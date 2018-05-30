@@ -14,6 +14,41 @@ If you're using the advanced flow, you can get the latest version of the Hybrid 
 
 ## 2018
 
+### April 20th, 2018 (2.0.5 / 2.0.1)
+
+* We improved the styling of the loader and login screens by making the text on those pages thicker.
+
+### April 19th, 2018 (2.0.4 / 2.0.1)
+
+* We improved the styling of the loader screen.
+* We added backwards compatibility with respect to quality vs. density properties (for Android only).
+
+### March 23rd, 2018 (2.0.3 / 2.0.1)
+
+This patch fixes the issue with an upstream dependency (`com.google.android.gms:play-services-gcm`) that was updated by Google. The issue prevented building *.apk* files, both locally and on Phonegap Build.
+
+### March 16th, 2018 (2.0.2 / 2.0.0)
+
+This patch fixes the issue with the generation of the `index.html` file.
+
+### March 13th, 2018 (2.0.1 / 2.0.0)
+
+This patch fixes the issue with an upstream dependency (`com.android.support:support-v4`) that was updated by Google. The issue prevented building *.apk* files, both locally and on Phonegap Build.
+
+### March 9th, 2018 (2.0.0 / 2.0.0)
+
+{{% alert type="info" %}}
+
+This is a major release, because it is not fully compatible with older versions of hybrid-app-template. For this update, we recommend that you download a fresh hybrid app package from the Mendix Cloud Portal via [Developer Portal](https://sprintr.home.mendix.com/index.html) > **DEPLOY** > **Mobile App**. We extended the **Mobile Apps** wizard with fields for the theming options described below. In addition, you can configure splash screens/icons by uploading a single base image.
+
+{{% /alert %}}
+
+* We added support for custom theming:
+  * You can configure the image on the error screen by adding/replacing `error.png`.
+  * You can configure the colors (background/foreground/text) of the error dialog box, login screen, and pin screen by adjusting `parameters.json`.
+  * You can adjust the HTML and CSS of the loading screen by configuring `loader.html.snippet` and `loader.css.snippet`.
+* We now properly set the page title based on the `name` value in `parameters.json`.
+
 ### January 31st, 2018 (1.7.4 / 1.4.0)
 
 {{% alert type="info" %}}

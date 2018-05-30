@@ -10,45 +10,142 @@ These release notes are for the [beta](../beta-features/index) version of the We
 
 ## 2018
 
-### March 5th, 2018 15:10:44 GMT
+### May 25th, 2018
+
+#### Improvements
+
+* We improved the process of creating and editing attributes of the enumeration type in domain models. To make the process faster and more user-friendly, we redesigned the **Create new enumeration** wizard in the domain model editor.
+* When you are editing a microflow and rearranging the existing activities in it, a preview of an activity now shows you where you can place that activity. This hint makes the process of editing microflows easier.
+
+#### Fixes
+
+* We fixed the issue where a pop-up window did not appear in the **Buzz** tab when typing an `@` symbol to mention team members. 
+
+### May 18th, 2018
+
+#### Fixes
+
+* We fixed the issue where the the guided product introduction tour sometimes crashed when opening the **Create new page** wizard on slow connections.
+
+### May 11th, 2018
 
 #### New Features
 
-  * We added support for Mendix 7.12.0.
-  * Navigation list widgets are now fully rendered in the page editor.
-  * Java actions and connectors are now fully rendered in microflows.
-  * The return type of Java action is now available for use in microflows.
-  
-#### Improvements
- 
-  * We've added tooltips to various controls to make things easier on new users.
-  * The header of the page editor Toolbox is sticky now, so it does not scroll along with the Toolbox contents. 
-  * After dragging an item from the Toolbox, the side panel stays on the Toolbox (for both the domain model editor and microflow editor) .
-  * A maintenance page is now shown when the Web Modeler going to be under maintenance. 
-  * An animation is shown while custom widgets are updated on the Settings page.
-  * The order of the items on the left sidebar has been improved.
-  * We've improved the new page creation flow, reducing the number of steps in the flow.
-  * We improved checking the prerequisites, which prevents breaking the guided product introduction tour in the publishing step. 
-  
-#### Fixes
-  
-  * Only filtering of non-form page templates is now allowed while creating edit pages.
-  * The Web Modeler now handles conversion and custom widgets requests better. 
-  
-### February 7th, 2018 16:28:00 GMT
+* We added a quick search to make the process of searching different elements in your application faster. Click the magnifying glass icon in the left menu bar to search through microflows, entities, and pages. Simply start typing the name of the item you are looking for and the search feature will return any matches it finds, using exact matches as well as fuzzy matches based on the characters entered.
 
 #### Improvements
 
-*	In all dialog boxes, you can now use the <kbd>Ctrl</kbd> + <kbd>Enter</kbd> shortcut to confirm your choices and close the dialog box. For simple dialog boxes containing only one field, pressing only <kbd>Enter</kbd> works to confirm and close the dialog box.
-*	In the domain model editor, it is now possible to swap the direction of an association by using the **Swap Direction** button or icon. If you are unsure which direction an association between two entities should have, you can now create it either way. Then, if the **Multiplicity** property does not contain the option you need, you can switch the association direction to configure it correctly. This will save you time when setting up your domain model.
-*	We introduced a feature to the domain model editor that arranges the position of entities automatically. When your view is becoming cluttered with entity objects and association lines, click the **Auto arrange entities** icon in the upper-left corner of the editor. We’ll then use an algorithm to determine the best possible placement of items on your screen. Still not happy with the result? Click the icon again to see if we can come up with something better.
-*	In both the microflow editor and domain model editor, the canvas will now follow the cursor if it is moved outside the visible area. This makes it easy to work with more extensive microflows and domain models.
+* When dragging new elements to a microflow, a preview of the element shows you where you can place this element. This hint makes the process of creating microflows easier.
+* We improved the **Pages** icon and color in the left menu bar for a better modeling experience.
 
 #### Fixes
 
-*	In the page editor, the **Create** button on the **Create New Attribute** dialog box now functions properly, even when used after clicking **Add parameter** (which is used, for example, for the **Caption** property of a widget).
+* We fixed the issue that caused the Web Modeler to crash when a custom widget contained a nanoflow property.
 
-### January 29th, 2018 16:10:52 GMT
+### May 1st, 2018
+
+#### New Features
+
+This release contains collaborative modeling features that will benefit collaboration within extended development teams. Such teams consist of, for example, business developers, professional developers, product owners, key users, UX designers, and other stakeholders.
+
+* Using the new **Buzz** tab, you can now leave comments on pages, domain models, microflows, and navigation layouts. You can also respond to comments made by other team members.
+* Mentioning a team member at any point in time will trigger an email notification to that user containing your comment and a link to the document you commented on in the Web Modeler.
+* All conversations are visible on the **Buzz** section of the Developer Portal. The conversation will contain a link to access the page, domain model, microflow, or navigation layout directly in the Web Modeler.
+* You can now create feedback items directly from your app's **Buzz** for any topics that should be part of the next sprint’s grooming by selecting **Create Feedback Item** from the top menu inside a Buzz conversation. This generates a feedback item in the Developer Portal tied directly to the app component in question, which product owners can then follow up on.
+* When multiple users open the app in the Web Modeler, one user is in control while others can still view the entire app model and contribute to any running Buzz conversations. This means they are fully part of the development process.
+* As a view-only user, you can see the latest changes performed by others by clicking **Refresh**, or you take control yourself with one click by selecting **Take Over**.
+
+In summary, by connecting communication directly to the application model, the Mendix Web Modeler paves the way for development teams to remain engaged and in the loop throughout the development lifecycle. This allows each team member to contribute to a successful result.
+For more information about these features, please see the [Mendix 7.14 release blog post](https://www.mendix.com/blog/mendix-7-14-the-power-of-teamwork/).
+
+#### Improvements
+
+* We added support for [Desktop Modeler 7.14.1](../desktop-modeler/7.14). The minimum supported version remains Desktop Modeler 7.11.0.
+
+### April 25th, 2018
+
+#### Improvements
+
+* You can now move activities within a microflow, whereas previously an activity was unmovable once positioned. This makes it easier and faster to manage microflows. The improvement includes all microflow activities, exclusive and inheritance splits, and merges and loops if they have only one incoming or one outgoing connection. 
+
+#### Fixes
+
+* We fixed the issue where a step was skipped during the guided product introduction tour.
+
+### April 18th, 2018
+
+#### Improvements
+
+* We added inline editing functionality to the domain model editor and the navigation editor. This makes it very easy and intuitive to change the captions of entities, attributes, and navigation menu items. Simply double-click the caption and start typing straight away.
+* Any user can now start a short guided product introduction tour at any moment, in any app. This helps you find your way easily. To start the tour, select the **Take a Product Tour** option from the information menu at the top-right of the Web Modeler.
+* You can now change the caption of microflow activities in the microflow editor. This allows you to build a microflow just the way you want it to be, with captions you recognize easily.
+* The **Checks** panel can now be resized by dragging it. This is the panel in which consistency errors are shown. The resizable panel helps you to keep an overview when solving consistency errors.
+* In the microflow editor, the element that causes a consistency error is now highlighted when you click the consistency error record. This helps you to solve consistency errors fast.
+
+#### Fixes
+
+* The page editor no longer crashes when encountering a list view with a nanoflow data source (for example, if this was incorporated using the Desktop Modeler).
+* We fixed the issue where the custom widget **Text Box Search** made the Web Modeler crash if no entity was provided.
+
+### March 27th, 2018 
+
+#### Improvements
+
+* In the page editor, the following widgets are now rendered in their full glory (meaning, when you add them to your model using the Desktop Modeler):
+  * Data grids
+  * Template grids
+  * Reference set selectors
+  * Input reference set selectors
+  * Table widgets
+  * Header widgets from your layouts
+  * Report widgets
+  * Snippets
+  * Widgets specific to the login page
+* At this stage *all* the Mendix widgets supported by the Desktop Modeler are now rendered in the Web Modeler. This will further streamline collaboration between users of our two Modelers. It also enables you to use the Web Modeler live in meetings (for example, in frequent iterations during the app development cycle).
+* Input widgets set to read-only will now render as such in the Web Modeler's page editor. For example, if you configure a text box widget to be rendered as a control or as a text widget, it will now render the same way in the Web Modeler as for an end-user, regardless of editability.
+* In the microflow editor, you are now able to connect annotations with microflow activities. In this way, the valuable information often contained in annotations will always be in context, even when the activity is moved during the construction of the microflow. This will benefit users in understanding and maintaining microflows.
+* We added support for the release of Desktop Modeler version 7.13.1. The minimum supported version remains Desktop Modeler 7.11.0.
+
+#### Fixes
+
+* We fixed the "Something went wrong" messages that appeared when creating new enumeration items and new microflows.
+* The Web Modeler will now start even if the App Store cannot be reached.
+
+### March 5th, 2018 
+
+#### Improvements
+
+* We've added tooltips to various controls to make things easier for new users to comprehend.
+* The header of the page editor toolbox is "sticky" now, so it does not scroll along with the **Toolbox** contents. This makes it easier for users to browse widgets and/or building blocks. 
+* The order of the editors in the left sidebar menu has been improved to better match user expectations and improve overall modeling experience.
+* In both the domain model editor and microflow editor, after dragging an item from the toolbox, the side panel will not toggle to the **Properties** pane. Instead it will keep displaying the **Toolbox**. This improves modeling speed, as we have witnessed in various user tests.
+* An animation is now shown as custom widgets are updated on the **App Settings** page to inform the user that the widget is being updated in the background.
+* Based on user feedback, we improved the guided product introduction tour, available when you select **Start Your First App** from the **Introduction Tour** category in the [Mendix Developer Portal](https://sprintr.home.mendix.com/) when you create a new app.
+* We improved the drawing and auto-resizing of microflows when a user removes one or more activities from a microflow.
+* In the microflow editor, the **Refresh In Client** property for **Create Object** and **Change Object** activities now has the default value **True**. This prevents the consequences of users accidentally not setting this property, as witnessed in many user tests.
+* Java actions and connectors may be part of your microflows (for example, when added to your model using the Desktop Modeler). If so, they are now fully rendered in the Web Modeler's microflow editor. Also, the return type of a Java action is now available for use in microflows.
+* We added support for [Desktop Modeler 7.12.0](../desktop-modeler/7.12). The minimum supported version remains Desktop Modeler 7.11.0.
+* A maintenance page is now shown when the Web Modeler is unavailable due to maintenance activities by Mendix. 
+  
+#### Fixes
+
+* Only the filtering of non-form page templates is now allowed while creating edit pages.
+* The Web Modeler now handles conversion and custom widget requests better. 
+  
+### February 7th, 2018 
+
+#### Improvements
+
+* In all dialog boxes, you can now use the <kbd>Ctrl</kbd> + <kbd>Enter</kbd> shortcut to confirm your choices and close the dialog box. For simple dialog boxes containing only one field, pressing only <kbd>Enter</kbd> works to confirm and close the dialog box.
+* In the domain model editor, it is now possible to swap the direction of an association by using the **Swap Direction** button or icon. If you are unsure which direction an association between two entities should have, you can now create it either way. Then, if the **Multiplicity** property does not contain the option you need, you can switch the association direction to configure it correctly. This will save you time when setting up your domain model.
+* We introduced a feature to the domain model editor that arranges the position of entities automatically. When your view is becoming cluttered with entity objects and association lines, click the **Auto arrange entities** icon in the upper-left corner of the editor. We’ll then use an algorithm to determine the best possible placement of items on your screen. Still not happy with the result? Click the icon again to see if we can come up with something better.
+* In both the microflow editor and domain model editor, the canvas will now follow the cursor if it is moved outside the visible area. This makes it easy to work with more extensive microflows and domain models.
+
+#### Fixes
+
+* In the page editor, the **Create** button on the **Create New Attribute** dialog box now functions properly, even when used after clicking **Add parameter** (which is used, for example, for the **Caption** property of a widget).
+
+### January 29th, 2018 
 
 #### Improvements
 
@@ -60,7 +157,7 @@ These release notes are for the [beta](../beta-features/index) version of the We
 
 ## 2017
 
-### December 18th, 2017 10:43:36 GMT
+### December 18th, 2017 
 
 #### Improvements
 
@@ -74,7 +171,7 @@ These release notes are for the [beta](../beta-features/index) version of the We
 * The Web Modeler failed to load on Safari 10. We fixed several minor runtime issues for this.
 * We made a general security fix.
 
-### December 1st, 2017 09:53:20 GMT
+### December 1st, 2017 
 
 #### Improvements
 
@@ -125,7 +222,7 @@ These release notes are for the [beta](../beta-features/index) version of the We
 * We fixed the **Locked by** pop-up window so that the username of the person who locked the app is shown.
 
 ### October 26th, 2017
- 
+
 #### Improvements
 
 * We added support for [Desktop Modeler 7.8.0](../desktop-modeler/7.8).

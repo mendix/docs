@@ -1302,10 +1302,6 @@ module.exports = {
       to: "/developerportal/howto/gathering-user-feedback"
     },
     {
-      from: "/howto50/Generating+a+personal+SSH2+key+pair",
-      to: "/howto50/generating-a-personal-ssh2-key-pair"
-    },
-    {
       from: "/howto50/Getting+Started",
       to: "/howto50/getting-started"
     },
@@ -1827,10 +1823,6 @@ module.exports = {
     {
       from: "/howto6/Gathering+user+feedback",
       to: "/developerportal/howto/gathering-user-feedback"
-    },
-    {
-      from: "/howto6/Generating+a+personal+SSH2+key+pair",
-      to: "/howto6/generating-a-personal-ssh2-key-pair"
     },
     {
       from: "/howto6/Getting+Started",
@@ -6933,7 +6925,7 @@ module.exports = {
     },
     {
       "from": "/refguide7/Close+Form",
-      "to": "/refguide/close-form"
+      "to": "/refguide/close-page"
     },
     {
       "from": "/refguide7/Clustered+Mendix+Runtime",

@@ -111,7 +111,6 @@ To create logic to call the web service, follow these steps:
 
 ## 4 Related Content
 
-* [How to Generate a Personal SSH2 Key Pair](../security/generating-a-personal-ssh2-key-pair)
 * [How to Create a Secure App](../security/create-a-secure-app)
 * [How to Consume a Complex Web Service](consume-a-complex-web-service)
 * [How to Export XML Documents](export-xml-documents)

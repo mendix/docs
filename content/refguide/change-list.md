@@ -3,24 +3,25 @@ title: "Change List"
 parent: "list-activities"
 ---
 
+## 1 Introduction
 
-With the Change List activity you can change a list that is stored in a variable.
+With this activity you can change a list that is stored in a variable.
 
 {{% alert type="info" %}}
 
-See [Microflow Element Common Properties](microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
+See [Microflow Element Common Properties](microflow-element-common-properties) for properties that all microflow activities share (for example, caption). This page only describes the properties specific to the action.
 
 {{% /alert %}}
 
-## Input Properties
+## 2 Input Properties
 
-### List
+### 2.1 List
 
 Defines the list variable that is changed.
 
-## Action Properties
+## 3 Action Properties
 
-### Type
+### 3.1 Type
 
 Defines the type of change that is performed to the list.
 
@@ -33,6 +34,6 @@ Defines the type of change that is performed to the list.
 
 _Default value:_ Add
 
-### Value
+### 3.2 Value
 
-Value defines the value that is used to change the list. The value is entered using a [microflow expression](expressions). The microflow expression should result in an object or list of the same [entity](entities) as the input list.
+Value defines the value that is used to change the list. The value is entered using an [expression](expressions). The expression should result in an object or list of the same [entity](entities) as the input list.

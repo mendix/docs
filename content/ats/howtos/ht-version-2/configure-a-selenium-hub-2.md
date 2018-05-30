@@ -53,7 +53,7 @@ Some examples of custom capabilities are:
 
 {{% alert type="info" %}}
 
-Browser and platform overwrites do not work! The ATS run configuration will overwrite your custom capabilities. So selecting InternetExplorer as your browser in custom capabilities does not work.
+Browser and platform overwrites do not work! The ATS run configuration will overwrite your custom capabilities.
 
 {{% /alert %}}
 

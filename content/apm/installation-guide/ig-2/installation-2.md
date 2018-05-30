@@ -4,6 +4,10 @@ category: "Installation Guide"
 menu_order: 2
 ---
 
+{{% alert type="warning" %}}
+The documentation in this section describes a product that is in closed beta, so it is subject to change before the final release. For more information, see [Beta Features](/releasenotes/beta-features/).
+{{% /alert %}}
+
 ## 1 Introduction
 
 This is the installation guide for Mansystems APM 2.

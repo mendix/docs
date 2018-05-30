@@ -22,8 +22,18 @@ A company admin can perform the following actions on the **Users** tab:
 * View all company users
 * Activate/deactivate users
 * View active/inactive users
+* Create report
 
 For more information, see [How to Deactivate and Activate Users](/developerportal/howto/deactivate-users).
+
+### 2.1 Create Report
+
+You can create reports about users active in your company (either by being a member of the company or a member of an app owned by the company). You will be presented with the following options:
+
+* **Export Users** – this report will return a list of users who are active in your company
+* **Export Permissions** – this report will return a list of permissions for users active in your company's apps
+
+You can export these reports by clicking **Export to Excel**. Note that the exports will contain further details in addition to those shown on the screen.
 
 ## 3 Security Groups
 

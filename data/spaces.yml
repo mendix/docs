@@ -13,16 +13,16 @@ addons:
   space: "Other Add-ons"
   priority: false
   menu_categories:
-    - "AQM"
+    - "Application Quality Monitor"
 apm:
-  space: "APM"
+  space: "Application Performance Monitor"
   priority: false
   menu_categories:
     - "Installation Guide"
     - "Reference Guide"
     - "Use Cases"
 ats:
-  space: "ATS"
+  space: "Application Test Suite"
   priority: false
   menu_categories:
     - "General"
@@ -102,7 +102,7 @@ howto:
     - "Mobile"
     - "Security"
     - "Integration"
-    - "Extendability"
+    - "Extensibility"
     - "Custom Widget Development"
     - "Testing"
     - "Monitoring & Troubleshooting"
@@ -163,6 +163,7 @@ refguide:
     - "Runtime"
     - "Java Programming"
     - "SAP"
+    - "IBM"
     - "Mobile"
 howtogeneral:
   space: "General How-to's"
@@ -182,9 +183,9 @@ releasenotes:
     - "Platform SDK"
     - "Hybrid App"
     - "Mendix Mobile App"
-    - "APM"
-    - "ATS"
-    - "AQM"
+    - "Application Test Suite"
+    - "Application Performance Monitor"
+    - "Application Quality Monitor"
     - "Beta Features"
 developerportal:
   space: "Developer Portal"

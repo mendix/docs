@@ -17,6 +17,8 @@ Add a [published REST service](published-rest-service) to expose your entities a
 
 For an overview of the available options when you add a published  service, see [Published REST Service](published-rest-service).
 
+To publish a microflow as a REST operation, right-click anywhere in the editor and select [Publish as REST service operation](publish-microflow-as-rest-operation).
+
 ## <a name="authorization"></a>3 Authentication
 
 Published REST services are secured with basic authentication. This is automatically applied when you set the [security level](project-security) of your app to **Prototype / demo**  or **Production**. 
@@ -32,8 +34,14 @@ For more details, see [Published REST Routing](published-rest-routing).
 
 Every [published REST service](published-rest-service) is automatically documented. This documentation is available in the app under `http://yourapp.com/rest-doc/`. Each service has an interactive documentation page using [Swagger UI](https://swagger.io/swagger-ui/). You can interact with the service to see how it behaves.
 
-The documentation of the services is available in the [Open API 2.0](open-api) format, which is readable by many systems and tools.
+The documentation of the services is available in the [Open API 2.0](open-api) format, which is readable by many systems and tools. It contains [JSON Schemas](published-rest-service-json-schema) for the messages definitions.
 
 ## 5 Logging
 
 To log detailed information about interaction with your published REST service, [set the log level](logging) of the **REST Publish** log node to **Trace**.
+
+## 6 Example
+
+**How to publish REST natively with Mendix**
+
+{{% youtube HzrFkv0U4n8 %}}

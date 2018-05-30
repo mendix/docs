@@ -5,19 +5,31 @@ parent: "rg-version-2"
 
 ## 1 Dashboard
 
-The dashboard is where you find all information about the results of your tests. It is split into two parts: **Current Status and 7-Day History** infographics and the **Recent Tests** result tree. 
+The dashboard is where you find all information about the results of your tests. It is split into two parts: **Current Status and 7-Day History** infographics and the **Recent Tests** result tree.
 
 ![](attachments/project/dashboard.png)
 
 ### 1.1 Infographics
 
-Infographics are the first thing you see when you open your app in ATS. These charts show you the current status and the states of the past seven days of your tests. They include the results of all your test cases. Data-driven tests are counted as a single test case. 
+Infographics are the first thing you see when you open your app in ATS. These charts show you the current status and the states of the past seven days of your tests. They include the results of all your test cases. Data-driven tests are counted as a single test case.
 
 For the **7-Day History**, a snapshot of the current test states is taken every day at 23:59 UTC.
 
-To generate a report of the status of your tests, click **Download Report**. The report is automatically downloaded as a PDF file.
+### 1.2 Report
 
-### 1.2 Recent Tests
+To generate a PDF report of the status of your tests, click **Download Report**. A dialog box will open allowing you to select between two reporting options for determining the items included in the report: **All** or **Selected**. If you select **All**, then all test suites and test cases will be included in the report. If you select **Selected**, then you can add one or more test cases, test suites, or folders that you want to be part of the report.
+
+{{% alert type="info" %}}
+Adding a test suite or a folder will recursively add all nested test suites and test cases.
+{{% /alert %}}
+
+When you are happy with your selection (or you have just chosen **All**), you can proceed with the reporting process by clicking **Generate**. This will open a second dialog box where you will get a summary infographic, similar to the one that you see on the **Dashboard**. At this point, you can download the report by clicking **Download**. You can cancel the process at any point by clicking the **X** button.
+
+{{% alert type="info" %}}
+The **7-day history** infographic will only be included in the PDF report when you choose **All**.
+{{% /alert %}}
+
+### 1.3 Recent Tests
 
 Under **Recent Tests**, you can find detailed information about the status of all your test cases and test suites. You can see the duration since the latest run, its result, and the success rate (for test suites). The success rate is calculated using the results of all the containing test cases. For data-driven tests, the data set is displayed in the **test data** column.
 
@@ -38,7 +50,7 @@ The following three icons exist for test cases, test suites, and data-driven tes
 |![](attachments/project/test-suite-icon.png) | Test suite |
 |![](attachments/project/ddt-icon.png)| Data-driven Test case|
 
-To open the latest execution log, click **Show Log**. When you click the **name of a test case/test suite**, the edit page opens. 
+To open the latest execution log, click **Show Log**. When you click the **name of a test case/test suite**, the edit page opens.
 
 ## 2 Permissions
 
@@ -54,7 +66,7 @@ The **App Admin** role is assigned to a user when they have the app settings per
 
 ## 3 Settings
 
-Settings is the central point for configuring ATS. You can set the Mendix API Key, add your deployments, and add your Selenium hubs. You can also find an overview of all the testers and administrators of your app. 
+Settings is the central point for configuring ATS. You can set the Mendix API Key, add your deployments, and add your Selenium hubs. You can also find an overview of all the testers and administrators of your app.
 
 {{% alert type="info" %}}
 
@@ -93,7 +105,7 @@ In the **Edit Selenium Hub** dialog box, set the following parameters:
 | URL                 | The URL of the Selenium server.          |
 | Custom Capabilities<sup>1</sup> | Sets the Selenium DesiredCapabilities (for more information, see [Class DesiredCapabilities](https://seleniumhq.github.io/selenium/docs/api/java/org/openqa/selenium/remote/DesiredCapabilities.html)). |
 
-ATS automatically retrieves the parallel test session limit from the Selenium hub. This limit is updated every 15 minutes. If ATS is not able to get the limit from the Selenium hub, it is set to one single test execution at a time.  
+ATS automatically retrieves the parallel test session limit from the Selenium hub. This limit is updated every 15 minutes. If ATS is not able to get the limit from the Selenium hub, it is set to one single test execution at a time.
 
 {{% alert type="info" %}}
 Starting with ATS verson 2.0, ATS capabilites override custom capabilities.
@@ -109,10 +121,10 @@ The Mendix API Key is used to synchronize stories between the Developer Portal a
 
 You must set this key, otherwise you cannot use your user stories in ATS. Be aware that after you have set the Mendix API key, you won't be able to see it again. You can only set a new API key.
 
-For information on where to find the API keys of your Mendix app, see [Authentication](https://docs.mendix.com/apidocs-mxsdk/apidocs/authentication.html).
+For information on where to find the API keys of your Mendix app, see [Authentication](/apidocs-mxsdk/apidocs/authentication).
 
 ### 3.5 CI/CD API Key
 
-The CI/CD API key is used to allow other systems or applications access to the ATS CI/CD API. Generating a new API key revokes access for any systems using the old API key. These systems are not able to access the ATS CI/CD API until they are updated with the new API key. Make sure to save the displayed API key in a secure place, as you cannot view it again in ATS. 
+The CI/CD API key is used to allow other systems or applications access to the ATS CI/CD API. Generating a new API key revokes access for any systems using the old API key. These systems are not able to access the ATS CI/CD API until they are updated with the new API key. Make sure to save the displayed API key in a secure place, as you cannot view it again in ATS.
 
 For more information about the CI/CD API, see [CI/CD API](cicd-api).

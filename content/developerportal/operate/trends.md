@@ -1,6 +1,7 @@
 ---
 title: "Trends in Mendix Cloud v3"
 parent: "metrics"
+menu_order: 50
 description: "Describes how to interpret various graphs and trends in the Mendix Cloud v3."
 tags: ["Trends","v3","Mendix Cloud","Developer Portal"]
 ---
@@ -11,7 +12,7 @@ To track the usage growth of your app and to debug performance problems, the Men
 
 ## 2 Monitor Trends Access  
 
-To view the **Trends** you must have permission to **Access the Monitoring**.
+To view the **Trends**, you must have permission to **Access the Monitoring**.
 
 {{% alert type="info" %}}
 
@@ -160,7 +161,13 @@ This graph displays the amount of data that is stored on disk in absolute amount
 
 Disk utilization shows the percentage of time that the disk storage is busy processing requests. This graph should be interpreted in combination with other graphs, like CPU iowait, disk iops, and number of running requests. For example, a combination of a moderate number of IO operations, low amount of disk throughput, visible cpu iowait, filled up memory disk cache, and reports of long running database queries in the application log could point to a shortage of system memory for disk cache that leads to repeated random reads from disk storage.
 
-## 6 Related content
+{{% alert type="info" %}}
+
+Disk utilization is calculated as the disk usage that is used by the user of the system. Due to operating system overhead and empty space in block size allocation, not all disk space can be fully allocated. For this reason, the total amount of usable space will be ~4% lower than the actual disk space.
+
+{{% /alert %}}
+
+## 6 Related Content
 
 * [Alerts](monitoring-application-health)
 * [Database Maintenance: Size Reduction](/howtogeneral/support/database-maintenance-size-reduction)

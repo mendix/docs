@@ -95,5 +95,4 @@ Validating user input can also be achieved by overriding the default save button
 *   [Finding the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
 *   [Managing your Application Requirements with Mendix](/developerportal/howto/managing-your-application-requirements-with-mendix)
 *   [Scout and Windows 10 Workaround](scout-and-windows-10-workaround)
-*   [Generating a personal SSH2 key pair](generating-a-personal-ssh2-key-pair)
 *   [Creating a chainable Custom Widget](create-a-chainable-custom-widget)

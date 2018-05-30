@@ -34,6 +34,8 @@ Before starting with this how-to, make sure you have the following prerequisites
 
 * Read [How to Create a Test Case](create-a-test-case-2)
 
+{{% youtube ucvD8cjo6JI %}}
+
 ## 3 Creating a Master Data Set within ATS
 
 The following steps explain how to create a master data set within ATS. If you want to create a master data set from an Excel file, please see chapter four.
@@ -266,4 +268,4 @@ You now know how to do the following:
 
 ## 10 Next Up
 
-You now learned how to create a dataset and how to use that data in your test case. The next how-to is [How to Create a Negative Test Case](create-a-negative-test-case-2). You find an overview of all the how-tos and the structure on the [ATS 2 How-to's](ht-version-2) page. We advise you to follow the predefined structure.
+You now learned how to create a dataset and how to use that data in your test case. The next how-to is [How to Use Precondition in Test Cases](use-precondition-in-test-cases-2). You find an overview of all the how-tos and the structure on the [ATS 2 How-To's](ht-version-2) page. We advise you to follow the predefined structure.

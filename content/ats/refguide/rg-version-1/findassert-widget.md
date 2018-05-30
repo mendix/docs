@@ -14,9 +14,9 @@ It is possible to use a sequence of names as a path.
 
 ## Usage
 
-Provide the name of the widget.
-Optionally search the widget by value and filter only visible widgets.
-You can also provide a WebElement as search context, to narrow down the search for the widget, if there are two or more widgets with the same name.
+* Provide the name of the widget.
+* Optionally search the widget by value and filter only visible widgets.
+* You can also provide a WebElement as search context, to narrow down the search for the widget, if there are two or more widgets with the same name.
 
 ## Input Parameters
 

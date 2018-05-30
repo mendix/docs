@@ -1,7 +1,7 @@
 ---
 title: "App Store Content Support"
 category: "App Store"
-order: 40
+menu_order: 40
 ---
 
 ## 1 App Store Content Support

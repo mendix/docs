@@ -17,17 +17,7 @@ A text box must be placed in a data view or template grid and connected to an at
 
 ## General Properties
 
-### Decimal Precision (Only for Numeric Attributes)
-
-The precision of a value describes the number of digits that are used to express that value. This property indicates the number of decimal places (the number of digits following the point).
-
-_Default value:_ 2
-
-### Group Digits (Only for Numeric Attributes)
-
-For ease of reading, numbers with many digits before the decimal separator may be divided into groups using a delimiter. This property indicates whether the end user will see these groups.
-
-_Default value:_ False
+{{% snippet file="refguide/Numeric+Formatting+Properties.md" %}}
 
 ### Show as Password (Only for Attributes of the String or HashString Type)
 

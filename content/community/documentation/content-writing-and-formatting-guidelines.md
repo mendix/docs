@@ -1,7 +1,7 @@
 ---
 title: "Content Writing and Formatting Guidelines"
 category: "Documentation"
-order: 20
+menu_order: 20
 ---
 
 ## 1 Introduction
@@ -172,13 +172,13 @@ If you want to use an image in your numbered list, add it after the related exer
 
 ##### 5.1.4.2 Images
 
-Add images that clearly show the specific functionality of the related step (so the reader can check that the image matches what they see on their screen). For example:
+Add images that clearly show the specific functionality of the related step (so the reader can check that the image matches what they see on their screen). For example, the arrows and flow on this screenshot are too busy and not clear enough for the user:
 
 ![](attachments/content-writing-and-formatting-guidelines/image_examples.png)
 
-Add boxes, indicators, arrows, and other information to an image only if it makes the image more understandable. For example:
+Add boxes, indicators, arrows, and other information to an image only if it makes the image more understandable:
 
-![](attachments/content-writing-and-formatting-guidelines/highlighting_image_example.png)
+![](attachments/content-writing-and-formatting-guidelines/image_examples2.png)
 
 Keep the images as simple as possible, because having too many arrows on an image can make it confusing!
 
@@ -202,7 +202,7 @@ For example:
 
 {{% alert type="warning" %}}
 
-The documentation in this section describes a new feature that is still in beta, and is subject to change before the final release.
+The documentation in this section describes a new feature that is in beta, so it is subject to change before the final release.
 
 {{% /alert %}}
 

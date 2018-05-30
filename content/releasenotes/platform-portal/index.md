@@ -4,6 +4,96 @@ title: "Platform Portal"
 
 ## 2018
 
+### May 23rd, 2018
+
+#### Improvements
+
+* Company Admins can now export three reports to Excel: active users, app permissions of active users, and apps. This enables managing users and their permissions at scale.
+
+#### Fixes
+
+* The **Revisions** tab on the **Story Details** page now shows the avatar of the committer instead of the app's avatar.
+
+### May 22nd, 2018
+
+#### Fixes
+
+* We fixed the bug in Mendix Cloud v4 that prevented users from using nested custom domains. Now you can have one domain (for example, `app.example.com`) and one on `microservice.app.example.com`.
+
+### May 8th, 2018
+
+#### Improvements
+
+* You can now assign colors to your labels on the **Stories** page: Mendix Blue, Firetruck Red, Goldfish Orange, and Tulip Green.
+* The **Story Details** page now has a new tab that shows the revisions related to the story.
+
+#### Fixes
+
+* On the **Feedback Details** page, the **Move to app** drop-down menu is visible again.
+* Special characters like **&** are now displayed correctly in the subject of Buzz notification emails.
+* The green call-to-action button in Buzz notification emails will now also work in Outlook for Windows. (Ticket 63452).
+* If there is a lot of activity in a Buzz thread, each notification email now displays the correct thread history, instead of each email containing the same comments.
+* We fixed two documentation links.
+
+### May 5th, 2018
+
+#### Improvements
+
+* It is now possible to add a comment as an optional parameter to the backup while generating one via REST API.
+* It is now possible to see the Mendix Runtime version in response to a "Retrieve Environment Package" API call.
+
+#### Fixes
+
+* We fixed the issue that prevented our Mendix Cloud v4 users from uploading and restoring big backups (larger than ~30GB) to their environments. It has been tested with the archives (~90GBs) on Mendix Cloud v4.
+* We addressed and fixed the issue that caused Mendix Cloud v4 users in the Asia Pacific time zone to receive the wrong timestamps when they downloaded daily logs.
+
+### April 9th, 2018
+
+#### Improvements
+
+* As of today, Mendix Cloud v4 users will be able to create and restore backups of their environments via REST API. Detailed information can be found in the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api) documentation.
+* The results of **Retrieve Environments** and **Retrieve Environment** REST API calls will now also include the model version and Mendix version information of the applications for which the call is being made.
+
+#### Fixes
+
+* It is now possible to assign an empty value for application constants that have string as the data type.
+* The loading pop-up window text shown while retrieving branches is now fixed.
+* The bug that prevented some users from viewing the list of running requests of their applications is now fixed.
+* The bug that prevented users from deactivating their projects is now fixed.
+
+### March 21st, 2018
+
+#### Improvements
+
+* Applications in Mendix Cloud v3 that were running for more than 248 days started to use 100% CPU due to an unknown bug in either the Mendix Runtime, the JVM, or a combination thereof. A very small number of applications have been impacted by this, as most applications are updated much more often, and every deployment restarts an application. However, this problem has been causing performance issues for both the affected applications and our infrastructure. As a workaround, we will now automatically restart apps that have been running non-stop for 247 days between 01:00 and 07:00 local time of the cloud region. If this happens to an application, you will see a message in the application log.
+
+### March 20th, 2018
+
+#### Improvements
+
+* We enabled ICMP (ping) packets for our Mendix Cloud v4 load balancers. Now you can use tools like ping, traceroute, and mtr to debug connectivity issues from your location to Mendix Cloud v4 applications. Note that packets will not reach the actual application but only the load balancers. You can expect latency in the low single-digit milliseconds between the load balancers and applications.
+
+### March 16th, 2018
+
+#### Improvements
+
+* We changed the browser title from "Mendix App Plaform" to **Mendix Platform** to be consistent with our messaging and documentation.
+* We have improved database storage alerts for Mendix Cloud v4 applications. If you subscribed to your applications' alerts, you will receive a warning alert when you have less than 25% disk space on your applications' databases and a critical alert when disk space is below 10%. You need to re-deploy your application to activate this alert.
+* Live logging for Mendix Cloud v4 applications is here! You can now view logs neatly and in real-time.
+* Hybrid mobile improvements: you can now generate icons and splash screens, add custom loader and error images, and add custom HTML and CSS. We also added a new theming section for minor color tweaks.
+
+#### Fixes
+
+* Users of Mendix Cloud V4 applications will now see a notification if their environment fails to clean properly.
+* The health status of newly-created Mendix Cloud v4 applications used to be reflected with a red cross. This has been fixed.
+* The **Deploy** and **Operate** deep links were not available in the **Security** menu for user groups without monitoring access. This has been fixed.
+
+### March 13th, 2018
+
+#### Improvements
+
+* In the Mendix Cloud, we have renewed the SSL/TLS certificates for *.mendixcloud.com*, *.mxapps.io*, and *.mendix.com*.
+
 ### March 1st, 2018
 
 #### Fixes
@@ -309,7 +399,7 @@ title: "Platform Portal"
 
 ### April 1st, 2017
 
-* We added list backups/download backup operations to the [Deploy API](https://docs.mendix.com/apidocs-mxsdk/apidocs/deploy-api#DeployAPI-ListBackups).
+* We added list backups/download backup operations to the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api#3-15-list-environment-backups).
 * We fixed the status page link in alert emails.
 * We updated the **Security** link from the Deploy/Operate tabs. It now goes to the same page on all pages in the platform.
 * We fixed the issue where the Free Apps backups page was very slow or resulted in an error in some cases.

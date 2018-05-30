@@ -139,13 +139,6 @@ This how-to has enabled you to start working and building a custom widget for th
 
 ## 8 Related Content
 
-### 8.1 Internal Resources
-
-* [How to Create a Chainable Custom Widget](create-a-chainable-custom-widget)
-* [How to Use the Mobile Slider Custom Widget](the-mobile-slider-custom-widget)
-
-### 8.2 External Resources
-
 These are some interesting books and articles you can read to dive into the source code of the `AppStoreWidgetBoilerplate`:
 
 * Custom Mendix widgets are based on DOJO widgets – for more information, see this blog post: 

@@ -154,6 +154,16 @@ For more details on migration, see [Uniqueness Constraint Migration](uniqueness-
 
 Falling back to the **Runtime** option will remove the unique constraints from the database, and uniqueness rules will not be checked at the database level anymore. Hence, data accuracy cannnot be guaranteed at the highest level, especially in the case of high concurrency transactions.
 
+### 3.13 Web Service Calls
+
+{{% alert type="info" %}}
+
+This setting was added in version 7.15
+
+{{% /alert %}}
+
+We optimize the way web services are called, which means that you can use custom proxy settings for each web service call. However, this implementation does not support schema validation yet. Neither does it support complex schemas that use a policy reference with an algorithm suite. This configuration option allows you to use the old implementation, in case you need one of these features.
+
 ## 4 Modeler
 
 These settings determine the behavior of the Modeler for this project. The settings apply to everyone that is working on this project.

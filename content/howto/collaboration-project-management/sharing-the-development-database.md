@@ -26,12 +26,9 @@ Therefore this type of database is excellent to use while developing and running
 
 One application can make use of many different databases. Take the following steps to select the preferred database (if there is more than one configured)
 
-1.  Double click on settings in the project explorer
-    
-    ![](attachments/18448637/18580428.png)
-
-2.  Select the preferred database configuration and click on 'Make active'
-    
+1.  Double-click **Settings** in the **Project Explorer**.
+2.  Select the preferred database configuration and click **Make active**.
+  
     ![](attachments/18448637/18580427.png)
 
 ## 4\. Start the database viewer
@@ -74,7 +71,7 @@ On the bottom right pane, the results are shown and a total of 50 rows is retrie
 
 The built-in database can easily be shared with other members of the team. Like the business logic itself, it is possible to commit a snapshot of the database to the team server. To do this, take the following steps:
 
-1.  Go to Project -> More Versioning -> Click on 'Add Snapshot of Data'
+1.  Select **Project** > **More Versioning** > **Add Snapshot of Data**:
 
     ![](attachments/18448637/18580420.png)
 

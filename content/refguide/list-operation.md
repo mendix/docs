@@ -3,6 +3,11 @@ title: "List Operation"
 parent: "list-activities"
 ---
 
+{{% alert type="info" %}}
+This activity can only be used in microflows, not in nanoflows.
+{{% /alert %}}
+
+## 1 Introduction
 
 The List Operation activity can perform various actions on a list. See below for details on these actions.
 
@@ -12,11 +17,11 @@ See [Microflow Element Common Properties](microflow-element-common-properties) f
 
 {{% /alert %}}
 
-## Operation Types
+## 2 Operation Types
 
 A list operation action can execute any of the following types of operations.
 
-### Binary
+### 2.1 Binary
 
 These binary operations have as an input a list and either another list or an object. The resulting type depends on the type of the operation. All lists and objects must relate to the same entity.
 
@@ -28,13 +33,13 @@ These binary operations have as an input a list and either another list or an ob
 | Contains | Checks whether all elements of the second parameter are present in the first parameter. | Boolean |
 | Equals | Checks whether the lists contain the same elements. | Boolean |
 
-### Sort
+### 2.2 Sort
 
 | Operation | Description | Result Type |
 | --- | --- | --- |
 | Sort | Allows you to sort a list based on a number of a attributes. The attributes are ordered to determine their priority while sorting. The input list remains in its original order while the sorted list is stored in the output variable. | List |
 
-### Member Inspections
+### 2.3 Member Inspections
 
 These operations take a single list and a member (attribute or association) as input. The resulting type depends on the type of the operation.
 
@@ -43,7 +48,7 @@ These operations take a single list and a member (attribute or association) as i
 | Find | Find the first object of which the member has the given value. | Object |
 | Filter | Find all objects of which the member has the given value. | List |
 
-### Unary
+### 2.4 Unary
 
 These unary operations have a list as input and either an object or another list as a resulting type, depending on the operation.
 
@@ -52,8 +57,8 @@ These unary operations have a list as input and either an object or another list
 | Head | The result is the first element of the list, or empty if the parameter contains zero elements or was initialized as empty. | Object |
 | Tail | The result is a list containing all elements of the parameter except the first, or an empty list if the parameter contains zero elements or was initialized as empty. | List |
 
-## Output Properties
+## 3 Output Properties
 
-### Name
+### 3.1 Name
 
 Defines the name of the resulting List, Object or Boolean variable. The variable can be used by all activities that follow this activity.

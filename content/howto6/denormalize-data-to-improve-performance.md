@@ -134,6 +134,5 @@ Now the application is ready to store redundant data, but you still need to keep
 * [How to Manage Your Application Requirements](/developerportal/howto/managing-your-application-requirements-with-mendix)
 * [How to Define Access Rules Using XPath](define-access-rules-using-xpath)
 * [How to Configure the Scout and Windows 10 Workaround](scout-and-windows-10-workaround)
-* [How to Generate a Personal SSH2 Key Pair](generating-a-personal-ssh2-key-pair)
 * [Attributes](/refguide6/attributes)
 * [Event Handlers](/refguide6/event-handlers)

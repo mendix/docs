@@ -1,7 +1,7 @@
 ---
 title: "Use App Store Content in the Desktop Modeler"
 category: "App Store"
-order: 20
+menu_order: 20
 description: "Covers the basics of how to access the App Store from the Desktop Modeler and provides examples of how to add a widget and module to your app."
 frontpage_featured: true
 ---
@@ -29,7 +29,7 @@ To download content from the App Store via the Desktop Modeler, follow these ste
 
 1. Open the Desktop Modeler and log in with your Mendix account credentials.
 2. Open the project in which you would like to install a component.
-3. Click **App Store** in the menu bar to open the App Store in the Desktop Modeler:
+3. Click the App Store icon in the top menu bar to open the App Store in the Desktop Modeler:
 
     ![](attachments/use-app-store-content-in-the-modeler/toolbar.png)
 
@@ -45,7 +45,7 @@ To download content from the App Store via the Desktop Modeler, follow these ste
     * A project will be created on your hard-drive and will be opened in the Desktop Modeler
     * A component will be downloaded directly into your project
 
-    Make sure that you download the correct version of the content from the App Store, because the widget or module version needs to be compatible with the Desktop Modeler version in which you are working. For example, if you are using Mendix 6, always download a widget that has a Mendix 6 version. Do not download a widget that has a higher release version than the Desktop Modeler in which you are working. You can access older versions of the widgets in the All Versions tab in the App Store and download the most compatible version:
+    Make sure that you download the correct version of the content from the App Store, because the widget or module version needs to be compatible with the Desktop Modeler version in which you are working. For example, if you are using Mendix 6, always download a widget that has a Mendix 6 version. Do not download a widget that has a higher release version than the Desktop Modeler in which you are working. You can access older versions of the widgets in the **All Versions** tab in the App Store and download the most compatible version:
 
     ![](attachments/use-app-store-content-in-the-modeler/18580437.png)
 
@@ -60,13 +60,13 @@ In this section of the how-to, you will learn how to add the Radiobutton List wi
 To add the Radiobutton List widget from the App Store via the Desktop Modeler, follow these steps:
 
 1. Download the **RadioButton List** widget by following the steps in [3 Downloading Content from the App Store via the Desktop Modeler](#DownloadingContentfromtheAppStoreviatheModeler).
-2.  A widget downloaded from the App Store will be placed in the **widgets** folder in your project structure. You can find the widget and start using it in the following ways:
+2.  A widget downloaded from the App Store will be placed in your project structure. You can find the widget and start using it in the following ways:
 
-    * In the **Add-On** menu, select it from the list of all the widgets you have downloaded:
+    * Click **Add widget**, then browse the list of **Add-on widgets**:
 
         ![](attachments/use-app-store-content-in-the-modeler/18580440.png)
 
-    * Right-click the field in which you want to use the widget, select **Add Widget** > **Add-on**, and select it from the list of all the widgets you have downloaded:
+    * Right-click the drop zone in which you want to use the widget, select **Add Widget**, then browse the list of **Add-on widgets**:
 
         ![](attachments/use-app-store-content-in-the-modeler/18580439.png)
 
@@ -91,11 +91,13 @@ To resolve the radio button error, follow these steps:
     ![](attachments/use-app-store-content-in-the-modeler/18580436.png)
 
     In this example, the **Target attribute** property in the radio button is required.
+
 2. Double-click the radio button to open all of its options in the **Edit Custom Widget** editor. Notice that the **Target attribute** is empty or set to none:
 
     ![](attachments/use-app-store-content-in-the-modeler/18580435.png)
 
 3. Double-click **Select**, which will open the **Select Attribute** dialog box.
+
 4. Select the attribute that you want to display as a radio button. Note that the radio button works on Booleans and enumeration attribute types.
 
     ![](attachments/use-app-store-content-in-the-modeler/18580434.png)
@@ -139,7 +141,7 @@ Sometimes additional widgets are added when you download a module. For example, 
 
 To use the Google Maps module in the Desktop Modeler, follow these steps:
 
-1. Add **Home** and **ViewAllLocations** to your navigation:
+1. Add **Location Map Overview** and **Location Overview** to your app's **Navigation**:
 
     ![](attachments/use-app-store-content-in-the-modeler/18580429.png)
 
@@ -177,4 +179,4 @@ To delete a theme, remove the *.zip* file from your project's **theme** folder.
 * [How to Restore an SQL Server Database](/deployment/on-premises/restoring-a-sql-server-database)
 * [How to Set Up a New SQL Server Database](/deployment/on-premises/setting-up-a-new-sql-server-database)
 * [Feedback Widget: Bridging the Gap Between Developers and Business Users](http://www.mendix.com/blog/feedback-widget-bridging-the-gap-between-users/)
-* [My Top 5 Mendix Widgets for Speeding Application Development](http://www.mendix.com/blog/top-5-mendix-widgets-speeding-application-development/)
+* [My Top 5 Mendix Widgets for Speeding Up Application Development](http://www.mendix.com/blog/top-5-mendix-widgets-speeding-application-development/)

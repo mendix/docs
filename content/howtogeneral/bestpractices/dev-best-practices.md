@@ -100,7 +100,7 @@ For some entities you want to use entity events that are always triggered when a
 
 #### 3.4.2 Calculated Attributes
 
-For attributes, you can choose to store the value in the database or to calculate the value based on a microflow. For the microflow that has the calculation purpose you can use `CAL\_` as a prefix.
+For attributes, you can choose to store the value in the database or to calculate the value based on a microflow. For the microflow that has the calculation purpose you can use *CAL\_* as a prefix.
 
 #### 3.4.3 Project Settings
 
@@ -154,7 +154,7 @@ Microflows that are used for data validation use the prefix *VAL\_*.
 
 #### 3.7.1 Home Pages
 
-You can define the home pages per device and role in your navigation. See the list blow for page names we recommend using:
+You can define the home pages per device and role in your navigation. See the list below for page names we recommend using:
 
 | Event Type           | Device  | Page Name                   |
 |----------------------|---------|-----------------------------|

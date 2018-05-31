@@ -7,8 +7,6 @@ tags: ["SAP", "integration", "SAP services", "OData"]
 
 ## 1 Introduction
 
-A change
-
 Mendix apps can consume OData services exposed by SAP back-end systems. To do this you need to use the SAP OData Connector.
 
 The SAP OData Connector needs to know details of the OData service which has been exposed. This involves mapping the data structures exposed by the OData service (via the $metadata URL) to entities and attributes of the domain model. This information is created as a Mendix module (.mpk) file which can be imported into your Mendix app.

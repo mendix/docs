@@ -32,7 +32,7 @@ To install APM 2, follow these steps:
 9. Copy the widget from **USE_ME/CopyPasteAPMBrowserWidget** to the layout(s) of your app. Please note that it will only be loaded once, regardless of how many times the user opens a page containing the widget.
 10. Set the value of the **USE_ME/APMAgent.APMAPIKey** constant with the key you generated at step 6.
 
-## 3 Upgrade
+## 3 Upgrading
 
 To upgrade an APM 2 agent follow these steps
 

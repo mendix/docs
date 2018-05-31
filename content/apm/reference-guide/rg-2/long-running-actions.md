@@ -7,4 +7,4 @@ After clicking the **Long running microflow** indicator, a pop-up window with lo
 
  ![](attachments/long-running-actions.png)
 
-If the long running action finishes before the dialog is shown the dialog will show an empty grid.
+If the long-running action finishes before the pop-up window is shown, the pop-up window will show an empty grid.

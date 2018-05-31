@@ -54,6 +54,6 @@ The statistics will give insights in click path behavior of the users. How do th
 
 ## 6 In a Load Test
 
-When generating load, the statistics and performance module are used to analyze what is happening within the application. The results of multiple load tests can be compared to see what influence the load has on the duration of microflows and actions. The browser recorder can be used to see what influence the load test has on the application from the users perspective.
+When generating load, the statistics and performance module are used to analyze what is happening within the application. The results of multiple load tests can be compared to see what influence the load has on the duration of microflows and actions. The browser recorder can be used to see what influence the load test has on the application from the user's perspective.
 
 Several tests can be compared to each other by using the marker to mark microflows as belonging to a certain lab setup

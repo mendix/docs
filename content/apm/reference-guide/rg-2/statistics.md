@@ -27,7 +27,7 @@ The **Tree** tab can be used to see the statistic results in a quick overview. T
 
 ![](attachments/statistics_tree.png)
 
-Note that in the tree of the statistics a child action can take longer than the parent, because the average durations are compared and if you consider a microflow with a split and most cases take the quick route and only some cases take the slow route, then the average of the parent is faster than the average of the slow route child.
+Note that in the tree of the statistics, a child action can take longer than the parent. This is because the average durations are compared, and if you consider a microflow with a split and most cases take the quick route while only some cases take the slow route, then the average of the parent is faster than the average of the slow route child.
 
 The **History** tab gives insight into the duration and count over time. These insights help to detect trends and see if the optimizations were successful. 
 

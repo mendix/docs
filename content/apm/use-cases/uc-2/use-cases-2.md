@@ -16,7 +16,7 @@ The APM tools have been used extensively by Mansystems Developers and Support En
 
 The **Trap** module is always on in development, test, acceptance, and production. It is used to have all logging immediately available when an error occurs.
 
-The **Statistics** module is always on to collect valuable statistics. Snapshots are stored frequently and on shutdown of the Mendix application, so during development comparative analysis can also be done. In production, you can look at the functionality that takes the most time to optimize the functionality. Also, you can look at the trend to see performance issues coming. It is possible to drill down on the statistics and get detailed information about the duration of microflows and actions.
+The **Statistics** module is always on to collect valuable statistics. Snapshots are stored frequently and on shutdown of the Mendix application, so during development, comparative analysis can also be done. In production, you can look at the functionality that takes the most time to optimize the functionality. Also, you can look at the trend to see performance issues coming. It is possible to drill down on the statistics and get detailed information about the duration of microflows and actions.
 
 The **Log** module is used for cases that need analysis but have no specific trigger (meaning, when a trap is not fired). Also, in production, the log tool makes logging available and searchable to support engineers without the need for technical application support to deliver a file (or worse, turn the logging on and off and then deliver the file).
 

@@ -39,8 +39,6 @@ The arguments sent to the microflow are automatically configured based on the pa
 
 The arguments available to a data or template grid control bar button are determined by the selection mode of the grid and the parameters of the selected microflow. Single selection results in the selected object being passed to the microflow if the microflow has an object parameter. If the microflow has an object list parameter, all the pages will be passed instead, ignoring the selection. Simple multi-selection allows for both all pages and selection, which defaults to selection. This can be configured via the drop-down menu in the microflow settings page.
 
- No selection results in no parameters, and single selection results in a single object if 
-
 ## 4 Execution
 
 ### 4.1 Microflow Call Type

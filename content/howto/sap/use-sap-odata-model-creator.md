@@ -21,7 +21,7 @@ There are three ways to create the data model:
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* identify the SAP back-end system and OData service you wish to use
+* Identify the SAP back-end system and OData service you wish to use
 * Create the app in the Mendix Desktop Modeler 7.5.1 or higher
 
 ## 3 Generating a Data Model

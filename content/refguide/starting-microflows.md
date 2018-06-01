@@ -37,7 +37,7 @@ You can create a new microflow by clicking 'Select...' and then 'New'. Modeler w
 
 The arguments sent to the microflow are automatically configured based on the parameters of the selected microflow and the available arguments. Which arguments are available depends on the widget calling the microflow. For a full listing consult the table above. Additionally, if the widget calling a microflow is contained inside a nested data view, then the object of the enclosing data view is also available.
 
-The arguments available to a data or template grid control bar button are determined by the selection mode of the grid. No selection will result in no parameters and single selection results in a single object. (Simple) multi-selection allows for both all pages and selection, which defaults to selection. This can be configured by drop-down in the microflow settings page.
+The arguments available to a data or template grid control bar button are determined by the selection mode of the grid and the parameters of the selected microflow. Single selection results in the selected object being passed to the microflow if the microflow has an object parameter. If the microflow has an object list parameter, all the pages will be passed instead, ignoring the selection. Simple multi-selection allows for both all pages and selection, which defaults to selection. This can be configured via the drop-down menu in the microflow settings page.
 
 ## 4 Execution
 

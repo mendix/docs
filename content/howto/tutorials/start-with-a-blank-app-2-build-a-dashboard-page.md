@@ -13,7 +13,7 @@ This is the second how-to in this series on how to create an employee directory 
 
 * Change the page layout for multiple devices 
 * Use building blocks
-* Use the theme customizer
+* Use the Theme Customizer
 * Create a domain model
 
 {{% youtube AVI-jRt7y4M %}}

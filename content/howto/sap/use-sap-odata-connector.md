@@ -32,7 +32,7 @@ For more information, see [How to Use App Store Content in the Modeler](/communi
 
 To get started quickly, you can download one of the SAP Data Models available in the [Mendix App Store](https://appstore.mendix.com/). A SAP Data Model is available as a module which you can add to your app. The module contains a pre-built domain model for a specific service of SAP.
 
-In case you want to use a SAP Data Model which isn't available in the Mendix App Store, you can generate a SAP Data Model based on a OData service from a SAP back-end system. 
+In case you want to use a SAP Data Model which isn't available in the Mendix App Store, you can generate a SAP Data Model based on an OData service from a SAP back-end system. 
 
 For more information, see [SAP Data Models](/refguide/sap/sap-data-models) and [Use the SAP OData Model Creator](/use-sap-odata-model-creator).
 

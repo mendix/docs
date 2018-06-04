@@ -22,7 +22,7 @@ These release notes are for the [beta](../beta-features/index) version of the We
 
 #### Fixes
 
-* We fixed the issue when choosing to skip a guided product introduction tour, the guided product introduction tour was skipped by clicking **Cancel** instead of clicking **Yes**.
+* We fixed the issue that occurred when the user clicked **Yes** and wanted to skip the guided product introduction tour, but the tour could only be skipped by clicking **Cancel**. To skip the guided product tour, you now need to click **Yes**.
 * We fixed the issue where you could not use an attribute as a source for an **Open Link** action in a list view.
 * We fixed the issue where Adobe PhoneGap Build service custom widgets were always considered out of date when the widgets were present in pages.
 

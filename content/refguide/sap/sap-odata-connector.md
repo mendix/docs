@@ -114,7 +114,10 @@ This domain model is part of the SAP OData Connector module and can be found in 
 * **Header** – add a custom HTTP header that provides more information in an HTTP request
   * **Name** – the name of the header
   * **Value** – the value of the header
-* **CloudConnector Info** – internal use only
+* **CloudConnector Info** – information which can be read from the SAP Cloud Portal to obtain proxy details used by SAP Cloud Connector
+  * **ProxyHost** – the resolved host which is being accessed through the SAP Cloud Connector
+  * **ProxyPort** – the resolved port which is used by the SAP Cloud Connector target
+  * **ProxyBearerToken** – an authorization token which is needed when using the SAP Cloud Connector
 * **Cookie** – the cookie is maintained internally and is valid for a Mendix session or in the microflow context of a startup microflow or scheduled event
 * **CSRFToken** – the Cross-Site Request Forgery (CSFR) token is maintained internally and is used to prevent CSRF attacks; a CSFR token is maintained for a Mendix session and is also supported in the microflow context of a startup microflow or scheduled event
 
@@ -331,6 +334,14 @@ This action returns the HTTP Response to the last OData action that was performe
 For example, you could catch an exception on **Get List** and display an error message to the user.
 
 ![](attachments/sap-odata-connector/errorhandling-sapodataconnector.png)
+
+#### 3.2.5 Get cloud connector info
+
+This creates a **CloudConnectorInfo** object and fills the values for **ProxyHost**, **ProxyPort**, and **ProxyBearerToken** from the SAP environment, when the app is running on the SAP Cloud Portal.
+
+{{% alert type="warning" %}}
+If your app is not running on the SAP Cloud Portal, this action will throw an error.
+{{% /alert %}}
 
 ## 4 Connector Action Parameters<a name="ConnectorActionParameters"></a>
 

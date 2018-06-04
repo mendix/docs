@@ -48,7 +48,7 @@ To accelerate the consumption of the SAP Business Suite services, Mendix also pr
 
 For example, if you need a CRM app, it is recommended to use a **Field Sales Representative** service like **Check Price and Availability for Field Sales Representative**. The **Check Price and Availability for Field Sales Representative** > **SAP Service** module contains all the entities of the selected service. By using the **SAP Service** module with the **SAP OData Connector** module, you can retrieve those CRM entities from the SAP back-end system in your Mendix app.
 
-## 3 Related Content
+## 4 Related Content
 
 * [SAP OData Connector](sap-odata-connector)
 * [How To Use the SAP OData Model Creator](/howto/sap/use-sap-odata-model-creator)

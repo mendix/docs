@@ -19,7 +19,7 @@ It is possible to record an individual user's browser without recording the runt
 
 When recording a browser, the user has to confirm the following message:
 
-![](attachments/browser_agent_recording_notice.png)
+![](attachments/Browser_agent_recording_notice.png)
 
 ## 3 Recorded Results
 

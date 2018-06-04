@@ -10,6 +10,22 @@ These release notes are for the [beta](../beta-features/index) version of the We
 
 ## 2018
 
+### June 4th, 2018
+
+#### New Features
+
+* We added keyboard shortcuts to make the process of building applications even faster. The new hotkeys are for opening editors (such as the page editor, microflow editor, and domain model editor) as well as for publishing and viewing the app. To learn which hotkeys are available, click the information icon in the top-right corner of the Web Modeler, then select the **Keyboard Shortcuts** option.
+
+#### Improvements
+
+* We added support for [Desktop Modeler 7.15.1](../desktop-modeler/7.15). The minimum supported version remains Desktop Modeler 7.11.0.
+
+#### Fixes
+
+* We fixed the issue that occurred when the user clicked **Yes** and wanted to skip the guided product introduction tour, but the tour could only be skipped by clicking **Cancel**. To skip the guided product tour, you now need to click **Yes**.
+* We fixed the issue where you could not use an attribute as a source for an **Open Link** action in a list view.
+* We fixed the issue where Adobe PhoneGap Build service custom widgets were always considered out of date when the widgets were present in pages.
+
 ### May 25th, 2018
 
 #### Improvements

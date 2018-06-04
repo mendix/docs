@@ -14,17 +14,17 @@ These release notes are for the [beta](../beta-features/index) version of the We
 
 #### New Features
 
-* We added keyboard shortcuts to make the process of building applications even faster. The new hotkeys include opening editors such as page editor, microflow editor, and domain model editor, as well as keyboard shortcuts for publishing and viewing the app. To learn which hotkeys are available, click the information icon in the top-right corner of the Web Modeler, then select the **Keyboard Shortcuts** option.
+* We added keyboard shortcuts to make the process of building applications even faster. The new hotkeys are for opening editors (such as the page editor, microflow editor, and domain model editor) as well as for publishing and viewing the app. To learn which hotkeys are available, click the information icon in the top-right corner of the Web Modeler, then select the **Keyboard Shortcuts** option.
 
 #### Improvements
 
-* We added support for [Desktop Modeler 7.15.1](https://docs.mendix.com/releasenotes/desktop-modeler/7.15). The minimum supported version remains Desktop Modeler 7.11.0.
+* We added support for [Desktop Modeler 7.15.1](../desktop-modeler/7.15). The minimum supported version remains Desktop Modeler 7.11.0.
 
 #### Fixes
 
 * We fixed the issue when choosing to skip a guided product introduction tour, the guided product introduction tour was skipped by clicking **Cancel** instead of clicking **Yes**.
-* We fixed the issue when you could not use an attribute as a source for an **Open Link** action in a list view.
-* We fixed the issue where Adobe PhoneGap Build service custom widgets would always be considered out of date when these widgets are present in pages.
+* We fixed the issue where you could not use an attribute as a source for an **Open Link** action in a list view.
+* We fixed the issue where Adobe PhoneGap Build service custom widgets were always considered out of date when the widgets were present in pages.
 
 ### May 25th, 2018
 

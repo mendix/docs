@@ -216,7 +216,10 @@ List of objects with the following key-value pairs:
 
 *   _Status_ (String): Status of the environment. Possible values: Empty, Stopped, Running
 *   _Url_ (String): URL to access your application.
-*   Mode (String): Mode of the environment. Possible values: Test, Acceptance, Production.
+*   _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production.
+*   _ModelVersion_ (String): The version number of the package deployed in your environment.
+*   _MendixVersion_ (String): The Mendix version number of the package deployed in your environment.
+*   _Production_ (Boolean): A flag indicating if this environment is a production environment.
 
 #### 3.4.3.1 Example
 
@@ -225,12 +228,19 @@ List of objects with the following key-value pairs:
     {
         "Status" :  "Stopped" ,
         "Mode" :  "Acceptance",
-        "Url" :  "https://calc-accp.mendixcloud.com
+        "Url" :  "https://calc-accp.mendixcloud.com",
+        "ModelVersion" :  "1.1.0.253",
+        "MendixVersion" :  "6.10.10",
+        "Production" :  "false"
+
     },
     {
         "Status" :  "Stopped" ,
         "Mode" :  "Production",
-        "Url" :  "https://calc.mendixcloud.com"
+        "Url" :  "https://calc.mendixcloud.com",
+        "ModelVersion" :  "175.0.0.3702",
+        "MendixVersion" :  "6.10.12",
+        "Production" :  "false"
     }
 ]
 ```
@@ -270,6 +280,10 @@ An object with the following key-value pairs:
 *   _Status_ (String): Status of the environment. Possible values: Empty, Stopped, Running
 *   _Url_ (String): URL to access your application.
 *   _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production.
+*   _ModelVersion_ (String): The version number of the package deployed in your environment.
+*   _MendixVersion_ (String): The Mendix version number of the package deployed in your environment.
+*   _Production_ (Boolean): A flag indicating if this environment is a production environment.
+
 
 #### 3.5.3.1 Error Codes
 
@@ -285,7 +299,10 @@ An object with the following key-value pairs:
 {
      "Status" :  "Stopped" ,
      "Mode" :  "Acceptance",
-     "Url" :  "https://calc-accp.mendixcloud.com"
+     "Url" :  "https://calc-accp.mendixcloud.com",
+     "ModelVersion" :  "1.1.0.253",
+     "MendixVersion" :  "6.10.10",
+     "Production" :  "false"
 }
 ```
 

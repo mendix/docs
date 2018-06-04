@@ -24,7 +24,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ### 2.1 Getting the SAP OData Connector Module
 
-To be able to use the OData Connector, create your project, then navigate to the Mendix App Store to download the [SAP OData Connector](https://appstore.home.mendix.com/link/app/74525/Mendix/SAP-OData-Connector) module. You will then find this module in your app project's App Store modules.
+To be able to use the OData Connector; first create your project. Inside the desktop modeler, navigate to the Mendix App Store to download the [SAP OData Connector](https://appstore.home.mendix.com/link/app/74525/Mendix/SAP-OData-Connector) module. You will then find this module in your app project's App Store modules.
 
 For more information, see [How to Use App Store Content in the Modeler](/community/app-store/use-app-store-content-in-the-modeler).
 

@@ -58,8 +58,7 @@ There may be several schemas in the packages of an API. Each of these will gener
 
     ![](attachments/use-sap-odata-model-creator/model-creator-wizard-2-api.png)
 
-    {{% alert type="info" %}}
-    You can return to any stage in this process by clicking on the relevant step number.
+    {{% alert type="info" %}}You can return to any stage in this process by clicking on the relevant step number.
     {{% /alert %}}
 
 2. Click the package you want. It will be highlighted.
@@ -68,8 +67,7 @@ There may be several schemas in the packages of an API. Each of these will gener
 
     ![](attachments/use-sap-odata-model-creator/model-creator-wizard-3-api.png)
 
-    {{% alert type="info" %}}
-    This will be shown even if only one API exists.
+    {{% alert type="info" %}}This will be shown even if only one API exists.
     {{% /alert %}}
 
 4. Click the API you want. It will be highlighted.
@@ -78,8 +76,7 @@ There may be several schemas in the packages of an API. Each of these will gener
 
     ![](attachments/use-sap-odata-model-creator/model-creator-wizard-4-api.png)
 
-    {{% alert type="info" %}}
-    This will be shown even if only one schema exists.
+    {{% alert type="info" %}}This will be shown even if only one schema exists.
     {{% /alert %}}
 
 6. Click the schema you want. It will be highlighted.
@@ -100,7 +97,7 @@ There may be several schemas in the packages of an API. Each of these will gener
 
 You have now created the module. Section [4 Using the Data Model Module in a Mendix App](#Using) explains how to import it into your app.
 
-#### 3.3 Uploading an Odata Metadata XML File<a name="Uploading"></a>
+### 3.2 Uploading an Odata Metadata XML File<a name="Uploading"></a>
 
 You may want to generate the data model by hand using the `$metadata` file directly. This may, for example, not be in the API Business Hub.
 
@@ -128,8 +125,7 @@ To try this you could use the publicly available HCM People Profile service, for
 
     ![](attachments/use-sap-odata-model-creator/upload-metadata-schemas.png)
 
-    {{% alert type="info" %}}
-    This will be shown even if only one schema exists.
+    {{% alert type="info" %}}This will be shown even if only one schema exists.
     {{% /alert %}}
 
 7. Click the schema you want. It will be highlighted.
@@ -170,8 +166,7 @@ This method does not work where the destination needs authentication. You cannot
 
     ![](attachments/use-sap-odata-model-creator/upload-metadata-schemas.png)
 
-    {{% alert type="info" %}}
-    This will be shown even if only one schema exists.
+    {{% alert type="info" %}}This will be shown even if only one schema exists.
     {{% /alert %}}
 
 4. Click the schema you want. It will be highlighted.

@@ -114,9 +114,9 @@ This domain model is part of the SAP OData Connector module and can be found in 
 * **Header** – add a custom HTTP header that provides more information in an HTTP request
   * **Name** – the name of the header
   * **Value** – the value of the header
-* **CloudConnector Info** – information which can be read from the SAP Cloud Portal to obtain proxy details used by SAP Cloud Connector
-  * **ProxyHost** – the resolved host which is being accessed through the SAP Cloud Connector
-  * **ProxyPort** – the resolved port which is used by the SAP Cloud Connector target
+* **CloudConnector Info** – information which can be read from the SAP Cloud Portal to obtain proxy details used to access the SAP Cloud Connector
+  * **ProxyHost** – the address of the proxy which gives access through the SAP Cloud Connector
+  * **ProxyPort** – the port which is to gain access through the SAP Cloud Connector
   * **ProxyBearerToken** – an authorization token which is needed when using the SAP Cloud Connector
 * **Cookie** – the cookie is maintained internally and is valid for a Mendix session or in the microflow context of a startup microflow or scheduled event
 * **CSRFToken** – the Cross-Site Request Forgery (CSFR) token is maintained internally and is used to prevent CSRF attacks; a CSFR token is maintained for a Mendix session and is also supported in the microflow context of a startup microflow or scheduled event

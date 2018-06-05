@@ -5,6 +5,17 @@ category: "Desktop Modeler"
 
 To download the Windows Service, go to the Modeler page in the [Mendix App Store](https://appstore.home.mendix.com/link/modelers) and open **Related downloads**.
 
+## 4.5.1
+
+**Release date: June 5, 2018**
+
+* We upgraded the target Microsoft .NET Framework version from 4.5 to 4.5.2.
+* We added a checkbox to the Update App form to be able to configure whether you want to apply the correct user rights on some deployment folders. This is enabled by default for new apps, but disabled by default when you upgrade an existing app.
+* We show more information during the update process of an app.
+* We updated the DotNetZip library from version 1.10.1 to 1.11.0. This library is used for making backups and for extracting deployment archives.
+* We removed our dependency on the Microsoft.VisualBasic.PowerPacks library.
+* We improved the check whether the correct Mendix server version is available or not.
+
 ## 4.5
 
 **Release date: February 21st, 2017**

@@ -36,8 +36,14 @@ On the resulting page, click the green **Download** button. Make sure that **Add
 
 ### 4 Installing Module Dependencies
 
-The PushNotifications module has one dependency: the Encryption module. To include this dependency, download it from the App Store in a way similar to how you installed the PushNotifications module. While importing, you may get a pop-up window with information about overwriting project files, which you can confirm by clicking **OK**.
+The PushNotifications module has two dependencies:
 
+ * [Encryption module](https://appstore.home.mendix.com/link/app/1011/Mendix/Encryption)
+ * [The Community Commons module](https://appstore.home.mendix.com/link/app/170/)
+ 
+ To include these dependencies, download them from the App Store in a way similar to how you installed the PushNotifications module. While importing, you may get a pop-up window with information about overwriting project files, which you can confirm by clicking **OK**.
+
+**Note:**
 If your project is using an older version of the [Encryption module](https://appstore.home.mendix.com/link/app/1011/Mendix/Encryption), it might trigger an error for referencing a non-existent layout. You can fix this by assigning the master layout of the **Encryption.ResponsiveLayout_Certificate** layout to another layout (please note that in this specific use case, it is not important which layout is used). This does not apply to version 1.3.1 and higher.
 
 ![](attachments/19955732/20217886.jpg)

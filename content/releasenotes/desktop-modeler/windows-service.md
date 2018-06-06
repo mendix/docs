@@ -32,6 +32,7 @@ To download the Windows Service, go to the Modeler page in the [Mendix App Store
 Add DB2 and MariaDB as database types. They will only be useful when supported by the server version of the app.
 * Add more clear database synchronization information when migrating from one database to another.
 * Simplify update app and update server dialog forms.
+* Update DotNetZip library from version 1.9.1.8 to 1.10.1. This library is used for making backups and for extracting deployment archives.
 
 ## 4.3
 

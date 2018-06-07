@@ -17,7 +17,7 @@ The health icon will display the health status of the environment that is in the
 
 #### Fixes
 
-* We fixed an issue of our alerting infrastructure that prevented some of our Mendix Cloud V4 users from receiving alerts in case if their apps run out of memory.
+* We fixed an issue in our alerting infrastructure that prevented some of our Mendix Cloud V4 users from receiving alerts in case if their apps run out of memory.
 * We fixed the problem that caused the Mendix Cloud V4 Metrics legend to remain on screen even if the user navigated to a different page.
 * We fixed health icon statuses of the environments so that they reflect the environment health with minimum delay.
 

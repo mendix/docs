@@ -6,6 +6,12 @@ tags: ["theming"]
 
 ## Configuring your theme
 
+{{% alert type="info" %}}
+
+This document describes how the styling of your page in the modeler can be configured. This functionality is introduced in Mendix 7.16.
+
+{{% /alert %}}
+
 The styling that is loaded when opening your Mendix application in a web browser is configured in the HTML of your index pages.
 
 To ensure that we load the same styling when viewing your page in the desktop modeler and web modeler, you can configure the `"cssFiles"` property in settings.json in the theme folder of your project. For example, with the following configuration we load `theme.css` when viewing a page in the modeler.

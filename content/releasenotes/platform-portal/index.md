@@ -10,10 +10,10 @@ title: "Platform Portal"
 
 * Introducing Scaling API for Mendix Cloud V4: Now it is possible to scale Mendix Cloud V4 applications via Deploy API. For instructions refer to documentation [here](https://docs.mendix.com/apidocs-mxsdk/apidocs/deploy-api "Deploy API").
 * We have made improvements to Cloud Portal infrastructure for the upcoming releases to support more than three environments per application.
- 
+
 #### Fixes
 
-* We fixed an issue with OOM alerts that prevented some of our Mendix Cloud V4 users from receiving alerts in case if their apps run out of memory.
+* We fixed an issue of our alerting infrastructure that prevented some of our Mendix Cloud V4 users from receiving alerts in case if their apps run out of memory.
 * We fixed the problem that caused the Mendix Cloud V4 Metrics legend to remain on screen even if the user navigated to a different page.
 * We fixed health icon statuses of the environments so that they reflect the environment health with minimum delay.
 

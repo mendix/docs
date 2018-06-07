@@ -1,12 +1,12 @@
 ---
 title: "Configure Your Theme"
-category: "Theming"
+category: "UX"
 tags: ["theming", "UX"]
 ---
 
 ## 1 Introduction
 
-This how-to describes configuring the styling of your page in the Desktop Modeler and Web Modeler.
+This document describes how to configure the styling of your page in the Desktop Modeler and Web Modeler.
 
 {{% alert type="info" %}}
 

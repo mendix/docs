@@ -1,5 +1,5 @@
 ---
-title: "Configuring your theme"
+title: "Configure Your Theme"
 category: "Theming"
 tags: ["theming", "UX"]
 ---

@@ -8,19 +8,18 @@ title: "Platform Portal"
 
 #### Improvements
 
-* Introducing Scaling API for Mendix Cloud V4: Now it is possible to scale Mendix Cloud V4 applications via Deploy API. For instructions refer to documentation [here](https://docs.mendix.com/apidocs-mxsdk/apidocs/deploy-api "Deploy API").
-* We have aggregated the health icons for the acceptance and test environments in the Nodes Dashboard and in the Company Admin screen.
+* We have introduced scaling via API for Mendix Cloud V4. It is now possible to scale Mendix Cloud V4 applications via the Deploy API. For instructions, see the [Deploy API](../apidocs-mxsdk/apidocs/deploy-api).
+* We have aggregated the health icons for the acceptance and test environments in the **Nodes** dashboard and **Company Admin** screen.
 
 ![](attachments/CPHealthIcon.png)
 
-The health icon will display the health status of the environment that is in the worst condition . This is to prepare for an upcoming release which will support more than three environments per application.
+The health icon will display the health status of the environment that is in the worst condition. This is to prepare for an upcoming release that will support more than three environments per application.
 
 #### Fixes
 
-* We fixed an issue in our alerting infrastructure that prevented some of our Mendix Cloud V4 users from receiving alerts in case if their apps run out of memory.
-* We fixed the problem that caused the Mendix Cloud V4 Metrics legend to remain on screen even if the user navigated to a different page.
-* We fixed health icon statuses of the environments so that they reflect the environment health with minimum delay.
-
+* We fixed the issue in our alerting infrastructure that prevented some Mendix Cloud V4 users from receiving alerts when their apps ran out of memory.
+* We fixed the problem that caused the Mendix Cloud V4 **Metrics** legend to remain on the screen even if the user navigated to a different page.
+* We fixed the health icon statuses of the environments so that they reflect the environment health with minimum delay.
 
 ### May 23rd, 2018
 

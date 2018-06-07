@@ -9,7 +9,11 @@ title: "Platform Portal"
 #### Improvements
 
 * Introducing Scaling API for Mendix Cloud V4: Now it is possible to scale Mendix Cloud V4 applications via Deploy API. For instructions refer to documentation [here](https://docs.mendix.com/apidocs-mxsdk/apidocs/deploy-api "Deploy API").
-* We have made improvements to Cloud Portal infrastructure for the upcoming releases to support more than three environments per application.
+* We have aggregated the health icons for the acceptance and test environments in the Nodes Dashboard and in the Company Admin screen.
+
+![](attachments/CPHealthIcon.png)
+
+The health icon will display the health status of the environment that is in the worst condition . This is to prepare for an upcoming release which will support more than three environments per application.
 
 #### Fixes
 

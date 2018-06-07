@@ -1056,7 +1056,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 ### 3.19.1 Description
 
-Scale memory and instances of an environment. Only the environments that run a package that has Mendix Runtime Version 7 or above will give the chance to spread the total memory over multiple instances. The environments with older runtime version packages can only be scaled horizontally. If the deployed package has an older runtime version than Mendix 7 can be scaled horizontally (1 fixed instance, memory amount is adjustable).
+Scale memory and instances of an environment. Only those environments that run a package that has Mendix Runtime version 7 or higher will make it possible to spread the total memory over multiple instances. Environments with older Runtime version packages can only be scaled horizontally. If the deployed package has a Runtime version older than Mendix 7, it can be scaled horizontally (1 fixed instance, memory amount is adjustable).
 
 ```bash
 HTTP Method: POST

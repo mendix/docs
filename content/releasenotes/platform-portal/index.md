@@ -3,22 +3,23 @@ title: "Platform Portal"
 ---
 
 ## 2018
+
 ### June 11th, 2018
 
 #### Improvements
 
-* We have added alerts when an application runs out of memory or otherwise unexpectedly crashes.
+* We have added alerts for when an application runs out of memory or otherwise unexpectedly crashes.
 
 ### June 8th, 2018
 
 #### Improvements
 
 * We have introduced scaling via API for Mendix Cloud V4. It is now possible to scale Mendix Cloud V4 applications via the Deploy API. For instructions, see the [Deploy API](../../apidocs-mxsdk/apidocs/deploy-api).
-* We have aggregated the health icons for the acceptance and test environments in the **Nodes** dashboard and **Company Admin** screen.
+* We have aggregated the health icons for the acceptance and test environments in the **Nodes** dashboard and **Company Admin** screen.<br />
 
-![](attachments/CPHealthIcon.png)
+	![](attachments/CPHealthIcon.png)<br /> 
 
-The health icon will display the health status of the environment that is in the worst condition. This is to prepare for an upcoming release that will support more than three environments per application.
+	* The health icon will display the health status of the environment that is in the worst condition. This is to prepare for an upcoming release that will support more than three environments per application.
 
 #### Fixes
 

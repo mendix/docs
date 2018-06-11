@@ -10,6 +10,22 @@ These release notes are for the [beta](../beta-features/index) version of the We
 
 ## 2018
 
+### June 11th, 2018
+
+#### New Features
+
+* Elective application upgrade: with the latest release of the Web Modeler, applications created with 7.11 version and above will not auto-upgrade when they are opened in the Web Modeler. Instead, users will receive a prompt to upgrade if it is available, but do not have to select it. This is great because users in the business and IT wanting to leverage both the Web Modeler and the Desktop Modeler can collaborate on the same application.
+
+#### Improvements
+
+* To improve the user experience, we added a pop-up dialog when a user goes offline with information that the internet connection is lost. Once restored, the pop-up message will disappear automatically.
+* The selection of items in the lists that are opened from the left menu bar (e.g. pages, domain models, microflows) has been improved, including the use of arrow-up and arrow-down keys.
+
+#### Fixes
+
+* We fixed an issue when the user ended up in read-only mode after refreshing.
+* We fixed an issue when the single-key shortcuts were triggered by pressing Ctrl+shortcut or Cmd+shortcut (for example, the **Checks** panel was opened when pressing Ctrl+C instead of pressing C).
+
 ### June 4th, 2018
 
 #### New Features

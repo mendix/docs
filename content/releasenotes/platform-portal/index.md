@@ -4,6 +4,12 @@ title: "Platform Portal"
 
 ## 2018
 
+### June 11th, 2018
+
+#### Improvements
+
+* We have added alerts for when an application runs out of memory or otherwise unexpectedly crashes.
+
 ### June 8th, 2018
 
 #### Improvements

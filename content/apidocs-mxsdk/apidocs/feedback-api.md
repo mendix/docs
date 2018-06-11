@@ -86,7 +86,7 @@ This microflow retrieves all feedback items for the project which satisfy the Is
 
 * Return value – List of Issue
 
-### Microflow GetFeedbackItems
+### Microflow GetSingleFeedbackItem
 
 This microflow retrieves a single feedback item by ID.
 

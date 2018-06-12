@@ -65,7 +65,7 @@ To add a new environment, follow these steps:
 
 2.  Set the following parameters:
 
-		| Field | Description |
+	| Field | Description |
 | :--- | :--- |
 | **Name** | The name of the application. Using the name of the application is advised. |
 | **URL** | The URL of the actual Mendix application to test. |
@@ -89,7 +89,7 @@ To add a new Selenium hub, follow these steps:
 2. Click the provider you use.
 3.  Set the following parameters:
 
-		| Field | Description |
+	| Field | Description |
 | :--- | :--- |
 | **Name** | The name of the Selenium hub. You can give it any name. |
 | **Username** | The username of your selenium provider account. This can be different from your login name. |
@@ -226,7 +226,7 @@ To create a test suite, follow these steps:
 
       ![](attachments/getting-started-2/create-new-test-suite.png)
 
-5. The **Test Suite** page looks similar to the **Test Case** page, but with fewer options. The **Test Suite** page also displays the following buttons:
+5.  The **Test Suite** page looks similar to the **Test Case** page, but with fewer options. The **Test Suite** page also displays the following buttons:
 
       * **Parallel** - executes the test steps at same time, depending on your selenium settings.
       * **Sequential** - executes the test steps one at a time, like a test case.

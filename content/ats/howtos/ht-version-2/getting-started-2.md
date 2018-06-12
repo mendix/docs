@@ -31,7 +31,7 @@ You add users to ATS by inviting them to your Mendix app project. For more infor
 
 ## 3 Configuring Your App
 
-When you log in to ATS, you see the **My Apps** page. An app is a folder in which all the data related to a specific application is saved and managed. You must click your app to gain access to the **test settings**.
+When you [log in to ATS](https://ats.mendix.com), you see the **My Apps** page. An app is a folder in which all the data related to a specific application is saved and managed. You must click your app to gain access to the **test settings**.
 
 ![](attachments/getting-started-2/my-apps-page.png)
 

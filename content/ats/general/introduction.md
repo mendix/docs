@@ -5,7 +5,7 @@ category: "General"
 
 ## 1 ATS Start Page
 
-When you log in to the Application Test Suite (ATS) you see the **My apps** page. This page displays all the Mendix apps you are a member of and that have an ATS license. Every member of the team in your app has access to ATS.
+When you [log in to Application Test Suite (ATS)](https://ats.mendix.com), you see the **My apps** page. This page displays all the Mendix apps you are a member of and that have an ATS license. Every member of the team in your app has access to ATS.
 
 ![The My apps page](attachments/introduction/my-apps.png)
 
@@ -22,6 +22,7 @@ If you already have some active test cases in your **ATS app**, the dashboard wi
 ![ATS app dashboard](attachments/introduction/dashboard.png)
 
 The dashboard can be divided into four parts:
+
 * Current state chart
 * 7-Day history
 * Test case treeview

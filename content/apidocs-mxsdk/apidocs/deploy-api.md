@@ -216,7 +216,10 @@ List of objects with the following key-value pairs:
 
 *   _Status_ (String): Status of the environment. Possible values: Empty, Stopped, Running
 *   _Url_ (String): URL to access your application.
-*   Mode (String): Mode of the environment. Possible values: Test, Acceptance, Production.
+*   _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production.
+*   _ModelVersion_ (String): The version number of the package deployed in your environment.
+*   _MendixVersion_ (String): The Mendix version number of the package deployed in your environment.
+*   _Production_ (Boolean): A flag indicating if this environment is a production environment.
 
 #### 3.4.3.1 Example
 
@@ -225,12 +228,19 @@ List of objects with the following key-value pairs:
     {
         "Status" :  "Stopped" ,
         "Mode" :  "Acceptance",
-        "Url" :  "https://calc-accp.mendixcloud.com
+        "Url" :  "https://calc-accp.mendixcloud.com",
+        "ModelVersion" :  "1.1.0.253",
+        "MendixVersion" :  "6.10.10",
+        "Production" :  "false"
+
     },
     {
         "Status" :  "Stopped" ,
         "Mode" :  "Production",
-        "Url" :  "https://calc.mendixcloud.com"
+        "Url" :  "https://calc.mendixcloud.com",
+        "ModelVersion" :  "175.0.0.3702",
+        "MendixVersion" :  "6.10.12",
+        "Production" :  "false"
     }
 ]
 ```
@@ -270,6 +280,10 @@ An object with the following key-value pairs:
 *   _Status_ (String): Status of the environment. Possible values: Empty, Stopped, Running
 *   _Url_ (String): URL to access your application.
 *   _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production.
+*   _ModelVersion_ (String): The version number of the package deployed in your environment.
+*   _MendixVersion_ (String): The Mendix version number of the package deployed in your environment.
+*   _Production_ (Boolean): A flag indicating if this environment is a production environment.
+
 
 #### 3.5.3.1 Error Codes
 
@@ -285,7 +299,10 @@ An object with the following key-value pairs:
 {
      "Status" :  "Stopped" ,
      "Mode" :  "Acceptance",
-     "Url" :  "https://calc-accp.mendixcloud.com"
+     "Url" :  "https://calc-accp.mendixcloud.com",
+     "ModelVersion" :  "1.1.0.253",
+     "MendixVersion" :  "6.10.10",
+     "Production" :  "false"
 }
 ```
 
@@ -1035,3 +1052,65 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
     "ModelVersion": "1.0.11.50"
 }
 ```
+## 3.19 Scaling Environments (Mendix Cloud v4 Only)
+
+### 3.19.1 Description
+
+Scale memory and instances of an environment. Only those environments that run a package that has Mendix Runtime version 7 or higher will make it possible to spread the total memory over multiple instances. Environments with older Runtime version packages can only be scaled horizontally. If the deployed package has a Runtime version older than Mendix 7, it can be scaled horizontally (1 fixed instance, memory amount is adjustable).
+
+```bash
+HTTP Method: POST
+URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/scale
+```
+
+### 3.19.2 Request
+
+#### 3.19.2.1 Parameters
+
+*   _AppId_ (String): Subdomain name of an app.
+*   _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production.
+
+#### 3.19.2.2 Example
+
+```bash
+POST /api/1/apps/calc/environments/acceptance/scale/0c982ca3-621f-40e9-9c6e-96492934170a HTTP/ 1.1
+Host: deploy.mendix.com
+
+Content-Type: application/json
+Mendix-Username: richard.ford51@example.com
+Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
+
+{ 
+	Instances: 2,
+	MemoryPerInstance: 2048,
+}
+```
+
+### 3.19.3 Output
+
+#### 3.19.3.1 Error Codes
+
+| HTTP Status | Error code | Description |
+| --- | --- | --- |
+| 400 | INVALID_REQUEST | You have allocated more memory than is available under your plan. Please contact support to upgrade your plan. |
+| 400 | INVALID_REQUEST | Memory per instance cannot be smaller than 1024MB.|
+| 400 | NOT_ALLOWED| Horizontal scaling (to multiple instances) is only available for apps with Mendix version >=7. Please upgrade to activate this functionality. |
+| 400 | NOT_ALLOWED| Scaling is only available for paid apps on Mendix Cloud V4. Please contact support to upgrade to the V4 Cloud to access this functionality. |
+| 404 | ENVIRONMENT_NOT_FOUND | Environment not found. |
+
+#### 3.19.3.2 Example
+
+```bash
+{
+    "Status": "Running",
+    "Instances": 2,
+    "Mode": "Acceptance",
+    "Production": false,
+    "MemoryPerInstance": 2048,
+    "TotalMemory": 8192,
+    "ModelVersion": "1.1.0.253",
+    "MendixVersion": "7.5.0",
+    "Url": "https://calc.mendixcloud.com"
+}
+```
+

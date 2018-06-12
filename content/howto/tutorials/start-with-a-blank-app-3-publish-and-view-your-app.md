@@ -7,7 +7,7 @@ tags: ["build", "app", "developer portal", "web modeler"]
 
 ## 1 Introduction
 
-Now that you've gotten started with your app and have worked with some of the design options in the theme customizer, it's time to publish your app.
+Now that you've gotten started with your app and have worked with some of the design options in the Theme Customizer, it's time to publish your app.
 
 **This how-to will teach you how to do the following:**
 

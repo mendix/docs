@@ -14,9 +14,26 @@ If you're using the advanced flow, you can get the latest version of the Hybrid 
 
 ## 2018
 
+### April 20th, 2018 (2.0.5 / 2.0.1)
+
+* We improved the styling of the loader and login screens by making the text on those pages thicker.
+
+### April 19th, 2018 (2.0.4 / 2.0.1)
+
+* We improved the styling of the loader screen.
+* We added backwards compatibility with respect to quality vs. density properties (for Android only).
+
+### March 23rd, 2018 (2.0.3 / 2.0.1)
+
+This patch fixes the issue with an upstream dependency (`com.google.android.gms:play-services-gcm`) that was updated by Google. The issue prevented building *.apk* files, both locally and on Phonegap Build.
+
+### March 16th, 2018 (2.0.2 / 2.0.0)
+
+This patch fixes the issue with the generation of the `index.html` file.
+
 ### March 13th, 2018 (2.0.1 / 2.0.0)
 
-This patch release fixes an issue with an upstream dependency (`com.android.support:support-v4`) that was updated by Google. The issue prevents building *.apk* files, both locally and on Phonegap Build.
+This patch fixes the issue with an upstream dependency (`com.android.support:support-v4`) that was updated by Google. The issue prevented building *.apk* files, both locally and on Phonegap Build.
 
 ### March 9th, 2018 (2.0.0 / 2.0.0)
 

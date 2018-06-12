@@ -26,11 +26,11 @@ Applying CBD in a development process requires taking some trade-offs or risks i
 *   **Time to Market** – CBD generally slows initial time to market as it requires investment in upfront design and higher level of involvement of architect. This is generally compensated for by lower maintenance cost.
 *   **Initial Development Cost** – The design, development and testing of interfaces between components comes with associated cost that is typically not included in monolithic projects. However, this too will contribute to lower subsequent maintenance cost.
 *   **Risk of over-engineering** – If the need for CBD isn’t clear in the project up front, there is a risk of investing in a solution for a problem that will not manifest. This should be evaluated with the project architect in the project initiation phase.
-*   **Risk of missing out on crucial details** - Small functional details may have huge architectural implications and could be overlooked. This is not always preventable in an agile project, since details and requirements can pop up at any point during the development cycle. Continuous involvement of the project architect is essential to mitigate this risk.
+*   **Risk of missing out on crucial details** - Small functional details may have huge architectural implications and could be overlooked. This is not always preventable in an Agile project, since details and requirements can pop up at any point during the development cycle. Continuous involvement of the project architect is essential to mitigate this risk.
 
 ### Mendix Recommended Approach
 
-The recommended approach to apply Component Based Development in agile Mendix projects is outlined by the points below.
+The recommended approach to apply Component Based Development in Agile Mendix projects is outlined by the points below.
 
 *   Apply KISS principle – Keep it Simple Stupid
 *   Apply CBD when triggered by a real demand

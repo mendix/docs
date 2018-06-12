@@ -4,31 +4,71 @@ title: "Platform Portal"
 
 ## 2018
 
-### May 8th
+### June 11th, 2018
 
 #### Improvements
-- You can now assign colors to your labels on the Stories page: Mendix Blue, Firetruck Red, Goldfish Orange, and Tulip Green.
-- The Story Details page now has a new tab that shows the revisions related to the story.
+
+* We have added alerts for when an application runs out of memory or otherwise unexpectedly crashes.
+
+### June 8th, 2018
+
+#### Improvements
+
+* We have introduced scaling via API for Mendix Cloud V4. It is now possible to scale Mendix Cloud V4 applications via the Deploy API. For instructions, see the [Deploy API](../../apidocs-mxsdk/apidocs/deploy-api).
+* We have aggregated the health icons for the acceptance and test environments in the **Nodes** dashboard and **Company Admin** screen.<br /> 
+
+	![](attachments/CPHealthIcon.png)<br /> 
+
+	* The health icon will display the health status of the environment that is in the worst condition. This is to prepare for an upcoming release that will support more than three environments per application.
 
 #### Fixes
-- On the Feedback Details page, the "Move to app" drop-down is visible again.
-- Special characters like "&" are now displayed correctly in the subject of Buzz Notification emails.
-- The green call-to-action button in Buzz notification emails will now also work in Outlook for Windows (ticket #63452).
-- If there's a lot of activity in a Buzz thread, each notification email now displays the correct thread history, instead of each email containing the same comments.
-- Fixed two documentation links.
 
+* We fixed the issue in our alerting infrastructure that prevented some Mendix Cloud V4 users from receiving alerts when their apps ran out of memory.
+* We fixed the problem that caused the Mendix Cloud V4 **Metrics** legend to remain on the screen even if the user navigated to a different page.
+* We fixed the health icon statuses of the environments so that they reflect the environment health with minimum delay.
+
+### May 23rd, 2018
+
+#### Improvements
+
+* Company Admins can now export three reports to Excel: active users, app permissions of active users, and apps. This enables managing users and their permissions at scale.
+
+#### Fixes
+
+* The **Revisions** tab on the **Story Details** page now shows the avatar of the committer instead of the app's avatar.
+
+### May 22nd, 2018
+
+#### Fixes
+
+* We fixed the bug in Mendix Cloud v4 that prevented users from using nested custom domains. Now you can have one domain (for example, `app.example.com`) and one on `microservice.app.example.com`.
+
+### May 8th, 2018
+
+#### Improvements
+
+* You can now assign colors to your labels on the **Stories** page: Mendix Blue, Firetruck Red, Goldfish Orange, and Tulip Green.
+* The **Story Details** page now has a new tab that shows the revisions related to the story.
+
+#### Fixes
+
+* On the **Feedback Details** page, the **Move to app** drop-down menu is visible again.
+* Special characters like **&** are now displayed correctly in the subject of Buzz notification emails.
+* The green call-to-action button in Buzz notification emails will now also work in Outlook for Windows. (Ticket 63452).
+* If there is a lot of activity in a Buzz thread, each notification email now displays the correct thread history, instead of each email containing the same comments.
+* We fixed two documentation links.
 
 ### May 5th, 2018
 
 #### Improvements
 
-* It’s now possible to add a comment as an optional parameter to the backup while generating one via REST API.
-* It’s now possible to see the Mendix Runtime version in response to "Retrieve Environment Package" API call.
+* It is now possible to add a comment as an optional parameter to the backup while generating one via REST API.
+* It is now possible to see the Mendix Runtime version in response to a "Retrieve Environment Package" API call.
 
 #### Fixes
 
-* We fixed an issue which prevented our Mendix Cloud v4 users to upload and restore big backups (larger than ~30GB) to their environments. It has been tested with the archives (~90GBs) on Mendix Cloud v4.
-* We addressed and fixed an issue that caused Mendix Cloud v4 users in the Asia Pacific time zone to get wrong timestamps when they downloaded daily logs.
+* We fixed the issue that prevented our Mendix Cloud v4 users from uploading and restoring big backups (larger than ~30GB) to their environments. It has been tested with the archives (~90GBs) on Mendix Cloud v4.
+* We addressed and fixed the issue that caused Mendix Cloud v4 users in the Asia Pacific time zone to receive the wrong timestamps when they downloaded daily logs.
 
 ### April 9th, 2018
 

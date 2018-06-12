@@ -122,7 +122,9 @@ This is done from the **Environments** page of the Developer Portal:
 
 9.  Select **File Store Enabled** if your application makes use of FileDocument or Image objects. Other sorts of object do not need File Store to be enabled.
 
-10.  Set a **Subscription Secret** (required). This secret is associated with your Mendix production license. By entering the subscription secret, your application will run in this environment as production. If the subscription secret is invalid, your app will still run, but will restart every 1-2 hours and have a limitation of six named users.
+10. Set a **Subscription Secret** (required). This secret is associated with your Mendix production license. By entering the subscription secret, your application will run in this environment as production. If the subscription secret is invalid, your app will still run, but will restart every 1-2 hours and have a limitation of six named users.
+
+    {{% alert type="info" %}}If you do not have a subscription secret, create a support ticket with Mendix Support and they will send you one.{{% /alert %}}
 
 11. Click **Next** to create the environment and finish the setup.
 
@@ -260,7 +262,19 @@ If you do not select **Remove resources** in this dialog, the resources will be 
 
 Click **Change** to change the Development Mode toggle. Set it to Yes if you want the application to run with only prototype security, or completely without security. This is not recommended for acceptance or production environments.
 
-#### 7.1.6 Change License Subscription ID
+#### 7.1.6 Scaling
+
+If the app is started or stopped (that is, the environment has been created successfully and the app has been deployed without errors) then options to scale the app are available.
+
+Use the **Instances** slider to change the number of instances of the app which can run. This allows you to scale the app horizontally to support a large numbers of users, or to improve the app's resilience by allowing it to continue to run if there are any issues with one of the instances.
+
+Use the **Memory per instance** slider to change the amount of memory allocated to each instance of the app ("user's current memory").
+
+Click **Scale Now** to apply the new settings. If the application is running, it will be stopped and restarted to apply the settings. If it is stopped, the new settings will be used the next time the application is started.
+
+Click **Reset** to return the values to their values before the sliders were moved.
+
+#### 7.1.7 Change License Subscription ID
 
 Click **Change** to change the subscription secret which is the code which registers your production Mendix license to this environment.
 

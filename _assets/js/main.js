@@ -26,7 +26,7 @@
       Menu structure
     ******************/
     function normalizeId(id) {
-      return id.replace(/[ '"\+\-&]+/g, "-").replace(/[\(\)]/g, '').toLowerCase();
+      return id.replace(/[ '"\+\-&\.]+/g, "-").replace(/[\(\)]/g, '').toLowerCase();
     }
 
     function getRandom(max) {

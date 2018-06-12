@@ -21,6 +21,8 @@ You can easily expose an entity via REST by right-clicking the entity in the [do
 
 To publish a microflow as a REST operation, right-click anywhere in the editor and select [Publish as REST service operation](publish-microflow-as-rest-operation).
 
+To publish a microflow as a REST operation, right-click anywhere in the editor and select [Publish as REST service operation](publish-microflow-as-rest-operation).
+
 ## <a name="authorization"></a>3 Authentication
 
 Published REST services are secured with basic authentication. This is automatically applied when you set the [security level](project-security) of your app to **Prototype / demo**  or **Production**. 

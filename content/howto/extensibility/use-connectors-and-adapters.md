@@ -36,7 +36,7 @@ This module provides access to Amazon S3 inside of Mendix.
 
 [![](attachments/18448690/salesforce.png)](https://appstore.home.mendix.com/link/app/1424/Mendix/Salesforce.com-Connector)
 
-This module enables building Mendix apps on top of your [Salesforce](http://Salesforce.com) environment in minutes. Get the rapid development and deployment power of Mendix on top of your entire existing Salesforce architecture. This adapter quickly and easily allows you to communicate with standard or custom objects in your company's Salesforce instance.
+This module enables building Mendix apps on top of your [Salesforce](http://Salesforce.com) environment in minutes. Get the rapid development and deployment power of Mendix on top of your entire existing Salesforce architecture. This connector quickly and easily allows you to communicate with standard or custom objects in your company's Salesforce instance.
 
 [Click to download in the Mendix App Store.](https://appstore.home.mendix.com/link/app/1424/Mendix/Salesforce.com-Connector)
 

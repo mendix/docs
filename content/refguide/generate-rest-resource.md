@@ -1,5 +1,5 @@
 ---
-title: "Generate REST Resource"
+title: "Generate a REST Resource"
 parent: "published-rest-services"
 ---
 
@@ -11,21 +11,19 @@ This feature was introduced in version 7.16.0.
 
 ## 1 Introduction
 
-You can publish a REST resource with basic operations based on an entity by right-clicking on an entity in the domain model, and selecting **Expose as REST resource**. Alternatively, you can drag an entity or message definition onto the list of resources of a published REST service.
+You can publish a REST resource with basic operations based on an entity by right-clicking an entity in the domain model and selecting **Expose as REST resource**. Alternatively, you can drag an entity or message definition onto the list of resources of a published REST service. This page describes the options you have once you perform one of these actions.
 
-This page describes the options that you have once you do that.
+## 2 REST Service
 
-## 2 REST service
-
-This only shows up when you click **Expose as REST resource** in the domain model. Choose a service to generate the resource and operation in.
+This only shows up when you click **Expose as REST resource** in the domain model. Next, choose a service in which to generate the resource and operation.
 
 ## 3 General
 
-### 3.1 Resource name
+### 3.1 Resource Name
 
 Type the name of the resource that you want to publish.
 
-### 3.2 Key attribute
+### 3.2 Key Attribute
 
 To be able to create a **Get by key** or a **Delete** operation, there needs to be a unique attribute on the entity. Select that attribute here.
 
@@ -33,18 +31,18 @@ To be able to create a **Get by key** or a **Delete** operation, there needs to 
 
 Check the operations that you want to generate:
 
-* **Get all** - Allows clients to get all objects
-* **Get by key** - Allows clients to get an object, given its key
-* **Post** - Allows clients to add a new object
-* **Delete** - Allows clients to delete objects
+* **Get all** – allows clients to get all the objects
+* **Get by key** – allows clients to get an object, given its key
+* **Post** – allows clients to add a new object
+* **Delete** – allows clients to delete objects
 
-When you click **OK**, the following gets created:
+When you click **OK**, the following items are created:
 
 * A resource
 * All the operations that you selected
 * A microflow for each operation
 * A message definition
-* An import mapping (for the *Post* operation)
-* An export mapping (for the *Get all* and *Get by key* operations)
+* An import mapping (for the **Post** operation)
+* An export mapping (for the **Get all** and **Get by key** operations)
 
 If you have already created a message definition for the entity, that message definition will be reused. Existing import and export mappings based on that message definition will also be reused.

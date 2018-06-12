@@ -22,6 +22,7 @@ If you already have some active test cases in your **ATS app**, the dashboard wi
 ![ATS app dashboard](attachments/introduction/dashboard.png)
 
 The dashboard can be divided into four parts:
+
 * Current state chart
 * 7-Day history
 * Test case treeview

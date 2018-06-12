@@ -1,5 +1,5 @@
 ---
-title: "Generate a REST Resource"
+title: "Generating a REST Resource"
 parent: "published-rest-services"
 ---
 

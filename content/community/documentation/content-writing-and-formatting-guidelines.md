@@ -59,15 +59,15 @@ Need an extra hand with spelling and grammar? Load your article into [Hemmingway
 
 For details on the Markdown syntax, see the [GitHub Guide to Mastering Markdown](https://guides.github.com/features/mastering-markdown/).
 
-### 4.2 Text Styling
+### 4.1 Text Styling
 
 Use **bold** when identifying buttons, windows, fields, and other entities that appear in the UI. For example: "Add a **Retrieve** activity to the microflow."
 
 Use *italics* when the user needs to enter text. For example: "In the **Name** field, enter *Customer_NewEdit_Commit*."
 
-### 4.3 Embedding a Modelshare
+### 4.2 Embedding a Model Share
 
-To embed a modelshare in the documentation, paste the `iframe`. For example:
+To embed a model share in the documentation, paste the iframe, for example:
 
 ```html
 <iframe width='100%' height='491px' frameborder='0' src='https://modelshare.mendix.com/models/fb092960-6fc1-41c0-bb64-d9e70c012bc5/save-example?embed=true' allowfullscreen></iframe>
@@ -77,11 +77,11 @@ This will render as:
 
 <iframe width='100%' height='491px' frameborder='0' src='https://modelshare.mendix.com/models/fb092960-6fc1-41c0-bb64-d9e70c012bc5/save-example?embed=true' allowfullscreen></iframe>
 
-### 4.4 Specific Formatting Tips
+### 4.3 Specific Formatting Tips
 
 Some tips to consider when formatting Markdown are listed below.
 
-#### 4.4.1 Note Styles
+#### 4.3.1 Note Styles
 
 To format note styles, implement the code below.
 

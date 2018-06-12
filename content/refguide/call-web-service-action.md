@@ -39,7 +39,7 @@ If you override the location, this property defines the location where to call t
 
 ### 3.1 Use Timeout on Request
 
-Can be used to throw an exception when the web service takes too long to respond after connecting. After a set amount of time an exception will be thrown and the microflow will rollback or go into your custom error handler. Note that this does not change the connection timeout.
+This can be used to throw an exception when the web service takes too long to respond after connecting. After a set amount of time, an exception will be thrown and the microflow will roll back or go into your custom error handler. Note that this does not change the connection timeout.
 
 _Default value:_ No
 

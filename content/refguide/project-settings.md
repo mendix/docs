@@ -162,7 +162,7 @@ This setting was added in version 7.15
 
 {{% /alert %}}
 
-We optimize the way web services are called, which means that you can use custom proxy settings for each web service call. However, this implementation does not support schema validation yet. Neither does it support complex schemas that use a policy reference with an algorithm suite. This configuration option allows you to use the old implementation, in case you need one of these features.
+The way web services are called is optimized, which means that you can use custom proxy settings for each web service call. However, this implementation does not support schema validation, nor does it support complex schemas that use a policy reference with an algorithm suite. This configuration option allows you to use the old implementation, in case you need one of these features.
 
 ## 4 Modeler
 

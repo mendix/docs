@@ -27,6 +27,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Select and deploy the app to a SAP account and subaccount where you have authority to configure security
 * Setup the app with the following two **User roles** in **Project ... > Security**: Supervisor and Inspector
 * Give each role a different starting page so that the effect of the SSO can be seen
+* 
 
 ## 3 Getting the SAP XSUAA Connector Module
 
@@ -119,8 +120,18 @@ To accomplish this, follow these steps:
 Your app is now configured to use an IDP, but you now need to configure the IDP and allocate users to roles. This is performed in the [SAP Cloud Platform Cockpit](https://account.hana.ondemand.com/cockpit#/home/allaccounts).
 
 {{% alert type="info" %}}
-Your note
+Before configuring the IDP, you must first deploy your app to the SAP Cloud Portal. This will expose the user roles in the app to the security configuration tools in the SAP Cloud Platform Cockpit.
 {{% /alert %}}
+
+The diagram below shows the relationship between the security structures in your Mendix app (blue), the SAP Cloud Platform app environment (yellow), SAP User Account and Authentication (orange) and the IDP (green).
+
+![](attachments/use-sap-xsuaa-connector/xsuaa-diagram.png)
+
+When your app is deployed to the SAP Cloud Platform, each **User Role** in the Mendix app is exposed as a **Scope** in the SAP environment. Each Scope is mapped to a single **Role Template** 
+
+In the SAP Cloud Platform Cockpit, you need to configure how the 
+
+
 
 ## 5 Related Content
 

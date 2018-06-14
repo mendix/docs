@@ -20,7 +20,7 @@ title: "Platform Portal"
 
 #### Improvements
 
-* We have added alerts for when an application runs out of memory or otherwise unexpectedly crashes.
+* We have added alerts for when an application runs out of memory or otherwise unexpectedly crashes. This is only applicable for Mendix Cloud V4 deployments.
 
 ### June 8th, 2018
 

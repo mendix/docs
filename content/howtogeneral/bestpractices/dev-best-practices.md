@@ -1,5 +1,5 @@
 ---
-title: "Mendix Development Best Practices"
+title: "Best Practices for Mendix Development"
 category: "Best Practices"
 ---
 

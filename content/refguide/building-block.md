@@ -1,5 +1,5 @@
 ---
-title: "Building block"
+title: "Building Block"
 parent: "pages"
 ---
 

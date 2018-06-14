@@ -95,7 +95,7 @@ To create an association, draw a line from the border of one entity to the borde
 
 This section will explain how to change the multiplicity of associations. 
 
-By default, the domain model editor creates an association with a 1-to-many multiplicity. In the above case, a customer can have multiple orders, and an order can only have one customer. If the desired multiplicity is not available in the properties list you have probably drawn the association the wrong way, so you should remove the association and draw it again the other way around.
+By default, the domain model editor creates an association with a one-to-many multiplicity. In the above case, a customer can have multiple orders, and an order can only have one customer. If the desired multiplicity is not available in the properties list you have probably drawn the association the wrong way, so you should remove the association and draw it again the other way around.
 
 To change the multiplicity, double-click the **Order_Customer** association in order to open its **Properties** dialog box:
 

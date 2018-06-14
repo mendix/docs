@@ -166,7 +166,7 @@ refguide:
     - "IBM"
     - "Mobile"
 howtogeneral:
-  space: "General How-to's"
+  space: "Best Practices & Support"
   priority: 6
   menu_categories:
     - "Tips & Tricks"

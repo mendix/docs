@@ -1,7 +1,9 @@
 ---
 title: "Execute an SQL Statement on an External Database"
-category: "Best Practices"
+category: "Integration"
 ---
+
+## 1 Introduction
 
 The Mendix Platform offers many ways to integrate with external data, but integrating with external databases has not been a seamless experience until now. The **Database connector** module can be used to seamlessly connect to external databases without limiting you in your choice of database or SQL dialect, enabling you to incorporate your external data directly in your Mendix application.
 This document will focus on executing an SQL (_Structured Query Language_) _Statement_ on **relational external databases**.
@@ -14,7 +16,7 @@ JDBC (_Java Database Connectivity_) API, a standard Java API, is used when this 
 *   How to execute SQL statements on relational external databases with the help of Database connector module.
 *   How to configure 'Execute statement' action.
 
-## 1. Prerequisites for Execute statement action
+## 2 Prerequisites for the Execute Statement Action
 
 Before you can start with this how-to, please make sure you have completed the following prerequisites.
 
@@ -25,11 +27,11 @@ Before you can start with this how-to, please make sure you have completed the f
 *   The SQL **statement** to execute, relative to the database type (_SQL dialect_ differs for different databases).
 *   The JDBC driver jar, for the database you want to connect to.
 
-## 2\. Preparation
+## 3 Preparation
 
 The JDBC driver jars, for the databases you want to connect to, must be placed inside the userlib directory of your Mendix application. So if you want to connect to Amazon RDS PostgreSQL database (For e.g. `jdbc:postgresql://xyz-rds-instance.ccnapcvoeosh.eu-west-1.rds.amazonaws.com:5432/postgres`), you need to place PostgreSQL Jdbc driver jar inside the userlib folder.
 
-## 3\. Using Execute statement action in a microflow
+## 4 Using Execute Statement Action in a Microflow
 
 1. Look for the Database connector in the Toolbox.
 2. Drag and drop the 'Execute statement' action to your microflow.
@@ -43,9 +45,9 @@ The JDBC driver jars, for the databases you want to connect to, must be placed i
 
 ![](attachments/19203493/19399146.png)
 
-**The Execute statement action's result is either an Integer or a Long value which usually represents the amount of affected rows.**
+The Execute statement action's result is either an Integer or a Long value which usually represents the amount of affected rows.
 
-## 4\. Remarks
+## 5 Remarks
 
 *   This database connector can be used for CREATE, INSERT, UPDATE, STORED PROCEDURE, DELETE or DDL SQL statements.
 *   This database connector should not be used for SELECT SQL queries.
@@ -54,6 +56,6 @@ The JDBC driver jars, for the databases you want to connect to, must be placed i
 
 *   Proper security must be applied as this action can allow SQL Injection in your Mendix application.
 
-## 5\. Related content
+## 6 Related Content
 
 *   [How to execute an SQL statement on an external database](how-to-execute-an-sql-statement-on-an-external-database)

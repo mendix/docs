@@ -1,13 +1,13 @@
 ---
-title: "Inheritance vs. 1-1 Association"
-category: "Best Practices"
+title: "Inheritance vs. One-to-One Association"
+parent: "associations"
 ---
 
-# Inheritance vs. 1-1 Association
+# Inheritance vs. One-to-One Association
 
-Every Mendix developer has to choose on a daily basis whether or not he wants to use inheritance. It starts the moment you initiate a new project; how do you want to setup your users? Are you going to keep using the already available Account entity in the Administration module? Or are you going to work with separate entities with a 1-1 association to the user account? Or are you going to add (multiple) entities that inherit from System.User?
+Every Mendix developer has to choose on a daily basis whether or not he wants to use inheritance. It starts the moment you initiate a new project; how do you want to setup your users? Are you going to keep using the already available Account entity in the Administration module? Or are you going to work with separate entities with a one-to-one association to the user account? Or are you going to add (multiple) entities that inherit from **System.User**?
 
-When defining closely related structures, it can be difficult to decide on the best architecture. Should the entity inherit from my structure or do I rather want a 1-1 association? You should consider both options. Both options can have a huge impact on the performance of the application or the speed of development. 
+When defining closely related structures, it can be difficult to decide on the best architecture. Should the entity inherit from my structure or do I rather want a one-to-one association? You should consider both options. Both options can have a huge impact on the performance of the application or the speed of development. 
 
 ## Generalization, Specialization and Inheritance in Mendix
 
@@ -29,11 +29,11 @@ When changing an object, the Mendix Platform will write those changes to the dat
 
 When you change an object with inheritance the platform will potentially prevent all the retrieves on all entities from the hierarchy, since it will look at the super class, which is required for all retrieves.
 
-#### **1-1 Association**
+#### One-to-One Association
 
 When changing an object, none of the associated objects will be changed. There are two exceptions to this rule: of course if you change the associated object in an object event, or because associated objects are being 'auto-committed', see [Object Events, How do they work](/howto6/working-with-object-events). 
 
-Whenever you have a high number of write transactions in your application, it is far better to choose for a 1-1 association, since this limits the number of tables that are being changed/locked during a transaction. However, if you do more inserts than updates it might be worth using inheritance again. Inheritance uses one less table to store the relationship, it doesn't have the association table. Therefore any inserts require 1 indexed table less to be updated.
+Whenever you have a high number of write transactions in your application, it is far better to choose for a one-to-one association, since this limits the number of tables that are being changed/locked during a transaction. However, if you do more inserts than updates it might be worth using inheritance again. Inheritance uses one less table to store the relationship, it doesn't have the association table. Therefore, any inserts require one indexed table fewer to be updated.
 
 ### Retrieving Objects
 
@@ -41,9 +41,9 @@ Mendix is optimized to only retrieve the data that is required for the action th
 
 #### Inheritance
 
-If you retrieve any specializations from the super class the platform will always include the entire hierarchy in the query, in order to guarantee a consistent data structure. I.E. if you have an overview of Adminstration.Account the platform will include the System.User table whether or not you show any System.User attributes, just to make sure that the data is consistent and complete. Both tables have a clustered index on the object id, so joining the information in the database is extremely efficient. 
+If you retrieve any specializations from the super class the platform will always include the entire hierarchy in the query, in order to guarantee a consistent data structure. For example, if you have an overview of **Adminstration.Account**, the platform will include the System.User table whether or not you show any System.User attributes, just to make sure that the data is consistent and complete. Both tables have a clustered index on the object id, so joining the information in the database is extremely efficient. 
 
-#### 1-1 Association
+#### One-to-One  Association
 
 The associated objects will only be retrieved when they are shown in a page. This is less efficient than with inheritance, because the information is retrieved using the association table, but based on how the information is ordered and filtered, it will be far less efficient to join over the association table than over the clustered index that is used with inheritance.
 
@@ -59,13 +59,13 @@ Using inheritance can make your microflows easier to maintain, you can re-use fu
 
 Don't just add inheritance because it is easier, or remove it because it is slower. Especially in scenarios were different object types have to go through a similar process it can be worth it to apply inheritance just so you can re-use functionality and increase the consistency and stability of your application. One place you definitely don't want to use inheritance is in a system with a high transaction volume. Writing and updating records in tables with inheritance is slower than just updating a single table. If there are many new or changed objects loaded through, Excel, web services, or any other integration inheritance can slow the process down significantly. 
 
-### 1-1 Association
+### One-to-One Association
 
-When loading data through an integration, inheritance can improve the development speed, because functionality can be re-used. This is a huge advantage since all future changes only have to be applied in a single place. Inheritance however, could case the slower performance if all the changes can be stored in a separate entity. If it is possible to separate all data in a separate entity, and this information is only used by the application in a limited number of locations, it will be significantly faster to keep a 1-1 entity. 
+When loading data through an integration, inheritance can improve the development speed, because functionality can be re-used. This is a huge advantage since all future changes only have to be applied in a single place. Inheritance however, could case the slower performance if all the changes can be stored in a separate entity. If it is possible to separate all data in a separate entity, and this information is only used by the application in a limited number of locations, it will be significantly faster to keep a one-to-one entity. 
 
 ## Conclusion
 
-This explanation might not have given you an explicit answer to the question on when to use inheritance, but that is because there is no right or wrong answer. Both inheritance and 1-1 associations have their advantages and disadvantages. Based on your needs you need to decide per situation what is best for that entity. Below is a short summary of all the pros and cons for each situation. Based on these criteria you will need to decide for your entity which solution is worth it. 
+This explanation might not have given you an explicit answer to the question on when to use inheritance, but that is because there is no right or wrong answer. Both inheritance and one-to-one associations have their advantages and disadvantages. Based on your needs you need to decide per situation what is best for that entity. Below is a short summary of all the pros and cons for each situation. Based on these criteria you will need to decide for your entity which solution is worth it. 
 
 There are a few situations where a clear answer can be given:
 
@@ -74,11 +74,7 @@ _Never use inheritance for entities with:_
 *   _A high number of transactions on the different sub entities (As a high we consider multiple changes or creates per second)_
 *   _Only a handful common attributes. If you feel that it isn't worth creating associated objects for the information, it isn't worth inheriting either_
 
-_Never use 1-1 association for entities:_
+_Never use one-to-one association for entities:_
 
 *   _That always require the information from the associated objects, and users intensively search and sort on the associated attributes._
 
-## Related Content
-
-* [Best Practices for Component Based Development](best-practices-for-component-based-development)
-* [Development Best Practices](dev-best-practices)

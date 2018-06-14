@@ -3,47 +3,74 @@ title: "Use Any Chart"
 parent: "charts-tutorials"
 ---
 
-TODO follow format https://raw.githubusercontent.com/mendix/docs/development/templates/the-how-to-template.md
+## 1 Introduction
 
-## 1 Any Chart
-With the AnyChart it is possible to build all the chart types that are possible with Plotly.js and it allows you build highly dynamic charts. So if you want to build a 3D chart or have a dynamic set of series, the AnyChart is your friend.
+The basic chart widgets provide the set of easy to configure charts; line, bar, column, pie, heatmap. With the advanced options fine tuning can be done. When the advanced options are not sufficient the `Any Chart` could be used.
 
-### 1.1 Configuration
+With the Any Chart it is possible to build all the chart types that are possible with Plotly.js and it allows you build highly dynamic charts. So, if you want to build a 3D chart or have a dynamic set of series, the An yChart is your friend.
+
+**This how-to will teach you how to do the following:**
+
+* Create line chart with sample data
+* Export data for a chart
+* Fine tune the chart with the run time playground
+
+## 2 Prerequisites
+
+Before starting this how-to, make sure you have completed the following prerequisites:
+
+* Latest Mendix modeler
+* Latest Any Chart widget module from the Mendix App Store
+* Understanding of JSON data structures
+
+## 3 Chart structure
+
 The Any Charts can be configured with a JSON `Data` array and `Layout` object. The configuration can be set statically, via the `Source attribute` or with the `Sample data`. The data of the attribute will be merged into the static settings and will overwrite any common properties. The `Sample data` is for demo purposes at run time when there is no `Source attribute` selected or when rendering sample data in the web modeler preview.
 
-### 1.2 Use building blocks
-[Building blocks](https://docs.mendix.com/refguide/building-block) can provide pre-configured widget. The modules contains various chart samples for a quick start.
+## 4 Create a chart
 
-1. Download the [Any Chart building blocks](https://appstore.home.mendix.com/link/app/106459/Mendix/Any-Chart-Building-blocks-Module) module from the app store into your project
-1. Create a Chart entity
-1. Create a page with a data view and use the Chart entity above as the data source entity
-1. Add the required building block into the data view
-1. Run the project to preview the chart
+To create a line chart with the Any chart widget, follow these steps:
 
-### 1.3 Start from scratch
-1. Select one of the chart samples from the [Any Chart cheat sheet](../../refguide/charts-any-cheat-sheet.md). For example the line chart:  
-`[ { "x": [ 1, 2 ], "y": [ 1, 2 ], "type": "scatter" } ]`
-1. In the modeler, copy the data into the widget tab `Data`, field `Static`
+1. Create a page with a data view (Chart context)
+1. Add the Any Chart widget in the data view
+1. Select one of the chart samples from the [Any Chart cheat sheet](../../refguide/charts-any-cheat-sheet.md####-line-chart). For example the line chart:  
+``` json
+[ { "x": [ 1, 2 ], "y": [ 1, 2 ], "type": "scatter" } ]
+```
+2. In the modeler, copy the data into the Any Chart widget property tab `Data`, field `Static`
 1. Run the project to validate the chart renders correctly
 1. Split the data into static and dynamic parts that are going to be generated from the domain model.  
 Static : `[ { "type": "scatter" } ]` and Sample data `[ { "x": [ 1, 2 ], "y": [ 1, 2 ] } ]`
-1. Run the project to preview the chart
-
 ![Any Chart Configuration](attachments/charts/any-chart-configuration.png)
+1. Run the project to preview the chart
+![Any Chart result](attachments/charts/charts-any-sample.png)
 
-### 1.4 Generating data and layout
-1. Add a `Data` attribute to the Chart entity
+
+## 5 Export data
+
+To generate JSON data for the chart widget, follow these steps:
+
+1. Add a `Data` string (unlimited length) attribute to the Chart (context) entity
 1. In the widget set the `Source attribute` field in the `Data` tab
+![Select data attribute](attachments/charts/any-chart-configuration-attribute.png)
 1. Create a `JSON Structure` and use the `Sample data` as the snippet
+![Create export mapping](attachments/charts/any-chart-json-structure-line-chart-data.png)
 1. Create an `Export Mapping` with the `JSON Structure`
+![Select data structure](attachments/charts/any-chart-json-structure-linechart-export-mapping-select.png)
+![Map objects](attachments/charts/any-chart-json-structure-linechart-export-mapping.png)
 1. Create a microflow that retrieves the data and use the `Export Mapping` to generate a `String Variable`. Store the value in the object attribute that is select as `Source attribute`
+![Export microflow](attachments/charts/any-chart-export-microflow.png)
+![Export microflow](attachments/charts/any-chart-export-microflow-structure.png)
 
 If need be, the layout can also be generated in the same way as the data. In most cases a `Static` layout will suffice.
 
-### 1.5 Runtime preview editor
+## 6 Fine tuning
+
 Editing the JSON configuration in the modeler could be cumbersome. With the live preview editor, developers can directly see the output of their changes. 
 
 The editor is only a playground and no settings are stored. All changes you make in the runtime preview that you wish to persist have to be applied to your data model too.
+
+To fine tuning chart widget configuration, follow these steps:
 
 1. In the `Data` tab, set the `Mode` option to `Development`
 1. Run the project, and open the chart page
@@ -53,6 +80,16 @@ The editor is only a playground and no settings are stored. All changes you make
 1. Copy the new settings and apply them in the modeler
 1. Re-run the project to confirm the change are applied
 
-The [cheat sheet](../../refguide/charts-advanced-cheat-sheet.md) provides a quick help for the most common settings.
+![chart editor](attachments/charts/charts-toggle-editor-open.png)
 
-The full reference is found here: [https://plot.ly/javascript/reference/](https://plot.ly/javascript/reference/).
+## 7 References
+- The properties [Any Chart reference guide](../../refguide/charts-any-configuration.md).  
+- Most common chart type [Any Chart cheat sheet](../../refguide/charts-any-cheat-sheet.md####-line-chart)  
+- The [configuration cheat sheet](../../refguide/charts-advanced-cheat-sheet.md) provides a quick help for the most common settings.  
+- The full JSON reference is found here: [https://plot.ly/javascript/reference/](https://plot.ly/javascript/reference/).
+- Mendix modeler documentation  
+https://docs.mendix.com/refguide/json-structures  
+https://docs.mendix.com/refguide/export-mappings  
+
+## 8 Related Content
+

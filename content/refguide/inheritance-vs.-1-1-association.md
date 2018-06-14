@@ -1,6 +1,6 @@
 ---
 title: "Inheritance vs. One-to-One Association"
-category: "Best Practices"
+parent: "associations"
 ---
 
 # Inheritance vs. One-to-One Association

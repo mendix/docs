@@ -209,10 +209,6 @@ module.exports = {
       to: "/howtogeneral/bestpractices/"
     },
     {
-      from: "/bestpractices/Inheritance+vs.+1-1+association",
-      to: "/howtogeneral/bestpractices/inheritance-vs.-1-1-association"
-    },
-    {
       from: "/bestpractices/Naming+conventions",
       to: "/howtogeneral/bestpractices/dev-best-practices"
     },
@@ -2141,7 +2137,7 @@ module.exports = {
     },
 	{
       from: "/bestpractices/How+to+execute+an+SQL+statement+on+an+external+database",
-      to: "/howto7/integration/how-to-execute-an-sql-statement-on-an-external-database"
+      to: "/howto/integration/how-to-execute-an-sql-statement-on-an-external-database"
     },
     /****************************************************
      * Mendix Cloud

@@ -77,12 +77,13 @@ The form to show when a user hovers over a chart plot point
 The Plotly series options as JSON. This options will only be used when the in the tab Advanced Mode is set to Advanced or Developer.
 
 ### Appearance
+The appearance settings are use to set dimension of the chart
 
 #### Width unit
-Percentage or Pixels
+The type of units which are used for the `Width` property: Percentage or Pixels
 
 #### Width
-The width of the chart in picsels or percentage based on the `Width unit` setting.
+The width of the chart in pixels or percentage based on the `Width unit` setting.
 
 #### Height unit
 'Percentage of width' is the aspect ratio, 'Pixels' is absolute. Warning: When using 'Percentage of parent' the parent container must have an absolute height, else nothing is displayed.
@@ -116,9 +117,12 @@ The JSON containing the Plotly configuration options
 - [Full reference](https://github.com/plotly/plotly.js/blob/master/src/plot_api/plot_config.js)
 
 ## 1.3 Dynamic series
-The basix charts only support a static amount of series which can be configured in themodelerr by nut changed during the runtime depending on the data of the application. To setup dynamic series see [Any charts](charts-any-configuration.md)
+The basic charts only support a static amount of series which can be configured in the modeler. 
+Dynamic series changes during the runtime depending on the data of the application. To setup dynamic series see [Any charts](charts-any-configuration.md)
+We are looking into added dynamic series into basic charts at a later moment.
 
 # 2 Configuration per chart type
+The properties above are common across the chart types. In this section the properties are described that are specific for the chart type.
 
 ## 2.1 Column Chart
 

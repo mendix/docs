@@ -11,3 +11,4 @@ The following tutorials are available here:
 * [How to create charts](charts-basic-create)
 * [How to use chart data source REST](charts-basic-rest)
 * [How to use Any Chart](charts-any-usage)
+* [How to use theme charts](charts-theme)

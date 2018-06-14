@@ -13,5 +13,5 @@ This category contains documents about best practices when developing with Mendi
 * [Developer Tool Recommendations](developer-tools)
 * [How to Convert Your Application from Mendix 4 to Mendix 5](how-to-convert-your-application-from-mendix-4-to-5)
 * [How to Execute an SQL Statement on an External Database](how-to-execute-an-sql-statement-on-an-external-database)
-* [Inheritance vs. 1-1 Association](inheritance-vs.-1-1-association)
+* [Inheritance vs. One-to-One Association](inheritance-vs.-1-1-association)
 * [SIG - Mendix Performance Subjects](sig-mendix-performance-subjects-explanation)

@@ -36,7 +36,7 @@ This function is often used to constrain retrieving objects to the objects of th
 
 [id = $currentUser]
 
-It will only return results when you are querying System.Account or specializations of that entity. Entities with a 1-1 relation to the account will give no results.
+It will only return results when you are querying System.Account or specializations of that entity. Entities with a one-to-one relation to the account will give no results.
 
 If you want to get all the objects (querying any entity) that were created by the current user, you should use the following:
 

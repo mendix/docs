@@ -2,6 +2,7 @@
 title: "Query Over Self-References"
 category: "Tips & Tricks"
 ---
+
 When using more generic domain models, you often turn to using inheritance or self references to allow for simple yet efficiently designed models. This makes building your microflows and application logic much easier, but it can become challenging to query the correct objects; especially when your are using a self-reference. In this example, a self-reference to Group is used. This will allow you to build a group structure with an unlimited amount of sub-groups.
 
 ![](attachments/18448725/18581640.png)     ![](attachments/18448725/18581639.png)
@@ -31,11 +32,4 @@ If you do not specify the [reversed()] expression the query will be interpreted 
 
 ![](attachments/18448725/18581634.png)
 
-## Related articles
 
-*   [Finding Object Activities](finding-object-activities)
-*   [Finding Unused Items](finding-unused-items)
-*   [Finding your way through a project](finding-your-way-through-a-project)
-*   [Querying over self-references](querying-over-self-references)
-*   [Showing a Project in the Directory in Explorer](showing-a-project-in-the-directory-in-explorer)
-*   [Translatable Validation Messages](translatable-validation-messages)

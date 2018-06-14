@@ -4,11 +4,23 @@ title: "Platform Portal"
 
 ## 2018
 
+### June 15th, 2018
+
+#### Improvements
+
+* Support for Client Certficate validation in Access Restriction Profile for Mendix Cloud V4 deployments.
+
+#### Fixes
+
+* Incorrect message is shown during scaling of a non-deployed environment #64799
+* Re-introduce copy privileges for Operations #DEP-220
+* Retrieve environment package via Rest API broken #65348 #65370
+
 ### June 11th, 2018
 
 #### Improvements
 
-* We have added alerts for when an application runs out of memory or otherwise unexpectedly crashes.
+* We have added alerts for when an application runs out of memory or otherwise unexpectedly crashes. This is only applicable for Mendix Cloud V4 deployments.
 
 ### June 8th, 2018
 

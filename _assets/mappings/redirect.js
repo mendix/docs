@@ -205,16 +205,8 @@ module.exports = {
       to: "/howtogeneral/bestpractices/best-practices-for-component-based-development"
     },
     {
-      from: "/bestpractices/How+to+execute+an+SQL+statement+on+an+external+database",
-      to: "/howtogeneral/bestpractices/how-to-execute-an-sql-statement-on-an-external-database"
-    },
-    {
       from: "/bestpractices/Best+Practices",
       to: "/howtogeneral/bestpractices/"
-    },
-    {
-      from: "/bestpractices/Inheritance+vs.+1+1+association",
-      to: "/howtogeneral/bestpractices/inheritance-vs.-1-1-association"
     },
     {
       from: "/bestpractices/Inheritance+vs.+1-1+association",
@@ -231,10 +223,6 @@ module.exports = {
     {
       from: "/howtogeneral/bestpractices/naming-conventions",
       to: "/howtogeneral/bestpractices/dev-best-practices"
-    },
-    {
-      from: "/bestpractices/SIG+-+Mendix+performance+subjects+explanation",
-      to: "/howtogeneral/bestpractices/sig-mendix-performance-subjects-explanation"
     },
     /****************************************************
      * Community
@@ -2150,6 +2138,10 @@ module.exports = {
     {
       from: "/howto7/deploying-a-mendix-app-to-cloud-foundry",
       to: "/deployment/cloud-foundry/deploy-a-mendix-app-to-cloud-foundry"
+    },
+	{
+      from: "/bestpractices/How+to+execute+an+SQL+statement+on+an+external+database",
+      to: "/howto7/integration/how-to-execute-an-sql-statement-on-an-external-database"
     },
     /****************************************************
      * Mendix Cloud
@@ -8326,6 +8318,14 @@ module.exports = {
     {
       "from": "/refguide7/XPath+year+from+dateTime",
       "to": "/refguide/xpath-year-from-datetime"
+    },
+	{
+      "from": "/bestpractices/SIG+-+Mendix+performance+subjects+explanation",
+      "to": "/refguide/sig-mendix-performance-subjects-explanation"
+    },
+	{
+      "from": "/bestpractices/Inheritance+vs.+1+1+association",
+      "to": "/refguide/inheritance-vs.-1-1-association"
     },
     /****************************************************
      * REFERENCE GUIDE RENAMES

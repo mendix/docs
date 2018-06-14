@@ -1,5 +1,5 @@
 ---
-title: "General How-to's"
+title: "Best Practices & Support"
 notoc: true
 ---
 

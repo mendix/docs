@@ -44,7 +44,7 @@ The image selected will appear in the **Building Blocks** tab of the Web Modeler
 ### 4.3 Documentation URL
 
 <div class="alert alert-info">
-Added in Mendix 7.17.
+This feature was added for Desktop Modeler version 7.17.
 </div>
 
-The documentation URL may be used to link to a documentation page for the building block. These links will appear in the **Building Blocks** tab of the Web Modeler's **Toolbox**.
+The documentation URL can be used to link to a documentation page for the building block. These links will appear in the **Building Blocks** tab of the Web Modeler's **Toolbox**.

@@ -78,7 +78,3 @@ _Never use one-to-one association for entities:_
 
 *   _That always require the information from the associated objects, and users intensively search and sort on the associated attributes._
 
-## Related Content
-
-* [Best Practices for Component Based Development](best-practices-for-component-based-development)
-* [Development Best Practices](dev-best-practices)

@@ -220,6 +220,7 @@ Titles, axis and series can contain complex mathematical expression.
 ```
 $\sqrt{(n_\text{c}(t|{T_\text{early}}))}$
 ```
+
 Add to the index.html of the theme.
 ``` javascript
 <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_SVG"></script>

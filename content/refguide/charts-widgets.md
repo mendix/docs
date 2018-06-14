@@ -4,10 +4,12 @@ parent: "Chart Widgets"
 ---
 
 {{% alert type="info" %}}
+
 Please note that, Charts are published through the Mendix App Store and are included in the Atlas UI themes building blocks.  
 Updates can be retrieved through the Mendix App Store.
 Charts: https://appstore.home.mendix.com/link/app/105695/
 Any Chart: https://appstore.home.mendix.com/link/app/106517/
+
 {{% /alert %}}
 
 ## 1 Basic charts
@@ -90,8 +92,10 @@ To the theme folder, add a `.json` file named *com.mendix.charts*. The JSON shou
 ```
 
 {{% alert type="info" %}}
+
 Please use with caution, as the configuration set up here shall be applied to every instance of the charts in your application.  
 Only the advanced configurations set up in the widget itself have a higher precendence.
+
 {{% /alert %}}
 
 ## 5 Related Content

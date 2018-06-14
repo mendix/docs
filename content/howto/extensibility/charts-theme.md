@@ -48,14 +48,18 @@ To figure out the required custom configuration, follow these steps:
 }
 ```
 
-1. Change the font settings, till the chart shows required font  
-{{% alert type="info" %}}
-Please note that the editor changes will never persist. and need to stored in the advanced settings of the widget or stored in the theme
+10. Change the font settings, till the chart shows required font
+
+{{% alert type="warning" %}}  
+Please note that the editor changes will never persist. and need to stored in the advanced settings of the widget or stored in the theme  
 {{% /alert %}}
-1. Set **Mode** to **Advanced** in modeler, to remove the Toggle Editor button.  
-{{% alert type="info" %}}
-Please note that the theme settings only apply too chart in mode Advanced and Developer
+
+12. Set **Mode** to **Advanced** in modeler, to remove the Toggle Editor button.
+
+{{% alert type="warning" %}}  
+Please note that the theme settings only apply too chart in mode Advanced and Developer  
 {{% /alert %}}
+
 ![chart editor](attachments/charts/charts-toggle-editor-open.png)
 
 ### 3.2 Add theme configuration
@@ -96,8 +100,8 @@ To change the font, follow these steps:
 
 ## 4 Reference
 
-* More information in the [Charts reference guide](../../refguide/charts-widgets)
-* [Layout samples](../../refguide/charts-advanced-cheat-sheet##-Layout-all-charts)
-* [Configuration samples](../../refguide/charts-advanced-cheat-sheet###-configurations-options-all-charts) 
+* More information in the [Charts reference guide](../../refguide/charts-widgets.md)
+* [Layout samples](../../refguide/charts-advanced-cheat-sheet.md##-Layout-all-charts)
+* [Configuration samples](../../refguide/charts-advanced-cheat-sheet.md###-configurations-options-all-charts) 
 
 ## 5 Related Content

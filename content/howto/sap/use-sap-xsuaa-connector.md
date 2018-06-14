@@ -27,7 +27,6 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Select and deploy the app to a SAP account and subaccount where you have authority to configure security
 * Setup the app with the following two **User roles** in **Project ... > Security**: Supervisor and Inspector
 * Give each role a different starting page so that the effect of the SSO can be seen
-* 
 
 ## 3 Getting the SAP XSUAA Connector Module
 
@@ -120,18 +119,110 @@ To accomplish this, follow these steps:
 Your app is now configured to use an IDP, but you now need to configure the IDP and allocate users to roles. This is performed in the [SAP Cloud Platform Cockpit](https://account.hana.ondemand.com/cockpit#/home/allaccounts).
 
 {{% alert type="info" %}}
+
 Before configuring the IDP, you must first deploy your app to the SAP Cloud Portal. This will expose the user roles in the app to the security configuration tools in the SAP Cloud Platform Cockpit.
+{{% /alert %}}
+
+
+{{% alert type="warning" %}}
+
+This section describes actions which are carried out using the SAP Cloud Platform Cockpit. This document uses the current navigation through the SAP Cloud Platform Cockpit but this is outside the Mendix environment and may be changed. Documentation on the SAP Cloud Platform is in the [SAP Help Portal](https://help.sap.com/viewer/p/CP).
+
 {{% /alert %}}
 
 The diagram below shows the relationship between the security structures in your Mendix app (blue), the SAP Cloud Platform app environment (yellow), SAP User Account and Authentication (orange) and the IDP (green).
 
-![](attachments/use-sap-xsuaa-connector/xsuaa-diagram.png)
+![](attachments/use-sap-xsuaa-connector/xsuaa-diagram-labeled.png)
 
-When your app is deployed to the SAP Cloud Platform, each **User Role** in the Mendix app is exposed as a **Scope** in the SAP environment. Each Scope is mapped to a single **Role Template** 
+### 4.1 Scope
 
-In the SAP Cloud Platform Cockpit, you need to configure how the 
+When your app is deployed to the SAP Cloud Platform, each **User Role** (A) in the Mendix app is exposed as a **Scope** (B) in the SAP environment. You can see this mapping by going to your app in the SAP Cloud Platform Cockpit. Under **Security** you can view the **Scopes**. You will see that the four **User Roles** in the Mendix app are exposed as scopes in the application space:
 
+![](attachments/use-sap-xsuaa-connector/app-scopes.png)
 
+### 4.2 Role Template
+
+Each Scope is mapped to a single **Role Template** (C) during deployment. You can see the Role Templates in the Application details of the SAP Cloud Platform Cockpit. These are also defined during the deployment of the app.
+
+![](attachments/use-sap-xsuaa-connector/app-role-templates.png)
+
+### 4.3 Role
+
+In the SAP Cloud Platform Cockpit, you can view and add additional **Roles** (D) to the Role Template, or you can stay with the generated default role. Note that new roles added here do not have different roles in your Mendix app. However, adding new roles here may allow you to obtain additional analytics through the SAP or IDP logs. Here a new *Inspector* role has been added to the Inspector Role Template.
+
+![](attachments/use-sap-xsuaa-connector/app-roles.png)
+
+### 4.4 Role Collection
+
+The **Role Collection** (E) is defined not for the SAP Clout Platform **Space** where your app is running, but in your SAP **Subaccount**. It is this Role Collection which will be linked to the IDP.
+
+This means that there may be other Role Collections which are being used by other apps being deployed in this subaccount and you may, or may not, wish to share authentication between spaces/apps. You could, for example, use the same authentication for several related apps running in the same subaccount, or use different authentication for development and production.
+
+Here, we add a new Role Collection for the Inspector 2 role in the SAP Cloud Platform space roles.
+
+1. Give the new Role Collection a name and, optionally, a description.
+
+	![](attachments/use-sap-xsuaa-connector/new-role-collection.png)
+
+2. Click on the **Name** of the Role Collection to allocate roles to the Role Collection
+
+	![](attachments/use-sap-xsuaa-connector/select-role-collection.png)
+
+3. Add the Role(s) which you want to include in this Role Collection
+
+	![](attachments/use-sap-xsuaa-connector/add-role.png)
+
+The new role collection can now be seen in the SAP Cloud Platform Cockpit for this Subaccount, with the Roles which it includes.
+
+![](attachments/use-sap-xsuaa-connector/show-role-collection.png)
+
+### 4.5 Trust Configuration
+
+Your Subaccount will have one or more **Trust Configurations**. These are the IDPs which you can use to authenticate your users. The default is the **SAP ID Service** but you may add other IPDs.
+
+![](attachments/use-sap-xsuaa-connector/trust-configurations.png)
+
+Depending on the IDP, you can either map **Users** (G) directly to a Role Collection, or map a **User Group** (F) to a Role Collection and then map Users to the User Group.
+
+#### 4.5.1 Map User Directly to a Role Collection
+
+This is the method used by the **SAP ID Service**, amongst others.
+
+1. Click on the SAP ID Service in the Trust Configurations.
+
+2. Enter the username (email) of an SAP user that you want to give access to.
+
+3. Click **Show Assignments** to show existing assignments.
+
+4. Click **Add Assignment** and choose the Role Collection (in this case *Inspector 2*) to which you want to grant access.
+
+The selected user now has access to the selected Role Collection and, through that, to the correct User Role in your app.
+
+![](attachments/use-sap-xsuaa-connector/role-collection-assignment-direct.png)
+
+You can picture the authentication as shown below:
+
+![](attachments/use-sap-xsuaa-connector/xsuaa-diagram-config-direct.png)
+
+#### 4.5.2 Map User Group to a Role Collection
+
+Some IDPs (for example SAML 2.0 IDPs) have the concept of a User Group. In this case there will be two options in the Trust Configuration for the IDP: **Role Collection Mappings** and **Role Collection Assignment**.
+
+You can link an individual username to the Role Collection in the same way as described above using the **Role Collection Assignment** option.
+
+Alternatively, you can link a Role Collection to an existing Group within the IDP. In this case, you need to do the following.
+
+1. Open **Role Collection Mappings** for the IDP.
+
+2. Create a new Role Collection Mapping and map the Role Collection (for example, *Inspector 2 Role Collection*) to an existing Group (for example, *Inspector 2 Group*) in the IDP.
+
+![](attachments/use-sap-xsuaa-connector/role-collection-mapping.png)
+
+Now any user within the IDP which is part of the *Inspector 2 Group* will have access to the correct role in your Mendix app.
+
+You can picture the authentication as shown below:
+
+![](attachments/use-sap-xsuaa-connector/xsuaa-diagram-config-via-group.png)
 
 ## 5 Related Content
 
@@ -140,3 +231,4 @@ In the SAP Cloud Platform Cockpit, you need to configure how the
 * [Project Security](/refguide/project-security)
 * [SAP Cloud Platform XSUAA Connector](https://appstore.home.mendix.com/link/app/78091/)
 * [SAP XSUAA Connector](/refguide/sap/sap-xsuaa-connector)
+* [SAP Cloud Platform Cockpit](https://account.hana.ondemand.com/cockpit#/home/allaccounts)

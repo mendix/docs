@@ -1267,7 +1267,7 @@ module.exports = {
     },
     {
       from: "/howto50/Finding+Object+Activities",
-      to: "/howtogeneral/tips/finding-object-activities"
+      to: "/howto/tips/finding-object-activities"
     },
     {
       from: "/howto50/Finding+the+Root+Cause+of+Runtime+Errors",
@@ -1275,11 +1275,11 @@ module.exports = {
     },
     {
       from: "/howto50/Finding+Unused+Items",
-      to: "/howtogeneral/tips/finding-unused-items"
+      to: "/howto/tips/finding-unused-items"
     },
     {
       from: "/howto50/Finding+your+way+through+a+project",
-      to: "/howtogeneral/tips/finding-your-way-through-a-project"
+      to: "/howto/tips/finding-your-way-through-a-project"
     },
     {
       from: "/howto50/Gathering+user+feedback",
@@ -1399,11 +1399,7 @@ module.exports = {
     },
     {
       from: "/howto50/Querying+over+self+references",
-      to: "/howtogeneral/tips/querying-over-self-references"
-    },
-    {
-      from: "/howto50/Querying+over+self-references",
-      to: "/howtogeneral/tips/querying-over-self-references"
+      to: "/howto/tips/querying-over-self-references"
     },
     {
       from: "/howto50/Restoring+a+SQL+Server+database",
@@ -1467,7 +1463,7 @@ module.exports = {
     },
     {
       from: "/howto50/Showing+a+Project+in+the+Directory+in+Explorer",
-      to: "/howtogeneral/tips/showing-a-project-in-the-directory-in-explorer"
+      to: "/howto/tips/showing-a-project-in-the-directory-in-explorer"
     },
     {
       from: "/howto50/Solving+Load+and+Import+Errors",
@@ -1507,11 +1503,11 @@ module.exports = {
     },
     {
       from: "/howto50/Tips+Tricks",
-      to: "/howtogeneral/tips/"
+      to: "/howto/tips/"
     },
     {
       from: "/howto50/Translatable+Validation+Messages",
-      to: "/howtogeneral/tips/translatable-validation-messages"
+      to: "/howto/tips/translatable-validation-messages"
     },
     {
       from: "/howto50/Trends",
@@ -8343,39 +8339,39 @@ module.exports = {
      ****************************************************/
     {
       from: "/tips/Finding+Object+Activities",
-      to: "/howtogeneral/tips/finding-object-activities"
+      to: "/howto/tips/finding-object-activities"
     },
     {
       from: "/tips/Finding+Unused+Items",
-      to: "/howtogeneral/tips/finding-unused-items"
+      to: "/howto/tips/finding-unused-items"
     },
     {
       from: "/tips/Finding+your+way+through+a+project",
-      to: "/howtogeneral/tips/finding-your-way-through-a-project"
+      to: "/howto/tips/finding-your-way-through-a-project"
     },
     {
       from: "/tips/Import+a+large+Excel+file",
-      to: "/howtogeneral/tips/import-a-large-excel-file"
+      to: "/howto/tips/import-a-large-excel-file"
     },
     {
       from: "/tips/Tips+and+Tricks",
-      to: "/howtogeneral/tips/"
+      to: "/howto/tips/"
     },
     {
       from: "/tips/Migrating+your+Mendix+database",
-      to: "/howtogeneral/tips/migrating-your-mendix-database"
+      to: "/howto/tips/migrating-your-mendix-database"
     },
     {
       from: "/tips/Querying+over+self-references",
-      to: "/howtogeneral/tips/querying-over-self-references"
+      to: "/howto/tips/querying-over-self-references"
     },
     {
       from: "/tips/Showing+a+Project+in+the+Directory+in+Explorer",
-      to: "/howtogeneral/tips/showing-a-project-in-the-directory-in-explorer"
+      to: "/howto/tips/showing-a-project-in-the-directory-in-explorer"
     },
     {
       from: "/tips/Translatable+Validation+Messages",
-      to: "/howtogeneral/tips/translatable-validation-messages"
+      to: "/howto/tips/translatable-validation-messages"
     },
     /****************************************************
      * APM

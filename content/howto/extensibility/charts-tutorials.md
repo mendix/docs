@@ -8,7 +8,8 @@ tags: ["build", "app", "developer portal", "web modeler"]
 
 The following tutorials are available here:
 
-* [How to create charts](charts-basic-create)
-* [How to use chart data source REST](charts-basic-rest)
-* [How to use Any Chart](charts-any-usage)
-* [How to use theme charts](charts-theme)
+* [How to create a basic chart](charts-basic-create.md)
+* [How to fine tune a chart, with advance settings](charts-advanced-tuning.md)
+* [How to globally theme charts](charts-theme.md)
+* [How to use a chart with a REST data source](charts-basic-rest.md)
+* [How to create an advanced chart](charts-any-usage.md)

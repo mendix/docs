@@ -2,11 +2,12 @@
 title: "Find Unused Items"
 category: "Tips & Tricks"
 ---
-# Finding Unused Items
+
+## 1 Introduction
 
 During the development of your application it might occur that specific functionality, pages, microflows etc. aren't applicable anymore for the final version of your application. In order to keep your model clean, clear and easy to maintain it is advised to cleanup any unused items. This How-To will teach you how you can find unused items and what you have to keep in mind dealing with unused items.
 
-## 1 Finding Unused Items
+## 2 Finding Unused Items
 
 In this how-to, you will learn how you can find unused items within your model.
 
@@ -28,7 +29,7 @@ Modules downloaded from the Appstore might contain a lot of unused items. If you
 
 Any objects which are excluded from the project won't show up in the unused items list.
 
-## 2 Setting Unused Objects to "Used" 
+## 3 Setting Unused Objects to "Used" 
 
 Some pages and microflows are only used from Java code and will be listed as an unused item because the Modeler can't look into Java source code. To prevent anyone from removing these objects you can mark the page or microflow as "used." In this part of the How-To you will learn how to do so.
 
@@ -41,11 +42,3 @@ To mark a page as used, right-click the page and select **Properties**:
 
 ![](attachments/18448720/18581607.png)
 
-## 3 Related Content
-
-*   [Finding Object Activities](finding-object-activities)
-*   [Finding Unused Items](finding-unused-items)
-*   [Finding your way through a project](finding-your-way-through-a-project)
-*   [Querying over self-references](querying-over-self-references)
-*   [Showing a Project in the Directory in Explorer](showing-a-project-in-the-directory-in-explorer)
-*   [Translatable Validation Messages](translatable-validation-messages)

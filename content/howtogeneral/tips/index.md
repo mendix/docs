@@ -1,7 +1,8 @@
 ---
 title: "Tips & Tricks"
 ---
-This is where our experts reveal their tips and tricks.
+
+These are some tips and tricks from Mendix experts:
 
 *   [Find Your Way Through a Project](finding-your-way-through-a-project)
 *   [Find Object Activities](finding-object-activities)

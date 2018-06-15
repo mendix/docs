@@ -44,11 +44,4 @@ The text is replaced by this microflow, the input is the translated text, the va
 
 <iframe width="100%" height="495px" frameborder="0" src="https://modelshare.mendix.com/models/6a80d12a-5670-48fe-bbdf-ba793af6cf8d/replace-i18n-token?embed=true" allowfullscreen=""></iframe>
 
-## 4 Related Content
 
-*   [Finding Object Activities](finding-object-activities)
-*   [Finding Unused Items](finding-unused-items)
-*   [Finding your way through a project](finding-your-way-through-a-project)
-*   [Querying over self-references](querying-over-self-references)
-*   [Showing a Project in the Directory in Explorer](showing-a-project-in-the-directory-in-explorer)
-*   [Translatable Validation Messages](translatable-validation-messages)

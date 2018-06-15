@@ -3,9 +3,11 @@ title: "Find Object Activities"
 category: "Tips & Tricks"
 ---
 
+## 1 Introduction
+
 Mendix has comprehensive functionality to find changes made to several subjects in the application. This how-to will describe how to find changes made in objects based on a certain activity.
 
-## 1 Finding Object Activities
+## 2 Finding Object Activities
 
 The following steps will explain how to find certain activities that are used in microflows, to objects.
 
@@ -19,11 +21,3 @@ The following steps will explain how to find certain activities that are used in
 5.  See the results of in the **Find Results** pane:
     ![](attachments/18448724/18581629.png)
 
-## 2 Related Content
-
-*   [Finding Object Activities](finding-object-activities)
-*   [Finding Unused Items](finding-unused-items)
-*   [Finding your way through a project](finding-your-way-through-a-project)
-*   [Querying over self-references](querying-over-self-references)
-*   [Showing a Project in the Directory in Explorer](showing-a-project-in-the-directory-in-explorer)
-*   [Translatable Validation Messages](translatable-validation-messages)

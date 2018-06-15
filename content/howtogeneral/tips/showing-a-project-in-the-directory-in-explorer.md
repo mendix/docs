@@ -26,11 +26,4 @@ When developing an application the following directories in the project director
 2.  ../javasrouce - Here are the java actions stored.
 3.  ../widgets - Here are the JavaScript actions stored.
 
-## 4 Related Content
 
-*   [Finding Object Activities](finding-object-activities)
-*   [Finding Unused Items](finding-unused-items)
-*   [Finding your way through a project](finding-your-way-through-a-project)
-*   [Querying over self-references](querying-over-self-references)
-*   [Showing a Project in the Directory in Explorer](showing-a-project-in-the-directory-in-explorer)
-*   [Translatable Validation Messages](translatable-validation-messages)

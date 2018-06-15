@@ -3,6 +3,8 @@ title: "Import a Large Excel File"
 category: "Tips & Tricks"
 ---
 
+## 1 Introduction
+
 Every now and then a client asks you to import some data. It doesn’t look like a lot of effort at first glance, so you add it as a task and plan to pick it up at the end of the day.
 
 Looking at the sheet later, you realize that there are more than hundred columns that need to be imported into the application. This means manual labour, a lot of it. As every column represents an attribute, creating 100+ new attributes in an import entity would take ages if you did it manually.
@@ -15,13 +17,13 @@ We will use XML-to-domain mapping to create a new import entity from an Excel sh
 
 * Quickly import a large Excel file with a lot of columns
 
-## 1 Prerequisites
+## 2 Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisite:
 
 * Have an app project with the [MxModel Reflection](https://appstore.home.mendix.com/link/app/69/) and [Excel Importer](https://appstore.home.mendix.com/link/app/72/) modules installed and configured from the Mendix App Store
 
-## 2 Modifying your Excel Sheet
+## 3 Modifying Your Excel Sheet
 
 The Excel sheet you receive in this scenario contains almost every country in the world, and for every country, some data is stored. This data has to be imported into your application.
 
@@ -72,7 +74,7 @@ To modify your Excel sheet, follow these steps:
 
 9. Drag the cells down like you’ve done with column **A1** and **C1**. Now your column **D** should have the columns **A**, **B**, and **C** combined into one, and your sheet should look like this: [Countries with Tags and Column D](attachments/Excel/CountriesWithTagsAndColumnD.xlsx).
 
-## 3 Preparing Your XSD File
+## 4 Preparing Your XSD File
 
 We have used some of the basic functionalities of Excel to help us out creating the first part of our XSD structure. For a proper XSD file, we still need to have a header and a footer. This is where your favourite text editor comes in (for example, Brackets).
 
@@ -103,7 +105,7 @@ To prepare your XSD file, follow these steps:
 
 5.  Don’t forget to save it!
 
-## 4 Importing into Your Application Project
+## 5 Importing into Your Application Project
 
 The XSD file is ready to be imported into the Desktop Modeler. To import it, follow these steps:
 

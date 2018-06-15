@@ -8073,15 +8073,18 @@ module.exports = {
     },
     {
       "from": "/refguide7/Text",
-      "to": "/refguide/text"
+      "to": "/refguide/text",
+      "case": true
     },
     {
       "from": "/refguide7/Text+area",
-      "to": "/refguide/text-area"
+      "to": "/refguide/text-area",
+      "case": true
     },
     {
       "from": "/refguide7/Text+box",
-      "to": "/refguide/text-box"
+      "to": "/refguide/text-box",
+      "case": true
     },
     {
       "from": "/refguide7/Third+Party+Licenses",

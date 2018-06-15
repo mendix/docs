@@ -77,13 +77,14 @@ const mappings = (opts) => new Promise((resolve, reject) => {
               gutil.log(`${mapping_indicator} ${r.from} => ${r.to} disabled`)
               return true;
             }
-            const to = r.to.trim(),
-                  from = r.from.trim(),
-                  lastChar = to.substr(-1),
-                  mdFile = path.join((opts.contentFolder ? opts.contentFolder : '.'), '.' + to + (lastChar === '/' ? 'index.md' : '.md')),
-                  htmlFile = gutil.replaceExtension(mdFile, '.html'),
-                  hash = new Buffer(`${from}-${to}`).toString('base64'),
-                  caseSensitive = to.toLowerCase() === from.toLowerCase() || to.toLowerCase().indexOf(from.toLowerCase()) !== -1;
+            const to = r.to.trim();
+            const from = r.from.trim();
+            const isCase = 'undefined' !== typeof r.case ? r.case : false;
+            const lastChar = to.substr(-1);
+            const mdFile = path.join((opts.contentFolder ? opts.contentFolder : '.'), '.' + to + (lastChar === '/' ? 'index.md' : '.md'));
+            const htmlFile = gutil.replaceExtension(mdFile, '.html');
+            const hash = new Buffer(`${from}-${to}`).toString('base64');
+            const caseSensitive = isCase || to.toLowerCase() === from.toLowerCase() || to.toLowerCase().indexOf(from.toLowerCase()) !== -1;
 
             if (!shell.test('-e', mdFile) && !shell.test('-e', htmlFile)) {
               errors.push(`There is no file for the mapping in mappings.json to: ${gutil.colors.cyan(to)}`);

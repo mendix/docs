@@ -14,10 +14,10 @@ These release notes are for the [beta](../beta-features/index) version of the We
 
 #### Fixes
 
-* We fixed the issue where the user could get stuck on the loading spinner if connection to the Web Modeler failed. Now, when the connection is restored, the page will reload.
-* We fixed the issue where the error pop-up window would not always be on top of other pop-up windows.
+* We fixed the issue where the user got stuck on the loading spinner if the connection to the Web Modeler failed. Now, when the connection is restored, the page will reload.
+* We fixed the issue where the error pop-up window was not always on top of other pop-up windows.
 * We fixed the issue where custom widgets on the page could not be dragged once placed.
-* We fixed the issue where the user could drag items to the **Navigation Document** being in read-only mode.
+* We fixed the issue where the user could drag items to the **Navigation Document** while in read-only mode.
 
 ### June 11th, 2018
 

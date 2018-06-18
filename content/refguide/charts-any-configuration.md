@@ -17,10 +17,10 @@ The data to be plotted is described in an array usually called data, whose eleme
 Data JSON array based on https://plot.ly/javascript/reference/
 
 ### Source attribute
-The attribute data will merge and overwrite 'Static' data.
+The attribute data will merge and overwrite **Static** data.
 
 ### Sample data
-Data for preview. It will be merged with the 'Static data' in the web modeler or at runtime when no 'Source attribute' is selected.
+Data for preview. It will be merged with the **Static data** in the web modeler or at runtime when no **Source attribute** is selected.
 
 ### Mode
 The development mode adds a button to the charts when running the app which is used to toggle a live editor for the advanced configuration options.
@@ -52,7 +52,7 @@ The type of units which are used for the **Width** property: Percentage or Pixel
 The width of the chart in pixels or percentage based on the **Width unit** setting.
 
 #### Height unit
-'Percentage of width' is the aspect ratio, 'Pixels' is absolute. Warning: When using 'Percentage of parent' the parent container must have an absolute height, else nothing is displayed.
+**Percentage of width** is the aspect ratio, **Pixels** is absolute. Warning: When using **Percentage of parent** the parent container must have an absolute height, else nothing is displayed.
 
 #### Height
 The height in pixels or percentage based on the settings of the **Height unit**

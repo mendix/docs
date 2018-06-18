@@ -5,7 +5,7 @@ parent: "charts-tutorials"
 
 ## 1 Introduction
 
-The individual Charts widgets can be fine tuned with advanced settings. The theme allows developers to create **global settings that applies to all charts**. This way color, language, font and many more things could be set.
+The individual Charts widgets can be fine tuned with advanced settings. The theme allows developers to create "global settings that applies to all charts". This way color, language, font and many more things could be set.
 
 **This how-to will teach you how to do the following:**
 
@@ -32,7 +32,7 @@ To figure out the required custom configuration, follow these steps:
 1. Open the page with chart
 1. Open the chart widget settings
 1. Go to the tab **Advanced**
-1. Set the **Mode** to **Developer**
+1. Set the **Mode** to **Developer**  
 ![chart widget properties](attachments/charts/charts-widget-properties-advanced.png)
 1. Run the project
 1. Open in the browser the page with the chart
@@ -50,14 +50,18 @@ To figure out the required custom configuration, follow these steps:
 
 10. Change the font settings, till the chart shows required font
 
-{{% alert type="warning" %}}  
-Please note that the editor changes will never persist. and need to stored in the advanced settings of the widget or stored in the theme  
+{{% alert type="warning" %}}
+
+Please note that the editor changes will never persist. and need to stored in the advanced settings of the widget or stored in the theme
+
 {{% /alert %}}
 
 12. Set **Mode** to **Advanced** in modeler, to remove the Toggle Editor button.
 
-{{% alert type="warning" %}}  
-Please note that the theme settings only apply too chart in mode Advanced and Developer  
+{{% alert type="warning" %}}
+
+Please note that the theme settings only apply too chart in mode Advanced and Developer
+
 {{% /alert %}}
 
 ![chart editor](attachments/charts/charts-toggle-editor-open.png)
@@ -100,8 +104,8 @@ To change the font, follow these steps:
 
 ## 4 Reference
 
-* More information in the [Charts reference guide](../../refguide/charts-widgets.md)
-* [Layout samples](../../refguide/charts-advanced-cheat-sheet.md##-Layout-all-charts)
-* [Configuration samples](../../refguide/charts-advanced-cheat-sheet.md###-configurations-options-all-charts) 
+* More information in the [Charts reference guide](../../refguide/charts-widgets)
+* [Layout samples](../../refguide/charts-advanced-cheat-sheet##-Layout-all-charts)
+* [Configuration samples](../../refguide/charts-advanced-cheat-sheet###-configurations-options-all-charts) 
 
 ## 5 Related Content

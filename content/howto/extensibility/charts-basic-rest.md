@@ -5,7 +5,7 @@ parent: "charts-tutorials"
 
 ## 1 Introduction
 
-Using the Charts widget, you can use information from a REST Services to plot graphs. This how to shows you how to do that through an example in which you will publish a REST service and use it as a REST Data source endpoint.
+With the Charts widget, you can use data from a REST Service to plot graphs.
 
 **This how-to will teach you how to do the following:**
 
@@ -16,28 +16,26 @@ Using the Charts widget, you can use information from a REST Services to plot gr
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Installed the Latest mendix modeler.
-* Download latest [Charts Widget](https://appstore.home.mendix.com/link/app/105695/) from the Mendix App Store.
+* Install the Latest mendix modeler
+* Download latest [Charts Widget](https://appstore.home.mendix.com/link/app/105695/) from the Mendix App Store
 
 ## 3 Data source
 
-To create a REST Data source end point., follow these steps:
+To create a REST Data source end point, follow these steps:
 
-1. Open a project with a Charts widget.
-2. Open the page with the Charts widget.
-3. Double click on the charts widget.
-4. On the **Chart properties** tab, add new Chart **Series** property.
-
+1. Open a project with a Charts widget
+2. Open the page with the Charts widget
+3. Double click on the Charts widget
+4. In the tab **Chart properties**, add new Chart **Series** property  
 ![Chart Rest Series](attachments/charts/charts-rest-series.png)
-5. Add **Series name**, **Entity**.
-
-![Values entity](attachments/charts/charts-entity.png)
-6. Select **Data source** REST endpoint.
-7. Add the **REST URL**
+5. Add **Series name** and **Entity**  
+![Values entity](attachments/charts/charts-entity.png)  
+6. Select **Data source** REST endpoint  
+7. Add the **REST URL**  
 ![Chart Rest URL](attachments/charts/charts-rest-url.png)
-8. On the Data points tab, configure the **X-axis data attribute**, and the **Y-axis data attribute**
-
+8. In the tab **Data points**, select the **X-axis data attribute** and the **Y-axis data attribute**  
 ![select Data Points](attachments/charts/charts-data-points.png)
+
 ## 4 Related Content
 
 TODO Format content into template

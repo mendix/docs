@@ -32,7 +32,7 @@ In order to use the Charts widget, a specific data structure is set up. This is 
 
 ![Values entity](attachments/charts/charts-entity.png)
 
-## 3.2 Create the data entry mechanism
+## 3.2 Create a data entry page
 
 To create a basic data entry page from which the Charts widget will fetch data, follow these steps:
 
@@ -44,39 +44,43 @@ To create a basic data entry page from which the Charts widget will fetch data, 
 
 ## 3.3 Add the Charts widget to a new page
 
-1. Create a page called *ShowChart*
-1. Add it to the User Navigation.
-1. Add a data view to this page that contains the Values entity and has a microflow as a data source.
-1. Create a new microflow named **IVK_NewValues** to populate the data view
-![Values entity](attachments/charts/charts-create-new-values.png)
-1. Right click on the data view and select **Go to microflow**.
-1. In the new **IVK_NewValues** microflow, create a new Values object and set that object as the return.
+1. Create a page named *ShowChart*
+1. Add it to the **User Navigation**
+1. Add a data view to this page that contains the Values entity and has a microflow as a data source
+1. Create a new microflow named **IVK_NewValues** to fill the data view  
+![Values entity](attachments/charts/charts-create-new-value.png)
+1. Right click on the data view and select **Go to microflow**
+1. In the new **IVK_NewValues** microflow, create a new Values object and set that object as the return  
 ![New Values microflow](attachments/charts/charts-new-values-microflow.png)
-1. On the ShowChart page add the charts - Area Chart via the Add widget menu:
+1. On the ShowChart page, add the chart - Area Chart using the Add widget menu
 ![Select widget](attachments/charts/charts-select-chart.png)
-1. The final page should look like this:
+1. The final page should look like this  
 ![Final widget Page](attachments/charts/charts-widget-page.png)
 
-## 3.4 Configuring the Charts Widget
+## 3.4 Configure the Charts Widget
 
-The charts widgets are configured through the familiar modeler widget dialogue we must configure the charts module to reference our charting domain model.
+To configure a Charts widget, follow these steps:
 
-1. Add a new **series** property
+1. Open the page with the Charts widget
+1. Right click, select **properties**
+1. In the tab **Chart properties**, add a new **series** property  
 ![Chart Series](attachments/charts/charts-series.png)
-2. On the **Data source** tab select **Entity**
+2. In the tab **Data source**, select **Entity**  
 ![select Entity](attachments/charts/chart-add-entity.png)
-3. Set the **Data source** as **Database**.
-4. On the Data points tab, configure the **X-axis data attribute**, and the **Y-axis data attribute**
+3. Set the **Data source** as **Database**  
+4. In the tab **Data points**, select the **X-axis data attribute** and the **Y-axis data attribute**  
 ![select Data Points](attachments/charts/charts-data-points.png)
 
-## 3.5 Creating Some Data
+## 3.5 View chart
 
-Now that the chart is configured, all we have left to do is create some sample data using the page we have created. we will then be able to visualise the chart!
+To view the chart, follow these steps:
 
-1. In the application front end, navigate to the data entry page.
-2. Enter data values for x value, and y value to populate your app with data.
-![Enter Data](attachments/charts/charts-front-end.png)
-3. Navigate to the  Show chart page to see your data visualised.
+1. Run the project
+1. In your browser, open the data entry page
+1. Enter data values for x value and y value  
+![Enter Data](attachments/charts/charts-front-end.png)  
+1. Click on the **Save** button
+3. Open the  Show chart page to view the chart created
 ![Show Chart](attachments/charts/charts-area-chart.png)
 
 ## 4 Related Content

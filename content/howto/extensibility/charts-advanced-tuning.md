@@ -110,11 +110,11 @@ Please note that the advanced settings only apply to the chart in mode Advanced 
 
 ## 6 References
 
-Reference guide for the [advanced properties](../../refguide/charts-configuration.md###-advanced)
+Reference guide for the [advanced properties](../../refguide/charts-configuration###-advanced)
 
-Layout options [cheat sheet](../../refguide/charts-advanced-cheat-sheet.md##-layout-all-charts)  
-Configuration options [cheat sheet](../../refguide/charts-advanced-cheat-sheet.md###-configurations-options-all-charts)  
-Data options [cheat sheet](../../refguide/charts-advanced-cheat-sheet.md##-data-series-properties)  
+Layout options [cheat sheet](../../refguide/charts-advanced-cheat-sheet##-layout-all-charts)  
+Configuration options [cheat sheet](../../refguide/charts-advanced-cheat-sheet###-configurations-options-all-charts)  
+Data options [cheat sheet](../../refguide/charts-advanced-cheat-sheet##-data-series-properties)  
 
 Full reference https://plot.ly/javascript/
 

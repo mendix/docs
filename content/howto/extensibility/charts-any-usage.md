@@ -21,7 +21,7 @@ Before starting this how-to, make sure you have the following prerequisites:
 
 * Latest Mendix modeler
 * Latest Any Chart widget module from the Mendix App Store
-* Understanding of JSON data structures
+* An understanding of JSON data structures
 
 ## 3 Chart structure
 
@@ -54,13 +54,13 @@ Sample data :
 [ { "x": [ 1, 2 ], "y": [ 1, 2 ] } ]
 ```
 
-![Any Chart Configuration](attachments/charts/any-chart-configuration.png)
-6. Run the project to preview the chart
+![Any Chart Configuration](attachments/charts/any-chart-configuration.png)  
+7. Run the project to preview the chart  
 ![Any Chart result](attachments/charts/charts-any-sample.png)
 
 ## 5 Export data
 
-To generate JSON data for the chart widget, follow these steps:
+To generate JSON data for the Charts widget, follow these steps:
 
 1. Add a **Data** string (unlimited length) attribute to the Chart (context) entity
 1. In the widget, set the **Source attribute** field in the **Data** tab
@@ -70,7 +70,8 @@ To generate JSON data for the chart widget, follow these steps:
 1. Create an **Export Mapping** with the **JSON Structure**
 ![Select data structure](attachments/charts/any-chart-line-chart-export-mapping-select.png)
 ![Map objects](attachments/charts/any-chart-line-chart-export-mapping.png)
-1. Create a microflow that retrieves the data and use the **Export Mapping** to generate a **String Variable**. Store the value in the object attribute that is select as **Source attribute**
+1. Create a microflow that retrieves the data.
+1. Use the **Export Mapping** to generate a **String Variable**. Store the value in the object attribute that is selected as **Source attribute**
 ![Export microflow](attachments/charts/any-chart-export-microflow.png)
 ![Export microflow](attachments/charts/any-chart-export-microflow-structure.png)
 
@@ -80,17 +81,21 @@ If need be, the layout can also be generated in the same way as the data. In mos
 
 Editing the JSON configuration in the modeler could be cumbersome. With the live preview editor, developers can directly see the output of their changes. 
 
+{{% alert type="warning" %}}
+
 The editor is only a playground and no settings are stored. All changes you make in the runtime preview that you wish to persist have to be applied to your data model too.
 
-To fine tuning chart widget configuration, follow these steps:
+{{% /alert %}}
+
+To fine tune a Charts widget configuration, follow these steps:
 
 1. In the **Data** tab, set the **Mode** option to **Development**
-1. Run the project, and open the chart page
+1. Run the project, and open the page with the chart 
 1. Click the **Toggle Editor** button on the top right of the chart and fine tune your settings
 1. In the editor, select either **Data** or **Layout** from the dropdown menu
 1. Edit Static or Data settings
 1. Copy the new settings and apply them in the modeler
-1. Re-run the project to confirm the change are applied
+1. Re-run the project to confirm the changes are applied
 
 ![chart editor](attachments/charts/charts-toggle-editor-open.png)
 

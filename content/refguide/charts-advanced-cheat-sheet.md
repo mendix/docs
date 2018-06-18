@@ -68,7 +68,6 @@ The legend properties below are added to the layout configuration to apply custo
 {
   "showlegend": true,
 }
-
 ```
 #### Left:
 Adjust x for long series names or y axis ticks
@@ -217,7 +216,7 @@ See more[ Multiple X axes configurations ](https://plot.ly/javascript/multiple-a
 
 #### Math LaTeX formulas
 Titles, axis and series can contain complex mathematical expression.
-![ Math formula ](attachments/pages/charts/MathFormula.PNG)
+![ Math formula ](attachments/pages/charts/math-formula.png)
 ```
 $\sqrt{(n_\text{c}(t|{T_\text{early}}))}$
 ```
@@ -352,7 +351,7 @@ This is the default range mode in charts. Both positive and negative ranges for 
 ```
 ![ Range mode ](attachments/pages/charts/tozero.gif)  
 
-:heavy_exclamation_mark: **NB:** When `fill` is not set to `"none"` in the series, the y-axis range is forced to start from zero (`tozero`).  
+:heavy_exclamation_mark: **NB:** When **fill** is not set to *none* in the series, the y-axis range is forced to start from zero (*tozero*).  
 Layout
 ```json
 {
@@ -375,7 +374,7 @@ See more [ range mode configurations ](https://plot.ly/javascript/reference/#lay
 These properties are applied to specific charts only. For each chart, data properties are distinct. They make the chart appear as its supposed to be.
 
 ### Lines
-A mode and line configuration can be added in the `Advanced` configuration of the series.
+A mode and line configuration can be added in the **Advanced** configuration of the series.
 ![ Line styles ](attachments/pages/charts/line-styles.png)
 ``` json
 [

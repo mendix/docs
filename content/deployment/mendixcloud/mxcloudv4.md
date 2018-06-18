@@ -26,6 +26,7 @@ The primary hosting locations are as follows:
 *   Mendix Cloud EU: AWS Frankfurt
 *   Mendix Cloud US: AWS North Virginia
 *   Mendix Cloud Asia Pacific: AWS Tokyo
+*   Mendix Cloud UK: AWS London
 
 Backups will always be stored in at least one external data center, separate from the primary hosting location.
 
@@ -60,8 +61,6 @@ A VPN (which is already deprecated in favor of client certificates) will not be 
 
 These are the differences between Mendix Cloud v3 and Mendix Cloud v4:
 
-* The order of the download archive buttons differs between v3 and v4
-* Upload buttons in v3/v4 are called **Upload Data**/**Upload Archive**
 * In Cloud v4, the debugger is always active, and the button shows the credentials to connect the Desktop Modeler to it
 * The Java security manager is no longer in place
     * The Java security manager is used in v3 to enforce standardization and to act as an additional security layer
@@ -72,7 +71,6 @@ These are the differences between Mendix Cloud v3 and Mendix Cloud v4:
 
 There are some features missing in v4. Mendix will implement the following features in the near future:
 
-* Using client certificates for access restriction profiles is not available; for outgoing connections, client certificates are available
 * File storage usage is not visible
 * Application CPU alerts are not sent
 * Archived logs can only be downloaded, not viewed in the browser

@@ -1,6 +1,6 @@
 ---
 title: "Scheduled Events"
-category: "Modeler"
+category: "Desktop Modeler"
 ---
 
 

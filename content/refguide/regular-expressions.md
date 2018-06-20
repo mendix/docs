@@ -1,6 +1,6 @@
 ---
 title: "Regular Expressions"
-category: "Modeler"
+category: "Desktop Modeler"
 ---
 
 

@@ -1,6 +1,6 @@
 ---
 title: "Desktop Modeler Overview"
-category: "Modeler"
+category: " Desktop Modeler"
 description: "Describes the Desktop Modeler in general: tabs, menus, shortcut keys."
 menu_order: 10
 tags: ["desktop modeler"]

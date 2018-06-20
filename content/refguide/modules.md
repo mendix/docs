@@ -1,6 +1,6 @@
 ---
 title: "Modules"
-category: "Modeler"
+category: "Desktop Modeler"
 ---
 
 ## 1 Introduction

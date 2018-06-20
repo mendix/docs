@@ -1,6 +1,6 @@
 ---
 title: "Translatable Texts"
-category: "Modeler"
+category: "Desktop Modeler"
 ---
 
 

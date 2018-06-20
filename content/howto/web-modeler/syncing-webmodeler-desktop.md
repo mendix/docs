@@ -1,10 +1,10 @@
 ---
-title: "Syncing the Web Modeler with the Desktop Modeler"
+title: "Sync the Web Modeler with the Desktop Modeler"
 category: "Web Modeler"
 tags: ["web modeler", "desktop modeler"]
 ---
 
-## 1 Introduction {#sync-webmodeler-desktop}
+## 1 Introduction
 
 If you have created your app in the Web Modeler, you can extend the functionalities of the app by modeling them in the Desktop Modeler.
 

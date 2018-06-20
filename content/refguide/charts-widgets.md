@@ -1,6 +1,6 @@
 ---
 title: "Chart Widgets"
-parent: "Chart Widgets"
+parent: "pages"
 ---
 
 {{% alert type="info" %}}

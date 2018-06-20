@@ -4,7 +4,7 @@ parent: "Chart Widgets"
 ---
 
 # 1 Common configuration
-The configuration that is common across all charts is described here. For chart specific configuration see below
+The common configuration for all charts is described here. For chart specific configuration see below
 
 ## 1.1 Single series
 Contain a single set of data like a pie chart
@@ -13,11 +13,12 @@ Contain a single set of data like a pie chart
 Can contain multiple series of data like a chart with multiple line
 
 ### Chart properties
+
 #### Series
 Add series and configure their properties, each series will represents a data set. For example a line in a line chart
 
 ##### Data source
-The data for each each series can origination from a different data source
+The data for each each series can originate from a different data source
 
 ###### Series name
 Name of the series, use in the legends, when enabled
@@ -29,7 +30,7 @@ The entity from which the data values will be retrieved
 Select the data source type for the series: Database, Microflow or REST endpoint
 
 ###### REST URL
-Relative or full URL to REST endpoint. More information on setting up a REST end point see [REST Charts](../howto/extensibility/charts-basic-rest.md)
+Relative or full URL to REST endpoint. More information on setting up a REST end point see [REST Charts](../howto/extensibility/charts-basic-rest)
 
 ###### XPath constraint
 The constraint on the data from the entity (used when the data source is Database)
@@ -126,6 +127,13 @@ The properties above are common across the chart types. In this section, the pro
 
 ## 2.1 Column Chart
 
+### Series
+
+#### Appearance
+
+##### Column color
+HTML color of the column e.g. green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
+
 ## 2.2 Line Chart
 
 ### Series
@@ -141,15 +149,98 @@ Straight line, Curved line (spline)
 ##### Line color
 HTML color of the line e.g. green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
 
-
 ## 2.3 Pie Chart
+
+### Chart propterties
+
+#### Chart type
+The type of pie chart to use e.g pie, doughnut
+
+#### Show legend
+Displays a legend on the pie chart
+
+#### Colors
+Contains the color of each pie slice e.g. green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
+
+#### Refresh interval (ms)
+Refresh the chart in intervals of ms, when set to 0 refresh is disabled
 
 ## 2.4 Area Chart
 
+### Series
+
+#### Appearance
+
+##### Border
+No, Yes, Yes with markers
+
+##### Border style
+Straight, Curved
+
+##### Border color
+HTML color of the border e.g. green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
+
+##### Area color
+HTML color of the border e.g. green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5). Default is the border color with transparency
+
 ## 2.5 Bar Chart
+### Series
+
+#### Appearance
+
+##### Bar color
+HTML color of the bar e.g. green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
 
 ## 2.6 Time Series Chart
+### Series
+
+#### Appearance
+
+##### Border
+No, Yes, Yes with markers
+
+##### Border Style
+Straight, Curved
+
+##### Line color
+HTML color of the bar e.g. green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
+
+##### Fill area
+Fill area between data points and x-axis: Yes, No
+
+##### Area color
+HTML color of the bar e.g. green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5). By default, the border color with transparency is used
 
 ## 2.7 Heat Map
 
+### Scale
+
+#### Colors
+The percentage with the colors that should be applied. At least two values need to be specified, else the default colors are used
+
+#### Show scale
+Display scale on the chart: Yes , No
+
+#### Show values
+Display data values on the chart: Yes , No
+
+#### Font value color
+HTML color of the bar e.g. green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
+
+#### X-axis label
+Label to be applied on the X-axis
+
+#### Y-axis label
+Label to be applied on the Y-axis
+
+#### Smooth color
+Gradual color gradient between data points: Yes , No
+
 ## 2.8 Bubble Chart
+
+### Series
+
+#### Appearance
+
+##### Serie olor
+Color of the bubbles e.g green,#00FF00, rgb(2,255,0)

@@ -93,6 +93,7 @@ howto:
   mendix_version: 7
   menu_categories:
     - "Tutorials"
+    - "Web Modeler"
     - "SAP"
     - "Atlas UI"
     - "Modeling Basics"

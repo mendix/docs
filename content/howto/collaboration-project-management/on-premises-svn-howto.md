@@ -59,7 +59,7 @@ SVN clients newer than 1.7 use an updated working copy format, which means that 
 Currently, there's no direct way of creating and storing a new application in your on-premises SVN server. Instead, to create a new app, please follow these steps:
 
 1. Create a new Mendix application from either the [Mendix Portal](https://sprintr.home.mendix.com/index.html) or the Mendix Desktop Modeler.<br>
-    * If you create the app from the Mendix Portal, open it in the Mendix Desktop Modeler to download it to your local machine (for more information, see [Syncing the Web Modeler with the Desktop Modeler](syncing-webmodeler-desktop)<br>
+    * If you create the app from the Mendix Portal, open it in the Mendix Desktop Modeler to download it to your local machine (for more information, see [Syncing the Web Modeler with the Desktop Modeler](../web-modeler/syncing-webmodeler-desktop)<br>
     * If you create the app from the Desktop Modeler, click **Yes** when asked whether you want to enable the Team Server
 2. The new project now contains a link to the location of the Mendix Team Server. To replace this with the address of your own SVN server, please create a ticket in the [Mendix Support Portal](https://support.mendix.com/hc/en-us) specifying your project and the address of your SVN server. This address must include the name of the repository you're going to use for your app (for example, `https://svn.example.com:9876/repos/myapp`).
 3. Please wait for confirmation from Mendix before continuing the process.

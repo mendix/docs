@@ -36,21 +36,21 @@ In order to use the Charts widget, a specific data structure is set up. This is 
 
 To create a basic data entry page from which the Charts widget will fetch data, follow these steps:
 
-1. Create a page that will allow for creation of data
-1. Add this page to user navigation
-1. Use the **Generate page** feature to automatically create the data entry page for a data point
+1. Right Click on value entity
+1. Select **generate Overview pages**
+1. Add the **Value_NewEdit** page to user navigation
 
-![Values entity](attachments/charts/charts-generate-page.png)
+![Values entity](attachments/charts/charts-rest-generate-overview-pages.png)
 
 ## 3.3 Add the Charts widget to a new page
 
 1. Create a page named *ShowChart*
 1. Add it to the **User Navigation**
 1. Add a data view to this page that contains the Values entity and has a microflow as a data source
-1. Create a new microflow named **IVK_NewValues** to fill the data view  
+1. Create a new microflow named **DSS_NewValues** to fill the data view  
 ![Values entity](attachments/charts/charts-create-new-value.png)
 1. Right click on the data view and select **Go to microflow**
-1. In the new **IVK_NewValues** microflow, create a new Values object and set that object as the return  
+1. In the new **DSS_NewValues** microflow, create a new Values object and set that object as the return  
 ![New Values microflow](attachments/charts/charts-new-values-microflow.png)
 1. On the ShowChart page, add the chart - Area Chart using the Add widget menu
 ![Select widget](attachments/charts/charts-select-chart.png)

@@ -34,20 +34,21 @@ For more information on publishing a rest API refer to Mendix [REST documentatio
 1. Open the Domain model
 1. Create entities with an association between **Values** and **Series**   
 ![Chart Rest Domain](attachments/charts/charts-rest-domain.png)  
-1. Create a **NewEdit** page for the Values, then add a data grid for the **Values_NewEdit** page that displays the **Name** of the Series over association  
-![Chart Rest Enter Data](attachments/charts/charts-rest-enter-data.png)
+1. Right Click on **Value** and select **generate overview pages**
+![Chart Rest Enter Data](attachments/charts/charts-rest-generate-overview-pages.png)
+1. Add the **Value_NewEdit** page generated to your navigation.
 1. Run the project  
 1. In your browser, open the NewEdit page  
 1. Add values and series by entering data in the appropriate fields
 
 ## 4 Publishing the Service
 
-To use data from a model in the REST service, you need to create a message definition.
+To use data from a model in the REST service, you need to create a JSON structure.
 
-### 4.1 Creating the Mapping
+### 4.1 Creating the Structure
 
-Create a **Message Definition**  
-![Charts Rest MD](attachments/charts/charts-rest-message-definition.png)
+Create a **JSON Structure**  
+![Charts Rest MD](attachments/charts/chart-series-json-structure.png)
 
 ### 4.2 Configure the REST Service
 
@@ -77,8 +78,10 @@ To create a REST Data source end point, follow these steps:
 ![Chart Rest URL](attachments/charts/charts-rest-url.png)
 1. In the tab **Data points**, select the **X-axis data attribute** and the **Y-axis data attribute**  
 ![select Data Points](attachments/charts/charts-data-points.png)  
+1. Add Parameters to the REST Request. The **contextId**, **series name** are provided by default 
+![select Data Points](attachments/charts/charts-rest-parameters.png) 
 1. View Chart  
-![Show Chart](attachments/charts/charts-area-chart.png)
+![Show Chart](attachments/charts/charts-rest-area-chart.png)
 
 ## 6 Related Content
 

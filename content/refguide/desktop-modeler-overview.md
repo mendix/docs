@@ -1,6 +1,9 @@
 ---
 title: "Desktop Modeler Overview"
-parent: "desktop-modeler"
+category: "Modeler"
+description: "Describes the Desktop Modeler in general: tabs, menus, shortcut keys."
+menu_order: 10
+tags: ["desktop modeler"]
 ---
 
 ## 1 Introduction

@@ -4,6 +4,7 @@ title: "Model SDK"
 
 These are the release notes for the Mendix Model SDK:
 
+* [4.12](4.12)
 * [4.11](4.11)
 * [4.10](4.10)
 * [4.9](4.9)

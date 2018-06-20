@@ -18,7 +18,6 @@ This section of the Mendix Reference Guide describes the various features of the
 * [Integration](integration)
 * [Java Actions](java-actions)
 * [Microflows](microflows)
-* [Modeler Products](modeler-products)
 * [Modules](modules)
 * [Nanoflows](nanoflows)
 * [Pages](pages)

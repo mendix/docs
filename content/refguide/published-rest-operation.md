@@ -97,15 +97,18 @@ An operation parameter can be either a query parameter, a path parameter, or a b
 
 The parameter data type is determined by the microflow of the operation. New parameters that are not yet part of the microflow will have *(Not set)* as their data type.
 
+<a name="import-mapping"></a>
 ### 2.6.1 Import Mapping
 
 {{% alert type="info" %}}
 
-This feature was introduced in version 7.14.0.
+This feature was introduced in version 7.14.0. Using an import mapping that takes a parameter was introduced in version 7.17.0
 
 {{% /alert %}}
 
-An import mapping can be selected for a body parameter. All objects and list parameters besides file documents must have import mapping selected. To select an import mapping, double-click the parameter or click **Edit** in the grid after you select the parameter. When selecting the import mapping, you can also choose the commit behavior of the mapping. You can choose to either commit, commit without events, or not commit imported objects. Not commiting is the default for REST Operation.
+For a body parameter, you can select an [import mapping](import-mappings) that converts the body of the request to an object. All object and list parameters besides file documents must have an import mapping selected. To select an import mapping, double-click the parameter or click **Edit** in the grid after you select the parameter. When selecting the import mapping, you can also choose the commit behavior of the mapping. You can choose to either commit, commit without events, or not commit imported objects.
+
+You can select an import mapping that takes no parameter, or an import mapping that takes a primitive parameter (string, integer, etc.). If select an import mapping with a primitive parameter, you need to have exactly one [path parameter](published-rest-path-parameters) with the same type. That path parameter will be passed to the import mapping.
 
 If you select an import mapping that supports both XML and JSON (for instance, a mapping that is based on a message definition), then the operation will be able to handle both XML and JSON requests.
 

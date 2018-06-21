@@ -1,6 +1,6 @@
 ---
 title: "Desktop Modeler Overview"
-category: "Modeler"
+category: " Desktop Modeler"
 description: "Describes the Desktop Modeler in general: tabs, menus, shortcut keys."
 menu_order: 10
 tags: ["desktop modeler"]
@@ -82,18 +82,18 @@ Using items in the menu bar of the Modeler you can create new projects, deploy a
 | View menu | Description | Shortcut key |
 | --- | --- | --- |
 | Start Page | Opens the start page in a tab in the Modeler. |   |
-| Breakpoints | Opens the dockable window '[Breakpoints](modeler)'. |   |
-| Changes | Opens the dockable window '[Changes](modeler)'. |   |
-| Connector | Opens the dockable window '[Connector](modeler)'. |   |
-| Console | Opens the dockable window '[Console](modeler)'. |   |
-| Documentation | Opens the dockable window '[Documentation](modeler)'. |   |
-| Error List | Opens the dockable window '[Error List](modeler)'. |   |
-| Find Results 1 | Opens the dockable window '[Find Results 1](modeler)'. |   |
-| Find Results 2 | Opens the dockable window '[Find Results 2](modeler)'. |   |
-| Project Explorer | Opens the dockable window '[Project Explorer](modeler)'. |   |
-| Properties | Opens the dockable window '[Properties](modeler)'. |   |
-| Stories | Opens the dockable window '[Stories](modeler)'. |   |
-| Toolbox | Opens the dockable window '[Toolbox](modeler)'. |   |
+| Breakpoints | Opens the dockable window '[Breakpoints](desktop-modeler)'. |   |
+| Changes | Opens the dockable window '[Changes](desktop-modeler)'. |   |
+| Connector | Opens the dockable window '[Connector](desktop-modeler)'. |   |
+| Console | Opens the dockable window '[Console](desktop-modeler)'. |   |
+| Documentation | Opens the dockable window '[Documentation](desktop-modeler)'. |   |
+| Error List | Opens the dockable window '[Error List](desktop-modeler)'. |   |
+| Find Results 1 | Opens the dockable window '[Find Results 1](desktop-modeler)'. |   |
+| Find Results 2 | Opens the dockable window '[Find Results 2](desktop-modeler)'. |   |
+| Project Explorer | Opens the dockable window '[Project Explorer](desktop-modeler)'. |   |
+| Properties | Opens the dockable window '[Properties](desktop-modeler)'. |   |
+| Stories | Opens the dockable window '[Stories](desktop-modeler)'. |   |
+| Toolbox | Opens the dockable window '[Toolbox](desktop-modeler)'. |   |
 | Fullscreen | Temporarily hides all dockable windows so that the tabbed documents can be shown in fullscreen. | F11 |
 | Reset Layout | Resets the layout of the Modeler to factory defaults. |   |
 

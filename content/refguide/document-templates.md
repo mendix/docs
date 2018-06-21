@@ -1,6 +1,6 @@
 ---
 title: "Document Templates"
-category: "Modeler"
+category: "Desktop Modeler"
 ---
 
 

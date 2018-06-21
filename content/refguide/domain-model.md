@@ -1,6 +1,6 @@
 ---
 title: "Domain Model"
-category: "Modeler"
+category: "Desktop Modeler"
 ---
 
 

@@ -1,6 +1,6 @@
 ---
 title: "Data Types"
-category: "Modeler"
+category: "Desktop Modeler"
 ---
 
 

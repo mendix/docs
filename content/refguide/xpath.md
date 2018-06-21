@@ -1,6 +1,6 @@
 ---
 title: "XPath"
-category: "Modeler"
+category: "Desktop Modeler"
 description: "Describes how the XPath query langauge is used in Mendix by presenting functions and examples."
 frontpage_featured: true
 ---

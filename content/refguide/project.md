@@ -1,6 +1,6 @@
 ---
 title: "Projects"
-category: "Modeler"
+category: "Desktop Modeler"
 ---
 
 

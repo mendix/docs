@@ -7525,7 +7525,7 @@ module.exports = {
     },
     {
       "from": "/refguide7/Modeler",
-      "to": "/refguide/modeler"
+      "to": "/refguide/desktop-modeler"
     },
     {
       "from": "/refguide7/Module+Role",

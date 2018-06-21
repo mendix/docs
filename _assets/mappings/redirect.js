@@ -2270,6 +2270,10 @@ module.exports = {
       from: "/howtogeneral/support/how-to-activate-or-deactivate-your-mendix-account",
       to: "/developerportal/howto/deactivate-users"
     },
+	{
+      from: "/howtogeneral/support/technical-contact",
+      to: "/developerportal/general/technical-contact"
+    },
     /****************************************************
      * DEVELOPER PORTAL
      ****************************************************/
@@ -8321,6 +8325,10 @@ module.exports = {
 	{
       "from": "/bestpractices/Inheritance+vs.+1+1+association",
       "to": "/refguide/inheritance-vs.-1-1-association"
+    },
+	{
+      "from": "/refguide7/certificates",
+      "to": "/deployment/mendixcloud/certificates"
     },
     /****************************************************
      * REFERENCE GUIDE RENAMES

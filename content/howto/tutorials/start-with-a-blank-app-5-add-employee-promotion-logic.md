@@ -75,17 +75,20 @@ To extend the structure of the **Employee** entity, follow these steps:
 
     ![](attachments/start-with-a-blank-app/entity.png)
 
-3.  Select the **Employee** entity and do the following:<br>
+3. Select the **Employee** entity and do the following:<br>
     a. Click the **New attribute** button below the entity.<br>
     b. Set the **Name** to *Level*.<br>
     c. Set the **Type** to **Enumeration**.<br>
-    d. Click **Select enumeration** to create a new enumeration.<br>
-    e. Enter *EmployeeLevel* for the **Name**.<br>
-    f. Click **New** and enter *Junior* for the **Caption** and **Name**.<br>
-    g. Repeat the step above to create the **Medior** and **Senior** items.<br>
-    h. Click **OK** to close the dialog boxes and create the new attribute.
-
+    d. Click **Select enumeration**.<br>
+    e. Click **New** to create a new enumeration. <br>
+    f. Enter *EmployeeLevel* for the **Name**.<br>
+    g. Click **Add item** and enter *Junior* for the **Caption** and **Name**.<br>
+    h. Repeat the step above to create the **Medior** and **Senior** items.<br>
+    i. Click **Create** to close the dialog box and to create the new enumeration. <br>
     ![](attachments/start-with-a-blank-app/enumeration.png)
+    j. In the **Create New Attribute** dialog window, click **Create** to create the new attribute. <br>
+
+    ![](attachments/start-with-a-blank-app/create-new-attribute.png)
 
 4. Select the **Level** attribute in the **Employee** entity and set the **Default Value** property to **Junior**.
 

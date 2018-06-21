@@ -31,16 +31,16 @@ The **7-day history** infographic will only be included in the PDF report when y
 
 ### 1.3 Recent Tests
 
-Under **Recent Tests**, you can find detailed information about the status of all your test cases and test suites. You can see the duration since the latest run, its result, and the success rate (for test suites). The success rate is calculated using the results of all the containing test cases. For data-driven tests, the data set is displayed in the **test data** column.
+Under **Recent Tests**, you can find detailed information about the status of all your test cases and test suites. You can see the duration since the latest completed run, a counter of passed / total test cases, and the success rate. The success rate is calculated using the results of all the containing test cases. 
+For data-driven tests, the data set is displayed in the **test data** column. The counter of a data-driven test cases shows passed / total test runs of the related data set records at the time of execution.
 
-The results of your tests are displayed as icons. The following table explaines the meanings of those icons:
+The results of your test cases are displayed as labels. The following table explaines the meanings of those lables:
 
-| Icon | Meaning |
+| Label| Meaning |
 | ---- | ------- |
-|![](attachments/project/passed-icon.png)| Passed – the test was executed successfully. |
-|![](attachments/project/failed-icon.png)| Failed – the test has failed. |
-|![](attachments/project/canceled-icon.png)| Canceled – the test was canceled by a user before finishing. |
-|![](attachments/project/skipped-icon.png)| Skipped – the execution of this test was skipped or it hasen't been run yet. |
+| Passed | The test was executed successfully. |
+| Failed | The test has failed. |
+| Not Executed| The execution of this test was skipped or it hasen't been run yet. |
 
 The following three icons exist for test cases, test suites, and data-driven test cases:
 
@@ -48,13 +48,13 @@ The following three icons exist for test cases, test suites, and data-driven tes
 | ---------------------------------------- | ---------- |
 |![](attachments/project/test-case-icon.png) | Test case  |
 |![](attachments/project/test-suite-icon.png) | Test suite |
-|![](attachments/project/ddt-icon.png)| Data-driven Test case|
+|![](attachments/project/ddt-icon.png)| Data-driven Test case |
 
 To open the latest execution log, click **Show Log**. When you click the **name of a test case/test suite**, the edit page opens.
 
 ## 2 Permissions
 
-There are two roles in ATS, which are assigned to the user by the system itself. These are described below.
+There are two roles in ATS, which are at first assigned to the user by the system itself but can be changed manually later. These are described below.
 
 ### 2.1 Tester
 
@@ -62,7 +62,7 @@ The **Tester** role is assigned to a user when they have at least one Team Serve
 
 ### 2.2 App Admin
 
-The **App Admin** role is assigned to a user when they have the app settings permission of the Team Server project in the Developer Portal. The app settings permission is by default part of the SCRUM Master role in the Developer Portal. An App Admin also has access to the test settings page described in the next section.
+The **App Admin** role is assigned to a user when they have the app settings permission of the Team Server project in the Developer Portal. The app settings permission is by default part of the SCRUM Master role in the Developer Portal. An App Admin also has access to the app settings page described in the next section.
 
 ## 3 Settings
 
@@ -111,11 +111,17 @@ ATS automatically retrieves the parallel test session limit from the Selenium hu
 Starting with ATS verson 2.0, ATS capabilites override custom capabilities.
 {{% /alert %}}
 
-### 3.3 Execution Log Cleanup
+### 3.3 Administration rights control from ATS
+
+Under **Administrators** you can specify which app members have administrative rights for the app. By default app members with the "SCRUM Master" project role in Sprintr will have administrative rights. Please keep in mind that users still need to be a member of a project in Sprintr for them to be eligible to be app administrators for the corresponding app in ATS.
+
+In order to make sure that administration rights which have been granted to users are not overwritten, we do not automatically revoke administration rights when the project role for a user in Sprintr changes from administrator to non-administrator. Instead, revoking administration rights can be done manually from the "Settings" page. Finally, note that a user who has an administrative project role in Sprintr will always have administrative rights in ATS.
+
+### 3.4 Execution Log Cleanup
 
 ATS automatically deletes execution logs that are older than 90 days. Here you can change for how many days ATS keeps the execution logs. ATS keeps the execution logs at least for one day.
 
-### 3.4 Mendix API Key
+### 3.5 Mendix API Key
 
 The Mendix API Key is used to synchronize stories between the Developer Portal and ATS.
 
@@ -123,7 +129,7 @@ You must set this key, otherwise you cannot use your user stories in ATS. Be awa
 
 For information on where to find the API keys of your Mendix app, see [Authentication](/apidocs-mxsdk/apidocs/authentication).
 
-### 3.5 CI/CD API Key
+### 3.6 CI/CD API Key
 
 The CI/CD API key is used to allow other systems or applications access to the ATS CI/CD API. Generating a new API key revokes access for any systems using the old API key. These systems are not able to access the ATS CI/CD API until they are updated with the new API key. Make sure to save the displayed API key in a secure place, as you cannot view it again in ATS.
 

@@ -18,13 +18,15 @@ The tables below list all the built-in functions of ATS. There is one table per 
 | Set Checkbox Value               | Checkbox                         | Sets the value of a check box. |
 | Set CKEditor Value               | CKEditor                         | Deprecated in favor of **Set Value**.<br /> Sets the CKEditor content value. |
 | Set File Manager                 | FileManager                      | Sets the file manager to the given file path to upload a file. |
-| Set Grid Selector Checkbox Value | Grid Selector                    | Checks/clears the check box. |
+| Set Grid Selector Checkbox Value | Grid Selector                    | Checks/clears the check box for a given column and row caption in a grid selector widget. |
 | Set Grid Selector Radiobutton checked  | Grid Selector              | Selects the radio button for the given column and row caption. |
 | Set InputReferenceSelector Value | InputReferenceSelector            | Deprecated in favor of **Set Value**.<br /> Sets the input reference selector to the given value. |
-| Set Row Cell Value               | DataGrid                         | Set the cell value in a data grid row. |
+| Set Row Cell Value               | DataGrid                         | Set the cell value for a particular column in a data grid row. |
 | Set Simple Checkbox Set Selector Value | Simple Checkbox Set Selector | Checks/clears the check box found by a given entity attribute value. |
-| Set Value | Standard widgets: TextBox, TextArea, DropDown, RadioButton, DatePicker, ReferenceSelector, SearchInput Text, SearchInput DropDown.<br /> App Store widgets: OnChange Inputbox, BooleanSlider, Bootstrap Wysiwyg Editor (Bootstrap RTE), CK Editor For Mendix, Input Reference Selector, Radiobutton List. | Sets the value of all supported widgets. |
+| Set Value | Standard widgets: TextBox, TextArea, DropDown, RadioButton, DatePicker¹, ReferenceSelector, SearchInput Text, SearchInput DropDown.<br /> App Store widgets: OnChange Inputbox, BooleanSlider, Bootstrap Wysiwyg Editor (Bootstrap RTE), CK Editor For Mendix, Input Reference Selector, Radiobutton List. | Sets the value of all supported widgets. |
 | Set Value (by index) | Drop Down, Reference Selector, Search Input Drop Down | Sets the value of all supported drop-down widgets by index. |
+
+¹ The date/time format depends on the device type. For **mobile** devices the date/time should be formatted in the ISO 8601 standard i.e. 'yyyy-MM-ddTHH:mm' for date and time or 'yyyy-MM-dd' for date or 'HH:mm' for just the time. Seconds should be omitted. For **desktop** devices the string should be formatted so as to match the date/time picker format. This format is locale dependent, for example for the US the format is 'MM/dd/yyyy, hh:mm a'.
 
 ## 3 Widget – Get
 
@@ -42,9 +44,9 @@ The tables below list all the built-in functions of ATS. There is one table per 
 | Get Index | DropDown, ReferenceSelector, SearchInput DropDown | Gets the index of selected values in a drop-down menu (for example, an EnumSelect or ReferenceSelector). |
 | Get InputReferenceSelector Value | InputReferenceSelector | Deprecated in favor of **Get Value**.<br /> Returns the current value of the InputReferenceSelector. |
 | Get Item/Row Index | DataGrid, TemplateGrid, ListView | Gets the index of a row in a data grid or an item in a template grid or list view. |
-| Get Row Cell Value | DataGrid | Gets the cell value of a data grid row. |
+| Get Row Cell Value | DataGrid | Gets the cell value of a data grid row for a given column name. |
 | Get Simple Checkbox Set Selector Value | Simple Checkbox Set Selector | Returns the current value of the check box found by the entity attribute value. |
-| Get Total Item/Row Count | DataGrid, TemplateGrid, ListView | Gets the total grid count from the paging status. |
+| Get Total Item/Row Count | DataGrid, TemplateGrid, ListView | Gets the total grid count from the paging status. Does not work if pagination is not shown.|
 | Get Validation Message | All widgets | Returns the validation message of a widget. |
 | Get Value | Standard widgets: TextBox, TextArea, DropDown, RadioButtons, DatePicker, ReferenceSelector, SearchInput Text, SearchInput DropDown, Label, Input Reference Set Selector.<br /> App Store widgets: OnChange Inputbox, BooleanSlider, BootstrapWysiwygEditor (Bootstrap RTE), CKEditor For Mendix¹, InputReferenceSelector, RadiobuttonList. | Returns the current value of all supported widgets.|
 | Get Visible Item/Row Count | DataGrid, TemplateGrid, ListView | Returns the number of currently visible items/rows in a template grid, data grid, or list view. |
@@ -62,11 +64,11 @@ The tables below list all the built-in functions of ATS. There is one table per 
 | Assert Checkbox Set Selector Value | Checkbox Set Selector | Finds the check-box-by-entity attribute and asserts that the check box is set to the given value. |
 | Assert Checkbox Value | CheckBox | Asserts the value of a check box. |
 | Assert CKEditor Value | CKEditor | Deprecated in favor of **Assert Value**.<br /> Compares the CKEditor value with the given value. |
-| Assert Grid Selector Value | Grid Selector | Asserts the value of check box/radio button. |
+| Assert Grid Selector Value | Grid Selector | Asserts the value of check box/radio button for a given column and row captions in a grid selector. |
 | Assert InputReferenceSelector Value | InputReferenceSelector | Deprecated in favor of **Assert Value**.<br /> Asserts that the input reference selector has the given value. |
 | Assert Simple Checkbox Set Selector Value | Simple Checkbox Set Selector | Asserts that the check box found by the given entity attribute value is checked/cleared. |
 | Assert Validation Message | All widgets | Asserts a validation message with a certain text. |
-| Assert Value | Standard widgets: Text Box, Text Area, DropDown, RadioButton, DatePicker, ReferenceSelector, SearchInput Text, SearchInput DropDown, Label.<br /> App Store widgets: OnChange Inputbox, BooleanSlider, BootstrapWysiwygEditor (Bootstrap RTE), CKEditor For Mendix, InputReferenceSelector, RadiobuttonList. | Asserts the current value of all supported widgets. |
+| Assert Value | Standard widgets: Text Box, Text Area, DropDown, RadioButton, DatePicker, ReferenceSelector, SearchInput Text, SearchInput DropDown, Label input reference set selector.<br /> App Store widgets: OnChange Inputbox, BooleanSlider, BootstrapWysiwygEditor (Bootstrap RTE), CKEditor For Mendix, InputReferenceSelector, RadiobuttonList. | Asserts the current value of all supported widgets. |
 | Dropdown has Option | DropDown, ReferenceSelector, SearchInput DropDown | Returns true if the value is available in a drop-down menu. |
 
 ## 5 Widget – Find
@@ -82,7 +84,7 @@ The tables below list all the built-in functions of ATS. There is one table per 
 | Find Grid Selector | Grid Selector | Finds a check box/radio button by the column and row caption. |
 | Find Item/Row | DataGrid, TemplateGrid, ListView | Finds a row/item in a data grid, template grid, or list view by index. |
 | Find Item/Row (by child element) | DataGrid, TemplateGrid, ListView | Finds an item or row of a template grid, data grid, or list view containing a specified element. |
-| Find Selected Item/Row | DataGrid, TemplateGrid, ListView | Returns the first selected item/row object. |
+| Find Selected Item/Row | DataGrid, TemplateGrid, ListView | Returns the first selected item/row as a web element. |
 | Find Simple Checkbox Set Selector | Simple Checkbox Set Selector | Finds the check box by the given value. |
 | Find Widget Child Node | All widgets | Find a node within a Mendix widget. Also matches the widget node itself. The function is limited to search only within widgets that are visible. |
 
@@ -96,11 +98,12 @@ The tables below list all the built-in functions of ATS. There is one table per 
 | Click Dropdown Div Converter split button | Dropdown Div Converter | Clicks the drop-down `div` converter split button. |
 | Click Menu Item | NavigationTree, MenuBar, SimpleMenuBar | Clicks a menu item in a navigation tree, menu bar, and simple menu bar. |
 | Click Widget | All widgets | Clicks a Mendix widget (for example, button, link, image) by its name. |
-| Click Widget Button | ListView, ReferenceSelector | Refresh Button / Loadmore / ClearSearchField (ListView) Goto, / Adds (ReferenceSelector). |
+| Click Widget Button | ListView, ReferenceSelector | Clicks on one of the following special widget buttons: Refresh Button / Loadmore / ClearSearchField (ListView) Goto, / Adds (ReferenceSelector). |
 | Close Dialog | Window, DialogMessage, ConfirmationDialog | Clicks the **X** button on a Confirmation, Error, Warning, or Info dialog box. |
 | Close GroupBox | GroupBox | Closes a group box. |
 | Confirm Dialog | ConfirmationDialog, DialogMessage | Clicks the **Proceed/OK** button on a Confirmation, Error, Warning, or Info dialog box. |
 | Open GroupBox | GroupBox | Opens a group box. |
+| Set ListView Search | ListView | Sets the ListView search text. |
 | Sort DataGrid | DataGrid | Sorts a data grid by the given column. |
 | Toggle BooleanSlider Value | BooleanSlider | Toggles the value of the Booleanslider. |
 | Toggle Checkbox Set Selector | Checkbox Set Selector | Finds a check-box by a given entity attribute and inverses the value. |
@@ -108,7 +111,7 @@ The tables below list all the built-in functions of ATS. There is one table per 
 | Toggle Checkbox Value | Checkbox | Clicks a check box to toggle its value. |
 | Toggle Grid Selector Checkbox Value | Grid Selector | Inverses the check box found by a given column and row caption. |
 | Toggle Simple Checkbox Set Selector Value | Simple Checkbox Set Selector | Inverses the value of the check box found by the given entity attribute value. |
-| Set ListView Search | ListView | Sets the ListView search text. |
+
 
 ## 7 Mendix
 
@@ -118,7 +121,7 @@ The tables below list all the built-in functions of ATS. There is one table per 
 | Get Current Page Title | N/A | Returns the current page/form title. |
 | Login | Standard login page | Logs in to the Mendix application with the standard login page or on the cloud using MxID. |
 | Logout | N/A | Triggers the logout/logoff from application via the Client API. Use this keyword in the teardown of your test cases to end the user session. This will work regardless of the UI state. |
-| Mendix wait | N/A | Injects Mendix scripts and waits. |
+| Mendix wait | N/A | Wait for microflow and UI activities. |
 | Open Mendix Application | N/A | Opens a Mendix application at the website URL in a browser with Mendix-specific settings. |
 
 ## 8 Web
@@ -139,28 +142,28 @@ The tables below list all the built-in functions of ATS. There is one table per 
 | Find Element by Sizzle | Finds a web element by Sizzle. Optionally restrict search to the specified SearchContext element. The occurrence lets you specify which element to fetch from the result list, starting at 1 for the first element (defaults to the first element). |
 | Get Current Window Handle | Returns the handle (meaning, the identifier) of the currently active window. |
 | Get Property Value | Returns the property value from the web element. (Does not have access to Dojo widget properties). |
-| Get Selected Option Index   | |
-| Get Selected Option Text | |
-| Get Selected Option Value | |
-| Get Text | |
+| Get Selected Option Index   | Returns the index of the first selected option in a select element. |
+| Get Selected Option Text | Returns the text of the first selected option in a select element. |
+| Get Selected Option Value | Returns the value of the first selected option in a select element. |
+| Get Text | Get the visible, i.e. not hidden by CSS, innerText of this element, including sub-elements, without any leading or trailing whitespace. |
 | Is Element Displayed | Returns true if the supplied element is displayed (visible). |
 | Is Selected | Checks whether the check box is selected. |
 | Maximize | Maximizes the current browser window. |
 | Open Application | Deprecated in favor of **Open Mendix Application**.<br /> Opens an application at the application's URL in a browser. |
 | Open Website | Deprecated in favor of **Open Mendix Application**. |
 | Select Option | Deprecated in favor of **Select Option by Index**, **Select Option by Text**, and **Select Option by Value**. |
-| Select Option by Index | |
-| Select Option by Text | |
-| Select Option by Value | |
+| Select Option by Index | Select the option at the given index. |
+| Select Option by Text | Select all options that display text matching the argument. |
+| Select Option by Value | Select all options that have a value matching the argument. |
 | Set Browser Dimensions | Deprecated in favor of **Set Size**. |
-| Set Page Load Timeout | |
-| Set Size | Sets the size of a browser window. |
-| Switch to Default Frame | |
-| Switch to Frame | |
+| Set Page Load Timeout | Sets the amount of time (in milliseconds) to wait for a page load to complete before throwing an error. If the timeout is negative, page loads can be indefinite. |
+| Set Size | Sets the size of the current browser window. This will change the outer window dimension, not just the view port. |
+| Switch to Default Frame | Selects either the first frame on the page, or the main document when a page contains iframes. |
+| Switch to Frame | Select a frame using its previously located WebElement. |
 | Switch to Next Window | Switches to the next open window. An error is thrown if there is only one window. Returns the window handle (meaning, the identifier) of the new active window. |
 | Switch to Window | Switches to the window via its identifier. An error is thrown if the window is not found. |
-| Unfocus WebElement | |
-| Wait for Condition | |
+| Unfocus WebElement | Removes focus from a web element by calling the blur method. |
+| Wait for Condition | Repeatedly runs the condition java script snippet every Interval (in milliseconds) until one of the following is fulfilled: <br />  * the snippet returns neither null nor false <br />  * the snippet throws an unignored exception <br />  * the timeout (in milliseconds) expires. |
 | Wait for Condition JS | Waits until the given expression returns true. |
 
 ## 9 Mouse & Keyboard
@@ -169,14 +172,13 @@ The tables below list all the built-in functions of ATS. There is one table per 
 | ---------------- | ----------------- | ---------------------------------------- |
 | Accept Browser Alert | N/A | Accepts the alert available. |
 | Clear WebElement | WebElement | Clears a web element (input or text area). |
-| Click | WebElement | Clicks in the middle of the given element. |
+| Click | WebElement | Clicks in the middle of the given web element. |
 | Click/Doubleclick | All web elements | Performs a click or double-click and waits for Mendix activities |
 | Click Coordinates | N/A | Clicks a given point on the page as described by the X and Y offset. If no reference element is given, the upper-left corner of the page is used as point of origin for calculating the desired point. Otherwise, the upper-left corner of the reference element is used. |
 | Dismiss Browser Alert | N/A | Dismisses the alert available. |
 | Doubleclick | WebElement | Performs a click or double-click and then a wait for Mendix activities. |
 | Focus and Clear Element Value | WebElement | Sets an input element to an empty string. |
 | Focus WebElement | WebElement | Focuses the web element and performs a wait afterwards. |
-| Focus WebElement | WebElement | |
 | Hover | WebElement | Hovers a web element. |
 | Send Enter | N/A                  | Simulates pressing <kbd>Enter</kbd> in the element. |
 | Send Keys | N/A                  | Simulates typing <kbd>Text</kbd> into the element. |
@@ -204,7 +206,7 @@ The tables below list all the built-in functions of ATS. There is one table per 
 | Assert lessThan | N/A | Asserts that the subject is less than the matcher parameter (for example, `100` is less than `1000`). |
 | Assert lessThanOrEqualTo | N/A | Asserts that the subject is either less than or equal to the matcher parameter (for example, `100` is less than `1000`, `1000` is equal to `1000`). |
 | Assert not equals | N/A | Asserts that two values are not equal. |
-| Assert not false | N/A | |
+| Assert not false | N/A | Asserts that the examined value is not false. |
 | Assert not true | N/A | Either false or null. |
 | Assert null | N/A | Fails if the object is not null. |
 | Assert null (internal) | N/A | The internal Assert null functions that allows a Boolean parameter to invert the result. |
@@ -212,7 +214,7 @@ The tables below list all the built-in functions of ATS. There is one table per 
 | Assert startsWith | N/A | Asserts that the subject starts with a string that is equal to the matcher parameter (for example, `testcase` starts with `test`). |
 | Assert true | N/A | Deprecated in favor of **Assert equalTo**. |
 | Assert XML equivalent | N/A | Asserts that two XMLs are equivalent. |
-| Concatenate String | String | Concatenate strings. |
+| Concatenate String | String | Concatenate strings. Any number of the arguments can be null. |
 | If Null Then 0 (Integer) | N/A | Deprecated.<br /> Checks the input value and sets it to 0 if it is null. |
 | Is not Null | N/A | Returns true if object is not null, false otherwise. |
 | Push ATS Scripts | N/A | Deprecated as it only served an internal purpose.<br /> Pushes generic ATS scripts to the client (jQuery, helpers functions). |
@@ -222,14 +224,14 @@ The tables below list all the built-in functions of ATS. There is one table per 
 | Return First Valid String | String | Returns the first string from the parameter list that is not null. |
 | Return First Valid WebElement | WebElement | Returns the first web element from the parameter list that is not null. |
 | Set Implicit Wait | N/A | Deprecated as it only served an internal purpose. |
-| Set Return Value | N/A | |
+| Set Return Value | N/A | Use this function in custom actions to set the return value of the custom action. When using the "extract action" feature this function call will be added automatically, where applicable. |
 | Sleep | N/A | The waits "sleep time" in milliseconds. |
 
 ## 11 Generators
 
 | Function         | Supported Widgets | Description                              |
 | ---------------- | ----------------- | ---------------------------------------- |
-| Generate GUID | N/A | Generates and returns a GUI. |
+| Generate GUID | N/A | Generates and returns a globally unique identifierGUID. |
 | Get Current DateTime String | N/A | Returns the current date and time in the supplied format (Java date format) (for example, `yyyy-MM-dd HH:mm:ss`. |
 | Random Number | N/A | Creates a random integer using `Math.floor(Math.random() * (max - min)) + min`. You need to define the min (included) and max (excluded). |
 | Random String | N/A | Creates a random alphanumeric string using `Math.random().toString(36).slice(2,8)`. Optionally, it allows you to add a prefix or postfix. |

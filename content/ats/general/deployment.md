@@ -157,7 +157,7 @@ Selenium Service | Agent Name          | Setup Instructions
 ---------------- | ------------------- | ------------------
 BrowserStack     | BrowserStack Local  | [Here](https://www.browserstack.com/local-testing)
 SauceLabs        | Sauce Connect Proxy | [Here](https://wiki.saucelabs.com/display/DOCS/Setting+Up+Sauce+Connect+Proxy)
-TestingBot       | TestingBot Tunnel   | [Here](https://testingbot.com/support/other/tunnel)
+
 
 ### 5.4 Customer-Hosted Selenium
 

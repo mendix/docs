@@ -1,6 +1,6 @@
 ---
 title: "Images"
-category: "Modeler"
+category: "Desktop Modeler"
 ---
 
 

@@ -3,6 +3,7 @@ title: "Deploy to the Mendix Cloud"
 category: "How-To's"
 description: "Describes how to deploy to the Mendix Cloud."
 tags: ["Deploy","Mendix Cloud","Developer Portal"]
+#If moving location for documentation purposes, plan with the Cloud Portal Team, as this doc is mapped to the product
 ---
 
 ## 1 Introduction

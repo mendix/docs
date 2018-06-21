@@ -1,6 +1,7 @@
 ---
 title: "Customizing PhoneGap Build packages"
 category: "Mobile"
+#If moving location for documentation purposes, plan with the Cloud Portal Team, as this doc is mapped to the product.
 ---
 
 

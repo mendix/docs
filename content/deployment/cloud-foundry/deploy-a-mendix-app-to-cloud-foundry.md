@@ -1,7 +1,8 @@
 ---
 title: "Deploy a Mendix App to Cloud Foundry"
 category: "Cloud Foundry"
-tags: []
+tags: ["Cloud Foundry"]
+#If moving location for documentation purposes, plan with the Modeler Team, as this doc is mapped to the product.
 ---
 
 ## 1 Introduction

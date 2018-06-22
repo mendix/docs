@@ -13,3 +13,4 @@ The following tutorials are available here:
 * [How to globally theme charts](charts-theme)
 * [How to use a chart with a REST data source](charts-basic-rest)
 * [How to create an advanced chart](charts-any-usage)
+* [How to use Plotly images REST service endpoint](charts-plotly-images-rest)

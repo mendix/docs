@@ -14,11 +14,11 @@ These release notes are for the [beta](../beta-features/index) version of the We
 
 #### Improvements
 
-* In the page editor, we improved the process of adding attributes in text widgets so that you can build applications even faster: when selecting an attribute to use in the text, you can use <kbd>Ctrl</kbd> + <kbd>Space</kbd> as a keyboard shortcut.
+* In the page editor, we improved the process of adding attributes in text widgets so that you can build applications even faster. Now, when selecting an attribute to use in the text, you can use <kbd>Ctrl</kbd> + <kbd>Space</kbd> as a keyboard shortcut.
 
 #### Fixes
 
-* In the page editor, we fixed a bug where PNG images could not be uploaded in Safari.
+* In the page editor, we fixed the bug where PNG images could not be uploaded in Safari.
 
 ### June 15th, 2018
 

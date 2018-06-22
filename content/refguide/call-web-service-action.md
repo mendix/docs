@@ -59,7 +59,9 @@ Setting this setting to yes can greatly decrease performance!
 
 When consuming a WSDL that uses encoding, turning on validation will lead to a consistency error, because it is not WS-I compliant.
 
-{{% /alert %}} When this setting is disabled, schema validation is not possible. This happens in two cases:
+{{% /alert %}} 
+
+When this setting is disabled, schema validation is not possible. This happens in two cases:
 
 * When you have configured the [consumed web service](consumed-web-service) to send binary data as attachments
 * When you have configured web service calls to use the new (optimized) implementation in the [project's runtime settings](project-settings)

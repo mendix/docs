@@ -24,7 +24,7 @@ Before you can manage your SAP Cloud Platform using the Developer Portal, you wi
 
 ### 2.1 Change Cloud Settings<a name='ChangeCloudSettings'></a>
 
-In this scenario, you have an existing app which is runningin another environment: for instance, on the Mendix Cloud. To change this, go to the Cloud Settings tab of the General Settings in the Development Portal.
+In this scenario, you have an existing app which is running in another environment: for instance, on the Mendix Cloud. To change this, go to the Cloud Settings tab of the General Settings in the Development Portal.
 
 ![](attachments/sap-cloud-platform/cloud-settings.png)
 
@@ -54,7 +54,7 @@ If you already have an SAP session, you will only have to choose the region. If 
 
 You may be asked to provide your credentials in one of two ways:
 
-1. You will be taken to the SAP authentication page to enter your credentials.
+1. You will be taken to the SAP authentication page to enter your credentials. In this case, your SAP username must be the same as your Mendix username.
 
 2. The Developer Portal will ask for your credentials which it will then use to obtain an access token from SAP. The Developer Portal will then use the access token. It will not store your credentials. *This method is being deprecated*.
 
@@ -140,6 +140,16 @@ An environment is created; with more than one environment it is possible to tran
 ## 4 Create Package from Team Server
 
 At any time, you can create a new deployment package from a committed version of the project. If you are working with the Desktop Modeler you will first have to commit the project.
+
+{{% alert type="info" %}}
+You can also deploy your app (the steps in sections 4 and 5.1 of this How-To) automatically from the Desktop Modeler. However, you will then have less control over the deployment.
+
+If you click **Run** in the Desktop Modeler this will automatically:
+
+* commit the project
+* generate a deployment package
+* deploy the deployment package to the first available environment (this will replace any app which is currently running in this environment)
+{{% /alert %}}
 
 1. Go to the **Environments** page of the Developer Portal.
 

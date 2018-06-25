@@ -12,7 +12,7 @@ This property specifies what action is executed when the element is clicked. The
 | Save changes | Commits all changes made on the page.  |
 | Cancel changes | Rolls back all changes made on the page. |
 | Close page | Closes the pop-up window (for pop-up pages) or navigates to the previously visited page (for content pages). |
-| Delete | Deletes an object.<br/>* When placed in a DataView, deletes the object DataView is bound. It does not delete objects in the nested DataView(s) unless configured through delete behaviours.<br/>* When placed on a DataGrid / TemplateGrid / Reference set selector control bar, deletes the selected object(s). <br/>* When placed inside a ListView template, deletes the current item of the ListView  |
+| Delete | Deletes an object.<br/>* When placed in a data view, deletes the object to which the data view is bound. It does not delete objects in a nested data view unless configured through delete behavior<br/>* When placed on a data grid, template grid, or reference set selector control bar, deletes the selected object(s) <br/>* When placed inside a list view template, deletes the current item of the list view  |
 | Synchronize | Synchronizes the data stored locally on your device with the server database. |
 | Sign out | Signs out the currently signed-in user. When no user is signed in, pressing this button has no effect. |
 
@@ -65,7 +65,7 @@ If a literal value is chosen for the address, you can enter the value here.
 
 If an attribute is chosen for the address, you can select the attribute here. An address attribute specifies a path to an attribute. The path starts at the entity of the data view in which the link button is contained.
 
-#### Close Page (Only for "Save changes", "Cancel changes" and "Delete") {#on-click-close-page}
+#### Close Page (Only for "Save changes", "Cancel changes", and "Delete") {#on-click-close-page}
 
 This flag indicates whether the current page should be closed.
 

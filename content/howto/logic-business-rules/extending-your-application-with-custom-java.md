@@ -16,7 +16,7 @@ Most application logic can be developed using microflows. Microflows are very po
 
 Before starting this how-to, make sure you have completed the following prerequisite:
 
-* Have Eclipse: download it [here](https://eclipse.org/)
+* Have Eclipse (download it [here](https://eclipse.org/))
 
 {{% alert type="info" %}}
 

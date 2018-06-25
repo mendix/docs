@@ -7,7 +7,7 @@ tags: ["SAP", "integration", "OData", "SSO"]
 
 ## 1 Introduction
 
-When you deploy an application to SAP Cloud Platform using the SAP deployment features of the Mendix Developer Portal it is bound automatically to the XSUAA service. This service allows you to use an external identity provider (IDP) for a Mendix application. This means that the user can sign on to their app using this IDP instead of having their user credentials stored separately in the Mendix app. This means that they can have a single sign-on (SSO) experience with their application.
+When you deploy an application to SAP Cloud Platform using the SAP deployment features of the Mendix Developer Portal it is bound automatically to the XSUAA service. This service allows you to use an external **ID**entity **P**rovider (IDP) for a Mendix application. This means that the user can sign on to their app using this IDP instead of having their user credentials stored separately in the Mendix app. This means that they can have a single sign-on (SSO) experience with their application.
 
 A Mendix application is role-based. Using the SAP Cloud Platform Cockpit, you can assign the roles within the app to roles within your SAP subaccount. The roles in the SAP subaccount can then be assigned to individual users via the selected IDP (Trust Configuration).
 
@@ -134,6 +134,8 @@ The diagram below shows the relationship between the security structures in your
 
 ![](attachments/use-sap-xsuaa-connector/xsuaa-diagram-labeled.png)
 
+Once the user has been authenticated, various attributes (the user's name, for example) are copied from the IDP **User** (green) to the **User** entity within the Mendix application (blue) so that they can be used by the app. However the authorization credentials remain in the IDP and the user cannot access the app except through the IDP.
+
 ### 5.1 Scope
 
 When your app is deployed to the SAP Cloud Platform, each **User Role** (A) in the Mendix app is exposed as a **Scope** (B) in the SAP environment. You can see this mapping by going to your app in the SAP Cloud Platform Cockpit. Under **Security** you can view the **Scopes**. You will see that the four **User Roles** in the Mendix app are exposed as scopes in the application space:
@@ -145,6 +147,8 @@ When your app is deployed to the SAP Cloud Platform, each **User Role** (A) in t
 Each Scope is mapped to a single **Role Template** (C) during deployment. You can see the Role Templates in the Application details of the SAP Cloud Platform Cockpit. These are also defined during the deployment of the app.
 
 ![](attachments/use-sap-xsuaa-connector/app-role-templates.png)
+
+The **Attribute**s of the **Role Template** are not used by Mendix in linking Mendix Roles to SAP Roles.
 
 ### 5.3 Role
 

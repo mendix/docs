@@ -144,7 +144,7 @@ When your app is deployed to the SAP Cloud Platform, each **User Role** (A) in t
 
 ### 5.2 Role Template
 
-Each Scope is mapped to a single **Role Template** (C) during deployment. You can see the Role Templates in the Application details of the SAP Cloud Platform Cockpit. These are also defined during the deployment of the app.
+Each Scope is mapped to a single **Role Template** &#40;C) during deployment. You can see the Role Templates in the Application details of the SAP Cloud Platform Cockpit. These are also defined during the deployment of the app.
 
 ![](attachments/use-sap-xsuaa-connector/app-role-templates.png)
 

@@ -5,8 +5,7 @@ parent: "control-bar"
 
 {{% alert type="info" %}}
 
-This button has been removed in version 7.17.
-Use a normal [Action button](action-button) instead.
+This button was removed in Mendix 7.17. Use a normal [Action button](action-button) instead.
 
 {{% /alert %}}
 

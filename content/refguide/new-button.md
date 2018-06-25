@@ -3,6 +3,12 @@ title: "Create Button"
 parent: "button-widgets"
 ---
 
+{{% alert type="info" %}}
+
+This button was removed in Mendix 7.17. Use a normal [Action button](action-button) with "Create object" action instead.
+
+{{% /alert %}}
+
 When the user presses the **Create** button, the Mendix application will create a new object and open a page to edit the new object.
 
 ## Button Properties

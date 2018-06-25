@@ -9,6 +9,7 @@ This property specifies what action is executed when the element is clicked. The
 | Call a microflow | The specified microflow is executed. |
 | Call a nanoflow | The specified nanoflow is executed. |
 | Open link | Triggers an action based on the link type, some of which are specific to mobile devices. |
+| Create object | Creates a new object |
 | Save changes | Commits all changes made on the page.  |
 | Cancel changes | Rolls back all changes made on the page. |
 | Close page | Closes the pop-up window (for pop-up pages) or navigates to the previously visited page (for content pages). |
@@ -74,3 +75,14 @@ This flag indicates whether the current page should be closed.
 When an object is saved in a Mendix application running in an [offline profile](hybrid-phone-profile), this information is stored in a local database until it can be synchronized with the server. In practice, this means that uploading a new object to the server requires two distinct actions: saving the object and [syncing it](offline#synchronization).
 
 This flag indicates whether synchronization should happen when the save button is clicked.
+
+#### Entity (path) (Only for "Create object")
+
+Specifies which entity to create. It is also possible to choose an association (if available) from the context object.
+
+* If an entity is configured, a new instance of the entity will be created.
+* If an entity throguh association from the context object is configured, a new instance of the entity will be created and associated with the context object.
+
+#### On Click Page (Only for "Create object")
+
+Specifies which [page](page) should be shown with the new created object. This page must accept a context parameter object with the same or sub-type of the created entity.

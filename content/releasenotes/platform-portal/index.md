@@ -8,8 +8,8 @@ title: "Platform Portal"
 
 #### Improvements
 
-* Implemented the new Mendix Header.
-* Fixed a bug that allowed users to start an application during a restore.
+* Implemented the new Mendix header.
+* Fixed the bug that allowed users to start an application during a restore.
 
 ### June 15th, 2018
 

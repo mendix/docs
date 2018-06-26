@@ -4,6 +4,13 @@ title: "Platform Portal"
 
 ## 2018
 
+### June 26th, 2018
+
+#### Improvements
+
+* Implemented the new Mendix header.
+* Fixed the bug that allowed users to start an application during a restore.
+
 ### June 15th, 2018
 
 #### Improvements

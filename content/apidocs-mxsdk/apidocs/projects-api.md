@@ -3,6 +3,7 @@ title: "Projects API"
 category: "API Documentation"
 ---
 
+
 # Contents
 
 ## Introduction
@@ -76,22 +77,6 @@ The `Result` element contains the job result, in case it has completed. For `Cre
 The following Model Share shows how to use the RetrieveJobStatus call from the Modeler.
 
 <iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/7f0be770-bd1a-4fa8-9928-ca89b857d8b2/retrievejobstatus-usage?embed=true" allowfullscreen=""></iframe>
-
-### DeleteApp
-
-The DeleteApp operation will remove an application, including all resources that are associated with it, like the Team Server repository, cloud nodes, and all model server working copies. The operation can only be called by someone who has administrative permissions on the project (usually the user that created the project).
-
-#### Parameters
-
-| Name | Type |	Description |
-| --- | --- | --- |
-| ProjectID |	String | ID of the project/app, as can be found under the project settings. |
-| User | String | The email address you use to log into your Mendix account.|
-| ApiKey | String | An API Key associated to the user account of the User.|
-
-#### Output
-
-The DeleteApp action does not return anything. If a true request completes successfully, the application was removed. 
 
 ### ExposeTeamServerRevisionAsOnlineWorkingCopy
 

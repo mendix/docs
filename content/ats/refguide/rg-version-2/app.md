@@ -31,16 +31,17 @@ The **7-day history** infographic will only be included in the PDF report when y
 
 ### 1.3 Recent Tests
 
-Under **Recent Tests**, you can find detailed information about the status of all your test cases and test suites. You can see the duration since the latest completed run, a counter of passed / total test cases, and the success rate. The success rate is calculated using the results of all the containing test cases. 
-For data-driven tests, the data set is displayed in the **test data** column. The counter of a data-driven test cases shows passed / total test runs of the related data set records at the time of execution.
+Under **Recent Tests**, you can find detailed information about the status of all your test cases and test suites. You can see the duration since the latest completed run, a counter of passed/total test cases, and the success rate. The success rate is calculated using the results of all the containing test cases. 
 
-The results of your test cases are displayed as labels. The following table explaines the meanings of those lables:
+For data-driven tests, the data set is diplayed in the **test data** column. The counter of a data-driven test cases shows the passed/total test runs of the related data set records at the time of execution.
+
+The results of your test cases are displayed as the following labels:
 
 | Label| Meaning |
 | ---- | ------- |
 | Passed | The test was executed successfully. |
 | Failed | The test has failed. |
-| Not Executed| The execution of this test was skipped or it hasen't been run yet. |
+| Not Executed| The execution of this test was skipped or it has not been run yet. |
 
 The following three icons exist for test cases, test suites, and data-driven test cases:
 
@@ -48,7 +49,7 @@ The following three icons exist for test cases, test suites, and data-driven tes
 | ---------------------------------------- | ---------- |
 |![](attachments/project/test-case-icon.png) | Test case  |
 |![](attachments/project/test-suite-icon.png) | Test suite |
-|![](attachments/project/ddt-icon.png)| Data-driven Test case |
+|![](attachments/project/ddt-icon.png)| Data-driven test case |
 
 To open the latest execution log, click **Show Log**. When you click the **name of a test case/test suite**, the edit page opens.
 
@@ -111,11 +112,11 @@ ATS automatically retrieves the parallel test session limit from the Selenium hu
 Starting with ATS verson 2.0, ATS capabilites override custom capabilities.
 {{% /alert %}}
 
-### 3.3 Administration rights control from ATS
+### 3.3 Administration Rights Control from ATS
 
-Under **Administrators** you can specify which app members have administrative rights for the app. By default app members with the "SCRUM Master" project role in Sprintr will have administrative rights. Please keep in mind that users still need to be a member of a project in Sprintr for them to be eligible to be app administrators for the corresponding app in ATS.
+Under **Administrators**, you can specify which app members have administrative rights for the app. By default, app members with the SCRUM Master project role in the Developer Portal will have administrative rights. Please keep in mind that users still need to be a member of an app project in the Developer Portal for them to be eligible to be app administrators for the corresponding app in ATS.
 
-In order to make sure that administration rights which have been granted to users are not overwritten, we do not automatically revoke administration rights when the project role for a user in Sprintr changes from administrator to non-administrator. Instead, revoking administration rights can be done manually from the "Settings" page. Finally, note that a user who has an administrative project role in Sprintr will always have administrative rights in ATS.
+In order to make sure that the administration rights granted to users are not overwritten, administration rights are not automatically revoked when the project role for a user in the Developer Portal changes from administrator to non-administrator. Instead, revoking administration rights can be done manually from the **Settings** page. Finally, note that a user who has an administrative project role in the Developer Portal will always have administrative rights in ATS.
 
 ### 3.4 Execution Log Cleanup
 

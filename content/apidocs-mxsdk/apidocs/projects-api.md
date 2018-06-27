@@ -3,7 +3,6 @@ title: "Projects API"
 category: "API Documentation"
 ---
 
-
 # Contents
 
 ## Introduction
@@ -80,14 +79,15 @@ The following Model Share shows how to use the RetrieveJobStatus call from the M
 
 ### DeleteApp
 
-The DeleteApp operation will remove an application, including all resources that are associated with it, like the TeamServer repository, cloud nodes and all model server working copies. The operation can only be called by someone who has administrative permissions on the project (usually the user that created the project)
+The DeleteApp operation will remove an application, including all resources that are associated with it, like the Team Server repository, cloud nodes, and all model server working copies. The operation can only be called by someone who has administrative permissions on the project (usually the user that created the project).
 
 #### Parameters
+
 | Name | Type |	Description |
 | --- | --- | --- |
-| ProjectID |	String | ID of the project / app, as can be found under the project settings. |
+| ProjectID |	String | ID of the project/app, as can be found under the project settings. |
 | User | String | The email address you use to log into your Mendix account.|
-| ApiKey | String | An API Key associated to the user account of User.|
+| ApiKey | String | An API Key associated to the user account of the User.|
 
 #### Output
 

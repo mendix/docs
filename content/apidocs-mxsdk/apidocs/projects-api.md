@@ -91,7 +91,7 @@ The DeleteApp operation will remove an application, including all resources that
 
 #### Output
 
-The DeleteApp action does not return anything, if tue request completes successfully, the application was removed. 
+The DeleteApp action does not return anything. If a true request completes successfully, the application was removed. 
 
 ### ExposeTeamServerRevisionAsOnlineWorkingCopy
 

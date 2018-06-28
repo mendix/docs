@@ -145,7 +145,7 @@ The tables below list all the built-in functions of ATS. There is one table per 
 | Get Selected Option Index   | Returns the index of the first selected option in a select element. |
 | Get Selected Option Text | Returns the text of the first selected option in a select element. |
 | Get Selected Option Value | Returns the value of the first selected option in a select element. |
-| Get Text | Get the visible, i.e. not hidden by CSS, innerText of this element, including sub-elements, without any leading or trailing whitespace. |
+| Get Text | Gets the visible (meaning, not hidden by CSS) innerText of this element, including sub-elements, without any leading or trailing whitespace. |
 | Is Element Displayed | Returns true if the supplied element is displayed (visible). |
 | Is Selected | Checks whether the check box is selected. |
 | Maximize | Maximizes the current browser window. |
@@ -163,7 +163,7 @@ The tables below list all the built-in functions of ATS. There is one table per 
 | Switch to Next Window | Switches to the next open window. An error is thrown if there is only one window. Returns the window handle (meaning, the identifier) of the new active window. |
 | Switch to Window | Switches to the window via its identifier. An error is thrown if the window is not found. |
 | Unfocus WebElement | Removes focus from a web element by calling the blur method. |
-| Wait for Condition | Repeatedly runs the condition java script snippet every Interval (in milliseconds) until one of the following is fulfilled: <br />  * the snippet returns neither null nor false <br />  * the snippet throws an unignored exception <br />  * the timeout (in milliseconds) expires. |
+| Wait for Condition | Repeatedly runs the condition java script snippet every Interval (in milliseconds) until one of the following is fulfilled: <br />  * The snippet returns neither null nor false <br />  * The snippet throws an unignored exception <br />  * The timeout (in milliseconds) expires |
 | Wait for Condition JS | Waits until the given expression returns true. |
 
 ## 9 Mouse & Keyboard

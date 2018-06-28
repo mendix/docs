@@ -11,11 +11,11 @@ In the **Developer Portal**, there are two types of **Buzz** pages:
 
 *   **The company Buzz**
 
-    ![](attachments/companybuzz.jpg)
+    ![](attachments/companybuzz.png)
 
 *   **The app Buzz**
 
-    ![](attachments/appbuzz.jpg)
+    ![](attachments/appbuzz.png)
 
 ## 2 App Buzz
 

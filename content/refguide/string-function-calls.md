@@ -392,6 +392,8 @@ In `isMatch()`, the regex is implicitly anchored at `^` and `$`.
 
 * `isMatch('NLG 123.45', '[0-9]')` returns false
 * `isMatch('NLG 123.45', '.*[0-9].*')` returns true
+NB searching an empty string:
+* `isMatch('', '.*[0-9].*')` returns true
 
 ## replaceAll
 

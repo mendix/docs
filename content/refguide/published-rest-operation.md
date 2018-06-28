@@ -89,13 +89,11 @@ If you check this box, the operation is marked as deprecated in the service's [O
 
 This feature was introduced in version 7.12.0.
 
+Begin able to edit the parameters was introduced in version 7.17.0
+
 {{% /alert %}}
 
-The **Parameters** table shows the name, data type, and type of the parameter.
-
-An operation parameter can be either a query parameter, a path parameter, or a body parameter. Path and query parameters are detemined by their placement in the URL. If the parameter is part of the operation's location, it is a path parameter. If it is a part of the operation's query string, it is a query parameter. A body parameter comes from the body of the request.
-
-The parameter data type is determined by the microflow of the operation. New parameters that are not yet part of the microflow will have *(Not set)* as their data type.
+In this list you can add, update or delete the [parameters of the operation](published-rest-operation-parameter).
 
 <a name="import-mapping"></a>
 ### 2.6.1 Import Mapping

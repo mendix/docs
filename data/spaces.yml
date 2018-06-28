@@ -10,10 +10,10 @@ apidocs-mxsdk:
     - "API Documentation"
     - "Mendix Platform SDK"
 addons:
-  space: "Other Add-ons"
+  space: "Application Quality Monitor"
   priority: false
   menu_categories:
-    - "Application Quality Monitor"
+    - "Application Quality Monitor Overview"
 apm:
   space: "Application Performance Monitor"
   priority: false

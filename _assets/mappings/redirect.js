@@ -1215,11 +1215,11 @@ module.exports = {
     },
     {
       from: "/howto50/Deploying+a+Mendix+App+to+Cloud+Foundry",
-      to: "/deployment/cloud-foundry/deploy-a-mendix-app-to-cloud-foundry"
+      to: "/deployment/cloud-foundry/index"
     },
     {
       from: "/howto50/Deploying+a+Mendix+App+to+Pivotal",
-      to: "/deployment/cloud-foundry/deploy-a-mendix-app-to-pivotal"
+      to: "/deployment/cloud-foundry/index"
     },
     {
       from: "/howto50/Deploying+Mendix+on+Microsoft+Windows",
@@ -1714,15 +1714,15 @@ module.exports = {
     },
     {
       from: "/howto6/Deploy+a+Mendix+App+to+IBM+Bluemix",
-      to: "/deployment/cloud-foundry/deploy-a-mendix-app-to-ibm-bluemix"
+      to: "/deployment/cloud-foundry/index"
     },
     {
       from: "/howto6/deploying+a+mendix+app+to+ibm+bluemix",
-      to: "/deployment/cloud-foundry/deploy-a-mendix-app-to-ibm-bluemix"
+      to: "/deployment/cloud-foundry/index"
     },
     {
       from: "/howto6/Deploy+a+Mendix+App+to+Pivotal",
-      to: "/deployment/cloud-foundry/deploy-a-mendix-app-to-pivotal"
+      to: "/deployment/cloud-foundry/index"
     },
     {
       from: "/howto6/Deploy+Mendix+on+Microsoft+Windows",
@@ -1734,7 +1734,7 @@ module.exports = {
     },
     {
       from: "/howto6/Deploying+a+Mendix+App+to+Cloud+Foundry",
-      to: "/deployment/cloud-foundry/deploy-a-mendix-app-to-cloud-foundry"
+      to: "/deployment/cloud-foundry/index"
     },
     {
       from: "/howto6/deploying+to+the+cloud",
@@ -2125,11 +2125,11 @@ module.exports = {
     },
     {
       from: "/howto/deploying-a-mendix-app-to-cloud-foundry",
-      to: "/deployment/cloud-foundry/deploy-a-mendix-app-to-cloud-foundry"
+      to: "/deployment/cloud-foundry/index"
     },
     {
       from: "/howto7/deploying-a-mendix-app-to-cloud-foundry",
-      to: "/deployment/cloud-foundry/deploy-a-mendix-app-to-cloud-foundry"
+      to: "/deployment/cloud-foundry/index"
     },
 	{
       from: "/bestpractices/How+to+execute+an+SQL+statement+on+an+external+database",

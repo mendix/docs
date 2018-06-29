@@ -1,10 +1,11 @@
 ---
 title: "Edit Cloud Foundry Settings Dialog"
 parent: "dialogs"
+tags: ["Cloud Foundry", "Deploy"]
 ---
 Use this dialog to specify the information necessary for deploying your app to a Cloud Foundry instance.
 
-**Note**: Configuration How-tos for specific Cloud Foundry providers can be found here: [Deploying a Mendix App to Cloud Foundry](/deployment/cloud-foundry/deploy-a-mendix-app-to-cloud-foundry)
+**Note**: Configuration How-tos for specific Cloud Foundry providers can be found here: [Deploy a Mendix App to Cloud Foundry](/deployment/cloud-foundry/index)
 
 ## Step 1: Entering credentials
 

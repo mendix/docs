@@ -1,5 +1,6 @@
 ---
 title: "Cloud Foundry"
+tags: ["Cloud Foundry", "Pivotal", "Deploy", "Bind"]
 ---
 
 ## 1 Introduction

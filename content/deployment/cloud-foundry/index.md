@@ -1,5 +1,6 @@
 ---
-title: "Cloud Foundry"
+title: ""Deploy a Mendix App to Cloud Foundry"
+category: "Cloud Foundry"
 description: "How to deploy a Mendix App on a Cloud Foundry environment which does not have Mendix support in the Developer Portal"
 tags: ["Cloud Foundry", "Pivotal", "Deploy", "Bind"]
 ---

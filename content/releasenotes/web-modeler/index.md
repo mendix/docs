@@ -14,11 +14,11 @@ These release notes are for the [beta](../beta-features/index) version of the We
 
 #### New Features
 
-* We added **Create Variable** and **Change Variable** activities to the microflow editor, so that to enhance the number of cases you can configure in the Web Modeler. Use **Create Variable** to create a variable which can store, change, and reuse a specified value. Use **Change Variable** to change the value of an existing variable in the current microflow. 
+* We added **Create Variable** and **Change Variable** activities to the microflow editor, so as to enhance the number of cases you can configure in the Web Modeler. Use **Create Variable** to create a variable that can store, change, and reuse a specified value. Use **Change Variable** to change the value of an existing variable in the current microflow. 
 
 #### Fixes
 
-* We fixed the issue when an entity in the domain model editor could jump to the right if you dragged it outside your current viewport. 
+* We fixed the issue where an entity in the domain model editor jumped to the right if you dragged it outside your current viewport. 
 
 ### June 22nd, 2018
 

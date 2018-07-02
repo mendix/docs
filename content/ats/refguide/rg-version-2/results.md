@@ -25,7 +25,7 @@ The first column shows the status of a test. If the test is done, a warning and/
     
 *  Canceled – the test was canceled before it could be completed.
 
-    ![](attachments/test-run/canceled-flag.PNG)
+    ![](attachments/test-run/canceled-flag.png)
     
 The second column shows the type of the test. The following list explains all the different icons:
 
@@ -84,7 +84,7 @@ Under **Test steps**, you will find the result, start time, and the duration of 
 
 Drill down deeper into the log by clicking the name of the test step. You can always go back to a parent step by clicking its name in the breadcrumbs:
 
-![](attachments/results/result-log.png)
+![](attachments/test-run/result-log.png)
 
 The following results can be assigned to a test step:
 

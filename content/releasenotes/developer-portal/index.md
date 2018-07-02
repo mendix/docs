@@ -4,12 +4,18 @@ title: "Developer Portal"
 
 ## 2018
 
+### July 2nd, 2018
+
+#### Improvements
+
+* We improved the stability of the alerting stack.
+
 ### June 26th, 2018
 
 #### Improvements
 
-* Implemented the new Mendix header.
-* Fixed the bug that allowed users to start an application during a restore.
+* We implemented the new Mendix header.
+* We fixed the bug that allowed users to start an application during a restore.
 
 ### June 15th, 2018
 

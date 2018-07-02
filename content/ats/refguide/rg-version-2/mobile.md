@@ -108,7 +108,7 @@ Once you have created a test case for mobile, you will want to run it. This is w
 4. Under **Platform Settings**, select the mobile platform you wish to test: Android 6 or Android 7.
 5. Click **Run**.
 
-![](attachments/mobile/run-configuration.PNG)
+![](attachments/mobile/run-configuration.png)
 
 ## 4 Native Dialogs
 

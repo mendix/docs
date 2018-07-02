@@ -33,7 +33,6 @@ These are the most important things you should know about configuring an access 
 
 These are the known limitations:
 
-* The client certificate option is not yet available for Mendix Cloud v4 environments
 * The IP range filter option is not available in Mendix Cloud v3 environments hosted outside of the Netherlands
 * When using client certificate restrictions, the client certifcate CA in all active profiles must be identical (in other words, it's only possible to use a single CA for the entire application environment)
 

@@ -25,7 +25,7 @@ The first column shows the status of a test. If the test is done, a warning and/
     
 *  Canceled – the test was canceled before it could be completed.
 
-    ![](attachments/test-run/canceled-flag.png)
+    ![](attachments/test-run/canceled-flag.PNG)
     
 The second column shows the type of the test. The following list explains all the different icons:
 

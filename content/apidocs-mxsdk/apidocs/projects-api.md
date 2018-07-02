@@ -142,6 +142,6 @@ The CommitOnlineWorkingCopyChangesToTeamServer action returns a String which is 
 
 Download the Projects API App Service below, so you can import it in your model:
 
-[ProjectsAPI_10.msd](attachments/14778446/ProjectsAPI_10.msd)
+[ProjectsAPI_11.msd](attachments/14778446/ProjectsAPI_11.msd)
 
-In the consumed Projects API App Service settings, you will have to use a constant with the value `https://sprintr.home.mendix.com/ws/ProjectsAPI/10/soap1` as Location.
+In the consumed Projects API App Service settings, you will have to use a constant with the value `https://sprintr.home.mendix.com/ws/ProjectsAPI/11/soap1` as Location.

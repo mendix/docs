@@ -35,7 +35,9 @@ The other sections of your Community Profile are described below.
 
 ### 3.1 <a name="invite"></a>Inviting Friends and Colleagues to Mendix
 
-On your dashboard, you can invite friends and colleagues to join Mendix. After you click **Invite Friends**, a pop-up window titled **Get your free t-shirt** appears where you can send someone a Mendix invite by entering their email address and clicking **Send invite**. There is also a personal invite link provided, which you can share on your personal website, blog, and social media channels to invite more people to Mendix. You will earn some Mendix swag with five successful invites!
+On your dashboard, you can invite friends and colleagues to join Mendix. After you click **Invite Friends**, a pop-up window titled **Get your free t-shirt** appears. There are two tabs available here. On the **Share URL** tab, you can copy the personal invite link that is provided and then share it on your personal website, blog, and social media channels to invite more people to Mendix. On the **Send invite** tab, you can send someone a Mendix invite by entering their email address and clicking **Send invite**. 
+
+You will earn some Mendix swag with five successful invites!
 
 ![](attachments/how-to-set-up-your-profile/referral-url.png)
 

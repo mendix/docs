@@ -38,6 +38,12 @@ If you connect a data set with a test case, ATS executes a session for each reco
 
 {{% /alert %}}
 
+
+### 2.1 Execution type for data driven test cases
+
+For data driven test cases you have the option between parallel/sequential execution. If this is set to parallel, ATS tries to run all the sessions (one for each record) of your test case in parallel. This is limited through the concurrency limit of your Selenium hub. When the sequential option is chosen, the sessions run in succession, one after the other.
+Use the sequential execution in order to prevent the tests to interfere with each other by manipulating data at the same time.
+
 ## 3 Importing and Exporting Data Sets
 
 When creating and editing a data set, select the **Create/Update fields from file** option to provide a template Excel file. Create or update fields and records of your data set using this Excel file. ATS recognizes the first row of the Excel sheet as the field names. ATS considers all extra rows as records and also uses them to determine the field data type.

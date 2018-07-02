@@ -4,6 +4,12 @@ title: "Developer Portal"
 
 ## 2018
 
+### July 2nd, 2018
+
+#### Improvements
+
+* Improved stability of alerting stack
+
 ### June 26th, 2018
 
 #### Improvements

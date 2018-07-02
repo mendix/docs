@@ -33,7 +33,7 @@ This option is only available for supported Selenium hubs.
 
 {{% /alert %}}
 
-If you have selected a Selenium hub from a supported Selenium hub provider (TestingBot, SauceLabs, or Browserstack), you will get access to the platform settings. Here you can set the operating system on which the test case will be run.
+If you have selected a Selenium hub from a supported Selenium hub provider (SauceLabs, or Browserstack), you will get access to the platform settings. Here you can set the operating system on which the test case will be run.
 
 For more information on the different supported operating systems, see [Supported Selenium Hub Providers](supported-selenium-hub-provider).
 

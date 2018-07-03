@@ -19,7 +19,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Installed the latest Mendix modeler
 * Downloaded the latest [Chart Widget](https://appstore.home.mendix.com/link/app/105695/) from the Mendix App Store
-* Setup a chart, see [How to create a chart](chart-basic-create)
+* Setup a chart, see [How to create a chart](charts-basic-create)
 
 ## 3 Changing Layout
 

@@ -1,5 +1,5 @@
 ---
-title: "How to fine tune a chart, with advance settings"
+title: "How to Fine-Tune a Chart with Advanced Settings"
 parent: "charts-tutorials"
 ---
 

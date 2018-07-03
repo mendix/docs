@@ -451,7 +451,7 @@ See more [ Area chart data properties ](https://plot.ly/javascript/reference/#ar
 ### Time series
 
 #### Filter buttons
-![ Line chart data properties ](attachments/pages/charts/time-series-filters.PNG)
+![ Line chart data properties ](attachments/pages/charts/time-series-filters.png)
 ``` json
 {
   "xaxis": {

@@ -21,7 +21,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Downloaded the latest [Chart Widget](https://appstore.home.mendix.com/link/app/105695/) from the Mendix App Store
 * Setup a chart, see [How to create a chart](charts-basic-create)
 
-## 3 Changing Layout
+## 3 Changing Layout<a name="layout-changes"></a>
 
 Before:
 ![chart](attachments/charts/charts-toggle-editor.png)
@@ -75,7 +75,7 @@ Before:
 
 To create a custom configuration, follow these steps:
 
-1. Repeat steps 1 to 8 from the [layout instructions](##-3-layout-changes)
+1. Repeat steps 1 to 8 from the [layout instructions](#layout-changes)
 1. Select the from the drop down menu the name of the series, in this case **Series 1**
 1. Edit the **Custom settings**, change it to *{ "type": "line" }*
 ![chart editor](attachments/charts/charts-widget-bar-line-combination.png)
@@ -91,7 +91,7 @@ After:
 
 To create custom a configuration, follow these steps:
 
-1. Repeat steps 1 to 8 from the [layout instructions](##-3-layout-changes)
+1. Repeat steps 1 to 8 from the [layout instructions](#layout-changes)
 1. Select the from the drop down menu **Configuration**
 1. Edit the **Custom settings**, change it to *{ "displayModeBar": true }*
 1. Add more Custom settings as desired. See [here](https://plot.ly/javascript/configuration-options/) for more configuration settings 
@@ -110,11 +110,11 @@ Please note that the advanced settings only apply to the chart in mode Advanced 
 
 ## 6 References
 
-Reference guide for the [advanced properties](../../refguide/charts-configuration###-advanced)
+Reference guide for the [advanced properties](../../refguide/charts-configuration#advanced)
 
-Layout options [cheat sheet](../../refguide/charts-advanced-cheat-sheet##-layout-all-charts)  
-Configuration options [cheat sheet](../../refguide/charts-advanced-cheat-sheet###-configurations-options-all-charts)  
-Data options [cheat sheet](../../refguide/charts-advanced-cheat-sheet##-data-series-properties)  
+Layout options [cheat sheet](../../refguide/charts-advanced-cheat-sheet##layout-all)  
+Configuration options [cheat sheet](../../refguide/charts-advanced-cheat-sheet#config-options)  
+Data options [cheat sheet](../../refguide/charts-advanced-cheat-sheet#data-series)  
 
 Full reference https://plot.ly/javascript/
 

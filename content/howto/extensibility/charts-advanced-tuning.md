@@ -112,7 +112,7 @@ Please note that the advanced settings only apply to the chart in mode Advanced 
 
 Reference guide for the [advanced properties](../../refguide/charts-configuration#advanced)
 
-Layout options [cheat sheet](../../refguide/charts-advanced-cheat-sheet##layout-all)  
+Layout options [cheat sheet](../../refguide/charts-advanced-cheat-sheet#layout-all)  
 Configuration options [cheat sheet](../../refguide/charts-advanced-cheat-sheet#config-options)  
 Data options [cheat sheet](../../refguide/charts-advanced-cheat-sheet#data-series)  
 

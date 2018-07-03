@@ -1,5 +1,5 @@
 ---
-title: "Chart advanced cheat sheet"
+title: "Chart Advanced Cheat Sheet"
 parent: "Chart Widgets"
 ---
 

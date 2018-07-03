@@ -108,12 +108,12 @@ The developer option adds a button to the charts when running the app which can 
 
 #### Layout options
 The JSON containing the Plotly layout options
-- [Samples](charts-advanced-cheat-sheet##-Layout-all-charts)
+- [Samples](charts-advanced-cheat-sheet#layout-all)
 - [Full reference](https://plot.ly/javascript/reference/#layout)
 
 #### Configuration options
 The JSON containing the Plotly configuration options
-- [Samples](charts-advanced-cheat-sheet###-configurations-options-all-charts) 
+- [Samples](charts-advanced-cheat-sheet#config-options) 
 - [Documentation](https://plot.ly/javascript/configuration-options/)
 - [Full reference](https://github.com/plotly/plotly.js/blob/master/src/plot_api/plot_config.js)
 

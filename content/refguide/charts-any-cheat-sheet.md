@@ -9,7 +9,8 @@ This cheat sheet lists the most common chart types, more chart types could be fo
 
 ### Basic Chart
 
-#### Line Chart
+#### Line Chart {#line-chart}
+
 ![LineChartProperties](attachments/pages/charts/line-chart2.png)
 ``` json
 [

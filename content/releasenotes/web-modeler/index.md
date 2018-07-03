@@ -10,6 +10,35 @@ These release notes are for the [beta](../beta-features/index) version of the We
 
 ## 2018
 
+### June 29th, 2018
+
+#### New Features
+
+* We added **Create Variable** and **Change Variable** activities to the microflow editor, so as to enhance the number of cases you can configure in the Web Modeler. Use **Create Variable** to create a variable that can store, change, and reuse a specified value. Use **Change Variable** to change the value of an existing variable in the current microflow. 
+
+#### Fixes
+
+* We fixed the issue where an entity in the domain model editor jumped to the right if you dragged it outside your current viewport. 
+
+### June 22nd, 2018
+
+#### Improvements
+
+* In the page editor, we improved the process of adding attributes in text widgets so that you can build applications even faster. Now, when selecting an attribute to use in the text, you can use <kbd>Ctrl</kbd> + <kbd>Space</kbd> as a keyboard shortcut.
+
+#### Fixes
+
+* In the page editor, we fixed the bug where PNG images could not be uploaded in Safari.
+
+### June 15th, 2018
+
+#### Fixes
+
+* We fixed the issue where the user got stuck on the loading spinner if the connection to the Web Modeler failed. Now, when the connection is restored, the page will reload.
+* We fixed the issue where the error pop-up window was not always on top of other pop-up windows.
+* We fixed the issue where custom widgets on the page could not be dragged once placed.
+* We fixed the issue where the user could drag items to the **Navigation Document** while in read-only mode.
+
 ### June 11th, 2018
 
 #### New Features

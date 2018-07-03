@@ -1,6 +1,6 @@
 ---
 title: "Integration"
-category: "Modeler"
+category: "Desktop Modeler"
 ---
 
 

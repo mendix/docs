@@ -1,6 +1,6 @@
 ---
 title: "Java Actions"
-category: "Modeler"
+category: "Desktop Modeler"
 description: "Describes using Java Actions to extend the functionality of your Mendix app."
 ---
 

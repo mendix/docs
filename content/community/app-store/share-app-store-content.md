@@ -63,7 +63,7 @@ To add content to the App Store, follow these steps:
 4. In the **Publish to** drop-down menu, select the location where you want to publish your content:<a name="4"></a>
 
     * **Public App Store (visible for anyone)** – your content will be available to every developer in the Mendix community (this content will have to be reviewed and approved by Mendix before it is available)
-    * **Private App Store (visible for your company)** – your content will be available only to the developers in your company (this content will not be reviewed by Mendix)
+    * <a name="private-app-store"></a>**Private App Store (visible for your company)** – your content will be available only to the developers in your company (this content will not be reviewed by Mendix)
 5. In the bottom half of the **Share your content** screen, do the following:
 
     * Enter a **Name** for your content

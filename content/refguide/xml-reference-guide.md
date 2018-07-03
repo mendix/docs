@@ -1,6 +1,6 @@
 ---
 title: "XML"
-category: "Modeler"
+category: "Desktop Modeler"
 ---
 
 This is the reference guide for the widget XML.

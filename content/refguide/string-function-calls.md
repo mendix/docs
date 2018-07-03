@@ -2,6 +2,7 @@
 title: "String Function Calls"
 parent: "expressions"
 description: "Describes the functions for converting and inspecting strings in Mendix."
+#If moving location for documentation purposes, plan with the Cloud Portal Team, as this doc is mapped to the product.
 ---
 
 These are functions to convert and inspect [strings](data-types). Note that these functions never change the string itself, they only return a new value.
@@ -391,6 +392,10 @@ In `isMatch()`, the regex is implicitly anchored at `^` and `$`.
 
 * `isMatch('NLG 123.45', '[0-9]')` returns false
 * `isMatch('NLG 123.45', '.*[0-9].*')` returns true
+
+NB searching an empty string:
+
+* `isMatch('', '.*[0-9].*')` returns true
 
 ## replaceAll
 

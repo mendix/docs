@@ -5,7 +5,7 @@ category: "General"
 
 ## 1 ATS Start Page
 
-When you log in to the Application Test Suite (ATS) you see the **My apps** page. This page displays all the Mendix apps you are a member of and that have an ATS license. Every member of the team in your app has access to ATS.
+When you [log in to Application Test Suite (ATS)](https://ats.mendix.com), you see the **My apps** page. This page displays all the Mendix apps you are a member of and that have an ATS license. Every member of the team in your app has access to ATS.
 
 ![The My apps page](attachments/introduction/my-apps.png)
 
@@ -22,6 +22,7 @@ If you already have some active test cases in your **ATS app**, the dashboard wi
 ![ATS app dashboard](attachments/introduction/dashboard.png)
 
 The dashboard can be divided into four parts:
+
 * Current state chart
 * 7-Day history
 * Test case treeview
@@ -70,10 +71,10 @@ ATS has the following different user role settings.
 
 ### 4.1 SCRUM Master
 
-The SCRUM Master of your app can access the **Test Settings** from the profile menu. Here you can add your app environment URL for testing and add a Selenium Hub for executing your tests. This is the only difference with other roles.
+The SCRUM Master of your app can access the **App Settings** from the profile menu. Here you can add your app environment URL for testing and add a Selenium Hub for executing your tests. This is the only difference with other roles.
 
 ### 4.2 Others
 
-All other roles in your app have access to ATS. The only difference is that the SCRUM Master can access the **Test Settings** of your app.
+All other roles in your app have access to ATS. The only difference is that the SCRUM Master can access the **App Settings** of your app.
 
 For more information, see the [ATS 2 Reference Guide](../refguide/rg-version-2/rg-version-2).

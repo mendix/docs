@@ -1,6 +1,6 @@
 ---
 title: "Data Sets"
-category: "Modeler"
+category: "Desktop Modeler"
 ---
 
 

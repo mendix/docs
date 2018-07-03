@@ -1,6 +1,6 @@
 ---
 title: "Enumerations"
-category: "Modeler"
+category: "Desktop Modeler"
 ---
 
 

@@ -1,6 +1,6 @@
 ---
 title: "Constants"
-category: "Modeler"
+category: "Desktop Modeler"
 ---
 
 

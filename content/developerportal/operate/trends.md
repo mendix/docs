@@ -4,6 +4,7 @@ parent: "metrics"
 menu_order: 50
 description: "Describes how to interpret various graphs and trends in the Mendix Cloud v3."
 tags: ["Trends","v3","Mendix Cloud","Developer Portal"]
+#If moving location for documentation purposes, plan with the Cloud Portal Team, as this doc is mapped to the product.
 ---
 
 ## 1 Introduction

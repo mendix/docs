@@ -1,5 +1,5 @@
 ---
-title: "Building block"
+title: "Building Block"
 parent: "pages"
 ---
 
@@ -39,4 +39,4 @@ The display name determines the name of the building block that will appear in t
 
 ### 4.2 Image
 
-The image selected will appear in the **Building Blocks** tab of the Web Modeler's **Toolbox**. Selecting a representative image will allow users to easily distinguish between building blocks. If left blank, the Web Modeler will display an empty white field. Any image selected will be scaled down to 200x200 pixels.
+The image selected will appear in the **Building Blocks** tab of the Web Modeler's **Toolbox**. Selecting a representative image will allow users to easily distinguish between building blocks. If left blank, the Web Modeler will display a generic default image. Any image selected will be scaled down to 200x200 pixels.

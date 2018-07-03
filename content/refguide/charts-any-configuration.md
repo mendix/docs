@@ -1,6 +1,6 @@
 ---
 title: "Any Chart Widgets"
-parent: "Chart Widgets"
+parent: "chart-widgets"
 ---
 
 ## Any Charts

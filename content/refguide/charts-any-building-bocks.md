@@ -1,6 +1,6 @@
 ---
 title: "Any Chart Building Blocks"
-parent: "Chart Widgets"
+parent: "chart-widgets"
 ---
 
 ## Introduction

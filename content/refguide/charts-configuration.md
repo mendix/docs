@@ -1,6 +1,6 @@
 ---
 title: "Chart configuration"
-parent: "Chart Widgets"
+parent: "chart-widgets"
 ---
 
 # 1 Common configuration

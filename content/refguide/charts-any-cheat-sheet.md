@@ -1,6 +1,6 @@
 ---
 title: "Any Chart Cheat Sheet"
-parent: "Chart Widgets"
+parent: "chart-widgets"
 ---
 
 ## Any Chart Cheat types

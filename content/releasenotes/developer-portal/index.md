@@ -4,6 +4,13 @@ title: "Developer Portal"
 
 ## 2018
 
+### July 3rd, 2018
+
+#### Improvements (SAP - Cloud Deployment Portal)
+
+* To improve integration between Mendix and SAP we now enforce using the same username (email address) for Mendix and SAP. You will need to use the same username the next time you need to provide your credentials. 
+  *  This is currently implemented only for SAP regions **eu10** and **us10**. 
+
 ### July 2nd, 2018
 
 #### Improvements

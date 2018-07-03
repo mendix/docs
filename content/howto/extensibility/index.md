@@ -11,5 +11,5 @@ One of the strengths of Mendix is that it’s easy to connect your Mendix applic
 * [How to Build Microflow Actions Using the Mendix Connector Kit](howto-connector-kit)
 * [How to Install and Configure the SMTP Module](install-and-configure-the-smtp-module)
 * [How to Use Connectors and Adapters](use-connectors-and-adapters)
+* [How to Visualize Data Using the Charts Widgets](charts-tutorials)
 * [How to Visualize Data Using the ChartsJS Module](visualize-data-using-the-chartsjs-module)
-

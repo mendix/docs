@@ -15,7 +15,11 @@ Add a [published REST service](published-rest-service) to expose your entities a
 
 ## 2 Published REST Service
 
-For an overview of the available options when you add a published  service, see [Published REST Service](published-rest-service).
+For an overview of the available options when you add a published service, see [Published REST Service](published-rest-service).
+
+You can easily expose an entity via REST by right-clicking the entity in the [domain model](domain-model) and selecting [Expose as REST resource](generate-rest-resource).
+
+To publish a microflow as a REST operation, right-click anywhere in the editor and select [Publish as REST service operation](publish-microflow-as-rest-operation).
 
 To publish a microflow as a REST operation, right-click anywhere in the editor and select [Publish as REST service operation](publish-microflow-as-rest-operation).
 

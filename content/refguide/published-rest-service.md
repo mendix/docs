@@ -122,6 +122,8 @@ The allowed roles define which [module role](module-role) a user must have to be
 
 A REST service exposes a number of [resources](published-rest-resource). On a resource you can define GET, PUT, POST, PATCH, DELETE, HEAD and OPTIONS operations.
 
+You can drag an entity or a message definition onto this list to [generate a complete resource](generate-rest-resource).
+
 ## 5 Operations
 
 When you select a resource, you see the [operations](published-rest-operation) that are defined for that resource.

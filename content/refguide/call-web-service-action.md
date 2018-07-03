@@ -39,7 +39,7 @@ When calling a web service using a call-web-service activity, the location of th
 
 ### 2.4 Use Timeout on Request
 
-**Use Timeout on Request** can be used to throw an exception when the web service takes too long to respond after connecting. After a set amount of time an exception will be thrown and the microflow will rollback or go into your custom error handler. Note that this does not change the connection timeout.
+This can be used to throw an exception when the web service takes too long to respond after connecting. After a set amount of time, an exception will be thrown and the microflow will roll back or go into your custom error handler. Note that this does not change the connection timeout.
 
 _Default value:_ No
 

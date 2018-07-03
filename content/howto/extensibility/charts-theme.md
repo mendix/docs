@@ -105,7 +105,7 @@ To change the font, follow these steps:
 ## 4 Reference
 
 * More information in the [Charts reference guide](../../refguide/charts-widgets)
-* [Layout samples](../../refguide/charts-advanced-cheat-sheet##-Layout-all-charts)
-* [Configuration samples](../../refguide/charts-advanced-cheat-sheet###-configurations-options-all-charts) 
+* [Layout samples](../../refguide/charts-advanced-cheat-sheet#layout-all)
+* [Configuration samples](../../refguide/charts-advanced-cheat-sheet##config-options) 
 
 ## 5 Related Content

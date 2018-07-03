@@ -1,5 +1,5 @@
 ---
-title: "Use Plotly images REST service"
+title: "Use the Plotly Images REST Service"
 parent: "charts-tutorials"
 ---
 

@@ -7,9 +7,9 @@ tags: ["SAP", "integration", "OData", "SSO"]
 
 ## 1 Introduction
 
-When you deploy an application to SAP Cloud Platform using the SAP deployment features of the Mendix Developer Portal it is bound automatically to the XSUAA service. This service allows you to use an external **ID**entity **P**rovider (IDP) for a Mendix application. This means that the user can sign on to their app using this IDP instead of having their user credentials stored separately in the Mendix app. This means that they can have a single sign-on (SSO) experience with their application.
+When you deploy an application to SAP Cloud Platform using the SAP deployment features of the Mendix Developer Portal it is bound automatically to the XSUAA service. This service allows you to use an external **Id**entity **P**rovider (IdP) for a Mendix application. This means that the user can sign on to their app using this IdP instead of having their user credentials stored separately in the Mendix app. This means that they can have a single sign-on (SSO) experience with their application.
 
-A Mendix application is role-based. Using the SAP Cloud Platform Cockpit, you can assign the roles within the app to roles within your SAP subaccount. The roles in the SAP subaccount can then be assigned to individual users via the selected IDP (Trust Configuration).
+A Mendix application is role-based. Using the SAP Cloud Platform cockpit, you can assign the roles within the app to roles within your SAP subaccount. The roles in the SAP subaccount can then be assigned to individual users via the selected IdP (Trust Configuration).
 
 In this document, you will see how to use the SAP XSUAA Connector to provide SSO in an app which has two roles: Supervisor and Inspector. 
 
@@ -23,8 +23,8 @@ In this document, you will see how to use the SAP XSUAA Connector to provide SSO
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Create an SAP app using an SAP starter app.
-* Select and deploy the app to a SAP account and subaccount where you have authority to configure security
+* Create an SAP app using an SAP starter app
+* Select and deploy the app to an SAP account and subaccount where you have authority to configure security
 * Setup the app with the following two **User roles** in **Project ... > Security**: Supervisor and Inspector
 * Give each role a different starting page so that the effect of the SSO can be seen
 
@@ -116,35 +116,35 @@ To accomplish this, follow these steps:
 
 ## 5 Configuring the SAP Cloud Platform Subaccount
 
-Your app is configured to use an IDP. Now you need to configure the IDP and allocate users to roles. This is performed in the [SAP Cloud Platform Cockpit](https://account.hana.ondemand.com/cockpit#/home/allaccounts).
+Your app is configured to use an IdP. Now you need to configure the IdP and allocate users to roles. This is performed in the [SAP Cloud Platform Cockpit](https://account.hana.ondemand.com/cockpit#/home/allaccounts).
 
 {{% alert type="info" %}}
 
-Before configuring the IDP, you must first deploy your app to the SAP Cloud Portal. This will expose the user roles in the app to the security configuration tools in the SAP Cloud Platform Cockpit.
+Before configuring the IdP, you must first deploy your app to SAP Cloud Platform. This will expose the user roles in the app to the security configuration tools in the SAP Cloud Platform cockpit.
 {{% /alert %}}
 
 
 {{% alert type="warning" %}}
 
-This section describes actions which are carried out using the SAP Cloud Platform Cockpit. This document uses the current navigation through the SAP Cloud Platform Cockpit but this is outside the Mendix environment and may be changed. Documentation on the SAP Cloud Platform is in the [SAP Help Portal](https://help.sap.com/viewer/p/CP).
+This section describes actions which are carried out using the SAP Cloud Platform cockpit. This document uses the current navigation through the SAP Cloud Platform cockpit but this is outside the Mendix environment and may be changed. SAP Cloud Platform documentation is in the [SAP Help Portal](https://help.sap.com/viewer/p/CP).
 
 {{% /alert %}}
 
-The diagram below shows the relationship between the security structures in your Mendix app (blue), the SAP Cloud Platform app environment (yellow), SAP User Account and Authentication (orange) and the IDP (green).
+The diagram below shows the relationship between the security structures in your Mendix app (blue), the SAP Cloud Platform app environment (yellow), SAP User Account and Authentication (orange), and the IdP (green).
 
 ![](attachments/use-sap-xsuaa-connector/xsuaa-diagram-labeled.png)
 
-Once the user has been authenticated, various attributes (the user's name, for example) are copied from the IDP **User** (green) to the **User** entity within the Mendix application (blue) so that they can be used by the app. However the authorization credentials remain in the IDP and the user cannot access the app except through the IDP.
+Once the user has been authenticated, various attributes (the user's name, for example) are copied from the IdP **User** (green) to the **User** entity within the Mendix application (blue) so that they can be used by the app. However the authorization credentials remain in the IdP and the user cannot access the app by using credentials stored in the app.
 
 ### 5.1 Scope
 
-When your app is deployed to the SAP Cloud Platform, each **User Role** (A) in the Mendix app is exposed as a **Scope** (B) in the SAP environment. You can see this mapping by going to your app in the SAP Cloud Platform Cockpit. Under **Security** you can view the **Scopes**. You will see that the four **User Roles** in the Mendix app are exposed as scopes in the application space:
+When your app is deployed to SAP Cloud Platform, each **User Role** (A) in the Mendix app is exposed as a **Scope** (B) in the SAP environment. You can see this mapping by going to your app in the SAP Cloud Platform cockpit. Under **Security** you can view the **Scopes**. You will see that the four **User Roles** in the Mendix app are exposed as scopes in the application space:
 
 ![](attachments/use-sap-xsuaa-connector/app-scopes.png)
 
 ### 5.2 Role Template
 
-Each Scope is mapped to a single **Role Template** &#40;C) during deployment. You can see the Role Templates in the Application details of the SAP Cloud Platform Cockpit. These are also defined during the deployment of the app.
+Each Scope is mapped to a single **Role Template** &#40;C) during deployment. You can see the Role Templates in the Application details of the SAP Cloud Platform cockpit. These are also defined during the deployment of the app.
 
 ![](attachments/use-sap-xsuaa-connector/app-role-templates.png)
 
@@ -152,13 +152,13 @@ The **Attribute**s of the **Role Template** are not used by Mendix in linking Me
 
 ### 5.3 Role
 
-In the SAP Cloud Platform Cockpit, you can view and add additional **Roles** (D) to the Role Template, or you can stay with the generated default role. Note that new roles added here do not have different roles in your Mendix app. However, adding new roles may allow you to obtain additional analytics through the SAP or IDP logs. Here a new *Inspector* role (Inspector 2) has been added to the Inspector Role Template.
+In the SAP Cloud Platform cockpit, you can view and add additional **Roles** (D) to the Role Template, or you can stay with the generated default role. Note that new roles added here do not have different roles in your Mendix app. However, adding new roles may allow you to obtain additional analytics through the SAP or IdP logs. Here a new *Inspector* role (Inspector 2) has been added to the Inspector Role Template.
 
 ![](attachments/use-sap-xsuaa-connector/app-roles.png)
 
 ### 5.4 Role Collection
 
-The **Role Collection** (E) is defined not for the app deployed to the SAP Cloud Platform, but in your SAP **Subaccount**. It is this Role Collection which will be linked to the IDP.
+The **Role Collection** (E) is defined not for the app deployed to SAP Cloud Platform, but in your SAP **Subaccount**. It is this Role Collection which will be linked to the IdP.
 
 There may be other Role Collections which are being used by other apps deployed in this subaccount and you may, or may not, wish to share authentication between apps. You could, for example, use the same authentication for several related apps running in the same subaccount which have the same app User Roles. Or you may wish to use different authentication for development and production environments.
 
@@ -168,25 +168,25 @@ Here, we add a new Role Collection for the Inspector 2 role in the SAP Cloud Pla
 
 	![](attachments/use-sap-xsuaa-connector/new-role-collection.png)
 
-2. Click on the **Name** of the Role Collection to allocate roles to the Role Collection
+2. Click on the **Name** of the Role Collection to allocate roles to the Role Collection.
 
 	![](attachments/use-sap-xsuaa-connector/select-role-collection.png)
 
-3. Add the Role(s) which you want to include in this Role Collection
+3. Add the Role(s) which you want to include in this Role Collection.
 
 	![](attachments/use-sap-xsuaa-connector/add-role.png)
 
-The new role collection can now be seen in the SAP Cloud Platform Cockpit for this Subaccount, with the Role(s) which it includes.
+The new role collection can now be seen in the SAP Cloud Platform cockpit for this Subaccount, with the Role(s) which it includes.
 
 ![](attachments/use-sap-xsuaa-connector/show-role-collection.png)
 
 ### 5.5 Trust Configuration
 
-Your Subaccount will have one or more **Trust Configurations**. These are the IDPs which you can use to authenticate your users. The default is the **SAP ID Service** but you may add other IPDs.
+Your Subaccount will have one or more **Trust Configurations**. These are the IdPs which you can use to authenticate your users. The default is the **SAP ID Service** but you may add other IPDs.
 
 ![](attachments/use-sap-xsuaa-connector/trust-configurations.png)
 
-Depending on the IDP, you can either map **Users** (G) directly to a Role Collection, or map a **User Group** (F) to a Role Collection. Users are mapped by the IDPs own configuration to the User Group.
+Depending on the IdP, you can either map **Users** (G) directly to a Role Collection, or map a **User Group** (F) to a Role Collection. Users are mapped by the IdPs own configuration to the User Group.
 
 #### 5.5.1 Map User Directly to a Role Collection
 
@@ -210,19 +210,19 @@ You can picture the authentication as shown below:
 
 #### 5.5.2 Map User Group to a Role Collection
 
-Some IDPs (for example SAML 2.0 IDPs) have the concept of a User Group. In this case there will be two options in the Trust Configuration for the IDP: **Role Collection Mappings** and **Role Collection Assignment**.
+Some IdPs (for example SAML 2.0 IdPs) have the concept of a User Group. In this case there will be two options in the Trust Configuration for the IdP: **Role Collection Mappings** and **Role Collection Assignment**.
 
 You can link an individual username to the Role Collection in the same way as described above using the **Role Collection Assignment** option.
 
-Alternatively, you can link a Role Collection to an existing Group within the IDP. In this case, you need to do the following.
+Alternatively, you can link a Role Collection to an existing Group within the IdP. In this case, you need to do the following.
 
-1. Open **Role Collection Mappings** for the IDP.
+1. Open **Role Collection Mappings** for the IdP.
 
-2. Create a new Role Collection Mapping and map the Role Collection (for example, *Inspector 2 Role Collection*) to an existing Group (for example, *Inspector 2 Group*) in the IDP.
+2. Create a new Role Collection Mapping and map the Role Collection (for example, *Inspector 2 Role Collection*) to an existing Group (for example, *Inspector 2 Group*) in the IdP.
 
 ![](attachments/use-sap-xsuaa-connector/role-collection-mapping.png)
 
-Now any user within the IDP which is part of the *Inspector 2 Group* will have access to the correct role in your Mendix app.
+Now any user within the IdP which is part of the *Inspector 2 Group* will have access to the correct role in your Mendix app.
 
 You can picture the authentication as shown below:
 

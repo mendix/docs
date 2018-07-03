@@ -1,5 +1,5 @@
 ---
-title: "Use Charts theme"
+title: "Use the Charts Theme"
 parent: "charts-tutorials"
 ---
 

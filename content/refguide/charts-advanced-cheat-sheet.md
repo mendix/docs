@@ -11,7 +11,7 @@ The full reference is found be found at [https://plot.ly/javascript/](https://pl
 
 When the advanced configuration does not suffice have a look at the [Any Chart](https://appstore.home.mendix.com/link/app/106437/Mendix/Any-Chart) from the app store.
 
-## Layout (all charts)
+## Layout (all charts) {#layout-all}
 Layout controls the general appearance of the chart. The chart is customized by adding JSON properties to the layout.
 Below is a basic configuration.
 ``` json
@@ -531,7 +531,7 @@ Displays two different X axes with different scales.
 ```
 ![ Multiple X axes properties ](attachments/pages/charts/data-multiple-x.png)
 
-### Configurations options (all charts)
+### Configurations options (all charts) {#config-options}
 ```json
 {
   "displayModeBar": true,

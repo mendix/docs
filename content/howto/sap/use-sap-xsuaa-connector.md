@@ -26,7 +26,10 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Create an SAP app using an SAP starter app
 * Select and deploy the app to an SAP account and subaccount where you have authority to configure security
 * Setup the app with the following two **User roles** in **Project ... > Security**: Supervisor and Inspector
-* Give each role a different starting page so that the effect of the SSO can be seen
+
+	![](attachments/use-sap-xsuaa-connector/add-roles-to-app.png)
+
+* Ensure the app behaves differently according to the user role, so you can see the effect of setting up the roles in XSUAA. For example, give each role a different starting page as described here: [How To Set Up the Navigation Structure](../ux/setting-up-the-navigation-structure)
 
 ## 3 Getting the SAP XSUAA Connector Module
 

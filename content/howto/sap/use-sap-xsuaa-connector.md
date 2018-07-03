@@ -25,6 +25,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Create an SAP app using an SAP starter app
 * Select and deploy the app to an SAP account and subaccount where you have authority to configure security
+* Set the security level for the project to at least Prototype/demo to use SAP Authentication; for more information see [Project Security](/refguide/project-security) and for instructions on setting security levels, see [How To Create a Secure App](../security/create-a-secure-app)
 * Setup the app with the following two **User roles** in **Project ... > Security**: Supervisor and Inspector
 
 	![](attachments/use-sap-xsuaa-connector/add-roles-to-app.png)
@@ -44,10 +45,7 @@ For more information, see [How to Use App Store Content in the Modeler](/communi
 In this section, you will learn how to implement the XSUAA connector in your Mendix app.
 
 {{% alert type="warning" %}}
-SAP Authentication will not work if the Project Security is off.
-
-Set the security level for the project to at least Prototype/demo to use SAP Authentication. For more information see [Project Security](/refguide/project-security).
-For instructions on setting security levels, see [How To Create a Secure App](../security/create-a-secure-app).
+SAP Authentication will not work if the Project Security is off. See the prerequisites above.
 {{% /alert %}}
 
 ### 4.1 Adding the OnStartup Microflow to the Application Settings
@@ -89,16 +87,16 @@ If login.html does not support XSUAA then you need to add the SSO login button t
 	```html
 	<a id="ssoButton" href="/xsauaalogin/" class="login-sso-button btn btn-primary">Sign in with your XSUAA account</a>
 	```
-The XSUAA login button will look like this:
+6. Deploy and run your app. The XSUAA login button will look like this:
 
-![](attachments/use-sap-xsuaa-connector/sso-login-screen.png)
+	![](attachments/use-sap-xsuaa-connector/sso-login-screen.png)
 
 #### 4.2.2 Redirecting Your Application to XSUAA Without Showing the Login Page
 
 An alternative to adding the SSO login button to the landing page of your app is to redirect your app to XSUAA automatically without showing the login page.
 
 {{% alert type="info" %}}
-Note that this will only work if you are running your app on the SAP Cloud.
+Note that this will only work if you are running your app on SAP Cloud Platform.
 {{% /alert %}}
 
 To accomplish this, follow these steps:
@@ -185,7 +183,7 @@ The new role collection can now be seen in the SAP Cloud Platform cockpit for th
 
 ### 5.5 Trust Configuration
 
-Your Subaccount will have one or more **Trust Configurations**. These are the IdPs which you can use to authenticate your users. The default is the **SAP ID Service** but you may add other IPDs.
+Your Subaccount will have one or more **Trust Configurations**. These are the IdPs which you can use to authenticate your users. The default is the **SAP ID Service** but you may add other IdPs.
 
 ![](attachments/use-sap-xsuaa-connector/trust-configurations.png)
 

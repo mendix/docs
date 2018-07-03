@@ -72,7 +72,7 @@ The nanoflow that will be executed on click
 ###### Tooltip form
 The form to show when a user hovers over a chart plot point
 
-##### Advanced
+##### Advanced {#advanced}
 
 ###### Options
 The Plotly series options as JSON. This options will only be used when the tab Advanced Mode is set to Advanced or Developer.

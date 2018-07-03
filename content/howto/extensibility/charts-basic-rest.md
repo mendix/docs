@@ -1,5 +1,5 @@
 ---
-title: "Use Charts REST data source"
+title: "Use the Charts REST Data Source"
 parent: "charts-tutorials"
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "Charts How-to's"
+title: "Chart How-to's"
 menu_order: 10
 description: "These how-to's will guide you in creating various Mendix apps."
 tags: ["build", "app", "developer portal", "web modeler"]

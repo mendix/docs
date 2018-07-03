@@ -371,7 +371,7 @@ Data
 ![ Range mode ](attachments/pages/charts/rangemode-note.gif)  
 See more [ range mode configurations ](https://plot.ly/javascript/reference/#layout-yaxis-rangemode)
 
-## Data/Series Properties
+## Data/Series Properties {#data-series}
 These properties are applied to specific charts only. For each chart, data properties are distinct. They make the chart appear as its supposed to be.
 
 ### Lines

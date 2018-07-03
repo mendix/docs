@@ -33,7 +33,7 @@ To create a line chart with the Any Chart widget, follow these steps:
 
 1. Create a page with a data view (Chart context)
 1. Add the Any Chart widget in the data view
-1. Select one of the chart samples from the [Any Chart cheat sheet](../../refguide/charts-any-cheat-sheet.md####-line-chart). For example the line chart:  
+1. Select one of the chart samples from the [Any Chart cheat sheet](../../refguide/charts-any-cheat-sheet#line-chart). For example the line chart:  
 
 ```json
 [ { "x": [ 1, 2 ], "y": [ 1, 2 ], "type": "scatter" } ]

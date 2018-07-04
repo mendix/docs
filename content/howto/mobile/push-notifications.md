@@ -1,5 +1,5 @@
 ---
-title: "Push Notifications"
+title: "Use Push Notifications"
 category: "Mobile"
 ---
 

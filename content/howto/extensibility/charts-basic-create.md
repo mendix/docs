@@ -1,5 +1,5 @@
 ---
-title: "Create Charts"
+title: "Create a Basic Chart"
 parent: "charts-tutorials"
 ---
 

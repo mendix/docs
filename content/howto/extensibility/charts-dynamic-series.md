@@ -1,5 +1,5 @@
 ---
-title: "Create Charts"
+title: "Create a Dynamic Series Chart"
 parent: "charts-tutorials"
 ---
 

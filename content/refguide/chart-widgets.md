@@ -3,9 +3,10 @@ title: "Chart Widgets"
 parent: "pages"
 ---
 
-{{% alert type="info" %}}Please note that, Charts are published through the Mendix App Store and are included in the Atlas UI themes building blocks. Updates can be retrieved through the Mendix App Store:
-* [Charts](https://appstore.home.mendix.com/link/app/105695/)
-* [AnyChart](https://appstore.home.mendix.com/link/app/106517/){{% /alert %}}
+{{% alert type="info" %}}Please note that, Charts are published through the Mendix App Store and are included in the Atlas UI themes building blocks. Updates can be retrieved through the Mendix App Store:<br />
+* [Charts](https://appstore.home.mendix.com/link/app/105695/)<br />
+* [AnyChart](https://appstore.home.mendix.com/link/app/106517/)
+{{% /alert %}}
 
 ## 1 Basic Charts
 

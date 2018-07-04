@@ -1,5 +1,5 @@
 ---
-title: "Security - Node Permissions"
+title: "Security & Node Permissions"
 category: "Settings"
 description: "This page describes the permission settings of your node."
 tags: ["Node","Permission","Developer Portal"]

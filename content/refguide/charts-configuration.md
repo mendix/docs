@@ -1,5 +1,5 @@
 ---
-title: "Chart configuration"
+title: "Chart Configuration"
 parent: "chart-widgets"
 ---
 

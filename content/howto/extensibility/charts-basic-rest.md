@@ -1,6 +1,7 @@
 ---
 title: "Use a Chart with a REST Data Source"
 parent: "charts-tutorials"
+menu_order: 60
 ---
 
 ## 1 Introduction

@@ -1,5 +1,5 @@
 ---
-title: "Web Modeler Versions and Mendix Versions Interrelation"
+title: "Web Modeler Versions and Mendix Versions Correlation"
 category: "Web Modeler"
 description: "Describes how Mendix versions and Web Modeler version relate to each other."
 tags: ["web modeler", "desktop modeler", "versions"]

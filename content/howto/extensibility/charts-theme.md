@@ -1,6 +1,7 @@
 ---
 title: "Use the Charts Theme"
 parent: "charts-tutorials"
+menu_order: 40
 ---
 
 ## 1 Introduction

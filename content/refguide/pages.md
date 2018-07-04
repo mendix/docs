@@ -34,6 +34,6 @@ We discern the following categories of widgets:
     * Examples: save button, microflow button
 * [Report widgets](report-widgets) aggregate data and show it in the form of a table or a chart
     * Examples: basic report, report chart
-* [Chart widgets](chart-widgets) Graphically represent data in various chart types
+* [Chart widgets](chart-widgets) graphically represent data in various chart types
     * Examples: line chart, bar chart, heatmap
 * Add-on widgets can be downloaded from the [Mendix App Store](https://appstore.mendix.com/) or created by yourself using JavaScript

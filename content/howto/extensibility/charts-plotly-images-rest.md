@@ -1,6 +1,7 @@
 ---
 title: "Use the Plotly Images REST Service"
 parent: "charts-tutorials"
+menu_order: 60
 ---
 
 ## 1 Introduction

@@ -50,11 +50,11 @@ You are now prompted with an SAP Cloud Platform login screen. Select the region 
 
 ![](attachments/sap-cloud-platform/01-sap-select-region.png)
 
-If you already have an SAP session, you will only have to choose the region. If there is no current SAP session you will be asked for your SAP credentials as well. Providing your credentials will grant the Deployment Portal access to manage your SAP Cloud Platform account.
+If you have already logged on to SAP and your SAP session has not expired, you will only have to choose the region. If you do not have a current SAP session you will be asked for your SAP credentials as well. Providing your credentials will grant the Deployment Portal access to manage your SAP Cloud Platform account.
 
 You may be asked to provide your credentials in one of two ways:
 
-1. You will be taken to the SAP authentication page to enter your credentials. In this case, your SAP username must be the same as your Mendix username.
+1. You will be taken to the SAP authentication page to enter your credentials. In this case, your SAP username (email address) must be the same as your Mendix username.
 
 2. The Developer Portal will ask for your credentials which it will then use to obtain an access token from SAP. The Developer Portal will then use the access token. It will not store your credentials. *This method is being deprecated*.
 

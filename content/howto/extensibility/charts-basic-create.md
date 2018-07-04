@@ -1,6 +1,7 @@
 ---
-title: "Create Charts"
+title: "Create a Basic Chart"
 parent: "charts-tutorials"
+menu_order: 10
 ---
 
 ## 1 Introduction

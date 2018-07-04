@@ -1,6 +1,7 @@
 ---
 title: "Use Any Chart"
 parent: "charts-tutorials"
+menu_order: 20
 ---
 
 ## 1 Introduction

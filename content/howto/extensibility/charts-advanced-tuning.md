@@ -1,6 +1,7 @@
 ---
 title: "Fine-Tune a Chart with Advanced Settings"
 parent: "charts-tutorials"
+menu_order: 30
 ---
 
 ## 1 Introduction

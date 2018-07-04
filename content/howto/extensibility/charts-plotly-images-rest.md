@@ -1,11 +1,12 @@
 ---
-title: "Use the Plotly Images REST Service"
+title: "Use the Plotly Images REST Service Endpoint"
 parent: "charts-tutorials"
+menu_order: 70
 ---
 
 ## 1 Introduction
 
-The [plotly api images endpoint](https://api.plot.ly/v2/images) turns a plot into an image of the desired format. A set of body paramters and headers are passed to the endpoint, which returns a image when a request is made.
+The [Plotly API images endpoint](https://api.plot.ly/v2/images) turns a plot into an image of the desired format. A set of body paramters and headers are passed to the endpoint, which returns a image when a request is made.
 
 **This how-to will teach you how to do the following:**
 

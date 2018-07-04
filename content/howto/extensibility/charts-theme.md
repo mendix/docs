@@ -1,6 +1,7 @@
 ---
 title: "Use the Charts Theme"
 parent: "charts-tutorials"
+menu_order: 40
 ---
 
 ## 1 Introduction
@@ -104,7 +105,7 @@ To change the font, follow these steps:
 
 ## 4 Reference
 
-* More information in the [Charts reference guide](../../refguide/charts-widgets)
+* More information in the [Charts reference guide](../../refguide/chart-widgets)
 * [Layout samples](../../refguide/charts-advanced-cheat-sheet#layout-all)
 * [Configuration samples](../../refguide/charts-advanced-cheat-sheet#config-options) 
 

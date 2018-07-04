@@ -1,6 +1,6 @@
 ---
 title: "Chart Advanced Cheat Sheet"
-parent: "Chart Widgets"
+parent: "chart-widgets"
 ---
 
 ## Advanced configuration settings

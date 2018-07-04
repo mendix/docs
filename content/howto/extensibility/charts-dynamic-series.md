@@ -1,6 +1,7 @@
 ---
-title: "Create Charts"
+title: "Create a Dynamic Series Chart"
 parent: "charts-tutorials"
+menu_order: 50
 ---
 
 ## 1 Introduction

@@ -23,7 +23,7 @@ The applicable level of service for Mendix-supported App Store content is equal 
 
 This means that equal response and resolve times are applicable, and the standard support process using the [Mendix Support Portal](https://support.mendix.com) has to be followed.
 
-### 2.2 Community Category
+### 2.2 Community Category {#community-category}
 
 Support on content in this category is up to the user or organization providing the content. We recommend contacting the owner of the content in case of questions or issues via the following methods:
 

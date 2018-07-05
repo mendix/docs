@@ -1,5 +1,5 @@
 ---
-title: "Install and Configure the SMTP Module"
+title: "Install and Configure the SMTP Email Module"
 category: "Extensibility"
 tags: []
 ---

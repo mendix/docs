@@ -32,7 +32,9 @@ If you don't want basic authentication, there are two options:
 * You can choose to have [no authentication](published-rest-service#authentication) for specific published REST services, or
 * When you [allow anonymous users](project-security#anonymous-users) to your app, all published REST services become available without authentication
 
-For more details, see [Published REST Routing](published-rest-routing).
+Note that web service users cannot access REST services.
+
+For more details, see [Published REST Routing](published-rest-routing) or [Published REST Security](published-rest-service#authentication).
 
 ## <a name="interactive-documentation"></a>4 Documentation
 

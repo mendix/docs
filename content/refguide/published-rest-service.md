@@ -114,6 +114,8 @@ If authentication is required, you can select which authentication methods you w
     xmlHttp.send(null);
     ```
 
+Note that web service users cannot access REST services.
+
 ### 3.3 Allowed Roles
 
 The allowed roles define which [module role](module-role) a user must have to be able to access the service. This option is only available when **Requires authentication** is set to **Yes**.

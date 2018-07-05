@@ -39,7 +39,7 @@ Also, specific company policies may be in place for approving software upgrades.
 
 The latest **Web Modeler version** supports a range of recent **Mendix Desktop Modeler versions**. While we encourage users to upgrade to a new Mendix Desktop Modeler version as soon as possible, in many cases it is possible to postpone the upgrade and still make use of the latest Web Modeler features.
 
-Even when you are editing an app that does not have a range of recent **Mendix Desktop Modeler versions**, the Web Modeler in many cases will still be available for use. An older version of the Web Modeler will automatically be loaded when you open this project in the Web Modeler. This Web Modeler version will not contain the latest Web Modeler features, but it will still allow you to edit the app. For more information on the latest changes to the Web Modeler, see the [Web Modeler Release Notes](/releasenotes/web-modeler).
+Even when you are editing an app that does not have a range of recent **Mendix Desktop Modeler versions**, the Web Modeler in many cases will still be available for use. An older version of the Web Modeler will automatically be loaded when you open this project in the Web Modeler. This Web Modeler version will not contain the latest Web Modeler features, but it will still allow you to edit the app. For more information on the latest changes to the Web Modeler, see the [Web Modeler Release Notes](../../releasenotes/web-modeler).
 
 {{% alert type="info" %}} 
 
@@ -49,4 +49,4 @@ The Web Modeler has a minimum supported **Mendix Desktop Modeler version**. This
 
 ## 4 Related Content
 
-* [Web Modeler Release Notes](/releasenotes/web-modeler)
+* [Web Modeler Release Notes](../../releasenotes/web-modeler)

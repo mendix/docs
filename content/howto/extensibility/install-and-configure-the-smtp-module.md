@@ -33,8 +33,7 @@ In this section, you will install the SMTP Email module and integrate it into an
 
     ![](attachments/19202956/19398974.png)
     
-    {{% alert type="info" %}}
-    The SMTP Email module is community-supported. For details, see section [2.2 Community Category](/community/app-store#community-category) of *App Store Content Support*.
+    {{% alert type="info" %}}The SMTP Email module is community-supported. For details, see section [2.2 Community Category](/community/app-store#community-category) of *App Store Content Support*.
     {{% /alert %}}
 
 2.  Download and set up the [Encryption Module](https://appstore.home.mendix.com/link/app/1011/Mendix/Encryption), which will allow for protected passwords. 
@@ -92,13 +91,11 @@ To send an email in a microflow, follow these steps:
 
     ![](attachments/19202956/19398982.png)
 
-4. On the **MakeANewEmail** page, delete the **Save** button and add an action that calls a microflow. Call this microflow **IVK_UserManualEmailSend**:
+4.  On the **MakeANewEmail** page, delete the **Save** button and add an action that calls a microflow. Call this microflow **IVK_UserManualEmailSend**:
 
     ![](attachments/19202956/19398983.png)
 
-    {{% alert type="warning" %}}
-
-    Don’t forget to put a progress bar on the call for your action button. In the time it takes to send the email, you want users to know that the app is still working.
+    {{% alert type="warning" %}}Don’t forget to put a progress bar on the call for your action button. In the time it takes to send the email, you want users to know that the app is still working.
 
     {{% /alert %}}
 

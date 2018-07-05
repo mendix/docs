@@ -114,7 +114,9 @@ If authentication is required, you can select which authentication methods you w
     xmlHttp.send(null);
     ```
 
-Note that web service users cannot access REST services.
+{{% alert type="warning" %}}
+Web service users cannot access REST services.
+{{% /alert %}}
 
 ### 3.3 Allowed Roles
 

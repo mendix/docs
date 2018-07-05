@@ -15,6 +15,9 @@ Mendix applications rarely exist in isolation. Many developers find that the app
 * Perform administrative email tasks at runtime
 * Set up an email queue
 
+{{% alert type="info" %}}
+The 
+
 ## 2 Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
@@ -29,9 +32,15 @@ In this section, you will install the SMTP email module and integrate it into an
 
 ### 3.1 Installing the Module into Your Application
 
-1.  Download the SMTP email module from the Mendix App Store:
+1.  Download the [SMTP Email module](https://appstore.home.mendix.com/link/app/2461/) from the Mendix App Store:
 
     ![](attachments/19202956/19398974.png)
+    
+    {{% alert type="info" %}}
+
+    The SMTP Email module is community-supported. For details, see section [2.2 Community Category](/community/app-store#community-category) of *App Store Content Support*.
+
+    {{% /alert %}}
 
 2.  Download and set up the [Encryption Module](https://appstore.home.mendix.com/link/app/1011/Mendix/Encryption), which will allow for protected passwords. 
 

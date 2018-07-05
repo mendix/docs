@@ -4,5 +4,4 @@ title: "Web Modeler"
 
 ## Documents in This Category
 
-* [Web Modeler Versions and Mendix Versions Correlation](versions-wm)
-
+* [Web Modeler Version & Mendix Version Correlation](versions-wm)

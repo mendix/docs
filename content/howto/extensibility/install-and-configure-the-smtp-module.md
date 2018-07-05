@@ -6,11 +6,11 @@ tags: []
 
 ## 1 Introduction
 
-Mendix applications rarely exist in isolation. Many developers find that the apps they build need to alert people in other parts of the business about important activities. The best solution for this is that ubiquitous notification framework: email. If your company has an SMTP exchange, Mendix can leverage that server to send emails directly from your application. The SMTP email module makes this easy by providing settings, error logs, and message queues with just a few short configuration steps.
+Mendix applications rarely exist in isolation. Many developers find that the apps they build need to alert people in other parts of the business about important activities. The best solution for this is that ubiquitous notification framework: email. If your company has an SMTP exchange, Mendix can leverage that server to send emails directly from your application. The SMTP Email module makes this easy by providing settings, error logs, and message queues with just a few short configuration steps.
 
 **This how-to will teach you how to do the following:**
 
-* Install the SMTP email module into your application
+* Install the SMTP Email module into your application
 * Send an email from a Mendix app using your own SMTP relay
 * Perform administrative email tasks at runtime
 * Set up an email queue
@@ -28,7 +28,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 Setting Up the Module<a name="SettingUptheModule"></a>
 
-In this section, you will install the SMTP email module and integrate it into an existing Mendix application.
+In this section, you will install the SMTP Email module and integrate it into an existing Mendix application.
 
 ### 3.1 Installing the Module into Your Application
 
@@ -73,7 +73,7 @@ In this section, you will install the SMTP email module and integrate it into an
 
 ## 4 Sending an Email in a Microflow
 
-In this section, you will learn how to build a microflow in your application that can send an email using the credentials configured in  section [3 Setting Up the Module](#SettingUptheModule). The actual sending of an email in the SMTP module is accomplished through the **SMTPEmailModule.SendEmailMessage** microflow (accessible via **SMTPEmailModule** > **Private** > **Email**):
+In this section, you will learn how to build a microflow in your application that can send an email using the credentials configured in  section [3 Setting Up the Module](#SettingUptheModule). The actual sending of an email in the SMTP Email module is accomplished through the **SMTPEmailModule.SendEmailMessage** microflow (accessible via **SMTPEmailModule** > **Private** > **Email**):
 
 ![](attachments/19202956/19398978.png)
 
@@ -113,7 +113,7 @@ To send an email in a microflow, follow these steps:
 
 6. Go to the **IVK_UserManualEmailSend** microflow to edit it and add an **Email** parameter.
 
-7. Add a call to the **IVK_SendEmail** sub-microflow in the SMTP module, and then add a **Close page** activity:
+7. Add a call to the **IVK_SendEmail** sub-microflow in the SMTP Email module, and then add a **Close page** activity:
 
     ![](attachments/19202956/19398984.png)
 
@@ -129,7 +129,7 @@ To send an email in a microflow, follow these steps:
 
 ## 5 Setting Up the Email Queue
 
-Beyond simply creating and sending emails, the SMTP module comes with a functioning email queue that is easy to set up. Having an email queue can be very useful for controlling the email load volume or sending nightly updates for users to read in the morning. 
+Beyond simply creating and sending emails, the SMTP Email module comes with a functioning email queue that is easy to set up. Having an email queue can be very useful for controlling the email load volume or sending nightly updates for users to read in the morning. 
 
 To set up the email queue, follow these steps:
 
@@ -171,5 +171,5 @@ The SMTP email module contains a number of other powerful tools. Some of the enh
 
 * [How to Use  Connectors and Adapters](use-connectors-and-adapters)
 * [How to Access a Samba Share from the MxCloud](access-a-samba-share-from-the-mxcloud)
-* [How to Install and Configure the SMTP Module](install-and-configure-the-smtp-module)
+* [How to Install and Configure the SMTP Email Module](install-and-configure-the-smtp-module)
 * [How to Visualize Data Using the ChartsJS Module](visualize-data-using-the-chartsjs-module)

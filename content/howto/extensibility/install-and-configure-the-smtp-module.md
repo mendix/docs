@@ -15,6 +15,11 @@ Mendix applications rarely exist in isolation. Many developers find that the app
 * Perform administrative email tasks at runtime
 * Set up an email queue
 
+{{% alert type="warning" %}}
+
+The SMTP email module is [community supported](https://docs.mendix.com/community/app-store/app-store-content-support).
+
+{{% /alert %}}
 ## 2 Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:

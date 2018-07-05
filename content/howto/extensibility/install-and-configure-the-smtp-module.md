@@ -15,9 +15,6 @@ Mendix applications rarely exist in isolation. Many developers find that the app
 * Perform administrative email tasks at runtime
 * Set up an email queue
 
-{{% alert type="info" %}}
-The 
-
 ## 2 Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
@@ -37,18 +34,14 @@ In this section, you will install the SMTP Email module and integrate it into an
     ![](attachments/19202956/19398974.png)
     
     {{% alert type="info" %}}
-
     The SMTP Email module is community-supported. For details, see section [2.2 Community Category](/community/app-store#community-category) of *App Store Content Support*.
-
     {{% /alert %}}
 
 2.  Download and set up the [Encryption Module](https://appstore.home.mendix.com/link/app/1011/Mendix/Encryption), which will allow for protected passwords. 
 
-    {{% alert type="warning" %}}
-
-    As with all App Store modules, it is important that you do NOT modify any contents within the module itself. If you do, you run the risk of having your changes overwritten upon the next update.
-
+    {{% alert type="warning" %}}As with all App Store modules, it is important that you do NOT modify any contents within the module itself. If you do, you run the risk of having your changes overwritten upon the next update.
     {{% /alert %}}
+    
 3.  Create a new module called **EmailCustomizations** to house the project-specific pages and flows:
 
     ![](attachments/19202956/19398975.png)

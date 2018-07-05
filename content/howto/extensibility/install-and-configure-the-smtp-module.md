@@ -33,7 +33,7 @@ In this section, you will install the SMTP Email module and integrate it into an
 
     ![](attachments/19202956/19398974.png)
     
-    {{% alert type="info" %}}The SMTP Email module is community-supported. For details, see section [2.2 Community Category](/community/app-store-content-support#community-category) of *App Store Content Support*.
+    {{% alert type="info" %}}The SMTP Email module is community-supported. For details, see section [2.2 Community Category](/community/app-store/app-store-content-support#community-category) of *App Store Content Support*.
     {{% /alert %}}
 
 2.  Download and set up the [Encryption Module](https://appstore.home.mendix.com/link/app/1011/Mendix/Encryption), which will allow for protected passwords. 

@@ -33,7 +33,7 @@ The location where the operation can be reached starts with the location of the 
 
 The operation path specifies the remainder of the location of the operation. You can leave it empty to use the location of the resource.
 
-You can use [path parameters](published-rest-path-parameters) to capture part of the location as a microflow parameter. Specify path parameters in the operation path between '{' and '}'. The microflow (see below) should have a parameter with the same name. Whatever is in the URL at the place of the path parameter will be passed to the microflow.
+You can use [path parameters](published-rest-path-parameters) to capture part of the location as a microflow parameter or as a parameter to the import mapping. Specify path parameters in the operation path between '{' and '}'. Whatever is in the URL at the place of the path parameter will be passed to the microflow or the import mapping.
 
 The method and operation path determine [which operation gets executed for a given request URL](published-rest-routing).
 
@@ -53,11 +53,9 @@ An operation has different parameters:
 
  * [Path parameters](published-rest-path-parameters), which are part of the path of the URL
  * Query parameters, which are at the end of the URL in the form of `?name1=value1&name2=value2` (when a microflow parameter is not in the path and is not object, then it's considered a query parameter)
- * A body parameter (optional), which is in the body of the request to the operation (the 'GET', 'HEAD', and 'DELETE' operations do not have a body parameter)
+ * A body parameter (optional), which is in the body of the request to the operation (the 'GET', 'HEAD', and 'DELETE' operations do not have a body parameter). Only body parameters parameters can have a *List* or *Object* type.
 
-A microflow for an operation takes all these operation parameters as input.
-
-Path and query parameters can't have the *list* or *object* type.
+A microflow for an operation takes these operation parameters as input.
 
 A microflow parameter that has the *list* or *object* type indicates a body parameter. You can specify an import mapping to convert the incoming JSON or XML. If the parameter is a file document or inherits from a file document, an import mapping is not needed.
 

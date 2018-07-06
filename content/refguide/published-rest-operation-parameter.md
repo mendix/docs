@@ -15,21 +15,25 @@ These fields were introduced as read-only in the parameter list in version 7.12.
 
 {{% /alert %}}
 
-### 2.1 Name
-
-The name of the parameter. If this parameter is passed to the microflow, this name should match the name of the microflow parameter.
-
-### 2.2 Type
-
-Specify the type of the parameter. Object or list parameters can only come from the body of the request.
-
-### 2.3 Parameter type
+### 2.1 Parameter type
 
 Specify where the parameter comes from. Possible values are
 
 * **Query** When the request contains a query string such as `?name=John&age=42`, you can pass these to the microflow by adding query parameters. For more information, see [Published REST Query Parameters](published-rest-query-parameters).
 * **Path** The operation path can contain parameters as well. If you add a path parameter, make sure you add it to the operation path as well. For more information, see [Published REST Path Parameters](published-rest-path-parameters).
 * **Body** The microflow can have 0 or 1 body parameters. A body parameter is taken from the body of the request. If the body is a file document or an image, its contents will be filled with the body of the request. If the body parameter is an other type of object or a list, an import mapping is needed to convert the body content of the request into an object or a list. **GET**, **HEAD** and **OPTIONS** operations shouldn't have body parameters.
+
+### 2.2 Name
+
+The name of the parameter
+
+### 2.3 Type
+
+Specify the type of the parameter. Object or list parameters can only come from the body of the request.
+
+### 2.4 Microflow parameter
+
+Specify the microflow parameter that will be filled with the value from this operation parameter. You should always select one, except for when you defined a path parameter to be passed to the import mapping.
 
 ## 3 Mapping
 

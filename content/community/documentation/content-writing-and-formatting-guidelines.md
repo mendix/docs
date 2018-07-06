@@ -194,13 +194,11 @@ Images can be given a maximum width. This is done through the ``image_container`
 {{%/* /image_container */%}}
 ```
 
-This example sets the maximum width to ``100px`` and aligns the images to the center (valid alignments are ``left``, ``center`` and ``right``):
+This example sets the maximum width to ``100px`` and aligns the images to the center (valid alignments are ``left``, ``center``, and ``right``):
 
 {{% image_container width="100" align="center" %}}
 ![](attachments/content-writing-and-formatting-guidelines/image_examples2.png)
 {{% /image_container %}}
-
-
 
 ### 5.2 How-to Content
 

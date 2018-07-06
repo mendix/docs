@@ -86,6 +86,9 @@ Password | Provide same password as in PgAdmin
 
 If you also want to restore the **FileDocuments** of your backup you need to download a **Full snapshot**. You need to move the **FileDocuments** to the **deployment directory** of your app. You can find the deployment directory behind the Mendix Desktop Modeler version:
 
+ ![](attachments/restore-backup-locally/backup-choice.png)
+ 
+
  ![](attachments/restore-backup-locally/root-directory.png)
 
 After navigating to the deployment directory, follow these steps:

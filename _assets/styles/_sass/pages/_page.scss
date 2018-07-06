@@ -184,6 +184,12 @@ $block: 'mx';
           }
         }
       }
+
+      .image-container {
+        img {
+          display: none;
+        }
+      }
     }
 
     @include modifier('frontpage') {

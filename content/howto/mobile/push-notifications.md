@@ -26,8 +26,8 @@ To use push notifications, make sure you have the following:
 
 ## 3 Supported Platforms
 
-* Android 4.4 and higher
-* iOS 9.0 and higher
+* Android 4.4 and above
+* iOS 9.0 and above
 
 ## 4 Demo
 

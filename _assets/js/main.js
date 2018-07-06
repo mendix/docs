@@ -39,6 +39,7 @@
       var width = 'number' === typeof widthData ? widthData + 'px' : widthData;
       $images.each(function () {
         var $img = $(this);
+        $img.css('width', '100%');
         $img.css('max-width', width);
         $img.show();
       });

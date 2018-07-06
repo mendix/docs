@@ -25,7 +25,7 @@ The **Web Modeler version** is updated continuously (even daily), which will pro
 
 This means that when you upgrade, you upgrade your app to a new **Mendix Desktop Modeler version**. When you see the upgrade notification, you can either stay on the current version and continue working (although you might not have the newest Mendix Platform features and improvements), or you can upgrade to the newest version. 
 
- {{% alert type="warning" %}} 
+{{% alert type="warning" %}} 
 
 Once you have upgraded to the newest version, you cannot revert the upgrade. Also, anyone working on the app using the Desktop Modeler must use the new version of the Desktop Modeler from that moment on. 
 

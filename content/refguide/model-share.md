@@ -8,7 +8,7 @@ category: "General"
 
 Mendix [Model Share](https://modelshare.mendix.com/) is a simple way to share parts of your Mendix Models with others. Model Shares can be viewed online, used inside blogposts and other media, and imported directly to the Mendix Desktop Modeler. All Model Shares have an unique URL which can be used for sharing. A typical Model Share URL looks as follows: `https://modelshare.mendix.com/models/a78832b7-0776-40b7-b041-e69e724ff3d5/iv-k-split-string-return-list-example`.
 
-Mendix Model Share is supported in Mendix 5.14 and higher.
+Mendix Model Share is supported in Mendix 5.14 and above.
 
 # Creating a Model Share
 

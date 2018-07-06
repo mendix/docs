@@ -8,7 +8,7 @@ menu_order: 20
 
 ### 1.1 Which Mendix versions are supported?
 
-Mendix 6.0.0 and higher.
+Mendix 6.0.0 and above.
 
 ### 1.2 Where does the Model API run?
 

@@ -25,6 +25,10 @@ The [page](page) that should be shown.
 
 See [Opening Pages](opening-pages).
 
+#### Page for specializations (Only for "Show a page") {#on-click-page}
+
+Allows to configure a different page for each specialization of the context object. If this action is placed inside a data view, it is possible to configure different page(s) for each specialization of the data view object. If this action is placed in a data grid, it is possible to configure different pages for each specialization of the grid entity. This setting is not visible when there is not a context object, or context object has no specializations.
+
 #### Microflow (Only for "Call a microflow") {#on-click-microflow}
 
 The [microflow](microflow) that should be executed.

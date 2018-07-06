@@ -4,9 +4,7 @@ parent: "page-concepts"
 ---
 
 
-In many places within pages you can open other pages. For example, the [edit button](edit-button) of the [data grid](data-grid) opens a page to edit the selected object.
-
-Pages can be opened either in the content pane of the browser or in a new pop-up. Where the page is opened depends on the [layout type](layout) of its [layout](layout): pages based on a layout of type 'Modal pop-up' or 'Pop-up' will be open as a pop-up, other pages will be opened in content. If the target page layout is of type 'Legacy', then the page location must be configured manually (see [Location](opening-pages) section below).
+In many places within pages you can open other pages. Pages can be opened either in the content pane of the browser or in a new pop-up. Where the page is opened depends on the [layout type](layout) of its [layout](layout): pages based on a layout of type 'Modal pop-up' or 'Pop-up' will be open as a pop-up, other pages will be opened in content. If the target page layout is of type 'Legacy', then the page location must be configured manually (see [Location](opening-pages) section below).
 
 If the target page contains a [data view](data-view) with a page parameter data source, then an object for this data view must be passed to the page while opening. What object to pass is configured automatically based on the arguments available for the widget opening the page (see [available arguments for microflows](starting-microflows) for details).
 

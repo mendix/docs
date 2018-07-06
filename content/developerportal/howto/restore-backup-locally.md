@@ -31,19 +31,19 @@ Once the Postgres Installer is installed and you have downloaded a backup file, 
 2. Double click **PostgreSQL 9.6**.
 3. Click **Database** and **create** a new database.  
 
-    ![](attachments/postgres/add-database.png)
+    ![](attachments/restore-backup-locally/add-database.png)
 
 4. Fill in the **Database** name.
 5. Select the correct owner click **Save**.
 6. Rightclick on the newly created database and click **Restore**. 
 
-    ![](attachments/postgres/restore-database.png)
+    ![](attachments/restore-backup-locally/restore-database.png)
 
 7. Upload the correct **.backup** file.
 8. Click on the **Restore options** tab.
 9. Under **Owner** set **Don’t save** to **Yes**.
 
-    ![](attachments/postgres/restore-options.png)
+    ![](attachments/restore-backup-locally/restore-options.png)
 
 10. Click **Restore**.
 11.	Wait until you see that the backup is **Successfully completed.** in the right corner of the screen.  
@@ -55,11 +55,11 @@ After the backup has been restored in a local Postgres database, the database ha
 1. Open Mendix **Desktop Modeler**. 
 2. Click below **Project** on **Settings**.
 
-    ![](attachments/modeler/modeler-settings.png)
+    ![](attachments/restore-backup-locally/modeler-settings.png)
 
 3. Under the tab **Configurations** click **New**.
 
-   ![](attachments/modeler/add-configuration.png)
+   ![](attachments/restore-backup-locally/add-configuration.png)
 
 4. Fill in the database information. 
 
@@ -78,7 +78,7 @@ Password | Provide same password as in PgAdmin
 
 If you also want to restore the **FileDocuments** of your backup you need to download a **Full snapshot**. You need to move the **FileDocuments** to the **deployment directory** of your app. You can find the deployment directory behind the Mendix Desktop Modeler version:
 
- ![](attachments/modeler/root-directory.png)
+ ![](attachments/restore-backup-locally/root-directory.png)
 
 After navigating to the deployment directory, follow these steps:
 

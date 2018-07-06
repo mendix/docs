@@ -22,10 +22,11 @@ Specify where the parameter comes from. Possible values are
 * **Query** When the request contains a query string such as `?name=John&age=42`, you can pass these to the microflow by adding query parameters. For more information, see [Published REST Query Parameters](published-rest-query-parameters).
 * **Path** The operation path can contain parameters as well. If you add a path parameter, make sure you add it to the operation path as well. For more information, see [Published REST Path Parameters](published-rest-path-parameters).
 * **Body** The microflow can have 0 or 1 body parameters. A body parameter is taken from the body of the request. If the body is a file document or an image, its contents will be filled with the body of the request. If the body parameter is an other type of object or a list, an import mapping is needed to convert the body content of the request into an object or a list. **GET**, **HEAD** and **OPTIONS** operations shouldn't have body parameters.
+* **Header** The value of a header parameter is taken from the (first) request header with that name
 
 ### 2.2 Name
 
-The name of the parameter
+The name of the parameter. For a header parameter, this should be the name of the request header.
 
 ### 2.3 Type
 

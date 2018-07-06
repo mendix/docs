@@ -52,7 +52,8 @@ Support for **File Documents** in these microflows was introduced in version 7.1
 An operation has different parameters:
 
  * [Path parameters](published-rest-path-parameters), which are part of the path of the URL
- * Query parameters, which are at the end of the URL in the form of `?name1=value1&name2=value2` (when a microflow parameter is not in the path and is not object, then it's considered a query parameter)
+ * [Query parameters](published-rest-query-parameters), which are at the end of the URL in the form of `?name1=value1&name2=value2` (when a microflow parameter is not in the path and is not object, then it's considered a query parameter)
+ * Header parameters, which come from the HTTP headers of the request
  * A body parameter (optional), which is in the body of the request to the operation (the 'GET', 'HEAD', and 'DELETE' operations do not have a body parameter). Only body parameters parameters can have a *List* or *Object* type.
 
 A microflow for an operation takes these operation parameters as input.

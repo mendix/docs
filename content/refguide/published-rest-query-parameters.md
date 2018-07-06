@@ -9,12 +9,7 @@ The **published REST service** feature was introduced in version 7.10.0.
 
 {{% /alert %}}
 
-The specification of a [published REST operation](published-rest-operation) includes a microflow that implements the operation. This microflow takes a number of parameters:
-
-* It may take a parameter of the [HttpRequest](http-request-and-response-entities#http-request) type
-* It takes all the [path parameters](published-rest-path-parameters) specified in the operation path of the operation
-
-Any other parameters come from the body, the path or the query string of the request. 
+The specification of a [published REST operation](published-rest-operation) includes a microflow that implements the operation. This microflow may take parameters that come from the query string of the request.
 
 A query parameter can only have a primitive type (Boolean, date and time, decimal, enumeration, integer/long, or string).
 

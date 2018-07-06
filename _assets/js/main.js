@@ -23,6 +23,28 @@
     });
 
     /*****************
+      Image containers
+    ******************/
+    $('.image-container').each(function () {
+      var $this = $(this);
+      var widthData = $this.data('max-width');
+      var alignData = $this.data('align');
+      var $images = $('img', $this);
+      if (!widthData || !$images) {
+        return;
+      }
+      if (alignData) {
+        $this.addClass('text-' + alignData);
+      }
+      var width = 'number' === typeof widthData ? widthData + 'px' : widthData;
+      $images.each(function () {
+        var $img = $(this);
+        $img.css('max-width', width);
+        $img.show();
+      });
+    });
+
+    /*****************
       Menu structure
     ******************/
     function normalizeId(id) {

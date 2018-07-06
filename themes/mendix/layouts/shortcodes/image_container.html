@@ -1,0 +1,6 @@
+<div
+	class="image-container"
+	data-max-width="{{ if .IsNamedParams }}{{with .Get "width" }}{{.}}{{else}}100%{{end}}"{{else}}{{with .Get 0 }}{{.}}{{else}}100%{{end}}"{{end}}
+	{{ if .IsNamedParams }}{{with .Get "align" }}data-align="{{.}}"{{else}}{{end}}{{else}}{{with .Get 1 }}data-align="{{.}}"{{else}}{{end}}{{end}}>
+	{{.Inner}}
+</div>

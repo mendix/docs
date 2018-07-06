@@ -186,6 +186,22 @@ Place images in a folder with the same name as the document that uses the images
 
 For example, if you are adding an image to the Content Writing and Formatting Guidelines document, located at */community/documentation/*, you would place the images in the */community/documentation/attachments/content-writing-and-formatting-guidelines/* folder. That way, you can group images for the same document nicely together.
 
+Images can be given a maximum width. This is done through the ``image_container`` shortcode:
+
+```html
+{{%/* image_container width="100" align="center" */%}}
+![](attachments/content-writing-and-formatting-guidelines/image_examples2.png)
+{{%/* /image_container */%}}
+```
+
+This example sets the maximum width to ``100px`` and aligns the images to the center (valid alignments are ``left``, ``center`` and ``right``):
+
+{{% image_container width="100" align="center" %}}
+![](attachments/content-writing-and-formatting-guidelines/image_examples2.png)
+{{% /image_container %}}
+
+
+
 ### 5.2 How-to Content
 
 #### 5.2.1 Documenting Microflows

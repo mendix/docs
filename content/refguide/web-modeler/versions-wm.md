@@ -19,7 +19,7 @@ The **Web Modeler version** and the **Mendix version** (**Mendix Desktop Modeler
 
 ## 2  Upgrading to the Next Version
 
-The **Web Modeler version** is updated continuously (even daily), and you will have the latest user interface features available for editing your app. However, when there is a new **Mendix Desktop Modeler version**, an orange top-bar is displayed, informing you that you can upgrade your app to the next version.   
+The **Web Modeler version** is updated continuously (even daily), which will provide you with the latest user interface features for editing your app. However, when there is a new **Mendix Desktop Modeler version**, an orange top-bar is displayed, informing you that you can upgrade your app to the next version.   
 
 ![](attachments/versions-wm/wm-top-bar-upgrade.png)
 

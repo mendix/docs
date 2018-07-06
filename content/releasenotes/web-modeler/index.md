@@ -10,7 +10,7 @@ These release notes are for the [beta](../beta-features/index) version of the We
 
 Below you can find release notes for the Web Modeler correlated with the following version ranges of the Mendix Desktop Modeler: 
 
-* [7.15 and Above](7.15-and-above)
+* [7.15 & Above](7.15-and-above)
 * [7.11–7.14](7.11-7.14)
 
 The release notes include all minor versions, patches, and known issues.

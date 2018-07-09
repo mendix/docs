@@ -21,7 +21,7 @@ Restoring a backup locally can be useful if you want to test your cloud environm
 
 * [Download a backup](how-to-download-a-backup) that you want to restore locally from the [Developer Portal](http://home.mendix.com)
 * Download and run the [Postgres Installer](https://www.postgresql.org/download/windows/)
-* When restoring a database hosted in Mendix Cloud v4, you will need a utility such as [7zip](http://www.7-zip.org/) which can unzip **.gz** files. 
+* When restoring a database hosted in Mendix Cloud v4, you will need a utility such as [7zip](http://www.7-zip.org/) which can unzip **.gz** files.
 
 NOTE: This guideline has been made with Postgres Installer version Version 9.6.5.
 
@@ -32,18 +32,18 @@ Once Postgres is installed and you have downloaded a backup file, it's time to c
 {{% alert type="info" %}}
 If your backup came from Mendix Cloud v4, it will have been compressed as a .gz file. You will first have to extract the file(s) from this archive using a tool such as 7zip.
 
-If you have downloaded a full backup, this will also have been archived as a .tar file which you need to extract to get your .backup file containing the database backup.
+If you have downloaded a full backup, this will also have been archived as a .tar file which you need to extract to get your .backup file containing the database backup. The .backup file in the **db** folder of the archive.
 {{% /alert %}}
 
 1. Start **PgAdmin 4** from the Windows start menu.
 2. Double click **PostgreSQL 9.6**.
-3. Right-click **Databases** and **Create** a new database.  
+3. Right-click **Databases** and **Create** a new database.
 
     ![](attachments/restore-backup-locally/add-database.png)
 
 4. Fill in the **Database** name.
-5. Select the correct owner and click **Save**.
-6. Right-click on the newly created database and click **Restore**. 
+5. Select the correct owner (the default is **postgres**) and click **Save**.
+6. Right-click on the newly created database and click **Restore**.
 
     ![](attachments/restore-backup-locally/restore-database.png)
 
@@ -54,47 +54,56 @@ If you have downloaded a full backup, this will also have been archived as a .ta
     ![](attachments/restore-backup-locally/restore-options.png)
 
 10. Click **Restore**.
-11.	Wait until you see that the backup is **Successfully completed.** in the right corner of the screen.  
+11.	Wait until you see that the backup is **Successfully completed.** in the right corner of the screen.
 
-## 4 Modeler
+## 4 Linking the Database to the App in Desktop Modeler
 
-After the backup has been restored in a local Postgres database, the database has to be linked to the Mendix Modeler. This means that the Mendix Modeler will be using another database than the database that was originally created. 
+After the backup has been restored as a local Postgres database, you have to link the database to the Desktop Modeler. This tells the Desktop Modeler to use the database that you have just created in Postgresql, rather than the database that was originally created with the app.
 
-1. Open Mendix **Desktop Modeler**. 
-2. Click below **Project** on **Settings**.
+1. Open your app in the **Desktop Modeler**.
+2. Open **Project... > Settings** from the **Project Explorer**.
 
     ![](attachments/restore-backup-locally/modeler-settings.png)
 
 3. Under the tab **Configurations** click **New**.
 
-   ![](attachments/restore-backup-locally/add-configuration.png)
+    ![](attachments/restore-backup-locally/add-configuration.png)
 
-4. Fill in the database information. 
+4. Fill in the database information.
+    * **Name**: *{a unique name}*
+    * **Type**: *PostreSQL*
+    * **URL**: *localhost:5432*
+    * **Database name**: *{database name}*
+    * **User name**: *{database owner} (set when you created the database in gAdmin; the default is postgres)*
+    * **Password**: *{password for database owner}*
 
-Configuration | Information
----- | ---
-Type | PostreSQL
-URL | localhost: 5432
-Database name | Provide database name
-User name | Provide user name from PgAdmin
-Password | Provide same password as in PgAdmin
+    {{% alert type="info" %}}The default password for the database owner **postgres** is blank. Mendix will not accept a blank password so you will have to set one in pgAdmin.
+
+    ![](attachments/restore-backup-locally/database-owner-properties.png)
+    
+    ![](attachments/restore-backup-locally/database-owner-password.png)
+
+    {{% /alert %}}
 
 5. Click **OK**.
 6. Run the app by clicking **Run Locally**.
 
-## 5 Restore files
+## 5 Restoring Files
 
-If you also want to restore the **FileDocuments** of your backup you need to download a **Full snapshot**. You need to move the **FileDocuments** to the **deployment directory** of your app. You can find the deployment directory behind the Mendix Desktop Modeler version:
+The steps above restore the database, but do not restore any **FileDocuments** (binary files, such as images). If you also want to restore the **FileDocuments**, you need to follow the following steps:
 
- ![](attachments/restore-backup-locally/backup-choice.png)
- 
+1. Download a **Full snapshot**.
 
- ![](attachments/restore-backup-locally/root-directory.png)
+    ![](attachments/restore-backup-locally/backup-choice.png)
 
-After navigating to the deployment directory, follow these steps:
+2. Select **Project > Show Project Directory in Explorer** from the Desktop Modeler menu
 
-1. Open the **<backup>.tar.gz** file using a program like **7-zip**.
-2. Copy the files in the **Files** folder from the unpacked backup file to the **Deployment\Data\Files** folder.
+    ![](attachments/restore-backup-locally/project-directory.png)
+
+3. Navigate to the **deployment/data/files** folder within your project.
+4. Extract the **{backup name}.tar** file from the .gz archive using a program like **7-zip**.
+5. Extract the entire **tree** folder from the backup archive to the  **deployment/data/files** folder within your project.
+6. Run the app by clicking **Run Locally**.
 
 ## 5 Related Content
 

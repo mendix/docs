@@ -7,35 +7,36 @@ tags: ["Backup","Restore","Local","Developer Portal"]
 
 ## 1 Introduction
 
-Restoring a backup locally can be useful if you want to test your cloud environment's data without interrupting your live cloud environments. In this way you can reproduce your apps behavior containing data from your cloud environment locally. By using your Mendix Modeler and a Postgres database, you can debug your app using backups of your cloud production/acceptance/test data.
+Restoring a backup locally can be useful if you want to test your cloud environment's data without interrupting your live cloud environment. In this way you can see locally how your app behaves when using data in your cloud environment. By using your Mendix Modeler and a Postgres database, you can debug your app using backups of your cloud test/acceptance/production data.
 
 **This how-to will teach you how to do the following:**
 
 * Download a backup from your cloud environment
 * Create a new database
 * Configure the project settings of the app
+* Download and restore FileDocument (binary) objects in your Domain Model
 
 ## 2 Prerequisites
 
 **Before starting this how-to, make sure you have completed the following prerequisites:**
 
-* [Download a backup](how-to-download-a-backup) that you want to restore locally from the [Developer Portal](http://home.mendix.com)
-* Download and run the [Postgres Installer](https://www.postgresql.org/download/windows/)
-* When restoring a database hosted in Mendix Cloud v4, you will need a utility such as [7zip](http://www.7-zip.org/) which can unzip **.gz** files.
+* [Download a backup](how-to-download-a-backup) that you want to restore locally
+* Install Postgresql on your local machine by downloading and running the [Postgresql Installer](https://www.postgresql.org/download/windows/)
+* When restoring a database hosted in Mendix Cloud v4, or downloading a full backup, you will need a utility such as [7zip](http://www.7-zip.org/) on your local machine which can extract files from **.gz** and **.tar** archives.
 
-NOTE: This guideline has been made with Postgres Installer version Version 9.6.5.
+NOTE: This guideline has been made with Postgresql version Version 9.6.5.
 
 ## 3 Restoring the Backup to Postgres
 
-Once Postgres is installed and you have downloaded a backup file, it's time to create a local database in Postgres. The backup database will be restored into a local Postgres database.
+Once Postgresql is installed and you have downloaded a backup file, you need to create a local database in Postgresql. The backup database will be restored into a local Postgresql database.
 
 {{% alert type="info" %}}
 If your backup came from Mendix Cloud v4, it will have been compressed as a .gz file. You will first have to extract the file(s) from this archive using a tool such as 7zip.
 
-If you have downloaded a full backup, this will also have been archived as a .tar file which you need to extract to get your .backup file containing the database backup. The .backup file in the **db** folder of the archive.
+If you have downloaded a full backup, this will also have been archived as a .tar file which you need to extract to get your .backup file containing the database backup. The .backup file is in the **db** folder of the archive.
 {{% /alert %}}
 
-1. Start **PgAdmin 4** from the Windows start menu.
+1. Start **pgAdmin 4** from the Windows start menu.
 2. Double click **PostgreSQL 9.6**.
 3. Right-click **Databases** and **Create** a new database.
 
@@ -47,9 +48,9 @@ If you have downloaded a full backup, this will also have been archived as a .ta
 
     ![](attachments/restore-backup-locally/restore-database.png)
 
-7. Upload the correct **.backup** file.
+7. Select the **.backup** file you downloaded from the Team Server.
 8. Click on the **Restore options** tab.
-9. Under **Owner** set **Don’t save** to **Yes**.
+9. Under **Do not save** set **Owner** to **Yes**.
 
     ![](attachments/restore-backup-locally/restore-options.png)
 

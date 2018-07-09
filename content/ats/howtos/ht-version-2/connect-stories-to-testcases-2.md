@@ -1,5 +1,5 @@
 ---
-title: "Link Test Cases/Test Suites to User Stories"
+title: "Link Test Cases & Test Suites to User Stories"
 parent: "ht-version-2"
 description: "Describes the steps for linking Test Cases and Test Suites to User Stories."
 tags: ["ATS", "testing"]

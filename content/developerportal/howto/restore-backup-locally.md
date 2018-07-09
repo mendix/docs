@@ -90,7 +90,13 @@ After the backup has been restored as a local Postgres database, you have to lin
 
 ## 5 Restoring Files
 
-The steps above restore the database, but do not restore any **FileDocuments** (binary files, such as images). If you also want to restore the **FileDocuments**, you need to follow the following steps:
+The steps above restore the database, but do not restore any **FileDocuments** (binary files, such as images).
+
+{{% alert type="warning" %}}
+You are restoring the FileDocuments to the same directory as your original local test files. Please remember to backup the files directory before adding your restored FileDocuments.
+{{% /alert %}}
+
+If you also want to restore the **FileDocuments**, you need to follow the following steps:
 
 1. Download a **Full snapshot**.
 

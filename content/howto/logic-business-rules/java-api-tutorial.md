@@ -63,7 +63,10 @@ public static List<IMendixObject> getAttachments(GenericObject object, IContext 
 	String attachmentEntityName = Attachment.entityName;
 	String relationName = Attachment.MemberNames.Attachment_GenericObject.toString();
 	String currentObjectID = object.getGUID();
-	return Core.retrieveXPathQueryEscaped(context, "//%s[%s='%s']", attachmentEntityName, relationName, currentObjectID);
+	String query = String.format("//%s[%s=$currentid]", attachmentEntityName, relationName);
+	return Core.createXPathQuery(query)
+		.setVariable("currentid", currentObjectID)
+		.execute(context);
 }
 ```
 
@@ -73,9 +76,10 @@ public static List<IMendixObject> getAttachments(GenericObject object, IContext 
 | 3 | The name of the `Attachment` entity is defined in a `String` by copying the `entityName` from the `Attachment` proxy class. |
 | 4 | The name of the relation between the `Attachment` entity and `GenericObject` entity is defined in a `String` by getting it from the `MemberNames` enumeration of the `Attachment` proxy class and calling `toString()` on it. |
 | 5 | The ID of the `currentObject` is retrieved from the `GenericObject` proxy object method `getGUID();`. |
-| 6 | The `Core` method `retrieveXPathQueryEscaped` is executed and its result (a list of `IMendixObjects`) is immediately returned. The parameters of this method are the context in which we wish to execute this query and the actual query. By using the "escaped" version of this method, the XML characters in the parameters are being escaped. It also allows for easily readable code. The actual query `"//%s[%s='%s']"` is being passed as a parameter, and after that, a number of `Strings` are passed, which will take the place of the `%s` tokens. |
+| 6 | We construct a query on the `Attachment` entity that are related to the object with `currentid`. The prefix `$` denotes that this is a variable, which can later be safely inserted using the `Core.createXPathQuery` API.
+| 7 | The `Core` method `createXPathQuery` is used to create a query. This query fill the variable `currentid` with the ID of the current object. We pass the context in which we want the query to be executed. Ater this its result (a list of `IMendixObjects`) is immediately returned.
 
-The same query could be executed using `Core.retrieveXPathQuery()`. With that method, you can enter additional parameters, such as a sorting mechanism and a maximum number of objects returned. View the JavaDoc for more information.
+Using the createXPathQuery API, you can also enter conditions, such as a sorting mechanism and a maximum number of objects returned. After executing these are taken into account. View the JavaDoc for more information.
 
 Now that we have a way to get all the `Attachments` from a certain `GenericObject`, we can start copying them.
 

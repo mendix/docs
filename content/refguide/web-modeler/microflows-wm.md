@@ -81,13 +81,13 @@ In the **Toolbox** tab, you can see that the microflow contains three sections w
 
 Elements available in the **General** section are described in the table below.
 
-| Element                                          | Description                                                  |
-| ------------------------------------------------ | ------------------------------------------------------------ |
-| [Annotation]( ../refguide/annotation)            | An annotation is an element that can be used to put comments in a microflow. |
-| [End Event](../refguide/end-event)               | An end event defines the location where the microflow will stop. There can be more than one end event, for example when an exclusive split is used in the microflow. So, the number of end events depends on the number of possible outcomes of the microflow. |
-| [Exclusive Split](microflows-exclusive-split-wm) | An exclusive split splits the microflow flow. Use an exclusive split when you want to add conditions to one and the same action. For example, you want to show different order forms for the customers with different grades. Thus, an exclusive split creates different flows. With the help of an exclusive split the app makes a decision based on a condition and follows one and only one of the outgoing flows. |
-| [Merge](../refguide/merge)                       | A merge can be used to combine flows into one.  If previously you split the microflow flow and now one and the same action needs to be executed for these separated flows, you can combine the two (or more) paths using a merge. |
-| [Parameter](../refguide/parameter)               | A parameter is an input data for the microflow and can be used in any activity in the microflow. |
+| Element                               | Description                                                  |
+| ------------------------------------- | ------------------------------------------------------------ |
+| [Annotation]( ../refguide/annotation) | An annotation is an element that can be used to put comments in a microflow. |
+| [End Event](../refguide/end-event)    | An end event defines the location where the microflow will stop. There can be more than one end event, for example when an exclusive split is used in the microflow. So, the number of end events depends on the number of possible outcomes of the microflow. |
+| Exclusive Split                       | An exclusive split splits the microflow flow. Use an exclusive split when you want to add conditions to one and the same action. For example, you want to show different order forms for the customers with different grades. Thus, an exclusive split creates different flows. With the help of an exclusive split the app makes a decision based on a condition and follows one and only one of the outgoing flows. |
+| [Merge](../refguide/merge)            | A merge can be used to combine flows into one.  If previously you split the microflow flow and now one and the same action needs to be executed for these separated flows, you can combine the two (or more) paths using a merge. |
+| [Parameter](../refguide/parameter)    | A parameter is an input data for the microflow and can be used in any activity in the microflow. |
 
 ### 5.2 Object Activities Section {#microflow-object-activities}
 
@@ -155,6 +155,4 @@ When configuring the activities of the microflows you will notice icons above or
 
 ## 8 Related Content
 
-* [Exclusive Split in the Web Modeler](webmodeler-howto-microflows-exclsplit)
-* [Setting and Changing a Value for Different Activities in the Microflows in the Web Modeler](microflows-setting-and-changing-value-wm)
-* [Microflow Expressions in the Web Modeler](microflows-expressions-wm)
+* [The Web Modeler Overview](overview-wm)

@@ -119,7 +119,9 @@ This domain model is part of the SAP OData Connector module and can be found in 
   * **ProxyPort** – the port which is to gain access through the SAP Cloud Connector
   * **ProxyBearerToken** – an authorization token which is needed when using the SAP Cloud Connector
 * **Cookie** – the cookie is maintained internally and is valid for a Mendix session or in the microflow context of a startup microflow or scheduled event
-* **CSRFToken** – the Cross-Site Request Forgery (CSFR) token is maintained internally and is used to prevent CSRF attacks; a CSFR token is maintained for a Mendix session and is also supported in the microflow context of a startup microflow or scheduled event
+* **CSRFToken** – the Cross-Site Request Forgery (CSFR) token is maintained internally and is used to prevent CSRF attacks; a CSFR token is obtained when a **Get** or **Get list** OData action is performed and is maintained for a Mendix session which means that:
+  * where an asynchronous or background microflow is executed (for example, using *executeMicroflowInBackground* from Community Commons) a new CSFR token must be obtained before any other actions are performed
+  * where a startup microflow or scheduled event is run, the context also supports CSRF but, again, the token must be obtained before performing any other actions
 
 ## 3 Actions<a name="Actions"></a>
 

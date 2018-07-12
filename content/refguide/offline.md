@@ -54,29 +54,33 @@ From Mendix 7.4.0 on, objects can also be edited after synchronization.
 
 Both autonumbers and calculated attributes require server intervention, and are therefore disallowed. Objects with these attribute types can still be viewed and created offline, but the attributes themselves cannot be displayed.
 
-### 4.7 Default Attribute Values
+### 4.7 Files
+
+Storing and uploading files offline is not supported. Specializations of the System.FileDocument can still be created offline, but files cannot be uploaded or downloaded. The exception to this rule is System.Image, which can be accessed, viewed, and uploaded as usual with the image viewer and upload widgets.
+
+### 4.8 Default Attribute Values
 
 Default attribute values for entities in the domain model don't have any effect for objects created offline. Boolean attributes will always default to `false`, numeric attributes to `0`, and other attributes to `empty`.
 
-### 4.8 Associations
+### 4.9 Associations
 
 Attribute paths which follow references are not allowed in grid columns. In addition, reference set selectors cannot be used. 
 
 In addition, usage of reference set associations (accessing through custom widgets etc) is not supported.
 
-### 4.9 Inheritance
+### 4.10 Inheritance
 
 It is not possible to use more than one entity from a generalization/specialization relation. If you use two or more related entities on your offline pages, synchronization will fail, because the objects of these entities will be inserted multiple times into the database with the same ID.
 
-### 4.10 System Members
+### 4.11 System Members
 
 System members (`createdDate`, `changedDate`, `owner`, `changedBy`) are not supported.
 
-### 4.11 Excel/CSV Export
+### 4.12 Excel/CSV Export
 
 Spreadsheets are generated through direct database interaction, which is not available offline.
 
-### 4.12 Platforms
+### 4.13 Platforms
 
 Offline-enabled apps are only supported on the iOS and Android platforms.
 

@@ -1,6 +1,6 @@
 ---
 title: "Widgets in the Web Modeler"
-parent: "Page Editor Overview in the Web Modeler"
+parent: "page-editor-wm"
 description: "Describes widgets in the Mendix Web Modeler."
 tags: ["web modeler", "page editor", "pages", "widgets"]
 ---
@@ -54,7 +54,7 @@ Widgets in the Web Modeler can be divided by origin described in the table below
 | Type              | Description                                                  | Origin                                                       |
 | ----------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | Default widgets   | Widgets that are included into your app by default and don't have the info icon in the top-right corner. | Apps created in the Developer Portal. For more information on the Developer Portal, see [Developer Portal](https://docs.mendix.com/developerportal/). |
-| App Store widgets | Widgets that are you can download to your project directly from the Web Modeler. Some App Store widgets are already in your project as a part of the app. Such widgets have the info icon ![](attachments/page-editor-widgets-wm/wm-info icon.png) in the top-right corner of widgets in the **Toolbox**. <br />For more information on the App Store, see [App Store Overview](../../community/app-store/app-store-overview). | [App Store](https://docs.mendix.com/community/app-store/)    |
+| App Store widgets | Widgets that are you can download to your project directly from the Web Modeler. Some App Store widgets are already in your project as a part of the app. Such widgets have the info icon ![](attachments/page-editor-widgets-wm/wm-info-icon.png) in the top-right corner of widgets in the **Toolbox**. <br />For more information on the App Store, see [App Store Overview](../../community/app-store/app-store-overview). | [App Store](https://docs.mendix.com/community/app-store/)    |
 | Local widgets     | Either widgets that are a part of a starter app, or widgets created by your or your team locally via the Desktop Modeler. For more information on developing widgets, see [Custom Widget Developing](../../howto/custom-widget-development/). As a rule local widgets will be listed in the **Add-ons** category. For more information on categories, see [Widgets by Categories](#widget-categories). | Apps created in the  Developer Portal/Desktop Modeler        |
 
 ## Adding the App Store Widgets

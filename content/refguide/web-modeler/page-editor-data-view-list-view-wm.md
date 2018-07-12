@@ -1,6 +1,6 @@
 ---
 title: "Data View and List View Properties in the Web Modeler"
-parent: "Page Editor Overview in the Web Modeler"
+parent: "page-editor-wm"
 description: "Describes the data view and list view in the Page Editor of the Mendix Web Modeler."
 tags: ["web modeler", "page editor", "pages", "data view", "list view"]
 ---
@@ -41,7 +41,7 @@ In the **General** section, you can enable/disable the **Show Footer** option (e
 
 ### 2.3 Design Section {#design-section-data-view}
 
-The **Design** section of the data view properties allows you to change spacing and aligning of the data view on the page. Hover over the ![](attachments/page-editor-data-view-list-view-wm/wm-info icon.png) icon to get more details on each option. 
+The **Design** section of the data view properties allows you to change spacing and aligning of the data view on the page. Hover over the ![](attachments/page-editor-data-view-list-view-wm/wm-info-icon.png) icon to get more details on each option. 
 
 ## 3 List View Properties
 
@@ -95,7 +95,7 @@ In the **General** section, you can select the number of rows to be displayed on
 
 ### 3.4 Design Section {#design-section-list-view}
 
-The **Design** section of the list view properties allows you to change spacing and aligning of the data view on the page. Hover over the ![](attachments/page-editor-data-view-list-view-wm/wm-info icon.png) icon to get more details on each option. 
+The **Design** section of the list view properties allows you to change spacing and aligning of the data view on the page. Hover over the ![](attachments/page-editor-data-view-list-view-wm/wm-info-icon.png) icon to get more details on each option. 
 
 ## 4 Related Content
 

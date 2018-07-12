@@ -1,6 +1,6 @@
 ---
 title: "Association Properties in the Web Modeler"
-parent: "Domain Models Overview in the Web Modeler"
+parent: "domain-models-wm"
 description: "Describes the association properties in the Mendix Web Modeler."
 tags: ["web modeler", "domain model"]
 ---

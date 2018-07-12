@@ -31,4 +31,4 @@ To learn how to deploy your Mendix application on-premises, see [How to Deploy M
 
 ## 7 Document Categories
 
-{{% space_block %}}
+{{% category_block %}}

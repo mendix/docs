@@ -1,5 +1,5 @@
 ---
-title: "Navigation Document"
+title: "Navigation Document in the Web Modeler"
 category: "Web Modeler"
 description: "Describes the navigation menu in the Mendix Web Modeler."
 tags: ["web modeler", "navigation", "app menu"]

@@ -31,7 +31,7 @@ The Web Modeler enables you to do the following:
 * [Page Editor Overview in the Web Modeler](page-editor-wm)
   * [Data View and List View Properties in the Web Modeler](page-editor-data-view-list-view-wm)
   * [Widgets in the Web Modeler](page-editor-widgets-wm)
-* [Navigation Document](navigation-wm)
+* [Navigation Document in the Web Modeler](navigation-wm)
 * [Checks Overview in the Web Modeler](checks-wm)
 * [Theme Customizer in the Web Modeler](theme-customizer-wm)
 * [App Settings Overview in the Web Modeler](app-settings-wm)

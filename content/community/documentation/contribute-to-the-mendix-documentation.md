@@ -66,6 +66,10 @@ You can add and edit the description and tags metadata in the header of the docu
 
 {{% /alert %}}{{% alert type="warning" %}}
 
+If you want your pull request to be merged on a specific date (for example, for a specific release), you must specify that somewhere on the **Conversation** tab of the pull request (either in the title or as a comment). Otherwise, the pull request will be reviewed and merged under the assumption that the content can be published immediately. 
+
+{{% /alert %}}{{% alert type="warning" %}}
+
 Mendix supports documentation for three major versions at any one time. This means that if you make a documentation change in one version, it is important to make that same change in the documentation for the two previous versions (if the change is applicable, of course). For example, you make a change for Mendix version 6 but these changes are also applicable to Mendix versions 5 and 4, so you should make the same change in the documentation for Mendix versions 5 and 4. You can submit all of these changes in the same pull request.
 
 {{% /alert %}}
@@ -77,7 +81,7 @@ To submit a new how-to or reference guide page to our documentation, follow thes
 1. Save a copy of the [How-to Template](the-how-to-template-page) or [Reference Guide Page Template](the-reference-guide-page-template-page) locally in order to use it.
 2. Follow the guidelines in the template for writing your document, and make sure the text aligns with our [Content Writing and Formatting Guidelines](content-writing-and-formatting-guidelines).
 3. Take screenshots for the new document and add them to a new sub-folder in the **attachments** folder. For more details on working with images, see [5 Naming New Files and Images](#NamingNewFilesandImages).
-4. To merge your new documention, commit it to the GitHub repository:
+4. To merge your new documentation, commit it to the GitHub repository:
     *  You can commit new Markdown files via Sourcetree or via the **Create new file** button in the GitHub repo in your browser (where you can copy-paste your text)
     *  You can commit new image files via Sourcetree or via the **Upload files** button in the GitHub repo in your browser (where you can drag and drop your image file)
 5. Create a pull request that specifies our **development** branch as the base. For more information, see [Creating a Pull Request](https://help.github.com/articles/creating-a-pull-request/).

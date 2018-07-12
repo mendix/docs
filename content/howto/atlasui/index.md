@@ -11,7 +11,7 @@ Mendix Atlas UI is the design framework that makes building elegant user experie
 
 ### 1.2 Web Modeler
 
-The Mendix Web Modeler brings the collaborative Mendix Platform to the browser, making it easier than ever to share and collaborate on application models. Every app built in the Web Modeler is styled with the Atlas UI framework. 
+The Mendix Web Modeler brings the collaborative Mendix Platform to the browser, making it easier than ever to share and collaborate on application models. Every app built in the Web Modeler is styled with the Atlas UI framework.
 
 After clicking **Create App** in the [Mendix Developer Portal](https://sprintr.home.mendix.com/index.html), you can select the Atlas UI **Blank App** on the **Starter Apps** tab and get running in minutes.
 

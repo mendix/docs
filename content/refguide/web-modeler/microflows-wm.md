@@ -81,13 +81,13 @@ In the **Toolbox** tab, you can see that the microflow contains three sections w
 
 Elements available in the **General** section are described in the table below.
 
-| Element                               | Description                                                  |
-| ------------------------------------- | ------------------------------------------------------------ |
-| [Annotation]( ../refguide/annotation) | An annotation is an element that can be used to put comments in a microflow. |
-| [End Event](../refguide/end-event)    | An end event defines the location where the microflow will stop. There can be more than one end event, for example when an exclusive split is used in the microflow. So, the number of end events depends on the number of possible outcomes of the microflow. |
-| Exclusive Split                       | An exclusive split splits the microflow flow. Use an exclusive split when you want to add conditions to one and the same action. For example, you want to show different order forms for the customers with different grades. Thus, an exclusive split creates different flows. With the help of an exclusive split the app makes a decision based on a condition and follows one and only one of the outgoing flows. |
-| [Merge](../refguide/merge)            | A merge can be used to combine flows into one.  If previously you split the microflow flow and now one and the same action needs to be executed for these separated flows, you can combine the two (or more) paths using a merge. |
-| [Parameter](../refguide/parameter)    | A parameter is an input data for the microflow and can be used in any activity in the microflow. |
+| Element                      | Description                                                  |
+| ---------------------------- | ------------------------------------------------------------ |
+| [Annotation]( ../annotation) | An annotation is an element that can be used to put comments in a microflow. |
+| [End Event](../end-event)    | An end event defines the location where the microflow will stop. There can be more than one end event, for example when an exclusive split is used in the microflow. So, the number of end events depends on the number of possible outcomes of the microflow. |
+| Exclusive Split              | An exclusive split splits the microflow flow. Use an exclusive split when you want to add conditions to one and the same action. For example, you want to show different order forms for the customers with different grades. Thus, an exclusive split creates different flows. With the help of an exclusive split the app makes a decision based on a condition and follows one and only one of the outgoing flows. |
+| [Merge](../merge)            | A merge can be used to combine flows into one.  If previously you split the microflow flow and now one and the same action needs to be executed for these separated flows, you can combine the two (or more) paths using a merge. |
+| [Parameter](../parameter)    | A parameter is an input data for the microflow and can be used in any activity in the microflow. |
 
 ### 5.2 Object Activities Section {#microflow-object-activities}
 
@@ -95,14 +95,14 @@ Elements available in the **General** section are described in the table below.
 
 The **Object Activities** are described in the table below.
 
-| Activity                                     | Description                                                  |
-| -------------------------------------------- | ------------------------------------------------------------ |
-| [Aggregate List](../refguide/aggregate-list) | Aggregate List can be used to calculate aggregated values such as the maximum, minimum, sum, average, and total amount of objects over a list of objects. |
-| [Change Object](../refguide/change-object)   | Can be used to change an existing object or properties of this object. This can be done with or without committing and with or without events. |
-| [Commit](../refguide/committing-objects)     | **Commit** saves changes you have not saved in the database yet. |
-| [Create Object](../refguide/create-object)   | The **Create Object** action can be used to create an object. |
-| [Delete](../refguide/deleting-objects)       | **Delete Object** can be used to delete one object or the list of objects. |
-| [Retrieve](../refguide/retrieve)             | **Retrieve** can be used to get one or more objects, either by directly traversing an association of another object, or by retrieving objects from the database. The **Retrieve** to get one or more objects of a certain entity either from database or by association (work memory). |
+| Activity                            | Description                                                  |
+| ----------------------------------- | ------------------------------------------------------------ |
+| [Aggregate List](../aggregate-list) | Aggregate List can be used to calculate aggregated values such as the maximum, minimum, sum, average, and total amount of objects over a list of objects. |
+| [Change Object](../change-object)   | Can be used to change an existing object or properties of this object. This can be done with or without committing and with or without events. |
+| [Commit](../committing-objects)     | **Commit** saves changes you have not saved in the database yet. |
+| [Create Object](../create-object)   | The **Create Object** action can be used to create an object. |
+| [Delete](../deleting-objects)       | **Delete Object** can be used to delete one object or the list of objects. |
+| [Retrieve](../retrieve)             | **Retrieve** can be used to get one or more objects, either by directly traversing an association of another object, or by retrieving objects from the database. The **Retrieve** to get one or more objects of a certain entity either from database or by association (work memory). |
 
 ### 5.3 Client Activities Section {#microflow-client-activities}
 
@@ -110,12 +110,12 @@ The **Object Activities** are described in the table below.
 
 The **Client Activities** are described in the table below.
 
-| Activity                                     | Description                                                  |
-| -------------------------------------------- | ------------------------------------------------------------ |
-| [Close Page](../refguide/close-page)         | This activity closes the currently open page.                |
-| [Show Home Page](../refguide/show-home-page) | The **Show Home Page** action navigates to the home page for the current user. It goes to the same page as the user goes to after signing in and respects role-based home pages. |
-| [Show Message](../refguide/show-message)     | With the **Show Message** action you can show a blocking or non-blocking message to the user. (Non-blocking message lets users continue their work in the app with the pop-up open, which the blocking message doesn't let the user continue work until the pop-up window is closed. ) |
-| [Show Page](../refguide/show-page)           | With this action you can show a page to the end user.        |
+| Activity                            | Description                                                  |
+| ----------------------------------- | ------------------------------------------------------------ |
+| [Close Page](../close-page)         | This activity closes the currently open page.                |
+| [Show Home Page](../show-home-page) | The **Show Home Page** action navigates to the home page for the current user. It goes to the same page as the user goes to after signing in and respects role-based home pages. |
+| [Show Message](../show-message)     | With the **Show Message** action you can show a blocking or non-blocking message to the user. (Non-blocking message lets users continue their work in the app with the pop-up open, which the blocking message doesn't let the user continue work until the pop-up window is closed. ) |
+| [Show Page](../show-page)           | With this action you can show a page to the end user.        |
 
 ### 5.4 Variable Activities
 
@@ -123,23 +123,23 @@ The **Client Activities** are described in the table below.
 
 The **Variable Activities** are described in the table below:
 
-| Activity                                       | Description                                                  |
-| ---------------------------------------------- | ------------------------------------------------------------ |
-| [Change Variable](../refguide/change-variable) | This activity is used to change the value of an existing variable in the current microflow. |
-| [Create Variable](../refguide/create-variable) | With this activity you can create a variable and assign a value to it. The variable can be used to store, change, and reuse a value in activities of the microflow. |
+| Activity                              | Description                                                  |
+| ------------------------------------- | ------------------------------------------------------------ |
+| [Change Variable](../change-variable) | This activity is used to change the value of an existing variable in the current microflow. |
+| [Create Variable](../create-variable) | With this activity you can create a variable and assign a value to it. The variable can be used to store, change, and reuse a value in activities of the microflow. |
 
 For example, you can first create a variable named *Discount* to a microflow, and then change the variable Discount depending on the type of the customer's grade. You can give a discount for customers with Gold and Silver grades. 
 
-![](attachments/microflows-exclusive-split-wm/wm-example-of-using-var-activities.png)
+![](attachments/microflows-wm/wm-example-of-using-var-activities.png)
 
 ## 6 Flows {#flows} 
 
 Flows are lines connecting the elements. You can find the description of flows in the table below:
 
-| Flow                                           | Image                                                 | Description                                                  |
-| ---------------------------------------------- | ----------------------------------------------------- | ------------------------------------------------------------ |
-| Sequence Flow                                  | ![](attachments/microflows-wm/wm-sequence-flow.png)   | A sequence flow is an arrow that links events, activities, splits and merges with each other. Hereby it defines the order of execution. Flows always flow in one direction where elements follow each other up one by one. Splits always lead to one direction so it is not possible that multiple flows take place simultaneously. |
-| [Annotation Flow](../refguide/annotation-flow) | ![](attachments/microflows-wm/wm-annotation-flow.png) | An annotation flow is a connection that can be used to link an annotation to a flow object(s). |
+| Flow                                  | Image                                                 | Description                                                  |
+| ------------------------------------- | ----------------------------------------------------- | ------------------------------------------------------------ |
+| Sequence Flow                         | ![](attachments/microflows-wm/wm-sequence-flow.png)   | A sequence flow is an arrow that links events, activities, splits and merges with each other. Hereby it defines the order of execution. Flows always flow in one direction where elements follow each other up one by one. Splits always lead to one direction so it is not possible that multiple flows take place simultaneously. |
+| [Annotation Flow](../annotation-flow) | ![](attachments/microflows-wm/wm-annotation-flow.png) | An annotation flow is a connection that can be used to link an annotation to a flow object(s). |
 
 ## 7 Activity Icons 
 

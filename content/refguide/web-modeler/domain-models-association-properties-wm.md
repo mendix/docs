@@ -22,7 +22,7 @@ In the Web Modeler, associations have the following properties:
 In relation to the module the associations can be of two types:
 
 * Associations within one module
-* [Cross module associations](#cross-module-association)
+* [Cross module associations](#cross-module-associations)
 
 ## 2 Name {#name}
 

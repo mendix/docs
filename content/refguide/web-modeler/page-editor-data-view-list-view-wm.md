@@ -27,13 +27,13 @@ Data view consists of the following properties:
 
 ### 2.1 Data Source Properties {#data-source-data-view} 
 
-The data source determines which object will be shown in the data view. For general information on data sources, see [Data Sources](https://docs.mendix.com/refguide/data-sources). 
+The data source determines which object will be shown in the data view. For general information on data sources, see [Data Sources](../data-sources). 
 
 | Data Source Property | Description                                                  |
 | -------------------- | ------------------------------------------------------------ |
-| Context              | A data source determining that wherever you are opening the page from, you are passing the selected object. For example, when you add the **Show Page** activity in the microflow, you select the page and the object to pass. (For more information on the microflows, see [Microflows in the Web Modeler](microflows-wm).) That means that when the page is opened in the microflow, the object of this type is provided and will be shown in the data view on the page. For more technical information on the context source, see [Context Source](../refguide/entity-path-source). |
-| Microflow            | A data source that runs a selected microflow and displays a return value. For more technical information, see [Microflow Source](../refguide/microflow-source). |
-| List widget          | A data source that allows a data view to display detailed information on an object in the list widget (list view) on the same page. For more technical information, see [Listen To Widget Source](../refguide/microflow-source). |
+| Context              | A data source determining that wherever you are opening the page from, you are passing the selected object. For example, when you add the **Show Page** activity in the microflow, you select the page and the object to pass. (For more information on the microflows, see [Microflows in the Web Modeler](microflows-wm).) That means that when the page is opened in the microflow, the object of this type is provided and will be shown in the data view on the page. For more technical information on the context source, see [Context Source](../entity-path-source). |
+| Microflow            | A data source that runs a selected microflow and displays a return value. For more technical information, see [Microflow Source](../microflow-source). |
+| List widget          | A data source that allows a data view to display detailed information on an object in the list widget (list view) on the same page. For more technical information, see [Listen To Widget Source](../microflow-source). |
 
 ### 2.2 General Section {#general-section-data-view}
 
@@ -55,14 +55,14 @@ List view consists of the following properties:
 
 ### 3.1 Data Source Properties {#data-source-list-view}
 
-The data source determines which objects will be shown in the list view. For general information about data sources, see [Data Sources](../refguide/data-sources). 
+The data source determines which objects will be shown in the list view. For general information about data sources, see [Data Sources](../data-sources). 
 
 | Data Source Property | Description                                                  |
 | -------------------- | ------------------------------------------------------------ |
-| Database             | A data source that determines that the object or objects shown are retrieved directly from the database. You need to select **Entity** (that you have in the domain model), or create a new entity, if you set database as the data source. For more technical information, see [Database Source](../refguide/database-source). |
-| Microflow            | A data source that runs a selected microflow and displays a return value (i.e. list of objects). For more technical information, see [Microflow Source](../refguide/microflow-source). |
-| XPath                | Currently, this data source can only be configured in the Desktop Modeler. For more information, see [XPath Source](../refguide/xpath-source). |
-| Association          | Currently, this data source can only be configured in the Desktop Modeler. For more information, see [Association Source](../refguide/association-source). |
+| Database             | A data source that determines that the object or objects shown are retrieved directly from the database. You need to select **Entity** (that you have in the domain model), or create a new entity, if you set database as the data source. For more technical information, see [Database Source](../database-source). |
+| Microflow            | A data source that runs a selected microflow and displays a return value (i.e. list of objects). For more technical information, see [Microflow Source](../microflow-source). |
+| XPath                | Currently, this data source can only be configured in the Desktop Modeler. For more information, see [XPath Source](../xpath-source). |
+| Association          | Currently, this data source can only be configured in the Desktop Modeler. For more information, see [Association Source](../association-source). |
 
 ### 3.2 Events Section
 

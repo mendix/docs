@@ -3,7 +3,6 @@ title: "System Requirements"
 category: "General"
 ---
 
-
 ## Modeler
 
 The Mendix Modeler supports Windows 7, 8 and 10\. It supports both 32-bit and 64-bit variations, but 64-bit is recommended.
@@ -49,7 +48,7 @@ The Team Server is implemented using Subversion and the Modeler uses the HTTPS p
 
 See [Data Storage](data-storage)
 
-### Java
+### Java {#java}
 
 When running Mendix on a server you will need Java Runtime Environment (JRE) 8.
 

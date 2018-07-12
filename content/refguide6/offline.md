@@ -20,6 +20,8 @@ The first time an [offline-enabled](configuring-hybrid-mobile-apps-to-run-offlin
 
 During synchronization, any changed, created, and deleted objects will be applied to the offline database. Additionally, any objects created by the user since the application last synced will be uploaded to the server. The server will perform any relevant event handlers on these objects as usual. If the synchronization action encounters an error during this process, the entire upload process is reversed. For example, if ten objects are uploaded and one of these commits triggers a validation error, all ten objects are lost. This is to ensure that the internal consistency between your newly created objects is maintained. For example; if a user creates a Order with several Orderlines and the Order fails to commit, the entire transaction is rolled back to prevent your Orderlines from ending up in the database without an Order, thus corrupting your data.
 
+Synchronization of files is only triggered by modifications to the attributes of the object, not by modifying the contents of the file itself.
+
 ## Restrictions
 
 ### Microflows

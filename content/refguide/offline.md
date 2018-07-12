@@ -26,6 +26,8 @@ During download, the offline database is dropped and recreated to avoid any conf
 
 Because synchronization depends on the regular runtime APIs, the models of the app and the runtime should be compatible. This is important when deploying a new version of your app. For example, if you remove the `Brand` attribute of an offline-visible entity `Car`, someone using an old version of the offline app will get an error during synchronization if they change the brand of their car. Therefore, as a rule of thumb, never remove, rename, or change the type of an offline visible entity or its attributes.
 
+Synchronization of files is only triggered by modifications to the attributes of the object, not by modifying the contents of the file itself.
+
 ## 4 Restrictions
 
 ### 4.1 Microflows

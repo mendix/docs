@@ -32,15 +32,15 @@ This section describes the software requirements for running ATS.
 
 ### 3.1 Operating System
 
-See [official documentation](https://world.mendix.com/display/refguide6/System+Requirements), section Server/Operating system. ATS itself has no requirements regarding the operating system.
+For details on the operating system, see the [Operating System](/refguide6/system-requirements#operatingsystem) section in *System Requirements*. ATS itself has no requirements regarding the operating system.
 
 ### 3.2 Java
 
-See [official documentation](https://world.mendix.com/display/refguide6/System+Requirements), section Server/Java. ATS itself has no requirements regarding Java.
+For details on Java, see the [Java](/refguide6/system-requirements#java) section in *System Requirements*. ATS itself has no requirements regarding the Java.
 
 ### 3.3 Mendix Business Server
 
-ATS requires Mendix business server, version 6.10.10.
+ATS requires Mendix Business Server, version 6.10.10.
 
 ### 3.4 Database
 

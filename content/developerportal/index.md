@@ -36,4 +36,4 @@ In **Community**, you can find documentation, forums, trainings, support, and mu
 
 ## Links
 
-{{% space_block %}}
+{{% category_block %}}

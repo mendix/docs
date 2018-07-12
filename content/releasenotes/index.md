@@ -6,4 +6,4 @@ description: "The release notes for the Mendix Platform are divided into various
 
 The release notes for the Mendix Platform are divided into the categories and versions below.
 
-{{% space_block %}}
+{{% category_block %}}

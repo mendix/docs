@@ -7,7 +7,7 @@ tags: ["web modeler", "navigation", "app menu"]
 
 ## 1 Introduction 
 
-A **Navigation Document** shows a configured menu of your app in a form of a tree. You can create items and sub-items in your navigation. 
+A navigation document shows a configured menu of your app in a form of a tree. You can create items and sub-items in your navigation. 
 
 ![](attachments/navigation-wm/wm-nagigation-wm-vs-app.png)
 
@@ -45,7 +45,7 @@ If a menu item has a sub-item, the **On Click Action** should be **Nothing**.
 
 {{% /alert %}}
 
-### 2.2 General Section {#general-section-navigation}
+### 2.2 General {#general-section-navigation}
 
 The properties that can be configured in the **General** section, are described in the table below.
 

@@ -25,7 +25,7 @@ Data view consists of the following properties:
 
 ![](attachments/page-editor-data-view-list-view-wm/wm-data-view-properties.png)
 
-### 2.1 Data Source Properties {#data-source-data-view} 
+### 2.1 Data Source {#data-source-data-view} 
 
 The data source determines which object will be shown in the data view. For general information on data sources, see [Data Sources](../data-sources). 
 
@@ -35,13 +35,15 @@ The data source determines which object will be shown in the data view. For gene
 | Microflow            | A data source that runs a selected microflow and displays a return value. For more technical information, see [Microflow Source](../microflow-source). |
 | List widget          | A data source that allows a data view to display detailed information on an object in the list widget (list view) on the same page. For more technical information, see [Listen To Widget Source](../microflow-source). |
 
-### 2.2 General Section {#general-section-data-view}
+### 2.2 General {#general-section-data-view}
 
 In the **General** section, you can enable/disable the **Show Footer** option (enabled by default). A footer is an area at the bottom of the document, usually containing information common for all pages, such as copyrights.  
 
-### 2.3 Design Section {#design-section-data-view}
+### 2.3 Design {#design-section-data-view}
 
-The **Design** section of the data view properties allows you to change spacing and aligning of the data view on the page. Hover over the ![](attachments/page-editor-data-view-list-view-wm/wm-info-icon.png) icon to get more details on each option. 
+The **Design** section of the data view properties allows you to change spacing and aligning of the data view on the page. Hover over the information icon to get more details on each option:
+
+![](attachments/page-editor-data-view-list-view-wm/wm-info-icon.png)
 
 ## 3 List View Properties
 
@@ -53,7 +55,7 @@ List view consists of the following properties:
 
 ![](attachments/page-editor-data-view-list-view-wm/wm-list-view-properties.png)
 
-### 3.1 Data Source Properties {#data-source-list-view}
+### 3.1 Data Source {#data-source-list-view}
 
 The data source determines which objects will be shown in the list view. For general information about data sources, see [Data Sources](../data-sources). 
 
@@ -64,7 +66,7 @@ The data source determines which objects will be shown in the list view. For gen
 | XPath                | Currently, this data source can only be configured in the Desktop Modeler. For more information, see [XPath Source](../xpath-source). |
 | Association          | Currently, this data source can only be configured in the Desktop Modeler. For more information, see [Association Source](../association-source). |
 
-### 3.2 Events Section
+### 3.2 Events
 
  You can choose the **On Click Action** in the **Events** section. The **On Click Action** defines what action is performed when the user clicks a row of the list view. The following actions are available:
 
@@ -78,7 +80,7 @@ The data source determines which objects will be shown in the list view. For gen
   * **Sign Out** – the current user is signed out of the app 
   * **Open Link** – triggers an action based on the link type (for more information, see [Open Link Action Properties](#open-link-action-properties))
 
-#### 3.2.1 Open Link Action Properties {#open-link-action-properties}
+#### 3.2.1 Open Link Action {#open-link-action-properties}
 
 When you set the **On Click Action** to **Open Link**, several properties are available. See the description in the table below:
 
@@ -87,7 +89,7 @@ When you set the **On Click Action** to **Open Link**, several properties are av
 | Link Type         |For this property, the following options are available: <ul><li>**Web** – navigates to a website </li><li>**Email** – composes an email</li><li>**Phone Call** – starts a phone call</li><li>**Text Message** – sends a text message</li></ul>|
 | Source          | For this property, the following options are available: <ul><li>**Use literal value** – you can fill a value out (Specify **Url** for **Web**, **Recipient** for **Email**, and **Phone Number** for **Phone Cal**l and **Message**) </li><li>**Use attribute** – if you select **Database**>**Entity** as a data source for the list view,  you can choose the attribute of a string type that belongs to the entity or create a new one (when the **Use attribute** option is configured, you do not need to fill out any information manually, it will be updated dynamically)</li></ul>**Note** When you configure **Email**, **Phone Call** or **Message** options, the corresponding default app will be opened on the device when the action is triggered, for example, the default email client will be opened to compose a message. |
 
-### 3.3 General Section {#general-section-list-view}
+### 3.3 General {#general-section-list-view}
 
 In the **General** section, you can select the number of rows to be displayed on the page. After the indicated limit is reached, the **Load more...** button is displayed on the page.
 

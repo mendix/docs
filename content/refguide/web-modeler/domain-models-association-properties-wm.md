@@ -34,9 +34,9 @@ Multiplicity  defines the number of possible referred objects. The cardinality (
 
 Multiplicity can be of the following types:
 
-* one-to-one – one X object is associated with one Y object
+* One-to-one – one X object is associated with one Y object
 * one-to-many – one X object is associated with multiple Y object
-* many-to-many – multiple X objects are associated with multiple Y objects
+* Many-to-many – multiple X objects are associated with multiple Y objects
 
 Multiplicity shows the owner and the direction of association if the association is of the one-to-many or many-to-many type. In the domain model it is displayed as an arrow pointing the direction. The owner is located at the start of an arrow.
 
@@ -71,11 +71,11 @@ In the Web Modeler cross-module association is indicated with the following:
 
 *  An icon next to the entity that has such association: 
 
-  ![](attachments/domain-models-association-properties-wm/association-icon.png)
+   ![](attachments/domain-models-association-properties-wm/association-icon.png)
 
 *  A pop-up window, which displays when you click the icon:
 
-  ![](attachments/domain-models-association-properties-wm/association-pop-up.png)
+   ![](attachments/domain-models-association-properties-wm/association-pop-up.png)
 
 Cross module associations have the following properties:
 

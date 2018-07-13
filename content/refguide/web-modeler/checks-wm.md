@@ -7,7 +7,7 @@ tags: ["web modeler", "app viewing", "checks", "errors"]
 
 ## 1 Introduction 
 
-When publishing your app, the Web Modeler checks the app you created on consistency errors. If there are any, the app can't be published, and you see the **Checks** button goes red with the number of errors indicated.
+When publishing your app, the Web Modeler checks the app you created on consistency errors. If there are any, the app canot be published, and you see the **Checks** button goes red with the number of errors indicated.
 
 ![](attachments/checks-wm/wm-checks-button.png)
 
@@ -17,7 +17,7 @@ To display checks for your app and view the faulty elements in it, do the follow
 
 1. Click **Publish** in the top-right of the Web Modeler.
 
-2. In the pop-up window, click **Update**
+2. In the pop-up window, click **Update**.
 
    ![](attachments/checks-wm/wm-publish-update.png)
 
@@ -25,12 +25,12 @@ To display checks for your app and view the faulty elements in it, do the follow
 
    ![](attachments/checks-wm/wm-checks-button-red.png)
 
-4. Click the **Checks** button, the warning or press **C** hotkey to view all checks. 
-   The panel with the list of checks appears at the bottom of the screen. For more information on the **Checks** panel, see [The Checks Panel Overview](#checks-panel-overview).
+4. Click the **Checks** button, the warning or press <kbd>C</kbd> to view all checks. 
+   The panel with the list of checks appears at the bottom of the screen. For more information on the **Checks** panel, see section [3.2 Checks Panel Overview](#checks-panel-overview).
 
    ![](attachments/checks-wm/wm-checks-panel.png)
 
-5. Click **Error**, **Warning** and **Info** buttons to manage what is displayed on the **Checks** panel (the types that are displayed are highlighted in red/orange/blue for **Error**/**Warning**/**Info** types correspondingly). For more information, see [Types of Checks](#checks-types). 
+5. Click **Error**, **Warning** and **Info** buttons to manage what is displayed on the **Checks** panel (the types that are displayed are highlighted in red/orange/blue for **Error**/**Warning**/**Info** types correspondingly). For more information, see section [3.1 Types of Checks](#checks-types). 
 
    ![](attachments/checks-wm/wm-checks-panel-different-colors.png)
 
@@ -52,7 +52,7 @@ The **Checks** panel consist of three buttons indicating the type of a check and
 
 ### 3.1 Types of Checks {#checks-types}
 
-There are three types of checks in the Web Modeler. Each button is colored differently at the top of the **Checks** panel, and has its own icon.
+There are three types of checks in the Web Modeler. Each button is colored differently at the top of the **Checks** panel and has its own icon.
 
 ![](attachments/checks-wm/wm-button-colors.png)
 
@@ -70,7 +70,7 @@ The button is colored only when the corresponding type of the check is enabled f
 
 {{% /alert %}}
 
-### 3.2 The Checks Panel Overview {#checks-panel-overview}
+### 3.2 Checks Panel Overview {#checks-panel-overview}
 
 The **Checks** panel is represented as a table with buttons on top, and a table underneath them. The buttons control the information that is displayed in the table. For more information, see [Types of Checks](#checks-types). 
 

@@ -31,4 +31,4 @@ For more technical information on attribute types, see the [Type](../attributes#
 ## 3 Related Content
 
 * [Domain Models Overview in the Web Modeler](domain-models-wm)
-* [Attributes](attributes) 
+* [Attributes](../attributes) 

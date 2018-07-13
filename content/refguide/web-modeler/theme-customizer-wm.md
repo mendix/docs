@@ -15,8 +15,6 @@ To open the **Theme Customizer**, click the paintbrush icon at the left menu bar
 
 ![](attachments/theme-customizer-wm/wm-theme-customizer-icon.png)
 
-
-
 The **Theme Customizer** is divided into two panes:
 
 * [Settings](#theme-customizer-settings) 
@@ -58,7 +56,7 @@ To upload the logo, do the following:
 
 4. The selected picture is uploaded and shown in the **Preview**. 
 
-![](attachments/theme-customizer-wm/wm-logo-preview.png)
+   ![](attachments/theme-customizer-wm/wm-logo-preview.png)
 
 5. Click **Apply Style** to save changes.
 

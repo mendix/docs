@@ -7,7 +7,7 @@ tags: ["web modeler", "settings", "widgets"]
 
 ## 1 Introduction
 
-**App Settings** contain information on App Store widgets and local widgets in your app. For more details on widgets, see [Widgets in the Web Modeler](page-editor-widgets-wm).
+**App Settings** contains information on Mendix App Store widgets and local widgets in your app. For more details on widgets, see [Widgets in the Web Modeler](page-editor-widgets-wm).
 
 To open the **App Settings**, click the gear icon at the left menu bar.
 
@@ -15,7 +15,7 @@ To open the **App Settings**, click the gear icon at the left menu bar.
 
 ## 2 App Settings Overview
 
-**App Settings **contain an overview of all App Store widgets and local widgets in your project. 
+**App Settings** contains an overview of all App Store widgets and local widgets in your project. 
 
 ![](attachments/app-settings-wm/wm-app-settings-screen.png)
 

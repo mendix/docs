@@ -7,13 +7,11 @@ tags: ["web modeler", "page editor", "pages"]
 
 ## 1 Introduction 
 
-The Page editor allows a user to define the end-user interface of a Mendix application. 
+The page editor allows a user to define the end-user interface of a Mendix application. 
 
 To view the **Pages** of your app in the Web Modeler, click the **Pages** icon in the left menu bar of the Web Modeler.
 
 ![](attachments/page-editor-wm/wm-pages-icon.png)
-
-
 
 {{% alert type="warning" %}}
 
@@ -109,20 +107,7 @@ You can also view the information on Navigation layout by clicking it in the bre
 
 The following options will be displayed in the **Properties** tab:
 
-* Edit Title
-
-* Change Layout
-
-* Customize Appearance
-
-* Edit Navigation
-
-* Edit Layout 
-
-  ![](attachments/page-editor-wm/wm-navigation-layout.png)
-
-  
-
+![](attachments/page-editor-wm/wm-navigation-layout.png)
 
 ## 5 Toolbox Tab
 

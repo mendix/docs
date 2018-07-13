@@ -22,13 +22,13 @@ Examples of using microflows can be the following:
 *  You check the values that a user has entered, and you either show the user an error message or  another page
 *  You're creating a to-do list and you want to use custom logic when the status of the item on the list has changed
 
-To view the **Microflows** of your app in the Web Modeler, click the **Microflows** icon in the left menu bar:
+To view the microflows of your app in the Web Modeler, click the **Microflows** icon in the left menu bar:
 
 ![](attachments/microflows-wm/wm-micflows-icon.png)
 
 ## 2 Concepts and Definitions 
 
-A microflow is like a flow chart. On a new microflow the start event (a starting point of the microflow represented by a green dot) and the end event (an end point of the microflow represented by a red dot) exist by default. They are also connected by a sequence flow (a line with an arrow), where you can add new events and activities. For more information, see [Creating a New Microflow](#creating-new-microflow).
+A microflow is like a flow chart. On a new microflow the start event (a starting point of the microflow represented by a green dot) and the end event (an end point of the microflow represented by a red dot) exist by default. They are also connected by a sequence flow (a line with an arrow), where you can add new events and activities. For more information, see section [3 Creating a New Microflow](#creating-new-microflow).
 
 ![](attachments/microflows-wm/wm-new-microflow-created.png)
 
@@ -36,9 +36,9 @@ Before you start configuring microflows, familiarize yourself with the concepts 
 
 | Concept    | Description                                                  |
 | ---------- | ------------------------------------------------------------ |
-| Activities | Blue boxes performing different functions. For example, with the help of an activity you can show users a home page. For more information, see [Toolbox](#microflows-toolbox). |
-| Flows      | Arrows that connect microflow events and activities. For more information, see [Flows](#flows). |
-| Events     | Other things placed in a flow not in a shape of a blue box are events. Exclusive split is a an example of the event. For more information, see [General Section](#microflow-general-section). |
+| Activities | Blue boxes performing different functions. For example, with the help of an activity you can show users a home page. For more information, see section [5 Toolbox](#microflows-toolbox). |
+| Flows      | Arrows that connect microflow events and activities. For more information, see section [6 Flows](#flows). |
+| Events     | Other things placed in a flow not in a shape of a blue box are events. Exclusive split is a an example of the event. For more information, see section [5.1 General](#microflow-general-section). |
 | Variable   | A variable is a temporary storage for data. Variables are used to store information and refer to it when needed. For this purpose variables should have a unique name. <br />In a microflow you can add a variable, assign a value to it and then use it in microflow activities. You can then change this value later if necessary. For example, you can create variable **$Discount** and assign it a value 0.5, and use it to calculate a price for a customer. <br />You can use the variable only in the microflow where it was created. |
 | Parameter  | Parameters contain global variables, which means that you can use one and the same parameter in different microflows. |
 
@@ -71,11 +71,11 @@ To add a new activity or event to the microflow, do the following:
 
 In the **Toolbox** tab, you can see that the microflow contains three sections with different elements and activities:
 
-* [General Section](#microflow-general-section)
+* [General](#microflow-general-section)
 * [Object Activities](#microflow-object-activities)
 * [Client Activities](#microflow-client-activities)
 
-### 5.1 General Section {#microflow-general-section}
+### 5.1 General {#microflow-general-section}
 
 ![](attachments/microflows-wm/wm-microflows-general-properties.png)
 
@@ -89,7 +89,7 @@ Elements available in the **General** section are described in the table below.
 | [Merge](../merge)            | A merge can be used to combine flows into one.  If previously you split the microflow flow and now one and the same action needs to be executed for these separated flows, you can combine the two (or more) paths using a merge. |
 | [Parameter](../parameter)    | A parameter is an input data for the microflow and can be used in any activity in the microflow. |
 
-### 5.2 Object Activities Section {#microflow-object-activities}
+### 5.2 Object Activities {#microflow-object-activities}
 
 ![](attachments/microflows-wm/wm-object-activities.png)
 

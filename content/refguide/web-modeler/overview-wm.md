@@ -1,5 +1,5 @@
 ---
-title: "The Web Modeler Overview"
+title: "Web Modeler Overview"
 category: "Web Modeler"
 description: "Describes various features of the Mendix Web Modeler."
 tags: ["web modeler", "desktop modeler"]

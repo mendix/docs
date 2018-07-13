@@ -6,7 +6,7 @@ title: "Web Modeler"
 
 This section of the Mendix Reference Guide describes the Web Modeler. 
 
-Mendix offers two Modeler Products:
+Mendix offers two Modeler products:
 
 * [Desktop Modeler](../desktop-modeler-overview)
 * [Web Modeler](overview-wm)

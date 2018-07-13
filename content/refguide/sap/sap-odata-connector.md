@@ -119,7 +119,9 @@ This domain model is part of the SAP OData Connector module and can be found in 
   * **ProxyPort** – the port which is to gain access through the SAP Cloud Connector
   * **ProxyBearerToken** – an authorization token which is needed when using the SAP Cloud Connector
 * **Cookie** – the cookie is maintained internally and is valid for a Mendix session or in the microflow context of a startup microflow or scheduled event
-* **CSRFToken** – the Cross-Site Request Forgery (CSFR) token is maintained internally and is used to prevent CSRF attacks; a CSFR token is maintained for a Mendix session and is also supported in the microflow context of a startup microflow or scheduled event
+* **CSRFToken** – the Cross-Site Request Forgery (CSRF) token is maintained internally and is used to prevent CSRF attacks; a CSRF token is obtained when a **Get** or **Get list** OData action is performed and is maintained for a Mendix session (or transaction context) which means that:
+  * where an asynchronous or background microflow is executed (for example, using *executeMicroflowInBackground* from Community Commons) a new CSRF token must be obtained before any other actions are performed
+  * where a startup microflow or scheduled event is run, the context also supports CSRF but, again, the token must be obtained before performing any other actions
 
 ## 3 Actions<a name="Actions"></a>
 
@@ -147,6 +149,14 @@ This Create is not the same as the Mendix **Create Object** action. The SAP ODat
 * Output
   * Return type - Boolean
   * Variable - the name which you would like to give to the boolean variable holding the value indicating the success or failure of the create action
+
+**Deep Create**
+
+The Create operation can also perform a *Deep Create*. This means that if you create a new object which has 'child' objects associated with it, then these will be created in the SAP back-end system at the same time. 'Child' objects are those that are associated with the object via a one-to-many or one-to-one association.
+
+In the image below, creating a **Parent** object via the SAP OData Connector will also create any **Child**, **Grandchild**, or **ParentData** objects which have been associated with it. (Creating a Child object will only create Grandchild objects and will NOT create the Parent, even if one is associated).
+
+![](attachments/sap-odata-connector/deep-create-parent-child.png)
 
 For example, this connector can be used to create a task using the **SAP My Tasks for Field Sales Representative (CRM)** service. In this case the **Query** is
 

@@ -15,8 +15,6 @@ The picture below shows the components of the Web Modeler interface:
 
 ![](attachments/overview-wm/wm-modeler-home-page.png)
 
-
-
 ## 2 Opening the Web Modeler
 
 ### 2.1 Opening the Web Modeler via the Developer Portal
@@ -29,9 +27,9 @@ You can edit an app in the **Web Modeler** by opening your app in the [Developer
 
 The drop-down menu on the **Edit App** button is only available for **Free Apps**.
 
-Some apps are not suitable for the Web Modeler. The following ones are not suitable to run in the Web Modeler:
+Some apps are not suitable for the Web Modeler. The following ones are not suitable to run in the Web Modeler:<br />
 
-* Apps below **Mendix 7.5** version
+* Apps below **Mendix 7.5** version<br />
 * Apps that are not based on the Atlas UI framework
 
 {{% /alert %}}
@@ -116,7 +114,7 @@ The bottom menu bar provides the following options:
 | [Theme Customizer](theme-customizer-wm) | Here you can style your app with custom branding, colors, and typography. |
 | Feedback | Allows you to provide feedback on the Mendix Web Modeler. The purpose of the feedback on Mendix is to provide low priority issues, questions, and ideas on how to improve the Web Modeler. <br />The Feedback button is not a support option. If there are any platform problems, contact **Mendix Support**. For more information, see [Mendix Support](../../howtogeneral/support/). |
 
-## 6 Toolbox, Properties and Buzz
+## 6 Toolbox, Properties, and Buzz
 
 The top right menu of the Web Modeler consists of the **Toolbox**, **Properties** , and **Buzz** tabs. 
 

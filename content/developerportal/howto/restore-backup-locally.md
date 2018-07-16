@@ -1,5 +1,7 @@
 ---
 title: "Restore a Backup Locally"
+# try using linktitle rather than having to rename everything to add the -a-
+linktitle: "restore backup locally"
 parent: "how-to-restore-a-backup"
 description: "This page describes how to restore a backup."
 tags: ["Backup","Restore","Local","Developer Portal"]
@@ -21,7 +23,13 @@ Restoring a backup locally can be useful if you want to test your cloud environm
 **Before starting this how-to, make sure you have completed the following prerequisites:**
 
 * [Download a backup](how-to-download-a-backup) that you want to restore locally
-* Install Postgresql on your local machine by downloading and running the [Postgresql Installer](https://www.postgresql.org/download/windows/)
+* Install Postgresql on your local machine by downloading and running the [Postgresql Installer](https://www.postgresql.org/download/windows/); use the program defaults and choose a password:
+
+    ![](attachments/restore-backup-locally/postgres-password.png)
+
+    {{% alert type="info" %}}You will need this password later to allow your Mendix app to access the restored data. 
+    {{% /alert %}}
+
 * When restoring a database hosted in Mendix Cloud v4, or downloading a full backup, you will need a utility such as [7zip](http://www.7-zip.org/) on your local machine which can extract files from **.gz** and **.tar** archives.
 
 NOTE: This guideline has been made with Postgresql version Version 9.6.5.
@@ -37,14 +45,14 @@ If you have downloaded a full backup, this will also have been archived as a .ta
 {{% /alert %}}
 
 1. Start **pgAdmin 4** from the Windows start menu.
-2. Double click **PostgreSQL 9.6**.
+2. Click the **+** in the Browser to open the **Servers > PostgreSQL 9.6** menu.
 3. Right-click **Databases** and **Create** a new database.
 
     ![](attachments/restore-backup-locally/add-database.png)
 
 4. Fill in the **Database** name.
 5. Select the correct owner (the default is **postgres**) and click **Save**.
-6. Right-click on the newly created database and click **Restore**.
+6. Right-click on the newly created database and click **Restore...**.
 
     ![](attachments/restore-backup-locally/restore-database.png)
 
@@ -75,9 +83,10 @@ After the backup has been restored as a local Postgres database, you have to lin
     * **Type**: *PostreSQL*
     * **URL**: *localhost:5432*
     * **Database name**: *{database name}*
-    * **User name**: *{database owner} (set when you created the database in gAdmin; the default is postgres)*
-    * **Password**: *{password for database owner}*
+    * **User name**: *{database owner} (set when you created the database in pgAdmin; the default is postgres)*
+    * **Password**: *{password for database owner} (by default the password you provided when setting up postgressql)*
 
+<!--
     {{% alert type="info" %}}The default password for the database owner **postgres** is blank. Mendix will not accept a blank password so you will have to set one in pgAdmin.
 
     ![](attachments/restore-backup-locally/database-owner-properties.png)
@@ -85,6 +94,7 @@ After the backup has been restored as a local Postgres database, you have to lin
     ![](attachments/restore-backup-locally/database-owner-password.png)
 
     {{% /alert %}}
+-->
 
 5. Click **OK**.
 6. Run the app by clicking **Run Locally**.

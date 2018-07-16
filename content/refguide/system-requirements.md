@@ -86,5 +86,5 @@ Jetty is built into the Mendix Runtime, an application server is not required.
 ## Mobile Browsers
 
 * iOS 9 and newer (Safari)
-* Android 4.4 and newer
+* Android 5.0 and newer
 * Windows Phone 8 and newer

@@ -4,6 +4,21 @@ title: "Developer Portal"
 
 ## 2018
 
+#### July 17th, 2018
+
+#### Improvements
+
+* We have improved the deployment speed for Asia region. The feature is not enabled by default, so users have to request if it is needed.
+* We have implemented tags on environments for metrics in Datadog. It is now possible to add custom tags to metrics which will serve as selection criteria for grouping environments into Landscape Management Dashboard. Environments tags can be created, retrieved and deleted using APIs. Detailed information can be found in the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api)
+* We have changed yearly overview of trends to Quarterly in cloud Portal for v4 applications.
+* Reordering of environments is possible by operations manager
+* Custom offline pages are now immediately active after transport of a new deployment package
+
+#### Fixes
+
+* The users will get a warning if they try to restore backup into a small environment. (Ticket 63367)
+* Create backup via REST API will no longer return error message 500 even when it is succeeded(Ticket 65762)
+
 ### July 3rd, 2018
 
 #### Improvements

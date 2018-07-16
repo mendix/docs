@@ -51,7 +51,7 @@ The **Auto Arrange** option above the domain model auto-arranges the entities. Y
 | [Attribute](domain-models-attributes-wm) | Attributes are characteristics that describe and/or identify the entity. For example, a *Customer* entity typically has attributes for the name of the customer, an e-mail address, and other personal information. If we draw a parallel with databases, the attribute is a column. | Name<br />Type |
 | [Association](domain-models-association-properties-wm) | An association describes a relation between entities. In the domain model, an association is represented by a line/arrow between two entities. If we draw a parallel with databases, the association is a foreign key. | Name<br />[Multiplicity](domain-models-association-properties-wm#multiplicity)<br />[Delete behavior](domain-models-association-properties-wm#delete-behavior) |
 
-For examples and more technical details, see [Domain Model](../domain-model), [Entities](../entities), [Attributes](../attributes), and [Associations](../associations). 
+For examples and more technical details, see [Domain Model](../domain-model), [Entities](../entities), [Attributes](../attributes), and [Associations](../associations) in the *Desktop Modeler* category of the Mendix Reference Guide. 
 
 ## 3 Adding New Entities {#adding-new-entities}
 

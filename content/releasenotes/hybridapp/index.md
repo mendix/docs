@@ -18,17 +18,17 @@ If you're using the advanced flow, you can get the latest version of the Hybrid 
 
 {{% alert type="warning" %}}
 
-As of August 1, new apps published to Google's Play Store need to target at least Android SDK 26. As of November 1, updates to apps also need to target at least SDK 26.
+As of August 1st, new apps published to Google's Play Store need to target at least Android SDK 26. As of November 1st, updates to apps also need to target at least SDK 26.
 
 {{% /alert %}}
 
-With this update, Mendix hybrid apps are compatible with this new requirement.
+With this update, Mendix hybrid apps are compatible with the above requirement.
 
-Unfortunately, Crosswalk is not compatible with SDK versions 24 and above. Therefor, we have removed Crosswalk from the default Mendix hybrid app template. This can lead to a degraded performance on Android devices running version 4.4 or lower.
+Unfortunately, Crosswalk is not compatible with SDK versions 24 and above. Therefore, we removed Crosswalk from the default Mendix hybrid app template. This can lead to a degraded performance on Android devices running version 4.4 or lower.
 
 {{% alert type="info" %}}
 
-For this update, we recommend that you download a fresh hybrid app package from the Mendix Cloud Portal via [Developer Portal](https://sprintr.home.mendix.com/index.html) > **DEPLOY** > **Mobile App**.
+For this update, we recommend downloading a fresh hybrid app package from the Mendix Cloud Portal via [Developer Portal](https://sprintr.home.mendix.com/index.html) > **DEPLOY** > **Mobile App**.
 
 {{% /alert %}}
 

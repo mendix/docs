@@ -14,6 +14,32 @@ If you're using the advanced flow, you can get the latest version of the Hybrid 
 
 ## 2018
 
+### July 9th, 2018 (2.1.0 / 2.0.1)
+
+{{% alert type="warning" %}}
+
+As of August 1, new apps published to Google's Play Store need to target at least Android SDK 26. As of November 1, updates to apps also need to target at least SDK 26.
+
+{{% /alert %}}
+
+With this update, Mendix hybrid apps are compatible with this new requirement.
+
+Unfortunately, Crosswalk is not compatible with SDK versions 24 and above. Therefor, we have removed Crosswalk from the default Mendix hybrid app template. This can lead to a degraded performance on Android devices running version 4.4 or lower.
+
+{{% alert type="info" %}}
+
+For this update, we recommend that you download a fresh hybrid app package from the Mendix Cloud Portal via [Developer Portal](https://sprintr.home.mendix.com/index.html) > **DEPLOY** > **Mobile App**.
+
+{{% /alert %}}
+
+### July 5th, 2018 (2.0.7 / 2.0.1)
+
+* We fixed the transparency level in the default styling.
+
+### July 3rd, 2018 (2.0.6 / 2.0.1)
+
+* We increased the default server timeout for offline apps. The new timeout is 30 seconds.
+
 ### April 20th, 2018 (2.0.5 / 2.0.1)
 
 * We improved the styling of the loader and login screens by making the text on those pages thicker.

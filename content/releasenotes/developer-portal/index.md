@@ -8,16 +8,16 @@ title: "Developer Portal"
 
 #### Improvements
 
-* We have improved the deployment speed for Asia region. The feature is not enabled by default, so users have to request if it is needed.
-* We have implemented tags on environments for metrics in Datadog. It is now possible to add custom tags to metrics which will serve as selection criteria for grouping environments into Landscape Management Dashboard. Environments tags can be created, retrieved and deleted using APIs. Detailed information can be found in the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api)
-* We have changed yearly overview of trends to Quarterly in cloud Portal for v4 applications.
-* Reordering of environments is possible by operations manager
-* Custom offline pages are now immediately active after transport of a new deployment package
+* We improved the deployment speed for the Asia region. The feature is not enabled by default, so users have to request it if necessary.
+* We implemented tags on environments for metrics in Datadog. It is now possible to add custom tags to metrics that will serve as selection criteria for grouping environments into a landscape management dashboard. Environment tags can be created, retrieved, and deleted using APIs. Detailed information can be found in the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api).
+* We changed the yearly overview of trends to quarterly in the Cloud Portal for v4 applications.
+* It is now possible for an Operations Manager to reorder environments.
+* Custom offline pages are now immediately active after the transport of a new deployment package.
 
 #### Fixes
 
-* The users will get a warning if they try to restore backup into a small environment. (Ticket 63367)
-* Create backup via REST API will no longer return error message 500 even when it is succeeded(Ticket 65762)
+* You will now get a warning if you try to restore backup into a small environment. (Ticket 63367)
+* Creating a backup via REST API will no longer return error message 500 when it succeeds. (Ticket 65762)
 
 ### July 3rd, 2018
 

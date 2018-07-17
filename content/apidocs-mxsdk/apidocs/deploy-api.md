@@ -1119,11 +1119,10 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 ### 3.20.1 Description
 
-Tags are arbitrary strings which are not interpreted by CloudPortal. Users are able to set tags on environments.  Tags serve two purpose:
+Tags are arbitrary strings that are not interpreted by Cloud Portal. Users are able to set tags on environments. Tags serve two purposes:
 
-- Adding custom tags to metrics (for DataDog)
-
-- Serve as selection criteria for grouping environments into a Landscape Management dashboard
+* Custom tags can be added to metrics (for Datadog)
+* Tags can serve as selection criteria for grouping environments into a landscape management dashboard
 
 ```bash
 HTTP Method: POST

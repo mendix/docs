@@ -36,7 +36,7 @@ NOTE: This guideline has been made with Postgresql version Version 9.6.5.
 
 ## 3 Restoring the Backup to Postgres
 
-Once Postgresql is installed and you have downloaded a backup file, you need to create a local database in Postgresql. The backup database will be restored into a local Postgresql database.
+Once Postgresql is installed and you have downloaded a backup file, you need to create a local database in Postgresql. The backup database will be restored into this local Postgresql database.
 
 {{% alert type="info" %}}
 If your backup came from Mendix Cloud v4, it will have been compressed as a .gz file. You will first have to extract the file(s) from this archive using a tool such as 7zip.
@@ -45,7 +45,7 @@ If you have downloaded a full backup, this will also have been archived as a .ta
 {{% /alert %}}
 
 1. Start **pgAdmin 4** from the Windows start menu.
-2. Click the **+** in the Browser to open the **Servers > PostgreSQL 9.6** menu.
+2. Click the **+** in the Browser pane to open the **Servers > PostgreSQL 9.6** menu.
 3. Right-click **Databases** and **Create** a new database.
 
     ![](attachments/restore-backup-locally/add-database.png)
@@ -82,19 +82,9 @@ After the backup has been restored as a local Postgres database, you have to lin
     * **Name**: *{a unique name}*
     * **Type**: *PostreSQL*
     * **URL**: *localhost:5432*
-    * **Database name**: *{database name}*
+    * **Database name**: *{database name} (the name of the database you created in pgAdmin)*
     * **User name**: *{database owner} (set when you created the database in pgAdmin; the default is postgres)*
-    * **Password**: *{password for database owner} (by default the password you provided when setting up postgressql)*
-
-<!--
-    {{% alert type="info" %}}The default password for the database owner **postgres** is blank. Mendix will not accept a blank password so you will have to set one in pgAdmin.
-
-    ![](attachments/restore-backup-locally/database-owner-properties.png)
-    
-    ![](attachments/restore-backup-locally/database-owner-password.png)
-
-    {{% /alert %}}
--->
+    * **Password**: *{password for database owner} (by default the password you provided for postgres when first setting up postgressql)*
 
 5. Click **OK**.
 6. Run the app by clicking **Run Locally**.
@@ -109,7 +99,7 @@ You are restoring the FileDocuments to the same directory as your original local
 
 If you also want to restore the **FileDocuments**, you need to follow the following steps:
 
-1. Download a **Full snapshot**.
+1. Download a **Full Snapshot**.
 
     ![](attachments/restore-backup-locally/backup-choice.png)
 

@@ -85,7 +85,7 @@ A common example is when you first check if the object (in our example the objec
 
 
 
-##3 Expression Types {#expression-types}
+## 3 Expression Types {#expression-types}
 
 An overview of the possibilities with expressions can be found below:
 

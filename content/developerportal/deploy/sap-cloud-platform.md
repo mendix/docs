@@ -233,6 +233,10 @@ The environment details page contains two tabs: General and Model Options. Open 
 
 ![](attachments/sap-cloud-platform/environment-details.png)
 
+{{% alert type="info" %}}If you make changes to your app which you want be applied next time the app is deployed you must make them here.
+
+Changes made to the app in the SAP Cloud Platform cockpit are only temporary and can be overwritten by the values in the Mendix Developer Portal next time the app is deployed.{{% /alert %}}
+
 ### 7.1 General Tab
 
 This tab contains information on how the application is deployed on SAP Cloud Platform.

@@ -4,6 +4,15 @@ parent: "data-storage"
 ---
 ## Known issue
 
+### Numeric conversion
+
 There is a known bug in older versions of Oracle 11.2 where converting numeric attributes to string attributes with a length greater than 80 leads to corrupted data on existing rows.
 
 This problem is fixed in Oracle 11.2.0.4\. See [https://support.oracle.com/epmos/faces/DocumentDisplay?id=9949330.8](https://support.oracle.com/epmos/faces/DocumentDisplay?id=9949330.8) and [http://stackoverflow.com/questions/16735793/strange-behavior-on-oracle-cast-to-nvarchar2](http://stackoverflow.com/questions/16735793/strange-behavior-on-oracle-cast-to-nvarchar2).
+
+### Select DISTINCT attribute of type CLOB
+Selecting DISTINCT attributes of type String and size > 2000 is not supported by Mendix due to known Oracle limitation of selecting DISTINCT columns with a CLOB data type. If you encounter exception in the logs with the messag like: 
+
+`Error Msg = ORA-06502: PL/SQL: numeric or value error: character string buffer too small`. 
+
+Bare in mind that you should not select DISTINCT attribute when it has type String and length > 2000.

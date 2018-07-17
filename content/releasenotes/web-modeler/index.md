@@ -16,3 +16,5 @@ Below you can find release notes for the Web Modeler correlated with the followi
 The release notes include all minor versions, patches, and known issues.
 
 For more information on the correlation between Web Modeler versions and Mendix Desktop Modeler versions, see [Web Modeler Version and Mendix Version Correlation](/refguide/web-modeler/versions-wm).
+
+For details on the Web Modeler, see [Web Modeler](/refguide/web-modeler/) in the Mendix Reference Guide. 

@@ -21,7 +21,7 @@ There are two ways to configure a condition for the exclusive split:
 
 *  [With an **Expression**](#expression-tab) (for example, you can create a comparison with it)
 
-  ![](attachments/microflows-exclusive-split-wm/wm-configure-condition-dialog-excl-split.png)
+   ![](attachments/microflows-exclusive-split-wm/wm-configure-condition-dialog-excl-split.png)
 
 ### 2.1 Configuring the Condition with Variables or Attributes {#variables-attributes-tab}
 

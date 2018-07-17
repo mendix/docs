@@ -31,13 +31,13 @@ For more information on the functions of these activities, see [Microflows in th
 
 3. Select the data source (an entity) for the activity, then click **Add New Value**
 
-   ![](attachments/microflows-setting-and-changing-value-wm/wm-add-new-value.png)
+    ![](attachments/microflows-setting-and-changing-value-wm/wm-add-new-value.png)
 
 4. In the **Set initial value**/**Change value dialog**, select an attribute or association 
 
 5. Set the initial value (for **Create Object**) or assign a new value (for **Change Object**) in **Variables/Attributes**, **Constant** or **Expression** tabs.  For more information on these tabs, see section [5 Common Elements](#set-value-common-elements).
 
-   ![](attachments/microflows-setting-and-changing-value-wm/wm-set-initial-value-object-dialog.png)
+    ![](attachments/microflows-setting-and-changing-value-wm/wm-set-initial-value-object-dialog.png)
 
 ## 3 Setting the Initial Value for Create Variable and Changing the Value for Change Variable
 
@@ -49,11 +49,11 @@ To set the initial value or change the value of a variable, do the following:
 
 3. Select the data type for the activity, then click **Set initial value** / **Change value**
 
-   ![](attachments/microflows-setting-and-changing-value-wm/wm-set-initial-value-var.png)
+    ![](attachments/microflows-setting-and-changing-value-wm/wm-set-initial-value-var.png)
 
 4. Set the initial value (for **Create Variable**) or assign a new value (for **Change Variable**) in **Variables / Attributes**, **Constant** or **Expression** tabs.  For more information on these tabs, see section [5 Common Elements](#set-value-common-elements).
 
-   ![](attachments/microflows-setting-and-changing-value-wm/wm-change-value-var-dialog.png)
+    ![](attachments/microflows-setting-and-changing-value-wm/wm-change-value-var-dialog.png)
 
 ## 4 Configuring the Return Value for the End Event 
 
@@ -65,15 +65,15 @@ The return value is the value that is returned to the flow or a widget that call
 
 3. Set the **Returns** option to **Value**.
 
-   ![](attachments/microflows-setting-and-changing-value-wm/wm-end-event-returns-value-setting.png)
+    ![](attachments/microflows-setting-and-changing-value-wm/wm-end-event-returns-value-setting.png)
 
 4. Select the data type, then click **Value** to configure it.
 
-   ![](attachments/microflows-setting-and-changing-value-wm/wm-configure-return-value.png)
+    ![](attachments/microflows-setting-and-changing-value-wm/wm-configure-return-value.png)
 
 5. Set the return value in **Variables/Attributes**, **Constant** or **Expression** tabs. For more information, see section [5 Common Elements](#set-value-common-elements).
 
-   ![](attachments/microflows-setting-and-changing-value-wm/wm-configure-retuen-value-dialog.png)
+    ![](attachments/microflows-setting-and-changing-value-wm/wm-configure-retuen-value-dialog.png)
 
 ## 5 Common Elements {#set-value-common-elements}
 

@@ -18,6 +18,8 @@ The **Expression** tab is opened when you configure the following activities in 
 *  [Create Variable](../create-variable) 
 *  [Change Variable](../change-variable)
 
+![](attachments/microflows-expressions-wm/wm-expression-tab.png)
+
 For more information, see [Setting and Changing a Value for Different Activities in the Microflows in the Web Modeler](microflows-setting-and-changing-value-wm).
 
 ## 2 Writing the Expression
@@ -39,14 +41,16 @@ When you start typing the expression, a list of suggestions with variables, [rel
 
 To write an expression using suggestions, do the following:
 
-1. Browse though the list of suggestions and select the condition for your expression.
-2. To add more conditions to the expression, press <kbd>Space</kbd>.
-3. Select the condition from the list.
+1. Browse through the list of suggestions and select the element for your expression with a mouse or a keyboard.
+2. To add more elements to the expression, press <kbd>Space</kbd>.
+3. Select the element from the list.
 4. Click **Add** when the expression is completed.
 
 {{% alert type="info" %}}
 
-Each time you add a new condition to the expression, the list of suggestions is adjusted depending on the previous conditions. 
+The list of suggestions is adjusted depending on the previous elements in the expression. 
+
+To call the list of suggestions, press <kbd>Ctrl</kbd> + <kbd>Space</kbd>
 
 {{% /alert %}}
 
@@ -59,15 +63,27 @@ If you want to write the expression manually, pay attention to the following:
 * Attributes and associations of object variables are accessed using a slash, e.g., *$Customer/Name*, *$Customer/Grade* refer to the attributes Name and Grade of the entity Customer. 
 * Unary, boolean, and relational types of expressions are available in the Web Modeler (for more information, see section [3 Expression Types](#expression-types))
 
-### 2.3 Example of the Expression
+### 2.3 Examples of the Expression
 
-Let us study an example that illustrates how the expression can be used. You have an exclusive split and you want to write an expression that checks whether the customer grade is gold and the price of the order is more than 100 (you can configure a discount after the split that is allowed if this expression is true). 
+Let us study examples that illustrate how the expression can be used: 
+
+**Example 1**
+
+You have an exclusive split and you want to write an expression that checks whether the customer grade is gold and the price of the order is more than 100 (you can configure a discount after the split that is allowed if this expression is true). 
 
 ![](attachments/microflows-expressions-wm/wm-example-excl-split.png) 
 
 The expression will look the following way:
 
 ![](attachments/microflows-expressions-wm/wm-expression-excl-split.png)
+
+**Example 2**
+
+A common example is when you first check if the object (in our example the object is *Customer*) exists. And then you check if the Customer's name matches a particular one (in our example Customer's name is *Mendix*). The expression will look the following way:
+
+![](attachments/microflows-expressions-wm/wm-customer-empty-and-name-example.png)
+
+
 
 ##3 Expression Types {#expression-types}
 

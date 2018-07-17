@@ -17,13 +17,13 @@ An exclusive split makes a decision based on a condition and follows one and onl
 
 There are two ways to configure a condition for the exclusive split:
 
-* With **Variables/ Attributes**
+* [With **Variables/ Attributes**](#variables-attributes-tab) ( for example, you can use it to create different flows for an attribute of the enumeration type)
 
-*  With an **Expression**
+*  [With an **Expression**](#expression-tab) (for example, you can create a comparison with it)
 
   ![](attachments/microflows-exclusive-split-wm/wm-configure-condition-dialog-excl-split.png)
 
-### 2.1 Configuring the Condition with Variables or Attributes
+### 2.1 Configuring the Condition with Variables or Attributes {#variables-attributes-tab}
 
 
 The following elements can be used as an exclusive split condition in the **Variable/Attributes** tab:
@@ -39,7 +39,7 @@ The parameters and entities which you would like to use in configuring the condi
 
 {{% /alert %}}
 
-### 2.2 Configuring the Condition with an Expression
+### 2.2 Configuring the Condition with an Expression {#expression-tab}
 
 You can also configure the condition by writing the expression. For more information, see [Microflow Expressions in the Web Modeler](microflows-expressions-wm).
 
@@ -47,19 +47,13 @@ You can also configure the condition by writing the expression. For more informa
 
 The number of available cases depends on the selected **Condition**. 
 
-For the boolean type of the parameter or attribute, two values are possible: true and false.  For a detailed example, see [How to Configure an Exclusive Split](../../howto/webmodeler/webmodeler-howto-microflows-exclsplit).
-
-
+For the boolean type of the parameter or attribute, two values are possible: true and false.  
 
 ![](attachments/microflows-exclusive-split-wm/wm-exclusive-split-boolean.png)
 
 
 
 The number of cases available for the enumeration type depends on the corresponding enumeration constants/values. There is also the empty case available for enumeration. If the enumeration parameter or attribute of an object is unassigned, the sequence flow with the caption (empty) is followed.
-
-For a detailed example, see [How to Configure an Exclusive Split in the Web Modeler](../../howto/webmodeler/webmodeler-howto-microflows-exclsplit).
-
-
 
 ![](attachments/microflows-exclusive-split-wm/wm-exclusive-split-enumeration.png)
 

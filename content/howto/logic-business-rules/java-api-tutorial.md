@@ -77,7 +77,7 @@ public static List<IMendixObject> getAttachments(GenericObject object, IContext 
 | 4 | The name of the relation between the `Attachment` entity and `GenericObject` entity is defined in a `String` by getting it from the `MemberNames` enumeration of the `Attachment` proxy class and calling `toString()` on it. |
 | 5 | The ID of the `currentObject` is retrieved from the `GenericObject` proxy object method `getGUID();`. |
 | 6 | We construct a query on the `Attachment` entity that is related to the object with `currentid`. The prefix `$` denotes that this is a variable, which can later be safely inserted using the `Core.createXPathQuery` API.
-| 7 | The `Core` method `createXPathQuery` is used to create a query. This query fill the variable `currentid` with the ID of the current object. We pass the context in which we want the query to be executed. Ater this its result (a list of `IMendixObjects`) is immediately returned.
+| 7 | The `Core` method `createXPathQuery` is used to create a query. This query fill the variable `currentid` with the ID of the current object. We pass the context in which we want the query to be executed. After this its result (a list of `IMendixObjects`) is immediately returned.
 
 Using the createXPathQuery API, you can also enter conditions, such as a sorting mechanism and a maximum number of objects returned. After executing, these are taken into account. View the JavaDoc for more information.
 

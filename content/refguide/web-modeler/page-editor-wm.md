@@ -38,7 +38,7 @@ After opening the Web Modeler, it automatically opens the home page of the app.
 
 To open a page in the Web Modeler, do the following:
 
-1. Click the **Pages** icon in the left menu bar. 
+1.  Click the **Pages** icon in the left menu bar. 
 
     ![](attachments/page-editor-wm/wm-pages.png)
 
@@ -51,14 +51,12 @@ The selected page is opened.
 To create a new page in the Web Modeler, do the following:
 
 1. Click the **Pages** icon.
-
-2. Click **New** in the top right corner of the displayed side panel.
+2.  Click **New** in the top right corner of the displayed side panel.
 
     ![](attachments/page-editor-wm/wm-new-page.png)
 
 3. In the **Create new page** dialog window, fill out the title of the page, select the layout and the [page template](https://atlas.mendix.com/index3.html#/templates).  
-
-4. Click **Create**.
+4.  Click **Create**.
 
     ![](attachments/page-editor-wm/wm-create-new-page-dialog.png)
 
@@ -69,10 +67,8 @@ A new page is created.
 To delete a page in the Web Modeler, do the following:
 
 1. Open the page you want to delete.
-
 2. Open the **Properties** tab.
-
-3. Click **Delete** at the bottom of the **Properties** tab.
+3.  Click **Delete** at the bottom of the **Properties** tab.
 
     ![](attachments/page-editor-wm/wm-page-delete.png)
 

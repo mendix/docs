@@ -96,20 +96,11 @@ New attribute is added to the entity.
 To add association in the domain model, do the following:
 
 1. Select a block with entity you want to add association to.
-
-<<<<<<< HEAD
-2. Click the arrow icon that appears:
+2.  Click the arrow icon that appears:
 
     ![](attachments/domain-models-wm/wm-addingassociation.png) 
    
-3. Select a second entity for the new association from the list of existing entities and click **Select**. You can also create a new entity for the association from the dialog box. 
-=======
-2.  Click the arrow icon that appears:   
-
-    ![](attachments/domain-models-wm/wm-addingassociation.png) 
-
 3.  Select a second entity for the new association from the list of existing entities and click **Select**. You can also create a new entity for the association from the dialog box. 
->>>>>>> b7762681aa9087726bbfd4b3259c3c6e9d38ae7e
 
     ![](attachments/domain-models-wm/wm-new-association.png)
 

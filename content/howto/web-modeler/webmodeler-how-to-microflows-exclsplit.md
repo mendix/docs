@@ -51,7 +51,7 @@ The app will open the corresponding page depending on the grade of a customer, f
   b. Set the [**Type**](../../refguide/web-modeler/domain-models-attributes-wm) to **Enumeration**.<br />
   c. Click **Select enumeration** to create a new enumeration.<br />
 
-  ![](../attachments/webmodeler-how-to-microflows-exclsplit/wm-create-new-attribute-enumeration.png)
+  ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-create-new-attribute-enumeration.png)
 
   d. In the **Select enumeration** dialog window, click **New**.<br />
   e. In the **Create new enumeration** dialog window, click **Add Item** (*Grade* is filled out automatically for the **Name**).<br />

@@ -11,20 +11,16 @@ An exclusive split makes a decision based on a condition and follows one and onl
 
 ![](attachments/microflows-exclusive-split-wm/wm-exclusive-split.png)
 
-
-
 ## 2 Condition
 
 There are two ways to configure a condition for the exclusive split:
 
 * [With **Variables/ Attributes**](#variables-attributes-tab) ( for example, you can use it to create different flows for an attribute of the enumeration type)
-
 *  [With an **Expression**](#expression-tab) (for example, you can create a comparison with it)
 
    ![](attachments/microflows-exclusive-split-wm/wm-configure-condition-dialog-excl-split.png)
 
 ### 2.1 Configuring the Condition with Variables or Attributes {#variables-attributes-tab}
-
 
 The following elements can be used as an exclusive split condition in the **Variable/Attributes** tab:
 
@@ -51,13 +47,9 @@ For the boolean type of the parameter or attribute, two values are possible: tru
 
 ![](attachments/microflows-exclusive-split-wm/wm-exclusive-split-boolean.png)
 
-
-
 The number of cases available for the enumeration type depends on the corresponding enumeration constants/values. There is also the empty case available for enumeration. If the enumeration parameter or attribute of an object is unassigned, the sequence flow with the caption (empty) is followed.
 
 ![](attachments/microflows-exclusive-split-wm/wm-exclusive-split-enumeration.png)
-
-
 
 ## 4 Caption
 

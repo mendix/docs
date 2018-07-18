@@ -97,20 +97,19 @@ To add association in the domain model, do the following:
 
 1. Select a block with entity you want to add association to.
 
-2. Click the arrow icon that appears:   
+2.  Click the arrow icon that appears:   
 
-   ![](attachments/domain-models-wm/wm-addingassociation.png) 
+    ![](attachments/domain-models-wm/wm-addingassociation.png) 
 
-3. Select a second entity for the new association from the list of existing entities and click **Select**. You can also create a new entity for the association from the dialog box. 
+3.  Select a second entity for the new association from the list of existing entities and click **Select**. You can also create a new entity for the association from the dialog box. 
 
-   ![](attachments/domain-models-wm/wm-new-association.png)
+    ![](attachments/domain-models-wm/wm-new-association.png)
 
+    {{% alert type="info" %}}
 
-   {{% alert type="info" %}}
+    The module is indicated next to the entity name in the brackets. If you select the entity from another module, you will create a cross-  module association. For more information, see section [5 Cross-Module Associations](domain-models-association-properties-wm#cross-module-associations). The entities of the current module are listed first. 
 
-The module is indicated next to the entity name in the brackets. If you select the entity from another module, you will create a cross-module association. For more information, see section [5 Cross-Module Associations](domain-models-association-properties-wm#cross-module-associations).  The entities of the current module are listed first. 
-
-   {{% /alert %}}  
+    {{% /alert %}}  
 
 ## 6 Specifying Properties
 

@@ -5,7 +5,7 @@ notoc: true
 
 ## 1 Developer Portal
 
-The [Mendix Developer Portal](https://sprintr.home.mendix.com/) is a platform for Mendix developers to use to collaborate, deploy, and manage their apps, company, and users.
+The [Mendix Developer Portal](https://home.mendix.com/) is a platform for Mendix developers to use to collaborate, deploy, and manage their apps, company, and users.
 
 The Developer Portal consists of the sections described below.
 

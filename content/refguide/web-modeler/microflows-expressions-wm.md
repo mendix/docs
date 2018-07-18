@@ -59,14 +59,14 @@ To call the list of suggestions, press <kbd>Ctrl</kbd> + <kbd>Space</kbd>
 If you want to write the expression manually, pay attention to the following:
 
 * Variables in the microflow can be called in an expression by inserting the dollar sign followed by the name of the variable. For example, *$Customer* refers to the variable *Customer*  
-* Attributes and associations of object variables are accessed using a slash, e.g., *$Customer/Name*, *$Customer/Grade* refer to the attributes Name and Grade of the entity Customer 
+* Attributes and associations of object variables are accessed using a slash, for example, *$Customer/Name*, *$Customer/Grade* refer to the attributes Name and Grade of the entity Customer 
 * Unary, boolean, and relational types of expressions are available in the Web Modeler (for more information, see section [3 Expression Types](#expression-types))
 
 ### 2.3 Examples of the Expression
 
-Let us study examples that illustrate how the expression can be used: 
+Let us study two examples that illustrate how the expression can be used. 
 
-**Example 1**
+#### 2.3.1 Example 1
 
 You have an exclusive split and you want to write an expression that checks whether the customer grade is gold and the price of the order is more than 100 (you can configure a discount after the split that is allowed if this expression is true). 
 
@@ -76,7 +76,7 @@ The expression will look the following way:
 
 ![](attachments/microflows-expressions-wm/wm-expression-excl-split.png)
 
-**Example 2**
+#### 2.3.2 Example 2
 
 A common example is when you first check if the object (in our example the object is *Customer*) exists. And then you check if the Customer's name matches a particular one (in our example Customer's name is *Mendix*). The expression will look the following way:
 

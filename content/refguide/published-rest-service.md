@@ -124,7 +124,7 @@ Check more than one authentication method to have the service try each of them. 
 
 Specify which microflow to use for custom authentication.
 
-Any microflow parameters of primitive type (string, integer, etc.) will be filled with the first query parameter of that name.
+Select **Parameters** to see the [list of parameters passed to the authentication microflow](published-rest-authentication-parameter). In that window you can indicate whether the authentication microflow's parameters come from request headers or from the query string.
 
 The microflow may take an [HttpRequest](http-request-and-response-entities#http-request) as a parameter, so it can inspect the incoming request.
 

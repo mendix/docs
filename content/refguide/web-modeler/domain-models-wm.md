@@ -67,7 +67,7 @@ To add an entity, do the following:
 
 3. Fill out the name for it and click **Create**:
 
-   ![](attachments/domain-models-wm/wm-createnewentity_dialog.png)
+    ![](attachments/domain-models-wm/wm-createnewentity_dialog.png)
 
 The new entity is added to the domain model.
 
@@ -79,11 +79,11 @@ To add attributes in the domain mode, do the following:
 
 1. Select a block with entity you want to add attribute to. The **New attribute** option appears:
 
-   ![](attachments/domain-models-wm/wm-addingattribute.png)
+    ![](attachments/domain-models-wm/wm-addingattribute.png)
 
 2. Click New attribute and specify its **Name** and **Type**:
 
-   ![](attachments/domain-models-wm/wm-createneweattribute_dialog.png)
+    ![](attachments/domain-models-wm/wm-createneweattribute_dialog.png)
 
 3. Click **Create**.
 
@@ -97,10 +97,10 @@ To add association in the domain model, do the following:
 
 1. Select a block with entity you want to add association to.
 
-2. Click the arrow icon that appears:   
+2. Click the arrow icon that appears:
 
-   ![](attachments/domain-models-wm/wm-addingassociation.png) 
-
+    ![](attachments/domain-models-wm/wm-addingassociation.png) 
+   
 3. Select a second entity for the new association from the list of existing entities and click **Select**. You can also create a new entity for the association from the dialog box. 
 
    ![](attachments/domain-models-wm/wm-new-association.png)

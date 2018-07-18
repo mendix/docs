@@ -55,7 +55,7 @@ You can also open your app in the Web Modeler via the Desktop Modeler. Do the fo
 
 2. Click the globe icon in the top right corner (only available if the Web Modeler is enabled).
 
-   ![](attachments/overview-wm/webmodeler-thru-desktop-modeler.png)
+    ![](attachments/overview-wm/webmodeler-thru-desktop-modeler.png)
 
 3. [Do the sync](https://docs.mendix.com/refguide/desktop-webmodeler) to see the latest changes made in the Desktop Modeler reflected in the Web Modeler. 
 

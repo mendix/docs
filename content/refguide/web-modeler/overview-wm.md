@@ -53,7 +53,7 @@ You can also open your app in the Web Modeler via the Desktop Modeler. Do the fo
 
 1. Open the project in Desktop Modeler that you want to view in the Web Modeler.
 
-2. Click the globe icon in the top right corner (only available if the Web Modeler is enabled).
+2.  Click the globe icon in the top right corner (only available if the Web Modeler is enabled).
 
     ![](attachments/overview-wm/webmodeler-thru-desktop-modeler.png)
 

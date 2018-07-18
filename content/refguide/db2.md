@@ -53,6 +53,6 @@ According to the [IBM DB2 documentation](https://www.ibm.com/support/knowledgece
 
 ### Select DISTINCT attribute of type CLOB
 
-Selecting DISTINCT attributes of type String and size > 8168 characters is not supported by Mendix due to a known DB2 limitation of selecting DISTINCT columns with a CLOB data type. When you run into this limitation, you may encounter exception in the logs with a message like this:
+Selecting DISTINCT attributes of type String and size > 8168 characters is not supported by Mendix due to a known DB2 limitation of selecting DISTINCT columns with a CLOB data type. When you run into this limitation, you may encounter an exception in the logs with a message like this:
 
 `DB2 SQL Error: SQLCODE=-727, SQLSTATE=56098, SQLERRMC=2;-134;42907`

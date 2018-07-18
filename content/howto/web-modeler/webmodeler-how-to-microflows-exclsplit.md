@@ -30,7 +30,7 @@ Customers can make an order from this page. However, if the blocked user tries t
 To start this tutorial, make sure you have completed the following prerequisites:
 
 * Create a [Mendix account](https://signup.mendix.com/link/signup/?source=direct)
-* [Create an app](https://docs.mendix.com/howto/tutorials/start-with-a-blank-app-1-create-the-app)
+* [Create an app](../tutorials/start-with-a-blank-app-1-create-the-app)
 
 ## 3 Configuring the Exclusive Split with the Attribute of the Enumeration Type  
 
@@ -43,9 +43,7 @@ This use case will require an exclusive split with attribute of the enumeration 
 The app will open the corresponding page depending on the grade of a customer, for this we need to create a new entity and a new attribute first. To create the new entity and attribute, do the following:
 
 1. Open your [domain model](../../refguide/web-modeler/domain-models-wm).
-
 2. Create entity *Customer*. For more information on how to create the entity, see section [3 Adding New Entities](../../refguide/web-modeler/domain-models-wm).
-
 3. For the **Customer** entity, create attribute (for more information on how to create the attribute, see section [4 Adding New Attributes](../../refguide/web-modeler/domain-models-wm)) and do the following:<br />
   a. Set the attribute **Name** to *Grade*.<br />
   b. Set the [**Type**](../../refguide/web-modeler/domain-models-attributes-wm) to **Enumeration**.<br />
@@ -76,7 +74,6 @@ The new attribute is created.
 To configure the exclusive split with the attribute or parameter of the enumeration type, follow these steps:
 
 1. [Create a new microflow](../../refguide/web-modeler/microflows-wm) and name it, for example, *Show_grade_specific_page*.
-
 2.  In the **Toolbox** tab, select the exclusive split, drag and drop it to the microflow. 
 
    ![](../attachments/webmodeler-how-to-microflows-exclsplit/wm-drag-and-drop-excl-split.png)
@@ -129,7 +126,6 @@ To configure the exclusive split with the attribute or parameter of the enumerat
    c. In **Data Source**>**Object to Pass**, set **Customer** to get the data on customers and their grade. 
 
 10. Repeat steps 8-9 for customers of Silver and Gold grades, creating the order form pages for silver and gold customers respectively.
-
 11.  For the customers with no grade indicated we will show an error message. To do so, select **Show Message** in the **Toolbox**, and add it to the flow labelled **(empty)** in the microflow. 
 
     ![](../attachments/webmodeler-how-to-microflows-exclsplit/wm-microflow-empty-flow-show-message.png)
@@ -172,7 +168,6 @@ The new attribute for the **Customer** entity is created.
 To configure the exclusive split with the attribute of the boolean type, follow these steps:
 
 1. [Create a new microflow](../../refguide/web-modeler/microflows-wm) and name it, for example *Customer_status_check*.
-
 2.  In the **Toolbox** tab, select the exclusive split, drag and drop it to the microflow. 
 
    ![](../attachments/webmodeler-how-to-microflows-exclsplit/wm-drag-and-drop-excl-split.png)

@@ -35,15 +35,15 @@ To create a certificate signing request manually, follow these steps:
 The resulting *ios.csr* file must be uploaded to the Apple Developer Member Center to generate a signed certificate. Follow these steps to do that:
 
 1.  Open the [Apple Developer Member Center](https://developer.apple.com/account/overview.action).
-2.  Under **iOS Apps**, click **Certificates**.
+2.  Under **iOS, tvOS, watchOS**, click **Certificates, All**.
 3.  In the **iOS Certificates** overview, click the plus button on the top-right. This will open the **Add iOS Certificate** wizard in the **Select Type** step with the caption "What type of certificate do you need?".
     *   If the plus button is disabled (greyed out), you do not have enough rights. Ask the company account administrator to give you extra rights.
 4.  Under **Development**, select **iOS Development Certificate**.
-5.  Click **Continue**. You are now at step **Request**. This page describes how to create a certificate signing request on Macs. You can ignore it.
+5.  Click **Continue**. You are now at step **About Creating a Certificate Signing Request (CSR)**. This page describes how to create a certificate signing request on Macs. You can ignore it.
 6.  Click **Continue** again. You are now at step **Generate**, captioned **Generate your certificate**.
 7.  Under **Upload CSR file**, click **Choose File ...**.
 8.  Select the *ios.csr* certificate signing request file that you created.
-9.  Click **Generate**. Apple will sign your CSR and make the signed certificate available for download.
+9.  Click **Continue**. Apple will sign your CSR and make the signed certificate available for download.
     *   If you are presented with a message that says that your certificate signing request is pending approval, you do not have enough rights. Ask the company account administrator to approve your certificate signing request.
 10.  Click **Download** and store the *.cer* file on your disk at a convenient place (for example, next to the private key and CSR files).
 11.  Click **Done**. The **iOS Certificates** overview page becomes visible again. Your new certificate should be in the list. Here, you can download it again, or you can revoke it (in case you lose the corresponding private key).

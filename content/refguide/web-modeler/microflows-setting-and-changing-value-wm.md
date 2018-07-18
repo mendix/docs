@@ -26,16 +26,13 @@ For more information on the functions of these activities, see [Microflows in th
  To set the initial value or change the value of an object, do the following:
 
 1. Add the **Create Object**/**Change Object** activity to a microflow. For more information, see [Adding New Event or Activity](microflows-wm#adding-activity-to-microflow).
-
 2. Click the activity to view its properties.
-
-3. Select the data source (an entity) for the activity, then click **Add New Value**
+3.  Select the data source (an entity) for the activity, then click **Add New Value**
 
     ![](attachments/microflows-setting-and-changing-value-wm/wm-add-new-value.png)
 
-4. In the **Set initial value**/**Change value dialog**, select an attribute or association 
-
-5. Set the initial value (for **Create Object**) or assign a new value (for **Change Object**) in **Variables/Attributes**, **Constant** or **Expression** tabs.  For more information on these tabs, see section [5 Common Elements](#set-value-common-elements).
+4. In the **Set initial value**/**Change value dialog**, select an attribute or association.
+5.  Set the initial value (for **Create Object**) or assign a new value (for **Change Object**) in **Variables/Attributes**, **Constant** or **Expression** tabs.  For more information on these tabs, see section [5 Common Elements](#set-value-common-elements).
 
     ![](attachments/microflows-setting-and-changing-value-wm/wm-set-initial-value-object-dialog.png)
 

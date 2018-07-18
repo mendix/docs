@@ -58,9 +58,8 @@ To call the list of suggestions, press <kbd>Ctrl</kbd> + <kbd>Space</kbd>
 
 If you want to write the expression manually, pay attention to the following:
 
-* Variables in the microflow can be called in an expression by inserting the dollar sign followed by the name of the variable. E.g. *$Customer* refers to the variable *Customer*.  
-
-* Attributes and associations of object variables are accessed using a slash, e.g., *$Customer/Name*, *$Customer/Grade* refer to the attributes Name and Grade of the entity Customer. 
+* Variables in the microflow can be called in an expression by inserting the dollar sign followed by the name of the variable. For example, *$Customer* refers to the variable *Customer*  
+* Attributes and associations of object variables are accessed using a slash, e.g., *$Customer/Name*, *$Customer/Grade* refer to the attributes Name and Grade of the entity Customer 
 * Unary, boolean, and relational types of expressions are available in the Web Modeler (for more information, see section [3 Expression Types](#expression-types))
 
 ### 2.3 Examples of the Expression

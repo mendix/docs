@@ -1,8 +1,8 @@
 ---
-title: "Configure an Exclusive Split Step 1: Add Entities and Attributes, and Configure a Microflow"
+title: "Configure an Exclusive Split Step 1: Add Entities and Attributes, Configure a Microflow"
 category: "Web Modeler"
 description: "This how to describes the process of configuring an exclusive split in the Mendix Web Modeler."
-tags:["web modeler", "microflows", "exclusive split"]
+tags: ["web modeler", "microflows", "exclusive split", "domain model"]
 ---
 
 ## 1 Introduction

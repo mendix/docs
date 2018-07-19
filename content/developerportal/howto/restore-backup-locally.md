@@ -2,7 +2,8 @@
 title: "Restore a Backup Locally"
 # try using linktitle rather than having to rename everything to add the -a-
 linktitle: "restore backup locally"
-parent: "how-to-restore-a-backup"
+category: "How-To's"
+#parent: "how-to-restore-a-backup"
 description: "This page describes how to restore a backup."
 tags: ["Backup","Restore","Local","Developer Portal"]
 ---

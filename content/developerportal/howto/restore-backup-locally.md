@@ -33,7 +33,7 @@ Restoring a backup locally can be useful if you want to test your cloud environm
 
 * When restoring a database hosted in Mendix Cloud v4, or downloading a full backup, you will need a utility such as [7zip](http://www.7-zip.org/) on your local machine which can extract files from **.gz** and **.tar** archives.
 
-NOTE: This guideline has been made with Postgresql version Version 9.6.5.
+NOTE: This how-to has been made with Postgresql version Version 9.6.5.
 
 ## 3 Restoring the Backup to Postgres
 
@@ -79,7 +79,7 @@ After the backup has been restored as a local Postgres database, you have to lin
 
     ![](attachments/restore-backup-locally/add-configuration.png)
 
-4. Fill in the database information.
+4. Fill in the database information:
     * **Name**: *{a unique name}*
     * **Type**: *PostreSQL*
     * **URL**: *localhost:5432*

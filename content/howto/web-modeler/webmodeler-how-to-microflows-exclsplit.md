@@ -119,7 +119,7 @@ To configure the exclusive split with the attribute or parameter of the enumerat
 
 9. Open the properties for the **Show Page** activity and do the following:
    a. Click the **Select a page** field.<br />
-   b. In the **Select Page** dialog window, click **New page**, and [create a page](#creating-new-page) for customer grade **Bronze**. 
+   b. In the **Select Page** dialog window, click **New page**, and [create a page](../../refguide/web-modeler/page-editor-wm) for customer grade **Bronze**. 
    **Note** After you create a page, it will be added to the **Select field** automatically.<br />
 
    ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-show-page-select-page.png)
@@ -211,7 +211,7 @@ To configure the exclusive split with the attribute of the boolean type, follow 
 
 Congratulations! We have now created a microflow that will show an error message and close the current page if the customer is blocked.
 
-If you want to embed your microflow to the pages, see [Configure an Exclusive Split Step 2: Embedding the Microflow to Your App](webmodeler-howto-microflows-exclsplit-p2).
+If you want to embed your microflow to the pages, see [Configure an Exclusive Split Step 2: Embedding the Microflow to Your App](webmodeler-how-to-microflows-exclsplit-p2).
 
 
 

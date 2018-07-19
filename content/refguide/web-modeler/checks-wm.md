@@ -72,7 +72,7 @@ The button is colored only when the corresponding type of the check is enabled f
 
 ### 3.2 Checks Panel Overview {#checks-panel-overview}
 
-The **Checks** panel is represented as a table with buttons on top, and a table underneath them. The buttons control the information that is displayed in the table. For more information, see [Types of Checks](#checks-types). 
+The **Checks** panel is represented as a table with buttons on top, and a table underneath them. The buttons control the information that is displayed in the table. For more information, see section [3.1 Types of Checks](#checks-types). 
 
 {{% alert type="info" %}}
 
@@ -84,7 +84,7 @@ The information displayed in the table of the **Checks** panel is represented be
 
 | Item     | Description                                                  |
 | -------- | ------------------------------------------------------------ |
-| Message  | Contains an explanation of the error/warning/info. In front of the message you can see an icon indicating the type of the check. For more information, see [Types of Checks](#checks-types). |
+| Message  | Contains an explanation of the error/warning/info. In front of the message you can see an icon indicating the type of the check. For more information, see section [3.1 Types of Checks](#checks-types). |
 | Module   | Indicates the module where the error/warning/info is found.  |
 | Document | Indicates the place of your app where the error/warning/info is found (for example, a page, a microflow). |
 | Element  | Indicated the exact element that is faulty (button, activity, etc. ). |

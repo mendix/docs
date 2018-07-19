@@ -51,7 +51,7 @@ The **Auto Arrange** option above the domain model auto-arranges the entities. Y
 | [Attribute](domain-models-attributes-wm) | Attributes are characteristics that describe and/or identify the entity. For example, a *Customer* entity typically has attributes for the name of the customer, an e-mail address, and other personal information. If we draw a parallel with databases, the attribute is a column. | Name<br />Type |
 | [Association](domain-models-association-properties-wm) | An association describes a relation between entities. In the domain model, an association is represented by a line/arrow between two entities. If we draw a parallel with databases, the association is a foreign key. | Name<br />[Multiplicity](domain-models-association-properties-wm#multiplicity)<br />[Delete behavior](domain-models-association-properties-wm#delete-behavior) |
 
-For examples and more technical details, see [Domain Model](../domain-model), [Entities](../entities), [Attributes](../attributes), and [Associations](../associations). 
+For examples and more technical details, see [Domain Model](../domain-model), [Entities](../entities), [Attributes](../attributes), and [Associations](../associations) in the *Desktop Modeler* category of the Mendix Reference Guide. 
 
 ## 3 Adding New Entities {#adding-new-entities}
 
@@ -67,7 +67,7 @@ To add an entity, do the following:
 
 3. Fill out the name for it and click **Create**:
 
-   ![](attachments/domain-models-wm/wm-createnewentity_dialog.png)
+    ![](attachments/domain-models-wm/wm-createnewentity_dialog.png)
 
 The new entity is added to the domain model.
 
@@ -79,11 +79,11 @@ To add attributes in the domain mode, do the following:
 
 1. Select a block with entity you want to add attribute to. The **New attribute** option appears:
 
-   ![](attachments/domain-models-wm/wm-addingattribute.png)
+    ![](attachments/domain-models-wm/wm-addingattribute.png)
 
 2. Click New attribute and specify its **Name** and **Type**:
 
-   ![](attachments/domain-models-wm/wm-createneweattribute_dialog.png)
+    ![](attachments/domain-models-wm/wm-createneweattribute_dialog.png)
 
 3. Click **Create**.
 
@@ -96,21 +96,19 @@ New attribute is added to the entity.
 To add association in the domain model, do the following:
 
 1. Select a block with entity you want to add association to.
+2.  Click the arrow icon that appears:
 
-2. Click the arrow icon that appears:   
+    ![](attachments/domain-models-wm/wm-addingassociation.png) 
+   
+3.  Select a second entity for the new association from the list of existing entities and click **Select**. You can also create a new entity for the association from the dialog box. 
 
-   ![](attachments/domain-models-wm/wm-addingassociation.png) 
+    ![](attachments/domain-models-wm/wm-new-association.png)
 
-3. Select a second entity for the new association from the list of existing entities and click **Select**. You can also create a new entity for the association from the dialog box. 
+    {{% alert type="info" %}}
 
-   ![](attachments/domain-models-wm/wm-new-association.png)
+    The module is indicated next to the entity name in the brackets. If you select the entity from another module, you will create a cross-  module association. For more information, see section [5 Cross-Module Associations](domain-models-association-properties-wm#cross-module-associations). The entities of the current module are listed first. 
 
-
-   {{% alert type="info" %}}
-
-The module is indicated next to the entity name in the brackets. If you select the entity from another module, you will create a cross-module association. For more information, see [Cross-Module Associations](domain-models-association-properties-wm#cross-module-associations).  The entities of the current module are listed first. 
-
-   {{% /alert %}}  
+    {{% /alert %}}  
 
 ## 6 Specifying Properties
 
@@ -161,7 +159,7 @@ For more information, see [Association Properties](domain-models-association-pro
 
 To change the association, click the line in the domain model. The **Properties** tab for the selected entity is displayed automatically. 
 
-If the association type is one-to-many or many-to-many, you can swap direction of it clicking the corresponding icon. For more information, see [Multiplicity](domain-models-association-properties-wm#multiplicity). 
+If the association type is one-to-many or many-to-many, you can swap direction of it clicking the corresponding icon. For more information, see section [3 Multiplicity](domain-models-association-properties-wm#multiplicity). 
 
 ![](attachments/domain-models-wm/wm-managing_associations.png)
 

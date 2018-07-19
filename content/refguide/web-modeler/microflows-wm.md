@@ -47,12 +47,11 @@ Before you start configuring microflows, familiarize yourself with the concepts 
 To create a new microflow and to start building a microflow, do the following:
 
 1. Click the **Microflow** icon in the left menu bar. 
-
-2. Click **New** on the **Microflows** side panel.
+2.  Click **New** on the **Microflows** side panel.
 
    ![](attachments/microflows-wm/wm-new-microflow.png)
 
-3. Fill out the name of the microflow in the pop-up dialog and click **Create**.
+3.  Fill out the name of the microflow in the pop-up dialog and click **Create**.
 
    ![](attachments/microflows-wm/wm-new-microflow-dialog.png)
 
@@ -81,13 +80,13 @@ In the **Toolbox** tab, you can see that the microflow contains three sections w
 
 Elements available in the **General** section are described in the table below.
 
-| Element                      | Description                                                  |
-| ---------------------------- | ------------------------------------------------------------ |
-| [Annotation]( ../annotation) | An annotation is an element that can be used to put comments in a microflow. |
-| [End Event](../end-event)    | An end event defines the location where the microflow will stop. There can be more than one end event, for example when an exclusive split is used in the microflow. So, the number of end events depends on the number of possible outcomes of the microflow. |
-| Exclusive Split              | An exclusive split splits the microflow flow. Use an exclusive split when you want to add conditions. For example, you want to show different order forms for the customers with different grades. Thus, an exclusive split creates different flows. With the help of an exclusive split the app makes a decision based on a condition and follows one and only one of the outgoing flows. |
-| [Merge](../merge)            | A merge can be used to combine flows into one.  If previously you split the microflow flow and now one and the same action needs to be executed for these separated flows, you can combine the two (or more) paths using a merge. |
-| [Parameter](../parameter)    | A parameter is an input data for the microflow and can be used in any activity in the microflow. |
+| Element                                          | Description                                                  |
+| ------------------------------------------------ | ------------------------------------------------------------ |
+| [Annotation]( ../annotation)                     | An annotation is an element that can be used to put comments in a microflow. |
+| [End Event](../end-event)                        | An end event defines the location where the microflow will stop. There can be more than one end event, for example when an exclusive split is used in the microflow. So, the number of end events depends on the number of possible outcomes of the microflow. |
+| [Exclusive Split](microflows-exclusive-split-wm) | An exclusive split splits the microflow flow. Use an exclusive split when you want to add conditions. For example, you want to show different order forms for the customers with different grades. Thus, an exclusive split creates different flows. With the help of an exclusive split the app makes a decision based on a condition and follows one and only one of the outgoing flows. |
+| [Merge](../merge)                                | A merge can be used to combine flows into one.  If previously you split the microflow flow and now one and the same action needs to be executed for these separated flows, you can combine the two (or more) paths using a merge. |
+| [Parameter](../parameter)                        | A parameter is an input data for the microflow and can be used in any activity in the microflow. |
 
 ### 5.2 Object Activities {#microflow-object-activities}
 
@@ -149,10 +148,13 @@ When configuring the activities of the microflows you will notice icons above or
 | --------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | Entity                | ![](attachments/microflows-wm/wm-entity-icon.png)            | Indicates that the data source for the activity is an entity. |
 | Value                 | ![](attachments/microflows-wm/wm-simple-value-icon.png)      | Indicates that the data source for the activity is a simple value, such as decimal, boolean, date and time, etc. |
-| Commit                | ![](attachments/microflows-wm/wm-commit-icon.png)            | Indicates that the object will be committed. Committing means that the changes will be saved in the database. <br />This can be useful, for example, when you want an object *NewCustomer* to be saved and updated in the tables that contain information about customers. |
+| Commit                | ![](attachments/microflows-wm/wm-commit-icon.png)            | Indicates that the object will be committed. Committing means that the changes will be saved in the database. This can be useful, for example, when you want an object *NewCustomer* to be saved and updated in the tables that contain information about customers. |
 | Commit without events | ![](attachments/microflows-wm/wm-commit-with-no-events-icon.png) | Indicates that the object will be committed but without events. This means that the object will be saved in the database, but event handlers will not be triggered. For example, the information about a new customer will be saved, but the tables containing information about new customers will not be updated. |
 | Refresh in Client     | ![](attachments/microflows-wm/wm-refresh-in-client-icon.png) | Indicates that the result of the activity will be displayed to the end-user. |
 
 ## 8 Related Content
 
 * [The Web Modeler Overview](overview-wm)
+* [Exclusive Split in the Web Modeler](microflows-exclusive-split-wm)
+* [Microflow Expressions in the Web Modeler](microflows-expressions-wm)
+* [Setting and Changing a Value for Different Activities in the Microflows in the Web Modeler](microflows-setting-and-changing-value-wm)

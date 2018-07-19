@@ -1,6 +1,7 @@
 ---
 title: "Restore a Backup"
 category: "How-To's"
+menu_order: 210
 description: "This page describes how to restore a backup."
 tags: ["Backup","Restore","Mendix Cloud","Developer Portal"]
 ---

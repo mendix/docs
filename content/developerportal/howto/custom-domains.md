@@ -1,6 +1,7 @@
 ---
 title: "Configure Custom Domains"
 category: "How-To's"
+menu_order: 90
 description: "Describes how to configure custom domains as well as generate, upload, and renew certificates in Mendix."
 tags: ["Custom Domain","Mendix Cloud","Developer Portal"]
 ---

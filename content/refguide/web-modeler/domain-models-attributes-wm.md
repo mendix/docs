@@ -26,7 +26,7 @@ Attributes in the Web Modeler can be of the following types:
 | Long          | A whole number.  In Java, the range of this type is –9,223,372,036,854,775,808 to 9,223,372,036,854,775,807. |
 | String        | A text containing letters, spaces, numbers and other characters. You can set this type to unlimited or to limit it with the number of symbols you like. |
 
-For more technical information on attribute types, see the [Type](../attributes#type) section in *Attributes*.
+For more technical information on attribute types, see the [Type](../attributes#type) section in *Attributes* in the *Desktop Modeler* category.
 
 ## 3 Related Content
 

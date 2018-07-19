@@ -1,6 +1,7 @@
 ---
 title: "Delete, Deactivate, and Activate an App"
 category: "How-to's"
+menu_order: 30
 description: "Describes how to delete, deactivate, and activate an app in the Developer Portal"
 tags: ["app", "delete", "deactivate", "activate", "Developer Portal", "Company Admin", "SCRUM Master"]
 ---

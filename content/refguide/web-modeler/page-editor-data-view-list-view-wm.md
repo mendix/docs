@@ -43,7 +43,7 @@ In the **General** section, you can enable/disable the **Show Footer** option (e
 
 The **Design** section of the data view properties allows you to change spacing and aligning of the data view on the page. Hover over the information icon to get more details on each option:
 
-![](attachments/page-editor-data-view-list-view-wm/wm-info-icon.png)
+![](attachments/page-editor-data-view-list-view-wm/wm-design-section-info-icon.png)
 
 ## 3 List View Properties
 
@@ -78,7 +78,7 @@ The data source determines which objects will be shown in the list view. For gen
   * **Cancel Changes** – rolls back all changes made on the page 
   * **Close Page** – closes the pop-up window (for pop-up pages) or navigates to the previously visited page  
   * **Sign Out** – the current user is signed out of the app 
-  * **Open Link** – triggers an action based on the link type (for more information, see [Open Link Action Properties](#open-link-action-properties))
+  * **Open Link** – triggers an action based on the link type (for more information, see section [3.2.1 Open Link Action](#open-link-action-properties)
 
 #### 3.2.1 Open Link Action {#open-link-action-properties}
 
@@ -97,7 +97,9 @@ In the **General** section, you can select the number of rows to be displayed on
 
 ### 3.4 Design Section {#design-section-list-view}
 
-The **Design** section of the list view properties allows you to change spacing and aligning of the data view on the page. Hover over the ![](attachments/page-editor-data-view-list-view-wm/wm-info-icon.png) icon to get more details on each option. 
+The **Design** section of the list view properties allows you to change spacing and aligning of the data view on the page. Hover over the information icon to get more details on each option. 
+
+![](attachments/page-editor-data-view-list-view-wm/wm-design-section-info-icon.png)
 
 ## 4 Related Content
 

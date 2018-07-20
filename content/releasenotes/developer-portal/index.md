@@ -4,6 +4,17 @@ title: "Developer Portal"
 
 ## 2018
 
+#### July 23th, 2018
+
+#### Improvements
+
+* Fixed problems with uploads, downloads and restores of backups with very large databases in Cloud V4
+* Added an alert on database connections
+* Added an alert on internal alerting problems
+* Fixed a problem where 404, 403 and 503 responses to a REST call would be translated to an HTML error page
+* Added telegraph as a sidecar for monitoring
+
+
 #### July 17th, 2018
 
 #### Improvements

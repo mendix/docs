@@ -1,13 +1,13 @@
 ---
-title: "Configure an Exclusive Split Step 1: Add Entities and Attributes to the Domain Model, and Configure a Microflow"
+title: "Configure an Exclusive Split Step 1: Build the Domain Model, and Configure a Microflow"
 category: "Web Modeler"
-description: "This how to describes the process of configuring an exclusive split in the Mendix Web Modeler."
+description: "This how-to describes the process of configuring an exclusive split in the Mendix Web Modeler."
 tags: ["web modeler", "microflows", "exclusive split", "domain model"]
 ---
 
 ## 1 Introduction
 
-This how-to explains how you can configure an exclusive split in the Microflow editor of the Web Modeler. 
+This how-to explains how you can configure an exclusive split in the microflow editor of the Web Modeler. 
 
 An exclusive split is an activity which is used to model conditions or decisions in the logic of your app. For more information on the exclusive split, see [Exclusive Split](../../refguide/web-modeler/microflows-exclusive-split-wm). 
 
@@ -19,7 +19,7 @@ An exclusive split is an activity which is used to model conditions or decisions
 
 This how-to describes the following use case: 
 
-You have an online shopping app. You will create a page where you can manage your customer's details, i.e, name, grade, and the customer's status (active or blocked). 
+You have an online shopping app. You will create a page where you can manage your customer's details, that is, name, grade, and the customer's status (active or blocked). 
 
 You will also create a page with the list of customers. Upon clicking a specific button on this page, different pages (order forms) will be shown to customers with different grades: Bronze, Silver, and Gold. 
 
@@ -43,7 +43,9 @@ This use case will require an exclusive split with attribute of the enumeration 
 The app will open the corresponding page depending on the grade of a customer, for this we need to create a new entity and a new attribute first. To create the new entity and attribute, do the following:
 
 1. Open your [domain model](../../refguide/web-modeler/domain-models-wm).
-2. Create entity *Customer*. For more information on how to create the entity, see section [3 Adding New Entities](../../refguide/web-modeler/domain-models-wm).
+
+2. Create entity *Customer*. For more information on how to create the entity, see section [3 Adding New Entities](../../refguide/web-modeler/domain-models-wm) in *Domain Models Overview in the Web Modeler*.
+
 3. For the **Customer** entity, create attribute (for more information on how to create the attribute, see section [4 Adding New Attributes](../../refguide/web-modeler/domain-models-wm)) and do the following:<br />
   a. Set the attribute **Name** to *Grade*.<br />
   b. Set the [**Type**](../../refguide/web-modeler/domain-models-attributes-wm) to **Enumeration**.<br />
@@ -87,7 +89,7 @@ To configure the exclusive split with the attribute or parameter of the enumerat
    a. Set **Data Type** to **Object**.<br />
    b. Set **Entity** to **Customer**. 
 
-   ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-parameter-properties.png)
+   ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-parameter-properties.png) 
 
 5.  In the **Properties** of the exclusive split, click the **Configure condition** field.
 
@@ -103,15 +105,15 @@ To configure the exclusive split with the attribute or parameter of the enumerat
 
    a. Select **Edit** in the **(not set)** field.<br />
 
-   ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-setting-cases-for-excl-split.png)
+   ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-setting-cases-for-excl-split.png) <br/>
    b. Set **Bronze** in the **Select Value** drop-down menu.<br />
    c. Click the **Go back** icon to return to the exclusive split properties.<br />
 
-   ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-excl-split-go-back.png)
+   ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-excl-split-go-back.png) <br/>
    d. Click **Add New Case** in the **Cases** section.<br />
    e. Repeat steps b-d to add all possible cases: **Silver**, **Gold** and **Empty** (a case when the customer's grade is not set). 
 
-   ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-excl-split-possible-cases.png)
+   ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-excl-split-possible-cases.png) 
 
 8.  To open a corresponding order form (page) for customers with the bronze grade, select **Show Page** in the **Toolbox**, drag and drop it to flow labelled **Bronze** in the microflow. 
 
@@ -122,13 +124,13 @@ To configure the exclusive split with the attribute or parameter of the enumerat
    b. In the **Select Page** dialog window, click **New page**, and [create a page](../../refguide/web-modeler/page-editor-wm) for customer grade **Bronze**. 
    **Note** After you create a page, it will be added to the **Select field** automatically.<br />
 
-   ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-show-page-select-page.png)
+   ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-show-page-select-page.png) <br />
    c. In **Data Source**>**Object to Pass**, set **Customer** to get the data on customers and their grade. 
 
 10. Repeat steps 8-9 for customers of Silver and Gold grades, creating the order form pages for silver and gold customers respectively.
 11.  For the customers with no grade indicated we will show an error message. To do so, select **Show Message** in the **Toolbox**, and add it to the flow labelled **(empty)** in the microflow. 
 
-    ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-microflow-empty-flow-show-message.png)
+     ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-microflow-empty-flow-show-message.png)
 
 12. In the **Properties** tab for the **Show message** activity, do the following:
     a. Select **Error** as the message type.<br />
@@ -139,7 +141,7 @@ To configure the exclusive split with the attribute or parameter of the enumerat
 
 Congratulations! We have now created the microflow that will open different order forms for customers with different grades, or show an error message when the customer has no grade.
 
-If you want to test your microflow by adding it to the pages, see [Configure an Exclusive Split in the Web Modeler Step 2: Embedding the Microflow to Your App](webmodeler-how-to-microflows-exclsplit-p2).
+If you want to test your microflow by adding it to the pages, see [Configure an Exclusive Split Step 2: Embed the Microflow to Your App](webmodeler-how-to-microflows-exclsplit-p2).
 
 ## 4 Configuring the Exclusive Split with Attribute of the Boolean Type  
 
@@ -170,48 +172,48 @@ To configure the exclusive split with the attribute of the boolean type, follow 
 1. [Create a new microflow](../../refguide/web-modeler/microflows-wm) and name it, for example *Customer_status_check*.
 2.  In the **Toolbox** tab, select the exclusive split, drag and drop it to the microflow. 
 
-   ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-drag-and-drop-excl-split.png)
+    ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-drag-and-drop-excl-split.png)
 
 3.  We need to pass a parameter to configure the exclusive split. In the **Toolbox** tab, select **Parameter**, and drag and drop it to the microflow.
 
-   ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-microflow-not-set-parameter.png)
+    ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-microflow-not-set-parameter.png)
 
 4. In our example the logic we are adding should apply to the status of the customer. Hence, we need to add the customer as the parameter. In the **Properties** tab for the **Parameter**, do the following:
    a. Set **Data Type** to **Object** 
    b. Set **Entity** to **Customer**.
 
-   ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-parameter-properties.png)
+    ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-parameter-properties.png)
 
 5.  Click the exclusive split, and in the **Properties** tab, click the **Configure condition** field.
 
-   ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-excl-split-configure-condition.png)
+    ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-excl-split-configure-condition.png)
 
 6.  In the **Configure condition** pop-up window, we need to select the attribute that the condition will be based on. So, in the **Configure condition** pop-up window, click  the **Variables/Attributes** tab, select **Blocked Boolean** attribute of the **Customer**, and click **Save**.
 
-   ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-configure-condition-pop-up.png)
+    ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-configure-condition-pop-up.png)
 
 7.  Cases **true** and **false** are set automatically for properties of the exclusive split, and the corresponding flows are added to the microflow. Caption **Blocked?** is added automatically according to the attribute name. 
 
-  ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-true-false-flows-microflow.png)
+    ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-true-false-flows-microflow.png)
 
 8.  To show an error message to the blocked customers, select **Show message** in the **Toolbox**, and add it to the **true** flow in the microflow. 
 
-   ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-show-message-true-flow.png)
+    ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-show-message-true-flow.png)
 
 9. In the **Properties** tab for the **Show message** activity, do the following:
    a. Select **Error** as the message type.
    b. Fill out the **Template** that will be shown to users when this message pops up (In our example: Sorry, you can't proceed with the order). 
    c. Leave the **Blocking** property for the message enabled, which prevents the user continue work until the pop-up window is closed.
 
-   ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-show-message-properties-true-flow.png)
+   ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-show-message-properties-true-flow.png) <br/>
 
 10.  In the **Toolbox** tab, select the **Close Page** activity, drag and drop it to the microflow.
 
-  ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-microflow-blocked-completed.png)
+    ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-microflow-blocked-completed.png)
 
 Congratulations! We have now created a microflow that will show an error message and close the current page if the customer is blocked.
 
-If you want to embed your microflow to the pages, see [Configure an Exclusive Split Step 2: Embedding the Microflow to Your App](webmodeler-how-to-microflows-exclsplit-p2).
+If you want to embed your microflow to the pages, see [Configure an Exclusive Split Step 2: Embed the Microflow to Your App](webmodeler-how-to-microflows-exclsplit-p2).
 
 
 

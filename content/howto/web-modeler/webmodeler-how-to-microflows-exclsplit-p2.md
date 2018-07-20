@@ -17,7 +17,7 @@ You have configured microflows and exclusive splits with enumeration attribute t
 
 To start this tutorial, make sure you have completed the following prerequisites:
 
-* [Configure an Exclusive Split Step 1: Build the Domain Model, and Configure a Microflow](webmodeler-how-to-microflows-exclsplit)
+* [Configure an Exclusive Split Step 1: Build the Domain Model and Configure a Microflow](webmodeler-how-to-microflows-exclsplit)
 
 ## 3 Embedding the Microflow to Pages   
 
@@ -33,14 +33,14 @@ To embed the microflow with an exclusive split (the attribute of the enumeration
     ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-data-view.png)
 
 3. Drag and drop **Data View** to the page.
-4. In the **Properties** tab for the **DATA VIEW**, do the following: 
+4. In the **Properties** tab for the **DATA VIEW**, do the following:<br/> 
    a. Set **Data Source** to **Context.**<br/>
    b. Set **Entity** to **Customer**.<br/>
 
    ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-data-view-properties.png) <br/>
 
 5. In **Toolbox**>**Widgets** >**Buttons** find **Create Object**, drag and drop it inside the Data View container (it is named **New** by default).
-6. We are going to create a new page that will be opened when a user clicks the **New** button. Open the **Properties** tab for the created button and do the following:
+6. We are going to create a new page that will be opened when a user clicks the **New** button. Open the **Properties** tab for the created button and do the following:<br/>
    a. Set **Customer** as **Data Source**>**Entity**.<br/>
    b. Click **Select Page**.<br/>
 
@@ -89,13 +89,13 @@ To embed the microflow with an exclusive split (the attribute of the Boolean typ
 4. Now we will add the microflow to pages. Open the page **Order_form_for_bronze_customers.**
 5.  In **Toolbox**>**Widgets** >**Data Containers**, find **Data View**. 
 
-   ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-data-view.png)
+    ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-data-view.png)
 
 6.  Drag and drop **Data View** to the page.
 
-   ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-data-view-select-data-view-source.png)
+    ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-data-view-select-data-view-source.png)
 
-7. In the **Properties** of the **DATA VIEW**, do the following:
+7. In the **Properties** of the **DATA VIEW**, do the following:<br/>
    a. Set **Data Source** to **Context.**<br/>
    b. Set **Entity** to **Customer**.<br/>
 
@@ -108,7 +108,7 @@ To embed the microflow with an exclusive split (the attribute of the Boolean typ
 9. Click the **Call Microflow** button to view its properties. 
 10. In the **Properties** tab, select the **Customers_status_check microflow**. 
 
-  ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-call-microflow-button-selected-microflow.png)
+    ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-call-microflow-button-selected-microflow.png)
 
 11. Change the **Caption** from **Microflow** to **Place Order**. 
 12. Open the page **Order_form_for_silver_customers** and repeat steps 4-11.

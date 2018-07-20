@@ -46,26 +46,26 @@ The app will open the corresponding page depending on the grade of a customer, f
 
 2. Create entity *Customer*. For more information on how to create the entity, see section [3 Adding New Entities](../../refguide/web-modeler/domain-models-wm) in *Domain Models Overview in the Web Modeler*.
 
-3. For the **Customer** entity, create attribute (for more information on how to create the attribute, see section [4 Adding New Attributes](../../refguide/web-modeler/domain-models-wm)) and do the following: <br />
-  a. Set the attribute **Name** to *Grade*. <br />
-  b. Set the [**Type**](../../refguide/web-modeler/domain-models-attributes-wm) to **Enumeration**. <br />
-  c. Click **Select enumeration** to create a new enumeration. <br />
+3. For the **Customer** entity, create attribute (for more information on how to create the attribute, see section [4 Adding New Attributes](../../refguide/web-modeler/domain-models-wm)) and do the following:<br />
+  a. Set the attribute **Name** to *Grade*.<br />
+  b. Set the [**Type**](../../refguide/web-modeler/domain-models-attributes-wm) to **Enumeration**.<br />
+  c. Click **Select enumeration** to create a new enumeration.<br />
 
-  ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-create-new-attribute-enumeration.png) <br />
+   ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-create-new-attribute-enumeration.png)<br />
 
-  d. In the **Select enumeration** dialog window, click **New**. <br />
-  e. In the **Create new enumeration** dialog window, click **Add Item** (*Grade* is filled out automatically for the **Name**). <br />
+   d. In the **Select enumeration** dialog window, click **New**.<br />
+   e. In the **Create new enumeration** dialog window, click **Add Item** (*Grade* is filled out automatically for the **Name**).<br />
 
-  ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-new-enumeration-add-item.png) <br />
+   ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-new-enumeration-add-item.png)<br />
 
-  f. Enter *Bronze* for the **Caption** (**Name** is filled out as *Bronze* automatically as well). <br />
+   f. Enter *Bronze* for the **Caption** (**Name** is filled out as *Bronze* automatically as well).<br />
 
-  ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-new-enumeration-add-item-bronze.png) <br />
+   ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-new-enumeration-add-item-bronze.png)<br />
 
-  g. Click **Add Item** and repeat the step above to create the **Silver** and **Gold** grades. <br />
-  h. Click **Create** to close the dialog windows and create the new attribute. <br />
+   g. Click **Add Item** and repeat the step above to create the **Silver** and **Gold** grades.<br />
+   h. Click **Create** to close the dialog windows and create the new attribute.<br />
 
-  ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-new-enumeration-bronze-silver-gold.png) <br />
+   ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-new-enumeration-bronze-silver-gold.png)<br />
 
 The new attribute is created.
 
@@ -99,7 +99,7 @@ To configure the exclusive split with the attribute or parameter of the enumerat
 
     ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-configure-condition-grade.png)
 
-   Caption **Grade?** is added automatically to the exclusive split according to the attribute name to indicate which condition the exclusive split is based on. 
+    Caption **Grade?** is added automatically to the exclusive split according to the attribute name to indicate which condition the exclusive split is based on. 
 
 7. We need to add different logic for each value of the **Grade** attribute. To do this, in the **Properties** tab, set cases for the exclusive split doing the following:<br />
 
@@ -117,9 +117,9 @@ To configure the exclusive split with the attribute or parameter of the enumerat
 
 8.  To open a corresponding order form (page) for customers with the bronze grade, select **Show Page** in the **Toolbox**, drag and drop it to flow labelled **Bronze** in the microflow. 
 
-   ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-microflow-show-page.png)
+    ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-microflow-show-page.png)
 
-9. Open the properties for the **Show Page** activity and do the following:
+9. Open the properties for the **Show Page** activity and do the following:<br />
    a. Click the **Select a page** field.<br />
    b. In the **Select Page** dialog window, click **New page**, and [create a page](../../refguide/web-modeler/page-editor-wm) for customer grade **Bronze**. 
    **Note** After you create a page, it will be added to the **Select field** automatically.<br />
@@ -207,7 +207,7 @@ To configure the exclusive split with the attribute of the boolean type, follow 
 
    ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-show-message-properties-true-flow.png) <br/>
 
-10.  In the **Toolbox** tab, select the **Close Page** activity, drag and drop it to the microflow.
+10. In the **Toolbox** tab, select the **Close Page** activity, drag and drop it to the microflow.
 
     ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-microflow-blocked-completed.png)
 

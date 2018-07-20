@@ -1,5 +1,5 @@
 ---
-title: "Configure an Exclusive Split Step 1: Build the Domain Model, and Configure a Microflow"
+title: "Configure an Exclusive Split Step 1: Build the Domain Model and Configure a Microflow"
 category: "Web Modeler"
 description: "This how-to describes the process of configuring an exclusive split in the Mendix Web Modeler."
 tags: ["web modeler", "microflows", "exclusive split", "domain model"]
@@ -9,7 +9,7 @@ tags: ["web modeler", "microflows", "exclusive split", "domain model"]
 
 This how-to explains how you can configure an exclusive split in the microflow editor of the Web Modeler. 
 
-An exclusive split is an activity which is used to model conditions or decisions in the logic of your app. For more information on the exclusive split, see [Exclusive Split](../../refguide/web-modeler/microflows-exclusive-split-wm). 
+An exclusive split is an activity which is used to model conditions or decisions in the logic of your app. For more information on the exclusive split, see [Exclusive Split in the Web Modeler](../../refguide/web-modeler/microflows-exclusive-split-wm). 
 
 **This how-to will teach you how to do the following:**
 
@@ -36,7 +36,7 @@ To start this tutorial, make sure you have completed the following prerequisites
 
 In this example we will create a microflow and configure the exclusive split when you want to open different order forms depending on the customer grade. 
 
-This use case will require an exclusive split with attribute of the enumeration type (list of predefined values). For more information on types of attributes, see [Attribute Types](../../refguide/web-modeler/domain-models-attributes-wm). 
+This use case will require an exclusive split with attribute of the enumeration type (list of predefined values). For more information on types of attributes, see [Attribute Types in the Web Modeler](../../refguide/web-modeler/domain-models-attributes-wm). 
 
 ### 3.1 Adding an Entity and an Attribute to the Domain Model 
 
@@ -46,26 +46,26 @@ The app will open the corresponding page depending on the grade of a customer, f
 
 2. Create entity *Customer*. For more information on how to create the entity, see section [3 Adding New Entities](../../refguide/web-modeler/domain-models-wm) in *Domain Models Overview in the Web Modeler*.
 
-3. For the **Customer** entity, create attribute (for more information on how to create the attribute, see section [4 Adding New Attributes](../../refguide/web-modeler/domain-models-wm)) and do the following:<br />
-  a. Set the attribute **Name** to *Grade*.<br />
-  b. Set the [**Type**](../../refguide/web-modeler/domain-models-attributes-wm) to **Enumeration**.<br />
-  c. Click **Select enumeration** to create a new enumeration.<br />
+3. For the **Customer** entity, create attribute (for more information on how to create the attribute, see section [4 Adding New Attributes](../../refguide/web-modeler/domain-models-wm)) and do the following: <br />
+  a. Set the attribute **Name** to *Grade*. <br />
+  b. Set the [**Type**](../../refguide/web-modeler/domain-models-attributes-wm) to **Enumeration**. <br />
+  c. Click **Select enumeration** to create a new enumeration. <br />
 
-  ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-create-new-attribute-enumeration.png)
+  ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-create-new-attribute-enumeration.png) <br />
 
-  d. In the **Select enumeration** dialog window, click **New**.<br />
-  e. In the **Create new enumeration** dialog window, click **Add Item** (*Grade* is filled out automatically for the **Name**).<br />
+  d. In the **Select enumeration** dialog window, click **New**. <br />
+  e. In the **Create new enumeration** dialog window, click **Add Item** (*Grade* is filled out automatically for the **Name**). <br />
 
-  ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-new-enumeration-add-item.png)
+  ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-new-enumeration-add-item.png) <br />
 
-  f. Enter *Bronze* for the **Caption** (**Name** is filled out as *Bronze* automatically as well).<br />
+  f. Enter *Bronze* for the **Caption** (**Name** is filled out as *Bronze* automatically as well). <br />
 
-  ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-new-enumeration-add-item-bronze.png)
+  ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-new-enumeration-add-item-bronze.png) <br />
 
-  g. Click **Add Item** and repeat the step above to create the **Silver** and **Gold** grades.<br />
-  h. Click **Create** to close the dialog windows and create the new attribute.
+  g. Click **Add Item** and repeat the step above to create the **Silver** and **Gold** grades. <br />
+  h. Click **Create** to close the dialog windows and create the new attribute. <br />
 
-  ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-new-enumeration-bronze-silver-gold.png)
+  ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-new-enumeration-bronze-silver-gold.png) <br />
 
 The new attribute is created.
 
@@ -78,26 +78,26 @@ To configure the exclusive split with the attribute or parameter of the enumerat
 1. [Create a new microflow](../../refguide/web-modeler/microflows-wm) and name it, for example, *Show_grade_specific_page*.
 2.  In the **Toolbox** tab, select the exclusive split, drag and drop it to the microflow. 
 
-   ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-drag-and-drop-excl-split.png)
+    ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-drag-and-drop-excl-split.png)
 
 3.  We need to pass a parameter to configure the exclusive split correctly.  In the **Toolbox**, select **Parameter** and drag and drop it to the microflow.
 
-   ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-microflow-not-set-parameter.png)
+    ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-microflow-not-set-parameter.png)
 
 4. In our example the logic we are adding should apply to the single customer that is selected in the page. Hence, we need to add the customer as the parameter. Change the following properties of the **Parameter**:<br />
 
    a. Set **Data Type** to **Object**.<br />
-   b. Set **Entity** to **Customer**. 
+   b. Set **Entity** to **Customer**.<br />
 
-   ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-parameter-properties.png) 
+   ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-parameter-properties.png)<br />
 
 5.  In the **Properties** of the exclusive split, click the **Configure condition** field.
 
-   ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-excl-split-configure-condition.png)
+    ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-excl-split-configure-condition.png)
 
 6.  In the **Configure condition** pop-up window, we need to select the attribute that the condition will be based on. So, click the **Variables/Attributes** tab, select the **Grade Customer_grade** condition, and click **Save**. 
 
-   ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-configure-condition-grade.png)
+    ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-configure-condition-grade.png)
 
    Caption **Grade?** is added automatically to the exclusive split according to the attribute name to indicate which condition the exclusive split is based on. 
 
@@ -135,9 +135,9 @@ To configure the exclusive split with the attribute or parameter of the enumerat
 12. In the **Properties** tab for the **Show message** activity, do the following:
     a. Select **Error** as the message type.<br />
     b. Fill out the **Template** that will be shown to users when this message pops up (in our example: Please select the customer grade first).<br />
-    c. Leave the **Blocking** property for the message enabled, which prevents the user continue work until the pop-up window is closed.  
+    c. Leave the **Blocking** property for the message enabled, which prevents the user continue work until the pop-up window is closed.<br />  
 
-    ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-empty-customer-grade-message.png)
+    ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-empty-customer-grade-message.png)<br />
 
 Congratulations! We have now created the microflow that will open different order forms for customers with different grades, or show an error message when the customer has no grade.
 
@@ -157,9 +157,9 @@ As we will verify customers by their statuses, we need to create a corresponding
 2. For the Customer entity, create attribute (for more information on how to create the attribute, see section [3 Adding New Attributes](../../refguide/web-modeler/domain-models-wm)),  and do the following: <br />
    a. Set name to *Blocked*. <br />
    b. Set the [**Type**](../../refguide/web-modeler/domain-models-attributes-wm) to **Boolean**. <br />
-   c. Click **Create**.  
+   c. Click **Create**. <br />
 
-![](attachments/webmodeler-how-to-microflows-exclsplit/wm-new-attribute-create-dialog.png)
+   ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-new-attribute-create-dialog.png)<br />
 
 The new attribute for the **Customer** entity is created.
 
@@ -178,11 +178,11 @@ To configure the exclusive split with the attribute of the boolean type, follow 
 
     ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-microflow-not-set-parameter.png)
 
-4. In our example the logic we are adding should apply to the status of the customer. Hence, we need to add the customer as the parameter. In the **Properties** tab for the **Parameter**, do the following:
-   a. Set **Data Type** to **Object** 
-   b. Set **Entity** to **Customer**.
+4. In our example the logic we are adding should apply to the status of the customer. Hence, we need to add the customer as the parameter. In the **Properties** tab for the **Parameter**, do the following:<br />
+   a. Set **Data Type** to **Object** <br />
+   b. Set **Entity** to **Customer**.<br />
 
-    ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-parameter-properties.png)
+    ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-parameter-properties.png)<br />
 
 5.  Click the exclusive split, and in the **Properties** tab, click the **Configure condition** field.
 

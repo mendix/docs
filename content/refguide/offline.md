@@ -13,12 +13,13 @@ To access the offline application, you need to have a mobile device that runs a 
 
 ## 3 Synchronization<a name="synchronization"></a>
 
-The first time an [offline-enabled](configuring-hybrid-mobile-apps-to-run-offline) mobile application is run, it will retrieve all the data it requires to run offline from the server. After that, it will remain in offline mode until a synchronization event is triggered. Remaining in offline mode will significantly improve the performance of your application. Synchronization can be triggered by either the server or the user. The server will automatically resynchronize the app if it is opened after a new model is uploaded, in order to prevent inconsistencies. The user can trigger a synchronization by triggering a sync action, for example from an [action button](action-button). Lastly, the app will always attempt to synchronize if it is (re)started. If your device is not connected to the internet on startup, this step will be skipped.
+The first time an [offline-enabled](configuring-hybrid-mobile-apps-to-run-offline) mobile application is run, it will retrieve all the data it requires to run offline from the server. After that, it will remain in offline mode until a synchronization event is triggered. Remaining in offline mode will significantly improve the performance of your application. Synchronization can be triggered by either the server or the user. The server will automatically resynchronize the app if it is opened after a new model is uploaded, in order to prevent inconsistencies. The user can trigger a synchronization by triggering a sync action, for example from an [action button](action-button). 
 
-Synchronization consists of two steps:
+{{% alert type="info" %}}
 
-1. Uploading new and changed objects.
-2. Recreating the database by downloading all necessary objects from the runtime.
+As of Mendix 7.6, the startup performance of offline apps skips data and file synchronizations on subsequent application startups. Mendix still does them, but only if your app has been redeployed in the meantime. In that case, synchronization consists of two steps: Uploading new and changed objects, and then recreating the database by downloading all necessary objects from the runtime.
+
+{{% /alert %}}
 
 During upload, objects newly created by the user will be created on the server. Then, new and changed objects are uploaded to the server by committing them. Any relevant event handlers on these objects will run as usual. If the synchronization action encounters an error during this process, the entire upload process is reverted. For example, if ten objects are uploaded and one of these commits triggers a validation error, all ten objects are lost. This is to ensure that the internal consistency between your newly created objects is maintained. For example, if a user creates an order with several order lines and the order fails to commit, the entire transaction is rolled back to prevent your order lines from ending up in the database without an order and corrupting your data.
 

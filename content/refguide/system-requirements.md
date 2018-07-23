@@ -89,7 +89,7 @@ Jetty is built into the Mendix Runtime, an application server is not required.
 * Android 5.0 and newer
 * Windows Phone 8 and newer
 
-## Mobile Operation Systems (for Mendix Mobile apps)
+## Mobile Operation Systems (for the Mendix Mobile App)
 
-* iOS 9 and newer
-* Android 5.0 and newer
+* iOS 9 and above
+* Android 5.0 and above

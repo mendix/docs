@@ -61,9 +61,9 @@ To create a new navigation item, do the following:
 
 1. Click the **Navigation Document** icon in the left menu bar to open the **Navigation**.
 
-2. Click a plus at the end of the navigation tree to create a menu item, or click a plus next to the existing navigation item to create its sub-item
+2.  Click a plus at the end of the navigation tree to create a menu item, or click a plus next to the existing navigation item to create its sub-item
 
-   ![](attachments/navigation-wm/wm-adding-navigation-items.png)
+    ![](attachments/navigation-wm/wm-adding-navigation-items.png)
 
 3. Specify the properties of the created item if needed (For more information, see [Properties of Menu Items](#properties-of-menu-items)). 
 

@@ -25,7 +25,7 @@ For more information on the functions of these activities, see [Microflows in th
 
  To set the initial value or change the value of an object, do the following:
 
-1. Add the **Create Object**/**Change Object** activity to a microflow. For more information, see [Adding New Event or Activity](microflows-wm#adding-activity-to-microflow).
+1. Add the **Create Object**/**Change Object** activity to a microflow. For more information, see section [4 Adding New Event or Activity](microflows-wm#adding-activity-to-microflow) in *Microflows in the Web Modeler*.
 2. Click the activity to view its properties.
 3.  Select the data source (an entity) for the activity, then click **Add New Value**
 
@@ -40,7 +40,7 @@ For more information on the functions of these activities, see [Microflows in th
 
 To set the initial value or change the value of a variable, do the following:
 
-1. Add the **Create Variable**/**Change Variable** activity to a microflow. For more information, see [Adding New Event or Activity](microflows-wm#adding-activity-to-microflow).
+1. Add the **Create Variable**/**Change Variable** activity to a microflow. For more information, see section [4 Adding New Event or Activity](microflows-wm#adding-activity-to-microflow) in *Microflows in the Web Modeler*.
 2. Click the activity to view its properties.
 3.  Select the data type for the activity, then click **Set initial value** / **Change value**
 
@@ -54,7 +54,7 @@ To set the initial value or change the value of a variable, do the following:
 
 The return value is the value that is returned to the flow or a widget that called the current flow. To configure the return value, do the following:
 
-1. Add the **End Event** to a microflow or select the existing end event. For more information, see [Adding New Event or Activity](microflows-wm#adding-activity-to-microflow).
+1. Add the **End Event** to a microflow or select the existing end event. For more information, see section [4 Adding New Event or Activity](microflows-wm#adding-activity-to-microflow) in *Microflows in the Web Modeler*.
 2. Click the event to view its properties.
 3.  Set the **Returns** option to **Value**.
 

@@ -75,9 +75,9 @@ To add an App Store widget, do the following:
 
    ![](attachments/page-editor-widgets-wm/wm-slider.png) 
 
-3. Click the cloud icon to download the widget and add it to your project.
+3.  Click the cloud icon to download the widget and add it to your project.
 
-   ![](attachments/page-editor-widgets-wm/wm-app-store-download.png)
+    ![](attachments/page-editor-widgets-wm/wm-app-store-download.png)
 
 The widget is now added to your project, you can simply drag and drop it to the page to use it. You can also view settings of this widget in the **App Settings**.  For more information, see [App Settings Overview in the Web Modeler](app-settings-wm). 
 

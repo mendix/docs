@@ -45,7 +45,7 @@ There are also four actions you can perform, which are described below.
 
 In this section, you can click **Create a Package from Team Server** and select a branch containing the revision you would like to build.
 
-Only branches where the latest revision is Mendix 5 and higher will be displayed here. If you need to build other revisions, please do so manually from the Mendix Modeler.
+Only branches where the latest revision is Mendix 5 and above will be displayed here. If you need to build other revisions, please do so manually from the Mendix Modeler.
 
 #### 2.1.2 Uploading
 

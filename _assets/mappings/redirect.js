@@ -1215,11 +1215,11 @@ module.exports = {
     },
     {
       from: "/howto50/Deploying+a+Mendix+App+to+Cloud+Foundry",
-      to: "/deployment/cloud-foundry/deploy-a-mendix-app-to-cloud-foundry"
+      to: "/deployment/cloud-foundry/index"
     },
     {
       from: "/howto50/Deploying+a+Mendix+App+to+Pivotal",
-      to: "/deployment/cloud-foundry/deploy-a-mendix-app-to-pivotal"
+      to: "/deployment/cloud-foundry/index"
     },
     {
       from: "/howto50/Deploying+Mendix+on+Microsoft+Windows",
@@ -1714,15 +1714,15 @@ module.exports = {
     },
     {
       from: "/howto6/Deploy+a+Mendix+App+to+IBM+Bluemix",
-      to: "/deployment/cloud-foundry/deploy-a-mendix-app-to-ibm-bluemix"
+      to: "/deployment/cloud-foundry/index"
     },
     {
       from: "/howto6/deploying+a+mendix+app+to+ibm+bluemix",
-      to: "/deployment/cloud-foundry/deploy-a-mendix-app-to-ibm-bluemix"
+      to: "/deployment/cloud-foundry/index"
     },
     {
       from: "/howto6/Deploy+a+Mendix+App+to+Pivotal",
-      to: "/deployment/cloud-foundry/deploy-a-mendix-app-to-pivotal"
+      to: "/deployment/cloud-foundry/index"
     },
     {
       from: "/howto6/Deploy+Mendix+on+Microsoft+Windows",
@@ -1734,7 +1734,7 @@ module.exports = {
     },
     {
       from: "/howto6/Deploying+a+Mendix+App+to+Cloud+Foundry",
-      to: "/deployment/cloud-foundry/deploy-a-mendix-app-to-cloud-foundry"
+      to: "/deployment/cloud-foundry/index"
     },
     {
       from: "/howto6/deploying+to+the+cloud",
@@ -2125,11 +2125,11 @@ module.exports = {
     },
     {
       from: "/howto/deploying-a-mendix-app-to-cloud-foundry",
-      to: "/deployment/cloud-foundry/deploy-a-mendix-app-to-cloud-foundry"
+      to: "/deployment/cloud-foundry/index"
     },
     {
       from: "/howto7/deploying-a-mendix-app-to-cloud-foundry",
-      to: "/deployment/cloud-foundry/deploy-a-mendix-app-to-cloud-foundry"
+      to: "/deployment/cloud-foundry/index"
     },
 	{
       from: "/bestpractices/How+to+execute+an+SQL+statement+on+an+external+database",
@@ -8607,115 +8607,115 @@ module.exports = {
     },
     {
       from: "/ReleaseNotes/Platform+Portal",
-      to: "/releasenotes/platform-portal/"
+      to: "/releasenotes/developer-portal/"
     },
     {
       from: "/ReleaseNotes/Release+Notes+2016-10-05",
-      to: "/releasenotes/platform-portal/"
+      to: "/releasenotes/developer-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2016-05-12",
-      to: "/releasenotes/platform-portal/"
+      to: "/releasenotes/developer-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2016-03-24",
-      to: "/releasenotes/platform-portal/"
+      to: "/releasenotes/developer-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2016-02-18",
-      to: "/releasenotes/platform-portal/"
+      to: "/releasenotes/developer-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2016-01-13",
-      to: "/releasenotes/platform-portal/"
+      to: "/releasenotes/developer-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2015-12-01",
-      to: "/releasenotes/platform-portal/"
+      to: "/releasenotes/developer-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2015-11-30",
-      to: "/releasenotes/platform-portal/"
+      to: "/releasenotes/developer-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2015-10-16",
-      to: "/releasenotes/platform-portal/"
+      to: "/releasenotes/developer-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2015-09-17",
-      to: "/releasenotes/platform-portal/"
+      to: "/releasenotes/developer-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2015-09-03",
-      to: "/releasenotes/platform-portal/"
+      to: "/releasenotes/developer-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2015-08-06",
-      to: "/releasenotes/platform-portal/"
+      to: "/releasenotes/developer-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2015-07-31",
-      to: "/releasenotes/platform-portal/"
+      to: "/releasenotes/developer-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2015-07-24",
-      to: "/releasenotes/platform-portal/"
+      to: "/releasenotes/developer-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2015-07-16",
-      to: "/releasenotes/platform-portal/"
+      to: "/releasenotes/developer-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2015-07-03",
-      to: "/releasenotes/platform-portal/"
+      to: "/releasenotes/developer-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2015-06-16",
-      to: "/releasenotes/platform-portal/"
+      to: "/releasenotes/developer-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2015-06-02",
-      to: "/releasenotes/platform-portal/"
+      to: "/releasenotes/developer-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2015-05-29",
-      to: "/releasenotes/platform-portal/"
+      to: "/releasenotes/developer-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2015-04-21",
-      to: "/releasenotes/platform-portal/"
+      to: "/releasenotes/developer-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2015-04-16",
-      to: "/releasenotes/platform-portal/"
+      to: "/releasenotes/developer-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2015-03-31",
-      to: "/releasenotes/platform-portal/"
+      to: "/releasenotes/developer-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2015-02-26",
-      to: "/releasenotes/platform-portal/"
+      to: "/releasenotes/developer-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2015-02-19",
-      to: "/releasenotes/platform-portal/"
+      to: "/releasenotes/developer-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2015-02-05",
-      to: "/releasenotes/platform-portal/"
+      to: "/releasenotes/developer-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2015-01-22",
-      to: "/releasenotes/platform-portal/"
+      to: "/releasenotes/developer-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2014-12-30",
-      to: "/releasenotes/platform-portal/"
+      to: "/releasenotes/developer-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2014-12-23",
-      to: "/releasenotes/platform-portal/"
+      to: "/releasenotes/developer-portal/"
     },
     {
       from: "/ReleaseNotes/Model+SDK+3.0.1",

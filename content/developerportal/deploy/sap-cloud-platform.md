@@ -16,7 +16,7 @@ This document describes two ways of managing the SAP Cloud Platform:
 
 ## 2 Set Up SAP Cloud Platform for the First Time<a name='FirstTime'></a>
 
-Before you can manage your SAP Cloud Platform using the Developer Portal, you will need to set it up first. There are two circumstances under which you will have to set up the SAP Cloud Platform for the first time.
+Before you can manage your SAP Cloud Platform using the Developer Portal, you will need to set it up. There are two circumstances under which you will have to set up the SAP Cloud Platform for the first time.
 
 1. You have an existing app which has never been deployed on the SAP Cloud Platform and you want to change the cloud settings. See section [2.1 Change Cloud Settings](#ChangeCloudSettings).
 
@@ -24,7 +24,7 @@ Before you can manage your SAP Cloud Platform using the Developer Portal, you wi
 
 ### 2.1 Change Cloud Settings<a name='ChangeCloudSettings'></a>
 
-In this scenario, you have an existing app which is running, for instance, on the Mendix Cloud. To change this, go to the Cloud Settings tab of the General Settings in the Development Portal.
+In this scenario, you have an existing app which is running in another environment: for instance, on the Mendix Cloud. To change this, go to the Cloud Settings tab of the General Settings in the Development Portal.
 
 ![](attachments/sap-cloud-platform/cloud-settings.png)
 
@@ -36,7 +36,7 @@ Click **Getting Started** and then continue with section [2.3 Set Up Region](#Se
 
 ### 2.2 New SAP App<a name='NewSAPApp'></a>
 
-In this scenario, you choose a Mendix starter app from the SAP Apps tab.
+In this scenario, you choose a Mendix starter app from the **SAP Apps** tab.
 
 ![](attachments/sap-cloud-platform/sap-starter-apps.png)
 
@@ -48,13 +48,16 @@ Once the app has been created you can continue with section [2.3 Set Up Region](
 
 You are now prompted with an SAP Cloud Platform login screen. Select the region where your SAP Cloud Platform is located. Make sure that you have enough quota in this region for your organization to run a Mendix app.
 
-If there is no current SAP session you will be asked for your SAP credentials as well. Providing your credentials will grant the Deployment Portal access to manage your SAP Cloud Platform account. The Developer Portal will only receive an access token. It will not store your credentials.
+![](attachments/sap-cloud-platform/01-sap-select-region.png)
 
-![](attachments/sap-cloud-platform/01-sap-login.png)
+If you have already logged on to SAP and your SAP session has not expired, you will only have to choose the region. If you do not have a current SAP session you will be asked for your SAP credentials as well. Providing your credentials will grant the Deployment Portal access to manage your SAP Cloud Platform account.
 
-If you already have an SAP session, you will only have to choose the region.
+You may be asked to provide your credentials in one of two ways:
 
-![](attachments/sap-cloud-platform/01-sap-login-no-credentials.png)
+1. You will be taken to the SAP authentication page to enter your credentials. In this case, your SAP username (email address) must be the same as your Mendix username.
+
+2. The Developer Portal will ask for your credentials which it will then use to obtain an access token from SAP. The Developer Portal will then use the access token. It will not store your credentials. *This method is being deprecated*.
+
 
 You will now be asked to provide the final details for the SAP Cloud Platform development environment.
 
@@ -110,7 +113,7 @@ This is done from the **Environments** page of the Developer Portal:
 
     ![](attachments/sap-cloud-platform/08-sap-env-2.png)
 
-6.  Set the size of the memory that the app needs in order to run. This can also be changed later within SAP Cloud Platform.
+6.  Set the size of the memory that the app needs in order to run. This can also be changed later.
 
 7.  Set **Development Mode** to Yes if you want the application to run with the Mendix security level of Prototype/demo, or Off (no security). This is not recommended for acceptance or production environments.
 
@@ -136,7 +139,17 @@ An environment is created; with more than one environment it is possible to tran
 
 ## 4 Create Package from Team Server
 
-At any time, you can create a new deployment package from a committed version of the project. If you are working with Desktop Modeler you will first have to commit the project.
+At any time, you can create a new deployment package from a committed version of the project. If you are working with the Desktop Modeler you will first have to commit the project.
+
+{{% alert type="info" %}}
+You can also deploy your app (the steps in sections 4 and 5.1 of this How-To) automatically from the Desktop Modeler. However, you will then have less control over the deployment.
+
+If you click **Run** in the Desktop Modeler this will automatically:
+
+* commit the project
+* generate a deployment package
+* deploy the deployment package to the first available environment (this will replace any app which is currently running in this environment)
+{{% /alert %}}
 
 1. Go to the **Environments** page of the Developer Portal.
 
@@ -220,6 +233,10 @@ The environment details page contains two tabs: General and Model Options. Open 
 
 ![](attachments/sap-cloud-platform/environment-details.png)
 
+{{% alert type="info" %}}If you make changes to your app which you want be applied next time the app is deployed you must make them here.
+
+Changes made to the app in the SAP Cloud Platform cockpit are only temporary and can be overwritten by the values in the Mendix Developer Portal next time the app is deployed.{{% /alert %}}
+
 ### 7.1 General Tab
 
 This tab contains information on how the application is deployed on SAP Cloud Platform.
@@ -235,7 +252,7 @@ If the application is running, click **Stop Application** and confirm when asked
 The button will change to **Start Application** which you can click to (re)start the application.
 
 {{% alert type="info" %}}
-You need to use this option to stop and start your app after changing one of the settings on this page.
+You may need to use this option to stop and start your app after changing one of the settings on this page.
 {{% /alert %}}
 
 #### 7.1.2 Change Admin Password
@@ -272,7 +289,7 @@ Use the **Memory per instance** slider to change the amount of memory allocated 
 
 Click **Scale Now** to apply the new settings. If the application is running, it will be stopped and restarted to apply the settings. If it is stopped, the new settings will be used the next time the application is started.
 
-Click **Reset** to return the values to their values before the sliders were moved.
+Click **Reset** to return the values to what they were before the sliders were moved.
 
 #### 7.1.7 Change License Subscription ID
 
@@ -340,6 +357,6 @@ If you want to delete your app and all its resources, delete the environment and
 
 You can still delete the app and its resources from the SAP Cloud Platform Cockpit, but you will then have to remove all the resources individually.
 
-## 9 Related Content
+<!-- ## 9 Related Content -->
 
-* [Deploy a Mendix App on SAP Cloud Platform](/deployment/sap-cloud-platform/deploy-a-mendix-app-to-sap-cloud-platform)
+

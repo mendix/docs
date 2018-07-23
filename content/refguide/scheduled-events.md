@@ -37,7 +37,7 @@ Seconds, Minutes, Hours, Days, and Weeks are scheduled exactly as configured. Ho
 
 If you schedule an event to start at March 1, it will run on April 1, May 2, Jun 2, Jul 3, Aug 3, Sep 3, etc. So be aware when scheduling your events, because it is possible that they will run 1 day of what you have been expecting.
 
-This is a simplified example of the implementation of how the Mendix 5.3.2 release calculates the interval. Later releases might behave slightly different, but I haven't seen a message in the release notes that this has been improved.
+This is a simplified example of the implementation of how the Mendix 5.3.2 release calculates the interval. Later releases might behave slightly different.
 
 ```java
 switch(scheduledEvent.getIntervalType())

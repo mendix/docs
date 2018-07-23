@@ -7,7 +7,7 @@ tags: ["SAP", "OData", "integration", "SAP services"]
 
 ## 1 Introduction
 
-SAP data models reflect an OData service from SAP back-end systems like SAP Business Suite (SAP ERP 6.0), SAP S/4HANA, and SAP S/4HANA Cloud. OData services are exposed via the SAP Gateway and are described in a `$metadata` file, which describes all the entities, relationships, and functions that are exposed for that service.
+SAP data models reflect an OData service from SAP back-end systems like SAP Business Suite (SAP ERP 6.0), SAP S/4HANA, and SAP S/4HANA Cloud. OData services are exposed via SAP Gateway and are described in a `$metadata` file, which describes all the entities, relationships, and functions that are exposed for that service.
 
 Handcrafting a Mendix domain model for these OData services would be a lot of work. The SAP OData Model Creator automates this process by creating a Mendix module for the selected service containing the Mendix domain model which can be imported in your project. The data model also contains additional information such as the URL of the exposed endpoint, a list of collections in the service, and a list of functions provided by the service.
 
@@ -97,7 +97,7 @@ There may be several schemas in the packages of an API. Each of these will gener
 
 You have now created the module. Section [4 Using the Data Model Module in a Mendix App](#Using) explains how to import it into your app.
 
-### 3.2 Uploading an Odata Metadata XML File<a name="Uploading"></a>
+### 3.2 Uploading an OData Metadata XML File<a name="Uploading"></a>
 
 You may want to generate the data model by hand using the `$metadata` file directly. This may, for example, not be in the API Business Hub.
 
@@ -153,7 +153,7 @@ You have now created the module. Section [4 Using the Data Model Module in a Men
 You can also generate the data model from the metadata by providing the URL to the SAP OData Model Creator. You can try this using the publicly available HCM People Profile service, for which [https://www.sapfioritrial.com/sap/opu/odata/sap/HCM_PEOPLE_PROFILE_SRV/$metadata](https://www.sapfioritrial.com/sap/opu/odata/sap/HCM_PEOPLE_PROFILE_SRV/$metadata) is the metadata file.
 
 {{% alert type="warning" %}}
-This method does not work where the destination needs authentication. You cannot use it, for example, to generate a data model for a service on the ES5 Netweaver Gateway Demo.
+This method does not work where the destination needs authentication. You cannot use it, for example, to generate a data model for a service on the ES5 Gateway Demo.
 {{% /alert %}}
 
 1. Click **URL** on the first page of the SAP OData Model Creator.

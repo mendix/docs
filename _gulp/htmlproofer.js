@@ -56,6 +56,25 @@ const parseHtmlFile = file => new Promise((resolve, reject) => {
       }
     });
 
+    $('video').each((i, el) => {
+      const src = $(el).attr('src'),
+            parsed = url.parse(src);
+
+      if (parsed.hostname) {
+        file.external.videos.push(src);
+      } else {
+        if (parsed.query) {
+          file.warnings.push(`The src of the video ${gutil.colors.cyan(src)} has a query string. Is that necessary?`);
+        }
+
+        if (src.indexOf('/') === 0) {
+          file.videos.push(src);
+        } else {
+          file.videos.push(path.join(path.dirname(file.basePath), parsed.path))
+        }
+      }
+    });
+
     $('a').each((i, el) => {
       const $el = $(el),
             href = $el.attr('href'),
@@ -191,6 +210,19 @@ const validateFiles = files => Promise.resolve(_.map(files, file => {
     if (!helpers.isFile(fullPath)) {
       file.errors.push(`Has image: ${gutil.colors.cyan(image)} which would resolve to ${gutil.colors.cyan(fullPath)}, but it does not exist`);
       verbose && console.log(`err image ${file.path}`, image);
+    }
+  });
+
+  // Let's check all the videos
+  _.forEach(file.videos, video => {
+    let fullPath = path.join(SOURCEPATH, video);
+    _.remove(allResidualFiles, n => n === fullPath);
+    if (allFiles.indexOf(fullPath) !== -1) {
+      return;
+    }
+    if (!helpers.isFile(fullPath)) {
+      file.errors.push(`Has video: ${gutil.colors.cyan(video)} which would resolve to ${gutil.colors.cyan(fullPath)}, but it does not exist`);
+      verbose && console.log(`err image ${file.path}`, video);
     }
   });
 

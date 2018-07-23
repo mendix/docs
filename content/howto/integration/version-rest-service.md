@@ -23,9 +23,9 @@ Give each service a version number following the `MAJOR.MINOR.PATCH` format:
 
 To make versioning more explicit in your model, we suggest creating a folder for each service. Call it *ServiceName_Version*. Store all microflows, mappings, and message definitions that are used in the service in that folder.
 
-After you have published a service and clients are using it, it is not advisable to change it anymore. 
+After you have published a service and users are using it, it is not advisable to change it anymore. 
 
-If you were to change it in a way that requires the clients to change, you would introduce a "breaking change." A client would start getting errors without doing anything different.
+If you were to change it in a way that requires the user to change, you would introduce a "breaking change." The user would start getting errors without doing anything different.
 
 Instead of changing a published service, you should duplicate the service and give it a new major version. If you want to change a microflow, a mapping, or a message definition, duplicate that as well, and change the duplicate.
 
@@ -94,8 +94,8 @@ Note that this is a breaking change (because it is not backwards compatible), so
 
 After you have created a new version of your service, you should mark the old version as deprecated.
 
-You do that by adding **(deprecated)** to the service name. Write a description of why it was deprecated and what the new version number is in the **Public documentation** of the service. You should also mark all operations that changed as deprecated. In this way, clients can see which operations have changed from one version to the next.
+You do that by adding **(deprecated)** to the service name. Write a description of why it was deprecated and what the new version number is in the **Public documentation** of the service. You should also mark all the operations that changed as deprecated. This way, the user can see which operations have changed from one version to the next.
 
-You should let clients know that the this version is deprecated (for instance, by publishing release notes).
+You should let users know that the this version is deprecated (for instance, by publishing release notes).
 
-After a version has been deprecated for a sufficiently long time, you can remove it. All the clients should have moved to the new version in the meantime.
+After a version has been deprecated for a sufficiently long time, you can remove it. All users should have moved to the new version in the meantime.

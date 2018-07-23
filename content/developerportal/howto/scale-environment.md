@@ -1,6 +1,7 @@
 ---
 title: "Scale Your Environment in Mendix Cloud v4"
 category: "How-To's"
+menu_order: 110
 description: "Describes how to scale your environments in Mendix Cloud v4."
 tags: ["Scale","Environments","Mendix Cloud","Developer Portal"]
 ---

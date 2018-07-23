@@ -71,7 +71,7 @@ const getGenerateFiles = (dir) => {
       const normalized = files.map(f => normalizeSafe(f));
       resolve(
         _.filter(normalized,
-           file => path.extname(file) && 
+           file => path.extname(file) &&
            extArr.indexOf(path.extname(file) !== -1
           )
         )
@@ -87,6 +87,7 @@ const readHtmlFile = filePath => new Promise((resolve, reject) => {
       content: content,
       links: [],
       images:[],
+      videos:[],
       anchors: [],
       anchorLinks: [],
       external: {

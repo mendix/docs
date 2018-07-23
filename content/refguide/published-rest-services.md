@@ -15,7 +15,9 @@ Add a [published REST service](published-rest-service) to expose your entities a
 
 ## 2 Published REST Service
 
-For an overview of the available options when you add a published  service, see [Published REST Service](published-rest-service).
+For an overview of the available options when you add a published service, see [Published REST Service](published-rest-service).
+
+You can easily expose an entity via REST by right-clicking the entity in the [domain model](domain-model) and selecting [Expose as REST resource](generate-rest-resource).
 
 To publish a microflow as a REST operation, right-click anywhere in the editor and select [Publish as REST service operation](publish-microflow-as-rest-operation).
 
@@ -28,7 +30,11 @@ If you don't want basic authentication, there are two options:
 * You can choose to have [no authentication](published-rest-service#authentication) for specific published REST services, or
 * When you [allow anonymous users](project-security#anonymous-users) to your app, all published REST services become available without authentication
 
-For more details, see [Published REST Routing](published-rest-routing).
+{{% alert type="warning" %}}
+Note that web service users cannot access REST services.
+{{% /alert %}}
+
+For more details, see [Published REST Routing](published-rest-routing) and section [3.1 Requires Authentication](published-rest-service#authentication) in *Published REST Service*.
 
 ## <a name="interactive-documentation"></a>4 Documentation
 

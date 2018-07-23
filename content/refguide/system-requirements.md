@@ -27,9 +27,9 @@ If you want to use TortoiseSVN in combination with the Modeler, download the lat
 
 The Team Server is implemented using Subversion and the Modeler uses the HTTPS protocol to communicate with that server. To access the Team Server from within the Modeler, the network at your location needs the following settings:
 
-* The HTTPS port (TCP 443) needs to be open.
-* The HTTP port (TCP 80) needs to be open.
-* WebDAV - verbs within the HTTP protocol - needs to be enabled on the proxy server (if any).
+* The HTTPS port (TCP 443) needs to be open
+* The HTTP port (TCP 80) needs to be open
+* WebDAV (verbs within the HTTP protocol) needs to be enabled on the proxy server (if any)
 
 ## Web Modeler
 
@@ -39,14 +39,14 @@ The Mendix Web Modeler is optimized for use with Chrome. While Chrome is the off
 
 ### Operating System
 
-* Microsoft Windows Server 2008 SP2 or newer
-* Debian 8 (Jessie) or newer
+* Microsoft Windows Server 2008 SP2 and above
+* Debian 8 (Jessie) and above
 * Red Hat Enterprise Linux 6, Red Hat Enterprise Linux 7
 * CentOS 6, CentOS 7
 
 ### Web Server
 
-* Microsoft Internet Information Services 7 or newer
+* Microsoft Internet Information Services 7 and above
 * Nginx (tested with versions included in Debian Jessie and Debian Jessie Backports)
 * Apache
 
@@ -85,6 +85,11 @@ Jetty is built into the Mendix Runtime, an application server is not required.
 
 ## Mobile Browsers
 
-* iOS 9 and newer (Safari)
-* Android 4.4 and newer
-* Windows Phone 8 and newer
+* iOS 9 and above (Safari)
+* Android 5.0 and above
+* Windows Phone 8 and above
+
+## Mobile Operation Systems (for the Mendix Mobile App)
+
+* iOS 9 and above
+* Android 5.0 and above

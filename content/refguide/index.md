@@ -10,4 +10,4 @@ Before installing Mendix 7, please read [System Requirements](system-requirement
 
 If you're looking for step-by-step guides to the various aspects of the Mendix Platform, browse the [Mendix 7 How-To's](/howto).
 
-{{% space_block style="flat" %}}
+{{% category_block %}}

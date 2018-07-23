@@ -9,11 +9,11 @@ apidocs-mxsdk:
   menu_categories:
     - "API Documentation"
     - "Mendix Platform SDK"
-addons:
-  space: "Other Add-ons"
+aqm:
+  space: "Application Quality Monitor"
   priority: false
   menu_categories:
-    - "Application Quality Monitor"
+    - "Application Quality Monitor Overview"
 apm:
   space: "Application Performance Monitor"
   priority: false
@@ -162,6 +162,7 @@ refguide:
     - "General"
     - "Team Server"
     - "Desktop Modeler"
+    - "Web Modeler"
     - "Runtime"
     - "Java Programming"
     - "SAP"
@@ -180,7 +181,7 @@ releasenotes:
   menu_categories:
     - "Desktop Modeler"
     - "Web Modeler"
-    - "Platform Portal"
+    - "Developer Portal"
     - "Model SDK"
     - "Platform SDK"
     - "Hybrid App"
@@ -211,4 +212,3 @@ deployment:
     - "Docker"
     - "Mendix Cloud"
     - "On-Premises"
-    - "SAP Cloud Platform"

@@ -1,6 +1,7 @@
 ---
 title: "Change Password Expiration"
 category: "How-To's"
+menu_order: 10
 description: "Describes how to change an App Contact in the Developer Portal."
 tags: ["App Contact","Developer Portal"]
 ---

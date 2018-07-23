@@ -114,6 +114,10 @@ If authentication is required, you can select which authentication methods you w
     xmlHttp.send(null);
     ```
 
+{{% alert type="warning" %}}
+Web service users cannot access REST services.
+{{% /alert %}}
+
 ### 3.3 Allowed Roles
 
 The allowed roles define which [module role](module-role) a user must have to be able to access the service. This option is only available when **Requires authentication** is set to **Yes**.
@@ -121,6 +125,8 @@ The allowed roles define which [module role](module-role) a user must have to be
 ## 4 Resources
 
 A REST service exposes a number of [resources](published-rest-resource). On a resource you can define GET, PUT, POST, PATCH, DELETE, HEAD and OPTIONS operations.
+
+You can drag an entity or a message definition onto this list to [generate a complete resource](generate-rest-resource).
 
 ## 5 Operations
 

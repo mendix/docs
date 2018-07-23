@@ -1115,3 +1115,152 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 }
 ```
 
+## 3.20 Create Environment Tags (Mendix Cloud v4 Only)
+
+### 3.20.1 Description
+
+Tags are arbitrary strings that are not interpreted by Cloud Portal. Users are able to set tags on environments. Tags serve two purposes:
+
+* Custom tags can be added to metrics (for Datadog)
+* Tags can serve as selection criteria for grouping environments into a landscape management dashboard
+
+```bash
+HTTP Method: POST
+URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/tags
+```
+
+### 3.20.2 Request
+
+#### 3.20.2.1 Parameters
+
+- _AppId_ (String): Subdomain name of an app.
+- _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production.
+
+#### 3.20.2.2 Example
+
+```bash
+POST /api/1/apps/calc/environments/acceptance/tags
+Host: deploy.mendix.com
+
+Content-Type: application/json
+Mendix-Username: richard.ford51@example.com
+Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
+
+{ 
+	"Tag": "europe"
+}
+```
+
+### 3.20.3 Output
+
+#### 3.20.3.1 Error Codes
+
+| HTTP Status | Error code | Description                         |
+| ----------- | ---------- | ----------------------------------- |
+| 404         | NOT_FOUND  | An App or Environment is not found. |
+
+#### 3.20.3.2 Example
+
+```bash
+{
+    "Tag": "A"
+}
+```
+
+## 3.21 Retrieve Environment Tags (Mendix Cloud v4 Only)
+
+### 3.21.1 Description
+
+Gets current values of environment tags.
+
+```bash
+HTTP Method: GET
+URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/tags
+```
+
+### 3.21.2 Request
+
+#### 3.21.2.1 Parameters
+
+- _AppId_ (String): Subdomain name of an app.
+- _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production.
+
+#### 3.21.2.2 Example
+
+```bash
+GET /api/1/apps/calc/environments/acceptance/tags
+Host: deploy.mendix.com
+
+Content-Type: application/json
+Mendix-Username: richard.ford51@example.com
+Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
+
+```
+
+### 3.21.3 Output
+
+#### 3.21.3.1 Error Codes
+
+| HTTP Status | Error code | Description                         |
+| ----------- | ---------- | ----------------------------------- |
+| 404         | NOT FOUND  | An App or Environment is not found. |
+
+#### 3.21.3.2 Example
+
+```bash
+{
+    "Tag": "A"
+}
+```
+
+## 3.22 Delete Environment Tags (Mendix Cloud v4 Only)
+
+### 3.21.1 Description
+
+Delete the current value of environment tags.
+
+```bash
+HTTP Method: DELETE
+URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/tags
+```
+
+### 3.21.2 Request
+
+#### 3.21.2.1 Parameters
+
+- _AppId_ (String): Subdomain name of an app.
+- _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production.
+
+#### 3.21.2.2 Example
+
+```bash
+DELETE /api/1/apps/calc/environments/acceptance/tags
+Host: deploy.mendix.com
+
+Content-Type: application/json
+Mendix-Username: richard.ford51@example.com
+Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
+{
+    "Tag": "A"
+}
+```
+
+### 3.21.3 Output
+
+#### 3.21.3.1 Response Codes
+
+| HTTP Status | Error code | Description                                                  |
+| ----------- | ---------- | ------------------------------------------------------------ |
+| 204         | No Content | The tag has been removed  or the response is empty or Tag not found |
+
+#### 3.21.3.2 Error Codes
+
+| HTTP Status | Error code | Description                         |
+| ----------- | ---------- | ----------------------------------- |
+| 404         | NOT FOUND  | An App or Environment is not found. |
+
+#### 3.21.3.3 Example
+
+```bash
+[]
+```

@@ -1,7 +1,7 @@
 ---
 title: "Navigation"
 parent: "project"
-description: "Describes the concept of navigation in apps and the properties of a profile for Mendix version 7.4 and higher."
+description: "Describes the concept of navigation in apps and the properties of a profile for Mendix version 7.4 and above."
 ---
 
 ## 1 Introduction

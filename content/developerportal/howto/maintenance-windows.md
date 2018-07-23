@@ -1,7 +1,8 @@
 ---
 title: "Configure Maintenance Windows"
 category: "How-To's"
-description: "This page describes how to cofigure the maintenance windows for your node environment."
+menu_order: 100
+description: "This page describes how to configure the maintenance windows for your node environment."
 tags: ["Deploy","App","Developer Portal"]
 ---
 

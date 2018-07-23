@@ -24,7 +24,7 @@ To enable the cloud debugging, you need to get a URL and a password from the clo
 
 {{% alert type="info" %}}
 
-The debugger can only be used in combination with single instance environments. Multi-instance environents need to be scaled down to one instance first before the debugger can be used.
+The debugger supports only debugging of single instance environments. Multi-instance environents need to be scaled down to one instance first before the debugger can be used.
 
 {{% /alert %}}
 

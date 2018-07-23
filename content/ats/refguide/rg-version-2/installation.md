@@ -91,7 +91,7 @@ The following browsers are supported to operate ATS (on their supported OS):
 
 A web server can be used to serve static content and proxy the dynamic content. A web server can be used to encrypt the communication using https.
 
-Mansystems does not support web servers other than ad hoc assistance in getting the web server up and running and based on documented installations by Mendix. For details on making ATS ready to use, see [How to Set Up Internet Information Services](/howto40/set-up-internet-information-services).  
+Mansystems does not support web servers other than ad hoc assistance in getting the web server up and running and based on documented installations by Mendix. 
 
 When using Nginx, we recommend to change the following settings in the server section:
 

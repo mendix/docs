@@ -49,11 +49,11 @@ To create a new microflow and to start building a microflow, do the following:
 1. Click the **Microflow** icon in the left menu bar. 
 2.  Click **New** on the **Microflows** side panel.
 
-   ![](attachments/microflows-wm/wm-new-microflow.png)
+    ![](attachments/microflows-wm/wm-new-microflow.png)
 
 3.  Fill out the name of the microflow in the pop-up dialog and click **Create**.
 
-   ![](attachments/microflows-wm/wm-new-microflow-dialog.png)
+    ![](attachments/microflows-wm/wm-new-microflow-dialog.png)
 
 The new microflow is created, you can now start adding logic to it by adding events or activities. 
 

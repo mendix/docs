@@ -104,11 +104,11 @@ To add association in the domain model, do the following:
 
     ![](attachments/domain-models-wm/wm-new-association.png)
 
-    {{% alert type="info" %}}
+{{% alert type="info" %}}
 
-    The module is indicated next to the entity name in the brackets. If you select the entity from another module, you will create a cross-  module association. For more information, see section [5 Cross-Module Associations](domain-models-association-properties-wm#cross-module-associations). The entities of the current module are listed first. 
+The module is indicated next to the entity name in the brackets. If you select the entity from another module, you will create a cross-  module association. For more information, see section [5 Cross-Module Associations](domain-models-association-properties-wm#cross-module-associations) in *Association Properties in the Web Modeler*. The entities of the current module are listed first. 
 
-    {{% /alert %}}  
+{{% /alert %}}  
 
 ## 6 Specifying Properties
 
@@ -159,7 +159,7 @@ For more information, see [Association Properties](domain-models-association-pro
 
 To change the association, click the line in the domain model. The **Properties** tab for the selected entity is displayed automatically. 
 
-If the association type is one-to-many or many-to-many, you can swap direction of it clicking the corresponding icon. For more information, see section [3 Multiplicity](domain-models-association-properties-wm#multiplicity). 
+If the association type is one-to-many or many-to-many, you can swap direction of it clicking the corresponding icon. For more information, see section [3 Multiplicity](domain-models-association-properties-wm#multiplicity) in *Association Properties in the Web Modeler*. 
 
 ![](attachments/domain-models-wm/wm-managing_associations.png)
 

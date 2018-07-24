@@ -13,3 +13,5 @@ One of the strengths of Mendix is that it’s easy to connect your Mendix applic
 * [How to Use Connectors and Adapters](use-connectors-and-adapters)
 * [How to Visualize Data Using the Charts Widgets](charts-tutorials)
 * [How to Visualize Data Using the ChartsJS Module](visualize-data-using-the-chartsjs-module)
+* [Howto use Mendix DataStorage APIs to build reusable microflow actions](howto-datastorage-api)
+

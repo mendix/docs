@@ -3,6 +3,10 @@ title: "Application Test Suite"
 ---
 These are the release notes for the the Mendix Application Test Suite (ATS):
 
+* [2.9](2.9)
+* [2.8](2.8)
+* [2.7](2.7)
+* [2.6](2.6)
 * [2.5](2.5)
 * [2.4](2.4)
 * [2.3](2.3)

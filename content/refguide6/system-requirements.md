@@ -44,7 +44,7 @@ The Team Server is implemented using Subversion and the Modeler uses the HTTPS p
 * Nginx (tested with versions included in Debian Jessie and Debian Jessie Backports)
 * Apache
 
-### Database Server
+### Database Server {#database-server}
 
 See [Data Storage](data-storage)
 

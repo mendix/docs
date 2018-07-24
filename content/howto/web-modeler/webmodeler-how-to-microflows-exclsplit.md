@@ -139,11 +139,11 @@ As we will verify customers by their statuses, we need to create a corresponding
 
 1. Open your [domain model](../../refguide/web-modeler/domain-models-wm).
 2.  For the Customer entity, create attribute (for more information on how to create the attribute, see section [3 Adding New Attributes](../../refguide/web-modeler/domain-models-wm)),  and do the following: <br />
-   a. Set name to *Blocked*. <br />
-   b. Set the [**Type**](../../refguide/web-modeler/domain-models-attributes-wm) to **Boolean**. <br />
-   c. Click **Create**. 
+    a. Set name to *Blocked*. <br />
+    b. Set the [**Type**](../../refguide/web-modeler/domain-models-attributes-wm) to **Boolean**. <br />
+    c. Click **Create**. 
 
-   ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-new-attribute-create-dialog.png)
+    ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-new-attribute-create-dialog.png)
 
 The new attribute for the **Customer** entity is created.
 
@@ -161,10 +161,10 @@ To configure the exclusive split with the attribute of the boolean type, follow 
     ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-microflow-not-set-parameter.png)
 
 4.  In our example the logic we are adding should apply to the status of the customer. Hence, we need to add the customer as the parameter. In the **Properties** tab for the **Parameter**, do the following:<br />
-   a. Set **Data Type** to **Object** <br />
-   b. Set **Entity** to **Customer**.
+    a. Set **Data Type** to **Object** <br />
+    b. Set **Entity** to **Customer**.
 
-   ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-parameter-properties.png)
+    ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-parameter-properties.png)
 
 5. Click the exclusive split, and in the **Properties** tab, click the **Configure condition** field.
 6.  In the **Configure condition** pop-up window, we need to select the attribute that the condition will be based on. So, in the **Configure condition** pop-up window, click  the **Variables/Attributes** tab, select **Blocked Boolean** attribute of the **Customer**, and click **Save**.
@@ -177,11 +177,11 @@ To configure the exclusive split with the attribute of the boolean type, follow 
 
 8. To show an error message to the blocked customers, select **Show message** in the **Toolbox**, and add it to the **true** flow in the microflow. 
 9.  In the **Properties** tab for the **Show message** activity, do the following:<br/>
-   a. Select **Error** as the message type.<br/>
-   b. Fill out the **Template** that will be shown to users when this message pops up (In our example: Sorry, you can't proceed with the order). <br/>
-   c. Leave the **Blocking** property for the message enabled, which prevents the user continue work until the pop-up window is closed.
+    a. Select **Error** as the message type.<br/>
+    b. Fill out the **Template** that will be shown to users when this message pops up (In our example: Sorry, you can't proceed with the order). <br/>
+    c. Leave the **Blocking** property for the message enabled, which prevents the user continue work until the pop-up window is closed.
 
-   ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-show-message-properties-true-flow.png) 
+    ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-show-message-properties-true-flow.png) 
 
 10. In the **Toolbox** tab, select the **Close Page** activity, drag and drop it to the microflow.
 

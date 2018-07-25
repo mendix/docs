@@ -81,7 +81,7 @@ To add attributes in the domain mode, do the following:
 
     ![](attachments/domain-models-wm/wm-addingattribute.png)
 
-2. Click New attribute and specify its **Name** and **Type**:
+2. Click **New attribute** and specify its **Name** and **Type**:
 
     ![](attachments/domain-models-wm/wm-createneweattribute_dialog.png)
 

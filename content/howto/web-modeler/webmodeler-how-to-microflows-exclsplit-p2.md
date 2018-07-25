@@ -2,6 +2,7 @@
 title: "Configure an Exclusive Split Step 2: Embed the Microflow to Your App"
 category: "Web Modeler"
 description: "This how to describes the process of configuring an exclusive split in the Mendix Web Modeler."
+menu_order: 20
 tags: ["web modeler", "microflows", "exclusive split", "pages"]
 ---
 
@@ -33,42 +34,40 @@ To embed the microflow with an exclusive split (the attribute of the enumeration
     ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-data-view.png)
 
 3. Drag and drop **Data View** to the page.
-4. In the **Properties** tab for the **DATA VIEW**, do the following:<br/> 
-   a. Set **Data Source** to **Context.**<br/>
-   b. Set **Entity** to **Customer**.<br/>
+4.  In the **Properties** tab for the **DATA VIEW**, do the following:<br/> 
+    a. Set **Data Source** to **Context.**<br/>
+    b. Set **Entity** to **Customer**.
 
-   ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-data-view-properties.png) <br/>
+    ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-data-view-properties.png)
 
 5. In **Toolbox**>**Widgets** >**Buttons** find **Create Object**, drag and drop it inside the Data View container (it is named **New** by default).
-6. We are going to create a new page that will be opened when a user clicks the **New** button. Open the **Properties** tab for the created button and do the following:<br/>
-   a. Set **Customer** as **Data Source**>**Entity**.<br/>
-   b. Click **Select Page**.<br/>
+6.  We are going to create a new page that will be opened when a user clicks the **New** button. Open the **Properties** tab for the created button and do the following:<br/>
+    a. Set **Customer** as **Data Source**>**Entity**.<br/>
+    b. Click **Select Page**.<br/>
 
-   ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-create-button-properties.png) <br/>
+    ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-create-button-properties.png) <br/>
 
-   c. In the **Select Page** dialog window, click **New** page.<br/>
-   d. In the **Create new page** dialog window, fill out the title of the page, for example, *New_customer*. <br/>
-   e. Tick **Pre-fill page contents based on the Customer entity** and click **Create**.<br/>
+    c. In the **Select Page** dialog window, click **New** page.<br/>
+    d. In the **Create new page** dialog window, fill out the title of the page, for example, *New_customer*. <br/>
+    e. Tick **Pre-fill page contents based on the Customer entity** and click **Create**.
 
-   ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-pre-fill-contents.png) <br/>
+    ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-pre-fill-contents.png) 
 
-   The page with customer details is generated.
-
+    The page with customer details is generated.
 7. Return to the **Customer_details** page, and in **Toolbox**>**Widgets** >**Data Containers**, find **List View**, drag and drop it to the page.
 8. Open **Properties** for the list view and set **Customer** as **Data Source**>**Entity**.
 9.  In the **Toolbox**>**Building Blocks**>**Lists** select **List 4**, drag and drop it to the list view. 
 
-    ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-list-view-list4.png) <br/>
+    ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-list-view-list4.png) 
 
-10. Delete the following elements from the list view:
-   a. The **TEXT** widget with the subtitle. 
-   b. The **IMAGE** widget.
+10. Delete the following elements from the list view:<br/>
+    a. The **TEXT** widget with the subtitle. <br/>
+    b. The **IMAGE** widget.<br/>
+11. Open the **Properties** of the **Details** button, and do the following:<br/>
+    a. Set **Events**>**On Click Action** to **Microflow**.<br/>
+    b. Click **Select microflow** and set **Show_grade_specific_page**.
 
-11. Open the **Properties** of the **Details** button, and do the following:
-    a. Set **Events**>**On Click Action** to **Microflow**.
-    b. Click **Select microflow** and set **Show_grade_specific_page**.  
-
-    ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-details-button-microflow.png) <br/>
+    ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-details-button-microflow.png) 
 
 Congratulations! Now when the user clicks **Details**, the form for the corresponding customer grade will be opened. 
 
@@ -95,11 +94,11 @@ To embed the microflow with an exclusive split (the attribute of the Boolean typ
 
     ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-data-view-select-data-view-source.png)
 
-7. In the **Properties** of the **DATA VIEW**, do the following:<br/>
-   a. Set **Data Source** to **Context.**<br/>
-   b. Set **Entity** to **Customer**.<br/>
+7.  In the **Properties** of the **DATA VIEW**, do the following:<br/>
+    a. Set **Data Source** to **Context.**<br/>
+    b. Set **Entity** to **Customer**.
 
-   ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-data-view-properties.png)<br/>
+    ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-data-view-properties.png)
 
 8.  In **Toolbox**>**Widgets**>**Buttons**, find the **Call Microflow** button, drag and drop it into the **DATA VIEW** container. 
 

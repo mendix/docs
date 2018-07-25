@@ -69,11 +69,11 @@ To add an App Store widget, do the following:
 
    a. Find the category with the **View App Store widgets** option and click it.  <br />
 
-   ![](attachments/page-editor-widgets-wm/wm-view-app-store-widgets.png)
+   ![](attachments/page-editor-widgets-wm/wm-view-app-store-widgets.png) <br />
 
-   b.  Start typing the name of the category or of a specific widget in the **Search** field. 
+   b.  Start typing the name of the category or of a specific widget in the **Search** field. <br />
 
-   ![](attachments/page-editor-widgets-wm/wm-slider.png) 
+   ![](attachments/page-editor-widgets-wm/wm-slider.png) <br />
 
 3.  Click the cloud icon to download the widget and add it to your project.
 

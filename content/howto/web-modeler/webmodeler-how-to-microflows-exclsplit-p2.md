@@ -2,7 +2,7 @@
 title: "Configure an Exclusive Split Step 2: Embed the Microflow to Your App"
 category: "Web Modeler"
 description: "This how to describes the process of configuring an exclusive split in the Mendix Web Modeler."
-menu_order: 20
+menu_order: 30
 tags: ["web modeler", "microflows", "exclusive split", "pages"]
 ---
 

@@ -10,58 +10,55 @@ output:
 
 ## 1 Introduction
 
-The Mendix business modeler support two query languages to retrieve data:
+The Mendix business modeler supports two query languages to retrieve data:
 
-* Xpath is an easy to use query language
-* OQL is similar to SQL and offers more powerful reporting facilities
+* Xpath as an easy to use query language to retrieve objects
+* OQL is a SQL based lagnuage, more focussed on powerful reporting facilities
 
 You can use these query languages in the Mendix Modeler, but both languages are also available through a Java
-API. You can use these APIs to implement powerful reusable Microflow actions through the Connector Kit.
-In addition to Xpath and OQL, the Mendix APIs also enable you to query normal SQL on your Mendix database.
+API. You can use these APIs to implement powerful reusable Microflow Activities through the Connector Kit.
+In addition to Xpath and OQL, the Mendix APIs also enable you to use standard SQL on your Mendix database.
 
-In this blogpost I’ll show you have you can build the following Microflow actions:
+This howto describes how you can build the following Microflow actions:
 
 * Retrieve advanced Xpath - returns a list of entities as specified by the Xpath expression,
 * Retrieve advanced OQL - returns a list of entities as specified by a OQL query,
 * Retrieve Dataset OQL - returns a list of entities as specified by a Dataset OQL query
 * Retrieve advanced SQL - returns a list of entities as specified by a SQL query,
-* Create first Monday of month list - returns a list of dates of the first Monday of every month in a
-specified range.
+* Create first Monday of month list - returns a list of dates of the first Monday of every month in a specified range.
 * Register global entity listeners - run custom java code for every object change.
 
  ![Microflow actions toolbox][1]
- 
+
 ## 2 Retrieve advanced Xpath
 
 The goal is to create a Microflow action where a user can specify an Xpath expression and what result entities
-are expected. The action will execute the xpath statement and return the resulting list of objects.
+are expected. The action will execute the XPath statement and return the resulting list of objects.
 
 In practice, this is not a very useful Microflow action, as you can already do this with the standard Retrieve
-action in the Mendix modeler. The goal however is to illustrate how you can use the xpath java API.
+action in the Mendix modeler. The goal however is to illustrate how you can use the Xpath java API.
 
 The java action need the following parameters:
 
-*	A string where the user can specify the xpath expression to be executed.
-*	A result entity where the user specifies what entity is to be returned.
-*	A return type which specified that the action returns a list with entities specified in the previous
+* A string where the user can specify the xpath expression to be executed.
+* A result entity where the user specifies what entity is to be returned.
+* A return type which specified that the action returns a list with entities specified in the previous
 parameter.
 
  ![][3]
  
-A type parameter is required so you define that the result list returns objects of the entity specified in the
-ResultEntity parameter:
+A type parameter is required to define what object types should be returned in the list. This is specified using the ResultEntity parameter:
  
  ![][5]
  
-Finally, we should define how we want to display the microflow in the microflow toolbox. This consists of
-a caption, a category and an icon:
+Finally, we should define how we want to display the microflow in the microflow toolbox. This consists of a caption, a category and an icon:
 
  ![][7]
  
-The implementation of this java action is pretty straight forward, you can use the Core.retrieveXPathQuery[LINK]
+The implementation of this java action is pretty straight forward, you can use the [Core.retrieveXPathQuery](https://apidocs.mendix.com/7/runtime/com/mendix/core/Core.html#retrieveXPathQuery-com.mendix.systemwideinterfaces.core.IContext-java.lang.String-)
 API to execute your Xpath expression and return a list of Mendix objects.
  
-The implementation also validates that the list returns contains objects of the entity specified.
+The implementation also validates that the list returned contains objects of the entity specified.
 
  ![][9]
  
@@ -71,31 +68,26 @@ Here’s an example data model with two entities, Department and Employee.
  
  ![][11]
  
-We can drag the java action created above from the toolbox on a microflow. In this example we want to retrieve
-all Employee objects and return a list of these objects.
+We can drag the java action created above from the toolbox on a microflow. In this example we want to retrieve all Employee objects and return a list of these objects.
  
  ![][13]
- 
- ![][15]
 
 ## 3 Retrieve objects using OQL
 
-The following example illustrates how you can use the OQL APIs to reporting purposes. OQL is the general
+The following example illustrates how you can use the OQL APIs for reporting purposes. OQL is the general
 purpose Mendix query language, very much resembling SQL. Biggest differences between OQL and SQL are:
 
-*	OQL is expressed in entity and attribute names instead of table names and column names. This makes it
-easier to use as you do not have to know the technical datamodel as stored in the database.
-*	OQL is database vendor independent, so you can run the same OQL statement on all databases supported
-by Mendix.
+*	OQL is expressed in entity and attribute names instead of table names and column names. This makes it easier to use as you do not have to know the technical datamodel as stored in the database.
+*	OQL is database vendor independent, so you can run the same OQL statement on all databases supported by Mendix.
 
 The following Non-persistent entity shows what data we are interested in for our report:
 
-*	For every department we want to know its name,
-*	The birthday of the oldest employee,
-*	The birthday of the youngest employee,
-*	Total salary for all employees,
-*	Avarage salary for all employees, 
-*	Minimum salary paid per department.
+* For every department we want to know its name,
+* The birthday of the oldest employee,
+* The birthday of the youngest employee,
+* Total salary for all employees,
+* Avarage salary for all employees, 
+* Minimum salary paid per department.
  
  ![][17]
  
@@ -103,15 +95,13 @@ Using OQL you can query this data as follows:
 
  ![][18]
  
-We can create a generic microflow action to execute OQL queries and return a list of objects. The java
-action has the following parameters:
+We can create a generic microflow action to execute OQL queries and return a list of objects. The java action has the following parameters:
 
-*	OqlQuery – a string containing the OQL query
-*	ResultEntity – what entity will hold the retrieved data
-*	A list of the ResultEntity specified as a return type.
+* OqlQuery – a string containing the OQL query
+* ResultEntity – what entity will hold the retrieved data
+* A list of the ResultEntity specified as a return type.
 
-As in the xpath example above, a Type parameter is defined to specify that the Return list used the type
-specified in ResultEntity.
+As in the xpath example above, a Type parameter is defined to specify that the Return list uses the type specified in ResultEntity.
 
 Additionally, we need to expose the java action as a microflow action, provide caption and an icon.
  
@@ -119,16 +109,12 @@ Additionally, we need to expose the java action as a microflow action, provide c
  
 The implementation of the Java action illustrated below does the following:
 
-*	Retrieve all data using Mendix API Core.retrieveOQLDataTable()
-*	Loops through all rows, creates a new object of the type specified by the used in ResultEntity. A java
-action parameter of type Entity results in a java string containing the name of the entity. This can be passed
-to Core.instantiate to create a new object.
-*	Loops through all columns of a record and copy the column value to an attribute with the same name. If an
-attribute with a column name does not exist, a message is printed, and the loop continues.
-*	The Mendix object created is added to the list to be returned.
+* Retrieve all data using Mendix API Core.retrieveOQLDataTable()
+* Loops through all rows, creates a new object of the type specified by the used in ResultEntity. A java action parameter of type Entity results in a java string containing the name of the entity. This can be passed to Core.instantiate to create a new object.
+* Loops through all columns of a record and copy the column value to an attribute with the same name. If an attribute with a column name does not exist, a message is printed, and the loop continues.
+* The Mendix object created is added to the list to be returned.
 
-Note in the domain model screenshot and the OQL screenshot above, the names of the attributes and columns match
-exactly even on case.
+Note in the domain model screenshot and the OQL screenshot above, the names of the ttributes and columns match exactly even on case.
 
  ![][21]
  
@@ -138,23 +124,19 @@ The result is a generic OQL action that you can use in your microflows as follow
 
 ## 4 Retrieve objects using OQL specified in a Dataset
 
-Instead of coding the OQL statement in a string parameter, you can also use a Dataset. This has the benefit
-that Mendix modeler will validate your OQL query.
+Instead of coding the OQL statement in a string parameter, you can also use a Dataset. This has the benefit the that Mendix Modeler will validate your OQL query.
 
  ![][40]
  
-Now we need to define a java action that will take the name of the dataset. This action will get the OQL of
-the DataSet, execute it, and return a list of mendix objects.
+Now we need to define a java action that will take the name of the dataset. This action will get the OQL of the DataSet, execute it, and return a list of mendix objects.
 
  ![][41]
 
-Microflow to execute the Java action is similar to the previous example, but instead of an OQL query, you
-specify the name of the Dataset.
+Microflow to execute the Java action is similar to the previous example, but instead of an OQL query, you specify the name of the Dataset.
 
  ![][42]
 
-The java code to get the Dataset OQL, execute the OQL, and retrieve the Objects. You can use the
-*Core.createOQLTextGetRequestFromDataSet()* method to get te OQL query or the Dataset specified.
+The java code to get the Dataset OQL, execute the OQL, and retrieve the Objects. You can use the [Core.createOQLTextGetRequestFromDataSet](https://apidocs.mendix.com/7/runtime/com/mendix/core/Core.html#createOQLTextGetRequestFromDataSet-java.lang.String-) method to get te OQL query of the Dataset specified.
 
  ![][43]
 

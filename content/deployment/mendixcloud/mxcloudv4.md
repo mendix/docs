@@ -80,6 +80,7 @@ There are some features missing in v4. Mendix will implement the following featu
 
 * The Amazon RDS maintenance window is not aligned with the CP maintenance window for an application
 * To use the debugger, you need to scale down to one instance
+* Custom error pages for 404 and 403 are not functional
 
 ## 12 Related Content
 

@@ -1,5 +1,5 @@
 ---
-title: "Howto use Mendix DataStorage APIs to build reusable microflow actions"
+title: "Use Mendix Data Storage APIs to Build Reusable Microflow Actions"
 category: "Extensibility"
 description: "Describes creating custom Microflow actions using Data Storage APIs."
 tags: ["Java","Connector Kit","microflow action","parameter type","SQL","XPath","OQL","DataStorage"]
@@ -10,7 +10,7 @@ output:
 
 ## 1 Introduction
 
-The Mendix business modeler supports two query languages to retrieve data:
+The Mendix Modeler supports two query languages to retrieve data:
 
 * Xpath as an easy to use query language to retrieve objects
 * OQL is a SQL based lagnuage, more focussed on powerful reporting facilities

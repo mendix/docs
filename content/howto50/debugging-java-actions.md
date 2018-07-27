@@ -2,11 +2,7 @@
 title: "Debugging Java Actions"
 category: 'Monitoring & Troubleshooting'
 ---
-# Debugging Java Actions
-
 The Mendix Modeler has a built-in debugger to solve errors on Microflow level. A Microflow can be extended with custom Java actions, but because these actions are text based they can only be checked on compile errors. If you run into an error in any of the Java actions, you can easily debug them utilizing the debugger of Eclipse.
-
-# Table of contents
 
 ## 1\. Preparation
 

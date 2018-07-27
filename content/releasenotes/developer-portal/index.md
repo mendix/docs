@@ -4,7 +4,7 @@ title: "Developer Portal"
 
 ## 2018
 
-#### July 23rd, 2018
+### July 23rd, 2018
 
 #### Improvements
 
@@ -13,7 +13,7 @@ title: "Developer Portal"
 * We fixed the problem wherein 404, 403, and 503 responses to a REST call translated to an HTML error page.
 * We added Telegraf as a sidecar for monitoring.
 
-#### July 17th, 2018
+### July 17th, 2018
 
 #### Improvements
 
@@ -33,7 +33,7 @@ title: "Developer Portal"
 #### Improvements
 
 * To improve integration and security between Mendix and SAP we now redirect you to SAP to provide your SAP credentials. This means that you need to use the same username (email address) for Mendix and SAP the next time you need to provide your credentials. This is currently implemented only for SAP regions **eu10 (Europe - Frankfurt)** and **us10 (US East - VA)**.
-  
+
 ### July 2nd, 2018
 
 #### Improvements
@@ -70,7 +70,7 @@ title: "Developer Portal"
 #### Improvements
 
 * We have introduced scaling via API for Mendix Cloud V4. It is now possible to scale Mendix Cloud V4 applications via the Deploy API. For instructions, see the [Deploy API](../../apidocs-mxsdk/apidocs/deploy-api).
-* We have aggregated the health icons for the acceptance and test environments in the **Nodes** dashboard and **Company Admin** screen. 
+* We have aggregated the health icons for the acceptance and test environments in the **Nodes** dashboard and **Company Admin** screen.
 
   ![](attachments/CPHealthIcon.png)
 

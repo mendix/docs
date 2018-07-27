@@ -10,8 +10,6 @@ Selenium IDE is a Firefox plugin which records and plays back user interactions 
 - How to record test scripts with Selenium IDE.
 - How to find unique CSS selectors with FirePath.
 
-# Table of contents
-
 ## 1\. Preparation
 
 Before you can start with this how-to, make sure you have completed the following prerequisites.

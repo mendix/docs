@@ -22,9 +22,9 @@ An association between a persistable entity and a non-persistable entity must st
 
 See below for more examples.
 
-# Behavior Properties
+## Behavior Properties
 
-## Delete behavior
+### Delete behavior
 
 Delete behavior defines what should happen to the associated object when an object is deleted. The following options can be configured for each end of the association.
 
@@ -50,15 +50,15 @@ This delete behavior is used if you want to be able to delete a 'Customer' only 
 
 {{% /alert %}}
 
-# Common Properties
+## Common Properties
 
-## Name
+### Name
 
 The name of the association is used to refer to it from forms, microflows, XPath constraints etc.
 
-# Type Properties
+## Type Properties
 
-## Type
+### Type
 
 Type defines whether an association is a reference (single) or a reference set (plural).
 
@@ -75,7 +75,7 @@ The examples for this property are combined with the example of the owner proper
 
 {{% /alert %}}
 
-## Owner
+### Owner
 
 This property defines whether an association has one or two owners. If there is one owner, the owner is located at the start of the arrow.
 

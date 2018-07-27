@@ -115,7 +115,7 @@ const parseHtmlFile = file => new Promise((resolve, reject) => {
     });
 
     var lastLevel = null;
-    $('h1,h2,h3,h4,h5', '.mx__page__content').each((i, el) => {
+    $('h1,h2,h3,h4,h5,h6', '.mx__page__content').each((i, el) => {
       var $el = $(el),
           id = $el.attr('id'),
           tagName = $el[0].name.toLowerCase(),

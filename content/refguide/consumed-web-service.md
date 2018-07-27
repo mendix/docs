@@ -51,6 +51,6 @@ This part contains all the operations found in the WSDL. You can expand the list
 
 The documentation of the imported web service. Here you can describe the purpose of the web service.
 
-# Calling consumed web services
+## Calling consumed web services
 
 Please refer to the section [Call Web Service Action](call-web-service-action).

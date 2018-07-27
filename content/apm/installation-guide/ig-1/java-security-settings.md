@@ -4,7 +4,7 @@ parent: "pre-requisites"
 ---
 This appendix describes how to simulate security in the Mendix Modeler and what java permissions are needed.
 
-# Simulate cloud security in the Mendix Modeler
+## Simulate cloud security in the Mendix Modeler
 
 If you run your application in a Mendix Modeler with emulated cloud security, you can use the log tool, trap tool, statistics tool and performance tool. For the additional tools you need extra permissions in java. The following procedure describes how you can configure the Mendix Modeler to simulate the same security as you get with emulated cloud security plus the security rules needed for the APMAgent.
 Procedure to simulate cloud security plus APMAgent permissions:
@@ -22,7 +22,7 @@ Procedure to simulate cloud security plus APMAgent permissions:
 -Dcom.mendix.policy.file="**<new file from step 2.>**"
 **_Note._** _If there are spaces in your path you need the double quotes around the file names!_
 
-# Needed java permissions
+## Needed java permissions
 
 For an on-premises installation, often no additional Java security is set and you don't have to do anything. If, however, your internal IT has set security on the java JVM running the Mendix Runtime you have to arrange additional permissions in Java with your internal IT as described below.
 Here follow the permissions needed in Java and what they are used for:

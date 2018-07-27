@@ -2,19 +2,19 @@
 title: "Team Server API"
 category: "API Documentation"
 ---
-# Introduction
+## Introduction
 
 The team server API allows you to retrieve the information (branches, revisions) of application models stored in our team server. You always access an application model via the context of an application (see the Deploy API for more information about retrieving applications and application identifiers).
 The image below provides a domain model representation of the concepts discussed below and how these are related:
 ![](attachments/131076/425989.png)
 
-# Authentication
+## Authentication
 
 The Cloud Portal Management API requires its users to authenticate themselves. This can be done by using API keys; for more information about this please refer to [this article](authentication "authentication").
 
-# API calls
+## API calls
 
-## Retrieve branches
+### Retrieve branches
 
 <a name="TeamServerAPI-Description" rel="nofollow"></a>Retrieves all branches that belong to the team server project of a specific app which the authenticated user has access to as a regular user.
 
@@ -23,13 +23,13 @@ HTTP Method: GET
  URL: https://deploy.mendix.com/api/1/apps/<AppId>/branches/
 ```
 
-### Request
+#### Request
 
-#### Parameter
+##### Parameter
 
 *   _AppId_ (String) : Subdomain name of an app.
 
-#### Example
+##### Example
 
 ```java
 GET /api/1/apps/calc/branches/ HTTP/1.1
@@ -40,7 +40,7 @@ Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey: 26587896-1cef-4483-accf-ad304e2673d6
 ```
 
-### Output
+#### Output
 
 List of objects with the following key-value pairs:
 
@@ -49,14 +49,14 @@ List of objects with the following key-value pairs:
 *   _LatestRevisionNumber_ (Long) : Number of the latest revision.
 *   _LatestRevisionMendixVersion_ (String) : Version string of the Mendix version of the app project in this revision.
 
-#### Error codes
+##### Error codes
 
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
 | 400 | INVALID_APPID | Invalid AppId. |
 | 404 | APP_NOT_FOUND | App not found. |
 
-#### Example
+##### Example
 
 ```java
 [{
@@ -72,7 +72,7 @@ List of objects with the following key-value pairs:
 }]
 ```
 
-## Retrieve branch
+### Retrieve branch
 
 Retrieves a specific branch that belongs to the team server project of a specific app which the authenticated user has access to as a regular user.
 
@@ -81,14 +81,14 @@ Retrieves a specific branch that belongs to the team server project of a specifi
  URL: https://deploy.mendix.com/api/1/apps/<AppId>/branches/<Name>
 ```
 
-### Request
+#### Request
 
-#### Parameters
+##### Parameters
 
 *   _AppId_ (String) : Subdomain name of an app.
 *   _Name_ (String) : Name of the branch to get or 'trunk' to get the main line. The name of the branch should be [URL-encoded](https://www.w3schools.com/tags/ref_urlencode.asp).
 
-#### Example
+##### Example
 
 ```java
 GET /api/1/apps/calc/branches/statistical%20functions HTTP/1.1
@@ -99,7 +99,7 @@ Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey: 26587896-1cef-4483-accf-ad304e2673d6
 ```
 
-### Output
+#### Output
 
 An object with the following key-value pairs:
 
@@ -108,7 +108,7 @@ An object with the following key-value pairs:
 *   _LatestRevisionNumber_ (Long) : Number of the latest revision.
 *   _LatestRevisionMendixVersion_ (String) : Version string of the Mendix version of the app project in the latest revision.
 
-#### Error codes
+##### Error codes
 
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
@@ -116,7 +116,7 @@ An object with the following key-value pairs:
 | 404 | APP_NOT_FOUND | App not found. |
 | 404 | BRANCH_NOT_FOUND | There is no branch with name 'branch name'. |
 
-#### Example
+##### Example
 
 ```java
 {
@@ -127,7 +127,7 @@ An object with the following key-value pairs:
 }
 ```
 
-## Retrieve revisions
+### Retrieve revisions
 
 Retrieves all revisions of a specific branch that belongs to the team server project of a specific app which the authenticated user has access to as a regular user.
 
@@ -136,14 +136,14 @@ HTTP Method: GET
  URL: https://deploy.mendix.com/api/1/apps/<AppId>/branches/<Name>/revisions/
 ```
 
-### Request
+#### Request
 
-#### Parameters
+##### Parameters
 
 *   _AppId_ (String) : Subdomain name of an app.
 *   _Name_ (String) : Name of the branch to get or 'trunk' to get the main line.
 
-#### Example
+##### Example
 
 ```java
 GET /api/1/apps/calc/branches/trunk/revisions/ HTTP/1.1
@@ -154,7 +154,7 @@ Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey: 26587896-1cef-4483-accf-ad304e2673d6
 ```
 
-### Output
+#### Output
 
 List of objects with the following key-value pairs:
 
@@ -164,7 +164,7 @@ List of objects with the following key-value pairs:
 *   _Author_ (String) : Creator of the revision (committer).
 *   _MendixVersion_ (String) : Version string of the Mendix version of the app project in this revision.
 
-#### Error codes
+##### Error codes
 
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
@@ -172,7 +172,7 @@ List of objects with the following key-value pairs:
 | 404 | APP_NOT_FOUND | App not found. |
 | 404 | BRANCH_NOT_FOUND | There is no branch with name 'branch name'. |
 
-#### Example
+##### Example
 
 ```java
 [{

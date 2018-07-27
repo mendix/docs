@@ -3,12 +3,19 @@
 {{- $permaLink := replace $page.Permalink "index.html" "" -}}
 {{- $permaLink := replace $permaLink ".html" "" -}}
 {{- if and (ne $path nil) (ne $path "") -}}
-    {{- $replacePath1 := $path | replaceRE "refguide[0-9]/" "refguide/" -}}
-    {{- $replacePath2 := $replacePath1 | replaceRE "howto[0-9]/" "howto/" -}}
+    {{- $replacePath1 := $path | replaceRE "refguide[0-9]+/" "refguide/" -}}
+    {{- $replacePath2 := $replacePath1 | replaceRE "howto[0-9]+/" "howto/" -}}
     {{- $replacePath := delimit (slice "content" $replacePath2) "/" -}}
+    {{- $replacePathAlternative := $replacePath | replaceRE ".md" "" -}}
+    {{- $replacePathAlternative := delimit (slice $replacePathAlternative "index.md") "/" -}}
     {{- if (fileExists $replacePath) -}}
-        {{- $replacePerma1 := $permaLink | replaceRE "refguide[0-9]/" "refguide/" -}}
-        {{- $replacePerma := $replacePerma1 | replaceRE "howto[0-9]/" "howto/" -}}
+        {{- $replacePerma1 := $permaLink | replaceRE "refguide[0-9]+/" "refguide/" -}}
+        {{- $replacePerma := $replacePerma1 | replaceRE "howto[0-9]+/" "howto/" -}}
+<link rel="canonical" href="{{ $replacePerma }}">
+    {{- else if (fileExists $replacePathAlternative) -}}
+    {{- $replacePerma1 := $permaLink | replaceRE "refguide[0-9]+/" "refguide/" -}}
+    {{- $replacePerma := $replacePerma1 | replaceRE "howto[0-9]+/" "howto/" -}}
+    {{- $replacePerma := delimit (slice $replacePerma "") "/" -}}
 <link rel="canonical" href="{{ $replacePerma }}">
     {{- else -}}
 <link rel="canonical" href="{{ $permaLink }}">

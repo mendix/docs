@@ -81,7 +81,7 @@ To embed the microflow with an exclusive split (the attribute of the Boolean typ
 
 1. We need to add an option to mark customer as blocked. To do this, open the **New_customer page** created in the previous section. For more information, see [Embedding the Microflow Having an Exclusive Split with Attribute of the Enumeration Type](#embedding-exclusive-split-enumeration).
 2. In **Toolbox**>**Widgets** >**Input Elements** select **Radio Buttons**, drag and drop it into the **DATA VIEW** container.
-3.  In the **Properties** for the radio buttons, click **Data Source**>**Attribute **and select **Blocked Boolean**. 
+3.  In the **Properties** for the radio buttons, click **Data Source**>**Attribute** and select **Blocked Boolean**. 
 
     ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-new-customer-page-blocked-attribute.png)
 

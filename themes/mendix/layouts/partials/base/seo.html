@@ -49,9 +49,7 @@
   {{ with $page.Params.tags }}
   <meta name="keywords" content="{{ delimit $page.Params.tags ", " }}">{{ else }}{{ "<!-- no tags set -->" | safeHTML }}
   {{ end }}
-
-  <link rel="canonical" href="{{ $permaLink }}">
-  <meta property="og:url" content="{{ $permaLink }}" />
+  {{ partial "canonical" . }}
 
   <link rel="alternate" type="application/atom+xml" title="Updates" href="https://docs.mendix.com/feed.xml" />
 

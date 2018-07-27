@@ -1,0 +1,18 @@
+{{- $page := . -}}
+{{- $path := .File.Path }}
+{{- $permaLink := replace $page.Permalink "index.html" "" -}}
+{{- $permaLink := replace $permaLink ".html" "" -}}
+{{- if and (ne $path nil) (ne $path "") -}}
+    {{- $replacePath1 := $path | replaceRE "refguide[0-9]/" "refguide/" -}}
+    {{- $replacePath2 := $replacePath1 | replaceRE "howto[0-9]/" "howto/" -}}
+    {{- $replacePath := delimit (slice "content" $replacePath2) "/" -}}
+    {{- if (fileExists $replacePath) -}}
+        {{- $replacePerma1 := $permaLink | replaceRE "refguide[0-9]/" "refguide/" -}}
+        {{- $replacePerma := $replacePerma1 | replaceRE "howto[0-9]/" "howto/" -}}
+<link rel="canonical" href="{{ $replacePerma }}">
+    {{- else -}}
+<link rel="canonical" href="{{ $permaLink }}">
+    {{- end -}}
+{{- else -}}
+<link rel="canonical" href="{{ $permaLink }}">
+{{- end -}}

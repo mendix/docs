@@ -55,7 +55,7 @@ To create a merge for gold, silver, and bronze customer grades in a microflow, f
 
     c. Click one of the dots that will turn into an arrow.<br/>
 
-    d.  Drag the arrow to the merge. Now the activity is connected to the merge.
+    d. Drag the arrow to the merge. Now the **Show Page activity** is connected to the merge.
 
     ![](attachments/webmodeler-how-to-merge-and-change-object/wm-connecting-activity-and-merge.png)<br/> 
 
@@ -100,7 +100,7 @@ Now we will add logic to the microflow. We have merged three flows into one, bec
 
     d. Click **Add** to finish setting the value for the **Active** attribute.<br/>
 
-    e. In the **Properties** tab>the **Behavior** section do the following: leave the **Commit** option set to **Yes**, since we are not planning to change the object further, and hence want our changes to be saved (committed) to the database.  <br/>
+    e. In the **Properties** tab > the **Behavior** section do the following: leave the **Commit** option set to **Yes**, since we are not planning to change the object further and want our changes to be saved (committed) to the database.  <br/>
 
     ![](attachments/webmodeler-how-to-merge-and-change-object/wm-change-object-properties.png)
 

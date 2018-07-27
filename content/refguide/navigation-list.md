@@ -3,7 +3,6 @@ title: "Navigation list"
 parent: "container-widgets"
 ---
 
-
 A navigation list can be used to attach an action to an entire row. Such a row is called a navigation list item.
 
 {{% alert type="info" %}}
@@ -19,7 +18,7 @@ A navigation list with three empty rows.
 
 {{% snippet file="refguide/Style+Property.md" %}}
 
-# Navigation list item
+## Navigation list item
 
 Each row in the navigation list is a navigation list item. A navigation list item can be associated with an action. Conditional visibility is available for list items.
 

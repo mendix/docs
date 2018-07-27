@@ -12,15 +12,15 @@ See [Microflow Element Common Properties](microflow-element-common-properties) f
 
 {{% /alert %}}
 
-# Input Properties
+## Input Properties
 
-## List
+### List
 
 List defines the list variable that is changed.
 
-# Action Properties
+## Action Properties
 
-## Type
+### Type
 
 Type defines the how the value changes the list.
 
@@ -33,6 +33,6 @@ Replace | The list is emptied and the value is added to the list.
 
 _Default value:_ Add
 
-## Value
+### Value
 
 Value defines the value that is used to change the list. The value needs to be entered using [microflow expressions](microflow-expressions). The microflow expression should result in an object or list of the same entity as the input list.

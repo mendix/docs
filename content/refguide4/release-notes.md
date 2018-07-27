@@ -46,11 +46,11 @@ In short:
 *   Web service calls have been improved by adding the option to store (complex) results in a variable and by providing an optional limit to the number of objects to map.
 *   The speed of the deployment process has been improved too. Iterating over working apps has never been so fast!
 
-# Full Release Notes
+## Full Release Notes
 
-## Persistence
+### Persistence
 
-### Non-persistable entities
+#### Non-persistable entities
 
 There is a new concept 'persistable' in the domain model. An entity that is not persistable cannot be stored in the database; a table is not even created for non-persistable entities (NPE). All objects of NPEs live in memory.
 You can now call a web service and store its results only in memory (not in the database). This keeps the database cleaner and helps performance.
@@ -63,27 +63,27 @@ Non-persistable entities are drawn in a different color (orange). NPEs have cert
 
 They are not allowed in places that rely on database queries, such as data sets, and XPaths. The Modeler will check this for you.
 
-### Persistable entities
+#### Persistable entities
 
 Note that objects of normal (persistable, blue) entities are not stored in the database immediately anymore. When you create an object in a microflow or click a new 'New' button (see below) the object is created in memory.
 
-### Associations
+#### Associations
 
 Associations between non-persistable entities and persistable entities must start in the non-persistable entity and have owner 'default'.
 
-### Image
+#### Image
 
 You can assign an image to entities. These images are purely for your own documentation. For example, you can assign an SAP icon to entities that originate from a SAP web service.
 
-### Import web service / XML file wizard
+#### Import web service / XML file wizard
 
 A new button in the toolbar of the domain model editor helps you to import web service operations and XML files. It starts a wizard that lets you choose between web service and XML file, existing or new and finally generates domain model entities, an import mapping (for the result of the web service operation or XML file) and optionally a microflow that calls the web service or imports an XML file.
 
-## Mobile Forms
+### Mobile Forms
 
 There is a new document type 'mobile form'. Mobile forms are meant to be displayed on mobile phones. In many ways they are similar to web forms.
 
-### Layout and widgets
+#### Layout and widgets
 
 A mobile form has a heading that shows a title and allows for the placement of two buttons. There is also a footer that either contains a menu bar (based on mobile navigation), custom content (for example, a table with buttons) or nothing (hidden).
 The set of available widgets is:
@@ -96,15 +96,15 @@ The set of available widgets is:
 *   Various buttons: microflow, save, cancel, link, back, drop-down, sign out
 *   Other: label, image viewer
 
-### Navigation
+#### Navigation
 
 In the project explorer under 'Project' you can find a new node 'Mobile'. There you can enable the mobile client for your project and configure navigation. The navigation items can be shown in the footer of a form.
 
-### Hosting an application with mobile forms
+#### Hosting an application with mobile forms
 
 You can configure the web server (IIS, Apache, nginx) to redirect to index-mobile.html. If you are running on your own machine you can go to index-mobile.html by hand or use the enhanced open browser button or menu items.
 
-### New form editor
+#### New form editor
 
 The form editor has been rebuilt from the ground up. It offers a number of cool new features:
 
@@ -116,17 +116,17 @@ The form editor has been rebuilt from the ground up. It offers a number of cool 
 *   Context-menu key (or Shift-F10) is supported: for keyboard aficionados
 *   Inline editing of captions: no need to look at the property grid while typing!
 
-## Minor microflow features
+### Minor microflow features
 
-### Commit object(s)
+#### Commit object(s)
 
 You can commit multiple objects at once using the commit action. It saves you from drawing a loop and it is very efficient (just as efficient as a batch commit in Java).
 
-### Delete object(s)
+#### Delete object(s)
 
 You can delete multiple objects at once using the delete action. Again, you do not need a loop and it is much faster.
 
-### Persistent create deprecated
+#### Persistent create deprecated
 
 When you convert a project, all existing create actions are deprecated. This will give you one warning. Right-clicking the warning allows you to find all occurrences of the create action and it offers a quick conversion.
 
@@ -134,37 +134,37 @@ The old (persistent) create immediately inserted an object in the database. The 
 
 You cannot introduce new persistent create actions. You can only make the new create action.
 
-### New create action
+#### New create action
 
 The new create action only creates the object in memory and does not insert a line into the database yet. You can now specify initial values for the fields of the new object from the create action. This saves you from adding a separate change action after creating an object.
 
-### Call web service / import XML
+#### Call web service / import XML
 
 Both call web service and import XML offer the option to store a resulting list of objects in a variable now. You no longer need to add a parameter to your mapping and associate all results with that parameter, just so you can discover the imported objects again.
 
 Whether to commit the imported objects to the database is an option now. Also, you can limit the number of objects that are returned.
 
-### Retrieve action
+#### Retrieve action
 
 Retrieve by association now allows following association in 'reverse'.
 
 When retrieving from the database you can specify an offset and a limit. This allows you to iterate of huge collections of objects without running out of memory.
 
-### New list operations
+#### New list operations
 
 There are two new list operations: find and filter. They both look through a list for elements that have an attribute set to a given value. 'Find' returns the first object that matches, 'filter' returns all of them.
 
-## Minor form features
+### Minor form features
 
 We renamed form to 'web form' to emphasize the distinction between web forms and mobile forms.
 
-### Persistent 'New' button deprecated
+#### Persistent 'New' button deprecated
 
 All New buttons in a converted project are "persistent New buttons". The persistent New button creates an object and stores it in the database immediately. The new 'New' button only creates an object in memory.
 
 A warning indicates the existence of persistent 'New' buttons. Right-clicking this warning shows you options to find all persistent New buttons and to convert them all to new 'New' buttons. Just like with microflow create actions, you only notice the difference between the old and the new 'New' button if you inspect the database after the create (and before a commit) and expect the object to be there.
 
-### Data sources
+#### Data sources
 
 We introduced the concept of 'data source' for widgets operating on entities: data view, data grid, reference set selector, image viewer. The data source specifies where the data for the widget comes from: the database, a microflow etcetera.
 
@@ -174,34 +174,34 @@ The data source also determines which features of the widget are enabled. Having
 
 A new data source wizard helps you to configure the data source. It can even create microflows for you!
 
-## Performance improvements
+### Performance improvements
 
-### Creating a deployment archive is faster
+#### Creating a deployment archive is faster
 
 The Modeler generates forms now. This means the runtime does not have to be started for generating forms, improving performance significantly.
 
-### Batching
+#### Batching
 
 The batch API has been deprecated. Because objects are not immediately inserted into the database and the new action to commit multiple objects action, you can get the same performance from microflows and Java without using the batch API.
 
-### Creating objects is faster
+#### Creating objects is faster
 
 The create action no longer inserts a row into the database and this means there is one less round trip to the database. In microflows that perform a lot of operations you will definitely notice the speedup.
 
-## Other minor features
+### Other minor features
 
-### Hide completed stories
+#### Hide completed stories
 
 The Stories dock can hide completed stories so that you can focus on what really needs to be done.
 
-### Quickly open browser
+#### Quickly open browser
 
 You can quickly open the web browser to show your application by using the F9 shortcut key. Use Ctrl+F9 if you want to preview the mobile interface of your app!
 
-### Automatically update condition settings
+#### Automatically update condition settings
 
 When adding or deleting an enumeration value, the corresponding condition settings (visibility/editablity) are automatically updated. When adding a value you even get to choose what value you want to update with.
 
-### Exception handling
+#### Exception handling
 
 If the Modeler encounters an exception, you can now easily send the stack trace and a short description of what you were doing directly to the developers. Please send us this feedback and help us improve the Modeler!

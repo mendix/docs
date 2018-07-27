@@ -87,7 +87,7 @@ To be able to use the data from your model in the REST service, you need to crea
 
   ![](attachments/publish-rest-service/AddOperation.png)
 
-6. In the same dialog box, click **Select** next to the **Microflow** field. As you do not have a microflow for this operation, select the **RESTExample** module in the dialog box and then click **New** to create a new microflow. Enter *PRS_GetGetOrderByID* for the **Name** of this new microflow: 
+6. In the same dialog box, click **Select** next to the **Microflow** field. As you do not have a microflow for this operation, select the **RESTExample** module in the dialog box and then click **New** to create a new microflow. Enter *PRS_GetGetOrderByID* for the **Name** of this new microflow:
 
    ![](attachments/publish-rest-service/AddOperationMicroflow.png)
 
@@ -100,7 +100,7 @@ To be able to use the data from your model in the REST service, you need to crea
 	![](attachments/publish-rest-service/ConvertOrderID.png)
 
 10. Add a second activity to the microflow to retrieve the **Order** based on the **OrderID**. This retrieve action from the database returns 1 order.
-	
+
 	![](attachments/publish-rest-service/RetrieveOrder.png)
 
 11. <a name="eleven"></a>From the Project Explorer, right-click the RESTExample module and select **Add** > **Mappings** > **Export Mapping** to add a new mapping named **EM_ExportOrder**:
@@ -119,7 +119,7 @@ To be able to use the data from your model in the REST service, you need to crea
 
 14. Now go back to the **PRS_GetGetOrderByID** microflow and add an **Export with mapping** activity.
 
-15. In the **Mapping** field of the dialog box, select the mapping created above in [step 11](#eleven). For the **Parameter** field, select the **Order** object retrieved with the database retrieve action in the microflow. 
+15. In the **Mapping** field of the dialog box, select the mapping created above in [step 11](#eleven). For the **Parameter** field, select the **Order** object retrieved with the database retrieve action in the microflow.
 
 16. <a name="sixteen"></a>Select **JSON** for the result, and store the output in a **String variable**. Enter *Order_JSON* for the variable's **Name**.
 
@@ -201,7 +201,7 @@ Now that you covered the error handling of the parameter parsing, it's time to h
 
 To add the error handling for those situations when the OrderID parameter is filled but no result is found, follow these steps:
 
-1.  After the activity for retrieving from the database, add an exclusive split activity with the following statement: `$Order != empty`. 
+1.  After the activity for retrieving from the database, add an exclusive split activity with the following statement: `$Order != empty`.
 
 	The true exit is connected to the activity for exporting to JSON. For the false exit, add new Create object activities that create a **NewhttpErrorNotFoundResponse** and a **NewhttpErrorNotFoundHeader**:
 
@@ -217,6 +217,6 @@ To add the error handling for those situations when the OrderID parameter is fil
 
 3. Test your new error responses as you did with the app in section [4.3 Viewing the App](#viewing).
 
-# 6 Related Content
+## 6 Related Content
 
 * For more information on creating published REST services in Mendix (including GET, POST, and DELETE operations), see [Published REST Services](/refguide/published-rest-services)

@@ -2,9 +2,6 @@
 title: "Java Memory Usage With Mendix"
 parent: "transient-objects-garbage-collecting"
 ---
-# Java Memory Usage With Mendix
-
-
 
 The Java memory is divided in different Memory Usage blocks. Each of these blocks are a snapshot of the actual memory usage of that segment. Each of the memory usage blocks can be broken down into four different values
 
@@ -19,7 +16,7 @@ For all Mendix applications the value for init and max start with identical valu
 
 ## Memory Segments
 
-#### **_Perm Gen & Code Cache    _**
+### **_Perm Gen & Code Cache    _**
 
 The Permanent Generation space is allocated to all classes and libraries. The allocated memory to the Perm Gen stays fairly static and only increases when new libraries or classes are loaded into the application. The Perm Gen is not part of the Java Heap, it is added on top of the assigned heap. For more details, see [Presenting the Permanent Generation](https://blogs.oracle.com/jonthecollector/presenting-the-permanent-generation).
 
@@ -29,7 +26,7 @@ This image on the right shows shows in detail how data moves through the memory.
 
 All information regarding the stack is stored in memory. All runtime information is stored in the Heap, all program or JVM specific information is stored in the Non Heap.
 
-All classes from the Mendix Platform, the custom java code, and user libraries are stored in the Non Heap. (Since Mendix 5 this will also hold the information from the deployment archive.  
+All classes from the Mendix Platform, the custom java code, and user libraries are stored in the Non Heap. (Since Mendix 5 this will also hold the information from the deployment archive.
 
 ![](attachments/16714070/16844066.png)
 

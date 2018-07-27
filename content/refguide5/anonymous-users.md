@@ -4,7 +4,7 @@ parent: project-security
 space: Reference Guide 5
 ---
 
-# Allow anonymous users
+## Allow anonymous users
 
 Here you can configure whether anonymous users are allowed to access your application.
 
@@ -13,11 +13,11 @@ Value | Description
 Yes   | Anonymous users are allowed. End-users do not have to sign in to access the application. If the user clicks a button of which the microflow requires a user role other than the anonymous user role, the user is presented with a sign in screen.
 No    | Anonymous users are not allowed. End-users have to sign in to access the application.
 
-# Anonymous user role
+## Anonymous user role
 
 This is the user role that end-users of your application have when they are not signed in.
 
-# Sign-in microflow
+## Sign-in microflow
 
 When anonymous users are allowed, here you can optionally configure a sign-in microflow. This microflow can be used to transfer data from the anonymous user to the signed-in user. In this microflow the current user is set to the signed-in user.
 

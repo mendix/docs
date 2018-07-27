@@ -3,7 +3,7 @@ title: "Build API"
 category: "API Documentation"
 ---
 
-# Introduction
+## Introduction
 
 The Build API allows you to manage deployment packages and create new deployment packages using our build server. You will need the information from the Teamserver API as input for these API calls.
 
@@ -11,11 +11,11 @@ The image below provides a domain model representation of the concepts discussed
 
 ![](attachments/deploy-api/api-model.png)
 
-# API calls
+## API calls
 
-## Retrieve packages
+### Retrieve packages
 
-### Description
+#### Description
 
 Retrieves all deployment packages that are available for a specific app that the authenticated user has access to as a regular user. These packages can be found if you click **Details** on an app in the **Nodes** screen in the Mendix Platform.
 
@@ -24,7 +24,7 @@ Retrieves all deployment packages that are available for a specific app that the
  URL: [https://deploy.mendix.com/api/1/apps/<AppId>/packages/ (https://deploy.mendix.com/api/1/apps/<AppId>/packages/)]
 ```
 
-### Request
+#### Request
 
 ##### Parameter
 
@@ -41,7 +41,7 @@ Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 ```
 
-### Output
+#### Output
 
 List of objects with the following key-value pairs:
 
@@ -86,9 +86,9 @@ List of objects with the following key-value pairs:
 }]
 ```
 
-## Retrieve Package
+### Retrieve Package
 
-### Description
+#### Description
 
 Retrieves a specific deployment package that is available for a specific app that the authenticated user has access to as a regular user. This package can be found if you click **Details** on an app in the **Nodes** screen in the Mendix Platform.
 
@@ -97,7 +97,7 @@ HTTP Method: GET
  URL: [https://deploy.mendix.com/api/1/apps/<AppId>/packages/<PackageId> (https://deploy.mendix.com/api/1/apps/<AppId>/packages/<PackageId>)]
 ```
 
-### Request
+#### Request
 
 ##### Parameters
 
@@ -115,7 +115,7 @@ Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 ```
 
-### Output
+#### Output
 
 An object with the following key-value pairs:
 
@@ -152,9 +152,9 @@ An object with the following key-value pairs:
 }
 ```
 
-## Delete package
+### Delete package
 
-### Description
+#### Description
 
 Deletes a specific deployment package that is available for a specific app that the authenticated user has access to as a regular user. This package can be found if you click **Details** on an app in the **Nodes** screen in the Mendix Platform.
 
@@ -163,9 +163,9 @@ Deletes a specific deployment package that is available for a specific app that 
  URL: [https://deploy.mendix.com/api/1/apps/<AppId>/packages/<PackageId> (https://deploy.mendix.com/api/1/apps/<AppId>/packages/<PackageId>)]
 ```
 
-### Request
+#### Request
 
-#### Parameters
+##### Parameters
 
 *   _AppId_ (String) : Subdomain name of an app
 *   _PackageId_ (String) : Id of the deployment package
@@ -179,7 +179,7 @@ Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 ```
 
-#### Error codes
+##### Error codes
 
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
@@ -187,7 +187,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 | 404 | PACKAGE_NOT_FOUND | Package or build job not found. |
 | 409 | PACKAGE_IN_USE | Package is still in use. |
 
-## Download package
+### Download package
 
 Downloads a specific deployment package that is available for a specific app that the authenticated user has access to as a regular user. This package can be found if you click **Details** on an app in the **Nodes** screen in the Mendix Platform.
 
@@ -196,7 +196,7 @@ Downloads a specific deployment package that is available for a specific app tha
  URL: [https://deploy.mendix.com/api/1/apps/<AppId>/packages/<PackageId>/download (https://deploy.mendix.com/api/1/apps/<AppId>/packages/<PackageId>/download)]
 ```
 
-### Request
+#### Request
 
 Parameters
 
@@ -212,7 +212,7 @@ Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 ```
 
-### Output
+#### Output
 
 Error codes
 
@@ -222,7 +222,7 @@ Error codes
 | 404 | PACKAGE_NOT_FOUND | Package or build job not found. |
 | 500 | BUILD_NOT_SUCCEEDED | Build not successful finished. |
 
-## Start building deployment package
+### Start building deployment package
 
 Start the process to build a deployment package, based on the team server project of a specific app that the authenticated user has access to as a regular user. This package can be found if you click **Details** on an app in the **Nodes** screen in the Mendix Platform. For a Sandbox, this will also trigger a deployment of the new package.
 
@@ -231,7 +231,7 @@ HTTP Method: POST
  URL: [https://deploy.mendix.com/api/1/apps/<AppId>/packages/ (https://deploy.mendix.com/api/1/apps/<AppId>/packages/)]
 ```
 
-### Request
+#### Request
 
 ##### Parameter
 
@@ -263,7 +263,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 }
 ```
 
-### Output
+#### Output
 
 An object with the following key-value pair:
 

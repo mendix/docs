@@ -6,7 +6,7 @@ parent: "understanding-the-metamodel"
 
 Microflows have parameters, a return type (the return value is defined in an object, see below), and allowed module roles. Rules are similar to microflows, but have rule parameters, and they do not have some Microflow-specific properties
 
-#### Graphical overview
+### Graphical overview
 
 ![](attachments/15466739/16842814.svg)
 

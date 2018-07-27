@@ -2,10 +2,6 @@
 title: "Transient Objects & Garbage Collecting"
 category: "Runtime"
 ---
-# Transient Objects & Garbage Collecting
-
-
-
 This article will explain the life-cycle of both persistable and non-persistable objects. How both of them flow through the platform memory. In order to understand the behavior of transient Objects there are a few facts that we need to be aware off:
 
 *   A Transient Object is an Object that is considered temporary and only exists in memory

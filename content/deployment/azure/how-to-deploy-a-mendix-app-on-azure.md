@@ -2,8 +2,6 @@
 title: "Deploy a Mendix App on Azure"
 category: "Azure"
 ---
-# How to deploy a Mendix app on Azure
-
 Mendix is now available in the Microsoft Azure marketplace as an App that can run on a virtual server in the cloud. This means you can run your own Mendix server for an hour, day, week, or even a year, and gives you full control over the environment. This how-to will guide you through a couple of simple steps to get your Mendix app up and running.
 
 **After completing this how-to you will know how to:**

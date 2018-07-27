@@ -2,11 +2,7 @@
 title: "Clearing Warning Messages in Mendix"
 category: 'Monitoring & Troubleshooting'
 ---
-# Clearing Warning Messages in Mendix
-
 This how-to explains how to eliminate design time warnings.  While these warnings will not cause the application to break, it is important to fix them to keep a clean project.
-
-# Table of contents
 
 ## 1. Viewing Warnings
 

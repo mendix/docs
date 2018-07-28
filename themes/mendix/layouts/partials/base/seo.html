@@ -74,7 +74,7 @@
     }{{ else }}{
       "@context": "http://schema.org",
       "@type": "WebPage",
-      {{ printf "\"headline\": \"%s\"" ($.Scratch.Get "title") | safeHTML }}
+      {{ printf "\"headline\": \"%s\"" ($.Scratch.Get "title") | safeHTML }},
       "url": "{{ $permaLink }}"{{ with $page.GitInfo }},
       {{ printf "\"dateModified\": \"%s\"" (dateFormat "2006-02-01T15:04:05-0700" .AuthorDate) | safeHTML }}{{ end}}{{ with $page.Params.description }},
       "description": "{{ $page.Params.description  | safeJS }}"{{ end }}

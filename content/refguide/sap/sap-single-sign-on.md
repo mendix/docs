@@ -93,7 +93,7 @@ Click **Sign Out** and you can then return to Mendix and login again with an acc
 
 ### 4.2. You are using the wrong region
 
-Check that you have selected the right region. You can be logged in to several SAP regions and if you use different email addresses for these you may get this error.
+You may get this error if you have chosen the wrong region to deploy your app. Check that you have selected the right region. You can be logged in to several SAP regions and if you use different email addresses for these then this error can occur.
 
 ### 4.3 You are using the wrong Mendix account
 

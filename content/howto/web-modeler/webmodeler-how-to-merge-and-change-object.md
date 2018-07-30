@@ -62,7 +62,7 @@ To create a merge for gold, silver, and bronze customer grades in a microflow, f
 
 4. Repeat step 3 for the flow labelled **Silver**. 
 
-As a result, we have three flows merged into one
+As a result, we have three flows merged into one.
 
 ![](attachments/webmodeler-how-to-merge-and-change-object/wm-flows-into-one.png)
 

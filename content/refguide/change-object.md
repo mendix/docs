@@ -9,21 +9,6 @@ The Change object activity can be used to change the members of an object. This 
 
 {{% alert type="info" %}}
 
-Before a customer is saved you want to make sure all characters of the zip code are capitals. You do this by creating an [event handler](event-handlers) for the entity 'Customer'. The flow that is used as event handler is shown below. It consists of a parameter and a change object activity. The parameter contains the current customer being saved.
-
-![](attachments/819203/918094.png)
-
-The properties are configured as below.
-
-| Property | Value | Reason |
-| --- | --- | --- |
-| Object | InputCustomer (Module.Customer) | The change activity applies to the current customer being saved |
-| Commit type | No | The object is changed before commit and the changes are still 'remembered' by the server when it is committed |
-| Refresh in client | No | Objects of the entity 'Customer' are automatically refreshed by the server when a object is committed in a form |
-| Change member action _set_ on _zipcode_ | toUpperCase($InputCustomer/zipcode) | An [expression](expressions) can be used to set all characters to upper case (capitals) |
-
-{{% /alert %}}{{% alert type="info" %}}
-
 See [Microflow Element Common Properties](microflow-element-common-properties) for properties that all microflow activities share (for example, caption). This page only describes the properties specific to the action.
 
 {{% /alert %}}

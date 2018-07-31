@@ -5,7 +5,7 @@ parent: "object-activities"
 
 ## 1 Introduction
 
-A change object can be used to change the members of an object. This can be done with or without committing and with or without events.
+The Change object activity can be used to change the members of an object. This can be done with or without committing and with or without events.
 
 {{% alert type="info" %}}
 
@@ -27,6 +27,8 @@ The properties are configured as below.
 See [Microflow Element Common Properties](microflow-element-common-properties) for properties that all microflow activities share (for example, caption). This page only describes the properties specific to the action.
 
 {{% /alert %}}
+
+If the microflow is called from the client, [input widgets](input-widgets) showing the changed object's attributes will be refreshed automatically. This includes updating their visibility and editability [conditions](conditions).
 
 ## 2 Input Properties
 
@@ -62,15 +64,10 @@ _Default value:_ No
 
 ### 3.2 Refresh in Client
 
-Refresh in client defines whether pages that use the entity of the object being changed are refreshed.
-
-| Option | Description |
-| --- | --- |
-| Yes | Objects of same entity are refreshed in the user's browser |
-| No | Objects of same entity are not refreshed in the user's browser |
+When set, Refresh in client will cause [data grids](data-grid), [template grids](template-grid), [list views](list-view), [reference selectors](reference-selector), [reference set selectors](reference-set-selector) and [input reference set selectors](input-reference-set-selector) to be refreshed if they show the entity of the changed object.
 
 {{% alert type="warning" %}}
-Nanoflows do not have the refresh in client option. All the changes made in a nanoflow refresh the client by default.
+When inside a [nanoflow](nanoflows), the Change object action does not have the Refresh in client option. It behaves as if set to _Yes_ if Commit type is set to _Yes_ and _No_ if Commit type is set to _No_.
 {{% /alert %}}
 
 _Default value_: No

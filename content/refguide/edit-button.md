@@ -3,6 +3,11 @@ title: "Edit button"
 parent: "control-bar"
 ---
 
+{{% alert type="info" %}}
+
+This button was removed in Mendix 7.17. Use a normal [Action button](action-button) with the **Show a page** action instead.
+
+{{% /alert %}}
 
 The edit button allows user to edit, or view, an object selected in the grid or reference set selector.
 

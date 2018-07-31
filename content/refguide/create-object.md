@@ -5,7 +5,7 @@ parent: "object-activities"
 
 ## 1 Introduction 
 
-The create-object action can be used to create an object.
+The Create object action can be used to create an object.
 
 {{% alert type="info" %}}
 
@@ -19,22 +19,33 @@ See [Microflow Element Common Properties](microflow-element-common-properties) f
 
 The entity of which you want to create an object.
 
-### 2.2 Refresh in Client
+### 2.2 Commit Type
 
-This property specifies whether pages that use the entity of the object being created are refreshed.
+Commit type defines the way the object is committed.
 
 | Option | Description |
 | --- | --- |
-| Yes | Objects of same entity are refreshed in the user's browser. |
-| No | Objects of same entity are not refreshed in the user's browser. |
-
-_Default value_: No
+| Yes with event handlers | The object is saved in the database and the [event handlers](event-handlers) are triggered |
+| Yes without event handlers | The object is saved in the database, but the [event handlers](event-handlers) are not triggered |
+| No | The object is changed without being saved in the database |
 
 {{% alert type="warning" %}}
 
-Nanoflows do not have this property. All the changes made in a nanoflow refresh the client by default.
+Nanoflows do not support committing changes without events. Committing while running in an online app sends a commit request to the Mendix Runtime and runs the events. If a Create object action is used in an offline app, the changes are committed to the offline database.
 
 {{% /alert %}}
+
+_Default value:_ No
+
+### 2.3 Refresh in Client
+
+When set, Refresh in client will cause [data grids](data-grid), [template grids](template-grid), [list views](list-view), [reference selectors](reference-selector), [reference set selectors](reference-set-selector) and [input reference set selectors](input-reference-set-selector) to be refreshed if they show the entity of the created object.
+
+{{% alert type="warning" %}}
+When inside a [nanoflow](nanoflows), the Create object action does not have the Refresh in client option. It behaves as if set to _Yes_ if Commit type is set to _Yes_ and _No_ if Commit type is set to _No_.
+{{% /alert %}}
+
+_Default value_: No
 
 ### 2.3 Initialize Members
 

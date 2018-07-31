@@ -3,7 +3,7 @@ title: "Grid action button"
 parent: "control-bar"
 ---
 
-An action button can call a microflow, open a page or do nothing. 
+An action button can perform various actions such as calling a microflow or nanoflow or opening a page. 
 
 Common properties
 

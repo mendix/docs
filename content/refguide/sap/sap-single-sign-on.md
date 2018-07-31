@@ -46,7 +46,7 @@ Enter the correct credentials and you will be signed in to the Desktop Modeler.
 
 When you create an SAP app or a new SAP Cloud Platform environment, you may be asked to sign in to SAP.
 
-This is triggered if you do not already have an active session on the SAP region you have selected.
+This is triggered if you do not already have an active session in the SAP region you have selected.
 
 First you select a region:
 
@@ -74,7 +74,7 @@ There are three possible solutions, depending on why the email addresses are dif
 
 In this case you cannot resolve the issue from within Mendix. You will continue to get the error each time you try to link your accounts.
 
-To resolve this problem, you must sign out of the SAP region so that you can then enter the correct credentials. The sign out is based on the region you are using and has the format
+To resolve this problem, you must sign out of the SAP region so that you can then enter the correct credentials. The sign out page is based on the region you are using and has the format
 
 `https://login.cf.{region}.hana.ondemand.com/`. 
 

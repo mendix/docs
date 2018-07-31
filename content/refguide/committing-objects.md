@@ -33,14 +33,7 @@ Nanoflows do not have this property. Committing while running in an online app s
 
 ### 3.2 Refresh in Client
 
-This property specifies whether pages that use the entity of the object(s) being committed are refreshed.
-
-| Option | Description |
-| --- | --- |
-| Yes | Objects of same entity are refreshed in the user's browser. |
-| No | Objects of same entity are not refreshed in the user's browser. |
-
-_Default value_: No
+When set, Refresh in client will cause [data grids](data-grid), [template grids](template-grid), [list views](list-view), [reference selectors](reference-selector), [reference set selectors](reference-set-selector) and [input reference set selectors](input-reference-set-selector) to be refreshed if they show the entity of the committed object.
 
 {{% alert type="warning" %}}
 
@@ -50,6 +43,8 @@ When committing a large number of objects, we recommend that you do not enable '
 
 {{% alert type="warning" %}}
 
-Nanoflows do not have this property. All the changes made in a nanoflow refresh the client by default.
+When inside a [nanoflow](nanoflows), the Commit object action does not have the Refresh in client option. It behaves as if set to _Yes_.
 
 {{% /alert %}}
+
+_Default value_: No

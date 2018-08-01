@@ -8,3 +8,4 @@ title: "SAP"
 * [SAP OData Connector](sap-odata-connector)
 * [SAP Data Models](sap-data-models)
 * [SAP XSUAA Connector](sap-xsuaa-connector)
+* [SAP Single Sign-On](sap-single-sign-on)

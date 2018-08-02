@@ -385,7 +385,7 @@ const checkHTMLFiles = (opts) => helpers.getFiles(SOURCEPATH)
     console.log('');
 
     if (DELETE_UNUSED_IMAGES) {
-      const unused = _.filter(allResidualFiles, f => f.indexOf('/attachments/') !== -1 && (f.indexOf('.png') !== -1 || f.indexOf('.jpg') !== -1 || f.indexOf('.jpeg') !== -1));
+      const unused = _.filter(allResidualFiles, f => f.indexOf('/attachments/') !== -1 && (f.indexOf('.png') !== -1 || f.indexOf('.jpg') !== -1 || f.indexOf('.jpeg') !== -1 || f.indexOf('.PNG') !== -1 || f.indexOf('.mp4') !== -1));
 
       _.forEach(unused, file => {
         // This is diry, should be done differently

@@ -8,7 +8,7 @@ With Java actions you can extend the functionality of your application in situat
 
 {{% alert type="info" %}}
 
-Each Java action, defined in the modeler, corresponds with a file <name of Java action>.java in subdirectory javasource/<module name>/actions of the project directory.
+Each Java action, defined in the modeler, corresponds with a file &lt;name of Java action&gt;.java in subdirectory javasource/&lt;module name&gt;/actions of the project directory.
 
 The skeletons of these .java files are generated automatically when you deploy for Eclipse (in the Project menu). For more information about creating the Java code in these files see [Java Programming](java-programming).
 
@@ -24,7 +24,11 @@ The name of the Java action is used to refer to it from a call to it in a microf
 
 A Java action has zero or more parameters. Parameters are the means by which you pass data into the Java action. In the Java code you can access the values of the parameters.
 
-Each parameter has a name and a type. See [Data Types](data-types) for the possible standard parameter types. When the type is Object or List, you must also select its entity type, which can be either a specific entity or a type parameter. The type parameter postpones the selection of the actual entity type until the Java action is used in a microflow. This allows your Java action to accept a (list of) Mendix object(s) of arbitrary entity type.
+Each parameter has a name, a type, a category, and a description. 
+
+Use categories to keep the parameters apart in the [Java Action Call](java-action-call). If you don't specify a category the parameter will appear in the _Input_ group.
+
+See [Data Types](data-types) for the possible standard parameter types. When the type is Object or List, you must also select its entity type, which can be either a specific entity or a type parameter. The type parameter postpones the selection of the actual entity type until the Java action is used in a microflow. This allows your Java action to accept a (list of) Mendix object(s) of arbitrary entity type.
 
 The other types supported by Java actions are described below.
 

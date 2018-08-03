@@ -46,7 +46,13 @@ Once the app has been created you can continue with section [2.3 Set Up Region](
 
 ### 2.3 Set Up Region<a name='SetUpRegion'></a>
 
-You are now prompted with an SAP Cloud Platform login screen. Select the region where your SAP Cloud Platform is located. Make sure that you have enough quota in this region for your organization to run a Mendix app.
+You are now prompted with an SAP Cloud Platform login screen. Select the region where your SAP Cloud Platform is located.
+
+Make sure that you have enough quota in this region for your organization to run a Mendix app. You will need enough quota to create:
+
+* a database
+* a route
+* a binding to XSUAA
 
 ![](attachments/sap-cloud-platform/01-sap-select-region.png)
 

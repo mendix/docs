@@ -2,13 +2,13 @@ const path = require('path');
 const _ = require('lodash');
 const cheerio = require('cheerio');
 const Promise = require('bluebird');
-const helpers = require('./helpers');
 const yamlFront = require('yaml-front-matter');
 const YAML = require('yamljs');
 const algoliasearch = require('algoliasearch');
 const moment = require('moment');
-const commandLineHelpers = require('./helpers/command_line');
 
+const { readFile, isFile, getFiles, readHtmlFiles, gulpErr } = require('./helpers');
+const commandLineHelpers = require('./helpers/command_line');
 const log = commandLineHelpers.log('algolia');
 
 let SOURCEFOLDER = null,
@@ -35,9 +35,9 @@ const getSourceFiles = files => {
         file.slug = parsed.name;
         file.space = spacesObj[dirName];
 
-        if (helpers.isFile(base + '.md')) {
+        if (isFile(base + '.md')) {
           file.sourcePath = base + '.md';
-        } else if (helpers.isFile(base + '.html')) {
+        } else if (isFile(base + '.html')) {
           file.sourcePath = base + '.html';
         }
 
@@ -62,7 +62,7 @@ const getSourceFiles = files => {
 const readSourceFiles = files => {
   return Promise.all(_.map(files, file => {
     return new Promise((resolve, reject) => {
-      helpers.readFile(file.sourcePath).then(contents => {
+      readFile(file.sourcePath).then(contents => {
         file.source = contents.toString();
         try {
           file.meta = yamlFront.loadFront(contents);
@@ -231,8 +231,8 @@ const indexFiles = (opts) => {
   TARGETFOLDER = opts.target;
   SPACES = opts.spacesFile;
   log(`Indexing html in ${TARGETFOLDER}`);
-  helpers.getFiles(TARGETFOLDER)
-    .then(helpers.readHtmlFiles)
+  getFiles(TARGETFOLDER)
+    .then(readHtmlFiles)
     .then(getSourceFiles)
     .then(readSourceFiles)
     .then(parseHtmlFiles)
@@ -300,7 +300,7 @@ const indexFiles = (opts) => {
       }
     })
     .catch(err => {
-      helpers.gulpErr('algolia', err);
+      gulpErr('algolia', err);
       //throw err;
     });
 };

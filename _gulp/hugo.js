@@ -1,8 +1,9 @@
 const spawn = require('child_process').spawn;
 const { beep } = require('gulp-util');
 const _ = require('lodash');
-const gulpErr = require('./helpers').gulpErr;
+
 const commandLineHelpers = require('./helpers/command_line');
+const { gulpErr } = require('./helpers');
 
 const { red } = commandLineHelpers.colors;
 const log = commandLineHelpers.log('hugo');

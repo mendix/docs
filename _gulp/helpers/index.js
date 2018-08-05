@@ -9,7 +9,7 @@ const async = require('async');
 const fs = require('fs');
 const { normalizeSafe } = require('upath');
 
-const commandLineHelpers = require('./helpers/command_line');
+const commandLineHelpers = require('./command_line');
 
 const { cyan, red } = commandLineHelpers.colors;
 

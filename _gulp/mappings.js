@@ -1,6 +1,3 @@
-const helpers = require('./helpers');
-const gulpErr = helpers.gulpErr;
-const touch = helpers.touch;
 const fs = require('fs');
 const { replaceExtension } = require('gulp-util');
 const path = require('path');
@@ -9,6 +6,12 @@ const Promise = require('bluebird');
 const _ = require('lodash');
 
 const commandLineHelpers = require('./helpers/command_line');
+const { gulpErr, touch } = require('./helpers');
+const CONFIG = require('./config');
+
+const SRC_FILE = CONFIG.PATHS.redirect_mappings.src;
+const DEST_FILE = CONFIG.PATHS.redirect_mappings.dest;
+const CONTENT_FOLDER = CONFIG.PATHS.redirect_mappings.contentFolder;
 
 const { cyan } = commandLineHelpers.colors;
 const log = commandLineHelpers.log('mapping');
@@ -44,7 +47,7 @@ const readMappingsFile = (src, type) => new Promise((resolve, reject) => {
         try {
           mappings = JSON.parse(data);
         } catch (e) {
-          gulpErr('write:mappings', `Cannot read ${opts.src}: ${e}`);
+          gulpErr('write:mappings', `Cannot read ${SRC_FILE}: ${e}`);
         }
         if (mappings) {
           resolve(data);
@@ -56,15 +59,15 @@ const readMappingsFile = (src, type) => new Promise((resolve, reject) => {
   }
 });
 
-const mappings = (opts) => new Promise((resolve, reject) => {
-  helpers.touch(opts.dest);
-  readMappingsFile(opts.src, opts.type)
+const redirect_mappings = () => new Promise((resolve, reject) => {
+  touch(DEST_FILE);
+  readMappingsFile(SRC_FILE, 'js')
     .then(mappings => {
       if (mappings.redirect) {
         const red = _.reverse(_.sortBy(mappings.redirect, mapping => mapping.from.length));
         let mappingsArr = [
               '############################################################################################',
-              `# Mendix redirect mapping, generated on ${opts.buildDate} using \'gulp write:mappings\'`,
+              `# Mendix redirect mapping, generated on ${CONFIG.BUILDDATE} using \'gulp write:mappings\'`,
               '############################################################################################',
               ''
             ],
@@ -73,7 +76,7 @@ const mappings = (opts) => new Promise((resolve, reject) => {
 
         _.forEach(red, r => {
           if (!r.to || !r.from) {
-            return `Error reading ${opts.src}, this is not a correct mapping: ${JSON.stringify(r, null, 4)}`;
+            return `Error reading ${SRC_FILE}, this is not a correct mapping: ${JSON.stringify(r, null, 4)}`;
           } else {
 
             if (r.disabled) {
@@ -84,7 +87,7 @@ const mappings = (opts) => new Promise((resolve, reject) => {
             const from = r.from.trim();
             const isCase = 'undefined' !== typeof r.case ? r.case : false;
             const lastChar = to.substr(-1);
-            const mdFile = path.join((opts.contentFolder ? opts.contentFolder : '.'), '.' + to + (lastChar === '/' ? 'index.md' : '.md'));
+            const mdFile = path.join((CONTENT_FOLDER ? CONTENT_FOLDER : '.'), '.' + to + (lastChar === '/' ? 'index.md' : '.md'));
             const htmlFile = replaceExtension(mdFile, '.html');
             const hash = new Buffer(`${from}-${to}`).toString('base64');
             const caseSensitive = isCase || to.toLowerCase() === from.toLowerCase() || to.toLowerCase().indexOf(from.toLowerCase()) !== -1;
@@ -109,15 +112,15 @@ const mappings = (opts) => new Promise((resolve, reject) => {
         const mappingsFile = mappingsArr.join('\n');
 
         if (errors.length > 0) {
-          reject(`You have errors in your mapping ${cyan(opts.src)} file:\n\n${errors.join('\n')}\n`);
-        } else if (opts.write) {
-          touch(opts.dest);
+          reject(`You have errors in your mapping ${cyan(SRC_FILE)} file:\n\n${errors.join('\n')}\n`);
+        } else if (CONFIG.MAPPING_WRITE) {
+          touch(DEST_FILE);
 
-          fs.writeFile(opts.dest, mappingsFile, err => {
+          fs.writeFile(DEST_FILE, mappingsFile, err => {
             if (err) {
               reject(`Error writing mappings: ${err}`)
             } else {
-              log(`Mappings written to ${opts.dest}`);
+              log(`Mappings written to ${DEST_FILE}`);
               resolve();
             }
           })
@@ -126,7 +129,7 @@ const mappings = (opts) => new Promise((resolve, reject) => {
           resolve();
         }
       } else {
-        reject(`No redirects found in ${opts.src}`);
+        reject(`No redirects found in ${SRC_FILE}`);
       }
     })
     .catch((err) => {
@@ -135,5 +138,5 @@ const mappings = (opts) => new Promise((resolve, reject) => {
 });
 
 module.exports = {
-  run: mappings
+  redirect_mappings
 }

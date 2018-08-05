@@ -1,7 +1,7 @@
-const { readFile, getFiles } = require('./helpers');
 const Promise = require('bluebird');
 const _ = require('lodash');
 
+const { readFile, getFiles } = require('./helpers');
 const commandLineHelpers = require('./helpers/command_line');
 
 const { cyan, red, yellow, white } = commandLineHelpers.colors;

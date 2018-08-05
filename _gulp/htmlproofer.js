@@ -7,11 +7,11 @@ const shell = require('shelljs');
 const _ = require('lodash');
 const cheerio = require('cheerio');
 const Promise = require('bluebird');
-const helpers = require('./helpers');
 const moment = require('moment');
 const RSS = require('rss');
 const { normalizeSafe } = require('upath');
 
+const { isFile, getFiles, readHtmlFiles, gulpErr, checkLinks, getAllFiles } = require('./helpers');
 const commandLineHelpers = require('./helpers/command_line');
 
 const { cyan, yellow, red } = commandLineHelpers.colors;
@@ -222,7 +222,7 @@ const validateFiles = files => Promise.resolve(_.map(files, file => {
           verbose && console.log(`hash err ${file.path} to ${linkedFile.basePath}`, link);
         }
       }
-    } else if (!helpers.isFile(fullPath)) {
+    } else if (!isFile(fullPath)) {
       file[errorKey].push(`${red('[LINK]   ')} ${cyan(link)} does not exist. Path: ${cyan(linkPath)} (.html | index.html) is unresolved`);
       verbose && console.log(`err ${file.path}`, link);
     }
@@ -235,7 +235,7 @@ const validateFiles = files => Promise.resolve(_.map(files, file => {
     if (allFiles.indexOf(fullPath) !== -1) {
       return;
     }
-    if (!helpers.isFile(fullPath)) {
+    if (!isFile(fullPath)) {
       file[errorKey].push(`${red('[IMAGE]  ')} ${cyan(image)} does not exist. Path: ${cyan(fullPath)} is unresolved`);
       verbose && console.log(`err image ${file.path}`, image);
     }
@@ -248,7 +248,7 @@ const validateFiles = files => Promise.resolve(_.map(files, file => {
     if (allFiles.indexOf(fullPath) !== -1) {
       return;
     }
-    if (!helpers.isFile(fullPath)) {
+    if (!isFile(fullPath)) {
       file[errorKey].push(`${red('[VIDEO]  ')} ${cyan(video)} does not exist. Path: ${cyan(fullPath)} is unresolved`);
       verbose && console.log(`err image ${file.path}`, video);
     }
@@ -274,8 +274,7 @@ const validateFiles = files => Promise.resolve(_.map(files, file => {
 }));
 
 const checkAllLinks = (links, files) => {
-  return helpers
-    .checkLinks(links)
+  return checkLinks(links)
     .then(results => {
       return _.map(files, file => {
         if (file.external && file.external.links) {
@@ -357,8 +356,8 @@ const checkExternal = files => {
   return checkAllLinks(uniq, files);
 }
 
-const checkHTMLFiles = (opts) => helpers.getFiles(SOURCEPATH)
-  .then(helpers.readHtmlFiles)
+const checkHTMLFiles = (opts) => getFiles(SOURCEPATH)
+  .then(readHtmlFiles)
   .then(parseHtmlFiles)
   .then(validateFiles)
   .then(checkExternal)
@@ -443,7 +442,7 @@ const checkHTMLFiles = (opts) => helpers.getFiles(SOURCEPATH)
     });
   })
   .catch(err => {
-    helpers.gulpErr('htmlproofer', err);
+    gulpErr('htmlproofer', err);
     opts.callback(true);
   });
 
@@ -451,15 +450,14 @@ const checkFiles = (opts) => {
   SOURCEPATH = normalizeSafe(opts.dir);
   EXTERNAL = opts.external || false;
   log(`Testing html in ${SOURCEPATH}`);
-  helpers
-    .getAllFiles(SOURCEPATH)
+  getAllFiles(SOURCEPATH)
     .then(files => {
       allFiles = files;
       allResidualFiles = files;
       checkHTMLFiles(opts);
     })
     .catch(err => {
-      helpers.gulpErr('htmlproofer', err);
+      gulpErr('htmlproofer', err);
       opts.callback(true);
     });
 };

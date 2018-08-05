@@ -1,4 +1,4 @@
-const gutil = require('gulp-util');
+const { PluginError } = require('gulp-util');
 const path = require('path');
 const shell = require('shelljs');
 const recursive = require('recursive-readdir');
@@ -9,6 +9,10 @@ const async = require('async');
 const fs = require('fs');
 const { normalizeSafe } = require('upath');
 
+const commandLineHelpers = require('./helpers/command_line');
+
+const { cyan, red } = commandLineHelpers.colors;
+
 const readFile = Promise.promisify(require('fs').readFile);
 const writeFile = Promise.promisify(require('fs').writeFile);
 
@@ -17,11 +21,12 @@ let TESTED = [];
 let TOTAL = 0;
 
 const throwError = (plugin, error) => {
-  const e = new gutil.PluginError({
+  gulpErrorLog = commandLineHelpers.log(`err:${plugin}`);
+  const e = new PluginError({
     plugin: plugin,
     message: error
   }, { showStack: true });
-  gutil.log(e.message);
+  gulpErrorLog(e.message);
 }
 
 const isFile = filePath => {
@@ -80,6 +85,16 @@ const getGenerateFiles = (dir) => {
   });
 };
 
+const readJSON = files => Promise.all(files.map(file => readFile(file).then(content => {
+  let json;
+  try {
+    json = JSON.parse(content);
+    return json;
+  } catch (e) {
+    throw new Error(`${cyan(file)}: ${red(e)}`);
+  }
+})));
+
 const readHtmlFile = filePath => new Promise((resolve, reject) => {
   readFile(filePath, "utf8").then(content => {
     resolve({
@@ -122,7 +137,6 @@ const checkLink = (url, cb) => {
     if (100 * (TESTED.length / TOTAL) % 10 === 0) {
       console.log(100 * (TESTED.length / TOTAL) + "% TESTED");
     }
-    //console.log(TESTED.length, res);
     cb();
   });
 }
@@ -141,6 +155,7 @@ const checkLinks = urls => new Promise((resolve, reject) => {
 });
 
 const writeAssetMappings = (currentFolder) => new Promise((resolve, reject) => {
+  const assetMappingLog = commandLineHelpers.log('asset mapping');
   const indexMappingHeader = [
     '############################################################################################',
     `# Mendix assets redirect mapping`,
@@ -179,10 +194,10 @@ const writeAssetMappings = (currentFolder) => new Promise((resolve, reject) => {
 
   fs.writeFile(indexDest, indexes, err => {
     if (err) {
-      gutil.log(`Error writing asset mappings: ${err}`)
+      assetMappingLog(`Error writing asset mappings: ${err}`)
       reject();
     } else {
-      gutil.log(`Asset mappings written to ${indexDest}`);
+      assetMappingLog(`Asset mappings written to ${indexDest}`);
       resolve();
     }
   });
@@ -193,6 +208,7 @@ module.exports = {
   gulpErr: throwError,
   touch: touchFile,
   isFile,
+  readJSON,
   getFiles,
   getAllFiles,
   readHtmlFile,

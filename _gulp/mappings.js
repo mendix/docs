@@ -2,13 +2,16 @@ const helpers = require('./helpers');
 const gulpErr = helpers.gulpErr;
 const touch = helpers.touch;
 const fs = require('fs');
-const gutil = require('gulp-util');
+const { replaceExtension } = require('gulp-util');
 const path = require('path');
 const shell = require('shelljs');
 const Promise = require('bluebird');
 const _ = require('lodash');
 
-const mapping_indicator = gutil.colors.cyan("[MAPPING]");
+const commandLineHelpers = require('./helpers/command_line');
+
+const { cyan } = commandLineHelpers.colors;
+const log = commandLineHelpers.log('mapping');
 
 const escapeMapping = str => {
   return str
@@ -54,7 +57,7 @@ const readMappingsFile = (src, type) => new Promise((resolve, reject) => {
 });
 
 const mappings = (opts) => new Promise((resolve, reject) => {
-
+  helpers.touch(opts.dest);
   readMappingsFile(opts.src, opts.type)
     .then(mappings => {
       if (mappings.redirect) {
@@ -74,7 +77,7 @@ const mappings = (opts) => new Promise((resolve, reject) => {
           } else {
 
             if (r.disabled) {
-              gutil.log(`${mapping_indicator} ${r.from} => ${r.to} disabled`)
+              log(`${r.from} => ${r.to} disabled`);
               return true;
             }
             const to = r.to.trim();
@@ -82,16 +85,16 @@ const mappings = (opts) => new Promise((resolve, reject) => {
             const isCase = 'undefined' !== typeof r.case ? r.case : false;
             const lastChar = to.substr(-1);
             const mdFile = path.join((opts.contentFolder ? opts.contentFolder : '.'), '.' + to + (lastChar === '/' ? 'index.md' : '.md'));
-            const htmlFile = gutil.replaceExtension(mdFile, '.html');
+            const htmlFile = replaceExtension(mdFile, '.html');
             const hash = new Buffer(`${from}-${to}`).toString('base64');
             const caseSensitive = isCase || to.toLowerCase() === from.toLowerCase() || to.toLowerCase().indexOf(from.toLowerCase()) !== -1;
 
             if (!shell.test('-e', mdFile) && !shell.test('-e', htmlFile)) {
-              errors.push(`There is no file for the mapping in mappings.json to: ${gutil.colors.cyan(to)}`);
+              errors.push(`There is no file for the mapping in mappings.json to: ${cyan(to)}`);
             } else if (to === from) {
-              errors.push(`${gutil.colors.cyan(to)} is the same as ${gutil.colors.cyan(from)}`);
+              errors.push(`${cyan(to)} is the same as ${cyan(from)}`);
             } else if (done.indexOf(hash) !== -1) {
-              errors.push(`You have a duplicate mapping for. ${gutil.colors.cyan(from)} => ${gutil.colors.cyan(to)}`);
+              errors.push(`You have a duplicate mapping for. ${cyan(from)} => ${cyan(to)}`);
             }
             let mappingStr = '',
                 fromStr = (from.substr(-1) === '/' ? from + '?' : from + '/?');
@@ -106,7 +109,7 @@ const mappings = (opts) => new Promise((resolve, reject) => {
         const mappingsFile = mappingsArr.join('\n');
 
         if (errors.length > 0) {
-          reject(`You have errors in your mapping ${gutil.colors.cyan(opts.src)} file:\n\n${errors.join('\n')}\n`);
+          reject(`You have errors in your mapping ${cyan(opts.src)} file:\n\n${errors.join('\n')}\n`);
         } else if (opts.write) {
           touch(opts.dest);
 
@@ -114,7 +117,7 @@ const mappings = (opts) => new Promise((resolve, reject) => {
             if (err) {
               reject(`Error writing mappings: ${err}`)
             } else {
-              gutil.log(`Mappings written to ${opts.dest}`);
+              log(`Mappings written to ${opts.dest}`);
               resolve();
             }
           })

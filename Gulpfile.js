@@ -84,7 +84,6 @@ gulp.task('clean:css', `Cleanup the ${paths.styles.dest} directory`, () => {
 
 // WRITE
 gulp.task('write:mappings', `Write mappings from _assets/mappings/redirect.json to ${DIST_FOLDER}/mappings/redirect.map`, done => {
-  helpers.touch(path.join(CURRENTFOLDER, '/_site/mappings/indexes.map'));
   mappings
     .run({
       write: true,

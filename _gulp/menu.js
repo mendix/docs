@@ -1,29 +1,11 @@
 const helpers = require('./helpers');
-const gulpErr = helpers.gulpErr;
-const fs = require('fs');
-const recursive = require('recursive-readdir');
 const Promise = require('bluebird');
-const gutil = require('gulp-util');
-const shell = require('shelljs');
 const _ = require('lodash');
 
-const cyan = str => gutil.colors.cyan(str);
-const yellow = str => gutil.colors.yellow(str);
-const red = str => gutil.colors.red(str);
-const white = str => gutil.colors.white(str);
+const commandLineHelpers = require('./helpers/command_line');
 
-const menu_indicator = cyan("[MENU]");
-
-const readJSON = files => Promise.all(files.map(file => helpers.readFile(file).then(content => {
-  let json;
-  try {
-    json = JSON.parse(content);
-    return json;
-  } catch (e) {
-    throw new Error(`${cyan(file)}: ${red(e)}`);
-  }
-})));
-const checkJSON = jsonArr => Promise.all(jsonArr.map(jsonFile => parseAndCheck(jsonFile)))
+const { cyan, yellow, red, white } = commandLineHelpers.colors;
+const log = commandLineHelpers.log('menu');
 
 const parseAndCheck = menuJSON => new Promise((resolve, reject) => {
   const categories = menuJSON.categories.map(cat => cat.toLowerCase()),
@@ -32,29 +14,31 @@ const parseAndCheck = menuJSON => new Promise((resolve, reject) => {
 
   _.forEach(pages, page => {
     if (page.category && categories.indexOf(page.category.toLowerCase()) === -1) {
-      gutil.log(`${menu_indicator} ${white("CATEGORY ")} page: ${cyan(page.url)} has category ${cyan(page.category)} which does not exist`)
+      log(`${white("CATEGORY ")} page: ${cyan(page.url)} has category ${cyan(page.category)} which does not exist`)
     }
     if (page.parent && _.findIndex(pages, p => p.id.toLowerCase() === page.parent.toLowerCase() && p.dir.indexOf(page.dir) !== -1) === -1) {
-      gutil.log(`${menu_indicator} ${yellow("PARENT   ")} page: ${cyan(page.url)} has parent ${cyan(page.parent)} which does not exist`)
+      log(`${yellow("PARENT   ")} page: ${cyan(page.url)} has parent ${cyan(page.parent)} which does not exist`)
     }
     if (!page.category && !page.parent && categoriesOrig.indexOf(page.title) === -1 && _.compact(page.url.split('/')).length > 1) {
-      gutil.log(`${menu_indicator} ${red("MISSING  ")} page: ${cyan(page.url)} has no category/parent, but is also not a category. Please check the page!`)
+      log(`${red("MISSING  ")} page: ${cyan(page.url)} has no category/parent, but is also not a category. Please check the page!`)
     }
   });
   resolve(null);
-})
+});
+
+const checkJSON = jsonArr => Promise.all(jsonArr.map(jsonFile => parseAndCheck(jsonFile)))
 
 const checkMenus = (path, cb) => {
   helpers
     .getFiles(path, '.json')
-    .then(readJSON)
+    .then(helpers.readJSON)
     .then(checkJSON)
     .then(files => {
       cb(false)
     })
     .catch(err => {
-      gutil.log(`${menu_indicator} ${red("ERROR  ")} ${err}`);
-      gutil.log(`${menu_indicator} ${red("ERROR  ")} It seems one of the JSON files cannot be read. Might be a comma left somewhere? Please check the files in ${cyan('/json/menu')}`);
+      log(`${red("ERROR  ")} ${err}`);
+      log(`${red("ERROR  ")} It seems one of the JSON files cannot be read. Might be a comma left somewhere? Please check the files in ${cyan('/json/menu')}`);
       cb(true);
     })
 }

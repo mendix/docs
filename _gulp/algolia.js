@@ -7,13 +7,19 @@ const YAML = require('yamljs');
 const algoliasearch = require('algoliasearch');
 const moment = require('moment');
 
-const { readFile, isFile, getFiles, readHtmlFiles, gulpErr } = require('./helpers');
+const { isFile, getFiles, readHtmlFiles, gulpErr, readSourceFiles } = require('./helpers');
 const commandLineHelpers = require('./helpers/command_line');
 const log = commandLineHelpers.log('algolia');
 
 let SOURCEFOLDER = null,
     TARGETFOLDER = null,
     SPACES = null;
+
+const DEBUG = !!process.env.DEBUG;
+
+if (DEBUG) {
+  log('Debugging enabled, will not push to Algolia');
+}
 
 let spacesObj = {};
 let indexedNum = 0;
@@ -59,24 +65,16 @@ const getSourceFiles = files => {
   })
 }
 
-const readSourceFiles = files => {
-  return Promise.all(_.map(files, file => {
-    return new Promise((resolve, reject) => {
-      readFile(file.sourcePath).then(contents => {
-        file.source = contents.toString();
-        try {
-          file.meta = yamlFront.loadFront(contents);
-        } catch(e) {
-          console.log(e);
-        }
-        resolve(file);
-      }).catch(e => {
-        console.log(e);
-        resolve(file);
-      })
-    })
-  }))
-}
+const parseSourceFiles = files =>
+  readSourceFiles(files, (file, contents, resolve) => {
+    file.source = contents.toString();
+    try {
+      file.meta = yamlFront.loadFront(contents);
+    } catch(e) {
+      console.log(e);
+    }
+    resolve(file);
+  });
 
 // ******************** ALGOLIA HELPERS ***********************
 // These are copied from https://github.com/algolia/algoliasearch-jekyll/blob/master/lib/record_extractor.rb and rewritten in Javascript
@@ -207,6 +205,7 @@ const parseHtmlFile = file => {
             item.mendix_version = file.mendix_version;
           }
 
+         //  console.log(item);
           index.push(item);
 
           indexedNum++;
@@ -234,11 +233,14 @@ const indexFiles = (opts) => {
   getFiles(TARGETFOLDER)
     .then(readHtmlFiles)
     .then(getSourceFiles)
-    .then(readSourceFiles)
+    .then(parseSourceFiles)
     .then(parseHtmlFiles)
     .then(() => {
       if (process.env.ALGOLIA_WRITE_KEY && opts.algolia_index && opts.algolia_app_id) {
         log(`Indexed ${index.length} items`);
+        if (DEBUG) {
+          return;
+        }
         const client = algoliasearch(opts.algolia_app_id, process.env.ALGOLIA_WRITE_KEY);
         const algoliaIndex = client.initIndex(opts.algolia_index);
         log(`Create settings for ${opts.algolia_index}`);
@@ -306,6 +308,5 @@ const indexFiles = (opts) => {
 };
 
 module.exports = {
-  run: indexFiles,
-  readSourceFiles
+  run: indexFiles
 };

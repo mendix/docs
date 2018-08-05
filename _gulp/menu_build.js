@@ -5,7 +5,7 @@ const yamlFront = require('yaml-front-matter');
 const YAML = require('yamljs');
 const { normalizeSafe } = require('upath');
 
-const {getGenerateFiles, isFile, readFile, writeFile} = require('./helpers');
+const {getGenerateFiles, isFile, readFile, writeFile, readSourceFiles} = require('./helpers');
 const commandLineHelpers = require('./helpers/command_line');
 
 const { cyan, red } = commandLineHelpers.colors;
@@ -56,28 +56,20 @@ const getSourceFilesPromise = (opts) => {
 }
 
 
-const readSourceFiles = files =>
-  Promise.all(_.map(files, file => {
-    return new Promise((resolve, reject) => {
-      readFile(file.sourcePath).then(contents => {
-        let meta = null;
-        try {
-          meta = yamlFront.loadFront(contents);
-        } catch(e) {
-          console.log(e);
-        }
-        if (meta !== null) {
-          file.meta = true;
-          _.merge(file, _.omit(meta, ['__content', 'space']));
-        }
-        resolve(file);
-      }).catch(e => {
-        console.log(e);
-        resolve(file);
-      })
-    })
-  }));
-
+const parseSourceFiles = files =>
+  readSourceFiles(files, (file, contents, resolve) => {
+    let meta = null;
+    try {
+      meta = yamlFront.loadFront(contents);
+    } catch(e) {
+      console.log(e);
+    }
+    if (meta !== null) {
+      file.meta = true;
+      _.merge(file, _.omit(meta, ['__content', 'space']));
+    }
+    resolve(file);
+  });
 
 const filterAndBindSpace = (files) =>
   _.map(_.keys(SPACES), (spaceKey) => {
@@ -156,7 +148,7 @@ const build = (opts) => new Promise((resolve, reject) => {
   const {src, destination, spaceFile} = opts;
   getGenerateFiles(src)
     .then(getSourceFilesPromise(opts))
-    .then(readSourceFiles)
+    .then(parseSourceFiles)
     .then(filterAndBindSpace)
     .then(checkSpaces)
     .then(writeSpaces(opts))

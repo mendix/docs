@@ -43,6 +43,18 @@ const touchFile = filePath => {
   }
 }
 
+const readSourceFiles = (files, cb) =>
+  Promise.all(_.map(files, file => {
+    return new Promise((resolve, reject) => {
+      readFile(file.sourcePath).then(contents => {
+        cb(file, contents, resolve)
+      }).catch(e => {
+        console.log(e);
+        resolve(file);
+      })
+    })
+  }));
+
 const getAllFiles = (dir) => new Promise((resolve, reject) => {
   recursive(dir, [], (err, files) => {
     if (err) {
@@ -163,6 +175,7 @@ module.exports = {
   getAllFiles,
   readHtmlFile,
   readHtmlFiles,
+  readSourceFiles,
   readFile,
   writeFile,
   getGenerateFiles,

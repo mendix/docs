@@ -137,6 +137,4 @@ const redirect_mappings = () => new Promise((resolve, reject) => {
     });
 });
 
-module.exports = {
-  redirect_mappings
-}
+module.exports = redirect_mappings;

@@ -11,7 +11,8 @@ const server      = require('./_gulp/server');
 const jsonServer  = require('./_gulp/json');
 const hugo        = require('./_gulp/hugo');
 const helpers     = require('./_gulp/helpers');
-const mappings    = require('./_gulp/mappings');
+const redirect_mappings  = require('./_gulp/mappings_redirects');
+const asset_mappings     = require('./_gulp/mappings_assets');
 const htmlproofer = require('./_gulp/htmlproofer');
 const algolia     = require('./_gulp/algolia');
 const menu_check  = require('./_gulp/menu_check');
@@ -53,8 +54,7 @@ gulp.task('clean:css', `Cleanup the ${CONFIG.PATHS.styles.dest} directory`, () =
 
 // WRITE
 gulp.task('write:mappings', `Write mappings from _assets/mappings/redirect.json to ${CONFIG.DIST_FOLDER}/mappings/redirect.map`, done => {
-  mappings
-    .redirect_mappings()
+  redirect_mappings()
     .then(done)
     .catch(err => {
       helpers.gulpErr('write:mapping', err);
@@ -63,8 +63,7 @@ gulp.task('write:mappings', `Write mappings from _assets/mappings/redirect.json 
 });
 
 gulp.task('write:assetmappings', `Write asset mappings to ${CONFIG.DIST_FOLDER}/mappings/assets.map`, done => {
-  helpers
-    .writeAssetMappings(CONFIG.CURRENTFOLDER)
+  asset_mappings(CONFIG.CURRENTFOLDER)
     .then(() => {
       done();
     })

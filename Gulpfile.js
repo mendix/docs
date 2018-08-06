@@ -1,11 +1,11 @@
-const gulp        = require('gulp-help')(require('gulp'));
-const gutil       = require('gulp-util');
-const sass        = require('gulp-sass');
-const sourcemaps  = require('gulp-sourcemaps');
-const minify      = require('gulp-minify');
-const hash        = require('gulp-hash');
+const gulp               = require('gulp-help')(require('gulp'));
+const gutil              = require('gulp-util');
+const sass               = require('gulp-sass');
+const sourcemaps         = require('gulp-sourcemaps');
+const minify             = require('gulp-minify');
+const hash               = require('gulp-hash');
 
-const CONFIG      = require('./_gulp/config');
+const CONFIG             = require('./_gulp/config');
 
 const server             = require('./_gulp/server');
 const jsonServer         = require('./_gulp/json');
@@ -20,11 +20,11 @@ const menu_build         = require('./_gulp/menu_build');
 const { gulpErr }        = require('./_gulp/helpers');
 const { cyan, red }      = require('./_gulp/helpers/command_line').colors;
 
-const path        = require('path');
-const pump        = require('pump');
-const browserSync = require('browser-sync').create();
-const del         = require('del');
-const runSequence = require('run-sequence');
+const path               = require('path');
+const pump               = require('pump');
+const browserSync        = require('browser-sync').create();
+const del                = require('del');
+const runSequence        = require('run-sequence');
 
 /* DONT EDIT BELOW */
 gutil.log(`Gulp started at ${cyan(CONFIG.BUILDDATE)}`);
@@ -215,6 +215,7 @@ gulp.task('json', `Run JSON export server`, ['dev:sass', 'build:js', 'write:menu
 **************************************************/
 gulp.task('check:html', `Check HTML files in the build folder`, done => {
   htmlproofer.check({
+    external: !!process.env.EXTERNAL,
     dir: path.resolve(CONFIG.CURRENTFOLDER, '_site'),
     callback: function (err) {
       if (err) {

@@ -4,6 +4,14 @@ title: "Developer Portal"
 
 ## 2018
 
+### August 7th, 2018
+
+#### Improvements
+
+* We introduced new environments lifecycle for our SAP apps and migrated all of the old environments
+* We improved our UX specially on the environments screens of SAP apps
+* We have fixed a few minor UX bugs
+
 ### July 23rd, 2018
 
 #### Improvements

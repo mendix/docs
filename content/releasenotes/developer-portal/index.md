@@ -7,10 +7,10 @@ title: "Developer Portal"
 ### August 8th, 2018
 
 #### Improvements
-Over the last few months we have made several improvements to our alerting stack, to improve the timeliness of alerts. As a consequence we will reduce the runtime heartbeat timeout from 15 minutes to 3 minutes. We do this to ensure no alerts are accidentally missed by the customer. We will reduce the heartbeat timout this stepwise on 8 August 2018, while monitoring our customers applications for false positives.
 
-In some cases, customers may still experience false positives for the runtime heartbeat alert. In this case, the problem can made to go away by doing a transport and then a restart of the application.
+Over the last few months, we have made several improvements to our alerting stack to improve the timeliness of alerts. As a consequence, we are reducing the runtime heartbeat timeout from 15 minutes to 3 minutes. We are doing this to ensure that you do not accidentally miss any alerts. We will be monitoring your applications for false positives.
 
+In some cases, you may still experience false positives for the runtime heartbeat alert. If that happens, you can resolve the problem by doing a transport and then a restart of the app.
 
 ### July 23rd, 2018
 

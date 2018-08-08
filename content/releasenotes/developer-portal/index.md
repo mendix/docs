@@ -12,6 +12,14 @@ Over the last few months, we have made several improvements to our alerting stac
 
 In some cases, you may still experience false positives for the runtime heartbeat alert. If that happens, you can resolve the problem by doing a transport and then a restart of the app.
 
+### August 7th, 2018
+
+#### Improvements
+
+* We introduced a new environments lifecycle for our SAP apps and migrated all of the old environments.
+* We improved our UX, especially on the **Environments** screens of SAP apps.
+* We fixed a few minor UX bugs.
+
 ### July 23rd, 2018
 
 #### Improvements

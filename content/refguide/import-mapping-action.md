@@ -52,7 +52,7 @@ This feature was introduced in version 7.10.0.
 
 If the import mapping is based on a [message definition](message-definition), it can import both single objects and lists. Select whether the input variable contains a single object or a list of objects.
 
-### 3.4 If no object was found
+### 3.4 If No Object Was Found
 
 {{% alert type="info" %}}
 
@@ -60,7 +60,7 @@ This feature was introduced in version 7.17.0.
 
 {{% /alert %}}
 
-You can indicate what should happen **if not object was found** when the import mapping has checked the box **decide this at the place where the mapping gets used**.
+You can indicate what should happen **if no object was found** when the import mapping has checked the box **decide this at the place where the mapping gets used**.
  
 ### 3.5 Parameter
 

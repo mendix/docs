@@ -92,7 +92,7 @@ Begin able to edit the parameters was introduced in version 7.17.0
 
 {{% /alert %}}
 
-In this list you can add, update or delete the [parameters of the operation](published-rest-operation-parameter).
+In this list, you can add, update or delete the [parameters of the operation](published-rest-operation-parameter).
 
 <a name="import-mapping"></a>
 ### 2.6.1 Import Mapping
@@ -105,7 +105,7 @@ This feature was introduced in version 7.14.0. Using an import mapping that take
 
 For a body parameter, you can select an [import mapping](import-mappings) that converts the body of the request to an object. All object and list parameters besides file documents must have an import mapping selected. To select an import mapping, double-click the parameter or click **Edit** in the grid after you select the parameter. When selecting the import mapping, you can also choose the commit behavior of the mapping. You can choose to either commit, commit without events, or not commit imported objects.
 
-You can select an import mapping that takes no parameter, or an import mapping that takes a primitive parameter (string, integer, etc.). If select an import mapping with a primitive parameter, you need to have exactly one [path parameter](published-rest-path-parameters) with the same type. That path parameter will be passed to the import mapping.
+You can select an import mapping that takes no parameter, or an import mapping that takes a primitive parameter (string, integer, etcetera). If you select an import mapping with a primitive parameter, you need to have exactly one [path parameter](published-rest-path-parameters) with the same type. That path parameter will be passed to the import mapping.
 
 You can indicate what should happen **if not object was found** when the import mapping has checked the box **decide this at the place where the mapping gets used**.
 

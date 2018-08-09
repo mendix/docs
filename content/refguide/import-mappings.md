@@ -15,7 +15,7 @@ Figure 1 depicts an example of an Import Mapping document in which two elements 
 
 ### 1.1 Obtaining an object
 
-For each XML or JSON object, a Mendix object needs to be obtained. You can create one or you can find an existing object in the database. Alternatively, you can use a custom microflow that returns an object. You can see how to configure how a Mendix object is obtained in the window depicted in figure 2, which is shown after double clicking a specific mapping element.
+For each XML or JSON object, a Mendix object needs to be obtained. You can create one or you can find an existing object in the database. Alternatively, you can use a custom microflow that returns an object. You can see how a Mendix object is obtained in the window depicted in figure 2, which is shown after double clicking a specific mapping element.
 
 ![](attachments/16713727/16843943.png)
 
@@ -43,7 +43,7 @@ This is the action that the runtime will perform when an error occurred in the s
 
 {{% alert type="info" %}}
 
-The feature 'Decide this at the place where the mapping gets used' was introduced in version 7.17.0
+The feature **Decide this at the place where the mapping gets used** was introduced in version 7.17.0
 
 {{% /alert %}}
 
@@ -61,7 +61,7 @@ Be aware that lists are not stored ordered in the Mendix database. XML Schema ca
 
 ## 2 Mapping attributes in Import Mappings
 
-Each selected XML or JSON element needs to be mapped to an attribute in the domain entity. If you don't want to map certain elements, simply uncheck them in the **Select elements...** dialog. Configuring how to map the attributes is done in the screen depicted in figure 3, which is shown after double clicking a specific mapping element.
+Each selected XML or JSON element needs to be mapped to an attribute in the domain entity. If you don't want to map certain elements, simply uncheck them in the **Select elements...** dialog box. Configuring how to map the attributes is done in the screen depicted in figure 3, which is shown after double clicking a specific mapping element.
 
 ![](attachments/16713727/16843943.png)
 

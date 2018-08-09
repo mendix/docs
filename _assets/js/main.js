@@ -277,6 +277,8 @@
 
     function walkmenu(element) {
       var found = false;
+      var hrefList = [];
+      var broken = false;
       $(element).find('a').each(function () {
         var $menulink = $(this);
         if ($menulink.attr('href') === window.location.pathname) {
@@ -290,6 +292,7 @@
           $parents.each(function () {
             var $collapse = $(this),
                 $parentlink = $collapse.parent().find('> a.expand-link'),
+                $parentA = $collapse.parent().find('> a:not(.expand-link)'),
                 $title = $collapse.parent().find('> [data-page-title]');
 
             $collapse.addClass('in');
@@ -306,7 +309,46 @@
                 }
               }
             }
+
+            if ($parentA && $parentA.attr('href')) {
+              hrefList.push({
+                title: $parentA.text(),
+                href: $parentA.attr('href')
+              });
+            } else {
+              broken = true;
+            }
+
           });
+
+          if (!broken) {
+            hrefList.push({
+              title: $menulink.text(),
+              href: href
+            });
+            var schema = {
+              "@context": "http://schema.org",
+              "@type": "BreadcrumbList",
+              "itemListElement": []
+            };
+
+            $.each(hrefList, function (index, item) {
+              schema.itemListElement.push({
+                "@type": "ListItem",
+                "position": index + 1,
+                "item":
+                {
+                 "@id": item.href,
+                 "name": item.title
+                 }
+               });
+            });
+
+            $( "<script/>", {
+              "type": "application/ld+json",
+              "html":JSON.stringify(schema, null, 4)
+            }).appendTo( "head" );
+          }
 
           if (!hasBreadCrumbLink($menulink.text())) {
             $breadcrumb.append('<li><a href="' + href + '" title="' + $menulink.text() + '">' + $menulink.text() + '</a></li>');

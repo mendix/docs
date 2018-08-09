@@ -1,20 +1,25 @@
-const url = require('url');
 const path = require('path');
 const _ = require('lodash');
-const gutil = require('gulp-util');
 const cheerio = require('cheerio');
 const Promise = require('bluebird');
-const helpers = require('./helpers');
 const yamlFront = require('yaml-front-matter');
 const YAML = require('yamljs');
 const algoliasearch = require('algoliasearch');
 const moment = require('moment');
 
-const pluginID = gutil.colors.cyan('[ALGOLIA]');
+const { isFile, getFiles, readHtmlFiles, gulpErr, readSourceFiles } = require('./helpers');
+const commandLineHelpers = require('./helpers/command_line');
+const log = commandLineHelpers.log('algolia');
 
 let SOURCEFOLDER = null,
     TARGETFOLDER = null,
     SPACES = null;
+
+const DEBUG = !!process.env.DEBUG;
+
+if (DEBUG) {
+  log('Debugging enabled, will not push to Algolia');
+}
 
 let spacesObj = {};
 let indexedNum = 0;
@@ -36,9 +41,9 @@ const getSourceFiles = files => {
         file.slug = parsed.name;
         file.space = spacesObj[dirName];
 
-        if (helpers.isFile(base + '.md')) {
+        if (isFile(base + '.md')) {
           file.sourcePath = base + '.md';
-        } else if (helpers.isFile(base + '.html')) {
+        } else if (isFile(base + '.html')) {
           file.sourcePath = base + '.html';
         }
 
@@ -60,24 +65,16 @@ const getSourceFiles = files => {
   })
 }
 
-const readSourceFiles = files => {
-  return Promise.all(_.map(files, file => {
-    return new Promise((resolve, reject) => {
-      helpers.readFile(file.sourcePath).then(contents => {
-        file.source = contents.toString();
-        try {
-          file.meta = yamlFront.loadFront(contents);
-        } catch(e) {
-          console.log(e);
-        }
-        resolve(file);
-      }).catch(e => {
-        console.log(e);
-        resolve(file);
-      })
-    })
-  }))
-}
+const parseSourceFiles = files =>
+  readSourceFiles(files, (file, contents, resolve) => {
+    file.source = contents.toString();
+    try {
+      file.meta = yamlFront.loadFront(contents);
+    } catch(e) {
+      console.log(e);
+    }
+    resolve(file);
+  });
 
 // ******************** ALGOLIA HELPERS ***********************
 // These are copied from https://github.com/algolia/algoliasearch-jekyll/blob/master/lib/record_extractor.rb and rewritten in Javascript
@@ -208,11 +205,12 @@ const parseHtmlFile = file => {
             item.mendix_version = file.mendix_version;
           }
 
+         //  console.log(item);
           index.push(item);
 
           indexedNum++;
           if (indexedNum % 1000 === 0) {
-            gutil.log(`${pluginID} Items indexed: ${indexedNum}`);
+            log(`Items indexed: ${indexedNum}`);
           }
         }
       });
@@ -223,7 +221,7 @@ const parseHtmlFile = file => {
 }
 
 const parseHtmlFiles = files => {
-  gutil.log(`${pluginID} Mapping ${files.length} files`);
+  log(`Mapping ${files.length} files`);
   return Promise.all(_.map(files, file => parseHtmlFile(file)));
 };
 
@@ -231,18 +229,21 @@ const indexFiles = (opts) => {
   SOURCEFOLDER = opts.source;
   TARGETFOLDER = opts.target;
   SPACES = opts.spacesFile;
-  gutil.log(`${pluginID} Indexing html in ${TARGETFOLDER}`);
-  helpers.getFiles(TARGETFOLDER)
-    .then(helpers.readHtmlFiles)
+  log(`Indexing html in ${TARGETFOLDER}`);
+  getFiles(TARGETFOLDER)
+    .then(readHtmlFiles)
     .then(getSourceFiles)
-    .then(readSourceFiles)
+    .then(parseSourceFiles)
     .then(parseHtmlFiles)
     .then(() => {
       if (process.env.ALGOLIA_WRITE_KEY && opts.algolia_index && opts.algolia_app_id) {
-        console.log(`${pluginID} Indexed ${index.length} items`);
+        log(`Indexed ${index.length} items`);
+        if (DEBUG) {
+          return;
+        }
         const client = algoliasearch(opts.algolia_app_id, process.env.ALGOLIA_WRITE_KEY);
         const algoliaIndex = client.initIndex(opts.algolia_index);
-        console.log(`${pluginID} Create settings for ${opts.algolia_index}`);
+        log(`Create settings for ${opts.algolia_index}`);
         algoliaIndex.setSettings({
           'distinct': true,
           'attributeForDistinct': 'url',
@@ -269,24 +270,24 @@ const indexFiles = (opts) => {
           'highlightPostTag': '</span>'
         }, (setIndexErr, setIndexContent) => {
           if (setIndexErr) {
-            gutil.log(`${pluginID} error creating index settings for: ${opts.algolia_index}`);
+            log(`error creating index settings for: ${opts.algolia_index}`);
             throw setIndexErr;
           } else {
-            console.log(`${pluginID} Settings set for ${opts.algolia_index}, clearing objects`);
+            log(`Settings set for ${opts.algolia_index}, clearing objects`);
             //console.log(setIndexContent);
             algoliaIndex.clearIndex((clearIndexErr, clearIndexContent) => {
               if (clearIndexErr) {
-                gutil.log(`${pluginID} error clearing objects!`);
+                log(`error clearing objects!`);
                 throw clearIndexErr;
               } else {
-                gutil.log(`${pluginID} ${opts.algolia_index}, cleared, adding objects`);
-                //gutil.log(`${pluginID} ${clearIndexContent}`);
+                log(`${opts.algolia_index}, cleared, adding objects`);
+                //log(`${clearIndexContent}`);
                 algoliaIndex.addObjects(index, (uploadErr, uploadContents) => {
                   if (uploadErr) {
-                    gutil.log(`${pluginID} error adding objects!`);
+                    log(`error adding objects!`);
                     throw uploadErr;
                   } else {
-                    gutil.log(`${pluginID} Objects added to ${opts.algolia_index}`);
+                    log(`Objects added to ${opts.algolia_index}`);
                     //console.log(uploadContents);
                     opts.cb();
                   }
@@ -296,17 +297,16 @@ const indexFiles = (opts) => {
           }
         });
       } else {
-        console.log(`${pluginID} Indexed ${indexedNum} items, not doing anything with it right now (ALGOLIA_WRITE_KEY is missing)`);
+        log(`Indexed ${indexedNum} items, not doing anything with it right now (ALGOLIA_WRITE_KEY is missing)`);
         opts.cb();
       }
     })
     .catch(err => {
-      helpers.gulpErr('algolia', err);
+      gulpErr('algolia', err);
       //throw err;
     });
 };
 
 module.exports = {
-  run: indexFiles,
-  readSourceFiles
+  run: indexFiles
 };

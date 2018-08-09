@@ -6,12 +6,12 @@ const YAML = require('yamljs');
 const yamlFront = require('yaml-front-matter');
 const _ = require('lodash');
 const cheerio = require('cheerio');
-const gutil = require('gulp-util');
 const { normalizeSafe } = require('upath');
 
 const { getFiles, readFile, isFile } = require('./helpers');
 
-const pluginID = gutil.colors.cyan("[JSON SERVER]");
+const commandLineHelpers = require('./helpers/command_line');
+const log = commandLineHelpers.log('json server');
 
 const CONTENTFOLDER = 'content';
 const SNIPPETSFOLDER = 'snippets';
@@ -23,7 +23,7 @@ let SPACES;
 
 const contentHandler = (req, res, next) => {
     const contentPath = req.params[0];
-    gutil.log(`${pluginID} Handling content: ${contentPath}`);
+    log(`Handling content: ${contentPath}`);
 
     const sourcePath = normalizeSafe(path.resolve(mainFolder, CONTENTFOLDER, contentPath));
     const generatePath = normalizeSafe(path.resolve(mainFolder, GENERATEDFOLDER, contentPath));
@@ -46,13 +46,13 @@ const contentHandler = (req, res, next) => {
         .filter(f => f !== null);
 
     if (sourceFile.length !== 1) {
-        gutil.log(`${pluginID} Handling content: ${contentPath}, source not found`);
+        log(`Handling content: ${contentPath}, source not found`);
         res.send(404, 'source file not found');
         return next();
     }
 
     if (targetFile.length !== 1) {
-        gutil.log(`${pluginID} Handling content: ${contentPath}, target not found`);
+        log(`Handling content: ${contentPath}, target not found`);
         res.send(404, 'target file not found');
         return next();
     }
@@ -78,7 +78,7 @@ const contentHandler = (req, res, next) => {
                     try {
                         menu = require(path.resolve(mainFolder, 'static/json', dirName + '.json'));
                     } catch (e) {
-                        console.log(`Error getting menu file for ${dirName}: `, e);
+                        log(`Error getting menu file for ${dirName}: `, e);
                         menu = null;
                     }
                 }
@@ -87,7 +87,7 @@ const contentHandler = (req, res, next) => {
                 try {
                     meta = yamlFront.loadFront(content);
                 } catch (e) {
-                    console.log('Error loading front matter for ' + source, e);
+                    log('Error loading front matter for ' + source, e);
                     meta = null;
                 }
 
@@ -107,14 +107,14 @@ const contentHandler = (req, res, next) => {
                             obj.parent = parent.u;
                             delete obj.category;
                         } else {
-                            console.log(`Can't find a parent for page: ${obj.pathMarkdown}`);
+                            log(`Can't find a parent for page: ${obj.pathMarkdown}`);
                             delete obj.category;
                         }
                     } else if (!obj.category && !obj.parent && menu !== null && menu.pages && menu.categories) {
                         if (menu.categories.indexOf(obj.title) !== -1) {
                             obj.parent = `/${dirName}/`;
                         } else {
-                            console.log(`Can't find a parent/category for page: ${obj.pathMarkdown}`);
+                            log(`Can't find a parent/category for page: ${obj.pathMarkdown}`);
                         }
                     }
                 }
@@ -204,7 +204,7 @@ const contentHandler = (req, res, next) => {
 };
 
 const pagesHandler = (req, res, next) => {
-    gutil.log(`${pluginID} Handling pages`);
+    log(`Handling pages`);
     const contentFolder = path.resolve(mainFolder, CONTENTFOLDER);
     const normalizedFolder = normalizeSafe(contentFolder);
 
@@ -241,7 +241,7 @@ const pagesHandler = (req, res, next) => {
 };
 
 const snippetsHandler = (req, res, next) => {
-    gutil.log(`${pluginID} Handling snippets`);
+    log(`Handling snippets`);
     const snippetsFolder = path.resolve(mainFolder, SNIPPETSFOLDER);
     const normalized = normalizeSafe(snippetsFolder);
 
@@ -264,7 +264,7 @@ const snippetsHandler = (req, res, next) => {
 };
 
 const spacesHandler = (req, res, next) => {
-    gutil.log(`${pluginID} Handling spaces`);
+    log(`Handling spaces`);
     const spaceArr = [];
     Object.keys(SPACES).forEach((spaceID) => {
         const obj = SPACES[spaceID];
@@ -287,7 +287,7 @@ const spawn = (folder) => {
     server.get(/^\/spaces/, spacesHandler)
 
     server.listen(7000, () => {
-        gutil.log(`${pluginID} Server listening on ${server.url}`);
+        log(`Server listening on ${server.url}`);
     });
 }
 

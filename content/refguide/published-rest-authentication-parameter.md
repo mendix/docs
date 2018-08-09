@@ -1,5 +1,5 @@
 ---
-title: "Parameters for the custom authentication microflow"
+title: "Parameters for the Custom Authentication Microflow"
 parent: "published-rest-services"
 ---
 

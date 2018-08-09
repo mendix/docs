@@ -1,5 +1,5 @@
 ---
-title: "Reference set selector"
+title: "Reference Set Selector"
 parent: "input-widgets"
 ---
 

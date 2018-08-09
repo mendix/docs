@@ -1,4 +1,4 @@
-const gutil = require('gulp-util');
+const { PluginError } = require('gulp-util');
 const path = require('path');
 const shell = require('shelljs');
 const recursive = require('recursive-readdir');
@@ -9,6 +9,10 @@ const async = require('async');
 const fs = require('fs');
 const { normalizeSafe } = require('upath');
 
+const commandLineHelpers = require('./command_line');
+
+const { cyan, red } = commandLineHelpers.colors;
+
 const readFile = Promise.promisify(require('fs').readFile);
 const writeFile = Promise.promisify(require('fs').writeFile);
 
@@ -17,11 +21,12 @@ let TESTED = [];
 let TOTAL = 0;
 
 const throwError = (plugin, error) => {
-  const e = new gutil.PluginError({
+  gulpErrorLog = commandLineHelpers.log(`err:${plugin}`);
+  const e = new PluginError({
     plugin: plugin,
     message: error
   }, { showStack: true });
-  gutil.log(e.message);
+  gulpErrorLog(e.message);
 }
 
 const isFile = filePath => {
@@ -37,6 +42,18 @@ const touchFile = filePath => {
     shell.touch(filePath);
   }
 }
+
+const readSourceFiles = (files, cb) =>
+  Promise.all(_.map(files, file => {
+    return new Promise((resolve, reject) => {
+      readFile(file.sourcePath).then(contents => {
+        cb(file, contents, resolve)
+      }).catch(e => {
+        console.log(e);
+        resolve(file);
+      })
+    })
+  }));
 
 const getAllFiles = (dir) => new Promise((resolve, reject) => {
   recursive(dir, [], (err, files) => {
@@ -80,6 +97,16 @@ const getGenerateFiles = (dir) => {
   });
 };
 
+const readJSON = files => Promise.all(files.map(file => readFile(file).then(content => {
+  let json;
+  try {
+    json = JSON.parse(content);
+    return json;
+  } catch (e) {
+    throw new Error(`${cyan(file)}: ${red(e)}`);
+  }
+})));
+
 const readHtmlFile = filePath => new Promise((resolve, reject) => {
   readFile(filePath, "utf8").then(content => {
     resolve({
@@ -104,10 +131,12 @@ const readHtmlFile = filePath => new Promise((resolve, reject) => {
 const readHtmlFiles = paths => Promise.all(_.map(paths, file => readHtmlFile(file)));
 
 const checkLink = (url, cb) => {
+  //console.log(url);
   request({
     url: url,
-    followRedirect: false
+    followRedirect: true
   }, (err, response, body) => {
+    //console.log(url, response ? response.statusCode : 'ERR: ' + err);
     let res = {
       url: url,
       err: null,
@@ -116,13 +145,12 @@ const checkLink = (url, cb) => {
     if (err) {
       res.err = err;
     } else {
-      res.code = response.statusCode;
+      res.code = response ? response.statusCode : -1;
     }
     TESTED.push(res);
     if (100 * (TESTED.length / TOTAL) % 10 === 0) {
       console.log(100 * (TESTED.length / TOTAL) + "% TESTED");
     }
-    //console.log(TESTED.length, res);
     cb();
   });
 }
@@ -140,68 +168,20 @@ const checkLinks = urls => new Promise((resolve, reject) => {
   })
 });
 
-const writeAssetMappings = (currentFolder) => new Promise((resolve, reject) => {
-  const indexMappingHeader = [
-    '############################################################################################',
-    `# Mendix assets redirect mapping`,
-    '############################################################################################',
-    ''
-  ];
-  const indexDest = path.join(currentFolder, './_site/mappings/assets.map');
-  const assetsJS = path.join(currentFolder, './data/assetsjs.json');
-  const assetsCSS = path.join(currentFolder, './data/assetscss.json');
-  touchFile(indexDest);
-
-  let index = [];
-  if (isFile(assetsJS)) {
-    _.mapKeys(require(assetsJS), (v,k) => {
-      index.push({
-        from: `~*\\/public\\/js\\/${k.replace('.', '\\\.')}`,
-        to: `/public/js/${v}`
-      });
-    });
-  }
-  if (isFile(assetsCSS)) {
-    _.mapKeys(require(assetsCSS), (v,k) => {
-      index.push({
-        from: `~*\\/public\\/styles\\/${k.replace('.', '\\\.')}`,
-        to: `/public/styles/${v}`
-      });
-    });
-  }
-
-  const indexMapping = _.chain(index)
-    .sortBy(file => file.from.length)
-    .map(file => `${file.from} ${file.to};`)
-    .value();
-
-  let indexes = indexMappingHeader.concat(indexMapping).join('\n');
-
-  fs.writeFile(indexDest, indexes, err => {
-    if (err) {
-      gutil.log(`Error writing asset mappings: ${err}`)
-      reject();
-    } else {
-      gutil.log(`Asset mappings written to ${indexDest}`);
-      resolve();
-    }
-  });
-});
-
-
 module.exports = {
   gulpErr: throwError,
   touch: touchFile,
   isFile,
+  readJSON,
   getFiles,
   getAllFiles,
   readHtmlFile,
   readHtmlFiles,
+  readSourceFiles,
   readFile,
   writeFile,
   getGenerateFiles,
   checkLink,
   checkLinks,
-  writeAssetMappings,
   getGenerateFiles
 }

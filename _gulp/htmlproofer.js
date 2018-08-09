@@ -5,17 +5,22 @@ const path = require('path');
 const fs = require('fs');
 const shell = require('shelljs');
 const _ = require('lodash');
-const gutil = require('gulp-util');
 const cheerio = require('cheerio');
 const Promise = require('bluebird');
-const helpers = require('./helpers');
 const moment = require('moment');
 const RSS = require('rss');
 const { normalizeSafe } = require('upath');
-const os = require('os');
+
+const { isFile, getFiles, readHtmlFiles, gulpErr, checkLinks, getAllFiles } = require('./helpers');
+const commandLineHelpers = require('./helpers/command_line');
+
+const { cyan, yellow, red } = commandLineHelpers.colors;
+
+const log = commandLineHelpers.log('html check');
+const rssLog = commandLineHelpers.log('rss');
+const indexMappingLog = commandLineHelpers.log('index mapping');
 
 const verbose = false;
-const indicator = gutil.colors.cyan("[HTML CHECK]");
 
 let totalChecks = 0;
 let totalChecked = 0;
@@ -47,7 +52,7 @@ const parseHtmlFile = file => new Promise((resolve, reject) => {
         file.external.images.push(src);
       } else {
         if (parsed.query) {
-          file.warnings.push(`${gutil.colors.yellow('[QS]     ')} The src of the image ${gutil.colors.cyan(src)} has a query string. Is that necessary?`);
+          file.warnings.push(`${yellow('[QS]     ')} The src of the image ${cyan(src)} has a query string. Is that necessary?`);
         }
 
         if (src.indexOf('/') === 0) {
@@ -66,7 +71,7 @@ const parseHtmlFile = file => new Promise((resolve, reject) => {
         file.external.videos.push(src);
       } else {
         if (parsed.query) {
-          file.warnings.push(`${gutil.colors.yellow('[QS]    ')} The src of the video ${gutil.colors.cyan(src)} has a query string. Is that necessary?`);
+          file.warnings.push(`${yellow('[QS]    ')} The src of the video ${cyan(src)} has a query string. Is that necessary?`);
         }
 
         if (src.indexOf('/') === 0) {
@@ -99,7 +104,7 @@ const parseHtmlFile = file => new Promise((resolve, reject) => {
           const parsed = url.parse(href.trim());
 
           if (parsed.query) {
-            file.warnings.push(`${gutil.colors.yellow('[QS]     ')} The link to ${gutil.colors.cyan(href)} has a query string. Is that necessary?`);
+            file.warnings.push(`${yellow('[QS]     ')} The link to ${cyan(href)} has a query string. Is that necessary?`);
           }
 
           if (href.indexOf('/') === 0) {
@@ -123,17 +128,17 @@ const parseHtmlFile = file => new Promise((resolve, reject) => {
 
       const diff = lastLevel !== null ? level - lastLevel : 0;
       if (diff > 1) {
-        file.warnings.push(`${gutil.colors.red('[TOC]    ')} There is are inconsistencies with the title sorting. Check title with text ${gutil.colors.cyan($el.text())}`);
+        file.warnings.push(`${red('[TOC]    ')} There is are inconsistencies with the title sorting. Check title with text ${cyan($el.text())}`);
       }
       lastLevel = level;
 
       if ('h1' === tagName) {
-        file.warnings.push(`${gutil.colors.red('[TITLE]  ')} There is a title with text ${gutil.colors.cyan($el.text())} which is an H1. This cannot happen, as this is the page title`);
+        file.warnings.push(`${red('[TITLE]  ')} There is a title with text ${cyan($el.text())} which is an H1. This cannot happen, as this is the page title`);
       }
 
       if (id) {
         if (file.anchors.indexOf(id) !== -1) {
-          file.warnings.push(`${gutil.colors.yellow('[ID]     ')} The element with ${gutil.colors.cyan('id="' + id + '"')} has a duplicate ID, this should not happen`);
+          file.warnings.push(`${yellow('[ID]     ')} The element with ${cyan('id="' + id + '"')} has a duplicate ID, this should not happen`);
         } else {
           file.anchors.push(id);
         }
@@ -142,7 +147,7 @@ const parseHtmlFile = file => new Promise((resolve, reject) => {
 
     const todos = $('.todo', '.mx__page__content');
     if (todos.length) {
-      file.warnings.push(`${gutil.colors.yellow('[TODO]   ')} This file has ${gutil.colors.cyan('{{% todo %}}')} elements.`);
+      file.warnings.push(`${yellow('[TODO]   ')} This file has ${cyan('{{% todo %}}')} elements.`);
     }
 
     const updateTime = $('meta[property="og:updated_time"]').attr('content');
@@ -157,7 +162,7 @@ const parseHtmlFile = file => new Promise((resolve, reject) => {
   const perc = Math.floor(100 * (totalChecked / totalChecks));
   if (perc % 10 === 0 && perc !== lastParsed) {
     lastParsed = perc;
-    gutil.log(`${indicator} Pages parsed: ${perc}%`);
+    log(`Pages parsed: ${perc}%`);
   }
 
   resolve(file);
@@ -213,12 +218,12 @@ const validateFiles = files => Promise.resolve(_.map(files, file => {
       if (fullUrl.hash) {
         const hashID = fullUrl.hash.replace('#', '');
         if (linkedFile.anchors.indexOf(hashID) === -1) {
-          file[warningKey].push(`${gutil.colors.yellow('[ANCHOR] ')} ${gutil.colors.cyan(link)}, page ${gutil.colors.cyan(linkedFile.basePath)} exists, anchor ${gutil.colors.cyan(hashID)} does not.`);
+          file[warningKey].push(`${yellow('[ANCHOR] ')} ${cyan(link)}, page ${cyan(linkedFile.basePath)} exists, anchor ${cyan(hashID)} does not.`);
           verbose && console.log(`hash err ${file.path} to ${linkedFile.basePath}`, link);
         }
       }
-    } else if (!helpers.isFile(fullPath)) {
-      file[errorKey].push(`${gutil.colors.red('[LINK]   ')} ${gutil.colors.cyan(link)} does not exist. Path: ${gutil.colors.cyan(linkPath)} (.html | index.html) is unresolved`);
+    } else if (!isFile(fullPath)) {
+      file[errorKey].push(`${red('[LINK]   ')} ${cyan(link)} does not exist. Path: ${cyan(linkPath)} (.html | index.html) is unresolved`);
       verbose && console.log(`err ${file.path}`, link);
     }
   });
@@ -230,8 +235,8 @@ const validateFiles = files => Promise.resolve(_.map(files, file => {
     if (allFiles.indexOf(fullPath) !== -1) {
       return;
     }
-    if (!helpers.isFile(fullPath)) {
-      file[errorKey].push(`${gutil.colors.red('[IMAGE]  ')} ${gutil.colors.cyan(image)} does not exist. Path: ${gutil.colors.cyan(fullPath)} is unresolved`);
+    if (!isFile(fullPath)) {
+      file[errorKey].push(`${red('[IMAGE]  ')} ${cyan(image)} does not exist. Path: ${cyan(fullPath)} is unresolved`);
       verbose && console.log(`err image ${file.path}`, image);
     }
   });
@@ -243,8 +248,8 @@ const validateFiles = files => Promise.resolve(_.map(files, file => {
     if (allFiles.indexOf(fullPath) !== -1) {
       return;
     }
-    if (!helpers.isFile(fullPath)) {
-      file[errorKey].push(`${gutil.colors.red('[VIDEO]  ')} ${gutil.colors.cyan(video)} does not exist. Path: ${gutil.colors.cyan(fullPath)} is unresolved`);
+    if (!isFile(fullPath)) {
+      file[errorKey].push(`${red('[VIDEO]  ')} ${cyan(video)} does not exist. Path: ${cyan(fullPath)} is unresolved`);
       verbose && console.log(`err image ${file.path}`, video);
     }
   });
@@ -253,7 +258,7 @@ const validateFiles = files => Promise.resolve(_.map(files, file => {
   _.forEach(file.anchorLinks, anchorlink => {
     if (file.anchors.indexOf(anchorlink) === -1) {
       //console.log(file.anchors);
-      file[warningKey].push(`${gutil.colors.yellow('[ANCHOR] ')} ${gutil.colors.cyan('#' + anchorlink)} does not exist in page`);
+      file[warningKey].push(`${yellow('[ANCHOR] ')} ${cyan('#' + anchorlink)} does not exist in page`);
       verbose && console.log(`err anchor ${file.path}`, anchorlink);
     }
   });
@@ -262,15 +267,14 @@ const validateFiles = files => Promise.resolve(_.map(files, file => {
   const perc = Math.floor(100 * (totalValidated / totalChecks));
   if (perc % 10 === 0 && perc !== lastValidated) {
     lastValidated = perc;
-    gutil.log(`${indicator} Pages validated: ${perc}%`);
+    log(`Pages validated: ${perc}%`);
   }
 
   return file;
 }));
 
 const checkAllLinks = (links, files) => {
-  return helpers
-    .checkLinks(links)
+  return checkLinks(links)
     .then(results => {
       return _.map(files, file => {
         if (file.external && file.external.links) {
@@ -278,9 +282,9 @@ const checkAllLinks = (links, files) => {
             const res = _.find(results, result => result.url === link);
             if (res && res.code && res.code !== 200) {
               if (res.code === 404) {
-                file.errors.push(`Has link to ${gutil.colors.cyan(link)} which return a ${gutil.colors.red('Page not found')}. Please fix this`);
+                file.errors.push(`Has link to ${cyan(link)} which return a ${red('Page not found')}. Please fix this`);
               } else {
-                //file.warnings.push(`Has link to ${gutil.colors.cyan(link)} which return a http code ${gutil.colors.cyan(res.code)}. Please check this`);
+                //file.warnings.push(`Has link to ${cyan(link)} which return a http code ${cyan(res.code)}. Please check this`);
               }
             }
           })
@@ -334,17 +338,16 @@ const writeUpdateFeed = files => new Promise((resolve, reject) => {
 
   fs.writeFile(feedDest, feed.xml({ indent: true }), err => {
     if (err) {
-      gutil.log(`Error writing /feed.xml: ${err}`)
+      rssLog(`Error writing /feed.xml: ${red(err)}`)
     } else {
-      gutil.log(`Update feed written to ${feedDest}`);
+      rssLog(`Update feed written to ${cyan(feedDest)}`);
     }
     resolve(files);
   });
 })
 
 const checkExternal = files => {
-  const externalChecked = 0,
-        total = _.flatten(_.map(files, file => file.external && file.external.links ? file.external.links : [])),
+  const total = _.flatten(_.map(files, file => file.external && file.external.links ? file.external.links : [])),
         uniq = _.uniq(total).filter(url => !/github\.com|localhost|linkedin\.com|facebook\.com|world\.mendix\.com/.test(url)); // we ignore github links for now
 
   if (!EXTERNAL) {
@@ -353,8 +356,8 @@ const checkExternal = files => {
   return checkAllLinks(uniq, files);
 }
 
-const checkHTMLFiles = (opts) => helpers.getFiles(SOURCEPATH)
-  .then(helpers.readHtmlFiles)
+const checkHTMLFiles = (opts) => getFiles(SOURCEPATH)
+  .then(readHtmlFiles)
   .then(parseHtmlFiles)
   .then(validateFiles)
   .then(checkExternal)
@@ -363,22 +366,23 @@ const checkHTMLFiles = (opts) => helpers.getFiles(SOURCEPATH)
     const errors = _.filter(files, file => file.errors.length > 0),
           warnings = _.filter(files, file => file.warnings.length > 0);
 
-    console.log(`Finished checking ${files.length} files`);
+    log(`Finished checking ${cyan(files.length)} files`);
+
     console.log('\n======= Errors: ' + errors.length);
     if (errors.length > 0) {
       _.forEach(errors, file => {
-        console.log(`\nFile: ${gutil.colors.cyan(file.basePath)} has the following errors:\n`);
+        console.log(`\nFile: ${cyan(file.basePath)} has the following errors:\n`);
         _.forEach(file.errors, error => {
-          console.log(gutil.colors.red('   + ') + error);
+          console.log(red('   + ') + error);
         })
       })
     }
     console.log('\n======= Warnings: ' + warnings.length);
     if (warnings.length > 0) {
       _.forEach(warnings, file => {
-        console.log(`\nFile: ${gutil.colors.cyan(file.basePath)} has the following warnings:\n`);
+        console.log(`\nFile: ${cyan(file.basePath)} has the following warnings:\n`);
         _.forEach(file.warnings, error => {
-          console.log(gutil.colors.yellow('   + ') + error);
+          console.log(yellow('   + ') + error);
         })
       })
     }
@@ -390,7 +394,7 @@ const checkHTMLFiles = (opts) => helpers.getFiles(SOURCEPATH)
       _.forEach(unused, file => {
         // This is diry, should be done differently
         const f = file.replace('/_site/', '/content/');
-        console.log(`Deleting ${gutil.colors.cyan(f)}`);
+        console.log(`Deleting ${cyan(f)}`);
         shell.rm('-rf', f);
       })
     }
@@ -420,13 +424,13 @@ const checkHTMLFiles = (opts) => helpers.getFiles(SOURCEPATH)
 
     fs.writeFile(indexDest, indexes, err => {
       if (err) {
-        gutil.log(`Error writing index mappings: ${err}`)
+        indexMappingLog(`Error writing index mappings: ${red(err)}`)
         opts.callback(true);
       } else {
-        gutil.log(`Index mappings written to ${indexDest}`);
+        indexMappingLog(`Index mappings written to ${cyan(indexDest)}`);
         if (errors.length === 0) {
           if (files.length === 0) {
-            console.log(`It seems there are no files to check. This looks bad`);
+            log(red(`It seems there are no files to check. This looks bad`));
             opts.callback(true);
           } else {
             opts.callback(false);
@@ -438,23 +442,22 @@ const checkHTMLFiles = (opts) => helpers.getFiles(SOURCEPATH)
     });
   })
   .catch(err => {
-    helpers.gulpErr('htmlproofer', err);
+    gulpErr('htmlproofer', err);
     opts.callback(true);
   });
 
 const checkFiles = (opts) => {
   SOURCEPATH = normalizeSafe(opts.dir);
   EXTERNAL = opts.external || false;
-  gutil.log(`${indicator} Testing html in ${SOURCEPATH}`);
-  helpers
-    .getAllFiles(SOURCEPATH)
+  log(`Testing html in ${SOURCEPATH}`);
+  getAllFiles(SOURCEPATH)
     .then(files => {
       allFiles = files;
       allResidualFiles = files;
       checkHTMLFiles(opts);
     })
     .catch(err => {
-      helpers.gulpErr('htmlproofer', err);
+      gulpErr('htmlproofer', err);
       opts.callback(true);
     });
 };

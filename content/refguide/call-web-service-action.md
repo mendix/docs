@@ -162,11 +162,21 @@ If the data type is a complex XML structure it can be mapped to entities using a
 
 Here you can choose the [Import Mapping](import-mappings) that will be used to transform the XML into objects.
 
-### 5.2 Parameter
+### 5.2 If no object was found
+
+{{% alert type="info" %}}
+
+This feature was introduced in version 7.17.0.
+
+{{% /alert %}}
+
+You can indicate what should happen **if not object was found** when the import mapping has checked the box **decide this at the place where the mapping gets used**.
+
+### 5.3 Parameter
 
 If the selected mapping requires a parameter, you can choose it here.
 
-### 5.3 Range (If the Mapping Returns a List)
+### 5.4 Range (If the Mapping Returns a List)
 
 The range determines how many objects are mapped and returned.
 
@@ -176,14 +186,14 @@ The range determines how many objects are mapped and returned.
 | First | Map and return only the first object. The result of the action will be a single object instead of a list. |
 | Custom | Map and return a given number of objects (limit). The limit is a microflow expression that should result in a number. |
 
-### 5.4 Store in Variable
+### 5.5 Store in Variable
 
 Choose whether to store the result of the operation in a variable.
 
-### 5.5 Type
+### 5.6 Type
 
 The type of the output variable.
 
-### 5.6 Name
+### 5.7 Name
 
 The name for the variable that will hold the result of the operation.

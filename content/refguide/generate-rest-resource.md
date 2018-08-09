@@ -7,6 +7,8 @@ parent: "published-rest-services"
 
 This feature was introduced in version 7.16.0.
 
+The option to generate **Patch** was introduced in version 7.17.0.
+
 {{% /alert %}}
 
 ## 1 Introduction
@@ -25,7 +27,7 @@ Type the name of the resource that you want to publish.
 
 ### 3.2 Key Attribute
 
-To be able to create a **Get by key** or a **Delete** operation, there needs to be a unique attribute on the entity. Select that attribute here.
+To be able to create a **Get by key**, a **Patch** or a **Delete** operation, there needs to be a unique attribute on the entity. Select that attribute here.
 
 ## 4 Operations
 
@@ -34,7 +36,8 @@ Check the operations that you want to generate:
 * **Get all** – allows clients to get all the objects
 * **Get by key** – allows clients to get an object, given its key
 * **Post** – allows clients to add a new object
-* **Delete** – allows clients to delete objects
+* **Patch** – allows clients to update an existing object
+* **Delete** – allows clients to delete an existing object
 
 When you click **OK**, the following items are created:
 
@@ -42,7 +45,7 @@ When you click **OK**, the following items are created:
 * All the operations that you selected
 * A microflow for each operation
 * A message definition
-* An import mapping (for the **Post** operation)
+* An import mapping (for the **Post** and **Patch** operations)
 * An export mapping (for the **Get all** and **Get by key** operations)
 
 If you have already created a message definition for the entity, that message definition will be reused. Existing import and export mappings based on that message definition will also be reused.

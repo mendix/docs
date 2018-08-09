@@ -8,7 +8,7 @@ title: "Developer Portal"
 
 #### Improvements
 
-* Alerts will be sent when a Mendix Cloud v3 app or database runs out of system memory.
+* Alerts are now sent when a Mendix Cloud v3 app or database runs out of system memory.
 
 ### August 8th, 2018
 

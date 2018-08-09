@@ -22,8 +22,6 @@ MySQL does not fully support time zone conversion out-of-the-box. You have to fi
 
 MariaDB supports an identical configuration for time zone conversions.
 
-## Database creation
+## Database Creation
 
-MYSQL new database creation is supported since Mendix 7.18, however the user should have enough access rights to be able to create a database.
-
-
+MYSQL new database creation is supported for Mendix 7.18 and above. However, the user should have enough access rights to be able to create a database.

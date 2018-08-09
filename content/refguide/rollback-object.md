@@ -29,7 +29,7 @@ Object defines the object that needs to be rolled back.
 
 ### 2.2 Refresh in Client
 
-When set, Refresh in client will cause [data grids](data-grid), [template grids](template-grid), [list views](list-view), [reference selectors](reference-selector), [reference set selectors](reference-set-selector) and [input reference set selectors](input-reference-set-selector) to be refreshed if they show the entity of the rolled back object.
+When set, Refresh in client will cause [data grids](data-grid), [template grids](template-grid), [list views](list-view), [reference selectors](reference-selector), [reference set selectors](reference-set-selector), and [input reference set selectors](input-reference-set-selector) to be refreshed if they show the entity of the rolled back object.
 
 _Default value_: No
 

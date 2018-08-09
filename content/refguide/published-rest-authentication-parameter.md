@@ -13,11 +13,11 @@ This feature was introduced in version 7.17.0. Prior to that, all authentication
 
 The custom authentication microflow of a published REST service is executed whenever a client calls one of the operation. The client's requests contains headers and may contain query parameters, which can be passed to the authentication microflow. 
 
-When you click the **Parameters** button that is next to the authentication microflow, the **Authentication microflow arguments** dialog appears. In this dialog, you can set the following:
+When you click the **Parameters** button that is next to the authentication microflow, the **Authentication microflow arguments** dialog box appears. In this dialog box, you can set the parameters.
 
 ## 2 Parameters
 
-This list gives an overview of the microflow parameters, and where their values are taken from. Click **Add** to add a parameter, and **Edit** to change a parameter.
+The information below gives you an overview of the microflow parameters, and explains where their values are taken from. Click **Add** to add a parameter, and **Edit** to change a parameter.
 
 Make sure that you add all microflow parameters here.
 
@@ -25,9 +25,9 @@ Make sure that you add all microflow parameters here.
 
 Specify where the parameter comes from. Possible values are
 
-* **Query** When the request contains a query string such as `?name=John&age=42`, you can pass these to the microflow by adding query parameters. For more information, see [Published REST Query Parameters](published-rest-query-parameters).
+* **Query** – when the request contains a query string such as `?name=John&age=42`, you can pass these to the microflow by adding query parameters. For more information, see [Published REST Query Parameters](published-rest-query-parameters).
 
-* **Header** The value of a header parameter is taken from the (first) request header with that name.
+* **Header** – the value of a header parameter is taken from the (first) request header with that name.
 
 ### 2.2 Name
 

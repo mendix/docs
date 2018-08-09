@@ -1,5 +1,5 @@
 ---
-title: "Text area"
+title: "Text Area"
 parent: "input-widgets"
 ---
 

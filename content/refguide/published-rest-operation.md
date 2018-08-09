@@ -88,7 +88,7 @@ If you check this box, the operation is marked as deprecated in the service's [O
 
 This feature was introduced in version 7.12.0.
 
-Begin able to edit the parameters was introduced in version 7.17.0
+Ability to edit the parameters was introduced in version 7.17.0
 
 {{% /alert %}}
 

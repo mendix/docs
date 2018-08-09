@@ -95,6 +95,8 @@ The **No Authentication** feature was introduced in version 7.11.0. In earlier v
 
 The **Active Session** authentication was introduced in version 7.13.0
 
+The **Custom** authentication was introduced in version 7.17.0
+
 {{% /alert %}}
 
 Select whether clients need to authenticate or not.
@@ -113,14 +115,36 @@ If authentication is required, you can select which authentication methods you w
     xmlHttp.setRequestHeader("X-Csrf-Token", mx.session.getConfig("csrftoken"));
     xmlHttp.send(null);
     ```
+* Select **Custom** to authenticate using a microflow. This microflow is called every time a user want to access a resource.
+
+Check more than one authentication method to have the service try each of them. It will first try **Custom** authentication, then **Username and password**, and then **Active session**. For more details, see [Published REST Routing](published-rest-routing).
+
+<a name="authentication-microflow"></a>
+### 3.3 Microflow
+
+Specify which microflow to use for custom authentication.
+
+Select **Parameters** to see the [list of parameters passed to the authentication microflow](published-rest-authentication-parameter). In that window you can indicate whether the authentication microflow's parameters come from request headers or from the query string.
+
+The microflow may take an [HttpRequest](http-request-and-response-entities#http-request) as a parameter, so it can inspect the incoming request.
+
+The microflow may also take an [HttpResponse](http-request-and-response-entities#http-response) as a parameter. When the microflow sets the status code of this response to something other then **200**, this value is returned and the operation will not be executed. Any headers set on the response are returned (except when the microflow returns an empty user).
+
+The authentication microflow should return a User.
+
+There are three possible outcomes of the authentication microflow
+  * When the status code of the HttpResponse parameter is set to something other then **200**, then this value is returned and the operation will not be executed
+  * Otherwise, when the resulting User is not empty, the operation is executed in the context of that user
+  * Otherwise, when the resulting User is empty, the next authentication method is attempted. When there are no other authentication methods, the result is **404 Not Found**.
+
+### 3.4 Allowed Roles
+
+The allowed roles define which [module role](module-role) a user must have to be able to access the service. This option is only available when **Requires authentication** is set to **Yes**.
 
 {{% alert type="warning" %}}
 Web service users cannot access REST services.
 {{% /alert %}}
 
-### 3.3 Allowed Roles
-
-The allowed roles define which [module role](module-role) a user must have to be able to access the service. This option is only available when **Requires authentication** is set to **Yes**.
 
 ## 4 Resources
 

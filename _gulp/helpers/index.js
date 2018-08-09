@@ -131,10 +131,12 @@ const readHtmlFile = filePath => new Promise((resolve, reject) => {
 const readHtmlFiles = paths => Promise.all(_.map(paths, file => readHtmlFile(file)));
 
 const checkLink = (url, cb) => {
+  //console.log(url);
   request({
     url: url,
-    followRedirect: false
+    followRedirect: true
   }, (err, response, body) => {
+    //console.log(url, response ? response.statusCode : 'ERR: ' + err);
     let res = {
       url: url,
       err: null,
@@ -143,7 +145,7 @@ const checkLink = (url, cb) => {
     if (err) {
       res.err = err;
     } else {
-      res.code = response.statusCode;
+      res.code = response ? response.statusCode : -1;
     }
     TESTED.push(res);
     if (100 * (TESTED.length / TOTAL) % 10 === 0) {

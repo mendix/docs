@@ -19,7 +19,7 @@ The call-web-service activity can be used to call one of the [imported web servi
 
 **Operation** defines which operation of the web service is called.
 
-### 2.2 Override location
+### 2.2 Override Location
 
 **Override location** defines whether to override the location where the web service is called.
 
@@ -74,7 +74,7 @@ The new (optimized) implementation feature was introduced in version 7.15.0.
 
 _Default value:_ No
 
-### 2.7 Proxy configuration
+### 2.7 Proxy Configuration
 
 {{% alert type="info" %}}
 
@@ -124,7 +124,7 @@ The XML for the request parts (header and body) can be generated in several ways
 
 Using this option, a single [Export Mapping](export-mappings) can be used to generate the XML for the request part. You can choose the export mapping to use for the request part and, if applicable, the object or list that you want to use as parameter for the mapping.
 
-### 4.2 Simple expressions for each request parameter
+### 4.2 Simple Expressions for Each Request Parameter
 
 This option for request parts can be used when all children of the XML element of the request part occur at most once and are primitive values. If that is not the case, this option is disabled and cannot be used.
 
@@ -162,7 +162,7 @@ If the data type is a complex XML structure it can be mapped to entities using a
 
 Here you can choose the [Import Mapping](import-mappings) that will be used to transform the XML into objects.
 
-### 5.2 If no object was found
+### 5.2 If No Object Was Found
 
 {{% alert type="info" %}}
 

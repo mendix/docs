@@ -1,8 +1,24 @@
 ---
 title: "Developer Portal"
 ---
-
 ## 2018
+
+#### August 13th, 2018
+
+#### Improvements
+
+* A new API call to access logs of Mendix Cloud V4 applications is now available. Detailed information can be found in the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api).
+* It is now possible to add custom environment variables via Cloud Portal to set up application metrics with Datadog and Telegraph.
+* All loglevels in Cloud Portal (INFO, ERROR, TRACE, DEBUG, WARNING, CRITICAL) are also available in Datadog.
+* Postgres database size can also be obversed in Datadog after enabling it in cloud portal.
+
+#### Fixes
+
+* We adressed an issue that prevented our customers to receive an error message when a deployment failure occurs.
+* Application names will be correctly propagated in alert notification emails after renaming project names in Sprinter.
+* Status page link in alert emails will redirect you to the corresponding alert's page in Cloud Portal.
+* We solved an issue that caused blank error messages during backup creation for some of our customers.
+* "Environment" breadcrumb in Deploy / Environments / Environment section is a link again which redirects the user to Environments section. 
 
 ### August 9th, 2018
 

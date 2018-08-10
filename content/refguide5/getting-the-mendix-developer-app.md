@@ -17,5 +17,5 @@ Currently the following mobile operating systems are supported by the Mendix Dev
 To download the Developer App, search for "Mendix" in your device's App Store, or select one of the download links below:
 
 *   [Download for iOS](https://itunes.apple.com/us/app/mendix-developer-app/id922423316)
-*   [Download for Android](https://play.google.com/store/apps/details?id=com.mendix.MendixDeveloperApp&hl=en)
+*   [Download for Android](https://play.google.com/store/apps/details?id=com.mendix.SprintrMobile)
 *   [Download for Windows Phone](http://www.windowsphone.com/en-in/store/app/mendixdeveloperapp/349d987a-dddb-4d1f-91e3-a3715ee0fc0e)

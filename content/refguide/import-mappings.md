@@ -5,7 +5,7 @@ parent: "mapping-documents"
 
 Please refer to [Mapping Documents](mapping-documents) for an introduction.
 
-## 1 Obtaining objects in Import Mappings
+## 1 Obtaining Objects in Import Mappings
 
 Figure 1 depicts an example of an Import Mapping document in which two elements from an XML Schema have been selected using the **Select elements...** dialog. Following this the ReceivedPartners and ReceivedClient entities were added, and mapped to the Result and Client schema elements. Each time the Import Mapping is invoked, a new ReceivedPartners object is created.
 
@@ -13,7 +13,7 @@ Figure 1 depicts an example of an Import Mapping document in which two elements 
 
 **Figure 1**
 
-### 1.1 Obtaining an object
+### 1.1 Obtaining an Object
 
 For each XML or JSON object, a Mendix object needs to be obtained. You can create one or you can find an existing object in the database. Alternatively, you can use a custom microflow that returns an object. You can see how a Mendix object is obtained in the window depicted in figure 2, which is shown after double clicking a specific mapping element.
 
@@ -21,7 +21,7 @@ For each XML or JSON object, a Mendix object needs to be obtained. You can creat
 
 **Figure 2**
 
-### 1.2 Attribute mapping properties
+### 1.2 Attribute Mapping Properties
 
 #### 1.2.1 Obtain Mendix Object Methods
 
@@ -49,7 +49,7 @@ The feature **Decide this at the place where the mapping gets used** was introdu
 
 At the top level of the mapping, you can choose to decide this at the place where the mapping gets used. In that case, the option **if no object was found** shows up whenever you use the mapping, for instance in an [import mapping action](import-mapping-action) or a [call REST service action](call-rest-action).
 
-### 1.3 Setting associations
+### 1.3 Setting Associations
 
 Optionally, you may set an association to the parent object. If set to Yes, a list of allowed associations is shown. If an association is selected, it is drawn in the mapping document.
 
@@ -59,7 +59,7 @@ Be aware that lists are not stored ordered in the Mendix database. XML Schema ca
 
 {{% /alert %}}
 
-## 2 Mapping attributes in Import Mappings
+## 2 Mapping Attributes in Import Mappings
 
 Each selected XML or JSON element needs to be mapped to an attribute in the domain entity. If you don't want to map certain elements, simply uncheck them in the **Select elements...** dialog box. Configuring how to map the attributes is done in the screen depicted in figure 3, which is shown after double clicking a specific mapping element.
 
@@ -73,7 +73,7 @@ Having defined the mappings for the attributes, these mappings are also shown in
 
 **Figure 4**
 
-### 2.1 Mapping attribute properties
+### 2.1 Mapping Attribute Properties
 
 | Property | Description |
 | --- | --- |
@@ -84,7 +84,7 @@ Having defined the mappings for the attributes, these mappings are also shown in
 | Key | This property specifies whether the value element is used as search key to obtain an object. If a value element is used as search key, you must specify the attribute it maps to. The XML value will be matched to the value of this attribute when searching for an object. Attribute with 'binary' type is not supported to be set as key.
 | Map attributes by name | If this button is clicked, an attempt is made to match attributes by name. A dialog appears reporting what has been changed. |
 
-## 3 Mapping parameter
+## 3 Mapping Parameter
 
 {{% alert type="info" %}}
 

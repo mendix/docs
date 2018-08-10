@@ -1,5 +1,5 @@
 ---
-title: "Parameters for the custom authentication microflow"
+title: "Parameters for the Custom Authentication Microflow"
 parent: "published-rest-services"
 ---
 
@@ -21,7 +21,7 @@ The information below gives you an overview of the microflow parameters, and exp
 
 Make sure that you add all microflow parameters here.
 
-### 2.1 Parameter type
+### 2.1 Parameter Type
 
 Specify where the parameter comes from. Possible values are
 
@@ -33,10 +33,10 @@ Specify where the parameter comes from. Possible values are
 
 The name of the parameter. For a header parameter, this should be the name of the request header.
 
-### 2.3 Data type
+### 2.3 Data Type
 
 Specify the type of the parameter. Only primitive types are supported.
 
-### 2.4 Microflow parameter
+### 2.4 Microflow Parameter
 
 Specify the microflow parameter that will be filled with the value from this operation parameter. You should always select one.

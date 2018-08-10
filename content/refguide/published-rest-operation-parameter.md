@@ -15,7 +15,7 @@ These fields were introduced as read-only in the parameter list in version 7.12.
 
 {{% /alert %}}
 
-### 2.1 Parameter type
+### 2.1 Parameter Type
 
 Specify where the parameter comes from. Possible values are the following:
 
@@ -40,7 +40,7 @@ Specify the microflow parameter that will be filled with the value from this ope
 
 The mapping group is only shown for body parameters.
 
-## 3.1 Import mapping
+## 3.1 Import Mapping
 
 {{% alert type="info" %}}
 
@@ -52,7 +52,7 @@ Specify the import mapping that converts the body of the request (JSON or XML) i
 
 You can use an import mapping that takes a primitive parameter (string, integer, etcetera) if the operation has no more than one path parameter with that type. The value of that path parameter will be passed to the microflow. If there is no path parameter, and empty value will be passed to the import mapping.
 
-## 3.2 If no object was found
+## 3.2 If No Object Was Found
 
 {{% alert type="info" %}}
 

@@ -107,7 +107,7 @@ For a body parameter, you can select an [import mapping](import-mappings) that c
 
 You can select an import mapping that takes no parameter, or an import mapping that takes a primitive parameter (string, integer, etcetera). If you select an import mapping with a primitive parameter, you need to have exactly one [path parameter](published-rest-path-parameters) with the same type. That path parameter will be passed to the import mapping.
 
-You can indicate what should happen **if not object was found** when the import mapping has checked the box **decide this at the place where the mapping gets used**.
+You can indicate what should happen **if no object was found** when the import mapping has checked the box **decide this at the place where the mapping gets used**.
 
 If you select an import mapping that supports both XML and JSON (for instance, a mapping that is based on a message definition), then the operation will be able to handle both XML and JSON requests.
 

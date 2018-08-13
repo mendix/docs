@@ -136,51 +136,55 @@ For more information, see [How to Upload a File in Your App Using ATS](../howtos
 ### 5.1 General Solutions
 
 {{% alert type="warning" %}}
-This is a generic advice on which subscription type you need when using a Selenium SaaS provider. Always look what fits best for your situation!
+This section presents generic advice on which subscription type you need when using a Selenium SaaS provider. Always look at what fits best for your situation!
 {{% /alert %}}
 
-Selenium SaaS providers in general provide three different solutions.
+Selenium SaaS providers in general provide the following three solutions:
 
-1. Live testing: With live testing, you can manually test your website/application using a virtual machine that resembles a chosen device. This option is not needed for ATS since it is an automated testing tool. ATS only supports automated browser testing so this solution is not viable.
-2. Automated testing: With automated testing, you use the Selenium SaaS providers servers to execute your test cases. The provider hosts selenium/appium and enables all kind of extras. This is the solution you need when using ATS.
-3. Mobile testing: With mobile testing, you use the Selenium SaaS providers servers to execute your mobile test cases. The providers host Appium and enable all kind of extras. ATS is only for browser testing so this solution is not viable.
+* **Live testing** – With live testing, you can manually test your application using a virtual machine that resembles a chosen device. This option is not needed for ATS, since it is an automated testing tool. ATS only supports automated browser testing, so this solution is not viable.
+* **Automated testing** – With automated testing, you use the Selenium SaaS provider servers to execute your test cases. The provider hosts Selenium/Appium and enables all kind of extras. This is the solution you need when using ATS.
+* **Mobile testing** – With mobile testing, you use the Selenium SaaS provider servers to execute your mobile test cases. The providers host Appium and enable all kind of extras. ATS is only for browser testing, so this solution is not viable.
 
-To test your application for desktops and mobile you need automated browser testing.
+To test your application for desktops and mobile, you need **automated browser testing**.
 
-ATS has two supported selenium providers, see [Supported Selenium Providers](../refguide/rg-version-2/supported-selenium-hub-provider). The solutions of these providers are discussed in the next sections.
+ATS has two supported Selenium providers (for details, see [Supported Selenium Providers](../refguide/rg-version-2/supported-selenium-hub-provider)). The solutions of these providers are discussed in the next sections.
 
 ### 5.2 Browserstack Solutions/Products
 
 {{% alert type="warning" %}}
-Browserstack is a third party, the information displayed may be out of date! This section is pure to help you understand the different solutions.
+Browserstack is a third party, so the information displayed here may be out of date! This section is purely to help you understand the different solutions.
 {{% /alert %}}
 
-These Browserstack solutions are compatible with ATS.
+These Browserstack solutions are compatible with ATS:
 
-1. Automate Pro, unlimited automated browser testing for desktop sites.<sup>1</sup> If you only want to test your application on desktops browsers then you should choose Automate Pro.
-2. Automate Mobile, unlimited automated browser testing for desktop and mobile sites.<sup>1</sup> If you want to test your application on desktop and mobile browsers then you choose Automate Mobile.
-3. Enterprise, personalized pricing.
-
-<sup>1</sup> See [Browserstack Automate](https://www.browserstack.com/automate).<br>
+* **Automate Pro** – unlimited automated browser testing for desktop sites
+    * If you only want to test your application on desktop browsers, you should select this option
+    * For more information, see [Browserstack Automate](https://www.browserstack.com/automate)
+* **Automate Mobile** – unlimited automated browser testing for desktop and mobile sites
+    * If you want to test your application on desktop and mobile browsers, you should select this option
+    * For more information, see [Browserstack Automate](https://www.browserstack.com/automate)
+* **Enterprise** – personalized pricing
 
 For more information on pricing, see [Browserstack Pricing](https://www.browserstack.com/pricing).
 
 ### 5.3 SauceLabs Solutions/Products
 
 {{% alert type="warning" %}}
-SauceLabs is a third party, the information displayed may be out of date! This section is pure to help you understand the different solutions.
+SauceLabs is a third party, so the information displayed here may be out of date! This section is purely to help you understand the different solutions.
 {{% /alert %}}
 
-These SauceLabs solutions are compatible with ATS.
+These SauceLabs solutions are compatible with ATS:
 
-1. Automated, limited browser testing for desktop and mobile sites.<sup>1</sup> If you want to test your application on desktop and mobile browsers choose this option.
-2. Unlimited Automated, unlimited browser testing for desktop and mobile sites.<sup>1</sup> If you want to test your application on desktop and mobile browsers unlimited choose this option.
-3. Enterprise, personalized pricing.
-
-<sup>1</sup> See [SauceLabs Automated](https://saucelabs.com/products/web-testing).
+* **Automated** – limited browser testing for desktop and mobile sites
+    * If you want to test your application on desktop and mobile browsers, you should select this option
+    * For more information, see [SauceLabs Automated](https://saucelabs.com/products/web-testing)
+* **Unlimited Automated** – unlimited browser testing for desktop and mobile sites
+    * If you want to test your application on unlimited desktop and mobile browsers, you should select this option
+    * For more information, see [SauceLabs Automated](https://saucelabs.com/products/web-testing)
+* **Enterprise** – personalized pricing
 
 {{% alert type="info" %}}
-There is also a difference between virtual machines and real devices which do not matter for ATS.
+There is also a difference between virtual machines and real devices, which does not matter for ATS.
 {{% /alert %}}
 
 For more information on pricing, see [SauceLabs Pricing](https://saucelabs.com/pricing).

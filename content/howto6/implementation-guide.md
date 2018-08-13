@@ -104,6 +104,6 @@ See [Setting up Apple Push Notification Server](setting-up-apple-push-notificati
 
 You will need to build the hybrid mobile application. Refer to the [Publishing a Mendix Hybrid Mobile App how-to](publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores) to get the explanation on how to do this.
 
-For more information about PhoneGap Build, you can refer to their [documentation](http://docs.build.phonegap.com/en_US/index.html).
+For more information about PhoneGap Build, you can refer to their [documentation](http://docs.phonegap.com/phonegap-build/).
 
 Note that a free PhoneGap Build account is limited to a single application, whereas paid plans support multiple applications. As a consequence, you may need to delete an existing app from your PhoneGap build environment in order to create a new one.

@@ -12,7 +12,7 @@ Custom widget development can be difficult at the beginning. The resources below
 
 In order to create widgets, you need a good understanding of how JavaScript works. These texts can help you get started:
 
- * [Javascript: The Good Parts](http://bdcampbell.net/javascript/book/javascript_the_good_parts.pdf)
+ * [JavaScript: The Good Parts](https://7chan.org/pr/src/OReilly_JavaScript_The_Good_Parts_May_2008.pdf)
  * [You Don't Know JS](https://github.com/getify/You-Dont-Know-JS)
  * [Learning JavaScript Design Patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
 
@@ -38,7 +38,7 @@ For details on the widget life cycle, reference this documentation:
 
 ### 3.3 Widget Scaffolding
 
-In the past we created widgets using Brackets and a plugin. With the new JavaScript/Node.JS tools that have recently come out, we deprecated this way of creating widgets. The new way of creating widgets is done using Yeoman and a generator. 
+In the past we created widgets using Brackets and a plugin. With the new JavaScript/Node.JS tools that have recently come out, we deprecated this way of creating widgets. The new way of creating widgets is done using Yeoman and a generator.
 
 For a quick tutorial on using the widget generator, see [How to Scaffold a Widget with the Yeoman Widget Generator](scaffold-a-widget-with-the-yeoman-widget-generator).
 

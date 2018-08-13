@@ -97,7 +97,7 @@ In the **General** section, you can select the number of rows to be displayed on
 
 ### 3.4 Design Section {#design-section-list-view}
 
-The **Design** section of the list view properties allows you to change spacing and aligning of the data view on the page. Hover over the information icon to get more details on each option. 
+The **Design** section of the list view properties allows you to change spacing and aligning of the list view on the page. Hover over the information icon to get more details on each option. 
 
 ![](attachments/page-editor-data-view-list-view-wm/wm-design-section-info-icon.png)
 

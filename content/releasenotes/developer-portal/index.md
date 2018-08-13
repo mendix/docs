@@ -70,7 +70,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 #### Improvements
 
 * To improve integration and security between Mendix and SAP we now redirect you to SAP to provide your SAP credentials. This means that you need to use the same username (email address) for Mendix and SAP the next time you need to provide your credentials. This is currently implemented only for SAP regions **eu10 (Europe - Frankfurt)** and **us10 (US East - VA)**.
-	adc60286c074f1d20a8c96a859a62534
+
 ### July 2nd, 2018
 
 #### Improvements

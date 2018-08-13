@@ -135,7 +135,7 @@ For more information, see [How to Upload a File in Your App Using ATS](../howtos
 
 ### 5.1 General Solutions
 
-{% alert type="warning" %}}
+{{% alert type="warning" %}}
 This is a generic advice on which subscription type you need when using a Selenium SaaS provider. Always look what fits best for your situation!
 {{% /alert %}}
 

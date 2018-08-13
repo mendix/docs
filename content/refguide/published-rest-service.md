@@ -145,14 +145,19 @@ The allowed roles define which [module role](module-role) a user must have to be
 Web service users cannot access REST services.
 {{% /alert %}}
 
+## 4 Enable CORS
 
-## 4 Resources
+Check this box when your service needs to be available on websites other than your own.
+
+Click the [Settings...](cors-settings) button to specify this access in more detail, for instance which websites are allowed to access the service.
+
+## 5 Resources
 
 A REST service exposes a number of [resources](published-rest-resource). On a resource you can define GET, PUT, POST, PATCH, DELETE, HEAD and OPTIONS operations.
 
 You can drag an entity or a message definition onto this list to [generate a complete resource](generate-rest-resource).
 
-## 5 Operations
+## 6 Operations
 
 When you select a resource, you see the [operations](published-rest-operation) that are defined for that resource.
 
@@ -160,12 +165,12 @@ Resources and Operations are appended to [Location](#location) to form a URL on 
 
 ![](attachments/published-rest-service/example-location-url.png)
 
-## 6 Example
+## 7 Example
 
 **How to publish REST natively with Mendix**
 
 {{% youtube HzrFkv0U4n8 %}}
 
-## 7 Related Content
+## 8 Related Content
 
 For more information on which operation gets executed for a given request URL, see [Published REST Routing](published-rest-routing).

@@ -3,21 +3,21 @@ title: "Developer Portal"
 ---
 ## 2018
 
-#### August 13th, 2018
+### August 13th, 2018
 
 #### Improvements
 
-* A new API call to access logs of Mendix Cloud V4 applications is now available. Detailed information can be found in the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api).
-* It is now possible to add custom environment variables via Cloud Portal to set up application metrics with Datadog and Telegraph.
-* All loglevels in Cloud Portal (INFO, ERROR, TRACE, DEBUG, WARNING, CRITICAL) are also available in Datadog.
-* Postgres database size can also be observed in Datadog after enabling it in cloud portal.
+* A new API call for accessing the logs of Mendix Cloud V4 applications is now available. Detailed information can be found in the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api).
+* It is now possible to add custom environment variables via the Cloud Portal to set up application metrics with Datadog and Telegraph.
+* All the log levels in the Cloud Portal (as in, INFO, ERROR, TRACE, DEBUG, WARNING, CRITICAL) are now also available in Datadog.
+* The Postgres database size can also be observed in Datadog after enabling it in the Cloud Portal.
 
 #### Fixes
 
-* We adressed an issue that prevented our customers to provide better feedback in case of startup failure.
-* Status page link in alert emails will redirect you to the corresponding alerts page in Cloud Portal.
-* We solved an issue that caused blank error messages during backup creation for some of our customers.
-* "Environment" breadcrumb in Deploy / Environments / Environment section is a link again which redirects the user to Environments section. 
+* We adressed the issue that prevented users from providing better feedback in the case of a startup failure.
+* The status page link in alert emails now redirects you to the corresponding alerts page in the Cloud Portal.
+* We solved the issue that caused blank error messages during backup creation.
+* The **Environment** breadcrumb in **Deploy** > **Environments** > **Environment** is now a link that redirects you back to the **Environments** page. 
 
 ### August 9th, 2018
 

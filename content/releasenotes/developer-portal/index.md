@@ -10,13 +10,12 @@ title: "Developer Portal"
 * A new API call to access logs of Mendix Cloud V4 applications is now available. Detailed information can be found in the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api).
 * It is now possible to add custom environment variables via Cloud Portal to set up application metrics with Datadog and Telegraph.
 * All loglevels in Cloud Portal (INFO, ERROR, TRACE, DEBUG, WARNING, CRITICAL) are also available in Datadog.
-* Postgres database size can also be obversed in Datadog after enabling it in cloud portal.
+* Postgres database size can also be observed in Datadog after enabling it in cloud portal.
 
 #### Fixes
 
-* We adressed an issue that prevented our customers to receive an error message when a deployment failure occurs.
-* Application names will be correctly propagated in alert notification emails after renaming project names in Sprinter.
-* Status page link in alert emails will redirect you to the corresponding alert's page in Cloud Portal.
+* We adressed an issue that prevented our customers to provide better feedback in case of startup failure.
+* Status page link in alert emails will redirect you to the corresponding alerts page in Cloud Portal.
 * We solved an issue that caused blank error messages during backup creation for some of our customers.
 * "Environment" breadcrumb in Deploy / Environments / Environment section is a link again which redirects the user to Environments section. 
 
@@ -71,7 +70,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 #### Improvements
 
 * To improve integration and security between Mendix and SAP we now redirect you to SAP to provide your SAP credentials. This means that you need to use the same username (email address) for Mendix and SAP the next time you need to provide your credentials. This is currently implemented only for SAP regions **eu10 (Europe - Frankfurt)** and **us10 (US East - VA)**.
-
+	adc60286c074f1d20a8c96a859a62534
 ### July 2nd, 2018
 
 #### Improvements

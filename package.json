@@ -20,7 +20,7 @@
   },
   "license": "CC BY 4.0.",
   "devDependencies": {
-    "algoliasearch": "^3.24.3",
+    "algoliasearch": "^3.30.0",
     "async": "^2.5.0",
     "bluebird": "^3.5.0",
     "browser-sync": "^2.18.13",

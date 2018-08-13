@@ -241,7 +241,9 @@ const indexFiles = (opts) => {
         if (DEBUG) {
           return;
         }
-        const client = algoliasearch(opts.algolia_app_id, process.env.ALGOLIA_WRITE_KEY);
+        const client = algoliasearch(opts.algolia_app_id, process.env.ALGOLIA_WRITE_KEY, {
+          timeout: 60000
+        });
         const algoliaIndex = client.initIndex(opts.algolia_index);
         log(`Create settings for ${opts.algolia_index}`);
         algoliaIndex.setSettings({

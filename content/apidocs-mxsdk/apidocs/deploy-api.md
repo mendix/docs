@@ -1215,7 +1215,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 ### 3.22 Delete Environment Tags (Mendix Cloud v4 Only)
 
-#### 3.21.1 Description
+#### 3.22.1 Description
 
 Delete the current value of environment tags.
 
@@ -1224,14 +1224,14 @@ HTTP Method: DELETE
 URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/tags
 ```
 
-#### 3.21.2 Request
+#### 3.22.2 Request
 
-##### 3.21.2.1 Parameters
+##### 3.22.2.1 Parameters
 
 - _AppId_ (String): Subdomain name of an app.
 - _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production.
 
-##### 3.21.2.2 Example
+##### 3.22.2.2 Example
 
 ```bash
 DELETE /api/1/apps/calc/environments/acceptance/tags
@@ -1245,22 +1245,70 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 }
 ```
 
-#### 3.21.3 Output
+#### 3.22.3 Output
 
-##### 3.21.3.1 Response Codes
+##### 3.22.3.1 Response Codes
 
 | HTTP Status | Error code | Description                                                  |
 | ----------- | ---------- | ------------------------------------------------------------ |
 | 204         | No Content | The tag has been removed  or the response is empty or Tag not found |
 
-##### 3.21.3.2 Error Codes
+##### 3.22.3.2 Error Codes
 
 | HTTP Status | Error code | Description                         |
 | ----------- | ---------- | ----------------------------------- |
 | 404         | NOT FOUND  | An App or Environment is not found. |
 
-##### 3.21.3.3 Example
+##### 3.22.3.3 Example
 
 ```bash
 []
+```
+
+### 3.23 Download Archived Logs for a Specific Date (Mendix Cloud v4 Only)
+
+#### 3.23.1 Description
+
+Download archived logs for a specific date.
+
+```bash
+HTTP Method: GET
+URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/logs/<Date>(YYYY-MM-DD)
+```
+
+#### 3.23.2 Request
+
+##### 3.23.2.1 Parameters
+
+- _AppId_ (String): Subdomain name of an app.
+- _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production.
+- _Date_ (String): Date of the desired log (YYYY-MM-DD). Inserting a future date will provide the logs for the current day.
+
+##### 3.23.2.2 Example
+
+```bash
+GET /api/1/apps/calc/environments/acceptance/logs/2018-08-10
+Host: deploy.mendix.com 
+
+Content-Type: application/json
+Mendix-Username: richard.ford51@example.com
+Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
+```
+
+#### 3.23.3 Output
+##### 3.23.3.1 Error Codes
+
+| HTTP Status | Error code | Description                         |
+| ----------- | ---------- | ----------------------------------- |
+| 404         | NOT FOUND  | An App or Environment is not found. |
+| 403 | FORBIDDEN | You do not have access |
+
+##### 3.23.3.2 Example
+
+```
+{
+    "Environment": "38471410-861f-47e5-8efc-2f4b16f04005",
+    "Date": 1536451200000,
+    "DownloadUrl": "https://boobafina.test.mendix.com/v1/logs/38471410-861f-47e5-8efc-2f4b16f04005?endDate=2018-09-09&expire=20180810153345&startDate=2018-08-10&signature=893DC8D3EAB0372FF49DB0E2D6973C701D32B567B67E97A41FD9E53E4D957991F80E3AC83B29452AF205FC306C51EAE8D81BA19F82147E5147B72EE15A8AC11FD3BE0306C3SDADAF478CCC9B98B9CBE70F99C99EDFB4DC77020F44FE540847FBABED34ACE856878F908EB38AC35D03125E7EFC9AE5CC2A67B871FA36C9F48A022BC7905838DE67046B5E57E82C0FBDCDFF67456DD66A2C2B4642B7B34C2829730257818B53113B620057777496EBA6D823EAA58378357A7F6ADA4956B6D86C100D61C8AD3483961A2C5EBEFF35A27BDE230478186F9F4ABC6207684781F"
+}
 ```

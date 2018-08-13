@@ -18,7 +18,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Install [weinre](https://people.apache.org/~pmuellr/weinre/docs/latest/)
 * Install the Mendix Developer App (v1.1 or later) on your mobile device:
-    * Download for [Android](https://play.google.com/store/apps/details?id=com.mendix.MendixDeveloperApp&hl)
+    * Download for [Android](https://play.google.com/store/apps/details?id=com.mendix.SprintrMobile)
     * Download for [iOS](https://itunes.apple.com/us/app/mendix-developer-app/id922423316)
     * Download for [Windows Phone](https://www.microsoft.com/en-us/store/p/mendix-developer-app/9wzdncrdftvr)
 

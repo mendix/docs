@@ -1265,7 +1265,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 []
 ```
 
-### 3.23 Download archived logs for a specific date (Mendix Cloud v4 Only)
+### 3.23 Download Archived Logs for a Specific Date (Mendix Cloud v4 Only)
 
 #### 3.23.1 Description
 
@@ -1282,7 +1282,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/logs/<Date
 
 - _AppId_ (String): Subdomain name of an app.
 - _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production.
-- _Date_ (String): Date of the desired log YYYY-MM-DD. Putting a future date will provide the logs for the current day.
+- _Date_ (String): Date of the desired log (YYYY-MM-DD). Inserting a future date will provide the logs for the current day.
 
 ##### 3.23.2.2 Example
 

@@ -50,6 +50,18 @@ A complete configuration may look like this:
 
 ![](attachments/use-a-client-certificate/example-custom-settings.png)
 
+You can use an empty path to specify that you don't want to use a client certificate, even when the server accepts one. The following sample uses client certificate _Mx1.pfx_ for _WebService1_, and no client certificate for _WebService2_:
+
+```
+{ "Module.WebService1": "D:\\App\\Mx1.pfx", "Module.WebService2": "" }
+```
+
+{{% alert type="info" %}}
+
+The possibility to use an empty path was introduce in version 7.18.0.
+
+{{% /alert %}}
+
 ## 4 Running in the Cloud
 
 {{% alert type="info" %}}

@@ -112,10 +112,12 @@ For each language you can configure whether to check that all mandatory texts ha
 
 Certificates are used to connect to web services over HTTPS when:
 
-*   The server uses a self-signed Certificate Authority.
+*   The server uses a self-signed Certificate Authority, and/or
 *   A client certificate (certificate with private key) is required.
 
 These certificates can be imported into the Modeler using the 'Import' button. Certificate Authority files usually have a .crt extension and client certifcates usually have a .p12 or a .pfx extension. After importing use 'View details' to acquire more information concerning the certificate.
+
+Client certificates added here will be used whenever a server accepts a client certificate. If you upload more than one client certificate, one of them will be chosen based on the requirements of the server. If you need more control over client certificates, you should not upload the certificates here, but use [custom settings](custom-settings) *ClientCertificates*, *ClientCertificatePasswords* and *WebServiceClientCertificates*.
 
 {{% alert type="warning" %}}
 

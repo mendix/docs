@@ -16,8 +16,8 @@ If you're using the advanced flow, you can get the latest version of the Hybrid 
 
 ### August 13th, 2018 (2.2.0 / 2.0.1)
 
-* We changed how auth tokens are stored, preventing an issue where a session would sometimes not be reconstructed after an update of the app.
-* We added several default entries to the config.xml file, preventing security errors in the webview.
+* We changed how auth tokens are stored, preventing an issue where a session was not reconstructed after an update of the app.
+* We added several default entries to the *config.xml* file, preventing security errors in the web view.
 
 ### July 9th, 2018 (2.1.0 / 2.0.1)
 

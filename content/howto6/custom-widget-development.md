@@ -12,7 +12,7 @@ Custom widget development can be difficult at the beginning. The resources below
 
 In order to create widgets, you need a good understanding of how JavaScript works. These texts can help you get started:
 
- * [JavaScript: The Good Parts](https://7chan.org/pr/src/OReilly_JavaScript_The_Good_Parts_May_2008.pdf)
+ * [JavaScript: The Good Parts](https://github.com/transidai1705/javascript-ebooks/raw/master/%5BJavaScript%20The%20Good%20Parts%201st%20Edition%20by%20Douglas%20Crockford%20-%202008%5D.pdf)
  * [You Don't Know JS](https://github.com/getify/You-Dont-Know-JS)
  * [Learning JavaScript Design Patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
 

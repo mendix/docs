@@ -17,7 +17,7 @@ To download the **Mendix** mobile app, select one of the download links below:
 
 ### Fixes
 
-* We fixed the issue where hybrid apps were stuck in either offline or online mode.
+* We fixed an issue where hybrid apps were stuck in either offline or online mode.
 
 ## 4.7.0
 

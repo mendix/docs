@@ -1,6 +1,7 @@
 ---
 title: "Inheritance vs. One-to-One Association"
 parent: "associations"
+#tags: ["domain model", "association", "inheritance", "one-to-one"]
 ---
 Every Mendix developer has to choose on a daily basis whether or not he wants to use inheritance. It starts the moment you initiate a new project; how do you want to setup your users? Are you going to keep using the already available Account entity in the Administration module? Or are you going to work with separate entities with a one-to-one association to the user account? Or are you going to add (multiple) entities that inherit from **System.User**?
 

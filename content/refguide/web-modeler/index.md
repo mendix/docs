@@ -11,7 +11,7 @@ Mendix offers two Modeler products:
 * [Desktop Modeler](../desktop-modeler-overview)
 * [Web Modeler](overview-wm)
 
-The Mendix Web Modeler is a collaborative, no-code, web-based application development environment. It enables Business Developers and users with minimal coding or software development experience to create  web and mobile applications without having to know how to code.
+The Mendix Web Modeler is a collaborative, no-code, web-based application development environment. It enables business developers and users with minimal coding or software development experience to create  web and mobile applications without having to know how to code.
 
 The Web Modeler enables you to do the following: 
 

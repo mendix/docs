@@ -115,7 +115,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 #### Fixes
 
-* We fixed the issue in our alerting infrastructure that prevented some Mendix Cloud V4 users from receiving alerts when their apps ran out of memory.
+* We fixed an issue in our alerting infrastructure that prevented some Mendix Cloud V4 users from receiving alerts when their apps ran out of memory.
 * We fixed the problem that caused the Mendix Cloud V4 **Metrics** legend to remain on the screen even if the user navigated to a different page.
 * We fixed the health icon statuses of the environments so that they reflect the environment health with minimum delay.
 
@@ -159,8 +159,8 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 #### Fixes
 
-* We fixed the issue that prevented our Mendix Cloud v4 users from uploading and restoring big backups (larger than ~30GB) to their environments. It has been tested with the archives (~90GBs) on Mendix Cloud v4.
-* We addressed and fixed the issue that caused Mendix Cloud v4 users in the Asia Pacific time zone to receive the wrong timestamps when they downloaded daily logs.
+* We fixed an issue that prevented our Mendix Cloud v4 users from uploading and restoring big backups (larger than ~30GB) to their environments. It has been tested with the archives (~90GBs) on Mendix Cloud v4.
+* We addressed and fixed an issue that caused Mendix Cloud v4 users in the Asia Pacific time zone to receive the wrong timestamps when they downloaded daily logs.
 
 ### April 9th, 2018
 
@@ -220,7 +220,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 #### Fixes
 
-* We fixed the issue that prevented SAP Cloud users from viewing the **Mobile App** section properly.
+* We fixed an issue that prevented SAP Cloud users from viewing the **Mobile App** section properly.
 * When uploading a backup in Mendix Cloud v3, double-clicking the **Restore** button was causing the UI to break. This is now fixed.
 
 ### February 23rd, 2018
@@ -240,7 +240,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 #### Fixes
 
 * Backup creation was reported as a backup restore action in the activity feed, which is now fixed.
-* We addressed and fixed the issue where a backup activity item was added each time the backups page was viewed.
+* We addressed and fixed an issue where a backup activity item was added each time the backups page was viewed.
 * The environment details list was loading slowly for some of our users, which is now fixed.
 
 ### February 19th, 2018
@@ -257,13 +257,13 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 #### Fixes
 
-* We addressed the issue that prevented the **Daily Digest** email from being sent.
+* We addressed an issue that prevented the **Daily Digest** email from being sent.
 
 ### January 25th, 2018
 
 #### Fixes
 
-* Happy new year! We addressed the issue where backup downloads were logged as restored backups in the activity log.
+* Happy new year! We addressed an issue where backup downloads were logged as restored backups in the activity log.
 * If you had a **Backups** section of your apps open in multiple tabs, you saw multiple activity log entries for each action taken. That's fixed now.
 * The restart and stop/start activities are now distinctly defined in the **Activity** section.
 * Branches of an application are sorted alphabetically, but **Main Line** is now always on top.
@@ -292,8 +292,8 @@ In some cases, you may still experience false positives for the runtime heartbea
 #### Fixes
 
 * It's now possible to scale Mendix 6 applications on Cloud V4. Previously, this was only possible with environments that run Mendix 7 apps. With Mendix 6 apps, you can only scale the allocated memory, but not the amount of instances.
-* Big backups are now welcomed on V4 environments, as we fixed the issue that prevented users from uploading backup packages larger than 5 GBs.
-* We fixed the issue where some Mendix Cloud V3 users were not able to set a specified Java version for environments.
+* Big backups are now welcomed on V4 environments, as we fixed an issue that prevented users from uploading backup packages larger than 5 GBs.
+* We fixed an issue where some Mendix Cloud V3 users were not able to set a specified Java version for environments.
 * Hovering over a Mendix Cloud environment status icon will now give more information about the environment's health.
 
 ### December 13th, 2017
@@ -307,7 +307,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 #### Fixes
 
-* We adressed the issue that prevents Free Apps from being embedded in an iframe.
+* We adressed an issue that prevents Free Apps from being embedded in an iframe.
 
 ### November 27th, 2017
 
@@ -410,14 +410,14 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 #### Fixes
 
-* We fixed the issue where users with Microsoft browsers would get an error page after signup instead of automatically continuing to the Developer Portal.
+* We fixed an issue where users with Microsoft browsers would get an error page after signup instead of automatically continuing to the Developer Portal.
 
 ### August 11th, 2017
 
 #### Fixes
 
-* We fixed the issue where Desktop Modeler users couldn't submit feedback items.
-* We fixed the issue where team member names in the **Node Security** screen were empty and only visible after a refresh.
+* We fixed an issue where Desktop Modeler users couldn't submit feedback items.
+* We fixed an issue where team member names in the **Node Security** screen were empty and only visible after a refresh.
 
 ### August 2nd, 2017
 
@@ -472,7 +472,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 #### Fixes
 
-* We fixed the issue with the input of Japanese characters in the feedback widget.
+* We fixed an issue with the input of Japanese characters in the feedback widget.
 
 ### May 19th, 2017
 
@@ -510,16 +510,16 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 #### Fixes
 
-* We fixed the issue where invitation dialogs would be shown twice in some situations. They are now shown just once.
+* We fixed an issue where invitation dialogs would be shown twice in some situations. They are now shown just once.
 
 ### April 1st, 2017
 
 * We added list backups/download backup operations to the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api#3-15-list-environment-backups).
 * We fixed the status page link in alert emails.
 * We updated the **Security** link from the Deploy/Operate tabs. It now goes to the same page on all pages in the platform.
-* We fixed the issue where the Free Apps backups page was very slow or resulted in an error in some cases.
-* We fixed the issue where the log viewer for Free Apps did not escape HTML, so if the application logged plain HTML, it was interpreted in the browser.
-* We fixed the issue where simultaneous snapshot restore jobs from the same environment to two others could lock one of the environments.
+* We fixed an issue where the Free Apps backups page was very slow or resulted in an error in some cases.
+* We fixed an issue where the log viewer for Free Apps did not escape HTML, so if the application logged plain HTML, it was interpreted in the browser.
+* We fixed an issue where simultaneous snapshot restore jobs from the same environment to two others could lock one of the environments.
 * We updated links from *world.mendix.com* to *docs.mendix.com*.
 
 ### March 20th, 2017
@@ -546,7 +546,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 * We made various small styling improvements.
 
 #### Fixes
-* We fixed the issue in which completing a sprint from the **Stories** page wouldn't properly update the UI.
+* We fixed an issue in which completing a sprint from the **Stories** page wouldn't properly update the UI.
 * The **getAccounts** call in the **UserManagementAPI** will now sort results consistently on **EmailAddress** when using limit/offset.
 
 ### February 21st, 2017

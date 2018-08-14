@@ -21,7 +21,7 @@ The domain model consists of entities and associations. An entity is the bluepri
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Download and install the [https://appstore.home.mendix.com/link/modelers/](Mendix Desktop Modeler)
+* Download and install the [Mendix Desktop Modeler](https://appstore.home.mendix.com/link/modelers/)
 * Create a new app or have an existing app project available
 
 ## 3 Creating Entities and Attributes

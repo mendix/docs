@@ -63,7 +63,7 @@ Once you have the unique URL and password, there are two methods for connecting 
 
 {{% alert type="warning" %}}
 
-If you do not see an overview similar to the one below, then you do not have sufficient cloud permissions to deploy packages into the cloud or to debug in the cloud. Contact the technical contact or the project SCRUM master in your project to get sufficient permissions.
+If you do not see an overview similar to the one below, then you do not have sufficient cloud permissions to deploy packages into the cloud or to debug in the cloud. Contact the technical contact or the project SCRUM Master in your project to get sufficient permissions.
 
 {{% /alert %}}
 

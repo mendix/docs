@@ -20,7 +20,7 @@ In order to access the team server project two prerequisites must be arranged;
 
 Becoming a team member is handled through an invite which has to be send to you by another team member. So if you aren’t member of a project yet, ask a current team member to invite you.
 
-The role is depending on the project security/role settings. By default the roles “Scrum master” & “Business Engineer” are allowed to access the team server. Though this can be adjusted by the scrum master of the project. Once a role has the “Edit” right to the development step, team members with this role will be able to download the model, change it and committing new revisions. View means that the team member is allowed to see the repository overview of the team server revisions.
+The role is depending on the project security/role settings. By default the roles “SCRUM Master” & “Business Engineer” are allowed to access the team server. Though this can be adjusted by the scrum master of the project. Once a role has the “Edit” right to the development step, team members with this role will be able to download the model, change it and committing new revisions. View means that the team member is allowed to see the repository overview of the team server revisions.
 
 ![](attachments/18448641/18580469.png)
 

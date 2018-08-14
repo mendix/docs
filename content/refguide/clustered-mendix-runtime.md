@@ -70,6 +70,8 @@ While running a multi-node cluster it is not predictable on which node a microfl
 
 Some apps require a guaranteed single execution of a certain activity at a given point in time. In a single node Mendix Runtime this could be guaranteed by using JVM locks. However, in a distributed scenario those JVMs run on different machines, so there is no locking system available. Mendix does not support cluster wide locking either. If this can't be circumvented, you might need to resort to an external distributed lock manager. However, keep in mind that locking in a distributed system is complex and prone to failure (lock starvation, lock expiration, etc.).
 
+Note: for this reason the property 'disallow concurrent execution' of a microflow only applies to a single node.
+
 ## 9 Dirty State in a Cluster
 
 When a user signs in to a Mendix application and starts going through a certain application flow, the system can temporararily retain some data while not persisting it yet in the database. The data is retained in the Mendix Client memory and communicated on behalf of the user to a Mendix Runtime node.

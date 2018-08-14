@@ -11,7 +11,7 @@ Mendix allows for microflows to be triggered in pages by a variety of widgets. T
 | --- | --- | --- |
 | Action button (data view) | On click | Data view object |
 | Data view | Data source | Object of the data view containing this data view |
-| Action button (data grid) | On click | Grid selection or clicked row (as an object or as a list, depending on the [selection mode](data-grid)) |
+| Action button (grid) (1) | On click | Grid selection or clicked row (as an object or as a list, depending on the [selection mode](data-grid)) |
 | Reference set selector | On change | Data view object |
 | Input widget (2) | On change | Data view object |
 | Input widget | On enter | Data view object |
@@ -20,8 +20,8 @@ Mendix allows for microflows to be triggered in pages by a variety of widgets. T
 | Action button | On click | Enclosing data view object, if available |
 | Reference selector | Data source | Data view object |
 
-(1) The following 'grid' widgets have microflow buttons: data grid, template grid and reference set selector.
-(2) The following widgets are attribute widgets: check box, date picker, drop-down, text area, and text box.
+(1) The following 'grid' widgets have grid action buttons: data grid, template grid and reference set selector.
+(2) The following widgets are input widgets: check box, date picker, drop-down, text area, and text box.
 
 ## 2 Microflow
 
@@ -36,6 +36,12 @@ You can create a new microflow by clicking 'Select...' and then 'New'. Modeler w
 ## 3 Microflow arguments
 
 The arguments sent to the microflow are automatically configured based on the parameters of the selected microflow and the available arguments. Which arguments are available depends on the widget calling the microflow. For a full listing consult the table above. Additionally, if the widget calling a microflow is contained inside a nested data view, then the object of the enclosing data view is also available.
+
+{{% alert type="info" %}}
+
+Since 7.19.0, not only the object of the enclosing data view can be passed additionally, but also objects from data views above that one, all the way up to the top of page.
+
+{{% /alert %}}
 
 The arguments available to a data or template grid control bar button are determined by the selection mode of the grid and the parameters of the selected microflow. Single selection results in the selected object being passed to the microflow if the microflow has an object parameter. If the microflow has an object list parameter, all the pages will be passed instead, ignoring the selection. Simple multi-selection allows for both all pages and selection, which defaults to selection. This can be configured via the drop-down menu in the microflow settings page.
 

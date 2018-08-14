@@ -14,9 +14,9 @@ title: "Developer Portal"
 
 #### Fixes
 
-* We adressed the issue that prevented users from providing better feedback in the case of a startup failure.
+* We improved the feedback messages in the case of a startup failure.
 * The status page link in alert emails now redirects you to the corresponding alerts page in the Cloud Portal.
-* We solved the issue that caused blank error messages during backup creation.
+* We solved an issue that caused blank error messages during backup creation.
 * The **Environments** breadcrumb in **Deploy** > **Environments** > environment is now a link that redirects you back to the **Environments** page. 
 
 ### August 9th, 2018

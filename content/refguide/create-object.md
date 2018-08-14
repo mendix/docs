@@ -43,7 +43,7 @@ When set, Refresh in client will cause [data grids](data-grid), [template grids]
 
 {{% alert type="warning" %}}
 
-When inside a [nanoflow](nanoflows), the Create object action does not have the Refresh in client option and the refresh behavior depends on the Commit type option. If Commit type is set to _Yes_, [data grids](data-grid), [template grids](template-grid), [list views](list-view), [reference selectors](reference-selector), [reference set selectors](reference-set-selector) and [input reference set selectors](input-reference-set-selector) will be refreshed if they show the entity of the changed object.
+When inside a [nanoflow](nanoflows), the Create object action does not have the Refresh in client option and the refresh behavior depends on the **Commit type** option. If **Commit type** is set to *Yes*, [data grids](data-grid), [template grids](template-grid), [list views](list-view), [reference selectors](reference-selector), [reference set selectors](reference-set-selector) and [input reference set selectors](input-reference-set-selector) will be refreshed if they show the entity of the changed object.
 
 {{% /alert %}}
 

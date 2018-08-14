@@ -37,7 +37,7 @@ When set, Refresh in client will cause [data grids](data-grid), [template grids]
 
 {{% alert type="info" %}}
 
-For input widgets, this setting behaves differently as of 7.18.0. Before 7.18.0, if this setting was set to _No_, [input widgets](input-widgets) showing the changed object's attributes wouldn't be refreshed, including their visibility and editability [conditions](conditions). Since 7.18.0, input widgets and their conditions will always be refreshed.
+For input widgets, this setting behaves differently as of 7.18.0. Before 7.18.0, if this setting was set to *No*, [input widgets](input-widgets) showing the changed object's attributes wouldn't be refreshed, including their visibility and editability [conditions](conditions). Since 7.18.0, input widgets and their conditions will always be refreshed.
 
 {{% /alert %}}
 

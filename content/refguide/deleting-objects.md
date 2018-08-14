@@ -31,7 +31,7 @@ When set, Refresh in client will cause [data grids](data-grid), [template grids]
 
 {{% alert type="info" %}}
 
-For [data views](data-view) and [input widgets](input-widgets), this setting behaves differently as of 7.18.0. Before 7.18.0, if this setting was set to _No_, Data views showing the deleted object and input widgets showing its attributes wouldn't be refreshed, including their visibility and editability [conditions](conditions). They will always be refreshed with 7.18.0.
+For [data views](data-view) and [input widgets](input-widgets), this setting behaves differently as of 7.18.0. Before 7.18.0, if this setting was set to *No*, Data views showing the deleted object and input widgets showing its attributes wouldn't be refreshed, including their visibility and editability [conditions](conditions). They will always be refreshed with 7.18.0.
 
 {{% /alert %}}
 

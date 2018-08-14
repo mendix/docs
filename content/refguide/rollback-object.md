@@ -33,7 +33,7 @@ When set and the microflow is called from the client, Refresh in client will cau
 
 {{% alert type="info" %}}
 
-For input widgets, this setting behaves differently as of 7.18.0. Before 7.18.0, if this setting was set to _No_, [input widgets](input-widgets) showing the rolled back object's attributes wouldn't be refreshed, including their visibility and editability [conditions](conditions). Since 7.18.0, input widgets and their conditions will always be refreshed.
+For input widgets, this setting behaves differently as of 7.18.0. Before 7.18.0, if this setting was set to *No*, [input widgets](input-widgets) showing the rolled back object's attributes wouldn't be refreshed, including their visibility and editability [conditions](conditions). Since 7.18.0, input widgets and their conditions will always be refreshed.
 
 {{% /alert %}}
 

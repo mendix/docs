@@ -47,7 +47,7 @@ _Default value:_ No
 
 ### 3.2 Refresh in Client
 
-When set and the microflow is called from the client, Refresh in client will cause [data grids](data-grid), [template grids](template-grid), [list views](list-view), [reference selectors](reference-selector), [reference set selectors](reference-set-selector), and [input reference set selectors](input-reference-set-selector) to be refreshed if they show the entity of the changed object.
+When set and the microflow is called from the client, Refresh in client causes [data grids](data-grid), [template grids](template-grid), [list views](list-view), [reference selectors](reference-selector), [reference set selectors](reference-set-selector), and [input reference set selectors](input-reference-set-selector) to be refreshed if they show the entity of the changed object.
 
 {{% alert type="info" %}}
 

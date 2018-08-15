@@ -124,11 +124,11 @@ First actions to take | If this alert triggers, and visiting the application url
 
 | APPLICATION STATUS    |                                                              |      |
 | --------------------- | ------------------------------------------------------------ | ---- |
-| Description           | ~updates required from Hans Then                             |      |
+| Description           | Our application runtime sends a heartbeat signal every few minutes to show it is still alive. If no heartbeat timeout has been received for some time, the system will generate an alert. The heartbeat value varies per cluster and we are reducing it over time, but in general is ~5 minutes.                             |      |
 | Example message       | No runtime heartbeat received for 8m45s                      |      |
 | Warning Threshold     | Not Used                                                     |      |
 | Critical Threshold    | If the runtime heatbeat of the application is more than 8 mins, a critical alert will be generated |      |
-| First actions to take | ~updates required from Hans Then                             |      |
+| First actions to take | Check application logs and Mendix status page.                             |      |
 
 | Critical Logs         |                                                              |      |
 | --------------------- | ------------------------------------------------------------ | ---- |

@@ -67,4 +67,4 @@ _Default value_: No
 
 ### 3.3 Change Members
 
-You can specify a list of changes that will be applied to the object. Values for members are specified with [expressions](expressions) and should be of the same type as the member. For a reference set association, it is also possible to add and remove (instead of only setting the member). For **add**, an object or a list of objects can be added to the currently associated objects. For **remove**, an object or a list of objects can be removed from the currently associated objects.
+You can specify a list of changes that to apply to the object. Values for members are specified with [expressions](expressions) and should be of the same type as the member. For a reference set association, it is also possible to add and remove (instead of only setting the member). For **add**, an object or a list of objects can be added to the currently associated objects. For **remove**, an object or a list of objects can be removed from the currently associated objects.

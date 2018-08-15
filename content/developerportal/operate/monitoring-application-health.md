@@ -120,6 +120,56 @@ Warning Threshold | The application URL is not reachable.
 Critical Threshold | Not used.
 First actions to take | If this alert triggers, and visiting the application url results in slow loading or unresponsiveness, visit [https://status.mendix.com/](https://status.mendix.com/) to see if there is an outage. This condition might point to an internal networking connectivity problem.
 
+### 3.3 Alerts in Mendix Cloud v4
+
+| APPLICATION STATUS    |                                                              |      |
+| --------------------- | ------------------------------------------------------------ | ---- |
+| Description           | ~updates required from Hans Then                             |      |
+| Example message       | No runtime heartbeat received for 8m45s                      |      |
+| Warning Threshold     | Not Used                                                     |      |
+| Critical Threshold    | If the runtime heatbeat of the application is more than 8 mins, a critical alert will be generated |      |
+| First actions to take | ~updates required from Hans Then                             |      |
+
+| Critical Logs         |                                                              |      |
+| --------------------- | ------------------------------------------------------------ | ---- |
+| Description           | The *CRITICAL* log level is reserved for issuing messages in *rare cases where the application may not be able to function reliably anymore*, for example, there's a chance of data corruption when the application continues to be running. Internal JVM Errors are logged to this level. Out of Memory errors, which are JVM Errors must be treated as harmful for the stability and integrity of your mendix application process. |      |
+| Example message       | Critical errors count is 2                                   |      |
+| Warning Threshold     | Not used.                                                    |      |
+| Critical Threshold    | If any logging is done on CRITICAL level, the alerts status always directly switches to Critical. The critical log messages counter will only be reset when restarting the application process. |      |
+| First actions to take | Inspect the application log file and look up the CRITICAL error messages. Restart the application as soon as possible in case of stability issues. |      |
+
+| DATABASE CPU UTILIZATION |                                                              |      |
+| ------------------------ | ------------------------------------------------------------ | ---- |
+| Description              | Overall system load of the application server. High values indicate high CPU load because of application activity, and/or the CPU is spending too much time waiting for disk reads or writes. |      |
+| Example message          | Database has 95% CPU Utilization                             |      |
+| Warning Threshold        | Not used                                                     |      |
+| Critical Threshold       | System load is higher than 90%                               |      |
+| First actions to take    | Inspect the trends for *Application node CPU usage* combined with *Application node disk throughput* and *Application node load* for anomalies and correlate those with application behavior. |      |
+
+| DATABASE FREE SPACE   |                                                              |      |
+| --------------------- | ------------------------------------------------------------ | ---- |
+| Description           | Track the amount of disk space used for the database belonging to the appication. |      |
+| Example message       | Database has less than 5% free space                         |      |
+| Warning Threshold     | Database has less than 25% and more than 10% free space available. |      |
+| Critical Threshold    | Database has less than 10% free space available              |      |
+| First actions to take | Inspect the trends for *Application node CPU usage* combined with *Application node disk throughput* and *Application node load* for anomalies and correlate those with application behavior. ~updates required from Hans Then |      |
+
+| Health Check          |                                          |      |
+| --------------------- | ---------------------------------------- | ---- |
+| Description           | ~updates required from Hans Then         |      |
+| Example message       | Health: Healthy                          |      |
+| Warning Threshold     | Health: ~updates required from Hans Then |      |
+| Critical Threshold    | Health: ~updates required from Hans Then |      |
+| First actions to take | ~updates required from Hans Then         |      |
+
+| VIRTUAL MACHINE CRASH |                                                              |      |
+| --------------------- | ------------------------------------------------------------ | ---- |
+| Description           | Show the state of the application's virtual machine, or an error state when the issue occurs with virtual machine |      |
+| Example message       | Your application's virtual machine died 1 times in the last minute. |      |
+| Warning Threshold     | Not used.                                                    |      |
+| Critical Threshold    | If the application's virtual machine should be running but completely disappeared, or if the JVM process does not respond to any signal any more. ~updates required from Hans Then |      |
+| First actions to take | ~updates required from Hans Then                             |      |
+
 ## 4 Alerts History
 
 To access the history of the alerts from your app, follow these steps:

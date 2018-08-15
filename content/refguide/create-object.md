@@ -39,7 +39,7 @@ _Default value:_ No
 
 ### 2.3 Refresh in Client
 
-When set, Refresh in client will cause [data grids](data-grid), [template grids](template-grid), [list views](list-view), [reference selectors](reference-selector), [reference set selectors](reference-set-selector), and [input reference set selectors](input-reference-set-selector) to be refreshed if they show the entity of the created object.
+When set, Refresh in client causes [data grids](data-grid), [template grids](template-grid), [list views](list-view), [reference selectors](reference-selector), [reference set selectors](reference-set-selector), and [input reference set selectors](input-reference-set-selector) to be refreshed if they show the entity of the created object.
 
 {{% alert type="warning" %}}
 

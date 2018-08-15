@@ -57,9 +57,9 @@ For input widgets, this setting behaves differently as of 7.19.0. For Mendix ver
 
 {{% alert type="warning" %}}
 
-When inside a [nanoflow](nanoflows), the Change object action does not have the Refresh in client option, and the refresh behavior depends on the **Commit type** option. It will always refresh [input widgets](input-widgets) showing the changed object's attributes (including their [conditions](conditions)).
+When inside a [nanoflow](nanoflows), the Change object action does not have the Refresh in client option, and the refresh behavior depends on the **Commit type** option. It always refreshes [input widgets](input-widgets) showing the changed object's attributes (including their [conditions](conditions)).
 
-If **Commit type** is set to *Yes*, then additionally [data grids](data-grid), [template grids](template-grid), [list views](list-view), [reference selectors](reference-selector), [reference set selectors](reference-set-selector) and [input reference set selectors](input-reference-set-selector) will be refreshed if they show the entity of the changed object.
+If **Commit type** is set to *Yes*, then [data grids](data-grid), [template grids](template-grid), [list views](list-view), [reference selectors](reference-selector), [reference set selectors](reference-set-selector), and [input reference set selectors](input-reference-set-selector) are refreshed if they show the entity of the changed object.
 
 {{% /alert %}}
 

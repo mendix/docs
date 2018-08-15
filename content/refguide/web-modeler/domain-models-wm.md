@@ -1,5 +1,5 @@
 ---
-title: "Domain Models Overview in the Web Modeler"
+title: "Domain Model Overview in the Web Modeler"
 category: "Web Modeler"
 description: "Describes the domain models in the Mendix Web Modeler."
 tags: ["web modeler", "domain model"]

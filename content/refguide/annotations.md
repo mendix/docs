@@ -1,6 +1,7 @@
 ---
 title: "Annotations"
 parent: "domain-model"
+tags: ["domain model", "annotation"]
 ---
 
 

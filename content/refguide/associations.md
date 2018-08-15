@@ -1,6 +1,7 @@
 ---
 title: "Associations"
 parent: "domain-model"
+#tags: ["domain model", "association"]
 ---
 
 ## 1 Introduction

@@ -19,7 +19,7 @@ An example of an import mapping document is depicted in **Figure 1**. More detai
 
 ![](attachments/16713725/16843933.png)
 
-**Figure 1**
+**Figure 1**: An example of an import mapping, mapping an Order from a web service to a ReceivedOrder entity
 
 ## 3 Export Mappings
 
@@ -32,7 +32,7 @@ An example of an export mapping document is depicted in **Figure 2**. In that ex
 
 ![](attachments/16713726/16843940.png)
 
-**Figure 2**
+**Figure 2**: An example of an export mapping
 
 ## 4 Creating a New Mapping Document
 

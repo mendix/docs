@@ -52,11 +52,21 @@ This feature was introduced in version 7.10.0.
 
 If the import mapping is based on a [message definition](message-definition), it can import both single objects and lists. Select whether the input variable contains a single object or a list of objects.
 
-### 3.4 Parameter
+### 3.4 If No Object Was Found
+
+{{% alert type="info" %}}
+
+This feature was introduced in version 7.17.0.
+
+{{% /alert %}}
+
+You can indicate what should happen **if no object was found** when the import mapping has checked the box **decide this at the place where the mapping gets used**.
+ 
+### 3.5 Parameter
 
 If the selected mapping requires a parameter, you can choose it here.
 
-### 3.5 Range (If the Mapping Returns a List)
+### 3.6 Range (If the Mapping Returns a List)
 
 The range determines how many objects are mapped and returned.
 

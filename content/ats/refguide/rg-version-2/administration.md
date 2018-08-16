@@ -1,10 +1,14 @@
 ---
 title: "Administration"
 parent: "rg-version-2"
+description: "Describes a tenant administrator role in ATS."
+tags: ["ats", "administrator", "administration"]
 ---
 
 ## 1 Introduction
- 
+
+A tenant administrator is a user role which is used in on-premises instances of ATS. The tenant administrator is able to create and edit accounts and apps. 
+
 As a tenant administrator in ATS, you have access to the following additional functionality:
 
 *   Managing apps system-wide

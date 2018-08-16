@@ -33,7 +33,7 @@ The location where the operation can be reached starts with the location of the 
 
 The operation path specifies the remainder of the location of the operation. You can leave it empty to use the location of the resource.
 
-You can use [path parameters](published-rest-path-parameters) to capture part of the location as a microflow parameter. Specify path parameters in the operation path between '{' and '}'. The microflow (see below) should have a parameter with the same name. Whatever is in the URL at the place of the path parameter will be passed to the microflow.
+You can use [path parameters](published-rest-path-parameters) to capture part of the location as a microflow parameter or as a parameter to the import mapping. Specify path parameters in the operation path between '{' and '}'. Whatever is in the URL at the place of the path parameter will be passed to the microflow or the import mapping.
 
 The method and operation path determine [which operation gets executed for a given request URL](published-rest-routing).
 
@@ -52,12 +52,11 @@ Support for **File Documents** in these microflows was introduced in version 7.1
 An operation has different parameters:
 
  * [Path parameters](published-rest-path-parameters), which are part of the path of the URL
- * Query parameters, which are at the end of the URL in the form of `?name1=value1&name2=value2` (when a microflow parameter is not in the path and is not object, then it's considered a query parameter)
- * A body parameter (optional), which is in the body of the request to the operation (the 'GET', 'HEAD', and 'DELETE' operations do not have a body parameter)
+ * [Query parameters](published-rest-query-parameters), which are at the end of the URL in the form of `?name1=value1&name2=value2` (when a microflow parameter is not in the path and is not object, then it's considered a query parameter)
+ * Header parameters, which come from the HTTP headers of the request
+ * A body parameter (optional), which is in the body of the request to the operation (the 'GET', 'HEAD', and 'DELETE' operations do not have a body parameter). Only body parameters parameters can have a *List* or *Object* type.
 
-A microflow for an operation takes all these operation parameters as input.
-
-Path and query parameters can't have the *list* or *object* type.
+A microflow for an operation takes these operation parameters as input.
 
 A microflow parameter that has the *list* or *object* type indicates a body parameter. You can specify an import mapping to convert the incoming JSON or XML. If the parameter is a file document or inherits from a file document, an import mapping is not needed.
 
@@ -89,23 +88,26 @@ If you check this box, the operation is marked as deprecated in the service's [O
 
 This feature was introduced in version 7.12.0.
 
+Ability to edit the parameters was introduced in version 7.17.0
+
 {{% /alert %}}
 
-The **Parameters** table shows the name, data type, and type of the parameter.
+In this list, you can add, update or delete the [parameters of the operation](published-rest-operation-parameter).
 
-An operation parameter can be either a query parameter, a path parameter, or a body parameter. Path and query parameters are detemined by their placement in the URL. If the parameter is part of the operation's location, it is a path parameter. If it is a part of the operation's query string, it is a query parameter. A body parameter comes from the body of the request.
-
-The parameter data type is determined by the microflow of the operation. New parameters that are not yet part of the microflow will have *(Not set)* as their data type.
-
+<a name="import-mapping"></a>
 ### 2.6.1 Import Mapping
 
 {{% alert type="info" %}}
 
-This feature was introduced in version 7.14.0.
+This feature was introduced in version 7.14.0. Using an import mapping that takes a parameter was introduced in version 7.17.0
 
 {{% /alert %}}
 
-An import mapping can be selected for a body parameter. All objects and list parameters besides file documents must have import mapping selected. To select an import mapping, double-click the parameter or click **Edit** in the grid after you select the parameter. When selecting the import mapping, you can also choose the commit behavior of the mapping. You can choose to either commit, commit without events, or not commit imported objects. Not commiting is the default for REST Operation.
+For a body parameter, you can select an [import mapping](import-mappings) that converts the body of the request to an object. All object and list parameters besides file documents must have an import mapping selected. To select an import mapping, double-click the parameter or click **Edit** in the grid after you select the parameter. When selecting the import mapping, you can also choose the commit behavior of the mapping. You can choose to either commit, commit without events, or not commit imported objects.
+
+You can select an import mapping that takes no parameter, or an import mapping that takes a primitive parameter (string, integer, etcetera). If you select an import mapping with a primitive parameter, you need to have exactly one [path parameter](published-rest-path-parameters) with the same type. That path parameter will be passed to the import mapping.
+
+You can indicate what should happen **if no object was found** when the import mapping has checked the box **decide this at the place where the mapping gets used**.
 
 If you select an import mapping that supports both XML and JSON (for instance, a mapping that is based on a message definition), then the operation will be able to handle both XML and JSON requests.
 

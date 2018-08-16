@@ -14,8 +14,6 @@ The Mendix front end uses the DOJO framework to implement widgets. Each Mendix w
 *   How to set up your Mendix test project
 *   How to test the Custom Widget at run-time
 
-# Table of contents
-
 ## 1\. Preparation
 
 Before you start building your own widget make sure you have the following programs installed:
@@ -149,7 +147,7 @@ Start building your own Mendix custom widget by creating a copy of the "[AppStor
     The newly created MPK package is placed in the **test/widgets **directory.![](attachments/8782081/9764904.png)
 7. Open the test project by opening **Test.mpr** from the **test** directory. You can also use ![](attachments/8782081/9764936.png) or click the ![](attachments/8782081/9764937.png) button in the Mendix panel in Brackets.
     ![](attachments/8782081/9764938.png)
-    
+
     The test project is created in Mendix 5.6.0\. It's possible that Brackets will ask you to select a modeler version. Select the version of your installed Mendix business modeler.
 
     ![](attachments/8785003/9273431.png)
@@ -708,7 +706,7 @@ You as a developer are responsible for that to happen.
 The final step is to add your widget to your Mendix Project. The widget should now be available up under the Add-on menu.
 
 1. Open the test project by opening **Test.mpr** in the **test** directory. You can also use
-    
+
     ![](attachments/8785003/9273419.png) in Brackets.
 
     The test project is created in Mendix 5.14.1\. It's possible that Brackets will ask you to select a modeler version. Select the Modeler Version of your installed Mendix version.

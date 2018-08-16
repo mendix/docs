@@ -1,10 +1,10 @@
 ---
-title: "Radio buttons"
+title: "Radio Buttons"
 parent: "input-widgets"
 ---
 
 
-The radio buttons widget is an [input widget](input-widgets) that can be used to display and edit boolean and enumeration attributes.
+The **Radio Buttons** widget is an [input widget](input-widgets) that can be used to display and edit Boolean and enumeration attributes.
 
 {{% alert type="info" %}}
 

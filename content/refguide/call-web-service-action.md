@@ -19,7 +19,7 @@ The call-web-service activity can be used to call one of the [imported web servi
 
 **Operation** defines which operation of the web service is called.
 
-### 2.2 Override location
+### 2.2 Override Location
 
 **Override location** defines whether to override the location where the web service is called.
 
@@ -74,7 +74,7 @@ The new (optimized) implementation feature was introduced in version 7.15.0.
 
 _Default value:_ No
 
-### 2.7 Proxy configuration
+### 2.7 Proxy Configuration
 
 {{% alert type="info" %}}
 
@@ -124,7 +124,7 @@ The XML for the request parts (header and body) can be generated in several ways
 
 Using this option, a single [Export Mapping](export-mappings) can be used to generate the XML for the request part. You can choose the export mapping to use for the request part and, if applicable, the object or list that you want to use as parameter for the mapping.
 
-### 4.2 Simple expressions for each request parameter
+### 4.2 Simple Expressions for Each Request Parameter
 
 This option for request parts can be used when all children of the XML element of the request part occur at most once and are primitive values. If that is not the case, this option is disabled and cannot be used.
 
@@ -162,11 +162,21 @@ If the data type is a complex XML structure it can be mapped to entities using a
 
 Here you can choose the [Import Mapping](import-mappings) that will be used to transform the XML into objects.
 
-### 5.2 Parameter
+### 5.2 If No Object Was Found
+
+{{% alert type="info" %}}
+
+This feature was introduced in version 7.17.0.
+
+{{% /alert %}}
+
+You can indicate what should happen **if not object was found** when the import mapping has checked the box **decide this at the place where the mapping gets used**.
+
+### 5.3 Parameter
 
 If the selected mapping requires a parameter, you can choose it here.
 
-### 5.3 Range (If the Mapping Returns a List)
+### 5.4 Range (If the Mapping Returns a List)
 
 The range determines how many objects are mapped and returned.
 
@@ -176,14 +186,14 @@ The range determines how many objects are mapped and returned.
 | First | Map and return only the first object. The result of the action will be a single object instead of a list. |
 | Custom | Map and return a given number of objects (limit). The limit is a microflow expression that should result in a number. |
 
-### 5.4 Store in Variable
+### 5.5 Store in Variable
 
 Choose whether to store the result of the operation in a variable.
 
-### 5.5 Type
+### 5.6 Type
 
 The type of the output variable.
 
-### 5.6 Name
+### 5.7 Name
 
 The name for the variable that will hold the result of the operation.

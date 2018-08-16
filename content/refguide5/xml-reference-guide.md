@@ -2,13 +2,7 @@
 title: "XML Reference Guide"
 category: "Modeler"
 ---
-# Widgets - XML reference guide
-
-
-
 This is the reference guide for the widget XML.
-
-
 
 ## Requirements
 
@@ -359,7 +353,7 @@ What it looks like in the Mendix Modeler: 
 Remember to use the correct language notation according to the [Java supported locales](http://java.sun.com/javase/6/docs/technotes/guides/intl/locale.doc.html).
 {{% /alert %}}
 
-# Related content
+## Related content
 
 *   [Getting started with the Widget Development Plugin for Adobe Brackets](/howto50/getting-started-with-the-widget-development-plugin-for-adobe-brackets)
 *   [Creating a chainable Custom Widget](/howto50/creating-a-chainable-custom-widget)

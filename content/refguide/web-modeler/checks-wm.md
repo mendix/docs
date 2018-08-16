@@ -17,26 +17,26 @@ To display checks for your app and view the faulty elements in it, do the follow
 
 1. Click **Publish** in the top-right of the Web Modeler.
 
-2. In the pop-up window, click **Update**.
+2.  In the pop-up window, click **Update**.
 
-   ![](attachments/checks-wm/wm-publish-update.png)
+    ![](attachments/checks-wm/wm-publish-update.png)
 
-3. If your app has consistency errors, the **Checks** button will have red border, the number of the errors will be indicated on the button, and a warning will be displayed. 
+3.  If your app has consistency errors, the **Checks** button will have red border, the number of the errors will be indicated on the button, and a warning will be displayed. 
 
-   ![](attachments/checks-wm/wm-checks-button-red.png)
+    ![](attachments/checks-wm/wm-checks-button-red.png)
 
-4. Click the **Checks** button, the warning or press <kbd>C</kbd> to view all checks. 
+4.  Click the **Checks** button, the warning or press <kbd>C</kbd> to view all checks. 
    The panel with the list of checks appears at the bottom of the screen. For more information on the **Checks** panel, see section [3.2 Checks Panel Overview](#checks-panel-overview).
 
-   ![](attachments/checks-wm/wm-checks-panel.png)
+    ![](attachments/checks-wm/wm-checks-panel.png)
 
-5. Click **Error**, **Warning** and **Info** buttons to manage what is displayed on the **Checks** panel (the types that are displayed are highlighted in red/orange/blue for **Error**/**Warning**/**Info** types correspondingly). For more information, see section [3.1 Types of Checks](#checks-types). 
+5.  Click **Error**, **Warning** and **Info** buttons to manage what is displayed on the **Checks** panel (the types that are displayed are highlighted in red/orange/blue for **Error**/**Warning**/**Info** types correspondingly). For more information, see section [3.1 Types of Checks](#checks-types). 
 
-   ![](attachments/checks-wm/wm-checks-panel-different-colors.png)
+    ![](attachments/checks-wm/wm-checks-panel-different-colors.png)
 
-6. To view the exact place and element that the error/warning/info refers to, click the corresponding row in the **Checks** panel (you can click any place of the row, the whole row is responsive),  and the element that contains faults will be displayed.
+6.  To view the exact place and element that the error/warning/info refers to, click the corresponding row in the **Checks** panel (you can click any place of the row, the whole row is responsive),  and the element that contains faults will be displayed.
 
-   ![](attachments/checks-wm/wm-viewing-error.png)
+    ![](attachments/checks-wm/wm-viewing-error.png)
 
 7. To close the panel, either click the close button in the top-right corner of the panel, or click **Checks** in the top-right corner of the Web Modeler. 
 

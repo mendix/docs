@@ -46,7 +46,13 @@ Once the app has been created you can continue with section [2.3 Set Up Region](
 
 ### 2.3 Set Up Region<a name='SetUpRegion'></a>
 
-You are now prompted with an SAP Cloud Platform login screen. Select the region where your SAP Cloud Platform is located. Make sure that you have enough quota in this region for your organization to run a Mendix app.
+You are now prompted with an SAP Cloud Platform login screen. Select the region where your SAP Cloud Platform is located.
+
+Make sure that you have enough quota in this region for your organization to run a Mendix app. You will need enough quota to create:
+
+* a database
+* a route
+* a binding to XSUAA
 
 ![](attachments/sap-cloud-platform/01-sap-select-region.png)
 
@@ -58,6 +64,9 @@ You may be asked to provide your credentials in one of two ways:
 
 2. The Developer Portal will ask for your credentials which it will then use to obtain an access token from SAP. The Developer Portal will then use the access token. It will not store your credentials. *This method is being deprecated*.
 
+{{% alert type="info" %}}
+If you have issues using SAP authentication, please refer to the reference [SAP Single Sign On](/refguide/sap/sap-single-sign-on).
+{{% /alert %}}
 
 You will now be asked to provide the final details for the SAP Cloud Platform development environment.
 
@@ -357,6 +366,6 @@ If you want to delete your app and all its resources, delete the environment and
 
 You can still delete the app and its resources from the SAP Cloud Platform Cockpit, but you will then have to remove all the resources individually.
 
-<!-- ## 9 Related Content -->
+## 9 Related Content
 
-
+* [SAP Single Sign On](/refguide/sap/sap-single-sign-on)

@@ -1,19 +1,51 @@
 ---
 title: "Local Profile"
 parent: "rg-version-2"
+description: "Describes a local profile in ATS."
+tags: ["ats", "profile", "password"]
 ---
 
-Local accounts, i.e. those created by the tenant administrator can access and change their profile information via the _Edit Profile_ page.
-To open this page click on your profile photo and then on _Show Profile_.
+## 1 Introduction
 
-![Edit profile page](attachments/profile/profile.png)
+Local accounts, meaning accounts created by a tenant administrator, can access and change their profile information via the **Edit Profile** page. 
 
-From the _Edit profile_ a user can change their _Full name_ and _Password_. 
+For more details on tenant administration, see [Administration](administration).
 
-To change your _Full name_ type into the text box. The change is automatically saved. The _Full name _ is displayed in various places in the app, e.g. in the test run history. This is not the user name which is used to log in.
+## 2 Performing Basic Functions
 
-To change your password click on_Change password_ then enter your new password and click _Change_.
-In order to change your password you have to be able to log in first. If you have problems logging in, contact your tenant administrator.
+### 2.1 Opening the Edit Profile Page
 
+To open the **Edit Profile** page, do the following:
 
+1.  Click your profile photo 
+
+2.  Click **Show Profile**.
+
+    ![Edit profile page](attachments/profile/profile.png)
+
+### 2.2 Changing the Full Name 
+
+To change your **Full name** from the **Edit Profile** page, type a new one in a text box. The change is automatically saved. 
+
+{{% alert type="info" %}}
+
+Full name is displayed in various places in the app, e.g. in the test run history. This is not the user name which is used to log in.
+
+{{% /alert %}} 
+
+### 2.3 Changing Password
+
+To change your password from the **Edit Profile** page, do the following:
+
+1.  Click **Change password**.
+
+2.  Enter your new password.
+
+3. Click **Change**.
+
+{{% alert type="info" %}}
+
+To change your password, you need to log in first. If you have problems with logging in, contact your tenant administrator. For more details on tenant administration, see [Administration](administration).
+
+{{% /alert %}} 
 

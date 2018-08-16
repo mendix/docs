@@ -9,8 +9,6 @@ For java applications most monitoring tools provide a way to hook into [JMX](ht
 
 Mendix doesn’t provide any runtime or application specific MBeans, which means that without writing your own MBeans you will only be able to monitor generic JVM statistics. In this post i’ll describe how you enable JMX on your Mendix runtime. I’ll also decribe how you can write custom MBeans to expose Mendix runtime information and application specific information.
 
-# Table of contents
-
 ## 1\. Starting the Mendix runtime with JMX enabled
 
 1.  To enable JMX on your Mendix runtime you can use the following javaopts to the m2ee.yaml for your Mendix runtime:

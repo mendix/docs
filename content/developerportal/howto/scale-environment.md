@@ -14,7 +14,7 @@ Licensed apps in the Mendix Cloud can be scaled in various ways. Memory can be a
 
 * Scale your environment in Mendix Cloud v4
 
-# 2 Prerequisites
+## 2 Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
@@ -51,15 +51,15 @@ If you want to scale your licensed app in Mendix Cloud v4, follow these steps:
 4. Set the amount of **Instances** from 1 to 4 by dragging the scroller from the left side to the right side of the screen.
 5. Set the amount of **Memory per instance** that you want to use. You are not obligated to use the whole memory at once.
 
-If you have 1GB RAM of the **Total Allocated Memory**, you have 1 instance available to utilize your memory. 
+If you have 1GB RAM of the **Total Allocated Memory**, you have 1 instance available to utilize your memory.
 
 To scale your memory over multiple instances you need more memory.
 
-![](attachments/deploy/scale.png) 
+![](attachments/deploy/scale.png)
 
 ### 4.1 Scaling Example 1
 
-If you have more than 1GB (for example 16GB) RAM of the **Total Allocated Memory**, you can spread the memory among 4 instances. 
+If you have more than 1GB (for example 16GB) RAM of the **Total Allocated Memory**, you can spread the memory among 4 instances.
 
 For example, you can scale 16GB of the total allocated memory four times with 4GB over 4 instances (4 x 4GB = 16GB).
 

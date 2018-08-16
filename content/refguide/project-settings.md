@@ -194,10 +194,12 @@ For each language, you can configure whether to check that all mandatory texts h
 
 Certificates are used to connect to web services over HTTPS when the following requirements are met:
 
-* The server uses a self-signed certificate authority
+* The server uses a self-signed certificate authority, and/or
 * A client certificate (certificate with a private key) is required
 
 These certificates can be imported into the Modeler using the **Import** button. Certificate authority files usually have a *.crt* extension, and client certifcates usually have a *.p12* or *.pfx* extension. After importing, use **View details** to acquire more information concerning the certificate.
+
+Client certificates added here will be used whenever a server accepts a client certificate. If you upload more than one client certificate, one of them will be chosen based on the requirements of the server. If you need more control over client certificates, you should not upload the certificates here, but use [custom settings](custom-settings) *ClientCertificates*, *ClientCertificatePasswords*, and *ClientCertificateUsages*.
 
 {{% alert type="warning" %}}
 
@@ -213,7 +215,7 @@ Be aware that during local deployment, the certificate files will be located in 
 
 Certificates can be installed in the Windows Certificate Store using the **Install Certificate** wizard in the **View details** form. This can be useful when trying to access a WSDL-file using an *https* connection, which requires a client certificate.
 
-{{% /alert %}}<
+{{% /alert %}}
 {{% alert type="success" %}}
 
 When an SSLException occurs at runtime with the message `HelloRequest followed by an unexpected handshake message` or when a web service does not respond (Java 6 update 21 and above) when using the imported certificates, this is caused by either the client or server not being [RFC-5746](http://www.ietf.org/rfc/rfc5746.txt)-compatible.

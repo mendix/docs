@@ -1,10 +1,47 @@
 ---
 title: "Developer Portal"
 ---
-
 ## 2018
 
-#### July 23rd, 2018
+### August 13th, 2018
+
+#### Improvements
+
+* A new API call for accessing the logs of Mendix Cloud V4 applications is now available. Detailed information can be found in the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api).
+* It is now possible to add custom environment variables via the Cloud Portal to set up application metrics with Datadog and Telegraph.
+* All the log levels in the Cloud Portal (as in, INFO, ERROR, TRACE, DEBUG, WARNING, CRITICAL) are now also available in Datadog.
+* The Postgres database size can also be observed in Datadog after enabling it in the Cloud Portal.
+
+#### Fixes
+
+* We improved the feedback messages in the case of a startup failure.
+* The status page link in alert emails now redirects you to the corresponding alerts page in the Cloud Portal.
+* We solved an issue that caused blank error messages during backup creation.
+* The **Environments** breadcrumb in **Deploy** > **Environments** > environment is now a link that redirects you back to the **Environments** page. 
+
+### August 9th, 2018
+
+#### Improvements
+
+* Alerts are now sent when a Mendix Cloud v3 app or database runs out of system memory.
+
+### August 8th, 2018
+
+#### Improvements
+
+Over the last few months, we have made several improvements to our alerting stack to improve the timeliness of alerts. As a consequence, we are reducing the runtime heartbeat timeout from 15 minutes to 3 minutes. We are doing this to ensure that you do not accidentally miss any alerts. We will be monitoring your applications for false positives.
+
+In some cases, you may still experience false positives for the runtime heartbeat alert. If that happens, you can resolve the problem by doing a transport and then a restart of the app.
+
+### August 7th, 2018
+
+#### Improvements
+
+* We introduced a new environments lifecycle for our SAP apps and migrated all of the old environments.
+* We improved our UX, especially on the **Environments** screens of SAP apps.
+* We fixed a few minor UX bugs.
+
+### July 23rd, 2018
 
 #### Improvements
 
@@ -13,7 +50,7 @@ title: "Developer Portal"
 * We fixed the problem wherein 404, 403, and 503 responses to a REST call translated to an HTML error page.
 * We added Telegraf as a sidecar for monitoring.
 
-#### July 17th, 2018
+### July 17th, 2018
 
 #### Improvements
 
@@ -33,7 +70,7 @@ title: "Developer Portal"
 #### Improvements
 
 * To improve integration and security between Mendix and SAP we now redirect you to SAP to provide your SAP credentials. This means that you need to use the same username (email address) for Mendix and SAP the next time you need to provide your credentials. This is currently implemented only for SAP regions **eu10 (Europe - Frankfurt)** and **us10 (US East - VA)**.
-  
+
 ### July 2nd, 2018
 
 #### Improvements
@@ -70,7 +107,7 @@ title: "Developer Portal"
 #### Improvements
 
 * We have introduced scaling via API for Mendix Cloud V4. It is now possible to scale Mendix Cloud V4 applications via the Deploy API. For instructions, see the [Deploy API](../../apidocs-mxsdk/apidocs/deploy-api).
-* We have aggregated the health icons for the acceptance and test environments in the **Nodes** dashboard and **Company Admin** screen. 
+* We have aggregated the health icons for the acceptance and test environments in the **Nodes** dashboard and **Company Admin** screen.
 
   ![](attachments/CPHealthIcon.png)
 
@@ -78,7 +115,7 @@ title: "Developer Portal"
 
 #### Fixes
 
-* We fixed the issue in our alerting infrastructure that prevented some Mendix Cloud V4 users from receiving alerts when their apps ran out of memory.
+* We fixed an issue in our alerting infrastructure that prevented some Mendix Cloud V4 users from receiving alerts when their apps ran out of memory.
 * We fixed the problem that caused the Mendix Cloud V4 **Metrics** legend to remain on the screen even if the user navigated to a different page.
 * We fixed the health icon statuses of the environments so that they reflect the environment health with minimum delay.
 
@@ -122,8 +159,8 @@ title: "Developer Portal"
 
 #### Fixes
 
-* We fixed the issue that prevented our Mendix Cloud v4 users from uploading and restoring big backups (larger than ~30GB) to their environments. It has been tested with the archives (~90GBs) on Mendix Cloud v4.
-* We addressed and fixed the issue that caused Mendix Cloud v4 users in the Asia Pacific time zone to receive the wrong timestamps when they downloaded daily logs.
+* We fixed an issue that prevented our Mendix Cloud v4 users from uploading and restoring big backups (larger than ~30GB) to their environments. It has been tested with the archives (~90GBs) on Mendix Cloud v4.
+* We addressed and fixed an issue that caused Mendix Cloud v4 users in the Asia Pacific time zone to receive the wrong timestamps when they downloaded daily logs.
 
 ### April 9th, 2018
 
@@ -183,7 +220,7 @@ title: "Developer Portal"
 
 #### Fixes
 
-* We fixed the issue that prevented SAP Cloud users from viewing the **Mobile App** section properly.
+* We fixed an issue that prevented SAP Cloud users from viewing the **Mobile App** section properly.
 * When uploading a backup in Mendix Cloud v3, double-clicking the **Restore** button was causing the UI to break. This is now fixed.
 
 ### February 23rd, 2018
@@ -203,7 +240,7 @@ title: "Developer Portal"
 #### Fixes
 
 * Backup creation was reported as a backup restore action in the activity feed, which is now fixed.
-* We addressed and fixed the issue where a backup activity item was added each time the backups page was viewed.
+* We addressed and fixed an issue where a backup activity item was added each time the backups page was viewed.
 * The environment details list was loading slowly for some of our users, which is now fixed.
 
 ### February 19th, 2018
@@ -220,13 +257,13 @@ title: "Developer Portal"
 
 #### Fixes
 
-* We addressed the issue that prevented the **Daily Digest** email from being sent.
+* We addressed an issue that prevented the **Daily Digest** email from being sent.
 
 ### January 25th, 2018
 
 #### Fixes
 
-* Happy new year! We addressed the issue where backup downloads were logged as restored backups in the activity log.
+* Happy new year! We addressed an issue where backup downloads were logged as restored backups in the activity log.
 * If you had a **Backups** section of your apps open in multiple tabs, you saw multiple activity log entries for each action taken. That's fixed now.
 * The restart and stop/start activities are now distinctly defined in the **Activity** section.
 * Branches of an application are sorted alphabetically, but **Main Line** is now always on top.
@@ -255,8 +292,8 @@ title: "Developer Portal"
 #### Fixes
 
 * It's now possible to scale Mendix 6 applications on Cloud V4. Previously, this was only possible with environments that run Mendix 7 apps. With Mendix 6 apps, you can only scale the allocated memory, but not the amount of instances.
-* Big backups are now welcomed on V4 environments, as we fixed the issue that prevented users from uploading backup packages larger than 5 GBs.
-* We fixed the issue where some Mendix Cloud V3 users were not able to set a specified Java version for environments.
+* Big backups are now welcomed on V4 environments, as we fixed an issue that prevented users from uploading backup packages larger than 5 GBs.
+* We fixed an issue where some Mendix Cloud V3 users were not able to set a specified Java version for environments.
 * Hovering over a Mendix Cloud environment status icon will now give more information about the environment's health.
 
 ### December 13th, 2017
@@ -270,7 +307,7 @@ title: "Developer Portal"
 
 #### Fixes
 
-* We adressed the issue that prevents Free Apps from being embedded in an iframe.
+* We adressed an issue that prevents Free Apps from being embedded in an iframe.
 
 ### November 27th, 2017
 
@@ -373,14 +410,14 @@ title: "Developer Portal"
 
 #### Fixes
 
-* We fixed the issue where users with Microsoft browsers would get an error page after signup instead of automatically continuing to the Developer Portal.
+* We fixed an issue where users with Microsoft browsers would get an error page after signup instead of automatically continuing to the Developer Portal.
 
 ### August 11th, 2017
 
 #### Fixes
 
-* We fixed the issue where Desktop Modeler users couldn't submit feedback items.
-* We fixed the issue where team member names in the **Node Security** screen were empty and only visible after a refresh.
+* We fixed an issue where Desktop Modeler users couldn't submit feedback items.
+* We fixed an issue where team member names in the **Node Security** screen were empty and only visible after a refresh.
 
 ### August 2nd, 2017
 
@@ -435,7 +472,7 @@ title: "Developer Portal"
 
 #### Fixes
 
-* We fixed the issue with the input of Japanese characters in the feedback widget.
+* We fixed an issue with the input of Japanese characters in the feedback widget.
 
 ### May 19th, 2017
 
@@ -473,16 +510,16 @@ title: "Developer Portal"
 
 #### Fixes
 
-* We fixed the issue where invitation dialogs would be shown twice in some situations. They are now shown just once.
+* We fixed an issue where invitation dialogs would be shown twice in some situations. They are now shown just once.
 
 ### April 1st, 2017
 
 * We added list backups/download backup operations to the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api#3-15-list-environment-backups).
 * We fixed the status page link in alert emails.
 * We updated the **Security** link from the Deploy/Operate tabs. It now goes to the same page on all pages in the platform.
-* We fixed the issue where the Free Apps backups page was very slow or resulted in an error in some cases.
-* We fixed the issue where the log viewer for Free Apps did not escape HTML, so if the application logged plain HTML, it was interpreted in the browser.
-* We fixed the issue where simultaneous snapshot restore jobs from the same environment to two others could lock one of the environments.
+* We fixed an issue where the Free Apps backups page was very slow or resulted in an error in some cases.
+* We fixed an issue where the log viewer for Free Apps did not escape HTML, so if the application logged plain HTML, it was interpreted in the browser.
+* We fixed an issue where simultaneous snapshot restore jobs from the same environment to two others could lock one of the environments.
 * We updated links from *world.mendix.com* to *docs.mendix.com*.
 
 ### March 20th, 2017
@@ -509,7 +546,7 @@ title: "Developer Portal"
 * We made various small styling improvements.
 
 #### Fixes
-* We fixed the issue in which completing a sprint from the **Stories** page wouldn't properly update the UI.
+* We fixed an issue in which completing a sprint from the **Stories** page wouldn't properly update the UI.
 * The **getAccounts** call in the **UserManagementAPI** will now sort results consistently on **EmailAddress** when using limit/offset.
 
 ### February 21st, 2017

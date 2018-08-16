@@ -12,7 +12,7 @@ A data grid showing accounts.
 
 {{% /alert %}}
 
-# Common Properties
+## Common Properties
 
 {{% snippet file="refguide/Name+Property.md" %}}
 
@@ -22,9 +22,9 @@ A data grid showing accounts.
 
 {{% snippet file="refguide/Tab+index+Property.md" %}}
 
-## General Properties
+### General Properties
 
-### Show Control Bar
+#### Show Control Bar
 
 This property indicates whether the control bar will be visible in the end user interface. The control bar also includes the paging buttons.
 
@@ -36,7 +36,7 @@ Even if the control bar is invisible there can still be a default button that is
 
 _Default value:_ True
 
-### Show Paging Buttons
+#### Show Paging Buttons
 
 This property indicates with the buttons to page through the information in the grid are visible. Only hide these buttons if you are sure that there will never be more objects than the number of rows of the grid. Note that hiding the control bar also hides the paging buttons.
 
@@ -44,19 +44,19 @@ _Default value:_ True
 
 {{% snippet file="refguide/Column+Width+Properties.md" %}}
 
-### Number of Rows
+#### Number of Rows
 
 With this property you can change the number of rows that will be shown in one page. See also the property 'Show empty rows'.
 
 _Default value:_ 20
 
-### Show Empty Rows
+#### Show Empty Rows
 
 If you choose to show empty rows there will always be the grid will always show the same number of rows (see 'Number of rows') even if there are less objects to show on the page.
 
 _Default value:_ False
 
-### Selection Mode
+#### Selection Mode
 
 The selection mode determines whether and how the user can select items in the grid.
 
@@ -70,13 +70,13 @@ The selection mode determines whether and how the user can select items in the g
 
 _Default value:_ Single selection
 
-### Select First
+#### Select First
 
 This property indicates whether the first item will be selected initially. This is especially useful if there is a data view listening to this grid.
 
 _Default value:_ False
 
-### Default Button Trigger
+#### Default Button Trigger
 
 The default button can be triggered by a single or a double click on a row.
 
@@ -87,25 +87,25 @@ The default button can be triggered by a single or a double click on a row.
 
 _Default value:_ Double click
 
-### Refresh Time (in Seconds)
+#### Refresh Time (in Seconds)
 
 If the refresh time is non-zero, the data grid will refresh its contents every given number of seconds. For example, a task list could be refreshed every minute so that you know when new tasks arrive. By default the refresh time is zero and this means that the grid will not automatically refresh itself.
 
 _Default value:_ 0
 
-### Tooltip Page
+#### Tooltip Page
 
 A tooltip page is a page that appears when you hover your mouse over a row. The tooltip page should consist of a data view on the same entity as the data grid. Besides creating and connecting a tooltip page you also have to specify on which columns the tooltip will appear. See the property 'Show tooltip' of [data grid columns](columns).
 
-## Data Source Properties
+### Data Source Properties
 
 The data source determines which objects will be shown in the data grid. For general information about data sources, see [Data Sources](data-sources).
 
-### Type
+#### Type
 
 The data grid supports the following types of data sources: [Database Source](database-source), [XPath Source](xpath-source), [Association Source](association-source), [Microflow Source](microflow-source). The database and XPath sources retrieve objects from the database and supports searching and sorting. The database source can also be used in [offline](offline) applications. The association source follows an association from the enclosing data view to get to the objects. Finally, the microflow source calculates the list of objects by executing a microflow.
 
-### Other Properties
+#### Other Properties
 
 See the corresponding data source for its properties:
 
@@ -114,19 +114,19 @@ See the corresponding data source for its properties:
 *   [Microflow source](microflow-source)
 *   [Association source](association-source)
 
-## Visibility Properties
+### Visibility Properties
 
 {{% snippet file="refguide/Visibility+Property.md" %}}
 
 {{% snippet file="refguide/Visibility+Property+With+Module+Roles+Simple.md" %}}
 
-# Components
+## Components
 
-## Columns
+### Columns
 
 #### Common Properties
 
-### Class Property
+#### Class Property
 
 The class property allows you to specify a cascading style sheet (CSS) class for the widget. This class will be applied to the widget in the browser and the widget will get the corresponding styling. The class should be a class from the theme that is used in the project. It overrules the default styling of the widget.
 
@@ -140,7 +140,7 @@ Note that the styling is applied in the following order:
 
 {{% /alert %}}
 
-### Style Property
+#### Style Property
 
 The style property allows you to specify additional CSS styling. If a class is also specified, this styling is applied _after_ the class.
 
@@ -151,15 +151,15 @@ This will result in a blue background
 
 {{% /alert %}}
 
-### Data Source Properties
+#### Data Source Properties
 
-#### Attribute (path)
+##### Attribute (path)
 
 The attribute (path) property specifies the attribute's value that will be displayed in this column. It can be an attribute of the grid entity, or it can be an attribute of an associated entity, in which case we speak of an attribute path. The path can follow multiple associations of type reference, and at the end (optionally) one of type reference set. If you show a reference set in a column the values will be separated by a comma.
 
-### Formatting Properties
+#### Formatting Properties
 
-#### Enumeration Format (Only for Attributes of Type Enumeration)
+##### Enumeration Format (Only for Attributes of Type Enumeration)
 
 A column connected to an attribute of type enumeration can show its contexts as text (default) or as image.
 
@@ -168,19 +168,19 @@ A column connected to an attribute of type enumeration can show its contexts as 
 | Text | Show the caption text of the enumeration. |
 | Image | Show the image of the enumeration value. |
 
-#### Decimal Precision (Only for Decimal Attributes)
+##### Decimal Precision (Only for Decimal Attributes)
 
 The precision of a value is defined the number of digits that is used to express that value. This property indicates the number of decimal places (the number of digits following the decimal point).
 
 _Default value:_ 2
 
-#### Group Digits (Only for Numeric Attributes)
+##### Group Digits (Only for Numeric Attributes)
 
 For ease of reading, numbers with many digits before the decimal separator may be divided into groups using a delimiter. This property defines whether the end user will see these groups, or not.
 
 _Default value:_ False
 
-#### Date Format (Only for Attributes of Type DateTime)
+##### Date Format (Only for Attributes of Type DateTime)
 
 The date format determines whether the date part, the time part or both are shown. How the date and time parts are formatted depends on the localization of the user using the application.
 
@@ -219,17 +219,17 @@ If you choose 'Custom' as the date format (see above) the custom date format det
 
 {{% /alert %}}
 
-### General Properties
+#### General Properties
 
-#### Caption
+##### Caption
 
 The caption of a column is the text that appears as a header above the rows. This is a translatable text. See [Translatable Texts](translatable-texts).
 
-#### Editable
+##### Editable
 
 The editable property indicates whether the values of the column will be editable in-line, i.e. without opening a page with a data view. In-line editing allows the data grid to behave like you would expect from a spreadsheet application.
 
-#### Aggregate Function
+##### Aggregate Function
 
 The values in a column can be aggregated in several ways. The aggregate function determines the way in which the values are aggregated. The aggregate will be shown at the bottom of the column that precedes by the aggregate caption (see below).
 
@@ -248,7 +248,7 @@ Note that all objects will be taken into account, and not just the ones on the c
 
 {{% /alert %}}
 
-#### Aggregate Caption
+##### Aggregate Caption
 
 The aggregate caption is the text that appears in front of the computed value. This is a translatable text. See [Translatable Texts](translatable-texts).
 
@@ -258,25 +258,25 @@ The aggregate caption is the text that appears in front of the computed value. T
 
 {{% /alert %}}
 
-#### Show Tooltip
+##### Show Tooltip
 
 This property determines whether the tooltip page is shown as the mouse is hovered over this column. The tooltip page can be configured on the data grid.
 
 _Default value:_ False
 
-## Control Bar
+### Control Bar
 
 The control bar of the template grid, data grid, and reference set selector allows you to manipulate the objects displayed by means of buttons. By default, both grids will be created with a new, edit, and delete button in the control bar. The control bar can also include a number of selection options and spreadsheet export buttons, as well as microflow buttons for custom actions.
 
 See [Control Bar](control-bar).
 
-## Search Bar (for the Database and XPath Data Source Types)
+### Search Bar (for the Database and XPath Data Source Types)
 
 The search bar contains search fields that allow the end-user to quickly find the information he or she needs.
 
 See [Search Bar](search-bar).
 
-## Sort Bar (for the Database and XPath Data Source Types)
+### Sort Bar (for the Database and XPath Data Source Types)
 
 The sort bar contains a number of sort items. Each sort item specifies what attribute to sort on and in what direction (ascending or descending). First the contents of the grid will be sorted on the first item; if two rows are the same with respect to this sort item the second item will be used et cetera. For example, if you have sort items for name and age and two people have the same name they will be sorted on their age.
 

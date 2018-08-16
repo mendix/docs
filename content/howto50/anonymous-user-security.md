@@ -2,8 +2,6 @@
 title: "Anonymous User Security"
 category: "Security"
 ---
-# Anonymous User Security
-
 When setting up anonymous access for your application you have to be wary about where you give the users access to. There are a few guidelines you have to remember otherwise you could make your entire application accessible to the public. 
 
 When creating an anonymous user role, always make sure you give it as few access as possible. Because of this you never want to re-use module rules from your named user accounts. This is probably faster, but makes it much easier to give the anonymous user to much access to information in your application. When you are using anonymous users, any changes made to your object can never be traced back to the actual user since the user was anonymous and no longer exists. 
@@ -21,7 +19,7 @@ That way the anonymous user can only change the records he just created, during 
 
 If an anonymous user needs to have access to certain Master Data tables, or needs to a name of a user in an overview, the anonymous user needs read access on that entity. However always limit its access. If the user doesn't need to have access to all fields don't give it just because that is only 1 button click. If you see an anonymous user with full read access, always confirm if he can't work with less access.
 
-#### Security Review
+## Security Review
 
 When going over an application and reviewing an anonymous user, it is most often three things that trigger a red flag indicating an application is not secure.
 
@@ -37,7 +35,7 @@ Whenever you see any of these situations, you should look closely if that is rea
 
 Any user can always talk directly to the API, just download any tool that can Post messages to a url and you can try sending JSON queries to the platform. That would simulate the communication between the browser and server. The server doesn't care (and doesn't need to care) who sends the messages as long as it matches with what is allowed within the session.
 
-### Best Practice 
+## Best Practice 
 
 If you have anonymous access you need to limit the access to as few entities as possible, never give full read access to all attributes if it is just for selecting items. (For example if an anonymous user is allowed to see the project name, then only give read access to the project name not the full entity).
 

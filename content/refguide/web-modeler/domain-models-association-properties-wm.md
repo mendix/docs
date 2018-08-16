@@ -54,7 +54,7 @@ Delete behavior defines what should happen to the associated object when an obje
 | Delete {name of entity} object(s) as well                    | When an object is deleted, the associated object(s) are also deleted. |
 | Delete {name of entity} object only if it is not associated with {name of other entity} object(s) | An object can only be deleted if it is not associated with any other object(s). |
 
-For examples of delete behavior configuring, see [Creating Basic Layer>Delete Behavior](../../howto/data-models/create-a-basic-data-layer#6-delete-behavior).
+For examples of delete behavior configuring, see section [7 Delete Behavior](../../howto/data-models/create-a-basic-data-layer#delete-behavior) in *How to Create a Basic Data Layer* in *Data Models* category.
 
 
 ## 5 Cross-Module Associations {#cross-module-associations}

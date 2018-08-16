@@ -9,9 +9,11 @@ This property specifies what action is executed when the element is clicked. The
 | Call a microflow | The specified microflow is executed. |
 | Call a nanoflow | The specified nanoflow is executed. |
 | Open link | Triggers an action based on the link type, some of which are specific to mobile devices. |
+| Create object | Creates a new object |
 | Save changes | Commits all changes made on the page.  |
 | Cancel changes | Rolls back all changes made on the page. |
 | Close page | Closes the pop-up window (for pop-up pages) or navigates to the previously visited page (for content pages). |
+| Delete | Deletes an object.<ul><li>When placed in a data view, deletes the object to which the data view is bound; it does not delete objects in a nested data view unless configured through delete behavior</li><li>When placed on a data grid, template grid, or reference set selector control bar, deletes the selected object(s)</li><li>When placed inside a list view template, deletes the current item of the list view</li></ul> |
 | Synchronize | Synchronizes the data stored locally on your device with the server database. |
 | Sign out | Signs out the currently signed-in user. When no user is signed in, pressing this button has no effect. |
 
@@ -22,6 +24,10 @@ _Default value:_ Do nothing
 The [page](page) that should be shown.
 
 See [Opening Pages](opening-pages).
+
+#### Page for Specializations (Only for "Show a page") {#on-click-page}
+
+Allows you to configure a different page for each specialization of the context object. If this action is placed inside a data view, it is possible to configure different page(s) for each specialization of the data view object. If this action is placed in a data grid, it is possible to configure different pages for each specialization of the grid entity. This setting is not visible when there is not a context object or when the context object has no specializations.
 
 #### Microflow (Only for "Call a microflow") {#on-click-microflow}
 
@@ -64,7 +70,7 @@ If a literal value is chosen for the address, you can enter the value here.
 
 If an attribute is chosen for the address, you can select the attribute here. An address attribute specifies a path to an attribute. The path starts at the entity of the data view in which the link button is contained.
 
-#### Close Page (Only for "Save changes" and "Cancel changes") {#on-click-close-page}
+#### Close Page (Only for "Save changes", "Cancel changes", and "Delete") {#on-click-close-page}
 
 This flag indicates whether the current page should be closed.
 
@@ -73,3 +79,14 @@ This flag indicates whether the current page should be closed.
 When an object is saved in a Mendix application running in an [offline profile](hybrid-phone-profile), this information is stored in a local database until it can be synchronized with the server. In practice, this means that uploading a new object to the server requires two distinct actions: saving the object and [syncing it](offline#synchronization).
 
 This flag indicates whether synchronization should happen when the save button is clicked.
+
+#### Entity (path) (Only for "Create object")
+
+Specifies which entity to create. It is also possible to choose an association (if available) from the context object.
+
+* If an entity is configured, a new instance of the entity will be created
+* If an entity through association from the context object is configured, a new instance of the entity will be created and associated with the context object
+
+#### On Click Page (Only for "Create object")
+
+Specifies which [page](page) should be shown with the new created object. This page must accept a context parameter object with the same or sub-type of the created entity.

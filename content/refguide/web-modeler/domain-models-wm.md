@@ -1,5 +1,5 @@
 ---
-title: "Domain Models Overview in the Web Modeler"
+title: "Domain Model Overview in the Web Modeler"
 category: "Web Modeler"
 description: "Describes the domain models in the Mendix Web Modeler."
 tags: ["web modeler", "domain model"]
@@ -11,7 +11,7 @@ The domain model is a data model that describes the information in your applicat
 
 The domain model in the Web Modeler consists of the following:
 
-* Entities
+* [Entities](#entity)
 * [Associations](domain-models-association-properties-wm) 
 
 {{% alert type="info" %}}
@@ -47,7 +47,7 @@ The **Auto Arrange** option above the domain model auto-arranges the entities. Y
 
 | Domain model components                                  | Description                                                  | Properties |
 | -------------------------------------------------------- | :----------------------------------------------------------- | ------------------- |
-| Entity                                                   | An entity represents a class of real-world objects, such as customers, invoices, work items, etc. <br />If we draw a parallel with databases, the entity is a table. | Name<br />[Persistablity](../persistability) |
+| Entity<a name="entity"></a>                          | An entity represents a class of real-world objects, such as customers, invoices, work items, etc. <br />If we draw a parallel with databases, the entity is a table. | Name<br />[Persistablity](../persistability) |
 | [Attribute](domain-models-attributes-wm) | Attributes are characteristics that describe and/or identify the entity. For example, a *Customer* entity typically has attributes for the name of the customer, an e-mail address, and other personal information. If we draw a parallel with databases, the attribute is a column. | Name<br />Type |
 | [Association](domain-models-association-properties-wm) | An association describes a relation between entities. In the domain model, an association is represented by a line/arrow between two entities. If we draw a parallel with databases, the association is a foreign key. | Name<br />[Multiplicity](domain-models-association-properties-wm#multiplicity)<br />[Delete behavior](domain-models-association-properties-wm#delete-behavior) |
 
@@ -81,7 +81,7 @@ To add attributes in the domain mode, do the following:
 
     ![](attachments/domain-models-wm/wm-addingattribute.png)
 
-2. Click New attribute and specify its **Name** and **Type**:
+2. Click **New attribute** and specify its **Name** and **Type**:
 
     ![](attachments/domain-models-wm/wm-createneweattribute_dialog.png)
 
@@ -104,11 +104,11 @@ To add association in the domain model, do the following:
 
     ![](attachments/domain-models-wm/wm-new-association.png)
 
-    {{% alert type="info" %}}
+{{% alert type="info" %}}
 
-    The module is indicated next to the entity name in the brackets. If you select the entity from another module, you will create a cross-  module association. For more information, see section [5 Cross-Module Associations](domain-models-association-properties-wm#cross-module-associations). The entities of the current module are listed first. 
+The module is indicated next to the entity name in the brackets. If you select the entity from another module, you will create a cross-  module association. For more information, see section [5 Cross-Module Associations](domain-models-association-properties-wm#cross-module-associations) in *Association Properties in the Web Modeler*. The entities of the current module are listed first. 
 
-    {{% /alert %}}  
+{{% /alert %}}  
 
 ## 6 Specifying Properties
 
@@ -159,7 +159,7 @@ For more information, see [Association Properties](domain-models-association-pro
 
 To change the association, click the line in the domain model. The **Properties** tab for the selected entity is displayed automatically. 
 
-If the association type is one-to-many or many-to-many, you can swap direction of it clicking the corresponding icon. For more information, see section [3 Multiplicity](domain-models-association-properties-wm#multiplicity). 
+If the association type is one-to-many or many-to-many, you can swap direction of it clicking the corresponding icon. For more information, see section [3 Multiplicity](domain-models-association-properties-wm#multiplicity) in *Association Properties in the Web Modeler*. 
 
 ![](attachments/domain-models-wm/wm-managing_associations.png)
 

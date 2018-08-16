@@ -2,8 +2,6 @@
 title: "Text"
 parent: "common-widgets"
 ---
-
-
 The text widget shows text which can optionally contain parameters. Every parameter is replaced with the value of the attribute it refers to. The text widget is the recommended way to show text to the user.
 
 {{% alert type="info" %}}
@@ -33,10 +31,10 @@ The render mode determines how the text will be shown in the web browser.
 | Value | Description |
 | --- | --- |
 | Text | The text will be rendered inline with the previous/next texts on a page (<span> tag in HTML) |
-| Paragraph | The text will be rendered as a separate paragraph (<p> tag in HTML) |
-| Heading 1 | The text will be rendered as a large heading (<h1> tag in HTML) |
+| Paragraph | The text will be rendered as a separate paragraph (``<p>`` tag in HTML) |
+| Heading 1 | The text will be rendered as a large heading (``<h1>`` tag in HTML) |
 | ... | ... |
-| Heading 6 | The text will be rendered as a small heading (<h6> tag in HTML) |
+| Heading 6 | The text will be rendered as a small heading (``<h6>`` tag in HTML) |
 
 _Default value:_ Text
 

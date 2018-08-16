@@ -13,7 +13,7 @@ This property specifies what action is executed when the element is clicked. The
 | Save changes | Commits all changes made on the page.  |
 | Cancel changes | Rolls back all changes made on the page. |
 | Close page | Closes the pop-up window (for pop-up pages) or navigates to the previously visited page (for content pages). |
-| Delete | Deletes an object.<ul><li>* When placed in a data view, deletes the object to which the data view is bound; it does not delete objects in a nested data view unless configured through delete behavior</li><li>* When placed on a data grid, template grid, or reference set selector control bar, deletes the selected object(s)</li><li>* When placed inside a list view template, deletes the current item of the list view</li></ul> |
+| Delete | Deletes an object.<ul><li>When placed in a data view, deletes the object to which the data view is bound; it does not delete objects in a nested data view unless configured through delete behavior</li><li>When placed on a data grid, template grid, or reference set selector control bar, deletes the selected object(s)</li><li>When placed inside a list view template, deletes the current item of the list view</li></ul> |
 | Synchronize | Synchronizes the data stored locally on your device with the server database. |
 | Sign out | Signs out the currently signed-in user. When no user is signed in, pressing this button has no effect. |
 
@@ -85,7 +85,7 @@ This flag indicates whether synchronization should happen when the save button i
 Specifies which entity to create. It is also possible to choose an association (if available) from the context object.
 
 * If an entity is configured, a new instance of the entity will be created
-* If an entity throguh association from the context object is configured, a new instance of the entity will be created and associated with the context object
+* If an entity through association from the context object is configured, a new instance of the entity will be created and associated with the context object
 
 #### On Click Page (Only for "Create object")
 

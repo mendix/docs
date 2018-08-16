@@ -117,7 +117,7 @@ To change the multiplicity, double-click the **Order_Customer** association in o
 
     ![](attachments/18448745/18582205.png)
 
-## 7 Delete Behavior
+## 7 Delete Behavior {#delete-behavior}
 
 You can configure the delete behavior for both sides of an association.
 

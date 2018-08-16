@@ -217,7 +217,7 @@ BrowserStack     | BrowserStack Local  | [Here](https://www.browserstack.com/loc
 SauceLabs        | Sauce Connect Proxy | [Here](https://wiki.saucelabs.com/display/DOCS/Setting+Up+Sauce+Connect+Proxy)
 
 
-### 6.4 Customer-Hosted Selenium
+### 6.4 Customer-Hosted Selenium {#customer-hosted-selenium}
 
 This option requires you to set up your own Selenium Server on-premises.
 

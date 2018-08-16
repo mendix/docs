@@ -39,7 +39,7 @@ The rows in the table are CDs. The type of the two rows is 'CD' and this is the 
 
 *   [Access Rules](access-rules)
 
-## General Properties
+## General Properties {#entities-general-properties}
 
 ### Name
 

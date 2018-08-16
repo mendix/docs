@@ -27,22 +27,22 @@ To create a new enumeration, do the following:
 
 2. Select an entity you want to create the attribute for. For more information on how to create the entity, see section [3 Adding New Entities](domain-models-wm#adding-new-entities) in *Domain Models Overview in the Web Modeler*.
 
-3. To create a new attribute of the enumeration type, click **New attribute** and do the following:<br />
-   a. Set the attribute **Name**. In our example, the name of the attribute is *Grade*.<br />
-   b. Set the [**Type**](domain-models-attributes-wm) to **Enumeration**.<br />
-   c. Click **Select enumeration** to create a new enumeration.<br />d. In the **Select enumeration** dialog window, click **New**.<br/>
-   e. In the **Create new enumeration** dialog window, click **Add Item** to add possible options of the enumeration (**Name** is filled out automatically and is the same as the attribute name).<br />
+3.  To create a new attribute of the enumeration type, click **New attribute** and do the following:<br />
+    a. Set the attribute **Name**. In our example, the name of the attribute is *Grade*.<br />
+    b. Set the [**Type**](domain-models-attributes-wm) to **Enumeration**.<br />
+    c. Click **Select enumeration** to create a new enumeration.<br />d. In the **Select enumeration** dialog window, click **New**.<br/>
+    e. In the **Create new enumeration** dialog window, click **Add Item** to add possible options of the enumeration (**Name** is filled out automatically and is the same as the attribute name).<br />
 
-   ![](attachments/domain-models-enumeration-wm/wm-new-enumeration-add-item.png)<br />
+    ![](attachments/domain-models-enumeration-wm/wm-new-enumeration-add-item.png)<br />
 
-   f. Fill out the name for the **Caption** (**Name** is filled out automatically). In our example, we first fill out  *Bronze*, as one of three possible items of the enumeration: Bronze, Silver, and Gold. <br />
+    f. Fill out the name for the **Caption** (**Name** is filled out automatically). In our example, we first fill out  *Bronze*, as one of three possible items of the enumeration: Bronze, Silver, and Gold. <br />
 
-   ![](attachments/domain-models-enumeration-wm/wm-new-enumeration-add-item-bronze.png)<br />
+    ![](attachments/domain-models-enumeration-wm/wm-new-enumeration-add-item-bronze.png)<br />
 
-   g. Click **Add Item** and repeat the step above to create other enumeration items.<br />
-   h. Click **Create** to close the dialog windows and create the new attribute.
+    g. Click **Add Item** and repeat the step above to create other enumeration items.<br />
+    h. Click **Create** to close the dialog windows and create the new attribute.
 
-   ![](attachments/domain-models-enumeration-wm/wm-new-enumeration-bronze-silver-gold.png)
+    ![](attachments/domain-models-enumeration-wm/wm-new-enumeration-bronze-silver-gold.png)
 
 The attribute and the enumeration items are created.
 
@@ -54,17 +54,17 @@ You can also set an existing enumeration for attributes of the enumeration type.
 
 2. Select an entity you want to create the attribute for. For more information on how to create the entity, see section [3 Adding New Entities](domain-models-wm#adding-new-entities) in *Domain Models Overview in the Web Modeler*.
 
-3. To create a new attribute of the enumeration type, click **New attribute** and do the following:<br />
+3.  To create a new attribute of the enumeration type, click **New attribute** and do the following:<br />
 
-   a. Set the attribute **Name**. In our example, the name of the attribute is *Grade*.<br />
-   b. Set the [**Type**](domain-models-attributes-wm) to **Enumeration**.<br />
-   c. Click **Select enumeration** to create a new enumeration.<br />
+    a. Set the attribute **Name**. In our example, the name of the attribute is *Grade*.<br />
+    b. Set the [**Type**](domain-models-attributes-wm) to **Enumeration**.<br />
+    c. Click **Select enumeration** to create a new enumeration.<br />
 
-   ![](attachments/domain-models-enumeration-wm/wm-new-attribute-select-enumeration.png) <br/>
+    ![](attachments/domain-models-enumeration-wm/wm-new-attribute-select-enumeration.png) <br/>
 
-   d. In the **Select enumeration** dialog window, the existing enumerations are displayed in the list. Click the one you want to use, then click **Select**.<br />
+    d. In the **Select enumeration** dialog window, the existing enumerations are displayed in the list. Click the one you want to use, then click **Select**.<br />
 
-   ![](attachments/domain-models-enumeration-wm/wm-selecting-existing-enumeration.png)
+    ![](attachments/domain-models-enumeration-wm/wm-selecting-existing-enumeration.png)
 
 The existing enumeration is selected for the attribute of the enumeration type. 
 

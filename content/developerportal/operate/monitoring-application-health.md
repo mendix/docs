@@ -152,7 +152,7 @@ Description | Track the amount of disk space used for the database belonging to 
 Example message | Database has less than 5% free space 
 Warning Threshold| Database has less than 25% and more than 10% free space available. 
 Critical Threshold | Database has less than 10% free space available 
-First actions to take | Inspect the trends for *Application node CPU usage* combined with *Application node disk throughput* and *Application node load* for anomalies and correlate those with application behavior. 
+First actions to take | Check if there is a sudden increase or a slow increase over time. Resolve by either stopping a runaway process, removing old data, or ordering more storage.
 
 Health Check|| 
 :---|:---|

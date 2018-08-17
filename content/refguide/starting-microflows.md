@@ -20,7 +20,7 @@ Mendix allows for microflows to be triggered in pages by a variety of widgets. T
 | Action button | On click | Enclosing data view object, if available |
 | Reference selector | Data source | Data view object |
 
-<sup id="fn1">1. [The following grid widgets have grid action buttons: data grid, template grid, and reference set selector.]<a href="#ref1" title="Jump back to footnote 1 in the text.">↩</a></sup><br />
+<sup id="fn1"><a href="#ref1" title="Jump back to footnote 1 in the text.">1.</a> The following grid widgets have grid action buttons: data grid, template grid, and reference set selector.</sup><br />
 <sup id="fn2"><a href="#ref2" title="Jump back to footnote 2 in the text.">2.</a> The following widgets are input widgets: check box, date picker, drop-down, text area, and text box.</sup>
 
 ## 2 Microflow

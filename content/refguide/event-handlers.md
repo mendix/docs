@@ -1,12 +1,10 @@
 ---
 title: "Event Handlers"
 parent: "entities"
+tags: ["domain model", "entity", "event handler"]
 ---
 
-
 Event handlers define microflows that handle certain events related to the entity. Depending on the chosen moment and type, the microflow is executed before or after creating, committing, deleting or rolling back an object.
-
-
 
 {{% alert type="warning" %}}
 

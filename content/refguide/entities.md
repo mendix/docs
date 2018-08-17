@@ -1,6 +1,7 @@
 ---
 title: "Entities"
 parent: "domain-model"
+tags: ["domain model", "entity", "attribute", "validation rule", "even handler", "access rule"]
 ---
 
 

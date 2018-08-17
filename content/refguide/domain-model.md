@@ -1,6 +1,7 @@
 ---
 title: "Domain Model"
 category: "Desktop Modeler"
+tags: ["domain model", "entity", "association", "annotation"]
 ---
 
 

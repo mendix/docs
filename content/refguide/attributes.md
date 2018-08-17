@@ -1,6 +1,7 @@
 ---
 title: "Attributes"
 parent: "entities"
+tags: ["domain model", "entity", "attribute"]
 ---
 
 

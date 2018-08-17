@@ -1,6 +1,7 @@
 ---
 title: "Indexes"
 parent: "entities"
+tags: ["domain model", "entity", "attribute", "index"]
 ---
 
 

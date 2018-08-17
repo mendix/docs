@@ -3,6 +3,13 @@ title: "Developer Portal"
 ---
 ## 2018
 
+### August 20th, 2018
+
+#### Fixes
+
+- We have fixed a bug that was causing some of our Mendix Cloud v4 users to unsubscribe from alerting lists after changing environment privilege settings. 
+- We have addressed an issue which caused some of our Mendix Cloud v4 users to not to be able to see their archived logs from previous day.
+
 ### August 13th, 2018
 
 #### Improvements

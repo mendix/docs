@@ -3,7 +3,7 @@ title: "Developer Portal"
 ---
 ## 2018
 
-### August 20th, 2018
+### August 21st, 2018
 
 #### Fixes
 

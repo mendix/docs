@@ -3,6 +3,13 @@ title: "Developer Portal"
 ---
 ## 2018
 
+### August 21st, 2018
+
+#### Fixes
+
+- We have fixed a bug that was causing some of our Mendix Cloud v4 users to unsubscribe from alerting lists after changing environment privilege settings. 
+- We have addressed an issue which caused some of our Mendix Cloud v4 users to not to be able to see their archived logs from previous day.
+
 ### August 13th, 2018
 
 #### Improvements
@@ -29,7 +36,7 @@ title: "Developer Portal"
 
 #### Improvements
 
-Over the last few months, we have made several improvements to our alerting stack to improve the timeliness of alerts. As a consequence, we are reducing the runtime heartbeat timeout from 15 minutes to 3 minutes. We are doing this to ensure that you do not accidentally miss any alerts. We will be monitoring your applications for false positives.
+Over the last few months, we have made several improvements to our alerting stack of Mendix Cloud v4 applications to improve the timeliness of alerts. As a consequence, we are reducing the runtime heartbeat timeout from 15 minutes to 3 minutes. We are doing this to ensure that you do not accidentally miss any alerts. We will be monitoring your applications for false positives.
 
 In some cases, you may still experience false positives for the runtime heartbeat alert. If that happens, you can resolve the problem by doing a transport and then a restart of the app.
 

@@ -1,19 +1,27 @@
 ---
 title: "Chart Advanced Cheat Sheet"
 parent: "chart-widgets"
+tags: ["Charts", "Advanced", "Desktop Modeler", "Layout Controls", "Data Properties", "Series Properties"]
 ---
 
-## Advanced configuration settings
-The standard charts provide the most common settings trough the widget configuration. Additional settings can set via the Advanced settings. 
-This cheat sheet with JSON snippets will provide some sample for the advance configuration.
+## 1 Introduction
 
-The full reference is found be found at [https://plot.ly/javascript/](https://plot.ly/javascript/).
+This reference describes advanced configuration settings for the chart widget.
 
-When the advanced configuration does not suffice have a look at the [Any Chart](https://appstore.home.mendix.com/link/app/106437/Mendix/Any-Chart) from the app store.
+Standard charts provide the most common settings through the widget configuration. Additional settings can be set via the Advanced settings.
 
-## Layout (all charts) {#layout-all}
+This cheat sheet with JSON snippets will provide some samples of advance configuration.
+
+The full reference can be found at [https://plot.ly/javascript/](https://plot.ly/javascript/).
+
+When the advanced configuration does not suffice have a look at the [Any Chart](https://appstore.home.mendix.com/link/app/106437/Mendix/Any-Chart) widget in the app store.
+
+## 2 Layout (All Charts) {#layout-all}
+
 Layout controls the general appearance of the chart. The chart is customized by adding JSON properties to the layout.
+
 Below is a basic configuration.
+
 ``` json
 {
   "font": {
@@ -36,10 +44,12 @@ Below is a basic configuration.
   }
 }
 ```
-To use this layout snippet above, endeavour to replace all lines that begin with "// some text properties" with actual properties specific to it.
+To use the layout snippet above, replace all lines that begin with "// some text properties" with actual properties specific to the element.
 
-### Legend
-The legend properties below are added to the layout configuration to apply custom style to it. Below are legend properties
+### 2.1 Legend
+
+The legend properties below are added to the layout configuration to apply custom style to it.
+
 ``` json
 {
   "legend": {
@@ -63,14 +73,20 @@ The legend properties below are added to the layout configuration to apply custo
 }
 ```
 
-#### Right:
+You can change the position of the legend by modifying the properties as shown below.
+
+**Right:**
+
 ``` json
 {
   "showlegend": true,
 }
 ```
-#### Left:
-Adjust x for long series names or y axis ticks
+
+**Left:**
+
+Adjust x for long series names or y axis ticks.
+
 ``` json
 {
   "showlegend": true,
@@ -81,7 +97,8 @@ Adjust x for long series names or y axis ticks
 }
 ```
 
-#### Top:
+**Top:**
+
 ``` json
 {
   "showlegend": true,
@@ -92,8 +109,10 @@ Adjust x for long series names or y axis ticks
 }
 ```
 
-#### Bottom:
-Adjust y to -0.2 for long x axis ticks
+**Bottom:**
+
+Adjust y to -0.2 for long x axis ticks.
+
 ``` json
 {
   "showlegend": true,
@@ -104,7 +123,8 @@ Adjust y to -0.2 for long x axis ticks
 }
 ```
 
-#### Inside
+**Inside:**
+
 ``` json
 {
   "showlegend": true,
@@ -114,18 +134,22 @@ Adjust y to -0.2 for long x axis ticks
 }
 ```
 
-#### None:
+**None:**
+
 ``` json
 {
   "showlegend": false
 }
 ```
 
-![ Legend configurations ](attachments/pages/charts/advanced-layout-legend.gif)  
-See more[ Legend configurations ](https://plot.ly/javascript/reference/#layout-legend)
+![Legend configurations](attachments/pages/charts/advanced-layout-legend.gif)
 
-### Axes
+More options can be found here: [Legend configurations](https://plot.ly/javascript/reference/#layout-legend).
+
+### 2.2 Axes
+
 The axes properties apply to charts with x and y axes. They can be configured as:
+
 ``` json
 {
   "xaxis": {
@@ -151,11 +175,14 @@ The axes properties apply to charts with x and y axes. They can be configured as
 }
 ```
 
-![ Axes configurations ](attachments/pages/charts/axes.gif)
-See more[ Axes configurations ](https://plot.ly/javascript/reference/#layout-xaxis)
+![Axes configurations](attachments/pages/charts/axes.gif)
 
-### Multiple Y axes
-The properties apply to charts with more than one Y axis. They can be configured as:
+More options can be found here: [Axes configurations](https://plot.ly/javascript/reference/#layout-xaxis).
+
+### 2.3 Multiple Y Axes
+
+These properties apply to charts with more than one Y axis. They can be configured as:
+
 ``` json
 {
   "yaxis": {
@@ -177,12 +204,16 @@ The properties apply to charts with more than one Y axis. They can be configured
 }
 ```
 
-The layout properties above should be used with the corresponding [ data properties ](#multiple-y-axes-data-properties).
-![ Multiple Y axes configurations ](attachments/pages/charts/multiple-y.gif)
-See more[ Multiple Y axes configurations ](https://plot.ly/javascript/multiple-axes/)
+The layout properties above should be used with the corresponding [data properties](#multiple-y-axes-data-properties).
 
-### Multiple X axes
+![Multiple Y axes configurations](attachments/pages/charts/multiple-y.gif)
+
+More options can be found here: [Multiple Y axes configurations](https://plot.ly/javascript/multiple-axes/).
+
+### 2.4 Multiple X Axes
+
 These properties apply to charts with more than one X axis. They can be configured as:
+
 ``` json
 {
   "xaxis": {
@@ -210,25 +241,34 @@ These properties apply to charts with more than one X axis. They can be configur
 }
 ```
 
-The layout properties above should be used with the corresponding [ data properties ](#multiple-x-axes-data-properties).
-![ Multiple X axes configurations ](attachments/pages/charts/multiple-x.gif)  
-See more[ Multiple X axes configurations ](https://plot.ly/javascript/multiple-axes/)
+The layout properties above should be used with the corresponding [data properties](#multiple-x-axes-data-properties).
 
-#### Math LaTeX formulas
-Titles, axis and series can contain complex mathematical expression.
-![ Math formula ](attachments/pages/charts/math-formula.png)
+![Multiple X axes configurations](attachments/pages/charts/multiple-x.gif)
+
+More options can be found here: [Multiple X axes configurations](https://plot.ly/javascript/multiple-axes/).
+
+### 2.5 Math LaTeX Formulas
+
+Titles, axes and series can contain complex mathematical expressions.
+
+![Math formula](attachments/pages/charts/math-formula.png)
+
 ```
 $\sqrt{(n_\text{c}(t|{T_\text{early}}))}$
 ```
 
-Add to the index.html of the theme.
+Add the following to the index.html of the theme:
+
 ``` javascript
 <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_SVG"></script>
 ```
-More information LatTex Syntax : https://en.wikibooks.org/wiki/LaTeX/Mathematics
 
-### Title
-The title appears above the chart. It can be configured as: 
+More information on LatTex Syntax is available here: https://en.wikibooks.org/wiki/LaTeX/Mathematics.
+
+### 2.6 Title
+
+The title appears above the chart. It can be configured as:
+
 ``` json
 {
   "title": "CHART TITLE",
@@ -239,19 +279,25 @@ The title appears above the chart. It can be configured as:
   }
 }
 ```
-![ Title configurations ](attachments/pages/charts/title.gif)  
-See more[ Title configurations ](https://plot.ly/javascript/reference/#layout-title)  
 
-### Color
-Sets the a background color to graph.
+![Title configurations](attachments/pages/charts/title.gif)
+
+More options can be found here: [Title configurations](https://plot.ly/javascript/reference/#layout-title).
+
+### 2.7 Color
+
+Sets the the background color of a graph.
+
 ``` json
 {
   "paper_bgcolor": "#FFF"
 }
 ```
 
-### Margin
-creates space around the chart.
+### 2.8 Margin
+
+Creates space around the chart.
+
 ``` json
 {
   "margin": {
@@ -265,11 +311,13 @@ creates space around the chart.
 }
 ```
 
-![ Margin configurations ](attachments/pages/charts/margin.gif)  
-See more[ Margin configurations ](https://plot.ly/javascript/reference/#layout-margin)
+![ Margin configurations ](attachments/pages/charts/margin.gif)
 
-### Tooltip
-A small pop-up box that appears when the user moves the mouse pointer over an chart data points.
+More options can be found here: [Margin configurations](https://plot.ly/javascript/reference/#layout-margin).
+
+### 2.9 Tooltip
+
+A small pop-up box that appears when the user moves the mouse pointer over a chart data point.
 
 ``` json
 {
@@ -286,11 +334,15 @@ A small pop-up box that appears when the user moves the mouse pointer over an ch
   }
 }
 ```
-![ Tooltip configurations ](attachments/pages/charts/tooltip.gif)  
-See more [ Tooltip configurations ](https://plot.ly/javascript/reference/#layout-hovermode)
 
-### Fonts
-Sets a global font on the root level will be applied to all chart elements. Or set for it for specific elements.
+![Tooltip configurations](attachments/pages/charts/tooltip.gif).
+
+More options can be found here: [Tooltip configurations](https://plot.ly/javascript/reference/#layout-hovermode).
+
+### 2.10 Fonts
+
+Sets a global font at the root level which will be applied to all chart elements. Or set a font for specific elements.
+
 ``` json
 {
   "font": {
@@ -316,11 +368,14 @@ Sets a global font on the root level will be applied to all chart elements. Or s
 }
 ```
 
-### Range mode 
+### 2.11 Range Mode
+
 Sets how the range of a given axis should be displayed.
 
-#### normal
+**normal:**
+
 Sets the range based on the plotted values, adjusting to fit them.
+
 ```json
 {
   "yaxis": {
@@ -328,10 +383,12 @@ Sets the range based on the plotted values, adjusting to fit them.
   }
 }
 ```
-![ Range mode ](attachments/pages/charts/normal.gif)  
+![Range mode](attachments/pages/charts/normal.gif)
 
-#### nonnegative
-Shows only positive values, the range based on the plotted positive values.
+**nonnegative:**
+
+Shows only positive values, the range is based on the plotted positive values.
+
 ```json
 {
   "yaxis": {
@@ -339,10 +396,13 @@ Shows only positive values, the range based on the plotted positive values.
   }
 }
 ```
-![ Range mode ](attachments/pages/charts/nonnegative.gif)  
 
-#### tozero
+![Range mode](attachments/pages/charts/nonnegative.gif)
+
+**tozero:**
+
 This is the default range mode in charts. Both positive and negative ranges for the axes will start from the zero mark.
+
 ```json
 {
   "yaxis": {
@@ -350,10 +410,14 @@ This is the default range mode in charts. Both positive and negative ranges for 
   }
 }
 ```
-![ Range mode ](attachments/pages/charts/tozero.gif)  
 
-:heavy_exclamation_mark: **NB:** When **fill** is not set to *none* in the series, the y-axis range is forced to start from zero (*tozero*).  
-Layout
+![Range mode](attachments/pages/charts/tozero.gif)  
+
+{{% alert type="info" %}}
+When **fill** for the series is set to something other than *none*, the y-axis range is forced to start from zero (*tozero*). For example:
+
+**Layout**
+
 ```json
 {
   "yaxis": {
@@ -361,22 +425,30 @@ Layout
   }
 }
 ```
-Data
+
+**Data**
+
 ```json
 {
   "fill": "tonexty"
 }
 ```
+{{% /alert %}}
 
-![ Range mode ](attachments/pages/charts/rangemode-note.gif)  
-See more [ range mode configurations ](https://plot.ly/javascript/reference/#layout-yaxis-rangemode)
+![Range mode](attachments/pages/charts/rangemode-note.gif)
 
-## Data/Series Properties {#data-series}
-These properties are applied to specific charts only. For each chart, data properties are distinct. They make the chart appear as its supposed to be.
+More options can be found here: [range mode configurations](https://plot.ly/javascript/reference/#layout-yaxis-rangemode).
 
-### Lines
+## 3 Data/Series Properties {#data-series}
+
+These properties are applied to specific types of chart only. For each chart, data properties are distinct. They make the chart appear as its supposed to be.
+
+### 3.1 Lines
+
 A mode and line configuration can be added in the **Advanced** configuration of the series.
-![ Line styles ](attachments/pages/charts/line-styles.png)
+
+![Line styles](attachments/pages/charts/line-styles.png)
+
 ``` json
 [
   {
@@ -415,23 +487,30 @@ A mode and line configuration can be added in the **Advanced** configuration of 
 ]
 ```
 
-### Combine Chart Types
-The type of a series can be changes. Make a bar series into line series
-![ Column chart data properties ](attachments/pages/charts/combine-list-bar.gif)
+### 3.2 Combine Chart Types
 
+The type of a series can be changed. For example, you can make a bar series into a line series:
 
-### Pie Chart
- Displays a circular graph divided into slices to illustrate numerical proportion.
+![Column chart data properties](attachments/pages/charts/combine-list-bar.gif)
+
+### 3.3 Pie Chart
+
+Displays a circular graph divided into slices to illustrate numerical proportion.
+
 ``` json
 {
   "hole": 0.9
 }
 ```
-![ Pie chart data properties ](attachments/pages/charts/pie-chart.png)  
-See more [ Pie chart data properties ](https://plot.ly/javascript/reference/#pie)
 
-### Fill
+![Pie chart data properties](attachments/pages/charts/pie-chart.png)
+
+More options can be found here: [Pie chart data properties](https://plot.ly/javascript/reference/#pie).
+
+### 3.4 Fill
+
 Displays a line chart with the areas below the lines filled with colors.
+
 ``` json
 {
   "line": {
@@ -445,13 +524,16 @@ Displays a line chart with the areas below the lines filled with colors.
 }
 ```
 
-![ Area chart data properties ](attachments/pages/charts/area-chart.png)  
-See more [ Area chart data properties ](https://plot.ly/javascript/reference/#area)
+![Area chart data properties](attachments/pages/charts/area-chart.png)
 
-### Time series
+More options can be found here: [Area chart data properties](https://plot.ly/javascript/reference/#area).
 
-#### Filter buttons
-![ Line chart data properties ](attachments/pages/charts/time-series-filters.png)
+### 3.5 Time Series
+
+The example below shows how you can set up filter buttons to filter a chart by time.
+
+![Line chart data properties](attachments/pages/charts/time-series-filters.png).
+
 ``` json
 {
   "xaxis": {
@@ -494,10 +576,12 @@ See more [ Area chart data properties ](https://plot.ly/javascript/reference/#ar
 }
 ```
 
-See more properties on the [Range Selector](https://plot.ly/javascript/reference/#layout-xaxis-rangeselector)
+See more properties here: [Range Selector](https://plot.ly/javascript/reference/#layout-xaxis-rangeselector).
 
-### Multiple Y axes data properties
-Displays two different Y axes with different scales, in the data set.
+### 3.6 Multiple Y Axes Data Properties
+
+Displays two different Y axes with different scales, according to the ranges of the data sets.
+
 ``` json
 [
   {
@@ -511,10 +595,13 @@ Displays two different Y axes with different scales, in the data set.
   }
 ]
 ```
-![ Multiple Y axes properties ](attachments/pages/charts/data-multiple-y.png)
 
-### Multiple X axes data properties
+![Multiple Y axes properties](attachments/pages/charts/data-multiple-y.png)
+
+### 3.7 Multiple X Axes Data Properties
+
 Displays two different X axes with different scales.
+
 ``` json
 [
   {
@@ -529,9 +616,13 @@ Displays two different X axes with different scales.
   }
 ]
 ```
-![ Multiple X axes properties ](attachments/pages/charts/data-multiple-x.png)
 
-### Configurations options (all charts) {#config-options}
+![Multiple X axes properties](attachments/pages/charts/data-multiple-x.png).
+
+## 4 Configurations Options (All Charts) {#config-options}
+
+The following configuration options are available in all charts.
+
 ```json
 {
   "displayModeBar": true,

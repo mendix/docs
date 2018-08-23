@@ -65,7 +65,7 @@ const getAllFiles = (dir) => new Promise((resolve, reject) => {
   });
 });
 
-const getFiles = (dir, ext) => {
+const getFiles = (dir, ext, ignore = []) => {
   const extName = ext || '.html';
   return new Promise((resolve, reject) => {
     recursive(dir, [], (err, files) => {
@@ -73,7 +73,7 @@ const getFiles = (dir, ext) => {
         return reject(err);
       }
       const normalized = files.map(f => normalizeSafe(f));
-      resolve(_.filter(normalized, file => path.extname(file) === extName));
+      resolve(_.filter(normalized, file => path.extname(file) === extName && ignore.indexOf(path.basename(file)) === -1));
     });
   });
 };

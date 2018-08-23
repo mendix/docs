@@ -45,7 +45,7 @@ const parseAndCheck = menuJSON => new Promise((resolve, reject) => {
 const checkJSON = jsonArr => Promise.all(jsonArr.map(jsonFile => parseAndCheck(jsonFile)));
 
 const checkMenus = (path, cb) => {
-  getFiles(path, '.json')
+  getFiles(path, '.json', ['spaces.json'])
     .then(readJSON)
     .then(checkJSON)
     .then(files => {

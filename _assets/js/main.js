@@ -201,6 +201,19 @@
       return $cat;
     }
 
+    function hasPathInData(data, main) {
+      if (main.u && main.u === window.location.pathname) {
+        return true;
+      }
+      if (data.pages) {
+        var filtered = data.pages
+          .map(function (page) { return page.u.replace(window.location.pathname, '')})
+          .filter(function (u) { return u === '' || u === '/' });
+        return filtered.length > 0;
+      }
+      return false;
+    }
+
     function menu(element, data, callback) {
       var $menu = $(element),
           $source = $menu.data('source');
@@ -214,12 +227,22 @@
           var $collapse = $('<div class="collapse" id="' + mainID + '" />');
           var title = typeof main.mt !== 'undefined' ? main.mt : main.t;
           $menu.append($space);
-          $space.append(addExpandLink(mainID, title, main.u));
+          var $expandLink = addExpandLink(mainID, title, main.u);
+          $space.append($expandLink);
           $space.append($collapse);
-          data.categories.forEach(function (cat) {
-            $collapse.append(createCategory(space, cat, data));
-          });
-          callback($menu);
+          if (hasPathInData(data, main)) {
+            data.categories.forEach(function (cat) {
+              $collapse.append(createCategory(space, cat, data));
+            });
+            callback($menu);
+          } else {
+            $('> .expand-link', $expandLink.parent()).one('click', function (e) {
+              data.categories.forEach(function (cat) {
+                $collapse.append(createCategory(space, cat, data));
+              });
+            });
+            callback($menu);
+          }
         } else {
           console.warn('Cannot find mainpage for ' + $source);
         }

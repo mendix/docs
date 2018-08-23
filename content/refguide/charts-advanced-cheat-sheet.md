@@ -44,7 +44,8 @@ Below is a basic configuration.
   }
 }
 ```
-To use the layout snippet above, replace all lines that begin with "// some text properties" with actual properties specific to the element.
+
+To use the layout snippet above, replace all lines labeled *// {some text} properties* with actual properties specific to the element.
 
 ### 2.1 Legend
 

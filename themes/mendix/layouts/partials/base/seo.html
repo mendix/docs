@@ -4,10 +4,8 @@
 {{- $paths := split .File.Dir "/" }}
 {{- $main := index $paths 0 }}
 {{- $space := index $spaces $main -}}
-
 {{- $.Scratch.Set "title" $page.Title -}}
 {{- $.Scratch.Set "description" $site.Params.description -}}
-
 {{- with $page.Title -}}
   {{- with $space -}}
     {{- if eq .space $page.Title }}
@@ -28,12 +26,9 @@
 {{- if eq $page.URL "/" -}}
   {{- $.Scratch.Set "title" $site.Title }}
 {{- end -}}
-
 {{- $permaLink := replace $page.Permalink "index.html" "" -}}
 {{- $permaLink := replace $permaLink ".html" "" -}}
-
   {{ "<!-- SEO -->" | safeHTML }}
-
   {{ printf "<title>%s</title>" ($.Scratch.Get "title") | safeHTML }}
   {{ printf "<meta property=\"og:title\" content=\"%s\" />" ($.Scratch.Get "title") | safeHTML }}{{ with $page.Title }}
   {{ printf "<!-- <meta itemprop=\"name\" content=\"%s\" /> -->" . | safeHTML }}{{ end }}
@@ -50,14 +45,10 @@
   <meta name="keywords" content="{{ delimit $page.Params.tags ", " }}">{{ else }}{{ "<!-- no tags set -->" | safeHTML }}
   {{ end }}
   {{ partial "canonical" . }}
-
   <link rel="alternate" type="application/atom+xml" title="Updates" href="https://docs.mendix.com/feed.xml" />
-
   <meta property="og:site_name" content="Mendix Documentation" />
   <meta property="og:locale" content="en_US" />
-
   <meta name="twitter:site" content="@MendixDeveloper" />
-
   <script type="application/ld+json">
     {{ if eq $page.URL "/" }}{
       "@context": "http://schema.org",
@@ -80,5 +71,4 @@
       "description": "{{ $page.Params.description  | safeJS }}"{{ end }}
     }{{ end }}
   </script>
-
   {{ "<!-- /SEO -->" | safeHTML }}

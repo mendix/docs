@@ -139,7 +139,10 @@ const writeSpaces = opts => {
       }
     };
     const writePromise = writeSpace(opts);
-    return writePromise(pageObj);
+    return writePromise(pageObj)
+    .then(() => {
+      return pageObj;
+    });
   }));
 }
 
@@ -152,6 +155,9 @@ const build = (opts) => new Promise((resolve, reject) => {
     .then(filterAndBindSpace)
     .then(checkSpaces)
     .then(writeSpaces(opts))
+    .then(arr => {
+      return writeFile(path.join(opts.destination, 'spaces.json'), JSON.stringify(arr));
+    })
     .then(() => {
       resolve(errors);
     })

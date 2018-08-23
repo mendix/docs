@@ -201,31 +201,29 @@
       return $cat;
     }
 
-    function menu(element, callback) {
+    function menu(element, data, callback) {
       var $menu = $(element),
           $source = $menu.data('source');
-      $.get($source, function( data ) {
-        if (data.categories && data.pages) {
-          var mainPage = data.pages.filter(function (page) { return page.m });
-          var space = $source.replace('/json/', '').replace('.json', '');
-          if (mainPage.length === 1) {
-            var main = mainPage[0];
-            var mainID = 'space-' + normalizeId(main.t);
-            var $space = $('<div class="space" />');
-            var $collapse = $('<div class="collapse" id="' + mainID + '" />');
-            var title = typeof main.mt !== 'undefined' ? main.mt : main.t;
-            $menu.append($space);
-            $space.append(addExpandLink(mainID, title, main.u));
-            $space.append($collapse);
-            data.categories.forEach(function (cat) {
-              $collapse.append(createCategory(space, cat, data));
-            });
-            callback($menu);
-          } else {
-            console.warn('Cannot find mainpage for ' + $source);
-          }
+      if (data.categories && data.pages) {
+        var mainPage = data.pages.filter(function (page) { return page.m });
+        var space = $source.replace('/json/', '').replace('.json', '');
+        if (mainPage.length === 1) {
+          var main = mainPage[0];
+          var mainID = 'space-' + normalizeId(main.t);
+          var $space = $('<div class="space" />');
+          var $collapse = $('<div class="collapse" id="' + mainID + '" />');
+          var title = typeof main.mt !== 'undefined' ? main.mt : main.t;
+          $menu.append($space);
+          $space.append(addExpandLink(mainID, title, main.u));
+          $space.append($collapse);
+          data.categories.forEach(function (cat) {
+            $collapse.append(createCategory(space, cat, data));
+          });
+          callback($menu);
+        } else {
+          console.warn('Cannot find mainpage for ' + $source);
         }
-      });
+      }
     }
 
     function hasBreadCrumbLink(title) {
@@ -367,11 +365,23 @@
       $('.sidebar-menu--loading').removeClass('sidebar-menu--loading');
     }
 
-    $('.menu').each(function () {
-      if ($(this).data("source")) {
-        menu(this, walkmenu);
-      }
-    });
+    var $menus = $('.menu');
+    if ($menus.length) {
+      $.get('/json/spaces.json', function( data ) {
+        window.__mxMenuItems = data;
+        $menus.each(function () {
+          var source = $(this).data("source");
+          if (source) {
+            var filtered = data.filter(function (s) { return s.filename === source });
+            if (filtered.length === 1) {
+              menu(this, filtered[0].content, walkmenu);
+            } else {
+              console.warn('Cannot find menu for :' + source);
+            }
+          }
+        });
+      })
+    }
 
     /*****************
       Back to top

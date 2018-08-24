@@ -43,7 +43,7 @@ See [Any Chart Widgets](charts-any-configuration) to learn how to configure *Any
 
 ## 4 Related Content
 
-- [Any Chart Configuration](charts-any-configuration)
-- [Any Chart Building Bocks](charts-any-building-bocks)
-- [Any Chart Cheat Sheet](charts-any-cheat-sheet)
-- [Basic Chart Cheat Sheet](charts-advanced-cheat-sheet)
+* [Any Chart Configuration](charts-any-configuration)
+* [Any Chart Building Bocks](charts-any-building-bocks)
+* [Any Chart Cheat Sheet](charts-any-cheat-sheet)
+* [Basic Chart Cheat Sheet](charts-advanced-cheat-sheet)

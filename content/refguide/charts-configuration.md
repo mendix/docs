@@ -1,92 +1,94 @@
 ---
 title: "Chart Configuration"
 parent: "chart-widgets"
+tags: ["Charts", "Widgets", "Desktop Modeler", "Chart Configuration", "Configuration"]
 ---
 
-## 1 Common configuration
+## 1 Introduction
+
+This guide explains the options for configuring chart widgets. It covers the following widgets:
+
+* Area chart
+* Bar chart
+* Bubble chart
+* Column chart
+* Heat map
+* Line chart
+* Pie chart
+* Time series
+
+The configuration of *Any chart* widgets is in another document here: [Any Chart Widgets](charts-any-configuration).
+
+## 2 Common configuration
 The common configuration for all charts is described here. For chart specific configuration see below
 
-### 1.1 Single series
-Contain a single set of data like a pie chart
+### 2.1 Chart properties
 
-### 1.2 Multi series
-Can contain multiple series of data like a chart with multiple line
+![](attachments/pages/charts/line-chart-chart-properties.png)
 
-#### Chart properties
+#### 2.1.1 Series
 
-##### Series
-Add series and configure their properties, each series will represents a data set. For example a line in a line chart
+Add series and configure their properties, each series will represents a data set. For example a line in a line chart.
 
-###### Data source
-The data for each each series can originate from a different data source
+* A single series will contain a single set of data for charts such as a pie chart
 
-**Series name**
+* More than one series can contain data for charts which support a multiple series of data: like a line chart with multiple lines.
 
-Name of the series, use in the legends, when enabled
+1. Data source
 
-**Entity**
+    The data for each each series can originate from a different data source.
+    
+    ![](attachments/pages/charts/series-item-data-source.png)
 
-The entity from which the data values will be retrieved
+  * **Series name**: A name for the series, for use in the legends (when enabled)
 
-**Data source**
+  * **Entity**: The entity from which the data values will be retrieved
 
-Select the data source type for the series: Database, Microflow or REST endpoint
+  * **Data source**: the data source type for the series: *Database*, *Microflow* or *REST endpoint*
 
-**REST URL**
+  * **REST URL**: Relative or full URL to REST endpoint. For more information on setting up a REST end point see [REST Charts](../howto/extensibility/charts-basic-rest)
 
-Relative or full URL to REST endpoint. More information on setting up a REST end point see [REST Charts](../howto/extensibility/charts-basic-rest)
+  * **XPath constraint**: The constraint on the data from the entity (used when the data source is Database)
 
-**XPath constraint**
+  * **Microflow**: A microflow that returns a list object with data values
 
-The constraint on the data from the entity (used when the data source is Database)
+2. Data points
 
-**Microflow**
+    The attribute(s) within the data source used for the values to be plotted.
+    
+    ![](attachments/pages/charts/series-item-data-points.png)
 
-A microflow that returns a list object with data values
+  * **X-axis data attribute**: For data source Database attributes over reference are supported with a maximum of one level deep. For data source Microflow, references are not supported
 
-###### Data points
+  * **Y-axis data attribute**: For data source Database attributes over reference are supported with a maximum of one level deep. For data source Microflow references are not supported
 
-**X-axis data attribute**
+  * **X-axis sort attribute**: For data source Database attributes over reference are supported with a maximum of one level deep. For data source Microflow references are not supported
 
-For data source Database, attributes over reference are supported with a maximum of one level deep. For data source Microflow, references are not supported.
+  * **Sort order**: The sort-order of the data provided by the "X-axis sort attribute"
 
-**Y-axis data attribute**
+3. Events
 
-For data source Database, attribute over reference is supported with a maximal of one level deep. For data source Microflow references are not supported.
+    The events to be supported if the user interacts with the chart.
+    
+    ![](attachments/pages/charts/series-item-events.png)
+    
+  * **On click**: Select the way a click of a data point should be handled.
+    * Do nothing
+    * Show a page
+    * Call a microflow
+    * Call a nanoflow
 
-**X-axis sort attribute**
+    Configure the corresponding setting
 
-For data source Database, attribute over reference is supported with a maximal of one level deep. For data source Microflow references are not supported
+  * **On click page**: The page that will be opened on click. Required when the **On click > Show a page** option is selected
 
-**Sort order**
+  * **Open page as**: Full page, Popup or Blocking popup
 
-The order of sorting that data provide by the "X-axis sort attribute"
+  * **On click microflow**: The microflow that will be executed on click
 
-###### Events
+  * **On click nanoflow**: The nanoflow that will be executed on click
 
-**On click**
-
-Select the way a click of a data point should be handled. Do nothing, Show a page, Call a microflow, Call a nanoflow. Configure the corresponding setting
-
-**On click page**
-
-The page that will be opened on click. Required when the "On click" "Show a page" is selected.
-
-**Open page as**
-
-Full page, Popup or Blocking popup
-
-**On click microflow**
-
-The microflow that will be executed on click
-
-**On click nanoflow**
-
-The nanoflow that will be executed on click
-
-**Tooltip form**
-
-The form to show when a user hovers over a chart plot point
+  * **Tooltip form**: The page to show when a user hovers over a chart plot point
 
 ###### Advanced{#advanced}
 

@@ -1,0 +1,23 @@
+{{- $intercom := index .Site.Params "intercom" -}}
+{{- $liveId := index $intercom "live_id" -}}
+{{- $testId := index $intercom "test_id" -}}
+{{- $env := getenv "HUGO_ENV" -}}
+{{- if eq $env "production" -}}
+  <!-- BUILD: PRODUCTION: INTERCOM -->
+  <script type="text/javascript">
+    window.__IntercomAppId = "{{ $liveId }}"
+    window.intercomSettings = {
+      app_id: window.__IntercomAppId
+    };
+  </script>
+{{- partial "asset" (dict "page" . "type" "js" "filename" "intercom.js") -}}
+{{- else if eq $env "test" -}}
+<!-- BUILD: TEST: INTERCOM -->
+  <script type="text/javascript">
+    window.__IntercomAppId = "{{ $testId }}"
+    window.intercomSettings = {
+      app_id: window.__IntercomAppId
+    };
+  </script>
+{{- partial "asset" (dict "page" . "type" "js" "filename" "intercom.js") -}}
+{{- end -}}

@@ -81,3 +81,62 @@ The microflow called on hover receives an event object of the type **Event entit
 
 ### Tooltip form
 The form to show when a user hovers over a chart plot point, context uses **Tooltip entity**.
+
+## Chart Theming
+
+Advanced JSON settings can also be added in a global context via the theme folder of your mendix project root directory.
+
+To the theme folder, add a `.json` file named *com.mendix.charts*. The JSON should be in the following format:
+
+``` json
+{
+  "layout": {
+    // Add shared layout options here (for all charts)
+  },
+  "configuration": {
+    // Add shared configuration options here (for all charts)
+  },
+  "charts": {
+    "LineChart": {
+      "layout": {
+        // Add line chart only layout options here
+      },
+      "data": {
+        // Add line chart only data options here
+      },
+      "configuration": {
+          // Add line chart only configuration options here
+      }
+    },
+    "AreaChart": {
+      // Same arrangement as the line chart
+    },
+    "BubbleChart": {
+      // Same arrangement as the line chart
+    },
+    "TimeSeries": {
+      // Same arrangement as the line chart
+    },
+    "ColumnChart": {
+      // Same arrangement as the line chart
+    },
+    "BarChart": {
+      // Same arrangement as the line chart
+    },
+    "PieChart": {
+      // Same arrangement as the line chart
+    },
+    "HeatMap": {
+      // Same arrangement as the line chart
+    }
+  }
+}
+```
+
+{{% alert type="info" %}}
+
+Please use with caution, as the configuration set up here shall be applied to every instance of the charts in your application.  
+Only the advanced configurations set up in the widget itself have a higher precedence.
+
+{{% /alert %}}
+

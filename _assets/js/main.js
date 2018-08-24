@@ -350,17 +350,29 @@
             var schema = {
               "@context": "http://schema.org",
               "@type": "BreadcrumbList",
-              "itemListElement": []
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "item":
+                  {
+                    "@type": "WebSite",
+                    "@id": "https://docs.mendix.com",
+                    "name": "Mendix Documentation"
+                   }
+                }
+              ]
             };
 
             $.each(hrefList, function (index, item) {
               schema.itemListElement.push({
                 "@type": "ListItem",
-                "position": index + 1,
+                "position": index + 2,
                 "item":
                 {
-                 "@id": item.href,
-                 "name": item.title
+                  "@type": "WebPage",
+                  "@id": "https://docs.mendix.com" + item.href,
+                  "name": item.title
                  }
                });
             });

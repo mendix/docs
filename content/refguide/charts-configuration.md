@@ -30,11 +30,23 @@ The common configuration for all charts is described here. For chart specific co
 
 Add series and configure their properties, each series will represents a data set. For example a line in a line chart.
 
-* A single series will contain a single set of data for charts such as a pie chart
+* The *Pie Charts* and *Heat Maps* support only a single series containing a single set of data
 
-* More than one series can contain data for charts which support a multiple series of data: like a line chart with multiple lines.
+    In this case, the **Data source** and **Data points** are shown as separate tabs in the widget.
 
-1. Data source
+    ![](attachments/pages/charts/widget-data-source.png)
+
+    The fields are the same as the once described in the sections [Data source](#data-source) and [Data points](#data-points), below.
+
+* Charts which support a multiple series of data, like a line chart with multiple lines, support more than one series of data
+
+    In this case, new series can be added by clicking the **Series > New** button in the **Chart properties** tab.
+
+    {{% alert type="info" %}}**Dynamic series** (that is, changing the number of series on a multiple-series chart dynamically at runtime).
+
+    The basic charts only support a fixed number of series which is set in the modeler. You need to use *Any chart* to set up dynamic series. See [Any charts](charts-any-configuration).{{% /alert %}}
+
+1. Data source<a name="data-source"></a>
 
     The data for each each series can originate from a different data source.
     
@@ -52,7 +64,7 @@ Add series and configure their properties, each series will represents a data se
 
   * **Microflow**: A microflow that returns a list object with data values
 
-2. Data points
+2. Data points<a name="data-points"></a>
 
     The attribute(s) within the data source used for the values to be plotted.
     
@@ -66,7 +78,13 @@ Add series and configure their properties, each series will represents a data se
 
   * **Sort order**: The sort-order of the data provided by the "X-axis sort attribute"
 
-3. Events
+3. Appearance
+
+    The appearance of the series. This is customized for each type of chart, see: [3 Configuration per chart type](#configuration-by-chart-type), below.
+
+    ![](attachments/pages/charts/series-item-appearance.png)
+
+4. Events
 
     The events to be supported if the user interacts with the chart.
     
@@ -90,181 +108,164 @@ Add series and configure their properties, each series will represents a data se
 
   * **Tooltip form**: The page to show when a user hovers over a chart plot point
 
-###### Advanced{#advanced}
+5. Advanced <a name="advanced"></a>
 
-**Options**
+    ![](attachments/pages/charts/series-item-advanced.png)
 
-The Plotly series options as JSON. This options will only be used when the tab Advanced Mode is set to Advanced or Developer.
+* **Options**: The Plotly *series options* in JSON format; these options will only be used when the *widget* tab **Advanced > Mode** is set to *Advanced* or *Developer*: see [Advanced](#advanced-mode), below.
 
-#### Appearance
-The appearance settings are use to set dimension of the chart
+#### 2.1.2 Appearance
 
-##### Width unit
-The type of units which are used for the **Width** property: Percentage or Pixels
+The **Appearance** settings are used to set the size of the chart on the page.
 
-##### Width
-The width of the chart in pixels or percentage based on the **Width unit** setting.
+![](attachments/pages/charts/widget-appearance.png)
 
-##### Height unit
-**Percentage of width** is the aspect ratio, **Pixels** is absolute. Warning: When using **Percentage of parent** the parent container must have an absolute height, else nothing is displayed.
+* **Width unit**: The type of unit which is used for the **Width** property - *Percentage* or *Pixels*
 
-##### Height
-The height in pixels or percentage based on the settings of the **Height unit**
+* **Width**: The width of the chart in pixels or percentage based on the **Width unit** setting
 
-#### REST
-Add parameters to REST request, The contextId, and series name are provided by default
+* **Height unit**: The type of unit which is used for the **Height** property
 
-#### Advanced
-There are three modes how you can use these charts:
- - Basic: quickly setup a chart with the various widget options
- - Advanced: specify additional JSON configuration
- - Developer: this will add a **Toggle Editor** button at runtime to the chart which toggles an editor to play with different settings
+  * **Percentage of width**: sets the aspect ratio
+  * **Pixels**: is an absolute height
+  * **Percentage of parent**: sets the height in relation to a container in which the widget is placed
+  
+  {{% alert type="warning" %}}When using **Percentage of parent** the parent container must have an **absolute** height, else nothing is displayed.{{% /alert %}}
 
-The charts are based on the popular framework plotly.js which uses JSON to configure the charts. In the advanced and developer mode, you can specify additional JSON unlocking the many features of plotly.js. You can do this with a live preview. See the following link for more information about plotly.js and the options: https://plot.ly/javascript/
+* **Height**: The height in pixels or percentage based on the setting of **Height unit**
 
-##### Mode
-The developer option adds a button to the charts when running the app which can be used to toggle a live editor for the advanced configuration options.
+#### 2.1.3 REST
 
-##### Layout options
-The JSON containing the Plotly layout options
-- [Samples](charts-advanced-cheat-sheet#layout-all)
-- [Full reference](https://plot.ly/javascript/reference/#layout)
+Add parameters to a REST request (see [Data source](#data-source). The contextId, and series name are provided by default.
 
-##### Configuration options
-The JSON containing the Plotly configuration options
-- [Samples](charts-advanced-cheat-sheet#config-options)
-- [Documentation](https://plot.ly/javascript/configuration-options/)
-- [Full reference](https://github.com/plotly/plotly.js/blob/master/src/plot_api/plot_config.js)
+![](attachments/pages/charts/widget-rest.png)
 
-### 1.3 Dynamic series
-The basic charts only support a static amount of series which can be configured in the modeler.
-Dynamic series changes during the runtime depending on the data of the application. To setup dynamic series see [Any charts](charts-any-configuration)
-We are looking forward to add dynamic series into basic charts at a later moment.
+#### 2.1.4 Advanced <a name="advanced-mode"></a>
 
-## 2 Configuration per chart type
-The properties above are common across the chart types. In this section, the properties described are specific for the chart type.
+The charts are based on the popular framework plotly.js which uses JSON to configure the charts. In the advanced and developer mode, you can specify additional JSON: unlocking the many features of plotly.js. You can also do this with a live preview.
 
-### 2.1 Column Chart
+See the following link for more information about plotly.js and the options: https://plot.ly/javascript/.
 
-#### Series
+![](attachments/pages/charts/widget-advanced.png)
 
-##### Appearance
+* **Mode**: You can use these charts in three different modes:
 
-###### Column color
-HTML color of the column e.g. green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
+  * **Basic**: quickly setup a chart with the various widget options
+  * **Advanced**: specify additional JSON configuration
+  * **Developer**: this will add a **Toggle Editor** button to the chart at runtime which toggles an editor to play with different advanced configuration options
 
-### 2.2 Line Chart
+    ![](attachments/pages/charts/toggle-editor.png)
 
-#### Series
+* **Layout options**: The JSON containing the Plotly layout options
+  * [Samples](charts-advanced-cheat-sheet#layout-all)
+  * [Full reference](https://plot.ly/javascript/reference/#layout)
 
-##### Appearance
+* **Configuration options**: The JSON containing the Plotly configuration options
+  * [Samples](charts-advanced-cheat-sheet#config-options)
+  * [Documentation](https://plot.ly/javascript/configuration-options/)
+  * [Full reference](https://github.com/plotly/plotly.js/blob/master/src/plot_api/plot_config.js)
 
-###### Line mode
-Lines, Lines with markers
+## 3 Configuration by Chart Type <a name="configuration-by-chart-type"></a>
 
-###### Line style
-Straight line, Curved line (spline)
+The properties above are common across the chart types. In this section, the properties described are specific to the chart type.
 
-###### Line color
-HTML color of the line e.g. green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
+### 3.1 Column Chart
 
-### 2.3 Pie Chart
+#### 3.1.1 Series New or Edit
 
-#### Chart propterties
+1. **Appearance** Tab
 
-##### Chart type
-The type of pie chart to use e.g pie, doughnut
+    * **Column color**: HTML color of the column e.g. green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
 
-##### Show legend
-Displays a legend on the pie chart
+### 3.2 Line Chart
 
-##### Colors
-Contains the color of each pie slice e.g. green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
+#### 3.2.1 Series New or Edit
 
-##### Refresh interval (ms)
-Refresh the chart in intervals of ms, when set to 0 refresh is disabled
+1. **Appearance** Tab
 
-### 2.4 Area Chart
+    * **Line mode**: *Lines* (without showing markers where the data points are) or *Lines with markers*
 
-#### Series
+    * **Line style**: join the data points with a *Straight line* or a *Curved line (spline)*
 
-##### Appearance
+    * **Line color**: HTML color of the line e.g. green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
 
-###### Border
-No, Yes, Yes with markers
+### 3.3 Pie Chart
 
-###### Border style
-Straight, Curved
+#### 3.3.1 Chart properties
 
-###### Border color
-HTML color of the border e.g. green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
+* **Chart type**: The type of pie chart to use, either *pie* or *doughnut*
 
-###### Area color
-HTML color of the border e.g. green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5). Default is the border color with transparency
+* **Show legend**: Displays a legend on the pie chart
 
-### 2.5 Bar Chart
-#### Series
+* **Colors**: Contains the color of each slice e.g. green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
 
-##### Appearance
+* **Refresh interval (ms)**: Refresh the chart in intervals of ms, when set to 0 refresh is disabled
 
-###### Bar color
-HTML color of the bar e.g. green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
+### 3.4 Area Chart
 
-### 2.6 Time Series Chart
-#### Series
+#### 3.4.1 Series New or Edit
 
-##### Appearance
+1. **Appearance** Tab
 
-###### Border
-No, Yes, Yes with markers
+    * **Border**: No, Yes, Yes with markers
 
-###### Border Style
-Straight, Curved
+    * **Border style**: Straight, Curved
 
-###### Line color
-HTML color of the bar e.g. green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
+    * **Border color**: HTML color of the border e.g. green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
 
-###### Fill area
-Fill area between data points and x-axis: Yes, No
+    * **Area color**: HTML color of the area within the border e.g. green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5). Default is the border color with transparency
 
-###### Area color
-HTML color of the bar e.g. green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5). By default, the border color with transparency is used
+### 3.5 Bar Chart
 
-### 2.7 Heat Map
+#### 3.5.1 Series New or Edit
 
-#### Scale
+1. **Appearance** Tab
 
-##### Colors
-The percentage with the colors that should be applied. At least two values need to be specified, else the default colors are used
+    * **Bar color**: HTML color of the bar e.g. green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
 
-##### Show scale
-Display scale on the chart: Yes , No
+### 3.6 Time Series Chart
 
-##### Show values
-Display data values on the chart: Yes , No
+#### 3.6.1 Series New or Edit
 
-##### Font value color
-HTML color of the bar e.g. green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
+1. **Appearance** Tab
 
-##### X-axis label
-Label to be applied on the X-axis
+    * **Border**: No, Yes, Yes with markers
 
-##### Y-axis label
-Label to be applied on the Y-axis
+    * **Border style**: Straight, Curved
 
-##### Smooth color
-Gradual color gradient between data points: Yes , No
+    * **Line color**: HTML color of the line e.g. green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
 
-### 2.8 Bubble Chart
+    * **Fill area**: Fill area between data points and x-axis: Yes, No
 
-#### Series
+    * **Area color**: HTML color of the area within the border e.g. green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5). Default is the line color with transparency
 
-##### Appearance
+### 3.7 Heat Map
 
-###### Serie color
-Color of the bubbles e.g green,#00FF00, rgb(2,255,0)
+#### 3.7.1 Scale
 
-## 3 Chart Theming
+* **Colors**: The percentage at which each color should be applied, together with the associated color. At least two values must specified, otherwise the default colors are used
+
+* **Show scale**: Display scale on the chart: Yes , No
+
+* **Show values**: Display data values on the chart: Yes , No
+
+* **Font value color**: HTML color of the values displayed on the heat map e.g. green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
+
+* **X-axis label**: Label to be displayed on the X-axis
+
+* **Y-axis label**: Label to be displayed on the Y-axis
+
+* **Smooth color**: Gradual color gradient between data points: Yes , No
+
+### 3.8 Bubble Chart
+
+#### 3.8.1 Series New or Edit
+
+1. **Appearance** Tab
+
+    * **Serie color**[sic]: Color of the bubbles e.g green,#00FF00, rgb(2,255,0)
+
+## 4 Chart Theming
 
 Advanced JSON settings can also be added in a global context via the theme folder of your mendix project root directory.
 

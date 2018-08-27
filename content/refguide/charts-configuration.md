@@ -42,9 +42,7 @@ Add series and configure their properties, each series represents a data set. Fo
 
     In this case, new series can be added by clicking the **Series > New** button in the **Chart properties** tab.
 
-    {{% alert type="info" %}}The charts described in this guide do not support **Dynamic series** (that is, changing the number of series on a multiple-series chart dynamically at runtime).
-
-    The basic charts only support a fixed number of series which is set in the modeler. You need to use *Any chart* to set up dynamic series. See [Any charts](charts-any-configuration).{{% /alert %}}
+    {{% alert type="info" %}}The charts described in this guide do not support **Dynamic series** (that is, changing the number of series on a multiple-series chart dynamically at runtime).<br /><br />The basic charts only support a fixed number of series which is set in the modeler. You need to use *Any chart* to set up dynamic series. See [Any charts](charts-any-configuration).{{% /alert %}}
 
 1. Data source<a name="data-source"></a>
 

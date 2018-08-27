@@ -20,7 +20,7 @@ This guide explains the options for configuring chart widgets. It covers the fol
 The configuration of *Any chart* widgets is in another document here: [Any Chart Widgets](charts-any-configuration).
 
 ## 2 Common configuration
-The common configuration for all charts is described here. For chart specific configuration see below
+The common configuration for all charts is described here. For chart specific configuration see [Configuration by Chart Type](#configuration-by-chart-type),  below.
 
 ### 2.1 Chart properties
 
@@ -28,7 +28,7 @@ The common configuration for all charts is described here. For chart specific co
 
 #### 2.1.1 Series
 
-Add series and configure their properties, each series will represents a data set. For example a line in a line chart.
+Add series and configure their properties, each series will represents a data set. For example a line on a line chart.
 
 * The *Pie Charts* and *Heat Maps* support only a single series containing a single set of data
 
@@ -36,23 +36,23 @@ Add series and configure their properties, each series will represents a data se
 
     ![](attachments/pages/charts/widget-data-source.png)
 
-    The fields are the same as the once described in the sections [Data source](#data-source) and [Data points](#data-points), below.
+    The fields are the same as the ones described in the sections [Data source](#data-source) and [Data points](#data-points), below.
 
-* Charts which support a multiple series of data, like a line chart with multiple lines, support more than one series of data
+* Charts which support multiple series of data, like a line chart with multiple lines, support more than one series of data
 
     In this case, new series can be added by clicking the **Series > New** button in the **Chart properties** tab.
 
-    {{% alert type="info" %}}**Dynamic series** (that is, changing the number of series on a multiple-series chart dynamically at runtime).
+    {{% alert type="info" %}}The charts described in this guide do not support **Dynamic series** (that is, changing the number of series on a multiple-series chart dynamically at runtime).
 
     The basic charts only support a fixed number of series which is set in the modeler. You need to use *Any chart* to set up dynamic series. See [Any charts](charts-any-configuration).{{% /alert %}}
 
 1. Data source<a name="data-source"></a>
 
-    The data for each each series can originate from a different data source.
+    The data for each each series can originate from a different data source. You can add additional data series in the **Chart properties** tab.
     
     ![](attachments/pages/charts/series-item-data-source.png)
 
-  * **Series name**: A name for the series, for use in the legends (when enabled)
+  * **Series name**: A name for the series, for use in legends (when enabled)
 
   * **Entity**: The entity from which the data values will be retrieved
 
@@ -90,13 +90,13 @@ Add series and configure their properties, each series will represents a data se
     
     ![](attachments/pages/charts/series-item-events.png)
     
-  * **On click**: Select the way a click of a data point should be handled.
+  * **On click**: Select the way a click of a data point should be handled:
     * Do nothing
     * Show a page
     * Call a microflow
     * Call a nanoflow
 
-    Configure the corresponding setting
+    Configure the corresponding setting.
 
   * **On click page**: The page that will be opened on click. Required when the **On click > Show a page** option is selected
 
@@ -136,7 +136,7 @@ The **Appearance** settings are used to set the size of the chart on the page.
 
 #### 2.1.3 REST
 
-Add parameters to a REST request (see [Data source](#data-source). The contextId, and series name are provided by default.
+Add parameters to a REST request (see [Data source](#data-source)). The contextId, and series name are provided by default.
 
 ![](attachments/pages/charts/widget-rest.png)
 
@@ -243,7 +243,7 @@ The properties above are common across the chart types. In this section, the pro
 
 #### 3.7.1 Scale
 
-* **Colors**: The percentage at which each color should be applied, together with the associated color. At least two values must specified, otherwise the default colors are used
+* **Colors**: The percentage at which each color should be applied, together with the associated color. At least two values must be specified, otherwise the default colors are used
 
 * **Show scale**: Display scale on the chart: Yes , No
 

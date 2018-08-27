@@ -1,268 +1,269 @@
 ---
 title: "Chart Configuration"
 parent: "chart-widgets"
+tags: ["Charts", "Widgets", "Desktop Modeler", "Chart Configuration", "Configuration"]
 ---
 
-## 1 Common configuration
-The common configuration for all charts is described here. For chart specific configuration see below
+## 1 Introduction
 
-### 1.1 Single series
-Contain a single set of data like a pie chart
+This guide explains the options for configuring chart widgets. It covers the following widgets:
 
-### 1.2 Multi series
-Can contain multiple series of data like a chart with multiple line
+* Area chart
+* Bar chart
+* Bubble chart
+* Column chart
+* Heat map
+* Line chart
+* Pie chart
+* Time series
 
-#### Chart properties
+The configuration of *Any chart* widgets is in another document here: [Any Chart Widgets](charts-any-configuration).
 
-##### Series
-Add series and configure their properties, each series will represents a data set. For example a line in a line chart
+## 2 Common configuration
+The common configuration for all charts is described here. For chart specific configuration see [Configuration by Chart Type](#configuration-by-chart-type),  below.
 
-###### Data source
-The data for each each series can originate from a different data source
+### 2.1 Chart properties
 
-**Series name**
+![](attachments/pages/charts/line-chart-chart-properties.png)
 
-Name of the series, use in the legends, when enabled
+#### 2.1.1 Series
 
-**Entity**
+Add series and configure their properties, each series represents a data set. For example a line on a line chart.
 
-The entity from which the data values will be retrieved
+* The *Pie Charts* and *Heat Maps* support only a single series containing a single set of data
 
-**Data source**
+    In this case, the **Data source** and **Data points** are shown as separate tabs in the widget.
 
-Select the data source type for the series: Database, Microflow or REST endpoint
+    ![](attachments/pages/charts/widget-data-source.png)
 
-**REST URL**
+    The fields are the same as the ones described in the sections [Data source](#data-source) and [Data points](#data-points), below.
 
-Relative or full URL to REST endpoint. More information on setting up a REST end point see [REST Charts](../howto/extensibility/charts-basic-rest)
+* Charts which support multiple series of data, like a line chart with multiple lines, support more than one series of data
 
-**XPath constraint**
+    In this case, new series can be added by clicking the **Series > New** button in the **Chart properties** tab.
 
-The constraint on the data from the entity (used when the data source is Database)
+    {{% alert type="info" %}}The charts described in this guide do not support **Dynamic series** (that is, changing the number of series on a multiple-series chart dynamically at runtime).<br /><br />The basic charts only support a fixed number of series which is set in the modeler. You need to use *Any chart* to set up dynamic series. See [Any charts](charts-any-configuration).{{% /alert %}}
 
-**Microflow**
+1. Data source<a name="data-source"></a>
 
-A microflow that returns a list object with data values
+    The data for each each series can originate from a different data source. You can add additional data series in the **Chart properties** tab.
+    
+    ![](attachments/pages/charts/series-item-data-source.png)
 
-###### Data points
+  * **Series name**: A name for the series, for use in legends (when enabled)
 
-**X-axis data attribute**
+  * **Entity**: The entity from which the data values will be retrieved
 
-For data source Database, attributes over reference are supported with a maximum of one level deep. For data source Microflow, references are not supported.
+  * **Data source**: the data source type for the series: *Database*, *Microflow* or *REST endpoint*
 
-**Y-axis data attribute**
+  * **REST URL**: Relative or full URL to REST endpoint. For more information on setting up a REST end point see [REST Charts](../howto/extensibility/charts-basic-rest)
 
-For data source Database, attribute over reference is supported with a maximal of one level deep. For data source Microflow references are not supported.
+  * **XPath constraint**: The constraint on the data from the entity (used when the data source is Database)
 
-**X-axis sort attribute**
+  * **Microflow**: A microflow that returns a list object with data values
 
-For data source Database, attribute over reference is supported with a maximal of one level deep. For data source Microflow references are not supported
+2. Data points<a name="data-points"></a>
 
-**Sort order**
+    The attribute(s) within the data source used for the values to be plotted.
+    
+    ![](attachments/pages/charts/series-item-data-points.png)
 
-The order of sorting that data provide by the "X-axis sort attribute"
+  * **X-axis data attribute**: For data source Database attributes over reference are supported with a maximum of one level deep. For data source Microflow, references are not supported
 
-###### Events
+  * **Y-axis data attribute**: For data source Database attributes over reference are supported with a maximum of one level deep. For data source Microflow references are not supported
 
-**On click**
+  * **X-axis sort attribute**: For data source Database attributes over reference are supported with a maximum of one level deep. For data source Microflow references are not supported
 
-Select the way a click of a data point should be handled. Do nothing, Show a page, Call a microflow, Call a nanoflow. Configure the corresponding setting
+  * **Sort order**: The sort-order of the data provided by the "X-axis sort attribute"
 
-**On click page**
+3. Appearance
 
-The page that will be opened on click. Required when the "On click" "Show a page" is selected.
+    The appearance of the series. This is customized for each type of chart, see: [3 Configuration per chart type](#configuration-by-chart-type), below.
 
-**Open page as**
+    ![](attachments/pages/charts/series-item-appearance.png)
 
-Full page, Popup or Blocking popup
+4. Events
 
-**On click microflow**
+    The events to be supported if the user interacts with the chart.
+    
+    ![](attachments/pages/charts/series-item-events.png)
+    
+  * **On click**: Select the way a click of a data point should be handled:
+    * Do nothing
+    * Show a page
+    * Call a microflow
+    * Call a nanoflow
 
-The microflow that will be executed on click
+    Configure the corresponding setting.
 
-**On click nanoflow**
+  * **On click page**: The page that will be opened on click. Required when the **On click > Show a page** option is selected
 
-The nanoflow that will be executed on click
+  * **Open page as**: Full page, Popup or Blocking popup
 
-**Tooltip form**
+  * **On click microflow**: The microflow that will be executed on click
 
-The form to show when a user hovers over a chart plot point
+  * **On click nanoflow**: The nanoflow that will be executed on click
 
-###### Advanced{#advanced}
+  * **Tooltip form**: The page to show when a user hovers over a chart plot point
 
-**Options**
+5. Advanced <a name="advanced"></a>
 
-The Plotly series options as JSON. This options will only be used when the tab Advanced Mode is set to Advanced or Developer.
+    ![](attachments/pages/charts/series-item-advanced.png)
 
-#### Appearance
-The appearance settings are use to set dimension of the chart
+* **Options**: The Plotly *series options* in JSON format; these options will only be used when the *widget* tab **Advanced > Mode** is set to *Advanced* or *Developer*: see [Advanced](#advanced-mode), below.
 
-##### Width unit
-The type of units which are used for the **Width** property: Percentage or Pixels
+#### 2.1.2 Appearance
 
-##### Width
-The width of the chart in pixels or percentage based on the **Width unit** setting.
+The **Appearance** settings are used to set the size of the chart on the page.
 
-##### Height unit
-**Percentage of width** is the aspect ratio, **Pixels** is absolute. Warning: When using **Percentage of parent** the parent container must have an absolute height, else nothing is displayed.
+![](attachments/pages/charts/widget-appearance.png)
 
-##### Height
-The height in pixels or percentage based on the settings of the **Height unit**
+* **Width unit**: The type of unit which is used for the **Width** property - *Percentage* or *Pixels*
 
-#### REST
-Add parameters to REST request, The contextId, and series name are provided by default
+* **Width**: The width of the chart in pixels or percentage based on the **Width unit** setting
 
-#### Advanced
-There are three modes how you can use these charts:
- - Basic: quickly setup a chart with the various widget options
- - Advanced: specify additional JSON configuration
- - Developer: this will add a **Toggle Editor** button at runtime to the chart which toggles an editor to play with different settings
+* **Height unit**: The type of unit which is used for the **Height** property
 
-The charts are based on the popular framework plotly.js which uses JSON to configure the charts. In the advanced and developer mode, you can specify additional JSON unlocking the many features of plotly.js. You can do this with a live preview. See the following link for more information about plotly.js and the options: https://plot.ly/javascript/
+  * **Percentage of width**: sets the aspect ratio
+  * **Pixels**: is an absolute height
+  * **Percentage of parent**: sets the height in relation to a container in which the widget is placed
+  
+  {{% alert type="warning" %}}When using **Percentage of parent** the parent container must have an **absolute** height, else nothing is displayed.{{% /alert %}}
 
-##### Mode
-The developer option adds a button to the charts when running the app which can be used to toggle a live editor for the advanced configuration options.
+* **Height**: The height in pixels or percentage based on the setting of **Height unit**
 
-##### Layout options
-The JSON containing the Plotly layout options
-- [Samples](charts-advanced-cheat-sheet#layout-all)
-- [Full reference](https://plot.ly/javascript/reference/#layout)
+#### 2.1.3 REST
 
-##### Configuration options
-The JSON containing the Plotly configuration options
-- [Samples](charts-advanced-cheat-sheet#config-options)
-- [Documentation](https://plot.ly/javascript/configuration-options/)
-- [Full reference](https://github.com/plotly/plotly.js/blob/master/src/plot_api/plot_config.js)
+Add parameters to a REST request (see [Data source](#data-source)). The contextId, and series name are provided by default.
 
-### 1.3 Dynamic series
-The basic charts only support a static amount of series which can be configured in the modeler.
-Dynamic series changes during the runtime depending on the data of the application. To setup dynamic series see [Any charts](charts-any-configuration)
-We are looking forward to add dynamic series into basic charts at a later moment.
+![](attachments/pages/charts/widget-rest.png)
 
-## 2 Configuration per chart type
-The properties above are common across the chart types. In this section, the properties described are specific for the chart type.
+#### 2.1.4 Advanced <a name="advanced-mode"></a>
 
-### 2.1 Column Chart
+The charts are based on the popular framework plotly.js which uses JSON to configure the charts. In the advanced and developer mode, you can specify additional JSON: unlocking the many features of plotly.js. You can also do this with a live preview.
 
-#### Series
+See the following link for more information about plotly.js and the options: https://plot.ly/javascript/.
 
-##### Appearance
+![](attachments/pages/charts/widget-advanced.png)
 
-###### Column color
-HTML color of the column e.g. green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
+* **Mode**: You can use these charts in three different modes:
 
-### 2.2 Line Chart
+  * **Basic**: quickly setup a chart with the various widget options
+  * **Advanced**: specify additional JSON configuration
+  * **Developer**: this will add a **Toggle Editor** button to the chart at runtime which toggles an editor to play with different advanced configuration options
 
-#### Series
+    ![](attachments/pages/charts/toggle-editor.png)
 
-##### Appearance
+* **Layout options**: The JSON containing the Plotly layout options
+  * [Samples](charts-advanced-cheat-sheet#layout-all)
+  * [Full reference](https://plot.ly/javascript/reference/#layout)
 
-###### Line mode
-Lines, Lines with markers
+* **Configuration options**: The JSON containing the Plotly configuration options
+  * [Samples](charts-advanced-cheat-sheet#config-options)
+  * [Documentation](https://plot.ly/javascript/configuration-options/)
+  * [Full reference](https://github.com/plotly/plotly.js/blob/master/src/plot_api/plot_config.js)
 
-###### Line style
-Straight line, Curved line (spline)
+## 3 Configuration by Chart Type <a name="configuration-by-chart-type"></a>
 
-###### Line color
-HTML color of the line e.g. green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
+The properties above are common across the chart types. In this section, the properties described are specific to the chart type.
 
-### 2.3 Pie Chart
+### 3.1 Column Chart
 
-#### Chart propterties
+#### 3.1.1 Series New or Edit
 
-##### Chart type
-The type of pie chart to use e.g pie, doughnut
+1. **Appearance** Tab
 
-##### Show legend
-Displays a legend on the pie chart
+    * **Column color**: HTML color of the column e.g. green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
 
-##### Colors
-Contains the color of each pie slice e.g. green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
+### 3.2 Line Chart
 
-##### Refresh interval (ms)
-Refresh the chart in intervals of ms, when set to 0 refresh is disabled
+#### 3.2.1 Series New or Edit
 
-### 2.4 Area Chart
+1. **Appearance** Tab
 
-#### Series
+    * **Line mode**: *Lines* (without showing markers where the data points are) or *Lines with markers*
 
-##### Appearance
+    * **Line style**: join the data points with a *Straight line* or a *Curved line (spline)*
 
-###### Border
-No, Yes, Yes with markers
+    * **Line color**: HTML color of the line e.g. green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
 
-###### Border style
-Straight, Curved
+### 3.3 Pie Chart
 
-###### Border color
-HTML color of the border e.g. green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
+#### 3.3.1 Chart properties
 
-###### Area color
-HTML color of the border e.g. green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5). Default is the border color with transparency
+* **Chart type**: The type of pie chart to use, either *pie* or *doughnut*
 
-### 2.5 Bar Chart
-#### Series
+* **Show legend**: Displays a legend on the pie chart
 
-##### Appearance
+* **Colors**: Contains the color of each slice e.g. green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
 
-###### Bar color
-HTML color of the bar e.g. green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
+* **Refresh interval (ms)**: Refresh the chart in intervals of ms, when set to 0 refresh is disabled
 
-### 2.6 Time Series Chart
-#### Series
+### 3.4 Area Chart
 
-##### Appearance
+#### 3.4.1 Series New or Edit
 
-###### Border
-No, Yes, Yes with markers
+1. **Appearance** Tab
 
-###### Border Style
-Straight, Curved
+    * **Border**: No, Yes, Yes with markers
 
-###### Line color
-HTML color of the bar e.g. green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
+    * **Border style**: Straight, Curved
 
-###### Fill area
-Fill area between data points and x-axis: Yes, No
+    * **Border color**: HTML color of the border e.g. green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
 
-###### Area color
-HTML color of the bar e.g. green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5). By default, the border color with transparency is used
+    * **Area color**: HTML color of the area within the border e.g. green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5). Default is the border color with transparency
 
-### 2.7 Heat Map
+### 3.5 Bar Chart
 
-#### Scale
+#### 3.5.1 Series New or Edit
 
-##### Colors
-The percentage with the colors that should be applied. At least two values need to be specified, else the default colors are used
+1. **Appearance** Tab
 
-##### Show scale
-Display scale on the chart: Yes , No
+    * **Bar color**: HTML color of the bar e.g. green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
 
-##### Show values
-Display data values on the chart: Yes , No
+### 3.6 Time Series Chart
 
-##### Font value color
-HTML color of the bar e.g. green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
+#### 3.6.1 Series New or Edit
 
-##### X-axis label
-Label to be applied on the X-axis
+1. **Appearance** Tab
 
-##### Y-axis label
-Label to be applied on the Y-axis
+    * **Border**: No, Yes, Yes with markers
 
-##### Smooth color
-Gradual color gradient between data points: Yes , No
+    * **Border style**: Straight, Curved
 
-### 2.8 Bubble Chart
+    * **Line color**: HTML color of the line e.g. green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
 
-#### Series
+    * **Fill area**: Fill area between data points and x-axis: Yes, No
 
-##### Appearance
+    * **Area color**: HTML color of the area within the border e.g. green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5). Default is the line color with transparency
 
-###### Serie color
-Color of the bubbles e.g green,#00FF00, rgb(2,255,0)
+### 3.7 Heat Map
 
-## 3 Chart Theming
+#### 3.7.1 Scale
+
+* **Colors**: The percentage at which each color should be applied, together with the associated color. At least two values must be specified, otherwise the default colors are used
+
+* **Show scale**: Display scale on the chart: Yes , No
+
+* **Show values**: Display data values on the chart: Yes , No
+
+* **Font value color**: HTML color of the values displayed on the heat map e.g. green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
+
+* **X-axis label**: Label to be displayed on the X-axis
+
+* **Y-axis label**: Label to be displayed on the Y-axis
+
+* **Smooth color**: Gradual color gradient between data points: Yes , No
+
+### 3.8 Bubble Chart
+
+#### 3.8.1 Series New or Edit
+
+1. **Appearance** Tab
+
+    * **Serie color**[sic]: Color of the bubbles e.g green,#00FF00, rgb(2,255,0)
+
+## 4 Chart Theming
 
 Advanced JSON settings can also be added in a global context via the theme folder of your mendix project root directory.
 

@@ -28,7 +28,7 @@ The common configuration for all charts is described here. For chart specific co
 
 #### 2.1.1 Series
 
-Add series and configure their properties, each series will represents a data set. For example a line on a line chart.
+Add series and configure their properties, each series represents a data set. For example a line on a line chart.
 
 * The *Pie Charts* and *Heat Maps* support only a single series containing a single set of data
 

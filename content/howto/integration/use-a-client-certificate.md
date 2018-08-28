@@ -50,7 +50,7 @@ A complete configuration may look like this:
 
 ![](attachments/use-a-client-certificate/example-custom-settings.png)
 
-You can use an empty path to specify that you don't want to use a client certificate, even when the server accepts one. The following sample uses client certificate _Mx1.pfx_ for _WebService1_, and no client certificate for _WebService2_:
+You can use an empty path to specify that you do not want to use a client certificate, even when the server accepts one. The following sample uses client certificate `Mx1.pfx` for `WebService1` and no client certificate for `WebService2`:
 
 ```
 { "Module.WebService1": "D:\\App\\Mx1.pfx", "Module.WebService2": "" }
@@ -58,7 +58,7 @@ You can use an empty path to specify that you don't want to use a client certifi
 
 {{% alert type="info" %}}
 
-The possibility to use an empty path was introduce in version 7.18.0.
+The possibility to use an empty path was introduced in Mendix version 7.18.0.
 
 {{% /alert %}}
 

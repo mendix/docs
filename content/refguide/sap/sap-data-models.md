@@ -30,6 +30,10 @@ Each Mendix SAP data model (previously referred to as "service modules") has a d
 
 ![](attachments/sap-data-models/sap-service-example.png)
 
+{{% alert type="warning" %}}
+Do not change the names of entities, attributes, or associations in the Domain Model; they need to match the names used by the SAP OData service for the SAP OData Connector to work correctly.
+{{% /alert %}}
+
 ### 2.2 Service Root
 
 The module contains a constant whose value is the service root of the OData service. For the **Check Price and Availability for Field Sales Representative** this is the constant SRA016_PRICE_AVAIL_SRV and has the value `https://www.sapfioritrial.com/sap/opu/odata/sap/SRA016_PRICE_AVAIL_SRV`.

@@ -15,11 +15,11 @@ Import mappings are used to define how incoming XML or JSON is converted into Me
 *   Receiving XML or JSON from a call action [Call Rest Action](call-rest-action).
 *   Importing XML or JSON directly in an [Import from Mapping](import-mapping-action) action. 
 
-An example of an import mapping document is depicted in **Figure 1**. More details on import mapping specifics can be found at the [Import Mappings](import-mappings) page.
+This is an example of an import mapping document that maps an **Order** from a web service to a **ReceivedOrder** entity:
 
 ![](attachments/16713725/16843933.png)
 
-**Figure 1**
+For more details, see [Import Mappings](import-mappings).
 
 ## 3 Export Mappings
 
@@ -28,11 +28,13 @@ Export mappings are used to define how Mendix objects can be converted to XML ac
 *   Sending XML to a web service (defined in an [imported web service](consumed-web-service)) in a [Call Web Service Action](call-web-service-action) activity.
 *   Exporting XML directly in an [Export with Mapping](export-mapping-action) action. 
 
-An example of an export mapping document is depicted in **Figure 2**. In that example a Cheesecake entity will be passed when the export mapping is called. Subsequently the Topping entities will be fetched by following the "Topping_Cheesecake" association from the passed Cheesecake Mendix object. The result is passed to an XML document, or sent to a webservice. More details on export mapping specifics can be found at the [Export Mappings](export-mappings) page.
+This is an example of an export mapping document:
 
 ![](attachments/16713726/16843940.png)
 
-**Figure 2**
+In this example, a **Cheesecake** entity will be passed when the export mapping is called. Subsequently, the **Topping** entities will be fetched by following the **Topping_Cheesecake** association from the passed Cheesecake Mendix object. The result is passed to an XML document or sent to a web service.
+
+For more details, see [Export Mappings](export-mappings).
 
 ## 4 Creating a New Mapping Document
 

@@ -142,28 +142,28 @@ Warning Threshold | Not used.
 Critical Threshold | System load is higher than 90%.
 First actions to take | Inspect the trends for **Application node CPU usage** combined with **Application node disk throughput** and **Application node load** for anomalies and correlate those with application behavior.
 
-Database Free Space | | 
+Database Free Space | |
 :---|:---|
-Description | Track the amount of disk space used for the database belonging to the application. 
+Description | Track the amount of disk space used for the database belonging to the application.
 Example message | Database has less than 5% free space.
 Warning Threshold | Database has less than 25% and more than 10% free space available. 
-Critical Threshold | Database has less than 10% free space available .
+Critical Threshold | Database has less than 10% free space available.
 First actions to take | Check if there is a sudden increase or a slow increase over time. Resolve by either stopping a runaway process, removing old data, or ordering more storage.
 
-Health Check | | 
+Health Check | |
 :---|:---|
 Description | Each application can define a health check microflow. This microflow is called periodically by the Mendix Runtime to determine if the application is still healthy. This can be used to check for application-specific health indicators.
-Example message | Health: the nightly import job took more than an hour to complete! 
-Warning Threshold | If the health check microflow returns a non-empty string value, this means the application is not healthy and a WARNING alert is generated. 
+Example message | Health: the nightly import job took more than an hour to complete!
+Warning Threshold | If the health check microflow returns a non-empty string value, this means the application is not healthy and a WARNING alert is generated.
 Critical Threshold | If the health check microflow itself experiences an error, a CRITICAL alert is generated. This will also happen when no database connection can be established.
 First actions to take | Since the health check microflow is specific to your application, we cannot generically advise actions to take.
 
 Virtual Machine Crash | |
 :---|:---|
-Description | Show the state of the application's virtual machine, or an error state when the issue occurs with a virtual machine. 
-Example message | Your application's virtual machine died 1 times in the last minute. 
-Warning Threshold | Not used.                                                   
-Critical Threshold | If the application's virtual machine should be running but has completely disappeared, or if the JVM process does not respond to any signal anymore. 
+Description | Show the state of the application's virtual machine, or an error state when the issue occurs with a virtual machine.
+Example message | Your application's virtual machine died 1 times in the last minute.
+Warning Threshold | Not used.
+Critical Threshold | If the application's virtual machine should be running but has completely disappeared, or if the JVM process does not respond to any signal anymore.
 First actions to take | Check the log files and application metrics for a possible cause of the crash.
 
 ## 4 Alerts History

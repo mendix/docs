@@ -1,17 +1,17 @@
 ---
-title: "CORS settings"
+title: "CORS Settings"
 parent: "published-rest-services"
 ---
 
 {{% alert type="info" %}}
 
-The **CORS settings** feature was introduced in version 7.18.0.
+The CORS settings feature was introduced in Mendix version 7.18.0.
 
 {{% /alert %}}
 
 ## 1 Introduction
 
-When you enable CORS in a [published REST service](published-rest-service), by default all websites on all servers are allowed to access your service. The CORS settings dialog allows you to configure this type of access on a more detailed level.
+When you enable CORS in a [published REST service](published-rest-service), by default all websites on all servers are allowed to access your service. The **CORS Settings** dialog box allows you to configure this type of access on a more detailed level.
 
 ## 2 Allowed Origins
 
@@ -23,4 +23,4 @@ Here you can choose how long a browser is allowed to remember these settings bef
 
 ## 4 Allow Credentials
 
-Check this box to indicate that the browser is allowed to send cookies, authorization headers and/or client certificates to this service.
+Check this box to indicate that the browser is allowed to send cookies, authorization headers, and/or client certificates to this service.

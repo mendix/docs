@@ -82,9 +82,9 @@ Indicates whether the resulting objects should be committed to the database, and
 
 | Option | Description |
 | --- | --- |
-| Yes | The objects are saved in the database and the [event handlers](event-handlers) are triggered |
-| Yes without events | The objects are saved in the database, but the [event handlers](event-handlers) are not triggered (Default) |
-| No | The objects are created without being saved in the database. You will need a [commit action](committing-objects) to save them |
+| Yes | The objects are saved in the database and the [event handlers](event-handlers) are triggered. |
+| Yes without events | The objects are saved in the database, but the [event handlers](event-handlers) are not triggered (default). |
+| No | The objects are created without being saved in the database. You will need a [commit action](committing-objects) to save them. |
 
 ## 4 Validation
 

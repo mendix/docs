@@ -1,7 +1,7 @@
 ---
 title: "Mendix Profile"
 category: "General"
-description: "This page describes 'Show Profile' page of the Developer Portal."
+description: "This page describes the 'Show Profile' page of the Developer Portal."
 tags: ["Profile","MxID","Developer Portal","Account"]
 ---
 
@@ -80,8 +80,8 @@ In this tab, you can view your sent and received invitations.
 
 There are two types of invitations:
 
-* Project invititation – invitation to join the development team to work on an app
-* App invitation – invitation to join the app as a user
+* Project invitation – an invitation to join the development team to work on an app
+* App invitation – an invitation to join the app as a user
 
 ## 2 Edit Profile
 
@@ -94,7 +94,7 @@ In the right-top corner of your profile page, click **Edit** to manage your prof
 
 ### 2.1 General
 
-In this section, you can change your following details:
+In this section, you can change the following details about you:
 
 * Full name
 * Email
@@ -103,7 +103,7 @@ In this section, you can change your following details:
 
 ### 2.2 Information About Your Work Status
 
-In this section, you can change your following details:
+In this section, you can change the following details about you:
 
 * Job title
 * Department
@@ -112,7 +112,7 @@ In this section, you can change your following details:
 
 ### 2.3 Some Contact Info Will come in Handy
 
-In this section, you can change your following details:
+In this section, you can change the following details about you:
 
 * Phone number
 * Website URL
@@ -122,14 +122,16 @@ In this section, you can change your following details:
 
 ### 2.4 Change Password
 
-Here you can change your password. By default, you are requested to change your password every 90 days. Only the **Company Admin** is allowed to change the experience period.
+Here you can change your password. By default, you are requested to change your password every 90 days. Only the **Company Admin** is allowed to change the expiration period.
  
 These are the password requirements:
 
-* Use at least eight characters
-* Use letters and numbers
-* Use special characters (such as `!` `+` `@`)
-* Mix lowercase and uppercase
+* At least eight characters long
+* Constructed with at least one of each of:
+    * uppercase letter
+    * lowercase letter
+    * number
+    * special character (such as `!` `+` `@`)
 
 ## 3 Related Content
 

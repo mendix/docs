@@ -1,5 +1,5 @@
 ---
-title: "Consumed web service"
+title: "Consumed Web Service"
 parent: "consumed-web-services"
 ---
 

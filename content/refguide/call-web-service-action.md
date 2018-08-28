@@ -176,7 +176,17 @@ You can indicate what should happen **if not object was found** when the import 
 
 If the selected mapping requires a parameter, you can choose it here.
 
-### 5.4 Range (If the Mapping Returns a List)
+### 5.4 Commit
+
+Indicates whether the resulting objects should be committed to the database, and whether event handlers should be triggered.
+
+| Option | Description |
+| --- | --- |
+| Yes | The objects are saved in the database and the [event handlers](event-handlers) are triggered |
+| Yes without events | The objects are saved in the database, but the [event handlers](event-handlers) are not triggered (Default) |
+| No | The objects are created without being saved in the database. You will need a [commit action](committing-objects) to save them |
+
+### 5.5 Range (If the Mapping Returns a List)
 
 The range determines how many objects are mapped and returned.
 
@@ -186,14 +196,14 @@ The range determines how many objects are mapped and returned.
 | First | Map and return only the first object. The result of the action will be a single object instead of a list. |
 | Custom | Map and return a given number of objects (limit). The limit is a microflow expression that should result in a number. |
 
-### 5.5 Store in Variable
+### 5.6 Store in Variable
 
 Choose whether to store the result of the operation in a variable.
 
-### 5.6 Type
+### 5.7 Type
 
 The type of the output variable.
 
-### 5.7 Name
+### 5.8 Name
 
 The name for the variable that will hold the result of the operation.

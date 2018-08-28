@@ -27,6 +27,12 @@ These are the possible values:
 * **Date and time**
 * **Custom** (see below for more details)
 
+{{% alert type="info" %}}
+
+A date picker with a custom date format cannot be editable.
+
+{{% /alert %}}
+
 ### Custom Date Format
 
 If you choose 'Custom' as the date format (see above) this property determines how the attribute value is formatted. The custom date format is a string that allows for any combination of symbols found in the table below. Any punctuation will be rendered literally.

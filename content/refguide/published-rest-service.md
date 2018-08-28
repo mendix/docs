@@ -40,7 +40,7 @@ By default, version is set to "1.0.0".
 
 {{% alert type="info" %}}
 
-**Location** is editable since version 7.12.0.
+**Location** is editable in Mendix versions 7.12.0 and above.
 
 {{% /alert %}}
 
@@ -149,7 +149,7 @@ Web service users cannot access REST services.
 
 Check this box when your service needs to be available on websites other than your own.
 
-Click the [Settings...](cors-settings) button to specify this access in more detail, for instance which websites are allowed to access the service.
+Click the [Settings](cors-settings) button to specify this access in more detail (for instance, which websites are allowed to access the service).
 
 ## 5 Resources
 

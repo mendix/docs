@@ -83,7 +83,7 @@ To view the chart, follow these steps:
 2. In your browser, open the data entry page.
 3. Enter data values for **x value** and **y value**.
     ![Enter Data](attachments/charts/charts-front-end.png)  
-4. Click on the **Save** button.
+4. Click the **Save** button.
 5. Open the **ShowChart** page to view the chart created.
     ![Show Chart](attachments/charts/charts-area-chart.png)
 

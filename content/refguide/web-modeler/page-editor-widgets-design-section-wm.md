@@ -7,7 +7,7 @@ tags: ["web modeler", "page editor", "widgets", "on click action", "events"]
 
 ## 1 Introduction 
 
-The **Design** section in **Properties** allows you to change spacing and aligning of a widget on a page. Hover over the information icon to get more details on each option.
+The **Design** section in **Properties** allows you to change spacing and aligning of a widget on a page, but is not limited to this functions. Depending on an element, you can, for example, change its color. Hover over the information icon to get more details on each option.
 
 ![](attachments/page-editor-widgets-design-section-wm/wm-design-section-info-icon.png)
 

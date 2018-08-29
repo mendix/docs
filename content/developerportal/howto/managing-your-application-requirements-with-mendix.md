@@ -225,10 +225,10 @@ To export sprints and stories, follow these steps:
 ## 9 Related Content
 
 * [App Platform](/refguide7/app-platform)
-* [How to Contribute to a GitHub Repository](/howto7/collaboration-project-management/contribute-to-a-github-repository)
-* [How to Share the Development Database](/howto7/collaboration-project-management/sharing-the-development-database)
-* [How to Start Your Own Repository](/howto7/collaboration-project-management/starting-your-own-repository)
+* [How to Contribute to a GitHub Repository](/howto7/collaboration-requirements-management/contribute-to-a-github-repository)
+* [How to Share the Development Database](/howto7/collaboration-requirements-management/sharing-the-development-database)
+* [How to Start Your Own Repository](/howto7/collaboration-requirements-management/starting-your-own-repository)
 * [How to Use the Excel Exporter](/howto7/integration/using-the-excel-exporter)
 * [How to Use the Feedback Widget](gathering-user-feedback)
 * [Team Server](/refguide7/team-server)
-* [Use Team Server - Version Control](/howto7/collaboration-project-management/using-team-server-_-version-control)
+* [Use Team Server - Version Control](/howto7/collaboration-requirements-management/using-team-server-_-version-control)

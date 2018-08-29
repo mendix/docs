@@ -1,5 +1,5 @@
 ---
-title: "Collaboration & Project Management"
+title: "Collaboration & Requirements Management"
 ---
 
 ## Documents in This Category

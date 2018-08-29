@@ -1,6 +1,6 @@
 ---
 title: "Sharing the Development Database"
-category: "Collaboration & Project Management"
+category: "Collaboration & Requirements Management"
 tags: []
 ---
 All Mendix applications need a database running in the background. While developing an application it is advised to use the standard built-in database that is supplied with the Mendix Modeler. This how-to will teach you how to open and manage the data stored inside the built-in database.
@@ -80,7 +80,7 @@ The built-in database can easily be shared with other members of the team. Like 
 
 ## 7\. Update a data snapshot
 
-To import a data snapshot into the model, the project has to be updated since the last database snapshot has been committed by another team member. To get the data from the committed database snapshot the following steps have to be applied:
+To import a data snapshot into the model, the app project has to be updated since the last database snapshot has been committed by another team member. To get the data from the committed database snapshot the following steps have to be applied:
 
 1.  First the application has to be updated. Press update on the changes tab
 

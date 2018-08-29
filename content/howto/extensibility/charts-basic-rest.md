@@ -2,11 +2,12 @@
 title: "Use a Chart with a REST Data Source"
 parent: "charts-tutorials"
 menu_order: 60
+tags: ["Charts", "Widgets", "REST", "Desktop Modeler"]
 ---
 
 ## 1 Introduction
 
-With the Charts widget, you can use data from a REST Service to plot graphs.
+With the Charts widgets, you can use data from a REST Service to plot graphs.
 
 **This how-to will teach you how to do the following:**
 
@@ -17,12 +18,14 @@ With the Charts widget, you can use data from a REST Service to plot graphs.
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Install the Latest mendix modeler
-* Download latest [Charts Widget](https://appstore.home.mendix.com/link/app/105695/) from the Mendix App Store
+* Install the latest Mendix desktop modeler
+* Download the latest [Charts Widgets](https://appstore.home.mendix.com/link/app/105695/) from the Mendix App Store
 
-## 3 REST endpoint setup
+## 3 Setting up a REST Endpoint
 
-Mendix allows you to publish REST Web services natively in the modeler, and using these capabilities we can publish a REST service and use it in our Charts widget to plot graphs. To create an Area Chart with data from a REST service, follow these steps:
+Mendix allows you to publish REST Web services natively from the modeler. Using these capabilities you can publish a REST service and use it in our Charts widget to plot graphs.
+
+To create an Area Chart with data from a REST service, follow these steps:
 
 {{% alert type="info" %}}
 

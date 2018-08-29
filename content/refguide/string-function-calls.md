@@ -571,7 +571,7 @@ Converts a string back from a URL. The opposite of [urlEncode](#urlEncode).
 The string, URL-decoded.
 
 ```java
-urlEncode('Hello%2C+world%21')
+urlDecode('Hello%2C+world%21')
 ```
 
 returns:

@@ -15,7 +15,7 @@ For example, if you want to fill out the information on each customer, data view
 
 In more complex templates, a data view can contain other data views for related objects, for example, showing customer details and showing customer payment status, if these are modeled as two different entities. 
 
-## 2 Data View Properties  
+## 2 Data View Properties {#data-view-properties}
 
 Data view consists of the following properties:
 
@@ -41,11 +41,9 @@ In the **General** section, you can enable/disable the **Show Footer** option (e
 
 ### 2.3 Design {#design-section-data-view}
 
-The **Design** section of the data view properties allows you to change spacing and aligning of the data view on the page. Hover over the information icon to get more details on each option:
+For information on the **Design** section and its properties, see [Design Section in Widgets of the Web Modeler](page-editor-widgets-design-section-wm).
 
-![](attachments/page-editor-data-view-list-view-wm/wm-design-section-info-icon.png)
-
-## 3 List View Properties
+## 3 List View Properties {#list-view-properties}
 
 List view consists of the following properties:
 

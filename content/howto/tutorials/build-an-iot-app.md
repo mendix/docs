@@ -17,13 +17,13 @@ The Mendix Logistics IoT app obtains and measures data from various sensors in i
 
 The following how-to's will guide you through the process of building and expanding the Mendix Logistics IoT app:
 
-* [How to Build a Logistics IoT App Step 1: Connect App Pages](build-an-iot-app-1)
-* [How to Build a Logistics IoT App Step 2: Configure the Sensor Data Subscription](build-an-iot-app-2)
-* [How to Build a Logistics IoT App Step 3: Handle the Sensor Data](build-an-iot-app-3)
-* [How to Build a Logistics IoT App Step 4: Add Another Data Dimension](build-an-iot-app-4)
-* [How to Build a Logistics IoT App Step 5: Create Alerts](build-an-iot-app-5)
-* [How to Build a Logistics IoT App Step 6: Expand the IoT App Tracking](build-an-iot-app-6)
+* [Step 1: Connect App Pages](build-an-iot-app-1)
+* [Step 2: Configure the Sensor Data Subscription](build-an-iot-app-2)
+* [Step 3: Handle the Sensor Data](build-an-iot-app-3)
+* [Step 4: Add Another Data Dimension](build-an-iot-app-4)
+* [Step 5: Create Alerts](build-an-iot-app-5)
+* [Step 6: Expand the IoT App Tracking](build-an-iot-app-6)
 
 ## 3 Next Step
 
-Start the IoT app tutorial by checking out [How to Build a Logistics IoT App Step 1: Connect App Pages](build-an-iot-app-1)!
+Start the IoT app tutorial by checking out [Step 1: Connect App Pages](build-an-iot-app-1)!

@@ -1,5 +1,5 @@
 ---
-title: "Build a Simple HRM App Step 4: Enrich the GUI with Filter Options"
+title: "Step 4: Enrich the GUI with Filter Options"
 parent: "build-a-simple-hrm-app"
 tags: ["HRM", "build", "app", "developer portal"]
 ---
@@ -17,7 +17,7 @@ This is the fourth how-to in a series of five on how to create a simple HRM app.
 
 Before you can start with this how-to, make sure you have completed the following prerequisite:
 
-*  Complete the third how-to in this series: [Build a Simple HRM App Step 3: Show Related Data in the GUI](build-a-simple-hrm-app-3-show-related-data-in-the-gui)
+*  Complete the third how-to in this series: [Step 3: Show Related Data in the GUI](build-a-simple-hrm-app-3-show-related-data-in-the-gui)
 
 ## 3 Enriching the User Interface
 
@@ -148,12 +148,12 @@ To view your app, follow these steps:
     
     ![](attachments/build-a-simple-hrm-app/18580775.png)
 
-To use the final how-to for creating a simple HRM application, see [Build a Simple HRM App 5: Smarten Up Your App with Business Logic](build-a-simple-hrm-app-5-smarten-up-your-app-with-business-logic).
+To use the final how-to for creating a simple HRM application, see [Step 5: Smarten Up Your App with Business Logic](build-a-simple-hrm-app-5-smarten-up-your-app-with-business-logic).
 
 ## 5 Related Content
 
-* [Build a Simple HRM App Step 1: Create, Manage, and Deploy the App](build-a-simple-hrm-app-1-create-manage-and-deploy-the-app)
-* [Build a Simple HRM App Step 2: First Steps in Building a Rich GUI](build-a-simple-hrm-app-2-first-steps-in-building-a-rich-gui)
-* [Build a Simple HRM App Step 3: Show Related Data in the GUI](build-a-simple-hrm-app-3-show-related-data-in-the-gui)
-* [Build a Simple HRM App Step 5: Smarten Up Your App with Business Logic](build-a-simple-hrm-app-5-smarten-up-your-app-with-business-logic)
+* [Step 1: Create, Manage, and Deploy the App](build-a-simple-hrm-app-1-create-manage-and-deploy-the-app)
+* [Step 2: First Steps in Building a Rich GUI](build-a-simple-hrm-app-2-first-steps-in-building-a-rich-gui)
+* [Step 3: Show Related Data in the GUI](build-a-simple-hrm-app-3-show-related-data-in-the-gui)
+* [Step 5: Smarten Up Your App with Business Logic](build-a-simple-hrm-app-5-smarten-up-your-app-with-business-logic)
 * [Testing Microflows Using the UnitTesting Module](../testing/testing-microflows-using-the-unittesting-module)

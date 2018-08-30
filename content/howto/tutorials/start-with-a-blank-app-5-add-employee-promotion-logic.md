@@ -1,5 +1,5 @@
 ---
-title: "Start with a Blank App Step 5: Add Employee Promotion Logic"
+title: "Step 5: Add Employee Promotion Logic"
 parent: "start-with-a-blank-app"
 description: "Presents details on add pages to your app's UI in the Web Modeler."
 tags: ["build", "app", "developer portal", "web modeler"]
@@ -19,7 +19,7 @@ This is the fifth and final how-to in this series on creating an employee direct
 
 Before starting with this how-to, make sure you have completed the following prerequisite:
 
-* Complete the fourth how-to in this series: [How to Start with a Blank App Step 4: Add Pages to the User Interface](start-with-a-blank-app-3-publish-and-view-your-app)
+* Complete the fourth how-to in this series: [Step 4: Add Pages to the User Interface](start-with-a-blank-app-3-publish-and-view-your-app)
 
 ## 3 Adding a Promote Button to the User Interface
 
@@ -186,7 +186,7 @@ Yes! Now you're ready to view the app.
 
 ## 4 Viewing Your App
 
-Update and view your app, just like you did in [How to Start with a Blank App Step 3: Publish and View Your App](start-with-a-blank-app-3-publish-and-view-your-app).
+Update and view your app, just like you did in [Step 3: Publish and View Your App](start-with-a-blank-app-3-publish-and-view-your-app).
 
 You can now promote your employees!
 
@@ -196,7 +196,7 @@ You are also perfectly lined up to continue with [another Mendix tutorial](index
 
 ## 5 Related Content
 
-* [How to Start with a Blank App Step 1: Create the App](start-with-a-blank-app-1-create-the-app)
-* [How to Start with a Blank App Step 2: Build a Dashboard Page](start-with-a-blank-app-2-build-a-dashboard-page)
-* [How to Start with a Blank App Step 3: Publish and View Your App](start-with-a-blank-app-3-publish-and-view-your-app)
-* [How to Start with a Blank App Step 4: Add Pages to the User Interface](start-with-a-blank-app-4-add-pages-to-the-user-interface)
+* [Step 1: Create the App](start-with-a-blank-app-1-create-the-app)
+* [Step 2: Build a Dashboard Page](start-with-a-blank-app-2-build-a-dashboard-page)
+* [Step 3: Publish and View Your App](start-with-a-blank-app-3-publish-and-view-your-app)
+* [Step 4: Add Pages to the User Interface](start-with-a-blank-app-4-add-pages-to-the-user-interface)

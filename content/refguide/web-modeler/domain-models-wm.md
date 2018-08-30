@@ -2,6 +2,7 @@
 title: "Domain Model Overview in the Web Modeler"
 category: "Web Modeler"
 description: "Describes the domain models in the Mendix Web Modeler."
+menu_order: 20
 tags: ["web modeler", "domain model"]
 ---
 

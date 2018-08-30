@@ -32,15 +32,15 @@ To configure **Content** and add attributes to it, do the following:
 
 1. Place **Text** inside a data container (a list view or a data view) and set an entity for the list view/data view. For more information, see [Data View and List View Properties in the Web Modeler](page-editor-data-view-list-view-wm). This is necessary to able to add attributes of the selected entity into the text. 
 
-2. Open **Properties** of the **Text**, delete the default *Text* in the **General** section > **Content** and start typing the message you want to show to the end-user.  
+2.  Open **Properties** of the **Text**, delete the default *Text* in the **General** section > **Content** and start typing the message you want to show to the end-user.  
 
-   ![](attachments/page-editor-widgets-typography-wm/wm-content.png)
+    ![](attachments/page-editor-widgets-typography-wm/wm-content.png)
 
 3. To insert attribute values into your message, click **Add attribute** or press <kbd>Ctrl</kbd> + <kbd>Space</kbd>,  the list of attributes will be shown. 
 
-4. Browse through the list of attributes (you can also use <kbd>Up</kbd> and <kbd>Down</kbd> arrows for that) and select the attribute you want to add to the **Text**. 
+4.  Browse through the list of attributes (you can also use <kbd>Up</kbd> and <kbd>Down</kbd> arrows for that) and select the attribute you want to add to the **Text**. 
 
-   ![](attachments/page-editor-widgets-typography-wm/wm-list-of-attributes.png)
+    ![](attachments/page-editor-widgets-typography-wm/wm-list-of-attributes.png)
 
 5. Type the rest of the text to finish your message.
 

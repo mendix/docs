@@ -19,7 +19,7 @@ A merge is used to combine flows into one. If you split the microflow flow (with
 
 This how-to describes the following use case: 
 
-In  [How to Configure an Exclusive Split Step 1: Build the Domain Model and Configure a Microflow ](webmodeler-how-to-microflows-exclsplit) we have configured the exclusive split to open a specific page depending on the customer's grade. In case the customer's grade is not indicated, the error message is shown. So we have four flows after the exclusive split: 
+In  [How to Configure an Exclusive Split Step 1: Build the Domain Model and Configure a Microflow ](webmodeler-how-to-microflows-exclsplit-p1) we have configured the exclusive split to open a specific page depending on the customer's grade. In case the customer's grade is not indicated, the error message is shown. So we have four flows after the exclusive split: 
 
 * Showing a page for bronze  grade customers
 * Showing a page for silver grade customers
@@ -32,7 +32,7 @@ In this how-to we will merge flows for bronze, silver, and gold customer grades 
 
 To start this tutorial, make sure you have completed the following prerequisites:
 
-* Create the microflow with the exclusive split: [How to Configure an Exclusive Split Step 1: Build the Domain Model and Configure a Microflow](webmodeler-how-to-microflows-exclsplit)
+* Create the microflow with the exclusive split: [How to Configure an Exclusive Split Step 1: Build the Domain Model and Configure a Microflow](webmodeler-how-to-microflows-exclsplit-p1)
 
 ## 3 Creating a Merge
 

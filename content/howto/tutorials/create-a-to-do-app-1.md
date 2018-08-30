@@ -1,5 +1,5 @@
 ---
-title: "Build a Mobile To-Do App Step 1: Create a New Project, Module, and Domain Model"
+title: "Step 1: Create a New Project, Module, and Domain Model"
 parent: "create-a-to-do-app"
 description: "This is the first how-to for creating a to-do app in 20 minutes using the Mendix Mobile Quick Starter app."
 tags: ["Mobile", "Quick", "Starter", "App", "To-do", "Kickstart", "Development"]
@@ -57,13 +57,13 @@ The domain model for the to-do app will be pretty simple. It'll contain one enti
 
     ![](attachments/create-a-to-do-app/todo-02.jpg)
 
-For the next step in this series, move on to [How to Build a Mobile To-Do App Step 2: Create the Pages](create-a-to-do-app-2).
+For the next step in this series, move on to [Step 2: Create the Pages](create-a-to-do-app-2).
 
 ## 6 Related Content
 
-* [How to Build a Mobile To-Do App Step 2: Create the Pages](create-a-to-do-app-2)
-* [How to Build a Mobile To-Do App Step 3: Improve the Look and Feel of the App](create-a-to-do-app-3)
-* [How to Build a Mobile To-Do App Step 4: Add Logic to the Microflows](create-a-to-do-app-4)
+* [Step 2: Create the Pages](create-a-to-do-app-2)
+* [Step 3: Improve the Look and Feel of the App](create-a-to-do-app-3)
+* [Step 4: Add Logic to the Microflows](create-a-to-do-app-4)
 * [How to Deploy Your First Hybrid Mobile App](../mobile/deploy-your-first-hybrid-mobile-app)
 * [How to Publish a Mendix Hybrid Mobile App in Mobile App Stores](../mobile/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)
 * [Push Notifications](../mobile/push-notifications)

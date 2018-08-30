@@ -2,6 +2,7 @@
 title: "Button Widgets in the Web Modeler"
 parent: "page-editor-widgets-wm"
 description: "Describes button widgets in the Mendix Web Modeler."
+menu_order: 50
 tags: ["web modeler", "page editor", "button", "widgets"]
 ---
 

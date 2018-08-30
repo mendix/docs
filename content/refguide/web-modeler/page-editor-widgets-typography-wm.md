@@ -2,6 +2,7 @@
 title: "Typography Widgets in the Web Modeler"
 parent: "page-editor-widgets-wm"
 description: "Describes typography widgets in the Mendix Web Modeler."
+menu_order: 40
 tags: ["web modeler", "page editor", "typography", "text widgets", "widgets"]
 ---
 

@@ -68,6 +68,8 @@ For example, you have a page with a list view showing customer names. A **Delete
 
 ![](attachments/page-editor-widgets-events-section-wm/wm-list-view-delete.png)
 
+
+
 ####2.3.2 Delete Object Action in a Data View
 
 When placed on a data view, **Delete Object** will delete the connected object. For example, you opened a page with customer's details. The details are placed in a data view. You have **Save** and **Delete** buttons at the bottom of the page. When you press **Delete**, the customer "John" and customer's details will be deleted and the page will be closed. 

@@ -44,12 +44,8 @@ Specific properties for **List View** are described in the table below:
 | Property    | Description                                                  | Possible Values                                              |
 | ----------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | Style       | Changes the appearance of lines in the list view.            | Possible values of this property are the following:<ul><li>Striped</li><li>Bordered</li><li>Lined</li><li>No Styling</li></ul> |
-| Hover Style | Highlights a row when hovering over it. Only useful if the row is clickable.
- | True/False                                                   |
+| Hover Style | Highlights a row when hovering over it. Only useful if the row is clickable. | True/False                                                   |
 | Row Size    | Changes the size of the row.                                 | Possible values of this property are the following:<ul><li>Small</li><li>Large</li></ul> |
-
-
-
 ### 2.2 Container Specific Properties {#container-design-properties}
 
 Specific properties for the **Container** widget are described in the table below:

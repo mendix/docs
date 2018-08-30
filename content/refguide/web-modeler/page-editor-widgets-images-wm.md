@@ -2,6 +2,7 @@
 title: "Image Widgets in the Web Modeler"
 parent: "page-editor-widgets-wm"
 description: "Describes image widgets in the Mendix Web Modeler."
+menu_order: 30
 tags: ["web modeler", "page editor", "image", "image widgets", "widgets"]
 ---
 

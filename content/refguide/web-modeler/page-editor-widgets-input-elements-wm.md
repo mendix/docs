@@ -2,6 +2,7 @@
 title: "Input Element Widgets of the Web Modeler"
 parent: "page-editor-widgets-wm"
 description: "Describes input widgets in the Mendix Web Modeler."
+menu_order: 20
 tags: ["web modeler", "page editor", "input widgets", "widgets"]
 ---
 

@@ -53,7 +53,7 @@ This cheat sheet lists the most common chart types, more chart types could be fo
 } ]
 ```
 
-#### Heatmap {#an-anchor-for-heatmap}
+#### Heatmap {#an-anchor-for-heatmap} {#a-second-anchor-for-heatmap} <a name="a-third-anchor-for-heatmap"></a>
 ![HeatMapProperties](attachments/pages/charts/heat-map2.png)
 ``` json
 [ {

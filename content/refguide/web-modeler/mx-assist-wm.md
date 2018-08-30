@@ -1,7 +1,6 @@
 ---
 title: "Mendix Assist"
 parent: "microflows-wm"
-category: "Web Modeler"
 description: "Describes Mendix Assist in the Mendix Web Modeler."
 tags: ["web modeler", "mendix assist", "AI", "assistant"]
 ---

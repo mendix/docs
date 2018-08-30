@@ -2,7 +2,7 @@
 title: "Configure a Merge and a Change Object Activity"
 category: "Web Modeler"
 description: "This how to describes the process of configuring a merge and a change object activity in the Mendix Web Modeler."
-menu_order: 40
+menu_order: 30
 tags: ["web modeler", "microflows", "merge", "expression", "change object"]
 ---
 
@@ -111,6 +111,7 @@ Congratulations! Now we have the microflow that works the following way:
    a. If the customer has a grade, it opens the order form for the corresponding customer grade.<br/>
    b. If the customer does not have a grade, the error message pops up.<br/>
 2. If the customer has the grade, the customer's status is set to active irrespective of the grade once the order form is opened.
+
 Now you can publish and view your app. For more information, see [How to Publish and View Your App](../tutorials/start-with-a-blank-app-3-publish-and-view-your-app).
 
  

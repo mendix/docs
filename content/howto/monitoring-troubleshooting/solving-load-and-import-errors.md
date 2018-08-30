@@ -28,7 +28,7 @@ Before trying to solve the problems, it's useful to discover the origin of the p
 
 ### 2.1 Is this a Team Server project?
 
-If your project is a [Team Server](/refguide7/team-server) project, and you just did a [download or update](../collaboration-project-management/using-team-server-_-version-control) from the server, the problem may have been added in a revision that was recently committed to the Team Server. You can check who made the most recent commit in the **Develop** menu item in the top menu of your Project Dashboard in the [Mendix Dev Portal](https://sprintr.home.mendix.com).
+If your project is a [Team Server](/refguide7/team-server) project, and you just did a [download or update](../collaboration-requirements-management/using-team-server-_-version-control) from the server, the problem may have been added in a revision that was recently committed to the Team Server. You can check who made the most recent commit in the **Develop** menu item in the top menu of your Project Dashboard in the [Mendix Dev Portal](https://sprintr.home.mendix.com).
 
 If the latest change on your branch line was committed by someone other than yourself, please inform the person about the problem.
 

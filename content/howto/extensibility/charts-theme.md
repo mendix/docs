@@ -2,111 +2,126 @@
 title: "Use the Charts Theme"
 parent: "charts-tutorials"
 menu_order: 40
+description: "Hos to set up a theme which will be applied to all the charts created with charts widgets in an app"
+tags: ["Charts", "Theme", "Widget", "Desktop Modeler"]
 ---
 
 ## 1 Introduction
 
-The individual Charts widgets can be fine tuned with advanced settings. The theme allows developers to create "global settings that applies to all charts". This way color, language, font and many more things could be set.
+The look of individual **Charts** widgets can be fine tuned with advanced settings. A theme allows developers to create global settings that apply to all charts. In this way color, language, font and many more things can be set for all the charts in an app.
 
 **This how-to will teach you how to do the following:**
 
-* Change font style for all charts
+* Change the font style for all charts
 * Add a theme configuration
 
 ## 2 Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Latest Mendix modeler
-* Download latest [Chart Widget](https://appstore.home.mendix.com/link/app/105695/) from the Mendix App Store
-* Setup a chart, see [How to create a charts](charts-basic-create)
+* Download the latest Mendix desktop modeler
+* Download the latest [Chart Widget](https://appstore.home.mendix.com/link/app/105695/) from the Mendix App Store
+* Setup a chart: see [How to create a charts](charts-basic-create)
 
-## 3 Create a chart theme
+## 3 Creating a Chart Theme
 
-Before:
+This is how the original chart looks:
+
 ![chart](attachments/charts/charts-toggle-editor.png)
 
-### 3.1 Create advanced custom configuration
-To figure out the required custom configuration, follow these steps:
+### 3.1 Creating an Advanced Custom Configuration
 
-1. Open the project with the chart
-1. Open the page with chart
-1. Open the chart widget settings
-1. Go to the tab **Advanced**
-1. Set the **Mode** to **Developer**  
-![chart widget properties](attachments/charts/charts-widget-properties-advanced.png)
-1. Run the project
-1. Open in the browser the page with the chart
-1. Click on the **Toggle Editor** button
-1. In the **Layout** section add the **Custom setting**  
-```json
-{
-  "font": {
-    "family": "Open Sans",
-    "size": 14,
-    "color": "#555"
-  }
-}
-```
+To create the required custom configuration easily, follow these steps:
 
-10. Change the font settings, till the chart shows required font
+1. Open the project with the chart(s).
 
-{{% alert type="warning" %}}
+1. Open a page with a chart.
 
-Please note that the editor changes will never persist. and need to stored in the advanced settings of the widget or stored in the theme
+1. Open the chart widget settings.
 
-{{% /alert %}}
+1. Go to the tab **Advanced**.
 
-12. Set **Mode** to **Advanced** in modeler, to remove the Toggle Editor button.
+1. Set the **Mode** to **Developer**.
 
-{{% alert type="warning" %}}
+   ![chart widget properties](attachments/charts/charts-widget-properties-advanced.png)
 
-Please note that the theme settings only apply too chart in mode Advanced and Developer
+1. Run the project.
 
-{{% /alert %}}
+1. Open the page with the chart in the browser.
 
-![chart editor](attachments/charts/charts-toggle-editor-open.png)
+1. Click the **Toggle Editor** button.
 
-### 3.2 Add theme configuration
-To add a theme file, follow these steps:
+1. In the **Layout** section add the **Custom settings**.
 
-1. From the desktop modeler, go to the menu **Project** > **Show Project Directory in Explorer**
-1. Open the folder **theme**
-1. Create a new file *com.mendix.charts.json* (Please not that the file name is case sensitive and the file extension is `json`)
-1. Open the file in a plain text editor
-1. Add json empty object  
-```json
-{
-
-}
-```
-
-### 3.3 Change the font globally
-To change the font, follow these steps:
-
-1. Edit the *[project folder]/theme/com.mendix.charts.json* file
-1. Replace or update the content. In the **layout** section, place the style changes that are created in the first section of this how to.  
-```json
-{
-  "layout": {
-    "font": {
-      "family": "Impact",
-      "size": 20,
-      "color": "#4682B4"
+    ```json
+    {
+      "font": {
+        "family": "Open Sans",
+        "size": 14,
+        "color": "#555"
+      }
     }
-  }
-}
-```
+    ```
 
-3. Restart the Mendix modeler
-1. Validate the expected results
+1. Change the font settings, till the chart shows the required font.
 
-![chart updated](attachments/charts/charts-toggle-editor-changed.png)
+    ![chart editor](attachments/charts/charts-toggle-editor-open.png)
 
-## 4 Reference
+    {{% alert type="warning" %}}Please note that the editor changes will not persist. They need to be stored in the advanced settings of the widget or stored in the theme.{{% /alert %}}
 
-* More information in the [Charts reference guide](../../refguide/chart-widgets)
-* [Layout samples](../../refguide/charts-advanced-cheat-sheet#layout-all)
-* [Configuration samples](../../refguide/charts-advanced-cheat-sheet#config-options) 
+12. In the desktop modeler, set **Mode** in the chart widget to **Advanced**, to remove the Toggle Editor button.
 
-## 5 Related Content
+    {{% alert type="warning" %}}Please note that the theme settings only apply to charts in Advanced or Developer mode.{{% /alert %}}
+
+### 3.2 Adding a Theme Configuration
+
+To add a theme file which will apply to all charts in the app, follow these steps:
+
+1. From the desktop modeler, go to the menu **Project > Show Project Directory in Explorer**.
+
+1. Open the **theme** folder.
+
+1. Create a new file: *com.mendix.charts.json*
+
+    {{% alert type="info" %}}Please note that
+    * the file name is case sensitive
+    * the file extension is `json`
+    * the file must contain a *json* object, even if this is empty – the format of this is:
+      ```json
+      {
+    
+      }
+      ```
+    {{% /alert %}}
+
+### 3.3 Changing the Font Globally
+
+To change the font in all charts in the app, follow these steps:
+
+1. Edit the *[project folder]/theme/com.mendix.charts.json* file in a plain text editor.
+
+1. Replace or update the content. In the **layout** section, place the style changes that were created in the first section of this how to.
+
+    ```json
+    {
+      "layout": {
+        "font": {
+          "family": "Impact",
+          "size": 20,
+          "color": "#4682B4"
+        }
+      }
+    }
+    ```
+
+1. Restart the Mendix app.
+
+1. Validate the expected result.
+
+    ![chart updated](attachments/charts/charts-toggle-editor-changed.png)
+
+## 4 Related Content
+
+* [Charts reference guide](/refguide/chart-widgets)
+* [Layout samples](/refguide/charts-advanced-cheat-sheet#layout-all)
+* [Configuration samples](/refguide/charts-advanced-cheat-sheet#config-options)

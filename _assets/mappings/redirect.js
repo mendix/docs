@@ -8563,7 +8563,7 @@ module.exports = {
     },
     {
       from: "/ReleaseNotes/4.08.10",
-      to: "/releasenotes/desktop-modeler/4.8"
+      to: "/releasenotes/desktop-modeler/unsupported-versions/4.8"
     },
     {
       from: "/ReleaseNotes/5.15.0",

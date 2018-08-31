@@ -1,7 +1,7 @@
 ---
 title: "Step 4: Enrich the GUI with Filter Options"
 parent: "build-a-simple-hrm-app"
-tags: ["HRM", "build", "app", "developer portal"]
+tags: ["hrm", "human resources management", "human resources", "build", "app", "developer portal", "enumeration", "search", "gui"]
 ---
 
 ## 1 Introduction

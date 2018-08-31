@@ -2,7 +2,7 @@
 title: "Step 2: Create the Pages"
 parent: "create-a-to-do-app"
 description: "This is the second how-to for creating a to-do app in 20 minutes using the Mendix Mobile Quick Starter app."
-tags: ["Mobile", "Quick", "Starter", "App", "To-do", "Kickstart", "Development"]
+tags: ["mobile", "starter", "to-do", "app", "page"]
 toc-level: "4"
 ---
 

@@ -2,7 +2,7 @@
 title: "Step 1: Create a New Project, Module, and Domain Model"
 parent: "create-a-to-do-app"
 description: "This is the first how-to for creating a to-do app in 20 minutes using the Mendix Mobile Quick Starter app."
-tags: ["Mobile", "Quick", "Starter", "App", "To-do", "Kickstart", "Development"]
+tags: ["mobile", "starter", "to-do", "app", "project"]
 toc-level: "4"
 ---
 
@@ -12,7 +12,7 @@ In this how-to, you will create and prepare a new project, module, and domain mo
 
 **This how-to will teach you how to do the following:**
 
-* Create a project that will speed up and simplify your mobile app development
+* Create an app project that will speed up and simplify your mobile app development
 
 ## 2 Prerequisite
 

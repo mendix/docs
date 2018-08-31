@@ -1,7 +1,7 @@
 ---
 title: "Step 3: Show Related Data in the GUI"
 parent: "build-a-simple-hrm-app"
-tags: ["HRM", "build", "app", "developer portal"]
+tags: ["hrm", "human resources management", "human resources", "build", "app", "developer portal", "entity", "entities"]
 ---
 
 ## 1 Introduction

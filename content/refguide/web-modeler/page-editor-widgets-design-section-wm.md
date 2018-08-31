@@ -11,7 +11,7 @@ The **Design** section in **Properties** allows you to change spacing and aligni
 
 ![](attachments/page-editor-widgets-design-section-wm/wm-design-section-info-icon.png)
 
-##2 Common Properties {#design-common-properties}
+## 2 Common Properties {#design-common-properties}
 
 The **Design** section has the following properties common for all widgets:
 

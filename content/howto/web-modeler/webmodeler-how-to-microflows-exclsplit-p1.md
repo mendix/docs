@@ -53,7 +53,7 @@ The app will open the corresponding page depending on the grade of a customer, f
 
     ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-new-enumeration-add-item.png) <br />
 
-    f. Enter *Bronze* for the **Caption** (**Name** is filled out as *Bronze* automatically as well).<br />
+    f. Enter *Bronze* for the **Caption** (**Name** is filled out as *Bronze* automatically as well).<br />
 
     ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-new-enumeration-add-item-bronze.png)<br />
 

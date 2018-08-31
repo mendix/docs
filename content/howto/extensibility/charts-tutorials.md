@@ -3,7 +3,7 @@ title: "Use Charts"
 category: "Extensibility"
 menu_order: 10
 description: "These how-to's will guide you in using charts in Mendix apps."
-tags: ["build", "app", "How To", "Web modeler", "]
+tags: ["build", "app", "How To", "Web modeler", "Desktop Modeler"]
 ---
 
 The following how-to's are available here:

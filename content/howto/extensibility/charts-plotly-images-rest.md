@@ -25,7 +25,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Retrieve the plotly API key which goes with your account; your API key can be found on the settings page when you are logged in to the site
 
-* Create a Mendix app to work with, see [How to create a mendix app](tutorials/start-with-a-blank-app-1-create-the-app)
+* Create a Mendix app to work with, see [How to create a mendix app](../tutorials/start-with-a-blank-app-1-create-the-app)
 
 ## 3 Setting up the Domain Model
 

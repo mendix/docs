@@ -1,63 +1,86 @@
 ---
 title: "Any Chart Widgets"
 parent: "chart-widgets"
+description: "A reference guide on the configuration of the Any Chart widget to pass the correct values to plotly. This enables you to draw a wide variety of charts"
+tags: ["Any Chart", "Reference Guide", "Options", "Configuration", "Charts"]
 ---
 
-## Any Charts
-With the Any Chart, you can build all the chart types that are possible with Plotly.js and highly dynamic charts as well. So if you want to build a 3D chart or have a dynamic set of series, the Any Chart is your friend.
+## 1 Introduction
 
-The configuration of this chart type is complex and it is recommended to start of the building blocks that are delivered in the [Any Chart module](https://appstore.home.mendix.com/link/app/106517/) from the Mendix App Store. Alternative use the [Any Chart cheat sheet](./charts-any-cheat-sheet) for a quick start
+With **Any Chart**, you can build all the chart types that are possible with Plotly.js, including 'dynamic' charts with a data-driven structure. So if you want to build a 3D chart or have a dynamic set of series, Any Chart is your friend.
 
-The Any Charts can be configured with a JSON **Data** array and **Layout** object. The configuration can be set statically, via the **Source attribute** or with the **Sample data**. The data of the attribute will be merged into the static settings and will overwrite any common properties. The Sample data is for demo purposes at run time when there is no Source attribute selected or when rendering sample data in the web modeler preview.
+The configuration of this chart type is complex and it is recommended to start by looking at the building blocks that are delivered in the [Any Chart module](https://appstore.home.mendix.com/link/app/106517/) from the Mendix App Store. Alternatively, use [How to Use Any Chart](/howto/extensibility/charts-any-usage) or the [Any Chart cheat sheet](charts-any-cheat-sheet) for a quick start.
 
-## Data
-The data to be plotted is described in an array usually called data, whose elements are trace objects of various types (e.g. scatter, bar etc) as documented in the [Full Reference](https://plot.ly/javascript/reference).
+Any Charts are configured with a JSON **Data** array and **Layout** object. The configuration can be set statically, via the **Source attribute** and **Sample data** properties.
+
+The layout JSON, which is created dynamically or retrieved from the database, will be merged into the static settings and will overwrite any common properties.
+
+The Sample data is for demo purposes at run time when there is no Source attribute selected or when rendering sample data in the modeler preview.
+
+## 2 Data
+
+The data to be plotted is described in an array, usually called data, whose elements are trace objects of various types (scatter or bar, for example) as documented in the [Full Reference](https://plot.ly/javascript/reference).
 
 ### Static
-Data JSON array based on https://plot.ly/javascript/reference/
+
+The data JSON array based on https://plot.ly/javascript/reference/.
 
 ### Source attribute
-The attribute data will merge and overwrite **Static** data.
+
+The data from this attribute will merge with, and overwrite, the **Static** data.
 
 ### Sample data
-Data for preview. It will be merged with the **Static data** in the web modeler or at runtime when no **Source attribute** is selected.
+
+Data for previewing the chart. This will be merged with the **Static data** in the modeler or at runtime when no **Source attribute** is selected.
 
 ### Mode
-The development mode adds a button to the charts when running the app which is used to toggle a live editor for the advanced configuration options.
 
-## Layout options
-The layout of the plot – non-data-related visual attributes such as the title, annotations etc – is described in an object usually called layout, as documented in the [Full Reference](https://plot.ly/javascript/reference/#layout).
+**Development** mode adds a button to the charts when running the app. This button is used to toggle a live editor for testing advanced configuration options.
+
+## 3 Layout options
+
+The layout of the plot – non-data-related visual attributes such as the title, annotations etc – is described in a json object, usually called layout, as documented in the [Full Reference](https://plot.ly/javascript/reference/#layout).
 
 ### Static
-JSON object based on https://plot.ly/javascript/reference/.
+
+A JSON object based on https://plot.ly/javascript/reference/.
 
 ### Source attribute
-Attribute layout will merge and overwrite static layout options.
+
+The data in an attribute containing layout information will be merged with, and will overwrite, static layout options.
 
 ### Sample layout
-Layout options for preview. It will be merged with the 'Static' in the web modeler or at runtime when no 'Source attribute' is selected
 
-## Configuration options
-The JSON containing the Plotly configuration options.  
-High-level configuration options for the plot, such as the scroll/zoom/hover behavior, is described in an object usually called config, as [documented here](https://plot.ly/javascript/configuration-options).  
+Layout options for preview. It will be merged with the 'Static' in the modeler or at runtime when no 'Source attribute' is selected.
+
+## 4 Configuration options
+
+The JSON containing the Plotly configuration options.
+
+High-level configuration options for the plot, such as the scroll/zoom/hover behavior, is described in an object, usually called config, as [documented here](https://plot.ly/javascript/configuration-options).  
 The difference between **config** and **layout** is that layout relates to the content of the plot, whereas config relates to the context in which the plot is being shown.
 
 ### Appearance
-The appearance settings are use to set dimension of the chart
+
+The appearance settings are use to set the dimensions of the chart.
 
 #### Width unit
-The type of units which are used for the **Width** property: Percentage or Pixels
+
+The type of units which are used for the **Width** property: Percentage or Pixels.
 
 #### Width
+
 The width of the chart in pixels or percentage based on the **Width unit** setting.
 
 #### Height unit
+
 **Percentage of width** is the aspect ratio, **Pixels** is absolute. Warning: When using **Percentage of parent** the parent container must have an absolute height, else nothing is displayed.
 
 #### Height
-The height in pixels or percentage based on the settings of the **Height unit**
 
-## Events
+The height in pixels or percentage based on the settings of the **Height unit**.
+
+## 5 Events
 Data in the any chart is not directly related to data object in the Mendix server. So the event will share chart event data. https://plot.ly/javascript/plotlyjs-events/#event-data
 This JSON data is stored in the **Data attribute** and should interpreted by the developer.
 
@@ -133,10 +156,11 @@ To the theme folder, add a `.json` file named *com.mendix.charts*. The JSON shou
 }
 ```
 
+For guidance on how to set up chart theming see: [How to Use the Charts Theme](/howto/extensibility/charts-theme).
+
 {{% alert type="info" %}}
 
-Please use with caution, as the configuration set up here shall be applied to every instance of the charts in your application.  
-Only the advanced configurations set up in the widget itself have a higher precedence.
+Please use with caution, as the configuration set up here will be applied to every chart in your application. Only the advanced configurations set up in the widget itself have a higher precedence.
 
 {{% /alert %}}
 

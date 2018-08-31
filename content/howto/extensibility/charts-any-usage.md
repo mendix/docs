@@ -93,27 +93,33 @@ Editing the JSON configuration in the modeler can be cumbersome. With the live p
 
 {{% alert type="warning" %}}
 
-The editor is only a playground and no settings are stored. All changes you make in the runtime preview that you wish to persist have to be applied to your **Any Chart** widget** too.
+The editor is only a playground and no settings are stored. All changes you make in the runtime preview that you wish to use the next time you view the app have to be applied to your **Any Chart** widget too.
 
 {{% /alert %}}
 
 To fine tune a Charts widget configuration, follow these steps:
 
 1. In the **Data** tab, set the **Mode** option to **Development**.
+
 2. Run the project, and open the page containing the chart.
+
 3. Click the **Toggle Editor** button on the top right of the chart to fine-tune your settings.
-4. In the editor, select either **Data** or **Layout** from the dropdown menu.
-5. Edit Static or Data settings.
-6. Copy the new settings and apply them in the modeler.
-7. Re-run the project to confirm the changes have been applied.
 
     ![chart editor](attachments/charts/charts-toggle-editor-open.png)
 
+4. In the editor, select either **Data** or **Layout** from the dropdown menu.
+
+5. Edit Static or Data settings.
+
+6. Copy the new settings and apply them in the modeler.
+
+7. Re-run the project to confirm the changes have been applied.
+
 ## 7 Related Content
 
-* **Any Chart** properties: [Any Chart Reference Guide](../../refguide/charts-any-configuration)
-* The most common chart types:  [Any Chart Cheat Sheet](../../refguide/charts-any-cheat-sheet)
-* The most common settings: [Configuration Cheat Sheet](../../refguide/charts-advanced-cheat-sheet)
+* **Any Chart** properties: [Any Chart Reference Guide](/refguide/charts-any-configuration)
+* The most common chart types:  [Any Chart Cheat Sheet](/refguide/charts-any-cheat-sheet)
+* The most common settings: [Configuration Cheat Sheet](/refguide/charts-advanced-cheat-sheet)
 * The full JSON reference: [https://plot.ly/javascript/reference/](https://plot.ly/javascript/reference/)
-* Mendix modeler documentation: [JSON structures](https://docs.mendix.com/refguide/json-structures)
-* Mendix modeler documentation: [Export Mappings](https://docs.mendix.com/refguide/export-mappings)  
+* Mendix modeler documentation: [JSON structures](/refguide/json-structures)
+* Mendix modeler documentation: [Export Mappings](/refguide/export-mappings)  

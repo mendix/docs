@@ -24,9 +24,9 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Downloaded the latest [Chart Widget](https://appstore.home.mendix.com/link/app/105695/) from the Mendix App Store
 * Setup a chart, see [How to create a chart](charts-basic-create)
 
-## 3 Changing the Layout<a name="layout-changes"></a>
+## 3 Changing the Layout {#layout-changes}
 
-Before:
+This is what the original chart looks like:
 
 ![chart](attachments/charts/charts-toggle-editor.png)
 
@@ -56,9 +56,9 @@ To create a custom layout, follow these steps:
 
     {{% alert type="warning" %}}Please note that changes made in the editor will not persist unless they are stored in the advanced settings of the widget or in the theme.{{% /alert %}}
 
-After:
+    After making some changes, the chart looks like this:
 
-![chart editor](attachments/charts/charts-toggle-editor-open.png)
+    ![chart editor](attachments/charts/charts-toggle-editor-open.png)
 
 11. Paste the new font settings into the **Layout options** property in the **Advanced** tab.
 
@@ -68,13 +68,13 @@ After:
 
 {{% alert type="warning" %}}
 
-Please note that the advanced settings only apply to the chart in mode Advanced or Developer.
+Please note that the advanced settings only apply to the chart in Advanced or Developer mode.
 
 {{% /alert %}}
 
-## 4 Changing Chart Type
+## 4 Changing the Chart Type
 
-Before:
+This is what the chart looks like before making any changes:
 
 ![chart editor](attachments/charts/charts-widget-bar.png)
 
@@ -82,7 +82,7 @@ To create a custom configuration, follow these steps:
 
 1. Repeat steps 1 to 8 from the [layout instructions](#layout-changes).
 2. Select the name of the series you want to display differently from the drop down menu: in this case **Series 1**.
-3. Edit the **Custom settings**; change them to *{ "type": "line" }*.
+3. Edit the **Custom settings**; change them to `{ "type": "line" }`.
     ![chart editor](attachments/charts/charts-widget-bar-line-combination.png)
 4. Copy the the custom settings.
 5. In the modeler, open the **Series 1** configuration.
@@ -90,37 +90,33 @@ To create a custom configuration, follow these steps:
 
     ![chart editor](attachments/charts/charts-widget-bar-line-combination-properties.png)
 
-After:
+After the changes, the chart looks like this:
 
 ![chart editor](attachments/charts/charts-widget-bar-line-combination-result.png)
 
-## 5 Changing Configuration 
+## 5 Changing the Configuration 
 
 To create custom a configuration, follow these steps:
 
 1. Repeat steps 1 to 8 from the [layout instructions](#layout-changes).
 2. Select **Configuration** from the drop down menu.
-3. Edit the **Custom settings**, change them to *{ "displayModeBar": true }*.
+3. Edit the **Custom settings**, change them to `{ "displayModeBar": true }`.
 4. Add more Custom settings as desired. See [here](https://plot.ly/javascript/configuration-options/) for more configuration settings.
 5. The changes made in the editor are not persistent; copy the required settings.
 6. Paste the new configuration into the **Configuration options** property in the **Advanced** tab.
     ![chart editor](attachments/charts/charts-widget-properties-advanced-config.png)
 7. Change **Mode** to **Advanced** set modeler, to remove the **Toggle Editor** button.
 
-{{% alert type="warning" %}}
+    {{% alert type="warning" %}}Please note that the advanced settings only apply to the chart in Advanced or Developer mode{{% /alert %}}
 
-Please note that the advanced settings only apply to the chart in mode Advanced or Developer
-
-{{% /alert %}}
-
-![chart editor](attachments/charts/charts-config-toolbar.png)
+    ![chart editor](attachments/charts/charts-config-toolbar.png)
 
 ## 6 Related Content
 
-Reference guide for the [advanced properties](../../refguide/charts-configuration#advanced)
+Reference guide for the [advanced properties](/refguide/charts-configuration#advanced)
 
-Layout options: [cheat sheet](../../refguide/charts-advanced-cheat-sheet#layout-all)  
-Configuration options: [cheat sheet](../../refguide/charts-advanced-cheat-sheet#config-options)  
-Data series options: [cheat sheet](../../refguide/charts-advanced-cheat-sheet#data-series)  
+Layout options: [cheat sheet](/refguide/charts-advanced-cheat-sheet#layout-all)  
+Configuration options: [cheat sheet](/refguide/charts-advanced-cheat-sheet#config-options)  
+Data series options: [cheat sheet](/refguide/charts-advanced-cheat-sheet#data-series)  
 
 Full reference: https://plot.ly/javascript/

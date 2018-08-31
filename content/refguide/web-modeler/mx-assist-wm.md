@@ -44,6 +44,12 @@ information dialog with brief description of this activity/event is displayed ab
 
 ![](attachments/mx-assist-wm/wm-info-dialog.png)
 
+The following options are available in the information dialog window:
+
+* **Don't show again** – disables the information dialog window (it will not be shown again when you insert other activities) 
+* **Lean More** – opens documentation on microflow activities
+* **Thanks, I understand** – dismisses the current information dialog window 
+
 ## 3 Settings
 
 To open settings of Mendix Assist, click the gear icon in the top right corner of the information dialog.

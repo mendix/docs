@@ -2,7 +2,7 @@
 title: "Step 4: Add Logic to the Microflows"
 parent: "create-a-to-do-app"
 description: "This is the fourth how-to for creating a to-do app in 20 minutes using the Mendix Mobile Quick Starter app."
-tags: ["Mobile", "Quick", "Starter", "App", "To-do", "Kickstart", "Development"]
+tags: ["mobile", "starter", "to-do", "app", "logic", "microflow"]
 toc-level: "4"
 ---
 

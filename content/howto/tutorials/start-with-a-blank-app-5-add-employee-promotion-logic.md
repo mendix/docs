@@ -2,7 +2,7 @@
 title: "Step 5: Add Employee Promotion Logic"
 parent: "start-with-a-blank-app"
 description: "Presents details on add pages to your app's UI in the Web Modeler."
-tags: ["build", "app", "developer portal", "web modeler"]
+tags: ["build", "app", "developer portal", "web modeler", "microflow", "modeler", "desktop modeler"]
 ---
 
 ## 1 Introduction

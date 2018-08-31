@@ -2,7 +2,7 @@
 title: "Step 1: Create, Manage, and Deploy the App"
 parent: "build-a-simple-hrm-app"
 description: "Presents details on how to create, deploy, and manage a simple HRM app."
-tags: ["HRM", "build", "app", "developer portal"]
+tags: ["hrm", "human resources management", "human resources", "app", "developer portal", "create", "manage", "deploy"]
 ---
 
 ## 1 Introduction

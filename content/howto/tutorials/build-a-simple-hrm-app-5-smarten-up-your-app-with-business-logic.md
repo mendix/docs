@@ -1,7 +1,7 @@
 ---
 title: "Step 5: Smarten Up Your App with Business Logic"
 parent: "build-a-simple-hrm-app"
-tags: ["HRM", "build", "app", "developer portal"]
+tags: ["hrm", "human resources management", "human resources", "build", "app", "developer portal", "microflow", "logic"]
 ---
 
 ## 1 Introduction

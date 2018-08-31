@@ -1,7 +1,7 @@
 ---
 title: "Step 2: Perform the First Steps to Build a Rich GUI"
 parent: "build-a-simple-hrm-app"
-tags: ["HRM", "build", "app", "developer portal"]
+tags: ["hrm", "human resources management", "human resources", "build", "app", "developer portal", "domain model", "page"]
 ---
 
 ## 1 Introduction

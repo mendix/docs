@@ -1486,10 +1486,6 @@ module.exports = {
       to: "/howto50/testing"
     },
     {
-      from: "/howto50/Testing+Mendix+applications+using+Selenium+IDE",
-      to: "/howto50/testing-mendix-applications-using-selenium-ide"
-    },
-    {
       from: "/howto50/Testing+microflows+using+the+UnitTesting+module",
       to: "/howto50/testing-microflows-using-the-unittesting-module"
     },
@@ -2039,10 +2035,6 @@ module.exports = {
     {
       from: "/howto6/Testing",
       to: "/howto6/testing"
-    },
-    {
-      from: "/howto6/Testing+Mendix+applications+using+Selenium+IDE",
-      to: "/howto6/testing-mendix-applications-using-selenium-ide"
     },
     {
       from: "/howto6/Testing+microflows+using+the+UnitTesting+module",

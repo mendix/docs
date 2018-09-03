@@ -129,10 +129,8 @@ The app should now be visible on your device. Open it and log in to your app wit
 ## 6. Related content
 
 *   [Mobile](mobile)
-*   [Deploy your first Hybrid Mobile App](deploy-your-first-hybrid-mobile-app)
 *   [Publishing a Mendix Hybrid Mobile App in Mobile App Stores](publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)
 *   [Mobile](/howto6/mobile)
-*   [Deploy your first Hybrid Mobile App](/howto6/deploy-your-first-hybrid-mobile-app)
 *   [Publishing a Mendix Hybrid Mobile App in Mobile App Stores](/howto6/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)
 *   [The Mobile Slider Custom Widget](the-mobile-slider-custom-widget)
 *   [The Mobile Slider Custom Widget](/howto6/the-mobile-slider-custom-widget)

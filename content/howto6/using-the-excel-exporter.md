@@ -186,4 +186,3 @@ This module has many steps that must be configured in order for the template to 
 *   [Exposing a web service](expose-a-web-service)
 *   [Importing XML documents](importing-xml-documents)
 *   [Consuming a REST Service](consume-a-rest-service)
-*   [Exposing data to BI tools using OData](exposing-data-to-bi-tools-using-odata)

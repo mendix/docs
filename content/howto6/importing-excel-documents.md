@@ -235,8 +235,4 @@ Once you have completed an Excel template you can export the template for exampl
 *   [Synchronizing user accounts using the LDAP module](synchronizing-user-accounts-using-the-ldap-module)
 *   [Importing XML documents](importing-xml-documents)
 *   [Consuming a REST Service](consume-a-rest-service)
-*   [Exposing data to BI tools using OData](exposing-data-to-bi-tools-using-odata)
-
-
-
 *   [Export to CSV button](/refguide6/export-to-csv-button)

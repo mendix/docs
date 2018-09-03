@@ -47,7 +47,6 @@ Note that the fourth row in a grid has an index of 3.
 
 ## 4\. Related content
 
-*   [Creating automated tests with TestNG](create-automated-tests-with-testng)
 *   [Consuming a complex web service](consume-a-complex-web-service)
 *   [Consuming a simple Web Service](consume-a-simple-web-service)
 *   [Selenium Support](selenium-support)

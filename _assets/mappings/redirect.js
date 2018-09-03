@@ -1665,10 +1665,6 @@ module.exports = {
       to: "/howto6/create-and-deploy-your-first-app"
     },
     {
-      from: "/howto6/Create+Automated+Tests+with+TestNG",
-      to: "/howto6/create-automated-tests-with-testng"
-    },
-    {
       from: "/howto6/Create+your+first+Microflow+Hello+World",
       to: "/howto6/create-your-first-microflow-hello-world"
     },
@@ -1725,10 +1721,6 @@ module.exports = {
       to: "/deployment/on-premises/deploy-mendix-on-microsoft-windows"
     },
     {
-      from: "/howto6/Deploy+your+first+Hybrid+Mobile+App",
-      to: "/howto6/deploy-your-first-hybrid-mobile-app"
-    },
-    {
       from: "/howto6/Deploying+a+Mendix+App+to+Cloud+Foundry",
       to: "/deployment/cloud-foundry/index"
     },
@@ -1771,10 +1763,6 @@ module.exports = {
     {
       from: "/howto6/Exposing+a+web+service",
       to: "/howto6/expose-a-web-service"
-    },
-    {
-      from: "/howto6/Exposing+data+to+BI+tools+using+OData",
-      to: "/howto6/exposing-data-to-bi-tools-using-odata"
     },
     {
       from: "/howto6/Extendability",
@@ -1923,10 +1911,6 @@ module.exports = {
     {
       from: "/howto6/Optimizing+Retrieve+Activities",
       to: "/howto6/optimizing-retrieve-activities"
-    },
-    {
-      from: "/howto6/Publishing+a+Mendix+Hybrid+Mobile+App+in+Mobile+App+Stores",
-      to: "/howto6/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores"
     },
     {
       from: "/howto6/Push+Notifications",

@@ -2171,6 +2171,10 @@ module.exports = {
       to: "/deployment/mendixcloud/"
     },
     {
+      from: "/mendixcloud/Integrate+your+app+with+Mendix+SSO",
+      to: "/deployment/mendixcloud/integrate-your-app-with-mendix-sso"
+    },
+    {
       from: "/mendixcloud/Java+in+the+Cloud",
       to: "/deployment/mendixcloud/java-in-the-cloud"
     },

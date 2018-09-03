@@ -276,3 +276,4 @@ You can view the implementation by deploying your app to the Mendix Cloud and go
 *   [How to Deploy to the Mendix Cloud](/developerportal/howto/deploying-to-the-cloud)
 *   [How to deploy a Mendix app on Azure](/deployment/azure/how-to-deploy-a-mendix-app-on-azure)
 *   [Sending Email](sending-email)
+*   [Integrate your app with Mendix SSO](integrate-your-app-with-mendix-sso)

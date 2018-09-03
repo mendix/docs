@@ -267,3 +267,4 @@ Congratulations! You have deployed a Mendix app on Amazon Web Services.
 *   [How to deploy a Mendix app on Azure](/deployment/azure/how-to-deploy-a-mendix-app-on-azure)
 *   [Sending Email](/deployment/mendixcloud/sending-email)
 *   [Different user logins when integrated with Mendix SSO](/deployment/mendixcloud/different-user-logins-when-integrated-with-mendix-sso)
+*   [Integrate your app with Mendix SSO](/deployment/mendixcloud/integrate-your-app-with-mendix-sso)

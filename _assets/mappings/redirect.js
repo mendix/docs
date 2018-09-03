@@ -1210,10 +1210,6 @@ module.exports = {
       to: "/howto50/denormalize-data-to-improve-performance"
     },
     {
-      from: "/howto50/Deploy+your+first+Hybrid+Mobile+App",
-      to: "/howto50/deploy-your-first-hybrid-mobile-app"
-    },
-    {
       from: "/howto50/Deploying+a+Mendix+App+to+Cloud+Foundry",
       to: "/deployment/cloud-foundry/index"
     },

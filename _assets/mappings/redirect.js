@@ -1166,10 +1166,6 @@ module.exports = {
       to: "/howto50/creating-a-secure-app"
     },
     {
-      from: "/howto50/Creating+automated+tests+with+TestNG",
-      to: "/howto50/creating-automated-tests-with-testng"
-    },
-    {
       from: "/howto50/Creating+your+first+two+Overview+and+Detail+pages",
       to: "/howto50/creating-your-first-two-overview-and-detail-pages"
     },

@@ -81,6 +81,7 @@ The width of the chart in pixels or percentage based on the **Width unit** setti
 The height in pixels or percentage based on the settings of the **Height unit**.
 
 ## 5 Events
+
 Data in the any chart is not directly related to data object in the Mendix server. So the event will share chart event data. https://plot.ly/javascript/plotlyjs-events/#event-data
 This JSON data is stored in the **Data attribute** and should interpreted by the developer.
 

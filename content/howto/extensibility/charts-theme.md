@@ -83,19 +83,15 @@ To add a theme file which will apply to all charts in the app, follow these step
 
 1. Create a new file: *com.mendix.charts.json*
 
-    {{% alert type="info" %}}Please note that
-
-    * the file name is case sensitive
-
-    * the file extension is `json`
-
+    {{% alert type="info" %}}Please note that<br/>
+    * the file name is case sensitive<br/>
+    * the file extension is `json`<br/>
     * the file must contain a *json* object, even if this is empty – the format of this is:
-
-      ```json
-      {
-    
-      }
-      ```
+        ```json
+        {
+        
+        }
+        ```
     {{% /alert %}}
 
 ### 3.3 Changing the Font Globally

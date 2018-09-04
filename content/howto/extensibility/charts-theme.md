@@ -43,7 +43,7 @@ To create the required custom configuration easily, follow these steps:
 
 1. Set the **Mode** to **Developer**.
 
-   ![chart widget properties](attachments/charts/charts-widget-properties-advanced.png)
+    ![chart widget properties](attachments/charts/charts-widget-properties-advanced.png)
 
 1. Run the project.
 
@@ -84,9 +84,13 @@ To add a theme file which will apply to all charts in the app, follow these step
 1. Create a new file: *com.mendix.charts.json*
 
     {{% alert type="info" %}}Please note that
+
     * the file name is case sensitive
+
     * the file extension is `json`
+
     * the file must contain a *json* object, even if this is empty – the format of this is:
+
       ```json
       {
     

@@ -1166,10 +1166,6 @@ module.exports = {
       to: "/howto50/creating-a-secure-app"
     },
     {
-      from: "/howto50/Creating+automated+tests+with+TestNG",
-      to: "/howto50/creating-automated-tests-with-testng"
-    },
-    {
       from: "/howto50/Creating+your+first+two+Overview+and+Detail+pages",
       to: "/howto50/creating-your-first-two-overview-and-detail-pages"
     },
@@ -1208,10 +1204,6 @@ module.exports = {
     {
       from: "/howto50/Denormalize+Data+to+Improve+Performance",
       to: "/howto50/denormalize-data-to-improve-performance"
-    },
-    {
-      from: "/howto50/Deploy+your+first+Hybrid+Mobile+App",
-      to: "/howto50/deploy-your-first-hybrid-mobile-app"
     },
     {
       from: "/howto50/Deploying+a+Mendix+App+to+Cloud+Foundry",
@@ -1486,10 +1478,6 @@ module.exports = {
       to: "/howto50/testing"
     },
     {
-      from: "/howto50/Testing+Mendix+applications+using+Selenium+IDE",
-      to: "/howto50/testing-mendix-applications-using-selenium-ide"
-    },
-    {
       from: "/howto50/Testing+microflows+using+the+UnitTesting+module",
       to: "/howto50/testing-microflows-using-the-unittesting-module"
     },
@@ -1669,10 +1657,6 @@ module.exports = {
       to: "/howto6/create-and-deploy-your-first-app"
     },
     {
-      from: "/howto6/Create+Automated+Tests+with+TestNG",
-      to: "/howto6/create-automated-tests-with-testng"
-    },
-    {
       from: "/howto6/Create+your+first+Microflow+Hello+World",
       to: "/howto6/create-your-first-microflow-hello-world"
     },
@@ -1729,10 +1713,6 @@ module.exports = {
       to: "/deployment/on-premises/deploy-mendix-on-microsoft-windows"
     },
     {
-      from: "/howto6/Deploy+your+first+Hybrid+Mobile+App",
-      to: "/howto6/deploy-your-first-hybrid-mobile-app"
-    },
-    {
       from: "/howto6/Deploying+a+Mendix+App+to+Cloud+Foundry",
       to: "/deployment/cloud-foundry/index"
     },
@@ -1775,10 +1755,6 @@ module.exports = {
     {
       from: "/howto6/Exposing+a+web+service",
       to: "/howto6/expose-a-web-service"
-    },
-    {
-      from: "/howto6/Exposing+data+to+BI+tools+using+OData",
-      to: "/howto6/exposing-data-to-bi-tools-using-odata"
     },
     {
       from: "/howto6/Extendability",
@@ -1929,10 +1905,6 @@ module.exports = {
       to: "/howto6/optimizing-retrieve-activities"
     },
     {
-      from: "/howto6/Publishing+a+Mendix+Hybrid+Mobile+App+in+Mobile+App+Stores",
-      to: "/howto6/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores"
-    },
-    {
       from: "/howto6/Push+Notifications",
       to: "/howto6/push-notifications"
     },
@@ -2039,10 +2011,6 @@ module.exports = {
     {
       from: "/howto6/Testing",
       to: "/howto6/testing"
-    },
-    {
-      from: "/howto6/Testing+Mendix+applications+using+Selenium+IDE",
-      to: "/howto6/testing-mendix-applications-using-selenium-ide"
     },
     {
       from: "/howto6/Testing+microflows+using+the+UnitTesting+module",
@@ -8563,7 +8531,7 @@ module.exports = {
     },
     {
       from: "/ReleaseNotes/4.08.10",
-      to: "/releasenotes/desktop-modeler/4.8"
+      to: "/releasenotes/desktop-modeler/unsupported-versions/4.8"
     },
     {
       from: "/ReleaseNotes/5.15.0",

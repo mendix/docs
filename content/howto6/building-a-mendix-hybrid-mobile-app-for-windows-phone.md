@@ -73,7 +73,6 @@ To build the Windows Phone app, follow these steps:
 You can deploy this xap file to the Windows store, or use it to test the app on a device.
 
 ## 4 Related Content
-* [How to Deploy Your First Hybrid Mobile App](deploy-your-first-hybrid-mobile-app)
 * [How to Publish a Mendix Hybrid Mobile App in Mobile App Stores](publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)
 * [How to Debug a Hybrid Mobile Application](debug-a-hybrid-mobile-application)
 * [Push Notifications](push-notifications)

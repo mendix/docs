@@ -122,4 +122,4 @@ To configure the web service call, follow these steps:
 * [Synchronizing User Accounts Using the LDAP Mmodule](synchronizing-user-accounts-using-the-ldap-module)
 * [Importing XML Documents](importing-xml-documents)
 * [Consuming a REST Service](consume-a-rest-service)
-* [Exposing Data to BI tools Using OData](exposing-data-to-bi-tools-using-odata)
+

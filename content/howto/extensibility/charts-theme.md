@@ -87,11 +87,15 @@ To add a theme file which will apply to all charts in the app, follow these step
     * the file name is case sensitive<br/>
     * the file extension is `json`<br/>
     * the file must contain a *json* object, even if this is empty – the format of this is:
-        ```json
+    
+    ```json
+    
         {
         
         }
-        ```
+        
+    ```
+        
     {{% /alert %}}
 
 ### 3.3 Changing the Font Globally

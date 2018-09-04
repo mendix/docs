@@ -8,7 +8,7 @@ This document describes the properties of a published OData resource. If you wan
 
 {{% /alert %}}
 
-## Adding or editing a resource
+## 1 Adding or editing a resource
 
 The **Add resource** or **Edit** button in the Published OData Service document will open an editor window for the published resource. The editor window is separated in two parts: **Resource** and **Uniform Resource Identifier**. The former lets you specify which entity and entity attributes to expose, whereas the latter lets you customize the location where the resource will be published.
 
@@ -16,7 +16,7 @@ Another way to add a resource is by right-clicking on an entity in the domain mo
 
 ![](attachments/16713722/16843929.png)
 
-### Resource
+### 1.1 Resource
 
 Press the **Select...** button to open a dialog window that allows you to select an entity from the domain model to publish. Click on an entity in the displayed tree and press **Select** to confirm.
 
@@ -24,7 +24,7 @@ Press the **Select...** button to open a dialog window that allows you to select
 
 IBM DB2 does not support read-isolated data retrieval operations that are non-blocking in a multi-user environment. Therefore the data retrieved by OData might not be 100% consistent if the same data rows are modified concurrently by another user. For the details see this [IBM DB2](db2) page.
 
-## Selecting exposed attributes and associations
+## 2 Selecting exposed attributes and associations
 
 When an entity to publish has been selected, press the **Select...** button to open a dialog that allows you to select individual attributes to expose.
 
@@ -34,7 +34,7 @@ Attributes of published entities are nillable by default, meaning that if their 
 
 Attributes of type binary are not allowed to be exported through OData services, other than the Contents field of System.FileDocument.
 
-## Mapping from internal names to exposed names.
+## 3 Mapping from internal names to exposed names
 
 Use the **Exposed entity name** field to customize the name of your resource that is exposed to the outside world. By default, the name is the same as the name of the exposed entity from your domain model. You can change this to any name which starts with a letter followed by letters or digits with a maximum length of 480 characters. Be aware however that the location URIs must be unique. Exposing two different resources on the same location will result in a consistency error.
 
@@ -44,7 +44,13 @@ When these names have been overriden, the name of the entity, attribute or assoc
 
 These features make it easier to refactor your domain model without affecting external APIs.
 
-## Use paging
+## 4 Entity set name
+
+Use the **Entity set name** field to change the last part of the URL of the resource.
+
+_Default value:_ Entity name + s
+
+## 5 Use paging
 
 If you enable this option, you can set a maximum number of objects per response, with a link included to the next set of objects. A client like Tableau can use this to show progress and will automatically keep following the links until all data is retrieved. Memory usage of clients can be improved if you use paging with a reasonable page size.
 
@@ -52,7 +58,7 @@ If you enable this option, you can set a maximum number of objects per response,
 
 _Default value:_ No
 
-## Page size
+## 6 Page size
 
 When Use paging is set to Yes, you can set the amount of objects per page here.
 

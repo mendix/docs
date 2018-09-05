@@ -32,7 +32,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 Starting the Packaging Process<a name="StartingthePackagingProcess"></a>
 
-Before starting, make sure you have a Mendix app with mobile support enabled running in the Mendix Cloud, either as a free app or in a licensed cloud node. If you do not have one ready yet, set up the Company Expenses app from the Mendix App Store as a free app to try out its mobile features.
+Before starting, make sure you have a Mendix app with mobile support enabled running in the Mendix Cloud, either as a free app or in a licensed cloud node. If you do not have one ready yet, set up the [Company Expenses](https://appstore.home.mendix.com/link/app/240/) app from the Mendix App Store as a free app to try out its mobile features.
 
 To start the packaging process, follow these steps:
 

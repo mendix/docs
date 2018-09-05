@@ -1238,10 +1238,6 @@ module.exports = {
       to: "/howto50/exposing-a-web-service"
     },
     {
-      from: "/howto50/Exposing+data+to+BI+tools+using+OData",
-      to: "/howto50/exposing-data-to-bi-tools-using-odata"
-    },
-    {
       from: "/howto50/Extendability",
       to: "/howto50/extendability"
     },

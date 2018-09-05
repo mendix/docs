@@ -1,17 +1,20 @@
 ---
 title: "Any Chart Cheat Sheet"
 parent: "chart-widgets"
+description: "Shows, with examples, how the most common types of chart can be configured using the Any Chart Widget"
+tags: ["Any Chart", "Examples", "Charts", "Widget"]
 ---
 
-## Any Chart Cheat types
+## 1 Introduction
 
-This cheat sheet lists the most common chart types, more chart types could be found at [https://plot.ly/javascript/](https://plot.ly/javascript/).
+This *cheat sheet* lists the most common chart types, together with a visual sample and the json required to create them. More chart types can be found at [https://plot.ly/javascript/](https://plot.ly/javascript/).
 
-### Basic Chart
+## 2 Basic Charts
 
-#### Line Chart {#line-chart}
+### 2.1 Line Chart {#line-chart}
 
 ![LineChartProperties](attachments/pages/charts/line-chart2.png)
+
 ``` json
 [
   {
@@ -27,8 +30,10 @@ This cheat sheet lists the most common chart types, more chart types could be fo
 ]
 ```
 
-#### Bubble Chart
+### 2.2 Bubble Chart
+
 ![BubbleChartProperties](attachments/pages/charts/bubble-chart.png)
+
 ``` json
 [ {
   "x": [ 1, 2, 3 ],
@@ -41,8 +46,10 @@ This cheat sheet lists the most common chart types, more chart types could be fo
 } ]
 ```
 
-#### Scatter Chart
+### 2.3 Scatter Chart
+
 ![ScatterPlotProperties](attachments/pages/charts/scatter-plot.png)
+
 ``` json
 [ {
   "x": [ 1, 2, 3 ],
@@ -53,8 +60,10 @@ This cheat sheet lists the most common chart types, more chart types could be fo
 } ]
 ```
 
-#### Heatmap
+### 2.4 Heatmap
+
 ![HeatMapProperties](attachments/pages/charts/heat-map2.png)
+
 ``` json
 [ {
   "z": [ [ 1, 2 ], [ 3, 4 ] ],
@@ -62,8 +71,10 @@ This cheat sheet lists the most common chart types, more chart types could be fo
 } ]
 ```
 
-#### Bar Chart
+### 2.5 Bar Chart
+
 ![BarChartProperties](attachments/pages/charts/bar-chart2.png)
+
 ``` json
 [ {
   "y": [ "giraffe", "elephant" ],
@@ -73,8 +84,10 @@ This cheat sheet lists the most common chart types, more chart types could be fo
 } ]
 ```
 
-#### Column Chart
+### 2.6 Column Chart
+
 ![ColumnChartProperties](attachments/pages/charts/column-chart2.png)
+
 ``` json
 [ {
   "x": [ "giraffe", "elephant" ],
@@ -84,8 +97,10 @@ This cheat sheet lists the most common chart types, more chart types could be fo
 } ]
 ```
 
-#### Pie Chart
+### 2.7 Pie Chart
+
 ![PieChartProperties](attachments/pages/charts/pie-chart2.png)
+
 ``` json
 [ {
   "values": [ 10, 20, 30 ],
@@ -94,8 +109,10 @@ This cheat sheet lists the most common chart types, more chart types could be fo
 } ]
 ```
 
-#### Doughnut Chart
+### 2.8 Doughnut Chart
+
 ![DoughNutChartProperties](attachments/pages/charts/doughnut-chart.png)
+
 ```json
 [ {
   "values": [ 10, 20, 30 ],
@@ -105,8 +122,10 @@ This cheat sheet lists the most common chart types, more chart types could be fo
 } ]
 ```
 
-#### Area Chart
+### 2.9 Area Chart
+
 ![AreaChartProperties](attachments/pages/charts/area-chart2.png)
+
 ``` json
 [ {
   "x": [ 1, 2, 3 ],
@@ -116,10 +135,12 @@ This cheat sheet lists the most common chart types, more chart types could be fo
 } ]
 ```
 
-### Statistical Chart
+## 3 Statistical Charts
 
-#### Histograms
+### 3.1 Histograms
+
 ![HistogramProperties](attachments/pages/charts/histogram.png)
+
 ``` json
 [ {
   "x": [ 0, 2, 1, 3, 4, 2 ],
@@ -127,8 +148,10 @@ This cheat sheet lists the most common chart types, more chart types could be fo
 } ]
 ```
 
-#### Box Chart
+### 3.2 Box Chart
+
 ![BoxPlotProperties](attachments/pages/charts/box-plot.png)
+
 ``` json
 [ {
   "x": [ 1, 2, 3, 4, 5 ],
@@ -136,8 +159,10 @@ This cheat sheet lists the most common chart types, more chart types could be fo
 } ]
 ```
 
-#### 2D Histogram
+### 3.3 2D Histogram
+
 ![2DHistogramProperties](attachments/pages/charts/2d-histogram.png)
+
 ``` json
 [ {
   "x": [ 1, 2, 3, 4, 5 ],
@@ -146,10 +171,12 @@ This cheat sheet lists the most common chart types, more chart types could be fo
 } ]
 ```
 
-### Maps
+## 4 Maps
 
-#### Bubble Map
+### 4.1 Bubble Map
+
 ![BubbleMapProperties](attachments/pages/charts/bubble-map.png)
+
 ``` json
 [ {
   "lon": [ 100, 400 ],
@@ -163,9 +190,12 @@ This cheat sheet lists the most common chart types, more chart types could be fo
 } ]
 ```
 
-#### Choropleth Map
-![ChoroplethMapProperties](attachments/pages/charts/choropleth-map.png)  
-Data
+### 4.2 Choropleth Map
+
+![ChoroplethMapProperties](attachments/pages/charts/choropleth-map.png)
+
+#### 4.2.1 Choropleth Map Data
+
 ``` json
 [ {
   "locations": [ "AZ", "CA", "VT" ],
@@ -174,7 +204,9 @@ Data
   "type": "scattergeo"
 } ]
 ```
-Layout
+
+#### 4.2.2 Choropleth Map Layout
+
 ``` json
 { 
   "geo": { 
@@ -183,8 +215,10 @@ Layout
 }
 ```
 
-#### Scatter Map
+### 4.3 Scatter Map
+
 ![ScatterMapProperties](attachments/pages/charts/scatter-map.png)
+
 ``` json
 [ {
   "lon": [ 12, 22 ],
@@ -194,10 +228,13 @@ Layout
   "mode": "marker"
 } ]
 ```
-### 3D Chart
 
-#### 3D Surface Chart
+## 5 3D Charts
+
+### 5.1 3D Surface Chart
+
 ![3DSurfacePlotProperties](attachments/pages/charts/3d-surface-plot.png)
+
 ``` json
 [ {
   "colorscale": "Viridis",
@@ -206,8 +243,10 @@ Layout
 } ]
 ```
 
-#### 3D Line Chart
+### 5.2 3D Line Chart
+
 ![3DLineChartProperties](attachments/pages/charts/3d-line-chart.png)
+
 ``` json
 [ {
   "x": [ 9, 8, 5, 1 ],
@@ -218,8 +257,10 @@ Layout
 } ]
 ```
 
-#### 3D Scatter Chart
+### 5.3 3D Scatter Chart
+
 ![3DScatterPlotProperties](attachments/pages/charts/3d-scatter-plot.png)
+
 ``` json
 [ {
   "x": [ "9", "8", "5", "1" ],
@@ -230,10 +271,12 @@ Layout
 } ]
 ```
 
-### Other Chart
+## 6 Other Charts
 
-#### Contour Chart
+### 6.1 Contour Chart
+
 ![ContourProperties](attachments/pages/charts/contour.png)
+
 ``` json
 [ {
   "z": [ [ 2, 2, 4, 11 ], [ 5, 14, 8, 11 ] ],
@@ -241,8 +284,10 @@ Layout
 } ]
 ```
 
-#### Time Series
+### 6.2 Time Series
+
 ![TimeSeriesProperties](attachments/pages/charts/time-series2.png)
+
 ``` json
 [ {
   "type": "scatter",
@@ -252,8 +297,10 @@ Layout
 } ]
 ```
 
-#### Group By Chart
+### 6.3 Group By Chart
+
 ![GroupByChartProperties](attachments/pages/charts/group-by-chart.png)
+
 ``` json
 [ {
     "type": "scatter",
@@ -263,8 +310,10 @@ Layout
 } ]
 ```
 
-#### Symmetric Error Bar
+### 6.4 Symmetric Error Bar
+
 ![ErrorBarProperties](attachments/pages/charts/error-bar.png)
+
 ``` json
 [ {
   "x": [ 0, 1, 2 ],
@@ -277,8 +326,10 @@ Layout
 } ]
 ```
 
-#### Polar Chart
+### 6.5 Polar Chart
+
 ![PolarChartProperties](attachments/pages/charts/polar-chart.png)
+
 ``` json
 [ {
   "type": "scatterpolar",
@@ -288,9 +339,12 @@ Layout
 } ]
 ```
 
-#### Ternary Plot
-![TernaryPlotProperties](attachments/pages/charts/ternary-plot.png)  
-Data
+### 6.6 Ternary Plot
+
+![TernaryPlotProperties](attachments/pages/charts/ternary-plot.png)
+
+#### 6.6.1 Ternary Plot Data
+
 ``` json
 [{
     "type": "scatterternary",
@@ -302,7 +356,8 @@ Data
 }]
 ```
 
-Layout
+#### 6.6.2 Ternary Plot Layout
+
 ```json
 {
   "ternary": {
@@ -310,3 +365,9 @@ Layout
   }
 }
 ```
+
+## 7 Related Content
+
+* Full chart documentation is here: [https://plot.ly/javascript/](https://plot.ly/javascript/)
+* [Any Chart Widget](charts-any-configuration)
+* [How to Use Any Chart](/howto/extensibility/charts-any-usage)

@@ -1,25 +1,28 @@
 ---
-title: "Integrate your app with Mendix SSO"
+title: "Integrate Your App with Mendix SSO"
 category: "Mendix Cloud"
 ---
 
-With the release of the AppCloud, Mendix introduced a new project layout and module that make use of the new Mendix AppCloud services. With the _AppCloud Default Project_ layout you can easily create new apps that make use of AppCloud services out of the box. You can upgrade your existing app with the separate _AppCloudServices_ module.
-Do you want to know more about all the possibilities this opens up? Take a look at the [press release](http://www.mendix.com/press/new-mendix-appcloud/).
+## 1 Introduction
 
-In this how-to we will explain how you can incorporate the AppCloudServices module into your existing app.
+With the release of the AppCloud, Mendix introduced a new project layout and module that makes use of the new Mendix AppCloud services. With the **AppCloud Default Project** layout, you can easily create new apps use the AppCloud services out of the box. You can upgrade your existing app with the separate [AppCloudServices module](https://appstore.home.mendix.com/link/app/934/).
 
-## 1\. Read More
+Want to know more about all the possibilities this opens up? Take a look at the [New Mendix AppCloud Ignites Application Innovation by Connecting All Custom Apps, Developers, Data, and Users in One Enterprise Cloud Ecosystem](http://www.mendix.com/press/new-mendix-appcloud/) blog post.
 
-The AppCloudServices module requires version 5.3.2 of the Mendix Modeler. If your app was not created with Mendix 5.3.2 or newer, you need to convert it first. For more information about converting apps, see [this page](/refguide6/moving-from-5-to-6).
+This how-to will explain how you can incorporate the AppCloudServices module into your existing app.
 
-## 2\. Step-by-step Guide with an Example
+**## 2 Prerequisites [KEEP?]**
 
-This how-to uses version 3.0 of the Company Expenses (CE) app, which does not yet contain the AppCloudServices module. This version can be found in the Modeler AppStore by going to the app page and opening the versions tab. Company Expenses 3.0 was built in an older version of Mendix, so it should first be converted to Mendix 5.3.2.
+**The AppCloudServices module requires version 5.3.2 of the Mendix Desktop Modeler. If your app was not created with Mendix 5.3.2 or newer, you need to convert it first. For more information about converting apps, see [this page](/refguide6/moving-from-5-to-6).**
 
-1.  Start the **Mendix Modeler** and open your existing app that has been converted to Mendix 5.3.2 or newer.
-2.  Open the **App Store** inside the Mendix Modeler.
-3.  Search for _AppCloudServices,_ click on the **AppCloudServices** module created by Mendix and click **Download**.
-4.  Select **Add as a new module** and click on **Import**. The module should now be visible in the project explorer:
+## 3 Steps & Example
+
+This how-to uses the [Company Expenses](https://appstore.home.mendix.com/link/app/240/).
+
+1. Open your app project in the Desktop Modeler.
+2. Open the **App Store** inside the Mendix Modeler.
+3. Search for "AppCloudServices," then open and download the Mendix **AppCloudServices** module.
+4.  Select **Add as a new module** and click **Import**. The module should now be visible in the project explorer:
     ![](attachments/18448695/18581209.png)
     Once the module has been imported, you can make use of the Mendix AppCloud Navigation widget. In order to do this, make sure all starting pages in your app use the `AppCloudMasterLayout` as their master layout. In the CE app, we need to apply the master layout to both `UserLoginLayout` and `DesktopLayoutRightSideBar`.
 
@@ -62,7 +65,7 @@ This how-to uses version 3.0 of the Company Expenses (CE) app, which does not ye
 
     When you deploy your upgraded app in the AppCloud it will now be automatically added to your Launchpad. Opening the app from your Launchpad will automatically log you in with your Mendix account, and you can easily invite other Mendix accounts through app user management.
 
-## 3\. Related content
+## 4 Related Content
 
 *   [Different user logins when integrated with Mendix SSO](different-user-logins-when-integrated-with-mendix-sso)
 *   [Trends in Mendix Cloud v3](/developerportal/operate/trends)

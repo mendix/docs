@@ -49,7 +49,7 @@ The data for previewing the chart. This will be merged with the **Static data** 
 
 **Production** mode removes this button so that the user sees the chart as you have designed it.
 
-## 3 Layout options
+## 4 Layout options
 
 The layout of the plot – non-data-related visual attributes such as the title, annotations etc – is described in a json object as documented in the [Full Reference](https://plot.ly/javascript/reference/#layout).
 
@@ -65,25 +65,25 @@ This is an unlimited length string attribute of the entity which forms the conte
 
 Layout options for preview. It will be merged with the 'Static' in the modeler or at runtime when no 'Source attribute' is selected.
 
-## 4 Configuration options
+## 5 Configuration options
 
 The JSON containing the Plotly high-level configuration options for the plot, such as the scroll/zoom/hover behavior. These high-level configuration options are documented here: https://plot.ly/javascript/configuration-options.
 
 The difference between **config** and **layout** is that layout relates to the content of the plot, whereas config relates to the context in which the plot is being shown. The **Any Chart** widget does not allow the configuration options to be changed dynamically in your app.
 
-## 5 Appearance
+## 6 Appearance
 
 The appearance settings are use to set the dimensions of the chart.
 
-#### Width unit
+### Width unit
 
 The type of unit which is used for the **Width** property: Percentage or Pixels.
 
-#### Width
+### Width
 
 The width of the chart in pixels or as a percentage based on the **Width unit** setting.
 
-#### Height unit
+### Height unit
 
 **Percentage of width** allows you to change the aspect ratio, **Pixels** is an absolute measure, and **Percentage of parent** allows you to set the height in relation to the parent container.
 
@@ -91,11 +91,11 @@ The width of the chart in pixels or as a percentage based on the **Width unit** 
 Warning: When using **Percentage of parent** the parent container must have an absolute height, else nothing is displayed.
 {{% /alert %}}
 
-#### Height
+### Height
 
 The height in pixels or as a percentage based on the settings of the **Height unit**.
 
-## 6 Events
+## 7 Events
 
 The **Any Chart** widget supports two sorts of event, related to the points plotted on the chart:
 
@@ -140,7 +140,7 @@ The microflow identified here is called by an on hover event received from plotl
 
 The form to show when a user hovers over a chart plot point. It has the context **Tooltip entity**.
 
-## 7 Chart Theming
+## 8 Chart Theming
 
 Advanced JSON settings can also be added in a global context via the theme folder of your mendix project root directory.
 

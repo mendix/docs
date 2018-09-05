@@ -7,7 +7,7 @@ tags: ["Sprint","Stories","Developer Portal"]
 ---
 ## 1 Introduction
 
-In this how-to, you will learn how to manage your application requirements in Mendix by creating and configuring sprints and stories. These components are often used in an Agile development environment, in which you and your team work in short development cycles last 2–4 weeks. By adding your sprints to Mendix, you will have a clear overview of your tasks and can easily view the status of your development cycle. You can also manage the progress of tasks and sprints from within the Mendix Modeler.
+In this how-to, you will learn how to manage your application requirements in Mendix by creating and configuring sprints and stories. These components are often used in an Agile development environment, in which you and your team work in short development cycles of 2–4 weeks. By adding your sprints to Mendix, you will have a clear overview of your tasks and can easily view the status of your development cycle. You can also manage the progress of tasks and sprints from within the Mendix Modeler.
 
 **This how-to will teach you how to do the following:**
 
@@ -23,10 +23,10 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 Creating a New App
 
-To create a new App, follow these steps:
+To create a new Mendix app, follow these steps:
 
-1. Go to the [Developer Portal](https://home.mendix.com/) and log in (create an account [here](https://developers.mendix.com/start-for-free/) if you don't have one yet).
-2.  Click **Create New App** in the top-left of the screen:
+1. Go to the [Developer Portal](https://home.mendix.com/) and log in (create an account [here](https://developers.mendix.com/start-for-free/) if you do not have one yet).
+2.  Click **Create App** in the top-left of the screen:
 
     ![](attachments/general/create-app.png)
 
@@ -66,13 +66,13 @@ Under the **Collaborate** category you can add sprints, stories, planning, and d
     * Leave the **This sprint comes after** field empty (if there are existing sprints, you can place the new sprint before or after a selected sprint)
     * Set the **Duration** to **2** (weeks)
 
-   ![](attachments/collaborate/18580514.png)
+	![](attachments/collaborate/18580514.png)
 
-   {{% alert type="info" %}}
+	{{% alert type="info" %}}
 
-The default duration of a sprint in Mendix is two weeks, which starts the moment you create the sprint. Check **customize** to select a different start date.
+	The default duration of a sprint in Mendix is two weeks, which starts the moment you create the sprint. Check **customize** to select a different start date.
 
-   {{% /alert %}}
+	{{% /alert %}}
 
 5.  Click **Save**, and the new sprint will be added to your stories overview.
 
@@ -94,16 +94,15 @@ To add story points, follow these steps:
 
 3.  Click **Post story**.
 
-    {{% alert type="info" %}}
+	{{% alert type="info" %}} 
+	
+	You can also add Bug story points this way by selecting **Bug** from the **Story type** drop-down menu. The icon in the top left will change to this: ![](attachments/collaborate/18580492.png)
 
-You can also add Bug story points this way by selecting **Bug** from the **Story type** drop-down menu.
-The icon in the top left will change to ![](attachments/collaborate/18580492.png)
-
-   {{% /alert %}}
+	{{% /alert %}}
 
 The new story point is now added to Sprint 1:
 
-   ![](attachments/collaborate/18580509.png)
+![](attachments/collaborate/18580509.png)
 
 ### 4.2 Adding Tasks to a Story
 
@@ -123,16 +122,16 @@ To add a task to the story, follow these steps:
 
 ## 5 Managing Stories in the Mendix Modeler
 
-Besides being able to manage your sprints in the **Developer Portal**, you can also view them in the Mendix Modeler.
+Besides being able to manage your sprints in the **Developer Portal**, you can also view them in the Mendix Desktop Modeler.
 
 To manage stories in the Modeler, follow these steps:
 
-1.  Go to the overview page of your project and click **Edit in Modeler**:
+1.  Go to the overview page of your project and click **Edit in Desktop Modeler**:
 
     ![](attachments/general/edit-app.png)
 
 2.  Select a Modeler version when asked, and then log in to the Modeler.
-3.  You will now see your sprints in the **Stories** tab at the bottom:
+3.  You will now see your active sprints in the **Stories** tab at the bottom:
 
     ![](attachments/collaborate/18580490.png)
 
@@ -143,19 +142,19 @@ To manage stories in the Modeler, follow these steps:
 5.  Go back to the **Stories** page in the [Developer Portal](http://home.mendix.com).
 6.  Expand the first sprint and check the status of the first entry:
 
-    ![](attachments/collaborate/18580489.png)
+	![](attachments/collaborate/18580489.png)
 
-    It is now **Running**, because you changed the status in the Modeler.
+	It is now **Running**, because you changed the status in the Modeler.
 
-    {{% alert type="info" %}}
+	{{% alert type="info" %}}
 
-If you change a status or update story points in the Modeler or in the browser, they will automatically be synchronized and available everywhere.
+	If you change a status or update story points in the Modeler or in the browser, they will automatically be synchronized and available everywhere.
 
-   {{% /alert %}}
+	{{% /alert %}}
 
 ## 6 Moving Stories
 
-This section will describe a scenario in which the story in Sprint 3 needs to be moved to Sprint 2, as the customer requires the app to be delivered sooner.
+This section will describe a scenario in which a story in Sprint 3 needs to be moved to Sprint 2, as the customer requires the app to be delivered sooner.
 
 {{% alert type="info" %}}
 
@@ -163,21 +162,22 @@ Moving a story will move any tasks and sub-tasks as well.
 
 {{% /alert %}}
 
-There are two ways to move the story:
+There are two ways to move the story, which are described below.
 
 ### 6.1 Method 1
 
-Select the story you want to move, click **Details**.
+1. Select the story you want to move.
+2.  Click **Details**.
 
-   ![](attachments/collaborate/story-actions.png)
+	![](attachments/collaborate/story-actions.png)
 
- and below **Move to** from the right menu, select **Sprint 2**:
+3.  In the **Move To Sprint** drop-down menu at the bottom-right of the page, select **Sprint 2**:
 
-    ![](attachments/collaborate/move-sprint.png)
+	![](attachments/collaborate/move-sprint.png)
 
 ### 6.2 Method 2
 
-Click and drag the story into another sprint or to the **Backlog**:
+1. Select the story and drag it into another sprint or to the **Backlog**:
 
    ![](attachments/collaborate/18580498.png)
 
@@ -190,16 +190,20 @@ To import stories, follow these steps:
 1. Download this [example Excel](attachments/collaborate/18580488.xls).
 2.  On the **Stories** page click **More** and click **Import/Export**.
 
-    ![](attachments/collaborate/more-button.png)
+	![](attachments/collaborate/more-button.png)
 
 3.  Select **Update stories from Excel**:
 
-    ![](attachments/collaborate/18580502.png)
+	![](attachments/collaborate/18580502.png)
 
 4. Click **Browse** to select the example Excel file that contains your user stories.
 5.  Click **Import**, and then scroll to the bottom of the page and click **Next**:
 
-    ![](attachments/collaborate/18580501.png)
+	{{% image_container width="500"}}
+
+	![](attachments/collaborate/18580501.png)
+	
+	{{% /image_container %}}
 
     The **Stories** tab will now list your imported content:
 
@@ -209,18 +213,17 @@ To import stories, follow these steps:
 
 With Mendix, it’s always possible to export data from your application and from the database.
 
-To export sprints and stories, follow these steps:
+To export sprints and stories, go to the **Stories** page, click **More**, then click **Import/Export**:
 
-1.  On the **Stories** page click **More** and click **Import/Export**.
+![](attachments/collaborate/more-button.png)
 
-    ![](attachments/collaborate/more-button.png)
+There are three options to choose from, depending on which data you want to export:
 
-    There are three options to choose from, depending on which data you want to export.
+* **Export all Stories to Excel**
+* **Export** – an overview of the export data will be shown
+* **Download** – to save the Excel file on your computer
 
-2. Select **Export all Stories to Excel**.
-3. Click **Export**, and an overview of the export data will be shown.
-4. Click **Download** and save the Excel file on your computer.
-5. Open the file to see your exported data.
+Finally, open the file to see your exported data.
 
 ## 9 Related Content
 

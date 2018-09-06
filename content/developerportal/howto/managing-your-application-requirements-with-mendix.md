@@ -47,33 +47,33 @@ The development of a new product, feature, or release usually has multiple sprin
 
 To add a sprint, follow these steps:
 
-1.  Click **Stories** in the left menu:
+1. Click **Stories** in the left menu:
 
-	![](attachments/collaborate/collaborate.png)
+  ![](attachments/collaborate/collaborate.png)
 
-	Under the **Collaborate** category you can add sprints, stories, planning, and documents that can be used in your app. The **Stories** page shows the existing stories and sprints.
+  Under the **Collaborate** category you can add sprints, stories, planning, and documents that can be used in your app. The **Stories** page shows the existing stories and sprints.
 
-	![](attachments/collaborate/stories.png)
+  ![](attachments/collaborate/stories.png)
 
-2.  There is one default sprint called **Get started**, which is automatically created when you create a new project. You need a clean sprint, so delete the **Get started** sprint by clicking on the bin.
+2. There is one default sprint called **Get started**, which is automatically created when you create a new project. You need a clean sprint, so delete the **Get started** sprint by clicking on the bin.
 
-	![](attachments/collaborate/bin.png)
+  ![](attachments/collaborate/bin.png)
 
-3.  Click **New sprint**.
-4.  Under **Plan something**, do the following:
+3. Click **New sprint**.
 
-	* Select **Sprint** (when you are working towards a release of your product, you can add the release planning)
-	* Below **Name** enter **Sprint 1**
-	* Leave the **This sprint comes after** field empty (if there are existing sprints, you can place the new sprint before or after a selected sprint)
-	* Set the **Duration** to **2** (weeks)
+4. Under **Plan something**, do the following:
 
-	{{% image_container width="500"}}
-	![](attachments/collaborate/18580514.png)
-	{{% /image_container %}}
+  * Select **Sprint** (when you are working towards a release of your product, you can add the release planning)
+  * Below **Name** enter **Sprint 1**
+  * Leave the **This sprint comes after** field empty (if there are existing sprints, you can place the new sprint before or after a selected sprint)
+  * Set the **Duration** to **2** (weeks)
 
-	{{% alert type="info" %}}The default duration of a sprint in Mendix is two weeks, which starts the moment you create the sprint. Check **customize** to select a different start date.{{% /alert %}}
+  {{% image_container width="400" %}}![](attachments/collaborate/18580514.png)
+  {{% /image_container %}}
 
-5.  Click **Save**, and the new sprint will be added to your stories overview.
+  {{% alert type="info" %}}The default duration of a sprint in Mendix is two weeks, which starts the moment you create the sprint. Check **customize** to select a different start date.{{% /alert %}}
+
+5. Click **Save**, and the new sprint will be added to your stories overview.
 
 ### 4.1 Adding Story Points
 
@@ -178,12 +178,16 @@ To import stories, follow these steps:
 
 3.  Select **Update stories from Excel**:
 
+	{{% image_container width="400" %}}
 	![](attachments/collaborate/18580502.png)
+	{{% /image_container %}}
 
 4. Click **Browse** to select the example Excel file that contains your user stories.
 5.  Click **Import**, and then scroll to the bottom of the page and click **Next**:
 
+	{{% image_container width="400" %}}
 	![](attachments/collaborate/18580501.png)
+	{{% /image_container %}}
 
     The **Stories** tab will now list your imported content:
 

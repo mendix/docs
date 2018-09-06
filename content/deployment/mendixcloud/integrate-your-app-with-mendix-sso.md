@@ -54,7 +54,7 @@ This how-to uses the [Company Expenses](https://appstore.home.mendix.com/link/ap
 
 	![](attachments/18448695/18581212.png)
 
-	{{% alert type="info" %}}If this microflow is not called during startup, your users will encounter "404 not found" errors when trying to navigate to your app.{{% /alert %}}
+	{{% alert type="info" %}}If this microflow is not called during startup, your users will encounter **404 Not Found** errors when trying to navigate to your app.{{% /alert %}}
 
 Congratulations! Your app now makes use of the AppCloud services. When you deploy your upgraded app in the AppCloud, it will now be automatically added to your [Launchpad](https://home.mendix.com/home/). Opening the app from your Launchpad will automatically log you in with your Mendix account, and you can easily invite other Mendix accounts through app user management.
 

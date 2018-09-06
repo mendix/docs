@@ -1,4 +1,4 @@
----
+Project---
 title: "Export Project Package"
 parent: "dialogs"
 ---
@@ -16,7 +16,7 @@ When creating a project package from you app, it's possible to include a data sn
 
 ### Existing snapshot
 
-Select this option when you want to include an existing snapshot in the package. This option is only available when a snapshot is already present. Snapshots can be created by going to *Team > Add snapshot of data*.
+Select this option when you want to include an existing snapshot in the package. This option is only available when a snapshot is already present. Snapshots can be created by going to *Project > More Versioning > Add snapshot of data*.
 
 ### Existing snapshot
 

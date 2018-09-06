@@ -67,7 +67,9 @@ To add a sprint, follow these steps:
 	* Leave the **This sprint comes after** field empty (if there are existing sprints, you can place the new sprint before or after a selected sprint)
 	* Set the **Duration** to **2** (weeks)
 
+	{{% image_container width="500"}}
 	![](attachments/collaborate/18580514.png)
+	{{% /image_container %}}
 
 	{{% alert type="info" %}}The default duration of a sprint in Mendix is two weeks, which starts the moment you create the sprint. Check **customize** to select a different start date.{{% /alert %}}
 

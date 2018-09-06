@@ -178,19 +178,13 @@ To import stories, follow these steps:
 
 3.  Select **Update stories from Excel**:
 
-	{{% image_container width="400" %}}
-	
-	![](attachments/collaborate/18580502.png)
-	
+	{{% image_container width="400" %}}![](attachments/collaborate/18580502.png)
 	{{% /image_container %}}
 
 4. Click **Browse** to select the example Excel file that contains your user stories.
 5.  Click **Import**, and then scroll to the bottom of the page and click **Next**:
 
-	{{% image_container width="400" %}}
-	
-	![](attachments/collaborate/18580501.png)
-	
+	{{% image_container width="400" %}}![](attachments/collaborate/18580501.png)
 	{{% /image_container %}}
 
     The **Stories** tab will now list your imported content:

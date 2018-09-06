@@ -54,9 +54,7 @@ This how-to uses the [Company Expenses](https://appstore.home.mendix.com/link/ap
 
 	![](attachments/18448695/18581212.png)
 
-	{{% alert type="info" %}}
-	If this microflow is not called during startup, your users will encounter "404 not found" errors when trying to navigate to your app.
-	{{% /alert %}}
+	{{% alert type="info" %}}If this microflow is not called during startup, your users will encounter **404 Not Found** errors when trying to navigate to your app.{{% /alert %}}
 
 Congratulations! Your app now makes use of the AppCloud services. When you deploy your upgraded app in the AppCloud, it will now be automatically added to your [Launchpad](https://home.mendix.com/home/). Opening the app from your Launchpad will automatically log you in with your Mendix account, and you can easily invite other Mendix accounts through app user management.
 
@@ -68,4 +66,4 @@ Congratulations! Your app now makes use of the AppCloud services. When you deplo
 *   [How to deploy a Mendix app on Azure](/deployment/azure/how-to-deploy-a-mendix-app-on-azure)
 *   [Sending Email](sending-email)
 
-After completing this how-to on configuring AppCloud services, you might want to check out [how to improve logging in with different types of user accounts](different-user-logins-when-integrated-with-mendix-sso).
+After completing this how-to on configuring AppCloud services, check out [how to improve logging in with different types of user accounts](different-user-logins-when-integrated-with-mendix-sso).

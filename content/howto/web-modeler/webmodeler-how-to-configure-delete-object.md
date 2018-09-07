@@ -42,10 +42,13 @@ To configure the domain model and create the page, do the following:
 2. Create entity *Customer*. For more information on how to create the entity, see section [3 Adding New Entities](../../refguide/web-modeler/domain-models-wm) in *Domain Models Overview in the Web Modeler*.
 
 3. For the **Customer** entity, create an attribute (for more information on how to create an attribute, see section [4 Adding New Attributes](../../refguide/web-modeler/domain-models-wm) in *Domain Models Overview in the Web Modeler*) and do the following:<br/>
+
     a. Set the **Name** of the attribute to *Name*.<br/>
+    
     b. Set the [**Type**](../../refguide/web-modeler/domain-models-attributes-wm) to **String**.<br/>
 
     ![](attachments/webmodeler-how-to-configure-delete-object/wm-name-attribute.png)<br/>
+    
     c. Click **Create** to add the new attribute.<br/>
 
     ![](attachments/webmodeler-how-to-configure-delete-object/wm-customer-entity.png)<br/>
@@ -84,7 +87,7 @@ Now we will configure a list view and will add a button with [**Delete Object** 
 
 4. Select the text *Name* and do the following in **Properties**:<br/>a. In **Content**, delete the text *Name*.<br/>
 
-    b. Click **Add attribute** (or press <kbd>Ctrl<kbd/> + <kbd>Space<kbd/>) and select the **Name** attribute. <br/>
+    b. Click **Add attribute** (or press <kbd>Ctrl</kbd> + <kbd>Space</kbd>) and select the **Name** attribute. <br/>
 
     ![](attachments/webmodeler-how-to-configure-delete-object/wm-text-content.png)<br/>
 
@@ -140,21 +143,21 @@ We can also configure the [**Delete Object** action](../../refguide/web-modeler/
 
 8. Open the **Properties** of the **Text Box**, and in **Data Source**, set **Attribute** to **Name** (the label for the text box will be changed to **Name** automatically).  
 
-  ![](attachments/webmodeler-how-to-configure-delete-object/wm-text-box-name.png)
+   ![](attachments/webmodeler-how-to-configure-delete-object/wm-text-box-name.png)
 
 9. Repeat step 7 to add one more **Text Box** to the page.
 
 10. Open the **Properties** of the **Text Box**, and in **Data Source**, set **Attribute** to **Address** (the label for the text box will be changed to **Address** automatically).
 
-  ![](attachments/webmodeler-how-to-configure-delete-object/wm-text-box-address.png)
+    ![](attachments/webmodeler-how-to-configure-delete-object/wm-text-box-address.png)
 
 11. In **Toolbox** > **Widgets** > **Buttons** find **Delete Object**, drag and drop it inside the data view. 
 
 12. The button is already preconfigured: its **On Click Action** is set to **Delete Object**, and **Caption** is set to **Delete**. But we will add some styling to it. Do the following:<br/>
 
-   a. In the **General** section, set **Style** to **Danger**.<br/>
+    a. In the **General** section, set **Style** to **Danger**.<br/>
 
-   b. In the **Design** section, set **Align Self** to **Right**.<br/>
+    b. In the **Design** section, set **Align Self** to **Right**.<br/>
 
 Now we have configured the data view that will show you the customer's name and address once you select this customer in a list. 
 

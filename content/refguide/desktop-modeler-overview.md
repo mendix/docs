@@ -26,7 +26,7 @@ The table below describes all the available dockable window panes.
 
 | Pane | Description |
 | --- | --- |
-| <a name="breakpoints">Breakpoints</a> (via Debug Windows) | Shows all breakpoints in the project. You can enable/disable breakpoints from here. |
+| Breakpoints {#breakpoints} (via Debug Windows) | Shows all breakpoints in the project. You can enable/disable breakpoints from here. |
 | <a name="changes">Changes</a> | For [Team Server](team-server) projects, this pane shows the local changes to the project since the last commit. You can commit changes, update to the latest revision and view the history from here. |
 | <a name="connector">Connector</a> | Shows what elements can be connected to the currently selected element. For example, when a button is a selected, the connector will show microflows that you can drag and drop onto the button to connect them. |
 | <a name="console">Console</a> | Shows the output of the Mendix Runtime while running an application. |
@@ -103,7 +103,7 @@ Using items in the menu bar of the Modeler, you can create new projects, deploy 
 | Stories | Opens the dockable window pane [Stories](#stories). |   |
 | Toolbox | Opens the dockable window pane [Toolbox](#toolbox). |   |
 |  Debug Windows > Breakpoints | Opens the dockable window pane [Breakpoints](#breakpoints). |   |
-|  Debug Windows > Debugger | Opens the dockable window pane [Debugger](#debigger). |   |
+|  Debug Windows > Debugger | Opens the dockable window pane [Debugger](#debugger). |   |
 |  Debug Windows > Variables | Opens the dockable window pane [Variables](#variables). |   |
 | Full Screen | Temporarily hides all dockable window panes so that the tabbed documents can be shown in full screen. |<kbd>F11</kbd> |
 | Reset Layout | Resets the layout of the Modeler to factory defaults. |   |
@@ -147,7 +147,7 @@ Using items in the menu bar of the Modeler, you can create new projects, deploy 
 | Stop | Stops the currently running project. | <kbd>Shift</kbd> + <kbd>F5</kbd> |
 | Configuration | Sets the configuration level (**Default**). | |
 | Default log level | Allows setting the default log level before running the project locally. The options are **Trace**, **Debug**, **Info** (default), **Warning**, **Error**, **Critical**. |   |
-| Debug | Allows you to connect the [Debugger](debugger). | |
+| Debug | Allows you to connect the [Debugger](#debugger). | |
 | Responsive Browser | Shows the web client for the currently running project in the browser. | <kbd>F9</kbd> |
 | Tablet Browser | Shows the tablet mobile client for the currently running project in the browser. | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F9</kbd> |
 | Phone Browser | Shows the mobile client for the currently running project in the browser. | <kbd>Ctrl</kbd> + <kbd>F9</kbd> |

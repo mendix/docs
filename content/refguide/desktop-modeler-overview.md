@@ -103,7 +103,7 @@ Using items in the menu bar of the Modeler, you can create new projects, deploy 
 | Stories | Opens the dockable window pane [Stories](#stories). |   |
 | Toolbox | Opens the dockable window pane [Toolbox](#toolbox). |   |
 |  Debug Windows > Breakpoints | Opens the dockable window pane [Breakpoints](#breakpoints). |   |
-|  Debug Windows > Debugger | Opens the dockable window pane [Debugger](#debigger). |   |
+|  Debug Windows > Debugger | Opens the dockable window pane [Debugger](#debugger). |   |
 |  Debug Windows > Variables | Opens the dockable window pane [Variables](#variables). |   |
 | Full Screen | Temporarily hides all dockable window panes so that the tabbed documents can be shown in full screen. |<kbd>F11</kbd> |
 | Reset Layout | Resets the layout of the Modeler to factory defaults. |   |

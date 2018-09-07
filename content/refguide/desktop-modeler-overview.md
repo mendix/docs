@@ -26,20 +26,20 @@ The table below describes all the available dockable window panes.
 
 | Pane | Description |
 | --- | --- |
-| Breakpoints {#breakpoints} (via Debug Windows) | Shows all breakpoints in the project. You can enable/disable breakpoints from here. |
-| <a name="changes">Changes</a> | For [Team Server](team-server) projects, this pane shows the local changes to the project since the last commit. You can commit changes, update to the latest revision and view the history from here. |
-| <a name="connector">Connector</a> | Shows what elements can be connected to the currently selected element. For example, when a button is a selected, the connector will show microflows that you can drag and drop onto the button to connect them. |
-| <a name="console">Console</a> | Shows the output of the Mendix Runtime while running an application. |
-| <a name="debugger">Debugger</a> (via Debug Windows) | This can be used to debug your application. |
-| <a name="documentation">Documentation</a> | Shows the documentation for the currently selected element (if applicable). |
-| <a name="error-list">Error List</a> | Shows the errors and warning currently in your project. |
-| <a name="find-results">Find Results</a> | Shows the results of the latest find action. You can search for text, for usages of an element (for example, attribute) and for unused items. There are two **Find Results** panes. If you lock the results of the first pane, the second one will be used for subsequent find operations until you unlock it. |
-| <a name="get-started">Get Started</a> | Shows useful resources for getting started with the Mendix Modeler. |
-| <a name="project-explorer">Project Explorer</a> | Shows the complete structure of your project including all documents inside the modules. By default the active document is always selected in the project explorer so you can quickly see where the document you are editing is in the tree. You can change this behavior in the **Edit** > **Preferences** window pane. |
-| <a name="properties">Properties</a> | Shows properties of the currently selected element. This is where a lot of editing in the Modeler takes place. |
-| <a name="stories">Stories</a> | For [Team Server](team-server) enabled projects, this pane shows the stories of the current sprint. |
-| <a name="toolbox">Toolbox</a> | Shows the tools that can be used in the current editor. For example, in a page you can insert all kinds of widgets (for example, text box and data view) by dragging them from the **Toolbox** to your form. |
-| <a name="variables">Variables</a> (via Debug Windows) | You can view the current values of variables here when debugging your application. |
+| Breakpoints (via Debug Windows) | Shows all breakpoints in the project. You can enable/disable breakpoints from here. |
+| Changes | For [Team Server](team-server) projects, this pane shows the local changes to the project since the last commit. You can commit changes, update to the latest revision and view the history from here. |
+| Connector | Shows what elements can be connected to the currently selected element. For example, when a button is a selected, the connector will show microflows that you can drag and drop onto the button to connect them. |
+| Console | Shows the output of the Mendix Runtime while running an application. |
+| Debugger (via Debug Windows) | This can be used to debug your application. |
+| Documentation | Shows the documentation for the currently selected element (if applicable). |
+| Error List | Shows the errors and warning currently in your project. |
+| Find Results | Shows the results of the latest find action. You can search for text, for usages of an element (for example, attribute) and for unused items. There are two **Find Results** panes. If you lock the results of the first pane, the second one will be used for subsequent find operations until you unlock it. |
+| Get Started | Shows useful resources for getting started with the Mendix Modeler. |
+| Project Explorer | Shows the complete structure of your project including all documents inside the modules. By default the active document is always selected in the project explorer so you can quickly see where the document you are editing is in the tree. You can change this behavior in the **Edit** > **Preferences** window pane. |
+| Properties | Shows properties of the currently selected element. This is where a lot of editing in the Modeler takes place. |
+| Stories | For [Team Server](team-server) enabled projects, this pane shows the stories of the current sprint. |
+| Toolbox | Shows the tools that can be used in the current editor. For example, in a page you can insert all kinds of widgets (for example, text box and data view) by dragging them from the **Toolbox** to your form. |
+| Variables (via Debug Windows) | You can view the current values of variables here when debugging your application. |
 
 ## 3 Document Tabs
 
@@ -91,20 +91,20 @@ Using items in the menu bar of the Modeler, you can create new projects, deploy 
 
 | Menu Item | Description | Shortcut Key |
 | --- | --- | --- |
-| Changes | Opens the dockable window pane [Changes](#changes). |   |
-| Connector | Opens the dockable window pane [Connector](#connector). |   |
-| Console | Opens the dockable window pane [Console](#console). |   |
-| Documentation | Opens the dockable window pane [Documentation](#documentation). |   |
-| Error List | Opens the dockable window pane [Error List](#error-list). |   |
-| Find Results 1 | Opens the dockable window pane [Find Results 1](#find-results). |   |
-| Find Results 2 | Opens the dockable window pane [Find Results 2](#find-results). |   |
-| Project Explorer | Opens the dockable window pane [Project Explorer](#project-explorer). |   |
-| Properties | Opens the dockable window pane [Properties](#properties). |   |
-| Stories | Opens the dockable window pane [Stories](#stories). |   |
-| Toolbox | Opens the dockable window pane [Toolbox](#toolbox). |   |
-|  Debug Windows > Breakpoints | Opens the dockable window pane [Breakpoints](#breakpoints). |   |
-|  Debug Windows > Debugger | Opens the dockable window pane [Debugger](#debugger). |   |
-|  Debug Windows > Variables | Opens the dockable window pane [Variables](#variables). |   |
+| Changes | Opens the dockable window pane [Changes](#dockable-panes). |   |
+| Connector | Opens the dockable window pane [Connector](#dockable-panes). |   |
+| Console | Opens the dockable window pane [Console](#dockable-panes). |   |
+| Documentation | Opens the dockable window pane [Documentation](#dockable-panes). |   |
+| Error List | Opens the dockable window pane [Error List](#dockable-panes). |   |
+| Find Results 1 | Opens the dockable window pane [Find Results 1](#dockable-panes). |   |
+| Find Results 2 | Opens the dockable window pane [Find Results 2](#dockable-panes). |   |
+| Project Explorer | Opens the dockable window pane [Project Explorer](#dockable-panes). |   |
+| Properties | Opens the dockable window pane [Properties](#dockable-panes). |   |
+| Stories | Opens the dockable window pane [Stories](#dockable-panes). |   |
+| Toolbox | Opens the dockable window pane [Toolbox](#dockable-panes). |   |
+|  Debug Windows > Breakpoints | Opens the dockable window pane [Breakpoints](#dockable-panes). |   |
+|  Debug Windows > Debugger | Opens the dockable window pane [Debugger](#dockable-panes). |   |
+|  Debug Windows > Variables | Opens the dockable window pane [Variables](#dockable-panes). |   |
 | Full Screen | Temporarily hides all dockable window panes so that the tabbed documents can be shown in full screen. |<kbd>F11</kbd> |
 | Reset Layout | Resets the layout of the Modeler to factory defaults. |   |
 

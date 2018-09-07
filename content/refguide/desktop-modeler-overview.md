@@ -26,7 +26,7 @@ The table below describes all the available dockable window panes.
 
 | Pane | Description |
 | --- | --- |
-| <a name="breakpoints">Breakpoints</a> (via Debug Windows) | Shows all breakpoints in the project. You can enable/disable breakpoints from here. |
+| Breakpoints {#breakpoints} (via Debug Windows) | Shows all breakpoints in the project. You can enable/disable breakpoints from here. |
 | <a name="changes">Changes</a> | For [Team Server](team-server) projects, this pane shows the local changes to the project since the last commit. You can commit changes, update to the latest revision and view the history from here. |
 | <a name="connector">Connector</a> | Shows what elements can be connected to the currently selected element. For example, when a button is a selected, the connector will show microflows that you can drag and drop onto the button to connect them. |
 | <a name="console">Console</a> | Shows the output of the Mendix Runtime while running an application. |

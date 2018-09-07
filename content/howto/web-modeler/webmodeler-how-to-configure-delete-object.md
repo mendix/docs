@@ -48,11 +48,10 @@ To configure the domain model and create the page, do the following:
     
     b. Set the [**Type**](../../refguide/web-modeler/domain-models-attributes-wm) to **String**.<br/>
 
-    ![](attachments/webmodeler-how-to-configure-delete-object/wm-name-attribute.png)<br/>
-    
+    ![](attachments/webmodeler-how-to-configure-delete-object/wm-name-attribute.png)<br/>    
     c. Click **Create** to add the new attribute.<br/>
 
-    ![](attachments/webmodeler-how-to-configure-delete-object/wm-customer-entity.png)<br/>
+    ![](attachments/webmodeler-how-to-configure-delete-object/wm-customer-entity.png)
 
 4. Repeat step 3 to create an attribute *Address* of string type.
 
@@ -83,7 +82,6 @@ Now we will configure a list view and will add a button with [**Delete Object** 
     b.  Set **Entity** to **Customer**.<br/>
 
     ![](attachments/webmodeler-how-to-configure-delete-object/wm-list-view-properties.png) <br/>
-
     Now the list view is connected to the **Customer** entity. <br/>
 
 4.  Select the text *Name* and do the following in **Properties**:<br/>
@@ -93,7 +91,6 @@ Now we will configure a list view and will add a button with [**Delete Object** 
     b. Click **Add attribute** (or press <kbd>Ctrl</kbd> + <kbd>Space</kbd>) and select the **Name** attribute. <br/>
 
     ![](attachments/webmodeler-how-to-configure-delete-object/wm-text-content.png)<br/>
-
     Now the text widget is connected to the **Name** attribute, and will show us the customers names in a list.<br/>
 
 5.  Click the button displayed as arrow and delete it.
@@ -130,7 +127,7 @@ We can also configure the [**Delete Object** action](../../refguide/web-modeler/
 
     b. Set **Widget** to **List View with entity Customer**. Now the data source for the data view is the list view that is placed on the same page.<br/>
 
-    ![](attachments/webmodeler-how-to-configure-delete-object/wm-data-view-list-widget.png)<br/>
+    ![](attachments/webmodeler-how-to-configure-delete-object/wm-data-view-list-widget.png)
 
 5. We need to fill the data view with data. In **Toolbox** >**Widgets** > **Typography**, select **Text**, drag and drop it inside data view content. 
 

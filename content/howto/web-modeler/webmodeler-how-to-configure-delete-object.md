@@ -85,7 +85,9 @@ Now we will configure a list view and will add a button with [**Delete Object** 
 
     Now the list view is connected to the **Customer** entity. <br/>
 
-4. Select the text *Name* and do the following in **Properties**:<br/>a. In **Content**, delete the text *Name*.<br/>
+4. Select the text *Name* and do the following in **Properties**:<br/>
+
+    a. In **Content**, delete the text *Name*.<br/>
 
     b. Click **Add attribute** (or press <kbd>Ctrl</kbd> + <kbd>Space</kbd>) and select the **Name** attribute. <br/>
 

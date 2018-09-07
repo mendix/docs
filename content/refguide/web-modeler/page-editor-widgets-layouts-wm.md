@@ -3,6 +3,7 @@
 title: "Layout Widgets in the Web Modeler"
 parent: "page-editor-widgets-wm"
 description: "Describes layout widgets in the Mendix Web Modeler."
+menu_order: 60
 tags: ["web modeler", "page editor", "layout", "layout widgets", "widgets"]
 ---
 

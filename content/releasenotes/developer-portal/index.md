@@ -8,7 +8,7 @@ title: "Developer Portal"
 
 #### Improvements
 
-* Applications created through our APIs will now have the Web Modeler enabled if the template the apps are based on is suitable for use in the Web Modeler.
+* An application created through our APIs now has the Web Modeler enabled if the template the app is based on is suitable for use in the Web Modeler.
 
 #### Fixes
 

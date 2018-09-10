@@ -1,5 +1,5 @@
 ---
-title: "Parse and format date function calls"
+title: "Parse & Format Date Function Calls"
 parent: "expressions"
 description: "Describes the functions for parsing datetimes from strings using a specified pattern or producing a string from a datetime in Mendix."
 ---

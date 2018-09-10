@@ -1,24 +1,25 @@
 ---
 title: "Developer Portal"
 ---
+
 ## 2018
 
 ### September 10th, 2018
 
 #### Improvements
 
-* Applications created through our APIs will now have the Web Modeler enabled if the template they were based on is suitable for use in the Web Modeler.
+* Applications created through our APIs will now have the Web Modeler enabled if the template the apps are based on is suitable for use in the Web Modeler.
 
 #### Fixes
 
-* We have loosened an unnecessarily strict constraint on email domains during signup. You can now sign up with email domains with single-character sub-domains.(Ticket #68210 , #68386)
+* We have loosened an unnecessarily strict constraint on email domains during signup. You can now sign up with email domains with single-character sub-domains. (Tickets 68210 , 68386)
 
 ### August 21st, 2018
 
 #### Fixes
 
-- We have fixed a bug that was causing some of our Mendix Cloud v4 users to unsubscribe from alerting lists after changing environment privilege settings. 
-- We have addressed an issue which caused some of our Mendix Cloud v4 users to not to be able to see their archived logs from previous day.
+* We have fixed a bug that was causing some Mendix Cloud v4 users to unsubscribe from alerting lists after changing environment privilege settings. 
+* We have addressed an issue that caused some Mendix Cloud v4 users to not to be able to see their archived logs from previous day.
 
 ### August 13th, 2018
 

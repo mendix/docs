@@ -3,6 +3,16 @@ title: "Developer Portal"
 ---
 ## 2018
 
+### September 10th, 2018
+
+#### Improvements
+
+* Applications created through our APIs will now have the Web Modeler enabled if the template they were based on is suitable for use in the Web Modeler.
+
+#### Fixes
+
+* We have loosened an unnecessarily strict constraint on email domains during signup. You can now sign up with email domains with single-character sub-domains.(Ticket #68210 , #68386)
+
 ### August 21st, 2018
 
 #### Fixes

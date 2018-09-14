@@ -3,7 +3,7 @@ title: "Sync the Web Modeler with the Desktop Modeler"
 category: "Web Modeler"
 menu_order: 10 
 tags: ["web modeler", "desktop modeler"]
-#IF MOVING LOCATION OF THIS DOC FOR DOCUMENTATION PURPOSES, PLAN WITH THE WEB MODELER TEAM, AS THIS DOC IS MAPPED TO THE PRODUCT.
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction

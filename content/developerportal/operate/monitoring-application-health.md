@@ -4,7 +4,7 @@ category: "Operate"
 menu_order: 20
 description: "This page describes how to monitor the application health."
 tags: ["Monitoring","Mendix Cloud","Developer Portal","Performance","Health"]
-#If moving location for documentation purposes, plan with the Cloud Portal Team, as this doc is mapped to the product.
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction

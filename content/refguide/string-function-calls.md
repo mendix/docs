@@ -2,7 +2,7 @@
 title: "String Function Calls"
 parent: "expressions"
 description: "Describes the functions for converting and inspecting strings in Mendix."
-#If moving location for documentation purposes, plan with the Cloud Portal Team, as this doc is mapped to the product.
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 These are functions to convert and inspect [strings](data-types). Note that these functions never change the string itself, they only return a new value.

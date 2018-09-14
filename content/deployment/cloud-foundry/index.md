@@ -2,6 +2,7 @@
 title: "Cloud Foundry"
 description: "How to deploy a Mendix App on a Cloud Foundry environment which does not have Mendix support in the Developer Portal"
 tags: ["Cloud Foundry", "Pivotal", "Deploy", "Bind"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction

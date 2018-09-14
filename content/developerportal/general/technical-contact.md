@@ -3,7 +3,7 @@ title: "Technical Contact"
 category: "General"
 description: "This page describes the role of a technical contact."
 tags: ["Technical Contact","Settings","Developer Portal"]
-#If moving location for documentation purposes, plan with the Cloud Portal Team, as this doc is mapped to the product.
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction

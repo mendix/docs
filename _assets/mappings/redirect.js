@@ -2096,6 +2096,10 @@ module.exports = {
       to: "/deployment/cloud-foundry/index"
     },
 	{
+      from: "/deploy-a-mendix-app-to-cloud-foundry",
+      to: "/deployment/cloud-foundry/index"
+    },
+	{
       from: "/bestpractices/How+to+execute+an+SQL+statement+on+an+external+database",
       to: "/howto/integration/how-to-execute-an-sql-statement-on-an-external-database"
     },

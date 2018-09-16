@@ -228,18 +228,18 @@ returns:
 
 ## contains
 
-Determines whether a substring occurs in the original string.
+Determines whether a string (first parameter) contains another string (second parameter).
 
 This expression: 
 
 ```java
-contains('mystring', 'otherstring')
+contains('stringtosearchin', 'stringtosearchfor')
 ```
 
 is equivalent to the following expression:
 
 ```java
-find('mystring', 'otherstring') != -1
+find('stringtosearchin', 'stringtosearchfor') != -1
 ```
 
 {{% alert type="warning" %}}

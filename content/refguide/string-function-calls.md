@@ -228,7 +228,7 @@ returns:
 
 ## contains
 
-Determines whether a string (first parameter) contains another string (second parameter).
+Determines whether the original string (first parameter) contains a substring (second parameter).
 
 This expression: 
 

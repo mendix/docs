@@ -242,7 +242,7 @@ is equivalent to the following expression:
 find('stringtosearchin', 'stringtosearchfor') != -1
 ```
 
-Searching for an empty variable or empty string, like this expression where $param = '':
+Searching for an empty variable or empty string, like this expression where `$param = ''`:
 
 ```java
 contains('stringtosearchin', $param)

@@ -2,8 +2,8 @@
 title: "Annotations"
 parent: "domain-model"
 tags: ["domain model", "annotation"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
-
 
 An annotation is an element that can be used to put comments in a domain model.
 

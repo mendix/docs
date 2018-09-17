@@ -1,5 +1,6 @@
 ---
 title: "Develop a Smart SAP Catalog"
+#There is no category or parent here as we do not want this document linked into the menu. It is only for use by SAP for TechEd 2018.
 ---
 
 ## 1 Introduction

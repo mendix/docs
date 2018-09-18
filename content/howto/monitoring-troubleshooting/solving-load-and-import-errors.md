@@ -17,7 +17,7 @@ Read on to find out how to determine the origin of these errors, and possible wa
 ## 2 Determine the actual problems
 
 Click the **Details >>** button to show the actual errors that occurred while loading your project:
-    
+
 ![](attachments/18448577/18580052.png)
 
 These detailed messages tell you the following:

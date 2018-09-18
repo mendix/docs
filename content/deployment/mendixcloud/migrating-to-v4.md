@@ -1,15 +1,15 @@
 ---
 title: "Migrate to Mendix Cloud v4"
 category: "Mendix Cloud"
-description: "This page describes how to migrate your App from a Mendix Cloud v3 node to a Mendix Cloud v4 node."
+description: "This page describes how to migrate your app from a Mendix Cloud v3 node to a Mendix Cloud v4 node."
 tags: ["App","Migrate","Developer Portal","v3","v4","Node"]
 ---
 
 ## 1 Introduction
 
-This how-to describes everything about the migration from v3 to v4.
+This how-to tells you how to migrate your app from a Mendix Cloud v3 node to a Mendix Cloud v4 node.
 
-**This how-to will teach you how to do the following:**
+**It will teach you how to do the following:**
 
 *   Migrate your licensed app from Mendix Cloud v3 to v4
 

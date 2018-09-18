@@ -2103,6 +2103,10 @@ module.exports = {
       from: "/bestpractices/How+to+execute+an+SQL+statement+on+an+external+database",
       to: "/howto/integration/how-to-execute-an-sql-statement-on-an-external-database"
     },
+	{
+      from: "/howto7/solving-load-and-import-errors",
+      to: "/howto/monitoring-troubleshooting/solving-load-and-import-errors"
+    },	
     /****************************************************
      * Mendix Cloud
      ****************************************************/
@@ -7095,6 +7099,10 @@ module.exports = {
       "from": "/refguide7/Desktop+profile",
       "to": "/refguide/desktop-profile"
     },
+	{
+      "from": "/refguide7/desktop-webmodeler",
+      "to": "/howto/web-modeler/syncing-webmodeler-desktop"
+    },	
     {
       "from": "/refguide7/Developing+Hybrid+Mobile+Apps",
       "to": "/refguide/developing-hybrid-mobile-apps"
@@ -7127,7 +7135,11 @@ module.exports = {
       "from": "/refguide7/Download+From+Team+Server+Dialog",
       "to": "/refguide/download-from-version-control-dialog"
     },
-    {
+	{
+      "from": "/refguide7/drop-down-widget",
+      "to": "/refguide/drop_down"
+    },
+	{
       "from": "/refguide7/Drop-down",
       "to": "/refguide/drop_down"
     },
@@ -7475,6 +7487,10 @@ module.exports = {
       "from": "/refguide7/Microflow+Expressions",
       "to": "/refguide/expressions"
     },
+	{
+      "from": "/refguide7/microflow-expressions",
+      "to": "/refguide/expressions"
+    },	
     {
       "from": "/refguide7/Microflow+Source",
       "to": "/refguide/microflow-source"

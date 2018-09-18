@@ -1,7 +1,7 @@
 ---
-title: "Solve Load and Import Errors"
+title: "Solve Load & Import Errors"
 category: "Monitoring & Troubleshooting"
-tags: []
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 This how-to will help you to solve problems that may occur when opening a project in the Mendix Desktop Modeler.
 

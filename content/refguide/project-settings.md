@@ -42,9 +42,19 @@ Here you can select a microflow that is automatically executed when a shutdown c
 
 ### 3.5 Health Check
 
-Select a microflow that reports on the health status of a running application. When this microflow returns an empty string, the application is healthy; otherwise, the string represents an explanation of why the application is not healthy.
+Here you can select a microflow performs the checks on a running app that you think are required to assess the app's health.
 
-### 3.6 First Day of the Week<a name="first-day-of-the-week"></a>
+The result of each check is returned as a string, which is displayed in the [Developer Portal](../developerportal/deploy/environments). When the microflow returns an empty string, the application is healthy; otherwise, the string presents an explanation of why the application is not healthy.
+
+This microflow gets called every few minutes to check if the app is still healthy. This is done by executing it using m2ee on the admin port of your app. For more information, see the section [Health Check](monitoring-mendix-runtime#check-health) in *Monitoring Mendix Runtime*.
+
+{{% alert type="info" %}}
+
+The health check microflow is specific to [Mendix Cloud](../deployment/mendixcloud/). For other clouds, the admin port can be called, or the health check microflow can be exposed through a REST API.
+
+{{% /alert %}}
+
+### 3.6 First Day of the Week {#first-day-of-the-week}
 
 The first day of the week setting determines the first day of the week in the date picker widget.
 

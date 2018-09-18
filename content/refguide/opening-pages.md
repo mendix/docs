@@ -1,6 +1,7 @@
 ---
 title: "Opening Pages"
 parent: "page-concepts"
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 You can open other pages from many many places within pages. Pages can be opened either in the content pane of the browser or in a new pop-up window. Where the page is opened depends on the [layout type](layout) of its [layout](layout). Pages with the layout type **Modal pop-up** or **Pop-up** will open as a pop-up window, and other pages will be opened in the content. If the target page layout is of the type **Legacy**, then the page location must be configured manually (for details, see the [Location](#location) section below).

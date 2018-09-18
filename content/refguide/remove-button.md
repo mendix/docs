@@ -1,6 +1,7 @@
 ---
 title: "Remove button"
 parent: "control-bar"
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 The remove button is a button specifically made for the reference set selector. With this button the end-user can remove objects that have been added to the reference set selector.

@@ -2,6 +2,7 @@
 title: "System Requirements"
 category: "General"
 description: "Presents the system requirements for using the Mendix Platform."
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## Desktop Modeler

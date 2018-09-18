@@ -1,6 +1,7 @@
 ---
 title: "Merge"
 parent: "splits"
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 A merge can be used to combine multiple sequence flows into one sequence flow. Imagine a situation where the flow has been separated in the part preceding the merge to execute specific actions. After this the same action needs to be executed for all the separated flows. In this situation a merge can be used to avoid redundancy.

@@ -3,7 +3,6 @@ title: "Build a Mobile To-Do App"
 parent: "mendix-tutorials"
 description: "This how-to series will teach you how to create a to-do app in 20 minutes using the Mendix Mobile Quick Starter app."
 tags: ["mobile", "starter", "to-do", "app"]
-frontpage_featured: true
 ---
 
 ## 1 Introduction

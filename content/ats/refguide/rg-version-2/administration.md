@@ -7,7 +7,7 @@ tags: ["ats", "administrator", "administration"]
 
 {{% alert type="info" %}}
 
-Tenant administration is a feature which is only available in the On-Premise version of ATS.
+Tenant administration is a feature that is only available in the on-premises version of ATS.
 
 {{% /alert %}}
 

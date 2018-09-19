@@ -4,6 +4,7 @@ category: "Web Modeler"
 description: "Describes various features of the Mendix Web Modeler."
 menu_order: 10
 tags: ["web modeler", "desktop modeler"]
+frontpage_featured: true
 ---
 
 ## 1 Introduction {#web-modeler-overview}

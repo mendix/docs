@@ -3,7 +3,6 @@ title: "Build a Simple HRM App"
 parent: "mendix-tutorials"
 description: "This series of Mendix How-To's will guide you through the process of creating a simple human resource management (HRM) application."
 tags: ["hrm", "human resources management", "human resources", "app", "developer portal"]
-frontpage_featured: true
 ---
 
 The following how-to's will guide you through the process of creating a simple human resource management (HRM) application with the Mendix Desktop Modeler:

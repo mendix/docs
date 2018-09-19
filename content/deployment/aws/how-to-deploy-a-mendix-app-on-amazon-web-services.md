@@ -52,11 +52,7 @@ The first thing to do when you want to run a Mendix instance on AWS is adding a 
 
 9. In the **Region** section, select the region where you want the server to run. We'll leave it at US East (N. Virginia) for this how-to.
 
-    {{% alert type="info" %}}
-
-    The region where you server runs is not necessarily where you are currently located. If you are in the US and your app users are mostly in Japan it's better to select Asia Pacific (Tokyo).
-
-    {{% /alert %}}
+    {{% alert type="info" %}}The region where you server runs is not necessarily where you are currently located. If you are in the US and your app users are mostly in Japan it's better to select Asia Pacific (Tokyo).{{% /alert %}}
 
 10. In the **Security Group** section make sure the instance is accessible through SSH, HTTP, and HTTPS. You can change these settings later.
 
@@ -117,11 +113,7 @@ Now that you've got your Mendix instance up and running it's time to run an app 
 
     The deployment package will be stored in the **releases** folder of your project folder.
 
-    {{% alert type="info" %}}
-
-    Your app must be converted to Mendix 5.18 or higher before it can run on Amazon Web Services.
-
-    {{% /alert %}}
+    {{% alert type="info" %}}Your app must be converted to Mendix 5.18 or higher before it can run on Amazon Web Services.{{% /alert %}}
 
 ## 4 Uploading the Deployment Package to AWS
 

@@ -7283,7 +7283,11 @@ module.exports = {
       "from": "/refguide7/History+Dialog",
       "to": "/refguide/history-dialog"
     },
-    {
+	{
+      "from": "/refguide7/horizontal-split-pane",
+      "to": "/refguide/scroll-container"
+    },	
+	{
       "from": "/refguide7/If+expressions",
       "to": "/refguide/if-expressions"
     },
@@ -8154,6 +8158,10 @@ module.exports = {
       "from": "/refguide7/Version+Control+Scenarios",
       "to": "/refguide/version-control-scenarios"
     },
+	{
+      "from": "/refguide7/vertical-split-pane",
+      "to": "/refguide/scroll-container"
+    },	
     {
       "from": "/refguide7/XML+Inheritance+and+Choice",
       "to": "/refguide/xml-inheritance-and-choice"

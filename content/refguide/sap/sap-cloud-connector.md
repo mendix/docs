@@ -3,6 +3,7 @@ title: "SAP Cloud Connector"
 category: "SAP"
 description: "Presents reference information on the SAP Cloud Connector."
 tags: ["SAP", "SAP Cloud Platform", "on-premises", "Cloud Connector"]
+frontpage_featured: true
 ---
 
 ## 1 Introduction

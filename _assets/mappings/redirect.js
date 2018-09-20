@@ -2131,10 +2131,6 @@ module.exports = {
       to: "/deployment/mendixcloud/different-user-logins-when-integrated-with-mendix-sso"
     },
     {
-      from: "/mendixcloud/How+to+deploy+a+Mendix+app+on+Amazon+Web+Services",
-      to: "/deployment/aws/how-to-deploy-a-mendix-app-on-amazon-web-services"
-    },
-    {
       from: "/mendixcloud/How+to+deploy+a+Mendix+app+on+Azure",
       to: "/deployment/azure/how-to-deploy-a-mendix-app-on-azure"
     },
@@ -2189,10 +2185,6 @@ module.exports = {
     {
       from: "/mendixcloud/Sending+Email",
       to: "/deployment/mendixcloud/sending-email"
-    },
-    {
-      from: "/deployment/mendixcloud/how-to-deploy-a-mendix-app-on-amazon-web-services",
-      to: "/deployment/aws/how-to-deploy-a-mendix-app-on-amazon-web-services"
     },
     {
       from: "/deployment/mendixcloud/how-to-deploy-a-mendix-app-on-azure",

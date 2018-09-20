@@ -206,7 +206,6 @@ deployment:
   space: "Deployment"
   priority: false
   menu_categories:
-    - "Amazon Web Services"
     - "Azure"
     - "Cloud Foundry"
     - "Docker"

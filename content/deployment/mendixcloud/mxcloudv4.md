@@ -6,7 +6,7 @@ tags: ["Cloud", "Mendix Cloud", "V4", "Version 4", "FAQ", "V3"]
 
 ## 1 What Is Mendix Cloud v4?
 
-Mendix Cloud v4 is the latest version of the Mendix Cloud, where licensed Mendix apps are deployed to a scalable, enterprise-grade cloud platform.
+Mendix Cloud v4 is the latest version of the Mendix Cloud: where licensed Mendix apps are deployed to a scalable, enterprise-grade cloud platform.
 
 V4 was launched in Q1 2017. As in v3, applications are deployed via the Mendix Developer Portal or our [APIs](/apidocs-mxsdk/apidocs/deploy-api). Unlike v3, the applications run on Cloud Foundry clusters that are deployed on highly available Amazon Web Services (AWS) regions. Apps can run in the EU, US, Japan, or the UK.
 

@@ -7,6 +7,14 @@ tags: ["App","Troubleshoot","Developer Portal","Cache","Mendix Cloud"]
 
 ## 1 Introduction
 
+{{% alert type="info" %}}
+
+This information is only relevant for apps built using Desktop Modeler/Runtime versions 4, 5, and 6.
+
+The version 7 runtime is stateless and does not cache Mendix objects on the server. See the [Mendix Desktop Modeler Release Notes 7.0](/releasenotes/desktop-modeler/7.0) for more information.
+
+{{% /alert %}}
+
 The "Cache" tab can be found on the **Metrics** page of your Cloud node. It can be used to monitor all Mendix objects that are currently being held in the memory of your environment.
 
 ## 2 About the "Cache" tab in the Mendix Cloud

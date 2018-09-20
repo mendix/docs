@@ -74,35 +74,37 @@ Some of the app has been written already, so you need to import those pieces int
 
 	![](attachments/modify-a-mendix-questionnaire-for-sap-successFactors-teched-2018/media/image6.png)
 
-This makes a local copy of your app and loads it into the Mendix Desktop Modeler.
+	This makes a local copy of your app and loads it into the Mendix Desktop Modeler.
 
-2.  Click *Or sign in with...* **SAP** and sign in with your SAP credentials.
+2.	Click **Launch** in the *Mendix Version Selector* to start the correct version of the Desktop Modeler (version 7.17.2).
+
+3.  Click *Or sign in with...* **SAP** and sign in with your SAP credentials.
 
 	![](attachments/modify-a-mendix-questionnaire-for-sap-successFactors-teched-2018/media/image7.png)
 
-3.  Click the App Store icon (the shopping basket) in the Desktop Modeler.
+4.  Click the App Store icon (the shopping basket) in the Desktop Modeler.
 
 	![](attachments/modify-a-mendix-questionnaire-for-sap-successFactors-teched-2018/media/image8.png)
 
-4.  Enter *Questionnaire* in the search box and click the magnifying glass.
+5.  Enter *Questionnaire* in the search box and click the magnifying glass.
 
 	![](attachments/modify-a-mendix-questionnaire-for-sap-successFactors-teched-2018/media/image9.png)
 
-5.  Click **Read more**.
+6.  Click **Read more**.
 
-6.  Click **Download** to add the module to your project.
+7.  Click **Download** to add the module to your project.
 
 	![](attachments/modify-a-mendix-questionnaire-for-sap-successFactors-teched-2018/media/image10.png)
 
-7.  Click **Import** to confirm that you want to import the module.
+8.  Click **Import** to confirm that you want to import the module.
 
 	![](attachments/modify-a-mendix-questionnaire-for-sap-successFactors-teched-2018/media/image11.png)
 
-8.  Repeat steps 3 through 7 to find and download the **SAP Teched 2018 - SuccessFactors Employee** module.
+9.  Repeat steps 3 through 7 to find and download the **SAP Teched 2018 - SuccessFactors Employee** module.
 
 	![](attachments/modify-a-mendix-questionnaire-for-sap-successFactors-teched-2018/media/image12.png)
 
-9.  You can see the two modules you have imported, along with other modules, by expanding the tree structure in the **Project Explorer**.
+10.  You can see the two modules you have imported, along with other modules, by expanding the tree structure in the **Project Explorer**.
 
 	![](attachments/modify-a-mendix-questionnaire-for-sap-successFactors-teched-2018/media/image13.png)
 
@@ -409,7 +411,7 @@ Microflows are the business logic of your application. You will build a microflo
 
 27. Select *cust_score (Long)* as **Member**.
 
-28. Enter *$Questionnaire/TotalScore* as the **Value**. (This sets the value of the attribute *cust_score* of the SuccessFactors *SFEmployeeScore* object to the *TotalScore* value on the *Questionnaire*.)
+28. Enter *$SFEmployeeScore/cust_score + $Questionnaire/TotalScore* as the **Value**. (This adds the *TotalScore* value on the *Questionnaire* to the value of the attribute *cust_score* of the SuccessFactors *SFEmployeeScore* object.)
 
 29. Click **OK**.
 

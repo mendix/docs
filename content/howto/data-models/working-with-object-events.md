@@ -1,7 +1,8 @@
 ---
 title: "Work with Object Events"
 category: "Data Models"
-tags: []
+tags: ["microflow"]
+#To update the screenshots of these microflows, open the "How to Work with Objects - Microflow Screenshots" app project.
 ---
 
 When working with the Mendix Platform, objects are created, removed, or reverted back to the original. Based on the state of the object and the object events that are specified in the domain model, different actions are taken by the platform to guarantee data consistency. 

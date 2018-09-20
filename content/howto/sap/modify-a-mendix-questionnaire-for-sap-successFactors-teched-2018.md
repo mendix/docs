@@ -248,7 +248,7 @@ You will now create a page which is shown when the user has finished a questionn
 
 	![](attachments/modify-a-mendix-questionnaire-for-sap-successFactors-teched-2018/media/page-title.png)
 
-9. Click the **Toolbar** tab to return to the toolbar.
+9. Click the **Toolbox** tab to return to the toolbox.
 
 10.  Drag a **Data view** widget from the **Toolbox > Widgets** onto the page.
 
@@ -276,9 +276,9 @@ You will now create a page which is shown when the user has finished a questionn
 
 	![](attachments/modify-a-mendix-questionnaire-for-sap-successFactors-teched-2018/media/image35.png)
 
-18. Enter *Congratulations: you finished the* *questionnaire\!* in the text widget.
+18. Enter *"Congratulations: you finished the questionnaire! "* in the text widget.
 
-19. Drag another text widget and enter *You have earned {1} point(s)*.
+19. Drag another text widget and enter *"You have earned {1} point(s)."*.
 
 	The page now shows this:
 	

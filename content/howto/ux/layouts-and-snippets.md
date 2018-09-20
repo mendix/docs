@@ -42,7 +42,7 @@ These are some available predefined layout structures:
 
 Most users start by creating an application interface for the desktop user, but it's easy to unlock the app for mobile and tablet users. For each device, you can create a set of layouts that fit the specific layout needs for the device. When device-specific layouts have been created, they can be used as templates for creating device-specific pages: 
 
-![](attachments/18448710/18581465.png)
+![](attachments/18448710/layout-compare.png)
 
 ## 3 Styling
 
@@ -68,7 +68,7 @@ With regions, you divide the layout container into sections in order to position
 
 A placeholder can be used in a layout to define an area that can be filled in in a page based on that layout or in another layout defining that layout as the master layout.
 
-![](attachments/18448710/18581463.png) 
+![](attachments/18448710/placeholders.png) 
 
 When the area is filled in a page, this will be the content area of that page, showing the dynamic data as specified in that page. When a layout inherits from another layout, the area can filled with a new layout container in order to define this specialized layout. It can also be kept empty, and then it will be filled in a page.
 
@@ -116,7 +116,7 @@ Two of the most useful widget types are menu widgets and snippets. You will lear
 
 The menu bar widget shows a configured menu in the form of a horizontal bar with items. The items can have sub-items, and the main item in the menu can be expanded. Sub-items can go only one level deep (a sub-item cannot have its own sub-item). The menu item points to either the page or the microflow that will open or start when the item is clicked. 
 
-![](attachments/18448710/18581460.png)
+![](attachments/18448710/menu-bar.png)
 
 ### 5.2 Navigation Tree
 

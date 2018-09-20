@@ -92,6 +92,8 @@ The following non-persistent entity shows what data you are interested in for yo
 Using OQL, you can query this data as follows:
 
 ![](attachments/dsapi/image018.png)
+
+Note that here you use the alias (**as ...**) to map the results of the selection to the attributes in the entity.
  
 You can create a generic microflow action to execute OQL queries and return a list of objects. The Java action has the following parameters:
 
@@ -108,7 +110,11 @@ Additionally, you need to expose the Java action as a microflow action, provide 
 The Java action illustrated below does the following:
 
 * Retrieves all data using the Mendix API Core.retrieveOQLDataTable()
-* Loops through all the rows, creates a new object of the type specified by ResultEntity. A Java action parameter of type Entity results in a Java string containing the name of the entity. This can be passed to Core.instantiate to create a new object
+* Loops through all the rows, creates a new object of the type specified by ResultEntity.
+
+    {{% alert type="info" %}}Setting a Java action parameter of type **Entity of type parameter...** (*ResultEntity* in the example above) creates a Java string in the action which contains the name of the entity type. This string can be passed to Core.instantiate to create a new object.
+    {{% /alert %}}
+
 * Loops through all columns of a record and copies the column value to an attribute with the same name. If an attribute with a column name does not exist, a message is printed, and the loop continues
 * The Mendix object created is added to the list to be returned
 
@@ -161,7 +167,7 @@ The Java implementation below implements the following steps:
  
 ![](attachments/dsapi/image028.png)
  
-You can find the complete Java source code on GitHub: [LINK].
+You can find the complete Java source code on GitHub: [RetrieveAdvancedSQL](https://github.com/ako/QueryApiBlogPost/blob/master/javasource/hr/actions/RetrieveAdvancedSql.java).
 
 You now have a generic SQL action that can be used in microflows to retrieve data from your application database. The query in this example returns the same data as the OQL earlier, so you can reuse the non-persistent entity DepartmentSummary as defined previously.
  
@@ -260,4 +266,4 @@ public java.lang.Boolean executeAction() throws Exception {
 }
 ```
 
-This example will trigger a listener for every object change before writing the changes to the database. To find out what attributes have been changed, you
+This example will trigger a listener for every object change before writing the changes to the database. To find out what attributes have been changed, you can use the **getChangedMembers** method, as illustrated above.

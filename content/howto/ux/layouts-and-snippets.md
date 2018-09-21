@@ -122,13 +122,13 @@ The menu bar widget shows a configured menu in the form of a horizontal bar with
 
 The navigation tree widget shows a configured menu in the form of a tree. Items can have sub-items when the main item is expanded. The menu structure of the navigation tree can have up to three levels. In the end, a menu item points to either the page or the microflow that will open or start when the item is clicked.
 
-![](attachments/18448710/18581459.png)
+![](attachments/18448710/nav-tree.png)
 
 ### 5.3 Simple Menu Bar
 
 The simple menu bar widget shows a configured menu in the form of a horizontal bar with images and captions. Items cannot have sub items (the menu structure can only have one level). The menu item points to either the page or the microflow that will open or start when the item is clicked.
 
-![](attachments/18448710/18581458.png)
+![](attachments/18448710/simple-menu.png)
 
 ### 5.4 Menu Source
 

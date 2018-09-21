@@ -41,7 +41,7 @@ The device type of the currently logged-in user is available in [microflows](mic
 
 Every app always has one profile of a Responsive type which cannot be deleted. This is the default profile used by a Mendix app.
 
-### 2.2 Tablet browser
+### 2.2 Tablet Browser
 
 All the users accessing a Mendix app from a browser on a tablet will automatically be redirected to a profile of the Tablet browser type. If no profile exists of that type, the user will be redirected to the Responsive profile.
 

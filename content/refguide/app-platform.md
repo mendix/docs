@@ -4,6 +4,8 @@ category: "General"
 description: "Provides an introduction to the various features of the Developer Portal."
 ---
 
+## 1 Introduction to the Developer Portal 
+
 The key components of the entire Mendix Platform are the [Mendix Modeler](desktop-modeler) and the the [Mendix Developer Portal](https://sprintr.home.mendix.com/index.html). The Mendix Reference Guide devotes a lot of spaces to describing how the Modeler works. This page serves as an introduction to the Developer Portal.
 
 The Mendix Developer Portal takes a lightweight and social approach to enterprise project collaboration. The Developer Portal provides a unique combination of project management tools and social activity streams, offering a way to interact with colleagues, project team members, and even external people involved in projects.
@@ -16,7 +18,7 @@ The Developer Portal can be used separately from other Mendix products, and the 
 
 For detailed information on all the Mendix Developer Portal features, see the [Developer Portal](/developerportal) documentation.
 
-## Further Reading
+## 2 Related Contnet
 
 * [Developer Portal](/developerportal)
 * [Desktop Modeler](desktop-modeler)

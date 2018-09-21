@@ -24,8 +24,6 @@ When you look at a page, you can see that a page consists of two important compo
 * Layout – the structure of the page (just like PowerPoint has one or more layout presets)
 * Content – what is displayed within the structure of the page
 
-![](attachments/18448710/18581449.jpg)
-
 While modeling the pages, you select a layout when a page is created.
 
 ### 2.2 The Value of Layouts
@@ -205,9 +203,7 @@ Snippets are reusable interface parts that can be used on pages and layouts. Usi
 
 In addition, a snippet can define an entity that serves as a context for the widgets placed in it. For example, if you set the *Course* entity for a snippet, you could place a text box that shows the *Course Title* on the snippet without having to define a data view first. When an entity is defined on a snippet, it needs to be placed inside a context for that entity in each place that you use the snippet (for example, a data view).
 
-### 6.1 Example
-
-![](attachments/18448710/18581449.jpg)
+![](attachments/18448710/snippet.png)
 
 ## 7 Related Content
 

@@ -4,7 +4,7 @@ parent: "xpath-constraint-functions"
 ---
 
 
-The ends-with() function checks whether a String attribute ends with a specific substring.
+The `ends-with()` function checks whether a String attribute ends with a specific substring.
 
 ```java
 //Sales.Customer[ends-with(Name, 'sen')]

@@ -4,7 +4,7 @@ parent: "xpath-constraint-functions"
 ---
 
 
-The month-from-dateTime() function extracts the amount of months from a DateTime attribute so it can be used to compare to a value.
+The `month-from-dateTime()` function extracts the amount of months from a DateTime attribute so it can be used to compare to a value.
 
 ```java
 //Logging.Log[month-from-dateTime(DateAttribute) = 12]

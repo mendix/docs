@@ -75,21 +75,23 @@ Depending on whether you have used SAP from Mendix before, and whether you are c
 
 	![](attachments/develop-a-smart-sap-catalog-teched-2018/media/image8.png)
 
-    The correct version of the Mendix Desktop Modeler will open, automatically download your app to your computer, and open it.
+2.	Click **Open VersionSelector** when asked.
 
-1. Click the *arrow* next to the **Run** button in the Desktop Modeler.
+3.  Click **Open with selected Modeler version** to confirm that you want to edit the app in your current version of the Desktop Modeler (version 7.17.2).
 
-1. Click **Run Locally**.
+4. Click the *arrow* next to the **Run** button in the Desktop Modeler.
+
+5. Click **Run Locally**.
 
 	![](attachments/develop-a-smart-sap-catalog-teched-2018/media/image9.png)
 
-1. Click **Yes** to confirm that you want to create a database for the app.
+6. Click **Yes** to confirm that you want to create a database for the app.
 
 	![](attachments/develop-a-smart-sap-catalog-teched-2018/media/image10.png)
 
-1. Wait for the app to be started.
+7. Wait for the app to be started.
 
-1. Click **View** to view the app in a browser.
+8. Click **View** to view the app in a browser.
 
 	![](attachments/develop-a-smart-sap-catalog-teched-2018/media/image11.png)
 

@@ -1,6 +1,7 @@
 ---
 title: "Stories"
 category: "Collaborate"
+menu_order: 30
 description: "Describes how to manage your stories."
 tags: ["Stories","Developer Portal"]
 ---

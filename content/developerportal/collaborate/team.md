@@ -1,6 +1,7 @@
 ---
 title: "Team"
 category: "Collaborate"
+menu_order: 20
 description: "This page describes the Team page of the Developer Portal."
 tags: ["Team","Developer Portal"]
 ---

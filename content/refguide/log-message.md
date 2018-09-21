@@ -61,6 +61,10 @@ With parameters you can customize your message with data specific to the situati
 
 ### 2.5 Include Latest Stack Trace
 
-Defines whether to include the stack trace of the latest error in this log message. In the modeler, log messages that include a stack trace are marked with a paperclip icon (![](attachments/819203/917892.png)) and double-clicking them shows the stack trace.
+Defines whether to include the stack trace of the latest error in this log message. In the modeler, log messages that include a stack trace are marked with a paperclip icon:
 
-This option also applies to $latestSoapFault. If you define an error handler for a web service call, and it catches a soap fault error, checking this box will add the stacktrace to the logline in the modeler.
+![](attachments/819203/917892.png)
+
+Double-clicking these log messages shows the stack trace.
+
+This option also applies to `$latestSoapFault`. If you define an error handler for a web service call, and it catches a soap fault error, checking this box will add the stacktrace to the logline in the modeler.

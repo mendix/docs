@@ -132,43 +132,70 @@ The simple menu bar widget shows a configured menu in the form of a horizontal b
 
 ### 5.4 Menu Source
 
-The items that are shown in the menu widget are determined by the menu source. A menu widget is either filled from a menu configured in the **Navigation** document or a **Menu** document. 
+The items that are shown in the menu widget are determined by the menu source. A menu widget is either filled from a menu configured in the **Navigation** document or a **Menu** page resource: 
 
-![](attachments/18448710/18581457.png)
+* **Project** > **Navigation** – when selected, the menu items are taken from one of the menus defined in this document; use this for the main menu of your application
+* **Add Other** > **Menu ** – when selected, the menu items are taken from this page resource; use this menu for auxiliary menus
 
-When you have selected the project navigation as source, the type device must be determined for the the correct navigation menu.
+When you have selected the project navigation as source, the device profile must be determined for the correct navigation menu:
 
-![](attachments/18448710/18581456.png)
+![](attachments/18448710/edit-menu-bar.png)
 
-![](attachments/18448710/18581455.png)
+For the desktop, use the **Responsive** menu. 
+
+For tablet and phone configuration, you need to choose the appropriate profile type. See the section [Device Profiles](#profiles) below for details. 
 
 ### 5.5 Project Navigation
 
 The **Navigation** document defines the main navigation structure of the application for end-users. It allows you to set the home page of your application as well as define menu structures for use in menu widgets. The home page can vary based on the roles a user has. If security is enabled, the menu will only show the items to which the user has access.
 
-### 5.6 Device Profiles
+### 5.6 Device Profiles {#profiles}
 
-At the heart of the navigation model in Mendix, are three device types: Desktop, Tablet, and Phone. You can define separate home pages and menus for each of these three devices. The Desktop device type is always enabled, while Tablet and Phone can be disabled if you do not want to use them. When a user visits a Mendix application, she is automatically redirected to the home page of the appropriate device type (for details, see [6.8 Redirection to Device Types](#RedirectiontoDeviceTypes)).
+At the heart of the navigation model in Mendix, are three device types: Desktop, Tablet, and Phone. You can define separate home pages and menus for each of these three devices. The Desktop device type is always enabled, while the following Tablet and Phone profiles can be enabled or disabled:
 
-![](attachments/18448710/18581454.png)
+* **Hybrid tablet app online**
+* **Hybrid tablet app offline**
+* **Hybrid phone app online**
+* **Hybrid phone app offline**
+* **Tablet browser**
+* **Phone browser**
+
+![](attachments/18448710/device-profiles.png)
+
+When a user visits a Mendix application, she is automatically redirected to the home page of the appropriate device type (for details, see the section [Redirection to Device Types](#RedirectiontoDeviceTypes)).
+
+For more information on navigation profiles, see the following for reference:
+
+* [Navigation in Mendix 7.4 & Above](../refguide/navigation)
+* [Navigation in Mendix Versions 7.2 & 7.3](../refguide/navigation-in-72-and-73)
+* [Navigation Before Mendix Version 7.2](../refguide/navigation-before-72)
+* [Solving Issues with Navigation Profile Conversion to 7.4](../refguide/navigation-conversion-to-74)
 
 ### 5.7 Menu Document
 
 A menu document defines a navigation menu that can be used by a menu widget. Typically, the main menus for your application are defined in device types, while you use menu documents for auxiliary menus (for example, a side bar). A menu consists of a list of menu items, which optionally contain sub-items. Depending on the widget a number of levels are allowed.
 
-![](attachments/18448710/18581453.png)
+![](attachments/18448710/menu-document.png)
 
-### 5.8 Redirection to Device Types<a name="RedirectiontoDeviceTypes"></a>
+### 5.8 Redirection to Device Types {#RedirectiontoDeviceTypes}
 
-The Mendix runtime automatically redirects users to the home page of the appropriate device type based on the device they are using. This happens by examining the `User-Agent` string that is sent by the device's browser. The default configuration for the redirection is highlighted here:
+The Mendix Runtime automatically redirects users to the home page of the appropriate device type based on the device they are using. This happens by examining the `User-Agent` string that is sent by the device's browser. This is the default configuration for the redirection:
 
-![](attachments/18448710/18581452.png)
+| User-Agent String Regular Expression | Device Type |
+| ------------------------------------ | ----------- |
+| `Android.*Mobile|iPhone`             | Phone       |
+| `Android|iPad`                       | Tablet      |
+| (Other)                              | Desktop     |
 
 The string for specific user interphases can also be configured within the server custom settings (this is more advanced and not covered here).
 
-If a device type is not enabled, it falls back to another device type as shown here:
+If a device type is not enabled, it falls back to another device type:
 
-![](attachments/18448710/18581451.png)
+| Device Type | Fallback                             |
+| ----------- | ------------------------------------ |
+| Phone       | Tablet, Desktop                      |
+| Tablet      | Phone, Desktop                       |
+| Desktop     | (None, as Desktop is always enabled) |
 
 It is also possible to force the client to use a specific device type by adding a `profile` query string parameter to the URL when visiting a Mendix application. The possible values are `Desktop`, `Tablet`, and `Phone`.
 

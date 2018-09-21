@@ -166,10 +166,10 @@ When a user visits a Mendix application, she is automatically redirected to the 
 
 For more information on navigation profiles, see the following for reference:
 
-* [Navigation in Mendix 7.4 & Above](../refguide/navigation)
-* [Navigation in Mendix Versions 7.2 & 7.3](../refguide/navigation-in-72-and-73)
-* [Navigation Before Mendix Version 7.2](../refguide/navigation-before-72)
-* [Solving Issues with Navigation Profile Conversion to 7.4](../refguide/navigation-conversion-to-74)
+* [Navigation in Mendix 7.4 & Above](/refguide/navigation)
+* [Navigation in Mendix Versions 7.2 & 7.3](/refguide/navigation-in-72-and-73)
+* [Navigation Before Mendix Version 7.2](/refguide/navigation-before-72)
+* [Solving Issues with Navigation Profile Conversion to 7.4](/refguide/navigation-conversion-to-74)
 
 ### 5.7 Menu Document
 

@@ -127,7 +127,7 @@ refguide4:
     - "Deployment"
   banner:
     type: 'warning'
-    text: 'You are browsing the documentation of an unsupported version of Mendix. Please find the latest version of the Reference Guide <a href="/refguide/">here</a>'
+    text: 'You are browsing the documentation of an unsupported version of Mendix. Please find the latest version of the Reference Guide <a href="/refguide/">here</a>.'
 refguide5:
   space: "Mendix 5 Reference Guide"
   priority: false

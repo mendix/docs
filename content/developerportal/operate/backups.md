@@ -51,7 +51,7 @@ In Mendix Cloud V4, the upload functionality is the symmetrical equivalent of th
 
 Anything you can download you can also upload again, which means you can upload the following:
 
-* **Full Snapshot
+* **Full Snapshot**
 * **Database Only**
 * **Files Only**
 

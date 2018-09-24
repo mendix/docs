@@ -2,6 +2,7 @@
 title: "Optimize Retrieve Activities"
 category: "Logic & Business Rules"
 tags: ["microflow", "retrieve", "optimize"]
+#To update the screenshots of these microflows, open the Microflow Screenshots app project.
 ---
 
 ## 1 Introduction

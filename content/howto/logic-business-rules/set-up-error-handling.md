@@ -1,7 +1,8 @@
 ---
 title: "Set Up Error Handling"
 category: "Logic & Business Rules"
-tags: []
+tags: ["error", "error handling", "rollback"]
+#To update the screenshots of these microflows, open the Microflow Screenshots app project.
 ---
 
 ## 1 Introduction
@@ -27,7 +28,7 @@ To ensure that every user or process can only see persisted data, all the data c
 ### 2.3 Transactions Prevent Two processes from Using the Same Object at the Same Time
 
 When an object is updated, the platform will place a lock on that object for the duration of the transaction. That means that while the transaction is running, no other transactions are allowed to read or write in that same object. As soon as the transaction has finished, the lock will be released automatically and any waiting processes will continue normally.
- 
+
 Please note that this isn't the same as preventing two users from editing the same object. It is still possible for two users to open the same object and change it 1 milliseconds after each other. The latest change will still be applied.
 
 ## 3 Error Handling Components

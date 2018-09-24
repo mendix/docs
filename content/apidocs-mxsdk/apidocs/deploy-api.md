@@ -9,7 +9,7 @@ tags: ["API", "deploy", "licensed", "deployment", "cloud"]
 
 ## 1 Introduction
 
-The Deploy API allows you to manage application environments in the Mendix Cloud. You can retrieve the status of, and start and stop, applications. You can also configure new model versions and deploy them to application environments. You also need the Build API to create and manage deployment packages.
+The Deploy API allows you to manage application environments in the Mendix Cloud. You can retrieve the status of, and start and stop, applications. You can also configure new model versions and deploy them to application environments. To create and manage deployment packages you need, in addition, the Build API .
 
 This image provides a domain model representation of the concepts discussed below and how these are related:
 
@@ -19,7 +19,7 @@ This image provides a domain model representation of the concepts discussed belo
 
 The Deploy API requires authentication via API keys that are bound to your Mendix account (for more information, see [Authentication](authentication)).
 
-As APIs are designed for automated systems, the Deploy API does not require two-factor authentication which is normally required to make changes to production environments. This is a potential security risk. Therefore, the Technical Contact of an application needs to explicitly allow API access for team members that want to use the Deploy API. This can be configured from the **Node Security** screen under **Project Settings**. By default, API access is already enabled for test and acceptance environments for all team members. To perform an action via the Deploy API, such as transporting a new deployment package, both the **Transport** and **API Access** permissions need to be enabled.
+As APIs are designed for automated systems, the Deploy API does not require the two-factor authentication which is normally required to make changes to production environments. This is a potential security risk. Therefore, the Technical Contact of an application needs to allow API access explicitly for team members that want to use the Deploy API. This can be configured from the **Node Security** screen under **Project Settings**. By default, API access is already enabled for test and acceptance environments for all team members. To perform an action via the Deploy API, such as transporting a new deployment package, both the **Transport** and **API Access** permissions need to be enabled.
 
 ## 3 API Calls
 
@@ -139,7 +139,7 @@ Response object with the following fields:
 
 #### 3.3.1 Description
 
-Retrieves a specific app which the authenticated user has access to as a regular user. These app can be found via the "Nodes overview" screen in the Mendix Platform.
+Retrieves a specific app to which the authenticated user has access as a regular user. This app can be found via the "Nodes overview" screen in the Mendix Platform.
 
 ```bash
 HTTP Method: GET
@@ -192,7 +192,7 @@ Object with the following key-value pairs:
 
 #### 3.4.1 Description
 
-Retrieves all environments that are connected to a specific app which the authenticated user has access to as a regular user. These environments can be found via the "Nodes overview" screen in the Mendix Platform.
+Retrieves all environments that are connected to a specific app to which the authenticated user has access as a regular user. These environments can be found via the "Nodes overview" screen in the Mendix Platform.
 
 ```bash
 HTTP Method: GET
@@ -255,7 +255,7 @@ List of objects with the following key-value pairs:
 
 #### 3.5.1 Description
 
-Retrieves a specific environment that is connected to a specific app which the authenticated user has access to as a regular user. These environments can be found via the "Nodes overview" screen in the Mendix Platform.
+Retrieves a specific environment that is connected to a specific app to which the authenticated user has access as a regular user. These environments can be found via the "Nodes overview" screen in the Mendix Platform.
 
 ```bash
 HTTP Method: GET
@@ -316,7 +316,7 @@ An object with the following key-value pairs:
 
 #### 3.6.1 Description
 
-Starts a specific environment that is connected to a specific app which the authenticated user has access to as a regular user. These environments can be found via the "Nodes overview" screen in the Mendix Platform.
+Starts a specific environment that is connected to a specific app to which the authenticated user has access as a regular user. These environments can be found via the "Nodes overview" screen in the Mendix Platform.
 
 ```bash
 HTTP Method: POST
@@ -430,7 +430,7 @@ An object with the following key-value pair:
 
 #### 3.8.1 Description
 
-Stops a specific environment that is connected to a specific app which the authenticated user has access to as a regular user. These environments can be found via the "Nodes overview" screen in the Mendix Platform.
+Stops a specific environment that is connected to a specific app to which the authenticated user has access as a regular user. These environments can be found via the "Nodes overview" screen in the Mendix Platform.
 
 ```bash
 HTTP Method: POST
@@ -465,7 +465,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 #### 3.9.1 Description
 
-Retrieves the deployed package of a specific environment that is connected to a specific app which the authenticated user has access to as a regular user. These environments can be found via the "Nodes overview" screen in the Mendix Platform.
+Retrieves the deployed package of a specific environment that is connected to a specific app to which the authenticated user has access as a regular user. These environments can be found via the "Nodes overview" screen in the Mendix Platform.
 
 ```bash
 HTTP Method: GET
@@ -546,7 +546,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages/upload
 
 *   _AppId_ (String): Subdomain name of an app.
 *   _Name_ (String): Name of the deployment package as query parameter
-*   _file_ (File): Deployment package as multipart/form-data
+*   _file_ (File): Deployment package as multipart/form-data (see [IETF RFC 7578: Returning Values from Forms: multipart/form-data](https://tools.ietf.org/html/rfc7578))
 
 **Example Request**
 
@@ -561,7 +561,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 Content-Type: multipart/form-data; boundary=MultipartBoundary
 
 --MultipartBoundary
-Content-Disposition: form-data; name="file"
+Content-Disposition: form-data; name="calc_1.0.0.45.mda"
 
 @%USERPROFILE%/Documents/Mendix/calc-main/releases/calc_1.0.0.45.mda
 --MultipartBoundary--
@@ -572,7 +572,7 @@ Curl example:
 curl -v -F "file=@%USERPROFILE%/Documents/Mendix/calc-main/releases/calc_1.0.0.45.mda"  -X POST -H "Mendix-Username: richard.ford51@example.com" -H "Mendix-ApiKey: 26587896-1cef-4483-accf-ad304e2673d6" "https://deploy.mendix.com/api/1/calc/packages/upload"
 ```
 
-#### 3.10.3 Ouput
+#### 3.10.3 Output
 
 **Error Codes**
 
@@ -587,7 +587,9 @@ curl -v -F "file=@%USERPROFILE%/Documents/Mendix/calc-main/releases/calc_1.0.0.4
 
 #### 3.11.1 Description
 
-Transports a specific deployment package to a specific environment. This action requires the environment to be in the "NotRunning" status. This call is not available for Sandboxes, in which case the Build API can be used to trigger a deployment.
+Transports a specific deployment package to a specific environment. This action requires the environment to be in the status *NotRunning*.
+
+This call is not available for Free App Sandbox. For a Free App Sandbox, the Build API can be used to trigger a deployment.
 
 ```bash
 HTTP Method: POST
@@ -637,7 +639,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 #### 3.12.1 Description
 
-Removes all data from a specific environment including files and database records. This action requires the environment to be in "NotRunning" status.
+Removes all data from a specific environment: including files and database records. This action requires the environment to be in the status *NotRunning*.
 
 ```bash
 HTTP Method: POST
@@ -690,7 +692,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 #### 3.13.1 Description
 
-Gets current values of custom settings, constants and scheduled events used by the target environment.
+Gets the current values of custom settings, constants, and scheduled events used by the target environment.
 
 ```bash
 HTTP Method: GET
@@ -753,7 +755,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 #### 3.14.1 Description
 
-Changes value of existing environment settings like custom settings, constants and scheduled events. These changes are applied after restarting the environment.
+Changes the values of existing environment settings like custom settings, constants, and scheduled events. These changes are applied after restarting the environment.
 
 ```bash
 HTTP Method: POST
@@ -907,7 +909,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 #### 3.16.1 Description
 
-Download the backup for an environment. The response contains direct links to the external backup system, you can use these links to download three types of backups.
+Downloads the backup for an environment. The response contains direct links to the external backup system. You can use these links to download three types of backups: *FilesOnly*, *DatabaseOnly*, or *DatabaseAndFiles*.
 
 ```bash
 HTTP Method: GET
@@ -955,11 +957,11 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 }
 ```
 
-### 3.17 Create a Backup for an Environment (Mendix Cloud v4 Only)
+### 3.17 Create a Backup of an Environment (Mendix Cloud v4 Only)
 
 #### 3.17.1 Description
 
-Create a backup for an environment. The response contains the details of the created backup. This call is only available for Mendix Cloud v4 applications.
+Create a backup of an environment. The response contains the details of the created backup. This call is only available for Mendix Cloud v4 applications.
 
 ```bash
 HTTP Method: POST
@@ -1017,7 +1019,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 #### 3.18.1 Description
 
-Restore a previously created backup to an environment. The environment that the data will be restored on must be stopped before using this call. The response of a successful call contains the details of the restored backup. This call is only available for Mendix Cloud v4 applications. Please note that the Snapshot ID can be a snapshot created for a different environment, similar to the "restore into" functionality in the Developer Portal.
+Restore a previously created backup to an environment. The environment to which the data will be restored must be stopped before using this call. The response of a successful call contains the details of the restored backup. This call is only available for Mendix Cloud v4 applications. Please note that the Snapshot ID can be a snapshot created for a different environment, similar to the "restore into" functionality in the Developer Portal.
 
 ```bash
 HTTP Method: POST
@@ -1071,7 +1073,9 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 #### 3.19.1 Description
 
-Scale memory and instances of an environment. Only those environments that run a package that has Mendix Runtime version 7 or higher will make it possible to spread the total memory over multiple instances. Environments with older Runtime version packages can only be scaled horizontally. If the deployed package has a Runtime version older than Mendix 7, it can be scaled horizontally (1 fixed instance, memory amount is adjustable).
+Scale memory and instances of an environment. Only those environments that run a package that has Mendix Runtime version 7 or above will make it possible to spread the total memory over multiple instances.
+
+Environments with a deployed runtime package below version 7 can only be scaled horizontally: that is, with one fixed instance but an adjustable amount of memory.
 
 ```bash
 HTTP Method: POST
@@ -1133,7 +1137,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 #### 3.20.1 Description
 
-Tags are arbitrary strings that are not interpreted by Cloud Portal. Users are able to set tags on environments. Tags serve two purposes:
+Tags are arbitrary strings that are not interpreted by the Cloud Portal. Users are able to set tags on environments. Tags serve two purposes:
 
 * Custom tags can be added to metrics (for Datadog)
 * Tags can serve as selection criteria for grouping environments into a landscape management dashboard
@@ -1231,7 +1235,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 #### 3.22.1 Description
 
-Delete the current value of environment tags.
+Deletes the current value of environment tags.
 
 ```bash
 HTTP Method: DELETE
@@ -1283,7 +1287,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 #### 3.23.1 Description
 
-Download archived logs for a specific date.
+Downloads archived logs for a specific date.
 
 ```bash
 HTTP Method: GET

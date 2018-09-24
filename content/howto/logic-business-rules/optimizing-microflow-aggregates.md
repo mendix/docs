@@ -1,7 +1,8 @@
 ---
 title: "Optimize Microflow Aggregates"
 category: "Logic & Business Rules"
-tags: []
+tags: ["microflow", "aggregate"]
+#To update the screenshots of these microflows, open the Microflow Screenshots app project.
 ---
 
 In some projects, it is necessary to evaluate large datasets in a microflow (for example, for reporting purposes). If all those microflows do a lot of retrieves and aggregates on large datasets, it is easy to run into performance or memory problems. 

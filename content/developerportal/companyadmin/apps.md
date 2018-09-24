@@ -1,6 +1,7 @@
 ---
 title: "Apps"
 category: "Company Admin"
+menu_order: 30
 description: "Describes the options available to company administrators in a Mendix app."
 tags: ["Company","Admin","Developer Portal"]
 ---

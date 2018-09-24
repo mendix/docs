@@ -1,6 +1,7 @@
 ---
 title: "Users"
 category: "Company Admin"
+menu_order: 20
 description: "Developer Portal Users"
 tags: ["Company","Admin","Developer Portal"]
 ---

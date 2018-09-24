@@ -1,6 +1,7 @@
 ---
 title: "Company"
 category: "Company Admin"
+menu_order: 10
 description: "Describes the page that enables managing a company's details."
 tags: ["Company","Admin","Developer Portal"]
 ---

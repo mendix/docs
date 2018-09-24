@@ -195,12 +195,12 @@ developerportal:
   priority: false
   menu_categories:
     - "General"
-    - "Company Admin"
     - "Collaborate"
     - "Develop"
     - "Deploy"
     - "Operate"
     - "Settings"
+    - "Company Admin"
     - "How-to's"
 deployment:
   space: "Deployment"

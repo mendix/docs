@@ -1,6 +1,7 @@
 ---
-title: "API Key"
+title: "API Keys"
 category: "Settings"
+menu_order: 40
 description: "This page describes the API Key settings of your App."
 tags: ["Settings","App","API","Key","Developer Portal"]
 ---

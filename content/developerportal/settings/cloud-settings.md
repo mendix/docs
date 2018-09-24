@@ -1,6 +1,7 @@
 ---
 title: "Cloud Settings"
 category: "Settings"
+menu_order: 15
 description: "This page shows the cloud settings of your app."
 tags: ["Settings", "App", "Developer Portal", "Cloud", "SAP"]
 ---

@@ -1,13 +1,14 @@
 ---
 title: "Security & Node Permissions"
 category: "Settings"
+menu_order: 20
 description: "This page describes the permission settings of your node."
 tags: ["Node","Permission","Developer Portal"]
 ---
 
 ## 1 Introduction
 
-Fine grained access management for your Mendix Cloud environments is handled in the **Node Security** tab of the [Settings](/developerportal/settings) page under **Security**. Each team member can subscribe or unsubscribe to the alerts, and the [Technical Contact](/developerportal/general/technical-contact) can manage various permissions of each team member per environment.
+Fine-grained access management for your Mendix Cloud environments is handled in the **Node Security** tab of the [Settings](/developerportal/settings) page under **Security**. Each team member can subscribe or unsubscribe to the alerts, and the [Technical Contact](/developerportal/general/technical-contact) can manage various permissions of each team member per environment.
 
 Learn more about [Roles Within the Company and Apps](/developerportal/general/roles).
 

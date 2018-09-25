@@ -1,6 +1,7 @@
 ---
 title: "Nodes"
 category: "Company Admin"
+menu_order: 40
 description: "Developer Portal Cloud Noces"
 tags: ["Company","Admin","Developer Portal"]
 ---

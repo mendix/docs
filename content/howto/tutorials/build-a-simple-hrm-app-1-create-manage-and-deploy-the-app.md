@@ -1,8 +1,8 @@
 ---
-title: "Build a Simple HRM App Step 1: Create, Manage, and Deploy the App"
+title: "Step 1: Create, Manage, and Deploy the App"
 parent: "build-a-simple-hrm-app"
 description: "Presents details on how to create, deploy, and manage a simple HRM app."
-tags: ["HRM", "build", "app", "developer portal"]
+tags: ["hrm", "human resources management", "human resources", "app", "developer portal", "create", "manage", "deploy"]
 ---
 
 ## 1 Introduction
@@ -44,9 +44,9 @@ Great work. Now you can move on to the second how-to for creating a simple HRM a
 
 ## 4 Related Content
 
-* [Build a Simple HRM App Step 2: Perform the First Steps in Building a Rich GUI](build-a-simple-hrm-app-2-first-steps-in-building-a-rich-gui)
-* [Build a Simple HRM App Step 3: Show Related Data in the GUI](build-a-simple-hrm-app-3-show-related-data-in-the-gui)
-* [Build a Simple HRM App Step 4: Enrich the GUI with Filter Options](build-a-simple-hrm-app-4-enrich-the-gui-with-filter-options)
-* [Build a Simple HRM App Step 5: Smarten Up Your App with Business Logic](build-a-simple-hrm-app-5-smarten-up-your-app-with-business-logic)
+* [Step 2: Perform the First Steps in Building a Rich GUI](build-a-simple-hrm-app-2-first-steps-in-building-a-rich-gui)
+* [Step 3: Show Related Data in the GUI](build-a-simple-hrm-app-3-show-related-data-in-the-gui)
+* [Step 4: Enrich the GUI with Filter Options](build-a-simple-hrm-app-4-enrich-the-gui-with-filter-options)
+* [Step 5: Smarten Up Your App with Business Logic](build-a-simple-hrm-app-5-smarten-up-your-app-with-business-logic)
 * [Testing Microflows Using the UnitTesting Module](../testing/testing-microflows-using-the-unittesting-module)
 * [How to Manage Sprints and Stories](/developerportal/howto/managing-your-application-requirements-with-mendix)

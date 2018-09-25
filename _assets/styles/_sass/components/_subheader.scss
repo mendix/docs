@@ -15,6 +15,12 @@ $block: 'mx';
       }
     }
 
+    @include element('link') {
+      @include element('time') {
+        margin-left: 5px;
+      }
+    }
+
     @include element('edit-button') {
       float: right;
       i {

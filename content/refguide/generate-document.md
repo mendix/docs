@@ -3,7 +3,14 @@ title: "Generate Document"
 parent: "document-generation-activities"
 description: "Describes generating documents from a microflow. "
 tags: ["PDF", "document", "document template", "HTML", "Microsoft Word", "ODT"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
+
+{{% alert type="info" %}}
+This activity can only be used in microflows, not in nanoflows.
+{{% /alert %}}
+
+## 1 Introduction
 
 The generate-document microflow action can be used to create a document based on a [template](document-templates).
 
@@ -18,15 +25,15 @@ See [Microflow Element Common Properties](microflow-element-common-properties) f
 
 {{% /alert %}}
 
-## Input Properties
+## 2 Input Properties
 
-### File document
+### 2.1 File Document
 
 The file document that will contain the generated document. It should be an object of entity System.FileDocument or a specialization thereof.
 
-## Action Properties
+## 3 Action Properties
 
-### Language
+### 3.1 Language
 
 The language in which the titles and labels of the document should appear.
 
@@ -38,7 +45,7 @@ The language in which the titles and labels of the document should appear.
 
 _Default value:_ Current user
 
-### Document type
+### 3.2 Document Type
 
 The document type specifies the type of the generated document.
 
@@ -51,10 +58,10 @@ The document type specifies the type of the generated document.
 | Rich-text format | Generate a document in Rich-text format. |
 | ODT | Generate a document in Open Office (ODT) format. |
 
-### Template
+### 3.3 Template
 
-Template defines which [document template](document-templates) is used to generate the file. Depending on the template being used one or more arguments need to be specified. For each top-level data grid and data view objects of the correct type need to be passed to the template. The value of the argument can be entered using microflow expressions.
+Template defines which [document template](document-templates) is used to generate the file. Depending on the template being used one or more arguments need to be specified. For each top-level data grid and data view objects of the correct type need to be passed to the template. The value of the argument can be entered using expressions.
 
-### Override margins
+### 3.4 Override Margins
 
 Here you can set custom margins for your documents that can be defined at runtime.

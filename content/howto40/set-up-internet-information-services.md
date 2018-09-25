@@ -151,7 +151,6 @@ To speed up the loading times of the application via IIS, compression can be set
 IIS 6
 
 *   [http://weblogs.asp.net/owscott/archive/2004/01/12/IIS-Compression-in-IIS6.0.aspx](http://weblogs.asp.net/owscott/archive/2004/01/12/IIS-Compression-in-IIS6.0.aspx)
-*   [http://www.microsoft.com/technet/prodtechnol/WindowsServer2003/Library/IIS/d52ff289-94d3-4085-bc4e-24eb4f312e0e.mspx?mfr=true](http://www.microsoft.com/technet/prodtechnol/WindowsServer2003/Library/IIS/d52ff289-94d3-4085-bc4e-24eb4f312e0e.mspx?mfr=true)
 
 IIS 7
 

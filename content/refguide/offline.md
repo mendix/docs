@@ -13,9 +13,21 @@ To access the offline application, you need to have a mobile device that runs a 
 
 ## 3 Synchronization<a name="synchronization"></a>
 
-The first time an [offline-enabled](configuring-hybrid-mobile-apps-to-run-offline) mobile application is run, it will retrieve all the data it requires to run offline from the server. After that, it will remain in offline mode until a synchronization event is triggered. Remaining in offline mode will significantly improve the performance of your application. Synchronization can be triggered by either the server or the user. The server will automatically resynchronize the app if it is opened after a new model is uploaded, in order to prevent inconsistencies. The user can trigger a synchronization by triggering a sync action, for example from an [action button](action-button). Lastly, the app will always attempt to synchronize if it is (re)started. If your device is not connected to the internet on startup, this step will be skipped.
+The first time an [offline-enabled](configuring-hybrid-mobile-apps-to-run-offline) mobile application is run, it will retrieve all the data it requires to run offline from the server. After that, it will remain in offline mode until a synchronization event is triggered. Remaining in offline mode will significantly improve the performance of your application. Synchronization can be triggered by either the server or the user. The server will automatically resynchronize the app if it is opened after a new model is uploaded, in order to prevent inconsistencies. The user can trigger a synchronization by triggering a sync action, for example from an [action button](action-button). 
 
-During synchronization, any changed, created, and deleted objects will be applied to the offline database. Additionally, any objects created by the user since the application last synchronized will be uploaded to the server. The server will perform any relevant event handlers on these objects as usual. If the synchronization action encounters an error during this process, the entire upload process is reverted. For example, if ten objects are uploaded and one of these commits triggers a validation error, all ten objects are lost. This is to ensure that the internal consistency between your newly created objects is maintained. For example, if a user creates an order with several order lines and the order fails to commit, the entire transaction is rolled back to prevent your order lines from ending up in the database without an order and corrupting your data.
+{{% alert type="info" %}}
+
+As of Mendix 7.6, the startup performance of offline apps skips data and file synchronizations on subsequent application startups. Mendix still does them, but only if your app has been redeployed in the meantime. In that case, synchronization consists of two steps: Uploading new and changed objects, and then recreating the database by downloading all necessary objects from the runtime.
+
+{{% /alert %}}
+
+During upload, objects newly created by the user will be created on the server. Then, new and changed objects are uploaded to the server by committing them. Any relevant event handlers on these objects will run as usual. If the synchronization action encounters an error during this process, the entire upload process is reverted. For example, if ten objects are uploaded and one of these commits triggers a validation error, all ten objects are lost. This is to ensure that the internal consistency between your newly created objects is maintained. For example, if a user creates an order with several order lines and the order fails to commit, the entire transaction is rolled back to prevent your order lines from ending up in the database without an order and corrupting your data.
+
+During download, the offline database is dropped and recreated to avoid any conflicts. The database is then filled by querying all objects that are used in the offline profile.
+
+Because synchronization depends on the regular runtime APIs, the models of the app and the runtime should be compatible. This is important when deploying a new version of your app. For example, if you remove the `Brand` attribute of an offline-visible entity `Car`, someone using an old version of the offline app will get an error during synchronization if they change the brand of their car. Therefore, as a rule of thumb, never remove, rename, or change the type of an offline visible entity or its attributes.
+
+Synchronization of files is only triggered by modifications to the attributes of the object, not by modifying the contents of the file itself.
 
 ## 4 Restrictions
 
@@ -45,23 +57,33 @@ From Mendix 7.4.0 on, objects can also be edited after synchronization.
 
 Both autonumbers and calculated attributes require server intervention, and are therefore disallowed. Objects with these attribute types can still be viewed and created offline, but the attributes themselves cannot be displayed.
 
-### 4.7 Default Attribute Values
+### 4.7 Files
+
+Storing and uploading files offline is not supported. Specializations of the System.FileDocument can still be created offline, but files cannot be uploaded or downloaded. The exception to this rule is System.Image, which can be accessed, viewed, and uploaded as usual with the image viewer and upload widgets.
+
+### 4.8 Default Attribute Values
 
 Default attribute values for entities in the domain model don't have any effect for objects created offline. Boolean attributes will always default to `false`, numeric attributes to `0`, and other attributes to `empty`.
 
-### 4.8 Associations
+### 4.9 Associations
 
-Attribute paths which follow references are not allowed in grid columns. In addition, reference set selectors cannot be used.
+Attribute paths which follow references are not allowed in grid columns. In addition, reference set selectors cannot be used. 
 
-### 4.9 System Members
+In addition, usage of reference set associations (accessing through custom widgets etc) is not supported.
+
+### 4.10 Inheritance
+
+It is not possible to use more than one entity from a generalization/specialization relation. If you use two or more related entities on your offline pages, synchronization will fail, because the objects of these entities will be inserted multiple times into the database with the same ID.
+
+### 4.11 System Members
 
 System members (`createdDate`, `changedDate`, `owner`, `changedBy`) are not supported.
 
-### 4.10 Excel/CSV Export
+### 4.12 Excel/CSV Export
 
 Spreadsheets are generated through direct database interaction, which is not available offline.
 
-### 4.11 Platforms
+### 4.13 Platforms
 
 Offline-enabled apps are only supported on the iOS and Android platforms.
 

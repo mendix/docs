@@ -1,24 +1,17 @@
-const fs = require('fs');
 const path = require('path');
-const recursive = require('recursive-readdir');
 const Promise = require('bluebird');
-const gutil = require('gulp-util');
-const shell = require('shelljs');
 const _ = require('lodash');
 const yamlFront = require('yaml-front-matter');
 const YAML = require('yamljs');
 const { normalizeSafe } = require('upath');
 
-const {getGenerateFiles, gulpErr, isFile, readFile, writeFile} = require('./helpers');
+const {getGenerateFiles, isFile, readFile, writeFile, readSourceFiles} = require('./helpers');
+const commandLineHelpers = require('./helpers/command_line');
+
+const { cyan, red } = commandLineHelpers.colors;
+const log = commandLineHelpers.log('menu build');
 
 let errors = false;
-
-const cyan = str => gutil.colors.cyan(str);
-const yellow = str => gutil.colors.yellow(str);
-const red = str => gutil.colors.red(str);
-const white = str => gutil.colors.white(str);
-
-const menu_indicator = cyan("[MENU_BUILD]");
 
 let SPACES = {};
 
@@ -63,28 +56,20 @@ const getSourceFilesPromise = (opts) => {
 }
 
 
-const readSourceFiles = files =>
-  Promise.all(_.map(files, file => {
-    return new Promise((resolve, reject) => {
-      readFile(file.sourcePath).then(contents => {
-        let meta = null;
-        try {
-          meta = yamlFront.loadFront(contents);
-        } catch(e) {
-          console.log(e);
-        }
-        if (meta !== null) {
-          file.meta = true;
-          _.merge(file, _.omit(meta, ['__content', 'space']));
-        }
-        resolve(file);
-      }).catch(e => {
-        console.log(e);
-        resolve(file);
-      })
-    })
-  }));
-
+const parseSourceFiles = files =>
+  readSourceFiles(files, (file, contents, resolve) => {
+    let meta = null;
+    try {
+      meta = yamlFront.loadFront(contents);
+    } catch(e) {
+      console.log(e);
+    }
+    if (meta !== null) {
+      file.meta = true;
+      _.merge(file, _.omit(meta, ['__content', 'space']));
+    }
+    resolve(file);
+  });
 
 const filterAndBindSpace = (files) =>
   _.map(_.keys(SPACES), (spaceKey) => {
@@ -105,16 +90,16 @@ const checkSpaces = (spaceArray) =>
         return false;
       }
       if (!file.title) {
-        gutil.log(`${menu_indicator} Page ${cyan(file.basePath)} does not have a title. ${red('Is the metadata correct? It will be rendered, but not visible in the menu & search')}`);
+        log(`Page ${cyan(file.basePath)} does not have a title. ${red('Is the metadata correct? It will be rendered, but not visible in the menu & search')}`);
         errors = true;
         return false;
       }
       if (file.category && !_.find(files, f => f.title === file.category) && categories.indexOf(file.category.toLowerCase()) === -1) {
-        gutil.log(`${menu_indicator} File ${cyan(file.basePath)} has category ${cyan(file.category)} which has no file associated to it or is not used in ${cyan('spaces.yml')}`);
+        log(`File ${cyan(file.basePath)} has category ${cyan(file.category)} which has no file associated to it or is not used in ${cyan('spaces.yml')}`);
         return false;
       }
       if (file.parent && !_.find(files, f => f.url === normalizeSafe(path.join(file.dir, file.parent)))) {
-        gutil.log(`${menu_indicator} File ${cyan(file.basePath)} has parent ${cyan(file.parent)} which would resolve to ${cyan(normalizeSafe(path.join(file.dir, file.parent)))}, but this does not exist`);
+        log(`File ${cyan(file.basePath)} has parent ${cyan(file.parent)} which would resolve to ${cyan(normalizeSafe(path.join(file.dir, file.parent)))}, but this does not exist`);
         return false;
       }
       return true
@@ -133,7 +118,8 @@ const writeSpaces = opts => {
     'dir': 'd',
     'parent': 'p',
     'main': 'm',
-    'menu_title': 'mt'
+    'menu_title': 'mt',
+    'menu_order': 'mo'
   };
   return (spaceArray) => Promise.all(_.map(spaceArray, (space) => {
     const pageObj = {
@@ -141,7 +127,7 @@ const writeSpaces = opts => {
       content: {
         categories: space.menu_categories,
         pages: _.map(space.files, file => {
-          const f = _.pick(file, ['title', 'category', 'id', 'url', 'dir', 'parent', 'main', 'menu_title']);
+          const f = _.pick(file, ['title', 'category', 'id', 'url', 'dir', 'parent', 'main', 'menu_title', 'menu_order']);
           const newObject = {};
           _.keys(f).forEach(k => {
             if (keyMap[k]) {
@@ -153,7 +139,10 @@ const writeSpaces = opts => {
       }
     };
     const writePromise = writeSpace(opts);
-    return writePromise(pageObj);
+    return writePromise(pageObj)
+    .then(() => {
+      return pageObj;
+    });
   }));
 }
 
@@ -162,10 +151,13 @@ const build = (opts) => new Promise((resolve, reject) => {
   const {src, destination, spaceFile} = opts;
   getGenerateFiles(src)
     .then(getSourceFilesPromise(opts))
-    .then(readSourceFiles)
+    .then(parseSourceFiles)
     .then(filterAndBindSpace)
     .then(checkSpaces)
     .then(writeSpaces(opts))
+    .then(arr => {
+      return writeFile(path.join(opts.destination, 'spaces.json'), JSON.stringify(arr));
+    })
     .then(() => {
       resolve(errors);
     })

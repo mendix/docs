@@ -10,7 +10,7 @@ Mendix apps encourage the application of a services-oriented architecture, with 
 
 One important aspect of services is that all access to data and logic is handled by the service operations. Direct access to databases used for storing the service data is discouraged, because this would bypass the business rules and security handled by the service. This creates a challenge for generic reporting, data warehousing, and ETL tooling.
 
-A new standard called OData being adopted more and more, as this enables generic data access within a services-oriented architecture. OData is “an open protocol to allow the creation and consumption of queryable and interoperable Restful APIs in a simple and standard way” ([www.odata.org](http://www.odata.org)). In other words, it enables tools to use any REST/OData service by providing metadata that describes the data being provided and by standardizing the messages exchanged with the OData services.
+A new standard called OData being adopted more and more, as this enables generic data access within a services-oriented architecture. [OData](http://www.odata.org) is “an open protocol to allow the creation and consumption of queryable and interoperable Restful APIs in a simple and standard way.". In other words, it enables tools to use any REST/OData service by providing metadata that describes the data being provided and by standardizing the messages exchanged with the OData services.
 
 A reporting tool like Tableau or Excel can discover what data and functionality is available in an OData service and provide a generic way for users to build new queries for the data.
 
@@ -39,9 +39,11 @@ A published OData service can be used by third-party applications to read data f
 
     ![](attachments/18448736/18582029.png)
 
-3. Enter the name **Expenses** and click **OK**.
+3.  Enter the name **Expenses** and click **OK**.
+
     ![](attachments/18448736/18582027.png)
-4. Go to the Resources tab and click **Add published resource**:
+
+4.  Go to the Resources tab and click **Add published resource**:
 
     ![](attachments/18448736/18581979.png)
 

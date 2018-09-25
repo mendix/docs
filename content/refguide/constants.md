@@ -1,6 +1,7 @@
 ---
 title: "Constants"
-category: "Modeler"
+category: "Desktop Modeler"
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 
@@ -12,7 +13,7 @@ The value for a constant can be overridden in a [Configuration](configuration). 
 
 Constants can be used in:
 
-*   [Microflow expressions](microflow-expressions): by prefixing the full name of the constant with @.
+*   [Microflow expressions](expressions): by prefixing the full name of the constant with @.
 *   [Consumed Web Services](consumed-web-services): in this case the constant is a URL that specifies where the web service is located. This can vary based on the environment in which the application is running, so that you can for example use different web services for development and production.
 
 ## Common Properties

@@ -1,6 +1,7 @@
 ---
 title: "Publishing Packages To Mobile Stores"
 category: "Mobile"
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 Mendix Apps can be packaged as hybrid mobile apps. You can publish those packages in the Apple App Store and the Android app stores (for example, Google Play) or the Amazon App Store. These app packages are built with Adobe's PhoneGap Build cloud service. The resulting apps can then access native functionality, such as the geo location service and the camera.

@@ -1,5 +1,5 @@
 ---
-title: "Push Notifications"
+title: "Use Push Notifications"
 category: "Mobile"
 ---
 
@@ -18,15 +18,16 @@ The Mendix push notifications functionality makes it easy for developers to incl
 
 To use push notifications, make sure you have the following:
 
-* A Mendix app platform account (sign up [here](https://www.mendix.com/try-now/?utm_source=documentation&utm_medium=community&utm_campaign=signup))
-* Mendix Modeler version 6.8.1 or higher (download the Modeler in the [App Store](https://appstore.home.mendix.com/link/modeler))
+* Mendix Desktop Modeler version 7.1–7.3
+    * Please note that 7.3 is the last version verified to work with [Push Notifications Connector](https://appstore.home.mendix.com/link/app/3003/)
+    * Download the Modeler in the [App Store](https://appstore.home.mendix.com/link/modeler)
 * A mobile device (to get started, we recommend an Android device connected to your development machine via a data cable)
 * An [Adobe PhoneGap Build](https://build.phonegap.com/) account
 
 ## 3 Supported Platforms
 
-* Android 4.4 and higher
-* iOS 9.0 and higher
+* Android 4.4 and above
+* iOS 9.0 and above
 
 ## 4 Demo
 
@@ -59,7 +60,7 @@ From the admin pages, you currently cannot disable the APNs service completely. 
 
 ## 8 Contributing
 
-For more information on contributing to this repository, see [How to Contribute to a GitHub Repository](../collaboration-project-management/contribute-to-a-github-repository).
+For more information on contributing to this repository, see [How to Contribute to a GitHub Repository](../collaboration-requirements-management/contribute-to-a-github-repository).
 
 ## 9 Documents in This Sub-Category
 

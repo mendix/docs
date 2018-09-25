@@ -1,7 +1,6 @@
 User-agent: *
 Disallow: /mappings/
 Disallow: /404
-Disallow: /json/
 Sitemap: https://docs.mendix.com/sitemap.xml
 {{ $env := getenv "HUGO_ENV" }}
 {{- if eq $env "production" -}}

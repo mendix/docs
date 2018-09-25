@@ -128,7 +128,7 @@ The CI/CD in ATS is using a webservice with authentication. Please use the stand
 
 ## 5 Configure ATS in Your Pipeline (Example)
 
-Using the CI/CD API key and the unique ID of the CI/CD template you can execute a test case from your CI/CD pipeline. In this chapter, you find an example for Jenkins.
+Using the CI/CD API key and the unique ID of the CI/CD template you can execute a test case from your CI/CD pipeline. In this section, you find an example for Jenkins.
 
 ## 5.1 Prerequisites
 
@@ -136,14 +136,14 @@ Using the CI/CD API key and the unique ID of the CI/CD template you can execute 
 * Know how to configure CI/CD in ATS:
   * Configure a CI/CD Template in ATS
   * Create the CI/CD API key in ATS
-  * Find your AppID in Mendix Sprintr
+  * Find your AppID in the Mendix Developer Portal
 
-## 5.2 Adding an Extra Step in Jenkins
+## 5.2 Adding an Extra Step in Jenkins on a Linux Server
 
 This is only an example for Jenkins on Linux in shell scripting and can be written in another scripting language of your choice like for example Powershell (for Windows) or Groovy.
 
-* Make sure that curl and xmllint are installed on your Linux server.
-* In your Jenkins project, add a build step of type Execute shell and use the following shell script. 
+* Make sure that curl and xmllint are installed on your Linux server
+* In your Jenkins project, add a build step of type Execute shell and use the following shell script
 
 ![](attachments/ats-and-ci-cd-2/script-cicd-jenkins.png)
 
@@ -185,3 +185,122 @@ RESULT=$(curl -s -H 'Content-Type: text/xml' -d "<soapenv:Envelope xmlns:soapenv
 echo EMAILTEXT="Test Run Status is ${RESULT}" >> email.txt
 ```
 The last API call results in a "Passed" or "Failed", you can email this result or for example use the outcome in a conditional step for continuing deploying on different environments or failing this build. 
+
+## 5.3 Adding an Extra Step in Jenkins on a Windows Server
+
+This is only a PowerShell example for Jenkins on Windows, and it can be written in another scripting language of your choice.
+
+* Make sure to install the [PowerShell plugin](https://wiki.jenkins.io/display/JENKINS/PowerShell+Plugin)
+* In your Jenkins project, add a build step of type `Execute powershell` and use the following PowerShell script
+* In the script, you will find the parameters displayed here – change the values in the script with your own values:
+
+| Parameter | Value |
+| --- | --- |
+| $url | 'ENTERURL' |
+| $appapitoken | 'APPAPITOKEN' |
+| $appid | 'APPID' |
+| $jobtemplate | 'JOBTEMPLATE' |
+
+```
+function Execute-SOAPRequest 
+( 
+        [Xml]    $SOAPRequest, 
+        [String] $URL 
+) 
+{ 
+        write-host "Sending SOAP Request To Server: $URL" 
+        $soapWebRequest = [System.Net.WebRequest]::Create($URL) 
+        $soapWebRequest.Headers.Add("SOAPAction","`"http://www.facilities.co.za/valid8service/valid8service/Valid8Address`"")
+
+        $soapWebRequest.ContentType = "text/xml;charset=`"utf-8`"" 
+        $soapWebRequest.Accept      = "text/xml" 
+        $soapWebRequest.Method      = "POST" 
+        
+        write-host "Initiating Send." 
+        $requestStream = $soapWebRequest.GetRequestStream() 
+        $SOAPRequest.Save($requestStream) 
+        $requestStream.Close() 
+        
+        write-host "Send Complete, Waiting For Response." 
+        $resp = $soapWebRequest.GetResponse() 
+        $responseStream = $resp.GetResponseStream() 
+        $soapReader = [System.IO.StreamReader]($responseStream) 
+        $ReturnXml = [Xml] $soapReader.ReadToEnd() 
+        $responseStream.Close() 
+        
+        write-host "Response Received."
+
+       
+        return $ReturnXml 
+
+}
+
+$url = 'ENTERURL'
+$appapitoken = 'APPAPITOKEN'
+$appid = 'APPID'
+$jobtemplate = 'JOBTEMPLATE'
+$soap = [xml]@"
+<?xml version="1.0" encoding="utf-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:men="http://www.mendix.com/">
+   <soapenv:Header>
+      <men:authentication>
+         <username>ATSAPIUser</username>
+         <password>ATSAPIUser</password>
+      </men:authentication>
+   </soapenv:Header>
+   <soapenv:Body>
+      <men:RunJob>
+         <TestRun>
+            <AppAPIToken>$appapitoken</AppAPIToken>
+            <AppID>$appid</AppID>
+            <JobTemplateID>$jobtemplate</JobTemplateID>
+         </TestRun>
+      </men:RunJob>
+   </soapenv:Body>
+</soapenv:Envelope>
+"@
+
+write-host "Starting the RunJob API call..."
+$ret = Execute-SOAPRequest $soap $url
+$jobid = $ret.Envelope.Body.RunJobResponse.RunJob.JobID.'#cdata-section'
+
+$url2 = 'https://ats100.mendixcloud.com/ws/GetJobStatus'
+$soap2 = [xml]@"
+<?xml version="1.0" encoding="utf-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:men="http://www.mendix.com/">
+   <soapenv:Header>
+      <men:authentication>
+         <username>ATSAPIUser</username>
+         <password>ATSAPIUser</password>
+      </men:authentication>
+   </soapenv:Header>
+   <soapenv:Body>
+      <men:GetTestRun>
+         <TestRun>
+            <AppAPIToken>$appapitoken</AppAPIToken>
+            <JobID>$jobid</JobID>
+            <AppID>$appid</AppID>
+         </TestRun>
+      </men:GetTestRun>
+   </soapenv:Body>
+</soapenv:Envelope>
+"@
+
+Start-Sleep -s 5
+write-host "Starting the GetJobStatus API call..."
+$ret2 = Execute-SOAPRequest $soap2 $url2
+
+$executionstatus = $ret2.Envelope.Body.GetTestRunResponse.TestRun.ExecutionStatus.'#cdata-section'
+
+while($executionstatus -ne 'Done')
+    {
+        write-host "Status Test Run is: $executionstatus, please wait..."
+        Start-sleep -s 30
+        $ret2 = Execute-SOAPRequest $soap2 $url2
+        $executionstatus = $ret2.Envelope.Body.GetTestRunResponse.TestRun.ExecutionStatus.'#cdata-section'
+    }
+
+$executionresult = $ret2.Envelope.Body.GetTestRunResponse.TestRun.ExecutionResult.'#cdata-section'
+write-host "Result of Test Run is: $executionresult"
+```
+The last API call results in a "Passed" or "Failed". You can email this result or, for example, use the outcome in a conditional step for continuing deploying on different environments or failing this build.

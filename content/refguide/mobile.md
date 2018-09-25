@@ -10,7 +10,7 @@ Mendix allows you to quickly build apps for mobile devices. This document gives 
 
 Every app starts at the home page. You can specify different home pages for phones and tablets in the [Navigation](navigation) document. The mobile profiles can be added and removed separately. If you add a profile, you also have to provide its home page. Apart from the home page, different home page for different user roles can be specified. In addition, there is a default menu that can be used in [menu widgets](menu-widgets).
 
-![](attachments/16714058/18582284.png)
+![](attachments/modeler-core/18582284.png)
 
 ## 3 Layout
 
@@ -20,7 +20,7 @@ For mobile devices, you might want to have a layout that hides the menu in a col
 
 You will need at least one layout per supported device type (desktop, tablet, phone) to optimize your app, but you can create as many as you like.
 
-![](attachments/16714058/16844053.png)
+![](attachments/modeler-core/16844053.png)
 
 ## 4 Widgets
 
@@ -36,13 +36,9 @@ If you want to publish your app in the Apple App Store or Google Play, you have 
 
 To access native functions of the device, we provide a number of PhoneGap widgets in the Mendix App Store. And, of course, you can build your own custom widgets that use native features. PhoneGap widgets can be recognized by their special icon. You can also search for them by via **Edit** > **Find Advanced** in the Mendix Desktop Modeler.
 
-![](attachments/16714058/16844052.png)
+![](attachments/modeler-core/16844052.png)
 
 ### 5.2 Offline Apps
-
-{{% alert type="warning" %}}
-This is a new feature still in beta, and is subject to change before the final release.
-{{% /alert %}}
 
 Separate profiles are available for building [offline apps](offline). These apps can run even when there is no network connection available, because they store their data on the device itself. When the device connects to the network, the user can synchronize with the main application. Note that there are some restrictions compared to connected apps.
 

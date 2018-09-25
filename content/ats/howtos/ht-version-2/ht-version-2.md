@@ -1,6 +1,7 @@
 ---
 title: "ATS 2 How-to's"
 category: "How-to's"
+menu_order: 20
 ---
 
 These are the main documents in this section:
@@ -11,7 +12,9 @@ These are the main documents in this section:
 * [How to Create a Test Case](create-a-test-case-2)
 * [How to Create a Test Suite](create-a-test-suite-2)
 * [How to Create a Data-Driven Test Case](create-datadriven-test-case-2)
+* [How to Use Precondition in Test Cases](use-precondition-in-test-cases-2)
 * [How to Create a Negative Test Case](create-a-negative-test-case-2)
+* [How to Create Extracted Actions](create-extracted-actions-2)
 * [How to Schedule Test Cases/Test Suites](schedule-testcase-testsuite-2)
 * [How to Mask Your Password](mask-your-password-2)
 * [How to Upload a File in Your App Using ATS](upload-file-using-ats-2)
@@ -19,4 +22,5 @@ These are the main documents in this section:
 * [How to Increase Recorder and Helper Coverage](increase-recorder-helper-coverage-2)
 * [How to Create Custom Actions](create-custom-actions-2)
 * [How to Connect Stories to Test Cases](connect-stories-to-testcases-2)
+* [How to Set Up Selenium locally](setup-local-selenium-index-2)
 * [How to Use ATS in Combination with CI/CD](ats-and-ci-cd-2)

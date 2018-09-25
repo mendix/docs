@@ -1,14 +1,16 @@
 ---
 title: "Microflows"
-category: "Modeler"
+parent: "application-logic"
+menu_order: 10
 description: "Presents an overview of all the elements that can be used in a microflow."
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
 {{% alert type="info" %}}
 
-This part is an overview of all the elements that can be used in a microflow. For the properties of the microflow itself, see [Microflow](microflow).
+This page is an overview of all the elements that can be used in a microflow. For the properties of the microflow itself, see [Microflow Properties](microflow).
 
 {{% /alert %}}
 

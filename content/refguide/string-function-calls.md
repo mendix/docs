@@ -1,12 +1,13 @@
 ---
 title: "String Function Calls"
-parent: "microflow-expressions"
+parent: "expressions"
 description: "Describes the functions for converting and inspecting strings in Mendix."
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 These are functions to convert and inspect [strings](data-types). Note that these functions never change the string itself, they only return a new value.
 
-Strings are surrounded by quotes. If the string contains a quote, it should be escaped by another quote. For example: `'this isn't funny'`.
+Strings are surrounded by quotes. If the string contains a quote, it should be escaped by another quote. For example: `'this isn''t funny'`.
 
 ## toLowerCase
 
@@ -227,19 +228,27 @@ returns:
 
 ## contains
 
-Determines whether a substring occurs in the original string.
+Determines whether the original string (first parameter) contains a substring (second parameter).
 
 This expression: 
 
 ```java
-contains('mystring', 'otherstring')
+contains('stringtosearchin', 'stringtosearchfor')
 ```
 
 is equivalent to the following expression:
 
 ```java
-find('mystring', 'otherstring') != -1
+find('stringtosearchin', 'stringtosearchfor') != -1
 ```
+
+Searching for an empty variable or empty string, like this expression where `$param = ''`:
+
+```java
+contains('stringtosearchin', $param)
+```
+
+will return true.
 
 {{% alert type="warning" %}}
 This function is case-senstive.
@@ -391,6 +400,10 @@ In `isMatch()`, the regex is implicitly anchored at `^` and `$`.
 
 * `isMatch('NLG 123.45', '[0-9]')` returns false
 * `isMatch('NLG 123.45', '.*[0-9].*')` returns true
+
+NB searching an empty string:
+
+* `isMatch('', '.*[0-9].*')` returns true
 
 ## replaceAll
 
@@ -566,7 +579,7 @@ Converts a string back from a URL. The opposite of [urlEncode](#urlEncode).
 The string, URL-decoded.
 
 ```java
-urlEncode('Hello%2C+world%21')
+urlDecode('Hello%2C+world%21')
 ```
 
 returns:

@@ -1,6 +1,7 @@
 ---
 title: "Project Settings"
 parent: "project"
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
@@ -41,9 +42,19 @@ Here you can select a microflow that is automatically executed when a shutdown c
 
 ### 3.5 Health Check
 
-Select a microflow that reports on the health status of a running application. When this microflow returns an empty string, the application is healthy; otherwise, the string represents an explanation of why the application is not healthy.
+Here you can select a microflow performs the checks on a running app that you think are required to assess the app's health.
 
-### 3.6 First Day of the Week<a name="first-day-of-the-week"></a>
+The result of each check is returned as a string, which is displayed in the [Developer Portal](../developerportal/deploy/environments). When the microflow returns an empty string, the application is healthy; otherwise, the string presents an explanation of why the application is not healthy.
+
+This microflow gets called every few minutes to check if the app is still healthy. This is done by executing it using m2ee on the admin port of your app. For more information, see the section [Health Check](monitoring-mendix-runtime#check-health) in *Monitoring Mendix Runtime*.
+
+{{% alert type="info" %}}
+
+The health check microflow is specific to [Mendix Cloud](../deployment/mendixcloud/). For other clouds, the admin port can be called, or the health check microflow can be exposed through a REST API.
+
+{{% /alert %}}
+
+### 3.6 First Day of the Week {#first-day-of-the-week}
 
 The first day of the week setting determines the first day of the week in the date picker widget.
 
@@ -154,6 +165,16 @@ For more details on migration, see [Uniqueness Constraint Migration](uniqueness-
 
 Falling back to the **Runtime** option will remove the unique constraints from the database, and uniqueness rules will not be checked at the database level anymore. Hence, data accuracy cannnot be guaranteed at the highest level, especially in the case of high concurrency transactions.
 
+### 3.13 Web Service Calls
+
+{{% alert type="info" %}}
+
+This setting was added in version 7.15
+
+{{% /alert %}}
+
+The way web services are called has been optimized, which means that you can use custom proxy settings for each web service call. However, this implementation does not support schema validation, nor does it support complex schemas that use a policy reference with an algorithm suite. This configuration option allows you to use the old implementation, in case you need one of these features.
+
 ## 4 Modeler
 
 These settings determine the behavior of the Modeler for this project. The settings apply to everyone that is working on this project.
@@ -184,10 +205,12 @@ For each language, you can configure whether to check that all mandatory texts h
 
 Certificates are used to connect to web services over HTTPS when the following requirements are met:
 
-* The server uses a self-signed certificate authority
+* The server uses a self-signed certificate authority, and/or
 * A client certificate (certificate with a private key) is required
 
 These certificates can be imported into the Modeler using the **Import** button. Certificate authority files usually have a *.crt* extension, and client certifcates usually have a *.p12* or *.pfx* extension. After importing, use **View details** to acquire more information concerning the certificate.
+
+Client certificates added here will be used whenever a server accepts a client certificate. If you upload more than one client certificate, one of them will be chosen based on the requirements of the server. If you need more control over client certificates, you should not upload the certificates here, but use [custom settings](custom-settings) *ClientCertificates*, *ClientCertificatePasswords*, and *ClientCertificateUsages*.
 
 {{% alert type="warning" %}}
 
@@ -203,10 +226,10 @@ Be aware that during local deployment, the certificate files will be located in 
 
 Certificates can be installed in the Windows Certificate Store using the **Install Certificate** wizard in the **View details** form. This can be useful when trying to access a WSDL-file using an *https* connection, which requires a client certificate.
 
-{{% /alert %}}<
+{{% /alert %}}
 {{% alert type="success" %}}
 
-When an SSLException occurs at runtime with the message `HelloRequest followed by an unexpected handshake message` or when a web service does not respond (Java 6 update 21 and higher) when using the imported certificates, this is caused by either the client or server not being [RFC-5746](http://www.ietf.org/rfc/rfc5746.txt)-compatible.
+When an SSLException occurs at runtime with the message `HelloRequest followed by an unexpected handshake message` or when a web service does not respond (Java 6 update 21 and above) when using the imported certificates, this is caused by either the client or server not being [RFC-5746](http://www.ietf.org/rfc/rfc5746.txt)-compatible.
 
 When updating the client and server to be compatible with RFC-5746 is not feasible, the following should be added to **Extra JVM parameters** in the **Server** tab to avoid this exception: `-Dsun.security.ssl.allowUnsafeRenegotiation=true`. Be warned that this does make the client-server communication vulnerable to an exploit which has been fixed in RFC-5746.
 When client and server are RFC-5746 compatible at a future point in time, this JVM parameter can be removed.

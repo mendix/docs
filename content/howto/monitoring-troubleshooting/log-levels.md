@@ -71,7 +71,7 @@ To access the advanced features of the console, follow these steps:
 
 1. Open the **Console**.
 2. Click **Advanced** to open the drop-down menu of advanced options.
-3. Click **Set log levels...**.
+3. Click **Set log levels**.
 
 ![](attachments/18448575/18580030.png)
 

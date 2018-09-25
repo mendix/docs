@@ -2,19 +2,19 @@
 title: "Team Server API"
 category: "API Documentation"
 ---
-# <a name="TeamServerAPI-Introduction" rel="nofollow"></a>Introduction
+## Introduction
 
 The team server API allows you to retrieve the information (branches, revisions) of application models stored in our team server. You always access an application model via the context of an application (see the Deploy API for more information about retrieving applications and application identifiers).
 The image below provides a domain model representation of the concepts discussed below and how these are related:
 ![](attachments/131076/425989.png)
 
-# Authentication
+## Authentication
 
 The Cloud Portal Management API requires its users to authenticate themselves. This can be done by using API keys; for more information about this please refer to [this article](authentication "authentication").
 
-# <a name="TeamServerAPI-APIcalls" rel="nofollow"></a>API calls
+## API calls
 
-## <a name="TeamServerAPI-Retrievebranches" rel="nofollow"></a>Retrieve branches
+### Retrieve branches
 
 <a name="TeamServerAPI-Description" rel="nofollow"></a>Retrieves all branches that belong to the team server project of a specific app which the authenticated user has access to as a regular user.
 
@@ -23,9 +23,9 @@ HTTP Method: GET
  URL: https://deploy.mendix.com/api/1/apps/<AppId>/branches/
 ```
 
-### <a name="TeamServerAPI-Request" rel="nofollow"></a>Request
+#### Request
 
-##### <a name="TeamServerAPI-Parameter" rel="nofollow"></a>Parameter
+##### Parameter
 
 *   _AppId_ (String) : Subdomain name of an app.
 
@@ -40,7 +40,7 @@ Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey: 26587896-1cef-4483-accf-ad304e2673d6
 ```
 
-### Output
+#### Output
 
 List of objects with the following key-value pairs:
 
@@ -72,7 +72,7 @@ List of objects with the following key-value pairs:
 }]
 ```
 
-## Retrieve branch
+### Retrieve branch
 
 Retrieves a specific branch that belongs to the team server project of a specific app which the authenticated user has access to as a regular user.
 
@@ -81,7 +81,7 @@ Retrieves a specific branch that belongs to the team server project of a specifi
  URL: https://deploy.mendix.com/api/1/apps/<AppId>/branches/<Name>
 ```
 
-### Request
+#### Request
 
 ##### Parameters
 
@@ -99,7 +99,7 @@ Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey: 26587896-1cef-4483-accf-ad304e2673d6
 ```
 
-### Output
+#### Output
 
 An object with the following key-value pairs:
 
@@ -127,16 +127,16 @@ An object with the following key-value pairs:
 }
 ```
 
-## Retrieve revisions
+### Retrieve revisions
 
 Retrieves all revisions of a specific branch that belongs to the team server project of a specific app which the authenticated user has access to as a regular user.
 
 ```java
 HTTP Method: GET
- URL: https://deploy.mendix.com/api/1/apps/<AppId>/branches/<Name>/revisions/ 
+ URL: https://deploy.mendix.com/api/1/apps/<AppId>/branches/<Name>/revisions/
 ```
 
-### Request
+#### Request
 
 ##### Parameters
 
@@ -154,7 +154,7 @@ Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey: 26587896-1cef-4483-accf-ad304e2673d6
 ```
 
-### Output
+#### Output
 
 List of objects with the following key-value pairs:
 

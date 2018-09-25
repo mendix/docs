@@ -9,20 +9,20 @@ apidocs-mxsdk:
   menu_categories:
     - "API Documentation"
     - "Mendix Platform SDK"
-addons:
-  space: "Other Add-ons"
+aqm:
+  space: "Application Quality Monitor"
   priority: false
   menu_categories:
-    - "AQM"
+    - "Application Quality Monitor Overview"
 apm:
-  space: "APM"
+  space: "Application Performance Monitor"
   priority: false
   menu_categories:
     - "Installation Guide"
     - "Reference Guide"
     - "Use Cases"
 ats:
-  space: "ATS"
+  space: "Application Test Suite"
   priority: false
   menu_categories:
     - "General"
@@ -93,20 +93,22 @@ howto:
   mendix_version: 7
   menu_categories:
     - "Tutorials"
-    - "SAP"
-    - "Atlas UI"
     - "Modeling Basics"
-    - "Data Models"
+    - "Web Modeler"
+    - "Atlas UI"
     - "UX"
+    - "Data Models"
     - "Logic & Business Rules"
     - "Mobile"
     - "Security"
     - "Integration"
-    - "Extendability"
+    - "SAP"
+    - "Extensibility"
     - "Custom Widget Development"
     - "Testing"
     - "Monitoring & Troubleshooting"
-    - "Collaboration & Project Management"
+    - "Collaboration & Requirements Management"
+    - "Tips & Tricks"
 refguide4:
   space: "Mendix 4 Reference Guide"
   priority: false
@@ -125,7 +127,7 @@ refguide4:
     - "Deployment"
   banner:
     type: 'warning'
-    text: 'You are browsing the documentation of an unsupported version of Mendix. Please find the latest version of the Reference Guide <a href="/refguide/">here</a>'
+    text: 'You are browsing the documentation of an unsupported version of Mendix. Please find the latest version of the Reference Guide <a href="/refguide/">here</a>.'
 refguide5:
   space: "Mendix 5 Reference Guide"
   priority: false
@@ -159,13 +161,15 @@ refguide:
   menu_categories:
     - "General"
     - "Team Server"
-    - "Modeler"
+    - "Desktop Modeler"
+    - "Web Modeler"
     - "Runtime"
     - "Java Programming"
     - "SAP"
+    - "IBM"
     - "Mobile"
 howtogeneral:
-  space: "General How-to's"
+  space: "Best Practices & Support"
   priority: 6
   menu_categories:
     - "Tips & Tricks"
@@ -177,35 +181,33 @@ releasenotes:
   menu_categories:
     - "Desktop Modeler"
     - "Web Modeler"
-    - "Platform Portal"
+    - "Developer Portal"
     - "Model SDK"
     - "Platform SDK"
     - "Hybrid App"
     - "Mendix Mobile App"
-    - "APM"
-    - "ATS"
-    - "AQM"
+    - "Application Test Suite"
+    - "Application Performance Monitor"
+    - "Application Quality Monitor"
     - "Beta Features"
 developerportal:
   space: "Developer Portal"
   priority: false
   menu_categories:
     - "General"
-    - "Company Admin"
     - "Collaborate"
     - "Develop"
     - "Deploy"
     - "Operate"
     - "Settings"
+    - "Company Admin"
     - "How-to's"
 deployment:
   space: "Deployment"
   priority: false
   menu_categories:
-    - "Amazon Web Services"
     - "Azure"
     - "Cloud Foundry"
     - "Docker"
     - "Mendix Cloud"
     - "On-Premises"
-    - "SAP Cloud Platform"

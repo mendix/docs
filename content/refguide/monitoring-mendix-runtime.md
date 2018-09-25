@@ -32,14 +32,14 @@ Read the next sections to find out which monitoring actions are supported.
 **Response**
 
 ```java
-{  
-  "feedback":{  
-    "202de1e51639ae0":{  
+{
+  "feedback":{
+    "202de1e51639ae0":{
       "request_duration":106175,
       "type":"CLIENT",
       "user":"Anonymous_2ce7c971-f077-4aca-83c5-f3898443ed01",
-      "action_stack":[  
-      {  
+      "action_stack":[
+      {
         "xpath":"//MyFirstModule.Entity",
         "amount":1,
         "depth":0,
@@ -47,16 +47,16 @@ Read the next sections to find out which monitoring actions are supported.
         "sort":{},
         "type":"RetrieveXPathAction"
       },
-      {  
-        "current_activity":{  
+      {
+        "current_activity":{
           "caption":"Retrieve Entity from database",
           "type":"RetrieveByXPath"
         },
         "name":"MyFirstModule.LoopNested",
         "type":"Microflow"
       },
-      {  
-        "current_activity":{  
+      {
+        "current_activity":{
           "caption":"LoopNested",
           "type":"SubMicroflow"
         },
@@ -64,21 +64,21 @@ Read the next sections to find out which monitoring actions are supported.
         "type":"Microflow"
       }
     ]},
-    "bcbb5508-0293-4f12-b290-ee109962811e":{  
+    "bcbb5508-0293-4f12-b290-ee109962811e":{
       "request_duration":104776,
       "type":"CLIENT_ASYNC_MONITORED",
       "user":"Anonymous_2ce7c971-f077-4aca-83c5-f3898443ed01",
-      "action_stack":[  
-      {  
-        "current_activity":{  
+      "action_stack":[
+      {
+        "current_activity":{
           "caption":"Retrieve Entity from database",
           "type":"RetrieveByXPath"
         },
         "name":"MyFirstModule.LoopNested",
         "type":"Microflow"
       },
-      {  
-        "current_activity":{  
+      {
+        "current_activity":{
           "caption":"LoopNested",
           "type":"SubMicroflow"
         },
@@ -124,8 +124,8 @@ This request returns the current executions of actions known by the Mendix Runti
 	"cache": { "total_count":2 },
     "sessions":
     {
-	  "user_sessions":{  
-        "562949953421313":[  
+	  "user_sessions":{
+        "562949953421313":[
           "Mozilla/5.0 (Windows NT 6.3; WOW64; rv:39.0) Gecko/20100101 Firefox/39.0"
         ]
       },
@@ -147,38 +147,38 @@ This request returns the current executions of actions known by the Mendix Runti
       "init_nonheap":2555904,
       "init_heap":268435456,
       "eden":0,
-      "memorypools":[  
-        {  
+      "memorypools":[
+        {
           "is_heap":false,
           "usage":11788032,
           "name":"Code Cache",
           "index":0
         },
-        {  
+        {
           "is_heap":false,
           "usage":49590256,
           "name":"Metaspace",
           "index":1
         },
-        {  
+        {
           "is_heap":false,
           "usage":6458552,
           "name":"Compressed Class Space",
           "index":2
         },
-        {  
+        {
           "is_heap":true,
           "usage":106799624,
           "name":"PS Eden Space",
           "index":3
         },
-        {  
+        {
           "is_heap":true,
           "usage":0,
           "name":"PS Survivor Space",
           "index":4
         },
-        {  
+        {
           "is_heap":true,
           "usage":18500976,
           "name":"PS Old Gen",
@@ -256,17 +256,17 @@ In case you do want to develop a strategy on interpreting these pools anyway bas
 **Response**
 
 ```java
-{  
-  "feedback":{  
-    "totals":{  
+{
+  "feedback":{
+    "totals":{
       "Expenses.TempUser":1,
       "System.Session":1
     },
-    "user_totals":[  
-      {  
+    "user_totals":[
+      {
         "user_name":"MxAdmin",
         "total_count":2,
-        "amounts_per_type":{  
+        "amounts_per_type":{
           "Expenses.TempUser":1,
           "System.Session":1
          }
@@ -315,7 +315,7 @@ This monitoring action gives more detailed information about objects which are c
 
 The server statistics monitor action gives information about the embedded Jetty web server. The "jetty" section lists the number of current open connections and the maximum number of open connections. In addition, the maximum idle time of connection before it's being closed is listed, for when Jetty is under normal circumstances. Please note that in Mendix 7.9 and above, information about the maximum idle time of connections before it's being closed for when Jetty is low on resources ("max_idle_time_s_low_resources") is removed as part of the Jetty upgrade, because it is no longer provided by Jetty.
 
-The "threadpool" section gives information about the threadpool of the handler which processes all requests which go through the runtime port. See the [Jetty QueuedThreadPool documentation](http://download.eclipse.org/jetty/stable-9/apidocs/org/eclipse/jetty/util/thread/QueuedThreadPool.html) for more information.
+The "threadpool" section gives information about the threadpool of the handler which processes all requests which go through the runtime port. See the [Jetty QueuedThreadPool documentation](https://www.eclipse.org/jetty/javadoc/9.4.11.v20180605/org/eclipse/jetty/util/thread/QueuedThreadPool.html) for more information.
 
 ## 6 Logged-In Users
 
@@ -354,7 +354,7 @@ Shows which users are currently logged in. If a user has multiple sessions, this
 ```java
 {
   "feedback": {
-    "qtp1967003817-95":[  
+    "qtp1967003817-95":[
       "sun.misc.Unsafe.park(Native Method)",
       "java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)",
       "java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)",
@@ -383,7 +383,7 @@ Shows which users are currently logged in. If a user has multiple sessions, this
       "org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)",
       "java.lang.Thread.run(Thread.java:745)"
     ],
-    "pool-1-thread-10":[  
+    "pool-1-thread-10":[
       "sun.misc.Unsafe.park(Native Method)",
       "java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)",
       "java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)",
@@ -400,8 +400,8 @@ Shows which users are currently logged in. If a user has multiple sessions, this
 ```
 
 Returns all the current thread stack traces by name. This is useful to low level analyze what is happening in the application. Use the "get_current_runtime_executions" request to retrieve information on a higher level (microflows and other actions).
-
-## 8 Runtime Status
+{#check-health}
+## 8 Runtime Status {#runtime-status}
 
 **Request**
 
@@ -423,7 +423,7 @@ Returns all the current thread stack traces by name. This is useful to low level
 
 Returns the current Mendix Runtime status. Possible status values are: "created", "starting", "broken", "running", "stopping" and "stopped". This information can be used to track in what state the Mendix Runtime is when the command to start or stop was given or to check whether the runtime is still running.
 
-## 9 Check Health
+## 9 Check Health {#check-health}
 
 **Request**
 
@@ -444,13 +444,13 @@ Returns the current Mendix Runtime status. Possible status values are: "created"
 }
 ```
 
-In the Mendix Desktop Modeler a [Health Microflow](project-settings) can be configured. This microflow can report on the functional status of the application. Does the general functionality of the application work? Are the necessary remote services available?
+In the Mendix Desktop Modeler, a [health check microflow](project-settings) can be configured. This microflow can report on the functional status of the application: does the general functionality of the application work, and are the necessary remote services available?
 
-If such a Health Microflow has been configured, this request will report on the current health status. The "health" value, can be either "healthy", "sick", or "unknown" (when no health microflow was configured). In case of the value "sick", the "diagnosis" value will give the reason the application is not healthy. This reason is the return value of the Health Microflow.
+If a health check microflow has been configured, this request will report on the current health status. The "health" value can be either "healthy," "sick," or "unknown" (when no health microflow was configured). For the value "sick," the "diagnosis" value will give the reason the application is not healthy. This reason is the return value of the health check microflow.
 
 {{% alert type="warning" %}}
 
-This request can only be executed when the Mendix Runtime status is "running" (see Runtime Status).
+This request can only be executed when the Mendix Runtime status is "running" (see [Runtime Status](#runtime-status) above).
 
 {{% /alert %}}
 

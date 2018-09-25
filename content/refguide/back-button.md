@@ -1,5 +1,5 @@
 ---
-title: "Back button"
+title: "Back Button"
 parent: "button-widgets"
 ---
 

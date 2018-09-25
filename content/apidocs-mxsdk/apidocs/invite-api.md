@@ -4,7 +4,7 @@ category: "API Documentation"
 ---
 
 
-# Introduction
+## Introduction
 
 The Invite API is an [App Service](/refguide6/consumed-app-services) that enables invitation of new users to your AppCloud application directly from the application. You can use it to allow your users to invite others to the application.
 
@@ -16,19 +16,19 @@ The Invite API will require the EnvironmentUUID and EnvironmentPassword paramete
 
 The service is part of the [AppCloudServices module](https://appstore.home.mendix.com/link/app/934/Mendix/AppCloudServices), which is available from the App Store, and it's included in the default themes when creating a new application. Both of these options include a default implementation of the Invite API.
 
-# API Calls
+## API Calls
 
-## SendInvite
+### SendInvite
 
-### Description
+#### Description
 
 Invites someone to start using the application. This person will receive an invitation email with confirmation link; after following the confirmation link the user will gain access to the application. Note that if the invitee has no Mendix account yet, a signup for this will have to be completed as part of accepting the invitation.
 
-### Available in
+#### Available in
 
 API Version 1
 
-### Parameters
+#### Parameters
 
 | Name | Parameter type | Required | Description |
 | --- | --- | --- | --- |
@@ -38,6 +38,6 @@ API Version 1
 | InviterEmailAddress | String | Yes | Email address of the user inviting the new user. Based on this address, the Mendix Platform will include the name of this user in the invitation email sent to the invitee. Note: The email address of the inviting user must correspond with a user who has access to the application. |
 | RoleUUID | String | Yes | UUID of the user role which the invitee should receive on accepting the invitation. This should be the ModelGUID attribute of the corresponding System.UserRole object. |
 
-### Return type
+#### Return type
 
 None

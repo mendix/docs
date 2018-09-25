@@ -1,6 +1,8 @@
 ---
 title: "Associations"
 parent: "domain-model"
+tags: ["domain model", "association"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
@@ -13,7 +15,7 @@ The cardinality (or number of referred objects) of an association is indicated b
 
 The arrow here indicates that **Order** is the owner of the association, and the `1` and `*` indicate that one customer is associated with many orders:
 
-![](attachments/819203/918217.png)
+![](attachments/domain-model-editor/918217.png)
 
 An association between a persistable entity and a non-persistable entity must start in the non-persistable entity and have the owner **Default**.
 
@@ -27,17 +29,17 @@ Delete behavior defines what should happen to the associated object when an obje
 | --- | --- |
 | delete {name of entity} object but keep {name of other entity} object(s) | When an object is deleted, the associated object(s) are not deleted. |
 | delete {name of entity> object and {name of other entity} object(s) as well | When an object is deleted, the associated object(s) are also deleted. |
-| delete {name of entity> object only if it has no {name of other entity} object(s) | An object can only be deleted if it is not associated with any other object(s). |
+| delete {name of entity> object only if it is not associated with {name of other entity} object(s) | An object can only be deleted if it is not associated with any other object(s). |
 
 * *Default value*: delete {name of entity} object but keep {name of other entity} object(s)
 
 This delete behavior is used if you want to delete any associated **Profile** when a **Customer** is deleted:
 
-![](attachments/819203/918143.png)
+![](attachments/domain-model-editor/918143.png)
 
 This delete behavior is used if you want to be able to delete a **Customer** only if it is not associated with any **Order**:
 
-![](attachments/819203/918146.png)
+![](attachments/domain-model-editor/918146.png)
 
 ## 3 Common Properties
 
@@ -77,7 +79,7 @@ This property defines whether an association has one or two owners. If there is 
 
 Drawing an association from the **Order** entity to the **Customer** entity results in the following:
 
-![](attachments/819203/918217.png)
+![](attachments/domain-model-editor/918217.png)
 
 The type property has its default value `Reference`. In this example, a customer can have multiple orders, and an order can only have one customer.
 
@@ -102,7 +104,7 @@ A many-to-many association with default ownership is created by drawing an assoc
 
 In this example, a **Customer** can have multiple **Groups**, and a **Group** can have multiple **Customers**:
 
-![](attachments/819203/918127.png)
+![](attachments/domain-model-editor/918127.png)
 
 In XML, instances of these entities and their associations look as follows (note that the association is only stored in the **Customer** element):
 
@@ -128,7 +130,7 @@ A one-to-one association is created by setting the owner property to `Both` (whi
 
 In this example, a **Customer** can have one **Profile**, and a **Profile** can have one **Customer**:
 
-![](attachments/819203/918128.png)
+![](attachments/domain-model-editor/918128.png)
 
 In XML, instances of these entities and their associations look as follows (note that the association is stored both in the **Profile** element and the **Customer** element):
 
@@ -153,7 +155,7 @@ A many-to-many association where both entities are owners is created by setting 
 
 In this example, an **Accountant** can have multiple **Groups** and a **Group** can have multiple **Accountants**:
 
-![](attachments/819203/918125.png)
+![](attachments/domain-model-editor/918125.png)
 
 In XML, instances of these entities and their association look as follows (note that the association is stored both in the **Accountant** element and the **Group** element):
 

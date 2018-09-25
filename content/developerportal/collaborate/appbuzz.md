@@ -1,6 +1,7 @@
 ---
-title: "App Buzz"
+title: "Buzz for App"
 category: "Collaborate"
+menu_order: 10
 description: "This page describes the app Buzz, which is the landing page for an app."
 tags: ["Buzz","Developer Portal"]
 ---
@@ -11,11 +12,11 @@ In the **Developer Portal**, there are two types of **Buzz** pages:
 
 *   **The company Buzz**
 
-    ![](attachments/companybuzz.jpg)
+    ![](attachments/companybuzz.png)
 
 *   **The app Buzz**
 
-    ![](attachments/appbuzz.jpg)
+    ![](attachments/appbuzz.png)
 
 ## 2 App Buzz
 

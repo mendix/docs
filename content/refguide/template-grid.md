@@ -1,6 +1,7 @@
 ---
 title: "Template grid"
 parent: "data-widgets"
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 
@@ -8,8 +9,8 @@ The template grid shows a list of objects in a tile view. For example, a templat
 
 {{% alert type="info" %}}
 
-![](attachments/16713913/16844030.png)
-A template grid showing products with an image, name and description.
+![](attachments/pages/template-grid.png)
+A template grid showing employees with their profile picture.
 
 {{% /alert %}}
 

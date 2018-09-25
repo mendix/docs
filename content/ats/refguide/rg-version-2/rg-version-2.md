@@ -1,6 +1,7 @@
 ---
 title: "ATS 2 Reference Guide"
 category: "Reference Guide"
+menu_order: 20
 ---
 
 These are the main documents in this category:
@@ -17,7 +18,7 @@ These are the main documents in this category:
 * [Repository](repository)
 * [Results](results)
 * [Schedule](schedule)
-* [Action Reference](action-reference)
+* [Function Reference](function-reference)
 * [Supported Widgets](supported-widgets)
 * [Recorder](recorder)
 * [ATS Helper](ats-helper)

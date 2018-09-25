@@ -1,16 +1,17 @@
 ---
-title: "Check box"
+title: "Check Box"
 parent: "input-widgets"
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 
-A check box is an [input widget](input-widgets) that can be used to display and edit boolean attributes. It will display a tick if the value is true and remain empty if it is false.
+A check box is an [input widget](input-widgets) that can be used to display and edit Boolean attributes. It will display a tick if the value is true and remain empty if it is false.
 
 {{% alert type="info" %}}
 
-![](attachments/16713879/16843996.png)
+![](attachments/pages/check-box.png)
 
-This checkbox might be used to indicate whether or not a user is a customer.
+This check box allows you to change whether someone is subscribed to the newsletter.
 
 {{% /alert %}}
 

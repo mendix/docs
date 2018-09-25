@@ -1,8 +1,8 @@
 ---
-title: "Start with a Blank App Step 2: Build a Dashboard Page"
+title: "Step 2: Build a Dashboard Page"
 parent: "start-with-a-blank-app"
 description: "Presents details on the first steps in building a dashboard in the Web Modeler."
-tags: ["build", "app", "developer portal", "web modeler"]
+tags: ["build", "app", "developer portal", "web modeler", "building block", "theme customizer", "domain model"]
 ---
 
 ## 1 Introduction
@@ -13,7 +13,7 @@ This is the second how-to in this series on how to create an employee directory 
 
 * Change the page layout for multiple devices 
 * Use building blocks
-* Use the theme customizer
+* Use the Theme Customizer
 * Create a domain model
 
 {{% youtube AVI-jRt7y4M %}}
@@ -26,7 +26,7 @@ Some of the naming in the video will differ from the text below.
 
 Before starting with this how-to, make sure you have completed the following prerequisite:
 
-* Complete the first how-to in this series: [How to Start with a Blank App Step 1: Create the App](start-with-a-blank-app-1-create-the-app)
+* Complete the first how-to in this series: [Step 1: Create the App](start-with-a-blank-app-1-create-the-app)
 
 ## 3 Building Up a Dashboard Page
 
@@ -105,11 +105,11 @@ To make a small change to the look and feel of your app, follow these steps:
  
     Clicking **Reset Style** in **Theme Customizer** will undo the changes.
      
-Well done! Continue with [How to Start with a Blank App Step 3: Publish and View Your App](start-with-a-blank-app-3-publish-and-view-your-app).
+Well done! Continue with [Step 3: Publish and View Your App](start-with-a-blank-app-3-publish-and-view-your-app).
 
 ## 4 Related Content
 
-* [How to Start with a Blank App Step 1: Create the App](start-with-a-blank-app-1-create-the-app)
-* [How to Start with a Blank App Step 3: Publish and View Your App](start-with-a-blank-app-3-publish-and-view-your-app)
-* [How to Start with a Blank App Step 4: Add Pages to the User Interface](start-with-a-blank-app-4-add-pages-to-the-user-interface)
-* [How to Start with a Blank App Step 5: Add Employee Promotion Logic](start-with-a-blank-app-5-add-employee-promotion-logic)
+* [Step 1: Create the App](start-with-a-blank-app-1-create-the-app)
+* [Step 3: Publish and View Your App](start-with-a-blank-app-3-publish-and-view-your-app)
+* [Step 4: Add Pages to the User Interface](start-with-a-blank-app-4-add-pages-to-the-user-interface)
+* [Step 5: Add Employee Promotion Logic](start-with-a-blank-app-5-add-employee-promotion-logic)

@@ -1,6 +1,7 @@
 ---
-title: "Setting Up Your Development Environment"
+title: "Set Up Your Development Environment"
 parent: "tutorial-for-the-mendix-sdk"
+menu_order: 10
 ---
 
 ## 1 Introduction
@@ -9,7 +10,7 @@ This document will lead you through the process of setting up everything you nee
 
 ## 2 Quick Installation
 
-If you know what you are doing, the quick installation instructions below are for you. Otherwise, please skip this paragraph and continue with [Setting up your development tools](setting-up-your-development-environment).
+If you know what you are doing, the quick installation instructions below are for you. Otherwise, please skip this paragraph and continue with section [3 Setting Up Your Development Tools](#setting).
 
 For the quick installation, we assume that you have `node` already installed. 
 Set up a new `node` project and install the dependencies using the following steps:
@@ -23,7 +24,7 @@ $ npm install mendixmodelsdk mendixplatformsdk when @types/when --save
 $ tsc --init
 ```
 
-## 3 Setting Up Your Development Tools
+## <a name="setting"></a>3 Setting Up Your Development Tools
 
 To set up your development tools, follow these steps:
 
@@ -38,7 +39,7 @@ To set up your development tools, follow these steps:
 
     For Debian-based Linux distributions such as Ubuntu, please refer to [this article](https://github.com/nodesource/distributions#user-content-installation-instructions) to properly set up your apt-get sources.
 
-    In the rest of the tutorial, in blocks such as the above, lines starting with a `$` represent commands to type into a terminal. Sometimes a line follows without a $, represents output of the command.
+    In the rest of the how-to's, in blocks such as the above, lines starting with a `$` represent commands to type into a terminal. Sometimes a line follows without a $, represents output of the command.
 
 3.  Install [Visual Studio Code](https://code.visualstudio.com/) - not to be confused with Visual Studio - a text editor/IDE with good support for [TypeScript](http://www.typescriptlang.org/). Make sure you have a recent version (v1.11.0+); check the version you are using through Help > About when you have Code opened.
 4.  Install TypeScript 2.*.* with [`npm`](https://www.npmjs.com/) , Node.js' package manager:

@@ -1,6 +1,7 @@
 ---
 title: "Provide Feedback on Mendix"
 category: "How-To's"
+menu_order: 70
 description: "Describes how to provide feedback on Mendix."
 tags: ["Feedback","Widget","Developer Portal","Mendix"]
 ---

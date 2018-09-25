@@ -1,18 +1,18 @@
 ---
 title: "General"
+description: "A description of the sections in the Developer Portal and links to more detail"
+tags: ["Mendix", "Developer Portal", "Platform Services"]
 ---
 
 ## 1 Developer Portal
 
-The Developer Portal [home.mendix.com](http://home.mendix.com) is a platform for Mendix developers to use to collaborate, deploy, and manage their apps, company, and users. 
-
-  ![](attachments/general/developer-portal.png)
+The Developer Portal [home.mendix.com](http://home.mendix.com) is the platform for Mendix developers to collaborate, deploy, and manage their apps, company, and users. 
 
 The Developer Portal consists of the sections described below.
 
 ### 1.1 Buzz
 
-In the company **Buzz**, you can communicate with the users of your company.
+In the company **Buzz**, you can communicate with the users in your company.
 
 ![](attachments/general/developerportal-buzz.png)
   
@@ -40,7 +40,7 @@ The **App Store** has modules, widgets, themes, and connectors that you can use 
   
 ### 1.5 Community  
 
-In **Community**, you can find documentation, forums, trainings, support, and much more.
+In **Community**, you can find documentation, forums, training, support, and much more.
 
 ![](attachments/general/developerportal-community.png)
 

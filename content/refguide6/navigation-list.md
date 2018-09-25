@@ -19,16 +19,16 @@ A navigation list with three empty rows.
 
 {{% snippet file="refguide6/Style+Property.md" %}}
 
-# Navigation list item
+## Navigation list item
 
 Each row in the navigation list is a navigation list item. A navigation list item can be associated with an action. Conditional visibility is available for list items.
 
-## General
+### General
 
-### Action
+#### Action
 
 Action defines what action is performed when a navigation list item is 'clicked'. This can either be opening a page or calling a microflow. For opening a page see [Opening Pages](opening-pages) and for calling a microflow see [Starting Microflows](starting-microflows). Microflows attached to a navigation list item have no Confirmation or Advanced microflow settings.
 
-## Visibility properties
+### Visibility properties
 
 {{% snippet file="refguide6/Visibility+Property+With+Module+Roles+Simple.md" %}}

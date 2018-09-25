@@ -5,8 +5,6 @@ category: "Integration"
 
 Mendix 5 uses CSS classes to identify page content like widgets and popups. You can use these classes in Selenium to manipulate pages and verify data.
 
-# Table of contents
-
 ## 1. Naming conventions
 
 Widgets can be given a name in the Mendix modeler. These names appear in the HTML document as class names prefixed by '`mx-name-`'. For instance, a grid named `ArtistGrid` will get a CSS class '`mx-name-ArtistGrid`'. This is true for all widgets.
@@ -49,5 +47,4 @@ Note that the fourth row in a grid has an index of 3.
 
 ## 4\. Related content
 
-*   [Creating automated tests with TestNG](creating-automated-tests-with-testng)
 *   [Expose a web service](exposing-a-web-service)

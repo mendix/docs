@@ -107,6 +107,10 @@ $block: 'mx';
       h5 {
         font-size: 16px;
       }
+      h6 {
+        font-size: 14px;
+        font-weight: bold;
+      }
 
       table {
         width: 100%;
@@ -182,6 +186,12 @@ $block: 'mx';
               }
             }
           }
+        }
+      }
+
+      .image-container {
+        img {
+          display: none;
         }
       }
     }

@@ -3,6 +3,7 @@ title: "SAP Cloud Connector"
 category: "SAP"
 description: "Presents reference information on the SAP Cloud Connector."
 tags: ["SAP", "SAP Cloud Platform", "on-premises", "Cloud Connector"]
+frontpage_featured: true
 ---
 
 ## 1 Introduction
@@ -24,7 +25,7 @@ An important dependency for the SAP Cloud Connector is the JWT token received fr
 
 ## 3 Usage
 
-When the SAP XSUAA Connector and Cloud Connector are set up, the only thing a developer needs to do to use it is enable the **Use cloud connector** flag on one of the SAP OData Connector operators (such as Get List, Create, or Delete).
+When the SAP XSUAA Connector and Cloud Connector are set up, the only thing a developer needs to do to use it is enable the **Use SAP cloud connector** flag on one of the SAP OData Connector operators (such as Get List, Create, or Delete).
 
 ![](attachments/sap-cloud-connector/cloud-connector.png)
 

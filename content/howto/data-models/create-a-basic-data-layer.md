@@ -1,7 +1,7 @@
 ---
 title: "Create a Basic Data Layer"
 category: "Data Models"
-tags: ["data layer", "domain model"]
+tags: ["data layer", "domain model", "entities", "enumerations", "associations"]
 ---
 
 ## 1 Introduction
@@ -17,7 +17,14 @@ The domain model consists of entities and associations. An entity is the bluepri
 * Create associations
 * Delete association behavior
 
-## 2 Creating Entities and Attributes
+## 2 Prerequisites
+
+Before starting this how-to, make sure you have completed the following prerequisites:
+
+* Download and install the [Mendix Desktop Modeler](https://appstore.home.mendix.com/link/modelers/)
+* Create a new app or have an existing app project available
+
+## 3 Creating Entities and Attributes
 
 To create entities and their attributes, follow these steps:
 
@@ -33,7 +40,7 @@ To create entities and their attributes, follow these steps:
 
     ![](attachments/18448745/18582190.png) 
 
-    By default the Modeler creates a persistent entity, which means that the app's database will be able to store objects of this type of entity.
+    By default, the Modeler creates a persistent entity, which means that the app's database will be able to store objects of this type of entity.
 4. Start typing directly to change the name of the entity into **Customer**:
 
     ![](attachments/18448745/18582189.png)
@@ -50,46 +57,31 @@ To create entities and their attributes, follow these steps:
 
     ![](attachments/18448745/18582185.png)
 
-9. Repeat the steps above again to create a second entity that looks like this:
+8. Repeat the steps above again to create a second entity that looks like this:
 
     ![](attachments/18448745/18582184.png)
 
-## 3 Adding Enumerations
+## 4 Adding Enumerations
 
 An enumeration is a predefined list of values that can be used as an attribute type. This allows users of the app to select any of the predefined values for this attribute. A good example of an enumeration is order status. Let's add an enumeration and extend the **Order** entity with an enumeration value-based attribute.
 
 To add enumerations, follow these steps:
 
-1. Right-click the module and select **Add** > **Enumeration**:
-
-    ![](attachments/18448745/18582182.png)
-
-2. Enter *OrderStatus* for the **Name** and click **OK**:
-
-    ![](attachments/18448745/18582202.png)
-
+1. Right-click the module and select **Add** > **Enumeration**.
+2. Enter *OrderStatus* for the **Name** and click **OK**.
 3. Click **New** to add a new enumeration value:
 
     ![](attachments/18448745/18582181.png)
 
-4. Enter _Open_ for the **Caption** and click **OK**:
-
-    ![](attachments/18448745/18582180.png)
-
+4. Enter *Open* for the **Caption** and click **OK**.
 5. Repeat the steps above for the **Processing** and **Complete** values. You should then have the following configured values:
 
     ![](attachments/18448745/18582179.png)
 
     Click **OK** to save the enumeration. Now we will create an enumeration value-based attribute in the **Order** entity.
-6. Right-click the **Order** entity and select **Add** > **Attribute**:
-
-    ![](attachments/18448745/18582178.png)
-
-7. Enter *OrderStatus* for **Name** and select *Enumeration* for **Type**.
-8. Select the *OrderStatus* enumeration and click **Select**:
-
-    ![](attachments/18448745/18582177.png)
-
+6. Right-click the **Order** entity and select **Add** > **Attribute**.
+7. Enter *OrderStatus* for **Name** and select **Enumeration** for **Type**.
+8. Select the **OrderStatus** enumeration and click **Select**.
 9. Select **Open** for **Default value**:
 
     ![](attachments/18448745/18582197.png)
@@ -98,7 +90,7 @@ To add enumerations, follow these steps:
 
     ![](attachments/18448745/18582176.png)
 
-## 4 Creating Associations
+## 5 Creating Associations
 
 After you have created the entities, you can start creating associations.
 
@@ -106,11 +98,11 @@ To create an association, draw a line from the border of one entity to the borde
 
 ![](attachments/18448745/18582175.png)
 
-## 5 Multiplicity
+## 6 Multiplicity
 
 This section will explain how to change the multiplicity of associations. 
 
-By default, the domain model editor creates an association with a 1-to-many multiplicity. In the above case, a customer can have multiple orders, and an order can only have one customer. If the desired multiplicity is not available in the properties list you have probably drawn the association the wrong way, so you should remove the association and draw it again the other way around.
+By default, the domain model editor creates an association with a one-to-many multiplicity. In the above case, a customer can have multiple orders, and an order can only have one customer. If the desired multiplicity is not available in the properties list you have probably drawn the association the wrong way, so you should remove the association and draw it again the other way around.
 
 To change the multiplicity, double-click the **Order_Customer** association in order to open its **Properties** dialog box:
 
@@ -125,7 +117,7 @@ To change the multiplicity, double-click the **Order_Customer** association in o
 
     ![](attachments/18448745/18582205.png)
 
-## 6 Delete Behavior
+## 7 Delete Behavior {#delete-behavior}
 
 You can configure the delete behavior for both sides of an association.
 
@@ -142,7 +134,7 @@ To configure the delete behavior, double-click the **Order_Customer** associatio
 
     ![](attachments/18448745/18582208.png)
 
-## 7 Related Content
+## 8 Related Content
 
 * [How to Work with Images and Files](working-with-images-and-files)
 * [How to Denormalize Data to Improve Performance](denormalize-data-to-improve-performance)
@@ -151,7 +143,6 @@ To configure the delete behavior, double-click the **Order_Customer** associatio
 * [How to Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
 * [How to Manage Sprints and Stories](/developerportal/howto/managing-your-application-requirements-with-mendix)
 * [How to Define Access Rules Using XPath](../logic-business-rules/define-access-rules-using-xpath)
-* [How to Configure the Scout and Windows 10 Workaround](../ux/scout-and-windows-10-workaround)
-* [How to Generate a Personal SSH2 Key Pair](../security/generating-a-personal-ssh2-key-pair)
+* [How to Perform the Scout and Windows 10 Workaround](../ux/perform-scout-and-windows-10-workaround)
 * [How to Create Your First Two Overview and Detail Pages](../ux/create-your-first-two-overview-and-detail-pages)
 

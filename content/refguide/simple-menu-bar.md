@@ -1,6 +1,7 @@
 ---
 title: "Simple Menu Bar"
 parent: "menu-widgets"
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 
@@ -8,11 +9,11 @@ The simple menu bar widget shows a configured menu in the form of a horizontal o
 
 {{% alert type="info" %}}
 
-![](attachments/16713889/16844019.png)
+![](attachments/pages/simple-menu-bar-horizontal.png)
 
 {{% /alert %}}{{% alert type="info" %}}
 
-![](attachments/16713889/16844018.png)
+![](attachments/pages/simple-menu-bar-vertical.png)
 
 {{% /alert %}}
 

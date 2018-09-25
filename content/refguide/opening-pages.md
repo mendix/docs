@@ -1,14 +1,12 @@
 ---
 title: "Opening Pages"
 parent: "page-concepts"
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+You can open other pages from many many places within pages. Pages can be opened either in the content pane of the browser or in a new pop-up window. Where the page is opened depends on the [layout type](layout) of its [layout](layout). Pages with the layout type **Modal pop-up** or **Pop-up** will open as a pop-up window, and other pages will be opened in the content. If the target page layout is of the type **Legacy**, then the page location must be configured manually (for details, see the [Location](#location) section below).
 
-In many places within pages you can open other pages. For example, the [edit button](edit-button) of the [data grid](data-grid) opens a page to edit the selected object.
-
-Pages can be opened either in the content pane of the browser or in a new pop-up. Where the page is opened depends on the [layout type](layout) of its [layout](layout): pages based on a layout of type 'Modal pop-up' or 'Pop-up' will be open as a pop-up, other pages will be opened in content. If the target page layout is of type 'Legacy', then the page location must be configured manually (see [Location](opening-pages) section below).
-
-If the target page contains a [data view](data-view) with data source "caller of the page", then an object for this data view must be passed to the page while opening. What object to pass is configured automatically based on the arguments available for the widget opening the page (see [available arguments for microflows](starting-microflows) for details).
+If the target page contains a [data view](data-view) with a page parameter data source, then an object for this data view must be passed to the page while opening. What object to pass is configured automatically based on the arguments available for the widget opening the page (see [available arguments for microflows](starting-microflows) for details).
 
 Generally speaking, opening a page in content will trigger a full reload of the entire browser contents. However, if the new page uses the same [layout](layout) as the old one, only the page contents will refresh. The layout will retain its state. This allows for navigation without any unnecessary overhead or loss of data. 
 
@@ -28,7 +26,7 @@ By default the title of the page is taken from the title property of the selecte
 This feature allows you to re-use the same page for the New and Edit buttons of a data grid. By simply setting the titles to, for example, 'New customer' and 'Edit customer', you can save yourself the trouble of duplicating the rest of the page.
 {{% /alert %}}
 
-### Location
+### Location {#location}
 
 {{% alert type="info" %}}
 

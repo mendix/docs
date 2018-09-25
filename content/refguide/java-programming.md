@@ -3,11 +3,13 @@ title: "Java Programming"
 description: "Describes how to use the Mendix Java library and use Eclipse as an environment to write your Mendix Java Actions."
 ---
 
+## 1 Introduction
+
 With Java actions you can extend the functionality of your application in situations where it would be hard to implement this functionality in microflows.
 
 For information about Java actions in the Modeler see [Java Actions](java-actions).
 
-## Writing code in the .java files of your Java actions
+## 2 Writing Code in the .java Files of Your Java Actions
 
 In the .java files of your Java actions you can write your Java code between the markers:
 
@@ -29,7 +31,7 @@ The method _executeAction_ is called by the runtime when the Java action is bein
 
 The executeAction method throws all exceptions that occur. This means you can do error handling in the microflow calling this Java action. If you'd like to do your own error handling within the action, use try/catch statements.
 
-## Using the Mendix Java library
+## 3 Using the Mendix Java library
 
 In the Java code that you write for your Java actions you can use the Mendix Java library.
 
@@ -43,15 +45,15 @@ This library is automatically added to your libraries when you imported your pro
 
 A tutorial with some examples can be found at the [Java API Tutorial](/howto7/logic-business-rules/java-api-tutorial) page.
 
-## Using Eclipse as an environment to write your Mendix Java actions
+## 4 Using Eclipse as an Environment to Write Your Mendix Java Actions
 
 See [Using Eclipse](using-eclipse).
 
-## Java actions in the cloud
+## 5 Java Actions in the Cloud
 
 See [Java in the Cloud](/deployment/mendixcloud/java-in-the-cloud).
 
-## Documents in This Category
+## 6 Related Content
 
 * [Troubleshooting](troubleshooting)
 * [Using Eclipse](using-eclipse)

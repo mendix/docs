@@ -48,23 +48,19 @@ Whether you plan to import or export documents, working with XML means that your
 
 To add an XML schema (XSD), follow these steps:
 
-1. Right-click a module in the **Project Explorer** and select **Add** > **Document** from the menu (you can also use the shortcut **Ctrl+N**):
+1.  Right-click a module in the **Project Explorer** and select **Add** > **Mappings** > **XML schema** from the menu:
 
     ![](attachments/18448727/18581698.png)
 
-2. Select **XML Schema** as the document type and click **OK**:
-
-    ![](attachments/18448727/18581697.png)
-
-3. Enter **CustomersXSD** as the **Name** and click **OK**:
+2.  Enter **CustomersXSD** as the **Name** and click **OK**:
 
     ![](attachments/18448727/18581696.png)
 
-4. In the **XML Schema** editor, click **Select...** and select the XSD file that you downloaded earlier:
+3.  In the **XML Schema** editor, click **Select...** and select the XSD file that you downloaded earlier:
 
     ![](attachments/18448727/18581657.png)
 
-5. Click **OK** to save the XML schema, which you will be using in the following steps.
+4. Click **OK** to save the XML schema, which you will be using in the following steps.
 
 ## 5 Create XML-to-Domain mapping
 
@@ -72,37 +68,28 @@ The XML schema describes what the possible contents of an XML file are, but we n
 
 To create the XML-to-domain mapping, follow these steps:
 
-1. Right-click a module in the **Project Explorer** and select **Add** > **Document** from the menu (you can also use shortcut **Ctrl+N**):
+1. Right-click a module in the **Project Explorer** and select **Add** > **Mappings** > **Import mapping**:
 
     ![](attachments/18448727/18581698.png)
 
-2. Select **XML-to-Domain mapping** as the **Document type** and click **OK**:
-
-    ![](attachments/18448727/18581691.png)
-
-3. Enter **ImportCustomersMapping** as the **Name** and click **OK.**  The new mapping will open automatically and the elements will be shown.
+2.  Enter **ImportCustomersMapping** as the **Name** and click **OK.**  The new mapping will open automatically and the elements will be shown.
 
     ![](attachments/18448727/18581689.png)  
 
-4. On the **Select XSD Elements** dialog box, do the following
+3.  On the **Select XSD Elements** dialog box, do the following
     * Select **XML schema** as the **Schema source**
     * Select **CustomerXSD** as the schema
     * Click **Expand all** to see the tree with elements
 
     ![](attachments/18448727/18581656.png)
 
-5. Select the following elements: **Customer**, **ID**, **CompanyName**, **Address**, **City**, and **PostalCode**.
-6. Click **OK**. The first part of the import mapping should look like this:
+4. Select the following elements: **Customer**, **ID**, **CompanyName**, **Address**, **City**, and **PostalCode**.
+5. Click **OK**. The first part of the import mapping should look like this:
 
     ![](attachments/18448727/18581655.png)
 
-7. Open the connector (from the lower-right side of the Modeler or from the **View** menu):
-
-    ![](attachments/18448727/18581683.png)
-
-    ![](attachments/18448727/18581682.png)  
-
-8. Drag the entity **Customer** from the connector to the place-holder in the mapping editor:
+6. Open the connector (from the lower-right side of the Modeler or from the **View** menu).
+7.  Drag the entity **Customer** from the connector to the place-holder in the mapping editor:
 
     ![](attachments/18448727/18581681.png)  
 
@@ -110,15 +97,15 @@ To create the XML-to-domain mapping, follow these steps:
 
     ![](attachments/18448727/18581654.png)
 
-9. In the **Map Object Element** editor, do the following:
-    * Select **Search for an object** as the **Find method** (to be able to search for an object, you need to define one or more keys in the value-to-attribute mappings)
+8. In the **Map Object Element** editor, do the following:
+    * Select **Find an object (by key)** as the **Method** (to be able to search for an object, you need to define one or more keys in the value-to-attribute mappings)
     * Select **Create** for **If no object was found**
     * Select attributes for all five value-to-attribute mappings
     * Select **CustomerID** as the **Key**
 
     ![](attachments/18448727/18581653.png)  
 
-10. Click **OK** to save the mapping.
+9. Click **OK** to save the mapping.
 
 ## 6 Creating the Import Logic
 
@@ -126,34 +113,34 @@ In this section, you will create the logic to import the customers stored in an 
 
 To create the import logic, follow these steps:
 
-1. Open the **XMLDocument** overview page. It should look this, using a default layout:
+1.  Open the **XMLDocument** overview page. It should look this, using a default layout:
 
     ![](attachments/18448727/18581648.png)
 
-2. Right-click the toolbar of the data grid widget and select **Add button** > **Action** to add a new action button:
+2.  Right-click the toolbar of the data grid widget and select **Add button** > **Action** to add a new action button:
 
     ![](attachments/18448727/18581647.png)
 
-3. Double-click the new button to open the **Edit Action Button** editor and do the following:
-    * Change the caption to *Import XML Document*
-    * Select **Call a microflow** as the **On click** event
-    * Click **Select** for the microflow, create a new microflow, and name it **XMLDocument_Import**
-    * Click **OK** to save the properties
+3.  Double-click the new button to open the **Edit Action Button** editor and do the following:<br />
+    a. Change the caption to *Import XML Document*<br />
+    b. For the **On click** event, select **Call a microflow**, then click **Select** for the microflow, create a new microflow, and name it **XMLDocument_Import**.<br />
+    c. Click **OK** to save the properties.<br />
 
     ![](attachments/18448727/18581646.png)
 
-4. Right-click the new microflow button and click **Go to microflow** in the context menu. You should see an empty microflow with an XMLDocument as the input parameter:
+4. Right-click the new **Import XML Document** button and select **Go to microflow** in the context menu. You should see an empty microflow with **XMLDocument** as the input parameter:
 
     ![](attachments/18448727/18581669.png)
 
-5. Open the **Toolbox** and drag an **Import XML** activity to the line between the start and end event. This inserts a new import XML activity.
-6. Double-click the new activity to open the **Import XML** editor:
+5. Open the **Toolbox** and drag an **Import with mapping** activity to the line between the start and end event. This inserts a new import XML activity.
+6.  Double-click the new activity to open the **Import With Mapping** dialog box and do the following:<br />
+    a. Select the input paramater **XMLDocument** as the **Variable**.<br />
+    b. Select the previously created XML-to-domain mapping **ImportCustomersMapping** as the mapping.<br />
+    c. Click **OK** to save the properties.<br />
 
     ![](attachments/18448727/18581668.png)
 
-7. Select the input paramater **XMLDocument** as the **XML document**.
-8. Select the previously created XML-to-domain mapping **ImportCustomersMapping** as the mapping.
-9. Click **OK** to save the properties. The microflow should look like this:
+    The microflow should look like this:
 
     ![](attachments/18448727/18581667.png)
 

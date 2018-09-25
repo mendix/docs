@@ -1,6 +1,7 @@
 ---
 title: "Use the Mendix Feedback Widget"
 category: "How-To's"
+menu_order: 60
 description: "Describes how to use the Feedback Widget."
 tags: ["Feedback","Widget","Developer Portal"]
 ---

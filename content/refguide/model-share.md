@@ -4,15 +4,15 @@ category: "General"
 ---
 
 
-# Introduction
+## Introduction
 
 Mendix [Model Share](https://modelshare.mendix.com/) is a simple way to share parts of your Mendix Models with others. Model Shares can be viewed online, used inside blogposts and other media, and imported directly to the Mendix Desktop Modeler. All Model Shares have an unique URL which can be used for sharing. A typical Model Share URL looks as follows: `https://modelshare.mendix.com/models/a78832b7-0776-40b7-b041-e69e724ff3d5/iv-k-split-string-return-list-example`.
 
-Mendix Model Share is supported in Mendix 5.14 and higher.
+Mendix Model Share is supported in Mendix 5.14 and above.
 
-# Creating a Model Share
+## Creating a Model Share
 
-![](attachments/16713690/16843858.png)
+![](attachments/modeler-core/2018-02-21_12-38-31.png)
 
 A Model Share can be quickly created from within the Mendix Desktop Modeler. Open the document (currently, only microflows are supported) you want to share and press the 'Share' button. Optionally provide a title and description for the new Model Share - these are used as meta data. After filling out the details, confirm your input by clicking the 'Share' button and a new Model Share will be created. Model Shares will be bound to your personal Mendix Account.
 
@@ -26,13 +26,13 @@ After finishing the upload, the Mendix Desktop Modeler will show the URL of your
 
 ![](attachments/16713690/16843859.png)
 
-# Importing a Model Share
+## Importing a Model Share
 
 The Mendix Desktop Modeler will recognize automatically if a Model Share URL is on the clipboard. So if you know the URL of a model share, just copy it to your clipboard and use the paste button in the Mendix Desktop Modeler to import the Model Share. The Mendix Desktop Modeler will automatically solve naming conflicts. The Model Share URL can be copied easily from the Model Share page or a Model Share embedded view using the 'Copy' button.
 
-![](attachments/16713690/16843857.png)
+![](attachments/modeler-core/2018-02-21_13-11-18.png)
 
-# Embedding a Model Share in (for example) a blog post
+## Embedding a Model Share in (for example) a blog post
 
 To embed a Model Share in your blog post, go to the page of your Model Share and copy the embed text. The embed text will look as follows:
 
@@ -46,11 +46,11 @@ Once pasted in your blog post / tutorial / wherever valid (X)HTML is accepted, t
 
 ![](attachments/16713690/16843856.png)
 
-# Removing Model Shares
+## Removing Model Shares
 
 You can remove Model Shares you have created by navigating to your [model shares](https://modelshare.mendix.com/mymodels/) on the model share website. This will show a list of model shares uploaded by your Mendix account. If you want to remove a Model Share, open it, and press the 'Delete' button in the side bar. Note that it might take a while before Model Shares are removed from caches and especially from search engine results.
 
-# Disclaimer
+## Disclaimer
 
 *   All shared models are publicly available and will be indexed by search engines.
 *   Mendix stores all the models on best efforts basis. Model share is not a backup service, please use the Mendix Teamserver instead.

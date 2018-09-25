@@ -1,7 +1,8 @@
 ---
-title: "Navigation"
+title: "Navigation in Mendix 7.4 & Above"
 parent: "project"
-description: "Describes the concept of navigation in apps and the properties of a profile for Mendix version 7.4 and higher."
+description: "Describes the concept of navigation in apps and the properties of a profile for Mendix version 7.4 and above."
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
@@ -20,11 +21,11 @@ At the heart of the navigation model in Mendix, there are seven types of profile
 
 {{% alert type="info" %}}
 
-In Mendix 7.0.2, the Offline device profile was replaced by the [Hybrid Phone profile](hybrid-phone-profile). In addition to this, a new device profile was made available, which was called the [Hybrid Tablet profile](hybrid-tablet-profile). All the settings from the Offline device profile were automatically copied to the Hybrid Phone profile.
+In Mendix 7.4.0, separation for **Tablet** and **Phone** has been introduced for both **Hybrid Online** and **Hybrid Offline** apps.
 
-In Mendix 7.2.0, the Hybrid Tablet and Hybrid Phone profiles were converted to profiles of the Hybrid app or Hybrid offline app type, based on the offline enabled option.
+In Mendix 7.2.0, the **Hybrid Tablet** and **Hybrid Phone** profiles were converted to profiles of the **Hybrid App** or **Hybrid Offline App** type, based on the offline enabled option.
 
-In Mendix 7.4.0, separation for Tablet and Phone has been introduced for both Hybrid and Hybrid Offline apps.
+In Mendix 7.0.2, the **Offline** device profile was replaced by the [Hybrid Phone profile](hybrid-phone-profile). In addition to this, a new device profile was made available, which was called the [Hybrid Tablet profile](hybrid-tablet-profile). All the settings from the Offline device profile were automatically copied to the Hybrid Phone profile.
 
 {{% /alert %}}
 
@@ -40,7 +41,7 @@ The device type of the currently logged-in user is available in [microflows](mic
 
 Every app always has one profile of a Responsive type which cannot be deleted. This is the default profile used by a Mendix app.
 
-### 2.2 Tablet browser
+### 2.2 Tablet Browser
 
 All the users accessing a Mendix app from a browser on a tablet will automatically be redirected to a profile of the Tablet browser type. If no profile exists of that type, the user will be redirected to the Responsive profile.
 

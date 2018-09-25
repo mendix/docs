@@ -14,7 +14,7 @@ This document describes the installation and configuration of the Mendix softwar
 * Deploy a Mendix app
 * Configure the MS Internet Information Services (IIS) server
 
-## <a name="Prerequisites"></a>2 Prerequisites
+## 2 Prerequisites {#Prerequisites}
 
 In order to set up an environment to run Mendix applications, you will need to install the Mendix software. For each Mendix application that will be run, a separate user (service) account is required. This section presents an overview of the setup.
 
@@ -33,7 +33,7 @@ Before starting this how-to, make sure you have the following prerequisites:
     * This depends on your Mendix Server Distribution (for example, Mendix Server Distribution 4 requires Java 6, Mendix Server Distribution 5 requires Java 7)
 * Mendix deployment archive (MDA) of your Mendix project
 * Mendix server distribution corresponding with your Modeler (see the [Mendix App Store](https://appstore.home.mendix.com/link/modelers))
-* Database with sufficient security rights. Suitable database servers are IBM DB2, MariaDB, Microsoft SQL Server, MySQL, Oracle Database and PostgreSQL. See https://docs.mendix.com/refguide/system-requirements for more information.
+* Database with sufficient security rights. Suitable database servers are IBM DB2, MariaDB, Microsoft SQL Server, MySQL, Oracle Database and PostgreSQL. See [System Requirements](/refguide/system-requirements) for more information.
 * A local or domain user with the “log on as a service” local security policy set
 
 ## 3 Installation of the Mendix Service Console
@@ -118,16 +118,20 @@ To create a website, follow these steps:
 7. Enter a port number in the **Port** field.
 8. Click **OK**.
 
-### 5.3 Configuring the MIME Type
+### 5.3 Configuring the MIME Types
 
-To configure the MIME type, follow these steps:
+To configure the MIME types, follow these steps:
 
 1. Open the IIS Manager and navigate to the website you want to manage.
-2. In the **Features View**, double-click **MIME Types**.
+2. In the **Features View**, double-click **MIME Types** and do the following:
 3. In the **Actions** pane, click **Add.**
-4. In the **Add MIME Type** dialog box, enter *.mxf* in the **File name extension** field.
-5. Enter *text/xml* in the **MIME type** field.
-6. Click **OK**.
+4. In the **Add MIME Type** dialog box, add this extension:
+	* **File name extension**: *.mxf*
+	* **MIME type**: *text/xml*
+6. Add another extension:
+   * **File name extension**: *.json*
+   * **MIME type**: *application/json*
+7. Click **OK**.
 
 ### 5.4 Configuring the URL Rewrite
 

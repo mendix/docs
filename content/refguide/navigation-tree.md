@@ -1,6 +1,7 @@
 ---
 title: "Navigation Tree"
 parent: "menu-widgets"
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 
@@ -8,7 +9,7 @@ The navigation tree widget shows a configured menu in the form of a tree. Items 
 
 {{% alert type="info" %}}
 
-![](attachments/16713887/16844016.png)
+![](attachments/pages/navigation-tree.png)
 
 {{% /alert %}}
 

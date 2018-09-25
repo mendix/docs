@@ -1,8 +1,10 @@
 ---
 title: "Alerts"
 category: "Operate"
+menu_order: 20
 description: "This page describes how to monitor the application health."
 tags: ["Monitoring","Mendix Cloud","Developer Portal","Performance","Health"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
@@ -22,21 +24,17 @@ The Mendix Cloud automatically monitors the health and status of apps that are d
 2.  Open the app that you want to monitor.
 3.  Click **Alerts** under the **Operate** category. This will display the status of your app node in various categories.
 
-    ![](attachments/18580000.png)
+	![](attachments/18580000.png)
 
-  {{% alert type="warning" %}}
-
-  The Acceptance and Production buttons at the top let you switch between viewing the status for your production and acceptance node. Note that accessing production information may require additional authentication and is subject to your project's security settings.
-
-  {{% /alert %}}
+	{{% alert type="warning" %}}The Acceptance and Production buttons at the top let you switch between viewing the status for your production and acceptance node. Note that accessing production information may require additional authentication and is subject to your project's security settings.{{% /alert %}}
 
 4.  If one of the status items is not listed as **OK**, click the line to show an additional information box with details about the error.
 
-  ![](attachments/18579999.png)
+	![](attachments/18579999.png)
 
 This status information will tell you important information that you either need in order to resolve the issue, or that needs to be included when submitting a support request with [Mendix Support](https://support.mendix.com). You can download a log of the alerts on the **Log** page under the **Operate** category.
 
-Any status that could cause your app to stop functioning will result in an alert. For example, the monitoring information from the image showes that one of the status indicators was *Critical*. When this happens to one of your nodes, all users that are subscribed to alerts will receive an email alert.
+Any status that could cause your app to stop functioning will result in an alert. For example, the monitoring information from the image showes that one of the status indicators was **Critical**. When this happens to one of your nodes, all users that are subscribed to alerts will receive an email alert.
 
 ## 3 Alerting Categories and Thresholds
 
@@ -104,7 +102,7 @@ First actions to take | Review trends for *Application node disk usage in %* and
 
 Database Server Disk Usage | |
 :---|:---|
-Description | Track the amount of disk space used for the database belonging to the appication.
+Description | Track the amount of disk space used for the database belonging to the application.
 Example message | Disk usage 92% (warning=80, critical=90).
 Warning Threshold | More than 80% of available disk space is in use.
 Critical Threshold | More than 90% of available disk space is in use.
@@ -113,10 +111,60 @@ First actions to take | Review trends for *Database node disk usage in %* and *D
 Web Server | |
 :---|:---|
 Description | The application URL is reachable. This check tries to visit the URL of your application, retrieving HTTP headers on the top level location /.
-Example message | Did not find correct headers for url `https://example.mendixcloud.com/`
+Example message | Did not find correct headers for url `https://example.mendixcloud.com/`.
 Warning Threshold | The application URL is not reachable.
 Critical Threshold | Not used.
 First actions to take | If this alert triggers, and visiting the application url results in slow loading or unresponsiveness, visit [https://status.mendix.com/](https://status.mendix.com/) to see if there is an outage. This condition might point to an internal networking connectivity problem.
+
+### 3.3 Alerts in Mendix Cloud v4
+
+Application Status | |
+:---|:---|
+Description | Our application runtime sends a heartbeat signal every few minutes to show it is still alive. If no heartbeat timeout has been received for some time, the system will generate an alert. The heartbeat value varies per cluster and we are reducing it over time, but in general is ~5 minutes.|
+Example message | No runtime heartbeat received for 8m45s.
+Warning Threshold | Not used.                                              |
+Critical Threshold | If the runtime heartbeat of the application is more than 8 minutes, a critical alert will be generated.
+First actions to take | Check the application logs and [https://status.mendix.com/](https://status.mendix.com/).                         |
+
+Critical Logs | |
+:---|:---|
+Description | The CRITICAL log level is reserved for issuing messages in rare cases where the application may not be able to function reliably anymore. For example, there is a chance of data corruption when the application continues to be running. Internal JVM errors are logged to this level. Out of memory errors (which are JVM errors) must be treated as harmful for the stability and integrity of your Mendix application process.
+Example message | Critical errors count is 2.
+Warning Threshold | Not used.
+Critical Threshold | If any logging is done on the CRITICAL level, the alerts status always directly switches to Critical. The critical log message counter will only be reset when restarting the application process.
+First actions to take | Inspect the application log file and look up the CRITICAL error messages. Restart the application as soon as possible in case of stability issues.
+
+Database CPU Utilization | |
+:---|:---|
+Description | The overall system load of the application server. High values indicate high CPU load because of application activity, and/or the CPU is spending too much time waiting for disk reads or writes.
+Example message | Database has 95% CPU Utilization.
+Warning Threshold | Not used.
+Critical Threshold | System load is higher than 90%.
+First actions to take | Inspect the trends for **Application node CPU usage** combined with **Application node disk throughput** and **Application node load** for anomalies and correlate those with application behavior.
+
+Database Free Space | |
+:---|:---|
+Description | Track the amount of disk space used for the database belonging to the application.
+Example message | Database has less than 5% free space.
+Warning Threshold | Database has less than 25% and more than 10% free space available. 
+Critical Threshold | Database has less than 10% free space available.
+First actions to take | Check if there is a sudden increase or a slow increase over time. Resolve by either stopping a runaway process, removing old data, or ordering more storage.
+
+Health Check | |
+:---|:---|
+Description | Each application can define a health check microflow. This microflow is called periodically by the Mendix Runtime to determine if the application is still healthy. This can be used to check for application-specific health indicators.
+Example message | Health: the nightly import job took more than an hour to complete!
+Warning Threshold | If the health check microflow returns a non-empty string value, this means the application is not healthy and a WARNING alert is generated.
+Critical Threshold | If the health check microflow itself experiences an error, a CRITICAL alert is generated. This will also happen when no database connection can be established.
+First actions to take | Since the health check microflow is specific to your application, we cannot generically advise actions to take.
+
+Virtual Machine Crash | |
+:---|:---|
+Description | Show the state of the application's virtual machine, or an error state when the issue occurs with a virtual machine.
+Example message | Your application's virtual machine died 1 times in the last minute.
+Warning Threshold | Not used.
+Critical Threshold | If the application's virtual machine should be running but has completely disappeared, or if the JVM process does not respond to any signal anymore.
+First actions to take | Check the log files and application metrics for a possible cause of the crash.
 
 ## 4 Alerts History
 

@@ -1,6 +1,6 @@
 ---
 title: "Activities"
-parent: "microflows"
+parent: "common-elements"
 ---
 
 Activities represent the actions that are executed in a microflow.
@@ -56,10 +56,10 @@ Client activities can be used to have the web client of your application perform
 
 | Graphic | Name | Description |
 | --- | --- | --- |
-| [![](attachments/819203/918114.png)](close-form) | [Close form](close-form) | Close form closes the form that is opened last by the user that calls the microflow where this activity is used in. |
+| [![](attachments/819203/918114.png)](close-page) | [Close page](close-page) | Close page closes the pagethat is opened last by the user that calls the microflow where this activity is used in. |
 | [![](attachments/819203/918108.png)](download-file) | [Download file](download-file) | Download file can be used to enable the browser to download a specific file. The user, that calls the microflow where this activity is used in, gets a download popup or the file is shown directly in the browser. |
 | [![](attachments/819203/918099.png)](show-message) | [Show message](show-message) | Show message can be used to show a blocking or non-blocking message to the user that calls the microflow where this activity is used in. |
-| [![](attachments/819203/917544.png)](show-page) | [Show page](show-page) | Show form can be used to show a form to the user that calls the microflow where this activity is used in. |
+| [![](attachments/819203/917544.png)](show-page) | [Show page](show-page) | Show page can be used to show a page to the user that calls the microflow where this activity is used in. |
 | [![](attachments/819203/918097.png)](validation-feedback) | [Validation feedback](validation-feedback) | Validation feedback can be used to display a red text below a widget that displays an attribute or association. |
 | ![](attachments/16713769/17661963.png) | [Show home page](show-home-page) | Show home Page can be used to navigate to the home page for the current user. |
 

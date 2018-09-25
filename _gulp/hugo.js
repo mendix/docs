@@ -1,14 +1,17 @@
 const spawn = require('child_process').spawn;
-const gutil = require('gulp-util');
+const { beep } = require('gulp-util');
 const _ = require('lodash');
-const gulpErr = require('./helpers').gulpErr;
-const browserSync = require('browser-sync').create();
+
+const commandLineHelpers = require('./helpers/command_line');
+const { gulpErr } = require('./helpers');
+
+const { red } = commandLineHelpers.colors;
+const log = commandLineHelpers.log('hugo');
 
 let reload_timer;
 let TIMEOUT = 500;
 
 const spawnHugo = (watch, cb, bsync) => {
-  const indicator = gutil.colors.cyan("[HUGO]");
   const doneStr = 'total in';
   const syncStr = 'Syncing';
   const child = spawn('hugo', [
@@ -23,7 +26,7 @@ const spawnHugo = (watch, cb, bsync) => {
   child.stdout.on('data', data => {
       _.each(data.split('\n'), line => {
         if (line) {
-          gutil.log(indicator, line);
+          log(line);
           if ((line.indexOf(doneStr) !== -1 || line.indexOf(syncStr) !== -1) && watch) {
             if (bsync) {
               if (reload_timer) {
@@ -47,7 +50,7 @@ const spawnHugo = (watch, cb, bsync) => {
   child.stderr.on('data', data => {
       _.each(data.split('\n'), line => {
         if (line) {
-          gutil.log(indicator, gutil.colors.red(line));
+          log(red(line));
           if (line.indexOf('ERROR') !== -1) {
             if (cb) {
               cb(1);
@@ -56,11 +59,11 @@ const spawnHugo = (watch, cb, bsync) => {
           }
         }
       });
-      gutil.beep();
+      beep();
   });
 
   child.on('close', function(code) {
-      gutil.log(indicator, "Closed with exit code", code);
+      log("Closed with exit code", code);
       if (cb && _.isFunction(cb)) {
         cb(code);
       }

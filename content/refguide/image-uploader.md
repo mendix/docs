@@ -1,6 +1,7 @@
 ---
 title: "Image uploader"
 parent: "file-widgets"
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 
@@ -8,7 +9,7 @@ An image uploader is used to upload images to the server. It also generates a th
 
 {{% alert type="info" %}}
 
-![](attachments/16713874/16843989.png)
+![](attachments/pages/image-uploader.png)
 The image uploader is placed in a nested data view here. The Profile entity is a specialization of System.Image.
 
 {{% /alert %}}

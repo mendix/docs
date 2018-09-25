@@ -1,6 +1,9 @@
 ---
 title: "Attributes"
 parent: "entities"
+tags: ["domain model", "entity", "attribute"]
+#Team: Desktop Modeler
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 
@@ -64,7 +67,7 @@ The password itself should not be stored, but only its hash value, thus it is st
 
 A customer can be active or inactive, which is stored in an attribute named 'Active' of type Boolean.
 
-![](attachments/819203/917578.png)
+![](attachments/domain-model-editor/917578.png)
 
 ### Localize (Only for the Date and Time Attribute Type)
 
@@ -109,7 +112,7 @@ If the value is a computation, the **Microflow** property defines which microflo
 
 In a webshop, you want to show the total expenses for each customer. These are calculated by retrieving all orders associated with the customer and adding their totals.
 
-![](attachments/819203/917570.png)
+![](attachments/domain-model-editor/917570.png)
 
 ### Default Value (If Value Is Stored)
 

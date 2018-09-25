@@ -22,21 +22,31 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 To enable the cloud debugging, you need to get a URL and a password from the cloud and add that information to the Modeler. The steps below will explain where you can gather all the necessary information. 
 
-{{% alert type="warning" %}}
+{{% alert type="info" %}}
 
-Be aware of other application end-users. Debugging in production is not recommended. However, if you are debugging in the cloud, be aware of other system end-users. The debugger will stop processes from moving on for other users.
+The debugger supports only debugging of single-instance environments. Multi-instance environents need to be scaled down to one instance before the debugger can be used.
 
 {{% /alert %}}
 
-### <a name="EnablingDebuggingintheCloud"></a>3.1 Enabling Debugging in the Cloud
+{{% alert type="warning" %}}
+
+Debugging in production is not recommended. However, if you are debugging in the cloud, be aware of other system end-users. The debugger will stop processes from moving on for other users.
+
+{{% /alert %}}
+
+<a name="EnablingDebuggingintheCloud"></a>
+### 3.1 Enabling Debugging in the Cloud
 
 1. Open your browser, go to [http://home.mendix.com](http://home.mendix.com), and log in with your Mendix ID.
-2. Click **Dev Portal** and navigate to the project that you want to debug:
+
+2. Click **Apps** and navigate to the project that you want to debug:
 
     ![](attachments/18448576/18580045.png) 
-3. Open the **Deploy** tab in your project and click **Details** for the environment:
+
+3. Click **Environments** in the left sidebar, and on the **Deploy** tab, click **Details** for the environment:
 
     ![](attachments/18448576/18580051.png)
+
 4. On the **Environment Details** screen, click **Enable Debugging**:
 
     ![](attachments/18448576/18580050.png)
@@ -44,7 +54,7 @@ Be aware of other application end-users. Debugging in production is not recommen
     This invokes the **Debugger settings** pop-up window. Usually this presents a URL (such as `http://yourapp.mendixcloud.com`) and a secure password that changes each time you enable and disable the debugger:
 
     ![](attachments/18448576/18580049.png)
-    
+
     If you want to disable the debugger, click **Disable Debugging** on the **Environment Details** screen.
 
 ### 3.2 How to Enable Cloud Debugging in Your Modeler
@@ -53,7 +63,7 @@ Once you have the unique URL and password, there are two methods for connecting 
 
 {{% alert type="warning" %}}
 
-If you do not see an overview similar to the one below, then you do not have sufficient cloud permissions to deploy packages into the cloud or to debug in the cloud. Contact the technical contact or the project SCRUM master in your project to get sufficient permissions.
+If you do not see an overview similar to the one below, then you do not have sufficient cloud permissions to deploy packages into the cloud or to debug in the cloud. Contact the technical contact or the project SCRUM Master in your project to get sufficient permissions.
 
 {{% /alert %}}
 

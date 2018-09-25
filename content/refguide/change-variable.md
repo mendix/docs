@@ -1,25 +1,27 @@
 ---
 title: "Change Variable"
 parent: "variable-activities"
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+## 1 Introduction
 
-The 'Change Variable' action can be used to change the value of an existing variable.
+This action can be used to change the value of an existing variable.
 
 {{% alert type="info" %}}
 
-See [Microflow Element Common Properties](microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
+See [Microflow Element Common Properties](microflow-element-common-properties) for properties that all microflow activities share (for example, caption). This page only describes the properties specific to the action.
 
 {{% /alert %}}
 
-## Input Properties
+## 2 Input Properties
 
-### Variable name
+### 2.1 Variable name
 
 The variable of which you want to change the value.
 
-## Action Properties
+## 3 Action Properties
 
-### Value
+### 3.1 Value
 
-The new value for the variable. The value is entered using a [microflow expression](microflow-expressions). The type of the microflow expression should be the same as the type of the selected variable.
+The new value for the variable. The value is entered using an [expression](expressions). The type of the expression should be the same as the type of the selected variable.

@@ -16,7 +16,7 @@ module.exports = {
      ****************************************************/
     {
       from: "/apidocs/Home",
-      to: "/apidocs-mxsdk/apidocs/index"
+      to: "/apidocs-mxsdk/apidocs/"
     },
     {
       from: "/apidocs/Authentication",
@@ -40,7 +40,7 @@ module.exports = {
     },
     {
       from: "/apidocs/API+documentation",
-      to: "/apidocs-mxsdk/apidocs/index"
+      to: "/apidocs-mxsdk/apidocs/"
     },
     {
       from: "/apidocs/Invite+API",
@@ -116,7 +116,7 @@ module.exports = {
     },
     {
       from: "/MXSDK/Mendix+SDK+Home",
-      to: "/apidocs-mxsdk/mxsdk/index"
+      to: "/apidocs-mxsdk/mxsdk/"
     },
     {
       from: "/MXSDK/JavaScript+TypeScript+Resources",
@@ -205,20 +205,8 @@ module.exports = {
       to: "/howtogeneral/bestpractices/best-practices-for-component-based-development"
     },
     {
-      from: "/bestpractices/How+to+execute+an+SQL+statement+on+an+external+database",
-      to: "/howtogeneral/bestpractices/how-to-execute-an-sql-statement-on-an-external-database"
-    },
-    {
       from: "/bestpractices/Best+Practices",
       to: "/howtogeneral/bestpractices/"
-    },
-    {
-      from: "/bestpractices/Inheritance+vs.+1+1+association",
-      to: "/howtogeneral/bestpractices/inheritance-vs.-1-1-association"
-    },
-    {
-      from: "/bestpractices/Inheritance+vs.+1-1+association",
-      to: "/howtogeneral/bestpractices/inheritance-vs.-1-1-association"
     },
     {
       from: "/bestpractices/Naming+conventions",
@@ -232,20 +220,16 @@ module.exports = {
       from: "/howtogeneral/bestpractices/naming-conventions",
       to: "/howtogeneral/bestpractices/dev-best-practices"
     },
-    {
-      from: "/bestpractices/SIG+-+Mendix+performance+subjects+explanation",
-      to: "/howtogeneral/bestpractices/sig-mendix-performance-subjects-explanation"
-    },
     /****************************************************
      * Community
      ****************************************************/
     {
       from: "/community/Community+Documentation",
-      to: "/community/documentation/index"
+      to: "/community/documentation/"
     },
     {
       from: "/community/Community+Projects",
-      to: "/community/tools/index"
+      to: "/community/tools/"
     },
     {
       from: "/community/Content+Writing+and+Formatting+Guidelines",
@@ -1182,10 +1166,6 @@ module.exports = {
       to: "/howto50/creating-a-secure-app"
     },
     {
-      from: "/howto50/Creating+automated+tests+with+TestNG",
-      to: "/howto50/creating-automated-tests-with-testng"
-    },
-    {
       from: "/howto50/Creating+your+first+two+Overview+and+Detail+pages",
       to: "/howto50/creating-your-first-two-overview-and-detail-pages"
     },
@@ -1226,16 +1206,12 @@ module.exports = {
       to: "/howto50/denormalize-data-to-improve-performance"
     },
     {
-      from: "/howto50/Deploy+your+first+Hybrid+Mobile+App",
-      to: "/howto50/deploy-your-first-hybrid-mobile-app"
-    },
-    {
       from: "/howto50/Deploying+a+Mendix+App+to+Cloud+Foundry",
-      to: "/deployment/cloud-foundry/deploy-a-mendix-app-to-cloud-foundry"
+      to: "/deployment/cloud-foundry/index"
     },
     {
       from: "/howto50/Deploying+a+Mendix+App+to+Pivotal",
-      to: "/deployment/cloud-foundry/deploy-a-mendix-app-to-pivotal"
+      to: "/deployment/cloud-foundry/index"
     },
     {
       from: "/howto50/Deploying+Mendix+on+Microsoft+Windows",
@@ -1262,10 +1238,6 @@ module.exports = {
       to: "/howto50/exposing-a-web-service"
     },
     {
-      from: "/howto50/Exposing+data+to+BI+tools+using+OData",
-      to: "/howto50/exposing-data-to-bi-tools-using-odata"
-    },
-    {
       from: "/howto50/Extendability",
       to: "/howto50/extendability"
     },
@@ -1283,7 +1255,7 @@ module.exports = {
     },
     {
       from: "/howto50/Finding+Object+Activities",
-      to: "/howtogeneral/tips/finding-object-activities"
+      to: "/howto/tips/finding-object-activities"
     },
     {
       from: "/howto50/Finding+the+Root+Cause+of+Runtime+Errors",
@@ -1291,19 +1263,15 @@ module.exports = {
     },
     {
       from: "/howto50/Finding+Unused+Items",
-      to: "/howtogeneral/tips/finding-unused-items"
+      to: "/howto/tips/finding-unused-items"
     },
     {
       from: "/howto50/Finding+your+way+through+a+project",
-      to: "/howtogeneral/tips/finding-your-way-through-a-project"
+      to: "/howto/tips/finding-your-way-through-a-project"
     },
     {
       from: "/howto50/Gathering+user+feedback",
       to: "/developerportal/howto/gathering-user-feedback"
-    },
-    {
-      from: "/howto50/Generating+a+personal+SSH2+key+pair",
-      to: "/howto50/generating-a-personal-ssh2-key-pair"
     },
     {
       from: "/howto50/Getting+Started",
@@ -1419,11 +1387,7 @@ module.exports = {
     },
     {
       from: "/howto50/Querying+over+self+references",
-      to: "/howtogeneral/tips/querying-over-self-references"
-    },
-    {
-      from: "/howto50/Querying+over+self-references",
-      to: "/howtogeneral/tips/querying-over-self-references"
+      to: "/howto/tips/querying-over-self-references"
     },
     {
       from: "/howto50/Restoring+a+SQL+Server+database",
@@ -1487,7 +1451,7 @@ module.exports = {
     },
     {
       from: "/howto50/Showing+a+Project+in+the+Directory+in+Explorer",
-      to: "/howtogeneral/tips/showing-a-project-in-the-directory-in-explorer"
+      to: "/howto/tips/showing-a-project-in-the-directory-in-explorer"
     },
     {
       from: "/howto50/Solving+Load+and+Import+Errors",
@@ -1510,10 +1474,6 @@ module.exports = {
       to: "/howto50/testing"
     },
     {
-      from: "/howto50/Testing+Mendix+applications+using+Selenium+IDE",
-      to: "/howto50/testing-mendix-applications-using-selenium-ide"
-    },
-    {
       from: "/howto50/Testing+microflows+using+the+UnitTesting+module",
       to: "/howto50/testing-microflows-using-the-unittesting-module"
     },
@@ -1527,11 +1487,11 @@ module.exports = {
     },
     {
       from: "/howto50/Tips+Tricks",
-      to: "/howtogeneral/tips/index"
+      to: "/howto/tips/"
     },
     {
       from: "/howto50/Translatable+Validation+Messages",
-      to: "/howtogeneral/tips/translatable-validation-messages"
+      to: "/howto/tips/translatable-validation-messages"
     },
     {
       from: "/howto50/Trends",
@@ -1693,10 +1653,6 @@ module.exports = {
       to: "/howto6/create-and-deploy-your-first-app"
     },
     {
-      from: "/howto6/Create+Automated+Tests+with+TestNG",
-      to: "/howto6/create-automated-tests-with-testng"
-    },
-    {
       from: "/howto6/Create+your+first+Microflow+Hello+World",
       to: "/howto6/create-your-first-microflow-hello-world"
     },
@@ -1738,27 +1694,23 @@ module.exports = {
     },
     {
       from: "/howto6/Deploy+a+Mendix+App+to+IBM+Bluemix",
-      to: "/deployment/cloud-foundry/deploy-a-mendix-app-to-ibm-bluemix"
+      to: "/deployment/cloud-foundry/index"
     },
     {
       from: "/howto6/deploying+a+mendix+app+to+ibm+bluemix",
-      to: "/deployment/cloud-foundry/deploy-a-mendix-app-to-ibm-bluemix"
+      to: "/deployment/cloud-foundry/index"
     },
     {
       from: "/howto6/Deploy+a+Mendix+App+to+Pivotal",
-      to: "/deployment/cloud-foundry/deploy-a-mendix-app-to-pivotal"
+      to: "/deployment/cloud-foundry/index"
     },
     {
       from: "/howto6/Deploy+Mendix+on+Microsoft+Windows",
       to: "/deployment/on-premises/deploy-mendix-on-microsoft-windows"
     },
     {
-      from: "/howto6/Deploy+your+first+Hybrid+Mobile+App",
-      to: "/howto6/deploy-your-first-hybrid-mobile-app"
-    },
-    {
       from: "/howto6/Deploying+a+Mendix+App+to+Cloud+Foundry",
-      to: "/deployment/cloud-foundry/deploy-a-mendix-app-to-cloud-foundry"
+      to: "/deployment/cloud-foundry/index"
     },
     {
       from: "/howto6/deploying+to+the+cloud",
@@ -1801,10 +1753,6 @@ module.exports = {
       to: "/howto6/expose-a-web-service"
     },
     {
-      from: "/howto6/Exposing+data+to+BI+tools+using+OData",
-      to: "/howto6/exposing-data-to-bi-tools-using-odata"
-    },
-    {
       from: "/howto6/Extendability",
       to: "/howto6/extendability"
     },
@@ -1827,10 +1775,6 @@ module.exports = {
     {
       from: "/howto6/Gathering+user+feedback",
       to: "/developerportal/howto/gathering-user-feedback"
-    },
-    {
-      from: "/howto6/Generating+a+personal+SSH2+key+pair",
-      to: "/howto6/generating-a-personal-ssh2-key-pair"
     },
     {
       from: "/howto6/Getting+Started",
@@ -1957,10 +1901,6 @@ module.exports = {
       to: "/howto6/optimizing-retrieve-activities"
     },
     {
-      from: "/howto6/Publishing+a+Mendix+Hybrid+Mobile+App+in+Mobile+App+Stores",
-      to: "/howto6/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores"
-    },
-    {
       from: "/howto6/Push+Notifications",
       to: "/howto6/push-notifications"
     },
@@ -2069,10 +2009,6 @@ module.exports = {
       to: "/howto6/testing"
     },
     {
-      from: "/howto6/Testing+Mendix+applications+using+Selenium+IDE",
-      to: "/howto6/testing-mendix-applications-using-selenium-ide"
-    },
-    {
       from: "/howto6/Testing+microflows+using+the+UnitTesting+module",
       to: "/howto6/testing-microflows-using-the-unittesting-module"
     },
@@ -2153,12 +2089,24 @@ module.exports = {
     },
     {
       from: "/howto/deploying-a-mendix-app-to-cloud-foundry",
-      to: "/deployment/cloud-foundry/deploy-a-mendix-app-to-cloud-foundry"
+      to: "/deployment/cloud-foundry/index"
     },
     {
       from: "/howto7/deploying-a-mendix-app-to-cloud-foundry",
-      to: "/deployment/cloud-foundry/deploy-a-mendix-app-to-cloud-foundry"
+      to: "/deployment/cloud-foundry/index"
     },
+	{
+      from: "/deploy-a-mendix-app-to-cloud-foundry",
+      to: "/deployment/cloud-foundry/index"
+    },
+	{
+      from: "/bestpractices/How+to+execute+an+SQL+statement+on+an+external+database",
+      to: "/howto/integration/how-to-execute-an-sql-statement-on-an-external-database"
+    },
+	{
+      from: "/howto7/solving-load-and-import-errors",
+      to: "/howto/monitoring-troubleshooting/solving-load-and-import-errors"
+    },	
     /****************************************************
      * Mendix Cloud
      ****************************************************/
@@ -2181,10 +2129,6 @@ module.exports = {
     {
       from: "/mendixcloud/Different+user+logins+when+integrated+with+Mendix+SSO",
       to: "/deployment/mendixcloud/different-user-logins-when-integrated-with-mendix-sso"
-    },
-    {
-      from: "/mendixcloud/How+to+deploy+a+Mendix+app+on+Amazon+Web+Services",
-      to: "/deployment/aws/how-to-deploy-a-mendix-app-on-amazon-web-services"
     },
     {
       from: "/mendixcloud/How+to+deploy+a+Mendix+app+on+Azure",
@@ -2243,10 +2187,6 @@ module.exports = {
       to: "/deployment/mendixcloud/sending-email"
     },
     {
-      from: "/deployment/mendixcloud/how-to-deploy-a-mendix-app-on-amazon-web-services",
-      to: "/deployment/aws/how-to-deploy-a-mendix-app-on-amazon-web-services"
-    },
-    {
       from: "/deployment/mendixcloud/how-to-deploy-a-mendix-app-on-azure",
       to: "/deployment/azure/how-to-deploy-a-mendix-app-on-azure"
     },
@@ -2293,6 +2233,10 @@ module.exports = {
     {
       from: "/howtogeneral/support/how-to-activate-or-deactivate-your-mendix-account",
       to: "/developerportal/howto/deactivate-users"
+    },
+	{
+      from: "/howtogeneral/support/technical-contact",
+      to: "/developerportal/general/technical-contact"
     },
     /****************************************************
      * DEVELOPER PORTAL
@@ -6933,7 +6877,7 @@ module.exports = {
     },
     {
       "from": "/refguide7/Close+Form",
-      "to": "/refguide/close-form"
+      "to": "/refguide/close-page"
     },
     {
       "from": "/refguide7/Clustered+Mendix+Runtime",
@@ -7147,6 +7091,10 @@ module.exports = {
       "from": "/refguide7/Desktop+profile",
       "to": "/refguide/desktop-profile"
     },
+	{
+      "from": "/refguide7/desktop-webmodeler",
+      "to": "/howto/web-modeler/syncing-webmodeler-desktop"
+    },	
     {
       "from": "/refguide7/Developing+Hybrid+Mobile+Apps",
       "to": "/refguide/developing-hybrid-mobile-apps"
@@ -7179,7 +7127,11 @@ module.exports = {
       "from": "/refguide7/Download+From+Team+Server+Dialog",
       "to": "/refguide/download-from-version-control-dialog"
     },
-    {
+	{
+      "from": "/refguide7/drop-down-widget",
+      "to": "/refguide/drop_down"
+    },
+	{
       "from": "/refguide7/Drop-down",
       "to": "/refguide/drop_down"
     },
@@ -7237,7 +7189,7 @@ module.exports = {
     },
     {
       "from": "/refguide7/Enumerations+in+microflow+expressions",
-      "to": "/refguide/enumerations-in-microflow-expressions"
+      "to": "/refguide/enumerations-in-expressions"
     },
     {
       "from": "/refguide7/Error+Event",
@@ -7323,7 +7275,11 @@ module.exports = {
       "from": "/refguide7/History+Dialog",
       "to": "/refguide/history-dialog"
     },
-    {
+	{
+      "from": "/refguide7/horizontal-split-pane",
+      "to": "/refguide/scroll-container"
+    },	
+	{
       "from": "/refguide7/If+expressions",
       "to": "/refguide/if-expressions"
     },
@@ -7525,8 +7481,12 @@ module.exports = {
     },
     {
       "from": "/refguide7/Microflow+Expressions",
-      "to": "/refguide/microflow-expressions"
+      "to": "/refguide/expressions"
     },
+	{
+      "from": "/refguide7/microflow-expressions",
+      "to": "/refguide/expressions"
+    },	
     {
       "from": "/refguide7/Microflow+Source",
       "to": "/refguide/microflow-source"
@@ -7545,7 +7505,7 @@ module.exports = {
     },
     {
       "from": "/refguide7/Modeler",
-      "to": "/refguide/modeler"
+      "to": "/refguide/desktop-modeler"
     },
     {
       "from": "/refguide7/Module+Role",
@@ -8097,15 +8057,18 @@ module.exports = {
     },
     {
       "from": "/refguide7/Text",
-      "to": "/refguide/text"
+      "to": "/refguide/text",
+      "case": true
     },
     {
       "from": "/refguide7/Text+area",
-      "to": "/refguide/text-area"
+      "to": "/refguide/text-area",
+      "case": true
     },
     {
       "from": "/refguide7/Text+box",
-      "to": "/refguide/text-box"
+      "to": "/refguide/text-box",
+      "case": true
     },
     {
       "from": "/refguide7/Third+Party+Licenses",
@@ -8187,6 +8150,10 @@ module.exports = {
       "from": "/refguide7/Version+Control+Scenarios",
       "to": "/refguide/version-control-scenarios"
     },
+	{
+      "from": "/refguide7/vertical-split-pane",
+      "to": "/refguide/scroll-container"
+    },	
     {
       "from": "/refguide7/XML+Inheritance+and+Choice",
       "to": "/refguide/xml-inheritance-and-choice"
@@ -8335,6 +8302,18 @@ module.exports = {
       "from": "/refguide7/XPath+year+from+dateTime",
       "to": "/refguide/xpath-year-from-datetime"
     },
+	{
+      "from": "/bestpractices/SIG+-+Mendix+performance+subjects+explanation",
+      "to": "/refguide/sig-mendix-performance-subjects-explanation"
+    },
+	{
+      "from": "/bestpractices/Inheritance+vs.+1+1+association",
+      "to": "/refguide/inheritance-vs.-1-1-association"
+    },
+	{
+      "from": "/refguide7/certificates",
+      "to": "/deployment/mendixcloud/certificates"
+    },
     /****************************************************
      * REFERENCE GUIDE RENAMES
      ****************************************************/
@@ -8355,40 +8334,58 @@ module.exports = {
      ****************************************************/
     {
       from: "/tips/Finding+Object+Activities",
-      to: "/howtogeneral/tips/finding-object-activities"
+      to: "/howto/tips/finding-object-activities"
     },
     {
       from: "/tips/Finding+Unused+Items",
-      to: "/howtogeneral/tips/finding-unused-items"
+      to: "/howto/tips/finding-unused-items"
     },
     {
       from: "/tips/Finding+your+way+through+a+project",
-      to: "/howtogeneral/tips/finding-your-way-through-a-project"
+      to: "/howto/tips/finding-your-way-through-a-project"
     },
     {
       from: "/tips/Import+a+large+Excel+file",
-      to: "/howtogeneral/tips/import-a-large-excel-file"
+      to: "/howto/tips/import-a-large-excel-file"
     },
     {
       from: "/tips/Tips+and+Tricks",
-      to: "/howtogeneral/tips/"
+      to: "/howto/tips/"
     },
     {
       from: "/tips/Migrating+your+Mendix+database",
-      to: "/howtogeneral/tips/migrating-your-mendix-database"
+      to: "/howto/tips/migrating-your-mendix-database"
     },
     {
       from: "/tips/Querying+over+self-references",
-      to: "/howtogeneral/tips/querying-over-self-references"
+      to: "/howto/tips/querying-over-self-references"
     },
     {
       from: "/tips/Showing+a+Project+in+the+Directory+in+Explorer",
-      to: "/howtogeneral/tips/showing-a-project-in-the-directory-in-explorer"
+      to: "/howto/tips/showing-a-project-in-the-directory-in-explorer"
     },
     {
       from: "/tips/Translatable+Validation+Messages",
-      to: "/howtogeneral/tips/translatable-validation-messages"
+      to: "/howto/tips/translatable-validation-messages"
     },
+    /****************************************************
+     * APM
+     ****************************************************/
+    // {
+    //   from: "~*\\\/apm\\\/use-cases\\\/uc",
+    //   to: "/apm/use-cases/",
+    //   exact: true
+    // },
+    // {
+    //   from: "~*\\\/apm\\\/installation-guide\\\/ig",
+    //   to: "/apm/installation-guide/",
+    //   exact: true
+    // },
+    // {
+    //   from: "~*\\\/apm\\\/reference-guide\\\/rg",
+    //   to: "/apm/reference-guide/",
+    //   exact: true
+    // },
     /****************************************************
      * RELEASE NOTES
      ****************************************************/
@@ -8550,7 +8547,7 @@ module.exports = {
     },
     {
       from: "/ReleaseNotes/4.08.10",
-      to: "/releasenotes/desktop-modeler/4.8"
+      to: "/releasenotes/desktop-modeler/unsupported-versions/4.8"
     },
     {
       from: "/ReleaseNotes/5.15.0",
@@ -8594,115 +8591,115 @@ module.exports = {
     },
     {
       from: "/ReleaseNotes/Platform+Portal",
-      to: "/releasenotes/platform-portal/"
+      to: "/releasenotes/developer-portal/"
     },
     {
       from: "/ReleaseNotes/Release+Notes+2016-10-05",
-      to: "/releasenotes/platform-portal/"
+      to: "/releasenotes/developer-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2016-05-12",
-      to: "/releasenotes/platform-portal/"
+      to: "/releasenotes/developer-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2016-03-24",
-      to: "/releasenotes/platform-portal/"
+      to: "/releasenotes/developer-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2016-02-18",
-      to: "/releasenotes/platform-portal/"
+      to: "/releasenotes/developer-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2016-01-13",
-      to: "/releasenotes/platform-portal/"
+      to: "/releasenotes/developer-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2015-12-01",
-      to: "/releasenotes/platform-portal/"
+      to: "/releasenotes/developer-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2015-11-30",
-      to: "/releasenotes/platform-portal/"
+      to: "/releasenotes/developer-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2015-10-16",
-      to: "/releasenotes/platform-portal/"
+      to: "/releasenotes/developer-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2015-09-17",
-      to: "/releasenotes/platform-portal/"
+      to: "/releasenotes/developer-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2015-09-03",
-      to: "/releasenotes/platform-portal/"
+      to: "/releasenotes/developer-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2015-08-06",
-      to: "/releasenotes/platform-portal/"
+      to: "/releasenotes/developer-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2015-07-31",
-      to: "/releasenotes/platform-portal/"
+      to: "/releasenotes/developer-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2015-07-24",
-      to: "/releasenotes/platform-portal/"
+      to: "/releasenotes/developer-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2015-07-16",
-      to: "/releasenotes/platform-portal/"
+      to: "/releasenotes/developer-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2015-07-03",
-      to: "/releasenotes/platform-portal/"
+      to: "/releasenotes/developer-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2015-06-16",
-      to: "/releasenotes/platform-portal/"
+      to: "/releasenotes/developer-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2015-06-02",
-      to: "/releasenotes/platform-portal/"
+      to: "/releasenotes/developer-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2015-05-29",
-      to: "/releasenotes/platform-portal/"
+      to: "/releasenotes/developer-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2015-04-21",
-      to: "/releasenotes/platform-portal/"
+      to: "/releasenotes/developer-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2015-04-16",
-      to: "/releasenotes/platform-portal/"
+      to: "/releasenotes/developer-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2015-03-31",
-      to: "/releasenotes/platform-portal/"
+      to: "/releasenotes/developer-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2015-02-26",
-      to: "/releasenotes/platform-portal/"
+      to: "/releasenotes/developer-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2015-02-19",
-      to: "/releasenotes/platform-portal/"
+      to: "/releasenotes/developer-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2015-02-05",
-      to: "/releasenotes/platform-portal/"
+      to: "/releasenotes/developer-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2015-01-22",
-      to: "/releasenotes/platform-portal/"
+      to: "/releasenotes/developer-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2014-12-30",
-      to: "/releasenotes/platform-portal/"
+      to: "/releasenotes/developer-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2014-12-23",
-      to: "/releasenotes/platform-portal/"
+      to: "/releasenotes/developer-portal/"
     },
     {
       from: "/ReleaseNotes/Model+SDK+3.0.1",

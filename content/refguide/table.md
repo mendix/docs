@@ -1,6 +1,7 @@
 ---
 title: "Table"
 parent: "container-widgets"
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 
@@ -8,7 +9,7 @@ Tables can be used to lend structure to a page. They contain a number of [rows](
 
 {{% alert type="info" %}}
 
-![](attachments/16713853/16843973.jpg)
+![](attachments/pages/table.png)
 An example of how you can create a structured page with a table.
 
 {{% /alert %}}
@@ -17,7 +18,7 @@ Cells can be merged horizontally and vertically to allow for asymmetric lay-outs
 
 {{% alert type="info" %}}
 
-![](attachments/16713853/16843971.jpg)
+![](attachments/pages/table-merge.png)
 The merge button
 
 {{% /alert %}}
@@ -37,13 +38,6 @@ Tables allow for a number of keyboard interactions. Examples include navigating 
 ## General properties
 
 {{% snippet file="refguide/Column+Width+Properties.md" %}}
-
-{{% alert type="info" %}}
-
-![](attachments/16713853/16843970.png)
-A table with widths 30% and 70%
-
-{{% /alert %}}
 
 ## Visibility properties
 

@@ -24,17 +24,13 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 To open a hybrid example app, follow these steps:
 
-1.  Go to the [Company Expenses](https://appstore.home.mendix.com/link/app/240/Mendix/Company-Expenses) app in the Mendix App Store and click **Open in Modeler**:
+1.  Open the App Store in your Desktop Modeler by clicking this icon in the upper-right toolbar:
+
+    ![](attachments/18448692/icon.png)
+
+2. Search for the **Company Expenses** app and click **Download**:
 
     ![](attachments/18448692/18581187.png)
-
-2. In the **Launch Selection** pop-up window, select **Mendix Version Selector** as the application to open this link:
-
-    ![](attachments/18448692/18581200.png)
-
-    The Modeler will open the example application and create a new project for you:
-
-    ![](attachments/18448692/18581199.png)
 
 3. Click **Run** to deploy this application to the Mendix Cloud:
 

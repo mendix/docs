@@ -28,7 +28,7 @@ Enrich the user interface of your applications by building on top of our web cli
 
 ## Stories API
 
-Extend the requirements and project management capabilities of Mendix, or connect 3rd party service management and project management tools.
+Extend the requirements and project management capabilities of Mendix, or connect third-party service management and project management tools.
 
 * [Stories API](stories-api)
 

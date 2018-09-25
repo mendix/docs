@@ -1,6 +1,7 @@
 ---
 title: "Header"
 parent: "layout-widgets"
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 
@@ -10,10 +11,10 @@ Headers consist of three distinct elements: a left drop-zone, a right drop-zone,
 
 {{% alert type="info" %}}
 
-![](attachments/16713870/16843984.jpg)
+![](attachments/pages/header-layout.png)
 A basic lay-out utilizing a header to give the page structure.
 
-![](attachments/16713870/16843983.jpg)
+![](attachments/pages/header-page.png)
 An edit page derived from the lay-out above. The page title it automatically adjusted to match that of the page and the [placeholders](placeholder) have been used to add a save and cancel button, replacing the need to add a control bar to the data view.
 
 {{% /alert %}}

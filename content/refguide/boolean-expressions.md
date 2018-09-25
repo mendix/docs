@@ -1,6 +1,6 @@
 ---
 title: "Boolean expressions"
-parent: "microflow-expressions"
+parent: "expressions"
 ---
 ### Boolean expressions
 

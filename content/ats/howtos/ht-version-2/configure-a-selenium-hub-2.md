@@ -53,7 +53,7 @@ Some examples of custom capabilities are:
 
 {{% alert type="info" %}}
 
-Browser and platform overwrites do not work! The ATS run configuration will overwrite your custom capabilities. So selecting InternetExplorer as your browser in custom capabilities does not work.
+Browser and platform overwrites do not work! The ATS run configuration will overwrite your custom capabilities.
 
 {{% /alert %}}
 
@@ -263,7 +263,7 @@ To configure a custom selenium hub follow these steps:
 
 {{% alert type="info" %}}
 
-For more information on local selenium set-up go to [Customer Hosted Selenium](../../general/deployment#5-4-customer-hosted-selenium).
+For more information on local selenium set-up go to [Customer Hosted Selenium](../../general/deployment#customer-hosted-selenium).
 
 {{% /alert %}}
 

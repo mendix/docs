@@ -63,7 +63,6 @@ This will trigger a build for the Hybrid app, so sit back and relax while your a
 
 ## 4 Related Content
 * [How To Enable WKWebView for Hybrid Apps on iOS](building-a-mendix-hybrid-mobile-app-for-windows-phone)
-* [How to Deploy Your First Hybrid Mobile App](deploy-your-first-hybrid-mobile-app)
 * [How to Publish a Mendix Hybrid Mobile App in Mobile App Stores](publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)
 * [How to Debug a Hybrid Mobile Application](debug-a-hybrid-mobile-application)
 * [Push Notifications](push-notifications)

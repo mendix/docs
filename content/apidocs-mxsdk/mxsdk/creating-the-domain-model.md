@@ -1,19 +1,20 @@
 ---
-title: "Creating the Domain Model"
+title: "Create the Domain Model"
 parent: "tutorial-for-the-mendix-sdk"
+menu_order: 30
 description: "Explains how to create a domain model with inheritance and what the relation is between the metamodel and the SDK."
 ---
 
 ## 1 Introduction
 
-You now have your first script up and running, which creates a new app with a single entity. This tutorial guides you through the process of creating a more extensive domain model. At the end of this tutorial you will have a domain model with two entities: `Customer` and `Invoice`. These entities should be associated with a one-to-many association. The `Customer` entity should become a specialization of the `Administration.Account` entity (and indirectly `System.User`), so that customers can log into the app.
+You now have your first script up and running, which creates a new app with a single entity. This how-to guides you through the process of creating a more extensive domain model. At the end of this how-to you will have a domain model with two entities: `Customer` and `Invoice`. These entities should be associated with a one-to-many association. The `Customer` entity should become a specialization of the `Administration.Account` entity (and indirectly `System.User`), so that customers can log into the app.
 
 In this document, you will learn how to do the following:
 
 * Create a domain model with inheritance
 * Explain the relation between the metamodel and the SDK
 
-After completing this tutorial, you will be able to generate apps with the following domain model:
+After completing this how-to, you will be able to generate apps with the following domain model:
 
 ![](attachments/16714173/16844083.png)
 
@@ -27,7 +28,7 @@ The answer to the first question is directly based on functional requirements: y
 
 The Desktop Modeler reference guide gives an overview of what can be configured for different parts of the Mendix app model, the Metamodel reference guide specifies in detail which actual programmable objects are available in the SDK, and the Model SDK API docs provide the precise API details needed to write the actual code.
 
-This tutorial will guide you through the collection of the necessary information from these sources to create the domain model. At the same time, it will explain the general concepts and structure of the SDK documentation. This will enable you to find the information that you need to manipulate other parts of the app model as well.
+This how-to will guide you through the collection of the necessary information from these sources to create the domain model. At the same time, it will explain the general concepts and structure of the SDK documentation. This will enable you to find the information that you need to manipulate other parts of the app model as well.
 
 ## 2 Creating Entities
 
@@ -50,7 +51,7 @@ An `Entity` also has a [`location`](https://apidocs.mendix.com/modelsdk/latest/c
 customer.location = { x: 100, y: 100 };
 ```
 
-With these ingredients, you can create the two entities. Replace the snippet that creates a single entity in the script that you created in the [previous tutorial steps](creating-your-first-script) with the following snippet to create the two new entities:
+With these ingredients, you can create the two entities. Replace the snippet that creates a single entity in the script that you created in the [previous how-to steps](creating-your-first-script) with the following snippet to create the two new entities:
 
 ```ts
 const domainModel = await loadDomainModel(workingCopy); 
@@ -109,7 +110,7 @@ invoices.childConnection = { "x": 100, "y": 30 };
 invoices.parentConnection = { "x": 0, "y": 30 };
 ```
 
-By combining the above two snippets, it is possible to add a fully functioning 1-to-many association between `Invoice` and  `Customer` to the domain model. Add the following snippet to your script, right below the lines that create the entities, and just before the `return workingCopy` statement:
+By combining the above two snippets, it is possible to add a fully functioning one-to-many association between `Invoice` and  `Customer` to the domain model. Add the following snippet to your script, right below the lines that create the entities, and just before the `return workingCopy` statement:
 
 ```ts
 const invoices = domainmodels.Association.createIn(domainModel);

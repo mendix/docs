@@ -1,6 +1,8 @@
 ---
 title: "Entities"
 parent: "domain-model"
+tags: ["domain model", "entity", "attribute", "validation rule", "even handler", "access rule"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 
@@ -39,7 +41,7 @@ The rows in the table are CDs. The type of the two rows is 'CD' and this is the 
 
 *   [Access Rules](access-rules)
 
-## General Properties
+## General Properties {#entities-general-properties}
 
 ### Name
 
@@ -54,7 +56,7 @@ The generalization specifies the entity of which this entity derives her propert
 {{% alert type="info" %}}
 
 This property can be used in a situation where one has an entity 'Student' and an entity 'Professor' which have some generic properties. They both have a name, telephone number and email address and can be a member of one or more courses. Both entities are generalized in the entity 'Member'. Contrary this means that the entity 'Member' can be specialized in the entity 'Student' and the entity 'Professor'.
-![](attachments/819203/917900.png)
+![](attachments/domain-model-editor/917900.png)
 
 {{% /alert %}}
 
@@ -68,7 +70,7 @@ Define whether instances of this entity can be stored in the database. See [pers
 
 {{% alert type="info" %}}
 
-![](attachments/4194533/4325380.png)
+![](attachments/domain-model-editor/4325380.png)
 
 {{% /alert %}}
 

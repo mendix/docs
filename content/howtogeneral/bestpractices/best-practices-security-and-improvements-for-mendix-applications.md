@@ -1,5 +1,5 @@
 ---
-title: "Security Best Practices and Improvements for Mendix Applications"
+title: "Best Practices for Mendix Application Security"
 category: "Best Practices"
 description: "A set of security aspects and checks to use when developing your application."
 tags: ["Best Practices Security"]

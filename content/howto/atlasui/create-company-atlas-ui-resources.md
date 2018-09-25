@@ -2,6 +2,7 @@
 title: "Create Company Atlas UI Resources"
 category: "Atlas UI"
 tags: ["Atlas", "UI", "UX", "user experience"]
+frontpage_featured: true
 ---
 
 ## 1 Introduction
@@ -75,7 +76,7 @@ The building block is now available in the **Toolbox**, where users can drag it 
 
 Now that it’s clear how to create page templates and building blocks, we need to discuss how to get our resources from the **Local** category into a module that can be shared with our apps and users.
 
-Let’s begin by placing our page template inside the **Atlas_UI_Resources** module under **App Store modules**:
+Let’s begin by placing our page template inside the **UI_Resources** module under **App Store modules**:
 
 ![](attachments/howto/creating_moving_local.png)
 
@@ -83,7 +84,7 @@ In our example, the new page template has been added to the dashboard category. 
 
 ![](attachments/howto/creating_open_pt.png)
 
-The **Atlas_UI_Resources** module has been sorted with folders that can be renamed and used as categories for page templates and building blocks. The sorting is done using numbers in front of the name, which can be altered to change the order in which they appear. Page templates and building blocks can be placed inside the same folder to reuse the same category names.
+The **UI_Resources** module has been sorted with folders that can be renamed and used as categories for page templates and building blocks. The sorting is done using numbers in front of the name, which can be altered to change the order in which they appear. Page templates and building blocks can be placed inside the same folder to reuse the same category names.
 
 Adding an underscore to the folder name in the Desktop Modeler (for example, **_Layouts**) ensures that the folder doesn’t get added to the categories for page templates or building blocks.
 

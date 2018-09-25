@@ -87,7 +87,7 @@ If you have two new objects referencing one another and you try to commit one of
 
 ### 4.5 Objects Retrieved from Database Are Not State
 
-Objects retrieved from the database are not part of the state (as compared to objects retrieved by association). This means that you cannot access uncommitted changes and new objects through objects comming from the database, even when retrieving by association starting from these objects.
+Objects retrieved from the database are not part of the state (as compared to objects retrieved by association). This means that you cannot access uncommitted changes and new objects through objects coming from the database, even when retrieving by association starting from these objects.
 
 For example, assume a user has associated (but not committed) an order line with an existing order object. When retrieving the order lines through the order object retrieved from the database, the aforementioned order line is not retrieved. However, when the order object is passed as a microflow parameter from a page, the same retrieve returns the order line object.
 

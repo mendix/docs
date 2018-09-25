@@ -14,6 +14,72 @@ If you're using the advanced flow, you can get the latest version of the Hybrid 
 
 ## 2018
 
+### August 13th, 2018 (2.2.0 / 2.0.1)
+
+* We changed how auth tokens are stored, preventing an issue where a session was not reconstructed after an update of the app.
+* We added several default entries to the *config.xml* file, preventing security errors in the web view.
+
+### July 9th, 2018 (2.1.0 / 2.0.1)
+
+{{% alert type="warning" %}}
+
+As of August 1st, new apps published to Google's Play Store need to target at least Android SDK 26. As of November 1st, updates to apps also need to target at least SDK 26.
+
+{{% /alert %}}
+
+With this update, Mendix hybrid apps are compatible with the above requirement.
+
+Unfortunately, Crosswalk is not compatible with SDK versions 24 and above. Therefore, we removed Crosswalk from the default Mendix hybrid app template. This can lead to a degraded performance on Android devices running version 4.4 or lower.
+
+{{% alert type="info" %}}
+
+For this update, we recommend downloading a fresh hybrid app package from the Mendix Cloud Portal via [Developer Portal](https://sprintr.home.mendix.com/index.html) > **DEPLOY** > **Mobile App**.
+
+{{% /alert %}}
+
+### July 5th, 2018 (2.0.7 / 2.0.1)
+
+* We fixed the transparency level in the default styling.
+
+### July 3rd, 2018 (2.0.6 / 2.0.1)
+
+* We increased the default server timeout for offline apps. The new timeout is 30 seconds.
+
+### April 20th, 2018 (2.0.5 / 2.0.1)
+
+* We improved the styling of the loader and login screens by making the text on those pages thicker.
+
+### April 19th, 2018 (2.0.4 / 2.0.1)
+
+* We improved the styling of the loader screen.
+* We added backwards compatibility with respect to quality vs. density properties (for Android only).
+
+### March 23rd, 2018 (2.0.3 / 2.0.1)
+
+This patch fixes an issue with an upstream dependency (`com.google.android.gms:play-services-gcm`) that was updated by Google. The issue prevented building *.apk* files, both locally and on Phonegap Build.
+
+### March 16th, 2018 (2.0.2 / 2.0.0)
+
+This patch fixes an issue with the generation of the `index.html` file.
+
+### March 13th, 2018 (2.0.1 / 2.0.0)
+
+This patch fixes an issue with an upstream dependency (`com.android.support:support-v4`) that was updated by Google. The issue prevented building *.apk* files, both locally and on Phonegap Build.
+
+### March 9th, 2018 (2.0.0 / 2.0.0)
+
+{{% alert type="info" %}}
+
+This is a major release, because it is not fully compatible with older versions of hybrid-app-template. For this update, we recommend that you download a fresh hybrid app package from the Mendix Cloud Portal via [Developer Portal](https://sprintr.home.mendix.com/index.html) > **DEPLOY** > **Mobile App**. We extended the **Mobile Apps** wizard with fields for the theming options described below. In addition, you can configure splash screens/icons by uploading a single base image.
+
+{{% /alert %}}
+
+* We added support for custom theming:
+  * You can configure the image on the error screen by adding/replacing `error.png`.
+  * You can configure the colors (background/foreground/text) of the error dialog box, login screen, and pin screen by adjusting `parameters.json`.
+  * You can adjust the HTML and CSS of the loading screen by configuring `loader.html.snippet` and `loader.css.snippet`.
+* We now properly set the page title based on the `name` value in `parameters.json`.
+
 ### January 31st, 2018 (1.7.4 / 1.4.0)
 
 {{% alert type="info" %}}
@@ -22,7 +88,7 @@ For this update, we recommend that you download a fresh hybrid app package from 
 
 {{% /alert %}}
 
-* We fixed the issue where NPM updates failed consistently. This issue was related to the recently added local PhoneGap dependency. This local dependency is now removed. PhoneGap should be installed globally, and it should match the CLI version configured in the *config.xml* (for example, `npm install -g phonegap@7.1.0`). During NPM install/update, there will be feedback in the console regarding the current and required versions.
+* We fixed an issue where NPM updates failed consistently. This issue was related to the recently added local PhoneGap dependency. This local dependency is now removed. PhoneGap should be installed globally, and it should match the CLI version configured in the *config.xml* (for example, `npm install -g phonegap@7.1.0`). During NPM install/update, there will be feedback in the console regarding the current and required versions.
 * We removed the *package-lock.json* files from both `mendix-hybrid-app-base` as well as `mendix-hybrid-app-template`. This makes it easier to stay up to date with the latest `mendix-hybrid-app-base` package.
 * Example files for the *config.xml.mustache* and the *index.html.mustache* files are now created during NPM install/update.
 * We removed the obsolete dependencies related to webpack.
@@ -33,13 +99,13 @@ For this update, we recommend that you download a fresh hybrid app package from 
 
 ### January 23rd, 2018 (1.7.2 / 1.3.5)
 
-* We updated the *package-lock.json* file to fix the issue where an old version of `mendix-hybrid-app-base` was being used.
+* We updated the *package-lock.json* file to fix an issue where an old version of `mendix-hybrid-app-base` was being used.
 
 ### January 17th, 2018 (1.7.2 / 1.3.4)
 
 * We added a cachebust to the `synchronizePackage` call so that a fresh copy of the static files is downloaded only when needed.
 * We upgraded the Phonegap CLI version used to 7.1.0.
-* We upgraded the **cordova-build-architecture** plugin to the latest version, which fixes the issue with setting up a local platform for the PhoneGap project.
+* We upgraded the **cordova-build-architecture** plugin to the latest version, which fixes an issue with setting up a local platform for the PhoneGap project.
 * We added **npm** as a dev dependency to make local builds more robust.
 
 ## 2017
@@ -71,7 +137,7 @@ For this update, we recommend that you download a fresh hybrid app package from 
     ```
 
 * We removed the superfluous error message in case of a failed PIN login.
-* We fixed the issue where static files would synchronize on every startup, when **static resources from disk** was enabled in the Mendix project.
+* We fixed an issue where static files would synchronize on every startup, when **static resources from disk** was enabled in the Mendix project.
 * In earlier versions, mobile apps with offline mode enabled would show a dialog box when a new version of the Mendix app was available. We changed this behavior to always update on startup. This prevents inconsistencies that can occur when the user decides to update the mobile app at a later moment.
 
 ### October 27th, 2017 (1.5.0 / 1.3.1)
@@ -86,7 +152,7 @@ For this update, we recommend that you download a fresh hybrid app package from 
 
 * We added extra Phonegap commands (`plugin` and `prepare`).
 * We added a `devDependency` to fix the failing build in some cases.
-* We fixed the issue where some cleanup steps were skipped when the removal of cookies and/or PIN/login tokens failed.
+* We fixed an issue where some cleanup steps were skipped when the removal of cookies and/or PIN/login tokens failed.
 
 ### October 12th, 2017 (1.4.1 / 1.3.0)
 
@@ -138,12 +204,12 @@ For this update, we recommend that you download a fresh hybrid app package from 
 
 ### June 13th, 2017 (1.0.4 / 1.0.3)
 
-* We fixed the issue where the *package.json* was removed on cleanup.
+* We fixed an issue where the *package.json* was removed on cleanup.
 
 ### June 13th, 2017 (1.0.3 / 1.0.3)
 
 * `WkWebview` is now enabled by default.
-* We fixed the issues with UglifyJS and added the NPM5 lockfile.
+* We fixed an issue with UglifyJS and added the NPM5 lockfile.
 
 ### June 13th, 2017 (1.0.2 / 1.0.2)
 

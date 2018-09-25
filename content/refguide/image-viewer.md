@@ -1,6 +1,7 @@
 ---
 title: "Image viewer"
 parent: "file-widgets"
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 
@@ -8,7 +9,7 @@ An image viewer can be used to display an image or its thumbnail.
 
 {{% alert type="info" %}}
 
-![](attachments/819203/918195.png)
+![](attachments/pages/image-viewer.png)
 This image viewer shows the product image.
 
 {{% /alert %}}

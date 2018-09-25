@@ -6,7 +6,7 @@ parent: "understanding-the-metamodel"
 
 A Mendix app model starts with a project. A project contains several top-level or project documents such as settings and security, and it contains the modules that make up a Mendix app.
 
-#### Graphical overview
+### Graphical overview
 
 ![](attachments/16057002/16842800.svg)
 

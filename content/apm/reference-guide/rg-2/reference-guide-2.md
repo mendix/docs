@@ -1,7 +1,12 @@
 ---
 title: "APM 2 Reference Guide"
 category: "Reference Guide"
+menu_order: 20
 ---
+
+{{% alert type="warning" %}}
+The documentation in this section describes a product that is in closed beta, so it is subject to change before the final release. For more information, see [Beta Features](/releasenotes/beta-features/).
+{{% /alert %}}
 
 ## 1 Introduction
 
@@ -28,9 +33,9 @@ Mansystems APM is based on Wikipedia's definition of [Application Performance Ma
 * APM is the "monitoring and management of performance and availability of software applications"
 * APM strives "to detect and diagnose complex application performance problems to maintain an expected level of service"
 * APM is "the translation of IT metrics into business meaning (i.e., value)"
- 
+
 Of course, you need the basic infrastructure probes to measure hardware parts like the CPU, memory, and disk as well as components like the database and the web server. However, for higher quality support, you should also look at the application and how it is performing, especially linking this to the user’s business perspective.
- 
+
 We all know that software contains bugs, and of course we all test before we bring something into production. For users, an error is a sign that the application is not functioning. If the error appears unexpectedly, the user loses trust in the system. The standard reaction of Support is usually to ask questions (including whether the customer can reproduce the issue), to ask that logging be turned on, and to ask for a database dump so that they can investigate the issue in a safe environment.
 
 The APM tools provide valuable information for analyzing the behavior and performance of an application in production. This allows for direct analysis without asking the customer to wait, reproduce, or deliver technical information. The same information is available during development as well to prevent issues before they appear in production.
@@ -51,7 +56,7 @@ When Support or DevOps wants to investigate a performance issue, they can use th
 
 ## 5 Your Flight Data Recorder
 
-The runtime agent's **Trap** feature is always listening on all levels of logging, up to the TRACE level. It is possible to configure the amount of seconds of logging it has to keep in memory. If an error occurs, the logging in memory and the error is stored in the APM manager database, which can provide information regarding what the runtime was proccessing at the time of the error. 
+The runtime agent's **Trap** feature is listening on all levels of logging, up to the TRACE level. If an error occurs, the logging in memory and the error is stored in the APM manager database, which can provide information regarding what the runtime was processing at the time of the error.
 
 ## 6 Logs
 

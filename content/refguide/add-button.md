@@ -1,10 +1,11 @@
 ---
 title: "Add Button"
 parent: "control-bar"
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 
-The add button can only be used in the reference set selector. With this button the user can select objects that have to be added to the reference set selector.
+The add button can only be used in the reference set selector. With this button, the user can select objects that have to be added to the reference set selector.
 
 ## Common Properties
 

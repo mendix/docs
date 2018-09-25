@@ -115,25 +115,99 @@ Selenium<sup>2</sup> Support          | ![][green] Yes<sup>3</sup> | ![][green] 
 <sup>3</sup> Provided by your Selenium SaaS provider.<br />
 <sup>4</sup> Not required in this option.
 
-## 5 Setup Instructions
+### 4.3 Uploading Files
 
-### 5.1 Standard
+ATS does not support the uploading of files in every situation. This table presents a summary of the different possibilities:
+
+| Selenium Setup | Uploading Your Own File | Uploading a File | Uploading Possible? |
+| :-------------- | :---------------------- | :--------------- | :------------------ |
+| Local Selenium Server (Docker) | ![](attachments/deployment/grey.png) Limited<sup>1</sup> | ![](attachments/deployment/green.png) Yes | ![](attachments/deployment/green.png) Yes |
+| BrowserStack (SaaS) | ![](attachments/deployment/red.png) No | ![](attachments/deployment/green.png) Yes | ![](attachments/deployment/green.png) Yes |
+| SauceLabs (SaaS) | ![](attachments/deployment/red.png) No | ![](attachments/deployment/red.png) No | ![](attachments/deployment/red.png) No |
+| Selenium SaaS Agent | ![](attachments/deployment/grey.png) Limited<sup>2</sup> | ![](attachments/deployment/green.png) Yes | ![](attachments/deployment/green.png) Yes |
+
+<sup>1</sup> This is only possible when you prepare your own files on that server.<br />
+<sup>2</sup> This depends on where the agent is installed.
+
+For more information, see [How to Upload a File in Your App Using ATS](../howtos/ht-version-2/upload-file-using-ats-2].
+
+## 5 Selenium SaaS Subscription
+
+### 5.1 General Solutions
+
+{{% alert type="warning" %}}
+This section presents generic advice on which subscription type you need when using a Selenium SaaS provider. Always look at what fits best for your situation!
+{{% /alert %}}
+
+Selenium SaaS providers in general provide the following three solutions:
+
+* **Live testing** – With live testing, you can manually test your application using a virtual machine that resembles a chosen device. This option is not needed for ATS, since it is an automated testing tool. ATS only supports automated browser testing, so this solution is not viable.
+* **Automated testing** – With automated testing, you use the Selenium SaaS provider servers to execute your test cases. The provider hosts Selenium/Appium and enables all kind of extras. This is the solution you need when using ATS.
+* **Mobile testing** – With mobile testing, you use the Selenium SaaS provider servers to execute your mobile test cases. The providers host Appium and enable all kind of extras. ATS is only for browser testing, so this solution is not viable.
+
+To test your application for desktops and mobile, you need **automated browser testing**.
+
+ATS has two supported Selenium providers (for details, see [Supported Selenium Providers](../refguide/rg-version-2/supported-selenium-hub-provider)). The solutions of these providers are discussed in the next sections.
+
+### 5.2 Browserstack Solutions/Products
+
+{{% alert type="warning" %}}
+Browserstack is a third party, so the information displayed here may be out of date! This section is purely to help you understand the different solutions.
+{{% /alert %}}
+
+These Browserstack solutions are compatible with ATS:
+
+* **Automate Pro** – unlimited automated browser testing for desktop sites
+    * If you only want to test your application on desktop browsers, you should select this option
+    * For more information, see [Browserstack Automate](https://www.browserstack.com/automate)
+* **Automate Mobile** – unlimited automated browser testing for desktop and mobile sites
+    * If you want to test your application on desktop and mobile browsers, you should select this option
+    * For more information, see [Browserstack Automate](https://www.browserstack.com/automate)
+* **Enterprise** – personalized pricing
+
+For more information on pricing, see [Browserstack Pricing](https://www.browserstack.com/pricing).
+
+### 5.3 SauceLabs Solutions/Products
+
+{{% alert type="warning" %}}
+SauceLabs is a third party, so the information displayed here may be out of date! This section is purely to help you understand the different solutions.
+{{% /alert %}}
+
+These SauceLabs solutions are compatible with ATS:
+
+* **Automated** – limited browser testing for desktop and mobile sites
+    * If you want to test your application on desktop and mobile browsers, you should select this option
+    * For more information, see [SauceLabs Automated](https://saucelabs.com/products/web-testing)
+* **Unlimited Automated** – unlimited browser testing for desktop and mobile sites
+    * If you want to test your application on unlimited desktop and mobile browsers, you should select this option
+    * For more information, see [SauceLabs Automated](https://saucelabs.com/products/web-testing)
+* **Enterprise** – personalized pricing
+
+{{% alert type="info" %}}
+There is also a difference between virtual machines and real devices, which does not matter for ATS.
+{{% /alert %}}
+
+For more information on pricing, see [SauceLabs Pricing](https://saucelabs.com/pricing).
+
+## 6 Setup Instructions
+
+### 6.1 Standard
 
 There are no additional steps required to set up the standard option.
 
-### 5.2 Public App On-Premises
+### 6.2 Public App On-Premises
 
 This option requires configuring your firewall in order to allow Selenium to establish a connection to your AUT.
 
-#### 5.2.1 Firewall Configuration
+#### 6.2.1 Firewall Configuration
 
 The firewall should accept connections from the internet either on port 80 (if you use http) or port 443 (if you use https) and forward to the web server of your Mendix application.
 
-### 5.3 Private App On-Premises
+### 6.3 Private App On-Premises
 
 This option requires you to deploy an agent component on-premise.
 
-#### 5.3.1 Agent Setup
+#### 6.3.1 Agent Setup
 
 The setup of the agents depends on your provider.
 
@@ -141,9 +215,9 @@ Selenium Service | Agent Name          | Setup Instructions
 ---------------- | ------------------- | ------------------
 BrowserStack     | BrowserStack Local  | [Here](https://www.browserstack.com/local-testing)
 SauceLabs        | Sauce Connect Proxy | [Here](https://wiki.saucelabs.com/display/DOCS/Setting+Up+Sauce+Connect+Proxy)
-TestingBot       | TestingBot Tunnel   | [Here](https://testingbot.com/support/other/tunnel)
 
-### 5.4 Customer-Hosted Selenium
+
+### 6.4 Customer-Hosted Selenium {#customer-hosted-selenium}
 
 This option requires you to set up your own Selenium Server on-premises.
 
@@ -151,12 +225,16 @@ This option requires you to set up your own Selenium Server on-premises.
 Selenium is an open-source third-party component and there is no active support from Mendix.
 {{% /alert %}}
 
-#### 5.4.1 Selenium Runner Setup
+{{% alert type="info" %}}
+Selenium standalone support has been dropped with ATS 2.0. Only Selenium Grid is supported. By following the instructions below, you will set up a Selenium Grid.
+{{% /alert %}}
+
+#### 6.4.1 Selenium Runner Setup
 
 We provide basic installation instructions for the Selenium Runner based on Docker containers. For details, see [Get Started with Docker](https://docs.docker.com/engine/getstarted/), [Selenium Documentation](http://www.seleniumhq.org/docs/), and [Docker-Selenium](https://github.com/SeleniumHQ/docker-selenium).
 
 {{% alert type="info" %}}
-The current ATS version requires Selenium version 2.53.0. If ATS upgrades to a newer Selenium version, the customer is obligated to upgrade its Selenium Runner to the new version as well.
+The current ATS version requires Selenium version 3.8.1. If ATS upgrades to a newer Selenium version, the customer is obligated to upgrade its Selenium Runner to the new version as well.
 {{% /alert %}}
 
 Before you start, make sure that your server has internet access to download the container images.
@@ -168,12 +246,12 @@ Before you start, make sure that your server has internet access to download the
 
     ```yaml
     seleniumhub:
-        image: selenium/hub:2.53.0
+        image: selenium/hub:3.8.1
         ports:
         - 4444:4444
 
     firefoxnode:
-        image: selenium/node-firefox-debug:2.53.0
+        image: selenium/node-firefox-debug:3.8.1
         ports:
         - 5900
         links:
@@ -184,7 +262,7 @@ Before you start, make sure that your server has internet access to download the
         - SCREEN_DEPTH=24
 
     chromenode:
-        image: selenium/node-chrome-debug:2.53.0
+        image: selenium/node-chrome-debug:3.8.1
         ports:
         - 5900
         links:
@@ -205,7 +283,7 @@ Before you start, make sure that your server has internet access to download the
     docker-compose scale firefoxnode=2 chromenode=2
     ```
 
-#### 5.4.2 Firewall Configuration
+#### 6.4.2 Firewall Configuration
 
 The firewall should accept TCP connections from the internet on port 4444 (the standard port for Selenium Server). This port should forward to your Selenium Server.
 

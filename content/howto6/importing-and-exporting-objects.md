@@ -160,10 +160,6 @@ Mendix module object packages are stored as Mendix Package (.mpk) files. An obje
 *   [Synchronizing user accounts using the LDAP module](synchronizing-user-accounts-using-the-ldap-module)
 *   [Importing XML documents](importing-xml-documents)
 *   [Consuming a REST Service](consume-a-rest-service)
-*   [Exposing data to BI tools using OData](exposing-data-to-bi-tools-using-odata)
-
-
-
 *   [Modules](/refguide6/modules)
 *   [Project](/refguide6/project)
 *   [Common Widgets](/refguide6/common-widgets)

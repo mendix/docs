@@ -1,6 +1,7 @@
 ---
 title: "Manage Developer Portal Deep Links"
 category: "How-To's"
+menu_order: 50
 description: "This document describes how to use shortcuts and deep links in the Developer Portal."
 tags: ["Developer Portal","deeplink"]
 ---

@@ -1,15 +1,16 @@
 ---
 title: "Reference Selector"
 parent: "input-widgets"
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 The reference selector is an [input widget](input-widgets) that can be used to display and edit [associations](associations).
 
 {{% alert type="info" %}}
 
-![](attachments/16713884/16844011.png)
+![](attachments/pages/reference-selector.png)
 This reference selector allows you to select a product for your orderline.
-![](attachments/819203/917935.png)
+![](attachments/pages/reference-selector-domain-model.png)
 To use a reference selector you need a many-to-one association in the domain model.
 
 {{% /alert %}}
@@ -85,17 +86,7 @@ See [Opening Pages](opening-pages) for more details.
 
 ## Formatting Properties
 
-### Decimal Precision (Only for Numeric Attributes)
-
-The precision of a value describes the number of digits that are used to express that value. This property indicates the number of decimal places (the number of digits following the point).
-
-_Default value:_ 2
-
-### Group Digits (Only for Numeric Attributes)
-
-For ease of reading, numbers with many digits before the decimal separator may be divided into groups using a delimiter. This property determines whether or not such a delimiter is used. Which delimiter is used depends on the language of the end user.
-
-_Default value:_ No
+{{% snippet file="refguide/Numeric+Formatting+Properties.md" %}}
 
 ### Date Format (Only for Attributes of Type Date and Time)
 

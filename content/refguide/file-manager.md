@@ -1,6 +1,7 @@
 ---
 title: "File manager"
 parent: "file-widgets"
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 
@@ -8,7 +9,7 @@ A file manager is used to upload and/or download files.
 
 {{% alert type="info" %}}
 
-![](attachments/16713872/16843985.png)
+![](attachments/pages/file-manager.png)
 
 {{% /alert %}}
 

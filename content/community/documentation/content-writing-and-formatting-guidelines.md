@@ -1,6 +1,7 @@
 ---
 title: "Content Writing and Formatting Guidelines"
 category: "Documentation"
+menu_order: 20
 ---
 
 ## 1 Introduction
@@ -58,15 +59,15 @@ Need an extra hand with spelling and grammar? Load your article into [Hemmingway
 
 For details on the Markdown syntax, see the [GitHub Guide to Mastering Markdown](https://guides.github.com/features/mastering-markdown/).
 
-### 4.2 Text Styling
+### 4.1 Text Styling
 
 Use **bold** when identifying buttons, windows, fields, and other entities that appear in the UI. For example: "Add a **Retrieve** activity to the microflow."
 
 Use *italics* when the user needs to enter text. For example: "In the **Name** field, enter *Customer_NewEdit_Commit*."
 
-### 4.3 Embedding a Modelshare
+### 4.2 Embedding a Model Share
 
-To embed a modelshare in the documentation, paste the `iframe`. For example:
+To embed a model share in the documentation, paste the iframe, for example:
 
 ```html
 <iframe width='100%' height='491px' frameborder='0' src='https://modelshare.mendix.com/models/fb092960-6fc1-41c0-bb64-d9e70c012bc5/save-example?embed=true' allowfullscreen></iframe>
@@ -76,11 +77,11 @@ This will render as:
 
 <iframe width='100%' height='491px' frameborder='0' src='https://modelshare.mendix.com/models/fb092960-6fc1-41c0-bb64-d9e70c012bc5/save-example?embed=true' allowfullscreen></iframe>
 
-### 4.4 Specific Formatting Tips
+### 4.3 Specific Formatting Tips
 
 Some tips to consider when formatting Markdown are listed below.
 
-#### 4.4.1 Note Styles
+#### 4.3.1 Note Styles
 
 To format note styles, implement the code below.
 
@@ -171,19 +172,33 @@ If you want to use an image in your numbered list, add it after the related exer
 
 ##### 5.1.4.2 Images
 
-Add images that clearly show the specific functionality of the related step (so the reader can check that the image matches what they see on their screen). For example:
+Add images that clearly show the specific functionality of the related step (so the reader can check that the image matches what they see on their screen). For example, the arrows and flow on this screenshot are too busy and not clear enough for the user:
 
 ![](attachments/content-writing-and-formatting-guidelines/image_examples.png)
 
-Add boxes, indicators, arrows, and other information to an image only if it makes the image more understandable. For example:
+Add boxes, indicators, arrows, and other information to an image only if it makes the image more understandable:
 
-![](attachments/content-writing-and-formatting-guidelines/highlighting_image_example.png)
+![](attachments/content-writing-and-formatting-guidelines/image_examples2.png)
 
 Keep the images as simple as possible, because having too many arrows on an image can make it confusing!
 
 Place images in a folder with the same name as the document that uses the images, and place that folder in the attachment folder that is located in the same folder as the file you're editing.
 
 For example, if you are adding an image to the Content Writing and Formatting Guidelines document, located at */community/documentation/*, you would place the images in the */community/documentation/attachments/content-writing-and-formatting-guidelines/* folder. That way, you can group images for the same document nicely together.
+
+Images can be given a maximum width. This is done through the ``image_container`` shortcode:
+
+```html
+{{%/* image_container width="100" align="center" */%}}
+![](attachments/content-writing-and-formatting-guidelines/image_examples2.png)
+{{%/* /image_container */%}}
+```
+
+This example sets the maximum width to ``100px`` and aligns the images to the center (valid alignments are ``left``, ``center``, and ``right``):
+
+{{% image_container width="100" align="center" %}}
+![](attachments/content-writing-and-formatting-guidelines/image_examples2.png)
+{{% /image_container %}}
 
 ### 5.2 How-to Content
 
@@ -201,7 +216,7 @@ For example:
 
 {{% alert type="warning" %}}
 
-The documentation in this section describes a new feature that is still in beta, and is subject to change before the final release.
+The documentation in this section describes a new feature that is in beta, so it is subject to change before the final release.
 
 {{% /alert %}}
 

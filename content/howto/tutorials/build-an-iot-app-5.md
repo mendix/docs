@@ -1,5 +1,5 @@
 ---
-title: "Build a Logistics IoT App Step 5: Create Alerts"
+title: "Step 5: Create Alerts"
 parent: "build-an-iot-app"
 description: "Describes how to extend the Mendix Logistics IoT app to create alerts."
 tags: ["iot", "logistics", "supply chain", "cargo", "shipment", "logistics", "sensor"]
@@ -20,7 +20,7 @@ In this how-to, you will learn how to use business logic to create alerts for wh
 
 Before starting with this how-to, make sure you have completed the following prerequisite:
 
-* Use the previous how-to in this series: [How to Build a Logistics IoT App Step 4: Add Another Data Dimension](build-an-iot-app-4)
+* Use the previous how-to in this series: [Step 4: Add Another Data Dimension](build-an-iot-app-4)
 
 ## 3 Creating Alerts (Step 5)
 
@@ -67,13 +67,12 @@ To improve the alert mechanism, follow these steps:
 10. On the shipment overview page of the app, select **Container Bananas**, then click **Subscribe**.
 11. Open the **Current alerts** panel by clicking the exclamation mark icon in the top right of the page. You will see a message like this: **Temperature is too high: 15**.
 
-Excellent! Now that you have configured the alert mechanism, you can move on to the final how-to in this tutorial: [How to Build a Logistics IoT App Step 6: Expand the IoT App Tracking](build-an-iot-app-6).
+Excellent! Now that you have configured the alert mechanism, you can move on to the final how-to in this tutorial: [Step 6: Expand the IoT App Tracking](build-an-iot-app-6).
 
 ## 4 Related Content
 
-* [How to Build a Logistics IoT App](build-an-iot-app)
-* [How to Build a Logistics IoT App Step 1: Connect App Pages](build-an-iot-app-1)
-* [How to Build a Logistics IoT App Step 2: Configure the Sensor Data Subscription](build-an-iot-app-2)
-* [How to Build a Logistics IoT App Step 3: Handle the Sensor Data](build-an-iot-app-3)
-* [How to Build a Logistics IoT App Step 4: Add Another Data Dimension](build-an-iot-app-4)
-* [How to Build a Logistics IoT App Step 6: Expand the IoT App Tracking](build-an-iot-app-6)
+* [Step 1: Connect App Pages](build-an-iot-app-1)
+* [Step 2: Configure the Sensor Data Subscription](build-an-iot-app-2)
+* [Step 3: Handle the Sensor Data](build-an-iot-app-3)
+* [Step 4: Add Another Data Dimension](build-an-iot-app-4)
+* [Step 6: Expand the IoT App Tracking](build-an-iot-app-6)

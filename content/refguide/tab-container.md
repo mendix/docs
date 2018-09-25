@@ -1,6 +1,7 @@
 ---
 title: "Tab container"
 parent: "container-widgets"
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 
@@ -8,7 +9,7 @@ Tab containers are used to show information categorized into multiple tab pages.
 
 {{% alert type="info" %}}
 
-![](attachments/16713860/18582271.png)
+![](attachments/pages/tab-container.png)
 A tab control with two tab pages (Address, Orders).
 
 {{% /alert %}}

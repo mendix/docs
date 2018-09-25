@@ -1,12 +1,13 @@
 ---
 title: "Sidebar toggle button"
 parent: "layout-widgets"
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 
 The sidebar toggle is a button that when pressed will make a region of a [scroll container](scroll-container) appear or disappear. This makes it possible to create sidebars, for instance a menu on a mobile phone that is hidden by default and can be shown by clicking the button. See the picture for an example layout that used the sidebar toggle. 
 
-![](attachments/16713866/16843980.png)
+![](attachments/pages/sidebar-toggle-button.png)
 
 ## Button properties
 

@@ -1,6 +1,6 @@
 ---
 title: "Parsing and Formatting Decimal Function Calls"
-parent: "microflow-expressions"
+parent: "expressions"
 ---
 
 For details on all the pattern possibilities, see [Class DecimalFormat](http://docs.oracle.com/javase/7/docs/api/java/text/DecimalFormat.html).
@@ -13,48 +13,16 @@ Parses a string value to a decimal value. Takes optional parameters for the form
 
 * Value to parse
     * Type: string
-* Pattern to match (optional)
-    * Type: string
 * Default value (optional)
-    * Type: decimal
+    * Type: decimal or empty
 
 ### Output
 
 A decimal value that matches the inputted string value. If the value cannot be parsed (meaning, it does not match the format parameter or contains illegal characters), the default value will be returned. If no default value was provided, an error occurs.
 
-```java
-parseDecimal('3.45')
-```
-
-returns:
-
-```java
-3.45
-```
-
-with default value:
-
-```java
-parseDecimal('noDecimal', 5.05)
-```
-
-returns:
-
-```java
-5.05
-```
-
-with format parameter:
-
-```java
-parseDecimal('$3.33', '$#.##')
-```
-
-returns:
-
-```java
-3.33
-```
+* `parseDecimal('3.45')` returns 3.45
+* `parseDecimal('noDecimal', 5.05)` returns 5.05
+* `parseDecimal('noDecimal', empty)` returns empty
 
 ## formatDecimal
 

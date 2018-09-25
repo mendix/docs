@@ -4,7 +4,7 @@ parent: "xpath-constraint-functions"
 ---
 
 
-The not() function inverts the meaning (and as such; the result) of the argument.
+The `not()` function inverts the meaning (and as such; the result) of the argument.
 
 ```java
 //Sales.Customer[not(Name = 'Jansen')]

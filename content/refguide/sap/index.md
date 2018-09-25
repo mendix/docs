@@ -6,5 +6,6 @@ title: "SAP"
 
 * [SAP Cloud Connector](sap-cloud-connector)
 * [SAP OData Connector](sap-odata-connector)
-* [SAP Service Modules](sap-service-modules)
+* [SAP Data Models](sap-data-models)
 * [SAP XSUAA Connector](sap-xsuaa-connector)
+* [SAP Single Sign-On](sap-single-sign-on)

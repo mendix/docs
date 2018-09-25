@@ -1,5 +1,5 @@
 ---
-title: "Reference Guide 4"
+title: "Mendix 4 Reference Guide"
 ---
 This is the reference guide for version 4 of the Mendix technology.
 

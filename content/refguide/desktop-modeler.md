@@ -1,8 +1,32 @@
 ---
 title: "Desktop Modeler"
-parent: "modeler-products"
+description: "Describes the various features of the Mendix Modeler, including document templates, the domain model, microflows, modules, pages, and security."
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-These are the documents in this category:
+This section of the Mendix Reference Guide describes the various features of the Mendix Desktop Modeler, including document templates, the domain model, microflows, modules, pages, and security.
 
-* [Desktop Modeler Overview](desktop-modeler-overview)
+## Main Documents in This Category
+
+* [Constants](constants)
+* [Data Sets](data-sets)
+* [Data Types](data-types)
+* [Dialogs](dialogs)
+* [Document Templates](document-templates)
+* [Domain Model](domain-model)
+* [Enumerations](enumerations)
+* [Images](images)
+* [Integration](integration)
+* [Java Actions](java-actions)
+* [Microflows](microflows)
+* [Modules](modules)
+* [Nanoflows](nanoflows)
+* [Pages](pages)
+* [Projects](project)
+* [Regular Expressions](regular-expressions)
+* [Rules](rules)
+* [Scheduled Events](scheduled-events)
+* [Security](security)
+* [Translatable Texts](translatable-texts)
+* [XML](xml-reference-guide)
+* [XPath](xpath)

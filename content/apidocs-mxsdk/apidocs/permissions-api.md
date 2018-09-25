@@ -4,7 +4,7 @@ category: "API Documentation"
 ---
 
 
-# Introduction
+## Introduction
 
 The Permissions API is an [App Service](/refguide6/consumed-app-services) that allows retrieving the [user roles](/refguide6/user-roles) a specific user has in your application. There are several ways in which the roles granted to a user in an application can be changed:
 
@@ -20,13 +20,13 @@ The Permissions API will require the EnvironmentUUID and EnvironmentPassword par
 
 The service is part of the [AppCloudServices module](https://appstore.home.mendix.com/link/app/934/Mendix/AppCloudServices), which is available from the App Store, and it's included in the default themes when creating a new application. Both of these options include a default implementation of the Permissions API.
 
-# API Calls
+## API Calls
 
-## GetRolesForOpenID
+### GetRolesForOpenID
 
-### Description
+#### Description
 
-Retrieves the user roles for a specific user, based on their OpenID; this will return a list of AppRole objects representing the user roles the user has. 
+Retrieves the user roles for a specific user, based on their OpenID; this will return a list of AppRole objects representing the user roles the user has.
 
 {{% alert type="info" %}}
 
@@ -34,11 +34,11 @@ Note that a request will return a list of [non-persistable objects](/refguide6/p
 
 {{% /alert %}}
 
-### Available in
+#### Available in
 
 API Version 1
 
-### Parameters
+#### Parameters
 
 | Name | Parameter type | Required | Description |
 | --- | --- | --- | --- |
@@ -46,13 +46,13 @@ API Version 1
 | EnvironmentUUID | String | Yes | UUID of the requesting environment. This should be the value of the AppCloudServices.EnvironmentUUID constant, which the Mendix Cloud Portal will fill in automatically. |
 | EnvironmentPassword | String | Yes | Password of the requesting environment. This should be the value of the AppCloudServices.EnvironmentUUID constant, which the Mendix Cloud Portal will fill in automatically. |
 
-### Return type
+#### Return type
 
 List of PermissionsAPI.AppRole objects
 
 ![](attachments/18449570/18582265.png)
 
-#### AppRole
+##### AppRole
 
 | Attribute | Type | Description |
 | --- | --- | --- |

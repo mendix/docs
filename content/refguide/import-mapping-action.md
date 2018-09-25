@@ -1,7 +1,13 @@
 ---
 title: "Import Mapping Action"
 parent: "microflow-activities"
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
+
+{{% alert type="info" %}}
+This activity can only be used in microflows, not in nanoflows.
+{{% /alert %}}
+
 
 ## 1 Introduction
 
@@ -47,11 +53,21 @@ This feature was introduced in version 7.10.0.
 
 If the import mapping is based on a [message definition](message-definition), it can import both single objects and lists. Select whether the input variable contains a single object or a list of objects.
 
-### 3.4 Parameter
+### 3.4 If No Object Was Found
+
+{{% alert type="info" %}}
+
+This feature was introduced in version 7.17.0.
+
+{{% /alert %}}
+
+You can indicate what should happen **if no object was found** when the import mapping has checked the box **decide this at the place where the mapping gets used**.
+ 
+### 3.5 Parameter
 
 If the selected mapping requires a parameter, you can choose it here.
 
-### 3.5 Range (If the Mapping Returns a List)
+### 3.6 Range (If the Mapping Returns a List)
 
 The range determines how many objects are mapped and returned.
 
@@ -60,6 +76,16 @@ The range determines how many objects are mapped and returned.
 | All | Map and return all objects. |
 | First | Map and return only the first object. The result of the action will be a single object instead of a list. |
 | Custom | Map and return a given number of objects (limit). The limit is a microflow expression that should result in a number. |
+
+### 3.7 Commit {#commit}
+
+Indicates whether the resulting objects should be committed to the database, and whether event handlers should be triggered.
+
+| Option | Description |
+| --- | --- |
+| Yes | The objects are saved in the database and the [event handlers](event-handlers) are triggered. |
+| Yes without events | The objects are saved in the database, but the [event handlers](event-handlers) are not triggered (default). |
+| No | The objects are created without being saved in the database. You will need a [commit action](committing-objects) to save them. |
 
 ## 4 Validation
 

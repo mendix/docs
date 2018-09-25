@@ -3,6 +3,12 @@ title: "Create Button"
 parent: "button-widgets"
 ---
 
+{{% alert type="info" %}}
+
+This button was removed in Mendix 7.17. Use a normal [Action button](action-button) with the **Create object** action instead.
+
+{{% /alert %}}
+
 When the user presses the **Create** button, the Mendix application will create a new object and open a page to edit the new object.
 
 ## Button Properties
@@ -37,7 +43,7 @@ See [Opening Pages](opening-pages).
 
 ### Entity (Path)
 
-Specifies which type of object will be created when the button is clicked. It is possible to create an object which has an association to an object in an enclosing data view or to the object passed as the caller of the page. The association will be set automatically when the new object is created. Only one to one or one to many associations are supported.
+Specifies which type of object will be created when the button is clicked. It is possible to create an object which has an association to an object in an enclosing data view or to the object passed as the page parameter. The association will be set automatically when the new object is created. Only one to one or one to many associations are supported.
 
 ## Visibility Properties
 

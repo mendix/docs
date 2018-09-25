@@ -1,6 +1,8 @@
 ---
 title: "Indexes"
 parent: "entities"
+tags: ["domain model", "entity", "attribute", "index"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 
@@ -20,7 +22,7 @@ Changing and deleting objects of an entity with indexes takes longer, because th
 
 Customers are usually retrieved by a combination of zipcode and housenumber, so _one_ index is set on the combination of the attributes.
 
-![](attachments/819203/917548.png)
+![](attachments/domain-model-editor/917548.png)
 
 The objects are retrieved by the following OQL query. Pay attention to the order of the attributes in the WHERE clause.
 

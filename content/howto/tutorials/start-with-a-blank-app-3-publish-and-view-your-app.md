@@ -1,5 +1,5 @@
 ---
-title: "Start with a Blank App Step 3: Publish and View Your App"
+title: "Step 3: Publish and View Your App"
 parent: "start-with-a-blank-app"
 description: "Presents details on how to publish your app from the Web Modeler."
 tags: ["build", "app", "developer portal", "web modeler"]
@@ -7,7 +7,7 @@ tags: ["build", "app", "developer portal", "web modeler"]
 
 ## 1 Introduction
 
-Now that you've gotten started with your app and have worked with some of the design options in the theme customizer, it's time to publish your app.
+Now that you've gotten started with your app and have worked with some of the design options in the Theme Customizer, it's time to publish your app.
 
 **This how-to will teach you how to do the following:**
 
@@ -25,7 +25,7 @@ Some of the naming in the video will differ from the text below.
 
 Before starting with this how-to, make sure you have completed the following prerequisite:
 
-* Complete the second how-to in this series: [How to Start with a Blank App Step 2: Build a Dashboard Page](start-with-a-blank-app-2-build-a-dashboard-page)
+* Complete the second how-to in this series: [Step 2: Build a Dashboard Page](start-with-a-blank-app-2-build-a-dashboard-page)
 
 ## 3 Updating and Viewing Your App
 
@@ -65,11 +65,11 @@ To view your app on a mobile device, follow these steps:
 
 2. Scan the QR-code with your mobile device using the [Mendix Mobile app](https://play.google.com/store/apps/details?id=com.mendix.SprintrMobile&hl=en). Follow the directions to download the Mendix Mobile app in case you don't have it installed.
 
-Nice. Now you're ready to continue with the next how-to of this tutorial: [How to Start with a Blank App Step 4: Add Pages to the User Interface](start-with-a-blank-app-4-add-pages-to-the-user-interface).
+Nice. Now you're ready to continue with the next how-to of this tutorial: [Step 4: Add Pages to the User Interface](start-with-a-blank-app-4-add-pages-to-the-user-interface).
 
 ## 5 Related Content
 
-* [How to Start with a Blank App Step 1: Create the App](start-with-a-blank-app-1-create-the-app)
-* [How to Start with a Blank App Step 2: Build a Dashboard Page](start-with-a-blank-app-2-build-a-dashboard-page)
-* [How to Start with a Blank App Step 4: Add Pages to the User Interface](start-with-a-blank-app-4-add-pages-to-the-user-interface)
-* [How to Start with a Blank App Step 5: Add Employee Promotion Logic](start-with-a-blank-app-5-add-employee-promotion-logic)
+* [Step 1: Create the App](start-with-a-blank-app-1-create-the-app)
+* [Step 2: Build a Dashboard Page](start-with-a-blank-app-2-build-a-dashboard-page)
+* [Step 4: Add Pages to the User Interface](start-with-a-blank-app-4-add-pages-to-the-user-interface)
+* [Step 5: Add Employee Promotion Logic](start-with-a-blank-app-5-add-employee-promotion-logic)

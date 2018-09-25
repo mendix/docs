@@ -1,6 +1,7 @@
 ---
-title: "Consumed web service"
+title: "Consumed Web Service"
 parent: "consumed-web-services"
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 
@@ -51,6 +52,6 @@ This part contains all the operations found in the WSDL. You can expand the list
 
 The documentation of the imported web service. Here you can describe the purpose of the web service.
 
-# Calling consumed web services
+## Calling consumed web services
 
 Please refer to the section [Call Web Service Action](call-web-service-action).

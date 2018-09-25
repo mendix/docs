@@ -1,6 +1,7 @@
 ---
 title: "Search button"
 parent: "control-bar"
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 The search button toggles the search bar on and off. It is only present if the 'Show search bar' property of the grid is either 'With button (initially open)' or 'With button (initially closed)'.

@@ -1,6 +1,7 @@
 ---
 title: "Input Reference Set Selector"
 parent: "input-widgets"
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 
@@ -13,8 +14,8 @@ The multiplicity settings of an association can be found by double-clicking the 
 
 {{% /alert %}}{{% alert type="info" %}}
 
-![](attachments/16713883/16844004.png)
-This input reference set selector allows you to link a user to organizations.
+![](attachments/pages/input-reference-set-selector.png)
+This input reference set selector allows you to link an employee to organizations.
 
 {{% /alert %}}
 

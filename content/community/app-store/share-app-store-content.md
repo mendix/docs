@@ -1,6 +1,7 @@
 ---
 title: "Share App Store Content"
 category: "App Store"
+menu_order: 30
 ---
 
 ## 1 Introduction
@@ -39,7 +40,7 @@ To add content to the App Store, follow these steps:
 
         b. Enter the **GitHub profile name**.
 
-        c. Select the **GitHub repo** from which the content will be uploaded by clicking **Select**. The system will crawl all of the projects fpr that GitHub profile and present the Mendix package file (*.mpk*) options to you on the **Please select a repository** pop-up window. When you find the correct *.mpk* file name, click **Select** on this window.
+        c. Select the **GitHub repo** from which the content will be uploaded by clicking **Select**. The system will crawl all of the projects for that GitHub profile and present the Mendix package file (*.mpk*) options to you on the **Please select a repository** pop-up window. When you find the correct *.mpk* file name, click **Select** on this window.
 
         d. Select the **release** by clicking **Select**. If there are various releases of the *.mpk* file available, the system will present them to you on the **Please select a release** pop-up window. When you find the correct release, click **Select** on this window.
 
@@ -62,7 +63,7 @@ To add content to the App Store, follow these steps:
 4. In the **Publish to** drop-down menu, select the location where you want to publish your content:<a name="4"></a>
 
     * **Public App Store (visible for anyone)** – your content will be available to every developer in the Mendix community (this content will have to be reviewed and approved by Mendix before it is available)
-    * **Private App Store (visible for your company)** – your content will be available only to the developers in your company (this content will not be reviewed by Mendix)
+    * <a name="private-app-store"></a>**Private App Store (visible for your company)** – your content will be available only to the developers in your company (this content will not be reviewed by Mendix)
 5. In the bottom half of the **Share your content** screen, do the following:
 
     * Enter a **Name** for your content
@@ -86,7 +87,7 @@ To add content to the App Store, follow these steps:
         * The **Typical usage scenario** for the content
         * The **Features and limitations** for the content
     * These sections are optional:
-        * Any **Depdencies** (for example, the required Desktop Modeler version, modules, images, and styles)
+        * Any **Dependencies** (for example, the required Desktop Modeler version, modules, images, and styles)
         * The **Installation** steps and details
         * The **Configuration** steps and details
         * Any **Known bugs**
@@ -165,7 +166,7 @@ To develop widgets and submit them to the App Store, follow these guidelines:
 * A function may not be larger than 200 lines of code
 * A function may only do one thing, and it should do it properly
 * Internal variables should start with an underscore (`_`)
-* The Dojo library and its functionalities are leading, but for external plugins you can use jQuery
+* Using the Dojo Toolkit and its functionalities is preferred, but for external plugins you can use jQuery
 * Create a test project based on the [AppStoreBoilerplate](https://github.com/mendix/AppStoreWidgetBoilerplate)
 * Create test pages for mobile when content is mobile-supported
 

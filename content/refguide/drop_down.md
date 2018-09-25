@@ -1,15 +1,16 @@
 ---
 title: "Drop-Down"
 parent: "input-widgets"
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 A drop-down is an [input widget](input-widgets) that can be used to display and edit enumeration attributes. It should not be confused with a reference selector, which is used to select a object with which to fill an [association](associations).
 
 {{% alert type="info" %}}
 
- ![](attachments/16713880/16844000.png)
- 
-This drop-down widget allows the user to select the state of the customer.
+ ![](attachments/pages/drop-down.png)
+
+This drop-down widget allows the user to select their favorite color.
 
 {{% /alert %}}
 

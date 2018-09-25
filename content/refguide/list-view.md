@@ -1,6 +1,7 @@
 ---
 title: "List view"
 parent: "data-widgets"
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 
@@ -8,8 +9,8 @@ The list view is similar to the template grid. The list view shows a list of obj
 
 {{% alert type="info" %}}
 
-![](attachments/16713891/16844024.png)
-A read-only list view showing all available products.
+![](attachments/pages/list-view.png)
+A read-only list view showing all profiles.
 
 {{% /alert %}}
 

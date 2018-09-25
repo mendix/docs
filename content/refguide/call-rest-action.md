@@ -1,7 +1,12 @@
 ---
 title: "Call REST Service Action"
 parent: "microflow-activities"
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
+
+{{% alert type="info" %}}
+This activity can only be used in microflows, not in nanoflows.
+{{% /alert %}}
 
 ## 1 Introduction
 
@@ -13,14 +18,31 @@ The Call REST Service action can be used to call a REST endpoint. You can specif
 
 ### 2.1 Location
 
-The **Location** property defines the REST endpoint to be called. The location needs to be entered using a string template. The string template should result in a valid URL string. Parameters can be used by writing a number between braces (for example, `{1}`). For each parameter in the template, you can specify its value using a [microflow expression](microflow-expressions) resulting in a string value. To escape the opening brace (`{`), a double opening brace should be used (`{{`).
+The **Location** property defines the REST endpoint to be called. The location needs to be entered using a string template. The string template should result in a valid URL string. Parameters can be used by writing a number between braces (for example, `{1}`). For each parameter in the template, you can specify its value using a [microflow expression](expressions) resulting in a string value. To escape the opening brace (`{`), a double opening brace should be used (`{{`).
 
-The **HTTP method** property defines the HTTP method to use when calling a REST endpoint. The possible values are: GET, POST, PUT, PATCH, DELETE.
+The **HTTP method** property defines the HTTP method to use when calling a REST endpoint. The possible values are: GET, POST, PUT, PATCH, DELETE, HEAD, and OPTIONS.
 
 ### 2.2 Timeout
 
-Set **Use timeout on request** to **Yes** to be able specify how long the Call REST activity should wait for the REST endpoint to respond. If the REST endpoint has not responded after the number of seconds in **Timeout (s)**, an exception will be 
-thrown and the microflow will roll back or go into your custom error handler.
+Set **Use timeout on request** to **Yes** to be able specify how long the Call REST activity should wait for the REST endpoint to respond. If the REST endpoint has not responded after the number of seconds in **Timeout (s)**, an exception will occur and the microflow will roll back or go into your custom error handler.
+
+### 2.3 Proxy Configuration
+
+{{% alert type="info" %}}
+
+This feature was introduced in version 7.15.0.
+
+{{% /alert %}}
+
+In almost all cases, you can ignore this setting. **Use project settings** is a good default value.
+
+If desired, you can configure whether to use a proxy for the request. These are the choices:
+
+* **Use project settings** – use whatever settings are defined at the project level (default)
+* **Override** – override the project-level settings for this action
+* **No proxy** – do not use a proxy for this action, even if there is a proxy configured at the project level
+
+When you select **Override**, you can configure dynamically whether to use a proxy. You then supply the host, port, username, and password settings for the proxy.
 
 ## 3 HTTP Headers
 
@@ -30,9 +52,9 @@ thrown and the microflow will roll back or go into your custom error handler.
 
 The **Use HTTP authentication** check box defines whether basic authentication should be used.
 
-The **User name** property defines the user name that will be used to authenticate over HTTP. The user name needs to be entered using [microflow Expressions](microflow-expressions). The microflow expression should result in a string.
+The **User name** property defines the user name that will be used to authenticate over HTTP. The user name needs to be entered using [microflow Expressions](expressions). The microflow expression should result in a string.
 
-The **Password** property defines the password that will be used to authenticate over HTTP. The password needs to be entered using [microflow expressions](microflow-expressions). The microflow expression should result in a string.
+The **Password** property defines the password that will be used to authenticate over HTTP. The password needs to be entered using [expressions](expressions). The microflow expression should result in a string.
 
 ### 3.2 Custom HTTP Headers
 
@@ -42,7 +64,7 @@ These headers are added to the HTTP request header. Each custom header is a pair
 
 ![](attachments/19203256/19399114.png)
 
-The sections below describe the options in the drop-down menu for generating the request. Requests can only be generated for HTTP methods POST, PUT, and PATCH.
+The sections below describe the options in the drop-down menu for generating the request. Requests can only be generated for HTTP methods POST, PUT, PATCH, and OPTIONS.
 
 ### 4.1 Export Mapping for the Entire Request
 
@@ -62,7 +84,7 @@ If the [export mapping](export-mappings) requires an input, you can select a var
 
 #### 4.1.4 Content Type
 
-If the [export mapping](export-mappings) is based on a message definition, it can export both XML and JSON. Choose the type of output you want.
+If the [export mapping](export-mappings) is based on a message definition, it can export both XML and JSON. Choose the type of output you want. **Content-Type header** is not set by default. To set it, use the **Custom HTTP Headers** tab.
 
 ### 4.2 Binary for the Entire Request
 
@@ -70,7 +92,7 @@ This option allows you to send binary data (for example, the contents of a FileD
 
 ### 4.3 Custom Request Template
 
-This option allows you to generate the request using a string template. The template defines the structure of the request in plain text. Parameters can be used by writing a number between braces (for example, `{1}`). For each parameter in the template, you can specify its value using a [microflow expression](microflow-expressions) resulting in a string value. To escape the opening brace (`{`), a double opening brace should be used (`{{`).
+This option allows you to generate the request using a string template. The template defines the structure of the request in plain text. Parameters can be used by writing a number between braces (for example, `{1}`). For each parameter in the template, you can specify its value using a [microflow expression](expressions) resulting in a string value. To escape the opening brace (`{`), a double opening brace should be used (`{{`).
 
 ## 5 Response
 

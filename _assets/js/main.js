@@ -23,15 +23,57 @@
     });
 
     /*****************
+      Image containers
+    ******************/
+    $('.image-container').each(function () {
+      var $this = $(this);
+      var widthData = $this.data('max-width');
+      var alignData = $this.data('align');
+      var $images = $('img', $this);
+      if (!widthData || !$images) {
+        return;
+      }
+      if (alignData) {
+        $this.addClass('text-' + alignData);
+      }
+      var width = 'number' === typeof widthData ? widthData + 'px' : widthData;
+      $images.each(function () {
+        var $img = $(this);
+        $img.css('width', '100%');
+        $img.css('max-width', width);
+        $img.show();
+      });
+    });
+
+    /*****************
       Menu structure
     ******************/
     function normalizeId(id) {
-      return id.replace(/[ '"\+\-&]+/g, "-").toLowerCase();
+      return id.replace(/[ '"\+\-&\.]+/g, "-").replace(/[\(\)]/g, '').toLowerCase();
     }
 
     function getRandom(max) {
       max = Math.floor(max);
       return Math.floor(Math.random() * max);
+    }
+
+    function hasMenuOrders(arr) {
+      return arr.length > 0 && arr.filter(function (p) { return typeof p.mo !== 'undefined'; }).length > 0;
+    }
+
+    function sortOnMenuOrders(arr) {
+      if (hasMenuOrders(arr)) {
+        var fixed = arr.map(function (p) {
+          if (typeof p.mo === 'undefined') {
+            p.mo = 100000000;
+          }
+          return p;
+        });
+        return fixed.sort(function (p1, p2) {
+          return p1.mo - p2.mo;
+        });
+      }
+      return arr;
     }
 
     function sortPages(arr, getModifier, numFunc) {
@@ -72,22 +114,24 @@
     }
 
     function addNormalLink(title, url) {
+      var cleanUrl = url === null ? null : url.replace(/[\(\)]/g, '');
       return $([
         '<i class="link-icon link-icon-link"></i>',
-        url === null ? '' : '<a href="' + url + '" data-page-title="' + title + '" title="' + title + '">',
-        '<div class="category-title" ' + (url === null ? 'data-page-title="' + title + '"' : '') + '>' + title + '</div>',
-        url === null ? '' : '</a>'
+        cleanUrl === null ? '' : '<a href="' + cleanUrl + '" data-page-title="' + title + '" title="' + title + '">',
+        '<div class="category-title" ' + (cleanUrl === null ? 'data-page-title="' + title + '"' : '') + '>' + title + '</div>',
+        cleanUrl === null ? '' : '</a>'
       ].join(''));
     }
 
     function addExpandLink(id, title, url) {
+      var cleanUrl = url === null ? null : url.replace(/[\(\)]/g, '');
       return $([
         '<a class="expand-link" href="#' + id + '" data-toggle="collapse" aria-expanded="false" aria-controls="' + id + '">',
         '<i class="link-icon link-icon-menu"></i>',
         '</a>',
-        url === null ? '' : '<a title="' + title + '" data-page-title="' + title + '" href="' + url + '">',
-        '<div class="category-title" ' + (url === null ? 'data-page-title="' + title + '"' : '') + '>' + title + '</div>',
-        url === null ? '' : '</a>',
+        cleanUrl === null ? '' : '<a title="' + title + '" data-page-title="' + title + '" href="' + cleanUrl + '">',
+        '<div class="category-title" ' + (cleanUrl === null ? 'data-page-title="' + title + '"' : '') + '>' + title + '</div>',
+        cleanUrl === null ? '' : '</a>',
       ].join(''));
     }
 
@@ -108,6 +152,8 @@
           if (page && page.u.indexOf("/releasenotes/") === 0) {
             subpages = sortOnVersion(subpages);
           }
+
+          subpages = sortOnMenuOrders(subpages);
 
           $item.append(addExpandLink(pageId, title, page.u));
           $collapse.append(addPages(subpages, data));
@@ -137,6 +183,8 @@
         getPages = sortOnVersion(getPages);
       }
 
+      getPages = sortOnMenuOrders(getPages);
+
       if (getPages.length === 0 && catUrl) {
         $cat.append(addNormalLink(cat, catUrl));
       } else if (getPages.length > 0) {
@@ -153,31 +201,52 @@
       return $cat;
     }
 
-    function menu(element, callback) {
+    function hasPathInData(data, main) {
+      if (main.u && main.u === window.location.pathname) {
+        return true;
+      }
+      if (data.pages) {
+        var filtered = data.pages
+          .map(function (page) { return page.u.replace(window.location.pathname, '')})
+          .filter(function (u) { return u === '' || u === '/' });
+        return filtered.length > 0;
+      }
+      return false;
+    }
+
+    function menu(element, data, callback) {
       var $menu = $(element),
           $source = $menu.data('source');
-      $.get($source, function( data ) {
-        if (data.categories && data.pages) {
-          var mainPage = data.pages.filter(function (page) { return page.m });
-          var space = $source.replace('/json/', '').replace('.json', '');
-          if (mainPage.length === 1) {
-            var main = mainPage[0];
-            var mainID = 'space-' + normalizeId(main.t);
-            var $space = $('<div class="space" />');
-            var $collapse = $('<div class="collapse" id="' + mainID + '" />');
-            var title = typeof main.mt !== 'undefined' ? main.mt : main.t;
-            $menu.append($space);
-            $space.append(addExpandLink(mainID, title, main.u));
-            $space.append($collapse);
+      if (data.categories && data.pages) {
+        var mainPage = data.pages.filter(function (page) { return page.m });
+        var space = $source.replace('/json/', '').replace('.json', '');
+        if (mainPage.length === 1) {
+          var main = mainPage[0];
+          var mainID = 'space-' + normalizeId(main.t);
+          var $space = $('<div class="space" />');
+          var $collapse = $('<div class="collapse" id="' + mainID + '" />');
+          var title = typeof main.mt !== 'undefined' ? main.mt : main.t;
+          $menu.append($space);
+          var $expandLink = addExpandLink(mainID, title, main.u);
+          $space.append($expandLink);
+          $space.append($collapse);
+          if (hasPathInData(data, main)) {
             data.categories.forEach(function (cat) {
               $collapse.append(createCategory(space, cat, data));
             });
             callback($menu);
           } else {
-            console.warn('Cannot find mainpage for ' + $source);
+            $('> .expand-link', $expandLink.parent()).one('click', function (e) {
+              data.categories.forEach(function (cat) {
+                $collapse.append(createCategory(space, cat, data));
+              });
+            });
+            callback($menu);
           }
+        } else {
+          console.warn('Cannot find mainpage for ' + $source);
         }
-      });
+      }
     }
 
     function hasBreadCrumbLink(title) {
@@ -229,6 +298,8 @@
 
     function walkmenu(element) {
       var found = false;
+      var hrefList = [];
+      var broken = false;
       $(element).find('a').each(function () {
         var $menulink = $(this);
         if ($menulink.attr('href') === window.location.pathname) {
@@ -242,6 +313,7 @@
           $parents.each(function () {
             var $collapse = $(this),
                 $parentlink = $collapse.parent().find('> a.expand-link'),
+                $parentA = $collapse.parent().find('> a:not(.expand-link)'),
                 $title = $collapse.parent().find('> [data-page-title]');
 
             $collapse.addClass('in');
@@ -258,7 +330,58 @@
                 }
               }
             }
+
+            if ($parentA && $parentA.attr('href')) {
+              hrefList.push({
+                title: $parentA.text(),
+                href: $parentA.attr('href')
+              });
+            } else {
+              broken = true;
+            }
+
           });
+
+          if (!broken) {
+            hrefList.push({
+              title: $menulink.text(),
+              href: href
+            });
+            var schema = {
+              "@context": "http://schema.org",
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "item":
+                  {
+                    "@type": "WebSite",
+                    "@id": "https://docs.mendix.com",
+                    "name": "Mendix Documentation"
+                   }
+                }
+              ]
+            };
+
+            $.each(hrefList, function (index, item) {
+              schema.itemListElement.push({
+                "@type": "ListItem",
+                "position": index + 2,
+                "item":
+                {
+                  "@type": "WebPage",
+                  "@id": "https://docs.mendix.com" + item.href,
+                  "name": item.title
+                 }
+               });
+            });
+
+            $( "<script/>", {
+              "type": "application/ld+json",
+              "html":JSON.stringify(schema, null, 4)
+            }).appendTo( "head" );
+          }
 
           if (!hasBreadCrumbLink($menulink.text())) {
             $breadcrumb.append('<li><a href="' + href + '" title="' + $menulink.text() + '">' + $menulink.text() + '</a></li>');
@@ -277,11 +400,23 @@
       $('.sidebar-menu--loading').removeClass('sidebar-menu--loading');
     }
 
-    $('.menu').each(function () {
-      if ($(this).data("source")) {
-        menu(this, walkmenu);
-      }
-    });
+    var $menus = $('.menu');
+    if ($menus.length) {
+      $.get('/json/spaces.json', function( data ) {
+        window.__mxMenuItems = data;
+        $menus.each(function () {
+          var source = $(this).data("source");
+          if (source) {
+            var filtered = data.filter(function (s) { return s.filename === source });
+            if (filtered.length === 1) {
+              menu(this, filtered[0].content, walkmenu);
+            } else {
+              console.warn('Cannot find menu for :' + source);
+            }
+          }
+        });
+      })
+    }
 
     /*****************
       Back to top
@@ -391,7 +526,10 @@
       });
 
       var $header = $('.mx__page__header');
-      $toc.children().first().css('margin-top', $header.height() + 8);
+      var $toc_title = $('.mx__toc__title');
+      var initialMarginHeight = $header.height() + 8;
+
+      $toc.children().first().css('margin-top', initialMarginHeight);
       $toc.css('position', 'fixed');
 
       $body.scrollspy({
@@ -403,9 +541,14 @@
         $body.scrollspy('refresh');
       });
 
+      var scrollToc = function () {
+        $toc_title.css('margin-top', $win.scrollTop() > initialMarginHeight ? 0 : initialMarginHeight - $win.scrollTop());
+      }
+
       setTimeout(function () {
         var $el = $toc;
         $el.show();
+        scrollToc();
         $el.affix({
           offset: {
             top: function () {
@@ -422,10 +565,8 @@
             }
           }
         });
-        // $el.on('activate.bs.scrollspy', function (event) {
-        //   console.log(event.target);
-        // })
       }, 100);
+      $win.on('scroll', scrollToc);
     }
 
     /*****************

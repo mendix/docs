@@ -1,6 +1,6 @@
 ---
 title: "Job Configuration"
-parent: "Test Run"
+parent: "test-run"
 ---
 
 ## 1 Introduction
@@ -21,7 +21,7 @@ The **General Settings** job configuration page then opens. On this page, set th
 
 For explanations of the general settings sections, see [2 General Settings](#general).
 
-If you selected a Selenium hub from a supported Selenium hub provider (TestingBot, SauceLabs, or Browserstack), you get access to the **Platform Settings** section for the selection of the operating system and screen resolution:
+If you selected a Selenium hub from a supported Selenium hub provider (SauceLabs, or Browserstack), you get access to the **Platform Settings** section for the selection of the operating system and screen resolution:
 
 ![](attachments/test-run/runconfig-os.png)
 
@@ -41,8 +41,8 @@ This is the Selenium hub ATS uses to execute the test case.
 
 This the browser in which ATS executes the test case. The browser version is set automatically by ATS. For supported Selenium hub providers, ATS sets the following browser versions:
 
-* Firefox: version 45
-* Chrome: version 53 (for Windows XP: version 49)
+* Firefox: version 58
+* Chrome: version 64 (for Windows XP: version 49)
 
 ## 3 Platform Settings<a name="platform"></a>
 
@@ -54,7 +54,7 @@ This option is only available for supported Selenium hubs.
 
 {{% /alert %}}
 
-If you have selected a Selenium hub from a supported Selenium hub provider (TestingBot, SauceLabs, or Browserstack), you get access to the platform settings. Here you can set the operating system on which the test case is executed.
+If you have selected a Selenium hub from a supported Selenium hub provider (SauceLabs, or Browserstack), you get access to the platform settings. Here you can set the operating system on which the test case is executed.
 
 For more information on the different supported operating systems, see [Supported Selenium Hub Providers](supported-selenium-hub-provider).
 

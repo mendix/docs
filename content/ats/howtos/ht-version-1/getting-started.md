@@ -30,7 +30,7 @@ Before starting with this how-to, make sure you have the following prerequisites
 
 ## 3 Creating a New Project<a name="CreatingNewProject"></a>
 
-When you log in to ATS as a user, you see the **My Projects** page. A project is a folder in which all the data related to a specific application will be saved and managed. Every user can create a new project, and, as its owner, manage other users' access to it. If there are no projects on your account yet, you are prompted to create a new project.
+When you [log in to ATS](https://ats.mendix.com) as a user, you see the **My Projects** page. A project is a folder in which all the data related to a specific application will be saved and managed. Every user can create a new project, and, as its owner, manage other users' access to it. If there are no projects on your account yet, you are prompted to create a new project.
 
 ![](attachments/getting-started/my-projects.png)
 
@@ -46,8 +46,8 @@ To create a new project, follow these steps:
       --- | ---
       **Project type** | Select **Project**.
       **Name** | Enter a name for your project. You can enter any name, but using the actual name of your application here is advised.
-      **Mendix Project/App ID** | Enter the Mendix project/app ID of the app you want to test, NOT the project ID of ATS! This will give ATS access to your Sprintr and user stories. A project can be created without a Mendix project/app ID, but than you have no access to the Sprintr and user stories.
-      **Mendix API Key** | This is the API key you created in your Sprintr project for ATS.
+      **Mendix Project/App ID** | Enter the Mendix project/app ID of the app you want to test, NOT the project ID of ATS! This will give ATS access to your Developer Portal and user stories. A project can be created without a Mendix project/app ID, but than you have no access to the Developer Portal and user stories.
+      **Mendix API Key** | This is the API key you created in your Developer Portal project for ATS.
       **Project Users** | Enter the people that need access to this project. This project will then appear in their **My Projects** menu. You can always edit this later. There are two different roles for a project user: a **Tester** can only test, create tests, and monitor results; a **Project Administrator** has the same rights as the tester but has also editing rights to the configuration settings of a project.
       **Action Libraries** | Make sure that the action libraries **Core** and **Mendix** are included. Please note that without libraries, it is not possible to select actions for the test script. For more information on action libraries, see [Standard Actions Reference](/ats/refguide/rg-version-1/standard-actions-reference).
 

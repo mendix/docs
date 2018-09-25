@@ -26,6 +26,7 @@ The primary hosting locations are as follows:
 *   Mendix Cloud EU: AWS Frankfurt
 *   Mendix Cloud US: AWS North Virginia
 *   Mendix Cloud Asia Pacific: AWS Tokyo
+*   Mendix Cloud UK: AWS London
 
 Backups will always be stored in at least one external data center, separate from the primary hosting location.
 
@@ -33,7 +34,6 @@ Data will always be stored in the same political region for the following region
 
 *   Data in the EU, including backups, will stay within the EU
 *   Data in the US, including backups, will stay within the US
-
 
 ## 5 Does Mendix Expose the Underlying Cloud Foundry API?
 
@@ -61,8 +61,6 @@ A VPN (which is already deprecated in favor of client certificates) will not be 
 
 These are the differences between Mendix Cloud v3 and Mendix Cloud v4:
 
-* The order of the download archive buttons differs between v3 and v4
-* Upload buttons in v3/v4 are called **Upload Data**/**Upload Archive**
 * In Cloud v4, the debugger is always active, and the button shows the credentials to connect the Desktop Modeler to it
 * The Java security manager is no longer in place
     * The Java security manager is used in v3 to enforce standardization and to act as an additional security layer
@@ -73,21 +71,16 @@ These are the differences between Mendix Cloud v3 and Mendix Cloud v4:
 
 There are some features missing in v4. Mendix will implement the following features in the near future:
 
-* Using client certificates for access restriction profiles is not available; for outgoing connections, client certificates are available
-* File storage usage only shows the number of files, not the amount of used storage
+* File storage usage is not visible
 * Application CPU alerts are not sent
 * Archived logs can only be downloaded, not viewed in the browser
 * The database status is not visible on the node details screen
 
 ## 11 Known Issues in Mendix Cloud v4
 
-* Upload archive only supports archives of a maximum of 4 GB
 * The Amazon RDS maintenance window is not aligned with the CP maintenance window for an application
 * To use the debugger, you need to scale down to one instance
-* In Mendix Cloud v4, instances of your application are spread out over multiple availability zones (AZs), while your database is only active in one AZ at a time (but it can fail over to another AZ)
-    * The result of this is that your instance and the database are not always in the same AZ, which can cause performance differences that are especially noticable in microflows that have lots of small database queries/updates (as such actions are latency sensitive)
-    * You can notice varying response times when you are scaling to more than one Runtime instance and your app is restarted, as it can then end up in a different AZ
-    * Our recommendation is to optimize the application logic to use fewer but larger queries
+* Custom error pages for 404 and 403 are not functional
 
 ## 12 Related Content
 

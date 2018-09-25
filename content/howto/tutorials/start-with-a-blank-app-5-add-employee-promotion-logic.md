@@ -1,8 +1,8 @@
 ---
-title: "Start with a Blank App Step 5: Add Employee Promotion Logic"
+title: "Step 5: Add Employee Promotion Logic"
 parent: "start-with-a-blank-app"
 description: "Presents details on add pages to your app's UI in the Web Modeler."
-tags: ["build", "app", "developer portal", "web modeler"]
+tags: ["build", "app", "developer portal", "web modeler", "microflow", "modeler", "desktop modeler"]
 ---
 
 ## 1 Introduction
@@ -19,7 +19,7 @@ This is the fifth and final how-to in this series on creating an employee direct
 
 Before starting with this how-to, make sure you have completed the following prerequisite:
 
-* Complete the fourth how-to in this series: [How to Start with a Blank App Step 4: Add Pages to the User Interface](start-with-a-blank-app-3-publish-and-view-your-app)
+* Complete the fourth how-to in this series: [Step 4: Add Pages to the User Interface](start-with-a-blank-app-3-publish-and-view-your-app)
 
 ## 3 Adding a Promote Button to the User Interface
 
@@ -75,23 +75,28 @@ To extend the structure of the **Employee** entity, follow these steps:
 
     ![](attachments/start-with-a-blank-app/entity.png)
 
-3.  Select the **Employee** entity and do the following:<br>
+3. Select the **Employee** entity and do the following:<br>
     a. Click the **New attribute** button below the entity.<br>
     b. Set the **Name** to *Level*.<br>
     c. Set the **Type** to **Enumeration**.<br>
-    d. Click **Select enumeration** to create a new enumeration.<br>
-    e. Set the **Name** to **EmployeeLevel**.<br>
-    f. Click **New Item** and set the **Caption** and **Name** to *Junior*.<br>
-    g. Repeat the step above to create the **Medior** and **Senior** items.<br>
-    h. Click **Create** to close the dialog boxes and create the new attribute.
-
+    d. Click **Select enumeration**.<br>
+    e. Click **New** to create a new enumeration. <br>
+    f. Enter *EmployeeLevel* for the **Name**.<br>
+    g. Click **Add item** and enter *Junior* for the **Caption** and **Name**.<br>
+    h. Repeat the step above to create the **Medior** and **Senior** items.<br>
+    i. Click **Create** to close the dialog box and to create the new enumeration.<br>
+    
     ![](attachments/start-with-a-blank-app/enumeration.png)
+    
+    j. In the **Create New Attribute** dialog window, click **Create** to create the new attribute.<br>
+
+    ![](attachments/start-with-a-blank-app/create-new-attribute.png)
 
 4. Select the **Level** attribute in the **Employee** entity and set the **Default Value** property to **Junior**.
 
 All set? Continue below to learn how to edit the microflow you created earlier in the Desktop Modeler.
 
-### 3.2 Opening and Syncing the App in the Desktop Modeler
+### 3.3 Opening and Syncing the App in the Desktop Modeler
 
 The Desktop Modeler is used to add complex logic and build sophisticated integrations to your app.
 
@@ -117,16 +122,13 @@ To open your app in the Desktop Modeler, follow these steps:
 
 At this point, the local version of your app is in sync with the version in the Web Modeler. Continue with the next step to edit a microflow in the Desktop Modeler.
 
-### 3.3 Implementing the Logic to Promote an Employee
+### 3.4 Implementing the Logic to Promote an Employee
 
 Microflows consist of microflow actions. To implement the promote requirement, you need to determine the level of the employee and promote them accordingly.
 
 To edit a microflow so that it promotes employees, follow these steps:
 
-1.  Open the **Promote_Employee** microflow:
-
-    ![](attachments/start-with-a-blank-app/open-microflow-dm.png)
-
+1.  Open the **Promote_Employee** microflow from the **Project Explorer**.
 2.  Right-click the microflow arrow, select **Insert** > **Exclusive Split**, and do the following:<br>
     a. Double-click the exclusive split to open its properties.<br>
     b. Set the caption to **Level**.<br>
@@ -153,8 +155,8 @@ To edit a microflow so that it promotes employees, follow these steps:
 
     ![](attachments/start-with-a-blank-app/exclusive-split-level5.png)
 
-8. Insert an **Activity** of the **Show message** type to the right of the change object activity and do the following:<br>
-    a. Set the **Template** to `{1} is promoted to Medior!`.<br>
+8. Insert an **Activity** of the **Show message** type above the change object activity and do the following:<br>
+    a. Enter *{1} is promoted to Medior!* for the **Template**.<br>
     b. Click **New** to add a parameter and set it to `$Employee/Name`. 
 
     ![](attachments/start-with-a-blank-app/show-message.png)
@@ -170,7 +172,7 @@ To edit a microflow so that it promotes employees, follow these steps:
 
 Fantastic, you've created your first business logic! Can't wait to find out if this is working as expected? Return to the Web Modeler to extend the UI and view your app.
 
-### 3.4 Adding the Employee Level to the UI
+### 3.5 Adding the Employee Level to the UI
 
 The microflow should function correctly at this point, so let's add the employee level to the UI.
 
@@ -184,7 +186,7 @@ Yes! Now you're ready to view the app.
 
 ## 4 Viewing Your App
 
-Update and view your app, just like you did in [How to Start with a Blank App Step 3: Publish and View Your App](start-with-a-blank-app-3-publish-and-view-your-app).
+Update and view your app, just like you did in [Step 3: Publish and View Your App](start-with-a-blank-app-3-publish-and-view-your-app).
 
 You can now promote your employees!
 
@@ -194,7 +196,7 @@ You are also perfectly lined up to continue with [another Mendix tutorial](index
 
 ## 5 Related Content
 
-* [How to Start with a Blank App Step 1: Create the App](start-with-a-blank-app-1-create-the-app)
-* [How to Start with a Blank App Step 2: Build a Dashboard Page](start-with-a-blank-app-2-build-a-dashboard-page)
-* [How to Start with a Blank App Step 3: Publish and View Your App](start-with-a-blank-app-3-publish-and-view-your-app)
-* [How to Start with a Blank App Step 4: Add Pages to the User Interface](start-with-a-blank-app-4-add-pages-to-the-user-interface)
+* [Step 1: Create the App](start-with-a-blank-app-1-create-the-app)
+* [Step 2: Build a Dashboard Page](start-with-a-blank-app-2-build-a-dashboard-page)
+* [Step 3: Publish and View Your App](start-with-a-blank-app-3-publish-and-view-your-app)
+* [Step 4: Add Pages to the User Interface](start-with-a-blank-app-4-add-pages-to-the-user-interface)

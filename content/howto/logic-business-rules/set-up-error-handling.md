@@ -53,6 +53,16 @@ With default error handling, there is always a transaction running. But since th
 
 ![](attachments/18448677/18580951.png)
 
+| Order        |          |
+| ------------ | -------- |
+| ID           | 1234     |
+| Date         | 1/1/2018 |
+
+| Customer |      |
+| -------- | ---- |
+| ID       | 1234 |
+| Status   | Gold |
+
 ### 3.3 Error Handling – Custom with Rollback
 
 Any submicroflow initiated with error handling set to **Custom with Rollback** will NOT initiate a new transaction. The original transaction will be re-used in the subflow. If an error occurs, the transaction will be completely reverted and a new transaction will be initiated so the custom error flow can continue using that new transaction.
@@ -61,7 +71,41 @@ Any submicroflow initiated with error handling set to **Custom with Rollback** w
 
 ![](attachments/18448677/18580950.png)
 
-![](attachments/18448677/4.3.png)
+**For 1:**
+
+| Order        |        |
+| ------------ | ------ |
+| ...          |        |
+| ...          |        |
+
+| Customer     |        |
+| ------------ | ------ |
+| ID           |  1234  |
+| Status       |  Silver|
+
+**For 2:**
+
+| Order        |          |
+| ------------ | -------- |
+| ID           | 1234     |
+| Date         | 1/1/2018 |
+
+| Customer     |          |
+| ------------ | -------- |
+| ID           | 1234     |
+| Status       | Gold     |
+
+**For 3:**
+
+| Order        |        |
+| ------------ | ------ |
+| ...          |        |
+| ...          |        |
+
+| Customer     |        |
+| ------------ | ------ |
+| ID           | 1234   |
+| Status       | Silver |
 
 Because you are switching transactions, merging back to the original process is not recommended, as this will result in inconsistent data. If you use error handling with rollback in a subflow, you should make sure that all parent microflows are configured to use error handling continuously. It is preferable that you re-throw the exception after running your custom actions.
 
@@ -73,7 +117,41 @@ A submicroflow with error handling set to **Custom without Rollback** will alway
 
 ![](attachments/18448677/18580949.png)
 
-![](attachments/18448677/4.4.png)
+**For 1:**
+
+| Order        |        |
+| ------------ | ------ |
+| ...          |        |
+| ...          |        |
+
+| Customer     |        |
+| ------------ | ------ |
+| ID           |  1234  |
+| Status       |  Silver|
+
+**For 2:**
+
+| Order        |          |
+| ------------ | -------- |
+| ID           | 1234     |
+| Date         | 1/1/2018 |
+
+| Customer     |          |
+| ------------ | -------- |
+| ID           | 1234     |
+| Status       | Gold     |
+
+**For 3:**
+
+| Order        |        |
+| ------------ | ------ |
+| ...          |        |
+| ...          |        |
+
+| Customer     |        |
+| ------------ | ------ |
+| ID           | 1234   |
+| Status       | Silver |
 
 ## 4 Combinations of Different Types of Error Handling
 

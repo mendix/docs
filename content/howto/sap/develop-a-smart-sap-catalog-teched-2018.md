@@ -101,7 +101,7 @@ The App looks like this:
 
 ## 5 Creating an OData Data Model for the Product Management OData service
 
-You are going to use a product catalog which is held in the SAP back-end system. These have been exposed via an OData service called **EPM_REF_APPS_PROD_MAN_SRV** is provided in the *student share* folder.
+You are going to use a product catalog which is held in an SAP S/4HANA system. These have been exposed via an OData service called **EPM_REF_APPS_PROD_MAN_SRV** which its metadata file is provided in the session folder in the *student share*.
 
 Your Mendix app needs to know the details of the EPM_REF_APPS_PROD_MAN_SRV OData service before you can get data from it. You do this by creating a data model using the SAP OData Model Creator in the Mendix App Store.
 
@@ -241,7 +241,7 @@ Mendix apps work by showing pages to the user. You can define which page should 
 
 	![](attachments/develop-a-smart-sap-catalog-teched-2018/media/image33.png)
 
-## 9 Retrieving Data from S/4HANA
+## 9 Retrieving Data from SAP S/4HANA
 
 The **SmartCatalogExercise** module comes with no products. You need to replace a retrieve from the local database with an OData **Get** action against the **EPM_REF_APPS_PROD_MAN_SRV** service.
 
@@ -315,7 +315,7 @@ The **SmartCatalogExercise** module comes with no products. You need to replace 
     @EPM_REF_APPS_PROD_MAN_SRV.EPM_REF_APPS_PROD_MAN_SRV + '/' + toString (EPM_REF_APPS_PROD_MAN_SRV.EntitySetNames.Products) + '/?$filter=substringof(SubCategoryName,''' + urlEncode($SearchCriteria/Term) + ''')'
     ```
 
-    This is the OData query which retrieves a list of products which contain the search term which is entered on the product list page. The first part of the query identifies the S/4HANA service list of products. This is then filtered to only return products where the search term appears in the product's SubCategoryName.
+    This is the OData query which retrieves a list of products which contain the search term which is entered on the product list page. The first part of the query identifies the SAP S/4HANA service list of products. This is then filtered to only return products where the search term appears in the product's SubCategoryName.
 
 1. Click **OK**.
 
@@ -337,7 +337,7 @@ The **SmartCatalogExercise** module comes with no products. You need to replace 
 
 1. Select *true* from the dropdown for **Use SAP cloud connector**.
     
-    The SAP Cloud Connector has been configured in advance. It means that you can connect to the S/4HANA system (which is running on-premises and is not publicly available) just by setting this value to *true*. Mendix then makes the connection automatically for you, behind the scenes.
+    The SAP Cloud Connector has been configured in advance. It means that you can connect to the SAP S/4HANA system (which is running on-premises and is not publicly available) just by setting this value to *true*. Mendix then makes the connection automatically for you, behind the scenes.
 
 1. Enter *ProductList* for the **Variable** name.
 
@@ -395,7 +395,7 @@ You will now add the ability to search the catalog by image.
 
     Firstly, you need to add an entity to the domain model to store the image you are going to use later to search the product list.
 
-1. Drag a new **Entity** into the domain model.
+1. Drag a new **Entity** from the **Toolbox** into the domain model.
 
 	![](attachments/develop-a-smart-sap-catalog-teched-2018/media/image49.png)
 
@@ -415,7 +415,7 @@ You will now add the ability to search the catalog by image.
     
     Now you create an empty *SearchImage* object which will then have the image put into it.
 
-1. Right-click **Project 'Smart Catalog' > App Store modules > SmartCatalogExercise > Microflow** in the **Project Explorer**.
+1. Right-click **Project 'Smart Catalog' > App Store modules > SmartCatalogExercise > Microflow** folder in the **Project Explorer**.
 
 1. Click **Add microflow...**.
     
@@ -759,7 +759,7 @@ To deploy the app to SAP Cloud Platform and use the SAP Cloud Connector the secu
 
 1. Click **OK** to close the **Project Security** dialog.
 
-    You will see that the project now has some errors as the security settings will not allow some of the pages and microflows to be reached.
+    You will see in the **Errors** bottom pane that the project now has some errors as the security settings will not allow some of the pages and microflows to be reached.
 
 1. Double-click **Project 'Smart Catalog' > App Store modules > SmartCatalogExercise > Security**
 
@@ -871,11 +871,11 @@ No users have been given access to your app, so you need to add them.
      
      ![](attachments/develop-a-smart-sap-catalog-teched-2018/media/image101.png)
 
-1. Click **Add Assignment**.
+1. Click **Assign Role Collection**.
 
 1. Check that the **Role Collection** is *Smart Catalog User*.
 
-1. Click **Add Assignment**,
+1. Click **Assign Role Collection**,
      
      ![](attachments/develop-a-smart-sap-catalog-teched-2018/media/image102.png)
 
@@ -883,7 +883,7 @@ Your student username is now assigned to the User role in the app (via the *Smar
 
 #### 13.2.2 Cloud Connector Configuration
 
-The end point for the cloud connector does not support HTTPS, We, therefore, have to alter the value of the variable containing the endpoint in the app when it is running in the cloud.
+The end point for the cloud connector does not support HTTPS, we, therefore, have to alter the value of the variable containing the endpoint in the app when it is running in the cloud.
 
 1.  Click **trial** in the breadcrumb navigation to return to the trial subaccount.
     
@@ -929,7 +929,7 @@ You have made all the configuration changes which are needed. These changes only
 
 ## 14 Viewing Your App
 
-You can now view your app running in SAP Cloud Platform and confirm that the SAP single-signon works.
+You can now view your app running in SAP Cloud Platform and confirm that the SAP single-sign-on works.
 
 ![](attachments/develop-a-smart-sap-catalog-teched-2018/media/image112.png)
 

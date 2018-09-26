@@ -81,7 +81,7 @@ Depending on whether you have used SAP from Mendix before, and whether you are c
 
 10.  Click the **SAP** logo and sign in with your student credentials.
 
-	![](attachments/develop-a-smart-sap-catalog-teched-2018/media/modeler-sign-in.png)
+	 ![](attachments/develop-a-smart-sap-catalog-teched-2018/media/modeler-sign-in.png)
 
 11. Click the *arrow* next to the **Run** button in the Desktop Modeler.
 
@@ -183,21 +183,16 @@ Some of the app has been written already, so you need to import those pieces int
 
 	![](attachments/develop-a-smart-sap-catalog-teched-2018/media/image25.png)
 
-1. Repeat steps 3 through 6 to find and download the **SAP Leonardo Machine Learning Foundation Connector** module.
+1. Repeat steps 1 through 5 to find and download the **SAP Leonardo Machine Learning Foundation Connector** module.
 
 	![](attachments/develop-a-smart-sap-catalog-teched-2018/media/image26.png)
 
-1. Repeat steps 3 through 6 to find and download the **Camera** module.
-
-	![](attachments/develop-a-smart-sap-catalog-teched-2018/media/image27.png)
-
-1. You can see the *LeonardoMachineLearning* and *SmartCatalogExercise* modules you have imported, along with other modules, by expanding the tree structure in the **Project Explorer**. The *Camera* module has created a new camera widget which you will use later in the exercise.
+1. You can see the *LeonardoMachineLearning* and *SmartCatalogExercise* modules you have imported, along with other modules, by expanding the tree structure in the **Project Explorer**.
 
 	![](attachments/develop-a-smart-sap-catalog-teched-2018/media/image28.png)
 
 * The **SAP TechEd 2018 - Smart Catalog** module contains the initial modeling for your app
 * The **SAP Leonardo Machine Learning Foundation Connector** allows your app to connect to SAP Leonardo Machine Learning Foundation services
-* The **Camera** module allows your app to access the camera on your device
 
 ## 8 Setting up Application Navigation
 
@@ -232,18 +227,6 @@ Mendix apps work by showing pages to the user. You can define which page should 
 	![](attachments/develop-a-smart-sap-catalog-teched-2018/media/image31.png)
 
 1. Click **OK** to confirm the change.
-
-1. Click the **Hybrid phone app online** tab on the Navigation dialog.
-
-1. Repeat steps 2 through 11 for this tab.
-
-	![](attachments/develop-a-smart-sap-catalog-teched-2018/media/image32.png)
-
-1. Click the **Hybrid tablet app online** tab on the Navigation dialog.
-
-1. Click **Delete** to delete this navigation profile.
-
-	![](attachments/develop-a-smart-sap-catalog-teched-2018/media/image33.png)
 
 ## 9 Retrieving Data from SAP S/4HANA
 
@@ -511,8 +494,6 @@ You will now add the ability to search the catalog by image.
 
 1. Switch back to the **Toolbox** in the right-hand pane.
 
-    You need to add a camera widget to the page, so that users who are using a mobile device can use their camera to capture an image.
-
 1. Drag a **Layout grid** into the drop zone under the image.
 
 	![](attachments/develop-a-smart-sap-catalog-teched-2018/media/image62.png)
@@ -524,28 +505,6 @@ You will now add the ability to search the catalog by image.
 1. Drag the **Upload image** widget on the screen into the layout grid.
 
 	![](attachments/develop-a-smart-sap-catalog-teched-2018/media/image64.png)
-
-1. Right-click the left-hand side of the layout grid.
-
-1. Click **Insert row above**.
-
-	![](attachments/develop-a-smart-sap-catalog-teched-2018/media/image65.png)
-
-1. Click **Full**.
-
-1. Drag a **Camera** widget into the new row.
-
-	![](attachments/develop-a-smart-sap-catalog-teched-2018/media/image66.png)
-
-1. Double-click the **Camera** widget to open the properties.
-
-1. Enter *Use Camera* as the **Label** in the **Button** tab.
-
-1. Select **Yes** for **Auto save** in the **Behavior** tab.
-
-1. Click **OK**.
-
-	![](attachments/develop-a-smart-sap-catalog-teched-2018/media/image67.png)
 
 1. Double-click the **Save** button.
 
@@ -725,7 +684,7 @@ Now you need to use SAP Leonardo Machine Learning to make your app 'smart'.
 
 1. Click View when the runtime has been started successfully.
 
-You can now see the changes to the app. Running in a browser, you cannot access a camera, but you could upload an image for SAP Leonardo Machine Learning Foundation Services to analyze.
+You can now see the changes to the app. You can upload an image for SAP Leonardo Machine Learning Foundation Services to analyze.
 
 ![](attachments/develop-a-smart-sap-catalog-teched-2018/media/image82.png)
 

@@ -61,7 +61,7 @@ Depending on whether you have used SAP from Mendix before, and whether you are c
 
 1.  Leave the **Postgress-v9.4-dev** \[sic\] database selected.
 
-1.  Click **Create**.
+6.  Click **Create**.
     
     ![](attachments/develop-a-smart-sap-catalog-teched-2018/media/image6.png)
 
@@ -71,27 +71,31 @@ Depending on whether you have used SAP from Mendix before, and whether you are c
 
     ![](attachments/develop-a-smart-sap-catalog-teched-2018/media/image7.png)
 
-1.  Click **Edit App**.
+7.  Click **Edit App**.
 
 	![](attachments/develop-a-smart-sap-catalog-teched-2018/media/image8.png)
 
-2.	Click **Open VersionSelector** when asked.
+8.	Click **Open VersionSelector** when asked.
 
-3.  Click **Open with selected Modeler version** to confirm that you want to edit the app in your current version of the Desktop Modeler (version 7.17.2).
+9.  Click **Open with selected Modeler version** to confirm that you want to edit the app in your current version of the Desktop Modeler (version 7.17.2).
 
-4. Click the *arrow* next to the **Run** button in the Desktop Modeler.
+10.  Click the **SAP** logo and sign in with your student credentials.
 
-5. Click **Run Locally**.
+	![](attachments/develop-a-smart-sap-catalog-teched-2018/media/modeler-sign-in.png)
+
+11. Click the *arrow* next to the **Run** button in the Desktop Modeler.
+
+12. Click **Run Locally**.
 
 	![](attachments/develop-a-smart-sap-catalog-teched-2018/media/image9.png)
 
-6. Click **Yes** to confirm that you want to create a database for the app.
+13. Click **Yes** to confirm that you want to create a database for the app.
 
 	![](attachments/develop-a-smart-sap-catalog-teched-2018/media/image10.png)
 
-7. Wait for the app to be started.
+14. Wait for the app to be started.
 
-8. Click **View** to view the app in a browser.
+15. Click **View** to view the app in a browser.
 
 	![](attachments/develop-a-smart-sap-catalog-teched-2018/media/image11.png)
 
@@ -871,11 +875,18 @@ No users have been given access to your app, so you need to add them.
      
      ![](attachments/develop-a-smart-sap-catalog-teched-2018/media/image101.png)
 
+1. Click **Add User** to confirm that your student credentials should be added to the SAP ID Service.
+
+     ![](attachments/develop-a-smart-sap-catalog-teched-2018/media/confirm-user-id-service.png)
+
 1. Click **Assign Role Collection**.
+
+     ![](attachments/develop-a-smart-sap-catalog-teched-2018/media/assign-role-collection.png)
+
 
 1. Check that the **Role Collection** is *Smart Catalog User*.
 
-1. Click **Assign Role Collection**,
+1. Click **Add Assignment**,
      
      ![](attachments/develop-a-smart-sap-catalog-teched-2018/media/image102.png)
 

@@ -46,7 +46,7 @@ The project explorer shows an icon in front of items (documents, folders and mod
 
 ![](attachments/modeler-core/2018-02-21_13-27-21.png)
 
-In the screenshot you can see that the document Account_Edit has been modified. Also a new folder called 'Flows' was added and all microflows were moved inside this folder. Note that the folders and modules containing changes are depicted with a small yellow circle. This helps you to quickly see where in the project the changes are.
+In the screenshot you can see that the microflow ChangePassword has been modified. Also a new folder called 'Flows' was added and all microflows were moved inside this folder. Note that the folders and modules containing changes are depicted with a small yellow circle. This helps you to quickly see where in the project the changes are.
 
 The Changes Dock shows a line for each change to an item. If a document is both modified and moved there are two lines for that document. The dock also shows items that were deleted, something the project explorer cannot do.
 

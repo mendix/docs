@@ -101,7 +101,7 @@ The App looks like this:
 
 ## 5 Creating an OData Data Model for the Product Management OData service
 
-You are going to use a product catalog which is held in an SAP S/4HANA system. These have been exposed via an OData service called **EPM_REF_APPS_PROD_MAN_SRV** which its metadata file is provided in the session folder in the *student share*.
+You are going to use a product catalog which is held in an SAP S/4HANA system. These have been exposed via an OData service called **EPM_REF_APPS_PROD_MAN_SRV**. The metadata file for the services is provided in the session folder in the *student share*.
 
 Your Mendix app needs to know the details of the EPM_REF_APPS_PROD_MAN_SRV OData service before you can get data from it. You do this by creating a data model using the SAP OData Model Creator in the Mendix App Store.
 
@@ -415,7 +415,7 @@ You will now add the ability to search the catalog by image.
     
     Now you create an empty *SearchImage* object which will then have the image put into it.
 
-1. Right-click **Project 'Smart Catalog' > App Store modules > SmartCatalogExercise > Microflow** folder in the **Project Explorer**.
+1. Right-click the **Project 'Smart Catalog' > App Store modules > SmartCatalogExercise > Microflow** folder in the **Project Explorer**.
 
 1. Click **Add microflow...**.
     
@@ -883,7 +883,7 @@ Your student username is now assigned to the User role in the app (via the *Smar
 
 #### 13.2.2 Cloud Connector Configuration
 
-The end point for the cloud connector does not support HTTPS, we, therefore, have to alter the value of the variable containing the endpoint in the app when it is running in the cloud.
+The end point for the cloud connector does not support HTTPS. Therefore, you have to alter the value of the variable containing the endpoint in the app when it is running in the cloud.
 
 1.  Click **trial** in the breadcrumb navigation to return to the trial subaccount.
     

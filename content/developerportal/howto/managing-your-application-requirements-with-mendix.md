@@ -150,7 +150,7 @@ This section will describe a scenario in which a story in Sprint 3 needs to be m
 Moving a story will move any tasks and sub-tasks as well.
 {{% /alert %}}
 
-There are two methods for moving the story. Thsi is the first method:
+There are two methods for moving the story. This is the first method:
 
 1. Select the story you want to move.
 2.  Click **Details**.

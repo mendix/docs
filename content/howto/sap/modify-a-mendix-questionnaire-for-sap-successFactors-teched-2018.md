@@ -513,13 +513,15 @@ You have now made all the changes to the app. You can test it by first running i
 
     ![](attachments/modify-a-mendix-questionnaire-for-sap-successFactors-teched-2018/media/image61.png)
 
-7.  Sign in to the app.
+7.  Sign in to the app with your student credentials.
 
-    The app now needs to get the employee’s current score from SAP SuccessFactors.
+    The app now needs to get the employee’s current score from SAP SuccessFactors. You can see the score on the upper-right corner.
 
 8.  Complete the questionnaire which is offered.
 
-9.  Submit the score.
+9.  Choose to update the score in SAP SuccessFactors.
+
+10. Now you can see the updated score on the upper-right corner!
 
 ## 7 Deploying the app to SAP Cloud Platform
 

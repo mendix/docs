@@ -38,7 +38,11 @@ Backups will always be stored in at least one external data center, separate fro
 Data will always be stored in the same political region for the following regions:
 
 *   Data in the EU, including backups, will stay within the EU
+    * Data in the EU is not currently backed up in the UK
+    * Data in the UK is backed up elsewhere in the EU
 *   Data in the US, including backups, will stay within the US
+
+Data in Japan is currently backed up in Australia.
 
 ## 5 Does Mendix Expose the Underlying Cloud Foundry API?
 

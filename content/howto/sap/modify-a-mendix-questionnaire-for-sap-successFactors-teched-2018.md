@@ -236,7 +236,7 @@ You will now create a page which is shown when the user has finished a questionn
 
 2.  Enter *QuestionnaireSummary* as **Page name**.
 
-3.  Select *PopupLayout (Atlas_UI_Resources)* as **Navigation layout**. Note that this is the **Atlas_UI** version of the PopupLayout (there is more than one PopupLayout).
+3.  Select *Atlas_Default (Atlas_UI_Resources)* as **Navigation layout**.
 
 4.  Select **Blank** in the left-hand pane.
 
@@ -256,11 +256,11 @@ You will now create a page which is shown when the user has finished a questionn
 
 10.  Drag a **Data view** widget from the **Toolbox > Widgets** onto the page.
 
-	![](attachments/modify-a-mendix-questionnaire-for-sap-successFactors-teched-2018/media/image31.png)
+	 ![](attachments/modify-a-mendix-questionnaire-for-sap-successFactors-teched-2018/media/image31.png)
 
 11.  Double-click on the top of the Data view (currently labeled *(Unknown)*).
 
-	![](attachments/modify-a-mendix-questionnaire-for-sap-successFactors-teched-2018/media/image32.png)
+	 ![](attachments/modify-a-mendix-questionnaire-for-sap-successFactors-teched-2018/media/image32.png)
 
 12.  Click **Select...** next to **Data source > Entity (path)**.
 

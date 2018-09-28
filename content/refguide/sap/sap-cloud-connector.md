@@ -10,7 +10,7 @@ frontpage_featured: true
 ## 1 Introduction
 
 {{% alert type="info" %}}
-From October 2018, Cloud Connector functionality is provided by SAP Destination Services.
+From SAP OData Connector version 4.0.0, Cloud Connector functionality is provided by SAP Destination Services.
 {{% /alert %}}
 
 A challenge when running an application in the cloud is to be able to access your on-premises systems in a secure way.

@@ -15,7 +15,7 @@ There are three layout widgets:
 
 * [Layout Grid](#layout-grid)
 * [Container](#container-overview)
-* [Group Box](../group-box) (which currently can be configured only in the Desktop Modeler)
+* [Group Box](#group-box-overview)
 
 ## 2 Layout Grid Overview {#layout-grid}
 
@@ -100,7 +100,25 @@ A **Container** is used as a layout element where you can place a widget or a gr
 
 Container properties consist of the **Design** section. For information, see [Design Section in Widgets of the Web Modeler](page-editor-widgets-design-section-wm).
 
-## 4 Related Content
+## 4 Group Box Overview {#group-box-overview}
+
+A group box is used to group widgets together. The group box can be configured to collapse or expand dynamically with all the elements inside it. 
+
+![](attachments/page-editor-widgets-layouts-wm/wm-group-box.png)
+
+### 4.1 Group Box Properties
+
+Group box properties consist of the **General** section and the **Design** section. For information on the **Design** section and its properties, see [Design Section in Widgets of the Web Modeler](page-editor-widgets-design-section-wm).
+
+Properties available in the **General** section are described in the table below.
+
+| Property    | Description                                                  |
+| ----------- | ------------------------------------------------------------ |
+| Show Header | Defines whether a header is shown above the group box. <br />*This property is enabled by default.* |
+| Caption     | This property is only displayed when the **Show Header** option is enabled. It defines the caption that is shown in the header. |
+| Collapsible | This property is only displayed when the **Show Header** option is enabled. It defines whether the group box and its elements can be collapsed or expanded. Possible values of this property are the following:<ul><li>Yes (start expanded) – the elements inside the group box will be initially expanded and can be collapsed when a user clicks a minus icon in the header</li><li>Yes (start collapsed) – the elements inside the group box will be initially collapsed and can be expanded when a user clicks a plus icon in the header </li><li>No – group box elements cannot be expanded or collapsed</li></ul> |
+
+## 5 Related Content
 
 * [Page Editor Overview in the Web Modeler](page-editor-wm) 
 * [Widgets in the Web Modeler](page-editor-widgets-wm)

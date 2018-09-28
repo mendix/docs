@@ -48,7 +48,7 @@ The details of your SAP destination are held in the **Destination** entity which
 
 ![Destination entity](attachments/sap-destination-services/destination-entity.png)
 
-This contains attributes for all the possible information about a destination, but only those attributes which are relevant to the chosen *Authentication* method.
+This contains attributes for all the possible information about a destination, but only those attributes which are relevant to the chosen *Authentication* method will be populated with values.
 
 ### 5.1 General Attributes
 
@@ -58,7 +58,7 @@ This is the name of the destination. It is the name that was used as the *Destin
 
 #### 5.1.2 Description
 
-This is a free text desciption of this destination.
+This is a free text description of this destination.
 
 #### 5.1.3 ProtocolType
 
@@ -82,12 +82,12 @@ This is the type of connection which is going to be made to the destination. It 
 
 This indicates the method of authentication which is used to connect to the destination.
 
-The **SAP Destination Services** module has the following methods of authentication. The SAP OData Connector currently supports:
+The **SAP Destination Services** module currently supports the following methods of authentication:
 
 * NoAuthentication
 * BasicAuthentication
 * OAuth2SAMLBearerAssertion
-* PrincipalPropagation
+* PrincipalPropagation (this is only valid with a **proxy type** of *OnPremise*).
 
 The following types of authenticatoin are not currently supported by the SAP Destination Services module:
 
@@ -97,7 +97,7 @@ The following types of authenticatoin are not currently supported by the SAP Des
 
 ### 5.2 Attributes Dependent on Authentication Method
 
-For more information about the content and use of these attributes, please see the different types of HTTP authentication documented here: [SAP Cloud Platform Connectivity: HTTP Destinations](https://help.sap.com/viewer/cca91383641e40ffbe03bdc78f00f681/Cloud/en-US/b068356dd7c34cf7ad6b6023deeb317d.html).
+For more information about the content and use of these attributes, please see the documentation on the different types of HTTP authentication here: [SAP Cloud Platform Connectivity: HTTP Destinations](https://help.sap.com/viewer/cca91383641e40ffbe03bdc78f00f681/Cloud/en-US/b068356dd7c34cf7ad6b6023deeb317d.html).
 
 #### 5.2.1 NoAuthentication
 

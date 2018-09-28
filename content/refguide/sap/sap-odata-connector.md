@@ -1,6 +1,7 @@
 ---
 title: "SAP OData Connector"
 category: "SAP"
+menu_order: 10
 description: "Presents reference information on the use of the SAP OData Connector."
 tags: ["SAP", "integration", "OData", "BAPI"]
 ---

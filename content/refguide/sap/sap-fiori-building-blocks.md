@@ -10,7 +10,11 @@ tags: ["SAP", "Fiori", "Building Block", "Page Design", "Layout", "UI", "UX"]
 
 This document contains a summary of the building blocks you can use to create an SAP Fiori themed app.
 
-To use these building blocks, you must have the **Fiori Blank** app template. This can be downloaded from the App Store here: https://appstore.home.mendix.com/link/app/53585/
+To use these building blocks, you can either
+
+* use the **Fiori Blank** app template; this can chosen when creating a new app, or be downloaded from the App Store here – https://appstore.home.mendix.com/link/app/53585/
+
+* add the SAP Fiori UI Package to your app: this can be downloaded from the App Store here – https://appstore.home.mendix.com/link/app/107625/
 
 ## 2 Building Blocks
 

@@ -89,7 +89,7 @@ The **SAP Destination Services** module has the following methods of authenticat
 * OAuth2SAMLBearerAssertion
 * PrincipalPropagation
 
-Other values which are not currently supported by the SAP OData connector, but are available to you if you use SAP Destination Services in conjunction with other API endpoints are:
+The following types of authenticatoin are not currently supported by the SAP Destination Services module:
 
 * AppToAppSSO
 * ClientCertificateAuthentication
@@ -128,23 +128,17 @@ The following attributes are provided for destinations with SAML Bearer Assertio
 
 #### 5.2.4 PrincipalPropagation
 
+All the configuration for this type of authentication is performed in the connectivity service.
+
 {{% alert type="info" %}}
 This is the type of authentication which you need to implement if you previously used the SAP Cloud Connector.
 {{% /alert %}}
 
-The following attributes are provided for destinations with Principal Propagation authentication.
+By providing the SAP OData Connector actions (*Get list* for example) with a destination of this type, you can gain access to your on-premises systems which are configured through SAP Cloud Platform Connectivity.
 
-#### 5.2.5 ApptoAppSSO
-
-The following attributes are provided for destinations with Application-to-Application SSO authentication.
-
-#### 5.2.6 ClientCertificateAuthentication
-
-The following attributes are provided for destinations with Client Certificate authentication.
-
-#### 5.2.7 SAPAssertionSSO
-
-The following attributes are provided for destinations with SAP Assertion SSO authentication.
+<!--
+To use this in Mendix REST and other calls to API endpoints, you should use the following attributes
+-->
 
 ## 6	Good Practice
 

@@ -136,9 +136,13 @@ This is the type of authentication which you need to implement if you previously
 
 By providing the SAP OData Connector actions (*Get list* for example) with a destination of this type, you can gain access to your on-premises systems which are configured through SAP Cloud Platform Connectivity.
 
-<!--
-To use this in Mendix REST and other calls to API endpoints, you should use the following attributes
--->
+The attributes in the **Destination** entity which are used for *Principal Propogation* are:
+
+* Url –  the *Location* of the service
+* ProxyHost – the *Host* of the service
+* ProxyPort - the *Port* of the service
+* SapConnectivityProxyCredentials – the *Username* of the user accessing the service (Password is *empty*)
+* SapConnectivityAuthentication – the value of the *SAP-Connectivity-Authentication* header which authenticates access to the service via the connectivity service
 
 ## 6	Good Practice
 

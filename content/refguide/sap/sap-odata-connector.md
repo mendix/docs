@@ -154,9 +154,9 @@ This Create is not the same as the Mendix **Create Object** action. The SAP ODat
 {{% /alert %}}
 
 * Input
-  * Query (required) - A URL which points to the Collection to which the object belongs. The Collection also identifies as an Entity Set in the OData service.
+
   * Odata object (required) - an object which is a specialization of the OdataObject entity and corresponds to the OData Entity which is being created
-  * Request Parameters - This is used to override the default behavior of the action when responding to conditions such as timeouts and HTTP responses. To keep the standard behavior, set it to _empty_
+  * Query (required) - A URL which points to the Collection to which the object belongs. The Collection also identifies as an Entity Set in the OData service.  * Request Parameters - This is used to override the default behavior of the action when responding to conditions such as timeouts and HTTP responses. To keep the standard behavior, set it to _empty_
   * Use SAP cloud connector - **False** if you want to use a publicly accessible service, **True** if you need to access your on-premises SAP back-end system via the SAP Cloud Connector
 * Output
   * Return type - Boolean

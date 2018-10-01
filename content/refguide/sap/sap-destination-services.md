@@ -3,7 +3,7 @@ title: "SAP Destination Services"
 category: "SAP"
 menu-order: 15
 description: "Reference for using SAP Destination Services within the SAP OData Connector"
-tags: ["SAP", "OData Connector". "Destination Services", "Cloud Connector"]
+tags: ["SAP", "OData Connector", "Destination Services", "Cloud Connector"
 ---
 
 ## 1 Introduction

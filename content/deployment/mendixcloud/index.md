@@ -16,7 +16,7 @@ If you are new to the Mendix community and would like to deploy and share your o
 
 {{% alert type="info" %}}
 
-Free apps are part of our community edition and require Mendix 5.18 or higher.
+Free apps are part of our community edition and require Mendix version 6 or higher.
 
 If you are not currently a customer but would prefer to use a licensed cloud node you can find more information on our pricing page: [Mendix Platform Pricing](http://www.mendix.com/pricing).
 

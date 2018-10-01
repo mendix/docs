@@ -58,7 +58,7 @@ However, you can launch services on your own AWS account in the same region to m
 
 We add regions based on customer demand. If you would like a different region, contact your Mendix Customer Success Manager to see what we can offer. Note that we any request will need to take into account the costs of launching a complete Cloud Foundry cluster, with backup services, monitoring, etc. 
 
-You can also consider running your Mendix app using your own AWS account in a different AWS region. You can do this using Docker, and there are some documents on how to do this here: [Docker](/deployment/docker). If you co this, however, you will not receive all the benefits of running in the Mendix Cloud.
+You can also consider running your Mendix app using your own AWS account in a different AWS region. You can do this using Docker, and there are some documents on how to do this here: [Docker](/deployment/docker). If you do this, however, you will not receive all the benefits of running in the Mendix Cloud.
 
 ## 8 What Are the Limitations?
 

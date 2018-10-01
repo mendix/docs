@@ -4,11 +4,21 @@ title: "Developer Portal"
 
 ## 2018
 
+### October 1st, 2018
+
+#### Improvements
+
+* The Web Modeler can now be enabled for all types of apps. You can do this on the **Settings** > **General** page of your app. If you have a licensed app, you will also need to choose your deployment environment.
+
+#### Fixes
+
+* For a while, the **Show activity for** filter buttons on the company **Buzz** page were broken and displayed nothing. They now work again.
+
 ### September 10th, 2018
 
 #### Improvements
 
-* An application created through our APIs now has the Web Modeler enabled if the template the app is based on is suitable for use in the Web Modeler.
+* An application created through our APIs now has the Web Modeler enabled if the template on which the app is based is suitable for use in the Web Modeler.
 
 #### Fixes
 

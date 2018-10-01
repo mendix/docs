@@ -34,7 +34,7 @@ In the App Settings the following columns are displayed:
 | Status            | Indicates if the update is available. Click **Update Available** to update the particular widget. When the widget is updated, the new version of this widget is displayed in the **App Settings**. Also, the widget is updated on all pages where it is used. **Note** You may have a situation that the new version properties differ from the old one, and you can get consistency errors when publishing. For details on errors, see [Checks](checks-wm). |
 | **Delete** button | Deletes the widget from your project and from all pages where it was used. |
 
-## 4 Related Content
+## 3 Related Content
 
 * [The Web Modeler Overview](overview-wm)
 * [App Store Content Support](../../community/app-store/app-store-content-support)

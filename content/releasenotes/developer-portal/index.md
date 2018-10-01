@@ -16,7 +16,7 @@ The Web Modeler can now be enabled for all types of apps. You can do this on the
 
 * **SAP OData Connector** version 4.0.0
 
-This version of the SAP OData Connector allows you to use the destination services of SAP Cloud Platform. This simplifies configuration, authentication and endpoint management when integrating your application, running in SAP Cloud Platform, with SAP backend services. See [SAP Destination Services](\refguide\sap\sap-destination-services).
+This version of the SAP OData Connector allows you to use the destination services of SAP Cloud Platform. This simplifies configuration, authentication and endpoint management when integrating your application, running in SAP Cloud Platform, with SAP backend services. See [SAP Destination Services](/refguide/sap/sap-destination-services).
 
 The following authentication types are currently supported in SAP Destination Services:
 
@@ -42,7 +42,7 @@ We now configure Destination Service in the scope of XSUAA. This means that we a
  
 #### Breaking Changes
 
-* The new **SAP OData Connector** will break existing projects which are using the SAP Cloud Connector. The SAP OData Connector no longer supports the “Use Cloud Connector” attribute. This is now embedded in the destination service configuration. See [SAP Destination Services](\refguide\sap\sap-destination-services) for more details. 
+* The new **SAP OData Connector** will break existing projects which are using the SAP Cloud Connector. The SAP OData Connector no longer supports the “Use Cloud Connector” attribute. This is now embedded in the destination service configuration. See [SAP Destination Services](/refguide/sap/sap-destination-services) for more details. 
 
 #### Fixes
 

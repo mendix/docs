@@ -12,13 +12,17 @@ This reference guide describes the actions and domain model of the SAP OData Con
 
 The SAP OData Connector is an OData connector written specifically to integrate with SAP back-end systems like SAP Business Suite (SAP ERP 6.0), SAP S/4HANA, SAP S/4HANA Cloud, and SAP SuccessFactors. The SAP OData Connector can be used for all SAP back-end systems that have OData enabled, both in the cloud and on-premises. For ECC, SAP Gateway will be used to expose the traditional BAPI interface as an OData service.
 
-When running the Mendix application in SAP Cloud Platform, you can choose to use the SAP Cloud Platform cloud connector to gain access to your on-premises SAP instance. If you choose to use the SAP Cloud Platform cloud connector, this will invoke the SAP Connectivity Service in the SAP Cloud Platform to find a route to your private SAP OData service. This route is configured from the SAP Cloud Connector running as an agent in your on-premises SAP back-end. If no route is configured, the SAP OData Connector will route requests to the public OData service. For more information, see the [SAP Cloud Connector](sap-cloud-connector) documentation and the [SAP OData Connector](https://appstore.home.mendix.com/link/app/74525/Mendix/SAP-OData-Connector) in the Mendix App Store.
-
 ![](attachments/sap-odata-connector/appstore-sapodata.png)
 
-The SAP OData Connector can be used for example in combination with an SAP Data Model of an SAP Fiori Cloud app. For more details, see [SAP Data Models](sap-data-models). Alternatively, you can generate a data model from the metadata of your OData service, exposed from your SAP back-end system. For more details see [How to Use the SAP OData Model Creator](/howto/sap/use-sap-odata-model-creator).
+The SAP OData Connector can be used for example in combination with the SAP Data Model of an SAP Fiori Cloud app. For more details, see [SAP Data Models](sap-data-models). Alternatively, you can generate a data model from the metadata of your OData service, exposed from your SAP back-end system. For more details see [How to Use the SAP OData Model Creator](/howto/sap/use-sap-odata-model-creator).
 
 If you are new to the SAP OData Connector, you can try it out by following our how-to: [How to Use the OData Connector](/howto/sap/use-sap-odata-connector). This reference assumes that you know the details of the SAP OData service you want to use.
+
+When running the Mendix application in SAP Cloud Platform, you can choose to use SAP Destination Services to gain access to your on-premises SAP instance. SAP Destination Services can be configured to invoke the SAP Connectivity Service in the SAP Cloud Platform to find a route to your private SAP OData service. This route is configured from the SAP Cloud Connector running as an agent in your on-premises SAP back-end. If no route is configured, the SAP OData Connector will route requests to the public OData service. For more information, see the [SAP Destination Services](sap-destination-services) documentation and the [SAP OData Connector](https://appstore.home.mendix.com/link/app/74525/Mendix/SAP-OData-Connector) in the Mendix App Store.
+
+{{% alert type="info" %}}
+SAP Destination Services replaces the SAP Cloud Connector flag which was used in previous version of the SAP OData Connector
+{{% /alert %}}
 
 ## 2 Using the SAP OData Connector<a name="UsingtheSAPODataConnector"></a>
 
@@ -123,6 +127,13 @@ This domain model is part of the SAP OData Connector module and can be found in 
 * **CSRFToken** – the Cross-Site Request Forgery (CSRF) token is maintained internally and is used to prevent CSRF attacks; a CSRF token is obtained when a **Get** or **Get list** OData action is performed and is maintained for a Mendix session (or transaction context) which means that:
   * where an asynchronous or background microflow is executed (for example, using *executeMicroflowInBackground* from Community Commons) a new CSRF token must be obtained before any other actions are performed
   * where a startup microflow or scheduled event is run, the context also supports CSRF but, again, the token must be obtained before performing any other actions
+* **Destination** – Information which defines the destination when using *Destination Services*. See [SAP Destination Services](sap-destinination-services) for more information.<br />
+    There are also some entities which are used to construct the *Destination* entity. Attribute values should always be taken from the Destination entity, rather than these entities:
+    * DestinationConfiguration
+    * ConectivityInfo
+    * JsonObject
+    * AuthTokens
+    * Root
 
 ## 3 Actions<a name="Actions"></a>
 

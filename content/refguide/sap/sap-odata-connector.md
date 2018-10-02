@@ -130,7 +130,7 @@ This domain model is part of the SAP OData Connector module and can be found in 
 * **CSRFToken** – the Cross-Site Request Forgery (CSRF) token is maintained internally and is used to prevent CSRF attacks; a CSRF token is obtained when a **Get** or **Get list** OData action is performed and is maintained for a Mendix session (or transaction context) which means that:
   * where an asynchronous or background microflow is executed (for example, using *executeMicroflowInBackground* from Community Commons) a new CSRF token must be obtained before any other actions are performed
   * where a startup microflow or scheduled event is run, the context also supports CSRF but, again, the token must be obtained before performing any other actions
-* **Destination** – Information which defines the destination when using *Destination Services*. See [SAP Destination Services](sap-destinination-services) for more information.<br />
+* **Destination** – Information which defines the destination when using *Destination Services*. See [SAP Destination Services](sap-destination-services) for more information.<br />
     There are also some entities which are used to construct the *Destination* entity. Attribute values should always be taken from the Destination entity, rather than these entities:
     * DestinationConfiguration
     * ConectivityInfo

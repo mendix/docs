@@ -8,7 +8,7 @@ tags: ["SAP", "integration", "OData", "BAPI"]
 
 ## 1 Introduction<a name="Introduction"></a>
 
-This reference guide describes the actions and domain model of the SAP OData Connector module.
+This reference guide describes the actions and domain model of the SAP OData Connector module. 
 
 The SAP OData Connector is an OData connector written specifically to integrate with SAP back-end systems like SAP Business Suite (SAP ERP 6.0), SAP S/4HANA, SAP S/4HANA Cloud, and SAP SuccessFactors. The SAP OData Connector can be used for all SAP back-end systems that have OData enabled, both in the cloud and on-premises. For ECC, SAP Gateway will be used to expose the traditional BAPI interface as an OData service.
 

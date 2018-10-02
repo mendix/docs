@@ -136,9 +136,13 @@ This is the type of authentication which you need to implement if you previously
 
 By providing the SAP OData Connector actions (*Get list* for example) with a destination of this type, you can gain access to your on-premises systems which are configured through SAP Cloud Platform Connectivity.
 
-<!--
-To use this in Mendix REST and other calls to API endpoints, you should use the following attributes
--->
+The attributes in the **Destination** entity which are used for *Principal Propogation* are:
+
+* Url –  the *Location* of the service
+* ProxyHost – the *Host* of the service
+* ProxyPort - the *Port* of the service
+* SapConnectivityProxyCredentials – the *Username* of the user accessing the service (Password is *empty*)
+* SapConnectivityAuthentication – the value of the *SAP-Connectivity-Authentication* header which authenticates access to the service via the connectivity service
 
 ## 6	Good Practice
 
@@ -159,6 +163,12 @@ If retrying the **Get Destination** action still causes an exception, then conti
 SAP Destination Services does not support running on a local machine. Your app must be deployed to SAP Cloud Platform to get the destination.
 
 If you want to deploy locally, during development or testing for example, you will need to have an endpoint which is accessible from your network and provide any credentials from within your app.
+
+### 6.4 Formatting URLs with a ServiceRoot in SAP OData Connector
+
+When you use SAP OData Connector actions, you often have to provide a string containing a URL or query. Without Destination Services this needs to contain the SERVICEROOT, that is the endpoint of the service being consumed.
+
+With Destination Services, you should not provide the SERVICEROOT. You should start the query with a slash and the COLLECTIONNAME. Note that this is also the case where the URL is obtained from the object metadata or *Deferred* attribute. See [SAP OData Connector](sap-odata-connector) for more details.
 
 ## 7	Troubleshooting
 

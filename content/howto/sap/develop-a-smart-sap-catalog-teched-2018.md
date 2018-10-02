@@ -79,23 +79,39 @@ Depending on whether you have used SAP from Mendix before, and whether you are c
 
 9.  Click **Open with selected Modeler version** to confirm that you want to edit the app in your current version of the Desktop Modeler (version 7.17.2).
 
-10.  Click the **SAP** logo and sign in with your student credentials.
+10. Click the **SAP** logo and sign in with your student credentials.
 
-	 ![](attachments/develop-a-smart-sap-catalog-teched-2018/media/modeler-sign-in.png)
+	![](attachments/develop-a-smart-sap-catalog-teched-2018/media/modeler-sign-in.png)
 
-11. Click the *arrow* next to the **Run** button in the Desktop Modeler.
+    Before you start, you need to make one configuration change to allow Mendix to run on your TechEd computer:
 
-12. Click **Run Locally**.
+11. Click the menu item **Edit > Preferences...**
+
+	![](attachments/develop-a-smart-sap-catalog-teched-2018/media/dm-preferences.png)
+
+12. Paste or type the following path into **Deployment > JDK directory**
+
+	```html
+	D:\SAP\JavaVM\NTAMD64\sapjvm_8.1.040\sapjvm_8
+	```
+
+13. Click **OK** to confirm the change
+
+	![](attachments/develop-a-smart-sap-catalog-teched-2018/media/jdk-directory.png)
+
+14. Click the *arrow* next to the **Run** button in the Desktop Modeler.
+
+15. Click **Run Locally**.
 
 	![](attachments/develop-a-smart-sap-catalog-teched-2018/media/image9.png)
 
-13. Click **Yes** to confirm that you want to create a database for the app.
+16. Click **Yes** to confirm that you want to create a database for the app.
 
 	![](attachments/develop-a-smart-sap-catalog-teched-2018/media/image10.png)
 
-14. Wait for the app to be started.
+17. Wait for the app to be started.
 
-15. Click **View** to view the app in a browser.
+18. Click **View** to view the app in a browser.
 
 	![](attachments/develop-a-smart-sap-catalog-teched-2018/media/image11.png)
 

@@ -84,29 +84,45 @@ Some of the app has been written already, so you need to import those pieces int
 
 	![](attachments/modify-a-mendix-questionnaire-for-sap-successFactors-teched-2018/media/image7.png)
 
-5.  Click the App Store icon (the shopping basket) in the Desktop Modeler.
+	Before you start, you need to make one configuration change to allow Mendix to run on your TechEd computer:
+
+5. Click the menu item **Edit > Preferences...**
+
+	![](attachments/modify-a-mendix-questionnaire-for-sap-successFactors-teched-2018/media/dm-preferences.png)
+
+6. Paste or type the following path into **Deployment > JDK directory**
+
+	```html
+	D:\SAP\JavaVM\NTAMD64\sapjvm_8.1.040\sapjvm_8
+	```
+
+7. Click **OK** to confirm the change
+
+	![](attachments/modify-a-mendix-questionnaire-for-sap-successFactors-teched-2018/media/jdk-directory.png)
+
+8.  Click the App Store icon (the shopping basket) in the Desktop Modeler.
 
 	![](attachments/modify-a-mendix-questionnaire-for-sap-successFactors-teched-2018/media/image8.png)
 
-6.  Enter *Questionnaire* in the search box and click the magnifying glass.
+9.  Enter *Questionnaire* in the search box and click the magnifying glass.
 
 	![](attachments/modify-a-mendix-questionnaire-for-sap-successFactors-teched-2018/media/image9.png)
 
-7.  Click **Read more**.
+10.  Click **Read more**.
 
-8.  Click **Download** to add the module to your project.
+11. Click **Download** to add the module to your project.
 
 	![](attachments/modify-a-mendix-questionnaire-for-sap-successFactors-teched-2018/media/image10.png)
 
-9.  Click **Import** to confirm that you want to import the module.
+12. Click **Import** to confirm that you want to import the module.
 
 	![](attachments/modify-a-mendix-questionnaire-for-sap-successFactors-teched-2018/media/image11.png)
 
-10.  Repeat steps 3 through 7 to find and download the **SAP Teched 2018 - SuccessFactors Employee** module.
+13. Repeat steps 3 through 7 to find and download the **SAP Teched 2018 - SuccessFactors Employee** module.
 
 	![](attachments/modify-a-mendix-questionnaire-for-sap-successFactors-teched-2018/media/image12.png)
 
-11.  You can see the two modules you have imported, along with other modules, by expanding the tree structure in the **Project Explorer**.
+14. You can see the two modules you have imported, along with other modules, by expanding the tree structure in the **Project Explorer**.
 
 	![](attachments/modify-a-mendix-questionnaire-for-sap-successFactors-teched-2018/media/image13.png)
 

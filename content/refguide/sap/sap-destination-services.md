@@ -164,6 +164,12 @@ SAP Destination Services does not support running on a local machine. Your app m
 
 If you want to deploy locally, during development or testing for example, you will need to have an endpoint which is accessible from your network and provide any credentials from within your app.
 
+### 6.4 Formatting URLs with a ServiceRoot in SAP OData Connector
+
+When you use SAP OData Connector actions, you often have to provide a string containing a URL or query. Without Destination Services this needs to contain the SERVICEROOT, that is the endpoint of the service being consumed.
+
+With Destination Services, you should not provide the SERVICEROOT. You should start the query with a slash and the COLLECTIONNAME. Note that this is also the case where the URL is obtained from the object metadata or *Deferred* attribute. See [SAP OData Connector](sap-odata-connector) for more details.
+
 ## 7	Troubleshooting
 
 ### 7.1	Failure to Get Destination

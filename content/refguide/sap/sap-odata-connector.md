@@ -88,9 +88,12 @@ Part of the data model for this sample data is:
 
 This domain model generally works in the same way as a Mendix domain model, with entities, attributes, and associations. However, there are two additions to support the SAP OData Connector:
 
-* Every object is based on an entity which is a specialization of the ComplexType, FunctionParameters, or OdataObject entity. The OdataObject entity adds a **meta_objectURI** string, which is the URI of the object and can be used in entity manipulation actions, and a
-**meta_etag** string that identifies a state of the object. This is used by the OData service when you try to change data to check if it has been changed since it was retrieved by your app.
+* Every object is based on an entity which is a specialization of the ComplexType, FunctionParameters, or OdataObject entity. The OdataObject entity adds a **meta_objectURI** string, which is the URI of the object and can be used in entity manipulation actions, and a **meta_etag** string that identifies a state of the object. This is used by the OData service when you try to change data to check if it has been changed since it was retrieved by your app.
 * Many objects have attributes which end in ...Deferred. These contain URIs which will return a list of objects of an entity type which is associated with the current object. For example: in the domain model above, the Task entity contains an attribute AttachmentsDeferred. This will contain a URI which can be used to return a list of TaskAttachments associated with the current Task object via the Attachments_Task_TaskAttachment association.
+
+{{% alert type="info" %}}
+If you are using *Destination Services* to identify the endpoint of your SAP OData Service, you will need to edit the strings from the  meta_objectURI and ...Deferred attributes as they will already contain an endpoint in addition to the object references.
+{{% /alert %}}
 
 #### 2.3.2 SAP OData Connector Domain Model<a name='ConnectorDM'></a>
 
@@ -466,13 +469,21 @@ When you are referencing an object, the format of the URL is:
 @SERVICEROOT + '/' + toString(COLLECTIONNAME) + '/' + OBJECTINSTANCE
 ```
 
-**@SERVICEROOT** is a constant which is created in the SAP Service Data Model and has a value which is the root URL of the OData service, for example: https://www.sapfioritrial.com/sap/opu/odata/sap/CRM_TASK
+**@SERVICEROOT** is a constant which is created in the SAP Service Data Model and has a value which is the root URL of the OData service, for example: https://www.sapfioritrial.com/sap/opu/odata/sap/CRM_TASK.
+
+{{% alert type="info" %}}
+If you are using a *Destination* configured by SAP Destination Services, then the @SERVICEROOT should be empty. In other words, the query should begin with the `'/'` before the COLLECTIONNAME. 
+{{% /alert %}}
 
 **COLLECTIONNAME** can be found in the enumeration EntitySetNames which lists all the collections in the SAP Service Data Model, for example: the collection Tasks will be shown as @SERVICEROOT.EntitySetNames.Tasks
 
 **OBJECTINSTANCE** is generally available as an attribute of an entity object.
 
 Alternatively, you can obtain the entire URL from attributes of an object. For example, the **meta_objectURI** attribute of an object is the full URL to the instance of the object which is held by the OData service.
+
+{{% alert type="warning" %}}
+If you are using a *Destination*, you will need to remove the SERVICEROOT part of the URL attribute and start with *'/' + COLLECTIONNAME*.
+{{% /alert %}}
 
 #### 4.1.6 Http method
 
@@ -530,6 +541,10 @@ Set this to _empty_ if it is not required.
 For example, Account is the parent entity of task via the Tasks_Account_Task association in the CRM_TASK domain model.
 
 ![](attachments/sap-odata-connector/taskaccounttask-sapodataconnector.png)
+
+{{% alert type="info" %}}
+If you are using *Destination Services* to identify the endpoint of your SAP OData Service, you will need to edit the values of the ...Deferred attributes as they will already contain an endpoint in addition to the object references.
+{{% /alert %}}
 
 {{% alert type="warning" %}}
 There is no data content validation on the Parent parameter. This means you will not get an error if you:

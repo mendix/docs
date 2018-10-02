@@ -156,7 +156,7 @@ This Create is not the same as the Mendix **Create Object** action. The SAP ODat
 * Input
 
   * Odata object (required) - an object which is a specialization of the OdataObject entity and corresponds to the OData Entity which is being created
-  * Destination – a string containing the name of the destination. This matches the name of the destination as set up in the SAP Cloud Platform Cockpit. If you are not using Destination Services, set it to *empty*.
+  * Destination – a string containing the name of the destination. This matches the name of the destination as set up in the SAP Cloud Platform Cockpit. If you are not using Destination Services, set it to *empty*
   * Query (required) - A URL which points to the Collection to which the object belongs. The Collection also identifies as an Entity Set in the OData service.
   * Request Parameters - This is used to override the default behavior of the action when responding to conditions such as timeouts and HTTP responses. To keep the standard behavior, set it to _empty_
 * Output
@@ -189,7 +189,7 @@ The Delete operation deletes an existing entity instance in the SAP back-end sys
 
 * Input
   * Odata object (required) - The Mendix representation of the object which you wish to delete
-  * Destination – a string containing the name of the destination. This matches the name of the destination as set up in the SAP Cloud Platform Cockpit. If you are not using Destination Services, set it to *empty*.
+  * Destination – a string containing the name of the destination. This matches the name of the destination as set up in the SAP Cloud Platform Cockpit. If you are not using Destination Services, set it to *empty*
   * Request Parameters - This is used to override the default behavior of the action when responding to conditions such as timeouts and HTTP responses. To keep the standard behavior, set it to _empty_
 * Output
   * Return type - Boolean
@@ -208,12 +208,12 @@ The service operations which are supported by the OData service are listed in th
  The Execute entry action allows you to invoke these service operations on the SAP back-end system. It returns an object from the OData service.
 
 * Input
-  * Destination – a string containing the name of the destination. This matches the name of the destination as set up in the SAP Cloud Platform Cockpit. If you are not using Destination Services, set it to *empty*.
-  * Url (required) - the URL of the service operation. This is generally SERVICEROOT/[function name]
+  * Response type (required) - the type of entity which represents the object which is returned
+  * Destination – a string containing the name of the destination. This matches the name of the destination as set up in the SAP Cloud Platform Cockpit. If you are not using Destination Services, set it to *empty*
+  * Url (required) - the URL of the service operation. This is generally */[function name]* preceded by the SERVICEROOT if Destination Services are not being used
   * Http method (required) - GET or POST: the method used to invoke the service operation. GET is usually used to retrieve data and POST is usually used to create data
   * Function parameters (required): Additional parameters which the service operation needs in order to retrieve, update, or create the correct data. The name of the relevant Function Parameters entity, imported into your app as part of the SAP service data model, will be [function name]Parameters. The attributes of this entity will indicate the parameters which are required by the service operation
   * Request Parameters - This is used to override the default behavior of the action when responding to conditions such as timeouts and HTTP responses. To keep the standard behavior, set it to _empty_
-  * Response type (required) - the type of entity which represents the object which is returned
 * Output
   * Return type - Object: an object which has the same type as the entity type which was passed as Response type
   * Variable - the name which you would like to give to the object which is returned by the OData service operation
@@ -223,12 +223,12 @@ The service operations which are supported by the OData service are listed in th
 This performs the same action as the Execute entry action, but this is used where the expected result from the service operation is a list, rather than a single item.
 
 * Input
-  * Destination – a string containing the name of the destination. This matches the name of the destination as set up in the SAP Cloud Platform Cockpit. If you are not using Destination Services, set it to *empty*.
+  * Response type (required) - the type of entity which represents the objects in the list which is returned
+  * Destination – a string containing the name of the destination. This matches the name of the destination as set up in the SAP Cloud Platform Cockpit. If you are not using Destination Services, set it to *empty*
   * Url (required) - the URL of the service operation
   * Http method (required) - GET or POST: the method used to invoke the service operation. GET is usually used to retrieve data and POST is usually used to create data
   * Function parameters (required): Additional parameters which the service operation needs in order to retrieve or create the correct data. The name of the relevant function parameters entity, imported into your app as part of the SAP service domain model, will be [function name]Parameters. The attributes of this entity will indicate the parameters which are required by the service operation
   * Request Parameters - This is used to override the default behavior of the action when responding to conditions such as timeouts and HTTP responses. To keep the standard behavior, set it to _empty_
-  * Response type (required) - the type of entity which represents the objects in the list which is returned
 * Output
   * Return type - List
   * Variable - the name which you would like to give to the list of objects which is returned by the OData service operation
@@ -238,9 +238,9 @@ This performs the same action as the Execute entry action, but this is used wher
 The Get Entry operation gets a single existing entity instance from the OData service.
 
 * Input
-  * Url (required) - The URL of the object to be retrieved
   * Response type (required) - the type of entity which represents the object which is returned
-  * Destination – a string containing the name of the destination. This matches the name of the destination as set up in the SAP Cloud Platform Cockpit. If you are not using Destination Services, set it to *empty*.  
+  * Destination – a string containing the name of the destination. This matches the name of the destination as set up in the SAP Cloud Platform Cockpit. If you are not using Destination Services, set it to *empty*  
+  * Url (required) - The URL of the object to be retrieved
   * Request Parameters - This is used to override the default behavior of the action in responding to conditions such as timeouts and HTTP responses. To keep the standard behavior, set it to _empty_
 * Output
   * Return type - Object: an object which has the same type as the entity type which was passed as Response type
@@ -260,9 +260,9 @@ This produces the GET request https://www.sapfioritrial.com/sap/opu/odata/sap/CR
 The Get List action gets a list of objects described by a type of entity in the domain model from the SAP OData service. This action uses filters (SQL queries) to control which objects are returned. The entity collection is described by an entity in the SAP service domain model which you have imported into your app.
 
 * Input
-  * Destination – a string containing the name of the destination. This matches the name of the destination as set up in the SAP Cloud Platform Cockpit. If you are not using Destination Services, set it to *empty*.
-  * Query (required) - the query which will return a list of entity instances from the OData service. See section [4.1.1 Query](#Query) for more information
   * Response type (required) - the type of entity which represents the objects which are returned
+  * Destination – a string containing the name of the destination. This matches the name of the destination as set up in the SAP Cloud Platform Cockpit. If you are not using Destination Services, set it to *empty*
+  * Query (required) - the query which will return a list of entity instances from the OData service. See section [4.1.1 Query](#Query) for more information
   * Request Parameters - This is used to override the default behavior of the action when responding to conditions such as timeouts and HTTP responses. To keep the standard behavior, set it to _empty_
   * Parent - If the Get List action returns a list of objects which all have a single parent object (an object which is linked as one parent to many objects of Response type) then you can pass the parent object here and Get List will make the associations. Set this to _empty_ if it is not required
   * Result info - This is an object of type ResultInfo where the number of items in the list is returned. Note that the query should include $inlinecount=allpages in order to return the total number of items in the list. Set this to _empty_ if it is not required
@@ -284,7 +284,7 @@ This action refreshes local data which is cached in objects within the Mendix do
 
 * Input
   * Odata object (required) - The Mendix representation of the object containing the 'dirty' data which you wish to refresh by retrieving it from SAP using the OData service
-  * Destination – a string containing the name of the destination. This matches the name of the destination as set up in the SAP Cloud Platform Cockpit. If you are not using Destination Services, set it to *empty*.
+  * Destination – a string containing the name of the destination. This matches the name of the destination as set up in the SAP Cloud Platform Cockpit. If you are not using Destination Services, set it to *empty*
   * Request Parameters - This is used to override the default behavior of the action when responding to conditions such as timeouts and HTTP responses. To keep the standard behavior, set it to _empty_
 * Output
   * Return type - Boolean
@@ -296,7 +296,7 @@ The Update operation changes the attributes of an existing entity instance in th
 
 * Input
   * Odata object (required) - The Mendix representation of the object containing the updated data which you wish to update.
-  * Destination – a string containing the name of the destination. This matches the name of the destination as set up in the SAP Cloud Platform Cockpit. If you are not using Destination Services, set it to *empty*.
+  * Destination – a string containing the name of the destination. This matches the name of the destination as set up in the SAP Cloud Platform Cockpit. If you are not using Destination Services, set it to *empty*
   * Request Parameters - This is used to override the default behavior of the action in responding to conditions such as timeouts and HTTP responses. To keep the standard behavior, set it to _empty_
 * Output
   * Return type - Boolean

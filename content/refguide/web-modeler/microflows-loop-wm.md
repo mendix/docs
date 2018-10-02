@@ -76,7 +76,7 @@ To start the use-case, do the following:
 
 Check out the video with the process of configuring the example above:
 
-<video controls src="attachments/wm-loop-example.mp4">VIDEO</video>
+<video controls src="attachments/microflows-loop-wm/wm-loop-example.mp4">VIDEO</video>
 
 As a result, we have a list of orders retrieved to our microflow, and a loop that iterates over this list. The activity inside the loop sets the status of each order to processed. 
 

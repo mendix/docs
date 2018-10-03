@@ -7,11 +7,11 @@ tags: ["web modeler", "page editor", "pages", "widgets"]
 
 ## 1 Introduction 
 
-Widgets are single user-interface elements that can be configured, for example, a drop-down menu or different kind of buttons. 
+Widgets are single user-interface elements that can be configured: for example, a drop-down menu or different kinds of buttons. 
 
 ![](attachments/page-editor-widgets-wm/wm-widgets-examples.png)
 
-Widgets in the Web Modeler differ by categories and by the origin. 
+Widgets in the Web Modeler are grouped by category and can be classified by their origin. 
 
 ## 2 Viewing Widgets in the Web Modeler
 
@@ -49,7 +49,7 @@ Widget categories are described in the table below:
 
 ## 4 Widgets by Origin {#widgets-by-origin}
 
-Widgets in the Web Modeler can be divided by origin described in the table below:
+Widgets in the Web Modeler can be divided by origin as shown in the table below:
 
 | Type              | Description                                                  | Origin                                                       |
 | ----------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -59,7 +59,7 @@ Widgets in the Web Modeler can be divided by origin described in the table below
 
 ## 5 Adding the App Store Widgets
 
-You can add App Store widgets to your app by downloading them directly in the **Widgets** tab in the Web Modeler. These widgets are a subset of all widgets available in the app store: only the ones that are approved for use in the Web Modeler can be downloaded by the user. You can also update them once the update is available. For more information on the widgets updating, see [App Settings in the Web Modeler](app-settings-wm). 
+You can add App Store widgets to your app by downloading them directly in the **Widgets** tab in the Web Modeler. These widgets are a subset of all widgets available in the app store: you can only download the ones that are approved for use in the Web Modeler. You can also update them if an update is available. 
 
 To add an App Store widget, do the following:
 
@@ -67,7 +67,7 @@ To add an App Store widget, do the following:
 
 2. Do one of the following: 
 
-   a. Find the category with the **View App Store widgets** option and click it.  <br />
+   a. Find a category with the **View App Store widgets** option and click it.  <br />
 
    ![](attachments/page-editor-widgets-wm/wm-view-app-store-widgets.png)
 
@@ -81,11 +81,7 @@ To add an App Store widget, do the following:
 
 The widget is now added to your project, you can simply drag and drop it to the page to use it. You can also view settings of this widget in the **App Settings**.  For more information, see [App Settings Overview in the Web Modeler](app-settings-wm). 
 
-{{% alert type="info" %}}
-
-Some App Store widgets are downloaded as a package consisting of several widgets, for example, when you download one chart widget, the whole package of charts is downloaded. 
-
-{{% /alert %}}
+For more information on managing widgets in your app, see [App Settings in the Web Modeler](app-settings-wm). 
 
 ## 6 Related Content
 

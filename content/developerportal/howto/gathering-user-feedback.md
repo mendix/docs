@@ -63,9 +63,11 @@ When a user is logged into the app, the **Feedback** button will appear on the r
 
 ![](attachments/collaborate/18580450.png)
 
-## 6 Processing Feedback in the Developer Portal
+## 6 Reviewing Feedback in the Developer Portal {#reviewing}
 
 Once you have received feedback, you and your team can process the feedback within the Developer Portal.
+
+### 6.1 Processing Feedback
 
 To process the feedback, follow these steps:
 
@@ -83,7 +85,7 @@ To process the feedback, follow these steps:
 
     Action | Description
     | --- | --- |
-    **Accept feedback** | Clicking this option signifies the feedback is valid and that you want to add a story to your backlog on the basis of the feedback (for more information, see [6.1 Adding a Feedback Story to Your Backlog](#6.1))
+    **Accept feedback** | Clicking this option signifies the feedback is valid and that you want to add a story to your backlog on the basis of the feedback (for more information, see [Adding a Feedback Story to Your Backlog](#adding) below)
     **Mark 'Under review'** | Notifies the user who submitted the feedback and your team that the item is under review.
     **Mark as handled** | Changes the status of the item from open to handled so that the item will not pollute your open items list.
     **Close feedback** | Closes the feedback item (for example, when it is already solved or a duplicate has already been accepted).
@@ -92,7 +94,7 @@ To process the feedback, follow these steps:
     **Move to app** | Moves the item to another app to which you have access.
     **Delete feedback** | Deletes the feedback.
 
-### 6.1 Adding a Feedback Story to Your Backlog<a name="6.1"></a>
+### 6.2 Adding a Feedback Story to Your Backlog {#adding}
 
 After clicking **Accept feedback**, you can create a story on the basis of the feedback item and add it to your backlog. To do that, follow these steps:
 

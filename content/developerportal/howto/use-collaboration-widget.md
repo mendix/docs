@@ -12,8 +12,6 @@ The new Mendix Collaboration Widget enables you to collaborate more easily and q
 
 ![](attachments/collab-widget/widget.png)
 
-**[TAKE NEW SCREENSHOT, NO RED BOX, JUST LABELS]**
-
 **This how-to will teach you how to do the following:**
 
 * Use the widget for leaving feedback on an app, editing an app, get a mobile preview of an app, and sharing an app

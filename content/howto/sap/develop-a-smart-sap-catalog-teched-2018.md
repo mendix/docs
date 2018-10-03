@@ -584,6 +584,8 @@ You will now add the ability to search the catalog by image.
 
 1. Click **Run Locally**.
 
+1. Click **OK** to confirm that you want the sync the database.
+
 1. Click **View** when the runtime has been started successfully.
 
 You can now see the changes to the app. There is an **Image** button which you can click to see the **Select Image** pop-up.
@@ -596,10 +598,8 @@ Now you need to use SAP Leonardo Machine Learning to make your app 'smart'.
 
 1.  Double-click the microflow **IVK_ClassifyProductImage** to open it.
 
-1. Drag an **SAP Leonardo machine learning (API Business Hub) > Product Image Classification** action into the microflow.
+1. Drag a **ClassifyProductFromImage** action into the microflow.
      
-     The *SAP Leonardo machine learning* widgets in the *API Business Hub* section are only available via the *SAP API Business Hub*. Other *SAP Leonardo machine learning* widgets are available both in the *SAP API Business Hub* and in the cloud.
-
 	![](attachments/develop-a-smart-sap-catalog-teched-2018/media/image75.png)
 
 1. Double-click the **Product Image Classification** action.
@@ -618,7 +618,7 @@ Now you need to use SAP Leonardo Machine Learning to make your app 'smart'.
 
 1. Select *Head* as the **Operation**. This selects just the first item in the list.
 
-1. Select *ProductClassifications (List of LeonardoMachineLearning.ProductClassification)* as the **List**.
+1. Select *ProductClassifications (List of LeonardoMachineLearning.ProductClassificationResponse)* as the **List**.
 
 1. Click **OK**.
 
@@ -632,7 +632,7 @@ Now you need to use SAP Leonardo Machine Learning to make your app 'smart'.
 
 1. Click **Select...** for **Association**
 
-1. Select **Variables > ProductClassification (LeonardoMachineLearning.ProductClassification) > ProductImageClassiciationResults_ProductClassification (List of LeonardoMachineLearning.ProductImageClassificationResults)**.
+1. Select **Variables > ProductClassificationResponse (LeonardoMachineLearning.ProductClassificationResponse) > ImageObject_ProductClassificationResponse (List of LeonardoMachineLearning.Result)**.
 
 1. Click **Select**.
 
@@ -646,7 +646,7 @@ Now you need to use SAP Leonardo Machine Learning to make your app 'smart'.
 
 1. Select *Head* as the **Operation**.
 
-1. Select *ProductImageClassificationResultsList (List of LeonardoMachineLearning.ProductImageClassificationResults)* as the **List**.
+1. Select *ResultList (List of LeonardoMachineLearning.Result)* as the **List**.
 
 1. Enter *Results* as the **Name**.
 

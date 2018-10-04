@@ -33,19 +33,19 @@ Widgets of the Web Modeler are divided into categories that you can see when you
 
 Widget categories are described in the table below:
 
-| Widget Category                                         | Description                                                  |
-| ------------------------------------------------------- | ------------------------------------------------------------ |
-| [Data Containers](page-editor-data-view-list-view-wm)   | Contains data view (the starting point for showing the contents of one object ), and list view (the starting point for showing the contents of list of objects). For more information, see [Data View and List View Properties in the Web Modeler](page-editor-data-view-list-view-wm). |
-| [Input Elements](page-editor-widgets-input-elements-wm) | Contains different elements that can be used for inputting data. For more information, see [Input Element Widgets in the Web Modeler](page-editor-widgets-input-elements-wm). |
-| [Images](page-editor-widgets-images-wm)                 | Contains widgets that are used to display for images. For more information, see [Image Widgets in the Web Modeler](page-editor-widgets-images-wm). |
-| [Typography](page-editor-widgets-typography-wm)         | Contains widgets that can used for placing a text on a page. For more information, see [Typography Widgets in the Web Modeler](page-editor-widgets-typography-wm). |
-| [Buttons](page-editor-widgets-buttons-wm)               | Contains a variety of buttons for placing on a page. For more information, see [Button Widgets in the Web Modeler](page-editor-widgets-buttons-wm). |
-| [Layouts](page-editor-widgets-layouts-wm)               | Contains layouts used for placing the elements. For more information, see [Layout Widgets in the Web Modeler](page-editor-widgets-layouts-wm). |
-| [Menus](../menu-widgets)                                | Contains widgets used for creating a menu. These widgets can be currently configured only in the Desktop Modeler. For more information, see [Menu Widgets](../menu-widgets) in the *Desktop Modeler* category. |
-| Display                                                 | Contains widgets suitable for displaying changing elements on a page, e.g. a map, or a progress bar. This category consist of the App Store widgets. For more information, see section [4 Widgets by Origin](#widgets-by-origin). |
-| Charts                                                  | Contains different charts. This category consist of the App Store widgets. For more information, see section [4 Widgets by Origin](#widgets-by-origin). |
-| List view Controls                                      | Contains controls for the list view. This category consist of the App Store widgets. For more information, see section [4 Widgets by Origin](#widgets-by-origin). |
-| Add-ons                                                 | Contains all custom widgets previously installed in the app. If widgets cannot be matched to the App Store profile they will be shown in the add-ones. |
+| Widget Category                                         | Contains                                                     | Documented here                                              |
+| ------------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| [Data Containers](page-editor-data-view-list-view-wm)   | ways of displaying data from a single object, or list of objects. | [Data View and List View Properties in the Web Modeler](page-editor-data-view-list-view-wm) |
+| [Input Elements](page-editor-widgets-input-elements-wm) | elements that can be used for inputting data.                | [Input Element Widgets in the Web Modeler](page-editor-widgets-input-elements-wm) |
+| [Images](page-editor-widgets-images-wm)                 | image display widgets.                                       | [Image Widgets in the Web Modeler](page-editor-widgets-images-wm) |
+| [Typography](page-editor-widgets-typography-wm)         | text display widgets.                                        | [Typography Widgets in the Web Modeler](page-editor-widgets-typography-wm) |
+| [Buttons](page-editor-widgets-buttons-wm)               | user interaction buttons.                                    | [Button Widgets in the Web Modeler](page-editor-widgets-buttons-wm) |
+| [Layouts](page-editor-widgets-layouts-wm)               | layouts used for controlling the placing widgets.            | [Layout Widgets in the Web Modeler](page-editor-widgets-layouts-wm) |
+| [Menus](../menu-widgets)                                | menu creation widgets. Currently, these widgets can be configured only in the Desktop Modeler. | [Menu Widgets](../menu-widgets) in the *Desktop Modeler* category |
+| Display                                                 | widgets which display changing elements on a page, e.g. a map, or a progress bar. This category consists of the App Store widgets. | section [4 Widgets by Origin](#widgets-by-origin)            |
+| Charts                                                  | different charts. This category consist of the App Store widgets. | section [4 Widgets by Origin](#widgets-by-origin)            |
+| List view Controls                                      | controls for the list view. This category consist of the App Store widgets. | section [4 Widgets by Origin](#widgets-by-origin)            |
+| Add-ons                                                 | all custom widgets previously installed in the app. If widgets cannot be matched to the App Store profile they will be shown in the add-ones. |                                                              |
 
 ## 4 Widgets by Origin {#widgets-by-origin}
 
@@ -65,15 +65,15 @@ To add an App Store widget, do the following:
 
 1. Open the **Widgets** tab.
 
-2. Do one of the following: 
+2.  Do one of the following: <br />
 
-   a. Find a category with the **View App Store widgets** option and click it.  <br />
+    a. Find a category with the **View App Store widgets** option and click it.  <br />
 
-   ![](attachments/page-editor-widgets-wm/wm-view-app-store-widgets.png)
+    ![](attachments/page-editor-widgets-wm/wm-view-app-store-widgets.png)<br />
 
-   b.  Start typing the name of the category or of a specific widget in the **Search** field. 
+    b.  Start typing the name of the category or of a specific widget in the **Search** field. <br />
 
-   ![](attachments/page-editor-widgets-wm/wm-slider.png) 
+    ![](attachments/page-editor-widgets-wm/wm-slider.png) 
 
 3.  Click the cloud icon to download the widget and add it to your project.
 

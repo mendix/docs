@@ -48,7 +48,7 @@ To view the Company Contact, follow these steps:
 3. Click **Show Profile**.
 4.  Below your name, click your the name of your company:
 
-    ![](attachments/profile/my-profile.jpg)
+    ![](attachments/mendix-profile/my-profile.jpg)
  
 5.  Below **Contact**, you will see the Company Contact:
 
@@ -148,6 +148,6 @@ For more information, see [Settings](/developerportal/settings) and [Security â€
 * [How to Deactivate and Activate Users](/developerportal/howto/deactivate-users)
 * [How to Delete, Deactivate, and Activate Apps](/developerportal/howto/delete-apps)
 * [How to Manage Company Roles and App Roles](/developerportal/howto/change-roles)
-* [Mendix Profile](mendixprofile)
+* [Mendix Profile](mendix-profile)
 * [Settings](/developerportal/settings)
 * [Technical Contact](technical-contact)

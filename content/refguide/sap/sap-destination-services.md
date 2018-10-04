@@ -180,7 +180,7 @@ If Get Destination fails, check the following:
 *	The user accessing the Mendix App is also authenticated on the service you are trying to use. The usernames (email addresses) must be the same.
 *	That the destination has been set up correctly in the SAP Cloud Platform Cockpit.
 
-Remember that Destination Services will only work when deployed to SAP Cloud Platform.
+Remember that Destination Services will only work when deployed to SAP Cloud Platform, with users who are authenticated using an Identity Provider configured through SAP and XSUAA.
 
 ### 7.2	Unexpected Results in App
 

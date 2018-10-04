@@ -12,6 +12,8 @@ The new Mendix Collaboration Widget enables you to collaborate more easily and q
 
 ![](attachments/collab-widget/widget.png)
 
+**[Mobile view]**
+
 **This how-to will teach you how to do the following:**
 
 * Use the widget for leaving feedback on an app, editing an app, get a mobile preview of an app, and sharing an app
@@ -25,7 +27,9 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 Leaving Feedback on an App
 
-When you click the **Feedback** icon, the platform checks if you are signed in first. If you are already signed in, you will be in **Feedback Mode** right away. If you are not signed in, to enter the in **Feedback Mode** you will need to either sign in (although you do not have to enter your name on the feedback) **[VERIFY: ACCURATE, HOW WORKS?]** or continue as a guest.
+When you click the **Feedback** icon, the platform checks if you are signed in first. If you are already signed in, you will be in **Feedback Mode** right away. If you are not signed in, to enter the in **Feedback Mode** you will need to either sign in or continue as a guest.
+
+**[New screenshot, because no sign in available there]**
 
 ![](attachments/collab-widget/feedback-mode.png)
 
@@ -37,7 +41,7 @@ And voila! Your feedback will go straight to the **Feedback** page of your app p
 
 ## 4 Editing
 
-**[WHAT TO DESCRIBE HERE? NO FLOW IN INVISION]**
+This will take you to the page in the Web Modeler. If you have the permissions to edit the app, you can start editing! 
 
 ## 5 Phone Icon
 
@@ -49,17 +53,15 @@ You can gain this mobile view by installing the [Mendix mobile app](https://play
 
 For more information, see [Getting the Mendix Mobile App](/refguide/getting-the-mendix-app) and [Developing Hybrid Mobile Apps](/refguide/developing-hybrid-mobile-apps).
 
-**[NEED TO DOCUMENT SHARING VIA MOBILE APP - IS THAT PART OF YOUR RELEASE? https://mendix.invisionapp.com/share/R4O41LO83GQ#/screens/316047631]**
-
 ## 6 Sharing
 
-When you click the **Share**icon on the widget, a pop-up window will appear for sharing your app via **Email**, **URL**, or **Text Message**:
+When you click the **Share** icon on the widget, a pop-up window will appear for sharing your app via **Email**, **URL**, or **Text Message**:
+
+**[First release will only have email]**
 
 ![](attachments/collab-widget/share.png)
 
 You can add as many email addresses as you like and write a personal note to be included with your emails.
-
-**[HOW DOES IT WORK SHARING VIA URL? TEXT MESSAGE?]**
 
 ## 7 Configuring the Collaboration Widget
 

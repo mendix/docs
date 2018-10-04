@@ -1,37 +1,26 @@
 ---
-title: "Set Up Your Community Profile"
-category: "Tools"
+title: "Mendix Profile"
+category: "General"
 menu_order: 10
-tags: ["community", "profile", "invite", "review", "achievement"]
+description: "This page describes the personal profile page of the Developer Portal."
+tags: ["profile", "Developer Portal", "settings", "badge," "point", "connection", "invite", "leaderboard", "edit"]
 ---
 
 ## 1 Introduction
 
-So you’ve decided to check out your new Mendix Community Profile page, but you've found it suspiciously empty. Don’t worry, we're here to help you set up your profile so you can show the world what a real Mendix developer looks like!
+**[VERIFY NAMING: Profile, MxProfile, Mendix Profile, Community Profile, Developer Profile]**
 
-**This how-to will teach you how to do the following:**
+Your Mendix Profile is your main point of contact with members of the Mendix community. It is the page that displays your activities on the Mendix Platform as well as details about your life and background. There are plenty of ways to get more involved with the Mendix community, and your profile is a great starting point!
 
-* Set up your Community Profile
-* Make your profile public
-* Merge your accounts
+To access your Profile, hover over your picture on the right side of the Developer Portal navigation bar and select **My Profile** from the context menu.
 
-## 2 Prerequisites
+**[VERIFY LINK NAME CHANGE - MY PROFILE?]**
 
-Before starting this how-to, make sure you have completed the following prerequisites:
+## 2 Overview Tab
 
-* Sign up for Mendix [here](https://www.mendix.com/try-now/)
+**[REVIEW BELOW]**
 
-## 3 My Profile
-
-**[ADJUST HEADINGS VIA FINAL CONTENT]**
-
-To access your [Community Profile](https://developer.mendixcloud.com/link/profile), hover over your picture on the right side of the navigation bar and select **My Dashboard** from the context menu.
-
-**[LINK NAME ABOVE GOING TO  CHANGE?]**
-
-### 3.1 Overview
-
-Your profile will open to the **Overview** tab. In the header of your profile, you see your personal information (which is also presented on the **Personal Info** card). These details can be easily edited to present accurate personal details, project roles, and skills you have gained. Click the **Settings** cog icon to edit your job function and biography. The header also presents your location, number of [connections](#connections), Mendix points, [credits ](#credits), and [badges](#badges).
+Your profile will open to the **Overview** tab. In the header of your profile, you see your personal information (which is also presented on the **Personal Info** card). These details can be easily edited to present accurate personal details, project roles, and skills you have gained. Click the **Settings** cog icon to edit your profile. This will take you to the edit mode, where you can edit your job function, biography, skills, industries, social media accounts, password, API keys. The header also presents your location, number of [connections](#connections), Mendix points, Mendix level, [credits ](#credits), and [badges](#badges).
 
 Below the header, the first card you see presents your **Stats**. The chart and its legend display your points divided between various Mendix products and activities. For details on gaining points, see the [Points System FAQ](https://developer.mendixcloud.com/link/faq). When analyzing your points, be sure to also check out the [Leaderboard](#leaderboard) card on this tab to see the top Mendix community contributors!
 
@@ -39,50 +28,50 @@ Below the header, the first card you see presents your **Stats**. The chart and 
 
 The tabs of your Community Profile are described below.
 
-### 3.2 Badges {#badges}
+## 3 Badges {#badges}
 
 In addition to the **Stats** chart, on the **Overview** tab you can gain an overview of your **Badges**, which represent your achievements and progress on the Mendix Platform. You can see your **Badges in Progress** as well as **Next Badges**. The badges are color-coded based on their rarity, from green (least rare), to blue, purple, and orange (most rare). You can see all of your badges on the **Badges** tab of your profile. And for all the details on the badges—which will help you determine which next badges you can work towards—check out the [Badge Overview](https://developer.mendixcloud.com/link/badges).
 
 ![](attachments/how-to-set-up-your-profile/badges.png)
 
-### 3.3 Challenges
+## 4 Challenges
 
-The **Challenge** card lists activities you can complete on the Mendix Platform to gain various Mendix badges and credits. The platform suggests the best order for your challenges, but you can complete these activities in any order you like. The activities you complete and badges you gain are pushed to the top of the card, so you can see what you still have to do. Once you complete a challenge, you get a **Challenge** badge. **[STILL ACCURATE?]** 
+The **Challenge** card presents a featured challenge you can complete on the Mendix Platform to gain credits. Once you complete a challenge, you can claim the credits and use them in the MxShop.
 
-There is also a featured challenge on your profile. The featured achievement presents a [multi-level badge](https://developer.mendixcloud.com/link/badges) you can strive to win by working on the Mendix Platform and completing certain tasks. The header will always feature the next badge level for you to work towards. **[STILL EXISTS?]**
+**[UPDATE SCREENSHOT]**
 
 ![](attachments/how-to-set-up-your-profile/challenges.png)
 
-<a name="credits"></a>Clicking **View all** will bring you to the **Challenges** tab of your profile, which gives you more details on your challenges and credits. For each challenge, a certain amount of credits can be gained, with which you can claim rewards.
+<a name="credits"></a>Clicking **View all** will bring you to the **Challenges** tab of your profile, which gives you more details on your challenges and credits. You can complete these activities in any order you like.
 
 ![](attachments/how-to-set-up-your-profile/challenge-example.png)
 
-In the **Prizes you can claim** section, you can see a list of rewards you have gained by completing challenges and gaining credits. Click **Claim Reward** **[ACCURATE?]** to claim your prize. Click **View Shop** to go to the Mendix shop and see all the sweet Mendix swag on offer!
+Click **Claim Credits** **[VERIFY BUTTON NAME, GET NEW SCREENSHOT]** to claim your credits.
 
-Completing your challenges and gaining badges is a great way to stay engaged with the Mendix community. And there are always new prizes available!
+Completing your challenges and gaining credits is a great way to stay engaged with the Mendix community. And there are always new items available in the MxShop!
 
-### 3.4 Connections {#connections}
+## 5 Connections {#connections}
 
-One of the greatest strengths of Mendix is our awesome developers community, and the **Connections** card is the perfect place to start networking with fellow developers and Mendixites. When you are invited by a Mendixite to connect, you can check out their profile and make a decision to accept or ignore the invitation. **[IGNORE OR REJECT?]**  You can also see a list of people you may know so that you can add further connections to your profile.
+One of the greatest strengths of Mendix is our awesome developers community, and the **Connections** card is the perfect place to start networking with fellow developers and Mendixites. When you are invited by a Mendixite to connect, you can check out their profile and make a decision to accept or ignore the invitation. You can also see a list of people you may know so that you can add further connections to your profile.
+
+To connect with someone, click the plus icon.
+
+**[DOCUMENT SENDING AN INVITE]**
 
 ![](attachments/how-to-set-up-your-profile/connections.png)
 
-Clicking **View All** on the card will bring you to the **Connections** tab. On this tab, you can invite friends and colleagues to Mendix in two ways:
+Clicking **View All** on the card will bring you to the **Connections** tab of your profile. On this tab, you can invite friends and colleagues to Mendix in two ways:
 
 * **Share URL** – copy the personalized invite link and share it on your personal website, blog, and social media channels, or share it directly via specific social media
 * **Send invite** – send someone a Mendix invite by entering their email address and clicking **Send invite**
-
-**[STILL ACCURATE BELOW, OR HOW DOES THIS WORK NOW?]**
-
-After you click **Invite Friends**, a pop-up window titled **Get your free t-shirt** appears. There are two tabs available here. On the **Share URL** tab, you can copy the personal invite link that is provided and then share it on your personal website, blog, and social media channels to invite more people to Mendix. On the **Send invite** tab, you can send someone a Mendix invite by entering their email address and clicking **Send invite**. 
 
 ![](attachments/how-to-set-up-your-profile/referral.png)
 
 You will earn some Mendix swag with five successful invites!
 
-**[BELOW STILL NECESSARY?]**
+**[VERIFY HOW BELOW IS BUILT]**
 
-After you have invited someone to Mendix, click **Invite Friends / View Status** to see their name and status listed at the bottom of the pop-up window. Their status is determined via these steps:
+After you have invited someone to Mendix, click **View Status** to see their name and status listed at the bottom of the card. Their status is determined via these steps:
 
 1. If you invited them via email, they will first get the **Invited** status.
 2. When they click **Sign up for Mendix** and receive a confirmation email, they will get the **Confirmation e-mail sent** status.
@@ -90,23 +79,122 @@ After you have invited someone to Mendix, click **Invite Friends / View Status**
 
 Once five of your referred users reach the **Successful** status, you will see the **Claim your t-shirt** link on your dashboard. Click this to fill in some details and receive your awesome Mendix t-shirt. Yay!
 
-{{% alert type="info" %}}
+## 6 Leaderboard {#leaderboard}
 
-One more thing about Mendix invites – when you invite someone and they sign up for Mendix, they will receive a voucher for the [Mendix Rapid Developer Certification Exam](https://gettingstarted.mendixcloud.com/link/certification/rapid) that is valid for six weeks. So encourage your friends to try something new and get certified by Mendix!
+This card on your profile presents a selection of Mendix developers with the highest points.
 
-{{% /alert %}} 
-
-### 3.5 Leaderboard {#leaderboard}
-
-This card presents a selection **[WHICH EXACTLY?]** of the leading Mendix developers by points.
+**[UPDATE SCREENSHOT]**
 
 ![](attachments/how-to-set-up-your-profile/leaderboard.png)
 
-Clicking **VIew all** takes you to the **Leaderboards** page, which presents all the boards available for viewing Mendix Platform user activity: **Top Overall**, **Top Forum**, **Top App Store**, **Top Platform**, **Top Community**, and **Top Learning**.
+Clicking **View all** takes you to the **Leaderboards** page, which presents all the boards available for viewing Mendix Platform user activity: **Top Overall**, **Top Forum**, **Top App Store**, **Top Platform**, **Top Community**, and **Top Learning**.
 
-For details on how to gain points and climb the leaderboards, see the [Points System FAQ](https://developer.mendixcloud.com/link/faq).
+To earn points and climb the leaderboards, start performing different activities in the Mendix community. For example, let's say you have some time to spare while your app is deploying. You get a cup of coffee and check out the [Mendix Forum](http://forum.mendix.com). One questions pops out because you came across a similar problem a few weeks back. You decide to help the community member and post an answer to their question. Not long after, the author marks your answer as accepted. Boom! 15 points right there.
 
-### 3.5 Portfolio
+Check out the tables below which describe how to earn points.
+
+**[NEED MAX POINTS PER DAY?]**
+
+### 6.1 Forum Points
+
+| Activity                                    | Points | Max. Points per Day |
+| ------------------------------------------- | ------ | ------------------- |
+| Have your answer marked as accepted         | 15     | n/a                 |
+| Receive an upvote                           | 10     | 50                  |
+| Mark an answer on your question as accepted | 2      |                     |
+| Downvote someone                            | -1     |                     |
+| Receive a downvote                          | -2     |                     |
+
+### 6.2 App Store Points
+
+| Activity                           | Points | Max. Points per Day |
+| ---------------------------------- | ------ | ------------------- |
+| Published an app                   | 50     | n/a                 |
+| Published a new app version        | 25     | n/a                 |
+| App review added                   | 5      | n/a                 |
+| Download the Modeler               | 5      | 5                   |
+| Download an app from the App Store | 1      | 5                   |
+
+### 6.3 Platform Points
+
+| Activity                                   | Points | Max. Points per Day |
+| ------------------------------------------ | ------ | ------------------- |
+| First member of the company                | 25     | n/a                 |
+| Upload to Model Share                      | 10     | 10                  |
+| Send an app invite                         | 10     | 50                  |
+| Download a microflow from Model Share      | 5      | 5                   |
+| Send a Platform invite                     | 5      | 50                  |
+| Create a project                           | 5      | 5                   |
+| Send in a feedback item                    | 2      | 10                  |
+| Have your feedback item marked as accepted | 2      | 10                  |
+| Commit to the Team Server                  | 2      | 10                  |
+| Send a project invite                      | 2      | 20                  |
+| Create a user story                        | 1      | 20                  |
+| Post a message on the Buzz                 | 1      | 10                  |
+| Deploy to licensed node                    | 1      | 5                   |
+| Deploy to sandbox                          | 1      |                     |
+
+### 6.4 Community Points
+
+| Activity                               | Points | Max. per Day |
+| -------------------------------------- | ------ | ------------ |
+| Mendix Hackathon Winner                | 300    | n/a          |
+| Reached MVP status                     | 300    | n/a          |
+| Mendix Hackathon Runner-Up             | 150    | n/a          |
+| Meetup Organized                       | 100    | n/a          |
+| Complete Community Profile             | 50     | n/a          |
+| Make Community Profile public          | 50     | n/a          |
+| Add a review of Mendix to your profile | 50     | n/a          |
+| Attended Mendix Hackathon              | 50     | n/a          |
+| Successfully referred a friend         | 25     | n/a          |
+| Attended Mendix World 2016             | 25     | n/a          |
+| Meetup Attended                        | 25     | n/a          |
+| GitHub pull request merged             | 15     | n/a          |
+| Invite a friend                        | 5      | 50           |
+| A user signed up via your referral URL | 5      | 50           |
+
+{{% alert type="info" %}}
+
+In order to receive Mendix points for your contributions to Mendix GitHub repositories (for example, [mendix / docs](https://github.com/mendix/docs)), you are required to authorize the connection to your GitHub profile. For more information on gaining Mendix points, see the [Points System FAQ](https://developer.mendixcloud.com/link/faq) and [How to Contribute to the Mendix Documentation](../documentation/contribute-to-the-mendix-documentation#GainingMendixPoints).
+
+{{% /alert %}}
+
+### 6.5 Learning Points
+
+| Activity                                           | Points | Max. per Day |
+| -------------------------------------------------- | ------ | ------------ |
+| Pass the Expert Developer exam                     | 100    | n/a          |
+| Pass the Advanced Developer exam                   | 50     | n/a          |
+| Presentation given                                 | 25     | n/a          |
+| Write a Blogpost                                   | 25     | n/a          |
+| Pass the Rapid Developer Exam                      | 25     | n/a          |
+| Complete an online course on Getting Started       | 25     | n/a          |
+| Made a large contribution to the documentation     | 15     | n/a          |
+| Attend a Webinar                                   | 10     | n/a          |
+| Contribute to the Mendix Documentation             | 10     | n/a          |
+| Attend the classroom Advanced Developer course     | 10     | n/a          |
+| Attend the classroom Rapid Developer Course        | 10     | n/a          |
+| Made a small contribution to the documentation     | 5      | n/a          |
+| Mark a lecture as completed in the Getting Started | 1      | n/a          |
+
+### 6.6 Levels
+
+When you earn enough points, you gain a level:
+
+| Level | Points Needed |
+| ----- | ------------- |
+| 1     | 100           |
+| 2     | 500           |
+| 3     | 1000          |
+| 4     | 2500          |
+| 5     | 5000          |
+| 6     | 8500          |
+| 7     | 13000         |
+| 8     | 18500         |
+| 9     | 25000         |
+| 10    | 32500         |
+
+## 7 Portfolio
 
 The **Portfolio** card presents a selection of Mendix app projects you have worked on. Click the project name to see more details about it (including a description of the app, business need, solution, results, and collaborators), or click **View all projects** to be taken to the  **Portfolio** tab, which presents a complete view of all your projects. 
 
@@ -116,89 +204,110 @@ To add a project to your portfolio, click **Add Project**, which will open the p
 
 ![](attachments/how-to-set-up-your-profile/add-project.png)
 
-If you do not want to publish a project right away, click **Save as Draft** in the project editor to finish it later. The project draft will be visible only to you in your **Portfolio** tab and available for further editing.
+If you cannot finish your project or do not want to publish it right away, click **Save as Draft** in the project editor to finish it later. The project draft will be visible only to you in your **Portfolio** tab and available for further editing.
 
-**[WHAT HAPPENS IF YOU TRY TO SAVE/PUBLISH A PROJECT WITH EMPTY REQUIRED FIELDS? SAVES AS DRAFT? IF SO, ADD  NOTE]**
+## 8 Activity & Editing Your Profile
 
-{{% alert type="warning" %}}
-All projects published before October 16, 2017 will be in the **Draft** status in the edit mode. To improve the quality of the projects and the design of the Community Profile, we have new required fields. Please fill in the empty required fields to publish your project again.
-{{% /alert %}}
+On the **Activity** tab, you can see a list of the most important public events for which you have gained Mendix points.
 
-**[ACCURATE]**
+This tab also has a sidebar menu that takes you to other parts of your profile available for editing:
 
-### 3.6 Activity
+* **Profile**
+* **Latest Messages**
+* **Documents**
+* **Feedback**
+* **Team Server**
+* **API Keys**
+* **Pending Invites**
 
-This tab presents all of your latest activity.
+### 8.1 Profile Menu Item
 
-**[WHAT SHOULD GO HERE? NECESSARY?]**
+**[ALL INFO IN THESE PARTS COPIED FROM CURRENT Mendix Profile DOC - VERIFY NAMING]**
 
-# OLD
+In this tab, you can view and edit the following information:
 
-**[SECTIONS BELOW TO BE USED?]**
+* Full name
+* Email
+* Email notifications
+* Date of birth
+* Department
+* Birthday
+* Phone number
+* Email
+* OpenID – an identifier generated by Mendix to uniquely identify a user 
+* Job title
+* Department
+* Location
+* Country
+* Phone number
+* Website URL
+* Twitter name
+* LinkedIn URL
+* Skype name
 
-### Writing User Reviews of Mendix
+#### 8.1.1 Changing Your Password
 
-Once you start using Mendix regularly and are familiar with all the capabilities of the platform, you can write user reviews on [Gartner Peer Insights](https://www.gartner.com/reviews/market/mobile-application-development-platforms/vendor/mendix/product/mendix-platfor), [TrustRadius](https://www.trustradius.com/products/mendix/reviews), and [G2 Crowd](https://www.g2crowd.com/products/mendix/reviews). This is another way for you to earn Mendix swag!
+You can change your password on this tab. By default, you are requested to change your password every 90 days. Only a Company Admin is allowed to change the expiration period.
 
-{{% alert type="warning" %}}
-There is no opportunity for Mendix partners to leave reviews on Gartner Peer Insights due to their policy.
-{{% /alert %}}
+These are the password requirements:
 
-To write a user review and earn a fashionable pair of Mendix socks, follow these steps:
+* At least eight characters long
+* Constructed with at least one of the following:
+	* Upper-case letter
+	* Lower-case letter
+	* Number
+	* Special character (such as ! + @)
 
-1. Click **Write Review** under **Get your free socks** on your dashboard.
-2.  On the pop-up window, click the link to the software review website next to **Write your review here**:
-3. Write and save your user review on the website.
-4. Copy the URL to your review, paste it in the field on the pop-up window, and click **Submit Review**. Please note that you cannot submit a link to a review that has already been written and submitted.
+### 8.2 Latest Messages
 
-The submitted review is then verified by Mendix. You can check the status of your review by clicking **Write Review** and looking at the bottom of the pop-up window:
-* **Pending** – Mendix is still verifying the review
-*  **Successful** – the review has been verified and is published, so you can claim your swag!
+In this tab, you will get an overview of all the notifications from the Buzz of which you are a part. For example, when your colleague has done the following:
 
-Once your review has been verified as successful, you will see the **Claim your socks** link on your dashboard. Click this to fill in some details and receive your nice warm pair of Mendix socks!
+* Created an app, sprint, or story
+* Added a file or comment
+* Joined a new app team
 
-{{% alert type="info" %}}
-If your review has been declined, you can write a new one and submit it.
-{{% /alert %}}
+### 8.3 Documents
 
-{{% alert type="info" %}}
-You can only earn a pair of socks for your first Mendix user review. Subsequent reviews will still earn you Mendix points.
-{{% /alert %}}
+In this tab, you will get an overview of all the documents that you have shared within different apps in the Developer Portal.
 
-### Editing Your Public Profile
+### 8.4 Feedback
 
-To start editing your Community Profile, click the **My Public Profile** tab. This is the main public page of your profile with your Mendix badges, Mendix points, personal **Summary**, **Industry Experience**, **Skills**, **Project Roles**, **Activity**, **Projects**, and more.
+In this tab, you can view your the feedback you provided on the following:
 
-Click **Edit Profile** to go into edit mode:
+* Apps of which you are a team member
+* Your company’s apps of which you are not a team member (this is feedback you will not have permission to manage)
+* External Mendix apps (this is feedback you will not have permission to manage)
 
-To edit a specific field on your profile, click this icon:
+For more information on feedback, see the [Reviewing Feedback in the Developer Portal](gathering-user-feedback#reviewing) section of *How to Use the Mendix Feedback Widget*.
 
-In the header of your profile, you can edit the following details:
+### 8.5 Team Server
 
-* **Name**
-* **Function**
-* **Location**
-* **Country**
-* Whether you are looking for a **job**, a **project**, both, or neither
-*  Your social media links (GitHub, Twitter, LinkedIn, and Skype)
+Changes made through the Desktop Modeler are stored in the Mendix Team Server. This tab provides an overview of the revisions you have committed.
 
-{{% alert type="info" %}}
+### 8.6 API Keys
 
-<a name="github"></a>In order to receive Mendix points for your contributions to Mendix GitHub repositories (for example, [mendix / docs](https://github.com/mendix/docs)), you are required to authorize the connection to your GitHub profile. For more information on gaining Mendix points, see the [Points System FAQ](https://developer.mendixcloud.com/link/faq) and [How to Contribute to the Mendix Documentation](../documentation/contribute-to-the-mendix-documentation#GainingMendixPoints).
+In this tab, you can view and create API keys that can be used by external applications to connect to the APIs of the Developer Portal on behalf of your user account. These keys allow you to execute operations (or have them executed on your behalf) that require authentication but for which you do not want to pass your actual password. An example of this is to use an API key to perform scripted operations on your application model with the Platform SDK.
 
-{{% /alert %}}
+For more information, see Mendix Platform SDK.
 
-In the body of your profile, you can edit the following elements:
+### 8.7 Pending Invites
 
-* **Summary**
-* **Industry Experience**
-* **Skills**
-* **Reviews** – URLs of the reviews of Mendix you have written
-    * Links to these reviews will not appear on your public profile, but writing one review is required to make your profile 100% complete
-    * For details on writing reviews of Mendix, see section [3.2 Writing Reviews of Mendix](#review)
-* **Projects** – for details on adding a project, see section [5 Adding a Project](#project)
+In this tab, you can view your sent and received invitations.
 
-Be sure to complete the following items, which are necessary to make your Community Profile public:
+There are two types of invitations:
+
+* Project invitation – an invitation to join the development team to work on an app
+* App invitation – an invitation to join the app as a user
+
+### 8.8 Advanced
+
+**[WHAT FROM ABOVE GOES HERE?]**
+
+#### 8.8.1 Making Your Profile Public
+
+If you have started editing your profile but it is not yet visible to other Mendix community members, syou will see a banner inviting you to make it public at the top of your profile. You can make it public by clicking **Make this profile public** under **Profile Visibility** on this tab.
+
+Be sure to complete the following items, which are necessary to make your Profile public:
 
 * Add an avatar
 * Enter a **Function**
@@ -208,35 +317,37 @@ Be sure to complete the following items, which are necessary to make your Commun
 * Add at least 1 **Skill**
 * Add at least 1 **Industry Experience** item
 
-Once you have completed those items, click **View Public Profile** in the header to see how your public profile looks:
+{{% alert type="info" %}}
+To make a public profile private again, click Make this profile private.
+{{% /alert %}}
 
-If you have not been able to complete all of these steps, the **Profile Completeness** bar and **Profile Completion Tips** will remind you of what needs to be done to make your Community Profile complete:
+#### 8.8.2 Merging Your Accounts
 
-### Merging Your Accounts
+**[CORRECT LOCATION, UNDER ADVANCED TAB?]**
 
 With use of the Community Profile, you can merge your old Mendix account(s) into your current Mendix account. This action combines all your hard-earned points, certifications, and achievements in your efforts to climb the leaderboards.
 
 These are the quick and easy steps to follow when merging your accounts:
 
-1. Go to your [Community Profile](https://developer.mendixcloud.com/link/ownprofile/).
-2. Click **Edit Profile**.
-3. Click **Manage Account** on the right side of the screen.
-4. Under **Merge your accounts**, enter the email address of the account you want to merge with your current account.
-5. Click the send button to send a merge request.
+Advanced settings - see screenshot
+
+1. Click **Manage Account** on the right side of the screen.
+2. Under **Merge your accounts**, enter the email address of the account you want to merge with your current account.
+3. Click the send button to send a merge request.
 
 We’ll take things from there. The email address of the merged account will be shown in this list when the accounts have been merged:
 
 {{% alert type="info" %}}
-
 With this action we only combine the accounts. We do not deactivate the old account(s). This should be done by that company’s administrator.
-
 {{% /alert %}}
 
-### Profile Visibility
+## 9 Related Content
 
-If you want to make your profile private, these are the quick and easy steps to follow:
-
-1. Go to your [Community Profile](https://developer.mendixcloud.com/link/ownprofile/).
-2. Click **Edit Profile**.
-3. Click **Manage Account** on the right side of the screen.
-4. Under **Profile visibility**, click **Make this profile private**.
+* [Company Admin](../companyadmin)
+* [How to Deactivate and Activate Users](../howto/deactivate-users)
+* [Feedback](../collaborate/feedback)
+* [How to Manage Company Roles and App Roles](../howto/change-roles)
+* [Mendix Platform SDK](/apidocs-mxsdk/mxsdk)
+* [How to Provide Feedback on Mendix](../howto/feedback-mendix)
+* [Roles Within the Company and Apps](../general/roles)
+* [How to Use the Mendix Feedback Widget](../howto/gathering-user-feedback)

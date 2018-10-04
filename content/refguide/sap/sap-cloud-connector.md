@@ -4,7 +4,7 @@ category: "SAP"
 menu_order: 500
 description: "Presents reference information on the SAP Cloud Connector."
 tags: ["SAP", "SAP Cloud Platform", "on-premises", "Cloud Connector", "Destination Services"]
-frontpage_featured: true
+frontpage_featured: false
 ---
 
 ## 1 Introduction

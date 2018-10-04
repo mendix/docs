@@ -26,13 +26,13 @@ In **People**, you can view the other members of your company.
 
 Learn more about [Roles Within the Company and Apps](/developerportal/general/roles).
 
-### 1.4 App Store
-
-The **App Store** has modules, widgets, themes, and connectors that you can use to extend your app.
-
-### 1.5 Community
+### 1.4 Community
 
 In **Community**, you can find documentation, forums, trainings, support, and much more.
+
+### 1.5 App Store
+
+The **App Store** has modules, widgets, themes, and connectors that you can use to extend your app.
 
 ## Links
 

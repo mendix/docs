@@ -1,6 +1,7 @@
 ---
 title: "Use the SAP XSUAA Connector"
 category: "SAP"
+menu_order: 30
 description: "Describes how to set up the SAP XSUAA Connector."
 tags: ["SAP", "integration", "OData", "SSO"]
 ---

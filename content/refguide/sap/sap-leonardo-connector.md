@@ -62,6 +62,38 @@ The API key needs to be pasted as the value of the constant, **APIKey** which is
 
 You can use the SAP Leonardo Machine Learning (ML) Foundation Connector to access the services on *SAP API Business Hub*. This is a *sandbox* where you can explore the services in an *"as-simple-as-possible deployment"*. However, to use the full abilities of the services, you need to bind a ML Foundation Service to your app running in SAP Cloud Platform. More information on the distinction is available in the SAP blog post [Production-ready integration of SAP Leonardo Machine Learning Foundation services with an SAP S/4HANA side-by-side extension built with the SAP S/4HANA Cloud SDK](https://blogs.sap.com/2018/07/29/production-ready-integration-of-sap-leonardo-machine-learning-foundation-services-with-an-sap-s4hana-side-by-side-extension-built-with-the-sap-s4hana-cloud-sdk/).
 
+The following sections describe how to bind a ML Foundation Service to your app.
+
+### 5.1 Adding ML Foundation Trial Entitlement
+
+The ML Foundation Trial is not added automatically to your quota. Therefore, you need to add it manually.
+
+1. Go to the SAP Cloud Platform Cockpit for your account.
+
+2. Choose the **Entitlements** and choose the *ML Foundation Trial* entitlement.
+
+3. Click the **Subaccount** where you want to use the ML Foundation Trial services (this will usually be the *trial* subaccount).
+
+    ![Add ML foundation trial entitlement](attachments/sap-leonardo-connector/ml-entitlement.png)
+
+4. You will see your subaccount overview, and can see that ML Foundation Trial has been added.
+
+### 5.2 Binding an Instance of a ML Foundation Service to Your App
+
+1. Go to the **Space** where your app is deployed on SAP Cloud Platform.
+
+2. Select **ml-foundation-trial-beta** from the **Service Marketplace**
+
+    ![choose the machine learning service from the marketplace](attachments/sap-leonardo-connector/choose-ml-service.png)
+
+3. Go to **Instances** and click on **New Instance** to add an instance of the service.
+
+4. Choose the desired **Service Plan** and click **Next**.
+
+5. Add parameters, if required, and click **Next**. In most cases additional parameters are not required.
+
+6. Choose your app from the dropdown list of **Application**s and click **Next**. In most cases you will not need to add 
+
 
 
 ## 4 Related Content

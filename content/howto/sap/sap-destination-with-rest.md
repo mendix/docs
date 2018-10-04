@@ -68,7 +68,7 @@ The following HTTP Headers do the following:
 
 #### 3.2.1 Operation Tab
 
-The following entries are required in the **General** tab:
+The following entries are required in the **Operation** tab:
 
 |Entry|Description
 |-----|-----|

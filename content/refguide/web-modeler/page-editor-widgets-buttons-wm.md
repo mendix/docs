@@ -32,7 +32,11 @@ Apart from the default button widgets, you can also [download widgets from the M
 
 ## 2 Events Section
 
-Properties in the **Events** section are partially preset for buttons listed above. They depend on the action a button performs. For example, if the button is supposed to open a page, the **On Click Action** in the **Events** section will be **Page**. However, you need to specify what page exactly the button will open. For more information, see section [2.1 Preset Properties in the Events Section](#preset-properties). 
+Properties in the **Events** section are partially preset for buttons listed above. They depend on the action a button performs. For example, if the button is supposed to open a page, the **On Click Action** in the **Events** section will be **Page**. However, you need to specify what page exactly the button will open. 
+
+![](attachments/page-editor-widgets-buttons-wm/wm-events-section-page-button.png)
+
+For more information, see section [2.1 Preset Properties in the Events Section](#preset-properties). 
 
 {{% alert type="info" %}}
 

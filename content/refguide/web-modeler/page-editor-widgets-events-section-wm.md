@@ -49,7 +49,11 @@ When you set the **On Click Action** to **Create Object**, several properties ar
 
 ### 2.2 Open Link Action {#open-link-action}
 
-When you set the **On Click Action** to **Open Link**, several properties are available. See the description in the table below:
+When you set the **On Click Action** to **Open Link**, several properties are available. 
+
+![](attachments/page-editor-widgets-events-section-wm/wm-open-link-action.png)
+
+See the description in the table below:
 
 | Action Property | Description                                                  |
 | --------------- | ------------------------------------------------------------ |

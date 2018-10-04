@@ -48,7 +48,7 @@ For more information on the **Events** section and on click actions, see [Events
 
 ### 2.1 Preset Properties in the Events Section {#preset-properties}
 
-**On Click Action** in the **Events** section is preset depending on the action of the button. You can find the list of preset actions and properties that need to be configured in the table below. 
+**On Click Action** in the **Events** section is preset depending on the action of the button. You can find the list of preset actions and properties that need to be configured in the table below. On click action determines the action of the button. 
 
 | Button         | Preset Action  | Properties to be Configured                                  |
 | -------------- | -------------- | ------------------------------------------------------------ |

@@ -65,5 +65,5 @@ You can view your own submitted feedback items in the feedback list in your prof
 ## 5 Related Content
 
 * [Feedback](/developerportal/collaborate/feedback)
-* [Mendix Profile](/developerportal/general/mendixprofile)
+* [Mendix Profile](/developerportal/general/mendix-profile)
 * [How to Use the Feedback Widget](gathering-user-feedback)

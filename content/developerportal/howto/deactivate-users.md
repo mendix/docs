@@ -81,9 +81,9 @@ Follow these steps to activate an inactive user:
 
 ## 4 Related Content
 
+* [Mendix Profile](../general/mendix-profile
 * [Company Admin](/developerportal/companyadmin)
 * [How to Manage Company Roles and App Roles](/developerportal/howto/change-roles)
-* [How to Set Up Your Community Profile](/community/tools/how-to-set-up-your-profile)
 * [Mendix Support](/howtogeneral/support)
 * [Roles Within the Company and Apps](/developerportal/general/roles)
 * [Technical Contact](/developerportal/general/technical-contact)

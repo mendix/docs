@@ -19,7 +19,7 @@ The purpose of the Partner Profile is to provide the Mendix community and custom
 
 Before starting this how-to, make sure you have completed the following prerequisite:
 
-* Have a Community Profile (register [here](https://www.mendix.com/try-now/?utm_source=documentation&utm_medium=community&utm_campaign=signup) and see [How to Set Up Your Community Profile](how-to-set-up-your-profile) for more information)
+* Have a Mendix Profile (register [here](https://www.mendix.com/try-now/?utm_source=documentation&utm_medium=community&utm_campaign=signup) and see [Mendix Profile](/developerportal/general/mendix-profile)
 
 ## 3 Logging In to the Partner Profile
 
@@ -141,7 +141,7 @@ If you do not want to publish a project right away, click **Save as draft** in t
 
 ## 7 Editing Team Members<a name="team"></a>
 
-This section presents information on adding the most valuable assets of your company: your certified Mendix developers. Before you can add a developer to the Partner Profile, their Community Profile needs to be set to public (for details on how to do this, see [How to Set Up Your Community Profile](how-to-set-up-your-profile).
+This section presents information on adding the most valuable assets of your company: your certified Mendix developers. Before you can add a developer to the Partner Profile, their Mendix Profile needs to be set to public (for details on how to do this, see the [Making Your Profile Public](/developerportal/general/mendix-profile#public) section of *Mendix Profile*.
 
 To add developers to the Partner Profile, follow these steps:
 
@@ -192,7 +192,3 @@ The [Meet Our Partners page](https://developer.mendixcloud.com/openid/login?imme
 * Whether your company is Expert (which will get the most weight in sorting), Professional, or Authorized (for more information, see [4.2 Capability Tracks](#capability))
 * The total amount of certified developers (note that developers with multiple certifications count as one certified developer)
 * The total number of projects you have published on your Partner Profile
-
-## 11 Related Content
-
-* [How to Set Up Your Community Profile](how-to-set-up-your-profile)

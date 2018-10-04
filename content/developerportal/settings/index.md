@@ -83,7 +83,7 @@ For more information, see [API Keys](/developerportal/settings/api-key).
 * [How to Delete, Deactivate and Activate Apps](/developerportal/howto/delete-apps)
 * [How to Manage Company Roles and App Roles](/developerportal/howto/change-roles)
 * [How to Receive Environment Status Alerts](/developerportal/howto/receive-alerts)
-* [Mendix Profile](/developerportal/general/mendixprofile)
+* [Mendix Profile](/developerportal/general/mendix-profile)
 * [Roles Within the Company and Apps](/developerportal/general/roles)
 * [Three Ways to Leave Your App](/developerportal/general/leave-app)
 * [Technical Contact](/developerportal/general/technical-contact)

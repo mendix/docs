@@ -115,7 +115,7 @@ This action cannot be undone.
 ## 5 Related Content
 
 * [Feedback](/developerportal/collaborate/feedback)
-* [Mendix Profile](/developerportal/general/mendixprofile)
+* [Mendix Profile](/developerportal/general/mendix-profile)
 * [How to Provide Feedback on Mendix](/developerportal/howto/feedback-mendix)
 * [Stories](/developerportal/collaborate/stories)
 * [How to Manage Sprints and Stories](/developerportal/howto/managing-your-application-requirements-with-mendix)

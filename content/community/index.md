@@ -13,7 +13,6 @@ The team's goal is to activate and engage the community of Mendix developers in 
 
 These pages provide more information on the various projects that the Community Team is working on:
 
-* [How to Set Up Your Community Profile](tools/how-to-set-up-your-profile)
 * [How to Set Up Your Partner Profile](tools/how-to-set-up-your-partner-profile)
 * [The Mendix Forum](tools/the-mendix-forum)
 * [The Mendix Job Board](tools/the-mendix-job-board)

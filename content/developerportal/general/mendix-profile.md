@@ -159,13 +159,11 @@ These are points you can gain through activity in the [Mendix App Store](https:/
 | Invite a friend to Mendix                                    | 5      | 50           |
 | Have a user sign up via your referral URL                    | 5      | 50           |
 
-{{% alert type="info" %}}
+### 7.4.1 Authorizing GitHub Connection {#github}
 
 In order to receive Mendix points for your contributions to Mendix GitHub repositories (for example, [mendix / docs](https://github.com/mendix/docs)), you are required to authorize the connection to your GitHub profile. 
 
-{{% /alert %}}
-
-**[HOW DO YOU DO THE ABOVE?]**
+**[HOW DO YOU DO THE ABOVE NOW?]**
 
 ### 7.5 Learning Points
 
@@ -317,7 +315,7 @@ There are two types of invitations:
 
 You can perform several advanced operations via this menu item.
 
-#### 10.8.1 Making Your Profile Public
+#### 10.8.1 Making Your Profile Public {#public}
 
 If you have started editing your profile but it is not yet visible to other Mendix community members, you will see a banner inviting you to make it public at the top of your profile. You can make it public by clicking **Make this profile public** under **Profile Visibility** on this tab.
 

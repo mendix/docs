@@ -21,7 +21,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 Writing Your Microflow
 
-In your microflow which is making a REST or SOAP call, perform a **Get Destination** action before the REST or SOAP call.
+In your microflow which is making a REST or SOAP call, perform a **Get Destination** action before the REST or SOAP call. This needs to use the Destination Name which is configured as a Destination on SAP Cloud Platform.
 
 ![REST Microflow](attachments/sap-destination-with-rest/rest-microflow.png)
 

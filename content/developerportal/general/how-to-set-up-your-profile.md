@@ -24,7 +24,7 @@ Your profile will open to the **Overview** tab. In the header of your profile, y
 
 Below the header, the first card you see presents your **Stats**. The chart and its legend display your points divided between various Mendix products and activities. For details on gaining points, see the [Points System FAQ](https://developer.mendixcloud.com/link/faq). When analyzing your points, be sure to also check out the [Leaderboard](#leaderboard) card on this tab to see the top Mendix community contributors!
 
-![](attachments/how-to-set-up-your-profile/stats.png)
+![](attachments/profile/stats.png)
 
 The tabs of your Community Profile are described below.
 
@@ -32,7 +32,7 @@ The tabs of your Community Profile are described below.
 
 In addition to the **Stats** chart, on the **Overview** tab you can gain an overview of your **Badges**, which represent your achievements and progress on the Mendix Platform. You can see your **Badges in Progress** as well as **Next Badges**. The badges are color-coded based on their rarity, from green (least rare), to blue, purple, and orange (most rare). You can see all of your badges on the **Badges** tab of your profile. And for all the details on the badges—which will help you determine which next badges you can work towards—check out the [Badge Overview](https://developer.mendixcloud.com/link/badges).
 
-![](attachments/how-to-set-up-your-profile/badges.png)
+![](attachments/profile/badges.png)
 
 ## 4 Challenges
 
@@ -40,11 +40,11 @@ The **Challenge** card presents a featured challenge you can complete on the Men
 
 **[UPDATE SCREENSHOT]**
 
-![](attachments/how-to-set-up-your-profile/challenges.png)
+![](attachments/profile/challenges.png)
 
 <a name="credits"></a>Clicking **View all** will bring you to the **Challenges** tab of your profile, which gives you more details on your challenges and credits. You can complete these activities in any order you like.
 
-![](attachments/how-to-set-up-your-profile/challenge-example.png)
+![](attachments/profile/challenge-example.png)
 
 Click **Claim Credits** **[VERIFY BUTTON NAME, GET NEW SCREENSHOT]** to claim your credits.
 
@@ -58,14 +58,14 @@ To connect with someone, click the plus icon.
 
 **[DOCUMENT SENDING AN INVITE]**
 
-![](attachments/how-to-set-up-your-profile/connections.png)
+![](attachments/profile/connections.png)
 
 Clicking **View All** on the card will bring you to the **Connections** tab of your profile. On this tab, you can invite friends and colleagues to Mendix in two ways:
 
 * **Share URL** – copy the personalized invite link and share it on your personal website, blog, and social media channels, or share it directly via specific social media
 * **Send invite** – send someone a Mendix invite by entering their email address and clicking **Send invite**
 
-![](attachments/how-to-set-up-your-profile/referral.png)
+![](attachments/profile/referral.png)
 
 You will earn some Mendix swag with five successful invites!
 
@@ -85,7 +85,7 @@ This card on your profile presents a selection of Mendix developers with the hig
 
 **[UPDATE SCREENSHOT]**
 
-![](attachments/how-to-set-up-your-profile/leaderboard.png)
+![](attachments/profile/leaderboard.png)
 
 Clicking **View all** takes you to the **Leaderboards** page, which presents all the boards available for viewing Mendix Platform user activity: **Top Overall**, **Top Forum**, **Top App Store**, **Top Platform**, **Top Community**, and **Top Learning**.
 
@@ -198,11 +198,11 @@ When you earn enough points, you gain a level:
 
 The **Portfolio** card presents a selection of Mendix app projects you have worked on. Click the project name to see more details about it (including a description of the app, business need, solution, results, and collaborators), or click **View all projects** to be taken to the  **Portfolio** tab, which presents a complete view of all your projects. 
 
-![](attachments/how-to-set-up-your-profile/portfolio.png)
+![](attachments/profile/portfolio.png)
 
 To add a project to your portfolio, click **Add Project**, which will open the project editor. There are tips in the editor for what you should enter in each field. All of the fields in the project editor must be filled out before submitting the project.
 
-![](attachments/how-to-set-up-your-profile/add-project.png)
+![](attachments/profile/add-project.png)
 
 If you cannot finish your project or do not want to publish it right away, click **Save as Draft** in the project editor to finish it later. The project draft will be visible only to you in your **Portfolio** tab and available for further editing.
 

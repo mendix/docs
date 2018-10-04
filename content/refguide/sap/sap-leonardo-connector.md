@@ -56,6 +56,9 @@ The API key needs to be pasted as the value of the constant, **APIKey** which is
 
 ## 4 Microflow Actions
 
+Each action from the SAP Leonardo Machine Learning Foundation Connector is described below.
+
+### 4.1 
 
 
 ## 5 Binding SAP Leonardo Machine Learning Foundation Services to Your App
@@ -92,9 +95,13 @@ The ML Foundation Trial is not added automatically to your quota. Therefore, you
 
 5. Add parameters, if required, and click **Next**. In most cases additional parameters are not required.
 
-6. Choose your app from the dropdown list of **Application**s and click **Next**. In most cases you will not need to add 
+6. Choose your app from the dropdown list of **Application**s. In most cases you will not need to add any parameters.
 
+7. Click **Next**.
 
+8. Type an **Instance Name** for the instance and click **Finish**.
+
+    ![Confirm instance creation](attachments/sap-leonardo-connector/create-instance.png)
 
 ## 4 Related Content
 

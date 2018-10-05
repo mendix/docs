@@ -25,7 +25,7 @@ Loop properties consists of the **Data Source** section and are described below:
 
 ![](attachments/microflows-loop-wm/wm-loop-properties.png)
 
-##3 Loop Example
+## 3 Loop Example
 
 Let us study a straightforward use-case, where you retrieve a list of orders from your database, loop over this list, and mark orders as processed as a result. 
 

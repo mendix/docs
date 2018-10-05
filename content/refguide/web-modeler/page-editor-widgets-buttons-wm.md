@@ -8,11 +8,11 @@ tags: ["web modeler", "page editor", "button", "widgets"]
 
 ## 1 Introduction 
 
-Button [widgets](page-editor-widgets-wm) are used to perform various actions, for example, to open a page or execute a microflow.  
+Button [widgets](page-editor-widgets-wm) allow the user to perform various actions, for example, opening a page or executing a microflow. 
 
 ![](attachments/page-editor-widgets-buttons-wm/wm-button-widgets.png)
 
-There following **Buttons** are available in the Web Modeler:
+The following **Buttons** are available in the Web Modeler as default widgets:
 
 * Open Page
 * Call Microflow
@@ -26,13 +26,17 @@ There following **Buttons** are available in the Web Modeler:
 
 {{% alert type="info" %}}
 
-Apart from the standard button widgets, you can also [download widgets from the Mendix App Store](https://appstore.home.mendix.com/index3.html) to your app. For more information, see section [4 Widgets by Origin](page-editor-widgets-wm#widgets-by-origin) in *Widgets in the Web Modeler*.
+Apart from the default button widgets, you can also [download widgets from the Mendix App Store](https://appstore.home.mendix.com/index3.html) to your app. For more information, see section [4 Widgets by Origin](page-editor-widgets-wm#widgets-by-origin) in *Widgets in the Web Modeler*.
 
 {{% /alert %}}
 
 ## 2 Events Section
 
-Properties in the **Events** section are partially preset for buttons listed above. They depend on the action a button performs. For example, if the button is supposed to open a page, the **On Click Action** in the **Events** section will be **Page**. However, you need to specify what page exactly the button will open. For more information, see section [2.1 Preset Properties in the Events Section](#preset-properties). 
+Properties in the **Events** section are partially preset for buttons listed above. They depend on the action a button performs. For example, if the button is supposed to open a page, the **On Click Action** in the **Events** section will be **Page**. However, you need to specify what page exactly the button will open. 
+
+![](attachments/page-editor-widgets-buttons-wm/wm-events-section-page-button.png)
+
+For more information, see section [2.1 Preset Properties in the Events Section](#preset-properties). 
 
 {{% alert type="info" %}}
 
@@ -44,9 +48,9 @@ For more information on the **Events** section and on click actions, see [Events
 
 ### 2.1 Preset Properties in the Events Section {#preset-properties}
 
-**On Click Action** in the **Events** section is preset depending on the action of the button. You can find the list of preset actions and properties that need to be configured in the table below. 
+**On Click Action** in the **Events** section is preset depending on the action of the button. You can find the list of preset actions and properties that need to be configured in the table below. On click action determines the action of the button. 
 
-| Button         | Preset Action  | Properties to Be Configured                                  |
+| Button         | Preset Action  | Properties to be Configured                                  |
 | -------------- | -------------- | ------------------------------------------------------------ |
 | Open Page      | Page           | **Page** (Select page)                                       |
 | Call Microflow | Microflow      | **Microflow** (Select microflow)                             |
@@ -64,14 +68,14 @@ Properties available in the **General** section are described in the table below
 
 | Property    | Description                                                  |
 | ----------- | ------------------------------------------------------------ |
-| Caption     | Defines a text that will be shown on the button. Buttons have preset captions depending on the action they perform. For more information, see section [3.1 Preset Caption](#preset-caption). |
+| Caption     | Defines the text that will be shown on the button. Buttons have preset captions depending on the action they perform. For more information, see section [3.1 Preset Caption](#preset-caption). |
 | Icon        | Determines the icon that will be shown in front of the caption of the button. |
 | Render Mode | Defines the way the button will be shown to the end-user. Possible options are the following: <ul><li>**Button** – the widget will be rendered as a button</li><li>**Link** – the widget will be rendered as a hyperlink</li></ul><br />*Default value:* Button |
 | Style       | Applies a predefined styling to the button. Possible options are the following: <ul><li>Default</li><li>Inverse</li><li>Primary</li><li>Info</li><li>Success</li><li>Warning</li><li>Danger</li></ul><br />*Default value for all buttons except the **Save Changes** button:* Default<br />*Default value for the **Save Changes** button*: Success<br />The color for each style depends on your settings in the **Theme Customizer**. For details, see [Theme Customizer in the Web Modeler](theme-customizer-wm). |
 
 ### 3.1 Preset Caption {#preset-caption}
 
-**Caption** in the **General** section is preset depending on the action of the button. You can find a preset caption per each button in the table below. 
+**Caption** in the **General** section is preset depending on the action of the button. The preset caption for each button type is shown in the table below. 
 
 | Button         | Preset Caption |
 | -------------- | -------------- |

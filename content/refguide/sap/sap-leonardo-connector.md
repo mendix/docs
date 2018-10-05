@@ -58,7 +58,225 @@ The API key needs to be pasted as the value of the constant, **APIKey** which is
 
 Each action from the SAP Leonardo Machine Learning Foundation Connector is described below.
 
-### 4.1 
+### 4.1 ClassifyImage
+
+This implements the [**Inference Service for Customizable Image Classification (classification)**](https://api.sap.com/api/image_classification_api/resource) service of SAP Leonardo Machine Learning Foundation. It takes an image and detects the dominant objects present in an image from a set of 1000 categories such as trees, animals, food, vehicles, people, and more.
+
+![ClassifyImage action](attachments/sap-leonardo-connector/classify-image-input.png)
+
+**Input**
+
+There are two inputs to this action.
+
+* File
+
+    This is an image object which is a *System.Image* entity, or an entity which is based on the *System.Image* entity.
+
+* Options
+
+    This is an object of type *LeonardoMachineLearning.ImageClassifierOptions*. This contains two attributes, *ModelName* and *ModelVersion* (corresponding to *modelName* and *version* in the Leonardo API), which identify a specific model to be used in the inference.
+
+    For the default inference model, and on SAP API Business Hub, this value should be *empty*.
+
+*Limitations*
+
+The **ClassifyImage** action does not currently support a list of image objects, or images in an archive (.zip) file.
+
+*Options* are not available on the SAP API Business Hub.
+
+**Output**
+
+The **ClassifyImage** action returns a list of objects of entity type *LeonardoMachineLearning.ImageClassificationResponse*. Note that this list will contain a single object.
+
+![ClassifyImage domain model](attachments/sap-leonardo-connector/classify-image-output.png)
+
+|Entity/Attribute|Leonardo Equivalent|Description|
+|---|---|---|
+|**ImageClassificationResponse**||One object for each image (currently only one)|
+|ImageName|name|Name of the file provided for classification (this will be *empty*)|
+|**Result**|results|One object per classification inferred, sorted by probability|
+|Label||Name of a classification inferred from the image|
+|Score||Probability of the classification provided by label|
+
+### 4.2 ClassifyProductFromImage
+
+This implements the [**Product Image Classification API (inference_sync)**](https://api.sap.com/api/product_image_classification_api/overview) service of SAP Leonardo Machine Learning Foundation. It takes an image or archive of images and classifies images into a fixed set of categories of products that are common in eCommerce.
+
+![ClassifyProductFromImage action](attachments/sap-leonardo-connector/classify-product-from-image-input.png)
+
+**Input**
+
+The input is an object which is a *System.FileDocument* entity, or an entity which is based on the *System.FileDocument* entity. For example, it could be an object based on *System.Image* which is a single image. It could also be an object containing a *.zip* archive file containing images. 
+
+*Limitations*
+
+The **ClassifyProductFromImage** action does not currently support a list of image objects.
+
+**Output**
+
+The **ClassifyProductFromImage** action returns a list of objects of entity type *LeonardoMachineLearning.ProductClassificationResponse*.
+
+![ClassifyProductFromImage domain model](attachments/sap-leonardo-connector/classify-product-from-image-output.png)
+
+|Entity/Attribute|Leonardo Equivalent|Description|
+|---|---|---|
+|**ProductClassificationResponse**||One object for each image|
+|ImageName|name|Name of the file provided for classification|
+|**Result**||One object per classification inferred, sorted by probability|
+|Label||Name of a classification inferred from the image|
+|Score||Probability of the classification provided by label|
+
+### 4.3 DetectFace
+
+This implements the [**Inference Service for Face Detection (face-detection)**](https://api.sap.com/api/face_detection_api/resource) service of SAP Leonardo Machine Learning Foundation. It takes an image and detects faces in the images, if any, and returns information declaring boundary box per face, for every image.
+
+![DetectFace action](attachments/sap-leonardo-connector/detect-face-input.png)
+
+**Input**
+
+The input is an image object which is a *System.Image* entity, or an entity which is based on the *System.Image* entity.
+
+*Limitations*
+
+The **DetectFace** action does not currently support a list of image objects, or images in an archive (.zip) file.
+
+**Output**
+
+The **DetectFace** action returns a list of objects of entity type *LeonardoMachineLearning.FaceDetectionResponse*. Note that this list will contain a single object.
+
+![DetectFace domain model](attachments/sap-leonardo-connector/detect-face-output.png)
+
+|Entity/Attribute|Leonardo Equivalent|Description|
+|---|---|---|
+|**FaceDetectionResponse**||One object for each image (currently only one)|
+|FaceCount|numberOfFaces|Number of faces detected in the image|
+|**FaceCoordinates**|faces|One object per face detected in the image|
+|Top||topmost pixel y-coordinate|
+|Bottom||bottommost pixel y-coordinate|
+|Left||leftmost pixel y-coordinate|
+|Right||rightmost pixel y-coordinate|
+
+### 4.4 DetectTopic
+
+This implements the [**Inference Service for Topic Detection (topic-detection)**](https://api.sap.com/api/image_classification_api/resource) service of SAP Leonardo Machine Learning Foundation. It detects and ranks the topics from the input documents. At least two documents must be submitted.
+
+![DetectTopic action](attachments/sap-leonardo-connector/detect-topic-input.png)
+
+**Input**
+
+There are two inputs to this action.
+
+* File
+
+    This is an object which is a *System.FileDocument* entity, or an entity which is based on the *System.FileDocument* entity. It must be an archive containing at least two text documents.
+
+* Options
+
+    This is an object of type *LeonardoMachineLearning.TopicDetectionOptions*. This contains the following attributes:
+
+    Attribute|Description
+    ---|---
+    NumTopics|Total number of topics to be detected
+    NumTopicsPerDoc|Number of most relevant topics to be listed per document 
+    NumKeywordsPerTopic|Number of keywords to be listed per topic
+    NumFeatures|Maximum number of keywords to be extracted from documents (optional)
+
+    All the values for the options can be found in the API documentation on the SAP API Business Hub here: https://api.sap.com/api/topic_detection_api/resource. The parameters in the API have the same names as the attributes in the *TopicDetectionOptions* entity.
+
+**Output**
+
+The **DetectTopic** action returns an object of entity type *LeonardoMachineLearning.TopicDetectionResponse*.
+
+![ClassifyImage domain model](attachments/sap-leonardo-connector/detect-topic-output.png)
+
+|Entity/Attribute|Leonardo Equivalent|Description|
+|---|---|---|
+|**TopicDetectionResponse**||The object returned by the action|
+|**TopicDetectionResult**||
+|ImageName|name|Name of the file provided for classification (this will be *empty*)|
+|**Result**|results|One object per classification inferred, sorted by probability|
+|Label||Name of a classification inferred from the image|
+|Score||Probability of the classification provided by label|
+
+
+### 4.5 ExtractImageFeature
+
+This implements the [**Inference Service For Customizable Image Feature Extraction (feature-extraction)**](https://api.sap.com/api/img_feature_extraction_api/resource) service of SAP Leonardo Machine Learning Foundation. It takes an image and extracts feature vectors (measurable properties of the image such as edges or objects) for comparison, information retrieval, clustering, or further processing.
+
+![ExtractImageFeature action](attachments/sap-leonardo-connector/extract-image-feature-input.png)
+
+**Input**
+
+An image object which is a *System.Image* entity, or an entity which is based on the *System.Image* entity.
+
+*Limitations*
+
+The **ExtractImageFeature** action does not currently support a list of image objects or images in an archive (.zip) file.
+
+**ExtractImageFeature** only uses the default model for inferring vectors.
+
+**Output**
+
+The **ExtractImageFeature** action returns a list of objects of entity type *LeonardoMachineLearning.ImageFeatureExtratorResponse* [sic]. Note that this list will contain a single object.
+
+![ExtractImageFeature domain model](attachments/sap-leonardo-connector/classify-image-output.png)
+
+|Entity/Attribute|Leonardo Equivalent|Description|
+|---|---|---|
+|**ImageFeatureExtratorResponse**||One object for each image (currently only one)|
+|ImageName|name|Name of the file provided for classification|
+|**Vector**|featureVector|One object per feature vector|
+|Value|item|Value assigned to each feature vector|
+
+### 4.6 RecognizeOpticalCharacter (OCR)
+
+This implements the [**Inference Service for Optical Character Recognition (OCR)**](https://api.sap.com/api/ocr_api/resource) service of SAP Leonardo Machine Learning Foundation. It takes a document file with .pdf extension, or image file in the format .jpeg, .jpe, or .png as input and returns the result in text or xml format.
+
+![RecognizeOpticalCharacter (OCR) action](attachments/sap-leonardo-connector/ocr-input.png)
+
+**Input**
+
+There are two inputs to this action.
+
+* Options
+
+    This is an object of type *LeonardoMachineLearning.ocr_options*. This contains the following attributes:
+
+    Attribute|Description
+    ---|---
+    Lang|The language of the text (currently only a single language can be set)
+    OutputType|The output type of the result 
+    PageSegMode|The page segmentation mode
+    ModelType|The type of the machine learning model for ocr 
+
+    All the values for the options can be found in the API documentation on the SAP API Business Hub here: https://api.sap.com/api/ocr_api/resource?tag=OCR&path=post_ocr&method=post&opId=post_ocr. The parameters in the API have the same names as the attributes in the *ocr_options* entity.
+    
+* File
+
+    This is an object which is a *System.FileDocument* entity, or an entity which is based on the *System.FileDocument* entity. For example, it could be an object based on *System.Image* which is a single image. It could also be an object containing a *.pdf* portable document format file.
+
+*Limitations*
+
+The **RecognizeOpticalCharacter (OCR)** *Lang* option only accepts a single language for recognition.
+
+The *ocr_options* entity must be passed - the connector does not use the defaults if it is missing.
+
+**Output**
+
+The **RecognizeOpticalCharacter (OCR)** action returns an object of entity type *LeonardoMachineLearning.OCRResponse*.
+
+![RecognizeOpticalCharacter (OCR) domain model](attachments/sap-leonardo-connector/ocr-output.png)
+
+|Entity/Attribute|Leonardo Equivalent|Description|
+|---|---|---|
+|**OCRResponse**||The response object|
+|**PredictionValue**|prediction|one or more objects depending on how the page has been segmented|
+|Value||Text which has been recognized in the image, returned in the requested format|
+
+### 4.7 Score Similarity
+
+
+### 4.8 Translate
 
 
 ## 5 Binding SAP Leonardo Machine Learning Foundation Services to Your App

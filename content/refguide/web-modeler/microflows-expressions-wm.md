@@ -3,6 +3,7 @@ title: "Microflow Expressions in the Web Modeler"
 parent: "microflows-wm"
 description: "Describes the microflow expressions available in the Mendix Web Modeler."
 tags: ["web modeler", "microflow", "set value", "variable"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction 

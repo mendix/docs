@@ -62,7 +62,7 @@ You can also open your app in the Web Modeler via the Desktop Modeler. Do the fo
 
 The app opens in the Web Modeler.
 
-## 3 Upgrading the Web Modeler
+## 3 Web Modeler Upgrade
 
 After clicking **Edit in Web Modeler** you may need to upgrade your app to the latest version.
 

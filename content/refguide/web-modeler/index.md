@@ -33,6 +33,7 @@ The Web Modeler enables you to do the following:
 * [Navigation Document in the Web Modeler](navigation-wm)
 * [Microflows in the Web Modeler](microflows-wm)
   * [Exclusive Split in the Web Modeler](microflows-exclusive-split-wm)
+  * [Loops in the Web Modeler](microflows-loop-wm)
   * [Microflow Expressions in the Web Modeler](microflows-expressions-wm)
   * [Setting and Changing a Value for Different Activities in the Microflows in the Web Modeler](microflows-setting-and-changing-value-wm)
   * [Mendix Assist](mx-assist-wm)

@@ -38,7 +38,7 @@ For more information, see [Roles Within the Company and Apps](/developerportal/g
 
 ## 4 Related Content
 
-* [Company Admin](companyadmin-overview)
+* [Company Admin Overview](companyadmin-overview)
 * [Company](company)
 * [Users](users)
 * [Nodes](nodes)

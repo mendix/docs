@@ -55,7 +55,7 @@ To see the current background image of your own company, go to the **Mendix Laun
 
 ## 6 Related Content
 
-* [Company Admin](companyadmin-overview)
+* [Company Admin Overview](companyadmin-overview)
 * [Users](nodes)
 * [Apps](apps)
 * [Nodes](nodes)

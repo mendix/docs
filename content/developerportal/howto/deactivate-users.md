@@ -24,7 +24,7 @@ If a Mendix user moves to another company or comes from another company that is 
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Have the **Company Admin** role in your Mendix company (for more information, see [Company Admin](/developerportal/companyadmin))
+* Have the **Company Admin** role in your Mendix company (for more information, see [Company Admin Overview](/developerportal/general/companyadmin))
 * Before deactivating a user, make sure the following points are true for the user:
     * Does not have a **Company Contact** role
     * Does not have an **App Contact** role
@@ -82,7 +82,7 @@ Follow these steps to activate an inactive user:
 ## 4 Related Content
 
 * [Mendix Profile](../general/mendix-profile)
-* [Company Admin](/developerportal/companyadmin)
+* [Company Admin Overview](/developerportal/general/companyadmin)
 * [How to Manage Company Roles and App Roles](change-roles)
 * [Mendix Support](/howtogeneral/support)
 * [Roles Within the Company and Apps](../general/roles)

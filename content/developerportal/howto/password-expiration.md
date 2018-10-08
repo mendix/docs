@@ -37,7 +37,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 4 Related Content
 
-* [Company Admin](/developerportal/companyadmin)
+* [Company Admin Overview](/developerportal/general/companyadmin)
 * [How to Deactivate and Activate Users](/developerportal/howto/deactivate-users)
 * [How to Delete, Deactivate and Activate Apps](/developerportal/howto/delete-apps)
 * [How to Manage Company Roles and App Roles](/developerportal/howto/change-roles)

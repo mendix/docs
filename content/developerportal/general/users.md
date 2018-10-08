@@ -56,7 +56,7 @@ A company admin can view all the changes made in the company on the **Security H
 
 ## 5 Related Content
 
-* [Company Admin](companyadmin-overview)
+* [Company Admin Overview](companyadmin-overview)
 * [Company](company)
 * [Apps](apps)
 * [Nodes](nodes)

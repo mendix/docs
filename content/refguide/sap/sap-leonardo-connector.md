@@ -333,6 +333,72 @@ The **ScoreSimilarity** action returns an object of entity type *LeonardoMachine
 
 ### 4.8 Translate
 
+This implements the [**Inference Service For Machine Translation (translation)**](https://api.sap.com/api/translation_api/resource) service of SAP Leonardo Machine Learning Foundation. It translates a string from a source language to one or more target languages.
+
+![Translate action](attachments/sap-leonardo-connector/translate-input.png)
+
+**Input**
+
+An object of entity type *LeonardoMachineLearning.Translation*. This must be associated with a number of other entities, as described below.
+
+![Translate input domain model](attachments/sap-leonardo-connector/translate-input-domain-model.png)
+
+|Entity/Attribute|Description|
+|---|---|
+|**Translation**|One object which is associated with target languages and text to be translated, grouped into units|
+|SourceLanguage|The language of the source text, identified by a two character string (e.g. 'en' for English)|
+|**Units**|A way of grouping text to be translated|
+|**Original Value**|One or more objects containing fragments of text to be translated|
+|Value|A string to be translated|
+|**Target Languages**|A way of grouping the target languages for the translation|
+|**TargetLanguagesValue**|One or more objects containing a target language for the translation|
+|Value|A target language for the translation, identified by a two character string (e.g. 'en' for English)|
+
+**================================**
+
+For each vector in *VectorSets*, ScoreSimilarity will return the best *numSimilarVectors* comparisons.
+
+**VectorSets** must be a string in JSON format which contains an array of vectors called *0*, each containing an identifier and an array of values. It is also possible to compare two sets of vectors. More information is in the API documentation here: [Inference Service For Similarity Scoring](https://api.sap.com/api/similarity_scoring_api/resource).
+
+
+For example, to compare three vectors: [1.0, 2.0, 3.0, 4.0], [5.0, 6.0, 7.0, 8.0], and [1.0, 2.1, 3.1, 4.0] the JSON should be constructed as shown in the example, below.
+
+```json
+ {
+ 	"0": [{
+ 		"id": "v0",
+ 		"vector": [1.0, 2.0, 3.0, 4.0]
+ 	}, {
+ 		"id": "v1",
+ 		"vector": [5.0, 6.0, 7.0, 8.0]
+ 	}, {
+ 		"id": "v2",
+ 		"vector": [1.0, 2.1, 3.1, 4.0]
+ 	}]
+ }
+```
+
+If *numSimilarVectors* is set to *1* then the action will return just the best similarity score for each vector, and the id of the vector to which it refers.
+
+*Limitations*
+
+There is no validation that there is a translation model for any requested language pair.
+
+Passing the *key* value is not supported.
+
+**Output**
+
+The **ScoreSimilarity** action returns an object of entity type *LeonardoMachineLearning.SimilarityScoringResponse*.
+
+![Translate output domain model](attachments/sap-leonardo-connector/translate-output.png)
+
+|Entity/Attribute|Leonardo Equivalent|Description|
+|---|---|---|
+|**SimilarityScoringResponse**||One object which is the parent for the scores|
+|**SimilarVectorsScore**|similarVectors|One object per comparison|
+|FirstVectorId|id|The id of the vector being compared|
+|SecondVectorId|id|The id of the vector which is in the top *numSimilarVectors* matches with *FirstVectorId*|
+|Score||A score between -1 and 1 indicating how similar the vectors are|
 
 ## 5 Binding SAP Leonardo Machine Learning Foundation Services to Your App
 

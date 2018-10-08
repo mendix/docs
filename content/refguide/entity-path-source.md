@@ -3,10 +3,10 @@ title: "Context Source"
 parent: "data-sources"
 ---
 
-The context source is one of the data sources of a data view. Data views with this data source get their object from the context, which can be one of two things:
+The context source is one of the possible types of data source of a data view. Data views with this data source get their object from the context, which can be one of two things:
 
 * A surrounding data container such as a data view or list view — in this case, the entity (path) property should be an entity path following the associations from the entity of the container
-* The object that is passed to the page when opening it (for example, another page passing the selection of a grid or a microflow passing an object from the show page action)
+* The page parameter's value. The page parameter will contain the object that is passed to the page when opening it. Either another page passing the selection of a grid or a microflow passing an object from the show page action.
 
 ## Properties
 

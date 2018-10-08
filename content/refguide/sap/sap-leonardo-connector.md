@@ -60,7 +60,7 @@ Each action from the SAP Leonardo Machine Learning Foundation Connector is descr
 
 ### 4.1 ClassifyImage
 
-This implements the [**Inference Service for Customizable Image Classification (classification)**](https://api.sap.com/api/image_classification_api/resource) service of SAP Leonardo Machine Learning Foundation. It takes an image and detects the dominant objects present in an image from a set of 1000 categories such as trees, animals, food, vehicles, people, and more.
+This implements the [**Inference Service for Customizable Image Classification (classification)**](https://api.sap.com/api/image_classification_api/resource) service of SAP Leonardo Machine Learning Foundation. It takes an image and detects the dominant objects present in an image from a set of 1000 categories such as trees, animals, food, vehicles, people, and more. A description of the service can be found on the SAP site here: [Inference Service for Customizable Image Classification](https://help.sap.com/viewer/b04a8fe9c04745b98ad8652ccd5d636f/1.0/en-US/d7b4564d6625412c9e50ad1514308043.html). 
 
 ![ClassifyImage action](attachments/sap-leonardo-connector/classify-image-input.png)
 
@@ -100,7 +100,7 @@ The **ClassifyImage** action returns a list of objects of entity type *LeonardoM
 
 ### 4.2 ClassifyProductFromImage
 
-This implements the [**Product Image Classification API (inference_sync)**](https://api.sap.com/api/product_image_classification_api/overview) service of SAP Leonardo Machine Learning Foundation. It takes an image or archive of images and classifies images into a fixed set of categories of products that are common in eCommerce.
+This implements the [**Product Image Classification API (inference_sync)**](https://api.sap.com/api/product_image_classification_api/overview) service of SAP Leonardo Machine Learning Foundation. It takes an image or archive of images and classifies images into a fixed set of categories of products that are common in eCommerce. A description of the service can be found on the SAP site here: [Inference Service for Product Image Classification](https://help.sap.com/viewer/b04a8fe9c04745b98ad8652ccd5d636f/1.0/en-US/3013afaa529440429a6e63dfd31d1799.html). 
 
 ![ClassifyProductFromImage action](attachments/sap-leonardo-connector/classify-product-from-image-input.png)
 
@@ -128,7 +128,7 @@ The **ClassifyProductFromImage** action returns a list of objects of entity type
 
 ### 4.3 DetectFace
 
-This implements the [**Inference Service for Face Detection (face-detection)**](https://api.sap.com/api/face_detection_api/resource) service of SAP Leonardo Machine Learning Foundation. It takes an image and detects faces in the images, if any, and returns information declaring boundary box per face, for every image.
+This implements the [**Inference Service for Face Detection (face-detection)**](https://api.sap.com/api/face_detection_api/resource) service of SAP Leonardo Machine Learning Foundation. It takes an image and detects faces in the images, if any, and returns information declaring boundary box per face, for every image. A description of the service can be found on the SAP site here: [Inference Service for Face Detection](https://help.sap.com/viewer/b04a8fe9c04745b98ad8652ccd5d636f/1.0/en-US/3c58688fc6b14c8faf80fa5e99d88e32.html). 
 
 ![DetectFace action](attachments/sap-leonardo-connector/detect-face-input.png)
 
@@ -158,7 +158,7 @@ The **DetectFace** action returns a list of objects of entity type *LeonardoMach
 
 ### 4.4 DetectTopic
 
-This implements the [**Inference Service for Topic Detection (topic-detection)**](https://api.sap.com/api/image_classification_api/resource) service of SAP Leonardo Machine Learning Foundation. It detects and ranks the topics from the input documents. At least two documents must be submitted.
+This implements the [**Inference Service for Topic Detection (topic-detection)**](https://api.sap.com/api/image_classification_api/resource) service of SAP Leonardo Machine Learning Foundation. It detects and ranks the topics from the input documents. A description of the service can be found on the SAP site here: [Inference Service for Topic Detection](https://help.sap.com/viewer/f09b2311283b4f32a44e106729e11412/1.0/en-US/c90b3a5861f94adbba102164203d5a4b.html). At least two documents must be submitted.
 
 ![DetectTopic action](attachments/sap-leonardo-connector/detect-topic-input.png)
 
@@ -192,16 +192,17 @@ The **DetectTopic** action returns an object of entity type *LeonardoMachineLear
 |Entity/Attribute|Leonardo Equivalent|Description|
 |---|---|---|
 |**TopicDetectionResponse**||The object returned by the action|
-|**TopicDetectionResult**||
-|ImageName|name|Name of the file provided for classification (this will be *empty*)|
-|**Result**|results|One object per classification inferred, sorted by probability|
-|Label||Name of a classification inferred from the image|
-|Score||Probability of the classification provided by label|
-
+|**TopicDetectionResult**||One object per document provided for inference
+|DocumentName|docName|Name of the file provided for inference|
+|**TransactionDetectionValue**|n/a (implicit in the order of the values)|One object per topic detected|
+|Topic||A number identifying the topic inferred|
+|Score||The 'distance' between the topic *vector* and that of the document|
+|**TopicKeywords**|keywords|One object per keyword|
+|Keyword||A keyword which, together with the other keywords, defines the topic|
 
 ### 4.5 ExtractImageFeature
 
-This implements the [**Inference Service For Customizable Image Feature Extraction (feature-extraction)**](https://api.sap.com/api/img_feature_extraction_api/resource) service of SAP Leonardo Machine Learning Foundation. It takes an image and extracts feature vectors (measurable properties of the image such as edges or objects) for comparison, information retrieval, clustering, or further processing.
+This implements the [**Inference Service For Customizable Image Feature Extraction (feature-extraction)**](https://api.sap.com/api/img_feature_extraction_api/resource) service of SAP Leonardo Machine Learning Foundation. It takes an image and extracts feature vectors (measurable properties of the image such as edges or objects) for comparison, information retrieval, clustering, or further processing. 
 
 ![ExtractImageFeature action](attachments/sap-leonardo-connector/extract-image-feature-input.png)
 
@@ -219,7 +220,7 @@ The **ExtractImageFeature** action does not currently support a list of image ob
 
 The **ExtractImageFeature** action returns a list of objects of entity type *LeonardoMachineLearning.ImageFeatureExtratorResponse* [sic]. Note that this list will contain a single object.
 
-![ExtractImageFeature domain model](attachments/sap-leonardo-connector/classify-image-output.png)
+![ExtractImageFeature domain model](attachments/sap-leonardo-connector/extract-image-feature-output.png)
 
 |Entity/Attribute|Leonardo Equivalent|Description|
 |---|---|---|
@@ -273,8 +274,62 @@ The **RecognizeOpticalCharacter (OCR)** action returns an object of entity type 
 |**PredictionValue**|prediction|one or more objects depending on how the page has been segmented|
 |Value||Text which has been recognized in the image, returned in the requested format|
 
-### 4.7 Score Similarity
+### 4.7 ScoreSimilarity
 
+This implements the [**Inference Service For Similarity Scoring (similarity-scoring)**](https://api.sap.com/api/similarity_scoring_api/resource) service of SAP Leonardo Machine Learning Foundation. It compares vectors using a similarity score based on the cosine similarity of the vectors. The vectors retrieved from the **ExtractImageFeature** microflow action or from the *Inference Service for Document Feature Extraction* SAP Leonardo Machine Learning Foundation service can be used as inputs to this service.
+
+![ExtractImageFeature action](attachments/sap-leonardo-connector/score-similarity-input.png)
+
+**Input**
+
+An object of entity type *LeonardoMachineLearning.SimilarityScoringRequest*, or an entity which is based on the *LeonardoMachineLearning.SimilarityScoringRequest* entity.
+
+|Attribute|Description|
+|---|---|
+|numSimilarVectors|The number of scores to return for each vector in the comparison|
+|VectorSets|A string, in JSON format, containing the vectors to be compared|
+
+For each vector in *VectorSets*, ScoreSimilarity will return the best *numSimilarVectors* comparisons.
+
+**VectorSets** must be a string in JSON format which contains an array of vectors called *0*, each containing an identifier and an array of values. It is also possible to compare two sets of vectors. More information is in the API documentation here: [Inference Service For Similarity Scoring](https://api.sap.com/api/similarity_scoring_api/resource).
+
+
+For example, to compare three vectors: [1.0, 2.0, 3.0, 4.0], [5.0, 6.0, 7.0, 8.0], and [1.0, 2.1, 3.1, 4.0] the JSON should be constructed as shown in the example, below.
+
+```json
+ {
+ 	"0": [{
+ 		"id": "v0",
+ 		"vector": [1.0, 2.0, 3.0, 4.0]
+ 	}, {
+ 		"id": "v1",
+ 		"vector": [5.0, 6.0, 7.0, 8.0]
+ 	}, {
+ 		"id": "v2",
+ 		"vector": [1.0, 2.1, 3.1, 4.0]
+ 	}]
+ }
+```
+
+If *numSimilarVectors* is set to *1* then the action will return just the best similarity score for each vector, and the id of the vector to which it refers.
+
+*Limitations*
+
+The vectors to be scored must be provided as a string in JSON format. The action does not accept files as input.
+
+**Output**
+
+The **ScoreSimilarity** action returns an object of entity type *LeonardoMachineLearning.SimilarityScoringResponse*.
+
+![ScoreSimilarity domain model](attachments/sap-leonardo-connector/score-similarity-output.png)
+
+|Entity/Attribute|Leonardo Equivalent|Description|
+|---|---|---|
+|**SimilarityScoringResponse**||One object which is the parent for the scores|
+|**SimilarVectorsScore**|similarVectors|One object per comparison|
+|FirstVectorId|id|The id of the vector being compared|
+|SecondVectorId|id|The id of the vector which is in the top *numSimilarVectors* matches with *FirstVectorId*|
+|Score||A score between -1 and 1 indicating how similar the vectors are|
 
 ### 4.8 Translate
 

@@ -47,19 +47,19 @@ _Default value:_ No
 
 ### 3.2 Refresh in Client
 
-When set and the microflow is called from the client, Refresh in client causes [data grids](data-grid), [template grids](template-grid), [list views](list-view), [reference selectors](reference-selector), [reference set selectors](reference-set-selector), and [input reference set selectors](input-reference-set-selector) to be refreshed if they show the entity of the changed object.
+If the microflow is called from the client, the change is not reflected in the client if Refresh in client is set to *No*. If Refresh in client is set to *Yes*, the object is refreshed across the client, which includes reloading of relevant [data sources](data-sources).
 
 {{% alert type="info" %}}
 
-For input widgets, this setting behaves differently as of 7.19.0. For Mendix versions below 7.19.0, if this setting is set to *No*, [input widgets](input-widgets) showing the changed object's attributes are not refreshed (including their visibility and editability [conditions](conditions)). For version 7.19.0 and above, input widgets and their conditions are always refreshed.
+As of 7.19.0, changed attribute values are always reflected in the client. If the object is committed, the object is refreshed from the runtime, which includes updating virtual attributes. [Data sources](data-sources) are only reloaded if Refresh in client is set to *Yes*.
 
 {{% /alert %}}
 
 {{% alert type="warning" %}}
 
-When inside a [nanoflow](nanoflows), the Change object action does not have the Refresh in client option, and the refresh behavior depends on the **Commit type** option. It always refreshes [input widgets](input-widgets) showing the changed object's attributes (including their [conditions](conditions)).
+When inside a [nanoflow](nanoflows), the Change object action does not have the Refresh in client option and the refresh behavior depends on the **Commit type** option. It always reflects changed attribute values in the client, including [conditions](conditions).
 
-If **Commit type** is set to *Yes*, then [data grids](data-grid), [template grids](template-grid), [list views](list-view), [reference selectors](reference-selector), [reference set selectors](reference-set-selector), and [input reference set selectors](input-reference-set-selector) are refreshed if they show the entity of the changed object.
+If **Commit type** is set to *Yes*, the object is refreshed across the client as if Refresh in client was set to *Yes*.
 
 {{% /alert %}}
 

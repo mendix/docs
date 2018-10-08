@@ -39,11 +39,11 @@ _Default value:_ No
 
 ### 2.3 Refresh in Client
 
-When set, Refresh in client causes [data grids](data-grid), [template grids](template-grid), [list views](list-view), [reference selectors](reference-selector), [reference set selectors](reference-set-selector), and [input reference set selectors](input-reference-set-selector) to be refreshed if they show the entity of the created object.
+If the microflow is called from the client, [data sources](data-sources) don't reload, unless Refresh in client is set to *Yes*.
 
 {{% alert type="warning" %}}
 
-When inside a [nanoflow](nanoflows), the Create object action does not have the Refresh in client option, and the refresh behavior depends on the **Commit type** option. If **Commit type** is set to *Yes*, [data grids](data-grid), [template grids](template-grid), [list views](list-view), [reference selectors](reference-selector), [reference set selectors](reference-set-selector), and [input reference set selectors](input-reference-set-selector) are refreshed if they show the entity of the changed object.
+When inside a [nanoflow](nanoflows), the Create object action reloads [data sources](data-sources) as if Refresh in client was set to *Yes*.
 
 {{% /alert %}}
 

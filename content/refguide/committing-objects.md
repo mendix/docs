@@ -33,11 +33,11 @@ Nanoflows do not have this property. Committing while running in an online app s
 
 ### 3.2 Refresh in Client
 
-When set, Refresh in client causes [data grids](data-grid), [template grids](template-grid), [list views](list-view), [reference selectors](reference-selector), [reference set selectors](reference-set-selector), and [input reference set selectors](input-reference-set-selector) to be refreshed if they show the entity of the committed object.
+If the microflow is called from the client, the commit is not reflected in the client if Refresh in client is set to *No*. If Refresh in client is set to *Yes*, the object is refreshed across the client, which includes reloading of relevant [data sources](data-sources).
 
 {{% alert type="info" %}}
 
-For input widgets, this setting behaves differently as of 7.19.0. For Mendix versions below 7.19.0, if this setting is set to *No*, [input widgets](input-widgets) showing the changed object's attributes are not refreshed (including their visibility and editability [conditions](conditions)). For version 7.19.0 and above, input widgets and their conditions are always refreshed.
+As of 7.19.0, all attribute values are reflected in the client, including virtual ones, even if Refresh in client is set to *No*.
 
 {{% /alert %}}
 
@@ -49,7 +49,7 @@ When committing a large number of objects, we recommend that you do not enable '
 
 {{% alert type="warning" %}}
 
-When inside a [nanoflow](nanoflows), the Commit object action does not have the Refresh in client option. It refreshes [input widgets](input-widgets), showing the changed object's attributes (including their [conditions](conditions)). [Data grids](data-grid), [template grids](template-grid), [list views](list-view), [reference selectors](reference-selector), [reference set selectors](reference-set-selector), and [input reference set selectors](input-reference-set-selector) are refreshed if they show the entity of the changed object.
+When inside a [nanoflow](nanoflows), the object is refreshed across the client as if Refresh in client was set to *Yes*.
 
 {{% /alert %}}
 

@@ -27,11 +27,11 @@ The variable that refers to the object or list of objects that will be deleted. 
 
 ### 3.1 Refresh in Client
 
-When set, Refresh in client causes [data grids](data-grid), [template grids](template-grid), [list views](list-view), [reference selectors](reference-selector), [reference set selectors](reference-set-selector), and [input reference set selectors](input-reference-set-selector) to be refreshed if they show the entity of the deleted object(s).
+If the microflow is called from the client, the deletion is not reflected in the client if Refresh in client is set to *No*. If Refresh in client is set to *Yes*, the deletion is reflected across the client, which includes reloading of relevant [data sources](data-sources).
 
 {{% alert type="info" %}}
 
-For [data views](data-view) and [input widgets](input-widgets), this setting behaves differently as of 7.19.0. For Mendix versions below 7.19.0, if this setting is set to *No*, data views showing the deleted object and input widgets showing its attributes are not refreshed (including their visibility and editability [conditions](conditions)). For version 7.19.0 and above, they are always refreshed.
+As of 7.19.0, deletions are always reflected in the client. [Data sources](data-sources) are only reloaded if Refresh in client is set to *Yes*.
 
 {{% /alert %}}
 

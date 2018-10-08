@@ -87,19 +87,19 @@ This property determines how input widgets are rendered if read-only.
 
 ## 5 Data Source Properties
 
-The data source determines which objects will be shown in the data view. For general information about data sources, see [Data Sources](data-sources).
+The data source determines which object will be shown in the data view. For general information about data sources, see [Data Sources](data-sources).
 
 ### 5.1 Type
 
-The data view supports the following types of data sources: context, microflow, and listen to widget.
+The data view supports the following types of data sources: context, microflow, and listen to widget. Whatever data source you select, the data view will allways return one single object.
 
-### 5.2 Other Properties
+### 5.2 Entity, Microflow, 'List widget'
 
 See the corresponding data source for specific properties:
 
-* [Context source](entity-path-source)
-* [Microflow source](microflow-source)
-* [Listen to widget source](listen-to-grid-source)
+* [Context source](entity-path-source) - either a page parameter or a surrounding data element
+* [Microflow source](microflow-source) - a datasource microflow returning only one object
+* [Listen to widget source](listen-to-grid-source) - any widget returning only one object
 
 ### 5.3 Use Schema
 

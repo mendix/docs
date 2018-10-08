@@ -200,7 +200,6 @@ developerportal:
     - "Deploy"
     - "Operate"
     - "Settings"
-    - "Company Admin"
     - "How-to's"
 deployment:
   space: "Deployment"

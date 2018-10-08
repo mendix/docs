@@ -1,6 +1,6 @@
 ---
 title: "Apps"
-category: "Company Admin"
+parent: "roles"
 menu_order: 30
 description: "Describes the options available to company administrators in a Mendix app."
 tags: ["Company","Admin","Developer Portal"]
@@ -13,7 +13,7 @@ A company admin can manage the following items in the **Apps** section:
 * Apps
 * Roles
 
-![](attachments/appsettings.jpg)
+![](attachments/companyadmin/appsettings.jpg)
 
 ## 2 Apps Tab
 
@@ -38,7 +38,7 @@ For more information, see [Roles Within the Company and Apps](/developerportal/g
 
 ## 4 Related Content
 
-* [Company Admin](index)
+* [Company Admin](companyadmin-overview)
 * [Company](company)
 * [Users](users)
 * [Nodes](nodes)

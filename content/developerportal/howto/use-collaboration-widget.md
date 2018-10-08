@@ -61,3 +61,25 @@ You can add as many email addresses as you like and email your app to colleagues
 ## 7 Configuring the Collaboration Widget
 
 **[CAN CONFIGURE WIDGET IN YOUR APP PROJECT]**
+
+
+
+
+
+Data source: same as 
+
+Project: 
+
+-App ID
+
+Advanced Configiuraion
+
+-these are here so you can configure them if you want, but you should not have to 
+
+Production
+
+-running production, dont want mobile view or edit, doesn't make sense
+
+-can switch normal share button off and on in production
+
+Call it with Feedback & Collaboration Widget?

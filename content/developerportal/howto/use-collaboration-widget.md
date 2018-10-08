@@ -60,4 +60,4 @@ You can add as many email addresses as you like and email your app to colleagues
 
 ## 7 Configuring the Collaboration Widget
 
-**[CAN CONFIGURE WIDGET IN YOUR APP PROJECT - CAN TRY? NEED INPUT FROM JELTE]**
+**[CAN CONFIGURE WIDGET IN YOUR APP PROJECT]**

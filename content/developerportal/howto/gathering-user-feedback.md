@@ -127,8 +127,8 @@ To find the list of the provided feedback items, follow these steps:
 ## 9 Related Content
 
 * [Collaborate](/developerportal/collaborate)
-* [Feedback](/developerportal/collaborate/feedback)
+* [Feedback](../collaborate/feedback)
 * [How to Manage Sprints and Stories](managing-your-application-requirements-with-mendix)
-* [Mendix Profile](/developerportal/general/mendix-profile)
+* [Mendix Profile](../general/mendix-profile)
 * [How to Provide Feedback on Mendix](feedback-mendix)
-* [Stories](/developerportal/collaborate/stories)
+* [Stories](../collaborate/stories)

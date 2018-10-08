@@ -144,10 +144,10 @@ For more information, see [Settings](/developerportal/settings) and [Security â€
 
 ## 5 Related Content
 
+* [Mendix Profile](mendix-profile)
 * [Company Admin](/developerportal/companyadmin)
 * [How to Deactivate and Activate Users](/developerportal/howto/deactivate-users)
 * [How to Delete, Deactivate, and Activate Apps](/developerportal/howto/delete-apps)
 * [How to Manage Company Roles and App Roles](/developerportal/howto/change-roles)
-* [Mendix Profile](mendix-profile)
 * [Settings](/developerportal/settings)
 * [Technical Contact](technical-contact)

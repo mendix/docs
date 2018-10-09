@@ -33,7 +33,7 @@ Once you are in feedback mode, you can click anywhere on the screen to leave a c
 
 ![](attachments/collab-widget/add-comment.png)
 
-And voila! Your feedback will go straight to the [Feedback](../collaborate/feedback) page of your app project in the Developer Portal. For more information, see the [Reviewing Feedback in the Developer Portal](gathering-user-feedback#reviewing) section of *How to Use the Mendix Feedback Widget*.
+And voila! A screenshot is created automatically of the current page, which you can choose to attach to your feedback. After clicking **Send**, your feedback will go straight to the [Feedback](../collaborate/feedback) page of your app project in the Developer Portal. For more information, see the [Reviewing Feedback in the Developer Portal](gathering-user-feedback#reviewing) section of *How to Use the Mendix Feedback Widget*.
 
 ## 4 Editing
 
@@ -60,26 +60,8 @@ You can add as many email addresses as you like and email your app to colleagues
 
 ## 7 Configuring the Collaboration Widget
 
-**[CAN CONFIGURE WIDGET IN YOUR APP PROJECT]**
+You can configure the widget for certain actions in your app project (for example, to allow screenshots, to hide the Mendix logo, and to hide the **Share** button. All the properties are explained in the properties dialog box for the widget:
 
+**[UPDATE SCREENSHOT]**
 
-
-
-
-Data source: same as 
-
-Project: 
-
--App ID
-
-Advanced Configiuraion
-
--these are here so you can configure them if you want, but you should not have to 
-
-Production
-
--running production, dont want mobile view or edit, doesn't make sense
-
--can switch normal share button off and on in production
-
-Call it with Feedback & Collaboration Widget?
+![](attachments/collab-widget/widget-properties.png)

@@ -313,7 +313,7 @@ The **ScoreSimilarity** action returns an object of entity type *LeonardoMachine
 |SecondVectorId|id|The id of the vector which is in the top *numSimilarVectors* matches with *FirstVectorId*|
 |Score||A score between -1 and 1 indicating how similar the vectors are|
 
-<a name="scoresimilarity-example"><\a>**Example**
+<a name="scoresimilarity-example"></a>**Example**
 
 You have three vectors, *v0*, *v1*, and *v2*, containing the following values: [1.0, 2.0, 3.0, 4.0], [5.0, 6.0, 7.0, 8.0], and [1.0, 2.1, 3.1, 4.0]. In this case the JSON needs to be constructed as shown in the example, below.
 

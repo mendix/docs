@@ -1,7 +1,7 @@
 ---
 title: "Mendix Cloud V4 - FAQ"
 category: "Mendix Cloud"
-tags: ["Cloud", "Mendix Cloud", "V4", "Version 4", "FAQ", "V3"]
+tags: ["Cloud", "Mendix Cloud", "V4", "Version 4", "FAQ", "V3", "AWS", "Amazon Web Services"]
 ---
 
 ## 1 What Is Mendix Cloud v4?

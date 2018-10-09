@@ -354,31 +354,9 @@ An object of entity type *LeonardoMachineLearning.Translation*. This must be ass
 |**TargetLanguagesValue**|One or more objects containing a target language for the translation|
 |Value|A target language for the translation, identified by a two character string (e.g. 'en' for English)|
 
-**================================**
+For example, to translate the two texts *Hello* and *Goodbye* from English to both Spanish and German, you need to create objects as shown below:
 
-For each vector in *VectorSets*, ScoreSimilarity will return the best *numSimilarVectors* comparisons.
-
-**VectorSets** must be a string in JSON format which contains an array of vectors called *0*, each containing an identifier and an array of values. It is also possible to compare two sets of vectors. More information is in the API documentation here: [Inference Service For Similarity Scoring](https://api.sap.com/api/similarity_scoring_api/resource).
-
-
-For example, to compare three vectors: [1.0, 2.0, 3.0, 4.0], [5.0, 6.0, 7.0, 8.0], and [1.0, 2.1, 3.1, 4.0] the JSON should be constructed as shown in the example, below.
-
-```json
- {
- 	"0": [{
- 		"id": "v0",
- 		"vector": [1.0, 2.0, 3.0, 4.0]
- 	}, {
- 		"id": "v1",
- 		"vector": [5.0, 6.0, 7.0, 8.0]
- 	}, {
- 		"id": "v2",
- 		"vector": [1.0, 2.1, 3.1, 4.0]
- 	}]
- }
-```
-
-If *numSimilarVectors* is set to *1* then the action will return just the best similarity score for each vector, and the id of the vector to which it refers.
+![Translate output domain model](attachments/sap-leonardo-connector/translate-example.png)
 
 *Limitations*
 
@@ -388,17 +366,18 @@ Passing the *key* value is not supported.
 
 **Output**
 
-The **ScoreSimilarity** action returns an object of entity type *LeonardoMachineLearning.SimilarityScoringResponse*.
+The **Translate** action returns an object of entity type *LeonardoMachineLearning.TranslationResponse*.
 
 ![Translate output domain model](attachments/sap-leonardo-connector/translate-output.png)
 
 |Entity/Attribute|Leonardo Equivalent|Description|
 |---|---|---|
-|**SimilarityScoringResponse**||One object which is the parent for the scores|
-|**SimilarVectorsScore**|similarVectors|One object per comparison|
-|FirstVectorId|id|The id of the vector being compared|
-|SecondVectorId|id|The id of the vector which is in the top *numSimilarVectors* matches with *FirstVectorId*|
-|Score||A score between -1 and 1 indicating how similar the vectors are|
+|**TranslationResponse**||One object which is the parent for the translations|
+|SourceLanguage||The code indicating the language of the original text|
+|**TranslationResponseResult**|translations|One object per text/target language|
+|TargetLanguage|language|The code indicating the target language of this translated text|
+|OriginalText||The original text to be translated|
+|TargetText|value|The text in the target language|
 
 ## 5 Binding SAP Leonardo Machine Learning Foundation Services to Your App
 

@@ -23,7 +23,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Create an app containing a working application model
 
-## 3 Leaving Feedback on an App
+## 3 Submitting Feedback on an App
 
 When you click the **Feedback** icon, the platform first checks if you are signed in. If you are already signed in, you will be in **Feedback Mode** right away. If you are not signed in, you will need to either **Sign in to Mendix** or **Continue as a guest** to enter the feedback mode:
 
@@ -35,11 +35,11 @@ Once you are in feedback mode, you can click anywhere on the screen to leave a c
 
 And voila! A screenshot is created automatically of the current page, which you can choose to attach to your feedback. After clicking **Send**, your feedback will go straight to the [Feedback](../collaborate/feedback) page of your app project in the Developer Portal. For more information, see the [Reviewing Feedback in the Developer Portal](gathering-user-feedback#reviewing) section of *How to Use the Mendix Feedback Widget*.
 
-## 4 Editing
+## 4 Editing an App
 
 Clicking the **Edit** icon opens the app page in the Web Modeler. If you have permissions to edit the app, you can start editing and collaborating right away!
 
-## 5 Phone Icon
+## 5 Viewing an App
 
 When you click the **Mobile view**  icon, a pop-up window is displayed that enables viewing your app on a mobile device:
 
@@ -49,7 +49,7 @@ You can access this mobile view by installing the [Mendix mobile app](https://pl
 
 For more information, see [Getting the Mendix Mobile App](/refguide/getting-the-mendix-app) and [Developing Hybrid Mobile Apps](/refguide/developing-hybrid-mobile-apps).
 
-## 6 Sharing
+## 6 Sharing an App
 
 When you click the **Share** icon on the widget, a pop-up window appears for sharing your app via **Email**:
 

@@ -1,14 +1,14 @@
 ---
-title: "Use the Mendix Collaboration Widget"
+title: "Use the Mendix Feedback & Collaboration Widget"
 category: "How-To's"
 menu_order: 65
-description: "Describes how to use the Mendix Collaboration Widget for providing feedback, editing, and sharing apps."
+description: "Describes how to use the Mendix Feedback & Collaboration Widget for providing feedback, editing, and sharing apps."
 tags: ["Collaboration","Widget","Developer Portal", "Event App"]
 ---
 
 ## 1 Introduction
 
-The Mendix Collaboration Widget enables you to collaborate more easily and quickly then ever before when developing an app project. With this widget, you make use of the fully integrated Mendix app feedback cycle as well as access editing capabilities in the Web Modeler, check out a mobile view of the app, and easily share the app via email.
+The Mendix Feedback & Collaboration Widget enables you to collaborate more easily and quickly then ever before when developing an app project. With this widget, you make use of the fully integrated Mendix app feedback cycle as well as access editing capabilities in the Web Modeler, check out a mobile view of the app, and easily share the app via email.
 
 ![](attachments/collab-widget/widget.png)
 
@@ -58,7 +58,7 @@ When you click the **Share** icon on the widget, a pop-up window appears for sha
 
 You can add as many email addresses as you like and email your app to colleagues for further collaboration and feedback.
 
-## 7 Configuring the Collaboration Widget
+## 7 Configuring the Feedback & Collaboration Widget
 
 You can configure the widget for certain actions in your app project (for example, to allow screenshots, to hide the Mendix logo, and to hide the **Share** button. All the properties are explained in the properties dialog box for the widget:
 

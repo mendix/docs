@@ -136,16 +136,15 @@ In your integrations you have the following type of documents:
 
 | Event Type                                | Prefix |
 |-------------------------------------------|--------|
-| Consumed web service opeation microflow   | CWS\_  |
+| Consumed web service operation microflow  | CWS\_  |
 | Published web service operation microflow | PWS\_  |
 | Published app service operation microflow | PAS\_  |
-| Published rest service operation microflow| PRS\_  |
+| Published REST service operation microflow| PRS\_  |
 | Import mapping                            | X2D\_  |
 | Export mapping                            | D2X\_  |
 | XML schema                                | XML\_  |
-| JSON Structure                            | JSON\_ |
+| JSON structure                            | JSON\_ |
 | Deeplink                                  | DL\_   |
-
 
 ### 3.6 Scheduled Events
 

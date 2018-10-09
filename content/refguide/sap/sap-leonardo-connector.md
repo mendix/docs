@@ -158,7 +158,7 @@ The **DetectFace** action returns a list of objects of entity type *LeonardoMach
 
 ### 4.4 DetectTopic
 
-This implements the [**Inference Service for Topic Detection (topic-detection)**](https://api.sap.com/api/image_classification_api/resource) service of SAP Leonardo Machine Learning Foundation. It detects and ranks topics in the input documents. A description of the service can be found on the SAP site here: [Inference Service for Topic Detection](https://help.sap.com/viewer/f09b2311283b4f32a44e106729e11412/1.0/en-US/c90b3a5861f94adbba102164203d5a4b.html). At least two documents must be submitted.
+This implements the [**Inference Service for Topic Detection (topic-detection)**](https://api.sap.com/api/topic_detection_api/resource) service of SAP Leonardo Machine Learning Foundation. It detects and ranks topics in the input documents. A description of the service can be found on the SAP site here: [Inference Service for Topic Detection](https://help.sap.com/viewer/f09b2311283b4f32a44e106729e11412/1.0/en-US/c90b3a5861f94adbba102164203d5a4b.html). At least two documents must be submitted.
 
 ![DetectTopic action](attachments/sap-leonardo-connector/detect-topic-input.png)
 
@@ -313,7 +313,7 @@ The **ScoreSimilarity** action returns an object of entity type *LeonardoMachine
 |SecondVectorId|id|The id of the vector which is in the top *numSimilarVectors* matches with *FirstVectorId*|
 |Score||A score between -1 and 1 indicating how similar the vectors are|
 
-<a name="scoresimilarity-example><\a>**Example**
+<a name="scoresimilarity-example"><\a>**Example**
 
 You have three vectors, *v0*, *v1*, and *v2*, containing the following values: [1.0, 2.0, 3.0, 4.0], [5.0, 6.0, 7.0, 8.0], and [1.0, 2.1, 3.1, 4.0]. In this case the JSON needs to be constructed as shown in the example, below.
 

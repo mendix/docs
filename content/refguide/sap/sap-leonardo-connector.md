@@ -194,7 +194,7 @@ The **DetectTopic** action returns an object of entity type *LeonardoMachineLear
 |**TopicDetectionResponse**||The object returned by the action|
 |**TopicDetectionResult**||One object per document provided for inference
 |DocumentName|docName|Name of the file provided for inference|
-|**TransactionDetectionValue**|n/a (implicit in the order of the values)|One object per topic detected|
+|**TopicDetectionValue**|n/a (implicit in the order of the values)|One object per topic detected|
 |Topic||A number identifying the topic inferred|
 |Score||The 'distance' between the topic *vector* and that of the document|
 |**TopicKeywords**|keywords|One object per keyword|

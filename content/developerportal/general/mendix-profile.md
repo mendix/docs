@@ -8,13 +8,9 @@ tags: ["profile", "Developer Portal", "settings", "badge," "point", "connection"
 
 ## 1 Introduction
 
-**[VERIFY NAMING: Profile, MxProfile, Mendix Profile, Community Profile, Developer Profile]**
-
 Your Mendix Profile is your main point of contact with members of the Mendix community, as it displays your activities on the Mendix Platform as well as details about your background. There are plenty of ways to get more involved with the Mendix community, and your profile is the best place to start!
 
 To access your Mendix Profile, hover over your picture on the right side of the Developer Portal navigation bar and select **My Profile** from the context menu.
-
-**[VERIFY LINK NAME CHANGE - My Profile?]**
 
 ## 2 Header
 
@@ -36,19 +32,23 @@ To see all of your badges as well as the badges you can work towards, click **Vi
 
 ## 5 Challenges
 
-The **Challenge** card presents a featured challenge you can complete on the Mendix Platform to gain credits. Once you complete a challenge, you can claim the credits and use them in the MxShop. Challenges are not only about keeping engaged with the platform and exploring new challenges, but picking up some swag in the process!
+The **Challenge** card presents a featured challenge you can complete on the Mendix Platform to gain credits. Once you complete a challenge, you can claim the credits and use them in the Mendix Shop. Challenges are not only about keeping engaged with the platform and exploring new challenges, but picking up some swag in the process!
 
-**[UPDATE SCREENSHOT]**
+**[GET SCREENSHOT OF REAL CHALLENGE]**
 
 ![](attachments/mendix-profile/challenges.png)
 
 <a name="credits"></a>Clicking **View all** will bring you to the **Challenges** tab of your profile, which gives you more details on your challenges. You can complete these activities in any order you like.
 
+**[GET SCREENSHOT OF REAL CHALLENGE]**
+
 ![](attachments/mendix-profile/challenge-example.png)
 
-On this tab, you can also click **Claim Credits** **[VERIFY BUTTON NAME, GET NEW SCREENSHOT; ALSO VERIFY SHOP NAME]** on your completed challenges to claim your credits, which you can use in the MxShop.
+On this tab, you can also click **Claim Credits** on your completed challenges to claim your credits, which you will be able to spend in the Mendix Shop.
 
-Completing your challenges and gaining credits is a great way to stay engaged with the Mendix community. And there are always new items available in the MxShop!
+![](attachments/mendix-profile/credits.png)
+
+Completing your challenges and gaining credits is a great way to stay engaged with the Mendix community. And the Mendix Shop will always have cool items for you to spend credits on!
 
 ## 6 Connections {#connections}
 
@@ -78,10 +78,6 @@ Clicking **View all** takes you to the **Leaderboards** page, which presents all
 To earn points and climb the leaderboards, start performing different activities in the Mendix community. For example, let's say you have some time to spare while your app is deploying. You get a cup of coffee and check out the [Mendix Forum](http://forum.mendix.com). One questions pops out because you came across a similar problem a few weeks back. You decide to help the community member and post an answer to their question. Not long after, the author marks your answer as accepted. Boom! 15 points right there.
 
 Check out the tables below for ways to earn points.
-
-**[NEED MAX POINTS PER DAY?]**
-
-**[VERIFY: ALL STILL ACCURATE/VALID]?**
 
 ### 7.1 Forum Points
 
@@ -128,8 +124,6 @@ These are points you can gain through activity in the [Mendix App Store](https:/
 
 ### 7.4 Community Points
 
-**[VERIFY: GET POINTS FOR COMPLETING MENDIX PROFILE? REMOVE "Add a review of Mendix to your profile"?]**
-
 | Activity                                                     | Points | Max. per Day |
 | ------------------------------------------------------------ | ------ | ------------ |
 | Be the winner of a Mendix Hackathon!                         | 300    | n/a          |
@@ -138,7 +132,6 @@ These are points you can gain through activity in the [Mendix App Store](https:/
 | Organize a [Mendix Meetup ](https://developers.mendix.com/)  | 100    | n/a          |
 | Complete your Mendix Profile                                 | 50     | n/a          |
 | Make your Mendix Profile public                              | 50     | n/a          |
-| Add a review of Mendix to your profile                       | 50     | n/a          |
 | Attend a Mendix Hackathon                                    | 50     | n/a          |
 | Successfully refer a friend to Mendix                        | 25     | n/a          |
 | Attend a Mendix Meetup                                       | 25     | n/a          |
@@ -147,15 +140,11 @@ These are points you can gain through activity in the [Mendix App Store](https:/
 | Invite a friend to Mendix                                    | 5      | 50           |
 | Have a user sign up via your referral URL                    | 5      | 50           |
 
-### 7.4.1 Authorizing GitHub Connection {#github}
-
-In order to receive Mendix points for your contributions to Mendix GitHub repositories (for example, [mendix / docs](https://github.com/mendix/docs)), you are required to authorize the connection to your GitHub profile. 
-
-**[HOW DO YOU DO THE ABOVE NOW?]**
+{{% alert type="info" %}}
+In order to receive Mendix points for your contributions to Mendix GitHub repositories (for example, [mendix / docs](https://github.com/mendix/docs)), you are required to authorize the connection to your GitHub profile. For more information, see the [Social](#social) section below.
+{{% /alert %}}
 
 ### 7.5 Learning Points
-
-**[WHAT IS THIS?: "Complete an online course on Getting Started", "Mark a lecture as completed in the Getting Started"; "Make contribution to the documentation" - HOW IS THAT DETERMINED VS SMALL AND LARGE?]**
 
 | Activity                                                     | Points | Max. per Day |
 | ------------------------------------------------------------ | ------ | ------------ |
@@ -164,14 +153,13 @@ In order to receive Mendix points for your contributions to Mendix GitHub reposi
 | Give a presentation on Mendix                                | 25     | n/a          |
 | Write a blog post that is featured on the Mendix [Community Blog](https://developers.mendix.com/community-blog/) | 25     | n/a          |
 | Pass the [Rapid Developer Certification](https://gettingstarted.mendixcloud.com/link/certification/rapid) exam | 25     | n/a          |
-| Complete an online course on Getting Started                 | 25     | n/a          |
+| Complete a learning path in the [Mendix Academy](https://gettingstarted.mendixcloud.com/link/home) | 25     | n/a          |
 | Make a large contribution to the [Mendix documentation](https://docs.mendix.com/) | 15     | n/a          |
 | Attend a [Mendix webinar](https://gettingstarted.mendixcloud.com/link/webinar) | 10     | n/a          |
-| Make contribution to the documentation                       | 10     | n/a          |
 | Attend the [Advanced Developer Classroom](https://gettingstarted.mendixcloud.com/link/classroom/advanced) course | 10     | n/a          |
 | Attend the [Rapid Developer Classroom](https://gettingstarted.mendixcloud.com/link/classroom/rapid) course | 10     | n/a          |
-| Make a small contribution to the documentation               | 5      | n/a          |
-| Mark a lecture as completed in the Getting Started           | 1      | n/a          |
+| Make a small contribution to the Mendix documentation        | 5      | n/a          |
+| Complete a unit in the Mendix Academy                        | 1      | n/a          |
 
 {{% alert type="info" %}}
 
@@ -200,8 +188,6 @@ When you earn enough points, you gain a level:
 
 The **Portfolio** card presents a selection of Mendix app projects you have worked on. Click the project name to see more details about it (including a description of the app, business need, solution, results, and collaborators), or click **View all projects** to be taken to the  **Portfolio** tab, which presents a complete view of all your projects. 
 
-**[UPDATE SCREENSHOT]**
-
 ![](attachments/mendix-profile/portfolio.png)
 
 To add a project to your portfolio, click **Add Project**, which will open the project editor. There are tips in the editor for what you should enter in each field. All of the fields in the project editor must be filled out before submitting the project.
@@ -213,6 +199,8 @@ If you cannot finish your project or do not want to publish it right away, click
 ## 9 Activity
 
 On the **Activity** tab, you can see a list of the most important public events for which you have gained Mendix points.
+
+**[FINISH]**
 
 ## 10 Edit Mode {#editing}
 
@@ -228,12 +216,14 @@ There is also a link to [Mendix Support](https://support.mendix.com/hc/en-us) if
 
 In this section, you can tell the Mendix community about yourself and your work experience by stating if you are **Looking for** a job or a project and by selecting your areas of **Industry Experience** and **Skills**.
 
+**[FIX SCREENSHOT]**
+
 {{% image_container width="500" %}}![](attachments/mendix-profile/work-experience.png)
 {{% /image_container %}}
 
-### 10.3 Social
+### 10.3 Social {#social}
 
-Here you can add your social profiles for **GitHub**, **Meetup**, **Twitter**, **LinkedIn**, and **Skype**.
+Here you can connect  your social accounts for **GitHub**, **Meetup**, **Twitter**, **LinkedIn**, and **Skype**.
 
 ### 10.4 Security
 

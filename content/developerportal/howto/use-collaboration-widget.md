@@ -43,6 +43,8 @@ Clicking the **Edit** icon opens the app page in the Web Modeler. If you have pe
 
 When you click the **Mobile view**  icon, a pop-up window is displayed that enables viewing your app on a mobile device:
 
+**[UPDATE SCREENSHOT]**
+
 ![](attachments/collab-widget/view-app.png)
 
 You can access this mobile view by installing the [Mendix mobile app](https://play.google.com/store/apps/details?id=com.mendix.SprintrMobile) and then scanning the QR code in the pop-up window.

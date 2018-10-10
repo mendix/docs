@@ -200,9 +200,39 @@ If you cannot finish your project or do not want to publish it right away, click
 
 On the **Activity** tab, you can see a list of the most important public events for which you have gained Mendix points.
 
-**[FINISH]**
+You can also view details in the following sections.
 
-## 10 Edit Mode {#editing}
+### 9.1 Latest Messages
+
+In this section, you can see all the notifications from [Buzz](../developerportal/general#buzz) of which you are a part (for example, when your colleague has created an app or added a new story).
+
+### 9.2 Documents
+
+This section presents all of the documents  you have shared within different apps in the Developer Portal.
+
+### 9.3 Feedback
+
+**[ADD SCREENSHOT]**
+
+In this section, you can view feedback submitted on the following:
+
+* Apps of which you are an App Team member
+* Your company’s apps of which you are not an App Team member
+
+When you click **Details** for feedback on an app of which you are an App Team member, you can manage the feedback. For details on how to do this, see the [Processing Feedback in the Developer Portal](../howto/gathering-user-feedback#6-processing-feedback-in-the-developer-portal#processing) section of *How to Use the Mendix Feedback Widget*.
+
+### 9.4 Team Server
+
+Changes made through the Desktop Modeler are stored in the Mendix Team Server. This section provides an overview of the revisions you have committed.
+
+### 9.5 Pending Invites
+
+In this section, you can view the invitations you have sent and received. There are two types of invitations:
+
+* Project invitation – an invitation to join an App Team to work on an app project
+* App invitation – an invitation to join an app project as a user
+
+## 10 Settings {#editing}
 
 You can easily edit the information on your Mendix Profile by clicking the **Settings** cog icon. The settings page has a sidebar menu that allows you to edit the sections described below.
 
@@ -275,9 +305,8 @@ To make your public profile private again, click **Make this profile private**.
 
 * [Company Admin Overview](companyadmin-overview)
 * [How to Deactivate and Activate Users](../howto/deactivate-users)
-* [Feedback](../collaborate/feedback)
-* [How to Manage Company Roles and App Roles](../howto/change-roles)
-* [Mendix Platform SDK](/apidocs-mxsdk/mxsdk)
-* [How to Provide Feedback on Mendix](../howto/feedback-mendix)
 * [Roles Within the Company and Apps](../general/roles)
+* [How to Manage Company Roles and App Roles](../howto/change-roles)
+* [Feedback](../collaborate/feedback)
 * [How to Use the Mendix Feedback Widget](../howto/gathering-user-feedback)
+* [How to Provide Feedback on Mendix](../howto/feedback-mendix)

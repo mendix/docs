@@ -33,7 +33,11 @@ Once you are in feedback mode, you can click anywhere on the screen to leave a c
 
 ![](attachments/collab-widget/add-comment.png)
 
-And voila! A screenshot is created automatically of the current page, which you can choose to attach to your feedback. After clicking **Send**, your feedback will go straight to the [Feedback](../collaborate/feedback) page of your app project in the Developer Portal. For more information, see the [Reviewing Feedback in the Developer Portal](gathering-user-feedback#reviewing) section of *How to Use the Mendix Feedback Widget*.
+And voila! A screenshot is created automatically of the current page, which you can choose to attach to your feedback. After clicking **Send**, your feedback will go straight to the [Feedback](../collaborate/feedback) page of your app project in the Developer Portal. For more information, see [Feedback](../collaborate/feedback).
+
+When you are done leaving feedback, you need to exit the feedback mode by clicking this button:
+
+![](attachments/collab-widget/exit.png)
 
 ## 4 Editing an App
 
@@ -42,8 +46,6 @@ Clicking the **Edit** icon opens the app page in the Web Modeler. If you have pe
 ## 5 Viewing an App
 
 When you click the **Mobile view**  icon, a pop-up window is displayed that enables viewing your app on a mobile device:
-
-**[UPDATE SCREENSHOT]**
 
 ![](attachments/collab-widget/view-app.png)
 
@@ -63,7 +65,5 @@ You can add as many email addresses as you like and email your app to colleagues
 ## 7 Configuring the Feedback & Collaboration Widget
 
 You can configure the widget for certain actions in your app project (for example, to allow screenshots, to hide the Mendix logo, and to hide the **Share** button. All the properties are explained in the properties dialog box for the widget:
-
-**[UPDATE SCREENSHOT]**
 
 ![](attachments/collab-widget/widget-properties.png)

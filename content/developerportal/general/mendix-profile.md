@@ -34,17 +34,11 @@ To see all of your badges as well as the badges you can work towards, click **Vi
 
 The **Challenge** card presents a featured challenge you can complete on the Mendix Platform to gain credits. Once you complete a challenge, you can claim the credits and use them in the Mendix Shop. Challenges are not only about keeping engaged with the platform and exploring new challenges, but picking up some swag in the process!
 
-**[GET SCREENSHOT OF REAL CHALLENGE]**
-
 ![](attachments/mendix-profile/challenges.png)
 
 <a name="credits"></a>Clicking **View all** will bring you to the **Challenges** tab of your profile, which gives you more details on your challenges. You can complete these activities in any order you like.
 
-**[GET SCREENSHOT OF REAL CHALLENGE]**
-
-![](attachments/mendix-profile/challenge-example.png)
-
-On this tab, you can also click **Claim Credits** on your completed challenges to claim your credits, which you will be able to spend in the Mendix Shop.
+When you complete a challenge, click **Claim Credits** to claim the Mendix credits which you will be able to spend in the Mendix Shop.
 
 ![](attachments/mendix-profile/credits.png)
 
@@ -212,18 +206,22 @@ This section presents all of the documents  you have shared within different app
 
 ### 9.3 Feedback
 
-**[ADD SCREENSHOT]**
+{{% image_container width="500" %}}![](attachments/mendix-profile/feedback.png)
+{{% /image_container %}}
 
 In this section, you can view feedback submitted on the following:
 
 * Apps of which you are an App Team member
 * Your company’s apps of which you are not an App Team member
 
-When you click **Details** for feedback on an app of which you are an App Team member, you can manage the feedback. For details on how to do this, see the [Processing Feedback in the Developer Portal](../howto/gathering-user-feedback#6-processing-feedback-in-the-developer-portal#processing) section of *How to Use the Mendix Feedback Widget*.
+When you click **Details** for feedback on an app of which you are an App Team member, you can manage the feedback. For details on how to do this, see [Feedback](../collaborate/feedback).
 
 ### 9.4 Team Server
 
 Changes made through the Desktop Modeler are stored in the Mendix Team Server. This section provides an overview of the revisions you have committed.
+
+{{% image_container width="500" %}}![](attachments/mendix-profile/team-server.png)
+{{% /image_container %}}
 
 ### 9.5 Pending Invites
 
@@ -246,7 +244,7 @@ There is also a link to [Mendix Support](https://support.mendix.com/hc/en-us) if
 
 In this section, you can tell the Mendix community about yourself and your work experience by stating if you are **Looking for** a job or a project and by selecting your areas of **Industry Experience** and **Skills**.
 
-**[FIX SCREENSHOT]**
+{{% todo %}}**[FIX SCREENSHOT]**{{% /todo %}}
 
 {{% image_container width="500" %}}![](attachments/mendix-profile/work-experience.png)
 {{% /image_container %}}

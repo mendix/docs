@@ -10,7 +10,7 @@ The Developer Portal [home.mendix.com](http://home.mendix.com) is the platform f
 
 The Developer Portal consists of the sections described below.
 
-### 1.1 Buzz
+### 1.1 Buzz {#buzz}
 
 In the company **Buzz**, you can communicate with the users in your company.
 

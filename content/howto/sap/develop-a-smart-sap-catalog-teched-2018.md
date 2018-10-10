@@ -774,15 +774,15 @@ This will deploy your app to SAP Cloud Platform.
 
 ### 13.2 Configuring Your App
 
-Because this is the first time you have deployed your app, there are a couple of items which need to be configured from within the SAP Cloud Platform Cockpit.
+Because this is the first time you have deployed your app, there are a couple of items which need to be configured from within the SAP Cloud Platform cockpit.
 
 #### 13.2.1 Configuring Single Sign On
 
 No users have been given access to your app, so you need to add them.
 
-1.  Return to the browser tab with the SAP Cloud Platform Cockpit open. If you have this, jump to step 4.
+1.  Return to the browser tab with the SAP Cloud Platform cockpit open. If you have this, jump to step 4.
 
-1. Open the SAP Cloud Platform Cockpit here: https://account.hanatrial.ondemand.com/cockpit.
+1. Open the SAP Cloud Platform cockpit here: https://account.hanatrial.ondemand.com/cockpit.
 
 1. Log On with your student credentials, if required.
 
@@ -925,7 +925,7 @@ You can now view your app running in SAP Cloud Platform and confirm that the SAP
 
     OR  
 
-    Click the URL in the SAP Cloud Platform Cockpit when the application status is **Started.**
+    Click the URL in the SAP Cloud Platform cockpit when the application status is **Started.**
     
     ![](attachments/develop-a-smart-sap-catalog-teched-2018/media/image113.png)
 

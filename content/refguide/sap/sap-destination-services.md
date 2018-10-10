@@ -8,7 +8,7 @@ tags: ["SAP", "OData Connector", "Destination Services", "Cloud Connector"]
 
 ## 1 Introduction
 
-SAP Destination Services enables your Mendix app to use services defined in the SAP Cloud Platform Cockpit without needing to know all the technical details of the endpoint.
+SAP Destination Services enables your Mendix app to use services defined in the SAP Cloud Platform cockpit without needing to know all the technical details of the endpoint.
 
 In particular, it enables you to access services which use a different Identity Provider (IDP) from the one you are using for your Mendix App.
 
@@ -18,9 +18,9 @@ Destination Services will only provide the correct information when run on SAP C
 
 ## 2 Destination Services Configuration
 
-Your Mendix app will use destinations which are configured as part of your SAP subaccount. From your SAP Cloud Platform Cockpit, you can see which destinations have been configured.
+Your Mendix app will use destinations which are configured as part of your SAP subaccount. From your SAP Cloud Platform cockpit, you can see which destinations have been configured.
 
-![SAP Cloud Platform Cockpit - Destinations screen](attachments/sap-destination-services/sap-cockpit-destinations.png)
+![SAP Cloud Platform cockpit - Destinations screen](attachments/sap-destination-services/sap-cockpit-destinations.png)
 
 It is not the aim of this document to explain how to configure destinations. For this you need to see the SAP documentation here: [SAP Cloud Platform Connectivity: Destinations](https://help.sap.com/viewer/cca91383641e40ffbe03bdc78f00f681/Cloud/en-US/e4f1d97cbb571014a247d10f9f9a685d.html).
 
@@ -38,7 +38,7 @@ The **Get Destination** action properties look like this:
 
 ![Get Destination properties dialog](attachments/sap-destination-services/get-destination-properties.png)
 
-**Destination** is a string containing the name of the destination. This matches the name of the destination as set up in the SAP Cloud Platform Cockpit.
+**Destination** is a string containing the name of the destination. This matches the name of the destination as set up in the SAP Cloud Platform cockpit.
 
 **Variable** is the name of the object of type *SAPODataConnector.Destination* where the details of the destination will be stored.
 
@@ -62,7 +62,7 @@ This is a free text description of this destination.
 
 #### 5.1.3 ProtocolType
 
-This identifies the type of Hypertext Transfer Protocol being used. it corresponds to the **Type** field in the SAP Cloud Platform Cockpit. The possible values are
+This identifies the type of Hypertext Transfer Protocol being used. it corresponds to the **Type** field in the SAP Cloud Platform cockpit. The possible values are
 
 * HTTP
 * HTTPS
@@ -178,7 +178,7 @@ If Get Destination fails, check the following:
 
 *	The destination name is exactly as shown in the destinations page of your subaccount on SAP Cloud Platform
 *	The user accessing the Mendix App is also authenticated on the service you are trying to use. The usernames (email addresses) must be the same.
-*	That the destination has been set up correctly in the SAP Cloud Platform Cockpit.
+*	That the destination has been set up correctly in the SAP Cloud Platform cockpit.
 
 Remember that Destination Services will only work when deployed to SAP Cloud Platform, with users who are authenticated using an Identity Provider configured through SAP and XSUAA.
 

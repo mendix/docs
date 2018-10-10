@@ -398,7 +398,7 @@ The following sections describe how to bind a ML Foundation Service to your app.
 
 The ML Foundation Trial is not added automatically to your quota. Therefore, you need to add it manually.
 
-1. Go to the SAP Cloud Platform Cockpit for your account.
+1. Go to the SAP Cloud Platform cockpit for your account.
 
 2. Choose the **Entitlements** and choose the *ML Foundation Trial* entitlement.
 

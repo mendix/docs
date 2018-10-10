@@ -281,7 +281,7 @@ You will be asked to confirm that this environment should be removed. You will a
 ![](attachments/sap-cloud-platform/delete-environment.png)
 
 {{% alert type="info" %}}
-If you do not select **Remove resources** in this dialog, the resources will be left in the SAP Cloud Portal. In this case, they can only be removed individually from within the SAP Cloud Platform Cockpit.
+If you do not select **Remove resources** in this dialog, the resources will be left in the SAP Cloud Portal. In this case, they can only be removed individually from within the SAP Cloud Platform cockpit.
 {{% /alert %}}
 
 #### 7.1.5 Change Development Mode
@@ -364,7 +364,7 @@ This will not stop the app and delete the deployment of the app in the SAP Cloud
 If you want to delete your app and all its resources, delete the environment and resources first before you leave the app via the Mendix Developer Portal.
 {{% /alert %}}
 
-You can still delete the app and its resources from the SAP Cloud Platform Cockpit, but you will then have to remove all the resources individually.
+You can still delete the app and its resources from the SAP Cloud Platform cockpit, but you will then have to remove all the resources individually.
 
 ## 9 Related Content
 

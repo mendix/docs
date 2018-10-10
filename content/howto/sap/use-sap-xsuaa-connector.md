@@ -118,7 +118,7 @@ To accomplish this, follow these steps:
 
 ## 5 Configuring the SAP Cloud Platform Subaccount
 
-Your app is configured to use an IdP. Now you need to configure the IdP and allocate users to roles. This is performed in the [SAP Cloud Platform Cockpit](https://account.hana.ondemand.com/cockpit#/home/allaccounts).
+Your app is configured to use an IdP. Now you need to configure the IdP and allocate users to roles. This is performed in the [SAP Cloud Platform cockpit](https://account.hana.ondemand.com/cockpit#/home/allaccounts).
 
 {{% alert type="info" %}}
 
@@ -237,4 +237,4 @@ You can picture the authentication as shown below:
 * [Project Security](/refguide/project-security)
 * [SAP Cloud Platform XSUAA Connector](https://appstore.home.mendix.com/link/app/78091/)
 * [SAP XSUAA Connector](/refguide/sap/sap-xsuaa-connector)
-* [SAP Cloud Platform Cockpit](https://account.hana.ondemand.com/cockpit#/home/allaccounts)
+* [SAP Cloud Platform cockpit](https://account.hana.ondemand.com/cockpit#/home/allaccounts)

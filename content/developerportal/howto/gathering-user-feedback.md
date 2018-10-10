@@ -63,7 +63,7 @@ When a user is logged into the app, the **Feedback** button will appear on the r
 
 ![](attachments/collaborate/18580450.png)
 
-## 6 Processing Feedback in the Developer Portal
+## 6 Processing Feedback in the Developer Portal {#processing}
 
 Once you have received feedback, you and your team can process the feedback within the Developer Portal.
 

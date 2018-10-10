@@ -134,6 +134,14 @@ To use the hybrid app package, follow these steps:
 7.  Create the PhoneGap Build package by following the instructions in the **Through Uploading to PhoneGap Build** section of the [Mendix PhoneGap Build App Template documentation](https://github.com/mendix/hybrid-app-template#through-uploading-to-phonegap-build). Be sure to read the **Prerequisites** and **Build on PhoneGap** sections of this documentation as well. This is an overview of the steps:<br>
     a. Install [Node.js](https://nodejs.org/en/download/). <br>
     b. In the hybrid app root folder, execute **npm install**. <br>
+    {{% alert type="warning" %}}
+    
+    Not all versions of the `cordova-inappbrowser-plugin` will work correctly when implementing SSO for your hybrid app. In some versions the InAppBrowser page isn't always closed, causing the application to be opened in the InAppBrowser instead of the app. This can result in incorrect behavior, such as the camera not being able to be detected. To make sure the SSO implementation works correctly, we recommend using version `3.0.0` of the `cordova-inappbrowser-plugin`. You can check the version of the plugin that is used by opening *config.xml.mustache* file (under `src`) and look for the following line:
+    ```<plugin name="cordova-plugin-inappbrowser" source="npm" spec="1.4.0" />```
+    If needed, change the plugin version to `3.0.0` **before packaging your app**
+    ```<plugin name="cordova-plugin-inappbrowser" source="npm" spec="3.0.0" />```
+    
+    {{% /alert %}}
     c. In the hybrid app root folder execute **npm run package**.<br>
 
 8.  Create an APK or iOS package from the PhoneGap Build package. You can upload the new PhoneGap Build package (in the **dist** folder) to PhoneGap to build the APK or iOS binary.

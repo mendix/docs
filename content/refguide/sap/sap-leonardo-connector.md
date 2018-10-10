@@ -430,6 +430,6 @@ The ML Foundation Trial is not added automatically to your quota. Therefore, you
 
     ![Confirm instance creation](attachments/sap-leonardo-connector/create-instance.png)
 
-## 4 Related Content
+## 6 Related Content
 
 * [SAP Leonardo Machine Learning Foundation - Functional Services](https://api.sap.com/package/SAPLeonardoMLFunctionalServices)

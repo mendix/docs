@@ -14,13 +14,14 @@ To access your Mendix Profile, hover over your picture on the right side of the 
 
 ## 2 Header
 
-On the profile header, you can see your location, number of [connections](#connections), Mendix points, Mendix level, [credits ](#credits), and [badges](#badges). Other personal information is presented in the header as well as on the **Personal Info** card. This information can be easily edited to present accurate personal details, project roles, and skills you have gained. For all the details on editing your Mendix Profile, see the [Edit Mode](#editing) section below.
+On the profile header, you can see your location, number of [connections](#connections), Mendix points, Mendix level, [credits ](#credits), and [badges](#badges). Other personal information is presented in the header as well as on the **Personal Info** card. This information can be easily edited to present accurate personal details, project roles, and skills you have gained. For all the details on editing your Mendix Profile, see the [Settings](#settings) section below.
 
 ## 3 Overview
 
 Your profile will open to the **Overview** tab. The first profile card below the header presents your **Stats**. The chart and its legend display your points divided between various Mendix products and activities. When analyzing your points, be sure to also check out the [Leaderboard](#leaderboard) card on this tab to see the top Mendix community contributors!
 
-![](attachments/mendix-profile/stats.png)
+{{% image_container width="350" %}}![](attachments/mendix-profile/stats.png)
+{{% /image_container %}}
 
 ## 4 Badges {#badges}
 
@@ -28,19 +29,22 @@ In addition to the **Stats** chart, on the **Overview** tab you gain an overview
 
 To see all of your badges as well as the badges you can work towards, click **View all** to go to the **Badges** tab of your profile.
 
-![](attachments/mendix-profile/badges.png)
+{{% image_container width="350" %}}![](attachments/mendix-profile/badges.png)
+{{% /image_container %}}
 
 ## 5 Challenges
 
 The **Challenge** card presents a featured challenge you can complete on the Mendix Platform to gain credits. Once you complete a challenge, you can claim the credits and use them in the Mendix Shop. Challenges are not only about keeping engaged with the platform and exploring new challenges, but picking up some swag in the process!
 
-![](attachments/mendix-profile/challenges.png)
+{{% image_container width="350" %}}![](attachments/mendix-profile/challenges.png)
+{{% /image_container %}}
 
 <a name="credits"></a>Clicking **View all** will bring you to the **Challenges** tab of your profile, which gives you more details on your challenges. You can complete these activities in any order you like.
 
 When you complete a challenge, click **Claim Credits** to claim the Mendix credits which you will be able to spend in the Mendix Shop.
 
-![](attachments/mendix-profile/credits.png)
+{{% image_container width="350" %}}![](attachments/mendix-profile/credits.png)
+{{% /image_container %}}
 
 Completing your challenges and gaining credits is a great way to stay engaged with the Mendix community. And the Mendix Shop will always have cool items for you to spend credits on!
 
@@ -50,14 +54,16 @@ One of the greatest strengths of Mendix is our awesome developers community, and
 
 You can also see a list of people you may know so that you can add further connections to your profile. To connect with someone, click the plus icon, and an invitation will be sent.
 
-![](attachments/mendix-profile/connections.png)
+{{% image_container width="350" %}}![](attachments/mendix-profile/connections.png)
+{{% /image_container %}}
 
 Clicking **View All** on the card will bring you to the **Connections** tab of your profile. On this tab, you can invite friends and colleagues to Mendix in two ways:
 
 * **Share URL** – copy the personalized invite link and share it on your personal website, blog, and social media channels, or share it directly via specific social media
 * **Send invite** – send someone a Mendix invite by entering their email address and clicking **Send invite**
 
-![](attachments/mendix-profile/referral.png)
+{{% image_container width="500" %}}![](attachments/mendix-profile/referral.png)
+{{% /image_container %}}
 
 Once five of your referred users have signed up, you will see the **Claim your t-shirt** link. Click this to fill in some details and receive your awesome Mendix t-shirt!
 
@@ -230,7 +236,7 @@ In this section, you can view the invitations you have sent and received. There 
 * Project invitation – an invitation to join an App Team to work on an app project
 * App invitation – an invitation to join an app project as a user
 
-## 10 Settings {#editing}
+## 10 Settings {#settings}
 
 You can easily edit the information on your Mendix Profile by clicking the **Settings** cog icon. The settings page has a sidebar menu that allows you to edit the sections described below.
 

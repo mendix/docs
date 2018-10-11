@@ -57,7 +57,7 @@ For more information, see [Getting the Mendix Mobile App](/refguide/getting-the-
 
 When you click the **Share** icon on the widget, a pop-up window appears for sharing your app via **Email**:
 
-{{% image_container width="550" %}}![](attachments/collab-widget/share.png)
+{{% image_container width="450" %}}![](attachments/collab-widget/share.png)
 {{% /image_container %}}
 
 You can add as many email addresses as you like and email your app to colleagues for further collaboration and feedback.

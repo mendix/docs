@@ -14,7 +14,7 @@ tags: ["Developer Portal", "Cloud Environments", "Mendix Cloud", "SAP", "IBM", "
 * Several UX updates were made to Developer Portal pages:
   * The [My Apps](https://sprintr.home.mendix.com/link/myapps) page has been redesigned, and you can now toggle your app list views.
   * The **App** > **General** page has been redesigned.
-  * The [People](https://sprintr.home.mendix.com/link/people) overview has been redesigned. The same view on Mendix community members is available in the [Connections tab](/developerportal/general/mendix-profile#connections) of your Mendix Profile.
+  * The [People](https://developer.mendixcloud.com/link/people) overview has been redesigned. The same view on Mendix community members is available in the [Connections tab](/developerportal/general/mendix-profile#connections) of your Mendix Profile.
 
 ### October 1st, 2018
 

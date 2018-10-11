@@ -18,13 +18,11 @@ tags: ["Developer Portal", "Cloud Environments", "Mendix Cloud", "SAP", "IBM", "
 
 ### October 1st, 2018
 
-#### Improvements
-
-* **Web Modeler**
+#### Web Modeler Improvements
 
 The Web Modeler can now be enabled for all types of apps. You can do this on the **Settings** > **General** page of your app. If you have a licensed app, you will also need to choose your deployment environment.
 
-* **SAP OData Connector** version 4.0.0
+#### SAP OData Connector Version 4.0.0
 
 This version of the SAP OData Connector allows you to use the destination services of SAP Cloud Platform. This simplifies configuration, authentication and endpoint management when integrating your application, running in SAP Cloud Platform, with SAP backend services. See [SAP Destination Services](/refguide/sap/sap-destination-services).
 
@@ -36,17 +34,17 @@ The following authentication types are currently supported in SAP Destination Se
 
 The SAP OData Connector is included in the SAP starter apps and is also available in the App Store here: https://appstore.home.mendix.com/link/app/74525/.
 
-* **SAP Leonardo Machine Learning Foundation Connector** version 1.0.0
+#### SAP Leonardo Machine Learning Foundation Connector Version 1.0.0
 
 This new connector allows you to consume Leonardo Machine learning services from both API Business Hub and SAP Cloud Platform by adding activities to your Mendix model.
 
 The SAP Leonardo Machine Learning Foundation Connector is available in the App Store here: https://appstore.home.mendix.com/link/app/107221/.
 
-* **SAP Fiori styling**
+#### SAP Fiori Styling
 
 The existing SAP Blank starter app has been replaced by a new Fiori Blank starter app. This new Fiori Blank starter app has a new Fiori UI Package included. This is based on Atlas UI, which means that you can use either the Web Modeler or Desktop Modeler to build applications which give the Fiori UI experience. 
 
-* **SAP Cloud Deployment** version 3.5.2
+#### SAP Cloud Deployment Version 3.5.2
 
 We now configure Destination Service in the scope of XSUAA. This means that we add the uaa.user default scope to the destination instances in each new environment. This is needed to fetch the destination configuration.
 

@@ -32,7 +32,7 @@ These are the permissions of a Company Admin:
 
  ![](attachments/companyadmin/company-admin.png)
 
-For more details, see [Company Admin Overview](/developerportal/general/companyadmin).
+For more details, see [Company Admin Overview](/developerportal/general/companyadmin-overview).
 
 ### 2.2 Company Contact
 
@@ -145,7 +145,7 @@ For more information, see [Settings](/developerportal/settings) and [Security â€
 ## 5 Related Content
 
 * [Mendix Profile](mendix-profile)
-* [Company Admin Overview](/developerportal/general/companyadmin)
+* [Company Admin Overview](/developerportal/general/companyadmin-overview)
 * [How to Deactivate and Activate Users](/developerportal/howto/deactivate-users)
 * [How to Delete, Deactivate, and Activate Apps](/developerportal/howto/delete-apps)
 * [How to Manage Company Roles and App Roles](/developerportal/howto/change-roles)

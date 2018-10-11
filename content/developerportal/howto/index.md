@@ -75,7 +75,7 @@ This category contains documents about the use of specific tasks in the [Develop
 
 ## 7 Related Content
 
-* [Company Admin Overview](/developerportal/general/companyadmin)
+* [Company Admin Overview](/developerportal/general/companyadmin-overview)
 * [Collaborate](/developerportal/collaborate)
 * [Deploy](/developerportal/deploy)
 * [Develop](/developerportal/develop)

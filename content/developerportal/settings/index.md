@@ -69,14 +69,14 @@ The **Node Permissions** tab lets you view the team members that have the **App 
 For more information, see [Security-Node](/developerportal/settings/node-permissions).
 
 ## 4 API Keys
- 
+
 The **API Keys** page lists the existing API keys and lets you create new keys by clicking **Create API key**.
 
 For more information, see [API Keys](/developerportal/settings/api-key).
 
 ## 5 Related Content
 
-* [Company Admin Overview](/developerportal/general/companyadmin)
+* [Company Admin Overview](/developerportal/general/companyadmin-overview)
 * [How to Change Password Expiration](../howto/password-expiration)
 * [How to Configure Maintenance Windows](../howto/maintenance-windows)
 * [How to Deactivate and Activate Users](../howto/deactivate-users)
@@ -85,5 +85,5 @@ For more information, see [API Keys](/developerportal/settings/api-key).
 * [How to Receive Environment Status Alerts](../howto/receive-alerts)
 * [Mendix Profile](../general/mendix-profile)
 * [Roles Within the Company and Apps](../general/roles)
-* [Three Ways to Leave Your App](..l/general/leave-app)
+* [Three Ways to Leave Your App](../general/leave-app)
 * [Technical Contact](../general/technical-contact)

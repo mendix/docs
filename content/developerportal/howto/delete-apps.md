@@ -77,5 +77,5 @@ To activate an app in your company as a Company Admin, follow these steps:
 
 * [Roles Within the Company and Apps](/developerportal/general/roles)
 * [How to Manage Company Roles and App Roles](/developerportal/howto/change-roles)
-* [Company Admin Overview](/developerportal/general/companyadmin)
+* [Company Admin Overview](/developerportal/general/companyadmin-overview)
 * [Settings](/developerportal/settings)

@@ -36,7 +36,7 @@ To invite members, go to **Team**, click the **Invite Member** in the top-right 
 
 ## 3 Related Content
 
-* [Company Admin Overview](/developerportal/general/companyadmin)
+* [Company Admin Overview](/developerportal/general/companyadmin-overview)
 * [How to Deactivate and Activate Users](/developerportal/howto/deactivate-users)
 * [How to Manage Company Roles and App Roles](/developerportal/howto/change-roles)
 * [Roles Within the Company and Apps](/developerportal/general/roles)

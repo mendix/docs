@@ -143,7 +143,7 @@ You can find the **App Team** role settings by following these steps:
 
 ## 8 Related Content
 
-* [Company Admin Overview](/developerportal/general/companyadmin)
+* [Company Admin Overview](/developerportal/general/companyadmin-overview)
 * [How to Deactivate and Activate Users](/developerportal/howto/deactivate-users)
 * [How to Delete, Deactivate, and Activate Apps](/developerportal/howto/delete-apps)
 * [Security – Node Permissions](/developerportal/settings/node-permissions)

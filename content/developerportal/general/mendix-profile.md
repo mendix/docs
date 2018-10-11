@@ -116,7 +116,7 @@ These are points you can gain through activity in the [Mendix App Store](https:/
 | Deploy to a licensed node                                    | 1      | 5                   |
 | Deploy a Free App                                            | 1      | n/a                 |
 
-### 7.4 Community Points
+### 7.4 Community Points {#github}
 
 | Activity                                                     | Points | Max. per Day |
 | ------------------------------------------------------------ | ------ | ------------ |
@@ -198,7 +198,7 @@ You can also view details in the following sections.
 
 ### 9.1 Latest Messages
 
-In this section, you can see all the notifications from [Buzz](../developerportal/general#buzz) of which you are a part (for example, when your colleague has created an app or added a new story).
+In this section, you can see all the notifications from [Buzz](index#buzz) of which you are a part (for example, when your colleague has created an app or added a new story).
 
 ### 9.2 Documents
 

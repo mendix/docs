@@ -1,6 +1,6 @@
 ---
 title: "Users"
-category: "Company Admin"
+parent: "roles"
 menu_order: 20
 description: "Developer Portal Users"
 tags: ["Company","Admin","Developer Portal"]
@@ -14,7 +14,7 @@ A company admin can manage the following items in the **Users** category:
 * **Security Groups**
 * **Security History**
 
-![](attachments/usersettings.jpg)
+![](attachments/companyadmin/usersettings.jpg)
 
 ## 2 Users
 
@@ -56,7 +56,7 @@ A company admin can view all the changes made in the company on the **Security H
 
 ## 5 Related Content
 
-* [Company Admin](index)
+* [Company Admin Overview](companyadmin-overview)
 * [Company](company)
 * [Apps](apps)
 * [Nodes](nodes)

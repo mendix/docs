@@ -46,7 +46,7 @@ In **Community**, you can find documentation, forums, training, support, and muc
 
 ## 2 Documents in This Category
 
-* [Mendix Profile](mendixprofile)
+* [Mendix Profile](mendix-profile)
 * [Roles Within the Company and Apps](roles)
 * [Technical Contact](technical-contact)
 * [Three Ways to Leave Your App](leave-app)

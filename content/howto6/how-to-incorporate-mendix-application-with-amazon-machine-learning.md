@@ -1,6 +1,7 @@
 ---
 title: "How to Incorporate a Mendix Application with Amazon Machine Learning"
 category: "Extendability"
+tags: ["AWS", "Amazon Web Services"]
 ---
 
 ## 1 Introduction

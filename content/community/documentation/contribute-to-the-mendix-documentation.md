@@ -114,14 +114,14 @@ Make sure the image files comply with these naming conventions:
 
 As you add knowledge to the documentation that will help your fellow Mendix developers, for each contribution, you will gain Mendix points!
 
-Before you can receive Mendix points for your documentation contributions, you must authorize the connection of your GitHub profile to your Mendix Community Profile. For more information, see [How to Set Up Your Community Profile](../tools/how-to-set-up-your-profile#github).
+Before you can receive Mendix points for your documentation contributions, you must authorize the connection of your GitHub profile to your Mendix Community Profile. For more information, see the [Authorizing GitHub Connection](/developerportal/general/mendix-profile#github) section in *Mendix Profile*
 
 The amount of points you gain depends on the size of the documentation contribution you make. This is calculated per pull request and is based on the number of lines changed:
 
 * For a small contribution to the documentation – 5 points
 * For a large contribution to the documentation – 15 points
 
-The points are awarded when the pull request is merged. For more details on Mendix points, see the [Points System FAQ](https://developer.mendixcloud.com/link/faq).
+The points are awarded when the pull request is merged.
 
 ## 7 Related Content
 

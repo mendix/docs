@@ -1,6 +1,6 @@
 ---
 title: "Company"
-category: "Company Admin"
+parent: "roles"
 menu_order: 10
 description: "Describes the page that enables managing a company's details."
 tags: ["Company","Admin","Developer Portal"]
@@ -14,7 +14,7 @@ A company admin can manage the following items in the **Company** section:
 * **Company Settings**
 * **Launchpad Settings**
 
-![](attachments/companyprofile.jpg)
+![](attachments/companyadmin/companyprofile.jpg)
 
 ## 2 Company Profile
 
@@ -55,7 +55,7 @@ To see the current background image of your own company, go to the **Mendix Laun
 
 ## 6 Related Content
 
-* [Company Admin](index)
+* [Company Admin Overview](companyadmin-overview)
 * [Users](nodes)
 * [Apps](apps)
 * [Nodes](nodes)

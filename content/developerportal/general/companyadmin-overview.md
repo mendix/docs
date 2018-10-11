@@ -1,5 +1,7 @@
 ---
-title: "Company Admin"
+title: "Company Admin Overview"
+parent: "roles"
+menu_order: 05
 description: "Describes the options available to company administrators in a Mendix app."
 tags: ["Company","Admin","Developer Portal"]
 ---
@@ -39,7 +41,7 @@ Method #2:
 3. Click a company member.
 4. Click the company name.
 
-![](attachments/companycontact.jpg)
+![](attachments/companyadmin/companycontact.jpg)
 
 ## 3 Company Admin
 
@@ -62,7 +64,7 @@ A company admin can manage four categories of settings:
 * **Node** settings
   * View all company nodes
 
-![](attachments/companycategory.jpg)
+![](attachments/companyadmin/companycategory.jpg)
 
 A company admin can change the **Company settings** by following these steps:
 
@@ -70,7 +72,7 @@ A company admin can change the **Company settings** by following these steps:
 2. Click your avatar in the top-right of the screen.
 3. Click **Company Admin**.
 
-![](attachments/company-admin.png)
+![](attachments/companyadmin/company-admin.png)
 
 ## 4 Documents in This Category
 

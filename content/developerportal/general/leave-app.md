@@ -55,8 +55,8 @@ To leave and delete the app, click **Continue and delete app**.
 
 ## 3 Related Content
 
-* [Apps](/developerportal/companyadmin/apps)
-* [Company Admin](/developerportal/companyadmin)
+* [Apps](/developerportal/general/apps)
+* [Company Admin Overview](/developerportal/general/companyadmin)
 * [How to Deactivate and Activate Users](/developerportal/howto/deactivate-users)
 * [How to Delete, Deactivate, and Activate Apps](/developerportal/howto/delete-apps)
 * [General](/developerportal/settings/general-settings)

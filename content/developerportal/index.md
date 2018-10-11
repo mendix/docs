@@ -3,37 +3,33 @@ title: "Developer Portal"
 notoc: true
 ---
 
-## 1 Developer Portal
+## 1 Developer Portal 
 
-The [Mendix Developer Portal](https://home.mendix.com/) is a platform for Mendix developers to use to collaborate, deploy, and manage their apps, company, and users.
+The [Mendix Developer Portal](https://home.mendix.com/) is a where Mendix developers can collaborate, deploy, and manage their apps, company, and users.
 
-The Developer Portal consists of the sections described below.
+The Developer Portal consists of the header menu items described below.
 
-### 1.1 Buzz
+## 2 Buzz
 
-In the company **Buzz**, you can communicate with the users of your company.
+In the company **Buzz**, you can communicate with Mendix users in your company about the work on app projects.
 
-### 1.2 Apps
+## 3 Apps
 
 In **Apps**, you can find your nodes, sandboxes, and company's apps.
-After you select an app, you can [collaborate](/developerportal/collaborate), [develop](/developerportal/develop), [deploy](/developerportal/deploy), [operate](/developerportal/operate) the app with your App Team and manage its [settings](/developerportal/settings).
 
-For licensed apps, also see the [Deployment](/deployment) section.
+After you select an app, you can [collaborate](/developerportal/collaborate), [develop](/developerportal/develop), [deploy](/developerportal/deploy), and [operate](/developerportal/operate) the app with your App Team as well as manage its [settings](/developerportal/settings).
 
-### 1.3 People
+For more information on licensed apps, see the [Deployment](/deployment) documentation category.
+
+## 4 People
 
 In **People**, you can view the other members of your company.
 
-Learn more about [Roles Within the Company and Apps](/developerportal/general/roles).
+Learn more about Mendix users are distinguished in [Roles Within the Company and Apps](/developerportal/general/roles).
 
-### 1.4 App Store
-
-The **App Store** has modules, widgets, themes, and connectors that you can use to extend your app.
-
-### 1.5 Community
-
-In **Community**, you can find documentation, forums, trainings, support, and much more.
-
-## Links
+##5 Document Categories
 
 {{% category_block %}}
+
+
+

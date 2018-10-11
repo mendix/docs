@@ -6,6 +6,12 @@ tags: ["Developer Portal", "Cloud Environments", "Mendix Cloud", "SAP", "IBM", "
 
 ## 2018
 
+### October 11th, 2018
+
+#### Improvements
+
+* The Mendix Profile in the Developer Portal has been merged with the Community Profile. For more information, see [Mendix Profile](/developerportal/general/mendix-profile).
+
 ### October 1st, 2018
 
 #### Improvements
@@ -31,15 +37,15 @@ The SAP OData Connector is included in the SAP starter apps and is also availabl
 This new connector allows you to consume Leonardo Machine learning services from both API Business Hub and SAP Cloud Platform by adding activities to your Mendix model.
 
 The SAP Leonardo Machine Learning Foundation Connector is available in the App Store here: https://appstore.home.mendix.com/link/app/107221/.
- 
+
 * **SAP Fiori styling**
 
 The existing SAP Blank starter app has been replaced by a new Fiori Blank starter app. This new Fiori Blank starter app has a new Fiori UI Package included. This is based on Atlas UI, which means that you can use either the Web Modeler or Desktop Modeler to build applications which give the Fiori UI experience. 
- 
+
 * **SAP Cloud Deployment** version 3.5.2
 
 We now configure Destination Service in the scope of XSUAA. This means that we add the uaa.user default scope to the destination instances in each new environment. This is needed to fetch the destination configuration.
- 
+
 #### Breaking Changes
 
 * The new **SAP OData Connector** will break existing projects which are using the SAP Cloud Connector. The SAP OData Connector no longer supports the “Use Cloud Connector” attribute. This is now embedded in the destination service configuration. See [SAP Destination Services](/refguide/sap/sap-destination-services) for more details. 

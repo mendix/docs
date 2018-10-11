@@ -41,7 +41,7 @@ The data source determines which object will be shown in the data view. For gene
 In the **General** section, you can enable/disable the  following options:
 
 * Read-Only (disabled by default) – when enabled, all input widgets in the data view should be in read-only mode
-* Show Footer** option (enabled by default) – a footer is an area at the bottom of the document, usually containing information common for all pages, such as copyrights  
+* **Show Footer** option (enabled by default) – a footer is an area at the bottom of the document, usually containing information common for all pages, such as copyrights  
 
 ### 2.3 Design {#design-section-data-view}
 

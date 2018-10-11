@@ -244,8 +244,6 @@ There is also a link to [Mendix Support](https://support.mendix.com/hc/en-us) if
 
 In this section, you can tell the Mendix community about yourself and your work experience by stating if you are **Looking for** a job or a project and by selecting your areas of **Industry Experience** and **Skills**.
 
-{{% todo %}}**[FIX SCREENSHOT]**{{% /todo %}}
-
 {{% image_container width="500" %}}![](attachments/mendix-profile/work-experience.png)
 {{% /image_container %}}
 

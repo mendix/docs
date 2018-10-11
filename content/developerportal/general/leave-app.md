@@ -22,7 +22,11 @@ If you want to leave, delete, or deactivate your app, follow these steps:
 
 ### 2.1 Leaving the App with Team Members
 
-You can only leave an app when you are NOT the **Technical Contact**.
+{{% alert type="info" %}}
+
+Note that you cannot leave the app if you are the **Technical Contact** of the app.
+
+{{% /alert %}}
 
 After leaving, the app will still exist in the company and it will be available for other team members.
 

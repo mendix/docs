@@ -29,7 +29,13 @@ Before starting this how-to, make sure you have completed the following prerequi
 * To deactivate or delete an app, have the **SCRUM Master** role on your App Team
 * To activate an app, have the **Company Admin** role in your company
 
-## 3 Deleting or Deactivating an App
+{{% alert type="info" %}}
+
+Note that you cannot leave the app if you are the **Technical Contact** of the app.
+
+{{% /alert %}}
+
+## 3 Deleting an App
 
 If an app that has other App Team members needs to be deleted or deactivated, this can be accomplished by a team member with the SCRUM Master role or another custom role with the App Team's **App Settings permission**.
 
@@ -56,7 +62,7 @@ To view the **App Settings** and delete or deactivate your app, follow these ste
     * Only Free Apps can be deleted
     * App deletion cannot be undone, which means that ALL DATA WILL BE LOST, including all files on the Team Server and all data in the Free App node (if applicable)
 
-### 4 Activating & Deactivating an App
+## 4 Activating & Deactivating an App
 
 To activate or deactivate an app as  Company Admin, follow these steps:
 
@@ -84,7 +90,13 @@ To activate or deactivate an app as  Company Admin, follow these steps:
 
     ![](attachments/companyadmin/activate-app.png)
 
-## 6 Related Content
+{{% alert type="info" %}}
+
+Note that when you click Deactivate App, only the account owner can reactivate the app (via their account management screen). When you click Delete App, the app deletion cannot be undone and means that ALL DATA WILL BE LOST, including all files on the Team Server and all data in the Free App node (if applicable). For more information, see How to Delete, Deactivate, and Activate Apps.
+
+{{% /alert %}}
+
+## 5 Related Content
 
 * [Roles Within the Company and Apps](/developerportal/general/roles)
 * [How to Manage Company Roles and App Roles](/developerportal/howto/change-roles)

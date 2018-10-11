@@ -14,7 +14,7 @@ To select a different cloud platform, your project role must have edit rights on
 
 ![](attachments/cloudsettings.png)
 
-## 2 Switching cloud platform
+## 2 Switching the Cloud Platform
 
 If you select a non-Mendix cloud platform like SAP you will be redirected to a page to complete the setup. If you select Mendix Cloud no additional setup is needed.
 

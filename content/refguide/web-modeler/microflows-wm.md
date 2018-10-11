@@ -4,7 +4,7 @@ category: "Web Modeler"
 description: "Describes the microflows in the Mendix Web Modeler."
 menu_order: 50
 tags: ["web modeler", "microflow"]
-#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
+#If moving or renaming this doc file or section 5 Toolbox, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction 

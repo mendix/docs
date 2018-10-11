@@ -51,7 +51,7 @@ To configure the widget, follow these steps:
 6. Ensure that the **Feedback server** is set to `https://sprintr.home.mendix.com/`.
 7. Ensure that the **Project identifier** is filled in correctly. The project identifier is your **App ID**, and it is automatically filled in for the Mendix Feedback Widget. If necessary, you can find the identifier of your app in the [Developer Portal](http://home.mendix.com) by opening your app and clicking **General** under the **Settings** category:
 
-    ![](attachments/collaborate/generalsettings.jpg)
+    ![](attachments/collaborate/generalsettings.png)
 
 8. If you have configured multiple home pages for different user roles, you need to add the Mendix Feedback Widget to each home page for the user role from which you want to gather feedback. This can easily be done by copying the configured widget to the other relevant layouts and pages.
 

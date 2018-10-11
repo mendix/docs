@@ -49,7 +49,7 @@ To view the Company Contact, follow these steps:
 4.  Below your name, click your the name of your company:
 
     ![](attachments/mendix-profile/my-profile.jpg)
- 
+
 5.  Below **Contact**, you will see the Company Contact:
 
     ![](attachments/general/company-contact.png)
@@ -72,13 +72,9 @@ As a Regular User you can view apps made within the company by clicking **My Com
 
  ![](attachments/general/company-app.png)
 
- If you are a Team Member of an app, you can view the app roles in **General** under the **Settings** category.
+If you are a Team Member of an app, you can view the app roles in **Settings** > **General**.
 
  ![](attachments/settings/app-roles.png)
-
-{{% alert type="info" %}}
-If the app is not a licensed app, it will not have a Technical Contact.
-{{% /alert %}}
 
 The app roles are described below.
 

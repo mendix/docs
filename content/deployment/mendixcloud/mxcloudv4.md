@@ -94,7 +94,7 @@ There are some features missing in v4. Mendix will implement the following featu
 * In some circumstances your app can run out of file connections. This is indicated by the following entry in the logfile: *com.amazonaws.http.AmazonHttpClient executeHelper Unable to execute HTTP request: Timeout waiting for connection from pool*. To resolve this:
     * Update all App Store modules to the latest version – older versions may not close file connections correctly
     * If using Mendix 6, upgrade to version 6.10.16 or above; for Mendix 7, upgrade to version 7.16 or above
-    * Increase the number of available file connections (default is 50) by adding the *com.mendix.storage.s3.MaxConnections* setting on the **Environments > Runtime > Custom Runtime Settings** in the Developer Portal – see [Custom Settings](/refguide/custom-settings#5-amazon-s3-storage-service-settings) for more information
+    * Increase the number of available file connections (default is 50) by adding the *com.mendix.storage.s3.MaxConnections* setting on the **Environments > Runtime > Custom Runtime Settings** in the Developer Portal – see [Customization – Amazon S3 Storage Service Settings](/refguide/custom-settings#5-amazon-s3-storage-service-settings) for more information
 
 ## 12 Related Content
 

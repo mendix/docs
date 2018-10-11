@@ -41,16 +41,16 @@ Because a company can have multiple Company Admins and Regular Users cannot see 
 To view the Company Contact, follow these steps:
 
 1. Go to the [Developer Portal](http://home.mendix.com).
-2.  In the top-right corner, click your avatar:
+2. In the top-right corner, click your avatar:
 
-    ![](attachments/general/showprofile.jpg)
+    ![](attachments/general/show-profile.png)
 
-3. Click **Show Profile**.
-4.  Below your name, click your the name of your company:
+3. Click **My Profile**.
+4. Below your name, click your the name of your company:
 
     ![](attachments/mendix-profile/my-profile.jpg)
 
-5.  Below **Contact**, you will see the Company Contact:
+5. Below **Contact**, you will see the Company Contact:
 
     ![](attachments/general/company-contact.png)
 

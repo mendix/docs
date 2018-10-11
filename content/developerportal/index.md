@@ -27,7 +27,7 @@ In **People**, you can view the other members of your company.
 
 Learn more about Mendix users are distinguished in [Roles Within the Company and Apps](/developerportal/general/roles).
 
-##5 Document Categories
+## 5 Document Categories
 
 {{% category_block %}}
 

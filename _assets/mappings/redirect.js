@@ -244,10 +244,6 @@ module.exports = {
       to: "/community/tools/how-to-set-up-your-partner-profile"
     },
     {
-      from: "/community/How+to+set+up+your+profile",
-      to: "/community/tools/how-to-set-up-your-profile"
-    },
-    {
       from: "/community/The+How+to+Template+Page",
       to: "/community/documentation/the-how-to-template-page"
     },

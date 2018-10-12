@@ -1,5 +1,5 @@
 ---
-title: "Deactivate and Activate Users"
+title: "Deactivate & Activate Users"
 category: "How-To's"
 menu_order: 20
 description: "This document describes how to deactivate and activate company users in the Developer Portal."

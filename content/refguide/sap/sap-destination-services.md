@@ -30,7 +30,7 @@ Although you can use SAP Destination Services on their own, the main use within 
 
 ## 4 Get Destination Action
 
-There is one action within the SAP OData Connector module which allows you to get information about a destination. This is **Get Destination**, which is in the *Sap Destination Service* category of the microflow toolbox.
+There is one action within the SAP OData Connector module which allows you to get information about a destination. This is **Get Destination**, which is in the *SAP Destination Service* category of the microflow toolbox.
 
 ![Drag a Get Destination action from the toolbox](attachments/sap-destination-services/drag-get-destination.png)
 

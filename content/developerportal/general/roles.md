@@ -32,7 +32,7 @@ These are the permissions of a Company Admin:
 
  ![](attachments/companyadmin/company-admin.png)
 
-For more details, see [Company Admin](/developerportal/companyadmin).
+For more details, see [Company Admin Overview](/developerportal/general/companyadmin-overview).
 
 ### 2.2 Company Contact
 
@@ -41,16 +41,16 @@ Because a company can have multiple Company Admins and Regular Users cannot see 
 To view the Company Contact, follow these steps:
 
 1. Go to the [Developer Portal](http://home.mendix.com).
-2.  In the top-right corner, click your avatar:
+2. In the top-right corner, click your avatar:
 
-    ![](attachments/general/showprofile.jpg)
+    ![](attachments/general/show-profile.png)
 
-3. Click **Show Profile**.
-4.  Below your name, click your the name of your company:
+3. Click **My Profile**.
+4. Below your name, click your the name of your company:
 
-    ![](attachments/profile/my-profile.jpg)
- 
-5.  Below **Contact**, you will see the Company Contact:
+    ![](attachments/mendix-profile/my-profile.jpg)
+
+5. Below **Contact**, you will see the Company Contact:
 
     ![](attachments/general/company-contact.png)
 
@@ -72,13 +72,9 @@ As a Regular User you can view apps made within the company by clicking **My Com
 
  ![](attachments/general/company-app.png)
 
- If you are a Team Member of an app, you can view the app roles in **General** under the **Settings** category.
+If you are a Team Member of an app, you can view the app roles in **Settings** > **General**.
 
  ![](attachments/settings/app-roles.png)
-
-{{% alert type="info" %}}
-If the app is not a licensed app, it will not have a Technical Contact.
-{{% /alert %}}
 
 The app roles are described below.
 
@@ -144,10 +140,10 @@ For more information, see [Settings](/developerportal/settings) and [Security â€
 
 ## 5 Related Content
 
-* [Company Admin](/developerportal/companyadmin)
+* [Mendix Profile](mendix-profile)
+* [Company Admin Overview](/developerportal/general/companyadmin-overview)
 * [How to Deactivate and Activate Users](/developerportal/howto/deactivate-users)
 * [How to Delete, Deactivate, and Activate Apps](/developerportal/howto/delete-apps)
 * [How to Manage Company Roles and App Roles](/developerportal/howto/change-roles)
-* [Mendix Profile](mendixprofile)
 * [Settings](/developerportal/settings)
 * [Technical Contact](technical-contact)

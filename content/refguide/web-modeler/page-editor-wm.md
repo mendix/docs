@@ -2,6 +2,7 @@
 title: "Page Editor Overview in the Web Modeler"
 category: "Web Modeler"
 description: "Describes the page editor in the Mendix Web Modeler."
+menu_order: 30
 tags: ["web modeler", "page editor", "pages"]
 ---
 
@@ -38,11 +39,11 @@ After opening the Web Modeler, it automatically opens the home page of the app.
 
 To open a page in the Web Modeler, do the following:
 
-1.  Click the **Pages** icon in the left menu bar. 
+1. Click the **Pages** icon in the left menu bar. 
 
-    ![](attachments/page-editor-wm/wm-pages.png)
+2.  In the displayed list of app pages, select the one you want to open and click it.
 
-2. In the displayed list of app pages, select the one you want to open and click it.
+    ![](attachments/page-editor-wm/wm-opening-a-page.png)
 
 The selected page is opened. 
 

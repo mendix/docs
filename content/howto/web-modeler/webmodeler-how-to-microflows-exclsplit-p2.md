@@ -1,8 +1,8 @@
 ---
-title: "Configure an Exclusive Split Step 2: Embed the Microflow to Your App"
-category: "Web Modeler"
+title: "Step 2: Embed the Microflow to Your App"
+parent: "webmodeler-how-to-microflows-exclsplit"
 description: "This how to describes the process of configuring an exclusive split in the Mendix Web Modeler."
-menu_order: 30
+menu_order: 20
 tags: ["web modeler", "microflows", "exclusive split", "pages"]
 ---
 
@@ -18,7 +18,7 @@ You have configured microflows and exclusive splits with enumeration attribute t
 
 To start this tutorial, make sure you have completed the following prerequisites:
 
-* [Configure an Exclusive Split Step 1: Build the Domain Model and Configure a Microflow](webmodeler-how-to-microflows-exclsplit)
+* [Step 1: Build the Domain Model and Configure a Microflow](webmodeler-how-to-microflows-exclsplit-p1)
 
 ## 3 Embedding the Microflow to Pages   
 

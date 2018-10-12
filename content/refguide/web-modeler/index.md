@@ -1,5 +1,6 @@
 ---
 title: "Web Modeler"
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## Web Modeler
@@ -28,13 +29,14 @@ The Web Modeler enables you to do the following:
   * [Association Properties in the Web Modeler](domain-models-association-properties-wm)
   * [Attribute Types in the Web Modeler](domain-models-attributes-wm)
 * [Page Editor Overview in the Web Modeler](page-editor-wm)
-  * [Data View and List View Properties in the Web Modeler](page-editor-data-view-list-view-wm)
   * [Widgets in the Web Modeler](page-editor-widgets-wm)
 * [Navigation Document in the Web Modeler](navigation-wm)
 * [Microflows in the Web Modeler](microflows-wm)
   * [Exclusive Split in the Web Modeler](microflows-exclusive-split-wm)
+  * [Loops in the Web Modeler](microflows-loop-wm)
   * [Microflow Expressions in the Web Modeler](microflows-expressions-wm)
   * [Setting and Changing a Value for Different Activities in the Microflows in the Web Modeler](microflows-setting-and-changing-value-wm)
+  * [Mendix Assist](mx-assist-wm)
 * [Checks Overview in the Web Modeler](checks-wm)
 * [Theme Customizer in the Web Modeler](theme-customizer-wm)
 * [App Settings Overview in the Web Modeler](app-settings-wm)

@@ -1,6 +1,7 @@
 ---
 title: "Exclusive Split in the Web Modeler"
 parent: "microflows-wm"
+menu_order: 10
 description: "Describes the exclusive split in the Mendix Web Modeler."
 tags: ["web modeler", "microflow", "exclusive split"]
 ---
@@ -59,3 +60,5 @@ The caption describes to the human user what happens in this element.
 
 * [Microflows in the Web Modeler](microflows-wm)
 * [Microflow Expressions in the Web Modeler](microflows-expressions-wm)
+* [How to Configure an Exclusive Split](../../howto/web-modeler/webmodeler-how-to-microflows-exclsplit) 
+

@@ -2,7 +2,9 @@
 title: "Microflows in the Web Modeler"
 category: "Web Modeler"
 description: "Describes the microflows in the Mendix Web Modeler."
+menu_order: 50
 tags: ["web modeler", "microflow"]
+#If moving or renaming this doc file or section 5 Toolbox, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction 
@@ -83,8 +85,11 @@ Elements available in the **General** section are described in the table below.
 | Element                                          | Description                                                  |
 | ------------------------------------------------ | ------------------------------------------------------------ |
 | [Annotation]( ../annotation)                     | An annotation is an element that can be used to put comments in a microflow. |
-| [End Event](../end-event)                        | An end event defines the location where the microflow will stop. There can be more than one end event, for example when an exclusive split is used in the microflow. So, the number of end events depends on the number of possible outcomes of the microflow. |
+| [Break Event](../break-event)                    | A break event is used in loops only to stop iterating over a list of objects and continue with the rest of the flow in the microflow. For more information, see [Break Event](../break-event) in the *Desktop Modeler* category. |
+| [Continue Event](../continue-event)              | A continue event is used in loops only to stop the current iteration and start the iteration of the next object. For more information, see [Continue Event](../continue-event) in the *Desktop Modeler* category. |
+| [End Event](../end-event)                        | An end event defines the location where the microflow will stop. There can be more than one end event, for example when an exclusive split is used in the microflow. So, the number of end events depends on the number of possible outcomes of the microflow. For more information, see [End Event](../end-event) in the *Desktop Modeler* category. |
 | [Exclusive Split](microflows-exclusive-split-wm) | An exclusive split splits the microflow flow. Use an exclusive split when you want to add conditions. For example, you want to show different order forms for the customers with different grades. Thus, an exclusive split creates different flows. With the help of an exclusive split the app makes a decision based on a condition and follows one and only one of the outgoing flows. |
+| [Loop](microflows-loop-wm)                       | A loop is used to iterate over a list of objects and perform actions on each item of the list. For example, you can retrieve a list of orders from your database, then loop over this list and mark orders as processed. |
 | [Merge](../merge)                                | A merge can be used to combine flows into one.  If previously you split the microflow flow and now one and the same action needs to be executed for these separated flows, you can combine the two (or more) paths using a merge. |
 | [Parameter](../parameter)                        | A parameter is an input data for the microflow and can be used in any activity in the microflow. |
 

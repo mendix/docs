@@ -6,13 +6,13 @@ description: "This page describes the Metrics page of the Developer Portal."
 tags: ["Operate","App","Trends","Running now","Cache","Metrics","Developer Portal"]
 ---
 
-## 1  Introduction
+## 1 Introduction
 
-In **Metrics** under the **Operate** category, you can monitor the performance and health of your App. This page is divided into three subpages described below.
+In **Metrics** under the **Operate** category, you can monitor the performance and health of your App. This page is divided into three tabs, each of which is described below.
 
 ## 2 Trends
 
-In this section you can view the graphs of the App about:
+In this tab you can view the graphs of the App about:
 
 *   Application Statistics 
 *   Database Statistics
@@ -54,7 +54,13 @@ The details of an Action Stack are:
 
 ## 4 Cache
 
-Mendix 4 and up have an object cache for non-persistent objects. Here you can see how many objects of each type currently live in memory, and the same but broken down per user session.
+The Mendix runtime versions 4, 5, and 6 have an object cache for non-persistent objects. In this tab you can see how many objects of each type currently live in memory. You can also see the same information broken down per user session.
+
+{{% alert type="info" %}}
+
+The version 7 runtime is stateless and does not cache Mendix objects on the server. See the [Mendix Desktop Modeler Release Notes 7.0](/releasenotes/desktop-modeler/7.0) for more information.
+
+{{% /alert %}}
 
 *   Entity
 *   User sessions with the amount of entities. If you select a user session you can click **Details** to see which entities are used.

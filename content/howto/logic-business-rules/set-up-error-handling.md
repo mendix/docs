@@ -1,7 +1,8 @@
 ---
 title: "Set Up Error Handling"
 category: "Logic & Business Rules"
-tags: []
+tags: ["error", "error handling", "rollback"]
+#To update screenshots of these microflows in the Desktop Modeler, use the Microflow Screenshots app project.
 ---
 
 ## 1 Introduction
@@ -27,7 +28,7 @@ To ensure that every user or process can only see persisted data, all the data c
 ### 2.3 Transactions Prevent Two processes from Using the Same Object at the Same Time
 
 When an object is updated, the platform will place a lock on that object for the duration of the transaction. That means that while the transaction is running, no other transactions are allowed to read or write in that same object. As soon as the transaction has finished, the lock will be released automatically and any waiting processes will continue normally.
- 
+
 Please note that this isn't the same as preventing two users from editing the same object. It is still possible for two users to open the same object and change it 1 milliseconds after each other. The latest change will still be applied.
 
 ## 3 Error Handling Components
@@ -52,6 +53,16 @@ With default error handling, there is always a transaction running. But since th
 
 ![](attachments/18448677/18580951.png)
 
+| Order        |          |
+| ------------ | -------- |
+| ID           | 1234     |
+| Date         | 1/1/2018 |
+
+| Customer |      |
+| -------- | ---- |
+| ID       | 1234 |
+| Status   | Gold |
+
 ### 3.3 Error Handling – Custom with Rollback
 
 Any submicroflow initiated with error handling set to **Custom with Rollback** will NOT initiate a new transaction. The original transaction will be re-used in the subflow. If an error occurs, the transaction will be completely reverted and a new transaction will be initiated so the custom error flow can continue using that new transaction.
@@ -60,7 +71,41 @@ Any submicroflow initiated with error handling set to **Custom with Rollback** w
 
 ![](attachments/18448677/18580950.png)
 
-![](attachments/18448677/4.3.png)
+**For 1:**
+
+| Order        |        |
+| ------------ | ------ |
+| ...          |        |
+| ...          |        |
+
+| Customer     |        |
+| ------------ | ------ |
+| ID           |  1234  |
+| Status       |  Silver|
+
+**For 2:**
+
+| Order        |          |
+| ------------ | -------- |
+| ID           | 1234     |
+| Date         | 1/1/2018 |
+
+| Customer     |          |
+| ------------ | -------- |
+| ID           | 1234     |
+| Status       | Gold     |
+
+**For 3:**
+
+| Order        |        |
+| ------------ | ------ |
+| ...          |        |
+| ...          |        |
+
+| Customer     |        |
+| ------------ | ------ |
+| ID           | 1234   |
+| Status       | Silver |
 
 Because you are switching transactions, merging back to the original process is not recommended, as this will result in inconsistent data. If you use error handling with rollback in a subflow, you should make sure that all parent microflows are configured to use error handling continuously. It is preferable that you re-throw the exception after running your custom actions.
 
@@ -72,7 +117,41 @@ A submicroflow with error handling set to **Custom without Rollback** will alway
 
 ![](attachments/18448677/18580949.png)
 
-![](attachments/18448677/4.4.png)
+**For 1:**
+
+| Order        |        |
+| ------------ | ------ |
+| ...          |        |
+| ...          |        |
+
+| Customer     |        |
+| ------------ | ------ |
+| ID           |  1234  |
+| Status       |  Silver|
+
+**For 2:**
+
+| Order        |          |
+| ------------ | -------- |
+| ID           | 1234     |
+| Date         | 1/1/2018 |
+
+| Customer     |          |
+| ------------ | -------- |
+| ID           | 1234     |
+| Status       | Gold     |
+
+**For 3:**
+
+| Order        |        |
+| ------------ | ------ |
+| ...          |        |
+| ...          |        |
+
+| Customer     |        |
+| ------------ | ------ |
+| ID           | 1234   |
+| Status       | Silver |
 
 ## 4 Combinations of Different Types of Error Handling
 

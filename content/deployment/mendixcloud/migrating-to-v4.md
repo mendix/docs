@@ -1,15 +1,15 @@
 ---
 title: "Migrate to Mendix Cloud v4"
 category: "Mendix Cloud"
-description: "This page describes how to migrate your App from a Mendix Cloud v3 node to a Mendix Cloud v4 node."
+description: "This page describes how to migrate your app from a Mendix Cloud v3 node to a Mendix Cloud v4 node."
 tags: ["App","Migrate","Developer Portal","v3","v4","Node"]
 ---
 
 ## 1 Introduction
 
-This how-to describes everything about the migration from v3 to v4.
+This how-to tells you how to migrate your app from a Mendix Cloud v3 node to a Mendix Cloud v4 node.
 
-**This how-to will teach you how to do the following:**
+**It will teach you how to do the following:**
 
 *   Migrate your licensed app from Mendix Cloud v3 to v4
 
@@ -21,7 +21,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 *  Have an available v4 [Mendix Cloud](/deployment/mendixcloud) node (to request a licensed v4 Cloud Node, contact your Customer Success Manager (CSM))
 * Have the [Technical Contact](/developerportal/general/technical-contact) role for both v3 and v4 Cloud Nodes
-* Create a new temporary Free App without a Sandbox
+* Create a new temporary Free App without a Sandbox – instructions for unlinking a Free App from a sandbox are here: [How To Unlink Your Free App from a Sandbox Environment](/developerportal/howto/how-to-unlink-sandbox).
 
 ## 3 The Migration Process
 
@@ -92,6 +92,19 @@ After the v3 node has been offboarded, follow these steps to link the app to the
 4.  Select the v4 node by clicking **Use this Node** and link it to your app. The currently linked (temporary) app will be unlinked automatically. The temporary app can be deleted.
 
 For more information, see [How to Link a Different App to a Cloud Node](/developerportal/howto/how-to-link-a-different-app-to-a-node).
+
+### 3.5 Changing the App URL
+
+To change the App URL you will need to contact [Mendix Support](https://support.mendix.com). You will need to provide the following information:
+
+* **URL** for the new app, which is available from the *Environments* page for the new (v4) app
+* **URL** for the old app, which is available from the *Environments* page for the old (v3) app
+* **App ID** for the new app, which is available from the *General* page for the new (v4) app
+* **App ID** for the old app, which is available from the *General* page for the old (v3) app
+
+### 3.5 Changing a Custom Domain
+
+If you have a custom domain set up, you will need to change this. Instructions for doing this are here: [How To Configure Custom Domains](/developerportal/howto/custom-domains).
 
 ## 4 Related Content
 

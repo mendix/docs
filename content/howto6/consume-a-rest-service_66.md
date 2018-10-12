@@ -166,4 +166,4 @@ Congratulations! You can now start your app and get summaries from Wikipedia.
 * [How to Import XML Documents](importing-xml-documents)
 * [How to Import Excel Documents](importing-excel-documents)
 * [How to Expose a Web Service](expose-a-web-service)
-* [How to Expose Data to BI Tools Using OData](exposing-data-to-bi-tools-using-odata)
+

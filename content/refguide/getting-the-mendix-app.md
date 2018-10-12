@@ -1,6 +1,7 @@
 ---
 title: "Getting the Mendix Mobile App"
 parent: "developing-hybrid-mobile-apps"
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 The **Mendix** mobile app is a free app that allows you to collaborate with your app project team and test the apps you develop with Mendix on your device.

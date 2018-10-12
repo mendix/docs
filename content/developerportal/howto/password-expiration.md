@@ -26,18 +26,18 @@ Before starting this how-to, make sure you have completed the following prerequi
 ## 3 Add Company Admin
 
 1. Go to the [Developer Portal](http://home.mendix.com).
-2.  Click your avatar in the top-right corner of the screen.
+2.  Click your avatar in the top-right corner of the screen, then click **Company Admin**:
 
     ![](attachments/companyadmin/company-admin.png)
 
-3. Click **Company Admin** and select the **Company Settings** tab.
+3. Select the **Company Settings** tab.
 4.  Set the password expiration and click **Save**. Note that a value of zero or lower indicates that passwords never expire.
 
     ![](attachments/companyadmin/password-expiration.png)
 
 ## 4 Related Content
 
-* [Company Admin](/developerportal/companyadmin)
+* [Company Admin Overview](/developerportal/general/companyadmin-overview)
 * [How to Deactivate and Activate Users](/developerportal/howto/deactivate-users)
 * [How to Delete, Deactivate and Activate Apps](/developerportal/howto/delete-apps)
 * [How to Manage Company Roles and App Roles](/developerportal/howto/change-roles)

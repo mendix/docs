@@ -1,6 +1,7 @@
 ---
 title: "Community Best Practices for App Performance"
 category: "Best Practices"
+frontpage_featured: true
 ---
 
 {{% alert type="warning" %}}

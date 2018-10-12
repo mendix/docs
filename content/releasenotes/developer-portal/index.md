@@ -1,7 +1,77 @@
 ---
 title: "Developer Portal"
+description: "Release Notes for all aspects of the Mendix Developer Portal"
+tags: ["Developer Portal", "Cloud Environments", "Mendix Cloud", "SAP", "IBM", "On-premises", "Deployment"]
 ---
+
 ## 2018
+
+### October 11th, 2018
+
+#### Improvements
+
+* The Mendix Profile in the Developer Portal has been merged with the Community Profile. For more information, see [Mendix Profile](/developerportal/general/mendix-profile).
+* Several UX updates were made to Developer Portal pages:
+  * The [My Apps](https://sprintr.home.mendix.com/link/myapps) page has been redesigned, and you can now toggle your app list views.
+  * The **App** > **General** page has been redesigned.
+  * The [People](https://developer.mendixcloud.com/link/people) overview has been redesigned. The same view on Mendix community members is available in the [Connections tab](/developerportal/general/mendix-profile#connections) of your Mendix Profile.
+
+### October 1st, 2018
+
+#### Web Modeler Improvements
+
+The Web Modeler can now be enabled for all types of apps. You can do this on the **Settings** > **General** page of your app. If you have a licensed app, you will also need to choose your deployment environment.
+
+#### SAP OData Connector Version 4.0.0
+
+This version of the SAP OData Connector allows you to use the destination services of SAP Cloud Platform. This simplifies configuration, authentication and endpoint management when integrating your application, running in SAP Cloud Platform, with SAP backend services. See [SAP Destination Services](/refguide/sap/sap-destination-services).
+
+The following authentication types are currently supported in SAP Destination Services:
+
+* PrincipalPropagation authentication and ProxyType on-premise (Connectivity Service/Cloud Connector/On premise backend)
+* Oauth2SALMAssertion authentication (For Neo Platform apps)
+* Basic and None authentication for public backends
+
+The SAP OData Connector is included in the SAP starter apps and is also available in the App Store here: https://appstore.home.mendix.com/link/app/74525/.
+
+#### SAP Leonardo Machine Learning Foundation Connector Version 1.0.0
+
+This new connector allows you to consume Leonardo Machine learning services from both API Business Hub and SAP Cloud Platform by adding activities to your Mendix model.
+
+The SAP Leonardo Machine Learning Foundation Connector is available in the App Store here: https://appstore.home.mendix.com/link/app/107221/.
+
+#### SAP Fiori Styling
+
+The existing SAP Blank starter app has been replaced by a new Fiori Blank starter app. This new Fiori Blank starter app has a new Fiori UI Package included. This is based on Atlas UI, which means that you can use either the Web Modeler or Desktop Modeler to build applications which give the Fiori UI experience. 
+
+#### SAP Cloud Deployment Version 3.5.2
+
+We now configure Destination Service in the scope of XSUAA. This means that we add the uaa.user default scope to the destination instances in each new environment. This is needed to fetch the destination configuration.
+
+#### Breaking Changes
+
+* The new **SAP OData Connector** will break existing projects which are using the SAP Cloud Connector. The SAP OData Connector no longer supports the “Use Cloud Connector” attribute. This is now embedded in the destination service configuration. See [SAP Destination Services](/refguide/sap/sap-destination-services) for more details. 
+
+#### Fixes
+
+* For a while, the **Show activity for** filter buttons on the company **Buzz** page were broken and displayed nothing. They now work again.
+
+### September 10th, 2018
+
+#### Improvements
+
+* An application created through our APIs now has the Web Modeler enabled if the template on which the app is based is suitable for use in the Web Modeler.
+
+#### Fixes
+
+* We have loosened an unnecessarily strict constraint on email domains during signup. You can now sign up with email domains with single-character sub-domains. (Tickets 68210 , 68386)
+
+### August 21st, 2018
+
+#### Fixes
+
+* We have fixed a bug that was causing some Mendix Cloud v4 users to unsubscribe from alerting lists after changing environment privilege settings. 
+* We have addressed an issue that caused some Mendix Cloud v4 users to not to be able to see their archived logs from previous day.
 
 ### August 13th, 2018
 
@@ -29,7 +99,7 @@ title: "Developer Portal"
 
 #### Improvements
 
-Over the last few months, we have made several improvements to our alerting stack to improve the timeliness of alerts. As a consequence, we are reducing the runtime heartbeat timeout from 15 minutes to 3 minutes. We are doing this to ensure that you do not accidentally miss any alerts. We will be monitoring your applications for false positives.
+Over the last few months, we have made several improvements to our alerting stack of Mendix Cloud v4 applications to improve the timeliness of alerts. As a consequence, we are reducing the runtime heartbeat timeout from 15 minutes to 3 minutes. We are doing this to ensure that you do not accidentally miss any alerts. We will be monitoring your applications for false positives.
 
 In some cases, you may still experience false positives for the runtime heartbeat alert. If that happens, you can resolve the problem by doing a transport and then a restart of the app.
 

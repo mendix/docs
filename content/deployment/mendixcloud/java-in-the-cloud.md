@@ -3,12 +3,13 @@ title: "Java in Mendix Cloud v3"
 category: "Mendix Cloud"
 ---
 
+## 1 Introduction
 
 Projects with Java actions can be deployed to the Mendix Cloud. For security reasons, the capabilities of Java actions in Mendix Cloud v3 are constrained. Applications should not be able to access resources of other applications or compromise the cloud server in any way. In Mendix Cloud v4, there are no restrictions on Java actions.
 
 Java offers the [Java Security Manager](http://download.oracle.com/javase/tutorial/essential/environment/security.html "Java Security Manager") to configure programs to behave correctly. For each application a policy file is created to instruct the correct behavior.
 
-## 1 Restrictions For Java Actions
+## 2 Restrictions For Java Actions
 
 To ensure application safety the following permissions are disabled for Java actions in the cloud:
 
@@ -31,22 +32,22 @@ Exceptions on these restrictions are:
 
 Most applications should be able to function fully with these restrictions. However if you feel your application needs extra capabilities please [log a support ticket](https://support.mendix.com/), so that we can address your specific needs.
 
-## 2 Requesting Property Permissions
+## 3 Requesting Property Permissions
 
 In case your application needs to access certain PropertyPermissions from java actions, you can use the [Mendix Support Portal](https://support.mendix.com/) to send us a list of required properties. We will then make a security exception.
 
-## 3 Emulating Cloud Security
+## 4 Emulating Cloud Security
 
 Before deploying to the cloud, it is strongly recommended to first locally test your Java actions by emulating cloud security. This will make sure you encounter no surprises with regard to cloud security when the application is actually deployed to the Cloud. This will potentially save a lot of time, as it is much harder to debug these kind of issues in the Cloud than locally.
 
 Cloud security can be emulated locally using the following steps:
 
-*   Open the project settings window by double-clicking 'Settings' in the Project Explorer.
+*   Open the project settings window by double-clicking **Settings** in the Project Explorer.
 
-*   In the 'Configurations' tab select the configuration for which you would like to emulate cloud security and click the 'Edit' button.
+*   In the **Configurations** tab select the configuration for which you would like to emulate cloud security and click the 'Edit' button.
 
-*   Set 'Emulate cloud security' to 'Yes' and click 'OK' twice to save your settings.
+*   Set **Emulate cloud security** to **Yes** and click **OK** twice to save your settings.
 
-*   Select the configuration for which you enabled cloud security emulation in the menu bar and hit the 'Run' button (F5).
+*   Select the configuration for which you enabled cloud security emulation in the menu bar and click **Run** (F5).
 
 ![](attachments/4194602/4325407.png)

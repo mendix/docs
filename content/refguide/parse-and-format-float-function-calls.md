@@ -1,8 +1,7 @@
 ---
-title: "Parse and format float function calls"
+title: "Parse & Format Float Function Calls"
 parent: "expressions"
 ---
-
 
 {{% alert type="warning" %}}
 

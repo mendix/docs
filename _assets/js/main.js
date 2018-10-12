@@ -201,31 +201,52 @@
       return $cat;
     }
 
-    function menu(element, callback) {
+    function hasPathInData(data, main) {
+      if (main.u && main.u === window.location.pathname) {
+        return true;
+      }
+      if (data.pages) {
+        var filtered = data.pages
+          .map(function (page) { return page.u.replace(window.location.pathname, '')})
+          .filter(function (u) { return u === '' || u === '/' });
+        return filtered.length > 0;
+      }
+      return false;
+    }
+
+    function menu(element, data, callback) {
       var $menu = $(element),
           $source = $menu.data('source');
-      $.get($source, function( data ) {
-        if (data.categories && data.pages) {
-          var mainPage = data.pages.filter(function (page) { return page.m });
-          var space = $source.replace('/json/', '').replace('.json', '');
-          if (mainPage.length === 1) {
-            var main = mainPage[0];
-            var mainID = 'space-' + normalizeId(main.t);
-            var $space = $('<div class="space" />');
-            var $collapse = $('<div class="collapse" id="' + mainID + '" />');
-            var title = typeof main.mt !== 'undefined' ? main.mt : main.t;
-            $menu.append($space);
-            $space.append(addExpandLink(mainID, title, main.u));
-            $space.append($collapse);
+      if (data.categories && data.pages) {
+        var mainPage = data.pages.filter(function (page) { return page.m });
+        var space = $source.replace('/json/', '').replace('.json', '');
+        if (mainPage.length === 1) {
+          var main = mainPage[0];
+          var mainID = 'space-' + normalizeId(main.t);
+          var $space = $('<div class="space" />');
+          var $collapse = $('<div class="collapse" id="' + mainID + '" />');
+          var title = typeof main.mt !== 'undefined' ? main.mt : main.t;
+          $menu.append($space);
+          var $expandLink = addExpandLink(mainID, title, main.u);
+          $space.append($expandLink);
+          $space.append($collapse);
+          if (hasPathInData(data, main)) {
             data.categories.forEach(function (cat) {
               $collapse.append(createCategory(space, cat, data));
             });
             callback($menu);
           } else {
-            console.warn('Cannot find mainpage for ' + $source);
+            $('> .expand-link', $expandLink.parent()).one('click', function (e) {
+              data.categories.forEach(function (cat) {
+                $collapse.append(createCategory(space, cat, data));
+              });
+            });
+            callback($menu);
           }
+        } else {
+          console.warn('Cannot find mainpage for ' + $source);
         }
-      });
+      }
     }
 
     function hasBreadCrumbLink(title) {
@@ -329,17 +350,29 @@
             var schema = {
               "@context": "http://schema.org",
               "@type": "BreadcrumbList",
-              "itemListElement": []
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "item":
+                  {
+                    "@type": "WebSite",
+                    "@id": "https://docs.mendix.com",
+                    "name": "Mendix Documentation"
+                   }
+                }
+              ]
             };
 
             $.each(hrefList, function (index, item) {
               schema.itemListElement.push({
                 "@type": "ListItem",
-                "position": index + 1,
+                "position": index + 2,
                 "item":
                 {
-                 "@id": item.href,
-                 "name": item.title
+                  "@type": "WebPage",
+                  "@id": "https://docs.mendix.com" + item.href,
+                  "name": item.title
                  }
                });
             });
@@ -367,11 +400,23 @@
       $('.sidebar-menu--loading').removeClass('sidebar-menu--loading');
     }
 
-    $('.menu').each(function () {
-      if ($(this).data("source")) {
-        menu(this, walkmenu);
-      }
-    });
+    var $menus = $('.menu');
+    if ($menus.length) {
+      $.get('/json/spaces.json', function( data ) {
+        window.__mxMenuItems = data;
+        $menus.each(function () {
+          var source = $(this).data("source");
+          if (source) {
+            var filtered = data.filter(function (s) { return s.filename === source });
+            if (filtered.length === 1) {
+              menu(this, filtered[0].content, walkmenu);
+            } else {
+              console.warn('Cannot find menu for :' + source);
+            }
+          }
+        });
+      })
+    }
 
     /*****************
       Back to top

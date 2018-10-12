@@ -1,6 +1,7 @@
 ---
-title: "API Key"
+title: "API Keys"
 category: "Settings"
+menu_order: 40
 description: "This page describes the API Key settings of your App."
 tags: ["Settings","App","API","Key","Developer Portal"]
 ---
@@ -30,4 +31,4 @@ For security reasons, the API key will be only displayed once. It will not be di
 ## 2 Related Content
 
 * [API Documentation](/apidocs-mxsdk/apidocs)
-* [Mendix Profile](/developerportal/general/mendixprofile)
+* [Mendix Profile](../general/mendix-profile)

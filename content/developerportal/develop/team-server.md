@@ -1,6 +1,7 @@
 ---
 title: "Team Server"
 category: "Develop"
+menu_order: 20
 description: "Describes the Team Server repository."
 tags: ["Edit", "Modeler", "Developer Portal", "Team Server"]
 ---

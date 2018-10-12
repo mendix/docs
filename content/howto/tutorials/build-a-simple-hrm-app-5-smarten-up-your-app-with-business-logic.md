@@ -1,7 +1,7 @@
 ---
-title: "Build a Simple HRM App Step 5: Smarten Up Your App with Business Logic"
+title: "Step 5: Smarten Up Your App with Business Logic"
 parent: "build-a-simple-hrm-app"
-tags: ["HRM", "build", "app", "developer portal"]
+tags: ["hrm", "human resources management", "human resources", "build", "app", "developer portal", "microflow", "logic"]
 ---
 
 ## 1 Introduction
@@ -17,7 +17,7 @@ This is the last how-to in a series of five on how to create a simple HRM app. I
 
 Before you can start with this how-to, make sure you have completed the following prerequisite:
 
-* Complete the fourth how-to in this series: [Build a Simple HRM App Step 4: Enrich the GUI with Filter Options](build-a-simple-hrm-app-4-enrich-the-gui-with-filter-options).
+* Complete the fourth how-to in this series: [Step 4: Enrich the GUI with Filter Options](build-a-simple-hrm-app-4-enrich-the-gui-with-filter-options).
 
 ## 3 Creating a Microflow
 
@@ -211,8 +211,8 @@ We are very interested in your feedback. Please take [this short survey](https:/
 
 ## 6 Related Content
 
-* [Build a Simple HRM App Step 1: Create, Manage, and Deploy the App](build-a-simple-hrm-app-1-create-manage-and-deploy-the-app)
-* [Build a Simple HRM App Step 2: First Steps in Building a Rich GUI](build-a-simple-hrm-app-2-first-steps-in-building-a-rich-gui)
-* [Build a Simple HRM App Step 3: Show Related Data in the GUI](build-a-simple-hrm-app-3-show-related-data-in-the-gui)
-* [Build a Simple HRM App Step 4: Enrich the GUI with Filter Options](build-a-simple-hrm-app-4-enrich-the-gui-with-filter-options)
+* [Step 1: Create, Manage, and Deploy the App](build-a-simple-hrm-app-1-create-manage-and-deploy-the-app)
+* [Step 2: First Steps in Building a Rich GUI](build-a-simple-hrm-app-2-first-steps-in-building-a-rich-gui)
+* [Step 3: Show Related Data in the GUI](build-a-simple-hrm-app-3-show-related-data-in-the-gui)
+* [Step 4: Enrich the GUI with Filter Options](build-a-simple-hrm-app-4-enrich-the-gui-with-filter-options)
 * [Testing Microflows Using the UnitTesting Module](../testing/testing-microflows-using-the-unittesting-module)

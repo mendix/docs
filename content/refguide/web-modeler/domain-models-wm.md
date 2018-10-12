@@ -2,6 +2,7 @@
 title: "Domain Model Overview in the Web Modeler"
 category: "Web Modeler"
 description: "Describes the domain models in the Mendix Web Modeler."
+menu_order: 20
 tags: ["web modeler", "domain model"]
 ---
 
@@ -120,10 +121,13 @@ At the bottom of the tab you can see the **Delete** button.
 
 You can manage the following properties of an entity:
 
-*   The **Name** of the entity
-*   [Persistability](../persistability) of the entity
+* The **Name** of the entity
 
-![](attachments/domain-models-wm/wm-entityproperties.png)
+* [Persistability](../persistability) of the entity
+
+  ![](attachments/domain-models-wm/wm-entity-properties.png)
+
+
 
 To change the entity properties, click the entity in the domain model. The **Properties** tab for the selected entity is displayed automatically. 
 

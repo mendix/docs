@@ -1,6 +1,7 @@
 ---
 title: "Import Mapping Action"
 parent: "microflow-activities"
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 {{% alert type="info" %}}
@@ -75,6 +76,16 @@ The range determines how many objects are mapped and returned.
 | All | Map and return all objects. |
 | First | Map and return only the first object. The result of the action will be a single object instead of a list. |
 | Custom | Map and return a given number of objects (limit). The limit is a microflow expression that should result in a number. |
+
+### 3.7 Commit {#commit}
+
+Indicates whether the resulting objects should be committed to the database, and whether event handlers should be triggered.
+
+| Option | Description |
+| --- | --- |
+| Yes | The objects are saved in the database and the [event handlers](event-handlers) are triggered. |
+| Yes without events | The objects are saved in the database, but the [event handlers](event-handlers) are not triggered (default). |
+| No | The objects are created without being saved in the database. You will need a [commit action](committing-objects) to save them. |
 
 ## 4 Validation
 

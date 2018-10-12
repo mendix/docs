@@ -85,11 +85,12 @@ You can change the App Contact by following these steps:
 1. Go to the [Developer Portal](http://home.mendix.com).
 2. Click **Apps** in the top navigation panel and select the app for which you want to change the App Contact.
 3. Click **General** under the **Settings** category.
-4.  Click **Edit settings** in the top-right corner.
+4.  Click **Edit App Info** in the top-right corner.
 
-    ![](attachments/settings/change-appcontact.png)
+    {{% image_container width="500" %}}![](attachments/settings/change-appcontact.png)
+    {{% /image_container %}}
 
-5. Below **Contact**, change the new App Contact from the drop-down list.
+5. Below **App Contact**, select a new App Contact from the drop-down menu.
 6. Click **Save**.    
 
 ## 6 Change the Technical Contact
@@ -143,7 +144,7 @@ You can find the **App Team** role settings by following these steps:
 
 ## 8 Related Content
 
-* [Company Admin](/developerportal/companyadmin)
+* [Company Admin Overview](/developerportal/general/companyadmin-overview)
 * [How to Deactivate and Activate Users](/developerportal/howto/deactivate-users)
 * [How to Delete, Deactivate, and Activate Apps](/developerportal/howto/delete-apps)
 * [Security – Node Permissions](/developerportal/settings/node-permissions)

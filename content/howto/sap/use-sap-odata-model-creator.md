@@ -1,6 +1,7 @@
 ---
 title: "Use the SAP OData Model Creator"
 category: "SAP"
+menu_order: 20
 description: "Presents the use of the SAP OData Model Creator."
 tags: ["SAP", "OData", "integration", "SAP services"]
 ---
@@ -204,6 +205,10 @@ Now you have a Mendix module ready to import into your project.
     You now have your service **HCM\_PEOPLE\_PROFILE\_SRV** module available in your project ready to use in combination with the SAP OData Connector.
 
     ![](attachments/use-sap-odata-model-creator/project_explorer.png)
+
+{{% alert type="warning" %}}
+Do not change the names of entities, attributes, or associations in the Domain Model of the module; they need to match the names used by the SAP OData service for the SAP OData Connector to work correctly.
+{{% /alert %}}
 
 For more information on how to use the imported data model together with the SAP OData Connector, see [How to Use the SAP OData Connector](/howto/sap/use-sap-odata-connector).
 

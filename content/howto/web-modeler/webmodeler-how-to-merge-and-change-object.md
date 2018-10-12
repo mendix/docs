@@ -2,7 +2,7 @@
 title: "Configure a Merge and a Change Object Activity"
 category: "Web Modeler"
 description: "This how to describes the process of configuring a merge and a change object activity in the Mendix Web Modeler."
-menu_order: 40
+menu_order: 30
 tags: ["web modeler", "microflows", "merge", "expression", "change object"]
 ---
 
@@ -19,7 +19,7 @@ A merge is used to combine flows into one. If you split the microflow flow (with
 
 This how-to describes the following use case: 
 
-In  [How to Configure an Exclusive Split Step 1: Build the Domain Model and Configure a Microflow ](webmodeler-how-to-microflows-exclsplit) we have configured the exclusive split to open a specific page depending on the customer's grade. In case the customer's grade is not indicated, the error message is shown. So we have four flows after the exclusive split: 
+In  [How to Configure an Exclusive Split Step 1: Build the Domain Model and Configure a Microflow ](webmodeler-how-to-microflows-exclsplit-p1) we have configured the exclusive split to open a specific page depending on the customer's grade. In case the customer's grade is not indicated, the error message is shown. So we have four flows after the exclusive split: 
 
 * Showing a page for bronze  grade customers
 * Showing a page for silver grade customers
@@ -32,7 +32,7 @@ In this how-to we will merge flows for bronze, silver, and gold customer grades 
 
 To start this tutorial, make sure you have completed the following prerequisites:
 
-* Create the microflow with the exclusive split: [How to Configure an Exclusive Split Step 1: Build the Domain Model and Configure a Microflow](webmodeler-how-to-microflows-exclsplit)
+* Create the microflow with the exclusive split: [How to Configure an Exclusive Split Step 1: Build the Domain Model and Configure a Microflow](webmodeler-how-to-microflows-exclsplit-p1)
 
 ## 3 Creating a Merge
 
@@ -111,6 +111,7 @@ Congratulations! Now we have the microflow that works the following way:
    a. If the customer has a grade, it opens the order form for the corresponding customer grade.<br/>
    b. If the customer does not have a grade, the error message pops up.<br/>
 2. If the customer has the grade, the customer's status is set to active irrespective of the grade once the order form is opened.
+
 Now you can publish and view your app. For more information, see [How to Publish and View Your App](../tutorials/start-with-a-blank-app-3-publish-and-view-your-app).
 
  

@@ -1,5 +1,5 @@
 ---
-title: "Start with a Blank App Step 1: Create the App"
+title: "Step 1: Create the App"
 parent: "start-with-a-blank-app"
 description: "Presents details on how to get started with creating an app in the Web Modeler."
 tags: ["build", "app", "developer portal", "web modeler"]
@@ -50,11 +50,11 @@ Clicking **Edit App** will open your app for editing in the Web Modeler by defau
 
 {{% /alert %}}
 
-You're now in the Web Modeler. Welcome! You can move on to the next step for creating this app: [How to Start with a Blank App Step 2: Build a Dashboard Page](start-with-a-blank-app-2-build-a-dashboard-page).
+You're now in the Web Modeler. Welcome! You can move on to the next step for creating this app: [Step 2: Build a Dashboard Page](start-with-a-blank-app-2-build-a-dashboard-page).
 
 ## 5 Related Content
 
-* [How to Start with a Blank App Step 2: Build a Dashboard Page](start-with-a-blank-app-2-build-a-dashboard-page)
-* [How to Start with a Blank App Step 3: Publish and View Your App](start-with-a-blank-app-3-publish-and-view-your-app)
-* [How to Start with a Blank App Step 4: Add Pages to the User Interface](start-with-a-blank-app-4-add-pages-to-the-user-interface)
-* [How to Start with a Blank App Step 5: Add Employee Promotion Logic](start-with-a-blank-app-5-add-employee-promotion-logic)
+* [Step 2: Build a Dashboard Page](start-with-a-blank-app-2-build-a-dashboard-page)
+* [Step 3: Publish and View Your App](start-with-a-blank-app-3-publish-and-view-your-app)
+* [Step 4: Add Pages to the User Interface](start-with-a-blank-app-4-add-pages-to-the-user-interface)
+* [Step 5: Add Employee Promotion Logic](start-with-a-blank-app-5-add-employee-promotion-logic)

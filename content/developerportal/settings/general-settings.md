@@ -1,6 +1,7 @@
 ---
 title: "General Settings"
 category: "Settings"
+menu_order: 10
 description: "This page describes general settings of your app."
 tags: ["Settings", "App", "Developer Portal"]
 ---
@@ -9,13 +10,15 @@ tags: ["Settings", "App", "Developer Portal"]
 
 In **General**, there is an overview of the app:
 
-* **Name** of the app
+* Name of the app
 * **Description** of the app
-* **App ID**
 * **App Contact** for the app
 * **Technical Contact** for the app
+* Whether the app is enabled for the **Web Modeler**
+* * **App ID**
 
-    ![](attachments/general.png)
+    {{% image_container width="450" %}}![](attachments/general.png)
+    {{% /image_container %}}
 
 {{% alert type="info" %}}
 
@@ -23,44 +26,30 @@ Note that only the Technical Contact can grant other members with the Technical 
 
 {{% /alert %}}
 
-There are two actions you can take:
+There are three actions here you can perform:
 
-* Edit the app by clicking **Edit settings**
-* Leave the app by clicking **Leave app**
+* Click **Cloud Settings** to select the cloud platform on which you want to deploy your app (for details, see [Cloud Settings](cloud-settings))
+* Click **Edit App Info** to edit the app settings (you can only see this button when you have the **App Settings** permission; for more details, see [Roles Within the Company and Apps](/developerportal/general/roles))
+* Click **Leave app** to leave the app (for details, see [Three Ways to Leave Your App](/developerportal/general/leave-app))
 
-## 2 Editing Settings
+## 2 Editing App Info
 
-When you click **Edit Settings**, you can edit the following things:
+When you click **Edit App Info**, you can edit the following things:
 
-* App name
-* Description
-* App Contact
-* App logo
+* The name of the app
+* The app logo
+* The **Description** of the app
+* The **App Contact**
 
-There are two actions you can take:
-
-* Deactivate the app by clicking **Deactivate App**
-* Delete the app by clicking **Delete App**
-
-{{% alert type="warning" %}}
-
-Note that when you click **Deactivate App**, only the account owner can reactivate the app (via their account management screen). When you click **Delete App**, the app deletion cannot be undone and means that ALL DATA WILL BE LOST, including all files on the Team Server and all data in the Free App node (if applicable). For more information, see [How to Delete, Deactivate, and Activate Apps](/developerportal/howto/delete-apps).
-
-{{% /alert %}}
+{{% image_container width="450" %}}![](attachments/edit.png)
 
 ## 3 Leaving the App
 
-If you click **Leave App**, you will be removed from the app. If you are the last member of this app and decide to leave as well, the app will be deactivated. For more information, see [Three Ways to Leave Your App](/developerportal/general/leave-app).
+For details, see [Three Ways to Leave Your App](/developerportal/general/leave-app).
 
-{{% alert type="info" %}}
+## 4 Web Modeler
 
-Note that you cannot leave the app if you are the **Technical Contact** of the app.
-
-{{% /alert %}}
-
-## 4 Web Modeler (Beta)
-
-If your app is supported by the Web Modeler during the beta program, you can enable it by clicking **Enable Web Modeler**. For details on getting the full Web Modeler experience, see [How to Migrate Existing Projects to Atlas UI](/howto/atlasui/migrate-existing-projects-to-atlasui).
+If your app is supported by the Web Modeler, you can enable it by clicking **Enable Web Modeler**. For details on getting the full Web Modeler experience, see [How to Migrate Existing Projects to Atlas UI](/howto/atlasui/migrate-existing-projects-to-atlasui).
 
 ## 5 Related Content
 

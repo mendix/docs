@@ -32,7 +32,7 @@ All images, names and steps in this how-to are based on these versions. When usi
 
 {{% /alert %}}
 
-## 3.1 Publishing More Microflows as Web Service Operation
+## 3 Publishing More Microflows as Web Service Operation
 
 In the how-to [Exposing a web service](../integration/expose-a-web-service) you already published the microflow _GetCustomers_ as web service operation. In this chapter you will create two more microflow and publish them as web service operation.
 

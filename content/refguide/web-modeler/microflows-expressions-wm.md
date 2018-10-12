@@ -3,6 +3,7 @@ title: "Microflow Expressions in the Web Modeler"
 parent: "microflows-wm"
 description: "Describes the microflow expressions available in the Mendix Web Modeler."
 tags: ["web modeler", "microflow", "set value", "variable"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction 
@@ -35,7 +36,13 @@ If some errors appear in the expression, hints with an explanation will be displ
 
 ### 2.1 Writing the Expression Using Suggestions
 
-When you start typing the expression, a list of suggestions with variables, [relational](../relational-expressions) and [boolean](../boolean-expressions)  expressions appears. For more information, see section [3 Expression Types](#expression-types).
+When you start typing the expression, a list of suggestions appears divided into the following categories:
+
+* **Suggestions from your microflow** – variables or attributes that you have created or retrieved in your microflow
+* **Enumeration values** – values of [enumeration type of attributes](domain-models-enumeration-wm) that can be used in an expression
+* **Keywords** – key phrases or words that you can use in an expression
+* **Booleans** – true or false expressions
+* **Operators** – code elements that perform logical or mathematical operations. You can use Boolean or relational expressions (for more information, see section [3 Expression Types](#expression-types))
 
 ![](attachments/microflows-expressions-wm/wm-expressions-list.png)
 
@@ -48,8 +55,6 @@ To write an expression using suggestions, do the following:
 
 {{% alert type="info" %}}
 
-The list of suggestions is adjusted depending on the previous elements in the expression. 
-
 To call the list of suggestions, press <kbd>Ctrl</kbd> + <kbd>Space</kbd>
 
 {{% /alert %}}
@@ -60,7 +65,7 @@ If you want to write the expression manually, pay attention to the following:
 
 * Variables in the microflow can be called in an expression by inserting the dollar sign followed by the name of the variable. For example, *$Customer* refers to the variable *Customer*  
 * Attributes and associations of object variables are accessed using a slash, for example, *$Customer/Name*, *$Customer/Grade* refer to the attributes Name and Grade of the entity Customer 
-* Unary, boolean, and relational types of expressions are available in the Web Modeler (for more information, see section [3 Expression Types](#expression-types))
+* Unary, Boolean, and relational types of expressions are available in the Web Modeler (for more information, see section [3 Expression Types](#expression-types))
 
 ### 2.3 Examples of the Expression
 

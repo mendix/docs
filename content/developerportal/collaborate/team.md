@@ -1,6 +1,7 @@
 ---
 title: "Team"
 category: "Collaborate"
+menu_order: 20
 description: "This page describes the Team page of the Developer Portal."
 tags: ["Team","Developer Portal"]
 ---
@@ -35,7 +36,7 @@ To invite members, go to **Team**, click the **Invite Member** in the top-right 
 
 ## 3 Related Content
 
-* [Company Admin](/developerportal/companyadmin)
+* [Company Admin Overview](/developerportal/general/companyadmin-overview)
 * [How to Deactivate and Activate Users](/developerportal/howto/deactivate-users)
 * [How to Manage Company Roles and App Roles](/developerportal/howto/change-roles)
 * [Roles Within the Company and Apps](/developerportal/general/roles)

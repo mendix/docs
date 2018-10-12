@@ -14,7 +14,7 @@ This document describes the installation and configuration of the Mendix softwar
 * Deploy a Mendix app
 * Configure the MS Internet Information Services (IIS) server
 
-## <a name="Prerequisites"></a>2 Prerequisites
+## 2 Prerequisites {#Prerequisites}
 
 In order to set up an environment to run Mendix applications, you will need to install the Mendix software. For each Mendix application that will be run, a separate user (service) account is required. This section presents an overview of the setup.
 
@@ -132,8 +132,6 @@ To configure the MIME types, follow these steps:
    * **File name extension**: *.json*
    * **MIME type**: *application/json*
 7. Click **OK**.
-
-
 
 ### 5.4 Configuring the URL Rewrite
 

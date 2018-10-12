@@ -34,6 +34,10 @@ This will automatically generate a backup from your application data.
 
 ### 3.2 Uploading Data
 
+The sections below present details on uploading data in recent Mendix Cloud versions.
+
+#### 3.2.1 Uploading Data in Mendix Cloud V3
+
 You must stop the application before executing this process. This functionality is used to transfer data from your local or on-premises application to the cloud environment. This will not add a backup to the backup list but directly update the application with the newly uploaded data. Your environment will be cleared completely. The deployment package, uploaded files, and database will be removed. If you are uploading data to the production environment, any published app services will be unpublished.
 
 You can upload two types of data:
@@ -41,11 +45,27 @@ You can upload two types of data:
 * **Database**
 * **Uploaded files** (*zip* or *tar.gz*)
 
+#### 3.2.2 Uploading Data in Mendix Cloud V4
+
+In Mendix Cloud V4, the upload functionality is the symmetrical equivalent of the download function. This means there is no need to stop the application before uploading data. Instead, the upload will create a new backup item in your backup list, which you can then restore via the regular restore process. This will ensure less downtime for your application. 
+
+Anything you can download you can also upload again, which means you can upload the following:
+
+* **Full Snapshot**
+* **Database Only**
+* **Files Only**
+
+Please note that uploading a **Files Only** archive will result in a backup item with an exclamation mark and a warning message. Since the archive does not contain a database, it is not possible to restore it. This functionality can be used to move file documents from one environment to another (especially useful if you have a lot of file documents). It will still be necessary to upload a **Database Only** archive to make sure the database can be restored. 
+
 ### 3.3 Restoring a Backup
 
 You can choose the **destination** to which you want the environment to restore the backup. This allows you to, for example, restore a production environment backup to an acceptance environment.
 
 If you restore a backup that was originally deployed on an older Modeler version, you will get a warning. You can still restore the backup, but you have to deploy the older model later on. 
+
+{{% alert type="info" %}}
+In Mendix Cloud V4, if the restore takes too long, the system will show a timeout message. The restore will continue behind the scenes, and you can track the progress of the restore by inspecting your database free disk space graphs. While the database free disk space keeps decreasing, the restore is still in progress. If the database free disk space is constant, the restore has stopped and you can try to start your application. If this happens regularly, consider upgrading to a database plan with more CPU cores, so that the restore can be executed faster.
+{{% /alert %}}
 
 ### 3.4 Downloading a Backup
 

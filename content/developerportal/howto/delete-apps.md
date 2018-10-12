@@ -55,12 +55,12 @@ To view the **App Settings** and delete or deactivate your app, follow these ste
 
 6. A confirmation message will appear, asking if you are sure you want to leave the app and stating that the app will be deactivated if you are the only/last member of the App Team. Click **Yes** to continue the process of leaving your app.
 
-7. If the app will be made inaccessible upon your leaving, a final confirmation is necessary for whether you want to leave or leave and also delete your app:
+7.  If the app will be made inaccessible upon your leaving, a final confirmation is necessary for whether you want to leave or leave and also delete your app:
 
-  ![](attachments/settings/delete-confirmation.png)
+	![](attachments/settings/delete-confirmation.png)
 
-    * Only Free Apps can be deleted
-    * App deletion cannot be undone, which means that ALL DATA WILL BE LOST, including all files on the Team Server and all data in the Free App node (if applicable)
+	* Only Free Apps can be deleted
+	* App deletion cannot be undone, which means that ALL DATA WILL BE LOST, including all files on the Team Server and all data in the Free App node (if applicable)
 
 ## 4 Activating & Deactivating an App
 

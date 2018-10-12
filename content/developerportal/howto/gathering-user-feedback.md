@@ -28,11 +28,11 @@ Before starting this how-to, make sure you have completed the following prerequi
 The Mendix Feedback Widget is automatically included in any new app that you create. To ensure you have the lastest version of the Mendix Feedback Widget included in your app, follow these steps:
 
 1. Download the latest version of the [Mendix Feedback Widget](https://appstore.home.mendix.com/link/app/199/Mendix/Mendix-Feedback-Widget) from the Mendix App Store.
-2. When the latest Mendix Feedback Widget is included in your app, you need to ensure that the widget is added to the homepage of the application. Open the homepage from your app **Navigation**:
+2. When the latest Mendix Feedback Widget is included in your app, you need to ensure that the widget is added to the homepage of the application. Open the homepage from your app's **Project** > **Navigation**:
 
     ![](attachments/collaborate/18580455.png)
 
-3. If the Mendix Feedback Widget has not been added to the page, add it to the page or layout by selecting **Feedback Widget** under **Add-on** and dropping it into any position in the document:
+3. If the Mendix Feedback Widget has not been added to the page, add it to the page or layout by selecting **Add widget** > **Add-on widgets** > **Feedback Widget** and dropping it into a position in the page:
 
     ![](attachments/collaborate/18580453.png)
 
@@ -122,7 +122,7 @@ To find the list of the provided feedback items, follow these steps:
 2. Click **Show Profile**.
 3.  Go to the **Feedback** tab.
 
-    ![](attachments/collaborate/feedbackoverview.jpg)
+    ![](attachments/collaborate/feedback-overview.png)
 
 ## 9 Related Content
 

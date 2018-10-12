@@ -56,11 +56,11 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 You can view your own submitted feedback items in the feedback list in your profile settings. Follow these steps to find the list of provided feedback items:
 
-1. Click your profile in the right top corner in the [Developer Portal](http://home.mendix.com).
-2. Click **Show Profile**.
-3. Go to the **Feedback** tab:
+1. Click **My Profile** in the right-top corner of the [Developer Portal](http://home.mendix.com).
+2. Select the **Activity** tab.
+3. Select the **Feedback** menu item:
 
-    ![](attachments/collaborate/feedbackoverview.jpg)
+    ![](attachments/collaborate/feedback-overview.png)
 
 ## 5 Related Content
 

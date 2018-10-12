@@ -39,7 +39,7 @@ _Default value:_ No
 
 ### 2.3 Refresh in Client
 
-If the microflow is called from the client, [data sources](data-sources) don't reload, unless Refresh in client is set to *Yes*.
+If the microflow is called from the client, [data sources](data-sources) do not reload, unless **Refresh in client** is set to *Yes*.
 
 {{% alert type="warning" %}}
 

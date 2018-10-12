@@ -5,7 +5,7 @@ parent: "object-activities"
 
 ## 1 Introduction
 
-The Rollback object action can be used to undo changes (that have not been committed) that were made to the object in the part of the flow preceding the activity. Furthermore, it deletes objects that have been created but have never been committed.
+The Rollback object action can be used to undo changes (that have not been committed) made to the object in the part of the flow preceding the activity. Furthermore, it deletes objects that have been created but never committed.
 
 {{% alert type="info" %}}
 
@@ -29,17 +29,17 @@ Object defines the object that needs to be rolled back.
 
 ### 2.2 Refresh in Client
 
-If the microflow is called from the client, the rollback is not reflected in the client if Refresh in client is set to *No*. If Refresh in client is set to *Yes*, the object is refreshed across the client, which includes reloading of relevant [data sources](data-sources).
+If the microflow is called from the client, the rollback is not reflected in the client if **Refresh in client** is set to *No*. If Refresh in client is set to *Yes*, the object is refreshed across the client, which includes reloading of relevant [data sources](data-sources).
 
 {{% alert type="info" %}}
 
-As of 7.19.0, rolled back attribute values are always reflected in client. [Data sources](data-sources) are only reloaded if Refresh in client is set to *Yes*.
+As of 7.19.0, rolled back attribute values are always reflected in client. [Data sources](data-sources) are only reloaded if **Refresh in client** is set to *Yes*.
 
 {{% /alert %}}
 
 {{% alert type="warning" %}}
 
-When inside a [nanoflow](nanoflows), the Rollback object action reloads [data sources](data-sources) as if Refresh in client was set to *Yes*.
+When inside a [nanoflow](nanoflows), the Rollback object action reloads [data sources](data-sources) as if **Refresh in client** was set to *Yes*.
 
 {{% /alert %}}
 

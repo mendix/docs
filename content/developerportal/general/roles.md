@@ -46,11 +46,8 @@ To view the Company Contact, follow these steps:
     ![](attachments/general/show-profile.png)
 
 3. Click **My Profile**.
-4. Below your name, click your the name of your company:
-
-    ![](attachments/mendix-profile/my-profile.jpg)
-
-5. Below **Contact**, you will see the Company Contact:
+4. Below your name, click your the name of your company.
+5. Below **Contact**, you will see the **Company Contact**:
 
     ![](attachments/general/company-contact.png)
 

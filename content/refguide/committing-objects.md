@@ -33,11 +33,11 @@ Nanoflows do not have this property. Committing while running in an online app s
 
 ### 3.2 Refresh in Client
 
-If the microflow is called from the client, the commit is not reflected in the client if Refresh in client is set to *No*. If Refresh in client is set to *Yes*, the object is refreshed across the client, which includes reloading of relevant [data sources](data-sources).
+If the microflow is called from the client, the change is not reflected in the client if **Refresh in client** is set to *No*. If set to *Yes*, the object is refreshed across the client, which includes reloading the relevant [data sources](data-sources).
 
 {{% alert type="info" %}}
 
-As of 7.19.0, all attribute values are reflected in the client, including virtual ones, even if Refresh in client is set to *No*.
+As of 7.19.0, all attribute values are reflected in the client, including virtual ones, even if **Refresh in client** is set to *No*.
 
 {{% /alert %}}
 
@@ -49,7 +49,7 @@ When committing a large number of objects, we recommend that you do not enable '
 
 {{% alert type="warning" %}}
 
-When inside a [nanoflow](nanoflows), the object is refreshed across the client as if Refresh in client was set to *Yes*.
+When inside a [nanoflow](nanoflows), the object is refreshed across the client as if **Refresh in client** was set to *Yes*.
 
 {{% /alert %}}
 

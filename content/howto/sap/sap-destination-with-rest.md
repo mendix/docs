@@ -1,16 +1,16 @@
 ---
-title: "Use SAP Connectivity Services with REST and SOAP"
+title: "Use SAP Connectivity Service with REST and SOAP"
 category: "SAP"
 menu_order: 40
-description: "How to configure Mendix native REST and SOAP calls to use SAP Destination Services and SAP Connectivity Services to reach on-premises services."
+description: "How to configure Mendix native REST and SOAP calls to use the SAP Destination Service and the SAP Connectivity Service to reach on-premises services."
 tags: ["SAP", "Cloud Connector", "Connectivity Services", "Destination Services", "REST", "SOAP"]
 ---
 
 ## 1 Introduction
 
-SAP Destination Services are part of the SAP OData Connector and enable OData calls to be made using SAP destinations configured on SAP Cloud Platform. However, you can also use the destination information provided by SAP Destination Services to make calls to non-OData services using Mendix native actions for consuming REST and SOAP.
+SAP Destination Service is part of the SAP OData Connector and enables OData calls to be made using SAP destinations configured on SAP Cloud Platform. However, you can also use the destination information provided by the SAP Destination Service to make calls to non-OData services using Mendix native actions for consuming REST and SOAP.
 
-This how-to will teach you how to configure a REST or SOAP call to use the configuration obtained from SAP Destination Services.
+This how-to will teach you how to configure a REST or SOAP call to use the configuration obtained from the SAP Destination Service.
 
 ## 2 Prerequisites
 
@@ -22,7 +22,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 Writing Your Microflow
 
-In your microflow which is making a REST or SOAP call, perform a **Get Destination** action before the REST or SOAP call. This needs to use the Destination Name which is configured as a Destination on SAP Cloud Platform.
+In your microflow which is making a REST or SOAP call, perform a **Get Destination** action before the REST or SOAP call. This needs to use the Destination Name which is configured in a Destination on SAP Cloud Platform.
 
 ![REST Microflow](attachments/sap-destination-with-rest/rest-microflow.png)
 
@@ -53,7 +53,7 @@ The following entries are required in the **General** tab:
 #### 3.1.2 HTTP Headers Tab
 
 The following HTTP Headers do the following:
-* authenticate the app to perform the action via connectivity services
+* authenticate the app to perform the action via the Connectivity service
 * authenticate the user to access the endpoint defined by the destination
 * request that data is returned in JSON format
 
@@ -87,7 +87,7 @@ The following entries are required in the **Operation** tab:
 #### 3.2.2 HTTP Headers Tab
 
 The same HTTP Headers are required as for a REST call. They do the following:
-* authenticate the app to perform the action via connectivity services
+* authenticate the app to perform the action via the Connectivity service
 * authenticate the user to access the endpoint defined by the destination
 * request that data is returned in JSON format
 
@@ -102,7 +102,7 @@ The same HTTP Headers are required as for a REST call. They do the following:
 
 ## 4 Related Content
 
-* [SAP Destination Services](/refguide/sap/sap-destination-services)
+* [SAP Destination Service](/refguide/sap/sap-destination-services)
 * [Consumed Web Services](/refguide/consumed-web-services)
 * [Consumed Web Service](/refguide/consumed-web-service)
 * [Call Web Service Action](/refguide/call-web-service-action)

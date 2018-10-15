@@ -6,6 +6,12 @@ tags: ["Developer Portal", "Cloud Environments", "Mendix Cloud", "SAP", "IBM", "
 
 ## 2018
 
+### October 16th, 2018
+
+#### Bug Fix
+
+* It's again possible to go to people's profile pages directly from the Buzz or the People page. (Ticket 69702)
+
 ### October 11th, 2018
 
 #### Improvements

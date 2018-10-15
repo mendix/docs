@@ -17,7 +17,7 @@ This how-to will teach you how to configure a REST or SOAP call to use the confi
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Have a Mendix app which can be deployed to SAP Cloud Platform
-* Configured a **PrincipalPropagation** destination to an *on-premise* REST or SOAP service in your SAP Cloud Platform account; see [SAP Destination Service](/refguide/sap/sap-destination-services) for more information
+* Configured a **PrincipalPropagation** destination to an *on-premise* REST or SOAP service in your SAP Cloud Platform account; see [SAP Destination Service](/refguide/sap/sap-destination-service) for more information
 * Imported an **SAP OData Connector** version higher than 4.0.0 into your app
 
 ## 3 Writing Your Microflow
@@ -102,7 +102,7 @@ The same HTTP Headers are required as for a REST call. They do the following:
 
 ## 4 Related Content
 
-* [SAP Destination Service](/refguide/sap/sap-destination-services)
+* [SAP Destination Service](/refguide/sap/sap-destination-service)
 * [Consumed Web Services](/refguide/consumed-web-services)
 * [Consumed Web Service](/refguide/consumed-web-service)
 * [Call Web Service Action](/refguide/call-web-service-action)

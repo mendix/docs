@@ -26,7 +26,7 @@ Before starting with this how-to, make sure you have the following prerequisites
 * An application under test (AUT)
 * Selenium hub (for more information on the Selenium options, see [ATS Deployment](/ats/general/deployment))
 
-{{% youtube zJOpO0AymAg %}}
+{{% youtube zJOpO0AymAg?rel=0 %}}
 
 ## 3 Creating a New Project<a name="CreatingNewProject"></a>
 
@@ -261,7 +261,7 @@ Here, you can select your AUT and Selenium hub for ATS to use.
 | --- | --- |
 | **Application** | Select the app you want to test. |
 | **Selenium Hub** | Select the Selenium Hub you want to use to execute the test case. |
-| **Browser** | Select the browser that the Selenium Hub uses to execute the test case. Please note that these are the supported browsers. | 
+| **Browser** | Select the browser that the Selenium Hub uses to execute the test case. Please note that these are the supported browsers. |
 
 Now click **Run** again in the upper-right corner to execute the test case against the provided parameters. For more information on the run configuration, see [Run Configuration](/ats/refguide/rg-version-1/test-run).
 

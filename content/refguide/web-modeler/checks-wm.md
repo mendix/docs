@@ -12,7 +12,7 @@ When publishing your app, the Web Modeler checks the app you created on consiste
 
 ![](attachments/checks-wm/wm-checks-button.png)
 
-## 2 Viewing Checks for Your App and Interacting with the Checks Panel
+## 2 Viewing Checks for Your App and Interacting with the Checks Panel {#viewing-checks}
 
 To display checks for your app and view the faulty elements in it, do the following:
 

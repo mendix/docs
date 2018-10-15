@@ -7,18 +7,18 @@ tags: ["web modeler", "page editor", "widgets", "on click action", "events"]
 
 ## 1 Introduction 
 
-The **Design** section in **Properties** allows you to change spacing and aligning of a widget on a page, but is not limited to this functions. Depending on an element, you can, for example, change its color. Hover over the information icon to get more details on each option.
+The **Design** section in **Properties** allows you to change spacing and alignment of a widget on a page, but is not limited to these functions. For some elements you can, for example, change their color. Hover over the information icon to get more details on each option.
 
 ![](attachments/page-editor-widgets-design-section-wm/wm-design-section-info-icon.png)
 
 ## 2 Common Properties {#design-common-properties}
 
-The **Design** section has the following properties common for all widgets:
+The **Design** section has the following properties common to all widgets:
 
 
 | Property       | Description                                    | Possible Values                                              |
 | -------------- | ---------------------------------------------- | ------------------------------------------------------------ |
-| Spacing Top    | Adds margin above the widget.                  | Possible values of this property are the following:<ul><li>None – no extra spacing is applied</li><li>Small – small spacing is applied</li><li>Medium – medium spacing is applied</li><li>Large – large spacing is applied</li><li>Layout – the same spacing as the current layout has is applied (if you do not change the layout spacing, large and layout spacings are the same by default) </li></ul> |
+| Spacing Top    | Adds margin above the widget.                  | Possible values for *spacing top* are the following:<ul><li>None – no extra spacing is applied</li><li>Small – applies small spacing</li><li>Medium – applies medium spacing</li><li>Large – applies large spacing</li><li>Layout – applies the same spacing as the current layout (large and layout spacings are the same by default) </li></ul> |
 | Spacing Bottom | Adds margin below the widget.                  | Possible values of this property are the following:<ul><li>None – no extra spacing is applied</li><li>Small – small spacing is applied</li><li>Medium – medium spacing is applied</li><li>Large – large spacing is applied</li><li>Layout – the same spacing as the current layout has is applied (if you do not change the layout spacing, large and layout spacings are the same by default) </li></ul> |
 | Spacing Left   | Adds margin to the left of the widget.         | Possible values of this property are the following:<ul><li>None – no extra spacing is applied</li><li>Small – small spacing is applied</li><li>Medium – medium spacing is applied</li><li>Large – large spacing is applied</li><li>Layout – the same spacing as the current layout has is applied (if you do not change the layout spacing, large and layout spacings are the same by default) </li></ul> |
 | Spacing Right  | Adds margin to the right of the widget.        | Possible values of this property are the following:<ul><li>None – no extra spacing is applied</li><li>Small – small spacing is applied</li><li>Medium – medium spacing is applied</li><li>Large – large spacing is applied</li><li>Layout – the same spacing as the current layout has is applied (if you do not change the layout spacing, large and layout spacings are the same by default) </li></ul> |

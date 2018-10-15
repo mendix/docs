@@ -22,7 +22,7 @@ The **Design** section has the following properties common to all widgets:
 | Spacing Bottom | Adds margin below the widget.                  | Possible values of this property are the following:<ul><li>None – no extra spacing is applied</li><li>Small – small spacing is applied</li><li>Medium – medium spacing is applied</li><li>Large – large spacing is applied</li><li>Layout – the same spacing as the current layout has is applied (if you do not change the layout spacing, large and layout spacings are the same by default) </li></ul> |
 | Spacing Left   | Adds margin to the left of the widget.         | Possible values of this property are the following:<ul><li>None – no extra spacing is applied</li><li>Small – small spacing is applied</li><li>Medium – medium spacing is applied</li><li>Large – large spacing is applied</li><li>Layout – the same spacing as the current layout has is applied (if you do not change the layout spacing, large and layout spacings are the same by default) </li></ul> |
 | Spacing Right  | Adds margin to the right of the widget.        | Possible values of this property are the following:<ul><li>None – no extra spacing is applied</li><li>Small – small spacing is applied</li><li>Medium – medium spacing is applied</li><li>Large – large spacing is applied</li><li>Layout – the same spacing as the current layout has is applied (if you do not change the layout spacing, large and layout spacings are the same by default) </li></ul> |
-| Align Self     | Aligns the widget within its layout element. | Possible values for *align self* are the following:<ul><li>{none} – places the element next to the previous element<li>Left – places the element to the left of its layout element, equivalent to *float: left*</li><li>Right – places the element to the right of its layout element, equivalent to *float: right*</li></ul> |
+| Align Self     | Aligns the widget within its layout element. | Possible values for *align self* are the following:<ul><li>{none} – places the element next to the previous element</li><li>Left – places the element to the left of its layout element, equivalent to *float: left*</li><li>Right – places the element to the right of its layout element, equivalent to *float: right*</li></ul> |
 
 The example of how spacing works on a button is schematically shown on an image below:
 
@@ -43,9 +43,10 @@ Specific properties for **List View** are described in the table below:
 
 | Property    | Description                                                  | Possible Values                                              |
 | ----------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Style       | Changes the appearance of lines in the list view.            | Possible values of this property are the following:<ul><li>Striped</li><li>Bordered</li><li>Lined</li><li>No Styling</li></ul> |
+| Style       | Changes the appearance of lines in the list view.            | Possible values for *sytle* are the following:<ul><li>{blank}</li><li>Striped</li><li>Bordered</li><li>Lined</li><li>No Styling</li></ul> |
 | Hover Style | Highlights a row when hovering over it. Only useful if the row is clickable. | True/False                                                   |
-| Row Size    | Changes the size of the row.                                 | Possible values of this property are the following:<ul><li>Small</li><li>Large</li></ul> |
+| Row Size    | Changes the size of the row.                                 | Possible values for *row size* are the following:<ul><li>{blank}</li><li>Small</li><li>Large</li></ul> |
+
 ### 2.2 Container Specific Properties {#container-design-properties}
 
 Specific properties for the **Container** widget are described in the table below:

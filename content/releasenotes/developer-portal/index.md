@@ -6,6 +6,12 @@ tags: ["Developer Portal", "Cloud Environments", "Mendix Cloud", "SAP", "IBM", "
 
 ## 2018
 
+### October 16th, 2018
+
+#### Fixes
+
+* It is now possible to go to a Mendix community member's new [Mendix Profile](/developerportal/general/mendix-profile) directly from the [Buzz](/developerportal/collaborate/appbuzz) and [People](https://sprintr.home.mendix.com/link/people) pages. (Ticket 69702)
+
 ### October 11th, 2018
 
 #### Improvements

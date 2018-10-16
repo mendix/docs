@@ -61,7 +61,7 @@ The render mode defines the way a text will be shown to the end-user. Possible v
 
 ## 3 Page Title General Properties {#page-title-widget}
 
-The page title widget shows the title of the current page.  
+The page title widget shows the title of the current page.   
 
 If you want to change the name of the page, do the following:
 

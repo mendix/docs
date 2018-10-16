@@ -73,11 +73,11 @@ Specific properties for the **Text** widget are described in the table below:
 
 | Property     | Description                          | Possible Values                                              |
 | ------------ | ------------------------------------ | ------------------------------------------------------------ |
-| Weight       | Changes the weight of the font       | Possible values of this property are the following:<ul><li>Light</li><li>Normal</li><li>Semibold</li><li>Bold</li></ul> |
-| Color        | Changes the color of the text        | Possible values of this property are the following:<ul><li>Header color</li><li>Detail color</li><li>Default</li><li>Primary</li><li>Inverse</li><li>Success</li><li>Warning</li><li>Danger</li></ul><br />The color for each value depends on your settings in the **Theme Customizer**. For details, see [Theme Customizer in the Web Modeler](theme-customizer-wm). |
-| Alignment    | Aligns the text                      | Possible values of this property are the following:<ul><li>Left</li><li>Center</li><li>Right</li></ul> |
-| Transform    | Changes letter case of the text      | Possible values of this property are the following:<ul><li>Lowercase</li><li>Uppercase</li><li>Capitalize</li></ul> |
-| Wrap Options | Wrap a long text into multiple lines | Possible values of this property are the following:<ul><li>Wrap</li><li>No Wrap</li></ul> |
+| Weight       | Changes the weight of the font       | Possible values of *Weight* are the following:<ul><li>Light</li><li>Normal (this is the default if weight is left blank</li><li>Semibold</li><li>Bold</li></ul> |
+| Color        | Changes the color of the text        | Possible values of this property are the following:<ul><li>Header color</li><li>Detail color</li><li>Default – this is the default text color, not the default button color</li><li>Primary</li><li>Inverse</li><li>Success</li><li>Warning</li><li>Danger</li></ul><br />The color for each value depends on your settings in the **Theme Customizer**. For details, see [Theme Customizer in the Web Modeler](theme-customizer-wm). |
+| Alignment    | Aligns the text                      | Possible values of this property are the following:<ul><li>{blank}</li><li>Left</li><li>Center</li><li>Right</li></ul> |
+| Transform    | Changes letter case of the text      | Possible values of this property are the following:<ul><li>{blank} – do not transform the text<li>Lowercase</li><li>Uppercase</li><li>Capitalize</li></ul> |
+| Wrap Options | Wrap a long text into multiple lines | Possible values of this property are the following:<ul><li>{blank} – wrap<li>Wrap</li><li>No Wrap</li></ul> |
 
 
 ## 3 Related Content

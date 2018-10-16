@@ -57,7 +57,7 @@ The render mode defines the way a text will be shown to the end-user. Possible v
 | ----------- | ------------------------------------------------------------ |
 | Text        | The text will be rendered inline with the previous/next texts on a page |
 | Paragraph   | The text will be rendered as a separate paragraph            |
-| Heading 1-6 | The text will be rendered as a heading. Heading 1 is the largest type of the heading, heading 6 is the smallest one. |
+| H1-H6 | The text will be rendered as a heading. H1 is the largest type of the heading, H6 is the smallest one. |
 
 ## 3 Page Title General Properties {#page-title-widget}
 

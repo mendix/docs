@@ -10,8 +10,8 @@ tags: ["Developer Portal", "Cloud Environments", "Mendix Cloud", "SAP", "IBM", "
 
 #### Improvements
 
-* We have overhauled the scaling UI to make it more intuitive.
-* It's now possible to pause / resume downloading backups for Mendix Cloud V4 applications.
+* We have overhauled the scaling user interface to make it more intuitive.
+* It is now possible to pause and resume downloading backups for Mendix Cloud V4 applications.
 
 #### Fixes
 

@@ -6,6 +6,19 @@ tags: ["Developer Portal", "Cloud Environments", "Mendix Cloud", "SAP", "IBM", "
 
 ## 2018
 
+### October 17th, 2018
+
+#### Improvements
+
+* We have overhauled the scaling UI to make it more intuitive.
+* It's now possible to pause / resume downloading backups for Mendix Cloud V4 applications.
+
+#### Fixes
+
+* We fixed a memory leak problem that caused Cloud Portal to have longer response times.
+* We addressed and fixed an issue that caused some Cloud Portal users to see empty dialog boxes instead of error message content.
+* We addressed an issue that caused live logging to freeze from time to time. The fix has been confirmed on all mainstream browsers except for Internet Explorer, which we still are investigating.
+
 ### October 16th, 2018
 
 #### Fixes

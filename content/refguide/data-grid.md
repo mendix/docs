@@ -25,13 +25,13 @@ A data grid showing accounts.
 
 ### General Properties
 
-#### Show Control Bar
+#### Show Control Bar Buttons
 
-This property indicates whether the control bar will be visible in the end user interface. The control bar also includes the paging buttons.
+This property indicates whether the control bar buttons will be visible in the end user interface.
 
 {{% alert type="warning" %}}
 
-Even if the control bar is invisible there can still be a default button that is triggered by (double) clicking a row. See the property 'Default button trigger' and [data grid buttons](control-bar) for more information.
+Even if the control bar buttons are invisible there can still be a default button that is triggered by (double) clicking a row. See the property 'Default button trigger' and [data grid buttons](control-bar) for more information.
 
 {{% /alert %}}
 
@@ -39,7 +39,7 @@ _Default value:_ True
 
 #### Show Paging Buttons
 
-This property indicates with the buttons to page through the information in the grid are visible. Only hide these buttons if you are sure that there will never be more objects than the number of rows of the grid. Note that hiding the control bar also hides the paging buttons.
+This property indicates with the buttons to page through the information in the grid are visible. Only hide these buttons if you are sure that there will never be more objects than the number of rows of the grid.
 
 _Default value:_ True
 

@@ -62,8 +62,8 @@ Specific properties for **Buttons** are described in the table below:
 
 | Property   | Description                                                  | Possible Values                                              |
 | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Size       | Changes the size of the button.                              | Possible values of this property are the following:<ul><li>Small</li><li>Large</li></ul> |
-| Full Width | The button takes the whole width of a container it is placed in. | True/False                                                   |
+| Size       | Changes the size of the button.                              | You can change the size from the *preset* size by selecting one of the following:<ul><li>Small – the button is smaller than the preset</li><li>Large - the button is larger than the preset</li></ul> |
+| Full Width | The button takes the whole width of a container it is placed in. | On/Off                                                   |
 | Bordered   | Changes the style of the button to a button with a transparent background, a colored border, and a colored text. Color of the border and the text are inverted from the background color, that means, if the button background is red, the background will become transparent, but the border and text will become red. | True/False                                                   |
 | Align Icon | Places an icon (if any) to the right of the text or on top of it. | Possible values of this property are the following:<ul><li>Right</li><li>Top</li></ul> |
 

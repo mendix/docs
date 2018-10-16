@@ -3,8 +3,12 @@ title: "Logs"
 category: "Operate"
 menu_order: 30
 description: "This page describes the Logs page of the Developer Portal."
-tags: ["Operate","App","Developer Portal"]
+tags: ["Operate", "App", "Developer Portal", "SAP", "V3", "V4"]
 ---
+
+## 1 Introduction
+
+From this page of the Developer Portal, you can access the logs produced by your app. Depending on the environment to which your app is deployed.
 
 ## 1 Logs
 

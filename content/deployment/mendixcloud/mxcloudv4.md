@@ -91,6 +91,7 @@ There are some features missing in v4. Mendix will implement the following featu
 * To use the debugger, you need to scale down to one instance
 * Custom error pages for 404 and 403 are not functional
 * Metrics for multi-instance nodes are not reported correctly. The information reported on the app's **Metrics** and **Alerts** pages only represents once instance of a multi-instance node
+* It is not possible to deploy a model (`.mda`) that is larger than 4GB when uncompressed, or that contains approximately 64,000 or more files.
 * In some circumstances your app can run out of file connections. This is indicated by the following entry in the logfile: *com.amazonaws.http.AmazonHttpClient executeHelper Unable to execute HTTP request: Timeout waiting for connection from pool*. To resolve this:
     * Update all App Store modules to the latest version – older versions may not close file connections correctly
     * If using Mendix 6, upgrade to version 6.10.16 or above; for Mendix 7, upgrade to version 7.16 or above

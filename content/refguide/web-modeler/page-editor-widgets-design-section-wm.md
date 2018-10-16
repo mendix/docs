@@ -64,8 +64,8 @@ Specific properties for **Buttons** are described in the table below:
 | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | Size       | Changes the size of the button.                              | You can change the size from the *preset* size by selecting one of the following:<ul><li>Small – the button is smaller than the preset</li><li>Large - the button is larger than the preset</li></ul> |
 | Full Width | The button takes the whole width of a container it is placed in. | On/Off                                                   |
-| Bordered   | Changes the style of the button to a button with a transparent background, a colored border, and a colored text. Color of the border and the text are inverted from the background color, that means, if the button background is red, the background will become transparent, but the border and text will become red. | True/False                                                   |
-| Align Icon | Places an icon (if any) to the right of the text or on top of it. | Possible values of this property are the following:<ul><li>Right</li><li>Top</li></ul> |
+| Bordered   | Changes the style of the button to a button with a transparent background, a colored border, and a colored text. Color of the border and the text are inverted from the background color, that means, if the button background is red, the background will become transparent, but the border and text will become red.<br />**This option has no effect on buttons which are rendered as links**| True/False                                                   |
+| Align Icon | Moves an icon (if any) to the right of the text or on top of it. | Possible values of *Align Icon* are the following:<ul><li>{blank} – icon is to the left of the text<li>Right – icon is moved to the right side of the button or link</li><li>Top – icon is centred above the button text for *button* style and left-justified above the button text for *link* style</li></ul> |
 
 ### 2.4 Text Specific Properties {#text-design-properties}
 

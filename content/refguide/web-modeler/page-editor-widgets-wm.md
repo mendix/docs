@@ -33,19 +33,19 @@ Widgets of the Web Modeler are divided into categories that you can see when you
 
 Widget categories are described in the table below:
 
-| Widget Category                                         | Contains                                                     | Documented here                                              |
+| Widget Category                                         | Description                                                  | Link to More Detailed Documentation                          |
 | ------------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [Data Containers](page-editor-data-view-list-view-wm)   | ways of displaying data from a single object, or list of objects. | [Data View and List View Properties in the Web Modeler](page-editor-data-view-list-view-wm) |
-| [Input Elements](page-editor-widgets-input-elements-wm) | elements that can be used for inputting data.                | [Input Element Widgets in the Web Modeler](page-editor-widgets-input-elements-wm) |
-| [Images](page-editor-widgets-images-wm)                 | image display widgets.                                       | [Image Widgets in the Web Modeler](page-editor-widgets-images-wm) |
-| [Typography](page-editor-widgets-typography-wm)         | text display widgets.                                        | [Typography Widgets in the Web Modeler](page-editor-widgets-typography-wm) |
-| [Buttons](page-editor-widgets-buttons-wm)               | user interaction buttons.                                    | [Button Widgets in the Web Modeler](page-editor-widgets-buttons-wm) |
-| [Layouts](page-editor-widgets-layouts-wm)               | layouts used for controlling the placing widgets.            | [Layout Widgets in the Web Modeler](page-editor-widgets-layouts-wm) |
-| [Menus](../menu-widgets)                                | menu creation widgets. Currently, these widgets can be configured only in the Desktop Modeler. | [Menu Widgets](../menu-widgets) in the *Desktop Modeler* category |
-| Display                                                 | widgets which display changing elements on a page, e.g. a map, or a progress bar. This category consists of the App Store widgets. | section [4 Widgets by Origin](#widgets-by-origin)            |
-| Charts                                                  | different charts. This category consist of the App Store widgets. | section [4 Widgets by Origin](#widgets-by-origin)            |
-| List view Controls                                      | controls for the list view. This category consist of the App Store widgets. | section [4 Widgets by Origin](#widgets-by-origin)            |
-| Add-ons                                                 | all custom widgets previously installed in the app. If widgets cannot be matched to the App Store profile they will be shown in the add-ones. |                                                              |
+| [Data Containers](page-editor-data-view-list-view-wm)   | Data containers are ways of displaying data. This category contains a data view (the starting point for showing the contents of one object), and list view (the starting point for showing the contents of list of objects). | [Data View and List View Properties in the Web Modeler](page-editor-data-view-list-view-wm) |
+| [Input Elements](page-editor-widgets-input-elements-wm) | Contains elements that can be used for inputting data.       | [Input Element Widgets in the Web Modeler](page-editor-widgets-input-elements-wm) |
+| [Images](page-editor-widgets-images-wm)                 | Contains image display widgets.                              | [Image Widgets in the Web Modeler](page-editor-widgets-images-wm) |
+| [Typography](page-editor-widgets-typography-wm)         | Contains text display widgets.                               | [Typography Widgets in the Web Modeler](page-editor-widgets-typography-wm) |
+| [Buttons](page-editor-widgets-buttons-wm)               | Contains a variety of buttons for placing on a page.         | [Button Widgets in the Web Modeler](page-editor-widgets-buttons-wm) |
+| [Layouts](page-editor-widgets-layouts-wm)               | Contains layouts for controlling the placing widgets.        | [Layout Widgets in the Web Modeler](page-editor-widgets-layouts-wm) |
+| [Menus](../menu-widgets)                                | Contains menu creation widgets. Currently, these widgets can be configured only in the Desktop Modeler. | [Menu Widgets](../menu-widgets) in the *Desktop Modeler* category |
+| Display                                                 | Contains widgets which display changing elements on a page, for example a map, or a progress bar. This category consists of the App Store widgets. | section [4 Widgets by Origin](#widgets-by-origin)            |
+| Charts                                                  | Contains different charts. This category consist of the App Store widgets. | section [4 Widgets by Origin](#widgets-by-origin)            |
+| List view Controls                                      | Contains controls for the list view. This category consist of the App Store widgets. | section [4 Widgets by Origin](#widgets-by-origin)            |
+| Add-ons                                                 | Contains all custom widgets previously installed in the app. If widgets cannot be matched to the App Store profile they will be shown in the add-ones. |                                                              |
 
 ## 4 Widgets by Origin {#widgets-by-origin}
 

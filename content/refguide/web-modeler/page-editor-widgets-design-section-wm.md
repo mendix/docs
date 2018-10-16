@@ -32,9 +32,9 @@ The example of how spacing works on a button is schematically shown on an image 
 
 The following widgets have specific properties:
 
-* [List view](#list-view-design-properties) 
+* [List view](#list-view-design-properties) (a Data Container widget)
 * [Container](#container-design-properties) (a Layout widget)
-* [Buttons](#button-design-properties)
+* [Buttons](#button-design-properties) (all Button widgets)
 * [Text](#text-design-properties) (a Typography widget)
 
 ### 2.1 List View Specific Properties {#list-view-design-properties}
@@ -53,8 +53,8 @@ Specific properties for the **Container** widget are described in the table belo
 
 | Property         | Description                        | Possible Values                                              |
 | ---------------- | ---------------------------------- | ------------------------------------------------------------ |
-| Align Content    | Aligns content inside a container. | Possible values of this property are the following:<ul><li>Left align as a row</li><li>Center align as row</li><li>Right align as row</li><li>Left align as column</li><li>Center align as column</li><li>Right align as column</li></ul><br />When aligning content as a column, elements inside a container will be aligned one under another; when aligning content as a row, elements inside a container will be aligned next to each other. |
-| Background color | Applies a background color.        | Possible values of this property are the following:<ul><li>Default</li><li>Primary</li><li>Inverse</li><li>Success</li><li>Warning</li><li>Danger</li></ul><br />The color for each value depends on your settings in the **Theme Customizer**. For details, see [Theme Customizer in the Web Modeler](theme-customizer-wm). |
+| Align Content    | Aligns content inside a container. | Possible values of this property are the following:<ul><li>{blank} no alignment</li><li>Left align as a row</li><li>Center align as row</li><li>Right align as row</li><li>Left align as column</li><li>Center align as column</li><li>Right align as column</li></ul><br />When aligning content as a column, elements inside a container will be aligned one under another; when aligning content as a row, elements inside a container will be aligned next to each other. |
+| Background color | Applies a background color.        | Possible values of this property are the following:<ul><li>{blank} Color defined in **Backgrounds > Default** of the UI Customization section of the Theme Customizer</li><li>One of the **Brand Colors**</li><ul><li>Default</li><li>Primary</li><li>Inverse</li><li>Success</li><li>Warning</li><li>Danger</li></ul></ul><br />The color for each value depends on your settings in the **Theme Customizer**. For details, see [Theme Customizer in the Web Modeler](theme-customizer-wm). |
 
 ### 2.3 Button Specific Properties {#button-design-properties}
 

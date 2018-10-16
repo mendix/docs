@@ -18,10 +18,10 @@ The SAP OData Connector can be used for example in combination with the SAP Data
 
 If you are new to the SAP OData Connector, you can try it out by following our how-to: [How to Use the OData Connector](/howto/sap/use-sap-odata-connector). This reference assumes that you know the details of the SAP OData service you want to use.
 
-When running the Mendix application in SAP Cloud Platform, you can choose to use SAP Destination Services to gain access to your on-premises SAP instance. SAP Destination Services can be configured to invoke the SAP Connectivity Service in the SAP Cloud Platform to find a route to your private SAP OData service. This route is configured from the SAP Cloud Connector running as an agent in your on-premises SAP back-end. If no route is configured, the SAP OData Connector will route requests to the public OData service. For more information, see the [SAP Destination Services](sap-destination-services) documentation and the [SAP OData Connector](https://appstore.home.mendix.com/link/app/74525/Mendix/SAP-OData-Connector) in the Mendix App Store.
+When running the Mendix application on SAP Cloud Platform, you can choose to use the SAP Destination Service to gain access to your on-premises SAP instance. The SAP Destination Service can be configured to invoke the SAP Connectivity Service in SAP Cloud Platform to find a route to your OData service residing on-premises. This route is configured from the SAP Cloud Connector running as an agent in your on-premises SAP back-end. If no route is configured, the SAP OData Connector will route requests to the public OData service. For more information, see the [SAP Destination Service](sap-destination-service) documentation and the [SAP OData Connector](https://appstore.home.mendix.com/link/app/74525/Mendix/SAP-OData-Connector) in the Mendix App Store.
 
 {{% alert type="info" %}}
-SAP Destination Services replaces the SAP Cloud Connector flag which was used in previous version of the SAP OData Connector
+The SAP Destination Service replaces the SAP Cloud Connector flag which was used in previous version of the SAP OData Connector
 {{% /alert %}}
 
 ## 2 Using the SAP OData Connector<a name="UsingtheSAPODataConnector"></a>
@@ -92,7 +92,7 @@ This domain model generally works in the same way as a Mendix domain model, with
 * Many objects have attributes which end in ...Deferred. These contain URIs which will return a list of objects of an entity type which is associated with the current object. For example: in the domain model above, the Task entity contains an attribute AttachmentsDeferred. This will contain a URI which can be used to return a list of TaskAttachments associated with the current Task object via the Attachments_Task_TaskAttachment association.
 
 {{% alert type="info" %}}
-If you are using *Destination Services* to identify the endpoint of your SAP OData Service, you will need to edit the strings from the  meta_objectURI and ...Deferred attributes as they will already contain an endpoint in addition to the object references.
+If you are using the *SAP Destination Service* to identify the endpoint of your SAP OData Service, you will need to edit the strings from the  meta_objectURI and ...Deferred attributes as they will already contain an endpoint in addition to the object references.
 {{% /alert %}}
 
 #### 2.3.2 SAP OData Connector Domain Model<a name='ConnectorDM'></a>
@@ -130,7 +130,7 @@ This domain model is part of the SAP OData Connector module and can be found in 
 * **CSRFToken** – the Cross-Site Request Forgery (CSRF) token is maintained internally and is used to prevent CSRF attacks; a CSRF token is obtained when a **Get** or **Get list** OData action is performed and is maintained for a Mendix session (or transaction context) which means that:
   * where an asynchronous or background microflow is executed (for example, using *executeMicroflowInBackground* from Community Commons) a new CSRF token must be obtained before any other actions are performed
   * where a startup microflow or scheduled event is run, the context also supports CSRF but, again, the token must be obtained before performing any other actions
-* **Destination** – Information which defines the destination when using *Destination Services*. See [SAP Destination Services](sap-destination-services) for more information.<br />
+* **Destination** – Information which defines the destination when using the *SAP Destination Service*. See [SAP Destination Service](sap-destination-service) for more information.<br />
     There are also some entities which are used to construct the *Destination* entity. Attribute values should always be taken from the Destination entity, rather than these entities:
     * DestinationConfiguration
     * ConectivityInfo
@@ -159,7 +159,7 @@ This Create is not the same as the Mendix **Create Object** action. The SAP ODat
 * Input
 
   * Odata object (required) - an object which is a specialization of the OdataObject entity and corresponds to the OData Entity which is being created
-  * Destination – a string containing the name of the destination. This matches the name of the destination as set up in the SAP Cloud Platform cockpit. If you are not using Destination Services, set it to *empty*
+  * Destination – a string containing the name of the destination. This matches the name of the destination as set up in the SAP Cloud Platform cockpit. If you are not using an SAP Destination Service, set it to *empty*
   * Query (required) - A URL which points to the Collection to which the object belongs. The Collection also identifies as an Entity Set in the OData service.
   * Request Parameters - This is used to override the default behavior of the action when responding to conditions such as timeouts and HTTP responses. To keep the standard behavior, set it to _empty_
 * Output
@@ -192,7 +192,7 @@ The Delete operation deletes an existing entity instance in the SAP back-end sys
 
 * Input
   * Odata object (required) - The Mendix representation of the object which you wish to delete
-  * Destination – a string containing the name of the destination. This matches the name of the destination as set up in the SAP Cloud Platform cockpit. If you are not using Destination Services, set it to *empty*
+  * Destination – a string containing the name of the destination. This matches the name of the destination as set up in the SAP Cloud Platform cockpit. If you are not using an SAP Destination Service, set it to *empty*
   * Request Parameters - This is used to override the default behavior of the action when responding to conditions such as timeouts and HTTP responses. To keep the standard behavior, set it to _empty_
 * Output
   * Return type - Boolean
@@ -212,8 +212,8 @@ The service operations which are supported by the OData service are listed in th
 
 * Input
   * Response type (required) - the type of entity which represents the object which is returned
-  * Destination – a string containing the name of the destination. This matches the name of the destination as set up in the SAP Cloud Platform cockpit. If you are not using Destination Services, set it to *empty*
-  * Url (required) - the URL of the service operation. This is generally */[function name]* preceded by the SERVICEROOT if Destination Services are not being used
+  * Destination – a string containing the name of the destination. This matches the name of the destination as set up in the SAP Cloud Platform cockpit. If you are not using an SAP Destination Service, set it to *empty*
+  * Url (required) - the URL of the service operation. This is generally */[function name]* and is preceded by the SERVICEROOT if an SAP Destination Service is not being used
   * Http method (required) - GET or POST: the method used to invoke the service operation. GET is usually used to retrieve data and POST is usually used to create data
   * Function parameters (required): Additional parameters which the service operation needs in order to retrieve, update, or create the correct data. The name of the relevant Function Parameters entity, imported into your app as part of the SAP service data model, will be [function name]Parameters. The attributes of this entity will indicate the parameters which are required by the service operation
   * Request Parameters - This is used to override the default behavior of the action when responding to conditions such as timeouts and HTTP responses. To keep the standard behavior, set it to _empty_
@@ -227,8 +227,8 @@ This performs the same action as the Execute entry action, but this is used wher
 
 * Input
   * Response type (required) - the type of entity which represents the objects in the list which is returned
-  * Destination – a string containing the name of the destination. This matches the name of the destination as set up in the SAP Cloud Platform cockpit. If you are not using Destination Services, set it to *empty*
-  * Url (required) - the URL of the service operation
+  * Destination – a string containing the name of the destination. This matches the name of the destination as set up in the SAP Cloud Platform cockpit. If you are not using an SAP Destination Service, set it to *empty*
+  * Url (required) - the URL of the service operation. This is generally */[function name]* and is preceded by the SERVICEROOT if an SAP Destination Service is not being used
   * Http method (required) - GET or POST: the method used to invoke the service operation. GET is usually used to retrieve data and POST is usually used to create data
   * Function parameters (required): Additional parameters which the service operation needs in order to retrieve or create the correct data. The name of the relevant function parameters entity, imported into your app as part of the SAP service domain model, will be [function name]Parameters. The attributes of this entity will indicate the parameters which are required by the service operation
   * Request Parameters - This is used to override the default behavior of the action when responding to conditions such as timeouts and HTTP responses. To keep the standard behavior, set it to _empty_
@@ -242,7 +242,7 @@ The Get Entry operation gets a single existing entity instance from the OData se
 
 * Input
   * Response type (required) - the type of entity which represents the object which is returned
-  * Destination – a string containing the name of the destination. This matches the name of the destination as set up in the SAP Cloud Platform cockpit. If you are not using Destination Services, set it to *empty*  
+  * Destination – a string containing the name of the destination. This matches the name of the destination as set up in the SAP Cloud Platform cockpit. If you are not using an SAP Destination Service, set it to *empty*  
   * Url (required) - The URL of the object to be retrieved
   * Request Parameters - This is used to override the default behavior of the action in responding to conditions such as timeouts and HTTP responses. To keep the standard behavior, set it to _empty_
 * Output
@@ -264,7 +264,7 @@ The Get List action gets a list of objects described by a type of entity in the 
 
 * Input
   * Response type (required) - the type of entity which represents the objects which are returned
-  * Destination – a string containing the name of the destination. This matches the name of the destination as set up in the SAP Cloud Platform cockpit. If you are not using Destination Services, set it to *empty*
+  * Destination – a string containing the name of the destination. This matches the name of the destination as set up in the SAP Cloud Platform cockpit. If you are not using an SAP Destination Service, set it to *empty*
   * Query (required) - the query which will return a list of entity instances from the OData service. See section [4.1.1 Query](#Query) for more information
   * Request Parameters - This is used to override the default behavior of the action when responding to conditions such as timeouts and HTTP responses. To keep the standard behavior, set it to _empty_
   * Parent - If the Get List action returns a list of objects which all have a single parent object (an object which is linked as one parent to many objects of Response type) then you can pass the parent object here and Get List will make the associations. Set this to _empty_ if it is not required
@@ -287,7 +287,7 @@ This action refreshes local data which is cached in objects within the Mendix do
 
 * Input
   * Odata object (required) - The Mendix representation of the object containing the 'dirty' data which you wish to refresh by retrieving it from SAP using the OData service
-  * Destination – a string containing the name of the destination. This matches the name of the destination as set up in the SAP Cloud Platform cockpit. If you are not using Destination Services, set it to *empty*
+  * Destination – a string containing the name of the destination. This matches the name of the destination as set up in the SAP Cloud Platform cockpit. If you are not using an SAP Destination Service, set it to *empty*
   * Request Parameters - This is used to override the default behavior of the action when responding to conditions such as timeouts and HTTP responses. To keep the standard behavior, set it to _empty_
 * Output
   * Return type - Boolean
@@ -299,7 +299,7 @@ The Update operation changes the attributes of an existing entity instance in th
 
 * Input
   * Odata object (required) - The Mendix representation of the object containing the updated data which you wish to update.
-  * Destination – a string containing the name of the destination. This matches the name of the destination as set up in the SAP Cloud Platform cockpit. If you are not using Destination Services, set it to *empty*
+  * Destination – a string containing the name of the destination. This matches the name of the destination as set up in the SAP Cloud Platform cockpit. If you are not using an SAP Destination Service, set it to *empty*
   * Request Parameters - This is used to override the default behavior of the action in responding to conditions such as timeouts and HTTP responses. To keep the standard behavior, set it to _empty_
 * Output
   * Return type - Boolean
@@ -364,7 +364,7 @@ For example, you could catch an exception on **Get List** and display an error m
 #### 3.2.5 Get cloud connector info
 
 {{% alert type="info" %}}
-This action is included for backward compatibility. The information about your cloud connector connection is available in the **Destination** entity after you have performed a **Get Destination** action. See [SAP Destination Services](sap-destination-services) for more information.
+This action is included for backward compatibility. The information about your cloud connector connection is available in the **Destination** entity after you have performed a **Get Destination** action. See [SAP Destination Service](sap-destination-service) for more information.
 {{% /alert %}}
 
 This creates a **CloudConnectorInfo** object and fills the values for **ProxyHost**, **ProxyPort**, and **ProxyBearerToken** from the SAP environment, when the app is running on the SAP Cloud Portal.
@@ -406,10 +406,10 @@ When an object is returned from an OData service, your app needs to know to whic
 
 #### 4.1.3 Destination
 
-Destination is the name of the object of type SAPODataConnector.Destination where the details of a destination have been stored by a *Get Destination* action. SAP Destination Services enables your Mendix app to use services defined in the SAP Cloud Platform cockpit without needing to know all the technical details of the endpoint. You can find more information about Destination Services in [SAP Destination Services](sap-destination-services).
+Destination is the name of the object of type SAPODataConnector.Destination where the details of a destination have been stored by a *Get Destination* action. An SAP Destination Service enables your Mendix app to use services defined in the SAP Cloud Platform cockpit without needing to know all the technical details of the endpoint. You can find more information about the SAP Destination Service in [SAP Destination Service](sap-destination-service).
 
 {{% alert type="info" %}}
-Destination Services will only provide the correct information when run on SAP Cloud Platform. To test your app on your local machine you will have to use a URL to connect directly to an SAP service which is available to you.
+The SAP Destination Service will only provide the correct information when run on SAP Cloud Platform. To test your app on your local machine you will have to use a URL to connect directly to an SAP service which is available to you.
 {{% /alert %}}
 
 #### 4.1.4 Query<a name="Query"></a>
@@ -427,7 +427,7 @@ The Query edit box will help you by offering suggestions as described above.
 **@SERVICEROOT** is a constant which is created in the SAP Service Data Model and has a value which is the root URL of the OData service, for example: https://www.sapfioritrial.com/sap/opu/odata/sap/CRM_TASK.
 
 {{% alert type="info" %}}
-If you are using a *Destination* configured by SAP Destination Services, then the @SERVICEROOT should be empty. In other words, the query should begin with the `'/'` before the COLLECTIONNAME. 
+If you are using a *Destination* configured by the SAP Destination Service, then the @SERVICEROOT should be empty. In other words, the query should begin with the `'/'` before the COLLECTIONNAME. 
 {{% /alert %}}
 
 **COLLECTIONNAME** can be found in the enumeration EntitySetNames which lists all the collections in the SAP Service Data Model, for example: the collection Tasks will be shown as @SERVICEROOT.EntitySetNames.Tasks
@@ -472,7 +472,7 @@ When you are referencing an object, the format of the URL is:
 **@SERVICEROOT** is a constant which is created in the SAP Service Data Model and has a value which is the root URL of the OData service, for example: https://www.sapfioritrial.com/sap/opu/odata/sap/CRM_TASK.
 
 {{% alert type="info" %}}
-If you are using a *Destination* configured by SAP Destination Services, then the @SERVICEROOT should be empty. In other words, the query should begin with the `'/'` before the COLLECTIONNAME. 
+If you are using a *Destination* configured by the SAP Destination Service, then the @SERVICEROOT should be empty. In other words, the query should begin with the `'/'` before the COLLECTIONNAME. 
 {{% /alert %}}
 
 **COLLECTIONNAME** can be found in the enumeration EntitySetNames which lists all the collections in the SAP Service Data Model, for example: the collection Tasks will be shown as @SERVICEROOT.EntitySetNames.Tasks
@@ -543,7 +543,7 @@ For example, Account is the parent entity of task via the Tasks_Account_Task ass
 ![](attachments/sap-odata-connector/taskaccounttask-sapodataconnector.png)
 
 {{% alert type="info" %}}
-If you are using *Destination Services* to identify the endpoint of your SAP OData Service, you will need to edit the values of the ...Deferred attributes as they will already contain an endpoint in addition to the object references.
+If you are using the *Destination Service* to identify the endpoint of your SAP OData Service, you will need to edit the values of the ...Deferred attributes as they will already contain an endpoint in addition to the object references.
 {{% /alert %}}
 
 {{% alert type="warning" %}}

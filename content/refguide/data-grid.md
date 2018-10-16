@@ -31,7 +31,7 @@ This property indicates whether the control bar buttons will be visible in the e
 
 {{% alert type="warning" %}}
 
-Even if the control bar buttons are invisible there can still be a default button that is triggered by (double) clicking a row. See the property 'Default button trigger' and [data grid buttons](control-bar) for more information.
+Even if the control bar buttons are invisible, there can still be a default button that is triggered by (double) clicking a row. For more information, see the property [Default Button Trigger](#dbt) and [Data Grid Buttons](control-bar).
 
 {{% /alert %}}
 
@@ -77,7 +77,7 @@ This property indicates whether the first item will be selected initially. This 
 
 _Default value:_ False
 
-#### Default Button Trigger
+#### <a name="dbt"></a>Default Button Trigger
 
 The default button can be triggered by a single or a double click on a row.
 

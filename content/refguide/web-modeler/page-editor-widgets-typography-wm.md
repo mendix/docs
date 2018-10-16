@@ -61,16 +61,22 @@ The render mode defines the way a text will be shown to the end-user. Possible v
 
 ## 3 Page Title General Properties {#page-title-widget}
 
-The page title widget shows the title of the current page.   
+The page title widget sets the title of the current page and displays it. This is the title which also appears as the page title in your browser.
 
-If you want to change the name of the page, do the following:
+The title will be displayed in the **H1** style of the **Theme Customizer**. For details, see [Theme Customizer in the Web Modeler](theme-customizer-wm).
+
+If you want to change the title of the page, do the following:
 
 1. Open **Properties** of the widget > the **General** section.
 2. Change a name in the **Title** field. 
 
 The page title is changed. 
 
-The **Title** that you see in the page properties and in widget is one and the same. This means, if you make changes to the title in page properties, this change will be displayed in the widget, and vice versa.  
+{{% alert type="info" %}}
+The **Title** that you see in the page properties and in the widget are one and the same. This means, if you make changes to the title in page properties, this change will be displayed in the widget, and vice versa.  
+
+You can put several **Title** widgets on your page, but they will all display the same text and cannot be edited individually.
+{{% /alert %}}
 
 ![](attachments/page-editor-widgets-typography-wm/wm-page-title-interrelation.png)
 

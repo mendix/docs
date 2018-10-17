@@ -142,7 +142,7 @@ In your integrations you have the following type of documents:
 | Published REST service operation microflow| PRS\_  |
 | Import mapping                            | INM\_  |
 | Export mapping                            | EXM\_  |
-| XML schema                                | XML\_  |
+| XML schema                                | XSD\_  |
 | JSON structure                            | JSON\_ |
 | Deeplink                                  | DL\_   |
 

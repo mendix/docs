@@ -1,7 +1,6 @@
 ---
 title: "Use the Mendix Feedback Widget"
-category: "How-To's"
-menu_order: 60
+parent: "feedback"
 description: "Describes how to add the Feedback Widget to your app project and configure it."
 tags: ["Feedback","Widget","Developer Portal"]
 ---
@@ -23,7 +22,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 Submitting Feedback on an App
 
-The main purpose of the Mendix Feedback widget is to enable end-users to provide feedback on apps. By just clicking **Feedback** when you are logged in to a Mendix app, you can comment on low-priority issues, ask questions, and propose ideas for improvement. That feedback will be reviewed and processed. For details on how feedback is addressed for an app project, see [Feedback](../collaborate/feedback).
+The main purpose of the Mendix Feedback widget is to enable end-users to provide feedback on apps. By just clicking **Feedback** when you are logged in to a Mendix app, you can comment on low-priority issues, ask questions, and propose ideas for improvement. That feedback will be reviewed and processed. For details on how feedback is addressed for an app project, see [Feedback](feedback).
 
 {{% alert type="info" %}}
 
@@ -37,7 +36,7 @@ To provide feedback via the Mendix Feedback Widget, follow these steps:
 2. Fill in the feedback you want to send to Mendix. A description of the feedback and a screenshot of the screen are optional but recommended.
 3. Click **Send Feedback**:
 
-    ![](attachments/collaborate/feedback-example.png)
+    ![](attachments/feedback-example.png)
 
 After clicking **Send feedback**, your feedback will go straight to the [Feedback](https://docs.mendix.com/developerportal/collaborate/feedback) page of your app project in the Developer Portal.
 
@@ -54,11 +53,11 @@ The Mendix Feedback Widget is automatically included in any new app that you cre
 1. Download the latest version of the [Mendix Feedback Widget](https://appstore.home.mendix.com/link/app/199/) from the Mendix App Store.
 2. When the latest Mendix Feedback Widget is included in your app, you need to ensure that the widget is added to the homepage of the application. Open the homepage from your app's **Project** > **Navigation**:
 
-    ![](attachments/collaborate/18580455.png)
+    ![](attachments/18580455.png)
 
 3. If the Mendix Feedback Widget has not been added to the page, add it to the page or layout by selecting **Add widget** > **Add-on widgets** > **Feedback Widget** and dropping it into a position in the page:
 
-    ![](attachments/collaborate/18580453.png)
+    ![](attachments/18580453.png)
 
 ## 5 Configuring the Feedback Widget
 
@@ -69,13 +68,13 @@ To configure the widget, follow these steps:
 3. Select the **Username attribute** that stores the name of the user and the **Email address attribute**. This will be used to automatically fill in the name and email address of the user who is logged in when submitting feedback in the app.
 4. Decide whether you want to allow users to upload a file and screenshot to the feedback item (via **Allow file upload** and **Allow screenshot upload**, respectively). 
 
-    ![](attachments/collaborate/18580452.png)
+    ![](attachments/18580452.png)
 
 5. Open the **Configuration** tab of the Mendix Feedback Widget properties.
 6. Ensure that the **Feedback server** is set to `https://sprintr.home.mendix.com/`.
 7. Ensure that the **Project identifier** is filled in correctly. The project identifier is your **App ID**, and it is automatically filled in for the Mendix Feedback Widget. If necessary, you can find the identifier of your app in the [Developer Portal](http://home.mendix.com) by opening your app and clicking **General** under the **Settings** category:
 
-    ![](attachments/collaborate/generalsettings.png)
+    ![](attachments/generalsettings.png)
 
 8. If you have configured multiple home pages for different user roles, you need to add the Mendix Feedback Widget to each home page for the user role from which you want to gather feedback. This can easily be done by copying the configured widget to the other relevant layouts and pages.
 

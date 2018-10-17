@@ -13,8 +13,8 @@ On the **Feedback** page of the Developer Portal, you can view and manage the fe
 ![](attachments/feedback.png)
 
 This feedback comes from a variety of sources:
-* Submitted via the [Mendix Feedback Widget](../howto/use-feedback-widget)
-* Submitted via the [Mendix Feedback & Collaboration Widget](../howto/use-collaboration-widget)
+* Submitted via the [Mendix Feedback Widget](use-feedback-widget)
+* Submitted via the [Mendix Feedback & Collaboration Widget](use-collaboration-widget)
 * Submitted on the **Feedback** page itself (for details, see the [Actions](#actions) section below)
 
 ### 1.2 Types of Feedback {#types}

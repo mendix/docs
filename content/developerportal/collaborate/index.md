@@ -43,7 +43,7 @@ The **Feedback** button in the **Developer Portal** is used to provide feedback 
 
 {{% /alert %}}
 
-For more details, see [Feedback](feedback), [How to Use the Mendix Feedback Widget](../howto/use-feedback-widget), and [How to Use the Mendix Feedback & Collaboration Widget](../howto/use-collaboration-widget).
+For more details, see [Feedback](feedback), [How to Use the Mendix Feedback Widget](use-feedback-widget), and [How to Use the Mendix Feedback & Collaboration Widget](use-collaboration-widget).
 
 ## 6 Documents
 

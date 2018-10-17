@@ -88,5 +88,5 @@ Make sure the names of the databases aren't the same or make a copy of your own 
 *   [Contributing to a GitHub repository](contribute-to-a-github-repository)
 *   [Starting your own repository](starting-your-own-repository)
 *   [Using Team Server - Version Control](using-team-server-version-control)
-*   [Gathering user feedback](/developerportal/howto/use-feedback-widget)
+*   [How to Use the Mendix Feedback Widget](/developerportal/collaborate/use-feedback-widget)
 *   [Sharing the Development Database](sharing-the-development-database)

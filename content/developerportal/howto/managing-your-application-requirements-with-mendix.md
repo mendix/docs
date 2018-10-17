@@ -214,6 +214,6 @@ Finally, open the file to see your exported data.
 * [How to Share the Development Database](/howto7/collaboration-requirements-management/sharing-the-development-database)
 * [How to Start Your Own Repository](/howto7/collaboration-requirements-management/starting-your-own-repository)
 * [How to Use the Excel Exporter](/howto7/integration/using-the-excel-exporter)
-* [How to Use the Feedback Widget](use-feedback-widget)
+* [How to Use the Feedback Widget](../collaborate/use-feedback-widget)
 * [Team Server](/refguide7/team-server)
 * [Use Team Server - Version Control](/howto7/collaboration-requirements-management/using-team-server-_-version-control)

@@ -14,11 +14,11 @@ The page is accessed through the **Logs** page under the **Operate** category:
 
 ![Navigate to Logs](attachments/logs/log-menu.png)
 
-## 2 Mendix Cloud Version 4
+## 2 Apps Deployed to Mendix Cloud Version 4
 
 This is the default Mendix deployment for a licensed app.
 
-For apps deployed on Mendix Cloud Version 4 (V4), you can select which environment you want logs for. Production logs will require two-step authentication.
+For apps deployed to Mendix Cloud Version 4 (V4), you can select which environment you want logs for. Production logs will require two-step authentication.
 
 You can view the current log, download it, or view and download an archived log.
  
@@ -32,9 +32,9 @@ Download archived log | download a log selected from the list underneath
 Download today's log file | download today's log
 View Live Log | view today's log on the screen
 
-## 3 Mendix Cloud Version 3
+## 3 Apps Deployed to Mendix Cloud Version 3
 
-For apps deployed on Mendix Cloud Version 3 (V3), you can select which environment you want logs for. Production logs will require two-step authentication.
+For apps deployed to Mendix Cloud Version 3 (V3), you can select which environment you want logs for. Production logs will require two-step authentication.
 
 You can fetch the current log and download it, or you can view and download an archived log.
  
@@ -47,9 +47,17 @@ Action Button | Performs the Action
 Download archived log | download a log selected from the list underneath
 Fetch current Log | view the current log on the screen and download it, if required
 
-## 4 SAP Cloud Platform
+## 4 Apps SAP Cloud Platform
 
-For apps deployed on SAP Cloud Platform you can see the logs using Kibana. More information is available on the SAP help site here: [Application Logging for the Cloud Foundry Environment](https://help.sap.com/viewer/ee8e8a203e024bbb8c8c2d03fce527dc/Cloud/en-US/68454d44ad41458788959485a24305e2.html) and within Kibana.
+For apps deployed to SAP Cloud Platform you can see the logs using Kibana. 
+
+The logs page shows all the environments for this app. Click the **Logs** button to open the log in Kibana.
+
+![Logs Page SAP](attachments/logs/log-sap.png)
+
+You may be asked to provide your SAP credentials before you can see the log in Kibana.
+
+The Kibana user guide is available here: [Kibana User Guide](https://www.elastic.co/guide/en/kibana/current/index.html) and within Kibana. More information on how Kibana is integrated with SAP Cloud Platform is available on the SAP help site here: [Application Logging for the Cloud Foundry Environment](https://help.sap.com/viewer/ee8e8a203e024bbb8c8c2d03fce527dc/Cloud/en-US/68454d44ad41458788959485a24305e2.html).
 
 {{% alert type="info" %}}For apps deployed to environments created before 18 October 2018, the *Application Logging (application-logs)* service will not have been bound to your app automatically. To resolve this you can either:
 
@@ -72,4 +80,3 @@ Logs are not available for Free Apps. You will see a sample screen.
 ## 6 App Deployed to Other Clouds
 
 Logs are not available in the Development Portal for apps running on clouds not mentioned above. You will need to go to the cloud management portal for the cloud to which your app is deployed.
-

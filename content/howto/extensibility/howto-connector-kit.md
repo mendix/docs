@@ -6,6 +6,7 @@ tags: ["Java","Connector Kit","microflow action","parameter type", "AWS", "Amazo
 output:
   word_document: default
   html_document: default
+#To update screenshots of these microflows in the Desktop Modeler, use the SlackRekognition-main-master app project, which is saved locally in Other Resources > Documentation Backups (No Update).
 ---
 
 ## 1 Introduction

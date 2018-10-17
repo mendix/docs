@@ -81,6 +81,7 @@ To configure the widget, follow these steps:
 
 ## 6 Related Content
 
+* [How to Configure the Mendix Feedback Widget for iOS](/howto/mobile/feedback-widget-ios)
 * [How to Use the Mendix Feedback & Collaboration Widget](use-collaboration-widget)
 * [Feedback](../collaborate/feedback)
 * [Mendix Profile](../general/mendix-profile)

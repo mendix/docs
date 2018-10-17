@@ -214,7 +214,7 @@ In this section, you can see all the notifications from [Buzz](index#buzz) of wh
 
 This section presents all of the documents  you have shared within different apps in the Developer Portal.
 
-### 9.3 Feedback
+### 9.3 Feedback {#feedback}
 
 {{% image_container width="500" %}}![](attachments/mendix-profile/feedback.png)
 {{% /image_container %}}

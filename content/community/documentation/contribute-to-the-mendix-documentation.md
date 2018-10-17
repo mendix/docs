@@ -108,7 +108,7 @@ Make sure the image files comply with these naming conventions:
 * Make sure the image files have names that make sense, so it's easier to find them later on
 * Save the image files in a sub-folder in the **attachments** folder for the category in which the document is located; this sub-folder should have the same name as the document file name you are working on
   * For example, the `project-setup` image file is located in the **new-project** sub-folder (named after the document) in the **attachments** folder of the **getting-started** how-to category folder
-* The following image file types are allowed: `.jpg`, `.png`, `.gif`
+* The following image file types are allowed: `.png` (preferred), `.jpg`,  `.gif`
 
 ## 6 Gaining Mendix Points<a name="GainingMendixPoints"></a>
 

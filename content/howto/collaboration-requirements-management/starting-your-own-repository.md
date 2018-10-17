@@ -39,6 +39,6 @@ If you want to make a new release for the App Store, we advise you start off wit
 *   [How to Manage Sprints and Stories](/developerportal/howto/managing-your-application-requirements-with-mendix)
 *   [Contributing to a GitHub repository](contribute-to-a-github-repository)
 *   [Using Team Server - Version Control](using-team-server-_-version-control)
-*   [How to Use the Feedback Widget](/developerportal/howto/gathering-user-feedback)
+*   [How to Use the Feedback Widget](/developerportal/howto/use-feedback-widget)
 *   [Sharing the Development Database](sharing-the-development-database)
 

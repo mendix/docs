@@ -314,5 +314,5 @@ To make your public profile private again, click **Make this profile private**.
 * [Roles Within the Company and Apps](../general/roles)
 * [How to Manage Company Roles and App Roles](../howto/change-roles)
 * [Feedback](../collaborate/feedback)
-* [How to Use the Mendix Feedback Widget](../howto/gathering-user-feedback)
-* [How to Provide Feedback on Mendix](../howto/feedback-mendix)
+* [How to Use the Mendix Feedback Widget](../howto/use-feedback-widget)
+

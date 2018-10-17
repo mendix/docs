@@ -37,5 +37,5 @@ If you want to make a new release for the App Store, we advise you start off wit
 *   [Contributing to a GitHub repository](contribute-to-a-github-repository)
 *   [Starting your own repository](starting-your-own-repository)
 *   [Using Team Server - Version Control](using-team-server-version-control)
-*   [Gathering user feedback](/developerportal/howto/gathering-user-feedback)
+*   [Gathering user feedback](/developerportal/howto/use-feedback-widget)
 *   [Sharing the Development Database](sharing-the-development-database)

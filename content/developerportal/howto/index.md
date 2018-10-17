@@ -21,8 +21,8 @@ This category contains documents about the use of specific tasks in the [Develop
 
 ### 4.1 Feedback
 
-* [Use the Feedback Widget](gathering-user-feedback)
-* [Provide Feedback on Mendix](feedback-mendix)
+* [Use the Mendix Feedback Widget](use-feedback-widget)
+* [Use the Mendix Feedback & Collaboration Widget](use-collaboration-widget)
 
 ### 4.2 Stories
 

@@ -39,6 +39,12 @@ When you are done leaving feedback, you need to exit the feedback mode by clicki
 
 ![](attachments/collab-widget/exit.png)
 
+{{% alert type="info" %}}
+
+For details on how to see all the feedback you have submitted, see the Feedback section of Mendix Profile.
+
+{{% /alert %}}
+
 ## 4 Editing an App
 
 Clicking the **Edit** icon opens the app page in the Web Modeler. If you have permissions to edit the app, you can start editing and collaborating right away!

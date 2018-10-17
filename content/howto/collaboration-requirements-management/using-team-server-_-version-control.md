@@ -182,6 +182,6 @@ The example shows that you can merge a single revision. It is also possible to m
 *   [How to Manage Sprints and Stories](/developerportal/howto/managing-your-application-requirements-with-mendix)
 *   [Contributing to a GitHub repository](contribute-to-a-github-repository)
 *   [Starting your own repository](starting-your-own-repository)
-*   [How to Use the Feedback Widget](/developerportal/howto/gathering-user-feedback)
+*   [How to Use the Feedback Widget](/developerportal/howto/use-feedback-widget)
 *   [Sharing the Development Database](sharing-the-development-database)
 

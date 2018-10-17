@@ -36,6 +36,51 @@ Type | Description
 **Question** | The feedback is a question.
 **Issue** | The feedback is an issue or a bug.
 
+## Processing Feedback
+
+To process the feedback, follow these steps:
+
+1. Open the app in the [Developer Portal](http://home.mendix.com).
+2. Click **Feedback** under the **Collaborate** category.
+3. Click **Details** on a feedback item to open its details:
+
+    ![](attachments/feedbacklist.jpg)
+
+4. Process the item by, for example, asking for clarification in the **Leave a comment** box, or by choosing one of the **Actions** displayed in the menu on the right:
+
+    ![](attachments/feedbackdetails.jpg)
+
+    These are the response/commenting action options:
+
+    Action | Description
+    | --- | --- |
+    **Accept feedback** | Clicking this option signifies the feedback is valid and that you want to add a story to your backlog on the basis of the feedback (for more information, see [Adding a Feedback Story to Your Backlog](#adding) below)
+    **Mark 'Under review'** | Notifies the user who submitted the feedback and your team that the item is under review.
+    **Mark as handled** | Changes the status of the item from open to handled so that the item will not pollute your open items list.
+    **Close feedback** | Closes the feedback item (for example, when it is already solved or a duplicate has already been accepted).
+    **Convert to idea** | Changes the feedback type to an idea.
+    **Convert to question** | Changes the feedback type to a question.
+    **Move to app** | Moves the item to another app to which you have access.
+    **Delete feedback** | Deletes the feedback.
+
+### Adding a Feedback Story to Your Backlog {#adding}
+
+After clicking **Accept feedback**, you can create a story on the basis of the feedback item and add it to your backlog. To do that, follow these steps:
+
+1. Enter a logical name and a description for the user story.
+2. Decide whether the feedback item should be classified as a bug or feature.
+3. Select the sprint/backlog to which you want to add the story.
+4. Select a label (if you have any) that you want to add to the story.
+
+    ![](attachments/acceptfeedback.jpg)
+    
+### Providing Feedback to the User
+
+Once a feedback item is connected to a user story, the user who submitted the story will automatically be updated on the progress made on that story:
+
+* Adding a story with feedback attached from your backlog to a sprint will result in a message that the item has been planned
+* Completing a sprint that contains a story with feedback attached will result in a message that the item has been completed
+  
 ## 2 Actions
 
 ### 2.1 Add feedback
@@ -115,6 +160,7 @@ This action cannot be undone.
 ## 5 Related Content
 
 * [Mendix Profile](../general/mendix-profile)
-* [How to Provide Feedback on Mendix](../howto/feedback-mendix)
+* [How to Use the Mendix Feedback Widget](use-feedback-widget)
+* [How to Use the Mendix Feedback & Collaboration Widget](use-collaboration-widget)
 * [Stories](stories)
 * [How to Manage Sprints and Stories](../howto/managing-your-application-requirements-with-mendix)

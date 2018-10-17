@@ -35,7 +35,7 @@ Widget categories are described in the table below:
 
 | Widget Category                                         | Description                                                  | Link to More Detailed Documentation                          |
 | ------------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [Data Containers](page-editor-data-view-list-view-wm)   | Data containers are ways of displaying data. This category contains a data view (the starting point for showing the contents of one object), and list view (the starting point for showing the contents of list of objects). | [Data View and List View Properties in the Web Modeler](page-editor-data-view-list-view-wm) |
+| [Data Containers](page-editor-data-view-list-view-wm)   | Contains a data view (the starting point for showing the contents of one object), and list view (the starting point for showing the contents of list of objects). | [Data View and List View Properties in the Web Modeler](page-editor-data-view-list-view-wm) |
 | [Input Elements](page-editor-widgets-input-elements-wm) | Contains elements that can be used for inputting data.       | [Input Element Widgets in the Web Modeler](page-editor-widgets-input-elements-wm) |
 | [Images](page-editor-widgets-images-wm)                 | Contains image display widgets.                              | [Image Widgets in the Web Modeler](page-editor-widgets-images-wm) |
 | [Typography](page-editor-widgets-typography-wm)         | Contains text display widgets.                               | [Typography Widgets in the Web Modeler](page-editor-widgets-typography-wm) |

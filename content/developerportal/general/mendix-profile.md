@@ -310,7 +310,6 @@ To make your public profile private again, click **Make this profile private**.
 ## 11 Related Content
 
 * [Company Admin Overview](companyadmin-overview)
-* [How to Deactivate and Activate Users](../howto/deactivate-users)
 * [Roles Within the Company and Apps](../general/roles)
 * [How to Manage Company Roles and App Roles](../howto/change-roles)
 * [Feedback](../collaborate/feedback)

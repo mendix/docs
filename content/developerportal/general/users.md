@@ -36,7 +36,7 @@ You can create reports about users active in your company (either by being a mem
 
 You can export these reports by clicking **Export to Excel**. Note that the exports will contain further details in addition to those shown on the screen.
 
-## 3 Security Groups
+## 3 Security Groups {#security-groups}
 
 This tab lists the security groups that are defined for your company. Users who are assigned to security groups will automatically be granted access to specified AppCloud apps. Company admins can set up security groups and specific app permissions for security groups.
 

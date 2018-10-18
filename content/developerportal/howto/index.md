@@ -19,12 +19,7 @@ This category contains documents about the use of specific tasks in the [Develop
 
 ## 4 Collaborate
 
-### 4.1 Feedback
-
-* [Use the Feedback Widget](gathering-user-feedback)
-* [Provide Feedback on Mendix](feedback-mendix)
-
-### 4.2 Stories
+### 4.1 Stories
 
 * [Manage Sprints and Stories](managing-your-application-requirements-with-mendix)
 

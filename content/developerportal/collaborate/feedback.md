@@ -8,113 +8,102 @@ tags: ["Feedback","Developer Portal"]
 
 ## 1 Introduction
 
-Within Mendix, there are two use-cases for the Feedback widget:
-
-* To provide feedback on the Mendix Platform
-* To provide feedback via the app
-
-In the **Developer Portal**, you can view and manage the feedback about your app by clicking **Feedback** in the **Collaborate** category.
+On the **Feedback** page of the Developer Portal, you can view and manage the feedback that has been submitted about an app.
 
 ![](attachments/feedback.png)
 
-Feedback can go through the following four stages:
+This feedback comes from a variety of sources:
+* Submitted via the [Mendix Feedback Widget](use-feedback-widget)
+* Submitted via the [Mendix Feedback & Collaboration Widget](use-collaboration-widget)
+* Submitted on the **Feedback** page itself (for details, see the [Actions](#actions) section below)
 
-Stage | Description
-| --- | --- |
-**Open** | The feedback is awaiting a response from the App Team.
-**Handled** | The App Team has looked into the feedback and has respond for further information.
-**Accepted** | The App Team has accepted the feedback and added this feedback as a story to the sprint.
-**Closed** | The App Team has closed the feedback.
+### 1.2 Types of Feedback {#types}
 
-Feedback in each stage is shown in a separate tab.
+There are three types of feedback items:
 
-Each feedback item can be one of three types:
+| Type         | Description                                                |
+| ------------ | ---------------------------------------------------------- |
+| Idea     | An idea for a change or new feature.                       |
+| Question | A question about the platform.                             |
+| Issue    | An issue or a bug that needs to be investigated for a fix. |
 
-Type | Description
-| --- | --- |
-**Idea** | The feedback is an idea for a change or new feature.
-**Question** | The feedback is a question.
-**Issue** | The feedback is an issue or a bug.
+### 1.3 Feedback Stages {#stages}
 
-## 2 Actions
+Feedback can go through four different stages:
 
-### 2.1 Add feedback
+| Stage        | Description                                                  |
+| ------------ | ------------------------------------------------------------ |
+| Open     | The feedback is awaiting a response from the App Team.       |
+| Handled  | The App Team has looked into the feedback and has requested further information. |
+| Accepted | The App Team has accepted the feedback and added this feedback as a story to the sprint. For more information, see [Adding a Feedback Story to Your Backlog](#adding) below. |
+| Closed   | The App Team has closed the feedback.                        |
 
-This will add new feedback on your app
+Feedback in each stage is shown in a separate tab on the **Feedback** page.
 
-{{% alert type="info" %}}
-The feedback button on the right side of the screen in the Developer Portal is the feedback button for the Mendix Platform. It will send the feedback to Mendix. To provide feedback on your app, click **Add feedback**.
-{{% /alert %}}
+## 2 Feedback Actions {#actions}
 
-### 2.2 Export to Excel
+These are the general feedback actions available on the tabs of the **Feedback** page:
 
-This will export feedback items into an *.xls* file (you can filter on date, label, status, and type
+* Clicking **Add feedback** will add a new feedback item to the **Open** tab of the app project
+* Clicking **Export to Excel** will export the listed feedback items in an *.xls* file
+	* For the export, you can filter on the **Submitted after** date, **Label**, **Status** of feedback, and **Type** of feedback
+* Clicking **Show filters** allows you to filter on the types of feedback being listed: **Ideas**, **Questions**, and/or **Issues**
 
-## 3 Filters
+## 3 Feedback Details
 
-When you click **Show filter**, you can filter on the following:
+Clicking on the title of a feedback item or on **Details** opens the item's details page:
 
-* **Idea** - this will show all the ideas
-* **Question** - this will show all the questions
-* **Issue** - this will show all the issues
+![](attachments/feedbacklist.jpg)
 
-## 4 Feedback Details
+You can perform various actions for reviewing and processing a feedback item on this page, which are described below.
 
-Click **Details** for more information about this particular feedback item.
+### 3.1 Reviewing a Feedback Item
+
+To review the feedback and start any necessary investigation, you can read the description and then click **Details** for technical details about the feedback item:
 
 ![](attachments/feedback-details.png)
 
+On the item's details page, you can also **Turn email updates on/off**. This is useful for when you comment on a feedback item and perform further [processing](#processing) actions on it.
 
-On the detail page, click the plus sign (+) to see the following:
+In the **Leave a comment** box, you can post a comment and start an exchange with the Mendix community member who submitted the feedback. This is a good place to ask for clarification. You can also attach files to your comment.
 
-* Feedback number
-* Active userroles
-* Active form
-* Screen size
-* Browser
-* Application location
-* Submission date
+![](attachments/comment.png)
 
-On this page, you can also **Turn email updates on/off**.
+### 3.2 Processing a Feedback Item {#processing}
 
-When you click **Post a comment**, you can add files within a comment. 
+To process the feedback, you can select one of the following in the **Actions** menu:
 
-### 4.1 Actions
+| Action                  | Description                                                  |
+| ----------------------- | ------------------------------------------------------------ |
+| Accept feedback    | Signifies the feedback is valid and that you want to add a story to your backlog on the basis of the feedback item. For more details, see [Adding a Feedback Story to Your Backlog](#adding) below). |
+| Mark 'Under review' | Notifies the user who submitted the feedback as well as your team that the item is under review. |
+| Mark as handled    | Changes the status of the item from Open to Handled so that the item will not pollute your open items list. For more information, see the  [Feedback Stages](#stages) section. |
+| Close feedback      | Closes the feedback item. You can close a feedback item when, for example, you can solve and implement it yourself, or when a duplicate has already been accepted. |
 
-You can manage the feedback item with the following actions:
+You can also change the feedback item's type by clicking **Convert to idea** or **Convert to question**. For more information, see the [Types of Feedback](#types) section.
 
-Action | Description
-| --- | --- |
-**Accept feedback** | Means this feedback is valid and that you want to add a story to your backlog on the basis of this item.
-**Mark 'Under review'** | Notifies the user who submitted the feedback and your team that the item is under review.
-**Mark as handled** | Changes the status of the item from open to handled so that the item will not pollute your open items list.
-**Close feedback** | Closes the feedback (for example, when the item is already solved or a duplicate has already been accepted).
+Finally, you can click **Delete feedback** to delete the item. This action will remove all the associated messages as well. Note that this action cannot be undone.
 
-### 4.2 Convert
+### 3.2 Adding a Feedback Item to Your Backlog {#adding}
 
-If the feedback type is not correct, you can convert it afterwards by selecting one of these options:
+After clicking **Accept feedback**, you can create a story on the basis of the feedback item and add it to your backlog. To do that, follow these steps:
 
-Convert type | Description
-| --- | --- |
-**Convert to idea** | Changes the feedback type to an idea.
-**Convert to question** | Changes the feedback type to a question.
-**Convert to issue** | Changes the feedback type to an issue.
+1. Enter a logical name for the story in **As story** and a description in **Story description**.
+2. Decide whether the feedback item should be classified as a bug or feature in **Identify as**.
+3. Select the sprint (or backlog) to which you want to add the story in **Plan for sprint**.
+4. Select the label(s) (if available ) to be added to the story under **Assign labels**.
 
-### 4.3 Move to App
+    ![](attachments/accept-feedback.png)
 
-This option allows you to move a particular feedback item to another app.
+Once a feedback item is connected to a user story, the user who submitted the story will automatically be updated on the progress made on that story:
 
-You are only allowed to move a feedback item to an app in which you are already a team-member.
+* Adding a story with feedback attached from your backlog to a sprint will result in a message that the item has been planned
+* Completing a sprint that contains a story with feedback attached will result in a message that the item has been completed
 
-### 4.4 Delete
-
-When clicking **Delete feedback**, be sure that you want to delete that feedback item, because this will remove all the associated messages as well.
-
-This action cannot be undone. 
-
-## 5 Related Content
+## 4 Related Content
 
 * [Mendix Profile](../general/mendix-profile)
-* [How to Provide Feedback on Mendix](../howto/feedback-mendix)
+* [How to Use the Mendix Feedback Widget](use-feedback-widget)
+* [How to Use the Mendix Feedback & Collaboration Widget](use-collaboration-widget)
 * [Stories](stories)
 * [How to Manage Sprints and Stories](../howto/managing-your-application-requirements-with-mendix)

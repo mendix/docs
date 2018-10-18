@@ -18,7 +18,7 @@ This feedback comes from different sources:
 * Submitted via the [Mendix Feedback & Collaboration Widget](use-collaboration-widget)
 * Submitted on the **Feedback** page itself (for details, see the [Actions](#actions) section below)
 
-### 1.2 Types of Feedback {#types}
+### 1.1 Types of Feedback {#types}
 
 There are three types of feedback items:
 
@@ -28,7 +28,7 @@ There are three types of feedback items:
 | Question | A question about the platform.                             |
 | Issue    | An issue or a bug that needs to be investigated for a fix. |
 
-### 1.3 Feedback Stages {#stages}
+### 1.2 Feedback Stages {#stages}
 
 Feedback can go through four different stages:
 

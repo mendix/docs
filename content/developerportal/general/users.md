@@ -3,7 +3,7 @@ title: "Users"
 parent: "roles"
 menu_order: 20
 description: "Developer Portal Users"
-tags: ["Company","Admin","Developer Portal", "activate", "deactivate, "users"]
+tags: ["Company","Admin","Developer Portal", "activate", "deactivate", "users"]
 ---
 
 ## 1 Introduction

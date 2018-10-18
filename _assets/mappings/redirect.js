@@ -1267,7 +1267,7 @@ module.exports = {
     },
     {
       from: "/howto50/Gathering+user+feedback",
-      to: "/developerportal/howto/gathering-user-feedback"
+      to: "/developerportal/collaborate/use-feedback-widget"
     },
     {
       from: "/howto50/Getting+Started",
@@ -1770,7 +1770,7 @@ module.exports = {
     },
     {
       from: "/howto6/Gathering+user+feedback",
-      to: "/developerportal/howto/gathering-user-feedback"
+      to: "/developerportal/collaborate/use-feedback-widget"
     },
     {
       from: "/howto6/Getting+Started",

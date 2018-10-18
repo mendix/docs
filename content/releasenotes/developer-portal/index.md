@@ -10,14 +10,16 @@ tags: ["Developer Portal", "Cloud Environments", "Mendix Cloud", "SAP", "IBM", "
 
 #### Improvements
 
-* We have overhauled the scaling user interface to make it more intuitive.
+* We have overhauled the scaling user interface to make it more intuitive. (Ticket 67557)
 * It is now possible to pause and resume downloading backups for Mendix Cloud V4 applications.
 
 #### Fixes
 
 * We fixed a memory leak problem that caused Cloud Portal to have longer response times.
-* We addressed and fixed an issue that caused some Cloud Portal users to see empty dialog boxes instead of error message content.
-* We addressed an issue that caused live logging to freeze from time to time. The fix has been confirmed on all mainstream browsers except for Internet Explorer, which we still are investigating.
+* We addressed and fixed an issue that caused some Cloud Portal users to see empty dialog boxes instead of error message content. (Ticket 67626, 69363)
+* We addressed an issue that caused live logging to freeze from time to time. The fix has been confirmed on all mainstream browsers except for Internet Explorer, which we still are investigating. (Ticket 66418)
+* We fixed an issue which caused subdomain validation errors for sandbox environments. (Ticket 56574)
+
 
 ### October 16th, 2018
 
@@ -61,7 +63,7 @@ The SAP Leonardo Machine Learning Foundation Connector is available in the App S
 
 #### SAP Fiori Styling
 
-The existing SAP Blank starter app has been replaced by a new Fiori Blank starter app. This new Fiori Blank starter app has a new Fiori UI Package included. This is based on Atlas UI, which means that you can use either the Web Modeler or Desktop Modeler to build applications which give the Fiori UI experience. 
+The existing SAP Blank starter app has been replaced by a new Fiori Blank starter app. This new Fiori Blank starter app has a new Fiori UI Package included. This is based on Atlas UI, which means that you can use either the Web Modeler or Desktop Modeler to build applications which give the Fiori UI experience.
 
 #### SAP Cloud Deployment Version 3.5.2
 
@@ -69,7 +71,7 @@ We now configure Destination Service in the scope of XSUAA. This means that we a
 
 #### Breaking Changes
 
-* The new **SAP OData Connector** will break existing projects which are using the SAP Cloud Connector. The SAP OData Connector no longer supports the “Use Cloud Connector” attribute. This is now embedded in the destination service configuration. See [SAP Destination Service](/refguide/sap/sap-destination-service) for more details. 
+* The new **SAP OData Connector** will break existing projects which are using the SAP Cloud Connector. The SAP OData Connector no longer supports the “Use Cloud Connector” attribute. This is now embedded in the destination service configuration. See [SAP Destination Service](/refguide/sap/sap-destination-service) for more details.
 
 #### Fixes
 
@@ -89,7 +91,7 @@ We now configure Destination Service in the scope of XSUAA. This means that we a
 
 #### Fixes
 
-* We have fixed a bug that was causing some Mendix Cloud v4 users to unsubscribe from alerting lists after changing environment privilege settings. 
+* We have fixed a bug that was causing some Mendix Cloud v4 users to unsubscribe from alerting lists after changing environment privilege settings.
 * We have addressed an issue that caused some Mendix Cloud v4 users to not to be able to see their archived logs from previous day.
 
 ### August 13th, 2018
@@ -106,7 +108,7 @@ We now configure Destination Service in the scope of XSUAA. This means that we a
 * We improved the feedback messages in the case of a startup failure.
 * The status page link in alert emails now redirects you to the corresponding alerts page in the Cloud Portal.
 * We solved an issue that caused blank error messages during backup creation.
-* The **Environments** breadcrumb in **Deploy** > **Environments** > environment is now a link that redirects you back to the **Environments** page. 
+* The **Environments** breadcrumb in **Deploy** > **Environments** > environment is now a link that redirects you back to the **Environments** page.
 
 ### August 9th, 2018
 

@@ -12,7 +12,8 @@ On the **Feedback** page of the Developer Portal, you can view and manage the fe
 
 ![](attachments/feedback.png)
 
-This feedback comes from a variety of sources:
+This feedback comes from different sources:
+
 * Submitted via the [Mendix Feedback Widget](use-feedback-widget)
 * Submitted via the [Mendix Feedback & Collaboration Widget](use-collaboration-widget)
 * Submitted on the **Feedback** page itself (for details, see the [Actions](#actions) section below)
@@ -84,7 +85,7 @@ You can also change the feedback item's type by clicking **Convert to idea** or 
 
 Finally, you can click **Delete feedback** to delete the item. This action will remove all the associated messages as well. Note that this action cannot be undone.
 
-### 3.2 Adding a Feedback Item to Your Backlog {#adding}
+### 3.3 Adding a Feedback Item to Your Backlog {#adding}
 
 After clicking **Accept feedback**, you can create a story on the basis of the feedback item and add it to your backlog. To do that, follow these steps:
 

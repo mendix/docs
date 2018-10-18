@@ -21,7 +21,7 @@ On the **Company Admins** tab, the Company Admin can add, edit, or remove a Comp
 
 For more information, see [How to Manage Company Roles and App Roles](/developerportal/howto/change-roles).
 
-## 4 Company Settings
+## 4 Company Settings {#company-settings}
 
 On the **Company Settings** tab, the Company Admin can change the password expiration settings (number of days). To do this, set the password expiration (in days) and click **Save**. Note that a value of zero or lower indicates that passwords never expire.
 

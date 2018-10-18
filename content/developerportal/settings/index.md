@@ -72,7 +72,6 @@ For more information, see [API Keys](/developerportal/settings/api-key).
 ## 5 Related Content
 
 * [Company Admin Overview](/developerportal/general/companyadmin-overview)
-* [How to Change Password Expiration](../howto/password-expiration)
 * [How to Configure Maintenance Windows](../howto/maintenance-windows)
 * [How to Deactivate and Activate Users](../howto/deactivate-users)
 * [How to Delete, Deactivate and Activate Apps](../howto/delete-apps)

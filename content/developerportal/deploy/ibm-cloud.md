@@ -13,7 +13,7 @@ As a Mendix user with an IBM Cloud account you have access to many IBM resources
 
 * Select an IBM app template and ask Mendix to create the app
 * Create a deployment package on the IBM Cloud
-* Deploy and test your app on the IBM Cloud
+* Deploy and test your app to the IBM Cloud
 
 ## 2 Prerequisites
 
@@ -61,12 +61,13 @@ To set up IBM Cloud, follow these steps:
 
 2.  Log in to IBM Cloud if you are not already logged in. The name of your project is already filled in.
 
+3.  Click **Create**.
+
     ![](attachments/ibm-cloud/createnewproject.png)
 
     {{% alert type="info" %}}Currently you can only deploy your project in the **US South** region, so make sure that this is selected in **Select region to deploy in**.
     {{% /alert %}}
 
-3.  Click **Create Project**.
 
 4.  Click **Choose Deployment** to choose the deployment method for this app, for example the database you will be using.
 
@@ -100,7 +101,7 @@ To set up IBM Cloud, follow these steps:
 
 ### 3.3 Creating a Package for IBM Cloud
 
-Before you can deploy a package on IBM Cloud you have to create it.
+Before you can deploy a package to IBM Cloud you have to create it.
 
 To create a package for IBM Cloud, follow these steps:
 
@@ -151,7 +152,7 @@ To create a package for IBM Cloud, follow these steps:
 
     ![](attachments/ibm-cloud/packagedetails.png)
 
-### 3.4 Deploying a Package on IBM Cloud
+### 3.4 Deploying a Package to IBM Cloud
 
 When the project is built it will appear in the list of deployment packages. While it is being built, there will be a 'spinner' showing that the package is not yet complete. Once the package is ready for deployment this will be replaced by a tick.
 
@@ -159,7 +160,7 @@ When the project is built it will appear in the list of deployment packages. Whi
 
 The package is still within the Mendix environment and needs to be pushed to IBM Cloud. From there it can be deployed.
 
-To push and deploy the package on IBM Cloud, follow these steps:
+To push and deploy the package to IBM Cloud, follow these steps:
 
 1. Click **Push** next to the package you want to deploy. This will push this deployment package to IBM Cloud.
 

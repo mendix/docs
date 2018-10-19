@@ -28,7 +28,7 @@ On the **Apps** tab, you can perform the following actions:
 
 To create a report of the apps owned by your company, click **Create Report**. This will take you to a separate page with a list of apps. To export the report to a *csv* file, click **Export to Excel**. Note that the exported report will have more information than shown on the page.
 
-## 3 Roles Tab
+## 3 Roles Tab {#roles-tab}
 
 On the **Roles** tab, you can edit and add App Team member roles.
 

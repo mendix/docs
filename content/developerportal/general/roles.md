@@ -123,13 +123,13 @@ SCRUM Master | The Scrum Master of the Agile App Team. In addition to contributi
 
 The predefined roles can be changed in two places:
 
-*	As a Company Admin, you can change them, and the changes will effect every app created after the change
+*  As a Company Admin, you can change them, and the changes will effect every app created after the change
 
- ![](attachments/companyadmin/admin-roles.png)
+	 ![](attachments/companyadmin/admin-roles.png)
 
-*	As a Scrum Master, you can change them for the specific app of which you are the Scrum Master
+*  As a Scrum Master, you can change them for the specific app of which you are the Scrum Master
 
- ![](attachments/settings/app-team.png)
+	![](attachments/settings/app-team.png)
 
 ## 5 Related Content
 

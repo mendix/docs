@@ -12,8 +12,8 @@ As a Mendix user with an IBM Cloud account you have access to many IBM resources
 **This how-to will teach you how to do the following:**
 
 * Select an IBM app template and ask Mendix to create the app
-* Create a deployment package on the IBM Cloud
-* Deploy and test your app to the IBM Cloud
+* Create a deployment package on IBM Cloud
+* Deploy and test your app to IBM Cloud
 
 ## 2 Prerequisites
 
@@ -25,11 +25,11 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 Creating the New App and Setting Up IBM Cloud
 
-You have decided to create a new Mendix app using an IBM template which you will ask Mendix to deploy to your IBM Cloud.
+You have decided to create a new Mendix app using an IBM template which you will ask Mendix to deploy to your account on IBM Cloud.
 
 ### 3.1 Creating a New App
 
-First you will create your Mendix app which you wish to deploy.
+Firstly, you will create your Mendix app which you wish to deploy.
 
 To start creating a new app, follow these steps:
 
@@ -122,7 +122,7 @@ To set up IBM Cloud, follow these steps:
 
     ![](attachments/ibm-cloud/deploymentconfigured.png)
 
-    Your IBM Kubernetes environment is now configured. Go to section 3.3 [Creating a Package for IBM Cloud](#create-package) to learn how to create a package which will deploy to IBM Cloud.
+Your IBM Kubernetes environment is now configured. Go to section 3.3 [Creating a Package for IBM Cloud](#create-package) to learn how to create a package which will deploy to IBM Cloud.
 
 ### 3.3 Creating a Package for IBM Cloud {#create-package}
 
@@ -189,7 +189,7 @@ To push and deploy the package to IBM Cloud, follow these steps:
 
 1. Click **Push** next to the package you want to deploy. This will push this deployment package to IBM Cloud.
 
-    {{% alert type="info" %}}A request to deploy is sent to IBM Cloud. Currently you have to do this deployment manually.
+    {{% alert type="info" %}}A package is sent to IBM Cloud to be deployed. Currently you have to do this deployment manually.
     {{% /alert %}}
     
 2.  Click the **here** link or the **Open IBM Cloud** button to go to your IBM Cloud project page.
@@ -214,7 +214,18 @@ To push and deploy the package to IBM Cloud, follow these steps:
 
     * Click **View toolchain**
     * Click the **DELIVER > Delivery Pipeline** tool in the toolchain
-    * The **Deploy Stage** will indicate *STAGE PASSED* when your app has been deployed (you can also see the build log here, if you are encountering issues)
+    * The **Deploy Stage** will indicate *STAGE PASSED* when your app has been deployed (you can also click to see the build log here, if you are encountering issues)
+
+    {{% alert type="info" %}}Although there is a button here marked **View app**, it is not currently possible to see your app this way. You will need to view it from the Mendix site.
+    {{% /alert %}}
+
+    
+    {{% alert type="info" %}}Under some circumstances, the toolchain for Kubernetes cannot be built.
+
+    Go to the toolchain and look at the log from the **Build Stage**. If the log includes the following message, then you will need to remove any images by going to **Containers > Registry > Images** and deleting them.
+
+    `You have exceeded your storage quota. Delete one or more images, or review your storage quota and pricing plan.`
+    {{% /alert %}}
 
     You can also see when your deployment is complete from the Mendix app's *Environments* page.
 

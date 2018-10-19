@@ -16,7 +16,7 @@ tags: ["Developer Portal", "Cloud Environments", "Mendix Cloud", "SAP", "IBM", "
 #### Fixes
 
 * We fixed a memory leak problem that caused Cloud Portal to have longer response times.
-* We addressed and fixed an issue that caused some Cloud Portal users to see empty dialog boxes instead of error message content. (Ticket 67626, 69363)
+* We addressed and fixed an issue that caused some Cloud Portal users to see empty dialog boxes instead of error message content. (Tickets 67626, 69363)
 * We addressed an issue that caused live logging to freeze from time to time. The fix has been confirmed on all mainstream browsers except for Internet Explorer, which we still are investigating. (Ticket 66418)
 * We fixed an issue which caused subdomain validation errors for sandbox environments. (Ticket 56574)
 

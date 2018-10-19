@@ -59,21 +59,19 @@ To set up IBM Cloud, follow these steps:
 
     ![](attachments/ibm-cloud/landing.png)
 
-2.  Log in to IBM Cloud if you are not already logged in. The name of your project is already filled in.
+2.  Log in to IBM Cloud if you are not already logged in.
 
-3.  Click **Create**.
+    The **App name** name of your project is already filled in.
+
+3. Ensure that the correct account is shown at the top right of the screen (next to your avatar) if you have access to more than one account on IBM Cloud.
+
+4. Choose the appropriate **Resource Group**
+
+5.  Click **Create**.
 
     ![](attachments/ibm-cloud/createnewproject.png)
 
-    {{% alert type="info" %}}Currently you can only deploy your project in the **US South** region, so make sure that this is selected in **Select region to deploy in**.
-    {{% /alert %}}
-
-
-4.  Click **Choose Deployment** to choose the deployment method for this app, for example the database you will be using.
-
-    ![](attachments/ibm-cloud/choosedeployment.png)
-
-5.  Click **Link Account**.
+6.  Click **Link Account**.
 
     ![](attachments/ibm-cloud/linkaccount.png)
 
@@ -83,23 +81,50 @@ To set up IBM Cloud, follow these steps:
 
     You will now be returned to the project page.
 
-6.  Click **Choose Deployment** again.
+7.  Click **Choose Deployment**.
 
-    Currently only Cloud Foundry is supported.
+    ![Choose Deployment](attachments/ibm-cloud/choosedeployment_1.png)
 
-7.  Check that **Number of instances** is _1_.
+    You can choose to deploy to Cloud Foundry or Kubernetes.
 
-8.  Set **Memory allocation per instance** to _512_.
+#### 3.2.1 Deploying to Cloud Foundry
 
-    ![](attachments/ibm-cloud/choosedeployment_2.png)
+1.  Check that **Number of instances** is _1_.
 
-9.  Click **Create** and wait until the **Deployment Details** indicate that the toolchain is configured.
+2.  Set **Memory allocation per instance** to _512_.
+
+3. Choose the **Region**, **Organization**, **Space**, and **Domain** to deploy to.
+
+4. Change the **Host** if required; the default is the name of your app.
+
+5.  Click **Create**.
+
+    ![](attachments/ibm-cloud/choosedeployment-cf.png)
+
+6. Wait until the **Deployment Details** indicate that the toolchain is configured.
 
     ![](attachments/ibm-cloud/deploymentconfigured.png)
 
-    Your IBM environment is now configured.
+    Your IBM Cloud Foundry environment is now configured. Go to section 3.3 [Creating a Package for IBM Cloud](#create-package) to learn how to create a package which will deploy to IBM Cloud.
 
-### 3.3 Creating a Package for IBM Cloud
+#### 3.2.2 Deploying to Kubernetes
+
+{{% alert type="warning" %}}Please note that deploying to Kubernetes currently has a number of issues which mean that it is not suitable for production environments. Please contact [Mendix support](https://support.mendix.com) if you want to use Kubernetes for a production environment on IBM Cloud.
+{{% /alert %}}
+
+1. Choose the **Region**, **Organization**, **Space**, and **Cluster name** to deploy to.
+
+2.  Click **Create**.
+
+    ![](attachments/ibm-cloud/choosedeployment-k8.png)
+
+3. Wait until the **Deployment Details** indicate that the toolchain is configured.
+
+    ![](attachments/ibm-cloud/deploymentconfigured.png)
+
+    Your IBM Kubernetes environment is now configured. Go to section 3.3 [Creating a Package for IBM Cloud](#create-package) to learn how to create a package which will deploy to IBM Cloud.
+
+### 3.3 Creating a Package for IBM Cloud {#create-package}
 
 Before you can deploy a package to IBM Cloud you have to create it.
 
@@ -112,7 +137,6 @@ To create a package for IBM Cloud, follow these steps:
     You are now ready to create a deployment package which you will then push to IBM Cloud. It is only after the deployment package has been created and pushed to IBM Cloud that you can deploy your app.
  
 3.  Click **Create package from teamserver**.
-
 
     ![](attachments/ibm-cloud/createpackage.png)
 
@@ -129,14 +153,15 @@ To create a package for IBM Cloud, follow these steps:
 
     {{% alert type="info" %}}You will see a number if revisions. Note that a package cannot be created from the first revision as this contains no application template.
     {{% /alert %}}
-    {{% alert type="info" %}}Please do not choose to create a package from revision number 1.
+
+    {{% alert type="warning" %}}Please do not choose to create a package from revision number 1.
     {{% /alert %}}
 
 6.  Type a **Tag description** (optional) and set the version number for this build.
 
-    ![](attachments/ibm-cloud/entertag.png)
-
 7.  Click **Build this revision**.
+
+    ![](attachments/ibm-cloud/entertag.png)
 
 8.  Click **OK** to confirm the information message.
 
@@ -171,15 +196,27 @@ To push and deploy the package to IBM Cloud, follow these steps:
 
     ![](attachments/ibm-cloud/pushrequest.png)
 
+    You may need to configure your browser to allow the IBM Cloud page to open.
+
     You will now be back on your IBM Cloud project page.
 
 3.  Click **Deploy Application**.
 
     ![](attachments/ibm-cloud/readytodeploy.png)
 
-4.  Wait until the app is deployed. You will see that the **Last deploy** is a new deployment and has been deployed very recently.
+    You will see a confirmation message in the top right of the screen.
 
-    ![](attachments/ibm-cloud/deploysuccess.png)
+    ![Mendix app being deployed](attachments/ibm-cloud/being-deployed.png)
+
+4.  Wait until the app is deployed. This can take several minutes.
+
+    If you want to see the progress then do the following:
+
+    * Click **View toolchain**
+    * Click the **DELIVER > Delivery Pipeline** tool in the toolchain
+    * The **Deploy Stage** will indicate *STAGE PASSED* when your app has been deployed (you can also see the build log here, if you are encountering issues)
+
+    You can also see when your deployment is complete from the Mendix app's *Environments* page.
 
 5.  Click **Edit on Mendix** to return to Mendix.
 
@@ -187,12 +224,9 @@ To push and deploy the package to IBM Cloud, follow these steps:
 
     When the deployment is complete you will see your deployed app under **Managed by IBM Cloud**. You will also see activities related to the deployment under **Activity**.
 
-    ![](attachments/ibm-cloud/viewapp.png)
-
 7.  Click **View App** to run and view your app.
 
-    {{% alert type="info" %}}Under some circumstances this button is not active. You may have to refresh the page, or go to another page and return to make it active.
-    {{% /alert %}}
+    ![](attachments/ibm-cloud/viewapp.png)
 
     You can also view your app directly using the url which is given to you:
 
@@ -203,4 +237,3 @@ To push and deploy the package to IBM Cloud, follow these steps:
 * [IBM Cloud account](https://console.bluemix.net/registration/)
 * [Mendix Desktop Modeler](https://appstore.home.mendix.com/link/modelers/)
 * [Starter App Tutorial](/howto/tutorials/starter-apps)
-

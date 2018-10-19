@@ -8,8 +8,6 @@ This category contains documents about the use of specific tasks in the [Develop
 
 ## 2 Company Admin
 
-* [Change Password Expiration](/developerportal/howto/password-expiration)
-* [Deactivate and Activate Users](/developerportal/howto/deactivate-users)
 * [Delete, Deactivate and Activate Apps](/developerportal/howto/delete-apps)
 
 ## 3 General

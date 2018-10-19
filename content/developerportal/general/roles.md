@@ -1,5 +1,5 @@
 ---
-title: "Roles Within the Company and Apps"
+title: "Roles Within the Company & Apps"
 category: "General"
 description: "Describes the roles and permissions within the Mendix Platform."
 tags: ["Company","Admin","MxID","Developer Portal","Role","Permissions"]
@@ -139,7 +139,6 @@ For more information, see [Settings](/developerportal/settings) and [Security â€
 
 * [Mendix Profile](mendix-profile)
 * [Company Admin Overview](/developerportal/general/companyadmin-overview)
-* [How to Deactivate and Activate Users](/developerportal/howto/deactivate-users)
 * [How to Delete, Deactivate, and Activate Apps](/developerportal/howto/delete-apps)
 * [How to Manage Company Roles and App Roles](/developerportal/howto/change-roles)
 * [Settings](/developerportal/settings)

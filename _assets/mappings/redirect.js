@@ -2228,7 +2228,7 @@ module.exports = {
     },
     {
       from: "/howtogeneral/support/how-to-activate-or-deactivate-your-mendix-account",
-      to: "/developerportal/howto/deactivate-users"
+      to: "/developerportal/general/users"
     },
 	{
       from: "/howtogeneral/support/technical-contact",

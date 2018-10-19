@@ -15,41 +15,35 @@ The roles defined within a company and the company's apps are described below.
 
 ## 2 Company Roles
 
-Everyone with the same email domain will be automatically placed in the same company. For example, all the users that sign up with an email address with the `@bouncetravel.com` emaildomain will automatically join the company named *Bounce Travel*.
+Everyone with the same email domain will be automatically placed in the same company. For example, all the users that sign up with an email address with the `@bouncetravel.com` email domain will automatically join the company named *Bounce Travel*.
 
 Within the company there are three roles, which are described below.
 
 ### 2.1 Company Admin
 
-The Company Admin is a Regular User with additional privileges. A Company Admin role is a super role that is allowed to manage all the settings of the company, including the settings of apps, nodes, and users. A company can have multiple Company Admins, but Regular Users cannot see who has the Company Admin role.
-
-These are the permissions of a Company Admin:
-
-* Can manage company (profile, admins, groups and settings)
-* Can manage users, invitations, and security group memberships
-* Can manage apps and app roles
-* Can manage nodes
+The Company Admin is a regular user with additional privileges. The Company Admin role is a "super role" allowed to manage all the settings of the company, including the settings of the company's apps, cloud nodes, and users. A company can have multiple Company Admins, but regular users cannot see who has the Company Admin role.
 
  ![](attachments/companyadmin/company-admin.png)
 
-For more details, see [Company Admin Overview](/developerportal/general/companyadmin-overview).
+For details on this role, see [Company Admin Overview](/developerportal/general/companyadmin-overview).
 
 ### 2.2 Company Contact
 
-Because a company can have multiple Company Admins and Regular Users cannot see who has the the Company Admin role, making one of the Company Admins the Company Contact is recommended. The Company Contact is visible to Regular Users and with the Company Admin role, the Company Contact will be able to perform company operations on behalf of all Company Admins.
+Because a company can have multiple Company Admins and regular users cannot see who has the the Company Admin role, making one of the Company Admins the Company Contact is recommended. The Company Contact is visible to regular users. In addition, if they also have the Company Admin role, the Company Contact can perform company operations on behalf of all Company Admins.
 
 To view the Company Contact, follow these steps:
 
 1. Go to the [Developer Portal](http://home.mendix.com).
-2. In the top-right corner, click your avatar:
+2. In the top-right corner, click your avatar and then select **My Profile**:
 
     ![](attachments/general/show-profile.png)
 
-3. Click **My Profile**.
 4. Below your name, click your the name of your company.
-5. Below **Contact**, you will see the **Company Contact**:
+5. Below **Contact**, you will see the Company Contact:
 
     ![](attachments/general/company-contact.png)
+
+The Company Admin who is the Company Contact can change roles on the Comapny Admin's [Company](company) page.
 
 ### 2.3 Regular Users
 

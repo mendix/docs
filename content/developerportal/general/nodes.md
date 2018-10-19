@@ -44,3 +44,4 @@ This tab describes the following app details for that specific cloud node:
 * [Company](company)
 * [Users](nodes)
 * [Apps](apps)
+* [Settings & Node Permissions](/settings/node-permissions)

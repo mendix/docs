@@ -1,8 +1,8 @@
 ---
-title: "Roles Within the Company & Apps"
+title: "Company, App & App Team Roles"
 category: "General"
-description: "Describes the roles and permissions within the Mendix Platform."
-tags: ["Company","Admin","MxID","Developer Portal","Role","Permissions"]
+description: "Describes roles and permissions for a company, app, and team in the Mendix Platform."
+tags: ["company","admin", "Company Admin", "MxID","Developer Portal","role","permissions", "role"]
 ---
 
 ## 1 Introduction
@@ -96,7 +96,7 @@ Only the Technical Contact is allowed to do the following:
 
 For more information, see [Technical Contact](/developerportal/general/technical-contact).
 
-## 4 Team Member Roles
+## 4 App Team Member Roles
 
 Within an App Team, there are six predefined roles that can be provisioned to App Team members. Company Admins can also create new team roles within the company.
 

@@ -6,35 +6,35 @@ description: "Describes the options available to company administrators in a Men
 tags: ["Company","Admin","Developer Portal"]
 ---
 
-## 1 Apps Section
+## 1 Introduction
 
-A company admin can manage the following items in the **Apps** section:
+{{% alert type="info" %}}
+You must be a Company Admin to access this page and these settings.
+{{% /alert %}}
 
-* Apps
-* Roles
+There are two tabs on the **Apps** page with settings to manage:
 
-![](attachments/companyadmin/appsettings.jpg)
+![](attachments/companyadmin/app-settings.png)
 
 ## 2 Apps Tab
 
-A company admin perform the following actions on the **Apps** tab:
+On the **Apps** tab, you can perform the following actions:
 
-* Activate/deactivate apps
-* Delete apps
-* View the node details
-* Create report
+* Activate, deactivate, and delete apps (for details, see [How to Delete, Deactivate, and Activate Apps](/developerportal/howto/delete-apps)
+* Create a [report](#create-report)
+* View the [node](node) details
 
-For more information, see [How to Delete, Deactivate, and Activate Apps](/developerportal/howto/delete-apps).
+### 2.1 Creating a Report {#create-report}
 
-### 2.1 Create Report
+To create a report of the apps owned by your company, click **Create Report**. This will take you to a separate page with a list of apps. To export the report to a *csv* file, click **Export to Excel**. Note that the exported report will have more information than shown on the page.
 
-You can create a report of the apps owned by your company by clicking **Create Report**. This will take you to a seperate page with a list of apps. To export the report to a CSV file, click **Export to Excel**. Note that the exported report will have more information than shown on the page.
+## 3 Roles Tab
 
-## 3 Roles
+On the **Roles** tab, you can edit and add App Team member roles.
 
-A company admin can edit user roles and add new user roles on the **Roles** tab.
+![](attachments/companyadmin/apps-roles.png)
 
-For more information, see [Roles Within the Company and Apps](/developerportal/general/roles).
+For more information, see the [App Team Member Roles](/developerportal/general/roles) section of *Company, App & App Team Roles*.
 
 ## 4 Related Content
 

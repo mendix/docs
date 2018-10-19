@@ -1,17 +1,15 @@
 ---
 title: "Company, App & App Team Roles"
 category: "General"
-description: "Describes roles and permissions for a company, app, and team in the Mendix Platform."
-tags: ["company","admin", "Company Admin", "MxID","Developer Portal","role","permissions", "role"]
+description: "Describes the roles and permissions within the Mendix Platform."
+tags: ["Company","Admin", "Company Admin", MxID","Developer Portal","role","permissions"]
 ---
 
 ## 1 Introduction
 
 In order to use Mendix, you must sign up to create an account. With this signup you create a MxID, and this ID will be linked to a company. If the company already exists, you will join the company. If it is a new company, a new company will be created and you will automatically join it.
 
-To make changes to the roles, see [How to Manage Company Roles and App Roles](/developerportal/howto/change-roles).
-
-The roles defined within a company and the company's apps are described below.
+The roles defined within a company, app, and App Team are described below.
 
 ## 2 Company Roles
 
@@ -25,7 +23,7 @@ The Company Admin is a regular user with additional privileges. The Company Admi
 
  ![](attachments/companyadmin/company-admin.png)
 
-For details on this role, see [Company Admin Overview](/developerportal/general/companyadmin-overview).
+For details on this role, see [Company Admin Overview](companyadmin-overview).
 
 ### 2.2 Company Contact
 
@@ -38,102 +36,97 @@ To view the Company Contact, follow these steps:
 
     ![](attachments/general/show-profile.png)
 
-4. Below your name, click your the name of your company.
-5. Below **Contact**, you will see the Company Contact:
+3. Below your name, click your the name of your company.
+4. Below **Contact**, you will see the **Company Contact**:
 
     ![](attachments/general/company-contact.png)
 
-The Company Admin who is the Company Contact can change roles on the Comapny Admin's [Company](company) page.
+The Company Admin who is the Company Contact can change roles on the Company Admin's [Company](company) page.
 
 ### 2.3 Regular Users
 
-Regular Users are all company members. Regular Users can join the company, start building apps, and view other apps made within the company. 
+Regular users are all company members. Regular users can join the company, start building apps, and view other apps made within the company. 
 
-Under **My Company's Apps** in the [Developer Portal](http://home.mendix.com), the Regular Users can view the apps made within the company by clicking.
+By selecting **My Company's Apps** in the [Developer Portal](http://home.mendix.com), a regular user can view details about the apps made in their company.
 
 ![](attachments/general/myapps.png)
 
-The Regular Users cannot join the apps by themselves. If they want to join an app that they are not a member of, they have to ask any Team Member (with an *invite* permission) of the app to send an invitation. Because the Team Members are not visible , contact the the App Contact to send the invitation is recommended. Therefore, it is important that the App Contact has the correct permissions to manage the app (for example, the Scrum Master role).
+As a regular user, you cannot join an App Team by yourself. If you want to join an App Team, you have to ask a current App Team member (with an *invite* permission) of the app to send an invitation. Because Team Members are not visible, you can ask the App Contact to send the invite:
 
- ![](attachments/general/company-app.png)
+![](attachments/general/company-app.png)
+
+Accordingly, it is important that the App Contact has the correct permissions to manage the app (for example, the SCRUM Master role).
+
+For more information on roles and permissions, see [App Team Roles](#app-team-roles) below. 
 
 ## 3 App Roles
 
-As a Regular User you can view apps made within the company by clicking **My Company's Apps** in the [Developer Portal](http://home.mendix.com). If you select a specific app, you will see two responsible roles for the app. You can contact them with questions related to the app.
+When you view the details for a specific app, you will see the two roles responsible for the app: **App Contact** and **Technical Contacts**. You can contact them with questions related to the app.
 
- ![](attachments/general/company-app.png)
-
-If you are a Team Member of an app, you can view the app roles in **Settings** > **General**.
-
- ![](attachments/settings/app-roles.png)
+![](attachments/settings/app-roles.png)
 
 The app roles are described below.
 
 ### 3.1 App Contact
 
-The App Contact is visible to Regular Users and is the go-to person for questions related to the app. If you build your own app, you will automatically become the App Contact and you will have a **Scrum Master** role within the **App Team** roles.
+The App Contact is visible to regular users and is the go-to person for questions related to the app. If you build your own app, you will automatically become the App Contact and you will have a SCRUM Master role within the [App Team roles](#app-team-roles). 
 
-If the App Contact changes, it is recommended to provide the new App Contact with the App Team Scrum Master role. The App Contact will be the contact person for Regular Users and will be able to perform app operations on behalf of all Scrum Masters.
+If the App Contact changes (which can be done on the [General Settings](../settings/general-settings) page for your app), providing the new App Contact with the App Team [SCRUM Master](#scrum-master) role is recommended. The App Contact will be the contact person for regular users and will be able to perform app operations on behalf of all SCRUM Masters.
 
-### 3.2 Technical Contact
+### 3.2 Technical Contact {#technical-contact}
 
-The Technical Contact manages the technical deployment settings of the app. The Technical Contact can be responsible for different deployment platforms: Mendix Cloud node, on-premises, other plaforms such as MxBlue, Azure etc. 
+The Technical Contact manages the technical deployment settings of the app. The Technical Contact can be responsible for different deployment platforms (for example, a Mendix Cloud node, on-premises, other platforms such as SAP). For details on cloud deployment, see [Deploy](../deploy).
 
-With an app hosted in the Mendix Cloud, the Technical Contact is the first contact for App Team members regarding the **Node Permissions** and node operations.
+With an app hosted in the Mendix Cloud, the Technical Contact is the first contact for App Team members regarding node permissions and operations. 
 
 Only the Technical Contact is allowed to do the following:
 
 * Manage users with node permissions
-* Make adjustments to environments (resize/new environments etc.)
-* Manage licenses (renewals/activation/upgrades)
+* Make adjustments to environments (for example, resize, add new environments) 
+* Manage licenses (for example, manage renewals, activations, upgrades) 
 * Configure alert settings
 
 For more information, see [Technical Contact](/developerportal/general/technical-contact).
 
-## 4 App Team Member Roles
+## 4 App Team Roles {#app-team-roles}
 
-Within an App Team, there are six predefined roles that can be provisioned to App Team members. Company Admins can also create new team roles within the company.
+Within an App Team, there are six predefined roles that can be provisioned to App Team members. Company Admins can also edit and create new team roles within the company.
 
-The App Team roles have access to different permission areas based on the following:
+Each App Team role has access to permission areas based on the following factors:
 
-* Who can edit the backlog and current sprint
-* Who can edit the app model
-* Who has access to node information
-* Who can change the app settings
+* Who can edit the backlog and current [sprint](../collaborate/stories)
+* Who can edit the app [model](../develop/model)
+* Who has access to [cloud node](../settings/node-permissions) information (note that node permissions must be provisioned by the [Technical Contact](#technical-contact))
+* Who can change the app's [general settings](../settings/general-settings)
 
-{{% alert type="info" %}}
-
-Note that the **Node Permissions** must be provisioned by the **Technical Contact**.
-
-{{% /alert %}}
-
-The predefined roles can be changed in two places:
-
-*	As a Company Admin, you can change them, and the changes will effect every app created after the change
-
- ![](attachments/companyadmin/admin-roles.png)
-
-*	As a Scrum Master, you can change them for the specific app of which you are the Scrum Master
-
- ![](attachments/settings/app-team.png)
+### 4.1 Predefined App Team Roles {#scrum-master}
 
 These are the predefined App Team roles:
 
 Role | Explanation
 ------------ | -------------
-Application Operator | A member who does not actively develop the app, but is responsible for operations on the app's cloud node.
-Business Engineer | A member of the App Team who contributes to the development of the app.
-End-user | A user of the app who should have insight into the backlog but doesn't actively participate in development (for example, a stakeholder).
+Application Operator | An App Team member who does not actively develop the app, but is responsible for operations on the app's cloud node. 
+Business Engineer | An App Team member who contributes to the development of the app. 
+End-user | A user of the app who should have insight into the backlog but does not actively participate in development (for example, a stakeholder). 
 Product Owner | The product owner of the Scrum team who is responsible for managing the app's backlog.
-SCRUM Master | The Scrum Master of the Agile App Team. In addition to contributing to development, the Scrum Master manages all the settings within the app. If you create a new app, you will automatically become the Scrum Master.
+SCRUM Master | The Scrum Master of the Agile App Team. In addition to contributing to development, the SCRUM Master manages all the settings within the app. If you create a new app, you will automatically become the SCRUM Master. 
 
-For more information, see [Settings](/developerportal/settings) and [Security – Node Permissions](/developerportal/settings/node-permissions).
+### 4.2 Editing App Team Roles
+
+The predefined roles can be changed in two locations:
+
+* As a [Company Admin](companyadmin-overview), click **Role settings** on the [Roles Tab](apps#roles-tab) of your Company Admin's **Apps** page to edit the roles (the changes will affect every app created after the change)
+
+	![](attachments/companyadmin/apps-roles.png)
+
+* As a [SCRUM Master](#scrum-master), you can edit roles for the specific app of which you are the SCRUM Master by selecting **Team** > **Manage Team** and clicking **Role settings**
+
+	![](attachments/companyadmin/app-roles-edit.png)
 
 ## 5 Related Content
 
 * [Mendix Profile](mendix-profile)
 * [Company Admin Overview](/developerportal/general/companyadmin-overview)
-* [How to Delete, Deactivate, and Activate Apps](/developerportal/howto/delete-apps)
 * [How to Manage Company Roles and App Roles](/developerportal/howto/change-roles)
 * [Settings](/developerportal/settings)
 * [Technical Contact](technical-contact)

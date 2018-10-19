@@ -3,55 +3,39 @@ title: "Company"
 parent: "roles"
 menu_order: 10
 description: "Describes the page that enables managing a company's details."
-tags: ["Company","Admin","Developer Portal"]
+tags: ["company","admin","Developer Portal", "Company Admin", "expiration settings"]
 ---
 ## 1 Introduction
 
-A company admin can manage the following items in the **Company** section:
+{{% alert type="info" %}}
+You must be a Company Admin to access this page and these settings.
+{{% /alert %}}
 
-* **Company Profile**
-* **Company Admins**
-* **Company Settings**
-* **Launchpad Settings**
+There are four tabs on the **Company ** page with settings to manage:
 
 ![](attachments/companyadmin/company-profile.png)
 
-## 2 Company Profile
+## 2 Company Profile Tab
 
-A company admin can add or change the following items on the **Company Profile** tab:
+You can edit various company details on the **Company Profile** tab, such as **Company name**, **Contract person**, and **Logo**.
 
-* Company name
-* Summary
-* Website
-* Contact person
-* Email address
-* Phone number
-* Logo
+## 3 Company Admins Tab
 
-## 3 Company Admins
-
-A company admin can perform the following actions on the **Company Admins** tab:
-
-* Add/edit/remove a company admin
+On the **Company Admins** tab, you can add, edit, or remove a Company Admin.
 
 For more information, see [How to Manage Company Roles and App Roles](/developerportal/howto/change-roles).
 
-## 4 Company Settings
+## 4 Company Settings Tab{#company-settings}
 
-A company admin can perform the following actions on the **Company Settings** tab:
+On the **Company Settings** tab, you can change the password expiration settings (number of days). To do this, set the password expiration (in days) and click **Save**. Note that a value of zero or lower indicates that passwords never expire.
 
-* Change the password expiration settings
-* View the company email domains
+![](attachments/companyadmin/password-expiration.png)
 
-For more information, see [How to Change the Password Expiration](/developerportal/howto/password-expiration).
+You can also view the company email domains. This is important for verifying the domains of Mendix users assigned to your company. If the domain list contains incorrect domains or does not contain some of your company's email domains, contact [Mendix Support](mailto:support@mendix.com).
 
-## 5 Launchpad Settings
+## 5 Launchpad Settings Tab
 
-A company admin can perform the following actions on the **Launchpad Settings** tab:
-
-* Choose the background image
-
-To see the current background image of your own company, go to the **Mendix Launchpad** [https://home.mendix.com/home/](https://home.mendix.com/home/).
+On the **Launchpad Settings** tab, you can select the background image for the [Mendix launchpad](https://home.mendix.com/home/).
 
 ## 6 Related Content
 

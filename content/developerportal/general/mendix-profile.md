@@ -277,7 +277,7 @@ For more information, see [API Documentation](/apidocs-mxsdk/apidocs/) and [Mend
 
 In this section, you can merge your accounts and select your profile visibility.
 
-#### 10.6.2 Merging Your Accounts
+#### 10.6.2 Merging Your Accounts {#merging}
 
 With use of the Mendix Profile, you can merge your old Mendix account(s) into your current Mendix account. This action combines all your hard-earned points, certifications, and achievements in your efforts to climb the leaderboards.
 
@@ -310,7 +310,6 @@ To make your public profile private again, click **Make this profile private**.
 ## 11 Related Content
 
 * [Company Admin Overview](companyadmin-overview)
-* [How to Deactivate and Activate Users](../howto/deactivate-users)
 * [Roles Within the Company and Apps](../general/roles)
 * [How to Manage Company Roles and App Roles](../howto/change-roles)
 * [Feedback](../collaborate/feedback)

@@ -122,9 +122,7 @@ Pages have a number of events that can trigger a microflow. See the following li
 | On change event           | OCH\_\<Purpose\>   | Input widgets                  |
 | On leave event            | OLE\_\<Purpose\>   | Input widgets                  |
 | Data source               | DS\_\<Purpose\>    | Data view, list view, data grid, template grid |
-| Microflow/action button   | ACT\_\<Purpose\>   | Menu item, Navigation item, Microflow and Action button, Drop down button |
-|                           | *or*               | (“IVK\_” is used historically) |
-|                           | IVK\_\<Purpose\>   |                                |
+| Microflow/action button   | ACT\_\<Purpose\> or IVK\_\<Purpose> | Menu item, Navigation item, Microflow and Action button, Drop down button<br />(“IVK\_” is used historically) |
 
 #### 3.4.5 Unit Test Microflows
 

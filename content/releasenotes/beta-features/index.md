@@ -1,8 +1,8 @@
 ---
-title: "Beta Features"
+title: "Beta Features Overview"
 ---
 
-## 1 Beta Features Overview
+## 1 Overview
 
 Some Mendix Platform releases contain beta features. We release these beta features to collect feedback on their implementation so that we can improve them. We value any feedback on these beta features, as it enables us to provide you with the best possible product.
 

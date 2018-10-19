@@ -17,7 +17,7 @@ There are four tabs on the **Company ** page with settings to manage:
 
 ## 2 Company Profile Tab
 
-You can edit various company details on the **Company Profile** tab, such as **Company name**, **Contract person**, and **Logo**.
+You can edit various company details on the **Company Profile** tab, such as **Company name**, **Contact person**, and **Logo**.
 
 ## 3 Company Admins Tab
 

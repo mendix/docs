@@ -37,11 +37,11 @@ To view the Company Contact, follow these steps:
     ![](attachments/general/show-profile.png)
 
 3. Below your name, click your the name of your company.
-4. Below **Contact**, you will see the **Company Contact**:
+4. Below **Contact**, you can see the Company Contact:
 
     ![](attachments/general/company-contact.png)
 
-The Company Admin who is the Company Contact can change roles on the Company Admin's [Company](company) page.
+A Company Admin can change the Company Contact on their Company Admin [Company](company) page.
 
 ### 2.3 Regular Users
 

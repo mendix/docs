@@ -59,7 +59,7 @@ You may be asked to provide your SAP credentials before you can see the log in K
 
 The Kibana user guide is available here: [Kibana User Guide](https://www.elastic.co/guide/en/kibana/current/index.html) and within Kibana. More information on how Kibana is integrated with SAP Cloud Platform is available on the SAP help site here: [Application Logging for the Cloud Foundry Environment](https://help.sap.com/viewer/ee8e8a203e024bbb8c8c2d03fce527dc/Cloud/en-US/68454d44ad41458788959485a24305e2.html).
 
-{{% alert type="info" %}}For apps deployed to environments created before 18 October 2018, the *Application Logging (application-logs)* service will not have been bound to your app automatically. To resolve this you can either:
+{{% alert type="info" %}}For apps deployed to environments created before 22 October 2018, the *Application Logging (application-logs)* service will not have been bound to your app automatically. To resolve this you can either:
 
 1. Create a new environment and deploy your app there.
 

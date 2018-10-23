@@ -29,6 +29,10 @@ You are provided with all the information and software which you need to perform
 
 The first step is to create a Mendix app. You need to link this to SAP Cloud Platform so that you can run the app there.
 
+1.	Click the **Create App** button at the top of the page.
+
+    ![](attachments/develop-a-smart-sap-catalog-teched-2018/media/create-app.png)
+
 1.  Choose the **Blank App** with Atlas UI styling.
 
     ![](attachments/develop-a-smart-sap-catalog-teched-2018/media/image1.png)
@@ -71,7 +75,7 @@ Depending on whether you have used SAP from Mendix before, and whether you are c
 
     ![](attachments/develop-a-smart-sap-catalog-teched-2018/media/image7.png)
 
-7.  Click **Edit App**.
+7.  Click the *arrow* on the **Edit App** button and click *Edit in Desktop Modeler*.
 
 	![](attachments/develop-a-smart-sap-catalog-teched-2018/media/image8.png)
 

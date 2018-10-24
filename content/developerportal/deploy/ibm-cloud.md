@@ -311,17 +311,17 @@ To change the memory and instances configuration temporarily, do the following:
 
     ![Select environment variables tab](attachments/ibm-cloud/runtime-environment-variables.png)
 
-    The environment variables contain three pieces of information. These are:
+    The environment variables contain three pieces of information which can be useful in managing your app. These are:
 
-    * DEVELOPMENT_MODE – this is *true* if you want the application to run with the Mendix security level of Prototype/demo, or Off (no security). It is recommended that this is changed to *false* for acceptance or production environments.
-    * Constants within the app
-    * SCHEDULED_EVENTS – this is a comma separated list of all the scheduled events enabled in the app
+    * DEVELOPMENT_MODE – this is *true* if you want the application to run with the Mendix security level of Prototype/demo, or Off (no security); it is recommended that this is changed to *false* for acceptance or production environments
+    * Constants within the app – these have the format *MX_{module name}_{constant name}
+    * SCHEDULED_EVENTS – by default, this is a comma separated list of all the scheduled events enabled in the app
 
 2. Change the values of these variables by typing the new values. Clicking **Save** will apply the new values and restart the environment.
 
     ![Select environment variables tab](attachments/ibm-cloud/save-new-variable-values.png)
 
-    {{% alert type="warning" %}}You can add and delete variables here, but this is not recommended as it may make your app unusable.{{% /alert %}}
+    For a full discussion of Mendix and environment variables in Cloud Foundry, see [Run Mendix in Cloud Foundry](https://github.com/mendix/cf-mendix-buildpack) in the cf-mendix-buildpack GitHub project.
 
     {{% alert type="info" %}}Unlike the memory and instance configuration, values that you change here are changed permanently and will not be overwritten the next time you deploy the app.{{% /alert %}}
 

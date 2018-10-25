@@ -22,7 +22,7 @@ An empty container.
 
 {{% snippet file="refguide/Style+Property.md" %}}
 
-## General properties
+## Visibility properties
 
 {{% snippet file="refguide/Visibility+Property.md" %}}
 

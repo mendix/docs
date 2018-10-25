@@ -12,17 +12,17 @@ Mendix allows for microflows to be triggered in pages by a variety of widgets. T
 | --- | --- | --- |
 | Action button (data view) | On click | Data view object |
 | Data view | Data source | Object of the data view containing this data view |
-| Action button (grid)<sup><a href="#fn1">1</a></sup> | On click | Grid selection or clicked row (as an object or as a list, depending on the [selection mode](data-grid)) |
+| Action button (grid)<sup><a name="ref1" href="#fn1">1</a></sup> | On click | Grid selection or clicked row (as an object or as a list, depending on the [selection mode](data-grid)) |
 | Reference set selector | On change | Data view object |
-| Input widget<sup><a href="#fn2">2</a></sup> | On change | Data view object |
+| Input widget<sup><a name="ref2" href="#fn2">2</a></sup> | On change | Data view object |
 | Input widget | On enter | Data view object |
 | Input widget | On leave | Data view object |
 | Image viewer | On click | Image viewer object |
 | Action button | On click | Enclosing data view object, if available |
 | Reference selector | Data source | Data view object |
 
-<sup id="fn1"><a href="#ref1" title="Jump back to footnote 1 in the text.">1</a> The following grid widgets have grid action buttons: data grid, template grid, and reference set selector.</sup><br />
-<sup id="fn2"><a href="#ref2" title="Jump back to footnote 2 in the text.">2</a> The following widgets are input widgets: check box, date picker, drop-down, text area, and text box.</sup>
+<small><sup><a name="fn1" href="#ref1" title="Jump back to footnote 1 in the text.">1</a></sup> The following grid widgets have grid action buttons: *data grid*; *template grid*; and *reference set selector*.</small><br/>
+<small><sup ><a name="fn2" href="#ref2" title="Jump back to footnote 2 in the text.">2</a></sup> The following widgets are input widgets: *check box*; *date picker*; *drop-down*; *text area*; and *text box*.</small>
 
 ## 2 Microflow
 

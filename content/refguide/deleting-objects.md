@@ -4,12 +4,12 @@ parent: "object-activities"
 ---
 
 {{% alert type="info" %}}
-This activity can only be used in microflows, not in nanoflows.
+This action can only be used in microflows, not in nanoflows.
 {{% /alert %}}
 
 ## 1 Introduction
 
-Delete Object can be used to delete one or more objects.
+Delete object can be used to delete one or more objects.
 
 {{% alert type="info" %}}
 
@@ -27,11 +27,12 @@ The variable that refers to the object or list of objects that will be deleted. 
 
 ### 3.1 Refresh in Client
 
-Refresh in client defines whether pages that use the entity of the object being deleted are refreshed.
+If the microflow is called from the client, the deletion is not reflected in the client if **Refresh in client** is set to *No*. If set to *Yes*, the deletion is reflected across the client, which includes reloading relevant [data sources](data-sources).
 
-| Option | Description |
-| --- | --- |
-| Yes | Objects of same entity are refreshed in the user's browser. |
-| No | Objects of same entity are not refreshed in the user's browser. |
+{{% alert type="info" %}}
 
-_Default value:_ No
+As of 7.19.0, deletions are always reflected in the client. [Data sources](data-sources) are only reloaded if **Refresh in client** is set to *Yes*.
+
+{{% /alert %}}
+
+_Default value_: No

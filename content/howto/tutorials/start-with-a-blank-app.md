@@ -3,7 +3,6 @@ title: "Start with a Blank App"
 parent: "starter-apps"
 description: "This series of Mendix How-to's will guide you in creating an employee directory app in the Mendix Web Modeler."
 tags: ["build", "app", "developer portal", "web modeler"]
-frontpage_featured: true
 ---
 
 The following how-to's will guide you through the process of starting with a blank app and building an employee directory app in the Mendix Web Modeler:

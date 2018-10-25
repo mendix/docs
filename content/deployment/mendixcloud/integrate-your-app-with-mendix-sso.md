@@ -1,15 +1,16 @@
 ---
 title: "Integrate Your App with Mendix SSO"
 category: "Mendix Cloud"
+#Needs to be rewritten to remove AppCloud references and just concentrate on SSO. Also needs to be tested.
 ---
 
 ## 1 Introduction
 
-With the release of the AppCloud, Mendix introduced a new project layout and module that makes use of the new Mendix AppCloud services. With the **AppCloud Default Project** layout, you can easily create new apps use the AppCloud services out of the box. You can upgrade your existing app with the separate [AppCloudServices module](https://appstore.home.mendix.com/link/app/934/).
+The **AppCloudServices** module allows you to integrate your app with the Mendix Cloud, including the Single Sign-on (SSO) feature. You can add these services to your existing app with the AppCloudServices module, available here: [https://appstore.home.mendix.com/link/app/934/](https://appstore.home.mendix.com/link/app/934/).
 
 Want to know more about all the possibilities this opens up? Take a look at the [New Mendix AppCloud Ignites Application Innovation by Connecting All Custom Apps, Developers, Data, and Users in One Enterprise Cloud Ecosystem](http://www.mendix.com/press/new-mendix-appcloud/) blog post.
 
-This how-to will explain how you can incorporate the AppCloudServices module into your existing app.
+This how-to explains how you can incorporate the AppCloudServices module into your existing app.
 
 ## 2 Steps & Example
 

@@ -1,6 +1,7 @@
 ---
 title: "Password Text Box"
 parent: "authentication-widgets"
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 The password text box is a widget that can be used to provide a password for authentication. It must be placed on a page together with a [login id text box](login-id-text-box) and a [sign-in button](sign-in-button).

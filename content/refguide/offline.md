@@ -73,7 +73,7 @@ In addition, usage of reference set associations (accessing through custom widge
 
 ### 4.10 Inheritance
 
-It is not possible to use more than one entity from a generalization/specialization relation. If you use two or more related entities on your offline pages, synchronization will fail, because the objects of these entities will be inserted multiple times into the database with the same ID.
+It is not possible to use more than one entity from a generalization/specialization relation. If you use two or more related entities on your offline pages or offline nanoflows, synchronization will fail, because the objects of these entities will be inserted multiple times into the database with the same ID.
 
 ### 4.11 System Members
 

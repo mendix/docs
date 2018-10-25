@@ -22,7 +22,11 @@ If you want to leave, delete, or deactivate your app, follow these steps:
 
 ### 2.1 Leaving the App with Team Members
 
-You can only leave an app when you are NOT the **Technical Contact**.
+{{% alert type="info" %}}
+
+Note that you cannot leave the app if you are the **Technical Contact** of the app.
+
+{{% /alert %}}
 
 After leaving, the app will still exist in the company and it will be available for other team members.
 
@@ -55,9 +59,8 @@ To leave and delete the app, click **Continue and delete app**.
 
 ## 3 Related Content
 
-* [Apps](/developerportal/companyadmin/apps)
-* [Company Admin](/developerportal/companyadmin)
-* [How to Deactivate and Activate Users](/developerportal/howto/deactivate-users)
+* [Apps](/developerportal/general/apps)
+* [Company Admin Overview](/developerportal/general/companyadmin-overview)
 * [How to Delete, Deactivate, and Activate Apps](/developerportal/howto/delete-apps)
 * [General](/developerportal/settings/general-settings)
 * [How to Manage Company Roles and App Roles](/developerportal/howto/change-roles)

@@ -4,6 +4,7 @@ category: "Web Modeler"
 description: "Describes various features of the Mendix Web Modeler."
 menu_order: 10
 tags: ["web modeler", "desktop modeler"]
+frontpage_featured: true
 ---
 
 ## 1 Introduction {#web-modeler-overview}
@@ -61,7 +62,7 @@ You can also open your app in the Web Modeler via the Desktop Modeler. Do the fo
 
 The app opens in the Web Modeler.
 
-## 3 Upgrading the Web Modeler
+## 3 Web Modeler Upgrade
 
 After clicking **Edit in Web Modeler** you may need to upgrade your app to the latest version.
 
@@ -113,7 +114,6 @@ The bottom menu bar provides the following options:
 | Search (magnifying glass) icon | Helps you search through microflows, entities, and pages. Start typing the name of the item you are looking for and the search feature will return any matches it finds, using exact matches as well as fuzzy matches based on the characters entered. <br />You can also use "/" shortcut to search through your app. |
 | [App Settings](app-settings-wm) | Shows an overview of all widgets and their status. Widgets are user interface elements (alerts, buttons, charts, etc.) contained in the building blocks. They are used to build pages from. |
 | [Theme Customizer](theme-customizer-wm) | Here you can style your app with custom branding, colors, and typography. |
-| Feedback | Allows you to provide feedback on the Mendix Web Modeler. The purpose of the feedback on Mendix is to provide low priority issues, questions, and ideas on how to improve the Web Modeler. <br />The Feedback button is not a support option. If there are any platform problems, contact **Mendix Support**. For more information, see [Mendix Support](../../howtogeneral/support/). |
 
 ## 6 Toolbox, Properties, and Buzz
 
@@ -140,7 +140,7 @@ The top bar provides the following options:
 | Recent documents drop-down menu | A document that you are currently viewing is displayed in this option. When you click the drop-down menu, documents that you have recently viewed are displayed in the list. You can click the document to open it. |
 | Publish button | Deploy and run the app. Update your app to deploy the latest changes you made in the Web Modeler. Once deployed, click **View** to view your app in action. |
 | [Checks button](checks-wm) | Shows the errors and warnings currently in your app. If there are any errors in the app, you will not be able to publish your app, until you have solved them.<br />You can also use C shortcut to view the **Checks** panel. |
-| Information icon | Here you can find following information:<ul><li>**About** - shows the information on the Web Modeler version and Mendix version </li><li>**Keyboard Shortcuts** - opens the list of shortcuts in the Web Modeler</li><li>**Take a Product Tour** - starts a  the guided product introduction tour and shows you around the Web Modeler</li><li>**Mendix Academy** - a link to the [Mendix Academy](https://gettingstarted.mendixcloud.com)</li><li>**Mendix Documentation** - a link to the [Mendix Documentation](https://docs.mendix.com/)</li><li>**Mendix Atlas UI** - a link to to the [Mendix Atlas UI documentation](https://atlas.mendix.com)</li><li>**Edit in Desktop Modeler** - opens your app in the Desktop Modeler</li></ul> |
+| Information icon | Here you can find following information:<ul><li>**About** – shows the information on the [Web Modeler version and Mendix version](versions-wm) </li><li>**Keyboard Shortcuts** – opens the list of shortcuts in the Web Modeler</li><li>**Take a Product Tour** – starts a  the guided product introduction tour and shows you around the Web Modeler</li><li>**Ask the Community** – a link to the [Mendix Forum](https://forum.mendixcloud.com/index4.html) where you can ask questions and explore the knowledge offered by the entire Mendix Community<li>**Check the  Documentation** – a link to the [Web Modeler Documentation](index)</li><li>**Contact Mendix Support** – a link to the [Support Portal](https://support.mendix.com/hc/en-us)<li>**Mendix Academy** – a link to the [Mendix Academy](https://gettingstarted.mendixcloud.com)</li><li>**Mendix Assist Is ON** – a setting that enables/disables [Mendix Assist](mx-assist-wm)</li><li>**Edit in Desktop Modeler** – opens your app in the Desktop Modeler</li></ul> |
 
 ## 8 Related Content
 

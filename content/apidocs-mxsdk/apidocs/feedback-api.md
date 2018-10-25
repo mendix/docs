@@ -1,12 +1,17 @@
 ---
 title: "Feedback API"
 category: "API Documentation"
+description: "API to access Mendix app feedback from within the app"
+tags: ["Feedback", "Developer Portal", "API"]
 ---
 
-
-## Documentation
+## Introduction
 
 The Mendix Feedback API allows you to retrieve, add and manage feedback for your Mendix projects.
+
+To use the API, you need to set up a **Consumed Web Service** using the WDSL for this service, available here: [Get WSDL](attachments/9535499/19398864.wsdl). You can find out how to do this in [How to Consume a Complex Web Service](/howto/integration/consume-a-complex-web-service).
+
+The actions in the feedback API can then be called in a microflow using the **Call web service** action. This is described in the reference guide here: [Call Web Service Action](/refguide/call-web-service-action).
 
 {{% alert type="info" %}}
 
@@ -17,13 +22,11 @@ Each call also requires the parameters 'username' and 'password'. These are the 
 
 {{% /alert %}}
 
-**[Get WSDL](attachments/9535499/19398864.wsdl)**
+## API Calls
 
-## Published Microflows
+### AcceptFeedback
 
-### Microflow AcceptFeedback
-
-This microflow accepts the specified feedback item.
+This call **accepts** the specified feedback item. This means that the app team has accepted the feedback and added this feedback as a story to the sprint.
 
 | Parameter Name | Parameter Type | Description |
 | --- | --- | --- |
@@ -33,9 +36,9 @@ This microflow accepts the specified feedback item.
 
 * Return value – Boolean
 
-### Microflow AddFeedback
+### AddFeedback
 
-This microflow add a new feedback item to the project and returns the ID of the new feedback item.
+This call **adds a new feedback item** to the project and returns the ID of the new feedback item.
 
 | Parameter Name | Parameter Type | Description |
 | --- | --- | --- |
@@ -49,9 +52,9 @@ This microflow add a new feedback item to the project and returns the ID of the 
 
 * Return value – Integer/Long
 
-### Microflow CloseFeedback
+### CloseFeedback
 
-This microflow closes the specified feedback item.
+This call **closes** the specified feedback item.
 
 | Parameter Name | Parameter Type | Description |
 | --- | --- | --- |
@@ -60,11 +63,11 @@ This microflow closes the specified feedback item.
 | ProjectID | String | The ID of the project. 
 | Reason | String | Reason why the feedback item is being closed (Optional)
 
-* Return value – Enumeration IssueState
+* Return value – Enumeration IssueState (see below for possible values)
 
-### Microflow DeleteFeedback
+### DeleteFeedback
 
-This microflow deletes the specified feedback item.
+This call **deletes** the specified feedback item.
 
 | Parameter Name | Parameter Type | Description |
 | --- | --- | --- |
@@ -74,9 +77,9 @@ This microflow deletes the specified feedback item.
 
 * Return value – Boolean
 
-### Microflow GetFeedbackItems
+### GetFeedbackItems
 
-This microflow retrieves all feedback items for the project which satisfy the IssueState filter.
+This call **retrieves a list of all feedback items** for the project which satisfy the IssueState filter.
 
 | Parameter Name | Parameter Type | Description |
 | --- | --- | --- |
@@ -86,9 +89,9 @@ This microflow retrieves all feedback items for the project which satisfy the Is
 
 * Return value – List of Issue
 
-### Microflow GetSingleFeedbackItem
+### GetSingleFeedbackItem
 
-This microflow retrieves a single feedback item by ID.
+This call **retrieves a single feedback item** by ID.
 
 | Parameter Name | Parameter Type | Description |
 | --- | --- | --- |

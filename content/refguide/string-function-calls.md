@@ -228,19 +228,27 @@ returns:
 
 ## contains
 
-Determines whether a substring occurs in the original string.
+Determines whether the original string (first parameter) contains a substring (second parameter).
 
 This expression: 
 
 ```java
-contains('mystring', 'otherstring')
+contains('stringtosearchin', 'stringtosearchfor')
 ```
 
 is equivalent to the following expression:
 
 ```java
-find('mystring', 'otherstring') != -1
+find('stringtosearchin', 'stringtosearchfor') != -1
 ```
+
+Searching for an empty variable or empty string, like this expression where `$param = ''`:
+
+```java
+contains('stringtosearchin', $param)
+```
+
+will return true.
 
 {{% alert type="warning" %}}
 This function is case-senstive.

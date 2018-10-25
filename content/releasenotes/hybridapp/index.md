@@ -14,6 +14,26 @@ If you're using the advanced flow, you can get the latest version of the Hybrid 
 
 ## 2018
 
+### October 18th, 2018 (2.3.2 / 2.0.1)
+
+* We inadvertently removed the mechanism to pin the Android support library, which could lead to issues during compilation of the app. We now pin it at SDK version 27 again.
+
+### October 18th, 2018 (2.3.1 / 2.0.1)
+
+* We upgrade the inappbrowser plugin to latest version (3.0.0).
+
+### October 18th, 2018 (2.3.0 / 2.0.1)
+
+* The Cordova inappbrowser plugin does not comply with recent changes in Android API requirements. Specifically, opening a file using the file:// protocol is disallowed. To avoid the issue, links to files (images, pdfs, etc.) are now opened using the default application available on the device.
+
+### August 14th, 2018 (2.2.2 / 2.0.1)
+
+* As part of the signout/cleanup process, we now clear out all locations where authentication tokens might still reside.
+
+### August 13th, 2018 (2.2.1 / 2.0.1)
+
+* For upgraded apps, the recent change to store authentication tokens in file storage instead of localstorage could lead to a loss of the session. To avoid this issue, we added a fallback mechanism to check if a token is still available in localstorage.
+
 ### August 13th, 2018 (2.2.0 / 2.0.1)
 
 * We changed how auth tokens are stored, preventing an issue where a session was not reconstructed after an update of the app.

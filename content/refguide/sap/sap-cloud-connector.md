@@ -1,11 +1,17 @@
 ---
 title: "SAP Cloud Connector"
 category: "SAP"
+menu_order: 500
 description: "Presents reference information on the SAP Cloud Connector."
-tags: ["SAP", "SAP Cloud Platform", "on-premises", "Cloud Connector"]
+tags: ["SAP", "SAP Cloud Platform", "on-premises", "Cloud Connector", "Destination Services"]
+frontpage_featured: false
 ---
 
 ## 1 Introduction
+
+{{% alert type="info" %}}
+From SAP OData Connector version 4.0.0, Cloud Connector functionality is provided by SAP Destination Services.
+{{% /alert %}}
 
 A challenge when running an application in the cloud is to be able to access your on-premises systems in a secure way.
 

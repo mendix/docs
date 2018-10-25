@@ -52,7 +52,7 @@ To create a published web service, follow these steps:
 
         ![](attachments/18448728/18581713.png)
 
-    * On the **Settings** tab, you can configure the other settings (for now leave the settings as they are; for details on these settings, see [Published Web Services](/refguide7/published-web-services) in the Mendix Reference Guide):
+    * On the **Settings** tab, you can configure the other settings. Do change them before publishing your web service, especially the **Target namespace** (for details on these settings, see [Published Web Service](/refguide/published-web-service) in the Mendix Reference Guide):
 
         ![](attachments/18448728/18581712.png)
 

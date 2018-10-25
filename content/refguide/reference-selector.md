@@ -1,6 +1,7 @@
 ---
 title: "Reference Selector"
 parent: "input-widgets"
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 The reference selector is an [input widget](input-widgets) that can be used to display and edit [associations](associations).

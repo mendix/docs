@@ -8,8 +8,6 @@ This category contains documents about the use of specific tasks in the [Develop
 
 ## 2 Company Admin
 
-* [Change Password Expiration](/developerportal/howto/password-expiration)
-* [Deactivate and Activate Users](/developerportal/howto/deactivate-users)
 * [Delete, Deactivate and Activate Apps](/developerportal/howto/delete-apps)
 
 ## 3 General
@@ -19,12 +17,7 @@ This category contains documents about the use of specific tasks in the [Develop
 
 ## 4 Collaborate
 
-### 4.1 Feedback
-
-* [Use the Feedback Widget](gathering-user-feedback)
-* [Provide Feedback on Mendix](feedback-mendix)
-
-### 4.2 Stories
+### 4.1 Stories
 
 * [Manage Sprints and Stories](managing-your-application-requirements-with-mendix)
 
@@ -75,7 +68,7 @@ This category contains documents about the use of specific tasks in the [Develop
 
 ## 7 Related Content
 
-* [Company Admin](/developerportal/companyadmin)
+* [Company Admin Overview](/developerportal/general/companyadmin-overview)
 * [Collaborate](/developerportal/collaborate)
 * [Deploy](/developerportal/deploy)
 * [Develop](/developerportal/develop)

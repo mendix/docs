@@ -64,10 +64,11 @@ The **General** section has common properties for every input element, but may a
 
 Common properties of input elements are described in the table below:
 
-| Property   | Description                                                  |
-| ---------- | ------------------------------------------------------------ |
-| Show Label | Enable this property if you want to show a label (name) of a widget to the end-user. *This property is enabled by default.* |
-| Label      | This property only appears if **Show Label** is enabled. Specify the name that will be displayed to the end-users. When you select an attribute, the name of the attribute is filled out as a label. |
+| Property    | Description                                                  |
+| ----------- | ------------------------------------------------------------ |
+| Show Label  | Enable this property if you want to show a label (name) of a widget to the end-user. *This property is enabled by default.* |
+| Label       | This property only appears if **Show Label** is enabled. Specify the name that will be displayed to the end-users. When you select an attribute, the name of the attribute is filled out as a label. |
+| Editability | Editability indicates whether the end-user will be able to change the value displayed by the widget. Possible values are the following: <ul><li>Editable – the value displayed by the widget is editable</li><li>Read-only – the value is in read-only mode</li><li>Conditional – the widget is editable only if specified conditions are met (this option can be configured in the Desktop Modeler only)</li></ul>**Note** If an attribute set for the widget's data source is of the AutoNumber type, the widget is set into read-only mode by default and the **Editability** setting itself is disabled, because attributes of this type are generated automatically. |
 
 #### 3.2.2 Specific Properties
 

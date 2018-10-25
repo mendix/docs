@@ -2,6 +2,7 @@
 title: "Create Company Atlas UI Resources"
 category: "Atlas UI"
 tags: ["Atlas", "UI", "UX", "user experience"]
+frontpage_featured: true
 ---
 
 ## 1 Introduction

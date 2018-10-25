@@ -244,10 +244,6 @@ module.exports = {
       to: "/community/tools/how-to-set-up-your-partner-profile"
     },
     {
-      from: "/community/How+to+set+up+your+profile",
-      to: "/community/tools/how-to-set-up-your-profile"
-    },
-    {
       from: "/community/The+How+to+Template+Page",
       to: "/community/documentation/the-how-to-template-page"
     },
@@ -1271,7 +1267,7 @@ module.exports = {
     },
     {
       from: "/howto50/Gathering+user+feedback",
-      to: "/developerportal/howto/gathering-user-feedback"
+      to: "/developerportal/collaborate/use-feedback-widget"
     },
     {
       from: "/howto50/Getting+Started",
@@ -1774,7 +1770,7 @@ module.exports = {
     },
     {
       from: "/howto6/Gathering+user+feedback",
-      to: "/developerportal/howto/gathering-user-feedback"
+      to: "/developerportal/collaborate/use-feedback-widget"
     },
     {
       from: "/howto6/Getting+Started",
@@ -2103,6 +2099,10 @@ module.exports = {
       from: "/bestpractices/How+to+execute+an+SQL+statement+on+an+external+database",
       to: "/howto/integration/how-to-execute-an-sql-statement-on-an-external-database"
     },
+	{
+      from: "/howto7/solving-load-and-import-errors",
+      to: "/howto/monitoring-troubleshooting/solving-load-and-import-errors"
+    },	
     /****************************************************
      * Mendix Cloud
      ****************************************************/
@@ -2125,10 +2125,6 @@ module.exports = {
     {
       from: "/mendixcloud/Different+user+logins+when+integrated+with+Mendix+SSO",
       to: "/deployment/mendixcloud/different-user-logins-when-integrated-with-mendix-sso"
-    },
-    {
-      from: "/mendixcloud/How+to+deploy+a+Mendix+app+on+Amazon+Web+Services",
-      to: "/deployment/aws/how-to-deploy-a-mendix-app-on-amazon-web-services"
     },
     {
       from: "/mendixcloud/How+to+deploy+a+Mendix+app+on+Azure",
@@ -2187,10 +2183,6 @@ module.exports = {
       to: "/deployment/mendixcloud/sending-email"
     },
     {
-      from: "/deployment/mendixcloud/how-to-deploy-a-mendix-app-on-amazon-web-services",
-      to: "/deployment/aws/how-to-deploy-a-mendix-app-on-amazon-web-services"
-    },
-    {
       from: "/deployment/mendixcloud/how-to-deploy-a-mendix-app-on-azure",
       to: "/deployment/azure/how-to-deploy-a-mendix-app-on-azure"
     },
@@ -2236,7 +2228,7 @@ module.exports = {
     },
     {
       from: "/howtogeneral/support/how-to-activate-or-deactivate-your-mendix-account",
-      to: "/developerportal/howto/deactivate-users"
+      to: "/developerportal/general/users"
     },
 	{
       from: "/howtogeneral/support/technical-contact",
@@ -7095,6 +7087,10 @@ module.exports = {
       "from": "/refguide7/Desktop+profile",
       "to": "/refguide/desktop-profile"
     },
+	{
+      "from": "/refguide7/desktop-webmodeler",
+      "to": "/howto/web-modeler/syncing-webmodeler-desktop"
+    },	
     {
       "from": "/refguide7/Developing+Hybrid+Mobile+Apps",
       "to": "/refguide/developing-hybrid-mobile-apps"
@@ -7127,7 +7123,11 @@ module.exports = {
       "from": "/refguide7/Download+From+Team+Server+Dialog",
       "to": "/refguide/download-from-version-control-dialog"
     },
-    {
+	{
+      "from": "/refguide7/drop-down-widget",
+      "to": "/refguide/drop_down"
+    },
+	{
       "from": "/refguide7/Drop-down",
       "to": "/refguide/drop_down"
     },
@@ -7271,7 +7271,11 @@ module.exports = {
       "from": "/refguide7/History+Dialog",
       "to": "/refguide/history-dialog"
     },
-    {
+	{
+      "from": "/refguide7/horizontal-split-pane",
+      "to": "/refguide/scroll-container"
+    },	
+	{
       "from": "/refguide7/If+expressions",
       "to": "/refguide/if-expressions"
     },
@@ -7475,6 +7479,10 @@ module.exports = {
       "from": "/refguide7/Microflow+Expressions",
       "to": "/refguide/expressions"
     },
+	{
+      "from": "/refguide7/microflow-expressions",
+      "to": "/refguide/expressions"
+    },	
     {
       "from": "/refguide7/Microflow+Source",
       "to": "/refguide/microflow-source"
@@ -8138,6 +8146,10 @@ module.exports = {
       "from": "/refguide7/Version+Control+Scenarios",
       "to": "/refguide/version-control-scenarios"
     },
+	{
+      "from": "/refguide7/vertical-split-pane",
+      "to": "/refguide/scroll-container"
+    },	
     {
       "from": "/refguide7/XML+Inheritance+and+Choice",
       "to": "/refguide/xml-inheritance-and-choice"
@@ -8687,59 +8699,59 @@ module.exports = {
     },
     {
       from: "/ReleaseNotes/Model+SDK+3.0.1",
-      to: "/releasenotes/model-sdk/3.0"
+      to: "/releasenotes/model-sdk/3"
     },
     {
       from: "/ReleaseNotes/Model+SDK+3.0.0",
-      to: "/releasenotes/model-sdk/3.0"
+      to: "/releasenotes/model-sdk/3"
     },
     {
       from: "/ReleaseNotes/Model+SDK+2.9.1",
-      to: "/releasenotes/model-sdk/2.9"
+      to: "/releasenotes/model-sdk/2"
     },
     {
       from: "/ReleaseNotes/Model+SDK+2.9.0",
-      to: "/releasenotes/model-sdk/2.9"
+      to: "/releasenotes/model-sdk/2"
     },
     {
       from: "/ReleaseNotes/Model+SDK+2.8.1",
-      to: "/releasenotes/model-sdk/2.8"
+      to: "/releasenotes/model-sdk/2"
     },
     {
       from: "/ReleaseNotes/Model+SDK+2.8.0",
-      to: "/releasenotes/model-sdk/2.8"
+      to: "/releasenotes/model-sdk/2"
     },
     {
       from: "/ReleaseNotes/Model+SDK+2.7.0",
-      to: "/releasenotes/model-sdk/2.7"
+      to: "/releasenotes/model-sdk/2"
     },
     {
       from: "/ReleaseNotes/Model+SDK+2.6.3",
-      to: "/releasenotes/model-sdk/2.6"
+      to: "/releasenotes/model-sdk/2"
     },
     {
       from: "/ReleaseNotes/Model+SDK+2.6.0",
-      to: "/releasenotes/model-sdk/2.6"
+      to: "/releasenotes/model-sdk/2"
     },
     {
       from: "/ReleaseNotes/Model+SDK+2.5.0",
-      to: "/releasenotes/model-sdk/2.5"
+      to: "/releasenotes/model-sdk/2"
     },
     {
       from: "/ReleaseNotes/Model+SDK+2.4.0",
-      to: "/releasenotes/model-sdk/2.4"
+      to: "/releasenotes/model-sdk/2"
     },
     {
       from: "/ReleaseNotes/Model+SDK+2.3.0",
-      to: "/releasenotes/model-sdk/2.3"
+      to: "/releasenotes/model-sdk/2"
     },
     {
       from: "/ReleaseNotes/Model+SDK+2.2.2",
-      to: "/releasenotes/model-sdk/2.2"
+      to: "/releasenotes/model-sdk/2"
     },
     {
       from: "/ReleaseNotes/Model+SDK+2.1.0",
-      to: "/releasenotes/model-sdk/2.1"
+      to: "/releasenotes/model-sdk/2"
     },
     {
       from: "/ReleaseNotes/Platform+SDK+2.0.0",
@@ -8747,23 +8759,23 @@ module.exports = {
     },
     {
       from: "/ReleaseNotes/Model+SDK+2.0.0",
-      to: "/releasenotes/model-sdk/2.0"
+      to: "/releasenotes/model-sdk/2"
     },
     {
       from: "/ReleaseNotes/Model+SDK+1.2.0",
-      to: "/releasenotes/model-sdk/1.2"
+      to: "/releasenotes/model-sdk/1"
     },
     {
       from: "/ReleaseNotes/Model+SDK+1.1.1",
-      to: "/releasenotes/model-sdk/1.1"
+      to: "/releasenotes/model-sdk/1"
     },
     {
       from: "/ReleaseNotes/Model+SDK+1.1.0",
-      to: "/releasenotes/model-sdk/1.1"
+      to: "/releasenotes/model-sdk/1"
     },
     {
       from: "/ReleaseNotes/Model+SDK+1.0.2",
-      to: "/releasenotes/model-sdk/1.0"
+      to: "/releasenotes/model-sdk/1"
     },
     {
       from: "/ReleaseNotes/Platform+SDK+1.0.2",
@@ -8771,7 +8783,7 @@ module.exports = {
     },
     {
       from: "/ReleaseNotes/Model+SDK+1.0.0",
-      to: "/releasenotes/model-sdk/1.0"
+      to: "/releasenotes/model-sdk/1"
     },
     {
       from: "/ReleaseNotes/Application+Quality+Monitor",

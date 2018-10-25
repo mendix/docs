@@ -17,14 +17,9 @@ Follow these steps to find the **Settings** category:
 
 ## 2 General
 
-The **General** tab displays an overview of the app's information: the name and description of the app, the AppID, the App Contact, and the Technical Contact (if the app has a node).
+The **General** tab displays an overview of the app's information: the name and description of the app, the **App Contact**, the **Technical Contact** (if the app has a node), whether the **Web Modeler** is enabled for the app, the **App ID**.
 
-There are two actions here you can perform:
-
-* Click **Edit settings** to edit the app settings (you can only see this button when you have the **App Settings** permission; for more details, see [Roles Within the Company and Apps](/developerportal/general/roles))
-* Click **Leave app** to leave the app (for details, see [Three Ways to Leave Your App](/developerportal/general/leave-app))
-
-For more information, see [General](/developerportal/settings/general-settings).
+For more information, see [General Settings](general-settings).
 
 ## 3 Security
 
@@ -69,21 +64,19 @@ The **Node Permissions** tab lets you view the team members that have the **App 
 For more information, see [Security-Node](/developerportal/settings/node-permissions).
 
 ## 4 API Keys
- 
+
 The **API Keys** page lists the existing API keys and lets you create new keys by clicking **Create API key**.
 
 For more information, see [API Keys](/developerportal/settings/api-key).
 
 ## 5 Related Content
 
-* [Company Admin](/developerportal/companyadmin)
-* [How to Change Password Expiration](/developerportal/howto/password-expiration)
-* [How to Configure Maintenance Windows](/developerportal/howto/maintenance-windows)
-* [How to Deactivate and Activate Users](/developerportal/howto/deactivate-users)
-* [How to Delete, Deactivate and Activate Apps](/developerportal/howto/delete-apps)
-* [How to Manage Company Roles and App Roles](/developerportal/howto/change-roles)
-* [How to Receive Environment Status Alerts](/developerportal/howto/receive-alerts)
-* [Mendix Profile](/developerportal/general/mendixprofile)
-* [Roles Within the Company and Apps](/developerportal/general/roles)
-* [Three Ways to Leave Your App](/developerportal/general/leave-app)
-* [Technical Contact](/developerportal/general/technical-contact)
+* [Company Admin Overview](/developerportal/general/companyadmin-overview)
+* [How to Configure Maintenance Windows](../howto/maintenance-windows)
+* [How to Delete, Deactivate and Activate Apps](../howto/delete-apps)
+* [How to Manage Company Roles and App Roles](../howto/change-roles)
+* [How to Receive Environment Status Alerts](../howto/receive-alerts)
+* [Mendix Profile](../general/mendix-profile)
+* [Roles Within the Company and Apps](../general/roles)
+* [Three Ways to Leave Your App](../general/leave-app)
+* [Technical Contact](../general/technical-contact)

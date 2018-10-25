@@ -12,9 +12,9 @@ This category is divided into the five pages presented below.
 
 ## 2 Buzz
 
-The **Buzz** lets you see and share ideas as well as collaborate with your team. You will get an overview of new team members, new stories and their changes, and added or completed sprints.
+The **Buzz** lets you see and share ideas as well as collaborate with your team. You will get an overview of new team members, new stories and their changes, and sprints which are added or completed.
 
-For more details, see [App Buzz](appbuzz).
+For more details, see [Buzz for App](appbuzz).
 
 ## 3 Team
 
@@ -35,7 +35,7 @@ For more details, see [Stories](stories).
 The **Feedback** pages show an overview of the feedback provided about the app. There are two ways of submitting feedback:
 
 1. Add feedback on the **Feedback** page in the Developer Portal.
-2. Add feedback by going to the app (to go to the app, click **View App**).
+2. Add feedback from within the app (to go to the app, click **View App**).
 
 {{% alert type="info" %}}
 
@@ -43,10 +43,10 @@ The **Feedback** button in the **Developer Portal** is used to provide feedback 
 
 {{% /alert %}}
 
-For more details, see [Feedback](feedback) and [How to Provide Feedback on Mendix](../howto/feedback-mendix).
+For more details, see [Feedback](feedback), [How to Use the Mendix Feedback Widget](use-feedback-widget), and [How to Use the Mendix Feedback & Collaboration Widget](use-collaboration-widget).
 
 ## 6 Documents
 
-The **Documents** pages lets you upload files related to the app. It is possible to replace a current file with a newer version, add labels, comment, and download files.
+The **Documents** page lets you upload files related to the app. It is possible to replace a current file with a newer version, add labels, comment, and download files.
 
 For more details, see [Documents](documents).

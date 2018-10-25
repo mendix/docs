@@ -9,7 +9,7 @@ You can go to the [Mendix Community site](https://developers.mendix.com/) for al
 
 ## 2 Forum
 
-On the [Mendix Forum](https://forum.mendixcloud.com/index3.html), you can ask questions and explore the knowledge offered by the entire Mendix Commnity. There are questions and answers on various topics as well as a specific **Idea Forum** for the submission of unique ideas on changes and improvements to the Mendix app platform.
+On the [Mendix Forum](https://forum.mendixcloud.com/index3.html), you can ask questions and explore the knowledge offered by the entire Mendix Community. There are questions and answers on various topics as well as a specific **Idea Forum** for the submission of unique ideas on changes and improvements to the Mendix app platform.
 
 The **Forum** section at the top of the Mendix Community site presents the latest questions being asked on the forum along with the author of the question and how long ago it was asked:
 

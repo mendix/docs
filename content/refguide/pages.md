@@ -2,6 +2,7 @@
 title: "Pages"
 category: "Desktop Modeler"
 tags: ["Pages", "Widgets", "Desktop Modeler"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 This document describes what pages are for and what kind of widgets can be placed on them. The properties of a page, snippet, or layout document can be found on the documentation pages for those document types: [Page](page), [Snippet](snippet), and [Layout](layout).

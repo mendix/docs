@@ -30,7 +30,7 @@ The table below describes the most common errors you can come across when config
 
 Not configuring a data source for a [data view](page-editor-data-view-list-view-wm#data-view-properties) in a proper way results in consistency errors. For example, you selected a list widget as the data source, but you have not selected the specific list you would like the data view to listen to.
 
-![](attachments/consistency-errors-pages-wm/wm-data-view-error.png)
+![Data View Properties Not Configured](attachments/consistency-errors-pages-wm/wm-data-view-error.png)
 
 The table below describes the most common errors you can come across when configuring a data view,  causes of these errors, and ways to fix them. 
 
@@ -78,9 +78,9 @@ If you want the **Customer Details** page to open the details of a specific cust
 
 1. Open the **Customers** page.
 
-2. Drag the **Details** button inside the list view.
+2.  Drag the **Details** button inside the list view.
 
-   ![](attachments/consistency-errors-pages-wm/wm-list-view-content.png)
+    ![List View Example](attachments/consistency-errors-pages-wm/wm-list-view-content.png)
 
 
 Now the button gets the object of type *Customer* from the list view on the **Customers** page, and it will be passed to the **Customer Details** page. As a result, the details of a particular customer is displayed on the **Customer Details** page. 
@@ -95,9 +95,9 @@ If you want to create a new customer and fill in the customer's details on the *
 
 3. Set **Customer** as **Entity**.
 
-4. Set **Customer Details** as **Page**.
+4.  Set **Customer Details** as **Page**.
 
-   ![](attachments/consistency-errors-pages-wm/wm-button-create-object.png)
+    ![Button Properties](attachments/consistency-errors-pages-wm/wm-button-create-object.png)
 
 5. Change the button's caption from **Details** to **Add**, as this button will now create a new customer, and not show details of an existing customer.
 
@@ -136,7 +136,7 @@ The most common consistency errors for [static image widgets](page-editor-widget
 
 [Dynamic images](page-editor-widgets-images-wm) need to be placed inside a data container (a data view or a list view) and an entity should be selected for them. 
 
-![](attachments/consistency-errors-pages-wm/wm-dynamic-image-properties.png)
+![Dynamic Image Properties](attachments/consistency-errors-pages-wm/wm-dynamic-image-properties.png)
 
 Errors for static and dynamic images are described in the table below. 
 

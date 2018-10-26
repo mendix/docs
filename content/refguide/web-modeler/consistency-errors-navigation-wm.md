@@ -35,15 +35,15 @@ To fix the error, you can create an object and pass it to the page. Do the follo
 
 1. Open the navigation document.
 
-2. Open properties of the **Program** menu item, and do the following:
+2.  Open properties of the **Program** menu item, and do the following:<br />
 
-   a. Change the **On Click Action** property from **Page** to **More** > **Create Object**.
+    a. Change the **On Click Action** property from **Page** to **More** > **Create Object**.<br />
 
-   b. Set **ProgramItem** as **Entity (path)**.
+    b. Set **ProgramItem** as **Entity (path)**.<br />
 
-   c. Set **Program** as **Page**.
+    c. Set **Program** as **Page**.<br />
 
-   ![Menu Item Properties](attachments/consistency-errors-navigation-wm/wm-menu-item-properties.png)
+    ![Menu Item Properties](attachments/consistency-errors-navigation-wm/wm-menu-item-properties.png)
 
 Now when a user clicks the navigation item, a new object of type *ProgramItem* will be created and passed to the **Program** page.
 
@@ -67,9 +67,9 @@ However, you can also solve this error by creating a microflow that will create 
 
 1. Open **Navigation** > properties of the home page menu item.
 
-2. Change the **On Click Action** from **Page** to **Microflow**. 
+2.  Change the **On Click Action** from **Page** to **Microflow**. 
 
-   ![Menu Item Properties](attachments/consistency-errors-navigation-wm/wm-menu-item-on-click-action.png)
+    ![Menu Item Properties](attachments/consistency-errors-navigation-wm/wm-menu-item-on-click-action.png)
 
 3. Click **Select Microflow** and click **New Microflow** in the pop-up window.
 
@@ -77,19 +77,19 @@ However, you can also solve this error by creating a microflow that will create 
 
 5. The created microflow is opened. In the **Toolbox** > **Object Activities**, select **Create Object**, drag and drop it to the microflow.
 
-6. Open the **Create object** activity properties, and set **Entity** to **Customer**.
+6.  Open the **Create object** activity properties, and set **Entity** to **Customer**.
 
-   ![Create Object Activity Properties](attachments/consistency-errors-navigation-wm/wm-create-object-properties.png)
+    ![Create Object Activity Properties](attachments/consistency-errors-navigation-wm/wm-create-object-properties.png)
 
 7. In the **Toolbox** > **Client Activities**, select **Show Page** activity, drag and drop it to the microflow.
 
-8. Open the **Show Page** activity properties and do the following:
+8.  Open the **Show Page** activity properties and do the following:<br />
 
-   a.  Set **Page** to **Home**.
+    a.  Set **Page** to **Home**.<br />
 
-   b. Set **Object to pass** to **NewCustomer**. 
+    b. Set **Object to pass** to **NewCustomer**.<br />
 
-   ![Show Page Properties](attachments/consistency-errors-navigation-wm/wm-show-page-properties.png)
+    ![Show Page Properties](attachments/consistency-errors-navigation-wm/wm-show-page-properties.png)
 
 Now the new object of type *Customer* will be created and passed to the home page.
 

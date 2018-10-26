@@ -23,7 +23,7 @@ Consistency errors can occur in the following editors of the modeler:
 ##  2 Related Content
 
 * [Page Editor Consistency Errors in the Web Modeler](consistency-errors-pages-wm)
-* [Consistency Errors When Configuring Navigation](consistency-errors-navigation-wm)
+* [Navigation Consistency Errors in the Web Modeler](consistency-errors-navigation-wm)
 * [Checks Overview in the Web Modeler](checks-wm)
 * [Page Editor Overview in the Web Modeler](page-editor-wm)
 * [Navigation Document in the Web Modeler](navigation-wm)

@@ -43,24 +43,22 @@ The following reference documents describe the documents you can add:
 * [Import mappings](import-mappings)
 * [Consumed app services](consumed-app-services)
 * [Consumed web services](consumed-web-services)
-* [Published REST services]
-* Published web services
-* Published OData services
-* Published app services
+* [Published REST services](published-rest-services)
+* [Published web services](published-web-services)
+* [Published OData services](published-odata-services)
+* [Published app services](published-app-services)
 
 ## Additional Information About the Desktop Modeler
 
-The following reference documents add additional information about using the Desktop Modeler
+The following reference documents provide additional information about using the Desktop Modeler
 
 * [Data Types](data-types)
-* [Dialogs](dialogs)
+* [Dialog Boxes](dialogs)
 * [Domain Model](domain-model)
 * [Integration](integration)
+* [Modules](modules)
 * [Projects](project)
 * [Security](security)
 * [Translatable Texts](translatable-texts)
 * [XML](xml-reference-guide)
 * [XPath](xpath)
-* [Modules](modules)
-
- There are some project-level settings, but the core of the functionality is inside the modules. Examples of documents are project settings, domain models, pages, and microflows

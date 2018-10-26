@@ -51,7 +51,7 @@ A regular expression can contain the following types of subexpressions:
 
         These forms can be mixed: `[abcx-z]` matches "_a_", "_b_", "_c_", "_x_", "_y_", or "_z_", and is equivalent to `[a-cx-z]`
 
-        The "-" character is treated as a literal character if it is the last or the first character within the brackets, or if it is escaped with a backslash (`\`)
+        The `-` character is treated as a literal character if it is the last or the first character within the brackets, or if it is escaped with a backslash (`\`)
 
 * `[^ ]` – matches a single character that is **not** contained within the brackets. For example:
 

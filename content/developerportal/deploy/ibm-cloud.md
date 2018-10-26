@@ -62,7 +62,7 @@ To set up IBM Cloud, follow these steps:
 
 2.  Log in to IBM Cloud if you are not already logged in.
 
-    The **App name** name of your project is already filled in.
+    The **App name** name of your project is already filled in. It is recommended that you do not change this; changing this name will not change the name of your app in the Mendix Developer Portal.
 
 3. Ensure that the correct account is shown at the top right of the screen (next to your avatar) if you have access to more than one account on IBM Cloud.
 

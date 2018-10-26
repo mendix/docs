@@ -61,7 +61,7 @@ The description of the types of checks is represented in the table below.
 
 | Type    | Button color | Icon                                           | Function                                                     |
 | ------- | ------------ | ---------------------------------------------- | ------------------------------------------------------------ |
-| Error   | Red          | ![](attachments/checks-wm/wm-error-icon.png)   | Consistency errors that prevent your app from functioning in a correct way and being published (for example, if you do not specify an entity for the data view, your app cannot function correctly). For more information on consistency error, see [Consistency Errors in the Web Modeler](consistency-errors-wm) |
+| Error   | Red          | ![](attachments/checks-wm/wm-error-icon.png)   | Consistency errors that prevent your app from functioning in a correct way and being published (for example, if you do not specify an entity for the data view, your app cannot function correctly). For more information on consistency errors, see [Consistency Errors in the Web Modeler](consistency-errors-wm) |
 | Warning | Orange       | ![](attachments/checks-wm/wm-warning-icon.png) | Errors that are not critical, so you can publish your app having warnings. However, it is highly recommended to take action based on the warnings, because your app has logical gaps (for example, clicking a button does nothing). |
 | Info    | Blue         | ![](attachments/checks-wm/wm-info-icon.png)    | This type shows information on features that will be deleted from the user interface soon (deprecated). This does not affect the app now, but may cause problems when upgrading to the next version. |
 

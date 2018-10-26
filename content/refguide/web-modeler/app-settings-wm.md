@@ -2,7 +2,7 @@
 title: "App Settings Overview in the Web Modeler"
 category: "Web Modeler"
 description: "Describes the App Settings in the Mendix Web Modeler."
-menu_order: 80
+menu_order: 90
 tags: ["web modeler", "settings", "widgets"]
 ---
 

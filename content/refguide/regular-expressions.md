@@ -25,7 +25,8 @@ The expression defines the criteria that a string should be checked against in a
 {{% alert type="info" %}}
 
 For example, an expression for checking the Dutch postcode could be: [1-9][0-9][0-9][0-9] ?[A-Za-z][A-Za-z]
-Examples (excluding the quotes): "3072AP" and "7500 AH"
+
+Examples: **3072AP** and **7500 AH**
 
 The criteria are:
 
@@ -70,9 +71,11 @@ A regular expression can contain the following types of subexpressions:
 
 * `.` – a dot matches any single character. If you want to match a dot, you can escape it by prefixing it with a `\` (backslash)
 
-* A literal character is a character that does not have a special meaning in the regular expression language matches itself. This is effectively any character except `\[](){}^-$?*+|'. For example:
+* A literal character – this is a character that does not have a special meaning in the regular expression language and it matches itself. This is effectively any character except `\[](){}^-$?*+|.`. For example:
 
     * *`space`* in the Dutch zip code example is a literal character that just matches itself
+
+    If you need to match one of the characters which is not a literal, prefix it with a backslash (`\`).
 
 * `\w` – a word: a letter, digit, or underscore. `\w` is an abbreviation for `[A-Za-z0-9_]`
 

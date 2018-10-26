@@ -1,6 +1,6 @@
 ---
 title: "Navigation Consistency Errors in the Web Modeler"
-parent: "consistency-errors"
+parent: "consistency-errors-wm"
 description: "Describes navigation consistency errors in the Mendix Web Modeler and the way to fix them."
 tags: ["web modeler", "consistency errors", "checks", "errors", "navigation"]
 ---

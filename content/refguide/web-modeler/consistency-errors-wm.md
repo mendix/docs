@@ -17,7 +17,7 @@ Errors need to be solved before your app can be published. An example of a consi
 Consistency errors can occur in the following editors of the modeler:
 
 * Page editor (For information on consistency error in the page editor, see [Page Editor Consistency Errors in the Web Modeler](consistency-errors-pages-wm))
-* Navigation document (For information on consistency error in the navigation, see [Consistency Errors When Configuring Navigation](consistency-errors-navigation-wm))
+* Navigation document (For information on consistency error in the navigation, see [Navigation Consistency Errors in the Web Modeler](consistency-errors-navigation-wm))
 * Microflows editor
 
 ##  2 Related Content

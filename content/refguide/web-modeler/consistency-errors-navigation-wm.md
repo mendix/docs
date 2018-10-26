@@ -99,5 +99,4 @@ Now the new object of type *Customer* will be created and passed to the home pag
 ## 3 Related Content
 
 * [Navigation Document in the Web Modeler](navigation-wm)
-* [Navigation Profile](navigation-profile)
 * [Microflows in the Web Modeler](microflows-wm)

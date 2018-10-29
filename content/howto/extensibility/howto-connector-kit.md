@@ -120,7 +120,7 @@ The `executeAction` method is where all the magic happens:
 
 Microflow parameters are especially useful for handling events. For example, the [MQTT connector](https://appstore.home.mendix.com/link/app/3066/Mendix/MQTT-Client) ([GitHub MQTT Connector project](https://github.com/ako/MqttClient)) will execute a microflow when receiving an IoT sensor event so it can be handled using a user-specified microflow.
 
-## 4 Using Import and Export Mappings
+## 4 Using Import & Export Mappings
 
 Now we will discuss an example of how you can use mappings in your Java actions. In this example, you'll create an action to import a string using an import mapping. This is not particulairly useful, seeing there is a default action in your toolbox already that provides this functionality called **Import with mapping**. However, as an example, it illustrates how to use mappings.
 

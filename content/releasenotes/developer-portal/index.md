@@ -6,6 +6,14 @@ tags: ["Developer Portal", "Cloud Environments", "Mendix Cloud", "SAP", "IBM", "
 
 ## 2018
 
+### October 29th, 2018
+
+#### Improvements
+
+* Deploying to IBM Cloud is available from within Mendix. If you start with an IBM Starter App, you will be taken through the process of creating a deployment environment on IBM Cloud. You can then deploy your app to IBM Cloud from within the Desktop Modeler or Mendix Developer Portal. More information is available in [IBM Cloud](/developerportal/deploy/ibm-cloud)
+
+    You can also find Mendix Starter Kits on IBM Cloud and start the process from there.
+
 ### October 22nd, 2018
 
 #### Improvements
@@ -290,7 +298,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 #### Improvements
 
-* We changed the browser title from "Mendix App Plaform" to **Mendix Platform** to be consistent with our messaging and documentation.
+* We changed the browser title from "Mendix App Platform" to **Mendix Platform** to be consistent with our messaging and documentation.
 * We have improved database storage alerts for Mendix Cloud v4 applications. If you subscribed to your applications' alerts, you will receive a warning alert when you have less than 25% disk space on your applications' databases and a critical alert when disk space is below 10%. You need to re-deploy your application to activate this alert.
 * Live logging for Mendix Cloud v4 applications is here! You can now view logs neatly and in real-time.
 * Hybrid mobile improvements: you can now generate icons and splash screens, add custom loader and error images, and add custom HTML and CSS. We also added a new theming section for minor color tweaks.
@@ -312,7 +320,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 #### Fixes
 
 * Switching between environments in the **Metrics** menu of Mendix Cloud v3 apps is now fixed.
-* We fixed the syncronization problem that prevented Mendix Cloud v3 users from seeing their latest nightly backups.
+* We fixed the synchronization problem that prevented Mendix Cloud v3 users from seeing their latest nightly backups.
 
 ### February 27th, 2018
 
@@ -405,7 +413,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 #### Fixes
 
-* We adressed an issue that prevents Free Apps from being embedded in an iframe.
+* We addressed an issue that prevents Free Apps from being embedded in an iframe.
 
 ### November 27th, 2017
 
@@ -452,7 +460,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 #### Improvements
 
 * Deployments with almost no downtime: It is now possible to deploy a different version without stopping a running application. Once the deployment is done, you can restart the application with a single click. This is now available for Mendix Cloud v4. For Mendix Cloud v3, this will be available soon.
-* Improved the robustness of the Deploy API: Occasional failures that occured while starting/stopping an environment via the Deploy API no longer occur.
+* Improved the robustness of the Deploy API: Occasional failures that occurred while starting/stopping an environment via the Deploy API no longer occur.
 * Improved the stability for transporting deployment packages for Asia-Pacific users for Mendix Cloud v4.
 * Environment health indicators for your environments are now much more accurate.
 

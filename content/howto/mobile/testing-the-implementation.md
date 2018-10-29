@@ -2,7 +2,8 @@
 title: "Test the Implementation"
 parent: "push-notifications"
 ---
-Once you finish implementing the steps described previously, you will want to test whether everything works correctly. This can be done easily using the administration pages that should have been included in your application during [step 6](implementation-guide) of the implementation guide. Follow these steps to send a push notification to a device:
+
+Once you finish implementing the steps described in [How to Implement Push Notifications](implementation-guide), you need to test whether everything works correctly. This can be done easily using the administration pages that should be included in your application (for details, see the section [Setting Up the Administration Pages](implementation-guide#setting) in *How to Implement Push Notifications*). Follow the steps below to send a push notification to a device.
 
 ### Step 1 - Log In as Administrator to the Web (Desktop) Application
 

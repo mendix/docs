@@ -7,13 +7,13 @@ frontpage_featured: true
 
 ## 1 Introduction
 
-The documentation is open to the Mendix community, which means you can make changes and add to it in ways that you see necessary. Do you see a how-to that is inaccurate or a section of the reference guide that needs to be updated for UI changes? Now you can help us improve the documentation for the whole Mendix community!
+The documentation is open to the Mendix community, which means you can make changes and add to it in ways that you see necessary. Do you see a how-to that is inaccurate or a section of the reference guide that needs to be updated? Now you can help us improve the documentation for the whole Mendix community!
 
-We believe community-generated documentation can cover new areas of content and deal with the specific questions that only you know need to be answered. The documentation will address the needs of the community, and the community will play a key role in maintaining, improving, and expanding it.
+We believe community-generated documentation can cover new content and deal with the specific questions that you know need to be answered. The documentation is meant to address the needs of the Mendix community, and the community can play a key role in maintaining, improving, and expanding it.
 
-All of the Mendix documentation is stored in GitHub. With a GitHub account, you can edit all of the existing documentation. You can also write a new how-to on an awesome topic of your choice and submit it to our documentation.
+All of the Mendix documentation is stored in a GitHub repository. With a GitHub account, you can edit all existing documentation. You can also write a new how-to on an awesome topic of your choice and submit it to our documentation.
 
-To work on the documentation in GitHub, you will be using Markdown. For details on this easy-to-use syntax, see the [GitHub Guide to Mastering Markdown](https://guides.github.com/features/mastering-markdown/).
+To work on the documentation in GitHub, use Markdown. For details on this easy-to-use syntax, see the [GitHub Guide to Mastering Markdown](https://guides.github.com/features/mastering-markdown/).
 
 {{% alert type="info" %}}
 All documentation contributions may undergo changes after editing according to our internal style guide.
@@ -28,7 +28,7 @@ Quick guide to making a documentation change: fork the [mendix / docs](https://g
 * Add to and edit existing documentation
 * Create a new how-to or reference guide page using a template
 
-## 2 Prerequisites and Other Information
+## 2 Prerequisites
 
 ### 2.1 Prerequisites
 
@@ -40,12 +40,12 @@ Before starting with this how-to, make sure you have completed the following pre
 
 We recommend the use of the following tools for contributing to the Mendix documentation:
 
-* For writing and editing documentation – [Visual Studio Code](https://code.visualstudio.com) (with which you can preview your Markdown styling)
+* For writing and editing documentation – [Typora](https://typora.io/) or [Visual Studio Code](https://code.visualstudio.com) (with which you can preview your Markdown styling)
 * For committing your documentation – [Sourcetree](https://www.sourcetreeapp.com/) or [GitHub Desktop](https://desktop.github.com/)
 
 ### 2.3 Contributor License Agreement
 
-The first time you make a contribution to the Mendix documentation (via a pull request), you will have to sign the [Contributor License Agreement for mendix/docs](https://www.clahub.com/agreements/mendix/docs) via CLAHub.
+The first time you make a contribution to the Mendix documentation (via a pull request), you need to sign the [Contributor License Agreement for mendix/docs](https://www.clahub.com/agreements/mendix/docs) via CLAHub.
 
 To access the license agreement, go to the **Conversation** tab of the pull request and click **Details** for **clahub**:
 
@@ -55,23 +55,19 @@ This only needs to be done once.
 
 ## 3 Editing the Existing Documentation
 
-To edit the existing documentation (for example, a how-to or reference guide page), follow these steps:
+To edit existing documentation, follow these steps:
 
 1. Click **Edit** in the upper-right corner of the specific Mendix documentation page that you want to work on.
 2. Make your changes in GitHub (make sure the changes align with our [Content Writing and Formatting Guidelines](content-writing-and-formatting-guidelines)).
 3. Create a pull request that specifies our **development** branch as the base. For more information, see [Creating a Pull Request](https://help.github.com/articles/creating-a-pull-request/) and [GitHub Standard Fork & Pull Request Workflow](https://gist.github.com/Chaser324/ce0505fbed06b947d962).
 
-{{% alert type="info" %}}
+{{% alert type="warning" %}}
 
-You can add and edit the description and tags metadata in the header of the document so that the document is more searchable. For more information on the metadata, see the [How-to Template](the-how-to-template-page) and [Reference Guide Page Template](the-reference-guide-page-template-page).
-
-{{% /alert %}}{{% alert type="warning" %}}
-
-If you want your pull request to be merged on a specific date (for example, for a specific release), you must specify that somewhere on the **Conversation** tab of the pull request (either in the title or as a comment). Otherwise, the pull request will be reviewed and merged under the assumption that the content can be published immediately. 
+If you want your pull request to be merged on a specific date (for example, for a specific release), specify that in the title of the pull request or as a comment. Otherwise, the pull request will be reviewed and merged under the assumption that the content can be published immediately. 
 
 {{% /alert %}}{{% alert type="warning" %}}
 
-Mendix supports documentation for three major versions at any one time. This means that if you make a documentation change in one version, it is important to make that same change in the documentation for the two previous versions (if the change is applicable, of course). For example, you make a change for Mendix version 6 but these changes are also applicable to Mendix versions 5 and 4, so you should make the same change in the documentation for Mendix versions 5 and 4. You can submit all of these changes in the same pull request.
+Mendix supports documentation for three major versions at any one time.
 
 {{% /alert %}}
 

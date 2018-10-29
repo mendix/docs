@@ -14,7 +14,7 @@ To access your Mendix Profile, hover over your picture on the right side of the 
 
 ## 2 Header
 
-On the profile header, you can see your location, number of [connections](#connections), Mendix points, Mendix level, [credits ](#credits), and [badges](#badges). Other personal information is presented in the header as well as on the **Personal Info** card. This information can be easily edited to present accurate personal details, project roles, and skills you have gained. For all the details on editing your Mendix Profile, see the [Settings](#settings) section below.
+On the profile header, you can see your location, number of [connections](#connections), Mendix level and points in that level, [credits ](#credits), and [badges](#badges). Other personal information is presented in the header as well as on the **Personal Info** card. This information can be easily edited to present accurate personal details, project roles, and skills you have gained. For all the details on editing your Mendix Profile, see the [Settings](#settings) section below.
 
 ## 3 Overview
 
@@ -73,7 +73,7 @@ Once five of your referred users have signed up, you will see the **Claim your t
 
 ## 7 Leaderboard {#leaderboard}
 
-This card on your profile presents a selection of Mendix developers with the highest points.
+This card on your profile presents your points and ranking for the last 30 days:
 
 ![](attachments/mendix-profile/leaderboard.png)
 

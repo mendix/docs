@@ -77,7 +77,7 @@ If your project uses Mendix SSO, most likely the **AppCloudServices.StartAppClou
 
 <iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/02c590e5-f8bf-4f0e-90d6-3719390ee863/onstartupacsandpushnotifications?embed=true" allowfullscreen=""></iframe>
 
-## 7 Setting Up the Administration Pages
+## 7 Setting Up the Administration Pages {#setting}
 
 Add the **PushNotifications_Administration** page to the project navigation, so it can be reached after you deploy your app. This page contains three tabs:
 * **Pending Messages** – shows all the messages that are queued either because they were sent using the QueueMessage action or because previous attempts to send them failed

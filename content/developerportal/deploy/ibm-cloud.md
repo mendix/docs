@@ -239,7 +239,7 @@ To create a package for IBM Cloud within Developer Portal, follow these steps:
     
     {{% alert type="info" %}}Under some circumstances, the toolchain for Kubernetes cannot be built.
 
-    Go to the toolchain and look at the log from the **Build Stage**. If the log includes the message `You have exceeded your storage quota. Delete one or more images, or review your storage quota and pricing plan.`, then you will need to remove any images by going to **Containers > Registry > Images** and deleting them.
+        Go to the toolchain and look at the log from the **Build Stage**. If the log includes the message `You have exceeded your storage quota. Delete one or more images, or review your storage quota and pricing plan.`, then you will need to remove any images by going to **Containers > Registry > Images** and deleting them.
     
     {{% /alert %}}
 

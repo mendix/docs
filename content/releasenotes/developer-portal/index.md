@@ -10,9 +10,9 @@ tags: ["Developer Portal", "Cloud Environments", "Mendix Cloud", "SAP", "IBM", "
 
 #### Improvements
 
-* Deploying to the IBM Cloud Platform is available from within Mendix. If you start with an IBM Starter App, you will be taken through the process of creating a deployment environment on the IBM Cloud Platform. You can then deploy your app to the IBM Cloud Platform from within the Desktop Modeler or Mendix Developer Portal. More information is available in [IBM Cloud](/developerportal/deploy/ibm-cloud)
+* Deploying to IBM Cloud is available from within Mendix. If you start with an IBM Starter App, you will be taken through the process of creating a deployment environment on IBM Cloud. You can then deploy your app to IBM Cloud from within the Desktop Modeler or Mendix Developer Portal. More information is available in [IBM Cloud](/developerportal/deploy/ibm-cloud)
 
-    You can also find Mendix Starter Kits on the IBM Cloud Platform and start the process from there.
+    You can also find Mendix Starter Kits on IBM Cloud and start the process from there.
 
 ### October 22nd, 2018
 

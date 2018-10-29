@@ -38,7 +38,7 @@ For more information on running Mendix apps on Cloud Foundry, see the [Mendix Cl
 Mendix provides deployment tools in the Developer Portal for deploying apps to Cloud Foundry on the SAP Cloud Platform and IBM Cloud Portal. It is recommended that for these platforms you use the following documentation:
 
 * [SAP Cloud Platform](/developerportal/deploy/sap-cloud-platform)
-* IBM Cloud (under development, please contact Mendix for more details)
+* [IBM Cloud](/developerportal/deploy/ibm-cloud)
 
 Only use the instructions in this document if you have specific requirements which the recommended method does not support.
 

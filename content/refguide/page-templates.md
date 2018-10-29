@@ -10,7 +10,7 @@ Page templates are the starting point for creating new pages. Every time a new p
 
 When creating a new page, the user is presented with an overview of all the compatible page templates in the project. Prior to Mendix 7.9.0, this was a static selection designed to match most generic scenarios. Mendix 7.9.0 introduced page templates as a document type, allowing users to edit existing page templates and even create entirely new ones.
 
-## 2 Custom Page Templates (Mendix Version 7.9.0+)
+## 2 Custom Page Templates
 
 {{% alert type="info" %}}
 

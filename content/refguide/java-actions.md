@@ -11,7 +11,7 @@ With Java actions you can extend the functionality of your application in situat
 
 {{% alert type="info" %}}
 
-Each Java action defined in the Modeler corresponds with a file *{name of Java action}.java* in the subdirectory *javasource{module name}/actions* of the project directory.
+Each Java action defined in the Modeler corresponds to a file *{name of Java action}.java* in the subdirectory *javasource{module name}/actions* of the project directory.
 
 The skeletons of these *.java* files are generated automatically when you deploy for Eclipse (in the **Project** menu). For more information about creating the Java code in these files, see [Java Programming](java-programming).
 

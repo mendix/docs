@@ -62,38 +62,34 @@ To edit existing documentation, follow these steps:
 3. Create a pull request that specifies our **development** branch as the base. For more information, see [Creating a Pull Request](https://help.github.com/articles/creating-a-pull-request/) and [GitHub Standard Fork & Pull Request Workflow](https://gist.github.com/Chaser324/ce0505fbed06b947d962).
 
 {{% alert type="warning" %}}
+If you need your pull request to be merged on a specific date (for example, for a specific release), specify that in the title of the pull request or as a comment. Otherwise, all pull requests are reviewed and merged under the assumption that the content can be published immediately. 
+{{% /alert %}}
 
-If you want your pull request to be merged on a specific date (for example, for a specific release), specify that in the title of the pull request or as a comment. Otherwise, the pull request will be reviewed and merged under the assumption that the content can be published immediately. 
-
-{{% /alert %}}{{% alert type="warning" %}}
-
+{{% alert type="info" %}}
 Mendix supports documentation for three major versions at any one time.
-
 {{% /alert %}}
 
 ## 4 Writing a New How-to or Reference Guide Page
 
-To submit a new how-to or reference guide page to our documentation, follow these steps:
+To submit a new how-to or reference guide page to the Mendix documentation, follow these steps:
 
-1. Save a copy of the [How-to Template](the-how-to-template-page) or [Reference Guide Page Template](the-reference-guide-page-template-page) locally in order to use it.
+1. Save a copy of the [How-to Template](the-how-to-template-page) or [Reference Guide Page Template](the-reference-guide-page-template-page) locally to start writing.
 2. Follow the guidelines in the template for writing your document, and make sure the text aligns with our [Content Writing and Formatting Guidelines](content-writing-and-formatting-guidelines).
-3. Take screenshots for the new document and add them to a new sub-folder in the **attachments** folder. For more details on working with images, see [5 Naming New Files and Images](#NamingNewFilesandImages).
+3. Add screenshots and other images to a new sub-folder in the **attachments** folder. For details on working with images, see the section [Naming New Files](#Naming) below.
 4. To merge your new documentation, commit it to the GitHub repository:
-    *  You can commit new Markdown files via Sourcetree or via the **Create new file** button in the GitHub repo in your browser (where you can copy-paste your text)
-    *  You can commit new image files via Sourcetree or via the **Upload files** button in the GitHub repo in your browser (where you can drag and drop your image file)
-5. Create a pull request that specifies our **development** branch as the base. For more information, see [Creating a Pull Request](https://help.github.com/articles/creating-a-pull-request/).
+    *  Commit new Markdown files via Sourcetree or via the **Create new file** button in the [Mendix GitHub repo](https://github.com/mendix/docs) (where you can copy-paste your text)
+    *  Commit new image files via Sourcetree or via the **Upload files** button in the GitHub repo (where you can drag and drop your image files)
+5. Create a pull request that specifies the Mendix **development** branch as the base. For more information, see [Creating a Pull Request](https://help.github.com/articles/creating-a-pull-request/).
 
 {{% alert type="info" %}}
-
-You may receive a response to your pull request asking for verification of specific issues. Don’t panic! We just want to make sure your documentation submission fits well with what we have. Do your best with the request so that we can incorporate your documentation in our repository.
-
+You may receive a response to your pull request asking for verification of specific issues. Don’t panic! We just want to make sure your documentation submission fits well with what we have.
 {{% /alert %}}
 
-## <a name="NamingNewFilesandImages"></a>5 Naming New Document Files, Image Files, and Attachment Sub-Folders
+## <a name="Naming"></a>5 Naming New Files
 
 When contributing to the documentation, make sure the document files comply with these naming conventions:
 
-* Markdown file names should have the same name as the title of the page (for example, if the page is titled "Set Up Your Project," the filename should be `setup-your-project.md`)
+* Markdown file names should have the same name as the title of the page (for example, if the page is titled "Create Your Project," the filename should be `create-your-project.md`)
 * Document file names should always be lower-case with a hyphen (`-`) between each word
 * Do not use spaces or any other symbols in the file name (for example, `&`), as these will not be accepted
 
@@ -101,14 +97,13 @@ Make sure the image files comply with these naming conventions:
 
 * Image file names should always be lower-case with a hyphen (`-`) between each word
  * Do not use spaces or any other symbols in the file name (for example, `&`), as these will not be accepted
-* Make sure the image files have names that make sense, so it's easier to find them later on
+* Make sure the image files have names that make sense so it is easy to find them
 * Save the image files in a sub-folder in the **attachments** folder for the category in which the document is located; this sub-folder should have the same name as the document file name you are working on
-  * For example, the `project-setup` image file is located in the **new-project** sub-folder (named after the document) in the **attachments** folder of the **getting-started** how-to category folder
 * The following image file types are allowed: `.png` (preferred), `.jpg`,  `.gif`
 
 ## 6 Gaining Mendix Points<a name="GainingMendixPoints"></a>
 
-As you add knowledge to the documentation that will help your fellow Mendix developers, for each contribution, you will gain Mendix points!
+As you add knowledge to the documentation that will help your fellow Mendix developers, you will gain Mendix points for each contribution!
 
 Before you can receive Mendix points for your documentation contributions, you must authorize the connection of your GitHub profile to your Mendix Community Profile. For more information, see the [Authorizing GitHub Connection](/developerportal/general/mendix-profile#github) section in *Mendix Profile*
 

@@ -56,6 +56,6 @@ The following deep links can be used:
 
 * [Collaborate](/developerportal/collaborate)
 * [Developer Portal](/developerportal/general)
-* [Mendix Cloud Status](/developerportal/general/mendix-cloud-status)
+* [Mendix Cloud Status](/developerportal/deploy/mendix-cloud-status)
 * [Operate](/developerportal/operate)
 * [Settings](/developerportal/settings)

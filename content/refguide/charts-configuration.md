@@ -1,12 +1,15 @@
 ---
 title: "Chart Configuration"
 parent: "chart-widgets"
+menu_order: 10
 tags: ["Charts", "Widgets", "Desktop Modeler", "Chart Configuration", "Configuration"]
 ---
 
 ## 1 Introduction
 
-This guide explains the options for configuring chart widgets. It covers the following widgets:
+This guide explains the options for configuring chart widgets. The chart widgets are included in Mendix starter apps based on Atlas UI. They can be included in other Mendix apps by downloading them from the Mendix App Store here: https://appstore.home.mendix.com/link/app/105695/.
+
+This guide covers the following widgets:
 
 * Area chart
 * Bar chart
@@ -17,9 +20,10 @@ This guide explains the options for configuring chart widgets. It covers the fol
 * Pie chart
 * Time series
 
-The configuration of *Any chart* widgets is in another document here: [Any Chart Widgets](charts-any-configuration).
+The configuration of *Any chart* widgets is in another document, here: [Any Chart Widgets](charts-any-configuration).
 
 ## 2 Common configuration
+
 The common configuration for all charts is described here. For chart specific configuration see [Configuration by Chart Type](#configuration-by-chart-type),  below.
 
 ### 2.1 Chart properties
@@ -32,35 +36,37 @@ Add series and configure their properties, each series represents a data set. Fo
 
 * The *Pie Charts* and *Heat Maps* support only a single series containing a single set of data
 
-    In this case, the **Data source** and **Data points** are shown as separate tabs in the widget.
+  In this case, the **Data source** and **Data points** are shown as separate tabs in the widget.
 
-    ![](attachments/pages/charts/widget-data-source.png)
+  ![](attachments/pages/charts/widget-data-source.png)
 
-    The fields are the same as the ones described in the sections [Data source](#data-source) and [Data points](#data-points), below.
+  The fields are the same as the ones described in the sections [Data source](#data-source) and [Data points](#data-points), below.
 
 * Charts which support multiple series of data, like a line chart with multiple lines, support more than one series of data
 
-    In this case, new series can be added by clicking the **Series > New** button in the **Chart properties** tab.
+  In this case, new series can be added by clicking the **Series > New** button in the **Chart properties** tab.
 
-    {{% alert type="info" %}}The charts described in this guide do not support **Dynamic series** (that is, changing the number of series on a multiple-series chart dynamically at runtime).<br /><br />The basic charts only support a fixed number of series which is set in the modeler. You need to use *Any chart* to set up dynamic series. See [Any charts](charts-any-configuration).{{% /alert %}}
+  {{% alert type="info" %}}From version 1.4 of charts you can create charts with a variable number of data series. For instructions on how to do this, see [How to Create a Dynamic Series Chart](/howto/extensibility/charts-dynamic-series).{{% /alert %}}
 
 1. Data source<a name="data-source"></a>
 
     The data for each each series can originate from a different data source. You can add additional data series in the **Chart properties** tab.
-    
+  
     ![](attachments/pages/charts/series-item-data-source.png)
 
-  * **Series name**: A name for the series, for use in legends (when enabled)
+    * **Static/Dynamic**: Choose whether there is a fixed number of data series (lines, for example), or whether the number of data series is variable and will be decided by the app.
 
-  * **Entity**: The entity from which the data values will be retrieved
+    * **Entity**: The entity from which the data values will be retrieved
 
-  * **Data source**: the data source type for the series: *Database*, *Microflow* or *REST endpoint*
+    * **Data source**: the data source type for the series: *Database*, *Microflow* or *REST endpoint*
 
-  * **REST URL**: Relative or full URL to REST endpoint. For more information on setting up a REST end point see [REST Charts](../howto/extensibility/charts-basic-rest)
+    * **REST URL**: Relative or full URL to REST endpoint. For more information on setting up a REST end point see [REST Charts](../howto/extensibility/charts-basic-rest)
 
-  * **XPath constraint**: The constraint on the data from the entity (used when the data source is Database)
+    * **XPath constraint**: The constraint on the data from the entity (used when the data source is Database)
 
-  * **Microflow**: A microflow that returns a list object with data values
+    * **Microflow**: A microflow that returns a list object with data values
+
+    * **Series name**: A name for the series, for use in legends (when enabled)
 
 2. Data points<a name="data-points"></a>
 
@@ -68,13 +74,18 @@ Add series and configure their properties, each series represents a data set. Fo
     
     ![](attachments/pages/charts/series-item-data-points.png)
 
-  * **X-axis data attribute**: For data source Database attributes over reference are supported with a maximum of one level deep. For data source Microflow, references are not supported
+    * **X-axis data attribute**: For data source Database attributes over reference are supported with a maximum of one level deep. For data source Microflow, references are not supported
 
-  * **Y-axis data attribute**: For data source Database attributes over reference are supported with a maximum of one level deep. For data source Microflow references are not supported
+    * **Y-axis data attribute**: For data source Database attributes over reference are supported with a maximum of one level deep. For data source Microflow references are not supported
 
-  * **X-axis sort attribute**: For data source Database attributes over reference are supported with a maximum of one level deep. For data source Microflow references are not supported
+    * **X-axis sort attribute**: For data source Database attributes over reference are supported with a maximum of one level deep. For data source Microflow references are not supported
 
-  * **Sort order**: The sort-order of the data provided by the "X-axis sort attribute"
+    * **Sort order**: The sort-order of the data provided by the "X-axis sort attribute"
+
+    * **Aggregation type**: What to do if there are two y values in this series for one x value (for example if there are two data points in one series: (2,3), and (2,4)) – most of the options are self-explanatory, examples are:
+      * Sum: plot the sum of the two values – (2,7) for the example above
+      * Average: plot the mean of the two values (2,3.5)
+      * None: plot just the first data point (2,3)
 
 3. Appearance
 
@@ -82,35 +93,61 @@ Add series and configure their properties, each series represents a data set. Fo
 
     ![](attachments/pages/charts/series-item-appearance.png)
 
-4. Events
+4. Static Series
 
-    The events to be supported if the user interacts with the chart.
+    Additional configuration for the appearance of the series if it is a static series. This is customized for each type of chart, see: [3 Configuration per chart type](#configuration-by-chart-type), below.    
+
+    ![](attachments\pages\charts\series-item-static.png)
+
+5. Dynamic Series
+
+    Configuration of the series if it is a dynamic series.
+
+    ![](attachments\pages\charts\series-item-dynamic.png)
+
+    * **Series entity**: the entity which defines a series – the list of objects of this entity type will be used to construct the series; one series for each object.
+    
+      Each entity is associated with the values which will be plotted, see [How to Create a Dynamic Series Chart](/howto/extensibility/charts-dynamic-series) for more information.
+
+    * **Series name attribute**: the attribute in the series entity which will be displayed as the series name if a legend is displayed
+
+    * **Color attribute**: the attribute in the series entity which defines the HTML color used when displayed this series – *there may be more than one color attribute if the chart allows different values (for example an area chart has separate line and fill colors)
+
+    * **Series sort attribute**: allows you to sort the series by an attribute of the series entity – *this is not supported for **non-persistent** entities, such as those used when defining a REST datasource*
+
+    * **Series sort order**: *Ascending* or *Descending*
+
+6. Events
+
+   The events to be supported if the user interacts with the chart.
     
     ![](attachments/pages/charts/series-item-events.png)
+
+    {{% alert type="info" %}}The context of the page, microflow, or nanoflow selected for an event or tooltip will be the plotted object from which the point on the chart is drawn. This means you can display or use the x and y values, _and_ any other values stored in that object.<br /><br />For example you could use the tooltip to display the precise y value of a point, plus information on when the data was collected{{% /alert %}}
     
-  * **On click**: Select the way a click of a data point should be handled:
-    * Do nothing
-    * Show a page
-    * Call a microflow
-    * Call a nanoflow
+    * **On click**: Select the way a click of a data point should be handled:
+      * Do nothing
+      * Show a page
+      * Call a microflow
+      * Call a nanoflow
 
-    Configure the corresponding setting.
+      Configure the corresponding setting.
 
-  * **On click page**: The page that will be opened on click. Required when the **On click > Show a page** option is selected
+      * **On click page**: The page that will be opened on click. Required when the **On click > Show a page** option is selected
 
-  * **Open page as**: Full page, Popup or Blocking popup
+      * **Open page as**: Full page, Popup or Blocking popup
 
-  * **On click microflow**: The microflow that will be executed on click
+      * **On click microflow**: The microflow that will be executed on click
 
-  * **On click nanoflow**: The nanoflow that will be executed on click
+      * **On click nanoflow**: The nanoflow that will be executed on click
 
-  * **Tooltip form**: The page to show when a user hovers over a chart plot point
+    * **Tooltip form**: The page to show when a user hovers over a chart plot point
 
-5. Advanced <a name="advanced"></a>
+7. Advanced <a name="advanced"></a>
 
     ![](attachments/pages/charts/series-item-advanced.png)
 
-* **Options**: The Plotly *series options* in JSON format; these options will only be used when the *widget* tab **Advanced > Mode** is set to *Advanced* or *Developer*: see [Advanced](#advanced-mode), below.
+    * **Options**: The Plotly *series options* in JSON format; these options will only be used when the *widget* tab **Advanced > Mode** is set to *Advanced* or *Developer*: see [Advanced](#advanced-mode), below.
 
 #### 2.1.2 Appearance
 
@@ -171,7 +208,9 @@ The properties above are common across the chart types. In this section, the pro
 
 #### 3.1.1 Series New or Edit
 
-1. **Appearance** Tab
+1. **Static series** Tab
+
+    * **Series name**: this will be displayed in any legend on the chart
 
     * **Column color**: HTML color of the column e.g. green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
 
@@ -184,6 +223,10 @@ The properties above are common across the chart types. In this section, the pro
     * **Line mode**: *Lines* (without showing markers where the data points are) or *Lines with markers*
 
     * **Line style**: join the data points with a *Straight line* or a *Curved line (spline)*
+
+2. **Static series** Tab
+
+    * **Series name**: this will be displayed in any legend on the chart
 
     * **Line color**: HTML color of the line e.g. green, #00FF00, rgb(0,255,0), rgba(0,255,0, 0.5)
 

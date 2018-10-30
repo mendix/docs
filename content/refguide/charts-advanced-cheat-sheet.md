@@ -1,6 +1,7 @@
 ---
 title: "Chart Advanced Cheat Sheet"
 parent: "chart-widgets"
+menu_order: 20
 tags: ["Charts", "Advanced", "Desktop Modeler", "Layout Controls", "Data Properties", "Series Properties"]
 ---
 

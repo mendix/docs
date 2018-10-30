@@ -1,6 +1,6 @@
 ---
 title: "Users"
-parent: "roles"
+parent: "companyadmin-overview"
 menu_order: 20
 description: "Developer Portal Users"
 tags: ["company","admin", "Company Admin", Developer Portal", "activate", "deactivate", "user"]

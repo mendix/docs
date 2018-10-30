@@ -1,7 +1,6 @@
 ---
 title: "Company Admin Overview"
-parent: "roles"
-menu_order: 05
+category: "General"
 description: "Describes the options available to company administrators in a Mendix app."
 tags: ["Company","Admin","Developer Portal"]
 ---

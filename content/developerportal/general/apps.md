@@ -1,6 +1,6 @@
 ---
 title: "Apps"
-parent: "roles"
+parent: "companyadmin-overview"
 menu_order: 30
 description: "Describes the options available to company administrators in a Mendix app."
 tags: ["Company","Admin","Developer Portal"]

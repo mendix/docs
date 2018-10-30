@@ -1,6 +1,6 @@
 ---
 title: "Nodes"
-parent: "roles"
+parent: "companyadmin-overview"
 menu_order: 40
 description: "Developer Portal Cloud Noces"
 tags: ["company","admin", "Company Admin", "Developer Portal", "cloud", "node"]

@@ -194,6 +194,7 @@ developerportal:
   space: "Developer Portal"
   priority: false
   menu_categories:
+    - "Mendix Profile"
     - "General"
     - "Collaborate"
     - "Develop"

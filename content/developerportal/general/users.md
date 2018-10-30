@@ -27,7 +27,7 @@ You can also [create reports](#create-report) about your company's users by clic
 For security reasons, deactivating the Mendix profile of an employee that is leaving your company is recommended. If the employee returns to your company, the Mendix profile can be activated again. 
 
 {{% alert type="info" %}}
-If a Mendix user moves to another company or comes from another company that is also using Mendix, the user can merge their old Mendix account(s) into the new Mendix account. This action combines all the hard-earned points, certifications, and achievements in the user's efforts to climb the leaderboards. For more information, see the [Merging Your Accounts](mendix-profile#merging) of *Mendix Profile*.
+If a Mendix user moves to another company or comes from another company that is also using Mendix, the user can merge their old Mendix account(s) into the new Mendix account. This action combines all the hard-earned points, certifications, and achievements in the user's efforts to climb the leaderboards. For more information, see the [Merging Your Accounts](../mendix-profile/index#merging) of *Mendix Profile*.
 {{% /alert %}}
 
 Before deactivating a user, make sure the following points are true for that user:

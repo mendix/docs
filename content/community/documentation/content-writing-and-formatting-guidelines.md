@@ -130,9 +130,9 @@ The introduction should explain the business case of the how-to, what problems t
 
 In the **This how-to will teach you . . .** section, sum up the key points that end-users will have learnt after reading the how-to (make this as clear and concrete as possible).
 
+{{% alert type="info" %}}
 For example:
 
-{{% alert type="info" %}}
 **This how-to will teach you how to do the following:**
 
 * Create an app in Mendix
@@ -190,14 +190,14 @@ Keep the images as simple as possible, because having too many arrows on an imag
 Images can be given a maximum width. This is done through the ``image_container`` short code, for example:
 
 ```html
-{{%/* image_container width="200" */%}}
+{{%/* image_container width="300" */%}}
 ![](attachments/content-writing-and-formatting-guidelines/image_examples2.png)
 {{%/* /image_container */%}}
 ```
 
-This example sets the maximum width to `200px`:
+This example sets the maximum width to `300px`:
 
-{{% image_container width="200" align="center" %}}
+{{% image_container width="300" align="center" %}}
 ![](attachments/content-writing-and-formatting-guidelines/image_examples2.png)
 {{% /image_container %}}
 
@@ -213,9 +213,9 @@ Always show the result of a microflow assignment so that the user knows what it 
 
 Provide a warning note when you are releasing documentation about a feature that is in beta.
 
+{{% alert type="warning" %}}
 For example:
 
-{{% alert type="warning" %}}
 The documentation in this section describes a new feature that is in beta, so it is subject to change before the final release.
 {{% /alert %}}
 
@@ -229,21 +229,6 @@ For example:
 * Boston, New York, London, Paris, Amsterdam
 * dollars, $
   {{% /alert %}}
-
-#### 5.2.4 Writing Detailed and Short Explanations
-
-Explain something in detail once, and use the short version after that.
-
-For example, this could be a "first time" explanation:
-
-1. Open the **Toolbox**.
-2. Drag a data grid to the page. The Tooblox should be in the bottom-right corner. If it’s not open, you can reopen it from the **View** menu.
-3. ...
-
-And this could be the "short version" explanation:
-
-1. Add a data grid to the page.
-2. ...
 
 ## 6 Guidelines for the Reference Guide
 

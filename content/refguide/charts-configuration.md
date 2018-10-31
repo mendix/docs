@@ -19,7 +19,7 @@ This guide covers the following widgets:
 * Line chart
 * Pie chart
 * Time series
-  * Note that some apps may have two *Time series* widgets. This document refers to the one with this icon: ![Image of correct Time series widget](attachments\pages\charts\time-series-icon.png)
+  * Note that some apps may have two *Time series* widgets. This document refers to the one with this icon: ![Image of correct Time series widget](attachments/pages/charts/time-series-icon.png)
 
 The configuration of *Any chart* widgets is in another document, here: [Any Chart Widgets](charts-any-configuration).
 
@@ -96,13 +96,13 @@ Add series and configure their properties, each series represents a data set. Fo
 
     Additional configuration for the appearance of the series if it is a static series. This is customized for each type of chart, see: [3 Configuration per chart type](#configuration-by-chart-type), below.    
 
-    ![Data series Static series tab](attachments\pages\charts\series-item-static.png)
+    ![Data series Static series tab](attachments/pages/charts/series-item-static.png)
 
 5. Dynamic Series
 
     Configuration of the series if it is a dynamic series.
 
-    ![Data series Dynamic series tab](attachments\pages\charts\series-item-dynamic.png)
+    ![Data series Dynamic series tab](attachments/pages/charts/series-item-dynamic.png)
 
     * **Series entity**: the entity which defines a series – the list of objects of this entity type will be used to construct the series; one series for each object.
     
@@ -201,7 +201,7 @@ See the following link for more information about plotly.js and the options: htt
 
 #### 2.1.5 Common
 
-These are properties which are common to many widgets. For information see [Common Widget Properties](common-widget-properties.md#common-properties).
+These are properties which are common to many widgets. For information see [Common Widget Properties](common-widget-properties#common-properties).
 
 ## 3 Configuration by Chart Type {#configuration-by-chart-type}
 

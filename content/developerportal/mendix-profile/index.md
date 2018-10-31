@@ -1,6 +1,5 @@
 ---
 title: "Mendix Profile"
-category: "General"
 menu_order: 10
 description: "This page describes the personal profile page of the Developer Portal."
 tags: ["profile", "Developer Portal", "settings", "badge", "point", "connection", "invite", "leaderboard", "edit"]

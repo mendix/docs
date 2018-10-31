@@ -2,12 +2,13 @@
 title: "Any Chart Widgets"
 parent: "chart-widgets"
 description: "A reference guide on the configuration of the Any Chart widget to pass the correct values to plotly. This enables you to draw a wide variety of charts"
+menu_order: 30
 tags: ["Any Chart", "Reference Guide", "Options", "Configuration", "Charts"]
 ---
 
 ## 1 Introduction
 
-With **Any Chart**, you can build all the chart types that are possible with Plotly.js, including 'dynamic' charts with a data-driven structure. So if you want to build a 3D chart or have a dynamic set of series, Any Chart is your friend.
+With **Any Chart**, you can build all the chart types that are possible with Plotly.js. So if you want to build a chart which is not available as a standard chart widget, such as a 3D chart, Any Chart is your friend.
 
 The configuration of this chart type is complex and it is recommended to start by looking at the building blocks that are delivered in the [Any Chart module](https://appstore.home.mendix.com/link/app/106517/) from the Mendix App Store. Alternatively, use [How to Use Any Chart](/howto/extensibility/charts-any-usage) or the [Any Chart cheat sheet](charts-any-cheat-sheet) for a quick start.
 

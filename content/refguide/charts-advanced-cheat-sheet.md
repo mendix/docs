@@ -17,7 +17,7 @@ The full reference can be found at [https://plot.ly/javascript/](https://plot.ly
 
 When the advanced configuration does not suffice have a look at the [Any Chart](https://appstore.home.mendix.com/link/app/106437/Mendix/Any-Chart) widget in the app store.
 
-## 2 Layout (All Charts) <a name="layout-all"></a>
+## 2 Layout (All Charts) {#layout-all}
 
 Layout controls the general appearance of the chart. The chart is customized by adding JSON properties to the layout.
 
@@ -441,7 +441,7 @@ When **fill** for the series is set to something other than *none*, the y-axis r
 
 More options can be found here: [range mode configurations](https://plot.ly/javascript/reference/#layout-yaxis-rangemode).
 
-## 3 Data/Series Properties <a name="data-series"></a>
+## 3 Data/Series Properties {#data-series}
 
 These properties are applied to specific types of chart only. For each chart, data properties are distinct. They make the chart appear as its supposed to be.
 
@@ -580,7 +580,7 @@ The example below shows how you can set up filter buttons to filter a chart by t
 
 See more properties here: [Range Selector](https://plot.ly/javascript/reference/#layout-xaxis-rangeselector).
 
-### 3.6 Multiple Y Axes Data Properties <a name="multiple-y-axes-data-properties"></a>
+### 3.6 Multiple Y Axes Data Properties {#multiple-y-axes-data-properties}
 
 Displays two different Y axes with different scales, according to the ranges of the data sets.
 
@@ -600,7 +600,7 @@ Displays two different Y axes with different scales, according to the ranges of 
 
 ![Multiple Y axes properties](attachments/pages/charts/data-multiple-y.png)
 
-### 3.7 Multiple X Axes Data Properties <a name="multiple-x-axes-data-properties"></a>
+### 3.7 Multiple X Axes Data Properties {#multiple-x-axes-data-properties}
 
 Displays two different X axes with different scales.
 
@@ -621,7 +621,7 @@ Displays two different X axes with different scales.
 
 ![Multiple X axes properties](attachments/pages/charts/data-multiple-x.png).
 
-## 4 Configurations Options (All Charts) <a name="config-options"></a>
+## 4 Configurations Options (All Charts) {#config-options}
 
 The following configuration options are available in all charts.
 

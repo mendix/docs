@@ -2244,7 +2244,7 @@ module.exports = {
     },
     {
       from: "/developerportal/operate/mendix-cloud-status",
-      to: "/developerportal/general/mendix-cloud-status"
+      to: "/developerportal/deploy/mendix-cloud-status"
     },
     /****************************************************
      * REFERENCE GUIDE MENDIX 4

@@ -208,7 +208,7 @@ You can also view details in the following sections.
 
 ### 9.1 Latest Messages
 
-In this section, you can see all the notifications from [Buzz](index#buzz) of which you are a part (for example, when your colleague has created an app or added a new story).
+In this section, you can see all the notifications from [Buzz](../general/index#buzz) of which you are a part (for example, when your colleague has created an app or added a new story).
 
 ### 9.2 Documents
 
@@ -263,7 +263,7 @@ Here you can connect  your social accounts for **GitHub**, **Meetup**, **Twitter
 
 ### 10.4 Security
 
-You can change your password in this section. By default, you are requested to change your password every 90 days. Only a [Company Admin](companyadmin-overview) is allowed to change the expiration period.
+You can change your password in this section. By default, you are requested to change your password every 90 days. Only a [Company Admin](../general/companyadmin-overview) is allowed to change the expiration period.
 
 ### 10.5 API Keys
 
@@ -309,7 +309,7 @@ To make your public profile private again, click **Make this profile private**.
 
 ## 11 Related Content
 
-* [Company Admin Overview](companyadmin-overview)
+* [Company Admin Overview](../general/companyadmin-overview)
 * [Roles Within the Company and Apps](../general/roles)
 * [How to Manage Company Roles and App Roles](../howto/change-roles)
 * [Feedback](../collaborate/feedback)

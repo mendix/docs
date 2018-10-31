@@ -43,7 +43,7 @@ After clicking **Send feedback**, your feedback will go straight to the [Feedbac
 
 {{% alert type="info" %}}
 
-For details on how to see all the feedback you have submitted, see the [Feedback](../general/mendix-profile#feedback) section of *Mendix Profile*.
+For details on how to see all the feedback you have submitted, see the [Feedback](../mendix-profile/index#feedback) section of *Mendix Profile*.
 
 {{% /alert %}}
 
@@ -84,4 +84,4 @@ To configure the widget, follow these steps:
 * [How to Configure the Mendix Feedback Widget for iOS](/howto/mobile/feedback-widget-ios)
 * [How to Use the Mendix Feedback & Collaboration Widget](use-collaboration-widget)
 * [Feedback](../collaborate/feedback)
-* [Mendix Profile](../general/mendix-profile)
+* [Mendix Profile](../mendix-profile/index)

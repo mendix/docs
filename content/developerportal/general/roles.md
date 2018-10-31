@@ -125,7 +125,7 @@ The predefined roles can be changed in two locations:
 
 ## 5 Related Content
 
-* [Mendix Profile](mendix-profile)
+* [Mendix Profile](../mendix-profile/index)
 * [Company Admin Overview](/developerportal/general/companyadmin-overview)
 * [How to Manage Company Roles and App Roles](/developerportal/howto/change-roles)
 * [Settings](/developerportal/settings)

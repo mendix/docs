@@ -6,6 +6,13 @@ tags: ["Developer Portal", "Cloud Environments", "Mendix Cloud", "SAP", "IBM", "
 
 ## 2018
 
+### November 1st, 2018
+
+#### Fixes
+
+* We fixed an issue that caused an error while creating backup for some users of Mendix Cloud v4.(Tickets 70086, 70090, 75936, 75996)
+* Improvements in communication between web modeler and cloud portal.
+
 ### October 29th, 2018
 
 #### Improvements

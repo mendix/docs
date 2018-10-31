@@ -32,7 +32,7 @@ Apart from the default button widgets, you can also [download widgets from the M
 
 ## 2 Events Section
 
-Properties in the **Events** section are partially preset for buttons listed above. They depend on the action a button performs. For example, if the button is supposed to open a page, the **On Click Action** in the **Events** section will be **Page**. However, you need to specify what page exactly the button will open. 
+Properties in the **Events** section are partially preset for buttons listed above. They depend on the action a button performs. For example, if the button is supposed to open a page, the **On Click Action** in the **Events** section will be **Page**. However, you need to specify exactly which page the button will open. 
 
 ![](attachments/page-editor-widgets-buttons-wm/wm-events-section-page-button.png)
 
@@ -40,7 +40,7 @@ For more information, see section [2.1 Preset Properties in the Events Section](
 
 {{% alert type="info" %}}
 
-You can change preset properties, and make the button perform another action. 
+You can change preset properties to make the button perform another action. 
 
 {{% /alert %}}
 
@@ -70,8 +70,8 @@ Properties available in the **General** section are described in the table below
 | ----------- | ------------------------------------------------------------ |
 | Caption     | Defines the text that will be shown on the button. Buttons have preset captions depending on the action they perform. For more information, see section [3.1 Preset Caption](#preset-caption). |
 | Icon        | Determines the icon that will be shown in front of the caption of the button. |
-| Render Mode | Defines the way the button will be shown to the end-user. Possible options are the following: <ul><li>**Button** – the widget will be rendered as a button</li><li>**Link** – the widget will be rendered as a hyperlink</li></ul><br />*Default value:* Button |
-| Style       | Applies a predefined styling to the button. Possible options are the following: <ul><li>Default</li><li>Inverse</li><li>Primary</li><li>Info</li><li>Success</li><li>Warning</li><li>Danger</li></ul><br />*Default value for all buttons except the **Save Changes** button:* Default<br />*Default value for the **Save Changes** button*: Success<br />The color for each style depends on your settings in the **Theme Customizer**. For details, see [Theme Customizer in the Web Modeler](theme-customizer-wm). |
+| Render Mode | Defines the way the button will be shown to the end-user. Possible render modes are the following: <ul><li>**Button** – the widget will be rendered as a button</li><li>**Link** – the widget will be rendered as a hyperlink</li></ul><br />*Default render mode:* Button |
+| Style       | Available only for the **Button** render mode. <br />Applies a predefined styling to the button. Possible styles are the following: <ul><li>Default</li><li>Inverse</li><li>Primary</li><li>Info</li><li>Success</li><li>Warning</li><li>Danger</li></ul> *Default style for all buttons except the **Save Changes** button:* Default<br />*Default style for the **Save Changes** button*: Success<br />The color for each style depends on your settings in the **Theme Customizer**. For details, see [Theme Customizer in the Web Modeler](theme-customizer-wm). |
 
 ### 3.1 Preset Caption {#preset-caption}
 

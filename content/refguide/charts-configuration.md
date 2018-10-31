@@ -118,7 +118,7 @@ Add series and configure their properties, each series represents a data set. Fo
 
 6. Events
 
-   The events to be supported if the user interacts with the chart.
+    The events to be supported if the user interacts with the chart.
     
     ![Edit series Events tab](attachments/pages/charts/series-item-events.png)
 
@@ -130,7 +130,7 @@ Add series and configure their properties, each series represents a data set. Fo
       * Call a microflow
       * Call a nanoflow
 
-      Configure the corresponding setting.
+        Configure the corresponding setting.
 
       * **On click page**: The page that will be opened on click. Required when the **On click > Show a page** option is selected
 

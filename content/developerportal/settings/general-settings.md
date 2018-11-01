@@ -30,7 +30,7 @@ There are three actions here you can perform:
 
 * Click **Cloud Settings** to select the cloud platform on which you want to deploy your app (for details, see [Cloud Settings](cloud-settings))
 * Click **Edit App Info** to edit the app settings (you can only see this button when you have the **App Settings** permission; for more details, see [Roles Within the Company and Apps](/developerportal/general/company-app-roles))
-* Click **Leave app** to leave the app (for details, see [How to Leave, Delete, Deactivate & Activate an App](/developerportal/general/leave-deactivate-app))
+* Click **Leave app** to leave the app (for details, see [How to Leave & Delete an App](leave-delete-app))
 
 ## 2 Editing App Info
 
@@ -45,7 +45,7 @@ When you click **Edit App Info**, you can edit the following things:
 
 ## 3 Leaving the App
 
-For details, see [How to Leave, Delete, Deactivate & Activate an App](/developerportal/general/leave-deactivate-app).
+For details, see [How to Leave & Delete an App](leave-delete-app).
 
 ## 4 Web Modeler
 

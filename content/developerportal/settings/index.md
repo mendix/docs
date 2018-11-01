@@ -73,7 +73,7 @@ For more information, see [API Keys](/developerportal/settings/api-key).
 
 * [Company Admin Overview](/developerportal/general/companyadmin-overview)
 * [How to Configure Maintenance Windows](../howto/maintenance-windows)
-* [How to Leave, Delete, Deactivate & Activate an App](../general/leave-deactivate-app)
+* [How to Leave & Delete an App](../general/leave-delete-app)
 * [How to Manage Company Roles and App Roles](../howto/change-roles)
 * [How to Receive Environment Status Alerts](../howto/receive-alerts)
 * [Mendix Profile](../mendix-profile/index)

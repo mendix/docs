@@ -36,5 +36,4 @@ In **People**, you can view the other members of the Mendix community and also i
 
 * [Roles Within the Company and Apps](company-app-roles)
 * [Technical Contact](technical-contact)
-* [How to Leave, Delete, Deactivate & Activate an App](leave-deactivate-app)
 * [Two-Factor Authentication](twofactor-authenticator)

@@ -1,5 +1,5 @@
 ---
-title: "Manage Company Roles and App Roles"
+title: "Manage Company Roles & App Roles"
 category: "How-To's"
 menu_order: 40
 description: "This page describes how to add extra Company Admins and change the App Roles."
@@ -145,7 +145,8 @@ You can find the **App Team** role settings by following these steps:
 ## 8 Related Content
 
 * [Company Admin Overview](/developerportal/general/companyadmin-overview)
-* [How to Leave, Delete, Deactivate & Activate an App](/developerportal/general/leave-deactivate-app)
+* [How to Leave & Delete an App](../settings/leave-delete-app)
+* [How to Deactivate & Activate an App](../general/deactivate-activate-app)
 * [Security – Node Permissions](/developerportal/settings/node-permissions)
 * [Technical Contact](/developerportal/general/technical-contact)
 * [Roles Within the Company and Apps](/developerportal/general/company-app-roles)

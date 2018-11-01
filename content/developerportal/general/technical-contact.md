@@ -51,7 +51,7 @@ You can submit requests in the [Support Portal](https://support.mendix.com) for 
 ## 3 Related Content
 
 * [Company Admin Overview](/developerportal/general/companyadmin-overview)
-* [How to Leave, Delete, Deactivate & Activate an App](/developerportal/general/leave-deactivate-app)
+* [How to Leave & Delete an App](../settings/leave-delete-app)
 * [Deploy](/developerportal/deploy)
 * [How to Manage Company Roles and App Roles](/developerportal/howto/change-roles)
 * [Roles Within the Company and Apps](/developerportal/general/company-app-roles)

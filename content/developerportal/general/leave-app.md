@@ -1,5 +1,5 @@
 ---
-title: "Three Ways to Leave Your App"
+title: "Delete, Deactivate & Activate an App"
 category: "General"
 ---
 

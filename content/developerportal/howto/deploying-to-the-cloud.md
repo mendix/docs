@@ -105,6 +105,6 @@ If you want to choose whether you want to run your app locally or in the Sandbox
 * [How to Link a Different App to a Cloud Node](how-to-link-a-different-app-to-a-node)
 * [How to Link Your Free App to a Licensed Cloud Node](how-to-link-app-to-node)
 * [How to Add a Company Admin and Change the App Roles](/developerportal/howto/change-roles)
-* [Roles Within the Company and Apps](/developerportal/general/roles)
+* [Roles Within the Company and Apps](/developerportal/general/company-app-roles)
 * [How to Set Up Two-Factor Authentication With Google Authenticator](/howtogeneral/support/how-to-set-up-two-factor-authentication-with-google-authenticator)
 * [How to Upgrade Your Free App to a Licensed App](how-to-upgrade-free-app)

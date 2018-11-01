@@ -14,7 +14,7 @@ In an App Team, a SCRUM Master (or a custom role with the **App Settings** permi
 
 The Company Admin is allowed to deactivate, delete, as well as activate all the company's apps (with or without App Team members for the app).
 
-For more information, see [Roles Within the Company and Apps](/developerportal/general/roles).
+For more information, see [Roles Within the Company and Apps](/developerportal/general/company-app-roles).
 
 **This how-to will teach you how to do the following:**
 
@@ -98,7 +98,7 @@ Note that when you click Deactivate App, only the account owner can reactivate t
 
 ## 5 Related Content
 
-* [Roles Within the Company and Apps](/developerportal/general/roles)
+* [Roles Within the Company and Apps](/developerportal/general/company-app-roles)
 * [How to Manage Company Roles and App Roles](/developerportal/howto/change-roles)
 * [Company Admin Overview](/developerportal/general/companyadmin-overview)
 * [Settings](/developerportal/settings)

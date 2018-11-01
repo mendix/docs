@@ -29,7 +29,7 @@ Note that only the Technical Contact can grant other members with the Technical 
 There are three actions here you can perform:
 
 * Click **Cloud Settings** to select the cloud platform on which you want to deploy your app (for details, see [Cloud Settings](cloud-settings))
-* Click **Edit App Info** to edit the app settings (you can only see this button when you have the **App Settings** permission; for more details, see [Roles Within the Company and Apps](/developerportal/general/roles))
+* Click **Edit App Info** to edit the app settings (you can only see this button when you have the **App Settings** permission; for more details, see [Roles Within the Company and Apps](/developerportal/general/company-app-roles))
 * Click **Leave app** to leave the app (for details, see [Three Ways to Leave Your App](/developerportal/general/leave-app))
 
 ## 2 Editing App Info
@@ -54,6 +54,6 @@ If your app is supported by the Web Modeler, you can enable it by clicking **Ena
 ## 5 Related Content
 
 * [How to Manage Company Roles and App Roles](/developerportal/howto/change-roles)
-* [Roles Within the Company and Apps](/developerportal/general/roles)
+* [Roles Within the Company and Apps](/developerportal/general/company-app-roles)
 * [Technical Contact](/developerportal/general/technical-contact)
 

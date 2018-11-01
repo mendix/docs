@@ -78,5 +78,5 @@ Learn [How to Link Your Free App to a Licensed Cloud Node](how-to-link-app-to-no
 * [How to Download A Backup](how-to-download-a-backup)
 * [How to Link a Different App to a Cloud Node](how-to-link-a-different-app-to-a-node)
 * [How to Restore A Backup](how-to-restore-a-backup)
-* [Roles Within the Company and Apps](/developerportal/general/roles)
+* [Roles Within the Company and Apps](/developerportal/general/company-app-roles)
 * [How to Unlink Your Free App from a Sandbox Environment](how-to-unlink-sandbox)

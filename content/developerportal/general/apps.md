@@ -20,7 +20,7 @@ There are two tabs on the **Apps** page with settings to manage:
 
 On the **Apps** tab, you can perform the following actions:
 
-* Activate, deactivate, and delete apps (for details, see [How to Delete, Deactivate, and Activate Apps](/developerportal/howto/delete-apps))
+* Activate, deactivate, and delete apps (for details, see [How to Delete, Deactivate, and Activate Apps](/developerportal/general/leave-deactivate-app))
 * Create a [report](#create-report)
 * View the [node](nodes) details
 

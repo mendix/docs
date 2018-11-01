@@ -8,7 +8,7 @@ This category contains documents about the use of specific tasks in the [Develop
 
 ## 2 Company Admin
 
-* [Delete, Deactivate and Activate Apps](/developerportal/howto/delete-apps)
+* [Delete, Deactivate and Activate Apps](/developerportal/general/leave-deactivate-app)
 
 ## 3 General
 

@@ -138,7 +138,7 @@ In your integrations you have the following type of documents:
 | Published web service operation microflow | PWS\_  |
 | Published app service operation microflow | PAS\_  |
 | Published REST service operation microflow| PRS\_  |
-| Import mapping                            | INM\_  |
+| Import mapping                            | IMM\_  |
 | Export mapping                            | EXM\_  |
 | XML schema                                | XSD\_  |
 | JSON structure                            | JSON\_ |

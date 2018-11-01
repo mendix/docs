@@ -6,13 +6,21 @@ tags: ["Developer Portal", "Cloud Environments", "Mendix Cloud", "SAP", "IBM", "
 
 ## 2018
 
+### November 1st, 2018
+
+#### Fixes
+
+* We fixed an issue that caused an error while creating a backup in Mendix Cloud v4. (Tickets 70086, 70090, 75936, 75996)
+
+#### Improvements
+
+* We made improvements in the communication between the Web Modeler and the Cloud Portal.
+
 ### October 29th, 2018
 
 #### Improvements
 
-* Deploying to IBM Cloud is available from within Mendix. If you start with an IBM Starter App, you will be taken through the process of creating a deployment environment on IBM Cloud. You can then deploy your app to IBM Cloud from within the Desktop Modeler or Mendix Developer Portal. More information is available in [IBM Cloud](/developerportal/deploy/ibm-cloud)
-
-    You can also find Mendix Starter Kits on IBM Cloud and start the process from there.
+* Deploying to IBM Cloud is available from within Mendix. If you start with an IBM starter app, you will be taken through the process of creating a deployment environment on IBM Cloud. You can then deploy your app to IBM Cloud from within the Desktop Modeler or Mendix Developer Portal. More information is available in [IBM Cloud](/developerportal/deploy/ibm-cloud). You can also find Mendix Starter Kits on IBM Cloud and start the process from there.
 
 ### October 22nd, 2018
 

@@ -91,7 +91,7 @@ There are a number of tools you can use to identify your slow microflow, and the
 
 ### Server Monitoring
 
-The Mendix Runtime and cloud portal offer a number of performance graphs and logs. For more information on how to use them effectively, attend our our Application Administration Course.
+The Mendix Runtime and Developer Portal portal offer a number of performance graphs and logs.
 
 ### Microflow Debugger
 

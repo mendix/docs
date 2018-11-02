@@ -60,7 +60,7 @@ For more information on the **Events** section and on click actions, see [Events
 | Cancel Changes | Cancel Changes | None                                                         |
 | Close Page     | Close Page     | None                                                         |
 | Sign Out       | Sign Out       | None                                                         |
-| Open Link      | Open Link      | **Link Type** (*Default value*: Web)<br />**Source** (*Default value*: Use literal value)<br />**Url**<br />For more information on these properties, see section [2.2 Open Link Action](page-editor-widgets-events-section-wm#open-link-action) in *Events Section in Widgets of the Web Modeler*. |
+| Open Link      | Open Link      | For **Open Link** you need to configure the following properties: <ul><li>**Link Type** (*Default value: Web*)</li><li>**Source** (*Default value: Use literal value*)</li><li>**Url**</li></ul>For more information on these properties, see section [2.2 Open Link Action](page-editor-widgets-events-section-wm#open-link-action) in *Events Section in Widgets of the Web Modeler*. |
 
 ## 3 General Section
 
@@ -71,7 +71,7 @@ Properties available in the **General** section are described in the table below
 | Caption     | Defines the text that will be shown on the button. Buttons have preset captions depending on the action they perform. For more information, see section [3.1 Preset Caption](#preset-caption). |
 | Icon        | Determines the icon that will be shown in front of the caption of the button. |
 | Render Mode | Defines the way the button will be shown to the end-user. Possible render modes are the following: <ul><li>**Button** – the widget will be rendered as a button</li><li>**Link** – the widget will be rendered as a hyperlink</li></ul><br />*Default render mode:* Button |
-| Style       | Available only for the **Button** render mode. <br />Applies a predefined styling to the button. Possible styles are the following: <ul><li>Default</li><li>Inverse</li><li>Primary</li><li>Info</li><li>Success</li><li>Warning</li><li>Danger</li></ul> *Default style for all buttons except the **Save Changes** button:* Default<br />*Default style for the **Save Changes** button*: Success<br />The color for each style depends on your settings in the **Theme Customizer**. For details, see [Theme Customizer in the Web Modeler](theme-customizer-wm). |
+| Style       | Available only for the **Button** render mode. <br />Applies a predefined styling to the button. Possible styles are the following: <ul><li>Default</li><li>Inverse</li><li>Primary</li><li>Info</li><li>Success</li><li>Warning</li><li>Danger</li></ul> *Default style for all buttons except the **Save Changes** button: Default*<br />*Default style for the **Save Changes** button: Success*<br />The color for each style depends on your settings in the **Theme Customizer**. For details, see [Theme Customizer in the Web Modeler](theme-customizer-wm). |
 
 ### 3.1 Preset Caption {#preset-caption}
 

@@ -1,6 +1,6 @@
 ---
 title: "Apps"
-parent: "companyadmin-overview"
+parent: "companyadmin-settings"
 menu_order: 30
 description: "Describes the options available to company administrators in a Mendix app."
 tags: ["Company","Admin","Developer Portal"]
@@ -38,7 +38,7 @@ For more information, see the [App Team Member Roles](/developerportal/general/c
 
 ## 4 Related Content
 
-* [Company Admin Overview](companyadmin-overview)
+* [Company Admin Settings](companyadmin-settings)
 * [Company](company)
 * [Users](users)
 * [Nodes](nodes)

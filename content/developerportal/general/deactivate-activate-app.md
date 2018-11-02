@@ -51,7 +51,7 @@ To deactivate or activate an app as a Company Admin, follow these steps:
 
 * [Apps](../general/apps)
 * [How to Leave & Delete an App](../settings/leave-delete-app).
-* [Company Admin Overview](../general/companyadmin-overview)
+* [Company Admin Settings](../general/companyadmin-settings)
 * [General](../settings/general-settings)
-* [How to Manage Company Roles and App Roles](../howto/change-roles)
+* [How to Manage Company & App Roles](../general/change-roles)
 * [Roles Within the Company and Apps](company-app-roles)

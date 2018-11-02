@@ -8,7 +8,6 @@ This category contains documents about the use of specific tasks in the [Develop
 
 ## General
 
-* [Manage Company Roles and App Roles](/developerportal/howto/change-roles)
 * [Manage Developer Portal Deep Links](/developerportal/howto/manage-deeplinks)
 
 ## Collaborate
@@ -64,7 +63,7 @@ This category contains documents about the use of specific tasks in the [Develop
 
 ## Related Content
 
-* [Company Admin Overview](/developerportal/general/companyadmin-overview)
+* [Company Admin Settings](/developerportal/general/companyadmin-settings)
 * [Collaborate](/developerportal/collaborate)
 * [Deploy](/developerportal/deploy)
 * [Develop](/developerportal/develop)

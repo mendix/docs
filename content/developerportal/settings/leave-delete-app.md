@@ -66,7 +66,7 @@ If you want to leave and delete your app, follow these steps:
 
 * [Apps](../general/apps)
 * [How to Deactivate & Activate an App](../general/deactivate-activate-app))
-* [Company Admin Overview](../general/companyadmin-overview)
+* [Company Admin Settings](../general/companyadmin-settings)
 * [General](general-settings)
-* [How to Manage Company Roles and App Roles](../howto/change-roles)
+* [How to Manage Company & App Roles](../general/change-roles)
 * [Roles Within the Company and Apps](../general/company-app-roles)

@@ -1,5 +1,5 @@
 ---
-title: "Company Admin Overview"
+title: "Company Admin Settings"
 category: "General"
 description: "Describes the options available to company administrators in a Mendix app."
 tags: ["Company","Admin","Developer Portal"]

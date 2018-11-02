@@ -2,7 +2,7 @@
 title: "Company & App Roles"
 category: "General"
 description: "Describes the company and app roles and permissions within the Mendix Platform."
-tags: ["Company","Admin", "Company Admin", MxID","Developer Portal","role","permissions"]
+tags: ["Company","Admin", "Company Admin", "Company Contact", "MxID", "Developer Portal", "role", "permissions"]
 ---
 
 ## 1 Introduction
@@ -23,7 +23,7 @@ The Company Admin is a regular user with additional privileges. The Company Admi
 
  ![](attachments/companyadmin/company-admin.png)
 
-For details on this role, see [Company Admin Overview](companyadmin-overview).
+For details on this role, see [Company Admin Settings](companyadmin-settings).
 
 ### 2.2 Company Contact
 
@@ -41,7 +41,7 @@ To view the Company Contact, follow these steps:
 
     ![](attachments/general/company-contact.png)
 
-A Company Admin can change the Company Contact on their Company Admin [Company](company) page.
+A Company Admin can change the Company Contact on their Company Admin [Company](company) page. For more information, see the [Changing the Company Contact](change-roles#change-company-contact) section of *How to Manage Company & App Roles*.
 
 ### 2.3 Regular Users
 
@@ -71,7 +71,7 @@ The app roles are described below.
 
 The App Contact is visible to regular users and is the go-to person for questions related to the app. If you build your own app, you will automatically become the App Contact and you will have a SCRUM Master role within the [App Team roles](#app-team-roles). 
 
-If the App Contact changes (which can be done on the [General Settings](../settings/general-settings) page for your app), providing the new App Contact with the App Team [SCRUM Master](#scrum-master) role is recommended. The App Contact will be the contact person for regular users and will be able to perform app operations on behalf of all SCRUM Masters.
+If you change the App Contact (for details on how to do this, see the [Changing the App Contact](change-roles#change-app-contact) section of *How to Manage Company & App Roles*), providing the new App Contact with the App Team [SCRUM Master](#app-team-roles) role is recommended. The App Contact will be the contact person for regular users and will be able to perform app operations on behalf of all SCRUM Masters.
 
 ### 3.2 Technical Contact {#technical-contact}
 
@@ -99,8 +99,6 @@ Each App Team role has access to permission areas based on the following factors
 * Who has access to [cloud node](../settings/node-permissions) information (note that node permissions must be provisioned by the [Technical Contact](#technical-contact))
 * Who can change the app's [general settings](../settings/general-settings)
 
-### 4.1 Predefined App Team Roles {#scrum-master}
-
 These are the predefined App Team roles:
 
 Role | Explanation
@@ -111,22 +109,12 @@ End-user | A user of the app who should have insight into the backlog but does n
 Product Owner | The product owner of the Scrum team who is responsible for managing the app's backlog.
 SCRUM Master | The Scrum Master of the Agile App Team. In addition to contributing to development, the SCRUM Master manages all the settings within the app. If you create a new app, you will automatically become the SCRUM Master. 
 
-### 4.2 Editing App Team Roles
-
-The predefined roles can be changed in two locations:
-
-* As a [Company Admin](companyadmin-overview), click **Role settings** on the [Roles Tab](apps#roles-tab) of your Company Admin's **Apps** page to edit the roles (the changes will affect every app created after the change)
-
-	![](attachments/companyadmin/apps-roles.png)
-
-* As a [SCRUM Master](#scrum-master), you can edit roles for the specific app of which you are the SCRUM Master by selecting **Team** > **Manage Team** and clicking **Role settings**
-
-	![](attachments/companyadmin/app-roles-edit.png)
+For details on how to manage App Team roles, see the [Changing App Team Roles](change-roles#change-app-team-roles) section of *How to Manage Company & App Roles*.
 
 ## 5 Related Content
 
 * [Mendix Profile](../mendix-profile/index)
-* [Company Admin Overview](/developerportal/general/companyadmin-overview)
-* [How to Manage Company Roles and App Roles](/developerportal/howto/change-roles)
+* [Company Admin Settings](/developerportal/general/companyadmin-settings)
+* [How to Manage Company & App Roles](/developerportal/general/change-roles)
 * [Settings](/developerportal/settings)
 * [Technical Contact](technical-contact)

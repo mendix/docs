@@ -32,18 +32,18 @@ To deactivate or activate an app as a Company Admin, follow these steps:
 
 1. Go to the [Developer Portal](http://home.mendix.com).
 
-2. Click your avatar in the top-right corner of the screen and select **Company Admin**:
+2.  Click your avatar in the top-right corner of the screen and select **Company Admin**:
 
-  ![](attachments/companyadmin/company-admin.png)
+	![](attachments/companyadmin/company-admin.png)
 
 3. Select **Apps** from the sidebar menu to see the apps for deactivating/activating.
 
-4. Select one of these actions to perform:
+4.  Select one of these actions to perform:
 
 	* To deactivate an active app, select an app with a **Status** of **In Use** and click **Activate / Deactivate App**
 	* To activate an inactive app, select an app with a **Status** of **Inactive** and click **Activate / Deactivate App**
 
-  ![](attachments/companyadmin/apps.png)
+	![](attachments/companyadmin/apps.png)
 
 5. In the pop-up window that appears, confirm you choice (by clicking either **Deactivate apps** or **Activate apps**, according to the scenario).
 

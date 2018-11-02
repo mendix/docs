@@ -1,6 +1,6 @@
 ---
 title: "Leave, Deactivate & Delete an App"
-category: "General"
+parent: "general-settings"
 description: "Describes how to leave, delete, and deactivate an app in the Developer Portal."
 tags: ["app", "delete", "deactivate", "Developer Portal", "SCRUM Master"]
 ---
@@ -43,25 +43,24 @@ If you want to leave and delete your app, follow these steps:
 
 2. In the app's sidebar menu, select **Settings** > **General**.
 
-3. In the upper-right corner of that page, click **Leave app**:
+3.  In the upper-right corner of that page, click **Leave app**:
 
-  ![](attachments/leave-app.png) 
+	![](attachments/leave-app.png) 
 
-4. Confirm leaving the app by clicking **Yes** (the pop-up window states the app will be deactivated if you are the only/last member of the App Team):
+4.  Confirm leaving the app by clicking **Yes** (the pop-up window states the app will be deactivated if you are the only/last member of the App Team):
 
-  ![](attachments/leave-confirmation.png) 
+	![](attachments/leave-confirmation.png) 
 
-  * If you leave an app project that still has App Team members, the app will still exist in the company and it will be available for other team members. If you want to return to the App Team, other team members can invite you again to the app.
+	* If you leave an app project that still has App Team members, the app will still exist in the company and it will be available for other team members. If you want to return to the App Team, other team members can invite you again to the app.
 
-5. If the app will be made inaccessible upon your leaving, a final confirmation is necessary:
+5.  If the app will be made inaccessible upon your leaving, a final confirmation is necessary:
 
-  * Click **Continue** to just leave your app 
-    * If you are the only App Team member of the app project, clicking **Continue** allows you to leave the app project and deactivates the app
-    * Note that because a deactivated app will still exist in the company, only a Company Admin can re-activate the app and invite members to it – for details, see [How to Deactivate & Activate an App](../general/deactivate-activate-app))
+	* Click **Continue** to just leave your app 
+		* If you are the only App Team member of the app project, clicking **Continue** allows you to leave the app project and deactivates the app
+		* Note that because a deactivated app will still exist in the company, only a Company Admin can re-activate the app and invite members to it – for details, see [How to Deactivate & Activate an App](../general/deactivate-activate-app))
+	* Click **Continue and delete app** to leave and fully delete the app from your company
 
-  * Click **Continue and delete app** to leave and fully delete the app from your company
-
-  ![](attachments/delete-confirmation.png) 
+	![](attachments/delete-confirmation.png) 
 
 ## 4 Related Content
 

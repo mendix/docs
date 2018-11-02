@@ -1,7 +1,6 @@
 ---
 title: "Manage Company & App Roles"
-category: "How-To's"
-menu_order: 40
+category: "General"
 description: "This page describes how to add extra Company Admins and change the App Roles."
 tags: ["Company Admin","Company Contact","App Contact","Technical Contact","Node Permissions","App Team","Role","Developer Portal"]
 ---
@@ -152,7 +151,7 @@ The predefined roles can be changed in two locations:
 
 	![](attachments/companyadmin/apps-roles.png)
 
-* 	As a [SCRUM Master](#scrum-master), you can edit roles for the specific app of which you are the SCRUM Master by selecting **Team** > **Manage Team** and clicking **Role settings**
+* 	As a SCRUM Master, you can edit roles for the specific app of which you are the SCRUM Master by selecting **Team** > **Manage Team** and clicking **Role settings**
 
 	![](attachments/companyadmin/app-roles-edit.png)
 

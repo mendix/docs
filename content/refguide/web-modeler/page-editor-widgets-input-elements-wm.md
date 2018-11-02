@@ -77,8 +77,8 @@ Specific properties of the input elements are described in the table below:
 | Input Element | Property           | Description                                                  |
 | ------------- | ------------------ | ------------------------------------------------------------ |
 | Text Area     | Grow Automatically | When enabled, the text area grows automatically depending on the amount if text filled out in it. <br />*This property is disabled by default.* |
-| Text Area     | Number of Lines    | This property is only displayed when the **Grow Automatically** option is disabled.  The number of lines determine how many lines the text area shows at the same time. If the text in the text area contains more lines you will have to use a scrollbar to see it all. <br />*Default value for the **Number of Lines** option*: 5 |
-| Radio Buttons | Orientation        | This property defines whether the radio buttons are displayed in your app horizontally or vertically. <br />*Default value for **Orientation***: Horizontal. |
+| Text Area     | Number of Lines    | This property is only displayed when the **Grow Automatically** option is disabled.  The number of lines determine how many lines the text area shows at the same time. If the text in the text area contains more lines you will have to use a scrollbar to see it all. <br /> *Default value for the **Number of Lines** option*: 5 |
+| Radio Buttons | Orientation        | This property defines whether the radio buttons are displayed in your app horizontally or vertically. <br /> *Default value for **Orientation***: Horizontal. |
 
 ## 4 Design Section {#input-elements-design}
 

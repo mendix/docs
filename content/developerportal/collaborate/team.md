@@ -19,7 +19,7 @@ To invite team members to an app as well as to view and manage an app, follow th
 On the **Team** page, you will see an overview with the following information about the team members:
 
 * Name
-* Role - App Team role (see [Roles Within the Company and Apps](/developerportal/general/roles) for more information)
+* Role - App Team role (see [Roles Within the Company and Apps](/developerportal/general/company-app-roles) for more information)
 
 ### 2.1 Managing the Team
 
@@ -38,5 +38,5 @@ To invite members, go to **Team**, click the **Invite Member** in the top-right 
 
 * [Company Admin Overview](/developerportal/general/companyadmin-overview)
 * [How to Manage Company Roles and App Roles](/developerportal/howto/change-roles)
-* [Roles Within the Company and Apps](/developerportal/general/roles)
+* [Roles Within the Company and Apps](/developerportal/general/company-app-roles)
 * [Settings](/developerportal/settings)

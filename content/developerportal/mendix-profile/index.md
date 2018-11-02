@@ -309,7 +309,7 @@ To make your public profile private again, click **Make this profile private**.
 ## 11 Related Content
 
 * [Company Admin Overview](../general/companyadmin-overview)
-* [Roles Within the Company and Apps](../general/roles)
+* [Roles Within the Company and Apps](../general/company-app-roles)
 * [How to Manage Company Roles and App Roles](../howto/change-roles)
 * [Feedback](../collaborate/feedback)
 * [How to Use the Mendix Feedback Widget](../collaborate/use-feedback-widget)

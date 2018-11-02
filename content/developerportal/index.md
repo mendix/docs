@@ -25,7 +25,7 @@ For more information on licensed apps, see the [Deployment](/deployment) documen
 
 In **People**, you can view the other members of your company.
 
-Learn more about Mendix users are distinguished in [Roles Within the Company and Apps](/developerportal/general/roles).
+Learn more about Mendix users are distinguished in [Roles Within the Company and Apps](/developerportal/general/company-app-roles).
 
 ## 5 Document Categories
 

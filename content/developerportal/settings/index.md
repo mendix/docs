@@ -77,5 +77,5 @@ For more information, see [API Keys](/developerportal/settings/api-key).
 * [How to Manage Company & App Roles](../general/manage-roles)
 * [How to Receive Environment Status Alerts](../howto/receive-alerts)
 * [Mendix Profile](../mendix-profile/index)
-* [Roles Within the Company and Apps](../general/company-app-roles)
+* [Company & App Roles Overview](../general/company-app-roles)
 * [Technical Contact](../general/technical-contact)

@@ -34,6 +34,6 @@ In **People**, you can view the other members of the Mendix community and also i
 
 ## 2 Documents in This Category
 
-* [Roles Within the Company and Apps](company-app-roles)
+* [Company & App Roles Overview](company-app-roles)
 * [Technical Contact](technical-contact)
 * [Two-Factor Authentication](twofactor-authenticator)

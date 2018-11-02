@@ -26,6 +26,6 @@ The specific steps for setting up on different cloud platforms:
 ## 3 Related Content
 
 * [How to Manage Company & App Roles](/developerportal/general/manage-roles)
-* [Roles Within the Company and Apps](/developerportal/general/company-app-roles)
+* [Company & App Roles Overview](/developerportal/general/company-app-roles)
 * [Technical Contact](/developerportal/general/technical-contact)
 

@@ -10,7 +10,7 @@ tags: ["Node","Permission","Developer Portal"]
 
 Fine-grained access management for your Mendix Cloud environments is handled in the **Node Security** tab of the [Settings](/developerportal/settings) page under **Security**. Each team member can subscribe or unsubscribe to the alerts, and the [Technical Contact](/developerportal/general/technical-contact) can manage various permissions of each team member per environment.
 
-Learn more about [Roles Within the Company and Apps](/developerportal/general/company-app-roles).
+Learn more about [Company & App Roles Overview](/developerportal/general/company-app-roles).
 
 {{% alert type="info" %}}
 

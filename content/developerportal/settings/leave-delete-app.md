@@ -1,5 +1,5 @@
 ---
-title: "Leave, Deactivate & Delete an App"
+title: "Leave & Delete an App"
 parent: "general-settings"
 description: "Describes how to leave, delete, and deactivate an app in the Developer Portal."
 tags: ["app", "delete", "deactivate", "Developer Portal", "SCRUM Master"]
@@ -29,7 +29,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * To leave, delete, or deactivate an app, have the **SCRUM Master** role on your App Team (or a custom role with the **App Settings** permission)
 
-## 3 Leaving, Deactivating & Deleting an App
+## 3 Leaving & Deleting (or Deactivating) an App
 
 There are some important points to understand when you want to leave and/or delete an app:
 
@@ -68,5 +68,5 @@ If you want to leave and delete your app, follow these steps:
 * [How to Deactivate & Activate an App](../general/deactivate-activate-app))
 * [Company Admin Settings](../general/companyadmin-settings)
 * [General](general-settings)
-* [How to Manage Company & App Roles](../general/change-roles)
+* [How to Manage Company & App Roles](../general/manage-roles)
 * [Roles Within the Company and Apps](../general/company-app-roles)

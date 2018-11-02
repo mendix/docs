@@ -13,7 +13,7 @@ This document describes the role of the Technical Contact within the Mendix Clou
 The Technical Contact is responsible for license renewal and is the first point of contact for the Mendix Support department. A Mendix application will always be set up and delivered with a technical contact assigned to it. The Technical Contact needs an *MxID* before Mendix can activate a license for an application.
 
 {{% alert type="info" %}}
-It is currently not possible to select more than one Technical Contact in the Mendix Cloud (for more information, see [How to Manage Company & App Roles](/developerportal/general/change-roles). For on-premises installations, it is possible to select more than one contact. Contact [Mendix Support](https://support.mendix.com) with your request.
+It is currently not possible to select more than one Technical Contact in the Mendix Cloud (for more information, see [How to Manage Company & App Roles](/developerportal/general/manage-roles). For on-premises installations, it is possible to select more than one contact. Contact [Mendix Support](https://support.mendix.com) with your request.
 {{% /alert %}}
 
 ## 2 Technical Contact Responsibilities
@@ -50,7 +50,7 @@ You can submit requests in the [Support Portal](https://support.mendix.com) for 
 
 ## 3 Changing the Technical Contact
 
-For details on how to change the Technical Contact, see the [How to Manage Company & App Roles](change-roles#change-technical-contact) section of *How to Manage Company & App Roles*.
+For details on how to change the Technical Contact, see the [How to Manage Company & App Roles](manage-roles#change-technical-contact) section of *How to Manage Company & App Roles*.
 
 ## 3 Related Content
 

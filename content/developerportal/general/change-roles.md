@@ -1,7 +1,6 @@
 ---
-title: "Manage Company Roles & App Roles"
-category: "How-To's"
-menu_order: 40
+title: "Manage Company & App Roles"
+category: "General"
 description: "This page describes how to add extra Company Admins and change the App Roles."
 tags: ["Company Admin","Company Contact","App Contact","Technical Contact","Node Permissions","App Team","Role","Developer Portal"]
 ---
@@ -38,11 +37,11 @@ You can add extra Company Admins by following these steps:
 1. Go to the [Developer Portal](http://home.mendix.com).
 2.  Click your avatar in the top-right corner of the screen:
 
-    ![](attachments/companyadmin/company-admin.png)
+	![](attachments/companyadmin/company-admin.png)
 
 3.  Click **Company Admin** and select the **Company Admins** tab:
 
-    ![](attachments/companyadmin/companyadmin-overview.png)
+	![](attachments/companyadmin/companyadmin-overview.png)
 
 4. Click **Add Company Admin**.
 5.  Select the users that have to be changed into company admins and choose the permissions:
@@ -56,13 +55,13 @@ You can add extra Company Admins by following these steps:
 
 6. Click **Add**.
 
-## 4 Changing the Company Contact
+## 4 Changing the Company Contact {#change-company-contact}
 
 A company can have multiple Company Admins to manage the company's settings, users, apps, and nodes.
 
 Because there can be multiple Company Admins, one person of the company must be the contact person regarding the company operations.
 
-You can change the Company Contact by following these steps:
+The Company Admin can change the Company Contact by following these steps:
 
 1. Go to the [Developer Portal](http://home.mendix.com).
 2.  Click on your avatar in the top-right corner of the screen:
@@ -76,7 +75,7 @@ You can change the Company Contact by following these steps:
 
 5. Select the user that will be the new Company Contact and click **Select**. The change will be automatically saved. 
 
-## 5 Changing the App Contact
+## 5 Changing the App Contact {#change-app-contact}
 
 An app intended for other company users always has a contact person to address questions regarding the app.
 
@@ -93,7 +92,7 @@ You can change the App Contact by following these steps:
 5. Below **App Contact**, select a new App Contact from the drop-down menu.
 6. Click **Save**.    
 
-## 6 Change the Technical Contact
+## 6 Changing the Technical Contact {#change-technical-contact}
 
 A node can have only one Technical Contact to manage the node's environments, deployment repositories, backups, alerts, etc. 
 
@@ -112,7 +111,7 @@ You can change the Technical Contact by following these steps:
 
     ![](attachments/settings/change-technicalcontact.png)      
 
-## 7 Change/Add Roles
+## 7 Changing App Team Roles {#change-app-team-roles}
 
 It is possible to change or add new **App Team** roles for a specific app or on a company level for all apps.
 
@@ -135,16 +134,30 @@ As a **Company Admin**, you can edit and add new **App Team** roles on a company
 You can find the **App Team** role settings by following these steps:
 
 1. Go to the [Developer Portal](http://home.mendix.com).
-2.  Click your avatar in the top-right corner of the screen:
+
+2. Click your avatar in the top-right corner of the screen:
 
     ![](attachments/companyadmin/company-admin.png)
 
 3. Click **Company Admin**.
+
 4. Select the **Roles** tab.
+
+### Editing App Team Roles
+
+The predefined roles can be changed in two locations:
+
+*  As a [Company Admin](companyadmin-settings), click **Role settings** on the [Roles Tab](apps#roles-tab) of your Company Admin's **Apps** page to edit the roles (the changes will affect every app created after the change)
+
+	![](attachments/companyadmin/apps-roles.png)
+
+* 	As a SCRUM Master, you can edit roles for the specific app of which you are the SCRUM Master by selecting **Team** > **Manage Team** and clicking **Role settings**
+
+	![](attachments/companyadmin/app-roles-edit.png)
 
 ## 8 Related Content
 
-* [Company Admin Overview](/developerportal/general/companyadmin-overview)
+* [Company Admin Settings](/developerportal/general/companyadmin-settings)
 * [How to Leave & Delete an App](../settings/leave-delete-app)
 * [How to Deactivate & Activate an App](../general/deactivate-activate-app)
 * [Security – Node Permissions](/developerportal/settings/node-permissions)

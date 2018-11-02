@@ -1,6 +1,6 @@
 ---
 title: "Company"
-parent: "companyadmin-overview"
+parent: "companyadmin-settings"
 menu_order: 10
 description: "Describes the page that enables managing a company's details."
 tags: ["company","admin","Developer Portal", "Company Admin", "expiration settings"]
@@ -23,7 +23,7 @@ You can edit various company details on the **Company Profile** tab, such as **C
 
 On the **Company Admins** tab, you can add, edit, or remove a Company Admin.
 
-For more information, see [How to Manage Company Roles and App Roles](/developerportal/howto/change-roles).
+For more information, see [How to Manage Company & App Roles](/developerportal/general/change-roles).
 
 ## 4 Company Settings Tab{#company-settings}
 
@@ -39,7 +39,7 @@ On the **Launchpad Settings** tab, you can select the background image for the [
 
 ## 6 Related Content
 
-* [Company Admin Overview](companyadmin-overview)
+* [Company Admin Settings](companyadmin-settings)
 * [Users](nodes)
 * [Apps](apps)
 * [Nodes](nodes)

@@ -262,7 +262,7 @@ Here you can connect  your social accounts for **GitHub**, **Meetup**, **Twitter
 
 ### 10.4 Security
 
-You can change your password in this section. By default, you are requested to change your password every 90 days. Only a [Company Admin](../general/companyadmin-overview) is allowed to change the expiration period.
+You can change your password in this section. By default, you are requested to change your password every 90 days. Only a [Company Admin](../general/companyadmin-settings) is allowed to change the expiration period.
 
 ### 10.5 API Keys
 
@@ -308,9 +308,9 @@ To make your public profile private again, click **Make this profile private**.
 
 ## 11 Related Content
 
-* [Company Admin Overview](../general/companyadmin-overview)
+* [Company Admin Settings](../general/companyadmin-settings)
 * [Roles Within the Company and Apps](../general/company-app-roles)
-* [How to Manage Company Roles and App Roles](../howto/change-roles)
+* [How to Manage Company & App Roles](../general/change-roles)
 * [Feedback](../collaborate/feedback)
 * [How to Use the Mendix Feedback Widget](../collaborate/use-feedback-widget)
 

@@ -1,6 +1,6 @@
 ---
 title: "Nodes"
-parent: "companyadmin-overview"
+parent: "companyadmin-settings"
 menu_order: 40
 description: "Developer Portal Cloud Noces"
 tags: ["company","admin", "Company Admin", "Developer Portal", "cloud", "node"]
@@ -40,7 +40,7 @@ This tab describes the following app details for that specific cloud node:
 
 ## 4 Related Content
 
-* [Company Admin Overview](companyadmin-overview)
+* [Company Admin Settings](companyadmin-settings)
 * [Company](company)
 * [Users](nodes)
 * [Apps](apps)

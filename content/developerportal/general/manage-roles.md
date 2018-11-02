@@ -31,22 +31,23 @@ A company can have multiple Company Admins to manage the company's settings, use
 
 When you are a Company Admin, you can add extra Company Admins by following these steps:
 
-1. Go to the [Developer Portal](http://home.mendix.com), click your avatar in the top-right corner of the screen and select **Company Admin**:
+1.  Go to the [Developer Portal](http://home.mendix.com), click your avatar in the top-right corner of the screen and select **Company Admin**:
 
-    ![](attachments/companyadmin/company-admin.png)
-2. Select the **Company Admins** tab:
+	![](attachments/companyadmin/company-admin.png)
 
-  ![](attachments/companyadmin/companyadmin-overview.png)
+2.  Select the **Company Admins** tab:
+
+	![](attachments/companyadmin/companyadmin-overview.png)
 
 3. Click **Add Company Admin**.
-4. Select the users that should be changed into Company Admins, then select the permissions:
+4.  Select the users that should be changed into Company Admins, then select the permissions:
 
     * **Can manage Company** – can manage all the settings of the company
     * **Can manage Users** – can manage only the **Users** page of the company settings
     * **Can manage Apps** – can manage only the **Apps** page of the company settings
     * **Can manage Nodes** – can manage only the **Nodes** page of the company settings
 
-    ![](attachments/companyadmin/add-companyadmin.png)
+	![](attachments/companyadmin/add-companyadmin.png)
 
 5. Click **Add**.
 

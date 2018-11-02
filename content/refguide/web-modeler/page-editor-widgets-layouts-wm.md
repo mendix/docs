@@ -115,8 +115,8 @@ Properties available in the **General** section are described in the table below
 | Property    | Description                                                  |
 | ----------- | ------------------------------------------------------------ |
 | Show Header | **Show Header** defines whether a header is shown above the group box. <br />*This property is enabled by default.* |
-| Caption     | **Caption** is only displayed when the **Show Header** option is enabled. It defines the caption that is shown in the header. |
-| Collapsible | **Collapsible** is only displayed when the **Show Header** option is enabled. It defines whether the group box and its elements can be collapsed or expanded. Possible values of this property are the following:<ul><li>**Yes (start expanded)** – the elements inside the group box will be initially expanded and can be collapsed when a user clicks a minus icon in the header</li><li>**Yes (start collapsed)** – the elements inside the group box will be initially collapsed and can be expanded when a user clicks a plus icon in the header </li><li>**No** – group box elements cannot be expanded or collapsed</li></ul> |
+| Caption     | This property is only displayed when the **Show Header** option is enabled. It defines the caption that is shown in the header. |
+| Collapsible | This property is only displayed when the **Show Header** option is enabled. It defines whether the group box and its elements can be collapsed or expanded. Possible values of this property are the following:<ul><li>**Yes (start expanded)** – the elements inside the group box will be initially expanded and can be collapsed when a user clicks a minus icon in the header</li><li>**Yes (start collapsed)** – the elements inside the group box will be initially collapsed and can be expanded when a user clicks a plus icon in the header </li><li>**No** – group box elements cannot be expanded or collapsed</li></ul> |
 
 ## 5 Related Content
 

@@ -2220,19 +2220,19 @@ module.exports = {
     },
     {
       from: "/mxsupport/Technical+Contact+Definition",
-      to: "/developerportal/general/technical-contact"
+      to: "/developerportal/company-app-roles/technical-contact"
     },
     {
       from: "/mxsupport/technical-contact",
-      to: "/developerportal/general/technical-contact"
+      to: "/developerportal/company-app-roles/technical-contact"
     },
     {
       from: "/howtogeneral/support/how-to-activate-or-deactivate-your-mendix-account",
-      to: "/developerportal/general/users"
+      to: "/developerportal/company-app-roles/users"
     },
 	{
       from: "/howtogeneral/support/technical-contact",
-      to: "/developerportal/general/technical-contact"
+      to: "/developerportal/company-app-roles/technical-contact"
     },
     /****************************************************
      * DEVELOPER PORTAL
@@ -2240,7 +2240,11 @@ module.exports = {
 
     {
       from: "/developerportal/settings/technical-contact",
-      to: "/developerportal/general/technical-contact"
+      to: "/developerportal/company-app-roles/technical-contact"
+    },
+	    {
+      from: "/developerportal/general/technical-contact",
+      to: "/developerportal/company-app-roles/technical-contact"
     },
     {
       from: "/developerportal/operate/mendix-cloud-status",

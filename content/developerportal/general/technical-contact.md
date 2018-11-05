@@ -13,7 +13,7 @@ This document describes the role of the Technical Contact within the Mendix Clou
 The Technical Contact is responsible for license renewal and is the first point of contact for the Mendix Support department. A Mendix application will always be set up and delivered with a Technical Contact assigned to it. The Technical Contact needs an MxID before Mendix can activate a license for an application.
 
 {{% alert type="info" %}}
-It is currently not possible to select more than one Technical Contact in the Mendix Cloud (for more information, see the [Changing the Technical Contact](manage-roles#change-technical-contact) section of *How to Manage Company & App Roles*). However, for on-premises installations, it is possible to select more than one Technical Contact. Contact [Mendix Support](https://support.mendix.com) with your request.
+It is currently not possible to select more than one Technical Contact in the Mendix Cloud. However, for on-premises installations, it is possible to select more than one Technical Contact. Contact [Mendix Support](https://support.mendix.com) with your request.
 {{% /alert %}}
 
 ## 2 Technical Contact Responsibilities
@@ -22,13 +22,13 @@ The responsibilities depend on whether you are hosting your app in the Mendix Cl
 
 ### 2.1 Mendix Cloud
 
-For apps in the Mendix Cloud, the Technical Contact is the first point of contact for the app:
+For apps in the Mendix Cloud, the Technical Contact is the first point of contact for the app. In this scenario, the Technical Contact does the following:
 
-* The Technical Contact will receive notifications for upcoming maintenance operations on the application
-* The Technical Contact will be able to receive alerts from the Mendix application when problems arise (for example, CPU load is high, running out of disk space)
-* The Technical Contact can configure the alert settings in the **Monitoring** tab of the cloud node
+* Receives notifications for upcoming maintenance operations on the application
+* Can receive alerts from the Mendix app when problems arise (for example, CPU load is high, running out of disk space)
+* Can configure the alert settings in the **Monitoring** tab of the cloud node
 
-The Technical Contact can perform all the regular operations on the Mendix Cloud node in the [Developer Portal](http://home.mendix.com). Additionally, you can manage the access rights of your team members so that they can deploy, stop, start, etc. For more information, see [Security - Node Permissions](/developerportal/settings/node-permissions).
+As a Technical Contact, you can perform all the regular operations on the Mendix Cloud node in the [Developer Portal](http://home.mendix.com). Additionally, you can manage the access rights of your team members so that they can deploy, stop and start the app, and perform other actions. For more information, see [Security & Node Permissions](/developerportal/settings/node-permissions).
 
 These are some details about managing licenses (renewals, activation, and upgrades):
 
@@ -39,12 +39,12 @@ You can submit requests in the [Support Portal](https://support.mendix.com) for 
 
 ### 2.2 On-Premises
 
-This means that the Mendix app is running on the customer's own infrastructure.
+When a Mendix app is on premises, it is running on the customer's own infrastructure.
 
 These are some details about managing licenses (renewals, activation, and upgrades):
 
-* Mendix will send license renewal notifications to the Technical Contact via email
-* If the Technical Contact would like to expand the license (for example, for more users), they need to contact their Account Executive
+* Mendix sends license renewal notifications to the Technical Contact via email
+* As a Technical Contact, if you want to expand the license (for example, for more users), you need to contact your Account Executive
 
 You can submit requests in the [Mendix Support Portal](https://support.mendix.com) for questions, changes, and incidents.
 
@@ -52,7 +52,7 @@ You can submit requests in the [Mendix Support Portal](https://support.mendix.co
 
 For details on how to change the Technical Contact, see the [Changing the Technical Contact](manage-roles#change-technical-contact) section of *How to Manage Company & App Roles*.
 
-## 3 Related Content
+## 4 Related Content
 
 * [Company & App Roles Overview](/developerportal/general/company-app-roles)
 * [Company Admin Settings](/developerportal/general/companyadmin-settings)

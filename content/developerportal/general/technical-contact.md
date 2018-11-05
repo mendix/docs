@@ -50,12 +50,12 @@ You can submit requests in the [Mendix Support Portal](https://support.mendix.co
 
 ## 3 Changing the Technical Contact
 
-For details on how to change the Technical Contact, see the [How to Manage Company & App Roles](manage-roles#change-technical-contact) section of *How to Manage Company & App Roles*.
+For details on how to change the Technical Contact, see the [Changing the Technical Contact](manage-roles#change-technical-contact) section of *How to Manage Company & App Roles*.
 
 ## 3 Related Content
 
+* [Company & App Roles Overview](/developerportal/general/company-app-roles)
 * [Company Admin Settings](/developerportal/general/companyadmin-settings)
 * [How to Leave & Delete an App](../settings/leave-delete-app)
 * [Deploy](/developerportal/deploy)
-* [Company & App Roles Overview](/developerportal/general/company-app-roles)
 * [Settings](/developerportal/settings)

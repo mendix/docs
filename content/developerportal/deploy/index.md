@@ -23,16 +23,17 @@ The **Environments** page is divided into the following tabs:
     * IP range filters
     * Client certificate verification
     
+
    ![](attachments/environment-tab.png)    
-    
+​    
 For more details, see [Environments](environments).    
-    
+​    
 ### 2.1 Environment details
 
 If you click **Details** of a specific environments, you will be able to manage your environment in several tabs of the **Environment details** page.
 
    ![](attachments/environment-details.png)
-   
+
 For more details, see [Environment details](environments-details).       
 
 ## 3 Mobile App
@@ -56,3 +57,4 @@ For more details, see [App Services](app-services).
 * [Mendix Cloud Status](/developerportal/deploy/mendix-cloud-status)
 * [Mendix Cloud V4 - FAQ](/deployment/mendixcloud/mxcloudv4)
 * [How to View the Mendix Cloud Version and Region](/developerportal/howto/cloud-version-region)
+* [Two-Factor Authentication](two-factor-authentication)

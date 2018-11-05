@@ -71,11 +71,11 @@ For more information, see [API Keys](/developerportal/settings/api-key).
 
 ## 5 Related Content
 
-* [Company Admin Settings](/developerportal/general/companyadmin-settings)
+* [Company Admin Settings](/developerportal/company-app-roles/companyadmin-settings)
 * [How to Configure Maintenance Windows](../howto/maintenance-windows)
-* [How to Leave & Delete an App](../general/deactivate-activate-app)
-* [How to Manage Company & App Roles](../general/manage-roles)
+* [How to Leave & Delete an App](../company-app-roles/deactivate-activate-app)
+* [How to Manage Company & App Roles](../company-app-roles/manage-roles)
 * [How to Receive Environment Status Alerts](../howto/receive-alerts)
 * [Mendix Profile](../mendix-profile/index)
-* [Company & App Roles Overview](../general/company-app-roles)
-* [Technical Contact](../general/technical-contact)
+* [Company & App Roles](../company-app-roles/index)
+* [Technical Contact](../company-app-roles/technical-contact)

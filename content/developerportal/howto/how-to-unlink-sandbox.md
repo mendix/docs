@@ -22,7 +22,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 *   You have a Free App (Mendix version 5.18 and up)
 *   Your Free App is linked to a Sandbox. This happens automatically when you deploy your Free App from your **Mendix Modeler**
 *   Your Two-Factor Google Authenticator is enabled
-*   You are the [Technical Contact](/developerportal/general/technical-contact) of the sandbox
+*   You are the [Technical Contact](/developerportal/company-app-roles/technical-contact) of the sandbox
 
 ## 3 Download a Backup
 
@@ -44,7 +44,7 @@ When you have a Free App running in the Sandbox you will need to unlink the Free
 4.  Go to **Environments** in the left navigation panel.
 5.  Click **Unlink your app**. Beware that all your data will be lost!
 6.  Click **Yes, delete all data and unlink this project** to confirm.
-7.  Validate with your [Two-Factor Authentication](/developerportal/general/twofactor-authenticator).
+7.  Validate with your [Two-Factor Authentication](../deploy/two-factor-authentication).
 
 The Free App has now been unlinked from the Sandbox environment.
 

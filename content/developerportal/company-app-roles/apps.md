@@ -20,7 +20,7 @@ There are two tabs on the **Apps** page with settings to manage:
 
 On the **Apps** tab, you can perform the following actions:
 
-* Deactivate and activate apps (for details, see [How to Deactivate & Activate an App](/developerportal/general/deactivate-activate-app))
+* Deactivate and activate apps (for details, see [How to Deactivate & Activate an App](/developerportal/company-app-roles/deactivate-activate-app))
 * Create a [report](#create-report)
 * View the [node](nodes) details
 
@@ -34,7 +34,7 @@ On the **Roles** tab, you can edit and add App Team member roles.
 
 ![](attachments/companyadmin/apps-roles.png)
 
-For more information, see the [App Team Member Roles](/developerportal/general/company-app-roles) section of *Company & App Roles Overview*.
+For more information, see the [App Team Member Roles](/developerportal/company-app-roles/index) section of *Company & App Roles*.
 
 ## 4 Related Content
 

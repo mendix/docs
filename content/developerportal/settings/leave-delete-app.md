@@ -15,7 +15,7 @@ Your ability to delete and deactivate an app depends on your App Team role:
 * A custom role with the **App Settings** permission is also allowed to deactivate and delete an app (even when there are still App Team members for the app)
 * A **Company Admin** is allowed to delete, deactivate, and activate all the company's apps (with or without App Team members for the app)
 
-For more information on roles, see [Company & App Roles Overview](/developerportal/general/company-app-roles).
+For more information on roles, see [Company & App Roles](/developerportal/company-app-roles/index).
 
 **This how-to will teach you how to do the following as a SCRUM Master:**
 
@@ -35,7 +35,7 @@ There are some important points to understand when you want to leave and/or dele
 
 * You cannot delete or deactivate an app if you are the **Technical Contact** of the app
 * Only Free Apps can be deleted
-* App deletion cannot be undone, which means that ALL DATA WILL BE LOST, including all files on the [Team Server](/refguide/team-server) and all data in the Free App [node](../general/nodes) (if applicable)
+* App deletion cannot be undone, which means that ALL DATA WILL BE LOST, including all files on the [Team Server](/refguide/team-server) and all data in the Free App [node](../company-app-roles/nodes) (if applicable)
 
 If you want to leave and delete your app, follow these steps:
 
@@ -57,16 +57,16 @@ If you want to leave and delete your app, follow these steps:
 
 	* Click **Continue** to just leave your app 
 		* If you are the only App Team member of the app project, clicking **Continue** allows you to leave the app project and deactivates the app
-		* Note that because a deactivated app will still exist in the company, only a Company Admin can re-activate the app and invite members to it – for details, see [How to Deactivate & Activate an App](../general/deactivate-activate-app))
+		* Note that because a deactivated app will still exist in the company, only a Company Admin can re-activate the app and invite members to it – for details, see [How to Deactivate & Activate an App](../company-app-roles/deactivate-activate-app))
 	* Click **Continue and delete app** to leave and fully delete the app from your company
 
 	![](attachments/delete-confirmation.png) 
 
 ## 4 Related Content
 
-* [Apps](../general/apps)
-* [How to Deactivate & Activate an App](../general/deactivate-activate-app))
-* [Company Admin Settings](../general/companyadmin-settings)
+* [Apps](../company-app-roles/apps)
+* [How to Deactivate & Activate an App](../company-app-roles/deactivate-activate-app))
+* [Company Admin Settings](../company-app-roles/companyadmin-settings)
 * [General](general-settings)
-* [How to Manage Company & App Roles](../general/manage-roles)
-* [Company & App Roles Overview](../general/company-app-roles)
+* [How to Manage Company & App Roles](../company-app-roles/manage-roles)
+* [Company & App Roles](../company-app-roles/index)

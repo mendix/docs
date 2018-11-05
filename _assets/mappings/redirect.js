@@ -6789,7 +6789,7 @@ module.exports = {
     },
     {
       "from": "/refguide7/App+Platform",
-      "to": "/refguide/app-platform"
+      "to": "/developerportal/dev-portal-overview"
     },
     {
       "from": "/refguide7/App+Settings+Dialog",

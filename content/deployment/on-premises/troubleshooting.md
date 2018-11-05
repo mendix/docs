@@ -1,24 +1,22 @@
 ---
 title: "Troubleshooting"
 category: "On-Premises"
-tags: []
+tags: ["IIS". "Windows", "Internet Information Sevices", "Service Console"]
 ---
 
 ## 1 IIS Troubleshooting
 
-When setting up IIS as a webserver in front of Mendix it could happen that you run into issues with your installation.
-The first step you will need to take is to decide what is causing your problem, an incorrect Mendix installation or IIS.
+When setting up Microsoft Internet Information Services (IIS) as a webserver in front of Mendix it could happen that you run into issues with your installation. The first step you will need to take is to decide what is causing your problem, an incorrect Mendix installation or IIS.
 
-To determine where to look for your problem you should start by validating the Mendix installation. Whenever you open your application from your laptop, it will always open it through IIS. We want to work around that, in order to test just Mendix without IIS you should open the browser on your server. 
-When you open Internet Explorer and go to [http://localhost:8080/](http://localhost:8080/) (or the port that you have configured), you can test if the application is working.
+To determine where to look for your problem you should start by validating the Mendix installation. Whenever you open your application from your laptop, it will always open it through IIS. We want to work around that, in order to test just Mendix without IIS you should open the browser on your server. When you open the browser and go to [http://localhost:8080/](http://localhost:8080/) (or the port that you have configured), you can test if the application is working.
 
-If the test with Mendix application is successful you have to search for your problem in IIS, if the application isn't working you should start by validating your Mendix application installation.
+If the test with the Mendix application is successful you have to search for your problem in IIS, if the application isn't working you should start by validating your Mendix application installation.
 
 ### 1.1 Validating the Mendix installation
 
 If there are issues with the Mendix installation you should see error messages in the Service Console or in the browser as well.
 
-A common issue is related to critical files not being found.If you get these types of errors you will have to validate the installation of the server version. In order to do that you will need to confirm the location of the server installations. And search for the correct platform version, and the files that are referenced in the error message. If all files are present in the expected location there is an issue with security and the user running the Mendix service is not allowed to read and execute in the mxclientsystem folder. If the files are missing, somebody or some process removed the files. You should re-install the server distribution (tar.gz file).
+A common issue is related to critical files not being found. If you get these types of errors you will have to validate the installation of the server version. You do that by confirming the location of the server installations. Search for the correct platform version, and the files that are referenced in the error message. If all files are present in the expected location there is an issue with security and the user running the Mendix service is not allowed to read and execute in the mxclientsystem folder. If the files are missing, somebody or some process removed the files. You should re-install the server distribution (tar.gz file).
 
 ![](attachments/18448664/18580723.png)
 
@@ -30,15 +28,21 @@ When you have confirmed that the Mendix installation is working, you should star
 
 Open the application and inspect the request with your browser's developers tools. If the application isn't working you will see requests that are not successfully executed.
 
-*   All the /xas/ requests fail with an error:   The rewrite is incorrectly configured.    Go to /xas/ in the browser, which should give you a blank page if everything is behaving correctly. Most likely you will find a more detailed explanation about the cause of your problem. 
-*   Some javascript files can not be opened:   Try opening the files directly from your browser. If there is an issue in your IIS configuration you will get more information when opening that url. If that still results in the same error it is most likely a security problem. The user under which your website is executed, does not have sufficient privileges to access the required files. 
+*   All the /xas/ requests fail with an error:
+
+    The rewrite is incorrectly configured. Go to /xas/ in the browser, which should give you a blank page if everything is behaving correctly. Most likely you will find a more detailed explanation about the cause of your problem.
+  
+*   Some javascript files can not be opened:
+
+    Try opening the files directly from your browser. If there is an issue in your IIS configuration you will get more information when opening that url. If that still results in the same error it is most likely a security problem. The user under which your website is executed does not have sufficient privileges to access the required files. 
 
 If just the login process seems to be failing you need to validate the response when trying to login. You should not use valid credentials to test the login! When analyzing the response, and using invalid credentials, the server should return a 401 status code with the response: {}  any other status code or response indicates an issue.
 
-*   A 404 status code, indicates that the /xas/ url cannot be found. This is an issue in your rewriter configuration, the /xas/ requests should be redirected to the localhost/xas/ url. If the rewriter is not setup correctly IIS will try and open the folder called xas, which obviously does not exists. 
-*   A 401 status code with an html page as response,    IIS should be configured to return detailed error messages. If IIS is not returning detailed error messages, for every message different than 200 it will return the default html error page. The client system needs to have the detailed (JSON) error message in order to correctly process the response. [See this IIS page for more info about detailed error responses](https://esus1.mendixcloud.com/index.html#mce_temp_url#) 
+*   A 404 status code, indicates that the /xas/ url cannot be found. This is an issue in your rewriter configuration; the /xas/ requests should be redirected to the localhost/xas/ url. If the rewriter is not set up correctly, IIS will try and open the folder called xas, which obviously does not exist
 
-After you have identified the exact cause of your problem it is best to search on the exact error message you are receiving. There are numerous reasons why IIS might give that error, existing IIS blog and documentation pages give a much better understanding on how to solve your specific issue. 
+*   A 401 status code with an html page as response; IIS should be configured to return detailed error messages. If IIS is not returning detailed error messages, for every message different than 200 it will return the default html error page. The client system needs to have the detailed (JSON) error message in order to correctly process the response. [See this IIS page for more info about detailed error responses](https://esus1.mendixcloud.com/index.html#mce_temp_url#)
+
+After you have identified the exact cause of your problem, it is best to search on the exact error message you are receiving. There are numerous reasons why IIS might give that error; existing IIS blog and documentation pages give a much better understanding on how to solve your specific issue. 
 
 ## 2 Mendix Service Console
 
@@ -49,7 +53,7 @@ However, it does not matter that some files are not removed. All needed files ar
 
 ### 2.2 Error While Updating an App (2)
 
-On some Windows server installations, the app update process shows an error just before the end of the process
+On some Windows server installations, the app update process shows an error just before the end of the process.
 
 ![](attachments/18448664/18580725.png)
 Please upgrade the Mendix Service Console to version 4.1 or later.
@@ -64,7 +68,7 @@ This occurs even if you have never activated a license. Normally, when the licen
 
 ### 2.4 Security Errors While Starting Service
 
-When the system gives such errors while starting the service, make sure the configured service user has sufficient rights to the folders of the Mendix application. Sometimes you have to fill in the domain name with the user name, thus DOMAIN_NAME\user_name instead of user_name.
+When the system gives such errors while starting the service, make sure the configured service user has sufficient rights to the folders of the Mendix application. Sometimes you have to add the domain name to the user name, thus DOMAIN_NAME\user_name instead of user_name.
 
 ### 2.5 Type Initialization
 

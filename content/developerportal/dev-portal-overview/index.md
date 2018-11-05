@@ -4,7 +4,7 @@ description: "A description of the sections in the Developer Portal and links to
 tags: ["Mendix", "Developer Portal", "Platform Services"]
 ---
 
-## 1 Introduction
+## 1 What Is the Developer Portal?
 
 The key components of the entire Mendix Platform are the [Desktop Modeler](/refguide/desktop-modeler), [Web Modeler](/refguide/web-modeler/), and the [Developer Portal](http://home.mendix.com). The Developer Portal is where Mendix developers can collaborate, deploy, and manage their apps, company, and users. 
 
@@ -43,4 +43,4 @@ In [People](../mendix-profile/#connections), you can view the other members of t
 ## 5 Related Content
 
 * [Mendix Profile](../mendix-profile)
-* [Company & App Roles](../general/company-app-roles)
+* [Company & App Roles](../company-app-roles/index)

@@ -1,6 +1,5 @@
 ---
-title: "Company & App Roles Overview"
-category: "General"
+title: "Company & App Roles"
 description: "Describes the company and app roles and permissions within the Mendix Platform."
 tags: ["Company","Admin", "Company Admin", "Company Contact", "MxID", "Developer Portal", "role", "permissions"]
 ---

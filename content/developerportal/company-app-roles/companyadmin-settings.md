@@ -1,6 +1,7 @@
 ---
 title: "Company Admin Settings"
-category: "General"
+category: "Company & App Roles"
+menu_order: 20
 description: "Describes the options available to company administrators in a Mendix app."
 tags: ["Company","Admin","Developer Portal"]
 ---

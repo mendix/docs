@@ -1,6 +1,7 @@
 ---
 title: "Technical Contact"
-category: "General"
+category: "Company & App Roles"
+menu_order: 30
 description: "This page describes the role of a Mendix Technical Contact."
 tags: ["Technical Contact","Settings","Developer Portal"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -54,7 +55,7 @@ For details on how to change the Technical Contact, see the [Changing the Techni
 
 ## 4 Related Content
 
-* [Company & App Roles Overview](/developerportal/general/company-app-roles)
+* [Company & App Roles](/developerportal/company-app-roles/index)
 * [Company Admin Settings](/developerportal/general/companyadmin-settings)
 * [How to Leave & Delete an App](../settings/leave-delete-app)
 * [Deploy](/developerportal/deploy)

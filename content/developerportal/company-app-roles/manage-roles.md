@@ -34,11 +34,11 @@ When you are a Company Admin, you can add extra Company Admins by following thes
 
 1.  Go to the [Developer Portal](http://home.mendix.com), click your avatar in the top-right corner of the screen and select **Company Admin**:
 
-	![](attachments/companyadmin/company-admin.png)
+	![](attachments/company-admin.png)
 
 2.  Select the **Company Admins** tab:
 
-	![](attachments/companyadmin/companyadmin-overview.png)
+	![](attachments/companyadmin-overview.png)
 
 3. Click **Add Company Admin**.
 4.  Select the users that should be changed into Company Admins, then select the permissions:
@@ -48,7 +48,7 @@ When you are a Company Admin, you can add extra Company Admins by following thes
     * **Can manage Apps** – can manage only the **Apps** page of the company settings
     * **Can manage Nodes** – can manage only the **Nodes** page of the company settings
 
-	![](attachments/companyadmin/add-companyadmin.png)
+	![](attachments/add-companyadmin.png)
 
 5. Click **Add**.
 
@@ -60,7 +60,7 @@ The Company Admin can change the Company Contact by following these steps:
 
 1. Go to the **Company Profile** tab and click **Edit contact person**:
 
-    ![](attachments/companyadmin/change-companycontact.png)
+    ![](attachments/change-companycontact.png)
 
 2. Select the user that will be the new **Contact person** and click **Select**. The change will be automatically saved. 
 
@@ -74,7 +74,7 @@ You can change the App Contact by following these steps:
 2. Click **General** under the **Settings** category.
 3. Click **Edit App Info** in the top-right corner.
 
-    {{% image_container width="500" %}}![](attachments/settings/change-appcontact.png)
+    {{% image_container width="500" %}}![](attachments/change-appcontact.png)
     {{% /image_container %}}
 
 4. Below **App Contact**, select a new App Contact from the drop-down menu.
@@ -89,14 +89,14 @@ You can change the Technical Contact by following these steps:
 1. Go to the [Developer Portal](http://home.mendix.com) and click **Apps** in the top navigation panel.
 2. Click **My Apps**, and in the drop-down list, click **Nodes**.
 
-    ![](attachments/general/nodes.png)
+    ![](attachments/nodes.png)
 
 3. Select the node for which you want to change the Technical Contact.
 4. Click **Security** under the **Settings** category.
 5. Select the **Node Permissions** tab.
 6. Below the name of the new Technical Contact, click **Change to Technical Contact**. The Technical Contact will be changed for all environments. The change will be automatically saved.
 
-    ![](attachments/settings/change-technicalcontact.png)      
+    ![](attachments/change-technicalcontact.png)      
 
 ## 7 Editing App Team Roles {#edit-app-team-roles}
 
@@ -104,11 +104,11 @@ It is possible to change or add new App Team roles for a specific app or at the 
 
 * 	As a SCRUM Master, you can edit roles for the specific app of which you are the SCRUM Master by selecting **Team** > **Manage Team**, clicking **Role settings,** then making your edits or clicking **New role** to create a custom new App Team role for that app
 
-	![](attachments/companyadmin/app-roles-edit.png)
+	![](attachments/app-roles-edit.png)
 
 *  As a [Company Admin](companyadmin-settings), you can edit roles at the company level by clicking **Role settings** on the [Roles Tab](apps#roles-tab) of your Company Admin's [Apps](apps) page to edit the roles (the changes will affect every app created in the company after the change)
 
-	![](attachments/companyadmin/apps-roles.png)
+	![](attachments/apps-roles.png)
 
 ## 8 Related Content
 

@@ -14,7 +14,7 @@ You must be a Company Admin to access this page and these settings.
 
 There are three tabs on the **Users** page with settings to manage:
 
-![](attachments/companyadmin/user-settings.png)
+![](attachments/user-settings.png)
 
 ## 2 Users Tab
 
@@ -42,11 +42,11 @@ To deactivate a user, follow these steps:
 
 1.  Select the check box for the user(s) you want to deactivate, then click **Activate / Deactivate user**.:
 
-	![](attachments/companyadmin/deactivate-select.png)
+	![](attachments/deactivate-select.png)
 
 2.  In the pop-up window that appears, confirm your decision by clicking **Deactivate member(s)**:
 
-	![](attachments/companyadmin/deactivate-confirm.png)
+	![](attachments/deactivate-confirm.png)
 
 The deactivated user will become inactive and will immediately disappear from the list of users on this tab. If you click **Filter** and select **Inactive**, you will see the deactivated users.
 
@@ -62,12 +62,12 @@ To activate an inactive user, follow these steps:
 
 1.  Click **Filter** and select **Inactive** to see the list of company users extended with inactive (deactivated) users:
 
-	![](attachments/companyadmin/deactivate-filter2.png)
+	![](attachments/deactivate-filter2.png)
 
 2. Select the inactive user and click **Activate / Deactivate user**.
 3. In the pop-up window that appears, click **Activate accounts**.         
 
-    ![](attachments/companyadmin/activate.png) 
+    ![](attachments/activate.png) 
 
 ### 2.3 Creating a Report {#create-report}
 
@@ -90,7 +90,7 @@ You can perform the following actions on this tab:
 * Click **Details** to edit a security group and do the following:
     * Under **Users**, you can **Add** users to and **Remove** users from the group
 
-      ![](attachments/companyadmin/add-user.png)
+      ![](attachments/add-user.png)
 
     * Under **Access To**, you can up the security group's access to specific apps (via the **Add** and **Remove** buttons) 
         * Members of this security group will be granted access to these apps automatically

@@ -13,7 +13,7 @@ You must be a Company Admin to access this page and these settings.
 
 There are four tabs on the **Company ** page with settings to manage:
 
-![](attachments/companyadmin/company-profile.png)
+![](attachments/company-profile.png)
 
 ## 2 Company Profile Tab
 
@@ -29,7 +29,7 @@ For more information, see [How to Manage Company & App Roles](/developerportal/c
 
 On the **Company Settings** tab, you can change the password expiration settings (number of days). To do this, set the password expiration (in days) and click **Save**. Note that a value of zero or lower indicates that passwords never expire.
 
-![](attachments/companyadmin/password-expiration.png)
+![](attachments/password-expiration.png)
 
 You can also view the company email domains. This is important for verifying the domains of Mendix users assigned to your company. If the domain list contains incorrect domains or does not contain some of your company's email domains, contact [Mendix Support](mailto:support@mendix.com).
 

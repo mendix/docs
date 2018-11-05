@@ -26,23 +26,19 @@ You are provided with all the information and software which you need to perform
 
 Firstly, you need to create a new Mendix app and an SAP environment where you can run it.
 
-<!-- this step not needed? I'll leave it in, just in case we need to reinstate it
-
 1.  Click **Create App** in the top-right of the Mendix Developer Portal.
 
 	![](attachments/modify-a-mendix-questionnaire-for-sap-successFactors-teched-2018/media/image1.png)
 
--->
+2.  Click **SAP Apps**.
 
-1.  Click **SAP Apps**.
-
-2.  Click the picture of the **Blank App** (with Atlas UI).
+3.  Click the picture of the **Blank App** (with Atlas UI).
 
 	![](attachments/modify-a-mendix-questionnaire-for-sap-successFactors-teched-2018/media/image2.png)
 
-3.  Click **Use this app**.
+4.  Click **Use this app**.
 
-4.  Enter *Employee Questionnaire* and click **Create App**.
+5.  Enter *Employee Questionnaire* and click **Create App**.
  
 	![](attachments/modify-a-mendix-questionnaire-for-sap-successFactors-teched-2018/media/image3.png)
 
@@ -70,7 +66,7 @@ Now you are ready to start implementing the app using visual modeling.
 
 Some of the app has been written already, so you need to import those pieces into your app.
 
-1.  Click **Edit App** on the top-right corner of the Developer Portal.
+1.  Click the *arrow* on the **Edit App** button on the top-right corner of the Developer Portal and click *Edit in Desktop Modeler*.
 
 	![](attachments/modify-a-mendix-questionnaire-for-sap-successFactors-teched-2018/media/image6.png)
 
@@ -118,7 +114,7 @@ Some of the app has been written already, so you need to import those pieces int
 
 	![](attachments/modify-a-mendix-questionnaire-for-sap-successFactors-teched-2018/media/image11.png)
 
-13. Repeat steps 3 through 7 to find and download the **SAP Teched 2018 - SuccessFactors Employee** module.
+13. Repeat steps 8 through 12 to find and download the **SAP Teched 2018 - SuccessFactors Employee** module.
 
 	![](attachments/modify-a-mendix-questionnaire-for-sap-successFactors-teched-2018/media/image12.png)
 

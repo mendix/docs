@@ -66,9 +66,9 @@ Common properties of input elements are described in the table below:
 
 | Property    | Description                                                  |
 | ----------- | ------------------------------------------------------------ |
-| Show Label  | Enable this property if you want to show a label (name) of a widget to the end-user. *This property is enabled by default.* |
+| Show Label  | Enable this property if you want to show a label (name) of a widget to the end-user. <br />*This property is enabled by default.* |
 | Label       | This property only appears if **Show Label** is enabled. Specify the name that will be displayed to the end-users. When you select an attribute, the name of the attribute is filled out as a label. |
-| Editability | Editability indicates whether the end-user will be able to change the value displayed by the widget. Possible values are the following: <ul><li>Editable – the value displayed by the widget is editable</li><li>Read-only – the value is in read-only mode</li><li>Conditional – the widget is editable only if specified conditions are met (this option can be configured in the Desktop Modeler only)</li></ul>**Note** If an attribute set for the widget's data source is of the AutoNumber type, the widget is set into read-only mode by default and the **Editability** setting itself is disabled, because attributes of this type are generated automatically. |
+| Editability | Editability indicates whether the end-user will be able to change the value displayed by the widget. Possible values are the following: <ul><li>Editable – the value displayed by the widget is editable</li><li>Read-only – the value is in read-only mode</li><li>Conditional – the widget is editable only if specified conditions are met (this option can be configured in the Desktop Modeler only)</li></ul>{{%alert type="info" %}}If an attribute set for the widget's data source is of the AutoNumber type, the widget is set into read-only mode by default and the **Editability** setting itself is disabled, because attributes of this type are generated automatically.<br />{{%/alert %}} |
 
 #### 3.2.2 Specific Properties
 
@@ -77,8 +77,8 @@ Specific properties of the input elements are described in the table below:
 | Input Element | Property           | Description                                                  |
 | ------------- | ------------------ | ------------------------------------------------------------ |
 | Text Area     | Grow Automatically | When enabled, the text area grows automatically depending on the amount if text filled out in it. <br />*This property is disabled by default.* |
-| Text Area     | Number of Lines    | This property is only displayed when the **Grow Automatically** option is disabled.  The number of lines determine how many lines the text area shows at the same time. If the text in the text area contains more lines you will have to use a scrollbar to see it all. <br />*Default value: 5* |
-| Radio Buttons | Orientation        | This property defines whether the radio buttons are displayed in your app horizontally or vertically. <br />*Default value: Horizontal*. |
+| Text Area     | Number of Lines    | This property is only displayed when the **Grow Automatically** option is disabled.  The number of lines determine how many lines the text area shows at the same time. If the text in the text area contains more lines you will have to use a scrollbar to see it all. <br />Default value for the **Number of Lines** option: 5 |
+| Radio Buttons | Orientation        | This property defines whether the radio buttons are displayed in your app horizontally or vertically. <br />Default value for **Orientation**: Horizontal. |
 
 ## 4 Design Section {#input-elements-design}
 

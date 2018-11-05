@@ -63,7 +63,7 @@ This category contains documents about the use of specific tasks in the [Develop
 
 ## Related Content
 
-* [Company Admin Settings](/developerportal/general/companyadmin-settings)
+* [Company Admin Settings](/developerportal/company-app-roles/companyadmin-settings)
 * [Collaborate](/developerportal/collaborate)
 * [Deploy](/developerportal/deploy)
 * [Develop](/developerportal/develop)

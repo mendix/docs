@@ -36,7 +36,7 @@ Before deactivating a user, make sure the following points are true for that use
 * They are not the only **SCRUM Master** in an App Team
 * They are not involved in unsolved support tickets with [Mendix Support](https://support.mendix.com)
 
-For more information, see [How to Manage Company & App Roles](/developerportal/general/manage-roles) and [Company & App Roles](/developerportal/company-app-roles/index).
+For more information, see [How to Manage Company & App Roles](/developerportal/company-app-roles/manage-roles) and [Company & App Roles](/developerportal/company-app-roles/index).
 
 To deactivate a user, follow these steps:
 

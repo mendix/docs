@@ -89,7 +89,7 @@ You can change the Technical Contact by following these steps:
 1. Go to the [Developer Portal](http://home.mendix.com) and click **Apps** in the top navigation panel.
 2. Click **My Apps**, and in the drop-down list, click **Nodes**.
 
-    ![](attachments/general/nodes.png)
+    ![](attachments/company-app-roles/nodes.png)
 
 3. Select the node for which you want to change the Technical Contact.
 4. Click **Security** under the **Settings** category.
@@ -113,9 +113,9 @@ It is possible to change or add new App Team roles for a specific app or at the 
 ## 8 Related Content
 
 * [Company & App Roles](/developerportal/company-app-roles/index)
-* [Company Admin Settings](/developerportal/general/companyadmin-settings)
+* [Company Admin Settings](/developerportal/company-app-roles/companyadmin-settings)
 * [How to Leave & Delete an App](../settings/leave-delete-app)
-* [How to Deactivate & Activate an App](../general/deactivate-activate-app)
+* [How to Deactivate & Activate an App](../company-app-roles/deactivate-activate-app)
 * [Security – Node Permissions](/developerportal/settings/node-permissions)
-* [Technical Contact](/developerportal/general/technical-contact)
+* [Technical Contact](/developerportal/company-app-roles/technical-contact)
 

@@ -20,7 +20,7 @@ This how-to tells you how to migrate your app from a Mendix Cloud v3 node to a M
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 *  Have an available v4 [Mendix Cloud](/deployment/mendixcloud) node (to request a licensed v4 Cloud Node, contact your Customer Success Manager (CSM))
-* Have the [Technical Contact](/developerportal/general/technical-contact) role for both v3 and v4 Cloud Nodes
+* Have the [Technical Contact](/developerportal/company-app-roles/technical-contact) role for both v3 and v4 Cloud Nodes
 * Create a new temporary Free App without a Sandbox – instructions for unlinking a Free App from a sandbox are here: [How To Unlink Your Free App from a Sandbox Environment](/developerportal/howto/how-to-unlink-sandbox).
 
 ## 3 The Migration Process

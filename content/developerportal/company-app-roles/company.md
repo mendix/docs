@@ -23,7 +23,7 @@ You can edit various company details on the **Company Profile** tab, such as **C
 
 On the **Company Admins** tab, you can add, edit, or remove a Company Admin.
 
-For more information, see [How to Manage Company & App Roles](/developerportal/general/manage-roles).
+For more information, see [How to Manage Company & App Roles](/developerportal/company-app-roles/manage-roles).
 
 ## 4 Company Settings Tab{#company-settings}
 

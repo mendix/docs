@@ -53,4 +53,4 @@ For more information, see [Security – Node Permissions](../settings/node-permi
 
 * [Deploy](../deploy)
 * [Settings](../settings)
-* [Technical Contact](../general/technical-contact)
+* [Technical Contact](../company-app-roles/technical-contact)

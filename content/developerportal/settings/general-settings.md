@@ -53,7 +53,7 @@ If your app is supported by the Web Modeler, you can enable it by clicking **Ena
 
 ## 5 Related Content
 
-* [How to Manage Company & App Roles](/developerportal/general/manage-roles)
+* [How to Manage Company & App Roles](/developerportal/company-app-roles/manage-roles)
 * [Company & App Roles](/developerportal/company-app-roles/index)
-* [Technical Contact](/developerportal/general/technical-contact)
+* [Technical Contact](/developerportal/company-app-roles/technical-contact)
 

@@ -35,7 +35,7 @@ There are some important points to understand when you want to leave and/or dele
 
 * You cannot delete or deactivate an app if you are the **Technical Contact** of the app
 * Only Free Apps can be deleted
-* App deletion cannot be undone, which means that ALL DATA WILL BE LOST, including all files on the [Team Server](/refguide/team-server) and all data in the Free App [node](../general/nodes) (if applicable)
+* App deletion cannot be undone, which means that ALL DATA WILL BE LOST, including all files on the [Team Server](/refguide/team-server) and all data in the Free App [node](../company-app-roles/nodes) (if applicable)
 
 If you want to leave and delete your app, follow these steps:
 
@@ -57,16 +57,16 @@ If you want to leave and delete your app, follow these steps:
 
 	* Click **Continue** to just leave your app 
 		* If you are the only App Team member of the app project, clicking **Continue** allows you to leave the app project and deactivates the app
-		* Note that because a deactivated app will still exist in the company, only a Company Admin can re-activate the app and invite members to it – for details, see [How to Deactivate & Activate an App](../general/deactivate-activate-app))
+		* Note that because a deactivated app will still exist in the company, only a Company Admin can re-activate the app and invite members to it – for details, see [How to Deactivate & Activate an App](../company-app-roles/deactivate-activate-app))
 	* Click **Continue and delete app** to leave and fully delete the app from your company
 
 	![](attachments/delete-confirmation.png) 
 
 ## 4 Related Content
 
-* [Apps](../general/apps)
-* [How to Deactivate & Activate an App](../general/deactivate-activate-app))
-* [Company Admin Settings](../general/companyadmin-settings)
+* [Apps](../company-app-roles/apps)
+* [How to Deactivate & Activate an App](../company-app-roles/deactivate-activate-app))
+* [Company Admin Settings](../company-app-roles/companyadmin-settings)
 * [General](general-settings)
-* [How to Manage Company & App Roles](../general/manage-roles)
+* [How to Manage Company & App Roles](../company-app-roles/manage-roles)
 * [Company & App Roles](../company-app-roles/index)

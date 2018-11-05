@@ -23,7 +23,7 @@ Before starting with this how-to, please make sure you have completed the follow
 
 *   You have a Free App (Mendix version 5.18 and up)
 *   An available Licensed Cloud Node. To request a licensed cloud node, contact your Customer Success Manager (CSM)
-*   You are the [Technical Contact](/developerportal/general/technical-contact) of the sandbox and the node
+*   You are the [Technical Contact](/developerportal/company-app-roles/technical-contact) of the sandbox and the node
 
 ## 3 Upgrade Steps for a Sandbox Environment
 

@@ -85,7 +85,7 @@ Only the Technical Contact is allowed to do the following:
 * Manage licenses (for example, manage renewals, activations, and upgrades) 
 * Configure alert settings
 
-For more information, see [Technical Contact](/developerportal/general/technical-contact).
+For more information, see [Technical Contact](/developerportal/company-app-roles/technical-contact).
 
 ## 4 App Team Roles {#app-team-roles}
 
@@ -113,7 +113,7 @@ For details on how to manage App Team roles, see the [Editing App Team Roles](ma
 ## 5 Related Content
 
 * [Mendix Profile](../mendix-profile/index)
-* [How to Manage Company & App Roles](/developerportal/general/manage-roles)
-* [Company Admin Settings](/developerportal/general/companyadmin-settings)
+* [How to Manage Company & App Roles](/developerportal/company-app-roles/manage-roles)
+* [Company Admin Settings](/developerportal/company-app-roles/companyadmin-settings)
 * [Technical Contact](technical-contact)
 * [Settings](/developerportal/settings)

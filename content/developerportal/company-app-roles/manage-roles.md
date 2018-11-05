@@ -89,7 +89,7 @@ You can change the Technical Contact by following these steps:
 1. Go to the [Developer Portal](http://home.mendix.com) and click **Apps** in the top navigation panel.
 2. Click **My Apps**, and in the drop-down list, click **Nodes**.
 
-    ![](attachments/company-app-roles/nodes.png)
+    ![](attachments/general/nodes.png)
 
 3. Select the node for which you want to change the Technical Contact.
 4. Click **Security** under the **Settings** category.

@@ -61,13 +61,3 @@ This category contains documents about the use of specific tasks in the [Develop
 
 * [Restore a Backup Locally](restore-backup-locally)
 
-## Related Content
-
-* [Company Admin Settings](/developerportal/company-app-roles/companyadmin-settings)
-* [Collaborate](/developerportal/collaborate)
-* [Deploy](/developerportal/deploy)
-* [Develop](/developerportal/develop)
-* [General](/developerportal/general)
-* [Mendix Support](/howtogeneral/support)
-* [Operate](/developerportal/operate)
-* [Settings](/developerportal/settings)

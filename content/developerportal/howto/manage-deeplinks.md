@@ -39,9 +39,9 @@ If you want to provide links directly to a specific page on the Developer Portal
 1. Go to your browser.
 2. Paste the link in the browser's address bar.
 3. Paste the AppID, storyID or the feedbackItemNr after the final slash.
- 
+
 The following deep links can be used:
- 
+
 * Specific app: `https://sprintr.home.mendix.com/link/project/<appID>`
 * Stories overview for app: `https://sprintr.home.mendix.com/link/capture/<appID>`
 * Specific story ID: `https://sprintr.home.mendix.com/link/story/<storyID>`
@@ -52,10 +52,3 @@ The following deep links can be used:
 * Alerts for app: `https://cloud.home.mendix.com/link/monitor/<appID>`
 * Logs for app: `https://cloud.home.mendix.com/link/logs/<appID>`
 
-## 4 Related Content
-
-* [Collaborate](/developerportal/collaborate)
-* [Developer Portal](/developerportal/general)
-* [Mendix Cloud Status](/developerportal/deploy/mendix-cloud-status)
-* [Operate](/developerportal/operate)
-* [Settings](/developerportal/settings)

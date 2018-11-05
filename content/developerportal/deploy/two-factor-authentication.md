@@ -15,7 +15,7 @@ This document describes the purpose and the fuctionality of two-factor authentic
 
 Two-factor authentication (2FA) validates a second authentication mechanism next to your password. It is required for Mendix Cloud node activities done on a production environment. 2FA ensures that you are authenticated when performing sensitive activities, such as deploying packages and handling production data.
 
-![](attachments/general/production.png)
+![](attachments/two-factor-authentication/production.png)
 
 For more information, see [Google Authentication](https://www.google.com/landing/2step/#tab=how-it-protects).
 
@@ -23,11 +23,11 @@ For more information, see [Google Authentication](https://www.google.com/landing
 
 Before performing an operation on the production envrionment, you will be required to provide the authentication code.
 
-![](attachments/general/google.png)
+![](attachments/two-factor-authentication/google.png)
 
 After entering the authentication code, your browser session is authorized for the next eight hours.
 
-![](attachments/general/information.png)
+![](attachments/two-factor-authentication/information.png)
 
 ## 4 Setting Up and Disabling
 
@@ -47,10 +47,10 @@ For example, if you want to change your authentication method from **SMS Authent
 
 Team members with **App Team – Deploy Permissions** are authorized to have node permissions. The Technical Contact can grant those members different permissions that can differ per environment. For example, you might want to limit the access of external developers to only the acceptance environment.
 
-For more information, see [Security – Node Permissions](/developerportal/settings/node-permissions).
+For more information, see [Security – Node Permissions](../settings/node-permissions).
 
 ## 7 Related Content
 
-* [Deploy](/developerportal/deploy)
-* [Settings](/developerportal/settings)
-* [Technical Contact](/developerportal/general/technical-contact)
+* [Deploy](../deploy)
+* [Settings](../settings)
+* [Technical Contact](../general/technical-contact)

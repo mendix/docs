@@ -207,7 +207,7 @@ You can also view details in the following sections.
 
 ### 9.1 Latest Messages
 
-In this section, you can see all the notifications from [Buzz](../general/index#buzz) of which you are a part (for example, when your colleague has created an app or added a new story).
+In this section, you can see all the notifications from [Buzz](../collaborate/appbuzz) of which you are a part (for example, when your colleague has created an app or added a new story).
 
 ### 9.2 Documents
 

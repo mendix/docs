@@ -209,7 +209,6 @@ Finally, open the file to see your exported data.
 
 ## 9 Related Content
 
-* [App Platform](/refguide7/app-platform)
 * [How to Contribute to a GitHub Repository](/howto7/collaboration-requirements-management/contribute-to-a-github-repository)
 * [How to Share the Development Database](/howto7/collaboration-requirements-management/sharing-the-development-database)
 * [How to Start Your Own Repository](/howto7/collaboration-requirements-management/starting-your-own-repository)

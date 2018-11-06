@@ -112,6 +112,8 @@ Each application requires power users who should be able to administer technical
 This information can be exploited by an attacker (for example, by trying to guess the password). Even though Mendix will block the user for  about 5 minutes after three unsuccessful login attempts, it is recommended to rename the default *MxAdmin* user.
 The user name of the administrator can be changed at the project security settings under the *Administrator* tab.
 
+When deployed to the MendixCloud, you can activate the changed username by successfully changing the password with the "Change admin password" button on the environment.
+
 ## 10 Use SSL on Consumed Web Services Whenever Possible
 
 Most applications consume (web) services that could be located within an organization itself or at an external third party. When such a service is consumed by an application, your request crosses multiple networks and devices before it reaches its endpoint (the service). A potential attacker in between would be able to read and manipulate the conversation between the application and the service.

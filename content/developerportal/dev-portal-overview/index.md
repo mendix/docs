@@ -20,7 +20,7 @@ The Developer Portal consists of the header items described below.
 
 ## 2 Buzz {#buzz}
 
-In the company [Buzz](../collaborate/appbuzz), you can communicate with the users in your company:
+In the company [Buzz](../collaborate/buzz), you can communicate with the users in your company:
 
 ![](attachments/developerportal-buzz.png)
 

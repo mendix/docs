@@ -57,20 +57,13 @@ _Default value:_ 30
 Setting this setting to yes can greatly decrease performance!
 
 {{% alert type="warning" %}}
-
 When consuming a WSDL that uses encoding, turning on validation will lead to a consistency error, because it is not WS-I compliant.
+{{% /alert %}}
 
-{{% /alert %}} 
-
-When this setting is disabled, schema validation is not possible. This happens in two cases:
-
-* When you have configured the [consumed web service](consumed-web-service) to send binary data as attachments
-* When you have configured web service calls to use the new (optimized) implementation in the [project's runtime settings](project-settings)
+Schema validation is not supported when you configure the [consumed web service](consumed-web-service) to send binary data as attachments.
 
 {{% alert type="info" %}}
-
-The new (optimized) implementation feature was introduced in version 7.15.0.
-
+Support for schema validation using the [(optimized) implementation](project-settings#3.13-Web-Service-Calls) was introduced in version 7.20.
 {{% /alert %}}
 
 _Default value:_ No

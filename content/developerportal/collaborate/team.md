@@ -8,18 +8,17 @@ tags: ["Team","Developer Portal"]
 
 ## 1 Introduction
 
-To invite team members to an app as well as to view and manage an app, follow these steps:
+Your App Team includes all the roles working on developing the app as well as ideating and reviewing it. Mendix enables developers from both IT and business with mixes experience levels to collaborate in the Developer Portal while building apps.
 
-1. Go to the [Developer Portal](http://home.mendix.com).
-2. Click **Apps** in the top navigation panel and select the app you want to manage.
-3. Click **Team** under the **Collaborate** category.
+To view and manage your App Team members, follow these steps:
 
-## 2 Team
+1. Click **Apps** in the top navigation panel of the [Developer Portal](http://home.mendix.com) and select the app you want to manage.
+2. Click **Team** under the **Collaborate** category.
 
 On the **Team** page, you will see an overview with the following information about the team members:
 
-* Name
-* Role - App Team role (see [Company & App Roles](/developerportal/company-app-roles/index) for more information)
+* **Name**
+* **Role** – the developer's App Team role (for details on available roles, see the [App Team Roles](/company-app-roles/index#app-team-roles) section of *Company & App Roles*)
 
 ### 2.1 Managing the Team
 

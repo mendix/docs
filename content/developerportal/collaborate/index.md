@@ -14,7 +14,7 @@ This category is divided into the five pages presented below.
 
 The **Buzz** lets you see and share ideas as well as collaborate with your team. You will get an overview of new team members, new stories and their changes, and sprints which are added or completed.
 
-For more details, see [Buzz for App](appbuzz).
+For more details, see [Buzz](buzz).
 
 ## 3 Team
 

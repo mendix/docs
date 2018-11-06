@@ -18,7 +18,7 @@ To view and manage your App Team members, follow these steps:
 On the **Team** page, you will see an overview with the following information about the team members:
 
 * **Name**
-* **Role** – the developer's App Team role (for details on available roles, see the [App Team Roles](/company-app-roles/index#app-team-roles) section of *Company & App Roles*)
+* **Role** – the developer's App Team role (for details on available roles, see the [App Team Roles](../company-app-roles/index#app-team-roles) section of *Company & App Roles*)
 
 ### 2.1 Managing the Team
 

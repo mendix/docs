@@ -21,10 +21,10 @@ Before you can start with this how-to, please make sure you have completed the f
 
 * Be the [Technical Contact](/developerportal/company-app-roles/technical-contact) of the node
 
-In case you have created an app in the **Mendix Modeler**, you can upload it to the **Team Server** (see [Upload To Version Control Dialog](/refguide/upload-to-version-control-dialog)) and a repository will be created automatically.
+If you have created an app in the **Mendix Modeler**, you can upload it to the **Team Server** (see [Upload To Version Control Dialog](/refguide/upload-to-version-control-dialog)) and a repository will be created automatically.
 
-*   Make sure no **Sandbox** is linked to your app. (Every **Team Server** app is linked to a **Sandbox** automatically).
-Read [this](how-to-unlink-sandbox) how-to to learn  **unlink your Sandbox** from your app. 
+*   Make sure no environments are linked to your app. (Every **Team Server** app is linked to a **Sandbox** automatically).
+Instructions on how to do this are in [How To Unlink Your Free App from a Sandbox Environment](how-to-unlink-sandbox).
 
 ## 3 Linking a App to a Licensed Cloud Node
 
@@ -34,23 +34,28 @@ Read [How to Deploy to the Mendix Cloud](deploying-to-the-cloud) to learn how to
 
 1.  In the [Developer Portal](http://home.mendix.com), go to **Apps** and select the *app* you want to link to the *node*.
 2.  Once you are in the *app*, go to the **'Environments'** tab in the left navigation panel.
-3.  Click **Select Node**.
-4.  Select the correct *node* by clicking **Use this Node** and link it to your *app*. The current linked app will be *dislinked automatically*.
+3.  Click **Select a Node**.
+4.  Select the correct *node* by clicking **Use this Node** and link it to your *app*. *The current linked app will be unlinked automatically*.
 
 ## 5 Exchange Linked Apps Between Nodes
 
-In case you want to exchange two apps with nodes who are already linked, you can create a new (third) app.
+If you want to swap the nodes of two apps which are already linked to these nodes, you can create a new (third) app.
 
-App A → Node 1
-App B → Node 2
-App C (new app)
+For example, take the following case:
 
-For example, to be able to link **App A** to **Node 2**, follow these steps:
+**App A** is on **Node 1**
 
-1. Create a new empty app **App C**.
-2. Link **App C** this **Node 1** (see [3.1 Method 1](how-to-link-app-to-node)). 
-3. Now that **Node 1** is released from **App A**, it can be linked to **Node 2** (see [3.2 Method 2](how-to-link-app-to-node)).
-4. **App B** will no longer have a node. You can link **App B** to **Node 1** by following [3.2 Method 2](how-to-link-app-to-node).
+**App B** is on **Node 2**
+
+To link **App A** to **Node 2** and **App B** to **Node 1**, follow these steps:
+
+1. Create a new empty app **App C** which is not connected to any environment.
+
+2. Link **App C** to **Node 1** (see [3.1 Method 1 in *How To Link Your Free App to a Licensed Cloud Node*](how-to-link-app-to-node)). This will unlink **App A**.
+
+3. Now that **App A** is unlinked from **Node 1**, it can be linked to **Node 2** (see [3.2 Method 2 in *How To Link Your Free App to a Licensed Cloud Node*](how-to-link-app-to-node)).
+
+4. **App B** will now no longer have a node. You can link **App B** to **Node 1** by following [3.2 Method 2 in *How To Link Your Free App to a Licensed Cloud Node*](how-to-link-app-to-node).
 
 ## 6 Related Content
 

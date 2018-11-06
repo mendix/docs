@@ -12,15 +12,15 @@ In the Developer Portal, the Buzz lets you see Mendix app activity in your compa
 
 * The company Buzz, which is the landing page when you sign in to the Developer Portal:
 
-    ![](attachments/companybuzz.png)
+    ![](attachments/buzz.jpg)
 
     *   You can view the Buzz activity for **All** (**Company**), or you can filter the activity you see and the comments you share in the **Show activity for** and **Share with** menus
 
 * Buzz for a specific app, which is the landing page when you open that app project:
 
-    ![](attachments/appbuzz.png)
+    ![](attachments/app-buzz.jpg)
 
-    * You also see your fellow **Team** members on the right side of the app Buzz page
+    * You also see your fellow **Team** members on the right side of the app's Buzz page
       * To invite new [App Team](team) members, click the **+** icon
       * Click **Show all** to go to the **Team** page for the app
 

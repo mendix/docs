@@ -21,8 +21,10 @@ This how-to describes the process of upgrading your Free App to a Licensed App.
 
 Before starting with this how-to, please make sure you have completed the following prerequisites.
 
-*   You have a Free App (Mendix version 5.18 and up)
-*   An available Licensed Cloud Node. To request a licensed cloud node, contact your Customer Success Manager (CSM)
+*   You have a Free App (Mendix version 5.18 and above)
+*   An available licensed cloud *node*
+    * if your contract allows for more licensed nodes, please reach out to Mendix Support (see https://support.mendix.com for contact details) so they can create the node for you
+    * if your contract does not allow for more licensed nodes, please contact your Customer Success Manager (CSM)
 *   You are the [Technical Contact](/developerportal/company-app-roles/technical-contact) of the sandbox and the node
 
 ## 3 Upgrade Steps for a Sandbox Environment
@@ -31,7 +33,7 @@ If your app has a sandbox environment linked to it, you should follow the steps 
 
 ### 3.1 Download a Backup
 
-If your Free App is linked to a Sandbox environment you will first need to create a backup of your data that is stored in the Sandbox.
+If your Free App is linked to a Sandbox environment you will first need to create a backup of the data stored in the Sandbox.
 
 {{% alert type="warning" %}}
 
@@ -39,7 +41,7 @@ Please note that because you are going to unlink the Sandbox from your Free App,
 
 {{% /alert %}}
 
-The documentation on how to download a backup can be found [here](how-to-download-a-backup).
+The documentation on how to download a backup can be found in [How To Download a Backup](how-to-download-a-backup).
 
 ### 3.2 Unlink your Free App from Sandbox
 
@@ -47,29 +49,29 @@ Follow the instructions from paragraph **2.1 Method 1** of the [How to Connect y
 
 {{% alert type="info" %}}
 
-If you have just unlinked your Free App from a Sanbox, you only have to refresh the page and follow the steps 4 and 5 of the documentation about How to Unlink Your Free App from a Sandbox Environment.
+If you have just unlinked your Free App from a Sandbox, you only have to refresh the page and follow the steps 4 and 5 of the documentation about How to Unlink Your Free App from a Sandbox Environment.
 
 {{% /alert %}}
 
-The documentation on how to unlink your Free App from a Sandbox can be found [here](how-to-unlink-sandbox).
+The documentation on how to unlink your Free App from a Sandbox can be found in [How To Unlink Your Free App from a Sandbox Environment](how-to-unlink-sandbox).
 
 ### 3.3 Link Your Free App to Licensed Cloud Node
 
 If you had a Sandbox linked to your Free App, you had to first create a backup and unlink the Sandbox. The next step is linking your Free App to a licensed cloud node.
 
-The documentation on how to link your Free App to a licensed cloud node can be found [here](how-to-link-app-to-node).
+The documentation on how to link your Free App to a licensed cloud node can be found in [How To Link Your Free App to a Licensed Cloud Node](how-to-link-app-to-node).
 
 ### 3.4 Restore Backup
 
 After you have linked your App to a licensed node, you will need to restore a backup from your Sandbox environment.
 
-The documentation on how to restore a backup can be found [here](how-to-restore-a-backup).
+The documentation on how to restore a backup can be found in [How To Restore a Backup](how-to-restore-a-backup).
 
 ## 4 Upgrade Steps for a Free App Without a Sandbox Environment
 
 If you do not have a Sandbox linked to your Free App, you only have to follow instructions to link your Free App to a Licensed Cloud Node.
 
-Learn [How to Link Your Free App to a Licensed Cloud Node](how-to-link-app-to-node).
+To learn how to do this, see [How to Link Your Free App to a Licensed Cloud Node](how-to-link-app-to-node).
 
 ## 5 Related Content
 

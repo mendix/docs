@@ -2,44 +2,49 @@
 title: "Buzz"
 category: "Collaborate"
 menu_order: 10
-description: "This page describes the app Buzz, which is the landing page for an app."
+description: "This page describes the Mendix Buzz, which is the landing page for a Mendix app project."
 tags: ["Buzz","Developer Portal"]
 ---
 
-## 1 Introduction
+## 1 Buzz Locations
 
-In the **Developer Portal**, there are two types of **Buzz** pages:
+In the Developer Portal, the Buzz lets you see Mendix app activity in your company as well as collaborate and share ideas with your App Team. There are two types of **Buzz** pages:
 
-*   **The company Buzz**
+* The company Buzz, which is the landing page when you sign in to the Developer Portal:
 
     ![](attachments/companybuzz.png)
 
-*   **The app Buzz**
+    *   You can view the Buzz activity for **All** (**Company**), or you can filter the activity you see and the comments you share in the **Show activity for** and **Share with** menus
+
+* Buzz for a specific app, which is the landing page when you open that app project:
 
     ![](attachments/appbuzz.png)
 
-## 2 App Buzz
+    * You also see your fellow **Team** members on the right side of the app Buzz page
+      * To invite new [App Team](team) members, click the **+** icon
+      * Click **Show all** to go to the **Team** page for the app
 
-The app Buzz is the landing page after you open the app in the **Developer Portal**. Here you can view the latest updates on your app.
 
-You can find the app Buzz by following these steps: 
+## 2 Communicating on the Buzz
 
-1. Go to the [Developer Portal](http://home.mendix.com). 
-2. Click **Apps** and double-click to select an app. You will automatically be forwarded to the app Buzz page.
+### 2.1 Updating Your Status
 
-### 2.1 Conversations
+The easiest way to communicate with others in your company and on your team is by leaving comments in the Buzz. Click **Update status** to leave a relevant comment about an app project and participate in ongoing discussions about your Mendix apps.
 
-The Buzz lets you see and share ideas as well as collaborate with your team. You can communicate with your team by the following actions:
+![](attachments/update-status.png)
 
-*   Updating the status
-*   Starting a poll
+You can also add attachments for support and to add to the discussion with your colleagues.
 
-### 2.2 Team
+### 2.2 Starting a Poll
 
-On the right side of the screen, you can see your team members and invite new team members. To invite new members, click the plus sign (**+**).
+If you want to hear from various people in your company or on your App Team, click **Start a poll** to design and implement a quick poll on a relevant question:
 
-When you click **Show all**, you will be forwarded to the **Team** page.
+![](attachments/poll.png)
+
+In the **Add poll answer** box, you can add various answer choices. This is a great way to collaborate with and get feedback from your App Team!
 
 ## 3 Related Content
 
-*   [Collaborate](/developerportal/collaborate)
+*   [App Team](team)
+*   [Springs & Stories](stories)
+

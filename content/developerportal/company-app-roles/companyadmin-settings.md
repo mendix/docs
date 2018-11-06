@@ -20,7 +20,7 @@ To access the **Company Admin** settings as a Company Admin, follow these steps:
 2. Click your avatar in the top-right of the screen.
 3. Click **Company Admin**.
 
-![](attachments/companyadmin/company-admin.png)
+![](attachments/company-admin.png)
 
 ## 3 Company Admin Settings to Manage
 

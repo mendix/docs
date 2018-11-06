@@ -14,7 +14,7 @@ You must be a Company Admin to access this page and these settings.
 
 There are two tabs on the **Apps** page with settings to manage:
 
-![](attachments/companyadmin/app-settings.png)
+![](attachments/app-settings.png)
 
 ## 2 Apps Tab
 
@@ -32,7 +32,7 @@ To create a report of the apps owned by your company, click **Create Report**. T
 
 On the **Roles** tab, you can edit and add App Team member roles.
 
-![](attachments/companyadmin/apps-roles.png)
+![](attachments/apps-roles.png)
 
 For more information, see the [App Team Member Roles](/developerportal/company-app-roles/index) section of *Company & App Roles*.
 

@@ -20,7 +20,7 @@ Within the company there are three roles, which are described below.
 
 The Company Admin is a "super role" allowed to manage all the settings of the company, including the settings of the company's apps, cloud nodes, and users. A company can have multiple Company Admins, but regular users cannot see who has the Company Admin role.
 
- ![](attachments/companyadmin/company-admin.png)
+ ![](attachments/company-admin.png)
 
 For details on this role, see [Company Admin Settings](companyadmin-settings).
 
@@ -32,11 +32,11 @@ To view the Company Contact, follow these steps:
 
 1. Go to the [Developer Portal](http://home.mendix.com) and in the top-right corner, click your avatar and select **My Profile**:
 
-    ![](attachments/general/show-profile.png)
+    ![](attachments/show-profile.png)
 2. Below your name, click your the name of your company.
 3. Below **Contact**, you can see the Company Contact:
 
-    ![](attachments/general/company-contact.png)
+    ![](attachments/company-contact.png)
 
 A Company Admin can change the Company Contact on their Company Admin [Company](company) page. For more information, see the [Changing the Company Contact](manage-roles#change-company-contact) section of *How to Manage Company & App Roles*.
 
@@ -46,11 +46,11 @@ Regular users are all company members. Regular users can join the company, start
 
 By selecting **My Company's Apps** in the [Developer Portal](http://home.mendix.com), a regular user can view details about the apps made in their company.
 
-![](attachments/general/myapps.png)
+![](attachments/myapps.png)
 
 As a regular user, you cannot join an App Team by yourself. If you want to join an App Team, you have to ask a current App Team member (with the **Invite** permission) to send an invitation. Because App Team members are not visible to users outside that App Team, you can ask the App Contact to send the invite:
 
-![](attachments/general/company-app.png)
+![](attachments/company-app.png)
 
 {{% alert type="info" %}}
 It is thus important that the App Contact has the correct permissions to manage the app (for example, the SCRUM Master role).
@@ -62,7 +62,7 @@ For more information on roles and permissions, see [App Team Roles](#app-team-ro
 
 When you view the details for a specific app, you will see the two roles responsible for the app: **App contact** and **Technical contact**. These are users you can contact with questions related to the app.
 
-![](attachments/settings/app-roles.png)
+![](attachments/app-roles.png)
 
 These app roles are described below.
 

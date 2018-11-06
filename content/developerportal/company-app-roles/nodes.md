@@ -14,13 +14,13 @@ You must be a Company Admin to access this page and these settings.
 
 On the **Nodes** page, you can manage the cloud nodes for your company. Select the cloud node you want to manage by clicking **Details**:
 
-![](attachments/companyadmin/node-select.png)
+![](attachments/node-select.png)
 
 ## 2 Node Details Tab
 
 On the **Node Details** tab for your selected node,  you can view specific details about the app node:
 
-![](attachments/companyadmin/node-details.png)
+![](attachments/node-details.png)
 
 For details on the **Technical contact**, see [General Settings](../settings/general-settings).
 

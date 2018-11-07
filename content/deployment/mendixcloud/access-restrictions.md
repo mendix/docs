@@ -125,6 +125,6 @@ If it is desired that the `/ws/` path can still be reached from the office locat
 ## 6 Related Content
 
 * [Certificates](/deployment/mendixcloud/certificates)
-* [Deploy](/developerportal/deploy)
+* [Deploy and Manage](/developerportal/deploy)
 * [Environments](/developerportal/deploy/environments)
 * [Environment details](/developerportal/deploy/environments)

@@ -17,7 +17,7 @@ In the company **Buzz**, you can communicate with Mendix users in your company a
 
 In **Apps**, you can find your nodes, sandboxes, and company's apps.
 
-After you select an app, you can [collaborate](/developerportal/collaborate), [develop](/developerportal/develop), [deploy](/developerportal/deploy), and [operate](/developerportal/operate) the app with your App Team as well as manage its [settings](/developerportal/settings).
+After you select an app, you can [collaborate](/developerportal/collaborate), [develop](/developerportal/develop), [deploy and manage](/developerportal/deploy), and [operate](/developerportal/operate) the app with your App Team as well as manage its [settings](/developerportal/settings).
 
 For more information on licensed apps, see the [Deployment](/deployment) documentation category.
 

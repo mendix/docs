@@ -8,7 +8,7 @@ This category contains documents about the use of specific tasks in the [Develop
 
 ## General
 
-* [Manage Developer Portal Deep Links](/developerportal/howto/manage-deeplinks)
+* [Manage Developer Portal Deep Links](manage-deeplinks)
 
 ## Collaborate
 
@@ -29,13 +29,9 @@ This category contains documents about the use of specific tasks in the [Develop
 * [Link Your Free App to a Licensed Cloud Node](how-to-link-app-to-node)
 * [Link a Different App to a Cloud Node](how-to-link-a-different-app-to-a-node)
 
-### Deployment
-
-* [Deploy to the Mendix Cloud](deploying-to-the-cloud)
-
 ### Environments 
 
-* [View the Mendix Cloud Version and Region](/developerportal/howto/cloud-version-region)
+* [View the Mendix Cloud Version and Region](cloud-version-region)
 
 ### Sandbox
 
@@ -49,7 +45,7 @@ This category contains documents about the use of specific tasks in the [Develop
 
 ### Alerts
 
-* [Receive Environment Status Alerts](/developerportal/howto/receive-alerts)
+* [Receive Environment Status Alerts](receive-alerts)
 
 ### Backups
 

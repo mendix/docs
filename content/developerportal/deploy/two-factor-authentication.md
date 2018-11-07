@@ -51,6 +51,6 @@ For more information, see [Security – Node Permissions](../settings/node-permi
 
 ## 7 Related Content
 
-* [Deploy](../deploy)
+* [Deploy and Manage](../deploy)
 * [Settings](../settings)
 * [Technical Contact](../company-app-roles/technical-contact)

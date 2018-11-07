@@ -1,7 +1,7 @@
 ---
-title: "Deploy to the Mendix Cloud"
-category: "How-To's"
-menu_order: 140
+title: "Mendix Cloud"
+category: "Deploy and Manage"
+menu_order: 20
 description: "Describes how to deploy to the Mendix Cloud."
 tags: ["Deploy","Mendix Cloud","Developer Portal"]
 frontpage_featured: true
@@ -43,15 +43,15 @@ There are two methods for deploying your app to the Mendix Cloud. The first opti
 2. Open the licensed app.
 3. Click **Project** in the top menu bar and select **Deploy to licensed cloud node**:
 
-    ![](attachments/deploy/18581233.png)
+    ![](attachments/mendix-cloud-deploy/deploy-to-cloud-node.png)
 
 4. Click **Deploy**:
 
-    ![](attachments/deploy/18581232.png)
+    ![](attachments/mendix-cloud-deploy/select-revision.png)
 
 5. The deployment is now in progress. To see the uploaded package, click **Show online**:
 
-    ![](attachments/deploy/18581231.png)
+    ![](attachments/mendix-cloud-deploy/deployment-started.png)
 
 ### 3.2 Creating a Package from Team Server in the Developer Portal
 

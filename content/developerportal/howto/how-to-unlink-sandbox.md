@@ -51,7 +51,7 @@ The Free App has now been unlinked from the Sandbox environment.
 ## 5 Related Content
 
 *   [How to Configure Custom Domains](custom-domains)
-*   [How to Deploy to the Mendix Cloud](deploying-to-the-cloud)
+*   [How to Deploy to the Mendix Cloud](../deploy/mendix-cloud-deploy)
 *   [How to Download a Backup](how-to-download-a-backup)
 *   [How to Link a Different App to a Cloud Node](how-to-link-a-different-app-to-a-node)
 *   [How to Link Your Free App to a Licensed Cloud Node](how-to-link-app-to-node) 

@@ -134,7 +134,7 @@ To generate the app store packages, go to [Build.PhoneGap.com](https://build.pho
 ## 6 Related Content
 
 * [Customizing PhoneGap Build Packages](/refguide/customizing-phonegap-build-packages)
-* [Deploy](/developerportal/deploy)
+* [Deploy and Manage](/developerportal/deploy)
 * [Offline](/refguide/offline)
 * [How to Publish a Mendix Hybrid Mobile App in Mobile App Stores](/howto/mobile/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)
 * [Adobe PhoneGap Build](https://build.phonegap.com/)

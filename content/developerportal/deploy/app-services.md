@@ -87,7 +87,7 @@ For more information, see [How to Share App Store Content](/community/app-store/
 
 ## 5 Related Content
 
-* [Deploy](/developerportal/deploy)
+* [Deploy and Manage](/developerportal/deploy)
 * [Mendix App Services: Putting Them to Work for Your Projects](https://www.mendix.com/videos/mendix-app-services-putting-work-projects-pieter-van-balen-mendix-developer/)
 * [Published App Service](/refguide/published-app-services)
 * [How to Share App Store Content](/community/app-store/share-app-store-content)

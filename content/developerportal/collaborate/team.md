@@ -41,7 +41,7 @@ On the  **App Team** tab of the **Security** page, you can do the following:
 * Click **Add member** to add a new person to the App Team (see the [Inviting Team Members](#inviting) section below for more details)
 *  Click **Role settings** to view and edit the permissions for the App Team roles
 
-	{{% image_container width="400" %}![](attachments/role-settings.png)
+	{{% image_container width="400" %}}![](attachments/role-settings.png)
 	{{% /image_container %}}
 
 * Click **Change log** to view the change log for the App Team

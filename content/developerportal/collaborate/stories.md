@@ -10,81 +10,74 @@ tags: ["Stories","Developer Portal"]
 
 In **Stories**, you are able to manage sprints, stories, and labels. 
 
-![](attachments/stories.jpg)
+![](attachments/stories.png)
 
 For more information, see [How to Manage Sprints and Stories](/developerportal/howto/managing-your-application-requirements-with-mendix).
 
 ## 2 Actions
 
-Above the stories, you can find the following action buttons:
-
-* **New story** – add a new story
-* **New sprint** – add a new sprint
-* **Move to** – move the selected story to a different sprint
-* **Label** – use existing labels or create a new label for the selected story
-* **More**
-   * **Delete selection** – delete the selected story
-   * **Complete current sprint** – complete the current sprint; all stories have to be **Done** before completing the current sprint 
-   * **Import / Export** – import/export to Excel
-   * **Manage labels** – rename, merge, or delete a label
-   * **Manage story template** – create and edit default tasks that you can add as a task to every new story
-   * **History** – show the details of a story and/or revert changes
+You can perform the actions described below via the buttons that are available about your app project's stories.
 
 ### 2.1 New Story
 
-To create a new story , you must first select the correct **Sprint** and provide the following information:
+To add a new story, you need to fill in some details, including what your story is about and what type of story it is.
 
-* The title of the story
-* **Story type**
-    * **Feature**
-    * **Bug**
-* The number of **Story points**
-* Add **Labels** or use existing labels
-* A **Description** of the story
-* **Add default tasks based on story template** (if necessary)
-  * The default tasks created in the **Story template** will automatically appear as sub-tasks in this story
+![](attachments/story-example.png)
 
-### 2.2 New Sprint
+### 2.2 New sprint
 
-In this section, you are able to plan the following:
+To add a new sprint, you need to fill in some details, including the name of the sprint or release and where it should be located in the structure of your **Stories** page.
 
-* **Sprint**
-    * **Name**
-    * The order of the sprint
-    * The **Duration** of the sprint
-    * The start date of the sprint
-* **Release**
-    * **Name**
-    * **Date**
-    * **Description**
-* **Other**
-    * **Name**
-    * **Date**
-    * **Description**
-    * **Who is responsible?**
+![](attachments/sprint-example.png)
 
-### 2.3 Import / Export to Excel
+### 2.3 Move To
 
-The export options are the following:
+To move a story, select it and then click the sprint where it should be moved.
 
-* **Export all stories to Excel (including completed sprints)**
-* **Export all stories to Excel**
-* **Export single sprint to Excel**
-* **Update stories from Excel**
+![](attachments/move-to.png)
 
-## 3 Filter
+### 2.4 Label
 
-It is possible to filter on the following:
+To identify and organize stories, you can create and use labels.
 
-* **Sprints**
-    * **Archived**
-    * **Current**
-    * **Upcoming**
-    * **Backlog**
-* **Story**
-    * **Done**
-    * **Feature**
-    * **Bug**
+![](attachments/label.png)
+
+You can also perform various actions to [manage labels](#manage-labels).
+
+## 3 More Actions
+
+Via the **More** button, you can perform the actions described below.
+
+### 3.1 Delete Selection
+
+Delete the selected story
+
+![](attachments/delete-selection.png)
+
+**Complete current sprint** – complete the current sprint (note that all stories have to be marked **Done** before you are able to complete a sprint)
+
+**Import / Export** – export stories to or import stories from Excel
+
+![](attachments/import-export.png)
+
+### Manage labels {#manage-labels}
+
+Edit, merge, create, and delete labels
+
+    {{% image_container width="350" %}}![](attachments/labels.png)
+    {{%  /image_container %}}
+
+**Manage story template** – create and edit default tasks that you can add as a task to every new story
+
+{{% image_container width="350" %}}![](attachments/default-task.png)
+{{%  /image_container %}}
+
+To enable these default tasks, select the **Add default tasks based on story template** check box when creating a new story
+
+**History** – view the details for stories and revert changes if necessary
+
+{{% image_container width="350" %}}![](attachments/default-task.png)
+{{%  /image_container %}}
 
 ## 4 Related Content
 

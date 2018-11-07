@@ -1,6 +1,6 @@
 ---
 title: "Two-Factor Authentication"
-category: "General"
+parent: "General"
 description: "This page describes the purpose of the Two-Factor Authentication."
 tags: ["Authenticator","Developer Portal","Cloud","Permissions"]
 ---

@@ -41,6 +41,7 @@ The Web Modeler enables you to do the following:
 * [Consistency Errors in the Web Modeler](consistency-errors-wm)
   * [Page Editor Consistency Errors in the Web Modeler](consistency-errors-pages-wm)
   * [Navigation Consistency Errors in the Web Modeler](consistency-errors-navigation-wm)
+  * [Microflow Editor Consistency Errors in the Web Modeler](consistency-errors-microflows-wm)
 * [Theme Customizer in the Web Modeler](theme-customizer-wm)
 * [App Settings Overview in the Web Modeler](app-settings-wm)
 * [Web Modeler Version & Mendix Version Correlation](versions-wm)

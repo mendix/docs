@@ -18,13 +18,15 @@ Consistency errors can occur in the following editors of the modeler:
 
 * Page editor (For information on consistency error in the page editor, see [Page Editor Consistency Errors in the Web Modeler](consistency-errors-pages-wm))
 * Navigation document (For information on consistency error in the navigation, see [Navigation Consistency Errors in the Web Modeler](consistency-errors-navigation-wm))
-* Microflows editor
+* Microflows editor (For information on consistency error in the navigation, see [Microflow Editor Consistency Errors in the Web Modeler](consistency-errors-microflows-wm))
 
 ##  2 Related Content
 
 * [Page Editor Consistency Errors in the Web Modeler](consistency-errors-pages-wm)
 * [Navigation Consistency Errors in the Web Modeler](consistency-errors-navigation-wm)
+* [Microflow Editor Consistency Errors in the Web Modeler](consistency-errors-microflows-wm)
 * [Checks Overview in the Web Modeler](checks-wm)
 * [Page Editor Overview in the Web Modeler](page-editor-wm)
 * [Navigation Document in the Web Modeler](navigation-wm)
 * [Microflows in the Web Modeler](microflows-wm)
+* [How to Publish and View Your App](../../howto/tutorials/start-with-a-blank-app-3-publish-and-view-your-app)

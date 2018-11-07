@@ -91,20 +91,20 @@ With a Free App, it's only possible to deploy your app to a Sandbox environment 
 
 Once you have created and worked on your App, you will want to share it with others in the Free App. You can deploy your Free App to a Sandbox environment by clicking **Run** at the top of your Mendix Modeler. This will automatically deploy your app to a Sandbox.
 
-![](attachments/deploy/runapp2.jpg)
+![](attachments/mendix-cloud-deploy/runapp2.jpg)
 
 ### 5.2 Method 2
 
 If you want to choose whether you want to run your app locally or in the Sandbox, you can enable the Sandbox option by clicking **Run**:
 
-![](attachments/deploy/runapp.jpg)
+![](attachments/mendix-cloud-deploy/runapp.jpg)
 
 ## 6 Related Content
 
-* [How to Configure Custom Domains](custom-domains)
-* [How to Link a Different App to a Cloud Node](how-to-link-a-different-app-to-a-node)
-* [How to Link Your Free App to a Licensed Cloud Node](how-to-link-app-to-node)
+* [How to Configure Custom Domains](../howto/custom-domains)
+* [How to Link a Different App to a Cloud Node](../howto/how-to-link-a-different-app-to-a-node)
+* [How to Link Your Free App to a Licensed Cloud Node](../howto/how-to-link-app-to-node)
 * [How to Manage Company & App Roles](/developerportal/company-app-roles/manage-roles)
 * [Company & App Roles](/developerportal/company-app-roles/index)
 * [How to Set Up Two-Factor Authentication With Google Authenticator](/howtogeneral/support/how-to-set-up-two-factor-authentication-with-google-authenticator)
-* [How to Upgrade Your Free App to a Licensed App](how-to-upgrade-free-app)
+* [How to Upgrade Your Free App to a Licensed App](../howto/how-to-upgrade-free-app)

@@ -1,5 +1,7 @@
 ---
-title: "Deploy"
+title: "Deploy and Manage"
+description: "An overview and instructions on how to deploy Mendix apps to different environments and how to manage that deployment."
+tags: ["Deploy","Manage", "Mendix Cloud", "IBM", "SAP", "Cloud Foundry", "Kubernetes", "On-premises", "Environment"]
 ---
 
 ## 1 Introduction

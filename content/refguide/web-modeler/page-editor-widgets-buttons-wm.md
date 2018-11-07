@@ -48,7 +48,11 @@ For more information on the **Events** section and on click actions, see [Events
 
 ### 2.1 Preset Properties in the Events Section {#preset-properties}
 
-**On Click Action** in the **Events** section determines the action of the button. You can find the list of preset actions and properties that need to be configured in the table below. 
+**On Click Action** in the **Events** section determines the action of the button. 
+
+![](attachments/page-editor-widgets-buttons-wm/wm-events-section.png)
+
+You can find the list of preset actions and properties that need to be configured in the table below. 
 
 | Button         | Preset Action  | Properties to be Configured                                  |
 | -------------- | -------------- | ------------------------------------------------------------ |

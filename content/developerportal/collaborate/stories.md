@@ -2,8 +2,8 @@
 title: "Stories"
 category: "Collaborate"
 menu_order: 30
-description: "Describes how to manage your stories."
-tags: ["Stories","Developer Portal"]
+description: "Describes how to manage your sprints, stories, and labels."
+tags: ["Stories", "Sprint", "Developer Portal"]
 ---
 
 ## 1 Introduction
@@ -18,7 +18,7 @@ For more information, see [How to Manage Sprints and Stories](/developerportal/h
 
 You can perform the actions described below via the buttons that are available about your app project's stories.
 
-### 2.1 New Story
+### 2.1 New Story {#new-story}
 
 To add a new story, you need to fill in some details, including what your story is about and what type of story it is.
 
@@ -50,36 +50,54 @@ Via the **More** button, you can perform the actions described below.
 
 ### 3.1 Delete Selection
 
-Delete the selected story
+Click **Delete selection** to delete the selected story.
 
 ![](attachments/delete-selection.png)
 
-**Complete current sprint** – complete the current sprint (note that all stories have to be marked **Done** before you are able to complete a sprint)
+### 3.2 Complete Current Sprint
 
-**Import / Export** – export stories to or import stories from Excel
+Click **Complete current sprint** to complete a sprint. Note that all stories have to be marked **Done** before you are able to complete a sprint.
+
+You will receive this confirmation message, so make sure you are able to confirm completion!
+
+![](attachments/complete-verify.png)
+
+### 3.3 Import / Export
+
+Click **Import / Export** to import stories from or export stories to Excel.
 
 ![](attachments/import-export.png)
 
-### Manage labels {#manage-labels}
+If you select **Export a single sprint to Excel**, you can edit the sprint and then import it back to save the changes.
 
-Edit, merge, create, and delete labels
+If you select **Updates stories from Excel**, you can use an an Excel sheet from a previous export as a template for the import. The Developer Portal recognizes items by using the **ID** column.
 
-    {{% image_container width="350" %}}![](attachments/labels.png)
-    {{%  /image_container %}}
+When editing stories, follow these guidelines:
+* To add a new story or task, simply add a new line on the correct position and type in the item's name
+* To reorder an item, adjust the depth by adding or removing the plus signs (make sure they stay in the correct order where every item is the same or 1 position lower than the item above it)
+* To remove an item, replace its depth with a single minus sign (make sure  that any tasks connected to it are either moved or are also removed)
 
-**Manage story template** – create and edit default tasks that you can add as a task to every new story
+### 3.4 Manage Labels {#manage-labels}
 
-{{% image_container width="350" %}}![](attachments/default-task.png)
-{{%  /image_container %}}
+Click **Manage labels** to edit, merge, create, and delete labels.
 
-To enable these default tasks, select the **Add default tasks based on story template** check box when creating a new story
+![](attachments/labels.png)
 
-**History** – view the details for stories and revert changes if necessary
+### 3.5 Manage Story Template
 
-{{% image_container width="350" %}}![](attachments/default-task.png)
-{{%  /image_container %}}
+Click **Manage story template** to create and edit the default tasks that you can add as tasks to every new story for your app project.
+
+![](attachments/default-task.png)
+
+To enable these default tasks, select the **Add default tasks based on story template** check box when creating a [new story](new-story).
+
+### 3.6 History
+
+Click **History** to view the history details for stories (via **Show item**) and revert changes if necessary (via **Revert change**).
+
+![](attachments/history.png)
 
 ## 4 Related Content
 
-* [Feedback](/developerportal/collaborate/feedback)
 * [How to Manage Sprints and Stories](/developerportal/howto/managing-your-application-requirements-with-mendix)
+* [Feedback](/developerportal/collaborate/feedback)

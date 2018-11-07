@@ -89,7 +89,7 @@ Click **Manage story template** to create and edit the default tasks that you ca
 
 ![](attachments/default-task.png)
 
-To enable these default tasks, select the **Add default tasks based on story template** check box when creating a [new story](new-story).
+To enable these default tasks, select the **Add default tasks based on story template** check box when creating a [new story](#new-story).
 
 ### 3.6 History
 

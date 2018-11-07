@@ -2,8 +2,8 @@
 title: "Stories"
 category: "Collaborate"
 menu_order: 30
-description: "Describes how to manage your stories."
-tags: ["Stories","Developer Portal"]
+description: "Describes how to manage your sprints, stories, and labels."
+tags: ["Stories", "Sprint", "Developer Portal"]
 ---
 
 ## 1 Introduction
@@ -18,7 +18,7 @@ For more information, see [How to Manage Sprints and Stories](/developerportal/h
 
 You can perform the actions described below via the buttons that are available about your app project's stories.
 
-### 2.1 New Story
+### 2.1 New Story {#new-story}
 
 To add a new story, you need to fill in some details, including what your story is about and what type of story it is.
 
@@ -85,19 +85,19 @@ Click **Manage labels** to edit, merge, create, and delete labels.
 
 ### 3.5 Manage Story Template
 
-Click **Manage story template** to create and edit default tasks that you can add as a task to every new story
+Click **Manage story template** to create and edit the default tasks that you can add as tasks to every new story for your app project.
 
 ![](attachments/default-task.png)
 
-To enable these default tasks, select the **Add default tasks based on story template** check box when creating a new story
+To enable these default tasks, select the **Add default tasks based on story template** check box when creating a [new story](new-story).
 
 ### 3.6 History
 
-View the details for stories and revert changes if necessary
+Click **History** to view the history details for stories (via **Show item**) and revert changes if necessary (via **Revert change**).
 
-![](attachments/default-task.png)
+![](attachments/history.png)
 
 ## 4 Related Content
 
-* [Feedback](/developerportal/collaborate/feedback)
 * [How to Manage Sprints and Stories](/developerportal/howto/managing-your-application-requirements-with-mendix)
+* [Feedback](/developerportal/collaborate/feedback)

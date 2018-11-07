@@ -26,10 +26,10 @@ On the **Team** page, you will see an overview with the following information ab
 
 When you click **Manage Team** in the top-right corner of the screen, you will be forwarded to the **Settings** > **Security** page. 
 
-{{% alert type="info" %}}Only the following roles can see the **Manage Team** button:
-* [SCRUM Master](../company-app-roles/index#app-team-roles)
-* [Company Admin](../company-app-roles/#company-admin)
-* A custom role with **App Settings** permission
+{{% alert type="info" %}}Only the following roles can see the **Manage Team** button:<br />
+* [SCRUM Master](../company-app-roles/index#app-team-roles)<br />
+* [Company Admin](../company-app-roles/#company-admin)<br />
+* A custom role with **App Settings** permission<br />
 {{% /alert %}}
 
 ![](attachments/team-security.png)

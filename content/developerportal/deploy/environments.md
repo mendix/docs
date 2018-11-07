@@ -1,7 +1,7 @@
 ---
 title: "Environments"
 category: "Deploy and Manage"
-menu_order: 10
+menu_order: 100
 description: "This page describes the deploy options of your App."
 tags: ["Deploy","App","Developer Portal"]
 ---

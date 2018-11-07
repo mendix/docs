@@ -63,7 +63,7 @@ When consuming a WSDL that uses encoding, turning on validation will lead to a c
 Schema validation is not supported when you configure the [consumed web service](consumed-web-service) to send binary data as attachments.
 
 {{% alert type="info" %}}
-Support for schema validation using the [(optimized) implementation](project-settings#3.13-Web-Service-Calls) was introduced in version 7.20.
+Support for schema validation using the [(optimized) implementation](project-settings#web-service-calls) was introduced in version 7.20.
 {{% /alert %}}
 
 _Default value:_ No

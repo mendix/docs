@@ -16,7 +16,7 @@ Everyone with the same email domain will be automatically placed in the same com
 
 Within the company there are three roles, which are described below.
 
-### 2.1 Company Admin
+### 2.1 Company Admin {#company-admin}
 
 The Company Admin is a "super role" allowed to manage all the settings of the company, including the settings of the company's apps, cloud nodes, and users. A company can have multiple Company Admins, but regular users cannot see who has the Company Admin role.
 

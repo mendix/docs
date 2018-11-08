@@ -23,7 +23,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 Submitting Feedback on an App
 
-The main purpose of the Mendix Feedback widget is to enable end-users to provide feedback on apps. By just clicking **Feedback** when you are logged in to a Mendix app, you can comment on low-priority issues, ask questions, and propose ideas for improvement. That feedback will be reviewed and processed. For details on how feedback is addressed for an app project, see [Feedback](index).
+The main purpose of the Mendix Feedback widget is to enable end-users to provide feedback on apps. By just clicking **Feedback** when you are logged in to a Mendix app, you can comment on low-priority issues, ask questions, and propose ideas for improvement. That feedback will be reviewed and processed. For details on how feedback is addressed for an app project, see [Feedback](/feedback/index).
 
 {{% alert type="info" %}}
 

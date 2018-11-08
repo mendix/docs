@@ -33,7 +33,7 @@ Once you are in feedback mode, you can click anywhere on the screen to leave a c
 
 ![](attachments/add-comment.png)
 
-And voila! A screenshot is created automatically of the current page, which you can choose to attach to your feedback. After clicking **Send**, your feedback will go straight to the **Feedback** page of your app project in the Developer Portal. For more information, see [Feedback](feedback).
+And voila! A screenshot is created automatically of the current page, which you can choose to attach to your feedback. After clicking **Send**, your feedback will go straight to the **Feedback** page of your app project in the Developer Portal. For more information, see [Feedback](/feedback/index).
 
 When you are done leaving feedback, you need to exit the feedback mode by clicking this button:
 

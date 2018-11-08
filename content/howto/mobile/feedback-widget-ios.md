@@ -36,4 +36,4 @@ For more information on the Cordova Whitelist plugin, see [cordova-plugin-whitel
 ## 4 Related Content
 
 * [How to Use the Mendix Feedback Widget](/developerportal/feedback/use-feedback-widget)
-* [Feedback](../feedback/index)
+* [Feedback](/developerportal/feedback/index)

@@ -1,7 +1,7 @@
 ---
-title: "Build a Docker Image from a Mendix App Project"
-category: "Docker"
-#parent: ""
+title: "Docker"
+category: "Deploy and Manage"
+menu_order: 60
 description: "Describes how to build a new Docker image using the Mendix buildpack."
 tags: ["Docker", "Cloud", "container", "CI/CD"]
 ---
@@ -32,14 +32,14 @@ To build the Docker image, follow these steps:
 3. Open the **Command Prompt** and navigate to the buildpack folder. 
 4.  Open the Desktop Modeler and in the top menu, select **Project** > **Show project directory in Explorer**:
 
-    ![](attachments/build-docker-image-from-mendix-project/create-deployment-package.png)
+    ![](attachments/docker-deploy/create-deployment-package.png)
 
 5. Copy the project folder to the unzipped docker build folder. The project folder needs to be on the same level as the Docker file. The Docker build is not allowed to access files outside the context of the Docker build location.
 6.  Execute the following command:
 
     * `docker build --build-arg BUILD_PATH=<relative-mendix-project-location> -t <image name> .`
 
-    ![](attachments/build-docker-image-from-mendix-project/build-image.png)
+    ![](attachments/docker-deploy/build-image.png)
 
 ## 4 Pushing the Image
 

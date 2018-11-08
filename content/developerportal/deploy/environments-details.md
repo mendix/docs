@@ -1,6 +1,7 @@
 ---
 title: "Environment Details"
-parent: "environments"
+parent: "mendix-cloud-deploy"
+menu_order: 60
 description: "Describes the environmental details of your app."
 tags: ["Deploy","App","Environment","Developer Portal"]
 ---

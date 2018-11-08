@@ -40,7 +40,7 @@ From within the Modeler, you can deploy directly to Cloud Foundry-based platform
 
 Mendix can be deployed in a Docker container to provide highly scalable solutions and automated delivery pipelines (CI/CD).
 
-The Docker buildpack is available here: [Mendix Docker Buildpack](https://github.com/mendix/docker-mendix-buildpack) and instructions for using the buildpack are available here: [Build a Docker Image from a Mendix App Project](https://docs.mendix.com/deployment/docker/build-docker-image-from-mendix-project).
+The Docker buildpack is available here: [Mendix Docker Buildpack](https://github.com/mendix/docker-mendix-buildpack) and instructions for using the buildpack are available here: [Build a Docker Image from a Mendix App Project](/developerportal/deploy/docker-deploy).
 
 ## 8 Azure
 

@@ -1,7 +1,7 @@
 ---
 title: "Environments"
-category: "Deploy and Manage"
-menu_order: 100
+parent: "mendix-cloud-deploy"
+menu_order: 50
 description: "This page describes the deploy options of your App."
 tags: ["Deploy","App","Developer Portal"]
 ---

@@ -179,7 +179,7 @@ The example shows that you can merge a single revision. It is also possible to m
 
 ## 4\. Related content
 
-*   [Managing your Application Requirements with Mendix](/developerportal/howto/managing-your-application-requirements-with-mendix)
+*   [Managing your Application Requirements with Mendix](/developerportal/collaborate/stories)
 *   [Starting your own repository](starting-your-own-repository)
 *   [Contributing to a GitHub repository](contributing-to-a-github-repository)
 *   [Using Team Server - Version Control](using-team-server-version-control)

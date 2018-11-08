@@ -107,4 +107,4 @@ Once a feedback item is connected to a user story, the user who submitted the st
 * [How to Use the Mendix Feedback Widget](use-feedback-widget)
 * [How to Use the Mendix Feedback & Collaboration Widget](use-collaboration-widget)
 * [Stories](stories)
-* [How to Manage Sprints and Stories](../howto/managing-your-application-requirements-with-mendix)
+* [Stories](../collaborate/stories)

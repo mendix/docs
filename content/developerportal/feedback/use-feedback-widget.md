@@ -39,7 +39,7 @@ To provide feedback via the Mendix Feedback Widget, follow these steps:
 
     ![](attachments/feedback-example.png)
 
-After clicking **Send feedback**, your feedback will go straight to the [Feedback](feedback) page of your app project in the Developer Portal.
+After clicking **Send feedback**, your feedback will go straight to the [Feedback](index) page of your app project in the Developer Portal.
 
 {{% alert type="info" %}}
 

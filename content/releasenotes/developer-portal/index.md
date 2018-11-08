@@ -16,6 +16,12 @@ tags: ["Developer Portal", "Cloud Environments", "Mendix Cloud", "SAP", "IBM", "
 
 * We made improvements in the communication between the Web Modeler and the Cloud Portal.
 
+### October 30th, 2018
+
+#### Cloud v3 PostgreSQL backup format changed
+
+Cloud v3 PostgreSQL backups are now created with `pg_dump` version 1.13. This version has been shipped with PostgreSQL since March 2018 (PostgreSQL 10.3, 9.6.8, 9.5.12, 9.4.17 and 9.3.22). The side-effect is that it is not possible to restore these PostgreSQL backups using a `pg_restore` version below 1.13. The error that you will receive is: `pg_restore: [archiver] unsupported version (1.13) in file header`. To fix this issue, upgrade your PostgreSQL client software, to one that includes newer versions of `pg_dump` and `pg_restore`.
+
 ### October 29th, 2018
 
 #### Improvements

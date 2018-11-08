@@ -172,4 +172,4 @@ Changing the status of a story or updating story points automatically synchroniz
 
 ## 5 Related Content
 
-* [Feedback](/developerportal/collaborate/feedback)
+* [Feedback](../feedback/index)

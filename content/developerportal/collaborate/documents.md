@@ -41,5 +41,5 @@ You can perform the following actions:
 ## 3 Related Content
 
 * [Buzz](/developerportal/collaborate/buzz)
-* [Feedback](/developerportal/collaborate/feedback)
+* [Feedback](/developerportal/feedback/index)
 * [Team](/developerportal/collaborate/team)

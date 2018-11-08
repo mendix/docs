@@ -1,6 +1,6 @@
 ---
 title: "Use the Mendix Feedback & Collaboration Widget"
-parent: "feedback"
+category: "Feedback"
 menu_order: 20
 description: "Describes how to use the Mendix Feedback & Collaboration Widget for providing feedback, editing, and sharing apps."
 tags: ["Collaboration","Widget","Developer Portal", "Event App"]

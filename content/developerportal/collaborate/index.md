@@ -1,52 +1,37 @@
 ---
-title: "Collaborate"
+title: "Collaboration Tools"
 ---
 
 ## 1 Introduction
 
-The **Collaborate** category supports collaboration with your team and the tracking of sprints and other tasks in the app.
+The Developer Portal collaboration tools support collaboration with your team and the tracking of sprints and other tasks in the app.
 
-![](attachments/collaborate.png)
-
-This category is divided into the five pages presented below.
+This category will cover the tools below.
 
 ## 2 Buzz
 
 The **Buzz** lets you see and share ideas as well as collaborate with your team. You will get an overview of new team members, new stories and their changes, and sprints which are added or completed.
 
-For more details, see [Buzz](buzz).
+For details, see [Buzz](buzz).
 
 ## 3 Team
 
-The **Team** page shows an overview of your team members. It's also the place to **Invite Members** and **Manage your team**.
+The **Team** page shows an overview of your team members. It is also where you can invite members and manage your team.
 
-Click **Name** or **Role** to filter in an ascending or descending order. The default sorting order is ascending by **Name**.
-
-For more details, see [Team](team).
+For details, see [Team](team).
 
 ## 4 Stories
 
-The **Stories** page lets you add, edit, and delete stories, sprints, and labels. You can also import to and export from Excel and view the history.
+The **Stories** page lets you add, edit, and delete stories and sprints. You can also import to and export from Excel and view story history.
 
-For more details, see [Stories](stories).
+For details, see [Stories](stories).
 
-## 5 Feedback
-
-The **Feedback** pages show an overview of the feedback provided about the app. There are two ways of submitting feedback:
-
-1. Add feedback on the **Feedback** page in the Developer Portal.
-2. Add feedback from within the app (to go to the app, click **View App**).
-
-{{% alert type="info" %}}
-
-The **Feedback** button in the **Developer Portal** is used to provide feedback on the Mendix Platform. It is intended for low priority issues, questions, and ideas on how to improve the Mendix Platform.
-
-{{% /alert %}}
-
-For more details, see [Feedback](feedback), [How to Use the Mendix Feedback Widget](use-feedback-widget), and [How to Use the Mendix Feedback & Collaboration Widget](use-collaboration-widget).
-
-## 6 Documents
+## 5 Documents
 
 The **Documents** page lets you upload files related to the app. It is possible to replace a current file with a newer version, add labels, comment, and download files.
 
-For more details, see [Documents](documents).
+For more, see [Documents](documents).
+
+## 6 Related Content
+
+* [Feedback](../feedback/index)

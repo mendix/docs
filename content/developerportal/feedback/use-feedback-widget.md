@@ -1,6 +1,6 @@
 ---
 title: "Use the Mendix Feedback Widget"
-parent: "feedback"
+category: "Feedback"
 menu_order: 10
 description: "Describes how to add the Feedback Widget to your app project and configure it."
 tags: ["Feedback","Widget","Developer Portal"]
@@ -23,7 +23,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 Submitting Feedback on an App
 
-The main purpose of the Mendix Feedback widget is to enable end-users to provide feedback on apps. By just clicking **Feedback** when you are logged in to a Mendix app, you can comment on low-priority issues, ask questions, and propose ideas for improvement. That feedback will be reviewed and processed. For details on how feedback is addressed for an app project, see [Feedback](feedback).
+The main purpose of the Mendix Feedback widget is to enable end-users to provide feedback on apps. By just clicking **Feedback** when you are logged in to a Mendix app, you can comment on low-priority issues, ask questions, and propose ideas for improvement. That feedback will be reviewed and processed. For details on how feedback is addressed for an app project, see [Feedback](index).
 
 {{% alert type="info" %}}
 
@@ -39,7 +39,7 @@ To provide feedback via the Mendix Feedback Widget, follow these steps:
 
     ![](attachments/feedback-example.png)
 
-After clicking **Send feedback**, your feedback will go straight to the [Feedback](https://docs.mendix.com/developerportal/collaborate/feedback) page of your app project in the Developer Portal.
+After clicking **Send feedback**, your feedback will go straight to the [Feedback](feedback) page of your app project in the Developer Portal.
 
 {{% alert type="info" %}}
 
@@ -54,11 +54,11 @@ The Mendix Feedback Widget is automatically included in any new app that you cre
 1. Download the latest version of the [Mendix Feedback Widget](https://appstore.home.mendix.com/link/app/199/) from the Mendix App Store.
 2. When the latest Mendix Feedback Widget is included in your app, you need to ensure that the widget is added to the homepage of the application. Open the homepage from your app's **Project** > **Navigation**:
 
-    ![](attachments/18580455.png)
+    ![](attachments/show-page.png)
 
 3. If the Mendix Feedback Widget has not been added to the page, add it to the page or layout by selecting **Add widget** > **Add-on widgets** > **Feedback Widget** and dropping it into a position in the page:
 
-    ![](attachments/18580453.png)
+    ![](attachments/feedback-widget.png)
 
 ## 5 Configuring the Feedback Widget
 
@@ -69,7 +69,7 @@ To configure the widget, follow these steps:
 3. Select the **Username attribute** that stores the name of the user and the **Email address attribute**. This will be used to automatically fill in the name and email address of the user who is logged in when submitting feedback in the app.
 4. Decide whether you want to allow users to upload a file and screenshot to the feedback item (via **Allow file upload** and **Allow screenshot upload**, respectively). 
 
-    ![](attachments/18580452.png)
+    ![](attachments/edit-widget.png)
 
 5. Open the **Configuration** tab of the Mendix Feedback Widget properties.
 6. Ensure that the **Feedback server** is set to `https://sprintr.home.mendix.com/`.
@@ -83,5 +83,5 @@ To configure the widget, follow these steps:
 
 * [How to Configure the Mendix Feedback Widget for iOS](/howto/mobile/feedback-widget-ios)
 * [How to Use the Mendix Feedback & Collaboration Widget](use-collaboration-widget)
-* [Feedback](../collaborate/feedback)
 * [Mendix Profile](../mendix-profile/index)
+* [Collaboration Tools](../collaborate/index)

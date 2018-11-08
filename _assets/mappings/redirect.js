@@ -1710,7 +1710,7 @@ module.exports = {
     },
     {
       from: "/howto6/deploying+to+the+cloud",
-      to: "/developerportal/howto/deploying-to-the-cloud"
+      to: "/developerportal/deploy/mendix-cloud-deploy"
     },
     {
       from: "/howto6/Design+the+Architecture",
@@ -2116,11 +2116,11 @@ module.exports = {
     },
     {
       from: "/mendixcloud/Deploying+to+the+cloud",
-      to: "/developerportal/howto/deploying-to-the-cloud"
+      to: "/developerportal/deploy/mendix-cloud-deploy"
     },
     {
       from: "/mendixcloud/deploying-to-the-cloud",
-      to: "/developerportal/howto/deploying-to-the-cloud"
+      to: "/developerportal/deploy/mendix-cloud-deploy"
     },
     {
       from: "/mendixcloud/Different+user+logins+when+integrated+with+Mendix+SSO",
@@ -2189,6 +2189,10 @@ module.exports = {
     {
       from: "/mendixcloud/Trends",
       to: "/developerportal/operate/trends"
+    },
+    {
+      from: "/developerportal/howto/deploying-to-the-cloud",
+      to: "/developerportal/deploy/mendix-cloud-deploy"
     },
     /****************************************************
      * SUPPORT

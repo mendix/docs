@@ -42,7 +42,7 @@ Follow these steps to create a backup of a licensed app:
 
 ## 4 Related Content
 
-* [How to Deploy to the Mendix Cloud](deploying-to-the-cloud)
+* [How to Deploy to the Mendix Cloud](../deploy/mendix-cloud-deploy)
 * [How to Download a Backup](how-to-download-a-backup)
 * [How to Link an App to a Licensed Cloud Node](how-to-link-app-to-node)
 * [How to Restore a Backup](how-to-restore-a-backup)

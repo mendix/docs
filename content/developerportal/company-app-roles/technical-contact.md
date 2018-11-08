@@ -58,5 +58,5 @@ For details on how to change the Technical Contact, see the [Changing the Techni
 * [Company & App Roles](/developerportal/company-app-roles/index)
 * [Company Admin Settings](/developerportal/company-app-roles/companyadmin-settings)
 * [How to Leave & Delete an App](../settings/leave-delete-app)
-* [Deploy](/developerportal/deploy)
+* [Deploy and Manage](/developerportal/deploy)
 * [Settings](/developerportal/settings)

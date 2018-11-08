@@ -53,7 +53,7 @@ Widgets in the Web Modeler can be divided by origin as shown in the table below:
 
 | Type              | Description                                                  | Origin                                                       |
 | ----------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Default widgets   | Widgets that are included into your app by default and don't have the info icon in the top-right corner. | Apps created in the Developer Portal. For more information on the Developer Portal, see [Developer Portal](https://docs.mendix.com/developerportal/). |
+| Default widgets   | Widgets that are included into your app by default and do not have the information icon in the top-right corner. | Apps created in the Developer Portal. For more information on the Developer Portal, see [Developer Portal](https://docs.mendix.com/developerportal/). |
 | App Store widgets | Widgets that are you can download to your project directly from the Web Modeler. Some App Store widgets are already in your project as a part of the app. Such widgets have the information icon in the top-right corner of widgets in the **Toolbox**. <br />For more information on the App Store, see [App Store Overview](../../community/app-store/app-store-overview). | [App Store](../../community/app-store/index)                 |
 | Local widgets     | Either widgets that are a part of a starter app, or widgets created by your or your team locally via the Desktop Modeler. For more information on developing widgets, see the [Custom Widget Development](../../howto/custom-widget-development/) how-to's. As a rule local widgets will be listed in the **Add-ons** category. For more information on categories, see section [3 Widgets by Category](#widget-categories). | Apps created in the  Developer Portal/Desktop Modeler        |
 
@@ -79,11 +79,13 @@ To add an App Store widget, do the following:
 
     ![](attachments/page-editor-widgets-wm/wm-app-store-download.png)
 
-The widget is now added to your project, you can simply drag and drop it to the page to use it. You can also view settings of this widget in the **App Settings**.  For more information, see [App Settings Overview in the Web Modeler](app-settings-wm). 
+The widget is now added to your project, you can simply drag and drop it to the page to use it. You can also view settings of this widget in the **App Settings**.  For more information on managing widgets in your app, see [App Settings Overview in the Web Modeler](app-settings-wm). 
 
-For more information on managing widgets in your app, see [App Settings in the Web Modeler](app-settings-wm). 
+{{% alert type="info" %}}
 
-## 6 Related Content
+Some similar widgets are packaged together: downloading one of these widgets will cause a number of other widgets to be downloaded as well. For example, downloading a line chart will give you all chart widgets.
+
+{{% /alert %}}
 
 * [Page Editor Overview in the Web Modeler](page-editor-wm) 
 * [App Settings Overview in the Web Modeler](app-settings-wm)

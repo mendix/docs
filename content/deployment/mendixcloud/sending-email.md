@@ -71,7 +71,7 @@ When using Mendix mail servers and a sender address in a domain that has a restr
 ## 5 Related Content
 
 *   [Trends in Mendix Cloud v3](/developerportal/operate/trends)
-*   [How to Deploy to the Mendix Cloud](/developerportal/howto/deploying-to-the-cloud)
+*   [Mendix Cloud: Deploy](/developerportal/deploy/mendix-cloud-deploy)
 *   [How to deploy a Mendix app on Azure](/deployment/azure/how-to-deploy-a-mendix-app-on-azure)
 *   [Different user logins when integrated with Mendix SSO](different-user-logins-when-integrated-with-mendix-sso)
 *   [Integrate your app with Mendix SSO](integrate-your-app-with-mendix-sso)

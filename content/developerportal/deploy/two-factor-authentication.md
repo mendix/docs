@@ -1,6 +1,6 @@
 ---
 title: "Two-Factor Authentication"
-category: "General"
+parent: "general"
 description: "This page describes the purpose of the Two-Factor Authentication."
 tags: ["Authenticator","Developer Portal","Cloud","Permissions"]
 ---
@@ -51,6 +51,6 @@ For more information, see [Security – Node Permissions](../settings/node-permi
 
 ## 7 Related Content
 
-* [Deploy](../deploy)
+* [Deploy and Manage](../deploy)
 * [Settings](../settings)
 * [Technical Contact](../company-app-roles/technical-contact)

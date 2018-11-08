@@ -64,7 +64,7 @@ The app is now connected to the licensed cloud node.
 ## 4 Related Content
 
 *   [How to Configure Custom Domains](custom-domains)
-*   [How to Deploy to the Mendix Cloud](deploying-to-the-cloud)
+*   [How to Deploy to the Mendix Cloud](../deploy/mendix-cloud-deploy)
 *   [How to Download a Backup](how-to-download-a-backup)
 *   [How to Link a Different App to a Cloud Node](how-to-link-a-different-app-to-a-node)
 *   [How to Restore a Backup](how-to-restore-a-backup)

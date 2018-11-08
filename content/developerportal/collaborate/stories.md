@@ -2,91 +2,102 @@
 title: "Stories"
 category: "Collaborate"
 menu_order: 30
-description: "Describes how to manage your stories."
-tags: ["Stories","Developer Portal"]
+description: "Describes how to manage your sprints, stories, and labels."
+tags: ["Stories", "Sprint", "Developer Portal"]
 ---
 
 ## 1 Introduction
 
 In **Stories**, you are able to manage sprints, stories, and labels. 
 
-![](attachments/stories.jpg)
+![](attachments/stories.png)
 
 For more information, see [How to Manage Sprints and Stories](/developerportal/howto/managing-your-application-requirements-with-mendix).
 
 ## 2 Actions
 
-Above the stories, you can find the following action buttons:
+You can perform the actions described below via the buttons that are available about your app project's stories.
 
-* **New story** – add a new story
-* **New sprint** – add a new sprint
-* **Move to** – move the selected story to a different sprint
-* **Label** – use existing labels or create a new label for the selected story
-* **More**
-   * **Delete selection** – delete the selected story
-   * **Complete current sprint** – complete the current sprint; all stories have to be **Done** before completing the current sprint 
-   * **Import / Export** – import/export to Excel
-   * **Manage labels** – rename, merge, or delete a label
-   * **Manage story template** – create and edit default tasks that you can add as a task to every new story
-   * **History** – show the details of a story and/or revert changes
+### 2.1 New Story {#new-story}
 
-### 2.1 New Story
+To add a new story, you need to fill in some details, including what your story is about and what type of story it is.
 
-To create a new story , you must first select the correct **Sprint** and provide the following information:
+![](attachments/story-example.png)
 
-* The title of the story
-* **Story type**
-    * **Feature**
-    * **Bug**
-* The number of **Story points**
-* Add **Labels** or use existing labels
-* A **Description** of the story
-* **Add default tasks based on story template** (if necessary)
-  * The default tasks created in the **Story template** will automatically appear as sub-tasks in this story
+### 2.2 New sprint
 
-### 2.2 New Sprint
+To add a new sprint, you need to fill in some details, including the name of the sprint or release and where it should be located in the structure of your **Stories** page.
 
-In this section, you are able to plan the following:
+![](attachments/sprint-example.png)
 
-* **Sprint**
-    * **Name**
-    * The order of the sprint
-    * The **Duration** of the sprint
-    * The start date of the sprint
-* **Release**
-    * **Name**
-    * **Date**
-    * **Description**
-* **Other**
-    * **Name**
-    * **Date**
-    * **Description**
-    * **Who is responsible?**
+### 2.3 Move To
 
-### 2.3 Import / Export to Excel
+To move a story, select it and then click the sprint where it should be moved.
 
-The export options are the following:
+![](attachments/move-to.png)
 
-* **Export all stories to Excel (including completed sprints)**
-* **Export all stories to Excel**
-* **Export single sprint to Excel**
-* **Update stories from Excel**
+### 2.4 Label
 
-## 3 Filter
+To identify and organize stories, you can create and use labels.
 
-It is possible to filter on the following:
+![](attachments/label.png)
 
-* **Sprints**
-    * **Archived**
-    * **Current**
-    * **Upcoming**
-    * **Backlog**
-* **Story**
-    * **Done**
-    * **Feature**
-    * **Bug**
+You can also perform various actions to [manage labels](#manage-labels).
+
+## 3 More Actions
+
+Via the **More** button, you can perform the actions described below.
+
+### 3.1 Delete Selection
+
+Click **Delete selection** to delete the selected story.
+
+![](attachments/delete-selection.png)
+
+### 3.2 Complete Current Sprint
+
+Click **Complete current sprint** to complete a sprint. Note that all stories have to be marked **Done** before you are able to complete a sprint.
+
+You will receive this confirmation message, so make sure you are able to confirm completion!
+
+![](attachments/complete-verify.png)
+
+### 3.3 Import / Export
+
+Click **Import / Export** to import stories from or export stories to Excel.
+
+![](attachments/import-export.png)
+
+If you select **Export a single sprint to Excel**, you can edit the sprint and then import it back to save the changes.
+
+If you select **Updates stories from Excel**, you can use an an Excel sheet from a previous export as a template for the import. The Developer Portal recognizes items by using the **ID** column.
+
+When editing stories, follow these guidelines:
+* To add a new story or task, simply add a new line on the correct position and type in the item's name
+* To reorder an item, adjust the depth by adding or removing the plus signs (make sure they stay in the correct order where every item is the same or 1 position lower than the item above it)
+* To remove an item, replace its depth with a single minus sign (make sure  that any tasks connected to it are either moved or are also removed)
+
+### 3.4 Manage Labels {#manage-labels}
+
+Click **Manage labels** to edit, merge, create, and delete labels.
+
+![](attachments/labels.png)
+
+### 3.5 Manage Story Template
+
+Click **Manage story template** to create and edit the default tasks that you can add as tasks to every new story for your app project.
+
+![](attachments/default-task.png)
+
+To enable these default tasks, select the **Add default tasks based on story template** check box when creating a [new story](#new-story).
+
+### 3.6 History
+
+Click **History** to view the history details for stories (via **Show item**) and revert changes if necessary (via **Revert change**).
+
+![](attachments/history.png)
 
 ## 4 Related Content
 
-* [Feedback](/developerportal/collaborate/feedback)
 * [How to Manage Sprints and Stories](/developerportal/howto/managing-your-application-requirements-with-mendix)
+* [Feedback](/developerportal/collaborate/feedback)

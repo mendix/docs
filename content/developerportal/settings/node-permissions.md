@@ -92,7 +92,7 @@ The node permissions can be:
 
 With transport rights you can deploy new versions of the application to the node. You can create new deployment packages, stop and start the environment, and change configuration settings such as constants and scheduled events.
 
-For more information about deployment, see [How to Deploy to the Mendix Cloud](/developerportal/howto/deploying-to-the-cloud).
+For more information about deployment, see [How to Deploy to the Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy).
 
 ### 5.2 Access to Backups
 

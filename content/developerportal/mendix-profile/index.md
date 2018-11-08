@@ -223,7 +223,7 @@ In this section, you can view feedback submitted on the following:
 * Apps of which you are an App Team member
 * Your company’s apps of which you are not an App Team member
 
-When you click **Details** for feedback on an app of which you are an App Team member, you can manage the feedback. For details on how to do this, see [Feedback](../collaborate/feedback).
+When you click **Details** for feedback on an app of which you are an App Team member, you can manage the feedback. For details on how to do this, see [Feedback](../feedback/index).
 
 ### 9.4 Team Server
 
@@ -311,6 +311,6 @@ To make your public profile private again, click **Make this profile private**.
 * [Company Admin Settings](../company-app-roles/companyadmin-settings)
 * [Company & App Roles](../company-app-roles/index)
 * [How to Manage Company & App Roles](../company-app-roles/manage-roles)
-* [Feedback](../collaborate/feedback)
-* [How to Use the Mendix Feedback Widget](../collaborate/use-feedback-widget)
+* [Feedback](../feedback/index)
+* [How to Use the Mendix Feedback Widget](../feedback/use-feedback-widget)
 

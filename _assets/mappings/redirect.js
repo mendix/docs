@@ -1343,7 +1343,7 @@ module.exports = {
     },
     {
       from: "/howto50/Managing+your+Application+Requirements+with+Mendix",
-      to: "/developerportal/howto/managing-your-application-requirements-with-mendix"
+      to: "/developerportal/collaborate/stories"
     },
     {
       from: "/howto50/Mendix+on+Windows+-+Microsoft+SQL+Server",
@@ -1862,7 +1862,7 @@ module.exports = {
     },
     {
       from: "/howto6/Managing+your+Application+Requirements+with+Mendix",
-      to: "/developerportal/howto/managing-your-application-requirements-with-mendix"
+      to: "/developerportal/collaborate/stories"
     },
     {
       from: "/howto6/Mendix+on+Windows+-+Microsoft+SQL+Server",

@@ -43,7 +43,7 @@ To submit changes, follow these guidelines:
 
 ## 5 Related Content
 
-* [Managing Your Application Requirements with Mendix](/developerportal/howto/managing-your-application-requirements-with-mendix)
+* [Managing Your Application Requirements with Mendix](/developerportal/collaborate/stories)
 * [Starting Your Own Repository](starting-your-own-repository)
 * [Using Team Server – Version Control](using-team-server-version-control)
 * [Gathering User Feedback](/developerportal/collaborate/use-feedback-widget)

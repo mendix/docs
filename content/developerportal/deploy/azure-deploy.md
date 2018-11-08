@@ -1,7 +1,11 @@
 ---
-title: "Deploy a Mendix App on Azure"
-category: "Azure"
+title: "Azure"
+category: "Deploy and Manage"
+description: "Describes how to deploy a Mendix app to the IBM Cloud"
+menu_order: 70
+tags: ["Deployment", "Azure", "Microsoft", "Environment"]
 ---
+
 Mendix is now available in the Microsoft Azure marketplace as an App that can run on a virtual server in the cloud. This means you can run your own Mendix server for an hour, day, week, or even a year, and gives you full control over the environment. This how-to will guide you through a couple of simple steps to get your Mendix app up and running.
 
 **After completing this how-to you will know how to:**
@@ -34,14 +38,14 @@ The first thing to do when you want to run a Mendix instance on Azure is adding 
 1.  Go to [https://portal.azure.com](https://portal.azure.com/).
 2.  **Log in** with your Azure account.
 3.  Select the Azure marketplace from the dashboard:
-    ![](attachments/19202584/19398850.png)
+    ![](attachments/azure-deploy/19398850.png)
 4.  Search for **mendix.**
 
 5.  Select the Mendix app you want to deploy. For this how-to we'll use **Mendix Pro Edition - 50 users**.
-    ![](attachments/19202584/19398851.png)
+    ![](attachments/azure-deploy/19398851.png)
 
 6.  Click **Create** to start configuring the instance settings.
-    ![](attachments/19202584/19398852.png)
+    ![](attachments/azure-deploy/19398852.png)
 
 7.  Give the VM a Name.
 
@@ -54,7 +58,7 @@ The first thing to do when you want to run a Mendix instance on Azure is adding 
 11.  Select **OK.**
 
 12.  Select the **Size** of the image, by default D1 is selected.
-    ![](attachments/19202584/19398854.png)
+    ![](attachments/azure-deploy/19398854.png)
 
 13.  Click **Select**.
 
@@ -65,11 +69,11 @@ The first thing to do when you want to run a Mendix instance on Azure is adding 
 16.  A summary is shown, click on **Ok** to continue.
 
 17.  The Offer detail is shown. Click on Purchase to create the VM.
-    ![](attachments/19202584/19398856.png)
+    ![](attachments/azure-deploy/19398856.png)
 
 The image is now provisioning.
 
-![](attachments/19202584/19398857.png)
+![](attachments/azure-deploy/19398857.png)
 
 **Congratulations, the Mendix instance is now running!**
 
@@ -81,7 +85,7 @@ Now that you've got your Mendix instance up and running, it's time to run an app
 2.  **Log in** with your Mendix credentials.
 3.  Open a **project** you want to run on the Mendix Azure instance.
 4.  Create a deployment package of your project (**F7**).
-    ![](attachments/19202584/19398858.png)
+    ![](attachments/azure-deploy/19398858.png)
 
 5.  The deployment package will be stored in the **releases** folder of your project folder.
 
@@ -97,25 +101,25 @@ To upload the deployment package to the instance you need SFTP access.
 
 1.  Open **WinSCP**.
 2.  Select **New Site** on the left:
-    ![](attachments/19202584/19398859.png)
+    ![](attachments/azure-deploy/19398859.png)
 3.  Select **SFTP** as File protocol.
 
     For the hostname/IP you'll have to go back to Azure.
 
 4.  Open the Azure Console: [https://portal.azure.com/](https://portal.azure.com/).
 5.  Go to **Virtual Machines**.
-    ![](attachments/19202584/19398860.png)
+    ![](attachments/azure-deploy/19398860.png)
 
 6.  Select the instance you launched in the previous section.
 7.  From the pane below, copy the **Public IP address**:
-    ![](attachments/19202584/19398861.png)
+    ![](attachments/azure-deploy/19398861.png)
 
 8.  Go back to WinSCP and paste the Public IP address on the **Host name** field.
 9.  Fill in the created username and password.
 10.  Click **Login**.
 11.  Click **Yes** to add the server and host key to a cache.
 12.  On your computer, browse to the **releases** folder of the app you want to deploy.
-    ![](attachments/19202584/19398862.png)
+    ![](attachments/azure-deploy/19398862.png)
 13.  **Upload the deployment package** to the user’s home folder on the server.
 
 ## 4\. Running the image for the first time
@@ -210,12 +214,12 @@ The Mendix instance on Azure is now fully configured and ready for use. Let's tr
 2.  Login with **MxAdmin** and your admin **password**.
 
 **Congratulations! You have successfully deployed a Mendix app on Microsoft Azure.**
-![](attachments/19202584/19398863.png)
+![](attachments/azure-deploy/19398863.png)
 
 ## 7\. Related content
 
 *   [Trends in Mendix Cloud v3](/developerportal/operate/trends)
-*   [Mendix Cloud: Deploy](/developerportal/deploy/mendix-cloud-deploy)
+*   [Mendix Cloud: Deploy](mendix-cloud-deploy)
 *   [Sending Email](/deployment/mendixcloud/sending-email)
 *   [Different user logins when integrated with Mendix SSO](/deployment/mendixcloud/different-user-logins-when-integrated-with-mendix-sso)
 *   [Integrate your app with Mendix SSO](/deployment/mendixcloud/integrate-your-app-with-mendix-sso)

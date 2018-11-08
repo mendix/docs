@@ -2128,7 +2128,7 @@ module.exports = {
     },
     {
       from: "/mendixcloud/How+to+deploy+a+Mendix+app+on+Azure",
-      to: "/deployment/azure/how-to-deploy-a-mendix-app-on-azure"
+      to: "/developerportal/deploy/azure-deploy"
     },
     {
       from: "/mendixcloud/how-to-link-app-to-node",
@@ -2184,7 +2184,7 @@ module.exports = {
     },
     {
       from: "/deployment/mendixcloud/how-to-deploy-a-mendix-app-on-azure",
-      to: "/deployment/azure/how-to-deploy-a-mendix-app-on-azure"
+      to: "/developerportal/deploy/azure-deploy"
     },
     {
       from: "/mendixcloud/Trends",

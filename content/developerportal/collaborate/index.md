@@ -1,16 +1,18 @@
 ---
 title: "Collaboration Tools"
+description: "Describes the collaboration tools available in the Mendix Developer Portal."
+tags: ["Developer Portal", "sprint", "story", "stories", "buzz"]
 ---
 
 ## 1 Introduction
 
-The Developer Portal collaboration tools support collaboration with your team and the tracking of sprints and other tasks in the app.
+The Developer Portal supports collaboration with your team and the tracking of sprints and other tasks in your app projects.
 
-This category will cover the tools below.
+This category will cover the collaboration tools below.
 
 ## 2 Buzz
 
-The **Buzz** lets you see and share ideas as well as collaborate with your team. You will get an overview of new team members, new stories and their changes, and sprints which are added or completed.
+The **Buzz** lets you see and share ideas as well as discuss and collaborate with your team. You will get an overview of new team members, new stories and their changes, and sprints which are added or completed.
 
 For details, see [Buzz](buzz).
 

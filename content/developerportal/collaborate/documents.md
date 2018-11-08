@@ -1,6 +1,6 @@
 ---
 title: "Documents"
-category: "Collaborate"
+category: "Collaboration Tools"
 menu_order: 50
 description: "Describes how to manage your documents."
 tags: ["Documents", "Developer Portal"]

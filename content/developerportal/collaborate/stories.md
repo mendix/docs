@@ -1,6 +1,6 @@
 ---
 title: "Stories"
-category: "Collaborate"
+category: "Collaboration Tools"
 menu_order: 30
 description: "Describes how to manage your sprints, stories, and labels."
 tags: ["Stories", "Sprint", "Developer Portal"]

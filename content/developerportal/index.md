@@ -3,7 +3,7 @@ title: "Developer Portal"
 notoc: true
 ---
 
-## 1 Developer Portal 
+## 1 Introduction
 
 The [Mendix Developer Portal](https://home.mendix.com/) is a where Mendix developers can collaborate, deploy, and manage their apps, company, and users.
 
@@ -25,7 +25,7 @@ For more information on licensed apps, see the [Deployment](/deployment) documen
 
 In **People**, you can view the other members of your company.
 
-Learn more about Mendix users are distinguished in [Company & App Roles](/developerportal/company-app-roles/index).
+Learn more about how Mendix users are distinguished in [Company & App Roles](/developerportal/company-app-roles/index).
 
 ## 5 Document Categories
 

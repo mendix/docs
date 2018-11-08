@@ -4,7 +4,7 @@ parent: "dialogs"
 ---
 Use this dialog to specify the information necessary for deploying your app to a Cloud Foundry instance.
 
-**Note**: More information on deploying to Cloud Foundry can be found here: [Deploy a Mendix App to Cloud Foundry](/deployment/cloud-foundry/index).
+**Note**: More information on deploying to Cloud Foundry can be found here: [Cloud Foundry: Deploy](/developerportal/deploy/cloud-foundry-deploy).
 
 ## Step 1: Entering credentials
 

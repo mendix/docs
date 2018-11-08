@@ -34,7 +34,7 @@ For more information, see [SAP Cloud Platform](sap-cloud-platform).
 
 ## 6 Cloud Foundry
 
-From within the Modeler, you can deploy directly to Cloud Foundry-based platforms. To get started, see [cf-mendix-buildpack](https://github.com/mendix/cf-mendix-buildpack) and [Deploy a Mendix App to Cloud Foundry](/deployment/cloud-foundry/index).
+From within the Modeler, you can deploy directly to Cloud Foundry-based platforms. To get started, see [cf-mendix-buildpack](https://github.com/mendix/cf-mendix-buildpack) and [Cloud Foundry](cloud-foundry-deploy).
 
 ## 7 Docker and Kubernetes
 

@@ -1075,7 +1075,7 @@ module.exports = {
     },
     {
       from: "/howto50/Architecture+Options",
-      to: "/deployment/on-premises/design-the-architecture"
+      to: "/developerportal/deploy/on-premises-design"
     },
     {
       from: "/howto50/Build+a+simple+HRM+app+1+Create+manage+and+deploy+the+app",
@@ -1714,11 +1714,11 @@ module.exports = {
     },
     {
       from: "/howto6/Design+the+Architecture",
-      to: "/deployment/on-premises/design-the-architecture"
+      to: "/developerportal/deploy/on-premises-design"
     },
     {
       from: "/howto6/Architecture+Options",
-      to: "/deployment/on-premises/design-the-architecture"
+      to: "/developerportal/deploy/on-premises-design"
     },
     {
       from: "/howto6/Detect+and+Resolve+Performance+Issues",

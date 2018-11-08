@@ -1,6 +1,9 @@
 ---
-title: "Design the Architecture"
-category: "On-Premises"
+title: "On Premises"
+category: "Deploy and Manage"
+description: "Describes the options for deploying a Mendix app on premises"
+menu_order: 80
+tags: ["Deployment", "On premises", "Environment"]
 ---
 
 ## 1 Introduction
@@ -19,11 +22,11 @@ The options below are just a few examples of the most commonly used architecture
 
 This is the simplest solution with the fewest configuration and connection problems. This configuration is used in the Mendix cloud as well, except the cloud is Linux-based, with NGINX used instead of IIS and Postgresql used as the database server.
 
-![](attachments/18448662/18580719.jpg)
+![](attachments/on-premises-design/18580719.jpg)
 
 ### <a name="Option2"></a>2.2 Hosting with a Separate Database Server (Option 2)
 
-![](attachments/18448662/18580718.jpg)
+![](attachments/on-premises-design/18580718.jpg)
 
 ### 2.3 Separate Database Server and a Separate Web Server (Option 3)
 
@@ -31,11 +34,11 @@ This option is the most difficult to maintain, and every update has to be perfor
 
 You should avoid using this option if possible.
 
-![](attachments/18448662/18580717.jpg)
+![](attachments/on-premises-design/18580717.jpg)
 
 ### 2.4 Separate Mendix Web Server in a DMZ (Option 4)
 
-![](attachments/18448662/18580720.jpg)
+![](attachments/on-premises-design/18580720.jpg)
 
 ## 3 Load Balancing Support and Configuration
 
@@ -43,16 +46,16 @@ The platform can handle a load balancer in front of the platform. The only addit
 
 When updating the application, it is best to stop every instance. If the database structure has changed and a single instance updates the database structure, it can cause some strange behavior on all the running instances, since they are still expecting the old database structure.
 
-For more information, see [How to Configure High Availability](high-availability).
+For more information, see [How to Configure High Availability](/deployment/on-premises/high-availability).
 
 ## 4 Related Content
 
-* [How to Use a Security Checklist for Your On-Premises Installation](security-checklist-for-your-on-premises-installation)
-* [How to Update a Mendix Application](updating-a-mendix-application)
-* [How to Set Up a Microsoft SQL Server for Mendix on Windows](mendix-on-windows-microsoft-sql-server)
-* [How to Set Up a New SQL Server Database](setting-up-a-new-sql-server-database)
-* [How to Configure Mendix SQL Maintenance Plans](mendix-sql-maintenance-plans)
-* [How to Restore a SQL Server Database](restoring-a-sql-server-database)
-* [How to Set Up a SQL Server User](setting-up-a-sql-server-user)
-* [How to Set Up the Database User](setting-up-the-database-user)
-* [How to Troubleshoot SQL Server](troubleshooting-sql-server)
+* [How to Use a Security Checklist for Your On-Premises Installation](/deployment/on-premises/security-checklist-for-your-on-premises-installation)
+* [How to Update a Mendix Application](/deployment/on-premises/updating-a-mendix-application)
+* [How to Set Up a Microsoft SQL Server for Mendix on Windows](/deployment/on-premises/mendix-on-windows-microsoft-sql-server)
+* [How to Set Up a New SQL Server Database](/deployment/on-premises/setting-up-a-new-sql-server-database)
+* [How to Configure Mendix SQL Maintenance Plans](/deployment/on-premises/mendix-sql-maintenance-plans)
+* [How to Restore a SQL Server Database](/deployment/on-premises/restoring-a-sql-server-database)
+* [How to Set Up a SQL Server User](/deployment/on-premises/setting-up-a-sql-server-user)
+* [How to Set Up the Database User](/deployment/on-premises/setting-up-the-database-user)
+* [How to Troubleshoot SQL Server](/deployment/on-premises/troubleshooting-sql-server)

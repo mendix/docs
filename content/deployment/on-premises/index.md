@@ -13,7 +13,7 @@ Learn how to deploy your app on your own hardware by following the how-to's belo
     * [How to Activate a Mendix License on Microsoft Windows](activate-a-mendix-license-on-microsoft-windows)
 * [How to Update a Mendix Application](updating-a-mendix-application)
 * [How to Troubleshoot](troubleshooting)
-* [How to Set Up Architecture Options](design-the-architecture)
+* [How to Set Up Architecture Options](/developerportal/deploy/on-premises-design)
     * [How to Configure High Availability](high-availability)
 * [How to Set Up Mendix on Windows – Microsoft SQL Server](mendix-on-windows-microsoft-sql-server)
     * [How to Set Up a New SQL Server Database](setting-up-a-new-sql-server-database)

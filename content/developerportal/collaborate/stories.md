@@ -31,13 +31,13 @@ To add a new sprint, click **New sprint** and fill in some details, including th
 
 ### 2.3 Moving a Story {#moving}
 
-To move a story, select the story, click **Move to**, then select the sprint where the story should be moved.
+To move a story, select the story, click **Move to**, then select the sprint where the story should be moved:
 
 ![](attachments/move-to.png)
 
-### 2.4 Label {#label}
+### 2.4 Using Labels {#label}
 
-To add a label to a story or create a new label, use the options under **Label**.
+To add a label to a story or create a new label, use the options under **Label**:
 
 ![](attachments/label.png)
 
@@ -49,7 +49,7 @@ Via the **More** button, you can perform the actions described below.
 
 ### 3.1 Delete Selection
 
-Click **Delete selection** to delete the selected story.
+Click **Delete selection** to delete the selected story:
 
 ![](attachments/delete-selection.png)
 
@@ -78,13 +78,13 @@ When editing stories, follow these guidelines:
 
 ### 3.4 Manage Labels {#manage-labels}
 
-Click **Manage labels** to edit, merge, create, and delete labels.
+Click **Manage labels** to configure, merge, create, and delete labels:
 
 ![](attachments/labels.png)
 
 ### 3.5 Manage Story Template
 
-Click **Manage story template** to create and edit the default tasks that you can add as tasks to every new story for your app project.
+Click **Manage story template** to create and edit the default tasks that you can add as tasks to every new story for your app project:
 
 ![](attachments/default-task.png)
 
@@ -92,7 +92,7 @@ To enable these default tasks, select the **Add default tasks based on story tem
 
 ### 3.6 History
 
-Click **History** to view the history details for stories (via **Show item**) and revert changes if necessary (via **Revert change**).
+Click **History** to view the history details for stories (via **Show item**) and revert changes if necessary (via **Revert change**):
 
 ![](attachments/history.png)
 

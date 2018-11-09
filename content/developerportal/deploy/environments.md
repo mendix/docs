@@ -148,4 +148,4 @@ In this tab you can manage custom access restriction profiles. These profiles ca
 * [Deploy and Manage](/developerportal/deploy)
 * [Environment Details](/developerportal/deploy/environments-details)
 * [How to Receive Environment Status Alerts](/developerportal/howto/receive-alerts)
-* [How to Restrict Access for Incoming Requests](/deployment/mendixcloud/access-restrictions)
+* [How to Restrict Access for Incoming Requests](access-restrictions)

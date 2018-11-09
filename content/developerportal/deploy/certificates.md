@@ -1,6 +1,9 @@
 ---
 title: "Certificates"
-category: "Mendix Cloud"
+parent: "mendix-cloud-deploy"
+#menu_order: 
+#description: "Set a description with a maximum of 140 characters; this should describe what the goal of the document is, and it can be different from the document introduction; this is optional, and it can be removed"
+#tags: ["These", "are", "Example", "Tags"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -10,7 +13,7 @@ category: "Mendix Cloud"
 
 For connections from the internet to your Mendix Cloud applications, we provide a *.mendixcloud.com* or *.mxapps.io* domain with a certificate managed by Mendix. If you want to set up your own domain name, you can configure [custom domains](/developerportal/howto/custom-domains) (please note that this is not available for Free Apps).
 
-You can also restrict incoming traffic by requiring client certificates signed by a Certificate Authority of your choice. For more details on how to set this up, see [How to Restrict Access for Incoming Requests](/deployment/mendixcloud/access-restrictions).
+You can also restrict incoming traffic by requiring client certificates signed by a Certificate Authority of your choice. For more details on how to set this up, see [How to Restrict Access for Incoming Requests](access-restrictions).
 
 ### 1.2 Outgoing Connections
 
@@ -35,7 +38,7 @@ You can upload a PKCS12 file by following these steps:
 4. Select the **Network** tab.
 5.  Below **Outgoing Connections Certificates** click **Add Client Certificate**.
 
-    ![](attachments/4194597/certificate.png)
+    ![](attachments/certificates/certificate.png)
 
 6. Upload a PKCS12 (pfx) container. Within this container there has to be an X.509 certificate, a private key, and (optionally) a certificate chain.
 7. After uploading a client certificate, you will be requested to fill in a password to unlock the certificate container.
@@ -44,7 +47,7 @@ You can upload a PKCS12 file by following these steps:
 Certificates require an app restart before they become active.
 {{% /alert %}}
 
-![](attachments/4194597/certificate-details.png)
+![](attachments/certificates/certificate-details.png)
 
 For more information, see the following:
 

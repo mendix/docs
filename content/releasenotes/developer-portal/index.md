@@ -524,7 +524,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 #### Improvements
 
-* We enabled path-based access restrictions for all Mendix Cloud v3 apps. This allows users to more easily configure access restrictions on their environments. For more information, see [Access Restrictions](/deployment/mendixcloud/access-restrictions). Mendix Cloud v4 already has this functionality enabled.
+* We enabled path-based access restrictions for all Mendix Cloud v3 apps. This allows users to more easily configure access restrictions on their environments. For more information, see [Access Restrictions](/developerportal/deploy/access-restrictions). Mendix Cloud v4 already has this functionality enabled.
 
 ### August 14th, 2017
 

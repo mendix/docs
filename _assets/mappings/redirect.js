@@ -2350,7 +2350,7 @@ module.exports = {
     },
     {
       from: "/refguide4/certificates",
-      to: "/deployment/mendixcloud/certificates"
+      to: "/developerportal/deploy/certificates"
     },
     {
       from: "/refguide4/Change+List",
@@ -3605,7 +3605,7 @@ module.exports = {
     },
     {
       from: "/refguide5/certificates",
-      to: "/deployment/mendixcloud/certificates"
+      to: "/developerportal/deploy/certificates"
     },
     {
       from: "/refguide5/Change+List",
@@ -5212,7 +5212,7 @@ module.exports = {
     },
     {
       from: "/refguide6/certificates",
-      to: "/deployment/mendixcloud/certificates"
+      to: "/developerportal/deploy/certificates"
     },
     {
       from: "/refguide6/Change+List",
@@ -8315,7 +8315,11 @@ module.exports = {
     },
 	{
       "from": "/refguide7/certificates",
-      "to": "/deployment/mendixcloud/certificates"
+      "to": "/developerportal/deploy/certificates"
+    },
+  {
+      "from": "/deployment/mendixcloud/certificates",
+      "to": "/developerportal/deploy/certificates"
     },
     /****************************************************
      * REFERENCE GUIDE RENAMES

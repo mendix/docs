@@ -1,6 +1,9 @@
 ---
 title: "Restrict Access for Incoming Requests"
-category: "Mendix Cloud"
+parent: "mendix-cloud-deploy"
+#menu_order:
+#description: "Set a description with a maximum of 140 characters; this should describe what the goal of the document is, and it can be different from the document introduction; this is optional, and it can be removed"
+tags: ["incoming requests", "IP Range", "security", "paths", "URL"]
 ---
 
 ## 1 Introduction
@@ -124,7 +127,7 @@ If it is desired that the `/ws/` path can still be reached from the office locat
 
 ## 6 Related Content
 
-* [Certificates](/deployment/mendixcloud/certificates)
+* [Certificates](certificates)
 * [Deploy and Manage](/developerportal/deploy)
-* [Environments](/developerportal/deploy/environments)
-* [Environment details](/developerportal/deploy/environments)
+* [Environments](environments)
+* [Environment details](environments-details)

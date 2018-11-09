@@ -38,7 +38,7 @@ Via the Feedback Widget, you can also also provide feedback on how various parts
 To provide feedback via the Mendix Feedback Widget, follow these steps:
 
 1. Click the **Feedback** button on the right-side of the screen.
-2. Fill in the feedback you want to send to Mendix. The feedback can be an **Issue**, **Idea**, or **Question**. A description of the feedback (in **Additional information**) and a screenshot of the screen are optional but recommended.
+2. Fill in the feedback you want to send to Mendix. The feedback can be an **Issue**, **Idea**, or **Question**. A description of the feedback (in **Additional information**) and a screenshot of the screen (via the **Include a snapshot of this page** check box) are recommended.
 3.  Click **Send Feedback**:
 
 	{{% image_container width="500" %}}![](attachments/feedback-example.png)
@@ -59,11 +59,12 @@ To configure the Mendix Feedback Widget, follow these steps:
 1. Open the widget **Properties** by double-clicking the widget on the page. 
 2. Select the **User** entity that is used in your application to store the name and email address of the user. Note that this object must be a specialization of the **User** entity within the **System** module (for example, **Account** in the **Administration** module).
 3. Select the **Username attribute** that stores the name of the user and the **Email address attribute**. This will be used to automatically fill in the name and email address of the user who is logged in when submitting feedback in the app.
-4. Decide whether you want to allow users to upload a file and screenshot to the feedback item (via **Allow file upload** and **Allow screenshot upload**, respectively). 
+4.  Decide whether you want to allow users to upload a file and screenshot to the feedback item (via **Allow file upload** and **Allow screenshot upload**, respectively). 
 
-    ![](attachments/edit-widget.png)
+	{{% image_container width="500" %}}![](attachments/edit-widget.png)
+	{{% image_container width="500" %}}
 
-5. Open the **Configuration** tab of the Mendix Feedback Widget properties.
+5. Open the **Configuration** tab of the widget properties.
 6. Ensure that the **Feedback server** is set to `https://sprintr.home.mendix.com/`.
 7. Ensure that the **Project identifier** is filled in correctly. The project identifier is your **App ID**, and it is automatically filled in for the Mendix Feedback Widget. If necessary, you can find the identifier of your app in the [Developer Portal](http://home.mendix.com) by opening your app and clicking **General** under the **Settings** category:
 

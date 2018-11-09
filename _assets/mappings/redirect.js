@@ -6799,10 +6799,6 @@ module.exports = {
       "to": "/refguide/anonymous-users"
     },
     {
-      "from": "/refguide7/App+Platform",
-      "to": "/developerportal/dev-portal-overview/index"
-    },
-    {
       "from": "/refguide7/App+Settings+Dialog",
       "to": "/refguide/app-settings-dialog"
     },

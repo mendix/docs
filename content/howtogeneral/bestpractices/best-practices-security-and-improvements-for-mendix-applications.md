@@ -124,7 +124,7 @@ By using an SSL connection and adding the public key of the endpoint within your
 
 There are several scenarios possible for protecting your outgoing connections using encryption, that depend on the infrastructure possibilities and protocols used. This article describes it perfectly: [Securing Outgoing Connections For Your Application](/developerportal/deploy/securing-outgoing-connections-from-your-application).
 
-You can add individual certificates in your project’s settings in the Mendix Modeler. Test, acceptance and production environments require their certificates to be uploaded to the [Mendix Cloud](/deployment/mendixcloud/certificates).
+You can add individual certificates in your project’s settings in the Mendix Modeler. Test, acceptance and production environments require their certificates to be uploaded to the [Mendix Cloud](/developerportal/deploy/certificates).
 
 ## 11 Prevent Embedding of Your App Within an IFrame
 

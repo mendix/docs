@@ -108,7 +108,7 @@ If you have a custom domain set up, you will need to change this. Instructions f
 
 ## 4 Related Content
 
-*   [Certificates](/deployment/mendixcloud/certificates)
+*   [Certificates](certificates)
 *   [How to Configure Custom Domains](/developerportal/howto/custom-domains)
 *   [Mendix Cloud: Deploy](mendix-cloud-deploy)
 *   [How to Download a Backup](/developerportal/howto/how-to-download-a-backup)

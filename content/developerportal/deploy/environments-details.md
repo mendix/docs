@@ -167,7 +167,7 @@ You can perform the following actions:
 * **Edit**
 * **Delete**
 
-For more information, see [Certificates](/deployment/mendixcloud/certificates) and [How to Configure Custom Domains](/developerportal/howto/custom-domains).
+For more information, see [Certificates](certificates) and [How to Configure Custom Domains](/developerportal/howto/custom-domains).
 
 ### 4.2 Prevent Embedding Your App in an IFrame
 

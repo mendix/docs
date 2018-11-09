@@ -1,6 +1,9 @@
 ---
 title: "Sending Email"
-category: "Mendix Cloud"
+parent: "mendix-cloud-deploy"
+#menu_order:
+description: "How to use external email providers in Mendix, and how to configure Mendix mail on Cloud v3   "
+tags: ["email", "smtp", "sending policy framework", "Cloud v3", "SPF"]
 ---
 
 ## 1 Introduction
@@ -60,7 +63,7 @@ When using Mendix mail servers and a sender address in a domain that has a restr
 *   The needed information about Mendix mail servers that deliver outgoing mail traffic to the internet can be included in the SPF settings for the domain of the sender address by including `include:_spf.mendix.com` into the policy rule. By using this technique, your SPF configuration will always automatically be kept up to date.
 *   Do **not** directly use hard coded low level infrastructure details like IP addresses of mail servers. These addresses are subject to change whenever Mendix is doing upgrades and maintenance.
 
-### 4 Sender and Recipient Address Requirements
+## 4 Sender and Recipient Address Requirements
 
 *   Always use a sender address which is an existing address on which you are able to receive mail. If using a non-existing address as sender address, you will not get (bounce) error messages which might be generated when mail delivery fails half way.
 *   Do not invent your own non-existing domain or local part, do not use noreply@ addresses if that noreply@ address is not a real email box from which you can read and process delivery errors.
@@ -71,7 +74,7 @@ When using Mendix mail servers and a sender address in a domain that has a restr
 ## 5 Related Content
 
 *   [Trends in Mendix Cloud v3](/developerportal/operate/trends)
-*   [Mendix Cloud: Deploy](/developerportal/deploy/mendix-cloud-deploy)
-*   [Azure: Deploy](/developerportal/deploy/azure-deploy)
-*   [Different user logins when integrated with Mendix SSO](different-user-logins-when-integrated-with-mendix-sso)
-*   [Integrate your app with Mendix SSO](integrate-your-app-with-mendix-sso)
+*   [Mendix Cloud: Deploy](mendix-cloud-deploy)
+*   [Azure: Deploy](azure-deploy)
+*   [Different user logins when integrated with Mendix SSO](/deployment/mendixcloud/different-user-logins-when-integrated-with-mendix-sso)
+*   [Integrate your app with Mendix SSO](/deployment/mendixcloud/integrate-your-app-with-mendix-sso)

@@ -65,6 +65,6 @@ Congratulations! Your app now makes use of the AppCloud services. When you deplo
 *   [Trends in Mendix Cloud v3](/developerportal/operate/trends)
 *   [Mendix Cloud: Deploy](/developerportal/deploy/mendix-cloud-deploy)
 *   [Azure: Deploy](/developerportal/deploy/azure-deploy)
-*   [Sending Email](sending-email)
+*   [Sending Email](/developerportal/deploy/sending-email)
 
 After completing this how-to on configuring AppCloud services, check out [how to improve logging in with different types of user accounts](different-user-logins-when-integrated-with-mendix-sso).

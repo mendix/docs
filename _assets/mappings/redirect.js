@@ -2180,7 +2180,7 @@ module.exports = {
     },
     {
       from: "/mendixcloud/Sending+Email",
-      to: "/deployment/mendixcloud/sending-email"
+      to: "/developerportal/deploy/sending-email"
     },
     {
       from: "/deployment/mendixcloud/how-to-deploy-a-mendix-app-on-azure",

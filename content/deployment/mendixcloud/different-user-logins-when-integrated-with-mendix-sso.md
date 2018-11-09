@@ -279,5 +279,5 @@ You can view the implementation by deploying your app to the Mendix Cloud and go
 *   [Trends in Mendix Cloud v3](/developerportal/operate/trends)
 *   [Mendix Cloud: Deploy](/developerportal/deploy/mendix-cloud-deploy)
 *   [Azure: Deploy](/developerportal/deploy/azure-deploy)
-*   [Sending Email](sending-email)
+*   [Sending Email](/developerportal/deploy/sending-email)
 *   [Integrate your app with Mendix SSO](integrate-your-app-with-mendix-sso)

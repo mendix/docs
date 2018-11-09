@@ -62,7 +62,7 @@ You can also consider running your Mendix app using your own AWS account in a di
 
 ## 8 What Are the Limitations?
 
-There is no mail server included in Mendix Cloud v4. You can use a third-party email provider instead. For more information, see [Sending Email](deployment/mendixcloud/sending-email).
+There is no mail server included in Mendix Cloud v4. You can use a third-party email provider instead. For more information, see [Sending Email](sending-email).
 
 A VPN (which is already deprecated in favor of client certificates) will not be possible in Mendix Cloud v4. For alternatives, see [Securing Outgoing Connections from Your Application](securing-outgoing-connections-from-your-application).
 

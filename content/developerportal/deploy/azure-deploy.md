@@ -22,7 +22,7 @@ Mendix is now available in the Microsoft Azure marketplace as an App that can ru
 
 *   Configure access to a Mendix instance on Azure
 
-## 1. Preparation
+## 1 Preparation
 
 Before you can start with this how-to, please make sure you have completed the following prerequisites.
 
@@ -31,7 +31,7 @@ Before you can start with this how-to, please make sure you have completed the f
 *   Register for an [Azure account](https://azure.microsoft.com/nl-nl/account/)
 *   [Mendix Modeler ](https://appstore.home.mendix.com/link/modelers/)5.18+ installed
 
-## 2\. Adding Mendix from the Azure marketplace
+## 2 Adding Mendix from the Azure marketplace
 
 The first thing to do when you want to run a Mendix instance on Azure is adding a Mendix version to your Azure account.
 
@@ -77,7 +77,7 @@ The image is now provisioning.
 
 **Congratulations, the Mendix instance is now running!**
 
-## 2\. Creating a Deployment Package
+## 2 Creating a Deployment Package
 
 Now that you've got your Mendix instance up and running, it's time to run an app on it. To do this you need to create a deployment package of your Mendix app and upload it to the Azure instance.
 
@@ -95,7 +95,7 @@ Your app must be converted to Mendix 5.18 or higher before it can run on Azure.
 
 {{% /alert %}}
 
-## 3\. Uploading the Deployment Package to Azure
+## 3 Uploading the Deployment Package to Azure
 
 To upload the deployment package to the instance you need SFTP access.
 
@@ -122,7 +122,7 @@ To upload the deployment package to the instance you need SFTP access.
     ![](attachments/azure-deploy/19398862.png)
 13.  **Upload the deployment package** to the user’s home folder on the server.
 
-## 4\. Running the image for the first time
+## 4 Running the image for the first time
 
 To be sure the image is fully up to date with the latest patches, follow the below steps.
 
@@ -144,7 +144,7 @@ To be sure the image is fully up to date with the latest patches, follow the bel
 
 5.  On the question to update waagent use default (N)
 
-## 5\. Running the Mendix App on Azure
+## 5 Running the Mendix App on Azure
 
 Now that the deployment package is in place you can deploy it on the instance. You'll use PuTTY to connect to the instance with SSH.
 
@@ -203,7 +203,7 @@ Now that the deployment package is in place you can deploy it on the instance. Y
 
 **The app can now be accessed through the browser.**
 
-## 6\. Accessing the App
+## 6 Accessing the App
 
 The Mendix instance on Azure is now fully configured and ready for use. Let's try and see if the app works!
 
@@ -216,10 +216,10 @@ The Mendix instance on Azure is now fully configured and ready for use. Let's tr
 **Congratulations! You have successfully deployed a Mendix app on Microsoft Azure.**
 ![](attachments/azure-deploy/19398863.png)
 
-## 7\. Related content
+## 7 Related content
 
 *   [Trends in Mendix Cloud v3](/developerportal/operate/trends)
 *   [Mendix Cloud: Deploy](mendix-cloud-deploy)
-*   [Sending Email](/deployment/mendixcloud/sending-email)
+*   [Sending Email](/developerportal/deploy/sending-email)
 *   [Different user logins when integrated with Mendix SSO](/deployment/mendixcloud/different-user-logins-when-integrated-with-mendix-sso)
 *   [Integrate your app with Mendix SSO](/deployment/mendixcloud/integrate-your-app-with-mendix-sso)

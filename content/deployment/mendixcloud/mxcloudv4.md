@@ -14,7 +14,7 @@ V4 was launched in Q1 2017. As in v3, applications are deployed via the Mendix D
 
 New apps will be launched on Mendix Cloud v4 by default. Customers that need to stay on v3 because they use a VPN can still get new apps on v3 for the foreseeable future. Mendix Cloud v3 will be supported for several more years; no end-of-support or end-of-life dates have been set yet.
 
-If you want to move your app(s) from v3 to v4, you can find the instructions here: [Migrate to Mendix Cloud v4](migrating-to-v4).
+If you want to move your app(s) from v3 to v4, you can find the instructions here: [Migrate to Mendix Cloud v4](/developerportal/deploy/migrating-to-v4).
 
 ## 3 Can I Upgrade All My Apps?
 
@@ -99,4 +99,4 @@ There are some features missing in v4. Mendix will implement the following featu
 
 ## 12 Related Content
 
-* [How to Migrate to Mendix Cloud v4](/deployment/mendixcloud/migrating-to-v4)
+* [How to Migrate to Mendix Cloud v4](/developerportal/deploy/migrating-to-v4)

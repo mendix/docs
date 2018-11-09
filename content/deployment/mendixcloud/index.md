@@ -51,7 +51,6 @@ If you are upgrading a Free App to a licensed node you may find the following do
 * [Different User Logins when Integrated with Mendix SSO](different-user-logins-when-integrated-with-mendix-sso)
 * [Integrate Your App with Mendix SSO](integrate-your-app-with-mendix-sso)
 * [Java in Mendix Cloud v3](java-in-the-cloud)
-* [Migrate to Mendix Cloud v4](migrating-to-v4)
 * [Mendix Cloud v4 - FAQ](mxcloudv4)
 * [Sending Email](sending-email)
 * [Troubleshooting](troubleshoot-mendixcloud)

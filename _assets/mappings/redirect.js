@@ -2160,11 +2160,11 @@ module.exports = {
     },
     {
       from: "/mendixcloud/migrating+to+v4",
-      to: "/deployment/mendixcloud/migrating-to-v4"
+      to: "/developerportal/deploy/migrating-to-v4"
     },
     {
       from: "/developerportal/howto/migrating-to-v4",
-      to: "/deployment/mendixcloud/migrating-to-v4"
+      to: "/developerportal/deploy/migrating-to-v4"
     },
     {
       from: "/mendixcloud/Monitoring+application+health",

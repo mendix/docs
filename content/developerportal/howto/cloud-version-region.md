@@ -48,7 +48,7 @@ To view the Mendix Cloud region and version in which your app is hosted, follow 
 * [Application Trends in Mendix Cloud v4](/developerportal/operate/trends-v4)
 * [Environment Details](/developerportal/deploy/environments-details)
 * [How to Manage Company & App Roles](/developerportal/company-app-roles/manage-roles)
-* [How to Migrate to Mendix Cloud v4](/deployment/mendixcloud/migrating-to-v4)
+* [How to Migrate to Mendix Cloud v4](/developerportal/deploy/migrating-to-v4)
 * [Mendix Cloud](/deployment/mendixcloud/)
 * [Mendix Cloud v4 - FAQ](/deployment/mendixcloud/mxcloudv4)
 * [Company & App Roles](/developerportal/company-app-roles/index)

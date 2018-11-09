@@ -1,7 +1,7 @@
 ---
 title: "Run a Mendix Docker Image"
-category: "Docker"
-#parent: ""
+parent: "docker-deploy"
+menu_order: 10
 description: "Describes running a Mendix Docker image."
 tags: ["Docker", "Cloud", "container", "CI/CD"]
 ---
@@ -32,7 +32,7 @@ This how-to explains how to run a Mendix Docker image created using the Mendix D
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Build an image with the Mendix buildpack (for details, see [Build a Docker Image from a Mendix App Project](build-docker-image-from-mendix-project))
+* Build an image with the Mendix buildpack (for details, see [Docker: Deploy](docker-deploy))
 
 ## 3 Compatibility
 
@@ -61,6 +61,6 @@ docker run -it \
 
 ## 5 Related Content
 
-* [How to Build a Docker Image from a Mendix App Project](build-docker-image-from-mendix-project)
+* [Docker: Deploy](docker-deploy)
 * [Mendix Docker Buildpack ](https://github.com/mendix/docker-mendix-buildpack)
 * [Mendix Azure ACS Kubernetes Reference Implementation](https://github.com/mendix/docker-mendix-buildpack)

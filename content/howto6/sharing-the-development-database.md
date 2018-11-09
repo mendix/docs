@@ -84,9 +84,9 @@ Make sure the names of the databases aren't the same or make a copy of your own 
 
 ## 8\. Related content
 
-*   [Managing your Application Requirements with Mendix](/developerportal/howto/managing-your-application-requirements-with-mendix)
+*   [Managing your Application Requirements with Mendix](/developerportal/collaborate/stories)
 *   [Contributing to a GitHub repository](contribute-to-a-github-repository)
 *   [Starting your own repository](starting-your-own-repository)
 *   [Using Team Server - Version Control](using-team-server-version-control)
-*   [How to Use the Mendix Feedback Widget](/developerportal/collaborate/use-feedback-widget)
+*   [How to Use the Mendix Feedback Widget](/developerportal/feedback/use-feedback-widget)
 *   [Sharing the Development Database](sharing-the-development-database)

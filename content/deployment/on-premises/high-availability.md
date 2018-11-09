@@ -1,6 +1,6 @@
 ---
 title: "Configure High Availability"
-parent: "design-the-architecture"
+category: "On-Premises"
 ---
 
 ## 1 Introduction

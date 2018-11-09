@@ -49,4 +49,4 @@ Great work. Now you can move on to the second how-to for creating a simple HRM a
 * [Step 4: Enrich the GUI with Filter Options](build-a-simple-hrm-app-4-enrich-the-gui-with-filter-options)
 * [Step 5: Smarten Up Your App with Business Logic](build-a-simple-hrm-app-5-smarten-up-your-app-with-business-logic)
 * [Testing Microflows Using the UnitTesting Module](../testing/testing-microflows-using-the-unittesting-module)
-* [How to Manage Sprints and Stories](/developerportal/howto/managing-your-application-requirements-with-mendix)
+* [Stories](/developerportal/collaborate/stories)

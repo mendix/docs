@@ -58,6 +58,6 @@ All the changes made on this page are directly passed on to the **Stories** page
 
 ## 5 Related Content
 
-* [How to Manage Sprints and Stories](/developerportal/howto/managing-your-application-requirements-with-mendix)
+* [Stories](/developerportal/collaborate/stories)
 * [Company & App Roles](/developerportal/company-app-roles/index)
 * [Stories](/developerportal/collaborate/stories)

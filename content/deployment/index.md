@@ -19,11 +19,11 @@ From within the Modeler, you can view the cloud nodes you have available in the 
 
 ## 4 Cloud Foundry
 
-From within the Modeler, you can deploy directly to Cloud Foundry-based platforms. To get started, see [cf-mendix-buildpack](https://github.com/mendix/cf-mendix-buildpack) and [Deploy a Mendix App to Cloud Foundry](/deployment/cloud-foundry/index).
+From within the Modeler, you can deploy directly to Cloud Foundry-based platforms. To get started, see [cf-mendix-buildpack](https://github.com/mendix/cf-mendix-buildpack) and [Deploy a Mendix App to Cloud Foundry](/developerportal/deploy/cloud-foundry-deploy).
 
 ## 5 Azure
 
-Deploying to a Azure is possible from the [Azure Marketplace](https://azure.microsoft.com/en-us/marketplace/partners/mendix/mendix-pro/). For details on how to deploy, see [How to Deploy a Mendix App on Azure](/deployment/azure/how-to-deploy-a-mendix-app-on-azure).
+Deploying to a Azure is possible from the [Azure Marketplace](https://azure.microsoft.com/en-us/marketplace/partners/mendix/mendix-pro/). For details on how to deploy, see [How to Deploy a Mendix App on Azure](/developerportal/deploy/azure-deploy).
 
 ## 6 On-Premises
 

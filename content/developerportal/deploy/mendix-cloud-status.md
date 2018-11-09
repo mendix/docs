@@ -1,6 +1,6 @@
 ---
 title: "Mendix Cloud Status"
-category: "Deploy and Manage"
+parent: "mendix-cloud-deploy"
 description: "Describes where to find the current status of the Mendix Cloud."
 tags: ["Status","Mendix Cloud","Developer Portal"]
 ---

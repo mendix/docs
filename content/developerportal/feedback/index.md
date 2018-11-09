@@ -1,7 +1,5 @@
 ---
 title: "Feedback"
-category: "Collaborate"
-menu_order: 40
 description: "This page describes how to manage feedback."
 tags: ["Feedback","Developer Portal"]
 ---
@@ -106,5 +104,4 @@ Once a feedback item is connected to a user story, the user who submitted the st
 * [Mendix Profile](../mendix-profile/index)
 * [How to Use the Mendix Feedback Widget](use-feedback-widget)
 * [How to Use the Mendix Feedback & Collaboration Widget](use-collaboration-widget)
-* [Stories](stories)
-* [How to Manage Sprints and Stories](../howto/managing-your-application-requirements-with-mendix)
+* [Stories](../collaborate/stories)

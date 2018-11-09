@@ -1075,7 +1075,7 @@ module.exports = {
     },
     {
       from: "/howto50/Architecture+Options",
-      to: "/deployment/on-premises/design-the-architecture"
+      to: "/developerportal/deploy/on-premises-design"
     },
     {
       from: "/howto50/Build+a+simple+HRM+app+1+Create+manage+and+deploy+the+app",
@@ -1203,11 +1203,11 @@ module.exports = {
     },
     {
       from: "/howto50/Deploying+a+Mendix+App+to+Cloud+Foundry",
-      to: "/deployment/cloud-foundry/index"
+      to: "/developerportal/deploy/cloud-foundry-deploy"
     },
     {
       from: "/howto50/Deploying+a+Mendix+App+to+Pivotal",
-      to: "/deployment/cloud-foundry/index"
+      to: "/developerportal/deploy/cloud-foundry-deploy"
     },
     {
       from: "/howto50/Deploying+Mendix+on+Microsoft+Windows",
@@ -1267,7 +1267,7 @@ module.exports = {
     },
     {
       from: "/howto50/Gathering+user+feedback",
-      to: "/developerportal/collaborate/use-feedback-widget"
+      to: "/developerportal/feedback/use-feedback-widget"
     },
     {
       from: "/howto50/Getting+Started",
@@ -1343,7 +1343,7 @@ module.exports = {
     },
     {
       from: "/howto50/Managing+your+Application+Requirements+with+Mendix",
-      to: "/developerportal/howto/managing-your-application-requirements-with-mendix"
+      to: "/developerportal/collaborate/stories"
     },
     {
       from: "/howto50/Mendix+on+Windows+-+Microsoft+SQL+Server",
@@ -1690,15 +1690,15 @@ module.exports = {
     },
     {
       from: "/howto6/Deploy+a+Mendix+App+to+IBM+Bluemix",
-      to: "/deployment/cloud-foundry/index"
+      to: "/developerportal/deploy/cloud-foundry-deploy"
     },
     {
       from: "/howto6/deploying+a+mendix+app+to+ibm+bluemix",
-      to: "/deployment/cloud-foundry/index"
+      to: "/developerportal/deploy/cloud-foundry-deploy"
     },
     {
       from: "/howto6/Deploy+a+Mendix+App+to+Pivotal",
-      to: "/deployment/cloud-foundry/index"
+      to: "/developerportal/deploy/cloud-foundry-deploy"
     },
     {
       from: "/howto6/Deploy+Mendix+on+Microsoft+Windows",
@@ -1706,7 +1706,7 @@ module.exports = {
     },
     {
       from: "/howto6/Deploying+a+Mendix+App+to+Cloud+Foundry",
-      to: "/deployment/cloud-foundry/index"
+      to: "/developerportal/deploy/cloud-foundry-deploy"
     },
     {
       from: "/howto6/deploying+to+the+cloud",
@@ -1714,11 +1714,11 @@ module.exports = {
     },
     {
       from: "/howto6/Design+the+Architecture",
-      to: "/deployment/on-premises/design-the-architecture"
+      to: "/developerportal/deploy/on-premises-design"
     },
     {
       from: "/howto6/Architecture+Options",
-      to: "/deployment/on-premises/design-the-architecture"
+      to: "/developerportal/deploy/on-premises-design"
     },
     {
       from: "/howto6/Detect+and+Resolve+Performance+Issues",
@@ -1770,7 +1770,7 @@ module.exports = {
     },
     {
       from: "/howto6/Gathering+user+feedback",
-      to: "/developerportal/collaborate/use-feedback-widget"
+      to: "/developerportal/feedback/use-feedback-widget"
     },
     {
       from: "/howto6/Getting+Started",
@@ -1862,7 +1862,7 @@ module.exports = {
     },
     {
       from: "/howto6/Managing+your+Application+Requirements+with+Mendix",
-      to: "/developerportal/howto/managing-your-application-requirements-with-mendix"
+      to: "/developerportal/collaborate/stories"
     },
     {
       from: "/howto6/Mendix+on+Windows+-+Microsoft+SQL+Server",
@@ -2085,15 +2085,15 @@ module.exports = {
     },
     {
       from: "/howto/deploying-a-mendix-app-to-cloud-foundry",
-      to: "/deployment/cloud-foundry/index"
+      to: "/developerportal/deploy/cloud-foundry-deploy"
     },
     {
       from: "/howto7/deploying-a-mendix-app-to-cloud-foundry",
-      to: "/deployment/cloud-foundry/index"
+      to: "/developerportal/deploy/cloud-foundry-deploy"
     },
 	{
       from: "/deploy-a-mendix-app-to-cloud-foundry",
-      to: "/deployment/cloud-foundry/index"
+      to: "/developerportal/deploy/cloud-foundry-deploy"
     },
 	{
       from: "/bestpractices/How+to+execute+an+SQL+statement+on+an+external+database",
@@ -2128,7 +2128,7 @@ module.exports = {
     },
     {
       from: "/mendixcloud/How+to+deploy+a+Mendix+app+on+Azure",
-      to: "/deployment/azure/how-to-deploy-a-mendix-app-on-azure"
+      to: "/developerportal/deploy/azure-deploy"
     },
     {
       from: "/mendixcloud/how-to-link-app-to-node",
@@ -2184,7 +2184,7 @@ module.exports = {
     },
     {
       from: "/deployment/mendixcloud/how-to-deploy-a-mendix-app-on-azure",
-      to: "/deployment/azure/how-to-deploy-a-mendix-app-on-azure"
+      to: "/developerportal/deploy/azure-deploy"
     },
     {
       from: "/mendixcloud/Trends",
@@ -2194,7 +2194,10 @@ module.exports = {
       from: "/developerportal/howto/deploying-to-the-cloud",
       to: "/developerportal/deploy/mendix-cloud-deploy"
     },
-    /****************************************************
+    {
+      from: "/deployment/cloud-foundry/",
+      to: "/developerportal/deploy/cloud-foundry-deploy"
+    },    /****************************************************
      * SUPPORT
      ****************************************************/
 

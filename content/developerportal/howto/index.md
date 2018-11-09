@@ -10,14 +10,6 @@ This category contains documents about the use of specific tasks in the [Develop
 
 * [Manage Developer Portal Deep Links](manage-deeplinks)
 
-## Collaborate
-
-### Stories
-
-* [Manage Sprints and Stories](managing-your-application-requirements-with-mendix)
-
-## Deploy
-
 ### Configuration
 
 * [Configure Custom Domains](custom-domains)

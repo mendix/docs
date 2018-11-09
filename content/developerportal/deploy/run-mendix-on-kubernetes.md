@@ -1,6 +1,7 @@
 ---
 title: "Run Mendix on Kubernetes"
-category: "Docker"
+parent: "docker-deploy"
+menu_order: 20
 tags: ["kubernetes", "cloud", "deployment"]
 ---
 
@@ -292,6 +293,6 @@ Congratulations! You have deployed your first Mendix app in Kubernetes.
 
 ## 5 Related Content
 
-* [How to Build a Docker Image from a Mendix App Project](build-docker-image-from-mendix-project)
+* [Docker: Deploy](docker-deploy)
 * [Mendix Docker Buildpack](https://github.com/mendix/docker-mendix-buildpack)
 * [Mendix Azure ACS Kubernetes Reference Implementation](https://github.com/mendix/azure-kubernetes-cicd-reference-impl)

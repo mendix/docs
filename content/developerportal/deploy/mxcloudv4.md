@@ -1,6 +1,6 @@
 ---
 title: "Mendix Cloud V4 - FAQ"
-category: "Mendix Cloud"
+parent: "mendix-cloud-deploy"
 tags: ["Cloud", "Mendix Cloud", "V4", "Version 4", "FAQ", "V3", "AWS", "Amazon Web Services"]
 ---
 
@@ -14,7 +14,7 @@ V4 was launched in Q1 2017. As in v3, applications are deployed via the Mendix D
 
 New apps will be launched on Mendix Cloud v4 by default. Customers that need to stay on v3 because they use a VPN can still get new apps on v3 for the foreseeable future. Mendix Cloud v3 will be supported for several more years; no end-of-support or end-of-life dates have been set yet.
 
-If you want to move your app(s) from v3 to v4, you can find the instructions here: [Migrate to Mendix Cloud v4](/developerportal/deploy/migrating-to-v4).
+If you want to move your app(s) from v3 to v4, you can find the instructions here: [Migrate to Mendix Cloud v4](migrating-to-v4).
 
 ## 3 Can I Upgrade All My Apps?
 
@@ -58,13 +58,13 @@ However, you can launch services on your own AWS account in the same region to m
 
 We add regions based on customer demand. If you would like a different region, contact your Mendix Customer Success Manager to see what we can offer. Note that we any request will need to take into account the costs of launching a complete Cloud Foundry cluster, with backup services, monitoring, etc. 
 
-You can also consider running your Mendix app using your own AWS account in a different AWS region. You can do this using Docker, and there are some documents on how to do this here: [Docker](/developerportal/deploy/docker-deploy). If you do this, however, you will not receive all the benefits of running in the Mendix Cloud.
+You can also consider running your Mendix app using your own AWS account in a different AWS region. You can do this using Docker, and there are some documents on how to do this here: [Docker](docker-deploy). If you do this, however, you will not receive all the benefits of running in the Mendix Cloud.
 
 ## 8 What Are the Limitations?
 
-There is no mail server included in Mendix Cloud v4. You can use a third-party email provider instead. For more information, see [Sending Email](sending-email).
+There is no mail server included in Mendix Cloud v4. You can use a third-party email provider instead. For more information, see [Sending Email](deployment/mendixcloud/sending-email).
 
-A VPN (which is already deprecated in favor of client certificates) will not be possible in Mendix Cloud v4. For alternatives, see [Securing Outgoing Connections from Your Application](/developerportal/deploy/securing-outgoing-connections-from-your-application).
+A VPN (which is already deprecated in favor of client certificates) will not be possible in Mendix Cloud v4. For alternatives, see [Securing Outgoing Connections from Your Application](securing-outgoing-connections-from-your-application).
 
 ## 9 Differences Between Mendix Cloud Versions
 
@@ -99,4 +99,4 @@ There are some features missing in v4. Mendix will implement the following featu
 
 ## 12 Related Content
 
-* [How to Migrate to Mendix Cloud v4](/developerportal/deploy/migrating-to-v4)
+* [How to Migrate to Mendix Cloud v4](migrating-to-v4)

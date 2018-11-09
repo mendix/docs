@@ -67,6 +67,6 @@ For certain deployments (where e.g. non-HTTP protocols are used), you can set up
 
 ## Notes
 
-Client certificates can be added to your Mendix Cloud application from within the Cloud Portal. See [Certificates](/deployment/mendixcloud/certificates) for more information.
+Client certificates can be added to your Mendix Cloud application from within the Cloud Portal. See [Certificates](/developerportal/deploy/certificates) for more information.
 
 Scenarios 2, 3, 5a and 5b work best for HTTP based protocols, which will work out of the box from Mendix core functionality, but also for many AppStore modules and other content. However, by calling out to Java actions, most TCP based connections can be wrapped in TLS connections for added security.

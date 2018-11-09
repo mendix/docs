@@ -191,7 +191,7 @@ releasenotes:
     - "Application Quality Monitor"
     - "What Are Mendix Beta Features?"
 developerportal:
-  space: "Developer Portal"
+  space: "Developer Portal Guide"
   priority: false
   menu_categories:
     - "Mendix Profile"

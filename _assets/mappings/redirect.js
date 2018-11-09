@@ -2176,7 +2176,7 @@ module.exports = {
     },
     {
       from: "/mendixcloud/Securing+Outgoing+Connections+from+your+Application",
-      to: "/deployment/mendixcloud/securing-outgoing-connections-from-your-application"
+      to: "/developerportal/deploy/securing-outgoing-connections-from-your-application"
     },
     {
       from: "/mendixcloud/Sending+Email",
@@ -6581,7 +6581,7 @@ module.exports = {
     },
     {
       from: "/refguide6/version-downgrade-prevention",
-      to: "/deployment/mendixcloud/version-downgrade-prevention"
+      to: "/developerportal/deploy/version-downgrade-prevention"
     },
     {
       from: "/refguide6/Vertical+Split+Pane",

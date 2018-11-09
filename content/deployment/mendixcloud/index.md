@@ -48,7 +48,6 @@ If you are upgrading a Free App to a licensed node you may find the following do
 
 * [Restrict Access for Incoming Requests](access-restrictions)
 * [Certificates](certificates)
-* [Create Custom Error Pages](custom-error-page)
 * [Different User Logins when Integrated with Mendix SSO](different-user-logins-when-integrated-with-mendix-sso)
 * [Integrate Your App with Mendix SSO](integrate-your-app-with-mendix-sso)
 * [Java in Mendix Cloud v3](java-in-the-cloud)

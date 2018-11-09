@@ -72,7 +72,7 @@ You can manage the alerts by yourself, follow these steps:
 * [Application Trends in Mendix Cloud v4](/developerportal/operate/trends-v4)
 * [How to Manage Company & App Roles](/developerportal/company-app-roles/manage-roles)
 * [Mendix Cloud](/deployment/mendixcloud)
-* [Mendix Cloud v4 - FAQ](/deployment/mendixcloud/mxcloudv4)
+* [Mendix Cloud v4 - FAQ](/developerportal/deploy/mxcloudv4)
 * [Company & App Roles](/developerportal/company-app-roles/index)
 * [Security - Node Permissions](/developerportal/settings/node-permissions) 
 * [Technical Contact](/developerportal/company-app-roles/technical-contact)

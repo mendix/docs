@@ -48,18 +48,13 @@ If you are upgrading a Free App to a licensed node you may find the following do
 
 * [Restrict Access for Incoming Requests](access-restrictions)
 * [Certificates](certificates)
-* [Create Custom Error Pages](custom-error-page)
 * [Different User Logins when Integrated with Mendix SSO](different-user-logins-when-integrated-with-mendix-sso)
 * [Integrate Your App with Mendix SSO](integrate-your-app-with-mendix-sso)
 * [Java in Mendix Cloud v3](java-in-the-cloud)
-* [Migrate to Mendix Cloud v4](migrating-to-v4)
-* [Mendix Cloud v4 - FAQ](mxcloudv4)
-* [Secure Outgoing Connections from Your Application](securing-outgoing-connections-from-your-application)
 * [Sending Email](sending-email)
 * [Troubleshooting](troubleshoot-mendixcloud)
     * [Troubleshoot Your Application in the Mendix Cloud: Cache](troubleshooting-mxcloud-cache)
     * [Troubleshoot Your Application in the Mendix Cloud: Running Now](troubleshooting-mxcloud-runningnow)
-* [Version Downgrade Prevention](version-downgrade-prevention)
 
 ## 5 Related Content
 

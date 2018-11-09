@@ -8,6 +8,10 @@ tags: ["Feedback","Widget","Developer Portal"]
 
 ## 1 Introduction
 
+{{% alert type="warning" %}}
+This how-to covers the [Mendix Feedback Widget](https://appstore.home.mendix.com/link/app/199/) version 5.1.3 and below. For details on the latest version of the widget, see [How to Use the Mendix Feedback & Collaboration Widget](use-collaboration-widget).
+{{% /alert %}}
+
 With Mendix, you can make use of the fully integrated feedback cycle functionality. Mendix supports enabling the end-user to provide feedback out of the box. This feedback is then reviewed, processed, and converted into actionable user stories.
 
 **This how-to will teach you how to do the following:**
@@ -23,7 +27,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 Submitting Feedback on an App
 
-The main purpose of the Mendix Feedback widget is to enable end-users to provide feedback on apps. By just clicking **Feedback** when you are logged in to a Mendix app, you can comment on low-priority issues, ask questions, and propose ideas for improvement. That feedback will be reviewed and processed. For details on how feedback is addressed for an app project, see [Feedback](index).
+The main purpose of the Mendix Feedback widget is to enable end-users to provide feedback on apps. By just clicking **Feedback** when you are logged in to a Mendix app, you can comment on low-priority issues, ask questions, and propose ideas for improvement. That feedback will be reviewed and processed. For details on how feedback is addressed for an app project, see [Feedback Management](index).
 
 {{% alert type="info" %}}
 
@@ -47,22 +51,9 @@ For details on how to see all the feedback you have submitted, see the [Feedback
 
 {{% /alert %}}
 
-## 4 Adding the Mendix Feedback Widget to Your App Project
+## 4 Configuring the Widget in Your App Project
 
-The Mendix Feedback Widget is automatically included in any new app that you create. To ensure you have the latest version of the Mendix Feedback Widget included in your app, follow these steps:
-
-1. Download the latest version of the [Mendix Feedback Widget](https://appstore.home.mendix.com/link/app/199/) from the Mendix App Store.
-2. When the latest Mendix Feedback Widget is included in your app, you need to ensure that the widget is added to the homepage of the application. Open the homepage from your app's **Project** > **Navigation**:
-
-    ![](attachments/show-page.png)
-
-3. If the Mendix Feedback Widget has not been added to the page, add it to the page or layout by selecting **Add widget** > **Add-on widgets** > **Feedback Widget** and dropping it into a position in the page:
-
-    ![](attachments/feedback-widget.png)
-
-## 5 Configuring the Feedback Widget
-
-To configure the widget, follow these steps:
+To configure the Mendix Feedback Widget, follow these steps:
 
 1. Open the widget **Properties** by double-clicking the widget on the page. 
 2. Select the **User** entity that is used in your application to store the name and email address of the user. Note that this object must be a specialization of the **User** entitiy within the **System** module (for example, **Account** in the **Administration** module).

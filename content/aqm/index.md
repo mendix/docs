@@ -2,9 +2,10 @@
 title: "Application Quality Monitor"
 ---
 
+## 1 Introduction to the Application Quality Monitor Documentation
+
 Mendix Application Quality Monitor is an application analysis add-on for the Mendix Platform.
 
-For details, see the following:
+## 2 Document Categories
 
-* [Application Quality Monitor Overview](aqm-overview)
-
+{{% category_block %}}

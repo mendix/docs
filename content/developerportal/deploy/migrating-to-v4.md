@@ -1,6 +1,6 @@
 ---
 title: "Migrate to Mendix Cloud v4"
-category: "Mendix Cloud"
+parent: "mendix-cloud-deploy"
 description: "This page describes how to migrate your app from a Mendix Cloud v3 node to a Mendix Cloud v4 node."
 tags: ["App","Migrate","Developer Portal","v3","v4","Node"]
 ---
@@ -13,13 +13,13 @@ This how-to tells you how to migrate your app from a Mendix Cloud v3 node to a M
 
 *   Migrate your licensed app from Mendix Cloud v3 to v4
 
-    ![](attachments/v4/migratev4.png)
+    ![](attachments/migrating-to-v4/migratev4.png)
 
 ## 2 Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-*  Have an available v4 [Mendix Cloud](/deployment/mendixcloud) node (to request a licensed v4 Cloud Node, contact your Customer Success Manager (CSM))
+*  Have an available v4 [Mendix Cloud](mendix-cloud-deploy) node (to request a licensed v4 Cloud Node, contact your Customer Success Manager (CSM))
 * Have the [Technical Contact](/developerportal/company-app-roles/technical-contact) role for both v3 and v4 Cloud Nodes
 * Create a new temporary Free App without a Sandbox – instructions for unlinking a Free App from a sandbox are here: [How To Unlink Your Free App from a Sandbox Environment](/developerportal/howto/how-to-unlink-sandbox).
 
@@ -62,13 +62,13 @@ To upload the deployment package, follow these steps:
 
 #### 3.2.3 Configuration
 
-Before starting your app in Mendix Cloud v4, make sure it has the same configurations as the v3 node. You can find the node settings on the [Environment Details](/developerportal/deploy/environments-details) page under **Model Options**, **Network**, **Runtime**, and **Maintenance**.
+Before starting your app in Mendix Cloud v4, make sure it has the same configurations as the v3 node. You can find the node settings on the [Environment Details](environments-details) page under **Model Options**, **Network**, **Runtime**, and **Maintenance**.
 
 #### 3.2.4 Testing and Repeating
 
-Now that the app on Mendix Cloud v4 contains your data and is configured, deploy the deployment package to an evironment and start your app.
+Now that the app on Mendix Cloud v4 contains your data and is configured, deploy the deployment package to an environment and start your app.
 
-To learn how to do this, see [How to Deploy the App to an Environment](/developerportal/deploy/mendix-cloud-deploy#4-deploy-the-app-to-an-environment).
+To learn how to do this, see [How to Deploy the App to an Environment](mendix-cloud-deploy#4-deploy-the-app-to-an-environment).
 
 ### 3.3 Offboarding the v3 Node
 
@@ -110,7 +110,7 @@ If you have a custom domain set up, you will need to change this. Instructions f
 
 *   [Certificates](/deployment/mendixcloud/certificates)
 *   [How to Configure Custom Domains](/developerportal/howto/custom-domains)
-*   [Mendix Cloud: Deploy](/developerportal/deploy/mendix-cloud-deploy)
+*   [Mendix Cloud: Deploy](mendix-cloud-deploy)
 *   [How to Download a Backup](/developerportal/howto/how-to-download-a-backup)
 *   [How to Link a Different App to a Cloud Node](/developerportal/howto/how-to-link-a-different-app-to-a-node)
 *   [How to Link Your Free App to a Licensed Cloud Node](/developerportal/howto/how-to-link-app-to-node)

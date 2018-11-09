@@ -2160,11 +2160,11 @@ module.exports = {
     },
     {
       from: "/mendixcloud/migrating+to+v4",
-      to: "/deployment/mendixcloud/migrating-to-v4"
+      to: "/developerportal/deploy/migrating-to-v4"
     },
     {
       from: "/developerportal/howto/migrating-to-v4",
-      to: "/deployment/mendixcloud/migrating-to-v4"
+      to: "/developerportal/deploy/migrating-to-v4"
     },
     {
       from: "/mendixcloud/Monitoring+application+health",
@@ -2176,7 +2176,7 @@ module.exports = {
     },
     {
       from: "/mendixcloud/Securing+Outgoing+Connections+from+your+Application",
-      to: "/deployment/mendixcloud/securing-outgoing-connections-from-your-application"
+      to: "/developerportal/deploy/securing-outgoing-connections-from-your-application"
     },
     {
       from: "/mendixcloud/Sending+Email",
@@ -6581,7 +6581,7 @@ module.exports = {
     },
     {
       from: "/refguide6/version-downgrade-prevention",
-      to: "/deployment/mendixcloud/version-downgrade-prevention"
+      to: "/developerportal/deploy/version-downgrade-prevention"
     },
     {
       from: "/refguide6/Vertical+Split+Pane",

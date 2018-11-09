@@ -194,11 +194,10 @@ developerportal:
   space: "Developer Portal"
   priority: false
   menu_categories:
-    - "Developer Portal Overview"
     - "Mendix Profile"
     - "Company & App Roles"
     - "Collaboration Tools"
-    - "Feedback"
+    - "Feedback Management"
     - "Develop"
     - "Deploy and Manage"
     - "Operate"

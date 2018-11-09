@@ -1,6 +1,6 @@
 ---
 title: "Use the Mendix Feedback Widget"
-category: "Feedback"
+category: "Feedback Management"
 menu_order: 10
 description: "Describes how to add the Feedback Widget to your app project and configure it."
 tags: ["Feedback","Widget","Developer Portal"]

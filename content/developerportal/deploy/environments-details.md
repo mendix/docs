@@ -201,7 +201,7 @@ You can **Delete** a path or you can **Add** and **Edit** a path with the follow
 * Custom Profile for Client Certificates and/or IP ranges
 * N/A (inherit)
 
-For more information, see [How to Restrict Access for Incoming Requests](/deployment/mendixcloud/access-restrictions).
+For more information, see [How to Restrict Access for Incoming Requests](access-restrictions).
 
 ### 4.4 Outgoing Connections Certificates
 

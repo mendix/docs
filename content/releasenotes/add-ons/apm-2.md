@@ -1,6 +1,6 @@
 ---
 title: "2"
-category: "Add-ons"
+parent: "apm""
 ---
 
 These are the release notes for APM version 2:

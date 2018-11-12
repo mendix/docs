@@ -19,7 +19,7 @@ You can manage your Mendix Cloud v3 and Mendix Cloud v4 environments via the [De
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Have a node (for details, see [How to Upgrade Your Free App to a Licensed App](/developerportal/howto/how-to-upgrade-free-app))
+* Have a node (for details, see [How to Upgrade Your Free App to a Licensed App](/developerportal/deploy/how-to-upgrade-free-app))
 
 ## 3 Mendix Cloud Region and Version
 

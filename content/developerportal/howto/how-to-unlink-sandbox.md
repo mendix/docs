@@ -56,5 +56,5 @@ The Free App has now been unlinked from the Sandbox environment.
 *   [How to Link a Different App to a Cloud Node](how-to-link-a-different-app-to-a-node)
 *   [How to Link Your Free App to a Licensed Cloud Node](how-to-link-app-to-node) 
 *   [How to Restore a Backup](how-to-restore-a-backup)
-*   [How to Upgrade Your Free App to a Licensed App](how-to-upgrade-free-app)
+*   [How to Upgrade Your Free App to a Licensed App](/developerportal/deploy/how-to-upgrade-free-app)
 *   [How to Set Up Two-Factor Authentication With Google Authenticator](/howtogeneral/support/how-to-set-up-two-factor-authentication-with-google-authenticator)

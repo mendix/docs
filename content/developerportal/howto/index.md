@@ -29,10 +29,6 @@ This category contains documents about the use of specific tasks in the [Develop
 
 * [Unlink Your Free App from a Sandbox Environment](how-to-unlink-sandbox)
 
-### Upgrade
-
-* [Upgrade Your Free App to a Licensed App](how-to-upgrade-free-app)
-
 ## Operate
 
 ### Alerts

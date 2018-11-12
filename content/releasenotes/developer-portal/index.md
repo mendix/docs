@@ -6,6 +6,20 @@ tags: ["Developer Portal", "Cloud Environments", "Mendix Cloud", "SAP", "IBM", "
 
 ## 2018
 
+### November 13th, 2018
+
+We released the first version of the Mendix Shop. 
+
+* It is a webshop where users can spend their credits to buy Mendix swag.
+* Users completes challenges in gamification and earns credits for them.
+
+Functionalities:
+
+* Catalogue of availible Mendix products
+* Users can add products to their cart
+* Check-out flow with order confirmation email
+* Backend for shop admins to keep track of orders
+
 ### November 1st, 2018
 
 #### Fixes

@@ -1,6 +1,7 @@
 ---
 title: "Application Test Suite"
 category: "Add-ons"
+menu_order: 10
 ---
 These are the release notes for the the Mendix Application Test Suite (ATS):
 

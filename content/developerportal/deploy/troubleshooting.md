@@ -1,12 +1,12 @@
 ---
-title: "Troubleshooting"
-category: "On-Premises"
+title: "IIS (Internet Information Services) Troubleshooting"
+category: "Deploy and Manage"
 tags: []
 ---
 
 ## 1 IIS Troubleshooting
 
-When setting up IIS as a webserver in front of Mendix it could happen that you run into issues with your installation.
+When setting up Internet Information Services (IIS) as a webserver in front of Mendix it could happen that you run into issues with your installation.
 The first step you will need to take is to decide what is causing your problem, an incorrect Mendix installation or IIS.
 
 To determine where to look for your problem you should start by validating the Mendix installation. Whenever you open your application from your laptop, it will always open it through IIS. We want to work around that, in order to test just Mendix without IIS you should open the browser on your server. 

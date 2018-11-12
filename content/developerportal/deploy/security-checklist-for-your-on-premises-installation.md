@@ -1,6 +1,6 @@
 ---
 title: "Implement Security for Your On-Premises Installation"
-category: "On-Premises"
+category: "Deploy and Manage"
 tags: []
 ---
 

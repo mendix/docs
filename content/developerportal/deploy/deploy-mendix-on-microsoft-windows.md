@@ -1,6 +1,6 @@
 ---
 title: "Deploy Mendix on Microsoft Windows"
-category: "On-Premises"
+category: "Deploy and Manage"
 tags: []
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Microsoft SQL Server maintenance"
-category: "On-Premises"
+category: "Deploy and Manage"
 ---
 
 

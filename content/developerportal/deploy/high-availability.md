@@ -1,6 +1,6 @@
 ---
 title: "Configure High Availability"
-category: "On-Premises"
+category: "Deploy and Manage"
 ---
 
 ## 1 Introduction

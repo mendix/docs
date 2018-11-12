@@ -200,12 +200,4 @@ developerportal:
     - "Operate"
     - "Settings"
     - "How-to's"
-deployment:
-  space: "Deployment"
-  priority: false
-  menu_categories:
-    - "Azure"
-    - "Cloud Foundry"
-    - "Docker"
-    - "Mendix Cloud"
-    - "On-Premises"
+

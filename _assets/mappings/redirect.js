@@ -2148,7 +2148,7 @@ module.exports = {
     },
     {
       from: "/mendixcloud/Java+in+the+Cloud",
-      to: "/deployment/mendixcloud/java-in-the-cloud"
+      to: "/developerportal/deploy/java-in-the-cloud"
     },
     {
       from: "/mendixcloud/Maintenance+Windows",

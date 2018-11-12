@@ -3,7 +3,7 @@ title: "SAP Cloud Platform"
 category: "Deploy and Manage"
 menu_order: 40
 description: "Reference documentation on SAP Cloud deployment portal"
-tags: ["SAP", "SAP Cloud Portal", "Deployment", "Environment"]
+tags: ["SAP", "SAP Cloud Platform", "Deployment", "Environment"]
 ---
 
 ## 1 Introduction
@@ -189,7 +189,7 @@ When the package is ready to be deployed, a green tick will be shown next to the
 
 ### 5.1 Deploy to an Environment
 
-1.  A green tick indicates that the build has finished. Click **Deploy** to deploy the package to SAP Cloud Portal.
+1.  A green tick indicates that the build has finished. Click **Deploy** to deploy the package to SAP Cloud Platform.
 
     ![](attachments/sap-cloud-platform/sap-revision-built.png)
 
@@ -215,7 +215,7 @@ When the package is ready to be deployed, a green tick will be shown next to the
 
 4. Click **Continue** to continue to the Start Application confirmation page.
 
-5. Click **Start Application** to start the application on the SAP Cloud Portal.
+5. Click **Start Application** to start the application on SAP Cloud Platform.
 
     ![](attachments/sap-cloud-platform/start-application.png)
 
@@ -282,7 +282,7 @@ You will be asked to confirm that this environment should be removed. You will a
 ![](attachments/sap-cloud-platform/delete-environment.png)
 
 {{% alert type="info" %}}
-If you do not select **Remove resources** in this dialog, the resources will be left in the SAP Cloud Portal. In this case, they can only be removed individually from within the SAP Cloud Platform cockpit.
+If you do not select **Remove resources** in this dialog, the resources will be left in SAP Cloud Platform. In this case, they can only be removed individually from within the SAP Cloud Platform cockpit.
 {{% /alert %}}
 
 #### 7.1.5 Change Development Mode
@@ -360,7 +360,7 @@ If you are the last member of the app development team, you will be asked if you
 ![](attachments/sap-cloud-platform/delete-app.png)
 
 {{% alert type="info" %}}
-This will not stop the app and delete the deployment of the app in the SAP Cloud Portal.
+This will not stop the app and delete the deployment of the app in SAP Cloud Platform.
 
 If you want to delete your app and all its resources, delete the environment and resources first before you leave the app via the Mendix Developer Portal.
 {{% /alert %}}

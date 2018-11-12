@@ -1,6 +1,9 @@
 ---
-title: "Java in Mendix Cloud v3"
-category: "Mendix Cloud"
+title: "V3: Java in Mendix Cloud"
+parent: "mendix-cloud-deploy"
+#menu_order:
+description: "A description of the constraints on using Java in Mendix Cloud v3"
+tags: ["Java", "V3", "Mendix Cloud", "Constraints", "Permissions", "security", "Access"]
 ---
 
 ## 1 Introduction
@@ -50,4 +53,4 @@ Cloud security can be emulated locally using the following steps:
 
 *   Select the configuration for which you enabled cloud security emulation in the menu bar and click **Run** (F5).
 
-![](attachments/4194602/4325407.png)
+![](attachments/java-in-the-cloud/4325407.png)

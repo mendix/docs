@@ -1,6 +1,6 @@
 ---
 title: "2"
-parent: "apm""
+parent: "apm"
 ---
 
 These are the release notes for APM version 2:

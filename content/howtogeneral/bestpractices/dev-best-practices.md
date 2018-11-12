@@ -89,14 +89,14 @@ For some entities you want to use entity events that are always triggered when a
 
 | Event Type      | Prefix               |
 |-----------------|----------------------|
-| Before commit   | BCO\_\<Entity name\> |
-| After commit    | ACO\_\<Entity name\> |
-| Before create   | BCR\_\<Entity name\> |
-| After create    | ACR\_\<Entity name\> |
-| Before delete   | BDE\_\<Entity name\> |
-| After delete    | ADE\_\<Entity name\> |
-| Before rollback | BRO\_\<Entity name\> |
-| After rollback  | ARO\_\<Entity name\> |
+| Before commit   | BCo\_\<Entity name\> |
+| After commit    | ACo\_\<Entity name\> |
+| Before create   | BCr\_\<Entity name\> |
+| After create    | ACr\_\<Entity name\> |
+| Before delete   | BDe\_\<Entity name\> |
+| After delete    | ADe\_\<Entity name\> |
+| Before rollback | BRo\_\<Entity name\> |
+| After rollback  | ARo\_\<Entity name\> |
 
 #### 3.4.2 Calculated Attributes
 
@@ -108,9 +108,9 @@ Your project settings provide three events that can trigger a microflow. In thes
 
 | Event Type      | Microflow Name | Prefix |
 |-----------------|----------------|--------|
-| After startup   | AfterStartUp   | ASU\_  |
-| Before shutdown | BeforeShutDown | BSD\_  |
-| Health check    | HealthCheck    | HCK\_  |
+| After startup   | AfterStartUp   | ASu\_  |
+| Before shutdown | BeforeShutDown | BSd\_  |
+| Health check    | HealthCheck    | HCh\_  |
 
 #### 3.4.4 Pages
 
@@ -118,9 +118,9 @@ Pages have a number of events that can trigger a microflow. See the following li
 
 | Event Type                | Prefix             | Used In |
 |---------------------------|--------------------|--------------------------------|
-| On enter event            | OEN\_\<Purpose\>   | Input widgets                  |
-| On change event           | OCH\_\<Purpose\>   | Input widgets                  |
-| On leave event            | OLE\_\<Purpose\>   | Input widgets                  |
+| On enter event            | OEn\_\<Purpose\>   | Input widgets                  |
+| On change event           | OCh\_\<Purpose\>   | Input widgets                  |
+| On leave event            | OLe\_\<Purpose\>   | Input widgets                  |
 | Data source               | DS\_\<Purpose\>    | Data view, list view, data grid, template grid |
 | Microflow/action button   | ACT\_\<Purpose\> or IVK\_\<Purpose> | Menu item, Navigation item, Microflow and Action button, Drop down button<br />(“IVK\_” is used historically) |
 
@@ -138,11 +138,11 @@ In your integrations you have the following type of documents:
 | Published web service operation microflow | PWS\_  |
 | Published app service operation microflow | PAS\_  |
 | Published REST service operation microflow| PRS\_  |
-| Import mapping                            | IMM\_  |
-| Export mapping                            | EXM\_  |
+| Import mapping                            | ImM\_  |
+| Export mapping                            | ExM\_  |
 | XML schema                                | XSD\_  |
 | JSON structure                            | JSON\_ |
-| Deeplink                                  | DL\_   |
+| Deeplink                                  | Dl\_   |
 
 ### 3.6 Scheduled Events
 

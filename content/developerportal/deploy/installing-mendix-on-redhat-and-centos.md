@@ -1,6 +1,6 @@
 ---
 title: "Install Mendix on RedHat and CentOS"
-category: "On-Premises"
+category: "Deploy and Manage"
 tags: []
 ---
 

@@ -20,7 +20,7 @@ If you select a non-Mendix cloud platform like SAP you will be redirected to a p
 
 The specific steps for setting up on different cloud platforms:
 
-* [Deploy on premises](/deployment/on-premises)
+* [Deploy on premises](/developerportal/deploy/on-premises-design)
 * [SAP Cloud Platform](/developerportal/deploy/sap-cloud-platform)
 
 ## 3 Related Content

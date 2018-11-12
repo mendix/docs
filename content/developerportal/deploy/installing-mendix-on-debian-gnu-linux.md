@@ -1,6 +1,6 @@
 ---
 title: "Install Mendix on Debian GNU Linux"
-category: "On-Premises"
+category: "Deploy and Manage"
 tags: []
 ---
 

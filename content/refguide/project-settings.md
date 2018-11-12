@@ -50,7 +50,7 @@ This microflow gets called every few minutes to check if the app is still health
 
 {{% alert type="info" %}}
 
-The health check microflow is specific to [Mendix Cloud](../deployment/mendixcloud/). For other clouds, the admin port can be called, or the health check microflow can be exposed through a REST API.
+The health check microflow is specific to [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy). For other clouds, the admin port can be called, or the health check microflow can be exposed through a REST API.
 
 {{% /alert %}}
 

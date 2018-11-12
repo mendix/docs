@@ -2124,7 +2124,7 @@ module.exports = {
     },
     {
       from: "/mendixcloud/Different+user+logins+when+integrated+with+Mendix+SSO",
-      to: "/deployment/mendixcloud/different-user-logins-when-integrated-with-mendix-sso"
+      to: "/developerportal/deploy/managing-mendix-sso"
     },
     {
       from: "/mendixcloud/How+to+deploy+a+Mendix+app+on+Azure",
@@ -2136,19 +2136,19 @@ module.exports = {
     },
     {
       from: "/mendixcloud/Mendix+Cloud",
-      to: "/deployment/mendixcloud/"
+      to: "/developerportal/deploy/mendix-cloud-deploy"
     },
     {
       from: "/mendixcloud/Mendix+Cloud+Home",
-      to: "/deployment/mendixcloud/"
+      to: "/developerportal/deploy/mendix-cloud-deploy"
     },
     {
       from: "/mendixcloud/Integrate+your+app+with+Mendix+SSO",
-      to: "/deployment/mendixcloud/integrate-your-app-with-mendix-sso"
+      to: "/developerportal/deploy/integrate-with-mendix-sso"
     },
     {
       from: "/mendixcloud/Java+in+the+Cloud",
-      to: "/deployment/mendixcloud/java-in-the-cloud"
+      to: "/developerportal/deploy/java-in-the-cloud"
     },
     {
       from: "/mendixcloud/Maintenance+Windows",
@@ -8705,180 +8705,8 @@ module.exports = {
       to: "/releasenotes/developer-portal/"
     },
     {
-      from: "/ReleaseNotes/Model+SDK+3.0.1",
-      to: "/releasenotes/model-sdk/3"
-    },
-    {
-      from: "/ReleaseNotes/Model+SDK+3.0.0",
-      to: "/releasenotes/model-sdk/3"
-    },
-    {
-      from: "/ReleaseNotes/Model+SDK+2.9.1",
-      to: "/releasenotes/model-sdk/2"
-    },
-    {
-      from: "/ReleaseNotes/Model+SDK+2.9.0",
-      to: "/releasenotes/model-sdk/2"
-    },
-    {
-      from: "/ReleaseNotes/Model+SDK+2.8.1",
-      to: "/releasenotes/model-sdk/2"
-    },
-    {
-      from: "/ReleaseNotes/Model+SDK+2.8.0",
-      to: "/releasenotes/model-sdk/2"
-    },
-    {
-      from: "/ReleaseNotes/Model+SDK+2.7.0",
-      to: "/releasenotes/model-sdk/2"
-    },
-    {
-      from: "/ReleaseNotes/Model+SDK+2.6.3",
-      to: "/releasenotes/model-sdk/2"
-    },
-    {
-      from: "/ReleaseNotes/Model+SDK+2.6.0",
-      to: "/releasenotes/model-sdk/2"
-    },
-    {
-      from: "/ReleaseNotes/Model+SDK+2.5.0",
-      to: "/releasenotes/model-sdk/2"
-    },
-    {
-      from: "/ReleaseNotes/Model+SDK+2.4.0",
-      to: "/releasenotes/model-sdk/2"
-    },
-    {
-      from: "/ReleaseNotes/Model+SDK+2.3.0",
-      to: "/releasenotes/model-sdk/2"
-    },
-    {
-      from: "/ReleaseNotes/Model+SDK+2.2.2",
-      to: "/releasenotes/model-sdk/2"
-    },
-    {
-      from: "/ReleaseNotes/Model+SDK+2.1.0",
-      to: "/releasenotes/model-sdk/2"
-    },
-    {
-      from: "/ReleaseNotes/Platform+SDK+2.0.0",
-      to: "/releasenotes/platform-sdk/2.0"
-    },
-    {
-      from: "/ReleaseNotes/Model+SDK+2.0.0",
-      to: "/releasenotes/model-sdk/2"
-    },
-    {
-      from: "/ReleaseNotes/Model+SDK+1.2.0",
-      to: "/releasenotes/model-sdk/1"
-    },
-    {
-      from: "/ReleaseNotes/Model+SDK+1.1.1",
-      to: "/releasenotes/model-sdk/1"
-    },
-    {
-      from: "/ReleaseNotes/Model+SDK+1.1.0",
-      to: "/releasenotes/model-sdk/1"
-    },
-    {
-      from: "/ReleaseNotes/Model+SDK+1.0.2",
-      to: "/releasenotes/model-sdk/1"
-    },
-    {
-      from: "/ReleaseNotes/Platform+SDK+1.0.2",
-      to: "/releasenotes/platform-sdk/1.0"
-    },
-    {
-      from: "/ReleaseNotes/Model+SDK+1.0.0",
-      to: "/releasenotes/model-sdk/1"
-    },
-    {
-      from: "/ReleaseNotes/Application+Quality+Monitor",
-      to: "/releasenotes/aqm/"
-    },
-    {
-      from: "/ReleaseNotes/Mendix+AQM+2.0+Release+Notes",
-      to: "/releasenotes/aqm/2.0"
-    },
-    {
-      from: "/ReleaseNotes/Application+Performance+Monitor",
-      to: "/releasenotes/apm/"
-    },
-    {
       from: "/ReleaseNotes/Beta+features",
       to: "/releasenotes/beta-features/"
-    },
-    {
-      from: "/ReleaseNotes/Application+Test+Suite",
-      to: "/releasenotes/ats/"
-    },
-    {
-      from: "/releasenotes/APM/1",
-      to: "/releasenotes/apm/1"
-    },
-    {
-      from: "/releasenotes/ATS/1",
-      to: "/releasenotes/ats/1"
-    },
-    {
-      from: "/releasenotes/APM/1.10",
-      to: "/releasenotes/apm/1.10"
-    },
-    {
-      from: "/releasenotes/APM/1.11",
-      to: "/releasenotes/apm/1.11"
-    },
-    {
-      from: "/releasenotes/APM/1.12",
-      to: "/releasenotes/apm/1.12"
-    },
-    {
-      from: "/releasenotes/ATS/1.5",
-      to: "/releasenotes/ats/1.5"
-    },
-    {
-      from: "/releasenotes/APM/1.6",
-      to: "/releasenotes/apm/1.6"
-    },
-    {
-      from: "/releasenotes/ATS/1.6",
-      to: "/releasenotes/ats/1.6"
-    },
-    {
-      from: "/releasenotes/APM/1.7",
-      to: "/releasenotes/apm/1.7"
-    },
-    {
-      from: "/releasenotes/APM/1.8",
-      to: "/releasenotes/apm/1.8"
-    },
-    {
-      from: "/releasenotes/ATS/1.8",
-      to: "/releasenotes/ats/1.8"
-    },
-    {
-      from: "/releasenotes/APM/1.9",
-      to: "/releasenotes/apm/1.9"
-    },
-    {
-      from: "/releasenotes/AQM/2",
-      to: "/releasenotes/aqm/2"
-    },
-    {
-      from: "/releasenotes/AQM/2.0",
-      to: "/releasenotes/aqm/2.0"
-    },
-    {
-      from: "/releasenotes/APM/",
-      to: "/releasenotes/apm/"
-    },
-    {
-      from: "/releasenotes/AQM/",
-      to: "/releasenotes/aqm/"
-    },
-    {
-      from: "/releasenotes/ATS/",
-      to: "/releasenotes/ats/"
     }
   ]
 }

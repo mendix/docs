@@ -1,6 +1,9 @@
 ---
-title: "Different User Logins when Integrated with Mendix SSO"
-category: "Mendix Cloud"
+title: "Mendix SSO: Manage User Logins"
+parent: "mendix-cloud-deploy"
+#menu_order: 
+description: "How to manage Mendix SSO in your app so that local users and anonymous users are catered for"
+tags: ["SSO", "Single Sign-on", "AppCloudServices", "Local users", "Anonymous users"]
 #Needs a better description of what it does. Needs rewrite to remove launchpad references
 ---
 
@@ -89,7 +92,7 @@ Once this is done, after deploying your app in the mendix cloud, you can test th
 
 When users should be able to log in with either a Mendix account or with a local account, the default login page is not sufficient: it only allows users to login with a local account. To solve this, you should create a custom login page, which also allows users to login with their Mendix account. As an example, you could create this page:
 
-![](attachments/18448701/18581287.png)
+![](attachments/managing-mendix-sso/18581287.png)
 
 Additionally, you want users to automatically be redirected to this page when they reach the app. To implement this, you need to do two things.
 
@@ -276,7 +279,7 @@ You can view the implementation by deploying your app to the Mendix Cloud and go
 ## 3 Related Content
 
 *   [Trends in Mendix Cloud v3](/developerportal/operate/trends)
-*   [Mendix Cloud: Deploy](/developerportal/deploy/mendix-cloud-deploy)
-*   [Azure: Deploy](/developerportal/deploy/azure-deploy)
-*   [Sending Email](/developerportal/deploy/sending-email)
-*   [Integrate your app with Mendix SSO](/developerportal/deploy/integrate-with-mendix-sso)
+*   [Mendix Cloud: Deploy](mendix-cloud-deploy)
+*   [Azure: Deploy](azure-deploy)
+*   [Sending Email](sending-email)
+*   [Integrate your app with Mendix SSO](integrate-with-mendix-sso)

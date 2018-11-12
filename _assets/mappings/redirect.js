@@ -2124,7 +2124,7 @@ module.exports = {
     },
     {
       from: "/mendixcloud/Different+user+logins+when+integrated+with+Mendix+SSO",
-      to: "/deployment/mendixcloud/different-user-logins-when-integrated-with-mendix-sso"
+      to: "/developerportal/deploy/managing-mendix-sso"
     },
     {
       from: "/mendixcloud/How+to+deploy+a+Mendix+app+on+Azure",

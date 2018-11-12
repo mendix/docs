@@ -46,7 +46,6 @@ If you are upgrading a Free App to a licensed node you may find the following do
 
 ## 4 Documents in This Category
 
-* [Different User Logins when Integrated with Mendix SSO](different-user-logins-when-integrated-with-mendix-sso)
 * [Java in Mendix Cloud v3](java-in-the-cloud)
 * [Troubleshooting](troubleshoot-mendixcloud)
     * [Troubleshoot Your Application in the Mendix Cloud: Cache](troubleshooting-mxcloud-cache)

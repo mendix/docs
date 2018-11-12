@@ -185,9 +185,7 @@ releasenotes:
     - "SDKs"
     - "Hybrid App"
     - "Mendix Mobile App"
-    - "Application Test Suite"
-    - "Application Performance Monitor"
-    - "Application Quality Monitor"
+    - "Add-ons"
     - "What Are Mendix Beta Features?"
 developerportal:
   space: "Developer Portal Guide"

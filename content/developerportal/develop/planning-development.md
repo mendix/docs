@@ -1,7 +1,6 @@
 ---
-title: "Planning"
-category: "Develop"
-menu_order: 30
+title: "Planning Development"
+category: "Developing"
 description: "Describes the planning of your app development."
 tags: ["Developer Portal", "Planning", "Develop"]
 ---

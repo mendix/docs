@@ -1,38 +1,40 @@
 ---
-title: "Team Server"
-category: "Develop"
-menu_order: 20
-description: "Describes the Team Server repository."
-tags: ["Edit", "Modeler", "Developer Portal", "Team Server"]
+title: "Team Server Overview"
+category: "Developing"
+description: "This page describes the overview of Team Server revisions and commits."
+tags: ["Desktop Modeler", "Team Server", "Developer Portal", "commit"]
 ---
 
 ## 1 Introduction
 
-Changes made through the Desktop Modeler are stored in the Mendix **Team Server**. This page provides an overview of the revisions committed by any of the team's members.
+On the **Team Server** page of the Developer Portal, you are provided an overview of the changes and revisions made to the app project in the Desktop Modeler:
 
-## 2 Revision
+![](attachments/team-server.png)
 
-In a revision, you can see the following information:
+Here you can also find the **Team Server URL**, which takes the form of `https://teamserver.sprintr.com/<your AppID>`.
+
+## 2 Revision Summary
+
+In each revision, you can see the following information:
 
 * The date of the committed revision
-* The team member that committed the revision
+* The name of the App Team member who committed the revision
 * The branch to which the revision was committed
-* The Mendix Modeler version
+* The Mendix Desktop Modeler version used
 * The revision number
 
-### 2.1 Details
+## 3 Revision Details
 
 When you click **Details** for a revision, the following extra information is presented about that revision:
 
 * The message in the revision commit
 * The related stories
 
-**Related Stories** will only appear if you select them in the commit dialog box of the Desktop Modeler.
+Related stories will only appear if you select them in the **Commit** dialog box of the Desktop Modeler when committing:
 
-![](attachments/teamserver-commit.jpg)
+![](attachments/commit-story.png)
 
-## 3 Related Content
+## 4 Related Content
 
 * [Stories](/developerportal/collaborate/stories)
 * [Company & App Roles](/developerportal/company-app-roles/index)
-* [Stories](/developerportal/collaborate/stories)

@@ -145,4 +145,4 @@ The following features have been removed as a result of design decisions:
 
 ### Minor Fixes
 
-Many bug fixes and small changes have been maded, including everything from the 1.8 branch. For an overview of these changes, see [Release Notes 1.8](1.8).
+Many bug fixes and small changes have been maded, including everything from the 1.8 branch. For an overview of these changes, see [1.8](ats-1.8).

@@ -1,6 +1,6 @@
 ---
 title: "IIS (Internet Information Services) Troubleshooting"
-category: "Deploy and Manage"
+parent: on-premises-design
 tags: []
 ---
 

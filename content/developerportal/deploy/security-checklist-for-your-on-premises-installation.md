@@ -1,6 +1,6 @@
 ---
 title: "Implement Security for Your On-Premises Installation"
-category: "Deploy and Manage"
+parent: on-premises-design
 tags: []
 ---
 

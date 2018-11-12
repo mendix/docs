@@ -1,6 +1,6 @@
 ---
 title: "Deploy Mendix on Microsoft Windows"
-category: "Deploy and Manage"
+parent: on-premises-design
 tags: []
 ---
 

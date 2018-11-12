@@ -1,6 +1,6 @@
 ---
 title: "Microsoft SQL Server maintenance"
-category: "Deploy and Manage"
+parent: on-premises-design
 ---
 
 

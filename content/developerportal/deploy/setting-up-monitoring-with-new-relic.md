@@ -1,6 +1,6 @@
 ---
 title: "Set Up Monitoring with New Relic"
-category: "Deploy and Manage"
+parent: on-premises-design
 tags: []
 ---
 When setting up a Mendix application on-premise, you can set up advanced monitoring with New Relic. This works with both Windows and Linux deployments.

@@ -1,6 +1,6 @@
 ---
 title: "Mendix on Windows – Microsoft SQL Server"
-category: "Deploy and Manage"
+parent: on-premises-design
 tags: []
 ---
 

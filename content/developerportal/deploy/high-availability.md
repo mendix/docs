@@ -1,11 +1,11 @@
 ---
 title: "Configure High Availability"
-category: "Deploy and Manage"
+parent: on-premises-design
 ---
 
 ## 1 Introduction
 
-This how-to describes the requirements and limitations of using a Mendix app in a high-availability architecutre.
+This how-to describes the requirements and limitations of using a Mendix app in a high-availability architecture.
 
 **This how-to will teach you how to do the following:**
 

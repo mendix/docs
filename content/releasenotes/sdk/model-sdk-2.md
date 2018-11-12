@@ -1,6 +1,6 @@
 ---
 title: "2"
-category: "Model SDK"
+parent: "model-sdk"
 ---
 
 These are the release notes for the Model SDK version 2.

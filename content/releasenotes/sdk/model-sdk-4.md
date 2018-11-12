@@ -1,6 +1,6 @@
 ---
 title: "4"
-category: "Model SDK"
+parent: "model-sdk"
 #For next release, do not include Impact.
 ---
 

@@ -77,4 +77,4 @@ When using Mendix mail servers and a sender address in a domain that has a restr
 *   [Mendix Cloud: Deploy](mendix-cloud-deploy)
 *   [Azure: Deploy](azure-deploy)
 *   [Different user logins when integrated with Mendix SSO](/deployment/mendixcloud/different-user-logins-when-integrated-with-mendix-sso)
-*   [Integrate your app with Mendix SSO](/deployment/mendixcloud/integrate-your-app-with-mendix-sso)
+*   [Integrate your app with Mendix SSO](integrate-with-mendix-sso)

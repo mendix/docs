@@ -18,7 +18,7 @@ You can click **Run Locally** in the toolbar to run your app locally. Use the **
 
 The Mendix Cloud is the default deployment option when you get started with the Mendix Platform. As an integrated solution, the Mendix Cloud includes backups, monitoring, high availability, and more.
 
-From within the Modeler, you can view the cloud nodes you have available in the Mendix Cloud. You can create a deployment package (MDA) in the Developer Portal, and from there, you can transport it and start running your application. For more information, see [Mendix Cloud](/deployment/mendixcloud/).
+From within the Modeler, you can view the cloud nodes you have available in the Mendix Cloud. You can create a deployment package (MDA) in the Developer Portal, and from there, you can transport it and start running your application. For more information, see [Mendix Cloud](mendix-cloud-deploy).
 
 ## 4 IBM
 

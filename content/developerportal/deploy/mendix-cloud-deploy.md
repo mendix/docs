@@ -10,6 +10,40 @@ frontpage_featured: true
 
 ## 1 Introduction
 
+The Mendix Cloud is a public cloud service for Mendix applications; this is the default deployment option for Mendix applications. You can deploy either a limited **Free App** or an app running on a licensed cloud node.
+
+### 1.1 Free App
+
+If you are new to the Mendix community and would like to deploy and share your own app, you can do so for free on our public cloud offering. The Free App environment (sometimes referred to as the Sandbox) allows any Mendix developer to create and share their applications with their users. Note that a Free App does not support complex or large applications.
+
+<!-- Add a link here to something that shows the difference between a Free App and a Licensed App -->
+
+{{% alert type="info" %}}
+Free apps are part of our community edition and require Mendix version 6 or higher.
+
+If you are not currently a customer but would prefer to use a licensed cloud node you can find more information on our pricing page: [Mendix Platform Pricing](http://www.mendix.com/pricing).
+
+If you are an existing customer, you should deploy into your licensed cloud node.
+{{% /alert %}}
+
+A Free App will go to sleep after an hour or so of inactivity. If you access it while it is inactive, you will see the image below. If, after a couple of minutes, your app does not wake up, please contact our support team at [support.mendix.com](http://support.mendix.com).
+
+![](attachments/mendix-cloud-deploy/appresumed.png)
+
+You can upgrade a Free App to a licensed node with a *node* in the Mendix Cloud. The following documents describe how to do this:
+
+* [How To Upgrade Your Free App to a Licensed App](/developerportal/howto/how-to-upgrade-free-app)
+* [How To Unlink Your Free App from a Sandbox Environment](/developerportal/howto/how-to-unlink-sandbox)
+* [How To Link a Different App to a Cloud Node](/developerportal/howto/how-to-link-a-different-app-to-a-node)
+
+### 1.2 Licensed App
+
+A licensed app runs on a *node* which has a minimum of two environments: **production** and **acceptance**. A third environment, **test**, can be added, if required. Your licensed app is linked to a node and can be deployed to any of these environments.
+
+By default, apps are deployed to the Mendix Cloud **v4**. Features which are covered in the default documentation are for **v4**. Some customers with special requirements may use Mendix Cloud **v3**, and will have to refer to the **v3** documentation where the features differ from **v4**.
+
+## 2 Deploying an App to the Mendix Cloud
+
 It has never been easier to deploy a Mendix application to the cloud. This how-to will explain the options a developer has to deploy applications to a connected cloud node.
 
 **This how-to will teach you how to do the following:**
@@ -18,8 +52,6 @@ It has never been easier to deploy a Mendix application to the cloud. This how-t
 * Deploy via the Mendix Modeler
 * Deploy the app to an environment
 * Deploy a Free App to the Mendix Cloud
-
-## 2 Prerequisites
 
 Before starting this how-to, make sure you have completed the prerequisites described below.
 

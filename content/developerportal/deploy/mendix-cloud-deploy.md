@@ -32,7 +32,7 @@ A Free App will go to sleep after an hour or so of inactivity. If you access it 
 
 You can upgrade a Free App to a licensed node with a *node* in the Mendix Cloud. The following documents describe how to do this:
 
-* [How To Upgrade Your Free App to a Licensed App](/developerportal/howto/how-to-upgrade-free-app)
+* [How To Upgrade Your Free App to a Licensed App](how-to-upgrade-free-app)
 * [How To Unlink Your Free App from a Sandbox Environment](/developerportal/howto/how-to-unlink-sandbox)
 * [How To Link a Different App to a Cloud Node](/developerportal/howto/how-to-link-a-different-app-to-a-node)
 

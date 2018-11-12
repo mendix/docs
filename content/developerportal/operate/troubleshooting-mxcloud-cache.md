@@ -1,7 +1,8 @@
 ---
-title: "Troubleshoot Your Application in the Mendix Cloud: Cache"
-parent: "troubleshoot-mendixcloud"
-description: "This page describes how to troubleshoot the cache in your node."
+title: "Cache Metrics (Runtime Lower than Version 7.0)"
+parent: "metrics"
+#menu_order: 60
+description: "How to troubleshoot the cache in your node."
 tags: ["App","Troubleshoot","Developer Portal","Cache","Mendix Cloud"]
 ---
 
@@ -44,6 +45,6 @@ The cache statistics might also help you identify the most commonly used entitie
 
 ## 3 Related Content
 
-* [Metrics](/developerportal/operate/metrics)
+* [Metrics](metrics)
 * [Security - Node Permissions](/developerportal/settings/node-permissions)
-* [Troubleshooting your application in the Mendix Cloud: Running now](troubleshooting-mxcloud-runningnow)
+* [Running Now Metrics](troubleshooting-mxcloud-runningnow)

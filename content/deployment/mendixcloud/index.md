@@ -44,12 +44,6 @@ If you are upgrading a Free App to a licensed node you may find the following do
 * [How To Upgrade Your Free App to a Licensed App](https://docs.mendix.com/developerportal/howto/how-to-upgrade-free-app)
 * [How To Link a Different App to a Cloud Node](https://docs.mendix.com/developerportal/howto/how-to-link-a-different-app-to-a-node)
 
-## 4 Documents in This Category
-
-* [Troubleshooting](troubleshoot-mendixcloud)
-    * [Troubleshoot Your Application in the Mendix Cloud: Cache](troubleshooting-mxcloud-cache)
-    * [Troubleshoot Your Application in the Mendix Cloud: Running Now](troubleshooting-mxcloud-runningnow)
-
-## 5 Related Content
+## 4 Related Content
 
 The **AppCloudServices** module allows your app to integrate with services on the Mendix Cloud. It is available in the **App Store** here: [AppCloudServices](https://appstore.home.mendix.com/link/app/934/).

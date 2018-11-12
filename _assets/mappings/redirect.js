@@ -8553,10 +8553,6 @@ module.exports = {
       to: "/releasenotes/desktop-modeler/5.14"
     },
     {
-      from: "/ReleaseNotes/4.08.10",
-      to: "/releasenotes/desktop-modeler/unsupported-versions/4.8"
-    },
-    {
       from: "/ReleaseNotes/5.15.0",
       to: "/releasenotes/desktop-modeler/5.15"
     },

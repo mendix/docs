@@ -10,7 +10,6 @@ These are the Mendix Desktop Modeler major version release notes:
 * [7](7)
 * [6](6)
 * [5](5)
-* [Unsupported Versions](unsupported-versions/unsupported-versions)
 
 {{% alert type="info" %}}
 

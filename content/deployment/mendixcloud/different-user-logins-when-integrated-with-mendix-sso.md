@@ -275,7 +275,6 @@ You can view the implementation by deploying your app to the Mendix Cloud and go
 
 ## 3 Related Content
 
-*   [Different user logins when integrated with Mendix SSO](different-user-logins-when-integrated-with-mendix-sso)
 *   [Trends in Mendix Cloud v3](/developerportal/operate/trends)
 *   [Mendix Cloud: Deploy](/developerportal/deploy/mendix-cloud-deploy)
 *   [Azure: Deploy](/developerportal/deploy/azure-deploy)

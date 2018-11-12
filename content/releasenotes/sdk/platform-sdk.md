@@ -3,6 +3,8 @@ title: "Platform SDK"
 category: "SDKs"
 ---
 
+These are the Platform SDK release notes, including all minor versions and patches.
+
 ## 4.0.0
 
 * The minimum Model SDK dependency has been set to 4.0.0.

@@ -2136,11 +2136,11 @@ module.exports = {
     },
     {
       from: "/mendixcloud/Mendix+Cloud",
-      to: "/deployment/mendixcloud/"
+      to: "/developerportal/deploy/mendix-cloud-deploy"
     },
     {
       from: "/mendixcloud/Mendix+Cloud+Home",
-      to: "/deployment/mendixcloud/"
+      to: "/developerportal/deploy/mendix-cloud-deploy"
     },
     {
       from: "/mendixcloud/Integrate+your+app+with+Mendix+SSO",

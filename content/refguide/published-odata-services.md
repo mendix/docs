@@ -3,7 +3,8 @@ title: "Published OData Services"
 parent: "integration"
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
-In the Modeler, entities can be exposed as OData resources by adding a new 'Published OData service' document. You can expose any number of related resources in a Published OData service document. By default, the non-qualified names of entities are used in the URI to uniquely identify them, but you can override the name of the resource as well.
+
+In the Modeler, entities can be exposed as [OData resources](published-odata-resource) by adding a new 'Published OData service' document. You can expose any number of related resources in a Published OData service document. By default, the non-qualified names of entities are used in the URI to uniquely identify them, but you can override the name of the resource as well.
 
 ### OData Version
 
@@ -23,7 +24,7 @@ The service name is used to create a unique URI for the OData service. Thus, the
 
 ### Resources
 
-A resource is a network-accessible data object representing an entity, identified by a URI. You can add, edit, or remove resources and their unique identifiers from the 'Resources' tab. 
+A [resource](published-odata-resource) is a network-accessible data object representing an entity, identified by a URI. You can add, edit, or remove resources and their unique identifiers from the 'Resources' tab. 
 
 ### Service namespace
 
@@ -32,6 +33,10 @@ In OData, the namespace is used to refer to data types. On the 'Settings' tab, y
 ### Performance
 
 When exposing entities through OData, the entities are retrieved from the Mendix database in a streaming fashion, to avoid out-of-memory errors in the Mendix runtime.
+
+### Associations
+
+You can choose how you want to represent associations. See [representation of associations](odata-representation#associations) for more information.
 
 ### Security
 

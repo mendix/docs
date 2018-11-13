@@ -1,6 +1,6 @@
 ---
 title: "View the Mendix Cloud Version and Region"
-category: "How-To's"
+parent: "mendix-cloud-deploy"
 menu_order: 150
 description: "This page describes how view in which Mendix Cloud Version and Region your app is hosted."
 tags: ["Mendix Cloud Version","Mendix Cloud Region","Developer Portal"]
@@ -19,7 +19,7 @@ You can manage your Mendix Cloud v3 and Mendix Cloud v4 environments via the [De
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Have a node (for details, see [How to Upgrade Your Free App to a Licensed App](/developerportal/deploy/how-to-upgrade-free-app))
+* Have a node (for details, see [How to Upgrade Your Free App to a Licensed App](how-to-upgrade-free-app))
 
 ## 3 Mendix Cloud Region and Version
 
@@ -46,10 +46,10 @@ To view the Mendix Cloud region and version in which your app is hosted, follow 
 
 * [Application Trends in Mendix Cloud v3](/developerportal/operate/trends)
 * [Application Trends in Mendix Cloud v4](/developerportal/operate/trends-v4)
-* [Environment Details](/developerportal/deploy/environments-details)
+* [Environment Details](environments-details)
 * [How to Manage Company & App Roles](/developerportal/company-app-roles/manage-roles)
-* [How to Migrate to Mendix Cloud v4](/developerportal/deploy/migrating-to-v4)
-* [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy)
-* [Mendix Cloud v4 - FAQ](/developerportal/deploy/mxcloudv4)
+* [How to Migrate to Mendix Cloud v4](migrating-to-v4)
+* [Mendix Cloud](mendix-cloud-deploy)
+* [Mendix Cloud v4 - FAQ](mxcloudv4)
 * [Company & App Roles](/developerportal/company-app-roles/index)
 * [Technical Contact](/developerportal/company-app-roles/technical-contact)

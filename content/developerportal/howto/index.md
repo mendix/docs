@@ -16,10 +16,6 @@ This category contains documents about the use of specific tasks in the [Develop
 * [Configure Maintenance Windows](maintenance-windows)
 * [Scale Your Environment in Mendix Cloud v4](scale-environment)
 
-### Environments 
-
-* [View the Mendix Cloud Version and Region](cloud-version-region)
-
 ### Sandbox
 
 * [Unlink Your Free App from a Sandbox Environment](how-to-unlink-sandbox)

@@ -91,7 +91,7 @@ After the v3 node has been offboarded, follow these steps to link the app to the
 3.  Click **Select Node**.
 4.  Select the v4 node by clicking **Use this Node** and link it to your app. The currently linked (temporary) app will be unlinked automatically. The temporary app can be deleted.
 
-For more information, see [How to Link a Different App to a Cloud Node](/developerportal/howto/how-to-link-a-different-app-to-a-node).
+For more information, see [How to Link a Different App to a Cloud Node](how-to-link-a-different-app-to-a-node).
 
 ### 3.5 Changing the App URL
 

@@ -10,4 +10,3 @@ The following tutorials are available here:
 
 * [How to Build a Simple HRM App](build-a-simple-hrm-app)
 * [How to Build a Logistics IoT App](build-an-iot-app)
-* [How to Build a Mobile To-Do App](create-a-to-do-app)

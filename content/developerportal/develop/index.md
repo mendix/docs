@@ -10,6 +10,6 @@ As you work with your App Team to develop your app project, the Developer Portal
 
 ## 2 Documents in This Category
 
-* [Modeling Environments](selecting-environment)
+* [Modeling Environments](modeling-environments)
 * [Team Server Overview](team-server)
 * [Planning App Development](planning-development)

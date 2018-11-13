@@ -88,7 +88,7 @@ The backup file is immediately uploaded to the database.
 
 ## 4 Related Content
 
-* [How to Connect an App to a Licensed Cloud Node](how-to-link-app-to-node)
+* [How to Connect an App to a Licensed Cloud Node](/developerportal/deploy/how-to-link-app-to-node)
 * [How to Create a Backup](how-to-create-backup)
 * [How to Download a Backup](how-to-download-a-backup)
 * [How to Unlink Your Free App from a Sandbox Environment](how-to-unlink-sandbox)

@@ -57,6 +57,6 @@ To download a backup of a licensed app, follow these steps:
 ## 5 Related Content
 
 * [How to Create a Backup](how-to-create-backup)
-* [How to Link an App to a Licensed Cloud Node](how-to-link-app-to-node)
+* [How to Link an App to a Licensed Cloud Node](/developerportal/deploy/how-to-link-app-to-node)
 * [How to Restore a Backup](how-to-restore-a-backup)
 * [How to Unlink Your Free App from a Sandbox Environment](how-to-unlink-sandbox)

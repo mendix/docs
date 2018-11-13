@@ -2132,7 +2132,7 @@ module.exports = {
     },
     {
       from: "/mendixcloud/how-to-link-app-to-node",
-      to: "/developerportal/howto/how-to-link-app-to-node"
+      to: "/developerportal/deploy/how-to-link-app-to-node"
     },
     {
       from: "/mendixcloud/Mendix+Cloud",

@@ -31,7 +31,7 @@ To migrate your app from a v3 node to a v4 node in the Mendix Cloud, follow the 
 
 First, link the new temporary app to the cloud v4 node.
 
-To learn how to do this, see [How to Link Your Free App to a Licensed Cloud Node](/developerportal/howto/how-to-link-app-to-node).
+To learn how to do this, see [How to Link Your Free App to a Licensed Cloud Node](/developerportal/deploy/how-to-link-app-to-node).
 
 ### 3.2 Copying Data from v3 to v4
 
@@ -113,6 +113,6 @@ If you have a custom domain set up, you will need to change this. Instructions f
 *   [Mendix Cloud: Deploy](mendix-cloud-deploy)
 *   [How to Download a Backup](/developerportal/howto/how-to-download-a-backup)
 *   [How to Link a Different App to a Cloud Node](/developerportal/howto/how-to-link-a-different-app-to-a-node)
-*   [How to Link Your Free App to a Licensed Cloud Node](/developerportal/howto/how-to-link-app-to-node)
+*   [How to Link Your Free App to a Licensed Cloud Node](/developerportal/deploy/how-to-link-app-to-node)
 *   [How to Restore a Backup](/developerportal/howto/how-to-restore-a-backup)
 *   [How to Unlink Your Free App from a Sandbox Environment](/developerportal/howto/how-to-unlink-sandbox)

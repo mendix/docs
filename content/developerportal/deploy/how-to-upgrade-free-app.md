@@ -45,7 +45,7 @@ The documentation on how to download a backup can be found in [How To Download a
 
 ### 3.2 Unlink your Free App from Sandbox
 
-Follow the instructions from paragraph **2.1 Method 1** of the [How to Connect your Free App to a Licensed Cloud Node](/developerportal/howto/how-to-link-app-to-node) how-to.
+Follow the instructions from paragraph **2.1 Method 1** of the [How to Connect your Free App to a Licensed Cloud Node](/developerportal/deploy/how-to-link-app-to-node) how-to.
 
 {{% alert type="info" %}}
 
@@ -59,7 +59,7 @@ The documentation on how to unlink your Free App from a Sandbox can be found in 
 
 If you had a Sandbox linked to your Free App, you had to first create a backup and unlink the Sandbox. The next step is linking your Free App to a licensed cloud node.
 
-The documentation on how to link your Free App to a licensed cloud node can be found in [How To Link Your Free App to a Licensed Cloud Node](/developerportal/howto/how-to-link-app-to-node).
+The documentation on how to link your Free App to a licensed cloud node can be found in [How To Link Your Free App to a Licensed Cloud Node](/developerportal/deploy/how-to-link-app-to-node).
 
 ### 3.4 Restore Backup
 
@@ -71,7 +71,7 @@ The documentation on how to restore a backup can be found in [How To Restore a B
 
 If you do not have a Sandbox linked to your Free App, you only have to follow instructions to link your Free App to a Licensed Cloud Node.
 
-To learn how to do this, see [How to Link Your Free App to a Licensed Cloud Node](/developerportal/howto/how-to-link-app-to-node).
+To learn how to do this, see [How to Link Your Free App to a Licensed Cloud Node](/developerportal/deploy/how-to-link-app-to-node).
 
 ## 5 Related Content
 

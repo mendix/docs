@@ -18,7 +18,6 @@ This category contains documents about the use of specific tasks in the [Develop
 
 ### Connecting to a Cloud Node
 
-* [Link Your Free App to a Licensed Cloud Node](how-to-link-app-to-node)
 * [Link a Different App to a Cloud Node](how-to-link-a-different-app-to-a-node)
 
 ### Environments 

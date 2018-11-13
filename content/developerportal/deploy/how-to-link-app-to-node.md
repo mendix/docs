@@ -1,6 +1,6 @@
 ---
 title: "Link Your Free App to a Licensed Cloud Node"
-category: "How-To's"
+parent: "mendix-cloud-deploy"
 menu_order: 120
 description: "This page describes how to link an App to a licensed cloud node."
 tags: ["App","Node","Developer Portal","Deploy"]
@@ -23,7 +23,7 @@ Before starting this how-to, make sure you have completed the following prerequi
     * if your contract allows for more licensed nodes, please reach out to Mendix Support (see https://support.mendix.com for contact details) so they can create the node for you
     * if your contract does not allow for more licensed nodes, please contact your Customer Success Manager (CSM)
 *   You are the [Technical Contact](/developerportal/company-app-roles/technical-contact) of the node
-*   Make sure that the Sandbox is unlinked. See [How to Unlink Your Free App from a Sandbox Environment](how-to-unlink-sandbox)
+*   Make sure that the Sandbox is unlinked. See [How to Unlink Your Free App from a Sandbox Environment](/deveoperportal/howto/how-to-unlink-sandbox)
 *   Your Two-Factor Google Authenticator is enabled. See [How to Set Up Google Two-Factor Authentication](/howtogeneral/support/how-to-set-up-two-factor-authentication-with-google-authenticator)
 
 ## 3 Connect Your Free App to a Licensed Cloud Node
@@ -63,10 +63,10 @@ The app is now connected to the licensed cloud node.
 
 ## 4 Related Content
 
-*   [How to Configure Custom Domains](custom-domains)
-*   [How to Deploy to the Mendix Cloud](../deploy/mendix-cloud-deploy)
-*   [How to Download a Backup](how-to-download-a-backup)
-*   [How to Link a Different App to a Cloud Node](how-to-link-a-different-app-to-a-node)
-*   [How to Restore a Backup](how-to-restore-a-backup)
-*   [How to Unlink Your Free App from a Sandbox Environment](how-to-unlink-sandbox)
+*   [How to Configure Custom Domains](/developerportal/howto/custom-domains)
+*   [How to Deploy to the Mendix Cloud](mendix-cloud-deploy)
+*   [How to Download a Backup](/developerportal/howto/how-to-download-a-backup)
+*   [How to Link a Different App to a Cloud Node](/developerportal/howto/how-to-link-a-different-app-to-a-node)
+*   [How to Restore a Backup](/developerportal/howto/how-to-restore-a-backup)
+*   [How to Unlink Your Free App from a Sandbox Environment](/developerportal/howto/how-to-unlink-sandbox)
 *   [How to Set Up Google Two Factor Authentication](/howtogeneral/support/how-to-set-up-two-factor-authentication-with-google-authenticator)

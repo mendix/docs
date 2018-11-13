@@ -1,9 +1,10 @@
 ---
 title: "Use the Mendix Feedback Widget"
 category: "Feedback Management"
-menu_order: 10
+menu_order: 20
 description: "Describes how to add the Feedback Widget to your app project and configure it."
 tags: ["Feedback","Widget","Developer Portal"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
@@ -64,13 +65,13 @@ To configure the Mendix Feedback Widget, follow these steps:
 	{{% image_container width="500" %}}![](attachments/edit-widget.png)
 	{{% image_container width="500" %}}
 
-5. Open the **Configuration** tab of the widget properties.
-6. Ensure that the **Feedback server** is set to `https://sprintr.home.mendix.com/`.
-7. Ensure that the **Project identifier** is filled in correctly. The project identifier is your **App ID**, and it is automatically filled in for the Mendix Feedback Widget. If necessary, you can find the identifier of your app in the [Developer Portal](http://home.mendix.com) by opening your app and clicking **General** under the **Settings** category:
+5.  Open the **Configuration** tab of the widget properties.
+6.  Ensure that the **Feedback server** is set to `https://sprintr.home.mendix.com/`.
+7.  Ensure that the **Project identifier** is filled in correctly. The project identifier is your **App ID**, and it is automatically filled in for the Mendix Feedback Widget. If necessary, you can find the identifier of your app in the [Developer Portal](http://home.mendix.com) by opening your app and clicking **General** under the **Settings** category:
 
-    ![](attachments/generalsettings.png)
+	![](attachments/generalsettings.png)
 
-8. If you have configured multiple home pages for different user roles, you need to add the Mendix Feedback Widget to each home page for the user role from which you want to gather feedback. This can easily be done by copying the configured widget to the other relevant layouts and pages.
+8.  If you have configured multiple home pages for different user roles, you need to add the Mendix Feedback Widget to each home page for the user role from which you want to gather feedback. This can easily be done by copying the configured widget to the other relevant layouts and pages.
 
 ## 5 Related Content
 

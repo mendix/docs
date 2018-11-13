@@ -8,7 +8,7 @@ tags: ["Developer Portal", "Cloud Environments", "Mendix Cloud", "SAP", "IBM", "
 
 ### November 13th, 2018
 
-We have opened the [Mendix Shop](), which is a web shop where you can spend the credits you have gained by completing [challenges](/developerportal/mendix-profile/#challenges) to buy Mendix swag. The shop has products like ____. 
+The [Mendix Shop](https://mendixshop.mendixcloud.com) is open for business! This is a web shop where you can spend the credits you have gained by completing various [challenges](/developerportal/mendix-profile/#challenges). The shop has cool products like Mendix t-shirts, socks, and sweatbands, so be sure to check it out.
 
 ### November 1st, 2018
 

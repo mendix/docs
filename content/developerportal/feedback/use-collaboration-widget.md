@@ -87,18 +87,18 @@ The sections below describe how to make sure you have the latest version of the 
 
 To ensure you have the latest version of the widget included in your app, follow these steps:
 
-1. Download the latest version of the [Mendix Feedback Widget](https://appstore.home.mendix.com/link/app/199/) from the App Store (as accessed through the Desktop Modeler).
+1.  Download the latest version of the [Mendix Feedback Widget](https://appstore.home.mendix.com/link/app/199/) from the App Store (as accessed through the Desktop Modeler).
 
-  {{% image_container width="450" %}}![](attachments/app-store.png)
-  {{% /image_container %}}
+	{{% image_container width="450" %}}![](attachments/app-store.png)
+	{{% /image_container %}}
 
-2. When the latest widget is included in your app, you need to ensure that the widget is added to the homepage of the application. Open the homepage from your app's **Project** > **Navigation**:
+2.  When the latest widget is included in your app, you need to ensure that the widget is added to the homepage of the application. Open the homepage from your app's **Project** > **Navigation**:
 
-    ![](attachments/show-page.png)
+	![](attachments/show-page.png)
 
-3. If the widget has not been added automatically, add it to the desired page or layout by selecting **Add widget** > **Add-on widgets** > **Feedback & Collaboration Widget** and dropping it into a position in the page:
+3.  If the widget has not been added automatically, add it to the desired page or layout by selecting **Add widget** > **Add-on widgets** > **Feedback & Collaboration Widget** and dropping it into a position in the page:
 
-    ![](attachments/feedback-collaboration-widget.png)
+	![](attachments/feedback-collaboration-widget.png)
 
 ### 4.2 Configuring the Widget
 

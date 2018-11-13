@@ -2080,10 +2080,6 @@ module.exports = {
       to: "/howto/tutorials/build-a-simple-hrm-app"
     },
     {
-      from: "/howto/getting-started/create-a-to-do-app",
-      to: "/howto/tutorials/create-a-to-do-app"
-    },
-    {
       from: "/howto/deploying-a-mendix-app-to-cloud-foundry",
       to: "/developerportal/deploy/cloud-foundry-deploy"
     },

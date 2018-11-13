@@ -58,5 +58,5 @@ For more details, see [App Services](app-services).
 * [Mendix Cloud: Deploy](mendix-cloud-deploy)
 * [Mendix Cloud Status](mendix-cloud-status)
 * [Mendix Cloud V4 - FAQ](/developerportal/deploy/mxcloudv4)
-* [How to View the Mendix Cloud Version and Region](../howto/cloud-version-region)
+* [How to View the Mendix Cloud Version and Region](cloud-version-region)
 * [Two-Factor Authentication](two-factor-authentication)

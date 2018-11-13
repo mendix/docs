@@ -1,6 +1,6 @@
 ---
 title: "Developing in Mendix"
-description: "This page describes the options available for editing your app as well as how to view the overview of revisions and commits."
+description: "This page introduces the documents describing developing in Mendix via the Developer Portal."
 tags: ["Edit", "Desktop Modeler", "Web Modeler", "Team Server", "Developer Portal", "commit"]
 ---
 

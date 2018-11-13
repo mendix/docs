@@ -35,7 +35,7 @@ To see all of your badges as well as the badges you can work towards, click **Vi
 The **Badges in progress** section of the **Badges** tab only displays the current level in progress of a multi-level badge. Furthermore, multi-level badges that you have already earned are not shown in the **Earned badges** section when there is a higher level badge available.
 {{% /alert %}}
 
-## 5 Challenges
+## 5 Challenges {#challenges}
 
 The **Challenge** card presents a featured challenge you can complete on the Mendix Platform to gain credits. Once you complete a challenge, you can claim the credits and use them in the Mendix Shop. Challenges are not only about keeping engaged with the platform and exploring new challenges, but picking up some swag in the process!
 

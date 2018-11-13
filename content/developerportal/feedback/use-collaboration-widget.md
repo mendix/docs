@@ -102,6 +102,6 @@ To ensure you have the latest version of the widget included in your app, follow
 
 ### 4.2 Configuring the Widget
 
-You can configure the widget for certain actions in your app project (for example, to allow screenshots, to hide the Mendix logo, and to hide the **Share** button. All the properties are explained in the properties dialog box for the widget:
+You can configure the widget for certain actions in your app project (for example, to allow screenshots, to hide the Mendix logo, and to hide the **Share** button). All the properties are explained in the properties dialog box for the widget:
 
 ![](attachments/widget-properties.png)

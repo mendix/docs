@@ -134,7 +134,7 @@ If you want to choose whether you want to run your app locally or in the Sandbox
 ## 6 Related Content
 
 * [AppCloudServices](https://appstore.home.mendix.com/link/app/934/); the **AppCloudServices** module allows your app to integrate with services on the Mendix Cloud
-* [How to Configure Custom Domains](../howto/custom-domains)
+* [How to Configure Custom Domains](developerportal/howto/custom-domains)
 * [How to Link a Different App to a Cloud Node](how-to-link-a-different-app-to-a-node)
 * [How to Link Your Free App to a Licensed Cloud Node](how-to-link-app-to-node)
 * [How to Manage Company & App Roles](/developerportal/company-app-roles/manage-roles)

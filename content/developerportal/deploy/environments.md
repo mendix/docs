@@ -137,7 +137,7 @@ When your Mendix app needs to be accessible via your own URL (for example, `http
 
 There is also a section with an overview of linked custom domains.
 
-For more information, see [How to Configure Custom Domains](/developerportal/howto/custom-domains).
+For more information, see [How to Configure Custom Domains](custom-domains).
 
 ## 4 Access Restriction Profiles
 

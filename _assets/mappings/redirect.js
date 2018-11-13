@@ -2100,11 +2100,11 @@ module.exports = {
      ****************************************************/
     {
       from: "/mendixcloud/Custom+Domains",
-      to: "/developerportal/howto/custom-domains"
+      to: "/developerportal/deploy/custom-domains"
     },
     {
       from: "/mendixcloud/custom-domains",
-      to: "/developerportal/howto/custom-domains"
+      to: "/developerportal/deploy/custom-domains"
     },
     {
       from: "/mendixcloud/Deploying+to+the+cloud",

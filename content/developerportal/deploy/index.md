@@ -54,9 +54,9 @@ For more details, see [App Services](app-services).
 
 ## 5 Related Content
 
-* [How to Configure Custom Domains](../howto/custom-domains)
+* [How to Configure Custom Domains](custom-domains)
 * [Mendix Cloud: Deploy](mendix-cloud-deploy)
 * [Mendix Cloud Status](mendix-cloud-status)
-* [Mendix Cloud V4 - FAQ](/developerportal/deploy/mxcloudv4)
+* [Mendix Cloud V4 - FAQ](mxcloudv4)
 * [How to View the Mendix Cloud Version and Region](cloud-version-region)
 * [Two-Factor Authentication](two-factor-authentication)

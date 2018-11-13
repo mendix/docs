@@ -59,7 +59,7 @@ To link **App A** to **Node 2** and **App B** to **Node 1**, follow these steps:
 
 ## 6 Related Content
 
-*   [How to Configure Custom Domains](/developerportal/howto/custom-domains)
+*   [How to Configure Custom Domains](custom-domains)
 *   [How to Deploy to the Mendix Cloud](mendix-cloud-deploy)
 *   [How to Link Your Free App to a Licensed Cloud Node](how-to-link-app-to-node)
 *   [How to Unlink Your Free App from a Sandbox Environment](/developerportal/howto/how-to-unlink-sandbox)

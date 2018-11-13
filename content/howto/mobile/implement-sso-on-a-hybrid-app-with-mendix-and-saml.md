@@ -141,7 +141,8 @@ To use the hybrid app package, follow these steps:
     ![](attachments/implement-sso/build.phonegap.com.png)
     
 ### 5.3 The SAML Module 
-
+{{% alert type="warning" %}}Not all versions of the **SAML Module** will work correctly when implementing SSO for your hybrid app. Please make sure you use a version of the SAML Module that is capable of creating mobile app tokens, that is, at least version 1.9.3. We recommend you update the SAML Module to the latest version available, and if needed, update the Mendix version of your application.
+{{% /alert %}}<br>
 The last thing to do is to check the **Enable mobile authentication token** box in the **Provisioning** tab when configuring an identity provider in the Mendix SAML module. This will make sure the SAML module provides the correct login token to the JavaScript part.
 
 ![](attachments/implement-sso/saml-module.png)

@@ -1,8 +1,8 @@
 ---
 title: "Unlink Your Free App from a Sandbox Environment"
-category: "How-To's"
-menu_order: 160
-description: "This page describes how to unlink a Free App from a Sandbox Environment."
+parent: "mendix-cloud-deploy"
+#menu_order: 160
+description: "How to unlink a Free App from a Sandbox Environment."
 tags: ["App","Sandbox","Developer Portal","Unlink","Delete"]
 ---
 
@@ -32,7 +32,7 @@ Please note that because you are going to unlink the Sandbox from your Free App,
 
 {{% /alert %}}
 
-The documentation on how to download a backup can be found [here](how-to-download-a-backup).
+The documentation on how to download a backup can be found [here](/developerportal/howto/how-to-download-a-backup).
 
 ## 4 Unlink a Free App From a Sandbox
 
@@ -44,17 +44,17 @@ When you have a Free App running in the Sandbox you will need to unlink the Free
 4.  Go to **Environments** in the left navigation panel.
 5.  Click **Unlink your app**. Beware that all your data will be lost!
 6.  Click **Yes, delete all data and unlink this project** to confirm.
-7.  Validate with your [Two-Factor Authentication](../deploy/two-factor-authentication).
+7.  Validate with your [Two-Factor Authentication](two-factor-authentication).
 
 The Free App has now been unlinked from the Sandbox environment.
 
 ## 5 Related Content
 
-*   [How to Configure Custom Domains](/developerportal/deploy/custom-domains)
-*   [How to Deploy to the Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy)
-*   [How to Download a Backup](how-to-download-a-backup)
-*   [How to Link a Different App to a Cloud Node](/developerportal/deploy/how-to-link-a-different-app-to-a-node)
-*   [How to Link Your Free App to a Licensed Cloud Node](/developerportal/deploy/how-to-link-app-to-node) 
-*   [How to Restore a Backup](how-to-restore-a-backup)
-*   [How to Upgrade Your Free App to a Licensed App](/developerportal/deploy/how-to-upgrade-free-app)
+*   [How to Configure Custom Domains](custom-domains)
+*   [How to Deploy to the Mendix Cloud](mendix-cloud-deploy)
+*   [How to Download a Backup](/developerportal/howto/how-to-download-a-backup)
+*   [How to Link a Different App to a Cloud Node](how-to-link-a-different-app-to-a-node)
+*   [How to Link Your Free App to a Licensed Cloud Node](how-to-link-app-to-node) 
+*   [How to Restore a Backup](/developerportal/howto/how-to-restore-a-backup)
+*   [How to Upgrade Your Free App to a Licensed App](how-to-upgrade-free-app)
 *   [How to Set Up Two-Factor Authentication With Google Authenticator](/howtogeneral/support/how-to-set-up-two-factor-authentication-with-google-authenticator)

@@ -21,7 +21,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 *  Have an available v4 [Mendix Cloud](mendix-cloud-deploy) node (to request a licensed v4 Cloud Node, contact your Customer Success Manager (CSM))
 * Have the [Technical Contact](/developerportal/company-app-roles/technical-contact) role for both v3 and v4 Cloud Nodes
-* Create a new temporary Free App without a Sandbox – instructions for unlinking a Free App from a sandbox are here: [How To Unlink Your Free App from a Sandbox Environment](/developerportal/howto/how-to-unlink-sandbox).
+* Create a new temporary Free App without a Sandbox – instructions for unlinking a Free App from a sandbox are here: [How To Unlink Your Free App from a Sandbox Environment](how-to-unlink-sandbox).
 
 ## 3 The Migration Process
 
@@ -115,4 +115,4 @@ If you have a custom domain set up, you will need to change this. Instructions f
 *   [How to Link a Different App to a Cloud Node](how-to-link-a-different-app-to-a-node)
 *   [How to Link Your Free App to a Licensed Cloud Node](how-to-link-app-to-node)
 *   [How to Restore a Backup](/developerportal/howto/how-to-restore-a-backup)
-*   [How to Unlink Your Free App from a Sandbox Environment](/developerportal/howto/how-to-unlink-sandbox)
+*   [How to Unlink Your Free App from a Sandbox Environment](how-to-unlink-sandbox)

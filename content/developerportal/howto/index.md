@@ -10,12 +10,6 @@ This category contains documents about the use of specific tasks in the [Develop
 
 * [Manage Developer Portal Deep Links](manage-deeplinks)
 
-### Sandbox
-
-* [Unlink Your Free App from a Sandbox Environment](how-to-unlink-sandbox)
-
-## Operate
-
 ### Alerts
 
 * [Receive Environment Status Alerts](receive-alerts)

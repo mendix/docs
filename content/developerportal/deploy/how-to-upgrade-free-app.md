@@ -53,7 +53,7 @@ If you have just unlinked your Free App from a Sandbox, you only have to refresh
 
 {{% /alert %}}
 
-The documentation on how to unlink your Free App from a Sandbox can be found in [How To Unlink Your Free App from a Sandbox Environment](/developerportal/howto/how-to-unlink-sandbox).
+The documentation on how to unlink your Free App from a Sandbox can be found in [How To Unlink Your Free App from a Sandbox Environment](how-to-unlink-sandbox).
 
 ### 3.3 Link Your Free App to Licensed Cloud Node
 
@@ -81,4 +81,4 @@ To learn how to do this, see [How to Link Your Free App to a Licensed Cloud Node
 * [How to Link a Different App to a Cloud Node](how-to-link-a-different-app-to-a-node)
 * [How to Restore A Backup](/developerportal/howto/how-to-restore-a-backup)
 * [Company & App Roles](/developerportal/company-app-roles/index)
-* [How to Unlink Your Free App from a Sandbox Environment](/developerportal/howto/how-to-unlink-sandbox)
+* [How to Unlink Your Free App from a Sandbox Environment](how-to-unlink-sandbox)

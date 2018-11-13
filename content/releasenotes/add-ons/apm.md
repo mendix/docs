@@ -1,6 +1,7 @@
 ---
 title: "Application Performance Monitor"
 category: "Add-ons"
+menu_order: 20 
 ---
 
 These are the release notes for Mendix Application Performance Monitor (APM):

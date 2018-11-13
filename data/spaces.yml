@@ -195,17 +195,9 @@ developerportal:
     - "Company & App Roles"
     - "Collaboration Tools"
     - "Feedback Management"
-    - "Develop"
+    - "Developing in Mendix"
     - "Deploy and Manage"
     - "Operate"
     - "Settings"
     - "How-to's"
-deployment:
-  space: "Deployment"
-  priority: false
-  menu_categories:
-    - "Azure"
-    - "Cloud Foundry"
-    - "Docker"
-    - "Mendix Cloud"
-    - "On-Premises"
+

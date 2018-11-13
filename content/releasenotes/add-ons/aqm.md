@@ -1,6 +1,7 @@
 ---
 title: "Application Quality Monitor"
 category: "Add-ons"
+menu_order: 30
 ---
 
 These are the release notes for the Mendix Application Quality Monitor (AQM):

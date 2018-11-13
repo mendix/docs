@@ -38,7 +38,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 Before configuring your custom domain in the Mendix Cloud, you will need to configure a DNS record for your custom domain at your domain registrar/DNS provider.
 
-![](attachments/deploy/21168230.png)
+![](attachments/custom-domains/21168230.png)
 
 Please create a CNAME record and point it to `[YOUR-CUSTOM-DOMAIN].cname.mendix.net.`. For example, when your custom domain is `myapp.mycompany.com`, create a CNAME record to `myapp.mycompany.com.cname.mendix.net.` so that Mendix can point your custom domain to your Mendix app.
 
@@ -54,7 +54,7 @@ Custom domain certificates (or just "certificates") and custom domains are manag
 
 You can have a collection of certificates. For example when your certificate expires, you can upload a new certificate next to your old certificate. Those can be chosen when you configure a custom domain. This is done on the environment level (test, acceptance, production).
 
-![](attachments/deploy/21168233.png)
+![](attachments/custom-domains/21168233.png)
 
 To manage custom domains, follow these steps:
 
@@ -72,15 +72,15 @@ To create a certificate signing request and an RSA key, follow these steps:
 
 1.  Click **New** and then click **Create a Certificate Request**:
 
-    ![](attachments/deploy/newcustomdomain.jpg)
+    ![](attachments/custom-domains/newcustomdomain.jpg)
 
 2.  Fill in and submit the provided fields:
 
-    ![](attachments/deploy/21168225.png)
+    ![](attachments/custom-domains/21168225.png)
 
 3. Click **Generate**. An SSL/TLS private key and a certificate request is generated. The certificate request will be shown in the PEM format.
 
-![](attachments/deploy/21168226.png)
+![](attachments/custom-domains/21168226.png)
 
 {{% alert type="info" %}}
 
@@ -95,11 +95,11 @@ Before uploading a certificate, go to your certificate authority to get a signed
 1. Select the custom domain certificate.
 2. Click **Upload Signed Certificate**. 
 
-![](attachments/deploy/certificate.jpg)
+![](attachments/custom-domains/certificate.jpg)
 
 Here you can change the description of your certificate and upload the signed SSL/TLS certificate. You can also upload an intermediate certificate chain. The intermediate certificate chain is often provided by your certificate authority.
 
-![](attachments/deploy/21168227.png)
+![](attachments/custom-domains/21168227.png)
 
 ## 5 Uploading Your Own Custom Domain Certificate<a name="Uploading"></a>
 
@@ -113,11 +113,11 @@ To upload the custom domain certificate, follow these steps:
 
 1. Click **New** and then click **Upload Certificate, Chain and Key**:
 
-    ![](attachments/deploy/newcustomdomain.jpg)
+    ![](attachments/custom-domains/newcustomdomain.jpg)
 
 2. Enter the SSL/TLS certificate, intermediate certificate chain, and SSL/TLS private key in the provided fields. Optionally, you can give your custom domain certificate a description. The description is used when selecting the custom domain certificate when configuring a custom domain later on.
 
-    ![](attachments/deploy/21168228.png)
+    ![](attachments/custom-domains/21168228.png)
 
 3. Click **Save** to save your new custom domain certificate. It will be uploaded to the Mendix Cloud automatically.
 
@@ -153,18 +153,18 @@ To configure a custom domain on your application environment, follow these steps
 1. Click **Environments** under the **Deploy** category.
 2. Click **Details** for the environment you want to configure:
 
-    ![](attachments/deploy/environment-details.png)
+    ![](attachments/custom-domains/environment-details.png)
 
 3. Go to the **Network** tab:
 
-    ![](attachments/deploy/network.jpg)
+    ![](attachments/custom-domains/network.jpg)
 
 4. In **Custom Domains**, you can manage your custom domains. You can configure a custom domain by doing the following:
 
     * Providing a **Domain name** (like *myapp.mycompany.com*)
     * Selecting a custom domain **Certificate** you have uploaded above
 
-    ![](attachments/deploy/21168229.png)
+    ![](attachments/custom-domains/21168229.png)
 
 6. Click **Save** to save your custom domain. It will be configured for your application environment automatically.
 
@@ -196,5 +196,5 @@ An intermediate certificate chain chain could look like this from top to bottom:
 * [Certificates](/developerportal/deploy/certificates)
 * [Environments](/developerportal/deploy/environments)
 * [Mendix Cloud: Deploy](/developerportal/deploy/mendix-cloud-deploy)
-* [How to Upgrade Your Free App to a Licensed App](how-to-upgrade-free-app)
+* [How to Upgrade Your Free App to a Licensed App](/developerportal/deploy/how-to-upgrade-free-app)
 * [Company & App Roles](/developerportal/company-app-roles/index).

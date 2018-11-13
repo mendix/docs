@@ -32,9 +32,9 @@ A Free App will go to sleep after an hour or so of inactivity. If you access it 
 
 You can upgrade a Free App to a licensed node with a *node* in the Mendix Cloud. The following documents describe how to do this:
 
-* [How To Upgrade Your Free App to a Licensed App](/developerportal/howto/how-to-upgrade-free-app)
+* [How To Upgrade Your Free App to a Licensed App](how-to-upgrade-free-app)
 * [How To Unlink Your Free App from a Sandbox Environment](/developerportal/howto/how-to-unlink-sandbox)
-* [How To Link a Different App to a Cloud Node](/developerportal/howto/how-to-link-a-different-app-to-a-node)
+* [How To Link a Different App to a Cloud Node](how-to-link-a-different-app-to-a-node)
 
 ### 1.2 Licensed App
 
@@ -135,9 +135,9 @@ If you want to choose whether you want to run your app locally or in the Sandbox
 
 * [AppCloudServices](https://appstore.home.mendix.com/link/app/934/); the **AppCloudServices** module allows your app to integrate with services on the Mendix Cloud
 * [How to Configure Custom Domains](../howto/custom-domains)
-* [How to Link a Different App to a Cloud Node](../howto/how-to-link-a-different-app-to-a-node)
-* [How to Link Your Free App to a Licensed Cloud Node](../howto/how-to-link-app-to-node)
+* [How to Link a Different App to a Cloud Node](how-to-link-a-different-app-to-a-node)
+* [How to Link Your Free App to a Licensed Cloud Node](how-to-link-app-to-node)
 * [How to Manage Company & App Roles](/developerportal/company-app-roles/manage-roles)
 * [Company & App Roles](/developerportal/company-app-roles/index)
 * [How to Set Up Two-Factor Authentication With Google Authenticator](/howtogeneral/support/how-to-set-up-two-factor-authentication-with-google-authenticator)
-* [How to Upgrade Your Free App to a Licensed App](../howto/how-to-upgrade-free-app)
+* [How to Upgrade Your Free App to a Licensed App](how-to-upgrade-free-app)

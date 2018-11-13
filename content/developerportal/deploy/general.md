@@ -48,4 +48,4 @@ Deploying to a Azure is possible from the [Azure Marketplace](https://azure.micr
 
 ## 9 On-Premises
 
-To learn how to deploy your Mendix application on-premises, see [How to Deploy Mendix on Microsoft Windows](/deployment/on-premises/deploy-mendix-on-microsoft-windows), [How to Install Mendix on Debian GNU Linux](/deployment/on-premises/installing-mendix-on-debian-gnu-linux), and [How to Install Mendix on RedHat and CentOS](/deployment/on-premises/installing-mendix-on-redhat-and-centos).
+To learn how to deploy your Mendix application on-premises, see [How to Deploy Mendix on Microsoft Windows](deploy-mendix-on-microsoft-windows), [How to Install Mendix on Debian GNU Linux](installing-mendix-on-debian-gnu-linux), and [How to Install Mendix on RedHat and CentOS](installing-mendix-on-redhat-and-centos).

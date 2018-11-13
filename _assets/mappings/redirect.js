@@ -2144,11 +2144,11 @@ module.exports = {
     },
     {
       from: "/mendixcloud/Maintenance+Windows",
-      to: "/developerportal/howto/maintenance-windows"
+      to: "/developerportal/deploy/maintenance-windows"
     },
     {
       from: "/mendixcloud/maintenance-windows",
-      to: "/developerportal/howto/maintenance-windows"
+      to: "/developerportal/deploy/maintenance-windows"
     },
     {
       from: "/mendixcloud/migrating+to+v4",

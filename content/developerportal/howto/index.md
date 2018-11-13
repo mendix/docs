@@ -13,7 +13,6 @@ This category contains documents about the use of specific tasks in the [Develop
 ### Configuration
 
 * [Configure Custom Domains](custom-domains)
-* [Configure Maintenance Windows](maintenance-windows)
 
 ### Sandbox
 

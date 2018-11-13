@@ -12,7 +12,7 @@ On the **Team Server** page of the Developer Portal, an overview is presented of
 
 ![](attachments/team-server.png)
 
-Here you can also find the **Team Server URL**, which takes the following form: `https://teamserver.sprintr.com/<your AppID>`.
+Here you can also find the **Team Server URL**, which takes the following form: `https://teamserver.sprintr.com/<your AppID>/`. *Note that you may have to add the final slash manually to follow the link*.
 
 ## 2 Revision Summary
 

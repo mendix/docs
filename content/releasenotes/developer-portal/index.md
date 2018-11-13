@@ -10,8 +10,6 @@ tags: ["Developer Portal", "Cloud Environments", "Mendix Cloud", "SAP", "IBM", "
 
 We have opened the [Mendix Shop](), which is a web shop where you can spend the credits you have gained by completing [challenges](/developerportal/mendix-profile/#challenges) to buy Mendix swag. The shop has products like ____. 
 
-* Backend for shop admins to keep track of orders
-
 ### November 1st, 2018
 
 #### Fixes
@@ -54,7 +52,6 @@ Cloud v3 PostgreSQL backups are now created with `pg_dump` version 1.13. This ve
 * We addressed and fixed an issue that caused some Cloud Portal users to see empty dialog boxes instead of error message content. (Tickets 67626, 69363)
 * We addressed an issue that caused live logging to freeze from time to time. The fix has been confirmed on all mainstream browsers except for Internet Explorer, which we still are investigating. (Ticket 66418)
 * We fixed an issue which caused subdomain validation errors for sandbox environments. (Ticket 56574)
-
 
 ### October 16th, 2018
 

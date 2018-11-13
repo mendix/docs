@@ -2072,10 +2072,6 @@ module.exports = {
      * HOWTO MENDIX 7
      ****************************************************/
     {
-      from: "/howto/getting-started/build-an-iot-app",
-      to: "/howto/tutorials/build-an-iot-app"
-    },
-    {
       from: "/howto/getting-started/build-a-simple-hrm-app",
       to: "/howto/tutorials/build-a-simple-hrm-app"
     },

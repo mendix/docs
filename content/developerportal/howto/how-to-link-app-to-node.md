@@ -37,11 +37,11 @@ There are two methods to connect your project to a licensed cloud node:
 3.  Go to **Environments** in the left navigation panel.
 4.  Click on **Select a node**.
 
-    ![](attachments/deploy/link-node.png)
+    ![](attachments/how-to-link-app-to-node/link-node.png)
 
 5.  Click on **Use this node**.
 
-    ![](attachments/deploy/choose-node.png)
+    ![](attachments/how-to-link-app-to-node/choose-node.png)
 
 ### 3.2 Method 2
 
@@ -49,15 +49,15 @@ There are two methods to connect your project to a licensed cloud node:
 2.  Click **Apps** in the top navigation panel.
 2.  Click **My Apps** and select **Nodes**.
 
-    ![](attachments/general/myapps.png)
+    ![](attachments/how-to-link-app-to-node/myapps.png)
 
 3. Select the node that you want to link to an app by clicking **Select Node**.    
 
-    ![](attachments/deploy/select-node.png)
+    ![](attachments/how-to-link-app-to-node/select-node.png)
 
 4.  Choose the app you want to connect by clicking **Connect to this app**.
 
-    ![](attachments/deploy/connect-app.png)
+    ![](attachments/how-to-link-app-to-node/connect-app.png)
 
 The app is now connected to the licensed cloud node.
 

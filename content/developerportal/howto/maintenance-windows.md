@@ -35,24 +35,24 @@ Your "Preferred Maintenance Windows" is a weekly time range where system mainten
 1. Go to the [Developer Portal](http://home.mendix.com) and click **Apps** in the top navigation panel.
 2. Click **My Apps** and select **Nodes**.
 
-    ![](attachments/general/myapps.png)
+    ![](attachments/maintenance-windows/myapps.png)
 
 3. Select the node that you want to configure by clicking **Details**.
 4. Click **Environments** under the **Deploy** category:
 
-    ![](attachments/deploy/deploy-scale.png)    
+    ![](attachments/maintenance-windows/deploy-scale.png)    
 
 3. Select the node of the environment that you want to configure:
 
-    ![](attachments/deploy/maintenance1.png)
+    ![](attachments/maintenance-windows/maintenance1.png)
 
 4. Click **Details** for the environment you want to configure:
 
-    ![](attachments/deploy/maintenance2.png)
+    ![](attachments/maintenance-windows/maintenance2.png)
 
 5. Go to the **Maintenance** tab:
 
-    ![](attachments/deploy/maintenance.png)
+    ![](attachments/maintenance-windows/maintenance.png)
 
 {{% alert type="warning" %}}
 

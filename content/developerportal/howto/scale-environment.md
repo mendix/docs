@@ -28,11 +28,11 @@ To see the cloud version on which your app is hosted, follow these steps:
 1. Go to the [Developer Portal](http://home.mendix.com) and select your licensed app.
 2.  Click **Environments**:
 
-    ![](attachments/deploy/deploy-scale.png)
+    ![](attachments/scale-environment/deploy-scale.png)
 
 3.  Click **Details** for a selected environment:
 
-    ![](attachments/deploy/environment-details.png)
+    ![](attachments/scale-environment/environment-details.png)
 
 4. Next to **Mendix Cloud Version**, you will see the version of the cloud on which your licensed app is hosted.
 
@@ -55,7 +55,7 @@ If you have 1GB RAM of the **Total Allocated Memory**, you have 1 instance avail
 
 To scale your memory over multiple instances you need more memory.
 
-![](attachments/deploy/scale.png)
+![](attachments/scale-environment/scale.png)
 
 ### 4.1 Scaling Example 1
 
@@ -69,7 +69,7 @@ You don't need to use the whole memory at once. You can just use part of it and 
 
 For example, you can use one instance and store 4GB of RAM in there. The other 12GB of RAM will be unused.
 
-![](attachments/deploy/scaling.png)
+![](attachments/scale-environment/scaling.png)
 
 ## 5 Related Content
 

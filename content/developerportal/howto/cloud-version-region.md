@@ -29,18 +29,18 @@ To view the Mendix Cloud region and version in which your app is hosted, follow 
 2. Click **Apps** in the top navigation panel.
 3.  Click **My Apps** and select **Nodes**.
 
-    ![](attachments/general/myapps.png)
+    ![](attachments/cloud-version-region/myapps.png)
 
 4. Open the node by clicking **Details**.
 5. Click **Environments** under the **Deploy** category.
 6.  Click **Details** of the desired environment.
 
-    ![](attachments/deploy/environment-details.png)
+    ![](attachments/cloud-version-region/environment-details.png)
 
 7. Next to **Mendix Cloud Region**, you will see the region of the data center where your app is hosted.
 8.  Next to **Mendix Cloud Version**, you will see Mendix Cloud v3 or Mendix Cloud v4.
 
-    ![](attachments/deploy/environments-general.png)
+    ![](attachments/cloud-version-region/environments-general.png)
 
 ## 4 Related Content
 

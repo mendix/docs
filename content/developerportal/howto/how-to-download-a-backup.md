@@ -31,7 +31,7 @@ To download a backup of a Free App, follow these steps:
 3. Click **Backups** under the **Operate** category.
 4. Select the backup you want to download and click **Download Backup**.
 
-    ![](attachments/operate/backupoptions.jpg)
+    ![](attachments/download-a-backup/backupoptions.jpg)
 
 5. Select the backup type **Full Snapshot**, **Database Only**, or **Files Only**
 
@@ -45,11 +45,11 @@ To download a backup of a licensed app, follow these steps:
 4. Click **Backups** under the **Operate** category.
 5. Select the environment from which you want to download the backup.
 
-    ![](attachments/general/environment.jpg)
+    ![](attachments/download-a-backup/environment.jpg)
 
 6. If you want to create a backup first, click **Create Backup**.
 
-    ![](attachments/operate/backupoptions.jpg)
+    ![](attachments/download-a-backup/backupoptions.jpg)
 
 7. Select a backup and click **Download Backup**.
 8. Select the backup type **Full Snapshot**, **Database Only**, or **Files Only**

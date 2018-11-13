@@ -14,7 +14,6 @@ This category contains documents about the use of specific tasks in the [Develop
 
 * [Configure Custom Domains](custom-domains)
 * [Configure Maintenance Windows](maintenance-windows)
-* [Scale Your Environment in Mendix Cloud v4](scale-environment)
 
 ### Sandbox
 

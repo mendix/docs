@@ -1,14 +1,14 @@
 ---
 title: "Scale Your Environment in Mendix Cloud v4"
-category: "How-To's"
-menu_order: 110
+parent: "mendix-cloud-deploy"
+#menu_order: 110
 description: "Describes how to scale your environments in Mendix Cloud v4."
 tags: ["Scale","Environments","Mendix Cloud","Developer Portal"]
 ---
 
 ## 1 Introduction
 
-Licensed apps in the Mendix Cloud can be scaled in various ways. Memory can be added to the application container, which is called vertical scaling. Mendix 7+ apps running on Mendix Cloud v4 can be scaled horizontally as well, in which case multiple runtime containers will run simultaneously. Incoming traffic for your app is randomly distributed over the running instances. Only the first instance will excecute [scheduled events](/refguide/scheduled-events).
+Licensed apps in the Mendix Cloud can be scaled in various ways. Memory can be added to the application container, which is called vertical scaling. Mendix 7+ apps running on Mendix Cloud v4 can be scaled horizontally as well, in which case multiple runtime containers will run simultaneously. Incoming traffic for your app is randomly distributed over the running instances. Only the first instance will execute [scheduled events](/refguide/scheduled-events).
 
 **This how-to will teach you how to do the following:**
 
@@ -74,12 +74,12 @@ For example, you can use one instance and store 4GB of RAM in there. The other 1
 ## 5 Related Content
 
 * [Application Trends in Mendix Cloud v4](/developerportal/operate/trends-v4)
-* [Deploy and Manage](/developerportal/deploy)
-* [Environment Details](/developerportal/deploy/environments-details)
+* [Deploy and Manage](index)
+* [Environment Details](environments-details)
 * [How to Manage Company & App Roles](/developerportal/company-app-roles/manage-roles)
-* [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy)
-* [Mendix Cloud v4 - FAQ](/developerportal/deploy/mxcloudv4)
-* [How to Migrate to Mendix Cloud v4](/developerportal/deploy/migrating-to-v4)
+* [Mendix Cloud](mendix-cloud-deploy)
+* [Mendix Cloud v4 - FAQ](mxcloudv4)
+* [How to Migrate to Mendix Cloud v4](migrating-to-v4)
 * [Company & App Roles](/developerportal/company-app-roles/index)
 * [Security - Node Permissions](/developerportal/settings/node-permissions)
 * [Technical Contact](/developerportal/company-app-roles/technical-contact)

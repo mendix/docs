@@ -6,10 +6,6 @@ title: "How-to's"
 
 This category contains documents about the use of specific tasks in the [Developer Portal](http://home.mendix.com).
 
-## General
-
-* [Manage Developer Portal Deep Links](manage-deeplinks)
-
 ### Alerts
 
 * [Receive Environment Status Alerts](receive-alerts)

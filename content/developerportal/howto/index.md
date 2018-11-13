@@ -16,10 +16,6 @@ This category contains documents about the use of specific tasks in the [Develop
 * [Configure Maintenance Windows](maintenance-windows)
 * [Scale Your Environment in Mendix Cloud v4](scale-environment)
 
-### Connecting to a Cloud Node
-
-* [Link a Different App to a Cloud Node](how-to-link-a-different-app-to-a-node)
-
 ### Environments 
 
 * [View the Mendix Cloud Version and Region](cloud-version-region)

@@ -4,6 +4,7 @@ category: "Feedback Management"
 menu_order: 10
 description: "Describes how to use the Mendix Feedback & Collaboration Widget for providing feedback, editing, and sharing apps."
 tags: ["Collaboration","Widget","Developer Portal", "Event App"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction

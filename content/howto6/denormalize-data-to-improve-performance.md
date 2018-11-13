@@ -131,7 +131,7 @@ Now the application is ready to store redundant data, but you still need to keep
 * [How to Set Up Data Validation](setting-up-data-validation)
 * [How to Work with Object Events](working-with-object-events)
 * [How to Find the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
-* [How to Manage Your Application Requirements](/developerportal/howto/managing-your-application-requirements-with-mendix)
+* [How to Manage Your Application Requirements](/developerportal/collaborate/stories)
 * [How to Define Access Rules Using XPath](define-access-rules-using-xpath)
 * [How to Configure the Scout and Windows 10 Workaround](scout-and-windows-10-workaround)
 * [Attributes](/refguide6/attributes)

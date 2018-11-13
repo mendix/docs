@@ -1,6 +1,7 @@
 ---
 title: "Exclusive Split in the Web Modeler"
 parent: "microflows-wm"
+menu_order: 10
 description: "Describes the exclusive split in the Mendix Web Modeler."
 tags: ["web modeler", "microflow", "exclusive split"]
 ---

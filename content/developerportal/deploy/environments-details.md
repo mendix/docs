@@ -1,6 +1,7 @@
 ---
 title: "Environment Details"
-parent: "environments"
+parent: "mendix-cloud-deploy"
+menu_order: 60
 description: "Describes the environmental details of your app."
 tags: ["Deploy","App","Environment","Developer Portal"]
 ---
@@ -61,7 +62,7 @@ In Mendix Cloud v3 environments, you can click **Enable/Disable Debugging** to e
 
 In Mendix Cloud v4 environments, the debugger is always enabled. You can click **Show debugger information** to show the settings to connect the debugger in your Mendix Desktop Modeler to your app.
 
-## 2.2 Scaling – Mendix Cloud v4
+### 2.2 Scaling – Mendix Cloud v4
 
 ![](attachments/scale.png)
 
@@ -166,7 +167,7 @@ You can perform the following actions:
 * **Edit**
 * **Delete**
 
-For more information, see [Certificates](/deployment/mendixcloud/certificates) and [How to Configure Custom Domains](/developerportal/howto/custom-domains).
+For more information, see [Certificates](certificates) and [How to Configure Custom Domains](/developerportal/howto/custom-domains).
 
 ### 4.2 Prevent Embedding Your App in an IFrame
 
@@ -200,11 +201,11 @@ You can **Delete** a path or you can **Add** and **Edit** a path with the follow
 * Custom Profile for Client Certificates and/or IP ranges
 * N/A (inherit)
 
-For more information, see [How to Restrict Access for Incoming Requests](/deployment/mendixcloud/access-restrictions).
+For more information, see [How to Restrict Access for Incoming Requests](access-restrictions).
 
 ### 4.4 Outgoing Connections Certificates
 
-Add client certificates (in the PKCS12 format) or certificate authorites (in the PEM format). These will be used when your application initiates SSL/TLS connections.
+Add client certificates (in the PKCS12 format) or certificate authorities (in the PEM format). These will be used when your application initiates SSL/TLS connections.
 
 ## 5 Log Levels Tab
 
@@ -214,7 +215,7 @@ Log levels are used to distinguish the log messages and to highlight the highest
 
 On this tab, you can perform the following actions:
 
-* Retreive the current log levels by clicking **Refresh**
+* Retrieve the current log levels by clicking **Refresh**
 * Change the log level type by clicking the specific level
 * Click **Set all to INFO** to revert all the changes
 
@@ -233,7 +234,7 @@ The log level types are the following:
 
 For more information about log levels, see [How to Set Log Levels](/howto/monitoring-troubleshooting/log-levels).
 
-## 6 Runtime Tab
+## 6 Runtime Tab{#runtime-tab}
 
 ![](attachments/runtime.png)   
 

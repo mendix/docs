@@ -47,7 +47,7 @@ To start this tutorial, go to the [Mendix Developer Portal](https://sprintr.home
 
     ![](attachments/sap-purchase-order-approval/03-confirm-dev-created.png)
 
-    {{% alert type="info" %}}If you receive an error when creating the environment, there may be an issue with your SAP account (for example, it may have expired or you may have exceeded your quota limit). You can manage your SAP Cloud account by going to the [SAP Cloud Platform Cockpit](https://account.hanatrial.ondemand.com/cockpit).
+    {{% alert type="info" %}}If you receive an error when creating the environment, there may be an issue with your SAP account (for example, it may have expired or you may have exceeded your quota limit). You can manage your SAP Cloud account by going to the [SAP Cloud Platform cockpit](https://account.hanatrial.ondemand.com/cockpit).
     {{% /alert %}}
 
 8. Click **Edit App** to edit the app in the Mendix Desktop Modeler.

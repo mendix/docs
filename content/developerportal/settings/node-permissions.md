@@ -8,9 +8,9 @@ tags: ["Node","Permission","Developer Portal"]
 
 ## 1 Introduction
 
-Fine-grained access management for your Mendix Cloud environments is handled in the **Node Security** tab of the [Settings](/developerportal/settings) page under **Security**. Each team member can subscribe or unsubscribe to the alerts, and the [Technical Contact](/developerportal/general/technical-contact) can manage various permissions of each team member per environment.
+Fine-grained access management for your Mendix Cloud environments is handled in the **Node Security** tab of the [Settings](/developerportal/settings) page under **Security**. Each team member can subscribe or unsubscribe to the alerts, and the [Technical Contact](/developerportal/company-app-roles/technical-contact) can manage various permissions of each team member per environment.
 
-Learn more about [Roles Within the Company and Apps](/developerportal/general/roles).
+Learn more about [Company & App Roles](/developerportal/company-app-roles/index).
 
 {{% alert type="info" %}}
 
@@ -92,7 +92,7 @@ The node permissions can be:
 
 With transport rights you can deploy new versions of the application to the node. You can create new deployment packages, stop and start the environment, and change configuration settings such as constants and scheduled events.
 
-For more information about deployment, see [How to Deploy to the Mendix Cloud](/developerportal/howto/deploying-to-the-cloud).
+For more information about deployment, see [How to Deploy to the Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy).
 
 ### 5.2 Access to Backups
 
@@ -118,7 +118,7 @@ For more information, see [Metrics](/developerportal/operate/metrics).
 
 * [Application Trends in Mendix Cloud v3](/developerportal/operate/trends)
 * [Application Trends in Mendix Cloud v4](/developerportal/operate/trends-v4)
-* [How to Manage Company Roles and App Roles](/developerportal/howto/change-roles)
+* [How to Manage Company & App Roles](/developerportal/company-app-roles/manage-roles)
 * [How to Receive Environment Status Alerts](/developerportal/howto/receive-alerts)
 * [Metrics](/developerportal/operate/metrics)
 * [Logs](/developerportal/operate/logs)

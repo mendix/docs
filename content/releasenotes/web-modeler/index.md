@@ -2,12 +2,6 @@
 title: "Web Modeler"
 ---
 
-{{% alert type="info" %}}
-
-These release notes are for the [beta](../beta-features/index) version of the Web Modeler, Mendix's web-based development environment for business developers. We welcome users to provide feedback on issues or share suggestions for improvements.
-
-{{% /alert %}}
-
 Below you can find release notes for the Web Modeler correlated with the following version ranges of the Mendix Desktop Modeler: 
 
 * [7.15 & Above](7.15-and-above)

@@ -6,7 +6,7 @@ tags: []
 
 ## 1 Introduction
 
-You may have tried to build a hybrid app package for Windows Phone, and found out this is not possible in the cloud portal. You can do this by building the Phonegap Build package yourself.
+You may have tried to build a hybrid app package for Windows Phone, and found out this is not possible in the Developer Portal. You can do this by building the Phonegap Build package yourself.
 
 **This how-to will teach you how to do the following:**
 

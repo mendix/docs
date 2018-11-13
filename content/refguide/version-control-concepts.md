@@ -46,7 +46,7 @@ The project explorer shows an icon in front of items (documents, folders and mod
 
 ![](attachments/modeler-core/2018-02-21_13-27-21.png)
 
-In the screenshot you can see that the document Account_NewEdit has been modified. Also a new folder called 'Flows' was added and all microflows were moved inside this folder. Note that the folders and modules containing changes are depicted with a small yellow circle. This helps you to quickly see where in the project the changes are.
+In the screenshot you can see that the microflow ChangePassword has been modified. Also a new folder called 'Flows' was added and all microflows were moved inside this folder. Note that the folders and modules containing changes are depicted with a small yellow circle. This helps you to quickly see where in the project the changes are.
 
 The Changes Dock shows a line for each change to an item. If a document is both modified and moved there are two lines for that document. The dock also shows items that were deleted, something the project explorer cannot do.
 
@@ -80,7 +80,7 @@ Updating is the process of retrieving the latest changes from the repository. It
 
 In the process of updating the original of your working copy is updated as well. Let us say that the last time you updated you received all changes up to and including revision 40\. That means the original for your working copy is revision 40\. You have made some changes to your working copy. Since you started doing that other people on your team have made a total of four commits (41, 42, 43 and 44). If you now update, you will receive those changes and 44 will be the new original to which your changes are compared.
 
-Changes you receive from the repository when updating are combined with the changes you have made to your working copy (if any). Afterwards, your working copy will contain both your changes and the changes you received. Many times combining those changes will work out fine. For example, one person adds a form and another changes a microflow. Or two people both add a tab page to a form. Only if the changes are too close a document a conflict arises. For example, two people both change properties of the same data view. You will have to resolve such conflicts before you can commit.
+Changes you receive from the repository when updating are combined with the changes you have made to your working copy (if any). Afterwards, your working copy will contain both your changes and the changes you received. Many times combining those changes will work out fine. For example, one person adds a form and another changes a microflow. Or two people both add a tab page to a form. Only if the changes are too close a conflict can arise. For example, two people both change properties of the same data view. You will have to resolve such conflicts before you can commit.
 
 ## Conflict
 
@@ -100,7 +100,7 @@ The history of the project is a list of all revisions that have been committed i
 
 ## Development lines
 
-A repository can contain a number of development lines. Each development line offers independent development from the other development lines. In the simple case there is just one development called the main line (called 'trunk' in subversion). All development then happens inside that one line.
+A repository can contain a number of development lines. Each development line offers independent development from the other development lines. In the simple case there is just one development line called the main line (called 'trunk' in subversion). All development then happens inside that one line.
 
 ![](attachments/524294/688156.png)
 

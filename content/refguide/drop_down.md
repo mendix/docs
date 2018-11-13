@@ -1,6 +1,7 @@
 ---
 title: "Drop-Down"
 parent: "input-widgets"
+tags: ["Drop-down", "input", "page", "widget", "enumeration"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -18,11 +19,11 @@ This drop-down widget allows the user to select their favorite color.
 
 ### Empty Option Caption
 
-This property represents the caption for the empty option in the drop-down shown to the user. This is a translable text. For more details, see [Translatable Texts](translatable-texts).
+This property represents the caption for the empty option in the drop-down shown to the user. This is a translatable text. For more details, see [Translatable Texts](translatable-texts).
 
 {{% alert type="info" %}}
 
-Filling out the caption for an empty option increases the user experience of your application. It also helps screen-reader users to operate the application easily. For example, the drop-down that represents the color selection for a car could have a caption reading "Select a color."
+Filling out the caption for an empty option improves the user experience of your application. It also helps screen-reader users to operate the application easily. For example, the drop-down that represents the color selection for a car could have a caption reading "Select a color".
 
 {{% /alert %}}
 

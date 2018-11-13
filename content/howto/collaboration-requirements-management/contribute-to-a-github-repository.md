@@ -43,8 +43,8 @@ To submit changes, follow these guidelines:
 
 ## 5 Related Content
 
-* [How to Manage Sprints and Stories](/developerportal/howto/managing-your-application-requirements-with-mendix)
+* [Stories](/developerportal/collaborate/stories)
 * [How to Start Your Own Repository](starting-your-own-repository)
 * [How to Use Team Server – Version Control](using-team-server-_-version-control)
-* [How to Use the Feedback Widget](/developerportal/howto/gathering-user-feedback)
+* [How to Use the Feedback Widget](/developerportal/feedback/use-feedback-widget)
 * [How to Share the Development Database](sharing-the-development-database)

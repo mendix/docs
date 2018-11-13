@@ -28,7 +28,7 @@ The resources are downloaded to the device once for each deployment and are reus
 
 ### 3.2 Optimize Network Calls
 
-If this option is enabled (`true` by default), Mendix analyzes every microflow that can be triggered from the client to minimize the number of objects required to be sent. This speeds up your app significantly.
+If this option is enabled (**true** by default), Mendix analyzes every microflow that can be triggered from the client to minimize the number of objects required to be sent. This speeds up your app significantly.
 
 If you experience an issue while running your app in which objects seem to be lost, this option can be disabled to resolve that issue. If this resolves the issue, please file a bug report so that we can fix the issue in the platform.
 
@@ -50,7 +50,7 @@ This microflow gets called every few minutes to check if the app is still health
 
 {{% alert type="info" %}}
 
-The health check microflow is specific to [Mendix Cloud](../deployment/mendixcloud/). For other clouds, the admin port can be called, or the health check microflow can be exposed through a REST API.
+The health check microflow is specific to [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy). For other clouds, the admin port can be called, or the health check microflow can be exposed through a REST API.
 
 {{% /alert %}}
 
@@ -157,7 +157,7 @@ You can always switch between **Runtime** and **Database**.
 
 Moving from **Runtime** to **Database** means that the unique constraints will be added to the database and the uniqueness responsibility will belong to the database.
 
-Before switching to the Database option, the `DataStorage.EnableDiagnostics` custom runtime setting can be used to generate a uniqueness violation report. The unique constraint migration will need to be done if the generated report shows violations.
+Before switching to the Database option, the **DataStorage.EnableDiagnostics** custom runtime setting can be used to generate a uniqueness violation report. The unique constraint migration will need to be done if the generated report shows violations.
 
 For more details on migration, see [Uniqueness Constraint Migration](uniqueness-constraint-migration).
 
@@ -165,15 +165,15 @@ For more details on migration, see [Uniqueness Constraint Migration](uniqueness-
 
 Falling back to the **Runtime** option will remove the unique constraints from the database, and uniqueness rules will not be checked at the database level anymore. Hence, data accuracy cannnot be guaranteed at the highest level, especially in the case of high concurrency transactions.
 
-### 3.13 Web Service Calls
+### 3.13 Web Service Calls {#web-service-calls}
 
 {{% alert type="info" %}}
 
-This setting was added in version 7.15
+This setting was added in version 7.15 to introduce the (optimized) implementation.
 
 {{% /alert %}}
 
-The way web services are called has been optimized, which means that you can use custom proxy settings for each web service call. However, this implementation does not support schema validation, nor does it support complex schemas that use a policy reference with an algorithm suite. This configuration option allows you to use the old implementation, in case you need one of these features.
+The way web services are called has been optimized, which means you can use custom proxy settings for each web service call. However, this implementation does not support complex schemas that use a policy reference with an algorithm suite. This configuration option allows you to use the old implementation, in case you need this feature.
 
 ## 4 Modeler
 

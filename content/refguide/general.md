@@ -12,7 +12,6 @@ All of the reference guide content can be found under the topics listed on the l
 
 ## Documents in This Category
 
-* [App Platform](app-platform)
 * [Model Share](model-share)
 * [Moving from Version 6 to 7](moving-from-6-to-7)
 * [Offline](offline)

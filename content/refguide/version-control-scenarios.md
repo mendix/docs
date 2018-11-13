@@ -7,7 +7,7 @@ This page describes some common scenarios of working in the Modeler with version
 
 ## Starting A Project
 
-To start a new project with version control you simply choose 'New Project' in the Modeler and make sure that the Team Server option is enabled. Creating such a project creates a Team Server repository and a Developer Portal project. Also a working copy is created and opened so that you can immediately start working.
+To start a new project with version control you simply choose 'New Project' in the Modeler and make sure that the 'Enable online services' option is enabled. Creating such a project creates a Team Server repository and a Developer Portal project. Also a working copy is created and opened so that you can immediately start working.
 
 ![](attachments/modeler-core/2018-03-02_11-11-18.png)
 
@@ -25,7 +25,7 @@ If you already have a Developer Portal project that was created by hand, you can
 
 ## Day-to-day Development
 
-Let us say you have a working copy of a project on disk; you can now start making changes as you would normally do. Saved changes are not immediately visible to others like they were with the multi-developer databases in 2.x. Only when you are happy with a set of changes, you commit them to the repository. Others can then choose to update and retrieve those changes.
+Let us say you have a working copy of a project on disk; you can now start making changes as you would normally do. Saved changes are not immediately visible to others. Only when you are happy with a set of changes, you commit them to the repository. Others can then choose to update and retrieve those changes.
 
 {{% alert type="success" %}}
 
@@ -37,7 +37,7 @@ If you are about to commit and others have committed changes in the meantime, yo
 
 {{% alert type="success" %}}
 
-If everyone is committig often you will automatically have to update often. Before you can send your changes to the repository you will have to incorporate changes made by others that are not yet in your working copy. Updating often has the benefit that you receive fewer changes than if you wait a day and integrating those changes with your work is easier to do.
+If everyone is committing often you will automatically have to update often. Before you can send your changes to the repository you will have to incorporate changes made by others that are not yet in your working copy. Updating often has the benefit that you receive fewer changes than if you wait a day and integrating those changes with your work is easier to do.
 
 {{% /alert %}}
 
@@ -70,23 +70,23 @@ You can resolve a project conflict by choosing 'Use mine' or by deleting the inv
 
 ## Deploying A Project To The Cloud
 
-While developing you can deploy and run your project on your local machine by using the menu item 'Project > Run'. If you want to put your project into a test, acceptance or production environment, you will have to upload it to the cloud. If you are using the Mendix Cloud Portal you can choose 'Deploy to the Cloud Portal' from the project menu.
+While developing you can deploy and run your project on your local machine by using the menu item 'Run > Run'. If you want to put your project into a test, acceptance or production environment, you will have to upload it to the cloud. If you are using the Mendix Cloud Portal you can choose 'Deploy to the Cloud Portal' from the project menu.
 
 ![](attachments/modeler-core/2018-02-21_17-05-05.png)
 
-If you are using a different hosting environment, you create a deployment archive using the menu item 'Project > Create Deployment Archive'.
+If you are using a different hosting environment, you create a deployment package using the menu item 'Project > Create Deployment Package...'.
 
 ![](attachments/modeler-core/2018-02-28_13-44-04.png)
 
-You can choose a development line and revision to create an archive from. The Modeler will create a fresh checkout of that revision so that creating this deployment archive can always be reproduced by you or by other people. In other words, the Modeler does not rely on your local files for creating a versioned deployment archive.
+You can choose a development line and revision to create a package from. The Modeler will create a fresh checkout of that revision so that creating this deployment package can always be reproduced by you or by other people. In other words, the Modeler does not rely on your local files for creating a versioned deployment package.
 
 {{% alert type="warning" %}}
 
-You can only create a versioned deployment archive of changes that have been committed. If you have local changes that you want to deploy, commit them first.
+You can only create a versioned deployment package of changes that have been committed. If you have local changes that you want to deploy, commit them first.
 
 {{% /alert %}}
 
-Along with creating the archive the Modeler will also create a tag representing this version of your project. If you later want to make modifications to this version independently of other development you can create a branch based on this tag. The name of the tag is simply a version number that you choose.
+Along with creating the package the Modeler will also create a tag representing this version of your project. If you later want to make modifications to this version independently of other development you can create a branch based on this tag. The name of the tag is simply a version number that you choose.
 
 ## Patching A Deployed Application
 
@@ -106,7 +106,7 @@ Another reason for creating a branch is if you want to develop a big new feature
 
 ![](attachments/modeler-core/2018-02-28_13-50-39.png)
 
-You then work on the branch for a while until the big feature is done. At that point you can merge the whole branch back to the main line to integrate the feature there. You do this by opening the main line and then choosing 'Team > Merge changes here'. Choose 'Merge feature branch' and then select the branch and click 'Merge'. After resolving any conflicts and errors you can commit the new feature to the main line.
+You then work on the branch for a while until the big feature is done. At that point you can merge the whole branch back to the main line to integrate the feature there. You do this by opening the main line and then choosing 'Project > More Versioning > Merge changes here'. Choose 'Merge feature branch' and then select the branch and click 'Merge'. After resolving any conflicts and errors you can commit the new feature to the main line.
 
 ![](attachments/modeler-core/2018-02-28_14-05-23.png)
 

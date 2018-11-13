@@ -29,6 +29,10 @@ You are provided with all the information and software which you need to perform
 
 The first step is to create a Mendix app. You need to link this to SAP Cloud Platform so that you can run the app there.
 
+1.	Click the **Create App** button at the top of the page.
+
+    ![](attachments/develop-a-smart-sap-catalog-teched-2018/media/create-app.png)
+
 1.  Choose the **Blank App** with Atlas UI styling.
 
     ![](attachments/develop-a-smart-sap-catalog-teched-2018/media/image1.png)
@@ -61,7 +65,7 @@ Depending on whether you have used SAP from Mendix before, and whether you are c
 
 1.  Leave the **Postgress-v9.4-dev** \[sic\] database selected.
 
-1.  Click **Create**.
+6.  Click **Create**.
     
     ![](attachments/develop-a-smart-sap-catalog-teched-2018/media/image6.png)
 
@@ -71,27 +75,47 @@ Depending on whether you have used SAP from Mendix before, and whether you are c
 
     ![](attachments/develop-a-smart-sap-catalog-teched-2018/media/image7.png)
 
-1.  Click **Edit App**.
+7.  Click the *arrow* on the **Edit App** button and click *Edit in Desktop Modeler*.
 
 	![](attachments/develop-a-smart-sap-catalog-teched-2018/media/image8.png)
 
-2.	Click **Open VersionSelector** when asked.
+8.	Click **Open VersionSelector** when asked.
 
-3.  Click **Open with selected Modeler version** to confirm that you want to edit the app in your current version of the Desktop Modeler (version 7.17.2).
+9.  Click **Open with selected Modeler version** to confirm that you want to edit the app in your current version of the Desktop Modeler (version 7.17.2).
 
-4. Click the *arrow* next to the **Run** button in the Desktop Modeler.
+10. Click the **SAP** logo and sign in with your student credentials.
 
-5. Click **Run Locally**.
+	![](attachments/develop-a-smart-sap-catalog-teched-2018/media/modeler-sign-in.png)
+
+    Before you start, you need to make one configuration change to allow Mendix to run on your TechEd computer:
+
+11. Click the menu item **Edit > Preferences...**
+
+	![](attachments/develop-a-smart-sap-catalog-teched-2018/media/dm-preferences.png)
+
+12. Paste or type the following path into **Deployment > JDK directory**
+
+	```html
+	D:\SAP\JavaVM\NTAMD64\sapjvm_8.1.040\sapjvm_8
+	```
+
+13. Click **OK** to confirm the change
+
+	![](attachments/develop-a-smart-sap-catalog-teched-2018/media/jdk-directory.png)
+
+14. Click the *arrow* next to the **Run** button in the Desktop Modeler.
+
+15. Click **Run Locally**.
 
 	![](attachments/develop-a-smart-sap-catalog-teched-2018/media/image9.png)
 
-6. Click **Yes** to confirm that you want to create a database for the app.
+16. Click **Yes** to confirm that you want to create a database for the app.
 
 	![](attachments/develop-a-smart-sap-catalog-teched-2018/media/image10.png)
 
-7. Wait for the app to be started.
+17. Wait for the app to be started.
 
-8. Click **View** to view the app in a browser.
+18. Click **View** to view the app in a browser.
 
 	![](attachments/develop-a-smart-sap-catalog-teched-2018/media/image11.png)
 
@@ -101,7 +125,7 @@ The App looks like this:
 
 ## 5 Creating an OData Data Model for the Product Management OData service
 
-You are going to use a product catalog which is held in the SAP back-end system. These have been exposed via an OData service called **EPM_REF_APPS_PROD_MAN_SRV** is provided in the *student share* folder.
+You are going to use a product catalog which is held in an SAP S/4HANA system. These have been exposed via an OData service called **EPM_REF_APPS_PROD_MAN_SRV**. The metadata file for the services is provided in the session folder in the *student share*.
 
 Your Mendix app needs to know the details of the EPM_REF_APPS_PROD_MAN_SRV OData service before you can get data from it. You do this by creating a data model using the SAP OData Model Creator in the Mendix App Store.
 
@@ -179,21 +203,16 @@ Some of the app has been written already, so you need to import those pieces int
 
 	![](attachments/develop-a-smart-sap-catalog-teched-2018/media/image25.png)
 
-1. Repeat steps 3 through 6 to find and download the **SAP Leonardo Machine Learning Foundation Connector** module.
+1. Repeat steps 1 through 5 to find and download the **SAP Leonardo Machine Learning Foundation Connector** module.
 
 	![](attachments/develop-a-smart-sap-catalog-teched-2018/media/image26.png)
 
-1. Repeat steps 3 through 6 to find and download the **Camera** module.
-
-	![](attachments/develop-a-smart-sap-catalog-teched-2018/media/image27.png)
-
-1. You can see the *LeonardoMachineLearning* and *SmartCatalogExercise* modules you have imported, along with other modules, by expanding the tree structure in the **Project Explorer**. The *Camera* module has created a new camera widget which you will use later in the exercise.
+1. You can see the *LeonardoMachineLearning* and *SmartCatalogExercise* modules you have imported, along with other modules, by expanding the tree structure in the **Project Explorer**.
 
 	![](attachments/develop-a-smart-sap-catalog-teched-2018/media/image28.png)
 
 * The **SAP TechEd 2018 - Smart Catalog** module contains the initial modeling for your app
 * The **SAP Leonardo Machine Learning Foundation Connector** allows your app to connect to SAP Leonardo Machine Learning Foundation services
-* The **Camera** module allows your app to access the camera on your device
 
 ## 8 Setting up Application Navigation
 
@@ -229,19 +248,7 @@ Mendix apps work by showing pages to the user. You can define which page should 
 
 1. Click **OK** to confirm the change.
 
-1. Click the **Hybrid phone app online** tab on the Navigation dialog.
-
-1. Repeat steps 2 through 11 for this tab.
-
-	![](attachments/develop-a-smart-sap-catalog-teched-2018/media/image32.png)
-
-1. Click the **Hybrid tablet app online** tab on the Navigation dialog.
-
-1. Click **Delete** to delete this navigation profile.
-
-	![](attachments/develop-a-smart-sap-catalog-teched-2018/media/image33.png)
-
-## 9 Retrieving Data from S/4HANA
+## 9 Retrieving Data from SAP S/4HANA
 
 The **SmartCatalogExercise** module comes with no products. You need to replace a retrieve from the local database with an OData **Get** action against the **EPM_REF_APPS_PROD_MAN_SRV** service.
 
@@ -315,7 +322,7 @@ The **SmartCatalogExercise** module comes with no products. You need to replace 
     @EPM_REF_APPS_PROD_MAN_SRV.EPM_REF_APPS_PROD_MAN_SRV + '/' + toString (EPM_REF_APPS_PROD_MAN_SRV.EntitySetNames.Products) + '/?$filter=substringof(SubCategoryName,''' + urlEncode($SearchCriteria/Term) + ''')'
     ```
 
-    This is the OData query which retrieves a list of products which contain the search term which is entered on the product list page. The first part of the query identifies the S/4HANA service list of products. This is then filtered to only return products where the search term appears in the product's SubCategoryName.
+    This is the OData query which retrieves a list of products which contain the search term which is entered on the product list page. The first part of the query identifies the SAP S/4HANA service list of products. This is then filtered to only return products where the search term appears in the product's SubCategoryName.
 
 1. Click **OK**.
 
@@ -337,7 +344,7 @@ The **SmartCatalogExercise** module comes with no products. You need to replace 
 
 1. Select *true* from the dropdown for **Use SAP cloud connector**.
     
-    The SAP Cloud Connector has been configured in advance. It means that you can connect to the S/4HANA system (which is running on-premises and is not publicly available) just by setting this value to *true*. Mendix then makes the connection automatically for you, behind the scenes.
+    The SAP Cloud Connector has been configured in advance. It means that you can connect to the SAP S/4HANA system (which is running on-premises and is not publicly available) just by setting this value to *true*. Mendix then makes the connection automatically for you, behind the scenes.
 
 1. Enter *ProductList* for the **Variable** name.
 
@@ -395,7 +402,7 @@ You will now add the ability to search the catalog by image.
 
     Firstly, you need to add an entity to the domain model to store the image you are going to use later to search the product list.
 
-1. Drag a new **Entity** into the domain model.
+1. Drag a new **Entity** from the **Toolbox** into the domain model.
 
 	![](attachments/develop-a-smart-sap-catalog-teched-2018/media/image49.png)
 
@@ -415,7 +422,7 @@ You will now add the ability to search the catalog by image.
     
     Now you create an empty *SearchImage* object which will then have the image put into it.
 
-1. Right-click **Project 'Smart Catalog' > App Store modules > SmartCatalogExercise > Microflow** in the **Project Explorer**.
+1. Right-click the **Project 'Smart Catalog' > App Store modules > SmartCatalogExercise > Microflow** folder in the **Project Explorer**.
 
 1. Click **Add microflow...**.
     
@@ -507,8 +514,6 @@ You will now add the ability to search the catalog by image.
 
 1. Switch back to the **Toolbox** in the right-hand pane.
 
-    You need to add a camera widget to the page, so that users who are using a mobile device can use their camera to capture an image.
-
 1. Drag a **Layout grid** into the drop zone under the image.
 
 	![](attachments/develop-a-smart-sap-catalog-teched-2018/media/image62.png)
@@ -520,28 +525,6 @@ You will now add the ability to search the catalog by image.
 1. Drag the **Upload image** widget on the screen into the layout grid.
 
 	![](attachments/develop-a-smart-sap-catalog-teched-2018/media/image64.png)
-
-1. Right-click the left-hand side of the layout grid.
-
-1. Click **Insert row above**.
-
-	![](attachments/develop-a-smart-sap-catalog-teched-2018/media/image65.png)
-
-1. Click **Full**.
-
-1. Drag a **Camera** widget into the new row.
-
-	![](attachments/develop-a-smart-sap-catalog-teched-2018/media/image66.png)
-
-1. Double-click the **Camera** widget to open the properties.
-
-1. Enter *Use Camera* as the **Label** in the **Button** tab.
-
-1. Select **Yes** for **Auto save** in the **Behavior** tab.
-
-1. Click **OK**.
-
-	![](attachments/develop-a-smart-sap-catalog-teched-2018/media/image67.png)
 
 1. Double-click the **Save** button.
 
@@ -605,6 +588,8 @@ You will now add the ability to search the catalog by image.
 
 1. Click **Run Locally**.
 
+1. Click **OK** to confirm that you want the sync the database.
+
 1. Click **View** when the runtime has been started successfully.
 
 You can now see the changes to the app. There is an **Image** button which you can click to see the **Select Image** pop-up.
@@ -617,10 +602,8 @@ Now you need to use SAP Leonardo Machine Learning to make your app 'smart'.
 
 1.  Double-click the microflow **IVK_ClassifyProductImage** to open it.
 
-1. Drag an **SAP Leonardo machine learning (API Business Hub) > Product Image Classification** action into the microflow.
+1. Drag a **ClassifyProductFromImage** action into the microflow.
      
-     The *SAP Leonardo machine learning* widgets in the *API Business Hub* section are only available via the *SAP API Business Hub*. Other *SAP Leonardo machine learning* widgets are available both in the *SAP API Business Hub* and in the cloud.
-
 	![](attachments/develop-a-smart-sap-catalog-teched-2018/media/image75.png)
 
 1. Double-click the **Product Image Classification** action.
@@ -639,7 +622,7 @@ Now you need to use SAP Leonardo Machine Learning to make your app 'smart'.
 
 1. Select *Head* as the **Operation**. This selects just the first item in the list.
 
-1. Select *ProductClassifications (List of LeonardoMachineLearning.ProductClassification)* as the **List**.
+1. Select *ProductClassifications (List of LeonardoMachineLearning.ProductClassificationResponse)* as the **List**.
 
 1. Click **OK**.
 
@@ -653,7 +636,7 @@ Now you need to use SAP Leonardo Machine Learning to make your app 'smart'.
 
 1. Click **Select...** for **Association**
 
-1. Select **Variables > ProductClassification (LeonardoMachineLearning.ProductClassification) > ProductImageClassiciationResults_ProductClassification (List of LeonardoMachineLearning.ProductImageClassificationResults)**.
+1. Select **Variables > ProductClassificationResponse (LeonardoMachineLearning.ProductClassificationResponse) > ImageObject_ProductClassificationResponse (List of LeonardoMachineLearning.Result)**.
 
 1. Click **Select**.
 
@@ -667,7 +650,7 @@ Now you need to use SAP Leonardo Machine Learning to make your app 'smart'.
 
 1. Select *Head* as the **Operation**.
 
-1. Select *ProductImageClassificationResultsList (List of LeonardoMachineLearning.ProductImageClassificationResults)* as the **List**.
+1. Select *ResultList (List of LeonardoMachineLearning.Result)* as the **List**.
 
 1. Enter *Results* as the **Name**.
 
@@ -721,7 +704,7 @@ Now you need to use SAP Leonardo Machine Learning to make your app 'smart'.
 
 1. Click View when the runtime has been started successfully.
 
-You can now see the changes to the app. Running in a browser, you cannot access a camera, but you could upload an image for SAP Leonardo Machine Learning Foundation Services to analyze.
+You can now see the changes to the app. You can upload an image for SAP Leonardo Machine Learning Foundation Services to analyze.
 
 ![](attachments/develop-a-smart-sap-catalog-teched-2018/media/image82.png)
 
@@ -759,7 +742,7 @@ To deploy the app to SAP Cloud Platform and use the SAP Cloud Connector the secu
 
 1. Click **OK** to close the **Project Security** dialog.
 
-    You will see that the project now has some errors as the security settings will not allow some of the pages and microflows to be reached.
+    You will see in the **Errors** bottom pane that the project now has some errors as the security settings will not allow some of the pages and microflows to be reached.
 
 1. Double-click **Project 'Smart Catalog' > App Store modules > SmartCatalogExercise > Security**
 
@@ -795,15 +778,15 @@ This will deploy your app to SAP Cloud Platform.
 
 ### 13.2 Configuring Your App
 
-Because this is the first time you have deployed your app, there are a couple of items which need to be configured from within the SAP Cloud Platform Cockpit.
+Because this is the first time you have deployed your app, there are a couple of items which need to be configured from within the SAP Cloud Platform cockpit.
 
 #### 13.2.1 Configuring Single Sign On
 
 No users have been given access to your app, so you need to add them.
 
-1.  Return to the browser tab with the SAP Cloud Platform Cockpit open. If you have this, jump to step 4.
+1.  Return to the browser tab with the SAP Cloud Platform cockpit open. If you have this, jump to step 4.
 
-1. Open the SAP Cloud Platform Cockpit here: https://account.hanatrial.ondemand.com/cockpit.
+1. Open the SAP Cloud Platform cockpit here: https://account.hanatrial.ondemand.com/cockpit.
 
 1. Log On with your student credentials, if required.
 
@@ -871,7 +854,14 @@ No users have been given access to your app, so you need to add them.
      
      ![](attachments/develop-a-smart-sap-catalog-teched-2018/media/image101.png)
 
-1. Click **Add Assignment**.
+1. Click **Add User** to confirm that your student credentials should be added to the SAP ID Service.
+
+     ![](attachments/develop-a-smart-sap-catalog-teched-2018/media/confirm-user-id-service.png)
+
+1. Click **Assign Role Collection**.
+
+     ![](attachments/develop-a-smart-sap-catalog-teched-2018/media/assign-role-collection.png)
+
 
 1. Check that the **Role Collection** is *Smart Catalog User*.
 
@@ -883,7 +873,7 @@ Your student username is now assigned to the User role in the app (via the *Smar
 
 #### 13.2.2 Cloud Connector Configuration
 
-The end point for the cloud connector does not support HTTPS, We, therefore, have to alter the value of the variable containing the endpoint in the app when it is running in the cloud.
+The end point for the cloud connector does not support HTTPS. Therefore, you have to alter the value of the variable containing the endpoint in the app when it is running in the cloud.
 
 1.  Click **trial** in the breadcrumb navigation to return to the trial subaccount.
     
@@ -929,7 +919,7 @@ You have made all the configuration changes which are needed. These changes only
 
 ## 14 Viewing Your App
 
-You can now view your app running in SAP Cloud Platform and confirm that the SAP single-signon works.
+You can now view your app running in SAP Cloud Platform and confirm that the SAP single-sign-on works.
 
 ![](attachments/develop-a-smart-sap-catalog-teched-2018/media/image112.png)
 
@@ -939,7 +929,7 @@ You can now view your app running in SAP Cloud Platform and confirm that the SAP
 
     OR  
 
-    Click the URL in the SAP Cloud Platform Cockpit when the application status is **Started.**
+    Click the URL in the SAP Cloud Platform cockpit when the application status is **Started.**
     
     ![](attachments/develop-a-smart-sap-catalog-teched-2018/media/image113.png)
 

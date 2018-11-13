@@ -92,7 +92,7 @@ URL: https://deploy.mendix.com/api/1/apps/
 
 An object with the following key-value pair:
 
-*   _ProjectId_ (String) : The Developer Portal project identifier that should be linked to the new sandbox application. This value can be found under Settings > General, and it is represented as App ID.
+*   _ProjectId_ (String) : The Developer Portal project identifier that should be linked to the new sandbox application. This value can be found under **Settings** > **General**, and it is represented as **App ID**.
 
 **Example Request**
 

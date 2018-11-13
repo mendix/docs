@@ -58,10 +58,10 @@ To download the **Mendix** mobile app, select one of the download links below:
 
 ### New Functionality
 
-* You can now automatically open `mxapps.io` and `mendixcloud.com` URLs with the app.
+* You can now automatically open `mxapps.io` and `mendixcloud.com` URLs with the app
 * You can share your Mendix app via email, WhatsApp, etc.
-* You can post new message directly to an app Buzz.
-* You can start creating your Mendix account from the app.
+* You can post new message directly to an app's Buzz
+* You can start creating your Mendix account from the app
 
 ### Deprecations and Removals
 

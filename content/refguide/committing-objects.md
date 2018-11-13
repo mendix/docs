@@ -33,14 +33,13 @@ Nanoflows do not have this property. Committing while running in an online app s
 
 ### 3.2 Refresh in Client
 
-This property specifies whether pages that use the entity of the object(s) being committed are refreshed.
+If the microflow is called from the client, the change is not reflected in the client if **Refresh in client** is set to *No*. If set to *Yes*, the object is refreshed across the client, which includes reloading the relevant [data sources](data-sources).
 
-| Option | Description |
-| --- | --- |
-| Yes | Objects of same entity are refreshed in the user's browser. |
-| No | Objects of same entity are not refreshed in the user's browser. |
+{{% alert type="info" %}}
 
-_Default value_: No
+As of 7.19.0, all attribute values are reflected in the client, including virtual ones, even if **Refresh in client** is set to *No*.
+
+{{% /alert %}}
 
 {{% alert type="warning" %}}
 
@@ -50,6 +49,8 @@ When committing a large number of objects, we recommend that you do not enable '
 
 {{% alert type="warning" %}}
 
-Nanoflows do not have this property. All the changes made in a nanoflow refresh the client by default.
+When inside a [nanoflow](nanoflows), the object is refreshed across the client as if **Refresh in client** was set to *Yes*.
 
 {{% /alert %}}
+
+_Default value_: No

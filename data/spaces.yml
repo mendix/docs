@@ -182,32 +182,22 @@ releasenotes:
     - "Desktop Modeler"
     - "Web Modeler"
     - "Developer Portal"
-    - "Model SDK"
-    - "Platform SDK"
+    - "SDKs"
     - "Hybrid App"
     - "Mendix Mobile App"
-    - "Application Test Suite"
-    - "Application Performance Monitor"
-    - "Application Quality Monitor"
-    - "Beta Features"
+    - "Add-ons"
+    - "What Are Mendix Beta Features?"
 developerportal:
-  space: "Developer Portal"
+  space: "Developer Portal Guide"
   priority: false
   menu_categories:
-    - "General"
-    - "Collaborate"
+    - "Mendix Profile"
+    - "Company & App Roles"
+    - "Collaboration Tools"
+    - "Feedback Management"
     - "Develop"
-    - "Deploy"
+    - "Deploy and Manage"
     - "Operate"
     - "Settings"
-    - "Company Admin"
     - "How-to's"
-deployment:
-  space: "Deployment"
-  priority: false
-  menu_categories:
-    - "Azure"
-    - "Cloud Foundry"
-    - "Docker"
-    - "Mendix Cloud"
-    - "On-Premises"
+

@@ -257,6 +257,7 @@ Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 {
+     "Branch" : "branches/feature" ,
      "Revision" :  63 ,
      "Version" :  "2.5.4" ,
      "Description" :  "Add scientific mode"

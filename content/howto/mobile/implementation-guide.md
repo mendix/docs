@@ -73,11 +73,11 @@ Please do not remove the buttons with the caption **GCM Settings reference** and
 
 The PushNotifications module contains a microflow named **AfterStartup_PushNotifications** that will start the connectors for the FCM and APNs for you. Call this microflow from your **AfterStartup** microflow.
 
-If your project uses Mendix SSO, most likely the **AppCloudServices.StartAppCloudServices** microflow is set to execute after startup (for details, refer to [Integrate Your App with Mendix SSO](/deployment/mendixcloud/integrate-your-app-with-mendix-sso) in the Mendix Reference Guide). We suggest that you change your startup microflow to a new microflow, from which you will call both after the startup microflows.
+If your project uses Mendix SSO, most likely the **AppCloudServices.StartAppCloudServices** microflow is set to execute after startup (for details, refer to [Integrate Your App with Mendix SSO](/developerportal/deploy/integrate-with-mendix-sso) in the Mendix Reference Guide). We suggest that you change your startup microflow to a new microflow, from which you will call both after the startup microflows.
 
 <iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/02c590e5-f8bf-4f0e-90d6-3719390ee863/onstartupacsandpushnotifications?embed=true" allowfullscreen=""></iframe>
 
-## 7 Setting Up the Administration Pages
+## 7 Setting Up the Administration Pages {#setting}
 
 Add the **PushNotifications_Administration** page to the project navigation, so it can be reached after you deploy your app. This page contains three tabs:
 * **Pending Messages** – shows all the messages that are queued either because they were sent using the QueueMessage action or because previous attempts to send them failed

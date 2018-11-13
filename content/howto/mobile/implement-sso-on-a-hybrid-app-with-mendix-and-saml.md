@@ -49,7 +49,7 @@ There are two main problems when trying to implement SSO on a hybrid app.
 
 The first problem is that the JavaScript needed to start up the app mobile functionality is stored inside the Mendix hybrid app. The application is loaded from the locally stored *index.html* file.
 
-This is a problem because of all the browser redirects happening when doing the authentication against the IdP (as described in [3.2 How Authentication Against an IdP Works](#how)).
+This is a problem because of all the browser redirects happening when doing the authentication against the IdP (as described in the section [How Authentication Against an IdP Works](#how) above).
 
 When a Mendix hybrid app is started on the mobile device, the localhost *index.html* page is loaded in order to load all the necessary JavaScript to run the app. However, to be able to authenticate the user, the user is redirected to the IdP, and then the IdP needs to redirect the user back to the app. The problem is that there is no way for the IdP to redirect to a localhost page, so there is no way to start the app while still including the right Cordova JavaScript.
 
@@ -128,19 +128,23 @@ To use the hybrid app package, follow these steps:
     ![](attachments/implement-sso/entry.js.png)
 
 6.  Add the JavaScript code provided in [5.1 The JavaScript](#javascript) under `MxApp.onConfigReady(function(config) {`. Your *Entry.js* file should now look like this:
-       
+  ​     
     ![](attachments/implement-sso/entry.js-with-fix.png)
 
 7.  Create the PhoneGap Build package by following the instructions in the **Through Uploading to PhoneGap Build** section of the [Mendix PhoneGap Build App Template documentation](https://github.com/mendix/hybrid-app-template#through-uploading-to-phonegap-build). Be sure to read the **Prerequisites** and **Build on PhoneGap** sections of this documentation as well. This is an overview of the steps:<br>
     a. Install [Node.js](https://nodejs.org/en/download/). <br>
     b. In the hybrid app root folder, execute **npm install**. <br>
+    {{% alert type="warning" %}}Not all versions of the **cordova-inappbrowser-plugin** will work correctly when implementing SSO for your hybrid app. In some versions, the InAppBrowser page is not always closed, causing the application to be opened in the InAppBrowser instead of the app. This can result in incorrect behavior, such as the camera not being detected. To make sure the SSO implementation works correctly, we recommend using version **3.0.0** of the cordova-inappbrowser-plugin. You can check the version of the plugin that is used by opening the *config.xml.mustache* file (under `src`) and looking for the following line: `<plugin name="cordova-plugin-inappbrowser" source="npm" spec="1.4.0" />`.  If necessary, change the plugin version to `3.0.0` before packaging your app: `<plugin name="cordova-plugin-inappbrowser" source="npm" spec="3.0.0" />`.{{% /alert %}}<br>
     c. In the hybrid app root folder execute **npm run package**.<br>
-
 8.  Create an APK or iOS package from the PhoneGap Build package. You can upload the new PhoneGap Build package (in the **dist** folder) to PhoneGap to build the APK or iOS binary.
 
     ![](attachments/implement-sso/build.phonegap.com.png)
     
 ### 5.3 The SAML Module 
+
+{{% alert type="warning" %}}
+Not all versions of the SAML module will work correctly when implementing SSO for your hybrid app. Please make sure you use a version of the SAML module that is capable of creating mobile app tokens (that is, version 1.9.3 or above). We recommend updating the SAML module to the latest version available, and if needed, updating the Mendix version of your application.
+{{% /alert %}}
 
 The last thing to do is to check the **Enable mobile authentication token** box in the **Provisioning** tab when configuring an identity provider in the Mendix SAML module. This will make sure the SAML module provides the correct login token to the JavaScript part.
 

@@ -27,7 +27,7 @@ This means that a Mendix Cluster requires a Load Balancer to distribute the load
 
 The above depicted infrastructure is supported in an easy way in Pivotal Web Services. Pivotal Web Services allows easy scaling by increasing the number of running nodes for your app and provides a built-in load balancer for accessing the nodes.
 
-Deploying your application into Pivotal Web Services, and other Cloud Foundry platforms, is described on this page: [Deploy a Mendix App to Cloud Foundry](/deployment/cloud-foundry/index).
+Deploying your application into Pivotal Web Services, and other Cloud Foundry platforms, is described on this page: [Cloud Foundry: Deploy](/developerportal/deploy/cloud-foundry-deploy).
 
 Scaling out can be done using the Pivotal App Manager. Using the Pivotal App Manager is documented in the [Pivotal Webservices Documentation](http://docs.run.pivotal.io/console/dev-console.html).
 
@@ -57,7 +57,7 @@ If no database synchronization is required, all cluster nodes will become fully 
 
 Uploaded files should be stored in a shared file storage facility, as every Mendix Runtime node should access the same files. Either the local storage facility is shared or the files are stored in a central storage facility such as an Amazon S3 file storage, Microsoft Azure Blob storage, or IBM Bluemix Object Storage (see [custom settings](custom-settings) for more information about configuring the Mendix Runtime to store files on these storage facilities).
 
-## 7 After-Startup and Before-Shutdown Microflows
+## 7 After-Startup and Before-Shutdown Microflows {#startup-shutdown-microflows}
 
 It is possible to configure `After-Startup` and `Before-Shutdown` microflows in Mendix. In a Mendix Cluster this means that those microflows are called per node. This lets you register request handlers and other activities. However, doing database maintainance during these microflows is strongly discouraged because it might impact other nodes of the same cluster. There is no possibility to run a microflow on cluster startup or shutdown.
 

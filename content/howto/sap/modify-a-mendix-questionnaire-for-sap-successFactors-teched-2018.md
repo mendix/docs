@@ -26,23 +26,19 @@ You are provided with all the information and software which you need to perform
 
 Firstly, you need to create a new Mendix app and an SAP environment where you can run it.
 
-<!-- this step not needed? I'll leave it in, just in case we need to reinstate it
-
 1.  Click **Create App** in the top-right of the Mendix Developer Portal.
 
 	![](attachments/modify-a-mendix-questionnaire-for-sap-successFactors-teched-2018/media/image1.png)
 
--->
+2.  Click **SAP Apps**.
 
-1.  Click **SAP Apps**.
-
-2.  Click the picture of the **Blank App** (with Atlas UI).
+3.  Click the picture of the **Blank App** (with Atlas UI).
 
 	![](attachments/modify-a-mendix-questionnaire-for-sap-successFactors-teched-2018/media/image2.png)
 
-3.  Click **Use this app**.
+4.  Click **Use this app**.
 
-4.  Enter *Employee Questionnaire* and click **Create App**.
+5.  Enter *Employee Questionnaire* and click **Create App**.
  
 	![](attachments/modify-a-mendix-questionnaire-for-sap-successFactors-teched-2018/media/image3.png)
 
@@ -70,7 +66,7 @@ Now you are ready to start implementing the app using visual modeling.
 
 Some of the app has been written already, so you need to import those pieces into your app.
 
-1.  Click **Edit App** on the top-right corner of the Developer Portal.
+1.  Click the *arrow* on the **Edit App** button on the top-right corner of the Developer Portal and click *Edit in Desktop Modeler*.
 
 	![](attachments/modify-a-mendix-questionnaire-for-sap-successFactors-teched-2018/media/image6.png)
 
@@ -84,29 +80,45 @@ Some of the app has been written already, so you need to import those pieces int
 
 	![](attachments/modify-a-mendix-questionnaire-for-sap-successFactors-teched-2018/media/image7.png)
 
-5.  Click the App Store icon (the shopping basket) in the Desktop Modeler.
+	Before you start, you need to make one configuration change to allow Mendix to run on your TechEd computer:
+
+5. Click the menu item **Edit > Preferences...**
+
+	![](attachments/modify-a-mendix-questionnaire-for-sap-successFactors-teched-2018/media/dm-preferences.png)
+
+6. Paste or type the following path into **Deployment > JDK directory**
+
+	```html
+	D:\SAP\JavaVM\NTAMD64\sapjvm_8.1.040\sapjvm_8
+	```
+
+7. Click **OK** to confirm the change
+
+	![](attachments/modify-a-mendix-questionnaire-for-sap-successFactors-teched-2018/media/jdk-directory.png)
+
+8.  Click the App Store icon (the shopping basket) in the Desktop Modeler.
 
 	![](attachments/modify-a-mendix-questionnaire-for-sap-successFactors-teched-2018/media/image8.png)
 
-6.  Enter *Questionnaire* in the search box and click the magnifying glass.
+9.  Enter *Questionnaire* in the search box and click the magnifying glass.
 
 	![](attachments/modify-a-mendix-questionnaire-for-sap-successFactors-teched-2018/media/image9.png)
 
-7.  Click **Read more**.
+10.  Click **Read more**.
 
-8.  Click **Download** to add the module to your project.
+11. Click **Download** to add the module to your project.
 
 	![](attachments/modify-a-mendix-questionnaire-for-sap-successFactors-teched-2018/media/image10.png)
 
-9.  Click **Import** to confirm that you want to import the module.
+12. Click **Import** to confirm that you want to import the module.
 
 	![](attachments/modify-a-mendix-questionnaire-for-sap-successFactors-teched-2018/media/image11.png)
 
-10.  Repeat steps 3 through 7 to find and download the **SAP Teched 2018 - SuccessFactors Employee** module.
+13. Repeat steps 8 through 12 to find and download the **SAP Teched 2018 - SuccessFactors Employee** module.
 
 	![](attachments/modify-a-mendix-questionnaire-for-sap-successFactors-teched-2018/media/image12.png)
 
-11.  You can see the two modules you have imported, along with other modules, by expanding the tree structure in the **Project Explorer**.
+14. You can see the two modules you have imported, along with other modules, by expanding the tree structure in the **Project Explorer**.
 
 	![](attachments/modify-a-mendix-questionnaire-for-sap-successFactors-teched-2018/media/image13.png)
 
@@ -236,7 +248,7 @@ You will now create a page which is shown when the user has finished a questionn
 
 2.  Enter *QuestionnaireSummary* as **Page name**.
 
-3.  Select *PopupLayout (Atlas_UI_Resources)* as **Navigation layout**. Note that this is the **Atlas_UI** version of the PopupLayout (there is more than one PopupLayout).
+3.  Select *Atlas_Default (Atlas_UI_Resources)* as **Navigation layout**.
 
 4.  Select **Blank** in the left-hand pane.
 
@@ -256,11 +268,11 @@ You will now create a page which is shown when the user has finished a questionn
 
 10.  Drag a **Data view** widget from the **Toolbox > Widgets** onto the page.
 
-	![](attachments/modify-a-mendix-questionnaire-for-sap-successFactors-teched-2018/media/image31.png)
+	 ![](attachments/modify-a-mendix-questionnaire-for-sap-successFactors-teched-2018/media/image31.png)
 
 11.  Double-click on the top of the Data view (currently labeled *(Unknown)*).
 
-	![](attachments/modify-a-mendix-questionnaire-for-sap-successFactors-teched-2018/media/image32.png)
+	 ![](attachments/modify-a-mendix-questionnaire-for-sap-successFactors-teched-2018/media/image32.png)
 
 12.  Click **Select...** next to **Data source > Entity (path)**.
 
@@ -513,13 +525,15 @@ You have now made all the changes to the app. You can test it by first running i
 
     ![](attachments/modify-a-mendix-questionnaire-for-sap-successFactors-teched-2018/media/image61.png)
 
-7.  Sign in to the app.
+7.  Sign in to the app with your student credentials.
 
-    The app now needs to get the employee’s current score from SAP SuccessFactors.
+    The app now needs to get the employee’s current score from SAP SuccessFactors. You can see the score on the upper-right corner.
 
 8.  Complete the questionnaire which is offered.
 
-9.  Submit the score.
+9.  Choose to update the score in SAP SuccessFactors.
+
+10. Now you can see the updated score on the upper-right corner!
 
 ## 7 Deploying the app to SAP Cloud Platform
 

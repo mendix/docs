@@ -1,7 +1,7 @@
 ---
 title: "Environments"
-category: "Deploy"
-menu_order: 10
+parent: "mendix-cloud-deploy"
+menu_order: 50
 description: "This page describes the deploy options of your App."
 tags: ["Deploy","App","Developer Portal"]
 ---
@@ -145,7 +145,7 @@ In this tab you can manage custom access restriction profiles. These profiles ca
 
 ## 5 Related Content 
 
-* [Deploy](/developerportal/deploy)
+* [Deploy and Manage](/developerportal/deploy)
 * [Environment Details](/developerportal/deploy/environments-details)
 * [How to Receive Environment Status Alerts](/developerportal/howto/receive-alerts)
-* [How to Restrict Access for Incoming Requests](/deployment/mendixcloud/access-restrictions)
+* [How to Restrict Access for Incoming Requests](access-restrictions)

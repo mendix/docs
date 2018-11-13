@@ -75,7 +75,7 @@ returns:
 To get '1987-12-31T23:59:00', you need to concatenate two formatDateTime[UTC] functions:
 
 ```java
-formatDateTime($object/Date1,'yyyy-MM-DD') + 'T' + formatDateTime($object/Date1,'HH:mm:ss')
+formatDateTime($object/Date1,'yyyy-MM-dd') + 'T' + formatDateTime($object/Date1,'HH:mm:ss')
 ``` 
 
 ## formatTime[UTC]

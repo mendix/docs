@@ -69,4 +69,3 @@ This concludes the how-to about installing the Mendix Desktop Modeler.
 
 * [Desktop Modeler](/refguide/desktop-modeler)
 * [Desktop Modeler Overview](/refguide/desktop-modeler-overview)
-* [Mendix Platform](/refguide/app-platform)

@@ -14,18 +14,18 @@ To select a different cloud platform, your project role must have edit rights on
 
 ![](attachments/cloudsettings.png)
 
-## 2 Switching cloud platform
+## 2 Switching the Cloud Platform
 
 If you select a non-Mendix cloud platform like SAP you will be redirected to a page to complete the setup. If you select Mendix Cloud no additional setup is needed.
 
 The specific steps for setting up on different cloud platforms:
 
-* [Deploy on premises](/deployment/on-premises)
+* [Deploy on premises](/developerportal/deploy/on-premises-design)
 * [SAP Cloud Platform](/developerportal/deploy/sap-cloud-platform)
 
 ## 3 Related Content
 
-* [How to Manage Company Roles and App Roles](/developerportal/howto/change-roles)
-* [Roles Within the Company and Apps](/developerportal/general/roles)
-* [Technical Contact](/developerportal/general/technical-contact)
+* [How to Manage Company & App Roles](/developerportal/company-app-roles/manage-roles)
+* [Company & App Roles](/developerportal/company-app-roles/index)
+* [Technical Contact](/developerportal/company-app-roles/technical-contact)
 

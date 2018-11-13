@@ -2,10 +2,10 @@
 title: "Application Performance Monitor"
 ---
 
+## 1 Introduction to the Application Performance Monitor Documentation
+
 This space contains all the documentation for versions 1 and 2 of Application Performance Monitor (APM).
 
-These are the main APM documents:
+## 2 Document Categories
 
-* [Installation Guide](installation-guide)
-* [Reference Guide](reference-guide)
-* [Use Cases](use-cases)
+{{% category_block %}}

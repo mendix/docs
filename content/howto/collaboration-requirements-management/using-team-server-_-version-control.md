@@ -179,9 +179,9 @@ The example shows that you can merge a single revision. It is also possible to m
 
 ## 4\. Related Content
 
-*   [How to Manage Sprints and Stories](/developerportal/howto/managing-your-application-requirements-with-mendix)
+*   [Stories](/developerportal/collaborate/stories)
 *   [Contributing to a GitHub repository](contribute-to-a-github-repository)
 *   [Starting your own repository](starting-your-own-repository)
-*   [How to Use the Feedback Widget](/developerportal/howto/gathering-user-feedback)
+*   [How to Use the Feedback Widget](/developerportal/feedback/use-feedback-widget)
 *   [Sharing the Development Database](sharing-the-development-database)
 

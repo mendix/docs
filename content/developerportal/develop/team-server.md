@@ -33,6 +33,6 @@ When you click **Details** for a revision, the following extra information is pr
 
 ## 3 Related Content
 
-* [How to Manage Sprints and Stories](/developerportal/howto/managing-your-application-requirements-with-mendix)
-* [Roles Within the Company and Apps](/developerportal/general/roles)
+* [Stories](/developerportal/collaborate/stories)
+* [Company & App Roles](/developerportal/company-app-roles/index)
 * [Stories](/developerportal/collaborate/stories)

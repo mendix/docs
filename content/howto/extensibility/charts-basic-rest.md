@@ -73,19 +73,31 @@ To configure the REST service, follow these steps:
 To use the REST Data source end point in your chart, follow these steps:
 
 1. Create a page in your project containing an **Area chart** widget.
+
 1. Double click on the **Area chart** widget.
+
 1. In the tab **Chart properties**, add a new chart **Series** property.
+
 1. Add **Series name** and **Entity**.
 
+1. Select **Data source** REST endpoint.
+
     ![Chart Rest Series](attachments/charts/charts-rest-series.png)
-1. Select **Data source** REST endpoint  
-1. Add the **REST URL**  
+
+1. Add the **REST URL**.
+
     ![Chart Rest URL](attachments/charts/charts-rest-url.png)
-1. In the tab **Data points**, select the **X-axis data attribute** and the **Y-axis data attribute**  
+
+1. In the tab **Data points**, select the **X-axis data attribute** and the **Y-axis data attribute**.
+
     ![select Data Points](attachments/charts/charts-data-points.png)  
-1. Add Parameters to the REST Request. The **contextId**, **series name** are provided by default 
+
+1. Add Parameters to the REST Request. The **contextId**, **series name** are provided by default.
+
     ![select Data Points](attachments/charts/charts-rest-parameters.png) 
+
 1. Run your app and view the chart.
+
     ![Show Chart](attachments/charts/charts-rest-area-chart.png)
 
 ## 6 Related Content

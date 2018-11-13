@@ -34,9 +34,9 @@ To use the Charts widget, a specific data structure is set up. This is defined b
 
 1. Create a new module called **charts**.
 
-2. Configure your domain model to contain an entity **Values** with a string attribute **xValue** and a decimal attribute **yValue**.
+2. Configure your domain model to contain an entity **Value** with a string attribute **xValue** and a decimal attribute **yValue**.
 
-    ![Values entity](attachments/charts/charts-entity.png)
+    ![Value entity](attachments/charts/charts-entity.png)
 
 ## 3.2 Creating a Data Entry Page
 
@@ -46,7 +46,7 @@ To create a basic data entry page from which the Charts widget will fetch data, 
 
 2. Select **Generate overview pages**.
 
-    ![Values entity](attachments/charts/charts-rest-generate-overview-pages.png)
+    ![Generate overview pages for Value entity](attachments/charts/charts-rest-generate-overview-pages.png)
 
 3. Add the **Value_NewEdit** page to user navigation.
 
@@ -56,17 +56,17 @@ To create a basic data entry page from which the Charts widget will fetch data, 
 
 2. Add it to the user navigation.
 
-3. Add a **Data view** to this page that contains the **Values** entity and has a microflow as a data source.
+3. Add a **Data view** to this page that contains the **Value** entity and has a microflow as a data source.
 
-4. Create a new microflow named **DS_NewValues** to fill the data view.
+4. Create a new microflow named **DS_NewValue** to fill the data view.
 
-    ![Values entity](attachments/charts/charts-create-new-value.png)
+    ![Data view showing the Value entity](attachments/charts/charts-create-new-value.png)
 
 5. Right-click on the data view and select **Go to microflow**.
 
-6. In the new **DS_NewValues** microflow, create a new *Values* object and set that object as the return.
+6. In the new **DS_NewValue** microflow, create a new *Value* object and set that object as the return.
 
-    ![New Values microflow](attachments/charts/charts-new-values-microflow.png)
+    ![New Value microflow](attachments/charts/charts-new-values-microflow.png)
 
 7. On the ShowChart page, add the widget **Area chart**.
 
@@ -88,11 +88,11 @@ To configure a Charts widget, follow these steps:
 
     ![Chart Series](attachments/charts/charts-series.png)
 
-4. In the tab **Data source**, select *Values* as the **Entity**.
-
-    ![select Entity](attachments/charts/chart-add-entity.png)
+4. In the tab **Data source**, select *Value* as the **Entity**.
 
 5. Set the **Data source** as **Database**.
+
+    ![select Entity](attachments/charts/chart-add-entity.png)
 
 6. In the tab **Data points**, select *xValue* as the **X-axis data attribute** and *yValue* as the **Y-axis data attribute**.
 

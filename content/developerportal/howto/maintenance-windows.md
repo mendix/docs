@@ -35,24 +35,24 @@ Your "Preferred Maintenance Windows" is a weekly time range where system mainten
 1. Go to the [Developer Portal](http://home.mendix.com) and click **Apps** in the top navigation panel.
 2. Click **My Apps** and select **Nodes**.
 
-    ![](attachments/general/myapps.png)
+    ![](attachments/maintenance-windows/myapps.png)
 
 3. Select the node that you want to configure by clicking **Details**.
 4. Click **Environments** under the **Deploy** category:
 
-    ![](attachments/deploy/deploy-scale.png)    
+    ![](attachments/maintenance-windows/deploy-scale.png)    
 
 3. Select the node of the environment that you want to configure:
 
-    ![](attachments/deploy/maintenance1.png)
+    ![](attachments/maintenance-windows/maintenance1.png)
 
 4. Click **Details** for the environment you want to configure:
 
-    ![](attachments/deploy/maintenance2.png)
+    ![](attachments/maintenance-windows/maintenance2.png)
 
 5. Go to the **Maintenance** tab:
 
-    ![](attachments/deploy/maintenance.png)
+    ![](attachments/maintenance-windows/maintenance.png)
 
 {{% alert type="warning" %}}
 
@@ -91,10 +91,10 @@ When a maintenance operation is planned, it will show up under **Planned Mainten
 * [Alerts](/developerportal/operate/monitoring-application-health)
 * [Application Trends in Mendix Cloud v3](/developerportal/operate/trends)
 * [Application Trends in Mendix Cloud v4](/developerportal/operate/trends-v4)
-* [How to Manage Company Roles and App Roles](/developerportal/howto/change-roles)
+* [How to Manage Company & App Roles](/developerportal/company-app-roles/manage-roles)
 * [How to Receive Environment Status Alerts](/developerportal/howto/receive-alerts)
-* [Mendix Cloud](/deployment/mendixcloud)
-* [Mendix Cloud v4 - FAQ](/deployment/mendixcloud/mxcloudv4)
-* [Roles Within the Company and Apps](/developerportal/general/roles)
+* [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy)
+* [Mendix Cloud v4 - FAQ](/developerportal/deploy/mxcloudv4)
+* [Company & App Roles](/developerportal/company-app-roles/index)
 * [Security - Node Permissions](/developerportal/settings/node-permissions) 
-* [Technical Contact](/developerportal/general/technical-contact)
+* [Technical Contact](/developerportal/company-app-roles/technical-contact)

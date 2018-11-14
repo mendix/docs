@@ -38,16 +38,16 @@ The Technical Contact can grant you the **Receive Alerts** permission by followi
 2. Click **Apps** in the top navigation panel.
 3.  Click **My Apps** and select **Nodes**.
 
-    ![](attachments/general/myapps.png)
+    ![](attachments/receive-alerts/myapps.png)
 
 4. Open the node by clicking **Details**.
 5.  Click **Security** under the **Settings** category.
 
-    ![](attachments/settings/settings.png)
+    ![](attachments/receive-alerts/settings.png)
 
 6.  Select the check box below **Receive Alerts**. It is possible to set this permission separately for each environment. The changes will be automatically saved.
 
-    ![](attachments/settings/receive-alerts.png)
+    ![](attachments/receive-alerts/receive-alerts.png)
 
 ### 3.2 Alerts Page
 
@@ -59,11 +59,11 @@ You can manage the alerts by yourself, follow these steps:
 4. Open the node by clicking **Details**.
 5.  Click **Alerts** under the **Operate** category. 
 
-    ![](attachments/operate/operate.png)
+    ![](attachments/receive-alerts/operate.png)
 
 6. Select the check box of **Email Alerts**.  It is possible to set this option separately for each environment. The changes will be automatically saved.
 
-    ![](attachments/operate/email-alerts.png)
+    ![](attachments/receive-alerts/email-alerts.png)
 
 ## 4 Related Content
 

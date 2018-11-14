@@ -11,7 +11,7 @@ parent: "mendix-cloud-deploy"
 
 ### 1.1 Incoming Connections
 
-For connections from the internet to your Mendix Cloud applications, we provide a *.mendixcloud.com* or *.mxapps.io* domain with a certificate managed by Mendix. If you want to set up your own domain name, you can configure [custom domains](/developerportal/howto/custom-domains) (please note that this is not available for Free Apps).
+For connections from the internet to your Mendix Cloud applications, we provide a *.mendixcloud.com* or *.mxapps.io* domain with a certificate managed by Mendix. If you want to set up your own domain name, you can configure [custom domains](custom-domains) (please note that this is not available for Free Apps).
 
 You can also restrict incoming traffic by requiring client certificates signed by a Certificate Authority of your choice. For more details on how to set this up, see [How to Restrict Access for Incoming Requests](access-restrictions).
 

@@ -19,7 +19,7 @@ By selecting a revision in this grid, the tab pages below it will be filled with
 
 ## Message
 
-This tab page shows the message the the Modeler user entered when he or she committed these changes.
+This tab page shows the message the Modeler user entered when he or she committed these changes.
 
 ## Related stories
 

@@ -2100,11 +2100,11 @@ module.exports = {
      ****************************************************/
     {
       from: "/mendixcloud/Custom+Domains",
-      to: "/developerportal/howto/custom-domains"
+      to: "/developerportal/deploy/custom-domains"
     },
     {
       from: "/mendixcloud/custom-domains",
-      to: "/developerportal/howto/custom-domains"
+      to: "/developerportal/deploy/custom-domains"
     },
     {
       from: "/mendixcloud/Deploying+to+the+cloud",
@@ -2144,11 +2144,11 @@ module.exports = {
     },
     {
       from: "/mendixcloud/Maintenance+Windows",
-      to: "/developerportal/howto/maintenance-windows"
+      to: "/developerportal/deploy/maintenance-windows"
     },
     {
       from: "/mendixcloud/maintenance-windows",
-      to: "/developerportal/howto/maintenance-windows"
+      to: "/developerportal/deploy/maintenance-windows"
     },
     {
       from: "/mendixcloud/migrating+to+v4",

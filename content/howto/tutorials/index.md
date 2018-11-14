@@ -21,11 +21,6 @@ These tutorials will teach you how to build various apps using different feature
     In this tutorial, you will learn the basics of app development in the Mendix Desktop Modeler by building a simple HRM app.</td>
     <td><img src="attachments/overview/HRM_app.png"></td>
   </tbody>
-  <tbody>
-    <td><a href="build-an-iot-app">Build a Logistics IoT App</a><br> 
-    This tutorial will let you experience how to consume IoT services from an IoT Cloud platform.</td>
-    <td><img src="attachments/overview/Iot.png"></td>
-  </tbody>
   </tbody>
     <tbody>
     <td><a href="sap-tutorials">SAP Tutorial</a><br> 

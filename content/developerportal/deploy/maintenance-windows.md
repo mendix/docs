@@ -1,8 +1,8 @@
 ---
 title: "Configure Maintenance Windows"
-category: "How-To's"
-menu_order: 100
-description: "This page describes how to configure the maintenance windows for your node environment."
+parent: "mendix-cloud-deploy"
+#0menu_order: 100
+description: "How to configure the maintenance windows for your node environment."
 tags: ["Deploy","App","Developer Portal"]
 ---
 
@@ -54,13 +54,15 @@ Your "Preferred Maintenance Windows" is a weekly time range where system mainten
 
     ![](attachments/maintenance-windows/maintenance.png)
 
-{{% alert type="warning" %}}
 
-Here you can configure your preferred maintenance window. Transport rights for this environment are required. 
 
-{{% /alert %}}
+    Here you can configure your preferred maintenance window. Transport rights for this environment are required. 
 
-6. Click **Change** to modify the preferred maintenance window of your environment. All windows are defined in UTC time format. Please see the table below for the time in other time zones.
+
+6. Click **Change** to modify the preferred maintenance window of your environment.
+
+    {{% alert type="warning" %}}All windows are defined in UTC time format.<br /><br />Remember to convert to UTC from your local time.{{% /alert %}}
+
 
 {{% alert type="info" %}}
 
@@ -68,33 +70,15 @@ When a maintenance operation is planned, it will show up under **Planned Mainten
 
 {{% /alert %}}
 
-## 4 Maintenance Timetable
-
-### 4.1 Daylight Savings Time
-
-| UTC | LA (-07:00) | Boston (-04:00) | UK (+01:00) | NL (+02:00) |
-| --- | --- | --- | --- | --- |
-| 08:00 - 11:00 | 01:00 - 04:00 | 04:00 - 07:00 | 09:00 - 12:00 | 10:00 - 13:00 |
-| 12:00 - 15:00 | 05:00 - 08:00 | 08:00 - 11:00 | 13:00 - 16:00 | 14:00 - 17:00 |
-| 19:00 - 22:00 | 12:00 - 15:00 | 15:00 - 18:00 | 20:00 - 23:00 | 21:00 - 00:00 |
-
-### 4.2 Standard Time
-
-| UTC | LA (-08:00) | Boston (-05:00) | UK (+00:00) | NL (+01:00) |
-| --- | --- | --- | --- | --- |
-| 08:00 - 11:00 | 00:00 - 03:00 | 03:00 - 06:00 | 08:00 - 11:00 | 09:00 - 12:00 |
-| 12:00 - 15:00 | 04:00 - 07:00 | 07:00 - 10:00 | 12:00 - 15:00 | 13:00 - 16:00 |
-| 19:00 - 22:00 | 11:00 - 14:00 | 14:00 - 17:00 | 19:00 - 22:00 | 20:00 - 23:00 |
-
-## 5 Related Content
+## 4 Related Content
 
 * [Alerts](/developerportal/operate/monitoring-application-health)
 * [Application Trends in Mendix Cloud v3](/developerportal/operate/trends)
 * [Application Trends in Mendix Cloud v4](/developerportal/operate/trends-v4)
 * [How to Manage Company & App Roles](/developerportal/company-app-roles/manage-roles)
 * [How to Receive Environment Status Alerts](/developerportal/howto/receive-alerts)
-* [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy)
-* [Mendix Cloud v4 - FAQ](/developerportal/deploy/mxcloudv4)
+* [Mendix Cloud](mendix-cloud-deploy)
+* [Mendix Cloud v4 - FAQ](mxcloudv4)
 * [Company & App Roles](/developerportal/company-app-roles/index)
 * [Security - Node Permissions](/developerportal/settings/node-permissions) 
 * [Technical Contact](/developerportal/company-app-roles/technical-contact)

@@ -1,5 +1,5 @@
 ---
-title: "API Keys"
+title: "Manage API Keys"
 category: "Settings"
 description: "This page describes creating API keys for your app."
 tags: ["Settings", "App", "API", "Key", "API key", "Developer Portal"]

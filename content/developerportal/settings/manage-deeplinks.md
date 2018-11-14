@@ -1,43 +1,41 @@
 ---
-title: "Manage Developer Portal Deep Links"
+title: "Manage Deep Links"
 parent: "general-settings"
-description: "how to use shortcuts and deep links in the Developer Portal."
-tags: ["Developer Portal","deeplink"]
+description: "Describes how to implement deep links to Developer Portal pages."
+tags: ["Developer Portal", "deep link"]
 ---
 
 ## 1 Introduction
 
-In the Developer Portal, you can use deep links as a shortcut to go directly to the desired destination. 
+To go directly to the desired element of your app project in the Developer Portal, you can use deep links.
 
 **This how-to will teach you how to do the following:**
 
-* Find the AppID, storyID, and feedbackItemNr
-* Create deep links for your app, story, or feedback item
+* Find the App ID, Story ID, and Feedback Item Number for your app
+* Create deep links for your app, story, and feedback item
 
-## 2 Prerequisites
+## 2 Getting the AppID, storyID, & feedbackItemNr
 
-Before starting this how-to, make sure you have completed the following prerequisites:
+To create a deep link, you need the App ID, Story ID, or Feedback Item Nr for the desired element in the Developer Portal.
 
-* Be a member of the app team
-* Have sufficient permissions (for details, see [Security - Node Permissions](/developerportal/settings/node-permissions))
+*  For the App ID, select **Settings** > **General** – you will find the **App ID** at the bottom of the page:
 
-## 3 AppID, storyID, feedbackItemNr
+	![](attachments/app-id.png)
 
-To find out the AppID, storyID or the feedbackItemNr (which you need to create a deep link), follow these steps:
+*  For the Story ID, select **Collaborate** > **Stories** – the story **ID** is below the title of the story:
 
-1. Go to the [Developer Portal](http://home.mendix.com).
-2. Select the app for which you want to create the deep link.
-3. For the **AppID**, click **General** under the **Settings** category.
-4. For the **StoryID**, click **Stories** under the **Collaborate** category. The ID is next to **Details** of the story item.
-5. For the **FeedbackItemNr**, click **Feedback** under the **Collaborate** category. The item number is next to the title of the feedback item.
+	![](attachments/story-id.png)
 
-## 4 Developer Portal Deep Links
+*  For the Feedback Item Number, select **Collaborate** > **Feedback** – the feedback item number is next to the title of the feedback item:
 
-If you want to provide links directly to a specific page on the Developer Portal, follow these steps:
+	![](attachments/feedback-nr.png)
 
-1. Go to your browser.
-2. Paste the link in the browser's address bar.
-3. Paste the AppID, storyID or the feedbackItemNr after the final slash.
+## 3 Creating a Developer Portal Deep Link
+
+If you want to provide links directly to a specific element in your app project in the Developer Portal, follow these steps:
+
+1. Paste the URL to the Developer in your browser's address bar (i.e., `https://sprintr.home.mendix.com/` or `https://cloud.home.mendix.com/`).
+2. Paste the desired App ID, Story ID, or Feedback Item Number after the final slash.
 
 The following deep links can be used:
 

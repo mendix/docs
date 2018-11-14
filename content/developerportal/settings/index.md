@@ -61,7 +61,7 @@ The **Node Permissions** tab lets you view the team members that have the **App 
 * API rights
 * Access to monitoring
 
-For more information, see [Security-Node](/developerportal/settings/node-permissions).
+For more information, see [Security-Node](/developerportal/deploy/node-permissions).
 
 ## 4 API Keys
 

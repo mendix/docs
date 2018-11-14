@@ -1,7 +1,6 @@
 ---
-title: "Security & Node Permissions"
-category: "Settings"
-menu_order: 20
+title: "Node Permissions"
+category: "Deployment"
 description: "This page describes the permission settings of your node."
 tags: ["Node","Permission","Developer Portal"]
 ---
@@ -21,29 +20,28 @@ Note that you need to have an **MxID** to get access to the [Developer Portal](h
 
 ## 2 Node Settings
 
-In this section you will learn about configuring the user roles and permissions of the cloud node. Follow these steps to access the node permissions:
+In this section you will learn about configuring the user roles and permissions of the cloud node. 
 
-1.  Go to the [Developer Portal](http://home.mendix.com).
-2.  Click **Apps** in the top navigation panel.
-3.  Click **My Apps** and select **Nodes**.
+To access the node settings, click **Settings** > **Security** and open the **Node Permissions** tab.
 
-    ![](attachments/myapps.png)
-
-4.  Select the node.
-5.  Click **Security** in the left navigation panel.
-6.  Go to the **Node Permissions** tab.
+![](attachments/node-permissions/node-permissions.png)
 
 ## 3 User Roles
 
 Users with the Technical Contact role can manage all the settings in the cloud node, other members are restricted in what they can manage.
 
 A cloud node always has:
-* only one Technical Contact
-* any number of app team members with **View Deploy and Monitor** permissions
+* Only one Technical Contact
+* Any number of app team members with **View Deploy and Monitor** permissions
 
 {{% alert type="info" %}}
 
-Note that only app team members with the **View Deploy and Monitor** permissions show up in the list of **Node Permissions**. These permissions are available in **App Team**. A SCRUM Master of the app can assign the **View Deploy and Monitor** permissions in the **App Team permissions** to any team member by selecting one of the following app team user roles: **Application Operator**, **Business Engineer**, **Performance Engineer/Tester**, **SCRUM Master**.
+Note that only app team members with the **View Deploy and Monitor** permissions show up in the list of **Node Permissions**. These permissions are available in **App Team**. A SCRUM Master of the app can assign the **View Deploy and Monitor** permissions in the **App Team** permissions to any team member by selecting one of the following app team user roles:
+
+* Application Operator
+* Business Engineer
+* Performance Engineer/Tester
+* SCRUM Master
 
 {{% /alert %}}
 
@@ -86,7 +84,7 @@ The node permissions can be:
 * Managed only by the Technical Contact
 * Accessed by regular team members who have the permission to **View Deploy and Monitor**
 
-![](attachments/nodepermission.jpg)
+![](attachments/node-permissions/nodepermission.jpg)
 
 ### 5.1 Transport Rights
 
@@ -113,12 +111,3 @@ With the API rights you can use the [Deploy API](/apidocs-mxsdk/apidocs/deploy-a
 With this permission you can view the application metrics, logs, and alerts under the **Operate** category in the [Developer Portal](http://home.mendix.com). This allows you to successfully operate your Mendix Cloud environments.
 
 For more information, see [Metrics](/developerportal/operate/metrics).
-
-## 6 Related Content
-
-* [Application Trends in Mendix Cloud v3](/developerportal/operate/trends)
-* [Application Trends in Mendix Cloud v4](/developerportal/operate/trends-v4)
-* [How to Manage Company & App Roles](/developerportal/company-app-roles/manage-roles)
-* [How to Receive Environment Status Alerts](/developerportal/operate/receive-alerts)
-* [Metrics](/developerportal/operate/metrics)
-* [Logs](/developerportal/operate/logs)

@@ -1,5 +1,5 @@
 ---
-title: "Set Up a New SQL Server Database"
+title: "SQL Server: New Database Set Up"
 parent: "mendix-on-windows-microsoft-sql-server"
 ---
 

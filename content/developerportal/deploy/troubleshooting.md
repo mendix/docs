@@ -1,6 +1,6 @@
 ---
 title: "IIS (Internet Information Services) Troubleshooting"
-parent: on-premises-design
+parent: "on-premises-design"
 tags: []
 ---
 
@@ -31,11 +31,11 @@ When you have confirmed that the Mendix installation is working, you should star
 Open the application and inspect the request with your browser's developers tools. If the application isn't working you will see requests that are not successfully executed.
 
 *   All the /xas/ requests fail with an error:   The rewrite is incorrectly configured.    Go to /xas/ in the browser, which should give you a blank page if everything is behaving correctly. Most likely you will find a more detailed explanation about the cause of your problem. 
-*   Some javascript files can not be opened:   Try opening the files directly from your browser. If there is an issue in your IIS configuration you will get more information when opening that url. If that still results in the same error it is most likely a security problem. The user under which your website is executed, does not have sufficient privileges to access the required files. 
+*   Some JavaScript files can not be opened:   Try opening the files directly from your browser. If there is an issue in your IIS configuration you will get more information when opening that URL. If that still results in the same error it is most likely a security problem. The user under which your website is executed, does not have sufficient privileges to access the required files. 
 
 If just the login process seems to be failing you need to validate the response when trying to login. You should not use valid credentials to test the login! When analyzing the response, and using invalid credentials, the server should return a 401 status code with the response: {}  any other status code or response indicates an issue.
 
-*   A 404 status code, indicates that the /xas/ url cannot be found. This is an issue in your rewriter configuration, the /xas/ requests should be redirected to the localhost/xas/ url. If the rewriter is not setup correctly IIS will try and open the folder called xas, which obviously does not exists. 
+*   A 404 status code, indicates that the /xas/ URL cannot be found. This is an issue in your rewriter configuration, the /xas/ requests should be redirected to the localhost/xas/ URL. If the rewriter is not setup correctly IIS will try and open the folder called xas, which obviously does not exists. 
 *   A 401 status code with an html page as response,    IIS should be configured to return detailed error messages. If IIS is not returning detailed error messages, for every message different than 200 it will return the default html error page. The client system needs to have the detailed (JSON) error message in order to correctly process the response. [See this IIS page for more info about detailed error responses](https://esus1.mendixcloud.com/index.html#mce_temp_url#) 
 
 After you have identified the exact cause of your problem it is best to search on the exact error message you are receiving. There are numerous reasons why IIS might give that error, existing IIS blog and documentation pages give a much better understanding on how to solve your specific issue. 

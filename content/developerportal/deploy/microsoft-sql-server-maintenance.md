@@ -1,6 +1,6 @@
 ---
-title: "Microsoft SQL Server maintenance"
-parent: on-premises-design
+title: "SQL Server: Maintenance"
+parent: "mendix-on-windows-microsoft-sql-server"
 ---
 
 

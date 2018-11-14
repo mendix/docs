@@ -1,5 +1,5 @@
 ---
-title: "Planning App Development"
+title: "Plan App Development"
 category: "Developing in Mendix"
 menu_order: 30
 description: "Describes the planning of your app development."

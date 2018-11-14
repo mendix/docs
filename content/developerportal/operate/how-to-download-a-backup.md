@@ -20,7 +20,7 @@ This how-to describes downloading a Sandbox environment backup from a Free App a
 Before starting this how-to, make sure you have completed the following prerequisite:
 
 * Have a Free App or licensed cloud node with backups
-* In case of an licensed node, you have the correct [Security - Node Permissions](/developerportal/settings/node-permissions)
+* In case of an licensed node, you have the correct [Security - Node Permissions](/developerportal/deploy/node-permissions)
 
 ## 3 Downloading a Free App Backup
 

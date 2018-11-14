@@ -16,7 +16,7 @@ In the Mendix Cloud you can define a Maintenance Window for all your application
 
 Before you can start with this how-to, please make sure you have completed the following prerequisites.
 
-*   Have a Mendix Cloud application where you have transport, monitor, or backup access (for more information, see [Security - Node Permissions](/developerportal/settings/node-permissions))
+*   Have a Mendix Cloud application where you have transport, monitor, or backup access (for more information, see [Security - Node Permissions](/developerportal/deploy/node-permissions))
 
 ## 2 Maintenance Operations
 
@@ -80,5 +80,5 @@ When a maintenance operation is planned, it will show up under **Planned Mainten
 * [Mendix Cloud](mendix-cloud-deploy)
 * [Mendix Cloud v4 - FAQ](mxcloudv4)
 * [Company & App Roles](/developerportal/company-app-roles/index)
-* [Security - Node Permissions](/developerportal/settings/node-permissions) 
+* [Security - Node Permissions](/developerportal/deploy/node-permissions) 
 * [Technical Contact](/developerportal/company-app-roles/technical-contact)

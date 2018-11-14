@@ -1,6 +1,6 @@
 ---
 title: "General"
-category: "Deploy and Manage"
+category: "Deployment"
 menu_order: 10
 description: "An overview of all the ways in which a Mendix app can be deployed"
 tags: ["Deploy", "App", "Developer Portal", "Mendix Cloud", "Cloud Foundry", "Azure", "Docker", "IBM", "SAP", "On-premises", "Kubernetes"]

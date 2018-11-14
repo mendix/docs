@@ -1,6 +1,6 @@
 ---
 title: "Mendix Cloud"
-category: "Deploy and Manage"
+category: "Deployment"
 menu_order: 20
 description: "Describes how to deploy to the Mendix Cloud."
 tags: ["Deploy","Mendix Cloud","Developer Portal"]

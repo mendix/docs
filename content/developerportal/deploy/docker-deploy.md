@@ -1,6 +1,6 @@
 ---
 title: "Docker"
-category: "Deploy and Manage"
+category: "Deployment"
 menu_order: 60
 description: "Describes how to build a new Docker image using the Mendix buildpack."
 tags: ["Docker", "Cloud", "container", "CI/CD"]

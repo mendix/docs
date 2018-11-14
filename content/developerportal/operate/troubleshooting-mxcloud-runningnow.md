@@ -37,5 +37,5 @@ You can use the information displayed in the **Running now** tab for various pur
 * [Application Trends in Mendix Cloud v3](trends)
 * [Application Trends in Mendix Cloud v4](trends-v4)
 * [Metrics](metrics)
-* [Security - Node Permissions](/developerportal/settings/node-permissions)
+* [Security - Node Permissions](/developerportal/deploy/node-permissions)
 * [Cache Metrics](troubleshooting-mxcloud-cache)

@@ -20,7 +20,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Have a Free App or licensed cloud node available
 * Have a downloaded backup from a Free App or a licensed cloud node. See [How to Download a Backup](how-to-download-a-backup)
-* Have the correct [Security - Node Permissions](/developerportal/settings/node-permissions)
+* Have the correct [Security - Node Permissions](/developerportal/deploy/node-permissions)
 
 ## 3 Restoring a Backup
 

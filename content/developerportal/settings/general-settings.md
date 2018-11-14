@@ -15,7 +15,7 @@ The **General** settings page presents an overview of your app project with the 
 * Whether the app is supported for the **Web Modeler** and the ability to **Enable Web Modeler** (for details on getting the full Web Modeler experience, see [How to Migrate Existing Projects to Atlas UI](/howto/atlasui/migrate-existing-projects-to-atlasui))
 * The **App ID**
 
-{{% image_container width="450" %}}![](attachments/general-settings.png)
+{{% image_container width="550" %}}![](attachments/general-settings.png)
 {{% /image_container %}}
 
 The sections below describe the actions you can perform on this page.

@@ -20,7 +20,7 @@ This how-to describes creating a backup of a licensed cloud node. This option is
 Before starting this how-to, make sure you have completed the following prerequisite:
 
 *   You have a licensed cloud node
-*   You have the correct [Security - Node Permissions](/developerportal/settings/node-permissions)
+*   You have the correct [Security - Node Permissions](/developerportal/deploy/node-permissions)
 
 
 ## 3 Create a Backup

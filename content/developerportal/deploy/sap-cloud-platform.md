@@ -1,6 +1,6 @@
 ---
 title: "SAP Cloud Platform"
-category: "Deploy and Manage"
+category: "Deployment"
 menu_order: 40
 description: "Reference documentation on SAP Cloud deployment portal"
 tags: ["SAP", "SAP Cloud Platform", "Deployment", "Environment"]

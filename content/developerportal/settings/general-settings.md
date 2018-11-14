@@ -8,16 +8,14 @@ tags: ["Settings", "App", "Developer Portal"]
 
 ## 1 Introduction
 
-In **General**, there is an overview of the app:
+The **General** settings page presents an overview of your app project with the following details:
 
-* Name of the app
-* **Description** of the app
-* **App Contact** for the app
-* **Technical Contact** for the app
+* A **Description** of the app
+* The **App Contact** and **Technical Contact** for the app
 * Whether the app is enabled for the **Web Modeler**
 * * **App ID**
 
-    {{% image_container width="450" %}}![](attachments/general.png)
+    {{% image_container width="450" %}}![](attachments/general-settings.png)
     {{% /image_container %}}
 
 {{% alert type="info" %}}

@@ -1,6 +1,6 @@
 ---
 title: "IBM Cloud"
-category: "Deploy and Manage"
+category: "Deployment"
 description: "Describes how to deploy a Mendix app to the IBM Cloud"
 menu_order: 30
 tags: ["Deployment", "IBM", "IBM Cloud", "Environment"]

@@ -1,12 +1,12 @@
 ---
-title: "Operate"
-description: "This page describes the Operate category of the Developer Portal."
-tags: ["Operate","App","Developer Portal"]
+title: "Operations"
+description: "The day-to-day operation of an app from the Operate category of the Developer Portal. This is mainly useful for apps running in the Mendix Cloud."
+tags: ["Operate", "App", "Developer Portal", "Metrics", "Alerts", "Logs", "Backups", "Mendix Cloud", "V3", "V4"]
 ---
 
 ## 1 Introduction
 
-The category **Operate** is devided into these four sections:
+The category **Operate** is divided into these four sections:
 
 ![](attachments/operate.png)
 

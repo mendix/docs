@@ -1,6 +1,6 @@
 ---
 title: "Azure"
-category: "Deploy and Manage"
+category: "Deployment"
 description: "Describes how to deploy a Mendix app to the IBM Cloud"
 menu_order: 70
 tags: ["Deployment", "Azure", "Microsoft", "Environment"]

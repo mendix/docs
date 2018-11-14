@@ -2187,6 +2187,10 @@ module.exports = {
       to: "/developerportal/deploy/mendix-cloud-deploy"
     },
     {
+      from: "/deployment/on-premises",
+      to: "/developerportal/deploy/on-premises-design"
+    },
+    {
       from: "/deployment/cloud-foundry/",
       to: "/developerportal/deploy/cloud-foundry-deploy"
     },    /****************************************************

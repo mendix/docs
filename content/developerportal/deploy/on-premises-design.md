@@ -20,7 +20,7 @@ The options below are just a few examples of the most commonly used architecture
 
 ### 2.1 Minimal Server Architecture (Option 1)
 
-This is the simplest solution with the fewest configuration and connection problems. This configuration is used in the Mendix cloud as well, except the cloud is Linux-based, with NGINX used instead of IIS and Postgresql used as the database server.
+This is the simplest solution with the fewest configuration and connection problems. This configuration is used in the Mendix cloud as well, except the cloud is Linux-based, with NGINX used instead of IIS and PostgreSQL used as the database server.
 
 ![](attachments/on-premises-design/18580719.jpg)
 

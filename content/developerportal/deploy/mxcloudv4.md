@@ -1,5 +1,5 @@
 ---
-title: "Mendix Cloud V4 - FAQ"
+title: "V4: FAQ for Mendix Cloud V4"
 parent: "mendix-cloud-deploy"
 tags: ["Cloud", "Mendix Cloud", "V4", "Version 4", "FAQ", "V3", "AWS", "Amazon Web Services"]
 ---

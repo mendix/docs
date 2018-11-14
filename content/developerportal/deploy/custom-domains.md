@@ -1,16 +1,16 @@
 ---
-title: "Configure Custom Domains"
+title: "Custom Domains"
 parent: "mendix-cloud-deploy"
-menu_order: 90
-description: "Describes how to configure custom domains as well as generate, upload, and renew certificates in Mendix."
-tags: ["Custom Domain","Mendix Cloud","Developer Portal"]
+#menu_order: 90
+description: "How to configure custom domains as well as generate, upload, and renew certificates in Mendix."
+tags: ["Custom Domain","Mendix Cloud","Developer Portal", "certificates"]
 ---
 
 ## 1 Introduction
 
 The Mendix Cloud supports adding custom domains such as `https://myapp.mycompany.com/` to your environments. As we only allow HTTPS connections, you have to provide a custom domain certificate (an SSL/TLS certificate). This how-to walks you through the process.
 
-This option is available for free for licensed apps. You cannot add custom domains to free apps.
+This option is provided with licensed apps. You cannot add custom domains to free apps.
 
 **This how-to will teach you how to do the following:**
 
@@ -183,7 +183,7 @@ Yes. However, when you create the certificate request via the Mendix Cloud, you 
 
 ### 8.2 How Do I Properly Construct an Intermediate Certificate Chain?
 
-Your certificate is signed by the certificate authority. They sign your certificate with their intermediate certificate. They also sign their intermediate certificate with their own root certificate. Almost always, the intermediate certficate chain that you will need is just one intermediate certificate. Sometimes there is more then one intermediate certificate; this depends on the CA you use. You do not need to provide the root certificate, as every web browser has it in its trusted keystore.
+Your certificate is signed by the certificate authority. They sign your certificate with their intermediate certificate. They also sign their intermediate certificate with their own root certificate. Almost always, the intermediate certificate chain that you will need is just one intermediate certificate. Sometimes there is more then one intermediate certificate; this depends on the CA you use. You do not need to provide the root certificate, as every web browser has it in its trusted keystore.
 
 An intermediate certificate chain chain could look like this from top to bottom:
 

@@ -1,8 +1,9 @@
 ---
-title: "Link a Different App to a Cloud Node"
+title: "Change App Linked to Node"
+# Merge with other Linking docs
 parent: "mendix-cloud-deploy"
-menu_order: 130
-description: "How to link a cloud node to a different app."
+#menu_order: 130
+description: "How to link an existing app to a cloud node."
 tags: ["App","Node","Developer Portal","Deploy"]
 ---
 
@@ -26,7 +27,7 @@ If you have created an app in the **Mendix Modeler**, you can upload it to the *
 *   Make sure no environments are linked to your app. (Every **Team Server** app is linked to a **Sandbox** automatically).
 Instructions on how to do this are in [How To Unlink Your Free App from a Sandbox Environment](how-to-unlink-sandbox).
 
-## 3 Linking a App to a Licensed Cloud Node
+## 3 Linking an App to a Licensed Cloud Node
 
 Read [How to Deploy to the Mendix Cloud](mendix-cloud-deploy) to learn how to link an app to a cloud node.
 

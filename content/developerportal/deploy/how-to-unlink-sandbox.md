@@ -1,5 +1,6 @@
 ---
-title: "Unlink Your Free App from a Sandbox Environment"
+title: "Unlink Free App from Sandbox"
+# Merge with other Linking docs
 parent: "mendix-cloud-deploy"
 #menu_order: 160
 description: "How to unlink a Free App from a Sandbox Environment."

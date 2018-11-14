@@ -6,6 +6,12 @@ tags: ["Developer Portal", "Cloud Environments", "Mendix Cloud", "SAP", "IBM", "
 
 ## 2018
 
+### November 14th, 2018
+
+#### Fixes
+
+* We fixed an issue in which [custom error pages](/howto/ux/custom-error-page) did not work for online applications in Mendix Cloud V4.
+
 ### November 1st, 2018
 
 #### Fixes

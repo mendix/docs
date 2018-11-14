@@ -272,7 +272,7 @@ An example of this is to use an API key to perform scripted operations on your a
 
 For more information, see the following:
 
-* [API Keys](../settings/api-keys)
+* [API Keys](../settings/api-key)
 * [API Documentation](/apidocs-mxsdk/apidocs/)
 * [Mendix Platform SDK](/apidocs-mxsdk/mxsdk)
 
@@ -317,4 +317,3 @@ To make your public profile private again, click **Make this profile private**.
 * [How to Manage Company & App Roles](../company-app-roles/manage-roles)
 * [Feedback](../feedback/index)
 * [How to Use the Mendix Feedback Widget](../feedback/use-feedback-widget)
-

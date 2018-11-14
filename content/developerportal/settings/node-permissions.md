@@ -119,6 +119,6 @@ For more information, see [Metrics](/developerportal/operate/metrics).
 * [Application Trends in Mendix Cloud v3](/developerportal/operate/trends)
 * [Application Trends in Mendix Cloud v4](/developerportal/operate/trends-v4)
 * [How to Manage Company & App Roles](/developerportal/company-app-roles/manage-roles)
-* [How to Receive Environment Status Alerts](/developerportal/howto/receive-alerts)
+* [How to Receive Environment Status Alerts](/developerportal/operate/receive-alerts)
 * [Metrics](/developerportal/operate/metrics)
 * [Logs](/developerportal/operate/logs)

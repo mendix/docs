@@ -12,4 +12,4 @@ As you work with your App Team to develop your app project, the Developer Portal
 
 * [Modeling Environments](modeling-environments)
 * [Team Server Overview](team-server)
-* [Planning App Development](planning-development)
+* [Plan App Development](planning-development)

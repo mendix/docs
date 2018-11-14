@@ -1,6 +1,6 @@
 ---
-title: "Deploy and Manage"
-description: "An overview and instructions on how to deploy Mendix apps to different environments and how to manage that deployment."
+title: "Deployment"
+description: "Deployment section of the Developer Portal Guide: How to deploy Mendix apps to different environments and how to manage that deployment."
 tags: ["Deploy","Manage", "Mendix Cloud", "IBM", "SAP", "Cloud Foundry", "Kubernetes", "On-premises", "Environment"]
 ---
 
@@ -54,9 +54,9 @@ For more details, see [App Services](app-services).
 
 ## 5 Related Content
 
-* [How to Configure Custom Domains](../howto/custom-domains)
+* [How to Configure Custom Domains](custom-domains)
 * [Mendix Cloud: Deploy](mendix-cloud-deploy)
 * [Mendix Cloud Status](mendix-cloud-status)
-* [Mendix Cloud V4 - FAQ](/deployment/mendixcloud/mxcloudv4)
-* [How to View the Mendix Cloud Version and Region](../howto/cloud-version-region)
+* [Mendix Cloud V4 - FAQ](mxcloudv4)
+* [How to View the Mendix Cloud Version and Region](cloud-version-region)
 * [Two-Factor Authentication](two-factor-authentication)

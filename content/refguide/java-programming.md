@@ -51,7 +51,7 @@ See [Using Eclipse](using-eclipse).
 
 ## 5 Java Actions in the Cloud
 
-See [Java in the Cloud](/deployment/mendixcloud/java-in-the-cloud).
+See [Java in the Cloud](/developerportal/deploy/java-in-the-cloud).
 
 ## 6 Related Content
 

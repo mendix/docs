@@ -35,7 +35,7 @@ To see all of your badges as well as the badges you can work towards, click **Vi
 The **Badges in progress** section of the **Badges** tab only displays the current level in progress of a multi-level badge. Furthermore, multi-level badges that you have already earned are not shown in the **Earned badges** section when there is a higher level badge available.
 {{% /alert %}}
 
-## 5 Challenges
+## 5 Challenges {#challenges}
 
 The **Challenge** card presents a featured challenge you can complete on the Mendix Platform to gain credits. Once you complete a challenge, you can claim the credits and use them in the Mendix Shop. Challenges are not only about keeping engaged with the platform and exploring new challenges, but picking up some swag in the process!
 
@@ -270,7 +270,11 @@ In this section, you can view and create API keys that can be used by external a
 
 An example of this is to use an API key to perform scripted operations on your application model with the Platform SDK.
 
-For more information, see [API Documentation](/apidocs-mxsdk/apidocs/) and [Mendix Platform SDK](/apidocs-mxsdk/mxsdk).
+For more information, see the following:
+
+* [API Keys](../settings/api-key)
+* [API Documentation](/apidocs-mxsdk/apidocs/)
+* [Mendix Platform SDK](/apidocs-mxsdk/mxsdk)
 
 ### 10.6 Advanced
 
@@ -313,4 +317,3 @@ To make your public profile private again, click **Make this profile private**.
 * [How to Manage Company & App Roles](../company-app-roles/manage-roles)
 * [Feedback](../feedback/index)
 * [How to Use the Mendix Feedback Widget](../feedback/use-feedback-widget)
-

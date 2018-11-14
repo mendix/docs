@@ -122,7 +122,7 @@ This domain model is part of the SAP OData Connector module and can be found in 
 * **Header** – add a custom HTTP header that provides more information in an HTTP request
   * **Name** – the name of the header
   * **Value** – the value of the header
-* **CloudConnector Info** – information which can be read from the SAP Cloud Portal to obtain proxy details used to access the SAP Cloud Connector
+* **CloudConnector Info** – information which can be read from SAP Cloud Platform to obtain proxy details used to access the SAP Cloud Connector
   * **ProxyHost** – the address of the proxy which gives access through the SAP Cloud Connector
   * **ProxyPort** – the port which is to gain access through the SAP Cloud Connector
   * **ProxyBearerToken** – an authorization token which is needed when using the SAP Cloud Connector
@@ -367,7 +367,7 @@ For example, you could catch an exception on **Get List** and display an error m
 This action is included for backward compatibility. The information about your cloud connector connection is available in the **Destination** entity after you have performed a **Get Destination** action. See [SAP Destination Service](sap-destination-service) for more information.
 {{% /alert %}}
 
-This creates a **CloudConnectorInfo** object and fills the values for **ProxyHost**, **ProxyPort**, and **ProxyBearerToken** from the SAP environment, when the app is running on the SAP Cloud Portal.
+This creates a **CloudConnectorInfo** object and fills the values for **ProxyHost**, **ProxyPort**, and **ProxyBearerToken** from the SAP environment, when the app is running on SAP Cloud Platform.
 
 * Input - This action does not take any input parameters
 * Output
@@ -375,7 +375,7 @@ This creates a **CloudConnectorInfo** object and fills the values for **ProxyHos
   * Variable - the name which you would like to give to the CloudConnectorInfo object which is created and returned by this action
 
 {{% alert type="warning" %}}
-If your app is not running on the SAP Cloud Portal, this action will throw an error.
+If your app is not running on SAP Cloud Platform, this action will throw an error.
 {{% /alert %}}
 
 ## 4 Connector Action Parameters<a name="ConnectorActionParameters"></a>

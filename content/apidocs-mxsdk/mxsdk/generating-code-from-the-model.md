@@ -13,9 +13,9 @@ To help you to find out how you can write code to alter your model, the SDK ship
 To generate the code for a fully-loaded unit you can use the following code:
 
 ```ts
-import { utils } from "mendixmodelsdk";
+import { JavaScriptSerializer } from "mendixmodelsdk";
 
-console.log(utils.serializeToJs(someFullyLoadedModelUnit));
+console.log(JavaScriptSerializer.serializeToJs(someFullyLoadedModelUnit));
 ```
 
 ## 3 Example
@@ -27,7 +27,7 @@ Let's say you want to generate a set of entities in a domain model that looks li
 First you need to create the two entities in the domain model and commit that to Team Server. Next, you need to write a script like this:
 
 ```ts
-import { ModelSdkClient, IModel, IModelUnit, domainmodels, utils } from "mendixmodelsdk";
+import { ModelSdkClient, IModel, IModelUnit, domainmodels, JavaScriptSerializer } from "mendixmodelsdk";
 import { MendixSdkClient, Project, OnlineWorkingCopy, loadAsPromise } from "mendixplatformsdk";
 
 const username = "{YOUR_USERNAME}";
@@ -45,7 +45,7 @@ async function serializeToJs() {
 
     try {
         const domainModel = await loadAsPromise(domainModelInterface);
-        console.log(utils.serializeToJs(domainModel)); //print out the generated JavaScript
+        console.log(JavaScriptSerializer.serializeToJs(domainModel)); //print out the generated JavaScript
         console.log("success!")
     } catch (error) {
         console.log(`error: ${error}`);

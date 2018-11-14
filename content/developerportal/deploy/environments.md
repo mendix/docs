@@ -137,7 +137,7 @@ When your Mendix app needs to be accessible via your own URL (for example, `http
 
 There is also a section with an overview of linked custom domains.
 
-For more information, see [How to Configure Custom Domains](/developerportal/howto/custom-domains).
+For more information, see [How to Configure Custom Domains](custom-domains).
 
 ## 4 Access Restriction Profiles
 
@@ -147,5 +147,5 @@ In this tab you can manage custom access restriction profiles. These profiles ca
 
 * [Deploy and Manage](/developerportal/deploy)
 * [Environment Details](/developerportal/deploy/environments-details)
-* [How to Receive Environment Status Alerts](/developerportal/howto/receive-alerts)
-* [How to Restrict Access for Incoming Requests](/deployment/mendixcloud/access-restrictions)
+* [How to Receive Environment Status Alerts](/developerportal/operate/receive-alerts)
+* [How to Restrict Access for Incoming Requests](access-restrictions)

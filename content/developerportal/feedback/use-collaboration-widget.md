@@ -1,9 +1,10 @@
 ---
 title: "Use the Mendix Feedback & Collaboration Widget"
 category: "Feedback Management"
-menu_order: 20
+menu_order: 10
 description: "Describes how to use the Mendix Feedback & Collaboration Widget for providing feedback, editing, and sharing apps."
 tags: ["Collaboration","Widget","Developer Portal", "Event App"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
@@ -87,21 +88,21 @@ The sections below describe how to make sure you have the latest version of the 
 
 To ensure you have the latest version of the widget included in your app, follow these steps:
 
-1. Download the latest version of the [Mendix Feedback Widget](https://appstore.home.mendix.com/link/app/199/) from the App Store (as accessed through the Desktop Modeler).
+1.  Download the latest version of the [Mendix Feedback Widget](https://appstore.home.mendix.com/link/app/199/) from the App Store (as accessed through the Desktop Modeler).
 
-  {{% image_container width="450" %}}![](attachments/app-store.png)
-  {{% /image_container %}}
+	{{% image_container width="450" %}}![](attachments/app-store.png)
+	{{% /image_container %}}
 
-2. When the latest widget is included in your app, you need to ensure that the widget is added to the homepage of the application. Open the homepage from your app's **Project** > **Navigation**:
+2.  When the latest widget is included in your app, you need to ensure that the widget is added to the homepage of the application. Open the homepage from your app's **Project** > **Navigation**:
 
-    ![](attachments/show-page.png)
+	![](attachments/show-page.png)
 
-3. If the widget has not been added automatically, add it to the desired page or layout by selecting **Add widget** > **Add-on widgets** > **Feedback & Collaboration Widget** and dropping it into a position in the page:
+3.  If the widget has not been added automatically, add it to the desired page or layout by selecting **Add widget** > **Add-on widgets** > **Feedback & Collaboration Widget** and dropping it into a position in the page:
 
-    ![](attachments/feedback-collaboration-widget.png)
+	![](attachments/feedback-collaboration-widget.png)
 
 ### 4.2 Configuring the Widget
 
-You can configure the widget for certain actions in your app project (for example, to allow screenshots, to hide the Mendix logo, and to hide the **Share** button. All the properties are explained in the properties dialog box for the widget:
+You can configure the widget for certain actions in your app project (for example, to allow screenshots, to hide the Mendix logo, and to hide the **Share** button). All the properties are explained in the properties dialog box for the widget:
 
 ![](attachments/widget-properties.png)

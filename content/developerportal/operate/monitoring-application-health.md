@@ -1,6 +1,6 @@
 ---
 title: "Alerts"
-category: "Operate"
+category: "Operations"
 menu_order: 20
 description: "This page describes how to monitor the application health."
 tags: ["Monitoring","Mendix Cloud","Developer Portal","Performance","Health"]
@@ -12,7 +12,7 @@ tags: ["Monitoring","Mendix Cloud","Developer Portal","Performance","Health"]
 When your application has reached production status, it's important to keep track of its status and health. When you click **Alerts** in the **Operate** category of the **Developer Portal**, you can inspect your application's health in the Mendix Cloud. 
 
 Mendix analyzes the application and platform status periodically. All status alerts are logged in the **History** of the **Alerts**. 
-If you [Receive Environment Status Alerts](/developerportal/howto/receive-alerts), you will receive a status alert only once. Mendix will not send you multiple alerts of the same status.
+If you [Receive Environment Status Alerts](receive-alerts), you will receive a status alert only once. Mendix will not send you multiple alerts of the same status.
 
 This document will explain how to access the application status page, what the information on this page means, and how to look at the alerts for your app.
 
@@ -186,6 +186,6 @@ To access the history of the alerts from your app, follow these steps:
 
 * [Application Trends in Mendix Cloud v3](trends)
 * [Application Trends in Mendix Cloud v4](trends-v4)
-* [How to Configure Maintenance Windows](/developerportal/howto/maintenance-windows)
+* [How to Configure Maintenance Windows](/developerportal/deploy/maintenance-windows)
 * [Mendix Cloud Status](/developerportal/deploy/mendix-cloud-status)
 * [How to Submit Support Requests](/howtogeneral/support/how-to-submit-support-requests)

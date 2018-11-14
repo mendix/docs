@@ -102,7 +102,7 @@ You can change the Technical Contact by following these steps:
 
 It is possible to change or add new App Team roles for a specific app or at the company level for all company apps. This depends on your role:
 
-* 	As a SCRUM Master, you can edit roles for the specific app of which you are the SCRUM Master by selecting **Team** > **Manage Team**, clicking **Role settings,** then making your edits or clicking **New role** to create a custom new App Team role for that app
+* 	As a SCRUM Master, you can edit roles for the specific app of which you are the SCRUM Master by selecting **Team** > **Manage Team** (which will take you to the **App Team** tab of the **Settings** > **Security** page), clicking **Role settings,** then making your edits or clicking **New role** to create a custom new App Team role for that app
 
 	![](attachments/app-roles-edit.png)
 
@@ -116,6 +116,6 @@ It is possible to change or add new App Team roles for a specific app or at the 
 * [Company Admin Settings](/developerportal/company-app-roles/companyadmin-settings)
 * [How to Leave & Delete an App](../settings/leave-delete-app)
 * [How to Deactivate & Activate an App](../company-app-roles/deactivate-activate-app)
-* [Security – Node Permissions](/developerportal/settings/node-permissions)
+* [Security – Node Permissions](/developerportal/deploy/node-permissions)
 * [Technical Contact](/developerportal/company-app-roles/technical-contact)
 

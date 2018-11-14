@@ -8,6 +8,12 @@ tags: ["Developer Portal", "Cloud Environments", "Mendix Cloud", "SAP", "IBM", "
 
 ### November 14th, 2018
 
+#### Fixes
+
+* We fixed an issue in which [custom error pages](/howto/ux/custom-error-page) did not work for online applications in Mendix Cloud V4.
+
+#### Improvements
+
 The [Mendix Shop](https://mendixshop.mendixcloud.com) is open for business! This is a web shop where you can spend the credits you have gained by completing various [challenges](/developerportal/mendix-profile/#challenges). The shop has cool products like Mendix t-shirts, socks, and sweatbands, so be sure to check it out.
 
 ### November 1st, 2018
@@ -527,7 +533,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 #### Improvements
 
-* We enabled path-based access restrictions for all Mendix Cloud v3 apps. This allows users to more easily configure access restrictions on their environments. For more information, see [Access Restrictions](/deployment/mendixcloud/access-restrictions). Mendix Cloud v4 already has this functionality enabled.
+* We enabled path-based access restrictions for all Mendix Cloud v3 apps. This allows users to more easily configure access restrictions on their environments. For more information, see [Access Restrictions](/developerportal/deploy/access-restrictions). Mendix Cloud v4 already has this functionality enabled.
 
 ### August 14th, 2017
 

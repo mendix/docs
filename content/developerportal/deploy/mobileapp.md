@@ -31,12 +31,12 @@ In the **General settings** section, you must provide the following information:
 
 * The **Name** of the app
 * The unique **App Identifier** (for example, `com.example.CompanyExpenses`)
-* A **Desciption** of the app
+* A **Description** of the app
 * Whether a 5 digit PIN is enabled or disabled via the **PIN required?** check box
 
 ### 2.2 Profile Settings
 
-If you are targetting Mendix 7.2.0 or above, please specify the navigation profiles to use on phones and tablets.
+If you are targeting Mendix 7.2.0 or above, please specify the navigation profiles to use on phones and tablets.
 
 Make sure the profile identifier corresponds with the one defined in the Modeler.
 
@@ -50,7 +50,7 @@ For more information, see **Availability** in [Offline](/refguide/offline).
 
 By default, Mendix hybrid applications require a set of device permissions. When users install the app or open the app for the first time, they will be asked to grant these permissions. You can use the check boxes below to control which permissions are requested.
 
-The permssions that can be enabled/disabled:
+The permissions that can be enabled/disabled:
 
 * **Calendar**
 * **Camera**
@@ -78,7 +78,7 @@ In these tabs, you will see an overview of all the images that will be used in t
 * **Icons**
 * **Splash screens**
 
-The following image formats are supported: PNG, GIF, JPEG, and BMP. PNG is recommended, as it is compressed without loss of any information and supports transparancy very well.
+The following image formats are supported: PNG, GIF, JPEG, and BMP. PNG is recommended, as it is compressed without loss of any information and supports transparency very well.
 
 If you click **Edit**, you can replace the image by uploading a new file with the same dimensions as the original file.
 

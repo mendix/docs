@@ -34,7 +34,7 @@ The Mendix Cloud automatically monitors the health and status of apps that are d
 
 This status information will tell you important information that you either need in order to resolve the issue, or that needs to be included when submitting a support request with [Mendix Support](https://support.mendix.com). You can download a log of the alerts on the **Log** page under the **Operate** category.
 
-Any status that could cause your app to stop functioning will result in an alert. For example, the monitoring information from the image showes that one of the status indicators was **Critical**. When this happens to one of your nodes, all users that are subscribed to alerts will receive an email alert.
+Any status that could cause your app to stop functioning will result in an alert. For example, the monitoring information from the image shows that one of the status indicators was **Critical**. When this happens to one of your nodes, all users that are subscribed to alerts will receive an email alert.
 
 ## 3 Alerting Categories and Thresholds
 
@@ -82,7 +82,7 @@ Description | The container or virtual machine in which the application process 
 Example message | Packet loss = 5%, RTA = 226.74 ms.
 Warning Threshold | Response on a series of ICMP ping packets arrives with more than 5% packet loss, or with a latency higher than 200 milliseconds.
 Critical Threshold | Response on a series of ICMP ping packets arrives with more than 50% packet loss, or with a latency higher than 1 second.
-First actions to take | If this alert triggers and the application seems to be slow to respond, or if you're getting the red error page with running monsters, visit https://status.mendix.com/ to see if there is an outage. Inspect trends graphs to look for any anomaly in application behaviour leading up to the problem. If no outage is reported, contact Mendix Support, there might be something wrong with this specific environment.
+First actions to take | If this alert triggers and the application seems to be slow to respond, or if you're getting the red error page with running monsters, visit https://status.mendix.com/ to see if there is an outage. Inspect trends graphs to look for any anomaly in application behavior leading up to the problem. If no outage is reported, contact Mendix Support, there might be something wrong with this specific environment.
 
 Database Server Up | |
 :---|:---|
@@ -90,7 +90,7 @@ Description | The operating system of the database server used by the applicatio
 Example message | Packet loss = 5%, RTA = 226.74 ms.
 Warning Threshold | Response on a series of ICMP ping packets arrives with more than 5% packet loss, or with a latency higher than 200 milliseconds.
 Critical Threshold | Response on a series of ICMP ping packets arrives with more than 50% packet loss, or with a latency higher than 1 second.
-First actions to take | If this alert triggers and the application log displays errors about not being able to create database connections, visit https://status.mendix.com/ to see if there is an outage. Inspect trends graphs to look for any anomaly in application behaviour leading up to the problem. If no outage is reported, contact Mendix Support, there might be something wrong with this specific environment.
+First actions to take | If this alert triggers and the application log displays errors about not being able to create database connections, visit https://status.mendix.com/ to see if there is an outage. Inspect trends graphs to look for any anomaly in application behavior leading up to the problem. If no outage is reported, contact Mendix Support, there might be something wrong with this specific environment.
 
 Application Server Disk Usage | |
 :---|:---|
@@ -111,10 +111,10 @@ First actions to take | Review trends for *Database node disk usage in %* and *D
 Web Server | |
 :---|:---|
 Description | The application URL is reachable. This check tries to visit the URL of your application, retrieving HTTP headers on the top level location /.
-Example message | Did not find correct headers for url `https://example.mendixcloud.com/`.
+Example message | Did not find correct headers for URL `https://example.mendixcloud.com/`.
 Warning Threshold | The application URL is not reachable.
 Critical Threshold | Not used.
-First actions to take | If this alert triggers, and visiting the application url results in slow loading or unresponsiveness, visit [https://status.mendix.com/](https://status.mendix.com/) to see if there is an outage. This condition might point to an internal networking connectivity problem.
+First actions to take | If this alert triggers, and visiting the application URL results in slow loading or unresponsiveness, visit [https://status.mendix.com/](https://status.mendix.com/) to see if there is an outage. This condition might point to an internal networking connectivity problem.
 
 ### 3.3 Alerts in Mendix Cloud v4
 

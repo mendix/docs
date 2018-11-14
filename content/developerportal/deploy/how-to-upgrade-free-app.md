@@ -1,5 +1,6 @@
 ---
-title: "Upgrade Your Free App to a Licensed App"
+title: "License a Free App"
+# Merge with other Linking docs
 parent: "mendix-cloud-deploy"
 #menu_order: 170
 description: "How to upgrade a Free App to a Licensed App."

@@ -1,8 +1,8 @@
 ---
 title: "Environments"
 parent: "mendix-cloud-deploy"
-menu_order: 50
-description: "This page describes the deploy options of your App."
+menu_order: 10
+description: "List the environments in which your app is deployed. Also the starting point for managing existing environments and further deployments."
 tags: ["Deploy","App","Developer Portal"]
 ---
 
@@ -120,7 +120,7 @@ Clean | The environment has been cleaned.
 Custom Domain | Changes were made to the custom domain.
 Database Backup Downloaded | The database backup has been downloaded.
 Migration | The app has been migrated from one node to another node.
-Error | An error has occured while uploading an *.mda* file.
+Error | An error has occurred while uploading an *.mda* file.
 Files Backup Downloaded | Backup files have been downloaded.
 Maintenance | The admin password has been changed.
 MDA Uploaded | An *.mda* file has been uploaded.

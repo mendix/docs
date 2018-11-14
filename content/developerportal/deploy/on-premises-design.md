@@ -1,5 +1,5 @@
 ---
-title: "On Premises"
+title: "On-Premises"
 category: "Deploy and Manage"
 description: "Describes the options for deploying a Mendix app on premises"
 menu_order: 80

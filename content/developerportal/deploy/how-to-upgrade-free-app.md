@@ -41,7 +41,7 @@ Please note that because you are going to unlink the Sandbox from your Free App,
 
 {{% /alert %}}
 
-The documentation on how to download a backup can be found in [How To Download a Backup](/developerportal/howto/how-to-download-a-backup).
+The documentation on how to download a backup can be found in [How To Download a Backup](/developerportal/operate/how-to-download-a-backup).
 
 ### 3.2 Unlink your Free App from Sandbox
 
@@ -65,7 +65,7 @@ The documentation on how to link your Free App to a licensed cloud node can be f
 
 After you have linked your App to a licensed node, you will need to restore a backup from your Sandbox environment.
 
-The documentation on how to restore a backup can be found in [How To Restore a Backup](/developerportal/howto/how-to-restore-a-backup).
+The documentation on how to restore a backup can be found in [How To Restore a Backup](/developerportal/operate/how-to-restore-a-backup).
 
 ## 4 Upgrade Steps for a Free App Without a Sandbox Environment
 
@@ -77,8 +77,8 @@ To learn how to do this, see [How to Link Your Free App to a Licensed Cloud Node
 
 * [How to Configure Custom Domains](custom-domains)
 * [How to Deploy to the Mendix Cloud](mendix-cloud-deploy)
-* [How to Download A Backup](/developerportal/howto/how-to-download-a-backup)
+* [How to Download A Backup](/developerportal/operate/how-to-download-a-backup)
 * [How to Link a Different App to a Cloud Node](how-to-link-a-different-app-to-a-node)
-* [How to Restore A Backup](/developerportal/howto/how-to-restore-a-backup)
+* [How to Restore A Backup](/developerportal/operate/how-to-restore-a-backup)
 * [Company & App Roles](/developerportal/company-app-roles/index)
 * [How to Unlink Your Free App from a Sandbox Environment](how-to-unlink-sandbox)

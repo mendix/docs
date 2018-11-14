@@ -96,7 +96,7 @@ For more information about deployment, see [How to Deploy to the Mendix Cloud](/
 
 ### 5.2 Access to Backups
 
-This permission grants access to the backups of the environment. You can view, [create](/developerportal/howto/how-to-create-backup), [download](/developerportal/howto/how-to-download-a-backup), and [restore a backup](/developerportal/howto/how-to-restore-a-backup).
+This permission grants access to the backups of the environment. You can view, [create](/developerportal/operate/how-to-create-backup), [download](/developerportal/operate/how-to-download-a-backup), and [restore a backup](/developerportal/operate/how-to-restore-a-backup).
 
 For more information, see [Backups](/developerportal/operate/backups).
 
@@ -119,6 +119,6 @@ For more information, see [Metrics](/developerportal/operate/metrics).
 * [Application Trends in Mendix Cloud v3](/developerportal/operate/trends)
 * [Application Trends in Mendix Cloud v4](/developerportal/operate/trends-v4)
 * [How to Manage Company & App Roles](/developerportal/company-app-roles/manage-roles)
-* [How to Receive Environment Status Alerts](/developerportal/howto/receive-alerts)
+* [How to Receive Environment Status Alerts](/developerportal/operate/receive-alerts)
 * [Metrics](/developerportal/operate/metrics)
 * [Logs](/developerportal/operate/logs)

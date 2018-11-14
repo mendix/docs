@@ -24,5 +24,5 @@ Subscribing for updates from this site is recommended. You will be informed abou
 * [How to Configure Maintenance Windows](maintenance-windows)
 * [Mendix Support](/howtogeneral/support)
 * [Operate](/developerportal/operate)
-* [How to Receive Environment Status Alerts](/developerportal/howto/receive-alerts)
+* [How to Receive Environment Status Alerts](/developerportal/operate/receive-alerts)
 * [How to View the Mendix Cloud Version and Region](cloud-version-region)

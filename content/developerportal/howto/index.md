@@ -6,17 +6,3 @@ title: "How-to's"
 
 This category contains documents about the use of specific tasks in the [Developer Portal](http://home.mendix.com).
 
-### Alerts
-
-* [Receive Environment Status Alerts](receive-alerts)
-
-### Backups
-
-* [Create a Backup](how-to-create-backup)
-* [Download a Backup](how-to-download-a-backup)
-* [Restore a Backup](how-to-restore-a-backup)
-
-### Local Testing
-
-* [Restore a Backup Locally](restore-backup-locally)
-

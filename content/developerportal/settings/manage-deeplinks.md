@@ -1,7 +1,6 @@
 ---
 title: "Manage Developer Portal Deep Links"
-parent: "general"
-#menu_order: 50
+parent: "general-settings"
 description: "how to use shortcuts and deep links in the Developer Portal."
 tags: ["Developer Portal","deeplink"]
 ---

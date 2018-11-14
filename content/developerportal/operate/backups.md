@@ -96,6 +96,6 @@ At the bottom of the screen, you can click **Delete** to delete this particular 
 
 ## 5 Related Content
 
-* [How to Create a Backup](/developerportal/howto/how-to-create-backup)
-* [How to Download a Backup](/developerportal/howto/how-to-download-a-backup)
-* [How to Restore a Backup](/developerportal/howto/how-to-restore-a-backup)
+* [How to Create a Backup](how-to-create-backup)
+* [How to Download a Backup](how-to-download-a-backup)
+* [How to Restore a Backup](how-to-restore-a-backup)

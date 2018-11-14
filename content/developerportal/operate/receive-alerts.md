@@ -1,7 +1,7 @@
 ---
 title: "Receive Environment Status Alerts"
-category: "How-To's"
-menu_order: 180
+parent: "monitoring-application-health"
+#menu_order: 180
 description: "Describes how to receive environment status alerts."
 tags: ["Technical Contact","Settings","Alerts","Developer Portal"]
 ---
@@ -67,9 +67,9 @@ You can manage the alerts by yourself, follow these steps:
 
 ## 4 Related Content
 
-* [Alerts](/developerportal/operate/monitoring-application-health)
-* [Application Trends in Mendix Cloud v3](/developerportal/operate/trends)
-* [Application Trends in Mendix Cloud v4](/developerportal/operate/trends-v4)
+* [Alerts](monitoring-application-health)
+* [Application Trends in Mendix Cloud v3](trends)
+* [Application Trends in Mendix Cloud v4](trends-v4)
 * [How to Manage Company & App Roles](/developerportal/company-app-roles/manage-roles)
 * [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy)
 * [Mendix Cloud v4 - FAQ](/developerportal/deploy/mxcloudv4)

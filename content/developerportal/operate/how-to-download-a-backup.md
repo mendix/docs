@@ -1,6 +1,6 @@
 ---
 title: "Download a Backup"
-category: "How-To's"
+parent: "backups"
 menu_order: 200
 description: "This page describes how to download a backup."
 tags: ["Backup","Download","Mendix Cloud","Developer Portal"]

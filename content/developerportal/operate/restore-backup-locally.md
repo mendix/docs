@@ -2,7 +2,7 @@
 title: "Restore a Backup Locally"
 # try using linktitle rather than having to rename everything to add the -a-
 linktitle: "restore backup locally"
-category: "How-To's"
+parent: "backups"
 menu_order: 220
 #parent: "how-to-restore-a-backup"
 description: "This page describes how to restore a backup."
@@ -116,4 +116,4 @@ If you also want to restore the **FileDocuments**, you need to follow the follow
 
 ## 6 Related Content
 
-* [Backups](/developerportal/operate/backups)
+* [Backups](backups)

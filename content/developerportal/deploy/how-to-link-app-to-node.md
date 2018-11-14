@@ -65,8 +65,8 @@ The app is now connected to the licensed cloud node.
 
 *   [How to Configure Custom Domains](custom-domains)
 *   [How to Deploy to the Mendix Cloud](mendix-cloud-deploy)
-*   [How to Download a Backup](/developerportal/howto/how-to-download-a-backup)
+*   [How to Download a Backup](/developerportal/operate/how-to-download-a-backup)
 *   [How to Link a Different App to a Cloud Node](how-to-link-a-different-app-to-a-node)
-*   [How to Restore a Backup](/developerportal/howto/how-to-restore-a-backup)
+*   [How to Restore a Backup](/developerportal/operate/how-to-restore-a-backup)
 *   [How to Unlink Your Free App from a Sandbox Environment](how-to-unlink-sandbox)
 *   [How to Set Up Google Two Factor Authentication](/howtogeneral/support/how-to-set-up-two-factor-authentication-with-google-authenticator)

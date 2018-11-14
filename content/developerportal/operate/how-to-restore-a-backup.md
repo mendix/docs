@@ -1,6 +1,6 @@
 ---
 title: "Restore a Backup"
-category: "How-To's"
+parent: "backups"
 menu_order: 210
 description: "This page describes how to restore a backup."
 tags: ["Backup","Restore","Mendix Cloud","Developer Portal"]
@@ -19,7 +19,7 @@ This how-to describes how to restore a backup to a Free App or licensed cloud no
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Have a Free App or licensed cloud node available
-* Have a downloaded backup from a Free App or a licensed cloud node. See [How to Download a Backup](/developerportal/howto/how-to-download-a-backup)
+* Have a downloaded backup from a Free App or a licensed cloud node. See [How to Download a Backup](how-to-download-a-backup)
 * Have the correct [Security - Node Permissions](/developerportal/settings/node-permissions)
 
 ## 3 Restoring a Backup

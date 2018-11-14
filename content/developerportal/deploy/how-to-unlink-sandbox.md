@@ -32,7 +32,7 @@ Please note that because you are going to unlink the Sandbox from your Free App,
 
 {{% /alert %}}
 
-The documentation on how to download a backup can be found [here](/developerportal/howto/how-to-download-a-backup).
+The documentation on how to download a backup can be found [here](/developerportal/operate/how-to-download-a-backup).
 
 ## 4 Unlink a Free App From a Sandbox
 
@@ -52,9 +52,9 @@ The Free App has now been unlinked from the Sandbox environment.
 
 *   [How to Configure Custom Domains](custom-domains)
 *   [How to Deploy to the Mendix Cloud](mendix-cloud-deploy)
-*   [How to Download a Backup](/developerportal/howto/how-to-download-a-backup)
+*   [How to Download a Backup](/developerportal/operate/how-to-download-a-backup)
 *   [How to Link a Different App to a Cloud Node](how-to-link-a-different-app-to-a-node)
 *   [How to Link Your Free App to a Licensed Cloud Node](how-to-link-app-to-node) 
-*   [How to Restore a Backup](/developerportal/howto/how-to-restore-a-backup)
+*   [How to Restore a Backup](/developerportal/operate/how-to-restore-a-backup)
 *   [How to Upgrade Your Free App to a Licensed App](how-to-upgrade-free-app)
 *   [How to Set Up Two-Factor Authentication With Google Authenticator](/howtogeneral/support/how-to-set-up-two-factor-authentication-with-google-authenticator)

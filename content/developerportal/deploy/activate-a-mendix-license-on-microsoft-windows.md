@@ -62,7 +62,7 @@ In this section, you will enter the license key into the Mendix server, thus com
 ## 6 Related Content
 
 *   [Setting up the Database User](setting-up-the-database-user)
-*   [Troubleshooting](troubleshooting)
+*   [Troubleshooting](troubleshooting-iis)
 *   [Restoring a SQL Server Database](restoring-a-sql-server-database)
 *   [Troubleshooting SQL Server](troubleshooting-sql-server)
 *   [Mendix SQL Maintenance Plans](mendix-sql-maintenance-plans)

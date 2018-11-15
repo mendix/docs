@@ -12,7 +12,7 @@ tags: ["Developer Portal", "Cloud Environments", "Mendix Cloud", "SAP", "IBM", "
 
 *  The [Mendix Shop](https://mendixshop.mendixcloud.com) is open for business! This is a web shop where you can spend the credits you have gained by completing various [challenges](/developerportal/mendix-profile/#challenges). The shop has cool products like Mendix t-shirts, socks, and sweatbands, so be sure to check it out.
 
-	{{% image_container width="400" %}}![](attachments/shop.png)
+	{{% image_container width="300" %}}![](attachments/shop.png)
 	{{% /image_container %}}
 
 #### Fixes
@@ -241,7 +241,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 * We have introduced scaling via API for Mendix Cloud V4. It is now possible to scale Mendix Cloud V4 applications via the Deploy API. For instructions, see the [Deploy API](../../apidocs-mxsdk/apidocs/deploy-api).
 *  We have aggregated the health icons for the acceptance and test environments in the **Nodes** dashboard and **Company Admin** screen.
 
-	{{% image_container width="400" %}}![](attachments/CPHealthIcon.png)
+	{{% image_container width="300" %}}![](attachments/CPHealthIcon.png)
 	{{% /image_container %}}
 
 * The health icon will display the health status of the environment that is in the worst condition. This is to prepare for an upcoming release that will support more than three environments per application.

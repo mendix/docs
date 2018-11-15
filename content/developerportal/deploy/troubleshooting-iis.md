@@ -1,7 +1,7 @@
 ---
 title: "IIS (Internet Information Services) Troubleshooting"
 parent: "on-premises-design"
-tags: ["IIS". "Windows", "Internet Information Services", "Service Console"]
+tags: ["IIS", "Windows", "Internet Information Services", "Service Console"]
 ---
 
 ## 1 Introduction

@@ -1,5 +1,5 @@
 ---
-title: "General Settings"
+title: "Manage General App Settings"
 category: "Settings"
 menu_order: 10
 description: "This page describes general settings of your app."

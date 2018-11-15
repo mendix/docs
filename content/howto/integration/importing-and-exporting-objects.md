@@ -1,5 +1,5 @@
 ---
-title: "Import and Export Objects"
+title: "Import & Export Objects"
 category: "Integration"
 tags: ["mpk", "Mendix project packages", "import", "export", "documents", "project", "module", "widget"]
 ---

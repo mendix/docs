@@ -30,8 +30,7 @@ To create a new API key, click **Create API Key**  and follow these steps:
 
 	![](attachments/create-key-2.png)
 
-	{{% alert type="warning" %}}
-	For security reasons, the API key will only be displayed once, during **Step 2 of 2**. It will not be displayed again.
+	{{% alert type="warning" %}}For security reasons, the API key will only be displayed once, during **Step 2 of 2**. It will not be displayed again.
 	{{% /alert %}}
 
 ## 3 Related Content

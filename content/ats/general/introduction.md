@@ -1,6 +1,7 @@
 ---
 title: "Introduction to ATS"
-category: "General"
+category: "Application Test Suite"
+menu_order: 10
 ---
 
 ## 1 ATS Start Page

@@ -1,5 +1,5 @@
 ---
-title: "AQM"
+title: "AQM Guide"
 ---
 
 ## 1 Introduction to the Application Quality Monitor Documentation

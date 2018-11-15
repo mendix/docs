@@ -1,6 +1,6 @@
 ---
 title: "Manage General App Settings"
-category: "Settings"
+category: "App Settings"
 menu_order: 10
 description: "This page describes general settings of your app."
 tags: ["Settings", "App", "Developer Portal"]

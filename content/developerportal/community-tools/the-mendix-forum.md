@@ -1,6 +1,6 @@
 ---
 title: "The Mendix Forum"
-category: "Tools"
+category: "Community Tools"
 ---
 
 ## 1 Introduction

@@ -94,7 +94,7 @@ These are points you can gain through activity on the [Mendix Forum](https://for
 | Downvote someone                            | -1     | n/a                 |
 | Receive a downvote                          | -2     | n/a                 |
 
-### 7.2 App Store Points
+### 7.2 App Store Points {#app-store-points}
 
 These are points you can gain through activity in the [Mendix App Store](https://appstore.home.mendix.com/).
 
@@ -163,12 +163,6 @@ In order to receive Mendix points for your contributions to Mendix GitHub reposi
 | Attend the [Rapid Developer Classroom](https://gettingstarted.mendixcloud.com/link/classroom/rapid) course | 10     | n/a          |
 | Make a small contribution to the Mendix documentation        | 5      | n/a          |
 | Complete a unit in the Mendix Academy                        | 1      | n/a          |
-
-{{% alert type="info" %}}
-
-For details on how to gain Mendix points on documentation work, see [How to Contribute to the Mendix Docuemntation](/community/documentation/contribute-to-the-mendix-documentation).
-
-{{% /alert %}}
 
 ### 7.6 Point Levels
 

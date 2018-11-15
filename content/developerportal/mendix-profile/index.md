@@ -94,7 +94,7 @@ These are points you can gain through activity on the [Mendix Forum](https://for
 | Downvote someone                            | -1     | n/a                 |
 | Receive a downvote                          | -2     | n/a                 |
 
-### 7.2 App Store Points
+### 7.2 App Store Points {#app-store-points}
 
 These are points you can gain through activity in the [Mendix App Store](https://appstore.home.mendix.com/).
 

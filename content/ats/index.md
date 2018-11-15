@@ -1,5 +1,5 @@
 ---
-title: "Application Test Suite"
+title: "ATS"
 ---
 
 ## 1 Introduction to the Application Test Suite Documentation

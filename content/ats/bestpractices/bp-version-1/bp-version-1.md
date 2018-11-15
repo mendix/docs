@@ -1,7 +1,7 @@
 ---
 title: "ATS 1 Best Practices"
 category: "Best Practices"
-menu_order: 10
+menu_order: 20
 ---
 
 These are the main documents in this section:

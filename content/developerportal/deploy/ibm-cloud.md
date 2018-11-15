@@ -113,7 +113,7 @@ To set up IBM Cloud, follow these steps:
 
 #### 3.2.2 Deploying to Kubernetes
 
-{{% alert type="warning" %}}Please note that the default setup for deploying to Kubernetes to IBM Cloud is not currently suitable for production environments. Please refer to IBM documentation or contact [Mendix support](https://support.mendix.com) if you want to use Kubernetes for a production environment on IBM Cloud.
+{{% alert type="warning" %}}Please note that the default setup for deploying to Kubernetes to IBM Cloud is not currently suitable for production environments. Please refer to [IBM documentation](https://console.bluemix.net/docs/apps/tutorials/tutorial_mendix_kubernetes.html) or contact [Mendix support](https://support.mendix.com) if you want to use Kubernetes for a production environment on IBM Cloud.
 {{% /alert %}}
 
 1. Choose the **Region**, **Organization**, **Space**, and **Cluster name** to deploy to.

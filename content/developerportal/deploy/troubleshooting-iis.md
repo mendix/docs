@@ -1,6 +1,6 @@
 ---
 title: "IIS (Internet Information Services) Troubleshooting"
-parent: "on-premises-design"
+parent: "deploy-mendix-on-microsoft-windows"
 tags: ["IIS", "Windows", "Internet Information Services", "Service Console"]
 ---
 

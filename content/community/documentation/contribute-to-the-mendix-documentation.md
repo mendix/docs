@@ -73,7 +73,7 @@ Mendix supports documentation for three major versions at any one time.
 
 To submit a new how-to or reference guide page to the Mendix documentation, follow these steps:
 
-1. Save a copy of the [How-to Template](template/the-how-to-template-page) or [Reference Guide Page Template](the-reference-guide-page-template-page) locally to start writing.
+1. Save a copy of the [How-to Template](the-how-to-template-page) or [Reference Guide Page Template](the-reference-guide-page-template-page) locally to start writing.
 2. Follow the guidelines in the template for writing your document, and make sure the text aligns with our [Content Writing and Formatting Guidelines](content-writing-and-formatting-guidelines).
 3. Add screenshots and other images to a new sub-folder in the **attachments** folder. For details on working with images, see the section [Naming New Files](#Naming) below.
 4. To merge your new documentation, commit it to the GitHub repository:
@@ -117,5 +117,5 @@ The points are awarded when the pull request is merged.
 ## 7 Related Content
 
 * [Content Writing and Formatting Guidelines](content-writing-and-formatting-guidelines)
-* [How-to Template](template/the-how-to-template-page)
+* [How-to Template](the-how-to-template-page)
 * [Reference Guide Page Template](the-reference-guide-page-template-page)

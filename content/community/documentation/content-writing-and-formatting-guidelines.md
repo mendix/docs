@@ -110,7 +110,7 @@ Your note.
 
 ## 5 Guidelines for How-to's
 
-This section presents detailed guidlines for writing a how-to. Read this section while referencing the [How-to Template](template/the-how-to-template-page).
+This section presents detailed guidlines for writing a how-to. Read this section while referencing the [How-to Template](the-how-to-template-page).
 
 ### 5.1 How-to Sections
 

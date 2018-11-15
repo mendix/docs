@@ -1499,7 +1499,7 @@ module.exports = {
     },
     {
       from: "/howto50/Troubleshooting",
-      to: "/developerportal/deploy/troubleshooting"
+      to: "/developerportal/deploy/troubleshooting-iis"
     },
     {
       from: "/howto50/Troubleshooting+SQL+Server",
@@ -2030,7 +2030,7 @@ module.exports = {
     },
     {
       from: "/howto6/Troubleshooting",
-      to: "/developerportal/deploy/troubleshooting"
+      to: "/developerportal/deploy/troubleshooting-iis"
     },
     {
       from: "/howto6/Troubleshooting+SQL+Server",

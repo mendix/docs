@@ -244,10 +244,6 @@ module.exports = {
       to: "/community/tools/how-to-set-up-your-partner-profile"
     },
     {
-      from: "/community/The+How+to+Template+Page",
-      to: "/community/documentation/the-how-to-template-page"
-    },
-    {
       from: "/community/The+Mendix+Job+Board",
       to: "/community/tools/the-mendix-job-board"
     },
@@ -1499,7 +1495,7 @@ module.exports = {
     },
     {
       from: "/howto50/Troubleshooting",
-      to: "/developerportal/deploy/troubleshooting"
+      to: "/developerportal/deploy/troubleshooting-iis"
     },
     {
       from: "/howto50/Troubleshooting+SQL+Server",
@@ -2030,7 +2026,7 @@ module.exports = {
     },
     {
       from: "/howto6/Troubleshooting",
-      to: "/developerportal/deploy/troubleshooting"
+      to: "/developerportal/deploy/troubleshooting-iis"
     },
     {
       from: "/howto6/Troubleshooting+SQL+Server",

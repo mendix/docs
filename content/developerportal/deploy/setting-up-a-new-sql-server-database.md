@@ -82,6 +82,6 @@ END;
 * [How to Set Up the Database User](setting-up-the-database-user)
 * [How to Share the Development Database](/howto/collaboration-requirements-management/sharing-the-development-database)
 * [How to Restore a SQL Server Database](restoring-a-sql-server-database)
-* [How to Troubleshoot](troubleshooting)
+* [How to Troubleshoot](troubleshooting-iis)
 * [How to Troubleshoot an SQL Server](troubleshooting-sql-server)
 * [How to Set Up Mendix SQL Maintenance Plans](mendix-sql-maintenance-plans)

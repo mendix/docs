@@ -1,5 +1,5 @@
 ---
-title: "Application Quality Monitor Overview"
+title: "Application Quality Monitor"
 ---
 
 ## 1 Introduction

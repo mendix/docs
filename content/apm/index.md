@@ -1,5 +1,5 @@
 ---
-title: "Application Performance Monitor"
+title: "APM Guide"
 ---
 
 ## 1 Introduction to the Application Performance Monitor Documentation

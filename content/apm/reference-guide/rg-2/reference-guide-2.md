@@ -1,7 +1,7 @@
 ---
 title: "APM 2 Reference Guide"
 category: "Reference Guide"
-menu_order: 20
+menu_order: 10
 ---
 
 {{% alert type="warning" %}}

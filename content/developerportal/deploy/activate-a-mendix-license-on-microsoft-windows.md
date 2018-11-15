@@ -1,6 +1,6 @@
 ---
-title: "Activate a Mendix License on Microsoft Windows"
-parent: on-premises-design
+title: "MS Windows: Activate a Mendix License on Microsoft Windows"
+parent: "deploy-mendix-on-microsoft-windows"
 tags: ["license", "Windows", "on-premises", "Mendix Service Console"]
 ---
 

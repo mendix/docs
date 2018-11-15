@@ -1,7 +1,7 @@
 ---
-title: "Deploy Mendix on Microsoft Windows"
-parent: on-premises-design
-tags: []
+title: "Microsoft Windows"
+parent: "on-premises-design"
+tags: ["deploy", "Windows", "On Premises", "Microsoft"]
 ---
 
 ## 1 Introduction

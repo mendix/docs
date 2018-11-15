@@ -1,6 +1,6 @@
 ---
-title: "Implement Security for Your On-Premises Installation"
-parent: on-premises-design
+title: "Security for Your On-Premises Installation"
+parent: "on-premises-design"
 tags: []
 ---
 
@@ -10,7 +10,7 @@ This how-to serves as a checklist for implementing security for your on-premises
 
 **This how-to will teach you how to do the following:**
 
-* Use a Mendix version containing the lasteset security patches
+* Use a Mendix version containing the latest security patches
 * Configure file system access
 * Use an HTTP reverse proxy with SSL support
 * Configure your firewall
@@ -44,7 +44,7 @@ You are required to explicitly configure the application to be able to connect f
 
 ## 7 Letting the HTTP Reverse Proxy Serve Static Content
 
-Mendix strongly recommendeds configuring the reverse proxy to directly serve static content from the `web` directory on the root location of the application URL and the Mendix client system (located in the correct version to be used of the installed Mendix runtime distribution) on `/mxclientsystem`. The application process itself should only handle dynamic content (like the `/xas/` and `/ws/` sub-URLs).
+Mendix strongly recommends configuring the reverse proxy to directly serve static content from the `web` directory on the root location of the application URL and the Mendix client system (located in the correct version to be used of the installed Mendix runtime distribution) on `/mxclientsystem`. The application process itself should only handle dynamic content (like the `/xas/` and `/ws/` sub-URLs).
 
 ## 8 Securing Access to the Admin Port (for m2ee-tools and Windows Service Console Access)
 

@@ -1,6 +1,6 @@
 ---
-title: "Mendix on Windows – Microsoft SQL Server"
-parent: on-premises-design
+title: "Microsoft SQL Server"
+parent: "on-premises-design"
 tags: []
 ---
 

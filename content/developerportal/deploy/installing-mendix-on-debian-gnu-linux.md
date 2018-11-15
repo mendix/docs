@@ -1,7 +1,7 @@
 ---
-title: "Install Mendix on Debian GNU Linux"
-parent: on-premises-design
-tags: []
+title: "Debian GNU/Linux"
+parent: "on-premises-design"
+tags: ["Debian", "GNU", "Linux", "install", "deploy"]
 ---
 
 The documentation describing the installation and basic configuration of Mendix on a system running Debian GNU/Linux is available as part of the m2ee-tools helper program: [https://github.com/mendix/m2ee-tools/tree/develop/doc/README.md](https://github.com/mendix/m2ee-tools/tree/develop/doc/README.md).

@@ -8,13 +8,16 @@ tags: ["Developer Portal", "Cloud Environments", "Mendix Cloud", "SAP", "IBM", "
 
 ### November 14th, 2018
 
+#### Mendix Shop
+
+*  The [Mendix Shop](https://mendixshop.mendixcloud.com) is open for business! This is a web shop where you can spend the credits you have gained by completing various [challenges](/developerportal/mendix-profile/#challenges). The shop has cool products like Mendix t-shirts, socks, and sweatbands, so be sure to check it out.
+
+	{{% image_container width="300" %}}![](attachments/shop.png)
+	{{% /image_container %}}
+
 #### Fixes
 
 * We fixed an issue in which [custom error pages](/howto/ux/custom-error-page) did not work for online applications in Mendix Cloud V4.
-
-#### Improvements
-
-* The [Mendix Shop](https://mendixshop.mendixcloud.com) is open for business! This is a web shop where you can spend the credits you have gained by completing various [challenges](/developerportal/mendix-profile/#challenges). The shop has cool products like Mendix t-shirts, socks, and sweatbands, so be sure to check it out.
 
 ### November 1st, 2018
 
@@ -28,9 +31,9 @@ tags: ["Developer Portal", "Cloud Environments", "Mendix Cloud", "SAP", "IBM", "
 
 ### October 30th, 2018
 
-#### Cloud v3 PostgreSQL backup format changed
+#### Cloud v3 PostgreSQL Backup Format Changed
 
-* Cloud v3 PostgreSQL backups are now created with `pg_dump` version 1.13. This version has been shipped with PostgreSQL since March 2018 (PostgreSQL 10.3, 9.6.8, 9.5.12, 9.4.17 and 9.3.22). The side-effect is that it is not possible to restore these PostgreSQL backups using a `pg_restore` version below 1.13. The error that you will receive is: `pg_restore: [archiver] unsupported version (1.13) in file header`. To fix this issue, upgrade your PostgreSQL client software, to one that includes newer versions of `pg_dump` and `pg_restore`.
+* Cloud v3 PostgreSQL backups are now created with `pg_dump` version 1.13. This version has been shipped with PostgreSQL since March 2018 (PostgreSQL 10.3, 9.6.8, 9.5.12, 9.4.17, and 9.3.22). The side-effect is that it is not possible to restore these PostgreSQL backups using a `pg_restore` version below 1.13. The error that you will receive is `pg_restore: [archiver] unsupported version (1.13) in file header`. To fix this issue, upgrade your PostgreSQL client software to one that includes newer versions of `pg_dump` and `pg_restore`.
 
 ### October 29th, 2018
 
@@ -236,11 +239,12 @@ In some cases, you may still experience false positives for the runtime heartbea
 #### Improvements
 
 * We have introduced scaling via API for Mendix Cloud V4. It is now possible to scale Mendix Cloud V4 applications via the Deploy API. For instructions, see the [Deploy API](../../apidocs-mxsdk/apidocs/deploy-api).
-* We have aggregated the health icons for the acceptance and test environments in the **Nodes** dashboard and **Company Admin** screen.
+*  We have aggregated the health icons for the acceptance and test environments in the **Nodes** dashboard and **Company Admin** screen.
 
-  ![](attachments/CPHealthIcon.png)
+	{{% image_container width="300" %}}![](attachments/CPHealthIcon.png)
+	{{% /image_container %}}
 
-  * The health icon will display the health status of the environment that is in the worst condition. This is to prepare for an upcoming release that will support more than three environments per application.
+* The health icon will display the health status of the environment that is in the worst condition. This is to prepare for an upcoming release that will support more than three environments per application.
 
 #### Fixes
 

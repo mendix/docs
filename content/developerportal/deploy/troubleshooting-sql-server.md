@@ -1,5 +1,5 @@
 ---
-title: "Troubleshooting the SQL Server"
+title: "SQL Server: Troubleshooting"
 parent: "mendix-on-windows-microsoft-sql-server"
 ---
 

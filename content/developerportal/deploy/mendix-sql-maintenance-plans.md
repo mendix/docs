@@ -1,6 +1,6 @@
 ---
-title: "Set Up Mendix SQL Maintenance Plans"
-parent: on-premises-design
+title: "SQL Server: Maintenance Plans Set Up"
+parent: "mendix-on-windows-microsoft-sql-server"
 ---
 
 ## 1 Introduction

@@ -30,6 +30,11 @@ ats:
     - "Reference Guide"
     - "How-to's"
     - "Best Practices"
+community:
+  space: "Community"
+  priority: false
+  menu_categories:
+    - "Documentation"
 howto40:
   space: "Mendix 4 How-to's"
   priority: false

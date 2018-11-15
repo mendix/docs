@@ -2,7 +2,7 @@
 
 <div class="alert alert-info">
 
-Available only for attributes of type Date and time. 
+Available only for attributes of the date and time type.
 
 </div>
 

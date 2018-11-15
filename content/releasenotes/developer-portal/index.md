@@ -12,7 +12,7 @@ tags: ["Developer Portal", "Cloud Environments", "Mendix Cloud", "SAP", "IBM", "
 
 * We fixed an issue in which [custom error pages](/howto/ux/custom-error-page) did not work for online applications in Mendix Cloud V4.
 
-#### Improvements
+#### Mendix Shop
 
 * The [Mendix Shop](https://mendixshop.mendixcloud.com) is open for business! This is a web shop where you can spend the credits you have gained by completing various [challenges](/developerportal/mendix-profile/#challenges). The shop has cool products like Mendix t-shirts, socks, and sweatbands, so be sure to check it out.
 

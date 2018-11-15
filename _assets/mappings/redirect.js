@@ -170,6 +170,10 @@ module.exports = {
      * Best Practices
      ****************************************************/
     {
+      from: "/community/Contribute+to+the+Mendix+Documentation",
+      to: "/developerportal/community-documentation/contribute-to-the-mendix-documentation"
+    },
+	{
       from: "/bestpractices/Best+Practices+for+Component+Based+Development",
       to: "/howtogeneral/bestpractices/best-practices-for-component-based-development"
     },

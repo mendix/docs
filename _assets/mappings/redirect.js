@@ -167,13 +167,40 @@ module.exports = {
       to: "/apidocs-mxsdk/mxsdk/tutorial-for-the-mendix-sdk"
     },
     /****************************************************
+     * APPSTORE
+     ****************************************************/
+    {
+      from: "/appstore/Adding+App+Store+content+to+your+app",
+      to: "/community/app-store/use-app-store-content-in-the-modeler"
+    },
+    {
+      from: "/appstore/App+Store+Approval+Guidelines",
+      to: "/community/app-store/share-app-store-content"
+    },
+    {
+      from: "/appstore/App+Store+Content+Support",
+      to: "/community/app-store/app-store-content-support"
+    },
+    {
+      from: "/community/app-store-content-support",
+      to: "/community/app-store/app-store-content-support"
+    },
+    {
+      from: "/appstore/App+Store",
+      to: "/community/app-store/"
+    },
+    {
+      from: "/appstore/App+Store+Home",
+      to: "/community/app-store/"
+    },
+    {
+      from: "/appstore/Install+an+App+from+the+App+Store",
+      to: "/community/app-store/use-app-store-content-in-the-modeler"
+    },
+    /****************************************************
      * Best Practices
      ****************************************************/
     {
-      from: "/community/Contribute+to+the+Mendix+Documentation",
-      to: "/developerportal/community-documentation/contribute-to-the-mendix-documentation"
-    },
-	{
       from: "/bestpractices/Best+Practices+for+Component+Based+Development",
       to: "/howtogeneral/bestpractices/best-practices-for-component-based-development"
     },
@@ -192,6 +219,41 @@ module.exports = {
     {
       from: "/howtogeneral/bestpractices/naming-conventions",
       to: "/howtogeneral/bestpractices/dev-best-practices"
+    },
+    /****************************************************
+     * Community
+     ****************************************************/
+    {
+      from: "/community/Community+Documentation",
+      to: "/community/documentation/"
+    },
+    {
+      from: "/community/Community+Projects",
+      to: "/community/tools/"
+    },
+    {
+      from: "/community/Content+Writing+and+Formatting+Guidelines",
+      to: "/community/documentation/content-writing-and-formatting-guidelines"
+    },
+    {
+      from: "/community/Contribute+to+the+Mendix+Documentation",
+      to: "/community/documentation/contribute-to-the-mendix-documentation"
+    },
+    {
+      from: "/community/How+to+set+up+your+partner+profile",
+      to: "/community/tools/how-to-set-up-your-partner-profile"
+    },
+    {
+      from: "/community/The+Mendix+Job+Board",
+      to: "/community/tools/the-mendix-job-board"
+    },
+    {
+      from: "/community/The+Mendix+MVP+program",
+      to: "/community/tools/the-mendix-mvp-program"
+    },
+    {
+      from: "/community/The+Reference+Guide+Page+Template+Page",
+      to: "/community/documentation/the-reference-guide-page-template-page"
     },
     /****************************************************
      * HOWTO MENDIX 4
@@ -998,6 +1060,10 @@ module.exports = {
     {
       from: "/howto50/Access+a+Samba+share+from+the+MxCloud",
       to: "/howto50/access-a-samba-share-from-the-mxcloud"
+    },
+    {
+      from: "/howto50/Adding+App+Store+content+to+your+app",
+      to: "/community/app-store/use-app-store-content-in-the-modeler"
     },
     {
       from: "/howto50/Anonymous+User+Security",

@@ -1,5 +1,5 @@
 ---
-title: "Settings"
+title: "App Settings"
 ---
 
 ## 1 Introduction

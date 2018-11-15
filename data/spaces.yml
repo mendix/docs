@@ -30,13 +30,6 @@ ats:
     - "Reference Guide"
     - "How-to's"
     - "Best Practices"
-community:
-  space: "Community"
-  priority: false
-  menu_categories:
-    - "Tools"
-    - "Documentation"
-    - "App Store"
 howto40:
   space: "Mendix 4 How-to's"
   priority: false
@@ -199,5 +192,10 @@ developerportal:
     - "Developing in Mendix"
     - "Deployment"
     - "Operations"
-    - "Settings"
+    - "App Settings"
+    - "Community Tools"
+    - "Community Documentation"
+    - "App Store"
+
+
 

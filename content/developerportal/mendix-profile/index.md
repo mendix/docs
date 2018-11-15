@@ -166,7 +166,7 @@ In order to receive Mendix points for your contributions to Mendix GitHub reposi
 
 {{% alert type="info" %}}
 
-For details on how to gain Mendix points on documentation work, see [How to Contribute to the Mendix Docuemntation](/community/documentation/contribute-to-the-mendix-documentation).
+For details on how to gain Mendix points on documentation work, see [How to Contribute to the Mendix Docuemntation](/developerportal/community-documentation/contribute-to-the-mendix-documentation).
 
 {{% /alert %}}
 

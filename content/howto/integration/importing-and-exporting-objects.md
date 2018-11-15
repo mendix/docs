@@ -153,7 +153,7 @@ To import widgets, follow these steps:
 
 ### 2.5 Importing Content from the App Store
 
-To learn more about importing content from the App Store, see [Use App Store Content in the Desktop Modeler](/community/app-store/use-app-store-content-in-the-modeler).
+To learn more about importing content from the App Store, see [Use App Store Content in the Desktop Modeler](/developerportal/app-store/use-app-store-content-in-the-modeler).
 
 ## 3 Exporting Objects
 

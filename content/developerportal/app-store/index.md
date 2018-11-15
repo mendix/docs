@@ -12,7 +12,7 @@ Mendix delivers a robust platform for the rapid development of apps. To make you
 
 The App Store is completely integrated with the Community Profile, so you can find out information about who developed the item you are downloading. You can see the **Developer Info** on the information page for each App Store item, which presents the name, job title, and Mendix level of the developer; the numbers of added items, updated items, and reviews added; and the company for which they work. Clicking on the developer name will bring you to his or her Community Profile.
 
-In addition, you get Mendix points for downloading, uploading, and reviewing App Store content! For more information, see the **App Store** section of [How Does One Get These Rewards?](https://developer.mendixcloud.com/link/faq).
+In addition, you get Mendix points for downloading, uploading, and reviewing App Store content! For more information, see the [App Store Points](../mendix-profile/index#app-store-points) section of *Mendix Profile*.
 
 ## 3 App Store Versions
 
@@ -26,7 +26,7 @@ The public App Store is open to all Mendix Community developers.
 
 ### 3.2 Online and Desktop Modeler App Store
 
-The [web version of the App Store](https://appstore.home.mendix.com/) has a lot of advanced options available. However, if you download content from here, you will then have to separately upload it into your project. For more information, see [How to Import and Export Objects](/howto6/importing-and-exporting-objects).
+The [web version of the App Store](https://appstore.home.mendix.com/) has a lot of advanced options available. However, if you download content from here, you will then have to separately upload it into your project. For more information, see [How to Import & Export Objects](/howto/integration/importing-and-exporting-objects).
 
 The Desktop Modeler App Store is a more basic implementation that is suitable for doing the most important things with the content. It should be considered as an extension of the web version of the App Store rather than as a replacement. For more information, see [How to Use App Store Content in the Desktop Modeler](use-app-store-content-in-the-modeler).
 

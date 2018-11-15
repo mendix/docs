@@ -1,6 +1,6 @@
 ---
 title: "The Community Site"
-category: "Tools"
+category: "Community Tools"
 ---
 
 ## 1 Introduction
@@ -63,7 +63,7 @@ The **App Store** section of the Mendix Community site presents the latest updat
 
 Click the content item name to go to its page in the App Store, where you can read a detailed description of the content and check out some user reviews. Click **View all Apps** to go to the main Mendix App Store page, where you can see featured and new content, recent updates, reviews, and the top contributors to the App Store.
 
-For more information, see the [App Store Overview](/community/app-store/app-store-overview).
+For more information, see the [App Store Overview](../app-store/app-store-overview).
 
 ## 7 Documentation
 

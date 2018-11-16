@@ -12,7 +12,7 @@ On the [Mendix Forum](https://forum.mendixcloud.com/index3.html), you can ask qu
 
 The **Forum** section at the top of the Mendix Community site presents the latest questions being asked on the forum along with the author of the question and how long ago it was asked:
 
-{{% image_container width="500" %}}
+{{% image_container width="550" %}}
 ![](attachments/the-community-site/Forum.png)
 {{% /image_container %}}
 
@@ -26,7 +26,7 @@ There are many interactive and free webinars that Mendix produces available for 
 
 The **Monthly Webinar** section of the Mendix Community site presents a link to the upcoming webinar:
 
-{{% image_container width="450" %}}
+{{% image_container width="350" %}}
 ![](attachments/the-community-site/Latest_Webinar.png)
 {{% /image_container %}}
 
@@ -38,7 +38,7 @@ Mendix regularly organizes and hosts knowledge [meetups](https://www.meetup.com/
 
 The **Meetups** section of the Mendix community site presents the upcoming scheduled meetups:
 
-{{% image_container width="500" %}}
+{{% image_container width="550" %}}
 ![](attachments/the-community-site/Meetups.png)
 {{% /image_container %}}
 
@@ -50,13 +50,13 @@ The Mendix Academy offers both self-paced online training and classroom instruct
 
 In the **Academy** section of the Mendix Community site, you can see links to our beginner, intermediate, and advanced learning paths in the [Mendix Academy](https://gettingstarted.mendixcloud.com/index3.html):
 
-{{% image_container width="500" %}}
+{{% image_container width="550" %}}
 ![](attachments/the-community-site/academy1.png)
 {{% /image_container %}}
 
 Below that, you can see sign-up links for upcoming [Classroom Courses](https://gettingstarted.mendixcloud.com/link/classroom):
 
-{{% image_container width="500" %}}
+{{% image_container width="550" %}}
 ![](attachments/the-community-site/academy2.png)
 {{% /image_container %}}
 
@@ -68,7 +68,7 @@ The [Mendix App Store](https://appstore.home.mendix.com/index3.html) is where yo
 
 The **App Store** section of the Mendix community site presents the latest updates to App Store content (for example, an update of the Bootstrap Tooltip widget):
 
-{{% image_container width="500" %}}
+{{% image_container width="550" %}}
 ![](attachments/the-community-site/App_Store.png)
 {{% /image_container %}}
 
@@ -82,7 +82,7 @@ The [Mendix Documentation](https://docs.mendix.com/) covers all aspects of the M
 
 The **Documentation** section of the Developers site presents the latest updates on the documentation site:
 
-{{% image_container width="350" %}}
+{{% image_container width="250" %}}
 ![](attachments/the-community-site/Documentation.png)
 {{% /image_container %}}
 
@@ -92,7 +92,7 @@ Click a document title to go to that specific page in the documentation. Click *
 
 The **Developer Spotlight** section highlights [Mendix Developer Blog](https://www.mendix.com/tag/developers/) posts from Mendix insiders on various topics that are of interest to the community. This includes topics that are more technical in nature (for example, "Advanced Branching and Merging Strategies") as well as ones that deal with Community tools (for example, "the New Mendix Forum").
 
-{{% image_container width="450" %}}
+{{% image_container width="350" %}}
 ![](attachments/the-community-site/Developer_Blog.png)
 {{% /image_container %}}
 

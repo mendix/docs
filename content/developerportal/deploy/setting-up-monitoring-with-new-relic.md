@@ -1,8 +1,11 @@
 ---
 title: "Monitoring with New Relic"
 parent: "on-premises-design"
-tags: []
+description: "How to install Mendix behind a load balancer for high availability"
+menu_order: 30
+tags: ["new relic", "on-premises", "monitoring", "setup"]
 ---
+
 When setting up a Mendix application on-premise, you can set up advanced monitoring with New Relic. This works with both Windows and Linux deployments.
 
 ## Preparations

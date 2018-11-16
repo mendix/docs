@@ -1,6 +1,9 @@
 ---
 title: "Configure High Availability"
 parent: on-premises-design
+description: "How to install Mendix behind a load balancer for high availability"
+menu_order: 20
+tags: ["high-availability", "on-premises", "clustering", "runtime"]
 ---
 
 ## 1 Introduction

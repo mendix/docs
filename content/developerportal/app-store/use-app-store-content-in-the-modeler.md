@@ -23,7 +23,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Familiarize yourself with the [App Store Overview](app-store-overview)
 
-## 3 Downloading Content from the App Store via the Modeler<a name="DownloadingContentfromtheAppStoreviatheModeler"></a>
+## 3 Downloading Content from the App Store via the Modeler {#downloading}
 
 To download content from the App Store via the Desktop Modeler, follow these steps:
 
@@ -51,7 +51,7 @@ To download content from the App Store via the Desktop Modeler, follow these ste
 
     For more information on App Store content compatibility, see **4.5 Compatibility Section** in the [App Store Overview](app-store-overview).
 
-## 4 Using a Widget from the App Store in the Desktop Modeler
+## 4 Using a Widget from the App Store in the Desktop Modeler {#widget}
 
 In this section of the how-to, you will learn how to add the Radiobutton List widget as an example scenario. You can follow the same steps to download any App Store widget you need.
 
@@ -151,7 +151,7 @@ To use the Google Maps module in the Desktop Modeler, follow these steps:
 
 There are also guidelines for using projects, layouts, and themes from the App Store.
 
-### 6.1 Using a Project or Layout from the App Store
+### 6.1 Using a Project or Layout from the App Store {#project-layout}
 
 Downloading a project or layout will create a new project structure in the the location that you enter. After clicking **Download**, a pop-up window will appear where you can specify how the project should be created.
 

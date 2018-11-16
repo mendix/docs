@@ -1,6 +1,6 @@
 ---
 title: "The Mendix Job Board"
-category: "Tools"
+category: "Community Tools"
 ---
 
 ## 1 Introduction

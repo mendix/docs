@@ -1,6 +1,6 @@
 ---
 title: "The Mendix MVP Program"
-category: "Tools"
+category: "Community Tools"
 ---
 
 ## 1 Introduction

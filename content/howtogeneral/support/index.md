@@ -12,15 +12,15 @@ Mendix Support is here to answer any questions and solve any issues that you mig
 
 We are availalbe for all users of the Mendix Platform, and we are bound by service-level agreements (SLA) to our licensed customers. Licensed customers can select their type of SLA level: **Platform** or **Platinum**. The SLA level determines the specific agreement on the following points:
 
-* Support availability 
-* Platform availability 
-* Maintenance 
+* Support availability
+* Platform availability
+* Maintenance
 * Incident response time
-* Incident resolution time 
+* Incident resolution time
 * Recovery time objective (RTO)
 * Recovery point objective (RPO)
 
-The SLA for your company is available upon request. Please contact [Mendix Support](https://support.mendix.com) or your Customer Success Manager if you want to check the details. 
+The SLA for your company is available upon request. Please contact [Mendix Support](https://support.mendix.com) or your Customer Success Manager if you want to check the details.
 
 ## Finding Your Answers
 
@@ -30,7 +30,7 @@ We expect that many questions and issues can be solved by reading the Mendix [do
 
 We would like to invite you to an important channel where you can provide feature requests to Mendix: the [Mendix Idea Forum](https://forum.mendix.com/link/ideas/). Every quarter, any customer can post a feature request that can be reviewed, expanded on, and voted on by other members of the Mendix Community. Based on this feedback, we will determine which features have the most value according to our customers, and we will implement them.
 
-For more details about the idea forum, see [The Mendix Forum](/community/tools/the-mendix-forum#IdeasTab).
+For more details about the idea forum, see [The Mendix Forum](/developerportal/community-tools/the-mendix-forum#IdeasTab).
 
 ## Accessing Mendix Support
 
@@ -53,17 +53,17 @@ To manage your company account and the users, projects, and licensed cloud nodes
 
 ### Technical Contacts
 
-You need to appoint a technical contact for each of your applications. The technical contact checks the performance of the applications in the Cloud Portal and receives alerts from the Mendix Cloud Portal based on errors and warnings in each application. It is possible to make other team members receive these alerts as well. 
+You need to appoint a technical contact for each of your applications. The technical contact checks the performance of the applications in the Cloud Portal and receives alerts from the Mendix Cloud Portal based on errors and warnings in each application. It is possible to make other team members receive these alerts as well.
 
 It is very important to read these alerts carefully and to act upon them, as they can influence the performance of your app. For more information on alerts, see [Alerts](/developerportal/operate/monitoring-application-health).
 
 ### Training
 
-We expect your support team to be trained and certified on the Mendix Modeler, the Platform Portal, and the Cloud Portal so that they can interpret and analyze alerts, graphs, and logs in the Cloud Portal. For more information, please check our available [training courses](https://developers.mendix.com/training/) and [expert webinars](https://developers.mendix.com/training/webinars/) or contact the Mendix Academy (<academy@mendix.com>). 
+We expect your support team to be trained and certified on the Mendix Modeler, the Platform Portal, and the Cloud Portal so that they can interpret and analyze alerts, graphs, and logs in the Cloud Portal. For more information, please check our available [training courses](https://developers.mendix.com/training/) and [expert webinars](https://developers.mendix.com/training/webinars/) or contact the Mendix Academy (<academy@mendix.com>).
 
 ## Reach Out to Mendix Support
 
-If you suspect an issue in the Mendix Platform exists after your analysis (or if you have questions about your analysis), you can reach out to Mendix Support. We will provide pointers on how to solve the issues yourself or redirect you to Expert Services for further assistance. If we suspect a platform issue, we will involve second and third line support for confirmation, and we will fix it if it is a platform issue. If the issue is commercial (for example, because your app requires a larger app container or more file storage), we might refer you to your Customer Success Manager directly. 
+If you suspect an issue in the Mendix Platform exists after your analysis (or if you have questions about your analysis), you can reach out to Mendix Support. We will provide pointers on how to solve the issues yourself or redirect you to Expert Services for further assistance. If we suspect a platform issue, we will involve second and third line support for confirmation, and we will fix it if it is a platform issue. If the issue is commercial (for example, because your app requires a larger app container or more file storage), we might refer you to your Customer Success Manager directly.
 
 ## Platform Status
 

@@ -1,6 +1,6 @@
 ---
 title: "Contribute to the Mendix Documentation"
-category: "Documentation"
+category: "Community Documentation"
 menu_order: 10
 frontpage_featured: true
 ---

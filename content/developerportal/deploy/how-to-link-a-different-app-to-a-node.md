@@ -2,7 +2,7 @@
 title: "Change App Linked to Node"
 # Merge with other Linking docs
 parent: "mendix-cloud-deploy"
-menu_order: 265
+menu_order: 17
 description: "How to link an existing app to a cloud node."
 tags: ["App","Node","Developer Portal","Deploy"]
 ---

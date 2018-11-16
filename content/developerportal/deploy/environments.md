@@ -1,7 +1,7 @@
 ---
 title: "Environments"
 parent: "mendix-cloud-deploy"
-menu_order: 10
+menu_order: 5
 description: "List the environments in which your app is deployed. Also the starting point for managing existing environments and further deployments."
 tags: ["Deploy","App","Developer Portal"]
 ---

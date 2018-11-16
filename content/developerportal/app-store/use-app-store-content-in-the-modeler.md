@@ -3,6 +3,7 @@ title: "Use App Store Content in the Desktop Modeler"
 category: "App Store"
 menu_order: 20
 description: "Covers the basics of how to access the App Store from the Desktop Modeler and provides examples of how to add a widget and module to your app."
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction

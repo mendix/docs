@@ -59,7 +59,7 @@ In this section of the how-to, you will learn how to add the Radiobutton List wi
 
 To add the Radiobutton List widget from the App Store via the Desktop Modeler, follow these steps:
 
-1. Download the **RadioButton List** widget by following the steps in [3 Downloading Content from the App Store via the Desktop Modeler](#DownloadingContentfromtheAppStoreviatheModeler).
+1. Download the **RadioButton List** widget by following the steps in the [Downloading Content from the App Store via the Desktop Modeler](#downloading) section.
 2.  A widget downloaded from the App Store will be placed in your project structure. You can find the widget and start using it in the following ways:
 
     * Click **Add widget**, then browse the list of **Add-on widgets**:
@@ -112,7 +112,7 @@ In this section of the how-to, you will learn how to add the Google Maps module 
 
 To add the Google Maps module from the App Store via the Desktop Modeler, follow these steps:
 
-1. Download the **Google Maps Module** by following the steps in [3 Downloading Content from the App Store via the Desktop Modeler](#DownloadingContentfromtheAppStoreviatheModeler).
+1. Download the **Google Maps Module** by following the steps in the [Downloading Content from the App Store via the Desktop Modeler](#downloading) section.
 
 2.  On the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your project:
 

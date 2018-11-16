@@ -201,6 +201,10 @@ module.exports = {
       from: "/appstore/Install+an+App+from+the+App+Store",
       to: "/developerportal/app-store/use-app-store-content-in-the-modeler"
     },
+	{
+      from: "/community/app-store/use-app-store-content-in-the-modeler",
+      to: "/developerportal/app-store/use-app-store-content-in-the-modeler"
+    },
     /****************************************************
      * Best Practices
      ****************************************************/

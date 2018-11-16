@@ -3,6 +3,7 @@ title: "Contribute to the Mendix Documentation"
 category: "Community Documentation"
 menu_order: 10
 frontpage_featured: true
+#If moving or renaming this doc file, update the link in the site footer. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction

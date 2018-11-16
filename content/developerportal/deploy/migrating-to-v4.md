@@ -1,6 +1,7 @@
 ---
 title: "V4: Migrate to Mendix Cloud v4"
 parent: "mendix-cloud-deploy"
+menu_order: 310
 description: "How to migrate your app from a Mendix Cloud v3 node to a Mendix Cloud v4 node."
 tags: ["App","Migrate","Developer Portal","v3","v4","Node"]
 ---

@@ -164,6 +164,10 @@ In order to receive Mendix points for your contributions to Mendix GitHub reposi
 | Make a small contribution to the Mendix documentation        | 5      | n/a          |
 | Complete a unit in the Mendix Academy                        | 1      | n/a          |
 
+{{% alert type="info" %}}
+For details on how to gain Mendix points on documentation work, see [How to Contribute to the Mendix Docuemntation](../community-documentation/contribute-to-the-mendix-documentation).
+{{% /alert %}}
+
 ### 7.6 Point Levels
 
 When you earn enough points, you gain a level:

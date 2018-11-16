@@ -2,6 +2,7 @@
 title: "Share App Store Content"
 category: "App Store"
 menu_order: 30
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
@@ -108,7 +109,7 @@ To add content to the App Store, follow these steps:
         ![](attachments/share-app-store-content/add_content_8.png)
 
         You can request other license types to be added as **License** options by clicking the **Feedback** button on the right side of the App Store screen.
-        
+    
 10. After entering the information for your content, you can click one of these buttons in the middle of the screen:
 
     ![](attachments/share-app-store-content/add_content_7.png)
@@ -144,7 +145,7 @@ To update content that has already been published, follow these steps:
 
         ![](attachments/share-app-store-content/update_content_2.png)
 
-## 5 App Store Content Submission Guidelines<a name="AppStoreContentSubmissionGuidelines"></a>
+## 5 App Store Content Submission Guidelines {#submission}
 
 This section presents guidelines for developing and submitting content to the Mendix App Store.
 

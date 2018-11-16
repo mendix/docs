@@ -1,7 +1,9 @@
 ---
 title: "Microsoft Windows"
 parent: "on-premises-design"
-tags: ["deploy", "Windows", "On Premises", "Microsoft"]
+description: "How to install and configure Mendix on a system running Microsoft Windows"
+menu_order: 50
+tags: ["deploy", "Windows", "On Premises", "Microsoft", "Mendix Service Console"]
 ---
 
 ## 1 Introduction
@@ -97,7 +99,7 @@ To configure the MS IIS server, follow the steps in the sections below.
 
 ### 5.1 Activating a Proxy in ARR
 
-In order to use the proxy functionality within ARR, you need to enable this feature within IIS. To activiate a proxy in ARR, follow these steps:
+In order to use the proxy functionality within ARR, you need to enable this feature within IIS. To activate a proxy in ARR, follow these steps:
 
 1. Start the IIS Manager.
 2. Select the **Server** in the **Connections** pane.

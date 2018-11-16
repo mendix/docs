@@ -1,6 +1,6 @@
 ---
 title: "Microsoft SQL Server"
-parent: "on-premises-design"
+parent: "deploy-mendix-on-microsoft-windows"
 tags: []
 ---
 

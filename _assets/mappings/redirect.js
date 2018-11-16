@@ -177,6 +177,10 @@ module.exports = {
       from: "/appstore/App+Store+Approval+Guidelines",
       to: "/developerportal/app-store/share-app-store-content"
     },
+	{
+      from: "/community/app-store/share-app-store-content",
+      to: "/developerportal/app-store/share-app-store-content"
+    },
     {
       from: "/appstore/App+Store+Content+Support",
       to: "/developerportal/app-store/app-store-content-support"
@@ -195,6 +199,10 @@ module.exports = {
     },
     {
       from: "/appstore/Install+an+App+from+the+App+Store",
+      to: "/developerportal/app-store/use-app-store-content-in-the-modeler"
+    },
+	{
+      from: "/community/app-store/use-app-store-content-in-the-modeler",
       to: "/developerportal/app-store/use-app-store-content-in-the-modeler"
     },
     /****************************************************

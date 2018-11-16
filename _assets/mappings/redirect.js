@@ -177,6 +177,10 @@ module.exports = {
       from: "/appstore/App+Store+Approval+Guidelines",
       to: "/developerportal/app-store/share-app-store-content"
     },
+	{
+      from: "/community/app-store/share-app-store-content",
+      to: "/developerportal/app-store/share-app-store-content"
+    },
     {
       from: "/appstore/App+Store+Content+Support",
       to: "/developerportal/app-store/app-store-content-support"

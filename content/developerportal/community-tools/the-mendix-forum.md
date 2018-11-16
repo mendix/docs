@@ -1,5 +1,5 @@
 ---
-title: "The Mendix Forum"
+title: "Mendix Forum"
 category: "Community Tools"
 ---
 

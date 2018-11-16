@@ -22,7 +22,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Familiarize yourself with the [App Store Overview](app-store-overview)
 
-## 3 Downloading Content from the App Store via the Modeler<a name="DownloadingContentfromtheAppStoreviatheModeler"></a>
+## 3 Downloading Content from the App Store via the Modeler {#downloading}
 
 To download content from the App Store via the Desktop Modeler, follow these steps:
 

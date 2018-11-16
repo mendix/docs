@@ -1,6 +1,7 @@
 ---
 title: "V4: FAQ for Mendix Cloud V4"
 parent: "mendix-cloud-deploy"
+menu_order: 300
 tags: ["Cloud", "Mendix Cloud", "V4", "Version 4", "FAQ", "V3", "AWS", "Amazon Web Services"]
 ---
 

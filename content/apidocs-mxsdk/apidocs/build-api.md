@@ -7,6 +7,10 @@ category: "API Documentation"
 
 The Build API allows you to manage deployment packages and create new deployment packages using our build server. You will need the information from the Teamserver API as input for these API calls.
 
+{{% alert type="info" %}}
+This API is designed for apps which are deployed to the Mendix Cloud.
+{{% /alert %}}
+
 The image below provides a domain model representation of the concepts discussed below and how these are related:
 
 ![](attachments/deploy-api/api-model.png)

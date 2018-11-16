@@ -150,7 +150,7 @@ To use the Google Maps module in the Desktop Modeler, follow these steps:
 
 There are also guidelines for using projects, layouts, and themes from the App Store.
 
-### 6.1 Using a Project or Layout from the App Store
+### 6.1 Using a Project or Layout from the App Store {#project-layout}
 
 Downloading a project or layout will create a new project structure in the the location that you enter. After clicking **Download**, a pop-up window will appear where you can specify how the project should be created.
 

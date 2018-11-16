@@ -1,6 +1,7 @@
 ---
 title: "Microsoft SQL Server"
 parent: "deploy-mendix-on-microsoft-windows"
+menu_order: 30
 tags: []
 ---
 

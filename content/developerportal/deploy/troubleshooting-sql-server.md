@@ -1,6 +1,7 @@
 ---
-title: "SQL Server: Troubleshooting"
+title: "Troubleshooting SQL Server"
 parent: "mendix-on-windows-microsoft-sql-server"
+menu_order: 80
 ---
 
 ```

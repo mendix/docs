@@ -16,7 +16,7 @@ Besides operating as a powerful social platform, Mendix also provides tools for 
 
 The Developer Portal can be used separately from other Mendix products, and the [Mendix Feedback Widget](feedback/use-feedback-widget) can be included in any web application. As a whole, the Mendix Platform offers an open, well-defined API, enabling third-party developers to create their own widgets, plugins, and any other innovative products they come up with.
 
-The Developer Portal consists of the header items described below.
+The Developer Portal is integrated with the menu items described below.
 
 ## 2 Buzz {#buzz}
 
@@ -40,7 +40,37 @@ In [People](mendix-profile/index#connections), you can view the other members of
 
 ![](attachments/developerportal-people.png)
 
-## 5 Document Categories
+## 5 Community
+
+In [Community](/developerportal/community-tools/the-community-site), you can explore various resources for the vibrant Mendix community of users, from blog posts about how Mendix is being used in the wider world of low-code development to the [Mendix job board](/developerportal/community-tools/the-mendix-job-board) and [Mendix Shop](https://shop.mendix.com/):
+
+![](attachments/developerportal-community.png)
+
+## 6 App Store
+
+In the [Mendix App Store](/developerportal/app-store/app-store-overview), you can share Mendix content you have created, check out complete sample apps that can be used right away, and browse connectors, [widgets](https://appstore.home.mendix.com/link/app/48902/), and modules that can be used to build custom apps more quickly:
+
+![](attachments/developerportal-app-store.png)
+
+## 7 Academy 
+
+The [Mendix Academy](https://gettingstarted.mendixcloud.com/link/home) offers both self-paced online training (via learning paths) and classroom instruction from our team of experts:
+
+![](attachments/developerportal-academy.png)
+
+## 8 Forum
+
+In the [Mendix Forum](/developerportal/community-tools/the-mendix-forum), you can interact with the Mendix community to help out with [questions](https://forum.mendixcloud.com/link/questions/91882) and answers on the best ways to use Mendix as well as propose ideas for improving the Mendix Platform:
+
+![](attachments/developerportal-forum.png)
+
+## 9 Docs
+
+The [Mendix Documentation](https://docs.mendix.com/) is open to the Mendix community, which means you can [make changes and contribute](/developerportal/community-documentation/contribute-to-the-mendix-documentation) in ways that you see necessary:
+
+![](attachments/developerportal-docs.png)
+
+## 10 Document Categories
 
 {{% category_block %}}
 

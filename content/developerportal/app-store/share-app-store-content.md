@@ -144,7 +144,7 @@ To update content that has already been published, follow these steps:
 
         ![](attachments/share-app-store-content/update_content_2.png)
 
-## 5 App Store Content Submission Guidelines<a name="AppStoreContentSubmissionGuidelines"></a>
+## 5 App Store Content Submission Guidelines {#submission}
 
 This section presents guidelines for developing and submitting content to the Mendix App Store.
 

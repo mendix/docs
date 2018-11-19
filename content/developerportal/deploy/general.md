@@ -8,11 +8,23 @@ tags: ["Deploy", "App", "Developer Portal", "Mendix Cloud", "Cloud Foundry", "Az
 
 ## 1 Introduction
 
-The **Deploy** category allows you to deploy your app to several platforms.
+Mendix apps can be deployed to many different platforms. Much of the deployment and management of a Mendix app depends on which platform it is deployed to. You can find information about each platform in the sections of documentation which relate specifically to that platform.
+
+There are, however, a number of issues which are related to all, or several platforms. Rather than duplicate the information, these are covered in this section of the documentation.
+
+The subjects covered in the *General* section of deployment are:
+
+* [Secure Outgoing Connections from your Application](securing-outgoing-connections-from-your-application)
+* [Two-Factor Authentication](two-factor-authentication)
+* [Version Downgrade Prevented](version-downgrade-prevention)
+
+## 2 Managing Your Deployed Apps
+
+For a number of different platforms, the **Deploy** category in the Developer Portal allows you to deploy and manage your app.
 
    ![](attachments/deploy.png)
 
-## 2 Environments
+### 2.1 Environments
 
 The **Environments** page is divided into the following tabs:
 
@@ -27,12 +39,11 @@ The **Environments** page is divided into the following tabs:
     * IP range filters
     * Client certificate verification
     
-
    ![](attachments/environment-tab.png)    
 ​    
 For more details, see [Environments](environments).    
 ​    
-### 2.1 Environment details
+**Environment Details**
 
 If you click **Details** of a specific environments, you will be able to manage your environment in several tabs of the **Environment details** page.
 
@@ -40,7 +51,7 @@ If you click **Details** of a specific environments, you will be able to manage 
 
 For more details, see [Environment details](environments-details).       
 
-## 3 Mobile App
+### 2.2 Mobile App
 
 On this page, you can manage and publish your app in mobile app stores.
 
@@ -48,17 +59,8 @@ Mendix supports Android and iOS.
 
 For more details, see [Mobile App](mobileapp).  
 
-## 4 App Services
+## 2.3 App Services
 
 The **App Services** page lets you publish your app service, application, or widget to the Mendix App Store.
 
 For more details, see [App Services](app-services).  
-
-## 5 Related Content
-
-* [How to Configure Custom Domains](custom-domains)
-* [Mendix Cloud: Deploy](mendix-cloud-deploy)
-* [Mendix Cloud Status](mendix-cloud-status)
-* [Mendix Cloud V4 - FAQ](mxcloudv4)
-* [How to View the Mendix Cloud Version and Region](cloud-version-region)
-* [Two-Factor Authentication](two-factor-authentication)

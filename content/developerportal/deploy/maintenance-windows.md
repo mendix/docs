@@ -1,7 +1,7 @@
 ---
 title: "Maintenance Windows: Configuration"
 parent: "mendix-cloud-deploy"
-#0menu_order: 100
+menu_order: 33
 description: "How to configure the maintenance windows for your node environment."
 tags: ["Deploy","App","Developer Portal"]
 ---

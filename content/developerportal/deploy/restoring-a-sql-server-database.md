@@ -1,6 +1,7 @@
 ---
-title: "SQL Server: Restore Database"
+title: "Restore Database on SQL Server"
 parent: "mendix-on-windows-microsoft-sql-server"
+menu_order: 70
 ---
 ## 1 Introduction
 

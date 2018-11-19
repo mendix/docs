@@ -36,7 +36,7 @@ Properties in the **Events** section are partially preset for buttons listed abo
 
 ![](attachments/page-editor-widgets-buttons-wm/wm-events-section-page-button.png)
 
-For more information, see section [2.1 Preset Properties in the Events Section](#preset-properties). 
+For more information, see section [2.1 Default Properties in the Events Section](#default-properties). 
 
 {{% alert type="info" %}}
 
@@ -46,15 +46,15 @@ You can change preset properties, and make the button perform another action.
 
 For more information on the **Events** section and on click actions, see [Events Section in Widgets of the Web Modeler](page-editor-widgets-events-section-wm).
 
-### 2.1 Preset Properties in the Events Section {#preset-properties}
+### 2.1 Default Properties in the Events Section {#default-properties}
 
 **On Click Action** in the **Events** section determines the action of the button. 
 
 ![](attachments/page-editor-widgets-buttons-wm/wm-events-section.png)
 
-You can find the list of preset actions and properties that need to be configured in the table below. 
+You can find the list of default actions and properties that need to be configured in the table below. 
 
-| Button         | Preset Action  | Properties to be Configured                                  |
+| Button         | Default Action | Properties to be Configured                                  |
 | -------------- | -------------- | ------------------------------------------------------------ |
 | Open Page      | Page           | **Page** (Select page)                                       |
 | Call Microflow | Microflow      | **Microflow** (Select microflow)                             |
@@ -72,26 +72,26 @@ Properties available in the **General** section are described in the table below
 
 | Property    | Description                                                  |
 | ----------- | ------------------------------------------------------------ |
-| Caption     | Defines the text that will be shown on the button. Buttons have preset captions depending on the action they perform. For more information, see section [3.1 Preset Caption](#preset-caption). |
+| Caption     | Defines the text that will be shown on the button. Buttons have preset captions depending on the action they perform. For more information, see section [3.1 Default Caption](#default-caption). |
 | Icon        | Determines the icon that will be shown in front of the caption of the button. |
 | Render Mode | Defines the way the button will be shown to the end-user. Possible options are the following: <ul><li>**Button** – the widget will be rendered as a button</li><li>**Link** – the widget will be rendered as a hyperlink</li></ul>Default render mode: Button |
 | Style       | Applies a predefined styling to the button. Possible options are the following: <ul><li>Default</li><li>Inverse</li><li>Primary</li><li>Info</li><li>Success</li><li>Warning</li><li>Danger</li></ul>Default value for all buttons except the **Save Changes** button: Default<br />Default value for the **Save Changes** button: Success<br />The color for each style depends on your settings in the **Theme Customizer**. For details, see [Theme Customizer in the Web Modeler](theme-customizer-wm). |
 
-### 3.1 Preset Caption {#preset-caption}
+### 3.1 Default Caption {#default-caption}
 
-**Caption** in the **General** section is preset depending on the action of the button. The preset caption for each button type is shown in the table below. 
+**Caption** in the **General** section is set depending on the action of the button. The default caption for each button type is shown in the table below. 
 
-| Button         | Preset Caption |
-| -------------- | -------------- |
-| Open Page      | Page           |
-| Call Microflow | Microflow      |
-| Create Object  | New            |
-| Save Changes   | Save           |
-| Delete Object  | Delete         |
-| Cancel Changes | Cancel         |
-| Close Page     | Close          |
-| Sign Out       | Sign Out       |
-| Open Link      | Button         |
+| Button         | Default Caption |
+| -------------- | --------------- |
+| Open Page      | Page            |
+| Call Microflow | Microflow       |
+| Create Object  | New             |
+| Save Changes   | Save            |
+| Delete Object  | Delete          |
+| Cancel Changes | Cancel          |
+| Close Page     | Close           |
+| Sign Out       | Sign Out        |
+| Open Link      | Button          |
 
 ## 4 Design Section
 

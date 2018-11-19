@@ -1,6 +1,7 @@
 ---
-title: "SQL Server: Maintenance"
+title: "Maintenance of SQL Server"
 parent: "mendix-on-windows-microsoft-sql-server"
+menu_order: 40
 ---
 
 

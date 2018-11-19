@@ -42,7 +42,7 @@ The complexity of your domain model depends on the complexity of your app.
 
 {{% /alert %}}
 
-The **Auto Arrange** option above the domain model auto-arranges the entities. You can click it several times to get the view that you like. 
+The **Auto Arrange** option above the domain model groups and aligns entities by associations. Entities with no associations will be vertically aligned. 
 
 ## 2 Components 
 

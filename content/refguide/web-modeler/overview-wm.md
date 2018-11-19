@@ -142,6 +142,17 @@ The top bar provides the following options:
 | [Checks button](checks-wm) | Shows the errors and warnings currently in your app. If there are any errors in the app, you will not be able to publish your app, until you have solved them. For more information on errors, see [Consistency Errors in the Web Modeler](consistency-errors-wm).<br />You can also use C shortcut to view the **Checks** panel. |
 | Information icon | Here you can find following information:<ul><li>**About** – shows the information on the [Web Modeler version and Mendix version](versions-wm) </li><li>**Keyboard Shortcuts** – opens the list of shortcuts in the Web Modeler</li><li>**Take a Product Tour** – starts a  the guided product introduction tour and shows you around the Web Modeler</li><li>**Ask the Community** – a link to the [Mendix Forum](https://forum.mendixcloud.com/index4.html) where you can ask questions and explore the knowledge offered by the entire Mendix Community<li>**Check the  Documentation** – a link to the [Web Modeler Documentation](index)</li><li>**Contact Mendix Support** – a link to the [Support Portal](https://support.mendix.com/hc/en-us)<li>**Mendix Academy** – a link to the [Mendix Academy](https://gettingstarted.mendixcloud.com)</li><li>**Mendix Assist Is ON** – a setting that enables/disables [Mendix Assist](mx-assist-wm)</li><li>**Edit in Desktop Modeler** – opens your app in the Desktop Modeler</li></ul> |
 
-## 8 Related Content
+## 8 Cut/Copy/Paste Function 
+
+Cut/copy/paste function is available in all editors of the Web Modeler: pages, microflows, domain models, and navigation. To cut/copy/paste you can use <kbd>Ctrl</kbd> + <kbd>Z</kbd> /  <kbd>Ctrl</kbd> + <kbd>C</kbd> / <kbd>Ctrl</kbd> + <kbd>V</kbd> or  <kbd>Cmn</kbd> + <kbd>Z</kbd> /  <kbd>Cmd</kbd> + <kbd>C</kbd> / <kbd>Cmd</kbd> + <kbd>V</kbd>. 
+
+Mind the following issues when using cut/copy/paste:
+
+* You can cut/copy/paste elements within one editor; that means that you can cut/copy/paste elements within one page or to other pages in the Web Modeler, and copy microflow activities within one microflow or to other microflows
+* You can cut/copy/paste elements to different projects in the Web Modeler if they have the same Mendix version
+* You cannot copy/paste the whole page, only elements on the page   
+* You cannot cut/copy/paste from the Web Modeler to the Desktop Modeler
+
+## 9 Related Content
 
 * [How to Sync the Web Modeler with the Desktop Modeler](../../howto/web-modeler/syncing-webmodeler-desktop)

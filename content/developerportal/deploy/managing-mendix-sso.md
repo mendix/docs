@@ -1,7 +1,7 @@
 ---
 title: "Mendix SSO: Manage User Logins"
 parent: "mendix-cloud-deploy"
-#menu_order: 
+menu_order: 72
 description: "How to manage Mendix SSO in your app so that local users and anonymous users are catered for"
 tags: ["SSO", "Single Sign-on", "AppCloudServices", "Local users", "Anonymous users"]
 #Needs a better description of what it does. Needs rewrite to remove launchpad references

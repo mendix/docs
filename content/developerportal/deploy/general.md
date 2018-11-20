@@ -22,7 +22,7 @@ The subjects covered in the *General* section of deployment are:
 
 For a number of different platforms, the **Deploy** category in the Developer Portal allows you to deploy and manage your app.
 
-   ![](attachments/deploy.png)
+   ![](attachments/general/deploy.png)
 
 ### 2.1 Environments
 
@@ -39,7 +39,7 @@ The **Environments** page is divided into the following tabs:
     * IP range filters
     * Client certificate verification
     
-   ![](attachments/environment-tab.png)    
+   ![](attachments/general/environment-tab.png)    
 ​    
 For more details, see [Environments](environments).    
 ​    
@@ -47,7 +47,7 @@ For more details, see [Environments](environments).
 
 If you click **Details** of a specific environments, you will be able to manage your environment in several tabs of the **Environment details** page.
 
-   ![](attachments/environment-details.png)
+   ![](attachments/general/environment-details.png)
 
 For more details, see [Environment details](environments-details).       
 

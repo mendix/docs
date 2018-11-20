@@ -1,7 +1,6 @@
 ---
 title: "Calculate the Total Amount of Disk Space of a Cloud App Environment"
 category: "Mendix Support"
-#parent: ""
 #description: ""
 #tags: []
 ---

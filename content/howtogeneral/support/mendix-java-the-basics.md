@@ -1,9 +1,6 @@
 ---
 title: "Mendix and Java Part 1 – The Basics"
 category: "Mendix Support"
-#parent: ""
-#description: ""
-#tags: []
 ---
 
 ## 1 Introduction

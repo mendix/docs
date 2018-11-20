@@ -8,13 +8,13 @@ tags: ["Authenticator","Developer Portal","Cloud","Permissions"]
 
 ## 1 Introduction
 
-In the **Deploy** and **Operate** categories of the [Developer Portal](http://home.mendix.com), there are several operations that require  **Two-Factor Authentication**.
+In the **Deploy** and **Operate** categories of the [Developer Portal](http://home.mendix.com), there are several operations that require  **Two-Factor Authentication** (2FA).
 
-This document describes the purpose and the fuctionality of two-factor authentication.
+This document describes the purpose and functionality of 2FA.
 
 ## 2 The Purpose
 
-Two-factor authentication (2FA) validates a second authentication mechanism next to your password. It is required for Mendix Cloud node activities done on a production environment. 2FA ensures that you are authenticated when performing sensitive activities, such as deploying packages and handling production data.
+2FA adds a second authentication mechanism in addition to your password. It is an extra layer of authentication to allow you to perform sensitive activities on Mendix Cloud nodes, such as deploying packages and handling production data.
 
 ![](attachments/two-factor-authentication/production.png)
 
@@ -48,10 +48,10 @@ For example, if you want to change your authentication method from **SMS Authent
 
 Team members with **App Team – Deploy Permissions** are authorized to have node permissions. The Technical Contact can grant those members different permissions that can differ per environment. For example, you might want to limit the access of external developers to only the acceptance environment.
 
-For more information, see [Security – Node Permissions](../deploy/node-permissions).
+For more information, see [Security – Node Permissions](node-permissions).
 
 ## 7 Related Content
 
-* [Deploy and Manage](../deploy)
-* [Settings](../settings)
-* [Technical Contact](../company-app-roles/technical-contact)
+* [Deploy and Manage](/developerportal/deploy)
+* [Settings](/developerportal/settings)
+* [Technical Contact](/developerportal/company-app-roles/technical-contact)

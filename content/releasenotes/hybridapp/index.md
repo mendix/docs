@@ -39,55 +39,54 @@ The goal of this release is to upgrade all major dependencies to their latest ve
 
 ##### Framework
 
-| Name 	| Old Version 	| New Version 	|
-| - | - | - |
-| PhoneGap CLI | 7.1.0 | 8.1.1 |
-| Cordova Android | 6.3.0 | 7.1.2 |
-| Cordova iOS | 4.5.4 | 4.5.5 |
+| Name            | Old Version | New Version |
+| --------------- | ----------- | ----------- |
+| PhoneGap CLI    | 7.1.0       | 8.1.1       |
+| Cordova Android | 6.3.0       | 7.1.2       |
+| Cordova iOS     | 4.5.4       | 4.5.5       |
 
 ##### Plugins
 
-| Name 	| Old Version 	| New Version 	| Comments 	|
-| - | - | - | - |
-| `com.crosswalk.cookies` | No version specified | No version specified | |
-| `com.darktalker.cordova.screenshot` | 0.1.6 | 0.1.6 | |
-| `com.telerik.plugins.nativepagetransitions `| 0.6.5 | 0.6.5 | |
-| `cordova-build-architecture` | 1.0.3 | 1.0.4 | |
-| `cordova-plugin-actionsheet` | 2.3.3 | 2.3.3 | |
-| `cordova-plugin-android-permissions` | 0.10.0 | 0.11.0 | |
-| `cordova-android-support-gradle-release` | 1.2.0 | Removed |
-| `cordova-plugin-app-version` | 0.1.8 | 0.1.9 | |
-| `cordova-plugin-battery-status` | 1.1.2 | 2.0.2 | |
-| `cordova-plugin-calendar` | 4.5.5 | 5.1.2 | |
-| `cordova-plugin-camera` | 2.4.0 | 4.0.3 | |
-| `cordova-plugin-contacts` | 1.4.2 | 3.0.2 | |
-| `cordova-plugin-cookieemperor` | No version specified | No version specified |
-| `cordova-plugin-crosswalk-webview` | 2.3.0 | 2.4.0 | |
-| `cordova-plugin-device` | 1.1.2 | 2.0.2 | |
-| `cordova-plugin-device-motion` | 1.2.1 | 2.0.1 | |
-| `cordova-plugin-device-orientation` | 1.0.3 | 2.0.1 | |
-| `cordova-plugin-dialogs` | 1.2.1 | 2.0.1 | |
-| `cordova-plugin-file` | 4.2.0 | 6.0.1 | |
-| `cordova-plugin-file-opener2` | 2.0.19 | 2.0.19 | |
-| `cordova-plugin-file-transfer` | 1.5.1 | 1.7.1 | |
-| `cordova-plugin-geolocation` | 2.2.0 | 4.0.1 | |
-| `cordova-plugin-globalization` | 1.0.3 | 1.11.0| |
-| `cordova-plugin-inappbrowser` | 3.0.0 | 3.0.0 | |
-| `cordova-plugin-media` | 2.3.0 | 5.0.2 | |
-| `cordova-plugin-media-capture` | 1.4.2 | 3.0.2 | |
-| `cordova-plugin-network-information` | 1.2.1 | 2.0.1 | |
-| `cordova-plugin-secure-storage` | 2.4.0 | 2.6.8 | |
-| `cordova-plugin-spinner` | 1.1.0 | 1.1.0 | |
-| `cordova-plugin-splashscreen` | 4.1.0 | 5.0.2 | |
-| `cordova-plugin-statusbar` | 2.3.0 | 2.4.2 | |
-| `cordova-plugin-vibration` | 2.1.1 | 3.1.0 | |
-| `cordova-plugin-x-socialsharing` | 5.0.11 | 5.4.0 | |
-| `cordova-plugin-zip` | 3.1.0 | 3.1.0 | |
-| `cordova-plugin-whitelist` | 1.2.2 | 1.3.3 | |
-| `cordova-plugin-wkwebview-engine-mx` | 1.1.0 | 1.0.1-mx.1.2.0 | Old version number was incorrect |
-| `@mendix/cordova-sqlite-storage` | No version specified | 2.0.4-mx.1.1.0 | Renamed from `cordova-sqlite-storage-pgb` |
-| `@mendix/phonegap-plugin-push` | 1.5.3 | 1.11.1-mx.1.0.0 | Renamed from `phonegap-plugin-push` |
-| `@mendix/uk.co.workingedge.phonegap.plugin.launchnavigator` | 2.9.11 | 4.2.2-mx.1.0.0 | Renamed from `uk.co.workingedge.phonegap.plugin.launchnavigator` |
+| Name                                                        | Old Version          | New Version          | Comments                                                     |
+| ----------------------------------------------------------- | -------------------- | -------------------- | ------------------------------------------------------------ |
+| `com.crosswalk.cookies`                                     | No version specified | No version specified |                                                              |
+| `com.darktalker.cordova.screenshot`                         | 0.1.6                | 0.1.6                |                                                              |
+| `com.telerik.plugins.nativepagetransitions `                | 0.6.5                | 0.6.5                |                                                              |
+| `cordova-build-architecture`                                | 1.0.3                | 1.0.4                |                                                              |
+| `cordova-plugin-actionsheet`                                | 2.3.3                | 2.3.3                |                                                              |
+| `cordova-plugin-android-permissions`                        | 0.10.0               | 0.11.0               |                                                              |
+| `cordova-android-support-gradle-release`                    | 1.2.0                | Removed              |                                                              |
+| `cordova-plugin-app-version`                                | 0.1.8                | 0.1.9                |                                                              |
+| `cordova-plugin-battery-status`                             | 1.1.2                | 2.0.2                |                                                              |
+| `cordova-plugin-calendar`                                   | 4.5.5                | 5.1.2                |                                                              |
+| `cordova-plugin-camera`                                     | 2.4.0                | 4.0.3                |                                                              |
+| `cordova-plugin-contacts`                                   | 1.4.2                | 3.0.2                |                                                              |
+| `cordova-plugin-cookieemperor`                              | No version specified | No version specified |                                                              |
+| `cordova-plugin-crosswalk-webview`                          | 2.3.0                | 2.4.0                |                                                              |
+| `cordova-plugin-device`                                     | 1.1.2                | 2.0.2                |                                                              |
+| `cordova-plugin-device-motion`                              | 1.2.1                | 2.0.1                |                                                              |
+| `cordova-plugin-device-orientation`                         | 1.0.3                | 2.0.1                |                                                              |
+| `cordova-plugin-dialogs`                                    | 1.2.1                | 2.0.1                |                                                              |
+| `cordova-plugin-file`                                       | 4.2.0                | 6.0.1                |                                                              |
+| `cordova-plugin-file-opener2`                               | 2.0.19               | 2.0.19               |                                                              |
+| `cordova-plugin-geolocation`                                | 2.2.0                | 4.0.1                |                                                              |
+| `cordova-plugin-globalization`                              | 1.0.3                | 1.11.0               |                                                              |
+| `cordova-plugin-inappbrowser`                               | 3.0.0                | 3.0.0                |                                                              |
+| `cordova-plugin-media`                                      | 2.3.0                | 5.0.2                |                                                              |
+| `cordova-plugin-media-capture`                              | 1.4.2                | 3.0.2                |                                                              |
+| `cordova-plugin-network-information`                        | 1.2.1                | 2.0.1                |                                                              |
+| `cordova-plugin-secure-storage`                             | 2.4.0                | 2.6.8                |                                                              |
+| `cordova-plugin-spinner`                                    | 1.1.0                | 1.1.0                |                                                              |
+| `cordova-plugin-splashscreen`                               | 4.1.0                | 5.0.2                |                                                              |
+| `cordova-plugin-statusbar`                                  | 2.3.0                | 2.4.2                |                                                              |
+| `cordova-plugin-vibration`                                  | 2.1.1                | 3.1.0                |                                                              |
+| `cordova-plugin-x-socialsharing`                            | 5.0.11               | 5.4.0                |                                                              |
+| `cordova-plugin-zip`                                        | 3.1.0                | 3.1.0                |                                                              |
+| `cordova-plugin-whitelist`                                  | 1.2.2                | 1.3.3                |                                                              |
+| `cordova-plugin-wkwebview-engine-mx`                        | 1.1.0                | 1.0.1-mx.1.2.0       | Old version number was incorrect                             |
+| `@mendix/cordova-sqlite-storage`                            | No version specified | 2.0.4-mx.1.1.0       | Renamed from `cordova-sqlite-storage-pgb`                    |
+| `@mendix/phonegap-plugin-push`                              | 1.5.3                | 1.11.1-mx.1.0.0      | Renamed from `phonegap-plugin-push`                          |
+| `@mendix/uk.co.workingedge.phonegap.plugin.launchnavigator` | 2.9.11               | 4.2.2-mx.1.0.0       | Renamed from `uk.co.workingedge.phonegap.plugin.launchnavigator` |
 
 We have tested extensively against real-life projects and commonly used widgets from the [Mendix App Store](https://appstore.home.mendix.com/index3.html).
 

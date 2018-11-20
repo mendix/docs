@@ -28,11 +28,11 @@ When you deploy an app to the cloud, whether it is a free app or a licensed app,
 
 This is the Mendix **environment**.
 
-In a **node** in the Mendix Cloud, you may have one, or more, of these *environments*.
+In a **node** in the Mendix Cloud, you may have one, or more, of these *environments*. More information about *nodes* can be found here: [Nodes](/developerportal/company-app-roles/nodes).
 
 For a **Free App**, your app has a single *Sandbox* environment which allows you to test your app. However, this comes with restrictions on how long it will run and the number of users it will support. You cannot scale the app, and the operational capabilities are limited.
 
-In a **licensed node** you have everything you need to stage and deploy your app. You can have several different *environments* to support development: testing, acceptance, and production, for example. You can scale these environments by providing more memory or multiple instances, and you can configure and monitor them using the tools in the *Developer Portal*.
+In a **licensed node** you have everything you need to stage and deploy your app. You can have several different *environments* to support development: test, acceptance, and production, for example. You can scale these environments by providing more memory or multiple instances, and you can configure and monitor them using the tools in the *Developer Portal*.
 
 This document describes how you can link apps to a licensed node.
 
@@ -90,17 +90,17 @@ Before you can link an app to a new environment, you need to unlink it from its 
 
     ![](attachments/licensing-apps/link-node.png)
    
-5.  Click **Unlink your app**.
-
-    {{% alert type="warning" %}}Your Data will be deleted.{{% /alert %}}
+4.  Click **Unlink your app**.
 
     ![](attachments/licensing-apps/unlink-free-app.png)
 
-6.  Click **Yes, delete all data and unlink this app** to confirm.
+5.  Click **Yes, delete all data and unlink this app** to confirm.
 
     ![](attachments/licensing-apps/confirm-unlink.png)
 
-7.  Validate with your [Two-Factor Authentication](two-factor-authentication).
+    {{% alert type="warning" %}}Your Data will be deleted.{{% /alert %}}
+
+6.  Validate with your [Two-Factor Authentication](two-factor-authentication).
 
 Your app has now been unlinked from the Sandbox environment.
 
@@ -132,7 +132,7 @@ Apart from the app, the rest of the environment(s) in the target node will remai
 
 1.  Go to the [Developer Portal](http://home.mendix.com).
 
-1.  Select the *app* you want to link to the *node*.
+2.  Select the *app* you want to link to the *node*.
 
 3.  Go to **Environments** in the left navigation panel.
 
@@ -166,7 +166,7 @@ This method will only work if there is currently no app linked to the node.
 
     ![](attachments/licensing-apps/myapps.png)
 
-4. Select the node that you want to link to an app by clicking **Select Node**.    
+4. Select the node that to which you want to link an app **Select Node**.    
 
     ![](attachments/licensing-apps/select-node.png)
 

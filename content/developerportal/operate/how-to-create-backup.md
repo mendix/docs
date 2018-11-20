@@ -22,7 +22,6 @@ Before starting this how-to, make sure you have completed the following prerequi
 *   You have a licensed cloud node
 *   You have the correct [Security - Node Permissions](/developerportal/deploy/node-permissions)
 
-
 ## 3 Create a Backup
 
 Follow these steps to create a backup of a licensed app:
@@ -42,8 +41,7 @@ Follow these steps to create a backup of a licensed app:
 
 ## 4 Related Content
 
-* [How to Deploy to the Mendix Cloud](../deploy/mendix-cloud-deploy)
+* [How to Deploy to the Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy)
 * [How to Download a Backup](how-to-download-a-backup)
-* [How to Link an App to a Licensed Cloud Node](/developerportal/deploy/how-to-link-app-to-node)
+* [Licensing Apps](/developerportal/deploy/licensing-apps)
 * [How to Restore a Backup](how-to-restore-a-backup)
-* [How to Unlink Your Free App from a Sandbox Environment](/developerportal/deploy/how-to-unlink-sandbox)

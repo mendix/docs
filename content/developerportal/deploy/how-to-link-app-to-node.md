@@ -1,6 +1,6 @@
 ---
 title: "Link App to Licensed Node"
-# Merge with other Linking docs
+# Merge with other Linking docs into licensing-apps.md
 parent: "mendix-cloud-deploy"
 menu_order: 15
 description: "How to link an App, for example a Free App, to a licensed cloud node."

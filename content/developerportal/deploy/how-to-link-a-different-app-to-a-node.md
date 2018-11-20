@@ -1,6 +1,6 @@
 ---
 title: "Change App Linked to Node"
-# Merge with other Linking docs
+# Merge with other Linking docs into licensing-apps.md
 parent: "mendix-cloud-deploy"
 menu_order: 17
 description: "How to link an existing app to a cloud node."

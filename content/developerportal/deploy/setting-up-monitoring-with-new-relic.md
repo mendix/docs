@@ -34,7 +34,7 @@ The configuration section in m2ee.yaml should look something like this:
 
 1.  Add  '-javaagent:/PATH/TO/NEWRELIC.JAR' to your java arguments in the Windows Service Console
 
-![](attachments/18448657/18580677.png)
+![](attachments/setting-up-monitoring-with-new-relic/18580677.png)
 
 {{% alert type="info" %}}
 

@@ -22,7 +22,8 @@ When browsing the list of jobs on the [Mendix jobs board](https://developers.men
     * You can refine your search by selecting the **Jobs** category (for permanent positions) or the **Projects** category (for specific projects) in this drop-down menu
 * You can filter according to the job type by selecting or clearing the following check boxes: **Freelance**, **Full Time**, **Internship**, **Part Time**, **Project**, and **Temporary**
 
-![](attachments/mendix-job-board/filtering_options.png)
+{{% image_container width="300" %}}![](attachments/mendix-job-board/filtering_options.png)
+{{% /image_container %}}
 
 Each job listing on the job board presents the following information:
 

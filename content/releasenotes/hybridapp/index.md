@@ -91,8 +91,6 @@ The goal of this release is to upgrade all major dependencies to their latest ve
 
 We have tested extensively against real-life projects and commonly used widgets from the [Mendix App Store](https://appstore.home.mendix.com/index3.html).
 
-If you encounter issues caused by this release, please let us know via [support@mendix.com](support@mendix.com).
-
 ### October 18th, 2018 (2.3.2 / 2.0.1)
 
 * We inadvertently removed the mechanism to pin the Android support library, which could lead to issues during compilation of the app. We now pin it at SDK version 27 again.

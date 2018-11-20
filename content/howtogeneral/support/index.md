@@ -30,7 +30,7 @@ We expect that many questions and issues can be solved by reading the Mendix [do
 
 We would like to invite you to an important channel where you can provide feature requests to Mendix: the [Mendix Idea Forum](https://forum.mendix.com/link/ideas/). Every quarter, any customer can post a feature request that can be reviewed, expanded on, and voted on by other members of the Mendix Community. Based on this feedback, we will determine which features have the most value according to our customers, and we will implement them.
 
-For more details about the idea forum, see [The Mendix Forum](/developerportal/community-tools/the-mendix-forum#IdeasTab).
+For more details about the idea forum, see [The Mendix Forum](/developerportal/community-tools/mendix-forum#IdeasTab).
 
 ## Accessing Mendix Support
 

@@ -36,7 +36,7 @@ To restore the database, follow these steps:
 3. Right-click the database, select **Tasks** > **Restore** > **Database**, which will open the **Restore Database** dialog box.
 4. In the **Source** section of the **General** page, specify the source and the location of the backup sets to restore by selecting **Device** > **Add** and then locating the backup file:
 
-    ![](attachments/18448651/18580646.jpg)
+    ![](attachments/restoring-a-sql-server-database/18580646.jpg)
 
 5. In the **Destination** section of the **General** page, the **Database** field is automatically populated with the name of the database to be restored. To change the name of the database, enter the new name in this field.
 6. In the **Restore plan** section of the **General** page, leave the default as **To the last backup taken** or click **Timeline** to access the **Backup Timeline** dialog box where you can manually select a point in time to stop the recovery action.

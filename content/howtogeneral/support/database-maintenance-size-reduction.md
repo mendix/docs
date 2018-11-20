@@ -1,7 +1,6 @@
 ---
 title: "Database Maintenance in the Mendix Cloud: Size Reduction"
 category: "Mendix Support"
-#parent: ""
 #description: ""
 #tags: []
 ---

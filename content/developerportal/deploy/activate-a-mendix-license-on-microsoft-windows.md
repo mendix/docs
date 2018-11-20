@@ -31,12 +31,12 @@ In this section, you will retrieve the server ID from your Mendix server, which 
 
 1. Start the Mendix Service Console.
 2. Select your app in the overview on the left side of the console.
-    ![](attachments/19202502/19398813.png)
+    ![](attachments/activate-mendix-license-on-windows/19398813.png)
 3. The app needs to be running in order for you to be able to activate the license. If the app is not running, click **Start service** to start the app.
 4.  Click **Advanced** and select the **Show or add license...** option.
-    ![](attachments/19202502/19398814.png) 
+    ![](attachments/activate-mendix-license-on-windows/19398814.png) 
 5. Next to **Server ID**, click **Copy to clipboard**.
-    ![](attachments/19202502/19398815.png) 
+    ![](attachments/activate-mendix-license-on-windows/19398815.png) 
 
 ## 4 Retrieve the License Key by Submitting a Ticket
 
@@ -53,11 +53,11 @@ In this section, you will submit your server ID in the Mendix support portal to 
 In this section, you will enter the license key into the Mendix server, thus completing the license activation process.
 
 1. Return to the Mendix Service Console **License** dialog box (as described in [3 Retrieve the Server ID](#3RetrievetheServerID)).
-    ![](attachments/19202502/19398814.png) 
+    ![](attachments/activate-mendix-license-on-windows/19398814.png) 
 2. Paste your license key into the **License key** text box.
-    ![](attachments/19202502/19398816.png) 
+    ![](attachments/activate-mendix-license-on-windows/19398816.png) 
 3.  Click **Activate license**.
-    ![](attachments/19202502/19398817.png) 
+    ![](attachments/activate-mendix-license-on-windows/19398817.png) 
 4.  Congratulations! Your license has been activated.
 
 ## 6 Related Content

@@ -1,7 +1,8 @@
 ---
 title: "Two-Factor Authentication"
 parent: "general"
-description: "This page describes the purpose of the Two-Factor Authentication."
+menu_order: 20
+description: "What is Two-Factor Authentication and how to set up and change it."
 tags: ["Authenticator","Developer Portal","Cloud","Permissions"]
 ---
 

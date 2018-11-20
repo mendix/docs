@@ -1,7 +1,6 @@
 ---
 title: "Submit a Feature Request"
 category: "Mendix Support"
-#parent: ""
 #description: ""
 #tags: []
 ---

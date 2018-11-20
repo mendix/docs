@@ -20,7 +20,7 @@ App services are aimed at sharing functionality between your Mendix apps. You ca
 
 On the **App Service** page, you can see a list of the available app services, with whom the app service is shared, and what the current statuses are.
 
-![](attachments/publish-appservice.jpg)
+![](attachments/app-services/publish-appservice.png)
 
 For more information, see [Published App Services](/refguide/published-app-services) in the Mendix Reference Guide as well as the [Mendix App Services: Putting Them to Work for Your Projects](https://www.mendix.com/videos/mendix-app-services-putting-work-projects-pieter-van-balen-mendix-developer/) blog post.
 

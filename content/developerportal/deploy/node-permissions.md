@@ -1,6 +1,7 @@
 ---
 title: "Node Permissions"
-category: "mendix-cloud-deploy"
+parent: "mendix-cloud-deploy"
+menu_order: 18
 description: "This page describes the permission settings of your node."
 tags: ["Node","Permission","Developer Portal"]
 ---

@@ -20,9 +20,9 @@ This how-to tells you how to migrate your app from a Mendix Cloud v3 node to a M
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-*  Have an available v4 [Mendix Cloud](mendix-cloud-deploy) node (to request a licensed v4 Cloud Node, contact your Customer Success Manager (CSM))
+* Have an available v4 [Mendix Cloud](mendix-cloud-deploy) node (to request a licensed v4 Cloud Node, contact your Customer Success Manager (CSM))
 * Have the [Technical Contact](/developerportal/company-app-roles/technical-contact) role for both v3 and v4 Cloud Nodes
-* Create a new temporary Free App without a Sandbox – instructions for unlinking a Free App from a sandbox are here: [How To Unlink Your Free App from a Sandbox Environment](how-to-unlink-sandbox).
+* Create a new temporary Free App without a Sandbox – instructions for unlinking a Free App from a sandbox are here: [Licensing Apps](licensing-apps).
 
 ## 3 The Migration Process
 
@@ -32,7 +32,7 @@ To migrate your app from a v3 node to a v4 node in the Mendix Cloud, follow the 
 
 First, link the new temporary app to the cloud v4 node.
 
-To learn how to do this, see [How to Link Your Free App to a Licensed Cloud Node](how-to-link-app-to-node).
+To learn how to do this, see [Licensing Apps](licensing-apps).
 
 ### 3.2 Copying Data from v3 to v4
 
@@ -92,7 +92,7 @@ After the v3 node has been offboarded, follow these steps to link the app to the
 3.  Click **Select Node**.
 4.  Select the v4 node by clicking **Use this Node** and link it to your app. The currently linked (temporary) app will be unlinked automatically. The temporary app can be deleted.
 
-For more information, see [How to Link a Different App to a Cloud Node](how-to-link-a-different-app-to-a-node).
+For more information, see [Licensing Apps](licensing-apps).
 
 ### 3.5 Changing the App URL
 
@@ -113,7 +113,5 @@ If you have a custom domain set up, you will need to change this. Instructions f
 *   [How to Configure Custom Domains](custom-domains)
 *   [Mendix Cloud: Deploy](mendix-cloud-deploy)
 *   [How to Download a Backup](/developerportal/operate/how-to-download-a-backup)
-*   [How to Link a Different App to a Cloud Node](how-to-link-a-different-app-to-a-node)
-*   [How to Link Your Free App to a Licensed Cloud Node](how-to-link-app-to-node)
+*   [Licensing Apps](licensing-apps)
 *   [How to Restore a Backup](/developerportal/operate/how-to-restore-a-backup)
-*   [How to Unlink Your Free App from a Sandbox Environment](how-to-unlink-sandbox)

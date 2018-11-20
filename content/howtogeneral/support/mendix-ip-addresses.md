@@ -1,7 +1,6 @@
 ---
 title: "Mendix IP Addresses"
 category: "Mendix Support"
-#parent: ""
 #description: ""
 #tags: []
 ---

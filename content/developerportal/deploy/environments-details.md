@@ -10,11 +10,11 @@ tags: ["Deploy","App","Environment","Developer Portal"]
 
 To enter the **Environment details** page, go to the [Mendix Portal](http://home.mendix.com), select your licensed app, click **Environments**, and then click **Details** on the specific environment. 
 
-![](attachments/environment-details.png)   
+![](attachments/environments-details/environment-details.png)   
 
 ## 2 General Tab
 
-![](attachments/environment-tab.png)   
+![](attachments/environments-details/environment-tab.png)   
 
 The view of the **General** tab depends on the Mendix Cloud version on which the app is hosted. In this tab, you can find the following information about your environment:
 
@@ -24,7 +24,7 @@ The view of the **General** tab depends on the Mendix Cloud version on which the
    * Orange – the environment has warnings
    * Red – the environment is not working correctly
 
-        ![](attachments/environment-status.png)   
+        ![](attachments/environments-details/environment-status.png)   
 
 * **Running since** date – the date on which the app was started
 * **Mode** – the type of environment (Production, Acceptance, Test)
@@ -52,19 +52,19 @@ On the right side of the screen, you can find the following action buttons:
 
 #### 2.1.1 Debugger in Mendix Cloud v3
 
-![](attachments/actions-v3.png)
+![](attachments/environments-details/actions-v3.png)
 
 In Mendix Cloud v3 environments, you can click **Enable/Disable Debugging** to enable or disable the debugger option. For more information about enabling the debugger, see [How to Debug Microflows Remotely](/howto7/monitoring-troubleshooting/debug-microflows-remotely)
 
 #### 2.1.2 Debugger in Mendix Cloud v4
 
-![](attachments/actions-v4.png)
+![](attachments/environments-details/actions-v4.png)
 
 In Mendix Cloud v4 environments, the debugger is always enabled. You can click **Show debugger information** to show the settings to connect the debugger in your Mendix Desktop Modeler to your app.
 
 ### 2.2 Scaling – Mendix Cloud v4
 
-![](attachments/scale.png)
+![](attachments/environments-details/scale.png)
 
 If your app is hosted in Mendix Cloud v4, you will see a section named **Scaling** in the **General** tab.
 
@@ -115,7 +115,7 @@ In this section, you can find information about the deployment package that is c
 
 ## 3 Model Options Tab
 
-![](attachments/model-options.png)
+![](attachments/environments-details/model-options.png)
 
 On this tab, you can edit the model options described below.
 
@@ -151,7 +151,7 @@ For more information, see [Constants](/refguide/constants).
 
 ## 4 Network Tab
 
-![](attachments/network1.png)
+![](attachments/environments-details/network1.png)
 
 On this tab, you can manage the elements described below.
 
@@ -209,7 +209,7 @@ Add client certificates (in the PKCS12 format) or certificate authorities (in th
 
 ## 5 Log Levels Tab
 
-![](attachments/loglevels-tab.png)   
+![](attachments/environments-details/loglevels-tab.png)   
 
 Log levels are used to distinguish the log messages and to highlight the highest priority ones so that they can receive the immediate intervention they require.
 
@@ -219,7 +219,7 @@ On this tab, you can perform the following actions:
 * Change the log level type by clicking the specific level
 * Click **Set all to INFO** to revert all the changes
 
-![](attachments/loglevels.jpg)
+![](attachments/environments-details/loglevels.png)
 
 The log level types are the following:
 
@@ -236,7 +236,7 @@ For more information about log levels, see [How to Set Log Levels](/howto/monito
 
 ## 6 Runtime Tab{#runtime-tab}
 
-![](attachments/runtime.png)   
+![](attachments/environments-details/runtime.png)   
 
 On this tab, you can perform the following actions:
 
@@ -275,7 +275,7 @@ The Mendix Cloud uses runtime settings to configure the included systems for log
 
 ## 7 Maintenance Tab
 
-![](attachments/maintenance.png)   
+![](attachments/environments-details/maintenance.png)   
 
 There are two types of maintenance:
 

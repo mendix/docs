@@ -42,7 +42,7 @@ In [People](mendix-profile/index#connections), you can view the other members of
 
 ## 5 Community
 
-In [Community](/developerportal/community-tools/index), you can explore various resources for the vibrant Mendix community of users, from blog posts about how Mendix is being used in the wider world of low-code development to the [Mendix job board](/developerportal/community-tools/the-mendix-job-board) and [Mendix Shop](https://shop.mendix.com/):
+In [Community](/developerportal/community-tools/index), you can explore various resources for the vibrant Mendix community of users, from blog posts about how Mendix is being used in the wider world of low-code development to the [Mendix job board](/developerportal/community-tools/mendix-job-board) and [Mendix Shop](https://shop.mendix.com/):
 
 ![](attachments/developerportal-community.png)
 
@@ -60,7 +60,7 @@ The [Mendix Academy](https://gettingstarted.mendixcloud.com/link/home) offers bo
 
 ## 8 Forum
 
-In the [Mendix Forum](/developerportal/community-tools/the-mendix-forum), you can interact with the Mendix community to help out with [questions](https://forum.mendixcloud.com/link/questions/91882) and answers on the best ways to use Mendix as well as propose ideas for improving the Mendix Platform:
+In the [Mendix Forum](/developerportal/community-tools/mendix-forum), you can interact with the Mendix community to help out with [questions](https://forum.mendixcloud.com/link/questions/91882) and answers on the best ways to use Mendix as well as propose ideas for improving the Mendix Platform:
 
 ![](attachments/developerportal-forum.png)
 

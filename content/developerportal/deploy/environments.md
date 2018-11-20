@@ -21,7 +21,7 @@ In the **Environments** section of the **Deploy** category, there is an overview
     * IP Address Filtering
     * TLS Client Certificate Verification
     
-   ![](attachments/environment-tab.png)       
+   ![](attachments/environments/environment-tab.png)       
 
 ## 2 Deploy
 
@@ -29,7 +29,7 @@ In the **Deploy** tab, you can find the information below about your environment
 
 ### 2.1 Deployment Package Repository
 
-![](attachments/deployment-package.png)
+![](attachments/environments/deployment-package.png)
 
 In the **Deployment Package Repository** section, there is an overview of the following:
 
@@ -71,7 +71,7 @@ If you click **Deploy**, the package from the team server will be transported to
 
 ### 2.2 Environments
 
-![](attachments/deploy-environments.png)
+![](attachments/environments/deploy-environments.png)
 
 In this section, you have the an overview of all the available environments with the following details:
 
@@ -103,11 +103,11 @@ After clicking [Details](/developerportal/deploy/environments-details) of the se
 * Runtime
 * Maintenance
 
-![](attachments/environment-details.png)    
+![](attachments/environments/environment-details.png)    
 
 ### 2.3 Activity
 
-![](attachments/activity.png)
+![](attachments/environments/activity.png)
 
 This section shows the following activity types:
 

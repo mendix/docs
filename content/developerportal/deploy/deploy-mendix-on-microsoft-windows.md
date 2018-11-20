@@ -20,7 +20,7 @@ This document describes the installation and configuration of the Mendix softwar
 
 In order to set up an environment to run Mendix applications, you will need to install the Mendix software. For each Mendix application that will be run, a separate user (service) account is required. This section presents an overview of the setup.
 
-![](attachments/18448665/18580733.png)
+![](attachments/deploy-mendix-on-windows/18580733.png)
 
 Before starting this how-to, make sure you have the following prerequisites:
 
@@ -44,12 +44,12 @@ To download and install the Mendix Service Console, follow these steps:
 
 1. Download the latest version of the Mendix Service Console from the [App Store](https://appstore.home.mendix.com/link/modelers):
 
-    ![](attachments/18448665/service_console_download.png)
+    ![](attachments/deploy-mendix-on-windows/service_console_download.png)
 
 2. Install the Mendix Service Console by following the installation wizard.
 3. Start the Mendix Service Console after the installation. The first time you launch the application, the **Preferences** dialog box will be shown (it will always be shown if no valid location is configured for all the apps and server files):
 
-    ![](attachments/18448665/18580730.png)
+    ![](attachments/deploy-mendix-on-windows/18580730.png)
 
 4. In the **Preferences** dialog box, enter a **Location of apps and server files**. Mendix recommends using a directory that is NOT on the system partition where you can easily control the security rights. This location is used for storing your app files and Mendix server files. The app directory consists of four sub-directories:
 
@@ -73,11 +73,11 @@ To deploy a Mendix app using the Mendix Service Console, follow these steps:
     * **Startup type** – select whether you want the app to be started automatically when the server starts, started with a delay, started manually, or disabled altogether
     * **User name** and **Password** – the app will always run under the user account given here, and the service will be installed with this user account configured (for more information, see [Prerequisites](#Prerequisites))
 
-    ![](attachments/18448665/18580728.png)
+    ![](attachments/deploy-mendix-on-windows/18580728.png)
 4. Click **Next**.
 5. On the **Project Files** screen, click **Select app...**:
 
-    ![](attachments/18448665/18580727.png)
+    ![](attachments/deploy-mendix-on-windows/18580727.png)
 
 6. Now select the **MDA** file that was created in the Modeler and contains your application logic. After the installation of your MDA file, you will see which Mendix server (Mendix runtime) version is needed.
 7. Configure the **Database Settings**
@@ -87,7 +87,7 @@ To deploy a Mendix app using the Mendix Service Console, follow these steps:
     * **Name** – the database name
     * **User name** and **Password** – the database user name and password
 
-    ![](attachments/18448665/18580726.png)
+    ![](attachments/deploy-mendix-on-windows/18580726.png)
 
 8. Click **Next**.
 9. On the **Common Configuration** screen, keep the settings default. Only change these specific settings if needed for your application setup.

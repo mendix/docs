@@ -18,7 +18,7 @@ The **Forum** section at the top of the Mendix Community site presents the lates
 
 Click any question to go to that specific question page in the forum. Click **Ask a question** to submit your own question to the forum.
 
-For more information on the forum, see [Mendix Forum](the-mendix-forum).
+For more information on the forum, see [Mendix Forum](mendix-forum).
 
 ## 3 Monthly Webinar
 

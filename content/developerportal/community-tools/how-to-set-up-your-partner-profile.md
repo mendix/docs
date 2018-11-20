@@ -126,7 +126,7 @@ This will open the project editor. There are tips in the editor for what you sho
 
 All of the fields in the project editor must be filled out before submitting the project. Click **Submit** to save and submit your project:
 
-{{% image_container width="200" %}}
+{{% image_container width="300" %}}
 ![](attachments/how-to-set-up-your-partner-profile/project-buttons.png)
 {{% /image_container %}}
 

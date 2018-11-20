@@ -22,75 +22,76 @@ This is a major version upgrade of the hybrid app project.
 
 {{% /alert %}}
 
-The goal of this release is to upgrade all major dependencies to their latest versions, including the Phonegap/Cordova framework and all plugins. See below for an overview of all old and new versions.
+The goal of this release is to upgrade all major dependencies to their latest versions, including the PhoneGap/Cordova framework and all plugins. See below for an overview of all old and new versions.
 
 #### Changes
 
-- We upgraded the Phonegap/Cordova framework and plugins (see below)
-- Android builds now target Android SDK level 28 by default (minimally supported SDK level remains 19)
+* We upgraded the PhoneGap/Cordova framework and plugins (for details, see [Version Upgrades](#upgrades-20) below)
+* Android builds now target Android SDK level 28 by default (the minimally supported SDK level remains 19)
 
-#### For locally compiled apps only
+#### For Locally Compiled Apps Only
 
-- When you install the dependencies of the hybrid app (by running `npm install`), we check the version of the globally installed `phonegap` package. We lifted the requirement that this version needed to exactly match the phonegap-cli version specified in the `config.xml` file. Instead, we accept any newer version as well, within the major version specified. Example: if your `config.xml` defines phonegap-cli level 8.1.1, we also accept e.g. phonegap version 8.2.2.
-- We removed any references to the `cordova-android-support-gradle-release` and the `cordova-android-play-services-gradle-release` plugins, as they are no longer needed.
-- We added additional npm scripts (and improved existing ones) to make it easier to build your hybrid app and to interact with the Phonegap CLI.
+* When you install the dependencies of the hybrid app (by running `npm install`), we check the version of the globally installed `phonegap` package. We lifted the requirement that this version needs to exactly match the `phonegap-cli` version specified in the `config.xml` file. Instead, we now accept any newer version as well, within the major version specified. For example, if your `config.xml` defines `phonegap-cli` level 8.1.1, we also accept PhoneGap version 8.2.2.
+* We removed all references to the `cordova-android-support-gradle-release` and `cordova-android-play-services-gradle-release` plugins, as they are no longer needed.
+* We added additional NPM scripts (and improved existing ones) to make it easier to build your hybrid app and interact with the PhoneGap CLI.
 
-#### Version upgrades
+#### Version Upgrades {#upgrades-20}
 
 ##### Framework
 
-| Name 	| Old version 	| New version 	|
+| Name 	| Old Version 	| New Version 	|
 | - | - | - |
-| Phonegap CLI | 7.1.0 | 8.1.1 |
+| PhoneGap CLI | 7.1.0 | 8.1.1 |
 | Cordova Android | 6.3.0 | 7.1.2 |
 | Cordova iOS | 4.5.4 | 4.5.5 |
 
 ##### Plugins
 
-| Name 	| Old version 	| New version 	| Comments 	|
+| Name 	| Old Version 	| New Version 	| Comments 	|
 | - | - | - | - |
-| com.crosswalk.cookies | no version specified | no version specified | |
-| com.darktalker.cordova.screenshot | 0.1.6 | 0.1.6 | |
-| com.telerik.plugins.nativepagetransitions | 0.6.5 | 0.6.5 | |
-| cordova-build-architecture | 1.0.3 | 1.0.4 | |
-| cordova-plugin-actionsheet | 2.3.3 | 2.3.3 | |
-| cordova-plugin-android-permissions | 0.10.0 | 0.11.0 | |
-| cordova-android-support-gradle-release | 1.2.0 | removed |
-| cordova-plugin-app-version | 0.1.8 | 0.1.9 | |
-| cordova-plugin-battery-status | 1.1.2 | 2.0.2 | |
-| cordova-plugin-calendar | 4.5.5 | 5.1.2 | |
-| cordova-plugin-camera | 2.4.0 | 4.0.3 | |
-| cordova-plugin-contacts | 1.4.2 | 3.0.2 | |
-| cordova-plugin-cookieemperor | no version specified | no version specified |
-| cordova-plugin-crosswalk-webview | 2.3.0 | 2.4.0 | |
-| cordova-plugin-device | 1.1.2 | 2.0.2 | |
-| cordova-plugin-device-motion | 1.2.1 | 2.0.1 | |
-| cordova-plugin-device-orientation | 1.0.3 | 2.0.1 | |
-| cordova-plugin-dialogs | 1.2.1 | 2.0.1 | |
-| cordova-plugin-file | 4.2.0 | 6.0.1 | |
-| cordova-plugin-file-opener2 | 2.0.19 | 2.0.19 | |
-| cordova-plugin-file-transfer | 1.5.1 | 1.7.1 | |
-| cordova-plugin-geolocation | 2.2.0 | 4.0.1 | |
-| cordova-plugin-globalization | 1.0.3 | 1.11.0| |
-| cordova-plugin-inappbrowser | 3.0.0 | 3.0.0 | |
-| cordova-plugin-media | 2.3.0 | 5.0.2 | |
-| cordova-plugin-media-capture | 1.4.2 | 3.0.2 | |
-| cordova-plugin-network-information | 1.2.1 | 2.0.1 | |
-| cordova-plugin-secure-storage | 2.4.0 | 2.6.8 | |
-| cordova-plugin-spinner | 1.1.0 | 1.1.0 | |
-| cordova-plugin-splashscreen | 4.1.0 | 5.0.2 | |
-| cordova-plugin-statusbar | 2.3.0 | 2.4.2 | |
-| cordova-plugin-vibration | 2.1.1 | 3.1.0 | |
-| cordova-plugin-x-socialsharing | 5.0.11 | 5.4.0 | |
-| cordova-plugin-zip | 3.1.0 | 3.1.0 | |
-| cordova-plugin-whitelist | 1.2.2 | 1.3.3 | |
-| cordova-plugin-wkwebview-engine-mx | 1.1.0 | 1.0.1-mx.1.2.0 | Old version number was incorrect |
-| @mendix/cordova-sqlite-storage | no version specified | 2.0.4-mx.1.1.0 | Renamed from cordova-sqlite-storage-pgb |
-| @mendix/phonegap-plugin-push | 1.5.3 | 1.11.1-mx.1.0.0 | Renamed from phonegap-plugin-push |
-| @mendix/uk.co.workingedge.phonegap.plugin.launchnavigator | 2.9.11 | 4.2.2-mx.1.0.0 | Renamed from uk.co.workingedge.phonegap.plugin.launchnavigator |
+| `com.crosswalk.cookies` | No version specified | No version specified | |
+| `com.darktalker.cordova.screenshot` | 0.1.6 | 0.1.6 | |
+| `com.telerik.plugins.nativepagetransitions `| 0.6.5 | 0.6.5 | |
+| `cordova-build-architecture` | 1.0.3 | 1.0.4 | |
+| `cordova-plugin-actionsheet` | 2.3.3 | 2.3.3 | |
+| `cordova-plugin-android-permissions` | 0.10.0 | 0.11.0 | |
+| `cordova-android-support-gradle-release` | 1.2.0 | Removed |
+| `cordova-plugin-app-version` | 0.1.8 | 0.1.9 | |
+| `cordova-plugin-battery-status` | 1.1.2 | 2.0.2 | |
+| `cordova-plugin-calendar` | 4.5.5 | 5.1.2 | |
+| `cordova-plugin-camera` | 2.4.0 | 4.0.3 | |
+| `cordova-plugin-contacts` | 1.4.2 | 3.0.2 | |
+| `cordova-plugin-cookieemperor` | No version specified | No version specified |
+| `cordova-plugin-crosswalk-webview` | 2.3.0 | 2.4.0 | |
+| `cordova-plugin-device` | 1.1.2 | 2.0.2 | |
+| `cordova-plugin-device-motion` | 1.2.1 | 2.0.1 | |
+| `cordova-plugin-device-orientation` | 1.0.3 | 2.0.1 | |
+| `cordova-plugin-dialogs` | 1.2.1 | 2.0.1 | |
+| `cordova-plugin-file` | 4.2.0 | 6.0.1 | |
+| `cordova-plugin-file-opener2` | 2.0.19 | 2.0.19 | |
+| `cordova-plugin-file-transfer` | 1.5.1 | 1.7.1 | |
+| `cordova-plugin-geolocation` | 2.2.0 | 4.0.1 | |
+| `cordova-plugin-globalization` | 1.0.3 | 1.11.0| |
+| `cordova-plugin-inappbrowser` | 3.0.0 | 3.0.0 | |
+| `cordova-plugin-media` | 2.3.0 | 5.0.2 | |
+| `cordova-plugin-media-capture` | 1.4.2 | 3.0.2 | |
+| `cordova-plugin-network-information` | 1.2.1 | 2.0.1 | |
+| `cordova-plugin-secure-storage` | 2.4.0 | 2.6.8 | |
+| `cordova-plugin-spinner` | 1.1.0 | 1.1.0 | |
+| `cordova-plugin-splashscreen` | 4.1.0 | 5.0.2 | |
+| `cordova-plugin-statusbar` | 2.3.0 | 2.4.2 | |
+| `cordova-plugin-vibration` | 2.1.1 | 3.1.0 | |
+| `cordova-plugin-x-socialsharing` | 5.0.11 | 5.4.0 | |
+| `cordova-plugin-zip` | 3.1.0 | 3.1.0 | |
+| `cordova-plugin-whitelist` | 1.2.2 | 1.3.3 | |
+| `cordova-plugin-wkwebview-engine-mx` | 1.1.0 | 1.0.1-mx.1.2.0 | Old version number was incorrect |
+| `@mendix/cordova-sqlite-storage` | No version specified | 2.0.4-mx.1.1.0 | Renamed from `cordova-sqlite-storage-pgb` |
+| `@mendix/phonegap-plugin-push` | 1.5.3 | 1.11.1-mx.1.0.0 | Renamed from `phonegap-plugin-push` |
+| `@mendix/uk.co.workingedge.phonegap.plugin.launchnavigator` | 2.9.11 | 4.2.2-mx.1.0.0 | Renamed from `uk.co.workingedge.phonegap.plugin.launchnavigator` |
 
-We have tested extensively against real-life projects and commonly used widgets from the Mendix AppStore.
-If you do encounter issues caused by this release, please let us know at [support@mendix.com](support@mendix.com).
+We have tested extensively against real-life projects and commonly used widgets from the [Mendix App Store](https://appstore.home.mendix.com/index3.html).
+
+If you encounter issues caused by this release, please let us know via [support@mendix.com](support@mendix.com).
 
 ### October 18th, 2018 (2.3.2 / 2.0.1)
 

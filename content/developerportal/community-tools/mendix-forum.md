@@ -37,7 +37,7 @@ Each question specifies the following elements:
 
 Hovering over the developer name brings up the profile card:
 
-{{% image_container width="300" %}}
+{{% image_container width="200" %}}
 ![](attachments/mendix-forum/questions_profile_card.png)
 {{% /image_container %}}
 
@@ -69,7 +69,7 @@ To filter the questions that appear on the overview page, select from the follow
 * **Categories** – the category set when the question was asked (for more information, see the [Asking Your Question](#AskingYourQuestion) section)
 * **Tags** – the tags set when the question was asked (for more information, see the [Asking Your Question](#AskingYourQuestion) section)
 
-{{% image_container width="300" %}}
+{{% image_container width="200" %}}
 ![](attachments/mendix-forum/questions_filters.png)
 {{% /image_container %}}
 
@@ -134,7 +134,7 @@ To ask your own question on the forum, follow these steps:
 
 2.  On the **Ask your question** page, fill in the following details in the editor:
 
-	{{% image_container width="450" %}}![](attachments/mendix-forum/questions_ask_screen.png)
+	{{% image_container width="500" %}}![](attachments/mendix-forum/questions_ask_screen.png)
 	{{% /image_container %}}
 
 	* The **Title** of your question (remember, this is how forum users will first see your question, so make the title descriptive and interesting)
@@ -239,7 +239,7 @@ To submit your own idea to the idea forum, follow these steps:
 
 2.  On the **Submit your idea** page, fill in the following details in the editor:
 
-	{{% image_container width="400" %}}![](attachments/mendix-forum/ideas_submit_screen.png)
+	{{% image_container width="500" %}}![](attachments/mendix-forum/ideas_submit_screen.png)
 	{{% /image_container %}}
 
 	* The **Title** of your idea (this is how forum users will first see your idea, so make the title descriptive and interesting)

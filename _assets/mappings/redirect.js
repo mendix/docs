@@ -252,8 +252,8 @@ module.exports = {
       to: "/developerportal/community-tools/how-to-set-up-your-partner-profile"
     },
     {
-      from: "/community/The+Mendix+Job+Board",
-      to: "/developerportal/community-tools/the-mendix-job-board"
+      from: "/community/tools/the-mendix-job-board",
+      to: "/developerportal/community-tools/mendix-job-board"
     },
     {
       from: "/community/The+Mendix+MVP+program",

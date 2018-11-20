@@ -64,7 +64,7 @@ In Mendix Cloud v4 environments, the debugger is always enabled. You can click *
 
 ### 2.2 Scaling – Mendix Cloud v4
 
-![](attachments/environements-details/scale.png)
+![](attachments/environments-details/scale.png)
 
 If your app is hosted in Mendix Cloud v4, you will see a section named **Scaling** in the **General** tab.
 

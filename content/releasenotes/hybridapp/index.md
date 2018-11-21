@@ -69,7 +69,8 @@ The goal of this release is to upgrade all major dependencies to their latest ve
 | `cordova-plugin-dialogs`                                    | 1.2.1                | 2.0.1                |                                                              |
 | `cordova-plugin-file`                                       | 4.2.0                | 6.0.1                |                                                              |
 | `cordova-plugin-file-opener2`                               | 2.0.19               | 2.0.19               |                                                              |
-| `cordova-plugin-geolocation`                                | 2.2.0                | 4.0.1                |                                                              |
+| `cordova-plugin-file-transfer` | 1.5.1                | 1.7.1                |                                                              |
+| `cordova-plugin-geolocation`                                | 2.2.0                | 4.0.1              |                                                              |
 | `cordova-plugin-globalization`                              | 1.0.3                | 1.11.0               |                                                              |
 | `cordova-plugin-inappbrowser`                               | 3.0.0                | 3.0.0                |                                                              |
 | `cordova-plugin-media`                                      | 2.3.0                | 5.0.2                |                                                              |

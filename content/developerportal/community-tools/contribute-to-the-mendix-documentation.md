@@ -7,7 +7,7 @@ frontpage_featured: true
 
 ## 1 Introduction
 
-The documentation is open to the Mendix community, which means you can make changes and add to it in ways that you see necessary. Do you see a how-to that is inaccurate or a section of the reference guide that needs to be updated? Now you can help us improve the documentation for the whole Mendix community!
+The documentation is open to the Mendix community, which means you can make changes and add to it in ways that you see necessary. Do you see a how-to that is inaccurate or a section of the reference guide that needs to be updated? You can easily help us improve the documentation for the whole Mendix community!
 
 We believe community-generated documentation can cover new content and deal with the specific questions that you know need to be answered. The documentation is meant to address the needs of the Mendix community, and the community can play a key role in maintaining, improving, and expanding it.
 

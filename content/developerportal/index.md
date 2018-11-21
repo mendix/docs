@@ -66,7 +66,7 @@ In the [Mendix Forum](/developerportal/community-tools/mendix-forum), you can in
 
 ## 9 Docs
 
-The [Mendix Documentation](https://docs.mendix.com/) is open to the Mendix community, which means you can [make changes and contribute](/developerportal/community-documentation/contribute-to-the-mendix-documentation) to benefit the whole Mendix community:
+The [Mendix Documentation](https://docs.mendix.com/) is open to the Mendix community, which means you can [make changes and contribute](/developerportal/community-tools/contribute-to-the-mendix-documentation) to benefit the whole Mendix community:
 
 ![](attachments/developerportal-docs.png)
 

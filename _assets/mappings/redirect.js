@@ -259,10 +259,6 @@ module.exports = {
       from: "/community/tools/the-mendix-mvp-program",
       to: "/developerportal/community-tools/mendix-mvp-program"
     },
-    {
-      from: "/community/The+Reference+Guide+Page+Template+Page",
-      to: "/developerportal/community-documentation/the-reference-guide-page-template-page"
-    },
     /****************************************************
      * HOWTO MENDIX 4
      ****************************************************/

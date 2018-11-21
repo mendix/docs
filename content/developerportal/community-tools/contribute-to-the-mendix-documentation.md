@@ -1,7 +1,6 @@
 ---
 title: "Contribute to the Mendix Documentation"
 category: "Community Documentation"
-menu_order: 10
 frontpage_featured: true
 #If moving or renaming this doc file, update the link in the site footer. See Mapping to Products for more details.
 ---
@@ -70,17 +69,21 @@ If you need your pull request to be merged on a specific date (for example, for 
 Mendix supports documentation for three major versions at any one time.
 {{% /alert %}}
 
-## 4 Writing a New How-to or Reference Guide Page
+## 4 Writing New Documentation {#new-documentation}
 
-To submit a new how-to or reference guide page to the Mendix documentation, follow these steps:
+To submit a new how-to or reference guide page to the Mendix documentation, you should start with a Mendix documentation template:
 
-1. Save a copy of the [How-to Template](the-how-to-template-page) or [Reference Guide Page Template](the-reference-guide-page-template-page) locally to start writing.
-2. Follow the guidelines in the template for writing your document, and make sure the text aligns with our [Content Writing and Formatting Guidelines](content-writing-and-formatting-guidelines).
-3. Add screenshots and other images to a new sub-folder in the **attachments** folder. For details on working with images, see the section [Naming New Files](#Naming) below.
-4. To merge your new documentation, commit it to the GitHub repository:
+* To get the how-to template, right-click this link and save the file locally: [How-to Template](https://raw.githubusercontent.com/mendix/docs/development/templates/the-how-to-template.md)
+* To get the reference guide page template, right-click this link and save the file locally: [Reference Guide Page Template](https://raw.githubusercontent.com/mendix/docs/development/templates/the-reference-guide-page-template.md)
+
+After you have a template , follow these steps:
+
+1. Follow the guidelines in the template for writing your document, and make sure the text aligns with our [Content Writing and Formatting Guidelines](content-writing-and-formatting-guidelines).
+2. Add screenshots and other images to a new sub-folder in the **attachments** folder. For details on working with images, see the section [Naming New Files](#Naming) below.
+3. To merge your new documentation, commit it to the GitHub repository:
     *  Commit new Markdown files via Sourcetree or via the **Create new file** button in the [Mendix GitHub repo](https://github.com/mendix/docs) (where you can copy-paste your text)
     *  Commit new image files via Sourcetree or via the **Upload files** button in the GitHub repo (where you can drag and drop your image files)
-5. Create a pull request that specifies the Mendix **development** branch as the base. For more information, see [Creating a Pull Request](https://help.github.com/articles/creating-a-pull-request/).
+4. Create a pull request that specifies the Mendix **development** branch as the base. For more information, see [Creating a Pull Request](https://help.github.com/articles/creating-a-pull-request/).
 
 {{% alert type="info" %}}
 You may receive a response to your pull request asking for verification of specific issues. Don’t panic! We just want to make sure your documentation submission fits well with what we have.
@@ -118,5 +121,3 @@ The points are awarded when the pull request is merged.
 ## 7 Related Content
 
 * [Content Writing and Formatting Guidelines](content-writing-and-formatting-guidelines)
-* [How-to Template](the-how-to-template-page)
-* [Reference Guide Page Template](the-reference-guide-page-template-page)

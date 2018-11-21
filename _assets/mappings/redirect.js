@@ -256,8 +256,8 @@ module.exports = {
       to: "/developerportal/community-tools/mendix-job-board"
     },
     {
-      from: "/community/The+Mendix+MVP+program",
-      to: "/developerportal/community-tools/the-mendix-mvp-program"
+      from: "/community/tools/the-mendix-mvp-program",
+      to: "/developerportal/community-tools/mendix-mvp-program"
     },
     {
       from: "/community/The+Reference+Guide+Page+Template+Page",

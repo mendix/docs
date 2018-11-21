@@ -1,6 +1,9 @@
 ---
 title: "Project Settings"
 parent: "project"
+#menu_order:
+description: "Settings which apply to the project app as a whole."
+tags: ["project", "app", "configuration", "runtime", "desktop modeler", "languages", "certificate", "theme" ]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -22,19 +25,23 @@ These settings influence the behavior of the Runtime when running your applicati
 
 ### 3.1 Static Resources from Disk
 
-If this option is enabled, the static resources by your mobile application are downloaded as soon as you open your application rather than bit by bit as you navigate through the app. This can drastically cut down on your network requests as the files can be retrieved from the disk rather than from the server.
+If this option is enabled, the static resources for your mobile application are downloaded as soon as you open your application rather than bit by bit as you navigate through the app. This can drastically cut down the number of network requests, as the files can be retrieved from the disk rather than from the server.
 
-The resources are downloaded to the device once for each deployment and are reused for subsequent runs of your app. This concerns the number of files, including your theme, the JavaScript client, CSS files, and pages.
+The resources are downloaded to the device once for each deployment and are reused for subsequent runs of your app. This affects a number of files, including: your theme; the JavaScript client; CSS files; and pages.
 
 ### 3.2 Optimize Network Calls
 
-If this option is enabled (**true** by default), Mendix analyzes every microflow that can be triggered from the client to minimize the number of objects required to be sent. This speeds up your app significantly.
+If this option is enabled (**true** by default), Mendix analyzes every microflow that can be triggered from the client to minimize the number of objects which need to be sent. This speeds up your app significantly.
 
-If you experience an issue while running your app in which objects seem to be lost, this option can be disabled to resolve that issue. If this resolves the issue, please file a bug report so that we can fix the issue in the platform.
+If you experience an issue while running your app in which objects seem to be lost, this option can be disabled to resolve that issue. If this does resolve the issue, please file a bug report so that we can fix the issue in the platform.
 
 ### 3.3 After Startup
 
 Here you can select a microflow that is automatically executed immediately after the application has been started up.
+
+{{% alert type="warning" %}}
+There is a timeout of *11 minutes* on the after startup microflow. If your after startup microflow takes longer than 11 minutes your whole app will fail to start.
+{{% /alert %}}
 
 ### 3.4 Before Shutdown
 
@@ -42,15 +49,15 @@ Here you can select a microflow that is automatically executed when a shutdown c
 
 ### 3.5 Health Check
 
-Here you can select a microflow performs the checks on a running app that you think are required to assess the app's health.
+Here you can select a microflow which performs the checks on a running app that you think are required to assess the app's health.
 
-The result of each check is returned as a string, which is displayed in the [Developer Portal](../developerportal/deploy/environments). When the microflow returns an empty string, the application is healthy; otherwise, the string presents an explanation of why the application is not healthy.
+The result of each check is returned as a string, which is displayed in the [Developer Portal](/developerportal/deploy/environments). When the microflow returns an empty string, the application is healthy; otherwise, the string presents an explanation of why the application is not healthy.
 
 This microflow gets called every few minutes to check if the app is still healthy. This is done by executing it using m2ee on the admin port of your app. For more information, see the section [Health Check](monitoring-mendix-runtime#check-health) in *Monitoring Mendix Runtime*.
 
 {{% alert type="info" %}}
 
-The health check microflow is specific to [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy). For other clouds, the admin port can be called, or the health check microflow can be exposed through a REST API.
+The health check microflow is specific to the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy). For other clouds, the admin port can be called, or the health check microflow can be exposed through a REST API.
 
 {{% /alert %}}
 
@@ -77,11 +84,11 @@ The default time zone determines the time zone for newly created users. If your 
 
 ### 3.8 Scheduled Event Time Zone
 
-The scheduled event time zone defines under which timezone scheduled events run. The default is UTC and this has been the case since 3.0. If you would like to run scheduled events under another time zone (such as the time zone the office of the company is in or the project default timezone), you can select it here.
+The scheduled event time zone defines under which timezone scheduled events run. The default is UTC and this has been the case since 3.0. If you would like to run scheduled events under another time zone (such as the time zone of the company office or the project default timezone), you can select it here.
 
 This affects time zone-related operations, such as parsing and formatting dates from/to strings and obtaining the beginning of the current day.
 
-If you run on-premises, then you can select the time zone at which the server runs. However, please note that no guarantees are given for the whereabouts of application servers in the cloud.
+If you run on-premises, then you can select the time zone to which the server is set. However, please note that no guarantees are given for the whereabouts of application servers in the cloud.
 
 ### 3.9 Hash Algorithm
 
@@ -102,7 +109,7 @@ For more information on SHA, see [SHA Hash Functions](http://en.wikipedia.org/wi
 
 ### 3.10 Rounding Mode
 
- The rounding mode is used to select how to round numbers when performing calculations.
+The rounding mode is used to select how to round numbers when performing calculations.
 
 The rounding methods **Half away from zero** and **Half to the nearest even number** indicate how rounding is performed in the case of a tie (for example, 2.5).
 
@@ -163,7 +170,7 @@ For more details on migration, see [Uniqueness Constraint Migration](uniqueness-
 
 ##### 3.12.3.2 Switching from Database to Runtime
 
-Falling back to the **Runtime** option will remove the unique constraints from the database, and uniqueness rules will not be checked at the database level anymore. Hence, data accuracy cannnot be guaranteed at the highest level, especially in the case of high concurrency transactions.
+Falling back to the **Runtime** option will remove the unique constraints from the database, and uniqueness rules will not be checked at the database level anymore. Hence, data accuracy cannot be guaranteed at the highest level, especially in the case of high concurrency transactions.
 
 ### 3.13 Web Service Calls {#web-service-calls}
 
@@ -193,7 +200,7 @@ When enabled, the variable names that the Modeler suggests in microflows will st
 
 ### 5.1 Default Language
 
-The default language indicates the language that is used when a user has not chosen a language. The default language is also used as a fall-back language when a certain text is not translated in another language.
+The default language indicates the language that is used when a user has not chosen a language. The default language is also used as a fall-back language when a certain text is not translated to another language.
 
 ### 5.2 Languages
 
@@ -208,13 +215,13 @@ Certificates are used to connect to web services over HTTPS when the following r
 * The server uses a self-signed certificate authority, and/or
 * A client certificate (certificate with a private key) is required
 
-These certificates can be imported into the Modeler using the **Import** button. Certificate authority files usually have a *.crt* extension, and client certifcates usually have a *.p12* or *.pfx* extension. After importing, use **View details** to acquire more information concerning the certificate.
+These certificates can be imported into the Modeler using the **Import** button. Certificate authority files usually have a *.crt* extension, and client certificates usually have a *.p12* or *.pfx* extension. After importing, use **View details** to acquire more information concerning the certificate.
 
 Client certificates added here will be used whenever a server accepts a client certificate. If you upload more than one client certificate, one of them will be chosen based on the requirements of the server. If you need more control over client certificates, you should not upload the certificates here, but use [custom settings](custom-settings) *ClientCertificates*, *ClientCertificatePasswords*, and *ClientCertificateUsages*.
 
 {{% alert type="warning" %}}
 
-When running from the Modeler or from Eclipse, the certificates will be used automatically to connect over *https*. In server scenarios, the location of the certificate files has to be specified in the configuration file.
+When running from the Modeler or from Eclipse, the certificates will be used automatically to connect over *HTTPS*. When running on a server, the location of the certificate files has to be specified in the configuration file.
 
 {{% /alert %}}
 {{% alert type="warning" %}}
@@ -222,16 +229,21 @@ When running from the Modeler or from Eclipse, the certificates will be used aut
 Be aware that during local deployment, the certificate files will be located in the **deployment** folder, under **model/certificates**. Therefore, do not use production certificates during development.
 
 {{% /alert %}}
-{{% alert type="success" %}}
+{{% alert type="info" %}}
 
-Certificates can be installed in the Windows Certificate Store using the **Install Certificate** wizard in the **View details** form. This can be useful when trying to access a WSDL-file using an *https* connection, which requires a client certificate.
+Certificates can be installed in the Windows Certificate Store using the **Install Certificate** wizard in the **View details** form. This can be useful when trying to access a WSDL-file using an *HTTPS* connection which requires a client certificate.
 
 {{% /alert %}}
-{{% alert type="success" %}}
+{{% alert type="info" %}}
 
 When an SSLException occurs at runtime with the message `HelloRequest followed by an unexpected handshake message` or when a web service does not respond (Java 6 update 21 and above) when using the imported certificates, this is caused by either the client or server not being [RFC-5746](http://www.ietf.org/rfc/rfc5746.txt)-compatible.
 
-When updating the client and server to be compatible with RFC-5746 is not feasible, the following should be added to **Extra JVM parameters** in the **Server** tab to avoid this exception: `-Dsun.security.ssl.allowUnsafeRenegotiation=true`. Be warned that this does make the client-server communication vulnerable to an exploit which has been fixed in RFC-5746.
+If updating the client and server to be compatible with RFC-5746 is not feasible, the following should be added to **Extra JVM parameters** in the **Server** tab to avoid this exception:
+
+`-Dsun.security.ssl.allowUnsafeRenegotiation=true`.
+
+Be warned that this does make the client-server communication vulnerable to an exploit which has been fixed in RFC-5746.
+
 When client and server are RFC-5746 compatible at a future point in time, this JVM parameter can be removed.
 
 For background information, see [Transport Layer Security (TLS) Renegotiation Issue Readme](http://www.oracle.com/technetwork/java/javase/documentation/tlsreadme2-176330.html).
@@ -248,7 +260,7 @@ The option to designate a custom UI resources package was added in Mendix 7.9.0.
 
 {{% /alert %}}
 
-The look and feel of a Mendix application are governed by the [UI Resources package](ui-resources-package). This package supplies the project with all the required theme information accompanied by matching page templates and building blocks. Which module is designated as the UI Resources package is governed by the **UI resources package** setting. Generally, this is automatically updated when a new UI Resources package is imported. However, with this setting, the desired module can also be set manually.
+The look and feel of a Mendix application is governed by the [UI Resources package](ui-resources-package). This package supplies the project with all the required theme information accompanied by matching page templates and building blocks. The module which is designated as the UI Resources package is governed by the **UI resources package** setting. Generally, this is automatically updated when a new UI Resources package is imported. However, with this setting, the desired module can also be set manually.
 
 ### 7.2 Theme ZIP File
 
@@ -258,4 +270,12 @@ The look and feel of a Mendix application are governed by the [UI Resources pack
 
 {{% /alert %}}
 
-Older projects may still use a theme ZIP file as the basis for their theme. In this situation, the **Theme ZIP file** setting can be used to switch between any ZIP files found in the **theme** folder. Note that this practice is deprecated and will be removed in a future version. Transitioning from a ZIP file to a UI Resources package is straigtforward. First, replace the contents of the theme folder with the contents of the desired ZIP file. Then, use the **UI resources package** setting described above to select a module. Ideally, this module should only contain UI documents, such as page templates and building blocks. This will allow you to export and import the module to other projects without worrying about reference errors. Lastly, set the **Theme ZIP file** setting to **None**.
+Older projects may still use a theme ZIP file as the basis for their theme. In this situation, the **Theme ZIP file** setting can be used to switch between any ZIP files found in the **theme** folder. Note that this practice is deprecated and will be removed in a future version.
+
+Switching from a ZIP file to a UI Resources package is straightforward:
+
+Firstly, replace the contents of the theme folder with the contents of the desired ZIP file.
+
+Then, use the **UI resources package** setting described above to select a module. Ideally, this module should only contain UI documents, such as page templates and building blocks. This will allow you to export and import the module to other projects without worrying about reference errors.
+
+Lastly, set the **Theme ZIP file** setting to **None**.

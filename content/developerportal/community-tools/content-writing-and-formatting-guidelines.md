@@ -1,7 +1,6 @@
 ---
 title: "Content Writing and Formatting Guidelines"
 category: "Community Documentation"
-menu_order: 20
 ---
 
 ## 1 Introduction
@@ -110,7 +109,7 @@ Your note.
 
 ## 5 Guidelines for How-to's
 
-This section presents detailed guidlines for writing a how-to. Read this section while referencing the [How-to Template](the-how-to-template-page).
+This section presents detailed guidlines for writing a how-to. Read this section while referencing the [How-to Template](https://raw.githubusercontent.com/mendix/docs/development/templates/the-how-to-template.md).
 
 ### 5.1 How-to Sections
 

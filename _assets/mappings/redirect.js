@@ -232,36 +232,12 @@ module.exports = {
      * Community
      ****************************************************/
     {
-      from: "/community/Community+Documentation",
-      to: "/developerportal/community-documentation/"
-    },
-    {
-      from: "/community/Community+Projects",
-      to: "/developerportal/community-tools/"
-    },
-    {
-      from: "/community/Content+Writing+and+Formatting+Guidelines",
-      to: "/developerportal/community-documentation/content-writing-and-formatting-guidelines"
-    },
-    {
-      from: "/community/Contribute+to+the+Mendix+Documentation",
-      to: "/developerportal/community-documentation/contribute-to-the-mendix-documentation"
-    },
-    {
-      from: "/community/How+to+set+up+your+partner+profile",
-      to: "/developerportal/community-tools/how-to-set-up-your-partner-profile"
-    },
-    {
       from: "/community/tools/the-mendix-job-board",
       to: "/developerportal/community-tools/mendix-job-board"
     },
     {
       from: "/community/tools/the-mendix-mvp-program",
       to: "/developerportal/community-tools/mendix-mvp-program"
-    },
-    {
-      from: "/community/The+Reference+Guide+Page+Template+Page",
-      to: "/developerportal/community-documentation/the-reference-guide-page-template-page"
     },
     /****************************************************
      * HOWTO MENDIX 4

@@ -2,6 +2,7 @@
 title: "Mendix Jobs Board"
 category: "Community Tools"
 tags: ["job", "job board", "job dashboard"]
+order: 40
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Content Writing and Formatting Guidelines"
 category: "Community Documentation"
-order: 30
+menu_order: 30
 ---
 
 ## 1 Introduction

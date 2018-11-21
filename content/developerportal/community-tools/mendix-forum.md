@@ -1,7 +1,7 @@
 ---
 title: "Mendix Forum"
 category: "Community Tools"
-order: 10
+menu_order: 10
 ---
 
 ## 1 Introduction

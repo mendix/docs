@@ -1,7 +1,7 @@
 ---
 title: "Content Writing and Formatting Guidelines"
-category: "Community Documentation"
 menu_order: 30
+tags: ["documentation", "community"]
 ---
 
 ## 1 Introduction
@@ -61,13 +61,13 @@ You can tell end-users that they need to have installed certain software require
 
 Add images that clearly show the specific functionality of the related step (so the reader can check that the image matches what they see on their screen). For example, the arrows and flow on this screenshot are too busy and not clear enough for the user:
 
-{{% image_container width="500"}}
+{{% image_container width="500" %}}
 ![](attachments/content-writing-and-formatting-guidelines/image_examples.png)
 {{% /image_container %}}
 
 Add boxes, indicators, arrows, and other information to an image only if it makes the image more understandable:
 
-{{% image_container width="400"}}
+{{% image_container width="400" %}}
 ![](attachments/content-writing-and-formatting-guidelines/image_examples2.png)
 {{% /image_container %}}
 

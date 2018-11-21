@@ -32,7 +32,7 @@ The **Monthly Webinar** section of the Mendix Community site presents a link to 
 
 Don't worry if you can't make it for the next webinar. You can easily watch all past webinars on our [Webinars](https://gettingstarted.mendixcloud.com/link/webinar) page!
 
-## 4 Meetups
+## 4 Meetups {#meetups}
 
 Mendix regularly organizes and hosts knowledge [meetups](https://www.meetup.com/nl-NL/Mendix-Netherlands/) and Q&A sessions where enthusiasts of the platform can share knowledge and best practices as well as discuss experiences of working with Mendix.
 

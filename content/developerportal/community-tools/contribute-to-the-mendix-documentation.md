@@ -1,5 +1,6 @@
 ---
 title: "Contribute to the Mendix Documentation"
+category: "Community Tools"
 frontpage_featured: true
 menu_order: 20
 tags: ["documentation", "community"]

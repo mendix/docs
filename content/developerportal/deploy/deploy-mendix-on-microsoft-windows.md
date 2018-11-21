@@ -8,54 +8,72 @@ tags: ["deploy", "Windows", "On Premises", "Microsoft", "Mendix Service Console"
 
 ## 1 Introduction
 
-This document describes the installation and configuration of the Mendix software on a system running Microsoft Windows.
+This document describes the installation and configuration of the Mendix software on a system running Microsoft (MS) Windows. It covers:
 
-**This how-to will teach you how to do the following:**
-
-* Install the Mendix Service Console
-* Deploy a Mendix app
-* Configure the MS Internet Information Services (IIS) server
+* Installing the Mendix Service Console
+* Deploying a Mendix app
+* Configuring the MS Internet Information Services (IIS) server
 
 ## 2 Prerequisites {#Prerequisites}
 
-In order to set up an environment to run Mendix applications, you will need to install the Mendix software. For each Mendix application that will be run, a separate user (service) account is required. This section presents an overview of the setup.
+To set up an environment to run Mendix applications, you will need to install the Mendix software. For each Mendix application that will be run, a separate user (service) account is required. This section presents an overview of the setup.
 
 ![](attachments/deploy-mendix-on-windows/18580733.png)
 
 Before starting this how-to, make sure you have the following prerequisites:
 
-* Microsoft Windows 2008 SP2 or higher
+* MS Windows 2008 SP2 or higher
+
 * .NET 4.5 or higher
+
 * IIS 7 or higher with the following service roles enabled:
+
     * IIS Management console
+
     * Static content
+
     * ASP.NET
-* Microsoft Application Request Routing (ARR) Installed (for more information, see [Microsoft Application Request Routing](http://www.iis.net/downloads/microsoft/application-request-routing))
-* Java Runtime 8
-    * This depends on your Mendix Server Distribution (for example, Mendix Server Distribution 4 requires Java 6, Mendix Server Distribution 5 requires Java 7)
-* Mendix deployment archive (MDA) of your Mendix project
+
+* MS Application Request Routing (ARR) installed (for more information, see [Microsoft Application Request Routing](http://www.iis.net/downloads/microsoft/application-request-routing))
+
+* Java Runtime 8, or other version depending on your Mendix Server Distribution. For example:
+
+    * Mendix Server Distribution 4 requires Java 6
+
+    * Mendix Server Distribution 5 requires Java 7
+
+* Mendix Deployment Archive (MDA) of your Mendix project
+
 * Mendix server distribution corresponding with your Modeler (see the [Mendix App Store](https://appstore.home.mendix.com/link/modelers))
-* Database with sufficient security rights. Suitable database servers are IBM DB2, MariaDB, Microsoft SQL Server, MySQL, Oracle Database and PostgreSQL. See [System Requirements](/refguide/system-requirements) for more information.
+
+* Database with sufficient security rights
+
+    * Suitable database servers are IBM DB2, MariaDB, MS SQL Server, MySQL, Oracle Database and PostgreSQL. See [System Requirements](/refguide/system-requirements) for more information
+
 * A local or domain user with the “log on as a service” local security policy set
 
 ## 3 Installation of the Mendix Service Console
 
 To download and install the Mendix Service Console, follow these steps:
 
-1. Download the latest version of the Mendix Service Console from the [App Store](https://appstore.home.mendix.com/link/modelers):
+1. Download the latest version of the Mendix Service Console from the [App Store](https://appstore.home.mendix.com/link/modelers).
 
     ![](attachments/deploy-mendix-on-windows/service_console_download.png)
 
 2. Install the Mendix Service Console by following the installation wizard.
-3. Start the Mendix Service Console after the installation. The first time you launch the application, the **Preferences** dialog box will be shown (it will always be shown if no valid location is configured for all the apps and server files):
+
+3. Start the Mendix Service Console after the installation. The first time you launch the application, the **Preferences** dialog box will be shown (it will always be shown if no valid location is configured for all the apps and server files).
 
     ![](attachments/deploy-mendix-on-windows/18580730.png)
 
 4. In the **Preferences** dialog box, enter a **Location of apps and server files**. Mendix recommends using a directory that is NOT on the system partition where you can easily control the security rights. This location is used for storing your app files and Mendix server files. The app directory consists of four sub-directories:
 
     * Backup – this directory stores any database changes due to model upgrades
+
     * Log – this directory stores all of the application log files
+
     * Project – this directory contains all of your application files; within this directory you will find the directory data/files that contain all of your uploaded files
+
     * Service – this directory contains files for configuring the Windows Services
 
     In addition, there will be a file called `Settings.yaml` that contains your application configuration.
@@ -65,35 +83,50 @@ To download and install the Mendix Service Console, follow these steps:
 To deploy a Mendix app using the Mendix Service Console, follow these steps:
 
 1. Start the Mendix Service Console.
+
 2. Click **Add app** to add a new app. A wizard will appear for configuring the new app.
+
 3. Configure the **Service Settings** as follows:
+
     * **Service name** – this name must be unique within all existing Windows services
+
     * **Display name** – this is the description of the app, which is visible as a tooltip for the app in the left bar of the Mendix Service Console or as a column in the list of Windows services
+
     * **Description** – enter a description for the application that will be visible in the Mendix Service Console
+
     * **Startup type** – select whether you want the app to be started automatically when the server starts, started with a delay, started manually, or disabled altogether
+
     * **User name** and **Password** – the app will always run under the user account given here, and the service will be installed with this user account configured (for more information, see [Prerequisites](#Prerequisites))
 
     ![](attachments/deploy-mendix-on-windows/18580728.png)
+
 4. Click **Next**.
-5. On the **Project Files** screen, click **Select app...**:
+
+5. On the **Project Files** screen, click **Select app...**.
 
     ![](attachments/deploy-mendix-on-windows/18580727.png)
 
 6. Now select the **MDA** file that was created in the Modeler and contains your application logic. After the installation of your MDA file, you will see which Mendix server (Mendix runtime) version is needed.
-7. Configure the **Database Settings**
+
+7. Configure the **Database Settings**:
 
     * **Type** – the database server type
-    * **Host** – the IP address or host name of the database server
-    * **Name** – the database name
-    * **User name** and **Password** – the database user name and password
 
+    * **Host** – the IP address or host name of the database server
+
+    * **Name** – the database name
+
+    * **User name** and **Password** – the database user name and password
+    
     ![](attachments/deploy-mendix-on-windows/18580726.png)
 
 8. Click **Next**.
+
 9. On the **Common Configuration** screen, keep the settings default. Only change these specific settings if needed for your application setup.
+
 10. Click **Finish** and start the application.
 
-## 5 Configuring Microsoft Internet Information Server
+## 5 Configuring the Microsoft Internet Information Services Server
 
 To configure the MS IIS server, follow the steps in the sections below.
 
@@ -137,93 +170,199 @@ To configure the MIME types, follow these steps:
 
 ### 5.4 Configuring the URL Rewrite
 
+{{% alert type="info" %}}
+These instructions use port 8080, which is the default port. Please use the port your Mendix App is configured for.
+{{% /alert %}}
+
 #### 5.4.1 Rule 1 – xas
 
 1. Open the IIS Manager and navigate to the website you want to manage.
+
 2. In the **Features View**, double-click **URL Rewrite**.
-3. In the **Actions** pane on the right side of the screen, click **Add rule(s)…**.
-4. In the **Inbound Rules** field, enter *localhost:8080* (if 8080 is the port your Mendix App is configured for), then  click **OK**.
+
+3. In the **Actions** pane on the right side of the screen, click **Add rule(s)…** to add a new rewrite rule.
+
+4. In the **Inbound Rules** field, enter *localhost:8080*, then click **OK**.
+
 5. Select **ReverseProxyInboundRule1** in **Features View**.
+
 6. In the **Actions** pane on the right side of the screen, click **Rename**.
+
 7. Rename *ReverseProxyInboundRule1* to *xas*.
+
 8. Double-click **xas** in **Features View**.
+
 9. In the **Pattern field** enter `^(xas/)(.*)`.
+
 10. In the **Rewrite URL** field, enter `http://localhost:8080/{R:1}{R:2}`.
+
 11. Click **Apply**.
+
 12. Click **Back to Rules**.
 
 #### 5.4.2 Rule 2 – ws
 
 1. Click **Add rule(s)…**.
-2. In the **Inbound Rules** field, enter *localhost:8080* (if 8080 is the port your Mendix App is configured for), then click **OK**.
+
+2. In the **Inbound Rules** field, enter *localhost:8080*, then click **OK**.
+
 3. Select **ReverseProxyInboundRule1** in **Features View**.
+
 4. Click **Rename**.
+
 5. Rename *ReverseProxyInboundRule1* to *ws*.
+
 6. Double-click **ws** in **Features View**.
+
 7. In the **Pattern** field, enter `^(ws/)(.*)`.
+
 8. In the **Rewrite URL** field, enter `http://localhost:8080/{R:1}{R:2}`.
+
 9. Click **Apply**.
+
 10. Click **Back to Rules**.
 
-#### 5.4.3 Rule 3 – doc
+#### 5.4.3 Rule 3 – ws-doc
 
 1. Click **Add rule(s)…**.
-2. In the **Inbound Rules** field, enter *localhost:8080* (if 8080 is the port your Mendix App is configured for), then click **OK**.
+
+2. In the **Inbound Rules** field, enter *localhost:8080*, then click **OK**.
+
 3. Select **ReverseProxyInboundRule1** in **Features View**.
+
 4. Click **Rename**.
+
 5. Rename *ReverseProxyInboundRule1* to *ws-doc*.
-6. Double-click **ws** in **Features View**.
+
+6. Double-click **ws-doc** in **Features View**.
+
 7. In the **Pattern** field, enter `^(ws-doc/)(.*)` (you use the trailing slash because it points to an exact path, for example, */ws-doc/mydoc/1234*.)
+
 8. In the **Rewrite URL** field, enter `http://localhost:8080/{R:1}{R:2}`.
+
 9. Click **Apply**.
+
 10. Click **Back to Rules**.
 
-#### 5.4.4 Rule 4 – file
+#### 5.4.4 Rule 4 – ws-file
 
 1. Click **Add rule(s)…**.
-2. In the **Inbound Rules** field, enter *localhost:8080* (if 8080 is the port your Mendix App is configured for), then click **OK**.
+
+2. In the **Inbound Rules** field, enter *localhost:8080*, then click **OK**.
+
 3. Select **ReverseProxyInboundRule1** in **Features View**.
+
 4. Click **Rename**.
+
 5. Rename the *ReverseProxyInboundRule1* to *ws-file*.
-6. Double-click **ws** in **Features View**.
+
+6. Double-click **file** in **Features View**.
+
 7. In the **Pattern** field, enter `^(file)(.*)`.
+
 8. In the **Rewrite URL** field, enter `http://localhost:8080/{R:1}{R:2}`.
+
 9. Click **Apply**.
+
 10. Click **Back to Rules**.
 
 #### 5.4.5 Rule 5 – link
 
 1. Click **Add rule(s)…**.
-2. In the **Inbound Rules** field, enter *localhost:8080* (if 8080 is the port your Mendix App is configured for), then click **OK**.
+
+2. In the **Inbound Rules** field, enter *localhost:8080*, then click **OK**.
+
 3. Select **ReverseProxyInboundRule1** in **Features View**.
+
 4. Click **Rename**.
-5. Rename *ReverseProxyInboundRule1* to *file*.
-6. Double-click the **ws** in **Features View**.
-7. In the **Pattern** field,  enter `^(link/)(.*)` (you use the trailing slash because it points to an exact path, for example */link/myentity/1234*)
+
+5. Rename *ReverseProxyInboundRule1* to *link*.
+
+6. Double-click the **link** in **Features View**.
+
+7. In the **Pattern** field,  enter `^(link/)(.*)`
+
 8. In the **Rewrite URL** field, enter `http://localhost:8080/{R:1}{R:2}`.
+
 9. Click **Apply**.
+
 10. Click **Back to Rules**.
+
+#### 5.4.6 Rule 6 - add x-forwarded-proto header
+
+This is required to ensure that you can access the Swagger documentation of your published REST services. It has to be the first rule; we add it last to ensure that it is moved to the top and that additional rules are not placed above it accidentally.
+
+1. Click **View Server Variables**
+
+2. Check if server variable **HTTP_X_FORWARDED_PROTO** is listed. If it is, skip to step 7.
+
+3. In the **Action** page, click **Add** to add the server variable.
+
+4. Enter the **Server variable name** *HTTP_X_FORWARDED_PROTO*.
+
+5. Click **OK**.
+
+6. Click **Back to Rules**
+
+7. Click **Add rule(s)…**.
+
+8. Click **Blank Rule**.
+
+9. Set the **Name** to *add x-forwarded-proto header*.
+
+10.	In the **Match URL** section, set **Requested URL** to *Matches the Pattern*.
+
+11. Set **Using** to *Regular Expressions*.
+
+12. Set the **pattern** to `.*`.
+
+13. Set **Ignore Case** to *true* (checked).
+
+14.	In the **Server Variables** section, click **Add**.
+
+13.	Select Server variable name **HTTP_X_FORWARDED_PROTO**
+
+14. Set **Value** to *https*.
+
+15. Click **OK**.
+
+16.	In the **Action** section, select **None**.
+
+17. Set **Stop processing of subsequent rules** to *false* (unchecked).
+
+18.	Click **Apply** in the **Action** pane to save the rule.
+
+19. Click **Back to Rules**.
+
+20. Select the newly created *add x-forwarded-proto header* rule and use the **Move Up** button in the Action pane to move the rule to the top of the list.
 
 ### 5.5 Additional Request Handlers
 
-If you need to add additional request handlers, use this example:
+If you need to add additional request handlers, use this example replacing **requesthandler** with your own request handler needed for the application. Ensure that they come *after* the rule *add x-forwarded-proto header*.
 
 1. Click **Add rule(s)…**.
-2. In the **Inbound Rules** field, enter *localhost:8080* (if 8080 is the port your Mendix App is configured for), then click **OK**.
-3. Select **ReverseProxyInboundRule1** in **Features View**.
-4. Click **Rename**.
-5. Rename *ReverseProxyInboundRule1* to *requesthandler*.
-6. Double-click **ws** in **Features View**.
-7. In the **Pattern** field, enter `^(requesthandler)(.*)`.
-8. In the **Rewrite URL** field, enter `http://localhost:8080/{R:1}{R:2}`.
-9. Click **Apply**.
-10. Click **Back to Rules**.
 
-Replace **requesthandler** with your own request handler needed for the application.
+2. In the **Inbound Rules** field, enter *localhost:8080*, then click **OK**.
+
+3. Select **ReverseProxyInboundRule1** in **Features View**.
+
+4. Click **Rename**.
+
+5. Rename *ReverseProxyInboundRule1* to *requesthandler*.
+
+6. Double-click **requesthandler** in **Features View**.
+
+7. In the **Pattern** field, enter `^(requesthandler)(.*)`.
+
+8. In the **Rewrite URL** field, enter `http://localhost:8080/{R:1}{R:2}`.
+
+9. Click **Apply**.
+
+10. Click **Back to Rules**.
 
 ### 5.6 Adding the `Cache control: no-cache` Header
 
-In the application directory under **Project/Web**, you will find the `web.config` file that contains the Microsoft IIS configuration for the application. Here you should add the following code:
+In the application directory under **Project/Web**, you will find the `web.config` file that contains the MS IIS configuration for the application. Here you should add the following code:
 
 ```xml
 <configuration>
@@ -245,6 +384,13 @@ Afterwards, the contents of this file must be similar to the following example:
     <system.webServer>
         <rewrite>
             <rules>
+                <rule name="add x-forwarded-proto header">
+                    <match url=".*" />
+                    <conditions logicalGrouping="MatchAll" trackAllCaptures="false" />  <serverVariables>
+                        <set name="HTTP_X_FORWARDED_PROTO" value="https" />
+                    </serverVariables>
+                    <action type="None" />
+                </rule>
                 <rule name="xas" stopProcessing="true">
                     <match url="^(xas/)(.*)" />
                     <action type="Rewrite" url="http://localhost:8080/{R:1}{R:2}" />
@@ -257,12 +403,12 @@ Afterwards, the contents of this file must be similar to the following example:
                     <match url="^(ws-doc/)(.*)" />
                     <action type="Rewrite" url="http://localhost:8080/{R:1}{R:2}" />
                 </rule>
-                <rule name="link" stopProcessing="true">
-                    <match url="^(link/)(.*)" />
+                <rule name="ws-file" stopProcessing="true">
+                    <match url="^(file)(.*)" />
                     <action type="Rewrite" url="http://localhost:8080/{R:1}{R:2}" />
                 </rule>
-                <rule name="file" stopProcessing="true">
-                    <match url="^(file)(.*)" />
+                <rule name="link" stopProcessing="true">
+                    <match url="^(link/)(.*)" />
                     <action type="Rewrite" url="http://localhost:8080/{R:1}{R:2}" />
                 </rule>
             </rules>

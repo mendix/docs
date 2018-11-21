@@ -1,5 +1,5 @@
 ---
-title: "Content Writing and Formatting Guidelines"
+title: "Documentation Writing Guidelines"
 category: "Community Tools"
 menu_order: 30
 tags: ["documentation", "community"]

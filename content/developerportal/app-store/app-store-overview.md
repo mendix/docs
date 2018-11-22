@@ -95,7 +95,9 @@ The details page for each add-on and app presents the following item information
 
 ### 3.3 Additional Info Section
 
+{{% image_container width="300" %}}
 ![](attachments/app-store-overview/content_detail_2.png)
+{{% /image_container %}}
 
 In the **Additional Info** section, you can see the following information (depending on the type of content):
 
@@ -110,7 +112,9 @@ In the **Additional Info** section, you can see the following information (depen
 
 ### 3.4 Developer Info Section
 
+{{% image_container width="300" %}}
 ![](attachments/app-store-overview/content_detail_3.png)
+{{% /image_container %}}
 
 In the **Developer Info** section, you can see the following information:
 

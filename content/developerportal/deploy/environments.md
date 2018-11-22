@@ -84,10 +84,14 @@ In this section, you have the an overview of all the available environments with
 There are three types of environment statuses:
 
 *   Green – there are no alerts
-*   Orange – there is a warning alert
-*   Red – there is a critical alert
+*   Orange – there is at least one warning alert, but no critical alerts
+*   Red – there is at least one critical alert
 
-To see the details of the alerts, click **Alerts** under the **Operate** category.
+{{% alert type="info" %}}
+The environment status is cached; there can be a delay of up to five minutes before the status icon displays a change of status.
+{{% /alert %}}
+
+To see the details of the alerts, click **Alerts** under the **Operate** category. This is documented here: [Alerts](/developerportal/operate/monitoring-application-health).
 
 There are two actions you can take :
 

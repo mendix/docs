@@ -269,21 +269,21 @@ This is required to ensure that you can access the Swagger documentation of your
 
 14.	In the **Server Variables** section, click **Add**.
 
-13.	Select Server variable name **HTTP_X_FORWARDED_PROTO**
+15.	Select Server variable name **HTTP_X_FORWARDED_PROTO**
 
-14. Set **Value** to *https*.
+16. Set **Value** to *https*.
 
-15. Click **OK**.
+17. Click **OK**.
 
-16.	In the **Action** section, select **None**.
+18.	In the **Action** section, select **None**.
 
-17. Set **Stop processing of subsequent rules** to *false* (unchecked).
+19. Set **Stop processing of subsequent rules** to *false* (unchecked).
 
-18.	Click **Apply** in the **Action** pane to save the rule.
+20.	Click **Apply** in the **Action** pane to save the rule.
 
-19. Click **Back to Rules**.
+21. Click **Back to Rules**.
 
-20. Select the newly created *add x-forwarded-proto header* rule and use the **Move Up** button in the Action pane to move the rule to the top of the list.
+22. Select the newly created *add x-forwarded-proto header* rule and use the **Move Up** button in the Action pane to move the rule to the top of the list.
 
 ### 5.5 Disabling the Client Cache
 

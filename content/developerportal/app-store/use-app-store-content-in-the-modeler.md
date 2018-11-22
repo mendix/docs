@@ -62,7 +62,8 @@ To add the Radiobutton List widget from the App Store via the Desktop Modeler, f
 
 	* Click **Add widget**, then browse the list of **Add-on widgets**:
 
-		![](attachments/use-app-store-content/18580440.png)
+		{{% image_container width="400" %}}![](attachments/use-app-store-content/18580440.png)
+		{{% /image_container %}}
 
 	* Right-click the drop zone where you want to use the widget, select **Add Widget**, then browse the list of **Add-on widgets**:
 
@@ -118,9 +119,9 @@ To add the Google Maps module from the App Store via the Desktop Modeler, follow
 	{{% /alert %}}
 
 3. Click **Import** on the **Import Module** dialog box, and a pop-up stating that “The app was successfully imported into the project” will appear. Click **OK**.
-4. Open the **Project Explorer** to view the Google Maps module. Note that unlike a widget, a module will be visible in your Project Explorer and will contain a domain model, pages, and microflow logic. A module downloaded from the App Store will store files if the module contains files (for example, userlib or resource files). In addition, a module downloaded from the App Store will have a light blue icon to differentiate it from the development modules.
+4.  Open the **Project Explorer** to view the Google Maps module. Note that unlike a widget, a module will be visible in your Project Explorer and will contain a domain model, pages, and microflow logic. A module downloaded from the App Store will store files if the module contains files (for example, userlib or resource files). In addition, a module downloaded from the App Store will have a light blue icon to differentiate it from the development modules.
 
-    ![](attachments/use-app-store-content/18580430.png)
+	![](attachments/use-app-store-content/18580430.png)
 
 ### 5.2 Using the Module
 

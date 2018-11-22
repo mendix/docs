@@ -27,16 +27,15 @@ To add content to the App Store, follow these steps:
 
 1. Click **Add content** in the top-right corner of the App Store home screen:
 
-    ![](attachments/share-app-store-content/add_content_button.png)
+  ![](attachments/share-app-store-content/add_content_button.png)
 
-2. The **Share your content** page will open, where you need to select the purpose of your contribution:
+2. The **DRAFT** page will open, where you need to select the purpose of your contribution:
 
-    * **Share** — components that can be dowloaded using the Desktop Modeler
-        * If you select this option, continue to [step #3](#3) below
-    * **Promote** — a way to advertise a component or solution while not making it downloadable
-        * If you select this option, continue to [step #4](#4) below
-3. When adding Desktop Modeler content, select your **content source**:<a name="3"></a>
-    * If you select **Select from GitHub**, follow these steps:
+  * **Share** – components that can be downloaded using the Desktop Modeler – if you select this option, continue to [step #3](#3) below
+  * **Promote** – a way to advertise a component or solution while not making it downloadable – if you select this option, continue to [step #4](#4) below
+3.  <a name="3"></a>When adding Desktop Modeler content, **select your content source**:
+
+	* If you select **Select from GitHub**, follow these steps:
 
         a. Select the type of GitHub profile (**Organisation** or **User**) where the content is stored.
 
@@ -62,7 +61,7 @@ To add content to the App Store, follow these steps:
 
         ![](attachments/share-app-store-content/add_content_2.png)
 
-4. In the **Publish to** drop-down menu, select the location where you want to publish your content:<a name="4"></a>
+4. <a name="4"></a>In the **Publish to** drop-down menu, select the location where you want to publish your content:
 
     * **Public App Store (visible for anyone)** – your content will be available to every developer in the Mendix community (this content will have to be reviewed and approved by Mendix before it is available)
     * <a name="private-app-store"></a>**Private App Store (visible for your company)** – your content will be available only to the developers in your company (this content will not be reviewed by Mendix)
@@ -110,23 +109,23 @@ To add content to the App Store, follow these steps:
         ![](attachments/share-app-store-content/add_content_8.png)
 
         You can request other license types to be added as **License** options by clicking the **Feedback** button on the right side of the App Store screen.
-    
+
 10. After entering the information for your content, you can click one of these buttons in the middle of the screen:
 
-    ![](attachments/share-app-store-content/add_content_7.png)
+   ![](attachments/share-app-store-content/add_content_7.png)
 
-    * Click **Cancel** to cancel your changes to the content information
-    * Click **Delete Draft** to delete the draft of the content information you are working on
-    * Click **Save draft** to save the draft of the content information, which will open the **Draft version** section at the top of the screen:
+   * Click **Cancel** to cancel your changes to the content information
+   * Click **Delete Draft** to delete the draft of the content information you are working on
+   * Click **Save draft** to save the draft of the content information, which will open the **Draft version** section at the top of the screen:
 
-        ![](attachments/share-app-store-content/add_content_6.png)
+       ![](attachments/share-app-store-content/add_content_6.png)
 
-        In this section, you can do the following:
+       In this section, you can do the following:
 
-        * In the **Status** section, if applicable, click the **error** link (for example, **(7 error(s))**) to bring up the **Warning** pop-up window that lists the information you need enter or fix before you submit the content
-        * Click **Back** to go to the list of content drafts in the **My App Store** tab
-        * Click **Edit** to continue editing the content information
-        * Click **Submit for approval** to submit your App Store content for approval at Mendix
+       * In the **Status** section, if applicable, click the **error** link (for example, **(7 error(s))**) to bring up the **Warning** pop-up window that lists the information you need enter or fix before you submit the content
+       * Click **Back** to go to the list of content drafts in the **My App Store** tab
+       * Click **Edit** to continue editing the content information
+       * Click **Submit for approval** to submit your App Store content for approval at Mendix
 
 ## 4 Updating Existing App Store Content<a name="UpdatingExistingAppStoreContent"></a>
 

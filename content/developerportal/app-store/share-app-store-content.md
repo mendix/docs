@@ -2,25 +2,26 @@
 title: "Share App Store Content"
 category: "App Store"
 menu_order: 30
+tags: ["app store", "public app store", "private app store", widget", "module"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
-The App Store is driven by contributions from members of the Mendix Community who share various components and apps they have built. This Community tool how-to presents all the necessary details on adding and updating App Store content.
+The App Store is driven by contributions from members of the Mendix community who share various components and apps they have built. This how-to presents details on adding and updating App Store content.
 
 **This how-to will teach you how to do the following:**
 
-* Add new Desktop Modeler content and promotions to share in the App Store
+* Add new content and promotions to share in the App Store
 * Update existing App Store content
 
 ## 2 Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Familiarize yourself with the [App Store Overview](app-store-overview)
+* Familiarize yourself with the [App Store Overview](app-store-overview) and [How to Use App Store Content](use-app-store-content-in-the-modeler)
 
-## 3 Adding New App Store Content<a name="AddingNewAppStoreContent"></a>
+## 3 Adding New App Store Content {#adding}
 
 To add content to the App Store, follow these steps:
 

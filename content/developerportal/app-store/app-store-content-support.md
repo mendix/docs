@@ -45,4 +45,4 @@ The level of support depends on the availability and effort of the developer and
 
 * [App Store Overview](app-store-overview)
 * [How to Share App Store Content](share-app-store-content)
-* [How to Use App Store Content in the  Desktop Modeler](/developerportal/app-store/use-app-store-content-in-the-modeler)
+* [How to Use App Store Content in the  Desktop Modeler](/developerportal/app-store/use-app-store-content)

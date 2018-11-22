@@ -193,4 +193,4 @@ To develop modules and submit them to the App Store, follow these guidelines:
 
 * [App Store Content Support](app-store-content-support)
 * [App Store Overview](app-store-overview)
-* [How to Use App Store Content in the Desktop Modeler](use-app-store-content-in-the-modeler)
+* [How to Use App Store Content](use-app-store-content)

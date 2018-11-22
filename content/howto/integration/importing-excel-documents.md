@@ -17,7 +17,7 @@ Before starting this how-to, make sure you know how to do the following:
 * Create overview and detail pages (see [How to Create Your First Two Overview and Detail Pages](../ux/create-your-first-two-overview-and-detail-pages))
 * Create menu items (see [How to Set Up the Navigation Structure](../ux/setting-up-the-navigation-structure))
 * Create microflows (see [How to Create Your First Microflow: Hello World!](../logic-business-rules/create-your-first-microflow-hello-world)
-* Add App Store content to your app (see [How to Use App Store Content in the Modeler](/developerportal/app-store/use-app-store-content-in-the-modeler))
+* Add App Store content to your app (see [How to Use App Store Content in the Modeler](/developerportal/app-store/use-app-store-content))
 * Secure your applications (see [How to Create a Secure App](../security/create-a-secure-app))
 
 ## 3 Preparing the Data Structure, GUI, and Modules

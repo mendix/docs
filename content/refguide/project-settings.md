@@ -240,7 +240,7 @@ When an SSLException occurs at runtime with the message `HelloRequest followed b
 
 If updating the client and server to be compatible with RFC-5746 is not feasible, the following should be added to **Extra JVM parameters** in the **Server** tab to avoid this exception:
 
-`-Dsun.security.ssl.allowUnsafeRenegotiation=true`.
+`-Dsun.security.ssl.allowUnsafeRenegotiation=true`
 
 Be warned that this does make the client-server communication vulnerable to an exploit which has been fixed in RFC-5746.
 
@@ -274,8 +274,8 @@ Older projects may still use a theme ZIP file as the basis for their theme. In t
 
 Switching from a ZIP file to a UI Resources package is straightforward:
 
-Firstly, replace the contents of the theme folder with the contents of the desired ZIP file.
+1. Firstly, replace the contents of the theme folder with the contents of the desired ZIP file.
 
-Then, use the **UI resources package** setting described above to select a module. Ideally, this module should only contain UI documents, such as page templates and building blocks. This will allow you to export and import the module to other projects without worrying about reference errors.
+2. Then, use the **UI resources package** setting described above to select a module. Ideally, this module should only contain UI documents, such as page templates and building blocks. This will allow you to export and import the module to other projects without worrying about reference errors.
 
-Lastly, set the **Theme ZIP file** setting to **None**.
+3. Lastly, set the **Theme ZIP file** setting to **None**.

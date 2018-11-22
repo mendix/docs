@@ -9,13 +9,12 @@ tags: ["app store", "modeler"]
 
 ## 1 Introduction
 
-This Mendix community tool how-to covers the basics of how to access the App Store from the Desktop Modeler and provides examples of how to add a widget and a module to your application.
+This how-to covers the basics of accessing the App Store from the Desktop Modeler and provides examples of how to add a widget and a module to your application.
 
 **This how-to will teach you how to do the following:**
 
-* Install content from the App Store via the Modeler
-* Download widgets and modules from the App Store in the Desktop Modeler
-* Find widgets and modules downloaded from the App Store in the Desktop Modeler
+* Install content from the App Store via the Desktop Modeler
+* Download widgets and modules from the App Store into the Modeler
 * Use other App Store content in the Desktop Modeler
 
 ## 2 Prerequisites
@@ -24,17 +23,17 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Familiarize yourself with the [App Store Overview](app-store-overview)
 
-## 3 Downloading Content from the App Store via the Modeler {#downloading}
+## 3 Downloading Content from the App Store {#downloading}
 
 To download content from the App Store via the Desktop Modeler, follow these steps:
 
-1. Open the Desktop Modeler and log in with your Mendix account credentials.
+1. Open the Desktop Modeler and log in with your Mendix credentials.
 2. Open the project in which you would like to install a component.
-3. Click the App Store icon in the top menu bar to open the App Store in the Desktop Modeler:
+3. Click the App Store icon in the top menu bar to open it in the Desktop Modeler:
 
     ![](attachments/use-app-store-content-in-the-modeler/toolbar.png)
 
-4. On the App Store overview page, you can browse and search for a project or component you want to use in your project. Use the **Search** bar to find a specific project or component. You can also filter the content with the **Categories** in order to get a general view of what is available to download.
+4. On the App Store overview page, you find a project or component to use in your app. Use the **Search** bar to find a specific project or component. You can also filter the content with the **Categories** in order to get a general view of what is available to download.
 
     ![](attachments/use-app-store-content-in-the-modeler/18582345.png)
 
@@ -42,21 +41,19 @@ To download content from the App Store via the Desktop Modeler, follow these ste
 
     ![](attachments/use-app-store-content-in-the-modeler/item_details.png)
 
-6. When you have found a project or component you want to download into your project, click **Download**:
+6. When you have found the App Store item you want to download into your app, click **Download**:
     * A project will be created on your hard-drive and will be opened in the Desktop Modeler
     * A component will be downloaded directly into your project
 
-    Make sure that you download the correct version of the content from the App Store, because the widget or module version needs to be compatible with the Desktop Modeler version in which you are working. For example, if you are using Mendix 6, always download a widget that has a Mendix 6 version. Do not download a widget that has a higher release version than the Desktop Modeler in which you are working. You can access older versions of the widgets in the **All Versions** tab in the App Store and download the most compatible version:
+    Make sure that you download the correct version of the content from the App Store, because the widget or module version needs to be compatible with the Desktop Modeler version you are using. Do not download a widget that has a higher release version than the Desktop Modeler you are using. You can access older versions of the widgets in the **All Versions** tab in the App Store and download the most compatible version:
 
     ![](attachments/use-app-store-content-in-the-modeler/18580437.png)
 
-    For more information on App Store content compatibility, see **4.5 Compatibility Section** in the [App Store Overview](app-store-overview).
+## 4 Using a Widget in the Desktop Modeler {#widget}
 
-## 4 Using a Widget from the App Store in the Desktop Modeler {#widget}
+In this section, you will learn how to add a widget to your app project. You can follow the same steps to download any App Store widget you need.
 
-In this section of the how-to, you will learn how to add the Radiobutton List widget as an example scenario. You can follow the same steps to download any App Store widget you need.
-
-### 4.1 Adding a Widget from the App Store
+### 4.1 Adding the Widget
 
 To add the Radiobutton List widget from the App Store via the Desktop Modeler, follow these steps:
 

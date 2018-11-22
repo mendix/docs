@@ -8,7 +8,7 @@ Learn how to build apps in a team, share your code base, and manage your project
 | ------------------------------------------------------------
 | [How to Use the Mendix Feedback Widget](/developerportal/feedback/use-feedback-widget)
 | [Sharing the development database](sharing-the-development-database)
-| [How to Use App Store Content in the Modeler](/developerportal/app-store/use-app-store-content)
+| [How to Use App Store Content](/developerportal/app-store/use-app-store-content-in-the-modeler)
 | [Managing your Application Requirements with Mendix](/developerportal/collaborate/stories)
 
 | Advanced

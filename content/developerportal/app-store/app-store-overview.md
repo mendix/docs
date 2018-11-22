@@ -65,7 +65,7 @@ The header for each add-on presents the following details:
 	* **Download** – click this to download the content
 		* This is only available for content that has a file attached (meaning, all shared  Desktop Modeler content, but not promotions; for details on sharing  Desktop Modeler content, see [How to Share App Store Content](share-app-store-content))
 		* For details on how to import downloaded App Store content into the Desktop Modeler, see [How to Import & Export Objects](/howto/integration/importing-and-exporting-objects)
-		{{% alert type="info" %}}The best practice is to download content from the App Store that is accessible in the  Desktop Modeler, because it then downloads directly into the  Desktop Modeler (for details, see [How to Use App Store Content in the  Desktop Modeler](use-app-store-content)).
+		{{% alert type="info" %}}The best practice is to download content from the App Store that is accessible in the  Desktop Modeler, because it then downloads directly into the  Desktop Modeler (for details, see [How to Use App Store Content](use-app-store-content-in-the-modeler)).
 		{{% /alert %}}
 
 ### 3.2 Tabs
@@ -208,4 +208,4 @@ On the **More info** tab, you can view documents that provide more information o
 
 * [App Store Content Support](app-store-content-support)
 * [How to Share App Store Content](share-app-store-content)
-* [How to Use App Store Content in the  Desktop Modeler](use-app-store-content)
+* [How to Use App Store Content](use-app-store-content-in-the-modeler)

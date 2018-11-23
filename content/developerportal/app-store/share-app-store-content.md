@@ -164,6 +164,7 @@ To add content to the App Store, follow these steps:
 10. After entering the information for your content, you can click one of these buttons in the middle of the screen:
 
 	{{% image_container width="300" %}}![](attachments/share-app-store-content/add_content_7.png)
+	{{% /image_container %}}
 
 	* Click **Cancel** to cancel your changes to the content information
 	* Click **Delete Draft** to delete the draft of the content information you are working on

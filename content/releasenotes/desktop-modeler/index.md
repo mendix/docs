@@ -13,12 +13,6 @@ These are the Mendix Desktop Modeler major version release notes:
 
 {{% alert type="info" %}}
 
-The release notes include all minor versions, patches, and known issues.
-
-{{% /alert %}}
-
-{{% alert type="info" %}}
-
 The Windows Service release notes can be found in [Windows Service](windows-service).
 
 {{% /alert %}}

@@ -6,7 +6,7 @@ parent: "pages"
 
 ## 1 Introduction
 
-{{% alert type="warning" %}}
+{{% alert type="info" %}}
 
 This document describes the properties of a page. For details on what pages are for and what kind of widgets can be placed on them, see [Pages](pages).
 

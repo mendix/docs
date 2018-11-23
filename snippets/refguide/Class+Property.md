@@ -11,3 +11,7 @@ Styling is applied in the following order:<br />
 3) the `Style` property of the widget.
 
 </div>
+
+You can see which widgets in a page have styling applied via the class or style property by clicking the <strong>Show styles</strong> button.
+
+<img src="/refguide/attachments/pages/show-styles.png" alt="Location and effect of the Show styles button" />

@@ -97,7 +97,7 @@ To add content to the App Store, follow these steps:
 		e. Check the **Use GitHub readme.md** check box if you want the *readme.md* file to be included with the App Store content.<br />
 		f. Note that the **Release notes** section is only available for updating a new version of the content (for details see the  [Updating Existing App Store Content](#updating) section below).<br />
 
-		{{% image_container width="300" %}}![](attachments/share-app-store-content/add_content_1.png)
+		{{% image_container width="400" %}}![](attachments/share-app-store-content/add_content_1.png)
 		{{% /image_container %}}
 
 	*  If you select **Manual upload**, follow these steps:<br />
@@ -156,14 +156,14 @@ To add content to the App Store, follow these steps:
 	* **Mendix EULA** (for more information, see [Mendix Terms of Use](https://www.mendix.com/terms-of-use/))
 	* **MIT** (for more information, see [MIT License](https://opensource.org/licenses/MIT))
 
-	{{% image_container width="300" %}}![](attachments/share-app-store-content/add_content_8.png)
+	{{% image_container width="200" %}}![](attachments/share-app-store-content/add_content_8.png)
 	{{% /image_container %}}
 
 	You can request other license types to be added as **License** options by clicking the **Feedback** button on the right side of the App Store screen.
 
 10. After entering the information for your content, you can click one of these buttons in the middle of the screen:
 
-	![](attachments/share-app-store-content/add_content_7.png)
+	{{% image_container width="300" %}}![](attachments/share-app-store-content/add_content_7.png)
 
 	* Click **Cancel** to cancel your changes to the content information
 	* Click **Delete Draft** to delete the draft of the content information you are working on
@@ -195,7 +195,8 @@ To update content that has already been published, follow these steps:
 	* **Minor update** – a medium-sized change (which will save the content from version 6.0 to version 6.1.0, for example)
 	* **Patch** – a small change (which will save the content from 6.1.0 to 6.1.1, for example)
 
-	![](attachments/share-app-store-content/update_content_2.png)
+	{{% image_container width="400" %}}![](attachments/share-app-store-content/update_content_2.png)
+	{{% /image_container %}}
 
 ## 6 Related Content
 

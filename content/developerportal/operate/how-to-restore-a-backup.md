@@ -24,13 +24,13 @@ If you want to restore a backup to a different cloud node, or have your backup s
 
 1. Go to the **Backups** page of the *Developer Portal* for your app.
 
-2. Select the environment to which the backup should be restored (for example *Acceptance*).
+2. Select the environment to which the backup should be restored (for example *Test*).
 
-    ![](attachments/restore-a-backup/environment.jpg)
+    ![](attachments/restore-a-backup/environment.png)
 
 3. Select the backup you want to restore and click **Restore Backup**.
 
-    ![](attachments/restore-a-backup/backupoptions.jpg)
+    ![](attachments/restore-a-backup/backupoptions.png)
 
 4. Confirm the backup restore by clicking **Restore Backup**.
 
@@ -46,9 +46,9 @@ To transfer backups between environments, you will need a downloaded backup file
 
 1. Go to the **Backups** page of the *Developer Portal* for your app.
 
-2. Select the environment to which the backup should be restored (for example *Acceptance*).
+2. Select the environment to which the backup should be restored (for example *Test*).
 
-    ![](attachments/restore-a-backup/environment.jpg)
+    ![](attachments/restore-a-backup/environment.png)
 
 3. Click **Upload Archive**.
 
@@ -68,7 +68,7 @@ To transfer backups between environments, you will need a downloaded backup file
 
 2. Select the backup you want to restore and click **Restore Backup**.
 
-    ![](attachments/restore-a-backup/backupoptions.jpg)
+    ![The buttons giving the backup options: Download, Restore, and Details](attachments/restore-a-backup/free-backup-options.png)
 
 3. Click **Yes** to confirm the restoration.
 

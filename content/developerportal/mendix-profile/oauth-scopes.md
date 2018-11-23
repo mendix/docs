@@ -1,6 +1,6 @@
 ---
 title: "OAuth & Scopes"  
-category: "Profile"  
+category: "Mendix Profile"  
 tags: ["oath", "profile", "login", "Developer Portal", "scopes"]  
 description: "This page describes the authorizations and scopes"
 ---

@@ -1,6 +1,7 @@
 ---
 title: "App Store Content Support"
 category: "App Store"
+tags: ["app store", "support"]
 menu_order: 40
 ---
 

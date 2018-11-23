@@ -29,7 +29,9 @@ Here is an example page where a user is asked to accept scopes on their Mendix a
 
 ## 2 Scopes
 
-The following Mendix scopes provide access to data with user consent.
+The following Mendix scopes provide access to data with user consent. They are generated automatically within the Developer Portal.
+
+This information is provided so that you can make an informed decision on whether you want to authorize or cancel the request for access to your personal information or app.
 
 ### 2.1 Profile Scope {#profile}
 
@@ -71,8 +73,8 @@ This scope is an extension of the [profile scope](#profile). With this scope, a 
  
 ### 2.5 Create a Mendix Application Scope {#mx:app:create}
 
-This is a Mendix-specific scope. It is used by internal Mendix applications as well as by SAP and IBM (as strategic Mendix partners). This scope allows a website to create a Mendix application on behalf of the user.
+This is a Mendix-specific scope. It is used by internal Mendix applications as well as by SAP and IBM (as strategic Mendix partners). This scope allows an application or partner to create a Mendix application on behalf of the user.
 
 ### 2.6 Change the Deployment Cloud Target of a Mendix Application Scope {#mx:app:cloudswitch}
 
-This is a Mendix-specific scope. It is used by internal Mendix applications as well as by SAP and IBM (as strategic Mendix partners). This scope allows a website to change the deployment target cloud provider of an application.
+This is a Mendix-specific scope. It is used by internal Mendix applications as well as by SAP and IBM (as strategic Mendix partners). This scope allows a website/application to change platform to which an app will be deployed.

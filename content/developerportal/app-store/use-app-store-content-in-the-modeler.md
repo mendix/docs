@@ -49,7 +49,7 @@ To download content from the App Store via the Desktop Modeler, follow these ste
 
     ![](attachments/use-app-store-content/18580437.png)
 
-## 4 Using a Widget in the Desktop Modeler {#widget}
+## 4 Using a Widget in the Desktop Modeler {#4-using-a-widget-from-the-app-store-in-the-modeler
 
 In this section, you will learn how to add a widget to your app project. You can follow the same steps to download any App Store widget you need.
 
@@ -57,7 +57,7 @@ In this section, you will learn how to add a widget to your app project. You can
 
 To add the Radiobutton List widget from the App Store via the Desktop Modeler, follow these steps:
 
-1. Download the [RadioButton List](https://appstore.home.mendix.com/link/app/20/) widget (for reference, follow the steps in the [Downloading Content from the App Store via the Desktop Modeler](#downloading) section above).
+1. Download the [RadioButton List](https://appstore.home.mendix.com/link/app/20/) widget (for reference, follow the steps in the [Downloading Content from the App Store](#downloading) section above).
 2.  A widget downloaded from the App Store is placed in your app project structure. You can find the widget and start using it in the following ways:
 
 	* Click **Add widget**, then browse the list of **Add-on widgets**:
@@ -100,7 +100,7 @@ To resolve this widget error, follow these steps:
 
 	![](attachments/use-app-store-content/18580434.png)
 
-## 5 Using a Module in the Desktop Modeler
+## 5 Using a Module in the Desktop Modeler {#DownloadingContentfromtheAppStoreviatheModeler}
 
 In addition to widgets, you can download entire modules from the App Store (for example, the [Excel Importer](https://appstore.home.mendix.com/link/app/72/)). The modules include whole functionalities and integrations that can be very helpful when you are building your applications.
 
@@ -143,7 +143,7 @@ To use the Google Maps module in the Desktop Modeler, follow these steps:
 
 There are also guidelines for using projects, layouts, and themes from the App Store.
 
-### 6.1 Using a Project or Layout from the App Store {#project-layout}
+### 6.1 Using a Project or Layout from the App Store {#61-using-a-project-or-layout-from-the-app-store}
 
 Downloading a project or layout will create a new project structure in the the location that you enter. After clicking **Download**, a window will appear where you can specify how the project should be created.
 

@@ -31,7 +31,7 @@ Here is an example page where a user is asked to accept scopes on their Mendix a
 
 ## 2 Scopes
 
-The following Mendix scopes provide access to data with user consent. They are generated automatically within the Developer Portal.
+The following scopes provide access to data with user consent. They are generated automatically within the Developer Portal.
 
 This information is provided so that you can make an informed decision on whether you want to authorize or cancel the request for access to your personal information or app.
 
@@ -72,7 +72,7 @@ This scope is an extension of the [profile scope](#profile). With this scope, a 
 * LinkedIn profile
 * Twitter account
 * Skype account
- 
+
 ### 2.5 Create a Mendix Application Scope {#mx:app:create}
 
 This is a Mendix-specific scope that is used by internal Mendix applications as well as by SAP and IBM (as strategic Mendix partners). This scope allows a website/application or partner to create a Mendix application on behalf of the user.

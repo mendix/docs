@@ -23,7 +23,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Familiarize yourself with the [App Store Overview](app-store-overview)
 
-## 3 Downloading Content from the App Store
+## 3 Downloading Content from the App Store {#downloading}
 
 To download content from the App Store via the Desktop Modeler, follow these steps:
 
@@ -57,7 +57,7 @@ In this section, you will learn how to add a widget to your app project. You can
 
 To add the Radiobutton List widget from the App Store via the Desktop Modeler, follow these steps:
 
-1. Download the [RadioButton List](https://appstore.home.mendix.com/link/app/20/) widget (for reference, follow the steps in the [Downloading Content from the App Store via the Desktop Modeler](#downloading) section above).
+1. Download the [RadioButton List](https://appstore.home.mendix.com/link/app/20/) widget (for reference, follow the steps in the [Downloading Content from the App Store](#downloading) section above).
 2.  A widget downloaded from the App Store is placed in your app project structure. You can find the widget and start using it in the following ways:
 
 	* Click **Add widget**, then browse the list of **Add-on widgets**:

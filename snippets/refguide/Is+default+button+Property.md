@@ -5,7 +5,7 @@ This property indicates whether this button is the default button of the grid or
 <div class="alert alert-info">
 
 The default button is marked with a "[default]" suffix in the Modeler, so that you can easily spot it. In the screenshot below the Edit button is the default button and the Delete button has a button style 'Warning'.
-<img src="/refguide/attachments/pages/is-default-button-property.png" alt="" />
+<img src="attachments/pages/is-default-button-property.png" alt="" />
 
 </div>
 

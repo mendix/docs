@@ -7,3 +7,7 @@ The class property allows you to specify a cascading style sheet (CSS) class tha
 Styling is applied in the following order: 1) the default styling defined by the theme the project uses, 2) the `Class` property of the widget, and 3) the `Style` property of the widget.
 
 </div>
+
+You can see which widgets in a page have styling applied via the class or style property by clicking the <strong>Show styles</strong> button.
+
+<img src="/refguide/attachments/pages/show-styles.png" alt="Location and effect of the Show styles button" />

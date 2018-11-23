@@ -8,7 +8,7 @@ tags: ["app store", "public app store", "private app store", widget", "module"]
 
 ## 1 Introduction
 
-The App Store is driven by contributions from members of the Mendix community who share various components and apps they have built. This how-to presents details on adding and updating App Store content.
+The App Store is driven by contributions from members of the Mendix community who share the connectors, modules, and apps they have built. This how-to presents details on adding and updating App Store content.
 
 **This how-to will teach you how to do the following:**
 
@@ -31,48 +31,39 @@ To add content to the App Store, follow these steps:
 
 2. The **DRAFT** page will open, where you need to select the purpose of your contribution:
 
-  * **Share** – components that can be downloaded using the Desktop Modeler – if you select this option, continue to [step #3](#3) below
-  * **Promote** – a way to advertise a component or solution while not making it downloadable – if you select this option, continue to [step #4](#4) below
-3.  <a name="3"></a>When adding Desktop Modeler content, **select your content source**:
+	* **Share** – components that can be downloaded using the Desktop Modeler – if you select this option, continue to [step #3](#three) below
+	* **Promote** – a way to advertise a component or solution while not making it downloadable – if you select this option, continue to [step #4](#four) below
+3.  <a name="three"></a>When adding Desktop Modeler content, select **your content source**:
 
-	* If you select **Select from GitHub**, follow these steps:
+	*  If you select **Select from GitHub**, follow these steps:<br />
+		a. Select the type of GitHub profile (**Organisation** or **User**) where the content is stored.<br />
+		b. Enter the **GitHub profile name**.<br />
+		c. Select the **GitHub repo** from which the content will be uploaded by clicking **Select**. The system will crawl all of the projects for that GitHub profile and present the Mendix package file (*.mpk*) options to you in a pop-up window. When you find the correct *.mpk* file name, click **Select** on this window.<br />
+		d. Select the **release** by clicking **Select**. If there are various releases of the *.mpk* file available, the system will present them to you in a pop-up window. When you find the correct release, click **Select** on this window.<br />
+		e. Check the **Use GitHub readme.md** check box if you want the *readme.md* file to be included with the App Store content.<br />
+		f. Note that the **Release notes** section is only available for updating a new version of the content (for details see the  [Updating Existing App Store Content](#UpdatingExistingAppStoreContent) section below).<br />
+        
+		![](attachments/share-app-store-content/add_content_1.png)
 
-        a. Select the type of GitHub profile (**Organisation** or **User**) where the content is stored.
-
-        b. Enter the **GitHub profile name**.
-
-        c. Select the **GitHub repo** from which the content will be uploaded by clicking **Select**. The system will crawl all of the projects for that GitHub profile and present the Mendix package file (*.mpk*) options to you on the **Please select a repository** pop-up window. When you find the correct *.mpk* file name, click **Select** on this window.
-
-        d. Select the **release** by clicking **Select**. If there are various releases of the *.mpk* file available, the system will present them to you on the **Please select a release** pop-up window. When you find the correct release, click **Select** on this window.
-
-        e. Check the **Use GitHub readme.md** check box if you want the *readme.md* file to be included with the content.
-
-        f. Note that the **Release notes** section is only available for updating a new version of the content (for more information, see [4 Updating Existing App Store Content](#UpdatingExistingAppStoreContent)).
-
-        ![](attachments/share-app-store-content/add_content_1.png)
-
-    * If you select **Manual upload**, follow these steps:
-
-        a. Select the **Source file** by clicking **Upload**.
-
-        b. On the **Upload source file** dialog box, click **Browse** to browse the source files on your computer, select your source file, and then click **Save**.
-
-        c. Enter **Release notes** that describe your manually uploaded content.
+	*  If you select **Manual upload**, follow these steps:<br />
+		a. Select the **Source file** by clicking **Upload**.<br />
+		b. On the **Upload source file** pop-up window, click **Browse** to browse the source files on your computer, select your source file, and then click **Save**.<br />
+		c. Enter the **Release notes** that describe your manually uploaded content.<br />
 
         ![](attachments/share-app-store-content/add_content_2.png)
 
-4. <a name="4"></a>In the **Publish to** drop-down menu, select the location where you want to publish your content:
+4.  <a name="four"></a>In the **Publish to** drop-down menu, select the location where you want to publish your content:
 
-    * **Public App Store (visible for anyone)** – your content will be available to every developer in the Mendix community (this content will have to be reviewed and approved by Mendix before it is available)
-    * <a name="private-app-store"></a>**Private App Store (visible for your company)** – your content will be available only to the developers in your company (this content will not be reviewed by Mendix)
-5. In the bottom half of the **Share your content** screen, do the following:
+	* **Public App Store (visible for anyone)** – your content will be available to every developer in the Mendix community (this content will have to be reviewed and approved by Mendix before it is available)
+	* <a name="private-app-store"></a>**Private App Store (visible for your company)** – your content will be available only to the developers in your company (this content will not be reviewed by Mendix)
+5. In the bottom half of the **DRAFT** screen, do the following:
 
-    * Enter a **Name** for your content
-    * Select a category for your content from the **Category** drop-down menu
-    * If you have published a demo using your content, enter the **Demo URL**
-    * Click **Upload Image** to upload an image for your app
+	* Enter a **Name** for your content
+	* Select a category for your content from the **Category** drop-down menu (for example, **Connectors**)
+	* If you have published a demo using your content, enter the **Demo URL**
+	*  Click **Upload Image** to upload an image for your app
 
-        ![](attachments/share-app-store-content/add_content_3.png)
+		![](attachments/share-app-store-content/add_content_3.png)
 
 6. On the **Overview** tab in the bottom half of the **Share your content** screen, you can do the following:
 

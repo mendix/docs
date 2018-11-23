@@ -62,7 +62,7 @@ To add the Radiobutton List widget from the App Store via the Desktop Modeler, f
 
 	* Click **Add widget**, then browse the list of **Add-on widgets**:
 
-		{{% image_container width="400" %}}![](attachments/use-app-store-content/18580440.png)
+		{{% image_container width="350" %}}![](attachments/use-app-store-content/18580440.png)
 		{{% /image_container %}}
 
 	* Right-click the drop zone where you want to use the widget, select **Add Widget**, then browse the list of **Add-on widgets**:

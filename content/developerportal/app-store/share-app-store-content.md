@@ -25,9 +25,9 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 To add content to the App Store, follow these steps:
 
-1. Click **Add content** in the top-right corner of the App Store home screen:
+1.  Click **Add content** in the top-right corner of the App Store home screen:
 
-  ![](attachments/share-app-store-content/add_content_button.png)
+	![](attachments/share-app-store-content/add_content_button.png)
 
 2. The **DRAFT** page will open, where you need to select the purpose of your contribution:
 
@@ -91,11 +91,12 @@ To add content to the App Store, follow these steps:
 9.  In the **Version Details** section on the bottom-right of the screen, do the following:<br />
 	a. Check the **Beta version** check-box if the content is in beta.
 	b. Select the **Modeler version** on which you built the content.
-	c.  * Select the type of **License** you want applied to your app (if applicable):
-	​	* **Apache V2** (for more information, see [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0))
-	​	* **GNU General Public License, version 3** (for more information, see [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html))
-	​	* **Mendix EULA** (for more information, see [Mendix Terms of Use](https://www.mendix.com/terms-of-use/))
-	​	* **MIT** (for more information, see [MIT License](https://opensource.org/licenses/MIT))
+	c.  Select the type of **License** you want applied to your app (if applicable):
+
+		* **Apache V2** (for more information, see [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0))
+		* **GNU General Public License, version 3** (for more information, see [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html))
+		* **Mendix EULA** (for more information, see [Mendix Terms of Use](https://www.mendix.com/terms-of-use/))
+		* **MIT** (for more information, see [MIT License](https://opensource.org/licenses/MIT))
 
 	![](attachments/share-app-store-content/add_content_8.png)
 

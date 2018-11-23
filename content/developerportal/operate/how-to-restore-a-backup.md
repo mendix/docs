@@ -68,7 +68,7 @@ To transfer backups between environments, you will need a downloaded backup file
 
 2. Select the backup you want to restore and click **Restore Backup**.
 
-    ![The buttons giving the backup options: Download, Restore, and Details](attachments\restore-a-backup\free-backup-options.png)
+    ![The buttons giving the backup options: Download, Restore, and Details](attachments/restore-a-backup/free-backup-options.png)
 
 3. Click **Yes** to confirm the restoration.
 

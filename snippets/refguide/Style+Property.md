@@ -4,9 +4,9 @@ The style property allows you to specify additional CSS styling. If a class is a
 
 <div style="background-color:blue; color:white;">
 
-`background-color:blue; color:white;`<br />
+<code>background-color:blue; color:white;</code><br />
 <br />
-This will result in a blue background.
+This will result in white text on a blue background.
 
 </div>
 

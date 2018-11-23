@@ -160,7 +160,7 @@ The **MY COMPANY** section of the sidebar menu contains the following options:
 
 The private App Store is where your company can store content that will be available only to the developers in your company. This content will not be reviewed by Mendix.
 
-For more information, see the [Adding New App Store Content](share-app-store-content#AddingNewAppStoreContent) section of *How to Share App Store Content*.
+For more information, see the [Adding New App Store Content](share-app-store-content#Adding) section of *How to Share App Store Content*.
 
 ### 4.3 Modeler {#modeler}
 

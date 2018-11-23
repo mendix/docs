@@ -42,7 +42,7 @@ To add content to the App Store, follow these steps:
 		d. Select the **release** by clicking **Select**. If there are various releases of the *.mpk* file available, the system will present them to you in a pop-up window. When you find the correct release, click **Select** on this window.<br />
 		e. Check the **Use GitHub readme.md** check box if you want the *readme.md* file to be included with the App Store content.<br />
 		f. Note that the **Release notes** section is only available for updating a new version of the content (for details see the  [Updating Existing App Store Content](#UpdatingExistingAppStoreContent) section below).<br />
-        
+
 		![](attachments/share-app-store-content/add_content_1.png)
 
 	*  If you select **Manual upload**, follow these steps:<br />
@@ -50,20 +50,19 @@ To add content to the App Store, follow these steps:
 		b. On the **Upload source file** pop-up window, click **Browse** to browse the source files on your computer, select your source file, and then click **Save**.<br />
 		c. Enter the **Release notes** that describe your manually uploaded content.<br />
 
-        ![](attachments/share-app-store-content/add_content_2.png)
+		![](attachments/share-app-store-content/add_content_2.png)
 
 4.  <a name="four"></a>In the **Publish to** drop-down menu, select the location where you want to publish your content:
 
 	* **Public App Store (visible for anyone)** – your content will be available to every developer in the Mendix community (this content will have to be reviewed and approved by Mendix before it is available)
 	* <a name="private-app-store"></a>**Private App Store (visible for your company)** – your content will be available only to the developers in your company (this content will not be reviewed by Mendix)
-5. In the bottom half of the **DRAFT** screen, do the following:
+5.  In the bottom half of the **DRAFT** screen, do the following:<br />
+	a. Enter a **Name** for your content.<br />
+	b. Select a category for your content from the **Category** drop-down menu (for example, **Connectors**).<br />
+	c. If you have published a demo using your content, enter the **Demo URL**.<br />
+	d. Click **Upload Image** to upload an image for your app.<br />
 
-	* Enter a **Name** for your content
-	* Select a category for your content from the **Category** drop-down menu (for example, **Connectors**)
-	* If you have published a demo using your content, enter the **Demo URL**
-	*  Click **Upload Image** to upload an image for your app
-
-		![](attachments/share-app-store-content/add_content_3.png)
+	![](attachments/share-app-store-content/add_content_3.png)
 
 6. On the **Overview** tab in the bottom half of the **Share your content** screen, you can do the following:
 
@@ -127,7 +126,7 @@ To update content that has already been published, follow these steps:
 
     ![](attachments/share-app-store-content/update_content_1.png)
 
-3. On the **Share your content** page, you can edit the content details (as described in [3 Adding New App Store Content](#AddingNewAppStoreContent)).
+3. On the **Share your content** page, you can edit the content details (as described in [3 Adding New App Store Content](#Adding)).
 4. In the **Version Details** section, you must select the **Update type** so that the content is saved as a new version:
 
     * **Major update** – a large change (which will save the content from version 5.0 to version 6.0, for example)

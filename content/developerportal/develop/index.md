@@ -1,6 +1,6 @@
 ---
-title: "Developing in Mendix"
-description: "This page introduces the documents describing developing in Mendix via the Developer Portal."
+title: "Development"
+description: "This page introduces the documents that describe developing in Mendix via the Developer Portal."
 tags: ["Edit", "Desktop Modeler", "Web Modeler", "Team Server", "Developer Portal", "commit"]
 ---
 

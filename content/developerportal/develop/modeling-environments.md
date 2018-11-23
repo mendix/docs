@@ -1,6 +1,6 @@
 ---
 title: "Modeling Environments"
-category: "Developing in Mendix"
+category: "Development"
 menu_order: 10
 description: "This page describes the options available for editing your app as well as how to view the overview of revisions and commits."
 tags: ["Edit", "Desktop Modeler", "Web Modeler", "Team Server", "Developer Portal", "commit"]

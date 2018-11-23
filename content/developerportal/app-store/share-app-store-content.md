@@ -21,7 +21,61 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Familiarize yourself with the [App Store Overview](app-store-overview) and [How to Use App Store Content](use-app-store-content-in-the-modeler)
 
-## 3 Adding New App Store Content {#adding}
+## 3 App Store Content Development Guidelines {#submission}
+
+This section presents guidelines for developing content that you will submit to the Mendix App Store.
+
+{{% alert type="info" %}}
+Submitted App Store content will be reviewed within five working days.
+{{% /alert %}}
+
+### 3.1 General Guidelines
+
+These are some general guidelines for creating new App Store content :
+
+* Set up a separate project to build and maintain your App Store item
+* Use a relatively recent Mendix version when creating the item, not only the latest Mendix version (for example, use Mendix 7.8 and 6.6 )
+* Create multiple versions of your App Store item (for example, for Mendix 7 and 6)
+
+Any information the end-user should know about your content can be written on the [Documentation tab](#doc-tab) when you are adding the content to the App Store.
+
+### 3.2 Widget Guidelines
+
+To develop widgets and submit them to the App Store, follow these guidelines:
+
+* The widget must be based on the [AppStoreBoilerplate](https://github.com/mendix/AppStoreWidgetBoilerplate)
+* When writing variable and function names, use lowerCamelCase (for example, *mySecondVariable*)
+* Add code comments
+* Use descriptive variable and function names in both XML and JavaScript
+* Always add `"use strict";` to functions
+* A function may not be larger than 200 lines of code
+* A function may only do one thing, and it should do it properly
+* Internal variables should start with an underscore (`_`)
+* Using the Dojo Toolkit and its functionalities is preferred, but for external plugins you can use jQuery
+* Create a test project based on the [AppStoreBoilerplate](https://github.com/mendix/AppStoreWidgetBoilerplate)
+* Create test pages for mobile when content is mobile-supported
+
+### 3.2 Module Guidelines
+
+To develop modules and submit them to the App Store, follow these guidelines:
+
+* Create a folder named **USE_ME** and add the microflows and pages that are relevant for the user
+* Create an empty folder with the version number as its name, which will appear in the Desktop Modeler's Project Explorer
+* If you add any userlib *jar* files, make sure they are accompanied by a *MyModule.RequiredLib* file so that users know where the *jar* files come from
+* Reduce the use of layouts – using snippets will result in fewer module dependencies and will reduce the number of potential errors (for example, missing layouts)
+* User roles and security should be implemented 
+* Creating a new release or module export should be done while the security level of the project containing the module is set to **Production**
+*  The module security status (in the **Project Security**) must be **complete** for the following:
+	* Page access
+	* Microflow access
+	* OData access
+	* Entity access
+	* Dataset access
+* For example pages and microflows to be copied to another module, they should be "excluded from project" in order to encourage duplication and reduce dependency errors 
+* Do not rename entities and attributes when creating new versions, as data in these entities will get lost (replacing an existing module is based on the entity names)
+* The module should include the English language
+
+## 4 Adding New App Store Content {#adding}
 
 To add content to the App Store, follow these steps:
 
@@ -72,7 +126,7 @@ To add content to the App Store, follow these steps:
 
 	![](attachments/share-app-store-content/add_content_4.png)
 
-7.  On the **Documentation** tab, you can write or edit the documentation that should accompany your app in the editor. Note that this is only applicable when the **Use GitHub readme.md** check box is not checked, and you are only able to edit the documentation of your own and your company's content.
+7.  <a name="doc-tab"></a>On the **Documentation** tab, you can write or edit the documentation that should accompany your app in the editor. Note that this is only applicable when the **Use GitHub readme.md** check box is not checked, and you are only able to edit the documentation of your own and your company's content.
 
 	* The documentation template includes the following sections that you must fill out in order to submit your content:
 		* An extended **Description** of the content
@@ -93,10 +147,10 @@ To add content to the App Store, follow these steps:
 	b. Select the **Modeler version** on which you built the content.<br />
 	c.  Select the type of **License** you want applied to your app (if applicable):<br />
 
-		* **Apache V2** (for more information, see [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0))<br />
-		* **GNU General Public License, version 3** (for more information, see [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html))<br />
-		* **Mendix EULA** (for more information, see [Mendix Terms of Use](https://www.mendix.com/terms-of-use/))<br />
-		* **MIT** (for more information, see [MIT License](https://opensource.org/licenses/MIT))<br />
+	* **Apache V2** (for more information, see [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0))
+	 **GNU General Public License, version 3** (for more information, see [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html))
+	 **Mendix EULA** (for more information, see [Mendix Terms of Use](https://www.mendix.com/terms-of-use/))
+	 **MIT** (for more information, see [MIT License](https://opensource.org/licenses/MIT))
 
 	![](attachments/share-app-store-content/add_content_8.png)
 
@@ -119,7 +173,7 @@ To add content to the App Store, follow these steps:
 	* Click **Edit** to continue editing the content information
 	* Click **Submit for approval** to submit your App Store content for approval at Mendix
 
-## 4 Updating Existing App Store Content {#updating}
+## 5 Updating Existing App Store Content {#updating}
 
 To update content that has already been published, follow these steps:
 
@@ -136,48 +190,6 @@ To update content that has already been published, follow these steps:
 	* **Patch** – a small change (which will save the content from 6.1.0 to 6.1.1, for example)
 
 	![](attachments/share-app-store-content/update_content_2.png)
-
-## 5 App Store Content Submission Guidelines {#submission}
-
-This section presents guidelines for developing and submitting content to the Mendix App Store.
-
-{{% alert type="info" %}}
-Submitted App Store content will be reviewed within five working days.
-{{% /alert %}}
-
-### 5.1 Widget Guidelines
-
-To develop widgets and submit them to the App Store, follow these guidelines:
-
-* The widget must be based on the [AppStoreBoilerplate](https://github.com/mendix/AppStoreWidgetBoilerplate)
-* When writing variable and function names, use lowerCamelCase (for example, *mySecondVariable*)
-* Add code comments
-* Use descriptive variable and function names in both XML and JavaScript
-* Always add `"use strict";` to functions
-* A function may not be larger than 200 lines of code
-* A function may only do one thing, and it should do it properly
-* Internal variables should start with an underscore (`_`)
-* Using the Dojo Toolkit and its functionalities is preferred, but for external plugins you can use jQuery
-* Create a test project based on the [AppStoreBoilerplate](https://github.com/mendix/AppStoreWidgetBoilerplate)
-* Create test pages for mobile when content is mobile-supported
-
-### 5.2 Module Guidelines
-
-To develop modules and submit them to the App Store, follow these guidelines:
-
-* Create a folder named **USE_ME** and add the microflows and pages that are relevant for the user
-* Reduce the use of layouts – using snippets will result in fewer module dependencies and will reduce the number of potential errors (for example, missing layouts)
-* User roles and security should be implemented 
-* Creating a new release or module export should be done while the security level of the project containing the module is set to **Production**
-*  The module security status (in the **Project Security**) must be **complete** for the following:
-	* Page access
-	* Microflow access
-	* OData access
-	* Entity access
-	* Dataset access
-* For example pages and microflows to be copied to another module, they should be "excluded from project" in order to encourage duplication and reduce dependency errors 
-* Do not rename entities and attributes when creating new versions, as data in these entities will get lost (replacing an existing module is based on the entity names)
-* The module should include the English language
 
 ## 6 Related Content
 

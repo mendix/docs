@@ -202,4 +202,3 @@ To update content that has already been published, follow these steps:
 
 * [App Store Overview](app-store-overview)
 * [How to Use App Store Content](use-app-store-content-in-the-modeler)
-* [App Store Content Support](app-store-content-support)

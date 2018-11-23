@@ -1,5 +1,5 @@
 ---
-title: "Mendix SSO: Integrate your App"
+title: "Mendix Single Sign On"
 parent: "mendix-cloud-deploy"
 menu_order: 70
 description: "Use the AppCloudServices module to add Single Sign-on to your app using the user's Mendix credentials"

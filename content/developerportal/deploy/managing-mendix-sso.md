@@ -1,6 +1,6 @@
 ---
-title: "Mendix SSO: Manage User Logins"
-parent: "mendix-cloud-deploy"
+title: "Manage User Logins with Mendix SSO"
+parent: "integrate-with-mendix-sso"
 menu_order: 72
 description: "How to manage Mendix SSO in your app so that local users and anonymous users are catered for"
 tags: ["SSO", "Single Sign-on", "AppCloudServices", "Local users", "Anonymous users"]

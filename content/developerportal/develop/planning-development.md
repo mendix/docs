@@ -1,6 +1,6 @@
 ---
 title: "Plan App Development"
-category: "Developing in Mendix"
+category: "Development"
 menu_order: 30
 description: "Describes the planning of your app development."
 tags: ["Developer Portal", "Planning", "Develop"]

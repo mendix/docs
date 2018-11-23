@@ -1,6 +1,6 @@
 ---
 title: "Team Server Overview"
-category: "Developing in Mendix"
+category: "Development"
 menu_order: 20
 description: "This page describes the overview of Team Server revisions and commits."
 tags: ["Desktop Modeler", "Team Server", "Developer Portal", "commit"]

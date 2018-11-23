@@ -2,11 +2,13 @@
 
 The style property allows you to specify additional CSS styling. If a class is also specified, this styling is applied *after* the class.
 
-<div style="background-color:blue; color:white;">
+<div style="background-color:lightblue; color:white;">
 
-<code>background-color:blue; color:white;</code><br />
+For example:<br />
 <br />
-This will result in white text on a blue background.
+<code>background-color:lightblue; color:white;</code><br />
+<br />
+will result in white text on a blue background.
 
 </div>
 

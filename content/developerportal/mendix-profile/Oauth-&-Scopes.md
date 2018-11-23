@@ -7,19 +7,21 @@ description: "This page describes the authorizations and scopes"
 
 ## 1 Introduction
 
+The following sections provide introductory information on how OAuth and scopes work.
+
 ### 1.1 OAuth
 
 OAuth is a standard for access delegation. It is commonly used as a way for users to grant websites or applications limited access (scopes) to their data without providing their credentials. Mendix uses [OAuth 2.0](https://oauth.net/2/).
 
 In other words, OAuth allows a user with an account from one website/application to use those credentials to connect to another website/application. The process generally looks like this:
 
-1. The user goes to the login page of website A and clicks the button for logging in with credentials from website B.
-2. The user is asked to authenticate themselves on website B.
-3. Website B confirms the identity of the user to website A.
+1. The user goes to the login page of website/application A and clicks the button for logging in with credentials from website/application B.
+2. The user is asked to authenticate themselves on website/application B.
+3. Website/application B confirms the identity of the user to website/application A.
 
 ### 1.2 Scopes
 
-Once the user is authenticated by website/application B, website/application A has a guarantee of their real identity. OAuth also provides more complex functionality. For example, website/application B can communicate a set of information (for example, the email address or profile picture) and a set of rights to website/application A. This can only happen if the user grants certain rights.
+Once the user is authenticated by website/application B, website/application A has a guarantee of their real identity. In addition, OAuth provides more complex functionality. For example, website/application B can communicate a set of information (for example, the email address or profile picture) and a set of rights to website/application A. This can only happen if the user grants certain rights.
 
 For example, if the user grants website/application A permission to send their profile picture and last name to website/application B (through a specific authorization page), then website/application B can display that information on their website. The scopes are the access rights to that information granted manually by the user during the authentication process.
 
@@ -35,11 +37,11 @@ This information is provided so that you can make an informed decision on whethe
 
 ### 2.1 Profile Scope {#profile}
 
-With this scope, a website or application can access the user's basic profile information as recorded in Mendix. This scope contains the following data:
+With this scope, a website or application can access the user's basic profile information as recorded in Mendix. This scope contains the following user data:
 
-* User’s full name
-* User’s preferred username
-* User’s avatar
+* Full name
+* Username
+* Avatar
 * URL of the user's personal website or blog
 
 ### 2.2 Email Scope {#email}
@@ -54,27 +56,27 @@ This is one of the most common scopes. With this scope, website A (for example, 
 
 This scope is an extension of the [profile scope](#profile). With this scope, a website can access the user's Mendix profile for the following user data:
 
- * OpenID2 identifier
- * Username
- * Display name
- * Avatar
- * Biography
- * URL of the user's personal website or blog
- * Phone number
- * Job title
- * Name of the company the user belongs to
- * Mendix internal identifier of their company
- * Department (in their company)
- * Location (via their company)
- * Country (via their company)
- * LinkedIn profile
- * Twitter account
- * Skype account
+* OpenID2 identifier
+* Username
+* Display name
+* Avatar
+* Biography
+* Phone number
+* Job title
+* Name of the company the user belongs to
+* Mendix internal identifier of their company
+* Department (in their company)
+* Location (via their company)
+* Country (via their company)
+* URL of the user's personal website or blog
+* LinkedIn profile
+* Twitter account
+* Skype account
  
 ### 2.5 Create a Mendix Application Scope {#mx:app:create}
 
-This is a Mendix-specific scope. It is used by internal Mendix applications as well as by SAP and IBM (as strategic Mendix partners). This scope allows an application or partner to create a Mendix application on behalf of the user.
+This is a Mendix-specific scope that is used by internal Mendix applications as well as by SAP and IBM (as strategic Mendix partners). This scope allows a website/application or partner to create a Mendix application on behalf of the user.
 
 ### 2.6 Change the Deployment Cloud Target of a Mendix Application Scope {#mx:app:cloudswitch}
 
-This is a Mendix-specific scope. It is used by internal Mendix applications as well as by SAP and IBM (as strategic Mendix partners). This scope allows a website/application to change platform to which an app will be deployed.
+This is a Mendix-specific scope that is used by internal Mendix applications as well as by SAP and IBM (as strategic Mendix partners). This scope allows a website/application to change the platform to which an app will be deployed.

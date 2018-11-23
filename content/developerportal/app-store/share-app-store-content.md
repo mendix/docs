@@ -142,7 +142,7 @@ To add content to the App Store, follow these steps:
 		* Any **Known bugs**
 		* Any **Frequently Asked Questions**
 
-	{{% image_container width="400" %}}![](attachments/share-app-store-content/add_content_5.png)
+	{{% image_container width="450" %}}![](attachments/share-app-store-content/add_content_5.png)
 	{{% /image_container %}}
 
 8. Note that there is nothing for you to do on the **Statistics** and **All versions** tabs. The **Statistics** tab will chart the downloads of your content over time. The **All versions** tab will list the various versions of your content that have been updated.
@@ -156,7 +156,7 @@ To add content to the App Store, follow these steps:
 	* **Mendix EULA** (for more information, see [Mendix Terms of Use](https://www.mendix.com/terms-of-use/))
 	* **MIT** (for more information, see [MIT License](https://opensource.org/licenses/MIT))
 
-	{{% image_container width="200" %}}![](attachments/share-app-store-content/add_content_8.png)
+	{{% image_container width="300" %}}![](attachments/share-app-store-content/add_content_8.png)
 	{{% /image_container %}}
 
 	You can request other license types to be added as **License** options by clicking the **Feedback** button on the right side of the App Store screen.
@@ -170,7 +170,7 @@ To add content to the App Store, follow these steps:
 	* Click **Delete Draft** to delete the draft of the content information you are working on
 	* Click **Save draft** to save the draft of the content information, which will open the **Draft version** section at the top of the screen:
 
-	{{% image_container width="400" %}}![](attachments/share-app-store-content/add_content_6.png)
+	{{% image_container width="350" %}}![](attachments/share-app-store-content/add_content_6.png)
 	{{% /image_container %}}
 
 	In this section, you can do the following:
@@ -196,5 +196,10 @@ To update content that has already been published, follow these steps:
 	* **Minor update** – a medium-sized change (which will save the content from version 6.0 to version 6.1.0, for example)
 	* **Patch** – a small change (which will save the content from 6.1.0 to 6.1.1, for example)
 
-	{{% image_container width="400" %}}![](attachments/share-app-store-content/update_content_2.png)
+	{{% image_container width="350" %}}![](attachments/share-app-store-content/update_content_2.png)
 	{{% /image_container %}}
+
+## 6 Related Content
+
+* [App Store Overview](app-store-overview)
+* [How to Use App Store Content](use-app-store-content-in-the-modeler)

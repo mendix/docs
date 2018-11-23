@@ -128,7 +128,7 @@ To update content that has already been published, follow these steps:
 
 	![](attachments/share-app-store-content/update_content_1.png)
 
-3. On the **DRAFT** page, you can edit the content details (as described in the [Adding New App Store Content](#Adding) section above).
+3. On the **DRAFT** page, you can edit the content details (as described in the [Adding New App Store Content](#adding) section above).
 4.  In the **Version Details** section, you must select the **Update type** so that the content is saved as a new version:
 
 	* **Major update** – a large change (which will save the content from version 5.0 to version 6.0, for example)

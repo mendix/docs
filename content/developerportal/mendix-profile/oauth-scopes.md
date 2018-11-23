@@ -37,7 +37,7 @@ This information is provided so that you can make an informed decision on whethe
 
 ### 2.1 Profile Scope {#profile}
 
-With this scope, a website or application can access the user's basic profile information as recorded in Mendix. This scope contains the following user data:
+With this scope, a website or application can access the user's basic [profile](index) information as recorded in Mendix. This scope contains the following user data:
 
 * Full name
 * Username

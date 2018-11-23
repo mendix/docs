@@ -89,14 +89,14 @@ To add content to the App Store, follow these steps:
 
 8. Note that there is nothing for you to do on the **Statistics** and **All versions** tabs. The **Statistics** tab will chart the downloads of your content over time. The **All versions** tab will list the various versions of your content that have been updated.
 9.  In the **Version Details** section on the bottom-right of the screen, do the following:<br />
-	a. Check the **Beta version** check-box if the content is in beta.
-	b. Select the **Modeler version** on which you built the content.
-	c.  Select the type of **License** you want applied to your app (if applicable):
+	a. Check the **Beta version** check-box if the content is in beta.<br />
+	b. Select the **Modeler version** on which you built the content.<br />
+	c.  Select the type of **License** you want applied to your app (if applicable):<br />
 
-		* **Apache V2** (for more information, see [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0))
-		* **GNU General Public License, version 3** (for more information, see [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html))
-		* **Mendix EULA** (for more information, see [Mendix Terms of Use](https://www.mendix.com/terms-of-use/))
-		* **MIT** (for more information, see [MIT License](https://opensource.org/licenses/MIT))
+		* **Apache V2** (for more information, see [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0))<br />
+		* **GNU General Public License, version 3** (for more information, see [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html))<br />
+		* **Mendix EULA** (for more information, see [Mendix Terms of Use](https://www.mendix.com/terms-of-use/))<br />
+		* **MIT** (for more information, see [MIT License](https://opensource.org/licenses/MIT))<br />
 
 	![](attachments/share-app-store-content/add_content_8.png)
 

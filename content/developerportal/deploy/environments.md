@@ -39,6 +39,8 @@ In the **Deployment Package Repository** section, there is an overview of the fo
 *   Uploaded by
 *   Expire date of the deployment package
 
+**Actions**
+
 There are also four actions you can perform, which are described below.
 
 #### 2.1.1 Creating a Package from Team Server
@@ -59,6 +61,8 @@ Next to the deployment package info, if you click **Details**, the following ite
 * Description of the package
 * A build output
 * An overview of the environments that are currently running on this deployment package
+
+**Actions**
 
 There are also two action you can perform:
 
@@ -84,26 +88,22 @@ In this section, you have the an overview of all the available environments with
 There are three types of environment statuses:
 
 *   Green – there are no alerts
-*   Orange – there is a warning alert
-*   Red – there is a critical alert
+*   Orange – there is at least one warning alert, but no critical alerts
+*   Red – there is at least one critical alert
 
-To see the details of the alerts, click **Alerts** under the **Operate** category.
+{{% alert type="info" %}}
+The environment status is cached; there can be a delay of up to five minutes before the status icon displays a change of status.
+{{% /alert %}}
+
+To see the details of the alerts, click **Alerts** under the **Operate** category. This is documented here: [Alerts](/developerportal/operate/monitoring-application-health).
+
+**Actions**
 
 There are two actions you can take :
 
-* Transport the environment to the acceptance/production environment
-* View the details of the environment
+* **Details** of the selected environment – information about the details available are documented here: [Details](environments-details)
 
-After clicking [Details](/developerportal/deploy/environments-details) of the selected environment, you can see the following tabs:
-
-* General
-* Model Options
-* Network
-* Loglevels
-* Runtime
-* Maintenance
-
-![](attachments/environments/environment-details.png)    
+* **Transport to ...** – initiates the staging of an environment to the next stage: acceptance or production
 
 ### 2.3 Activity
 
@@ -146,6 +146,6 @@ In this tab you can manage custom access restriction profiles. These profiles ca
 ## 5 Related Content 
 
 * [Deploy and Manage](/developerportal/deploy)
-* [Environment Details](/developerportal/deploy/environments-details)
+* [Environment Details](environments-details)
 * [How to Receive Environment Status Alerts](/developerportal/operate/receive-alerts)
 * [How to Restrict Access for Incoming Requests](access-restrictions)

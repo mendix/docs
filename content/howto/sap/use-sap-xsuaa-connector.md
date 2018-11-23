@@ -39,7 +39,7 @@ The SAP app may already have the SAP XSUAA Connector installed. Look in **Projec
 
 If the SAP XSUAA Connector is not already in your project, download it from the App Store. It can be found here: [SAP Cloud Platform XSUAA Connector](https://appstore.home.mendix.com/link/app/78091/).
 
-For more information, see [How to Use App Store Content in the Modeler](/developerportal/app-store/use-app-store-content-in-the-modeler).
+For more information, see [How to Use App Store Content](/developerportal/app-store/use-app-store-content-in-the-modeler).
 
 ## 4 Using the Connector
 
@@ -233,7 +233,7 @@ You can picture the authentication as shown below:
 ## 6 Related Content
 
 * [How To Create a Secure App](../security/create-a-secure-app)
-* [How To Use App Store Content in the Modeler](/developerportal/app-store/use-app-store-content-in-the-modeler)
+* [How To Use App Store Content](/developerportal/app-store/use-app-store-content-in-the-modeler)
 * [Project Security](/refguide/project-security)
 * [SAP Cloud Platform XSUAA Connector](https://appstore.home.mendix.com/link/app/78091/)
 * [SAP XSUAA Connector](/refguide/sap/sap-xsuaa-connector)

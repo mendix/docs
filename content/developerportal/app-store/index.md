@@ -28,7 +28,7 @@ The public App Store is open to all Mendix Community developers.
 
 The [web version of the App Store](https://appstore.home.mendix.com/) has a lot of advanced options available. However, if you download content from here, you will then have to separately upload it into your project. For more information, see [How to Import & Export Objects](/howto/integration/importing-and-exporting-objects).
 
-The Desktop Modeler App Store is a more basic implementation that is suitable for doing the most important things with the content. It should be considered as an extension of the web version of the App Store rather than as a replacement. For more information, see [How to Use App Store Content in the Desktop Modeler](use-app-store-content-in-the-modeler).
+The Desktop Modeler App Store is a more basic implementation that is suitable for doing the most important things with the content. It should be considered as an extension of the web version of the App Store rather than as a replacement. For more information, see [How to Use App Store Content](use-app-store-content-in-the-modeler).
 
 The Mendix best practice is to use the web version of the App Store to browse all of the content, access the App Store that has been integrated into the Desktop Modeler, find the content there, and download it straight into the Desktop Modeler.
 
@@ -37,4 +37,4 @@ The Mendix best practice is to use the web version of the App Store to browse al
 * [App Store Content Support](app-store-content-support)
 * [App Store Overview](app-store-overview)
 * [How to Share App Store Content](share-app-store-content)
-* [How to Use App Store Content in the Desktop Modeler](use-app-store-content-in-the-modeler)
+* [How to Use App Store Content](use-app-store-content-in-the-modeler)

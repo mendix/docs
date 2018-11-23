@@ -170,10 +170,6 @@ module.exports = {
      * APPSTORE
      ****************************************************/
     {
-      from: "/appstore/Adding+App+Store+content+to+your+app",
-      to: "/developerportal/app-store/use-app-store-content-in-the-modeler"
-    },
-    {
       from: "/appstore/App+Store+Approval+Guidelines",
       to: "/developerportal/app-store/share-app-store-content"
     },
@@ -196,10 +192,6 @@ module.exports = {
     {
       from: "/appstore/App+Store+Home",
       to: "/developerportal/app-store/"
-    },
-    {
-      from: "/appstore/Install+an+App+from+the+App+Store",
-      to: "/developerportal/app-store/use-app-store-content-in-the-modeler"
     },
 	{
       from: "/community/app-store/use-app-store-content-in-the-modeler",
@@ -1044,10 +1036,6 @@ module.exports = {
     {
       from: "/howto50/Access+a+Samba+share+from+the+MxCloud",
       to: "/howto50/access-a-samba-share-from-the-mxcloud"
-    },
-    {
-      from: "/howto50/Adding+App+Store+content+to+your+app",
-      to: "/developerportal/app-store/use-app-store-content-in-the-modeler"
     },
     {
       from: "/howto50/Anonymous+User+Security",

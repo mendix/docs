@@ -4,11 +4,9 @@ description: "Landing page for user who need reference material on consuming SAP
 tags: ["SAP", "OData", "XSUAA", "Destination Services", "Fiori"]
 ---
 
-## Introduction
+This category contains documents to help developers consume SAP services.
 
-This section contains documents to help developers to consume SAP services.
-
-## Documents in This Category
+These are the main documents in the **SAP** category of the *Mendix Reference Guide*
 
 * [SAP OData Connector](sap-odata-connector)
 * [SAP Destination Service](sap-destination-service)
@@ -18,3 +16,4 @@ This section contains documents to help developers to consume SAP services.
 * [SAP Leonardo Machine Learning Foundation Connector](sap-leonardo-connector)
 * [SAP Fiori / Mendix Building Blocks](sap-fiori-building-blocks)
 * [SAP Cloud Connector](sap-cloud-connector)
+

@@ -8,6 +8,8 @@ MxBuild is a command-line tool that can be used to deploy and build a Mendix Dep
 
 MxBuild can be run in either _Build mode_ or _Service mode_, depending on your needs. These modes are described below.
 
+For the system requirements of MxBuild, see [System Requirements](system-requirements).
+
 ## Build Mode
 In Build mode, you specify on the command-line the Mendix Project file (.mpr) for which you want to build the deployment package (.mda). This file name may be preceded by a relative or absolute path. The project file should be located inside a Mendix project directory.
 

@@ -1,5 +1,6 @@
 ---
 title: "Hybrid App"
+category: "Mobile Products"
 toc-level: 1
 description: "Hybrid App release notes."
 ---

@@ -66,5 +66,5 @@ For information on the **Design** section and its properties, see [Design Sectio
 
 ## 5 Related Content
 
-* [Page Editor Overview in the Web Modeler](page-editor-wm) 
+* [Page Editor in the Web Modeler](page-editor-wm) 
 * [Widgets in the Web Modeler](page-editor-widgets-wm)

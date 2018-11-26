@@ -158,8 +158,8 @@ To fix the consistency errors, finish configuring the on click action (for examp
 
 ##  8 Related Content
 
-* [Page Editor Overview in the Web Modeler](page-editor-wm)
+* [Page Editor in the Web Modeler](page-editor-wm)
 * [Navigation Consistency Errors in the Web Modeler](consistency-errors-navigation-wm)
 * [Microflow Editor Consistency Errors in the Web Modeler](consistency-errors-microflows-wm)
-* [Checks Overview in the Web Modeler](checks-wm)
+* [Checks in the Web Modeler](checks-wm)
 * [How to Publish and View Your App](../../howto/tutorials/start-with-a-blank-app-3-publish-and-view-your-app)

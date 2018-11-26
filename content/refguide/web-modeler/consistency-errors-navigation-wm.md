@@ -102,5 +102,5 @@ Now the new object of type *Customer* will be created and passed to the home pag
 * [Page Editor Consistency Errors in the Web Modeler](consistency-errors-pages-wm)
 * [Microflow Editor Consistency Errors in the Web Modeler](consistency-errors-microflows-wm)
 * [Microflows in the Web Modeler](microflows-wm)
-* [Checks Overview in the Web Modeler](checks-wm)
+* [Checks in the Web Modeler](checks-wm)
 * [How to Publish and View Your App](../../howto/tutorials/start-with-a-blank-app-3-publish-and-view-your-app)

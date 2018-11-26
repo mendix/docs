@@ -1,5 +1,5 @@
 ---
-title: "SAP Single Sign On"
+title: "SAP Single Sign-On"
 category: "SAP"
 menu_order: 40
 description: "Reference information on SAP Single Sign-On"

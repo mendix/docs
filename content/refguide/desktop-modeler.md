@@ -5,19 +5,21 @@ description: "Describes the various features of the Mendix Modeler, including do
 tags: ["Mendix", "Desktop Modeler", "Documents"]
 ---
 
-The Mendix Desktop Modeler is the tool for creating, viewing, and editing your Mendix applications. The reference pages listed below describe the various features of the Mendix Desktop Modeler, including document templates, the domain model, microflows, modules, pages, and security.
+## 1 Introduction
 
-You can see an overview of the Desktop Modeler in [Desktop Modeler Overview](desktop-modeler-overview)
+The Mendix Desktop Modeler is the most powerful tool for creating, viewing, and editing your Mendix applications. This category describes the various features of the Desktop Modeler, including document templates, the domain model, microflows, modules, pages, and security.
 
-## Module Documents
+For more introductory information, see [Desktop Modeler Overview](desktop-modeler-overview)
 
-Your Mendix app is called a **project** in the Modeler. A project consists of many different sorts of items such as pages and microflows. These are generically referred to as **documents** and are stored in modules and folders.
+## 2 Main Documents in This Category
 
-Right-click a module, or folder, within the **Project Explorer** to add documents.
+Your Mendix app is called a project in the Modeler. An app project consists of different types of items, such as pages and microflows. These are generically referred to as documents, and they are stored in modules and folders.
 
-![Right-Click menu in the project explorer](attachments/desktop-modeler/add-document.png)
+To add a document to your app project, right-click the destination module or folder in the Modeler's **Project Explorer**:
 
-The following reference documents describe the documents you can add:
+![Right-click menu in Project Explorer](attachments/desktop-modeler/add-document.png)
+
+The following documents in the **Desktop Modeler** category of the *Mendix Reference Guide* describe the documents you can add:
 
 * [Pages](pages)
 * [Microflows](microflows)
@@ -28,29 +30,24 @@ The following reference documents describe the documents you can add:
 * [Snippets](snippet)
 * [Building blocks](building-block)
 * [Page templates](page-templates)
-* [Java Actions](java-actions)
+* [Java actions](java-actions)
 * [Rules](rules)
 * [Enumerations](enumerations)
-* [Data Sets](data-sets)
+* [Data sets](data-sets)
 * [Constants](constants)
-* [Regular Expressions](regular-expressions)
-* [Scheduled Events](scheduled-events)
-* [Document Templates](document-templates)
-* [Message Definitions](message-definitions)
+* [Regular expressions](regular-expressions)
+* [Scheduled events](scheduled-events)
+* [Document templates](document-templates)
+* [Message definitions](message-definitions)
 * [JSON structures](json-structures)
 * [XML schemas](xml-schemas)
-* [Export mappings](export-mappings)
-* [Import mappings](import-mappings)
-* [Consumed app services](consumed-app-services)
-* [Consumed web services](consumed-web-services)
-* [Published REST services](published-rest-services)
-* [Published web services](published-web-services)
-* [Published OData services](published-odata-services)
-* [Published app services](published-app-services)
+* [Export mappings](export-mappings) and [import mappings](import-mappings)
+* [Consumed app services](consumed-app-services) and [consumed web services](consumed-web-services)
+* [Published REST services](published-rest-services), [published web services](published-web-services), [published OData services](published-odata-services), and [published app services](published-app-services)
 
-## Additional Information About the Desktop Modeler
+## 3 Other Documents in This Category
 
-The following reference documents provide additional information about using the Desktop Modeler
+The following documents provide additional information about using the Desktop Modeler
 
 * [Data Types](data-types)
 * [Dialog Boxes](dialogs)

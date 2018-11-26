@@ -8,7 +8,7 @@ tags: ["web modeler", "consistency errors", "checks", "errors"]
 
 ## 1 Introduction 
 
-To make sure that your app is always properly built, the Web Modeler does several consistency [checks](checks-wm) when publishing your app. When a consistency check is not met, the Web Modeler will notify you about this via consistency errors on the **Checks** panel. For more information on how to view the consistency errors, see [Section 2 Viewing Checks for Your App and Interacting with the Checks Panel](checks-wm#viewing-checks) in *Checks Overview in the Web Modeler*. 
+To make sure that your app is always properly built, the Web Modeler does several consistency [checks](checks-wm) when publishing your app. When a consistency check is not met, the Web Modeler will notify you about this via consistency errors on the **Checks** panel. For more information on how to view the consistency errors, see [Section 2 Viewing Checks for Your App and Interacting with the Checks Panel](checks-wm#viewing-checks) in *Checks in the Web Modeler*. 
 
 Errors need to be solved before your app can be published. An example of a consistency error is when you do not specify the entity property of a data view on a page. 
 
@@ -25,8 +25,8 @@ Consistency errors can occur in the following editors of the modeler:
 * [Page Editor Consistency Errors in the Web Modeler](consistency-errors-pages-wm)
 * [Navigation Consistency Errors in the Web Modeler](consistency-errors-navigation-wm)
 * [Microflow Editor Consistency Errors in the Web Modeler](consistency-errors-microflows-wm)
-* [Checks Overview in the Web Modeler](checks-wm)
-* [Page Editor Overview in the Web Modeler](page-editor-wm)
+* [Checks in the Web Modeler](checks-wm)
+* [Page Editor in the Web Modeler](page-editor-wm)
 * [Navigation Document in the Web Modeler](navigation-wm)
 * [Microflows in the Web Modeler](microflows-wm)
 * [How to Publish and View Your App](../../howto/tutorials/start-with-a-blank-app-3-publish-and-view-your-app)

@@ -16,7 +16,7 @@ The Web Modeler enables you to do the following:
 These are the main documents in the **Web Modeler** category of the Mendix Reference Guide:
 
 * [Web Modeler Overview](overview-wm) 
-* [Domain Model in the Web Modeler](domain-models-wm)
+* [Domain Models in the Web Modeler](domain-models-wm)
 * [Page Editor in the Web Modeler](page-editor-wm)
 * [Navigation Document in the Web Modeler](navigation-wm)
 * [Microflows in the Web Modeler](microflows-wm)

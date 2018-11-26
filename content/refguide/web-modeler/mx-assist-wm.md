@@ -116,7 +116,7 @@ The exclusive split is added to the microflow.
 
 {{% alert type="info" %}}
 
-The number of options for the check depend on the number of variables of Boolean type in your microflow and on the number of attributes of Boolean type in your domain model. For more information, see [Domain Models Overview in the Web Modeler](domain-models-wm) and [Attribute Types in the Web Modeler](domain-models-attributes-wm). You can also add a check if an object exists microflow.
+The number of options for the check depend on the number of variables of Boolean type in your microflow and on the number of attributes of Boolean type in your domain model. For more information, see [Domain Models in the Web Modeler](domain-models-wm) and [Attribute Types in the Web Modeler](domain-models-attributes-wm). You can also add a check if an object exists microflow.
 
 {{% /alert %}}
 
@@ -136,7 +136,7 @@ The exclusive split is added to the microflow.
 
 {{% alert type="info" %}}
 
-The number of options for **Add a decision** depend on the number of parameters with enumeration data type in your microflow. For more information, see [Domain Models Overview in the Web Modeler](domain-models-wm) and [Attribute Types in the Web Modeler](domain-models-attributes-wm).
+The number of options for **Add a decision** depend on the number of parameters with enumeration data type in your microflow. For more information, see [Domain Models in the Web Modeler](domain-models-wm) and [Attribute Types in the Web Modeler](domain-models-attributes-wm).
 
 {{% /alert %}}
 

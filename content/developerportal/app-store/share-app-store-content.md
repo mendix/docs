@@ -62,15 +62,16 @@ To develop modules and submit them to the App Store, follow these guidelines:
 * Create a folder named **USE_ME** and add the microflows and pages that are relevant for the user
 * Create an empty folder with the version number as its name, which will appear in the Desktop Modeler's Project Explorer
 * If you add any userlib *jar* files, make sure they are accompanied by a *MyModule.RequiredLib* file so that users know where the *jar* files come from
+* Verify that the module's Java actions compile correctly (the easiest way to check is to create a deployment package, as it will clean the deployment folder and rebuild the app; for more information, see [Create Deployment Package Dialog](/developerportal/deploy/environments) and [Environments](../deploy/environments))
 * Reduce the use of layouts – using snippets will result in fewer module dependencies and will reduce the number of potential errors (for example, missing layouts)
 * User roles and security should be implemented 
 * Creating a new release or module export should be done while the security level of the project containing the module is set to **Production**
-*  The module security status (in the **Project Security**) must be **complete** for the following:
-	* Page access
-	* Microflow access
-	* OData access
-	* Entity access
-	* Dataset access
+* The module security status (in the **Project Security**) must be **complete** for the following:
+  * Page access
+  * Microflow access
+  * OData access
+  * Entity access
+  * Dataset access
 * For example pages and microflows to be copied to another module, they should be "excluded from project" in order to encourage duplication and reduce dependency errors 
 * Do not rename entities and attributes when creating new versions, as data in these entities will get lost (replacing an existing module is based on the entity names)
 * The module should include the English language

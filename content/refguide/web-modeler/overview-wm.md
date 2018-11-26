@@ -146,11 +146,11 @@ The top bar provides the following options:
 
 Cut/copy/paste function is available in all editors of the Web Modeler: pages, microflows, domain models, and navigation. To cut/copy/paste you can use <kbd>Ctrl</kbd> + <kbd>Z</kbd> /  <kbd>Ctrl</kbd> + <kbd>C</kbd> / <kbd>Ctrl</kbd> + <kbd>V</kbd> or  <kbd>Cmn</kbd> + <kbd>Z</kbd> /  <kbd>Cmd</kbd> + <kbd>C</kbd> / <kbd>Cmd</kbd> + <kbd>V</kbd>. 
 
-Mind the following issues when using cut/copy/paste:
+Mind the following characteristics when using cut/copy/paste:
 
 * You can cut/copy/paste elements within one editor; that means that you can cut/copy/paste elements within one page or to other pages in the Web Modeler, and copy microflow activities within one microflow or to other microflows
-* You can cut/copy/paste elements to different projects in the Web Modeler if they have the same Mendix version
-* You cannot copy/paste the whole page, only elements on the page   
+* You can cut/copy/paste elements to different apps in the Web Modeler if they have the same Mendix version
+* You cannot copy/paste pages or microflows, only elements of a page or a microflow 
 * You cannot cut/copy/paste from the Web Modeler to the Desktop Modeler
 
 ## 9 Related Content

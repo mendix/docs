@@ -1,6 +1,6 @@
 ---
-title: "DateTime handling FAQ"
-category: "Runtime"
+title: "DateTime Handling FAQ"
+parent: "date-and-time-handling"
 ---
 
 

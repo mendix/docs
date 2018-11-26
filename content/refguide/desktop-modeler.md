@@ -11,7 +11,7 @@ The Mendix Desktop Modeler is the most powerful tool for creating, viewing, and 
 
 For more introductory information, see [Desktop Modeler Overview](desktop-modeler-overview)
 
-## 2 Module Documents
+## 2 Main Documents in This Category
 
 Your Mendix app is called a project in the Modeler. An app project consists of different types of items, such as pages and microflows. These are generically referred to as documents, and they are stored in modules and folders.
 
@@ -22,11 +22,14 @@ To add a document to your app project, right-click the destination module or fol
 The following documents in the **Desktop Modeler** category of the *Mendix Reference Guide* describe the documents you can add:
 
 * [Pages](pages)
-* [Microflows](microflows) and [nanoflows](nanoflows)
+* [Microflows](microflows)
+* [Nanoflows](nanoflows)
 * [Images](images)
+* [Layouts](layout)
 * [Menus](menu)
 * [Snippets](snippet)
-* [Layouts](layout), [building blocks](building-block), [page templates](page-templates), and [document templates](document-templates)
+* [Building blocks](building-block)
+* [Page templates](page-templates)
 * [Java actions](java-actions)
 * [Rules](rules)
 * [Enumerations](enumerations)
@@ -34,16 +37,17 @@ The following documents in the **Desktop Modeler** category of the *Mendix Refer
 * [Constants](constants)
 * [Regular expressions](regular-expressions)
 * [Scheduled events](scheduled-events)
+* [Document templates](document-templates)
 * [Message definitions](message-definitions)
 * [JSON structures](json-structures)
 * [XML schemas](xml-schemas)
-* [Export mappings](export-mappings)  and  [import mappings](import-mappings)
+* [Export mappings](export-mappings) and [import mappings](import-mappings)
 * [Consumed app services](consumed-app-services) and [consumed web services](consumed-web-services)
 * [Published REST services](published-rest-services), [published web services](published-web-services), [published OData services](published-odata-services), and [published app services](published-app-services)
 
-## 3 Additional Information
+## 3 Other Documents in This Category
 
-The following reference documents provide additional information about using the Desktop Modeler
+The following documents provide additional information about using the Desktop Modeler
 
 * [Data Types](data-types)
 * [Dialog Boxes](dialogs)

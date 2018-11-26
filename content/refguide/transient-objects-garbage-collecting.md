@@ -1,5 +1,5 @@
 ---
-title: "Transient Objects and Garbage Collecting"
+title: "Transient Objects & Garbage Collecting"
 category: "Runtime"
 description: "This page will explain the life cycle of both persistable and non-persistable objects, and how they flow through the platform memory."
 tags: ["persistable", "non-persistable", "transient", "objects", "garbage", "collecing"]
@@ -13,7 +13,7 @@ This page will explain the life cycle of both persistable and non-persistable ob
 *   Changed Persistable Objects that are not committed only exist in memory and behave similar to Transient Objects
 *   The Mendix Platform will remove objects automatically when they are no longer ‘used’ (the definition of ‘used’ will be explained later)
 
-## 2 New Behavior in Mendix 7
+## 2 Behavior in Mendix 7
 
 The way that Transient Objects stay in memory has significantly changed in Mendix 7. They are no longer kept in the Mendix Platform Cache on the server's side, but maintained in the client. This means server-side garbage collection no longer takes place. This simplifies the handling of objects on the server side because an object will not be garbage collected while it exists on the server.
 

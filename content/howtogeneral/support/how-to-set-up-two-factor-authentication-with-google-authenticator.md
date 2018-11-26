@@ -8,7 +8,7 @@ category: "Mendix Support"
 ## 1 Introduction
 Two-factor authentication (2FA) validates your password and is required for Mendix Cloud node activities done in a production environment. 2FA ensures that you are authenticated when performing sensitive activities, such as deploying packages and monitoring the production environment.
 
-In this how-to you will learn how to set up 2FA. The Google Authenticator and SMS are two types of 2FA Mendix uses for Mendix Cloud Portal security.
+In this how-to you will learn how to set up 2FA. The Google Authenticator and SMS are two types of 2FA Mendix uses for Mendix Developer Portal security.
 
 Technical Contacts are required to use 2FA with their Mendix account when they access licensed cloud node details, specifically for transporting MDA files (deployment archives) to the production environment.
 

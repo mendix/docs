@@ -19,8 +19,8 @@ However there might be instances where physically reclaiming the lost space is i
 
 A database restore does a full physical rewrite of the database. It will compress the database to fit just the "living" records and fully optimize the physical placement of files on the actual hard disk to maximimize the performance of disk read operations.
 
-You can create and restore a backup in the Mendix Cloud Portal on the Deploy -> Backup page.
+You can create and restore a backup in the Mendix Developer Portal on the Deploy -> Backup page.
 
 ## 3 Conclusion
 
-To physically reclaim (currently unused) space that was created by deleting records from the database you can execute a backup and restore of the database in the Mendix Cloud Portal. However, if you expect the database to grow back to (nearly) its previous size in the future, the benefit of this action might be limited, so keep that in mind.
+To physically reclaim (currently unused) space that was created by deleting records from the database you can execute a backup and restore of the database in the Mendix Developer Portal. However, if you expect the database to grow back to (nearly) its previous size in the future, the benefit of this action might be limited, so keep that in mind.

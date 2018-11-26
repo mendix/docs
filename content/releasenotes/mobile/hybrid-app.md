@@ -12,7 +12,7 @@ The version numbers for each release refer to the [Hybrid App Base](https://gith
 
 If you're building the app using the regular PhoneGap Build approach from within the Mendix Developer Portal, you do not need to worry about these numbers. Downloading and building a new package will set you up with the latest version.
 
-If you're using the advanced flow, you can get the latest version of the Hybrid App Base by running `npm update` from your hybrid app project directory. To upgrade to the latest version of the Hybrid App Template, either pull in the latest changes from GitHub, or download a new copy from the Mendix Cloud Portal ([Developer Portal](https://sprintr.home.mendix.com/index.html) > **DEPLOY**).
+If you're using the advanced flow, you can get the latest version of the Hybrid App Base by running `npm update` from your hybrid app project directory. To upgrade to the latest version of the Hybrid App Template, either pull in the latest changes from GitHub, or download a new copy from the Mendix Developer Portal ([Developer Portal](https://sprintr.home.mendix.com/index.html) > **DEPLOY**).
 
 ## 2018
 
@@ -132,7 +132,7 @@ Unfortunately, Crosswalk is not compatible with SDK versions 24 and above. There
 
 {{% alert type="info" %}}
 
-For this update, we recommend downloading a fresh hybrid app package from the Mendix Cloud Portal via [Developer Portal](https://sprintr.home.mendix.com/index.html) > **DEPLOY** > **Mobile App**.
+For this update, we recommend downloading a fresh hybrid app package from the Mendix Developer Portal via [Developer Portal](https://sprintr.home.mendix.com/index.html) > **DEPLOY** > **Mobile App**.
 
 {{% /alert %}}
 
@@ -169,7 +169,7 @@ This patch fixes an issue with an upstream dependency (`com.android.support:supp
 
 {{% alert type="info" %}}
 
-This is a major release, because it is not fully compatible with older versions of hybrid-app-template. For this update, we recommend that you download a fresh hybrid app package from the Mendix Cloud Portal via [Developer Portal](https://sprintr.home.mendix.com/index.html) > **DEPLOY** > **Mobile App**. We extended the **Mobile Apps** wizard with fields for the theming options described below. In addition, you can configure splash screens/icons by uploading a single base image.
+This is a major release, because it is not fully compatible with older versions of hybrid-app-template. For this update, we recommend that you download a fresh hybrid app package from the Mendix Developer Portal via [Developer Portal](https://sprintr.home.mendix.com/index.html) > **DEPLOY** > **Mobile App**. We extended the **Mobile Apps** wizard with fields for the theming options described below. In addition, you can configure splash screens/icons by uploading a single base image.
 
 {{% /alert %}}
 
@@ -183,7 +183,7 @@ This is a major release, because it is not fully compatible with older versions 
 
 {{% alert type="info" %}}
 
-For this update, we recommend that you download a fresh hybrid app package from the Mendix Cloud Portal ([Developer Portal](https://sprintr.home.mendix.com/index.html) > **DEPLOY** > **Mobile App**).
+For this update, we recommend that you download a fresh hybrid app package from the Mendix Developer Portal ([Developer Portal](https://sprintr.home.mendix.com/index.html) > **DEPLOY** > **Mobile App**).
 
 {{% /alert %}}
 

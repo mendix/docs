@@ -10,7 +10,7 @@ The Invite API is an [App Service](/refguide6/consumed-app-services) that enable
 
 {{% alert type="info" %}}
 
-The Invite API will require the EnvironmentUUID and EnvironmentPassword parameters to authenticate and authorize requests; the values for these should come from constants from the AppCloudServices module with the same name. The Mendix Cloud Portal will automatically set these constants; you do not need to set these yourself. For this reason, the Invite API will however only function for applications which use the AppCloudServices module and are deployed through the Mendix Cloud Portal.
+The Invite API will require the EnvironmentUUID and EnvironmentPassword parameters to authenticate and authorize requests; the values for these should come from constants from the AppCloudServices module with the same name. The Mendix Developer Portal will automatically set these constants; you do not need to set these yourself. For this reason, the Invite API will however only function for applications which use the AppCloudServices module and are deployed through the Mendix Developer Portal.
 
 {{% /alert %}}
 
@@ -32,8 +32,8 @@ API Version 1
 
 | Name | Parameter type | Required | Description |
 | --- | --- | --- | --- |
-| EnvironmentUUID | String | Yes | UUID of the requesting environment. This should be the value of the AppCloudServices.EnvironmentUUID constant, which the Mendix Cloud Portal will fill in automatically. |
-| EnvironmentPassword | String | Yes | Password of the requesting environment. This should be the value of the AppCloudServices.EnvironmentUUID constant, which the Mendix Cloud Portal will fill in automatically. |
+| EnvironmentUUID | String | Yes | UUID of the requesting environment. This should be the value of the AppCloudServices.EnvironmentUUID constant, which the Mendix Developer Portal will fill in automatically. |
+| EnvironmentPassword | String | Yes | Password of the requesting environment. This should be the value of the AppCloudServices.EnvironmentUUID constant, which the Mendix Developer Portal will fill in automatically. |
 | InviteeEmailAddress | String | Yes | Email address of the to be invited user |
 | InviterEmailAddress | String | Yes | Email address of the user inviting the new user. Based on this address, the Mendix Platform will include the name of this user in the invitation email sent to the invitee. Note: The email address of the inviting user must correspond with a user who has access to the application. |
 | RoleUUID | String | Yes | UUID of the user role which the invitee should receive on accepting the invitation. This should be the ModelGUID attribute of the corresponding System.UserRole object. |

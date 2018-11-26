@@ -105,7 +105,7 @@ At this point, all the implementation steps are done and you can deploy your app
 
 {{% alert type="warning" %}}
 
-Make sure that the `Encryption.EncryptionKey` constant has a value before you start the application. If the value is not set, you will get a NullPointerException when you try to send a notification to APNs. If you are using a free app, set a default value for the constant in the model. Otherwise, configure the constant value in the Mendix Cloud portal.
+Make sure that the `Encryption.EncryptionKey` constant has a value before you start the application. If the value is not set, you will get a NullPointerException when you try to send a notification to APNs. If you are using a free app, set a default value for the constant in the model. Otherwise, configure the constant value in the Mendix Developer Portal.
 
 {{% /alert %}}
 

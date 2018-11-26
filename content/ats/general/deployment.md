@@ -15,7 +15,7 @@ Please be aware that not every option supports the full set of features. Take a 
 
 ## 2 Components
 
-Every ATS deployment consists of four components: the ATS application, the Mendix Cloud Portal, a Selenium Runner, and your Application Under Test (AUT).
+Every ATS deployment consists of four components: the ATS application, the Mendix Developer Portal, a Selenium Runner, and your Application Under Test (AUT).
 
 The following diagram illustrates how the components are connected:
 
@@ -25,9 +25,9 @@ The following diagram illustrates how the components are connected:
 
 The ATS application provides the GUI to create, manage, and run your tests.
 
-### 2.2 Mendix Cloud Portal
+### 2.2 Mendix Developer Portal
 
-The Mendix Cloud Portal is provided as a cloud service by Mendix. It hosts your projects, user stories, and other related data that is also used by the ATS application.
+The Mendix Developer Portal is provided as a cloud service by Mendix. It hosts your projects, user stories, and other related data that is also used by the ATS application.
 
 ### 2.3 Selenium Runner
 

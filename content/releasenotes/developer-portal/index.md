@@ -27,7 +27,7 @@ tags: ["Developer Portal", "Cloud Environments", "Mendix Cloud", "SAP", "IBM", "
 
 #### Improvements
 
-* We made improvements in the communication between the Web Modeler and the Cloud Portal.
+* We made improvements in the communication between the Web Modeler and the Developer Portal.
 
 ### October 30th, 2018
 
@@ -57,8 +57,8 @@ tags: ["Developer Portal", "Cloud Environments", "Mendix Cloud", "SAP", "IBM", "
 
 #### Fixes
 
-* We fixed a memory leak problem that caused Cloud Portal to have longer response times.
-* We addressed and fixed an issue that caused some Cloud Portal users to see empty dialog boxes instead of error message content. (Tickets 67626, 69363)
+* We fixed a memory leak problem that caused Developer Portal to have longer response times.
+* We addressed and fixed an issue that caused some Developer Portal users to see empty dialog boxes instead of error message content. (Tickets 67626, 69363)
 * We addressed an issue that caused live logging to freeze from time to time. The fix has been confirmed on all mainstream browsers except for Internet Explorer, which we still are investigating. (Ticket 66418)
 * We fixed an issue which caused subdomain validation errors for sandbox environments. (Ticket 56574)
 
@@ -140,14 +140,14 @@ We now configure Destination Service in the scope of XSUAA. This means that we a
 #### Improvements
 
 * A new API call for accessing the logs of Mendix Cloud V4 applications is now available. Detailed information can be found in the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api).
-* It is now possible to add custom environment variables via the Cloud Portal to set up application metrics with Datadog and Telegraph.
-* All the log levels in the Cloud Portal (as in, INFO, ERROR, TRACE, DEBUG, WARNING, CRITICAL) are now also available in Datadog.
-* The Postgres database size can also be observed in Datadog after enabling it in the Cloud Portal.
+* It is now possible to add custom environment variables via the Developer Portal to set up application metrics with Datadog and Telegraph.
+* All the log levels in the Developer Portal (as in, INFO, ERROR, TRACE, DEBUG, WARNING, CRITICAL) are now also available in Datadog.
+* The Postgres database size can also be observed in Datadog after enabling it in the Developer Portal.
 
 #### Fixes
 
 * We improved the feedback messages in the case of a startup failure.
-* The status page link in alert emails now redirects you to the corresponding alerts page in the Cloud Portal.
+* The status page link in alert emails now redirects you to the corresponding alerts page in the Developer Portal.
 * We solved an issue that caused blank error messages during backup creation.
 * The **Environments** breadcrumb in **Deploy** > **Environments** > environment is now a link that redirects you back to the **Environments** page.
 
@@ -188,7 +188,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 * We improved the deployment speed for the Asia region. The feature is not enabled by default, so you need to request it if necessary.
 * We implemented tags on environments for metrics in Datadog. It is now possible to add custom tags to metrics that will serve as selection criteria for grouping environments. Environment tags can be created, retrieved, and deleted using APIs. Detailed information can be found in the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api).
-* We changed the yearly overview of trends to quarterly in the Cloud Portal for v4 applications.
+* We changed the yearly overview of trends to quarterly in the Developer Portal for v4 applications.
 * It is now possible for an Operations Manager to reorder environments.
 * Custom offline pages are now immediately active after the transport of a new deployment package.
 
@@ -493,7 +493,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 #### Fixes
 
-* We fixed a problem where Team Server branches that were committed without the Mendix Modeler were hidden in the Cloud Portal.
+* We fixed a problem where Team Server branches that were committed without the Mendix Modeler were hidden in the Developer Portal.
 * We fixed a problem where changing an access restriction profile could display a wrong error about having more than 1 certificate in use.
 
 ### September 25th, 2017

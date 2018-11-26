@@ -1,5 +1,5 @@
 ---
-title: "Page Editor Overview in the Web Modeler"
+title: "Page Editor in the Web Modeler"
 category: "Web Modeler"
 description: "Describes the page editor in the Mendix Web Modeler."
 menu_order: 30

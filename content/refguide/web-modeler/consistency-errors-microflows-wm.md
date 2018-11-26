@@ -67,5 +67,5 @@ Some consistency errors may be connected with settings in the Desktop Modeler. T
 * [Microflows in the Web Modeler](microflows-wm)
 * [Page Editor Consistency Errors in the Web Modeler](consistency-errors-pages-wm)
 * [Navigation Consistency Errors in the Web Modeler](consistency-errors-navigation-wm)
-* [Checks Overview in the Web Modeler](checks-wm)
+* [Checks in the Web Modeler](checks-wm)
 * [How to Publish and View Your App](../../howto/tutorials/start-with-a-blank-app-3-publish-and-view-your-app)

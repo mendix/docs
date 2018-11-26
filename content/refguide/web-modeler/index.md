@@ -23,5 +23,5 @@ These are the main documents in the **Web Modeler** category of the Mendix Refer
 * [Checks in the Web Modeler](checks-wm)
 * [Consistency Errors in the Web Modeler](consistency-errors-wm)
 * [Theme Customizer in the Web Modeler](theme-customizer-wm)
-* [App Settings Overview in the Web Modeler](app-settings-wm)
+* [App Settings in the Web Modeler](app-settings-wm)
 * [Web Modeler Version & Mendix Version Correlation](versions-wm)

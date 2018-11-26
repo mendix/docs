@@ -1,5 +1,5 @@
 ---
-title: "Checks Overview in the Web Modeler"
+title: "Checks in the Web Modeler"
 category: "Web Modeler"
 description: "Describes checks during publishing process in the Mendix Web Modeler."
 menu_order: 60
@@ -8,7 +8,7 @@ tags: ["web modeler", "app viewing", "checks", "errors"]
 
 ## 1 Introduction 
 
-When publishing your app, the Web Modeler checks the app you created on [consistency errors](consistency-errors-wm). If there are any, the app canot be published, and you see the **Checks** button goes red with the number of errors indicated.
+When publishing your app, the Web Modeler checks the app you created on [consistency errors](consistency-errors-wm). If there are any, the app cannot be published, and you see the **Checks** button goes red with the number of errors indicated.
 
 ![](attachments/checks-wm/wm-checks-button.png)
 

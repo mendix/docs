@@ -55,7 +55,7 @@ To configure the domain model and create the page, do the following:
 
 4. Repeat step 3 to create an attribute *Address* of string type.
 
-5.  Now we need a page where customers' names will be listed. Create a blank page and name it *Customers*. For more information on creating pages, see section [3.2 Creating a New Page](../../refguide/web-modeler/page-editor-wm) in the *Page Editor Overview in the Web Modeler*.<br/>
+5.  Now we need a page where customers' names will be listed. Create a blank page and name it *Customers*. For more information on creating pages, see section [3.2 Creating a New Page](../../refguide/web-modeler/page-editor-wm) in the *Page Editor in the Web Modeler*.<br/>
 
     ![](attachments/webmodeler-how-to-configure-delete-object/wm-create-page.png)
 

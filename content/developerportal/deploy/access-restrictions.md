@@ -2,52 +2,43 @@
 title: "Restrict Access for Incoming Requests"
 parent: "mendix-cloud-deploy"
 menu_order: 36
-#description: "Set a description with a maximum of 140 characters; this should describe what the goal of the document is, and it can be different from the document introduction; this is optional, and it can be removed"
-tags: ["incoming requests", "IP Range", "security", "paths", "URL"]
+description: "How to limit access to your app using IP addresses and certificates"
+tags: ["incoming requests", "IP Range", "security", "paths", "URL", "certificate"]
 ---
 
 ## 1 Introduction
 
-This how-to will teach you how to do the following:
+Your app is accessible over the internet - but you may not want everyone to be able to access it. By configuring access restrictions, you have fine-grained control over external access to your application.
 
-* Restrict access for incoming requests to your app
-* Configure an access restriction profile
-* Apply a restriction to an app environment
+You can apply restrictions to the top level of the application URL (`/`), and also to more specific paths (for example, `/ws/` or `/odata/`). This allows you to, for example, open up web services without giving general users access to the app itself. Presets are available to simplify common requirements, such as allowing or denying all access. In addition, custom profiles can be created using IP range filters and a client certificate authority.
 
-## 2 Restricting Access for Incoming Requests to Your Application
+## 2 Access Restriction Profile Concepts
 
-By configuring access restrictions, you have fine-grained control over external access to your application.
+When configuring an access restriction profile, you need to bear the following things in mind:
 
-Restrictions can be applied to the top level of the application URL (`/`), and also to more specific paths (for example, `/ws/` or `/odata/`.
+* Access restriction profiles are configured at the *application* level and they can be reused in all the environments (test, acceptance, production) of an app
 
-Presets are available to simply allow or deny all access.
+* Access restriction profiles can contain any number of IPv4 and IPv6 address ranges, a client certificate authority, or both
 
-In addition, custom profiles can be assembled using IP range filters and a client certificate authority.
+* If an access restriction profile contains *both IP address ranges and a client certificate authority*, then any match on *either* the IP range *or* the client certificate will grant access
 
-## 3 Configuring an Access Restriction Profile
+**Known Limitations**
 
-These are the most important things you should know about configuring an access restriction profile:
+* The IP range filter option is not available in Mendix Cloud *v3* environments hosted outside the Netherlands
 
-* Access restriction profiles are configured at the application level and they can be reused in all the environments (test, acceptance, production) of an app
-* Access restriction profiles can contain any number of IPv4 and IPv6 address ranges, or a client certificate authority, or both
-* If an access restriction profiles contains both IP address ranges and a client certificate authority, then any match on either the IP range or the client certificate will grant access
+* When using client certificate restrictions, the client certificate CA in all active profiles must be identical (in other words, it is only possible to use a single CA for the entire application environment)
 
-### 3.1 Known Limitations
-
-These are the known limitations:
-
-* The IP range filter option is not available in Mendix Cloud v3 environments hosted outside of the Netherlands
-* When using client certificate restrictions, the client certifcate CA in all active profiles must be identical (in other words, it's only possible to use a single CA for the entire application environment)
-
-## 4 Applying a Restriction to an Application Environment
+## 3 Applying a Restriction to an Application Environment
 
 To apply a restriction to a specific application environment, follow these steps:
 
-1. Go to the [Developer Portal](http://home.mendix.com) and select your app.
-2. Click **Environment** under the **Deploy** category.
-3. Click the **Details** of the desired environment.
-4. Go to the **Network** tab.
-5. The section **Path Based Access Restrictions** allows for applying access restrictions to a single environment.
+1. Open the **Environment** page for your app in the *Developer Portal*.
+
+2. Click the **Details** of the desired environment.
+
+3. Go to the **Network** tab.
+
+4. The section **Path Based Access Restrictions** allows for applying access restrictions to a single environment.
 
 {{% alert type="info" %}}
 

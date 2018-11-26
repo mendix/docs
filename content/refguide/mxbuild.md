@@ -2,27 +2,33 @@
 title: "MxBuild"
 category: "General"
 menu_order: 50
+description: "Describes MxBuild which is a command-line tool for building and deploying Mendix Apps"
+tags: ["Build", "Deploy", "deployment package", "POST", "command-line"]
 ---
+
+## 1 Introduction
 
 MxBuild is a command-line tool that can be used to deploy and build a Mendix Deployment Package from a Mendix Project.
 
-MxBuild can be run in either _Build mode_ or _Service mode_, depending on your needs. These modes are described below.
+MxBuild can be run in either [Build mode](#build-mode), to build a package once, or [Service mode](#service-mode), if you are intending to build the package several times, depending on your needs. The modes are described in the sections below.
 
-## Build Mode
-In Build mode, you specify on the command-line the Mendix Project file (.mpr) for which you want to build the deployment package (.mda). This file name may be preceded by a relative or absolute path. The project file should be located inside a Mendix project directory.
+## 2 Build Mode{#build-mode}
+
+In Build mode, you specify the Mendix Project file (.mpr) for which you want to build the deployment package (.mda) on the command-line. The file name may be preceded by a relative or absolute path. The project file should be located inside a Mendix project directory.
 
 After creating the deployment package, the MxBuild process quits.
 
-### Options
+### 2.1 Options
+
 The following additional options can be specified when running in Build mode:
 
 | Option | Description |
 | --- | --- |
-| <code>––target=[package&#124;deploy]</code> | Use this to choose between creating a deployment package (.mda file) or only performing a deployment of the project. When this option is omitted, a deployment package is created. |
+| <code>––target=[package&#124;deploy]</code> | MxBuild will either create a deployment **package** (.mda file) or only performing a deployment of the project. When this option is omitted, a deployment package is created. |
 | `--loose-version-check` | Without this option MxBuild only accepts Mendix projects that have the exact same version as the MxBuild version itself. Adding this option makes it possible to create deployment packages from projects that are created with an older Mendix version. The project will then be upgraded to the MxBuild version before the deployment package is created. Note that the changes to the project as a result of this upgrade will not be stored, so your project will not be changed permanently. |
 | `--write-errors=FILENAME` | When this option is specified, all errors, warnings and deprecations encountered during deployment of the project are written to the specified file in JSON format. This file is only written when the project contains errors. If the file already exists, it will be overwritten without warning. See the section 'Project errors' for a description of the format of this file. |
 
-The following options are only applicable for the `package` build target:
+The following options are only applicable with the `--target=package` option:
 
 | Option | Description |
 | --- | --- |
@@ -31,7 +37,7 @@ The following options are only applicable for the `package` build target:
 | `--model-version=VERSION` | This option can be used to specify the version of the model. |
 | `--model-description=DESCRIPTION` | This option can be used to describe the model. |
 
-## Service Mode
+## 3 Service Mode{#service-mode}
 When you specify the command-line option `--serve`, MxBuild will start in Service mode. In this mode, you do not specify the project to build on the command-line. Instead, MxBuild will run indefinitely and you can tell it to build a project by sending it a POST request.
 
 The command-line option `--port=PORT` can be used to choose the TCP port that MxBuild will use. When this option is omitted, port `6543` is used.

@@ -20,7 +20,7 @@ Before you continue, make sure that you know how to create:
 
 * Domain models (for more information, see [How to Create a Basic Data Layer](../data-models/create-a-basic-data-layer))
 * Custom File Document (for more information, see [How to Work with Images and Files](../data-models/working-with-images-and-files))
-* Overview and detail pages (for more information, see [How to Create Your First Two Overview and Detail Pages](../ux/create-your-first-two-overview-and-detail-pages))
+* Overview and detail pages (for more information, see [How to Create Your First Two Overview & Detail Pages](../ux/create-your-first-two-overview-and-detail-pages))
 * Menu items (for more information, see [How to Set Up the Navigation Structure](../ux/setting-up-the-navigation-structure))
 
 ## 3 Preparing the Data Structure and GUI

@@ -184,5 +184,5 @@ Re-deploy your app to see the shiny new logo:
 * [How to Set Up the Navigation Structure](setting-up-the-navigation-structure)
 * [How to Set Up the Mendix UI Framework with Scout](setup-mendix-ui-framework-with-scout)
 * [How to Set Up the Mendix UI Framework with Koala](setup-mendix-ui-framework-with-koala)
-* [How to Create Your First Two Overview and Detail Pages](create-your-first-two-overview-and-detail-pages)
+* [How to Create Your First Two Overview & Detail Pages](create-your-first-two-overview-and-detail-pages)
 * [How to Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)

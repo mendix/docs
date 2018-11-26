@@ -50,4 +50,4 @@ However, there is the risk of creating an infinite loop if the retrieve applies 
 * [How to Optimize Retrieve Activities](optimizing-retrieve-activities)
 * [How to Configure Error Handling](set-up-error-handling)
 * [How to Optimize Microflow Aggregates](optimizing-microflow-aggregates)
-* [How to Extract and Use Sub Microflows](extract-and-use-sub-microflows)
+* [How to Extract & Use Sub-Microflows](extract-and-use-sub-microflows)

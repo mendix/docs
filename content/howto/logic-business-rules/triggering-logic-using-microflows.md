@@ -149,4 +149,4 @@ There are two more advanced settings:
 *   [Optimizing Retrieve Activities](optimizing-retrieve-activities)
 *   [Error Handling](set-up-error-handling)
 *   [Optimizing Microflow Aggregates](optimizing-microflow-aggregates)
-*   [Extract and use sub microflows](extract-and-use-sub-microflows)
+*   [Extract & Use Sub-Microflows](extract-and-use-sub-microflows)

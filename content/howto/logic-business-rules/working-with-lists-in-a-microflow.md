@@ -247,7 +247,7 @@ In the previous sections you filtered the list of orders from database on attrib
 *   [Optimizing Retrieve Activities](optimizing-retrieve-activities)
 *   [Error Handling](set-up-error-handling)
 *   [Optimizing Microflow Aggregates](optimizing-microflow-aggregates)
-*   [Extract and use sub microflows](extract-and-use-sub-microflows)
+*   [Extract & Use Sub-Microflows](extract-and-use-sub-microflows)
 *   [XPath](/refguide7/xpath)
 *   [XPath Constraints](/refguide7/xpath-constraints)
 *   [Aggregate List](/refguide7/aggregate-list)

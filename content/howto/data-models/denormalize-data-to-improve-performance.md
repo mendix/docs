@@ -143,7 +143,7 @@ Now the application is ready to store redundant data, but you still need to keep
 
 ## 5 Related Content
 
-* [How to Work with Images and Files](working-with-images-and-files)
+* [How to Work with Images & Files](working-with-images-and-files)
 * [How to Create a Basic Data Layer](create-a-basic-data-layer)
 * [How to Set Up Data Validation](setting-up-data-validation)
 * [How to Work with Object Events](working-with-object-events)

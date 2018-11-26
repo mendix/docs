@@ -30,7 +30,7 @@ Follow these steps:
     
     ![](attachments/18448735/18581969.png)
 
-    The 'XLSFile' object inherits from the 'Filedocument' object. If you don't know how to achieve this, please take a look at [How to Work with Images and Files](../data-models/working-with-images-and-files).
+    The 'XLSFile' object inherits from the 'Filedocument' object. If you don't know how to achieve this, please take a look at [How to Work with Images & Files](../data-models/working-with-images-and-files).
 2. Create **Overview** and **Detail** pages to manage objects of type **Customer** and **Order**.
 3.  Create **menu items **to access the **Order** and the **Customer** overview pages.
 4.  Download the **Excel Importer** and **Mx Model Reflection** modules from the appstore.

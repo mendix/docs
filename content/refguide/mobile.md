@@ -2,7 +2,7 @@
 title: "Mobile Development"
 ---
 
-## 1 Introduction to Mobile
+## 1 Introduction
 
 Mendix allows you to quickly build apps for mobile devices. This document gives an overview of mobile app development with Mendix.
 

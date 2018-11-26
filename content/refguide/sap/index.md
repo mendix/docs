@@ -1,12 +1,14 @@
 ---
 title: "SAP"
-description: "Landing page for user who need reference material on consuming SAP services"
+description: "Reference guide category for users who need material on consuming SAP services."
 tags: ["SAP", "OData", "XSUAA", "Destination Services", "Fiori"]
 ---
 
-This category contains documents to help developers consume SAP services.
+## 1 Introduction
 
-These are the main documents in the **SAP** category of the *Mendix Reference Guide*
+SAP and Mendix offer you the ability to extend the digital core of SAP with low-code rapid application development, enabling you to efficiently build new differentiating solutions on top of SAP products like SAP S/4HANA, SAP SuccessFactors, and SAP Hybris.
+
+## 2 Main Documents in This Category
 
 * [SAP OData Connector](sap-odata-connector)
 * [SAP Destination Service](sap-destination-service)

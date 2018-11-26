@@ -3,7 +3,7 @@ title: "Java Programming"
 description: "Describes how to use the Mendix Java library and use Eclipse as an environment to write your Mendix Java Actions."
 ---
 
-## 1 Introduction to Java Programming
+## 1 Introduction
 
 With Java actions, you can extend the functionality of your application in situations where it would be hard to implement this functionality in microflows.
 

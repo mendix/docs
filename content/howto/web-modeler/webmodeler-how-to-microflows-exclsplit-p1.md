@@ -1,5 +1,5 @@
 ---
-title: "Step 1: Build the Domain Model and Configure a Microflow"
+title: "Step 1: Build the Domain Model & Configure a Microflow"
 parent: "webmodeler-how-to-microflows-exclsplit"
 description: "This how-to describes the process of configuring an exclusive split in the Mendix Web Modeler."
 menu_order: 10
@@ -125,7 +125,7 @@ To configure the exclusive split with the attribute or parameter of the enumerat
 
 Congratulations! We have now created the microflow that will open different order forms for customers with different grades, or show an error message when the customer has no grade.
 
-If you want to test your microflow by adding it to the pages, see [Configure an Exclusive Split Step 2: Embed the Microflow to Your App](webmodeler-how-to-microflows-exclsplit-p2).
+If you want to test your microflow by adding it to the pages, see [Configure an Exclusive Split Step 2: Embed the Microflow in Your App](webmodeler-how-to-microflows-exclsplit-p2).
 
 ## 4 Configuring the Exclusive Split with Attribute of the Boolean Type  
 
@@ -189,7 +189,7 @@ To configure the exclusive split with the attribute of the boolean type, follow 
 
 Congratulations! We have now created a microflow that will show an error message and close the current page if the customer is blocked.
 
-If you want to embed your microflow to the pages, see [Step 2: Embed the Microflow to Your App](webmodeler-how-to-microflows-exclsplit-p2).
+If you want to embed your microflow to the pages, see [Step 2: Embed the Microflow in Your App](webmodeler-how-to-microflows-exclsplit-p2).
 
 
 

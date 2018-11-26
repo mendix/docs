@@ -155,4 +155,4 @@ Mind the following issues when using cut/copy/paste:
 
 ## 9 Related Content
 
-* [How to Sync the Web Modeler with the Desktop Modeler](../../howto/web-modeler/syncing-webmodeler-desktop)
+* [How to Sync the Web Modeler & Desktop Modeler](../../howto/web-modeler/syncing-webmodeler-desktop)

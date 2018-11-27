@@ -9,7 +9,7 @@ Learn some basics about the Desktop Modeler with the introductory how-to's in th
 
 ## 2 Main Documents in This Category
 
-* [How to Install the Mendix Desktop Modeler](install-the-mendix-desktop-modeler)
-* [How to Implement Styles](styles)
+* [Install the Mendix Desktop Modeler](install-the-mendix-desktop-modeler)
+* [Implement Styles](styles)
 
 

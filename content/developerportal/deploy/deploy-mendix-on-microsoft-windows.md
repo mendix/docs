@@ -397,6 +397,8 @@ When configuring IIS it can seem like you have done everything right but it just
 	
 	When you have concluded that no messages are arriving at Mendix you can enable IIS trace logging. By doing this, every rewrite rule gets printed to an IIS trace log file; you can see exactly how IIS changes the request and where it is forwarded to. This should provide you with the information needed to change the rewrite rules to the correct configuration. 
 	https://docs.microsoft.com/en-us/iis/extensions/url-rewrite-module/using-failed-request-tracing-to-trace-rewrite-rules
+
+See [Troubleshooting IIS (Internet Information Services)](troubleshooting-iis) for more troubleshooting information.
 	
 ## 8 Related Content
 

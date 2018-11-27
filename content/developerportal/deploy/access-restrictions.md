@@ -26,7 +26,7 @@ When configuring an access restriction profile, you need to bear the following t
 
 * The IP range filter option is not available in Mendix Cloud *v3* environments hosted outside the Netherlands
 
-* When using client certificate restrictions, the client certificate CA in all active profiles must be identical (in other words, it is only possible to use a single CA for the entire application environment)
+* When using client certificate restrictions, the client certificate Certificate Authority (CA) in all active profiles must be identical (in other words, it is only possible to use a single CA for the entire application environment)
 
 ## 3 Applying a Restriction to an Application Environment
 

@@ -1,7 +1,8 @@
 ---
 title: "Consume a Simple Web Service"
 category: "Integration"
-tags: ["integration", "wsdl", "web service"]
+menu_order: 7
+tags: ["integration", "wsdl", "web service", "consume"]
 ---
 
 ## 1 Introduction

@@ -1,7 +1,7 @@
 ---
 title: "Use a Client Certificate"
 category: "Integration"
-tags: ["integration", "web service"]
+tags: ["integration", "web service", "client certficate"]
 ---
 
 ## 1 Introduction

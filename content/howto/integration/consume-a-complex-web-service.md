@@ -1,7 +1,8 @@
 ---
 title: "Consume a Complex Web Service"
 category: "Integration"
-tags: ["web service", "integration"]
+menu_order: 8
+tags: ["web service", "integration", "consume"]
 ---
 
 ## 1 Introduction

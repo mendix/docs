@@ -1,7 +1,8 @@
 ---
 title: "Integrate a Legacy System into a Mendix App"
 category: "Integration"
-tags: []
+menu_order: 1
+tags: ["legacy", "legacy system", "integration"]
 ---
 
 ## 1 Introduction

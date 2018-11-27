@@ -1,6 +1,8 @@
 ---
 title: "Execute an SQL Statement on an External Database"
 category: "Integration"
+menu_order: 17
+tags: ["sql", "database", "external database", "integration"]
 ---
 
 ## 1 Introduction
@@ -58,4 +60,4 @@ The Execute statement action's result is either an Integer or a Long value which
 
 ## 6 Related Content
 
-*   [How to execute an SQL statement on an external database](how-to-execute-an-sql-statement-on-an-external-database)
+*   [How to execute an SQL statement on an external database](execute-an-sql-statement-on-an-external-database)

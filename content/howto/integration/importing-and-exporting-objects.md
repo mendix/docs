@@ -1,7 +1,8 @@
 ---
 title: "Import & Export Objects"
 category: "Integration"
-tags: ["mpk", "Mendix project packages", "import", "export", "documents", "project", "module", "widget"]
+menu_order: 2
+tags: ["mpk", "project package", "import", "export", "document", "project", "module", "widget"]
 ---
 
 ## 1 Introduction

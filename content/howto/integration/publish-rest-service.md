@@ -1,8 +1,9 @@
 ---
 title: "Publish a REST Service"
 category: "Integration"
+menu_order: 10
 description: "Describes how to publish REST web services natively from the Desktop Modeler."
-tags: ["REST", "web service"]
+tags: ["rest", "rest service", "web service", "integration"]
 ---
 
 ## 1 Introduction

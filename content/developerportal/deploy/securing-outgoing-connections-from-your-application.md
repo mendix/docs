@@ -79,6 +79,6 @@ Setting up an SSH enabled server and setting up a public/private keypair is a tr
 
 ## 3 Notes
 
-Client certificates can be added to your Mendix Cloud app from within the Cloud Portal. See [Certificates](/developerportal/deploy/certificates) for more information.
+Client certificates can be added to your Mendix Cloud app from within the Developer Portal. See [Certificates](/developerportal/deploy/certificates) for more information.
 
 Scenarios 2 to 5 work best for HTTP based protocols, which will work out of the box from Mendix core functionality, but also for many AppStore modules and other content. However, by using Java actions, they can be applied to most TCP based connections which can be wrapped in TLS for added security.

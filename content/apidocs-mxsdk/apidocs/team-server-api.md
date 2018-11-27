@@ -10,7 +10,7 @@ The image below provides a domain model representation of the concepts discussed
 
 ## Authentication
 
-The Cloud Portal Management API requires its users to authenticate themselves. This can be done by using API keys; for more information about this please refer to [this article](authentication "authentication").
+The Developer Portal Management API requires its users to authenticate themselves. This can be done by using API keys; for more information about this please refer to [this article](authentication "authentication").
 
 ## API calls
 
@@ -45,7 +45,7 @@ Mendix-ApiKey: 26587896-1cef-4483-accf-ad304e2673d6
 List of objects with the following key-value pairs:
 
 *   _Name_ (String) : Name of the branch. This is 'trunk' for the main line or a specific branch name.
-*   _DisplayName_ (String) : Visible name in the Cloud Portal. For the trunk, this is 'Main line'.
+*   _DisplayName_ (String) : Visible name in the Developer Portal. For the trunk, this is 'Main line'.
 *   _LatestRevisionNumber_ (Long) : Number of the latest revision.
 *   _LatestRevisionMendixVersion_ (String) : Version string of the Mendix version of the app project in this revision.
 
@@ -104,7 +104,7 @@ Mendix-ApiKey: 26587896-1cef-4483-accf-ad304e2673d6
 An object with the following key-value pairs:
 
 *   _Name_ (String) : Name of the branch. This is 'trunk' for the main line or a specific branch name.
-*   _DisplayName_ (String) : Visible name in the Cloud Portal. For the trunk, this is 'Main line'.
+*   _DisplayName_ (String) : Visible name in the Developer Portal. For the trunk, this is 'Main line'.
 *   _LatestRevisionNumber_ (Long) : Number of the latest revision.
 *   _LatestRevisionMendixVersion_ (String) : Version string of the Mendix version of the app project in the latest revision.
 

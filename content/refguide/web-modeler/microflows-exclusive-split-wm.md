@@ -60,5 +60,5 @@ The caption describes to the human user what happens in this element.
 
 * [Microflows in the Web Modeler](microflows-wm)
 * [Microflow Expressions in the Web Modeler](microflows-expressions-wm)
-* [How to Configure an Exclusive Split](../../howto/web-modeler/webmodeler-how-to-microflows-exclsplit) 
+* [How to Configure an Exclusive Split in the Web Modeler](../../howto/web-modeler/webmodeler-how-to-microflows-exclsplit) 
 

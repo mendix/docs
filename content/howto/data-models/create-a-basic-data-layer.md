@@ -136,7 +136,7 @@ To configure the delete behavior, double-click the **Order_Customer** associatio
 
 ## 8 Related Content
 
-* [How to Work with Images and Files](working-with-images-and-files)
+* [How to Work with Images & Files](working-with-images-and-files)
 * [How to Denormalize Data to Improve Performance](denormalize-data-to-improve-performance)
 * [How to Set Up Data Validation](setting-up-data-validation)
 * [How to Work with Object Events](working-with-object-events)
@@ -144,5 +144,5 @@ To configure the delete behavior, double-click the **Order_Customer** associatio
 * [Stories](/developerportal/collaborate/stories)
 * [How to Define Access Rules Using XPath](../logic-business-rules/define-access-rules-using-xpath)
 * [How to Perform the Scout and Windows 10 Workaround](../ux/perform-scout-and-windows-10-workaround)
-* [How to Create Your First Two Overview and Detail Pages](../ux/create-your-first-two-overview-and-detail-pages)
+* [How to Create Your First Two Overview & Detail Pages](../ux/create-your-first-two-overview-and-detail-pages)
 

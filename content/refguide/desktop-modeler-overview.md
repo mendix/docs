@@ -121,7 +121,7 @@ Using items in the menu bar of the Modeler, you can create new projects, deploy 
 | More Versioning > Manage Branch Lines | Manages branch lines on the version control server that can be used to develop functionality separately from the main line. |   |
 | More Versioning > Merge Changes Here | Merges changes that were committed in another development line to the development line that is currently opened in the Modeler. |   |
 | More Versioning > Reverse Merge Changes | Allows locally rolling back changes that were committed to the version control repository. These local changes can then be committed as a new revision. |   |
-| More Versioning > Sync with Web Modeler | Syncs your app project with the Web Modeler. For more information, see [How to Sync the Web Modeler with the Desktop Modeler](/howto/web-modeler/syncing-webmodeler-desktop). |   |
+| More Versioning > Sync with Web Modeler | Syncs your app project with the Web Modeler. For more information, see [How to Sync the Web Modeler & Desktop Modeler](/howto/web-modeler/syncing-webmodeler-desktop). |   |
 | More Versioning > Finish Sync with Web Modeler | Finishes the sync with the Web Modeler. |   |
 | More Versioning > Cancel Sync with Web Modeler | Cancels the sync with the Web Modeler. |   |
 | More Versioning > Add Snapshot of Data | Creates a snapshot of the built-in database and adds that to the version control repository. This is especially useful for adding test data to your app or for demo purposes. |   |

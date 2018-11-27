@@ -18,7 +18,7 @@ With scheduled events you can let the runtime execute a microflow at a specific 
 | Property | Description |
 | --- | --- |
 | Microflow | The microflow that is executed when the scheduled event is executed. It should have no parameters and run with all rights (see [Microflow](microflow)). |
-| Enabled | The microflow is only executed if the scheduled event is enabled. This setting only applies when running from the Modeler or from Eclipse. On production environments, scheduled events are enabled/disabled via the appropriate tools (Cloud Portal, Windows Service Console, etc.). |
+| Enabled | The microflow is only executed if the scheduled event is enabled. This setting only applies when running from the Modeler or from Eclipse. On production environments, scheduled events are enabled/disabled via the appropriate tools (Developer Portal, Windows Service Console, etc.). |
 
 ## Timing Properties
 

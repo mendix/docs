@@ -1,7 +1,8 @@
 ---
 title: "Extend Your Application with Custom Java"
 category: "Logic & Business Rules"
-tags: []
+menu_order: 12
+tags: ["microflow", "logic", "java"]
 ---
 
 ## 1 Introduction
@@ -177,4 +178,4 @@ To edit the Java action in Eclipse, follow these steps:
 * [How to Optimize Retrieve Activities](optimizing-retrieve-activities)
 * [How to Set Up Error Handling](set-up-error-handling)
 * [How to Optimize Microflow Aggregates](optimizing-microflow-aggregates)
-* [How to Extract and Use Sub Microflows](extract-and-use-sub-microflows)
+* [How to Extract & Use Sub-Microflows](extract-and-use-sub-microflows)

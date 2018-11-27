@@ -25,7 +25,7 @@ To see the results of this how-to, it is necessary that you set up a test projec
 Before you continue, make sure that you know how to create the following:
 
 * Domain models (for more information, see [How to Create a Basic Data Layer](../data-models/create-a-basic-data-layer))
-* Overview and detail pages (for more information, see [How to Create Your First Two Overview and Detail Pages](create-your-first-two-overview-and-detail-pages))
+* Overview and detail pages (for more information, see [How to Create Your First Two Overview & Detail Pages](create-your-first-two-overview-and-detail-pages))
 * Menu items (for more information, see [How to Set Up the Navigation Structure](setting-up-the-navigation-structure))
 
 1.  Create the following domain model:
@@ -146,6 +146,6 @@ In the previous section you have constrained the data grid on attributes of the 
 *   [How to Perform the Scout and Windows 10 Workaround](perform-scout-and-windows-10-workaround)
 *   [How to Use Layouts and Snippets](layouts-and-snippets)
 *   [How to Set Up the Navigation Structure](setting-up-the-navigation-structure)
-*   [How to Create Your First Two Overview and Detail Pages](create-your-first-two-overview-and-detail-pages)
+*   [How to Create Your First Two Overview & Detail Pages](create-your-first-two-overview-and-detail-pages)
 *   [How to Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
 *   [XPath Constraints](/refguide/xpath-constraints)

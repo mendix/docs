@@ -51,7 +51,7 @@ Examples are the `ws-doc` or `rest-doc` endpoints that enumerate all the publish
 
 As a Mendix developer, you can take the following preventative measures:
 
-* Disable unused endpoints within the Mendix Cloud Portal completely by applying a "deny all access" preset on them
+* Disable unused endpoints within the Mendix Developer Portal completely by applying a "deny all access" preset on them
 * Apply IP filtering or client certificate authentication to restrict access
 
 Keep the following in mind:
@@ -132,7 +132,7 @@ You can add individual certificates in your project’s settings in the Mendix M
 
 Applications that can be embedded within an Iframe can be misused by attackers. By using an overlay, it could trick users into clicking on buttons and make them perform actions within the application on their behalf without knowing it. This approach is called [clickjacking](https://www.owasp.org/index.php/Clickjacking).
 
-By sending a header to the user’s browser, it can block the use of the Mendix application within an Iframe, and avoid this type of attack. This header can easily be configured (and is enabled by default) within the Mendix Cloud Portal at your node’s environment details at *Prevent embedding your app in an Iframe*.
+By sending a header to the user’s browser, it can block the use of the Mendix application within an Iframe, and avoid this type of attack. This header can easily be configured (and is enabled by default) within the Mendix Developer Portal at your node’s environment details at *Prevent embedding your app in an Iframe*.
 
 ## 12 Maintain a High Level of Project Hygiene
 

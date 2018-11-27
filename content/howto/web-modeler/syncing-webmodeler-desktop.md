@@ -1,5 +1,5 @@
 ---
-title: "Sync the Web Modeler with the Desktop Modeler"
+title: "Sync the Web Modeler & Desktop Modeler"
 category: "Web Modeler"
 menu_order: 10 
 tags: ["web modeler", "desktop modeler"]

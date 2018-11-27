@@ -19,10 +19,11 @@ This document was written to address the missing information required by SIG to 
 The Mendix Platform consists of the following components:
 
 *   Mendix Platform – completely integrated application platform-as-a-service (aPaaS) for designing, building, deploying, and managing apps
-*   Developer Portal – web-based collaborative environment for design, development, and deployment of apps
-*   Cloud Portal – for managing users and environments, deploying apps to the cloud with a single click, and managing and monitoring their performance
+
+*   Developer Portal – web-based collaborative environment for design, development, and deployment of apps, managing users and environments, deploying apps to the cloud with a single click, and managing and monitoring their performance
 
 *   App Store – a portal with hundreds of publicly available building blocks to speed up app development
+
 *   Mendix Modeler – multi-user modeling studio of the Mendix Platform
 *   Team Server – a central repository for managing application model versions
 *   Runtime environment – runs applications using a server part (Mendix Runtime) and a client part (Mendix Client)
@@ -299,7 +300,7 @@ DELETE FROM "myfirstmodule$employee"
 WHERE "id" = ?
 ```
 
-Refesh the data grid:
+Refresh the data grid:
 
 ```java
 {"action":"retrieve_by_xpath","params":{"xpath":"//MyFirstModule.Employee","schema":{"id":"a2916c7c-af2f-4267-a8e9-99604f045861","offset":0,"sort":[["Firstname","asc"]],"amount":20},"count":true,"aggregates":false},"context":[],"releaseids":["281474976710757"],"profiledata":{"204eeb2972550c0":28&#125;&#125;

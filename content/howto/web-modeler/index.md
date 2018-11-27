@@ -2,11 +2,14 @@
 title: "Web Modeler"
 ---
 
-## Documents in This Category
+## 1 Introduction 
 
-* [How to Sync the Web Modeler with the Desktop Modeler](syncing-webmodeler-desktop)
-* [How to Configure an Exclusive Split Step 1: Build the Domain Model and Configure a Microflow](webmodeler-how-to-microflows-exclsplit)
-* [How to Configure an Exclusive Split Step 2: Embed the Microflow to Your App](webmodeler-how-to-microflows-exclsplit-p2)
-* [How to Configure a Merge and a Change Object Activity](webmodeler-how-to-merge-and-change-object)
+These Web Modeler how-to's will teach you how to sync the Web Modeler with the Desktop Modeler for version-control and collaboration purposes as well as how to perform certain actions when building an app in the Web Modeler.
+
+## 2 Main Documents in This Category
+
+* [How to Sync the Web Modeler & Desktop Modeler](syncing-webmodeler-desktop)
+* [How to Configure an Exclusive Split in the Web Modeler](webmodeler-how-to-microflows-exclsplit)
+* [How to Configure Merge & Change Object Activities in the Web Modeler](webmodeler-how-to-merge-and-change-object)
 * [How to Configure a Delete Object Action in the Web Modeler](webmodeler-how-to-configure-delete-object)
 

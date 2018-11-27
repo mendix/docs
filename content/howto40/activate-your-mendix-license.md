@@ -12,7 +12,7 @@ When you've purchased a Mendix 3.0 license, the technical contact of your licens
 
 ### Mendix Cloud License
 
-If you bought a Mendix Cloud license, activation will be handled by Mendix. By default, you can login with your MxID at the [Cloud Portal](https://cloud.mendix.com/) and manage your application here. If specific requirements of your application prevent you from using the Cloud Portal for now, a custom cloud slot will be created for you.
+If you bought a Mendix Cloud license, activation will be handled by Mendix. By default, you can login with your MxID at the [Developer Portal](https://home.mendix.com) and manage your application here. If specific requirements of your application prevent you from using the Developer Portal for now, a custom cloud slot will be created for you.
 
 ### On-Premises License
 

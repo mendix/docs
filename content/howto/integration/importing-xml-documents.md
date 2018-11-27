@@ -2,7 +2,7 @@
 title: "Import XML Documents"
 category: "Integration"
 menu_order: 3
-tags: ["import", "xml", "integration"
+tags: ["import", "xml", "integration"]
 ---
 
 ## 1 Introduction

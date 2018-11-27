@@ -6,7 +6,7 @@ title: "Security"
 
 This category of how-to's presents details on how to secure your data and make sure that the right user is seeing the data that they are allowed to see.
 
-## 2 Documents in This Category
+## 2 Main Documents in This Category
 
 * [Create a Secure App](create-a-secure-app)
 * [Set Up Anonymous User Security](set-up-anonymous-user-security)

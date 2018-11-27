@@ -8,7 +8,7 @@ Do you want to connect your app to the internet? Learn how to do this by followi
 
 We want to create a large network of Mendix apps, so let's start integrating!
 
-## 2 Documents in This Category
+## 2 Main Documents in This Category
 
 * [Integrate a Legacy System into a Mendix App](integrating-a-legacy-system-into-a-mendix-app)
 * [Import & Export Objects](importing-and-exporting-objects)

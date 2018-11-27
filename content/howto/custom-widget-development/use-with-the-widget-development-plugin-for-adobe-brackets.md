@@ -1,7 +1,7 @@
 ---
-title: "Get Started with the Widget Development Plugin for Adobe Brackets"
+title: "Use the Widget Development Plugin for Adobe Brackets"
 category: "Custom Widget Development"
-tags: []
+tags: ["widget", "develop widget", "plugin", "adobe", "brackets"]
 ---
 
 ## 1 Introduction

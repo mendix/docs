@@ -6,7 +6,7 @@ title: "SAP"
 
 The how-to's in this category will teach you to perform certain actions to integrate Mendix with SAP services like SAP Business Suite (SAP ERP 6.0), SAP S/4HANA, SAP S/4HANA Cloud, and SAP SuccessFactors, among others.
 
-## 2 Documents in This Category
+## 2 Main Documents in This Category
 
 * [Use the SAP OData Connector](use-sap-odata-connector)
 * [Use the SAP OData Model Creator](use-sap-odata-model-creator)

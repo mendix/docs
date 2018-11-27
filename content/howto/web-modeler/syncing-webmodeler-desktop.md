@@ -59,11 +59,5 @@ A **Commit** dialog box will appear for you to commit the changes you have made.
 ![](attachments/syncing-webmodeler-desktop/dm-commit-dialog.png)
 
 {{% alert type="info" %}}
-
 If you do not have anything to commit, you can also click **Cancel sync/Unlock Web Modeler** instead of **Finish sync with Web Modeler**. The Web Modeler will be unlocked.
-
 {{% /alert %}}
-
-## 4 Related Content
-
-* [How to Start with a Blank App](/howto/tutorials/start-with-a-blank-app)

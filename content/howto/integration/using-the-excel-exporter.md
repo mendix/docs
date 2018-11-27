@@ -1,7 +1,8 @@
 ---
 title: "Use the Excel Exporter"
 category: "Integration"
-tags: []
+menu_order: 6
+tags: ["excel", "excel export", "excel exporter", "integration"]
 ---
 ## 1 Introduction
 

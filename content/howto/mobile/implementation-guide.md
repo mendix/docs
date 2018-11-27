@@ -1,7 +1,8 @@
 ---
 title: "Implement Push Notifications"
 parent: "push-notifications"
-tags: []
+menu_order: 10
+tags: ["mobile", "push notification"]
 ---
 
 ## 1 Introduction

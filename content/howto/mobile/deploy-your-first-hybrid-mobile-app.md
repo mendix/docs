@@ -1,7 +1,8 @@
 ---
 title: "Deploy Your First Hybrid Mobile App"
 category: "Mobile"
-tags: []
+menu_order: 50
+tags: ["mobile", "deploy"]
 ---
 
 ## 1 Introduction
@@ -59,9 +60,8 @@ To open a hybrid example app, follow these steps:
 
 ## 4 Installing the App on Your Device
 
-If you want to install this application as a native app on your device, you can install it via iTunes or publish it to one of the mobile app stores. For details on how to achieve this, see [How to Publish a Mendix Hybrid Mobile App in Mobile App Stores](publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores).
+If you want to install this application as a native app on your device, you can install it via iTunes or publish it to one of the mobile app stores. For details on how to achieve this, see [How to Publish a Mendix Hybrid Mobile App in App Stores](publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores).
 
 ## 5 Related Content
 
-* [How to Build a Simple HRM App](../tutorials/build-a-simple-hrm-app)
 * [How to Debug a Hybrid Mobile Application](../monitoring-troubleshooting/debug-a-hybrid-mobile-application)

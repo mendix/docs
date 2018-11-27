@@ -1,8 +1,9 @@
 ---
 title: "Import Excel Documents"
 category: "Integration"
+menu_order: 5
 description: "Describes how to set up import templates and import data into your app using the Excel Importer module."
-tags: []
+tags: ["import", "excel", "integration"]
 ---
 
 ## 1 Introduction
@@ -27,7 +28,7 @@ Before you can start importing data into your application, you first need to set
 Follow these steps:
 
 1.  Create the following domain model.
-    
+  
     ![](attachments/18448735/18581969.png)
 
     The 'XLSFile' object inherits from the 'Filedocument' object. If you don't know how to achieve this, please take a look at [How to Work with Images & Files](../data-models/working-with-images-and-files).
@@ -42,7 +43,7 @@ Follow these steps:
 As an enumeration is used for the **OrderStatus** attribute, a microflow needs to be created to determine the enumeration value of the attribute based on the input from the Excel file.
 
 1.  Create the following microflow and name it **IVK_ParseStatus**.
-    
+  
     ![](attachments/18448735/18581968.png)
 
 2.  Set the **Return value** as follows:
@@ -72,7 +73,7 @@ In order to set up import templates for importing data, your application model m
 4.  Click on the menu item for the **MxObjects_Overview** in your navigation.
 5.  Select the module that contains the objects you want to use in your client, by clicking on the box to the left of it. In this case  **MyFirstModule** .
 6.  Click on the arrows next to **Synchronize all entities and microflows of checked modules on the left.**
-    
+  
     ![](attachments/18448735/18581937.png)
 
 7.  Now the two objects and the parse microflow from the module **MyFirstModule** can be seen and used in the client.
@@ -92,7 +93,7 @@ Based on the structure of the file you want to import, you will setup your templ
 3.  Determine the name of the template.
 4.  Click on the arrow next to the **Mendix object** box.
 5.  Select the **Customer** object.
-    
+  
     ![](attachments/18448735/18581966.png)
 
 6.  Click on the arrow next to **Reference to import objects** box.
@@ -104,7 +105,7 @@ Based on the structure of the file you want to import, you will setup your templ
 
     {{% /alert %}}
 8.  Set **Import Action** to **Synchronize objects**.
-    
+  
     ![](attachments/18448735/18581965.png)
 
     {{% alert type="warning" %}}
@@ -113,7 +114,7 @@ Based on the structure of the file you want to import, you will setup your templ
 
     {{% /alert %}}
 9.  Under the **Connect columns to attributes** section, click on **New** to create a mapping from the Excel sheet column to the proper Mendix attribute.
-    
+  
     ![](attachments/18448735/18581964.png)
 
 10. Add the column number, this should correspond with the column number from the value on the Excel file you want to map
@@ -126,11 +127,11 @@ Based on the structure of the file you want to import, you will setup your templ
 11. Define the Excel column header as the **Caption** value.
 12. Choose **Attribute** as a **type**.
 13. Click on the arrow next to the **Attribute** box.
-    
+  
     ![](attachments/18448735/18581963.png)
 
 14. Select the **attribute** you want to map the Excel value to.
-    
+  
     ![](attachments/18448735/18581962.png)
 
 15. Repeat steps 9 to 14 for each attribute of the **Customer** object.
@@ -142,39 +143,39 @@ Based on the structure of the file you want to import, you will setup your templ
     {{% /alert %}}
 
 16. For the mapping of attribute **Name** set the key value to **Yes**, to prevent a customer from being duplicated.
-    
+  
     ![](attachments/18448735/18581961.png)
 
 17. After creating all the mappings for the **Customer** object attributes, also create mappings for the **Order** object attributes by repeating steps 9 to 11. Because the **Order** object is associated to the **Customer** object, the mapping setup will be slightly different. The additional steps are discribed below.
 18. Choose **Reference** instead of **Attribute** as a type.
 19. Click on the arrow next to the **Reference** box, here you will select over which association the Order is linked to the Customer.
-    
+  
     ![](attachments/18448735/18581959.png)
 
 20. Select the **Customer_Order** association.
-    
+  
     ![](attachments/18448735/18581960.png)
 
 21. Click on the arrow next to the **Attribute** box.
-    
+  
     ![](attachments/18448735/18581958.png)
 
 22. Select the **Number** attribute form the **Order** object.
-    
+  
     ![](attachments/18448735/18581957.png)
 
 23. Click **Save**.
 24. Repeat steps 17 to 23 for each attribute of the **Order** object.
 25. For the mapping of attribute **Number** set the key value to**'Yes, only for the associated object**, to prevent orders being duplicated.
-    
+  
     ![](attachments/18448735/18581956.png)
 
 26. For the mapping of attribute **OrderStatus** the Excel file value needs to be parsed to an enumeration value. To achieve this we can use the **IVK_ParseStatus** microflow, created under 2.0, by clicking on the arrow next to the **Parse with** box.
-    
+  
     ![](attachments/18448735/18581955.png)
 
 27. Select the **IVK_ParseStatus** microflow.
-    
+  
     ![](attachments/18448735/18581953.png)
 
 28. Click **Save**.
@@ -187,7 +188,7 @@ Now the template is setup you can start importing data from an Excel file into y
 1.  Click on the menu item for the **ExcelImportOverview** in your navigation.
 2.  Go to the **Import Files** tab.
 3.  Click **New**.
-    
+  
     ![](attachments/18448735/18581952.png)
 
 4.  Select the template you just created.

@@ -71,9 +71,7 @@ To embed the microflow with an exclusive split (the attribute of the enumeration
 
 Congratulations! Now when the user clicks **Details**, the form for the corresponding customer grade will be opened. 
 
-You can now publish and view your app. For more information, see [How to Publish and View Your App](../tutorials/start-with-a-blank-app-3-publish-and-view-your-app).
-
-
+You can now publish and view your app.
 
 ### 3.2 Embedding the Microflow Having an Exclusive Split with the Attribute of the Boolean Type 
 
@@ -115,17 +113,4 @@ To embed the microflow with an exclusive split (the attribute of the Boolean typ
 
 Congratulations! Now when the user clicks **Place order**, only the customers who are not blocked will be able to proceed. If the user is blocked, he will get an error message. 
 
-You can publish and view your app. For more information, see [How to Publish and View Your App](../tutorials/start-with-a-blank-app-3-publish-and-view-your-app).
-
-
-
-
-
- 
-
-
-
-
-
-
-
+You can publish and view your app. 

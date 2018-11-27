@@ -94,4 +94,3 @@ The information displayed in the table of the **Checks** panel is represented be
 
 * [Consistency Errors in the Web Modeler](consistency-errors-wm)
 * [The Web Modeler Overview](overview-wm)
-* [How to Publish and View Your App](../../howto/tutorials/start-with-a-blank-app-3-publish-and-view-your-app)

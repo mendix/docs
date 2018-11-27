@@ -1,7 +1,8 @@
 ---
 title: "Export XML Documents"
 category: "Integration"
-tags: []
+menu_order: 4
+tags: ["export", "xml", "integration"]
 ---
 
 ## 1 Introduction

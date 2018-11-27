@@ -86,7 +86,6 @@ howto:
   priority: 6
   mendix_version: 7
   menu_categories:
-    - "Tutorials"
     - "Modeling Basics"
     - "Web Modeler"
     - "Atlas UI"

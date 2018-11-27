@@ -1,8 +1,9 @@
 ---
-title: "Implement SSO on a Hybrid App with Mendix and SAML"
+title: "Implement SSO on a Hybrid App with Mendix & SAML"
 category: "Mobile"
+menu_order: 30
 description: "Describes how to address the challenges of implementing SSO in hybrid mobile apps."
-tags: ["SAML", "SSO", "Mobile", "HybridApp", "PhoneGap", "Authentication"]
+tags: ["SAML", "SSO", "mobile", "hybrid app", "phonegap", "authentication"]
 ---
 
 ## 1 Introduction
@@ -15,7 +16,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Have a [PhoneGap Build account](https://build.phonegap.com/)
 * Be familiar with how the [SAML](https://appstore.home.mendix.com/link/app/1174/) module works
-* Read [How to Publish a Mendix Hybrid Mobile App in Mobile App Stores](publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)
+* Read [How to Publish a Mendix Hybrid Mobile App in App Stores](publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)
 * Read [Building a Mobile App with Mendix](https://www.mendix.com/blog/building-mobile-app-mendix/)
 
 ## 3 Context
@@ -153,7 +154,7 @@ The last thing to do is to check the **Enable mobile authentication token** box 
 ## 6 Related Content
 
 * [How to Deploy Your First Hybrid Mobile App](deploy-your-first-hybrid-mobile-app)
-* [How to Publish a Mendix Hybrid Mobile App in Mobile App Stores](publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)
+* [How to Publish a Mendix Hybrid Mobile App in App Stores](publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)
 * [How to Debug a Mobile App with Mendix](debug-a-mobile-app)
 * [How to Debug a Hybrid Mobile Application](../monitoring-troubleshooting/debug-a-hybrid-mobile-application)
 * [Building a Mobile App with Mendix](https://www.mendix.com/blog/building-mobile-app-mendix/)

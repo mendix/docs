@@ -31,7 +31,7 @@ To configure **Content** without adding attributes, you can do one of the follow
 
 To configure **Content** and add attributes to it, do the following:
 
-1. Place **Text** inside a data container (a list view or a data view) and set an entity for the list view/data view. For more information, see [Data View and List View Properties in the Web Modeler](page-editor-data-view-list-view-wm). This is necessary to allow attributes of the selected entity to be inserted into the text. 
+1. Place **Text** inside a data container (a list view or a data view) and set an entity for the list view/data view. For more information, see [Data View & List View Properties in the Web Modeler](page-editor-data-view-list-view-wm). This is necessary to allow attributes of the selected entity to be inserted into the text. 
 
 2.  Open **Properties** of the **Text**, delete the default *Text* in the **General** section > **Content** and start typing the message you want to show to the end-user.  
 

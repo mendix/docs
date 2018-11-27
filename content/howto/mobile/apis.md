@@ -1,7 +1,10 @@
 ---
-title: "APIs"
+title: "Microflow Actions"
 parent: "push-notifications"
+menu_order: 20
+tags: ["mobile", "push notification", "microflow"]
 ---
+
 This is a list of microflow actions that can be called by your application to send push notifications. They are located in the **Toolbox** under the **Push notifications** category.
 
 | Action Name | Description |

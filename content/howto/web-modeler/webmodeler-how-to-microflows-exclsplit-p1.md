@@ -26,20 +26,13 @@ You will also create a page with the list of customers. Upon clicking a specific
 
 Customers can make an order from this page. However, if the blocked user tries to make the order, the app will show them an error message and close the current page.  
 
-## 2 Prerequisites 
-
-To start this tutorial, make sure you have completed the following prerequisites:
-
-* Create a [Mendix account](https://signup.mendix.com/link/signup/?source=direct)
-* [Create an app](../tutorials/start-with-a-blank-app-1-create-the-app)
-
-## 3 Configuring the Exclusive Split with the Attribute of the Enumeration Type  
+## 2 Configuring the Exclusive Split with the Attribute of the Enumeration Type  
 
 In this example we will create a microflow and configure the exclusive split when you want to open different order forms depending on the customer grade. 
 
 This use case will require an exclusive split with attribute of the enumeration type (list of predefined values). For more information on types of attributes, see [Attribute Types in the Web Modeler](../../refguide/web-modeler/domain-models-attributes-wm). 
 
-### 3.1 Adding an Entity and an Attribute to the Domain Model 
+### 2.1 Adding an Entity and an Attribute to the Domain Model 
 
 The app will open the corresponding page depending on the grade of a customer, for this we need to create a new entity and a new attribute first. To create the new entity and attribute, do the following:
 
@@ -66,7 +59,7 @@ The new attribute is created.
 
 ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-grade-attribute.png)
 
-### 3.2 Configuring a Microflow 
+### 2.2 Configuring a Microflow 
 
 To configure the exclusive split with the attribute or parameter of the enumeration type, follow these steps:
 
@@ -127,13 +120,13 @@ Congratulations! We have now created the microflow that will open different orde
 
 If you want to test your microflow by adding it to the pages, see [Configure an Exclusive Split Step 2: Embed the Microflow in Your App](webmodeler-how-to-microflows-exclsplit-p2).
 
-## 4 Configuring the Exclusive Split with Attribute of the Boolean Type  
+## 3 Configuring the Exclusive Split with Attribute of the Boolean Type  
 
 In this example we will create a microflow and configure the exclusive split when you want to prevent a blocked customer from making an order. The reasons for blocking the customer can be that customer's credit score is too low, or password has expired. 
 
 This use case will require an exclusive split with an attribute of the boolean type (true or false). For more information on the types of attributes, see [Attribute Types](../../refguide/web-modeler/domain-models-attributes-wm).
 
-### 4.1 Adding an Entity and an Attribute to the Domain Model 
+### 3.1 Adding an Entity and an Attribute to the Domain Model 
 
 As we will verify customers by their statuses, we need to create a corresponding attribute for the entity first. For this, do the following:
 
@@ -149,7 +142,7 @@ The new attribute for the **Customer** entity is created.
 
 ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-blocked-attribute.png)
 
-### 4.2 Configuring a Microflow
+### 3.2 Configuring a Microflow
 
 To configure the exclusive split with the attribute of the boolean type, follow these steps:
 
@@ -190,14 +183,3 @@ To configure the exclusive split with the attribute of the boolean type, follow 
 Congratulations! We have now created a microflow that will show an error message and close the current page if the customer is blocked.
 
 If you want to embed your microflow to the pages, see [Step 2: Embed the Microflow in Your App](webmodeler-how-to-microflows-exclsplit-p2).
-
-
-
- 
-
-
-
-
-
-
-

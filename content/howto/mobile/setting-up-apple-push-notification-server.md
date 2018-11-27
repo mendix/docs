@@ -1,6 +1,8 @@
 ---
 title: "Set Up the Apple Push Notification Server"
 parent: "push-notifications"
+menu_order: 30
+tags: ["mobile", "push notification", "apple", "server"]
 ---
 In order to proceed you need an Apple developer license and a device running Mac OS X.
 

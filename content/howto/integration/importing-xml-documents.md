@@ -1,7 +1,8 @@
 ---
-title: "Import XML documents"
+title: "Import XML Documents"
 category: "Integration"
-tags: []
+menu_order: 3
+tags: ["import", "xml", "integration"]
 ---
 
 ## 1 Introduction

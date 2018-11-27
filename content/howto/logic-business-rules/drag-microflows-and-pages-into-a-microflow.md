@@ -1,7 +1,8 @@
 ---
-title: "Drag Microflows and Pages into a Microflow"
+title: "Drag Microflows & Pages into a Microflow"
 category: "Logic & Business Rules"
-tags: []
+menu_order: 4
+tags: ["microflow", "logic", "page"]
 ---
 
 ## 1 Introduction

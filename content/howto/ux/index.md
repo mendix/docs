@@ -8,10 +8,10 @@ Looking to create great user experiences and a user-friendly graphical user inte
 
 ## 2 Main Documents in This Category
 
-* [How to Create Your First Two Overview & Detail Pages](create-your-first-two-overview-and-detail-pages)
-* [How to Filter Data on an Overview Page](filtering-data-on-an-overview-page)
-* [How to Set Up the Navigation Structure](setting-up-the-navigation-structure)
-* [How to Set Up Layouts & Snippets](layouts-and-snippets)
-* [How to Set Up the Mendix UI Framework](setup-mendix-ui-framework)
-* [How to Create a Custom Theme with the Mendix UI Framework](create-a-custom-theme-with-the-mendix-ui-framework)
-* [How to Style Google Maps](style-google-maps)
+* [Create Your First Two Overview & Detail Pages](create-your-first-two-overview-and-detail-pages)
+* [Filter Data on an Overview Page](filtering-data-on-an-overview-page)
+* [Set Up the Navigation Structure](setting-up-the-navigation-structure)
+* [Set Up Layouts & Snippets](layouts-and-snippets)
+* [Set Up the Mendix UI Framework](setup-mendix-ui-framework)
+* [Create a Custom Theme with the Mendix UI Framework](create-a-custom-theme-with-the-mendix-ui-framework)
+* [Style Google Maps](style-google-maps)

@@ -89,4 +89,4 @@ Cross module associations have the following properties:
 
 ## 6 Related Content
 
-* [Domain Models in the Web Modeler](domain-models-wm)
+* [Domain Model in the Web Modeler](domain-models-wm)

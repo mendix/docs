@@ -74,5 +74,5 @@ For details on properties of attributes of the enumeration type, see section [3 
 
 ## 5 Related Content
 
-* [Domain Models in the Web Modeler](domain-models-wm)
+* [Domain Model in the Web Modeler](domain-models-wm)
 * [Attribute Types in the Web Modeler](domain-models-attributes-wm) 

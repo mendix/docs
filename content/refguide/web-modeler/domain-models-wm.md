@@ -1,5 +1,5 @@
 ---
-title: "Domain Models in the Web Modeler"
+title: "Domain Model in the Web Modeler"
 category: "Web Modeler"
 description: "Describes the domain models in the Mendix Web Modeler."
 menu_order: 20

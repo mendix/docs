@@ -54,6 +54,6 @@ You can find the description of specific properties that differ per attribute ty
 
 ## 4 Related Content
 
-* [Domain Models in the Web Modeler](domain-models-wm)
+* [Domain Model in the Web Modeler](domain-models-wm)
 * [Attributes](../attributes) 
 * [Enumeration in the Web Modeler](domain-models-enumeration-wm)

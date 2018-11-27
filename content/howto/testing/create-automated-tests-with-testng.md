@@ -1,7 +1,8 @@
 ---
 title: "Create Automated Tests with TestNG"
 category: "Testing"
-tags: []
+menu_order: 50
+tags: ["test", "testing", "testng"]
 ---
 
 ## 1 Introduction

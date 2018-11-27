@@ -1,7 +1,8 @@
 ---
 title: "Get Started with the TimeSeries Connector"
 category: "Extensibility"
-tags: ["IoT", "Connector", "TimeSeries", "Big Data", "Analytics"]
+menu_order: 2
+tags: ["iot", "connector", "timeseries", "big data", "analytics", "extensibility"]
 ---
 
 ## 1 Introduction
@@ -116,6 +117,7 @@ The next step is creating a *Channel*. This *Channel* should belong to an *Asset
   
   {{% /alert %}}
   
+
 In our example implementation we have created a page with a *Channel* object, on which the attributes and the association with an asset can be set.
 
 ![](attachments/how-to-get-started-with-the-timeseries-connector/CreateChannel.png)

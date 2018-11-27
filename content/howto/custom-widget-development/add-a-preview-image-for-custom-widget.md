@@ -1,7 +1,7 @@
 ---
 title: "Add a Preview Image for a Custom Widget"
 category: "Custom Widget Development"
-tags: ["image", "preview", "widget"]
+tags: ["image", "preview", "widget", "custom"]
 ---
 
 ## 1 Introduction
@@ -17,7 +17,7 @@ This how-to will show you how to specify a preview image that will be rendered i
 Before starting with this how-to, make sure you have completed the following prerequisites:
 
 * Download and install the [Mendix Modeler](https://appstore.home.mendix.com/link/modelers/)
-* Read [How to Get Start with the Widget Development Plugin for Adobe Brackets](getting-started-with-the-widget-development-plugin-for-adobe-brackets)
+* Read [How to Get Start with the Widget Development Plugin for Adobe Brackets](use-the-widget-development-plugin-for-adobe-brackets)
 
 ## 3 Adding a Preview Image to Your Custom Widget Package
 
@@ -33,4 +33,4 @@ Please note that older versions of the Modeler ignore this image and render a gr
 
 ## 4 Related Content
 
-* [How to Get Started with the Widget Development Plugin for Adobe Brackets](getting-started-with-the-widget-development-plugin-for-adobe-brackets)
+* [How to Use the Widget Development Plugin for Adobe Brackets](use-the-widget-development-plugin-for-adobe-brackets)

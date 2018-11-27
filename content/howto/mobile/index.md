@@ -8,7 +8,7 @@ The Mendix vision for mobile app development is that enterprises can greatly ben
 
 The rapid evolution of standards like HTML and the wide adoption of frameworks to bridge native device functions provide an ever-richer user experience for cross-platform apps. From a logic perspective, JavaScript is powerful as a platform-independent, back-end technology even in native clients. There is a shift occurring from native languages towards JavaScript, where JavaScript is being embedded more and more in native programming languages to raise the level of code reusability across platforms.
 
-## 2 Documents in This Category
+## 2 Main Documents in This Category
 
 * [Include Push Notifications](push-notifications)
 * [Configure the Mendix Feedback Widget for iOS](feedback-widget-ios)

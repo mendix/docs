@@ -46,7 +46,7 @@ In this chapter you will create a new SOAP project.
 2.  Press **CTRL+N** to create a new SOAP project.
     ![](attachments/14090991/14385251.png)
 3.  Run the project locally in the **Mendix Modeler**.
-4.  Go to _http://localhost:8080/ws-doc/_.
+4.  Go to`http://localhost:8080/ws-doc/`.
     ![](attachments/14090991/14385285.png)
 5.  Enter the URL of the WSDL schema in the **Initial WSDL** field in SoapUI.
     The Project Name field will automatically be filled with the name of the webservice following by _?wsdl_.

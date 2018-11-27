@@ -1,7 +1,8 @@
 ---
 title: "Debug Microflows"
 category: "Monitoring & Troubleshooting"
-tags: []
+menu_order: 2
+tags: ["monitoring", "troubleshooting", "debug", "microflow"]
 ---
 
 ## 1 Introduction

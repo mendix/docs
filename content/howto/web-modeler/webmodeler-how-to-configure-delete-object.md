@@ -15,24 +15,15 @@ This how-to explains how you can configure a delete object action in the Mendix 
 * configure the **Delete Object** action in a [list view](../../refguide/web-modeler/page-editor-data-view-list-view-wm#list-view-properties)
 * configure the **Delete Object** action in a [data view](../../refguide/web-modeler/page-editor-data-view-list-view-wm#data-view-properties)
 
-This how-to describes the following use case: 
-
-You want to be able to delete the customer's name from the list of customers. 
+This how-to describes the following use case:  you want to be able to delete the customer's name from the list of customers. 
 
 {{% alert type="info" %}}
 
-You can configure the **Delete Object** on click action for such widgets as buttons or a static image. In this how-to we use a **Delete** button as an example of widget with **Delete Object** on click action. For more information, see section [2.3 Delete Object Action](../../refguide/web-modeler/page-editor-widgets-events-section-wm#delete-object-action) in *Events Section in Widgets of the Web Modeler* in the *Web Modeler* category.
+You can configure the **Delete Object** on click action for such widgets as buttons or a static image. In this how-to we use a **Delete** button as an example of widget with **Delete Object** on click action. For more information, see the [Delete Object Action](../../refguide/web-modeler/page-editor-widgets-events-section-wm#delete-object-action) section in *Events Section in Widgets of the Web Modeler* in the *Web Modeler* category.
 
 {{% /alert %}}
 
-## 2 Prerequisites
-
-To start this tutorial, make sure you have completed the following prerequisites:
-
-* Create a [Mendix account](https://www.mendix.com/try-now/?utm_source=documentation&utm_medium=community&utm_campaign=signup)
-* [Create an app](../tutorials/start-with-a-blank-app-1-create-the-app)
-
-## 3 Configuring the Domain Model and Creating a Page
+## 2 Configuring the Domain Model and Creating a Page
 
 To list customers' names and to show a more detailed information under the list, we need to create an entity *Customer*, add attributes *Name* and *Address* to it, and then create a page where we will list names of customers. 
 
@@ -63,9 +54,7 @@ A new page is created.
 
 ![](attachments/webmodeler-how-to-configure-delete-object/wm-blank-page-created.png)
 
-
-
-## 4 Configuring a Delete Object Action in a List View
+## 3 Configuring a Delete Object Action in a List View
 
 Now we will configure a list view and will add a button with [**Delete Object** action](../../refguide/web-modeler/page-editor-widgets-events-section-wm#delete-object-action) that deletes the corresponding customer when a user clicks the button. Do the following:
 
@@ -107,7 +96,7 @@ Now we will configure a list view and will add a button with [**Delete Object** 
 
 We have created the page that lists the customers names. If a user clicks **Delete** in one of the lines, the customer who is indicated in this line will be deleted from the app along with the customer's details. For more information, see section [2.3 Delete Object Action](../../refguide/web-modeler/page-editor-widgets-events-section-wm#delete-object-action) in *Events Section in Widgets of the Web Modeler* in the *Web Modeler* category.
 
-## 5 Configuring a Delete Object Action in a Data View
+## 4 Configuring a Delete Object Action in a Data View
 
 We can also configure the [**Delete Object** action](../../refguide/web-modeler/page-editor-widgets-events-section-wm#delete-object-action) in a data view. In this case **Delete Object** will delete the connected object. To configure the data view and the **Delete** button on your page, do the following:
 

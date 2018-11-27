@@ -64,5 +64,4 @@ If you want to install this application as a native app on your device, you can 
 
 ## 5 Related Content
 
-* [How to Build a Simple HRM App](../tutorials/build-a-simple-hrm-app)
 * [How to Debug a Hybrid Mobile Application](../monitoring-troubleshooting/debug-a-hybrid-mobile-application)

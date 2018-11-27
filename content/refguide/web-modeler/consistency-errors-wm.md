@@ -29,4 +29,3 @@ Consistency errors can occur in the following editors of the modeler:
 * [Page Editor in the Web Modeler](page-editor-wm)
 * [Navigation Document in the Web Modeler](navigation-wm)
 * [Microflows in the Web Modeler](microflows-wm)
-* [How to Publish and View Your App](../../howto/tutorials/start-with-a-blank-app-3-publish-and-view-your-app)

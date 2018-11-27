@@ -1,6 +1,7 @@
 ---
 title: "Contribute to a GitHub Repository"
 category: "Collaboration & Requirements Management"
+menu_order: 20
 tags: ["github"]
 ---
 ## 1 Introduction

@@ -176,7 +176,7 @@ Falling back to the **Runtime** option will remove the unique constraints from t
 
 {{% alert type="info" %}}
 
-This setting was added in version 7.15 to introduce the new (optimized) implementation.
+This setting was added in version 7.15 to introduce an optimized implementation.
 
 {{% /alert %}}
 

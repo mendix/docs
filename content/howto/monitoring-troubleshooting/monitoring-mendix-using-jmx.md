@@ -1,7 +1,8 @@
 ---
 title: "Monitor Mendix Using JMX"
 category: "Monitoring & Troubleshooting"
-tags: []
+menu_order: 10
+tags: ["monitoring", "troubleshooting", "jmx"]
 ---
 
 ## 1 Introduction

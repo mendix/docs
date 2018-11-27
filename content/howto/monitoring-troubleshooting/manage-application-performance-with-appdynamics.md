@@ -1,7 +1,8 @@
 ---
 title: "Manage Application Performance with AppDynamics"
 category: "Monitoring & Troubleshooting"
-tags: []
+menu_order: 12
+tags: ["monitoring", "troubleshooting", "performance", "appdynamics"]
 ---
 
 ## 1 Introduction
@@ -172,5 +173,5 @@ For more information on AppDynamics, see the AppDynamics documentation here: [ht
 * [How to Debug Microflows](debug-microflows)
 * [How to Debug Java Actions](debug-java-actions)
 * [How to Handle Common Mendix SSO Errors](handle-common-mendix-sso-errors)
-* [How to Solve Load and Import Errors](solving-load-and-import-errors)
+* [How to Solve Load & Import Errors](solving-load-and-import-errors)
 * [How to Debug Microflows Remotely](debug-microflows-remotely)

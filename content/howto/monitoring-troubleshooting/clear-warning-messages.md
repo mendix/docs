@@ -1,7 +1,8 @@
 ---
 title: "Clear Warning Messages"
 category: "Monitoring & Troubleshooting"
-tags: ["monitoring", "troubleshooting", "warning", "error"]
+menu_order: 1
+tags: ["monitoring", "troubleshooting", "warning", "error", "warning message"]
 ---
 
 ## 1 Introduction

@@ -1,7 +1,8 @@
 ---
 title: "Set Log Levels"
 category: "Monitoring & Troubleshooting"
-tags: []
+menu_order: 9
+tags: ["monitoring", "troubleshooting", "log level", "logging", "log"]
 ---
 
 ## 1 Introduction

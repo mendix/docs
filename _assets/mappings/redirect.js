@@ -2053,7 +2053,7 @@ module.exports = {
     },
 	{
       from: "/bestpractices/How+to+execute+an+SQL+statement+on+an+external+database",
-      to: "/howto/integration/how-to-execute-an-sql-statement-on-an-external-database"
+      to: "/howto/integration/execute-an-sql-statement-on-an-external-database"
     },
 	{
       from: "/howto7/solving-load-and-import-errors",

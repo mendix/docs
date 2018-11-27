@@ -12,9 +12,9 @@ On the **Team Server** page of the Developer Portal, an overview is presented of
 
 ![](attachments/team-server.png)
 
-## 2 team Server URL
+## 2 Team Server URL
 
-The **Team Server URL** takes the following form: `https://teamserver.sprintr.com/<your AppID>/` and takes you to the team server for your app. Here you can see all the files and branches of your app.
+The **Team Server URL** has the following form: `https://teamserver.sprintr.com/<your AppID>/` and takes you to the team server for your app. Here you can see all the files and branches of your app.
 
 {{% alert type="info" %}}
 

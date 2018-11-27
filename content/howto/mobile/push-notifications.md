@@ -1,6 +1,8 @@
 ---
-title: "Configure Push Notifications"
+title: "Include Push Notifications"
 category: "Mobile"
+menu_order: 10
+tags: ["mobile", "push notification"]
 ---
 
 ## 1 Introduction to Push Notifications

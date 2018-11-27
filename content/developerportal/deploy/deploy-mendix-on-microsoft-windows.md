@@ -367,33 +367,37 @@ To make sure the correct application root URL is used within your web services, 
 
 When configuring IIS it can seem like you have done everything right but it just doesn't seem to work. This section describes a few common problems that people have run into when setting up IIS.
 
-1. When opening the website in the browser, an IIS error page shows regarding access permission.
+1. When opening the website in the browser, an IIS error page regarding access permission is displayed.
 
-	Validate your security settings. The user that runs the IIS service must be able to access the full directory path. (Most likely this is user: IIS_IUSRS, but confirm in your service list). If your Mendix application is installed on "E:\Mendix\projects\MyApp" the IIS user must be able to read all the folders in the hierarchy (Mendix, and projects, and MyApp, and the web folder inside MyApp).
+	Validate your security settings. The user that runs the IIS service must be able to access the full directory path. (This is probably user: IIS_IUSRS, but confirm this in your service list). If your Mendix application is installed on "E:\Mendix\projects\MyApp" the IIS user must be able to read **all** the folders in the hierarchy (Mendix, projects, MyApp, and the web folder inside MyApp).
 
-2. I can see the login page in the browser, but when triggering an aciton I'm getting a 404 or "server not found message"
+2. I can see the login page in the browser, but when triggering an action I get a 404 or "server not found message".
 
-	Did you have to enable or install additional plugins? 	>  If yes, then make sure to restart the entire IIS service. You can configure the newly installed settings, but they won't have any effect until you restart the full IIS service.
-	Did you add new configuration settings, like the rewrite rule?   Off course you have, but did you also restart the website? After adding new configuration options like the rewrite url you need to restart the website. You can do this by right clicking on your newly created site and you should see a restart option. 
+	* Did you have to enable or install additional plugins?
+	
+		If so, make sure to restart the entire IIS service. You can configure the newly installed settings, but they won't have any effect until you restart the full IIS service.
+		
+	* Did you add new configuration settings, like the rewrite rule?
+	
+		Of course you did, but did you also restart the website? After adding new configuration options like the rewrite URL you need to restart the website. You can do this by right clicking on your newly created site and you should see a restart option. 
 	
 3. I can sign in, but when entering an invalid password my login page shows 'server not found' instead of invalid login.
 
-	Some IIS installations hide the content of any response that isn't HTTP status code 200-OK. During a Mendix login, if you enter invalid credentials the Mendix returns a status code in the 400-range to indicate unauthorized access. This response also contains a JSON string with the response we want to show to the user. 
-	In some cases IIS obfuscates this response, Mendix cannot work with this setting enabled. You need to turn on 'Detailed Error Messages', the instruction on how to change this setting on your website can be found here: 	https://blogs.msdn.microsoft.com/rakkimk/2007/05/25/iis7-how-to-enable-the-detailed-error-messages-for-the-website-while-browsed-from-for-the-client-browsers/
+	Some IIS installations hide the content of any response that isn't HTTP status code 200-OK. If you enter invalid credentials during a Mendix login, Mendix returns a status code in the 400-range to indicate unauthorized access. This response also contains a JSON string with the response we want to show to the user.
+	
+	Mendix cannot work if IIS is hiding detailed error messages. You need to turn on 'Detailed Error Messages'. The instruction on how to change this setting on your website can be found on the Microsoft website here: [IIS7 : HOW TO enable the detailed error messages for the website while browsed from for the client browsers](https://blogs.msdn.microsoft.com/rakkimk/2007/05/25/iis7-how-to-enable-the-detailed-error-messages-for-the-website-while-browsed-from-for-the-client-browsers/)
 
-4. I'm still having issues finding the cuase of my problems what can I do?
+4. I'm still having issues finding the cause of my problems; what can I do?
 
-	First asses if you are hitting the Mendix application. If IIS forwards anything to the running Mendix app you can see that in the log. The log nodes 'Connector' and 'Jetty' can be most helpful. The Connector log node is able to print information about any incoming request. If you enable Trace logging you can see if the request comes in to the right request handler. 
-	If the 'Connector' doesn't print anything you can also enable trace logging on 'Jetty', the 'Jetty' log node will print a message for every connection that is established with Mendix. If Jetty doesn't print a trace message the IIS rewrite rules are definitely not setup correctly. 
+	First assess whether you are hitting the Mendix application. If IIS forwards anything to the running Mendix app you can see that in the log. The log nodes 'Connector' and 'Jetty' can be most helpful. The Connector log node is able to print information about any incoming request. If you enable Trace logging you can see if the request comes in to the right request handler.
 	
-	If you do have information in the 'Connector' log node you can see where the requests are being forwarded too. This should help you understand where the rewrite rules are directing traffic and how to change it.
+	If the 'Connector' doesn't print anything you can also enable trace logging on 'Jetty'. The 'Jetty' log node will print a message for every connection that is established with Mendix. If Jetty doesn't print a trace message the IIS rewrite rules are definitely not setup correctly. 
 	
+	If you do have information in the 'Connector' log node you can see where the requests are being forwarded to. This should help you understand where the rewrite rules are directing traffic and how to change it.
 	
-	When you have concluded thatno messages are arriving at Mendix you can enabel IIS trace logging. By doing this every rewrite rule gets printed into an IIS trace log file, you can see exactly how IIS changes the request and where they are forwarded too. This should prive you with the information needed to change the rewrite rules to the correct configuration. 
+	When you have concluded that no messages are arriving at Mendix you can enable IIS trace logging. By doing this, every rewrite rule gets printed to an IIS trace log file; you can see exactly how IIS changes the request and where it is forwarded to. This should provide you with the information needed to change the rewrite rules to the correct configuration. 
 	https://docs.microsoft.com/en-us/iis/extensions/url-rewrite-module/using-failed-request-tracing-to-trace-rewrite-rules
 	
-
-
 ## 8 Related Content
 
 * [On-Premises](on-premises-design)

@@ -65,7 +65,7 @@ Clicking a Delete button or triggering a delete activity will initiate the delet
 
 ## 5 Related Content
 
-* [How to Work with Images and Files](working-with-images-and-files)
+* [How to Work with Images & Files](working-with-images-and-files)
 * [How to Create a Basic Data Layer](create-a-basic-data-layer)
 * [How to Denormalize Data to Improve Performance](denormalize-data-to-improve-performance)
 * [How to Set Up Data Validation](setting-up-data-validation)

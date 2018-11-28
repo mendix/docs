@@ -1,6 +1,7 @@
 ---
 title: "Access a Samba Share"
 category: "Extensibility"
+menu_order: 10
 tags: ["Samba", "share"]
 ---
 

@@ -1,7 +1,8 @@
 ---
 title: "Test Web Services Using SoapUI"
 category: "Testing"
-tags: []
+menu_order: 30
+tags: ["test", "testing", "web service", "soapui"]
 ---
 
 ## 1 Introduction

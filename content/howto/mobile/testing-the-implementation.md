@@ -1,6 +1,8 @@
 ---
 title: "Test the Implementation"
 parent: "push-notifications"
+menu_order: 50
+tags: ["mobile", "push notification"]
 ---
 
 Once you finish implementing the steps described in [How to Implement Push Notifications](implementation-guide), you need to test whether everything works correctly. This can be done easily using the administration pages that should be included in your application (for details, see the section [Setting Up the Administration Pages](implementation-guide#setting) in *How to Implement Push Notifications*). Follow the steps below to send a push notification to a device.

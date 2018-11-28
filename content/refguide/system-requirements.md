@@ -95,3 +95,17 @@ Jetty is built into the Mendix Runtime, an application server is not required.
 
 * iOS 9 and above
 * Android 5.0 and above
+
+## MxBuild
+
+MxBuild is a command-line tool that can be used to build a Mendix Deployment Package. See [MxBuild](mxbuild) for more information.
+
+### Mendix version 7.1 and above
+
+* Mono v4.6.x
+* JDK 8.
+
+### Mendix version 6 and Version 7.0.2
+
+* Mono v3.1.0
+* JDK 8

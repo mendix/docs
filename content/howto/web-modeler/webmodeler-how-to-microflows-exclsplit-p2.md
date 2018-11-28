@@ -1,5 +1,5 @@
 ---
-title: "Step 2: Embed the Microflow to Your App"
+title: "Step 2: Embed the Microflow in Your App"
 parent: "webmodeler-how-to-microflows-exclsplit"
 description: "This how to describes the process of configuring an exclusive split in the Mendix Web Modeler."
 menu_order: 20
@@ -18,7 +18,7 @@ You have configured microflows and exclusive splits with enumeration attribute t
 
 To start this tutorial, make sure you have completed the following prerequisites:
 
-* [Step 1: Build the Domain Model and Configure a Microflow](webmodeler-how-to-microflows-exclsplit-p1)
+* [Step 1: Build the Domain Model & Configure a Microflow](webmodeler-how-to-microflows-exclsplit-p1)
 
 ## 3 Embedding the Microflow to Pages   
 
@@ -28,7 +28,7 @@ After microflows are created, you can add them to pages to run them in your app.
 
 To embed the microflow with an exclusive split (the attribute of the enumeration type) to pages, do the following:
 
-1. Сreate a page for the existing customers details and name it *Customer_details*. For more information on creating pages, see section [3.2 Creating a New Page](../../refguide/web-modeler/page-editor-wm) in the *Page Editor Overview in the Web Modeler*.
+1. Сreate a page for the existing customers details and name it *Customer_details*. For more information on creating pages, see section [3.2 Creating a New Page](../../refguide/web-modeler/page-editor-wm) in the *Page Editor in the Web Modeler*.
 2.  In **Toolbox**>**Widgets** >**Data Containers**, find **Data View**.
 
     ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-data-view.png)
@@ -71,9 +71,7 @@ To embed the microflow with an exclusive split (the attribute of the enumeration
 
 Congratulations! Now when the user clicks **Details**, the form for the corresponding customer grade will be opened. 
 
-You can now publish and view your app. For more information, see [How to Publish and View Your App](../tutorials/start-with-a-blank-app-3-publish-and-view-your-app).
-
-
+You can now publish and view your app.
 
 ### 3.2 Embedding the Microflow Having an Exclusive Split with the Attribute of the Boolean Type 
 
@@ -115,17 +113,4 @@ To embed the microflow with an exclusive split (the attribute of the Boolean typ
 
 Congratulations! Now when the user clicks **Place order**, only the customers who are not blocked will be able to proceed. If the user is blocked, he will get an error message. 
 
-You can publish and view your app. For more information, see [How to Publish and View Your App](../tutorials/start-with-a-blank-app-3-publish-and-view-your-app).
-
-
-
-
-
- 
-
-
-
-
-
-
-
+You can publish and view your app. 

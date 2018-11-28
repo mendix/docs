@@ -70,7 +70,9 @@ You can resolve a project conflict by choosing 'Use mine' or by deleting the inv
 
 ## Deploying A Project To The Cloud
 
-While developing you can deploy and run your project on your local machine by using the menu item 'Run > Run'. If you want to put your project into a test, acceptance or production environment, you will have to upload it to the cloud. If you are using the Mendix Cloud Portal you can choose 'Deploy to the Cloud Portal' from the project menu.
+While developing you can deploy and run your project on your local machine by using the menu item 'Run > Run Locally'.
+
+If you want to put your project into a test, acceptance or production environment, you will have to upload it to the cloud. If you are using the Mendix Cloud, or other partner cloud (SAP Cloud Platform, for example) the menu item 'Run > Run' will upload it to the default environment. If you are using the Mendix Cloud you can also choose 'Deploy to Licensed Cloud Node' from the project menu.
 
 ![](attachments/modeler-core/2018-02-21_17-05-05.png)
 
@@ -90,7 +92,7 @@ Along with creating the package the Modeler will also create a tag representing 
 
 ## Patching A Deployed Application
 
-If you want to add some functionality to a deployed application or you want to fix a bug in it, you can now do so without interfering with other development. First, you determine what the version is of the application that is deployed. The Cloud Portal can tell you this. For non-cloud projects you can find the version in the metadata.json file that is located next to the deployed project file (model.mdp).
+If you want to add some functionality to a deployed application or you want to fix a bug in it, you can now do so without interfering with other development. First, you determine what the version is of the application that is deployed. The Developer Portal can tell you this. For non-cloud projects you can find the version in the metadata.json file that is located next to the deployed project file (model.mdp).
 
 Once you know the version number you create a branch based on the tag with the that version number as its name. You can then add the functionality or fix the bug in this newly created branch. After testing that things work as intended you can create a new deployment archive with a higher version number (increase patch or minor version).
 

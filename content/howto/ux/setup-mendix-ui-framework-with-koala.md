@@ -70,7 +70,7 @@ The Mendix UI Framework uses **Sass**, which relies on Ruby. However, you can in
 
 ## 6 Related Content
 
-* [How to Create Your First Two Overview and Detail Pages](create-your-first-two-overview-and-detail-pages)
+* [How to Create Your First Two Overview & Detail Pages](create-your-first-two-overview-and-detail-pages)
 * [How to Filter Data on an Overview Page](filtering-data-on-an-overview-page)
 * [How to Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
 * [How to Use Layouts and Snippets](layouts-and-snippets)

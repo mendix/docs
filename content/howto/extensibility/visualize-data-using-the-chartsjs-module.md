@@ -1,6 +1,8 @@
 ---
 title: "Visualize Data Using the ChartJS Module"
 category: "Extensibility"
+menu_order: 8
+tags: ["extensibility", "chartjs"]
 ---
 
 ## 1 Introduction

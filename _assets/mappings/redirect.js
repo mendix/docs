@@ -2040,10 +2040,6 @@ module.exports = {
      * HOWTO MENDIX 7
      ****************************************************/
     {
-      from: "/howto/getting-started/build-a-simple-hrm-app",
-      to: "/howto/tutorials/build-a-simple-hrm-app"
-    },
-    {
       from: "/howto/deploying-a-mendix-app-to-cloud-foundry",
       to: "/developerportal/deploy/cloud-foundry-deploy"
     },
@@ -2057,7 +2053,7 @@ module.exports = {
     },
 	{
       from: "/bestpractices/How+to+execute+an+SQL+statement+on+an+external+database",
-      to: "/howto/integration/how-to-execute-an-sql-statement-on-an-external-database"
+      to: "/howto/integration/execute-an-sql-statement-on-an-external-database"
     },
 	{
       from: "/howto7/solving-load-and-import-errors",

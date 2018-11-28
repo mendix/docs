@@ -1,5 +1,5 @@
 ---
-title: "Create Your First Two Overview and Detail Pages"
+title: "Create Your First Two Overview & Detail Pages"
 category: "UX"
 tags: []
 ---

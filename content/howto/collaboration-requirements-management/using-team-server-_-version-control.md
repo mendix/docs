@@ -1,6 +1,7 @@
 ---
 title: "Use Team Server for Version Control"
 category: "Collaboration & Requirements Management"
+menu_order: 10
 tags: []
 ---
 ## 1. Team server

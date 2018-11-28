@@ -1,6 +1,6 @@
 ---
 title: "Packaging Hybrid Mobile Apps"
-category: "Mobile"
+category: "Mobile Development"
 ---
 
 

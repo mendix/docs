@@ -630,7 +630,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 | 400 | INVALID_RUNTIME_VERSION | This Runtime version is not supported on this environment. (For Mendix Cloud v4, using a Mendix version of 6 or newer is required.) |
 | 403 | NO_ACCESS | You do not have access |
 | 403 | TRANSPORT_NOT_ALLOWED | No access to transport to environment 'mode'. |
-| 403 | APP_IS_RUNNING | The 'mode' environment of 'app id' must be stoppped to do transport. |
+| 403 | APP_IS_RUNNING | The 'mode' environment of 'app id' must be stopped to do transport. |
 | 404 | ENVIRONMENT_NOT_FOUND | Environment not found. |
 | 404 | PACKAGE_NOT_FOUND | Package not found. |
 | 500 | PACKAGE_PARSE_FAILED | Failed to parse deployment package file. |
@@ -1032,7 +1032,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/restore/<S
 
 *   _AppId_ (String): Subdomain name of an app.
 *   _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production.
-*   _ShapshotId_ (String): ID of the snapshot to be restored.
+*   _SnapshotId_ (String): ID of the snapshot to be restored.
 
 **Example Request**
 
@@ -1137,7 +1137,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 #### 3.20.1 Description
 
-Tags are arbitrary strings that are not interpreted by the Cloud Portal. Users are able to set tags on environments. Tags serve two purposes:
+Tags are arbitrary strings that are not interpreted by the Developer Portal. Users are able to set tags on environments. Tags serve two purposes:
 
 * Custom tags can be added to metrics (for Datadog)
 * Tags can serve as selection criteria for grouping environments into a landscape management dashboard

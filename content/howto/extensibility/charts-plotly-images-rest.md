@@ -20,12 +20,8 @@ The [Plotly API images endpoint](https://api.plot.ly/v2/images) turns a plot int
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Install the latest Mendix desktop modeler
-
 * Create an account on **plot.ly**: you can sign up to plot.ly here: https://plot.ly/accounts/login/?action=signup#/
-
 * Retrieve the plotly API key which goes with your account; your API key can be found on the settings page when you are logged in to the site
-
-* Create a Mendix app to work with, see [How to Create a Mendix App](../tutorials/start-with-a-blank-app-1-create-the-app)
 
 ## 3 Setting up the Domain Model
 

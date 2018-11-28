@@ -1,5 +1,5 @@
 ---
-title: "Page Editor Overview in the Web Modeler"
+title: "Page Editor in the Web Modeler"
 category: "Web Modeler"
 description: "Describes the page editor in the Mendix Web Modeler."
 menu_order: 30
@@ -170,4 +170,4 @@ The **Properties** tab displays the properties of the currently selected element
 
 ## 7 Related Content
 
-* [Data View and List View Properties in the Web Modeler](page-editor-data-view-list-view-wm)
+* [Data View & List View Properties in the Web Modeler](page-editor-data-view-list-view-wm)

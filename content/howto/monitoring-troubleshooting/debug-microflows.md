@@ -1,7 +1,8 @@
 ---
 title: "Debug Microflows"
 category: "Monitoring & Troubleshooting"
-tags: []
+menu_order: 2
+tags: ["monitoring", "troubleshooting", "debug", "microflow"]
 ---
 
 ## 1 Introduction
@@ -18,7 +19,7 @@ The Mendix Modeler has a built-in consistency checker that validates if the appl
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Read [How to Create a Basic Data Layer](../data-models/create-a-basic-data-layer)
-* Read [How to Create Your First Two Overview and Detail pages](../ux/create-your-first-two-overview-and-detail-pages)
+* Read [How to Create Your First Two Overview & Detail Pages](../ux/create-your-first-two-overview-and-detail-pages)
 
 ## 3 Debugging Overview
 

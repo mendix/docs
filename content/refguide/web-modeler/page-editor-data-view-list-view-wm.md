@@ -1,5 +1,5 @@
 ---
-title: "Data View and List View Properties in the Web Modeler"
+title: "Data View & List View Properties in the Web Modeler"
 parent: "page-editor-widgets-wm"
 description: "Describes the data view and list view in the Page Editor of the Mendix Web Modeler."
 menu_order: 10
@@ -91,4 +91,4 @@ For information on the **Design** section and its properties, see [Design Sectio
 
 ## 4 Related Content
 
-* [Page Editor Overview in the Web Modeler](page-editor-wm)
+* [Page Editor in the Web Modeler](page-editor-wm)

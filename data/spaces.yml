@@ -86,14 +86,13 @@ howto:
   priority: 6
   mendix_version: 7
   menu_categories:
-    - "Tutorials"
     - "Modeling Basics"
     - "Web Modeler"
     - "Atlas UI"
     - "UX"
     - "Data Models"
     - "Logic & Business Rules"
-    - "Mobile"
+    - "Mobile Development"
     - "Security"
     - "Integration"
     - "SAP"
@@ -161,7 +160,7 @@ refguide:
     - "Java Programming"
     - "SAP"
     - "IBM"
-    - "Mobile"
+    - "Mobile Development"
 howtogeneral:
   space: "Best Practices & Support"
   priority: 6
@@ -177,8 +176,7 @@ releasenotes:
     - "Web Modeler"
     - "Developer Portal"
     - "SDKs"
-    - "Hybrid App"
-    - "Mendix Mobile App"
+    - "Mobile Products"
     - "Add-ons"
     - "What Are Mendix Beta Features?"
 developerportal:

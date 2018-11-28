@@ -120,5 +120,5 @@ Properties available in the **General** section are described in the table below
 
 ## 5 Related Content
 
-* [Page Editor Overview in the Web Modeler](page-editor-wm) 
+* [Page Editor in the Web Modeler](page-editor-wm) 
 * [Widgets in the Web Modeler](page-editor-widgets-wm)

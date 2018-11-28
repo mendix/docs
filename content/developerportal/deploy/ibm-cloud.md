@@ -22,7 +22,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Have an [IBM Cloud account](https://console.bluemix.net/registration/)
 * Download the [Mendix Desktop Modeler](https://appstore.home.mendix.com/link/modelers/) – you will need 7.11.0 or higher
-* Be familiar with the basic concepts of editing and deploying a Mendix app; if you are new to Mendix, the [Starter App Tutorial](/howto/tutorials/starter-apps) will introduce you to these concepts
+* Be familiar with the basic concepts of editing and deploying a Mendix app
 * Be familiar with the basic concepts of IBM Starter Kits and Toolchain
 
 ## 3 Creating the New App and Setting Up IBM Cloud
@@ -153,7 +153,7 @@ To create a package for IBM Cloud within Developer Portal, follow these steps:
 2.  Open the **Environments** page.
 
     You are now ready to create a deployment package which you will then push to IBM Cloud.
- 
+
 3.  Click **Create package from teamserver**.
 
     ![](attachments/ibm-cloud/createpackage.png)
@@ -328,4 +328,3 @@ To change the memory and instances configuration temporarily, do the following:
 
 * [IBM Cloud account](https://console.bluemix.net/registration/)
 * [Mendix Desktop Modeler](https://appstore.home.mendix.com/link/modelers/)
-* [Starter App Tutorial](/howto/tutorials/starter-apps)

@@ -1,8 +1,9 @@
 ---
-title: "Configure the Mendix Feedback Widget on iOS"
+title: "Configure the Mendix Feedback Widget for iOS"
 category: "Mobile"
+menu_order: 20
 description: "How to configure ios security settings to render the feedback widget's content"
-tags: ["Mobile", "feedback", "widget", "ios"]
+tags: ["mobile", "feedback", "widget", "ios"]
 ---
 
 ## 1 Introduction

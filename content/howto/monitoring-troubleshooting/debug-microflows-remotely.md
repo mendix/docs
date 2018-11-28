@@ -1,7 +1,8 @@
 ---
 title: "Debug Microflows Remotely"
 category: "Monitoring & Troubleshooting"
-tags: []
+menu_order: 3
+tags: ["monitoring", "troubleshooting", "debug", "microflow", "remote"]
 ---
 
 ## 1 Introduction

@@ -101,7 +101,7 @@ There are two ways that the device can build the packages:
 * **Build it in the cloud**
 * **Do it yourself**
 
-For more information, see [How to Publish a Mendix Hybrid Mobile App in Mobile App Stores](/howto/mobile/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores).
+For more information, see [How to Publish a Mendix Hybrid Mobile App in App Stores](/howto/mobile/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores).
 
 ### 4.1 Building It in the Cloud
 
@@ -136,6 +136,6 @@ To generate the app store packages, go to [Build.PhoneGap.com](https://build.pho
 * [Customizing PhoneGap Build Packages](/refguide/customizing-phonegap-build-packages)
 * [Deploy and Manage](/developerportal/deploy)
 * [Offline](/refguide/offline)
-* [How to Publish a Mendix Hybrid Mobile App in Mobile App Stores](/howto/mobile/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)
+* [How to Publish a Mendix Hybrid Mobile App in App Stores](/howto/mobile/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)
 * [Adobe PhoneGap Build](https://build.phonegap.com/)
 * [Apache Cordova Phonegap Reference Config.xml](https://cordova.apache.org/docs/en/latest/config_ref/)

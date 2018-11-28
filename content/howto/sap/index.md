@@ -2,9 +2,14 @@
 title: "SAP"
 ---
 
-## Documents in This Category
+## 1 Introduction
 
-* [How to Use the SAP OData Connector](use-sap-odata-connector)
-* [How to Use the SAP OData Model Creator](use-sap-odata-model-creator)
-* [How to Set Up the XSUAA Connector](use-sap-xsuaa-connector)
-* [How to Use SAP Connectivity Services with REST and SOAP](sap-destination-with-rest)
+The how-to's in this category will teach you to perform certain actions to integrate Mendix with SAP services like SAP Business Suite (SAP ERP 6.0), SAP S/4HANA, SAP S/4HANA Cloud, and SAP SuccessFactors, among others.
+
+## 2 Main Documents in This Category
+
+* [Use the SAP OData Connector](use-sap-odata-connector)
+* [Use the SAP OData Model Creator](use-sap-odata-model-creator)
+* [Set Up the XSUAA Connector](use-sap-xsuaa-connector)
+* [Use SAP Connectivity Services with REST and SOAP](sap-destination-with-rest)
+* [Extend the SAP Purchase Order Approval Tutorial App](sap-purchase-order-approval)

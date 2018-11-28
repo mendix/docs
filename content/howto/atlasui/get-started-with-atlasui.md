@@ -1,6 +1,7 @@
 ---
 title: "Get Started with Atlas UI"
 category: "Atlas UI"
+menu_order: 10
 tags: ["Atlas", "UI", "UX", "user experience", "Web Modeler"]
 ---
 

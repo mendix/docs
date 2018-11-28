@@ -1,6 +1,6 @@
 ---
 title: "Publish a Mendix Hybrid Mobile App in Mobile App Stores"
-category: "Mobile"
+category: "Mobile Development"
 menu_order: 60
 tags: ["mobile", "app store", "phonegap"]
 ---

@@ -2,8 +2,8 @@
 title: "Deploying Your App From the Web Modeler"
 category: "Web Modeler"
 description: "Describes the deployment process in the Mendix Web Modeler."
-menu_order: 60
-tags: ["web modeler", "deployment", "publishing", "app publishing"]
+menu_order: 55
+tags: ["web modeler", "deployment", "publishing", "app publishing", "deploy", "deploying"]
 ---
 
 ##1 Introduction
@@ -117,7 +117,7 @@ Web Modeler can fail to get your environment status in the following cases:
 
   ![Deploy Failed, No Environment for the Web Modeler](attachments/deployment-wm/wm-no-environment.png)
 
-For technical information on app administration, see [Web Modeler Deployment Settings](/developerportal/deploy/web-modeler-deployment-settings) in *Developer Portal Guide*. 
+For technical information for app administrators, see [Web Modeler Deployment Settings](/developerportal/deploy/web-modeler-deployment-settings) in *Developer Portal Guide*. 
 
 ## 6 Related Content
 

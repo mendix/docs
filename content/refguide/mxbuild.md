@@ -8,7 +8,30 @@ tags: ["Build", "Deploy", "deployment package", "POST", "command-line"]
 
 ## 1 Introduction
 
-MxBuild is a command-line tool that can be used to deploy and build a Mendix Deployment Package from a Mendix Project.
+MxBuild is a Windows command-line tool that can be used to build a Mendix Deployment Package from a Mendix Project.
+
+The version of MxBuild which you need is dependent upon the specific version of the Mendix model you want to build. You can find the correct MxBuild download at a link with the format `https://cdn.mendix.com/runtime/mxbuild-{mxversion}.tar.gz`.
+
+{{% alert type="info" %}}
+
+Mendix versions 7.18.1 and above include a build number in the version, and this has to be included in the link path. For example:
+
+* 7.17.2
+* 7.18.1.40272
+
+You can find the build number in path of your Mendix installation (for example `C:\Program Files\Mendix\7.18.1.40272`)
+
+{{% /alert %}}
+
+For example, McBuild for Mendix version 7.18.1 is found at [https://cdn.mendix.com/runtime/mxbuild-7.18.1.40272.tar.gz](https://cdn.mendix.com/runtime/mxbuild-7.18.1.40272.tar.gz).
+
+You can extract the files using your favorite archival tool, such as [7-Zip](). The 
+
+{{% alert type="warning" %}}
+You need to run 7-Zip *as an Administrator* to successfully extract the MxBuild files.
+{{% /alert %}}
+
+The system requirements for MxBuild are documented here: 
 
 MxBuild can be run in either [Build mode](#build-mode), to build a package once, or [Service mode](#service-mode), if you are intending to build the package several times, depending on your needs. The modes are described in the sections below.
 

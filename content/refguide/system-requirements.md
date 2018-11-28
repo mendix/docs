@@ -98,16 +98,16 @@ Jetty is built into the Mendix Runtime, an application server is not required.
 
 ## MxBuild{#mxbuild}
 
-MxBuild is a Windows command-line tool that can be used to build a Mendix Deployment Package. See [MxBuild](mxbuild) for more information.
+MxBuild is a Windows and Linux command-line tool that can be used to build a Mendix Deployment Package. See [MxBuild](mxbuild) for more information.
 
 <!-- Do we need to specify Windows version as well? -->
 
 ### Mendix version 7.1 and above
 
-* Mono v4.6.x
+* Mono v4.6.x or .NET v4.6.2
 * JDK 8.
 
 ### Mendix version 6 and Version 7.0.2
 
-* Mono v3.1.0
+* Mono v3.1.0 or .NET v4.5
 * JDK 8

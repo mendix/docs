@@ -8,7 +8,7 @@ tags: ["Build", "Deploy", "deployment package", "POST", "command-line"]
 
 ## 1 Introduction
 
-MxBuild is a Windows command-line tool that can be used to build a Mendix Deployment Package from a Mendix Project.
+MxBuild is a Windows and Linux command-line tool that can be used to build a Mendix Deployment Package from a Mendix Project.
 
 The version of MxBuild which you need is dependent on the specific version of the Mendix model you want to build. You can find the correct MxBuild download at a link with the format `https://cdn.mendix.com/runtime/mxbuild-{mxversion}.tar.gz`.
 
@@ -23,7 +23,7 @@ You can find the build number in path of your Mendix installation (for example `
 
 {{% /alert %}}
 
-For example, McBuild for Mendix version 7.18.1 is found at [https://cdn.mendix.com/runtime/mxbuild-7.18.1.40272.tar.gz](https://cdn.mendix.com/runtime/mxbuild-7.18.1.40272.tar.gz).
+For example, MxBuild for Mendix version 7.18.1 is found at [https://cdn.mendix.com/runtime/mxbuild-7.18.1.40272.tar.gz](https://cdn.mendix.com/runtime/mxbuild-7.18.1.40272.tar.gz).
 
 You can extract the files using your favorite archival tool, such as [7-Zip](). The 
 
@@ -33,21 +33,33 @@ You need to run 7-Zip *as an Administrator* to successfully extract the MxBuild 
 
 The system requirements for MxBuild are documented here: [System Requirements](system-requirements#mxbuild).
 
-MxBuild can be run in either [Build mode](#build-mode), to build a package once, or [Service mode](#service-mode), if you are intending to build the package several times, depending on your needs. The modes are described in the sections below.
+## 2 Command-line Options
 
-## 2 Build Mode{#build-mode}
+MxBuild takes a number of command-line options which control how the Mendix project is processed.
+
+| Option | Description |
+| --- | --- |
+| `-h`, `--help` | prints a short description of MxBuild and a list of all available options |
+| `--java-home=DIRECTORY` | the directory in which the JDK is installed<br/>for example: `--java-home=/usr/lib/jvm/java-8-oracle`<br/>for Windows the *DIRECTORY* should be enclosed in double-quotes `"`|
+| `--java-exe-path=FILENAME` | the **full path** to the Java executable<br/>for example `--java-exe-path=/usr/lib/jvm/java-8-oracle/bin/java`<br/>for Windows the *DIRECTORY* should be enclosed in double-quotes `"`|
+
+MxBuild can be run in either [build mode](#build-mode), to build a package once, or [service mode](#service-mode), which optimizes building a package several times. Most scenarios will use *build mode*. The remaining command-line options depend on which of these modes you are running in.
+
+The modes are described in the sections below.
+
+## 3 Build Mode{#build-mode}
 
 In Build mode, you specify the Mendix Project file (.mpr) for which you want to build the deployment package (.mda) on the command-line. The file name may be preceded by a relative or absolute path. The project file should be located inside a Mendix project directory.
 
 After creating the deployment package, the MxBuild process quits.
 
-### 2.1 Options
+### 2.1 Command-line Options
 
 The following additional options can be specified when running in Build mode:
 
 | Option | Description |
 | --- | --- |
-| <code>––target=[package&#124;deploy]</code> | MxBuild will either create a deployment **package** (.mda file) or only performing a deployment of the project. When this option is omitted, a deployment package is created. |
+| <code>––target=[package&#124;deploy]</code> | `package`(default if option is omitted): create a deployment package (.mda file)<br/>`deploy`: make a deployment of the project without making a deployment package (). When this option is omitted, a deployment package is created. |
 | `--loose-version-check` | Without this option MxBuild only accepts Mendix projects that have the exact same version as the MxBuild version itself. Adding this option makes it possible to create deployment packages from projects that are created with an older Mendix version. The project will then be upgraded to the MxBuild version before the deployment package is created. Note that the changes to the project as a result of this upgrade will not be stored, so your project will not be changed permanently. |
 | `--write-errors=FILENAME` | When this option is specified, all errors, warnings and deprecations encountered during deployment of the project are written to the specified file in JSON format. This file is only written when the project contains errors. If the file already exists, it will be overwritten without warning. See the section 'Project errors' for a description of the format of this file. |
 
@@ -63,6 +75,9 @@ The following options are only applicable with the `--target=package` option:
 ## 3 Service Mode{#service-mode}
 
 When you specify the command-line option `--serve`, MxBuild will start in Service mode. In this mode, you do not specify the project to build on the command-line. Instead, MxBuild will run indefinitely and you can tell it to build a project by sending it a POST request.
+
+| Option | Description |
+| --- | --- |
 
 The command-line option `--port=PORT` can be used to choose the TCP port that MxBuild will use. When this option is omitted, port `6543` is used.
 
@@ -165,17 +180,6 @@ The following table describes the possible HTTP status codes returned by MxBuild
 | `200 OK` | The request is handled successfully |
 | `400 Bad Request` | This happens in one of the following circumstances:<br/>&#8226; The request is not a POST request<br/>&#8226; Invalid command line options are specified<br/>&#8226; An unexpected error occurred |
 | `404 Not Found` | A resource is requested that doesn't exist |
-
-## JDK settings
-When running MxBuild (either in Build mode or in Service mode), you're required to specify the following two settings on the command-line:
-
-| Setting | Description |
-| --- | --- |
-| `--java-home=DIRECTORY` | This is the directory in which the JDK is installed, e.g. `--java-home=/usr/lib/jvm/java-8-oracle`. |
-| `--java-exe-path=FILENAME` | This is the full path to the Java executable, e.g. `--java-exe-path=/usr/lib/jvm/java-8-oracle/bin/java`. |
-
-## Other options
-Specifying `-h` or `--help` on the command-line will show a short description of MxBuild and a list of all available options.
 
 ## Return value
 When MxBuild exits, one of the following codes will be returned:

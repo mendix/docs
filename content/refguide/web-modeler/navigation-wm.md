@@ -16,6 +16,12 @@ Open the **Navigation Document** by clicking the corresponding icon in the left 
 
 ![](attachments/navigation-wm/wm-navigation-icon.png)
 
+{{% alert type="info" %}}
+
+In the Web Modeler, you are viewing and editing a Responsive type of the navigation profile, while there are more types of profiles in the Desktop Modeler. For more information on profiles in the Desktop Modeler, see section [2 Profiles](/refguide/navigation#profiles) in *Navigation in Mendix 7.4 & Above* in the *Desktop Modeler* category. 
+
+{{% /alert %}}
+
 ## 2 Properties of Menu Items {#properties-of-menu-items}
 
 Properties of the menu items consists of the following sections:

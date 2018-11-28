@@ -15,7 +15,7 @@ This document describes the concept of navigation in Mendix applications and the
 
 The **Navigation** document can be found by expanding the **Project** node in the **Project Explorer**. It defines the navigation structure of the application for users. It also allows you to set the home page of your application and to define the menu structures that can be used in [menu widgets](menu-widgets). A user's home page can vary based on their [user roles](user-roles).
 
-## 2 Profiles
+## 2 Profiles {#profiles}
 
 At the heart of the navigation model in Mendix, there are seven types of profiles: Responsive, Tablet browser, Phone browser, Hybrid tablet online app, Hybrid tablet onffine app, Hybrid phone online app, and Hybrid tablet offline app. Users that access the app via a particular device type are automatically redirected to the homepage of the appropriate profile based on the profile type (for details, see [3 Redirection to Profiles](#Redirection)).
 

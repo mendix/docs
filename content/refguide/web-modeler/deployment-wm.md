@@ -26,9 +26,9 @@ By default all apps created in the Web Modeler are Free Apps. A Free App is a co
 To deploy your application, follow these steps:
 
 1. Click **Publish** in the top-bar of the Web Modeler (the dialog with your app status will open). 
-2. Once your cloud environment has been set up, you will see the **Update** button. Click it to push the latest changes from the Web Modeler to the published app or to publish the app for the first time. 
+2.  Once your cloud environment has been set up, you will see the **Update** button. Click it to push the latest changes from the Web Modeler to the published app or to publish the app for the first time. 
 
-![Publishing and Updating Your App in the Web Modeler](attachments/deployment-wm/wm-publish-and-update-buttons.png)
+    ![Publishing and Updating Your App in the Web Modeler](attachments/deployment-wm/wm-publish-and-update-buttons.png)
 
 {{% alert type="info" %}}
 
@@ -82,12 +82,12 @@ The following list shows you the examples of the statuses you may see (note that
 
   {{%alert type="info" %}}It is possible that you see "Your app has failed to set up". This can happen during deployment, please wait until the process is completed.
 
-  ![Your App Has Failed to Set Up Status in the Web Modeler](attachments/deployment-wm/wm-updating-your-app-failed-to-set-up.png)
+   ![Your App Has Failed to Set Up Status in the Web Modeler](attachments/deployment-wm/wm-updating-your-app-failed-to-set-up.png)
   {{% /alert %}}
 
 If your project does not have [consistency errors](consistency-errors-wm), your application will be deployed and the dialog box with the information on the last deployment highlighted in green will be opened.  
 
-![](attachments/deployment-wm/wm-your-app-is-running-no-errors.png)
+![Your App Has Consistency Errors](attachments/deployment-wm/wm-your-app-is-running-no-errors.png)
 
 If your app has [consistency errors](consistency-errors-wm), you need to fix them first and then click the **Update** button again. If you do not click the **Update** button after solving consistency errors and click **View app**, the last successfully deployed version of your app will open without the recent changes. 
 

@@ -10,7 +10,7 @@ tags: ["Build", "Deploy", "deployment package", "POST", "command-line"]
 
 MxBuild is a Windows command-line tool that can be used to build a Mendix Deployment Package from a Mendix Project.
 
-The version of MxBuild which you need is dependent upon the specific version of the Mendix model you want to build. You can find the correct MxBuild download at a link with the format `https://cdn.mendix.com/runtime/mxbuild-{mxversion}.tar.gz`.
+The version of MxBuild which you need is dependent on the specific version of the Mendix model you want to build. You can find the correct MxBuild download at a link with the format `https://cdn.mendix.com/runtime/mxbuild-{mxversion}.tar.gz`.
 
 {{% alert type="info" %}}
 
@@ -31,7 +31,7 @@ You can extract the files using your favorite archival tool, such as [7-Zip](). 
 You need to run 7-Zip *as an Administrator* to successfully extract the MxBuild files.
 {{% /alert %}}
 
-The system requirements for MxBuild are documented here: 
+The system requirements for MxBuild are documented here: [System Requirements](system-requirements#mxbuild).
 
 MxBuild can be run in either [Build mode](#build-mode), to build a package once, or [Service mode](#service-mode), if you are intending to build the package several times, depending on your needs. The modes are described in the sections below.
 
@@ -61,11 +61,12 @@ The following options are only applicable with the `--target=package` option:
 | `--model-description=DESCRIPTION` | This option can be used to describe the model. |
 
 ## 3 Service Mode{#service-mode}
+
 When you specify the command-line option `--serve`, MxBuild will start in Service mode. In this mode, you do not specify the project to build on the command-line. Instead, MxBuild will run indefinitely and you can tell it to build a project by sending it a POST request.
 
 The command-line option `--port=PORT` can be used to choose the TCP port that MxBuild will use. When this option is omitted, port `6543` is used.
 
-The advantage of running MxBuild in Service mode is that the deployment of a project (`target` = `Deploy`) can be significantly faster for subsequent builds. For example, if no Java files have changed between subsequent builds, the Java compilation step will be skipped. Also, for some changes to the model, such as changes to Pages, the Mendix Runtime supports hot-reloading the model instead of doing a full restart. The response will indicate whether a full restart is required.
+The advantage of running MxBuild in Service mode is that the deployment of a project (`"target": "Deploy"`) can be significantly faster for subsequent builds. For example, if no Java files have changed since the previous build, the Java compilation step will be skipped. Also, for some changes to the model such as changes to Pages, the Mendix Runtime supports hot-reloading the model instead of doing a full restart. The response will indicate whether a full restart is required.
 
 ### Build Request
 A build can be started by sending a POST request to `<serviceLocation>/build`. The body of the POST request should contain a JSON object that specifies the path to the Mendix project (.mpr) file that you want to build, together with some additional options that are similar to the command-line options that can be used when running MxBuild in Build mode. Here is an example of this JSON object:
@@ -85,13 +86,13 @@ A build can be started by sending a POST request to `<serviceLocation>/build`. T
 
 The `target` property is required and its only valid values are `Package` and `Deploy`. When the target is `Package`, the `mdaFilePath` property is also required.
 
-The `projectFilePath` property should contain the absolute path to the project (.mpr) file.
+The `projectFilePath` property is required and contains the absolute path to the project (.mpr) file.
 
 The `projectName`, `modelVersion` and `modelDescription` properties are optional and only used when the target is `Package`.
 
-The `useLooseVersionCheck` property is optional. Its default is `false`, meaning that the project version needs to exactly match the MxBuild version. If set to `true`, MxBuild will also allow older projects to be deployed.
+The `useLooseVersionCheck` property is optional. Its default is `false`, meaning that the project version needs to match the MxBuild version exactly. If set to `true`, MxBuild will also allow older projects to be deployed.
 
-The `forceFullDeployment` property is optional. Its default is `false`, meaning that fast deployment will be used if possible. If set to `true`, fast deployment will never be used.
+The `forceFullDeployment` property is optional. Its default is `false`, meaning that fast deployment will be used if possible. If set to `true`, fast deployment will not be used.
 
 ### Build Response
 
@@ -151,7 +152,7 @@ When your Mendix project contains consistency errors, deployment will fail and t
 }
 ```
 
-See the section 'Project errors' below for a description of the error format.
+See the section [Project errors](#project-errors) below for a description of the error format.
 
 ### Shutting Down
 To shut down an MxBuild process that is running in Service mode, send a POST request to `<serviceLocation>/shutdown`.
@@ -162,7 +163,7 @@ The following table describes the possible HTTP status codes returned by MxBuild
 | Status code | Description |
 | --- | --- |
 | `200 OK` | The request is handled successfully |
-| `400 Bad Request` | This happens when either:<br/>- The request is not a POST request<br/>- Invalid command line options are specified<br/>- An unexpected error occurred |
+| `400 Bad Request` | This happens in one of the following circumstances:<br/>&#8226; The request is not a POST request<br/>&#8226; Invalid command line options are specified<br/>&#8226; An unexpected error occurred |
 | `404 Not Found` | A resource is requested that doesn't exist |
 
 ## JDK settings
@@ -189,7 +190,7 @@ When MxBuild exits, one of the following codes will be returned:
 
 If the exit code is larger than 0, MxBuild will also output a message describing the error.
 
-## Project errors
+## Project errors{#project-errors}
 When your Mendix project contains errors, deployment will fail and MxBuild will report these errors. When running in Build mode, you can use the `--write-errors=FILENAME` command-line option to tell MxBuild to write the errors to a file. In Service mode, MxBuild will return the errors as part of the JSON response object.
 
 In both cases, the errors are output in as a JSON object that has one property `problems`. The value of this property is an array of objects that each describe one error, warning or deprecation in your project. For example:

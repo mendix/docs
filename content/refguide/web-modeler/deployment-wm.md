@@ -50,9 +50,9 @@ To select a different preview mode, click the drop-down menu on the **View app**
 
 To view your app on a mobile device, follow these steps:
 
-1. Click **View on mobile device**.
+1.  Click **View on mobile device**.
 
-   ![View on Mobile Device Option in the Web Modeler](attachments/deployment-wm/wm-view-on-mobile-device.png)
+    ![View on Mobile Device Option in the Web Modeler](attachments/deployment-wm/wm-view-on-mobile-device.png)
 
 2. Scan the QR-code with your mobile device using the [Mendix Mobile app](https://play.google.com/store/apps/details?id=com.mendix.SprintrMobile&hl=en). Follow the directions to download the Mendix Mobile app in case you do not have it installed.
 
@@ -64,21 +64,21 @@ You may see different statuses in dialog box when your app is deploying (when cl
 
 The following list shows you the examples of the statuses you may see (note that this is not the list of all possible statuses):
 
-* Your app is running – your application has been deployed
+*  Your app is running – your application has been deployed
 
-  ![Your App is Running Status in the Web Modeler](attachments/deployment-wm/wm-your-app-is-running.png)
+   ![Your App is Running Status in the Web Modeler](attachments/deployment-wm/wm-your-app-is-running.png)
 
-* Provisioning your app (when being shown as a progress bar) – your application is in the process of deployment
+*  Provisioning your app (when being shown as a progress bar) – your application is in the process of deployment
 
-  ![Environment is Being Provisioned Status in the Web Modeler](attachments/deployment-wm/wm-proviosining-your-app.png)
+   ![Environment is Being Provisioned Status in the Web Modeler](attachments/deployment-wm/wm-proviosining-your-app.png)
 
-* Provisioning your app (when being shown as a separate message) – your app is being deployed by someone else, or you have triggered the deployment from another tab or in another browser
+*  Provisioning your app (when being shown as a separate message) – your app is being deployed by someone else, or you have triggered the deployment from another tab or in another browser
 
-  ![Provisioning Your App Status in the Web Modeler](attachments/deployment-wm/wm-provisioning-your-app-ver-2.png)
+   ![Provisioning Your App Status in the Web Modeler](attachments/deployment-wm/wm-provisioning-your-app-ver-2.png)
 
-* Updating your app – your application is the process of deployment
+*  Updating your app – your application is the process of deployment
 
-  ![Updating Your App Status in the Web Modeler](attachments/deployment-wm/wm-updating-your-app.png)
+   ![Updating Your App Status in the Web Modeler](attachments/deployment-wm/wm-updating-your-app.png)
 
   {{%alert type="info" %}}It is possible that you see "Your app has failed to set up". This can happen during deployment, please wait until the process is completed.
 
@@ -109,13 +109,13 @@ However, the Web Modeler may fail to get your environment status. This can happe
 
 Web Modeler can fail to get your environment status in the following cases:
 
-* Your app was a Free App, was unlinked from the Free App environment by an app administrator, but was not upgraded to the licensed app (for more information on Free Apps and licensed apps, see section [2 Deploying Your App](#deploying-your-app)) 
+*  Your app was a Free App, was unlinked from the Free App environment by an app administrator, but was not upgraded to the licensed app (for more information on Free Apps and licensed apps, see section [2 Deploying Your App](#deploying-your-app)) 
 
-![Failing to Get App Environment Status in the Web Modeler](attachments/deployment-wm/wm-unlinked-app.png)
+   ![Failing to Get App Environment Status in the Web Modeler](attachments/deployment-wm/wm-unlinked-app.png)
 
-* Your app is a licensed app, and no environment has been set for the Web Modeler deployment by an app administrator
+*  Your app is a licensed app, and no environment has been set for the Web Modeler deployment by an app administrator
 
-  ![Deploy Failed, No Environment for the Web Modeler](attachments/deployment-wm/wm-no-environment.png)
+   ![Deploy Failed, No Environment for the Web Modeler](attachments/deployment-wm/wm-no-environment.png)
 
 For technical information for app administrators, see [Web Modeler Deployment Settings](/developerportal/deploy/web-modeler-deployment-settings) in *Developer Portal Guide*. 
 

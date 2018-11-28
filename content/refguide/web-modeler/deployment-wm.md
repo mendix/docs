@@ -6,7 +6,7 @@ menu_order: 55
 tags: ["web modeler", "deployment", "publishing", "app publishing", "deploy", "deploying"]
 ---
 
-##1 Introduction
+## 1 Introduction
 
 Deployment means getting your app up and running in a cloud environment to make it available for the end-users. The term "publish" is used to describe the same process in the Web Modeler interface. For technical information for app administrators, see [Deploy and Manage](/developerportal/deploy/index) in the *Developer Portal Guide*. 
 

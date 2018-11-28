@@ -3,7 +3,7 @@ title: "Web Modeler Deployment Settings"
 parent: "mendix-cloud-deploy"
 menu_order: 10
 description: "Describes how to set deployment for the Web Modeler."
-tags: ["Node","Developer Portal","Deploy", "web modeler", "settings"]
+tags: ["node","developer portal","deploy", "web modeler", "settings"]
 ---
 
 ## 1 Introduction
@@ -20,17 +20,17 @@ By default the environment is not selected for the Web Modeler. Thus, when you t
 
 To select the environment for the Web Modeler, do the following:
 
-1. Open **Deploy** > **Environments** in the left menu bar in the Developer Portal.
+1.  Open **Deploy** > **Environments** in the left menu bar in the Developer Portal.
 
-   ![Environments in the Developer Portal](attachments/web-modeler-deployment-settings/developer-portal-deploy-environments.png)
+    ![Environments in the Developer Portal](attachments/web-modeler-deployment-settings/developer-portal-deploy-environments.png)
 
-2. In the **Deploy** tab > **Environments** section, select the environment that you want to select for the Web Modeler deployment by clicking **Details**. 
+2.  In the **Deploy** tab > **Environments** section, select the environment that you want to select for the Web Modeler deployment by clicking **Details**. 
 
-   ![Details of an Environment in the Developer Portal](attachments/web-modeler-deployment-settings/developer-portal-environments-details.png)
+    ![Details of an Environment in the Developer Portal](attachments/web-modeler-deployment-settings/developer-portal-environments-details.png)
 
-3. In the **General** tab, select **Web Modeler Target** and click **Change**.
+3.  In the **General** tab, select **Web Modeler Target** and click **Change**.
 
-   ![](attachments/web-modeler-deployment-settings/developer-portal-web-modeler-target.png)
+    ![](attachments/web-modeler-deployment-settings/developer-portal-web-modeler-target.png)
 
 4. In the **Select Web Modeler Target** dialog window, click the drop-down menu and select the environment. 
 

@@ -112,4 +112,4 @@ Congratulations! Now we have the microflow that works the following way:
    b. If the customer does not have a grade, the error message pops up.<br/>
 2. If the customer has the grade, the customer's status is set to active irrespective of the grade once the order form is opened.
 
-Now you can publish and view your app.
+Now you can publish and view your app. For more information, see [Deploying Your App From the Web Modeler](../../refguide/web-modeler/deployment-wm).

@@ -111,11 +111,11 @@ Web Modeler can fail to get your environment status in the following cases:
 
 *  Your app was a Free App, was unlinked from the Free App environment by an app administrator, but was not upgraded to the licensed app (for more information on Free Apps and licensed apps, see section [2 Deploying Your App](#deploying-your-app)) 
 
-   ![Failing to Get App Environment Status in the Web Modeler](attachments/deployment-wm/wm-unlinked-app.png)
+	![Failing to Get App Environment Status in the Web Modeler](attachments/deployment-wm/wm-unlinked-app.png)
 
 *  Your app is a licensed app, and no environment has been set for the Web Modeler deployment by an app administrator
 
-   ![Deploy Failed, No Environment for the Web Modeler](attachments/deployment-wm/wm-no-environment.png)
+	![Deploy Failed, No Environment for the Web Modeler](attachments/deployment-wm/wm-no-environment.png)
 
 For technical information for app administrators, see [Web Modeler Deployment Settings](/developerportal/deploy/web-modeler-deployment-settings) in *Developer Portal Guide*. 
 

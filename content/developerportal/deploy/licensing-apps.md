@@ -5,6 +5,7 @@ parent: "mendix-cloud-deploy"
 menu_order: 15
 description: "Licensing apps for production by linking them to a licensed cloud node."
 tags: ["App", "Node", "Developer Portal", "Deploy", "Link", "Unlink", "Licensed", "Sandbox", "Upgrade", "Mendix Cloud", "V3", "V4"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
@@ -117,7 +118,7 @@ There are two methods to connect your project to a licensed cloud node.
 {{% alert type="info" %}}
 If there is already an app linked to the target node, it will be **unlinked automatically**.
 {{% /alert %}}
- 
+
 {{% alert type="warning" %}}
 Apart from the app, the rest of the environment(s) in the target node will remain the same. This includes:
 

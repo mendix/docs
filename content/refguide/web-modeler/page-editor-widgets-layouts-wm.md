@@ -16,6 +16,7 @@ There are three layout widgets:
 * [Layout Grid](#layout-grid)
 * [Container](#container-overview)
 * [Group Box](#group-box-overview)
+* Tab Container
 
 ## 2 Layout Grid Overview {#layout-grid}
 
@@ -118,7 +119,26 @@ Properties available in the **General** section are described in the table below
 | Caption     | This property is only displayed when the **Show Header** option is enabled. It defines the caption that is shown in the header. |
 | Collapsible | This property is only displayed when the **Show Header** option is enabled. It defines whether the group box and its elements can be collapsed or expanded. Possible values of this property are the following:<ul><li>**Yes (start expanded)** – the elements inside the group box will be initially expanded and can be collapsed when a user clicks a minus icon in the header</li><li>**Yes (start collapsed)** – the elements inside the group box will be initially collapsed and can be expanded when a user clicks a plus icon in the header </li><li>**No** – group box elements cannot be expanded or collapsed</li></ul> |
 
-## 5 Related Content
+## 5 Tab Container Overview
+
+A tab container is a container that is used to show information categorized into two tabs. This can be useful if the amount of information that has to be displayed is larger than the amount of space on the screen. For example, you can show the list of customers on one tab, and orders on the other one. 
+
+![](attachments/page-editor-widgets-layouts-wm/wm-tab-container-example.png)
+
+You can place a widget or a group of widgets inside each tab container and configure information in them separately. 
+
+### 5.1 Tab Container Properties
+
+Properties of the tab container are described in the table below.
+
+| Property    | Description                                                  |
+| ----------- | ------------------------------------------------------------ |
+| Caption     | Defines the name of the tab.                                 |
+| Default Tab | Defines which tab is active when the page is opened. f no tab is set as the default one, the first tab page will be shown. By default, none of the tabs are set as default tab. |
+
+
+
+## 6 Related Content
 
 * [Page Editor in the Web Modeler](page-editor-wm) 
 * [Widgets in the Web Modeler](page-editor-widgets-wm)

@@ -57,7 +57,7 @@ You need to be the [Technical Contact](/developerportal/company-app-roles/techni
 
 You need to have enabled two-factor authentication. See [Two-Factor Authentication](two-factor-authentication).
 
-## 4 Linking Your App to a Licensed Node
+## 4 Linking Your App to a Licensed Node {#licensed-node}
 
 You have deployed an app: either as a free app, or to a licensed node. You now want to link it to a licensed node, or to a different licensed node.
 
@@ -185,7 +185,7 @@ If you want to use the data which was originally in your app, you will need to r
 
 The documentation on restoring a backup is here: [Restore a Backup](/developerportal/operate/how-to-restore-a-backup).
 
-## 5 Exchange Linked Apps Between Nodes{#exchange-apps}
+## 5 Exchange Linked Apps Between Nodes {#exchange-apps}
 
 If you want to swap the nodes of two apps which are already linked to nodes, you can do it by creating a new (third) app. By using the fact that linking an app to a node will remove an app which is already linked, you can use this app to unlink one app. You can then move this app to the other node, unlinking the app which is there. Finally, you can put this app into the first node.
 

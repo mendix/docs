@@ -158,9 +158,9 @@ refguide:
     - "Web Modeler"
     - "Runtime"
     - "Java Programming"
+    - "Mobile Development"
     - "SAP"
     - "IBM"
-    - "Mobile Development"
 howtogeneral:
   space: "Best Practices & Support"
   priority: 6

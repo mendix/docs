@@ -6,6 +6,18 @@ parent: "model-sdk"
 
 These are the release notes for the Model SDK version 4.
 
+## 4.17.0
+
+**Release date: November 30th, 2018**
+
+| story# | impact | description |
+|---|---|---|
+| MS-1195 | None | Added new working copy lock type 'update'. |
+| MS-1205 | None | Added support for Mendix 7.21.0. |
+| MS-1183 | None | Added new working copy lock type 'commit'. |
+| MS-1173 | None | Fixed duplicate processing of events. |
+| MS-1184 | None | Upgraded to Node.JS version 10. |
+
 ## 4.16.0
 
 **Release date: October 31st, 2018**

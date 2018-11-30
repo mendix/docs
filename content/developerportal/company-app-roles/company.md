@@ -11,7 +11,7 @@ tags: ["company","admin","Developer Portal", "Company Admin", "expiration settin
 You must be a Company Admin to access this page and these settings.
 {{% /alert %}}
 
-There are four tabs on the **Company ** page with settings to manage:
+There are four tabs on the **Company** page with settings to manage:
 
 ![](attachments/company-profile.png)
 

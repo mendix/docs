@@ -84,7 +84,7 @@ You can change the App Contact by following these steps:
 
 A node can have only one Technical Contact to manage the node's environments, deployment repositories, backups, alerts, etc. 
 
-You can change the Technical Contact by following these steps:
+If you are the current Technical Contact for an app, you can make another team member the Technical Contact by following these steps:
 
 1. Go to the [Developer Portal](http://home.mendix.com) and click **Apps** in the top navigation panel.
 2. Click **My Apps**, and in the drop-down list, click **Nodes**.
@@ -118,4 +118,3 @@ It is possible to change or add new App Team roles for a specific app or at the 
 * [How to Deactivate & Activate an App](../company-app-roles/deactivate-activate-app)
 * [Security – Node Permissions](/developerportal/deploy/node-permissions)
 * [Technical Contact](/developerportal/company-app-roles/technical-contact)
-

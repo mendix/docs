@@ -121,7 +121,7 @@ Properties available in the **General** section are described in the table below
 
 ## 5 Tab Container Overview
 
-A tab container is a container that is used to show information categorized into tabs. This can be useful if the amount of information that has to be displayed is larger than the amount of space on the screen. For example, you can show the list of customers on one tab, and orders on the other one. 
+A tab container is a container that is used to show information categorized into tabs. This can be useful if the amount of information that you would like to display is larger than the amount of space on the screen. For example, you can show a list of customers on one tab, and orders on the other one. 
 
 ![](attachments/page-editor-widgets-layouts-wm/wm-tab-container-example.png)
 
@@ -147,7 +147,7 @@ For information on the **Design** section and its properties, see [Design Sectio
 
 Each tab has the following properties: 
 
-* **Caption** – defines the name of the tab
+* **Caption** – defines the name of the tab; you can also edit the caption by double-clicking it in the page 
 
 *  **Default Tab** – defines which tab is active when the page is opened. If no tab is set as the default one, the first tab page will be shown. By default, none of the tabs are set as a default tab.
 

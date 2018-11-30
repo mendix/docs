@@ -127,16 +127,31 @@ A tab container is a container that is used to show information categorized into
 
 You can place a widget or a group of widgets inside each tab container and configure information in them separately. 
 
-### 5.1 Tab Container Properties
+### 5.1 Tab Container General Properties
 
-Properties of the tab container are described in the table below.
+In the **General** section, you can configure the following properties:
 
-| Property    | Description                                                  |
-| ----------- | ------------------------------------------------------------ |
-| Caption     | Defines the name of the tab.                                 |
-| Default Tab | Defines which tab is active when the page is opened. f no tab is set as the default one, the first tab page will be shown. By default, none of the tabs are set as default tab. |
+*  **Tabs** – use radio buttons to switch from one tab to another; click the **Edit** icon to open the tab properties and configure it (for more information, see section [5.3 Tab Properties](#tab-properties))
 
+	![](attachments/page-editor-widgets-layouts-wm/wm-tab-container-tabs-property.png)
 
+*  **Add New Tab** – adds a new tab to your tab container; tab properties will open automatically (for more information, see section [5.3 Tab Properties](#tab-properties))
+
+	![](attachments/page-editor-widgets-layouts-wm/wm-add-new-tab.png)
+
+### 5.2 Tab Container Design Properties
+
+For information on the **Design** section and its properties, see [Design Section in Widgets of the Web Modeler](page-editor-widgets-design-section-wm).
+
+### 5.3 Tab Properties {#tab-properties}
+
+Each tab has the following properties: 
+
+* **Caption** – defines the name of the tab
+
+*  **Default Tab** – defines which tab is active when the page is opened. If no tab is set as the default one, the first tab page will be shown. By default, none of the tabs are set as a default tab.
+
+	![](attachments/page-editor-widgets-layouts-wm/wm-tab-properties.png)
 
 ## 6 Related Content
 

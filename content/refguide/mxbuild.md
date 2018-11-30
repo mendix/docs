@@ -23,9 +23,9 @@ You can find the build number in path of your Mendix installation (for example `
 
 {{% /alert %}}
 
-For example, MxBuild for Mendix version 7.18.1 is found at [https://cdn.mendix.com/runtime/mxbuild-7.18.1.40272.tar.gz](https://cdn.mendix.com/runtime/mxbuild-7.18.1.40272.tar.gz).
+So, MxBuild for Mendix version 7.18.1 is found at [https://cdn.mendix.com/runtime/mxbuild-7.18.1.40272.tar.gz](https://cdn.mendix.com/runtime/mxbuild-7.18.1.40272.tar.gz).
 
-You can extract the files using your favorite archival tool, such as [7-Zip](). The 
+You can extract the files using your favorite archival tool, such as [7-Zip](https://www.7-zip.org/).
 
 {{% alert type="warning" %}}
 You need to run 7-Zip *as an Administrator* to successfully extract the MxBuild files.
@@ -37,7 +37,10 @@ The system requirements for MxBuild are documented here: [System Requirements](s
 
 MxBuild takes a number of command-line options which control how the Mendix project is processed.
 
-| Option | Description |
+<!-- Note to editor: the &nbsp; here makes the column wider so that options are not broken at hyphens
+  The alternative of using non-breaking hyphens means that a cut and paste may not work -->
+
+| Option&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Description |
 | --- | --- |
 | `-h`, `--help` | prints a short description of MxBuild and a list of all available options |
 | `--java-home=DIRECTORY` | the directory in which the JDK is installed<br/>for example: `--java-home=/usr/lib/jvm/java-8-oracle`<br/>for Windows the *DIRECTORY* should be enclosed in double-quotes `"`|
@@ -57,19 +60,19 @@ After creating the deployment package, the MxBuild process quits.
 
 The following additional options can be specified when running in Build mode:
 
-| Option | Description |
+| Option&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Description |
 | --- | --- |
 | <code>––target=[package&#124;deploy]</code> | `package` (default if option is omitted): create a deployment package (.mda file)<br/>`deploy`: make a deployment of the project without making a deployment package. |
 | `--loose-version-check` | create a deployment package from a project which was created with a lower Mendix version.<br/>The project will be upgraded to the MxBuild version before the deployment package is created.<br /> Any changes included as a result of this upgrade will **not** be stored in your project. |
-| `--write-errors=FILENAME` | Write all errors, warnings and deprecations encountered during deployment of the project to the specified file in JSON format.<br .>This file is only written when the project contains errors.<br />If the file already exists, it will be overwritten without warning.<br />See section 5, [Project Errors](#project-errors) for a description of the format of this file. |
+| `--write-errors=FILENAME` | Write all errors, warnings and deprecations encountered during deployment of the project to the specified file in JSON format.<br />This file is only written when the project contains errors.<br />If the file already exists, it will be overwritten without warning.<br />See section 5, [Project Errors](#project-errors) for a description of the format of this file. |
 
 {{% alert type="info" %}}
 The following options are only applicable with the `--target=package` option:
 {{% /alert %}}
 
-| Option | Description |
+| Option&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Description |
 | --- | --- |
-| `-o FILENAME` or `--output=FILENAME` | The name (with optional relative or absolute path) of the .mda file that is created by MxBuild.<br />If this option is omitted, the file will be saved in the *current* directory with the name `out.mda`. |
+| `-o FILENAME` or<br/>`--output=FILENAME` | The name (with optional relative or absolute path) of the .mda file that is created by MxBuild.<br />If this option is omitted, the file will be saved in the *current* directory with the name `out.mda`. |
 | `--project-name=NAME` | Change the name of the application as used by the Mendix Runtime.<br />When this option is not specified, the name of the project is used. |
 | `--model-version=VERSION` | Apply a specific version number to the model in the package. |
 | `--model-description=DESCRIPTION` | Embed a description of the model in the package. |
@@ -98,9 +101,9 @@ If the exit code is larger than 0, MxBuild will also output a message describing
 
 When your Mendix project contains errors, deployment will fail and MxBuild will report these errors. When running in Build mode, you can use the `--write-errors=FILENAME` command-line option to tell MxBuild to write the errors to a file. In Service mode, MxBuild will return the errors as part of the JSON response object.
 
-In both cases, the errors are output in as a JSON object that has one property `problems`. The value of this property is an array of objects that each describe one error, warning or deprecation in your project. For example:
+In both cases, the errors are output in as a JSON object that has one property: `problems`. The value of this property is an array of objects that each describe one error, warning or deprecation in your project. For example:
 
-```js
+```json
 {
   "problems": [
     {
@@ -178,8 +181,8 @@ Here is an example of this JSON object:
 | `target` | Y | `Package` or `Deploy`.<br/>When the target is `Package`, `mdaFilePath` is also required. |
 | `projectFilePath` | Y | the absolute path to the project (.mpr) file. |
 | `useLooseVersionCheck` | N | `true` or `false`.<br/>If set to `true`, MxBuild process lower-version projects to be deployed.<br/>`false` (the default) means that the project version needs to match the MxBuild version exactly.|
-| `forceFullDeployment` | N | `true` or `false`<br/>`false` (the default) specifies that fast deployment will be used if possible.<br/>`true` specifies that fast deployment will not be used.
-| `mdaFilePath` | ? | Required if target is `Package`<br/>The absolute path to the .mda file which will be created. |
+| `forceFullDeployment` | N | `true` or `false`.<br/>`false` (the default) specifies that fast deployment will be used if possible.<br/>`true` specifies that fast deployment will not be used.
+| `mdaFilePath` | ? | Required if target is `Package`.<br/>The absolute path to the .mda file which will be created. |
 | `projectName` | N | only used for a `Package`. |
 | `modelVersion` | N |  only used for a `Package`. |
 | `modelDescription` | N |  only used for a `Package`. |
@@ -206,7 +209,7 @@ Even if a restart is **not** required, you still need to call the M2EE command `
 
 For example:
 
-```js
+```json
 {
   "status": "Success",
   "restartRequired": true
@@ -216,7 +219,7 @@ For example:
 #### 6.2.3 Busy
 If a build is already in progress, the response will indicate this as follows:
 
-```js
+```json
 {
   "status": "Busy"
 }
@@ -226,7 +229,7 @@ If a build is already in progress, the response will indicate this as follows:
 
 If something goes wrong while processing the request, the status is `Failure` and an additional message describes the problem. For example:
 
-```js
+```json
 {
   "status": "Failure",
   "message": "Output file should be specified for target 'package'."
@@ -237,7 +240,7 @@ If something goes wrong while processing the request, the status is `Failure` an
 
 When your Mendix project contains consistency errors, deployment will fail and these errors (together with any warnings and deprecations) will be added to the `problems` property of the response. For example:
 
-```js
+```json
 {
   "status": "Failure",
   "message": "The project cannot be deployed, because it contains errors.",
@@ -262,7 +265,7 @@ When your Mendix project contains consistency errors, deployment will fail and t
 }
 ```
 
-See section 5, [Project Errors](#project-errors) for a description of the error format.
+See section 5, [Project Errors](#project-errors) for a description of this error format.
 
 ### 6.3 Shutting Down
 

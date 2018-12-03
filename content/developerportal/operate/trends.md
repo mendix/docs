@@ -1,7 +1,7 @@
 ---
 title: "Trends in Mendix Cloud v3"
 parent: "metrics"
-menu_order: 50
+menu_order: 10
 description: "Describes how to interpret various graphs and trends in the Mendix Cloud v3."
 tags: ["Trends","v3","Mendix Cloud","Developer Portal"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.

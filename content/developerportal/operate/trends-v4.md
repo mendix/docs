@@ -1,7 +1,7 @@
 ---
 title: "Trends in Mendix Cloud v4"
 parent: "metrics"
-menu_order: 60
+menu_order: 20
 description: "Describes how to interpret various graphs and trends in the Mendix Cloud v4."
 tags: ["Trends","v4","Mendix Cloud","Developer Portal"]
 ---

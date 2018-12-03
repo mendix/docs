@@ -6,6 +6,16 @@ tags: ["Developer Portal", "Cloud Environments", "Mendix Cloud", "SAP", "IBM", "
 
 ## 2018
 
+### December 1st, 2018
+
+#### Fixes
+
+* We fixed an issue that caused the Technical Contact role to be missing for some users of Cloud Portal. (Tickets 69085, 69150, 69419, 69440, 69458, 69585, 69592, 69783, 69884,70131,70228, 70285, 76152)
+* We fixed an issue that caused hanging deployments for some users of Cloud Portal (Tickets, 76691,76700)
+* We fixed a security issue that caused debugger password to be exposed to project members without deploy access. (Ticket 76172)
+* We fixed a security issue that caused application constants to be exposed to project members without deploy access. (Ticket 76171)
+* We addressed and fixed an issue that prevented some users from being able to deploy to their environments. (Tickets 77060, 77122)
+
 ### November 14th, 2018
 
 #### Mendix Shop

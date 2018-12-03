@@ -1,7 +1,7 @@
 ---
 title: "Developer Portal"
 description: "Release Notes for all aspects of the Mendix Developer Portal"
-tags: ["Developer Portal", "Cloud Environments", "Mendix Cloud", "SAP", "IBM", "On-premises", "Deployment"]
+tags: ["developer portal", "cloud environments", "Mendix Cloud", "SAP", "IBM", "on-premises", "deployment"]
 ---
 
 ## 2018
@@ -10,9 +10,9 @@ tags: ["Developer Portal", "Cloud Environments", "Mendix Cloud", "SAP", "IBM", "
 
 #### Fixes
 
-* We fixed an issue that caused the Technical Contact role to be missing for some users of Cloud Portal. (Tickets 69085, 69150, 69419, 69440, 69458, 69585, 69592, 69783, 69884,70131,70228, 70285, 76152)
-* We fixed an issue that caused hanging deployments for some users of Cloud Portal (Tickets, 76691,76700)
-* We fixed a security issue that caused debugger password to be exposed to project members without deploy access. (Ticket 76172)
+* We fixed an issue that caused the [Technical Contact](/developerportal/company-app-roles/technical-contact) role to be missing for some users of Deployment in the Developer Portal. (Tickets 69085, 69150, 69419, 69440, 69458, 69585, 69592, 69783, 69884,70131,70228, 70285, 76152)
+* We fixed an issue that caused deployments for some users to hang. (Tickets, 76691,76700)
+* We fixed a security issue that caused the debugger password to be exposed to app project members without deploy access. (Ticket 76172)
 * We fixed a security issue that caused application constants to be exposed to project members without deploy access. (Ticket 76171)
 * We addressed and fixed an issue that prevented some users from being able to deploy to their environments. (Tickets 77060, 77122)
 

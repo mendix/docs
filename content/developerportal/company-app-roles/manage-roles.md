@@ -86,17 +86,12 @@ A node can have only one Technical Contact to manage the node's environments, de
 
 If you are the current Technical Contact for an app, you can make another team member the Technical Contact by following these steps:
 
-1. Go to the [Developer Portal](http://home.mendix.com) and click **Apps** in the top navigation panel.
-2. Click **My Apps**, and in the drop-down list, click **Nodes**.
+1. Go to the [Developer Portal](http://home.mendix.com), click **Apps** in the top navigation panel, and select the app for which you want to change the Technical Contact.
+2. Click **Security** under the **Settings** category.
+3. Select the **Node Permissions** tab.
+4.  Below the name of the new Technical Contact, click **Change to Technical Contact**. The Technical Contact will be changed for all environments, and the change will be automatically saved.
 
-    ![](attachments/nodes.png)
-
-3. Select the node for which you want to change the Technical Contact.
-4. Click **Security** under the **Settings** category.
-5. Select the **Node Permissions** tab.
-6. Below the name of the new Technical Contact, click **Change to Technical Contact**. The Technical Contact will be changed for all environments. The change will be automatically saved.
-
-    ![](attachments/change-technicalcontact.png)      
+	![](attachments/change-technicalcontact.png)
 
 ## 7 Editing App Team Roles {#edit-app-team-roles}
 

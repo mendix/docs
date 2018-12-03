@@ -16,6 +16,7 @@ There are three layout widgets:
 * [Layout Grid](#layout-grid)
 * [Container](#container-overview)
 * [Group Box](#group-box-overview)
+* [Tab Container](#tab-container)
 
 ## 2 Layout Grid Overview {#layout-grid}
 
@@ -118,7 +119,41 @@ Properties available in the **General** section are described in the table below
 | Caption     | This property is only displayed when the **Show Header** option is enabled. It defines the caption that is shown in the header. |
 | Collapsible | This property is only displayed when the **Show Header** option is enabled. It defines whether the group box and its elements can be collapsed or expanded. Possible values of this property are the following:<ul><li>**Yes (start expanded)** – the elements inside the group box will be initially expanded and can be collapsed when a user clicks a minus icon in the header</li><li>**Yes (start collapsed)** – the elements inside the group box will be initially collapsed and can be expanded when a user clicks a plus icon in the header </li><li>**No** – group box elements cannot be expanded or collapsed</li></ul> |
 
-## 5 Related Content
+## 5 Tab Container Overview {#tab-container}
+
+A tab container is a container that is used to show information categorized into tabs. This can be useful if the amount of information that you would like to display is larger than the amount of space on the screen. For example, you can show a list of customers on one tab, and orders on the other one. 
+
+![](attachments/page-editor-widgets-layouts-wm/wm-tab-container-example.png)
+
+You can place a widget or a group of widgets inside each tab and configure information in them separately. 
+
+### 5.1 Tab Container General Properties
+
+In the **General** section, you can configure the following properties:
+
+*  **Tabs** – use radio buttons to switch from one tab to another; click the **Edit** icon to open the tab properties and configure it (for more information, see section [5.3 Tab Properties](#tab-properties))
+
+	![](attachments/page-editor-widgets-layouts-wm/wm-tab-container-tabs-property.png)
+
+*  **Add New Tab** – adds a new tab to your tab container; tab properties will open automatically (for more information, see section [5.3 Tab Properties](#tab-properties))
+
+	![](attachments/page-editor-widgets-layouts-wm/wm-add-new-tab.png)
+
+### 5.2 Tab Container Design Properties
+
+For information on the **Design** section and its properties, see [Design Section in Widgets of the Web Modeler](page-editor-widgets-design-section-wm).
+
+### 5.3 Tab Properties {#tab-properties}
+
+Each tab has the following properties: 
+
+* **Caption** – defines the name of the tab; you can also edit the caption by double-clicking it in the page 
+
+*  **Default Tab** – defines which tab is active when the page is opened. If no tab is set as the default one, the first tab page will be shown. By default, none of the tabs are set as a default tab.
+
+	![](attachments/page-editor-widgets-layouts-wm/wm-tab-properties.png)
+
+## 6 Related Content
 
 * [Page Editor in the Web Modeler](page-editor-wm) 
 * [Widgets in the Web Modeler](page-editor-widgets-wm)

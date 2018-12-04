@@ -3,6 +3,26 @@ title: "2.9"
 parent: "ats-2"
 ---
 
+## 2.9.4
+
+**Release date: December 4th, 2018**
+
+### Improvements
+
+* We have added the option to refresh the app roles from the app settings page. After clicking on this button the app roles for all users currently in the current app will be queried from Sprintr and updated in ATS, according to the standard rules for updating roles in ATS. Users who no longer have access to the corresponding project in Sprintr will be removed from the app. New members of a project in Sprintr have to login to ATS and accept the Terms and Conditions before they can become members of an app in ATS.
+
+* We have continued to make further optimizations on how tests results are processed in ATS. We expect that this will reduce the delay in seeing the results for a test.
+
+### (Potentially) Breaking change
+
+Due to complaints about flaky tests which were caused by long lasting *On change microflows* (>500 ms) we have decided to change the behaviour of the *Set value* function. 
+
+*Previous behaviour:* In previous versions, the *Set Value* function would type in a value in a input field and keep the focus on the field. Thus the on change / on leave microflows were not triggered until a later test step where another element on the page is focused for example by doing a click. This was done deliberately as we felt that it is a natural user behaviour, i.e. to keep the focus until an interaction occurs with another element on the page.
+
+*New behaviour:* Since ATS version 2.9.4 the *Set Value* function will unfocus the widget after setting the value and wait for on change / on leave microflows to finish before proceeding with the next steps in a test case. We hope that this will make tests more stable when on change microflows are used, since the wait will ensure that such microflows have finished executing before proceeding with the test.
+
+We do not expect this change to cause any issues with existing tests. However, if you notice strage behavior related to the *Set value* function after the update please inform us by submiting a support ticket.
+
 ## 2.9.3
 
 **Release date: October 15th, 2018**

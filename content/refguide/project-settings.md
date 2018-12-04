@@ -31,7 +31,7 @@ The resources are downloaded to the device once for each deployment and are reus
 
 ### 3.2 Optimize Network Calls
 
-If this option is enabled (**true** by default), Mendix analyzes every microflow that can be triggered from the client to minimize the number of objects which need to be sent. This speeds up your app significantly.
+If this option is enabled (**true** by default), Mendix analyzes every microflow that can be triggered from the client to minimize the number of objects required to be sent. This speeds up your app significantly.
 
 If you experience an issue while running your app in which objects seem to be lost, this option can be disabled to resolve that issue. If this does resolve the issue, please file a bug report so that we can fix the issue in the platform.
 
@@ -176,7 +176,7 @@ Falling back to the **Runtime** option will remove the unique constraints from t
 
 {{% alert type="info" %}}
 
-This setting was added in version 7.15 to introduce the (optimized) implementation.
+This setting was added in version 7.15 to introduce an optimized implementation.
 
 {{% /alert %}}
 

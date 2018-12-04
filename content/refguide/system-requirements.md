@@ -6,9 +6,13 @@ description: "Presents the system requirements for using the Mendix Platform."
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## Desktop Modeler
+## 1 Introduction
 
-The Mendix Modeler supports Windows 7, 8, and 10. It supports both 32-bit and 64-bit variations, but 64-bit is recommended.
+This document presents the system requirements for the various parts of the Mendix Platform.
+
+## 2 Desktop Modeler
+
+The Mendix [Desktop Modeler](desktop-modeler) supports Windows 7, 8, and 10. It supports both 32-bit and 64-bit variations, but 64-bit is recommended.
 
 The following frameworks are automatically installed (if necessary):
 
@@ -18,41 +22,43 @@ The following frameworks are automatically installed (if necessary):
 * Java Development Kit 1.8
 
 {{% alert type="warning" %}}
-
-You can choose which JDK is used for building and running locally through the **Edit** > **Preferences** menu item.
-
+You can choose which JDK is used for building and running locally via the **Edit** > **Preferences** menu item in the Desktop Modeler.
 {{% /alert %}}
 
-If you want to use TortoiseSVN in combination with the Modeler, download the latest version 1.7.x from the [Sourceforge page](http://sourceforge.net/projects/tortoisesvn/files/?source=navbar).
+If you want to use TortoiseSVN in combination with the Desktop Modeler, download the latest version 1.7.x from [Sourceforge](http://sourceforge.net/projects/tortoisesvn/files/?source=navbar).
 
-### Team Server
+## 3 Team Server
 
-The Team Server is implemented using Subversion and the Modeler uses the HTTPS protocol to communicate with that server. To access the Team Server from within the Modeler, the network at your location needs the following settings:
+The [Team Server](team-server) is implemented using Subversion, and the Modeler uses the HTTPS protocol to communicate with that server. To access the Team Server from within the Desktop Modeler, the network at your location needs the following settings:
 
 * The HTTPS port (TCP 443) needs to be open
 * The HTTP port (TCP 80) needs to be open
 * WebDAV (verbs within the HTTP protocol) needs to be enabled on the proxy server (if any)
 
-## Web Modeler
+## 4 Web Modeler
 
-The Mendix Web Modeler is optimized for use with Chrome. While Chrome is the officially supported browser, you can also use the Web Modeler with other popular browsers like Firefox, Safari and Edge. Note: the browser you use needs to have JavaScript turned on.
+The Mendix Web Modeler is optimized for use with Google Chrome. While Chrome is the officially supported browser, you can also use the Web Modeler with other popular browsers like Mozilla Firefox, Apple Safari, and Microsoft Edge. 
 
-## Server
+{{% alert type="info" %}}
+The browser you use needs to have JavaScript turned on.
+{{% /alert %}}
 
-### Operating System
+## 5 Server
+
+### 5.1 Operating System
 
 * Microsoft Windows Server 2008 SP2 and above
 * Debian 8 (Jessie) and above
 * Red Hat Enterprise Linux 6, Red Hat Enterprise Linux 7
 * CentOS 6, CentOS 7
 
-### Web Server
+### 5.2 Web Server
 
 * Microsoft Internet Information Services 7 and above
 * Nginx (tested with versions included in Debian Jessie and Debian Jessie Backports)
 * Apache
 
-### Database Server
+### 5.3 Database Server
 
 * [IBM DB2](db2) 11.1
 * [MariaDB](mysql) 5.5, 10.0, 10.1
@@ -61,51 +67,55 @@ The Mendix Web Modeler is optimized for use with Chrome. While Chrome is the off
 * [Oracle Database](oracle) 11g Release 2, 12c Release 1
 * PostgreSQL 9.2, 9.3, 9.4, 9.5, 9.6, 10
 
-### Java
+### 5.4 Java
 
-When running Mendix on a server you will need Java Runtime Environment (JRE) 8.
+When running Mendix on a server, you will need Java Runtime Environment (JRE) 8. To download JREs, see [Java SE Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html).
 
-You can download JREs here:
+{{% alert type="info" %}}
 
-[http://www.oracle.com/technetwork/java/javase/downloads/index.html](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
+There is an issue since Java 7 that causes timeouts when using web services with a certain amount of data. You can circumvent this issue by adding the VM params `-Djava.net.preferIPv4Stack=true`. The Mendix Desktop Modeler will do this for you, but if you are running Mendix on premises on a Windows server, you will need to do this yourself.
 
-There is an issue since Java 7, causing timeouts when using Web Services with a certain amount of data. You can circumvent this issue by adding the VM params "`-Djava.net.preferIPv4Stack=true`". The Mendix Desktop Modeler will do this for you but if you are running Mendix on premise on a Windows server you will need to do this yourself.
+For more information about this issue, see [HotSpot (64bit server) hangs on socket read (JVM 1.7 bug?) - updated](http://blog.bielu.com/2011/11/hotspot-64bit-server-hangs-on-socket.html) and [Possible Bug in Java 7](https://forums.oracle.com/forums/thread.jspa?messageID=9985748).
 
-For more information about this issue, have a look at [http://blog.bielu.com/2011/11/hotspot-64bit-server-hangs-on-socket.html](http://blog.bielu.com/2011/11/hotspot-64bit-server-hangs-on-socket.html) or [https://forums.oracle.com/forums/thread.jspa?messageID=9985748](https://forums.oracle.com/forums/thread.jspa?messageID=9985748)
+{{% /alert %}}
 
-### Application Server
+### 5.5 Application Server
 
-Jetty is built into the Mendix Runtime, an application server is not required.
+Jetty is built into the [Mendix Runtime](runtime), so an application server is not required.
 
-## Desktop Browsers
+## 6 Browsers
 
-* Mozilla Firefox 
+### 6.1 Desktop Browsers
+
 * Google Chrome
+* Mozilla Firefox 
 * Apple Safari
 * Microsoft Edge
 * Microsoft Internet Explorer 11
 
-## Mobile Browsers
+### 6.2 Mobile Browsers
 
 * iOS 9 and above (Safari)
 * Android 5.0 and above
 * Windows Phone 8 and above
 
-## Mobile Operation Systems (for the Mendix Mobile App)
+## 7 Mobile Operation Systems
+
+This is important for the [Mendix mobile app](getting-the-mendix-app):
 
 * iOS 9 and above
 * Android 5.0 and above
 
-## MxBuild
+## 8 MxBuild
 
-MxBuild is a command-line tool that can be used to build a Mendix Deployment Package. See [MxBuild](mxbuild) for more information.
+MxBuild is a command-line tool that can be used to build a Mendix deployment package. For more information, see [MxBuild](mxbuild).
 
-### Mendix version 7.1 and above
+### 8.1 Mendix Version 7.1 & Above
 
 * Mono v4.6.x
 * JDK 8.
 
-### Mendix version 6 and Version 7.0.2
+### 8.2 Mendix Version 6 & Version 7.0.2
 
 * Mono v3.1.0
 * JDK 8

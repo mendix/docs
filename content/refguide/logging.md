@@ -1,6 +1,6 @@
 ---
 title: "Logging"
-category: "Runtime"
+category: "Mendix Runtime"
 ---
 
 

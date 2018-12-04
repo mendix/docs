@@ -1,6 +1,6 @@
 ---
 title: "Data Storage"
-category: "Runtime"
+category: "Mendix Runtime"
 ---
 
 Data storage is the data foundation of the Mendix runtime. Data storage does the following:

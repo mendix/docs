@@ -1,5 +1,5 @@
 ---
-title: "Runtime"
+title: "Mendix Runtime"
 ---
 
 ## 1 Introduction
@@ -26,5 +26,5 @@ Links to available API documentation such as WSDLs for published web services ar
 * [Date & Time Handling](datetime-handling-faq)
 * [Logging](logging)
 * [Monitoring Mendix Runtime](monitoring-mendix-runtime)
-* [Mendix Objects & Caching](objects-and-caching)
+* [Objects & Caching](objects-and-caching)
 * [Transient Objects & Garbage Collecting](transient-objects-garbage-collecting)

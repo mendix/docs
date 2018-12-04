@@ -1,6 +1,6 @@
 ---
 title: "Monitoring Mendix Runtime"
-category: "Runtime"
+category: "Mendix Runtime"
 description: "Describes the supported Mendix Runtime monitoring actions."
 tags: ["runtime, json"]
 ---

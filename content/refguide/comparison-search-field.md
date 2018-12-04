@@ -13,6 +13,12 @@ parent: "search-bar"
 
 {{% snippet file="refguide/Search+Field+Default+Value+Property.md" %}}
 
+{{% snippet file="refguide/Search+Field+Custom+Date+Format+Property.md" %}}
+
+{{% snippet file="refguide/Custom+Date+Format+Tokens.md" %}}
+
+{{% snippet file="refguide/Search+Field+Placeholder+Property.md" %}}
+
 ## General Properties
 
 {{% snippet file="refguide/Search+Field+Attribute+Path+Property.md" %}}

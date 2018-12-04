@@ -143,12 +143,12 @@ Now the application is ready to store redundant data, but you still need to keep
 
 ## 5 Related Content
 
-* [How to Work with Images and Files](working-with-images-and-files)
+* [How to Work with Images & Files](working-with-images-and-files)
 * [How to Create a Basic Data Layer](create-a-basic-data-layer)
 * [How to Set Up Data Validation](setting-up-data-validation)
 * [How to Work with Object Events](working-with-object-events)
 * [How to Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
-* [How to Manage Sprints and Stories](/developerportal/howto/managing-your-application-requirements-with-mendix)
+* [Stories](/developerportal/collaborate/stories)
 * [How to Define Access Rules Using XPath](../logic-business-rules/define-access-rules-using-xpath)
 * [How to Perform the Scout and Windows 10 Workaround](../ux/perform-scout-and-windows-10-workaround)
 * [Attributes](/refguide7/attributes)

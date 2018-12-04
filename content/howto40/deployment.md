@@ -7,7 +7,6 @@ Please select a how-to:
 *   [Activate Your Mendix License](activate-your-mendix-license)
 *   [Mendix on the Mendix Cloud](mendix-on-the-mendix-cloud)
     *   [Migrating Your Data](migrating-your-data)
-    *   [Sending Email](sending-email)
     *   [Uploading Your Project](uploading-your-project)
 *   [Mendix on Windows - Service Console 3](mendix-on-windows---service-console-3)
     *   [Prerequisites](prerequisites)

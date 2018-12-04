@@ -1,6 +1,6 @@
 ---
 title: "Configuring Hybrid Mobile Apps To Run Offline"
-category: "Mobile"
+category: "Mobile Development"
 ---
 
 

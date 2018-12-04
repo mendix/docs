@@ -1,7 +1,7 @@
 ---
 title: "ATS 1 How-to's"
 category: "How-to's"
-menu_order: 10
+menu_order: 20
 ---
 
 These are the documents in this section:

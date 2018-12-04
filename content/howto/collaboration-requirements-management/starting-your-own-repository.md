@@ -1,6 +1,7 @@
 ---
 title: "Starting Your Own Repository"
 category: "Collaboration & Requirements Management"
+menu_order: 30
 tags: []
 ---
 
@@ -36,9 +37,9 @@ If you want to make a new release for the App Store, we advise you start off wit
 
 ## 6 Related Content
 
-*   [How to Manage Sprints and Stories](/developerportal/howto/managing-your-application-requirements-with-mendix)
+*   [Stories](/developerportal/collaborate/stories)
 *   [Contributing to a GitHub repository](contribute-to-a-github-repository)
 *   [Using Team Server - Version Control](using-team-server-_-version-control)
-*   [How to Use the Feedback Widget](/developerportal/howto/gathering-user-feedback)
+*   [How to Use the Feedback Widget](/developerportal/feedback/use-feedback-widget)
 *   [Sharing the Development Database](sharing-the-development-database)
 

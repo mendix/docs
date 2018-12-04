@@ -1,7 +1,8 @@
 ---
-title: "Use Connectors and Adapters"
+title: "Use Connectors & Adapters"
 category: "Extensibility"
-tags: []
+menu_order: 7
+tags: ["extensibility", "connector", "adapter", "extensibility"]
 ---
 
 ## 1 Introduction

@@ -1,7 +1,7 @@
 ---
 title: "ATS 2 Reference Guide"
 category: "Reference Guide"
-menu_order: 20
+menu_order: 10
 ---
 
 These are the main documents in this category:

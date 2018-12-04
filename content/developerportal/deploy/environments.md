@@ -1,8 +1,8 @@
 ---
 title: "Environments"
-category: "Deploy"
-menu_order: 10
-description: "This page describes the deploy options of your App."
+parent: "mendix-cloud-deploy"
+menu_order: 5
+description: "List the environments in which your app is deployed. Also the starting point for managing existing environments and further deployments."
 tags: ["Deploy","App","Developer Portal"]
 ---
 
@@ -21,7 +21,7 @@ In the **Environments** section of the **Deploy** category, there is an overview
     * IP Address Filtering
     * TLS Client Certificate Verification
     
-   ![](attachments/environment-tab.png)       
+   ![](attachments/environments/environment-tab.png)       
 
 ## 2 Deploy
 
@@ -29,7 +29,7 @@ In the **Deploy** tab, you can find the information below about your environment
 
 ### 2.1 Deployment Package Repository
 
-![](attachments/deployment-package.png)
+![](attachments/environments/deployment-package.png)
 
 In the **Deployment Package Repository** section, there is an overview of the following:
 
@@ -38,6 +38,8 @@ In the **Deployment Package Repository** section, there is an overview of the fo
 *   Creation date of the deployment package
 *   Uploaded by
 *   Expire date of the deployment package
+
+**Actions**
 
 There are also four actions you can perform, which are described below.
 
@@ -60,6 +62,8 @@ Next to the deployment package info, if you click **Details**, the following ite
 * A build output
 * An overview of the environments that are currently running on this deployment package
 
+**Actions**
+
 There are also two action you can perform:
 
 * Download the package
@@ -71,7 +75,7 @@ If you click **Deploy**, the package from the team server will be transported to
 
 ### 2.2 Environments
 
-![](attachments/deploy-environments.png)
+![](attachments/environments/deploy-environments.png)
 
 In this section, you have the an overview of all the available environments with the following details:
 
@@ -84,30 +88,26 @@ In this section, you have the an overview of all the available environments with
 There are three types of environment statuses:
 
 *   Green – there are no alerts
-*   Orange – there is a warning alert
-*   Red – there is a critical alert
+*   Orange – there is at least one warning alert, but no critical alerts
+*   Red – there is at least one critical alert
 
-To see the details of the alerts, click **Alerts** under the **Operate** category.
+{{% alert type="info" %}}
+The environment status is cached; there can be a delay of up to five minutes before the status icon displays a change of status.
+{{% /alert %}}
+
+To see the details of the alerts, click **Alerts** under the **Operate** category. This is documented here: [Alerts](/developerportal/operate/monitoring-application-health).
+
+**Actions**
 
 There are two actions you can take :
 
-* Transport the environment to the acceptance/production environment
-* View the details of the environment
+* **Details** of the selected environment – information about the details available are documented here: [Details](environments-details)
 
-After clicking [Details](/developerportal/deploy/environments-details) of the selected environment, you can see the following tabs:
-
-* General
-* Model Options
-* Network
-* Loglevels
-* Runtime
-* Maintenance
-
-![](attachments/environment-details.png)    
+* **Transport to ...** – initiates the staging of an environment to the next stage: acceptance or production
 
 ### 2.3 Activity
 
-![](attachments/activity.png)
+![](attachments/environments/activity.png)
 
 This section shows the following activity types:
 
@@ -120,7 +120,7 @@ Clean | The environment has been cleaned.
 Custom Domain | Changes were made to the custom domain.
 Database Backup Downloaded | The database backup has been downloaded.
 Migration | The app has been migrated from one node to another node.
-Error | An error has occured while uploading an *.mda* file.
+Error | An error has occurred while uploading an *.mda* file.
 Files Backup Downloaded | Backup files have been downloaded.
 Maintenance | The admin password has been changed.
 MDA Uploaded | An *.mda* file has been uploaded.
@@ -137,7 +137,7 @@ When your Mendix app needs to be accessible via your own URL (for example, `http
 
 There is also a section with an overview of linked custom domains.
 
-For more information, see [How to Configure Custom Domains](/developerportal/howto/custom-domains).
+For more information, see [How to Configure Custom Domains](custom-domains).
 
 ## 4 Access Restriction Profiles
 
@@ -145,7 +145,7 @@ In this tab you can manage custom access restriction profiles. These profiles ca
 
 ## 5 Related Content 
 
-* [Deploy](/developerportal/deploy)
-* [Environment Details](/developerportal/deploy/environments-details)
-* [How to Receive Environment Status Alerts](/developerportal/howto/receive-alerts)
-* [How to Restrict Access for Incoming Requests](/deployment/mendixcloud/access-restrictions)
+* [Deploy and Manage](/developerportal/deploy)
+* [Environment Details](environments-details)
+* [How to Receive Environment Status Alerts](/developerportal/operate/receive-alerts)
+* [How to Restrict Access for Incoming Requests](access-restrictions)

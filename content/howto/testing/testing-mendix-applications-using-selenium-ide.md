@@ -1,7 +1,8 @@
 ---
 title: "Test Mendix Applications Using Selenium IDE"
 category: "Testing"
-tags: []
+menu_order: 40
+tags: ["test", "testing", "selenium"]
 ---
 
 ## 1 Introduction

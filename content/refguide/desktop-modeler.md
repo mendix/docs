@@ -2,30 +2,59 @@
 title: "Desktop Modeler"
 description: "Describes the various features of the Mendix Modeler, including document templates, the domain model, microflows, modules, pages, and security."
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
+tags: ["Mendix", "Desktop Modeler", "Documents"]
 ---
 
-This section of the Mendix Reference Guide describes the various features of the Mendix Desktop Modeler, including document templates, the domain model, microflows, modules, pages, and security.
+## 1 Introduction
 
-## Main Documents in This Category
+The Mendix Desktop Modeler is the most powerful tool for creating, viewing, and editing your Mendix applications. This category describes the various features of the Desktop Modeler, including document templates, the domain model, microflows, modules, pages, and security.
 
-* [Constants](constants)
-* [Data Sets](data-sets)
-* [Data Types](data-types)
-* [Dialogs](dialogs)
-* [Document Templates](document-templates)
-* [Domain Model](domain-model)
-* [Enumerations](enumerations)
-* [Images](images)
-* [Integration](integration)
-* [Java Actions](java-actions)
-* [Microflows](microflows)
-* [Modules](modules)
-* [Nanoflows](nanoflows)
+For more introductory information, see [Desktop Modeler Overview](desktop-modeler-overview)
+
+## 2 Main Documents in This Category
+
+Your Mendix app is called a project in the Modeler. An app project consists of different types of items, such as pages and microflows. These are generically referred to as documents, and they are stored in modules and folders.
+
+To add a document to your app project, right-click the destination module or folder in the Modeler's **Project Explorer**:
+
+![Right-click menu in Project Explorer](attachments/desktop-modeler/add-document.png)
+
+The following documents in the **Desktop Modeler** category of the *Mendix Reference Guide* describe the documents you can add:
+
 * [Pages](pages)
-* [Projects](project)
-* [Regular Expressions](regular-expressions)
+* [Microflows](microflows)
+* [Nanoflows](nanoflows)
+* [Images](images)
+* [Layouts](layout)
+* [Menus](menu)
+* [Snippets](snippet)
+* [Building blocks](building-block)
+* [Page templates](page-templates)
+* [Java actions](java-actions)
 * [Rules](rules)
-* [Scheduled Events](scheduled-events)
+* [Enumerations](enumerations)
+* [Data sets](data-sets)
+* [Constants](constants)
+* [Regular expressions](regular-expressions)
+* [Scheduled events](scheduled-events)
+* [Document templates](document-templates)
+* [Message definitions](message-definitions)
+* [JSON structures](json-structures)
+* [XML schemas](xml-schemas)
+* [Export mappings](export-mappings) and [import mappings](import-mappings)
+* [Consumed app services](consumed-app-services) and [consumed web services](consumed-web-services)
+* [Published REST services](published-rest-services), [published web services](published-web-services), [published OData services](published-odata-services), and [published app services](published-app-services)
+
+## 3 Other Documents in This Category
+
+The following documents provide additional information about using the Desktop Modeler
+
+* [Data Types](data-types)
+* [Dialog Boxes](dialogs)
+* [Domain Model](domain-model)
+* [Integration](integration)
+* [Modules](modules)
+* [Projects](project)
 * [Security](security)
 * [Translatable Texts](translatable-texts)
 * [XML](xml-reference-guide)

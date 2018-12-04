@@ -1,20 +1,92 @@
 ---
 title: "Developer Portal"
 description: "Release Notes for all aspects of the Mendix Developer Portal"
-tags: ["Developer Portal", "Cloud Environments", "Mendix Cloud", "SAP", "IBM", "On-premises", "Deployment"]
+tags: ["developer portal", "cloud environments", "Mendix Cloud", "SAP", "IBM", "on-premises", "deployment"]
 ---
 
 ## 2018
+
+### December 1st, 2018
+
+#### Fixes
+
+* We fixed an issue that sometimes caused the team member with the [Technical Contact](/developerportal/company-app-roles/technical-contact) role to be hidden on the *Node Permissions* tab of the *Security* pages. (Tickets 69085, 69150, 69419, 69440, 69458, 69585, 69592, 69783, 69884,70131,70228, 70285, 76152)
+* We fixed an issue that caused deployments for some users to hang. (Tickets, 76691,76700)
+* We fixed a security issue that allowed app team members without deploy access to see the debugger password. (Ticket 76172)
+* We fixed a security issue that allowed app team members without deploy access to see application constants. (Ticket 76171)
+* We addressed and fixed an issue that prevented some users from being able to deploy to their environments. (Tickets 77060, 77122)
+
+### November 14th, 2018
+
+#### Mendix Shop
+
+*  The [Mendix Shop](https://mendixshop.mendixcloud.com) is open for business! This is a web shop where you can spend the credits you have gained by completing various [challenges](/developerportal/mendix-profile/#challenges). The shop has cool products like Mendix t-shirts, socks, and sweatbands, so be sure to check it out.
+
+	{{% image_container width="300" %}}![](attachments/shop.png)
+	{{% /image_container %}}
+
+#### Fixes
+
+* We fixed an issue in which [custom error pages](/howto/ux/custom-error-page) did not work for online applications in Mendix Cloud V4.
+
+### November 1st, 2018
+
+#### Fixes
+
+* We fixed an issue that caused an error while creating a backup in Mendix Cloud v4. (Tickets 70086, 70090, 75936, 75996)
+
+#### Improvements
+
+* We made improvements in the communication between the Web Modeler and the Developer Portal.
+
+### October 30th, 2018
+
+#### Cloud v3 PostgreSQL Backup Format Changed
+
+* Cloud v3 PostgreSQL backups are now created with `pg_dump` version 1.13. This version has been shipped with PostgreSQL since March 2018 (PostgreSQL 10.3, 9.6.8, 9.5.12, 9.4.17, and 9.3.22). The side-effect is that it is not possible to restore these PostgreSQL backups using a `pg_restore` version below 1.13. The error that you will receive is `pg_restore: [archiver] unsupported version (1.13) in file header`. To fix this issue, upgrade your PostgreSQL client software to one that includes newer versions of `pg_dump` and `pg_restore`.
+
+### October 29th, 2018
+
+#### Improvements
+
+* Deploying to IBM Cloud is available from within Mendix. If you start with an IBM starter app, you will be taken through the process of creating a deployment environment on IBM Cloud. You can then deploy your app to IBM Cloud from within the Desktop Modeler or Mendix Developer Portal. More information is available in [IBM Cloud](/developerportal/deploy/ibm-cloud). You can also find Mendix Starter Kits on IBM Cloud and start the process from there.
+
+### October 22nd, 2018
+
+#### Improvements
+
+* Apps deployed to SAP Cloud Platform can be edited in the Web Modeler or Desktop Modeler by choosing the appropriate option on the **Edit App** button in the Developer Portal. Older apps can have this functionality enabled using the **Enable Web Modeler** button on the **General** settings page.
+* Logs for apps deployed to SAP Cloud Platform can be viewed with Kibana from the **Logs** page of the Developer Portal. See [Logs](/developerportal/operate/logs) for more information.
+
+### October 17th, 2018
+
+#### Improvements
+
+* We have overhauled the scaling user interface to make it more intuitive. (Ticket 67557)
+* It is now possible to pause and resume downloading backups for Mendix Cloud V4 applications.
+
+#### Fixes
+
+* We fixed a memory leak problem that caused Developer Portal to have longer response times.
+* We addressed and fixed an issue that caused some Developer Portal users to see empty dialog boxes instead of error message content. (Tickets 67626, 69363)
+* We addressed an issue that caused live logging to freeze from time to time. The fix has been confirmed on all mainstream browsers except for Internet Explorer, which we still are investigating. (Ticket 66418)
+* We fixed an issue which caused subdomain validation errors for sandbox environments. (Ticket 56574)
+
+### October 16th, 2018
+
+#### Fixes
+
+* It is now possible to go to a Mendix community member's new [Mendix Profile](/developerportal/mendix-profile/index) directly from the [Buzz](/developerportal/collaborate/buzz) and [People](https://sprintr.home.mendix.com/link/people) pages. (Ticket 69702)
 
 ### October 11th, 2018
 
 #### Improvements
 
-* The Mendix Profile in the Developer Portal has been merged with the Community Profile. For more information, see [Mendix Profile](/developerportal/general/mendix-profile).
+* The Mendix Profile in the Developer Portal has been merged with the Community Profile. For more information, see [Mendix Profile](/developerportal/mendix-profile/index).
 * Several UX updates were made to Developer Portal pages:
   * The [My Apps](https://sprintr.home.mendix.com/link/myapps) page has been redesigned, and you can now toggle your app list views.
   * The **App** > **General** page has been redesigned.
-  * The [People](https://developer.mendixcloud.com/link/people) overview has been redesigned. The same view on Mendix community members is available in the [Connections tab](/developerportal/general/mendix-profile#connections) of your Mendix Profile.
+  * The [People](https://developer.mendixcloud.com/link/people) overview has been redesigned. The same view on Mendix community members is available in the [Connections tab](/developerportal/mendix-profile/index#connections) of your Mendix Profile.
 
 ### October 1st, 2018
 
@@ -24,7 +96,7 @@ The Web Modeler can now be enabled for all types of apps. You can do this on the
 
 #### SAP OData Connector Version 4.0.0
 
-This version of the SAP OData Connector allows you to use the destination services of SAP Cloud Platform. This simplifies configuration, authentication and endpoint management when integrating your application, running in SAP Cloud Platform, with SAP backend services. See [SAP Destination Services](/refguide/sap/sap-destination-services).
+This version of the SAP OData Connector allows you to use the destination services of SAP Cloud Platform. This simplifies configuration, authentication and endpoint management when integrating your application, running in SAP Cloud Platform, with SAP backend services. See [SAP Destination Service](/refguide/sap/sap-destination-service).
 
 The following authentication types are currently supported in SAP Destination Services:
 
@@ -42,7 +114,7 @@ The SAP Leonardo Machine Learning Foundation Connector is available in the App S
 
 #### SAP Fiori Styling
 
-The existing SAP Blank starter app has been replaced by a new Fiori Blank starter app. This new Fiori Blank starter app has a new Fiori UI Package included. This is based on Atlas UI, which means that you can use either the Web Modeler or Desktop Modeler to build applications which give the Fiori UI experience. 
+The existing SAP Blank starter app has been replaced by a new Fiori Blank starter app. This new Fiori Blank starter app has a new Fiori UI Package included. This is based on Atlas UI, which means that you can use either the Web Modeler or Desktop Modeler to build applications which give the Fiori UI experience.
 
 #### SAP Cloud Deployment Version 3.5.2
 
@@ -50,7 +122,7 @@ We now configure Destination Service in the scope of XSUAA. This means that we a
 
 #### Breaking Changes
 
-* The new **SAP OData Connector** will break existing projects which are using the SAP Cloud Connector. The SAP OData Connector no longer supports the “Use Cloud Connector” attribute. This is now embedded in the destination service configuration. See [SAP Destination Services](/refguide/sap/sap-destination-services) for more details. 
+* The new **SAP OData Connector** will break existing projects which are using the SAP Cloud Connector. The SAP OData Connector no longer supports the “Use Cloud Connector” attribute. This is now embedded in the destination service configuration. See [SAP Destination Service](/refguide/sap/sap-destination-service) for more details.
 
 #### Fixes
 
@@ -70,7 +142,7 @@ We now configure Destination Service in the scope of XSUAA. This means that we a
 
 #### Fixes
 
-* We have fixed a bug that was causing some Mendix Cloud v4 users to unsubscribe from alerting lists after changing environment privilege settings. 
+* We have fixed a bug that was causing some Mendix Cloud v4 users to unsubscribe from alerting lists after changing environment privilege settings.
 * We have addressed an issue that caused some Mendix Cloud v4 users to not to be able to see their archived logs from previous day.
 
 ### August 13th, 2018
@@ -78,16 +150,16 @@ We now configure Destination Service in the scope of XSUAA. This means that we a
 #### Improvements
 
 * A new API call for accessing the logs of Mendix Cloud V4 applications is now available. Detailed information can be found in the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api).
-* It is now possible to add custom environment variables via the Cloud Portal to set up application metrics with Datadog and Telegraph.
-* All the log levels in the Cloud Portal (as in, INFO, ERROR, TRACE, DEBUG, WARNING, CRITICAL) are now also available in Datadog.
-* The Postgres database size can also be observed in Datadog after enabling it in the Cloud Portal.
+* It is now possible to add custom environment variables via the Developer Portal to set up application metrics with Datadog and Telegraph.
+* All the log levels in the Developer Portal (as in, INFO, ERROR, TRACE, DEBUG, WARNING, CRITICAL) are now also available in Datadog.
+* The Postgres database size can also be observed in Datadog after enabling it in the Developer Portal.
 
 #### Fixes
 
 * We improved the feedback messages in the case of a startup failure.
-* The status page link in alert emails now redirects you to the corresponding alerts page in the Cloud Portal.
+* The status page link in alert emails now redirects you to the corresponding alerts page in the Developer Portal.
 * We solved an issue that caused blank error messages during backup creation.
-* The **Environments** breadcrumb in **Deploy** > **Environments** > environment is now a link that redirects you back to the **Environments** page. 
+* The **Environments** breadcrumb in **Deploy** > **Environments** > environment is now a link that redirects you back to the **Environments** page.
 
 ### August 9th, 2018
 
@@ -126,7 +198,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 * We improved the deployment speed for the Asia region. The feature is not enabled by default, so you need to request it if necessary.
 * We implemented tags on environments for metrics in Datadog. It is now possible to add custom tags to metrics that will serve as selection criteria for grouping environments. Environment tags can be created, retrieved, and deleted using APIs. Detailed information can be found in the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api).
-* We changed the yearly overview of trends to quarterly in the Cloud Portal for v4 applications.
+* We changed the yearly overview of trends to quarterly in the Developer Portal for v4 applications.
 * It is now possible for an Operations Manager to reorder environments.
 * Custom offline pages are now immediately active after the transport of a new deployment package.
 
@@ -177,11 +249,12 @@ In some cases, you may still experience false positives for the runtime heartbea
 #### Improvements
 
 * We have introduced scaling via API for Mendix Cloud V4. It is now possible to scale Mendix Cloud V4 applications via the Deploy API. For instructions, see the [Deploy API](../../apidocs-mxsdk/apidocs/deploy-api).
-* We have aggregated the health icons for the acceptance and test environments in the **Nodes** dashboard and **Company Admin** screen.
+*  We have aggregated the health icons for the acceptance and test environments in the **Nodes** dashboard and **Company Admin** screen.
 
-  ![](attachments/CPHealthIcon.png)
+	{{% image_container width="300" %}}![](attachments/CPHealthIcon.png)
+	{{% /image_container %}}
 
-  * The health icon will display the health status of the environment that is in the worst condition. This is to prepare for an upcoming release that will support more than three environments per application.
+* The health icon will display the health status of the environment that is in the worst condition. This is to prepare for an upcoming release that will support more than three environments per application.
 
 #### Fixes
 
@@ -262,7 +335,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 #### Improvements
 
-* We changed the browser title from "Mendix App Plaform" to **Mendix Platform** to be consistent with our messaging and documentation.
+* We changed the browser title from "Mendix App Platform" to **Mendix Platform** to be consistent with our messaging and documentation.
 * We have improved database storage alerts for Mendix Cloud v4 applications. If you subscribed to your applications' alerts, you will receive a warning alert when you have less than 25% disk space on your applications' databases and a critical alert when disk space is below 10%. You need to re-deploy your application to activate this alert.
 * Live logging for Mendix Cloud v4 applications is here! You can now view logs neatly and in real-time.
 * Hybrid mobile improvements: you can now generate icons and splash screens, add custom loader and error images, and add custom HTML and CSS. We also added a new theming section for minor color tweaks.
@@ -284,7 +357,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 #### Fixes
 
 * Switching between environments in the **Metrics** menu of Mendix Cloud v3 apps is now fixed.
-* We fixed the syncronization problem that prevented Mendix Cloud v3 users from seeing their latest nightly backups.
+* We fixed the synchronization problem that prevented Mendix Cloud v3 users from seeing their latest nightly backups.
 
 ### February 27th, 2018
 
@@ -377,7 +450,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 #### Fixes
 
-* We adressed an issue that prevents Free Apps from being embedded in an iframe.
+* We addressed an issue that prevents Free Apps from being embedded in an iframe.
 
 ### November 27th, 2017
 
@@ -424,13 +497,13 @@ In some cases, you may still experience false positives for the runtime heartbea
 #### Improvements
 
 * Deployments with almost no downtime: It is now possible to deploy a different version without stopping a running application. Once the deployment is done, you can restart the application with a single click. This is now available for Mendix Cloud v4. For Mendix Cloud v3, this will be available soon.
-* Improved the robustness of the Deploy API: Occasional failures that occured while starting/stopping an environment via the Deploy API no longer occur.
+* Improved the robustness of the Deploy API: Occasional failures that occurred while starting/stopping an environment via the Deploy API no longer occur.
 * Improved the stability for transporting deployment packages for Asia-Pacific users for Mendix Cloud v4.
 * Environment health indicators for your environments are now much more accurate.
 
 #### Fixes
 
-* We fixed a problem where Team Server branches that were committed without the Mendix Modeler were hidden in the Cloud Portal.
+* We fixed a problem where Team Server branches that were committed without the Mendix Modeler were hidden in the Developer Portal.
 * We fixed a problem where changing an access restriction profile could display a wrong error about having more than 1 certificate in use.
 
 ### September 25th, 2017
@@ -474,7 +547,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 #### Improvements
 
-* We enabled path-based access restrictions for all Mendix Cloud v3 apps. This allows users to more easily configure access restrictions on their environments. For more information, see [Access Restrictions](/deployment/mendixcloud/access-restrictions). Mendix Cloud v4 already has this functionality enabled.
+* We enabled path-based access restrictions for all Mendix Cloud v3 apps. This allows users to more easily configure access restrictions on their environments. For more information, see [Access Restrictions](/developerportal/deploy/access-restrictions). Mendix Cloud v4 already has this functionality enabled.
 
 ### August 14th, 2017
 

@@ -2,6 +2,7 @@
 title: "Images"
 category: "Desktop Modeler"
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
+tags: ["Images", "Image Collections", "png", "Desktop Modeler"]
 ---
 
 
@@ -11,7 +12,15 @@ The System module contains some images that are used by the standard components.
 
 ## Supported Formats
 
-The following image formats are supported: png, gif, jpeg, bmp. PNG is recommended; it is compressed without losing any information and supports transparancy very well.
+The following image formats are supported: png, gif, jpeg, bmp. PNG is recommended; it is compressed without losing any information and supports transparency very well.
+
+## Custom Images
+
+To use your own images, they must first be added to an **Image collection**.
+
+Right-click a module in the *Project Explorer* and choose **Add other > Image collection** to add a new image collection.
+
+Open the **Image Collection** to add custom images to your module.
 
 ## Common Properties
 

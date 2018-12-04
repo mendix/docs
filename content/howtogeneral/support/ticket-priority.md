@@ -1,10 +1,10 @@
 ---
 title: "Ticket Priority"
 category: "Mendix Support"
-#parent: ""
 #description: ""
 #tags: []
 ---
+
 ## 1 Introduction
 The Priority Levels are determined based on Impact and Urgency.
 

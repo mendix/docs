@@ -1,8 +1,9 @@
 ---
-title: "Implement SSO on a Hybrid App with Mendix and SAML"
-category: "Mobile"
+title: "Implement SSO on a Hybrid App with Mendix & SAML"
+category: "Mobile Development"
+menu_order: 30
 description: "Describes how to address the challenges of implementing SSO in hybrid mobile apps."
-tags: ["SAML", "SSO", "Mobile", "HybridApp", "PhoneGap", "Authentication"]
+tags: ["SAML", "SSO", "mobile", "hybrid app", "phonegap", "authentication"]
 ---
 
 ## 1 Introduction
@@ -15,7 +16,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Have a [PhoneGap Build account](https://build.phonegap.com/)
 * Be familiar with how the [SAML](https://appstore.home.mendix.com/link/app/1174/) module works
-* Read [How to Publish a Mendix Hybrid Mobile App in Mobile App Stores](publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)
+* Read [How to Publish a Mendix Hybrid Mobile App in App Stores](publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)
 * Read [Building a Mobile App with Mendix](https://www.mendix.com/blog/building-mobile-app-mendix/)
 
 ## 3 Context
@@ -49,7 +50,7 @@ There are two main problems when trying to implement SSO on a hybrid app.
 
 The first problem is that the JavaScript needed to start up the app mobile functionality is stored inside the Mendix hybrid app. The application is loaded from the locally stored *index.html* file.
 
-This is a problem because of all the browser redirects happening when doing the authentication against the IdP (as described in [3.2 How Authentication Against an IdP Works](#how)).
+This is a problem because of all the browser redirects happening when doing the authentication against the IdP (as described in the section [How Authentication Against an IdP Works](#how) above).
 
 When a Mendix hybrid app is started on the mobile device, the localhost *index.html* page is loaded in order to load all the necessary JavaScript to run the app. However, to be able to authenticate the user, the user is redirected to the IdP, and then the IdP needs to redirect the user back to the app. The problem is that there is no way for the IdP to redirect to a localhost page, so there is no way to start the app while still including the right Cordova JavaScript.
 
@@ -142,6 +143,10 @@ To use the hybrid app package, follow these steps:
     
 ### 5.3 The SAML Module 
 
+{{% alert type="warning" %}}
+Not all versions of the SAML module will work correctly when implementing SSO for your hybrid app. Please make sure you use a version of the SAML module that is capable of creating mobile app tokens (that is, version 1.9.3 or above). We recommend updating the SAML module to the latest version available, and if needed, updating the Mendix version of your application.
+{{% /alert %}}
+
 The last thing to do is to check the **Enable mobile authentication token** box in the **Provisioning** tab when configuring an identity provider in the Mendix SAML module. This will make sure the SAML module provides the correct login token to the JavaScript part.
 
 ![](attachments/implement-sso/saml-module.png)
@@ -149,7 +154,7 @@ The last thing to do is to check the **Enable mobile authentication token** box 
 ## 6 Related Content
 
 * [How to Deploy Your First Hybrid Mobile App](deploy-your-first-hybrid-mobile-app)
-* [How to Publish a Mendix Hybrid Mobile App in Mobile App Stores](publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)
+* [How to Publish a Mendix Hybrid Mobile App in App Stores](publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)
 * [How to Debug a Mobile App with Mendix](debug-a-mobile-app)
 * [How to Debug a Hybrid Mobile Application](../monitoring-troubleshooting/debug-a-hybrid-mobile-application)
 * [Building a Mobile App with Mendix](https://www.mendix.com/blog/building-mobile-app-mendix/)

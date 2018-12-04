@@ -1,6 +1,6 @@
 ---
 title: "Developing Hybrid Mobile Apps"
-category: "Mobile"
+category: "Mobile Development"
 ---
 
 ## 1 Introduction

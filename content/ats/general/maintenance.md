@@ -1,6 +1,6 @@
 ---
 title: "Maintenance"
-category: "General"
+category: "Application Test Suite"
 ---
 
 ## Maintenance Window

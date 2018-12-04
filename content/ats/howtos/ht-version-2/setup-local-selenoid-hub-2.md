@@ -114,7 +114,7 @@ The following steps describe how to install the hub and nodes with Docker-Compos
 
 ## 4 Starting Testing
 
-You can start testing by sending your test script to: [http://yourmachinenameorIP:4444/wd/hub](http://localhost:4444/wd/hub).  Make sure it is reachable from the outside!
+You can start testing by sending your test script to: `http://yourmachinenameorIP:4444/wd/hub`.  Make sure it is reachable from the outside!
 
 ## 5 Recording a Video of Your Test Case
 
@@ -126,7 +126,7 @@ In case you want to record your test case as a video follow these steps:
 
    ![](attachments/setup-local-selenium-index-2/setup-local-selenoid-hub-2/add_capability.png)
 
-2. Once the test case finishes you can find your video in: [http://yourmachinenameorIP:4444/video](http://localhost:4444/video). The video shows as "session-id.mp4"
+2. Once the test case finishes you can find your video in: `http://yourmachinenameorIP:4444/video`. The video shows as "session-id.mp4"
 4. (Optional:) You can give the video file a custom name by adding another Custom Capability:
 
    **VideoName** with a string, for example **MyTestVideo.mp4** (don't forget the .mp4!)

@@ -51,7 +51,7 @@ Examples are the `ws-doc` or `rest-doc` endpoints that enumerate all the publish
 
 As a Mendix developer, you can take the following preventative measures:
 
-* Disable unused endpoints within the Mendix Cloud Portal completely by applying a "deny all access" preset on them
+* Disable unused endpoints within the Mendix Developer Portal completely by applying a "deny all access" preset on them
 * Apply IP filtering or client certificate authentication to restrict access
 
 Keep the following in mind:
@@ -112,6 +112,8 @@ Each application requires power users who should be able to administer technical
 This information can be exploited by an attacker (for example, by trying to guess the password). Even though Mendix will block the user for  about 5 minutes after three unsuccessful login attempts, it is recommended to rename the default *MxAdmin* user.
 The user name of the administrator can be changed at the project security settings under the *Administrator* tab.
 
+When deployed to the Mendix Cloud, the administrator password needs to be reset before the changes come into effect. You can activate the changed username by successfully changing the password with the "Change admin password" button on the environment.
+
 ## 10 Use SSL on Consumed Web Services Whenever Possible
 
 Most applications consume (web) services that could be located within an organization itself or at an external third party. When such a service is consumed by an application, your request crosses multiple networks and devices before it reaches its endpoint (the service). A potential attacker in between would be able to read and manipulate the conversation between the application and the service.
@@ -122,15 +124,15 @@ By using an SSL connection and adding the public key of the endpoint within your
 * The conversation isn’t readable if it was ever intercepted
 * The identity of your endpoint is confirmed
 
-There are several scenarios possible for protecting your outgoing connections using encryption, that depend on the infrastructure possibilities and protocols used. This article describes it perfectly: [Securing Outgoing Connections For Your Application](/deployment/mendixcloud/securing-outgoing-connections-from-your-application).
+There are several scenarios possible for protecting your outgoing connections using encryption, that depend on the infrastructure possibilities and protocols used. This article describes it perfectly: [Securing Outgoing Connections For Your Application](/developerportal/deploy/securing-outgoing-connections-from-your-application).
 
-You can add individual certificates in your project’s settings in the Mendix Modeler. Test, acceptance and production environments require their certificates to be uploaded to the [Mendix Cloud](/deployment/mendixcloud/certificates).
+You can add individual certificates in your project’s settings in the Mendix Modeler. Test, acceptance and production environments require their certificates to be uploaded to the [Mendix Cloud](/developerportal/deploy/certificates).
 
 ## 11 Prevent Embedding of Your App Within an IFrame
 
 Applications that can be embedded within an Iframe can be misused by attackers. By using an overlay, it could trick users into clicking on buttons and make them perform actions within the application on their behalf without knowing it. This approach is called [clickjacking](https://www.owasp.org/index.php/Clickjacking).
 
-By sending a header to the user’s browser, it can block the use of the Mendix application within an Iframe, and avoid this type of attack. This header can easily be configured (and is enabled by default) within the Mendix Cloud Portal at your node’s environment details at *Prevent embedding your app in an Iframe*.
+By sending a header to the user’s browser, it can block the use of the Mendix application within an Iframe, and avoid this type of attack. This header can easily be configured (and is enabled by default) within the Mendix Developer Portal at your node’s environment details at *Prevent embedding your app in an Iframe*.
 
 ## 12 Maintain a High Level of Project Hygiene
 

@@ -1,5 +1,5 @@
 ---
-title: "Beta Features"
+title: "What Are Mendix Beta Features?"
 ---
 
 ## 1 Beta Features Overview

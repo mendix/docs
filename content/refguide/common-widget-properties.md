@@ -23,7 +23,7 @@ For example, if an address field is required, the required message for the text 
 
 {{% /alert %}}
 
-## Common Properties
+## Common Properties {#common-properties}
 
 ### Tab index (only in web forms)
 

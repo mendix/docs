@@ -1,6 +1,7 @@
 ---
 title: "Share Company Atlas UI Resources"
 category: "Atlas UI"
+menu_order: 40
 tags: ["Atlas", "UI", "UX", "user experience"]
 ---
 
@@ -101,6 +102,6 @@ To use the UI Resources module from teh Mendix App Store, follow these steps:
 
 * [How to Get Started with Atlas UI](get-started-with-atlasui)
 * [How to Create Company Atlas UI Resources](create-company-atlas-ui-resources)
-* [How to Create Custom Preview Images for Building Blocks and Page Templates](create-custom-preview-images-for-building-blocks-and-page-templates)
+* [How to Create Custom Preview Images for Building Blocks & Page Templates](create-custom-preview-images-for-building-blocks-and-page-templates)
 * [How to Extend Design Properties to Customize the Web Modeler Experience](extend-design-properties-to-customize-the-web-modeler-experience)
 * [How to Migrate Existing Projects to Atlas UI](migrate-existing-projects-to-atlasui)

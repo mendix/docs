@@ -1,8 +1,8 @@
 ---
 title: "Submit a Request with Mendix Support"
 category: "Mendix Support"
-#description: "Describes submitting a request with Mendix Support."
-#tags: ["support", "incident", "standard change", "URL", "change URL", "license", "change" ]
+description: "Describes submitting a request with Mendix Support."
+tags: ["support", "incident", "standard change", "URL", "change URL", "license", "change" ]
 ---
 
 ## 1 Introduction
@@ -22,7 +22,7 @@ This home page enables accessing various Mendix sites that provide important inf
 * [Mendix Forum](https://forum.mendix.com)
 * [Mendix App Store](https://appstore.mendix.com)
 * [Mendix Platform status](https://status.mendix.com)
-* [Mendix Cloud Portal](https://cloud.mendix.com)
+* [Mendix Developer Portal](https://home.mendix.com)
 
 The search box lets you search through the Mendix Documentation for relevant information.
 

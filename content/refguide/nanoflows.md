@@ -170,9 +170,9 @@ Artifacts provide the nanoflow with input and allow comments to be made.
 
 The Modeler visualizes which variables are used by selected object(s). It does this by showing the used variables in white text on a blue background. Conversely, elements that use the variable(s) defined by the selected object(s) are marked with the word **Usage** in white text on a green background.
 
-In the example below, the parameter **Inspection** is highlighted, because it is used in the selected activity. The activity that creates a log entry has a usage label, because it uses the variable defined by the selected activity.
+In the example below, the parameter **AccountPasswordData** is highlighted because it is used in the selected activity. And the activity **Save password** has a usage label because it uses the variable defined by the selected activity.
 
-![](attachments/16713739/16843952.png)
+![](attachments/16713739/16843950.png)
 
 ## 7 Errors
 

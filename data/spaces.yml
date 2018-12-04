@@ -10,32 +10,26 @@ apidocs-mxsdk:
     - "API Documentation"
     - "Mendix Platform SDK"
 aqm:
-  space: "Application Quality Monitor"
+  space: "AQM Guide"
   priority: false
   menu_categories:
-    - "Application Quality Monitor Overview"
+    - "Application Quality Monitor"
 apm:
-  space: "Application Performance Monitor"
+  space: "APM Guide"
   priority: false
   menu_categories:
+    - "Application Performance Monitor"
     - "Installation Guide"
     - "Reference Guide"
     - "Use Cases"
 ats:
-  space: "Application Test Suite"
+  space: "ATS Guide"
   priority: false
   menu_categories:
-    - "General"
+    - "Application Test Suite"
     - "Reference Guide"
     - "How-to's"
     - "Best Practices"
-community:
-  space: "Community"
-  priority: false
-  menu_categories:
-    - "Tools"
-    - "Documentation"
-    - "App Store"
 howto40:
   space: "Mendix 4 How-to's"
   priority: false
@@ -92,14 +86,13 @@ howto:
   priority: 6
   mendix_version: 7
   menu_categories:
-    - "Tutorials"
     - "Modeling Basics"
     - "Web Modeler"
     - "Atlas UI"
     - "UX"
     - "Data Models"
     - "Logic & Business Rules"
-    - "Mobile"
+    - "Mobile Development"
     - "Security"
     - "Integration"
     - "SAP"
@@ -163,11 +156,11 @@ refguide:
     - "Team Server"
     - "Desktop Modeler"
     - "Web Modeler"
-    - "Runtime"
+    - "Mendix Runtime"
     - "Java Programming"
+    - "Mobile Development"
     - "SAP"
     - "IBM"
-    - "Mobile"
 howtogeneral:
   space: "Best Practices & Support"
   priority: 6
@@ -182,31 +175,24 @@ releasenotes:
     - "Desktop Modeler"
     - "Web Modeler"
     - "Developer Portal"
-    - "Model SDK"
-    - "Platform SDK"
-    - "Hybrid App"
-    - "Mendix Mobile App"
-    - "Application Test Suite"
-    - "Application Performance Monitor"
-    - "Application Quality Monitor"
-    - "Beta Features"
+    - "SDKs"
+    - "Mobile Products"
+    - "Add-ons"
+    - "What Are Mendix Beta Features?"
 developerportal:
-  space: "Developer Portal"
+  space: "Developer Portal Guide"
   priority: false
   menu_categories:
-    - "General"
-    - "Collaborate"
-    - "Develop"
-    - "Deploy"
-    - "Operate"
-    - "Settings"
-    - "How-to's"
-deployment:
-  space: "Deployment"
-  priority: false
-  menu_categories:
-    - "Azure"
-    - "Cloud Foundry"
-    - "Docker"
-    - "Mendix Cloud"
-    - "On-Premises"
+    - "Mendix Profile"
+    - "Company & App Roles"
+    - "Collaboration Tools"
+    - "Feedback Management"
+    - "Development"
+    - "Deployment"
+    - "Operations"
+    - "App Settings"
+    - "Community Tools"
+    - "App Store"
+
+
+

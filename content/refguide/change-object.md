@@ -5,24 +5,9 @@ parent: "object-activities"
 
 ## 1 Introduction
 
-A change object can be used to change the members of an object. This can be done with or without committing and with or without events.
+The Change object activity can be used to change the members of an object. This can be done with or without committing and with or without events.
 
 {{% alert type="info" %}}
-
-Before a customer is saved you want to make sure all characters of the zip code are capitals. You do this by creating an [event handler](event-handlers) for the entity 'Customer'. The flow that is used as event handler is shown below. It consists of a parameter and a change object activity. The parameter contains the current customer being saved.
-
-![](attachments/819203/918094.png)
-
-The properties are configured as below.
-
-| Property | Value | Reason |
-| --- | --- | --- |
-| Object | InputCustomer (Module.Customer) | The change activity applies to the current customer being saved |
-| Commit type | No | The object is changed before commit and the changes are still 'remembered' by the server when it is committed |
-| Refresh in client | No | Objects of the entity 'Customer' are automatically refreshed by the server when a object is committed in a form |
-| Change member action _set_ on _zipcode_ | toUpperCase($InputCustomer/zipcode) | An [expression](expressions) can be used to set all characters to upper case (capitals) |
-
-{{% /alert %}}{{% alert type="info" %}}
 
 See [Microflow Element Common Properties](microflow-element-common-properties) for properties that all microflow activities share (for example, caption). This page only describes the properties specific to the action.
 
@@ -62,19 +47,24 @@ _Default value:_ No
 
 ### 3.2 Refresh in Client
 
-Refresh in client defines whether pages that use the entity of the object being changed are refreshed.
+If the microflow is called from the client, the change is not reflected in the client if **Refresh in client** is set to *No*. If set to *Yes*, the object is refreshed across the client, which includes reloading the relevant [data sources](data-sources).
 
-| Option | Description |
-| --- | --- |
-| Yes | Objects of same entity are refreshed in the user's browser |
-| No | Objects of same entity are not refreshed in the user's browser |
+{{% alert type="info" %}}
+
+As of 7.19.0, changed attribute values are always reflected in the client. If the object is committed, the object is refreshed from the Mendix Runtime, which includes updating virtual attributes. [Data sources](data-sources) are only reloaded if **Refresh in client** is set to *Yes*.
+
+{{% /alert %}}
 
 {{% alert type="warning" %}}
-Nanoflows do not have the refresh in client option. All the changes made in a nanoflow refresh the client by default.
+
+When inside a [nanoflow](nanoflows), the Change object action does not have the **Refresh in client option** available, and the refresh behavior depends on the **Commit type** option. It always reflects the changed attribute values in the client, including [conditions](conditions).
+
+If **Commit type** is set to *Yes*, the object is refreshed across the client as if **Refresh in client** was set to *Yes*.
+
 {{% /alert %}}
 
 _Default value_: No
 
 ### 3.3 Change Members
 
-You can specify a list of changes that will be applied to the object. Values for members are specified with [expressions](expressions) and should be of the same type as the member. For a reference set association it is also possible to add and remove instead of only set the member. With 'add' an object or a list of objects can be added to the currently associated objects. With 'remove' an object or a list of objects can be removed from the currently associated objects.
+You can specify a list of changes that to apply to the object. Values for members are specified with [expressions](expressions) and should be of the same type as the member. For a reference set association, it is also possible to add and remove (instead of only setting the member). For **add**, an object or a list of objects can be added to the currently associated objects. For **remove**, an object or a list of objects can be removed from the currently associated objects.

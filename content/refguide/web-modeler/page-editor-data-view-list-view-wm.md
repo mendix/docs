@@ -1,5 +1,5 @@
 ---
-title: "Data View and List View Properties in the Web Modeler"
+title: "Data View & List View Properties in the Web Modeler"
 parent: "page-editor-widgets-wm"
 description: "Describes the data view and list view in the Page Editor of the Mendix Web Modeler."
 menu_order: 10
@@ -38,7 +38,10 @@ The data source determines which object will be shown in the data view. For gene
 
 ### 2.2 General {#general-section-data-view}
 
-In the **General** section, you can enable/disable the **Show Footer** option (enabled by default). A footer is an area at the bottom of the document, usually containing information common for all pages, such as copyrights.  
+In the **General** section, you can enable/disable the  following options:
+
+* **Read-Only** (disabled by default) – when enabled, all [input widgets](page-editor-widgets-input-elements-wm) (for example, a text area, a check box) in the data view will be in read-only mode
+* **Show Footer** (enabled by default) – a footer is an area at the bottom of the document, usually containing information common for all pages, such as copyrights  
 
 ### 2.3 Design {#design-section-data-view}
 
@@ -74,9 +77,13 @@ For more information on the **Events** section and on click actions, see [Events
 
 ### 3.3 General {#general-section-list-view}
 
-In the **General** section, you can select the number of rows to be displayed on the page. After the indicated limit is reached, the **Load more...** button is displayed on the page.
+In the **General** section, you can select the number of rows to be displayed on the page and set the read-only for the list view:
+
+* **Page Size** – the number of rows displayed on the page; after the indicated limit is reached, the **Load more...** button is displayed on the page.
 
 ![](attachments/page-editor-data-view-list-view-wm/wm-load-more-list-view.png)
+
+* **Read-Only** (enabled by default) – when enabled, all [input widgets](page-editor-widgets-input-elements-wm) (for example, a text area, a check box) in the list view will be in read-only mode
 
 ### 3.4 Design Section {#design-section-list-view}
 
@@ -84,4 +91,4 @@ For information on the **Design** section and its properties, see [Design Sectio
 
 ## 4 Related Content
 
-* [Page Editor Overview in the Web Modeler](page-editor-wm)
+* [Page Editor in the Web Modeler](page-editor-wm)

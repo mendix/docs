@@ -180,7 +180,7 @@ In the example activity of this section, you will filter the orders by their ass
 ## 8 Related Content
 
 * [How to Configure the Scout and Windows 10 Workaround](scout-and-windows-10-workaround)
-* [How to Set Up Layouts and Snippets](layouts-and-snippets)
+* [How to Set Up Layouts & Snippets](layouts-and-snippets)
 * [How to Set Up the Mendix UI Framework](setup-mendix-ui-framework)
 * [How to Set Up the Mendix UI Framework with Just CSS](setup-mendix-ui-framework-with-just-css)
 * [How to Set Up the Mendix UI Framework with Koala](setup-mendix-ui-framework-with-koala)

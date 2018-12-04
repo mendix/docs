@@ -1,7 +1,6 @@
 ---
 title: "Mendix IP Addresses"
 category: "Mendix Support"
-#parent: ""
 #description: ""
 #tags: []
 ---
@@ -42,4 +41,4 @@ Usually you configure your firewall with rules for Incoming traffic to your netw
 
 ## 4 Related Content
 
-* [Mendix Cloud Status](/developerportal/general/mendix-cloud-status)
+* [Mendix Cloud Status](/developerportal/deploy/mendix-cloud-status)

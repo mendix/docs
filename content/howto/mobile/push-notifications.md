@@ -1,6 +1,8 @@
 ---
-title: "Use Push Notifications"
-category: "Mobile"
+title: "Include Push Notifications"
+category: "Mobile Development"
+menu_order: 10
+tags: ["mobile", "push notification"]
 ---
 
 ## 1 Introduction to Push Notifications

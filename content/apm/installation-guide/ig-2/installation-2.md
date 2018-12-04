@@ -1,7 +1,7 @@
 ---
 title: "APM 2 Installation Guide"
 category: "Installation Guide"
-menu_order: 2
+menu_order: 10
 ---
 
 {{% alert type="warning" %}}

@@ -10,7 +10,7 @@ The Profile API is an [App Service](/refguide6/consumed-app-services) that allow
 
 {{% alert type="info" %}}
 
-The Profile API will require the EnvironmentUUID and EnvironmentPassword parameters to authenticate and authorize requests. The values for these should come from constants from the AppCloudServices module with the same name. The Mendix Cloud Portal will automatically set these constants, you do not need to set these yourself. For this reason, the Profile API will only function for applications that use the AppCloudServices module and are deployed through the Mendix Cloud Portal.
+The Profile API will require the EnvironmentUUID and EnvironmentPassword parameters to authenticate and authorize requests. The values for these should come from constants from the AppCloudServices module with the same name. The Mendix Developer Portal will automatically set these constants, you do not need to set these yourself. For this reason, the Profile API will only function for applications that use the AppCloudServices module and are deployed through the Mendix Developer Portal.
 
 {{% /alert %}}
 
@@ -20,7 +20,7 @@ The service is part of the [AppCloudServices module](https://appstore.home.mendi
 
 When importing version 1.3.0 of the AppCloudServices module over earlier versions, you need to replace existing calls to AppCloudServices.RetrieveDisplayName with calls to AppCloudServices.RetrieveUserProfile. This new microflow returns a new entity (UserProfile) that contains, besides the Display Name that was already returned, a lot of other fields, e.g. Email Address, Company Name, and Avatar URL. Because the old microflow has been removed, the modeler will generate errors where the old microflow was used. You can replace those occurrences with calls to the new microflow.
 
-If you previously deployed your app with an older version of the AppCloudServices module, you will need to update the value of the "AppCloudServices.ProfileServiceLocation" constant in the Cloud Portal on first re-deployment. The new value should be "[https://profile.mendixcloud.com/ws/ProfileService/3/soap1](https://profile.mendixcloud.com/ws/ProfileService/3/soap1)".
+If you previously deployed your app with an older version of the AppCloudServices module, you will need to update the value of the "AppCloudServices.ProfileServiceLocation" constant in the Developer Portal on first re-deployment. The new value should be "[https://profile.mendixcloud.com/ws/ProfileService/3/soap1](https://profile.mendixcloud.com/ws/ProfileService/3/soap1)".
 
 {{% /alert %}}
 
@@ -47,8 +47,8 @@ API Version 3
 | Name | Parameter type | Required | Description |
 | --- | --- | --- | --- |
 | OpenID | String | Yes | OpenID of the user for whom the profile is requested. |
-| EnvironmentUUID | String | Yes | UUID of the requesting environment. This should be the value of the AppCloudServices.EnvironmentUUID constant, which the Mendix Cloud Portal will fill in automatically. |
-| EnvironmentPassword | String | Yes | Password of the requesting environment. This should be the value of the AppCloudServices.EnvironmentUUID constant, which the Mendix Cloud Portal will fill in automatically. |
+| EnvironmentUUID | String | Yes | UUID of the requesting environment. This should be the value of the AppCloudServices.EnvironmentUUID constant, which the Mendix Developer Portal will fill in automatically. |
+| EnvironmentPassword | String | Yes | Password of the requesting environment. This should be the value of the AppCloudServices.EnvironmentUUID constant, which the Mendix Developer Portal will fill in automatically. |
 
 #### Return type
 
@@ -109,8 +109,8 @@ API Version 1
 | Name | Parameter type | Required | Description |
 | --- | --- | --- | --- |
 | OpenID | String | Yes | OpenID of the user for whom the name is requested. |
-| EnvironmentUUID | String | Yes | UUID of the requesting environment. This should be the value of the AppCloudServices.EnvironmentUUID constant, which the Mendix Cloud Portal will fill in automatically. |
-| EnvironmentPassword | String | Yes | Password of the requesting environment. This should be the value of the AppCloudServices.EnvironmentUUID constant, which the Mendix Cloud Portal will fill in automatically. |
+| EnvironmentUUID | String | Yes | UUID of the requesting environment. This should be the value of the AppCloudServices.EnvironmentUUID constant, which the Mendix Developer Portal will fill in automatically. |
+| EnvironmentPassword | String | Yes | Password of the requesting environment. This should be the value of the AppCloudServices.EnvironmentUUID constant, which the Mendix Developer Portal will fill in automatically. |
 
 #### Return type
 

@@ -1,5 +1,5 @@
 ---
-title: "General"
+title: "Application Test Suite"
 ---
 
 These are the documents in this category:

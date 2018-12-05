@@ -308,7 +308,11 @@ Be sure to do the following in order to make your profile public:
 To make your public profile private again, click **Make this profile private**.
 {{% /alert %}}
 
-## 11 Related Content
+## 11 Main Document in This Category
+
+* [OAuth & Scopes](oauth-scopes)
+
+## 12 Related Content
 
 * [Company Admin Settings](../company-app-roles/companyadmin-settings)
 * [Company & App Roles](../company-app-roles/index)

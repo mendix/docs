@@ -99,9 +99,12 @@ Once a feedback item is connected to a user story, the user who submitted the st
 * Adding a story with feedback attached from your backlog to a sprint will result in a message that the item has been planned
 * Completing a sprint that contains a story with feedback attached will result in a message that the item has been completed
 
-## 4 Related Content
+## 4 Main Documents in This Category
 
-* [Mendix Profile](../mendix-profile/index)
-* [How to Use the Mendix Feedback Widget](use-feedback-widget)
-* [How to Use the Mendix Feedback & Collaboration Widget](use-collaboration-widget)
+* [Use the Mendix Feedback & Collaboration Widget](use-collaboration-widget)
+* [Use the Mendix Feedback Widget](use-feedback-widget)
+
+## 5 Related Content
+
 * [Stories](../collaborate/stories)
+* [Mendix Profile](../mendix-profile/index)

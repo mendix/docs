@@ -107,7 +107,7 @@ This is important for the [Mendix mobile app](getting-the-mendix-app):
 * Android 5.0 and above
 
 
-## MxBuild{#mxbuild}
+## 8 MxBuild{#mxbuild}
 
 MxBuild is a Windows and Linux command-line tool that can be used to build a Mendix Deployment Package. See [MxBuild](mxbuild) for more information.
 

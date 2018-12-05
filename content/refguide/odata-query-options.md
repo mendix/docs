@@ -29,7 +29,7 @@ By setting the $inlinecount query option to 'allpages', an inline count will be 
 
 At the moment we only support basic filtering options.
 
-This is done by passing parameters to the request, for example _?$filter=Name eq 'John'_
+This is done by passing parameters to the request, for example _/Employees?$filter=Name eq 'John'_
 
 We support the following operators:
 
@@ -47,7 +47,7 @@ How to pass values for different attribute types
 | Type | How to pass |
 | --- | --- |
 | String and Enumeration | Surrounded with apostrophes, e.g. 'John' |
-| Datetime | Surrounded with datetime and apostrophes, e.g. datetime'2015-01-01' or datetime'&leq;epoch value here&geq;' |
+| Datetime | Surrounded with datetime and apostrophes, e.g. datetime'2015-01-01' or datetime'&lt;epoch value here&gt;' |
 | Other | Plain value, e.g. 15 |
 
 ## 3.1 Arithmetic operators

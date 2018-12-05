@@ -1,6 +1,6 @@
 ---
 title: "SIG–Mendix Performance Subjects"
-category: "Runtime"
+category: "Mendix Runtime"
 ---
 
 ## 1 Introduction

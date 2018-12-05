@@ -1,6 +1,6 @@
 ---
 title: "Date & Time Handling"
-category: "Runtime"
+category: "Mendix Runtime"
 ---
 
 ## 1 Introduction

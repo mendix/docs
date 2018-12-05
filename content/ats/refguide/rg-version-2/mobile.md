@@ -29,7 +29,7 @@ In order to provide better support and stricter control guarantees, we limit the
 
 For detailed specifications, refer to [GSMArena.com](https://www.gsmarena.com/).
 
-¹Android 8.0
+¹Android 8.0<br />
 ²Android 8.1
 
 ## 2 Preparations

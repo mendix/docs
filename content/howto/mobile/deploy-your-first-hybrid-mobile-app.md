@@ -1,6 +1,6 @@
 ---
 title: "Deploy Your First Hybrid Mobile App"
-category: "Mobile"
+category: "Mobile Development"
 menu_order: 50
 tags: ["mobile", "deploy"]
 ---

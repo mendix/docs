@@ -1,6 +1,6 @@
 ---
 title: "Include Push Notifications"
-category: "Mobile"
+category: "Mobile Development"
 menu_order: 10
 tags: ["mobile", "push notification"]
 ---

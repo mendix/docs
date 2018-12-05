@@ -60,8 +60,8 @@ You can further customize widgets by changing their design properties. Colors, t
 ## 3 Main Documents in This Category
 
 * [Get Started with Atlas UI](get-started-with-atlasui)
+* [Migrate Existing Projects to Atlas UI](migrate-existing-projects-to-atlasui)
 * [Create Company Atlas UI Resources](create-company-atlas-ui-resources)
+* [Share Company Atlas UI Resources](share-company-atlas-ui-resources)
 * [Create Custom Preview Images for Building Blocks & Page Templates](create-custom-preview-images-for-building-blocks-and-page-templates)
 * [Extend Design Properties to Customize the Web Modeler Experience](extend-design-properties-to-customize-the-web-modeler-experience)
-* [Migrate Existing Projects to Atlas UI](migrate-existing-projects-to-atlasui)
-* [Share Company Atlas UI Resources](share-company-atlas-ui-resources)

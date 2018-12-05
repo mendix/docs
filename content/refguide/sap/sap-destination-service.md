@@ -8,9 +8,7 @@ tags: ["SAP", "OData Connector", "Destination Service", "Cloud Connector", "Conn
 
 ## 1 Introduction
 
-The SAP Destination Service enables your Mendix app to use services defined in the SAP Cloud Platform cockpit without needing to know all the technical details of the endpoint.
-
-In particular, it enables you to access services which use a different Identity Provider (IDP) from the one you are using for your Mendix App.
+The SAP Destination Service enables your Mendix app, running on SAP Cloud Platform, to use external services or systems. It also enables access to remote on-premises systems using the Connectivity service. 
 
 {{% alert type="info" %}}
 The SAP Destination Service will only provide the correct information when run on SAP Cloud Platform. To test your app on your local machine you will have to use a URL to connect directly to an SAP service which is available to you.

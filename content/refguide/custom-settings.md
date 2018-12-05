@@ -1,6 +1,6 @@
 ---
 title: "Customization"
-category: "Runtime"
+category: "Mendix Runtime"
 description: "Describes custom server, log file, database, Amazon S3 storage service, Microsoft Azure, IBM Bluemix object storage, and web client settings in Mendix."
 tags: ["Runtime", "Customization", "Settings", "Configuration", "IBM Cloud", "Amazon S3", "Microsoft Azure", "Custom Settings"]
 ---
@@ -119,6 +119,10 @@ The following settings influence the behavior of the Amazon S3 Storage Service m
 | com.mendix.storage.s3.UseV2Auth | Let the authentication policy use 'Signature Version 2' instead of the default 'Signature Version 4'. Set this setting to 'true' when the endpoint does not support 'Signature Version 4'. | false |
 | com.mendix.storage.s3.EncryptionKeys | List of keys which can be used to encrypt and decrypt data at rest in S3\. The right key to decrypt the data with is automatically selected depending on with which key it was encrypted. Each encryption key consists of a key id, the encryption algorithm and the actual key (Base64 encoded). Example: ![](attachments/Custom+Settings/code_snippet_2.png) |   |
 | com.mendix.storage.s3.MaxConnections | Overrides the default maximum connections limit in the Amazon S3 service. The default value is enough for most applications, so we do not recommend explicitly setting this to a custom value unless a larger maximum connections limit is absolutely necessary. | [DEFAULT_MAX_CONNECTIONS](https://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/ClientConfiguration.html#DEFAULT_MAX_CONNECTIONS) field of the ClientConfiguration interface in the AWS SDK for Java. |
+| com.mendix.storage.s3.ClientExecutionTimeout | Sets the amount of time (in milliseconds) to allow a call to the storage service to complete. A value of 0 means no timeout. For more information, see the [AWS Java SDK](https://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/ClientConfiguration.html#setClientExecutionTimeout-int-). | 0 (no timeout) |
+| com.mendix.storage.s3.ConnectionTimeout | Sets the amount of time to wait (in milliseconds) when initially establishing a connection before giving up and timing out. A value of 0 means infinity and is not recommended. For more information, see the [AWS Java SDK](https://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/ClientConfiguration.html#setConnectionTimeout-int-). | 10.000 (10 seconds) |
+| com.mendix.storage.s3.SocketTimeout | Sets the amount of time to wait (in milliseconds) for data to be transfered over an established, open connection before the connection times out and is closed.  A value of 0 means infinity and is not recommended. For more information, see the [AWS Java SDK](https://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/ClientConfiguration.html#setSocketTimeout-int-). | 50.000 (50 seconds) | 
+| com.mendix.storage.s3.RequestTimeout | Sets the amount of time to wait (in milliseconds) for the request to complete before giving up and timing out. A value of 0 means no timeout. For more information, see [the AWS Java SDK](https://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/ClientConfiguration.html#setRequestTimeout-int-). | 0 (no timeout) |
 
 ## 6 Microsoft Azure SQL
 
@@ -158,6 +162,8 @@ These settings can be used to store files using the Microsoft Azure blob storage
 | com.mendix.storage.azure.Container | Name of the container containing the blob. The container is created if it does not exist yet. |   |
 | com.mendix.storage.azure.ParallelismFactor | Maximum number of parallel multi-part file uploads / downloads. We advise you not to change this setting unless you experience slow file transfers for large files. Choosing larger values will lead to higher memory usage. | 5 |
 |com.mendix.storage.azure.UseHttps| Introduced in version 7.7. For enabling or disabling secure connections using HTTPS. Can be `true` or `false`. | `true` |
+| com.mendix.storage.azure.TimeoutIntervalInMs | Sets the amount of time (in milliseconds) to allow a call to the storage service to complete. For more information, see [the Azure Libraries](https://azure.github.io/azure-sdk-for-java/com/microsoft/azure/storage/RequestOptions.html#setTimeoutIntervalInMs-java.lang.Integer-). | No timeout |
+| com.mendix.storage.azure.MaximumExecutionTimeInMs | Sets the maximum execution time (in milliseconds) to use when making this request. For more information, see [the Azure Libraries](https://azure.github.io/azure-sdk-for-java/com/microsoft/azure/storage/RequestOptions.html#setMaximumExecutionTimeInMs-java.lang.Integer-). | No maximum time |
 
 {{% alert type="warning" %}}
 

@@ -22,6 +22,7 @@ The Web Modeler enables you to do the following:
 * [Page Editor in the Web Modeler](page-editor-wm)
 * [Navigation Document in the Web Modeler](navigation-wm)
 * [Microflows in the Web Modeler](microflows-wm)
+* [Deploying Your App From the Web Modeler](deployment-wm)
 * [Checks in the Web Modeler](checks-wm)
 * [Consistency Errors in the Web Modeler](consistency-errors-wm)
 * [Theme Customizer in the Web Modeler](theme-customizer-wm)

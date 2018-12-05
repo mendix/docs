@@ -1,6 +1,7 @@
 ---
 title: "Share Company Atlas UI Resources"
 category: "Atlas UI"
+menu_order: 40
 tags: ["Atlas", "UI", "UX", "user experience"]
 ---
 

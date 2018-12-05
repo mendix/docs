@@ -1,6 +1,7 @@
 ---
 title: "Migrate Existing Projects to Atlas UI"
 category: "Atlas UI"
+menu_order: 20
 tags: ["Atlas", "UI", "UX", "user experience"]
 ---
 

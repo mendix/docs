@@ -1,10 +1,20 @@
 ---
 title: "Developer Portal"
 description: "Release Notes for all aspects of the Mendix Developer Portal"
-tags: ["Developer Portal", "Cloud Environments", "Mendix Cloud", "SAP", "IBM", "On-premises", "Deployment"]
+tags: ["developer portal", "cloud environments", "Mendix Cloud", "SAP", "IBM", "on-premises", "deployment"]
 ---
 
 ## 2018
+
+### December 1st, 2018
+
+#### Fixes
+
+* We fixed an issue that sometimes caused the team member with the [Technical Contact](/developerportal/company-app-roles/technical-contact) role to be hidden on the *Node Permissions* tab of the *Security* pages. (Tickets 69085, 69150, 69419, 69440, 69458, 69585, 69592, 69783, 69884,70131,70228, 70285, 76152)
+* We fixed an issue that caused deployments for some users to hang. (Tickets, 76691,76700)
+* We fixed a security issue that allowed app team members without deploy access to see the debugger password. (Ticket 76172)
+* We fixed a security issue that allowed app team members without deploy access to see application constants. (Ticket 76171)
+* We addressed and fixed an issue that prevented some users from being able to deploy to their environments. (Tickets 77060, 77122)
 
 ### November 14th, 2018
 

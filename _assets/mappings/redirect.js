@@ -2090,6 +2090,14 @@ module.exports = {
       from: "/mendixcloud/how-to-link-app-to-node",
       to: "/developerportal/deploy/licensing-apps"
     },
+	{
+      from: "/developerportal/howto/how-to-link-app-to-node",
+      to: "/developerportal/deploy/licensing-apps"
+    },
+	{
+      from: "/developerportal/howto/how-to-link-a-different-app-to-a-node",
+      to: "/developerportal/deploy/licensing-apps"
+    },
     {
       from: "/mendixcloud/Mendix+Cloud",
       to: "/developerportal/deploy/mendix-cloud-deploy"

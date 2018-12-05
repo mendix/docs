@@ -27,10 +27,6 @@ So, MxBuild for Mendix version 7.18.1 is found at [https://cdn.mendix.com/runtim
 
 You can extract the files using your favorite archival tool, such as [7-Zip](https://www.7-zip.org/).
 
-{{% alert type="warning" %}}
-You need to run 7-Zip *as an Administrator* to successfully extract the MxBuild files.
-{{% /alert %}}
-
 The system requirements for MxBuild are documented here: [System Requirements](system-requirements#mxbuild).
 
 ## 2 Command-line

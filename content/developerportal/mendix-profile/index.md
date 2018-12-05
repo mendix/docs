@@ -311,11 +311,3 @@ To make your public profile private again, click **Make this profile private**.
 ## 11 Main Document in This Category
 
 * [OAuth & Scopes](oauth-scopes)
-
-## 12 Related Content
-
-* [Company Admin Settings](../company-app-roles/companyadmin-settings)
-* [Company & App Roles](../company-app-roles/index)
-* [How to Manage Company & App Roles](../company-app-roles/manage-roles)
-* [Feedback](../feedback/index)
-* [How to Use the Mendix Feedback Widget](../feedback/use-feedback-widget)

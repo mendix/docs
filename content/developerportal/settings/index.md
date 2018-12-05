@@ -4,31 +4,26 @@ title: "App Settings"
 
 ## 1 Introduction
 
-The **Settings** category focuses on managing your app settings. Here you can see the basic app information and edit it. You can also manage the app team and node permissions and create API keys.
+The **Settings** category of menu items can be used to manage your app settings. Here, you can find basic app information and edit it. You can also manage your App Team and node permissions as well as create API keys.
 
-Follow these steps to find the **Settings** category:
-
-1.  Go to the [Developer Portal](http://home.mendix.com).
-2.  Click **Apps** in the top navigation panel.
-4.  Select the app you want to manage.
-5.  Click **Security** in the left navigation panel.
-
-  ![](attachments/settings.png)
+This category will cover the settings below.
 
 ## 2 General
 
-The **General** tab displays an overview of the app's information: the name and description of the app, the **App Contact**, the **Technical Contact** (if the app has a node), whether the **Web Modeler** is enabled for the app, the **App ID**.
+The **General** tab displays an overview of the app's information: the name and description of the app, the **App Contact** and **Technical Contact**, whether the **Web Modeler** is enabled for the app, and the **App ID**.
 
-For more information, see [General Settings](general-settings).
+It is also possible to leave and delete an app here as well as manage deep links.
+
+For more information, see [Manage General App Settings](general-settings).
 
 ## 3 Security
 
-In **Security** there are two tabs with app and node permissions described below:
+In **Security**, there are two tabs with app and node permissions, as described below.
 
 ### 3.1 App Team
 
 {{% alert type="info" %}}
-Note that to view the **App Team**, you must have the **App Settings** permission or a default **Scrum Master** role.
+To view the App Team, you must have the **App Settings** permission or a default **SCRUM Master** role.
 {{% /alert %}}
 
 The **App Team** tab lets you view and delete the team members that are currently working on the app. Each member has a **Role**. You can change the role of each team member to the following:
@@ -40,26 +35,15 @@ The **App Team** tab lets you view and delete the team members that are currentl
 * Product Owner
 * Scrum Master
 
-There are two actions you can take:
-
-*   Change the **Role Settings**
-*   View the **Change log**
+For more information, see [Company & App Roles](../company-app-roles/index) as well as [How to Manage Company & App Roles](/company-app-roles/manage-roles).
 
 ### 3.2 Node Permissions
 
 {{% alert type="info" %}}
-
-**Node Permissions** are only available for Licensed Apps.
-
+Node permissions are only available for Licensed Apps.
 {{% /alert %}}
 
-The **Node Permissions** tab lets you view the team members that have the **App Team** permission to **View Deploy and Monitor** the node. A **Technical Contact** can grant those team members the following permissions:
-
-* Transport rights
-* Access to backup
-* Receive Alerts
-* API rights
-* Access to monitoring
+The **Node Permissions** tab lets you view the team members that have the App Team permission to view, deploy, and monitor the node.  A **Technical Contact** can grant those team members certain permissions.
 
 For more information, see [Security-Node](/developerportal/deploy/node-permissions).
 
@@ -69,13 +53,9 @@ The **API Keys** page lists the existing API keys and lets you create new keys b
 
 For more information, see [API Keys](/developerportal/settings/api-key).
 
-## 5 Related Content
+## 5 Main Documents in This Category
 
-* [Company Admin Settings](/developerportal/company-app-roles/companyadmin-settings)
-* [How to Configure Maintenance Windows](/developerportal/deploy/maintenance-windows)
-* [How to Leave & Delete an App](../company-app-roles/deactivate-activate-app)
-* [How to Manage Company & App Roles](../company-app-roles/manage-roles)
-* [How to Receive Environment Status Alerts](/developerportal/operate/receive-alerts)
-* [Mendix Profile](../mendix-profile/index)
-* [Company & App Roles](../company-app-roles/index)
-* [Technical Contact](../company-app-roles/technical-contact)
+* [Manage General App Settings](general-settings)
+* [Leave & Delete an App](leave-delete-app)
+* [Manage Deep Links](manage-deeplinks)
+* [Manage API Keys](api-key)

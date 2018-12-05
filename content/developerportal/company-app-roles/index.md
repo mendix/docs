@@ -115,11 +115,3 @@ For details on how to manage App Team roles, see the [Editing App Team Roles](ma
 * [Manage Company & App Roles](manage-roles)
 * [Company Admin Settings](companyadmin-settings)
 * [Technical Contact](technical-contact)
-
-## 6 Related Content
-
-* [Mendix Profile](../mendix-profile/index)
-* [How to Manage Company & App Roles](/developerportal/company-app-roles/manage-roles)
-* [Company Admin Settings](/developerportal/company-app-roles/companyadmin-settings)
-* [Technical Contact](technical-contact)
-* [Settings](/developerportal/settings)

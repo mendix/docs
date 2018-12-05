@@ -1,6 +1,7 @@
 ---
-title: "Show a Project in the Directory in Explorer"
+title: "Show the Project Directory in Explorer"
 category: "Tips & Tricks"
+menu_order: 40
 ---
 
 ## 1 Introduction

@@ -1,6 +1,7 @@
 ---
 title: "Migrate Your Mendix Database"
 category: "Tips & Tricks"
+menu_order: 70
 tags: ["Database", "Migrate", "Postgresql", "Export", "Import"]
 ---
 

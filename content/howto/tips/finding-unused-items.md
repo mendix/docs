@@ -1,6 +1,7 @@
 ---
 title: "Find Unused Items"
 category: "Tips & Tricks"
+menu_order: 30
 ---
 
 ## 1 Introduction

@@ -1,6 +1,7 @@
 ---
 title: "Use Translatable Validation Messages"
 category: "Tips & Tricks"
+menu_order: 60
 ---
 
 ## 1 Introduction

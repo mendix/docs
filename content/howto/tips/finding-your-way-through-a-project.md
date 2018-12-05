@@ -1,11 +1,12 @@
 ---
-title: "Find Your Way Through a Project"
+title: "Find Your Way in an App Project"
 category: "Tips & Tricks"
+menu_order: 10
 ---
 
 ## 1 Introduction
 
-This how-to explains how you can find your way through a project in the Mendix Modeler. At many places in the Mendix Modeler you can access a handy menu by clicking the right mouse button. Two options are commonly used to find your way through a project and they are called "Go to" and "Find usages." The "Go to," for example, allows you to navigate to the target of a button or to the source of data grid. The "Find Usages" option, for example, allows you to find all buttons that are opening a certain page.
+This how-to explains how you can find your way in an app project in the Desktop Modeler. At many places in the Modeler, you can access a handy menu by clicking the right mouse button. Two options are commonly used to find your way through a project and they are called "Go to" and "Find usages." The "Go to," for example, allows you to navigate to the target of a button or to the source of data grid. The "Find Usages" option, for example, allows you to find all buttons that are opening a certain page.
 
 ## 2 "Go To" Options
 

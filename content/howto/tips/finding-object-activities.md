@@ -1,6 +1,7 @@
 ---
 title: "Find Object Activities"
 category: "Tips & Tricks"
+menu_order: 20
 ---
 
 ## 1 Introduction

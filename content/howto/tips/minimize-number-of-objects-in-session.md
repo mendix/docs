@@ -1,6 +1,7 @@
 ---
 title: "Minimize the Number of In-Use Objects in Your Session"
-category: "General"
+category: "Tips & Tricks"
+menu_order: 05
 ---
 
 ## 1 Introduction

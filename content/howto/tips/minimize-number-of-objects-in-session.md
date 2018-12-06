@@ -19,7 +19,7 @@ After a microflow has run, any new objects or updates to existing objects that w
 
 The following diagram shows the flow of objects in the new architecture in detail:
 
-![](attachments/best-practices-for-app-performance/object_flow.png)
+![](attachments/minimize-number-of-objects-in-session/object_flow.png)
 
 ## 3 Minimizing the Number of In-Use Objects in Your Session
 
@@ -59,11 +59,11 @@ Link non-persistable objects that have long life spans to the current Session ob
 
 To do this, first create a reference between your entity and the Session entity in the System module, as shown in the following image:
 
-![](attachments/best-practices-for-app-performance-in-mendix-7/domain_model_npe.png)
+![](attachments/minimize-number-of-objects-in-session/domain_model_npe.png)
 
 Then link the object to the current session when you create it in a microflow, as shown in this image:
 
-![](attachments/best-practices-for-app-performance-in-mendix-7/create_object_dialog.png)
+![](attachments/minimize-number-of-objects-in-session/create_object_dialog.png)
 
 Because it is always possible to look at the current session object, any objects related to the current session can also always be retrieved. The client must then always keep these objects around; they will never be removed.
 

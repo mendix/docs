@@ -50,6 +50,14 @@ Warning Threshold | System load is higher than 2.8 over the last 15, 10, and 5 m
 Critical Threshold | System load is higher than 6.0 over the last 15, 10 and 5 minutes, with a maximum deviation of 20% between the values.
 First actions to take | Inspect the trends for *Application node CPU usage* combined with *Application node disk throughput* and *Application node load* for anomalies and correlate those with application behavior.
 
+CPU Credit Balance status | |
+:---|:---|
+Description | This only appears if you run into a warning or a critical Credit Balance. You can find more Details about the credit system in the official aws documentation: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-credits-baseline-concepts.html
+Example message | Application container 34234543-6543-6543-6543-153d247b6543 - Instance Index: 0 has low cpu credit balance: 16.315528
+Warning Threshold | -
+Critical Threshold | -
+First actions to take | Inspect the trends for *Application node CPU usage* combined with *Application node disk throughput* and *Application node load* for anomalies and correlate those with application behavior.
+
 Critical Logs | |
 :---|:---|
 Description | The *CRITICAL* log level is reserved for issuing messages in *rare cases where the application may not be able to function reliably anymore*, for example, there's a chance of data corruption when the application continues to be running. Internal JVM Errors are logged to this level. Out of Memory errors, which are JVM Errors must be treated as harmful for the stability and integrity of your mendix application process.

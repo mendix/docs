@@ -1,6 +1,6 @@
 ---
-title: "Best Practices for App Performance in Mendix 7"
-category: "Best Practices"
+title: "Employ Best Practices for App Performance"
+category: "Geneal"
 ---
 
 In Mendix 7, we introduced a completely new stateless architecture. All the application state that was kept in the runtime in earlier versions, will now be kept by the client in the browser. By “state”, we mean non-persistable entities (NPEs) and persistable entities that have not yet been committed to the database. The new approach has important advantages, such as the ability to easily scale the app horizontally. However, there are also some new things to keep in mind when developing for this new architecture, in order to prevent performance degradation of the client.

@@ -38,6 +38,7 @@ The App Store sidebar menu lists all the pa Itemsges that you can browse for con
 For details on add-ons, see [Add-On Details Page](#AddonDetailsPage).
 
 You can also access the following pages:
+
 * [My App Store](#myappstore)
 * [Private App Store](#privateappstore)
 * [Modeler](#modeler)

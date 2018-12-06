@@ -1,5 +1,5 @@
 ---
-title: "Starting Your Own Repository"
+title: "Start Your Own Repository"
 category: "Collaboration & Requirements Management"
 menu_order: 30
 tags: []

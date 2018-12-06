@@ -5,7 +5,7 @@ tags: ["collaboration", "requirements", "management"]
 
 ## 1 Introduction
 
-This category of how-to's presents on using the Mendix Team Server, collaborating via GitHub, translating app content, and other ways to collaborate and manage requirements.
+This category of how-to's presents information on using the Mendix Team Server, collaborating via GitHub, translating app content, and other ways to collaborate and manage requirements.
 
 ## 2 Main Documents in This Category
 
@@ -15,3 +15,4 @@ This category of how-to's presents on using the Mendix Team Server, collaboratin
 * [Share the Development Database](sharing-the-development-database)
 * [Translate Your App Content](translate-your-app-content)
 * [Work with an On-Premises Version Control Server](on-premises-svn-howto)
+

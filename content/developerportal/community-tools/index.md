@@ -2,11 +2,13 @@
 title: "Community Tools"
 ---
 
-## 1 Introduction to Mendix Community Tools
+## 1 Introduction
 
 You can go to the [Mendix Community site](https://developers.mendix.com/) for all the information you need as a member of the Mendix community. Each section of the site represents a community tool that is continuously updated with new content and exciting developments. In addition, the content on the site is not only created for Mendix community developers, it is created by Mendix community developers.
 
-## 2 Forum
+The Mendix Community site includes the community tools described below.
+
+## 2 Mendix Forum
 
 On the [Mendix Forum](https://forum.mendixcloud.com/index3.html), you can ask questions and explore the knowledge offered by the entire Mendix community. There are questions and answers on various topics as well as a specific **Idea Forum** for the submission of unique ideas on changes and improvements to the Mendix app platform.
 
@@ -97,3 +99,12 @@ The **Developer Spotlight** section highlights [Mendix Developer Blog](https://w
 {{% /image_container %}}
 
 Click any blog post title to go to the full text of that post. There is a lot of great content on what Mendix developers are doing located here!
+
+## 9 Main Documents in This Category
+
+* [Mendix Forum](mendix-forum)
+* [Contribute to the Documentation](contribute-to-the-mendix-documentation)
+* [Documentation Writing Guidelines](documentation-writing-guidelines)
+* [Mendix Jobs Board](mendix-job-board)
+* [Mendix MVP Program](mendix-mvp-program)
+* [Set Up Your Partner Profile](how-to-set-up-your-partner-profile)

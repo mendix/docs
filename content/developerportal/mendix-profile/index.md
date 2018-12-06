@@ -308,10 +308,6 @@ Be sure to do the following in order to make your profile public:
 To make your public profile private again, click **Make this profile private**.
 {{% /alert %}}
 
-## 11 Related Content
+## 11 Main Document in This Category
 
-* [Company Admin Settings](../company-app-roles/companyadmin-settings)
-* [Company & App Roles](../company-app-roles/index)
-* [How to Manage Company & App Roles](../company-app-roles/manage-roles)
-* [Feedback](../feedback/index)
-* [How to Use the Mendix Feedback Widget](../feedback/use-feedback-widget)
+* [OAuth & Scopes](oauth-scopes)

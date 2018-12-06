@@ -1,5 +1,5 @@
 ---
-title: "Sharing the Development Database"
+title: "Share the Development Database"
 category: "Collaboration & Requirements Management"
 menu_order: 40
 tags: []

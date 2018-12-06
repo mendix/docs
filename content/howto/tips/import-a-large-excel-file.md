@@ -1,6 +1,7 @@
 ---
 title: "Import a Large Excel File"
 category: "Tips & Tricks"
+menu_order: 65
 ---
 
 ## 1 Introduction

@@ -158,7 +158,6 @@ In order to receive Mendix points for your contributions to Mendix GitHub reposi
 | Pass the [Rapid Developer Certification](https://gettingstarted.mendixcloud.com/link/certification/rapid) exam | 25     | n/a          |
 | Complete a learning path in the [Mendix Academy](https://gettingstarted.mendixcloud.com/link/home) | 25     | n/a          |
 | Make a large contribution to the [Mendix documentation](https://docs.mendix.com/) | 15     | n/a          |
-| Attend a [Mendix webinar](https://gettingstarted.mendixcloud.com/link/webinar) | 10     | n/a          |
 | Attend the [Advanced Developer Classroom](https://gettingstarted.mendixcloud.com/link/classroom/advanced) course | 10     | n/a          |
 | Attend the [Rapid Developer Classroom](https://gettingstarted.mendixcloud.com/link/classroom/rapid) course | 10     | n/a          |
 | Make a small contribution to the Mendix documentation        | 5      | n/a          |

@@ -1,6 +1,6 @@
 ---
 title: "Install the Mendix Desktop Modeler"
-category: "Modeling Basics"
+category: "General"
 description: "Follow this how-to to learn how to install the Mendix Desktop Modeler."
 toc-level: "2"
 ---

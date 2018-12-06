@@ -3,6 +3,6 @@ title: "Best Practices & Support"
 notoc: true
 ---
 
-This space contains version-independent documentation for the following categories:
+The **Best Practices & Support** space is divided into the following categories:
 
 {{% category_block %}}

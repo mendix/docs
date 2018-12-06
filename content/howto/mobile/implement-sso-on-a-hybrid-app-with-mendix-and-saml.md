@@ -87,8 +87,10 @@ MxApp.onConfigReady(function(config) {
                     code: "document.cookie;"
                 }, function(values) {
                     var value = values[0] + ";";
-                    var token = new RegExp('AUTH_TOKEN=([^;]+);', 'g').exec(value)[1];
-                    window.localStorage.setItem("mx-authtoken", token);
+                    var token = new RegExp('AUTH_TOKEN=([^;]+);', 'g').exec(value);
+                    if (token && token.length > 1) {
+                        window.localStorage.setItem("mx-authtoken", token[1]);
+                    }
                     
                     samlWindow.close();
 

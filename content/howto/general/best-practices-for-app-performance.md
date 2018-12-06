@@ -1,25 +1,29 @@
 ---
 title: "Employ Best Practices for App Performance"
-category: "Geneal"
+category: "General"
 ---
 
-In Mendix 7, we introduced a completely new stateless architecture. All the application state that was kept in the runtime in earlier versions, will now be kept by the client in the browser. By “state”, we mean non-persistable entities (NPEs) and persistable entities that have not yet been committed to the database. The new approach has important advantages, such as the ability to easily scale the app horizontally. However, there are also some new things to keep in mind when developing for this new architecture, in order to prevent performance degradation of the client.
+## 1 Introduction
 
-## Overview
+In Mendix 7, we introduced a completely new stateless architecture. All the application state that was kept in the Mendix Runtime in earlier versions is now kept by the client in the browser. By “state,” we mean non-persistable entities (NPEs) and persistable entities that have not yet been committed to the database. Th
 
-The stateless architecture of Mendix 7 means that all temporary objects are stored in the client (browser), instead of in the runtime. However, since the objects are used in microflows, the runtime will need them to be able to execute a microflow. For this reason, the state is transferred by the browser to the server when a request is sent.
+This new approach has important advantages, such as the ability to easily scale the app horizontally. However, there are also some new things to keep in mind when developing for this new architecture, in order to prevent performance degradation of the client.
 
-The Mendix client that runs in the browser determines which objects are relevant for the current page and microflow you want to execute. It does this based on the possibility to retrieve objects from the microflow parameters by following the relations from that object. Only the objects that can be retrieved are transferred to the server to optimize performance. However, since there are many flexible ways to retrieve objects, Mendix must be conservative in this. There will often be more objects sent than are strictly necessary to be able to execute a microflow.
+## 2 Overview
 
-After the microflow has run, any new objects or updates to existing objects that were made are returned to the client. The client can then update its state and refresh any objects on the current page if necessary. This is only done for NPEs and for persistable objects that are on the current page.
+The stateless architecture of Mendix 7 means that all temporary objects are stored in the client (browser), instead of in the Mendix Runtime. However, since the objects are used in microflows, the Mendix Runtime will need them to be able to execute a microflow. For this reason, the state is transferred by the browser to the server when a request is sent.
+
+The Mendix Client that runs in the browser determines which objects are relevant for the current page and microflows you want to execute. It does this based on the possibility of retrieving objects from the microflow parameters by following the relations from that object. Only objects that can be retrieved are transferred to the server to optimize performance. However, since there are many flexible ways to retrieve objects, Mendix must be conservative in this. There will often be more objects sent than are strictly necessary to be able to execute a microflow.
+
+After a microflow has run, any new objects or updates to existing objects that were made are returned to the client. The client can then update its state and refresh any objects on the current page if necessary. This is only done for NPEs and for persistable objects that are on the current page.
 
 The following diagram shows the flow of objects in the new architecture in detail:
 
 ![](attachments/best-practices-for-app-performance-in-mendix-7/object_flow.png)
 
-## Limiting the Number of Objects
+## 3 Limiting the Number of Objects
 
-Because all objects necessary for a microflow are transferred between client and server for each request, the network traffic will grow when more objects are used at the same time. Especially on mobile devices, this can become a bottleneck. This leads us to the primary new best practice for Mendix 7.
+Because all the objects necessary for a microflow are transferred between the client and server for each request, the network traffic will grow when more objects are used at the same time. Especially on mobile devices, this can become a bottleneck. This leads us to the primary new best practice for Mendix 7.
 
 {{% alert type="info" %}}
 
@@ -115,7 +119,7 @@ We have identified some best practices for Mendix developers that go along with 
 
 *	Minimize the number of in-use objects in your session
 		Commit or roll back all changes to persistable objects before the end of the main microflow
-		Link non-persistable objects that have long life spans to the current Session object
-		Map only those parts of a web service integration that are necessary
-		Delete any non-persistable objects as soon as they are no longer necessary
-		Don’t use non-persistable objects in layouts
+	​	Link non-persistable objects that have long life spans to the current Session object
+	​	Map only those parts of a web service integration that are necessary
+	​	Delete any non-persistable objects as soon as they are no longer necessary
+	​	Don’t use non-persistable objects in layouts

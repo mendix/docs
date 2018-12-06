@@ -82,7 +82,7 @@ You can change the App Contact by following these steps:
 
 ## 6 Changing the Technical Contact {#change-technical-contact}
 
-A node can have only one Technical Contact to manage the node's environments, deployment repositories, backups, alerts, etc. 
+An app can have only one Technical Contact to manage the app's environments, deployment repositories, backups, and alerts.
 
 If you are the current Technical Contact for an app, you can make another team member the Technical Contact by following these steps:
 

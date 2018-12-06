@@ -1,5 +1,5 @@
 ---
-title: "Employ Best Practices for App Performance"
+title: "Minimize Number of In-Use Objects in Your Session"
 category: "General"
 ---
 
@@ -19,23 +19,17 @@ After a microflow has run, any new objects or updates to existing objects that w
 
 The following diagram shows the flow of objects in the new architecture in detail:
 
-![](attachments/best-practices-for-app-performance-in-mendix-7/object_flow.png)
+![](attachments/best-practices-for-app-performance/object_flow.png)
 
-## 3 Limiting the Number of Objects
+## 3 Minimizing the Number of In-Use Objects in Your Session
 
-Because all the objects necessary for a microflow are transferred between the client and server for each request, the network traffic will grow when more objects are used at the same time. Especially on mobile devices, this can become a bottleneck. This leads us to the primary new best practice for Mendix 7.
+Because all the objects necessary for a microflow are transferred between the client and server for each request, the network traffic will grow when more objects are used at the same time. This can become a bottleneck, especially on mobile devices.
 
-{{% alert type="info" %}}
+That is why the primary best practice for app performance is to minimize the number of in-use objects in your session. By "in-use objects," we mean NPEs and uncommitted persistable objects.
 
-Minimize the number of in-use objects in your session.
+It is not possible to eliminate the need for in-use objects entirely, unless you want your app to be completely read-only. However, there are several common ways to inadvertently create more objects than necessary. The rest of this document presents wyas to reduce the number of in-use objects.
 
-{{% /alert %}}
-
-By in-use objects we mean non-persistable objects and uncommitted persistable objects.
-
-Of course, it is not possible to eliminate the need for in-use objects entirely, unless you want your app to be completely read-only. However, there are several common ways to inadvertently create more objects than necessary. The rest of this document will discuss some best practices to reduce the number of in-use objects.
-
-## Changed Objects
+### 3.1 Changed Objects
 
 To the Mendix Runtime there is very little difference between a non-persistable object and a persistable object that is changed but not committed. Any changes that are not committed at the end of a browser request will be sent to the client for use in future requests. To minimize the number of objects for which this is the case, we recommend the following:
 

@@ -4,10 +4,11 @@ title: "Tips & Tricks"
 
 ## 1 Introduction
 
-These are some tips and tricks from Mendix experts:
+These are some tips and tricks from Mendix experts.
 
 ## 2 Main Documents in This Category
 
+* [Minimize Number of In-Use Objects in Your Session](minimize-number-of-objects-in-session)
 * [Find Your Way in an App Project](finding-your-way-through-a-project)
 * [Find Object Activities](finding-object-activities)
 * [Find Unused Items](finding-unused-items)
@@ -16,3 +17,4 @@ These are some tips and tricks from Mendix experts:
 * [Use Translatable Validation Messages](translatable-validation-messages)
 * [Import a Large Excel File](import-a-large-excel-file)
 * [Migrate Your Mendix Database](migrating-your-mendix-database)
+

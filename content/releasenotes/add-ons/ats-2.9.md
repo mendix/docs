@@ -3,6 +3,25 @@ title: "2.9"
 parent: "ats-2"
 ---
 
+## 2.9.4
+
+**Release date: December 4th, 2018**
+
+### Improvements
+
+* We have added the option to refresh the app roles from the App Settings page. After clicking the refresh button, the app roles for all users currently in the current app will be queried from the Mendix Developer Portal and updated in ATS, according to the standard rules for updating roles in ATS. Users who no longer have access to the corresponding project in the Developer Portal will be removed from the app. New members of an app project in the Developer Portal have to log in to ATS and accept the terms and conditions before they can become members of an app in ATS.
+* We have continued optimize how tests results are processed in ATS. We expect that this will reduce the delay in seeing the results for a test.
+
+### (Potentially) Breaking change
+
+Due to complaints about flaky tests that were caused by long on-change change microflows (>500 ms), we have decided to change the behavior of the **Set Value** function. 
+
+In previous versions, the Set Value function typed in a value in an input field and kept the focus on the field. Therefore, the on-change and on-leave microflows were not triggered until a later test step, where another element on the page was focused (for example, via a click). This was done deliberately, as we felt that it was natural user behavior (as in, keeping the focus until an interaction occurs with another element on the page).
+
+Since ATS version 2.9.4, the Set Value function unfocuses the widget after setting the value and waits for the on-change and on-leave microflows to finish before proceeding with the next steps in a test case. We hope that this makes tests more stable when on-change microflows are used, since the wait ensures that such microflows have finished executing before proceeding with the test.
+
+We do not expect this change to cause any issues with existing tests. However, if you notice strage behavior related to the Set Value function after the update, please inform us by submiting a support ticket.
+
 ## 2.9.3
 
 **Release date: October 15th, 2018**

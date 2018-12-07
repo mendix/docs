@@ -13,7 +13,7 @@ The Mendix Modeler contains a version control system that supports collaborating
 
 Below is a list of known problems and steps to fix them.
 
-### 2.1 Getting an error that contains `SharpSvn.SvnAuthenticationException: Proxy authentication failed`
+### 2.1 Getting an Error Containing `SharpSvn.SvnAuthenticationException: Proxy authentication failed`
 
 ![Error dialog with proxy authentication failed](attachments/troubleshoot-version-control-issues/oopsproxy.png)
 
@@ -23,7 +23,7 @@ The proxy settings can be changed in the Modeler by selecting **Edit** > **Prefe
 
 ![Proxy settings](attachments/troubleshoot-version-control-issues/proxysettings.png)
 
-### 2.2 Getting an error that contains another `SharpSvn.SvnAuthenticationException`
+### 2.2 Getting an Error Containing Another `SharpSvn.SvnAuthenticationException`
 
 If you are using the Desktop Modeler version 7.18 or higher, sign out and then sign back in.
 
@@ -32,7 +32,7 @@ If you are using a Desktop Modeler version lower than 7.18, follow these steps:
 1. Remove all the files from the *\Users\<your username>\AppData\Roaming\Subversion\auth\svn.simple* folder.
 2. Remove all the files from the *\Users\<your username>\AppData\Local\Mendix\svnconfig\auth\svn.simple* folder.
 
-### 2.3 Getting an error with the message `Connection timed out`
+### 2.3 Getting an Error with the Message `Connection timed out`
 
 If you are using the Desktop Modeler version 7.18 or higher, follow these steps:
 
@@ -40,12 +40,12 @@ If you are using the Desktop Modeler version 7.18 or higher, follow these steps:
 2. Add the text `http-timeout = 5000` under the section `[global]`.
 3. Save the file.
 
-### 2.4 Getting an error with the message `<project folder> is already locked`
+### 2.4 Getting an Error with the Message `<project folder> is already locked`
 
-1. Install TortoiseSVN as we suggest in System Requirements (https://docs.mendix.com/refguide/system-requirements). Please use version 1.7.x which can be downloaded from https://sourceforge.net/projects/tortoisesvn/files/1.7.15/
-2. Go to the parent directory (folder) of your project, this is the folder with the <folder_name> from the error message.
-3. Open the folder context menu (right click)
-4. On the **TortoiseSVN** sub-menu select **Clean up**.
+1. Install TortoiseSVN, as suggested in [System Requirements](/refguide/system-requirements). Use version 1.7.x, which can be downloaded [here](https://sourceforge.net/projects/tortoisesvn/files/1.7.15/).
+2. Go to the parent directory (folder) of your project (this is the folder with the **<folder_name>** from the error message).
+3. Right-click to open the folder's context menu.
+4. On the **TortoiseSVN** sub-menu, select **Clean up**.
 
 ## 3 Other Problems
 

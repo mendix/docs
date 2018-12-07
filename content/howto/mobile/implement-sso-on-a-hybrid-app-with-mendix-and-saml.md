@@ -88,15 +88,30 @@ MxApp.onConfigReady(function(config) {
                 }, function(values) {
                     var value = values[0] + ";";
                     var token = new RegExp('AUTH_TOKEN=([^;]+);', 'g').exec(value);
-                    if (token && token.length > 1) {
-                        window.localStorage.setItem("mx-authtoken", token[1]);
-                    }
-                    
-                    samlWindow.close();
+                    var authPromise = new Promise(function(resolve, reject) {
+                    	if (token && token.length > 1) {
+							window.localStorage.setItem("mx-authtoken", token);
 
-                    if (window.mx.afterLoginAction) {
-                        window.mx.afterLoginAction();
-                    }
+	                        window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, function (fs) {
+	                            fs.root.getFile(".mx-token", { create: true, exclusive: false }, function (fileEntry) {
+	                                fileEntry.createWriter(function (fileWriter) {
+	                                    fileWriter.onwriteend = resolve;
+	                                    fileWriter.onerror = reject;
+	                                    fileWriter.write(token);
+	                                });
+	                            }, reject);
+	                        }, reject);
+	                    } else {
+	                    	resolve();
+	                    }
+                    });
+
+                    authPromise.then(function() {
+                        samlWindow.close();
+                        if (window.mx.afterLoginAction) {
+                            window.mx.afterLoginAction();
+                        }
+                    });
                 });
 
             };

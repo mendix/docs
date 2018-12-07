@@ -153,9 +153,9 @@ refguide:
   mendix_version: 7
   menu_categories:
     - "General"
-    - "Team Server"
     - "Desktop Modeler"
     - "Web Modeler"
+    - "Team Server"
     - "Mendix Runtime"
     - "Java Programming"
     - "Mobile Development"

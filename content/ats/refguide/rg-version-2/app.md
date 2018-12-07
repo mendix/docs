@@ -112,11 +112,25 @@ ATS automatically retrieves the parallel test session limit from the Selenium hu
 Starting with ATS verson 2.0, ATS capabilites override custom capabilities.
 {{% /alert %}}
 
-### 3.3 Administration Rights Control from ATS
+### 3.3 Access Rights Control from ATS
 
-Under **Administrators**, you can specify which app members have administrative rights for the app. By default, app members with the SCRUM Master project role in the Developer Portal will have administrative rights. Please keep in mind that users still need to be a member of an app project in the Developer Portal for them to be eligible to be app administrators for the corresponding app in ATS.
+Under **App Team**, you can specify which app members have what type of access rights for an app.
 
-In order to make sure that the administration rights granted to users are not overwritten, administration rights are not automatically revoked when the project role for a user in the Developer Portal changes from administrator to non-administrator. Instead, revoking administration rights can be done manually from the **Settings** page. Finally, note that a user who has an administrative project role in the Developer Portal will always have administrative rights in ATS.
+By default, app members with the SCRUM Master app project role in the Developer Portal will have administrative rights. All other members of the app will get the default role configured for that app. Please keep in mind that users still need to be a member of an app project in the Developer Portal for them to be eligible to be app administrators for the corresponding app in ATS.
+
+App member that the have a No access role will not see the app in their **My apps** page and will not be able to open or edit or run any test cases for this app.
+
+{{% alert type="info" %}}
+For on-premises instances of ATS, all accounts created manually by the tenant administrator will be members of each project.
+{{% /alert %}}
+
+In order to make sure that the administration rights granted to users are not overwritten, administration rights are not automatically revoked when the project role for a user in the Developer Portal changes from administrator to non-administrator. Instead, revoking administration rights can be done manually from the **App Settings** page. Other existing users' access will be updated when they log in to ATS or when an administrator refreshes the app access rights by clicking on the corresponding button. New members of a project in the Developer Portal have to log in to ATS and accept the terms and conditions before they can become members of an app in ATS.
+
+Finally, note that a user who has an administrative project role in the Developer Portal will always have administrative rights in ATS.
+
+{{% alert type="info" %}}
+If an app project lacks a Mendix app ID, the app roles will not be synced with the Developer Portal.
+{{% /alert %}}
 
 ### 3.4 Execution Log Cleanup
 

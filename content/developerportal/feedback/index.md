@@ -1,7 +1,7 @@
 ---
 title: "Feedback Management"
 description: "This page describes how to manage feedback."
-tags: ["Feedback","Developer Portal"]
+tags: ["Feedback","Developer Portal", "feedback widget"]
 ---
 
 ## 1 Introduction
@@ -13,7 +13,6 @@ On the **Feedback** page of the Developer Portal, you can view and manage the fe
 This feedback comes from different sources:
 
 * Submitted via the [Mendix Feedback Widget](use-feedback-widget)
-* Submitted via the [Mendix Feedback & Collaboration Widget](use-collaboration-widget)
 * Submitted on the **Feedback** page itself (for details, see the [Actions](#actions) section below)
 
 ### 1.1 Types of Feedback {#types}
@@ -101,5 +100,4 @@ Once a feedback item is connected to a user story, the user who submitted the st
 
 ## 4 Main Documents in This Category
 
-* [Use the Mendix Feedback & Collaboration Widget](use-collaboration-widget)
 * [Use the Mendix Feedback Widget](use-feedback-widget)

@@ -34,6 +34,10 @@ If you choose 'Custom' as the date format (see above) this property determines h
 
 {{% snippet file="refguide/Custom+Date+Format+Tokens.md" %}}
 
+{{% alert type="info" %}}
+Even though a date picker with a custom date format is editable (as of Mendix 7.21.0), the calendar drop-down button will not be shown if the custom format does not represent the full date (meaning, the year [`y`-`yyyy`], month [`M`-`MMMM`], or day of month [`d`-`dd`] tokens are missing in the custom format).
+{{% /alert %}}
+
 ### 2.3 Placeholder Text
 
 The placeholder text is shown if the date attribute is empty. It can be used to give the end user a hint as to the expected format. Note: placeholder texts will not work if a native date picker is available (e.g. iOS and Android versions 4.0 and above).

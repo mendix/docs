@@ -14,6 +14,8 @@ This document explains how to configure your Mendix Cloud v4 app to send data to
 
 ## 2 Datadog API Key
 
+To make use of Datadog you will need a Datadog API key. If you already use Datadog, skip to section 2.2 [Existing Datadog User](#existing-datadog-user) to learn how to get one.
+
 ### 2.1 New Datadog User
 
 If you are new to Datadog, you will need to get an account first.
@@ -34,13 +36,13 @@ If you are new to Datadog, you will need to get an account first.
 
 5. You now need to use this API key with your app: see section 3 [Connect Node to Datadog](#connect-node).
 
-### 2.2 Existing Datadog User
+### 2.2 Existing Datadog User{#existing-datadog-user}
 
-To make use of Datadog you will need a Datadog API key. If you do not already have a Datadog API key, you can find an existing one, or create a new one here:
+To find your existing API key, or to request a new one for your app, do the following:
 
 1. Login to your Datadog account.
 
-2. Go to the **Integration > API** screen.
+2. Go to the **Integrations > API** screen.
 
     ![Datadog site: navigation to Integration, API](attachments/datadog-metrics/datadog-integrations-api.png)
 
@@ -95,7 +97,7 @@ The valid values for **DD_LOG_LEVEL** are:
 
 ### 4.2 Datadog Events Log
 
-The Datadog Events log contains events which come from your app: that is the same events that would appear in the Mendix Console. It does not contain events from the environment.
+The Datadog Events log contains events which come from your app: those are the same events that would appear in the Mendix Console. It does not contain events from the environment.
 
 ![Example events log](attachments/datadog-metrics/datadog-event-log.png)
 

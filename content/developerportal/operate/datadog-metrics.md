@@ -36,11 +36,21 @@ If you are new to Datadog, you will need to get an account first.
 
 ### 2.2 Existing Datadog User
 
-To make use of Datadog you will need a Datadog API key. If you do not already have a Datadog API key, you can obtain one here:
+To make use of Datadog you will need a Datadog API key. If you do not already have a Datadog API key, you can find an existing one, or create a new one here:
 
+1. Login to your Datadog account.
 
+2. Go to the **Integration > API** screen.
 
-## 3 [Connect Node to Datadog]{#connect-node}
+    ![Datadog site: navigation to Integration, API](attachments/datadog-metrics/datadog-integrations-api.png)
+
+3. Copy an existing **API Key** or create a new one.
+
+    ![Datadog site: API Keys page](attachments/datadog-metrics/datadog-api=keys.png)
+
+4. For more information on Datadog API keys, see the following page on the Datadog site: [How do I reset my Application Keys](https://docs.datadoghq.com/account_management/faq/how-do-i-reset-my-application-keys/) and related documentation.
+
+## 3 Connect Node to Datadog{#connect-node}
 
 To send your runtime information to Datadog, you need to provide the Datadog API key to your environment.
 
@@ -63,7 +73,7 @@ To send your runtime information to Datadog, you need to provide the Datadog API
     * **Name**: *DD_LOG_LEVEL*
     * **Value**: *INFO*
 
-        This will ensure that messages are sent to Datadog. You can change the log level later once you have confirmed that Datadog is receiving them.
+        This will ensure that some messages are sent to Datadog. You can change the log level later once you have confirmed that Datadog is receiving them.
 
 7. Return to the **Environments** page for your app and *Deploy* or *Transport* your app into the selected environment.
 
@@ -83,6 +93,16 @@ The valid values for **DD_LOG_LEVEL** are:
 * INFO
 * DEBUG
 
-## 4 Related Content
+### 4.2 Datadog Events Log
+
+The Datadog Events log contains events which come from your app: that is the same events that would appear in the Mendix Console. It does not contain events from the environment.
+
+![Example events log](attachments/datadog-metrics/datadog-event-log.png)
+
+### 4.3 Datadog Issues
+
+If you have any issues related to accessing Datadog, please contact their support here: [Support | Datadog](https://www.datadoghq.com/support/), or by email at [support@datadoghq.com](mailto:support@datadoghq.com).
+
+## 5 Related Content
 
 * [Metrics](metrics)

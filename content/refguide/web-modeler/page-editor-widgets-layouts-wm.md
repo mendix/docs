@@ -75,7 +75,7 @@ For information on the **Design** section and its properties, see [Design Sectio
 * [Expand](#expand-section) 
 * [Row Layout](#row-layout)
 
-{{% image_container width="400" %}}![Row and Column Properties](attachments/page-editor-widgets-layouts-wm/wm-row-and-column-sections.png)
+{{% image_container width="500" %}}![Row and Column Properties](attachments/page-editor-widgets-layouts-wm/wm-row-and-column-sections.png)
 {{% /image_container %}}
 
 #### 2.2.1 Expand Section

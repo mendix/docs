@@ -1,16 +1,16 @@
 ---
-title: "Community Best Practices for App Performance"
+title: "Implement Community Best Practices for App Performance"
 category: "Best Practices"
 frontpage_featured: true
 ---
 
-{{% alert type="warning" %}}
+## 1 Introduction
+
+{{% alert type="info" %}}
 
 This document is created by and for the Mendix community. It collects performance best practices in the form of do's and don'ts.
 
 {{% /alert %}}
-
-## Introduction
 
 A must-have for your app is that it performs well. Your users will not accept anything else, and they will choose alternatives if the performance is not good. This document describes some best practices to apply during development to in order to get a better performing app.
 
@@ -26,7 +26,7 @@ This document is organized in sections covering parts of the Mendix Modeler wher
 
 Other sections cover parts of the infrastructure for special performance considerations in Mendix domain specific languages, such as XPath, expressions, and OQL.
 
-## Domain Models
+## 2 Domain Models
 
 If you made a simple and sound design of the app's domain models, consider the following points so that the app performs well:
 
@@ -48,7 +48,7 @@ Mendix 7 is said to have optimized the retrieves, so not every association ID is
 
 {{% /alert %}}
 
-## Indexes
+## 3 Indexes
 
 Indexes is a topic with a long history of best practices from the database world. For Mendix apps, the following best practises apply:
 
@@ -61,7 +61,7 @@ Indexes is a topic with a long history of best practices from the database world
 * Indexes can be used best for equal searches, ranges searches for dates and numbers, and leading/`startsWith` searches on strings.
 * Index scans can be done to match more difficult clauses like `contains` or `endsWith`. These are still faster then full table scans.
 
-## Microflows
+## 4 Microflows
 
 * Minimize the work in loops. 
     * Do commits after the loop in a list commit. 
@@ -74,7 +74,7 @@ Indexes is a topic with a long history of best practices from the database world
 * Commit as late as possible. A commit locks that record (or list of records). This means that any other user/logic that wants to commit the same object has to wait until the first transaction is finished.
 * To prevent locking, do scheduled events that commit data in small chunks. This is so the data does not get locked over a longer period of time.
 
-## Pages
+## 5 Pages
 
 * Keep it simple. If possible, split up into multiple pages. Think of mobile app logic and not of all-in-one-screen logic
 * Minimize the data sent by using, for example, chunking or security to prevent data sent to the client.
@@ -83,30 +83,30 @@ Indexes is a topic with a long history of best practices from the database world
 * Give the user feedback. If this takes more than a few seconds, provide a progress indication.
 * Do work asynchronously if the user does not have to wait for the result. For example, sending mails or updating other apps over an interface should never be something the user is waiting on in the UI. For running work asynchronously, there are options in the [Community Commons Function Library](https://appstore.home.mendix.com/link/app/170/) in the Mendix App Store to run microflows in the background or have a process queue to control the load and prevent peaks in background work.
 
-## Infrastructure
+## 6 Infrastructure
 
 * Get better infrastructure (for example, more App Engines in the Mendix Cloud).
 * When on premises, make sure a proxying web server is placed in front of Mendix to serve static content and compress data.
 
-## XPath
+## 7 XPath
 
 * Avoid "unequal" and "not" clauses in XPath. Often they can be rewritten to positive statements, like `<boolean>=false()`, `<enum> = valueA`, `<enum> = valueB`, `integer>valueA`, or `integer<valueB`.
 * Combine paths to the same assoicated entity if query logic allows this.
 * In older PostgreSQL databases, it was wise to start the XPath with attribute clauses, since the database query optimizer was processing clauses in order. Nowadays, it is claimed that the query optimizer has improved, and this "rule" is no longer needed.
 * Make sure that the attributes used are indexed.
 
-## OQL
+## 8 OQL
 
 For OQL, many of the same best practices apply as for XPath.
 
 * Note that OQL queries do not get domain model security, so you might need to add extra clauses when applicable (for example, in multi-tenant apps).
 
-## Security
+## 9 Security
 
 * Minimize the number of roles per user.
 * Minimize the number of rules per entity.
 
-## Web Services and XML
+## 10 Web Services & XML
 
 * Use SHA256 instead of BCrypt
 * Validating against schema slows down the processing.

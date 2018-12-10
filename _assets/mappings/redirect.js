@@ -2064,7 +2064,7 @@ module.exports = {
       to: "/howto/monitoring-troubleshooting/solving-load-and-import-errors"
     },
 	{
-      from: "/howto/tutorials/start-with-a-blank-app",
+      from: "/howto/start-with-a-blank-app",
       to: "/refguide/web-modeler/overview-wm"
     },
 	{
@@ -2073,6 +2073,10 @@ module.exports = {
     },
 	{
       from: "/howto/tutorials/build-a-simple-hrm-app",
+      to: "/refguide/web-modeler/overview-wm"
+    },
+	{
+      from: "/howto/tutorials/build-an-iot-app",
       to: "/refguide/web-modeler/overview-wm"
     },
     /****************************************************

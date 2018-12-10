@@ -1,6 +1,7 @@
 ---
 title: "Use Layouts and Snippets"
 category: "UX"
+menu_order: 25
 tags: []
 ---
 

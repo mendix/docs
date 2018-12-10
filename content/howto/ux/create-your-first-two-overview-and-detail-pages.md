@@ -1,6 +1,7 @@
 ---
 title: "Create Your First Two Overview & Detail Pages"
 category: "UX"
+menu_order: 20
 tags: []
 ---
 

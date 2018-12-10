@@ -1,7 +1,7 @@
 ---
 title: "Implement Community Best Practices for App Performance"
 category: "General"
-menu_order: 20
+menu_order: 30
 tags: ["best practice", "performance", "community"]
 ---
 

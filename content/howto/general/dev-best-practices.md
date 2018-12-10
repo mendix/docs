@@ -162,7 +162,7 @@ Microflows that are used for [data validation](../data-models/setting-up-data-va
 
 #### 3.7.1 Home Pages
 
-You can define the [home pages](../refguide/show-home-page) per device and role in your navigation. See the list below for page names we recommend using:
+You can define the [home pages](/refguide/show-home-page) per device and role in your navigation. See the list below for page names we recommend using:
 
 | Event Type           | Device  | Page Name                   |
 |----------------------|---------|-----------------------------|

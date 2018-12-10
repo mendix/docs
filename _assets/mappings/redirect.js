@@ -2060,7 +2060,7 @@ module.exports = {
       to: "/howto/monitoring-troubleshooting/solving-load-and-import-errors"
     },
 	{
-      from: "/howto7/tutorials/start-with-a-blank-app",
+      from: "/howto/tutorials/start-with-a-blank-app",
       to: "/howto/index"
     },	
     /****************************************************

@@ -220,6 +220,10 @@ module.exports = {
       from: "/howtogeneral/bestpractices/naming-conventions",
       to: "/howtogeneral/bestpractices/dev-best-practices"
     },
+	{
+      from: "/howtogeneral/bestpractices/best-practices-security-and-improvements-for-mendix-applications",
+      to: "/howto/security/best-practices-security"
+    },
     /****************************************************
      * Community
      ****************************************************/
@@ -2061,8 +2065,16 @@ module.exports = {
     },
 	{
       from: "/howto/tutorials/start-with-a-blank-app",
-      to: "/howto/index"
-    },	
+      to: "/refguide/web-modeler/overview-wm"
+    },
+	{
+      from: "/howto/tutorials/create-a-to-do-app",
+      to: "/refguide/web-modeler/overview-wm"
+    },
+	{
+      from: "/howto/tutorials/build-a-simple-hrm-app",
+      to: "/refguide/web-modeler/overview-wm"
+    },
     /****************************************************
      * Mendix Cloud
      ****************************************************/

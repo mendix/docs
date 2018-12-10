@@ -2067,6 +2067,10 @@ module.exports = {
       from: "/howto/tutorials/build-an-iot-app",
       to: "/refguide/web-modeler/overview-wm"
     },
+	{
+      from: "/howtogeneral/bestpractices/ux-best-practices",
+      to: "/howto/ux/ux-best-practices"
+    },
     /****************************************************
      * Mendix Cloud
      ****************************************************/
@@ -2173,7 +2177,8 @@ module.exports = {
     {
       from: "/deployment/cloud-foundry/",
       to: "/developerportal/deploy/cloud-foundry-deploy"
-    },    /****************************************************
+    },    
+	/****************************************************
      * SUPPORT
      ****************************************************/
 

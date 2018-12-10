@@ -23,6 +23,8 @@ The language that will be used to develop the application should be determined u
 
 There are some exceptions why certain parts of an application may use another language. The main exception would be in the domain model of an integration module. For example, in case the source data model is in another language already.
 
+For more information, see [How to Translate Your App Content](../collaboration-requirements-management/translate-your-app-content).
+
 ### 2.2 Project Name
 
 Every project is named when it is created. Make sure you use a logical name that allows you to easily identify the application. You will probably create more projects in the future, and want to be able to recognize this project. We recommend leaving out dates or Mendix version numbers in the project name, since that information can be captured and extracted in a different way.

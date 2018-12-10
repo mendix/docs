@@ -208,18 +208,6 @@ module.exports = {
       from: "/bestpractices/Best+Practices",
       to: "/howtogeneral/bestpractices/"
     },
-    {
-      from: "/bestpractices/Naming+conventions",
-      to: "/howtogeneral/bestpractices/dev-best-practices"
-    },
-    {
-      from: "/bestpractices/Naming+conventions+in+Mendix+5",
-      to: "/howtogeneral/bestpractices/dev-best-practices"
-    },
-    {
-      from: "/howtogeneral/bestpractices/naming-conventions",
-      to: "/howtogeneral/bestpractices/dev-best-practices"
-    },
 	{
       from: "/howtogeneral/bestpractices/best-practices-security-and-improvements-for-mendix-applications",
       to: "/howto/security/best-practices-security"

@@ -1,7 +1,8 @@
 ---
 title: "Set Up Anonymous User Security"
 category: "Security"
-tags: []
+menu_order: 30
+tags: ["anonymous", "security"]
 ---
 
 ## 1 Introduction

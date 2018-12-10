@@ -1,7 +1,8 @@
 ---
 title: "Create a Secure App"
 category: "Security"
-tags: []
+menu_order: 10
+tags: ["security", "secure app"]
 ---
 
 ## 1 Introduction

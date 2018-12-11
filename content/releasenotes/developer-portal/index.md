@@ -15,7 +15,8 @@ tags: ["developer portal", "cloud environments", "Mendix Cloud", "SAP", "IBM", "
 * We improved the look and feel of the emails that are being sent by the Developer Portal.
 
 #### Fixes
-* Fixed broken deeplink to the Stories page of an app.
+
+* We fixed the broken deeplink to the **Stories** page of your app.
 
 ### December 1st, 2018
 

@@ -9,9 +9,10 @@ tags: ["developer portal", "cloud environments", "Mendix Cloud", "SAP", "IBM", "
 ### December 12th, 2018
 
 #### Improvements
-* Improved the performance of the My Apps page for users who are a member of a large number of apps.
-* Updated look and feel of the My Company's Apps page to be more in line with the My Apps page.
-* Improved the look and feel of emails being sent by the developer portal.
+
+* We improved the performance of the **My Apps** page for users who are a member of a large number of App Teams.
+* We updated the look and feel of the **My Company's Apps** page to be more in line with the **My Apps** page.
+* We improved the look and feel of the emails that are being sent by the Developer Portal.
 
 #### Fixes
 * Fixed broken deeplink to the Stories page of an app.

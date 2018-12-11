@@ -1,6 +1,9 @@
 ---
 title: "Published REST Service"
 parent: "published-rest-services"
+menu_order: 10
+#description: " "
+#tags: ["These", "are", "Example", "Tags"]
 ---
 
 {{% alert type="info" %}}

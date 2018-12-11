@@ -1,6 +1,9 @@
 ---
 title: "Published REST Query Parameters"
-parent: "published-rest-operation"
+parent: "published-rest-service"
+menu_order: 40
+#description: " "
+#tags: ["These", "are", "Example", "Tags"]
 ---
 
 {{% alert type="info" %}}

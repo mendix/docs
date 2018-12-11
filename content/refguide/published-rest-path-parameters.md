@@ -1,6 +1,9 @@
 ---
 title: "Published REST Path Parameters"
-parent: "published-rest-operation"
+parent: "published-rest-service"
+menu_order: 30
+#description: " "
+#tags: ["These", "are", "Example", "Tags"]
 ---
 
 {{% alert type="info" %}}

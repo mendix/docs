@@ -1,6 +1,9 @@
 ---
 title: "JSON Schema"
-parent: "published-rest-services"
+parent: "published-rest-technical-details"
+menu_order: 20
+#description: " "
+#tags: ["These", "are", "Example", "Tags"]
 ---
 
 {{% alert type="info" %}}

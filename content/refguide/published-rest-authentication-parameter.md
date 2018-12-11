@@ -1,6 +1,9 @@
 ---
 title: "Parameters for the Custom Authentication Microflow"
-parent: "published-rest-services"
+parent: "published-rest-technical-details"
+menu_order: 40
+#description: " "
+#tags: ["These", "are", "Example", "Tags"]
 ---
 
 {{% alert type="info" %}}

@@ -1,6 +1,9 @@
 ---
 title: "Published REST Routing"
-parent: "published-rest-services"
+parent: "published-rest-technical-details"
+menu_order: 10
+#description: " "
+#tags: ["These", "are", "Example", "Tags"]
 ---
 
 {{% alert type="info" %}}

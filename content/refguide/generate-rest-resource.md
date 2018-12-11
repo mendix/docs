@@ -1,6 +1,11 @@
 ---
 title: "Generating a REST Resource"
 parent: "published-rest-services"
+menu_order: 20
+#description: " "
+#tags: ["These", "are", "Example", "Tags"]
+# If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
+# linked from DM: domain model > entity (right-click) > Expose as REST resource > Help (integration)
 ---
 
 {{% alert type="info" %}}

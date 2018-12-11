@@ -1,5 +1,5 @@
 ---
-title: "Perform the Scout and Windows 10 Workaround"
+title: "Perform the Scout & Windows 10 Workaround"
 parent: "setup-mendix-ui-framework"
 tags: ["Scout", "Window 10", "Workaround"]
 ---

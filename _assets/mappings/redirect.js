@@ -208,18 +208,6 @@ module.exports = {
       from: "/bestpractices/Best+Practices",
       to: "/howtogeneral/bestpractices/"
     },
-    {
-      from: "/bestpractices/Naming+conventions",
-      to: "/howtogeneral/bestpractices/dev-best-practices"
-    },
-    {
-      from: "/bestpractices/Naming+conventions+in+Mendix+5",
-      to: "/howtogeneral/bestpractices/dev-best-practices"
-    },
-    {
-      from: "/howtogeneral/bestpractices/naming-conventions",
-      to: "/howtogeneral/bestpractices/dev-best-practices"
-    },
 	{
       from: "/howtogeneral/bestpractices/best-practices-security-and-improvements-for-mendix-applications",
       to: "/howto/security/best-practices-security"
@@ -2079,6 +2067,10 @@ module.exports = {
       from: "/howto/tutorials/build-an-iot-app",
       to: "/refguide/web-modeler/overview-wm"
     },
+	{
+      from: "/howtogeneral/bestpractices/ux-best-practices",
+      to: "/howto/ux/ux-best-practices"
+    },
     /****************************************************
      * Mendix Cloud
      ****************************************************/
@@ -2185,7 +2177,8 @@ module.exports = {
     {
       from: "/deployment/cloud-foundry/",
       to: "/developerportal/deploy/cloud-foundry-deploy"
-    },    /****************************************************
+    },    
+	/****************************************************
      * SUPPORT
      ****************************************************/
 

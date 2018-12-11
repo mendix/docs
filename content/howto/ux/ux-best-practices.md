@@ -1,7 +1,8 @@
 ---
-title: "Best Practices for UX Design"
-category: "Best Practices"
-tags: ["UX", "UI", "user experience", "design", "menu", "button", "typography", "card"]
+title: "Implement Best Practices for UX Design"
+category: "UX"
+menu_order: 66
+tags: ["ux", "ui", "ux designer", "user experience", "design", "menu", "button", "typography", "card"]
 ---
 
 ## 1 Introduction

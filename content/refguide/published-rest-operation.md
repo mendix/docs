@@ -73,7 +73,7 @@ To set the status code, reason phrase, and headers, you should add an [HttpRespo
 
 The result of the microflow is the result of the operation. You have several options here, which are described below.
 
-The first option is to **return a *list* or an *object***. You will need to specify an export mapping to convert it to XML or JSON. 
+The first option is to **return a *list* or an *object***. You will need to specify an export mapping to convert it to XML or JSON.
 
 The second option is to **return a primitive**. When your microflow returns a string, integer, Boolean, etc., then the response to the operation will be that value. If you return a non-empty value from the microflow, the *Content* attribute of the *HttpResponse* object is ignored. If you return an empty value from the microflow, then the *Content* of the *HttpResponse* is taken as the result.
 

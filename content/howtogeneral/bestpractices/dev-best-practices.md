@@ -23,7 +23,7 @@ The language that will be used to develop the application should be determined u
 
 There are some exceptions why certain parts of an application may use another language. The main exception would be in the domain model of an integration module. For example, in case the source data model is in another language already.
 
-For more information, see [How to Translate Your App Content](../collaboration-requirements-management/translate-your-app-content).
+For more information, see [How to Translate Your App Content](/howto/collaboration-requirements-management/translate-your-app-content).
 
 ### 2.2 Project Name
 
@@ -134,7 +134,7 @@ Your [project settings](/refguide/project-settings) provide three events that ca
 
 #### 3.4.5 Unit Test Microflows
 
-Microflows containing [unit tests](../testing/testing-microflows-using-the-unittesting-module) should have the prefix **Test\_**.
+Microflows containing [unit tests](/howto/testing/testing-microflows-using-the-unittesting-module) should have the prefix **Test\_**.
 
 ### 3.5 Integration
 
@@ -158,7 +158,7 @@ For the microflow that you use in your [scheduled events](/refguide/scheduled-ev
 
 ### 3.7 Validation
 
-Microflows that are used for [data validation](../data-models/setting-up-data-validation) use the prefix **Val\_**.
+Microflows that are used for [data validation](/howto/data-models/setting-up-data-validation) use the prefix **Val\_**.
 
 #### 3.7.1 Home Pages
 
@@ -181,7 +181,7 @@ You can define the [home pages](/refguide/show-home-page) per device and role in
 
 #### 3.7.3 Overview Pages
 
-Pages that show an [overview](../ux/create-your-first-two-overview-and-detail-pages) of a single entity should have a postfix of **\_Overview**.
+Pages that show an [overview](/howto/ux/create-your-first-two-overview-and-detail-pages) of a single entity should have a postfix of **\_Overview**.
 
 #### 3.7.4 New, Edit & View Pages
 
@@ -211,7 +211,7 @@ When using inheritance (specialization/generalization), it is recommended to use
 
 #### 4.1.3 Delete Behavior
 
-[Delete behavior](../data-models/create-a-basic-data-layer#delete-behavior) must be specified where possible. Delete behavior must, however, never be relied upon when deleting large amounts of data. For performance reasons it is better to explicitly delete dependent objects when doing batch deletes.
+[Delete behavior](/howto/data-models/create-a-basic-data-layer#delete-behavior) must be specified where possible. Delete behavior must, however, never be relied upon when deleting large amounts of data. For performance reasons it is better to explicitly delete dependent objects when doing batch deletes.
 
 #### 4.1.4 Event Handlers
 
@@ -251,7 +251,7 @@ The number of parameters for a microflow should be kept to a minimum to facilita
 
 #### 4.2.5 Error Handling & Logging
 
-Use microflow [error handling](../logic-business-rules/set-up-error-handling) for all integration and Java calls. Make sure to determine the correct rollback behavior. Always log the error that occurred, even if the process can continue, this is essential for later analysis of the error.
+Use microflow [error handling](/howto/logic-business-rules/set-up-error-handling) for all integration and Java calls. Make sure to determine the correct rollback behavior. Always log the error that occurred, even if the process can continue, this is essential for later analysis of the error.
 
 Complex processes and important business logic (like workflow processing or validations) must include debug and trace [logging](/refguide/logging). Logging actions must write the current state and progress of the process and must include a request ID or other identifying information. The log node must be the name of the module. This will greatly assist error analysis.
 
@@ -269,7 +269,7 @@ When an XPath needs multiple constraints, each constraint must be put in bracket
 
 ### 4.5 Security
 
-The [security](../security/index) overview in the Modeler must not show any incomplete (yellow) parts. All entity, microflow, and page access must be configured completely. With regards to entity access, it is recommended to not use the option to assign default rights to new members, to ensure access is only granted after a conscious decision.
+The [security](/howto/security/index) overview in the Modeler must not show any incomplete (yellow) parts. All entity, microflow, and page access must be configured completely. With regards to entity access, it is recommended to not use the option to assign default rights to new members, to ensure access is only granted after a conscious decision.
 
 ### 4.6 Mendix Version
 

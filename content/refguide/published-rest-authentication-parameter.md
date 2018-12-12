@@ -1,9 +1,9 @@
 ---
-title: "Parameters for the Custom Authentication Microflow"
+title: "Custom Authentication Microflow Parameters"
 parent: "published-rest-technical-details"
 menu_order: 40
-#description: " "
-#tags: ["These", "are", "Example", "Tags"]
+description: "The parameters which are passed to the custom authentication microflow for a published REST service"
+tags: ["published REST", "custom authentication", "microflow", "parameters", "arguments", "query", "header"]
 ---
 
 {{% alert type="info" %}}

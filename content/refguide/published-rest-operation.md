@@ -2,8 +2,8 @@
 title: "Published REST Operation"
 parent: "published-rest-service"
 menu_order: 10
-#description: " "
-#tags: ["These", "are", "Example", "Tags"]
+description: "Options to  configure a published REST operation."
+tags: ["Published REST", "operation", "method", "path", "example location", "mapping". "operation parameters", "how to"]
 # If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 # linked from DM: published rest > select resource > add operation for resource > help (integration)
 ---
@@ -17,6 +17,8 @@ This feature was introduced in version 7.10.0.
 ## 1 Introduction
 
 A published REST operation is part of a [published REST resource](published-rest-resource) and defines an endpoint that a client can call to get, put, post, patch, or delete items from the resource.
+
+This document describes the options when configuring a REST operation through the *add operation for resource* pop-up dialog.
 
 ## 2 General
 

@@ -3,7 +3,8 @@ title: "Published REST Path Parameters"
 parent: "published-rest-service"
 menu_order: 30
 #description: " "
-#tags: ["These", "are", "Example", "Tags"]
+tags: ["published REST", "path parameters", "Data and Time"]
+# combine this with published rest service
 ---
 
 {{% alert type="info" %}}

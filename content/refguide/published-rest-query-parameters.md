@@ -2,8 +2,9 @@
 title: "Published REST Query Parameters"
 parent: "published-rest-service"
 menu_order: 40
-#description: " "
-#tags: ["These", "are", "Example", "Tags"]
+description: "Parameters for a published REST query"
+tags: ["published REST", "query", "parameters", "Date and Time format"]
+# Merge into published rest service document
 ---
 
 {{% alert type="info" %}}

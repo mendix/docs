@@ -1,6 +1,6 @@
 ---
 title: "Implement Best Practices for Development"
-category: "Best Practices"
+category: "General"
 menu_order: 20
 tags: ["best practice", "development", "develop", "reusable", "prefix"]
 ---

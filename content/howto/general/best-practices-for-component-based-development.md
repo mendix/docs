@@ -1,6 +1,8 @@
 ---
-title: "Implement Component-Based Development"
+title: "Implement Best Practices for Component-Based Development"
 category: "Best Practices"
+menu_order: 40
+tags: ["best practice", "component," "component-based development", "component-based", "cbd"]
 ---
 
 ## 1 What is Component-Based Development (CBD)?

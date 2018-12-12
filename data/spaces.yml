@@ -162,12 +162,9 @@ refguide:
     - "SAP"
     - "IBM"
 howtogeneral:
-  space: "Best Practices & Support"
+  space: "Mendix Support Guide"
   priority: 6
   menu_categories:
-    - "Tips & Tricks"
-    - "Best Practices"
-    - "Mendix Support"
 releasenotes:
   space: "Release Notes"
   priority: false

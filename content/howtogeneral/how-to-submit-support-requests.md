@@ -1,6 +1,5 @@
 ---
 title: "Submit Support Requests"
-category: "Mendix Support"
 #description: ""
 #tags: []
 ---

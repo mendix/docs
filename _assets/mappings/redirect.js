@@ -200,10 +200,6 @@ module.exports = {
     /****************************************************
      * Best Practices
      ****************************************************/
-    {
-      from: "/bestpractices/Best+Practices+for+Component+Based+Development",
-      to: "/howto/general/best-practices-for-component-based-development"
-    },
 	{
       from: "/howtogeneral/bestpractices/best-practices-security-and-improvements-for-mendix-applications",
       to: "/howto/security/best-practices-security"
@@ -2177,11 +2173,6 @@ module.exports = {
 	/****************************************************
      * SUPPORT
      ****************************************************/
-
-    {
-      from: "/mxsupport/Technical+Contact+Definition",
-      to: "/developerportal/company-app-roles/technical-contact"
-    },
     {
       from: "/mxsupport/technical-contact",
       to: "/developerportal/company-app-roles/technical-contact"
@@ -2197,7 +2188,6 @@ module.exports = {
     /****************************************************
      * DEVELOPER PORTAL
      ****************************************************/
-
     {
       from: "/developerportal/settings/technical-contact",
       to: "/developerportal/company-app-roles/technical-contact"

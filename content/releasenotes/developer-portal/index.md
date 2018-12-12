@@ -16,7 +16,7 @@ tags: ["developer portal", "cloud environments", "Mendix Cloud", "SAP", "IBM", "
 
 #### Fixes
 
-* We fixed the broken deeplink to the **Stories** page of your apps.
+* We fixed the broken deep link to the **Stories** page of your apps.
 
 ### December 1st, 2018
 

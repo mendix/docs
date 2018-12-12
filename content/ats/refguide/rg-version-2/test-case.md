@@ -15,6 +15,12 @@ A dialog box opens where you give your test case a name and an optional descript
 
 ![](attachments/test/testcase-details.png)
 
+{{% alert type="info" %}}
+
+Please note that there is an additional switch for **paralell**/**sequential**. This switch is only available for [data driven test cases](test-data).
+
+{{% /alert %}}
+
 In the top-left corner of the **Test Case Details** page, you will find the name and the description of the test case. You can click these fields and make changes to them. ATS saves these changes automatically.
 
 In the top right corner of the screen, you will find the **Export** and **Run** drop-down menus:

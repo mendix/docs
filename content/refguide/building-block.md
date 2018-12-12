@@ -1,6 +1,7 @@
 ---
-title: "Building block"
+title: "Building Block"
 parent: "pages"
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
@@ -39,4 +40,12 @@ The display name determines the name of the building block that will appear in t
 
 ### 4.2 Image
 
-The image selected will appear in the **Building Blocks** tab of the Web Modeler's **Toolbox**. Selecting a representative image will allow users to easily distinguish between building blocks. If left blank, the Web Modeler will display an empty white field. Any image selected will be scaled down to 200x200 pixels.
+The image selected will appear in the **Building Blocks** tab of the Web Modeler's **Toolbox**. Selecting a representative image will allow users to easily distinguish between building blocks. If left blank, the Web Modeler will display a generic default image. Any image selected will be scaled down to 200x200 pixels.
+
+### 4.3 Documentation URL
+
+<div class="alert alert-info">
+This feature was added for Desktop Modeler version 7.17.
+</div>
+
+The documentation URL can be used to link to a documentation page for the building block. These links will appear in the **Building Blocks** tab of the Web Modeler's **Toolbox**.

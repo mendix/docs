@@ -1,8 +1,12 @@
 ---
 title: "APM 2 Reference Guide"
 category: "Reference Guide"
-menu_order: 20
+menu_order: 10
 ---
+
+{{% alert type="warning" %}}
+The documentation in this section describes a product that is in closed beta, so it is subject to change before the final release. For more information, see [Beta Features](/releasenotes/beta-features/).
+{{% /alert %}}
 
 ## 1 Introduction
 
@@ -52,7 +56,7 @@ When Support or DevOps wants to investigate a performance issue, they can use th
 
 ## 5 Your Flight Data Recorder
 
-The runtime agent's **Trap** feature is always listening on all levels of logging, up to the TRACE level. It is possible to configure the amount of seconds of logging it has to keep in memory. If an error occurs, the logging in memory and the error is stored in the APM manager database, which can provide information regarding what the runtime was proccessing at the time of the error.
+The runtime agent's **Trap** feature is listening on all levels of logging, up to the TRACE level. If an error occurs, the logging in memory and the error is stored in the APM manager database, which can provide information regarding what the runtime was processing at the time of the error.
 
 ## 6 Logs
 

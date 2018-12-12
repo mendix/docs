@@ -3,11 +3,16 @@ title: "Nanoflows"
 parent: "application-logic"
 menu_order: 20
 description: "Presents an overview of all the elements that can be used in a nanoflow."
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
+{{% alert type="info" %}}
+
 This page is an overview of all the elements that can be used in a nanoflow. For the properties of the nanoflow itself, see [Nanoflow Properties](nanoflow).
+
+{{% /alert %}}
 
 Nanoflows are similar to [microflows](microflows), as they allow you to express the logic of your application. However, they do have some specific benefits (for example, they run directly on the browser/device and can be used in an offline app). Furthermore, most of the actions run directly on the device, so there is also a speed benefit.
 
@@ -19,7 +24,7 @@ Nanoflows are designed with offline-first applications in mind, as they allow yo
 
 ### 2.2 Logic Where No Connection Is Needed
 
-Nanoflows also offer great value in online applications (for example, for UI logic, validations, calculations, and navigation). However, please keep in mind that when you perform database-releated actions, each action will create a separate network request to the Mendix Runtime. The following actions interact with the database:
+Nanoflows also offer great value in online applications (for example, for UI logic, validations, calculations, and navigation). However, please keep in mind that when you perform database-related actions, each action will create a separate network request to the Mendix Runtime. The following actions interact with the database:
 
 * Create
 * Commit
@@ -142,8 +147,8 @@ Client activities can be used to have the web client of your application perform
 
 | Graphic | Name | Description |
 | --- | --- | --- |
-| [![](attachments/819203/918114.png)](close-form) | [Close form](close-form) | Closes the form that is opened last by the user that calls the microflow in which this activity is used. |
-| [![](attachments/819203/917544.png)](show-page) | [Show page](show-page) | Can be used to show a form to the user that calls the microflow in which this activity is used. |
+| [![](attachments/819203/918114.png)](close-page) | [Close page](close-page) | Closes the page that is opened last by the user that calls the microflow in which this activity is used. |
+| [![](attachments/819203/917544.png)](show-page) | [Show page](show-page) | Can be used to show a page to the user that calls the microflow in which this activity is used. |
 | [![](attachments/819203/918097.png)](validation-feedback) | [Validation feedback](validation-feedback) | Can be used to display red text below a widget that displays an attribute or association. |
 
 ### 5.5 Loop
@@ -165,9 +170,9 @@ Artifacts provide the nanoflow with input and allow comments to be made.
 
 The Modeler visualizes which variables are used by selected object(s). It does this by showing the used variables in white text on a blue background. Conversely, elements that use the variable(s) defined by the selected object(s) are marked with the word **Usage** in white text on a green background.
 
-In the example below, the parameter **Inspection** is highlighted, because it is used in the selected activity. The activity that creates a log entry has a usage label, because it uses the variable defined by the selected activity.
+In the example below, the parameter **AccountPasswordData** is highlighted because it is used in the selected activity. And the activity **Save password** has a usage label because it uses the variable defined by the selected activity.
 
-![](attachments/16713739/16843952.png)
+![](attachments/16713739/16843950.png)
 
 ## 7 Errors
 
@@ -175,7 +180,7 @@ When an error occurs in a nanoflow, all the changes that have been made to objec
 
 ## 8 Nanoflow Debugging
 
-Step-by-step debugging is not supported yet. For now, we recommend using log message actions, which are shown in the console log of the Desktop Modeler (for version 7.13.0 and higher).
+Step-by-step debugging is not supported yet. For now, we recommend using log message actions, which are shown in the console log of the Desktop Modeler (for version 7.13.0 and above).
 
 ## 9 Security
 

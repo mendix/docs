@@ -2,10 +2,6 @@
 title: "Common Widget Properties"
 parent: "common-widgets"
 ---
-# Common Widget Properties
-
-
-
 These are properties that are shared by many widgets. For a complete list of properties, take a look at the relevant widget.
 
 ## Behavior Properties

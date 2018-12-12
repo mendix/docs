@@ -3,13 +3,14 @@ title: "Microflows"
 parent: "application-logic"
 menu_order: 10
 description: "Presents an overview of all the elements that can be used in a microflow."
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
 {{% alert type="info" %}}
 
-This part is an overview of all the elements that can be used in a microflow. For the properties of the microflow itself, see [Microflow Properties](microflow).
+This page is an overview of all the elements that can be used in a microflow. For the properties of the microflow itself, see [Microflow Properties](microflow).
 
 {{% /alert %}}
 
@@ -99,7 +100,7 @@ Artifacts provide the microflow with input and allow comments to be made.
 
 The Modeler visualizes which variables are used by the selected object(s). It does this by showing the used variables in white text on a blue background. Conversely, elements that use the variable(s) defined by the selected object(s) are marked with the word 'Usage' in white text on a green background.
 
-In the example below, the parameter AccountPasswordData is highlighted because it is used in the selected activity. And the activity 'Save password' has a usage label because it uses the variable defined by the selected activity.
+In the example below, the parameter **AccountPasswordData** is highlighted because it is used in the selected activity. And the activity **Save password** has a usage label because it uses the variable defined by the selected activity.
 
 ![](attachments/16713739/16843950.png)
 

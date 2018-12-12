@@ -1,6 +1,8 @@
 ---
 title: "Entities"
 parent: "domain-model"
+tags: ["domain model", "entity", "entities", "attribute", "validation rule", "even handler", "access rule"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 
@@ -39,7 +41,7 @@ The rows in the table are CDs. The type of the two rows is 'CD' and this is the 
 
 *   [Access Rules](access-rules)
 
-## General Properties
+## General Properties {#entities-general-properties}
 
 ### Name
 

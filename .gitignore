@@ -14,3 +14,6 @@ static/public/styles/*
 static/json/*.json
 
 yarn-error.log
+
+manifest_test.yml
+_scripts/hugo_bin

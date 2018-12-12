@@ -2,7 +2,7 @@
 title: "JavaScript & TypeScript Resources"
 parent: "reference-documentation"
 ---
-# So what is this TypeScript thing?
+## So what is this TypeScript thing?
 
 As a developer who works with the Mendix Platform, you may be familiar with implementing custom user actions using Java.
 

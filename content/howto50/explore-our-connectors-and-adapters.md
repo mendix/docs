@@ -83,7 +83,7 @@ One of the strengths of Mendix is that it’s easy to connect your Mendix applic
 
 [Download](https://appstore.home.mendix.com/link/app/1573/Appronto/Simple-CSV-Exporter)
 
-# Related content
+## Related content
 
 *   [Explore our connectors and adapters](explore-our-connectors-and-adapters)
 *   [Access a Samba share from the MxCloud](access-a-samba-share-from-the-mxcloud)

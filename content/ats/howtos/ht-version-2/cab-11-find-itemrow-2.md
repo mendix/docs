@@ -7,7 +7,7 @@ tags: ["ATS", "testing"]
 
 ## 1 Introduction
 
-This how-to explains how to create a Search Context action. That returns an item/row based on a description inside that item/row. 
+This how-to explains how to create a Search Context action. That returns an item/row based on a description inside that item/row.
 
 This how-to applies to all situations in which you must find an item/row using a unique text value inside. If you need to get an item/row by its child element, you can follow this how-to. Keep in mind that it might need some adjustments according to the widget!
 
@@ -42,7 +42,7 @@ To define the user approach, follow these steps:
 
     The `index-0` is the `mx-name` of an item/row within a list view, template grid, etc. This is the unique element you use to find the button. The recorder uses `index-0` this is hard-coded. The test case works, but as soon as you add an item to the grid, the test case breaks.
 
-    To avoid this, retrieve the item/row during the sessions based on a text value. 
+    To avoid this, retrieve the item/row during the sessions based on a text value.
 
 3.  When you open the debugger, you see that the button is a child element of the listview item:
 
@@ -80,7 +80,7 @@ To define the action structure, follow these steps:
 
     ![](attachments/create-search-context-actions-2/cab-11-find-itemrow-2/getitemrow-listviewitem-setreturnvalue.png)
 
-# 5 Action Parameters
+## 5 Action Parameters
 
 Next, you need to add the action input and output parameters:
     * Input parameters:
@@ -91,7 +91,7 @@ Next, you need to add the action input and output parameters:
         * Item/Row
 
 {{% alert type="info" %}}
-Keep the [guidelines for creating a custom action](guidelines-custom-action-2) in mind while creating action parameters. 
+Keep the [guidelines for creating a custom action](guidelines-custom-action-2) in mind while creating action parameters.
 {{% /alert %}}
 
 1.  Configure the **Widget Name** input parameter like this:

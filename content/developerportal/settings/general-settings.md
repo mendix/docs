@@ -1,70 +1,59 @@
 ---
-title: "General Settings"
-category: "Settings"
+title: "Manage General App Settings"
+category: "App Settings"
+menu_order: 10
 description: "This page describes general settings of your app."
 tags: ["Settings", "App", "Developer Portal"]
 ---
 
 ## 1 Introduction
 
-In **General**, there is an overview of the app:
+The **General** settings page presents an overview of your app project with the following details:
 
-* **Name** of the app
-* **Description** of the app
-* **App ID**
-* **App Contact** for the app
-* **Technical Contact** for the app
+* A **Description** of the app
+* The [App Contact](../company-app-roles/manage-roles#change-app-contact) and [Technical Contact](../company-app-roles/technical-contact) for the app
+* Whether the app is supported for the **Web Modeler** and the ability to **Enable Web Modeler** (for details on getting the full Web Modeler experience, see [How to Migrate Existing Projects to Atlas UI](/howto/atlasui/migrate-existing-projects-to-atlasui))
+* The **App ID**
 
-    ![](attachments/general.png)
+{{% image_container width="550" %}}![](attachments/general-settings.png)
+{{% /image_container %}}
 
-{{% alert type="info" %}}
+The sections below describe the actions you can perform on this page.
 
-Note that only the Technical Contact can grant other members with the Technical Contact role in [Security - Node Permissions](/developerportal/settings/node-permissions) in **Security**.
+## 2 Editing Cloud Settings
 
-{{% /alert %}}
-
-There are two actions you can take:
-
-* Edit the app by clicking **Edit settings**
-* Leave the app by clicking **Leave app**
-
-## 2 Editing Settings
-
-When you click **Edit Settings**, you can edit the following things:
-
-* App name
-* Description
-* App Contact
-* App logo
-
-There are two actions you can take:
-
-* Deactivate the app by clicking **Deactivate App**
-* Delete the app by clicking **Delete App**
-
-{{% alert type="warning" %}}
-
-Note that when you click **Deactivate App**, only the account owner can reactivate the app (via their account management screen). When you click **Delete App**, the app deletion cannot be undone and means that ALL DATA WILL BE LOST, including all files on the Team Server and all data in the Free App node (if applicable). For more information, see [How to Delete, Deactivate, and Activate Apps](/developerportal/howto/delete-apps).
-
-{{% /alert %}}
-
-## 3 Leaving the App
-
-If you click **Leave App**, you will be removed from the app. If you are the last member of this app and decide to leave as well, the app will be deactivated. For more information, see [Three Ways to Leave Your App](/developerportal/general/leave-app).
+Click **Cloud Settings** to select the cloud platform on which to deploy your app. The selection of cloud platforms available will depend on the features of your Mendix account.
 
 {{% alert type="info" %}}
-
-Note that you cannot leave the app if you are the **Technical Contact** of the app.
-
+Only users with the **App Settings** permission can change cloud platforms. For default roles, only the **SCRUM Master** has this permission. For more details, see the [App Team Roles](../company-app-roles/index#app-team-roles) section of *Company & App Roles*.
 {{% /alert %}}
 
-## 4 Web Modeler (Beta)
+![](attachments/cloudsettings.png)
 
-If your app is supported by the Web Modeler during the beta program, you can enable it by clicking **Enable Web Modeler**. For details on getting the full Web Modeler experience, see [How to Migrate Existing Projects to Atlas UI](/howto/atlasui/migrate-existing-projects-to-atlasui).
+If you select a non-Mendix cloud platform like SAP, you will be redirected to a page to complete the setup. If you select Mendix Cloud, no additional setup is needed.
 
-## 5 Related Content
+Specific steps for configuring different cloud platforms are provided here:
 
-* [How to Manage Company Roles and App Roles](/developerportal/howto/change-roles)
-* [Roles Within the Company and Apps](/developerportal/general/roles)
-* [Technical Contact](/developerportal/general/technical-contact)
+* [Mendix Cloud](../deploy/mendix-cloud-deploy)
+* [SAP Cloud Platform](../deploy/sap-cloud-platform)
+* [IBM Cloud](../deploy/ibm-cloud)
+* [On-Premises](../deploy/on-premises-design)
 
+## 3 Editing App Info
+
+{{% alert type="info" %}}
+Only users with the **App Settings** permission can edit the application information.
+{{% /alert %}}
+
+Click **Edit App Info** to edit the following details:
+
+* The name and logo of the app
+* The **Description** of the app
+* The **App Contact**
+
+{{% image_container width="450" %}}![](attachments/edit.png)
+{{% /image_container %}}
+
+## 4 Leaving the App
+
+To leave the app, click **Leave App**. For details on leaving, deleting, and deactivating an app, see [How to Leave & Delete an App](leave-delete-app).

@@ -1,6 +1,7 @@
 ---
 title: "Scroll Container"
 parent: "container-widgets"
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 A scroll container is used to divide the layout in regions (for details on regions, see [Scroll Container Region](scroll-container-region) in the Mendix Reference Guide) such as the header, sidebar, or footer. A scroll container must be the only top-level widget. Apart from that, a scroll container can only be placed directly in another scroll container.

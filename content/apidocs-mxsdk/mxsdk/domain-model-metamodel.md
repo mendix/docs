@@ -10,7 +10,7 @@ Attributes have a `value` which can either be a `StoredValue`, which is a value 
 
 The entities can also relate to each other through generalizations. Finally, you can define access rules, validation rules, event handlers and indexes for entities.
 
-#### Graphical overview
+### Graphical overview
 
 ![](attachments/14091498/16842837.svg)
 
@@ -26,11 +26,11 @@ Mendix Modeler Reference Guide | Model SDK API docs
 
 Entities can have multiple attributes. Each attribute has a specific type.
 
-#### Graphical overview - Non-numeric attributes
+### Graphical overview - Non-numeric attributes
 
 ![](attachments/14091498/16842840.svg)
 
-#### Graphical overview - Numeric attributes
+### Graphical overview - Numeric attributes
 
 ![](attachments/14091498/16842841.svg)
 
@@ -46,7 +46,7 @@ Entities can have a Generalization relationship with another entity. The entity 
 
 An `Entity` instance has a `generalization` property with which to define this relationship. It can either be set to a `NoGeneralization` instance if it is not a specialization of another entity, or it can be set to a `Generalization` instance. A `Generalization` instance has again a `generalization` property which must point to the entity that is the actual generalization.
 
-#### Graphical overview
+### Graphical overview
 
 ![](attachments/14091498/16842839.svg)
 
@@ -61,7 +61,7 @@ Mendix Modeler Reference Guide | Model SDK API docs
 
 To secure access to the data in a Mendix app, you can define access rules for entities. An access rule is always defined for a certain module role, defines to which attribute or association members that role has access, and the retrieved data is constrained by an xpath constraint.
 
-#### Graphical overview
+### Graphical overview
 
 ![](attachments/14091498/16842835.svg)
 
@@ -76,7 +76,7 @@ Mendix Modeler Reference Guide | Model SDK API docs
 
 For each attribute of an entity, it is possible to define a validation rule. The validation rule is applied to a single attribute, will show some error message, and it is a certain type of rule, e.g. the attribute needs to be equal to a certain value, or has a maximum length, or needs to be unique.
 
-#### Graphical overview
+### Graphical overview
 
 ![](attachments/14091498/16842834.svg)
 
@@ -90,7 +90,7 @@ Mendix Modeler Reference Guide | Model SDK API docs
 
 An entity can have multiple indexes. Each index consists of a set of indexed attributes.
 
-#### Graphical overview
+### Graphical overview
 
 ![](attachments/14091498/16842836.svg)
 

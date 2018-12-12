@@ -125,7 +125,7 @@ This widget lets you track events, pages, and transactions on your own Google An
 [Click to download in the Mendix App Store.](https://appstore.home.mendix.com/link/app/105/Mendix/Google-Analytics)
 
 
-# 20 Related Content
+## 20 Related Content
 
 *   [Explore our connectors and adapters](explore-the-connectors-and-adapters)
 *   [Access a Samba share from the MxCloud](access-a-samba-share-from-the-mxcloud)

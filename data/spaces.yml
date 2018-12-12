@@ -9,33 +9,27 @@ apidocs-mxsdk:
   menu_categories:
     - "API Documentation"
     - "Mendix Platform SDK"
-addons:
-  space: "Other Add-ons"
+aqm:
+  space: "AQM Guide"
   priority: false
   menu_categories:
     - "Application Quality Monitor"
 apm:
-  space: "Application Performance Monitor"
+  space: "APM Guide"
   priority: false
   menu_categories:
+    - "Application Performance Monitor"
     - "Installation Guide"
     - "Reference Guide"
     - "Use Cases"
 ats:
-  space: "Application Test Suite"
+  space: "ATS Guide"
   priority: false
   menu_categories:
-    - "General"
+    - "Application Test Suite"
     - "Reference Guide"
     - "How-to's"
     - "Best Practices"
-community:
-  space: "Community"
-  priority: false
-  menu_categories:
-    - "Tools"
-    - "Documentation"
-    - "App Store"
 howto40:
   space: "Mendix 4 How-to's"
   priority: false
@@ -92,21 +86,22 @@ howto:
   priority: 6
   mendix_version: 7
   menu_categories:
-    - "Tutorials"
-    - "SAP"
+    - "General"
+    - "Web Modeler"
     - "Atlas UI"
-    - "Modeling Basics"
-    - "Data Models"
     - "UX"
+    - "Data Models"
     - "Logic & Business Rules"
-    - "Mobile"
+    - "Mobile Development"
     - "Security"
     - "Integration"
+    - "SAP"
     - "Extensibility"
     - "Custom Widget Development"
     - "Testing"
     - "Monitoring & Troubleshooting"
-    - "Collaboration & Project Management"
+    - "Collaboration & Requirements Management"
+    - "Tips & Tricks"
 refguide4:
   space: "Mendix 4 Reference Guide"
   priority: false
@@ -125,7 +120,7 @@ refguide4:
     - "Deployment"
   banner:
     type: 'warning'
-    text: 'You are browsing the documentation of an unsupported version of Mendix. Please find the latest version of the Reference Guide <a href="/refguide/">here</a>'
+    text: 'You are browsing the documentation of an unsupported version of Mendix. Please find the latest version of the Reference Guide <a href="/refguide/">here</a>.'
 refguide5:
   space: "Mendix 5 Reference Guide"
   priority: false
@@ -158,15 +153,16 @@ refguide:
   mendix_version: 7
   menu_categories:
     - "General"
+    - "Desktop Modeler"
+    - "Web Modeler"
     - "Team Server"
-    - "Modeler"
-    - "Runtime"
+    - "Mendix Runtime"
     - "Java Programming"
+    - "Mobile Development"
     - "SAP"
     - "IBM"
-    - "Mobile"
 howtogeneral:
-  space: "General How-to's"
+  space: "Best Practices & Support"
   priority: 6
   menu_categories:
     - "Tips & Tricks"
@@ -178,35 +174,25 @@ releasenotes:
   menu_categories:
     - "Desktop Modeler"
     - "Web Modeler"
-    - "Platform Portal"
-    - "Model SDK"
-    - "Platform SDK"
-    - "Hybrid App"
-    - "Mendix Mobile App"
-    - "Application Test Suite"
-    - "Application Performance Monitor"
-    - "Application Quality Monitor"
-    - "Beta Features"
+    - "Developer Portal"
+    - "SDKs"
+    - "Mobile Products"
+    - "Add-ons"
+    - "What Are Mendix Beta Features?"
 developerportal:
-  space: "Developer Portal"
+  space: "Developer Portal Guide"
   priority: false
   menu_categories:
-    - "General"
-    - "Company Admin"
-    - "Collaborate"
-    - "Develop"
-    - "Deploy"
-    - "Operate"
-    - "Settings"
-    - "How-to's"
-deployment:
-  space: "Deployment"
-  priority: false
-  menu_categories:
-    - "Amazon Web Services"
-    - "Azure"
-    - "Cloud Foundry"
-    - "Docker"
-    - "Mendix Cloud"
-    - "On-Premises"
-    - "SAP Cloud Platform"
+    - "Mendix Profile"
+    - "Company & App Roles"
+    - "Collaboration Tools"
+    - "Feedback Management"
+    - "Development"
+    - "Deployment"
+    - "Operations"
+    - "App Settings"
+    - "Community Tools"
+    - "App Store"
+
+
+

@@ -1,7 +1,8 @@
 ---
 title: "Configure Selenium Support"
 category: "Integration"
-tags: []
+menu_order: 16
+tags: ["selenium", "integration"]
 ---
 
 ## 1 Introduction

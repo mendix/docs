@@ -56,11 +56,11 @@ The ranges are defined in the parameters of the data set. Whether values in thes
 
 
 
-# Module Role
+## Module Role
 
 The module roles define which roles users of this module can have. See [Security](security) for more information on module roles and [user roles](user-roles) and their relation.
 
-## Name
+### Name
 
 The name of a module role is used to refer to the module role from other elements in your model.
 
@@ -70,6 +70,6 @@ End users do not see the names of module roles. End users (if they create or vie
 
 {{% /alert %}}
 
-## Documentation
+### Documentation
 
 The documentation of a module role is there only for the convenience of the people who use the modeler; it is not visible for the end users.

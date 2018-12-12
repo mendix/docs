@@ -1,6 +1,7 @@
 ---
 title: "Share Company Atlas UI Resources"
 category: "Atlas UI"
+menu_order: 40
 tags: ["Atlas", "UI", "UX", "user experience"]
 ---
 
@@ -31,12 +32,12 @@ The Mendix App Store is a great way to share UI resources throughout your compan
 
 There are two important options to keep in mind when uploading a UI resources module:
 
-* **Publish to** – this option lets you share the UI resources in a private app store (company-only) or with the public audience (the entire Mendix community)
+* **Publish to** – this option lets you share the UI resources in a private App Store (company-only) or with the public audience (the entire Mendix community)
 * **Category** – choose the **UI Resources** category to make the module available as a UI resources module
 
 ![](attachments/howto/sharing_appstore_addcontent.png)
 
-When you upload new UI resources to the public Mendix App Store, the content will need to be reviewed and approved by Mendix. However, when you publish UI resources to a private app store, the content will not have to be reviewed, and it will be directly available in your company after publishing.
+When you upload new UI resources to the public Mendix App Store, the content will need to be reviewed and approved by Mendix. However, when you publish UI resources to the private App Store, the content will not have to be reviewed, and it will be directly available in your company after publishing.
 
 ## 4 Using Your Company Atlas UI Resources
 
@@ -64,7 +65,7 @@ Now that you have added your company UI resources to your company starter app, y
 
 #### 4.1.1 Sharing and Maintaining Your Company Starter App
 
-Now that you have created a company starter app, the next step is to share it with your company. The easiest way to do this is by uploading it to your private app store.
+Now that you have created a company starter app, the next step is to share it with your company. The easiest way to do this is by uploading it to the private App Store.
 
 There are four important options to keep in mind when uploading your company starter app:
 
@@ -101,6 +102,6 @@ To use the UI Resources module from teh Mendix App Store, follow these steps:
 
 * [How to Get Started with Atlas UI](get-started-with-atlasui)
 * [How to Create Company Atlas UI Resources](create-company-atlas-ui-resources)
-* [How to Create Custom Preview Images for Building Blocks and Page Templates](create-custom-preview-images-for-building-blocks-and-page-templates)
+* [How to Create Custom Preview Images for Building Blocks & Page Templates](create-custom-preview-images-for-building-blocks-and-page-templates)
 * [How to Extend Design Properties to Customize the Web Modeler Experience](extend-design-properties-to-customize-the-web-modeler-experience)
 * [How to Migrate Existing Projects to Atlas UI](migrate-existing-projects-to-atlasui)

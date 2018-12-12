@@ -1,6 +1,7 @@
 ---
 title: "Comparison Search Field"
 parent: "search-bar"
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 
@@ -11,6 +12,12 @@ parent: "search-bar"
 {{% snippet file="refguide/Search+Field+Type+Property.md" %}}
 
 {{% snippet file="refguide/Search+Field+Default+Value+Property.md" %}}
+
+{{% snippet file="refguide/Search+Field+Custom+Date+Format+Property.md" %}}
+
+{{% snippet file="refguide/Custom+Date+Format+Tokens.md" %}}
+
+{{% snippet file="refguide/Search+Field+Placeholder+Property.md" %}}
 
 ## General Properties
 

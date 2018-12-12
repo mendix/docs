@@ -1,6 +1,7 @@
 ---
 title: "XML"
-category: "Modeler"
+category: "Desktop Modeler"
+tags: ["XML", "widget"]
 ---
 
 This is the reference guide for the widget XML.
@@ -11,7 +12,7 @@ This reference guide assumes you have a basic understanding of XML and the Mendi
 
 ## 2 Start of the Widget XML
 
-An XML file always starts with the XML version and encoding declaration. These are standard and should be present in every XML file. The Mendix Modeler uses the widget XML file to create the property input fields, which show up when you add your widget to a form. Our widget declaration XML starts at the **<widget>** element. This is the root element that will contain all our settings for this widget.
+An XML file always starts with the XML version and encoding declaration. These are standard and should be present in every XML file. The Mendix Modeler uses the widget XML file to create the property input fields, which show up when you add your widget to a form. Our widget declaration XML starts at the `<widget>` element. This is the root element that will contain all our settings for this widget.
 
 ## 3 Widget Element<a name="Widgets-XMLreferenceguide-Widgetattributes" rel="nofollow"></a>
 
@@ -348,4 +349,4 @@ Remember to use the correct language notation according to the [Java supported l
 
 ## 6 Related content
 
-*   [Getting started with the Widget Development Plugin for Adobe Brackets](/howto7/custom-widget-development/getting-started-with-the-widget-development-plugin-for-adobe-brackets)
+*   [Getting started with the Widget Development Plugin for Adobe Brackets](/howto7/custom-widget-development/use-the-widget-development-plugin-for-adobe-brackets)

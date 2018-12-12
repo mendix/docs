@@ -4,4 +4,4 @@ parent: "xpath-constraint-functions"
 ---
 
 
-See [length](xpath-length).
+For information on this constraint function, see [XPath length](xpath-length).

@@ -1,0 +1,32 @@
+<div class="index__block"><ul>
+{{- $currentPage := .Page.Permalink }}
+{{- $path := .Page.Dir }}
+{{- $slices := split $path "/" }}
+{{- $basedir := index $slices 0 }}
+{{- $spaces := .Site.Data.spaces -}}
+{{- $space := index $spaces $basedir -}}
+{{- range $i, $p := .Page.Site.Pages }}
+  {{- if (eq (index (split $p.Dir "/") 0) $basedir) }}
+    {{ $.Scratch.SetInMap "pagemap" (printf "%s" $i) . }}
+  {{- end }}
+{{- end}}
+{{- $.Scratch.Set "pages" ($.Scratch.GetSortedMapValues "pagemap") }}
+{{- with $space.menu_categories -}}
+  {{- range $i, $menu_cat := . }}
+    {{- range sort ($.Scratch.Get "pages") "Title" "asc" }}
+      {{- if eq .Permalink $currentPage }}
+      {{- else if isset .Params "category" }}
+      {{- else if isset .Params "parent" }}
+      {{- else if ne .Title $menu_cat }}
+      {{- else }}
+        {{ $page := . }}
+        {{- $pageURL := replace $page.URL "index.html" "" -}}
+        {{- $pageURL := replace $pageURL ".html" "" }}
+  <li>
+    <a href="{{ $pageURL }}" title="{{$page.Title}}" />{{- $page.Title }}</a>
+  </li>
+      {{- end }}
+    {{- end }}
+  {{- end }}
+{{- end -}}
+</ul></div>

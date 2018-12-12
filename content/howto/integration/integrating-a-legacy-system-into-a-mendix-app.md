@@ -1,7 +1,8 @@
 ---
 title: "Integrate a Legacy System into a Mendix App"
 category: "Integration"
-tags: []
+menu_order: 1
+tags: ["legacy", "legacy system", "integration"]
 ---
 
 ## 1 Introduction
@@ -18,7 +19,7 @@ Mendix applications frequently need to communicate with existing systems. Whethe
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Know how to create domain models (for details, see [How to Create a Basic Data Layer](../data-models/create-a-basic-data-layer))
-* Know how to create overview and detail pages (for details, see [How to Create Your First Two Overview and Detail Pages](../ux/create-your-first-two-overview-and-detail-pages))
+* Know how to create overview and detail pages (for details, see [How to Create Your First Two Overview & Detail Pages](../ux/create-your-first-two-overview-and-detail-pages))
 * Know how to create microflows (for details, see [How to Build Your First Microflow: Hello world!](../logic-business-rules/create-your-first-microflow-hello-world))
 * Understand the concepts behind REST and web services (for more information, see [Consuming Your First REST Service](http://www.mendix.com/blog/consuming-first-rest-service/) and [How to Consume a Complex Web Service](consume-a-complex-web-service))
     * Creating an exposed REST service on top of your legacy system is beyond the scope of this tutorial; for instructions on how to accomplish this, refer to the configuration of your non-Mendix Platform
@@ -37,11 +38,9 @@ In this section, you will learn how to retrieve data from a legacy system using 
 For this how-to, we will use the publicly available Google Books API (for details, see [Google Books APIs Getting Started](https://developers.google.com/books/docs/v1/getting_started). We will construct our example around this data model. Each legacy system will have a different JSON structure based on internal data models. This example will return a collection of books using a given author search parameter. To use this API, users must collect an API key (as outlined in [Google Books APIs Acquiring and Using an API Key](https://developers.google.com/books/docs/v1/using?csw=1#APIKey)). The response structure of this particular API is as follows:
 
 1. The API we will use has a JSON structure.
-2. Construct the appropriate data model for this JSON.
+2.  Construct the appropriate data model for this JSON.
 
-    {{% alert type="warning" %}}
-
-    Every REST service will have a different specific JSON structure. For details on how to build JSON data structures in Mendix, see [JSON Structures](refguide/json-structures).
+    {{% alert type="warning" %}}Every REST service will have a different specific JSON structure. For details on how to build JSON data structures in Mendix, see [JSON Structures](/refguide/json-structures).
 
     {{% /alert %}}
 3. Create a non-persistable search entity called **BookSearch** that allows the user to enter an author and title. This should be linked to a second object:

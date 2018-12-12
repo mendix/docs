@@ -53,7 +53,6 @@ For example, to download a file, it is possible to get the UR (for example, `htt
 
 ## Related content
 
-* [Generating a Personal SSH2 Key Pair](generating-a-personal-ssh2-key-pair)
 * [Creating a Secure App](create-a-secure-app)
 * [Security](security)
 * [Anonymous User Security](set-up-anonymous-user-security)

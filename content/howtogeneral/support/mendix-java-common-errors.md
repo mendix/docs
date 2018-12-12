@@ -1,9 +1,6 @@
 ---
 title: "Mendix and Java Part 2 – Common Errors"
 category: "Mendix Support"
-#parent: ""
-#description: ""
-#tags: []
 ---
 
 ## 1 Introduction
@@ -64,7 +61,7 @@ The most common causes for this error are:
 
 If you want to reproduce this error, do something like this:
 
-![](attachments/mendix--java-part-ii--common-errors/5.jpg)
+![](attachments/mendix--java-part-ii--common-errors/common-errors.png)
 
 Eventually, memory will run low because of all the account being created, which is when the garbage collector will try to free up memory. It won’t be able to do this, so that all these Account objects are still alive. After a while, it will return the error.
 

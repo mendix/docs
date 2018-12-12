@@ -15,7 +15,7 @@ Before you continue, make sure that you know how to create:
 *   **Overview and detail pages** ([Creating your first two overview and detail pages](create-your-first-two-overview-and-detail-pages)).
 *   **Menu items** ([Setting Up the Navigation Structure](setting-up-the-navigation-structure)).
 *   **Microflows** ([Create your first Microflow: Hello World!](create-your-first-microflow-hello-world)
-*   **Add Appstore content** ([Use App Store Content in the Modeler](/community/app-store/use-app-store-content-in-the-modeler)).
+*   **Add Appstore content** ([Use App Store Content](/developerportal/app-store/use-app-store-content-in-the-modeler)).
 *   **Secure applications** ([Creating a secure app](create-a-secure-app)).
 
 Follow these steps:
@@ -235,8 +235,4 @@ Once you have completed an Excel template you can export the template for exampl
 *   [Synchronizing user accounts using the LDAP module](synchronizing-user-accounts-using-the-ldap-module)
 *   [Importing XML documents](importing-xml-documents)
 *   [Consuming a REST Service](consume-a-rest-service)
-*   [Exposing data to BI tools using OData](exposing-data-to-bi-tools-using-odata)
-
-
-
 *   [Export to CSV button](/refguide6/export-to-csv-button)

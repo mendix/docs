@@ -1,6 +1,6 @@
 ---
 title: "Security"
-category: "Modeler"
+category: "Desktop Modeler"
 ---
 
 

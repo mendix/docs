@@ -1,10 +1,10 @@
 ---
 title: "Action Button"
 parent: "button-widgets"
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-
-An action button can call a microflow, open a page or do nothing. 
+An action button can perform various actions such as calling a microflow or nanoflow or opening a page. 
 
 ## Button properties
 

@@ -5,7 +5,7 @@ parent: "data-storage"
 
 To ease the development and deployment improvements of an application, data validation was handled in the Mendix Runtime before Mendix 7. This meant that older data could remain in the database unchanged, even if newer versions of your domain model would add more strict validation rules.
 
-Mendix 7 focuses on stateless clustering, a higher number of concurrent users, and higher load applications. For efficiency reasons, some data validation will be handled by the application database. This means that data in your database will always have to comply with your validation rules, even if you make these validations more strict after the data has been created.
+Mendix 7 focuses on stateless clustering, a higher number of concurrent users, and above load applications. For efficiency reasons, some data validation will be handled by the application database. This means that data in your database will always have to comply with your validation rules, even if you make these validations more strict after the data has been created.
 
 This document outlines the impact of these changes on your projects. We will also discuss how you can migrate your existing data when you are deploying changes to your domain model validations. Finally, even if you are not making changes to your application, data you already have may be incompatible with your current validation rules. This document will discuss how you can ensure your existing data complies with your existing project model so that you can deploy in Mendix 7 with database constraints.
 

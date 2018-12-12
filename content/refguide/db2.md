@@ -3,7 +3,7 @@ title: "DB2"
 parent: "data-storage"
 ---
 
-Mendix 6.10 and above supports running on IBM DB2 databases.
+Running on IBM DB2 databases has been supported since Mendix 6.10.
 
 ## Page Size of the Table Space
 
@@ -50,3 +50,9 @@ According to the [IBM DB2 documentation](https://www.ibm.com/support/knowledgece
 ### Non-Blocking Read-Isolated Streaming with OData
 
 According to the [IBM DB2 documentation](https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.admin.perf.doc/doc/c0004121.html), non-blocking read-isolated queries are not supported by DB2\. The default behavior of DB2 is that when one user is retrieving rows from a table and another user is making modifications on the same table at the same time, then those modifications will show up in the data in the retrieve query (which means database reads are not isolated). Configuring a stricter transaction isolation level to prevent this behavior puts locks on those same rows (which means concurrent database actions are blocking). Taking this limitation into account, preventing concurrent row modifications from being included in the result set of a data retrieve action is not supported when a Mendix application is using DB2 as a streaming OData datasource.
+
+### Select DISTINCT attribute of type CLOB
+
+Selecting DISTINCT attributes of type String and size > 8168 characters is not supported by Mendix due to a known DB2 limitation of selecting DISTINCT columns with a CLOB data type. When you run into this limitation, you may encounter an exception in the logs with a message like this:
+
+`DB2 SQL Error: SQLCODE=-727, SQLSTATE=56098, SQLERRMC=2;-134;42907`

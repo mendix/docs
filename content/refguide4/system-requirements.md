@@ -69,7 +69,7 @@ Jetty is built into the Mendix Business Server, an application server is not req
 
 ## Desktop Browsers
 
-*   Internet Explorer 6 - 10\. We give a warning for people still using IE6\. For end users still using IE6 you have the option to install [Google Chrome Frame](http://code.google.com/intl/nl/chrome/chromeframe). It is free, you do not need administrator rights to install it (recent improvement) and it improves JavaScript performance and standards compliance by leaps and bounds.
+*   Internet Explorer 6 - 10. We give a warning for people still using IE6. For end users still using IE6 there was an option to install the Google Chrome Frame. As of February 25, 2014, [this is no longer supported](https://www.chromium.org/developers/how-tos/chrome-frame-getting-started?csw=1).
 
 *   Firefox 3.6 and newer
 

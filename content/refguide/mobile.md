@@ -1,10 +1,10 @@
 ---
-title: "Mobile"
+title: "Mobile Development"
 ---
 
 ## 1 Introduction
 
-Mendix allows you to quickly build apps for mobile devices. This document gives an overview of mobile app development with Mendix and points to relevant documentation pages.
+Mendix allows you to quickly build apps for mobile devices. This document gives an overview of mobile app development with Mendix.
 
 ## 2 Navigation
 
@@ -39,10 +39,6 @@ To access native functions of the device, we provide a number of PhoneGap widget
 ![](attachments/modeler-core/16844052.png)
 
 ### 5.2 Offline Apps
-
-{{% alert type="warning" %}}
-This is a new feature still in beta, and is subject to change before the final release.
-{{% /alert %}}
 
 Separate profiles are available for building [offline apps](offline). These apps can run even when there is no network connection available, because they store their data on the device itself. When the device connects to the network, the user can synchronize with the main application. Note that there are some restrictions compared to connected apps.
 

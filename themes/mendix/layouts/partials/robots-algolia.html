@@ -15,23 +15,9 @@
   {{- else -}}
   <meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
   {{- end -}}
-  <script type="text/javascript">
-    window.__IntercomAppId = "{{ $liveId }}"
-    window.intercomSettings = {
-      app_id: window.__IntercomAppId
-    };
-  </script>
-{{- partial "asset" (dict "page" . "type" "js" "filename" "intercom.js") -}}
 {{- else if eq $env "test" -}}
 <!-- BUILD: TEST -->
   <meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
-  <script type="text/javascript">
-    window.__IntercomAppId = "{{ $testId }}"
-    window.intercomSettings = {
-      app_id: window.__IntercomAppId
-    };
-  </script>
-{{- partial "asset" (dict "page" . "type" "js" "filename" "intercom.js") -}}
 {{- else -}}
 <!-- BUILD: UNKNOWN -->
   <meta name="ROBOTS" content="NOINDEX, NOFOLLOW">

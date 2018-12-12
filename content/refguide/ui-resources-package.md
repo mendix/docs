@@ -1,6 +1,6 @@
 ---
 title: "UI Resources Package"
-category: "Modeler"
+category: "Desktop Modeler"
 ---
 
 ## 1 Introduction

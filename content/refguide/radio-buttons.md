@@ -1,10 +1,11 @@
 ---
-title: "Radio buttons"
+title: "Radio Buttons"
 parent: "input-widgets"
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 
-The radio buttons widget is an [input widget](input-widgets) that can be used to display and edit boolean and enumeration attributes.
+The **Radio Buttons** widget is an [input widget](input-widgets) that can be used to display and edit Boolean and enumeration attributes.
 
 {{% alert type="info" %}}
 

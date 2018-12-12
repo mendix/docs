@@ -1,7 +1,8 @@
 ---
-title: "Use Connectors and Adapters"
+title: "Use Connectors & Adapters"
 category: "Extensibility"
-tags: []
+menu_order: 7
+tags: ["extensibility", "connector", "adapter", "extensibility"]
 ---
 
 ## 1 Introduction
@@ -36,7 +37,7 @@ This module provides access to Amazon S3 inside of Mendix.
 
 [![](attachments/18448690/salesforce.png)](https://appstore.home.mendix.com/link/app/1424/Mendix/Salesforce.com-Connector)
 
-This module enables building Mendix apps on top of your [Salesforce](http://Salesforce.com) environment in minutes. Get the rapid development and deployment power of Mendix on top of your entire existing Salesforce architecture. This adapter quickly and easily allows you to communicate with standard or custom objects in your company's Salesforce instance.
+This module enables building Mendix apps on top of your [Salesforce](http://Salesforce.com) environment in minutes. Get the rapid development and deployment power of Mendix on top of your entire existing Salesforce architecture. This connector quickly and easily allows you to communicate with standard or custom objects in your company's Salesforce instance.
 
 [Click to download in the Mendix App Store.](https://appstore.home.mendix.com/link/app/1424/Mendix/Salesforce.com-Connector)
 
@@ -152,6 +153,6 @@ You can now add Google Analytics-tracking to your Mendix application! This widge
 
 [Click to download in the Mendix App Store.](https://appstore.home.mendix.com/link/app/105/Mendix/Google-Analytics)
 
-# 20 Related Content
+## 20 Related Content
 
 * [How to Access a Samba Share from the MxCloud](access-a-samba-share-from-the-mxcloud)

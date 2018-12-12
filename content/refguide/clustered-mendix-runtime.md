@@ -1,6 +1,6 @@
 ---
 title: "Clustered Mendix Runtime"
-category: "Runtime"
+category: "Mendix Runtime"
 description: "This page describes the impact and its behavior of running Mendix Runtime as a Cluster. Using the Cluster functionality you can setup your Mendix application to run behind a load balancer to enable a failover and/or high availability architecture."
 tags: ["runtime", "cluster", "load balancer", "failover", "pivotal"]
 ---
@@ -27,7 +27,7 @@ This means that a Mendix Cluster requires a Load Balancer to distribute the load
 
 The above depicted infrastructure is supported in an easy way in Pivotal Web Services. Pivotal Web Services allows easy scaling by increasing the number of running nodes for your app and provides a built-in load balancer for accessing the nodes.
 
-Deploying your application into Pivotal Web Services is described on this page: [Deploying a Mendix App to Pivotal](/deployment/cloud-foundry/deploy-a-mendix-app-to-pivotal).
+Deploying your application into Pivotal Web Services, and other Cloud Foundry platforms, is described on this page: [Cloud Foundry: Deploy](/developerportal/deploy/cloud-foundry-deploy).
 
 Scaling out can be done using the Pivotal App Manager. Using the Pivotal App Manager is documented in the [Pivotal Webservices Documentation](http://docs.run.pivotal.io/console/dev-console.html).
 
@@ -57,7 +57,7 @@ If no database synchronization is required, all cluster nodes will become fully 
 
 Uploaded files should be stored in a shared file storage facility, as every Mendix Runtime node should access the same files. Either the local storage facility is shared or the files are stored in a central storage facility such as an Amazon S3 file storage, Microsoft Azure Blob storage, or IBM Bluemix Object Storage (see [custom settings](custom-settings) for more information about configuring the Mendix Runtime to store files on these storage facilities).
 
-## 7 After-Startup and Before-Shutdown Microflows
+## 7 After-Startup and Before-Shutdown Microflows {#startup-shutdown-microflows}
 
 It is possible to configure `After-Startup` and `Before-Shutdown` microflows in Mendix. In a Mendix Cluster this means that those microflows are called per node. This lets you register request handlers and other activities. However, doing database maintainance during these microflows is strongly discouraged because it might impact other nodes of the same cluster. There is no possibility to run a microflow on cluster startup or shutdown.
 
@@ -69,6 +69,10 @@ While running a multi-node cluster it is not predictable on which node a microfl
 ### 8.2 Cluster-Wide Locking (Guaranteed Single Execution)
 
 Some apps require a guaranteed single execution of a certain activity at a given point in time. In a single node Mendix Runtime this could be guaranteed by using JVM locks. However, in a distributed scenario those JVMs run on different machines, so there is no locking system available. Mendix does not support cluster wide locking either. If this can't be circumvented, you might need to resort to an external distributed lock manager. However, keep in mind that locking in a distributed system is complex and prone to failure (lock starvation, lock expiration, etc.).
+
+{{% alert type="info" %}}
+For the reason described above, the **Disallow concurrent execution** property of a microflow only applies to a single node.
+{{% /alert %}}
 
 ## 9 Dirty State in a Cluster
 
@@ -88,7 +92,7 @@ Note that whenever the Mendix Client is restarted, all the state is discarded, a
 
 The more objects that are part of the 'Dirty State', the more data has to be transferred in the requests and responses between the Mendix Runtime and the Mendix Client. As such, it has an impact on performance. In cluster environments it is advised to minimize the amount of 'Dirty State' to minimize the impact of the synchronization on performance.
 
-The Mendix Client attempts to optimize the amount of state sent to the Mendix Runtime by only sending data that can potentially be read while processing the request. For example, if you call a microflow tghat gets `Booking` as a parameter and retrieves `Flight` over association, then the client will pass only `Booking` and the associated `Flight`s from the dirty state along with the request, but not the `Hotel`s. Note that this behavior is the best effort; if the microflow is too complex to analyze (for example, when a Java action is called with a state object as a parameter), the entire dirty state will be sent along. This optimization can be disabled by the [`Optimize network calls` Project Setting](project-settings#3-2-optimize-network-calls).
+The Mendix Client attempts to optimize the amount of state sent to the Mendix Runtime by only sending data that can potentially be read while processing the request. For example, if you call a microflow that gets `Booking` as a parameter and retrieves `Flight` over association, then the client will pass only `Booking` and the associated `Flight`s from the dirty state along with the request, but not the `Hotel`s. Note that this behavior is the best effort; if the microflow is too complex to analyze (for example, when a Java action is called with a state object as a parameter), the entire dirty state will be sent along. This optimization can be disabled by the [`Optimize network calls` Project Setting](project-settings#3-2-optimize-network-calls).
 
 {{% alert type="warning" %}}
 

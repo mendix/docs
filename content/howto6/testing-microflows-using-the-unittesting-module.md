@@ -146,6 +146,3 @@ It is possible to create a Setup and TearDown microflow per module. The Setup mi
 
 Do not test everything, focus on the most used and complex microflows.
 
-## 4\. Releated Content
-
-*   [Creating automated tests with TestNG](create-automated-tests-with-testng)

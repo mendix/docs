@@ -140,7 +140,7 @@ The following methods, which were intended for internal use only, have been remo
 *   [ISortExpression.toXML(..)](http://apidocs.mendix.com/4/runtime/interfacecom_1_1mendix_1_1systemwideinterfaces_1_1connectionbus_1_1requests_1_1_i_sort_expression.html#acee2d007dd389aa10e47191e1a3be51c)
 *   [IGetRequest.getDataStoreIdentifier()](http://apidocs.mendix.com/4/runtime/interfacecom_1_1mendix_1_1systemwideinterfaces_1_1connectionbus_1_1requests_1_1types_1_1_i_get_request.html#a3eba482affc071037ef806ad971ac389), [IGetRequest.setDataStoreIdentifier(..)](http://apidocs.mendix.com/4/runtime/interfacecom_1_1mendix_1_1systemwideinterfaces_1_1connectionbus_1_1requests_1_1types_1_1_i_get_request.html#a1374e742c48599cbbccf21e11f4a2e72) and [IGetRequest.toXML(..)](http://apidocs.mendix.com/4/runtime/interfacecom_1_1mendix_1_1systemwideinterfaces_1_1connectionbus_1_1requests_1_1types_1_1_i_get_request.html#a52db877bbb60478b07179a7302376b4a)
 
-#### Removed deprecated methods
+## Removed deprecated methods
 
 The following deprecated methods and/or classes have been removed in Mendix 5:
 

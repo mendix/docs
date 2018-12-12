@@ -6,7 +6,7 @@ description: "Describes the profile properties and profile buttons for Mendix ve
 
 {{% alert type="warning" %}}
 
-This is applicable to Mendix versions 7.2 and 7.3. For details on how this works in Mendix versions 7.0 and 7.1, see [Navigation Before Mendix Version 7.2](navigation-before-72). For Mendix version 7.4 and higher, see [Navigation](navigation).
+This is applicable to Mendix versions 7.2 and 7.3. For details on how this works in Mendix versions 7.0 and 7.1, see [Navigation Before Mendix Version 7.2](navigation-before-72). For Mendix version 7.4 and above, see [Navigation](navigation).
 
 {{% /alert %}}
 

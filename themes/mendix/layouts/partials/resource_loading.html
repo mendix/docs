@@ -1,0 +1,16 @@
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://developer-static.mendix.com" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<link rel="preconnect" href="https://developer.mendixcloud.com" crossorigin>
+<link rel="preconnect" href="https://search-static.mendix.com" crossorigin>
+<link rel="preconnect" href="https://sprintr.home.mendix.com" crossorigin>
+<link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+<link rel="preconnect" href="https://js.intercomcdn.com" crossorigin>
+<link rel="preconnect" href="https://fast.wistia.net" crossorigin>
+<link rel="preconnect" href="https://munchkin.marketo.net" crossorigin>
+
+{{- $env := getenv "HUGO_ENV" -}}
+{{- if eq $env "production" -}}
+<link rel="preload" href="https://sprintr.home.mendix.com/feedback/ui/plainsprintrfeedback.css" as="style">
+{{- end -}}

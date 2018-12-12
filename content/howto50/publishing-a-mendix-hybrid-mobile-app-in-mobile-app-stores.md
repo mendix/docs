@@ -22,7 +22,7 @@ You require the following before you can build hybrid mobile packages of your ap
 
 ## 2. Starting the packaging process
 
-Before starting, make sure you have a Mendix App with mobile support enabled running in the Mendix Cloud, either in a Community Edition Sandbox or in a licensed cloud node. If you do not have one ready yet, set up the Company Expenses app from the Mendix App Store in a Sandbox to try out its mobile features.
+Before starting, make sure you have a Mendix App with mobile support enabled running in the Mendix Cloud, either in a Community Edition Sandbox or in a licensed cloud node.
 
 First, open the "Publish for Mobile App Stores" page in the Mendix Developer Portal:
 
@@ -112,7 +112,8 @@ You can now deploy your app to your test device. An easy way to do this is with 
 4.  Open the menu in the top left corner of the iTunes window.
 5.  Click "Add File to Library...".
 6.  Select the ".ipa" package file that you downloaded earlier.
-7.  iTunes will ask whether you want to replace any existing version of the app, if there is one - do so.
+7. iTunes will ask whether you want to replace any existing version of the app, if there is one - do so.
+
     *   You can also open an ".ipa" file directly with iTunes by double-clicking on it.
 8.  In the list of apps, your app should show up. Click the "Install" button next to your app.
 
@@ -128,10 +129,8 @@ The app should now be visible on your device. Open it and log in to your app wit
 ## 6. Related content
 
 *   [Mobile](mobile)
-*   [Deploy your first Hybrid Mobile App](deploy-your-first-hybrid-mobile-app)
 *   [Publishing a Mendix Hybrid Mobile App in Mobile App Stores](publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)
 *   [Mobile](/howto6/mobile)
-*   [Deploy your first Hybrid Mobile App](/howto6/deploy-your-first-hybrid-mobile-app)
 *   [Publishing a Mendix Hybrid Mobile App in Mobile App Stores](/howto6/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)
 *   [The Mobile Slider Custom Widget](the-mobile-slider-custom-widget)
 *   [The Mobile Slider Custom Widget](/howto6/the-mobile-slider-custom-widget)

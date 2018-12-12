@@ -47,7 +47,7 @@ Before you can start with this how-to, make sure you have completed the followin
 
 1.  Click on **Capture**.
     ![](attachments/14091670/14385439.png)
-    On this page you can plan the development of your app by adding sprints and stories. Click [here](/developerportal/howto/managing-your-application-requirements-with-mendix) to learn how to manage your application requirements in Mendix by creating and configuring sprints and stories.
+    On this page you can plan the development of your app by adding sprints and stories. Click [here](/developerportal/collaborate/stories) to learn how to manage your application requirements in Mendix by creating and configuring sprints and stories.
 2.  Click on **Develop**.
     ![](attachments/14091670/14385440.png)
     On this page you can see the latest revisions to your app, done through the use of version control.
@@ -96,4 +96,4 @@ Learn more about this topic using the following helpful links:
 s
 *   [Build a simple HRM app 2: First steps in building a rich GUI](build-a-simple-hrm-app-2-first-steps-in-building-a-rich-gui)
 *   [The Eye-Catching Mendix UI Framework](https://www.mendix.com/blog/the-eye-catching-mendix-ui-framework/)
-*   [Managing your Application Requirements with Mendix](/developerportal/howto/managing-your-application-requirements-with-mendix)
+*   [Managing your Application Requirements with Mendix](/developerportal/collaborate/stories)

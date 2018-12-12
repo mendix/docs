@@ -8,7 +8,7 @@ You can use configurations to have different database settings for different peo
 
 {{% alert type="warning" %}}
 
-When you are deploying your application to a server or the Mendix cloud you will have to configure settings below there. See the [Deployment](/deployment/mendixcloud) guide for more information.
+When you are deploying your application to a server or the Mendix cloud you will have to configure settings below there. See the [Deployment](/developerportal/deploy/mendix-cloud-deploy) guide for more information.
 
 {{% /alert %}}
 

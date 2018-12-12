@@ -3,15 +3,15 @@ title: "Client Activities"
 parent: "activities"
 ---
 
-## Close Form
+## Close Page
 
-See [Close Form](close-form).
+See [Close Page](close-page).
 
 ## Download File
 
 See [Download File](download-file).
 
-## Show Form
+## Show Page
 
 See [Show Page](show-page).
 

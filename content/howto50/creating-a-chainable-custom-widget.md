@@ -10,8 +10,6 @@ This how-to is an introduction on building a custom widget that is chainable in 
 *   How to create a chainable custom widget.
 *   How to setup and configure your Mendix app to support this.
 
-# Table of contents
-
 ## 1\. Preparation
 
 Before you start building your own chainable custom widget make sure you have the following programs installed:

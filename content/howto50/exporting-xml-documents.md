@@ -2,8 +2,6 @@
 title: "Exporting XML documents"
 category: "Integration"
 ---
-# Exporting XML documents
-
 Mendix is "The App Platform for the Enterprise" and in enterprise software it is not likely that you work in a [green field](https://en.wikipedia.org/wiki/Greenfield_project). In almost every situation you will need to integrate with existing systems. Mendix supports many ways of integration but this how-to focuses on how you can export XML documents with Mendix.
 
 ## 1. Preparation

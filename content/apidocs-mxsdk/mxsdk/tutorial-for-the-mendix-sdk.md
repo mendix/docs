@@ -1,6 +1,7 @@
 ---
 title: "How-to's"
 category: "Mendix Platform SDK"
+menu_order: 30
 ---
 
 ## 1 Introduction

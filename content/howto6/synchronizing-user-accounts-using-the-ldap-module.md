@@ -155,9 +155,5 @@ Note that the scheduled event will always synchronize all enabled LDAP server co
 *   [Exposing a web service](expose-a-web-service)
 *   [Importing XML documents](importing-xml-documents)
 *   [Consuming a REST Service](consume-a-rest-service)
-*   [Exposing data to BI tools using OData](exposing-data-to-bi-tools-using-odata)
-
-
-
 *   [http://www.openldap.org/](http://www.openldap.org/)
 *   [https://appstore.home.mendix.com/link/app/24/Mendix/LDAP-Synchronization-module](https://appstore.home.mendix.com/link/app/24/Mendix/LDAP-Synchronization-module)

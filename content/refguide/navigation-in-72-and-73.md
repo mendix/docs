@@ -1,5 +1,5 @@
 ---
-title: "Navigation in Mendix Versions 7.2 and 7.3"
+title: "Navigation in Mendix Versions 7.2 & 7.3"
 parent: "project"
 description: "Describes the concept of navigation in apps and the properties of a profile for Mendix versions 7.2 and 7.3."
 ---
@@ -8,7 +8,7 @@ description: "Describes the concept of navigation in apps and the properties of 
 
 {{% alert type="warning" %}}
 
-This document describes the concept of navigation in Mendix applications and the properties of a profile. This is applicable to Mendix versions 7.2 and 7.3. For details on how this works in Mendix versions 7.0 and 7.1, see [Navigation Before Mendix Version 7.2](navigation-before-72). For Mendix version 7.4 and higher, see [Navigation](navigation).
+This document describes the concept of navigation in Mendix applications and the properties of a profile. This is applicable to Mendix versions 7.2 and 7.3. For details on how this works in Mendix versions 7.0 and 7.1, see [Navigation Before Mendix Version 7.2](navigation-before-72). For Mendix version 7.4 and above, see [Navigation](navigation).
 
 {{% /alert %}}
 

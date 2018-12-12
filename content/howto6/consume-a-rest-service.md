@@ -194,4 +194,4 @@ In this section, you will create a microflow to hypothetically send data back to
 * [Selenium Support](selenium-support)
 * [Synchronizing User Accounts Using the LDAP Module](synchronizing-user-accounts-using-the-ldap-module)
 * [Importing XML Documents](importing-xml-documents)
-* [Exposing Data to BI Tools Using OData](exposing-data-to-bi-tools-using-odata)
+

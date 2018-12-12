@@ -263,7 +263,7 @@ To configure a custom selenium hub follow these steps:
 
 {{% alert type="info" %}}
 
-For more information on local selenium set-up go to [Customer Hosted Selenium](../../general/deployment#5-4-customer-hosted-selenium).
+For more information on local selenium set-up go to [Customer Hosted Selenium](../../general/deployment#customer-hosted-selenium).
 
 {{% /alert %}}
 

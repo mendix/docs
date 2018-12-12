@@ -1,5 +1,5 @@
 ---
-title: "XPath Contains"
+title: "XPath contains"
 parent: "xpath-constraint-functions"
 ---
 

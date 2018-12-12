@@ -3,7 +3,7 @@ title: "XPath sum"
 parent: "xpath-query-functions"
 ---
 
-The sum()-function returns the sum of its argument.
+The `sum()` function returns the sum of its argument.
 
 The function requires an XPath query as argument.
 

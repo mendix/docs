@@ -1,10 +1,11 @@
 ---
 title: "Custom Widget Development"
+tags: ["widget", "develop widget", "customize"]
 ---
 
 ## 1 Introduction
 
-A Mendix custom widget is a part of the user interface in your Mendix app that enables functionality and interaction with the users of the app. A custom widget can alter the interface, data, and images of the app as well as the way the app works. These custom widgets bridge the gap between using standard Mendix components (for example, buttons and list-views) and creating very specific components yourself.
+A Mendix custom widget is a part of the user interface in your Mendix app that enables functionality and interaction with the users of the app. A custom widget can alter the interface, data, and images of the app as well as the way the app works. These custom widgets bridge the gap between using standard Mendix components (for example, buttons and list views) and creating very specific components yourself.
 
 Custom widget development can be difficult at the beginning. The resources below will help you start your widget development.
 
@@ -12,7 +13,7 @@ Custom widget development can be difficult at the beginning. The resources below
 
 In order to create widgets, you need a good understanding of how JavaScript works. These texts can help you get started:
 
- * [JavaScript: The Good Parts](http://www.easycomputing.com/download/0e9fa6d09a001991e41aeae63152b12882e27116)
+ * [JavaScript: The Good Parts](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=4&ved=2ahUKEwjV9MTAzfTeAhXSaVAKHWhnBl4QFjADegQIDhAC&url=http%3A%2F%2F178.62.88.124%3A8080%2Fget%2FPDF%2FDouglas%2520Crockford-JavaScript_%2520The%2520Good%2520Parts_45.pdf&usg=AOvVaw2pz6Myacih_KqD7DVrgOWn)
  * [You Don't Know JS](https://github.com/getify/You-Dont-Know-JS)
  * [Learning JavaScript Design Patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
 
@@ -77,3 +78,9 @@ By debugging your widgets, you will quickly learn where you make mistakes and ho
 ### 4.3 Ask the Community
 
 Within the Mendix Community of developers, there are plenty of widget developers. The [Mendix Forum](https://forum.mendixcloud.com/index3.html) is the place to go to when you have questions.
+
+## 5 Main Documents in This Category
+
+* [Add a Preview Image for a Custom Widget](add-a-preview-image-for-custom-widget)
+* [Scaffold a Widget with the Yeoman Widget Generator](scaffold-a-widget-with-the-yeoman-widget-generator)
+* [Use the Widget Development Plugin for Adobe Brackets](use-the-widget-development-plugin-for-adobe-brackets)

@@ -1,6 +1,7 @@
 ---
 title: "Configuration"
 parent: "project-settings"
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 
@@ -10,7 +11,7 @@ You can use configurations to have different database settings for different peo
 
 {{% alert type="warning" %}}
 
-When you are deploying your application to a server or the Mendix cloud you will have to configure settings below there. See the [deployment guide](/deployment/mendixcloud) for more information.
+When you are deploying your application to a server or the Mendix cloud you will have to configure settings below there. See the [deployment guide](/developerportal/deploy/mendix-cloud-deploy) for more information.
 
 {{% /alert %}}
 

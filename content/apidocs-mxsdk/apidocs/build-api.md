@@ -1,30 +1,36 @@
 ---
 title: "Build API"
 category: "API Documentation"
+description: "An API to allow the triggering of deployment package builds, and to get information about existing deployment packages."
+tags: ["API", "Build Server", "Team Server", "Deployment package", "Mendix Cloud"]
 ---
 
-# Introduction
+## Introduction
 
-The Build API allows you to manage deployment packages and create new deployment packages using our build server. You will need the information from the Teamserver API as input for these API calls.
+The Build API allows you to manage deployment packages and create new deployment packages using our build server. You will need the information from the Teamserver API as input for these API calls. You will also need to provide authentication for each call; this is described in [Authentication](authentication).
+
+{{% alert type="info" %}}
+This API is designed for apps which are deployed to the Mendix Cloud.
+{{% /alert %}}
 
 The image below provides a domain model representation of the concepts discussed below and how these are related:
 
 ![](attachments/deploy-api/api-model.png)
 
-# API calls
+## API calls
 
-## Retrieve packages
+### Retrieve packages
 
-### Description
+#### Description
 
 Retrieves all deployment packages that are available for a specific app that the authenticated user has access to as a regular user. These packages can be found if you click **Details** on an app in the **Nodes** screen in the Mendix Platform.
 
-```java
- HTTP Method: GET
- URL: [https://deploy.mendix.com/api/1/apps/<AppId>/packages/ (https://deploy.mendix.com/api/1/apps/<AppId>/packages/)]
+```http
+HTTP Method: GET
+URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages/ 
 ```
 
-### Request
+#### Request
 
 ##### Parameter
 
@@ -32,16 +38,15 @@ Retrieves all deployment packages that are available for a specific app that the
 
 ##### Example
 
-```java
-GET /api/ 1 /apps/calc/packages/ HTTP/ 1.1
+```http
+GET /api/1/apps/calc/packages/ HTTP/1.1
 Host: deploy.mendix.com
-
 Accept: */*
 Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 ```
 
-### Output
+#### Output
 
 List of objects with the following key-value pairs:
 
@@ -64,7 +69,7 @@ List of objects with the following key-value pairs:
 
 ##### Example
 
-```java
+```json
 [{
      "Name" :  "Main line-1.1.5.9.mda" ,
      "Status" :  "Succeeded" ,
@@ -86,18 +91,18 @@ List of objects with the following key-value pairs:
 }]
 ```
 
-## Retrieve Package
+### Retrieve Package{#retrieve-package}
 
-### Description
+#### Description
 
 Retrieves a specific deployment package that is available for a specific app that the authenticated user has access to as a regular user. This package can be found if you click **Details** on an app in the **Nodes** screen in the Mendix Platform.
 
-```java
+```http
 HTTP Method: GET
- URL: [https://deploy.mendix.com/api/1/apps/<AppId>/packages/<PackageId> (https://deploy.mendix.com/api/1/apps/<AppId>/packages/<PackageId>)]
+URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages/<PackageId>
 ```
 
-### Request
+#### Request
 
 ##### Parameters
 
@@ -106,29 +111,32 @@ HTTP Method: GET
 
 ##### Example
 
-```java
-GET /api/ 1 /apps/calc/packages/b3d14e53- 2654 - 4534 -b374-9179a69ef3cf HTTP/ 1.1
+```http
+GET /api/1/apps/calc/packages/b3d14e53-2654-4534-b374-9179a69ef3cf HTTP/1.1
 Host: deploy.mendix.com
-
 Accept: */*
 Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 ```
 
-### Output
+#### Output
 
 An object with the following key-value pairs:
 
-*   _PackageId_ (String) : Unique identification of the package.
-*   _Name_ (String) : Name of the package.
-*   _Description_ (String) : Description of the package.
-*   _Version_ (String) : Package version. This is also the name of the tag on the project team server.
-*   _Creator_ (String) : Uploader or creator of this package.
+*   _PackageId_ (String) : Unique identification of the package
+*   _Name_ (String) : Name of the package
+*   _Description_ (String) : Description of the package
+*   _Version_ (String) : Package version. This is also the name of the tag on the project team server
+*   _Creator_ (String) : Uploader or creator of this package
 *   _CreationDate_ (Date) : Date that the package became available in the portal. This can be the
-    upload date or the date that a build was created in the portal.
-*   _Status_ (String) : Status of the package. A package is ready to use if the status is 'Succeeded'.
-    Possible values: Succeeded, Queued, Building, Uploading and Failed.
-*   _Size_ (Long) : Size of the package in bytes.
+    upload date or the date that a build was created in the portal
+*   _Status_ (String) : Status of the package. A package is ready to use if the status is 'Succeeded'. Possible values: 
+     * Succeeded
+     * Queued
+     * Building
+     * Uploading
+     * Failed
+*   _Size_ (Long) : Size of the package in bytes
 
 ##### Error codes
 
@@ -139,7 +147,7 @@ An object with the following key-value pairs:
 
 ##### Example
 
-```java
+```json
 {
      "Name" :  "Main line-2.5.4.63.mda" ,
      "Status" :  "Succeeded" ,
@@ -152,26 +160,26 @@ An object with the following key-value pairs:
 }
 ```
 
-## Delete package
+### Delete package
 
-### Description
+#### Description
 
 Deletes a specific deployment package that is available for a specific app that the authenticated user has access to as a regular user. This package can be found if you click **Details** on an app in the **Nodes** screen in the Mendix Platform.
 
-```java
- HTTP Method: DELETE
- URL: [https://deploy.mendix.com/api/1/apps/<AppId>/packages/<PackageId> (https://deploy.mendix.com/api/1/apps/<AppId>/packages/<PackageId>)]
+```http
+HTTP Method: DELETE
+URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages/<PackageId>
 ```
 
-### Request
+#### Request
 
-#### Parameters
+##### Parameters
 
 *   _AppId_ (String) : Subdomain name of an app
 *   _PackageId_ (String) : Id of the deployment package
 
-```java
-DELETE /api/ 1 /apps/calc/packages/b3d14e53- 2654 - 4534 -b374-9179a69ef3cf HTTP/ 1.1
+```http
+DELETE /api/1/apps/calc/packages/b3d14e53-2654-4534-b374-9179a69ef3cf HTTP/1.1
 Host: deploy.mendix.com
 
 Accept: */*
@@ -179,7 +187,7 @@ Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 ```
 
-#### Error codes
+##### Error codes
 
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
@@ -187,32 +195,31 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 | 404 | PACKAGE_NOT_FOUND | Package or build job not found. |
 | 409 | PACKAGE_IN_USE | Package is still in use. |
 
-## Download package
+### Download package
 
 Downloads a specific deployment package that is available for a specific app that the authenticated user has access to as a regular user. This package can be found if you click **Details** on an app in the **Nodes** screen in the Mendix Platform.
 
-```java
- HTTP Method: GET
- URL: [https://deploy.mendix.com/api/1/apps/<AppId>/packages/<PackageId>/download (https://deploy.mendix.com/api/1/apps/<AppId>/packages/<PackageId>/download)]
+```http
+HTTP Method: GET
+URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages/<PackageId>/download
 ```
 
-### Request
+#### Request
 
 Parameters
 
 *   _AppId_ (String) : Subdomain name of an app.
 *   _PackageId_ (String) : Id of the deployment package.
 
-```java
-GET /api/ 1 /apps/calc/packages/b3d14e53- 2654 - 4534 -b374-9179a69ef3cf/download HTTP/ 1.1
+```http
+GET /api/1/apps/calc/packages/b3d14e53-2654-4534-b374-9179a69ef3cf/download HTTP/1.1
 Host: deploy.mendix.com
-
 Accept: */*
 Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 ```
 
-### Output
+#### Output
 
 Error codes
 
@@ -222,16 +229,16 @@ Error codes
 | 404 | PACKAGE_NOT_FOUND | Package or build job not found. |
 | 500 | BUILD_NOT_SUCCEEDED | Build not successful finished. |
 
-## Start building deployment package
+### Start building deployment package
 
 Start the process to build a deployment package, based on the team server project of a specific app that the authenticated user has access to as a regular user. This package can be found if you click **Details** on an app in the **Nodes** screen in the Mendix Platform. For a Sandbox, this will also trigger a deployment of the new package.
 
-```java
+```http
 HTTP Method: POST
- URL: [https://deploy.mendix.com/api/1/apps/<AppId>/packages/ (https://deploy.mendix.com/api/1/apps/<AppId>/packages/)]
+URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages/
 ```
 
-### Request
+#### Request
 
 ##### Parameter
 
@@ -248,27 +255,32 @@ An object with the following key-value pairs:
 
 ##### Example
 
-```java
-POST /api/ 1 /apps/calc/packages/ HTTP/ 1.1
+```http
+POST /api/1/apps/calc/packages/ HTTP/1.1
 Host: deploy.mendix.com
-
 Accept: */*
 Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 {
+     "Branch" : "branches/feature" ,
      "Revision" :  63 ,
      "Version" :  "2.5.4" ,
      "Description" :  "Add scientific mode"
 }
 ```
 
-### Output
+#### Output
+
+{{% alert type="info" %}}
+You will receive a response to indicate that the build has started. Depending on the complexity of your app, it may take some time before it is complete.
+
+You can find out the status of your build by looking at the `status` from a [Retrieve Package](#retrieve-package) call. The status will be *Succeeded* once the package has been built successfully.
+{{% /alert %}}
 
 An object with the following key-value pair:
 
-*   _PackageId_ (String) : Unique identification of the package. This string can be used to get the build status
-    of the package later.
+*   _PackageId_ (String) : Unique identification of the package. This string can be used to get the build status of the package later.
 
 Error codes
 
@@ -287,3 +299,5 @@ Error codes
      "PackageId" :  "b3d14e53-2654-4534-b374-9179a69ef3cf"
 }
 ```
+
+If `calc` is the example app, you can find the status of the build by using `GET /api/1/apps/calc/packages/b3d14e53-2654-4534-b374-9179a69ef3cf HTTP/1.1` and looking for a return `status` of `Succeeded`.

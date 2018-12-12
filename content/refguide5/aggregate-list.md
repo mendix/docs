@@ -12,15 +12,15 @@ See [Microflow Element Common Properties](microflow-element-common-properties) f
 
 {{% /alert %}}
 
-# Input Properties
+## Input Properties
 
-## List
+### List
 
 The list to compute an aggregate over.
 
-# Action Properties
+## Action Properties
 
-## Function
+### Function
 
 Aggregate function defines which type of aggregation is applied.
 
@@ -32,12 +32,12 @@ Count   | The total amount of objects in the list.
 Minimum | The minimum of all values of an attribute from the list of objects.
 Maximum | The maximum of all values of an attribute from the list of objects.
 
-## Attribute
+### Attribute
 
 Attribute defines which attribute of the objects in the list is used to aggregate over. This must be a numeric attribute (Long, Integer, Float, Currency or Decimal).
 
-# Output
+## Output
 
-## Variable name
+### Variable name
 
 The name of the (numeric) variable in which the result of the aggregation is stored.

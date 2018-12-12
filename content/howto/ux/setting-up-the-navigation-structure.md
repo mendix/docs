@@ -1,6 +1,7 @@
 ---
 title: "Set Up the Navigation Structure"
 category: "UX"
+menu_order: 30
 tags: []
 ---
 Once you've created some pages you want to give users the ability to access them. The easiest way to do this is by using a navigation menu. The navigation editor of the Desktop Modeler allows you define navigation menus for desktop, tablet and phone interfaces. It also allows you to define which page is shown as a default home page depending on the user role.
@@ -22,7 +23,7 @@ This section will explain how to set the default home page. Please note that thi
 
     ![](attachments/18448703/18581311.png)
 
-2.  Select either **Respnsive**, **Tablet browser**, or **Phone browser** navigation, depending on the device interface you're working on.
+2.  Select either **Responsive**, **Tablet browser**, or **Phone browser** navigation, depending on the device interface you're working on.
 3.  Next to **Home pages** > **Default home page**, click **Select**.
 4.  Select the page you want to use as default home page. In this case, we use _Homepage._
 
@@ -30,11 +31,7 @@ This section will explain how to set the default home page. Please note that thi
 
 5.  Click **Select**.
 
-    {{% alert type="info" %}}
-
-    You can also select a microflow as default home page. Make sure that the microflow contains a 'Show Form' activity, otherwise the user won't see anything.
-
-    {{% /alert %}}
+    {{% alert type="info" %}}You can also select a microflow as default home page. Make sure that the microflow contains a 'Show Form' activity, otherwise the user won't see anything.{{% /alert %}}
 
     Now every time a user signs in to the application, the selected page/microflow is shown/triggered.
 
@@ -43,7 +40,7 @@ This section will explain how to set the default home page. Please note that thi
 In many cases you want users with different roles to see different home pages. This can be easily achieved with Mendix by use of Role-based home pages. You don't need to configure home pages for every role, because the default home page works as a fall-back mechanism. This section will explain how to set role based home pages.
 
 1.  Open the **Navigation** editor.
-2.  Select either **Respnsive**, **Tablet browser**, or **Phone browser** navigation, depending on the device interface you're working on.
+2.  Select either **Responsive**, **Tablet browser**, or **Phone browser** navigation, depending on the device interface you're working on.
 3.  Next to **Home pages** > **Role-based home pages**, click **Edit**.
 4.  In the **Role-based home pages** wizard, click **New**.
 5.  Select a user role to create a new setting. In this case, we select **Administrator**.
@@ -66,7 +63,7 @@ In many cases you want users with different roles to see different home pages. T
 This section will explain how to create menu items.
 
 1.  Open the **Navigation** editor.
-2.  Select either **Respnsive**, **Tablet browser**, or **Phone browser** navigation, depending on the device interface you're working on.
+2.  Select either **Responsive**, **Tablet browser**, or **Phone browser** navigation, depending on the device interface you're working on.
 3.  Locate the **Menu** section.
 4.  Click **New item** to create a top level menu item. You can also select an existing menu item and click **New subitem** to create a sub-menu item.
 5.  Enter a **caption**. In this case, enter _Customer Overview_.
@@ -96,11 +93,11 @@ Now that you've created a menu structure it's time to start using it on pages.
 6.  Select **Desktop**, **Tablet**, or **Phone** as menu, depending on the device interface you're working on.
 7.  Click **OK** to save the properties. The menu widget is now showing the navigation items created in the navigation editor.
 
-    To prevent repeating the previous steps for every page in your project, the Desktop Modeler supports something called layouts. With layouts you can define a base structure for pages in your project. In a layout you can define where the menu should be rendered and you can simply reuse that layout for the desired pages.
+    To prevent repeating the previous steps for every page in your project, the Desktop Modeler supports something called layouts. With layouts you can define a base structure for pages in your project. In a layout you can define where the menu should be rendered and you can simply reuse that layout for the desired pages. You can find out how to use layouts in the following document: [How to Use Layouts and Snippets](layouts-and-snippets).
 
 ## 6 Related Content
 
-* [How to Create Your First Two Overview and Detail Pages](create-your-first-two-overview-and-detail-pages)
+* [How to Create Your First Two Overview & Detail Pages](create-your-first-two-overview-and-detail-pages)
 * [How to Filter Data on an Overview Page](filtering-data-on-an-overview-page)
 * [How to Set Up the Mendix UI Framework with Just CSS](setup-mendix-ui-framework-with-just-css)
 * [How to Set Up the Mendix UI Framework with Koala](setup-mendix-ui-framework-with-koala)

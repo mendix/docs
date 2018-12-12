@@ -1,7 +1,7 @@
 ---
-title: "Detect and Resolve Performance Issues"
+title: "Detect & Resolve Performance Issues"
 category: "Monitoring & Troubleshooting"
-tags: []
+tags: ["monitoring", "troubleshooting", "performance issue", "performance"]
 ---
 Any application can run into performance issues. Here are a number of possible performance issues you may run into, some root causes, and finally how you can resolve them.
 
@@ -91,7 +91,7 @@ There are a number of tools you can use to identify your slow microflow, and the
 
 ### Server Monitoring
 
-The Mendix Business Server and cloud portal offer a number of performance graphs and logs. For more information on how to use them effectively, attend our our Application Administration Course.
+The Mendix Server and Developer Portal offer a number of performance graphs and logs.
 
 ### Microflow Debugger
 

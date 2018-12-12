@@ -1,7 +1,8 @@
 ---
 title: "Manage Application Performance with AppDynamics"
 category: "Monitoring & Troubleshooting"
-tags: []
+menu_order: 12
+tags: ["monitoring", "troubleshooting", "performance", "appdynamics"]
 ---
 
 ## 1 Introduction
@@ -41,7 +42,7 @@ To set up AppDynamics, follow these steps:
 4. Download the Agent Installer and extract it to any directory (but remember the path, as this will be used later for integrating the Java Agent with your Mendix application):
 
    ![](attachments/19202618/download-installer.png)
-    
+   
 
 ## 3.2 Setting Up Your Mendix Deployment
 
@@ -64,9 +65,6 @@ To the `javaopts` list in your *m2ee.yaml* file, add "-javaagent:<path-to-javaag
 ### 3.2.3 Mendix Desktop Modeler (Development Mode Only)
 
 1. Open your Mendix application, and then select **Settings** in the **Project Explorer**:
-
-    ![](attachments/19202618/19398902.png)
-
 2. Open a configuration:
 
      ![](attachments/19202618/19398903.png)
@@ -175,5 +173,5 @@ For more information on AppDynamics, see the AppDynamics documentation here: [ht
 * [How to Debug Microflows](debug-microflows)
 * [How to Debug Java Actions](debug-java-actions)
 * [How to Handle Common Mendix SSO Errors](handle-common-mendix-sso-errors)
-* [How to Solve Load and Import Errors](solving-load-and-import-errors)
+* [How to Solve Load & Import Errors](solving-load-and-import-errors)
 * [How to Debug Microflows Remotely](debug-microflows-remotely)

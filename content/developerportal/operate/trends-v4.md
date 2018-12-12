@@ -204,6 +204,11 @@ The most important value in here is **user**, which shows the amount of CPU time
 
 The memory graph shows the distribution of operating system memory that is available for this server. The most important part of the graph is the application process, which is visible as an amount of memory that is continuously in use, labelled in the category **apps**.
 
+#### <a name="Trends-diskusage"></a>5.3.3 Disk usage
+
+The disk usage graph shows only the disk usage inside the container. This is usually only relevant if your application creates a lot of temporary files in `/tmp`. This value is not the same as the file document storage. 
+
+
 ### 5.4 Database Node
 
 The database node is the isolated and secure machine on which your application runs.
@@ -225,6 +230,7 @@ Clearly visible amounts of **iowait** in combination with a high number of disk 
 
 The memory graph shows the distribution of operating system memory that is available for this server. The most important part of this graph is the **cache** section. This type of memory usage contains parts of the database storage that have been read from disk earlier. It is crucial to the performance of an application that parts of the database data and indexes that are referenced a lot are always immediately available in the working memory of the server, at the cache part. A lack of disk cache on a busy application will result in continuous re-reads of data from disk, which takes several orders of magnitude more time, slowing down the entire application.
 
+
 These are the types:
 
 Type | Explanation
@@ -236,6 +242,9 @@ Type | Explanation
 #### <a name="Trends-dbpgstatactivityVERSIONmain"></a>5.4.3 Database Connections
 
 The database connections graph shows the number of connections to the PostgreSQL server. This should go up and down with the usage of the application. The number of connections is limited to 50.
+
+### </a><a name="Trends-dbdfabs"></a><a name="Trends-dbdf"></a>5.4.4 Disk Usage
+This graph displays the amount of free disk space in bytes for the database.
 
 ## <a name="Trends-dbdiskstatsiops"></a>6 Both Application and Database Node
 
@@ -264,10 +273,6 @@ The disk latency graph shows the average waiting times for disk operations to co
 
 Disk throughput shows the amount of data that is being read from and written to disk. If there's more than one disk partition in the system, the `/srv` partition generally contains the project files and uploaded files of the application, while `/var` generally holds the database storage.
 
-### <a name="Trends-appdfabs"></a><a name="Trends-dbdfabs"></a><a name="Trends-dbdf"><a name="Trends-appdf"></a>6.5 Disk Usage
-
-This graph displays the amount of data that is stored on disk in absolute amounts. If there's more than one disk partition in the system, the `/srv` partition generally holds project files and uploaded files of the application, while `/var` generally holds the database storage.
-
 ### <a name="Trends-appdiskstatsutilization"></a><a name="Trends-dbdiskstatsutilization"></a>5.6 Disk Utilization
 
 Disk utilization shows the percentage of time that the disk storage is busy processing requests. This graph should be interpreted in combination with other graphs, like CPU **iowait**, **disk iops**, and **number of running requests**. For example, a combination of a moderate number of IO operations, low amount of disk throughput, visible CPU **iowait**, filled up memory disk cache, and reports of long-running database queries in the application log could point to a shortage of system memory for the disk cache that leads to repeated random reads from disk storage.
@@ -281,9 +286,9 @@ Disk utilization is calculated as the disk usage that is used by the user of the
 ## 6 Related Content
 
 * [Alerts](monitoring-application-health)
-* [How to Configure Maintenance Windows](/developerportal/howto/maintenance-windows)
-* [How to Migrate to Mendix Cloud v4](/deployment/mendixcloud/migrating-to-v4)
-* [How to Receive Environment Status Alerts](/developerportal/howto/receive-alerts)
-* [How to View the Mendix Cloud Version and Region](/developerportal/howto/cloud-version-region)
-* [Mendix Cloud v4 - FAQ](/deployment/mendixcloud/mxcloudv4)
+* [How to Configure Maintenance Windows](/developerportal/deploy/maintenance-windows)
+* [How to Migrate to Mendix Cloud v4](/developerportal/deploy/migrating-to-v4)
+* [How to Receive Environment Status Alerts](receive-alerts)
+* [How to View the Mendix Cloud Version and Region](/developerportal/deploy/cloud-version-region)
+* [Mendix Cloud v4 - FAQ](/developerportal/deploy/mxcloudv4)
 

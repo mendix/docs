@@ -1,6 +1,6 @@
 ---
 title: "Scheduled Events"
-category: "Modeler"
+category: "Desktop Modeler"
 ---
 
 
@@ -18,7 +18,7 @@ With scheduled events you can let the runtime execute a microflow at a specific 
 | Property | Description |
 | --- | --- |
 | Microflow | The microflow that is executed when the scheduled event is executed. It should have no parameters and run with all rights (see [Microflow](microflow)). |
-| Enabled | The microflow is only executed if the scheduled event is enabled. This setting only applies when running from the Modeler or from Eclipse. On production environments, scheduled events are enabled/disabled via the appropriate tools (Cloud Portal, Windows Service Console, etc.). |
+| Enabled | The microflow is only executed if the scheduled event is enabled. This setting only applies when running from the Modeler or from Eclipse. On production environments, scheduled events are enabled/disabled via the appropriate tools (Developer Portal, Windows Service Console, etc.). |
 
 ## Timing Properties
 
@@ -37,7 +37,7 @@ Seconds, Minutes, Hours, Days, and Weeks are scheduled exactly as configured. Ho
 
 If you schedule an event to start at March 1, it will run on April 1, May 2, Jun 2, Jul 3, Aug 3, Sep 3, etc. So be aware when scheduling your events, because it is possible that they will run 1 day of what you have been expecting.
 
-This is a simplified example of the implementation of how the Mendix 5.3.2 release calculates the interval. Later releases might behave slightly different, but I haven't seen a message in the release notes that this has been improved.
+This is a simplified example of the implementation of how the Mendix 5.3.2 release calculates the interval. Later releases might behave slightly different.
 
 ```java
 switch(scheduledEvent.getIntervalType())

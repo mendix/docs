@@ -6,7 +6,7 @@ frontpage_featured: true
 
 The API documentation is divided into the sections described below.
 
-## Runtime API
+## Runtime API {#runtime}
 
 Extend your application model using Java. All functionality and information from both the application model and Mendix Runtime is accessible via these APIs.
 
@@ -28,7 +28,7 @@ Enrich the user interface of your applications by building on top of our web cli
 
 ## Stories API
 
-Extend the requirements and project management capabilities of Mendix, or connect 3rd party service management and project management tools.
+Extend the requirements and project management capabilities of Mendix, or connect third-party service management and project management tools.
 
 * [Stories API](stories-api)
 
@@ -109,5 +109,5 @@ The Platform SDK is an open source TypeScript-based and JavaScript-based SDK tha
 
 The Model SDK enables you to modify your Mendix app, and is used as part of the Platform SDK.
 
-* [Mendix Model SDK Release Notes](/releasenotes/model-sdk/index)
+* [Mendix Model SDK Release Notes](/releasenotes/sdk/model-sdk)
 * [Mendix Model SDK](https://apidocs.mendix.com/modelsdk/latest/index.html)

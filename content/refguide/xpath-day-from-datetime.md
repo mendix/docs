@@ -4,7 +4,7 @@ parent: "xpath-constraint-functions"
 ---
 
 
-The day-from-dateTime() function extracts the amount of days from a DateTime attribute so it can be used to compare to a value.
+The `day-from-dateTime()` function extracts the amount of days from a DateTime attribute so it can be used to compare to a value.
 
 {{% alert type="info" %}}
 

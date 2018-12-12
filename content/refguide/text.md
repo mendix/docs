@@ -1,6 +1,7 @@
 ---
 title: "Text"
 parent: "common-widgets"
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 
@@ -30,13 +31,13 @@ For each parameter in the template you define an attribute of the context entity
 
 The render mode determines how the text will be shown in the web browser.
 
-| Value | Description |
-| --- | --- |
-| Text | The text will be rendered inline with the previous/next texts on a page (<span> tag in HTML) |
-| Paragraph | The text will be rendered as a separate paragraph (<p> tag in HTML) |
-| Heading 1 | The text will be rendered as a large heading (<h1> tag in HTML) |
-| ... | ... |
-| Heading 6 | The text will be rendered as a small heading (<h6> tag in HTML) |
+| Value     | Description |
+| --------- | ----------- |
+| Text      | The text will be rendered inline with the previous/next texts on a page (`<span>` tag in HTML) |
+| Paragraph | The text will be rendered as a separate paragraph (`<p>` tag in HTML) |
+| Heading 1 | The text will be rendered as a large heading (`<h1>` tag in HTML) |
+| ...       | ... |
+| Heading 6 | The text will be rendered as a small heading (`<h6>` tag in HTML) |
 
 _Default value:_ Text
 

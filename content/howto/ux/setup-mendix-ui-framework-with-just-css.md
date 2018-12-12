@@ -8,6 +8,10 @@ tags: ["UI Framework", "Styling", "CSS"]
 
 In this how-to we will go through how to setup the [Mendix UI Framework](https://ux.mendix.com/) and do our first styling changes by just using CSS.
 
+{{% alert type="warning" %}}
+These instructions are for apps which are based on the [Mendix UI Framework](https://ux.mendix.com/). They do not apply to apps which use the [Mendix Atlas UI](https://atlas.mendix.com/).
+{{% /alert %}}
+
 **After completing this how-to you will know:**
 
 *   How to create a new App
@@ -61,7 +65,7 @@ In this chapter we will create a new app and select a theme from the New App sel
 
 ## 5 Related Content
 
-*   [How to Create Your First Two Overview and Detail Pages](create-your-first-two-overview-and-detail-pages)
+*   [How to Create Your First Two Overview & Detail Pages](create-your-first-two-overview-and-detail-pages)
 *   [How to Filter Data on an Overview Page](filtering-data-on-an-overview-page)
 *   [How to Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
 *   [How to Use Layouts and Snippets](layouts-and-snippets)

@@ -38,7 +38,7 @@ Entity Access defines for each module role whether users with this role are auth
 
 Entity Access takes the form of a large matrix showing access rules that apply to entities. Each access rule in turn applies to a set of module roles. See [Access Rules](access-rules) for more information.
 
-## OData Access 
+## OData Access
 
 OData Access defines for each module role whether users with this role are authorized to access OData resources for each OData service exposed within the module.
 OData access takes the shape of a large matrix showing published OData services and modules roles. For each combination you can indicate whether or not the module role has access to the published OData service. You can also edit this information in a [published OData services](published-odata-services) using the property 'Allowed roles' in the 'Settings' tab.
@@ -62,11 +62,11 @@ The ranges are defined in the parameters of the data set. Whether values in thes
 
 
 
-# Module Role
+## Module Role
 
 The module roles define which roles users of this module can have. See [Security](security) for more information on module roles and [user roles](user-roles) and their relation.
 
-## Name
+### Name
 
 The name of a module role is used to refer to the module role from other elements in your model.
 
@@ -76,6 +76,6 @@ End users do not see the names of module roles. End users (if they create or vie
 
 {{% /alert %}}
 
-## Documentation
+### Documentation
 
 The documentation of a module role is there only for the convenience of the people who use the modeler; it is not visible for the end users.

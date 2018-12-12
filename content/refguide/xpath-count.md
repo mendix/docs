@@ -4,7 +4,7 @@ parent: "xpath-query-functions"
 ---
 
 
-The count()-function counts all objects retrieved by the enclosed query and returns the value as an integer.
+The `count()` function counts all objects retrieved by the enclosed query and returns the value as an integer.
 
 {{% alert type="info" %}}
 

@@ -40,7 +40,7 @@ This will result in a blue background
 
 {{% /alert %}}
 
-# Navigation list item
+## Navigation list item
 
 Each row in the navigation list is a navigation list item. A navigation list item can be associated with an action.
 

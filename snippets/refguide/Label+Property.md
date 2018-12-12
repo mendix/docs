@@ -11,3 +11,11 @@ _Default value:_ No
 ### Label caption
 
 This property is shown only when Show label is Yes. This property determines what text is rendered within a label.
+
+#### Text template
+
+The template for the label can contain parameters that are written as a number between braces (for example, `{1}`). The first parameter has the number `1`, the second `2`, etc. Note that to use template parameters, the widget must be placed in the context of an entity (for example, inside a data view or list view).
+
+#### Parameters
+
+For each parameter in the template, you define an attribute of the context entity or a referred entity, of which the value will be inserted at the position of the parameter.

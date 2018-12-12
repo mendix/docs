@@ -11,8 +11,6 @@ This how-to is about using the Mobile Slider widget in your Mendix hybrid mobile
 *   How the mobile slider custom widget works.
 *   How to configure your Mendix project to use the mobile slider widget.
 
-# Table of contents
-
 ## 1. Preparation
 
 Before you start building your Mendix hybrid mobile project with the Mobile Slider custom widget make sure you have the following programs installed:

@@ -1,7 +1,8 @@
 ---
 title: "Manage Application Performance with New Relic"
 category: "Monitoring & Troubleshooting"
-tags: []
+menu_order: 13
+tags: ["monitoring", "troubleshooting", "performance", "new relic"]
 ---
 
 ## 1 Introduction
@@ -64,15 +65,13 @@ To the `javaopts` list in your *m2ee.yaml* file, add "-javaagent:<path-to-javaag
 
 ### 3.2.3 Mendix Desktop Modeler (Development Mode Only)
 
-1. Open your Mendix application, and click on **Settings** in the **Project Explorer**:
-
-    ![](attachments/19202618/19398902.png)
+1. Open your Mendix application, and click **Settings** in the **Project Explorer**.
 
 2. Open a configuration:
 
      ![](attachments/19202618/19398903.png)
 
-3. In the **Extra JVM parameters** field on the **Server** tab, add "-javaagent:<path-to-javaagent>javaagent.jar":
+3. In the **Extra JVM parameters** field on the **Server** tab, add: `-javaagent:<path-to-javaagent>javaagent.jar`:
 
     ![](attachments/19202618/19398904.png)
 
@@ -101,5 +100,5 @@ For more information on New Relic, see the New Relic documentation here: [https:
 * [How to Debug Microflows](debug-microflows)
 * [How to Debug Java Actions](debug-java-actions)
 * [How to Handle Common Mendix SSO Errors](handle-common-mendix-sso-errors)
-* [How to Solve Load and Import Errors](solving-load-and-import-errors)
+* [How to Solve Load & Import Errors](solving-load-and-import-errors)
 * [How to Debug Microflows Remotely](debug-microflows-remotely)

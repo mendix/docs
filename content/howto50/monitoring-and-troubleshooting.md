@@ -24,4 +24,3 @@ Stay updated on the health of your app and troubleshoot when needed.
 | [Debugging Java Actions](debugging-java-actions)
 | [Debugging Java Actions remotely](debugging-java-actions-remotely)
 | [Common Mendix SSO Errors](common-mendix-sso-errors)
-| [Testing Mendix applications using Selenium IDE](testing-mendix-applications-using-selenium-ide)

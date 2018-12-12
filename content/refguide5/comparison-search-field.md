@@ -4,13 +4,13 @@ parent: search-bar
 space: Reference Guide 5
 ---
 
-# Common Properties
+## Common Properties
 
-## Caption
+### Caption
 
 The caption is the text that is shown in front of the actual search field. This is a translatable text. See [Translatable Texts](translatable-texts).
 
-## Type
+### Type
 
 Value     | Description
 --------- | ----------------------------------------------------------------------------------------
@@ -24,13 +24,13 @@ A hidden search field is an easy way to selectively display the contents of a gr
 
 {{% /alert %}}
 
-## Default value
+### Default value
 
 The default value is the initial value for the search field. In the case of a normal search field, this value can then be edited by the end user. In the case of a hidden or read-only search field the value is fixed.
 
-# General Properties
+## General Properties
 
-## Attribute (path)
+### Attribute (path)
 
 The text that is entered into the search field is searched for in the given attribute. For each object in the grid, the attribute is inspected to see whether it matches the value that is being searched.
 
@@ -43,7 +43,7 @@ Search field | Allowed direct attributes                                        
 Comparison   | AutoNumber, Currency, Date, Decimal, Float, Integer, Long, String | AutoNumber, Currency, Date, Decimal, Float, Integer, Long, String
 Drop-down    | Boolean, Enumeration                                              | AutoNumber, Boolean (added in 5.5.0), Currency, Decimal, Enumeration, Float, Integer, Long, String
 
-## Comparison
+### Comparison
 
 The value entered by the end user (or the default value in the case of hidden and read-only search fields) is compared to the value of the attribute of each of the objects in the grid. If the match succeeds, the object will be part of the search result. There are different ways in which the attribute value and the entered value can be compared. In the third column below you see the type of search field for which the comparison operator is allowed.
 
@@ -60,7 +60,7 @@ Smaller          | Is the attribute value smaller than the entered value?       
 
 _Default value:_ Equal
 
-## Date comparisons and the influence of the default value
+### Date comparisons and the influence of the default value
 
 It is possible to search on date attributes using equality. What happens with the time component belonging to the date is dependent on the default value of the comparison search field.
 

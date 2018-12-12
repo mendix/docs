@@ -35,7 +35,7 @@ If you want to disable the debugger, simply click on Disable Debugging.
 
 {{% alert type="warning" %}}
 
-If you do not see an overview similar to the one below, then you do not have sufficient cloud permissions to deploy packages into the cloud or be able to debug in the cloud. Contact the technical contact or the project SCRUM master in your organization and project to get sufficient permissions.
+If you do not see an overview similar to the one below, then you do not have sufficient cloud permissions to deploy packages into the cloud or be able to debug in the cloud. Contact the technical contact or the project SCRUM Master in your organization and project to get sufficient permissions.
 
 {{% /alert %}}
 

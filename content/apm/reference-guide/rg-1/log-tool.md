@@ -10,7 +10,7 @@ Logging consists of a log node, a level, and the logging message itself. For the
 
 ### Overview
 
-The logs tab shows the stored logs in the database.
+The **Logs** tab shows the stored logs in the database.
 
  ![](attachments/Log_Tool/Overview.png)
 

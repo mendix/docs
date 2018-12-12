@@ -166,4 +166,3 @@ In this section you will create logic to import customers stored in a [XML docum
 *   [Selenium Support](selenium-support)
 *   [Synchronizing user accounts using the LDAP module](synchronizing-user-accounts-using-the-ldap-module)
 *   [Consuming a REST Service](consume-a-rest-service)
-*   [Exposing data to BI tools using OData](exposing-data-to-bi-tools-using-odata)

@@ -4,6 +4,7 @@ parent: "metrics"
 menu_order: 50
 description: "Describes how to interpret various graphs and trends in the Mendix Cloud v3."
 tags: ["Trends","v3","Mendix Cloud","Developer Portal"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
@@ -12,11 +13,11 @@ To track the usage growth of your app and to debug performance problems, the Men
 
 ## 2 Monitor Trends Access  
 
-To view the **Trends** you must have permission to **Access the Monitoring**.
+To view the **Trends**, you must have permission to **Access the Monitoring**.
 
 {{% alert type="info" %}}
 
-Note that only the [Technical Contact](../general/technical-contact) is allowed to grand the node permissions.
+Note that only the [Technical Contact](../company-app-roles/technical-contact) is allowed to grand the node permissions.
 
 {{% /alert %}}
 
@@ -172,8 +173,8 @@ Disk utilization is calculated as the disk usage that is used by the user of the
 * [Alerts](monitoring-application-health)
 * [Database Maintenance: Size Reduction](/howtogeneral/support/database-maintenance-size-reduction)
 * [How to Calculate the Total Amount of Diskspace of a Cloud App Environment](/howtogeneral/support/how-to-calculate-diskspace-of-a-cloud-app-environment)
-* [How to Configure Maintenance Windows](/developerportal/howto/maintenance-windows)
-* [How to Migrate to Mendix Cloud v4](/deployment/mendixcloud/migrating-to-v4)
-* [How to Receive Environment Status Alerts](/developerportal/howto/receive-alerts)
-* [How to View the Mendix Cloud Version and Region](/developerportal/howto/cloud-version-region)
-* [Mendix Cloud v4 - FAQ](/deployment/mendixcloud/mxcloudv4)
+* [How to Configure Maintenance Windows](/developerportal/deploy/maintenance-windows)
+* [How to Migrate to Mendix Cloud v4](/developerportal/deploy/migrating-to-v4)
+* [How to Receive Environment Status Alerts](receive-alerts)
+* [How to View the Mendix Cloud Version and Region](/developerportal/deploy/cloud-version-region)
+* [Mendix Cloud v4 - FAQ](/developerportal/deploy/mxcloudv4)

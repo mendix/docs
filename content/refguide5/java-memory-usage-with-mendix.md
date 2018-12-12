@@ -2,7 +2,7 @@
 title: "Java Memory Usage With Mendix"
 parent: "transient-objects-garbage-collecting"
 ---
-# Java Memory Usage With Mendix
+## Java Memory Usage With Mendix
 
 
 
@@ -14,7 +14,7 @@ For all Mendix applications the value for init and max start with identical valu
 
 ## Memory Segments
 
-#### **_Perm Gen & Code Cache    _**
+### **_Perm Gen & Code Cache    _**
 
 The Permanent Generation space is allocated to all classes and libraries. The allocated memory to the Perm Gen stays fairly static and only increases when new libraries or classes are loaded into the application. The Perm Gen is not part of the Java Heap, it is added on top of the assigned heap.
 [_https://blogs.oracle.com/jonthecollector/entry/presenting_the_permanent_generation_](https://blogs.oracle.com/jonthecollector/entry/presenting_the_permanent_generation)
@@ -45,7 +45,7 @@ The Major Garbage Collection process is optimized for speedy garbage collection 
 
 The **Old / Tenured Generation** won’t cleaned frequently by the garbage collector. The Tenured Generation space either keeps on increasing until it reaches +/- 70% of its capacity, or after several days. The tenured space will steadily increase and should drop close to 0% after garbage collection.
 
-### Examples
+## Examples
 
 ![](attachments/13566037/14385365.png)
 

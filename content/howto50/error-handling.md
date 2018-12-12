@@ -5,19 +5,19 @@ category: 'Logic & Business Rules'
 
 When working with microflows it is important to realize that we always have transactions. These transactions help is in achieving the correct result, and in case something goes wrong they also help us to keep all information in our application consistent.
 
-# Transactions keep your data consistent
+## Transactions keep your data consistent
 
 Everything that happens in the platform happens in a transaction and, unless specified otherwise, everything is executed or nothing is executed. So if you don't specify any error handling and the microflow you are trying to execute gives an error, nothing will be executed. That means that all objects you create or changed are being reverted, you do net get the text feedback and the platform won't show the new page either. Either every single step in the microflow is successfully executed or nothing. That is the only way to keep a process and the data consistent.
 
-# Transactions keep the changes isolated
+## Transactions keep the changes isolated
 
 While updating or creating your objects you do not want any of the users to see the temporary information. As you can imagine it could give a really weird impression to the other users if they see all temporary information or even empty records because some microflow hasn't finished executing yet. To ensure that every user or process can only see persisted data, all data changed in a transaction is only available within that specific transaction. Non of the changes made inside that microflow will be available outside the microflow, not even to the user that initiated the microflow. Only once the microflow has successfully completed all actions will the information be available to the whole application.
 
-# Transactions prevent two processes from using the same object at the same time
+## Transactions prevent two processes from using the same object at the same time
 
 When an object is updated, the platform will place a lock on that object for the duration of the transaction. That means that while the transaction is running, no other transactions are allowed to read or write in that same object. As soon as the transaction has finished, the lock will be released automatically and any waiting processes will continue normally. Please note that this isn't the same as preventing two users from editing the same object. It is still possible for two users to open the same object, and change it 10ms after each other. The the latest change will still be applied.
 
-# Error Handling Components
+## Error Handling Components
 
 | Type | Image | Description |
 | --- | --- | --- |
@@ -31,7 +31,7 @@ Transactions
 
 There are many different combinations of error handling and transactions we can configure. Below you'll find several If we take a look at all the different combinations of error handling and transactions that we can use. There are many more combinations possible, but this should give a clear indication of some of the possibilities. In order to help you understand how the different configurations will behave.
 
-## Default Error Handling
+### Default Error Handling
 
 With default error handling, there is always a transaction running. But since there is no custom error handling specified, the platform will create one transaction for all actions executed in the microflow. All subflows will be executed in the same transaction. The changed Order and Customer information is only available inside the transaction until the microflow transaction has completed.
 
@@ -39,7 +39,7 @@ With default error handling, there is always a transaction running. But since th
 
 ![](attachments/13566084/14385358.png)
 
-## Error Handling - Custom With Rollback
+### Error Handling - Custom With Rollback
 
 Any sub microflow initiated with error handling set to 'Custom with Rollback', will NOT initiated a new transaction, the original transaction will be re-used in the subflow. Only in case an error occurs, the transaction will be completely reverted and a new transaction will be initiated so the custom error flow can continue using that new transaction.
 
@@ -55,7 +55,7 @@ Any sub microflow initiated with error handling set to 'Custom with Rollback', w
 
 Because you are switching transactions it is not recommended to merge back to the original process, this will result in inconsistent data. If you use error handling with rollback in a subflow you should make sure that all parent flows are configured to use error handling continue, and preferable that you re-throw the exception after running your custom actions.
 
-## Error Handling - Custom Without Rollback
+### Error Handling - Custom Without Rollback
 
 A sub microflow with error handling set to 'Custom without Rollback', will always create a sub transaction. All actions within the parent microflow will be persisted, what happens inside the sub microflow is determined by the sub microflow. If no custom error handling is specified in the sub microflow only the changes in the sub microflow can be reverted in case of an error.
 
@@ -63,13 +63,13 @@ A sub microflow with error handling set to 'Custom without Rollback', will alway
 
 ![](attachments/13566084/14385350.png) ![](attachments/13566084/14385351.png) ![](attachments/13566084/14385352.png)
 
-# Combinations of different types of Error Handling
+## Combinations of different types of Error Handling
 
 Most of the time you will be using a single activity with custom error handling. However if you are developing more complicated processes where you are sending data outside of the application it is important to realize what happens in case of an error later in the process. For example you don't want to send out notifications about a status change, if an error occurs and therefore reverts the change.
 
 Especially when interacting with other systems you need to think about how you want to process the errors. The best solution depends on the exact desire you have, do you want to continue, skip/revert the record you are working on, keep the changes you have made so far but stop the process. All of this can be done, as long as you know what you want to achieve. The instructions below will show you a couple of examples on how you can use the different combinations of error handling options.
 
-## Rollback in parent flow, Rollback in subflow
+### Rollback in parent flow, Rollback in subflow
 
 | Color | Description |
 | --- | --- |
@@ -78,7 +78,7 @@ Especially when interacting with other systems you need to think about how you w
 
 ![](attachments/13566084/14385361.png)
 
-## Rollback in parent flow, Continue in subflow
+### Rollback in parent flow, Continue in subflow
 
 | Color | Description |
 | --- | --- |
@@ -88,7 +88,7 @@ Especially when interacting with other systems you need to think about how you w
 
 ![](attachments/13566084/14385364.png)
 
-## Continue in parent flow, Rollback in subflow
+### Continue in parent flow, Rollback in subflow
 
 | Color | Description |
 | --- | --- |
@@ -98,7 +98,7 @@ Especially when interacting with other systems you need to think about how you w
 
 ![](attachments/13566084/14385362.png)
 
-## Continue in parent flow, Continue in subflow
+### Continue in parent flow, Continue in subflow
 
 | Color | Description |
 | --- | --- |
@@ -108,11 +108,11 @@ Especially when interacting with other systems you need to think about how you w
 
 ![](attachments/13566084/14385363.png)
 
-# Best-practices
+## Best-practices
 
 Always use a log activity to print the error message & stack trace! Never use the continue option, since that doesn't give you the option to print any info. The platform will just ignore the error. Always add custom error handling on integration or email activities Don't over-do it. You could specify a lot of complicated error handling combinations. This makes it much more difficult (and slower) for the platform to evaluate the microflow. And also makes it much more difficult to predict the exact behavior in case of an exception.
 
-# Related articles
+## Related articles
 
 - [Defining access rules using XPath](defining-access-rules-using-xpath)
 - [Triggering Logic using Microflows](triggering-logic-using-microflows)

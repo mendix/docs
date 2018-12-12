@@ -1,5 +1,5 @@
 ---
-title: "Perform the Scout and Windows 10 Workaround"
+title: "Perform the Scout & Windows 10 Workaround"
 parent: "setup-mendix-ui-framework"
 tags: ["Scout", "Window 10", "Workaround"]
 ---
@@ -20,7 +20,7 @@ Scout has not been updated for Windows 10. Therefore, Windows 10 users need to u
 
 ## 3 Related Content
 
-* [How to Create Your First Two Overview and Detail Pages](create-your-first-two-overview-and-detail-pages)
+* [How to Create Your First Two Overview & Detail Pages](create-your-first-two-overview-and-detail-pages)
 * [How to Filter Data on an Overview Page](filtering-data-on-an-overview-page)
 * [How to Set Up the Mendix UI Framework with Just CSS](setup-mendix-ui-framework-with-just-css)
 * [How to Set Up the Mendix UI Framework with Koala](setup-mendix-ui-framework-with-koala)

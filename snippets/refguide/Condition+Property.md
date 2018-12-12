@@ -4,11 +4,11 @@ The widget can be made editable only if the object of the data view that contain
 
 A practical example would be a personal details form in which the user must enter his marital status. In this case, you might wish to disable an input for the marriage date until the user indicates that he or she is married.
 
-##### Based on Attribute Value
+#### Based on Attribute Value
 
 When selected, this enables the widget while a particular attribute has a certain value. Only Boolean and enumeration attributes can be used for this purpose.
 
-##### Based on Expression
+#### Based on Expression
 
 <div class="alert alert-info">
 

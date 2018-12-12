@@ -2,8 +2,6 @@
 title: "Create a custom theme with the Mendix UI Framework"
 category: "GUIs"
 ---
-# Create a custom theme with the Mendix UI Framework
-
 In this how-to we will go through how to create a custom theme with the Mendix UI Framework. For this tutorial the website from Amazon will be used as an example.
 
 **After completing this how-to you will know:**

@@ -1,6 +1,7 @@
 ---
 title: "Starting Microflows"
 parent: "page-concepts"
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
@@ -11,17 +12,17 @@ Mendix allows for microflows to be triggered in pages by a variety of widgets. T
 | --- | --- | --- |
 | Action button (data view) | On click | Data view object |
 | Data view | Data source | Object of the data view containing this data view |
-| Action button (data grid) | On click | Grid selection or clicked row (as an object or as a list, depending on the [selection mode](data-grid)) |
+| Action button (grid)<sup><a name="ref1" href="#fn1">1</a></sup> | On click | Grid selection or clicked row (as an object or as a list, depending on the [selection mode](data-grid)) |
 | Reference set selector | On change | Data view object |
-| Input widget (2) | On change | Data view object |
+| Input widget<sup><a name="ref2" href="#fn2">2</a></sup> | On change | Data view object |
 | Input widget | On enter | Data view object |
 | Input widget | On leave | Data view object |
 | Image viewer | On click | Image viewer object |
 | Action button | On click | Enclosing data view object, if available |
 | Reference selector | Data source | Data view object |
 
-(1) The following 'grid' widgets have microflow buttons: data grid, template grid and reference set selector.
-(2) The following widgets are attribute widgets: check box, date picker, drop-down, text area, and text box.
+<small><sup><a name="fn1" href="#ref1" title="Jump back to footnote 1 in the text.">1</a></sup> The following grid widgets have grid action buttons: *data grid*; *template grid*; and *reference set selector*.</small><br/>
+<small><sup ><a name="fn2" href="#ref2" title="Jump back to footnote 2 in the text.">2</a></sup> The following widgets are input widgets: *check box*; *date picker*; *drop-down*; *text area*; and *text box*.</small>
 
 ## 2 Microflow
 
@@ -37,7 +38,13 @@ You can create a new microflow by clicking 'Select...' and then 'New'. Modeler w
 
 The arguments sent to the microflow are automatically configured based on the parameters of the selected microflow and the available arguments. Which arguments are available depends on the widget calling the microflow. For a full listing consult the table above. Additionally, if the widget calling a microflow is contained inside a nested data view, then the object of the enclosing data view is also available.
 
-The arguments available to a data or template grid control bar button are determined by the selection mode of the grid. No selection will result in no parameters and single selection results in a single object. (Simple) multi-selection allows for both all pages and selection, which defaults to selection. This can be configured by drop-down in the microflow settings page.
+{{% alert type="info" %}}
+
+For Mendix version 7.19.0 and above, in addition to passing the object of the enclosing data view, objects from the data views above that one all the way up to the top of page can also be passed.
+
+{{% /alert %}}
+
+The arguments available to a data or template grid control bar button are determined by the selection mode of the grid and the parameters of the selected microflow. Single selection results in the selected object being passed to the microflow if the microflow has an object parameter. If the microflow has an object list parameter, all the pages will be passed instead, ignoring the selection. Simple multi-selection allows for both all pages and selection, which defaults to selection. This can be configured via the drop-down menu in the microflow settings page.
 
 ## 4 Execution
 

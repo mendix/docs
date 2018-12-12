@@ -4,7 +4,7 @@ parent: "xpath-constraint-functions"
 ---
 
 
-The quarter-from-dateTime() function extracts the amount of quarters from a DateTime attribute so it can be used to compare to a value.
+The `quarter-from-dateTime()` function extracts the amount of quarters from a DateTime attribute so it can be used to compare to a value.
 
 ```java
 //Logging.Log[quarter-from-dateTime(DateAttribute) = 4]

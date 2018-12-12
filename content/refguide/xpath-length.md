@@ -4,7 +4,7 @@ parent: "xpath-constraint-functions"
 ---
 
 
-The length() function returns the length of a String attribute or value.
+The `length()` function returns the length of a String attribute or value.
 
 ```java
 //Sales.Customer[length(FirstName) >= 5]

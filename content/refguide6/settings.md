@@ -18,15 +18,15 @@ The tab 'Settings' contains the location of the app service and the authenticati
 
 ![](attachments/16713705/16843897.png)
 
-#### Configuration
+### Configuration
 
 You can change the default location of the app service by introducing a Constant with a URL to the location.
 
-#### Authentication
+### Authentication
 
 Authentication method is shown. As a consumer, you are not in charge of this and therefore you cannot change this.
 
-#### Timeout
+### Timeout
 
 This timeout applies to all actions provided by the app service. If the app service action does not reply within the specified time (seconds), an error is created. Standard error handling in microflows can be used to define what to do in case of a timeout.
 

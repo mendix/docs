@@ -6,7 +6,7 @@ tags: []
 
 ## 1 Introduction
 
-You may have tried to build a hybrid app package for Windows Phone, and found out this is not possible in the cloud portal. You can do this by building the Phonegap Build package yourself.
+You may have tried to build a hybrid app package for Windows Phone, and found out this is not possible in the Developer Portal. You can do this by building the Phonegap Build package yourself.
 
 **This how-to will teach you how to do the following:**
 
@@ -73,7 +73,6 @@ To build the Windows Phone app, follow these steps:
 You can deploy this xap file to the Windows store, or use it to test the app on a device.
 
 ## 4 Related Content
-* [How to Deploy Your First Hybrid Mobile App](deploy-your-first-hybrid-mobile-app)
-* [How to Publish a Mendix Hybrid Mobile App in Mobile App Stores](publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)
+* [How to Publish a Mendix Hybrid Mobile App in App Stores](publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)
 * [How to Debug a Hybrid Mobile Application](debug-a-hybrid-mobile-application)
 * [Push Notifications](push-notifications)

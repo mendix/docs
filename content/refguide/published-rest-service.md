@@ -1,6 +1,9 @@
 ---
 title: "Published REST Service"
 parent: "published-rest-services"
+menu_order: 10
+#description: " "
+#tags: ["These", "are", "Example", "Tags"]
 ---
 
 {{% alert type="info" %}}
@@ -40,7 +43,7 @@ By default, version is set to "1.0.0".
 
 {{% alert type="info" %}}
 
-**Location** is editable since version 7.12.0.
+**Location** is editable in Mendix versions 7.12.0 and above.
 
 {{% /alert %}}
 
@@ -95,6 +98,8 @@ The **No Authentication** feature was introduced in version 7.11.0. In earlier v
 
 The **Active Session** authentication was introduced in version 7.13.0
 
+The **Custom** authentication was introduced in version 7.17.0
+
 {{% /alert %}}
 
 Select whether clients need to authenticate or not.
@@ -113,16 +118,49 @@ If authentication is required, you can select which authentication methods you w
     xmlHttp.setRequestHeader("X-Csrf-Token", mx.session.getConfig("csrftoken"));
     xmlHttp.send(null);
     ```
+* Select **Custom** to authenticate using a microflow. This microflow is called every time a user want to access a resource.
 
-### 3.3 Allowed Roles
+Check more than one authentication method to have the service try each of them. It will first try **Custom** authentication, then **Username and password**, and then **Active session**. For more details, see [Published REST Routing](published-rest-routing).
+
+<a name="authentication-microflow"></a>
+### 3.3 Microflow
+
+Specify which microflow to use for custom authentication.
+
+Select **Parameters** to see the [list of parameters passed to the authentication microflow](published-rest-authentication-parameter). In that window you can indicate whether the authentication microflow's parameters come from request headers or from the query string.
+
+The microflow may take an [HttpRequest](http-request-and-response-entities#http-request) as a parameter, so it can inspect the incoming request.
+
+The microflow may also take an [HttpResponse](http-request-and-response-entities#http-response) as a parameter. When the microflow sets the status code of this response to something other then **200**, this value is returned and the operation will not be executed. Any headers set on the response are returned (except when the microflow returns an empty user).
+
+The authentication microflow should return a User.
+
+There are three possible outcomes of the authentication microflow
+  * When the status code of the HttpResponse parameter is set to something other then **200**, then this value is returned and the operation will not be executed
+  * Otherwise, when the resulting User is not empty, the operation is executed in the context of that user
+  * Otherwise, when the resulting User is empty, the next authentication method is attempted. When there are no other authentication methods, the result is **404 Not Found**.
+
+### 3.4 Allowed Roles
 
 The allowed roles define which [module role](module-role) a user must have to be able to access the service. This option is only available when **Requires authentication** is set to **Yes**.
 
-## 4 Resources
+{{% alert type="warning" %}}
+Web service users cannot access REST services.
+{{% /alert %}}
+
+## 4 Enable CORS
+
+Check this box when your service needs to be available on websites other than your own.
+
+Click the [Settings](cors-settings) button to specify this access in more detail (for instance, which websites are allowed to access the service).
+
+## 5 Resources
 
 A REST service exposes a number of [resources](published-rest-resource). On a resource you can define GET, PUT, POST, PATCH, DELETE, HEAD and OPTIONS operations.
 
-## 5 Operations
+You can drag an entity or a message definition onto this list to [generate a complete resource](generate-rest-resource).
+
+## 6 Operations
 
 When you select a resource, you see the [operations](published-rest-operation) that are defined for that resource.
 
@@ -130,12 +168,12 @@ Resources and Operations are appended to [Location](#location) to form a URL on 
 
 ![](attachments/published-rest-service/example-location-url.png)
 
-## 6 Example
+## 7 Example
 
 **How to publish REST natively with Mendix**
 
 {{% youtube HzrFkv0U4n8 %}}
 
-## 7 Related Content
+## 8 Related Content
 
 For more information on which operation gets executed for a given request URL, see [Published REST Routing](published-rest-routing).

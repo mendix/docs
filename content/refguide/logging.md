@@ -1,13 +1,13 @@
 ---
 title: "Logging"
-category: "Runtime"
+category: "Mendix Runtime"
 ---
 
 
 ## Log levels
 
 Below we describe what the various log levels of the runtime will show as output.
-During development, these log levels can be set in the console (advanced -> set log levels), when deployed on a server, please refer to the [Deployment](/deployment/mendixcloud/) pages.
+During development, these log levels can be set in the console (advanced -> set log levels), when deployed on a server, please refer to the [Deployment](/developerportal/deploy/mendix-cloud-deploy) pages.
 
 ### Critical
 

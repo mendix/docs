@@ -1,123 +1,74 @@
-const gulp        = require('gulp-help')(require('gulp'));
-const gutil       = require('gulp-util');
-const sass        = require('gulp-sass');
-const sourcemaps  = require('gulp-sourcemaps');
-const minify      = require('gulp-minify');
-const hash        = require('gulp-hash');
+const gulp               = require('gulp-help')(require('gulp'));
+const gutil              = require('gulp-util');
+const sass               = require('gulp-sass');
+const sourcemaps         = require('gulp-sourcemaps');
+const minify             = require('gulp-minify');
+const hash               = require('gulp-hash');
 
-const server      = require('./_gulp/server');
-const jsonServer  = require('./_gulp/json');
-const hugo        = require('./_gulp/hugo');
-const helpers     = require('./_gulp/helpers');
-const mappings    = require('./_gulp/mappings');
-const htmlproofer = require('./_gulp/htmlproofer');
-const algolia     = require('./_gulp/algolia');
-const menu_check  = require('./_gulp/menu_check');
-const menu_build  = require('./_gulp/menu_build');
+const CONFIG             = require('./_gulp/config');
 
-const path        = require('path');
-const pump        = require('pump');
-const browserSync = require('browser-sync').create();
-const del         = require('del');
-const runSequence = require('run-sequence');
-const yaml        = require('write-yaml');
+const server             = require('./_gulp/server');
+const jsonServer         = require('./_gulp/json');
+const hugo               = require('./_gulp/hugo');
+const redirect_mappings  = require('./_gulp/mappings_redirects');
+const asset_mappings     = require('./_gulp/mappings_assets');
+const htmlproofer        = require('./_gulp/htmlproofer');
+const algolia            = require('./_gulp/algolia');
+const menu_check         = require('./_gulp/menu_check');
+const menu_build         = require('./_gulp/menu_build');
 
-const { normalizeSafe } = require('upath');
+const { gulpErr }        = require('./_gulp/helpers');
+const { cyan, red }      = require('./_gulp/helpers/command_line').colors;
 
-const CURRENTFOLDER   = __dirname;
-const BUILDDATE       = new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '');
-const PORT            = 4000;
-const DIST_FOLDER     = '_site';            // DO NOT CHANGE THIS, IS USED BY TRAVIS FOR DEPLOYMENT IN MANIFEST
-const ALGOLIA_APP_ID  = 'OHBX5T982M';
-const ALGOLIA_INDEX   = 'docs';
-const DATAFOLDER      = 'data';
-const CONTENTFOLDER   = normalizeSafe(path.join(CURRENTFOLDER, 'content'));
+const path               = require('path');
+const pump               = require('pump');
+const browserSync        = require('browser-sync').create();
+const del                = require('del');
+const runSequence        = require('run-sequence');
 
 /* DONT EDIT BELOW */
-gutil.log(`Gulp started at ${gutil.colors.cyan(BUILDDATE)}`);
-
-const paths = {
-  styles: {
-    src: '_assets/styles/**/*.scss',
-    dest: 'static/public/styles'
-  },
-  scripts: {
-    src: '_assets/js/**/*.js',
-    dest: 'static/public/js'
-  },
-  content: {
-    pages: [
-      'content/**/*.md',
-      'content/**/*.html'
-    ],
-    all: [
-      'content/**/*.md',
-      'content/**/*.html',
-      'content/**/*.png',
-      'content/**/*.jpg'
-    ]
-  }
-}
+gutil.log(`Gulp started at ${cyan(CONFIG.BUILDDATE)}`);
 
 /*************************************************
-  TASKS
+  CLEAN
 **************************************************/
+const cleanTask = p => del([ p ], { force: true });
 
-// CLEAN
-gulp.task('clean', `Cleanup the ${DIST_FOLDER} directory`, () => {
-  return del([
-    DIST_FOLDER
-  ], { force: true });
-});
+gulp.task('clean', `Cleanup the ${CONFIG.DIST_FOLDER} directory`, () => cleanTask(CONFIG.DIST_FOLDER));
+gulp.task('clean:js', `Cleanup the ${CONFIG.PATHS.scripts.dest} directory`, () => cleanTask(CONFIG.PATHS.scripts.dest));
+gulp.task('clean:css', `Cleanup the ${CONFIG.PATHS.styles.dest} directory`, () => cleanTask(CONFIG.PATHS.styles.dest));
 
-gulp.task('clean:js', `Cleanup the ${paths.scripts.dest} directory`, () => {
-  return del([
-    paths.scripts.dest
-  ], { force: true });
-});
-
-gulp.task('clean:css', `Cleanup the ${paths.styles.dest} directory`, () => {
-  return del([
-    paths.styles.dest
-  ], { force: true });
-});
-
-// WRITE
-gulp.task('write:mappings', `Write mappings from _assets/mappings/redirect.json to ${DIST_FOLDER}/mappings/redirect.map`, done => {
-  helpers.touch(path.join(CURRENTFOLDER, '/_site/mappings/indexes.map'));
-  mappings
-    .run({
-      write: true,
-      type: 'js',
-      contentFolder: 'content',
-      src: path.join(CURRENTFOLDER, '/_assets/mappings/redirect.js'),
-      dest: path.join(CURRENTFOLDER, '/_site/mappings/redirect.map')
-    })
+/*************************************************
+  MAPPINGS
+**************************************************/
+gulp.task('write:mappings', `Write mappings from _assets/mappings/redirect.json to ${CONFIG.DIST_FOLDER}/mappings/redirect.map`, done => {
+  redirect_mappings()
     .then(done)
     .catch(err => {
-      helpers.gulpErr('write:mapping', err);
-      return process.exit(1);
-    });
-});
-
-gulp.task('write:assetmappings', `Write asset mappings to ${DIST_FOLDER}/mappings/assets.map`, done => {
-  helpers
-    .writeAssetMappings(CURRENTFOLDER)
-    .then(() => {
-      done();
-    })
-    .catch((e) => {
+      gulpErr('write:mapping', err);
       return process.exit(2);
     });
 });
 
+gulp.task('write:assetmappings', `Write asset mappings to ${CONFIG.DIST_FOLDER}/mappings/assets.map`, done => {
+  asset_mappings(CONFIG.CURRENTFOLDER)
+    .then(done)
+    .catch(err => {
+      gulpErr('write:assetmapping', err);
+      return process.exit(2);
+    });
+});
+
+/*************************************************
+  MENU
+**************************************************/
 const writeMenu = (exitOnError) => {
   return (done) => {
     menu_build
       .build({
-        src: CONTENTFOLDER,
-        destination: path.join(CURRENTFOLDER, 'static/json/'),
-        space: path.join(CURRENTFOLDER, 'data/spaces.yml')
+        src: CONFIG.CONTENTFOLDER,
+        destination: path.join(CONFIG.CURRENTFOLDER, 'static/json/'),
+        space: path.join(CONFIG.CURRENTFOLDER, 'data/spaces.yml')
       })
       .then((errors) => {
         if (exitOnError && errors) {
@@ -135,8 +86,21 @@ const writeMenu = (exitOnError) => {
 }
 
 gulp.task('write:menu', `Write menu jsons (development)`, writeMenu(false));
+gulp.task('build:menu', `Build menu jsons (production)`, writeMenu(true));
 
-//WATCH
+gulp.task('check:menu', `Check menu structure in the build folder`, done => {
+  menu_check.check(path.resolve(CONFIG.CURRENTFOLDER, '_site/json'), function (err) {
+    if (err) {
+      return process.exit(2);
+    } else {
+      done();
+    }
+  });
+});
+
+/*************************************************
+  JAVASCRIPT
+**************************************************/
 gulp.task('js-watch', `Internal task, don't use`, ['build:js'], function (done) {
     browserSync.reload();
     done();
@@ -145,46 +109,69 @@ gulp.task('js-watch', `Internal task, don't use`, ['build:js'], function (done) 
 // BUILD
 gulp.task('build:js', `Compress js files`, ['clean:js'], (done) => {
   pump([
-    gulp.src(paths.scripts.src),
+    gulp.src(CONFIG.PATHS.scripts.src),
     minify({
       ext: {
         src: '-debug.js',
         min: '.js'
       }
     }),
-    gulp.dest(paths.scripts.dest),
+    gulp.dest(CONFIG.PATHS.scripts.dest),
     hash(),
-    gulp.dest(paths.scripts.dest),
+    gulp.dest(CONFIG.PATHS.scripts.dest),
     hash.manifest('assetsjs.json', true, 4),
-    gulp.dest(DATAFOLDER)
+    gulp.dest(CONFIG.DATAFOLDER)
   ], done);
 });
 
+/*************************************************
+  SASS
+**************************************************/
 gulp.task('build:sass', `Sass build`, ['clean:css'], () => {
   return gulp
-    .src(paths.styles.src)
+    .src(CONFIG.PATHS.styles.src)
     .pipe(sass({
       outputStyle: 'compressed'
     }).on('error', sass.logError))
-    .pipe(gulp.dest(paths.styles.dest))
+    .pipe(gulp.dest(CONFIG.PATHS.styles.dest))
     .pipe(hash())
-    .pipe(gulp.dest(paths.styles.dest))
+    .pipe(gulp.dest(CONFIG.PATHS.styles.dest))
     .pipe(hash.manifest('assetscss.json', true, 4))
-    .pipe(gulp.dest(DATAFOLDER));
+    .pipe(gulp.dest(CONFIG.DATAFOLDER));
 });
 
+gulp.task('dev:sass', `Sass build (dev task, sourcemaps included)`, ['clean:css'], () => {
+  return gulp
+    .src(CONFIG.PATHS.styles.src)
+    .pipe(sourcemaps.init())
+    .pipe(sass({
+      outputStyle: 'compressed'
+    }).on('error', sass.logError))
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest(CONFIG.PATHS.styles.dest))
+    .pipe(browserSync.stream())
+    .pipe(hash())
+    .pipe(gulp.dest(CONFIG.PATHS.styles.dest))
+    .pipe(hash.manifest('assetscss.json', true, 4))
+    .pipe(gulp.dest(CONFIG.DATAFOLDER));
+});
+
+/*************************************************
+  HUGO
+**************************************************/
 gulp.task('build:hugo', `Build`, [], done => {
   hugo.build(done);
 });
 
-gulp.task('build:menu', `Build menu jsons (production)`, writeMenu(true));
-
+/*************************************************
+  MAIN BUILD TASKS
+**************************************************/
 gulp.task('build', `BUILD. Used for production`, done => {
   runSequence('clean', 'write:mappings', ['build:menu', 'build:sass', 'build:js'], 'write:assetmappings', 'build:hugo', 'check', (err) => {
       //if any error happened in the previous tasks, exit with a code > 0
       if (err) {
         var exitCode = 2;
-        gutil.log('[ERROR] gulp build task failed:', gutil.colors.red(err.message));
+        gutil.log('[ERROR] gulp build task failed:', red(err.message));
         gutil.log('[FAIL] gulp build task failed - exiting with code ' + exitCode);
         return process.exit(exitCode);
       }
@@ -194,51 +181,42 @@ gulp.task('build', `BUILD. Used for production`, done => {
     });
 });
 
-// DEV
-gulp.task('dev:sass', `Sass build (dev task, sourcemaps included)`, ['clean:css'], () => {
-  return gulp
-    .src(paths.styles.src)
-    .pipe(sourcemaps.init())
-    .pipe(sass({
-      outputStyle: 'compressed'
-    }).on('error', sass.logError))
-    .pipe(sourcemaps.write())
-    .pipe(gulp.dest(paths.styles.dest))
-    .pipe(browserSync.stream())
-    .pipe(hash())
-    .pipe(gulp.dest(paths.styles.dest))
-    .pipe(hash.manifest('assetscss.json', true, 4))
-    .pipe(gulp.dest(DATAFOLDER));
-});
-
+/*************************************************
+  MAIN SERVE TASK
+**************************************************/
 gulp.task('dev', ``, ['dev:sass', 'build:js', 'write:menu', 'build:hugo'], done => {
-  server.spawn(CURRENTFOLDER);
-  jsonServer.spawn(CURRENTFOLDER);
+  server.spawn(CONFIG.CURRENTFOLDER);
+  jsonServer.spawn(CONFIG.CURRENTFOLDER);
   hugo.spawn(true, false, browserSync);
   browserSync.init({
-    port: PORT,
+    port: CONFIG.PORT,
     proxy: 'localhost:8888',
     online: false,
     open: false
   });
-  gulp.watch(paths.styles.src, ['dev:sass']);
-  gulp.watch(paths.scripts.src, ['js-watch']);
-  gutil.log(`\n\n*********\nOpen your browser with this address: ${gutil.colors.cyan(`localhost:${PORT}`)}\n*********\n`);
+  gulp.watch(CONFIG.PATHS.styles.src, ['dev:sass']);
+  gulp.watch(CONFIG.PATHS.scripts.src, ['js-watch']);
+  gutil.log(`\n\n*********\nOpen your browser with this address: ${cyan(`localhost:${CONFIG.PORT}`)}\n*********\n`);
 });
 
-gulp.task('json', `Run JSON export server`, ['dev:sass', 'build:js', 'write:menu', 'build:hugo'], done => {
-  jsonServer.spawn(CURRENTFOLDER);
-})
-
-// SERVE
 gulp.task('serve', `Serve`, done => {
   runSequence('clean', 'dev');
 })
 
-// CHECK
+/*************************************************
+  JSON SERVER
+**************************************************/
+gulp.task('json', `Run JSON export server`, ['dev:sass', 'build:js', 'write:menu', 'build:hugo'], done => {
+  jsonServer.spawn(CONFIG.CURRENTFOLDER);
+})
+
+/*************************************************
+  HTML PROOFER
+**************************************************/
 gulp.task('check:html', `Check HTML files in the build folder`, done => {
   htmlproofer.check({
-    dir: path.resolve(CURRENTFOLDER, '_site'),
+    external: !!process.env.EXTERNAL,
+    dir: path.resolve(CONFIG.CURRENTFOLDER, '_site'),
     callback: function (err) {
       if (err) {
         return process.exit(2);
@@ -249,28 +227,23 @@ gulp.task('check:html', `Check HTML files in the build folder`, done => {
   });
 });
 
-gulp.task('check:menu', `Check menu structure in the build folder`, done => {
-  menu_check.check(path.resolve(CURRENTFOLDER, '_site/json'), function (err) {
-    if (err) {
-      return process.exit(2);
-    } else {
-      done();
-    }
-  });
-});
-
+/*************************************************
+  MAIN CHECK TASK
+**************************************************/
 gulp.task('check', `Test the html and menu`, done => {
   runSequence('check:html', 'check:menu', done);
 });
 
-// ALGOLIA
+/*************************************************
+  ALGOLIA
+**************************************************/
 gulp.task('algolia', `Push Algolia indexes`, done => {
   algolia.run({
-    target : path.resolve(CURRENTFOLDER, '_site'),
-    source : CONTENTFOLDER,
-    spacesFile: path.resolve(CURRENTFOLDER, 'data/spaces.yml'),
-    algolia_app_id: ALGOLIA_APP_ID,
-    algolia_index: ALGOLIA_INDEX,
+    target : path.resolve(CONFIG.CURRENTFOLDER, '_site'),
+    source : CONFIG.CONTENTFOLDER,
+    spacesFile: path.resolve(CONFIG.CURRENTFOLDER, 'data/spaces.yml'),
+    algolia_app_id: CONFIG.ALGOLIA_APP_ID,
+    algolia_index: CONFIG.ALGOLIA_INDEX,
     cb: done
   });
 });

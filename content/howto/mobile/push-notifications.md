@@ -1,6 +1,8 @@
 ---
-title: "Push Notifications"
-category: "Mobile"
+title: "Include Push Notifications"
+category: "Mobile Development"
+menu_order: 10
+tags: ["mobile", "push notification"]
 ---
 
 ## 1 Introduction to Push Notifications
@@ -26,8 +28,8 @@ To use push notifications, make sure you have the following:
 
 ## 3 Supported Platforms
 
-* Android 4.4 and higher
-* iOS 9.0 and higher
+* Android 4.4 and above
+* iOS 9.0 and above
 
 ## 4 Demo
 
@@ -60,7 +62,7 @@ From the admin pages, you currently cannot disable the APNs service completely. 
 
 ## 8 Contributing
 
-For more information on contributing to this repository, see [How to Contribute to a GitHub Repository](../collaboration-project-management/contribute-to-a-github-repository).
+For more information on contributing to this repository, see [How to Contribute to a GitHub Repository](../collaboration-requirements-management/contribute-to-a-github-repository).
 
 ## 9 Documents in This Sub-Category
 

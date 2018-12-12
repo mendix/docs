@@ -3,24 +3,36 @@ title: "Windows Service"
 category: "Desktop Modeler"
 ---
 
-To download the Windows Service, go to the Modeler page in the [Mendix App Store](https://appstore.home.mendix.com/link/modelers) and open **Related downloads**.
+To download the Windows Service, go to the Desktop Modeler page in the [Mendix App Store](https://appstore.home.mendix.com/link/modelers) and open **Related downloads**.
+
+## 4.5.1
+
+**Release date: June 5, 2018**
+
+* We upgraded the target Microsoft .NET Framework version from 4.5 to 4.5.2.
+* We added a check box to the **Update App** form so that you are able to configure whether you want to apply the correct user rights on some deployment folders. This is enabled by default for new apps, but disabled by default when you upgrade an existing app.
+* We now show more information during the update process of an app.
+* We updated the DotNetZip library from version 1.10.1 to 1.11.0. This library is used for making backups and extracting deployment archives.
+* We removed our dependency on the Microsoft.VisualBasic.PowerPacks library.
+* We improved the check on whether the correct Mendix Server version is available.
 
 ## 4.5
 
 **Release date: February 21st, 2017**
 
-* Added support for Mendix 7.
-* Updated background images.
+* We added support for Mendix 7.
+* We updated background images.
 
 ## 4.4
 
 **Release date: September 20th, 2016**
 
-* When an app is updated with a deployment archive, the old app will not be copied anymore to a backup file. In the user interface, there is a checkbox now to enable backing up the old app. (ticket 41885)
-* Fixed exception which occurs when showing active server actions (ticket 41924, 44180).
-Add DB2 and MariaDB as database types. They will only be useful when supported by the server version of the app.
-* Add more clear database synchronization information when migrating from one database to another.
-* Simplify update app and update server dialog forms.
+* When an app is updated with a deployment archive, the old app will not be copied anymore to a backup file. In the user interface, there is a checkbox now to enable backing up the old app. (Ticket 41885)
+* We fixed the exception that occurred when showing active server actions. (Ticket 41924, 44180)
+* We added DB2 and MariaDB as database types. They will only be useful when supported by the server version of the app.
+* We added more clear database synchronization information when migrating from one database to another.
+* We simplified the update app and update server dialog forms.
+* We updated DotNetZip library from version 1.9.1.8 to 1.10.1. This library is used for making backups and extracting deployment archives.
 
 ## 4.3
 

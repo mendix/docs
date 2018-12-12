@@ -4,9 +4,9 @@ parent: data-grid
 space: Reference Guide 5
 ---
 
-# Common Properties
+## Common Properties
 
-## Class
+### Class
 
 The class property allows you to specify a cascading style sheet (CSS) class for the widget. This class will be applied to the widget in the browser and the widget will get the corresponding styling. The class should be a class from the theme that is used in the project. It overrules the default styling of the widget.
 
@@ -20,7 +20,7 @@ Note that the styling is applied in the following order:
 
 {{% /alert %}}
 
-## Style
+### Style
 
 The style property allows you to specify additional CSS styling. If a class is also specified, this styling is applied _after_ the class.
 
@@ -30,15 +30,15 @@ background-color:blue; This will result in a blue background
 
 {{% /alert %}}
 
-# Data Source Properties
+## Data Source Properties
 
-## Attribute (path)
+### Attribute (path)
 
 The attribute (path) property specifies the attribute's value that will be displayed in this column. It can be an attribute of the grid entity, or it can be an attribute of an associated entity, in which case we speak of an attribute path. The path can follow multiple associations of type reference, and at the end (optionally) one of type reference set. If you show a reference set in a column the values will be separated by a comma.
 
-# Formatting Properties
+## Formatting Properties
 
-## Enumeration format (only for attributes of type Enumeration)
+### Enumeration format (only for attributes of type Enumeration)
 
 A column connected to an attribute of type enumeration can show its contexts as text (default) or as image.
 
@@ -47,19 +47,19 @@ Value | Description
 Text  | Show the caption text of the enumeration.
 Image | Show the image of the enumeration value.
 
-## Decimal precision (only for numeric attributes)
+### Decimal precision (only for numeric attributes)
 
 The precision of a value is defined the number of digits that is used to express that value. This property indicates the number of decimal places (the number of digits following the decimal point).
 
 _Default value:_ 2
 
-## Group digits (only for numeric attributes)
+### Group digits (only for numeric attributes)
 
 For ease of reading, numbers with many digits before the decimal separator may be divided into groups using a delimiter. This property defines whether the end user will see these groups, or not.
 
 _Default value:_ False
 
-## Date format (only for attributes of type DateTime)
+### Date format (only for attributes of type DateTime)
 
 The date format determines whether the date part, the time part or both are shown. How the date and time parts are formatted depends on the localization of the user using the application.
 
@@ -106,17 +106,17 @@ Format                           | Example output
 
 
 
-# General Properties
+## General Properties
 
-## Caption
+### Caption
 
 The caption of a column is the text that appears as a header above the rows. This is a translatable text. See [Translatable Texts](translatable-texts).
 
-## Editable
+### Editable
 
 The editable property indicates whether the values of the column will be editable in-line, i.e. without opening a page with a data view. In-line editing allows the data grid to behave like you would expect from a spreadsheet application.
 
-## Aggregate function
+### Aggregate function
 
 The values in a column can be aggregated in several ways. The aggregate function determines the way in which the values are aggregated. The aggregate will be shown at the bottom of the column that precedes by the aggregate caption (see below).
 
@@ -139,7 +139,7 @@ Note that all objects will be taken into account, and not just the ones on the c
 
 {{% /alert %}}
 
-## Aggregate caption
+### Aggregate caption
 
 The aggregate caption is the text that appears in front of the computed value. This is a translatable text. See [Translatable Texts](translatable-texts).
 
@@ -149,7 +149,7 @@ The aggregate caption is the text that appears in front of the computed value. T
 
 {{% /alert %}}
 
-## Show tooltip
+### Show tooltip
 
 This property determines whether the tooltip page is shown as the mouse is hovered over this column. The tooltip page can be configured on the [Data grid](data-grid).
 

@@ -7,7 +7,7 @@ parent: "events"
 This activity can only be used in microflows, not in nanoflows.
 {{% /alert %}}
 
-An error event defines a location where the microflow will stop and throw an error that occurred earlier. If you call a microflow, you may want to know whether any errors occurred within the microflow or not. This event throws the error again, so the caller of the microflow can catch them.
+An error event defines a location where the microflow will stop and throw an error that occurred earlier. If you call a microflow, you may want to know whether any errors occurred within the microflow or not. This event throws the error again, so the caller of the microflow can catch them. All database actions within the current transaction will be rolled back.
 
 {{% alert type="warning" %}}
 

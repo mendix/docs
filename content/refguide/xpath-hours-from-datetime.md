@@ -4,7 +4,7 @@ parent: "xpath-constraint-functions"
 ---
 
 
-The hours-from-dateTime() function extracts the amount of hours from a DateTime attribute so it can be used to compare to a value.
+The `hours-from-dateTime()` function extracts the amount of hours from a DateTime attribute so it can be used to compare to a value.
 
 ```java
 //Logging.Log[hours-from-dateTime(DateAttribute) = 8]

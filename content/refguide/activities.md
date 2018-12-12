@@ -56,7 +56,7 @@ Client activities can be used to have the web client of your application perform
 
 | Graphic | Name | Description |
 | --- | --- | --- |
-| [![](attachments/819203/918114.png)](close-form) | [Close form](close-form) | Close form closes the form that is opened last by the user that calls the microflow where this activity is used in. |
+| [![](attachments/819203/918114.png)](close-page) | [Close page](close-page) | Close page closes the pagethat is opened last by the user that calls the microflow where this activity is used in. |
 | [![](attachments/819203/918108.png)](download-file) | [Download file](download-file) | Download file can be used to enable the browser to download a specific file. The user, that calls the microflow where this activity is used in, gets a download popup or the file is shown directly in the browser. |
 | [![](attachments/819203/918099.png)](show-message) | [Show message](show-message) | Show message can be used to show a blocking or non-blocking message to the user that calls the microflow where this activity is used in. |
 | [![](attachments/819203/917544.png)](show-page) | [Show page](show-page) | Show page can be used to show a page to the user that calls the microflow where this activity is used in. |

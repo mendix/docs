@@ -80,3 +80,8 @@ This is a Mendix-specific scope that is used by internal Mendix applications as 
 ### 2.6 Change the Deployment Cloud Target of a Mendix Application Scope {#mx:app:cloudswitch}
 
 This is a Mendix-specific scope that is used by internal Mendix applications as well as by SAP and IBM (as strategic Mendix partners). This scope allows a website/application to change the platform to which an app will be deployed.
+
+### 2.7 Read access to Private App Store content {#:mx:appstore:content:private:read}
+
+This is a Mendix-specific scope that is used to authenticate against AppStore APIs. This scope allows an API consumer to retrieve content and metadata about content in their enterprise private App Store.
+

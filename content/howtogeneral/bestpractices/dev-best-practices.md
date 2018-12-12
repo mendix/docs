@@ -31,11 +31,11 @@ Every project is named when it is created. Make sure you use a logical name that
 
 ### 2.3 Configurations
 
-Every project has one configuration, but it may have many. Every project starts with a single configuration called **default**. When you work with multiple people on an application it is beneficial to create multiple configurations. When doing so, we recommend using relevant names for those configurations, like the name of the developer or the app's purpose, like **Test** and **Acceptance**. Beware that the database passwords defined in the configuration will be visible to other team members, so be careful with using personal passwords you'd like to keep secret.
+Every project has at least one configuration, but it may have many. Every project starts with a single configuration called **default**. When you work with multiple people on an application it is beneficial to create multiple configurations. When doing so, we recommend using relevant names for those configurations, like the name of the developer or the app's purpose, like **Test** and **Acceptance**. Beware that the database passwords defined in the configuration will be visible to other team members, so be careful with using personal passwords you'd like to keep secret.
 
 ### 2.4 User Roles
 
-The [user roles](/refguide/user-roles) should have logical names that reflect the different types of users that will use the application. The user roles are singular and use a camel case notation, like **FunctionalAdministrator**. User roles are mostly defined in English, but there is an option to these in a different language, since the user role is visible in the front-end.
+The [user roles](/refguide/user-roles) should have logical names that reflect the different types of users that will use the application. The user roles are singular and use a camel case notation, like **FunctionalAdministrator**. User roles are mostly defined in English, but there is an option to name these in a different language, since the user role is visible in the front-end.
 
 Each user role should correspond to only one module role per module. In other words, a user role should not map to multiple module roles within the same module. This helps to keep the number of applicable module roles for a user to a minimum, which reduces complexity in understanding the security model and reduces the performance impact of complex security rules.
 
@@ -44,7 +44,6 @@ Each user role should correspond to only one module role per module. In other wo
 ### 3.1 Modules
 
 #### 3.1.1 Module Names
-
 
 Modules should be treated like standalone replaceable services; for example, the customer module should function as a standalone customer management system as much as possible, replaceable by a different customer management system. Module names should have camel case names that identify the responsibility of the module, for example, **CustomerManagement** or **SharePointIntegration**.
 
@@ -56,7 +55,7 @@ The [module roles](/refguide/module-role) should have logical names that reflect
 
 #### 3.2.1 Entity Names
 
-Most of the time, an [entity](/refguide/entities) reflects a real-world object that people can relate to. Therefore, the entity name should also reflect that object and identify its purpose. There sometimes project-specific exceptions that lead to creating other types of entity, but that is up to you. The name of an entity is singular since an object is a single instance of the entity. A good example is using **Customer** and not **Customers**. Furthermore, we advise avoiding abbreviations, underscores, mathematical characters or any other special characters in the names of entities. Entity names also use camel case, for example, **HousekeepingRecord** or **LogEntry**.
+Most of the time, an [entity](/refguide/entities) reflects a real-world object that people can relate to. Therefore, the entity name should also reflect that object and identify its purpose. There are sometimes project-specific exceptions that lead to creating other types of entity, but that is up to you. The name of an entity is singular since an object is a single instance of the entity. A good example is using **Customer** and not **Customers**. Furthermore, we advise avoiding abbreviations, underscores, mathematical characters or any other special characters in the names of entities. Entity names also use camel case, for example, **HousekeepingRecord** or **LogEntry**.
 
 #### 3.2.2 Entity Attributes
 
@@ -82,9 +81,9 @@ With models built in lower versions of Mendix, however, you will need to manuall
 
 ### 3.3 Folders
 
-The structure for your documents starts with a clear separation of folders. By using a good folder structure you will improve the maintainability of your application; you will be able to find required documents faster and therefore will be able to develop and fix faster. The optimal grouping of your documents into folders depends on the circumstances and on the functional setup of your application. We recommend combining the guidelines below in a way that fits your project.
+The structure for your documents starts with a clear separation of folders. By using a good folder structure you will improve the maintainability of your application; you will be able to find required documents faster and therefore will be able to develop and fix faster. 
 
-The optimal grouping of your documents into folders depends on the circumstances and on the functional setup of your application. We recommend combining the guidelines below in a way that fits your project.
+The optimal grouping of your documents into folders depends on the circumstances and on the functionality of your application. We recommend combining the guidelines below in a way that fits your project.
 
 #### 3.3.1 Process-Related Sources
 
@@ -92,7 +91,7 @@ Every project consists of processes. Structure your documents for this process i
 
 #### 3.3.2 Entity-Related Sources
 
-Every project has documents that are needed for specific entities. Think of overview pages for maintenance, validation microflows that prevent commits, or other event triggers. These types of document should be structured into one folder that is named after the entity. Optionallly, sub-folders could be used to organize, for example, **events** and **pages**.
+Every project has documents that are needed for specific entities. Think of overview pages for maintenance, validation microflows that prevent commits, or other event triggers. These types of document should be structured into one folder that is named after the entity. Optionally, sub-folders could be used to organize, for example, **events** and **pages**.
 
 ### 3.4 Microflows
 

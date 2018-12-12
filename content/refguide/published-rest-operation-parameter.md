@@ -12,6 +12,8 @@ tags: ["published REST", "operation", "parameter", "resource", "mapping", "not f
 
 When a client calls a published REST operation, they call a URL with an optional query string and possibly a body. These parameters can be passed to the microflow and import mapping as path parameters, query parameters, and body parameters respectively.
 
+<!-- needs clarifying, 2 things cannot map to three things 'respectively' -->
+
 When you add or edit a parameter in a published REST operation, you can specify the settings described below. These settings are in the *add parameter* pop-up dialog in the *add operation for resource* dialog.
 
 ## 2 General

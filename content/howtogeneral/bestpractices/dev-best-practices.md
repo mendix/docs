@@ -116,7 +116,7 @@ The microflows related to such an event handler should have the following prefix
 
 #### 3.4.2 Calculated Attributes
 
-For attributes, you can choose to store the value in the database or to calculate the value based on a microflow. For the microflow that has the calculation purpose you can use **Cal\_** as a prefix.
+For attributes, you can choose to store the value in the database or to calculate the value based on a microflow. For the microflow that has the calculation purpose you can use **Cal_** as a prefix.
 
 #### 3.4.3 Project Settings
 
@@ -134,15 +134,15 @@ Pages have a number of events that can trigger a microflow. See the following li
 
 | Event Type                | Prefix             | Used In |
 |---------------------------|--------------------|--------------------------------|
-| On enter event            | OEn\_\<Purpose\>   | Input widgets                  |
-| On change event           | OCh\_\<Purpose\>   | Input widgets                  |
-| On leave event            | OLe\_\<Purpose\>   | Input widgets                  |
-| Data source               | DS\_\<Purpose\>    | Data view, list view, data grid, template grid |
-| Microflow/action button   | ACT\_\<Purpose\> or IVK\_\<Purpose> | Menu item, Navigation item, Microflow and Action button, Drop down button<br />(“IVK\_” is used historically) |
+| On enter event            | OEn_{Purpose}   | Input widgets                  |
+| On change event           | OCh_{Purpose}   | Input widgets                  |
+| On leave event            | OLe_{Purpose}   | Input widgets                  |
+| Data source               | DS_{Purpose}    | Data view, list view, data grid, template grid |
+| Microflow/action button   | ACT_{Purpose} or IVK_{Purpose} | Menu item, Navigation item, Microflow and Action button, Drop down button<br />(“IVK_” is used historically) |
 
 #### 3.4.5 Unit Test Microflows
 
-Microflows containing unit tests should have the prefix **Test\_**.
+Microflows containing unit tests should have the prefix **Test_**.
 
 ### 3.5 Integration
 
@@ -150,15 +150,15 @@ In your integrations you have the following type of documents:
 
 | Event Type                                | Prefix |
 |-------------------------------------------|--------|
-| Consumed web service operation microflow  | CWS\_  |
-| Published web service operation microflow | PWS\_  |
-| Published app service operation microflow | PAS\_  |
-| Published REST service operation microflow| PRS\_  |
-| Import mapping                            | ImM\_  |
-| Export mapping                            | ExM\_  |
-| XML schema                                | XSD\_  |
-| JSON structure                            | JSON\_ |
-| Deeplink                                  | Dl\_   |
+| Consumed web service operation microflow  | CWS_  |
+| Published web service operation microflow | PWS_  |
+| Published app service operation microflow | PAS_  |
+| Published REST service operation microflow| PRS_  |
+| Import mapping                            | ImM_  |
+| Export mapping                            | ExM_  |
+| XML schema                                | XSD_  |
+| JSON structure                            | JSON_ |
+| Deeplink                                  | Dl_   |
 
 ### 3.6 Scheduled Events
 

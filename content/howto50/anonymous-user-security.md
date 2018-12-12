@@ -49,5 +49,5 @@ For example to download a file, it is possible to get the URL `https://myMendixA
 
 *   [Security](security)
 *   [Creating a secure app](creating-a-secure-app)
-*   [Required Network Access for connecting to the Mendix Platform](/howtogeneral/support/troubleshoot-network-issues-for-team-server)
+*   [Required Network Access for connecting to the Mendix Platform](/howtogeneral/troubleshoot-network-issues-for-team-server)
 *   [Anonymous User Security](anonymous-user-security)

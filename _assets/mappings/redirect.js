@@ -208,17 +208,9 @@ module.exports = {
       from: "/bestpractices/Best+Practices",
       to: "/howtogeneral/bestpractices/"
     },
-    {
-      from: "/bestpractices/Naming+conventions",
-      to: "/howtogeneral/bestpractices/dev-best-practices"
-    },
-    {
-      from: "/bestpractices/Naming+conventions+in+Mendix+5",
-      to: "/howtogeneral/bestpractices/dev-best-practices"
-    },
-    {
-      from: "/howtogeneral/bestpractices/naming-conventions",
-      to: "/howtogeneral/bestpractices/dev-best-practices"
+	{
+      from: "/howtogeneral/bestpractices/best-practices-security-and-improvements-for-mendix-applications",
+      to: "/howto/security/best-practices-security"
     },
     /****************************************************
      * Community
@@ -2058,7 +2050,27 @@ module.exports = {
 	{
       from: "/howto7/solving-load-and-import-errors",
       to: "/howto/monitoring-troubleshooting/solving-load-and-import-errors"
-    },	
+    },
+	{
+      from: "/howto/start-with-a-blank-app",
+      to: "/refguide/web-modeler/overview-wm"
+    },
+	{
+      from: "/howto/tutorials/create-a-to-do-app",
+      to: "/refguide/web-modeler/overview-wm"
+    },
+	{
+      from: "/howto/tutorials/build-a-simple-hrm-app",
+      to: "/refguide/web-modeler/overview-wm"
+    },
+	{
+      from: "/howto/tutorials/build-an-iot-app",
+      to: "/refguide/web-modeler/overview-wm"
+    },
+	{
+      from: "/howtogeneral/bestpractices/ux-best-practices",
+      to: "/howto/ux/ux-best-practices"
+    },
     /****************************************************
      * Mendix Cloud
      ****************************************************/
@@ -2165,7 +2177,8 @@ module.exports = {
     {
       from: "/deployment/cloud-foundry/",
       to: "/developerportal/deploy/cloud-foundry-deploy"
-    },    /****************************************************
+    },    
+	/****************************************************
      * SUPPORT
      ****************************************************/
 

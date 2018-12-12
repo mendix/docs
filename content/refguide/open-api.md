@@ -1,6 +1,9 @@
 ---
 title: "Open API 2.0 Documentation"
-parent: "published-rest-services"
+parent: "published-rest-technical-details"
+menu_order: 30 
+#description: " "
+#tags: ["These", "are", "Example", "Tags"]
 ---
 
 {{% alert type="info" %}}

@@ -1,6 +1,7 @@
 ---
 title: "Style Google Maps"
 category: "UX"
+menu_order: 65
 tags: []
 ---
 

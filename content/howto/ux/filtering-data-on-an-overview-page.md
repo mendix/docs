@@ -1,6 +1,7 @@
 ---
 title: "Filter Data on an Overview Page"
 category: "UX"
+menu_order: 60
 tags: []
 ---
 

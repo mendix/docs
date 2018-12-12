@@ -1,7 +1,11 @@
 ---
 title: "Published REST Services"
 parent: "integration"
-#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
+#menu_order: 
+#description: " "
+#tags: ["These", "are", "Example", "Tags"]
+# If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
+# linked from integration - published rest > F1 help
 ---
 
 {{% alert type="info" %}}

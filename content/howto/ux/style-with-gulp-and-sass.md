@@ -1,6 +1,7 @@
 ---
-title: "Start Styling with Gulp and Sass"
+title: "Start Styling with Gulp & Sass"
 category: "UX"
+menu_order: 50
 tags: ["gulp", "sass", "ux"]
 ---
 

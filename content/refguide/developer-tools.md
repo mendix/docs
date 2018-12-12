@@ -1,7 +1,8 @@
 ---
 title: "Developer Tool Recommendations"
-category: "Best Practices"
-description: "Describes best practices for using third-party tools when developing with Mendix."
+category: "General"
+menu_order: 60
+description: "Describes the best third-party tools to use when developing with Mendix."
 tags: ["Linux", "GNU", "Firefox", "devtools", "Selenium", "Eclipse", "SOAP", "REST", "Visual Studio Code"]
 ---
 

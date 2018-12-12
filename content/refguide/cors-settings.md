@@ -1,7 +1,11 @@
 ---
 title: "CORS Settings"
-parent: "published-rest-services"
-#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
+parent: "published-rest-service"
+menu_order: 60
+#description: " "
+#tags: ["These", "are", "Example", "Tags"]
+# If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
+# linked from DM: published rest > Enable CORS > Settings > Help (integration)
 ---
 
 {{% alert type="info" %}}

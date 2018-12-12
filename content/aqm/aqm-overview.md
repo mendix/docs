@@ -25,7 +25,7 @@ The general notion of software quality embraces a variety of quality aspects, of
 
 ## 3 Implemented Checks for Best Practices
 
-AQM includes automated checks for a subset of the [Mendix Development Best Practices](/howtogeneral/bestpractices/). The following checks are currently implemented in AQM:
+AQM includes automated checks for a subset of the [Mendix Development Best Practices](/howto/general/dev-best-practices). The following checks are currently implemented in AQM:
 
 |Check Code|Check Name|
 |----------|----------|

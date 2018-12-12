@@ -10,7 +10,6 @@ Learn some basics about starting to model a Mendix app with the introductory how
 ## 2 Main Documents in This Category
 
 * [Install the Mendix Desktop Modeler](install-the-mendix-desktop-modeler)
-* [Implement Best Practices for Development](dev-best-practices)
 * [Implement Community Best Practices for App Performance](community-best-practices-for-app-performance)
 
 

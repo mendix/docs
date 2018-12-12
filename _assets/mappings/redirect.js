@@ -2192,7 +2192,7 @@ module.exports = {
       from: "/developerportal/settings/technical-contact",
       to: "/developerportal/company-app-roles/technical-contact"
     },
-	    {
+	{
       from: "/developerportal/general/technical-contact",
       to: "/developerportal/company-app-roles/technical-contact"
     },

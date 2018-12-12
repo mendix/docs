@@ -202,11 +202,7 @@ module.exports = {
      ****************************************************/
     {
       from: "/bestpractices/Best+Practices+for+Component+Based+Development",
-      to: "/howtogeneral/bestpractices/best-practices-for-component-based-development"
-    },
-    {
-      from: "/bestpractices/Best+Practices",
-      to: "/howtogeneral/bestpractices/"
+      to: "/howto/general/best-practices-for-component-based-development"
     },
 	{
       from: "/howtogeneral/bestpractices/best-practices-security-and-improvements-for-mendix-applications",
@@ -2182,30 +2178,6 @@ module.exports = {
      * SUPPORT
      ****************************************************/
 
-    {
-      from: "/mxsupport/Google+Authenticator+and+SMS+Installation",
-      to: "/howtogeneral/support/how-to-set-up-two-factor-authentication-with-google-authenticator"
-    },
-    {
-      from: "/mxsupport/Mendix+Support+Home",
-      to: "/howtogeneral/support/"
-    },
-    {
-      from: "/mxsupport/TreeNavigation",
-      to: "/howtogeneral/support/"
-    },
-    {
-      from: "/mxsupport/License+key+activation+on+Linux+server",
-      to: "/howtogeneral/support/license-key-activation-on-linux"
-    },
-    {
-      from: "/mxsupport/Preparing+Your+Project+for+New+Customer+Support+Tool",
-      to: "/howtogeneral/support/prepare-your-project-for-new-customer-support-portal"
-    },
-    {
-      from: "/mxsupport/Required+Network+Access+for+connecting+to+the+Mendix+Platform",
-      to: "/howtogeneral/support/troubleshoot-network-issues-for-team-server"
-    },
     {
       from: "/mxsupport/Technical+Contact+Definition",
       to: "/developerportal/company-app-roles/technical-contact"

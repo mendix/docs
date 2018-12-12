@@ -164,6 +164,7 @@ refguide:
 howtogeneral:
   space: "Mendix Support Guide"
   priority: 6
+  menu_categories:
 releasenotes:
   space: "Release Notes"
   priority: false
@@ -189,6 +190,3 @@ developerportal:
     - "App Settings"
     - "Community Tools"
     - "App Store"
-
-
-

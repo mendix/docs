@@ -7,7 +7,7 @@ tags: ["best practice", "development", "develop", "reusable", "prefix"]
 
 ## 1 Introduction
 
-This document collects best practices for implementing consistent naming and modeling conventions while developing your Mendix applications. This will help to improve your application’s maintainability and performance while making it easier to read and understand.
+This document can be used as a guideline for adopting consistent naming and modeling conventions while developing your Mendix applications. This will help to improve your application’s maintainability and performance, and make it easier to read and understand.
 
 Even with the powerful navigation and search support in the Mendix Modeler, adhering to naming and modeling conventions is a wise thing because:
 
@@ -21,21 +21,21 @@ Even with the powerful navigation and search support in the Mendix Modeler, adhe
 
 The language that will be used to develop the application should be determined upfront. This way you have one language for modules, entities, microflows, pages, etc. The preferred language for development is English.
 
-There are some exceptions why certain parts of an application may use another language. The main exception would be in the domain model of an integration module. For example, in case the source data model is in another language already.
+There are some reasons why certain parts of an application may use another language. The main reason to make an exception would be within the domain model of an integration module. For example, when the source data model is in another language already.
 
 For more information, see [How to Translate Your App Content](/howto/collaboration-requirements-management/translate-your-app-content).
 
 ### 2.2 Project Name
 
-Every project is named when it is created. Make sure you use a logical name that allows you to easily identify the application. You will probably create more projects in the future, and want to be able to recognize this project. We recommend leaving out dates or Mendix version numbers in the project name, since that information can be captured and extracted in a different way.
+Every project is named when it is created. Make sure you use a logical name that allows you to easily identify the application. You will probably create more projects in the future, and will want to be able to recognize this project. We recommend leaving out dates or Mendix version numbers in the project name, since that information can be captured and extracted in a different way.
 
 ### 2.3 Configurations
 
-Every project has one or multiple configurations. Every project starts with a single configuration called **default**. When you work with multiple people on an application it is beneficial to create multiple configurations. When doing so, we recommend using logical names for those configurations, like the name of the developer or the app's purpose, like **Test** and **Acceptance**. Beware that the database passwords defined in the configuration will be visible to other team members, so be careful with using personal passwords you would like to keep secret.
+Every project has at least one configuration, but it may have many. Every project starts with a single configuration called **default**. When you work with multiple people on an application it is beneficial to create multiple configurations. When doing so, we recommend using relevant names for those configurations, like the name of the developer or the app's purpose, like **Test** and **Acceptance**. Beware that the database passwords defined in the configuration will be visible to other team members, so be careful with using personal passwords you'd like to keep secret.
 
 ### 2.4 User Roles
 
-The [user roles](/refguide/user-roles) should have logical names that reflect the different types of users that will use the application. The user roles are singular and use a camel case notation, like **FunctionalAdministrator**. User roles are mostly defined in English, but there is an option to these in a different language, since the user role is visible in the front-end.
+The [user roles](/refguide/user-roles) should have logical names that reflect the different types of users that will use the application. The user roles are singular and use a camel case notation, like **FunctionalAdministrator**. User roles are mostly defined in English, but there is an option to name these in a different language, since the user role is visible in the front-end.
 
 Each user role should correspond to only one module role per module. In other words, a user role should not map to multiple module roles within the same module. This helps to keep the number of applicable module roles for a user to a minimum, which reduces complexity in understanding the security model and reduces the performance impact of complex security rules.
 
@@ -45,70 +45,84 @@ Each user role should correspond to only one module role per module. In other wo
 
 #### 3.1.1 Module Names
 
-Modules should be treated like standalone replaceable services. For example, the customer module should function as a standalone customer management system as much as possible, replaceable by a different customer management system. Module names should have camel case names that identify the responsibility of the module, for example, **CustomerManagement** or **SharePointIntegration**.
+Modules should be treated like standalone replaceable services; for example, the customer module should function as a standalone customer management system as much as possible, replaceable by a different customer management system. Module names should have camel case names that identify the responsibility of the module, for example, **CustomerManagement** or **SharePointIntegration**.
 
 #### 3.1.2 Module Roles
 
-The [module roles](/refguide/module-role) should have logical names that reflect the access they should have within a module. In comparison to the user role, the module role should always be in English, for instance, **Administrator** or **Employee**.
+The [module roles](/refguide/module-role) should have logical names that reflect the access they should have within a module. In contrast to the user role, the module role should always be in English, for instance **Administrator** or **Employee**.
 
 ### 3.2 Domain Model
 
 #### 3.2.1 Entity Names
 
-Most of the time, an [entity](/refguide/entities) reflects a real-world object that people can relate to. Therefore, the name should make sense to reflect that entity and be recognizable for its purpose. There are always exceptions that lead to creating other types of entities due to project specific needs, but that is up to you. The name of an entity is singular, since the entity reflects a single instance of an object. A good example is using **Customer** and not **Customers**.
-
-Furthermore, we advise avoiding abbreviations, underscores, mathematical characters, or any other special characters in the names of entities. Entity names also use camel case, for example, **HousekeepingRecord** and **LogEntry**.
+Most of the time, an [entity](/refguide/entities) reflects a real-world object that people can relate to. Therefore, the entity name should also reflect that object and identify its purpose. There are sometimes project-specific exceptions that lead to creating other types of entity, but that is up to you. The name of an entity is singular since an object is a single instance of the entity. A good example is using **Customer** and not **Customers**. Furthermore, we advise avoiding abbreviations, underscores, mathematical characters or any other special characters in the names of entities. Entity names also use camel case, for example, **HousekeepingRecord** or **LogEntry**.
 
 #### 3.2.2 Entity Attributes
 
-The entity [attribute](/refguide/attributes) should reflect a property of a real-world object that people can relate to and fits the purpose of that property. Furthermore, we advise avoiding abbreviations, underscores, mathematical characters, or any other special characters in the names of attributes. Entity attributes use camel case, for example, **FirstName** and **TelephoneNumber**.
+The entity [attribute](/refguide/attributes) should reflect a property of a real-world object that people can relate to and fits the purpose of that property. We advise avoiding abbreviations, underscores, mathematical characters or any other special characters in the names. Entity attributes should use camel case, for example, **FirstName** or **TelephoneNumber**.
 
 #### 3.2.3 Associations
 
-[Association](/refguide/associations) names in the domain model are automatically generated by Mendix. The auto-generated names are good to use by default. If you have multiple associations between the same entities we recommend extending the association name. By extending this name with a recognizable part you will be aware of the purpose of this specific association. For example, you can have a relation between **Person** and **Address**. A person can have multiple addresses but you want to specify what their postal address is and what their delivery address is. An implementation choice could be that you create two new associations for that purpose and adjust the names of the associations accordingly. For example, **Person\_Address\_Delivery**.
+**Naming multiple associations between entities**
 
-A second recommendation is that when an association already exists between entities, and you change the name on one or both of the entities, that you will rename the association. Mendix will not do this automatically for you and this way you will keep your model consistent and up-to-date.
+[Association](/refguide/associations) names in the domain model are automatically generated by Mendix. The auto-generated names follow the best practice and should be used by default.
+
+If you have multiple associations between the same entities we recommend extending the association name. Extending this name with a recognizable purpose clarifies where you should use the association. For example, you can have a relationship between **Person** and **Address**. A person can have multiple addresses but you want to specify what their postal address is and what their delivery address is. An implementation choice could be that you create two associations for that purpose and adjust the names of the associations accordingly. For example, **Person_Address_Delivery**.
+
+**Renaming entities**
+
+A second recommendation is that when an association already exists between entities, and you change the name on one or both of the entities, that you rename the association.
+
+{{% alert type="info" %}}
+Starting with version 7.19, Mendix will rename the association automatically. 
+{{% /alert %}}
+
+With models built in lower versions of Mendix, however, you will need to manually rename the assocation to keep your model consistent and up-to-date.
 
 ### 3.3 Folders
 
-The structure for your documents starts with a clear separation of folders. When using a decent folder structure, you will improve the maintainability of your app and be able to find required documents faster. Therefore, you and your teammates will be able to develop and fix faster.
+The structure for your documents starts with a clear separation of folders. By using a good folder structure you will improve the maintainability of your application; you will be able to find required documents faster and therefore will be able to develop and fix faster. 
 
-The optimal grouping of your documents into folders depends on the circumstances and on the functional setup of your application. We recommend combining the guidelines below in a way that fits your project.
+The optimal grouping of your documents into folders depends on the circumstances and on the functionality of your application. We recommend combining the guidelines below in a way that fits your project.
 
 #### 3.3.1 Process-Related Sources
 
-Every project has processes that are developed, so structure your documents in folders that reflect these processes and their steps.
+Every project consists of processes. Structure your documents for this process into folders that reflect those processes and their steps.
 
 #### 3.3.2 Entity-Related Sources
 
-Every project has documents that are needed for specific entities, for example, overview pages for maintenance, validation microflows that prevent commits, or other event triggers. Those type of documents should be structured into one folder that is named after the entity. Optional sub-folders can be applied to order **events** and **pages**, for example.
+Every project has documents that are needed for specific entities. Think of overview pages for maintenance, validation microflows that prevent commits, or other event triggers. These types of document should be structured into one folder that is named after the entity. Optionally, sub-folders could be used to organize, for example, **events** and **pages**.
 
 ### 3.4 Microflows
 
-[Microflow](/refguide/microflows) names must include the name of the main entity being processed and the operation being performed (for example, **Prefix\_Entity\_Operation** or **Act\_Vendor\_StartWorkflow**).
+[Microflow](/refguide/microflows) names should include the type of event which triggers them, the name of the main entity being processed, and the operation being performed: **{Prefix}_{Entity}_{Operation}**. For example,  **Act_Vendor_StartWorkflow**.
 
-If there is no main entity or there is another reason to use a different name to improve understandability, this is allowed. Make sure the name of the microflow clearly indicates its purpose.
+There are exceptions, such as where there is no main entity, or there is another reason to use a different name to improve understandability. The important thing is to make sure the name of the microflow clearly indicates its purpose.
 
-To easily find and recognize the purpose for that microflow, you can use prefixes. The sections below list a number of purposes with the related prefixes.
+To easily find and recognize the purpose of a microflow, you can use standard prefixes. Common purposes or events and their standard prefixes are listed below. If a microflow is triggered by several events you can consider using more than one prefix.
 
 #### 3.4.1 Entity Events
 
-For some entities, you want to use entity [events](/refguide/events) that are always triggered when a specific operation is executed for an entity. Think of a field like **TotalOrderAmount** that is automatically filled based on the amount values of the order-related order lines. An implementation choice can be to define an after-commit event that ensures that **TotalOrderAmount** is updated when a related order line is saved. The microflows related to such an event handler should have the following prefixes:
+For some entities you use entity [events](/refguide/events) that are always triggered when a specific operation is executed on the entity.
+
+For example, an attribute **TotalOrderAmount** is automatically filled based on the amount values of the order-related order lines. You can define an after-commit event that ensures that **TotalOrderAmount** is updated when a related order line is saved: *ACo_Order_CalculateTotalOrderAmount*.
+
+The microflows related to such an event handler should have the following prefixes:
 
 | Event Type      | Prefix               |
 |-----------------|----------------------|
-| Before commit   | BCo\_\<Entity name\> |
-| After commit    | ACo\_\<Entity name\> |
-| Before create   | BCr\_\<Entity name\> |
-| After create    | ACr\_\<Entity name\> |
-| Before delete   | BDe\_\<Entity name\> |
-| After delete    | ADe\_\<Entity name\> |
-| Before rollback | BRo\_\<Entity name\> |
-| After rollback  | ARo\_\<Entity name\> |
+| Before commit   | BCo_{Entity name} |
+| After commit    | ACo_{Entity name} |
+| Before create   | BCr_{Entity name} |
+| After create    | ACr_{Entity name} |
+| Before delete   | BDe_{Entity name} |
+| After delete    | ADe_{Entity name} |
+| Before rollback | BRo_{Entity name} |
+| After rollback  | ARo_{Entity name} |
 
 #### 3.4.2 Calculated Attributes
 
-For attributes, you can choose to store the value in the database or to calculate the value based on a microflow. For the microflow that has the calculation purpose you can use **Cal\_** as a prefix.
+For attributes, you can choose to store the value in the database or to calculate the value based on a microflow. For the microflow that has the calculation purpose you can use **Cal_** as a prefix.
 
 #### 3.4.3 Project Settings
 
@@ -126,15 +140,15 @@ Your [project settings](/refguide/project-settings) provide three events that ca
 
 | Event Type                | Prefix             | Used In |
 |---------------------------|--------------------|--------------------------------|
-| On enter event            | OEn\_\<Purpose\>   | Input widgets                  |
-| On change event           | OCh\_\<Purpose\>   | Input widgets                  |
-| On leave event            | OLe\_\<Purpose\>   | Input widgets                  |
-| Data source               | DS\_\<Purpose\>    | Data view, list view, data grid, template grid |
-| Microflow/action button   | ACT\_\<Purpose\> or IVK\_\<Purpose> | Menu item, Navigation item, Microflow and Action button, Drop down button<br />(“IVK\_” is used historically) |
+| On enter event            | OEn_{Purpose}   | Input widgets                  |
+| On change event           | OCh_{Purpose}   | Input widgets                  |
+| On leave event            | OLe_{Purpose}   | Input widgets                  |
+| Data source               | DS_{Purpose}    | Data view, list view, data grid, template grid |
+| Microflow/action button   | ACT_{Purpose} or IVK_{Purpose} | Menu item, Navigation item, Microflow and Action button, Drop down button<br />(“IVK_” is used historically) |
 
 #### 3.4.5 Unit Test Microflows
 
-Microflows containing [unit tests](/howto/testing/testing-microflows-using-the-unittesting-module) should have the prefix **Test\_**.
+Microflows containing [unit tests](/howto/testing/testing-microflows-using-the-unittesting-module) should have the prefix **Test_**.
 
 ### 3.5 Integration
 
@@ -142,15 +156,15 @@ In your integrations, you have the following type of documents:
 
 | Event Type                                | Prefix |
 |-------------------------------------------|--------|
-| Consumed web service operation microflow  | CWS\_  |
-| Published web service operation microflow | PWS\_  |
-| Published app service operation microflow | PAS\_  |
-| Published REST service operation microflow| PRS\_  |
-| Import mapping                            | ImM\_  |
-| Export mapping                            | ExM\_  |
-| XML schema                                | XSD\_  |
-| JSON structure                            | JSON\_ |
-| Deeplink                                  | Dl\_   |
+| Consumed web service operation microflow  | CWS_  |
+| Published web service operation microflow | PWS_  |
+| Published app service operation microflow | PAS_  |
+| Published REST service operation microflow| PRS_  |
+| Import mapping                            | ImM_  |
+| Export mapping                            | ExM_  |
+| XML schema                                | XSD_  |
+| JSON structure                            | JSON_ |
+| Deeplink                                  | Dl_   |
 
 ### 3.6 Scheduled Events
 

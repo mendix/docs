@@ -3,7 +3,7 @@ title: "Published REST Request Routing"
 parent: "published-rest-technical-details"
 menu_order: 10
 description: "A flow chart which shows how an example request is processed, what security is applied, and what is returned by the service."
-tags: ["flow chart", "processing", "security", "service", "resource", "operation", "method", "authentication", "return code". "published REST")
+tags: ["flow chart", "processing", "security", "service", "resource", "operation", "method", "authentication", "return code", "published REST")
 ---
 
 {{% alert type="info" %}}

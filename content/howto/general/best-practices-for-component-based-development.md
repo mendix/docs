@@ -1,6 +1,6 @@
 ---
 title: "Implement Best Practices for Component-Based Development"
-category: "Best Practices"
+category: "General"
 menu_order: 40
 tags: ["best practice", "component", "component-based development", "component-based", "cbd"]
 ---

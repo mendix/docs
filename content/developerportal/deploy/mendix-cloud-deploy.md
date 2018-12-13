@@ -134,4 +134,4 @@ If you want to choose whether you want to run your app locally or in the Sandbox
 * [Licensing Apps](licensing-apps)
 * [How to Manage Company & App Roles](/developerportal/company-app-roles/manage-roles)
 * [Company & App Roles](/developerportal/company-app-roles/index)
-* [How to Set Up Two-Factor Authentication With Google Authenticator](/howtogeneral/how-to-set-up-two-factor-authentication-with-google-authenticator)
+* [How to Set Up Two-Factor Authentication With Google Authenticator](../support/how-to-set-up-two-factor-authentication-with-google-authenticator)

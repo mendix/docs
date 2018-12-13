@@ -178,10 +178,6 @@ module.exports = {
       to: "/developerportal/app-store/share-app-store-content"
     },
     {
-      from: "/appstore/App+Store+Content+Support",
-      to: "/developerportal/app-store/app-store-content-support"
-    },
-    {
       from: "/community/app-store-content-support",
       to: "/developerportal/app-store/app-store-content-support"
     },

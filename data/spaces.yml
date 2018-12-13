@@ -161,10 +161,6 @@ refguide:
     - "Mobile Development"
     - "SAP"
     - "IBM"
-howtogeneral:
-  space: "Mendix Support Guide"
-  priority: 6
-  menu_categories:
 releasenotes:
   space: "Release Notes"
   priority: false

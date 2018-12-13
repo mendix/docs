@@ -171,8 +171,8 @@ Disk utilization is calculated as the disk usage that is used by the user of the
 ## 6 Related Content
 
 * [Alerts](monitoring-application-health)
-* [Database Maintenance: Size Reduction](/howtogeneral/database-maintenance-size-reduction)
-* [How to Calculate the Total Amount of Diskspace of a Cloud App Environment](/howtogeneral/how-to-calculate-diskspace-of-a-cloud-app-environment)
+* [Database Maintenance: Size Reduction](../support/database-maintenance-size-reduction)
+* [How to Calculate the Total Amount of Diskspace of a Cloud App Environment](../support/how-to-calculate-diskspace-of-a-cloud-app-environment)
 * [How to Configure Maintenance Windows](/developerportal/deploy/maintenance-windows)
 * [How to Migrate to Mendix Cloud v4](/developerportal/deploy/migrating-to-v4)
 * [How to Receive Environment Status Alerts](receive-alerts)

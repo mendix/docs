@@ -1,5 +1,6 @@
 ---
 title: "On-Premises Customers: Prepare Your Project for the New Support Portal"
+category: "Mendix Support"
 ---
 
 ## 1 Introduction

@@ -1,5 +1,6 @@
 ---
 title: "License Key Activation on Linux"
+category: "Mendix Support"
 #description: ""
 #tags: []
 ---

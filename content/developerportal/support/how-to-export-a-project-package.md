@@ -1,5 +1,6 @@
 ---
 title: "Export a Mendix Project Package"
+category: "Mendix Support"
 #description: ""
 #tags: []
 ---

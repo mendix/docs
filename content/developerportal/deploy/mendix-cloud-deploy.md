@@ -12,11 +12,24 @@ frontpage_featured: true
 
 The Mendix Cloud is a public cloud service for Mendix applications; this is the default deployment option for Mendix applications. You can deploy either a limited **Free App** or an app running on a licensed cloud node.
 
-### 1.1 Free App
+### 1.1 Free App{#free-app}
 
 If you are new to the Mendix community and would like to deploy and share your own app, you can do so for free on our public cloud offering. The Free App environment (sometimes referred to as the Sandbox) allows any Mendix developer to create and share their applications with their users. Note that a Free App does not support complex or large applications.
 
-<!-- Add a link here to something that shows the difference between a Free App and a Licensed App -->
+A Free App has a number of limitations compared to a licensed app. These are summarized in the table below:
+
+|                                             | Free App                                                     | Licensed App                                                 |
+| ------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| **Number of Users**                         | Maximum ten users.                                           | Depends on your pricing plan.                                |
+| **Storage**                                 | 100MB of data and 100MB of file storage space.               | Depends on your pricing plan.                                |
+| **Environments**                            | Single environment in the Mendix Cloud.                      | A node in the cloud which has one or more environments, for example, production, acceptance, and test. |
+| **Sleep Mode**                              | Goes into Sleep Mode after an hour or so of inactivity and automatically resumes when a user accesses it. All your data is retained while the app is in Sleep Mode. | Does not have a Sleep Mode.                                  |
+| **Starting and stopping your app manually** | Not available.                                               | Available.                                                   |
+| **Constants**                               | Defined in modeler.                                          | Configurable through environment variables.                  |
+| **Scalability**                             | Only one instance and a fixed amount of memory.              | Configurable in the Developer Portal                         |
+| **Metrics and alerts**                      | Not available.                                               | Available.                                                   |
+| **Historic archived logs**                  | Not available.                                               | Available.                                                   |
+| **Backups**                                 | Stored up to two weeks, can be done once a day.              | Maximum one year, depending on your plan.                    |
 
 {{% alert type="info" %}}
 Free apps are part of our community edition and require Mendix version 6 or higher.
@@ -26,7 +39,7 @@ If you are not currently a customer but would prefer to use a licensed cloud nod
 If you are an existing customer, you should deploy into your licensed cloud node.
 {{% /alert %}}
 
-A Free App will go to sleep after an hour or so of inactivity. If you access it while it is inactive, you will see the image below. If, after a couple of minutes, your app does not wake up, please contact our support team at [support.mendix.com](http://support.mendix.com).
+As noted in the table above, a Free App will go to sleep after an hour or so of inactivity. If you access it while it is inactive, you will see the image below. If, after a couple of minutes, your app does not wake up, please contact our support team at [support.mendix.com](http://support.mendix.com).
 
 ![](attachments/mendix-cloud-deploy/appresumed.png)
 

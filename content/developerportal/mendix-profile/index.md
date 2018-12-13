@@ -277,7 +277,7 @@ For more information, see the following:
 
 In this section, you can merge your accounts and select your profile visibility.
 
-#### 10.6.2 Merging Your Accounts {#merging}
+#### 10.6.1 Merging Your Accounts {#merging}
 
 With use of the Mendix Profile, you can merge your old Mendix account(s) into your current Mendix account. This action combines all your hard-earned points, certifications, and achievements in your efforts to climb the leaderboards.
 
@@ -289,7 +289,7 @@ We’ll take things from there!
 With this action, Mendix only combines the accounts. The old account is not deactivated. That should be done by the Company Admin.
 {{% /alert %}}
 
-#### 10.6.1 Selecting Your Profile Visibility {#public}
+#### 10.6.2 Selecting Your Profile Visibility {#public}
 
 If you have started editing your profile but it is not yet visible to other Mendix community members, you will see a banner inviting you to make it public at the top of your profile. You can make it public by clicking **Make this profile public**.
 
@@ -305,6 +305,14 @@ Be sure to do the following in order to make your profile public:
 
 {{% alert type="info" %}}
 To make your public profile private again, click **Make this profile private**.
+{{% /alert %}}
+
+#### 10.6.3 Viewing Your Audit Trail
+
+The Mendix Platform stores certain personal information about you. To view this information, click **View Audit Trail** in the **Personal Information Stored by Mendix** section of the **Advanced** settings.
+
+{{% alert type="info" %}}
+Mendix has been tracking these data changes since November, 2018.
 {{% /alert %}}
 
 ## 11 Main Document in This Category

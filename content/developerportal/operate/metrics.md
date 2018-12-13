@@ -68,6 +68,6 @@ The version 7 runtime is stateless and does not cache Mendix objects on the serv
 
 ## 5 Related Content
 
-* [How to Calculate the Total Amount of Diskspace of a Cloud App Environment](/howtogeneral/how-to-calculate-diskspace-of-a-cloud-app-environment)
-* [Database Maintenance: Size Reduction](/howtogeneral/database-maintenance-size-reduction)
+* [How to Calculate the Total Amount of Diskspace of a Cloud App Environment](../support/how-to-calculate-diskspace-of-a-cloud-app-environment)
+* [Database Maintenance: Size Reduction](../support/database-maintenance-size-reduction)
 * [Environment details](/developerportal/deploy/environments-details)

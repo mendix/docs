@@ -1,5 +1,6 @@
 ---
 title: "Troubleshoot Version Control Issues"
+category: "Mendix Support"
 description: "This document presents a list of problems and fixes for version control issues."
 tags: ["version control", "troubleshoot", "modeler"]
 ---

@@ -1,6 +1,5 @@
 ---
 title: "Hashing Algorithms"
-category: "Mendix Support"
 #description: ""
 #tags: []
 ---

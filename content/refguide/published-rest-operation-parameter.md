@@ -1,16 +1,18 @@
 ---
-title: "Published REST Operation Parameter"
+title: "Operation Parameters for Published REST"
 parent: "published-rest-service"
 menu_order: 20
-#description: " "
-#tags: ["These", "are", "Example", "Tags"]
+description: "Configure a published REST Operation by adding parameters to an operation "
+tags: ["published REST", "operation", "parameter", "resource", "mapping", "not found", "commit"]
 # If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 # linked from DM integration - published rest > select resource > add operation for resource > add parameter > help)
 ---
 
 ## 1 Introduction
 
-When a client calls a published REST operation, they call a URL with an optional query string and possibly a body. These parameters can be passed to the microflow and import mapping as path parameters, query parameters, and body parameters respectively. When you add or edit a parameter in a published REST operation, you can specify the settings described below. 
+When a client calls a published REST operation, they call a URL with an optional query string and possibly a body. These parameters can be passed to the microflow and import mapping as path parameters, query parameters, and body parameters respectively.
+
+When you add or edit a parameter in a published REST operation, you can specify the settings described below. These settings are in the *add parameter* pop-up dialog in the *add operation for resource* dialog.
 
 ## 2 General
 

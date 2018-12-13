@@ -32,7 +32,7 @@ After entering the authentication code, your browser session is authorized for t
 
 ## 4 Setting Up and Disabling
 
-For details on seting up, see [How to Set Up Your Two-Factor Authentication with Google](/howtogeneral/support/how-to-set-up-two-factor-authentication-with-google-authenticator).
+For details on seting up, see [How to Set Up Your Two-Factor Authentication with Google](/howtogeneral/how-to-set-up-two-factor-authentication-with-google-authenticator).
 
 If you change your device or phone number, you must contact [Mendix Support](https://support.mendix.com/hc/en-us) to disable the authenticator on your Mendix account.
 

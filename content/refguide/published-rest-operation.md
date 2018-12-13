@@ -2,8 +2,8 @@
 title: "Published REST Operation"
 parent: "published-rest-service"
 menu_order: 10
-#description: " "
-#tags: ["These", "are", "Example", "Tags"]
+description: "Options to  configure a published REST operation."
+tags: ["Published REST", "operation", "method", "path", "example location", "mapping", "operation parameters", "how to"]
 # If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 # linked from DM: published rest > select resource > add operation for resource > help (integration)
 ---
@@ -17,6 +17,8 @@ This feature was introduced in version 7.10.0.
 ## 1 Introduction
 
 A published REST operation is part of a [published REST resource](published-rest-resource) and defines an endpoint that a client can call to get, put, post, patch, or delete items from the resource.
+
+This document describes the options when configuring a REST operation through the *add operation for resource* pop-up dialog.
 
 ## 2 General
 
@@ -71,7 +73,7 @@ To set the status code, reason phrase, and headers, you should add an [HttpRespo
 
 The result of the microflow is the result of the operation. You have several options here, which are described below.
 
-The first option is to **return a *list* or an *object***. You will need to specify an export mapping to convert it to XML or JSON. 
+The first option is to **return a *list* or an *object***. You will need to specify an export mapping to convert it to XML or JSON.
 
 The second option is to **return a primitive**. When your microflow returns a string, integer, Boolean, etc., then the response to the operation will be that value. If you return a non-empty value from the microflow, the *Content* attribute of the *HttpResponse* object is ignored. If you return an empty value from the microflow, then the *Content* of the *HttpResponse* is taken as the result.
 

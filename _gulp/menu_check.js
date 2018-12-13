@@ -29,13 +29,13 @@ const parseAndCheck = menuJSON => new Promise((resolve, reject) => {
     const url = page.u;
     const title = page.t;
     const id = page.i;
-    if (category && categories.indexOf(category.toLowerCase()) === -1) {
+    if (category && categories && categories.indexOf(category.toLowerCase()) === -1) {
       log(`${white("CATEGORY ")} page: ${cyan(url)} has category ${cyan(category)} which does not exist`)
     }
     if (parent && _.findIndex(pages, p => p.i.toLowerCase() === parent.toLowerCase() && p.d.indexOf(page.d) !== -1) === -1) {
       log(`${yellow("PARENT   ")} page: ${cyan(url)} has parent ${cyan(parent)} which does not exist`)
     }
-    if (!category && !parent && categoriesOrig.indexOf(title) === -1 && _.compact(url.split('/')).length > 1) {
+    if (!category && !parent && categoriesOrig && categoriesOrig.indexOf(title) === -1 && _.compact(url.split('/')).length > 1) {
       log(`${red("MISSING  ")} page: ${cyan(url)} has no category/parent, but is also not a category. Please check the page!`)
     }
   });

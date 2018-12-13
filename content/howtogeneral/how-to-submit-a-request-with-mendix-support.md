@@ -1,6 +1,5 @@
 ---
 title: "Submit a Request with Mendix Support"
-category: "Mendix Support"
 description: "Describes submitting a request with Mendix Support."
 tags: ["support", "incident", "standard change", "URL", "change URL", "license", "change" ]
 ---

@@ -2,8 +2,8 @@
 title: "Published REST Service"
 parent: "published-rest-services"
 menu_order: 10
-#description: " "
-#tags: ["These", "are", "Example", "Tags"]
+description: "Configuration options for a published REST service"
+tags: ["published REST", "service", "reserved URL prefixes", "swagger", "security", "CORS", "resources", "operation", "how-to"]
 ---
 
 {{% alert type="info" %}}
@@ -15,6 +15,8 @@ The **published REST service** feature was introduced in version 7.10.0.
 ## 1 Introduction
 
 Use a published REST service to expose your entities and microflows to other apps using the REST standard.
+
+This document describes the published REST service configuration options shown when the published REST service is opened in the Desktop Modeler.
 
 ## 2 General
 

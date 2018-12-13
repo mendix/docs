@@ -1,6 +1,5 @@
 ---
 title: "Mendix and Java Part 2 – Common Errors"
-category: "Mendix Support"
 ---
 
 ## 1 Introduction

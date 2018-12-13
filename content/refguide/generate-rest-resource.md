@@ -1,9 +1,9 @@
 ---
-title: "Generating a REST Resource"
+title: "Generate a Published REST Resource"
 parent: "published-rest-services"
 menu_order: 20
-#description: " "
-#tags: ["These", "are", "Example", "Tags"]
+description: "Generate a published REST resource from an entity"
+tags: ["published REST", "resource", "entity", "operations", "expose"]
 # If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 # linked from DM: domain model > entity (right-click) > Expose as REST resource > Help (integration)
 ---

@@ -2,8 +2,8 @@
 title: "GitHub-Flavored Markdown"
 parent: "published-rest-service"
 menu_order: 70
-#description: " "
-#tags: ["These", "are", "Example", "Tags"]
+description: "Link to GitHub Guide to Mastering Markdown"
+tags: ["published REST", "GitHub", "Markdown"]
 # If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 # linked from DM: published rest > add resource > Public documentation > You can use GitHub Flavored Markdown ... (integration)
 ---

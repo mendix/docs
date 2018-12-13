@@ -173,7 +173,7 @@ module.exports = {
       from: "/appstore/App+Store+Approval+Guidelines",
       to: "/developerportal/app-store/share-app-store-content"
     },
-	{
+    {
       from: "/community/app-store/share-app-store-content",
       to: "/developerportal/app-store/share-app-store-content"
     },
@@ -193,7 +193,7 @@ module.exports = {
       from: "/appstore/App+Store+Home",
       to: "/developerportal/app-store/"
     },
-	{
+    {
       from: "/community/app-store/use-app-store-content-in-the-modeler",
       to: "/developerportal/app-store/use-app-store-content-in-the-modeler"
     },
@@ -201,14 +201,6 @@ module.exports = {
      * Best Practices
      ****************************************************/
     {
-      from: "/bestpractices/Best+Practices+for+Component+Based+Development",
-      to: "/howtogeneral/bestpractices/best-practices-for-component-based-development"
-    },
-    {
-      from: "/bestpractices/Best+Practices",
-      to: "/howtogeneral/bestpractices/"
-    },
-	{
       from: "/howtogeneral/bestpractices/best-practices-security-and-improvements-for-mendix-applications",
       to: "/howto/security/best-practices-security"
     },
@@ -2039,35 +2031,35 @@ module.exports = {
       from: "/howto7/deploying-a-mendix-app-to-cloud-foundry",
       to: "/developerportal/deploy/cloud-foundry-deploy"
     },
-	{
+    {
       from: "/deploy-a-mendix-app-to-cloud-foundry",
       to: "/developerportal/deploy/cloud-foundry-deploy"
     },
-	{
+    {
       from: "/bestpractices/How+to+execute+an+SQL+statement+on+an+external+database",
       to: "/howto/integration/execute-an-sql-statement-on-an-external-database"
     },
-	{
+    {
       from: "/howto7/solving-load-and-import-errors",
       to: "/howto/monitoring-troubleshooting/solving-load-and-import-errors"
     },
-	{
+    {
       from: "/howto/start-with-a-blank-app",
       to: "/refguide/web-modeler/overview-wm"
     },
-	{
+    {
       from: "/howto/tutorials/create-a-to-do-app",
       to: "/refguide/web-modeler/overview-wm"
     },
-	{
+    {
       from: "/howto/tutorials/build-a-simple-hrm-app",
       to: "/refguide/web-modeler/overview-wm"
     },
-	{
+    {
       from: "/howto/tutorials/build-an-iot-app",
       to: "/refguide/web-modeler/overview-wm"
     },
-	{
+    {
       from: "/howtogeneral/bestpractices/ux-best-practices",
       to: "/howto/ux/ux-best-practices"
     },
@@ -2102,11 +2094,11 @@ module.exports = {
       from: "/mendixcloud/how-to-link-app-to-node",
       to: "/developerportal/deploy/licensing-apps"
     },
-	{
+    {
       from: "/developerportal/howto/how-to-link-app-to-node",
       to: "/developerportal/deploy/licensing-apps"
     },
-	{
+    {
       from: "/developerportal/howto/how-to-link-a-different-app-to-a-node",
       to: "/developerportal/deploy/licensing-apps"
     },
@@ -2177,39 +2169,10 @@ module.exports = {
     {
       from: "/deployment/cloud-foundry/",
       to: "/developerportal/deploy/cloud-foundry-deploy"
-    },    
-	/****************************************************
+    },
+    /****************************************************
      * SUPPORT
      ****************************************************/
-
-    {
-      from: "/mxsupport/Google+Authenticator+and+SMS+Installation",
-      to: "/howtogeneral/support/how-to-set-up-two-factor-authentication-with-google-authenticator"
-    },
-    {
-      from: "/mxsupport/Mendix+Support+Home",
-      to: "/howtogeneral/support/"
-    },
-    {
-      from: "/mxsupport/TreeNavigation",
-      to: "/howtogeneral/support/"
-    },
-    {
-      from: "/mxsupport/License+key+activation+on+Linux+server",
-      to: "/howtogeneral/support/license-key-activation-on-linux"
-    },
-    {
-      from: "/mxsupport/Preparing+Your+Project+for+New+Customer+Support+Tool",
-      to: "/howtogeneral/support/prepare-your-project-for-new-customer-support-portal"
-    },
-    {
-      from: "/mxsupport/Required+Network+Access+for+connecting+to+the+Mendix+Platform",
-      to: "/howtogeneral/support/troubleshoot-network-issues-for-team-server"
-    },
-    {
-      from: "/mxsupport/Technical+Contact+Definition",
-      to: "/developerportal/company-app-roles/technical-contact"
-    },
     {
       from: "/mxsupport/technical-contact",
       to: "/developerportal/company-app-roles/technical-contact"
@@ -2218,19 +2181,18 @@ module.exports = {
       from: "/howtogeneral/support/how-to-activate-or-deactivate-your-mendix-account",
       to: "/developerportal/company-app-roles/users"
     },
-	{
+    {
       from: "/howtogeneral/support/technical-contact",
       to: "/developerportal/company-app-roles/technical-contact"
     },
     /****************************************************
      * DEVELOPER PORTAL
      ****************************************************/
-
     {
       from: "/developerportal/settings/technical-contact",
       to: "/developerportal/company-app-roles/technical-contact"
     },
-	    {
+    {
       from: "/developerportal/general/technical-contact",
       to: "/developerportal/company-app-roles/technical-contact"
     },
@@ -7075,10 +7037,10 @@ module.exports = {
       "from": "/refguide7/Desktop+profile",
       "to": "/refguide/desktop-profile"
     },
-	{
+    {
       "from": "/refguide7/desktop-webmodeler",
       "to": "/howto/web-modeler/syncing-webmodeler-desktop"
-    },	
+    },
     {
       "from": "/refguide7/Developing+Hybrid+Mobile+Apps",
       "to": "/refguide/developing-hybrid-mobile-apps"
@@ -7111,11 +7073,11 @@ module.exports = {
       "from": "/refguide7/Download+From+Team+Server+Dialog",
       "to": "/refguide/download-from-version-control-dialog"
     },
-	{
+    {
       "from": "/refguide7/drop-down-widget",
       "to": "/refguide/drop_down"
     },
-	{
+    {
       "from": "/refguide7/Drop-down",
       "to": "/refguide/drop_down"
     },
@@ -7259,11 +7221,11 @@ module.exports = {
       "from": "/refguide7/History+Dialog",
       "to": "/refguide/history-dialog"
     },
-	{
+    {
       "from": "/refguide7/horizontal-split-pane",
       "to": "/refguide/scroll-container"
-    },	
-	{
+    },
+    {
       "from": "/refguide7/If+expressions",
       "to": "/refguide/if-expressions"
     },
@@ -7467,10 +7429,10 @@ module.exports = {
       "from": "/refguide7/Microflow+Expressions",
       "to": "/refguide/expressions"
     },
-	{
+    {
       "from": "/refguide7/microflow-expressions",
       "to": "/refguide/expressions"
-    },	
+    },
     {
       "from": "/refguide7/Microflow+Source",
       "to": "/refguide/microflow-source"
@@ -8134,10 +8096,10 @@ module.exports = {
       "from": "/refguide7/Version+Control+Scenarios",
       "to": "/refguide/version-control-scenarios"
     },
-	{
+    {
       "from": "/refguide7/vertical-split-pane",
       "to": "/refguide/scroll-container"
-    },	
+    },
     {
       "from": "/refguide7/XML+Inheritance+and+Choice",
       "to": "/refguide/xml-inheritance-and-choice"
@@ -8286,19 +8248,19 @@ module.exports = {
       "from": "/refguide7/XPath+year+from+dateTime",
       "to": "/refguide/xpath-year-from-datetime"
     },
-	{
+    {
       "from": "/bestpractices/SIG+-+Mendix+performance+subjects+explanation",
       "to": "/refguide/sig-mendix-performance-subjects-explanation"
     },
-	{
+    {
       "from": "/bestpractices/Inheritance+vs.+1+1+association",
       "to": "/refguide/inheritance-vs.-1-1-association"
     },
-	{
+    {
       "from": "/refguide7/certificates",
       "to": "/developerportal/deploy/certificates"
     },
-  {
+    {
       "from": "/deployment/mendixcloud/certificates",
       "to": "/developerportal/deploy/certificates"
     },

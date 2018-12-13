@@ -31,7 +31,7 @@ This is the Mendix **environment**.
 
 In a **node** in the Mendix Cloud, you may have one, or more, of these *environments*. More information about *nodes* can be found here: [Nodes](/developerportal/company-app-roles/nodes).
 
-For a **Free App**, your app has a single *Sandbox* environment which allows you to test your app. However, this comes with restrictions on how long it will run and the number of users it will support. You cannot scale the app, and the operational capabilities are limited.
+For a **Free App**, your app has a single *Sandbox* environment which allows you to test your app. However, this comes with restrictions on how long it will run and the number of users it will support. You cannot scale the app, and the operational capabilities are limited. For more details on the restrictions of a Free App, see [Mendix Cloud](mendix-cloud-deploy#free-app)
 
 In a **licensed node** you have everything you need to stage and deploy your app. You can have several different *environments* to support development: test, acceptance, and production, for example. You can scale these environments by providing more memory or multiple instances, and you can configure and monitor them using the tools in the *Developer Portal*.
 

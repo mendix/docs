@@ -4,7 +4,7 @@ parent: "xpath-constraint-functions"
 ---
 
 
-The `contains()` function tests whether a string attribute contains a specific string (case-insensitive) as a sub-string.
+The `contains()` function tests whether a String attribute contains a specific string (case-insensitive) as a sub-string.
 
 {{% alert type="info" %}}
 

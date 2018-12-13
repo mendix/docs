@@ -1,5 +1,5 @@
 ---
-title: "Mendix Support Guide"
+title: "Mendix Support"
 ---
 
 ## What You Can Expect from Mendix Support

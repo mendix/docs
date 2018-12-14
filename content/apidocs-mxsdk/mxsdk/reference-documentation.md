@@ -1,5 +1,5 @@
 ---
-title: "Mendix Platform SDK References"
+title: "References"
 category: "Mendix Platform SDK"
 menu_order: 40
 ---

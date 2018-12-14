@@ -1,6 +1,6 @@
 ---
 title: "Troubleshoot Version Control Issues"
-category: "Mendix Support"
+parent: "support-references"
 description: "This document presents a list of problems and fixes for version control issues."
 tags: ["version control", "troubleshoot", "modeler"]
 ---
@@ -53,4 +53,4 @@ If the solutions here do not work for your version control problems, please subm
 
 ## 4 Related Content
 
-* [How to Submit Support Requests](how-to-submit-support-requests)
+* [How to Submit Support Requests](submit-support-request)

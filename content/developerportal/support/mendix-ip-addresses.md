@@ -1,6 +1,6 @@
 ---
 title: "Mendix IP Addresses"
-category: "Mendix Support"
+parent: "support-references"
 #description: ""
 #tags: []
 ---

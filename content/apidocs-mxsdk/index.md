@@ -3,7 +3,7 @@ title: "APIs & SDK"
 description: "Presents the Mendix API documentation as well as the documentation for the Mendix Platform SDK."
 ---
 
-This space contains the following documentation:
+The *APIs & SDK* are divided into the following categories:
 
-* [API Documentation](apidocs)
-* [Mendix Platform SDK](mxsdk)
+{{% category_block %}}
+

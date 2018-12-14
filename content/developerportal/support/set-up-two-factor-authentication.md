@@ -1,6 +1,6 @@
 ---
 title: "Set Up Two-Factor Authentication With Google Authenticator"
-category: "Mendix Support"
+parent: "support-references"
 #description: ""
 #tags: []
 ---

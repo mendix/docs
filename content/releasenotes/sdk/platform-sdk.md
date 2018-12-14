@@ -3,7 +3,7 @@ title: "Platform SDK"
 category: "SDKs"
 ---
 
-These are the Platform SDK release notes, including all minor versions and patches.
+These are the [Platform SDK](/apidocs-mxsdk/mxsdk/) release notes, including all minor versions and patches.
 
 ## 4.0.0
 

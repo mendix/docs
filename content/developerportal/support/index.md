@@ -75,13 +75,8 @@ Mendix supports the current major release and the two prior major releases (and 
 
 ## 9 Main Documents in This Category
 
-* [Escalation Management Process](escalation-management-process)
-* [Change the Affected Apps for Which You Can Submit Requests](how-to-change-the-affected-apps-for-which-you-can-submit-requests)
-* [Submit a Request with Mendix Support](how-to-submit-a-request-with-mendix-support)
-* [Submit Support Requests](how-to-submit-support-requests)
-* [On-Premises Customers: Prepare Your Project for the New Support Portal](prepare-your-project-for-new-customer-support-portal)
-* [Submit a Feature Request](submit-a-feature-request)
-* [Ticket Priority](ticket-priority)
+* [Mendix Support Details](support-info)
+* [Mendix Support How-to's](support-how-to's)
 
 
 

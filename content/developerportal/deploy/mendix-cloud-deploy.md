@@ -3,7 +3,7 @@ title: "Mendix Cloud"
 category: "Deployment"
 menu_order: 20
 description: "Describes how to deploy to the Mendix Cloud."
-tags: ["Deploy","Mendix Cloud","Developer Portal"]
+tags: ["Deploy","Mendix Cloud","Developer Portal", "Free app", "licensed", "limitations"]
 frontpage_featured: true
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -16,14 +16,15 @@ The Mendix Cloud is a public cloud service for Mendix applications; this is the 
 
 If you are new to the Mendix community and would like to deploy and share your own app, you can do so for free on our public cloud offering. The Free App environment (sometimes referred to as the Sandbox) allows any Mendix developer to create and share their applications with their users. Note that a Free App does not support complex or large applications.
 
-A Free App has a number of limitations compared to a licensed app. These are summarized in the table below:
+A Free App has a number of limitations compared to a licensed app. The main limitations are summarized in the table below:
 
 |                                             | Free App                                                     | Licensed App                                                 |
 | ------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | **Number of Users**                         | Maximum ten users.                                           | Depends on your pricing plan.                                |
+| **Sleep Mode**                              | Goes into Sleep Mode after an hour or so of inactivity and automatically resumes when a user accesses it. All your data is retained while the app is in Sleep Mode. | Does not have a Sleep Mode.                                  |
 | **Storage**                                 | 100MB of data and 100MB of file storage space.               | Depends on your pricing plan.                                |
 | **Environments**                            | Single environment in the Mendix Cloud.                      | A node in the cloud which has one or more environments, for example, production, acceptance, and test. |
-| **Sleep Mode**                              | Goes into Sleep Mode after an hour or so of inactivity and automatically resumes when a user accesses it. All your data is retained while the app is in Sleep Mode. | Does not have a Sleep Mode.                                  |
+| **Deployment**                              | Can only be deployed to the cloud from the Desktop or Web Modeler. | Can be deployed from a modeler, or from the Developer Portal. |
 | **Starting and stopping your app manually** | Not available.                                               | Available.                                                   |
 | **Constants**                               | Defined in modeler.                                          | Configurable through environment variables.                  |
 | **Scalability**                             | Only one instance and a fixed amount of memory.              | Configurable in the Developer Portal                         |

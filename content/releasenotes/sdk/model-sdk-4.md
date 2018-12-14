@@ -1,7 +1,6 @@
 ---
 title: "4"
 parent: "model-sdk"
-#For next release, do not include Impact.
 ---
 
 These are the release notes for the Model SDK version 4.
@@ -10,23 +9,22 @@ These are the release notes for the Model SDK version 4.
 
 **Release date: December 13th, 2018**
 
-| Story | Impact | Description |
-|---|---|---|
-| MS-1170 | Low  | We added a Promise-based API. All methods in `ModelSdkClient` and `Model` as well as the `load()` method of model elements now feature Promise-based overloads in addition to the original callback-based ones.<br /><br />{{% alert type="info" %}}If you open a working copy using the Promise-based API but you are still using callback-based APIs in other places in your code without passing an error callback (for example, the callback overload of the `load()` method of model elements), be sure to register an error handler on the model using the `Model.setErrorHandler()` API.{{% /alert %}} |
-| MS-1231 | Low  | We added support for Mendix 7.22.0(.<br /><br />{{% alert type="info" %}}There is a small breaking API change where the property `navigation.NavigationDocument.profiles` is now of a different type to accommodate the introduction of native navigation profiles. For Mendix version 7.21.0 and earlier, these profiles can be safely casted to `navigation.NavigationProfile`. In Mendix version 7.22.0 and later, there can also be instances of `navigation.NativeNavigationProfile` in this property.{{% /alert %}} |
-| MS-885  | None | We added a lock type parameter to the `unlockWorkingCopy` API. |
+*  We added a Promise-based API. All methods in `ModelSdkClient` and `Model` as well as the `load()` method of model elements now feature Promise-based overloads in addition to the original callback-based ones.
+	{{% alert type="info" %}}If you open a working copy using the Promise-based API but you are still using callback-based APIs in other places in your code without passing an error callback (for example, the callback overload of the `load()` method of model elements), be sure to register an error handler on the model using the `Model.setErrorHandler()` API.
+	{{% /alert %}} 
+*  We added support for Mendix 7.22.0.
+	{{% alert type="info" %}}There is a small breaking API change where the property `navigation.NavigationDocument.profiles` is now of a different type to accommodate the introduction of native navigation profiles. For Mendix version 7.21.0 and earlier, these profiles can be safely casted to `navigation.NavigationProfile`. In Mendix version 7.22.0 and later, there can also be instances of `navigation.NativeNavigationProfile` in this property.{{% /alert %}}
+* We added a lock type parameter to the `unlockWorkingCopy` API.
 
 ## 4.17.0
 
 **Release date: November 30th, 2018**
 
-| Story | Impact | Description |
-|---|---|---|
-| MS-1195 | None | Added new working copy lock type `update`. |
-| MS-1205 | None | Added support for Mendix 7.21.0. |
-| MS-1183 | None | Added new working copy lock type `commit`. |
-| MS-1173 | None | Fixed THE duplicate processing of events. |
-| MS-1184 | None | Upgraded to Node.JS version 10. |
+* We added new working copy lock type `update`.
+* We added support for Mendix 7.21.0.
+* We added new working copy lock type `commit`.
+* We fixed the duplicate processing of events.
+* We upgraded to Node.JS version 10.
 
 ## 4.16.0
 

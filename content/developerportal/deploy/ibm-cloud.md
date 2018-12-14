@@ -130,9 +130,20 @@ Your IBM Kubernetes environment is now configured. Go to section 3.3 [Creating a
 
 ### 3.3 Creating a Package for IBM Cloud {#create-package}
 
-Before you can deploy a package to IBM Cloud you have to create it. At any time, you can create a new deployment package from a committed version of the project. If you are working with the Desktop Modeler you will have to commit the project first.
+Before you can deploy a package to IBM Cloud you have to create it.
 
-#### 3.3.1 Deploying from Within the Desktop Modeler
+#### 3.3.1 Deploying from Within the Web Modeler
+
+It is not possible to deploy your app directly from the Web Modeler. The Web Modeler is not currently aware of target environments apart from the Mendix Cloud v4. You will have to make use of the Desktop Modeler.
+
+Sync your app with the Desktop Modeler as described in [Sync the Web Modeler & Desktop Modeler](/howto/web-modeler/syncing-webmodeler-desktop).
+
+Once you have your app in the Desktop Modeler, you can do one of the following: 
+
+* deploy it directly from the Desktop Modeler (see section 3.3.2, [Deploying from Within the Desktop Modeler](#deploy-dm))
+* commit from the Desktop Modeler and then deploy it from the Developer Portal (see section 3.3.3 [Deploying from the Developer Portal](#deploy-dp))
+
+#### 3.3.2 Deploying from Within the Desktop Modeler{#deploy-dm}
 
 You can deploy your app automatically from the Desktop Modeler. However, you will have less control over the deployment than deploying from the Developer Portal.
 
@@ -144,7 +155,9 @@ Click **Run** in the Desktop Modeler. This will automatically:
 
 You will still need to go to IBM Cloud and manually deploy the package; a message within the Desktop Modeler will let you know when the package is ready and will give you the link to IBM Cloud. See section 3.4 [Deploying a Package to IBM Cloud](#deploy-package) for instructions on how to do the deployment.
 
-#### 3.3.2 Deploying from the Developer Portal
+#### 3.3.3 Deploying from the Developer Portal{#deploy-dp}
+
+At any time, you can create a new deployment package from a committed version of the project. If you are working with the Desktop Modeler you will have to commit the project first.
 
 To create a package for IBM Cloud within Developer Portal, follow these steps:
 

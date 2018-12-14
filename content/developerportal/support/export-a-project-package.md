@@ -28,7 +28,7 @@ You can choose to include data from the built-in database in the Mendix Package.
 1. Open your project in the Mendix Modeler.
 2. Go to **File** and select **Export Project Package...**.
 
-  ![](attachments/export-a-project-package-mpk/exportpp.png)
+  ![](attachments/how-to-export-a-project-package-mpk/exportpp.png)
 
 4. Select the **Package destination**.
 5.  Select **No data** in the *Export Data* section.
@@ -42,11 +42,11 @@ There are two snapshot options in the export dialog window. The *Existing snapsh
 1. Open your project in the Mendix Modeler.
 2. Go to **File** and select **Export Project Package...**.
 
-  ![](attachments/export-a-project-package-mpk/exportpp.png)
+  ![](attachments/how-to-export-a-project-package-mpk/exportpp.png)
 
 4. Select the **Package destination**.
 5. Select **New snapshot from current database**.
 6. Click **Export**.
 
-![](attachments/export-a-project-package-mpk/snapshotincluded.png)
+![](attachments/how-to-export-a-project-package-mpk/snapshotincluded.png)
 

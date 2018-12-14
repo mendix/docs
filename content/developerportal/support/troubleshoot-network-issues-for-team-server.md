@@ -59,4 +59,4 @@ The Mendix Modeler connects with the domains stated below over HTTPS on port 443
 *   [Open Project Dialog](/refguide6/open-project-dialog)
 *   [Download From Team Server Dialog](/refguide6/download-from-team-server-dialog)
 *   [Upload A Project To Team Server](/refguide6/upload-to-team-server-dialog)
-*   [How to Submit Support Requests](how-to-submit-support-requests)
+*   [How to Submit Support Requests](submit-support-request)

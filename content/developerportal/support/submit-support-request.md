@@ -29,7 +29,7 @@ This is the basic information that is required for a ticket:
 *   A detailed description of the action that was performed when the error was received
 *   A description of the desired goal (optional)
 
-Alo select the affecteda app in the request. For more information, read [How to Change the Affected Apps for Which You Can Submit Requests](how-to-change-the-affected-apps-for-which-you-can-submit-requests).
+Alo select the affecteda app in the request. For more information, read [How to Change the Affected Apps for Which You Can Submit Requests](change-affected-apps).
 
 ## 4 Specifications
 
@@ -48,14 +48,14 @@ Depending on the type of request it is helpful to provide additional information
 
 *   Modeler type (Desktop Modeler or Web Modeler)
 *   Modeler version
-*   Test project - read [How To Export A Mendix Project Package (.mpk)](how-to-export-a-project-package) for more information
+*   Test project - read [How To Export A Mendix Project Package (.mpk)](export-a-project-package) for more information
 *   Reproducible steps
 
 ### 4.4 App Store Content Problem – Module, Widget, Theme Issues
 
 *   Name of the content
 *   Modeler version
-*   Test project - read [How To Export A Mendix Project Package (.mpk)](how-to-export-a-project-package) for more information
+*   Test project - read [How To Export A Mendix Project Package (.mpk)](export-a-project-package) for more information
 *   Reproducible steps
 
 {{% alert type="info" %}}

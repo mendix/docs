@@ -57,4 +57,4 @@ To give existing project members access to submit tickets, follow these steps:
 
 ## 4 Related Content
 
-*   [How to Change the Affected Apps for Which You Can Submit Requests](how-to-change-the-affected-apps-for-which-you-can-submit-requests)
+*   [How to Change the Affected Apps for Which You Can Submit Requests](change-affected-apps)

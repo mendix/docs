@@ -1,10 +1,10 @@
 ---
-title: "Reference Documentation"
+title: "Mendix Platform SDK References"
 category: "Mendix Platform SDK"
 menu_order: 40
 ---
 
-## 1 Introduction to the Reference Documentation
+## 1 Introduction
 
 Below is a collection of links to documentation about the Mendix metamodel as well as external resources you can use as a reference for programming with the Mendix SDK.
 

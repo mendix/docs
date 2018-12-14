@@ -1,6 +1,7 @@
 ---
 title: "Ticket Priority"
-category: "Mendix Support"
+parent: "support-details"
+menu_order: 20
 #description: ""
 #tags: []
 ---

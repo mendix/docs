@@ -206,5 +206,5 @@ In the previous section you have set some access rules to your domain model. In
 
 *   [Security](security)
 *   [Creating a secure app](creating-a-secure-app)
-*   [Required Network Access for connecting to the Mendix Platform](/developerportal/support/how-to-calculate-diskspace-of-a-cloud-app-environment)
+*   [Required Network Access for connecting to the Mendix Platform](/developerportal/support/calculate-diskspace-of-a-cloud-app-environment)
 *   [Anonymous User Security](anonymous-user-security)

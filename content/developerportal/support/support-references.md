@@ -1,6 +1,6 @@
 ---
 title: "Mendix Support References"
-category: "Mendix Support"
+parent: "support-references"
 ---
 
 The following documents present reference information addressing the requests that Mendix Support receives most frequently:
@@ -9,7 +9,7 @@ The following documents present reference information addressing the requests th
 * [Hashing Algorithms](hashing-algorithms)
 * [Calculate the Total Amount of Disk Space of a Cloud App Environment](calculate-diskspace-of-a-cloud-app-environment)
 * [Export a Mendix Project Package](export-a-project-package)
-* [Set Up Two-Factor Authentication With Google Authenticator](set-up-two-factor-authentication-with-google-authenticator)
+* [Set Up Two-Factor Authentication With Google Authenticator](set-up-two-factor-authentication)
 * [License Key Activation on Linux](license-key-activation-on-linux)
 * [Tricky Custom Settings in Mendix Runtime](mendix-customsettings-tricky)
 * [Mendix IP Addresses](mendix-ip-addresses)

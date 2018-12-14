@@ -75,8 +75,8 @@ Mendix supports the current major release and the two prior major releases (and 
 
 ## 9 Main Documents in This Category
 
-* [Mendix Support Details](support-info)
-* [Mendix Support How-to's](support-how-to's)
+* [Mendix Support Details](support-details)
+* [Mendix Support References](support-references)
 
 
 

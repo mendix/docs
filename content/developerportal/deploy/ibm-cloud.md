@@ -141,7 +141,7 @@ Sync your app with the Desktop Modeler as described in [Sync the Web Modeler & D
 Once you have your app in the Desktop Modeler, you can do one of the following: 
 
 * deploy it directly from the Desktop Modeler (see section 3.3.2, [Deploying from Within the Desktop Modeler](#deploy-dm))
-* commit from the Desktop Modeler and then deploy it from the Developer Portal (see section 3.3.3 [Deploying from the Developer Portal](#deploy-dp))
+* commit from the Desktop Modeler and then deploy it from the Developer Portal (see section 3.3.3, [Deploying from the Developer Portal](#deploy-dp))
 
 #### 3.3.2 Deploying from Within the Desktop Modeler{#deploy-dm}
 

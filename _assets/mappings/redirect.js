@@ -1,7 +1,7 @@
 module.exports = {
   "redirect": [
     /****************************************************
-     * GENERAL REDIRECTS
+     * General Redirects
      ****************************************************/
     {
       from: "/docs/Overview",
@@ -12,575 +12,7 @@ module.exports = {
       to: "/"
     },
     /****************************************************
-     * APPSTORE
-     ****************************************************/
-    {
-      from: "/community/app-store/share-app-store-content",
-      to: "/developerportal/app-store/share-app-store-content"
-    },
-    {
-      from: "/community/app-store-content-support",
-      to: "/developerportal/app-store/app-store-content-support"
-    },
-    {
-      from: "/community/app-store/use-app-store-content-in-the-modeler",
-      to: "/developerportal/app-store/use-app-store-content-in-the-modeler"
-    },
-    /****************************************************
-     * Best Practices
-     ****************************************************/
-    {
-      from: "/howtogeneral/bestpractices/best-practices-security-and-improvements-for-mendix-applications",
-      to: "/howto/security/best-practices-security"
-    },
-    /****************************************************
-     * Community
-     ****************************************************/
-    {
-      from: "/community/tools/the-mendix-job-board",
-      to: "/developerportal/community-tools/mendix-job-board"
-    },
-    {
-      from: "/community/tools/the-mendix-mvp-program",
-      to: "/developerportal/community-tools/mendix-mvp-program"
-    },    
-    /****************************************************
-     * HOWTO MENDIX 6
-     ****************************************************/
-    {
-      from: "/howto6/Mendix+6+How-to's",
-      to: "/howto6/"
-    },
-    {
-      from: "/howto6/Access+a+Samba+share+from+the+MxCloud",
-      to: "/howto6/access-a-samba-share-from-the-mxcloud"
-    },
-    {
-      from: "/howto6/Activate+a+Mendix+License+on+Microsoft+Windows",
-      to: "/developerportal/deploy/activate-a-mendix-license-on-microsoft-windows"
-    },
-    {
-      from: "/howto6/APIs",
-      to: "/howto6/apis"
-    },
-    {
-      from: "/howto6/Build+a+Simple+HRM+App",
-      to: "/howto6/build-a-simple-hrm-app"
-    },
-    {
-      from: "/howto6/Build+a+simple+HRM+app+1+Create+manage+and+deploy+the+app",
-      to: "/howto6/build-a-simple-hrm-app-1-create-manage-and-deploy-the-app"
-    },
-    {
-      from: "/howto6/Build+a+simple+HRM+app+2+First+steps+in+building+a+rich+GUI",
-      to: "/howto6/build-a-simple-hrm-app-2-first-steps-in-building-a-rich-gui"
-    },
-    {
-      from: "/howto6/Build+a+simple+HRM+app+3+Show+related+data+in+the+GUI",
-      to: "/howto6/build-a-simple-hrm-app-3-show-related-data-in-the-gui"
-    },
-    {
-      from: "/howto6/Build+a+simple+HRM+app+4+Enrich+the+GUI+with+Filter+Options",
-      to: "/howto6/build-a-simple-hrm-app-4-enrich-the-gui-with-filter-options"
-    },
-    {
-      from: "/howto6/Build+a+simple+HRM+app+5+Smarten+up+your+app+with+business+logic",
-      to: "/howto6/build-a-simple-hrm-app-5-smarten-up-your-app-with-business-logic"
-    },
-    {
-      from: "/howto6/Building+a+Mendix+Hybrid+Mobile+App+for+Windows+Phone",
-      to: "/howto6/building-a-mendix-hybrid-mobile-app-for-windows-phone"
-    },
-    {
-      from: "/howto6/Clear+Warning+Messages",
-      to: "/howto6/clear-warning-messages"
-    },
-    {
-      from: "/howto6/Consuming+a+complex+web+service",
-      to: "/howto6/consume-a-complex-web-service"
-    },
-    {
-      from: "/howto6/Consume+a+Complex+Web+Service",
-      to: "/howto6/consume-a-complex-web-service"
-    },
-    {
-      from: "/howto6/Consume+a+REST+Service",
-      to: "/howto6/consume-a-rest-service"
-    },
-    {
-      from: "/howto6/consuming+a+rest+service",
-      to: "/howto6/consume-a-rest-service"
-    },
-    {
-      from: "/howto6/Consuming+a+simple+Web+Service",
-      to: "/howto6/consume-a-simple-web-service"
-    },
-    {
-      from: "/howto6/Consume+a+Simple+Web+Service",
-      to: "/howto6/consume-a-simple-web-service"
-    },
-    {
-      from: "/howto6/Contribute+to+a+GitHub+Repository",
-      to: "/howto6/contribute-to-a-github-repository"
-    },
-    {
-      from: "/howto6/Create+a+Basic+Data+Layer",
-      to: "/howto6/create-a-basic-data-layer"
-    },
-    {
-      from: "/howto6/Creating+a+Basic+Data+Layer",
-      to: "/howto6/create-a-basic-data-layer"
-    },
-    {
-      from: "/howto6/Create+a+Basic+Hello+World+Custom+Widget",
-      to: "/howto6/create-a-basic-hello-world-custom-widget"
-    },
-    {
-      from: "/howto6/Create+a+Chainable+Custom+Widget",
-      to: "/howto6/create-a-chainable-custom-widget"
-    },
-    {
-      from: "/howto6/Create+a+Custom+Save+Button",
-      to: "/howto6/create-a-custom-save-button"
-    },
-    {
-      from: "/howto6/Create+a+custom+theme+with+the+Mendix+UI+Framework",
-      to: "/howto6/create-a-custom-theme-with-the-mendix-ui-framework"
-    },
-    {
-      from: "/howto6/Create+a+Secure+App",
-      to: "/howto6/create-a-secure-app"
-    },
-    {
-      from: "/howto6/Creating+a+Secure+App",
-      to: "/howto6/create-a-secure-app"
-    },
-    {
-      from: "/howto6/Create+and+Deploy+Your+First+App",
-      to: "/howto6/create-and-deploy-your-first-app"
-    },
-    {
-      from: "/howto6/Create+your+first+Microflow+Hello+World",
-      to: "/howto6/create-your-first-microflow-hello-world"
-    },
-    {
-      from: "/howto6/Create+Your+First+Two+Overview+and+Detail+Pages",
-      to: "/howto6/create-your-first-two-overview-and-detail-pages"
-    },
-    {
-      from: "/howto6/Debug+a+Hybrid+Mobile+Application",
-      to: "/howto6/debug-a-hybrid-mobile-application"
-    },
-    {
-      from: "/howto6/Debug+Java+Actions",
-      to: "/howto6/debug-java-actions"
-    },
-    {
-      from: "/howto6/Debug+Java+Actions+Remotely",
-      to: "/howto6/debug-java-actions-remotely"
-    },
-    {
-      from: "/howto6/Debug+Microflows",
-      to: "/howto6/debug-microflows"
-    },
-    {
-      from: "/howto6/Debugging+Microflows",
-      to: "/howto6/debug-microflows"
-    },
-    {
-      from: "/howto6/Debug+Microflows+Remotely",
-      to: "/howto6/debug-microflows-remotely"
-    },
-    {
-      from: "/howto6/Define+Access+Rules+Using+XPath",
-      to: "/howto6/define-access-rules-using-xpath"
-    },
-    {
-      from: "/howto6/Denormalize+Data+to+Improve+Performance",
-      to: "/howto6/denormalize-data-to-improve-performance"
-    },
-    {
-      from: "/howto6/Deploy+a+Mendix+App+to+IBM+Bluemix",
-      to: "/developerportal/deploy/cloud-foundry-deploy"
-    },
-    {
-      from: "/howto6/deploying+a+mendix+app+to+ibm+bluemix",
-      to: "/developerportal/deploy/cloud-foundry-deploy"
-    },
-    {
-      from: "/howto6/Deploy+a+Mendix+App+to+Pivotal",
-      to: "/developerportal/deploy/cloud-foundry-deploy"
-    },
-    {
-      from: "/howto6/Deploy+Mendix+on+Microsoft+Windows",
-      to: "/developerportal/deploy/deploy-mendix-on-microsoft-windows"
-    },
-    {
-      from: "/howto6/Deploying+a+Mendix+App+to+Cloud+Foundry",
-      to: "/developerportal/deploy/cloud-foundry-deploy"
-    },
-    {
-      from: "/howto6/deploying+to+the+cloud",
-      to: "/developerportal/deploy/mendix-cloud-deploy"
-    },
-    {
-      from: "/howto6/Design+the+Architecture",
-      to: "/developerportal/deploy/on-premises-design"
-    },
-    {
-      from: "/howto6/Architecture+Options",
-      to: "/developerportal/deploy/on-premises-design"
-    },
-    {
-      from: "/howto6/Detect+and+Resolve+Performance+Issues",
-      to: "/howto6/detect-and-resolve-performance-issues"
-    },
-    {
-      from: "/howto6/Drag+Microflows+and+Pages+into+a+Microflow",
-      to: "/howto6/drag-microflows-and-pages-into-a-microflow"
-    },
-    {
-      from: "/howto6/Explore+the+Connectors+and+Adapters",
-      to: "/howto6/explore-the-connectors-and-adapters"
-    },
-    {
-      from: "/howto6/Exporting+XML+Documents",
-      to: "/howto6/export-xml-documents"
-    },
-    {
-      from: "/howto6/Export+XML+Documents",
-      to: "/howto6/export-xml-documents"
-    },
-    {
-      from: "/howto6/Expose+a+web+service",
-      to: "/howto6/expose-a-web-service"
-    },
-    {
-      from: "/howto6/Exposing+a+web+service",
-      to: "/howto6/expose-a-web-service"
-    },
-    {
-      from: "/howto6/Extendability",
-      to: "/howto6/extendability"
-    },
-    {
-      from: "/howto6/Extending+Your+Application+with+Custom+Java",
-      to: "/howto6/extending-your-application-with-custom-java"
-    },
-    {
-      from: "/howto6/Extract+and+use+sub+microflows",
-      to: "/howto6/extract-and-use-sub-microflows"
-    },
-    {
-      from: "/howto6/Filtering+Data+on+an+Overview+Page",
-      to: "/howto6/filtering-data-on-an-overview-page"
-    },
-    {
-      from: "/howto6/Finding+the+Root+Cause+of+Runtime+Errors",
-      to: "/howto6/finding-the-root-cause-of-runtime-errors"
-    },
-    {
-      from: "/howto6/Gathering+user+feedback",
-      to: "/developerportal/feedback/use-feedback-widget"
-    },
-    {
-      from: "/howto6/Getting+Started",
-      to: "/howto6/getting-started"
-    },
-    {
-      from: "/howto6/Getting+started+with+the+Widget+Development+Plugin+for+Adobe+Brackets",
-      to: "/howto6/getting-started-with-the-widget-development-plugin-for-adobe-brackets"
-    },
-    {
-      from: "/howto6/GUI's",
-      to: "/howto6/guis"
-    },
-    {
-      from: "/howto6/Handle+Common+Mendix+SSO+Errors",
-      to: "/howto6/handle-common-mendix-sso-errors"
-    },
-    {
-      from: "/howto6/High+Availability",
-      to: "/developerportal/deploy/high-availability"
-    },
-    {
-      from: "/howto6/How+To+Enable+WKWebView+for+Hybrid+App+for+iOS",
-      to: "/howto6/how-to-enable-wkwebview-for-hybrid-app-for-ios"
-    },
-    {
-      from: "/howto6/How+to+incorporate+Mendix+application+with+Amazon+Machine+Learning",
-      to: "/howto6/how-to-incorporate-mendix-application-with-amazon-machine-learning"
-    },
-    {
-      from: "/howto6/Implementation+Guide",
-      to: "/howto6/implementation-guide"
-    },
-    {
-      from: "/howto6/Importing+and+Exporting+Objects",
-      to: "/howto6/importing-and-exporting-objects"
-    },
-    {
-      from: "/howto6/Importing+Excel+Documents",
-      to: "/howto6/importing-excel-documents"
-    },
-    {
-      from: "/howto6/Importing+XML+documents",
-      to: "/howto6/importing-xml-documents"
-    },
-    {
-      from: "/howto6/Install+and+Configure+the+SMTP+Module",
-      to: "/howto6/install-and-configure-the-smtp-module"
-    },
-    {
-      from: "/howto6/Installing+Mendix+on+Debian+GNU+Linux",
-      to: "/developerportal/deploy/installing-mendix-on-debian-gnu-linux"
-    },
-    {
-      from: "/howto6/Installing+Mendix+on+RedHat+and+CentOS",
-      to: "/developerportal/deploy/installing-mendix-on-redhat-and-centos"
-    },
-    {
-      from: "/howto6/Integrating+a+Legacy+System+into+a+Mendix+App",
-      to: "/howto6/integrating-a-legacy-system-into-a-mendix-app"
-    },
-    {
-      from: "/howto6/Integration",
-      to: "/howto6/integration"
-    },
-    {
-      from: "/howto6/Java+API+Tutorial",
-      to: "/howto6/java-api-tutorial"
-    },
-    {
-      from: "/howto6/Layouts+and+Snippets",
-      to: "/howto6/layouts-and-snippets"
-    },
-    {
-      from: "/howto6/Log+Levels",
-      to: "/howto6/log-levels"
-    },
-    {
-      from: "/howto6/Logic+and+Business+Rules",
-      to: "/howto6/logic-and-business-rules"
-    },
-    {
-      from: "/howto6/Manage+Application+Performance+with+AppDynamics",
-      to: "/howto6/manage-application-performance-with-appdynamics"
-    },
-    {
-      from: "/howto6/Manage+Application+Performance+with+New+Relic",
-      to: "/howto6/manage-application-performance-with-new-relic"
-    },
-    {
-      from: "/howto6/Managing+your+Application+Requirements+with+Mendix",
-      to: "/developerportal/collaborate/stories"
-    },
-    {
-      from: "/howto6/Mendix+on+Windows+-+Microsoft+SQL+Server",
-      to: "/developerportal/deploy/mendix-on-windows-microsoft-sql-server"
-    },
-    {
-      from: "/howto6/Mendix+SQL+Maintenance+Plans",
-      to: "/developerportal/deploy/mendix-sql-maintenance-plans"
-    },
-    {
-      from: "/howto6/Mobile",
-      to: "/howto6/mobile"
-    },
-    {
-      from: "/howto6/Monitoring+and+Troubleshooting",
-      to: "/howto6/monitoring-and-troubleshooting"
-    },
-    {
-      from: "/howto6/Monitoring+Mendix+using+JMX",
-      to: "/howto6/monitoring-mendix-using-jmx"
-    },
-    {
-      from: "/howto6/monitoring+application+health",
-      to: "/developerportal/operate/monitoring-application-health"
-    },
-    {
-      from: "/howto6/Optimizing+Microflow+Aggregates",
-      to: "/howto6/optimizing-microflow-aggregates"
-    },
-    {
-      from: "/howto6/Optimizing+Retrieve+Activities",
-      to: "/howto6/optimizing-retrieve-activities"
-    },
-    {
-      from: "/howto6/Push+Notifications",
-      to: "/howto6/push-notifications"
-    },
-    {
-      from: "/howto6/Restoring+a+SQL+Server+database",
-      to: "/developerportal/deploy/restoring-a-sql-server-database"
-    },
-    {
-      from: "/howto6/Scaffold+a+widget+with+the+Yeoman+Widget+generator",
-      to: "/howto6/scaffold-a-widget-with-the-yeoman-widget-generator"
-    },
-    {
-      from: "/howto6/Scout+and+Windows+10+Workaround",
-      to: "/howto6/scout-and-windows-10-workaround"
-    },
-    {
-      from: "/howto6/Security",
-      to: "/howto6/security"
-    },
-    {
-      from: "/howto6/Security+checklist+for+your+on+premises+installation",
-      to: "/developerportal/deploy/security-checklist-for-your-on-premises-installation"
-    },
-    {
-      from: "/howto6/Selenium+Support",
-      to: "/howto6/selenium-support"
-    },
-    {
-      from: "/howto6/Set+Up+Anonymous+User+Security",
-      to: "/howto6/set-up-anonymous-user-security"
-    },
-    {
-      from: "/howto6/Set+Up+Error+Handling",
-      to: "/howto6/set-up-error-handling"
-    },
-    {
-      from: "/howto6/Setting+up+a+new+SQL+Server+database",
-      to: "/developerportal/deploy/setting-up-a-new-sql-server-database"
-    },
-    {
-      from: "/howto6/Setting+up+a+SQL+Server+user",
-      to: "/developerportal/deploy/setting-up-a-sql-server-user"
-    },
-    {
-      from: "/howto6/Setting+up+Apple+Push+Notification+Server",
-      to: "/howto6/setting-up-apple-push-notification-server"
-    },
-    {
-      from: "/howto6/Setting+up+data+validation",
-      to: "/howto6/setting-up-data-validation"
-    },
-    {
-      from: "/howto6/Setting+up+Google+Firebase+Cloud+Messaging+Server",
-      to: "/howto6/setting-up-google-firebase-cloud-messaging-server"
-    },
-    {
-      from: "/howto6/Setting+up+monitoring+with+New+Relic",
-      to: "/developerportal/deploy/setting-up-monitoring-with-new-relic"
-    },
-    {
-      from: "/howto6/Setting+up+the+database+user",
-      to: "/developerportal/deploy/setting-up-the-database-user"
-    },
-    {
-      from: "/howto6/Setting+Up+the+Navigation+Structure",
-      to: "/howto6/setting-up-the-navigation-structure"
-    },
-    {
-      from: "/howto6/Setup+Mendix+UI+Framework",
-      to: "/howto6/setup-mendix-ui-framework"
-    },
-    {
-      from: "/howto6/Setup+Mendix+UI+Framework+with+just+CSS",
-      to: "/howto6/setup-mendix-ui-framework-with-just-css"
-    },
-    {
-      from: "/howto6/Setup+Mendix+UI+Framework+with+Koala",
-      to: "/howto6/setup-mendix-ui-framework-with-koala"
-    },
-    {
-      from: "/howto6/Sharing+the+Development+Database",
-      to: "/howto6/sharing-the-development-database"
-    },
-    {
-      from: "/howto6/Solving+Load+and+Import+Errors",
-      to: "/howto6/solving-load-and-import-errors"
-    },
-    {
-      from: "/howto6/Starting+your+own+repository",
-      to: "/howto6/starting-your-own-repository"
-    },
-    {
-      from: "/howto6/String+Concatenation",
-      to: "/howto6/string-concatenation"
-    },
-    {
-      from: "/howto6/Style+Google+Maps",
-      to: "/howto6/style-google-maps"
-    },
-    {
-      from: "/howto6/Synchronizing+user+accounts+using+the+LDAP+module",
-      to: "/howto6/synchronizing-user-accounts-using-the-ldap-module"
-    },
-    {
-      from: "/howto6/Testing",
-      to: "/howto6/testing"
-    },
-    {
-      from: "/howto6/Testing+microflows+using+the+UnitTesting+module",
-      to: "/howto6/testing-microflows-using-the-unittesting-module"
-    },
-    {
-      from: "/howto6/Testing+the+Implementation",
-      to: "/howto6/testing-the-implementation"
-    },
-    {
-      from: "/howto6/Testing+web+services+using+SoapUI",
-      to: "/howto6/testing-web-services-using-soapui"
-    },
-    {
-      from: "/howto6/The+Mobile+Slider+Custom+Widget",
-      to: "/howto6/the-mobile-slider-custom-widget"
-    },
-    {
-      from: "/howto6/Translate+Your+App+Content",
-      to: "/howto6/translate-your-app-content"
-    },
-    {
-      from: "/howto6/Triggering+Logic+using+Microflows",
-      to: "/howto6/triggering-logic-using-microflows"
-    },
-    {
-      from: "/howto6/Troubleshooting",
-      to: "/developerportal/deploy/troubleshooting-iis"
-    },
-    {
-      from: "/howto6/Troubleshooting+SQL+Server",
-      to: "/developerportal/deploy/troubleshooting-sql-server"
-    },
-    {
-      from: "/howto6/Updating+a+Mendix+Application",
-      to: "/developerportal/deploy/updating-a-mendix-application"
-    },
-    {
-      from: "/howto6/Use+Connectors+and+Adapters",
-      to: "/howto6/use-connectors-and-adapters"
-    },
-    {
-      from: "/howto6/Using+Team+Server+-+Version+Control",
-      to: "/howto6/using-team-server-version-control"
-    },
-    {
-      from: "/howto6/Using+the+Excel+Exporter",
-      to: "/howto6/using-the-excel-exporter"
-    },
-    {
-      from: "/howto6/Visualize+Data+using+the+ChartsJS+Module",
-      to: "/howto6/visualize-data-using-the-chartsjs-module"
-    },
-    {
-      from: "/howto6/Working+with+images+and+files",
-      to: "/howto6/working-with-images-and-files"
-    },
-    {
-      from: "/howto6/Working+With+Lists+in+a+Microflow",
-      to: "/howto6/working-with-lists-in-a-microflow"
-    },
-    {
-      from: "/howto6/Working+With+Object+Events",
-      to: "/howto6/working-with-object-events"
-    },
-    /****************************************************
-     * HOWTO MENDIX 7
+     * How-to 7
      ****************************************************/
     {
       from: "/howto/deploying-a-mendix-app-to-cloud-foundry",
@@ -593,10 +25,6 @@ module.exports = {
     {
       from: "/deploy-a-mendix-app-to-cloud-foundry",
       to: "/developerportal/deploy/cloud-foundry-deploy"
-    },
-    {
-      from: "/bestpractices/How+to+execute+an+SQL+statement+on+an+external+database",
-      to: "/howto/integration/execute-an-sql-statement-on-an-external-database"
     },
     {
       from: "/howto7/solving-load-and-import-errors",
@@ -621,6 +49,10 @@ module.exports = {
     {
       from: "/howtogeneral/bestpractices/ux-best-practices",
       to: "/howto/ux/ux-best-practices"
+    },
+	{
+      from: "/howtogeneral/bestpractices/best-practices-security-and-improvements-for-mendix-applications",
+      to: "/howto/security/best-practices-security"
     },
     /****************************************************
      * Mendix Cloud
@@ -730,7 +162,7 @@ module.exports = {
       to: "/developerportal/deploy/cloud-foundry-deploy"
     },
     /****************************************************
-     * SUPPORT
+     * Support
      ****************************************************/
     {
       from: "/mxsupport/technical-contact",
@@ -758,6 +190,26 @@ module.exports = {
     {
       from: "/developerportal/operate/mendix-cloud-status",
       to: "/developerportal/deploy/mendix-cloud-status"
+    },
+	{
+      from: "/community/app-store/share-app-store-content",
+      to: "/developerportal/app-store/share-app-store-content"
+    },
+    {
+      from: "/community/app-store-content-support",
+      to: "/developerportal/app-store/app-store-content-support"
+    },
+    {
+      from: "/community/app-store/use-app-store-content-in-the-modeler",
+      to: "/developerportal/app-store/use-app-store-content-in-the-modeler"
+    },
+	{
+      from: "/community/tools/the-mendix-job-board",
+      to: "/developerportal/community-tools/mendix-job-board"
+    },
+    {
+      from: "/community/tools/the-mendix-mvp-program",
+      to: "/developerportal/community-tools/mendix-mvp-program"
     },
     /****************************************************
      * REFERENCE GUIDE MENDIX 4

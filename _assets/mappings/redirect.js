@@ -58,28 +58,12 @@ module.exports = {
      * Mendix Cloud
      ****************************************************/
     {
-      from: "/mendixcloud/Custom+Domains",
-      to: "/developerportal/deploy/custom-domains"
-    },
-    {
       from: "/mendixcloud/custom-domains",
       to: "/developerportal/deploy/custom-domains"
     },
     {
-      from: "/mendixcloud/Deploying+to+the+cloud",
-      to: "/developerportal/deploy/mendix-cloud-deploy"
-    },
-    {
       from: "/mendixcloud/deploying-to-the-cloud",
       to: "/developerportal/deploy/mendix-cloud-deploy"
-    },
-    {
-      from: "/mendixcloud/Different+user+logins+when+integrated+with+Mendix+SSO",
-      to: "/developerportal/deploy/managing-mendix-sso"
-    },
-    {
-      from: "/mendixcloud/How+to+deploy+a+Mendix+app+on+Azure",
-      to: "/developerportal/deploy/azure-deploy"
     },
     {
       from: "/mendixcloud/how-to-link-app-to-node",
@@ -94,60 +78,20 @@ module.exports = {
       to: "/developerportal/deploy/licensing-apps"
     },
     {
-      from: "/mendixcloud/Mendix+Cloud",
-      to: "/developerportal/deploy/mendix-cloud-deploy"
-    },
-    {
-      from: "/mendixcloud/Mendix+Cloud+Home",
-      to: "/developerportal/deploy/mendix-cloud-deploy"
-    },
-    {
-      from: "/mendixcloud/Integrate+your+app+with+Mendix+SSO",
-      to: "/developerportal/deploy/integrate-with-mendix-sso"
-    },
-    {
-      from: "/mendixcloud/Java+in+the+Cloud",
-      to: "/developerportal/deploy/java-in-the-cloud"
-    },
-    {
-      from: "/mendixcloud/Maintenance+Windows",
-      to: "/developerportal/deploy/maintenance-windows"
-    },
-    {
       from: "/mendixcloud/maintenance-windows",
       to: "/developerportal/deploy/maintenance-windows"
-    },
-    {
-      from: "/mendixcloud/migrating+to+v4",
-      to: "/developerportal/deploy/migrating-to-v4"
     },
     {
       from: "/developerportal/howto/migrating-to-v4",
       to: "/developerportal/deploy/migrating-to-v4"
     },
     {
-      from: "/mendixcloud/Monitoring+application+health",
-      to: "/developerportal/operate/monitoring-application-health"
-    },
-    {
       from: "/mendixcloud/monitoring-application-health",
       to: "/developerportal/operate/monitoring-application-health"
     },
     {
-      from: "/mendixcloud/Securing+Outgoing+Connections+from+your+Application",
-      to: "/developerportal/deploy/securing-outgoing-connections-from-your-application"
-    },
-    {
-      from: "/mendixcloud/Sending+Email",
-      to: "/developerportal/deploy/sending-email"
-    },
-    {
       from: "/deployment/mendixcloud/how-to-deploy-a-mendix-app-on-azure",
       to: "/developerportal/deploy/azure-deploy"
-    },
-    {
-      from: "/mendixcloud/Trends",
-      to: "/developerportal/operate/trends"
     },
     {
       from: "/developerportal/howto/deploying-to-the-cloud",
@@ -177,7 +121,7 @@ module.exports = {
       to: "/developerportal/company-app-roles/technical-contact"
     },
     /****************************************************
-     * DEVELOPER PORTAL
+     * Developer Portal Guide
      ****************************************************/
     {
       from: "/developerportal/settings/technical-contact",
@@ -212,7 +156,7 @@ module.exports = {
       to: "/developerportal/community-tools/mendix-mvp-program"
     },
     /****************************************************
-     * REFERENCE GUIDE MENDIX 4
+     * Reference Guide 4
      ****************************************************/
     {
       from: "/refguide4/Access+Rules",

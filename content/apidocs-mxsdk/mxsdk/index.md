@@ -6,7 +6,7 @@ title: "Mendix Platform SDK"
 
 Before the Mendix SDK can make your life easier, there are some learning to do. First, read the [Introduction to the Mendix Platform SDK](sdk-intro) and the [FAQ](faq). Then, follow the step-by-step guides listed below to learn everything you need about using the SDK. After finishing the how-to's, you'll not only know how to use the SDK, but also how all the parts fit together.
 
-These are the how-to's for the Mendix Platform SDK:
+These are the how-to's for the [Mendix Platform SDK](https://apidocs.mendix.com/platformsdk/latest/):
 
 * [How to Set Up Your Development Environment](setting-up-your-development-environment)
 * [How to Create Your First Script](creating-your-first-script)

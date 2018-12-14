@@ -174,59 +174,17 @@ module.exports = {
       from: "/refguide7/certificates",
       to: "/developerportal/deploy/certificates"
     },
-    /****************************************************
-     * REFERENCE GUIDE RENAMES
-     ****************************************************/
     {
-      "from": "/refguide/download-from-team-server-dialog",
-      "to": "/refguide/download-from-version-control-dialog"
+      from: "/refguide/download-from-team-server-dialog",
+      to: "/refguide/download-from-version-control-dialog"
     },
     {
-      "from": "/refguide/open-project-dialog",
-      "to": "/refguide/open-app-dialog"
+      from: "/refguide/open-project-dialog",
+      to: "/refguide/open-app-dialog"
     },
     {
-      "from": "/refguide/upload-to-team-server-dialog",
-      "to": "/refguide/upload-to-version-control-dialog"
-    },
-    /****************************************************
-     * TIPS & TRICKS
-     ****************************************************/
-    {
-      from: "/tips/Finding+Object+Activities",
-      to: "/howto/tips/finding-object-activities"
-    },
-    {
-      from: "/tips/Finding+Unused+Items",
-      to: "/howto/tips/finding-unused-items"
-    },
-    {
-      from: "/tips/Finding+your+way+through+a+project",
-      to: "/howto/tips/finding-your-way-through-a-project"
-    },
-    {
-      from: "/tips/Import+a+large+Excel+file",
-      to: "/howto/tips/import-a-large-excel-file"
-    },
-    {
-      from: "/tips/Tips+and+Tricks",
-      to: "/howto/tips/"
-    },
-    {
-      from: "/tips/Migrating+your+Mendix+database",
-      to: "/howto/tips/migrating-your-mendix-database"
-    },
-    {
-      from: "/tips/Querying+over+self-references",
-      to: "/howto/tips/querying-over-self-references"
-    },
-    {
-      from: "/tips/Showing+a+Project+in+the+Directory+in+Explorer",
-      to: "/howto/tips/showing-a-project-in-the-directory-in-explorer"
-    },
-    {
-      from: "/tips/Translatable+Validation+Messages",
-      to: "/howto/tips/translatable-validation-messages"
+      from: "/refguide/upload-to-team-server-dialog",
+      to: "/refguide/upload-to-version-control-dialog"
     },
     /****************************************************
      * APM
@@ -247,7 +205,7 @@ module.exports = {
     //   exact: true
     // },
     /****************************************************
-     * RELEASE NOTES
+     * Release Notes
      ****************************************************/
     {
       from: "/ReleaseNotes/",

@@ -15,24 +15,12 @@ module.exports = {
      * APPSTORE
      ****************************************************/
     {
-      from: "/appstore/App+Store+Approval+Guidelines",
-      to: "/developerportal/app-store/share-app-store-content"
-    },
-    {
       from: "/community/app-store/share-app-store-content",
       to: "/developerportal/app-store/share-app-store-content"
     },
     {
       from: "/community/app-store-content-support",
       to: "/developerportal/app-store/app-store-content-support"
-    },
-    {
-      from: "/appstore/App+Store",
-      to: "/developerportal/app-store/"
-    },
-    {
-      from: "/appstore/App+Store+Home",
-      to: "/developerportal/app-store/"
     },
     {
       from: "/community/app-store/use-app-store-content-in-the-modeler",

@@ -4,10 +4,6 @@ module.exports = {
      * GENERAL REDIRECTS
      ****************************************************/
     {
-      from: "/docs/Overview",
-      to: "/"
-    },
-    {
       from: "/docs/",
       to: "/"
     },

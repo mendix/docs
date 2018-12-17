@@ -9,8 +9,8 @@ These are the [Platform SDK](/apidocs-mxsdk/mxsdk/) release notes, including all
 
 **Release date: December 17th, 2018**
 
-* We introduced `PlatformSdkClient.deleteApp()` that allows users to delete an app from the Mendix platform.
-* We made the `loadAsPromise()` API compatible with Model SDK 4.18.0.
+* We introduced `PlatformSdkClient.deleteApp()`, which allows users to delete an app from the Mendix Platform.
+* We made `loadAsPromise()` compatible with the [Model SDK version 4.18.0](model-sdk-4#418).
 * The Platform SDK now requires an ES6 environment to run.
 * We upgraded the dependencies.
 * We upgraded the typings to TypeScript 3.

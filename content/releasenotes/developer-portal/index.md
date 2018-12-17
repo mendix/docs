@@ -6,6 +6,12 @@ tags: ["developer portal", "cloud environments", "Mendix Cloud", "SAP", "IBM", "
 
 ## 2018
 
+### December 14th, 2018
+
+#### App Store Improvements
+
+* We have noticed that when searching in the App Store (via the **Search Mendix** search bar), users frequently use keywords like **Mendix**, **Modeler**, **Desktop**, and **Download** as well as different Desktop Modeler versions. The search results did not provide the expected results based on these keywords (as in, they did not show the Modeler download page). With this update, it is now possible to search for the Modeler and all of its versions in the **Search Mendix** search bar, which will redirect you to the [Desktop Modeler page](https://appstore.home.mendix.com/link/modelers/) in the Mendix App Store.
+
 ### December 12th, 2018
 
 #### Improvements

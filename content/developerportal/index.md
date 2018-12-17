@@ -82,4 +82,6 @@ Clicking the question icon in the Developer Portal brings up the options Mendix 
 
 ## 11 Document Categories
 
+The *Developer Portal Guide* is divided into the following categories:
+
 {{% category_block %}}

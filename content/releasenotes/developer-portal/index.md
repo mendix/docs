@@ -6,7 +6,7 @@ tags: ["developer portal", "cloud environments", "Mendix Cloud", "SAP", "IBM", "
 
 ## 2018
 
-### December 14th, 2018
+### December 17th, 2018
 
 #### App Store Improvements
 

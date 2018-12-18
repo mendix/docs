@@ -131,7 +131,7 @@ When you enter the subject of the request, the Mendix Support Portal will sugges
 
 If that does not help you solve your issue, you can submit the request.
 
-## 7 Request Priority
+## 7 Request Priority {#request-priority}
 
 You can select the priority that you feel the request should have. Please note the SLA regulations for this priority (which can be checked online as well).
 

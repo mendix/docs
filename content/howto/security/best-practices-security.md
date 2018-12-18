@@ -119,7 +119,7 @@ The password policy can be set by via the guidelines described in [Password Poli
 
 Each application requires power users who should be able to administer technical functions (like configuring SSO). By default, the user who has these capabilities is called **MxAdmin** and has the **Administrator** role.
 
-This information can be exploited by an attacker (for example, by trying to guess the password). Even though Mendix will block the user for  about 5 minutes after three unsuccessful login attempts, renamingthe default MxAdmin user is recommended.
+This information can be exploited by an attacker (for example, by trying to guess the password). Even though Mendix will block the user for  about 5 minutes after three unsuccessful login attempts, renaming the default MxAdmin user is recommended.
 
 The user name of the administrator can be changed in the Desktop Modeler's **Project Security** settings on the **Administrator** tab.
 

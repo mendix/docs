@@ -123,7 +123,7 @@ This information can be exploited by an attacker (for example, by trying to gues
 
 The user name of the administrator can be changed in the Desktop Modeler's **Project Security** settings on the **Administrator** tab.
 
-When deployed to the Mendix Cloud, the administrator password needs to be reset before the changes come into effect. You can activate the changed username by successfully changing the password with the **Change admin password** button on the environment.
+When deployed to the Mendix Cloud, the information about administrator user name and role is taken into account when using the **Change admin password** button on the environment. After changing settings in the Desktop Modeler and redeploying the application, a successful admin password change will trigger creating a user in the application with the new name and role. *Note* that at this point the application does not automatically remove the user with the previous user name. Removing the old **MxAdmin** account has to be done manually.
 
 ## 10 Using SSL on Consumed Web Services Whenever Possible
 

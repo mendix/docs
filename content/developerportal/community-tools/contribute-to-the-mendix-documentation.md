@@ -59,8 +59,8 @@ The sections below present the key steps in writing new documentation for Mendix
 
 To submit a new how-to or reference guide page to the Mendix documentation, start with a Mendix documentation template:
 
-* To get the how-to template, right-click this link and save the file locally: [How-to Template](https://raw.githubusercontent.com/mendix/docs/development/templates/the-how-to-template.md)
-* To get the reference guide page template, right-click this link and save the file locally: [Reference Guide Page Template](https://raw.githubusercontent.com/mendix/docs/development/templates/the-reference-guide-page-template.md)
+* To get the how-to template, right-click this link and save the file locally: [How-to Template](attachments/contribute-to-the-mendix-documentation/the-how-to-template.md)
+* To get the reference guide page template, right-click this link and save the file locally: [Reference Guide Page Template](attachments/contribute-to-the-mendix-documentation/the-reference-guide-page-template.md)
 
 ### 4.2 Guidelines & Conventions {#naming}
 

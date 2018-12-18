@@ -64,7 +64,7 @@ Validate your security settings. The user that runs the IIS service must be able
 
 ### 3.2 Login Process Fails: 404 - Server Not Found
 
-I can see the login page in the browser, but when triggering an action I get a 404 or "server not found message".
+You can see the login page in the browser, but when triggering an action you get a 404 or "server not found message".
 
 * Did you have to enable or install additional plugins?
 	
@@ -76,11 +76,11 @@ I can see the login page in the browser, but when triggering an action I get a 4
 
 ### 3.3 Incorrect Response When Using Invalid Credentials
 
-I can sign in, but when entering an invalid password my login page shows 'server not found' instead of invalid login.
+You can sign in, but when entering an invalid password the login page shows 'server not found' instead of invalid login.
 
 Some IIS installations hide the content of any response that isn't HTTP status code 200-OK. If you enter invalid credentials during a Mendix login, Mendix returns a status code in the 400-range to indicate unauthorized access. This response also contains a JSON string with the response we want to show to the user.
 	
-Mendix cannot work if IIS is hiding detailed error messages. You need to turn on 'Detailed Error Messages'. The instruction on how to change this setting on your website can be found on the Microsoft website here: [IIS7 : HOW TO enable the detailed error messages for the website while browsed from for the client browsers](https://blogs.msdn.microsoft.com/rakkimk/2007/05/25/iis7-how-to-enable-the-detailed-error-messages-for-the-website-while-browsed-from-for-the-client-browsers/)
+Mendix cannot work if IIS is hiding detailed error messages. You need to turn on 'Detailed Error Messages'. The instructions on how to change this setting for your website can be found on the Microsoft website here: [IIS7 : HOW TO enable the detailed error messages for the website while browsed from for the client browsers](https://blogs.msdn.microsoft.com/rakkimk/2007/05/25/iis7-how-to-enable-the-detailed-error-messages-for-the-website-while-browsed-from-for-the-client-browsers/)
 
 ### 3.4 Reviewing the Mendix App Log
 
@@ -116,13 +116,13 @@ Sometimes, *shortly after the update process has begun*, a popup tells you that 
 
 Please install Mendix Service Console 4.1 or later to reduce the chance that this error occurs; from version 4.1 and up, the update process will go further after showing this error.
 
-### 2.2 Update Process: Invoke or BeginInvoke Cannot be Called
+### 4.2 Update Process: Invoke or BeginInvoke Cannot be Called
 
 Please upgrade the Mendix Service Console to version 4.1 or later if you see the following error *just before the end of the app update process*:
 
 ![](attachments/troubleshooting-iis/18580725.png)
 
-### 2.3 Unable to Start Server
+### 4.3 Unable to Start Server
 
 Sometimes, you can see the following error when you start an app:
 
@@ -132,11 +132,11 @@ With an invalid license, the app *should* start in trial mode.
 
 If this popup is shown there is a deeper cause. Firstly, try starting the app on a new database. If this works, then the database is probably corrupt. This can sometimes happen if you migrated a database from an app deployed on Mendix Cloud **v4** to an app deployed on Mendix Cloud **v3**. 
 
-### 2.4 Security Errors While Starting Service
+### 4.4 Security Errors While Starting Service
 
 When the system gives security errors while starting the service, make sure that the configured service user has sufficient rights to the folders of the Mendix application. Sometimes you have to prefix the user name with the domain name; that is, use DOMAIN_NAME\user_name instead of just user_name.
 
-### 2.5 Type Initialization
+### 4.5 Type Initialization
 
 Sometimes the Event Viewer shows a message like this:
 
@@ -146,7 +146,7 @@ EventType clr20r3, P1 mendixservice.exe, P2 1.0.3810.25652, P3 4c0cf0d8, P4 mend
 
 Make sure that the user account used to run the service has enough rights to the folders containing the Mendix Service executables and the subfolders x86 and x64.
 
-## 3 Related Content
+## 5 Related Content
 
 *   [Finding the Root Cause of Runtime Errors](/howto/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
 *   [Clearing Warning Messages in Mendix](/howto/monitoring-troubleshooting/clear-warning-messages)

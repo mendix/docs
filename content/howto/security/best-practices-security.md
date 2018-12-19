@@ -77,7 +77,7 @@ When publishing a web or REST service, you should consider whether this service 
 
 Mendix offers the following options for providing authentication for your services:
 
-* Username and password validation, specified within the Mendix Modeler (for details, see [Published Web Services](/refguide/published-web-services))
+* User name and password validation, specified within the Mendix Modeler (for details, see [Published Web Services](/refguide/published-web-services))
 * Client certificates and IP ranges, which are specified in the Mendix Cloud – these can be found at the network tab of your node’s environment details as **Access Restriction Profiles**
 
 ## 6 Using the Encryption Module When Storing Sensitive Information
@@ -119,11 +119,15 @@ The password policy can be set by via the guidelines described in [Password Poli
 
 Each application requires power users who should be able to administer technical functions (like configuring SSO). By default, the user who has these capabilities is called **MxAdmin** and has the **Administrator** role.
 
-This information can be exploited by an attacker (for example, by trying to guess the password). Even though Mendix will block the user for  about 5 minutes after three unsuccessful login attempts, renamingthe default MxAdmin user is recommended.
+This information can be exploited by an attacker (for example, by trying to guess the password). Even though Mendix will block the user for  about 5 minutes after three unsuccessful login attempts, renaming the default MxAdmin user is recommended.
 
 The user name of the administrator can be changed in the Desktop Modeler's **Project Security** settings on the **Administrator** tab.
 
-When deployed to the Mendix Cloud, the administrator password needs to be reset before the changes come into effect. You can activate the changed username by successfully changing the password with the **Change admin password** button on the environment.
+When deployed to the Mendix Cloud, the information about the administrator user name and role is taken into account when using the **Change admin password** button on the environment. After changing the settings in the Desktop Modeler and redeploying the application, a successful admin password change will trigger the creation of a user in the app with the new name and role.
+
+{{% alert type="info" %}}
+At this point, the application does not automatically remove the user with the previous user name. Removing the old **MxAdmin** account has to be done manually.
+{{% /alert %}}
 
 ## 10 Using SSL on Consumed Web Services Whenever Possible
 

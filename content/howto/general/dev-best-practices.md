@@ -31,7 +31,7 @@ Every project is named when it is created. Make sure you use a logical name that
 
 ### 2.3 Configurations
 
-Every project has at least one configuration, but it may have many. Every project starts with a single configuration called **default**. When you work with multiple people on an application it is beneficial to create multiple configurations. When doing so, we recommend using relevant names for those configurations, like the name of the developer or the app's purpose, like **Test** and **Acceptance**. Beware that the database passwords defined in the configuration will be visible to other team members, so be careful with using personal passwords you'd like to keep secret.
+Every project has at least one configuration, but it may have many. Every project starts with a single configuration called **default**. When you work with multiple people on an application it is beneficial to create multiple configurations. When doing so, we recommend using relevant names for those configurations, like the name of the developer or the app's purpose, like **Test** or **Acceptance**. Beware that the database passwords defined in the configuration will be visible to other team members, so be careful with using personal passwords you'd like to keep secret.
 
 ### 2.4 User Roles
 
@@ -93,7 +93,7 @@ The optimal grouping of your documents into folders depends on the circumstances
 
 #### 3.3.1 Process-Related Sources
 
-Every project consists of processes. Structure your documents for this process into folders that reflect those processes and their steps.
+Every project consists of processes. Structure your documents for these processes into folders that reflect individual processes and their steps.
 
 #### 3.3.2 Entity-Related Sources
 
@@ -101,7 +101,7 @@ Every project has documents that are needed for specific entities. Think of over
 
 ### 3.4 Microflows
 
-Generally, [microflow](/refguide/microflows) names should include the type of event which triggers them, the name of the main entity being processed, and the operation being performed: **{Prefix}_{Entity}_{Operation}**. For example,  **Act_Vendor_StartWorkflow**.
+Generally, [microflow](/refguide/microflows) names should include the type of event which triggers them, the name of the main entity being processed, and the operation being performed: **{Prefix}\_{Entity}\_{Operation}**. For example,  **Act_Vendor_StartWorkflow**.
 
 There are exceptions, such as where there is no main entity, or there is another reason to use a different name to improve understandability. The important thing is to make sure the name of the microflow clearly indicates its purpose.
 

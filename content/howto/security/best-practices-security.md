@@ -77,7 +77,7 @@ When publishing a web or REST service, you should consider whether this service 
 
 Mendix offers the following options for providing authentication for your services:
 
-* Username and password validation, specified within the Mendix Modeler (for details, see [Published Web Services](/refguide/published-web-services))
+* User name and password validation, specified within the Mendix Modeler (for details, see [Published Web Services](/refguide/published-web-services))
 * Client certificates and IP ranges, which are specified in the Mendix Cloud – these can be found at the network tab of your node’s environment details as **Access Restriction Profiles**
 
 ## 6 Using the Encryption Module When Storing Sensitive Information
@@ -123,7 +123,11 @@ This information can be exploited by an attacker (for example, by trying to gues
 
 The user name of the administrator can be changed in the Desktop Modeler's **Project Security** settings on the **Administrator** tab.
 
-When deployed to the Mendix Cloud, the information about administrator user name and role is taken into account when using the **Change admin password** button on the environment. After changing settings in the Desktop Modeler and redeploying the application, a successful admin password change will trigger creating a user in the application with the new name and role. *Note* that at this point the application does not automatically remove the user with the previous user name. Removing the old **MxAdmin** account has to be done manually.
+When deployed to the Mendix Cloud, the information about the administrator user name and role is taken into account when using the **Change admin password** button on the environment. After changing the settings in the Desktop Modeler and redeploying the application, a successful admin password change will trigger the creation of a user in the app with the new name and role.
+
+{{% alert type="info" %}}
+At this point, the application does not automatically remove the user with the previous user name. Removing the old **MxAdmin** account has to be done manually.
+{{% /alert %}}
 
 ## 10 Using SSL on Consumed Web Services Whenever Possible
 

@@ -4,6 +4,7 @@ parent: "support-details"
 menu_order: 10
 description: "Describes submitting a request with Mendix Support."
 tags: ["support", "incident", "standard change", "URL", "change URL", "license", "change" ]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction

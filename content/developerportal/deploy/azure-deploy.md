@@ -4,6 +4,7 @@ category: "Deployment"
 description: "Describes how to deploy a Mendix app to the IBM Cloud"
 menu_order: 70
 tags: ["Deployment", "Azure", "Microsoft", "Environment"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 Mendix is now available in the Microsoft Azure marketplace as an App that can run on a virtual server in the cloud. This means you can run your own Mendix server for an hour, day, week, or even a year, and gives you full control over the environment. This how-to will guide you through a couple of simple steps to get your Mendix app up and running.

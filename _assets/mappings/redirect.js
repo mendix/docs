@@ -11,143 +11,35 @@ module.exports = {
       from: "/docs/",
       to: "/"
     },
-    /****************************************************
-     * For Support
+	/****************************************************
+     * Reference Guide 7 - 12.19.18, Verify if Still Necessary
      ****************************************************/
-	{
-      from: "/howtogeneral/support/how-to-submit-a-request-with-mendix-support",
-      to: "/developerportal/support/submit-support-request"
+    {
+      from: "/refguide7/microflow-expressions",
+      to: "/refguide/expressions"
     },
-	{
-      from: "/appstore/App+Store+Content+Support",
-      to: "/developerportal/app-store/app-store-content-support"
+    {
+      from: "/refguide7/vertical-split-pane",
+      to: "/refguide/scroll-container"
     },
-	{
-      from: "/community/How+to+set+up+your+profile",
-      to: "/developerportal/mendix-profile/"
+    {
+      from: "/refguide7/certificates",
+      to: "/developerportal/deploy/certificates"
     },
-	{
-      from: "/howtogeneral/support/How+to+download+a+backup",
-      to: "/developerportal/operate/how-to-download-a-backup"
-    },
-	{
-      from: "/howtogeneral/support/How+to+download+a+backup",
-      to: "/developerportal/operate/how-to-download-a-backup"
-    },
-	{
-      from: "/refguide5/Upload+To+Team+Server+Dialog",
-      to: "/refguide/upload-to-version-control-dialog"
-    },
-	{
-      from: "/howto6/Deploying+to+the+cloud",
-      to: "/developerportal/deploy/mendix-cloud-deploy"
-    },
-	{
-      from: "/howtogeneral/support/How+to+connect+a+different+project+to+a+node",
-      to: "/developerportal/deploy/licensing-apps"
-    },
-	{
-      from: "/refguide5/App+Settings+Dialog",
-      to: "/refguide/app-settings-dialog"
-    },
-	{
-      from: "/refguide5/Open+Project+Dialog",
-      to: "/refguide/open-app-dialog"
-    },
-	{
-      from: "/refguide5/Download+From+Team+Server+Dialog",
+    {
+      from: "/refguide/download-from-team-server-dialog",
       to: "/refguide/download-from-version-control-dialog"
     },
-	{
-      from: "/refguide5/Upload+To+Team+Server+Dialog",
+    {
+      from: "/refguide/open-project-dialog",
+      to: "/refguide/open-app-dialog"
+    },
+    {
+      from: "/refguide/upload-to-team-server-dialog",
       to: "/refguide/upload-to-version-control-dialog"
     },
-	{
-      from: "/mendixcloud/Monitoring+application+health",
-      to: "/developerportal/operate/metrics"
-    },
-	{
-      from: "/mendixcloud/Securing+Outgoing+Connections+from+your+Application",
-      to: "/developerportal/deploy/securing-outgoing-connections-from-your-application"
-    },
-	{
-      from: "/mendixcloud/Trends",
-      to: "/developerportal/operate/trends-v4"
-    },
-	{
-      from: "/mendixcloud/Custom+Domains",
-      to: "/developerportal/deploy/custom-domains"
-    },
-	{
-      from: "/refguide6/Team+Server",
-      to: "/refguide/team-server"
-    },
-	{
-      from: "/refguide6/Published+OData+Services",
-      to: "/refguide/published-odata-services"
-    },
-	{
-      from: "/mendixcloud/Sending+Email",
-      to: "/developerportal/deploy/sending-email"
-    },
-	{
-      from: "/refguide6/Project+Security",
-      to: "/refguide/project-security"
-    },
-	{
-      from: "/howto6/Mobile",
-      to: "/howto/mobile/"
-    },
-	{
-      from: "/refguide6/Mobile",
-      to: "/refguide/mobile"
-    },
-	{
-      from: "/appstore/App+Store+Content+Support",
-      to: "/developerportal/app-store/app-store-content-support"
-    },
-	{
-      from: "/howto6/Monitoring+and+Troubleshooting",
-      to: "/howto/monitoring-troubleshooting/"
-    },
-	{
-      from: "/howto6/Integration",
-      to: "/howto/integration/"
-    },
-	{
-      from: "/apidocs/API+documentation",
-      to: "/apidocs-mxsdk/apidocs/"
-    },
-	{
-      from: "/howto6/Security",
-      to: "/howto/security/"
-    },
-	{
-      from: "/mendixcloud/How+to+deploy+a+Mendix+app+on+Azure",
-      to: "/developerportal/deploy/azure-deploy"
-    },
-	{
-      from: "/mendixcloud/Deploying+to+the+cloud",
-      to: "/developerportal/deploy/mendix-cloud-deploy"
-    },
-	{
-      from: "/howto6/Deploying+a+Mendix+App+to+IBM+Bluemix",
-      to: "/developerportal/deploy/ibm-cloud"
-    },
-	{
-      from: "/mendixcloud/How+to+deploy+a+Mendix+app+on+Amazon+Web+Services",
-      to: "/developerportal/deploy/docker-deploy"
-    },
-	{
-      from: "/howto6/Cloud+Foundry",
-      to: "/developerportal/deploy/cloud-foundry-deploy"
-    },
-	{
-      from: "/refguide6/Custom+Settings",
-      to: "/refguide/custom-settings"
-    },
 	/****************************************************
-     * How-to 7
+     * How-to 7 - 12.19.18, Verify if Still Necessary
      ****************************************************/
     {
       from: "/howto/deploying-a-mendix-app-to-cloud-foundry",
@@ -190,9 +82,45 @@ module.exports = {
       to: "/howto/security/best-practices-security"
     },
     /****************************************************
-     * Mendix Cloud
+     * Developer Portal Guide - 12.19.18, Verify if Still Necessary
      ****************************************************/
     {
+      from: "/developerportal/settings/technical-contact",
+      to: "/developerportal/company-app-roles/technical-contact"
+    },
+    {
+      from: "/developerportal/general/technical-contact",
+      to: "/developerportal/company-app-roles/technical-contact"
+    },
+    {
+      from: "/developerportal/operate/mendix-cloud-status",
+      to: "/developerportal/deploy/mendix-cloud-status"
+    },
+	{
+      from: "/community/app-store/share-app-store-content",
+      to: "/developerportal/app-store/share-app-store-content"
+    },
+    {
+      from: "/community/app-store-content-support",
+      to: "/developerportal/app-store/app-store-content-support"
+    },
+    {
+      from: "/community/app-store/use-app-store-content-in-the-modeler",
+      to: "/developerportal/app-store/use-app-store-content-in-the-modeler"
+    },
+	{
+      from: "/community/tools/the-mendix-job-board",
+      to: "/developerportal/community-tools/mendix-job-board"
+    },
+    {
+      from: "/community/tools/the-mendix-mvp-program",
+      to: "/developerportal/community-tools/mendix-mvp-program"
+    },
+	{
+      from: "/deployment/mendixcloud/certificates",
+      to: "/developerportal/deploy/certificates"
+    },
+	{
       from: "/mendixcloud/custom-domains",
       to: "/developerportal/deploy/custom-domains"
     },
@@ -241,106 +169,7 @@ module.exports = {
       to: "/developerportal/deploy/cloud-foundry-deploy"
     },
     /****************************************************
-     * Support
-     ****************************************************/
-    {
-      from: "/mxsupport/technical-contact",
-      to: "/developerportal/company-app-roles/technical-contact"
-    },
-    {
-      from: "/howtogeneral/support/how-to-activate-or-deactivate-your-mendix-account",
-      to: "/developerportal/company-app-roles/users"
-    },
-    {
-      from: "/howtogeneral/support/technical-contact",
-      to: "/developerportal/company-app-roles/technical-contact"
-    },
-    /****************************************************
-     * Developer Portal Guide
-     ****************************************************/
-    {
-      from: "/developerportal/settings/technical-contact",
-      to: "/developerportal/company-app-roles/technical-contact"
-    },
-    {
-      from: "/developerportal/general/technical-contact",
-      to: "/developerportal/company-app-roles/technical-contact"
-    },
-    {
-      from: "/developerportal/operate/mendix-cloud-status",
-      to: "/developerportal/deploy/mendix-cloud-status"
-    },
-	{
-      from: "/community/app-store/share-app-store-content",
-      to: "/developerportal/app-store/share-app-store-content"
-    },
-    {
-      from: "/community/app-store-content-support",
-      to: "/developerportal/app-store/app-store-content-support"
-    },
-    {
-      from: "/community/app-store/use-app-store-content-in-the-modeler",
-      to: "/developerportal/app-store/use-app-store-content-in-the-modeler"
-    },
-	{
-      from: "/community/tools/the-mendix-job-board",
-      to: "/developerportal/community-tools/mendix-job-board"
-    },
-    {
-      from: "/community/tools/the-mendix-mvp-program",
-      to: "/developerportal/community-tools/mendix-mvp-program"
-    },
-	{
-      from: "/deployment/mendixcloud/certificates",
-      to: "/developerportal/deploy/certificates"
-    },
-    /****************************************************
-     * Reference Guide 7
-     ****************************************************/
-    {
-      from: "/refguide7/microflow-expressions",
-      to: "/refguide/expressions"
-    },
-    {
-      from: "/refguide7/vertical-split-pane",
-      to: "/refguide/scroll-container"
-    },
-    {
-      from: "/refguide7/certificates",
-      to: "/developerportal/deploy/certificates"
-    },
-    {
-      from: "/refguide/download-from-team-server-dialog",
-      to: "/refguide/download-from-version-control-dialog"
-    },
-    {
-      from: "/refguide/open-project-dialog",
-      to: "/refguide/open-app-dialog"
-    },
-    {
-      from: "/refguide/upload-to-team-server-dialog",
-      to: "/refguide/upload-to-version-control-dialog"
-    },
-    /****************************************************
-     * APM
-     ****************************************************/
-    // {
-    //   from: "~*\\\/apm\\\/use-cases\\\/uc",
-    //   to: "/apm/use-cases/",
-    //   exact: true
-    // },
-    // {
-    //   from: "~*\\\/apm\\\/installation-guide\\\/ig",
-    //   to: "/apm/installation-guide/",
-    //   exact: true
-    // },
-    // {
-    //   from: "~*\\\/apm\\\/reference-guide\\\/rg",
-    //   to: "/apm/reference-guide/",
-    //   exact: true
-    // },
-    /****************************************************
-     * Release Notes
+     * Release Notes - 12.19.18, Verify if Still Necessary
      ****************************************************/
     {
       from: "/ReleaseNotes/",
@@ -653,6 +482,171 @@ module.exports = {
     {
       from: "/ReleaseNotes/Beta+features",
       to: "/releasenotes/beta-features/"
-    }
+    },
+	/****************************************************
+     * For Support - 12.19.18, Verify if Still Necessary
+     ****************************************************/
+	{
+      from: "/howtogeneral/support/how-to-submit-a-request-with-mendix-support",
+      to: "/developerportal/support/submit-support-request"
+    },
+	{
+      from: "/appstore/App+Store+Content+Support",
+      to: "/developerportal/app-store/app-store-content-support"
+    },
+	{
+      from: "/community/How+to+set+up+your+profile",
+      to: "/developerportal/mendix-profile/"
+    },
+	{
+      from: "/howtogeneral/support/How+to+download+a+backup",
+      to: "/developerportal/operate/how-to-download-a-backup"
+    },
+	{
+      from: "/howtogeneral/support/How+to+download+a+backup",
+      to: "/developerportal/operate/how-to-download-a-backup"
+    },
+	{
+      from: "/refguide5/Upload+To+Team+Server+Dialog",
+      to: "/refguide/upload-to-version-control-dialog"
+    },
+	{
+      from: "/howto6/Deploying+to+the+cloud",
+      to: "/developerportal/deploy/mendix-cloud-deploy"
+    },
+	{
+      from: "/howtogeneral/support/How+to+connect+a+different+project+to+a+node",
+      to: "/developerportal/deploy/licensing-apps"
+    },
+	{
+      from: "/refguide5/App+Settings+Dialog",
+      to: "/refguide/app-settings-dialog"
+    },
+	{
+      from: "/refguide5/Open+Project+Dialog",
+      to: "/refguide/open-app-dialog"
+    },
+	{
+      from: "/refguide5/Download+From+Team+Server+Dialog",
+      to: "/refguide/download-from-version-control-dialog"
+    },
+	{
+      from: "/refguide5/Upload+To+Team+Server+Dialog",
+      to: "/refguide/upload-to-version-control-dialog"
+    },
+	{
+      from: "/mendixcloud/Monitoring+application+health",
+      to: "/developerportal/operate/metrics"
+    },
+	{
+      from: "/mendixcloud/Securing+Outgoing+Connections+from+your+Application",
+      to: "/developerportal/deploy/securing-outgoing-connections-from-your-application"
+    },
+	{
+      from: "/mendixcloud/Trends",
+      to: "/developerportal/operate/trends-v4"
+    },
+	{
+      from: "/mendixcloud/Custom+Domains",
+      to: "/developerportal/deploy/custom-domains"
+    },
+	{
+      from: "/refguide6/Team+Server",
+      to: "/refguide/team-server"
+    },
+	{
+      from: "/refguide6/Published+OData+Services",
+      to: "/refguide/published-odata-services"
+    },
+	{
+      from: "/mendixcloud/Sending+Email",
+      to: "/developerportal/deploy/sending-email"
+    },
+	{
+      from: "/refguide6/Project+Security",
+      to: "/refguide/project-security"
+    },
+	{
+      from: "/howto6/Mobile",
+      to: "/howto/mobile/"
+    },
+	{
+      from: "/refguide6/Mobile",
+      to: "/refguide/mobile"
+    },
+	{
+      from: "/appstore/App+Store+Content+Support",
+      to: "/developerportal/app-store/app-store-content-support"
+    },
+	{
+      from: "/howto6/Monitoring+and+Troubleshooting",
+      to: "/howto/monitoring-troubleshooting/"
+    },
+	{
+      from: "/howto6/Integration",
+      to: "/howto/integration/"
+    },
+	{
+      from: "/apidocs/API+documentation",
+      to: "/apidocs-mxsdk/apidocs/"
+    },
+	{
+      from: "/howto6/Security",
+      to: "/howto/security/"
+    },
+	{
+      from: "/mendixcloud/How+to+deploy+a+Mendix+app+on+Azure",
+      to: "/developerportal/deploy/azure-deploy"
+    },
+	{
+      from: "/mendixcloud/Deploying+to+the+cloud",
+      to: "/developerportal/deploy/mendix-cloud-deploy"
+    },
+	{
+      from: "/howto6/Deploying+a+Mendix+App+to+IBM+Bluemix",
+      to: "/developerportal/deploy/ibm-cloud"
+    },
+	{
+      from: "/mendixcloud/How+to+deploy+a+Mendix+app+on+Amazon+Web+Services",
+      to: "/developerportal/deploy/docker-deploy"
+    },
+	{
+      from: "/howto6/Cloud+Foundry",
+      to: "/developerportal/deploy/cloud-foundry-deploy"
+    },
+	{
+      from: "/refguide6/Custom+Settings",
+      to: "/refguide/custom-settings"
+    },
+	{
+      from: "/mxsupport/technical-contact",
+      to: "/developerportal/company-app-roles/technical-contact"
+    },
+    {
+      from: "/howtogeneral/support/how-to-activate-or-deactivate-your-mendix-account",
+      to: "/developerportal/company-app-roles/users"
+    },
+    {
+      from: "/howtogeneral/support/technical-contact",
+      to: "/developerportal/company-app-roles/technical-contact"
+    },
+	/****************************************************
+     * APM
+     ****************************************************/
+    // {
+    //   from: "~*\\\/apm\\\/use-cases\\\/uc",
+    //   to: "/apm/use-cases/",
+    //   exact: true
+    // },
+    // {
+    //   from: "~*\\\/apm\\\/installation-guide\\\/ig",
+    //   to: "/apm/installation-guide/",
+    //   exact: true
+    // },
+    // {
+    //   from: "~*\\\/apm\\\/reference-guide\\\/rg",
+    //   to: "/apm/reference-guide/",
+    //   exact: true
+    // },
   ]
 }

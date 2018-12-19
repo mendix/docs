@@ -39,7 +39,7 @@ module.exports = {
       to: "/refguide/upload-to-version-control-dialog"
     },
 	{
-      from: "/howto6/Deploying+to+the+cloud#Deployingtothecloud-2.Connectingaprojecttoacloudnode",
+      from: "/howto6/Deploying+to+the+cloud",
       to: "/developerportal/deploy/mendix-cloud-deploy"
     },
 	{

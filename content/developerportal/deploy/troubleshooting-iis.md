@@ -1,95 +1,152 @@
 ---
 title: "Troubleshooting IIS (Internet Information Services) "
 parent: "deploy-mendix-on-microsoft-windows"
+description: "Help on fixing issues with Microsoft IIS, including the use of application logs and other troubleshooting features"
 menu_order: 40
-tags: ["IIS", "Windows", "Internet Information Services", "Service Console"]
+tags: ["IIS", "Windows", "Internet Information Services", "Mendix Service Console", "errors"]
 ---
 
 ## 1 Introduction
 
-When setting up Microsoft Internet Information Services (IIS) as a webserver in front of Mendix you may run into issues with your installation. The first step you will need to take is to decide what is causing your problem: an incorrect Mendix installation or IIS.
+This page will help you troubleshoot issues you come across when setting up Microsoft Internet Information Services (IIS) as a webserver in front of Mendix.
 
-To determine where to look for your problem, you should start by validating the Mendix installation. When you open your application from your computer, it will open it through IIS. To work around that, and test Mendix without IIS, open the browser on your server. Open the browser and go to [http://localhost:8080/](http://localhost:8080/) (or the port that you have configured), to test if the application is working.
+It is broken into three sections:
 
-If testing the Mendix application is successful, you have to look for your problem in IIS. If the application isn't working, you should start by validating your Mendix application installation.
+* [Troubleshooting the Mendix Installation](#mendix)
+* [Troubleshooting IIS](#iis)
+* [Troubleshooting Mendix Service Console Errors](#msc-errors)
 
-### 1.1 Validating the Mendix Installation
+## 2 Troubleshooting the Mendix Installation{#mendix}
 
-If there are issues with the Mendix installation you should see error messages in the Service Console and/or in the browser.
+Firstly, make sure that your Mendix app is working before looking for issues in your IIS configuration.
 
-A common issue is related to critical files not being found. If you get these types of errors you will have to validate the installation of the server version. You do that by reviewing the location of the server installations. Search for the correct platform version, and the files that are referenced in the error message.
+### 2.1 Bypassing IIS to Run Your Mendix App
 
-If all the files are present in the expected location, there is an issue with security and the user running the Mendix service is not allowed to read and execute in the mxclientsystem folder.
+When you open the application normally it will attempt to access it via IIS. To test Mendix without IIS, you need to access it directly.
 
-If the files are missing, somebody or some process removed the files. You should re-install the server distribution (tar.gz file).
+Open the browser on your server and go to the app at [http://localhost:8080/](http://localhost:8080/) (or the port that you have configured, if different). If the app is working you will find it here.
+
+If the app is working, then the issue is with your IIS configuration.
+
+If there are issues with the Mendix app you should see error messages in the Mendix Service Console and/or in the browser.
+
+### 2.2 Critical Files Not Found
 
 ![](attachments/troubleshooting-iis/18580723.png)
 
-### 1.2 Validating IIS
+You can get this sort of error in two circumstances:
 
-When you have confirmed that the Mendix installation is working, you should start with a step-by-step validation of the IIS configuration.
+1. The files are missing, or in the wrong place
 
-1. Open the application and inspect the request with your browser's developers tools. If the application isn't working you will see requests that are not successfully executed.
+    Search for the correct platform version, and the file referred to in the error message.
 
-    *   **All the /xas/ requests fail** with an error:
+    If the files are missing, you should re-install the server distribution (tar.gz file) and confirm that the files are now in the right place.
 
-        The rewrite is incorrectly configured. Go to /xas/ in the browser, which should give you a blank page if everything is behaving correctly. Most likely you will find a more detailed explanation about the cause of your problem.
+2.  The Mendix service cannot access the files
+
+    If the files are there, ensure that the user running the Mendix service has read and execute access to the `mxclientsystem` folder.
+
+## 3 Troubleshooting IIS{#iis}
+
+This section describes a few common problems that people have run into when setting up IIS.
+
+We cannot provide a solution here for all the problems you may find. Use the techniques below to isolate the cause of your problem. If the solution is not clear, there are many resources on the internet which can help you to solve your specific issue.
+
+You can also ask for help on the [Mendix forum](https://forum.mendixcloud.com/index4.html).
+
+If you have some useful tips, please feel free to add them to this document.
+
+### 3.1 IIS Access Permission Error
+
+When opening the website in the browser, an IIS error page regarding access permission is displayed.
+
+Validate your security settings. The user that runs the IIS service must be able to access the full directory path. (This is probably user: IIS_IUSRS, but confirm this in your service list). If your Mendix application is installed on "E:\Mendix\projects\MyApp" the IIS user must be able to read **all** the folders in the hierarchy (Mendix, projects, MyApp, and the web folder inside MyApp).
+
+### 3.2 Login Process Fails: 404 - Server Not Found
+
+You can see the login page in the browser, but when triggering an action you get a 404 or "server not found message".
+
+* Did you have to enable or install additional plugins?
+	
+	If so, make sure to restart the entire IIS service. You can configure the newly installed settings, but they won't have any effect until you restart the full IIS service.
+		
+* Did you add new configuration settings, like the rewrite rule?
+	
+	Of course you did, but did you also restart the website? After adding new configuration options like the rewrite URL you need to restart the website. You can do this by right clicking on your newly created site and you should see a restart option.
+
+### 3.3 Incorrect Response When Using Invalid Credentials
+
+You can sign in, but when entering an invalid password the login page shows 'server not found' instead of invalid login.
+
+Some IIS installations hide the content of any response that isn't HTTP status code 200-OK. If you enter invalid credentials during a Mendix login, Mendix returns a status code in the 400-range to indicate unauthorized access. This response also contains a JSON string with the response we want to show to the user.
+	
+Mendix cannot work if IIS is hiding detailed error messages. You need to turn on 'Detailed Error Messages'. The instructions on how to change this setting for your website can be found on the Microsoft website here: [IIS7 : HOW TO enable the detailed error messages for the website while browsed from for the client browsers](https://blogs.msdn.microsoft.com/rakkimk/2007/05/25/iis7-how-to-enable-the-detailed-error-messages-for-the-website-while-browsed-from-for-the-client-browsers/)
+
+### 3.4 Reviewing the Mendix App Log
+
+First assess whether you are hitting the Mendix application. If IIS forwards anything to the running Mendix app you can see that in the log. The log nodes 'Connector' and 'Jetty' can be most helpful. The Connector log node is able to print information about any incoming request. If you enable Trace logging you can see if the request comes in to the right request handler.
+	
+If the 'Connector' doesn't print anything you can also enable trace logging on 'Jetty'. The 'Jetty' log node will print a message for every connection that is established with Mendix. If Jetty doesn't print a trace message the IIS rewrite rules are definitely not setup correctly. 
+	
+If you do have information in the 'Connector' log node you can see where the requests are being forwarded to. This should help you understand where the rewrite rules are directing traffic and how to change it.
+
+### 3.5 Reviewing the IIS Log
+
+If you conclude that no messages are arriving at Mendix, you can enable IIS trace logging. This prints every rewrite rule to an IIS trace log file; you can see exactly how IIS changes the request and where it is forwarded to. This should provide you with the information needed to correct the configuration of the rewrite rules. See this Microsoft page for more information: [Using Failed Request Tracing to Trace Rewrite Rules](https://docs.microsoft.com/en-us/iis/extensions/url-rewrite-module/using-failed-request-tracing-to-trace-rewrite-rules).
+
+### 3.6 Using Browser Developer Tools
+
+Open the application and inspect the requests with your browser's developers tools. If the application isn't working you will see requests that are not successfully executed. Examine these requests to see if there is a pattern.
+
+1.  All the /xas/ requests fail with an error.
+
+    The rewrite is probably incorrectly configured. Open the /xas/ folder in the browser. You may then be presented with a more detailed explanation about the cause of your problem.
   
-    *   **Some JavaScript files cannot be opened**:
+2.  Some JavaScript files cannot be opened.
 
-        Try opening the files directly from your browser. If there is an issue in your IIS configuration you will get more information when opening that URL. If that still results in the same error it is most likely a security problem. The user under which your website is executed does not have sufficient privileges to access the required files. 
-
-2.  If just the *login process* seems to be failing you need to validate the response when trying to login. Use invalid credentials to test the login! The server should return a *401 status code with the response: `{}`*. Any other status code or response indicates an issue.
-
-    *   A **404** status code indicates that the /xas/ URL cannot be found.
+    Try opening the files directly from your browser. If there is an issue in your IIS configuration you will get more information when opening that URL.
     
-        This is an issue in your rewriter configuration; the /xas/ requests should be redirected to the localhost/xas/ URL. If the rewriter is not set up correctly, IIS will try and open the folder called xas, which obviously does not exist
-
-    *   A **401 status code with an html page** as response.
+    If you still receive the error, it is most likely a security problem. The user under which your website is executed does not have sufficient privileges to access the required files.
     
-        IIS should be configured to return detailed error messages. If IIS is not returning detailed error messages, for every message different than 200 it will return the default html error page. The client system needs to have the detailed (JSON) error message in order to correctly process the response. [See this IIS page for more info about detailed error responses](https://support.microsoft.com/en-ca/help/943891)
+## 4 Troubleshooting Mendix Service Console Errors{#msc-errors}
 
-After you have identified the cause of your problem, it is best to search for the exact error message you are receiving; there are numerous reasons why IIS might give that error. Look on IIS blog and documentation pages to continue your investigation into how to solve your specific issue.
+### 4.1 Update Process: Directory Not Empty
 
-## 2 Mendix Service Console Errors
+Sometimes, *shortly after the update process has begun*, a popup tells you that the directory was not empty. This means that some of the app files from the old app cannot be removed after it has been backed up (for example if they were locked by another Windows process). This error is not fatal as all needed files will be overwritten by the new app version.
 
-### 2.1 Error While Updating an App (1)
+Please install Mendix Service Console 4.1 or later to reduce the chance that this error occurs; from version 4.1 and up, the update process will go further after showing this error.
 
-Sometimes, *shortly after the update process began*, a popup tells you that the directory was not empty.
+### 4.2 Update Process: Invoke or BeginInvoke Cannot be Called
 
-Normally, before the app is updated, a backup is created and the current app files are removed. Sometimes, not all the files can be removed, due to a lock by a Windows process, such as an open Explorer window. Please install Mendix Service Console 4.1 or later to reduce the chance that this error occurs.
-
-It does not matter that some files are not removed as all needed files are overwritten by the new app version. From version 4.1 and up, the update process will go further after showing this error.
-
-### 2.2 Error While Updating an App (2)
-
-On some Windows server installations, the app update process shows an error *just before the end of the process*.
+Please upgrade the Mendix Service Console to version 4.1 or later if you see the following error *just before the end of the app update process*:
 
 ![](attachments/troubleshooting-iis/18580725.png)
 
-Please upgrade the Mendix Service Console to version 4.1 or later.
+### 4.3 Unable to Start Server
 
-### 2.3 Unable to Start Server
-
-Sometimes, each time you start a specific app, the following error occurs:
+Sometimes, you can see the following error when you start an app:
 
 ![](attachments/troubleshooting-iis/18580724.png)
 
-This can occur even if you have never activated a license. Normally, when the license is not valid, the app starts in trial mode. If this popup is shown there is a deeper cause. Maybe the database is corrupt. This could happen if you have migrated a database from an app deployed on Mendix Cloud v4 to an app deployed on Mendix Cloud v3. Try starting the app on a new database.
+With an invalid license, the app *should* start in trial mode.
 
-### 2.4 Security Errors While Starting Service
+If this popup is shown there is a deeper cause. Firstly, try starting the app on a new database. If this works, then the database is probably corrupt. This can sometimes happen if you migrated a database from an app deployed on Mendix Cloud **v4** to an app deployed on Mendix Cloud **v3**. 
 
-When the system gives such errors while starting the service, make sure that the configured service user has sufficient rights to the folders of the Mendix application. Sometimes you have to add the domain name to the user name; in other words, use DOMAIN_NAME\user_name instead of user_name.
+### 4.4 Security Errors While Starting Service
 
-### 2.5 Type Initialization
+When the system gives security errors while starting the service, make sure that the configured service user has sufficient rights to the folders of the Mendix application. Sometimes you have to prefix the user name with the domain name; that is, use DOMAIN_NAME\user_name instead of just user_name.
+
+### 4.5 Type Initialization
 
 Sometimes the Event Viewer shows a message like this:
 
-`EventType clr20r3, P1 mendixservice.exe, P2 1.0.3810.25652, P3 4c0cf0d8, P4 mendixservice, P5 1.0.3810.25652, P6 4c0cf0d8, P7 2, P8 6, P9 system.typeinitialization, P10 NIL.`
+```
+EventType clr20r3, P1 mendixservice.exe, P2 1.0.3810.25652, P3 4c0cf0d8, P4 mendixservice, P5 1.0.3810.25652, P6 4c0cf0d8, P7 2, P8 6, P9 system.typeinitialization, P10 NIL.
+```
 
-Make sure that the user account for the service has enough rights to the folders containing the Mendix Service executables and the subfolders x86 and x64.
+Make sure that the user account used to run the service has enough rights to the folders containing the Mendix Service executables and the subfolders x86 and x64.
 
-## 3 Related Content
+## 5 Related Content
 
 *   [Finding the Root Cause of Runtime Errors](/howto/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
 *   [Clearing Warning Messages in Mendix](/howto/monitoring-troubleshooting/clear-warning-messages)

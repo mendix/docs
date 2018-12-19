@@ -59,7 +59,13 @@ Most of the time, an [entity](/refguide/entities) reflects a real-world object t
 
 #### 3.2.2 Entity Attributes
 
-The entity [attribute](/refguide/attributes) should reflect a property of a real-world object that people can relate to and fits the purpose of that property. We advise avoiding abbreviations, underscores, mathematical characters or any other special characters in the names. Entity attributes should use camel case, for example, **FirstName** or **TelephoneNumber**.
+The entity [attribute](/refguide/attributes) should reflect a property of a real-world object that people can relate to and fits the purpose of that property. We advise avoiding abbreviations, underscores (except in the case described in the next paragraph), mathematical characters or any other special characters in the names. Entity attributes should use camel case, for example, **FirstName** or **TelephoneNumber**.
+
+Attributes that do not reflect business-related data, but are only necessary for technical reasons, should start with an underscore (`_`).
+
+{{% alert type="info" %}}
+A strong indicator for determining whether or not an attribute is business-related is whether you would still capture it if you were using a paper-only process. If you would, it is likely that the attribute will deliver business value.
+{{% /alert %}}
 
 #### 3.2.3 Associations
 
@@ -95,13 +101,13 @@ Every project has documents that are needed for specific entities. Think of over
 
 ### 3.4 Microflows
 
-[Microflow](/refguide/microflows) names should include the type of event which triggers them, the name of the main entity being processed, and the operation being performed: **{Prefix}_{Entity}_{Operation}**. For example,  **Act_Vendor_StartWorkflow**.
+Generally, [microflow](/refguide/microflows) names should include the type of event which triggers them, the name of the main entity being processed, and the operation being performed: **{Prefix}_{Entity}_{Operation}**. For example,  **Act_Vendor_StartWorkflow**.
 
 There are exceptions, such as where there is no main entity, or there is another reason to use a different name to improve understandability. The important thing is to make sure the name of the microflow clearly indicates its purpose.
 
 To easily find and recognize the purpose of a microflow, you can use standard prefixes. Common purposes or events and their standard prefixes are listed below. If a microflow is triggered by several events you can consider using more than one prefix.
 
-#### 3.4.1 Entity Events
+#### 3.4.1 Entity Event Microflows
 
 For some entities you use entity [events](/refguide/events) that are always triggered when a specific operation is executed on the entity.
 
@@ -120,21 +126,15 @@ The microflows related to such an event handler should have the following prefix
 | Before rollback | BRo_{Entity name} |
 | After rollback  | ARo_{Entity name} |
 
-#### 3.4.2 Calculated Attributes
+#### 3.4.2 Calculated Attribute Microflows
 
-For attributes, you can choose to store the value in the database or to calculate the value based on a microflow. For the microflow that has the calculation purpose you can use **Cal_** as a prefix.
+For attributes, you can choose to store the value in the database or to calculate the value based on a microflow. For the microflow which does the calculation you should use **Cal_** as a prefix, and refer to the entity and attribute which is being calculated.
 
-#### 3.4.3 Project Settings
+| Event Type      | Prefix               |
+|-----------------|----------------------|
+| Calculation     | Cal_{Entity name}    |
 
-Your [project settings](/refguide/project-settings) provide three events that can trigger a microflow. In these cases we advise writing out the purpose as a microflow name. These microflows are defined only once per project and should preferably call sub-microflows to do the actual processing. These sub-microflows should have a prefix indicated below:
-
-| Event Type      | Microflow Name | Prefix |
-|-----------------|----------------|--------|
-| After startup   | AfterStartUp   | ASu\_  |
-| Before shutdown | BeforeShutDown | BSd\_  |
-| Health check    | HealthCheck    | HCh\_  |
-
-#### 3.4.4 Pages
+#### 3.4.4 Page-based Microflows
 
 [Pages](/refguide/pages) have a number of events that can trigger a microflow. See the following list for the examples and prefixes:
 
@@ -146,68 +146,109 @@ Your [project settings](/refguide/project-settings) provide three events that ca
 | Data source               | DS_{Purpose}    | Data view, list view, data grid, template grid |
 | Microflow/action button   | ACT_{Purpose} or IVK_{Purpose} | Menu item, Navigation item, Microflow and Action button, Drop down button<br />(“IVK_” is used historically) |
 
-#### 3.4.5 Unit Test Microflows
+### 3.4.5 Validation Microflows
+
+Microflows that are used for [data validation](/howto/data-models/setting-up-data-validation) use the prefix **Val_**.
+
+| Event Type      | Prefix               |
+|-----------------|----------------------|
+| Validation      | Val_                 |
+
+### 3.4.6 Scheduled Event Microflows
+
+For the microflow that you use in your [scheduled events](/refguide/scheduled-events), use the prefix **ScE_**. The event itself should have a descriptive name since it will be shown in the cloud configuration portal. The scheduled event and the microflow should have the same name.
+
+| Event Type      | Prefix               |
+|-----------------|----------------------|
+| Scheduled Event | ScE_                 |
+
+#### 3.4.7 Project Microflows
+
+Your [project settings](/refguide/project-settings) provide three events that can trigger a microflow. In these cases we advise writing out the purpose as a microflow name. These microflows are defined only once per project and should preferably call sub-microflows to do the actual processing. These sub-microflows should have a prefix indicated below:
+
+| Event Type      | Microflow Name | Sub-microflow Prefix |
+|-----------------|----------------|----------------------|
+| After startup   | AfterStartUp   | ASu_                 |
+| Before shutdown | BeforeShutDown | BSd_                 |
+| Health check    | HealthCheck    | HCh_                 |
+
+#### 3.4.8 Unit Test Microflows
 
 Microflows containing [unit tests](/howto/testing/testing-microflows-using-the-unittesting-module) should have the prefix **Test_**.
 
-### 3.5 Integration
+| Event Type      | Prefix               |
+|-----------------|----------------------|
+| Unit Test       | Test_                |
 
-In your integrations, you have the following type of documents:
+#### 3.4.9 Integration Microflows
+
+For integrations, you have the following types of microflow:
 
 | Event Type                                | Prefix |
 |-------------------------------------------|--------|
 | Consumed web service operation microflow  | CWS_  |
 | Published web service operation microflow | PWS_  |
 | Published app service operation microflow | PAS_  |
-| Published REST service operation microflow| PRS_  |
+| Published REST service operation microflow | PRS_  |
+
+### 3.5 Other Document Types
+
+#### 3.5.1 Layouts & Snippets
+
+[Layouts](/refguide/layout) and [snippets](/refguide/snippet) should be identified with prefixes.
+
+| Document Type                             | Prefix    |
+|-------------------------------------------|-----------|
+| Layout                                    | **Lay_**  |
+| Snippet                                   | **Snip_** |
+
+#### 3.5.2 Pages
+
+Pages use a **suffix** to indicate their use.
+
+Pages that show an [overview](/howto/ux/create-your-first-two-overview-and-detail-pages) of a single entity should have a suffix of **_Overview**.
+
+Pages that are to create, edit, or view entity data, and that are not part of a process, should have the suffix **_New**, **_Edit**, **_NewEdit**, or **_View**.
+
+Pages that are used to make a selection of one object have a suffix of **_Select** where the multi-object selection pages should have the suffix **_MultiSelect**.
+
+Pages that are used as a tooltip page should have the suffix **_Tooltip**.
+
+| Page Purpose                             | Suffix |
+|-------------------------------------------|--------|
+| List objects of a single entity type  | _Overview |
+| Create an object | _New |
+| Update an object | _Edit |
+| Create *or* Update an object | _NewEdit |
+| View an object (read-only) | _View |
+| Select a single object | _Select |
+| Select multiple objects | _MultiSelect |
+| Tooltip | _Tooltip |
+
+#### 3.5.3 Integration Documents
+
+Documents used to support integration should have the prefixes listed below.
+
+| Document Type                             | Prefix |
+|-------------------------------------------|--------|
 | Import mapping                            | ImM_  |
 | Export mapping                            | ExM_  |
 | XML schema                                | XSD_  |
 | JSON structure                            | JSON_ |
 | Deeplink                                  | Dl_   |
 
-### 3.6 Scheduled Events
+### 3.6 Home Pages
 
-For the microflow that you use in your [scheduled events](/refguide/scheduled-events), we prefer using the prefix **ScE\_**. The event itself should have a descriptive name since it will be shown in the cloud configuration portal. Preferably the scheduled event and the microflow should have the same name. 
-
-### 3.7 Validation
-
-Microflows that are used for [data validation](/howto/data-models/setting-up-data-validation) use the prefix **Val\_**.
-
-#### 3.7.1 Home Pages
-
-You can define the [home pages](/refguide/show-home-page) per device and role in your navigation. See the list below for page names we recommend using:
+You can define the [home pages](/refguide/show-home-page) per device and role in your navigation. The recommended page names are listed below:
 
 | Event Type           | Device  | Page Name                   |
 |----------------------|---------|-----------------------------|
-| Default home page    | Desktop | Home\_Desktop\_Default      |
-| Default home page    | Tablet  | Home\_Tablet\_Default       |
-| Default home page    | Mobile  | Home\_Phone\_Default        |
-| Role based home page | Desktop | Home\_Desktop\_\<Userrole\> |
-| Role based home page | Tablet  | Home\_Tablet\_\<Userrole\>  |
-| Role based home page | Mobile  | Home\_Phone\_\<Userrole\>   |
-
-#### 3.7.2 Layouts & Snippets
-
-[Layouts](/refguide/layout) should have a prefix of **Lay\_**.
-
-[Snippets](/refguide/snippet) should use **Snip\_**.
-
-#### 3.7.3 Overview Pages
-
-Pages that show an [overview](/howto/ux/create-your-first-two-overview-and-detail-pages) of a single entity should have a postfix of **\_Overview**.
-
-#### 3.7.4 New, Edit & View Pages
-
-Pages that are to create, edit, or view entity data, and that are not part of a process, should have the postfix **\_New**, **\_Edit**, **\_NewEdit**, or **\_View**.
-
-#### 3.7.5 Select Pages
-
-Pages that are used to make a selection of one object have a postfix of **\_Select** where the multi-object selection pages should have the postfix **\_MultiSelect**.
-
-#### 3.7.6 Tooltip Pages
-
-Pages that are used as a tooltip page should have the postfix **\_Tooltip**.
+| Default home page    | Desktop | Home_Desktop_Default      |
+| Default home page    | Tablet  | Home_Tablet_Default       |
+| Default home page    | Mobile  | Home_Phone_Default        |
+| Role based home page | Desktop | Home_Desktop_{Userrole} |
+| Role based home page | Tablet  | Home_Tablet_{Userrole}  |
+| Role based home page | Mobile  | Home_Phone_{Userrole}   |
 
 ## 4. General Guidelines & Best Practices
 
@@ -215,13 +256,11 @@ Pages that are used as a tooltip page should have the postfix **\_Tooltip**.
 
 #### 4.1.1 Attributes {#attributes}
 
-Attributes that do not reflect business-related data, but are only necessary for technical reasons, must start with an underscore (`_`). A strong indicator for determining whether an attribute is business-related is to judge whether you would also capture it in case the process under consideration was a paper-only process. If so, it is likely that the attribute will deliver business value.
-
 Using calculated (virtual) attributes is discouraged. These introduce a performance risk since they need to be calculated every time the object is used, regardless of whether the attribute itself is used.
 
 #### 4.1.2 Inheritance {#inheritance}
 
-When using inheritance (specialization/generalization), it is recommended to use a maximum of two levels for performance reasons.
+When using inheritance (specialization/generalization), it is recommended to use no more than two levels for performance reasons.
 
 #### 4.1.3 Delete Behavior
 
@@ -229,7 +268,7 @@ When using inheritance (specialization/generalization), it is recommended to use
 
 #### 4.1.4 Event Handlers
 
-[Event handlers](/refguide/event-handlers) on domain entities must be used with a lot of caution. They can quickly result in complex and possibly unexpected behavior when more of them are applicable to a single entity. It is often best to make the execution of microflows more explicit by using sub-microflows that are called manually, for example, just before committing an object.
+[Event handlers](/refguide/event-handlers) on domain entities must be used with a lot of caution. They can quickly result in complex and possibly unexpected behavior when several of them are applied to a single entity. It is often best to make the execution of microflows more explicit by using sub-microflows that are called manually, for example, just before committing an object.
 
 ### 4.2 Microflows
 
@@ -243,13 +282,13 @@ Certain cases (such as validation checks) may require this rule to be ignored to
 
 #### 4.2.2 Documentation & Annotations {#documentation-and-annotations}
 
-All complex microflows (more than ten activities or more than two splits) must have an [annotation](/refguide/annotations) describing the purpose of the microflow and expected parameters and return values. This annotation must be placed at the start, so it is visible when the microflow is opened. This will assist other developers in quickly understanding the general purpose of a microflow, without having to read through it entirely.
+All complex microflows (more than ten activities or more than two splits) should have an [annotation](/refguide/annotations) describing the purpose of the microflow, expected parameters, and return values. This annotation should be placed at the start, so it is visible when the microflow is opened. This will assist other developers in quickly understanding the general purpose of a microflow, without having to read through it entirely.
 
-Complex, non-standard or integration-related sections in microflows must have an accompanying annotation. Examples of these are web service calls, custom loops, Java calls etc.
+Complex, non-standard or integration-related sections in microflows should also have an accompanying annotation. Examples of these are web service calls, custom loops, and Java calls.
 
 #### 4.2.3 Readability
 
-The normal flow in a microflow must be aligned from left to right to ensure readability. Exceptions to the normal flow may branch out vertically: downwards is preferred, upwards if the downwards direction is already used.
+The normal flow in a microflow should be aligned from left to right to ensure readability. Exceptions to the normal flow may branch out vertically: downwards is preferred, upwards if the downwards direction is already used.
 
 Avoid crossing of lines of the links between the microflow elements.
 
@@ -257,7 +296,7 @@ If you decide to color code the different activities in your project, be sure to
 
 #### 4.2.4 Complexity
 
-Nested **if** statements in a single microflow expression are not allowed. If multiple checks depend on one another, this must be represented by multiple splits in the microflow, so that the complexity is not hidden away in the expressions. It is allowed to use complex and/or expressions if necessary.
+Nested `IF` statements in a single microflow expression are not recommended. If multiple checks depend on one another, this should be represented by multiple splits in the microflow, so that the complexity is not hidden away in the expressions. You can use `AND` and `OR` operators to produce complex expressions if necessary.
 
 Event triggers on input fields must be kept as simple as possible, since they are potentially executed very often, depending on user behavior. Complex operations here will reduce performance.
 
@@ -267,23 +306,25 @@ The number of parameters for a microflow should be kept to a minimum to facilita
 
 Use microflow [error handling](/howto/logic-business-rules/set-up-error-handling) for all integration and Java calls. Make sure to determine the correct rollback behavior. Always log the error that occurred, even if the process can continue, this is essential for later analysis of the error.
 
-Complex processes and important business logic (like workflow processing or validations) must include debug and trace [logging](/refguide/logging). Logging actions must write the current state and progress of the process and must include a request ID or other identifying information. The log node must be the name of the module. This will greatly assist error analysis.
+Complex processes and important business logic (like workflow processing or validations) must include debug and trace [logging](/refguide/logging). Logging actions must write the current state and progress of the process and must include a request ID or other identifying information. The log node should be the name of the module. This will greatly assist error analysis.
 
 ### 4.3 Warnings & Modeler Feedback
 
-No warnings must be visible in the Modeler, unless explicitly documented with a reason. Warnings can indicate many issues, including maintainability and security risks, which must be resolved.
+No warnings should be visible in the Modeler, unless explicitly documented with a reason. Warnings can indicate many issues, including maintainability and security risks, which must be resolved.
 
-Unused and excluded items must be removed from the model when they are no longer needed. When a version of the application is prepared for a release, all these items must be cleaned up. Make sure to check whether items that appear unused are not actually called from a Java action before removing them. The Modeler provides the possibility to mark such items as used to override warnings about this.
+Unused and excluded items should be removed from the model when they are no longer needed. When a version of the application is prepared for a release, all these items should be cleaned up. Make sure to check whether items that appear unused are not actually called from a Java action before removing them. The Modeler provides the possibility to mark such items as used to override warnings about this.
 
 ### 4.4 XPath
 
-[XPath](/refguide/xpath) constraints in any part of the model must be kept as simple as possible. As a general rule, XPaths must not appear when the **Find advanced \> XPath** option in the Modeler is used with all options enabled.
+[XPath](/refguide/xpath) constraints in any part of the model should be kept as simple as possible. As a general rule, XPaths must not appear when the **Find advanced > XPath** option in the Modeler is used with all options enabled.
 
-When an XPath needs multiple constraints, each constraint must be put in brackets (`[ ]`) separately, instead of using the **and** keyword. This also applies to sub-constraints.
+When an XPath needs multiple constraints, each constraint must be put in brackets (`[ ]`) separately, instead of using the `and` keyword. This also applies to sub-constraints.
 
 ### 4.5 Security
 
-The [security](/howto/security/index) overview in the Modeler must not show any incomplete (yellow) parts. All entity, microflow, and page access must be configured completely. With regards to entity access, it is recommended to not use the option to assign default rights to new members, to ensure access is only granted after a conscious decision.
+The [security](/howto/security/index) overview in the Modeler must not show any incomplete (yellow) parts. All entity, microflow, and page access must be configured completely.
+
+It is recommended **not** to assign default rights to new members when defining entity access. This will ensure that access is only granted after a conscious decision.
 
 ### 4.6 Mendix Version
 
@@ -293,4 +334,4 @@ Apps should keep up with new Mendix releases as much as possible.
 
 When introducing a new [Mendix App Store](https://appstore.home.mendix.com/index3.html) component to a project, carefully consider the support level of the component. Using components that are community supported introduces a maintainability and upgrade risk.
 
-App Store modules should NOT be modified. If an App Store module is modified, updating to a new version becomes much harder because the changes will be overwritten when a new version is downloaded from the App Store. This is why we strongly recommended not changing App Store modules. If changing an App Store module is unavoidable, changes should be marked explicitly and clearly, and performed again when the module is updated. To minimize the amount of changes in the actual App Store module, it is advisable to combine them in a separate extension module wherever possible.
+App Store modules should **not** be modified. This is because, if an App Store module is modified, updating to a new version becomes much harder because the changes will be overwritten when a new version is downloaded from the App Store. If changing an App Store module is unavoidable, changes should be marked explicitly and clearly, and performed again when the module is updated. To minimize the number of changes in the actual App Store module, it is advisable to combine them in a separate extension module wherever possible.

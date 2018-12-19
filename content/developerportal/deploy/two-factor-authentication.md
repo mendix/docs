@@ -3,14 +3,14 @@ title: "Two-Factor Authentication"
 parent: "general"
 menu_order: 20
 description: "What is Two-Factor Authentication and how to set up and change it."
-tags: ["Authenticator","Developer Portal","Cloud","Permissions"]
+tags: ["Authenticator","Developer Portal","Cloud","Permissions", "Google", "2FA", "Two-factor authentication"]
 ---
 
 ## 1 Introduction
 
 In the **Deploy** and **Operate** categories of the [Developer Portal](http://home.mendix.com), there are several operations that require  **Two-Factor Authentication**.
 
-This document describes the purpose and the fuctionality of two-factor authentication.
+This document describes the purpose and the functionality of two-factor authentication.
 
 ## 2 The Purpose
 
@@ -22,7 +22,7 @@ For more information, see [Google Authentication](https://www.google.com/landing
 
 ## 3 How It Works
 
-Before performing an operation on the production envrionment, you will be required to provide the authentication code.
+Before performing an operation on the production environment, you will be required to provide the authentication code.
 
 ![](attachments/two-factor-authentication/google.png)
 
@@ -32,7 +32,7 @@ After entering the authentication code, your browser session is authorized for t
 
 ## 4 Setting Up and Disabling
 
-For details on seting up, see [How to Set Up Your Two-Factor Authentication with Google](../support/set-up-two-factor-authentication).
+For details on setting up, see [How to Set Up Your Two-Factor Authentication with Google](../support/set-up-two-factor-authentication).
 
 If you change your device or phone number, you must contact [Mendix Support](https://support.mendix.com/hc/en-us) to disable the authenticator on your Mendix account.
 

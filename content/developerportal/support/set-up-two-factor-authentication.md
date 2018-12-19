@@ -1,8 +1,8 @@
 ---
 title: "Set Up Two-Factor Authentication With Google Authenticator"
 parent: "support-references"
-#description: ""
-#tags: []
+description: "How to set up Google Authenticator"
+tags: ["Google", "Authenticator", "2FA"]
 ---
 
 ## 1 Introduction

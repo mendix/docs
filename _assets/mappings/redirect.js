@@ -484,6 +484,29 @@ module.exports = {
       to: "/releasenotes/beta-features/"
     },
 	/****************************************************
+     * App Store - 12.19.18, Verify if Still Necessary
+     ****************************************************/
+	{
+      from: "/howto/collaboration-project-management/contribute-to-a-github-repository",
+      to: "/howto/collaboration-requirements-management/contribute-to-a-github-repository"
+    },
+	{
+      from: "/refguide6/Consumed+REST+Services",
+      to: "/refguide/consumed-rest-services"
+    },
+	{
+      from: "/addons/APM/",
+      to: "/apm/"
+    },
+	{
+      from: "/howto50/Create+a+custom+theme+with+the+Mendix+UI+Framework",
+      to: "/howto/ux/create-a-custom-theme-with-the-mendix-ui-framework"
+    },
+	{
+      from: "/mendixcloud/java-in-the-cloud",
+      to: "/developerportal/deploy/java-in-the-cloud"
+    },
+	/****************************************************
      * For Support - 12.19.18, Verify if Still Necessary
      ****************************************************/
 	{

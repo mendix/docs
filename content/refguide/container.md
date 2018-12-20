@@ -4,8 +4,7 @@ parent: "container-widgets"
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-
-A container widget can be used to style or simultaneously hide a group of widgets. In the browser, it is rendered as a simple `div` element by default. It is also possible to render a container as one of HTML5 sementic elements (`section`, `main`, `article`, `nav`, etc).
+A container widget can be used to style or simultaneously hide a group of widgets. In the browser, it is rendered as a simple `div` element by default. It is also possible to render a container as one of HTML5 sementic elements (`section`, `main`, `article`, `nav`, etc.).
 
 {{% alert type="info" %}}
 
@@ -26,9 +25,9 @@ An empty container.
 
 ### Render mode
 
-The render mode determines which html5 tag will be used to show the container in the web browser.
+The render mode determines which HTML5 tag will be used to show the container in the web browser.
 
-| Value     | HTML tag    |
+| Value     | HTML Tag    |
 | --------- | ----------- |
 | Div       | `div`       |
 | Section   | `section`   |

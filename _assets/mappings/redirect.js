@@ -506,6 +506,14 @@ module.exports = {
       from: "/mendixcloud/java-in-the-cloud",
       to: "/developerportal/deploy/java-in-the-cloud"
     },
+	{
+      from: "/mendixcloud/security-constraints-in-the-mendix-cloud",
+      to: "/developerportal/deploy/java-in-the-cloud"
+    },
+	{
+      from: "/mendixcloud/Integrate+your+app+with+Mendix+SSO",
+      to: "/developerportal/deploy/integrate-with-mendix-sso"
+    },
 	/****************************************************
      * For Support - 12.19.18, Verify if Still Necessary
      ****************************************************/

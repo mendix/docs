@@ -511,6 +511,10 @@ module.exports = {
       to: "/developerportal/deploy/java-in-the-cloud"
     },
 	{
+      from: "/howto50/Contributing+to+a+GitHub+repository",
+      to: "/howto/collaboration-requirements-management/contribute-to-a-github-repository"
+    },
+	{
       from: "/mendixcloud/Integrate+your+app+with+Mendix+SSO",
       to: "/developerportal/deploy/integrate-with-mendix-sso"
     },

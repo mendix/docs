@@ -25,6 +25,10 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Identify the SAP back-end system and OData service you wish to use
 * Create the app in the Mendix Desktop Modeler 7.5.1 or higher
 
+{{% alert type="warning" %}}
+SAP OData Model Creator only supports SAP OData Gateway Services which use OData version 2 or version 3. OData version 4 is not yet supported.
+{{% /alert %}}
+
 ## 3 Generating a Data Model
 
 The SAP OData Model Creator is an app in the App Store. Search for it in the Mendix App Store, or find it here: [SAP OData Model Creator](https://sapodatamodelcreator.mendixcloud.com/). 

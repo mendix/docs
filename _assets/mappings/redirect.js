@@ -507,6 +507,10 @@ module.exports = {
       to: "/developerportal/deploy/java-in-the-cloud"
     },
 	{
+      from: "/mendixcloud/security-constraints-in-the-mendix-cloud",
+      to: "/developerportal/deploy/java-in-the-cloud"
+    },
+	{
       from: "/howto50/Contributing+to+a+GitHub+repository",
       to: "/howto/collaboration-requirements-management/contribute-to-a-github-repository"
     },

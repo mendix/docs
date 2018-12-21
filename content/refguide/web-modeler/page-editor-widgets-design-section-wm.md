@@ -9,7 +9,7 @@ tags: ["web modeler", "page editor", "widgets", "on click action", "events"]
 
 The **Design** section in **Properties** allows you to change spacing and alignment of a widget on a page, but is not limited to these functions. For some elements you can, for example, change their color. Hover over the information icon to get more details on each option.
 
-![](attachments/page-editor-widgets-design-section-wm/wm-design-section-info-icon.png)
+![The Information Icon in the Design Section](attachments/page-editor-widgets-design-section-wm/wm-design-section-info-icon.png)
 
 ## 2 Common Properties {#design-common-properties}
 
@@ -20,11 +20,11 @@ The **Design** section has the following properties common to all widgets:
 | -------------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | Spacing Top/ Spacing Bottom/ Spacing Left/ Spacing Right | Adds margin above/ below/ left/ right of the widget          | Possible values for **Spacing Top**/ **Spacing Bottom**/ **Spacing Left**/ **Spacing Right** are the following:<ul><li>None – no extra spacing is applied</li><li>Small – applies small spacing</li><li>Medium –  applies medium spacing</li><li>Large – applies large spacing</li><li>Layout – applies the same spacing as the current layout  (if you do not change the layout spacing, large and layout spacings are the same by default) </li></ul> |
 | Align Self                                               | Aligns the widget within its layout element. For more information on layout elements, see [Layout Widgets in the Web Modeler](page-editor-widgets-layouts-wm) | Possible values for **Align Self** are the following:<ul><li>None – places the element next to the previous element</li><li>Left – aligns the element to the left (places the element to the left of its layout element)</li><li>Right – aligns the element to the right (places the element to the right of its layout element)</li></ul> |
-| Hide On Phone/Tablet/Desktop                             | Hides the selected widget on the phone, tablet, or desktop both on the preview and after publishing. This can be useful, for example, if you want to show more information in the desktop view than in the phone view of the same page. | Enabled/Disabled                                             |
+| Hide On Phone/Tablet/Desktop                             | Hides the selected widget from the page in the corresponding view. This can be useful, for example, if you want to show more information in the desktop view than in the phone view of the same page. | Enabled/Disabled                                             |
 
 The example of how spacing works on a button is schematically shown on an image below:
 
-![](attachments/page-editor-widgets-design-section-wm/wm-design-section-scheme.png)
+![Element Spacing](attachments/page-editor-widgets-design-section-wm/wm-design-section-scheme.png)
 
 ## 2 Specific Properties
 

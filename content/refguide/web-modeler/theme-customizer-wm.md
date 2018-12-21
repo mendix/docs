@@ -10,11 +10,11 @@ tags: ["web modeler", "theme customizer", "atlas ui"]
 
 The **Theme Customizer** is a tool that helps you customize your app. For example, you can adjust colors, upload logo, change text style, thus making your app look the way you want.
 
-![](attachments/theme-customizer-wm/wm-default-vs-customized.png)
+![Default Style vs. Customized Style](attachments/theme-customizer-wm/wm-default-vs-customized.png)
 
 To open the **Theme Customizer**, click the paintbrush icon at the left menu bar. 
 
-![](attachments/theme-customizer-wm/wm-theme-customizer-icon.png)
+![Theme Customizer Icon](attachments/theme-customizer-wm/wm-theme-customizer-icon.png)
 
 The **Theme Customizer** is divided into two panes:
 
@@ -50,12 +50,12 @@ To upload the logo, do the following:
 1. Open the **Theme Customizer**.
 2.  In the **Upload Logo** section, click **Select File**.  
 
-    ![](attachments/theme-customizer-wm/wm-upload-logo.png)
+    ![Uploading Your Logo](attachments/theme-customizer-wm/wm-upload-logo.png)
 
 3. In the dialog window, select the picture you want to use as logo.
 4.  The selected picture is uploaded and shown in the **Preview**. 
 
-    ![](attachments/theme-customizer-wm/wm-logo-preview.png)
+    ![Previewing Your Logo](attachments/theme-customizer-wm/wm-logo-preview.png)
 
 5. Click **Apply Style** to save changes.
 
@@ -68,7 +68,7 @@ To change the color, do the following:
 1. In **Brand Colors**, **UI Customization** or **Typography** sections, select the element you want to change.
 2.  Click this element and select color by clicking on the palette, filling out the code of the color, or selecting the color from **Brand Colors** and **Logo Colors** (only available when you upload a logo, for more information, see [Uploading a Logo](#uploading-logo)).
 
-    ![](attachments/theme-customizer-wm/wm-adjusting-color.png)
+    ![Brand Colors and Logo Colors](attachments/theme-customizer-wm/wm-adjusting-color.png)
 
 3. See the result in the **Preview**.
 4. Click **Apply Style** to save changes. 

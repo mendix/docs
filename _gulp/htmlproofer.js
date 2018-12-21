@@ -10,17 +10,29 @@ const Promise = require('bluebird');
 const moment = require('moment');
 const RSS = require('rss');
 const { normalizeSafe } = require('upath');
+const cliProgress = require('cli-progress');
 
 const { isFile, getFiles, readHtmlFiles, gulpErr, checkLinks, getAllFiles } = require('./helpers');
 const commandLineHelpers = require('./helpers/command_line');
 
 const { cyan, yellow, red } = commandLineHelpers.colors;
+const { getTime, indicator } = commandLineHelpers;
 
 const log = commandLineHelpers.log('html check');
 const rssLog = commandLineHelpers.log('rss');
 const indexMappingLog = commandLineHelpers.log('index mapping');
 
 const verbose = false;
+let barParsed = new cliProgress.Bar({
+  format: `{time} ${indicator('html check')} Parsing:  [{bar}] {percentage}% | ETA: {eta}s | {value}/{total} | {duration_formatted}`,
+  fps: 5,
+  barsize: 65
+}, cliProgress.Presets.shades_classic);
+let barChecked = new cliProgress.Bar({
+  format: `{time} ${indicator('html check')} Checking: [{bar}] {percentage}% | ETA: {eta}s | {value}/{total} | {duration_formatted}`,
+  fps: 5,
+  barsize: 65
+}, cliProgress.Presets.shades_classic);
 
 let totalChecks = 0;
 let totalChecked = 0;
@@ -162,8 +174,9 @@ const parseHtmlFile = file => new Promise((resolve, reject) => {
   const perc = Math.floor(100 * (totalChecked / totalChecks));
   if (perc % 10 === 0 && perc !== lastParsed) {
     lastParsed = perc;
-    log(`Pages parsed: ${perc}%`);
+    //log(`Pages parsed: ${perc}%`);
   }
+  barParsed.update(totalChecked, { time: getTime() });
 
   resolve(file);
 });
@@ -175,7 +188,11 @@ const parseHtmlFiles = files => {
   lastParsed = 0;
   lastValidated = 0;
 
-  return Promise.all(_.map(files, file => parseHtmlFile(file)));
+  barParsed.start(files.length, 0, { time: getTime() });
+  return Promise.all(_.map(files, file => parseHtmlFile(file))).then(parsed => {
+    barParsed.stop();
+    return parsed;
+  });
 }
 
 const getLinkPaths = link => {
@@ -196,82 +213,89 @@ const getLinkPaths = link => {
   return paths;
 }
 
-const validateFiles = files => Promise.resolve(_.map(files, file => {
+const validateFiles = files => {
+  barChecked.start(files.length, 0, { time: getTime() });
+  return Promise.resolve(_.map(files, file => {
 
-  const warningKey = 'warnings';
-  const errorKey = 'errors'; // Return this back to 'errors'
+    const warningKey = 'warnings';
+    const errorKey = 'errors'; // Return this back to 'errors'
 
-  // Let's check all the links
-  _.forEach(file.links, link => {
-    const fullPath = normalizeSafe(path.join(SOURCEPATH, link)),
-          fullUrl = url.parse(path.join(SOURCEPATH, link));
+    // Let's check all the links
+    _.forEach(file.links, link => {
+      const fullPath = normalizeSafe(path.join(SOURCEPATH, link)),
+            fullUrl = url.parse(path.join(SOURCEPATH, link));
 
-    let linkPath = (fullUrl.protocol !== null ? fullUrl.protocol : "").toUpperCase() + fullUrl.pathname; // TODO: Check how we can fix this in Windows??
-    let linkedFile = _.filter(
-      _.map(getLinkPaths(linkPath), linkPathPossible => _.find(
-        files, findFile => findFile.path === linkPathPossible)
-      ), f => !!f
-    );
+      let linkPath = (fullUrl.protocol !== null ? fullUrl.protocol : "").toUpperCase() + fullUrl.pathname; // TODO: Check how we can fix this in Windows??
+      let linkedFile = _.filter(
+        _.map(getLinkPaths(linkPath), linkPathPossible => _.find(
+          files, findFile => findFile.path === linkPathPossible)
+        ), f => !!f
+      );
 
-    if (linkedFile && linkedFile.length && linkedFile.length === 1) {
-      linkedFile = _.first(linkedFile);
-      if (fullUrl.hash) {
-        const hashID = fullUrl.hash.replace('#', '');
-        if (linkedFile.anchors.indexOf(hashID) === -1) {
-          file[warningKey].push(`${yellow('[ANCHOR] ')} ${cyan(link)}, page ${cyan(linkedFile.basePath)} exists, anchor ${cyan(hashID)} does not.`);
-          verbose && console.log(`hash err ${file.path} to ${linkedFile.basePath}`, link);
+      if (linkedFile && linkedFile.length && linkedFile.length === 1) {
+        linkedFile = _.first(linkedFile);
+        if (fullUrl.hash) {
+          const hashID = fullUrl.hash.replace('#', '');
+          if (linkedFile.anchors.indexOf(hashID) === -1) {
+            file[warningKey].push(`${yellow('[ANCHOR] ')} ${cyan(link)}, page ${cyan(linkedFile.basePath)} exists, anchor ${cyan(hashID)} does not.`);
+            verbose && console.log(`hash err ${file.path} to ${linkedFile.basePath}`, link);
+          }
         }
+      } else if (!isFile(fullPath)) {
+        file[errorKey].push(`${red('[LINK]   ')} ${cyan(link)} does not exist. Path: ${cyan(linkPath)} (.html | index.html) is unresolved`);
+        verbose && console.log(`err ${file.path}`, link);
       }
-    } else if (!isFile(fullPath)) {
-      file[errorKey].push(`${red('[LINK]   ')} ${cyan(link)} does not exist. Path: ${cyan(linkPath)} (.html | index.html) is unresolved`);
-      verbose && console.log(`err ${file.path}`, link);
-    }
-  });
+    });
 
-  // Let's check all the images
-  _.forEach(file.images, image => {
-    let fullPath = path.join(SOURCEPATH, image);
-    _.remove(allResidualFiles, n => n === fullPath);
-    if (allFiles.indexOf(fullPath) !== -1) {
-      return;
-    }
-    if (!isFile(fullPath)) {
-      file[errorKey].push(`${red('[IMAGE]  ')} ${cyan(image)} does not exist. Path: ${cyan(fullPath)} is unresolved`);
-      verbose && console.log(`err image ${file.path}`, image);
-    }
-  });
+    // Let's check all the images
+    _.forEach(file.images, image => {
+      let fullPath = path.join(SOURCEPATH, image);
+      _.remove(allResidualFiles, n => n === fullPath);
+      if (allFiles.indexOf(fullPath) !== -1) {
+        return;
+      }
+      if (!isFile(fullPath)) {
+        file[errorKey].push(`${red('[IMAGE]  ')} ${cyan(image)} does not exist. Path: ${cyan(fullPath)} is unresolved`);
+        verbose && console.log(`err image ${file.path}`, image);
+      }
+    });
 
-  // Let's check all the videos
-  _.forEach(file.videos, video => {
-    let fullPath = path.join(SOURCEPATH, video);
-    _.remove(allResidualFiles, n => n === fullPath);
-    if (allFiles.indexOf(fullPath) !== -1) {
-      return;
-    }
-    if (!isFile(fullPath)) {
-      file[errorKey].push(`${red('[VIDEO]  ')} ${cyan(video)} does not exist. Path: ${cyan(fullPath)} is unresolved`);
-      verbose && console.log(`err image ${file.path}`, video);
-    }
-  });
+    // Let's check all the videos
+    _.forEach(file.videos, video => {
+      let fullPath = path.join(SOURCEPATH, video);
+      _.remove(allResidualFiles, n => n === fullPath);
+      if (allFiles.indexOf(fullPath) !== -1) {
+        return;
+      }
+      if (!isFile(fullPath)) {
+        file[errorKey].push(`${red('[VIDEO]  ')} ${cyan(video)} does not exist. Path: ${cyan(fullPath)} is unresolved`);
+        verbose && console.log(`err image ${file.path}`, video);
+      }
+    });
 
-  // Let's check anchorlinks
-  _.forEach(file.anchorLinks, anchorlink => {
-    if (file.anchors.indexOf(anchorlink) === -1) {
-      //console.log(file.anchors);
-      file[warningKey].push(`${yellow('[ANCHOR] ')} ${cyan('#' + anchorlink)} does not exist in page`);
-      verbose && console.log(`err anchor ${file.path}`, anchorlink);
+    // Let's check anchorlinks
+    _.forEach(file.anchorLinks, anchorlink => {
+      if (file.anchors.indexOf(anchorlink) === -1) {
+        //console.log(file.anchors);
+        file[warningKey].push(`${yellow('[ANCHOR] ')} ${cyan('#' + anchorlink)} does not exist in page`);
+        verbose && console.log(`err anchor ${file.path}`, anchorlink);
+      }
+    });
+
+    totalValidated += 1;
+    const perc = Math.floor(100 * (totalValidated / totalChecks));
+    if (perc % 10 === 0 && perc !== lastValidated) {
+      lastValidated = perc;
+      //log(`Pages validated: ${perc}%`);
     }
-  });
+    barChecked.update(totalValidated, { time: getTime() });
 
-  totalValidated += 1;
-  const perc = Math.floor(100 * (totalValidated / totalChecks));
-  if (perc % 10 === 0 && perc !== lastValidated) {
-    lastValidated = perc;
-    log(`Pages validated: ${perc}%`);
-  }
-
-  return file;
-}));
+    return file;
+  })).then(files => {
+    barChecked.stop();
+    return files;
+  })
+};
 
 const checkAllLinks = (links, files) => {
   return checkLinks(links)

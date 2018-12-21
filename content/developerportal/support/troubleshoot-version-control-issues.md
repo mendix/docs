@@ -47,6 +47,13 @@ If you are using the Desktop Modeler version 7.18 or higher, follow these steps:
 3. Right-click to open the folder's context menu.
 4. On the **TortoiseSVN** sub-menu, select **Clean up**.
 
+### 2.5 Getting an Error with the Message `System.Security.Cryptography.CryptographicException: Key not valid for use in specified state`
+
+Remove your user settings and restart the Modeler.
+
+1. Rename *\Users\<username>\AppData\Local\Mendix\Settings.sqlite* to *Settings.sqlite.old* 
+2. Restart the Modeler.
+
 ## 3 Other Problems
 
 If the solutions here do not work for your version control problems, please submit a request with [Mendix Support](https://support.mendix.com/).

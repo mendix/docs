@@ -518,6 +518,10 @@ module.exports = {
       from: "/mendixcloud/Integrate+your+app+with+Mendix+SSO",
       to: "/developerportal/deploy/integrate-with-mendix-sso"
     },
+	{
+      from: "/refguide5/Customizing+Hybrid+Mobile+Apps",
+      to: "/refguide/customizing-hybrid-mobile-apps"
+    },
 	/****************************************************
      * For Support - 12.19.18, Verify if Still Necessary
      ****************************************************/

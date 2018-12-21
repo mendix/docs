@@ -12,7 +12,7 @@ The System module contains some images that are used by the standard components.
 
 ## Supported Formats
 
-The following image formats are supported: png, gif, jpeg, bmp. PNG is recommended; it is compressed without losing any information and supports transparency very well.
+The following image formats are supported: png, gif, jpeg, bmp, svg. PNG is recommended; it is compressed without losing any information and supports transparency very well.
 
 ## Custom Images
 

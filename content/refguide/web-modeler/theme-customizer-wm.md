@@ -32,7 +32,7 @@ In **Settings** you can change the way your app looks. The changes that you can 
 
 | Section          | Description                                                  |
 | ---------------- | ------------------------------------------------------------ |
-| Upload Logo      | You can upload a picture that will be used as a logo in your app. You can upload  images with extensions png, jpg, jpeg, and gif. <br />Once the logo is uploaded, its colors will appear in the drop-down window for adjusting colors of such elements as buttons, text, top and side bars in the **Theme Customizer**. Thus, you can select colors from **Logo Colors** to make your app the same style as your logo. For more information, see [**Adjusting Colors**](#adjusting-colors). |
+| Upload Logo      | You can upload a picture that will be used as a logo in your app. You can upload  images with extensions png, jpg, jpeg, gif, svg. <br />Once the logo is uploaded, its colors will appear in the drop-down window for adjusting colors of such elements as buttons, text, top and side bars in the **Theme Customizer**. Thus, you can select colors from **Logo Colors** to make your app the same style as your logo. For more information, see [**Adjusting Colors**](#adjusting-colors). |
 | Brand Colors     | In this section you can choose the main colors of your app (mostly used for buttons). |
 | UI Customization | In this section, you can adjust the style and color of the main UI elements: <ul><li>Topbar</li><li>Sidebar</li><li>Backgrounds</li></ul> |
 | Typography       | Use this section to override the text styles and text colors for your app. |

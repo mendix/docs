@@ -51,7 +51,7 @@ If you are using the Desktop Modeler version 7.18 or higher, follow these steps:
 
 Remove your user settings and restart the Modeler.
 
-1. Rename the *\Users\<username>\AppData\Local\Mendix\Settings.sqlite* to *Settings.sqlite.old* 
+1. Rename *\Users\<username>\AppData\Local\Mendix\Settings.sqlite* to *Settings.sqlite.old* 
 2. Restart the Modeler.
 
 ## 3 Other Problems

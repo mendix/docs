@@ -111,5 +111,5 @@ It is possible to change or add new App Team roles for a specific app or at the 
 * [Company Admin Settings](/developerportal/company-app-roles/companyadmin-settings)
 * [How to Leave & Delete an App](../settings/leave-delete-app)
 * [How to Deactivate & Activate an App](../company-app-roles/deactivate-activate-app)
-* [Security – Node Permissions](/developerportal/deploy/node-permissions)
+* [Node Permissions](/developerportal/deploy/node-permissions)
 * [Technical Contact](/developerportal/company-app-roles/technical-contact)

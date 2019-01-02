@@ -45,7 +45,7 @@ Node permissions are only available for Licensed Apps.
 
 The **Node Permissions** tab lets you view the team members that have the App Team permission to view, deploy, and monitor the node.  A **Technical Contact** can grant those team members certain permissions.
 
-For more information, see [Security-Node](/developerportal/deploy/node-permissions).
+For more information, see [Node Permissions](/developerportal/deploy/node-permissions).
 
 ## 4 API Keys
 

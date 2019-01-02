@@ -282,7 +282,7 @@ There are two types of maintenance:
 * Regular weekly maintenance (which does not affect your app), during which you can change the preferred maintenance window
 * Planned maintenance (which will affect your app in some ways), during which you will automatically receive an email about this and you can override the maintenance window
 
-For more information about maintenance, see [How to Configure Maintenance Windows](maintenance-windows).
+For more information about maintenance, see [Maintenance Windows: Configuration](maintenance-windows).
 
 ### 7.1 Preferred Maintenance Window
 

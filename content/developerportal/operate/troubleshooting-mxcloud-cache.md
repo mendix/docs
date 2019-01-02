@@ -46,5 +46,5 @@ The cache statistics might also help you identify the most commonly used entitie
 ## 3 Related Content
 
 * [Metrics](metrics)
-* [Security - Node Permissions](/developerportal/deploy/node-permissions)
+* [Node Permissions](/developerportal/deploy/node-permissions)
 * [Running Now Metrics](troubleshooting-mxcloud-runningnow)

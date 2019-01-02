@@ -81,5 +81,5 @@ For example, you can use one instance and store 4GB of RAM in there. The other 1
 * [Mendix Cloud v4 - FAQ](mxcloudv4)
 * [How to Migrate to Mendix Cloud v4](migrating-to-v4)
 * [Company & App Roles](/developerportal/company-app-roles/index)
-* [Security - Node Permissions](/developerportal/deploy/node-permissions)
+* [Node Permissions](/developerportal/deploy/node-permissions)
 * [Technical Contact](/developerportal/company-app-roles/technical-contact)

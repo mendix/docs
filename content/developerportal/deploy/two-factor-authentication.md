@@ -48,7 +48,7 @@ For example, if you want to change your authentication method from **SMS Authent
 
 Team members with **App Team – Deploy Permissions** are authorized to have node permissions. The Technical Contact can grant those members different permissions that can differ per environment. For example, you might want to limit the access of external developers to only the acceptance environment.
 
-For more information, see [Security – Node Permissions](../deploy/node-permissions).
+For more information, see [Node Permissions](../deploy/node-permissions).
 
 ## 7 Related Content
 

@@ -19,7 +19,7 @@ This section of the Developer Portal Guide contains step-by-step instructions, a
 
 You can click **Run Locally** in the toolbar to run your app locally. Use the **View** button to directly jump to your app running at localhost.
 
-If you plan to deploy to version 3 (V3) of the Mendix Cloud later on, *and* your project contains Java actions, you should enable the **Emulate Cloud Security** setting. For more information, see [Java in the Cloud](java-in-the-cloud).
+If you plan to deploy to version 3 (V3) of the Mendix Cloud later on, *and* your project contains Java actions, you should enable the **Emulate Cloud Security** setting. For more information, see [V3: Java in Mendix Cloud](java-in-the-cloud).
 
 ## 3 Mendix Cloud
 

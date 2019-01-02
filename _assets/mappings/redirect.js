@@ -491,10 +491,6 @@ module.exports = {
       to: "/howto/collaboration-requirements-management/contribute-to-a-github-repository"
     },
 	{
-      from: "/refguide6/Consumed+REST+Services",
-      to: "/refguide/consumed-rest-services"
-    },
-	{
       from: "/addons/APM/",
       to: "/apm/"
     },

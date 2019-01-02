@@ -29,7 +29,7 @@ For apps in the Mendix Cloud, the Technical Contact is the first point of contac
 * Can receive alerts from the Mendix app when problems arise (for example, CPU load is high, running out of disk space)
 * Can configure the alert settings in the **Monitoring** tab of the cloud node
 
-As a Technical Contact, you can perform all the regular operations on the Mendix Cloud node in the [Developer Portal](http://home.mendix.com). Additionally, you can manage the access rights of your team members so that they can deploy, stop and start the app, and perform other actions. For more information, see [Security & Node Permissions](/developerportal/deploy/node-permissions).
+As a Technical Contact, you can perform all the regular operations on the Mendix Cloud node in the [Developer Portal](http://home.mendix.com). Additionally, you can manage the access rights of your team members so that they can deploy, stop and start the app, and perform other actions. For more information, see [Node Permissions](/developerportal/deploy/node-permissions).
 
 These are some details about managing licenses (renewals, activation, and upgrades):
 

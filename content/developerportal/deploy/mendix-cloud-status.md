@@ -22,7 +22,7 @@ Subscribing for updates from this site is recommended. You will be informed abou
 
 ## 2 Related Content
 
-* [How to Configure Maintenance Windows](maintenance-windows)
+* [Maintenance Windows: Configuration](maintenance-windows)
 * [Operate](/developerportal/operate)
 * [How to Receive Environment Status Alerts](/developerportal/operate/receive-alerts)
-* [How to View the Mendix Cloud Version and Region](cloud-version-region)
+* [Cloud Version and Region in the Mendix Cloud](cloud-version-region)

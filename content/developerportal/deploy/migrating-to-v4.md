@@ -105,12 +105,12 @@ To change the App URL you will need to contact [Mendix Support](https://support.
 
 ### 3.5 Changing a Custom Domain
 
-If you have a custom domain set up, you will need to change this. Instructions for doing this are here: [How To Configure Custom Domains](custom-domains).
+If you have a custom domain set up, you will need to change this. Instructions for doing this are here: [Custom Domains](custom-domains).
 
 ## 4 Related Content
 
 *   [Certificates](certificates)
-*   [How to Configure Custom Domains](custom-domains)
+*   [Custom Domains](custom-domains)
 *   [Mendix Cloud: Deploy](mendix-cloud-deploy)
 *   [How to Download a Backup](/developerportal/operate/how-to-download-a-backup)
 *   [Licensing Apps](licensing-apps)

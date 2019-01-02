@@ -4,7 +4,7 @@
 #  priority: 1 - 9 (used for sitemap). If omitted this will not be included, which defaults to 0.5
 #  menu_categories: List with the categories used in the side menu
 apidocs-mxsdk:
-  space: "API & SDK"
+  space: "APIs & SDK"
   priority: false
   menu_categories:
     - "API Documentation"
@@ -161,10 +161,6 @@ refguide:
     - "Mobile Development"
     - "SAP"
     - "IBM"
-howtogeneral:
-  space: "Mendix Support Guide"
-  priority: 6
-  menu_categories:
 releasenotes:
   space: "Release Notes"
   priority: false
@@ -172,8 +168,8 @@ releasenotes:
     - "Desktop Modeler"
     - "Web Modeler"
     - "Developer Portal"
-    - "SDKs"
     - "Mobile Products"
+    - "SDKs"
     - "Add-ons"
     - "What Are Mendix Beta Features?"
 developerportal:
@@ -190,3 +186,4 @@ developerportal:
     - "App Settings"
     - "Community Tools"
     - "App Store"
+    - "Mendix Support"

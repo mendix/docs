@@ -16,6 +16,10 @@ The SAP OData Connector is an OData connector written specifically to integrate 
 
 The SAP OData Connector can be used for example in combination with the SAP Data Model of an SAP Fiori Cloud app. For more details, see [SAP Data Models](sap-data-models). Alternatively, you can generate a data model from the metadata of your OData service, exposed from your SAP back-end system. For more details see [How to Use the SAP OData Model Creator](/howto/sap/use-sap-odata-model-creator).
 
+{{% alert type="warning" %}}
+SAP OData Connector only supports SAP OData Gateway Services which use OData version 2 or version 3. OData version 4 is not yet supported.
+{{% /alert %}}
+
 If you are new to the SAP OData Connector, you can try it out by following our how-to: [How to Use the OData Connector](/howto/sap/use-sap-odata-connector). This reference assumes that you know the details of the SAP OData service you want to use.
 
 When running the Mendix application on SAP Cloud Platform, you can choose to use the SAP Destination Service to gain access to your on-premises SAP instance. The SAP Destination Service can be configured to invoke the SAP Connectivity Service in SAP Cloud Platform to find a route to your OData service residing on-premises. This route is configured from the SAP Cloud Connector running as an agent in your on-premises SAP back-end. If no route is configured, the SAP OData Connector will route requests to the public OData service. For more information, see the [SAP Destination Service](sap-destination-service) documentation and the [SAP OData Connector](https://appstore.home.mendix.com/link/app/74525/Mendix/SAP-OData-Connector) in the Mendix App Store.

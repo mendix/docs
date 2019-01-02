@@ -1,5 +1,6 @@
 ---
 title: "Hashing Algorithms"
+parent: "support-references"
 #description: ""
 #tags: []
 ---

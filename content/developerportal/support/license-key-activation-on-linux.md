@@ -1,5 +1,6 @@
 ---
 title: "License Key Activation on Linux"
+parent: "support-references"
 #description: ""
 #tags: []
 ---

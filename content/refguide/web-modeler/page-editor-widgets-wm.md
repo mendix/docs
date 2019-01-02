@@ -38,7 +38,7 @@ Widget categories are described in the table below:
 | [Data Containers](page-editor-data-view-list-view-wm)   | Contains a data view (the starting point for showing the contents of one object), and list view (the starting point for showing the contents of list of objects). | [Data View & List View Properties in the Web Modeler](page-editor-data-view-list-view-wm) |
 | [Input Elements](page-editor-widgets-input-elements-wm) | Contains elements that can be used for inputting data.       | [Input Element Widgets in the Web Modeler](page-editor-widgets-input-elements-wm) |
 | [Images](page-editor-widgets-images-wm)                 | Contains image display widgets.                              | [Image Widgets in the Web Modeler](page-editor-widgets-images-wm) |
-| [Typography](page-editor-widgets-typography-wm)         | Contains text display widgets.                               | [Typography Widgets in the Web Modeler](page-editor-widgets-typography-wm) |
+| [Text](page-editor-widgets-text-wm)                     | Contains text display widgets.                               | [Text Widgets in the Web Modeler](page-editor-widgets-text-wm) |
 | [Buttons](page-editor-widgets-buttons-wm)               | Contains a variety of buttons for placing on a page.         | [Button Widgets in the Web Modeler](page-editor-widgets-buttons-wm) |
 | [Layouts](page-editor-widgets-layouts-wm)               | Contains layouts for controlling the placing widgets.        | [Layout Widgets in the Web Modeler](page-editor-widgets-layouts-wm) |
 | [Menus](../menu-widgets)                                | Contains menu creation widgets. Currently, these widgets can be configured only in the Desktop Modeler. | [Menu Widgets](../menu-widgets) in the *Desktop Modeler* category |

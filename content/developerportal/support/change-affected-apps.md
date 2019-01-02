@@ -1,5 +1,7 @@
 ---
 title: "Change the Affected Apps for Which You Can Submit Requests"
+parent: "support-details"
+menu_order: 50
 #description: ""
 #tags: []
 ---

@@ -16,6 +16,10 @@ Any OData service can be used to generate a data model using the SAP OData Model
 
 To accelerate the consumption of the SAP Business Suite services, Mendix also provides the full set of Business Suite for SAP Fiori Cloud apps as modules in the Mendix App Store. See section [3 SAP Data Models in the App Store](#appstoremodels).
 
+{{% alert type="warning" %}}
+SAP OData Model Creator and SAP OData Connector only support SAP OData Gateway Services which use OData version 2 or version 3. OData version 4 is not yet supported.
+{{% /alert %}}
+
 ## 2 SAP Data Models
 
 The Data Model module contains up to four resources which help to consume the OData Service:

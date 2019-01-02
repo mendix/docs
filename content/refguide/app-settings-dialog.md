@@ -1,6 +1,7 @@
 ---
 title: "App Settings Dialog"
 parent: "dialogs"
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 When creating a new app, the App Settings dialog lets you specify an app name, whether or not to enable the online services provided by the Mendix Platform, the default language, and the location on disk where the project files for your app are stored. These settings are optional. Clicking Create app will create your app with the default settings.
 

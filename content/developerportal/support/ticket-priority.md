@@ -1,5 +1,7 @@
 ---
 title: "Ticket Priority"
+parent: "support-details"
+menu_order: 20
 #description: ""
 #tags: []
 ---

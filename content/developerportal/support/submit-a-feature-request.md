@@ -1,5 +1,7 @@
 ---
 title: "Submit a Feature Request"
+parent: "support-details"
+menu_order: 40
 #description: ""
 #tags: []
 ---

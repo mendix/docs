@@ -4,6 +4,7 @@ category: "Deployment"
 menu_order: 60
 description: "Describes how to build a new Docker image using the Mendix buildpack."
 tags: ["Docker", "Cloud", "container", "CI/CD"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction

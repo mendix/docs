@@ -3,6 +3,16 @@ title: "Developer Portal"
 description: "Release Notes for all aspects of the Mendix Developer Portal"
 tags: ["developer portal", "cloud environments", "Mendix Cloud", "SAP", "IBM", "on-premises", "deployment"]
 ---
+## 2019
+
+### January 3rd, 2019
+
+#### Fixes
+
+* We fixed issues regarding application constants for Mendix Cloud v4 and v3 applications( Tickets 77302, 77390, 77505, 77797)
+* We addressed and fixed an issue that prevented some Mendix Cloud v3 from being able to change Java version of their applications. (Tickets 77251, 77652)
+* We have updated the links to the tutorials in Mendix welcome email, so that the new users of our platform can be guided better. (Ticket 77158)
+* We've fixed integration issues that affected some Cloud Portal users while managing application members. (Ticket 77386)
 
 ## 2018
 

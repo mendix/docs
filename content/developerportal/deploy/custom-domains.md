@@ -12,7 +12,9 @@ tags: ["Custom Domain","Mendix Cloud","Developer Portal", "certificates"]
 
 The Mendix Cloud supports adding custom domains such as `https://myapp.mycompany.com/` to your environments. As we only allow HTTPS connections, you have to provide a custom domain certificate (an SSL/TLS certificate). This how-to walks you through the process.
 
+{{% alert type="info" %}}
 This option is provided for licensed apps. You cannot add custom domains to free apps.
+{{% /alert %}}
 
 **This how-to will teach you how to do the following:**
 
@@ -46,15 +48,17 @@ Create a CNAME (Canonical Name) record and point it to `[YOUR-CUSTOM-DOMAIN].cna
 
 {{% alert type="info" %}}
 
-It's not possible to create a CNAME record for an apex/naked domain (meaning, a domain without a subdomain, like `mycompany.com`), as custom apex/naked domains are currently not supported.
+It is not possible to create a CNAME record for an apex/naked domain (meaning, a domain without a subdomain, like `mycompany.com`), as custom apex/naked domains are currently not supported.
 
 {{% /alert %}}
 
 ## 3 Managing Custom Domains in the Mendix Cloud
 
-Custom domain certificates (or just "certificates") and custom domains are managed in separate locations in the Mendix Cloud. Certificates are currently managed on the application level.
+Custom domain certificates (or just "certificates") are managed at the *application* level while custom domains are managed per *environment*.
 
-You can have a collection of certificates. For example when your certificate expires, you can upload a new certificate next to your old certificate. Those can be chosen when you configure a custom domain. This is done on the environment level (test, acceptance, production).
+You can have more than one certificate for an application. For example when your certificate expires, you can upload a new certificate next to your old certificate.
+
+You can be choose which certificate to use when you configure a custom domain for an environment (test, acceptance, or production).
 
 ![](attachments/custom-domains/21168233.png)
 
@@ -72,7 +76,7 @@ If you already have a signed SSL/TLS certificate, continue with section 5, [Uplo
 
 ## 4 Obtaining a New Signed Certificate
 
-If you do not have an SSL/TLS certificate you can order one at a certificate authority (like GeoTrust, Thawte, Verisign, RapidSSL, GoDaddy, or Comodo). To get a signed SSL/TLS certificate from a certificate authority, you need to provide a *certificate signing request (CSR)*. A private SSL/TLS key and a CSR tied to that key can be created in the Mendix Cloud for you.
+If you do not have an SSL/TLS certificate you can order one from a certificate authority (like GeoTrust, Thawte, Verisign, RapidSSL, GoDaddy, or Comodo). To get a signed SSL/TLS certificate from a certificate authority, you need to provide a *certificate signing request (CSR)*. A private SSL/TLS key and a CSR tied to that key can be created in the Mendix Cloud for you.
 
 ### 4.1 Generating a Certificate Request for your Custom Domain{#Generating}
 
@@ -140,7 +144,7 @@ To upload the custom domain certificate, follow these steps:
 
 5. Paste the **TLS Private Key**.
 
-6. Paste an **Intermediate Certificate Chain**. This is optional, but most browsers will required it. The intermediate certificate chain is often provided by your certificate authority.
+6. Paste an **Intermediate Certificate Chain**. This is optional, but most browsers will required it. The intermediate certificate chain is provided by your certificate authority.
 
     ![](attachments/custom-domains/21168228.png)
 
@@ -180,7 +184,7 @@ For this you will need access to the certificate request that you created for th
 
 Once a custom domain certificate has been uploaded, you can configure a custom domain for one of your application environments.
 
-To configure a custom domain on your application environment, follow these steps:
+To configure a custom domain for your application environment, follow these steps:
 
 1. Click **Environments**.
 

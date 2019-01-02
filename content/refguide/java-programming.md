@@ -49,7 +49,7 @@ For details on this topic, see [Using Eclipse](using-eclipse).
 
 ## 5 Java Actions in the Cloud
 
-For details on this topic, see [Java in the Cloud](/developerportal/deploy/java-in-the-cloud).
+For details on this topic, see [V3: Java in Mendix Cloud](/developerportal/deploy/java-in-the-cloud).
 
 ## 6 Main Documents in This Category
 

@@ -22,8 +22,8 @@ Errors need to be solved before your app can be published. A consistency error c
 
 ##  2 Related Content
 
-* [Consistency Errors When Configuring Pages](consistency-errors-pages)
-* [Consistency Errors When Configuring Navigation](consistency-errors-navigation)
+* [Page Editor Consistency Errors](consistency-errors-pages)
+* [Navigation Consistency Errors](consistency-errors-navigation)
 * [Pages](pages)
 * [Microflows](microflows) 
 * [Navigation in Mendix 7.4 & Above](navigation)

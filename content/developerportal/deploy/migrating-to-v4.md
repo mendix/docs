@@ -24,7 +24,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Have the [Technical Contact](/developerportal/company-app-roles/technical-contact) role for both your existing v3 and available v4 Cloud Nodes
 
-* Create a new temporary Free App without a sandbox environment – instructions for unlinking a Free App from a sandbox are here: [Licensing Apps](licensing-app#unlink)
+* Create a new temporary Free App without a sandbox environment – instructions for unlinking a Free App from a sandbox are here: [Licensing Apps](licensing-apps#unlink)
 
 ## 3 Migrating the App
 

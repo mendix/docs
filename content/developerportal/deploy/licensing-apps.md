@@ -79,7 +79,7 @@ If you are unlinking from a *licensed node*, the node is NOT deleted and data is
 
 Before you can link an app to a new environment, you need to unlink it from its current environment. All apps will be created as a *Free App* by default the first time they are deployed. In most cases, therefore, you will have to unlink them.
 
-### 4.2.1 Unlinking a Free App
+### 4.2.1 Unlinking a Free App{#unlink}
 
 1.  Go to the **[Developer Portal](http://home.mendix.com)**.
 

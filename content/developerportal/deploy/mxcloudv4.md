@@ -104,4 +104,4 @@ There are some features missing in v4. Mendix will implement the following featu
 
 ## 12 Related Content
 
-* [How to Migrate to Mendix Cloud v4](migrating-to-v4)
+* [Migrate to Mendix Cloud v4](migrating-to-v4)

@@ -2,6 +2,7 @@
 title: "Mendix Cloud V4"
 parent: "mendix-cloud-deploy"
 menu_order: 50
+description: "Frequently asked questions about Mendix Cloud V4"
 tags: ["Cloud", "Mendix Cloud", "V4", "Version 4", "FAQ", "V3", "AWS", "Amazon Web Services"]
 ---
 
@@ -11,7 +12,7 @@ Mendix Cloud v4 is the latest version of the Mendix Cloud: where licensed Mendix
 
 V4 was launched in Q1 2017. As in v3, applications are deployed via the Mendix Developer Portal or our [APIs](/apidocs-mxsdk/apidocs/deploy-api). Unlike v3, the applications run on Cloud Foundry clusters that are deployed on highly available Amazon Web Services (AWS) regions. Apps can run in the EU, US, Japan, or the UK.
 
-## 2 What Does the v4 Rollout Look Like, and What Is the Status of v3?
+## 2 What Is the Status of Mendix Cloud v3?
 
 New apps will be launched on Mendix Cloud v4 by default. Customers that need to stay on v3 because they use a VPN can still get new apps on v3 for the foreseeable future. Mendix Cloud v3 will be supported for several more years; no end-of-support or end-of-life dates have been set yet.
 
@@ -49,17 +50,17 @@ Data in Japan is currently backed up in Australia.
 
 No, we do not. The Cloud Foundry API does not map one-to-one to our deployment options, our authorization model, or our cloud resource usage. However, deployment to the Mendix Cloud can be automated using the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api).
 
-## 6 How Do I Access the Underlying AWS Resources, and How Can You Deploy in My AWS account?
+## 6 How Do I Access the Underlying AWS Resources, and How Can I Deploy in My AWS account?
 
-Mendix Cloud v4 runs in Mendix's own AWS account, and you can not interact with the AWS APIs directly via our credentials. We do not offer [VPC peering](http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide/Welcome.html) or VPC connections. All access to Mendix-hosted AWS resources (such as EC2, RDS, and S3) is done via our APIs, such as the [Database API](https://apidocs.mendix.com/7/runtime/com/mendix/core/Core.html#retrieveXPathQuery-com.mendix.systemwideinterfaces.core.IContext-java.lang.String-) and [FileDocument API](https://apidocs.mendix.com/7/runtime/com/mendix/core/Core.html#storeFileDocumentContent-com.mendix.systemwideinterfaces.core.IContext-com.mendix.systemwideinterfaces.core.IMendixObject-java.io.InputStream-) in Runtime, and the cloud resources via the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api).
+Mendix Cloud v4 runs in Mendix's own AWS account, and you can not interact with the AWS APIs directly via our credentials. We do not offer [VPC peering](http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide/Welcome.html) or VPC connections. All access to Mendix-hosted AWS resources (such as EC2, RDS, and S3) is done via our APIs, such as the [Database API](https://apidocs.mendix.com/7/runtime/com/mendix/core/Core.html#retrieveXPathQuery-com.mendix.systemwideinterfaces.core.IContext-java.lang.String-) and [FileDocument API](https://apidocs.mendix.com/7/runtime/com/mendix/core/Core.html#storeFileDocumentContent-com.mendix.systemwideinterfaces.core.IContext-com.mendix.systemwideinterfaces.core.IMendixObject-java.io.InputStream-) in Runtime, and the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api) for cloud resources.
 
-However, you can launch services on your own AWS account in the same region to minimize latency, and you can access those services from connectors in your app. The [AWS IoT Connector](https://appstore.home.mendix.com/link/app/2868/Mendix/AWS-IoT-Connector) from the Mendix App Store is a good example.
+You can, however, launch services on your own AWS account in the same region to minimize latency, and you can access those services via connectors in your app. The [AWS IoT Connector](https://appstore.home.mendix.com/link/app/2868/Mendix/AWS-IoT-Connector) from the Mendix App Store is a good example.
 
 ## 7 There Is No Deployment in My Desired AWS Region, When Will Mendix Launch There?
 
 We add regions based on customer demand. If you would like a different region, contact your Mendix Customer Success Manager to see what we can offer. Note that we any request will need to take into account the costs of launching a complete Cloud Foundry cluster, with backup services, monitoring, etc. 
 
-You can also consider running your Mendix app using your own AWS account in a different AWS region. You can do this using Docker, and there are some documents on how to do this here: [Docker](docker-deploy). If you do this, however, you will not receive all the benefits of running in the Mendix Cloud.
+You can also consider running your Mendix app using your own AWS account in a different AWS region. You can do this using Docker, and there is some information on how to do this here: [Docker](docker-deploy). If you do this, however, you will not receive all the benefits of running in the Mendix Cloud.
 
 ## 8 What Are the Limitations?
 

@@ -58,7 +58,7 @@ When a maintenance operation is planned, it will show up under **Planned Mainten
 * [How to Manage Company & App Roles](/developerportal/company-app-roles/manage-roles)
 * [How to Receive Environment Status Alerts](/developerportal/operate/receive-alerts)
 * [Mendix Cloud](mendix-cloud-deploy)
-* [Mendix Cloud v4 - FAQ](mxcloudv4)
+* [Mendix Cloud V4](mxcloudv4)
 * [Company & App Roles](/developerportal/company-app-roles/index)
 * [Node Permissions](/developerportal/deploy/node-permissions) 
 * [Technical Contact](/developerportal/company-app-roles/technical-contact)

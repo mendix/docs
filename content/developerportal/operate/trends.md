@@ -177,4 +177,4 @@ Disk utilization is calculated as the disk usage that is used by the user of the
 * [Migrate to Mendix Cloud v4](/developerportal/deploy/migrating-to-v4)
 * [How to Receive Environment Status Alerts](receive-alerts)
 * [Cloud Version and Region in the Mendix Cloud](/developerportal/deploy/cloud-version-region)
-* [Mendix Cloud v4 - FAQ](/developerportal/deploy/mxcloudv4)
+* [Mendix Cloud V4](/developerportal/deploy/mxcloudv4)

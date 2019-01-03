@@ -96,6 +96,11 @@ There are some features missing in v4. Mendix will implement the following featu
     * Update all App Store modules to the latest version – older versions may not close file connections correctly
     * If using Mendix 6, upgrade to version 6.10.16 or above; for Mendix 7, upgrade to version 7.16 or above
     * Increase the number of available file connections (default is 50) by adding the *com.mendix.storage.s3.MaxConnections* setting on the **Environments > Runtime > Custom Runtime Settings** in the Developer Portal – see [Customization – Amazon S3 Storage Service Settings](/refguide/custom-settings#5-amazon-s3-storage-service-settings) for more information
+* The platform automatically restarts application instances due to routine platform updates, which can be up to several times a week. If you review logs for an app that is functioning normally and you see recent messages about a series of instance restarts for no apparent reason, platform updates are probably the reason. This is normal and ok!
+
+    In the majority of cases, the platform will start a new instance of your application, before gracefully stopping the old one. This ensures that there is no downtime. You can verify this in the logs of your application.
+    
+    If you want a second layer of assurance that you will not have downtime in this situation, we advise you to use Mendix 7+ and to scale your application to multiple instances.
 
 ## 12 Related Content
 

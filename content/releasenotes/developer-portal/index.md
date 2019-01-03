@@ -12,7 +12,7 @@ tags: ["developer portal", "cloud environments", "Mendix Cloud", "SAP", "IBM", "
 * We fixed issues where application constants were being reset to their default values for some Mendix Cloud v4 and v3 applications. (Tickets 77302, 77390, 77505, 77797)
 * We addressed and fixed an issue that prevented some Mendix Cloud v3 users from being able to change Java version of their applications. (Tickets 77251, 77652)
 * We have updated the links to the tutorials in Mendix welcome email, so that new users of our platform can be guided better. (Ticket 77158)
-* We have fixed integration issues that affected some Cloud Portal users while managing application members. (Ticket 77386)
+* We have fixed integration issues that affected some Developer Portal users while managing application members. (Ticket 77386)
 
 ## 2018
 

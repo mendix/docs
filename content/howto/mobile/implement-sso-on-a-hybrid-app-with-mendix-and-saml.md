@@ -70,56 +70,55 @@ To address the [first problem](#firstproblem), when the mobile app is starting t
 
 ```javascript
 MxApp.onConfigReady(function(config) {
-
+	
     var samlLogin = function() {
         var samlWindow = cordova.InAppBrowser.open(window.mx.remoteUrl + "SSO/", "_blank", "location=no,toolbar=no");
         var exitFn = function(){
             navigator.app.exitApp();
         };
         samlWindow.addEventListener("exit", exitFn);
-        var cb = function(event) {
+        var cb = function(event) {        
             if (event.url.indexOf(window.mx.remoteUrl) == 0 && event.url.indexOf("SSO") == -1) {
-
+            
                 samlWindow.removeEventListener("loadstop", cb);
                 samlWindow.removeEventListener("exit", exitFn);
-
+				
                 samlWindow.executeScript({
                     code: "document.cookie;"
                 }, function(values) {
                     var value = values[0] + ";";
                     var token = new RegExp('AUTH_TOKEN=([^;]+);', 'g').exec(value);
                     var authPromise = new Promise(function(resolve, reject) {
-                    	if (token && token.length > 1) {
-							window.localStorage.setItem("mx-authtoken", token);
-
-	                        window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, function (fs) {
-	                            fs.root.getFile(".mx-token", { create: true, exclusive: false }, function (fileEntry) {
-	                                fileEntry.createWriter(function (fileWriter) {
-	                                    fileWriter.onwriteend = resolve;
-	                                    fileWriter.onerror = reject;
-	                                    fileWriter.write(token);
-	                                });
-	                            }, reject);
-	                        }, reject);
-	                    } else {
-	                    	resolve();
-	                    }
+                        if (token && token.length > 1) {
+                            window.localStorage.setItem("mx-authtoken", token);
+							
+                            window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, function (fs) {
+                                fs.root.getFile(".mx-token", { create: true, exclusive: false }, function (fileEntry) {
+                                    fileEntry.createWriter(function (fileWriter) {
+                                        fileWriter.onwriteend = resolve;
+                                        fileWriter.onerror = reject;
+                                        fileWriter.write(token);
+                                    });
+                                }, reject);
+                            }, reject);
+                        } else {
+                            resolve();
+                        }
                     });
-
-                    authPromise.then(function() {
+                    
+                    var closeWindow = function() {
                         samlWindow.close();
                         if (window.mx.afterLoginAction) {
                             window.mx.afterLoginAction();
                         }
-                    });
+                    };
+                    authPromise.then(closeWindow, closeWindow);
                 });
-
             };
         }
         samlWindow.addEventListener("loadstop", cb);
     }
     config.ui.customLoginFn = samlLogin;
-
 });
 ```
 

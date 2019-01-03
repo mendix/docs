@@ -145,7 +145,11 @@ If you want to choose whether you want to run your app locally or in the Sandbox
 
 ![](attachments/mendix-cloud-deploy/runapp.jpg)
 
-## 6 Related Content
+## 6 Status of Deployment
+
+The Mendix status page ([https://status.mendix.com/](https://status.mendix.com/)) shows the current status of Mendix services. If you have issues with deployment, you can check the Mendix status page to see if deployment is operational (under **Mendix Services**) or if there are other Mendix issues which may be affecting your deployment.
+
+## 7 Related Content
 
 * [AppCloudServices](https://appstore.home.mendix.com/link/app/934/); the **AppCloudServices** module allows your app to integrate with services on the Mendix Cloud
 * [Custom Domains](custom-domains)

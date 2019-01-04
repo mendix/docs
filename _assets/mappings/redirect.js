@@ -491,10 +491,6 @@ module.exports = {
       to: "/howto/collaboration-requirements-management/contribute-to-a-github-repository"
     },
 	{
-      from: "/addons/APM/",
-      to: "/apm/"
-    },
-	{
       from: "/howto50/Create+a+custom+theme+with+the+Mendix+UI+Framework",
       to: "/howto/ux/create-a-custom-theme-with-the-mendix-ui-framework"
     },

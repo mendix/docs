@@ -24,7 +24,7 @@ Before starting this how-to, make sure you have completed the prerequisites desc
 
 * To add extra Company Admins, you need to be a **Company Admin**
 * To change the App Contact, you need to have a **SCRUM Master** role or possess the App Team **Settings** permission 
-* To change the Technical Contact, you need to be a **Technical Contact **
+* To change the Technical Contact, you need to be a **Technical Contact**
 
 ## 3 Adding a Company Admin
 

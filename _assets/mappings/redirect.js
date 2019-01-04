@@ -12,7 +12,22 @@ module.exports = {
       to: "/"
     },
 	/****************************************************
-     * Reference Guide 7 - 12.19.18, Verify if Still Necessary
+     * Reference Guide
+     ****************************************************/
+	{
+      from: "/refguide/download-from-team-server-dialog",
+      to: "/refguide/download-from-version-control-dialog"
+    },
+    {
+      from: "/refguide/open-project-dialog",
+      to: "/refguide/open-app-dialog"
+    },
+    {
+      from: "/refguide/upload-to-team-server-dialog",
+      to: "/refguide/upload-to-version-control-dialog"
+    },	 
+	/****************************************************
+     * Reference Guide 7
      ****************************************************/
     {
       from: "/refguide7/microflow-expressions",
@@ -26,38 +41,18 @@ module.exports = {
       from: "/refguide7/certificates",
       to: "/developerportal/deploy/certificates"
     },
-    {
-      from: "/refguide/download-from-team-server-dialog",
-      to: "/refguide/download-from-version-control-dialog"
-    },
-    {
-      from: "/refguide/open-project-dialog",
-      to: "/refguide/open-app-dialog"
-    },
-    {
-      from: "/refguide/upload-to-team-server-dialog",
-      to: "/refguide/upload-to-version-control-dialog"
-    },
 	/****************************************************
-     * How-to 7 - 12.19.18, Verify if Still Necessary
+     * How-to's
      ****************************************************/
-    {
+	{
       from: "/howto/deploying-a-mendix-app-to-cloud-foundry",
       to: "/developerportal/deploy/cloud-foundry-deploy"
     },
-    {
-      from: "/howto7/deploying-a-mendix-app-to-cloud-foundry",
-      to: "/developerportal/deploy/cloud-foundry-deploy"
-    },
-    {
+	{
       from: "/deploy-a-mendix-app-to-cloud-foundry",
       to: "/developerportal/deploy/cloud-foundry-deploy"
     },
-    {
-      from: "/howto7/solving-load-and-import-errors",
-      to: "/howto/monitoring-troubleshooting/solving-load-and-import-errors"
-    },
-    {
+	{
       from: "/howto/start-with-a-blank-app",
       to: "/refguide/web-modeler/overview-wm"
     },
@@ -81,8 +76,19 @@ module.exports = {
       from: "/howtogeneral/bestpractices/best-practices-security-and-improvements-for-mendix-applications",
       to: "/howto/security/best-practices-security"
     },
+	/****************************************************
+     * How-to 7
+     ****************************************************/
+    {
+      from: "/howto7/deploying-a-mendix-app-to-cloud-foundry",
+      to: "/developerportal/deploy/cloud-foundry-deploy"
+    },
+    {
+      from: "/howto7/solving-load-and-import-errors",
+      to: "/howto/monitoring-troubleshooting/solving-load-and-import-errors"
+    },
     /****************************************************
-     * Developer Portal Guide - 12.19.18, Verify if Still Necessary
+     * Developer Portal Guide
      ****************************************************/
     {
       from: "/developerportal/settings/technical-contact",
@@ -169,7 +175,7 @@ module.exports = {
       to: "/developerportal/deploy/cloud-foundry-deploy"
     },
     /****************************************************
-     * Release Notes - 12.19.18, Verify if Still Necessary
+     * Release Notes
      ****************************************************/
     {
       from: "/ReleaseNotes/",
@@ -484,7 +490,7 @@ module.exports = {
       to: "/releasenotes/beta-features/"
     },
 	/****************************************************
-     * App Store - 12.19.18, Verify if Still Necessary
+     * App Store
      ****************************************************/
 	{
       from: "/howto/collaboration-project-management/contribute-to-a-github-repository",
@@ -515,7 +521,7 @@ module.exports = {
       to: "/refguide/customizing-hybrid-mobile-apps"
     },
 	/****************************************************
-     * For Support - 12.19.18, Verify if Still Necessary
+     * For Support
      ****************************************************/
 	{
       from: "/howtogeneral/support/how-to-submit-a-request-with-mendix-support",

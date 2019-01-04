@@ -4,7 +4,7 @@ title: "Reference Guide"
 
 ## 1 Introduction
 
-The reference guide for ATS is divided according to the ATS version.
+The reference guide for ATS is categorized according to the ATS version.
 
 ## 2 Main Documents in This Category
 

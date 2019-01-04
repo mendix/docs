@@ -4,7 +4,7 @@ title: "How-to's"
 
 ## 1 Introduction
 
-The how-to's for ATS are divided according to the ATS version.
+The how-to's for ATS are categorized according to the ATS version.
 
 ## 2 Main Documents in This Category
 

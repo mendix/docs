@@ -4,7 +4,7 @@ title: "Best Practices"
 
 ## 1 Introduction
 
-The best practices for ATS are divided according to the ATS version.
+The best practices for ATS are categorized according to the ATS version.
 
 ## 2 Main Documents in This Category
 

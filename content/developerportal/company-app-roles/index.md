@@ -95,7 +95,7 @@ Each App Team role has access to permission areas based on the following factors
 
 * Who can edit the backlog and current [sprint](../collaborate/stories)
 * Who can edit the app [model](../develop/modeling-environments)
-* Who has access to [cloud node](../deploy/node-permissions) information (please note that node permissions must be provisioned by the [Technical Contact](#technical-contact))
+* Who has the correct [Node Permissions](../deploy/node-permissions) for access to the node information (please note that node permissions must be provisioned by the [Technical Contact](#technical-contact))
 * Who can change the app's [general settings](../settings/general-settings)
 
 These are the predefined App Team roles:

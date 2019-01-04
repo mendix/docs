@@ -68,5 +68,4 @@ NEVER use the Mendix Modeler to directly connect to a production database (for e
 * [How to Set Up a New SQL Server Database](setting-up-a-new-sql-server-database)
 * [How to Set Up a SQL Server User](setting-up-a-sql-server-user)
 * [How to Deploy Mendix on Microsoft Windows](deploy-mendix-on-microsoft-windows)
-* [How to Install Mendix on Debian GNU Linux](installing-mendix-on-debian-gnu-linux)
-* [How to Install Mendix on RedHat and CentOS](installing-mendix-on-redhat-and-centos)
+* [U*ix Deployment](unix-like)

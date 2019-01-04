@@ -79,5 +79,4 @@ To restore the database, follow these steps:
 * [How to Set Up a Security Checklist for Your On-Premises Installation](security-checklist-for-your-on-premises-installation)
 * [How to Use Mendix on Windows - Microsoft SQL Server](mendix-on-windows-microsoft-sql-server)
 * [How to Deploy Mendix on Microsoft Windows](deploy-mendix-on-microsoft-windows)
-* [How to Install Mendix on Debian GNU Linux](installing-mendix-on-debian-gnu-linux)
-* [How to Install Mendix on RedHat and CentOS](installing-mendix-on-redhat-and-centos)
+* [U*ix Deployment](unix-like)

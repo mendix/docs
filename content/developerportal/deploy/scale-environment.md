@@ -35,6 +35,8 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 {{% alert type="info" %}}
 You can find the cloud version on which your app is hosted in the environment details: see [Cloud Version and Region in the Mendix Cloud](cloud-version-region).
+
+Details of your plan are also displayed on the environment details page.
 {{% /alert %}}
 
 ## 3 Scaling Your Environment
@@ -54,7 +56,7 @@ If you want to scale your licensed app in Mendix Cloud v4, follow these steps:
 5. Set the **Memory per instance** that you want to use.
 
 {{% alert type="warning" %}}
-You cannot exceed the total memory provided by your plan. This is shown in the **Plan Details** section of the environment details.
+You cannot exceed the total memory provided by your plan. This is shown as the lower number in **Total Allocated Memory**.
 
 If you try to use scaling values which exceed the memory provided by your plan you will get the message `You do not have sufficient resources to configure this allocation`.
 {{% /alert %}}

@@ -11,4 +11,3 @@ Mendix APM provides this experience through the following tools:
 * Statistics Tool – identifies trends by gathering statistics on application performance
 * Performance Tool – analyzes individual functions and visualizes where improvement is possible
 * Measurements Tool – monitors the CPU and memory, performs measuring queries, and alerts if a limit is exceeded
-

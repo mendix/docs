@@ -62,5 +62,4 @@ The user that is configured as the Service Account should have Read&Execute priv
 *   [Security checklist for your on-premises installation](security-checklist-for-your-on-premises-installation)
 *   [Mendix on Windows - Microsoft SQL Server](mendix-on-windows-microsoft-sql-server)
 *   [Deploying Mendix on Microsoft Windows](deploy-mendix-on-microsoft-windows)
-*   [Installing Mendix on Debian GNU Linux](installing-mendix-on-debian-gnu-linux)
-*   [Installing Mendix on RedHat and CentOS](installing-mendix-on-redhat-and-centos)
+*   [U*ix Deployment](unix-like)

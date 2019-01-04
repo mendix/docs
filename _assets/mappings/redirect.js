@@ -25,20 +25,17 @@ module.exports = {
     {
       from: "/refguide/upload-to-team-server-dialog",
       to: "/refguide/upload-to-version-control-dialog"
-    },	 
-	/****************************************************
-     * Reference Guide 7
-     ****************************************************/
+    },
     {
-      from: "/refguide7/microflow-expressions",
+      from: "/refguide/microflow-expressions",
       to: "/refguide/expressions"
     },
     {
-      from: "/refguide7/vertical-split-pane",
+      from: "/refguide/vertical-split-pane",
       to: "/refguide/scroll-container"
     },
     {
-      from: "/refguide7/certificates",
+      from: "/refguide/certificates",
       to: "/developerportal/deploy/certificates"
     },
 	/****************************************************
@@ -76,15 +73,12 @@ module.exports = {
       from: "/howtogeneral/bestpractices/best-practices-security-and-improvements-for-mendix-applications",
       to: "/howto/security/best-practices-security"
     },
-	/****************************************************
-     * How-to 7
-     ****************************************************/
     {
-      from: "/howto7/deploying-a-mendix-app-to-cloud-foundry",
+      from: "/howto/deploying-a-mendix-app-to-cloud-foundry",
       to: "/developerportal/deploy/cloud-foundry-deploy"
     },
     {
-      from: "/howto7/solving-load-and-import-errors",
+      from: "/howto/solving-load-and-import-errors",
       to: "/howto/monitoring-troubleshooting/solving-load-and-import-errors"
     },
     /****************************************************
@@ -372,122 +366,6 @@ module.exports = {
     {
       from: "/ReleaseNotes/5.09.0",
       to: "/releasenotes/desktop-modeler/5.9"
-    },
-    {
-      from: "/ReleaseNotes/Platform+Portal",
-      to: "/releasenotes/developer-portal/"
-    },
-    {
-      from: "/ReleaseNotes/Release+Notes+2016-10-05",
-      to: "/releasenotes/developer-portal/"
-    },
-    {
-      from: "/ReleaseNotes/Release+notes+2016-05-12",
-      to: "/releasenotes/developer-portal/"
-    },
-    {
-      from: "/ReleaseNotes/Release+notes+2016-03-24",
-      to: "/releasenotes/developer-portal/"
-    },
-    {
-      from: "/ReleaseNotes/Release+notes+2016-02-18",
-      to: "/releasenotes/developer-portal/"
-    },
-    {
-      from: "/ReleaseNotes/Release+notes+2016-01-13",
-      to: "/releasenotes/developer-portal/"
-    },
-    {
-      from: "/ReleaseNotes/Release+notes+2015-12-01",
-      to: "/releasenotes/developer-portal/"
-    },
-    {
-      from: "/ReleaseNotes/Release+notes+2015-11-30",
-      to: "/releasenotes/developer-portal/"
-    },
-    {
-      from: "/ReleaseNotes/Release+notes+2015-10-16",
-      to: "/releasenotes/developer-portal/"
-    },
-    {
-      from: "/ReleaseNotes/Release+notes+2015-09-17",
-      to: "/releasenotes/developer-portal/"
-    },
-    {
-      from: "/ReleaseNotes/Release+notes+2015-09-03",
-      to: "/releasenotes/developer-portal/"
-    },
-    {
-      from: "/ReleaseNotes/Release+notes+2015-08-06",
-      to: "/releasenotes/developer-portal/"
-    },
-    {
-      from: "/ReleaseNotes/Release+notes+2015-07-31",
-      to: "/releasenotes/developer-portal/"
-    },
-    {
-      from: "/ReleaseNotes/Release+notes+2015-07-24",
-      to: "/releasenotes/developer-portal/"
-    },
-    {
-      from: "/ReleaseNotes/Release+notes+2015-07-16",
-      to: "/releasenotes/developer-portal/"
-    },
-    {
-      from: "/ReleaseNotes/Release+notes+2015-07-03",
-      to: "/releasenotes/developer-portal/"
-    },
-    {
-      from: "/ReleaseNotes/Release+notes+2015-06-16",
-      to: "/releasenotes/developer-portal/"
-    },
-    {
-      from: "/ReleaseNotes/Release+notes+2015-06-02",
-      to: "/releasenotes/developer-portal/"
-    },
-    {
-      from: "/ReleaseNotes/Release+notes+2015-05-29",
-      to: "/releasenotes/developer-portal/"
-    },
-    {
-      from: "/ReleaseNotes/Release+notes+2015-04-21",
-      to: "/releasenotes/developer-portal/"
-    },
-    {
-      from: "/ReleaseNotes/Release+notes+2015-04-16",
-      to: "/releasenotes/developer-portal/"
-    },
-    {
-      from: "/ReleaseNotes/Release+notes+2015-03-31",
-      to: "/releasenotes/developer-portal/"
-    },
-    {
-      from: "/ReleaseNotes/Release+notes+2015-02-26",
-      to: "/releasenotes/developer-portal/"
-    },
-    {
-      from: "/ReleaseNotes/Release+notes+2015-02-19",
-      to: "/releasenotes/developer-portal/"
-    },
-    {
-      from: "/ReleaseNotes/Release+notes+2015-02-05",
-      to: "/releasenotes/developer-portal/"
-    },
-    {
-      from: "/ReleaseNotes/Release+notes+2015-01-22",
-      to: "/releasenotes/developer-portal/"
-    },
-    {
-      from: "/ReleaseNotes/Release+notes+2014-12-30",
-      to: "/releasenotes/developer-portal/"
-    },
-    {
-      from: "/ReleaseNotes/Release+notes+2014-12-23",
-      to: "/releasenotes/developer-portal/"
-    },
-    {
-      from: "/ReleaseNotes/Beta+features",
-      to: "/releasenotes/beta-features/"
     },
 	/****************************************************
      * App Store

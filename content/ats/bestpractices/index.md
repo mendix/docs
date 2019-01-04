@@ -2,7 +2,11 @@
 title: "Best Practices"
 ---
 
-These are the main documents in this category:
+## 1 Introduction
 
-* [ATS 1 Best Practices](bp-version-1/bp-version-1)
+The best practices for ATS are divided according to the ATS version.
+
+## 2 Main Documents in This Category
+
 * [ATS 2 Best Practices](bp-version-2/bp-version-2)
+* [ATS 1 Best Practices](bp-version-1/bp-version-1)

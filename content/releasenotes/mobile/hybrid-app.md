@@ -14,6 +14,31 @@ If you're building the app using the regular PhoneGap Build approach from within
 
 If you're using the advanced flow, you can get the latest version of the Hybrid App Base by running `npm update` from your hybrid app project directory. To upgrade to the latest version of the Hybrid App Template, either pull in the latest changes from GitHub, or download a new copy from the Mendix Developer Portal ([Developer Portal](https://sprintr.home.mendix.com/index.html) > **DEPLOY**).
 
+## 2019
+
+### January 6th, 2019 (4.0.0 / 4.0.0)
+
+{{% alert type="warning" %}}
+
+As of April 11 2019, Google will drop support for sending push notifications through their GCM (Google Cloud Messaging) service. By that time, all clients will need to have migrated to the new FCM (Firebase Cloud Messaging) service. The move from GCM to FCM impacts Mendix apps that employ push notifications through the Mendix Push Notifications module. Please read the notes below for upgrade instructions
+
+{{% /alert %}}
+
+_Push Notifications_
+
+The latest release of the Mendix Push Notifications module supports FCM as the new endpoint for sending push notifications. FCM can be used to send push notifications to both Android as well as iOS devices.
+
+This upgrade of the hybrid app package includes an upgrade to v2 of the Cordova Push Notifications plugin. As part of the plugin upgrade, some additional setup is required for push notifications (i.c.w. the Mendix Push Notifications module). Specifically, if your app supports push notifications, you are now required to set up a Firebase account for your app and include Google service description files (google-services.json / GoogleService-Info.plist) in your hybrid app. Please follow the instructions on https://docs.mendix.com.
+
+As a result of this, Mendix hybrid apps that employ push notifications can no longer be built directly using the Phonegap Build flow in the Mendix portal. Instead, you will need to prepare the hybrid app package locally. You can use the generated hybrid app package to build your Android and iOS apps locally, or upload them to Phonegap Build manually.
+
+If your app does not employ push notifications, you can still use the Phonegap Build workflow from the Mendix portal. Please make sure that you disable the Push Notifications checkbox under ‘Permissions’ in the Mobile App screen in the Mendix portal.
+
+_Other fixes:_
+
+* We improved how permission texts are configured, in order to fix an issue with building iOS apps
+* We added an exception to navigation to “about:blank” to fix an issue with the Google Maps widget
+
 ## 2018
 
 ### November 20th, 2018 (3.0.0 / 3.0.0)

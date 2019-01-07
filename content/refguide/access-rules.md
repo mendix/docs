@@ -60,7 +60,7 @@ The set of objects to which the member access rights apply can be limited by usi
 
 {{% alert type="info" %}}
 
-A customer is allowed to view her discount, but is not allowed to edit it. The access rights for the discount attribute are 'Read'.
+A customer is allowed to view the discount, but is not allowed to edit it. The access rights for the discount attribute are 'Read'.
 
 ![](attachments/domain-model-editor/917534.png)
 
@@ -74,7 +74,7 @@ Entity 'Customer' is a specialization of entity 'User'. Entity 'Order' is associ
 
 ![](attachments/domain-model-editor/917537.png)
 
-A logged in customer is allowed to view her own orders, but she is not allowed to view orders of other customers. This is accomplished by using the following XPath constraint in the access rule of entity 'Order':
+A logged in customer is allowed to view personal orders, but is not allowed to view orders of other customers. This is accomplished by using the following XPath constraint in the access rule of entity 'Order':
 
 ```java
 [Module.Order_Customer = '[%CurrentUser%]']

@@ -1,7 +1,7 @@
 ---
 title: "Access Rules"
 parent: "entities"
-menu_order: 10
+menu_order: 70
 tags: ["domain model", "entity", "access rule", "xpath constraint", "module role"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -26,7 +26,7 @@ Access rules are defined in the entity **Properties** > the **Access rules** sec
 
 The **Access rules** section is visible only if  the project security is set to **Production**. For more information, see [Project Security](project-security).
 
-{{% /alert %}}{{% alert type="info" %}}
+{{% /alert %}}
 
 ### Documentation
 
@@ -70,8 +70,6 @@ A customer is allowed to view her discount, but is not allowed to edit it. The a
 
 The [XPath constraint](xpath-constraints) can be used to constrain the set of objects to which the access rule applies. If the XPath constraint is empty, the rule applies to all objects of the entity.
 
-{{% alert type="info" %}}
-
 Entity 'Customer' is a specialization of entity 'User'. Entity 'Order' is associated to entity 'Customer'.
 
 ![](attachments/domain-model-editor/917537.png)
@@ -84,7 +82,7 @@ A logged in customer is allowed to view her own orders, but she is not allowed t
 
 Because of this XPath constraint, the access rule only applies to orders of which the customer is the currently signed in user.
 
-{{% /alert %}}{{% alert type="info" %}}
+{{% alert type="info" %}}
 
 The checkbox 'Show XPath constraint' only indicates whether you can see the XPath constraint in the access rule dialog, it does not influence the behavior of your application.
 

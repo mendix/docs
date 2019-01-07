@@ -1,13 +1,13 @@
 ---
-title: "Inheritance vs. One-to-One Association"
-parent: "associations"
+title: "Inheritance, and One-to-One Associations"
+parent: "entities"
 #tags: ["domain model", "association", "inheritance", "one-to-one"]
 ---
-Every Mendix developer has to choose on a daily basis whether or not he wants to use inheritance. It starts the moment you initiate a new project; how do you want to setup your users? Are you going to keep using the already available Account entity in the Administration module? Or are you going to work with separate entities with a one-to-one association to the user account? Or are you going to add (multiple) entities that inherit from **System.User**?
+Mendix developers have to choose on a daily basis whether or not they want to use inheritance. It starts the moment you initiate a new project; how do you want to setup your users? Are you going to keep using the already available Account entity in the Administration module? Or are you going to work with separate entities with a one-to-one association to the user account? Or are you going to add (multiple) entities that inherit from **System.User**?
 
 When defining closely related structures, it can be difficult to decide on the best architecture. Should the entity inherit from my structure or do I rather want a one-to-one association? You should consider both options. Both options can have a huge impact on the performance of the application or the speed of development.
 
-## Generalization, Specialization and Inheritance in Mendix
+## Generalization, Specialization, and Inheritance in Mendix
 
 The Mendix domain model is based on the [UML](http://en.wikipedia.org/wiki/Unified_Modeling_Language) [class diagram](http://en.wikipedia.org/wiki/Class_diagram), which allows us to specify the objects/entities, their attributes and associations. The concept of generalization in UML is exactly the same in Mendix, however, the Mendix Domain model uses a different notation to display the Generalization. The UML class diagram uses associations with a hollow triangle (arrow) pointing to the super class. In Mendix generalization is expressed with a blue label above the entity, specifying the entity name.
 
@@ -21,7 +21,7 @@ The Mendix Platform uses the transaction level [Read Committed](http://en.wikipe
 
 ### Creating and Changing Objects
 
-When changing an object, the Mendix Platform will write those changes to the database as soon as you execute the commit activity. The update or insert query will be performed based on the values you've changed. This behavior varies per database, but most likely this will lock the record and prevent other users from reading it until the transaction has been completed (either finished or rolled back).
+When changing an object, the Mendix Platform will write those changes to the database as soon as you execute the commit activity. The update or insert query will be performed based on the values you have changed. This behavior varies per database, but most likely this will lock the record and prevent other users from reading it until the transaction has been completed (either finished or rolled back).
 
 #### Inheritance
 
@@ -29,9 +29,9 @@ When you change an object with inheritance the platform will potentially prevent
 
 #### One-to-One Association
 
-When changing an object, none of the associated objects will be changed. There are two exceptions to this rule: of course if you change the associated object in an object event, or because associated objects are being 'auto-committed', see [Object Events, How do they work](/howto6/working-with-object-events).
+When changing an object, none of the associated objects will be changed. There are two exceptions to this rule: of course if you change the associated object in an object event, or because associated objects are being 'auto-committed', see [Object Events, How do they work](/howto/working-with-object-events).
 
-Whenever you have a high number of write transactions in your application, it is far better to choose for a one-to-one association, since this limits the number of tables that are being changed/locked during a transaction. However, if you do more inserts than updates it might be worth using inheritance again. Inheritance uses one less table to store the relationship, it doesn't have the association table. Therefore, any inserts require one indexed table fewer to be updated.
+Whenever you have a high number of write transactions in your application, it is far better to choose for a one-to-one association, since this limits the number of tables that are being changed/locked during a transaction. However, if you do more inserts than updates it might be worth using inheritance again. Inheritance uses one less table to store the relationship, it does not have the association table. Therefore, any inserts require one indexed table fewer to be updated.
 
 ### Retrieving Objects
 
@@ -49,7 +49,7 @@ If you require a lot of searching, sorting and displaying of the inherited/assoc
 
 ## Flexibility
 
-Making a decision between inheritance and associated is something you should do before loading a lot of data into the application. When adding associations, additional data may be required to specify the relation ships between objects. When you remove generalizations, the relationship between the two objects will get lost. There are tricks you can use to resolve any previous relationships, however, this can be extremely difficult and time consuming once there is a lot of data available in your application.
+Making a decision between inheritance and associations is something you should do before loading a lot of data into the application. When adding associations, additional data may be required to specify the relationships between objects. When you remove generalizations, the relationship between the two objects will get lost. There are tricks you can use to resolve any previous relationships, however, this can be extremely difficult and time consuming once there is a lot of data available in your application.
 
 ### Inheritance
 
@@ -63,7 +63,7 @@ When loading data through an integration, inheritance can improve the developmen
 
 ## Conclusion
 
-This explanation might not have given you an explicit answer to the question on when to use inheritance, but that is because there is no right or wrong answer. Both inheritance and one-to-one associations have their advantages and disadvantages. Based on your needs you need to decide per situation what is best for that entity. Below is a short summary of all the pros and cons for each situation. Based on these criteria you will need to decide for your entity which solution is worth it.
+This explanation might not have given you an explicit answer to the question on when to use inheritance, but that is because there is no right or wrong answer. Both inheritance and one-to-one associations have their advantages and disadvantages. Based on the situation you need to decide what is better for a particular entity. Below is a short summary of all the pros and cons for each situation. Based on these criteria you will need to decide for your entity which solution is worth it.
 
 There are a few situations where a clear answer can be given:
 

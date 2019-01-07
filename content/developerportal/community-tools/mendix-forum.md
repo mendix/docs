@@ -177,8 +177,6 @@ Each idea specifies the following elements:
 
 #### 3.1.1 Sorting the Ideas
 
-The Sort by drop-down menu at the top of the screen has three options for sorting the questions on this page: Last Updated, Newest, and Most Popular.
-
 The **Sort by** drop-down menu at the top of the screen has three options for sorting the ideas on this page: **Last Updated**, **Newest**, and **Most Votes**.
 
 ![](attachments/mendix-forum/ideas_sort_by.png)

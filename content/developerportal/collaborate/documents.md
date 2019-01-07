@@ -2,7 +2,7 @@
 title: "Documents"
 category: "Collaboration Tools"
 menu_order: 50
-description: "Describes how to manage your documents."
+description: "Describes how to manage the documents in your app project."
 tags: ["Documents", "Developer Portal"]
 ---
 

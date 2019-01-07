@@ -2,7 +2,7 @@
 title: "App Team"
 category: "Collaboration Tools"
 menu_order: 20
-description: "This page describes the Team page of the Developer Portal."
+description: "Describes the Team page of the Developer Portal."
 tags: ["Team","Developer Portal"]
 ---
 
@@ -61,3 +61,4 @@ To invite members, click **Invite Member** on the **Team** and follow these step
 * [How to Manage Company & App Roles](/developerportal/company-app-roles/manage-roles)
 * [Company Admin Settings](/developerportal/company-app-roles/companyadmin-settings)
 * [Settings](/developerportal/settings)
+* [Stories](stories)

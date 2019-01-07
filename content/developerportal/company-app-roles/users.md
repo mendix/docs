@@ -2,7 +2,7 @@
 title: "Users"
 parent: "companyadmin-settings"
 menu_order: 20
-description: "Developer Portal Users"
+description: "Describes how a Company Admin can manage an app's users in the Developer Portal."
 tags: ["company","admin", "Company Admin", Developer Portal", "activate", "deactivate", "user"]
 ---
 

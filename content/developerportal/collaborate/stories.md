@@ -2,7 +2,7 @@
 title: "Stories"
 category: "Collaboration Tools"
 menu_order: 30
-description: "Describes how to manage your sprints, stories, and labels."
+description: "Describes how to manage the sprints and stories for your app project."
 tags: ["Stories", "Sprint", "Developer Portal"]
 ---
 
@@ -190,4 +190,6 @@ Changing the status of a story or updating story points automatically synchroniz
 
 ## 5 Related Content
 
+* [Buzz](buzz)
+* [App Team](team)
 * [Feedback](../feedback/index)

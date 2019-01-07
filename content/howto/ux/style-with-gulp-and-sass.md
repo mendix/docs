@@ -20,7 +20,7 @@ You can use [Gulp](https://gulpjs.com/) to watch the files for any changes you m
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Install [nodeJS](https://nodejs.org/en/) – mmake sure you install the LTS version (**8.x.x**)
+* Install [nodeJS](https://nodejs.org/en/) – make sure you install the LTS version (**8.x.x**)
 * Install Gulp by typing `npm install gulp-cli -g` in your terminal
 
 ## 3 Setting Up the Gulp Project

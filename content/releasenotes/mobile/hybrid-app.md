@@ -20,24 +20,24 @@ If you're using the advanced flow, you can get the latest version of the Hybrid 
 
 {{% alert type="warning" %}}
 
-As of April 11 2019, Google will drop support for sending push notifications through their GCM (Google Cloud Messaging) service. By that time, all clients will need to have migrated to the new FCM (Firebase Cloud Messaging) service. The move from GCM to FCM impacts Mendix apps that employ push notifications through the Mendix Push Notifications module. Please read the notes below for upgrade instructions
+As of April 11th, 2019, Google will drop support for sending push notifications through their Google Cloud Messaging (GCM) service. By that time, all clients will need to have migrated to the new Firebase Cloud Messaging (FCM) service. The move from GCM to FCM impacts Mendix apps that employ push notifications through the Mendix [Push Notifications Connector](https://appstore.home.mendix.com/link/app/3003/). Please read the notes below for upgrade instructions
 
 {{% /alert %}}
 
-_Push Notifications_
+#### Push Notifications
 
-The latest release of the Mendix Push Notifications module supports FCM as the new endpoint for sending push notifications. FCM can be used to send push notifications to both Android as well as iOS devices.
+The latest release of the Mendix Push Notifications Connector supports FCM as the new endpoint for sending push notifications. FCM can be used to send push notifications to both Android as well as iOS devices.
 
-This upgrade of the hybrid app package includes an upgrade to v2 of the Cordova Push Notifications plugin. As part of the plugin upgrade, some additional setup is required for push notifications (i.c.w. the Mendix Push Notifications module). Specifically, if your app supports push notifications, you are now required to set up a Firebase account for your app and include Google service description files (google-services.json / GoogleService-Info.plist) in your hybrid app. Please follow the instructions on https://docs.mendix.com.
+This upgrade of the hybrid app package includes an upgrade to v2 of the [Cordova Push Notifications plugin](https://github.com/phonegap/phonegap-plugin-push). As part of the plugin upgrade, some additional setup is required for push notifications (in connection with the Mendix Push Notifications Connector). Specifically, if your app supports push notifications, you are now required to set up a [Firebase](https://firebase.google.com/) account for your app and include Google service description files (*google-services.json* and *GoogleService-Info.plist*) in your hybrid app.
 
-As a result of this, Mendix hybrid apps that employ push notifications can no longer be built directly using the Phonegap Build flow in the Mendix portal. Instead, you will need to prepare the hybrid app package locally. You can use the generated hybrid app package to build your Android and iOS apps locally, or upload them to Phonegap Build manually.
+As a result of this, Mendix hybrid apps that employ push notifications can no longer be built directly using the Phonegap Build flow in the Mendix Developer Portal. Instead, you will need to prepare the hybrid app package locally. You can use the generated hybrid app package to build your Android and iOS apps locally, or upload them to Phonegap Build manually.
 
-If your app does not employ push notifications, you can still use the Phonegap Build workflow from the Mendix portal. Please make sure that you disable the Push Notifications checkbox under ‘Permissions’ in the Mobile App screen in the Mendix portal.
+If your app does not employ push notifications, you can still use the Phonegap Build workflow. Please make sure you clear the **Push Notifications** check box in the **Permissions** section of the **Deploy** > **Mobile App** page in the Developer Portal.
 
-_Other fixes:_
+#### Other Fixes
 
-* We improved how permission texts are configured, in order to fix an issue with building iOS apps
-* We added an exception to navigation to “about:blank” to fix an issue with the Google Maps widget
+* We improved how the permission texts are configured in order to fix an issue with building iOS apps.
+* We added an exception to the navigation for `about:blank` in order to fix an issue with the [Google Maps](https://appstore.home.mendix.com/link/app/48911/) widget.
 
 ## 2018
 

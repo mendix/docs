@@ -20,7 +20,7 @@ Access rules are not inherited from an entity's generalization; rather, the secu
 
 Access rules are defined in the entity **Properties** > the **Access rules** section.
 
-![Access Rules for Entities](attachments/access-rules/dm-entity-access-rules.png)
+![Access Rules for Entities](attachments/access-rules/dm-access-rules-section.png)
 
 {{% alert type="info" %}}
 

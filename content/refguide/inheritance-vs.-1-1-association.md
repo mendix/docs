@@ -1,5 +1,5 @@
 ---
-title: "Inheritance, and One-to-One Associations"
+title: "Inheritance and One-to-One Associations"
 parent: "entities"
 #tags: ["domain model", "association", "inheritance", "one-to-one"]
 ---

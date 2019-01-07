@@ -1,6 +1,6 @@
 ---
 title: "Feedback Management"
-description: "This page describes how to manage feedback."
+description: "Describes how to manage feedback on your Mendix app in the Developer Portal."
 tags: ["Feedback","Developer Portal", "feedback widget"]
 ---
 

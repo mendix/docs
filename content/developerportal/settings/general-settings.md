@@ -2,7 +2,7 @@
 title: "Manage General App Settings"
 category: "App Settings"
 menu_order: 10
-description: "This page describes general settings of your app."
+description: "Describes general settings of your app."
 tags: ["Settings", "App", "Developer Portal"]
 ---
 
@@ -57,3 +57,8 @@ Click **Edit App Info** to edit the following details:
 ## 4 Leaving the App
 
 To leave the app, click **Leave App**. For details on leaving, deleting, and deactivating an app, see [How to Leave & Delete an App](leave-delete-app).
+
+## 5 Related Content
+
+* [How to Leave & Delete an App](leave-delete-app)
+* [How to Manage Deep Links](manage-deeplinks)

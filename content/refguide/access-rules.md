@@ -1,6 +1,7 @@
 ---
 title: "Access Rules"
 parent: "entities"
+menu_order: 10
 tags: ["domain model", "entity", "access rule", "xpath constraint", "module role"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -17,7 +18,15 @@ Access rules are not inherited from an entity's generalization; rather, the secu
 
 ## Properties
 
-Access rules are defined for module roles in the **Properties** wizard for an entity on the **Access rules** tab.
+Access rules are defined in the entity **Properties** > the **Access rules** section.
+
+![Access Rules for Entities](attachments/access-rules/dm-access-rules-section.png)
+
+{{% alert type="info" %}}
+
+The **Access rules** section is visible only if  the project security is set to **Production**. For more information, see [Project Security](project-security).
+
+{{% /alert %}}{{% alert type="info" %}}
 
 ### Documentation
 

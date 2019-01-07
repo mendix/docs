@@ -1,7 +1,7 @@
 ---
 title: "Mendix Profile"
 menu_order: 10
-description: "This page describes the personal profile page of the Developer Portal."
+description: "Describes the personal profile page of the Mendix Developer Portal."
 tags: ["profile", "Developer Portal", "settings", "badge", "point", "connection", "invite", "leaderboard", "edit"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---

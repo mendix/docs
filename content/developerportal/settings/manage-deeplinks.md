@@ -49,3 +49,6 @@ The following deep links can be used:
 * Alerts for app: `https://cloud.home.mendix.com/link/monitor/<appID>`
 * Logs for app: `https://cloud.home.mendix.com/link/logs/<appID>`
 
+## 4 Related Content
+
+* [How to Manage General App Settings](general-settings)

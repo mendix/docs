@@ -2,7 +2,7 @@
 title: "Plan App Development"
 category: "Development"
 menu_order: 30
-description: "Describes the planning of your app development."
+description: "Describes where you can plan and monitor your app development."
 tags: ["Developer Portal", "Planning", "Develop"]
 ---
 
@@ -55,3 +55,8 @@ Click **Plan Something** to plan a **Sprint**, **Release**, or **Other**.
 All the changes made on this page are directly passed on to the **Stories** page and vice versa.
 
 {{% /alert %}}
+
+## 5 Related Content
+
+* [Modeling Environments](modeling-environments)
+* [Team Server Overview](team-server)

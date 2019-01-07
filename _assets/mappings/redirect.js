@@ -96,10 +96,6 @@ module.exports = {
       from: "/developerportal/operate/mendix-cloud-status",
       to: "/developerportal/deploy/mendix-cloud-status"
     },
-	{
-      from: "/community/app-store/share-app-store-content",
-      to: "/developerportal/app-store/share-app-store-content"
-    },
     {
       from: "/community/app-store-content-support",
       to: "/developerportal/app-store/app-store-content-support"

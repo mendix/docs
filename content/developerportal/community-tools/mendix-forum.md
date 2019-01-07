@@ -1,6 +1,7 @@
 ---
 title: "Mendix Forum"
 category: "Community Tools"
+description: "Describes the Mendix Forum, where the Mendix community can ask and answer questions as well as post ideas for how to improve the Mendix Platform."
 menu_order: 10
 ---
 
@@ -249,3 +250,7 @@ To submit your own idea to the idea forum, follow these steps:
 3. Click **Submit your idea**.
 
 Mendix looks forward to hearing all of your ideas!
+
+## 4 Related Content
+
+* [How to Contribute to the Documentation](contribute-to-the-mendix-documentation]

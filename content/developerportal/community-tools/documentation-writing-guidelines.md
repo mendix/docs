@@ -2,6 +2,7 @@
 title: "Documentation Writing Guidelines"
 category: "Community Tools"
 menu_order: 30
+description: "Describes some guidelines to follow when contributing to the Mendix documentation."
 tags: ["documentation", "community"]
 ---
 
@@ -101,3 +102,7 @@ To embed a model share in the documentation, paste the iframe, for example:
 This will render as:
 
 <iframe width='100%' height='491px' frameborder='0' src='https://modelshare.mendix.com/models/fb092960-6fc1-41c0-bb64-d9e70c012bc5/save-example?embed=true' allowfullscreen></iframe>
+
+## 6 Related Content
+
+* [How to Contribute to the Mendix Documentation](contribute-to-the-mendix-documentation)

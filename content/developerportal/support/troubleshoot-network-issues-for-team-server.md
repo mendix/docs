@@ -1,8 +1,8 @@
 ---
 title: "Troubleshoot Network Issues for Connecting to Team Server"
 parent: "support-references"
-#description: ""
-#tags: []
+description: "Describes troubleshooting connection issues as well as the permissions and settings required to connect to Team Server."
+tags: ["Team Server", "network", "troubleshoot", "firewall"]
 ---
 
 ## 1 Introduction

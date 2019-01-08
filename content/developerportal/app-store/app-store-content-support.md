@@ -1,8 +1,9 @@
 ---
 title: "App Store Content Support"
 category: "App Store"
-tags: ["app store", "support"]
 menu_order: 40
+tags: ["app store", "support"]
+description: "Describes the various levels of support available for using App Store items in your Mendix apps."
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

@@ -2,6 +2,7 @@
 title: "App Store Overview"
 category: "App Store"
 menu_order: 10
+description: "Presents an overview of how to find and use content from the Mendix App Store."
 tags: ["app store", "widget", "connector", "module", "partner"]
 ---
 
@@ -33,7 +34,7 @@ To see a detail page for each category, click **View more**.
 
 ### 2.2 Sidebar Menu
 
-The App Store sidebar menu lists all the pa Itemsges that you can browse for content.
+The App Store sidebar menu lists all the pages that you can browse for content.
 
 For details on add-ons, see [Add-On Details Page](#AddonDetailsPage).
 
@@ -207,6 +208,6 @@ On the **More info** tab, you can view documents that provide more information o
 
 ## 5 Related Content
 
-* [App Store Content Support](app-store-content-support)
-* [How to Share App Store Content](share-app-store-content)
 * [How to Use App Store Content](use-app-store-content-in-the-modeler)
+* [How to Share App Store Content](share-app-store-content)
+* [App Store Content Support](app-store-content-support)

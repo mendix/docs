@@ -1,5 +1,6 @@
 ---
 title: "App Store"
+description: "Presents details on using, sharing, and getting support on Mendix App Store items."
 ---
 
 ## 1 Introduction

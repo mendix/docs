@@ -1,11 +1,12 @@
 ---
 title: "Set Up Two-Factor Authentication With Google Authenticator"
 parent: "support-references"
-description: "How to set up Google Authenticator"
+description: "Describes how use Google Authenticator for Mendix Cloud activities."
 tags: ["Google", "Authenticator", "2FA"]
 ---
 
 ## 1 Introduction
+
 Two-factor authentication (2FA) validates your password and is required for Mendix Cloud node activities done in a production environment. 2FA ensures that you are authenticated when performing sensitive activities, such as deploying packages and monitoring the production environment.
 
 In this how-to you will learn how to set up 2FA. The Google Authenticator and SMS are two types of 2FA Mendix uses for Mendix Developer Portal security.
@@ -45,3 +46,8 @@ If you want to transport your deployment package into the production environment
     ![](attachments/19956271/20218012.png)
 
 Your account is now secured with 2FA and ready to use. You will get a six-digit number that expires every minute. You will need to enter that number to validate your account every time you access production.
+
+## 4 Related Content
+
+* [Mendix Cloud](../deploy/mendix-cloud-deploy)
+* [Two-Factor Authentication](../deploy/two-factor-authentication)

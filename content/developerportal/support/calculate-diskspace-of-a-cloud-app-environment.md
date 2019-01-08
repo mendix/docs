@@ -1,8 +1,8 @@
 ---
 title: "Calculate the Total Amount of Disk Space of a Cloud App Environment"
 parent: "support-references"
-#description: ""
-#tags: []
+description: "Describes calculating disk space on a Mendix Cloud environment."
+tags: ["Mendix Cloud", "cloud"]
 ---
 
 ## 1 Introduction
@@ -37,6 +37,7 @@ In order to calculate the total amount of file storage, you need to look at 2 gr
 You can calculate the total amount of disk usage with the this formula: ``(Disk usage in Gigs (/srv) * 100)/(Disk usage in % (/srv))``
 
 ### 3.1 Calculation Example
+
 From the graph below you need the amount of disk usage in GB from the **/srv** folder. You should always use the current disk usage amount in order to calculate the total amount. In this graph it is **112.63** GB.
 
 ![](attachments/how-to-calculate-the-total-amount-of-diskspace-of-a-cloud-app-environment/appusage.png)
@@ -64,3 +65,8 @@ From the **Database node disk usage in %** graph below you need the amount of di
  ![](attachments/how-to-calculate-the-total-amount-of-diskspace-of-a-cloud-app-environment/DBnodeDiskusagePercentage.png)
 
 The total amount of disk space for this app is: ``(28.43 * 100) / 37.74 = 75.3 GB``
+
+## 5 Related Content
+
+* [Mendix Cloud](../deploy/mendix-cloud-deploy)
+* [Environments](../deploy/environments)

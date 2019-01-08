@@ -3,6 +3,7 @@ title: "Share App Store Content"
 category: "App Store"
 menu_order: 30
 tags: ["app store", "public app store", "private app store", widget", "module"]
+description: "Describes how to create and share Mendix App Store content."
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

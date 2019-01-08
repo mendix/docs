@@ -1,6 +1,8 @@
 ---
 title: "Mendix Support Details"
 category: "Mendix Support"
+description: "Presents details on how Mendix Support works."
+tags: ["support", "request"]
 ---
 
 The following documents present details on how Mendix Support works:

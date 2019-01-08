@@ -41,7 +41,7 @@ The **Get Destination** action properties look like this:
 **Variable** is the name of the object of type *SAPODataConnector.Destination* where the details of the destination will be stored.
 
 {{% alert type="warning" %}}
-Owing to an issue with the current version of SAP Destination Services (4.0.2) the Destination entity is not always populated correctly.
+Owing to an issue with the current version of SAP Destination Services (SAP OData Connector version 4.0.2) the Destination entity is not always populated correctly.
 
 If you are using proxy type **OnPremise** and **NOT using PrincipalPropagation** for authentication, you will need to use the GetCloudConnectorInfo JAVA action (in **App Store modules > SAPODataConnector > USE_ME > helpers**) to fetch a CloudConnectorInfo object. This will contain data for your ProxyHost, ProxyPort, and SapConnectivityAuthentication (ProxyBearerToken).
 {{% /alert %}}

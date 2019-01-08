@@ -1,5 +1,5 @@
 ---
-title: "U*ix Deployment"
+title: "Unix Deployment"
 parent: "on-premises-design"
 description: "How to install and configure Mendix on a Unix-like system"
 menu_order: 99

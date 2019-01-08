@@ -152,7 +152,7 @@ Using items in the menu bar of the Modeler, you can create new projects, deploy 
 | Tablet Browser | Shows the tablet mobile client for the currently running project in the browser. | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F9</kbd> |
 | Phone Browser | Shows the mobile client for the currently running project in the browser. | <kbd>Ctrl</kbd> + <kbd>F9</kbd> |
 | Hybrid Phone App Online | Views the app as a phone app online. | |
-| View in the Mendix App | Views the app via the [Mendix mobile app](getting-the-mendix-app). | |
+| View in the Mendix App | Views the app via the [Mendix Mobile app](getting-the-mendix-app). | |
 
 ### 4.6 Language Menu
 

@@ -101,7 +101,7 @@ Jetty is built into the [Mendix Runtime](runtime), so an application server is n
 
 ## 7 Mobile Operation Systems
 
-This is important for the [Mendix mobile app](getting-the-mendix-app):
+This is important for the [Mendix Mobile app](getting-the-mendix-app):
 
 * iOS 9 and above
 * Android 5.0 and above

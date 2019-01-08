@@ -24,7 +24,7 @@ To access the node settings, click **Security** and open the **Node Permissions*
 
 ![](attachments/node-permissions/node-permissions.png)
 
-## 2.1 User Roles for Managing Permissions
+### 2.1 User Roles for Managing Permissions
 
 Only users with the *Technical Contact* role can manage the permission settings for the cloud node.
 
@@ -87,7 +87,7 @@ With the Access to Monitoring permission, you can view the application metrics, 
 
 For more information, see [Metrics](/developerportal/operate/metrics), [Logs](/developerportal/operate/logs), and [Alerts](/developerportal/operate/monitoring-application-health).
 
-### 3 Technical Contact
+## 3 Technical Contact
 
 A cloud node has a single Technical Contact. They manage the cloud node and can edit the privileges of regular team members.
 

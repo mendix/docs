@@ -100,10 +100,6 @@ module.exports = {
       from: "/community/app-store-content-support",
       to: "/developerportal/app-store/app-store-content-support"
     },
-    {
-      from: "/community/app-store/use-app-store-content-in-the-modeler",
-      to: "/developerportal/app-store/use-app-store-content-in-the-modeler"
-    },
 	{
       from: "/community/tools/the-mendix-job-board",
       to: "/developerportal/community-tools/mendix-job-board"

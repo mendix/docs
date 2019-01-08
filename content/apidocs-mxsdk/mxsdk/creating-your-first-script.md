@@ -45,7 +45,7 @@ After setting up all the prerequisites, you can start writing a first script tha
     function loadDomainModel(workingCopy: OnlineWorkingCopy): Promise<domainmodels.DomainModel> {
         const dm = workingCopy.model().allDomainModels().filter(dm => dm.containerAsModule.name === 'MyFirstModule')[0];
 
-        return new Promise((resolve, reject) => dm.load(resolve));
+        return dm.load();
     }
 
     main();

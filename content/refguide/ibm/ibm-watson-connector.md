@@ -10,16 +10,17 @@ tags: ["IBM", "Watson", "AI", "Translation", "Image Analysis"]
 
 IBM Watson™ is a suite of services which gives you access to a range of AI techniques and applications. These services are available over the web and cover the following areas:
 
-* Conversation
+* AI Assistant
 * Knowledge
 * Vision
 * Speech
 * Language
 * Empathy
+* Data
 
 You can find out more about IBM Watson on the [IBM Watson website](https://www.ibm.com/watson/products-services/).
 
-The [IBM Watson Connector Suite](https://appstore.home.mendix.com/link/app/2860/) in the Mendix App Store provides connectors which simplify the use of the Watson services. Including the IBM Watson Connector Suite in your app allows you to add microflow actions which make use of IBM Watson services. The IBM Watson Connector Suite is based on version 3.5.3 of the IBM Watson SDK.
+The [IBM Watson Connector Suite](https://appstore.home.mendix.com/link/app/2860/) in the Mendix App Store provides connectors which simplify the use of the Watson services. Including the IBM Watson Connector Suite in your app allows you to add microflow actions which make use of IBM Watson services. The IBM Watson Connector Suite is based on version 6.11.0 of the IBM Watson SDK.
 
 ### 1.1 Prerequisites
 
@@ -49,17 +50,24 @@ Import the [IBM Watson Connector Suite](https://appstore.home.mendix.com/link/ap
 
 ![](attachments/ibm-watson-connector/connectorlist.png)
 
-To use these actions, just drag them into your microflow. Each of the connectors is described in the following section.
+To use these actions, just drag them into your microflow. Each of the connectors is described in the following sections:
+
+* [Watson Assistant](#WatsonAssistant)
+* [Speech to Text](#SpeechToText)
+* [Text to Speech]
+* [Tone Analyzer]
+* [Language Translator]
+* [Visual Recognition]
 
 {{% alert type="info" %}}
 Not all Watson services are currently supported by the IBM Watson Connector Suite. More services will be added over time.
 
-These connectors are based on version 3.5.3 of the Watson SDK.
+These connectors are based on version 6.11.0 of the Watson SDK.
 
 If there is no connector for the service you want, you can use Mendix native REST to use the service yourself. See [How to Consume a REST Service](/howto/integration/consume-a-rest-service).
 {{% /alert %}}
 
-## 2 Connector Actions
+## 2 Connector Actions: Assistant{#WatsonAssistant}
 
 This section contains a reference to each of the microflow actions which is added to your app when you install the IBM Watson Connector Suite.
 
@@ -111,7 +119,7 @@ The ConversationMessageResponse contains the following:
 
 ![](attachments/ibm-watson-connector/conversation-dm.png)
 
-### 2.2 Speech To Text – Recognize Audio
+## 3 Connector Actions: Speech To Text{#SpeechToText}
 
 This action uses the [IBM Watson Speech to Text service](https://console.bluemix.net/docs/services/speech-to-text/index.html) to transcribe audio to text. Audio can be supplied in a number of common formats and the service uses machine intelligence to transcribe the text into one of a number of possible target languages.
 

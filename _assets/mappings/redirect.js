@@ -367,10 +367,6 @@ module.exports = {
       to: "/howto/collaboration-requirements-management/contribute-to-a-github-repository"
     },
 	{
-      from: "/howto50/Create+a+custom+theme+with+the+Mendix+UI+Framework",
-      to: "/howto/ux/create-a-custom-theme-with-the-mendix-ui-framework"
-    },
-	{
       from: "/mendixcloud/java-in-the-cloud",
       to: "/developerportal/deploy/java-in-the-cloud"
     },
@@ -385,10 +381,6 @@ module.exports = {
 	{
       from: "/mendixcloud/Integrate+your+app+with+Mendix+SSO",
       to: "/developerportal/deploy/integrate-with-mendix-sso"
-    },
-	{
-      from: "/refguide5/Customizing+Hybrid+Mobile+Apps",
-      to: "/refguide/customizing-hybrid-mobile-apps"
     },
 	/****************************************************
      * For Support

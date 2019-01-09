@@ -16,6 +16,6 @@ The Windows Service release notes can be found in [Windows Service](windows-serv
 {{% /alert %}}
 
 {{% alert type="info" %}}
-For updates on the status of Team Server as deployment options and other Mendix services, see [Mendix Status](https://status.mendix.com/).
+For updates on the status of Team Server as well as deployment options and other Mendix services, see [Mendix Status](https://status.mendix.com/).
 {% /alert %}}
 

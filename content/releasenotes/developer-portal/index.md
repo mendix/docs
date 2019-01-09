@@ -3,6 +3,11 @@ title: "Developer Portal"
 description: "Release Notes for all aspects of the Mendix Developer Portal"
 tags: ["developer portal", "cloud environments", "Mendix Cloud", "SAP", "IBM", "on-premises", "deployment"]
 ---
+
+{{% alert type="info" %}}
+For updates on the status of Mendix Cloud V4, Mendix Cloud V3, and other deployment options, see [Mendix Status](https://status.mendix.com/).
+{{% /alert %}}
+
 ## 2019
 
 ### January 3rd, 2019

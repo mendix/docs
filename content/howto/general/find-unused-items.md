@@ -1,7 +1,8 @@
 ---
-title: "Find Unused Items"
-category: "Tips & Tricks"
-menu_order: 30
+title: "Find Unused App Project Items"
+category: "General"
+menu_order: 50
+tags: ["unused", "item", "usage"]
 ---
 
 ## 1 Introduction
@@ -16,7 +17,7 @@ In this how-to, you will learn how you can find unused items within your model.
 
 2. Select **Unused items** as **search for** option
 
-    ![](attachments/18448720/18581609.png)
+    ![](attachments/find-unused-items/18581609.png)
 
 3. Click o**Find**.
 
@@ -36,10 +37,10 @@ Some pages and microflows are only used from Java code and will be listed as an 
 
 1.  Open the page or microflow which needs to be marked as used.
 2.  Change the **Mark as used** property from **no** to **yes** in the properties table of the Modeler.
-    ![](attachments/18448720/18581608.png)
+    ![](attachments/find-unused-items/18581608.png)
 3.  **Save** the object.
 
 To mark a page as used, right-click the page and select **Properties**:
 
-![](attachments/18448720/18581607.png)
+![](attachments/find-unused-items/18581607.png)
 

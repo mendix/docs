@@ -58,7 +58,7 @@ For examples and more technical details, see [Domain Model](../domain-model), [E
 
 You can add new entities in the **Toolbox**. 
 
-![](attachments/domain-models-wm/wm-domainentity.png)
+![](attachments/domain-models-wm/wm-toolbox-entity.png)
 
 To add an entity, do the following:
 

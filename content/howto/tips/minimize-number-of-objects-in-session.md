@@ -6,7 +6,7 @@ menu_order: 05
 
 ## 1 Introduction
 
-In Mendix 7, we introduced a completely new stateless architecture. All the application state that was kept in the Mendix Runtime in earlier versions is now kept by the Mendix Client in the browser. By “state,” we mean non-persistable entities (NPEs) and persistable entities that have not yet been committed to the database. Th
+In Mendix 7, we introduced a completely new stateless architecture. All the application state that was kept in the Mendix Runtime in earlier versions is now kept by the Mendix Client in the browser. By “state,” we mean non-persistable entities (NPEs) and persistable entities that have not yet been committed to the database.
 
 This new approach has important advantages, such as the ability to easily scale the app horizontally. However, there are also some new things to keep in mind when developing for this new architecture, in order to prevent performance degradation of the Mendix Client.
 

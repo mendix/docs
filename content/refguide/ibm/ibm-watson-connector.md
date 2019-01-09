@@ -42,6 +42,10 @@ To view the credentials:
 
 For more information see [Service credentials for Watson services](https://console.bluemix.net/docs/services/watson/getting-started-credentials.html).
 
+{{% alert type="warning" %}}
+If you have an existing Watson service it may give *Username* and *Password* in the credentials. To obtain credentials in the correct format, you will have to create a **new** service which has *API Key* and *URL* as the credentials. It is not possible to obtain the API Key/URL style of credentials for an existing service of this type.
+{{% /alert %}}
+
 If you are running your app on IBM Cloud and the Watson resources have been added to your IBM Cloud project, the credentials can be picked up automatically via VCAP. See section [3 Watson Service Configuration](#WatSerCon) for more information on VCAP. This section also covers the IBM Watson Connector Suite configuration for storing credentials. If you are testing your app locally, or in another environment, you will need to enter these credentials (API key or Username and Password) manually when you use the connector in your Mendix app.
 
 #### 1.1.2 IBM Watson Connector Suite

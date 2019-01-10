@@ -15,5 +15,7 @@ Learn some basics about starting to model a Mendix app with the introductory how
 * [Implement Community Best Practices for App Performance](community-best-practices-for-app-performance)
 * [Find Your Way in an App Project ](find-your-way)
 * [Find Unused App Project Items](find-unused-items)
-* [Minimize the Number of In-Use Objects in Your Session](minimize-number)
+* [Minimize the Number of In-Use Objects in Your Session}(minimize-number)
+
+
 

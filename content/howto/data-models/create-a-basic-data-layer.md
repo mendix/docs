@@ -1,6 +1,7 @@
 ---
 title: "Create a Basic Data Layer"
 category: "Data Models"
+menu_order: 1
 tags: ["data layer", "domain model", "entities", "enumerations", "associations"]
 ---
 

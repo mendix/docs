@@ -1,6 +1,7 @@
 ---
 title: "Work with Object Events"
 category: "Data Models"
+menu_order: 3
 tags: ["microflow"]
 #To update screenshots of these microflows in the Desktop Modeler, use the Microflow Screenshots app project.
 ---

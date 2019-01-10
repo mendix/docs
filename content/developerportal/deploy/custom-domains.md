@@ -5,7 +5,7 @@ menu_order: 27
 description: "How to configure custom domains as well as generate, upload, and renew certificates in Mendix."
 tags: ["Custom Domain","Mendix Cloud","Developer Portal", "certificates"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
-# Linked from Developer Portal > Environments > Custom Domains
+#Linked from Developer Portal > Environments > Custom Domains
 ---
 
 ## 1 Introduction
@@ -208,6 +208,7 @@ To configure a custom domain for your application environment, follow these step
 
     ![](attachments/custom-domains/21168229.png)
     
+
 {{% alert type="info" %}}
 
 Make sure you have configured a CNAME record for your custom domain with your domain registrar/DNS provider (for details, see section 2.2. [Create and Configure a CNAME Record](#DNS)).

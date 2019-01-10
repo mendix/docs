@@ -4,6 +4,7 @@ parent: "support-details"
 menu_order: 50
 description: "Describes how to change the app for which you submitted a Mendix Support request."
 tags: ["support", "Mendix Support", "app", "request"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction

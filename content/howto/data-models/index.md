@@ -14,4 +14,4 @@ This category includes how-to's on creating data layers and setting up data vali
 * [Work with Images & Files](working-with-images-and-files)
 * [Query Over Self-References](query-over)
 * [Denormalize Data to Improve Performance](denormalize-data-to-improve-performance)
- 
+* [Migrate Your Mendix Database](migrating-your-mendix-database)

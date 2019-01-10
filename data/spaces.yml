@@ -101,7 +101,6 @@ howto:
     - "Testing"
     - "Monitoring & Troubleshooting"
     - "Collaboration & Requirements Management"
-    - "Tips & Tricks"
 refguide4:
   space: "Mendix 4 Reference Guide"
   priority: false

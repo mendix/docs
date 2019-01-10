@@ -1,8 +1,8 @@
 ---
 title: "Migrate Your Mendix Database"
-category: "Tips & Tricks"
-menu_order: 70
-tags: ["Database", "Migrate", "Postgresql", "Export", "Import"]
+category: "Data Models"
+menu_order: 7
+tags: ["database", "migrate", "postgresql", "export", "import"]
 ---
 
 ## 1 Introduction
@@ -34,15 +34,15 @@ The most commonly used custom settings for database migration are:
 
 See [Custom Settings](/refguide/custom-settings) for more information on the full list of available settings. These settings can be configured as follows:
 
-*   Modeler: in **Project Explorer**, expand **Project**, double-click **Settings**, edit a configuration, go to the right-most tab called **Custom**:
+* Modeler: in **Project Explorer**, expand **Project**, double-click **Settings**, edit a configuration, go to the right-most tab called **Custom**:
 
-	![](attachments/19202917/19398970.png) 
+  ![](attachments/migrating/19398970.png) 
 
-*   Service Console: click an app in the left pane, click **Configuration**, click **Advanced**, see Custom Mendix settings.
+* Service Console: click an app in the left pane, click **Configuration**, click **Advanced**, see Custom Mendix settings.
 
-	![](attachments/19202917/19398971.png) 
+  ![](attachments/migrating/19398971.png) 
 
-*   m2ee-tools: add the custom settings to the mxruntime section. See [https://github.com/mendix/m2ee-tools/blob/develop/examples/full-documented-m2ee.yaml](https://github.com/mendix/m2ee-tools/blob/develop/examples/full-documented-m2ee.yaml)
+* m2ee-tools: add the custom settings to the mxruntime section. See [https://github.com/mendix/m2ee-tools/blob/develop/examples/full-documented-m2ee.yaml](https://github.com/mendix/m2ee-tools/blob/develop/examples/full-documented-m2ee.yaml)
 
 You can migrate databases using either the Modeler, the Service Console or m2ee-tools. The Service Console gives you the advantage of seeing a progress bar during the copy process, which is handy if you copy a lot of data which takes a long time to execute.
 

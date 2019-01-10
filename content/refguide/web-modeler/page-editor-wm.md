@@ -79,7 +79,7 @@ To delete a page in the Web Modeler, do the following:
 
 To view an element and its [properties](#page-editor-properties), click this element. 
 
-The selected element is indicated with an blue border. Additionally, if the element is inside a data container (data view or a list view), it will be indicated with a data container icon ![](attachments/page-editor-wm/wm-data-container-icon.png).
+The selected element is indicated with an blue border. Additionally, if the element is inside a data container (data view or a list view), it will be indicated with a data container icon.
 
 ![](attachments/page-editor-wm/wm-input-widget-example.png)
 

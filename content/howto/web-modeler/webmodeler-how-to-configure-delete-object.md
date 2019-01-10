@@ -3,7 +3,7 @@ title: "Configure a Delete Object Action in the Web Modeler"
 category: "Web Modeler"
 description: "This how to describes the process of configuring a delete object action in a data view and a list view in the Mendix Web Modeler."
 menu_order: 40
-tags: ["web modeler", "page editor", "delete object", "list view", "data view"]
+tags: ["web modeler", "page editor", "delete object", "list view", "data view", "how to"]
 ---
 
 ## 1 Introduction 
@@ -50,7 +50,7 @@ To configure the domain model and create the page, do the following:
 
     ![](attachments/webmodeler-how-to-configure-delete-object/wm-create-page.png)
 
-A new page is created.
+A new blank page is created.
 
 ![](attachments/webmodeler-how-to-configure-delete-object/wm-blank-page-created.png)
 

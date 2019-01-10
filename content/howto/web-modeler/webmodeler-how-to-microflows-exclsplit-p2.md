@@ -77,8 +77,8 @@ You can now publish and view your app.
 
 To embed the microflow with an exclusive split (the attribute of the Boolean type), do the following:
 
-1. We need to add an option to mark customer as blocked. To do this, open the **New_customer page** created in the previous section. For more information, see [Embedding the Microflow Having an Exclusive Split with Attribute of the Enumeration Type](#embedding-exclusive-split-enumeration).
-2. In **Toolbox**>**Widgets** >**Input Elements** select **Radio Buttons**, drag and drop it into the **DATA VIEW** container.
+1. We need to add an option to mark customer as blocked. To do this, open the **New_customer** page created in the previous section. For more information, see [Embedding the Microflow Having an Exclusive Split with Attribute of the Enumeration Type](#embedding-exclusive-split-enumeration).
+2. In **Toolbox**>**Widgets** >**Input Elements** select **Radio Buttons**, drag and drop it into the **Data view** container.
 3.  In the **Properties** for the radio buttons, click **Data Source**>**Attribute** and select **Blocked Boolean**. 
 
     ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-new-customer-page-blocked-attribute.png)
@@ -98,7 +98,7 @@ To embed the microflow with an exclusive split (the attribute of the Boolean typ
 
     ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-data-view-properties.png)
 
-8.  In **Toolbox**>**Widgets**>**Buttons**, find the **Call Microflow** button, drag and drop it into the **DATA VIEW** container. 
+8.  In **Toolbox**>**Widgets**>**Buttons**, find the **Call Microflow** button, drag and drop it into the **Data View** container. 
 
     ![](attachments/webmodeler-how-to-microflows-exclsplit/wm-call-microflow-button-in-data-view.png)
 

@@ -74,7 +74,7 @@ As the **Details** button to the **Customers** page is outside a data container 
 
 #### 4.1.1 Passing a Specific Object to the Page {#passing-specific-object}
 
-If you want the **Customer Details** page to open the details of a specific customer, this means you want to pass a specific object to the page. As we already have a list view with the customers list on the **Customer** page, we can fix this error the following way:
+If you want the **Customer Details** page to open the details of a specific customer, this means you want to pass a specific object to the page. As we already have a list view with the customers list on the **Customers** page, we can fix this error the following way:
 
 1. Open the **Customers** page.
 

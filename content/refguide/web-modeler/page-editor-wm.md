@@ -79,9 +79,9 @@ To delete a page in the Web Modeler, do the following:
 
 To view an element and its [properties](#page-editor-properties), click this element. 
 
-The selected element is indicated with an orange border. Additionally, if the element is inside a data view or a list view, that data/list view will be indicated with a blue border.
+The selected element is indicated with an blue border. Additionally, if the element is inside a data container (data view or a list view), it will be indicated with a data container icon ![](attachments/page-editor-wm/wm-data-container-icon.png).
 
-![](attachments/page-editor-wm/wm-orange-blue-boarders.png)
+![](attachments/page-editor-wm/wm-input-widget-example.png)
 
 ## 4 Breadcrumb Trail
 
@@ -94,7 +94,7 @@ The breadcrumb trail serves two functions:
 
 For example, when you select a button on a page, you will see that it is placed in a container, which is in a column.  Whereas, the column is in a row, and this row is placed in a layout grid on the page.
 
-![](attachments/page-editor-wm/wm-breadcrum.png)
+![](attachments/page-editor-wm/wm-breadcrumb.png)
 
 To view information on the element click this element in the breadcrumb trail and its properties are displayed automatically.
 

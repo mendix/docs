@@ -403,7 +403,7 @@ In `isMatch()`, the regex is implicitly anchored at `^` and `$`.
 
 NB searching an empty string:
 
-* `isMatch('', '.*[0-9].*')` returns true
+* `isMatch('', '.*[0-9].*')` returns false
 
 ## replaceAll
 

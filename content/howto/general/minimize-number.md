@@ -1,7 +1,7 @@
 ---
 title: "Minimize the Number of In-Use Objects in Your Session"
 category: "General"
-menu_order: 60
+menu_order: 8
 tags: ["object", "session", "architecture", "stateless", "runtime"]
 ---
 

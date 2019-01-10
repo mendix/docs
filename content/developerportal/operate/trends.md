@@ -1,7 +1,7 @@
 ---
 title: "Trends in Mendix Cloud v3"
 parent: "metrics"
-menu_order: 50
+menu_order: 5
 description: "Describes how to interpret various graphs and trends in the Mendix Cloud v3."
 tags: ["Trends","v3","Mendix Cloud","Developer Portal"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -172,7 +172,7 @@ Disk utilization is calculated as the disk usage that is used by the user of the
 
 * [Alerts](monitoring-application-health)
 * [Database Maintenance: Size Reduction](../support/database-maintenance-size-reduction)
-* [How to Calculate the Total Amount of Diskspace of a Cloud App Environment](../support/calculate-diskspace-of-a-cloud-app-environment)
+* [How to Calculate the Total Amount of Diskspace of a Cloud App Environment](calculate-diskspace-of-a-cloud-app-environment)
 * [Maintenance Windows: Configuration](/developerportal/deploy/maintenance-windows)
 * [Migrate to Mendix Cloud v4](/developerportal/deploy/migrating-to-v4)
 * [How to Receive Environment Status Alerts](receive-alerts)

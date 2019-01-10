@@ -1,7 +1,7 @@
 ---
 title: "Cache Metrics (Runtime Lower than Version 7.0)"
 parent: "metrics"
-#menu_order: 60
+#menu_order: 15
 description: "How to troubleshoot the cache in your node."
 tags: ["App","Troubleshoot","Developer Portal","Cache","Mendix Cloud"]
 ---

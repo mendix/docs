@@ -1,6 +1,7 @@
 ---
 title: "Calculate the Total Amount of Disk Space of a Cloud App Environment"
-parent: "support-references"
+parent: "metrics"
+menu_order: 25
 description: "Describes calculating disk space on a Mendix Cloud environment."
 tags: ["Mendix Cloud", "cloud"]
 ---
@@ -11,7 +12,7 @@ In this how-to you will learn how-to calculate the total amount of disk space i
 
 Each Mendix environment consists of an application server (app-node) and a database server (db-node). Every server is equipped with memory (RAM) and disk space (File/DB storage).
 
-![](attachments/how-to-calculate-the-total-amount-of-diskspace-of-a-cloud-app-environment/appenvironment.jpg)
+![](attachments/calculate-total/appenvironment.jpg)
 
 All Mendix Cloud environments are running on an **'S'** container by default.
 An **'S'** container consists of:
@@ -22,7 +23,7 @@ An **'S'** container consists of:
 
 The disk space is always divided evenly between the app-node and the db-node.
 
-![](attachments/how-to-calculate-the-total-amount-of-diskspace-of-a-cloud-app-environment/Scontainer.jpg)
+![](attachments/calculate-total/Scontainer.jpg)
 
 ## 2 Prerequisites
 
@@ -40,11 +41,11 @@ You can calculate the total amount of disk usage with the this formula: ``(Disk 
 
 From the graph below you need the amount of disk usage in GB from the **/srv** folder. You should always use the current disk usage amount in order to calculate the total amount. In this graph it is **112.63** GB.
 
-![](attachments/how-to-calculate-the-total-amount-of-diskspace-of-a-cloud-app-environment/appusage.png)
+![](attachments/calculate-total/appusage.png)
 
 And from the graph below you need the amount of disk usage in percentage from the **/srv** folder. You should always use the current disk usage percentage in order to calculate the total amount. In this graph it is **82.38** %.
 
-![](attachments/how-to-calculate-the-total-amount-of-diskspace-of-a-cloud-app-environment/appusagepercentage.png)
+![](attachments/calculate-total/appusagepercentage.png)
 
 Using the formula above, the total amount of disk space for this app is: ``(112.63 * 100) / 82.38 = 136.7 GB``
 
@@ -58,11 +59,11 @@ You can calculate the total amount of disk usage with the formula below: ``(Disk
 
 From the **Database node disk usage (in bytes)** graph you need the amount of disk usage in GB from the **/var** folder. You should always use the current disk usage amount in order to calculate the total amount. In this graph it is **28.43** GB.
 
- ![](attachments/how-to-calculate-the-total-amount-of-diskspace-of-a-cloud-app-environment/DBnodeDiskusage.png)
+ ![](attachments/calculate-total/DBnodeDiskusage.png)
 
 From the **Database node disk usage in %** graph below you need the amount of disk usage in percentage from the **/var** folder. You should always use the current disk usage percentage in order to calculate the total amount. In this graph it is **37.74** %.
 
- ![](attachments/how-to-calculate-the-total-amount-of-diskspace-of-a-cloud-app-environment/DBnodeDiskusagePercentage.png)
+ ![](attachments/calculate-total/DBnodeDiskusagePercentage.png)
 
 The total amount of disk space for this app is: ``(28.43 * 100) / 37.74 = 75.3 GB``
 

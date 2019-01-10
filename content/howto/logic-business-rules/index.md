@@ -26,3 +26,4 @@ With these how-to's, you can learn how to translate your business logic into mic
 * [Extend Your Application with Custom Java](extending-your-application-with-custom-java)
 * [Use the Java API](java-api-tutorial)
 * [Find Object Activities](finding-object-activities)
+* [Use Translatable Validation Messages](translatable-validation-messages)

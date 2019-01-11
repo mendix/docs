@@ -1,12 +1,12 @@
 ---
-title: "Runtime Customization"
+title: "Customization"
 category: "Mendix Runtime"
 description: "Describes custom server, log file, database, Amazon S3 storage service, Microsoft Azure, IBM Bluemix object storage, and web client settings in Mendix."
 tags: ["Runtime", "Customization", "Settings", "Configuration", "IBM Cloud", "Amazon S3", "Microsoft Azure", "Custom Settings"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Custom Runtime Settings
+## 1 Custom Settings
 
 You can use custom server settings to configure the Runtime beyond the standard possibilities offered by the Modeler.
 

@@ -49,14 +49,14 @@ Depending on the type of request it is helpful to provide additional information
 
 *   Modeler type (Desktop Modeler or Web Modeler)
 *   Modeler version
-*   Test project - read [How To Export A Mendix Project Package](/refguide/export-a-project-package-dialog) for more information
+*   Test project - read [How To Export A Mendix Project Package](/refguide/export-project-package-dialog) for more information
 *   Reproducible steps
 
 ### 4.4 App Store Content Problem – Module, Widget, Theme Issues
 
 *   Name of the content
 *   Modeler version
-*   Test project - read [How To Export A Mendix Project Package](/refguide/export-a-project-package-dialog) for more information
+*   Test project - read [How To Export A Mendix Project Package](/refguide/export-project-package-dialog) for more information
 *   Reproducible steps
 
 {{% alert type="info" %}}

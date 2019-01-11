@@ -32,14 +32,8 @@ If needed, inform your IT department that the Mendix Modeler connects to [https:
 
 The Mendix Modeler connects with the domains stated below over HTTPS on port 443. These domains should be added to the firewall white list:
 
-![](attachments/required-network-access-for-connecting-to-the-mendix-platform/networkaccessmendixplatform.jpg)
+![](attachments/troubleshoot-team-server/networkaccessmendixplatform.jpg)
 
 * [home.mendix.com](http://mendix.com/) – enables logging in to use the Mendix Modeler
 * [cloud.home.mendix.com](http://cloud.home.mendix.com/) – enables deploying your app to the Mendix Cloud
 
-## 4 Related Content
-
-*   [Open Project Dialog](/refguide6/open-project-dialog)
-*   [Download From Team Server Dialog](/refguide6/download-from-team-server-dialog)
-*   [Upload A Project To Team Server](/refguide6/upload-to-team-server-dialog)
-*   [How to Submit Support Requests](submit-support-request)

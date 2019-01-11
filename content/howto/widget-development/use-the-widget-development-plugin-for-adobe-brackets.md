@@ -1,6 +1,6 @@
 ---
 title: "Use the Widget Development Plugin for Adobe Brackets"
-category: "Custom Widget Development"
+category: "Widget Development"
 tags: ["widget", "develop widget", "plugin", "adobe", "brackets"]
 ---
 

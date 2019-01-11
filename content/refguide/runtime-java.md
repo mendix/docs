@@ -1,6 +1,7 @@
 ---
-title: "Mendix and Java Part 1 – The Basics"
-parent: "support-references"
+title: "Mendix Runtime & Java"
+category: "Mendix Runtime"
+tags: ["runtime", "java"]
 ---
 
 ## 1 Introduction
@@ -12,11 +13,11 @@ The Java concepts are listed below.
 ### 2.1 Java Virtual Machine (JVM)
 When using Mendix you will use it together with Java (JDK) to deploy and run the actual application in a Java Virtual Machine (JVM). The JVM is a container in which the Mendix application runs. It looks like this:
 
-![](attachments/mendix-and-java--part-i-the-basics-in-a-nutshell/2.jpg)
+![](attachments/mendix-runtime-java/2.jpg)
 
 Or as shown in the Mendix Cloud:
 
-![](attachments/mendix-and-java--part-i-the-basics-in-a-nutshell/4.jpg)
+![](attachments/mendix-runtime-java/4.jpg)
 
 ### 2.2 PermGen
 
@@ -50,7 +51,7 @@ When the GC executes a minor garbage collection it will try to clean up all the 
 
 You can see this quite well in the following JVM Object Heap graph taken from the Mendix Cloud:
 
-![](attachments/mendix-and-java--part-i-the-basics-in-a-nutshell/5.jpg)
+![](attachments/mendix-runtime-java/5.jpg)
 
 The purple and green spikes are minor garbage collections. The large drops in the red part are major garbage collections. This is a healthy looking Heap.
 
@@ -58,7 +59,7 @@ The purple and green spikes are minor garbage collections. The large drops in th
 
 And finally a Mendix Cloud graph where all of the above comes together:
 
-![](attachments/mendix-and-java--part-i-the-basics-in-a-nutshell/6.jpg)
+![](attachments/mendix-runtime-java/6.jpg)
 
 The green part (apps) is basically the JVM in which the Mendix application is running. Anything else is reserved for the operating system of the application server.
 

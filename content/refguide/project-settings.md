@@ -3,7 +3,7 @@ title: "Project Settings"
 parent: "project"
 #menu_order:
 description: "Settings which apply to the project app as a whole."
-tags: ["project", "app", "configuration", "runtime", "desktop modeler", "languages", "certificate", "theme" ]
+tags: ["project", "app", "configuration", "runtime", "desktop modeler", "languages", "certificate", "theme", "hashing", "hashing algorithm"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -92,20 +92,45 @@ If you run on-premises, then you can select the time zone to which the server is
 
 ### 3.9 Hash Algorithm
 
-The hash algorithm is used to generate hash values for attributes of the HashString type, such as the password of a user.
+The hash algorithm is used to generate hash values for attributes of the HashString type, such as the password of a user. Mendix offers two recommended hashing algorithms:
 
 | Option | Description |
 | --- | --- |
-| BCrypt (recommended) | Resistant to brute-force search attacks. |
+| BCrypt (default, recommended) | Resistant to brute-force search attacks. |
 | SSHA256 | Seeded Secure Hash Algorithm 2, digest length 256 bits. |
-| SHA256 | Secure Hash Algorithm 2, digest length 256 bits. |
-| MD5 | Message-Digest algorithm 5. |
 
-*Default value:* BCrypt (recommended)
+Mendix believes both algorithms are secure enough to store passwords within Mendix. The main difference between BCrypt and SSHA256 is that the BCrypt algorithm has been configured so that it is relatively slow on purpose, since it was designed specifically to stop brute force attacks. That's why this results in a slight performance difference with the SSHA256 algorithm.
 
-For more information on MD5, see [MD5](http://en.wikipedia.org/wiki/MD5).
+#### 3.9.1 Performance
 
-For more information on SHA, see [SHA Hash Functions](http://en.wikipedia.org/wiki/SHA_hash_functions).
+This performance difference is hardly noticeable to a single user when logging in (the password you enter when logging in is hashed using the selected algorithm), so in general the performance alone is not a reason to choose SSHA256 over BCrypt. This situation can change when dealing with high concurrency of hashing operations. A common example of an area where this occurs is published web services exposing operations that compute quickly, like short-running microflows.
+
+#### 3.9.2 Performance Tests
+
+A (web service) user will log in to execute a web service operation, wait for the operation to finish, and finally get the result back (if any).
+
+Imagine an empty microflow that returns nothing at all exposed as a published web service. We ask one user to execute this operation as many times as he can in one minute (simulated with SoapUI). First we set the hashing algorithm to BCrypt, then we set it to SSHA256. Any extra overhead here (on top of establishing the connection, building the XML message and so forth) is basically the hashing algorithm, as the operation should take near zero milliseconds and there is no result. So that leaves only the login, or, more precisely, the hashing of the password.
+
+| Hashing Algorithm | Total Operations Executed | Operation per Second | Overhead in Milliseconds |
+| --- | --- | --- | --- |
+| BCrypt | 654 | 10.88 | 91.9 |
+| SSHA256 | 7163 | 119.36 | 8.4 |
+
+So 80 milliseconds per operation is not that much, right? Well, that depends on how long the operation itself takes.
+
+| Operation Duration in Seconds | Operations per Hour (BCrypt) | Operations per Hour (SSHA256) | Difference % |
+| --- | --- | --- | --- |
+| 0.1 | 18760 | 33210 | +77% |
+| 0.25 | 10529 | 13932 | +32% |
+| 1 | 3297 | 3570 | +8% |
+| 5 | 707 | 719 | +1.67% |
+| 15 | 239 | 240 | +0.5% |
+
+The difference is noticeable when the operation takes less time. So if you expect a very high amount of concurrency in operations where hashing takes place (most commonly any place where login operations are involved), you might want to consider changing your hashing algorithm.
+
+{{% alert type="info" %}}
+It is important to remember when changing hashing algorithms is that any hashed attribute (like the System$User password attribute) has its algorithm set on hashing. In other words, for the hashing type to take effect, any existing hashed attribute will have to be reset using the new hashing type.
+{{% /alert %}}
 
 ### 3.10 Rounding Mode
 

@@ -389,6 +389,10 @@ module.exports = {
       from: "/howtogeneral/support/how-to-submit-a-request-with-mendix-support",
       to: "/developerportal/support/submit-support-request"
     },
+	{
+      from: "/developerportal/support/export-a-project-package",
+      to: "/refguide/export-project-package-dialog"
+    },
 	/****************************************************
      * APM
      ****************************************************/

@@ -1,8 +1,8 @@
 ---
 title: "Mendix IP Addresses"
-parent: "support-references"
+parent: "mendix-cloud-deploy"
 #description: ""
-#tags: []
+tags: ["mendix cloud", "ip address"]
 ---
 
 ## 1 Introduction

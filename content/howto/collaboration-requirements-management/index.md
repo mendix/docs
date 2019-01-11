@@ -15,4 +15,3 @@ This category of how-to's presents information on using the Mendix Team Server, 
 * [Share the Development Database](sharing-the-development-database)
 * [Translate Your App Content](translate-your-app-content)
 * [Work with an On-Premises Version Control Server](on-premises-svn-howto)
-

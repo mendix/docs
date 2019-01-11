@@ -26,3 +26,12 @@ Installation on other Unix-like operating systems is possible, but has not been 
 ## 2 Technical Documentation
 
 The documentation describing the installation and basic configuration of the Mendix software on a Unix-like system is available as part of the m2ee-tools helper program: [https://github.com/mendix/m2ee-tools/tree/develop/doc/README.md](https://github.com/mendix/m2ee-tools/tree/develop/doc/README.md).
+
+## 3 License Key Activation on Linux
+
+To activate your license key, follow these steps:
+
+1. Open the interactive m2ee console.
+2. Use the command `show_license_information` to display a generated server ID.
+3. Use the server ID to obtain a license key from Mendix.
+4. sActivate your license on the server using the `activate_license` m2ee command.

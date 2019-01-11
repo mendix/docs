@@ -75,7 +75,6 @@ To be able to use the data from your model in the REST service, you need to crea
 	![](attachments/publish-rest-service/AddRestService.png)
 
 2. Enter *PRS_OrderService*  for the **Name** of your REST service. The REST service is now opened
-
 3.  Add a new resource to your service by clicking **Add**, and enter *GetOrderByID* for the **Resource name**:
 
 	![](attachments/publish-rest-service/AddRestResource.png)
@@ -83,19 +82,16 @@ To be able to use the data from your model in the REST service, you need to crea
 	Click **OK** to close the dialog box.
 
 4. Add an operation to your resource by clicking **Add** in the **Operations for resource** section.
+5.  In the **Operation** dialog box, enter`{OrderID}` in the **Operation path** field (make sure to include the braces). This will allow the REST service to be invoked with the OrderID in the URL shown in the **Example location** field of this same dialog box.
 
-5. In the **Operation** dialog box, enter`{OrderID}` in the **Operation path** field (make sure to include the braces). This will allow the REST service to be invoked with the OrderID in the URL shown in the **Example location** field of this same dialog box.
+	![](attachments/publish-rest-service/AddOperation.png)
 
-  ![](attachments/publish-rest-service/AddOperation.png)
+6.  In the same dialog box, click **Select** next to the **Microflow** field. As you do not have a microflow for this operation, select the **RESTExample** module in the dialog box and then click **New** to create a new microflow. Enter *PRS_GetGetOrderByID* for the **Name** of this new microflow:
 
-6. In the same dialog box, click **Select** next to the **Microflow** field. As you do not have a microflow for this operation, select the **RESTExample** module in the dialog box and then click **New** to create a new microflow. Enter *PRS_GetGetOrderByID* for the **Name** of this new microflow:
-
-   ![](attachments/publish-rest-service/AddOperationMicroflow.png)
+	![](attachments/publish-rest-service/AddOperationMicroflow.png)
 
 7. Click **Show** to start editing the newly created microflow.
-
 8. Add two parameters: **httpRequest** and **OrderID**.
-
 9.  Add an action to the microflow to convert the **OrderID** variable (string) to an integer variable. This is needed to be able to search for the OrderID (autonumber).
 
 	![](attachments/publish-rest-service/ConvertOrderID.png)
@@ -126,19 +122,19 @@ To be able to use the data from your model in the REST service, you need to crea
 
 	![](attachments/publish-rest-service/MFExportWithMapping.png)
 
-16. Add a an activity to the microflow to create an object of the type **HttpResponse**:
+17. Add a an activity to the microflow to create an object of the type **HttpResponse**:
 
 	![](attachments/publish-rest-service/httpResponse.png)
 
 	The **StatusCode** will return "OK" as a 200 message. The content of the message is mapped to the exported JSON from [step 16](#sixteen). And add the **HttpVersion** that you will be using (in this case, `HTTP/1.1`).
 
-17. Add an activity to the microflow for adding a header to the response:
+18. Add an activity to the microflow for adding a header to the response:
 
 	![](attachments/publish-rest-service/httpResponseHeader.png)
 
 	Set the member **Key** to `'Content-Type'` and the **Value** to `'application/json' `(or `'application/xml'` if your response contains XML rather than JSON). Set the **System.HttpHeaders** association to your HTTP response.
 
-18. Open the end activity in your microflow and select **$NewHttpResponse** as the return value. You should have no errors, and your microflow should look like this:
+19. Open the end activity in your microflow and select **$NewHttpResponse** as the return value. You should have no errors, and your microflow should look like this:
 
 	![](attachments/publish-rest-service/CompleteMFNoErrorHandling.png)
 

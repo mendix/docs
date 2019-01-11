@@ -82,4 +82,4 @@ For every request to the Mendix Runtime—be it from the client or via web servi
 
 ## 6 Related Content
 
-*   [Java Memory Usage with Mendix](java-memory-usage-with-mendix)
+*   [Java Memory Usage](java-memory-usage)

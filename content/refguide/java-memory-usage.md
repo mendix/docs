@@ -1,5 +1,5 @@
 ---
-title: "Java Memory Usage With Mendix"
+title: "Java Memory Usage"
 parent: "runtime-java"
 menu_order: 2
 tags: ["runtime", "java", "memory usage", "memory"]

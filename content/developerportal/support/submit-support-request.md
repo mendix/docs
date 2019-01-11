@@ -49,14 +49,14 @@ Depending on the type of request it is helpful to provide additional information
 
 *   Modeler type (Desktop Modeler or Web Modeler)
 *   Modeler version
-*   Test project - read [How To Export A Mendix Project Package (.mpk)](export-a-project-package) for more information
+*   Test project - read [How To Export A Mendix Project Package](/refguide/export-a-project-package-dialog) for more information
 *   Reproducible steps
 
 ### 4.4 App Store Content Problem – Module, Widget, Theme Issues
 
 *   Name of the content
 *   Modeler version
-*   Test project - read [How To Export A Mendix Project Package (.mpk)](export-a-project-package) for more information
+*   Test project - read [How To Export A Mendix Project Package](/refguide/export-a-project-package-dialog) for more information
 *   Reproducible steps
 
 {{% alert type="info" %}}
@@ -193,13 +193,12 @@ The ticket can have the following statuses:
     * The ticket will be closed for comments automatically after a set number of days, after which you can a follow-up ticket
 
  ![](attachments/how-to-submit-a-ticket---quick-reference-for-endusers/204371829-pic9.png)
- 
+
 ## 10 Submitting a Feature Request
- 
+
 On the [Mendix Idea Forum](https://forum.mendix.com/ideaforum/), Mendix captures ideas and requests from customers and developers in the Mendix community. Each quarter, this forum is treated as a short-list of the top features that the Mendix community supports via topics with the most upvotes.
 
 ## 11 Related Content
 
 * [Ticket Priority](ticket-priority)
 * [Escalation Management Process](escalation-management-process)
- 

@@ -67,7 +67,7 @@ For the specific case of swapping two apps between licensed nodes, see the guida
 
 When you remove an app from its environment you may want to take the data (database and file store) with it. It is a good idea, in any case, to take backups before performing major activities.
 
-The documentation on downloading a backup is here: [Download a Backup](/developerportal/operate/how-to-download-a-backup). 
+The documentation on downloading a backup is here: [Download a Backup](/developerportal/operate/download-backup). 
 
 {{% alert type="warning" %}}
 When you unlink your *Free App* from its Sandbox environment, the environment will be permanently deleted. This means that you will not be able to recover any data once the app is unlinked.
@@ -183,7 +183,7 @@ After you have linked your App to a licensed node it will be using the resources
 
 If you want to use the data which was originally in your app, you will need to restore the backup from your old node.
 
-The documentation on restoring a backup is here: [Restore a Backup](/developerportal/operate/how-to-restore-a-backup).
+The documentation on restoring a backup is here: [Restore a Backup](/developerportal/operate/restore-backup).
 
 ## 5 Exchange Linked Apps Between Nodes {#exchange-apps}
 

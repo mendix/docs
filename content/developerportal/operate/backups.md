@@ -31,7 +31,7 @@ The **Backups** page under the **Operate** category presents options for managin
 
 ### 3.1 Create Backup
 
-This will automatically generate a backup from your application data. See [Create a Backup](how-to-create-backup).
+This will automatically generate a backup from your application data. See [Create a Backup](create-backup).
 
 ### 3.2 Upload Backup
 
@@ -74,7 +74,7 @@ You can download one of the following:
 * **Database Only**
 * **Files Only**
 
-See [Download a Backup](how-to-download-a-backup) for more information.
+See [Download a Backup](download-backup) for more information.
 
 {{% alert type="info" %}}
 As the download files are generated "on the fly" (meaning, while in progress), it is not possible to estimate the file size before downloading. Your browser will not show a progress bar.
@@ -90,7 +90,7 @@ If you restore a backup that was originally deployed with an older Modeler versi
 In Mendix Cloud V4, if the restore takes too long, the system will show a timeout message. The restore will continue behind the scenes, and you can track the progress of the restore by inspecting your database free disk space graphs. While the database free disk space keeps decreasing, the restore is still in progress. If the database free disk space is constant, the restore has stopped and you can try to start your application. If this happens regularly, consider upgrading to a database plan with more CPU cores, so that the restore can be executed faster.
 {{% /alert %}}
 
-See [Restore a Backup](how-to-restore-a-backup) for more information.
+See [Restore a Backup](restore-backup) for more information.
 
 ### 3.5 Details
 
@@ -111,6 +111,8 @@ At the bottom of the screen, you can click **Delete** to delete this particular 
 
 ## 4 Related Content
 
-* [How to Create a Backup](how-to-create-backup)
-* [How to Download a Backup](how-to-download-a-backup)
-* [How to Restore a Backup](how-to-restore-a-backup)
+* [How to Create a Backup](create-backup)
+* [How to Download a Backup](download-backup)
+* [How to Restore a Backup](restore-backup)
+* [How to Restore a Backup Locally(database-size-reduction)
+* [Database Size Reduction](database-size-reduction)

@@ -42,6 +42,6 @@ Follow these steps to create a backup of a licensed app:
 ## 4 Related Content
 
 * [How to Deploy to the Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy)
-* [How to Download a Backup](how-to-download-a-backup)
+* [How to Download a Backup](download-backup)
 * [Licensing Apps](/developerportal/deploy/licensing-apps)
-* [How to Restore a Backup](how-to-restore-a-backup)
+* [How to Restore a Backup](restore-backup)

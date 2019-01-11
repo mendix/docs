@@ -54,7 +54,7 @@ For more information about deployment, see [Mendix Cloud](/developerportal/deplo
 
 #### 2.2.2 Access to Backups
 
-The Access to Backups permission grants access to the backups of the environment. You can view, [create](/developerportal/operate/how-to-create-backup), [download](/developerportal/operate/how-to-download-a-backup), and [restore](/developerportal/operate/how-to-restore-a-backup) backups.
+The Access to Backups permission grants access to the backups of the environment. You can view, [create](/developerportal/operate/create-backup), [download](/developerportal/operate/download-backup), and [restore](/developerportal/operate/restore-backup) backups.
 
 For more information, see [Backups](/developerportal/operate/backups).
 

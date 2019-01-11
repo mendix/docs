@@ -10,7 +10,7 @@ tags: ["Backup", "Restore", "Mendix Cloud", "Developer Portal", "backup file for
 
 This page describes how to restore a backup to the Mendix Cloud.
 
-The backup can be stored in the cloud, associated with the environment from which it was made. Alternatively, it can be a backup which has been stored locally, for example by downloading a backup from the Mendix Cloud (see [Download a Backup](how-to-download-a-backup)) for more information.
+The backup can be stored in the cloud, associated with the environment from which it was made. Alternatively, it can be a backup which has been stored locally, for example by downloading a backup from the Mendix Cloud (see [Download a Backup](download-backup)) for more information.
 
 {{% alert type="info" %}}
 You can only restore a backup if you have sufficient rights to the target node. See [Node Permissions](/developerportal/deploy/node-permissions) for more information.
@@ -152,5 +152,5 @@ So, for example, the first file in the example file above (0d3e301f-5551-46f8-ad
 ## 6 Related Content
 
 * [Backups](backups)
-* [How to Create a Backup](how-to-create-backup)
-* [How to Download a Backup](how-to-download-a-backup)
+* [How to Create a Backup](create-backup)
+* [How to Download a Backup](download-backup)

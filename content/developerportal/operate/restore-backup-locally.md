@@ -3,8 +3,7 @@ title: "Restore a Backup Locally"
 # try using linktitle rather than having to rename everything to add the -a-
 linktitle: "restore backup locally"
 parent: "backups"
-menu_order: 220
-#parent: "how-to-restore-a-backup"
+menu_order: 4
 description: "This page describes how to restore a backup."
 tags: ["Backup","Restore","Local","Developer Portal"]
 ---
@@ -24,7 +23,7 @@ Restoring a backup locally can be useful if you want to test your cloud environm
 
 **Before starting this how-to, make sure you have completed the following prerequisites:**
 
-* [Download a backup](how-to-download-a-backup) that you want to restore locally
+* [Download a backup](download-backup) that you want to restore locally
 * Install Postgresql on your local machine by downloading and running the [Postgresql Installer](https://www.postgresql.org/download/windows/); use the program defaults and choose a password:
 
     ![](attachments/restore-backup-locally/postgres-password.png)

@@ -57,6 +57,6 @@ To download a backup of a licensed app, follow these steps:
 
 ## 5 Related Content
 
-* [How to Create a Backup](how-to-create-backup)
+* [How to Create a Backup](create-backup)
 * [Licensing Apps](/developerportal/deploy/licensing-apps)
-* [How to Restore a Backup](how-to-restore-a-backup)
+* [How to Restore a Backup](restore-backup)

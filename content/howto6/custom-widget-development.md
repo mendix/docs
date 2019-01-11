@@ -70,7 +70,7 @@ This category of how-to's presents in-depth information on how to build your own
 
 Most of the widgets in the [Mendix App Store](https://appstore.home.mendix.com/index3.html) are open-source and available on GitHub. You can find the **View on GitHub** link on the right side of the App Store screen:
 
-![](attachments/widget-development/appstore-github-link.png)
+![](attachments/custom-widget-development/appstore-github-link.png)
 
 ### 4.2 Learn by Doing
 

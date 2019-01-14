@@ -15,7 +15,8 @@ There are two image widgets in the Web Modeler:
 * Image – allows you to show a static (non-changing) image in your app
 * Dynamic image – allows you to show a dynamic image (for example, a relevant profile picture that is different for each customer) in your app
 
-![](attachments/page-editor-widgets-images-wm/wm-image-widgets.png)
+{{% image_container width="350" %}}![](attachments/page-editor-widgets-images-wm/wm-image-widgets.png)
+{{% /image_container %}}
 
 {{% alert type="info" %}}
 
@@ -29,7 +30,8 @@ You can switch between static and dynamic image in the **General** section, as w
 
 Before configuring settings in the **General** section for the **Dynamic Image**, keep in mind that it can only function inside a data container (a list view or a data view). You can either place widget in an existing data container; or click **Wrap with a new data view** in **Properties** to create a data view automatically and place an input element inside it. 
 
-![](attachments/page-editor-widgets-images-wm/wm-dynamic-image-data-view.png)
+{{% image_container width="350" %}}![](attachments/page-editor-widgets-images-wm/wm-dynamic-image-data-view.png)
+{{% /image_container %}}
 
 Settings available for **Static Image** and **Dynamic Image** are described in the table below:
 

@@ -51,21 +51,17 @@ To be able to use the data from your model in the REST service, you need to crea
 	![](attachments/publish-rest-service/message_definition.png)
 
 2. In the **Add Message Definition** dialog box, enter *MD_Orders* as the name for this definition.
-
 3.  The message definition is now opened and you need to select the entity to use for the MD_Orders definition. To do this, select **Add** and in the dialog box, click **Select** , then choose the **Order** entity from the list.
 
 	![](attachments/publish-rest-service/MD_AddEntity.png)
 
 4. After selecting the **Order** entity, the **Structure** part of the dialog box is filled with only the **Order** object selected.
-
 5. Select the **OrderID** and **Customer** attributes
-
 6.  Expand the **OrderItem_Order** association and select the **Product** and **Quantity** attributes:
 
 	![](attachments/publish-rest-service/MD_SelectedAttributes.png)
 
 7. Click **OK** to close the dialog box.
-
 8. Close the message definition, and make sure to save the definition if asked!
 
 ### 4.2 Configuring the REST Service
@@ -115,9 +111,7 @@ To be able to use the data from your model in the REST service, you need to crea
 	![](attachments/publish-rest-service/ExportMappingResult.png)
 
 14. Now go back to the **PRS_GetGetOrderByID** microflow and add an **Export with mapping** activity.
-
 15. In the **Mapping** field of the dialog box, select the mapping created above in [step 11](#eleven). For the **Parameter** field, select the **Order** object retrieved with the database retrieve action in the microflow.
-
 16. <a name="sixteen"></a>Select **JSON** for the result, and store the output in a **String variable**. Enter *Order_JSON* for the variable's **Name**.
 
 	![](attachments/publish-rest-service/MFExportWithMapping.png)
@@ -133,7 +127,6 @@ To be able to use the data from your model in the REST service, you need to crea
 	![](attachments/publish-rest-service/httpResponseHeader.png)
 
 	Set the member **Key** to `'Content-Type'` and the **Value** to `'application/json' `(or `'application/xml'` if your response contains XML rather than JSON). Set the **System.HttpHeaders** association to your HTTP response.
-
 19. Open the end activity in your microflow and select **$NewHttpResponse** as the return value. You should have no errors, and your microflow should look like this:
 
 	![](attachments/publish-rest-service/CompleteMFNoErrorHandling.png)
@@ -169,7 +162,6 @@ In this new service, no error handling has been implemented. For example, if you
 ### 5.1 Adding Error Handling
 
 1. Open the **PRS_GetGetOrderByID** microflow, right-click the first activity, then select the option to **Set Error Handling** to **Custom with rollback**.
-
 2.  After the first activity, add an activity that creates a new HttpResponse object. Enter *NewHttpErrorResponse* for the **Name**, and map the attributes like this:
 
 	![](attachments/publish-rest-service/ParsingErrorResponse.png)
@@ -177,7 +169,6 @@ In this new service, no error handling has been implemented. For example, if you
 	For the **Content** member, the value is this JSON string: `'{"Error": "The OrderID can only be an integer"}'`.
 
 3. Set the new activity as the custom error handler.
-
 4.  Below this activity, add a **Create object** activity that creates a new httpHeader object:
 
 	![](attachments/publish-rest-service/ParsingErrorResponseHeader.png)
@@ -188,7 +179,7 @@ In this new service, no error handling has been implemented. For example, if you
 
 	![](attachments/publish-rest-service/ParsingErrorMicroflow.png)
 
-6. Test your error handler as you did with the app in section [4.3 Viewing the App](#viewing). Enter some characters in the **OrderID** parameter and observe the response of the request, like this:
+6.  Test your error handler as you did with the app in section [4.3 Viewing the App](#viewing). Enter some characters in the **OrderID** parameter and observe the response of the request, like this:
 
 	![](attachments/publish-rest-service/ParsingErrorRESTResult.png)
 
@@ -198,9 +189,7 @@ Now that you covered the error handling of the parameter parsing, it's time to h
 
 To add the error handling for those situations when the OrderID parameter is filled but no result is found, follow these steps:
 
-1.  After the activity for retrieving from the database, add an exclusive split activity with the following statement: `$Order != empty`.
-
-	The true exit is connected to the activity for exporting to JSON. For the false exit, add new Create object activities that create a **NewhttpErrorNotFoundResponse** and a **NewhttpErrorNotFoundHeader**:
+1.  After the activity for retrieving from the database, add an exclusive split activity with the following statement: `$Order != empty`. The true exit is connected to the activity for exporting to JSON. For the false exit, add new Create object activities that create a **NewhttpErrorNotFoundResponse** and a **NewhttpErrorNotFoundHeader**:
 
 	![](attachments/publish-rest-service/OrderNotFoundResponse.png)
 
@@ -208,7 +197,7 @@ To add the error handling for those situations when the OrderID parameter is fil
 
 	![](attachments/publish-rest-service/OrderNotFoundHeader.png)
 
-2. Configure the end activity to return the **NewHttpResponse**. The microflow should now look like this:
+2.  Configure the end activity to return the **NewHttpResponse**. The microflow should now look like this:
 
 	![](attachments/publish-rest-service/CompleteMFWithErrorHandling.png)
 

@@ -70,15 +70,16 @@ If you place the **Delete Object** in a list view, the corresponding list view i
 
 For example, you have a page with a list view showing customer names. A **Delete** button is placed inside the list next to each name. Thus, if you click **Delete** in a line that says "Peter", this customer and all customer's details will be deleted. 
 
-![](attachments/page-editor-widgets-events-section-wm/wm-list-view-delete.png)
-
+{{% image_container width="350" %}}![](attachments/page-editor-widgets-events-section-wm/wm-list-view-delete.png)
+{{% /image_container %}}
 
 
 #### 2.3.2 Delete Object Action in a Data View
 
 When placed on a data view, **Delete Object** will delete the connected object. For example, you opened a page with customer's details. The details are placed in a data view. You have **Save** and **Delete** buttons at the bottom of the page. When you press **Delete**, the customer "John" and customer's details will be deleted and the page will be closed. 
 
-![](attachments/page-editor-widgets-events-section-wm/wm-data-view-delete.png)
+{{% image_container width="350" %}}![](attachments/page-editor-widgets-events-section-wm/wm-data-view-delete.png)
+{{% /image_container %}}
 
 ## 3 Related Content
 

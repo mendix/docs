@@ -25,7 +25,7 @@ Data view consists of the following properties:
 * [General](#general-section-data-view)
 * [Design](#design-section-data-view)
 
-{{% image_container width="400" %}}![](attachments/page-editor-data-view-list-view-wm/wm-data-view-properties.png)
+{{% image_container width="300" %}}![](attachments/page-editor-data-view-list-view-wm/wm-data-view-properties.png)
 {{% /image_container %}}
 
 ### 2.1 Data Source {#data-source-data-view} 
@@ -57,7 +57,7 @@ List view consists of the following properties:
 * [General](#general-section-list-view)
 * [Design](#design-section-list-view)
 
-{{% image_container width="400" %}}![](attachments/page-editor-data-view-list-view-wm/wm-list-view-properties.png)
+{{% image_container width="300" %}}![](attachments/page-editor-data-view-list-view-wm/wm-list-view-properties.png)
 {{% /image_container %}}
 
 ### 3.1 Data Source {#data-source-list-view}

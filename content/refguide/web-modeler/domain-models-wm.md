@@ -30,7 +30,8 @@ The rows in the table are CDs. The type of the two rows is "CD" and this is the 
 
 To view the **Domain Models** of your app in the Web Modeler, click the **Domain Models** icon in the left menu bar of the Web Modeler.
 
-![](attachments/domain-models-wm/wm-domain-model.png)
+{{% image_container width="350" %}}![](attachments/domain-models-wm/wm-domain-model.png)
+{{% /image_container %}}
 
 After opening a domain model, you will see an overview of all the entities, attribute, and associations of the entities. 
 
@@ -58,7 +59,8 @@ For examples and more technical details, see [Domain Model](../domain-model), [E
 
 You can add new entities in the **Toolbox**. 
 
-![](attachments/domain-models-wm/wm-toolbox-entity.png)
+{{% image_container width="350" %}}![](attachments/domain-models-wm/wm-toolbox-entity.png)
+{{% /image_container %}}
 
 To add an entity, do the following:
 
@@ -72,7 +74,8 @@ To add an entity, do the following:
 
 The new entity is added to the domain model.
 
-![](attachments/domain-models-wm/wm-new-entity.png)
+{{% image_container width="350" %}}![](attachments/domain-models-wm/wm-new-entity.png)
+{{% /image_container %}}
 
 ## 4 Adding New Attributes {#adding-new-attributes}
 
@@ -80,7 +83,8 @@ To add attributes in the domain mode, do the following:
 
 1. Select a block with entity you want to add attribute to. The **New attribute** option appears:
 
-    ![](attachments/domain-models-wm/wm-addingattribute.png)
+    {{% image_container width="350" %}}![](attachments/domain-models-wm/wm-addingattribute.png)
+    {{% /image_container %}}
 
 2. Click **New attribute** and specify its **Name** and **Type**:
 
@@ -90,7 +94,8 @@ To add attributes in the domain mode, do the following:
 
 New attribute is added to the entity. 
 
-![](attachments/domain-models-wm/wm-new-attribute.png)
+{{% image_container width="350" %}}![](attachments/domain-models-wm/wm-new-attribute.png)
+{{% /image_container %}}
 
 ## 5 Adding New Associations
 
@@ -99,7 +104,8 @@ To add association in the domain model, do the following:
 1. Select a block with entity you want to add association to.
 2.  Click the arrow icon that appears:
 
-    ![](attachments/domain-models-wm/wm-addingassociation.png) 
+    {{% image_container width="350" %}}![](attachments/domain-models-wm/wm-addingassociation.png)
+    {{% /image_container %}}
    
 3.  Select a second entity for the new association from the list of existing entities and click **Select**. You can also create a new entity for the association from the dialog box. 
 
@@ -165,7 +171,8 @@ To change the association, click the line in the domain model. The **Properties*
 
 If the association type is one-to-many or many-to-many, you can swap direction of it clicking the corresponding icon. For more information, see section [3 Multiplicity](domain-models-association-properties-wm#multiplicity) in *Association Properties in the Web Modeler*. 
 
-![](attachments/domain-models-wm/wm-managing_associations.png)
+{{% image_container width="350" %}}![](attachments/domain-models-wm/wm-managing_associations.png)
+{{% /image_container %}}
 
 ## 7 Deleting Entities, Attributes or Associations
 

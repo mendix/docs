@@ -23,7 +23,8 @@ The picture below shows the components of the Web Modeler interface:
 
 You can edit an app in the **Web Modeler** by opening your app in the [Developer Portal](https://home.mendix.com) and clicking **Edit App** or choosing the **Edit in Web Modeler** option in the drop-down menu of the **Edit App** button. 
 
-![](attachments/overview-wm/open-wm.png)
+{{% image_container width="350" %}}![](attachments/overview-wm/open-wm.png)
+{{% /image_container %}}
 
 {{% alert type="warning" %}}
 
@@ -66,7 +67,8 @@ The app opens in the Web Modeler.
 
 After clicking **Edit in Web Modeler** you may need to upgrade your app to the latest version.
 
-![](attachments/overview-wm/upgrade-wm.png)
+{{% image_container width="350" %}}![](attachments/overview-wm/upgrade-wm.png)
+{{% /image_container %}}
 
 {{% alert type="info" %}}
 When you upgrade your app in the Web Modeler to the latest  Mendix version, you will need to upgrade your app in the **Desktop Modeler** to the same version as well. 
@@ -83,11 +85,12 @@ After opening the Web Modeler,  the home page of the app opens.
 
 You can change the view of your page to different views by clicking the corresponding icons:
 
-*   Mobile
-*   Tablet
-*   Responsive (Desktop)    
+*  Mobile
+*  Tablet
+*  Responsive (Desktop)    
 
-![](attachments/overview-wm/wm-view.png)
+	{{% image_container width="350" %}}![](attachments/overview-wm/wm-view.png)
+	{{% /image_container %}}
 
 ## 5 Left Menu Bar
 

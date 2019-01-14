@@ -1,6 +1,6 @@
 ---
 title: "Submit a Support Request"
-parent: "support-details"
+category: "Mendix Support"
 menu_order: 10
 description: "Describes submitting a request with Mendix Support."
 tags: ["support", "incident", "standard change", "URL", "change URL", "license", "change" ]

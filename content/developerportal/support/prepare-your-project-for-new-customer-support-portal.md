@@ -1,6 +1,6 @@
 ---
 title: "On-Premises Customers: Prepare Your Project for the New Support Portal"
-parent: "support-details"
+category: "Mendix Support"
 menu_order: 60
 description: "Describes what you need to do with an on-premises app project to prepare it for Mendix Support."
 tags: ["on-premises", "support"]

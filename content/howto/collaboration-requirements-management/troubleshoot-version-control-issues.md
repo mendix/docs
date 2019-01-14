@@ -1,6 +1,7 @@
 ---
 title: "Troubleshoot Version Control Issues"
-parent: "support-references"
+parent: "using-team-server-_-version-control"
+menu_order: 20
 description: "This document presents a list of problems and fixes for version control issues."
 tags: ["version control", "troubleshoot", "modeler"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -16,13 +17,13 @@ Below is a list of known problems and steps to fix them.
 
 ### 2.1 Getting an Error Containing `SharpSvn.SvnAuthenticationException: Proxy authentication failed`
 
-![Error dialog with proxy authentication failed](attachments/troubleshoot-version-control-issues/oopsproxy.png)
+![Error dialog with proxy authentication failed](attachments/troubleshoot-version-control/oopsproxy.png)
 
 This error means that the Modeler has problems reaching the version control server because of a proxy server.
 
 The proxy settings can be changed in the Modeler by selecting **Edit** > **Preferences** and then the **Advanced** tab. In the **Proxy server** section, you can change the proxy authentication settings. Fill in the correct **User name** and **Password** for the proxy server.
 
-![Proxy settings](attachments/troubleshoot-version-control-issues/proxysettings.png)
+![Proxy settings](attachments/troubleshoot-version-control/proxysettings.png)
 
 ### 2.2 Getting an Error Containing Another `SharpSvn.SvnAuthenticationException`
 

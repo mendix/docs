@@ -1,6 +1,6 @@
 ---
 title: "Change the Affected Apps for Which You Can Submit Requests"
-parent: "support-details"
+category: "Mendix Support"
 menu_order: 50
 description: "Describes how to change the app for which you submitted a Mendix Support request."
 tags: ["support", "Mendix Support", "app", "request"]

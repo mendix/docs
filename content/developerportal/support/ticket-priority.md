@@ -1,6 +1,6 @@
 ---
 title: "Ticket Priority"
-parent: "support-details"
+category: "Mendix Support"
 menu_order: 20
 description: "Presents details on how Mendix Support prioritizes tickets."
 tags: ["support", "request", "impact", "urgency"]

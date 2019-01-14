@@ -1,6 +1,6 @@
 ---
 title: "New App Node Request Template"
-parent: "support-details"
+category: "Mendix Support"
 menu_order: 65
 tags: ["Support", "app nide", "node"]
 ---

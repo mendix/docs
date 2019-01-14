@@ -12,7 +12,8 @@ The page editor allows a user to define the end-user interface of a Mendix appli
 
 To view the **Pages** of your app in the Web Modeler, click the **Pages** icon in the left menu bar of the Web Modeler.
 
-![](attachments/page-editor-wm/wm-pages-icon.png)
+{{% image_container width="350" %}}![](attachments/page-editor-wm/wm-pages-icon.png)
+{{% /image_container %}}
 
 {{% alert type="warning" %}}
 
@@ -43,7 +44,8 @@ To open a page in the Web Modeler, do the following:
 
 2.  In the displayed list of app pages, select the one you want to open and click it.
 
-    ![](attachments/page-editor-wm/wm-opening-a-page.png)
+    {{% image_container width="400" %}}![](attachments/page-editor-wm/wm-opening-a-page.png)
+    {{% /image_container %}}
 
 The selected page is opened. 
 
@@ -54,7 +56,8 @@ To create a new page in the Web Modeler, do the following:
 1. Click the **Pages** icon.
 2.  Click **New** in the top right corner of the displayed side panel.
 
-    ![](attachments/page-editor-wm/wm-new-page.png)
+    {{% image_container width="400" %}}![](attachments/page-editor-wm/wm-new-page.png)
+    {{% /image_container %}}
 
 3. In the **Create new page** dialog window, fill out the title of the page, select the layout and the [page template](https://atlas.mendix.com/index3.html#/templates).  
 4.  Click **Create**.
@@ -81,7 +84,8 @@ To view an element and its [properties](#page-editor-properties), click this ele
 
 The selected element is indicated with an blue border. Additionally, if the element is inside a data container (data view or a list view), it will be indicated with a data container icon.
 
-![](attachments/page-editor-wm/wm-input-widget-example.png)
+{{% image_container width="400" %}}![](attachments/page-editor-wm/wm-input-widget-example.png)
+{{% /image_container %}}
 
 ## 4 Breadcrumb Trail
 
@@ -164,8 +168,8 @@ You can update widgets in the [App Settings](app-settings-wm).
 
 The **Properties** tab displays the properties of the currently selected element and differs depending on this element. 
 
-![](attachments/page-editor-wm/wm-properties.png)
-
+{{% image_container width="400" %}}![](attachments/page-editor-wm/wm-properties.png)
+{{% /image_container %}}
 
 
 ## 7 Related Content

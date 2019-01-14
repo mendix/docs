@@ -62,4 +62,4 @@ If the solutions here do not work for your version control problems, please subm
 
 ## 4 Related Content
 
-* [How to Submit Support Requests](submit-support-request)
+* [How to Submit Support Requests](/developerportal/support/submit-support-request)

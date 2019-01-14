@@ -397,6 +397,10 @@ module.exports = {
       from: "/developerportal/support/troubleshoot-version-control-issues",
       to: "/howto/collaboration-requirements-management/troubleshoot-version-control-issues"
     },
+	{
+      from: "/howtogeneral/support/Mendix%20New%20App-node%20Request%20Template.xlsm",
+      to: "/developerportal/support/new-app-node-request-template"
+    },
 	/****************************************************
      * APM
      ****************************************************/

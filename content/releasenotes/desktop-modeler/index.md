@@ -15,8 +15,8 @@ These are the Mendix Desktop Modeler major version release notes:
 The Windows Service release notes can be found in [Windows Service](windows-service).
 {{% /alert %}}
 
-
 {{% alert type="info" %}}
 For updates on the status of Team Server as well as deployment options and other Mendix services, see [Mendix Status](https://status.mendix.com/).
-{% /alert %}}
+{{% /alert %}}
+
 

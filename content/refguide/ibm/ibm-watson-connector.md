@@ -32,21 +32,19 @@ To use IBM Watson services you must have an account on [IBM Cloud](https://www.i
 
 To view the credentials:
 
-* Go to your existing services
-* Select the top-left menu, and then select Watson to get to the Watson console
-* Select Existing Services from Watson Services to view a list of your services and projects
+* View your existing services from the IBM Cloud dashboard
 * If the service is part of a project, click the name of the project that contains the service and you can view the credentials from the Credentials section of the project details page
-* If the service is not part of a project, click the service name that you want to view and then select **Service credentials**.
+* If the service is not part of a project, click the service name that you want to view
 
 ![](attachments/ibm-watson-connector/ibm-credentials.png)
 
 For more information see [Service credentials for Watson services](https://console.bluemix.net/docs/services/watson/getting-started-credentials.html).
 
 {{% alert type="warning" %}}
-If you have an existing Watson service it may give *Username* and *Password* in the credentials. To obtain credentials in the correct format, you will have to create a **new** service which has *API Key* and *URL* as the credentials. It is not possible to obtain the API Key/URL style of credentials for an existing service of this type.
+If you have an existing Watson service it may give *Username* and *Password* in the credentials. To obtain credentials in the correct format, you will have to create a **new** service which has *API Key* and *URL* as the credentials. It is not possible to obtain the API Key/URL style of credentials for an existing service which uses Username/Password credentials.
 {{% /alert %}}
 
-If you are running your app on IBM Cloud and the Watson resources have been added to your IBM Cloud project, the credentials can be picked up automatically via VCAP. See section [3 Watson Service Configuration](#WatSerCon) for more information on VCAP. This section also covers the IBM Watson Connector Suite configuration for storing credentials. If you are testing your app locally, or in another environment, you will need to enter these credentials (API key or Username and Password) manually when you use the connector in your Mendix app.
+If you are running your app on IBM Cloud and the Watson resources have been added to your IBM Cloud project, the credentials can be picked up automatically via VCAP. See section 8, [Watson Service Configuration](#WatSerCon) for more information on VCAP. This section also covers the IBM Watson Connector Suite configuration for storing credentials. If you are testing your app locally, or in another environment, you will need to enter these credentials (API key or Username and Password) manually when you use the connector in your Mendix app.
 
 #### 1.1.2 IBM Watson Connector Suite
 
@@ -58,10 +56,10 @@ To use these actions, just drag them into your microflow. Each of the connectors
 
 * [Watson Assistant](#WatsonAssistant)
 * [Speech to Text](#SpeechToText)
-* [Text to Speech]
-* [Tone Analyzer]
-* [Language Translator]
-* [Visual Recognition]
+* [Text to Speech](#TextToSpeech)
+* [Tone Analyzer](#ToneAnalyzer)
+* [Language Translator](#LanguageTranslator)
+* [Visual Recognition](#VisualRecognition)
 
 {{% alert type="info" %}}
 Not all Watson services are currently supported by the IBM Watson Connector Suite. More services will be added over time.
@@ -75,7 +73,9 @@ If there is no connector for the service you want, you can use Mendix native RES
 
 This section contains a reference to each of the microflow actions which is added to your app when you install the IBM Watson Connector Suite.
 
-### 2.1 Conversation – Send Message
+### 2.1 Assistant - Create session
+
+### 2.2 Assistant – Send Message
 
 This action sends a message from your app to the [IBM Watson Conversation service](https://console.bluemix.net/docs/services/conversation/index.html). This will use a selected workspace to analyze the message and return an appropriate response.
 
@@ -91,19 +91,19 @@ The easiest way to set up a workspace is through the IBM Watson Conversation Wor
 
 More information on the APIs for the IBM Watson Conversation service is available here: [IBM Watson Conversation service – API Reference](https://www.ibm.com/watson/developercloud/conversation/api/v1/).
 
-#### 2.1.1 Username
+#### 2.2.1 Username
 
 This is a string containing the username assigned to the conversation service in your IBM Cloud project.
 
-#### 2.1.2 Password
+#### 2.2.2 Password
 
 This is a string containing the password assigned to the conversation service in your IBM Cloud project.
 
-#### 2.1.3 Input
+#### 2.2.3 Input
 
 This is a string containing the input to the conversation. This string cannot contain carriage return, newline, or tab characters, and it must be no longer than 2048 characters. 
 
-#### 2.1.4 Conversation Context
+#### 2.2.4 Conversation Context
 
 This is an object of type ConversationContext which contains the context for this conversation.
 
@@ -111,7 +111,7 @@ The ConversationContext object keeps track of where you are in a conversation so
 
 The ConversationContext contains the ConversationId. This is a unique identifier for this conversation which is used by Watson to maintain the state of the dialog. The rest of the domain model around ConversationContext is used internally to manage the context of the conversation.
 
-#### 2.1.5 Variable (ConversationMessageResponse)
+#### 2.2.5 Variable (ConversationMessageResponse)
 
 This is the name you wish to assign to an object of type ConversationMessageResponse which is the response received from Watson.
 
@@ -131,19 +131,19 @@ This action uses the [IBM Watson Speech to Text service](https://console.bluemix
 
 More information on the APIs for the IBM Watson Speech to Text service is available here: [IBM Watson Speech to Text service – API Reference](https://www.ibm.com/watson/developercloud/speech-to-text/api/v1/).
 
-#### 2.2.1 Username
+### 3.1 Username
 
 This is a string containing the username assigned to the speech to text service in your IBM Cloud project.
 
-#### 2.2.2 Password
+### 3.2 Password
 
 This is a string containing the password assigned to the speech to text service in your IBM Cloud project.
 
-#### 2.2.3 Audio File
+### 3.3 Audio File
 
 This is an object of type, or a specialization of type, FileDocument containing the audio stream to be analyzed. The stream must be encoded in the format described in the audio format parameter.
 
-#### 2.2.4 Audio Format
+### 3.4 Audio Format
 
 The format of the audio file which is to be transcribed. These are listed in the enumeration AudioFormats. The following formats are supported:
 
@@ -157,11 +157,11 @@ The format of the audio file which is to be transcribed. These are listed in the
 
 For more detail see the [IBM Cloud documentation on audio formats](https://console.bluemix.net/docs/services/speech-to-text/audio-formats.html).
 
-#### 2.2.5 Audio Language
+### 3.5 Audio Language
 
 This is the language in which the text detected in the speech file should be transcribed. These are listed in the AudioLanguage enumeration. More information on the supported languages is available in the API reference: [Speech to Text API Reference](https://www.ibm.com/watson/developercloud/speech-to-text/api/v1/) on the IBM Cloud site.
 
-#### 2.2.6 Variable (SpeechReturn)
+### 3.6 Variable (SpeechReturn)
 
 This is the name you want to give to the object of type SpeechReturn which is returned by the IBM Speech to Text Analyzer.
 
@@ -171,7 +171,7 @@ The domain model for this action allows for several interim responses. In this i
 
 The text which has been decoded is in the object of type **Alternative** in the **transcript** attribute. The **confidence** indicates the service's confidence in the transcription in a range 0 to 1.
 
-### 2.3 Text To Speech – Synthesize
+## 4 Text To Speech – Synthesize{#TextToSpeech}
 
 This connector uses the [IBM Text to Speech service](https://console.bluemix.net/docs/services/text-to-speech/index.html) to 'speak' some text. It converts a string containing text into a sound object corresponding to the synthesis of the text using a specified voice. This voice can sound male or female and is optimized for a particular language. Some voices can, depending on their capabilities, add extra vocal signals such as speed, timbre, or emotional cues.
 
@@ -179,29 +179,29 @@ This connector uses the [IBM Text to Speech service](https://console.bluemix.net
 
 More information on the APIs for the IBM Watson text to speech service is available here: [IBM Watson Text to Speech service – API Reference](https://www.ibm.com/watson/developercloud/text-to-speech/api/v1/).
 
-#### 2.3.1 Username
+### 4.1 Username
 
 This is a string containing the username assigned to the text-to-speech service in your IBM Cloud project.
 
-#### 2.3.2 Password
+### 4.2 Password
 
 This is a string containing the password assigned to the text-to-speech service in your IBM Cloud project.
 
-#### 2.3.3 Text
+### 4.3 Text
 
 This is a string containing the text to be 'spoken'. This can also contain additional XML instructions on how the text should be performed. For example you can make certain phrases slower or louder than Watson would normally speak them. Depending on the **Voice** chosen, you can add more sophisticated expression to the text. More information is available in IBM's [SSML documentation](https://console.bluemix.net/docs/services/text-to-speech/SSML.html).
 
-#### 2.3.4 Voice
+### 4.4 Voice
 
 This is an object of type VoiceEnum which instructs the IBM Watson service how to synthesize the spoken text.
 
 Note that the voice chosen should match the language of the **Text**. There is no validation that the two match and using, for example, a Spanish **Voice** to synthesize English **Text** may have unexpected results.
 
-#### 2.3.5 Variable (Speech)
+### 4.5 Variable (Speech)
 
 This is the name you wish to assign to an object of type Speech which contains the sound response received from Watson.
 
-### 2.4 Tone Analyzer – Analyze Tone
+## 5 Tone Analyzer – Analyze Tone{#ToneAnalyzer}
 
 This connector uses the [IBM Watson Tone Analyzer](https://console.bluemix.net/docs/services/tone-analyzer/index.html) to detect emotional and language tones in written text.
 
@@ -209,19 +209,19 @@ This connector uses the [IBM Watson Tone Analyzer](https://console.bluemix.net/d
 
 More information on the APIs for the IBM Watson Analyze Tone service is available here: [IBM Watson Tone Analyzer service – API Reference](https://www.ibm.com/watson/developercloud/tone-analyzer/api/v3/).
 
-#### 2.4.1 Text
+### 5.1 Text
 
 This is a string containing the text to be analyzed. You can submit no more than 128 KB of total input content and no more than 1000 individual sentences. The text is analyzed as being in English.
 
-#### 2.4.2 Username
+### 5.2 Username
 
 This is a string containing the username assigned to the tone analyzer service in your IBM Cloud project.
 
-#### 2.4.3 Password
+### 5.3 Password
 
 This is a string containing the password assigned to the tone analyzer service in your IBM Cloud project.
 
-#### 2.4.4 Variable (ToneAnalyzerResponse)
+### 5.4 Variable (ToneAnalyzerResponse)
 
 This is the name you wish to assign to an object of type ToneAnalyzerResponse which is the response received from Watson. This is associated with the responses from the Tone Analyzer.
 
@@ -245,7 +245,9 @@ You can retrieve two sorts of tone:
 
     From the ToneCategory, you can use the associations in the same way as for the whole document to find the tones in the selected sentence.
 
-### 2.5 Translation – Get Identifiable Languages
+## 6 Language Translator{#LanguageTranslator}
+
+### 6.1 Translation – Get Identifiable Languages
 
 This action is part of the [IBM Watson Language Translator service](https://console.bluemix.net/docs/services/language-translator/index.html) and returns a list of languages which are recognized by the Watson Language Translation Service. Each language is represented by a code and a name. These languages are used as the input to the Translate language action, below.
 
@@ -257,15 +259,15 @@ Note that this is NOT the list of languages which**Translate Language** can tran
 
 More information on the APIs for the IBM Watson Language Translation service is available here: [IBM Watson Language Translator service – API Reference](https://www.ibm.com/watson/developercloud/language-translator/api/v2/).
 
-#### 2.5.1 Username
+#### 6.1.1 Username
 
 This is a string containing the username assigned to the translation service in your IBM Cloud project.
 
-#### 2.5.2 Password
+#### 6.1.2 Password
 
 This is a string containing the password assigned to the translation service in your IBM Cloud project.
 
-#### 2.5.3 Variable (List of Language)
+#### 6.1.3 Variable (List of Language)
 
 This is the name you wish to assign to a list of objects of type Language which is the response received from Watson.
 
@@ -274,7 +276,9 @@ Each language object consists of two attributes:
 * Name – the English name of the language
 * Code – a code representing the language (for example, **en** for English)
 
-### 2.6 Translation – Translate Language
+### 6.2 Translation - Get Language Models
+
+### 6.3 Translation – Translate Language
 
 This action uses the [IBM Watson Language Translator service](https://console.bluemix.net/docs/services/language-translator/index.html) to translate a piece of text from one language to another using the default translation model for that pair of languages.
 
@@ -302,7 +306,7 @@ Additionally, the current version of the IBM Watson Connector Suite supports onl
 
 More information on the APIs for the IBM Watson Language Translation service is available here: [IBM Watson Language Translator service – API Reference](https://www.ibm.com/watson/developercloud/language-translator/api/v2/).
 
-#### 2.6.1 Translation
+#### 6.3.1 Translation
 
 This is a translation object. For a successful translation it must have:
 
@@ -310,15 +314,15 @@ This is a translation object. For a successful translation it must have:
 * an association to a **Language** object representing the source language of the text via the Translation_SourceLanguage association: this must be one of the supported languages for Watson Translate
 * an association to a **Language** object representing the target language of the text via the Translation_TargetLanguage association: this must be one of the supported languages for Watson Translate and be supported by a translation model for translating between the source and target languages
 
-#### 2.6.2 Username
+#### 6.3.2 Username
 
 This is a string containing the username assigned to the translation service in your IBM Cloud project.
 
-#### 2.6.3 Password
+#### 6.3.3 Password
 
 This is a string containing the password assigned to the translation service in your IBM Cloud project.
 
-#### 2.6.4 Variable (Translation)
+#### 6.3.4 Variable (Translation)
 
 This is the name you wish to assign to an object of type Translation which is the response received from Watson.
 
@@ -334,7 +338,9 @@ This object will contain the following attributes:
 * Translation_TargetLanguage – the language you have translated to
 * Translation_SourceLanguage – the language you have translated from
 
-### 2.7 Visual Recognition – Classify Image
+## 7 Visual Recognition{#VisualRecognition}
+
+### 7.1 Visual Recognition – Classify Image
 
 This action passes an image to the [IBM Watson Visual Recognition service](https://console.bluemix.net/docs/services/visual-recognition/index.html) which uses either its default classifiers or custom classifiers to analyze the image and identify the contents.
 
@@ -342,15 +348,15 @@ This action passes an image to the [IBM Watson Visual Recognition service](https
 
 More information on the APIs for the IBM Watson Visual Recognition service is available here: [IBM Watson Visual Recognition service – API Reference](https://www.ibm.com/watson/developercloud/visual-recognition/api/v3/).
 
-#### 2.7.1 Visual Request Object
+#### 7.1.1 Visual Request Object
 
 This is an object of type **VisualRecognitionImage** which contains the image which is to be classified. The image must be in jpg or png format and be less that 10MB.
 
-#### 2.7.2 Apikey
+#### 7.1.2 Apikey
 
 This is a string containing the API key assigned to the Watson vision service in your IBM Cloud project.
 
-#### 2.7.3 Classifiers
+#### 7.1.3 Classifiers
 
 This is a list of the classifiers which Watson should use to classify the image. If you have not created your own classifier, you need to tell Watson to use the default classifier by using a Classifier object containing the following:
 
@@ -358,7 +364,7 @@ This is a list of the classifiers which Watson should use to classify the image.
 * ClassifierId – "default"
 * ClassifierOwner – "IBM" or empty
 
-#### 2.7.4 Variable (List of Classifier)
+#### 7.1.4 Variable (List of Classifier)
 
 This is the name of the list of Classifier objects returned from Watson.
 
@@ -366,7 +372,7 @@ Associated with each of the classifier objects will be zero or more **Classifier
 
 ![](attachments/ibm-watson-connector/visualrecognition-dm.png)
 
-### 2.8 Visual Recognition – Create Classifier
+### 7.2 Visual Recognition – Create Classifier
 
 This action allows you to train a new classifier for the [IBM Watson Visual Recognition service](https://console.bluemix.net/docs/services/visual-recognition/index.html) by uploading zip files containing images.
 
@@ -376,11 +382,11 @@ There should be two files containing zipped examples in jpg or png format with a
 
 Each zip file has a maximum size of 100MB and contains less than 10,000 images. More information on the APIs for the IBM Watson Visual Recognition service is available here: [IBM Watson Visual Recognition service – API Reference](https://www.ibm.com/watson/developercloud/visual-recognition/api/v3/).
 
-#### 2.8.1 Apikey
+#### 7.2.1 Apikey
 
 This is a string containing the API key assigned to the Watson vision service in your IBM Cloud project.
 
-#### 2.8.2 Classifier
+#### 7.2.2 Classifier
 
 {{% alert type="info" %}}
 The IBM Watson Connector Suite currently supports only one positive and one negative training file.
@@ -395,11 +401,13 @@ The **Name** attribute of the Classifier is the name of the classifier which wil
 
 ![](attachments/ibm-watson-connector/visualrecognition-dm.png)
 
-#### 2.8.3 Variable (String)
+#### 7.2.3 Variable (String)
 
 This is the name of a string containing the ID of the new classifier.
 
-### 2.9 Visual Recognition – Detect Faces
+### 7.3 Visual Recognition – Delete Classifier
+
+### 7.4 Visual Recognition – Detect Faces
 
 This action is part of the the [IBM Watson Visual Recognition service](https://console.bluemix.net/docs/services/visual-recognition/index.html) and allows you to analyze and get data about faces in images. Responses can include estimated age and gender, and the service can also identify celebrities.
 
@@ -407,15 +415,15 @@ This action is part of the the [IBM Watson Visual Recognition service](https://c
 
 More information on the APIs for the IBM Watson Visual Recognition service is available here: [IBM Watson Visual Recognition service – API Reference](https://www.ibm.com/watson/developercloud/visual-recognition/api/v3/).
 
-#### 2.9.1 Apikey
+#### 7.4.1 Apikey
 
 This is a string containing the API key assigned to the Watson vision service in your IBM Cloud project.
 
-#### 2.9.2 Image
+#### 7.4.2 Image
 
 This is an object of type, or a specialization of, System.Image containing the image in which faces should be detected.
 
-#### 2.9.3 Variable (List of Face)
+#### 7.4.3 Variable (List of Face)
 
 This is the name you wish to assign to a list of objects of type Face. Each object contains information about a face which has been detected in the image.
 
@@ -438,14 +446,16 @@ Each face object will contain the following:
 If there are more than ten faces in an image, these will all be detected but the age and gender confidence may return scores of zero.
 {{% /alert %}}
 
-## 3 Watson Service Configuration<a name="WatSerCon"></a>
+### 7.5 Visual Recognition – Get Classifiers
+
+## 8 Watson Service Configuration<a name="WatSerCon"></a>
 
 Functionality to store the API keys and username/password combinations which are required to access IBM Watson services is built into the Watson Connector Suite example app. An IBM Watson service will require either an API key, or a username/password combination, depending on how the service has been configured.
 
 If the app is running on IBM Cloud, then it can use VCAP to obtain the credentials for the configured services. Support for this functionality is in the project module **WatsonServices** in the folder **USE_ME**.
 If the app is not running on IBM Cloud (for example if you are testing it locally or on a Mendix cloud), then the credentials will have to be supplied manually.
 
-### 3.1 Getting Credentials Through VCAP
+### 8.1 Getting Credentials Through VCAP
 
 An example of how to check for the VCAP services and import the configured credentials is in the WatsonServices microflow **USE_ME > OnStartUpWatsonAppOnIBMCloud**. This is configured to run automatically in **Project Settings > Runtime > After startup**.
 
@@ -465,7 +475,7 @@ The microflow does the following:
 
 The credentials are now stored in the database and can be used with IBM Watson Services actions.
 
-### 3.2 Entering Credentials Manually
+### 8.2 Entering Credentials Manually
 
 If VCAP is not available, then the WatsonServiceConfig objects will have to be entered manually. This can be done in a number of ways. Two examples are:
 
@@ -473,7 +483,7 @@ If VCAP is not available, then the WatsonServiceConfig objects will have to be e
 
 2. Put the credentials in constants and run an **After start** microflow to populate the database when the application is run for the first time
 
-### 3.3 Using the Credentials
+### 8.3 Using the Credentials
 
 The microflow **GetWatsonServiceConfiguration** takes a parameter of WatsonServiceConfigType and checks to see that a configuration of that type has been set up as a **WatsonServiceConfig** object. It returns the object if it exists. If the object does not exist, it posts a message to the log and returns an empty object.
 
@@ -486,7 +496,7 @@ The WatsonServiceConfig entity has the following attributes:
 * Apikey – a string containing an API key used to access an IBM Watson service
 * Label – a label identifying the service for which these credentials are stored. It is an enumeration of WatsonServiceConfigType
 
-## 4 Not Yet Supported
+## 9 Not Yet Supported
 
 The IBM Watson Connector Suite does not yet have actions for all the APIs of the services which it does support. For example the APIs which allow you to build a conversation without using the IBM Watson Conversation Workspaces Tool.
 
@@ -510,7 +520,7 @@ In addition, the following Watson services are not yet supported at all by the I
 
     With [IBM Watson Natural Language Understanding](https://www.ibm.com/watson/services/natural-language-understanding/) you can analyze semantic features of text input, including categories, concepts, emotion, entities, keywords, metadata, relations, semantic roles, and sentiment. You can use the [IBM Watson Knowledge Studio](https://www.ibm.com/watson/services/knowledge-studio) to create custom models which address your unique business needs.
 
-## 5 Related Content
+## 10 Related Content
 
 * [Getting started with Watson and IBM Cloud](https://console.bluemix.net/docs/services/watson/index.html)
 * [How to Consume a REST Service](/howto/integration/consume-a-rest-service)

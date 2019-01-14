@@ -41,7 +41,8 @@ Multiplicity can be of the following types:
 
 Multiplicity shows the owner and the direction of association if the association is of the one-to-many or many-to-many type. In the domain model it is displayed as an arrow pointing the direction. The owner is located at the start of an arrow.
 
-![](attachments/domain-models-association-properties-wm/association-domainmodel.png)
+{{% image_container width="400" %}}![](attachments/domain-models-association-properties-wm/association-domainmodel.png)
+{{% /image_container %}}
 
 You can swap the direction of the multiplicity if its type is one-to-many or many-to-many. 
 

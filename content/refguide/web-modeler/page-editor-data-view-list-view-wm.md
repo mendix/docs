@@ -12,7 +12,8 @@ The data view is a starting point for showing the contents of one object on a pa
 
 For example, if you want to fill out the information on each customer, data view is the best way to do that.
 
-![](attachments/page-editor-data-view-list-view-wm/wm-data-view-example.png)
+{{% image_container width="400" %}}![](attachments/page-editor-data-view-list-view-wm/wm-data-view-example.png)
+{{% /image_container %}}
 
 In more complex templates, a data view can contain other data views for related objects, for example, showing customer details and showing customer payment status, if these are modeled as two different entities. 
 
@@ -24,7 +25,8 @@ Data view consists of the following properties:
 * [General](#general-section-data-view)
 * [Design](#design-section-data-view)
 
-![](attachments/page-editor-data-view-list-view-wm/wm-data-view-properties.png)
+{{% image_container width="400" %}}![](attachments/page-editor-data-view-list-view-wm/wm-data-view-properties.png)
+{{% /image_container %}}
 
 ### 2.1 Data Source {#data-source-data-view} 
 
@@ -55,7 +57,8 @@ List view consists of the following properties:
 * [General](#general-section-list-view)
 * [Design](#design-section-list-view)
 
-![](attachments/page-editor-data-view-list-view-wm/wm-list-view-properties.png)
+{{% image_container width="400" %}}![](attachments/page-editor-data-view-list-view-wm/wm-list-view-properties.png)
+{{% /image_container %}}
 
 ### 3.1 Data Source {#data-source-list-view}
 
@@ -81,7 +84,8 @@ In the **General** section, you can select the number of rows to be displayed on
 
 * **Page Size** – the number of rows displayed on the page; after the indicated limit is reached, the **Load more...** button is displayed on the page.
 
-![](attachments/page-editor-data-view-list-view-wm/wm-load-more-list-view.png)
+{{% image_container width="400" %}}![](attachments/page-editor-data-view-list-view-wm/wm-load-more-list-view.png)
+{{% /image_container %}}
 
 * **Read-Only** (enabled by default) – when enabled, all [input widgets](page-editor-widgets-input-elements-wm) (for example, a text area, a check box) in the list view will be in read-only mode
 

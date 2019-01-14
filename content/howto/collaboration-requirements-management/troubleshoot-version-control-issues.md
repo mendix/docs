@@ -1,7 +1,7 @@
 ---
 title: "Troubleshoot Version Control Issues"
 parent: "using-team-server-_-version-control"
-menu_order: 20
+menu_order: 10
 description: "This document presents a list of problems and fixes for version control issues."
 tags: ["version control", "troubleshoot", "modeler"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.

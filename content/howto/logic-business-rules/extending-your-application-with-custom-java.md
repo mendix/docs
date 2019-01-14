@@ -27,19 +27,19 @@ You can use any text editor to create custom Java actions, but we highly recomme
 
 ## 3 Adding Java Actions in the Modeler
 
-1. Right-click the **MyFirstModule** module and select **Add** > **Resources** > **Java action**.
-2. Enter *ReverseCustomerName* for the **Name** of the new Java action and click **OK**:
+1. Right-click the **MyFirstModule** module and select **Add other** > **Resources** > **Java action**.
+2.  Enter *ReverseCustomerName* for the **Name** of the new Java action and click **OK**:
 
-    ![](attachments/18448685/18581052.png)
+	![](attachments/18448685/18581052.png)
 
 3.  In the **Java Action** wizard, click **Add** to add a parameter and do the following:</br>
 
-    1. Enter *inputCustomer* for the **Name** of the new parameter</br>
-    2. Select **Object** as type.</br>
-    3. Click **Select...** for **Entity** and select **MyFirstModule.Customer** as the object type.</br>
-    4. Click **OK**.</br>
+	1. Enter *inputCustomer* for the **Name** of the new parameter</br>
+	2. Select **Object** for the **Type**.</br>
+	3. Click **Select** for **Entity** and select **MyFirstModule.Customer** as the object type.</br>
+	4. Click **OK**.</br>
 
-    ![](attachments/18448685/18581049.png)
+	![](attachments/18448685/18581049.png)
 
 4. Back on the **Java Action** wizard, change the return type of the Java action to **String** and click **OK** to save the Java action:
 

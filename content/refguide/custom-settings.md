@@ -213,7 +213,7 @@ The following settings influence the behavior of the Mendix web client.
 
 ## 10 Proxy Settings
 
-The following settings can allow you to pass by a proxy.
+The following settings allow you to use a proxy.
 
 | Name | Description | Default value |
 | --- | --- | --- |

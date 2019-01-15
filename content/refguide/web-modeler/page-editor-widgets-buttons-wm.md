@@ -52,7 +52,8 @@ For more information on the **Events** section and on click actions, see [Events
 
 **On Click Action** in the **Events** section determines the action of the button. 
 
-![](attachments/page-editor-widgets-buttons-wm/wm-events-section.png)
+{{% image_container width="300" %}}![](attachments/page-editor-widgets-buttons-wm/wm-events-section.png)
+{{% /image_container %}}
 
 You can find the list of default actions and properties that need to be configured in the table below. 
 

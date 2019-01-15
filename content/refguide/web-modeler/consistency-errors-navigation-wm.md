@@ -57,7 +57,8 @@ Let us study an example: in your **Navigation**, you have set **Customer Details
 
 You have the **Customer Details** page with a data view that expects an object *Customer* to be passed to it. In other words, this page needs to get data first to be able to display it. 
 
-![Data View Expects the Customer Object](attachments/consistency-errors-pages-wm/wm-data-view-customer.png)
+{{% image_container width="350" %}}![Data View Expects the Customer Object](attachments/consistency-errors-pages-wm/wm-data-view-customer.png)
+{{% /image_container %}}
 
 However, the home page is the first page to be opened in your app by default, and the **Customer Details** page cannot function as a home page, as it needs to get data first. 
 

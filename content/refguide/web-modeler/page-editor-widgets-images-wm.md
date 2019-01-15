@@ -13,10 +13,10 @@ Image [widgets](page-editor-widgets-wm) are used to show images to the users.
 There are two image widgets in the Web Modeler:
 
 * Image – allows you to show a static (non-changing) image in your app
-* Dynamic image – allows you to show a dynamic image (for example, a relevant profile picture that is different for each customer) in your app
+*  Dynamic image – allows you to show a dynamic image (for example, a relevant profile picture that is different for each customer) in your app
 
-{{% image_container width="350" %}}![](attachments/page-editor-widgets-images-wm/wm-image-widgets.png)
-{{% /image_container %}}
+   {{% image_container width="350" %}}![](attachments/page-editor-widgets-images-wm/wm-image-widgets.png)
+   {{% /image_container %}}
 
 {{% alert type="info" %}}
 

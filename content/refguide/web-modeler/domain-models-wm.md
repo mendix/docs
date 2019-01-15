@@ -182,7 +182,8 @@ To delete the entity, attribute or association, do the following:
 
 2.  Press **Delete** or click the **Delete** button at the bottom of the **Properties** tab.
 
-    ![](attachments/domain-models-wm/wm-deletion.png)
+    {{% image_container width="350" %}}![](attachments/domain-models-wm/wm-deletion.png)
+    {{% /image_container %}}
 
 ## 8 Related Content
 

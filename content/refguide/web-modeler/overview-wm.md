@@ -98,7 +98,8 @@ The menu on the left side of the Web Modeler has a top and a bottom menu.
 
 The top menu provides the following options:
 
-![](attachments/overview-wm/wm-menu-up.png)
+{{% image_container width="350" %}}![](attachments/overview-wm/wm-menu-up.png)
+{{% /image_container %}}
 
 | Top menu item | Shortcut | Description |
 |------|------|------|

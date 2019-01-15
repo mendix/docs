@@ -12,7 +12,7 @@ The page editor allows a user to define the end-user interface of a Mendix appli
 
 To view the **Pages** of your app in the Web Modeler, click the **Pages** icon in the left menu bar of the Web Modeler.
 
-{{% image_container width="350" %}}![](attachments/page-editor-wm/wm-pages-icon.png)
+{{% image_container width="300" %}}![](attachments/page-editor-wm/wm-pages-icon.png)
 {{% /image_container %}}
 
 {{% alert type="warning" %}}
@@ -108,7 +108,8 @@ You can also view the information on Navigation layout by clicking it in the bre
 
 The following options will be displayed in the **Properties** tab:
 
-![](attachments/page-editor-wm/wm-navigation-layout.png)
+{{% image_container width="300" %}}![](attachments/page-editor-wm/wm-navigation-layout.png)
+{{% /image_container %}}
 
 ## 5 Toolbox Tab
 
@@ -168,7 +169,7 @@ You can update widgets in the [App Settings](app-settings-wm).
 
 The **Properties** tab displays the properties of the currently selected element and differs depending on this element. 
 
-{{% image_container width="350" %}}![](attachments/page-editor-wm/wm-properties.png)
+{{% image_container width="300" %}}![](attachments/page-editor-wm/wm-properties.png)
 {{% /image_container %}}
 
 

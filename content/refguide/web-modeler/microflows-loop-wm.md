@@ -55,8 +55,7 @@ To start the use-case, do the following:
 
     a. In the **Toolbox**, select **Loop**, drag and drop it to the microflow. <br />
 
-    {{% image_container width="350" %}}![Loop is Added](attachments/microflows-loop-wm/wm-loop-added.png)
-    {{% /image_container %}}<br />
+    ![Loop is Added](attachments/microflows-loop-wm/wm-loop-added.png)<br />
 
     b. In **Properties**, set **OrderList** as **Loop Over** (**Loop Variable Name** is set automatically). We have selected the entity, and will loop over the list of its objects. <br />
 

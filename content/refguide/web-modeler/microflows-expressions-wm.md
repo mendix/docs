@@ -32,7 +32,8 @@ There are two ways of writing an expression:
 
 If some errors appear in the expression, hints with an explanation will be displayed. 
 
-![](attachments/microflows-expressions-wm/wm-expression-error.png)
+{{% image_container width="350" %}}![](attachments/microflows-expressions-wm/wm-expression-error.png)
+{{% /image_container %}}
 
 ### 2.1 Writing the Expression Using Suggestions
 

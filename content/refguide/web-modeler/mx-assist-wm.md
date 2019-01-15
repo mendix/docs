@@ -13,9 +13,7 @@ Mendix Assist was built using Machine Learning analysis of over twelve million a
 
 ## 2 Mendix Assist Overview
 
-Mendix Assist is enabled by default and is displayed as a blue dot in the flow of a [microflow](microflows-wm). A bow-tie appears on the dot when you hover over it.  
-
-
+Mendix Assist is enabled by default and is displayed as a blue dot in the flow of a [microflow](microflows-wm). A bow-tie appears on the dot when you hover over it. 
 
 ![](attachments/mx-assist-wm/wm-mendix-assist-icon.png)
 
@@ -27,9 +25,8 @@ It is possible to add activities in a regular way without using Mendix Assist.
 
 Click the bow-tie to see Mendix Assist recommendations. 
 
-![](attachments/mx-assist-wm/wm-mx-assist-recommendations.png)
-
-
+{{% image_container width="350" %}}![](attachments/mx-assist-wm/wm-mx-assist-recommendations.png)
+{{% /image_container %}}
 
 Mendix Assist lists the top 5 recommendations from the most probable to less probable ones for the particular microflow. Click the suggestion to proceed with it and insert it into a microflow. For more information, see section [4 Adding Activities and Elements with Mendix Assist](#add-activities).
 
@@ -65,7 +62,8 @@ Settings available for Mendix Assist are described in the table below:
 
 You can also enable/disable Mendix Assist by clicking the information icon in the top bar of the Web Modeler. 
 
-![](attachments/mx-assist-wm/wm-info-icon-setting.png)
+{{% image_container width="350" %}}![](attachments/mx-assist-wm/wm-info-icon-setting.png)
+{{% /image_container %}}
 
 {{% alert type="info" %}}
 If you disable Mendix Assist, the information dialog will be disabled as well. Once you re-enable Mendix Assist, the information dialog is also re-enabled. 
@@ -85,7 +83,8 @@ To add an activity (such as **Change Object**, **Show Page**, **Create Object**,
 
 3.  Click the selected activity to add it to the flow.
 
-    ![](attachments/mx-assist-wm/wm-mx-assist-list.png)
+    {{% image_container width="350" %}}![](attachments/mx-assist-wm/wm-mx-assist-list.png)
+    {{% /image_container %}}
 
 The activity is added to the flow.
 
@@ -93,7 +92,8 @@ The activity is added to the flow.
 
 Adding a check means that you will add an exclusive split with Boolean attribute type: your flow will be split into one flow labeled *true* and another one labeled *false*. For more information, see [Exclusive Split in the Web Modeler](microflows-exclusive-split-wm).   
 
-![](attachments/mx-assist-wm/wm-check-added.png)
+{{% image_container width="350" %}}![](attachments/mx-assist-wm/wm-check-added.png)
+{{% /image_container %}}
 
 {{% alert type="info" %}}
 
@@ -108,7 +108,8 @@ To add the check, do the following:
 
 2.  Find **Add a check** in the suggestions.
 
-    ![](attachments/mx-assist-wm/wm-adding-check.png)
+    {{% image_container width="350" %}}![](attachments/mx-assist-wm/wm-adding-check.png)
+    {{% /image_container %}}
 
 3. The number of options for the check will be opened, select the check that you want to add and click it. 
 
@@ -130,7 +131,8 @@ To add the decision, do the following:
 
 2. Find **Add a decision** in the suggestions and select it.
 
-   ![](attachments/mx-assist-wm/wm-adding-decision.png)
+    {{% image_container width="350" %}}![](attachments/mx-assist-wm/wm-adding-decision.png)
+    {{% /image_container %}}
 
 The exclusive split is added to the microflow.
 

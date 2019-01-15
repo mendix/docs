@@ -9,7 +9,8 @@ tags: ["web modeler", "page editor", "pages", "widgets"]
 
 Widgets are single user-interface elements that can be configured: for example, a drop-down menu or different kinds of buttons.
 
-![](attachments/page-editor-widgets-wm/wm-widgets-examples.png)
+{{% image_container width="300" %}}![](attachments/page-editor-widgets-wm/wm-widgets-examples.png)
+{{% /image_container %}}
 
 Widgets in the Web Modeler are grouped by category and can be classified by their origin.
 
@@ -29,7 +30,8 @@ To view widgets in the Web Modeler, do the following:
 
 Widgets of the Web Modeler are divided into categories that you can see when you open the **Widgets** tab.
 
-![](attachments/page-editor-widgets-wm/wm-widgets-categories.png)
+{{% image_container width="350" %}}![](attachments/page-editor-widgets-wm/wm-widgets-categories.png)
+{{% /image_container %}}
 
 Widget categories are described in the table below:
 
@@ -69,7 +71,8 @@ To add an App Store widget, do the following:
 
     a. Find a category with the **View App Store widgets** option and click it.  <br />
 
-    ![](attachments/page-editor-widgets-wm/wm-view-app-store-widgets.png)<br />
+    {{% image_container width="300" %}}![](attachments/page-editor-widgets-wm/wm-view-app-store-widgets.png)
+    {{% /image_container %}}<br />
 
     b.  Start typing the name of the category or of a specific widget in the **Search** field. <br />
 

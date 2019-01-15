@@ -10,7 +10,8 @@ tags: ["web modeler", "page editor", "button", "widgets"]
 
 Button [widgets](page-editor-widgets-wm) allow the user to perform various actions, for example, opening a page or executing a microflow. 
 
-![](attachments/page-editor-widgets-buttons-wm/wm-button-widgets.png)
+{{% image_container width="300" %}}![](attachments/page-editor-widgets-buttons-wm/wm-button-widgets.png)
+{{% /image_container %}}
 
 The following **Buttons** are available in the Web Modeler as default widgets:
 
@@ -34,7 +35,8 @@ Apart from the default button widgets, you can also [download widgets from the M
 
 Properties in the **Events** section are partially preset for buttons listed above. They depend on the action a button performs. For example, if the button is supposed to open a page, the **On Click Action** in the **Events** section will be **Page**. However, you need to specify what page exactly the button will open. 
 
-![](attachments/page-editor-widgets-buttons-wm/wm-events-section-page-button.png)
+{{% image_container width="300" %}}![](attachments/page-editor-widgets-buttons-wm/wm-events-section-page-button.png)
+{{% /image_container %}}
 
 For more information, see section [2.1 Default Properties in the Events Section](#default-properties). 
 

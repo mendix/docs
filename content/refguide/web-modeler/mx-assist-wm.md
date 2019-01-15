@@ -62,7 +62,7 @@ Settings available for Mendix Assist are described in the table below:
 
 You can also enable/disable Mendix Assist by clicking the information icon in the top bar of the Web Modeler. 
 
-{{% image_container width="350" %}}![](attachments/mx-assist-wm/wm-info-icon-setting.png)
+{{% image_container width="300" %}}![](attachments/mx-assist-wm/wm-info-icon-setting.png)
 {{% /image_container %}}
 
 {{% alert type="info" %}}
@@ -92,7 +92,7 @@ The activity is added to the flow.
 
 Adding a check means that you will add an exclusive split with Boolean attribute type: your flow will be split into one flow labeled *true* and another one labeled *false*. For more information, see [Exclusive Split in the Web Modeler](microflows-exclusive-split-wm).   
 
-{{% image_container width="350" %}}![](attachments/mx-assist-wm/wm-check-added.png)
+{{% image_container width="300" %}}![](attachments/mx-assist-wm/wm-check-added.png)
 {{% /image_container %}}
 
 {{% alert type="info" %}}

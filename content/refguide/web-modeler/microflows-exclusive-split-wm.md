@@ -8,9 +8,7 @@ tags: ["web modeler", "microflow", "exclusive split"]
 
 ## 1 Introduction 
 
-An exclusive split makes a decision based on a condition and follows one and only one of the outgoing flows. For example, you want to show different order forms for the customers with different grades, or you want to prevent a blocked customer make orders.
-
-![](attachments/microflows-exclusive-split-wm/wm-exclusive-split.png)
+An exclusive split makes a decision based on a condition and follows one and only one of the outgoing flows. For example, you need to use an exclusive split to show different order forms for the customers with different grades, or to prevent a blocked customer from making orders.
 
 ## 2 Condition
 
@@ -44,7 +42,7 @@ You can also configure the condition by writing the expression. For more informa
 
 The number of available cases depends on the selected **Condition**. 
 
-For the boolean type of the parameter or attribute, two values are possible: true and false.  
+For the Boolean type of the parameter or attribute, two values are possible: true and false.  
 
 ![](attachments/microflows-exclusive-split-wm/wm-exclusive-split-boolean.png)
 
@@ -54,7 +52,7 @@ The number of cases available for the enumeration type depends on the correspond
 
 ## 4 Caption
 
-The caption describes to the human user what happens in this element.
+The caption describes what happens in this element.
 
 ## 5 Related Content
 

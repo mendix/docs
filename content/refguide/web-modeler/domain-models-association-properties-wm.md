@@ -16,9 +16,10 @@ In the Web Modeler, associations have the following properties:
 
 * [Multiplicity](#multiplicity)
 
-* [Delete behavior](#delete-behavior)
+*  [Delete behavior](#delete-behavior)
 
-  ![](attachments/domain-models-association-properties-wm/association-properties.png)
+   {{% image_container width="350" %}}![](attachments/domain-models-association-properties-wm/association-properties.png)
+   {{% /image_container %}}
 
 In relation to the module the associations can be of two types:
 

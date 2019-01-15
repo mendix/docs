@@ -12,7 +12,8 @@ tags: ["web modeler", "page editor", "input widgets", "widgets"]
 
 **Input Elements** can only function inside a data container (a list view or a data view). You can either place widget in an existing data container; or click **Wrap with a new data view** in **Properties** to create a data view automatically and place an input element inside it. 
 
-![](attachments/page-editor-widgets-input-elements-wm/wm-wrap-in-data-view.png)
+{{% image_container width="350" %}}![](attachments/page-editor-widgets-input-elements-wm/wm-wrap-in-data-view.png)
+{{% /image_container %}}
 
 ## 2 Input Elements Overview
 

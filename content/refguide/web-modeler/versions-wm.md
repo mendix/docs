@@ -15,7 +15,8 @@ The **Mendix Desktop Modeler** version is the version of the app project you are
 
 The **Web Modeler version** and the **Mendix version** (**Mendix Desktop Modeler version**) can be viewed by clicking the info icon **About** in the top-right corner of the Web Modeler.
 
-![](attachments/versions-wm/wm-about-dialog.png)
+{{% image_container width="350" %}}![](attachments/versions-wm/wm-about-dialog.png)
+{{% /image_container %}}
 
 ## 2  Upgrading to the Next Version
 

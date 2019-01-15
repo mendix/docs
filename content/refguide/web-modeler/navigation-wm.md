@@ -14,7 +14,7 @@ A navigation document shows a configured menu of your app in a form of a tree. Y
 
 Open the **Navigation Document** by clicking the corresponding icon in the left menu bar.
 
-{{% image_container width="350" %}}![](attachments/navigation-wm/wm-navigation-icon.png)
+{{% image_container width="300" %}}![](attachments/navigation-wm/wm-navigation-icon.png)
 {{% /image_container %}}
 
 {{% alert type="info" %}}
@@ -30,7 +30,8 @@ Properties of the menu items consists of the following sections:
 * [Events](#events-section-navigation) 
 * [General](#general-section-navigation) 
 
-![](attachments/navigation-wm/wm-navigation-properties.png)
+{{% image_container width="300" %}}![](attachments/navigation-wm/wm-navigation-properties.png)
+{{% /image_container %}}
 
 ### 2.1 Events Section {#events-section-navigation}
 

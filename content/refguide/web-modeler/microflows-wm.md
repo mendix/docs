@@ -26,7 +26,7 @@ Examples of using microflows can be the following:
 
 To view the microflows of your app in the Web Modeler, click the **Microflows** icon in the left menu bar:
 
-{{% image_container width="350" %}}![Microflow Icon](attachments/microflows-wm/wm-micflows-icon.png)
+{{% image_container width="300" %}}![Microflow Icon](attachments/microflows-wm/wm-micflows-icon.png)
 {{% /image_container %}}
 
 ## 2 Concepts and Definitions 
@@ -57,8 +57,7 @@ To create a new microflow and to start building a microflow, do the following:
 
 3.  Fill out the name of the microflow in the pop-up dialog and click **Create**.
 
-    {{% image_container width="350" %}}![Create New Microflow Dialog](attachments/microflows-wm/wm-new-microflow-dialog.png)
-    {{% /image_container %}}
+    ![Create New Microflow Dialog](attachments/microflows-wm/wm-new-microflow-dialog.png)    
 
 The new microflow is created, you can now start adding logic to it by adding events or activities. 
 
@@ -81,7 +80,7 @@ In the **Toolbox** tab, you can see that the microflow contains three sections w
 
 ### 5.1 General {#microflow-general-section}
 
-{{% image_container width="350" %}}![Microflow General Properties](attachments/microflows-wm/wm-microflows-general-properties.png)
+{{% image_container width="300" %}}![Microflow General Properties](attachments/microflows-wm/wm-microflows-general-properties.png)
 {{% /image_container %}}
 
 Elements available in the **General** section are described in the table below.
@@ -99,7 +98,7 @@ Elements available in the **General** section are described in the table below.
 
 ### 5.2 Object Activities {#microflow-object-activities}
 
-{{% image_container width="400" %}}![Microflow Object Activities](attachments/microflows-wm/wm-object-activities.png)
+{{% image_container width="350" %}}![Microflow Object Activities](attachments/microflows-wm/wm-object-activities.png)
 {{% /image_container %}}
 
 The **Object Activities** are described in the table below.

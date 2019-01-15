@@ -22,7 +22,7 @@ There are three layout widgets:
 
 The **Layout Grid** is a widget that helps you to configure a page and make it responsive immediately. This means that a layout grid has a built-in behavior to show how a page will look like on different devices. Switch **Device** modes in the top bar to see how a page will be displayed on a phone, tablet or desktop.
 
-{{% image_container width="400" %}}![Device Modes](attachments/page-editor-widgets-layouts-wm/wm-device-modes.png)
+{{% image_container width="350" %}}![Device Modes](attachments/page-editor-widgets-layouts-wm/wm-device-modes.png)
 {{% /image_container %}}
 
 Layout grid contains [columns and rows](#columns-and-rows). 
@@ -50,7 +50,8 @@ Layout grid properties consist of the following sections:
 
 The **Expand** section > **Add Row** allows you to add a row above or below the selected one to create more space to place widgets in. 
 
-![Expand Section](attachments/page-editor-widgets-layouts-wm/wm-layout-grid-expand-row.png)
+{{% image_container width="300" %}}![Expand Section](attachments/page-editor-widgets-layouts-wm/wm-layout-grid-expand-row.png)
+{{% /image_container %}}
 
 To add a row, select a row in the layout grid and click one of the buttons in **Add Row**. A row identical to the selected one will be inserted.
 
@@ -139,11 +140,13 @@ In the **General** section, you can configure the following properties:
 
 *  **Tabs** – use radio buttons to switch from one tab to another; click the tab and drag it to change the order of tabs; click the **Edit** icon to open the tab properties and configure it (for more information, see section [5.3 Tab Properties](#tab-properties))
 
-	![](attachments/page-editor-widgets-layouts-wm/wm-tab-container-tabs-property.png)
+	{{% image_container width="300" %}}![](attachments/page-editor-widgets-layouts-wm/wm-tab-container-tabs-property.png)
+	{{% /image_container %}}
 
 *  **Add New Tab** – adds a new tab to your tab container; tab properties will open automatically (for more information, see section [5.3 Tab Properties](#tab-properties))
 
-	![](attachments/page-editor-widgets-layouts-wm/wm-add-new-tab.png)
+	{{% image_container width="300" %}}![](attachments/page-editor-widgets-layouts-wm/wm-add-new-tab.png)
+	{{% /image_container %}}
 
 ### 5.2 Tab Container Design Properties
 
@@ -157,7 +160,8 @@ Each tab has the following properties:
 
 *  **Default Tab** – defines which tab is active when the page is opened. If no tab is set as the default one, the first tab page will be shown. By default, none of the tabs are set as a default tab.
 
-	![](attachments/page-editor-widgets-layouts-wm/wm-tab-properties.png)
+	{{% image_container width="300" %}}![](attachments/page-editor-widgets-layouts-wm/wm-tab-properties.png)
+	{{% /image_container %}}
 
 ## 6 Related Content
 

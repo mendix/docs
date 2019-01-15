@@ -30,7 +30,8 @@ The table below describes the most common errors you can come across when config
 
 Not configuring a data source for a [data view](page-editor-data-view-list-view-wm#data-view-properties) in a proper way results in consistency errors. For example, you selected a list widget as the data source, but you have not selected the specific list you would like the data view to listen to.
 
-![Data View Properties Not Configured](attachments/consistency-errors-pages-wm/wm-data-view-error.png)
+{{% image_container width="350" %}}![Data View Properties Not Configured](attachments/consistency-errors-pages-wm/wm-data-view-error.png)
+{{% /image_container %}}
 
 The table below describes the most common errors you can come across when configuring a data view,  causes of these errors, and ways to fix them. 
 
@@ -61,7 +62,8 @@ Let us study an example: the **Customers** page contains a list view with a list
 
 However, the **Customer Details** page has a data view that expects an object *Customer* to be passed to it. In other words, this page needs to get data first to be able to display it. 
 
-![Data View Expects the Customer Object](attachments/consistency-errors-pages-wm/wm-data-view-customer.png)
+{{% image_container width="350" %}}![Data View Expects the Customer Object](attachments/consistency-errors-pages-wm/wm-data-view-customer.png)
+{{% /image_container %}}
 
 As this object is not passed to it from the **Customers** page, you get a consistency error.
 
@@ -80,7 +82,8 @@ If you want the **Customer Details** page to open the details of a specific cust
 
 2.  Drag the **Details** button inside the list view.
 
-    ![List View Example](attachments/consistency-errors-pages-wm/wm-list-view-content.png)
+    {{% image_container width="350" %}}![List View Example](attachments/consistency-errors-pages-wm/wm-list-view-content.png)
+    {{% /image_container %}}
 
 
 Now the button gets the object of type *Customer* from the list view on the **Customers** page, and it will be passed to the **Customer Details** page. As a result, the details of a particular customer is displayed on the **Customer Details** page. 
@@ -109,7 +112,8 @@ If a widget opens a page and this widget is inside a data container of entity X,
 
 Let us study an example: you have a **New** button on the **Engineers** page that opens the **Tasks** page. 
 
-![A Button on Engineers Page](attachments/consistency-errors-pages-wm/wm-engineers-page.png)
+{{% image_container width="350" %}}![A Button on Engineers Page](attachments/consistency-errors-pages-wm/wm-engineers-page.png)
+{{% /image_container %}}
 
 The button is placed inside a list view; the list view's data source is set to entity *Engineer* in **Properties** > **Data Source**.
 
@@ -117,7 +121,8 @@ The Tasks page has a data view on it, but the data view's data source is set to 
 
 This means that data view expects the object of type *SmartTask* passed to it, but the **Engineers** page is passing the object of type *Engineer*. As a result you get a consistency error.
 
-![List View on the Tasks Page](attachments/consistency-errors-pages-wm/wm-tasks-page-list-view.png)
+{{% image_container width="350" %}}![List View on the Tasks Page](attachments/consistency-errors-pages-wm/wm-tasks-page-list-view.png)
+{{% /image_container %}}
 
 To fix this error you can either place a button within a list view that will pass the correct type of data to the page (place the button inside the list view and set its data source to entity *SmartTask*), or change the data source of the data view on the **Tasks** page to entity *Engineer*. 
 
@@ -136,7 +141,8 @@ The most common consistency errors for [static image widgets](page-editor-widget
 
 [Dynamic images](page-editor-widgets-images-wm) need to be placed inside a data container (a data view or a list view) and an entity should be selected for them. 
 
-![Dynamic Image Properties](attachments/consistency-errors-pages-wm/wm-dynamic-image-properties.png)
+{{% image_container width="350" %}}![Dynamic Image Properties](attachments/consistency-errors-pages-wm/wm-dynamic-image-properties.png)
+{{% /image_container %}}
 
 Errors for static and dynamic images are described in the table below. 
 

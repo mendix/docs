@@ -11,7 +11,8 @@ The **Events** section is a section in the **Properties** tab that is common for
 
 In the **Events** section, you can set the **On Click Action** for widgets and specify what action will be performed when users click the widget. For example, you can specify that when a user clicks a profile image, the page with the user's personal account will open. 
 
-![](attachments/page-editor-widgets-events-section-wm/wm-events-section.png)
+{{% image_container width="300" %}}![](attachments/page-editor-widgets-events-section-wm/wm-events-section.png)
+{{% /image_container %}}
 
 ## 2 On Click Action {#on-click-action}  
 
@@ -51,7 +52,8 @@ When you set the **On Click Action** to **Create Object**, several properties ar
 
 When you set the **On Click Action** to **Open Link**, several properties are available. 
 
-![](attachments/page-editor-widgets-events-section-wm/wm-open-link-action.png)
+{{% image_container width="300" %}}![](attachments/page-editor-widgets-events-section-wm/wm-open-link-action.png)
+{{% /image_container %}}
 
 See the description in the table below:
 

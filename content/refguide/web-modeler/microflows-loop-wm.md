@@ -23,7 +23,8 @@ Loop properties consists of the **Data Source** section and are described below:
 * **Loop Over** – a variable that is a list of items you will loop through
 * **Loop Variable Name** – refers to the name of the list item that is currently being worked on
 
-![](attachments/microflows-loop-wm/wm-loop-properties.png)
+{{% image_container width="350" %}}![Data Source Properties of a Loop](attachments/microflows-loop-wm/wm-loop-properties.png)
+{{% /image_container %}}
 
 ## 3 Loop Example {#loop-example}
 
@@ -43,41 +44,44 @@ To start the use-case, do the following:
 
 2. First of all, we need to get the list of orders we will loop over. Do the following: <br />
 
-   a. In the **Toolbox**, select **Retrieve**, drag and drop it to the microflow. <br />
+    a. In the **Toolbox**, select **Retrieve**, drag and drop it to the microflow. <br />
 
-   b. In **Properties** > the **Data Source** section, select **From Database**, and set *Order* as an entity for this activity. <br />
+    b. In **Properties** > the **Data Source** section, select **From Database**, and set *Order* as an entity for this activity. <br />
 
-   ![Retrieve Object Properties](attachments/microflows-loop-wm/wm-retrieve-properties.png)
+    {{% image_container width="350" %}}![Retrieve Object Properties](attachments/microflows-loop-wm/wm-retrieve-properties.png)
+    {{% /image_container %}}
 
 3. As we have retrieved the list of orders we can work on, we will create a loop and logic for it. Do the following: <br />
 
-   a. In the **Toolbox**, select **Loop**, drag and drop it to the microflow. <br />
+    a. In the **Toolbox**, select **Loop**, drag and drop it to the microflow. <br />
 
-   ![Loop is Added](attachments/microflows-loop-wm/wm-loop-added.png)<br />
+    {{% image_container width="350" %}}![Loop is Added](attachments/microflows-loop-wm/wm-loop-added.png)
+    {{% /image_container %}}<br />
 
-   b. In **Properties**, set **OrderList** as **Loop Over** (**Loop Variable Name** is set automatically). We have selected the entity, and will loop over the list of its objects. <br />
+    b. In **Properties**, set **OrderList** as **Loop Over** (**Loop Variable Name** is set automatically). We have selected the entity, and will loop over the list of its objects. <br />
 
-   ![Loop Properties in an Example](attachments/microflows-loop-wm/wm-loop-properties-in-example.png)
+    {{% image_container width="350" %}}![Loop Properties in an Example](attachments/microflows-loop-wm/wm-loop-properties-in-example.png)
+     {{% /image_container %}}
 
 4. Now we can add the activity that will change the status of each order to *Processed*. This means that the activities you add inside the loop will be performed on each object (each order). Do the following:<br />
 
-   a. In the **Toolbox**, select **Change Object**, drag and drop it inside the loop .<br />
+    a. In the **Toolbox**, select **Change Object**, drag and drop it inside the loop .<br />
 
-   b. In **Properties** > the **Data Source** section for the **Change Object** activity, set **Variable** to **Order**.<br/>
+    b. In **Properties** > the **Data Source** section for the **Change Object** activity, set **Variable** to **Order**.<br/>
 
-   c. When the **Change Members** option appears, click **Add New Value**.<br />
+    c. When the **Change Members** option appears, click **Add New Value**.<br />
 
-   ![Change Object Properties in Loop Example](attachments/microflows-loop-wm/wm-change-object-properties.png)
+    ![Change Object Properties in Loop Example](attachments/microflows-loop-wm/wm-change-object-properties.png)
 
 5. In the **Change value** dialogue window,  do the following:<br />
 
-   a. Set **Select an Attribute or Association** to **Processed (Boolean)**.<br />
+    a. Set **Select an Attribute or Association** to **Processed (Boolean)**.<br />
 
-   b. In the **Expressions** tab, set the **New value** of this attribute by typing in *true*. <br />
+    b. In the **Expressions** tab, set the **New value** of this attribute by typing in *true*. <br />
 
-   ![Example of Change Value Dialogue Window](attachments/microflows-loop-wm/wm-change-value-dialogue-example.png)
+    ![Example of Change Value Dialogue Window](attachments/microflows-loop-wm/wm-change-value-dialogue-example.png)
 
-   c. Click **Add** to save the changes. 
+    c. Click **Add** to save the changes. 
 
 Check out the video with the process of configuring the example above:
 

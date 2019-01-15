@@ -168,7 +168,7 @@ You can update widgets in the [App Settings](app-settings-wm).
 
 The **Properties** tab displays the properties of the currently selected element and differs depending on this element. 
 
-{{% image_container width="400" %}}![](attachments/page-editor-wm/wm-properties.png)
+{{% image_container width="350" %}}![](attachments/page-editor-wm/wm-properties.png)
 {{% /image_container %}}
 
 

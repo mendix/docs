@@ -14,7 +14,8 @@ A navigation document shows a configured menu of your app in a form of a tree. Y
 
 Open the **Navigation Document** by clicking the corresponding icon in the left menu bar.
 
-![](attachments/navigation-wm/wm-navigation-icon.png)
+{{% image_container width="350" %}}![](attachments/navigation-wm/wm-navigation-icon.png)
+{{% /image_container %}}
 
 {{% alert type="info" %}}
 

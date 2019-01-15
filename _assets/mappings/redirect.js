@@ -383,25 +383,6 @@ module.exports = {
       to: "/developerportal/deploy/integrate-with-mendix-sso"
     },
 	/****************************************************
-     * For Support
-     ****************************************************/
-	{
-      from: "/howtogeneral/support/how-to-submit-a-request-with-mendix-support",
-      to: "/developerportal/support/submit-support-request"
-    },
-	{
-      from: "/developerportal/support/export-a-project-package",
-      to: "/refguide/export-project-package-dialog"
-    },
-	{
-      from: "/developerportal/support/troubleshoot-version-control-issues",
-      to: "/howto/collaboration-requirements-management/troubleshoot-version-control-issues"
-    },
-	{
-      from: "/howtogeneral/support/Mendix%20New%20App-node%20Request%20Template.xlsm",
-      to: "/developerportal/support/new-app-node-request-template"
-    },
-	/****************************************************
      * APM
      ****************************************************/
     // {

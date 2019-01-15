@@ -35,7 +35,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 	3. Click **Select** for **Entity** and select **MyFirstModule.Assets** as the object type.</br>
 	4. Click **OK**.</br>
 
-	{{% image_container width="400" %}}![](attachments/extend-custom-java/add.png)
+	{{% image_container width="500" %}}![](attachments/extend-custom-java/add.png)
 	{{% /image_container %}}
 
 4. Back on the **Java Action** wizard, change the **Return type** of the Java action to **String** and click **OK** to save the Java action:
@@ -100,32 +100,34 @@ return new StringBuilder(assetsAssetName).reverse().toString();
 5. Enter *Asset_ReverseName* for the **Name** of the new microflow and click **OK**.
 6.  Right-click the **Asset reverse name** button you just created and select **Go to on clock microflow** to open the new microflow, which should look like this:
 
-	{{% image_container width="400" %}}![](attachments/extend-custom-java/microflow1.png)
+	{{% image_container width="500" %}}![](attachments/extend-custom-java/microflow1.png)
 	{{% /image_container %}}
 
 7.  Drag the **ReverseCustomerName** Java action from the **Project Explorer** onto the line between the green start event and red end event. This generates a Java action activity:
 
-	{{% image_container width="400" %}}![](attachments/extend-custom-java/microflow2.png)
+	{{% image_container width="500" %}}![](attachments/extend-custom-java/microflow2.png)
 	{{% /image_container %}}
 
 8.  Double-click the generated activity to open the **Call Java Action** properties editor, and then click **Edit** for the first input to open the argument editor:
 
-	![](attachments/extend-custom-java/call1.png)
+	{{% image_container width="500" %}}![](attachments/extend-custom-java/call1.png)
+	{{% /image_container %}}
 
 9. Press and hold the <kbd>Ctrl</kbd> key and then press the spacebar to open the code completion editor.
 10. Select **$Assets (MyFirstModule.Assets)**:
 
-	{{% image_container width="400" %}}![](attachments/extend-custom-java/argument.png)
+	{{% image_container width="500" %}}![](attachments/extend-custom-java/argument.png)
 	{{% /image_container %}}
 
 11. Click **OK** to save the expression.
 12. In the **Call Java Action** window, change the output **Variable** to *ReversedName*:
 
-	![](attachments/extend-custom-java/call2.png)
+	{{% image_container width="500" %}}![](attachments/extend-custom-java/call2.png)
+	{{% /image_container %}}
 
 13. Click **OK** to save the properties. The microflow should now look like this:
 
-	{{% image_container width="400" %}}![](attachments/extend-custom-java/microflow3.png)
+	{{% image_container width="500" %}}![](attachments/extend-custom-java/microflow3.png)
 	{{% /image_container %}}
 
 14. From the **Toolbox** (select **View** > **Toolbox** to open it, if necessary), drag a **Show message** activity into the microflow.
@@ -133,16 +135,17 @@ return new StringBuilder(assetsAssetName).reverse().toString();
 16. In the **Parameters** section, click **New** to open the expression editor.
 17. Select **$ReversedName (String)**, which is the output variable of the Java action:
 
-	{{% image_container width="400" %}}![](attachments/extend-custom-java/parameter.png)
+	{{% image_container width="500" %}}![](attachments/extend-custom-java/parameter.png)
 	{{% /image_container %}}
 
 18. Click **OK** to save the parameter. The **Show Message** activity properties should now look like this:
 
-	![](attachments/extend-custom-java/show-message.png)
+	{{% image_container width="500" %}}![](attachments/extend-custom-java/show-message.png)
+	{{% /image_container %}}
 
 19. Click **OK** to save the show message activity. The microflow should now look like this:
 
-	{{% image_container width="400" %}}![](attachments/extend-custom-java/microflow4.png)
+	{{% image_container width="500" %}}![](attachments/extend-custom-java/microflow4.png)
 	{{% /image_container %}}
 
 ## 6 Deploying & Seeing the Results
@@ -151,11 +154,13 @@ return new StringBuilder(assetsAssetName).reverse().toString();
 2. To test the new feature, select **Asset** from the app's **Dashboard**.
 3.  On the **Assets** page, click **Asset reverse name** for the asset that has been loaded:
 
-	![](attachments/extend-custom-java/app1.png)
+	{{% image_container width="600" %}}![](attachments/extend-custom-java/app1.png)
+	{{% /image_container %}}
 
 4.  The reversed name of the asset will be presented: 
 
-	![](attachments/extend-custom-java/app2.png)
+	{{% image_container width="600" %}}![](attachments/extend-custom-java/app2.png)
+	{{% /image_container %}}
 
 ## 7 Related Content
 

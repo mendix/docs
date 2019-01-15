@@ -18,7 +18,7 @@ In the Web Modeler, associations have the following properties:
 
 *  [Delete behavior](#delete-behavior)
 
-   {{% image_container width="350" %}}![](attachments/domain-models-association-properties-wm/association-properties.png)
+   {{% image_container width="300" %}}![](attachments/domain-models-association-properties-wm/association-properties.png)
    {{% /image_container %}}
 
 In relation to the module the associations can be of two types:

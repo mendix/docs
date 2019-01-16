@@ -66,7 +66,7 @@ Every layout has a layout type, which determines the purpose of the layout and h
 | **Tablet specific** | Use this layout for pages on a tablet if the responsive option is not sufficient (for example, if different use cases with different user interfaces have to be supported). |
 | **Phone specific** | Use this layout for pages on a phone if the responsive option is not sufficient (for example, if different use cases with different user interfaces have to be supported). |
 | **Modal pop-up** | Use this layout for pages that should appear as modal pop-up windows. |
-| **Pop-up** | Use this layout for pages that should appear as non-modal pop-up windows. |
+| **Pop-up** | Use this layout for pages that should appear as modeless pop-up windows. |
 
 ## 6 Page Generation Properties<a name="pgp"></a>
 

@@ -1,6 +1,6 @@
 ---
 title: "Import a Large Excel File"
-parent: "importing-xml-documents"
+parent: "importing-excel-documents"
 tags: ["excel", "excel  importer", "app store", "sheet"]
 ---
 

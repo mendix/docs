@@ -75,6 +75,10 @@ To use IBM Watson Assistant, you must first create an **assistant** for your IBM
 
 The easiest way to set up an assistant is through the Watson Assistant Tool. Here you can create an assistant and either give the assistant a sample skill, or create a skill which supports your own dialog requirements and give this to your assistant. More information about assistants and dialog skills, and how they need to be set up, is available in the [Watson Assistant: Getting started tutorial](https://console.bluemix.net/docs/services/assistant/getting-started.html#getting-started).
 
+{{% alert type="info" %}}
+There is no action in the IBM Watson Connector Suite to allow you to create an assistant. If you wish to do this programmatically, you will need to use Mendix's native REST.
+{{% /alert %}}
+
 More information on the APIs for the IBM Watson Conversation service is available here: [Watson Assistant – API methods summary](https://console.bluemix.net/docs/services/assistant/api-methods.html#api-methods-summary)
 
 {{% alert type="info" %}}
@@ -280,14 +284,22 @@ You can retrieve tone information from two sources:
 
 ## 6 Language Translator{#LanguageTranslator}
 
+The [IBM Watson Language Translator](https://console.bluemix.net/docs/services/language-translator/index.html) can translate text between languages programmatically.
+
+The IBM Watson Connector Suite provides three actions which allow you to use the Language Translator service through Mendix:
+
+* Get Identifiable Languages
+* Get Translation Models
+* Translate Language
+
 ### 6.1 Translation – Get Identifiable Languages
 
-This action is part of the [Language Translator service](https://console.bluemix.net/docs/services/language-translator/index.html) and returns a list of languages which are recognized by the Watson Language Translation Service. Each language is represented by a code and a name. These languages are used as the input to the Translate language action, below.
+This action is part of the Language Translator service and returns a list of languages which are recognized by the Watson Language Translation Service. Each language is represented by a code and a name. These languages are used as the input to the Translate language action, below.
 
 ![](attachments/ibm-watson-connector/translation-getidentifiablelanguages.png)
 
 {{% alert type="info" %}}
-Note that this is NOT the list of languages which **Translate Language** can translate. The list needs further refinement before it can be used successfully in the **Translate Language** action.
+Note that this is NOT the list of all the languages which **Translate Language** can translate. The language pairs which are supported by the **Translate Language** action can be identified from the results of the **Get Translation Models** action.
 {{% /alert %}}
 
 More information on the APIs for the Language Translator service is available here: [IBM Cloud API Docs / Language Translator](https://cloud.ibm.com/apidocs/language-translator).
@@ -309,7 +321,7 @@ Each language object consists of two attributes:
 * Name – the English name of the language
 * Code – a code representing the language (for example, **en** for English)
 
-### 6.2 Translation - Get Language Models
+### 6.2 Translation - Get Translation Models
 
 This action is part of the Language Translator service and returns a list of translation models in your Language Translator service. You can only translate between two languages if a model exists in the Language Translator service which maps the two languages.
 
@@ -319,7 +331,7 @@ IBM provides a number of standard models, and it is possible to extend these wit
 The IBM Watson Connector Suite does not support the creation and deletion of custom models. you will need to do this using the native REST capabilities of Mendix.
 {{% /alert %}}
 
-![](attachments/ibm-watson-connector/translation-getlanguagemodels.png)
+![](attachments/ibm-watson-connector/translation-gettranslationmodels.png)
 
 #### 6.2.1 Apikey
 
@@ -331,9 +343,11 @@ This is a string containing the Url assigned to the Language Translator service 
 
 #### 6.2.3 Languages
 
-**What is this????????????????**
+This is a list of objects of type **Language**.
 
-This is a list of objects of type **Language** for which you 
+Each translation model which is retrieved from the service will have a pair of languages, a source language and a target language. The languages on the model are associated with the languages in the supplied list. These languages are used in the **Translate Language** action to identify the source and target languages.
+
+More information can be found in section 6.3 [Translation - Translate Language](#translatelanguage)
 
 #### 6.2.4 Variable (List of TranslationModel)
 
@@ -344,9 +358,9 @@ Each TranslationModel object is associated with two languages:
 * via TranslationModel_SourceLanguage to the source language
 * via TranslationModel_TargetLanguage for the language to be translated to
 
-### 6.3 Translation – Translate Language
+### 6.3 Translation – Translate Language{#translatelanguage}
 
-This action uses the [IBM Watson Language Translator service](https://console.bluemix.net/docs/services/language-translator/index.html) to translate a piece of text from one language to another using the default translation model for that pair of languages.
+This action is part of the Language Translator service and translates a piece of text from one language to another using the *default* translation model for that pair of languages.
 
 ![](attachments/ibm-watson-connector/translation-translatelanguage.png)
 
@@ -360,10 +374,12 @@ The languages are not explicit in the parameters of the action, but are identifi
 {{% alert type="info" %}}
 Note that not all pairs of languages are supported. For example, you can translate to and from English and Spanish and English and Portuguese. However, there is no model in Watson to translate Spanish to Portuguese. The IBM Watson Connector Suite does not check whether there is a valid model before it passes the language pair to Watson.
 
-The valid model pairs can be retrieved through the Get Language Models action.
+The valid model pairs can be retrieved through the Get Translation Models action.
+
+The translation will always be performed using the **default** translation model for the selected language pair. If you need to use a custom translation model, you will have to use the API of the Language Translator using native REST.
 {{% /alert %}}
 
-More information on the APIs for the IBM Watson Language Translation service is available here: [IBM Watson Language Translator service – API Reference](https://www.ibm.com/watson/developercloud/language-translator/api/v2/).
+More information on the APIs for the IBM Watson Language Translation service is available here: [IBM Cloud API Docs / Language Translator](https://cloud.ibm.com/apidocs/language-translator).
 
 #### 6.3.1 Apikey
 
@@ -378,8 +394,8 @@ This is a string containing the Url assigned to the Language Translator service 
 This is a translation object. For a successful translation it must have:
 
 * a **Text** attribute containing the text to be translated
-* an association to a **Language** object representing the source language of the text via the Translation_SourceLanguage association: this must be one of the supported languages for Watson Translate
-* an association to a **Language** object representing the target language of the text via the Translation_TargetLanguage association: this must be one of the supported languages for Watson Translate and be supported by a translation model for translating between the source and target languages
+* an association to a **Language** object representing the source language of the text via the Translation_SourceLanguage association: this must be one of the supported languages for Language Translator
+* an association to a **Language** object representing the target language of the text via the Translation_TargetLanguage association: this must be one of the supported languages for Language Translator and be supported by a translation model for translating between the source and target languages
 
 #### 6.3.4 Variable (Translation)
 
@@ -394,18 +410,28 @@ This object will contain the following attributes:
 
     and associations
 
-* Translation_TargetLanguage – the language you have translated to
-* Translation_SourceLanguage – the language you have translated from
+* *Translation_TargetLanguage* – the language you have translated to
+* *Translation_SourceLanguage* – the language you have translated from
 
 ## 7 Visual Recognition{#VisualRecognition}
 
+The [IBM Watson Visual Recognition service](https://console.bluemix.net/docs/services/visual-recognition/index.html) uses deep learning algorithms to analyze images for scenes, objects, faces, and other content. The response includes keywords that provide information about the content.
+
+The IBM Watson Connector Suite consists of five actions to classify images:
+
+* Classify Image
+* Create Classifier
+* Delete Classifier
+* Detect Faces
+* Get Classifiers
+
 ### 7.1 Visual Recognition – Classify Image
 
-This action passes an image to the [IBM Watson Visual Recognition service](https://console.bluemix.net/docs/services/visual-recognition/index.html) which uses either its default classifiers or custom classifiers to analyze the image and identify the contents.
+This action passes an image to the Visual Recognition service which uses either its default classifiers or custom classifiers to analyze the image and identify the contents.
 
 ![](attachments/ibm-watson-connector/visualrecognition-classifyimage.png)
 
-More information on the APIs for the IBM Watson Visual Recognition service is available here: [IBM Watson Visual Recognition service – API Reference](https://www.ibm.com/watson/developercloud/visual-recognition/api/v3/).
+More information on the APIs for the IBM Watson Visual Recognition service is available here: [IBM Cloud API Docs / Visual Recognition](https://cloud.ibm.com/apidocs/visual-recognition).
 
 #### 7.1.1 Apikey
 
@@ -421,29 +447,42 @@ This is an object of type **VisualRecognitionImage** which contains the image wh
 
 #### 7.1.4 Classifiers
 
-This is a list of the classifiers which Watson should use to classify the image. If you have not created your own classifier, you need to tell Watson to use the default classifier by using a Classifier object containing the following:
-
-* Name – "default"
-* ClassifierId – "default"
-* ClassifierOwner – "IBM" or empty
+This is a list of the classifiers which Watson should use to classify the image. Before you use **Classify Image** you will need to get a list of available classifiers using the **Get Classifier** action.
 
 #### 7.1.4 Variable (List of Classifier)
 
 This is the name of the list of Classifier objects returned from Watson.
 
-Associated with each of the classifier objects will be zero or more **Classifier_Class** objects. Each of these contain the **Name** of content which Watson has identified using the classifier, and the **Score** which is an indication of the confidence that Watson has that it has correctly identified the content, with 1.0 indicating complete confidence in the identification.
+Associated with each of the classifier objects will be zero or more **ClassifierClass** objects. Each of these contain the **Name** of content which Watson has identified using the classifier, and the **Score** which is an indication of the confidence that Watson has that it has correctly identified the content, with 1.0 indicating complete confidence in the identification.
 
 ![](attachments/ibm-watson-connector/visualrecognition-dm.png)
 
 ### 7.2 Visual Recognition – Create Classifier
 
-This action allows you to train a new classifier for the [IBM Watson Visual Recognition service](https://console.bluemix.net/docs/services/visual-recognition/index.html) by uploading zip files containing images.
+This action allows you to train a new classifier for the Visual Recognition service by uploading zip files containing images.
 
 ![](attachments/ibm-watson-connector/visualrecognition-createclassifier.png)
 
-There should be two files containing zipped examples in jpg or png format with at least 10 images in each file. One file contains positive examples: images which depict the visual subject of this classifier. One file contains negative examples: images which are visually similar to the positive images, but do not contain the visual subject of this classifier. For example, if you want to identify dogs you could upload one file containing images of dogs, and a negative one containing images of cats.
+You can use a number of files which contain positive examples: images which depict the visual subject of this class. These are stored as **TrainingImagesZipFile** entities. The name of the class is in the *ClassName* attribute of the *TrainingImagesZipFile* entity. Each positive class is associated with the **Classifier** being created via the *Classifier_positiveTrainingImagesZipFiles* association.
 
-Each zip file has a maximum size of 100MB and contains less than 10,000 images. More information on the APIs for the IBM Watson Visual Recognition service is available here: [IBM Watson Visual Recognition service – API Reference](https://www.ibm.com/watson/developercloud/visual-recognition/api/v3/).
+One file contains negative examples: images which are visually similar to the positive images, but do not contain the visual subject of this classifier.
+
+For example, if you want to have a classifier to identify different sorts of mammal, you could upload positive class image files "dog", "cat", "pig", and "horse", and a negative one containing images of reptiles.
+
+Each zip file has a maximum size of 100MB and contains less than 10,000 images.
+
+{{% alert type="info" %}}
+You cannot retrain an existing classifier.
+
+It can take a substantial length of time (several minutes) to create a classifier. It cannot be used for classification until the **Status** is set to *Ready*. You can find the status of a classifier using the **Get Classifiers** action and looking at the value of the Status attribute in the Classifier entity.
+
+Values for the classifier status are:
+
+* ready
+* training
+* retraining
+* failed
+{{% /alert %}}
 
 #### 7.2.1 Apikey
 
@@ -455,20 +494,16 @@ This is a string containing the Url assigned to the Visual Recognition service i
 
 #### 7.2.3 Classifier
 
-{{% alert type="info" %}}
-The IBM Watson Connector Suite currently supports only one positive and one negative training file.
-{{% /alert %}}
-
 This is an object of type Classifier. This is associated with the following objects.
 
-* one TrainingImagesZipFile objects via the association Classifier_positiveTrainingImagesZipFile; the positive example files described above
-* one TrainingImagesZipFile objects via the association Classifier_negativeTrainingImagesZipFile; the negative example file described above
+* one or more TrainingImagesZipFile objects via the association Classifier_positiveTrainingImagesZipFile; the positive example files described above
+* one TrainingImagesZipFile object via the association Classifier_negativeTrainingImagesZipFile; the negative example file described above
 
-The **Name** attribute of the Classifier is the name of the classifier which will be created by Watson. For example Dogs for a classifier identifying dogs.
+The **Name** attribute of the Classifier is the name of the classifier which will be created by Watson. For example "Mammals" for a classifier identifying mammals.
 
 ![](attachments/ibm-watson-connector/visualrecognition-dm.png)
 
-#### 7.2.3 Variable (String)
+#### 7.2.4 Variable (String)
 
 This is the name of a string containing the ID of the new classifier.
 
@@ -484,13 +519,25 @@ This is a string containing the API key assigned to the Visual Recognition servi
 
 This is a string containing the Url assigned to the Visual Recognition service in your IBM Cloud.  See section 1.1.1 [IBM Cloud](#IBMCloud) for more details.
 
+#### 7.3.3 Classifier id
+
+This is the id of the classifier which is to be deleted. The Classifier id is held in the *ClassifierId* attribute of the classifier and also returned as a string when a classifier is created within the Mendix app.
+
+#### 7.3.4 Variable (Boolean)
+
+The action returns *true* if the delete request is accepted. Otherwise it returns *false*.
+
+{{% alert type="info" %}}
+You cannot delete an IBM default classifier, for example *default*, *food*, or *explicit*.
+
+It may take several minutes to fully delete a classifier. Any quota for the maximum number of custom classifier models will not be updated until the classifier has been deleted fully.
+{{% /alert %}}
+
 ### 7.4 Visual Recognition – Detect Faces
 
-This action is part of the the [IBM Watson Visual Recognition service](https://console.bluemix.net/docs/services/visual-recognition/index.html) and allows you to analyze and get data about faces in images. Responses can include estimated age and gender, and the service can also identify celebrities.
+This action allows you to analyze and get data about faces in images. Responses can include estimated age and gender.
 
 ![](attachments/ibm-watson-connector/visualrecognition-detectfaces.png)
-
-More information on the APIs for the IBM Watson Visual Recognition service is available here: [IBM Watson Visual Recognition service – API Reference](https://www.ibm.com/watson/developercloud/visual-recognition/api/v3/).
 
 #### 7.4.1 Apikey
 
@@ -500,11 +547,11 @@ This is a string containing the API key assigned to the Visual Recognition servi
 
 This is a string containing the Url assigned to the Visual Recognition service in your IBM Cloud.  See section 1.1.1 [IBM Cloud](#IBMCloud) for more details.
 
-#### 7.4.2 Image
+#### 7.4.3 Image
 
 This is an object of type, or a specialization of, System.Image containing the image in which faces should be detected.
 
-#### 7.4.3 Variable (List of Face)
+#### 7.4.4 Variable (List of Face)
 
 This is the name you wish to assign to a list of objects of type Face. Each object contains information about a face which has been detected in the image.
 
@@ -538,16 +585,29 @@ This is a string containing the API key assigned to the Visual Recognition servi
 
 This is a string containing the Url assigned to the Visual Recognition service in your IBM Cloud.  See section 1.1.1 [IBM Cloud](#IBMCloud) for more details.
 
+#### 7.5.3 Variable (List of Classifier)
+
+This is the name to give to a list of Classifier objects which is the complete list of classifiers available in your Visual Recognition service. This includes the standard IBM classifiers, together with any custom classifiers in your service.
+
+Each Classifier will be contain the following information:
+
+* Name – the classifier name
+* ClassifierId – a unique identifier for this classifier
+* ClassifierOwner – the owner of the classifier
+* Created – the date and time that the classifier was created
+* Status – the training status of classifier; possible values are *ready*, *training*, *retraining*, *failed*. Only classifiers with a status of *ready* can be used to classify an image
+* Explanation – will sometimes contain text describing why training of a classifier has failed
+
 ## 8 Watson Service Configuration<a name="WatSerCon"></a>
 
-Functionality to store the API keys and username/password combinations which are required to access IBM Watson services is built into the Watson Connector Suite example app. An IBM Watson service will require either an API key, or a username/password combination, depending on how the service has been configured.
+Functionality to store the API keys and username/password combinations which are required to access IBM Watson services is built into the Watson Connector Suite example app. An IBM Watson service will require an API key and a URL.
 
 If the app is running on IBM Cloud, then it can use VCAP to obtain the credentials for the configured services. Support for this functionality is in the project module **WatsonServices** in the folder **USE_ME**.
 If the app is not running on IBM Cloud (for example if you are testing it locally or on a Mendix cloud), then the credentials will have to be supplied manually.
 
 ### 8.1 Getting Credentials Through VCAP
 
-An example of how to check for the VCAP services and import the configured credentials is in the WatsonServices microflow **USE_ME > OnStartUpWatsonAppOnIBMCloud**. This is configured to run automatically in **Project Settings > Runtime > After startup**.
+An example of how to check for the VCAP services and import the configured credentials is in the WatsonServices microflow **USE_ME > OnStartUpWatsonAppOnIBMCloud**. In the sample app, this is configured to run automatically in **Project Settings > Runtime > After startup**.
 
 ![](attachments/ibm-watson-connector/onstartupwatsonapponibmcloud.png)
 
@@ -584,6 +644,10 @@ The WatsonServiceConfig entity has the following attributes:
 * Apikey – a string containing an API key used to access an IBM Watson service
 * Url - a string containing the URL used to access an IBM Watson service
 * Label – a label identifying the service for which these credentials are stored. It is an enumeration of WatsonServiceConfigType
+
+{{% alert type="info" %}}
+The enumeration **WatsonServiceConfigType** contains a *Name* which reflects the VCAP value referring to the service. In some cases this is different from the current name of the service (for example the *Assistant* service uses the VCAP name *conversation*). The current name of the service is shown in the *Caption* of the enumeration.
+{{% /alert %}}
 
 ## 9 Not Yet Supported
 

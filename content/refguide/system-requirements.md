@@ -99,19 +99,16 @@ Jetty is built into the [Mendix Runtime](runtime), so an application server is n
 * Android 5.0 and above
 * Windows Phone 8 and above
 
-## 7 Mobile Operation Systems
+## 7 Mobile Operating Systems
 
 This is important for the [Mendix Mobile app](getting-the-mendix-app):
 
 * iOS 9 and above
 * Android 5.0 and above
 
-
 ## 8 MxBuild{#mxbuild}
 
 MxBuild is a Windows and Linux command-line tool that can be used to build a Mendix Deployment Package. See [MxBuild](mxbuild) for more information.
-
-
 
 ### 8.1 Mendix Version 7.1 & Above
 

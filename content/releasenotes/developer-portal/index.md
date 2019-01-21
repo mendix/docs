@@ -10,6 +10,12 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud V3, and other deploym
 
 ## 2019
 
+### January 21, 2019
+
+#### App Store Fixes
+
+* The **Reviews** section at the bottom of the [App Store main page](https://appstore.home.mendix.com/index3.html) presents the latest published user reviews. We fixed an issue where clicking on a user's name to view their profile caused an internal server error. You will now be redirected to the expected user.
+
 ### January 3rd, 2019
 
 #### Fixes

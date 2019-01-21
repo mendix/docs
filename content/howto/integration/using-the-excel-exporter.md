@@ -20,13 +20,12 @@ The MxModelReflection module is a commonly used module in most apps. The purpose
 
 ### 2.1 Download the MxModelReflection Module
 
-1.  Open the **Mendix App Store** from within the modeler.
-2.  Search for the keyword **Reflection.**
+1. Open the **Mendix App Store** from within the modeler.
+2. Search for the keyword **Reflection.**
 
     ![](attachments/18448688/18581166.png)
 
-3.  Click the **Download** button and include the module as a new module by right-clicking in the Project Explorer and selecting 'Import module package'.
-4.  Ensure the module has downloaded successfully and is now a new module in your project.
+3. Click the **Download** button and include the module in your app project. It will be imported into **App Store modules** in the **Project Explorer**.
 
 ### 2.2 Download the 'Excel Exporter' Module
 

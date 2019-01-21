@@ -10,6 +10,12 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud V3, and other deploym
 
 ## 2019
 
+### January 21, 2019
+
+#### App Store Fixes
+
+* On the App Store main page, inside a box called “Reviews” are the latest published reviews by users visible. We fixed an issue when clicking on a user to view the profile, would cause a internal server error. In this update this issue got fixed and will redirect you to the expected user.
+
 ### January 3rd, 2019
 
 #### Fixes

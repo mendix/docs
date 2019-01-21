@@ -3,7 +3,7 @@ title: "IBM Watson Connector"
 category: "IBM"
 #parent: "Enter the parent document filename of this document if necessary (for example, "push-notifications")"
 description: "A reference guide to the Mendix IBM Watson connectors"
-tags: ["IBM", "Watson", "AI", "Translation", "Image Analysis"]
+tags: ["IBM", "Watson", "AI", "Translation", "Image Analysis", "Assistant", "Speech to Text", "Text to Speech", "Tone Analyzer", "Visual Recognition", "Face Detection", "Image Classification"]
 ---
 
 ## 1 Introduction
@@ -44,7 +44,7 @@ For more information see [Service credentials for Watson services](https://conso
 If you have an existing Watson service it may give *Username* and *Password* in the credentials. To obtain credentials in the correct format, you will have to create a **new** service which has *API Key* and *URL* as the credentials. It is not possible to obtain the API Key/URL style of credentials for an existing service which uses Username/Password credentials.
 {{% /alert %}}
 
-If you are running your app on IBM Cloud and the Watson resources have been added to your IBM Cloud project, the credentials can be picked up automatically via VCAP. See section 8, [Watson Service Configuration](#WatSerCon) for more information on VCAP. This section also covers the IBM Watson Connector Suite configuration for storing credentials. If you are testing your app locally, or in another environment, you will need to enter these credentials (API key or Username and Password) manually when you use the connector in your Mendix app.
+If you are running your app on IBM Cloud and the Watson resources have been added to your IBM Cloud project, the credentials can be picked up automatically via VCAP. See section 8, [Watson Service Configuration](#WatSerCon) for more information on VCAP. This section also covers the IBM Watson Connector Suite configuration for storing credentials. If you are testing your app locally, or in another environment, you will need to enter these credentials manually when you use the connector in your Mendix app.
 
 #### 1.1.2 IBM Watson Connector Suite
 
@@ -128,15 +128,15 @@ This is a string containing the API key assigned to the Watson Assistant service
 
 This is a string containing the Url assigned to the Watson Assistant service in your IBM Cloud.  See section 1.1.1 [IBM Cloud](#IBMCloud) for more details.
 
-#### 2.2.3 Input
-
-This is a string containing the input to the conversation. This string cannot contain carriage return, newline, or tab characters, and it must be no longer than 2048 characters. 
-
-#### 2.2.4 Session Context
+#### 2.2.3 Session Context
 
 This is an object of type *SessionContext* which contains the context for this conversation.
 
 The SessionContext object contains the SessionId. This is a unique identifier which Watson Assistant uses to keep track of where you are in a conversation. This means that Watson Assistant can interpret your response in the light of what has been said before. For example, if you have been in a dialog about the weather, Watson Assistant will recognize that you are still in that part of the conversation.
+
+#### 2.2.4 Input
+
+This is a string containing the input to the conversation. This string cannot contain carriage return, newline, or tab characters, and it must be no longer than 2048 characters. 
 
 #### 2.2.5 Variable (AssistantMessageResponse)
 
@@ -148,7 +148,7 @@ The AssistantMessageResponse contains the following:
 * Output – the response from Watson to the input
 * ConversationId – the ConversationId; the same as the ConversationId passed in the Conversation context
 * Association to *AssistantIntent* which gives more information on what Watson Assistant interpreted as the intention of the input
-* Association to *AssistantEntity* which gives more information on which (dialog skill) entities Watson interpreted as being referring to
+* Association to *AssistantEntity* which gives more information on which (dialog skill) entities Watson interpreted as being referred to
 
 ![Domain model for Watson Assistant connector actions](attachments/ibm-watson-connector/assistant-dm.png)
 
@@ -200,7 +200,7 @@ The domain model for this action allows for several interim responses. In this i
 
 The text which has been decoded is in the object of type **Alternative** in the **transcript** attribute. The **confidence** indicates the service's confidence in the transcription in a range 0 to 1.
 
-## 4 Text To Speech – Synthesize{#TextToSpeech}
+## 4 Connector Actions: Text To Speech – Synthesize{#TextToSpeech}
 
 This connector uses the [IBM Text to Speech service](https://console.bluemix.net/docs/services/text-to-speech/index.html) to 'speak' some text. It converts a string containing text into a sound object corresponding to the synthesis of the text using a specified voice. This voice can sound male or female and is optimized for a particular language. Some voices can, depending on their capabilities, add extra vocal signals such as speed, timbre, or emotional cues.
 
@@ -238,7 +238,7 @@ All formats except BASIC and RAW can be played back in a Mendix app using the [A
 
 This is the name you wish to assign to an object of type Speech which contains the sound response received from Watson.
 
-## 5 Tone Analyzer – Analyze Tone{#ToneAnalyzer}
+## 5 Connector Actions: Tone Analyzer – Analyze Tone{#ToneAnalyzer}
 
 This connector uses the [Tone Analyzer](https://console.bluemix.net/docs/services/tone-analyzer/index.html) to detect emotional and language tones in written text.
 
@@ -276,15 +276,17 @@ You can retrieve tone information from two sources:
 
 2. The tone of each sentence
 
-    The document is also broken up into sentences using punctuation and line breaks to identify individual sentences.
+    The document is also broken up into sentences using punctuation and line breaks.
 
     One or more SentenceTone objects, containing the sentence content (**Text**), are associated with the ToneAnalyzerResponse object via the association **Sentence_Tones**. There will be one SentenceTone object for each sentence.
 
     From each SentenceTone, one or more Tone objects are linked via the association **Tone_SentenceTone**. These contain the same information as for the tone of the whole document.
 
-## 6 Language Translator{#LanguageTranslator}
+## 6 Connector Actions: Language Translator{#LanguageTranslator}
 
 The [IBM Watson Language Translator](https://console.bluemix.net/docs/services/language-translator/index.html) can translate text between languages programmatically.
+
+More information on the APIs for the Language Translator service is available here: [IBM Cloud API Docs / Language Translator](https://cloud.ibm.com/apidocs/language-translator).
 
 The IBM Watson Connector Suite provides three actions which allow you to use the Language Translator service through Mendix:
 
@@ -301,8 +303,6 @@ This action is part of the Language Translator service and returns a list of lan
 {{% alert type="info" %}}
 Note that this is NOT the list of all the languages which **Translate Language** can translate. The language pairs which are supported by the **Translate Language** action can be identified from the results of the **Get Translation Models** action.
 {{% /alert %}}
-
-More information on the APIs for the Language Translator service is available here: [IBM Cloud API Docs / Language Translator](https://cloud.ibm.com/apidocs/language-translator).
 
 #### 6.1.1 Apikey
 
@@ -413,7 +413,7 @@ This object will contain the following attributes:
 * *Translation_TargetLanguage* – the language you have translated to
 * *Translation_SourceLanguage* – the language you have translated from
 
-## 7 Visual Recognition{#VisualRecognition}
+## 7 Connector Actions: Visual Recognition{#VisualRecognition}
 
 The [IBM Watson Visual Recognition service](https://console.bluemix.net/docs/services/visual-recognition/index.html) uses deep learning algorithms to analyze images for scenes, objects, faces, and other content. The response includes keywords that provide information about the content.
 

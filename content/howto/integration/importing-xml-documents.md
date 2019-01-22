@@ -7,7 +7,7 @@ tags: ["import", "xml", "integration"]
 
 ## 1 Introduction
 
-Mendix is "The App Platform for the Enterprise" and in enterprise software it is not likely that you work in a [green field](https://en.wikipedia.org/wiki/Greenfield_project). In almost every situation you will need to integrate with existing systems. Mendix supports many ways of integration but this how-to focuses on how you can import XML documents with Mendix.
+Mendix is the app platform for the enterprise organization, and in enterprise software, you likely do not work in a [green field](https://en.wikipedia.org/wiki/Greenfield_project). In almost every situation, you will need to integrate with existing systems. Mendix supports many ways of integration, but this how-to focuses on how you can import XML documents with Mendix.
 
 **This how-to will teach you how to do the following:**
 
@@ -19,14 +19,14 @@ Mendix is "The App Platform for the Enterprise" and in enterprise software it is
 
 Before you continue, make sure that you know how to create:
 
-* Domain models (for more information, see [How to Create a Basic Data Layer](../data-models/create-a-basic-data-layer))
-* Custom File Document (for more information, see [How to Work with Images & Files](../data-models/working-with-images-and-files))
-* Overview and detail pages (for more information, see [How to Create Your First Two Overview & Detail Pages](../ux/create-your-first-two-overview-and-detail-pages))
-* Menu items (for more information, see [How to Set Up the Navigation Structure](../ux/setting-up-the-navigation-structure))
+* Domain models (see [How to Create a Basic Data Layer](../data-models/create-a-basic-data-layer))
+* A custom file document (see [How to Work with Images & Files](../data-models/working-with-images-and-files))
+* Overview and detail pages (see [How to Create Your First Two Overview & Detail Pages](../ux/create-your-first-two-overview-and-detail-pages))
+* Menu items (see [How to Set Up the Navigation Structure](../ux/setting-up-the-navigation-structure))
 
-## 3 Preparing the Data Structure and GUI
+## 3 Preparing the Data Structure & GUI
 
-The XML document used during this how-to contains customers. To be able to see the imported data, you first need to set up the data structure and GUI to maintain the customer data. Then you need to facilitate the uploading and downloading of XML documents. Finally, you will create the actual import logic and the corresponding import mapping.
+The XML document used in this how-to contains customers. To be able to see the imported data, you first need to set up the data structure and GUI to maintain the customer data. Then, you need to facilitate the uploading and downloading of XML documents. Finally, you will create the actual import logic and the corresponding import mapping.
 
 To prepare the data structure and the GUI, follow these steps:
 
@@ -49,7 +49,7 @@ Whether you plan to import or export documents, working with XML means that your
 
 To add an XML schema (XSD), follow these steps:
 
-1.  Right-click a module in the **Project Explorer** and select **Add** > **Mappings** > **XML schema** from the menu:
+1.  Right-click a module in the **Project Explorer** and select **Add Other** > **XML schema** from the menu:
 
     ![](attachments/18448727/18581698.png)
 
@@ -57,7 +57,7 @@ To add an XML schema (XSD), follow these steps:
 
     ![](attachments/18448727/18581696.png)
 
-3.  In the **XML Schema** editor, click **Select...** and select the XSD file that you downloaded earlier:
+3.  In the **XML Schema** editor, click **Select** and select the XSD file that you downloaded earlier:
 
     ![](attachments/18448727/18581657.png)
 
@@ -69,22 +69,16 @@ The XML schema describes what the possible contents of an XML file are, but we n
 
 To create the XML-to-domain mapping, follow these steps:
 
-1. Right-click a module in the **Project Explorer** and select **Add** > **Mappings** > **Import mapping**:
-
-    ![](attachments/18448727/18581698.png)
-
+1. Right-click a module in the **Project Explorer** and select **Add Other** > **Import mapping**.
 2.  Enter **ImportCustomersMapping** as the **Name** and click **OK.**  The new mapping will open automatically and the elements will be shown.
 
-    ![](attachments/18448727/18581689.png)  
+	![](attachments/18448727/18581689.png)
 
-3.  On the **Select XSD Elements** dialog box, do the following
-    * Select **XML schema** as the **Schema source**
-    * Select **CustomerXSD** as the schema
-    * Click **Expand all** to see the tree with elements
+3.  On the **Select schema elements** dialog box, make sure **XML schema** is selected as the **Schema source**, and select **CustomerXSD** as the schema. Then, click **Expand all** to see the tree with elements.
+4.  Select the following elements: **Customer**, **ID**, **CompanyName**, **Address**, **City**, and **PostalCode**:
 
-    ![](attachments/18448727/18581656.png)
+	![](attachments/18448727/18581656.png)
 
-4. Select the following elements: **Customer**, **ID**, **CompanyName**, **Address**, **City**, and **PostalCode**.
 5. Click **OK**. The first part of the import mapping should look like this:
 
     ![](attachments/18448727/18581655.png)
@@ -94,11 +88,11 @@ To create the XML-to-domain mapping, follow these steps:
 
     ![](attachments/18448727/18581681.png)  
 
-    The **Map Object Element** editor for this element will open automatically:
+    The **Map entity** editor for this element will open automatically:
 
     ![](attachments/18448727/18581654.png)
 
-8. In the **Map Object Element** editor, do the following:
+8. In the **Map entity** editor, do the following:
     * Select **Find an object (by key)** as the **Method** (to be able to search for an object, you need to define one or more keys in the value-to-attribute mappings)
     * Select **Create** for **If no object was found**
     * Select attributes for all five value-to-attribute mappings

@@ -86,7 +86,9 @@ const compareHeading = (nodeName1, nodeName2) => parseInt(nodeName1.replace('h',
 const nodeCssSelector = node => {
   if (node === null) return null;
   if (typeof node.attr('id') !== 'undefined') {
-    return '#' + node.attr('id').replace(/-[0-9]+$/,'');
+    // Made a change here because ID's in release-notes contain numbers in the ID. Need a proper ID to use in search
+    // return '#' + node.attr('id').replace(/-[0-9]+$/,'');
+    return '#' + node.attr('id');
   }
   return nodeName(node);
 };
@@ -205,7 +207,6 @@ const parseHtmlFile = file => {
             item.mendix_version = file.mendix_version;
           }
 
-         //  console.log(item);
           index.push(item);
 
           indexedNum++;

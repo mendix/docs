@@ -49,10 +49,7 @@ Whether you plan to import or export documents, working with XML means that your
 
 To add an XML schema (XSD), follow these steps:
 
-1.  Right-click a module in the **Project Explorer** and select **Add Other** > **XML schema** from the menu:
-
-    ![](attachments/18448727/18581698.png)
-
+1.  Right-click a module in the **Project Explorer** and select **Add Other** > **XML schema** from the menu.
 2.  Enter **CustomersXSD** as the **Name** and click **OK**:
 
     ![](attachments/18448727/18581696.png)

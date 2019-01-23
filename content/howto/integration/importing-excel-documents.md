@@ -35,7 +35,7 @@ Follow these steps:
 2. Create **Overview** and **Detail** pages to manage objects of type **Customer** and **Order**.
 3.  Create **menu items** to access the **Order** and the **Customer** overview pages.
 4.  Download the **Excel Importer** and **Mx Model Reflection** modules from the appstore.
-5.  Create **menu items** for the **ExcelImportOverview** and the **MxObjects_Overview** pages. Those pages already exist within the _**USE_ME** folders of the downloaded modules.
+5.  Create menu items for the **ExcelImportOverview** and the **MxObjects_Overview** pages. Those pages already exist within the _**USE_ME** folders of the downloaded modules.
 6.  Configure the **Administrator** user role to have the **Configurator** modu lerole for the **Excel Importer** module, and the **ModelAdministrator** module role for the **Mx Model Reflection** module.
 
 ## 4 Preparing the Logic for the Data Import

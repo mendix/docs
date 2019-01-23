@@ -156,7 +156,8 @@ A many-to-many association where both entities are owners is created by setting 
 
 In this example, an **Accountant** can have multiple **Groups** and a **Group** can have multiple **Accountants**:
 
-![](attachments/domain-model-editor/918125.png)
+{{% image_container width="300" %}}![](attachments/domain-model-editor/918125.png)
+{{% /image_container %}}
 
 In XML, instances of these entities and their association look as follows (note that the association is stored both in the **Accountant** element and the **Group** element):
 

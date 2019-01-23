@@ -215,9 +215,11 @@ On this page, you can read the full descriptive text of the idea and do the foll
         * **Closed** – the idea has been reviewed by the Product Managers but it has not been accepted
     * The **Category** of the idea
     * The **Tags** applied to the idea (clicking a tag will list ideas with that same tag under the **Ideas** tab)
-* Click **Vote** to upvote the idea (**2**)
+* <a name="upvoting"></a>Click **Vote** to upvote the idea (**2**)
     * By upvoting ideas, you can show the Mendix community and Product Managers what you would like to see added to the Mendix Platform
-    * The upvotes will be used as input for the Product Managers and Mendix Community MVPs to decide which features will be nominated for implementation
+
+		{{% alert type="info" %}}The upvotes will be used as input for the Product Managers and Mendix Community MVPs to decide which features will be nominated for implementation. Please note that the level of impact also needs to be considered.
+		{{% /alert %}}
 * Click the star to favorite the idea (**3**)
 * Submit a comment on the idea (**4**)
 

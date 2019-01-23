@@ -49,10 +49,7 @@ Whether you plan to import or export documents, working with XML means that your
 
 To add an XML schema (XSD), follow these steps:
 
-1.  Right-click a module in the **Project Explorer** and select **Add Other** > **XML schema** from the menu:
-
-    ![](attachments/18448727/18581698.png)
-
+1.  Right-click a module in the **Project Explorer** and select **Add Other** > **XML schema** from the menu.
 2.  Enter **CustomersXSD** as the **Name** and click **OK**:
 
     ![](attachments/18448727/18581696.png)
@@ -79,26 +76,26 @@ To create the XML-to-domain mapping, follow these steps:
 
 	![](attachments/18448727/18581656.png)
 
-5. Click **OK**. The first part of the import mapping should look like this:
+5.  Click **OK**. The first part of the import mapping should look like this:
 
-    ![](attachments/18448727/18581655.png)
+	![](attachments/18448727/18581655.png)
 
 6. Open the connector (from the lower-right side of the Modeler or from the **View** menu).
 7.  Drag the entity **Customer** from the connector to the place-holder in the mapping editor:
 
-    ![](attachments/18448727/18581681.png)  
+	![](attachments/18448727/18581681.png)  
 
-    The **Map entity** editor for this element will open automatically:
+	The **Map entity** editor for this element will open automatically:
 
-    ![](attachments/18448727/18581654.png)
+	![](attachments/18448727/18581654.png)
 
-8. In the **Map entity** editor, do the following:
-    * Select **Find an object (by key)** as the **Method** (to be able to search for an object, you need to define one or more keys in the value-to-attribute mappings)
-    * Select **Create** for **If no object was found**
-    * Select attributes for all five value-to-attribute mappings
-    * Select **CustomerID** as the **Key**
+8.  In the **Map entity** editor, do the following:
+	* Select **Find an object (by key)** for the **Method** (to be able to search for an object, you need to define one or more keys in the value-to-attribute mappings)
+	* Select **Create** for **If no object was found**
+	* Select attributes for all five value-to-attribute mappings
+	* Set **CustomerID** as the **Key**
 
-    ![](attachments/18448727/18581653.png)  
+	![](attachments/18448727/18581653.png)
 
 9. Click **OK** to save the mapping.
 

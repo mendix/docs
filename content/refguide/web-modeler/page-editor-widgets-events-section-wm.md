@@ -19,13 +19,10 @@ In the **Events** section, you can set the **On Click Action** for widgets and s
 You can find the description of possible on click actions below:
 
 * **Nothing** – no action is taken when the user clicks a widget
-
 * **Page** –  the specified page is opened
-
+  * **Create Object** – creates a new object and passed it to the selected page (disabled by default). For more information, see section [2.1 Create Object Option](#create-object-option)
 * **Microflow** – the selected microflow is executed 
-
 * **More** – contains the following type of actions:
-  * **Create Object** – creates a new object (for more information, see section [2.1 Create Object Action](#create-object-action))
   * **Save Changes** – saves (commits) all changes made on the page
   * **Cancel Changes** – rolls back all changes made on the page 
   * **Close Page** – closes the pop-up window (for pop-up pages) or navigates to the previously visited page  
@@ -39,14 +36,16 @@ The list of available on click actions may differ depending on the widget. For e
 
 {{% /alert %}}
 
-### 2.1 Create Object Action {#create-object-action}
+### 2.1 Create Object Option {#create-object-option}
 
-When you set the **On Click Action** to **Create Object**, several properties are available. See the description in the table below:
+When you set the **On Click Action** to **Open Page**, you can enable the **Create Object** option. You need to pass an object if the selected page expects a context. For example, you want to create a new customer by clicking a **New** button. The **New** button will open a page where you can fill in a new customer's details. This page will expect the object *Customer* to be passed to it. Thus, when setting the on-click action to **Open Page**, you need to enable the Create Object option and select the **Customer** entity.
 
-| Action Property | Description                                                  |
-| --------------- | ------------------------------------------------------------ |
-| Entity          | Specifies which entity to create.                            |
-| Page            | Specifies which page should be shown with the new created object. The page should contain a data view that accepts the object you have specified. |
+![](attachments/page-editor-widgets-events-section-wm/wm-create-object-example.png)
+
+If you enable **Create Object** option, you need to specify the following:
+
+* **Page** – specifies which page should be shown with the new created object. The page should contain a data view that expects this object.
+* **Entity** – specifies the object of which entity will be created and passed to the page as a context.    
 
 ### 2.2 Open Link Action {#open-link-action}
 

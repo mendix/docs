@@ -21,8 +21,7 @@ This how-to will walk you through the steps needed to implement push notificatio
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Install Mendix Desktop Modeler version 7.1–7.3
-    * Please note that 7.3 is the last version verified to work with [Push Notifications Connector module](https://appstore.home.mendix.com/link/app/3003/)
+* Install Mendix Desktop Modeler version 6.10.3+ or 7.x
     * Download the Modeler in the [App Store](https://appstore.home.mendix.com/link/modeler)
 
 ## 3 Importing the PushNotifications Module from the App Store
@@ -34,6 +33,10 @@ The [Push Notifications Connector module](https://appstore.home.mendix.com/link/
 On the resulting page, click the green **Download** button. Make sure that **Add as a new module** is selected, and then click **Import**:
 
 ![](attachments/19955732/20217885.jpg)
+
+{{% alert type="warning" %}}
+The Push Notifications Connector assumes that the mobile app and the "back-end" part will reside in the same project.
+{{% /alert %}}
 
 ## 4 Installing Module Dependencies
 
@@ -57,14 +60,13 @@ After importing the module and the dependencies, your error dock will inform you
 ## 5 Including the Push Notifications Snippet in the Application's Layouts
 
 To properly register your device with a third-party remote push service (FCM or APNs) and display in-app notifications, you should put the widget on the pages of your app. You can accomplish this by
-dragging the **PushNotification_Snippet** (located in the *_USE ME* folder in the PushNotifications module) into the layouts used by your app. Note that push notifications do not currently work on
-the desktop.
+dragging the **Online_Snippet** or the **Offline_Snippet** (located in the *_USE ME* folder in the PushNotifications module) into the layouts used by your app. Which of these two you should pick depends on whether your Mendix hybrid app uses an online profile or an offline profile. Note that push notifications do not currently work on the desktop.
 
 If your app is offline-compatible, ensure that a sync button is available to the user so that device registration requests will be synchronized with the server. Also, make sure your app has an offline device profile (for details, see [Offline Device Profile](/refguide7/offline-device-profile) in the Mendix Reference Guide).
 
 {{% alert type="warning" %}}
 
-Please do not remove the buttons with the caption **GCM Settings reference** and **Device Registration reference** from the PushNotification_Snippet. They are necessary to make the widget offline-compatible. Please note that both buttons are invisible to the user.
+Please do not remove the button with the caption **Device Registration reference** from the PushNotification_Snippet. It is required to make the widget offline-compatible. Please note that this button is invisible to the user.
 
 {{% /alert %}}
 
@@ -72,7 +74,7 @@ Please do not remove the buttons with the caption **GCM Settings reference** and
 
 ## 6 Starting Connectors from Your "After Startup" Microflow
 
-The PushNotifications module contains a microflow named **AfterStartup_PushNotifications** that will start the connectors for the FCM and APNs for you. Call this microflow from your **AfterStartup** microflow.
+The PushNotifications module contains a microflow named **AfterStartup_PushNotifications** that will start the APNs connector for you. Call this microflow from your **AfterStartup** microflow.
 
 If your project uses Mendix SSO, most likely the **AppCloudServices.StartAppCloudServices** microflow is set to execute after startup (for details, refer to [Integrate Your App with Mendix SSO](/developerportal/deploy/integrate-with-mendix-sso) in the Mendix Reference Guide). We suggest that you change your startup microflow to a new microflow, from which you will call both after the startup microflows.
 
@@ -110,9 +112,9 @@ Make sure that the `Encryption.EncryptionKey` constant has a value before you st
 
 {{% /alert %}}
 
-## 10 Setting Up Access to APNs and FCM
+## 10 Setting Up Access to APNs and/or FCM
 
-Set up access to APNs and FCM and configure them in your application. Please note that starting with FCM is recommended, because it is significantly less complicated than setting up APNs. You can return to this step later on to set up APNs.
+Set up access to APNs and/or FCM and configure them in your application. Please note that starting with FCM is recommended, because it is significantly less complicated than setting up APNs. You can return to this step later on to set up APNs.
 
 For more details, see [How to Set Up the Apple Push Notification Server](setting-up-apple-push-notification-server) and [How to Set Up the Firebase Cloud Messaging Server](setting-up-google-firebase-cloud-messaging-server).
 

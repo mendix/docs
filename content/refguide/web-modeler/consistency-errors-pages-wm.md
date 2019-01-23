@@ -56,7 +56,7 @@ Possible errors that you can get when a page is expecting a context that is unav
 
 When a page expects a context that is not passed to it from another page or a microflow, you will get consistency errors. 
 
-Let us study an example: the **Customers** page contains a list view with a list of all customer names (**Customer** is set as **Entity** in the **Data Source** properties), and a **Details** button outside of the list view (placed in a [container](page-editor-widgets-layouts-wm#container-overview) only). The **Details** button opens a **Customer Details** page when a user clicks it (the **On Click Action** for the button is set to **Page**). 
+Let us study an example: the **Customers** page contains a list view with a list of all customer names (**Customer** is set as **Entity** in the **Data Source** properties), and a **Details** button outside of the list view (placed in a [container](page-editor-widgets-layouts-wm#container-overview) only). The **Details** button opens a **Customer Details** page when a user clicks it (the **On Click Action** for the button is set to **Page** and the **Create Object** option is disabled). 
 
 ![Button Properties on the Customers Page](attachments/consistency-errors-pages-wm/wm-customers-page.png)
 
@@ -94,15 +94,14 @@ If you want to create a new customer and fill in the customer's details on the *
 
 1. Open the **Customers** page.
 
-2. Open properties for the **Details** button, and set **More** > **Create Object** as an **On Click Action**.
+2. Open properties for the **Details** button > the **On Click Action** section and enable the **Create Object**.
+
+     {{% image_container width="350" %}}![Create Object Option Enabled](attachments/consistency-errors-pages-wm/wm-create-object-option-enabled.png)
+     {{% /image_container %}}
 
 3. Set **Customer** as **Entity**.
 
-4.  Set **Customer Details** as **Page**.
-
-    ![Button Properties](attachments/consistency-errors-pages-wm/wm-button-create-object.png)
-
-5. Change the button's caption from **Details** to **Add**, as this button will now create a new customer, and not show details of an existing customer.
+4. Change the button's caption from **Details** to **Add**, as this button will now create a new customer, and not show details of an existing customer.
 
 Now when a user clicks this button, the **Customer Details** page will open, and the new *Customer* object will be created. 
 

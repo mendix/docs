@@ -33,7 +33,7 @@ Follow these steps:
 
     The 'XLSFile' object inherits from the 'Filedocument' object. If you don't know how to achieve this, please take a look at [How to Work with Images & Files](../data-models/working-with-images-and-files).
 2. Create **Overview** and **Detail** pages to manage objects of type **Customer** and **Order**.
-3.  Create **menu items** to access the **Order** and the **Customer** overview pages.
+3.  Create menu items to access the **Order** and the **Customer** overview pages.
 4.  Download the **Excel Importer** and **Mx Model Reflection** modules from the appstore.
 5.  Create menu items for the **ExcelImportOverview** and the **MxObjects_Overview** pages. Those pages already exist within the _**USE_ME** folders of the downloaded modules.
 6.  Configure the **Administrator** user role to have the **Configurator** modu lerole for the **Excel Importer** module, and the **ModelAdministrator** module role for the **Mx Model Reflection** module.

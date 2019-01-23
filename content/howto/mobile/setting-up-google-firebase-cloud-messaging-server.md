@@ -11,7 +11,7 @@ You can use Google's Firebase Cloud Messaging service to send push notifications
 
 ## 2 Prerequisites
 
-* Have a Firebase account
+* A Firebase account
 
 ## 3 Setting up a Firebase project
 
@@ -35,11 +35,11 @@ From here, continue with step 4, below.
 
 ### 3.b Creating a New Firebase Cloud Messaging Project
 
-### 3.b Step 1 – Log In to the Developers Console
+#### 3.b Step 1 – Log In to the Developers Console
 
 Open up the Firebase [developers console](https://console.firebase.google.com/) and log in with your Google id.
 
-### 3.b Step 2 – Create Project
+#### 3.b Step 2 – Create Project
 
 Click `Create new project` and fill in the project name and region for your application. Then click `Create`.
 
@@ -51,11 +51,15 @@ If you wish to send push notifications to iOS devices through FCM, you will need
 
 Navigate to the 'Cloud messaging' tab.
 
+![](attachments/push_notifications_cloud_messaging.png)
+
 On this tab, upload either your APNs key or your APNs certificate(s).
 
 ## 5 Set up a service account
 
 In the top left corner of the screen, click on the little cogwheel and select `Project settings`. Then navigate to the 'Service accounts' tab.
+
+![](attachments/push_notifications_service_accounts.png)
 
 On this page, you can press 'Generate new private key'. Store the resulting file in a secure location. You'll use this file when configuring FCM in the backend of your Mendix application.
 
@@ -63,7 +67,9 @@ The file you just created gives API access to all available Firebase services fo
 
 ## 6 Download the Google Services config files
 
-In addition to the backend configuration set up in the previous steps, you'll need additional files that will be bundled as part of your mobile application. To obtain these, again click on the little cogwheel in the top left and select 'Project settings'. Then navigate to the 'Cloud messaging' tab.
+In addition to the backend configuration set up in the previous steps, you'll need additional files that will be bundled as part of your mobile application. To obtain these, again click on the little cogwheel in the top left and select 'Project settings'. Then navigate to the 'General' tab.
+
+![](attachments/push_notifications_platforms.png)
 
 The list at the bottom shows the Android and iOS applications that you have configured for your Firebase project. Select the Android application and click on 'google-services.json'. Then click on the iOS application and click on 'GoogleService-Info.plist'. Store both files in a secure location. You will need these when building your mobile application.
 

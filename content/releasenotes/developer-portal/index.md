@@ -10,7 +10,7 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud V3, and other deploym
 
 ## 2019
 
-### January 24, 2019
+### January 24th, 2019
 
 #### IBM Watson Connector Suite
 

@@ -8,7 +8,7 @@ tags: ["IBM", "Watson", "AI", "Translation", "Image Analysis", "Assistant", "Spe
 
 ## 1 Introduction
 
-IBM Watson™ is a suite of services which gives you access to a range of AI techniques and applications. These services are available over the web and cover the following areas:
+IBM Watson™ is a suite of services which gives you access to a range of AI and Machine Learning techniques and applications. These services are available over the web and cover the following areas:
 
 * AI Assistant
 * Knowledge
@@ -41,14 +41,14 @@ To view the credentials:
 For more information see [Service credentials for Watson services](https://cloud.ibm.com/docs/services/watson/getting-started-credentials.html).
 
 {{% alert type="warning" %}}
-If you have an existing Watson service it may give *Username* and *Password* in the credentials. To obtain credentials in the correct format, you will have to create a **new** service which has *API Key* and *URL* as the credentials. It is not possible to obtain the API Key/URL style of credentials for an existing service which uses Username/Password credentials.
+If you have an existing Watson service it may give a *Username* and *Password* in the credentials. To obtain credentials in the correct format, you will have to create a **new** service which has *API Key* and *URL* as the credentials. It is not possible to obtain the API Key/URL style of credentials for an existing service which uses Username/Password credentials.
 {{% /alert %}}
 
 If you are running your app on IBM Cloud and the Watson resources have been added to your IBM Cloud project, the credentials can be picked up automatically via VCAP. See section 8, [Watson Service Configuration](#WatSerCon) for more information on VCAP. This section also covers the IBM Watson Connector Suite configuration for storing credentials. If you are testing your app locally, or in another environment, you will need to enter these credentials manually when you use the connector in your Mendix app.
 
 #### 1.1.2 IBM Watson Connector Suite
 
-Import the [IBM Watson Connector Suite](https://appstore.home.mendix.com/link/app/2860/) into your project from the App Store. This will give you access to the connector actions within your microflows. IBM starter apps for Watson have the Suite already included.
+Import the [IBM Watson Connector Suite](https://appstore.home.mendix.com/link/app/2860/) into your project from the App Store. This will give you access to the connector actions within your microflows. IBM starter apps for Watson have the suite already included.
 
 ![The list of IBM Watson connector actions available in Mendix microflows](attachments/ibm-watson-connector/connectorlist.png)
 
@@ -73,7 +73,7 @@ If there is no connector for the service you want, you can use Mendix native RES
 
 To use IBM Watson Assistant, you must first create an **assistant** for your IBM Cloud service. An assistant is given a **dialog skill** which defines the flow of a conversation for your assistant. Watson uses natural-language processing and machine learning to choose the appropriate response within the dialog skill.
 
-The easiest way to set up an assistant is through the Watson Assistant Tool. Here you can create an assistant and either give the assistant a sample skill, or create a skill which supports your own dialog requirements and give this to your assistant. More information about assistants and dialog skills, and how they need to be set up, is available in the [Watson Assistant: Getting started tutorial](https://cloud.ibm.com/docs/services/assistant/getting-started.html#getting-started).
+The easiest way to set up an assistant is through the Watson Assistant Tool. Here you can create an assistant. You can give the assistant a sample skill or, alternatively, create a skill which supports your own dialog requirements and give this to your assistant. More information about assistants and dialog skills, and how they need to be set up, is available in the [Watson Assistant: Getting started tutorial](https://cloud.ibm.com/docs/services/assistant/getting-started.html#getting-started).
 
 {{% alert type="info" %}}
 There is no action in the IBM Watson Connector Suite to allow you to create or configure an assistant. If you wish to do this programmatically, you will need to use Mendix's native REST.
@@ -102,11 +102,11 @@ This is a string containing the API key assigned to the Watson Assistant service
 
 #### 2.1.2 Url
 
-This is a string containing the Url assigned to the Watson Assistant service in your IBM Cloud.  See section 1.1.1 [IBM Cloud](#IBMCloud) for more details.
+This is a string containing the URL assigned to the Watson Assistant service in your IBM Cloud.  See section 1.1.1 [IBM Cloud](#IBMCloud) for more details.
 
 #### 2.1.3 Assistant
 
-This is an **Assistant** object which provides the **Assistant ID** attribute of an assistant you have set up for your IBM Cloud service. The Assistant ID can be found by selecting **View API Details** from the assistant in your IBM Cloud service.
+This is an **Assistant** object in which the **Assistant ID** attribute contains the ID of an assistant you have set up for your IBM Cloud service. The Assistant ID of your Watson Assistant can be found by selecting **View API Details** from the assistant in your IBM Cloud service.
 
 ![Where to find the Watson Assistant API details](attachments/ibm-watson-connector/assistant-api-details.png)
 
@@ -116,9 +116,9 @@ This is an object of type *SessionContext* which is used to maintain the context
 
 ### 2.2 Assistant – Send Message
 
-This action sends a message from your app to a specified session. This will use the assistant associated with this session analyze the message and return an appropriate response. See [Watson Assistant API: Send user input to assistant](https://cloud.ibm.com/apidocs/assistant-v2#send-user-input-to-assistant) for more details.
+This action sends a message from your app to a specified session. This will use the assistant associated with this session to analyze the message and return an appropriate response. See [Watson Assistant API: Send user input to assistant](https://cloud.ibm.com/apidocs/assistant-v2#send-user-input-to-assistant) for more details.
 
-![](attachments/ibm-watson-connector/assistant-send-message.png)
+![Configuration dialog for the Assistant - Send Message action](attachments/ibm-watson-connector/assistant-send-message.png)
 
 #### 2.2.1 Apikey
 
@@ -126,7 +126,7 @@ This is a string containing the API key assigned to the Watson Assistant service
 
 #### 2.2.2 Url
 
-This is a string containing the Url assigned to the Watson Assistant service in your IBM Cloud.  See section 1.1.1 [IBM Cloud](#IBMCloud) for more details.
+This is a string containing the URL assigned to the Watson Assistant service in your IBM Cloud.  See section 1.1.1 [IBM Cloud](#IBMCloud) for more details.
 
 #### 2.2.3 Session Context
 
@@ -166,7 +166,7 @@ This is a string containing the API key assigned to the Speech to Text service i
 
 ### 3.2 Url
 
-This is a string containing the Url assigned to the Speech to Text service in your IBM Cloud.  See section 1.1.1 [IBM Cloud](#IBMCloud) for more details.
+This is a string containing the URL assigned to the Speech to Text service in your IBM Cloud.  See section 1.1.1 [IBM Cloud](#IBMCloud) for more details.
 
 ### 3.3 Audio File
 
@@ -194,9 +194,9 @@ This is the language in which the text detected in the speech file should be tra
 
 This is the name you want to give to the object of type SpeechReturn which is returned by the IBM Speech to Text Analyzer.
 
-The domain model for this action allows for several interim responses. In this implementation, however, you will only get a final result (with `_final` set to true) because the connector cannot analyze a stream, only a complete file.
+The domain model for this action allows for several interim responses. In this implementation, however, you will only get final results (with `_final` set to true) because the connector cannot analyze a stream, only a complete file.
 
-![](attachments/ibm-watson-connector/speechtotext-dm.png)
+![Domain model for Speech to Text connector actions](attachments/ibm-watson-connector/speechtotext-dm.png)
 
 If Watson detects that the speech file contains multiple sentences or speakers, each recognized sentence will be provided via a separate **Result** object.
 
@@ -206,7 +206,7 @@ The text which has been decoded is in the object of type **Alternative** in the 
 
 This connector uses the [IBM Text to Speech service](https://cloud.ibm.com/docs/services/text-to-speech/index.html) to 'speak' some text. It converts a string containing text into a sound object corresponding to the synthesis of the text using a specified voice. This voice can sound male or female and is optimized for a particular language. Some voices can, depending on their capabilities, add extra vocal signals such as speed, timbre, or emotional cues.
 
-![](attachments/ibm-watson-connector/texttospeech-synthesize.png)
+![Configuration dialog for the Text To Speech - Synthesize action](attachments/ibm-watson-connector/texttospeech-synthesize.png)
 
 More information on the APIs for the IBM Watson text to speech service is available here: [IBM Cloud API Docs / Text to Speech](https://cloud.ibm.com/apidocs/text-to-speech).
 
@@ -216,7 +216,7 @@ This is a string containing the API key assigned to the Text to Speech service i
 
 ### 4.2 Url
 
-This is a string containing the Url assigned to the Text to Speech service in your IBM Cloud.  See section 1.1.1 [IBM Cloud](#IBMCloud) for more details.
+This is a string containing the URL assigned to the Text to Speech service in your IBM Cloud.  See section 1.1.1 [IBM Cloud](#IBMCloud) for more details.
 
 ### 4.3 Text
 
@@ -244,7 +244,7 @@ This is the name you wish to assign to an object of type Speech which contains t
 
 This connector uses the [Tone Analyzer](https://cloud.ibm.com/docs/services/tone-analyzer/index.html) to detect emotional and language tones in written text.
 
-![](attachments/ibm-watson-connector/toneanalyzer-analyzetone.png)
+![Configuration dialog for the Tone Analyzer - Analyze Tone action](attachments/ibm-watson-connector/toneanalyzer-analyzetone.png)
 
 More information on the APIs for the IBM Watson Analyze Tone service is available here: [IBM Cloud API Docs / Tone Analyzer](https://cloud.ibm.com/apidocs/tone-analyzer).
 
@@ -254,7 +254,7 @@ This is a string containing the API key assigned to the Tone Analyzer service in
 
 ### 5.2 Url
 
-This is a string containing the Url assigned to the Tone Analyzer service in your IBM Cloud.  See section 1.1.1 [IBM Cloud](#IBMCloud) for more details.
+This is a string containing the URL assigned to the Tone Analyzer service in your IBM Cloud.  See section 1.1.1 [IBM Cloud](#IBMCloud) for more details.
 
 ### 5.3 Text
 
@@ -264,7 +264,7 @@ This is a string containing the text to be analyzed. You can submit no more than
 
 This is the name you wish to assign to an object of type ToneAnalyzerResponse which is the response received from Watson. This is associated with the responses from the Tone Analyzer.
 
-![](attachments/ibm-watson-connector/toneanalyzer-dm.png)
+![Domain model for Tone Analyzer connector actions](attachments/ibm-watson-connector/toneanalyzer-dm.png)
 
 {{% alert type="info" %}}
 In the previous version of the Tone Analyzer, tones were split into *Tone Categories*. This additional level of categorization has been removed from the current version of the Tone Analyzer.
@@ -296,14 +296,14 @@ The IBM Watson Connector Suite provides three actions which allow you to use the
 * Get Translation Models
 * Translate Language
 
-### 6.1 Translation – Get Identifiable Languages
+### 6.1 Translation – Get Identifiable Languages{#getIdentifiableLanguages}
 
 This action is part of the Language Translator service and returns a list of languages which are recognized by the Watson Language Translation Service. Each language is represented by a code and a name. These languages are used as the input to the Translate language action, below.
 
-![](attachments/ibm-watson-connector/translation-getidentifiablelanguages.png)
+![Configuration dialog for the Translation - Get Identifiable Languages action](attachments/ibm-watson-connector/translation-getidentifiablelanguages.png)
 
 {{% alert type="info" %}}
-Note that [Translate Language](#translatelanguage) cannot translate between any possible combination of languages. If translation between languages is not supported by Watson (for example, _Traditional Chinese_ to _Catalan_), the [Translate Language](#translatelanguage) action will throw an error. The language pairs which are supported by the [Translate Language](#translatelanguage) action can be identified from the results of the [Get Translation Models](#getTranslationModels) action.
+Note that [Translate Language](#translate-language) cannot translate between any possible combination of languages. If translation between languages is not supported by Watson (for example, _Traditional Chinese_ to _Catalan_), the [Translate Language](#translate-language) action will throw an error. The language pairs which are supported by the [Translate Language](#translate-language) action can be identified from the results of the [Get Translation Models](#getTranslationModels) action.
 {{% /alert %}}
 
 #### 6.1.1 Apikey
@@ -312,7 +312,7 @@ This is a string containing the API key assigned to the Language Translator serv
 
 #### 6.1.2 Url
 
-This is a string containing the Url assigned to the Language Translator service in your IBM Cloud.  See section 1.1.1 [IBM Cloud](#IBMCloud) for more details.
+This is a string containing the URL assigned to the Language Translator service in your IBM Cloud.  See section 1.1.1 [IBM Cloud](#IBMCloud) for more details.
 
 #### 6.1.3 Variable (List of Language)
 
@@ -333,7 +333,7 @@ IBM provides a number of standard models, and it is possible to extend these wit
 The IBM Watson Connector Suite does not support the creation and deletion of custom models. you will need to do this using the native REST capabilities of Mendix.
 {{% /alert %}}
 
-![](attachments/ibm-watson-connector/translation-gettranslationmodels.png)
+![Configuration dialog for the Translation - Get Translation Models action](attachments/ibm-watson-connector/translation-gettranslationmodels.png)
 
 #### 6.2.1 Apikey
 
@@ -341,11 +341,11 @@ This is a string containing the API key assigned to the Language Translator serv
 
 #### 6.2.2 Url
 
-This is a string containing the Url assigned to the Language Translator service in your IBM Cloud.  See section 1.1.1 [IBM Cloud](#IBMCloud) for more details.
+This is a string containing the URL assigned to the Language Translator service in your IBM Cloud.  See section 1.1.1 [IBM Cloud](#IBMCloud) for more details.
 
 #### 6.2.3 Languages
 
-This is a list of objects of type **Language**.
+This is a list of objects of type **Language**. You can create this list using the *Get Identifiable Languages* action, described [above](#getIdentifiableLanguages).
 
 Each translation model which is retrieved from the service will have a pair of languages, a source language and a target language. The languages on the model are associated with the languages in the supplied list. These languages are used in the **Translate Language** action to identify the source and target languages.
 
@@ -360,18 +360,20 @@ Each TranslationModel object is associated with two languages:
 * via TranslationModel_SourceLanguage to the source language
 * via TranslationModel_TargetLanguage for the language to be translated to
 
-### 6.3 Translation – Translate Language{#translatelanguage}
+### 6.3 Translation – Translate Language{#translate-language}
 
 This action is part of the Language Translator service and translates a piece of text from one language to another using the *default* translation model for that pair of languages.
 
-![](attachments/ibm-watson-connector/translation-translatelanguage.png)
+![Configuration dialog for the Translation - Translate Language action](attachments/ibm-watson-connector/translation-translatelanguage.png)
 
 The languages are not explicit in the parameters of the action, but are identified by associating the **Translation** object which is passed with two **Language** objects via the following associations:
 
 * Translation_TargetLanguage – the language you are translating to
 * Translation_SourceLanguage – the language you are translating from
 
-![](attachments/ibm-watson-connector/translation-dm.png)
+You can create the objects of entity type Language using the *Get Identifiable Languages* action, described [above](#getIdentifiableLanguages).
+
+![Domain model for Translation connector actions](attachments/ibm-watson-connector/translation-dm.png)
 
 {{% alert type="info" %}}
 Note that not all pairs of languages are supported. For example, you can translate to and from English and Spanish and English and Portuguese. However, there is no model in Watson to translate Spanish to Portuguese. The IBM Watson Connector Suite does not check whether there is a valid model before it passes the language pair to Watson.
@@ -389,7 +391,7 @@ This is a string containing the API key assigned to the Language Translator serv
 
 #### 6.3.2 Url
 
-This is a string containing the Url assigned to the Language Translator service in your IBM Cloud.  See section 1.1.1 [IBM Cloud](#IBMCloud) for more details.
+This is a string containing the URL assigned to the Language Translator service in your IBM Cloud.  See section 1.1.1 [IBM Cloud](#IBMCloud) for more details.
 
 #### 6.3.3 Translation
 
@@ -421,17 +423,17 @@ The [IBM Watson Visual Recognition service](https://cloud.ibm.com/docs/services/
 
 The IBM Watson Connector Suite consists of five actions to classify images:
 
-* Classify Image
-* Create Classifier
-* Delete Classifier
-* Detect Faces
-* Get Classifiers
+* [Classify Image](#classifyImage)
+* [Create Classifier](#createClassifier)
+* [Delete Classifier](#deleteClassifier)
+* [Detect Faces](#detectFaces)
+* [Get Classifiers](#getClassifiers)
 
-### 7.1 Visual Recognition – Classify Image
+### 7.1 Visual Recognition – Classify Image{#classifyImage}
 
-This action passes an image to the Visual Recognition service which uses either its default classifiers or custom classifiers to analyze the image and identify the contents.
+This action passes an image to the Visual Recognition service which uses either its built-in classifiers or custom classifiers to analyze the image and identify the contents.
 
-![](attachments/ibm-watson-connector/visualrecognition-classifyimage.png)
+![Configuration dialog for the Visual Recognition - Classify Image action](attachments/ibm-watson-connector/visualrecognition-classifyimage.png)
 
 More information on the APIs for the IBM Watson Visual Recognition service is available here: [IBM Cloud API Docs / Visual Recognition](https://cloud.ibm.com/apidocs/visual-recognition).
 
@@ -441,7 +443,7 @@ This is a string containing the API key assigned to the Visual Recognition servi
 
 #### 7.1.2 Url
 
-This is a string containing the Url assigned to the Visual Recognition service in your IBM Cloud.  See section 1.1.1 [IBM Cloud](#IBMCloud) for more details.
+This is a string containing the URL assigned to the Visual Recognition service in your IBM Cloud.  See section 1.1.1 [IBM Cloud](#IBMCloud) for more details.
 
 #### 7.1.3 Visual Request Object
 
@@ -460,9 +462,9 @@ This is an object of type **VisualRecognitionImage** which contains the image wh
 This is a list of the classifiers which Watson should use to classify the image. Before you use **Classify Image** you will need to get a list of available classifiers using the **Get Classifier** action.
 
 {{% alert type="info" %}}
-To use default IBM classifiers such as *default*, *food*, or *explicit*, you'll need to create  Classifier Mendix object for every classifier. Set the **Classifier Id** to the classifier_id of the default IBM classifier.
+To use built-in IBM classifiers such as *default*, *food*, or *explicit*, you will need to create *Classifier* object for the classifier(s) you wish to use. Set the **Classifier Id** to the classifier_id of the IBM classifier. The built-in classifiers are described in the IBM documentation [Classify an image](https://cloud.ibm.com/apidocs/visual-recognition#classify-an-image).
 
-If the Classifiers list is empty classification will be done with the _default_ classifier.
+If the Classifiers list is empty, classification will be performed using the _default_ classifier.
 {{% /alert %}}
 
 #### 7.1.4 Variable (List of Classifier)
@@ -471,13 +473,13 @@ This is the name of the list of Classifier objects returned from Watson.
 
 Associated with each of the classifier objects will be zero or more **ClassifierClass** objects. Each of these contain the **Name** of content which Watson has identified using the classifier, and the **Score** which is an indication of the confidence that Watson has that it has correctly identified the content, with 1.0 indicating complete confidence in the identification.
 
-![](attachments/ibm-watson-connector/visualrecognition-dm.png)
+![Domain model for Visual Recognition connector actions](attachments/ibm-watson-connector/visualrecognition-dm.png)
 
-### 7.2 Visual Recognition – Create Classifier
+### 7.2 Visual Recognition – Create Classifier{#createClassifier}
 
 This action allows you to train a new classifier for the Visual Recognition service by uploading zip files containing images.
 
-![](attachments/ibm-watson-connector/visualrecognition-createclassifier.png)
+![Configuration dialog for the Visual Recognition - Create Classifier action](attachments/ibm-watson-connector/visualrecognition-createclassifier.png)
 
 You can use a number of files which contain positive examples: images which depict the visual subject of this class. These are stored as **TrainingImagesZipFile** entities. The name of the class is in the *ClassName* attribute of the *TrainingImagesZipFile* entity. Each positive class is associated with the **Classifier** being created via the *Classifier_positiveTrainingImagesZipFiles* association.
 
@@ -510,7 +512,7 @@ This is a string containing the API key assigned to the Visual Recognition servi
 
 #### 7.2.2 Url
 
-This is a string containing the Url assigned to the Visual Recognition service in your IBM Cloud.  See section 1.1.1 [IBM Cloud](#IBMCloud) for more details.
+This is a string containing the URL assigned to the Visual Recognition service in your IBM Cloud.  See section 1.1.1 [IBM Cloud](#IBMCloud) for more details.
 
 #### 7.2.3 Classifier
 
@@ -521,15 +523,15 @@ This is an object of type Classifier. This is associated with the following obje
 
 The **Name** attribute of the Classifier is the name of the classifier which will be created by Watson. For example "Mammals" for a classifier identifying mammals.
 
-![](attachments/ibm-watson-connector/visualrecognition-dm.png)
+![Domain model for Visual Recognition connector actions](attachments/ibm-watson-connector/visualrecognition-dm.png)
 
 #### 7.2.4 Variable (String)
 
 This is the name of a string containing the ID of the new classifier.
 
-### 7.3 Visual Recognition – Delete Classifier
+### 7.3 Visual Recognition – Delete Classifier{#deleteClassifier}
 
-![](attachments/ibm-watson-connector/visualrecognition-deleteclassifier.png)
+![Configuration dialog for the Visual Recognition - Delete Classifier action](attachments/ibm-watson-connector/visualrecognition-deleteclassifier.png)
 
 #### 7.3.1 Apikey
 
@@ -537,7 +539,7 @@ This is a string containing the API key assigned to the Visual Recognition servi
 
 #### 7.3.2 Url
 
-This is a string containing the Url assigned to the Visual Recognition service in your IBM Cloud.  See section 1.1.1 [IBM Cloud](#IBMCloud) for more details.
+This is a string containing the URL assigned to the Visual Recognition service in your IBM Cloud.  See section 1.1.1 [IBM Cloud](#IBMCloud) for more details.
 
 #### 7.3.3 Classifier id
 
@@ -548,16 +550,16 @@ This is the id of the classifier which is to be deleted. The Classifier id is he
 The action returns *true* if the delete request is accepted. Otherwise it throws an error.
 
 {{% alert type="info" %}}
-You cannot delete an IBM default classifier, for example *default*, *food*, or *explicit*.
+You cannot delete an IBM built-in classifier, for example *default*, *food*, or *explicit*.
 
 It may take several minutes to fully delete a classifier. Any quota for the maximum number of custom classifier models will not be updated until the classifier has been deleted fully.
 {{% /alert %}}
 
-### 7.4 Visual Recognition – Detect Faces
+### 7.4 Visual Recognition – Detect Faces{#detectFaces}
 
 This action allows you to analyze and get data about faces in images. Responses can include estimated age and gender.
 
-![](attachments/ibm-watson-connector/visualrecognition-detectfaces.png)
+![Configuration dialog for the Visual Recognition - Detect Faces action](attachments/ibm-watson-connector/visualrecognition-detectfaces.png)
 
 #### 7.4.1 Apikey
 
@@ -565,7 +567,7 @@ This is a string containing the API key assigned to the Visual Recognition servi
 
 #### 7.4.2 Url
 
-This is a string containing the Url assigned to the Visual Recognition service in your IBM Cloud.  See section 1.1.1 [IBM Cloud](#IBMCloud) for more details.
+This is a string containing the URL assigned to the Visual Recognition service in your IBM Cloud.  See section 1.1.1 [IBM Cloud](#IBMCloud) for more details.
 
 #### 7.4.3 Image
 
@@ -580,7 +582,6 @@ The image must
   * jpg
   * gif
   * tiff
-
 
 #### 7.4.4 Variable (List of Face)
 
@@ -604,9 +605,11 @@ If there are more than ten faces in an image, these will all be detected but the
 The attributes which were used in previous versions to identify individuals have been removed in this version. These were: IdentityName, IdentityScore, and TypeHierarchy. For more details, see the [IBM Watson Release Notes](https://cloud.ibm.com/docs/services/visual-recognition/release-notes.html#2april2018).
 {{% /alert %}}
 
-### 7.5 Visual Recognition – Get Classifiers
+### 7.5 Visual Recognition – Get Classifiers{#getClassifiers}
 
-![](attachments/ibm-watson-connector/visualrecognition-getclassifiers.png)
+This action returns a list of *custom* classifiers which can be used in visual recognition.
+
+![Configuration dialog for the Visual Recognition - Get Classifiers action](attachments/ibm-watson-connector/visualrecognition-getclassifiers.png)
 
 #### 7.5.1 Apikey
 
@@ -614,13 +617,17 @@ This is a string containing the API key assigned to the Visual Recognition servi
 
 #### 7.5.2 Url
 
-This is a string containing the Url assigned to the Visual Recognition service in your IBM Cloud.  See section 1.1.1 [IBM Cloud](#IBMCloud) for more details.
+This is a string containing the URL assigned to the Visual Recognition service in your IBM Cloud.  See section 1.1.1 [IBM Cloud](#IBMCloud) for more details.
 
 #### 7.5.3 Variable (List of Classifier)
 
-This is the name to give to a list of Classifier objects which is the complete list of classifiers available in your Visual Recognition service.
+This is the name to give to a list of Classifier objects which is the list of *custom* classifiers available in your Visual Recognition service.
 
-Each Classifier will be contain the following information:
+{{% alert type="info" %}}
+**Get Classifiers** only returns details for custom classifiers. It doesn't return details for built-in IBM classifiers such as *default*, *food*, or *explicit*.
+{{% /alert %}}
+
+Each Classifier object will be contain the following information:
 
 * Name – the classifier name
 * ClassifierId – a unique identifier for this classifier
@@ -629,22 +636,18 @@ Each Classifier will be contain the following information:
 * Status – the training status of classifier; possible values are *ready*, *training*, *retraining*, *failed*. Only classifiers with a status of *ready* can be used to classify an image
 * Explanation – will sometimes contain text describing why training of a classifier has failed
 
-{{% alert type="info" %}}
-**Get Classifiers** only returns details for custom classifiers. It doesn't return details for default IBM classifiers such as *default*, *food*, or *explicit*.
-{{% /alert %}}
-
 ## 8 Watson Service Configuration{#WatSerCon}
 
-Functionality to store the API keys and username/password combinations which are required to access IBM Watson services is built into the Watson Connector Suite example app. An IBM Watson service will require an API key and a URL.
+Functionality to store the API keys and username/password combinations which are required to access IBM Watson services is built into the Watson Connector Suite example app. You need an API key and a URL to access an IBM Watson service.
 
-If the app is running on IBM Cloud, then it can use VCAP to obtain the credentials for the configured services. Support for this functionality is in the project module **WatsonServices** in the folder **USE_ME**.
+If the app is running on IBM Cloud, then it can use VCAP to obtain the credentials for the configured services. Support for this functionality is in the **USE_ME** folder of project module **WatsonServices**.
 If the app is not running on IBM Cloud (for example if you are testing it locally or on a Mendix cloud), then the credentials will have to be supplied manually.
 
 ### 8.1 Getting Credentials Through VCAP
 
 An example of how to check for the VCAP services and import the configured credentials is in the WatsonServices microflow **USE_ME > OnStartUpWatsonAppOnIBMCloud**. In the sample app, this is configured to run automatically in **Project Settings > Runtime > After startup**.
 
-![](attachments/ibm-watson-connector/onstartupwatsonapponibmcloud.png)
+![On Startup Microflow](attachments/ibm-watson-connector/onstartupwatsonapponibmcloud.png)
 
 The microflow does the following:
 
@@ -653,7 +656,7 @@ The microflow does the following:
 * If the VCAP_SERVICE environment variable does exist it will contain the credentials, in JSON format, of all the services which have been allocated to your project on IBM Cloud
 * The action **Import with mapping** is used, together with the mapping **USE_ME > JsonMapping > VCAP_Import_Mapping** to populate an object of type **Config** (see [Import Mapping Action](../import-mapping-action) for more information)
 
-    ![](attachments/ibm-watson-connector/vcap-dm.png)
+    ![Domain model for Watson VCAP Management](attachments/ibm-watson-connector/vcap-dm.png)
 
 * A list of all the **ConfigItem** objects associated with the **Config** item which has just been created is retrieved
 * This list is passed to the microflow **IVK_CreateOrUpdateService** which creates an object of type **WatsonServiceConfig** for each item in the list which contains credentials for a Watson service
@@ -672,7 +675,7 @@ If VCAP is not available, then the WatsonServiceConfig objects will have to be e
 
 The microflow **GetWatsonServiceConfiguration** takes a parameter of WatsonServiceConfigType and checks to see that a configuration of that type has been set up as a **WatsonServiceConfig** object. It returns the object if it exists. If the object does not exist, it posts a message to the log and returns an empty object.
 
-![](attachments/ibm-watson-connector/getwatsonserviceconfiguration.png)
+![GetWatsonServiceConfiguration microflow](attachments/ibm-watson-connector/getwatsonserviceconfiguration.png)
 
 The WatsonServiceConfig entity has the following attributes:
 
@@ -686,8 +689,9 @@ The enumeration **WatsonServiceConfigType** contains a *Name* which reflects the
 
 ## 9 Known Issues
 
-* Not all Watson services are available in all regions.
-The the [Service availability](https://cloud.ibm.com/docs/resources/services_region.html#services_region) document contains a comprehensive list of services and the regions where they are available.
+* Some Watson services are not available in every region.
+
+    The IBM [Service availability](https://cloud.ibm.com/docs/resources/services_region.html#services_region) document contains a comprehensive list of services and the regions where they are available.
 
 ## 10 Not Yet Supported
 

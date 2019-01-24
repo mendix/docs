@@ -10,6 +10,16 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud V3, and other deploym
 
 ## 2019
 
+### January 24, 2019
+
+#### IBM Watson Connector Suite
+
+* An upgraded version of the [IBM Watson Connector Suite](https://appstore.home.mendix.com/link/app/2860/) which supports IBM Watson SDK version 6.11.0 and adds additional microflow actions.
+* An upgraded version of the [IBM Watson Connector Suite Example Project](https://appstore.home.mendix.com/link/app/2880/) which includes the new IBM Watson Connector Suite.
+* An upgraded version of the IBM Watson Blank App starter app which includes the new IBM Watson Connector Suite.
+
+    For more information see the documentation here: [IBM Watson Connector](https://docs.mendix.com/refguide/ibm/ibm-watson-connector).
+
 ### January 21, 2019
 
 #### App Store Fixes

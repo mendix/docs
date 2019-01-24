@@ -30,11 +30,11 @@ Log in to Apple Developer and navigate to [https://developer.apple.com/account/i
 
 ### 2.2 Creating a Key
 
-Click on the **+** icon in the top-right of the screen. This will present you with a new form. Enter a descriptive name for this key, select the **Push Notifications service** check box, and then click **Contine**. On the next page, click **Confirm**.
+Click on the **+** icon in the top-right of the screen. This will present you with a new form. Enter a descriptive name for this key, select the **Push Notifications service** check box, and then press **Contine**. On the next page, press **Confirm**.
 
 ### 2.3 Downloading the Key
 
-Click the download button and store the key in a secure place. Also, copy the **Key ID** for use in the next step.
+Press the download button and store the key in a secure place. Also, copy the **Key ID** for use in the next step.
 
 ### 2.4 Configuring APNs in Your Application
 
@@ -63,7 +63,7 @@ Click **Edit**, scroll to the **Push Notifications** section, and choose to conf
 
 ### 3.3 Creating the CSR File
 
-The wizard now explains how to create a Certificate Signing Request (CSR). Read this description and click **Continue**. During the next step, you should be asked for your CSR file. You may use the same CSR you used to create the app signing certificate. If you do not have one, please follow the instructions as shown below.
+The wizard now explains how to create a Certificate Signing Request (CSR). Read this description and press **Continue**. During the next step, you should be asked for your CSR file. You may use the same CSR you used to create the app signing certificate. If you do not have one, please follow the instructions as shown below.
 
 ![](attachments/19955752/20217898.png)
 

@@ -59,14 +59,13 @@ After importing the module and the dependencies, your error dock will inform you
 
 ## 5 Including the Push Notifications Snippet in the Application's Layouts
 
-To properly register your device with a third-party remote push service (FCM or APNs) and display in-app notifications, you should put the widget on the pages of your app. You can accomplish this by
-dragging the **Online_Snippet** or the **Offline_Snippet** (located in the *_USE ME* folder in the PushNotifications module) into the layouts used by your app. Which of these two you should pick depends on whether your Mendix hybrid app uses an online profile or an offline profile. Note that push notifications do not currently work on the desktop.
+To properly register your device with a third-party remote push service (FCM or APNs) and display in-app notifications, you should put the widget on the pages of your app. You can accomplish this by dragging the **Online_Snippet** or **Offline_Snippet** (located in the **_USE ME** folder in the **PushNotifications** module) into the layouts used by your app. Which of these two you should pick depends on whether your Mendix hybrid app uses an online profile or an offline profile. Note that push notifications do not currently work on the desktop.
 
 If your app is offline-compatible, ensure that a sync button is available to the user so that device registration requests will be synchronized with the server. Also, make sure your app has an offline device profile (for details, see [Offline Device Profile](/refguide7/offline-device-profile) in the Mendix Reference Guide).
 
 {{% alert type="warning" %}}
 
-Please do not remove the button with the caption **Device Registration reference** from the PushNotification_Snippet. It is required to make the widget offline-compatible. Please note that this button is invisible to the user.
+Please do not remove the button with the caption **Device Registration reference** from the **PushNotification_Snippet**. This is required to make the widget offline-compatible. Please note that this button is invisible to the user.
 
 {{% /alert %}}
 

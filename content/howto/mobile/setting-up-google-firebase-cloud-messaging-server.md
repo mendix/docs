@@ -81,7 +81,7 @@ Open your Mendix application, log in as an Admin, and open the **PushNotificatio
 
 Configure FCM as follows:
 
-*	Select the **Enabled** checkbox
-*	Choose a name for the new configuration
+* Select the **Enabled** checkbox
+* Choose a name for the new configuration
 * Enter your Firebase project ID (find this on the Firebase console website)
-*	Upload the private key you downloaded earlier when you created a service account
+* Upload the private key you downloaded earlier when you created a service account

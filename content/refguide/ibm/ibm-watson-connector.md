@@ -20,7 +20,7 @@ IBM Watson™ is a suite of services which gives you access to a range of AI tec
 
 You can find out more about IBM Watson on the [IBM Watson website](https://www.ibm.com/watson/products-services/).
 
-The [IBM Watson Connector Suite](https://appstore.home.mendix.com/link/app/2860/) in the Mendix App Store provides connectors which simplify the use of the Watson services. Including the IBM Watson Connector Suite in your app allows you to add microflow actions which make use of IBM Watson services. The IBM Watson Connector Suite is based on version 6.11.0 of the IBM Watson SDK.
+The [IBM Watson Connector Suite](https://appstore.home.mendix.com/link/app/2860/) in the Mendix App Store provides connectors which simplify the use of the Watson services. Including the IBM Watson Connector Suite in your app allows you to add microflow actions which make use of IBM Watson services. The IBM Watson Connector Suite is based on version 6.11.0 of the [IBM Watson SDK](https://github.com/watson-developer-cloud/java-sdk).
 
 ### 1.1 Prerequisites
 
@@ -28,7 +28,7 @@ The following prerequisites are required to use the IBM Watson Connector Suite:
 
 #### 1.1.1 IBM Cloud{#IBMCloud}
 
-To use IBM Watson services you must have an account on [IBM Cloud](https://www.ibm.com/cloud/). There are various pricing points for this, and there are free options available to allow you to try out IBM services. You can then add Watson services to projects on your IBM Cloud account: see [Getting started with Watson and IBM Cloud](https://console.bluemix.net/docs/services/watson/index.html). Once you have added a service to your account you will be given credentials which you use each time you want to access the service.
+To use IBM Watson services you must have an account on [IBM Cloud](https://www.ibm.com/cloud/). There are various pricing points for this, and there are free options available to allow you to try out IBM services. You can then add Watson services to projects on your IBM Cloud account: see [Getting started with Watson and IBM Cloud](https://cloud.ibm.com/docs/services/watson/index.html). Once you have added a service to your account you will be given credentials which you use each time you want to access the service.
 
 To view the credentials:
 
@@ -38,7 +38,7 @@ To view the credentials:
 
 ![The IBM cloud page where you get the service credentials](attachments/ibm-watson-connector/ibm-credentials.png)
 
-For more information see [Service credentials for Watson services](https://console.bluemix.net/docs/services/watson/getting-started-credentials.html).
+For more information see [Service credentials for Watson services](https://cloud.ibm.com/docs/services/watson/getting-started-credentials.html).
 
 {{% alert type="warning" %}}
 If you have an existing Watson service it may give *Username* and *Password* in the credentials. To obtain credentials in the correct format, you will have to create a **new** service which has *API Key* and *URL* as the credentials. It is not possible to obtain the API Key/URL style of credentials for an existing service which uses Username/Password credentials.
@@ -64,7 +64,7 @@ To use these actions, just drag them into your microflow. Each of the connectors
 {{% alert type="info" %}}
 Not all Watson services are currently supported by the IBM Watson Connector Suite. More services will be added over time.
 
-These connectors are based on version 6.11.0 of the Watson SDK.
+These connectors are based on version 6.11.0 of the [Watson SDK](https://github.com/watson-developer-cloud/java-sdk).
 
 If there is no connector for the service you want, you can use Mendix native REST to use the service yourself. See [How to Consume a REST Service](/howto/integration/consume-a-rest-service).
 {{% /alert %}}
@@ -73,13 +73,13 @@ If there is no connector for the service you want, you can use Mendix native RES
 
 To use IBM Watson Assistant, you must first create an **assistant** for your IBM Cloud service. An assistant is given a **dialog skill** which defines the flow of a conversation for your assistant. Watson uses natural-language processing and machine learning to choose the appropriate response within the dialog skill.
 
-The easiest way to set up an assistant is through the Watson Assistant Tool. Here you can create an assistant and either give the assistant a sample skill, or create a skill which supports your own dialog requirements and give this to your assistant. More information about assistants and dialog skills, and how they need to be set up, is available in the [Watson Assistant: Getting started tutorial](https://console.bluemix.net/docs/services/assistant/getting-started.html#getting-started).
+The easiest way to set up an assistant is through the Watson Assistant Tool. Here you can create an assistant and either give the assistant a sample skill, or create a skill which supports your own dialog requirements and give this to your assistant. More information about assistants and dialog skills, and how they need to be set up, is available in the [Watson Assistant: Getting started tutorial](https://cloud.ibm.com/docs/services/assistant/getting-started.html#getting-started).
 
 {{% alert type="info" %}}
-There is no action in the IBM Watson Connector Suite to allow you to create an assistant. If you wish to do this programmatically, you will need to use Mendix's native REST.
+There is no action in the IBM Watson Connector Suite to allow you to create or configure an assistant. If you wish to do this programmatically, you will need to use Mendix's native REST.
 {{% /alert %}}
 
-More information on the APIs for the IBM Watson Conversation service is available here: [Watson Assistant – API methods summary](https://console.bluemix.net/docs/services/assistant/api-methods.html#api-methods-summary)
+More information on the APIs for the IBM Watson Conversation service is available here: [Watson Assistant – API methods summary](https://cloud.ibm.com/docs/services/assistant/api-methods.html#api-methods-summary)
 
 {{% alert type="info" %}}
 Watson Assistant used to be called Watson Conversation.
@@ -92,7 +92,7 @@ There are two actions supporting Watson Assistant:
 
 ### 2.1 Assistant - Create Session
 
-This action creates a new session for the [Watson Assistant](https://console.bluemix.net/docs/services/assistant/index.html#about). A session is used to send user input to an assistant and receive responses. It also maintains the state of the conversation. See [Watson Assistant API: Create a session](https://cloud.ibm.com/apidocs/assistant-v2#create-a-session) for more details.
+This action creates a new session for the [Watson Assistant](https://cloud.ibm.com/docs/services/assistant/index.html). A session is used to send user input to an assistant and receive responses. It also maintains the state of the conversation. See [Watson Assistant API: Create a session](https://cloud.ibm.com/apidocs/assistant-v2#create-a-session) for more details.
 
 ![Configuration of the Create Session action for Watson Assistant](attachments/ibm-watson-connector/assistant-create-session.png)
 
@@ -106,7 +106,7 @@ This is a string containing the Url assigned to the Watson Assistant service in 
 
 #### 2.1.3 Assistant
 
-This is a string containing the **Assistant ID** of an assistant you have set up for your IBM Cloud service. The Assistant ID can be found by selecting **View API Details** from the assistant in your IBM Cloud service.
+This is an **Assistant** object which provides the **Assistant ID** attribute of an assistant you have set up for your IBM Cloud service. The Assistant ID can be found by selecting **View API Details** from the assistant in your IBM Cloud service.
 
 ![Where to find the Watson Assistant API details](attachments/ibm-watson-connector/assistant-api-details.png)
 
@@ -154,7 +154,7 @@ The AssistantMessageResponse contains the following:
 
 ## 3 Connector Actions: Speech To Text{#SpeechToText}
 
-This action uses the [IBM Watson Speech to Text service](https://console.bluemix.net/docs/services/speech-to-text/index.html) to transcribe audio to text. Audio can be supplied in a number of common formats and the service uses machine intelligence to transcribe the text into one of a number of possible target languages.
+This action uses the [IBM Watson Speech to Text service](https://cloud.ibm.com/docs/services/speech-to-text/index.html) to transcribe audio to text. Audio can be supplied in a number of common formats and the service uses machine intelligence to transcribe the text into one of a number of possible target languages.
 
 ![Parameters for the Mendix connector action for the IBM Watson Speech to Text service](attachments/ibm-watson-connector/speechtotext.png)
 
@@ -183,7 +183,7 @@ The format of the audio file which is to be transcribed. These are listed in the
 All of the formats detailed on the IBM site are supported. For more detail see the [IBM Cloud documentation on audio formats](https://console.bluemix.net/docs/services/speech-to-text/audio-formats.html).
 
 {{% alert type="info" %}}
-BASIC and RAW files are narrow band and fixed rate. Watson Speech to Text expects the rate for BASIC to be 8000 Hz. The rate for RAW is set to 22050 Hz by the connector. The rate for all other file types will be detected automatically.
+Watson Speech to Text expects the sampling rate for BASIC files to be 8000 Hz. For RAW files, the connector doesn't currently support setting a custom sampling rate - files must have a sampling rate of 22050 Hz to be successfully processed. The rate for all other file types will be detected automatically. BASIC files are narrowband and can only be processed by a narrowband model.
 {{% /alert %}}
 
 ### 3.5 Audio Language
@@ -198,11 +198,13 @@ The domain model for this action allows for several interim responses. In this i
 
 ![](attachments/ibm-watson-connector/speechtotext-dm.png)
 
-The text which has been decoded is in the object of type **Alternative** in the **transcript** attribute. The **confidence** indicates the service's confidence in the transcription in a range 0 to 1.
+If Watson detects that the speech file contains multiple sentences or speakers, each recognized sentence will be provided via a separate **Result** object.
+
+The text which has been decoded is in the object of type **Alternative** in the **transcript** attribute. The **confidence** indicates the service's confidence in the transcription in a range 0 to 1. If the speech cannot be clearly recognized, there may be more than one alternative transcription of the same sentence.
 
 ## 4 Connector Actions: Text To Speech – Synthesize{#TextToSpeech}
 
-This connector uses the [IBM Text to Speech service](https://console.bluemix.net/docs/services/text-to-speech/index.html) to 'speak' some text. It converts a string containing text into a sound object corresponding to the synthesis of the text using a specified voice. This voice can sound male or female and is optimized for a particular language. Some voices can, depending on their capabilities, add extra vocal signals such as speed, timbre, or emotional cues.
+This connector uses the [IBM Text to Speech service](https://cloud.ibm.com/docs/services/text-to-speech/index.html) to 'speak' some text. It converts a string containing text into a sound object corresponding to the synthesis of the text using a specified voice. This voice can sound male or female and is optimized for a particular language. Some voices can, depending on their capabilities, add extra vocal signals such as speed, timbre, or emotional cues.
 
 ![](attachments/ibm-watson-connector/texttospeech-synthesize.png)
 
@@ -218,7 +220,7 @@ This is a string containing the Url assigned to the Text to Speech service in yo
 
 ### 4.3 Text
 
-This is a string containing the text to be 'spoken'. This can also contain additional XML instructions on how the text should be performed. For example you can make certain phrases slower or louder than Watson would normally speak them. Depending on the **Voice** chosen, you can add more sophisticated expression to the text. More information is available in IBM's [SSML documentation](https://console.bluemix.net/docs/services/text-to-speech/SSML.html).
+This is a string containing the text to be 'spoken'. This can also contain additional XML instructions on how the text should be performed. For example you can make certain phrases slower or louder than Watson would normally speak them. Depending on the **Voice** chosen, you can add more sophisticated expression to the text. More information is available in IBM's [SSML documentation](https://cloud.ibm.com/docs/services/text-to-speech/SSML.html).
 
 ### 4.4 Voice
 
@@ -240,7 +242,7 @@ This is the name you wish to assign to an object of type Speech which contains t
 
 ## 5 Connector Actions: Tone Analyzer – Analyze Tone{#ToneAnalyzer}
 
-This connector uses the [Tone Analyzer](https://console.bluemix.net/docs/services/tone-analyzer/index.html) to detect emotional and language tones in written text.
+This connector uses the [Tone Analyzer](https://cloud.ibm.com/docs/services/tone-analyzer/index.html) to detect emotional and language tones in written text.
 
 ![](attachments/ibm-watson-connector/toneanalyzer-analyzetone.png)
 
@@ -284,7 +286,7 @@ You can retrieve tone information from two sources:
 
 ## 6 Connector Actions: Language Translator{#LanguageTranslator}
 
-The [IBM Watson Language Translator](https://console.bluemix.net/docs/services/language-translator/index.html) can translate text between languages programmatically.
+The [IBM Watson Language Translator](https://cloud.ibm.com/docs/services/language-translator/index.html) can translate text between languages programmatically.
 
 More information on the APIs for the Language Translator service is available here: [IBM Cloud API Docs / Language Translator](https://cloud.ibm.com/apidocs/language-translator).
 
@@ -301,7 +303,7 @@ This action is part of the Language Translator service and returns a list of lan
 ![](attachments/ibm-watson-connector/translation-getidentifiablelanguages.png)
 
 {{% alert type="info" %}}
-Note that this is NOT the list of all the languages which **Translate Language** can translate. The language pairs which are supported by the **Translate Language** action can be identified from the results of the **Get Translation Models** action.
+Note that [Translate Language](#translatelanguage) cannot translate between any possible combination of languages. If translation between languages is not supported by Watson (for example, _Traditional Chinese_ to _Catalan_), the [Translate Language](#translatelanguage) action will throw an error. The language pairs which are supported by the [Translate Language](#translatelanguage) action can be identified from the results of the [Get Translation Models](#getTranslationModels) action.
 {{% /alert %}}
 
 #### 6.1.1 Apikey
@@ -321,7 +323,7 @@ Each language object consists of two attributes:
 * Name – the English name of the language
 * Code – a code representing the language (for example, **en** for English)
 
-### 6.2 Translation - Get Translation Models
+### 6.2 Translation - Get Translation Models{#getTranslationModels}
 
 This action is part of the Language Translator service and returns a list of translation models in your Language Translator service. You can only translate between two languages if a model exists in the Language Translator service which maps the two languages.
 
@@ -415,7 +417,7 @@ This object will contain the following attributes:
 
 ## 7 Connector Actions: Visual Recognition{#VisualRecognition}
 
-The [IBM Watson Visual Recognition service](https://console.bluemix.net/docs/services/visual-recognition/index.html) uses deep learning algorithms to analyze images for scenes, objects, faces, and other content. The response includes keywords that provide information about the content.
+The [IBM Watson Visual Recognition service](https://cloud.ibm.com/docs/services/visual-recognition/index.html) uses deep learning algorithms to analyze images for scenes, objects, faces, and other content. The response includes keywords that provide information about the content.
 
 The IBM Watson Connector Suite consists of five actions to classify images:
 
@@ -443,11 +445,25 @@ This is a string containing the Url assigned to the Visual Recognition service i
 
 #### 7.1.3 Visual Request Object
 
-This is an object of type **VisualRecognitionImage** which contains the image which is to be classified. The image must be in jpg or png format and be less that 10MB.
+This is an object of type **VisualRecognitionImage** which contains the image which is to be classified. The image must
+
+* have a pixel density of at least 32X32 pixels per inch
+* be less that 10MB
+* be in one of the following formats
+  * png
+  * jpg
+  * gif
+  * tiff
 
 #### 7.1.4 Classifiers
 
 This is a list of the classifiers which Watson should use to classify the image. Before you use **Classify Image** you will need to get a list of available classifiers using the **Get Classifier** action.
+
+{{% alert type="info" %}}
+To use default IBM classifiers such as *default*, *food*, or *explicit*, you'll need to create  Classifier Mendix object for every classifier. Set the **Classifier Id** to the classifier_id of the default IBM classifier.
+
+If the Classifiers list is empty classification will be done with the _default_ classifier.
+{{% /alert %}}
 
 #### 7.1.4 Variable (List of Classifier)
 
@@ -469,7 +485,11 @@ One file contains negative examples: images which are visually similar to the po
 
 For example, if you want to have a classifier to identify different sorts of mammal, you could upload positive class image files "dog", "cat", "pig", and "horse", and a negative one containing images of reptiles.
 
-Each zip file has a maximum size of 100MB and contains less than 10,000 images.
+Each zip file must
+
+* have a maximum size of 100MB
+* contain at least 10 images in jpg or png format (minimum recommended image resolution is 32X32 pixels)
+* contain less than 10,000 images
 
 {{% alert type="info" %}}
 You cannot retrain an existing classifier.
@@ -525,7 +545,7 @@ This is the id of the classifier which is to be deleted. The Classifier id is he
 
 #### 7.3.4 Variable (Boolean)
 
-The action returns *true* if the delete request is accepted. Otherwise it returns *false*.
+The action returns *true* if the delete request is accepted. Otherwise it throws an error.
 
 {{% alert type="info" %}}
 You cannot delete an IBM default classifier, for example *default*, *food*, or *explicit*.
@@ -551,6 +571,17 @@ This is a string containing the Url assigned to the Visual Recognition service i
 
 This is an object of type, or a specialization of, System.Image containing the image in which faces should be detected.
 
+The image must
+
+* have a pixel density of at least 32X32 pixels per inch
+* be less that 10MB
+* be in one of the following formats
+  * png
+  * jpg
+  * gif
+  * tiff
+
+
 #### 7.4.4 Variable (List of Face)
 
 This is the name you wish to assign to a list of objects of type Face. Each object contains information about a face which has been detected in the image.
@@ -570,7 +601,7 @@ Each face object will contain the following:
 {{% alert type="info" %}}
 If there are more than ten faces in an image, these will all be detected but the age and gender confidence may return scores of zero.
 
-The attributes which were used in previous versions to identify individuals have been removed in this version. These were: IdentityName, IdentityScore, and TypeHierarchy.
+The attributes which were used in previous versions to identify individuals have been removed in this version. These were: IdentityName, IdentityScore, and TypeHierarchy. For more details, see the [IBM Watson Release Notes](https://cloud.ibm.com/docs/services/visual-recognition/release-notes.html#2april2018).
 {{% /alert %}}
 
 ### 7.5 Visual Recognition – Get Classifiers
@@ -587,7 +618,7 @@ This is a string containing the Url assigned to the Visual Recognition service i
 
 #### 7.5.3 Variable (List of Classifier)
 
-This is the name to give to a list of Classifier objects which is the complete list of classifiers available in your Visual Recognition service. This includes the standard IBM classifiers, together with any custom classifiers in your service.
+This is the name to give to a list of Classifier objects which is the complete list of classifiers available in your Visual Recognition service.
 
 Each Classifier will be contain the following information:
 
@@ -598,7 +629,11 @@ Each Classifier will be contain the following information:
 * Status – the training status of classifier; possible values are *ready*, *training*, *retraining*, *failed*. Only classifiers with a status of *ready* can be used to classify an image
 * Explanation – will sometimes contain text describing why training of a classifier has failed
 
-## 8 Watson Service Configuration<a name="WatSerCon"></a>
+{{% alert type="info" %}}
+**Get Classifiers** only returns details for custom classifiers. It doesn't return details for default IBM classifiers such as *default*, *food*, or *explicit*.
+{{% /alert %}}
+
+## 8 Watson Service Configuration{#WatSerCon}
 
 Functionality to store the API keys and username/password combinations which are required to access IBM Watson services is built into the Watson Connector Suite example app. An IBM Watson service will require an API key and a URL.
 
@@ -649,7 +684,12 @@ The WatsonServiceConfig entity has the following attributes:
 The enumeration **WatsonServiceConfigType** contains a *Name* which reflects the VCAP value referring to the service. In some cases this is different from the current name of the service (for example the *Assistant* service uses the VCAP name *conversation*). The current name of the service is shown in the *Caption* of the enumeration.
 {{% /alert %}}
 
-## 9 Not Yet Supported
+## 9 Known Issues
+
+* Not all Watson services are available in all regions.
+The the [Service availability](https://cloud.ibm.com/docs/resources/services_region.html#services_region) document contains a comprehensive list of services and the regions where they are available.
+
+## 10 Not Yet Supported
 
 The IBM Watson Connector Suite does not yet have actions for all the APIs of the services which it does support. For example the APIs which allow you to build a conversation without using the IBM Watson Conversation Workspaces Tool.
 
@@ -667,11 +707,11 @@ In addition, the following IBM AI services are not yet supported at all by the I
 10. Watson Studio
 11. PowerAI
 
-## 10 Related Content
+## 11 Related Content
 
-* [Getting started with Watson and IBM Cloud](https://console.bluemix.net/docs/services/watson/index.html)
+* [Getting started with Watson and IBM Cloud](https://cloud.ibm.com/docs/services/watson/index.html)
 * [How to Consume a REST Service](/howto/integration/consume-a-rest-service)
 * [IBM Cloud](https://www.ibm.com/cloud/)
 * [IBM Watson Connector Suite](https://appstore.home.mendix.com/link/app/2860/)
 * [IBM Watson website](https://www.ibm.com/watson/products-services/)
-* [Service credentials for Watson services](https://console.bluemix.net/docs/services/watson/getting-started-credentials.html)
+* [Service credentials for Watson services](https://cloud.ibm.com/docs/services/watson/getting-started-credentials.html)

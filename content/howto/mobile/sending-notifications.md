@@ -31,7 +31,7 @@ You may use the **PrepareMessageData** microflow to generate this entity (but yo
 
 In addition, you can modify the NextTry attribute to influence when the notification is delivered.
 
-As an alternative to providing a contextObjectGuid, you can pass the entity that you would like to use as a context object to the [SendMessage... microflow actions](apis).
+As an alternative to providing a contextObjectGuid, you can pass the entity that you would like to use as a context object to the **SendMessage...** microflow actions.
 
 ## 2 Actions
 

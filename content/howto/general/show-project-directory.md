@@ -25,7 +25,7 @@ By default the directory is located in the MyDocuments section.
 When developing an application the following directories in the project directory are useful to amend the style of the application, add custom widgets and java actions:
 
 1.  ../theme - Here are the .css files stored which can be used to style the application.
-2.  ../javasrouce - Here are the java actions stored.
-3.  ../widgets - Here are the JavaScript actions stored.
+2.  ../javasource - Here the JavaScript actions are stored.
+3.  ../widgets - Here are the widgets are stored.
 
 

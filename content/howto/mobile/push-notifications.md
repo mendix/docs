@@ -5,9 +5,9 @@ menu_order: 10
 tags: ["mobile", "push notification"]
 ---
 
-## 1 Introduction to Push Notifications
+## 1 Introduction
 
-Push notifications enable your app to notify a user of events, even if the user is not actively using the app. This is a native capability available on both Android and iOS devices, and it is controlled through external services via e.g. Firebase Cloud Messaging (FCM) or Apple Push Notifications service (APNs).
+Push notifications enable your app to notify a user of events, even if the user is not actively using the app. This is a native capability available on both Android and iOS devices, and it is controlled through external services via, for example, Firebase Cloud Messaging (FCM) or Apple Push Notifications service (APNs).
 
 The Mendix push notifications solution consists of these two parts:
 
@@ -33,7 +33,7 @@ To use push notifications, make sure you have the following:
 
 ## 4 GCM vs. FCM
 
-Earlier versions of the Mendix Push Notifications Connector supported GCM and APNs. Google has replaced GCM with Firebase Cloud Messaging (FCM).
+Earlier versions of the Mendix Push Notifications Connector supported Google Cloud Messaging (GCM) and APNs. Google has replaced GCM with FCM.
 
 ## 5 Dependencies
 

@@ -35,7 +35,7 @@ On the resulting page, click the green **Download** button. Make sure that **Add
 ![](attachments/19955732/20217885.jpg)
 
 {{% alert type="warning" %}}
-The Push Notifications Connector assumes that the mobile app and the "back-end" part will reside in the same project.
+The Push Notifications Connector assumes that the mobile app and the "back-end" part will reside in the same app project.
 {{% /alert %}}
 
 ## 4 Installing Module Dependencies

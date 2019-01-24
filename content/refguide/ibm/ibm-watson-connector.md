@@ -349,7 +349,7 @@ This is a list of objects of type **Language**. You can create this list using t
 
 Each translation model which is retrieved from the service will have a pair of languages, a source language and a target language. The languages on the model are associated with the languages in the supplied list. These languages are used in the **Translate Language** action to identify the source and target languages.
 
-More information can be found in section 6.3 [Translation - Translate Language](#translatelanguage)
+More information can be found in section 6.3 [Translation - Translate Language](#translate-language)
 
 #### 6.2.4 Variable (List of TranslationModel)
 
@@ -467,7 +467,7 @@ To use built-in IBM classifiers such as *default*, *food*, or *explicit*, you wi
 If the Classifiers list is empty, classification will be performed using the _default_ classifier.
 {{% /alert %}}
 
-#### 7.1.4 Variable (List of Classifier)
+#### 7.1.5 Variable (List of Classifier)
 
 This is the name of the list of Classifier objects returned from Watson.
 

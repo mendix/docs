@@ -56,6 +56,24 @@ Remove your user settings and restart the Modeler.
 1. Rename *\Users\<username>\AppData\Local\Mendix\Settings.sqlite* to *Settings.sqlite.old* 
 2. Restart the Modeler.
 
+### 2.6 Getting an Error with the Message `SharpSvn.SvnRepositoryIOException: At least one property change failed; repository is unchanged`
+
+1. Install TortoiseSVN, as suggested in [System Requirements](/refguide/system-requirements). Use version 1.7.x, which can be downloaded [here](https://sourceforge.net/projects/tortoisesvn/files/1.7.15/).
+2. Open the project folder via the Desktop Modeler by choosing **Show project directory in Explorer** from the project menu
+3. Right-click the white background of the project folder
+4. Select **TortoiseSVN > Properties**
+5. Double-click the `svn:ignore line`
+6. Copy all text by doing **Ctrl+A**, **Ctrl+C**
+7. Paste into a new document in Notepad++ (or another editor that understands newline conventions)
+8. In the bottom right click on `CRLF` and select `LF` instead
+9. Copy all text by doing **Ctrl+A**, **Ctrl+C**
+10. Go back to window showing the `svn:ignore` property
+11. Paste there: **Ctrl+A**, **Ctrl+V**
+12. Click **OK** to close the `svn:ignore` property dialog
+13. Click **OK** to close the `properties` dialog.
+
+Restart the Desktop Modeler.
+
 ## 3 Other Problems
 
 If the solutions here do not work for your version control problems, please submit a request with [Mendix Support](https://support.mendix.com/).

@@ -94,7 +94,7 @@ If you want to create a new customer and fill in the customer's details on the *
 
 1. Open the **Customers** page.
 
-2. Open properties for the **Details** button > the **On Click Action** section and enable the **Create Object**.
+2. Open properties for the **Details** button > the **Events** section and enable the **Create Object** option.
 
      {{% image_container width="350" %}}![Create Object Option Enabled](attachments/consistency-errors-pages-wm/wm-create-object-option-enabled.png)
      {{% /image_container %}}

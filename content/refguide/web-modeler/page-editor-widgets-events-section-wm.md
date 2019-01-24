@@ -38,14 +38,21 @@ The list of available on click actions may differ depending on the widget. For e
 
 ### 2.1 Create Object Option {#create-object-option}
 
-When you set the **On Click Action** to **Open Page**, you can enable the **Create Object** option. You need to pass an object if the selected page expects a context. For example, you want to create a new customer by clicking a **New** button. The **New** button will open a page where you can fill in a new customer's details. This page will expect the object *Customer* to be passed to it. Thus, when setting the on-click action to **Open Page**, you need to enable the Create Object option and select the **Customer** entity.
+When you set the **On Click Action** to **Open Page**, you can enable the **Create Object** option. You need to pass an object if the selected page expects a context. 
+
+Let us study an example: you want to create a new customer by clicking the **New** button. This button will open a page where you can fill in a new customer's details and save them. However, the *Customer Details* page needs to get data first, in other words, it expects the object *Customer* to be passed to it. 
+
+{{% image_container width="350" %}}![Data View Expects the Customer Object](attachments/consistency-errors-pages-wm/wm-data-view-customer.png)
+{{% /image_container %}}
+
+Thus, when setting the on-click action of the **New** button to **Page**, you need to enable the **Create Object** option and select the **Customer** entity.
 
 ![](attachments/page-editor-widgets-events-section-wm/wm-create-object-example.png)
 
-If you enable **Create Object** option, you need to specify the following:
+If you enable **Create Object** option, you need to set the following:
 
 * **Page** – specifies which page should be shown with the new created object. The page should contain a data view that expects this object.
-* **Entity** – specifies the object of which entity will be created and passed to the page as a context.    
+* **Entity** – specifies the object of which entity will be created and passed to the selected page as a context.    
 
 ### 2.2 Open Link Action {#open-link-action}
 

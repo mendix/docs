@@ -11,12 +11,13 @@ This is a list of microflow actions that can be called by your application to se
 
 | Microflow Action Name | Description |
 | --- | --- |
-| SendMessageToDevice | An action to send a message to a device immediately. |
-| SendMessageToDevices | An action to send a message to multiple devices immediately. |
-| SendMessageToUser | An action to send a message to all the devices of a user immediately. |
-| SendMessageToUsers | An action to send a message to all the devices of multiple users immediately. |
+| SendMessageToDevice | Sends a message to a device immediately. |
+| SendMessageToDevices | Sends a message to multiple devices immediately. |
+| SendMessageToUser | Sends a message to all the devices of a user immediately. |
+| SendMessageToUsers | Sends a message to all the devices of multiple users immediately. |
 
-All actions accept a MessageData object as first parameter. The MessageData entity contains all input data for the notification, such as title, body, and timeToLive.
+All actions accept a MessageData object as the first parameter. The MessageData entity contains all input data for the notification, such as title, body, and timeToLive.
+
 You may use the **PrepareMessageData** microflow to generate this entity (but you can also create it manually).
 
 | Parameter | Description |
@@ -26,32 +27,31 @@ You may use the **PrepareMessageData** microflow to generate this entity (but yo
 | TimeToLive | The number of seconds before the notification expires. |
 | Badge | The number to show on the app icon. |
 | ActionName | The name of the action to perform when the recipient clicks on the notification (see below). |
-| ContextObjectGuid | The Mendix object id of the entity to pass to the specified action. |
+| ContextObjectGuid | The Mendix object ID of the entity to pass to the specified action. |
 
 In addition, you can modify the NextTry attribute to influence when the notification is delivered.
 
-As an alternative to providing a contextObjectGuid, you can pass the entity that you would like to use as context object to the **SendMessage...** Microflow actions.
+As an alternative to providing a contextObjectGuid, you can pass the entity that you would like to use as a context object to the [SendMessage... microflow actions](apis).
 
 ## 2 Actions
 
-You can specify actions to be performed once the recipient clicks a notification. To do so, you should specify the available actions in the widget:
+You can specify actions to be performed once the recipient clicks a notification. To do so, you should specify the available actions in the widget by following these steps:
 
-Locate the **Online_Snippet** or **Offline_Snippet** document and open it.
+1.  Locate the **Online_Snippet** or **Offline_Snippet** document and open it.
 
-![](attachments/push_notifications_snippets.png)
+  ![](attachments/push_notifications_snippets.png)
 
-Double click the widget to open the properties.
+2. Double-click the widget to open the properties.
 
-![](attachments/push_notifications_widget_settings.png)
+  ![](attachments/push_notifications_widget_settings.png)
 
-Use the **New** button to add new actions. Each action requires a name, an action type (Open Page or Call Microflow), and optionally an entity (the type of the context object).
-Depending on the action type, you should configure the page to be opened, or the microflow to be called.
+Use the **New** button to add new actions. Each action requires a name, an action type (Open Page or Call Microflow), and optionally an entity (the type of the context object). Depending on the action type, you should configure the page to be opened or the microflow to be called.
 
 ![](attachments/push_notifications_action.png)
 
 The names of the actions can be used as the vlaue of the ActionName attribute of the MessageData entity.
 
-### Shortcomings
+### 2.1 Shortcomings of This Approach
 
-- Nanoflows are not yet supported.
-- Microflows can only be used in online apps. In offline apps, microflows are not supported.
+* Nanoflows are not yet supported
+* Microflows can only be used in online apps; in offline apps, microflows are not supported

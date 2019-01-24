@@ -20,7 +20,7 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud V3, and other deploym
 
     For more information see the documentation here: [IBM Watson Connector](https://docs.mendix.com/refguide/ibm/ibm-watson-connector).
 
-### January 21, 2019
+### January 21st, 2019
 
 #### App Store Fixes
 

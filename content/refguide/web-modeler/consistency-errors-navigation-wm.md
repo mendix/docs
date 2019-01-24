@@ -17,7 +17,7 @@ The most common errors you can come across when configuring a navigation item ar
 
 | Text in the Checks Panel                                     | Element Where the Error Occurs                               | Cause of an Error                                            | Way to Fix                                                   |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| The selected page {Name of the page} expects an object of type {type of object}, which is not available here. | Property 'On click' of menu item {name of the menu item}     | You have set a page that expects an object to be passed to it (for example, a page with a data view) as a menu item. | Pass an object to the page by changing the **On click** property  of the menu item from **Show a page** to **Create object**. For more information, see section [2.1 Error Fix When the Selected Page Expects an Object](#page-expects-an-object) |
+| The selected page {Name of the page} expects an object of type {type of object}, which is not available here. | Property 'On click' of menu item {name of the menu item}.    | You have set a page that expects an object to be passed to it (for example, a page with a data view) as a menu item. | Pass an object to the page: open properties>the **Events** section, set the on-click action to **Page**, and enable the **Create Object** option and select an **Entity**. For more information, see section [2.1 Error Fix When the Selected Page Expects an Object](#page-expects-an-object) |
 | The selected {Name of the page} expects an object of type {type of object} and cannot be used as a home page. Change the page or use a microflow to provide the page with an object. | Property 'On click' of menu item 'Home'                      | You have set a page that expects an object to be passed to it (for example, a page with a data view) as the home page. But by default the home page has no object that is passed to it, because it is the starting point for your user. For a more detailed example, see section [2.2 Error Fix When the Home Page Expects an Object](#home-page-expects-an-object) | Set a different  page as the home page. Alternatively, you can use a microflow that will open the home page and pass a specific object to it. For more information, see section [2.2 Error Fix When the Home Page Expects an Object](#home-page-expects-an-object) |
 | The selected {Name of the page} expects an object of type {type of object} and cannot be used as a home page. Change the page or use a microflow to provide the page with an object. | Default home page of navigation profile 'Hybrid_tablet_app_online'/ 'Hybrid_phone_app_online' | In the Desktop Modeler you can configure several navigation profiles, while only the responsive navigation profile is shown and can be configured in the Web Modeler. The home page of the responsive profile is by default set as the home page for the Hybrid app navigation profiles, which can be configured in the Desktop Modeler only. <br />For more information on profiles, see [Navigation Profile](../navigation-profile) in the *Desktop Modeler category*. | [Sync the Web Modeler with the Desktop Modeler](../../howto/web-modeler/syncing-webmodeler-desktop) and change the home page for the navigation profile of **Hybrid tablet app online** or **Hybrid phone app online** in **Navigation**. |
 
@@ -25,7 +25,7 @@ The most common errors you can come across when configuring a navigation item ar
 
 When you set a page with a data view as a menu item, you get a consistency error, because the page expects an object to be passed to it. 
 
-For example, you have created a menu item called **Program**. This menu item opens the **Program** page. The **Program** page has a data view on it and expects a *ProgramItem* object to be passed to it. As a result, you get a consistency error, as no object is passed to this page from the navigation.
+For example, you have created a menu item called **Program**. This menu item opens the **Program** page but does not create and pass any object to it. The **Program** page has a data view on it and expects a *ProgramItem* object to be passed to it. As a result, you get a consistency error, as no object is passed to this page from the navigation.
 
 ![Scheme Showing the Menu Item Error](attachments/consistency-errors-navigation-wm/wm-page-expects-an-object-error.png)
 
@@ -33,13 +33,11 @@ To fix the error, you can create an object and pass it to the page. Do the follo
 
 1. Open the navigation document.
 
-2.  Open properties of the **Program** menu item, and do the following:<br />
+2. Open properties of the **Program** menu item, and do the following:<br />
 
-    a. Change the **On Click Action** property from **Page** to **More** > **Create Object**.<br />
+    a. In the **Events** section, make sure that the on-click action is set to **Page** and enable the **Create Object** option.<br />
 
-    b. Set **ProgramItem** as **Entity (path)**.<br />
-
-    c. Set **Program** as **Page**.<br />
+    b. Set **ProgramItem** as **Entity**.<br />
 
     {{% image_container width="350" %}}![Menu Item Properties](attachments/consistency-errors-navigation-wm/wm-menu-item-properties.png)
     {{% /image_container %}}

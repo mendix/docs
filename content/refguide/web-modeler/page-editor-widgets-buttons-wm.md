@@ -59,9 +59,9 @@ You can find the list of default actions and properties that need to be configur
 
 | Button         | Default Action | Properties to be Configured                                  |
 | -------------- | -------------- | ------------------------------------------------------------ |
-| Open Page      | Page           | **Page** (Select page)                                       |
+| Open Page      | Page           | **Page** (Select page) <br />If you want to create a new object and pass it as a context to the selected page, enable **Create Object** (disabled by default) and select an **Entity**. For more information on see section [2.1 Create Object Option](page-editor-widgets-events-section-wm#create-object-option) in *Events Section in Widgets of the Web Modeler*. |
 | Call Microflow | Microflow      | **Microflow** (Select microflow)                             |
-| Create Object  | Create Object  | **Entity** and **Page**                                      |
+| Create Object  | Create Object  | **Page** (Select page) and **Entity** (Select entity)        |
 | Save Changes   | Save Changes   | None                                                         |
 | Delete Object  | Delete Object  | None                                                         |
 | Cancel Changes | Cancel Changes | None                                                         |

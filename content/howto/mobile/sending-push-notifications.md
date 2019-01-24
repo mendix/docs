@@ -2,7 +2,7 @@
 title: "Sending Push Notifications"
 parent: "push-notifications"
 menu_order: 20
-tags: ["mobile", "push notification", "microflow"]
+tags: ["mobile", "push notification", "mobile", "microflow"]
 ---
 
 ## 1 Overview
@@ -39,11 +39,11 @@ You can specify actions to be performed once the recipient clicks a notification
 
 1.  Locate the **Online_Snippet** or **Offline_Snippet** document and open it.
 
-  ![](attachments/push_notifications_snippets.png)
+	![](attachments/push_notifications_snippets.png)
 
 2. Double-click the widget to open the properties.
 
-  ![](attachments/push_notifications_widget_settings.png)
+	![](attachments/push_notifications_widget_settings.png)
 
 Use the **New** button to add new actions. Each action requires a name, an action type (Open Page or Call Microflow), and optionally an entity (the type of the context object). Depending on the action type, you should configure the page to be opened or the microflow to be called.
 

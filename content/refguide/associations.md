@@ -66,7 +66,7 @@ You can find correspondence between **Type**/**Owner** and **Multiplicity**/**Na
 
 For more information on multiplicity and navigability, see section [2.3 Multiplicity](association-properties#multiplicity) and section [2.4 Navigability](association-properties#navigability) in *Associations and Their Properties*.
 
-## 6 Parent/Child
+## 6 Parent/Child {#parent-child}
 
 Parent and child settings show you the direction of the association. Parent defines an entity the association starts from, and child defines an entity the association ends with.
 

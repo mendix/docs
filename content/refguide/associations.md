@@ -13,7 +13,7 @@ The **Associations** tab is a tab in the entity properties and has the following
 * [Name](#name) 
 * [Type](#type)
 * [Owner](#owner)
-* [Parent/Child](parent-child)  
+* [Parent/Child](#parent-child)  
 
 ![](attachments/associations/dm-entity-properties-associations-tab.png)
 

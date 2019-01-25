@@ -27,7 +27,8 @@ An association between a persistable entity and a non-persistable entity must st
 
 If you double-click an association, its properties are opened. 
 
-![](attachments/association-properties/dm-association-properties.png)
+{{% image_container width="350" %}}![Association Properties](attachments/association-properties/dm-association-properties.png)
+{{% /image_container %}}
 
 Associations have the following properties:
 

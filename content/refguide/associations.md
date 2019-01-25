@@ -13,8 +13,7 @@ The **Associations** tab is a tab in the entity properties and has the following
 * [Name](#name) 
 * [Type](#type)
 * [Owner](#owner)
-* Parent – defines an entity the association starts from
-* Child – defines an entity the association ends with  
+* [Parent/Child](parent-child)  
 
 ![](attachments/associations/dm-entity-properties-associations-tab.png)
 
@@ -54,7 +53,7 @@ This property defines whether an association has one or two owners. If there is 
 
 ## 5 Type and Owner Relation to Multiplicity and Navigability
 
-**Type** and **Owner** properties of an entity are related to **Multiplicity** and **Navigability** properties of an association. When you change **Type** or **Owner**, you change **Multiplicity** and **Navigability** as well. 
+**Type** and **Owner** properties of an entity are related to **[Multiplicity](association-properties#multiplicity)** and **[Navigability](association-properties#navigability)** properties of an association. When you change **Type** or **Owner**, you change **Multiplicity** and **Navigability** as well. 
 
 You can find correspondence between **Type**/**Owner** and **Multiplicity**/**Navigability** in the table below.
 
@@ -65,7 +64,13 @@ You can find correspondence between **Type**/**Owner** and **Multiplicity**/**Na
 | **Multiplicity**: many-to-many <br />**Navigability**: X objects refer to Y objects | Reference set | Default |
 | **Multiplicity**: many-to-many <br />**Navigability**: X and Y objects refer to each other | Reference set | Both    |
 
-## 6 Association Examples
+For more information on multiplicity and navigability, see section [2.3 Multiplicity](association-properties#multiplicity) and section [2.4 Navigability](association-properties#navigability) in *Associations and Their Properties*.
+
+## 6 Parent/Child
+
+Parent and child settings show you the direction of the association. Parent defines an entity the association starts from, and child defines an entity the association ends with.
+
+## 7 Association Examples
 
 Drawing an association from the **Order** entity to the **Customer** entity results in the following:
 
@@ -177,7 +182,7 @@ In XML, instances of these entities and their association look as follows (note 
 
 ```
 
-## 7 Related Content
+## 8 Related Content
 
 * [Associations and Their Properties](association-properties)
 * [Entities](entities)

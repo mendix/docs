@@ -1,7 +1,6 @@
 ---
 title: "Associations and Their Properties"
 parent: "domain-model"
-menu_order: 30
 tags: ["domain model", "association"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -10,35 +9,45 @@ tags: ["domain model", "association"]
 
 An association describes a relation between entities. In the domain model, an association is represented by a line or arrow between two entities.
 
-The value of the association can only be viewed or edited from the object of the entity that is the _owner_ of the association. Either one entity or both entities can be the owner of the association. If one entity is the owner, there is an arrow that points from the owner to the other entity. If both entities are owners, there is a line between the two entities.
+The value of the association can only be viewed or edited from the object of the entity that is the _[owner](associations#owner)_ of the association. Either one entity or both entities can be the owner of the association. If one entity is the owner, there is an arrow that points from the owner to the other entity. If both entities are owners, there is a line between the two entities.
 
-The cardinality (or number of referred objects) of an association is indicated by the number one (`1`) or a star (`*`) at either side of the association.
+The [multiplicity](#multiplicity) (or number of referred objects) of an association is indicated by the number one (`1`) or a star (`*`) at either side of the association.
 
-The arrow here indicates that **Order** is the owner of the association, and the `1` and `*` indicate that one customer is associated with many orders:
+In the example below, the arrow indicates that **Order** is the owner of the association, and the `1` and `*` indicate that one customer is associated with many orders:
 
 ![](attachments/domain-model-editor/918217.png)
 
+{{% alert type="info" %}}
+
 An association between a persistable entity and a non-persistable entity must start in the non-persistable entity and have the owner **Default**. For more information on persistable and non-persistable entities, see [Persistability](persistability).
+
+{{% /alert %}}
 
 ## 2 Association Properties
 
-If you double-click an association, its properties are opened. Associations have the following properties:
+If you double-click an association, its properties are opened. 
 
-* Name – the name of the association is used to refer to it from forms, microflows, XPath constraints, etcetera
-* Documentation
-* Multiplicity
-* Navigability
-* Delete Bahavior
+![](attachments/association-properties/dm-association-properties.png)
 
-### 2.1 Name
+Associations have the following properties:
+
+* [Name](#name) 
+* [Documentation](#documentation)
+* [Multiplicity](#multiplicity)
+* [Navigability](#navigability)
+* [Delete Behavior](#delete-behavior)
+
+### 2.1 Name {#name}
 
 The name of the association is used to refer to it from forms, microflows, etcetera.
 
-### 2.2 Documentation
+### 2.2 Documentation {#documentation}
 
-### 2.3 Multiplicity
+You can write notes and documentation on this element in this field. 
 
-Multiplicity defines the number of possible referred objects. The cardinality (or number of referred objects) of an association is indicated by the number one (`1`) or a star (`*`) at either side of the association.
+### 2.3 Multiplicity {#multiplicity}
+
+Multiplicity defines the number of possible referred objects. It is indicated by the number one (`1`) or a star (`*`) at either side of the association.
 
 Multiplicity can be of the following types:
 
@@ -46,16 +55,16 @@ Multiplicity can be of the following types:
 * One-to-many – one X object is associated with multiple Y object
 * Many-to-many – multiple X objects are associated with multiple Y objects
 
-Multiplicity shows the owner and the direction of association if the association is of the one-to-many or many-to-many type. In case the association is one-to-one, both entities are owners. For more information about ownership, see
+Multiplicity shows the owner and the direction of association if the association is of the one-to-many or many-to-many type. In case the association is one-to-one, both entities are owners. For more information about ownership, see section [4 Owner](associations#owner) in *Associations*.
 
-### 2.4 Navigability 
+### 2.4 Navigability {#navigability}
 
 Navigability changes the owner of many-to-many associations. Navigability has the following options:
 
 * X objects refer to Y objects  – the owner of the association is X
 * X and Y objects refer to each other – both entities are owners
 
-### 2.5 Delete Behavior
+### 2.5 Delete Behavior {#delete-behavior}
 
 Delete behavior defines what should happen to the associated object when an object is deleted. The following options can be configured for each end of the association.
 

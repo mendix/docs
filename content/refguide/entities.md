@@ -32,13 +32,10 @@ The rows in the table are CDs. The type of the two rows is 'CD' and this is the 
 ## Components
 
 *   [Attributes](attributes)
-
+*   [Associations](associations)
 *   [Validation Rules](validation-rules)
-
 *   [Event Handlers](event-handlers)
-
 *   [Indexes](indexes)
-
 *   [Access Rules](access-rules)
 
 ## General Properties {#entities-general-properties}

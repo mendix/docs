@@ -8,21 +8,23 @@ tags: ["domain model", "association"]
 
 ## 1 Introduction
 
-The **Associations** tab is part of the entity properties and has the following settings:
+The **Associations** tab is a tab in the entity properties and has the following settings:
 
-*  Name 
-* Type
-* Owner
-* Parent
-* Child
+* [Name](#name) 
+* [Type](#type)
+* [Owner](#owner)
+* Parent – defines an entity the association starts from
+* Child – defines an entity the association ends with  
+
+![](attachments/associations/dm-entity-properties-associations-tab.png)
 
 For more information on associations, see [Association and Their Properties](association-properties). 
 
-## 2 Name
+## 2 Name {#name}
 
 The name of the association is used to refer to it from forms, microflows, XPath constraints, etcetera.
 
-## 3 Type
+## 3 Type {#type}
 
 This property defines whether an association is a reference (single) or a reference set (plural).
 
@@ -39,16 +41,31 @@ The examples for this property are combined with the example of the owner proper
 
 {{% /alert %}}
 
-## 4 Owner
+## 4 Owner {#owner}
 
 This property defines whether an association has one or two owners. If there is one owner, the owner is located at the start of the arrow.
 
 | Value | Description |
 | --- | --- |
-| Default | Only one entity is the owner (namely, the one where the arrow starts). |
-| Both | Both entities are owner. |
+| Default | Only one entity is the owner (the parent). |
+| Both | Both entities are owners. |
 
 * *Default value*: Default
+
+## 5 Type and Owner Relation to Multiplicity and Navigability
+
+**Type** and **Owner** properties of an entity are related to **Multiplicity** and **Navigability** properties of an association. When you change **Type** or **Owner**, you change **Multiplicity** and **Navigability** as well. 
+
+You can find correspondence between **Type**/**Owner** and **Multiplicity**/**Navigability** in the table below.
+
+|                                                              | Type          | Owner   |
+| ------------------------------------------------------------ | ------------- | ------- |
+| **Multiplicity**: one-to-one <br />**Navigability**: not available | Reference     | Both    |
+| **Multiplicity**: one-to-many <br />**Navigability**: not available | Reference     | Default |
+| **Multiplicity**: many-to-many <br />**Navigability**: X objects refer to Y objects | Reference set | Default |
+| **Multiplicity**: many-to-many <br />**Navigability**: X and Y objects refer to each other | Reference set | Both    |
+
+## 6 Association Examples
 
 Drawing an association from the **Order** entity to the **Customer** entity results in the following:
 
@@ -160,5 +177,7 @@ In XML, instances of these entities and their association look as follows (note 
 
 ```
 
-## 5 Parent and Child
+## 7 Related Content
 
+* [Associations and Their Properties](association-properties)
+* [Entities](entities)

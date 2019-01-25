@@ -90,14 +90,14 @@ MxApp.onConfigReady(function(config) {
                     var token = new RegExp('AUTH_TOKEN=([^;]+);', 'g').exec(value);
                     var authPromise = new Promise(function(resolve, reject) {
                         if (token && token.length > 1) {
-                            window.localStorage.setItem("mx-authtoken", token);
+                            window.localStorage.setItem("mx-authtoken", token[1]);
 							
                             window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, function (fs) {
                                 fs.root.getFile(".mx-token", { create: true, exclusive: false }, function (fileEntry) {
                                     fileEntry.createWriter(function (fileWriter) {
                                         fileWriter.onwriteend = resolve;
                                         fileWriter.onerror = reject;
-                                        fileWriter.write(token);
+                                        fileWriter.write(token[1]);
                                     });
                                 }, reject);
                             }, reject);

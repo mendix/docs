@@ -16,7 +16,7 @@ This section describes how to configure a report chart and connect it to a datas
 
 ![](attachments/2621481/2752703.png)
 
- **Choose the column of the dataset you want to use for the X-axis using the drop-down next to 'Data set column' in the Properties window.**
+ **Choose the column of the dataset you want to use for the X-axis using the drop-down next to 'Dataset column' in the Properties window.**
 
 ![](attachments/2621481/2752702.png)
 
@@ -24,7 +24,7 @@ This section describes how to configure a report chart and connect it to a datas
 
 ![](attachments/2621481/2752705.png)
 
- **Connect a column of the dataset to the series. You can do this by selecting the series, and then dragging the dataset column from the Connector window to the series. Alternatively you can use the drop-down next to 'Data set column' in the Properties window to select the dataset column.**
+ **Connect a column of the dataset to the series. You can do this by selecting the series, and then dragging the dataset column from the Connector window to the series. Alternatively you can use the drop-down next to 'Dataset column' in the Properties window to select the dataset column.**
 
 ![](attachments/2621481/2752708.png)
 

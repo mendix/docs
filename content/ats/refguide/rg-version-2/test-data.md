@@ -7,13 +7,13 @@ parent: "rg-version-2"
 
 Data-driven testing in ATS allows you to run tests using tables of data as direct test input. This way, you test different input values without having to write extra tests.
 
-Data sets are easy to create and maintain, so you can add more values later on without changing your test cases.
+Datasets are easy to create and maintain, so you can add more values later on without changing your test cases.
 
 You can access the **Test Data** tab from the **Test Cases** page. Here you create a dataset by clicking **New Data Set**. A dialog box opens, where you give the dataset a name and an optional description.
 
 ![](attachments/test/test-data-tab.png)
 
-Data sets consist of one or more fields and records. You can think of fields as columns in a table. Corresponding to that, records are the rows in a table and represent the values of a field.
+Datasets consist of one or more fields and records. You can think of fields as columns in a table. Corresponding to that, records are the rows in a table and represent the values of a field.
 
 Fields can have following data types: text or number.
 
@@ -44,7 +44,7 @@ If you connect a dataset with a test case, ATS executes a session for each recor
 For data driven test cases you have the option between parallel/sequential execution. If this is set to parallel, ATS tries to run all the sessions (one for each record) of your test case in parallel. This is limited through the concurrency limit of your Selenium hub. When the sequential option is chosen, the sessions run in succession, one after the other.
 Use the sequential execution in order to prevent the tests to interfere with each other by manipulating data at the same time.
 
-## 3 Importing and Exporting Data Sets
+## 3 Importing and Exporting Datasets
 
 When creating and editing a dataset, select the **Create/Update fields from file** option to provide a template Excel file. Create or update fields and records of your dataset using this Excel file. ATS recognizes the first row of the Excel sheet as the field names. ATS considers all extra rows as records and also uses them to determine the field data type.
 

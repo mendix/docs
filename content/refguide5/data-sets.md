@@ -1,5 +1,5 @@
 ---
-title: "Data Sets"
+title: "Datasets"
 category: "Modeler"
 ---
 

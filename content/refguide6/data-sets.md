@@ -1,5 +1,5 @@
 ---
-title: "Data Sets"
+title: "Datasets"
 category: "Modeler"
 ---
 
@@ -8,7 +8,7 @@ A dataset can be used to define the data shown in [reporting widgets](report-wid
 
 A dataset is defined using either an [OQL query](oql) or a custom [Java action](java-actions). To constrain a dataset parameters can be defined, which can be used in the OQL query or Java action.
 
-Data sets have the following fields:
+Datasets have the following fields:
 
 ## General
 

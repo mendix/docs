@@ -68,7 +68,7 @@ Data is exported from the repository.
 
 ## 3 Test Data<a name='test-data'></a>
 
-### 3.1 Creating Data Sets
+### 3.1 Creating Datasets
 
 In the **Test Data** tab of the **Repository** you can create datasets by clicking the **New Data Set** button. You can name the dataset and give it a description.
 

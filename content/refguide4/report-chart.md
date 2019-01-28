@@ -50,7 +50,7 @@ If the chart type is HorizontalBars, the axisses are swapped, and these properti
 
 This is the caption that end users see near the horizontal axis of the chart.
 
-### Data set column
+### Dataset column
 
 This property refers to the column of the dataset of which the value is displayed on the horizontal axis.
 

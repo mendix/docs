@@ -1,5 +1,5 @@
 ---
-title: "Data Sets"
+title: "Datasets"
 parent: "modules"
 ---
 Please select a how-to:

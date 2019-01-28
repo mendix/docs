@@ -33,7 +33,7 @@ The following documents in the **Desktop Modeler** category of the *Mendix Refer
 * [Java actions](java-actions)
 * [Rules](rules)
 * [Enumerations](enumerations)
-* [Data sets](data-sets)
+* [Datasets](data-sets)
 * [Constants](constants)
 * [Regular expressions](regular-expressions)
 * [Scheduled events](scheduled-events)

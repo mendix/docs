@@ -1,5 +1,5 @@
 ---
-title: "Data Sets"
+title: "Datasets"
 parent: "modules"
 ---
 A dataset can be used for [reporting](reporting).

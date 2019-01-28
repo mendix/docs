@@ -15,7 +15,7 @@ The quickest way to open the project directory is in the Mendix Modeler via the 
 
 1.  Click **Project** and select **Show Project Directory in Explorer**:
 
-        ![](attachments/show-project-directory/18581613.png)
+    ![](attachments/show-project-directory/18581613.png)
         
 2.  The following window will appear with the project directory shown in it:
 

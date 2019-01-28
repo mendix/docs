@@ -23,7 +23,7 @@ The quickest way to open the project directory is in the Mendix Modeler via the 
 
 By default, the directory is located in the **MyDocuments** section.
 
-## 3 Most Used Locations in the Project Directory
+## 3 Most Used Folders in the Project Directory
 
 When developing an application, the following directories in the project directory are useful for amending the style of the application as well as adding custom widgets and Java actions:
 

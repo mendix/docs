@@ -111,7 +111,7 @@ To create custom a configuration, follow these steps:
 
     ![chart editor](attachments/charts/charts-config-toolbar.png)
 
-## 6 Related Content
+## 6 Read More
 
 Reference guide for the [advanced properties](/refguide/charts-configuration#advanced)
 

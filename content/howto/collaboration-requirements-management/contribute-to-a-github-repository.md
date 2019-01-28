@@ -42,7 +42,7 @@ To submit changes, follow these guidelines:
 * After feedback has been given, Mendix expects a response within two weeks
     * After two weeks, we may close the pull request if it isn't showing any activity
 
-## 5 Related Content
+## 5 Read More
 
 * [Stories](/developerportal/collaborate/stories)
 * [How to Start Your Own Repository](starting-your-own-repository)

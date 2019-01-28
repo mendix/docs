@@ -253,6 +253,6 @@ To submit your own idea to the idea forum, follow these steps:
 
 Mendix looks forward to hearing all of your ideas!
 
-## 4 Related Content
+## 4 Read More
 
 * [How to Contribute to the Documentation](contribute-to-the-mendix-documentation]

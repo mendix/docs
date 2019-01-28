@@ -52,7 +52,7 @@ You can find the description of specific properties that differ per attribute ty
 | [Enumeration](domain-models-enumeration-wm) | Enumeration    | With this property you can define an enumeration (predefined list of options), by creating a new list or choosing from existing enumerations. For more information, see [Enumeration in the Web Modeler](domain-models-enumeration-wm). |
 | Length                                      | String         | Specifies whether the length of a string is limited or unlimited. In the case the length is limited, the **Max-Length** property specifies the maximum number of characters that can be stored in the attribute . <br />*Default value: Unlimited* |
 
-## 4 Related Content
+## 4 Read More
 
 * [Domain Model in the Web Modeler](domain-models-wm)
 * [Attributes](../attributes) 

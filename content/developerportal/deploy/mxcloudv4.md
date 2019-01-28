@@ -103,6 +103,6 @@ There are some features missing in v4. Mendix will implement the following featu
     
     If you want a second layer of assurance that you will not have downtime in this situation, we advise you to use Mendix 7+ and to scale your application to multiple instances.
 
-## 12 Related Content
+## 12 Read More
 
 * [Migrate to Mendix Cloud v4](migrating-to-v4)

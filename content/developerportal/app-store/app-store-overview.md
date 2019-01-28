@@ -206,7 +206,7 @@ On the **More info** tab, you can view documents that provide more information o
 
 ![](attachments/app-store-overview/partners_detail2.png)
 
-## 5 Related Content
+## 5 Read More
 
 * [How to Use App Store Content](use-app-store-content-in-the-modeler)
 * [How to Share App Store Content](share-app-store-content)

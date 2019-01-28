@@ -104,7 +104,7 @@ To use breakpoint conditions, follow these steps:
 
 3. Click **OK** to save the breakpoint condition.
 
-## 8 Related Content
+## 8 Read More
 
 * [How to Find the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
 * [How to Clear Warning Messages in Mendix](clear-warning-messages)

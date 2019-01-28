@@ -98,7 +98,7 @@ To use the UI Resources module from teh Mendix App Store, follow these steps:
 
 3. To download the UI resources inside your project, click **Download**. After downloading your company's UI Resources module, it will appear under **App Store modules**. The module can always be updated by downloading a new version from the Mendix App Store when new resources are added.
 
-## 5 Related Content
+## 5 Read More
 
 * [How to Get Started with Atlas UI](get-started-with-atlasui)
 * [How to Create Company Atlas UI Resources](create-company-atlas-ui-resources)

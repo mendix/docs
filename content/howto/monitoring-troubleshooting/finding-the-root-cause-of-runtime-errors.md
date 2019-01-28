@@ -51,7 +51,7 @@ Go to the section of the log that corresponds to the time of the error. There wi
 
 With these three pieces of information, you shouold be able to find the cause of the error. If you cannot determine the cause from this information, you can put in a break point in the specified microflow and debug the situation.
 
-## 4 Related Content
+## 4 Read More
 
 * [How to Clear Warning Messages](clear-warning-messages)
 * [How to Test Web Services Using SoapUI](../testing/testing-web-services-using-soapui)

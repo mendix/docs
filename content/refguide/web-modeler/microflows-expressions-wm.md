@@ -108,7 +108,7 @@ An overview of the possibilities with expressions can be found below:
 * [and](../boolean-expressions)
 * [or](../boolean-expressions)
 
-## 4 Related Content
+## 4 Read More
 
 * [Microflows in the Web Modeler](microflows-wm)
 * [Setting and Changing a Value for Different Activities in the Microflows in the Web Modeler](microflows-setting-and-changing-value-wm)

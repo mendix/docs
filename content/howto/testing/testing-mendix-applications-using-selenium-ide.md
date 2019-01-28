@@ -247,7 +247,7 @@ Now the test steps will have `mx-name-` CSS selectors rather than the Selenium d
 
     ![](attachments/18448631/18580275.png)
 
-## 5 Related Content
+## 5 Read More
 
 * [How to Create Automated Tests with TestNG](create-automated-tests-with-testng)
 * [How to Test Microflows Using the UnitTesting Module](testing-microflows-using-the-unittesting-module)

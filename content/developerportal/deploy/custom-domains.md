@@ -231,7 +231,7 @@ Your certificate is signed by the certificate authority (CA). They sign your cer
 
 To reach the root certificate, you have to link your certificate via the intermediate certificate chain, which is usually just one intermediate certificate. Occasionally a CA requires more than one intermediate certificate. You do not need to provide the root certificate, as every web browser has it in its trusted keystore.
 
-## 9 Related Content
+## 9 Read More
 
 * [Certificates](certificates)
 * [Environments](environments)

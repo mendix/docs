@@ -176,7 +176,7 @@ Re-deploy your app to see the shiny new logo:
 
 ![](attachments/18448711/18581468.png)
 
-## 7 Related Content
+## 7 Read More
 
 * [How to Perform the Scout and Windows 10 Workaround](perform-scout-and-windows-10-workaround)
 * [How to Layouts and Snippets](layouts-and-snippets)

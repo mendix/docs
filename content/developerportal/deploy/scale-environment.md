@@ -79,7 +79,7 @@ For example, you can use one instance with 4GiB RAM. The remaining 12GiB in your
 
 ![](attachments/scale-environment/scaling.png)
 
-## 5 Related Content
+## 5 Read More
 
 * [Trends in Mendix Cloud v4](/developerportal/operate/trends-v4)
 * [Deployment](index)

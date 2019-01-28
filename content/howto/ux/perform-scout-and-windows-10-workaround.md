@@ -18,7 +18,7 @@ Scout has not been updated for Windows 10. Therefore, Windows 10 users need to u
     * Use the search task bar icon to find the control panel and open it, then select **Region** > **Administrative** tab
     * The language for non-Unicode programs must be set to US English
 
-## 3 Related Content
+## 3 Read More
 
 * [How to Create Your First Two Overview & Detail Pages](create-your-first-two-overview-and-detail-pages)
 * [How to Filter Data on an Overview Page](filtering-data-on-an-overview-page)

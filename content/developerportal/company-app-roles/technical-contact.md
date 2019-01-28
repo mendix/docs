@@ -53,7 +53,7 @@ You can submit requests in the [Mendix Support Portal](https://support.mendix.co
 
 For details on how to change the Technical Contact, see the [Changing the Technical Contact](manage-roles#change-technical-contact) section of *How to Manage Company & App Roles*.
 
-## 4 Related Content
+## 4 Read More
 
 * [Company & App Roles](/developerportal/company-app-roles/index)
 * [Company Admin Settings](/developerportal/company-app-roles/companyadmin-settings)

@@ -154,7 +154,7 @@ Change the way tabs appear:
 
 Many of these classes are part of Bootstrap. For more information about classes and Bootstrap, see [Bootstrap CSS](https://getbootstrap.com/docs/3.3/css/).
 
-## 11 Related Content
+## 11 Read More
 
 * [Mendix Atlas UI](https://atlas.mendix.com/)
 

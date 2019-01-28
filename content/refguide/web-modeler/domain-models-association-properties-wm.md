@@ -89,6 +89,6 @@ Cross module associations have the following properties:
 | [Multiplicity](#multiplicity) | Defines the type of multiplicity                             |
 | Target                        | Defines the module (name before the dot) and second entity of the association (goes after the dot). |
 
-## 6 Related Content
+## 6 Read More
 
 * [Domain Model in the Web Modeler](domain-models-wm)

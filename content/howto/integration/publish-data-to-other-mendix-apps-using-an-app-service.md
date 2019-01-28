@@ -101,7 +101,7 @@ Before you publish our app, you need to make sure it is protected with a usernam
 
 You can now go ahead and deploy the app. This will publish your app service.
 
-## 9 Related Content
+## 9 Read More
 
 * [How to Expose a Web Service](expose-a-web-service)
 * [How to Expose Data to BI Tools Using OData](exposing-data-to-bi-tools-using-odata)

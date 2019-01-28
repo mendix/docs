@@ -211,6 +211,6 @@ To link **App A** to **Node 2** and **App B** to **Node 1**, follow these steps:
 
 You have now swapped App A and App B between nodes.
 
-## 6 Related Content
+## 6 Read More
 
 *   [Mendix Cloud](mendix-cloud-deploy)

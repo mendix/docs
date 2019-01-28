@@ -48,7 +48,7 @@ In order to submit tickets for on-premises installations you need to provide Men
 
 You can find the Project Name and Project ID in the General Settings of your project.
 
-## 5 Related Content
+## 5 Read More
 
 * [How to Submit a Support Request](submit-support-request)
 

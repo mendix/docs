@@ -154,7 +154,7 @@ In this section, you are going to create a new maintenance plan called **MP_SYSD
 
     ![](attachments/mendix-sql-maintenance-plans/18580655.png)
 
-## 4 Related Content
+## 4 Read More
 
 * [How to Restore an SQL Server Database](restoring-a-sql-server-database)
 * [How to Troubleshoot SQL Server](troubleshooting-sql-server)

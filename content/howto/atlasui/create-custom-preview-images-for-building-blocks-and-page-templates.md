@@ -123,7 +123,7 @@ To create a page template preview image in Illustrator, follow these steps:
 
 You can also create your page template preview image in a different image editor of your choice. Page template preview images should be 255px wide and 255px tall. Save the image as a *.png* file.
 
-## 4 Related Content
+## 4 Read More
 
 * [How to Get Started with Atlas UI](get-started-with-atlasui)
 * [How to Create Company Atlas UI Resources](create-company-atlas-ui-resources)

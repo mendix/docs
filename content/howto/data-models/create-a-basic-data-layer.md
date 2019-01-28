@@ -135,7 +135,7 @@ To configure the delete behavior, double-click the **Order_Customer** associatio
 
     ![](attachments/18448745/18582208.png)
 
-## 8 Related Content
+## 8 Read More
 
 * [How to Work with Images & Files](working-with-images-and-files)
 * [How to Denormalize Data to Improve Performance](denormalize-data-to-improve-performance)

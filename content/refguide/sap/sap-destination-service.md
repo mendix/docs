@@ -190,7 +190,7 @@ Remember that the SAP Destination Service will only work when deployed to SAP Cl
 
 Ensure that the user accessing the Mendix App has the required level of access on the service you are trying to use. They must be able to access all the data which your app is expecting.
 
-## 8	Related Content
+## 8	Read More
 
 * [SAP OData Connector](sap-odata-connector)
 * [SAP XSUAA Connector](sap-xsuaa-connector)

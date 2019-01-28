@@ -60,7 +60,7 @@ In this section, you will enter the license key into the Mendix server, thus com
     ![](attachments/activate-mendix-license-on-windows/19398817.png) 
 4.  Congratulations! Your license has been activated.
 
-## 6 Related Content
+## 6 Read More
 
 *   [Setting up the Database User](setting-up-the-database-user)
 *   [Troubleshooting](troubleshooting-iis)

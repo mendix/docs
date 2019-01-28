@@ -31,7 +31,7 @@ The priority levels are determined based on the impact and urgency of the reques
 
 If Mendix provides a workaround, the impact can never be higher than **Medium**.
 
-## 4 Related Content
+## 4 Read More
 
 * [How to Submit a Support Request](submit-support-request)
 * [Escalation Management Process](escalation-management-process)

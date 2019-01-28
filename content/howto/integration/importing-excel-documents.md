@@ -269,7 +269,7 @@ Once you have completed an Excel template you can export the template for exampl
 
     {{% /alert %}}
 
-## 10 Related Content
+## 10 Read More
 
 * [How to Consume a Complex Web Service](consume-a-complex-web-service)
 * [How to Consume a Simple Web Service](consume-a-simple-web-service)

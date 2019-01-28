@@ -114,7 +114,7 @@ To view the chart, follow these steps:
 
     ![Dynamic Series Chart](attachments/charts/charts-dynamic-series-chart.png)
 
-## 6 Related Content
+## 6 Read More
 
 * [How to create a basic chart](charts-basic-create)
 * [How to fine tune a chart, with advance settings](charts-advanced-tuning)

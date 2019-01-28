@@ -74,7 +74,7 @@ To define the access rules on the Order entity using XPath, follow these steps:
 
     ![](attachments/18448681/18580994.png)
 
-## 4 Related Content
+## 4 Read More
 
 * [How to Trigger Logic Using Microflows](triggering-logic-using-microflows)
 * [How to Create a Custom Save Button](create-a-custom-save-button)

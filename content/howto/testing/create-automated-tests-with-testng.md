@@ -526,7 +526,7 @@ Now you know how to create a TestNG test file, how to create a test suite and ho
 
 Happy testing!
 
-## 10 Related Content
+## 10 Read More
 
 * [Test Mendix Applications Using Selenium IDE](testing-mendix-applications-using-selenium-ide)
 * [Test Microflows Using the UnitTesting Module](testing-microflows-using-the-unittesting-module)

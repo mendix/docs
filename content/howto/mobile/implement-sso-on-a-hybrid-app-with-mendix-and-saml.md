@@ -167,7 +167,7 @@ The last thing to do is to check the **Enable mobile authentication token** box 
 
 ![](attachments/implement-sso/saml-module.png)
 
-## 6 Related Content
+## 6 Read More
 
 * [How to Deploy Your First Hybrid Mobile App](deploy-your-first-hybrid-mobile-app)
 * [How to Publish a Mendix Hybrid Mobile App in App Stores](publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)

@@ -53,7 +53,7 @@ Under **Details**, you can perform the following actions:
 
 To upload a new version of a document, select the document and click **New version**.
 
-## 3 Related Content
+## 3 Read More
 
 * [Buzz](buzz)
 * [App Team](team)

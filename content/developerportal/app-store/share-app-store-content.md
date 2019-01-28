@@ -201,7 +201,7 @@ To update content that has already been published, follow these steps:
 	{{% image_container width="350" %}}![](attachments/share-app-store-content/update_content_2.png)
 	{{% /image_container %}}
 
-## 6 Related Content
+## 6 Read More
 
 * [App Store Overview](app-store-overview)
 * [How to Use App Store Content](use-app-store-content-in-the-modeler)

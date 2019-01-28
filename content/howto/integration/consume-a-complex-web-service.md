@@ -136,7 +136,7 @@ To configure the web service call, follow these steps:
     * If you want to ignore the return, select the **Ignore** option
 8.  Your imported web service is now ready to be used in your application.
 
-## 5 Related Content
+## 5 Read More
 
 * [How to Consume a Simple Web Service](consume-a-simple-web-service)
 * [How to Export XML Documents](export-xml-documents)

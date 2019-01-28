@@ -43,7 +43,7 @@ The level of support depends on the availability and effort of the developer and
 | Platform content | [Mendix Support](https://developers.mendix.com/support/)   | [Mendix Support](https://developers.mendix.com/support/) | Mendix Community |
 | Community content | Mendix Community | Mendix Community | Mendix Community |
 
-## 3 Related Content
+## 3 Read More
 
 * [App Store Overview](app-store-overview)
 * [How to Share App Store Content](share-app-store-content)

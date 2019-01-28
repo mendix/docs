@@ -20,7 +20,7 @@ Errors need to be solved before your app can be published. A consistency error c
 * Integration
 * Security
 
-##  2 Related Content
+##  2 Read More
 
 * [Page Editor Consistency Errors](consistency-errors-pages)
 * [Navigation Consistency Errors](consistency-errors-navigation)

@@ -51,7 +51,7 @@ Limiting the navigation or page display is not the same thing as security. All d
 
 For example, to download a file, it is possible to get the UR (for example, `https://myMendixApp.com/file?fileID=2804771`). All that is necessary is to try random numbers until a file is found that is accessible. Unless you specify instance or object access, in that case, the platform would always validate the request against your privileges before presenting the information.
 
-## 7 Related Content
+## 7 Read More
 
 * [Creating a Secure App](create-a-secure-app)
 * [Anonymous User Security](set-up-anonymous-user-security)

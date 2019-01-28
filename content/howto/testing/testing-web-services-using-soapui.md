@@ -220,7 +220,7 @@ In this chapter you will learn how to run the testcase you created in previous c
 
 Congratulations! You have just created your first automated test with SoapUI.
 
-## 9 Related Content
+## 9 Read More
 
 *   [Finding the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
 *   [Clearing Warning Messages in Mendix](../monitoring-troubleshooting/clear-warning-messages)

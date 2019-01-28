@@ -216,7 +216,7 @@ Do not change the names of entities, attributes, or associations in the Domain M
 
 For more information on how to use the imported data model together with the SAP OData Connector, see [How to Use the SAP OData Connector](/howto/sap/use-sap-odata-connector).
 
-## 5 Related Content
+## 5 Read More
 
 * [HCM People Profile Service sample metadata](https://www.sapfioritrial.com/sap/opu/odata/sap/HCM_PEOPLE_PROFILE_SRV/$metadata)
 * [How to Use App Store Content](/developerportal/app-store/use-app-store-content-in-the-modeler)

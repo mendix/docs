@@ -131,7 +131,7 @@ To generate the app store packages, go to [Build.PhoneGap.com](https://build.pho
 
 {{% youtube 7ic625u2YJE %}}
 
-## 6 Related Content
+## 6 Read More
 
 * [Customizing PhoneGap Build Packages](/refguide/customizing-phonegap-build-packages)
 * [Deploy and Manage](/developerportal/deploy)

@@ -230,7 +230,7 @@ You can picture the authentication as shown below:
 
 ![](attachments/use-sap-xsuaa-connector/xsuaa-diagram-config-via-group.png)
 
-## 6 Related Content
+## 6 Read More
 
 * [How To Create a Secure App](../security/create-a-secure-app)
 * [How To Use App Store Content](/developerportal/app-store/use-app-store-content-in-the-modeler)

@@ -110,7 +110,7 @@ for (IMendixObject iMendixObject: getAttachments(sourceObject, context))
 
 After this, all `Attachments` belonging to one `GenericObject` have been copied to another.
 
-## 4 Related Content
+## 4 Read More
 
 * [How to Create a Custom Save Button](create-a-custom-save-button)
 * [How to Create Your First Microflow: Hello World!](create-your-first-microflow-hello-world)

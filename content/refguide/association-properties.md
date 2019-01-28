@@ -85,6 +85,6 @@ This delete behavior is used if you want to be able to delete a **Customer** onl
 
 ![](attachments/domain-model-editor/918146.png)
 
-## 3 Related Content
+## 3 Read More
 
 * [Associations](associations)

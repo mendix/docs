@@ -44,7 +44,7 @@ These design properties are used in the Web Modeler to give you more power when 
 
 ![](attachments/howto/extend_settings_in_wm.png)
 
-## 4 Related Content
+## 4 Read More
 
 * [How to Get Started with Atlas UI](get-started-with-atlasui)
 * [How to Create Company Atlas UI Resources](create-company-atlas-ui-resources)

@@ -105,7 +105,7 @@ It is possible to change or add new App Team roles for a specific app or at the 
 
 	![](attachments/apps-roles.png)
 
-## 8 Related Content
+## 8 Read More
 
 * [Company & App Roles](/developerportal/company-app-roles/index)
 * [Company Admin Settings](/developerportal/company-app-roles/companyadmin-settings)

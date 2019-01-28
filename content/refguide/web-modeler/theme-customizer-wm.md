@@ -73,6 +73,6 @@ To change the color, do the following:
 3. See the result in the **Preview**.
 4. Click **Apply Style** to save changes. 
 
-## 5 Related Content
+## 5 Read More
 
 * [Atlas UI](../../howto/atlasui/)

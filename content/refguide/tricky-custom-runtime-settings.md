@@ -103,6 +103,6 @@ In general, we see that increasing the `ConnectionPoolingMaxActive` value to a (
 
 In addition, keep in mind that changing this value for an application running in the Mendix Cloud will also require an adjustment on the database node that only Mendix can make. So, before changing the value, please file a ticket in the [Mendix Support portal](https://support.mendix.com/hc/en-us) stating the number to which you intend to change the value.
 
-## 5 Related Content
+## 5 Read More
 
 * [Custom Settings](/refguide/custom-settings)

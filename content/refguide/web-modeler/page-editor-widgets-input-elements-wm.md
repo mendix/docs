@@ -85,7 +85,7 @@ Specific properties of the input elements are described in the table below:
 
 For information on the **Design** section and its properties, see [Design Section in Widgets of the Web Modeler](page-editor-widgets-design-section-wm).
 
-## 5 Related Content
+## 5 Read More
 
 * [Page Editor in the Web Modeler](page-editor-wm) 
 * [Widgets in the Web Modeler](page-editor-widgets-wm)

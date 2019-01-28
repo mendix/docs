@@ -185,7 +185,7 @@ To delete the entity, attribute or association, do the following:
     {{% image_container width="300" %}}![](attachments/domain-models-wm/wm-deletion.png)
     {{% /image_container %}}
 
-## 8 Related Content
+## 8 Read More
 
 * [Attribute Types in the Web Modeler](domain-models-attributes-wm)
 * [Association Properties in the Web Modeler](domain-models-association-properties-wm) 

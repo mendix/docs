@@ -20,7 +20,7 @@ Consistency errors can occur in the following editors of the modeler:
 * Navigation document (For information on consistency error in the navigation, see [Navigation Consistency Errors in the Web Modeler](consistency-errors-navigation-wm))
 * Microflows editor (For information on consistency error in the navigation, see [Microflow Editor Consistency Errors in the Web Modeler](consistency-errors-microflows-wm))
 
-##  2 Related Content
+##  2 Read More
 
 * [Page Editor Consistency Errors in the Web Modeler](consistency-errors-pages-wm)
 * [Navigation Consistency Errors in the Web Modeler](consistency-errors-navigation-wm)

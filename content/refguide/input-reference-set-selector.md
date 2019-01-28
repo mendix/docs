@@ -101,6 +101,6 @@ The page has displays a reference selector for the reference to country and an i
 
 {{% snippet file="refguide/Tab+index+Property.md" %}}
 
-## Related Content
+## Read More
 
 *   [Data view](data-view)

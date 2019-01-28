@@ -88,6 +88,6 @@ Check out the video with the process of configuring the example above:
 
 As a result, we have a list of orders retrieved to our microflow, and a loop that iterates over this list. The activity inside the loop sets the status of each order to processed. 
 
-## 4 Related Content
+## 4 Read More
 
 * [Microflows in the Web Modeler](microflows-wm)

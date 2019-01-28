@@ -61,7 +61,7 @@ Build the app by following these steps:
 
 This will trigger a build for the Hybrid app, so sit back and relax while your app is being created. When the build is done you can download the new and shiny iOS ipa file, where the awesome WKWebView is enabled!
 
-## 4 Related Content
+## 4 Read More
 * [How To Enable WKWebView for Hybrid Apps on iOS](building-a-mendix-hybrid-mobile-app-for-windows-phone)
 * [How to Publish a Mendix Hybrid Mobile App in App Stores](publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)
 * [How to Debug a Hybrid Mobile Application](debug-a-hybrid-mobile-application)

@@ -84,7 +84,7 @@ The functions of these tabs are described in the table below:
 | Constant             | With this tab you can assign a new value selecting  from the values of an attribute of Enumeration type. |
 | Expression           | With this tab you can assign the attribute, association or variable different values, depending on what you write in the expression. For more information, see [Microflow Expressions in the Web Modeler](microflows-expressions-wm). |
 
-## 6 Related Content
+## 6 Read More
 
 * [Microflows in the Web Modeler](microflows-wm)
 * [Microflow Expressions in the Web Modeler](microflows-expressions-wm)

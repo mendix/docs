@@ -50,7 +50,7 @@ When a maintenance operation is planned, it will show up under **Planned Mainten
 
 {{% /alert %}}
 
-## 4 Related Content
+## 4 Read More
 
 * [Alerts](/developerportal/operate/monitoring-application-health)
 * [Application Trends in Mendix Cloud v3](/developerportal/operate/trends)

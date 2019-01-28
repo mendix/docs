@@ -66,7 +66,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 1.  Create a navigation item for your overview page to start using it. If you don't know how to setup the navigation structure, take a look at [How to Set Up the Navigation Structure](../ux/setting-up-the-navigation-structure).
 2.  If you turned on security for this application you need to configure page access on both the overview and detail pages. If you don't know how to configure page access, take a look at [How to Create a Secure App](../security/create-a-secure-app).
 
-## 6 Related Content
+## 6 Read More
 
 *   [How to Work with Images & Files](working-with-images-and-files)
 *   [How to Create a Basic Data Layer](create-a-basic-data-layer)

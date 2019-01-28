@@ -58,7 +58,7 @@ Click **Edit App Info** to edit the following details:
 
 To leave the app, click **Leave App**. For details on leaving, deleting, and deactivating an app, see [How to Leave & Delete an App](leave-delete-app).
 
-## 5 Related Content
+## 5 Read More
 
 * [How to Leave & Delete an App](leave-delete-app)
 * [How to Manage Deep Links](manage-deeplinks)

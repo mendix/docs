@@ -64,7 +64,7 @@ This how-to uses the [Company Expenses](https://appstore.home.mendix.com/link/ap
 
 Congratulations! Your app now makes use of the AppCloud services. When you deploy your upgraded app in the AppCloud, it will now be automatically added to your [Launchpad](https://home.mendix.com/home/). Opening the app from your Launchpad will automatically log you in with your Mendix account, and you can easily invite other Mendix accounts through app user management.
 
-## 3 Related Content
+## 3 Read More
 
 *   [Different user logins when integrated with Mendix SSO](managing-mendix-sso)
 *   [Trends in Mendix Cloud v3](/developerportal/operate/trends)

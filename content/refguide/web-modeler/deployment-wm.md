@@ -119,7 +119,7 @@ Web Modeler can fail to get your environment status in the following cases:
 
 For technical information for app administrators, see [Web Modeler Deployment Settings](/developerportal/deploy/web-modeler-deployment-settings) in *Developer Portal Guide*. 
 
-## 6 Related Content
+## 6 Read More
 
 * [Checks Overview in the Web Modeler](checks-wm)
 * [Consistency Errors in the Web Modeler](consistency-errors-wm)

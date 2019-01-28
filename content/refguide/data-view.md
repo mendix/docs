@@ -118,7 +118,7 @@ Curently this has no effect.
 
 {{% snippet file="refguide/Visibility+Property+With+Module+Roles+Simple.md" %}}
 
-## 8 Related Content
+## 8 Read More
 
 * [Entities](entities)
 * [Associations](associations)

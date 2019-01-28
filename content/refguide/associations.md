@@ -182,7 +182,7 @@ In XML, instances of these entities and their association look as follows (note 
 
 ```
 
-## 8 Related Content
+## 8 Read More
 
 * [Associations and Their Properties](association-properties)
 * [Entities](entities)

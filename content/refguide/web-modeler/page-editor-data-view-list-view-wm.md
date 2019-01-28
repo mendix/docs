@@ -93,6 +93,6 @@ In the **General** section, you can select the number of rows to be displayed on
 
 For information on the **Design** section and its properties, see [Design Section in Widgets of the Web Modeler](page-editor-widgets-design-section-wm).
 
-## 4 Related Content
+## 4 Read More
 
 * [Page Editor in the Web Modeler](page-editor-wm)

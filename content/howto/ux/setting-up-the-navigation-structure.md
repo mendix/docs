@@ -95,7 +95,7 @@ Now that you've created a menu structure it's time to start using it on pages.
 
     To prevent repeating the previous steps for every page in your project, the Desktop Modeler supports something called layouts. With layouts you can define a base structure for pages in your project. In a layout you can define where the menu should be rendered and you can simply reuse that layout for the desired pages. You can find out how to use layouts in the following document: [How to Use Layouts and Snippets](layouts-and-snippets).
 
-## 6 Related Content
+## 6 Read More
 
 * [How to Create Your First Two Overview & Detail Pages](create-your-first-two-overview-and-detail-pages)
 * [How to Filter Data on an Overview Page](filtering-data-on-an-overview-page)

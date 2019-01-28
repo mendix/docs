@@ -103,6 +103,6 @@ This will render as:
 
 <iframe width='100%' height='491px' frameborder='0' src='https://modelshare.mendix.com/models/fb092960-6fc1-41c0-bb64-d9e70c012bc5/save-example?embed=true' allowfullscreen></iframe>
 
-## 6 Related Content
+## 6 Read More
 
 * [How to Contribute to the Mendix Documentation](contribute-to-the-mendix-documentation)

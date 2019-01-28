@@ -55,7 +55,7 @@ To download a backup of a licensed app, follow these steps:
 7. Select a backup and click **Download Backup**.
 8. Select the backup type **Full Snapshot**, **Database Only**, or **Files Only**
 
-## 5 Related Content
+## 5 Read More
 
 * [How to Create a Backup](create-backup)
 * [Licensing Apps](/developerportal/deploy/licensing-apps)

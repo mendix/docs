@@ -115,6 +115,6 @@ The amount of points you gain depends on the size of the documentation contribut
 
 The points are awarded when the pull request is merged.
 
-## 7 Related Content
+## 7 Read More
 
 * [Documentation Writing Guidelines](documentation-writing-guidelines)

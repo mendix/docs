@@ -176,6 +176,6 @@ Resources and Operations are appended to [Location](#location) to form a URL on 
 
 {{% youtube HzrFkv0U4n8 %}}
 
-## 8 Related Content
+## 8 Read More
 
 For more information on which operation gets executed for a given request URL, see [Published REST Routing](published-rest-routing).

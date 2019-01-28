@@ -90,7 +90,7 @@ The information displayed in the table of the **Checks** panel is represented be
 | Document | Indicates the place of your app where the error/warning/info is found (for example, a page, a microflow). |
 | Element  | Indicated the exact element that is faulty (button, activity, etc. ). |
 
-## 4 Related Content
+## 4 Read More
 
 * [Consistency Errors in the Web Modeler](consistency-errors-wm)
 * [Deploying Your App From the Web Modeler](deployment-wm)

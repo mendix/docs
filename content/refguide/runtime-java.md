@@ -63,7 +63,7 @@ And finally a Mendix Cloud graph where all of the above comes together:
 
 The green part (apps) is basically the JVM in which the Mendix application is running. Anything else is reserved for the operating system of the application server.
 
-## 3 Related Content
+## 3 Read More
 
 * [Transient Objects & Garbage Collecting](transient-objects-garbage-collecting)
 * [Java Memory Usage](java-memory-usage)

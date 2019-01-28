@@ -182,6 +182,6 @@ If you encounter any problems, you should consult the application logs. These ar
 
 ![](attachments/cloud-foundry-deploy/cf-log.png)
 
-## 9 Related Content
+## 9 Read More
 
 * [Mendix BuildPack Documentation](https://github.com/mendix/cf-mendix-buildpack)

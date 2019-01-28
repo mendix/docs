@@ -116,7 +116,7 @@ To view the chart, follow these steps:
 
     ![Show Chart](attachments/charts/charts-area-chart.png)
 
-## 4 Related Content
+## 4 Read More
 
 * [How to Use a Chart With a REST Data Source](charts-basic-rest)
 * [How to Use Any Chart](charts-any-usage)

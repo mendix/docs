@@ -47,7 +47,7 @@ Related stories will only appear if you select them in the **Commit** dialog box
 
 ![](attachments/commit-story.png)
 
-## 5 Related Content
+## 5 Read More
 
 * [Stories](/developerportal/collaborate/stories)
 * [Company & App Roles](/developerportal/company-app-roles/index)

@@ -85,7 +85,7 @@ To create a page to show the objects in a list, follow these steps:
 
 Congratulations! You can now run your app and see a list of the customers available in the public **Check Price and Availability** application of [SAP Fiori Cloud Demo](https://www.sapfioritrial.com/sites?helpset=trial&sap-client=001#PriceAndAvailability-check).
 
-## 4 Related Content
+## 4 Read More
 
 * [SAP OData Connector](/refguide/sap/sap-odata-connector)
 * [SAP Data Models](/refguide/sap/sap-data-models)

@@ -143,7 +143,7 @@ To import the XML file, follow these steps:
 1. Deploy the application, upload [Customers.xml](attachments/18448727/18581651.xml), and trigger the import microflow.
 2. Open the customer overview page and check if the customer data has been imported into your application.
 
-## 8 Related Content
+## 8 Read More
 
 * [How to Consume a Complex Web Service](consume-a-complex-web-service)
 * [How to Consume a Simple Web Service](consume-a-simple-web-service)

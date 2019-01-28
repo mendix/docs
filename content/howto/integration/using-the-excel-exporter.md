@@ -187,7 +187,7 @@ This module has many steps that must be configured in order for the template to 
 
     ![](attachments/18448732/18581902.png)
 
-## 7 Related Content
+## 7 Read More
 
 *   [Consuming a complex web service](consume-a-complex-web-service)
 *   [Consuming a simple Web Service](consume-a-simple-web-service)

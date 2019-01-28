@@ -37,6 +37,6 @@ To {do this task}, follow these steps:
 
 ### 3.1 {Title of Sub-Section}
 
-## 4 Related Content
+## 4 Read More
 
-{Add links to related documents and relevant external sites if possible}
+{Add links to related documents and blog posts; make sure necessary third-party links are contextualized in the above sections, as they should not be put here}

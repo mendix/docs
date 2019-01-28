@@ -89,6 +89,6 @@ When placed on a data view, **Delete Object** will delete the connected object. 
 {{% image_container width="350" %}}![](attachments/page-editor-widgets-events-section-wm/wm-data-view-delete.png)
 {{% /image_container %}}
 
-## 3 Related Content
+## 3 Read More
 
 * [Widgets in the Web Modeler](page-editor-widgets-wm)

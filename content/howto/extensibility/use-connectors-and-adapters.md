@@ -145,6 +145,6 @@ You can now add Google Analytics-tracking to your Mendix application! This widge
 
 [Click to download in the Mendix App Store.](https://appstore.home.mendix.com/link/app/105/Mendix/Google-Analytics)
 
-## 19 Related Content
+## 19 Read More
 
 * [How to Access a Samba Share from the MxCloud](access-a-samba-share-from-the-mxcloud)

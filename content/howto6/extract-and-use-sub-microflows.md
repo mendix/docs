@@ -83,7 +83,7 @@ In addition, make sure you have highlighted the correct activities that you want
 
 The extra sub microflow option is based on the Mendix reusability principle. You can reuse any sub microflows in other parts in the application. Furthermore, when you have very large and complex microflows, using sub microflows can help you break down and better manage your logic and business processes. 
 
-## 7 Related Content
+## 7 Read More
 
 * [How to Define Access Rules Using XPath](define-access-rules-using-xpath)
 * [How to Trigger Logic Using Microflows](triggering-logic-using-microflows)

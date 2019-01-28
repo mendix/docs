@@ -28,7 +28,7 @@ We do not expect this change to cause any issues with existing tests. However, i
 
 ### Improvements
 
-* We have optimized the way data set records are stored for executed data-driven test cases. We expect this will improve the performance of processing the results for data-driven test cases.
+* We have optimized the way dataset records are stored for executed data-driven test cases. We expect this will improve the performance of processing the results for data-driven test cases.
 * We have refactored the code for fetching video recordings, making the recordings available sooner in ATS.
 
 ### Fixes

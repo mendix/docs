@@ -61,7 +61,7 @@ Non-persistable entities are drawn in a different color (orange). NPEs have cert
 *   indexes
 *   validation rules
 
-They are not allowed in places that rely on database queries, such as data sets, and XPaths. The Modeler will check this for you.
+They are not allowed in places that rely on database queries, such as datasets, and XPaths. The Modeler will check this for you.
 
 #### Persistable entities
 

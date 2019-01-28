@@ -70,11 +70,11 @@ Data is exported from the repository.
 
 ### 3.1 Creating Data Sets
 
-In the **Test Data** tab of the **Repository** you can create data sets by clicking the **New Data Set** button. You can name the data set and give it a description.
+In the **Test Data** tab of the **Repository** you can create datasets by clicking the **New Data Set** button. You can name the dataset and give it a description.
 
 ![](attachments/data-management/21168208.png)
 
-A data set is defined by one or more fields and records. Fields are the columns of your table, records are the lines in your table containing the field values. Fields can have the data types integer or string. After you have created a data set you can add fields and records to the set.
+A dataset is defined by one or more fields and records. Fields are the columns of your table, records are the lines in your table containing the field values. Fields can have the data types integer or string. After you have created a dataset you can add fields and records to the set.
 
 **Fields**
 
@@ -84,21 +84,21 @@ A column of the table for specific data, for example, usernames.
 
 Line in the data table containing an integer or string value of the data
 
-### 3.2 Importing/Exporting data sets
+### 3.2 Importing/Exporting datasets
 
-When creating/editing a data set you can select the **Create/Update fields from file** option to provide a template Excel file to create or update fields and records of your data set. The first row of your sheet will be considered the header and will be used to determine the field names. All additional rows will be considered records and will be used to determine the fields data type.
+When creating/editing a dataset you can select the **Create/Update fields from file** option to provide a template Excel file to create or update fields and records of your dataset. The first row of your sheet will be considered the header and will be used to determine the field names. All additional rows will be considered records and will be used to determine the fields data type.
 
 {{% alert type="info" %}}
 
-When updating an existing data set all existing fields and data records will be removed
+When updating an existing dataset all existing fields and data records will be removed
 
 {{% /alert %}}
 
-You can also only import data records into you data set by clicking the **Import from Excel** button. The first row of your Excel sheet must contain the field names of the data set into which you want to import the records.
+You can also only import data records into you dataset by clicking the **Import from Excel** button. The first row of your Excel sheet must contain the field names of the dataset into which you want to import the records.
 
 {{% alert type="info" %}}
 
-When importing data records all existing records in the data set will be removed
+When importing data records all existing records in the dataset will be removed
 
 {{% /alert %}}{{% alert type="info" %}}
 
@@ -106,4 +106,4 @@ When importing data from from Excel, ATS will try to convert data that doesn't m
 
 {{% /alert %}}
 
-You can simply export a data set by clicking the **Export to Excel** button.
+You can simply export a dataset by clicking the **Export to Excel** button.

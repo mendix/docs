@@ -4,7 +4,7 @@ parent: "reporting"
 ---
 ## Description
 
-This section describes how to connect the parameter widgets in the top half of the report pane to parameters from a data set. The related reference guide article can be found [here](/refguide4/report-pane).
+This section describes how to connect the parameter widgets in the top half of the report pane to parameters from a dataset. The related reference guide article can be found [here](/refguide4/report-pane).
 
 ## Instructions
 

@@ -16,7 +16,7 @@ At the level of a project some global settings can be specified: the security le
 
 See [Project Security](project-security).
 
-Most of the security settings take place at the module level. This has the advantage that a module can specify its own security and can be distributed and reused in other projects. Access to forms, entities, microflows and data sets can be configured.
+Most of the security settings take place at the module level. This has the advantage that a module can specify its own security and can be distributed and reused in other projects. Access to forms, entities, microflows and datasets can be configured.
 
 See [Module Security](module-security).
 

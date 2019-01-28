@@ -4,26 +4,26 @@ category: "Modeler"
 ---
 
 
-A data set can be used for [reporting](report-widgets).
+A dataset can be used for [reporting](report-widgets).
 
-A data set is defined using either an OQL query or a custom Java action. To constrain datasets parameters can be defined which can be used in the OQL queries or Java Actions.
+A dataset is defined using either an OQL query or a custom Java action. To constrain datasets parameters can be defined which can be used in the OQL queries or Java Actions.
 
-Example of a data set using OQL:
+Example of a dataset using OQL:
 
 ![](attachments/819203/918066.png)
 
 **General**
 
-*   _Name_: The name of the data set, this is the designation the data set will carry in the rest of the modeler.
-*   _Description_: The description of the data set, this is only relevant as documentation.
+*   _Name_: The name of the dataset, this is the designation the dataset will carry in the rest of the modeler.
+*   _Description_: The description of the dataset, this is only relevant as documentation.
 
 **Source**
 
-*   _OQL query_: The [OQL query](oql) which defines the data set.
-*   _Java action_: The interface of the Java action which returns a data set. The columns and data types of the columns needs to be specified in the modeler. Based on this specification the modeler will create a template for this action.
+*   _OQL query_: The [OQL query](oql) which defines the dataset.
+*   _Java action_: The interface of the Java action which returns a dataset. The columns and data types of the columns needs to be specified in the modeler. Based on this specification the modeler will create a template for this action.
 
 **Parameters**
-A dataset can have multiple parameters. Parameters are used to filter / manipulate data sets. Security on data sets is configured based on the parameters. In a Java action the parameters are used in the generated template.
+A dataset can have multiple parameters. Parameters are used to filter / manipulate datasets. Security on datasets is configured based on the parameters. In a Java action the parameters are used in the generated template.
 
 {{% alert type="info" %}}
 
@@ -35,7 +35,7 @@ In OQL parameters can be called using a **$** symbol, for example: **$Month**.
 
 *   _Name_: The name of the parameter
 *   _Type_: The type of the parameter: object, enumeration or a primitive (e.g. datetime, float, integer, boolean, etc).
-*   _Constraints_: The constraints on a parameter. These constraints influence which values can be selected for parameter input values by the end user. Constraints can be associated with user roles in the data set security. There are two type of constraints: ranges which apply to numeric and date parameters and XPath constraints which apply to object parameters.
+*   _Constraints_: The constraints on a parameter. These constraints influence which values can be selected for parameter input values by the end user. Constraints can be associated with user roles in the dataset security. There are two type of constraints: ranges which apply to numeric and date parameters and XPath constraints which apply to object parameters.
 
 _Ranges_
 

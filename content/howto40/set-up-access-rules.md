@@ -40,8 +40,8 @@ Additionally you can add documentation for this access rule, select which module
 
 You can only set read and write permissions for all objects of all the entities you selected. Permissions for individual attributes or XPath constraints to limit the objects for which the rule applies are not possible in this case.
 
- **Finally, you can configure data set access rules in the 'Data set access' tab of the Module security window.**
+ **Finally, you can configure dataset access rules in the 'Data set access' tab of the Module security window.**
 
 ![](attachments/2621533/2752543.png)
 
-You can do this by clicking on the cell which forms the intersection of the data set and module role you want to configure. This will bring up a window which allows you to configure the allowed parameter values per module role.
+You can do this by clicking on the cell which forms the intersection of the dataset and module role you want to configure. This will bring up a window which allows you to configure the allowed parameter values per module role.

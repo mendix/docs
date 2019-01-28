@@ -19,7 +19,7 @@ A module can contain many different types of documents. Each type of document is
 | Document type | Description |
 | --- | --- |
 | [Constants](constants) | Constants are used to define a constant value, for example: to store an URL to a webservice. |
-| [Data sets](data-sets) | A data set can be used for reporting and is defined using either an OQL query or a custom Java action. |
+| [Data sets](data-sets) | A dataset can be used for reporting and is defined using either an OQL query or a custom Java action. |
 | [Document templates](document-templates) | Document Templates are used to model a template needed as input for a document export action which can generate all kinds of documents based on application data. They are composed much in the same way as Forms. |
 | [Enumerations](enumerations) | An enumeration is a set of predefined values, for example: in a webshop, an enumeration called MemberType could have the values Gold and Silver. |
 | [Java actions](java-actions) | With Java actions you can extend the functionality of your application in situations where it would be hard to implement this functionality in microflows. You can call a Java action from a microflow. |

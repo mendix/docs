@@ -11,7 +11,7 @@ For more general information on security, see [Security](security).
 
 {{% /alert %}}
 
-Within a module you can define module roles and specify security settings of those module roles for forms, microflows, entities and data sets.
+Within a module you can define module roles and specify security settings of those module roles for forms, microflows, entities and datasets.
 
 ## 2 Form Access
 
@@ -53,18 +53,18 @@ The **REST Access** tab is visible only when the service has the security set to
 
 ## 7 Data Set Access
 
-Data Set Access shows for each [data set](data-sets) (used for [reporting](report-widgets)) and each module role which access the module role has to the data set.
+Data Set Access shows for each [dataset](data-sets) (used for [reporting](report-widgets)) and each module role which access the module role has to the dataset.
 
 | Value | Description |
 | --- | --- |
-| Full access | No constraint applies to the parameters for the data set, and all eventual range parameters are allowed. |
-| Limited access | At least one constraint applies to the parameters for the data set, or at least one range parameter is not allowed. |
-| No access | Users with this module role have no access to the data set. |
+| Full access | No constraint applies to the parameters for the dataset, and all eventual range parameters are allowed. |
+| Limited access | At least one constraint applies to the parameters for the dataset, or at least one range parameter is not allowed. |
+| No access | Users with this module role have no access to the dataset. |
 
 {{% alert type="info" %}}
 
-The constraints are defined in the parameter definitions of the data set. Whether they apply is defined in the data set access.
-The ranges are defined in the parameters of the data set. Whether values in these ranges are allowed is defined in the data set access.
+The constraints are defined in the parameter definitions of the dataset. Whether they apply is defined in the dataset access.
+The ranges are defined in the parameters of the dataset. Whether values in these ranges are allowed is defined in the dataset access.
 
 {{% /alert %}}
 

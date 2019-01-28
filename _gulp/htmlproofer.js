@@ -5,6 +5,7 @@ const path = require('path');
 const fs = require('fs');
 const shell = require('shelljs');
 const _ = require('lodash');
+const sha1 = require('sha1');
 const cheerio = require('cheerio');
 const Promise = require('bluebird');
 const moment = require('moment');
@@ -294,7 +295,7 @@ const checkAllLinks = (links, files) => {
     })
 }
 
-const writeUpdateFeed = files => new Promise((resolve, reject) => {
+const writeUpdateFeed = files => new Promise(async (resolve, reject) => {
   const updateFiles = _.chain(files)
     .filter(file => file.time !== null && !!file.seoTitle)
     .map(file => {
@@ -325,26 +326,44 @@ const writeUpdateFeed = files => new Promise((resolve, reject) => {
     site_url: 'https://docs.mendix.com/'
   });
 
+  const recommendations = [];
+
   _.forEach(updateFiles, update => {
+    const title = update.seoTitle;
+    const url = 'https://' + normalizeSafe(`docs.mendix.com${update.basePath}`);
     feed.item({
-      title: update.seoTitle,
+      title,
       description: '',
-      url: 'https://' + normalizeSafe(`docs.mendix.com${update.basePath}`),
+      url,
       date: update.dateObj
+    });
+    recommendations.push({
+      id: `docs-${sha1(url)}`,
+      title,
+      url
     })
   });
 
   const feedDest = path.join(SOURCEPATH, '/feed.xml');
+  const recommenderDest = path.join(SOURCEPATH, '/recommendations.json');
 
   fs.writeFile(feedDest, feed.xml({ indent: true }), err => {
     if (err) {
       rssLog(`Error writing /feed.xml: ${red(err)}`)
+      resolve(files);
     } else {
       rssLog(`Update feed written to ${cyan(feedDest)}`);
+      fs.writeFile(recommenderDest, JSON.stringify(recommendations, null, 4), err => {
+        if (err) {
+          rssLog(`Error writing /recommendations.json: ${red(err)}`)
+        } else {
+          rssLog(`Recommendations JSON written to ${cyan(recommenderDest)}`);
+        }
+        resolve(files);
+      });
     }
-    resolve(files);
   });
-})
+});
 
 const checkExternal = files => {
   const total = _.flatten(_.map(files, file => file.external && file.external.links ? file.external.links : [])),

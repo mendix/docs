@@ -296,6 +296,18 @@ const checkAllLinks = (links, files) => {
 }
 
 const writeUpdateFeed = files => new Promise(async (resolve, reject) => {
+  const recommendations = files
+    .filter(file => file.time !== null && !!file.seoTitle)
+    .map(file => {
+      const title = file.seoTitle.replace(' | Mendix Documentation', '');
+      const basePath = file.basePath.replace('index.html', '').replace('.html','');
+      const url = 'https://' + normalizeSafe(`docs.mendix.com${basePath}`);
+      return {
+        id: `docs-${sha1(url)}`,
+        title,
+        url
+      }
+    });
   const updateFiles = _.chain(files)
     .filter(file => file.time !== null && !!file.seoTitle)
     .map(file => {
@@ -326,8 +338,6 @@ const writeUpdateFeed = files => new Promise(async (resolve, reject) => {
     site_url: 'https://docs.mendix.com/'
   });
 
-  const recommendations = [];
-
   _.forEach(updateFiles, update => {
     const title = update.seoTitle;
     const url = 'https://' + normalizeSafe(`docs.mendix.com${update.basePath}`);
@@ -337,11 +347,6 @@ const writeUpdateFeed = files => new Promise(async (resolve, reject) => {
       url,
       date: update.dateObj
     });
-    recommendations.push({
-      id: `docs-${sha1(url)}`,
-      title,
-      url
-    })
   });
 
   const feedDest = path.join(SOURCEPATH, '/feed.xml');

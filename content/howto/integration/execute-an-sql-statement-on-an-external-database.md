@@ -58,6 +58,6 @@ The Execute statement action's result is either an Integer or a Long value which
 
 *   Proper security must be applied as this action can allow SQL Injection in your Mendix application.
 
-## 6 Related Content
+## 6 Read More
 
 *   [How to execute an SQL statement on an external database](execute-an-sql-statement-on-an-external-database)

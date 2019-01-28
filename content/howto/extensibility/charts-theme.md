@@ -115,7 +115,7 @@ To change the font in all charts in the app, follow these steps:
 
     ![chart updated](attachments/charts/charts-toggle-editor-changed.png)
 
-## 4 Related Content
+## 4 Read More
 
 * [Charts reference guide](/refguide/chart-widgets)
 * [Layout samples](/refguide/charts-advanced-cheat-sheet#layout-all)

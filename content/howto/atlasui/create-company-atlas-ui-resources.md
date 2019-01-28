@@ -97,7 +97,7 @@ When the resources are ready to be shared with multiple developers or apps, the 
 
 The module can now be imported in other apps or uploaded to the [Mendix App Store](https://appstore.home.mendix.com/index3.html). There is an option to make the resource module available for private use only so that everybody in your company can benefit from and extend the module.
 
-## 6 Related Content
+## 6 Read More
 
 * [How to Get Started with Atlas UI](get-started-with-atlasui)
 * [How to Create Custom Preview Images for Building Blocks & Page Templates](create-custom-preview-images-for-building-blocks-and-page-templates)

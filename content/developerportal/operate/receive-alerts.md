@@ -65,7 +65,7 @@ You can manage the alerts by yourself, follow these steps:
 
     ![](attachments/receive-alerts/email-alerts.png)
 
-## 4 Related Content
+## 4 Read More
 
 * [Alerts](monitoring-application-health)
 * [Application Trends in Mendix Cloud v3](trends)

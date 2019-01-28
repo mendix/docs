@@ -85,7 +85,7 @@ Click **Go to App Store** to upload your widget.
 
 For more information, see [How to Share App Store Content](../app-store/share-app-store-content).
 
-## 5 Related Content
+## 5 Read More
 
 * [Deploy and Manage](/developerportal/deploy)
 * [Mendix App Services: Putting Them to Work for Your Projects](https://www.mendix.com/videos/mendix-app-services-putting-work-projects-pieter-van-balen-mendix-developer/)

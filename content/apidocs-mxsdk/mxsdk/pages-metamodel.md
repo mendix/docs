@@ -177,7 +177,7 @@ Modeler Reference Guide | Model SDK API docs
 [Starting Microflows](/refguide6/starting-microflows) |
 [Opening Pages](/refguide6/opening-pages) |
 
-## Related Content
+## Read More
 
 *   Blog: [Designing Flexible User Interfaces with Layouts](https://www.mendix.com/blog/designing-flexible-user-interfaces-layouts/)
 *   Blog: [Creating Maintainable Interfaces with Snippets](https://www.mendix.com/blog/creating-maintainable-interfaces-with-snippets/)

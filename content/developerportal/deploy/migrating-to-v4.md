@@ -123,7 +123,7 @@ To change the App URL (if you are not using a custom domain) you will need to co
 
 If you have a custom domain set up, you will need to change this. Instructions for doing this are here: [Custom Domains](custom-domains).
 
-## 4 Related Content
+## 4 Read More
 
 *   [Certificates](certificates)
 *   [Custom Domains](custom-domains)

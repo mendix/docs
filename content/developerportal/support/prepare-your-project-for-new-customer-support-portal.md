@@ -57,7 +57,7 @@ To give existing project members access to submit tickets, follow these steps:
 
 5.  To finalize the setup send an email to [support@mendix.com](http://support.mendix.com/) with the Project Name, ProjectID and the name of the applicable app.
 
-## 4 Related Content
+## 4 Read More
 
 * [On-Premises](../deploy/on-premises-design)
 * [How to Change the Affected Apps for Which You Can Submit Requests](change-affected-apps)

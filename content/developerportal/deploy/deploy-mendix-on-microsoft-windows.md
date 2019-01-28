@@ -367,6 +367,6 @@ To make sure the correct application root URL is used within your web services, 
 
 When configuring IIS it can seem like you have done everything right but it just doesn't seem to work. A guide to troubleshooting IIS is available here: [Troubleshooting IIS](troubleshooting-iis).
 
-## 8 Related Content
+## 8 Read More
 
 * [On-Premises](on-premises-design)

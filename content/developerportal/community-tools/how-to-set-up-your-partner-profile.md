@@ -218,6 +218,6 @@ The [Meet Our Partners page](https://developer.mendixcloud.com/openid/login?imme
 * The total amount of certified developers (note that developers with multiple certifications count as one certified developer)
 * The total number of projects you have published on your Partner Profile
 
-## 11 Related Content
+## 11 Read More
 
 * [Mendix Jobs Board](mendix-job-board)

@@ -68,6 +68,6 @@ Mendix reserves the right to make MVP selection decisions and to revoke MVP stat
 
 By participating in the MVP program, each MVP agrees to release, indemnify, defend, and hold Mendix directors, officers, employees, sponsors and agents (including advertising and promotion agencies ), and any other organizations related to the MVP program, harmless from any and all claims, injuries, damages, expenses, or losses to person or property and/or liabilities of any nature that in any way arise from participation in the MVP program including without limitation the following: (i) any condition caused by events beyond Mendix’s control that may cause the MVP program to be disrupted or corrupted; and (ii) any injuries, losses, or damages (compensatory, direct, incidental, consequential, or otherwise) of any kind arising in connection with or as a result of the MVP designation or from participation in the MVP program.
 
-## 6 Related Content
+## 6 Read More
 
 * [Mendix Profile](../mendix-profile/index)

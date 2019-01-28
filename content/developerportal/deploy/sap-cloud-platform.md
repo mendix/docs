@@ -371,6 +371,6 @@ You can still delete the app and its resources from the SAP Cloud Platform cockp
 
 The Mendix status page ([https://status.mendix.com/](https://status.mendix.com/)) shows the current status of Mendix services. If you have issues with deploying to SAP Cloud Platform via the Developer Portal, you can check the Mendix status page to see if SAP Cloud Platform deployment is operational (under **Mendix Services**) or if there are other Mendix issues which may be affecting your deployment.
 
-## 10 Related Content
+## 10 Read More
 
 * [SAP Single Sign On](/refguide/sap/sap-single-sign-on)

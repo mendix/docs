@@ -59,7 +59,7 @@ docker run -it \
   mendix/mendix-buildpack:v1.2  
 ```
 
-## 5 Related Content
+## 5 Read More
 
 * [Docker: Deploy](docker-deploy)
 * [Mendix Docker Buildpack ](https://github.com/mendix/docker-mendix-buildpack)

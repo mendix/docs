@@ -29,7 +29,7 @@ The Mendix Mobile app does not yet support running [offline-enabled](offline) ap
 
 {{% /alert %}}
 
-## 3 Related Content
+## 3 Read More
 
 * [Mobile](mobile)
 * [Getting the Mendix Mobile App](getting-the-mendix-app)

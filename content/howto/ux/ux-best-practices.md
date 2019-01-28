@@ -211,7 +211,7 @@ These are the basic UX best practices outlined in this document:
 * Keep form fields in a single column
 * Give descriptive names to buttons
 
-## 11 Related Content
+## 11 Read More
 
 * [Common UX Mistakes Made by Business Developers (You Know Who You Are...)](https://blog.prototypr.io/common-ux-mistakes-made-by-business-developers-e837d0b31379)
 

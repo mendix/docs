@@ -98,7 +98,7 @@ Now the new object of type *Customer* will be created and passed to the home pag
 ![Open Home Page Microflow](attachments/consistency-errors-navigation-wm/wm-open-page-microflow.png)
 
 
-## 3 Related Content
+## 3 Read More
 
 * [Navigation Document in the Web Modeler](navigation-wm)
 * [Page Editor Consistency Errors in the Web Modeler](consistency-errors-pages-wm)

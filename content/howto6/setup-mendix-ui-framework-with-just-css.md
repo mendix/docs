@@ -55,7 +55,7 @@ In this chapter we will create a new app and select a theme from the New App sel
     ![](attachments/18448709/18581426.png) 
 8.  Congratulations, you made your first theme change.
 
-## 4\. Related Content
+## 4\. Read More
 
 *   [Scout and Windows 10 Workaround](scout-and-windows-10-workaround)
 *   [Layouts and Snippets](layouts-and-snippets)

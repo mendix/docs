@@ -80,6 +80,6 @@ You can now commit your app project.
 
 If the solutions here do not work for your version control problems, please submit a request with [Mendix Support](https://support.mendix.com/).
 
-## 4 Related Content
+## 4 Read More
 
 * [How to Submit Support Requests](/developerportal/support/submit-support-request)

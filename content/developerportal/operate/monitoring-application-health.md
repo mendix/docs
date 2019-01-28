@@ -190,7 +190,7 @@ To access the history of the alerts from your app, follow these steps:
 
 3. Click **Details**. This will open the alert details, which contains additional information. More information might be available in your application's log file.
 
-## 5 Related Content
+## 5 Read More
 
 * [Application Trends in Mendix Cloud v3](trends)
 * [Application Trends in Mendix Cloud v4](trends-v4)

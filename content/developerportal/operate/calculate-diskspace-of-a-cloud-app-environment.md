@@ -67,7 +67,7 @@ From the **Database node disk usage in %** graph below you need the amount of di
 
 The total amount of disk space for this app is: ``(28.43 * 100) / 37.74 = 75.3 GB``
 
-## 5 Related Content
+## 5 Read More
 
 * [Mendix Cloud](../deploy/mendix-cloud-deploy)
 * [Environments](../deploy/environments)

@@ -45,7 +45,7 @@ parent: "ats-1"
 
 * We fixed the bug for sandbox apps where the execution of a test case failed with the error "MTF not defined."
 * We fixed the test result calculation on the dashboard where data-driven tests were not taken into account.
-* We fixed the bug on the import of a test case where the parameter of a conditional action was mistakenly added to the regular action if the conditional action had a data set field as the input parameter value. 
+* We fixed the bug on the import of a test case where the parameter of a conditional action was mistakenly added to the regular action if the conditional action had a dataset field as the input parameter value. 
 * We fixed the selection of applications and Selenium hubs for scheduled tests where it was possible to select an application or Selenium hub from another project.  
 
 ## 1.8.5
@@ -89,7 +89,7 @@ ATS now supports testing the recently released Mendix 7.
 ### Fixes
 
 * We fixed a bug where the dialog box to link a story to a test case was not closed properly.
-* If you configured a data set with more than 30 fields for your test case, only the first 30 fields could be used due to a UI bug. This has been fixed.
+* If you configured a dataset with more than 30 fields for your test case, only the first 30 fields could be used due to a UI bug. This has been fixed.
 * A change of the project name now also updates the root folder in the repository.
 * We fixed the bug where users were able to select Selenium configurations and applications from other projects in the test run configuration.
 * We fixed the bug where the chart on the project selection page did not show the same results as the chart on the project dashboard.     

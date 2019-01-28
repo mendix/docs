@@ -142,7 +142,7 @@ Now the application is ready to store redundant data, but you still need to keep
 
 20. Run the application and create some customers and orders. You should now see an up-to-date value for the TotalOrderAmount.
 
-## 5 Related Content
+## 5 Read More
 
 * [How to Work with Images & Files](working-with-images-and-files)
 * [How to Create a Basic Data Layer](create-a-basic-data-layer)

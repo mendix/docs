@@ -47,7 +47,7 @@ To deactivate or activate an app as a Company Admin, follow these steps:
 
 5. In the pop-up window that appears, confirm you choice (by clicking either **Deactivate apps** or **Activate apps**, according to the scenario).
 
-## 4 Related Content
+## 4 Read More
 
 * [Apps](../company-app-roles/apps)
 * [How to Leave & Delete an App](../settings/leave-delete-app).

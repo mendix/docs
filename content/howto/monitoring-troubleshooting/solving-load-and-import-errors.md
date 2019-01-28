@@ -56,7 +56,7 @@ The most likely cause for these kinds of errors is a faulty script that was run 
 
 Finally, in the unlikely event that you encounter this error while working on your project with the Mendix Desktop Modeler, it's best to contact Mendix support and open a ticket to get help with the problem.
 
-## 5 Related Content
+## 5 Read More
 
 *   [Clearing Warning Messages in Mendix](clear-warning-messages)
 *   [Common Mendix SSO Errors](handle-common-mendix-sso-errors)

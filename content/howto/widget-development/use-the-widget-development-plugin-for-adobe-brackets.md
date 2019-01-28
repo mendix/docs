@@ -137,7 +137,7 @@ To package the widget source into an *.mpk* file, follow these steps:
 
 This how-to has enabled you to start working and building a custom widget for the Mendix Platform using Adobe Brackets as your main integrated development environment. The code examples in the `AppStoreWidgetBoilerplate` will provide you a quick overview of what you need to interact with both the user interface and Mendix.
 
-## 8 Related Content
+## 8 Read More
 
 These are some interesting books and articles you can read to dive into the source code of the `AppStoreWidgetBoilerplate`:
 

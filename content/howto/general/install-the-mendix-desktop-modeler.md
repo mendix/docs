@@ -66,7 +66,7 @@ The Mendix Desktop Modeler needs to be installed on your computer before you can
 
 This concludes the how-to about installing the Mendix Desktop Modeler.
 
-## 5 Related Content
+## 5 Read More
 
 * [Desktop Modeler](/refguide/desktop-modeler)
 * [Desktop Modeler Overview](/refguide/desktop-modeler-overview)

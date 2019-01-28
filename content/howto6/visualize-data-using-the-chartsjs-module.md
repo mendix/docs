@@ -81,7 +81,7 @@ The ChartJS widgets are configured through the familiar modeler widget dialogue 
 
 1.  Set the entity for the chart to be the created Chart entity
     ![](attachments/19202962/19399001.png)
-2.  under the widget’s Data Set tab, select the data set entity
+2.  under the widget’s Data Set tab, select the dataset entity
     ![](attachments/19202962/19399002.png)
 3.  Under the Data Set tab, configure the sorting, label, and fill color properties as shown below
     ![](attachments/19202962/19399003.png)

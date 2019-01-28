@@ -291,7 +291,7 @@ minikube service mendix-app-service --url
 
 Congratulations! You have deployed your first Mendix app in Kubernetes.
 
-## 5 Related Content
+## 5 Read More
 
 * [Docker: Deploy](docker-deploy)
 * [Mendix Docker Buildpack](https://github.com/mendix/docker-mendix-buildpack)

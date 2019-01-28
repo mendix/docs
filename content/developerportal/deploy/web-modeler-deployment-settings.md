@@ -38,7 +38,7 @@ To select the environment for the Web Modeler, do the following:
 
 You have selected the environment for the Web Modeler. 
 
-## 3 Related Content
+## 3 Read More
 
 *   [Deploying Your App From the Web Modeler](/refguide/web-modeler/deployment-wm)
 *   [Mendix Cloud](mendix-cloud-deploy)

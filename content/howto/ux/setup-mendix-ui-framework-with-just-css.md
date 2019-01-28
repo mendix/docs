@@ -63,7 +63,7 @@ In this chapter we will create a new app and select a theme from the New App sel
     ![](attachments/18448709/18581426.png) 
 8.  Congratulations, you made your first theme change.
 
-## 5 Related Content
+## 5 Read More
 
 *   [How to Create Your First Two Overview & Detail Pages](create-your-first-two-overview-and-detail-pages)
 *   [How to Filter Data on an Overview Page](filtering-data-on-an-overview-page)

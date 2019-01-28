@@ -18,7 +18,7 @@ If you do want to use the list but you also want the optimized query, do two sep
 
 ![](attachments/18448676/18580944.png)
 
-## 2 Related Content
+## 2 Read More
 
 * [How to Define Access Rules Using XPath](define-access-rules-using-xpath)
 * [How to Extend Your Application with Custom Java](extending-your-application-with-custom-java)

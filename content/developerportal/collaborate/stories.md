@@ -188,7 +188,7 @@ When you return to your app project in the Developer Portal, you will see the ne
 
 Changing the status of a story or updating story points automatically synchronizes the updates between the Developer Portal and the Modeler!
 
-## 5 Related Content
+## 5 Read More
 
 * [Buzz](buzz)
 * [App Team](team)

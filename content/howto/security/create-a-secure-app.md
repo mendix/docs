@@ -284,6 +284,6 @@ An XPath constraint can be used to constrain the set of objects to which the acc
     
     ![](attachments/18448715/18581520.png)
 
-## 7 Related Content
+## 7 Read More
 
 * [Set Up Anonymous User Security](set-up-anonymous-user-security)

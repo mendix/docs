@@ -38,7 +38,7 @@ This tab describes the following app details for that specific cloud node:
 * **Phone number**
 * **Email address**
 
-## 4 Related Content
+## 4 Read More
 
 * [Company Admin Settings](companyadmin-settings)
 * [Company](company)

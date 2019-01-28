@@ -109,7 +109,7 @@ Backup Details | Cloud Version | Description
 
 At the bottom of the screen, you can click **Delete** to delete this particular backup.
 
-## 4 Related Content
+## 4 Read More
 
 * [How to Create a Backup](create-backup)
 * [How to Download a Backup](download-backup)

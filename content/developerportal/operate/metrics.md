@@ -67,7 +67,7 @@ The version 7 runtime is stateless and does not cache Mendix objects on the serv
 *   User sessions with the amount of entities. If you select a user session you can click **Details** to see which entities are used.
 
 
-## 5 Related Content
+## 5 Read More
 
 * [Database Size Reduction](database-size-reduction)
 * [Environment details](/developerportal/deploy/environments-details)

@@ -38,7 +38,7 @@ With the Web Modeler, you can design beautiful apps by leveraging the integrated
 
 Click **Edit in Web Modeler** to open the app in the Web Modeler. Note that this is for Atlas UI-based apps only. If you need to enable the Web Modeler for your app project, click **Enable Web Modeler in Settings**, which will take you to the [General Settings](../settings/general-settings) page of your app project to do this.
 
-## 4 Related Content
+## 4 Read More
 
 * [Team Server Overview](team-server)
 * [Plan App Development](planning-development)

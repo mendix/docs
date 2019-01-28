@@ -48,6 +48,6 @@ The Web Modeler has a minimum supported **Mendix Desktop Modeler version**. This
 
 {{% /alert %}}
 
-## 4 Related Content
+## 4 Read More
 
 * [Web Modeler Release Notes](../../releasenotes/web-modeler)

@@ -711,7 +711,7 @@ In addition, the following IBM AI services are not yet supported at all by the I
 10. Watson Studio
 11. PowerAI
 
-## 11 Related Content
+## 11 Read More
 
 * [Getting started with Watson and IBM Cloud](https://cloud.ibm.com/docs/services/watson/index.html)
 * [How to Consume a REST Service](/howto/integration/consume-a-rest-service)

@@ -149,7 +149,7 @@ So, for example, the first file in the example file above (0d3e301f-5551-46f8-ad
          /0d3e301f-5551-46f8-ad44-8de2be084c95
 ```
 
-## 6 Related Content
+## 6 Read More
 
 * [Backups](backups)
 * [How to Create a Backup](how-to-create-backup)

@@ -70,7 +70,7 @@ If you have [TortoiseSVN](/refguide/version-control-scenarios#tortoisesvn-and-su
 
 If you encounter issues using this setup, please read the [Troubleshooting](https://github.com/mendix/ux-theming#troubleshooting) section in the GitHub repo documentation. If this does not resolve your issue, please [create a new GitHub issue](https://github.com/mendix/ux-theming/issues/).
 
-## 8 Related Content
+## 8 Read More
 
 * [mendix / ux-theming](https://github.com/mendix/ux-theming)
 * [How to Create a Custom Theme with the Mendix UI Framework](create-a-custom-theme-with-the-mendix-ui-framework)

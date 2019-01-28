@@ -235,6 +235,6 @@ To fix the consistency errors, finish configuring the on click event (for exampl
 
 ![On Click Event Example](attachments/consistency-errors-pages/dm-on-click-event.png)
 
-##  9 Related Content
+##  9 Read More
 
 * [Pages](pages) 

@@ -157,7 +157,7 @@ Downloading a theme is very similar to downloading a widget. Like a widget, a th
 
 To delete a theme, remove the *.zip* file from your project's **theme** folder.
 
-## 7 Related Content
+## 7 Read More
 
 * [App Store Overview](app-store-overview)
 * [How to Share App Store Content](share-app-store-content)

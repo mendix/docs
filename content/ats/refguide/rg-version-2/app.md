@@ -33,7 +33,7 @@ The **7-day history** infographic will only be included in the PDF report when y
 
 Under **Recent Tests**, you can find detailed information about the status of all your test cases and test suites. You can see the duration since the latest completed run, a counter of passed/total test cases, and the success rate. The success rate is calculated using the results of all the containing test cases. 
 
-For data-driven tests, the data set is diplayed in the **test data** column. The counter of a data-driven test cases shows the passed/total test runs of the related data set records at the time of execution.
+For data-driven tests, the dataset is diplayed in the **test data** column. The counter of a data-driven test cases shows the passed/total test runs of the related dataset records at the time of execution.
 
 The results of your test cases are displayed as the following labels:
 

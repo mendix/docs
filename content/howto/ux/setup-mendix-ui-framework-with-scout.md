@@ -87,7 +87,7 @@ The Mendix UI Framework uses **Sass**, which relies on Ruby. However, you can in
 
     As you can see our sidebar is now red, not the best look and feel but it works!
 
-## 6 Related Content
+## 6 Read More
 
 *   [How to Create Your First Two Overview & Detail Pages](create-your-first-two-overview-and-detail-pages)
 *   [How to Filter Data on an Overview Page](filtering-data-on-an-overview-page)

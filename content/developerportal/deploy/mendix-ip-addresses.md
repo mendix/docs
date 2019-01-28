@@ -39,6 +39,6 @@ The outgoing IP address is the same for multiple environments and applications b
 
 Usually you configure your firewall with rules for Incoming traffic to your network. Therefore you need to use the outgoing IP address of the Mendix application.
 
-## 4 Related Content
+## 4 Read More
 
 * [Cloud Status: Mendix Cloud](/developerportal/deploy/mendix-cloud-status)

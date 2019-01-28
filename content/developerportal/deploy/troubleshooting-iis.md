@@ -146,7 +146,7 @@ EventType clr20r3, P1 mendixservice.exe, P2 1.0.3810.25652, P3 4c0cf0d8, P4 mend
 
 Make sure that the user account used to run the service has enough rights to the folders containing the Mendix Service executables and the subfolders x86 and x64.
 
-## 5 Related Content
+## 5 Read More
 
 *   [Finding the Root Cause of Runtime Errors](/howto/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
 *   [Clearing Warning Messages in Mendix](/howto/monitoring-troubleshooting/clear-warning-messages)

@@ -31,6 +31,6 @@ After packaging your custom widget, the image provided will be rendered in the M
 
 Please note that older versions of the Modeler ignore this image and render a grey rectangle as usual.
 
-## 4 Related Content
+## 4 Read More
 
 * [How to Use the Widget Development Plugin for Adobe Brackets](use-the-widget-development-plugin-for-adobe-brackets)

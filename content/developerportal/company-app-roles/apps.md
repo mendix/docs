@@ -36,7 +36,7 @@ On the **Roles** tab, you can edit and add App Team member roles.
 
 For more information, see the [App Team Member Roles](/developerportal/company-app-roles/index) section of *Company & App Roles*.
 
-## 4 Related Content
+## 4 Read More
 
 * [Company Admin Settings](companyadmin-settings)
 * [Company](company)

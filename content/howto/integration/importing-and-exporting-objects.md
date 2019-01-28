@@ -211,7 +211,7 @@ Mendix module documents can be exported as a Mendix package (*.mpk*) file.
     
 2. Enter the **Name** for your package and click **Save**.
 
-## 4 Related Content
+## 4 Read More
 
 * [How to Consume a Complex Web Service](consume-a-complex-web-service)
 * [How to Consume a Simple Web Service](consume-a-simple-web-service)

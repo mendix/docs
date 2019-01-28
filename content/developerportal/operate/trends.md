@@ -168,7 +168,7 @@ Disk utilization is calculated as the disk usage that is used by the user of the
 
 {{% /alert %}}
 
-## 6 Related Content
+## 6 Read More
 
 * [Alerts](monitoring-application-health)
 * [Database Size Reduction](database-size-reduction)

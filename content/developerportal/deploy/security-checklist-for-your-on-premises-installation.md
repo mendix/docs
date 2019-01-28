@@ -60,7 +60,7 @@ Choose a strong password to protect the administrative interface running on the 
 
 NEVER use the Mendix Modeler to directly connect to a production database (for example, by using an SSH tunnel to the database or the Modeler on a Windows server). Because the Modeler is always running in development mode, it will instantaneously reset the password of the "admin user," which is defined in the Modeler to its development default. This likely means there will be an "MxAdmin" user with a password set to "1" (or this account will be created when it does not exist).
 
-## 10 Related Content
+## 10 Read More
 
 * [How to Restore a SQL Server Database](restoring-a-sql-server-database)
 * [How to Troubleshoot an SQL Server](troubleshooting-sql-server)

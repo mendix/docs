@@ -104,7 +104,7 @@ Validating user input can also be achieved by overriding the default save button
 15. Select for example **Name** as member.
 16. Enter an error message in the **Template** field. You can use indexes to dynamically insert parameters in the template.
 
-## 5 Related Content
+## 5 Read More
 
 * [How to Work with Images & Files](working-with-images-and-files)
 * [How to Create a Basic Data Layer](create-a-basic-data-layer)

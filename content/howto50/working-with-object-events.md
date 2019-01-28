@@ -55,7 +55,7 @@ Pressing a delete button or triggering a Delete activity will initiate the Delet
 
 ![](attachments/8785875/8946793.png)
 
-## 6 Related Content
+## 6 Read More
 
 *   [Working with images and files](working-with-images-and-files)
 *   [Creating a basic data layer](creating-a-basic-data-layer)

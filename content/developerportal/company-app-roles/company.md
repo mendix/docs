@@ -37,7 +37,7 @@ You can also view the company email domains. This is important for verifying the
 
 On the **Launchpad Settings** tab, you can select the background image for the [Mendix launchpad](https://home.mendix.com/home/).
 
-## 6 Related Content
+## 6 Read More
 
 * [Company Admin Settings](companyadmin-settings)
 * [Users](nodes)

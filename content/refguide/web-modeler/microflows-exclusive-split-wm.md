@@ -54,7 +54,7 @@ The number of cases available for the enumeration type depends on the correspond
 
 The caption describes what happens in this element.
 
-## 5 Related Content
+## 5 Read More
 
 * [Microflows in the Web Modeler](microflows-wm)
 * [Microflow Expressions in the Web Modeler](microflows-expressions-wm)

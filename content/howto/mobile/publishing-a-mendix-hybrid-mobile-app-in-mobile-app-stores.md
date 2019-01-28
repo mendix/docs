@@ -121,7 +121,7 @@ The app should now be visible on your device. Open it and log in to the app with
 
 {{% youtube 7ic625u2YJE %}}
 
-## 8 Related Content
+## 8 Read More
 
 * [Mobile How-To's](../mobile/)
 * [How to Deploy your First Hybrid Mobile App](deploy-your-first-hybrid-mobile-app)

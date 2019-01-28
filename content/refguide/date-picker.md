@@ -84,7 +84,7 @@ The placeholder text is shown if the date attribute is empty. It can be used to 
 
 {{% snippet file="refguide/Tab+index+Property.md" %}}
 
-## 9 Related Content
+## 9 Read More
 
 *   [Data View](data-view)
 *   [Attributes](attributes)

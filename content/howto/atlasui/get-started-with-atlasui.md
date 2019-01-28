@@ -68,7 +68,7 @@ You can now style your app with custom branding, colors, and typography!
 
 ![](attachments/howto/start_customize_your_theme.png)
 
-## 7 Related Content
+## 7 Read More
 
 * [How to Create Custom Preview Images for Building Blocks & Page Templates](create-custom-preview-images-for-building-blocks-and-page-templates)
 * [How to Extend Design Properties to Customize the Web Modeler Experience](extend-design-properties-to-customize-the-web-modeler-experience)

@@ -76,6 +76,6 @@ Specific properties for the **Text** widget are described in the table below:
 | Wrap Options | Wrap a long text into multiple lines | Possible values for **Wrap Options** are the following:<ul><li>None – text is not wrapped</li><li>Wrap</li><li>No Wrap</li></ul> |
 
 
-## 3 Related Content
+## 3 Read More
 
 * [Widgets in the Web Modeler](page-editor-widgets-wm)

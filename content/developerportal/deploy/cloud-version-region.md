@@ -32,7 +32,7 @@ To view the Mendix Cloud region and version in which your app is hosted, follow 
 
     ![](attachments/cloud-version-region/environments-general.png)
 
-## 3 Related Content
+## 3 Read More
 
 * [Environment Details](environments-details)
 * [Migrate to Mendix Cloud v4](migrating-to-v4)

@@ -113,6 +113,6 @@ If you also want to restore the **FileDocuments**, you need to follow the follow
 5. Extract the entire **tree** folder from the backup archive to the  **deployment/data/files** folder within your project.
 6. Run the app by clicking **Run Locally**.
 
-## 6 Related Content
+## 6 Read More
 
 * [Backups](backups)

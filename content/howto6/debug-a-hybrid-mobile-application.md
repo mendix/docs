@@ -39,7 +39,7 @@ On the configure screen, fill in the same settings that you used to start weinre
 
 You can now navigate to the same address on your local browser to start the debugging session.
 
-## 4 Related Content
+## 4 Read More
 
 * [How to Find the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
 * [How to Clear Warning Messages in Mendix](clear-warning-messages)

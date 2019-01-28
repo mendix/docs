@@ -58,7 +58,7 @@ A lot of Mendix projects have a custom theme. If this is the case for your proje
 
 ![Image of Mendix Atlas UI](attachments/howto/migrate_old_theme.png)
 
-## 7 Related Content
+## 7 Read More
 
 * [How to Get Started with Atlas UI](get-started-with-atlasui)
 * [How to Create Company Atlas UI Resources](create-company-atlas-ui-resources)

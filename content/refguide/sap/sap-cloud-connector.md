@@ -34,7 +34,7 @@ When the SAP XSUAA Connector and Cloud Connector are set up, the only thing a de
 
 ![](attachments/sap-cloud-connector/cloud-connector.png)
 
-## 4 Related Content
+## 4 Read More
 
 * [SAP XSUAA Connector](sap-xsuaa-connector)
 * [How to Set Up the SAP XSUAA Connector](/howto/sap/use-sap-xsuaa-connector)

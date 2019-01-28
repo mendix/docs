@@ -132,7 +132,7 @@ If the `/ws/` path should still be reachable from the office location *without* 
 
 {{% /alert %}}
 
-## 6 Related Content
+## 6 Read More
 
 * [Certificates](certificates)
 * [Deploy and Manage](/developerportal/deploy)

@@ -35,7 +35,7 @@ If you want to make a new release for the App Store, we advise you start off wit
 
 ![](attachments/18448643/18580533.png)
 
-## 6 Related Content
+## 6 Read More
 
 *   [Stories](/developerportal/collaborate/stories)
 *   [Contributing to a GitHub repository](contribute-to-a-github-repository)

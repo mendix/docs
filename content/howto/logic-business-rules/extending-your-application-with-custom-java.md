@@ -162,7 +162,7 @@ return new StringBuilder(assetsAssetName).reverse().toString();
 	{{% image_container width="600" %}}![](attachments/extend-custom-java/app2.png)
 	{{% /image_container %}}
 
-## 7 Related Content
+## 7 Read More
 
 * [How to Define Access Rules Using XPath](define-access-rules-using-xpath)
 * [How to Trigger Logic Using Microflows](triggering-logic-using-microflows)

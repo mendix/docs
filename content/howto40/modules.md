@@ -13,7 +13,7 @@ Please select a how-to:
     *   [Add Custom Images](add-custom-images)
 *   [Constants](constants)
     *   [Create and Configure a Constant](create-and-configure-a-constant)
-*   [Data Sets](data-sets)
+*   [Datasets](data-sets)
     *   [Create a Data Set and Add Parameters to It](create-a-data-set-and-add-parameters-to-it)
 *   [Document Templates](document-templates)
     *   [Create and Build a Document Template](create-and-build-a-document-template)

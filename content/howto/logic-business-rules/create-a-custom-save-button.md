@@ -78,7 +78,7 @@ To replace the default Save button with a custom one, follow these steps:
 
     ![](attachments/18448679/18580979.png)
 
-## 6 Related Content
+## 6 Read More
 
 * [How to Define Access Rules Using XPath](define-access-rules-using-xpath)
 * [How to Trigger Logic Using Microflows](triggering-logic-using-microflows)

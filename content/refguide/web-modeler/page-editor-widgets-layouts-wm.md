@@ -163,7 +163,7 @@ Each tab has the following properties:
 	{{% image_container width="300" %}}![](attachments/page-editor-widgets-layouts-wm/wm-tab-properties.png)
 	{{% /image_container %}}
 
-## 6 Related Content
+## 6 Read More
 
 * [Page Editor in the Web Modeler](page-editor-wm) 
 * [Widgets in the Web Modeler](page-editor-widgets-wm)

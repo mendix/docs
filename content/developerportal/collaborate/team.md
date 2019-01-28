@@ -55,7 +55,7 @@ To invite members, click **Invite Member** on the **Team** and follow these step
 2. Add a personal message (optional).
 3. Confirm the invitation(s).
 
-## 4 Related Content
+## 4 Read More
 
 * [Company & App Roles](/developerportal/company-app-roles/index)
 * [How to Manage Company & App Roles](/developerportal/company-app-roles/manage-roles)

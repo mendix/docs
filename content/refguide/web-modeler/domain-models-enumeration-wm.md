@@ -72,7 +72,7 @@ The existing enumeration is selected for the attribute of the enumeration type.
 
 For details on properties of attributes of the enumeration type, see section [3 Attribute Properties](domain-models-attributes-wm#attribute-properties) in *Attribute Types in the Web Modeler*. 
 
-## 5 Related Content
+## 5 Read More
 
 * [Domain Model in the Web Modeler](domain-models-wm)
 * [Attribute Types in the Web Modeler](domain-models-attributes-wm) 

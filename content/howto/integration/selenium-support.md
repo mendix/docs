@@ -58,7 +58,7 @@ $('.mx-name-ArtistGrid .mx-name-index-3')
 
 Note that the fourth row in a grid has an index of `3`.
 
-## 6 Related Content
+## 6 Read More
 
 * [How to Create Automated Tests with TestNG](../testing/create-automated-tests-with-testng)
 * [How to Test Mendix Applications Using Selenium IDE](../testing/testing-mendix-applications-using-selenium-ide)

@@ -36,7 +36,7 @@ You can subscribe to updates to the Mendix status. You will be informed about al
 
 You can elect to receive emails, or subscribe to the RSS or Atom feeds.
 
-## 6 Related Content
+## 6 Read More
 
 * [Maintenance Windows: Configuration](maintenance-windows)
 * [Operate](/developerportal/operate)

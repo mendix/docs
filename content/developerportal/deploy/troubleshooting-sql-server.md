@@ -35,7 +35,7 @@ Message: Login failed for user 'YourDatabaseUser'. Reason: The account is disabl
 
 Validate the ‘Status’ of the User. One of the login properties of the user is probably configured to be Deny or Disabled. Both permissions should be configured as Grant/Enabled.
 
-## Related Content
+## Read More
 
 *   [Setting Up the Database User](setting-up-the-database-user)
 *   [Restoring a SQL Server Database](restoring-a-sql-server-database)

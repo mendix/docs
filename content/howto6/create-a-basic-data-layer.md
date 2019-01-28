@@ -102,7 +102,7 @@ To configure the delete behavior, double-click the **Order_Customer** associatio
     * The **Error message** will be shown to a user that tries to delete a customer that has orders
     ![](attachments/18448745/18582208.png)
 
-## 7 Related Content
+## 7 Read More
 
 * [Work with Images and Files](working-with-images-and-files)
 * [Denormalize Data to Improve Performance](denormalize-data-to-improve-performance)

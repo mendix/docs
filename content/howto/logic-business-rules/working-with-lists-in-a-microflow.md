@@ -238,7 +238,7 @@ In the previous sections you filtered the list of orders from database on attrib
 
     ![](attachments/18448686/18581110.png)
 
-## 7 Related Content
+## 7 Read More
 
 *   [Defining access rules using XPath](define-access-rules-using-xpath)
 *   [Extending Your Application with Custom Java](extending-your-application-with-custom-java)

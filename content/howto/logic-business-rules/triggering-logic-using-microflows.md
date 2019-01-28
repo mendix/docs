@@ -140,7 +140,7 @@ There are two more advanced settings:
 *   **Maintain selection after microflow** – this is only for grid microflow buttons and specifies whether the selection of the data should be maintained after executing the microflow
 *   **Abort on validation errors** – you can choose to abort the microflow on validation errors  here
 
-## 3 Related Content
+## 3 Read More
 
 *   [Defining access rules using XPath](define-access-rules-using-xpath)
 *   [Extending Your Application with Custom Java](extending-your-application-with-custom-java)

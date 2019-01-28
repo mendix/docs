@@ -161,7 +161,7 @@ The most common consistency errors appear when you do not configure the on click
 
 To fix the consistency errors, finish configuring the on click action (for example, for an on click action *Page*, select a particular page that should open), or change the on click action to another one. 
 
-##  8 Related Content
+##  8 Read More
 
 * [Page Editor in the Web Modeler](page-editor-wm)
 * [Navigation Consistency Errors in the Web Modeler](consistency-errors-navigation-wm)

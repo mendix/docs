@@ -157,6 +157,6 @@ Mind the following characteristics when using cut/copy/paste:
 * You cannot copy/paste pages or microflows, only elements of a page or a microflow 
 * You cannot cut/copy/paste from the Web Modeler to the Desktop Modeler
 
-## 9 Related Content
+## 9 Read More
 
 * [How to Sync the Web Modeler & Desktop Modeler](../../howto/web-modeler/syncing-webmodeler-desktop)

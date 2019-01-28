@@ -42,7 +42,7 @@ In your Java IDE, you need to configure remote debugging. This screenshot shows 
 2. Place some breakpoints in your Java code.
 3. Start debugging.
 
-## 5 Related Content
+## 5 Read More
 
 * [How to Find the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
 * [How to Clear Warning Messages in Mendix](clear-warning-messages)

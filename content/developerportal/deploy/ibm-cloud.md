@@ -342,7 +342,7 @@ To change the memory and instances configuration temporarily, do the following:
 
 The Mendix status page ([https://status.mendix.com/](https://status.mendix.com/)) shows the current status of Mendix services. If you have issues with deploying to IBM via the Developer Portal, you can check the Mendix status page to see if IBM Cloud deployment is operational (under **Mendix Services**) or if there are other Mendix issues which may be affecting your deployment.
 
-## 6 Related Content
+## 6 Read More
 
 * [IBM Cloud account](https://console.bluemix.net/registration/)
 * [Mendix Desktop Modeler](https://appstore.home.mendix.com/link/modelers/)

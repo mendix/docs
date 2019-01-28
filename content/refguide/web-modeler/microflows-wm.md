@@ -162,7 +162,7 @@ When configuring the activities of the microflows you will notice icons above or
 | Commit without events | ![Commit Without Events Icon](attachments/microflows-wm/wm-commit-with-no-events-icon.png) | Indicates that the object will be committed but without events. This means that the object will be saved in the database, but event handlers will not be triggered. For example, the information about a new customer will be saved, but the tables containing information about new customers will not be updated. |
 | Refresh in Client     | ![Refresh in Client Icon](attachments/microflows-wm/wm-refresh-in-client-icon.png) | Indicates that the result of the activity will be displayed to the end-user. |
 
-## 8 Related Content
+## 8 Read More
 
 * [The Web Modeler Overview](overview-wm)
 * [Exclusive Split in the Web Modeler](microflows-exclusive-split-wm)

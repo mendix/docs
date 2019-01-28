@@ -41,7 +41,7 @@ However, there is the risk of creating an infinite loop if the retrieve applies 
 
 ![](attachments/18448682/18581011.png)
 
-## 4 Related Content
+## 4 Read More
 
 * [How to Define Access Rules Using XPath](define-access-rules-using-xpath)
 * [How to Extend Your Application with Custom Java](extending-your-application-with-custom-java)

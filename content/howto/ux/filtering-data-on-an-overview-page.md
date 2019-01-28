@@ -139,7 +139,7 @@ In the previous section you have constrained the data grid on attributes of the 
 
     ![](attachments/18448705/18581362.png)
 
-## 9 Related Content
+## 9 Read More
 
 *   [How to Set Up the Mendix UI Framework with Scout](setup-mendix-ui-framework-with-scout)
 *   [How to Set Up the Mendix UI Framework with Koala](setup-mendix-ui-framework-with-koala)

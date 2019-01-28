@@ -86,7 +86,7 @@ The above example demonstrates how a Mendix application can quickly integrate da
 
 For further documentation and to see the GitHub project for REST services, see the [Mendix RestServices GitHub page](https://github.com/mendix/RestServices).
 
-## 4 Related Content
+## 4 Read More
 
 * [How to Consume a Complex Web Service](consume-a-complex-web-service)
 * [How to Consume a Simple Web Service](consume-a-simple-web-service)

@@ -65,7 +65,7 @@ These are some important details:
 
 ![Example architecture for a High Availability environment](attachments/high-availability/18580721.jpg)
 
-## 4 Related Content
+## 4 Read More
 
 * [How to Configure a Security Checklist for Your On-Premises Installation](security-checklist-for-your-on-premises-installation)
 * [How to Update a Mendix Application](updating-a-mendix-application)

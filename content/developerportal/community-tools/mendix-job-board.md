@@ -88,6 +88,6 @@ The [Mendix job dashboard](https://developers.mendix.com/jobs/job-dashboard/) li
 * **Delete** — click this to delete old and obsolete jobs
     * Keep in mind that this is permanent and cannot be reversed!
 
-## 5 Related Content
+## 5 Read More
 
 * [Mendix Profile](../mendix-profile/index)

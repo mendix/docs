@@ -38,7 +38,7 @@ Allow the user to connect to the database. If the user is Denied the privilege t
 
 ![](attachments/setting-up-the-database-user/18580671.png)
 
-## 5 Related Content
+## 5 Read More
 
 *   [Restoring an SQL Server Database](restoring-a-sql-server-database)
 *   [Troubleshooting SQL Server](troubleshooting-sql-server)

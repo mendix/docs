@@ -52,7 +52,7 @@ Next, you need to push the image to a registry. This can be a public registry or
 
 * `docker push <image name>`
 
-## 5 Related Content
+## 5 Read More
 
 * [How to Run a Mendix Docker Image](run-mendix-docker-image)
 * [Mendix Docker Buildpack](https://github.com/mendix/docker-mendix-buildpack)

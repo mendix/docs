@@ -70,7 +70,7 @@ To restore the database, follow these steps:
         * This is not usually necessary unless the database is large and you wish to monitor the status of the restore operation
 9. Click **OK**.
 
-## 5 Related Content
+## 5 Read More
 
 * [How to Troubleshoot an SQL Server](troubleshooting-sql-server)
 * [How to Set Up an SQL Server User](setting-up-a-sql-server-user)

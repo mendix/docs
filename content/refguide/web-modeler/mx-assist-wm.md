@@ -142,7 +142,7 @@ The number of options for **Add a decision** depend on the number of parameters 
 
 {{% /alert %}}
 
-## 5 Related Content
+## 5 Read More
 
 * [Web Modeler Overview](overview-wm)
 * [Microflows in the Web Modeler](microflows-wm)

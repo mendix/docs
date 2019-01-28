@@ -43,7 +43,7 @@ If you want to hear from various people in your company or on your App Team, cli
 
 In the **Add poll answer** box, you can add various answer choices. This is a great way to collaborate with and get feedback from your App Team!
 
-## 3 Related Content
+## 3 Read More
 
 * [App Team](team)
 * [Stories](stories)

@@ -90,14 +90,14 @@ MxApp.onConfigReady(function(config) {
                     var token = new RegExp('AUTH_TOKEN=([^;]+);', 'g').exec(value);
                     var authPromise = new Promise(function(resolve, reject) {
                         if (token && token.length > 1) {
-                            window.localStorage.setItem("mx-authtoken", token);
+                            window.localStorage.setItem("mx-authtoken", token[1]);
 							
                             window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, function (fs) {
                                 fs.root.getFile(".mx-token", { create: true, exclusive: false }, function (fileEntry) {
                                     fileEntry.createWriter(function (fileWriter) {
                                         fileWriter.onwriteend = resolve;
                                         fileWriter.onerror = reject;
-                                        fileWriter.write(token);
+                                        fileWriter.write(token[1]);
                                     });
                                 }, reject);
                             }, reject);
@@ -167,7 +167,7 @@ The last thing to do is to check the **Enable mobile authentication token** box 
 
 ![](attachments/implement-sso/saml-module.png)
 
-## 6 Related Content
+## 6 Read More
 
 * [How to Deploy Your First Hybrid Mobile App](deploy-your-first-hybrid-mobile-app)
 * [How to Publish a Mendix Hybrid Mobile App in App Stores](publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)

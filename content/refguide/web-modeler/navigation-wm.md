@@ -76,6 +76,6 @@ To create a new navigation item, do the following:
 
 3. Specify the properties of the created item if needed (For more information, see [Properties of Menu Items](#properties-of-menu-items)). 
 
-## 4 Related Content
+## 4 Read More
 
 * [The Web Modeler Overview](overview-wm)

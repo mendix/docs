@@ -198,7 +198,7 @@ The ticket can have the following statuses:
 
 On the [Mendix Idea Forum](https://forum.mendix.com/ideaforum/), Mendix captures ideas and requests from customers and developers in the Mendix community. Each quarter, this forum is treated as a short-list of the top features that the Mendix community supports via topics with the most upvotes.
 
-## 11 Related Content
+## 11 Read More
 
 * [Ticket Priority](ticket-priority)
 * [Escalation Management Process](escalation-management-process)

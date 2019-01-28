@@ -39,7 +39,7 @@ Follow these steps to create a backup of a licensed app:
     ![](attachments/create-backup/backupoptions.jpg)
 
 
-## 4 Related Content
+## 4 Read More
 
 * [How to Deploy to the Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy)
 * [How to Download a Backup](how-to-download-a-backup)

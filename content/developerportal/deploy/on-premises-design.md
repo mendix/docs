@@ -48,7 +48,7 @@ When updating the application, it is best to stop every instance. If the databas
 
 For more information, see [How to Configure High Availability](high-availability).
 
-## 4 Related Content
+## 4 Read More
 
 * [How to Use a Security Checklist for Your On-Premises Installation](security-checklist-for-your-on-premises-installation)
 * [How to Update a Mendix Application](updating-a-mendix-application)

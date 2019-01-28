@@ -173,6 +173,6 @@ The **Properties** tab displays the properties of the currently selected element
 {{% /image_container %}}
 
 
-## 7 Related Content
+## 7 Read More
 
 * [Data View & List View Properties in the Web Modeler](page-editor-data-view-list-view-wm)

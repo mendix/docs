@@ -71,7 +71,7 @@ Currently, there's no direct way of creating and storing a new application in yo
 8. When the app project is opened in the Desktop Modeler, select **Team** > **Upload to Team Server...** in the top menu.
 9. In the dialog box that appears, select **Existing repository** and the name of your app project (for example, **MyApp**), and then press 'OK'. The app should now upload to your on-premises SVN server.
 
-## 7 Related Content
+## 7 Read More
 
 * [How to Use Team Server & Version Control](using-team-server-_-version-control)
 * [Team Server Reference Guide](/refguide/team-server)

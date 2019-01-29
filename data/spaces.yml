@@ -152,8 +152,7 @@ refguide:
   mendix_version: 7
   menu_categories:
     - "General"
-    - "Desktop Modeler"
-    - "Web Modeler"
+    - "Desktop Modeler"    
     - "Team Server"
     - "Mendix Runtime"
     - "Java Programming"
@@ -186,3 +185,9 @@ developerportal:
     - "Community Tools"
     - "App Store"
     - "Mendix Support"
+webmodeler:
+  space: "Web Modeler Guide"
+  priority: false
+  menu_categories:
+    - "Reference"
+    - "How-to's"

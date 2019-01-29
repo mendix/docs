@@ -71,7 +71,7 @@ Please do not remove the button with the caption **Device Registration reference
 
 ![](attachments/19955732/20217888.jpg)
 
-## 6 Starting Connectors from Your "After Startup" Microflow
+## 6 Starting Connectors from Your After-Startup Microflow
 
 The PushNotifications module contains a microflow named **AfterStartup_PushNotifications** that will start the APNs connector for you. Call this microflow from your **AfterStartup** microflow.
 

@@ -10,7 +10,7 @@ tags: ["web modeler", "microflows", "merge", "expression", "change object"]
 
 This how-to explains how you can add advanced logic to a microflow by configuring a merge and a change object activity in the Mendix Web Modeler. 
 
-A merge is used to combine flows into one. If you split the microflow flow (with an exclusive split) and now one and the same action needs to be executed for these separated flows, you can combine the two (or more) flows using a merge. For more information on exclusive split, see [Exclusive Split in the Web Modeler](/refguide/web-modeler/microflows-exclusive-split-wm).
+A merge is used to combine flows into one. If you split the microflow flow (with an exclusive split) and now one and the same action needs to be executed for these separated flows, you can combine the two (or more) flows using a merge. For more information on exclusive split, see [Exclusive Split in the Web Modeler](../wm-reference/microflows-exclusive-split-wm).
 
 **This how-to will teach you how to do the following:**
 
@@ -112,4 +112,4 @@ Congratulations! Now we have the microflow that works the following way:
    b. If the customer does not have a grade, the error message pops up.<br/>
 2. If the customer has the grade, the customer's status is set to active irrespective of the grade once the order form is opened.
 
-Now you can publish and view your app. For more information, see [Deploying Your App From the Web Modeler](../../refguide/web-modeler/deployment-wm).
+Now you can publish and view your app. For more information, see [Deploying Your App From the Web Modeler](../wm-reference/deployment-wm).

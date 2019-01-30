@@ -24,7 +24,7 @@ To open the **App Settings**, click the gear icon at the left menu bar.
 The following types of widgets are included into the widget overview of the App Settings:
 
 * App Store widgets that are Web Modeler approved, which are either, widgets that have been added by default when you created your app, or widgets you can download from the [App Store](../developerportal/app-store/) to your project directly from the Web Modeler (for more information on widgets, see [Widgets in the Web Modeler](page-editor-widgets-wm))
-* Local widgets – widgets created by users in the Desktop Modeler (you can create local widgets yourself via the Desktop Modeler, for more information, see [Custom Widget Development](../../howto/widget-development/))
+* Local widgets – widgets created by users in the Desktop Modeler (you can create local widgets yourself via the Desktop Modeler, for more information, see [Custom Widget Development](../howto/widget-development/))
 
 In the App Settings the following columns are displayed:
 

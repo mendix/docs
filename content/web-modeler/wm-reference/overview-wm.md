@@ -9,7 +9,7 @@ frontpage_featured: true
 
 ## 1 Introduction {#web-modeler-overview}
 
-The Mendix Web Modeler is the place where you can create, view and edit your Mendix applications without going into technical details. For this purpose you can use the [Desktop Modeler](../desktop-modeler-overview) and [do a sync with Desktop Modeler](../../howto/web-modeler/syncing-webmodeler-desktop) anytime. 
+The Mendix Web Modeler is the place where you can create, view and edit your Mendix applications without going into technical details. For this purpose you can use the [Desktop Modeler](../desktop-modeler-overview) and [do a sync with Desktop Modeler](../wm-how-to/syncing-webmodeler-desktop) anytime. 
 
 With the Web Modeler you can create and edit applications in your browser without installing software on your PC.   
 
@@ -59,7 +59,7 @@ You can also open your app in the Web Modeler via the Desktop Modeler. Do the fo
 
     ![](attachments/overview-wm/webmodeler-thru-desktop-modeler.png)
 
-3. [Do the sync](../../howto/web-modeler/syncing-webmodeler-desktop) to see the latest changes made in the Desktop Modeler reflected in the Web Modeler. 
+3. [Do the sync](../wm-how-to/syncing-webmodeler-desktop) to see the latest changes made in the Desktop Modeler reflected in the Web Modeler. 
 
 The app opens in the Web Modeler.
 
@@ -159,4 +159,4 @@ Mind the following characteristics when using cut/copy/paste:
 
 ## 9 Read More
 
-* [How to Sync the Web Modeler & Desktop Modeler](../../howto/web-modeler/syncing-webmodeler-desktop)
+* [How to Sync the Web Modeler & Desktop Modeler](.../wm-how-to/syncing-webmodeler-desktop)

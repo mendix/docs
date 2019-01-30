@@ -1,6 +1,6 @@
 ---
 title: "Domain Model in the Web Modeler"
-category: "Web Modeler"
+category: "Web Modeler Reference"
 description: "Describes the domain models in the Mendix Web Modeler."
 menu_order: 20
 tags: ["web modeler", "domain model"]

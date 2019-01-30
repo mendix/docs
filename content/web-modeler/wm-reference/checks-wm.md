@@ -1,6 +1,6 @@
 ---
 title: "Checks in the Web Modeler"
-category: "Web Modeler"
+category: "Web Modeler Reference"
 description: "Describes checks during publishing process in the Mendix Web Modeler."
 menu_order: 60
 tags: ["web modeler", "app viewing", "checks", "errors"]

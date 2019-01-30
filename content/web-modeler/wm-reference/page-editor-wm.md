@@ -1,6 +1,6 @@
 ---
 title: "Page Editor in the Web Modeler"
-category: "Web Modeler"
+category: "Web Modeler Reference"
 description: "Describes the page editor in the Mendix Web Modeler."
 menu_order: 30
 tags: ["web modeler", "page editor", "pages"]

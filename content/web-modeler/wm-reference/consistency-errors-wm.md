@@ -1,6 +1,6 @@
 ---
 title: "Consistency Errors in the Web Modeler"
-category: "Web Modeler"
+category: "Web Modeler Reference"
 menu_order: 70
 description: "Describes consistency errors in the Mendix Web Modeler and the way to fix them."
 tags: ["web modeler", "consistency errors", "checks", "errors"]

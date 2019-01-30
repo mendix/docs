@@ -1,6 +1,6 @@
 ---
 title: "Sync the Web Modeler & Desktop Modeler"
-category: "Web Modeler"
+category: "Web Modeler How-to's"
 menu_order: 10 
 tags: ["web modeler", "desktop modeler"]
 frontpage_featured: true

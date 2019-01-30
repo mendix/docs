@@ -1,5 +1,5 @@
 ---
-title: "Web Modeler"
+title: "Web Modeler How To's"
 ---
 
 ## 1 Introduction 

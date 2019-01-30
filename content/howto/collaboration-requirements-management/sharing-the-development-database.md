@@ -99,7 +99,7 @@ Make sure the names of the databases aren't the same or make a copy of your own 
 
 {{% /alert %}}
 
-## 8\. Related content
+## 8\. Read More
 
 *   [Stories](/developerportal/collaborate/stories)
 *   [Contributing to a GitHub repository](contribute-to-a-github-repository)

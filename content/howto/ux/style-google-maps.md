@@ -81,7 +81,7 @@ Supporting communities is cool. Therefore I will also show you how to upload you
 
     Happy modelling!
 
-## 4.. Related content
+## 4.. Read More
 
 *   [Create a custom theme with the Mendix UI Framework](create-a-custom-theme-with-the-mendix-ui-framework)
 *   [Layouts and Snippets](layouts-and-snippets)

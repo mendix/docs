@@ -59,11 +59,11 @@ module.exports = {
     },
     {
       from: "/howto/tutorials/build-a-simple-hrm-app",
-      to: "/web-modeler/overview-wm"
+      to: "/web-modeler/wm-reference/overview-wm"
     },
     {
       from: "/howto/tutorials/build-an-iot-app",
-      to: "/web-modeler/overview-wm"
+      to: "/web-modeler/wm-reference/overview-wm"
     },
 	{
       from: "/howto/web-modeler/syncing-webmodeler-desktop",

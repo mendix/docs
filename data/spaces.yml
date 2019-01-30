@@ -185,7 +185,7 @@ developerportal:
     - "Community Tools"
     - "App Store"
     - "Mendix Support"
-webmodeler:
+web-modeler:
   space: "Web Modeler Guide"
   priority: false
   menu_categories:

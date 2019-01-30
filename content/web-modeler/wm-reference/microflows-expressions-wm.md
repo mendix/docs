@@ -12,12 +12,12 @@ Expressions can be used to create or change an object or a variable based on log
 
 The **Expression** tab is opened when you configure the following activities in the microflow:
 
-*  [End Event](../end-event)
+*  [End Event](/refguide/end-event)
 *  [Exclusive Split](microflows-exclusive-split-wm)
-*  [Create Object](../create-object)
-*  [Change Object](../change-object)
-*  [Create Variable](../create-variable) 
-*  [Change Variable](../change-variable)
+*  [Create Object](/refguide/create-object)
+*  [Change Object](/refguide/change-object)
+*  [Create Variable](/refguide/create-variable) 
+*  [Change Variable](/refguide/change-variable)
 
 ![](attachments/microflows-expressions-wm/wm-expression-tab.png)
 
@@ -96,17 +96,17 @@ An overview of the possibilities with expressions can be found below:
 
 ### 3.1 Relational Expressions
 
-* [Less than ( < )](../relational-expressions)
-* [Greater than ( > )](../relational-expressions)
-* [Less than or equal to ( <= )](../relational-expressions)
-* [Greater than or equal to ( >= )](../relational-expressions)
-* [Is equal to ( = )](../relational-expressions)
-* [Is not equal to ( != )](../relational-expressions)
+* [Less than ( < )](/refguide/relational-expressions)
+* [Greater than ( > )](/refguide/relational-expressions)
+* [Less than or equal to ( <= )](/refguide/relational-expressions)
+* [Greater than or equal to ( >= )](/refguide/relational-expressions)
+* [Is equal to ( = )](/refguide/relational-expressions)
+* [Is not equal to ( != )](/refguide/relational-expressions)
 
 ### 3.2 Boolean Expressions
 
-* [and](../boolean-expressions)
-* [or](../boolean-expressions)
+* [and](/refguide/boolean-expressions)
+* [or](/refguide/boolean-expressions)
 
 ## 4 Read More
 

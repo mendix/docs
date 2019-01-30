@@ -26,7 +26,7 @@ Attributes in the Web Modeler can be of the following types:
 | Long          | A whole number.  The range of this type is –9,223,372,036,854,775,808 to 9,223,372,036,854,775,807. |
 | String        | A text containing letters, spaces, numbers and other characters. You can set this type to unlimited or to limit it with the number of symbols you like. |
 
-For more technical information on attribute types, see the [Type](../refguide/attributes#type) section in *Attributes* in the *Desktop Modeler* category.
+For more technical information on attribute types, see the [Type](/refguide/attributes#type) section in *Attributes* in the *Desktop Modeler* category.
 
 ## 3 Attribute Properties {#attribute-properties}
 
@@ -55,5 +55,5 @@ You can find the description of specific properties that differ per attribute ty
 ## 4 Read More
 
 * [Domain Model in the Web Modeler](domain-models-wm)
-* [Attributes](../attributes) 
+* [Attributes](/refguide/attributes) 
 * [Enumeration in the Web Modeler](domain-models-enumeration-wm)

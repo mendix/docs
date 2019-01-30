@@ -30,13 +30,13 @@ Data view consists of the following properties:
 
 ### 2.1 Data Source {#data-source-data-view} 
 
-The data source determines which object will be shown in the data view. For general information on data sources, see [Data Sources](../data-sources) in the *Desktop Modeler* category. 
+The data source determines which object will be shown in the data view. For general information on data sources, see [Data Sources](/refguide/data-sources) in the *Desktop Modeler* category. 
 
 | Data Source Property | Description                                                  |
 | -------------------- | ------------------------------------------------------------ |
-| Context              | A data source determining that wherever you are opening the page from, you are passing the selected object. For example, when you add the **Show Page** activity in the microflow, you select the page and the object to pass. (For more information on the microflows, see [Microflows in the Web Modeler](microflows-wm).) That means that when the page is opened in the microflow, the object of this type is provided and will be shown in the data view on the page. For more technical information on the context source, see [Context Source](../refguide/entity-path-source) in the *Desktop Modeler* category. |
-| Microflow            | A data source that runs a selected microflow and displays a return value. For more technical information, see [Microflow Source](../refguide/microflow-source) in the *Desktop Modeler* category. |
-| List widget          | A data source that allows a data view to display detailed information on an object in the list widget (list view) on the same page. For more technical information, see [Listen To Widget Source](../refguide/microflow-source) in the *Desktop Modeler* category. |
+| Context              | A data source determining that wherever you are opening the page from, you are passing the selected object. For example, when you add the **Show Page** activity in the microflow, you select the page and the object to pass. (For more information on the microflows, see [Microflows in the Web Modeler](microflows-wm).) That means that when the page is opened in the microflow, the object of this type is provided and will be shown in the data view on the page. For more technical information on the context source, see [Context Source](/refguide/entity-path-source) in the *Desktop Modeler* category. |
+| Microflow            | A data source that runs a selected microflow and displays a return value. For more technical information, see [Microflow Source](/refguide/microflow-source) in the *Desktop Modeler* category. |
+| List widget          | A data source that allows a data view to display detailed information on an object in the list widget (list view) on the same page. For more technical information, see [Listen To Widget Source](/refguide/microflow-source) in the *Desktop Modeler* category. |
 
 ### 2.2 General {#general-section-data-view}
 
@@ -62,15 +62,15 @@ List view consists of the following properties:
 
 ### 3.1 Data Source {#data-source-list-view}
 
-The data source determines which objects will be shown in the list view. For general information about data sources, see [Data Sources](../data-sources) in the *Desktop Modeler* category. 
+The data source determines which objects will be shown in the list view. For general information about data sources, see [Data Sources](/refguide/data-sources) in the *Desktop Modeler* category. 
 
 | Data Source Property | Description                                                  |
 | -------------------- | ------------------------------------------------------------ |
 | Database             | A data source that determines that the object or objects shown are retrieved directly from the database. You need to select **Entity** (that you have in the domain model), or create a new entity, if you set database as the data source. For more technical information, see [Database Source](../refguide/database-source) in the *Desktop Modeler* category.<br />After you have selected an entity, you can create one or more **Constraint** items. Constraints are used to limit (filter) data in a list view. To add a constraint, select an attribute and an operator for it (the number of available operators depend on the type of an attribute), and select a value. For example, to display a list of customers with only Gold grade, select an enumeration *Grade* as an attribute, select *Equals* as an operator, and set a value to *Gold*. <br />**Note** You can choose only the following types of attributes for constraints: AutoNumber, Boolean, Decimal, Enumeration, Integer, Long, and String. |
-| Microflow            | A data source that runs a selected microflow and displays a return value (i.e. list of objects). For more technical information, see [Microflow Source](../refguide/microflow-source) in the *Desktop Modeler* category. |
-| XPath                | Currently, this data source can only be configured in the Desktop Modeler. For more information, see [XPath Source](../refguide/xpath-source). |
-| Nanoflow             | Currently, this data source can only be configured in the Desktop Modeler. For more information, see [Nanoflows](../refguide/nanoflows). |
-| Association          | Currently, this data source can only be configured in the Desktop Modeler. For more information, see [Association Source](../refguide/association-source). |
+| Microflow            | A data source that runs a selected microflow and displays a return value (i.e. list of objects). For more technical information, see [Microflow Source](/refguide/microflow-source) in the *Desktop Modeler* category. |
+| XPath                | Currently, this data source can only be configured in the Desktop Modeler. For more information, see [XPath Source](/refguide/xpath-source). |
+| Nanoflow             | Currently, this data source can only be configured in the Desktop Modeler. For more information, see [Nanoflows](/refguide/nanoflows). |
+| Association          | Currently, this data source can only be configured in the Desktop Modeler. For more information, see [Association Source](/refguide/association-source). |
 
 ### 3.2 Events
 

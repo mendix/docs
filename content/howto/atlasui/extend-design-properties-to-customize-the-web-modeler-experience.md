@@ -34,7 +34,7 @@ Design properties are created to give your users and widgets more power in the W
 The example below shows the design property of a `"Button"`. The detailed Sass information can be found in this file: */theme/styles/sass/lib/components/_buttons.scss*.
 
 * `"name"` – the name of the design property
-* `"type"` – the type of design property (for example, `Dropdown`, `Toggle`, `Input`)
+* `"type"` – the type of design property (for example, `Dropdown` or `Toggle`)
 * `"description"` – a brief explanation of the design property
 * `"options"` – the array of options that shows the name and CSS class specified in the Sass files for Atlas UI
 

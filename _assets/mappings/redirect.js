@@ -51,11 +51,11 @@ module.exports = {
     },
 	{
       from: "/howto/start-with-a-blank-app",
-      to: "/web-modeler/overview-wm"
+      to: "/web-modeler/wm-reference/overview-wm"
     },
     {
       from: "/howto/tutorials/create-a-to-do-app",
-      to: "/web-modeler/overview-wm"
+      to: "/web-modeler/wm-reference/overview-wm"
     },
     {
       from: "/howto/tutorials/build-a-simple-hrm-app",
@@ -402,8 +402,8 @@ module.exports = {
       to: "/web-modeler/wm-reference/microflows-wm"
     },
 	{
-      from: "/refguide/web-modeler/microflows-wm#microflows-toolbox",
-      to: "/web-modeler/wm-reference/microflows-wm#microflows-toolbox"
+      from: "/refguide/web-modeler/microflows-wm",
+      to: "/web-modeler/wm-reference/microflows-wm"
     },
 	{
       from: "/refguide/web-modeler/microflows-expressions-wm",

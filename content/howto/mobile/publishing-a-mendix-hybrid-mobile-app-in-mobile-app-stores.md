@@ -74,11 +74,9 @@ The **PhoneGap Build: Signing Key Required** page asks you to go to the PhoneGap
 5. A pop-up window will be shown where you must upload a certificate file and a provisioning profile file. You can get those files from Apple. The certificate is the *.p12* file, and the provisioning profile is the *.mobileprovision* file. For more information, see [Managing App Signing Keys](/refguide7/managing-app-signing-keys) in the Mendix Reference Guide.
 6.  Give the key a title that you can easily recognize, and upload the files.<br>
 
-    {{% alert type="warning" %}}
+	{{% alert type="warning" %}}Before using the key, it must be unlocked with the passphrase that was set up for the key. Click the lock with the yellow background on the same row as the key and enter the passphrase. As the pop-up window states, the key can now be used for builds for the period of an hour. After an hour, the passphrase needs to be entered again for security reasons.
+	{{% /alert %}}
 
-    Before using the key, it must be unlocked with the passphrase that was set up for the key. Click the lock with the yellow background on the same row as the key and enter the passphrase. As the pop-up window states, the key can now be used for builds for the period of an hour. After an hour, the passphrase needs to be entered again for security reasons.
-
-    {{% /alert %}}
 7. Now you are ready to configure the app. Click **Apps** at the top of the page to go to an overview showing your app(s). Click the logo or the name of your app to go to the details of the app.
 8. Select the correct key for your app. Next to the text **iOS**, there is a drop-down menu with the **No key selected** option. Select the newly uploaded key from the drop-down menu, which should be listed under **unlocked**.
 
@@ -117,7 +115,7 @@ The app should now be visible on your device. Open it and log in to the app with
 
 ## 7 Examples
 
-** How to build a Phonegap app in the cloud **
+**How to build a Phonegap app in the cloud**
 
 {{% youtube 7ic625u2YJE %}}
 

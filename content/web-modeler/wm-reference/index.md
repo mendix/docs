@@ -1,10 +1,10 @@
 ---
-title: "Web Modeler Reference Guide"
+title: "Web Modeler Reference"
 tags: ["Web Modeler"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-The main documents in the Web Modeler Reference Guide are the following ones:
+The main documents in the Web Modeler Reference are the following ones:
 
 * [Web Modeler Overview](overview-wm) 
 * [Domain Model in the Web Modeler](domain-models-wm)

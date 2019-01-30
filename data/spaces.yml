@@ -189,5 +189,5 @@ web-modeler:
   space: "Web Modeler Guide"
   priority: false
   menu_categories:
-    - "Reference"
-    - "How-to's"
+    - "Web Modeler Reference"
+    - "Web Modeler How-to's"

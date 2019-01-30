@@ -7,10 +7,6 @@ tags: ["monitoring", "troubleshooting", "debug", "microflow"]
 
 ## 1 Introduction
 
-/~4
-
-~4
-
 The Mendix Modeler has a built-in consistency checker that validates if the application you are building contains any obvious errors. This dramatically reduces the amount of technical errors during run-time, but the Modeler isn't able to check if your app contains functional errors. This is mainly a manual practice, but Mendix does support enough tools to make this easier. If you run into a functional error in any of the microflows, you can easily debug them with the debugger.
 
 **This how-to will teach you how to do the following:**

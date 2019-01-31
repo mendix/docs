@@ -448,6 +448,8 @@ In the Mendix Desktop Modeler, a [health check microflow](project-settings) can 
 
 If a health check microflow has been configured, this request will report on the current health status. The "health" value can be either "healthy," "sick," or "unknown" (when no health microflow was configured). For the value "sick," the "diagnosis" value will give the reason the application is not healthy. This reason is the return value of the health check microflow.
 
+The health check microflow gets invoked multiple times per minute. Therefore, it is recommended to make it light-weight and run quickly. Heavy operations may have a significant impact on your application's performance.
+
 {{% alert type="warning" %}}
 
 This request can only be executed when the Mendix Runtime status is "running" (see [Runtime Status](#runtime-status) above).

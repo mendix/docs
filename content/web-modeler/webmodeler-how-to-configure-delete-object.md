@@ -1,8 +1,7 @@
 ---
 title: "Configure a Delete Object Action in the Web Modeler"
-category: "Web Modeler How-to's"
+parent: "microflows-wm"
 description: "This how to describes the process of configuring a delete object action in a data view and a list view in the Mendix Web Modeler."
-menu_order: 40
 tags: ["web modeler", "page editor", "delete object", "list view", "data view", "how to"]
 ---
 

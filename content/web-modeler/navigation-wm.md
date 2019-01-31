@@ -1,6 +1,6 @@
 ---
 title: "Navigation Document in the Web Modeler"
-category: "Web Modeler Reference"
+category: "Web Modeler Guide"
 description: "Describes the navigation menu in the Mendix Web Modeler."
 menu_order: 40
 tags: ["web modeler", "navigation", "app menu"]

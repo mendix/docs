@@ -1,7 +1,7 @@
 ---
 title: "Troubleshoot Syncing the Desktop Modeler with the Web Modeler"
-parent: "syncing-webmodeler-desktop"
-description: "This document presents a list of problems and fixes for issues around synchronization between the Desktop Modeler and Web Modeler."
+parent: "general-sync-webmodeler-desktopmodeler"
+description: "This document presents a list of problems and fixes for issues around synchronization between the Mendix Desktop Modeler and Web Modeler."
 tags: ["synchronization", "sync", "web modeler", "desktop modeler", "troubleshoot"]
 ---
 
@@ -9,11 +9,11 @@ tags: ["synchronization", "sync", "web modeler", "desktop modeler", "troubleshoo
 
 The Mendix Desktop Modeler supports synchronizing changes with the Web Modeler. This document is will help you to troubleshoot issues that may occur during this process. 
 
-## 2 The Inner-Workings of the Desktop Modeler & Web Modeler Synchronization
+## 2 The Inner Process of the Desktop Modeler & Web Modeler Synchronization
 
 Synchronization of the Web Modeler with the Desktop Modeler is a multi-step process. The steps described below take place after clicking **Sync with Web Modeler** in the Desktop Modeler:
 
-![](attachments/troubleshoot-desktop-web-modeler-sync/sync-with-wm.png)
+![](attachments/general-troubleshoot-desktop-web-modeler-sync/sync-with-wm.png)
 
 ### 2.1 Desktop Modeler Commit Check
 

@@ -176,7 +176,7 @@ Finally, you may want to automatically and/or periodically re-synchronize the LD
 
 Note that the scheduled event will always synchronize all enabled LDAP server configurations. If you want to override this default behavior you can change the "Ldap.ImportLdapUsersFlow" Microflow.
 
-## 8\. Related content
+## 8\. Read More
 
 *   [Consuming a complex web service](consume-a-complex-web-service)
 *   [Consuming a simple Web Service](consume-a-simple-web-service)

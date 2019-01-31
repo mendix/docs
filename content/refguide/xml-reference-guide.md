@@ -347,6 +347,6 @@ What it looks like in the Mendix Modeler:
 Remember to use the correct language notation according to the [Java supported locales](http://java.sun.com/javase/6/docs/technotes/guides/intl/locale.doc.html).
 {{% /alert %}}
 
-## 6 Related content
+## 6 Read More
 
 *   [Getting started with the Widget Development Plugin for Adobe Brackets](/howto7/widget-development/use-the-widget-development-plugin-for-adobe-brackets)

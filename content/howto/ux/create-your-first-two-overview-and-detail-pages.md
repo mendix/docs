@@ -76,7 +76,7 @@ You should now have an overview page with a data grid like this:
 1. Now create a navigation item for your overview page to start using it. For details on how to set up the navigation structure, see [How to Set Up the Navigation Structure](setting-up-the-navigation-structure).
 2. If you switched on security for this application, you need to configure page access on both the overview and detail pages. For more information on configuring page access, see [How to Create a Secure App](../security/create-a-secure-app).
 
-## 5 Related content
+## 5 Read More
 
 * [How to Perform the Scout and Windows 10 Workaround](perform-scout-and-windows-10-workaround)
 * [How to Use Layouts and Snippets](layouts-and-snippets)

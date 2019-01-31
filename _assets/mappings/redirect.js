@@ -51,19 +51,23 @@ module.exports = {
     },
 	{
       from: "/howto/start-with-a-blank-app",
-      to: "/refguide/web-modeler/overview-wm"
+      to: "/web-modeler/wm-reference/overview-wm"
     },
     {
       from: "/howto/tutorials/create-a-to-do-app",
-      to: "/refguide/web-modeler/overview-wm"
+      to: "/web-modeler/wm-reference/overview-wm"
     },
     {
       from: "/howto/tutorials/build-a-simple-hrm-app",
-      to: "/refguide/web-modeler/overview-wm"
+      to: "/web-modeler/wm-reference/overview-wm"
     },
     {
       from: "/howto/tutorials/build-an-iot-app",
-      to: "/refguide/web-modeler/overview-wm"
+      to: "/web-modeler/wm-reference/overview-wm"
+    },
+	{
+      from: "/howto/web-modeler/syncing-webmodeler-desktop",
+      to: "/web-modeler/wm-how-to/syncing-webmodeler-desktop"
     },
     {
       from: "/howtogeneral/bestpractices/ux-best-practices",
@@ -358,7 +362,7 @@ module.exports = {
     {
       from: "/ReleaseNotes/5.09.0",
       to: "/releasenotes/desktop-modeler/5.9"
-    },
+    },	
 	/****************************************************
      * App Store
      ****************************************************/
@@ -381,6 +385,33 @@ module.exports = {
 	{
       from: "/mendixcloud/Integrate+your+app+with+Mendix+SSO",
       to: "/developerportal/deploy/integrate-with-mendix-sso"
+    },
+	/****************************************************
+     * Web Modeler Guide
+     ****************************************************/
+	 {
+      from: "/refguide/web-modeler",
+      to: "/web-modeler/wm-reference/"
+    },
+	{
+      from: "/refguide/web-modeler/domain-models-association-properties-wm",
+      to: "/web-modeler/wm-reference/domain-models-association-properties-wm"
+    },
+	{
+      from: "/refguide/web-modeler/microflows-wm",
+      to: "/web-modeler/wm-reference/microflows-wm"
+    },
+	{
+      from: "/refguide/web-modeler/microflows-wm",
+      to: "/web-modeler/wm-reference/microflows-wm"
+    },
+	{
+      from: "/refguide/web-modeler/microflows-expressions-wm",
+      to: "/web-modeler/wm-reference/microflows-expressions-wm"
+    },
+	{
+      from: "/refguide/web-modeler/app-settings-wm",
+      to: "/web-modeler/wm-reference/app-settings-wm"
     },
 	/****************************************************
      * APM

@@ -217,7 +217,7 @@ The Mendix instance on Azure is now fully configured and ready for use. Let's tr
 **Congratulations! You have successfully deployed a Mendix app on Microsoft Azure.**
 ![](attachments/azure-deploy/19398863.png)
 
-## 7 Related content
+## 7 Read More
 
 *   [Trends in Mendix Cloud v3](/developerportal/operate/trends)
 *   [Mendix Cloud: Deploy](mendix-cloud-deploy)

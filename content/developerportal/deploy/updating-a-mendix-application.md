@@ -52,7 +52,7 @@ The user that is configured as the Service Account should have Read&Execute priv
 
 {{% /alert %}}
 
-## 3\. Related content
+## 3\. Read More
 
 *   [Restoring a SQL Server database](restoring-a-sql-server-database)
 *   [Troubleshooting SQL Server](troubleshooting-sql-server)

@@ -42,7 +42,7 @@ After you restart the application your data should show up in New Relic. Note th
 
 {{% /alert %}}
 
-## Related content
+## Read More
 
 *   [Setting up monitoring with New Relic](setting-up-monitoring-with-new-relic)
 *   [Finding the Root Cause of Runtime Errors](/howto/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)

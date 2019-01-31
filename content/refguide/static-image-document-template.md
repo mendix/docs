@@ -1,5 +1,5 @@
 ---
-title: "Static Image (document template)"
+title: "Static Image (Document Template)"
 parent: "document-templates"
 ---
 

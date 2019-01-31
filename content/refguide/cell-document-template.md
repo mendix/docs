@@ -1,5 +1,5 @@
 ---
-title: "Cell (document template)"
+title: "Cell (Document Template)"
 parent: "row-document-template"
 ---
 

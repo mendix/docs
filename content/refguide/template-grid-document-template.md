@@ -1,5 +1,5 @@
 ---
-title: "Template Grid (document template)"
+title: "Template Grid (Document Template)"
 parent: "document-templates"
 ---
 

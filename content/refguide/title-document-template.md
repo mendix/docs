@@ -1,5 +1,5 @@
 ---
-title: "Title (document template)"
+title: "Title (Document Template)"
 parent: "document-templates"
 ---
 

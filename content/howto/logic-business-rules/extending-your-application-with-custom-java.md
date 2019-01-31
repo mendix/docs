@@ -74,7 +74,7 @@ To edit the Java action in Eclipse, follow these steps:
 
 	![](attachments/extend-custom-java/java1.png)
 
-	As you can see, the Modeler generated a variable for the input customer object name `inputCustomer`. You can use that variable to get the name of the customer and reverse it like this:
+	As you can see, the Modeler generated a variable for `inputAssets`. You can use that variable to get the name of the asset and reverse it like this:
 
 	```java
 String assetsAssetName = this.inputAssets.getAssetName(this.getContext());
@@ -103,7 +103,7 @@ return new StringBuilder(assetsAssetName).reverse().toString();
 	{{% image_container width="500" %}}![](attachments/extend-custom-java/microflow1.png)
 	{{% /image_container %}}
 
-7.  Drag the **ReverseCustomerName** Java action from the **Project Explorer** onto the line between the green start event and red end event. This generates a Java action activity:
+7.  Drag the **ReverseAssetName** Java action from the **Project Explorer** onto the line between the green start event and red end event. This generates a Java action activity:
 
 	{{% image_container width="500" %}}![](attachments/extend-custom-java/microflow2.png)
 	{{% /image_container %}}

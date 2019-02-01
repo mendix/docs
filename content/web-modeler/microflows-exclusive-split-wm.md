@@ -1,7 +1,7 @@
 ---
 title: "Exclusive Split in the Web Modeler"
 category: "Microflows in the Web Modeler"
-menu_order: 10
+menu_order: 20
 description: "Describes the exclusive split in the Mendix Web Modeler."
 tags: ["web modeler", "microflow", "exclusive split"]
 ---

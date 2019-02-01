@@ -1,5 +1,5 @@
 ---
-title: "Dynamic Image (document template)"
+title: "Dynamic Image (Document Template)"
 parent: "document-templates"
 ---
 

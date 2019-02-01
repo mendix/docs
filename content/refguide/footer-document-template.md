@@ -1,5 +1,5 @@
 ---
-title: "Footer (document template)"
+title: "Footer (Document Template)"
 parent: "document-templates"
 ---
 

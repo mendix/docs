@@ -40,7 +40,7 @@ If you don't want basic authentication, there are three options:
 Note that web service users cannot access REST services.
 {{% /alert %}}
 
-For more details, see [Published REST Routing](published-rest-routing) and section [3.1 Requires Authentication](published-rest-service#authentication) in *Published REST Service*.
+For more details, see [Published REST Routing](published-rest-routing) and the [Requires Authentication](published-rest-service#authentication) section in *Published REST Service*.
 
 ## <a name="interactive-documentation"></a>4 Documentation
 

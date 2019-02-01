@@ -1,6 +1,5 @@
 ---
 title: "Theme Customizer in the Web Modeler"
-category: "Web Modeler Guide"
 description: "Describes the Theme Customizer in the Mendix Web Modeler."
 menu_order: 80
 tags: ["web modeler", "theme customizer", "atlas ui"]

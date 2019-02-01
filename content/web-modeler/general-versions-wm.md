@@ -1,6 +1,6 @@
 ---
 title: "Web Modeler Version & Mendix Version Correlation"
-category: "Web Modeler Guide"
+parent: "general-wm"
 description: "Describes how the Web Modeler version relates to the Mendix version."
 tags: ["web modeler", "desktop modeler", "versions"]
 ---

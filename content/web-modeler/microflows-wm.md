@@ -1,6 +1,5 @@
 ---
 title: "Microflows in the Web Modeler"
-category: "Web Modeler Guide"
 description: "Describes the microflows in the Mendix Web Modeler."
 menu_order: 50
 tags: ["web modeler", "microflow"]

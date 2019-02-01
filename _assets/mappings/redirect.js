@@ -395,7 +395,7 @@ module.exports = {
     },
 	{
       from: "/refguide/web-modeler/domain-models-association-properties-wm",
-      to: "/web-modeler/wm-reference/domain-models-association-properties-wm"
+      to: "/web-modeler/domain-models-association-properties-wm"
     },
 	{
       from: "/refguide/web-modeler/microflows-wm",

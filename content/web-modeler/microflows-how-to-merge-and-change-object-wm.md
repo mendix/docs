@@ -3,7 +3,6 @@ title: "Configure Merge & Change Object Activities in the Web Modeler"
 category: "Microflows in the Web Modeler"
 menu_order: 70
 description: "This how to describes the process of configuring a merge and a change object activity in the Mendix Web Modeler."
-menu_order: 30
 tags: ["web modeler", "microflows", "merge", "expression", "change object"]
 ---
 

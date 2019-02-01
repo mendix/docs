@@ -51,23 +51,23 @@ module.exports = {
     },
 	{
       from: "/howto/start-with-a-blank-app",
-      to: "/web-modeler/wm-reference/overview-wm"
+      to: "/web-modeler/general-wm"
     },
     {
       from: "/howto/tutorials/create-a-to-do-app",
-      to: "/web-modeler/wm-reference/overview-wm"
+      to: "/web-modeler/general-wm"
     },
     {
       from: "/howto/tutorials/build-a-simple-hrm-app",
-      to: "/web-modeler/wm-reference/overview-wm"
+      to: "/web-modeler/general-wm"
     },
     {
       from: "/howto/tutorials/build-an-iot-app",
-      to: "/web-modeler/wm-reference/overview-wm"
+      to: "/web-modeler/general-wm"
     },
 	{
       from: "/howto/web-modeler/syncing-webmodeler-desktop",
-      to: "/web-modeler/wm-how-to/syncing-webmodeler-desktop"
+      to: "/web-modeler/general-sync-webmodeler-desktopmodeler"
     },
     {
       from: "/howtogeneral/bestpractices/ux-best-practices",
@@ -391,27 +391,27 @@ module.exports = {
      ****************************************************/
 	 {
       from: "/refguide/web-modeler",
-      to: "/web-modeler/wm-reference/"
+      to: "/web-modeler/"
     },
 	{
       from: "/refguide/web-modeler/domain-models-association-properties-wm",
-      to: "/web-modeler/wm-reference/domain-models-association-properties-wm"
+      to: "/web-modeler/domain-models-association-properties-wm"
     },
 	{
       from: "/refguide/web-modeler/microflows-wm",
-      to: "/web-modeler/wm-reference/microflows-wm"
+      to: "/web-modeler/microflows-wm"
     },
 	{
       from: "/refguide/web-modeler/microflows-wm",
-      to: "/web-modeler/wm-reference/microflows-wm"
+      to: "/web-modeler/microflows-wm"
     },
 	{
       from: "/refguide/web-modeler/microflows-expressions-wm",
-      to: "/web-modeler/wm-reference/microflows-expressions-wm"
+      to: "/web-modeler/microflows-expressions-wm"
     },
 	{
       from: "/refguide/web-modeler/app-settings-wm",
-      to: "/web-modeler/wm-reference/app-settings-wm"
+      to: "/web-modeler/app-settings-wm"
     },
 	/****************************************************
      * APM

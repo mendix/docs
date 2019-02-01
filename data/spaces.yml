@@ -189,5 +189,13 @@ web-modeler:
   space: "Web Modeler Guide"
   priority: false
   menu_categories:
-    - "Web Modeler Reference"
-    - "Web Modeler How-to's"
+    - "Web Modeler General Info"
+    - "Domain Model in the Web Modeler"
+    - "Page Editor in the Web Modeler"
+    - "Navigation Document in the Web Modeler"
+    - "Microflows in the Web Modeler"
+    - "Publishing Your App From the Web Modeler"
+    - "Checks in the Web Modeler"
+    - "Consistency Errors in the Web Modeler"
+    - "Theme Customizer in the Web Modeler"
+    - "App Settings in the Web Modeler"  

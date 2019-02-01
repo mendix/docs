@@ -76,6 +76,78 @@ Restart the Desktop Modeler.
 
 You can now commit your app project.
 
+### 2.7 Resolving Conflicts on the 'svn:ignore' Property
+
+When merging or updating branches a conflict is sometimes reported on the project *folder*, rather than an individual file. This usually means that there is a conflict on the `svn:ignore` property.
+
+In the 'svn:ignore' property, Subversion records which files should be ignored. These are files which are on disk but that should not be on the Team Server.
+
+For example, the `deployment` directory is necessary for running your project but it should not be on the Team Server. Everyone has their own version of the `deployment` folder on their hard disk.
+
+You will need to resolve the conflict before you can commit your app project to the Team Server.
+
+#### 2.7.1 Example
+
+In this example, we will focus on merging a branch into the main line. On the main line the list of ignored files is this:
+
+```
+modeler-merge-marker
+.mendix-cache
+ResolveIgnoreConflict.mpr.lock
+*.launch
+ResolveIgnoreConflict.mpr.bak
+node_modules
+```
+
+On the branch the list is like this:
+
+```
+modeler-merge-marker
+.mendix-cache
+ResolveIgnoreConflict.mpr.lock
+*.launch
+ResolveIgnoreConflict.mpr.bak
+.project
+.classpath
+deployment
+```
+
+Note that the first five lines are the same and after that the lists deviate.
+
+Merging the branch to the main line will result in the following information message.
+
+![](attachments/troubleshoot-version-control/mergesuccessfuldialog.png)
+
+Note that a conflict is reported on the project *folder*. This usually means that there is a conflict on the `svn:ignore` property.
+
+To resolve a conflict on the svn:ignore property, perform the following steps.
+
+1. Install TortoiseSVN, as suggested in [System Requirements](/refguide/system-requirements). Use version 1.7.x, which can be downloaded from [Sourceforge](https://sourceforge.net/projects/tortoisesvn/files/1.7.15/).
+2. Open the project directory in the Windows File Explorer
+3. Right-click the white background and choose **TortoiseSVN > Edit Conflicts**.
+
+    The following dialog is shown (resized to show everything):
+
+    ![](attachments/troubleshoot-version-control/editconflictsdialog.png)
+
+4. Copy all lines starting from `modeler-merge-marker` to the clipboard. 
+5. Click **Manually edit property**.
+6. Double-click the `svn:ignore` line in the grid.
+7. Paste the previously copied lines here: <kbd>Ctrl</kbd>+<kbd>A</kbd> followed by <kbd>Ctrl</kbd>+<kbd>V</kbd>.
+8. Remove the special lines that start with `<<<<<<<`, `=======` or `>>>>>>>`.
+
+    For this example, we end up with the following combined ignore list:
+
+    ![](attachments/troubleshoot-version-control/combinedignorelist.png)
+
+    Note that it includes both the lines from the main line and from the branch. The order is not important.
+
+9. Click **OK** and then **OK** again to confirm the change.
+10. Right-click the white background of the project directory and choose **TortoiseSVN > Edit Conflicts** again.
+11. This time click **Resolve using local property**.
+
+You have resolved the conflict and can commit from the Desktop Modeler.
+
 ## 3 Other Problems
 
 If the solutions here do not work for your version control problems, please submit a request with [Mendix Support](https://support.mendix.com/).

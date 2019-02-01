@@ -18,7 +18,7 @@ You have configured microflows and exclusive splits with enumeration attribute t
 
 To start this tutorial, make sure you have completed the following prerequisites:
 
-* [Step 1: Build the Domain Model & Configure a Microflow](microflows-how-to-configure-exclsplit-wm-p1-wm)
+* [Step 1: Build the Domain Model & Configure a Microflow](microflows-how-to-configure-exclsplit-p1-wm)
 
 ## 3 Embedding the Microflow to Pages   
 

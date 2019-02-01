@@ -118,7 +118,7 @@ To configure the exclusive split with the attribute or parameter of the enumerat
 
 Congratulations! We have now created the microflow that will open different order forms for customers with different grades, or show an error message when the customer has no grade.
 
-If you want to test your microflow by adding it to the pages, see [Configure an Exclusive Split Step 2: Embed the Microflow in Your App](microflows-how-to-configure-exclsplit-wm-p2).
+If you want to test your microflow by adding it to the pages, see [Configure an Exclusive Split Step 2: Embed the Microflow in Your App](microflows-how-to-configure-exclsplit-p2-wm).
 
 ## 3 Configuring the Exclusive Split with Attribute of the Boolean Type  
 
@@ -182,4 +182,4 @@ To configure the exclusive split with the attribute of the boolean type, follow 
 
 Congratulations! We have now created a microflow that will show an error message and close the current page if the customer is blocked.
 
-If you want to embed your microflow to the pages, see [Step 2: Embed the Microflow in Your App](microflows-how-to-configure-exclsplit-wm-p2).
+If you want to embed your microflow to the pages, see [Step 2: Embed the Microflow in Your App](microflows-how-to-configure-exclsplit-p2-wm).

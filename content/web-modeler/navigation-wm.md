@@ -78,4 +78,4 @@ To create a new navigation item, do the following:
 
 ## 4 Read More
 
-* [The Web Modeler Overview](overview-wm)
+* [The Web Modeler General Info](general-wm)

@@ -164,7 +164,7 @@ When configuring the activities of the microflows you will notice icons above or
 
 ## 8 Read More
 
-* [The Web Modeler Overview](overview-wm)
+* [The Web Modeler General Info](general-wm)
 * [Exclusive Split in the Web Modeler](microflows-exclusive-split-wm)
 * [Microflow Expressions in the Web Modeler](microflows-expressions-wm)
 * [Setting and Changing a Value for Different Activities in the Microflows in the Web Modeler](microflows-setting-and-changing-value-wm)

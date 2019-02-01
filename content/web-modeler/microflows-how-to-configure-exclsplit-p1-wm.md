@@ -38,7 +38,7 @@ The app will open the corresponding page depending on the grade of a customer, f
 
 1. Open your [domain model](domain-models-wm).
 2. Create entity *Customer*. For more information on how to create the entity, see section [3 Adding New Entities](domain-models-wm) in *Domain Models Overview in the Web Modeler*.
-3.  For the **Customer** entity, create attribute (for more information on how to create the attribute, see section [4 Adding New Attributes](/domain-models-wm)) and do the following:<br />
+3.  For the **Customer** entity, create attribute (for more information on how to create the attribute, see section [4 Adding New Attributes](domain-models-wm)) and do the following:<br />
     a. Set the attribute **Name** to *Grade*.<br />
     b. Set the [**Type**](domain-models-attributes-wm) to **Enumeration**.<br />
     c. Click **Select enumeration** to create a new enumeration.<br />d. In the **Select enumeration** dialog window, click **New**.<br/>

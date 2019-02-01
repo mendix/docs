@@ -87,7 +87,7 @@ The list below shows you the examples of the environment statuses you may see (n
    ![Your App Has Failed to Set Up Status in the Web Modeler](attachments/deployment-wm/wm-updating-your-app-failed-to-set-up.png)
   {{% /alert %}}
 
-Publishing statuses are divided on the following:
+Deployment statuses are divided into the following ones:
 
 1.  If your project does not have [consistency errors](consistency-errors-wm), your application will be deployed and the dialog box with the information on the last deployment highlighted in green will be opened.  
 

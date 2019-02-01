@@ -1,6 +1,6 @@
 ---
 title: "Widgets in the Web Modeler"
-parent: "page-editor-wm"
+category: "Page Editor in the Web Modeler"
 description: "Describes widgets in the Mendix Web Modeler."
 tags: ["web modeler", "page editor", "pages", "widgets"]
 ---

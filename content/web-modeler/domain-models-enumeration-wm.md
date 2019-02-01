@@ -1,6 +1,6 @@
 ---
 title: "Enumeration in the Web Modeler"
-parent: "domain-models-attributes-wm"
+category: "Domain Model in the Web Modeler"
 description: "Describes an attribute of the enumeration type in the Mendix Web Modeler."
 tags: ["web modeler", "domain model", "attributes", "attribute types", "enumeration"]
 ---

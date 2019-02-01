@@ -1,6 +1,6 @@
 ---
 title: "Microflow Editor Consistency Errors in the Web Modeler"
-parent: "consistency-errors-wm"
+category: "Consistency Errors in the Web Modeler"
 description: "Describes microflow consistency errors in the Mendix Web Modeler and the way to fix them."
 tags: ["web modeler", "consistency errors", "checks", "errors", "microflow"]
 ---

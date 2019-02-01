@@ -1,6 +1,6 @@
 ---
 title: "Loops in the Web Modeler"
-parent: "microflows-wm"
+category: "Microflows in the Web Modeler"
 menu_order: 20
 description: "Describes a loop in the Mendix Web Modeler."
 tags: ["web modeler", "microflow", "loop", "loops"]

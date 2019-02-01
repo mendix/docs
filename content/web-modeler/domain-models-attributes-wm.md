@@ -1,6 +1,6 @@
 ---
 title: "Attribute Types in the Web Modeler"
-parent: "domain-models-wm"
+category: "Domain Model in the Web Modeler"
 description: "Describes attribute types in the Mendix Web Modeler."
 tags: ["web modeler", "domain model", "attributes", "attribute types"]
 ---

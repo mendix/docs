@@ -1,6 +1,6 @@
 ---
 title: "Page Editor Consistency Errors in the Web Modeler"
-parent: "consistency-errors-wm"
+category: "Consistency Errors in the Web Modeler"
 description: "Describes consistency errors in the page editor in the Mendix Web Modeler and the way to fix them."
 menu_order: 
 tags: ["web modeler", "consistency errors", "checks", "errors", "page editor"]

@@ -1,9 +1,10 @@
 ---
 title: "Sync the Web Modeler & Desktop Modeler"
-parent: "general-wm"
+category: "Web Modeler General Info"
 description: This document describes the process of syncing the Mendix Web Modeler and the Mendix Desktop Modeler.
 tags: ["web modeler", "desktop modeler"]
 frontpage_featured: true
+menu_order: 10
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

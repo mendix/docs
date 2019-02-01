@@ -1,6 +1,6 @@
 ---
 title: "Setting and Changing a Value for Different Activities in the Microflows in the Web Modeler"
-parent: "microflows-wm"
+category: "Microflows in the Web Modeler"
 description: "Describes the process of setting the initial value for objects or variables in the Mendix Web Modeler."
 tags: ["web modeler", "microflow", "set value", "variable"]
 ---

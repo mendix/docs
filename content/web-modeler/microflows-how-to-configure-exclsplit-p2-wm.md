@@ -28,7 +28,7 @@ After microflows are created, you can add them to pages to run them in your app.
 
 To embed the microflow with an exclusive split (the attribute of the enumeration type) to pages, do the following:
 
-1. Сreate a page for the existing customers details and name it *Customer_details*. For more information on creating pages, see section [3.2 Creating a New Page](../wm-reference/page-editor-wm) in the *Page Editor in the Web Modeler*.
+1. Сreate a page for the existing customers details and name it *Customer_details*. For more information on creating pages, see section [3.2 Creating a New Page](page-editor-wm) in the *Page Editor in the Web Modeler*.
 2.  In **Toolbox**>**Widgets** >**Data Containers**, find **Data View**.
 
     ![](attachments/microflows-how-to-configure-exclsplit-wm/wm-data-view.png)
@@ -113,4 +113,4 @@ To embed the microflow with an exclusive split (the attribute of the Boolean typ
 
 Congratulations! Now when the user clicks **Place order**, only the customers who are not blocked will be able to proceed. If the user is blocked, he will get an error message. 
 
-You can publish and view your app. For more information, see [Deploying Your App From the Web Modeler](../wm-reference/deployment-wm).
+You can publish and view your app. For more information, see [Deploying Your App From the Web Modeler](deployment-wm).

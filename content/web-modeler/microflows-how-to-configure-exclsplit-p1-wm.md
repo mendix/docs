@@ -10,7 +10,7 @@ tags: ["web modeler", "microflows", "exclusive split", "domain model", ]
 
 This how-to explains how you can configure an exclusive split in the microflow editor of the Web Modeler. 
 
-An exclusive split is an activity which is used to model conditions or decisions in the logic of your app. For more information on the exclusive split, see [Exclusive Split in the Web Modeler](../wm-reference/microflows-exclusive-split-wm). 
+An exclusive split is an activity which is used to model conditions or decisions in the logic of your app. For more information on the exclusive split, see [Exclusive Split in the Web Modeler](microflows-exclusive-split-wm). 
 
 **This how-to will teach you how to do the following:**
 
@@ -30,17 +30,17 @@ Customers can make an order from this page. However, if the blocked user tries t
 
 In this example we will create a microflow and configure the exclusive split when you want to open different order forms depending on the customer grade. 
 
-This use case will require an exclusive split with attribute of the enumeration type (list of predefined values). For more information on types of attributes, see [Attribute Types in the Web Modeler](../wm-reference/domain-models-attributes-wm). 
+This use case will require an exclusive split with attribute of the enumeration type (list of predefined values). For more information on types of attributes, see [Attribute Types in the Web Modeler](domain-models-attributes-wm). 
 
 ### 2.1 Adding an Entity and an Attribute to the Domain Model 
 
 The app will open the corresponding page depending on the grade of a customer, for this we need to create a new entity and a new attribute first. To create the new entity and attribute, do the following:
 
-1. Open your [domain model](../wm-reference/domain-models-wm).
-2. Create entity *Customer*. For more information on how to create the entity, see section [3 Adding New Entities](../wm-reference/domain-models-wm) in *Domain Models Overview in the Web Modeler*.
-3.  For the **Customer** entity, create attribute (for more information on how to create the attribute, see section [4 Adding New Attributes](../wm-reference/domain-models-wm)) and do the following:<br />
+1. Open your [domain model](domain-models-wm).
+2. Create entity *Customer*. For more information on how to create the entity, see section [3 Adding New Entities](domain-models-wm) in *Domain Models Overview in the Web Modeler*.
+3.  For the **Customer** entity, create attribute (for more information on how to create the attribute, see section [4 Adding New Attributes](/domain-models-wm)) and do the following:<br />
     a. Set the attribute **Name** to *Grade*.<br />
-    b. Set the [**Type**](../wm-reference/domain-models-attributes-wm) to **Enumeration**.<br />
+    b. Set the [**Type**](domain-models-attributes-wm) to **Enumeration**.<br />
     c. Click **Select enumeration** to create a new enumeration.<br />d. In the **Select enumeration** dialog window, click **New**.<br/>
     e. In the **Create new enumeration** dialog window, click **Add Item** (*Grade* is filled out automatically for the **Name**).<br />
 
@@ -63,7 +63,7 @@ The new attribute is created.
 
 To configure the exclusive split with the attribute or parameter of the enumeration type, follow these steps:
 
-1. [Create a new microflow](../wm-reference/microflows-wm) and name it, for example, *Show_grade_specific_page*.
+1. [Create a new microflow](microflows-wm) and name it, for example, *Show_grade_specific_page*.
 2. In the **Toolbox** tab, select the exclusive split, drag and drop it to the microflow.
 3.  We need to pass a parameter to configure the exclusive split correctly.  In the **Toolbox**, select **Parameter** and drag and drop it to the microflow.
 
@@ -99,7 +99,7 @@ To configure the exclusive split with the attribute or parameter of the enumerat
 8. To open a corresponding order form (page) for customers with the bronze grade, select **Show Page** in the **Toolbox**, drag and drop it to flow labelled **Bronze** in the microflow. 
 9.  Open the properties for the **Show Page** activity and do the following:<br />
     a. Click the **Select a page** field.<br />
-    b. In the **Select Page** dialog window, click **New page**, and [create a page](../wm-reference/page-editor-wm) for customer grade **Bronze**. 
+    b. In the **Select Page** dialog window, click **New page**, and [create a page](page-editor-wm) for customer grade **Bronze**. 
     **Note** After you create a page, it will be added to the **Select field** automatically.<br />
 
     ![](attachments/microflows-how-to-configure-exclsplit-wm/wm-show-page-select-page.png) <br />
@@ -124,16 +124,16 @@ If you want to test your microflow by adding it to the pages, see [Configure an 
 
 In this example we will create a microflow and configure the exclusive split when you want to prevent a blocked customer from making an order. The reasons for blocking the customer can be that customer's credit score is too low, or password has expired. 
 
-This use case will require an exclusive split with an attribute of the boolean type (true or false). For more information on the types of attributes, see [Attribute Types](../wm-reference/domain-models-attributes-wm).
+This use case will require an exclusive split with an attribute of the boolean type (true or false). For more information on the types of attributes, see [Attribute Types](domain-models-attributes-wm).
 
 ### 3.1 Adding an Entity and an Attribute to the Domain Model 
 
 As we will verify customers by their statuses, we need to create a corresponding attribute for the entity first. For this, do the following:
 
-1. Open your [domain model](../wm-reference/domain-models-wm).
-2.  For the Customer entity, create attribute (for more information on how to create the attribute, see section [3 Adding New Attributes](../wm-reference/domain-models-wm)),  and do the following: <br />
+1. Open your [domain model](domain-models-wm).
+2.  For the Customer entity, create attribute (for more information on how to create the attribute, see section [3 Adding New Attributes](domain-models-wm)),  and do the following: <br />
     a. Set name to *Blocked*. <br />
-    b. Set the [**Type**](../wm-reference/domain-models-attributes-wm) to **Boolean**. <br />
+    b. Set the [**Type**](domain-models-attributes-wm) to **Boolean**. <br />
     c. Click **Create**. 
 
     ![](attachments/microflows-how-to-configure-exclsplit-wm/wm-new-attribute-create-dialog.png)
@@ -146,7 +146,7 @@ The new attribute for the **Customer** entity is created.
 
 To configure the exclusive split with the attribute of the boolean type, follow these steps:
 
-1. [Create a new microflow](../wm-reference/microflows-wm) and name it, for example *Customer_status_check*.
+1. [Create a new microflow](microflows-wm) and name it, for example *Customer_status_check*.
 2. In the **Toolbox** tab, select the exclusive split, drag and drop it to the microflow. 
 
 3.  We need to pass a parameter to configure the exclusive split. In the **Toolbox** tab, select **Parameter**, and drag and drop it to the microflow.

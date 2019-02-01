@@ -58,5 +58,5 @@ The caption describes what happens in this element.
 
 * [Microflows in the Web Modeler](microflows-wm)
 * [Microflow Expressions in the Web Modeler](microflows-expressions-wm)
-* [How to Configure an Exclusive Split in the Web Modeler](../wm-how-to/webmodeler-how-to-microflows-exclsplit) 
+* [How to Configure an Exclusive Split in the Web Modeler](microflows-how-to-configure-exclsplit-wm) 
 

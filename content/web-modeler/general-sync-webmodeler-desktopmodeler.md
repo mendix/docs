@@ -66,5 +66,5 @@ If you do not have anything to commit, you can also click **Cancel sync/Unlock W
 
 ## 4 Read More
 
-* [Troubleshoot Syncing the Desktop Modeler with the Web Modeler](general-troubleshoot-desktop-web-modeler-sync)
+* [Troubleshoot Syncing the Desktop Modeler with the Web Modeler](general-general-general-general-troubleshoot-sync)
 

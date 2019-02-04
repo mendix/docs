@@ -3,11 +3,17 @@ title: "XPath ends-with"
 parent: "xpath-constraint-functions"
 ---
 
+##1 Introduction
 
-The `ends-with()` function checks whether a String attribute ends with a specific string (case-insensitive) as a sub-string.
+The `ends-with()` function checks whether a string attribute ends with a specific string (case-insensitive) as a sub-string.
+
+## 2 Example
+
+This query returns all customers whose name ends with the sub-string `sen`:
 
 ```java
 //Sales.Customer[ends-with(Name, 'sen')]
 ```
 
-This query returns all customers whose name ends with the substring 'sen'. Customers with the name 'Jansen' or 'Janssen' will be returned, because both names end with 'sen'.
+Customers with the name "Jansen" or "Isaacsen" will be returned, for example, because both names end with "sen."
+

@@ -37,9 +37,10 @@ This query returns all the customers who have placed *no* orders with a TotalPri
 //Sales.Customer[not(Sales.Customer_Order/Sales.Order/TotalPrice > 30000)]
 ```
 
-The query above does not return the same result as this one
+The query above does not return the same result as this one:
 
 ```java
 //Sales.Customer[Sales.Customer_Order/Sales.Order/TotalPrice <= 30000]
 ```
-The queryabove returns all the customers who have placed *at least one* order with a TotalPrice of *less than* 30,000, regardless of the number of orders they have placed worth more than 30,000. For example, if a customer has placed two orders—one for 15,000 and one for 35,000—this query will return this customer, while the *not* query will not. Customers who have not placed any orders will not be returned by this query.
+
+The query above returns all the customers who have placed *at least one* order with a TotalPrice of *less than* 30,000, regardless of the number of orders they have placed worth more than 30,000. For example, if a customer has placed two orders—one for 15,000 and one for 35,000—this query will return this customer, while the *not* query will not. Customers who have not placed any orders will not be returned by this query.

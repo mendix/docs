@@ -13,15 +13,13 @@ The function must specify a column in the query to aggregate.
 
 The query must specify an attribute that has a numeric type.
 
-## 2 First Example
+## 2 Examples
 
 This query returns the average total price of all placed orders:
 
 ```java
 avg(//Sales.Order/TotalPrice)
 ```
-
-## 3 Second Example
 
 This query returns the average total price of all orders placed by a customer named "Jansen":
 

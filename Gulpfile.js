@@ -200,7 +200,7 @@ gulp.task('dev', ``, ['dev:sass', 'build:js', 'write:menu', 'build:hugo'], done 
 });
 
 gulp.task('serve', `Serve`, done => {
-  runSequence('clean', 'dev');
+  runSequence('clean', ['build:menu', 'build:sass', 'build:js'], 'dev');
 })
 
 /*************************************************

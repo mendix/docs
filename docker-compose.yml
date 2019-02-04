@@ -4,8 +4,7 @@ services:
     build: .
     volumes:
       - .:/home/app/docs
-    command: yarn run serve
+      - /home/app/docs/node_modules/
+    command: yarn run docker
     ports:
       - "4000:4000"
-volumes:
-  node-modules:

@@ -29,19 +29,19 @@ You can extract the files using your favorite archival tool, such as [7-Zip](htt
 
 The system requirements for MxBuild are documented here: [System Requirements](system-requirements#mxbuild).
 
-## 2 Command-line
+## 2 Command Line
 
 To build your package, you specify the Mendix Project file (.mpr) for which you want to build the deployment package (.mda) on the command-line. The file name may be preceded by a relative or absolute path. The project file should be located inside a Mendix project directory.
 
 MxBuild takes a number of command-line options which control how the Mendix project is processed. These options precede the name of the project file.
 
-The format of the command line is:
+This is the format for the command line:
 
 `MxBuild --java-home="JDKDirectory" --java-exe-path="javaExecutable" [options] projectFile`
 
 After creating the deployment package, the MxBuild process quits.
 
-### 2.1 General Command-line Options
+### 2.1 General Command-Line Options
 
 <!-- Note to editor: the &nbsp; here makes the column wider so that options are not broken at hyphens
   The alternative of using non-breaking hyphens means that a cut and paste may not work -->
@@ -88,7 +88,7 @@ When MxBuild exits, one of the following codes will be returned:
 
 If the exit code is larger than 0, MxBuild will also output a message describing the error.
 
-## 4 Project Errors{#project-errors}
+## 4 Project Errors {#project-errors}
 
 When your Mendix project contains errors, deployment will fail and MxBuild will report these errors. You can use the `--write-errors=FILENAME` command-line option to tell MxBuild to write the errors to a file.
 

@@ -69,14 +69,7 @@ To use it, follow these steps:
     docker-compose build
     ```
 
-3.  Once the above command finishes, run:
-
-    ```sh
-    docker-compose run app yarn
-    ```
-
-    which will install the node dependencies.
-4.  Then run:
+3.  Then run:
 
     ```sh
     docker-compose up

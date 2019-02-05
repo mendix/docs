@@ -34,7 +34,7 @@ The **What's next?** section at the bottom of the page presents the following op
 
 ## 3  Web Modeler
 
-With the Web Modeler, you can design beautiful apps by leveraging the integrated Atlas UI in the WYSIWYG page editor. You can visually add your app’s domain model and business logic, all from the convenience of your web browser.
+With the [Web Modeler](/web-modeler), you can design beautiful apps by leveraging the integrated Atlas UI in the WYSIWYG page editor. You can visually add your app’s domain model and business logic, all from the convenience of your web browser.
 
 Click **Edit in Web Modeler** to open the app in the Web Modeler. Note that this is for Atlas UI-based apps only. If you need to enable the Web Modeler for your app project, click **Enable Web Modeler in Settings**, which will take you to the [General Settings](../settings/general-settings) page of your app project to do this.
 

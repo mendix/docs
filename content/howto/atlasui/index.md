@@ -7,11 +7,9 @@ tags: ["Atlas", "UI", "UX", "user experience"]
 
 Mendix Atlas UI is the design framework that makes building elegant user experiences a rapid process. It was built upon three design principles: simplicity, harmony, and flexibility. Simplicity helps you focus on what is important. We’ve simplified the design process with readymade page templates, building blocks, and widgets that can be arranged and customized to suit your app. Our design elements are harmonious, bringing a unified aesthetic to your app landscape. Atlas UI is built to be fully responsive, ensuring quality across scale without losing functionality. Visit the [Atlas UI site](https://atlas.mendix.com/) for detailed previews and descriptions of all Atlas UI elements.
 
-### 1.1 Web Modeler
+### 1.1 The Web Modeler
 
-The Mendix Web Modeler brings the collaborative Mendix Platform to the browser, making it easier than ever to share and collaborate on application models. Every app built in the Web Modeler is styled with the Atlas UI framework.
-
-After clicking **Create App** in the [Mendix Developer Portal](https://sprintr.home.mendix.com/index.html), you can select the Atlas UI **Blank App** on the **Starter Apps** tab and get running in minutes.
+The [Mendix Web Modeler](/web-modeler) brings the collaborative Mendix Platform to the browser, making it easier than ever to share and collaborate on application models. Every app built in the Web Modeler is styled with the Atlas UI framework. For more information, see [Get Started with Atlas UI](get-started-with-atlasui). 
 
 ### 1.2 Design Principles
 

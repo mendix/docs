@@ -3,15 +3,16 @@ title: "XPath contains"
 parent: "xpath-constraint-functions"
 ---
 
+## 1 Overview
 
-The `contains()` function tests whether a String attribute contains a specific string (case-insensitive) as a sub-string.
+The `contains()` function tests whether a string attribute contains a specific string (case-insensitive) as a sub-string.
 
-{{% alert type="info" %}}
+## 2 Example
+
+This query returns all the customers from which the name contains the string `an`:
 
 ```java
 //Sales.Customer[contains(Name, 'an')]
 ```
 
-This query returns all customers from which the name contains the string 'an'. Customers with the name 'Andy' or 'Jan' will be returned, because 'an' is part of the names 'Andy' and 'Jan'.
-
-{{% /alert %}}
+Customers with the name "Andy" or "Jan" will be returned, for example, because "an" is part of those names.

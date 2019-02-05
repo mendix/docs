@@ -34,7 +34,7 @@ For more information about Atlas UI, see [Atlas UI](index).
 
 You now have access to your app **Buzz** in the [Developer Portal](/developerportal). From **Buzz**, you can open the [Mendix Web Modeler](/web-modeler/general-wm) clicking **Edit App** in the top-right corner of the screen:
 
-{{% image_container width="350" %}}
+{{% image_container width="300" %}}
 ![Edit App Button in the Developer POrtal](attachments/get-started-with-atlasui/start_edit_your_app.png)
 {{% /image_container %}}
 

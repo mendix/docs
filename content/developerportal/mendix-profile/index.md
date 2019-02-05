@@ -20,7 +20,8 @@ On the profile header, you can see your location, number of [connections](#conne
 
 Your profile will open to the **Overview** tab. The first profile card below the header presents your **Stats**. The chart and its legend display your points divided between various Mendix products and activities. When analyzing your points, be sure to also check out the [Leaderboard](#leaderboard) card on this tab to see the top Mendix community contributors!
 
-{{% image_container width="350" %}}![](attachments/stats.png)
+{{% image_container width="350" %}}
+![](attachments/stats.png)
 {{% /image_container %}}
 
 ## 4 Badges {#badges}
@@ -29,7 +30,8 @@ In addition to the **Stats** chart, on the **Overview** tab you gain an overview
 
 To see all of your badges as well as the badges you can work towards, click **View all** to go to the **Badges** tab of your profile.
 
-{{% image_container width="350" %}}![](attachments/badges.png)
+{{% image_container width="350" %}}
+![](attachments/badges.png)
 {{% /image_container %}}
 
 {{% alert type="info" %}}
@@ -40,14 +42,16 @@ The **Badges in progress** section of the **Badges** tab only displays the curre
 
 The **Challenge** card presents a featured challenge you can complete on the Mendix Platform to gain credits. Once you complete a challenge, you can claim the credits and use them in the Mendix Shop. Challenges are not only about keeping engaged with the platform and exploring new challenges, but picking up some swag in the process!
 
-{{% image_container width="350" %}}![](attachments/challenges.png)
+{{% image_container width="350" %}}
+![](attachments/challenges.png)
 {{% /image_container %}}
 
 <a name="credits"></a>Clicking **View all** will bring you to the **Challenges** tab of your profile, which gives you more details on your challenges. You can complete these activities in any order you like.
 
 When you complete a challenge, click **Claim Credits** to claim the Mendix credits which you will be able to spend in the Mendix Shop.
 
-{{% image_container width="350" %}}![](attachments/credits.png)
+{{% image_container width="350" %}}
+![](attachments/credits.png)
 {{% /image_container %}}
 
 Completing your challenges and gaining credits is a great way to stay engaged with the Mendix community. And the Mendix Shop will always have cool items for you to spend credits on!
@@ -58,7 +62,8 @@ One of the greatest strengths of Mendix is our awesome developers community, and
 
 You can also see a list of people you may know so that you can add further connections to your profile. To connect with someone, click the plus icon, and an invitation will be sent.
 
-{{% image_container width="350" %}}![](attachments/connections.png)
+{{% image_container width="350" %}}
+![](attachments/connections.png)
 {{% /image_container %}}
 
 Clicking **View All** on the card will bring you to the **Connections** tab of your profile. On this tab, you can invite friends and colleagues to Mendix in two ways:
@@ -66,7 +71,8 @@ Clicking **View All** on the card will bring you to the **Connections** tab of y
 * **Share URL** – copy the personalized invite link and share it on your personal website, blog, and social media channels, or share it directly via specific social media
 * **Send invite** – send someone a Mendix invite by entering their email address and clicking **Send invite**
 
-{{% image_container width="500" %}}![](attachments/referral.png)
+{{% image_container width="500" %}}
+![](attachments/referral.png)
 {{% /image_container %}}
 
 Once five of your referred users have signed up, you will see the **Claim your t-shirt** link. Click this to fill in some details and receive your awesome Mendix t-shirt!
@@ -87,62 +93,62 @@ Check out the tables below for ways to earn points.
 
 These are points you can gain through activity on the [Mendix Forum](https://forum.mendixcloud.com/).
 
-| Activity                                    | Points | Max. Points per Day |
-| ------------------------------------------- | ------ | ------------------- |
-| Have your answer marked as accepted         | 15     | n/a                 |
-| Receive an upvote                           | 10     | 50                  |
-| Mark an answer on your question as accepted | 2      | n/a                 |
-| Downvote someone                            | -1     | n/a                 |
-| Receive a downvote                          | -2     | n/a                 |
+| Activity | Points | Max. Points per Day |
+| --- | --- | --- |
+| Have your answer marked as accepted | 15 | n/a |
+| Receive an upvote | 10 | 50 |
+| Mark an answer on your question as accepted | 2 | n/a |
+| Downvote someone | -1 | n/a |
+| Receive a downvote | -2 | n/a |
 
 ### 7.2 App Store Points {#app-store-points}
 
 These are points you can gain through activity in the [Mendix App Store](https://appstore.home.mendix.com/).
 
-| Activity                                                     | Points | Max. Points per Day |
-| ------------------------------------------------------------ | ------ | ------------------- |
-| Publish an app                                               | 50     | n/a                 |
-| Publish a new app version                                    | 25     | n/a                 |
-| Add an app review                                            | 5      | n/a                 |
-| Download the [Desktop Modeler](https://appstore.home.mendix.com/link/modelers/) | 5      | 5                   |
-| Download an app from the App Store | 1      | 5                   |
+| Activity | Points | Max. Points per Day |
+| --- | --- | --- |
+| Publish an app | 50 | n/a |
+| Publish a new app version | 25 | n/a |
+| Add an app review | 5 | n/a |
+| Download the [Desktop Modeler](https://appstore.home.mendix.com/link/modelers/) | 5 | 5 |
+| Download an app from the App Store | 1 | 5 |
 
 ### 7.3 Platform Points
 
-| Activity                                                     | Points | Max. Points per Day |
-| ------------------------------------------------------------ | ------ | ------------------- |
-| Be the first member of your company to sign up for Mendix    | 25     | n/a                 |
-| Upload to Model Share                                        | 10     | 10                  |
-| Send an app invite                                           | 10     | 50                  |
-| Download a microflow from [Model Share](https://modelshare.mendix.com/) | 5      | 5                   |
-| Send a Mendix Platform invite                                | 5      | 50                  |
-| Create an app project                                        | 5      | 5                   |
-| Submit a feedback item                                       | 2      | 10                  |
-| Have your feedback item marked as accepted                   | 2      | 10                  |
-| Commit to the Team Server                                    | 2      | 10                  |
-| Send a project invite                                        | 2      | 20                  |
-| Create a user story                                          | 1      | 20                  |
-| Post a message on the Buzz                                   | 1      | 10                  |
-| Deploy to a licensed node                                    | 1      | 5                   |
-| Deploy a Free App                                            | 1      | n/a                 |
+| Activity | Points | Max. Points per Day |
+| --- | --- | --- |
+| Be the first member of your company to sign up for Mendix | 25 | n/a |
+| Upload to Model Share | 10 | 10 |
+| Send an app invite | 10 | 50 |
+| Download a microflow from [Model Share](https://modelshare.mendix.com/) | 5 | 5 |
+| Send a Mendix Platform invite | 5 | 50 |
+| Create an app project | 5 | 5 |
+| Submit a feedback item | 2 | 10 |
+| Have your feedback item marked as accepted | 2 | 10 |
+| Commit to the Team Server | 2 | 10 |
+| Send a project invite | 2 | 20 |
+| Create a user story | 1 | 20 |
+| Post a message on the Buzz | 1 | 10 |
+| Deploy to a licensed node | 1 | 5 |
+| Deploy a Free App | 1 | n/a |
 
 ### 7.4 Community Points {#github}
 
-| Activity                                                     | Points | Max. per Day |
-| ------------------------------------------------------------ | ------ | ------------ |
-| Be the winner of a Mendix Hackathon!                         | 300    | n/a          |
-| Reach the [Mendix MVP](https://developer.mendixcloud.com/link/mvp) status | 300    | n/a          |
-| Be the runner-up in a Mendix Hackathon                       | 150    | n/a          |
-| Organize a [Mendix Meetup ](https://developers.mendix.com/)  | 100    | n/a          |
-| Complete your Mendix Profile                                 | 50     | n/a          |
-| Make your Mendix Profile public                              | 50     | n/a          |
-| Attend a Mendix Hackathon                                    | 50     | n/a          |
-| Successfully refer a friend to Mendix                        | 25     | n/a          |
-| Attend a Mendix Meetup                                       | 25     | n/a          |
-| Attend Mendix World 2016                                     | 25     | n/a          |
-| Get a GitHub pull request merged                             | 15     | n/a          |
-| Invite a friend to Mendix                                    | 5      | 50           |
-| Have a user sign up via your referral URL                    | 5      | 50           |
+| Activity | Points | Max. per Day |
+| --- | --- | --- |
+| Win a Mendix Hackathon! | 300 | n/a |
+| Reach the [Mendix MVP](https://developer.mendixcloud.com/link/mvp) status | 300 | n/a |
+| Be the runner-up in a Mendix Hackathon | 150 | n/a |
+| Organize a [Mendix Meetup ](https://developers.mendix.com/)  | 100 | n/a |
+| Complete your Mendix Profile | 50 | n/a |
+| Make your Mendix Profile public | 50 | n/a |
+| Attend a Mendix Hackathon | 50 | n/a |
+| Successfully refer a friend to Mendix | 25 | n/a |
+| Attend a Mendix Meetup | 25 | n/a |
+| Attend Mendix World 2016 | 25 | n/a |
+| Get a GitHub pull request merged | 15 | n/a |
+| Invite a friend to Mendix | 5 | 50 |
+| Have a user sign up via your referral URL | 5 | 50 |
 
 {{% alert type="info" %}}
 In order to receive Mendix points for your contributions to Mendix GitHub repositories (for example, [mendix / docs](https://github.com/mendix/docs)), you are required to authorize the connection to your GitHub profile. For more information, see the [Social](#social) section below.
@@ -150,19 +156,19 @@ In order to receive Mendix points for your contributions to Mendix GitHub reposi
 
 ### 7.5 Learning Points
 
-| Activity                                                     | Points | Max. per Day |
-| ------------------------------------------------------------ | ------ | ------------ |
-| Pass the [Expert Developer Certification](https://gettingstarted.mendixcloud.com/link/certification/expert) exam | 100    | n/a          |
-| Pass the [Advanced Developer](https://gettingstarted.mendixcloud.com/link/certification/advanced) exam | 50     | n/a          |
-| Give a presentation on Mendix                                | 25     | n/a          |
-| Write a blog post that is featured on the Mendix [Community Blog](https://developers.mendix.com/community-blog/) | 25     | n/a          |
-| Pass the [Rapid Developer Certification](https://gettingstarted.mendixcloud.com/link/certification/rapid) exam | 25     | n/a          |
-| Complete a learning path in the [Mendix Academy](https://gettingstarted.mendixcloud.com/link/home) | 25     | n/a          |
-| Make a large contribution to the [Mendix documentation](https://docs.mendix.com/) | 15     | n/a          |
-| Attend the [Advanced Developer Classroom](https://gettingstarted.mendixcloud.com/link/classroom/advanced) course | 10     | n/a          |
-| Attend the [Rapid Developer Classroom](https://gettingstarted.mendixcloud.com/link/classroom/rapid) course | 10     | n/a          |
-| Make a small contribution to the Mendix documentation        | 5      | n/a          |
-| Complete a unit in the Mendix Academy                        | 1      | n/a          |
+| Activity | Points | Max. per Day |
+| --- | --- | --- |
+| Pass the [Expert Developer Certification](https://gettingstarted.mendixcloud.com/link/certification/expert) exam | 100 | n/a |
+| Pass the [Advanced Developer](https://gettingstarted.mendixcloud.com/link/certification/advanced) exam | 50 | n/a |
+| Give a presentation on Mendix | 25 | n/a |
+| Write a blog post that is featured on the Mendix [Community Blog](https://developers.mendix.com/community-blog/) | 25 | n/a |
+| Pass the [Rapid Developer Certification](https://gettingstarted.mendixcloud.com/link/certification/rapid) exam | 25 | n/a |
+| Complete a learning path in the [Mendix Academy](https://gettingstarted.mendixcloud.com/link/home) | 25 | n/a |
+| Make a large contribution to the [Mendix documentation](https://docs.mendix.com/) | 15 | n/a |
+| Attend the [Advanced Developer Classroom](https://gettingstarted.mendixcloud.com/link/classroom/advanced) course | 10 | n/a |
+| Attend the [Rapid Developer Classroom](https://gettingstarted.mendixcloud.com/link/classroom/rapid) course | 10 | n/a |
+| Make a small contribution to the Mendix documentation | 5 | n/a |
+| Complete a unit in the Mendix Academy | 1 | n/a |
 
 {{% alert type="info" %}}
 For details on how to gain Mendix points on documentation work, see [How to Contribute to the Mendix Documentation](../community-tools/contribute-to-the-mendix-documentation).
@@ -173,17 +179,17 @@ For details on how to gain Mendix points on documentation work, see [How to Cont
 When you earn enough points, you gain a level:
 
 | Level | Points Needed |
-| ----- | ------------- |
-| 1     | 100           |
-| 2     | 500           |
-| 3     | 1000          |
-| 4     | 2500          |
-| 5     | 5000          |
-| 6     | 8500          |
-| 7     | 13000         |
-| 8     | 18500         |
-| 9     | 25000         |
-| 10    | 32500         |
+| --- | --- |
+| 1   | 100 |
+| 2   | 500 |
+| 3   | 1000 |
+| 4   | 2500 |
+| 5   | 5000 |
+| 6   | 8500 |
+| 7   | 13000 |
+| 8   | 18500 |
+| 9   | 25000 |
+| 10  | 32500 |
 
 ## 8 Portfolio
 
@@ -262,17 +268,28 @@ Here you can connect  your social accounts for **GitHub**, **Meetup**, **Twitter
 
 You can change your password in this section. By default, you are requested to change your password every 90 days. Only a [Company Admin](../company-app-roles/companyadmin-settings) is allowed to change the expiration period.
 
-### 10.5 API Keys
+### 10.5 API Keys {#api-key}
 
-In this section, you can view and create API keys that can be used by external applications to connect to the APIs of the Mendix Platform on behalf of your user account. These keys allow you to execute operations (or have them executed on your behalf) that require authentication but for which you do not want to pass your actual password. 
+In this section, you can create and view API keys that can be used by external applications to connect to the Mendix Platform APIs on behalf of your user account. These keys allow you to execute operations (or have them executed on your behalf) that require authentication but for which you do not want to pass your actual password. 
 
 An example of this is to use an API key to perform scripted operations on your application model with the Platform SDK.
 
+To obtain a Mendix API key, follow these steps, click **Create new API key** and follow the instructions.
+
+{{% alert type="warning" %}}
+Make a note of the API key, as it will only be shown once.
+{{% /alert %}}
+
+![](attachments/api-key.png)
+
+The obtained API key will allow apps that use it to act on behalf of the user. Therefore, the app will have the same privileges as the user who created the API key.
+
 For more information, see the following:
 
-* [API Keys](../settings/api-key)
+* [Authentication](/apidocs-mxsdk/apidocs/authentication)
 * [API Documentation](/apidocs-mxsdk/apidocs/)
 * [Mendix Platform SDK](/apidocs-mxsdk/mxsdk)
+* [How to Manage App API Keys](../settings/api-key)
 
 ### 10.6 Advanced
 

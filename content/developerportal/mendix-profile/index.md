@@ -75,8 +75,6 @@ Clicking **View All** on the card will bring you to the **Connections** tab of y
 ![](attachments/referral.png)
 {{% /image_container %}}
 
-Once five of your referred users have signed up, you will see the **Claim your t-shirt** link. Click this to fill in some details and receive your awesome Mendix t-shirt!
-
 ## 7 Leaderboard {#leaderboard}
 
 This card on your profile presents your points and ranking for the last 30 days:

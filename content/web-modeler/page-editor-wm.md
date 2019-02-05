@@ -24,14 +24,14 @@ The Web Modeler supports apps based on the Atlas UI framework only. For details 
 
 Pages of the Web Modeler consist of the following components:
 
-* [Layouts](https://atlas.mendix.com/index3.html#/layout/7881299347899569) 
-* [Templates](https://atlas.mendix.com/index3.html#/templates)
-* [Building blocks](https://atlas.mendix.com/index3.html#/buildingblocks)
-* [Widgets](https://atlas.mendix.com/index3.html#/widgets)
+* **Layouts** structure your pages and specify what comes where. Each page is based on a layout. For example, **Atlas_Default** or **PopupLayout** are types of layouts you choose when creating a page.
+* **Templates** – a starting point for creating new pages. Every time you create a new page, you select a template as a baseline that can then be edited to match the pages specific needs. For example, **Dashboard Action Tiles**, **List Default**, **Master Detail** are types of templates. 
+* **Building blocks** – pre-configured  set of elements that speeds up the process of building your page and styling it. For more information, see section [5.1 Building Blocks](#building-blocks). 
+* **Widgets** – single user-interface elements. For more information, see section [5.2. Widgets](#widgets) and [Widgets in the Web Modeler](page-editor-widgets-wm).
 
 The components described above are powered by Atlas UI. For more information, see [Atlas UI](https://atlas.mendix.com/index3.html#/getstarted/7881299347898769). 
 
-## 3 Performing Basic Functions 
+## 3 Performing Basic Functions {#page-editor-basic-functions}
 
 ### 3.1 Opening Pages
 
@@ -58,7 +58,7 @@ To create a new page in the Web Modeler, do the following:
     {{% image_container width="400" %}}![](attachments/page-editor-wm/wm-new-page.png)
     {{% /image_container %}}
 
-3. In the **Create new page** dialog window, fill out the title of the page, select the layout and the [page template](https://atlas.mendix.com/index3.html#/templates).  
+3. In the **Create new page** dialog window, fill out the title of the page, select the layout and the page template.  
 4.  Click **Create**.
 
     ![](attachments/page-editor-wm/wm-create-new-page-dialog.png)

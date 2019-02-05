@@ -8,6 +8,8 @@ const { normalizeSafe } = require('upath');
 const {getGenerateFiles, isFile, readFile, writeFile, readSourceFiles} = require('./helpers');
 const commandLineHelpers = require('./helpers/command_line');
 
+const PUBLISH_DRAFTS = typeof process.env.HUGO_ENV !== 'undefined' ? process.env.HUGO_ENV === 'test' : false;
+
 const { cyan, red } = commandLineHelpers.colors;
 const log = commandLineHelpers.log('menu build');
 
@@ -79,13 +81,21 @@ const filterAndBindSpace = (files) =>
     return obj;
   });
 
+const filterDrafts = (files) =>
+  _.filter(files, (file) => {
+    if (typeof file.draft !== 'undefined') {
+      return file.draft === PUBLISH_DRAFTS;
+    }
+    return true;
+  });
+
 const checkSpaces = (spaceArray) =>
   _.map(spaceArray, (space) => {
     const categories = _.map(space.menu_categories, cat => cat.toLowerCase())
     const files = space.files;
     space.files = _.filter(files, file => {
       if (!file.meta) {
-        console.log(`No metadata for file: ${cyan(file.basePath)}, is the block at the top correct?`);
+        log(`No metadata for file: ${cyan(file.basePath)}, is the block at the top correct?`);
         errors = true;
         return false;
       }
@@ -119,7 +129,8 @@ const writeSpaces = opts => {
     'parent': 'p',
     'main': 'm',
     'menu_title': 'mt',
-    'menu_order': 'mo'
+    'menu_order': 'mo',
+    'draft': 'dr'
   };
   return (spaceArray) => Promise.all(_.map(spaceArray, (space) => {
     const pageObj = {
@@ -127,7 +138,7 @@ const writeSpaces = opts => {
       content: {
         categories: space.menu_categories,
         pages: _.map(space.files, file => {
-          const f = _.pick(file, ['title', 'category', 'id', 'url', 'dir', 'parent', 'main', 'menu_title', 'menu_order']);
+          const f = _.pick(file, ['title', 'category', 'id', 'url', 'dir', 'parent', 'main', 'menu_title', 'menu_order', 'draft']);
           const newObject = {};
           _.keys(f).forEach(k => {
             if (keyMap[k]) {
@@ -149,9 +160,11 @@ const writeSpaces = opts => {
 
 const build = (opts) => new Promise((resolve, reject) => {
   const {src, destination, spaceFile} = opts;
+  log(`Building drafts: ${cyan(PUBLISH_DRAFTS ? 'yes' : 'no')}`);
   getGenerateFiles(src)
     .then(getSourceFilesPromise(opts))
     .then(parseSourceFiles)
+    .then(filterDrafts)
     .then(filterAndBindSpace)
     .then(checkSpaces)
     .then(writeSpaces(opts))

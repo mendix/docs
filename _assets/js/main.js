@@ -113,24 +113,28 @@
       return arr.sort();
     }
 
-    function addNormalLink(title, url) {
+    function addNormalLink(title, url, draft) {
       var cleanUrl = url === null ? null : url.replace(/[\(\)]/g, '');
       return $([
         '<i class="link-icon link-icon-link"></i>',
         cleanUrl === null ? '' : '<a href="' + cleanUrl + '" data-page-title="' + title + '" title="' + title + '">',
-        '<div class="category-title" ' + (cleanUrl === null ? 'data-page-title="' + title + '"' : '') + '>' + title + '</div>',
+        '<div class="category-title" ' + (cleanUrl === null ? 'data-page-title="' + title + '"' : '') + '>' + title +
+        (draft ? '<span class="category-title__badge badge">draft</span>' : '') +
+        '</div>',
         cleanUrl === null ? '' : '</a>'
       ].join(''));
     }
 
-    function addExpandLink(id, title, url) {
+    function addExpandLink(id, title, url, draft) {
       var cleanUrl = url === null ? null : url.replace(/[\(\)]/g, '');
       return $([
         '<a class="expand-link" href="#' + id + '" data-toggle="collapse" aria-expanded="false" aria-controls="' + id + '">',
         '<i class="link-icon link-icon-menu"></i>',
         '</a>',
         cleanUrl === null ? '' : '<a title="' + title + '" data-page-title="' + title + '" href="' + cleanUrl + '">',
-        '<div class="category-title" ' + (cleanUrl === null ? 'data-page-title="' + title + '"' : '') + '>' + title + '</div>',
+        '<div class="category-title" ' + (cleanUrl === null ? 'data-page-title="' + title + '"' : '') + '>' + title +
+        (draft ? '<span class="category-title__badge badge">draft</span>' : '') +
+        '</div>',
         cleanUrl === null ? '' : '</a>',
       ].join(''));
     }
@@ -144,6 +148,7 @@
           return rootpage.p && rootpage.p.toLowerCase() === page.i.toLowerCase() && rootpage.d.indexOf(page.d) !== -1;
         });
         var title = typeof page.mt !== 'undefined' ? page.mt : page.t;
+        var draft = typeof page.dr !== 'undefined' ? page.dr : false;
 
         if (subpages && subpages.length > 0) {
           var pageId = 'page-' + getRandom(100000) + '-' + normalizeId(page.i),
@@ -155,11 +160,11 @@
 
           subpages = sortOnMenuOrders(subpages);
 
-          $item.append(addExpandLink(pageId, title, page.u));
+          $item.append(addExpandLink(pageId, title, page.u, draft));
           $collapse.append(addPages(subpages, data));
           $item.append($collapse);
         } else {
-          $item.append(addNormalLink(title, page.u));
+          $item.append(addNormalLink(title, page.u, draft));
         }
         $list.append($item);
       });
@@ -306,6 +311,7 @@
           var $parents = $($menulink.parents('.collapse').get().reverse()),
               $breadcrumb = $('ul.mx__breadcrumb'),
               href = $menulink.attr('href'),
+              $menulinkTitle = $menulink.data('page-title') || $menulink.text(),
               $parent = $menulink.parent();
 
           $menulink.addClass('active');
@@ -344,7 +350,7 @@
 
           if (!broken) {
             hrefList.push({
-              title: $menulink.text(),
+              title: $menulinkTitle,
               href: href
             });
             var schema = {
@@ -384,7 +390,7 @@
           }
 
           if (!hasBreadCrumbLink($menulink.text())) {
-            $breadcrumb.append('<li><a href="' + href + '" title="' + $menulink.text() + '">' + $menulink.text() + '</a></li>');
+            $breadcrumb.append('<li><a href="' + href + '" title="' + $menulinkTitle + '">' + $menulinkTitle + '</a></li>');
           }
 
           if ($parent.find('> .expand-link').length === 1) {

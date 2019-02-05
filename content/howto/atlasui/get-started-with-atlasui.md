@@ -48,7 +48,8 @@ Your app is ready to be built. In the **Toolbox** in the [page editor](/web-mode
 
 All these resources have been created with Atlas UI. Each building block has an information icon that directs you to the Atlas UI website for the relevant information:
 
-{{% image_container width="200" %}}![Building Block Example](attachments/get-started-with-atlasui/start_building_block.png)
+{{% image_container width="200" %}}
+![Building Block Example](attachments/get-started-with-atlasui/start_building_block.png)
 {{% /image_container %}}
 
 ## 5 Choosing a Page Template

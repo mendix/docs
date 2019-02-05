@@ -7,7 +7,7 @@ tags: ["Atlas", "UI", "UX", "user experience", "Web Modeler"]
 
 ## 1 Introduction
 
-The Mendix Web Modeler is a powerful collaborative tool that lets you build your application in the cloud together with your team. When you log into the Web Modeler for the first time, you get the option to choose a starter app that is fully Atlas-enabled.
+The Web Modeler is a powerful collaborative tool that lets you build your application in the cloud together with your team. When you log into the Web Modeler for the first time, you get the option to choose a starter app that is powered by Atlas UI. For more information on the Web Modeler, see the [Web Modeler Guide](/web-modeler). 
 
 **This how-to will teach you how to do the following:**
 
@@ -32,7 +32,7 @@ For more information about Atlas UI, see [Atlas UI](index).
 
 ## 3 Editing Your App in the Web Modeler
 
-You now have access to your app **Buzz** in the [Developer Portal](/developerportal). From **Buzz**, you can open the [Mendix Web Modeler](/web-modeler/general-wm) clicking **Edit App** in the top-right corner of the screen:
+You now have access to your app **Buzz** in the [Developer Portal](/developerportal). From **Buzz**, you can open the Web Modeler clicking **Edit App** in the top-right corner of the screen:
 
 {{% image_container width="300" %}}
 ![Edit App Button in the Developer POrtal](attachments/get-started-with-atlasui/start_edit_your_app.png)
@@ -48,7 +48,8 @@ Your app is ready to be built. In the **Toolbox** in the [page editor](/web-mode
 
 All these resources have been created with Atlas UI. Each building block has an information icon that directs you to the Atlas UI website for the relevant information:
 
-![](attachments/howto/building-block.png)
+{{% image_container width="300" %}}![Building Block Example](attachments/get-started-with-atlasui/start_building_block.png)
+{{% /image_container %}}
 
 ## 5 Choosing a Page Template
 
@@ -56,7 +57,7 @@ You can choose a page template when you create a new page. For information on ho
 
 For example, **Dashboard Action Tiles**, **Dashboard Charts**, **Dashboard Expenses** are page templates. 
 
-![](attachments/get-started-with-atlasui/start_choose_a_page_template.png)
+![Page Template](attachments/get-started-with-atlasui/start_choose_a_page_template.png)
 
 Once the page is created, you can customize it.
 

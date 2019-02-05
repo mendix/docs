@@ -3,7 +3,7 @@ title: "XPath ends-with"
 parent: "xpath-constraint-functions"
 ---
 
-##1 Introduction
+## 1 Overview
 
 The `ends-with()` function checks whether a string attribute ends with a specific string (case-insensitive) as a sub-string.
 

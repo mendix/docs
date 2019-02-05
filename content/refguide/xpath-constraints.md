@@ -3,7 +3,7 @@ title: "XPath Constraints"
 parent: "xpath"
 ---
 
-## 1 Introduction
+## 1 Overview
 
 A constraint can be added to any Xpath query to filter the data retrieved. It should always take the form of a valid [expression](xpath-expressions). This should consist of one or more variables combined with [operators](xpath-operators), [functions](xpath-constraint-functions), [keywords or system variables](xpath-keywords-and-system-variables).
 

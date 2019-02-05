@@ -3,7 +3,7 @@ title: "XPath max"
 parent: "xpath-query-functions"
 ---
 
-## 1 Introduction
+## 1 Overview
 
 The `max()` function returns the maximum value of its argument.
 

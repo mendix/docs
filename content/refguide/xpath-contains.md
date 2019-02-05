@@ -3,7 +3,7 @@ title: "XPath contains"
 parent: "xpath-constraint-functions"
 ---
 
-## 1 Introduction
+## 1 Overview
 
 The `contains()` function tests whether a string attribute contains a specific string (case-insensitive) as a sub-string.
 

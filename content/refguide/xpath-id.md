@@ -3,7 +3,7 @@ title: "XPath id"
 parent: "xpath-query-functions"
 ---
 
-## 1 Introduction
+## 1 Overview
 
 This function replaces the default XPath query syntax. It retrieves data based upon the unique identification number supplied. Each individual Mendix object generated in a project is automatically provided with an ID.
 

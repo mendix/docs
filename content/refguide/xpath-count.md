@@ -3,7 +3,7 @@ title: "XPath count"
 parent: "xpath-query-functions"
 ---
 
-## 1 Introduction
+## 1 Overview
 
 The `count()` function counts all objects retrieved by the enclosed query and returns the value as an integer.
 

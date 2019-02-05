@@ -3,7 +3,7 @@ title: "XPath avg"
 parent: "xpath-query-functions"
 ---
 
-## 1 Introduction
+## 1 Overview
 
 The `avg()` function returns the average of its argument.
 

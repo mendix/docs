@@ -3,7 +3,7 @@ title: "XPath min"
 parent: "xpath-query-functions"
 ---
 
-## 1 Introduction
+## 1 Overview
 
 The `min()` function returns the minimum value of its argument.
 

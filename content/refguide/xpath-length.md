@@ -3,7 +3,7 @@ title: "XPath length"
 parent: "xpath-constraint-functions"
 ---
 
-## 1 Introduction
+## 1 Overview
 
 The `length()` function returns the length of a string attribute or value.
 

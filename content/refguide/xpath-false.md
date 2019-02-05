@@ -3,7 +3,7 @@ title: "XPath false"
 parent: "xpath-constraint-functions"
 ---
 
-## 1 Introduction
+## 1 Overview
 
 The function `false()` returns the boolean value `false`.
 

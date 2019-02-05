@@ -3,7 +3,7 @@ title: "XPath hours-from-dateTime"
 parent: "xpath-constraint-functions"
 ---
 
-## 1 Introduction
+## 1 Overview
 
 The `hours-from-dateTime()` function extracts the amount of hours from a DateTime attribute so it can be used to compare to a value.
 

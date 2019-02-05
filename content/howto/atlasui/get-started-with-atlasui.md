@@ -24,49 +24,45 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 2 Choosing Your Starter App
 
-In the [Mendix Developer Portal](https://sprintr.home.mendix.com/index.html), click **Create App**. On the **Starter Apps** tab, there are a number of apps marked with **ATLAS UI** that are Atlas UI-ready. You can select one you're interested in to get started.
+In the [Mendix Developer Portal](https://sprintr.home.mendix.com/index.html), click **Create App**. On the **Starter Apps** tab, there are a number of apps marked with **ATLAS UI** that are Atlas UI-based. You can select one to get started.
 
-![](attachments/howto/start_choose_your_starter_app.png)
+![Starter Apps in the Developer POrtal](attachments/get-started-with-atlasui/start_choose_your_starter_app.png)
+
+For more information about Atlas UI, see [Atlas UI](index). 
 
 ## 3 Editing Your App in the Web Modeler
 
-You now have access to your app **Buzz** in the [Developer Portal](https://sprintr.home.mendix.com/index.html). From here, you can open the Mendix Web Modeler by clicking **Edit App** in the top-right of the screen:
+You now have access to your app **Buzz** in the [Developer Portal](/developerportal). From **Buzz**, you can open the [Mendix Web Modeler](/web-modeler/general-wm) clicking **Edit App** in the top-right corner of the screen:
 
-![](attachments/howto/start_edit_your_app.png)
+{{% image_container width="350" %}}
+![Edit App Button in the Developer POrtal](attachments/get-started-with-atlasui/start_edit_your_app.png)
+{{% /image_container %}}
 
-Note that when you click **Edit App** for any app that is Atlas-ready, it will automatically open in the Web Modeler. If you need edit the app in the Desktop Modeler, click the drop-down arrow on the right side of the button and select **Edit in Desktop Modeler**.
+Note that when you click **Edit App** for any Atlas UI app, it will automatically open in the Web Modeler. If you need to edit the app in the Desktop Modeler, click the drop-down menu on the **Edit App** button and select **Edit in Desktop Modeler**.
 
 ## 4 Exploring the Mendix Web Modeler
 
-Your app is ready to be built. In your toolbox, you will find all the building blocks and widgets you need to customize your app. 
+Your app is ready to be built. In the **Toolbox** in the [page editor](/web-modeler/page-editor-wm), you will find building blocks and widgets you can build your pages with. 
 
-![](attachments/howto/start_explore_the_mendix_wm.png)
+![Web Modeler Page Example](attachments/get-started-with-atlasui/start_explore_the_mendix_wm.png)
 
-All of these resources have been created with Atlas UI. Each building block has an information icon that directs you to the Atlas UI website for the relevant information:
+All these resources have been created with Atlas UI. Each building block has an information icon that directs you to the Atlas UI website for the relevant information:
 
 ![](attachments/howto/building-block.png)
 
 ## 5 Choosing a Page Template
 
-Page templates are available by creating a new page, which is a good way to get started. First, click the **Pages** icon in the left navigation bar:
+You can choose a page template when you create a new page. For information on how to create a new page and perform other basic functions, see section [3 Performing Basic Functions](/web-modeler/page-editor-wm#page-editor-basic-functions) in Page Editor in the *Web Modeler Guide*. 
 
-![](attachments/howto/pages.png)
+For example, **Dashboard Action Tiles**, **Dashboard Charts**, **Dashboard Expenses** are page templates. 
 
-Click **NEW PAGE** at the bottom of the **Pages** panel, then choose a suitable page template:
+![](attachments/get-started-with-atlasui/start_choose_a_page_template.png)
 
-![](attachments/howto/start_choose_a_page_template.png)
-
-You can customize this template however you want.
+Once the page is created, you can customize it.
 
 ## 6 Customizing Your Theme
 
-Click the **Theme Customizer** icon in the left navigation bar:
-
-![](attachments/howto/theme-customizer.png)
-
-You can now style your app with custom branding, colors, and typography!
-
-![](attachments/howto/start_customize_your_theme.png)
+The **[Theme Customizer](/web-modeler/theme-customizer-wm)** allows you to customize your app in the Web Modeler. For more information on how you can style your app with it, see [Theme Customizer](/web-modeler/theme-customizer-wm) in the *Web Modeler Guide*. 
 
 ## 7 Read More
 
@@ -74,3 +70,6 @@ You can now style your app with custom branding, colors, and typography!
 * [How to Extend Design Properties to Customize the Web Modeler Experience](extend-design-properties-to-customize-the-web-modeler-experience)
 * [How to Migrate Existing Projects to Atlas UI](migrate-existing-projects-to-atlasui)
 * [How to Share Company Atlas UI Resources](share-company-atlas-ui-resources)
+* [Web Modeler General Info](/web-modeler/general-wm) 
+* [Page Editor in the Web Modeler](/web-modeler/page-editor-wm)
+* [Theme Customizer in the Web Modeler](/web-modeler/theme-customizer-wm)

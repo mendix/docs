@@ -14,15 +14,7 @@ There is a customizable **settings.json** file for the Atlas UI that can be foun
 * Change Atlas UI to Old Mendix UI Framework
 * Extend design properties applied in the Web Modeler
 
-## 2 Changing Atlas UI to Old Mendix UI Framework 
-
-The first line in the **settings.json** file enables the resources, page templates, and building blocks that are integrated with Atlas UI, the Web Modeler, and the Desktop Modeler:
-
- ```"pageTemplates" : "WebModeler"```
-
-If this line is deleted, the old Mendix UI Framework resources will be loaded in the Mendix Web Modeler and the Desktop Modeler. If you do not want to use Atlas UI, it is possible to delete this line.
-
-## 3 Extending Design Properties Applied in the Web Modeler
+## 2 Extending Design Properties Applied in the Web Modeler
 
 Properties in the **Design** section of the Web Modeler allow users to change the position and styling of widgets on a page. Atlas UI contains a design properties file that can be extended with your own custom design properties.
 
@@ -44,6 +36,22 @@ These design properties are used in the **Design** section of the Web Modeler.
 {{% alert type="info" %}}
 
 When you apply a new class in **settings.json** file, make sure that this class exists in the scss file. For example, the detailed Sass information for buttons can be found in this file: */theme/styles/sass/lib/components/_buttons.scss*
+
+{{% /alert %}}
+
+## 3 Changing Atlas UI to Old Mendix UI Framework 
+
+If your project is lower than version 7.9.0, you can change Atlas UI framework to the old Mendix UI framework.
+
+The first line in the **settings.json** file enables the resources, page templates, and building blocks that are integrated with Atlas UI, the Web Modeler, and the Desktop Modeler:
+
+ ```"pageTemplates" : "WebModeler"```
+
+If this line is deleted, the old Mendix UI Framework resources will be loaded in the Mendix Web Modeler and the Desktop Modeler. If you do not want to use Atlas UI, it is possible to delete this line.
+
+{{% alert type="warning" %}}
+
+You can only switch to the old Mendix UI framework following the instructions above if your project has a lower version than 7.9.0.
 
 {{% /alert %}}
 

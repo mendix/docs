@@ -10,6 +10,16 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud V3, and other deploym
 
 ## 2019
 
+### February 6th, 2019
+
+#### Fixes
+
+* We addressed and fixed an issue which caused some Mendix Cloud V4 backups to be duplicated.
+* We fixed a problem on Mendix Cloud V3 which prevented Path-based Access Restrictions from working with multiple TLS certificate authorities. (Ticket 77282)
+* We fixed the problem which prevented users in the Pacific Time Zone from being able to download the current day's logs. (Tickets 78325, 78586, 79119, 79162, 79427)
+* We addressed and solved a problem which meant that some sandboxes could not be resumed after getting stopped.
+* We have fixed the issue that prevented apps with ACS (App Cloud Services) from being deployed using the Web Modeler. (Ticket 76888)
+
 ### January 28th, 2019
 
 #### TLS v1.0 & v1.1 Disabled for Mendix Cloud v4

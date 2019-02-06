@@ -12,7 +12,7 @@ module.exports = {
       to: "/"
     },
     /****************************************************
-     * Developer Portal Guide (mapped, unversioned, temporary until fixed in product)
+     * Developer Portal Guide (temporary until fixed in product, mapped, unversioned) 
      ****************************************************/
     {
       from: "/developerportal/settings/technical-contact",
@@ -99,7 +99,7 @@ module.exports = {
       to: "/developerportal/deploy/cloud-foundry-deploy"
     },
 	/****************************************************
-     * From the App Store (mapped, unversioned, temporary until fixed in product)
+     * From the App Store (temporary until fixed in product, mapped, unversioned)
      ****************************************************/
 	{
 	  from: "/community/app-store/use-app-store-content-in-the-modeler",
@@ -126,7 +126,7 @@ module.exports = {
       to: "/developerportal/deploy/integrate-with-mendix-sso"
     },
 	/****************************************************
-     * Web Modeler Guide (mapped, unversioned, temporary until fixed in product)
+     * Web Modeler Guide (temporary until fixed in product, mapped, unversioned)
      ****************************************************/
 	 {
       from: "/refguide/web-modeler",
@@ -169,7 +169,7 @@ module.exports = {
       to: "/web-modeler/general-wm"
     },
 	/****************************************************
-     * How-to's version 7 (unmapped, temporary)
+     * How-to's version 7 (temporary, unmapped)
      ****************************************************/
     {
       from: "/howtogeneral/bestpractices/ux-best-practices",
@@ -180,7 +180,7 @@ module.exports = {
       to: "/howto/security/best-practices-security"
     },
 	/****************************************************
-     * From Desktop Modeler version 7 (mapped, permanent)
+     * From Desktop Modeler version 7 (permanent, mapped)
      ****************************************************/
 	{
       from: "/refguide/modeler",
@@ -223,7 +223,7 @@ module.exports = {
       to: "/howto/monitoring-troubleshooting/solving-load-and-import-errors"
     },
 	/****************************************************
-     * Reference Guide version 6
+     * From Desktop Modeler version 6 (permanent, most are mapped)
      ****************************************************/
     {
       from: "/refguide6/Reference+Guide+6",
@@ -1890,8 +1890,12 @@ module.exports = {
       from: "/refguide6/XPath+year+from+dateTime",
       to: "/refguide6/xpath-year-from-datetime"
     },	
+    {
+      from: "/howto6/Solving+Load+and+Import+Errors",
+      to: "/howto6/solving-load-and-import-errors"
+    },
 	/****************************************************
-     * APM (unmapped, permanent)
+     * APM (permanent, unmapped)
      ****************************************************/
     // {
     //   from: "~*\\\/apm\\\/use-cases\\\/uc",

@@ -15,6 +15,10 @@ module.exports = {
      * Reference Guide
      ****************************************************/
 	{
+      from: "/refguide/Modeler",
+      to: "/refguide/desktop-modeler-overview"
+    },
+	{
       from: "/refguide/modeler",
       to: "/refguide/desktop-modeler-overview"
     },

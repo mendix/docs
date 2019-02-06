@@ -37,6 +37,10 @@ module.exports = {
       from: "/refguide/web-modeler/app-settings-wm",
       to: "/web-modeler/app-settings-wm"
     },
+	{
+      from: "/howto/web-modeler/syncing-webmodeler-desktop",
+      to: "/web-modeler/general-sync-webmodeler-desktopmodeler"
+    },
 	/****************************************************
      * Web Modeler Guide (temporary, unmapped, unversioned)
      ****************************************************/
@@ -219,9 +223,9 @@ module.exports = {
       to: "/developerportal/deploy/cloud-foundry-deploy"
     },
 	{
-      from: "/howto/web-modeler/syncing-webmodeler-desktop",
+      from: "/refguide7/desktop-webmodeler",
       to: "/web-modeler/general-sync-webmodeler-desktopmodeler"
-    },
+    },	
 	{
       from: "/howto/solving-load-and-import-errors",
       to: "/howto/monitoring-troubleshooting/solving-load-and-import-errors"

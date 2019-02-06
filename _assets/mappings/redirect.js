@@ -262,10 +262,6 @@ module.exports = {
       to: "/releasenotes/desktop-modeler/5.14"
     },
     {
-      from: "/ReleaseNotes/5.14.0",
-      to: "/releasenotes/desktop-modeler/5.14"
-    },
-    {
       from: "/ReleaseNotes/5.13.1",
       to: "/releasenotes/desktop-modeler/5.13"
     },

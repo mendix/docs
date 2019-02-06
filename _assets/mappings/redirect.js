@@ -1,7 +1,7 @@
 module.exports = {
   "redirect": [
     /****************************************************
-     * General Redirects
+     * General Redirects (permanent)
      ****************************************************/
     {
       from: "/docs/Overview",
@@ -11,90 +11,8 @@ module.exports = {
       from: "/docs/",
       to: "/"
     },
-	/****************************************************
-     * Reference Guide
-     ****************************************************/
-	{
-      from: "/refguide/Modeler",
-      to: "/refguide/desktop-modeler-overview"
-    },
-	{
-      from: "/refguide/modeler",
-      to: "/refguide/desktop-modeler-overview"
-    },
-	{
-      from: "/refguide/download-from-team-server-dialog",
-      to: "/refguide/download-from-version-control-dialog"
-    },
-    {
-      from: "/refguide/open-project-dialog",
-      to: "/refguide/open-app-dialog"
-    },
-    {
-      from: "/refguide/upload-to-team-server-dialog",
-      to: "/refguide/upload-to-version-control-dialog"
-    },
-    {
-      from: "/refguide/microflow-expressions",
-      to: "/refguide/expressions"
-    },
-    {
-      from: "/refguide/vertical-split-pane",
-      to: "/refguide/scroll-container"
-    },
-    {
-      from: "/refguide/certificates",
-      to: "/developerportal/deploy/certificates"
-    },
-	/****************************************************
-     * How-to's
-     ****************************************************/
-	{
-      from: "/howto/deploying-a-mendix-app-to-cloud-foundry",
-      to: "/developerportal/deploy/cloud-foundry-deploy"
-    },
-	{
-      from: "/deploy-a-mendix-app-to-cloud-foundry",
-      to: "/developerportal/deploy/cloud-foundry-deploy"
-    },
-	{
-      from: "/howto/start-with-a-blank-app",
-      to: "/web-modeler/general-wm"
-    },
-    {
-      from: "/howto/tutorials/create-a-to-do-app",
-      to: "/web-modeler/general-wm"
-    },
-    {
-      from: "/howto/tutorials/build-a-simple-hrm-app",
-      to: "/web-modeler/general-wm"
-    },
-    {
-      from: "/howto/tutorials/build-an-iot-app",
-      to: "/web-modeler/general-wm"
-    },
-	{
-      from: "/howto/web-modeler/syncing-webmodeler-desktop",
-      to: "/web-modeler/general-sync-webmodeler-desktopmodeler"
-    },
-    {
-      from: "/howtogeneral/bestpractices/ux-best-practices",
-      to: "/howto/ux/ux-best-practices"
-    },
-	{
-      from: "/howtogeneral/bestpractices/best-practices-security-and-improvements-for-mendix-applications",
-      to: "/howto/security/best-practices-security"
-    },
-    {
-      from: "/howto/deploying-a-mendix-app-to-cloud-foundry",
-      to: "/developerportal/deploy/cloud-foundry-deploy"
-    },
-    {
-      from: "/howto/solving-load-and-import-errors",
-      to: "/howto/monitoring-troubleshooting/solving-load-and-import-errors"
-    },
     /****************************************************
-     * Developer Portal Guide
+     * Developer Portal Guide (mapped, unversioned, temporary until fixed in product)
      ****************************************************/
     {
       from: "/developerportal/settings/technical-contact",
@@ -172,8 +90,12 @@ module.exports = {
       from: "/deployment/cloud-foundry/",
       to: "/developerportal/deploy/cloud-foundry-deploy"
     },
+	{
+      from: "/refguide/certificates",
+      to: "/developerportal/deploy/certificates"
+    },
     /****************************************************
-     * Release Notes
+     * Release Notes (necessary?)
      ****************************************************/
     {
       from: "/ReleaseNotes/",
@@ -372,7 +294,7 @@ module.exports = {
       to: "/releasenotes/desktop-modeler/5.9"
     },	
 	/****************************************************
-     * App Store
+     * App Store (mapped, unversioned, temporary until fixed in product)
      ****************************************************/
 	{
       from: "/howto/collaboration-project-management/contribute-to-a-github-repository",
@@ -395,7 +317,7 @@ module.exports = {
       to: "/developerportal/deploy/integrate-with-mendix-sso"
     },
 	/****************************************************
-     * Web Modeler Guide
+     * Web Modeler Guide (mapped, unversioned, temporary until fixed in product)
      ****************************************************/
 	 {
       from: "/refguide/web-modeler",
@@ -422,7 +344,80 @@ module.exports = {
       to: "/web-modeler/app-settings-wm"
     },
 	/****************************************************
-     * APM
+     * From Desktop Modeler version 7 (mapped, permanent)
+     ****************************************************/
+	{
+      from: "/refguide/modeler",
+      to: "/refguide/desktop-modeler-overview"
+    },
+	{
+      from: "/refguide/download-from-team-server-dialog",
+      to: "/refguide/download-from-version-control-dialog"
+    },
+    {
+      from: "/refguide/open-project-dialog",
+      to: "/refguide/open-app-dialog"
+    },
+    {
+      from: "/refguide/upload-to-team-server-dialog",
+      to: "/refguide/upload-to-version-control-dialog"
+    },
+    {
+      from: "/refguide/microflow-expressions",
+      to: "/refguide/expressions"
+    },
+    {
+      from: "/refguide/vertical-split-pane",
+      to: "/refguide/scroll-container"
+    },
+	{
+      from: "/howto/deploying-a-mendix-app-to-cloud-foundry",
+      to: "/developerportal/deploy/cloud-foundry-deploy"
+    },
+	{
+      from: "/howto/web-modeler/syncing-webmodeler-desktop",
+      to: "/web-modeler/general-sync-webmodeler-desktopmodeler"
+    },
+	{
+      from: "/howto/solving-load-and-import-errors",
+      to: "/howto/monitoring-troubleshooting/solving-load-and-import-errors"
+    },
+	/****************************************************
+     * Former Tutorials (unmapped but permanent until verified as temporary)
+     ****************************************************/
+	{
+      from: "/howto/start-with-a-blank-app",
+      to: "/web-modeler/general-wm"
+    },
+    {
+      from: "/howto/tutorials/create-a-to-do-app",
+      to: "/web-modeler/general-wm"
+    },
+    {
+      from: "/howto/tutorials/build-a-simple-hrm-app",
+      to: "/web-modeler/general-wm"
+    },
+    {
+      from: "/howto/tutorials/build-an-iot-app",
+      to: "/web-modeler/general-wm"
+    },
+	/****************************************************
+     * How-to's (unmapped, unversioned, temporary)
+     ****************************************************/
+    {
+      from: "/howtogeneral/bestpractices/ux-best-practices",
+      to: "/howto/ux/ux-best-practices"
+    },
+	{
+      from: "/howtogeneral/bestpractices/best-practices-security-and-improvements-for-mendix-applications",
+      to: "/howto/security/best-practices-security"
+    },
+    {
+      from: "/howto/deploying-a-mendix-app-to-cloud-foundry",
+      to: "/developerportal/deploy/cloud-foundry-deploy"
+    },
+	/****************************************************
+     * APM (unmapped, permanent)
      ****************************************************/
     // {
     //   from: "~*\\\/apm\\\/use-cases\\\/uc",

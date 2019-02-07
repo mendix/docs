@@ -91,6 +91,10 @@ module.exports = {
       from: "/deployment/on-premises",
       to: "/developerportal/deploy/on-premises-design"
     },
+	{
+      from: "/developerportal/community-tools/the-mendix-job-board",
+      to: "/developerportal/community-tools/mendix-job-board"
+    },
 	/****************************************************
      * Developer Portal Guide (temporary, unmapped, unversioned) 
      ****************************************************/
@@ -153,6 +157,10 @@ module.exports = {
       from: "/mendixcloud/Integrate+your+app+with+Mendix+SSO",
       to: "/developerportal/deploy/integrate-with-mendix-sso"
     },
+	{
+      from: "/addons/APM",
+      to: "/apm/"
+    },
 	/****************************************************
      * From the Support Portal (temporary until fixed in product, mapped, unversioned) 
      ****************************************************/
@@ -171,6 +179,14 @@ module.exports = {
 	{
       from: "/developerportal/howto/how-to-link-a-different-app-to-a-node",
       to: "/developerportal/deploy/licensing-apps"
+    },
+	{
+      from: "/developerportal/support/new-app-request-template",
+      to: "/developerportal/support/new-app-node-request-template"
+    },
+	{
+      from: "/developerportal/support/export-a-project-package",
+      to: "/refguide/export-project-package-dialog"
     },
 	/****************************************************
      * PERMANENT REDIRECTS

@@ -40,12 +40,12 @@ Multiplicity can be of the following types:
 * one-to-many – one X object is associated with multiple Y object
 * Many-to-many – multiple X objects are associated with multiple Y objects
 
-Multiplicity shows the owner and the direction of association if the association is of the one-to-many or many-to-many type. In the domain model it is displayed as an arrow pointing the direction. The owner is located at the start of an arrow.
+Multiplicity shows the owner and the direction of association if the association is of the one-to-many or many-to-many type. In the domain model it is displayed as an arrow pointing the direction. The owner is the entity the association starts from, so it is located at the start of the arrow. In one-to-one associations both entities are owners. 
 
 {{% image_container width="400" %}}![](attachments/domain-models-association-properties-wm/association-domainmodel.png)
 {{% /image_container %}}
 
-You can swap the direction of the multiplicity if its type is one-to-many or many-to-many. 
+You can swap the direction of the multiplicity if its type is one-to-many or many-to-many. In this case you will change the owner of association. 
 
 ## 4 Delete Behavior {#delete-behavior}
 

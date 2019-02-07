@@ -160,7 +160,7 @@ First actions to take | Check if there is a sudden increase or a slow increase o
 
 Health Check | |
 :---|:---|
-Description | Each application can define a health check microflow. This microflow is called periodically by the Mendix Runtime to determine if the application is still healthy. This can be used to check for application-specific health indicators.
+Description | Each application can define a health check microflow. This microflow is called every 10 seconds by the Mendix Runtime to determine if the application is still healthy. This can be used to check for application-specific health indicators.
 Example message | Health: the nightly import job took more than an hour to complete!
 Warning Threshold | If the health check microflow returns a non-empty string value, this means the application is not healthy and a WARNING alert is generated.
 Critical Threshold | If the health check microflow itself experiences an error, a CRITICAL alert is generated. This will also happen when no database connection can be established.

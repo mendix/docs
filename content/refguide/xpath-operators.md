@@ -3,6 +3,7 @@ title: "XPath Operators"
 parent: "xpath-constraints"
 ---
 
+## 1 For XPath Query Constraints
 
 The following operators can be used in XPath query constraints, both in the Modeler and in Java code:
 
@@ -16,6 +17,8 @@ The following operators can be used in XPath query constraints, both in the Mode
 | `>=` | Greater than or equal to | `price >= 9.80` | true if price is 9.80, false if price is 9.70 |
 | `or` | Or | `price = 9.80 or price = 9.70` | true if price is 9.80, false if price is 9.60 |
 | `and` | And | `price = 9.80 and amount = 1` | true if price is 9.80 and amount is 1, false if price is 9.70 and amount is 1, false if price is 9.80 and amount is 2, false if price is 9.70 and amount is 2 |
+
+## 2 For Java Code
 
 Additionally, the following operators are supported in Java code only:
 

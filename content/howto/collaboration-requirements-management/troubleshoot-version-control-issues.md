@@ -76,7 +76,7 @@ Restart the Desktop Modeler.
 
 You can now commit your app project.
 
-### 2.7 Resolving Conflicts on the 'svn:ignore' Property
+### 2.7 Resolving Conflicts on the 'svn:ignore' Property {#svn-ignore}
 
 When merging or updating branches a conflict is sometimes reported on the project *folder*, rather than an individual file. This usually means that there is a conflict on the `svn:ignore` property.
 

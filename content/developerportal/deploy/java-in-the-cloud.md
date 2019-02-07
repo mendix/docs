@@ -39,7 +39,7 @@ Most applications should be able to function fully with these restrictions. Howe
 
 If your application needs to access certain PropertyPermissions from Java actions, you can use the [Mendix Support Portal](https://support.mendix.com/) to send us a list of required properties. We will then make a security exception.
 
-## 4 Emulating Cloud Security
+## 4 Emulating Cloud Security {#emulate-cloud-security}
 
 {{% alert type="warning" %}}
 The ability to emulate cloud security was removed from Mendix versions 7.21 and above: see [Release Notes for Desktop Modeler Version 7.21](/releasenotes/desktop-modeler/7.21).

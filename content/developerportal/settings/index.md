@@ -52,11 +52,11 @@ For more information, see [Node Permissions](/developerportal/deploy/node-permis
 
 The **API Keys** page lists the existing API keys and lets you create new keys by clicking **Create API key**.
 
-For more information, see [API Keys](/developerportal/settings/api-key).
+For more information, see [How to Manage App API Keys](/developerportal/settings/api-key).
 
 ## 5 Main Documents in This Category
 
 * [Manage General App Settings](general-settings)
 * [Leave & Delete an App](leave-delete-app)
 * [Manage Deep Links](manage-deeplinks)
-* [Manage API Keys](api-key)
+* [Manage App API Keys](api-key)

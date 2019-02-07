@@ -85,7 +85,7 @@ In our example, the new page template has been added to the dashboard category. 
 
 ![](attachments/howto/creating_open_pt.png)
 
-The **UI_Resources** module has been sorted with folders that can be renamed and used as categories for page templates and building blocks. The sorting is done using numbers in front of the name, which can be altered to change the order in which they appear. Page templates and building blocks can be placed inside the same folder to reuse the same category names.
+The **UI_Resources** module has been organized with folders that can be renamed and used as categories for page templates and building blocks. The sorting is done using numbers in front of the name, which can be altered to change the order in which they appear. Page templates and building blocks can be placed inside the same folder to reuse the same category names.
 
 Adding an underscore to the folder name in the Desktop Modeler (for example, **_Layouts**) ensures that the folder doesn’t get added to the categories for page templates or building blocks.
 

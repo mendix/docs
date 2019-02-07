@@ -48,7 +48,7 @@ You can fix the delete behavior errors in one of following ways:
 
 For more information on delete behavior, see section [4 Delete Behavior](domain-models-association-properties-wm##delete-behavior) in *Association Properties in the Web Modeler*.
 
-## 3 Related Content
+## 3 Read More
 
 * [Page Editor Consistency Errors in the Web Modeler](consistency-errors-pages-wm)
 * [Navigation Consistency Errors in the Web Modeler](consistency-errors-navigation-wm)

@@ -16,6 +16,25 @@ If you're using the advanced flow, you can get the latest version of the Hybrid 
 
 ## 2019
 
+### January 28th, 2019 (4.0.5 / 4.0.0)
+
+We fixed an issue on iOS where the app did not fill the entire screen after the keyboard was hidden.
+
+### January 23rd, 2019 (4.0.4 / 4.0.0)
+
+We fixed a mistake in the Google Services *.plist* file.
+
+### January 7th, 2019 (4.0.3 / 4.0.0)
+
+* We updated **Cordova Android** to version 7.1.3.
+* We made sure that the Google Play Services files are only copied over when push notifications are enabled.
+* We fixed the location of the *google-services.json* file.
+* We removed some superfluous logic from the webpack configuration (used for creating a hybrid app package).
+
+### January 7th, 2019 (4.0.2 / 4.0.0)
+
+The *build-extras.gradle* file was missing in the published npm package. We added it.
+
 ### January 6th, 2019 (4.0.0 / 4.0.0)
 
 {{% alert type="warning" %}}

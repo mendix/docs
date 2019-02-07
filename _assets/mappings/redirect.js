@@ -99,6 +99,10 @@ module.exports = {
      * Developer Portal Guide (temporary, unmapped, unversioned) 
      ****************************************************/
     {
+      from: "/howtogeneral/mendixcloud/trends",
+      to: "/developerportal/operate/trends"
+    },
+    {
       from: "/developerportal/operate/mendix-cloud-status",
       to: "/developerportal/deploy/mendix-cloud-status"
     },

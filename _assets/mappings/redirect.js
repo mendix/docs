@@ -250,6 +250,10 @@ module.exports = {
       from: "/howto/solving-load-and-import-errors",
       to: "/howto/monitoring-troubleshooting/solving-load-and-import-errors"
     },
+	{
+      from: "/refguide7/drop-down-widget",
+      to: "/refguide7/drop_down"
+    },
 	/****************************************************
      * From Desktop Modeler version 6 (permanent, most are mapped, versioned)
      ****************************************************/

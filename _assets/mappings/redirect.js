@@ -254,6 +254,14 @@ module.exports = {
       from: "/refguide7/drop-down-widget",
       to: "/refguide/drop_down"
     },
+	{
+      from: "/refguide7/horizontal-split-pane",
+      to: "/refguide/scroll-container"
+    },
+	{
+      from: "/refguide7/vertical-split-pane",
+      to: "refguide/scroll-container"
+    },
 	/****************************************************
      * From Desktop Modeler version 6 (permanent, most are mapped, versioned)
      ****************************************************/

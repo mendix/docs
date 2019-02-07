@@ -159,7 +159,7 @@ module.exports = {
     },
 	{
       from: "/addons/APM",
-      to: "/apm"
+      to: "/apm/"
     },
 	/****************************************************
      * From the Support Portal (temporary until fixed in product, mapped, unversioned) 

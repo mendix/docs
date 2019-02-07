@@ -230,10 +230,6 @@ module.exports = {
       from: "/refguide/microflow-expressions",
       to: "/refguide/expressions"
     },
-    {
-      from: "/refguide/vertical-split-pane",
-      to: "/refguide/scroll-container"
-    },
 	{
       from: "/howto/deploying-a-mendix-app-to-cloud-foundry",
       to: "/developerportal/deploy/cloud-foundry-deploy"
@@ -260,7 +256,7 @@ module.exports = {
     },
 	{
       from: "/refguide7/vertical-split-pane",
-      to: "refguide/scroll-container"
+      to: "/refguide/scroll-container"
     },
 	/****************************************************
      * From Desktop Modeler version 6 (permanent, most are mapped, versioned)

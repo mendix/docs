@@ -252,7 +252,7 @@ module.exports = {
     },
 	{
       from: "/refguide7/drop-down-widget",
-      to: "/refguide7/drop_down"
+      to: "/refguide/drop_down"
     },
 	/****************************************************
      * From Desktop Modeler version 6 (permanent, most are mapped, versioned)

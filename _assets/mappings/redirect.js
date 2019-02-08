@@ -206,7 +206,13 @@ module.exports = {
 	/****************************************************
      * From Desktop Modeler version 7 (permanent, mapped, versioned)
      ****************************************************/
-	{
+  /** Removed 8 feb 2019 - cannot be found in the Desktop Modeler code
+  {
+      from: "/howto/deploying-a-mendix-app-to-cloud-foundry",
+      to: "/developerportal/deploy/cloud-foundry-deploy"
+    },
+    */
+  {
       from: "/refguide/modeler",
       to: "/refguide/desktop-modeler-overview"
     },
@@ -218,21 +224,17 @@ module.exports = {
       from: "/refguide/download-from-team-server-dialog",
       to: "/refguide/download-from-version-control-dialog"
     },
-    {
+  {
       from: "/refguide/open-project-dialog",
       to: "/refguide/open-app-dialog"
     },
-    {
+  {
       from: "/refguide/upload-to-team-server-dialog",
       to: "/refguide/upload-to-version-control-dialog"
     },
-    {
+  {
       from: "/refguide/microflow-expressions",
       to: "/refguide/expressions"
-    },
-	{
-      from: "/howto/deploying-a-mendix-app-to-cloud-foundry",
-      to: "/developerportal/deploy/cloud-foundry-deploy"
     },
 	{
       from: "/deployment/cloud-foundry/",

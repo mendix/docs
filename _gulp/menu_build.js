@@ -79,6 +79,14 @@ const filterAndBindSpace = (files) =>
     obj.filename = `${spaceKey}.json`;
     obj.files = _.filter(files, (file) => file.space === obj.space);
     return obj;
+  }).filter(space => {
+    if (typeof space.draft === 'undefined' || PUBLISH_DRAFTS) {
+      return true;
+    }
+    if (space.draft && !PUBLISH_DRAFTS) {
+      return false;
+    }
+    return true;
   });
 
 const filterDrafts = (files) =>

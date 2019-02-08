@@ -414,6 +414,9 @@
       $.get('/json/spaces.json', function( data ) {
         window.__mxMenuItems = data;
         $menus.each(function () {
+          if ($(this).hasClass('menu--draft') && !$('body').hasClass('test')) {
+            return true;
+          }
           var source = $(this).data("source");
           if (source) {
             var filtered = data.filter(function (s) { return s.filename === source });

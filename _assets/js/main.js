@@ -410,8 +410,11 @@
     }
 
     var $menus = $('.menu');
+    var isTest = $('body').hasClass('test');
+    var lastBuild = $('meta[property="og:updated_time"]').attr('content');
+    var cacheBust = lastBuild ? '?q=' + +(new Date(lastBuild)) : '';
     if ($menus.length) {
-      $.get('/json/spaces.json', function( data ) {
+      $.get('/json/spaces.json' + (isTest ? cacheBust : ''), function( data ) {
         window.__mxMenuItems = data;
         $menus.each(function () {
           if ($(this).hasClass('menu--draft') && !$('body').hasClass('test')) {

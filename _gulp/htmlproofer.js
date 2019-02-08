@@ -42,6 +42,9 @@ const parseHtmlFile = file => new Promise((resolve, reject) => {
   if (file.content) {
     const $ = cheerio.load(file.content);
 
+    const draft = $('head').data('draft');
+    file.draft = !!draft;
+
     // remove obsolete stuff
     $('pre, code').remove();
 
@@ -224,7 +227,11 @@ const validateFiles = files => Promise.resolve(_.map(files, file => {
         }
       }
     } else if (!isFile(fullPath)) {
-      file[errorKey].push(`${red('[LINK]   ')} ${cyan(link)} does not exist. Path: ${cyan(linkPath)} (.html | index.html) is unresolved`);
+      if (file.draft) {
+        file[warningKey].push(`${yellow('[DRAFT]')} ${red('[LINK]   ')} ${cyan(link)} does not exist. Path: ${cyan(linkPath)} (.html | index.html) is unresolved`);
+      } else {
+        file[errorKey].push(`${red('[LINK]   ')} ${cyan(link)} does not exist. Path: ${cyan(linkPath)} (.html | index.html) is unresolved`);
+      }
       verbose && console.log(`err ${file.path}`, link);
     }
   });
@@ -237,8 +244,13 @@ const validateFiles = files => Promise.resolve(_.map(files, file => {
       return;
     }
     if (!isFile(fullPath)) {
-      file[errorKey].push(`${red('[IMAGE]  ')} ${cyan(image)} does not exist. Path: ${cyan(fullPath)} is unresolved`);
-      verbose && console.log(`err image ${file.path}`, image);
+      if (file.draft) {
+        file[warningKey].push(`${yellow('[DRAFT]')} ${red('[IMAGE]  ')} ${cyan(image)} does not exist. Path: ${cyan(fullPath)} is unresolved`);
+        verbose && console.log(`err image ${file.path}`, image);
+      } else {
+        file[errorKey].push(`${red('[IMAGE]  ')} ${cyan(image)} does not exist. Path: ${cyan(fullPath)} is unresolved`);
+        verbose && console.log(`err image ${file.path}`, image);
+      }
     }
   });
 
@@ -250,8 +262,13 @@ const validateFiles = files => Promise.resolve(_.map(files, file => {
       return;
     }
     if (!isFile(fullPath)) {
-      file[errorKey].push(`${red('[VIDEO]  ')} ${cyan(video)} does not exist. Path: ${cyan(fullPath)} is unresolved`);
-      verbose && console.log(`err image ${file.path}`, video);
+      if (file.draft) {
+        file[warningKey].push(`${yellow('[DRAFT]')} ${red('[VIDEO]  ')} ${cyan(video)} does not exist. Path: ${cyan(fullPath)} is unresolved`);
+        verbose && console.log(`err image ${file.path}`, video);
+      } else {
+        file[errorKey].push(`${red('[VIDEO]  ')} ${cyan(video)} does not exist. Path: ${cyan(fullPath)} is unresolved`);
+        verbose && console.log(`err image ${file.path}`, video);
+      }
     }
   });
 
@@ -395,7 +412,7 @@ const checkHTMLFiles = (opts) => getFiles(SOURCEPATH)
     console.log('\n======= Errors: ' + errors.length);
     if (errors.length > 0) {
       _.forEach(errors, file => {
-        console.log(`\nFile: ${cyan(file.basePath)} has the following errors:\n`);
+        console.log(`\nFile: ${file.draft ? yellow('DRAFT ') : ''}${cyan(file.basePath)} has the following errors:\n`);
         _.forEach(file.errors, error => {
           console.log(red('   + ') + error);
         })
@@ -404,7 +421,7 @@ const checkHTMLFiles = (opts) => getFiles(SOURCEPATH)
     console.log('\n======= Warnings: ' + warnings.length);
     if (warnings.length > 0) {
       _.forEach(warnings, file => {
-        console.log(`\nFile: ${cyan(file.basePath)} has the following warnings:\n`);
+        console.log(`\nFile: ${file.draft ? yellow('DRAFT ') : ''}${cyan(file.basePath)} has the following warnings:\n`);
         _.forEach(file.warnings, error => {
           console.log(yellow('   + ') + error);
         })

@@ -11,13 +11,17 @@ const log = commandLineHelpers.log('hugo');
 let reload_timer;
 let TIMEOUT = 500;
 
-const spawnHugo = (watch, cb, bsync) => {
+const spawnHugo = (opts = { watch: false, drafts: false }, cb, bsync) => {
+  const {
+    watch, drafts
+  } = opts;
   const doneStr = 'total in';
   const syncStr = 'Syncing';
   const child = spawn('hugo', [
     '-d',
     '_site',
-    (watch ? '-w' : '')
+    (watch ? '-w' : ''),
+    (drafts ? '--buildDrafts' : '')
   ], { cwd: process.cwd()});
 
   child.stdout.setEncoding('utf8');
@@ -70,8 +74,11 @@ const spawnHugo = (watch, cb, bsync) => {
   });
 };
 
-const build = (cb) => {
-  spawnHugo(false, (code) => {
+const build = (drafts = false, cb) => {
+  spawnHugo({
+    watch: false,
+    drafts
+  }, (code) => {
     if (code !== 0) {
       gulpErr('hugo:build', `Hugo exit code is ${code}, check your Hugo setup`);
       return process.exit(2);

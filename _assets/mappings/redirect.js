@@ -142,10 +142,6 @@ module.exports = {
 	  to: "/developerportal/app-store/use-app-store-content-in-the-modeler"
     },
 	{
-      from: "/howto/collaboration-project-management/contribute-to-a-github-repository",
-      to: "/howto/collaboration-requirements-management/contribute-to-a-github-repository"
-    },
-	{
       from: "/mendixcloud/java-in-the-cloud",
       to: "/developerportal/deploy/java-in-the-cloud"
     },
@@ -155,6 +151,10 @@ module.exports = {
     },
 	{
       from: "/howto50/Contributing+to+a+GitHub+repository",
+      to: "/howto/collaboration-requirements-management/contribute-to-a-github-repository"
+    },
+	{
+      from: "/howto/collaboration-project-management/contribute-to-a-github-repository",
       to: "/howto/collaboration-requirements-management/contribute-to-a-github-repository"
     },
 	{

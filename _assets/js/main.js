@@ -194,9 +194,10 @@
         $cat.append(addNormalLink(cat, catUrl));
       } else if (getPages.length > 0) {
         var catId = spaceID + '-cat-' + id,
-            $collapse = $('<div class="collapse" id="'+ catId + '" />');
+            $collapse = $('<div class="collapse" id="'+ catId + '" />'),
+            isDraft = catPage.length === 1 ? (typeof catPage[0].dr !== 'undefined' ? catPage[0].dr : false) : false;
 
-        $cat.append(addExpandLink(catId, cat, catPage.length === 1 ? catPage[0].u : null));
+        $cat.append(addExpandLink(catId, cat, catPage.length === 1 ? catPage[0].u : null, isDraft));
         $collapse.append(addPages(getPages, data));
         $cat.append($collapse);
       } else {
@@ -227,12 +228,13 @@
         var space = $source.replace('/json/', '').replace('.json', '');
         if (mainPage.length === 1) {
           var main = mainPage[0];
+          var isDraft = typeof main.dr !== 'undefined' ? main.dr : false;
           var mainID = 'space-' + normalizeId(main.t);
           var $space = $('<div class="space" />');
           var $collapse = $('<div class="collapse" id="' + mainID + '" />');
           var title = typeof main.mt !== 'undefined' ? main.mt : main.t;
           $menu.append($space);
-          var $expandLink = addExpandLink(mainID, title, main.u);
+          var $expandLink = addExpandLink(mainID, title, main.u, isDraft);
           $space.append($expandLink);
           $space.append($collapse);
           if (hasPathInData(data, main)) {
@@ -326,13 +328,14 @@
             $parentlink.attr('aria-expanded', 'true');
 
             if ($title && $title.length) {
+              var dataTitle = $title.data('page-title') || $title.text();
               found = true;
               $title.addClass('sub-active');
-              if (!hasBreadCrumbLink($title.text())) {
+              if (!hasBreadCrumbLink(dataTitle)) {
                 if ($title.attr('href')) {
-                  $breadcrumb.append('<li><a href="' + $title.attr('href') + '" title="' + $title.text() + '">' + $title.text() + '</a></li>');
+                  $breadcrumb.append('<li><a href="' + $title.attr('href') + '" title="' + dataTitle + '">' + dataTitle + '</a></li>');
                 } else {
-                  $breadcrumb.append('<li>' + $title.text() + '</li>');
+                  $breadcrumb.append('<li>' + dataTitle + '</li>');
                 }
               }
             }

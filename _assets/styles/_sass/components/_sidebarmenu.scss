@@ -99,8 +99,6 @@ $active-color: $color-black;
     font-size: 14px;
     font-weight: 400;
 
-
-
     .category-title {
       color: $color-darker-grey;
       text-overflow: ellipsis;
@@ -211,6 +209,10 @@ $active-color: $color-black;
         }
       }
 
+    }
+
+    @include modifier('draft') {
+      display: none;
     }
   }
 }

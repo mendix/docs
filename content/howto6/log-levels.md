@@ -5,9 +5,9 @@ tags: []
 ---
 Each application has a log and log-messages to monitor the health of the running of the application. Log levels are used to distinguish the log messages and to highlight the highest priority ones so that they can receive the immediate intervention they require. This How-To will therefore teach you how to configure the log levels for the various occurrence of logging within your application. You will start with the basics around logging and its uses. Moving onto the practices around configuring the log levels.
 
-## 1\. Logging the basics
+## 1\. Logging the Basics
 
-### 1.1 Log message
+### 1.1 Log Message
 
 Log messages are a note that appears in the log of your Mendix application filled with an abundance of contextual information, such as:
 
@@ -38,7 +38,7 @@ The template is the structure of the log’s message, and can be composed of par
 The stack trace is a list of method calls from the point when the application was started to the point where the exception was thrown.
 In the modeler, log messages that include a stack trace are marked with a paperclip icon () and double-clicking them shows the stack trace.
 
-### 1.2 The different levels
+### 1.2 The Different Levels
 
 The log level defines the severity of the log message. In the modeler, this is represented by different colors and an icon. Current log levels used by Mendix are: 
 
@@ -51,11 +51,11 @@ The log level defines the severity of the log message. In the modeler, this is r
 | Error | ![](attachments/18448575/18580037.png) | Red | Due to a more serious problem, the application has not been able to perform some function. |
 | Critical | ![](attachments/18448575/18580036.png) | White (text), red (background) | A serious error, indicating that the application itself may be unable to continue running. |
 
-## 2\. Setting the log levels
+## 2\. Setting the Log Levels
 
 Within this part of the how to you will learn how to configure the log levels of the logging messages produced by the system. The different levels highlighted above in section 1.2, can be applied to custom logging and to the predefined logging produced by the Mendix Business Modeller. This section will define how to configure both the log levels in custom logging and the predefined logging created by the Modeller.
 
-### 2.1 Advanced features of the console
+### 2.1 Advanced Features of the Console
 
 ![](attachments/18448575/18580030.png)
 
@@ -63,7 +63,7 @@ Within this part of the how to you will learn how to configure the log levels of
 2.  Click ‘Advanced’ to open the drop down list of advanced options
 3.  On the list of options click ‘Set log levels…’
 
-### 2.2 Configuring log levels
+### 2.2 Configuring Log Levels
 
 You can now select the level that which a log node will log messages as.
 
@@ -73,7 +73,7 @@ You can now select the level that which a log node will log messages as.
 2.  Click on the drop down list, in the log level column
 3.  From the drop down list select the correct level
 
-### 2.3 Configuring custom log levels
+### 2.3 Configuring Custom Log Levels
 
 You can also set the level of log messages in ones that you have created via a microflow.
 
@@ -83,7 +83,7 @@ You can also set the level of log messages in ones that you have created via a m
 2.  Double click on the ‘log message activity’
 3.  From the drop list, in the log level row select the correct level 
 
-## 3\. Related content
+## 3\. Related Content
 
 *   [Finding the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
 *   [Clearing Warning Messages in Mendix](clear-warning-messages)

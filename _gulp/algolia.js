@@ -184,6 +184,11 @@ const parseHtmlFile = file => {
         file.meta.time_stamp = null;
       }
 
+      $('article').find('.todo').each((i, el) => {
+        var $el = $(el);
+        $el.remove();
+      })
+
       $('article').find('p,li').each((i, el) => {
         var $el = $(el);
         if (!!$el.text().length && file.space.space) {

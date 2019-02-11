@@ -7,4 +7,4 @@ A Mendix hybrid application is a hybrid of a web and native app. If you want to 
 
 Once you are ready to distribute your app to test users or publish it on an app store, you need to package your app into a native app. PhoneGap offers tooling to do this yourself, but you will need to install and configure several pieces of software. Furthermore, when building iOS apps, PhoneGap requires you to use a Mac. The easier alternative is to let PhoneGap build the packaging for you.  
 
-We have made this second option even easier for users deploying their apps to the Mendix Cloud. Once you have deployed your app to the Mendix Cloud, visit the **Publish** tab in the [Development Portal](https://sprintr.home.mendix.com/). There, choose **Publish for Mobile App Stores**.
+We have made this second option even easier for users deploying their apps to the Mendix Cloud. For instructions on how to do this, see the [Publish for Mobile App Stores](/developerportal/deploy/mobileapp#publish) section in *Mobile App*.

@@ -44,6 +44,14 @@ $block: 'mx';
       max-width: 80%;
     }
 
+    @include modifier('wide') {
+      @include mq("md") {
+        float: left;
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+
     @include element('header') {
       @include element('head') {
         margin: 0;

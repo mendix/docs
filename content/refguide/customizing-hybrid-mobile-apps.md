@@ -3,7 +3,7 @@ title: "Customizing Hybrid Mobile Apps"
 category: "Mobile Development"
 ---
 
-The Mendix mobile app and generated hybrid mobile apps contain their own `index.html` files. These index files cannot be edited. For example, you cannot add CSS files to them. However, you can alter the index files indirectly through a file called `components.json`. There, you can add CSS and JavaScript files. The initial contents of `components.json` are shown below.
+The Mendix mobile app and generated hybrid mobile apps contain their own `index.html` files. This index file cannot be edited. For example, you cannot add CSS files to them. However, you can alter the index files indirectly through a file called `components.json`. There, you can add CSS and JavaScript files. The initial contents of `components.json` are shown below.
 
 **Standard 'components.json'**
 

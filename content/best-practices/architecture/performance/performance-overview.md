@@ -207,7 +207,7 @@ This table presents the recommended tests for various scenarios:
 | **Number of Concurrent Users** | \< 20 | \< 100 | \< 500 | \< 5k | 200k or more | ? |  ? | ? |
 | **Number of Service Calls (per Second)** | \< 5 | \< 10 | \< 50 | \< 500 | 2k or more | ? | ? | ? |
 
-{{% todo %}}[**FINISH ADDING TABLE INFO**]{{% /todo %}}
+**TO DO: FINISH ADDING TABLE INFO**
 
 ### 4.2 Testing & Tuning
 
@@ -272,7 +272,7 @@ Test automation makes a lot of sense for large apps with a lot of functionality 
 
 Professional performance testing can also be automated (for example, via JMeter). Such automation provides a nightly view on the performance of key parts of the functionality as they evolve during development; the areas we know from manual performance testing are critical
 
-{{% todo %}}[**HANGING CLAUSE AFTER SEMI-COLON IN LAST SENTENCE; PLEASE COMPLETE SENTENCE OR DELETE**]{{% /todo %}}
+**TO DO: HANGING CLAUSE AFTER SEMI-COLON IN LAST SENTENCE; PLEASE COMPLETE SENTENCE OR DELETE**
 
 However, for critical systems that need regular performance testing and tuning, automated testing will just shorten the performance test cycle. Manually-run performance, stress, and load tests are still required, and the tester should be a technical expert that can read the metrics data from the tests. 
 

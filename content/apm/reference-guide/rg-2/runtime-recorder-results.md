@@ -12,5 +12,9 @@ The tree view provides an overview of the durations of microflows and actions.
 ![](attachments/Performance_runtime_recording_ActionsTree.png)
 
 The **Actions** tab will display actions within the action.
-
+ 
 ![](attachments/Performance_runtime_recording_ActionsActions.png)
+ 
+When showing details of an action you can see SQL statements if the action uses SQL.
+ 
+![](attachments/Performance_runtime_recording_Action.png)

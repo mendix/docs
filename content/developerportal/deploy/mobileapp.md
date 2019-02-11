@@ -86,7 +86,7 @@ If you do not upload any images, the default Mendix-branded images that are show
 
 Take note of the required resolutions and file types for the image files, as the system will not allow you to upload images with different resolutions (because your app packages will not function properly).
 
-## 4 Publish for Mobile App Stores
+## 4 Publish for Mobile App Stores {#publish}
 
 On the right side of the screen, you can choose which operating system you want to publish (iOS or Android).
 
@@ -100,8 +100,6 @@ There are two ways that the device can build the packages:
 
 * **Build it in the cloud**
 * **Do it yourself**
-
-For more information, see [How to Publish a Mendix Hybrid Mobile App in App Stores](/howto/mobile/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores).
 
 ### 4.1 Building It in the Cloud
 

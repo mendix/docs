@@ -129,6 +129,12 @@ Stopped Manually | The application has been stopped manually.
 Technical Contact Changed | The Technical Contact has been changed.
 Transportation | A new deployment package has been transported to an environment.
 
+{{% alert type="info" %}}
+Operations carried out by the Mendix Operations Desk are not currently logged on the activity log.
+
+These are activities which are performed on a customer's behalf only with written approval through a support ticket. 
+{{% /alert %}}
+
 ## 3 Custom Domain
 
 In this tab you can manage your custom domain certificates on an application level.

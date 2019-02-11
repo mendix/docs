@@ -7,7 +7,7 @@ tags: ["mobile", "app store", "phonegap"]
 
 ## 1 Introduction
 
-Once you have finished developing a Mendix mobile app, you will want to make it available as an app for mobile platforms such as Apple's iOS and Google Android. We make it possible to produce a platform-specific native app in the **Publish** section of the Mendix Developer Portal.
+Once you have finished developing a Mendix mobile application, you will want to make it available as an app for mobile platforms such as Apple's iOS and Google Android. We make it possible to produce a platform-specific native app in the **Publish** section of the Developer Portal.
 
 The hybrid mobile app publishing process is based on Adobe PhoneGap. Manually using Adobe PhoneGap is very tedious, because you need both a Microsoft Windows machine and an Apple Mac machine, and they need to be set up with the correctly configured development environments. However, we have integrated the [Adobe PhoneGap Build](https://build.phonegap.com/) service into Mendix to eliminate this burden and to provide support for automatically building the required hybrid mobile packages. Instead of worrying about technical details, you can focus on the essentials: rapidly developing an app to support your business processes.
 
@@ -37,7 +37,7 @@ Before starting, make sure you have a Mendix app with mobile support enabled run
 
 To start the packaging process, follow these steps:
 
-1. Open the Mendix Developer Portal from the [launchpad](https://home.mendix.com/home/).
+1. Open the **Dev Portal** from the [launchpad](https://home.mendix.com/home/).
 2. Go to the project of the Mendix app that you want to publish.
 3. Go to the **Publish** tab of the project.
 4. Click **Publish for Mobile App Stores**. You will be shown the **Publish App for Mobile App Stores** page, where you need to set up some options for your hybrid mobile app.
@@ -58,7 +58,7 @@ To start the packaging process, follow these steps:
 11. Start the actual hybrid mobile app package building process by clicking **Start PhoneGap Build job**, which will initiate the packaging process.
 12. The first time you start this process, you will need to authorize the Mendix Developer Portal to act on your behalf with the Adobe PhoneGap Build service. You will be presented with a pop-up window to start the redirect to Adobe PhoneGap. To build for the authorization, click **Authorize use of Adobe PhoneGap Build**, and you will be temporarily redirected to the website of Adobe PhoneGap Build.
 13. On the Adobe PhoneGap Build service page, you will be asked whether you want to authorize the **Mendix Developer Portal** to act on your behalf. Choose **Yes** to allow the start of building jobs using your account. You will then be redirected back to the Mendix Developer Portal.
-    * If you choose "No", you will be redirected back to the Mendix developer Portal and you will not be able to publish your app
+    * If you choose **No**, you will be redirected back to the Developer Portal and you will not be able to publish your app
     * If you do not have a session with Adobe PhoneGap Build in your current browser, before being presented with the authorization request, you will be asked to log in
 
 After you have been redirected back to the Mendix Developer Portal, the packaging process will continue and you will have to set up the proper signing keys for your app.

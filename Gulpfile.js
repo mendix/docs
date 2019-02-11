@@ -26,8 +26,10 @@ const browserSync        = require('browser-sync').create();
 const del                = require('del');
 const runSequence        = require('run-sequence');
 
+const PUBLISH_DRAFTS = typeof process.env.HUGO_ENV !== 'undefined' ? process.env.HUGO_ENV === 'test' : false;
+
 /* DONT EDIT BELOW */
-gutil.log(`Gulp started at ${cyan(CONFIG.BUILDDATE)}`);
+gutil.log(`Gulp started at ${cyan(CONFIG.BUILDDATE)}, drafts ${cyan(PUBLISH_DRAFTS ? 'enabled' : 'disabled')}`);
 
 /*************************************************
   CLEAN
@@ -80,6 +82,7 @@ const writeMenu = (exitOnError) => {
         }
       })
       .catch((e) => {
+        console.log(e);
         return process.exit(2);
       })
   }
@@ -160,7 +163,7 @@ gulp.task('dev:sass', `Sass build (dev task, sourcemaps included)`, ['clean:css'
   HUGO
 **************************************************/
 gulp.task('build:hugo', `Build`, [], done => {
-  hugo.build(done);
+  hugo.build(PUBLISH_DRAFTS, done);
 });
 
 /*************************************************
@@ -187,7 +190,10 @@ gulp.task('build', `BUILD. Used for production`, done => {
 gulp.task('dev', ``, ['dev:sass', 'build:js', 'write:menu', 'build:hugo'], done => {
   server.spawn(CONFIG.CURRENTFOLDER);
   jsonServer.spawn(CONFIG.CURRENTFOLDER);
-  hugo.spawn(true, false, browserSync);
+  hugo.spawn({
+    watch: true,
+    drafts: PUBLISH_DRAFTS
+  }, false, browserSync);
   browserSync.init({
     port: CONFIG.PORT,
     proxy: 'localhost:8888',

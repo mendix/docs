@@ -7,7 +7,7 @@ This section describes how to use the microflow debugger. In Mendix 4.3 we intro
 
 ## Instructions
 
-There are three dockable windows associated with debugging: Debugger, Breakpoints and Variables. You can find these windows under 'View -> 'Debug windows' in the menu.
+There are three dockable windows associated with debugging: Debugger, Breakpoints and Variables. You can find these windows under **View** > **Debug windows** in the menu.
 
 ### Debugging a Locally Running Application
 

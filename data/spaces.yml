@@ -152,7 +152,7 @@ refguide:
   mendix_version: 7
   menu_categories:
     - "General"
-    - "Desktop Modeler"    
+    - "Desktop Modeler"
     - "Team Server"
     - "Mendix Runtime"
     - "Java Programming"
@@ -198,4 +198,11 @@ web-modeler:
     - "Checks in the Web Modeler"
     - "Consistency Errors in the Web Modeler"
     - "Theme Customizer in the Web Modeler"
-    - "App Settings in the Web Modeler"  
+    - "App Settings in the Web Modeler"
+best-practices:
+  space: "Best Practices"
+  priority: false
+  draft: true
+  menu_categories:
+    - "Category1"
+    - "Empty Category"

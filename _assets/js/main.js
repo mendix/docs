@@ -113,24 +113,28 @@
       return arr.sort();
     }
 
-    function addNormalLink(title, url) {
+    function addNormalLink(title, url, draft) {
       var cleanUrl = url === null ? null : url.replace(/[\(\)]/g, '');
       return $([
         '<i class="link-icon link-icon-link"></i>',
         cleanUrl === null ? '' : '<a href="' + cleanUrl + '" data-page-title="' + title + '" title="' + title + '">',
-        '<div class="category-title" ' + (cleanUrl === null ? 'data-page-title="' + title + '"' : '') + '>' + title + '</div>',
+        '<div class="category-title" ' + (cleanUrl === null ? 'data-page-title="' + title + '"' : '') + '>' + title +
+        (draft ? '<span class="category-title__badge badge">draft</span>' : '') +
+        '</div>',
         cleanUrl === null ? '' : '</a>'
       ].join(''));
     }
 
-    function addExpandLink(id, title, url) {
+    function addExpandLink(id, title, url, draft) {
       var cleanUrl = url === null ? null : url.replace(/[\(\)]/g, '');
       return $([
         '<a class="expand-link" href="#' + id + '" data-toggle="collapse" aria-expanded="false" aria-controls="' + id + '">',
         '<i class="link-icon link-icon-menu"></i>',
         '</a>',
         cleanUrl === null ? '' : '<a title="' + title + '" data-page-title="' + title + '" href="' + cleanUrl + '">',
-        '<div class="category-title" ' + (cleanUrl === null ? 'data-page-title="' + title + '"' : '') + '>' + title + '</div>',
+        '<div class="category-title" ' + (cleanUrl === null ? 'data-page-title="' + title + '"' : '') + '>' + title +
+        (draft ? '<span class="category-title__badge badge">draft</span>' : '') +
+        '</div>',
         cleanUrl === null ? '' : '</a>',
       ].join(''));
     }
@@ -144,6 +148,7 @@
           return rootpage.p && rootpage.p.toLowerCase() === page.i.toLowerCase() && rootpage.d.indexOf(page.d) !== -1;
         });
         var title = typeof page.mt !== 'undefined' ? page.mt : page.t;
+        var draft = typeof page.dr !== 'undefined' ? page.dr : false;
 
         if (subpages && subpages.length > 0) {
           var pageId = 'page-' + getRandom(100000) + '-' + normalizeId(page.i),
@@ -155,11 +160,11 @@
 
           subpages = sortOnMenuOrders(subpages);
 
-          $item.append(addExpandLink(pageId, title, page.u));
+          $item.append(addExpandLink(pageId, title, page.u, draft));
           $collapse.append(addPages(subpages, data));
           $item.append($collapse);
         } else {
-          $item.append(addNormalLink(title, page.u));
+          $item.append(addNormalLink(title, page.u, draft));
         }
         $list.append($item);
       });
@@ -189,9 +194,10 @@
         $cat.append(addNormalLink(cat, catUrl));
       } else if (getPages.length > 0) {
         var catId = spaceID + '-cat-' + id,
-            $collapse = $('<div class="collapse" id="'+ catId + '" />');
+            $collapse = $('<div class="collapse" id="'+ catId + '" />'),
+            isDraft = catPage.length === 1 ? (typeof catPage[0].dr !== 'undefined' ? catPage[0].dr : false) : false;
 
-        $cat.append(addExpandLink(catId, cat, catPage.length === 1 ? catPage[0].u : null));
+        $cat.append(addExpandLink(catId, cat, catPage.length === 1 ? catPage[0].u : null, isDraft));
         $collapse.append(addPages(getPages, data));
         $cat.append($collapse);
       } else {
@@ -222,12 +228,13 @@
         var space = $source.replace('/json/', '').replace('.json', '');
         if (mainPage.length === 1) {
           var main = mainPage[0];
+          var isDraft = typeof main.dr !== 'undefined' ? main.dr : false;
           var mainID = 'space-' + normalizeId(main.t);
           var $space = $('<div class="space" />');
           var $collapse = $('<div class="collapse" id="' + mainID + '" />');
           var title = typeof main.mt !== 'undefined' ? main.mt : main.t;
           $menu.append($space);
-          var $expandLink = addExpandLink(mainID, title, main.u);
+          var $expandLink = addExpandLink(mainID, title, main.u, isDraft);
           $space.append($expandLink);
           $space.append($collapse);
           if (hasPathInData(data, main)) {
@@ -306,6 +313,7 @@
           var $parents = $($menulink.parents('.collapse').get().reverse()),
               $breadcrumb = $('ul.mx__breadcrumb'),
               href = $menulink.attr('href'),
+              $menulinkTitle = $menulink.data('page-title') || $menulink.text(),
               $parent = $menulink.parent();
 
           $menulink.addClass('active');
@@ -320,13 +328,14 @@
             $parentlink.attr('aria-expanded', 'true');
 
             if ($title && $title.length) {
+              var dataTitle = $title.data('page-title') || $title.text();
               found = true;
               $title.addClass('sub-active');
-              if (!hasBreadCrumbLink($title.text())) {
+              if (!hasBreadCrumbLink(dataTitle)) {
                 if ($title.attr('href')) {
-                  $breadcrumb.append('<li><a href="' + $title.attr('href') + '" title="' + $title.text() + '">' + $title.text() + '</a></li>');
+                  $breadcrumb.append('<li><a href="' + $title.attr('href') + '" title="' + dataTitle + '">' + dataTitle + '</a></li>');
                 } else {
-                  $breadcrumb.append('<li>' + $title.text() + '</li>');
+                  $breadcrumb.append('<li>' + dataTitle + '</li>');
                 }
               }
             }
@@ -344,7 +353,7 @@
 
           if (!broken) {
             hrefList.push({
-              title: $menulink.text(),
+              title: $menulinkTitle,
               href: href
             });
             var schema = {
@@ -384,7 +393,7 @@
           }
 
           if (!hasBreadCrumbLink($menulink.text())) {
-            $breadcrumb.append('<li><a href="' + href + '" title="' + $menulink.text() + '">' + $menulink.text() + '</a></li>');
+            $breadcrumb.append('<li><a href="' + href + '" title="' + $menulinkTitle + '">' + $menulinkTitle + '</a></li>');
           }
 
           if ($parent.find('> .expand-link').length === 1) {
@@ -401,10 +410,16 @@
     }
 
     var $menus = $('.menu');
+    var isTest = $('body').hasClass('test');
+    var lastBuild = $('meta[property="og:updated_time"]').attr('content');
+    var cacheBust = lastBuild ? '?q=' + +(new Date(lastBuild)) : '';
     if ($menus.length) {
-      $.get('/json/spaces.json', function( data ) {
+      $.get('/json/spaces.json' + (isTest ? cacheBust : ''), function( data ) {
         window.__mxMenuItems = data;
         $menus.each(function () {
+          if ($(this).hasClass('menu--draft') && !$('body').hasClass('test')) {
+            return true;
+          }
           var source = $(this).data("source");
           if (source) {
             var filtered = data.filter(function (s) { return s.filename === source });

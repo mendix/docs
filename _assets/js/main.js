@@ -257,7 +257,9 @@
     }
 
     function hasBreadCrumbLink(title) {
-      return $('ul.mx__breadcrumb').find('li').filter(function (){ return $(this).text().trim() === title.trim(); }).length > 0;
+      return $('ul.mx__breadcrumb').find('li').filter(function (){
+        return $(this).text().trim() === (title + "").trim();
+      }).length > 0;
     }
 
     function shortenBreadCrumb() {

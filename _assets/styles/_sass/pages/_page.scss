@@ -44,6 +44,14 @@ $block: 'mx';
       max-width: 80%;
     }
 
+    @include modifier('wide') {
+      @include mq("md") {
+        float: left;
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+
     @include element('header') {
       @include element('head') {
         margin: 0;
@@ -211,6 +219,20 @@ $block: 'mx';
         margin: 0 auto;
         display: block;
         text-align: center;
+      }
+    }
+
+    .todo {
+      position: relative;
+      border-width: 2px;
+      &:before {
+        content: 'todo';
+        position: absolute;
+        top: -8px;
+        left: -1px;
+        font-size: 11px;
+        font-weight: bold;
+        color: #F00;
       }
     }
   }

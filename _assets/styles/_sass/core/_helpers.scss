@@ -115,33 +115,45 @@ $breakpoints: (
 /// Block Element
 /// @access public
 /// @param {String} $element - Element's name
-@mixin element($element) {
-    &__#{$element} {
-        @content;
-    }
+@mixin element($element, $root: false) {
+  @if $root {
+      #{$root}__#{$element} {
+          @content;
+      }
+  } @else {
+      &__#{$element} {
+          @content;
+      }
+  }
 }
 
 /// Block Modifier
 /// @access public
 /// @param {String} $modifier - Modifier's name
-@mixin modifier($modifier) {
-    &--#{$modifier} {
-        @content;
-    }
+@mixin modifier($modifier, $root: false) {
+  @if $root {
+      #{$root}--#{$modifier} {
+          @content;
+      }
+  } @else {
+      &--#{$modifier} {
+          @content;
+      }
+  }
 }
 
 /// @alias element
 @mixin e($element) {
-    @include element($element)  {
-        @content;
-    }
+  @include element($element) {
+      @content;
+  }
 }
 
 /// @alias modifier
 @mixin m($modifier) {
-    @include modifier($modifier) {
-        @content;
-    }
+  @include modifier($modifier) {
+      @content;
+  }
 }
 
 @mixin opacity($opacity) {

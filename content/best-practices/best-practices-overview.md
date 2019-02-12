@@ -3,9 +3,9 @@ title: "Best Practices Overview"
 draft: true
 ---
 
-**NEEDS STAGE 4 & STAGE5 REVIEW.**
+**NEEDS STAGE 4 & STAGE 5 REVIEW.**
 
-## Introduction 
+## 1 Introduction 
 
 Mendix is optimized for the easiest and fastest way to develop and maintain apps that fulfil a business function.
 
@@ -13,9 +13,9 @@ The [Mendix Evaluation Guide](https://www.mendix.com/evaluation-guide/) provides
 
 With the **Best Practices** documentation, we wan  to share information on how to approach typical challenges and solve specific use cases. This documentation is written by experts in the field, and sometimes it refers to real product examples available in the [Mendix App Store](https://appstore.home.mendix.com).
 
-While there are many ways to solve problems, we do not suggest that this is the only way, maybe not even the best way. But we want to give ideas on good ways to realize stable and easy to maintain solutions in areas such as Architecture, UX &amp; Design Thinking, DevOps and Agile and Quality Assurance.
+While there are many ways to solve problems, we do not suggest that these are the only ways. We want to present ideas on how to realize solutions that are stable and easy to maintain in areas such as [architecture](architecture/bp-architecture-overview), UX & design thinking, DevOps & Agile, and quality assurance.
 
-The section will be filled up over time, starting with Integration and Performance related use cases.
+This documentation will be expanded on an ongoing basis, starting with the architecture topics of [Integration](architecture/integration/integration-overview) and [Performance](architecture/integration/performance-overview)
 
 ### About Best Practices
 

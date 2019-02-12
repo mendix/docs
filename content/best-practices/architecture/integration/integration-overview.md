@@ -4,4 +4,4 @@ category: "Architecture"
 draft: true
 ---
 
-Integration parent doc
+**Integration parent doc**

@@ -3,7 +3,7 @@ title: "Architecture"
 description: "Best practices for architecture."
 draft: true
 ---
-**Needs stage 4 & stage 5 review.**
+**NEEDS STAGE 4 & STAGE 5 REVIEW.**
 
 ## Introduction
 

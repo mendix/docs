@@ -204,4 +204,5 @@ best-practices:
   priority: false
   draft: true
   menu_categories:
+    - "Best Practices Overview"
     - "Architecture"

@@ -54,7 +54,7 @@ To start the packaging process, follow these steps:
 9. Select the environment in which want to publish:
     * For Community Edition apps, the only option is **Sandbox** (for example, for a free app)
     * For apps running on a licensed cloud node, you can choose from **Test**, **Acceptance**, and **Production** (depending on what is available on your cloud node)
-10. Leave the default choice of how to build the package **Build Mobile App Store packages for me by sending the build configuration to Adobe PhoneGap Build**. You can use the alternative option to manually download a PhoneGap Build package, which you can then inspect, modify, and upload manually to Adobe PhoneGap Build (for more information, see [Customizing PhoneGap Build Packages](/refguide7/customizing-phonegap-build-packages) in the Mendix Reference Guide). Please note that this is unnecessary in almost all scenarios.
+10. Leave the default choice of how to build the package **Build Mobile App Store packages for me by sending the build configuration to Adobe PhoneGap Build**. You can use the alternative option to manually download a PhoneGap Build package, which you can then inspect, modify, and upload manually to Adobe PhoneGap Build (for more information, see the [Customizing PhoneGap Build Packages](/refguide/customizing-phonegap-build-packages) section in the *Mendix Reference Guide*). Please note that this is unnecessary in almost all scenarios.
 11. Start the actual hybrid mobile app package building process by clicking **Start PhoneGap Build job**, which will initiate the packaging process.
 12. The first time you start this process, you will need to authorize the Mendix Developer Portal to act on your behalf with the Adobe PhoneGap Build service. You will be presented with a pop-up window to start the redirect to Adobe PhoneGap. To build for the authorization, click **Authorize use of Adobe PhoneGap Build**, after which you will be temporarily redirected to the website of Adobe PhoneGap Build.
 13. On the Adobe PhoneGap Build service page, you will be asked if you want to authorize the **Mendix Developer Portal** to act on your behalf. Choose **Yes** to allow the start of building jobs using your account. You will then be redirected back to the Mendix Developer Portal.
@@ -97,7 +97,7 @@ You can now deploy your app to your test device. An easy way to do this is with 
 To install the iOS app on your test device, follow these steps:
 
 1. Open iTunes and connect your iOS device to your computer.
-2. At the top-right of the screen, click the **device selector** to show the contents of your device.
+2. At the top-right of the screen, click the device drop-down menu to show the contents of your device:
 
     ![](attachments/18448693/18581203.png)
 

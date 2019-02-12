@@ -1,18 +1,17 @@
 ---
 title: "Best Practices Overview"
-category: "Best Practices"
 draft: true
 ---
 
-**Needs stage 4 & stage 5 review.**
+**NEEDS STAGE 4 & STAGE5 REVIEW.**
 
 ## Introduction 
 
-Mendix is optimized for the easiest and fastest way to develop and maintain Apps that fulfil a business function.
+Mendix is optimized for the easiest and fastest way to develop and maintain apps that fulfil a business function.
 
-The Evaluation Guide gives a great overview of all the possibilities and features, and the Reference Guide explains the product in detail.
+The [Mendix Evaluation Guide](https://www.mendix.com/evaluation-guide/) provides a great overview of all the possibilities and features in the Mendix Platform, and the [Mendix Reference Guide](/refguide/) explains the product in detail.
 
-With the Best Practices section Mendix wants to share information on how to approach typical challenges and solve specific use cases, written by experts in the field, and sometimes referring to real examples available in the App Store.
+With the **Best Practices** documentation, we wan  to share information on how to approach typical challenges and solve specific use cases. This documentation is written by experts in the field, and sometimes it refers to real product examples available in the [Mendix App Store](https://appstore.home.mendix.com).
 
 While there are many ways to solve problems, we do not suggest that this is the only way, maybe not even the best way. But we want to give ideas on good ways to realize stable and easy to maintain solutions in areas such as Architecture, UX &amp; Design Thinking, DevOps and Agile and Quality Assurance.
 
@@ -21,6 +20,8 @@ The section will be filled up over time, starting with Integration and Performan
 ### About Best Practices
 
 Best Practices will eventually be valuable for all the people that participate in the Application Life-Cycle, from scoping and estimation to maintenance in production.
+
+{{% todo %}}[**UPDATE DIAGRAM**]{{% /todo %}}
 
 ![](attachments/overview1.png)
 
@@ -42,6 +43,8 @@ The areas of Best Practices planned are
 #### Structure of Best Practices
 
 There will be an Overview Document that covers the breadth of the area discussed, followed by a number of specific areas or use-cases covered more in detail, while referring to other more detailed information in the Reference Guide or the How-To section, and sometimes referring to example implementations in the App Store.
+
+{{% todo %}}[**UPDATE DIAGRAM**]{{% /todo %}}
 
 ![](attachments/overview2.png)
 

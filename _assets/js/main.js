@@ -183,6 +183,7 @@
         console.log('Problem with ' + spaceID + ', multiple category pages found for: ' + catID, catPage);
       }
       var catUrl = catPage && catPage.length === 1 ? catPage[0].u : null;
+      var catDraft = catPage && catPage.length === 1 ? (typeof catPage[0].dr !== 'undefined'? catPage[0].dr : false) : false;
 
       if (catUrl && catUrl.indexOf("/releasenotes/") === 0){
         getPages = sortOnVersion(getPages);
@@ -191,7 +192,7 @@
       getPages = sortOnMenuOrders(getPages);
 
       if (getPages.length === 0 && catUrl) {
-        $cat.append(addNormalLink(cat, catUrl));
+        $cat.append(addNormalLink(cat, catUrl, catDraft));
       } else if (getPages.length > 0) {
         var catId = spaceID + '-cat-' + id,
             $collapse = $('<div class="collapse" id="'+ catId + '" />'),

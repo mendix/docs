@@ -1,5 +1,5 @@
 ---
-title: "Architecture Overview"
+title: "Architecture"
 description: "Best practices for architecture."
 draft: true
 ---

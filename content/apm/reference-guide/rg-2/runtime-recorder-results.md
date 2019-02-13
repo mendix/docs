@@ -1,5 +1,5 @@
 ---
-title: "Runtime recorder results"
+title: "Runtime Recorder Results"
 parent: "recorder"
 ---
 
@@ -7,10 +7,14 @@ When you open a runtime recording from the [recorded sessions overview](recorder
 
 ![](attachments/Performance_runtime_recording.png)
 
-The tree view provides an overview of the durations of microflows and actions.
+The tree view provides an overview of the durations of microflows and actions:
 
 ![](attachments/Performance_runtime_recording_ActionsTree.png)
 
-The **Actions** tab will display actions within the action.
-
+The **Actions** tab displays actions within the action:
+ 
 ![](attachments/Performance_runtime_recording_ActionsActions.png)
+ 
+When showing the details of an action, you can see SQL statements if the action uses SQL:
+ 
+![](attachments/Performance_runtime_recording_Action.png)

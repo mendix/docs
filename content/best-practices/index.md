@@ -8,8 +8,6 @@ layout: wide
 
 {{% partial "cards/overview.html" %}}
 
-{{% partial "cards/overview2.html" %}}
-
 {{% partial "cards/architecture.html" %}}
 
 {{% partial "cards/ux.html" %}}

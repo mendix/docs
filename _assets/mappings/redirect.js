@@ -4,7 +4,7 @@ module.exports = {
      * POTENTIALLY TEMPORARY REDIRECTS
      ****************************************************/
 	/****************************************************
-     * How-to's version 7 (potentially temporary, versioned, unmapped)
+     * How-to's version 7 (potentially temporary until verified, unmapped)
      ****************************************************/
     {
       from: "/howtogeneral/bestpractices/ux-best-practices",
@@ -15,7 +15,7 @@ module.exports = {
       to: "/howto/security/best-practices-security"
     },
 	/****************************************************
-     * From the Web Modeler (potentially temporary until fixed in product, mapped, unversioned)
+     * From the Web Modeler (potentially temporary until fixed in product)
      ****************************************************/
 	{
       from: "/refguide/web-modeler/domain-models-association-properties-wm",
@@ -42,7 +42,7 @@ module.exports = {
       to: "/web-modeler/general-sync-webmodeler-desktopmodeler"
     },
 	/****************************************************
-     * Web Modeler Guide (potentially temporary, unmapped, unversioned)
+     * Web Modeler Guide (potentially temporary until verified, unmapped)
      ****************************************************/
 	{
       from: "/howto/start-with-a-blank-app",
@@ -61,7 +61,7 @@ module.exports = {
       to: "/web-modeler/general-wm"
     },
 	/****************************************************
-     * From the Developer Portal (potentially temporary until fixed in product, mapped, unversioned) 
+     * From the Developer Portal (potentially temporary until fixed in product, mapped) 
      ****************************************************/
 	{
       from: "/developerportal/settings/technical-contact",
@@ -96,7 +96,7 @@ module.exports = {
       to: "/developerportal/community-tools/mendix-job-board"
     },
 	/****************************************************
-     * Developer Portal Guide (potentially temporary, unmapped, unversioned) 
+     * Developer Portal Guide (potentially temporary, unmapped) 
      ****************************************************/
     {
       from: "/howtogeneral/mendixcloud/trends",
@@ -135,7 +135,7 @@ module.exports = {
       to: "/developerportal/deploy/licensing-apps"
     },
 	/****************************************************
-     * From the App Store (temporary until fixed in product, mapped, unversioned)
+     * From the App Store (potentially temporary until fixed in product, mapped)
      ****************************************************/
 	{
 	  from: "/community/app-store/use-app-store-content-in-the-modeler",
@@ -166,7 +166,7 @@ module.exports = {
       to: "/apm/"
     },
 	/****************************************************
-     * From the Support Portal (temporary until fixed in product, mapped, unversioned) 
+     * From the Support Portal (potentially temporary until fixed in product, mapped) 
      ****************************************************/
 	{
       from: "/community/app-store-content-support",
@@ -204,7 +204,7 @@ module.exports = {
       to: "/"
     },
 	/****************************************************
-     * From Desktop Modeler version 7 (permanent, mapped, versioned)
+     * From Desktop Modeler version 7 (permanent, mapped)
      ****************************************************/
 	{
       from: "/refguide/modeler",
@@ -255,7 +255,7 @@ module.exports = {
       to: "/refguide/scroll-container"
     },
 	/****************************************************
-     * From Desktop Modeler version 6 (permanent, most are mapped, versioned)
+     * From Desktop Modeler version 6 (permanent)
      ****************************************************/
     {
       from: "/refguide6/Reference+Guide+6",

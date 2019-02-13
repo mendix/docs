@@ -1,5 +1,5 @@
 ---
-title: "How to Import, Export & Batch"
+title: "Importing, Exporting & Batching"
 parent: "integration-overview"
 draft: true
 ---

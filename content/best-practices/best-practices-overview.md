@@ -41,7 +41,7 @@ These best practices will be expanded on an ongoing basis to cover the following
 
 ### 1.3 Structure of Best Practices
 
-For each category and sub-category of best practices, there will be an overview that covers the breadth of the area discussed. This will be followed by a number of specific areas or use cases that are covered more in detail. These will refer to more detailed information in the [Mendix Reference Guide](/refguide/) or [Mendix How-to's](/howtos/) that explains the product. The best practices will sometimes include example implementations in the App Store.
+For each category and sub-category of best practices, there will be an overview that covers the breadth of the area discussed. This will be followed by a number of specific areas or use cases that are covered more in detail. These will refer to more detailed information in the [Mendix Reference Guide](/refguide/) or [Mendix How-to's](/howtos/index) that explains the product. The best practices will sometimes include example implementations in the App Store.
 
 {{% todo %}}[**UPDATE DIAGRAM**]{{% /todo %}}
 

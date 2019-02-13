@@ -6,6 +6,8 @@ notoc: true
 layout: wide
 ---
 
-{{% partial "cards/architecture.html" %}}
+{{% partial "cards/overview.html" %}}
 
 {{% partial "cards/architecture.html" %}}
+
+{{% partial "cards/devops.html" %}}

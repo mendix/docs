@@ -7,3 +7,5 @@ layout: wide
 ---
 
 {{% partial "cards/architecture.html" %}}
+
+{{% partial "cards/architecture.html" %}}

@@ -99,7 +99,7 @@ const parseHtmlFile = file => new Promise((resolve, reject) => {
         return true;
       } else if (href.indexOf('#') === 0) {
         file.anchorLinks.push(href.trim().replace('#',''));
-      } else if (href.indexOf('http') === 0) {
+      } else if (href.indexOf('http://') === 0 || href.indexOf('https://') === 0) {
         file.external.links.push(href.trim());
       } else if (href.indexOf('mailto') === 0) {
         file.external.mailto.push(href.trim());

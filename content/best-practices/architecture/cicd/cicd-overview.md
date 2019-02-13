@@ -1,7 +1,7 @@
 ---
 title: "CI/CD & Automation"
 category: "Architecture"
-menu_order: 6
+menu_order: 7
 draft: true
 ---
 

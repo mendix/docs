@@ -1,7 +1,7 @@
 ---
-title: "High Performance with Mendix"
+title: "High Performance"
 category: "Architecture"
-menu_order: 1
+menu_order: 2
 description: "Presents a set of guidelines for building high-performance Mendix apps."
 tags: ["guideline", "best practice", "high performance", "performance", "enterprise", "core"]
 draft: true

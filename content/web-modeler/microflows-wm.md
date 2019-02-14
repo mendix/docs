@@ -104,7 +104,7 @@ The **Object Activities** are described in the table below.
 
 | Activity                            | Description                                                  |
 | ----------------------------------- | ------------------------------------------------------------ |
-| [Aggregate List](/refguide/aggregate-list) | Aggregate List can be used to calculate aggregated values such as the maximum, minimum, sum, average, and total amount of objects over a list of data objects. |
+| [Aggregate List](/refguide/aggregate-list) | **Aggregate List** can be used to calculate aggregated values such as the maximum, minimum, sum, average, and total amount of objects over a list of data objects. |
 | [Change Object](/refguide/change-object)   | Can be used to change an existing data object or properties of this object. |
 | [Commit](/refguide/committing-objects)     | **Commit** saves changes you have not saved in the database yet. |
 | [Create Object](/refguide/create-object)   | The **Create Object** action can be used to create a data object. |
@@ -121,7 +121,7 @@ The **Client Activities** are described in the table below.
 | ----------------------------------- | ------------------------------------------------------------ |
 | [Close Page](/refguide/close-page)         | This activity closes the currently open page.                |
 | [Show Home Page](/refguide/show-home-page) | The **Show Home Page** action navigates to the home page for the current user. It goes to the same page as the user goes to after signing in and respects role-based home pages. For details on setting the home page, see [Navigation Document in the Web Modeler](navigation-wm). |
-| [Show Message](/refguide/show-message)     | With the **Show Message** action you can show a blocking or non-blocking message to the user. (Non-blocking message lets users continue their work in the app with the pop-up open, which the blocking message doesn't let the user continue work until the pop-up window is closed. ) |
+| [Show Message](/refguide/show-message)     | With the **Show Message** action you can show a blocking or non-blocking message to the user. (Non-blocking message lets users continue their work in the app with the pop-up open, while the blocking message does not let the user continue work until the pop-up window is closed. ) |
 | [Show Page](/refguide/show-page)           | With this action you can show a page to the end user.        |
 
 ### 5.4 Variable Activities

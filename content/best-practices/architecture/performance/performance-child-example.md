@@ -6,4 +6,3 @@ tags: ["guideline", "best practice", "high performance", "performance", "enterpr
 draft: true
 ---
 
-**Performance child doc**

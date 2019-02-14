@@ -1,7 +1,7 @@
 ---
-title: "High Performance with Mendix"
+title: "High Performance Overview"
 category: "Architecture"
-menu_order: 1
+menu_order: 2
 description: "Presents a set of guidelines for building high-performance Mendix apps."
 tags: ["guideline", "best practice", "high performance", "performance", "enterprise", "core"]
 draft: true
@@ -47,13 +47,13 @@ The document can be helpful when sizing, configuring, managing, operating, and m
 
 This document is followed by use case-specific guidelines that in turn relate to the developer best practices applicable in the different use cases. 
 
-There is also the Mendix Expert training module [Performance Guidelines](https://gettingstarted.mendixcloud.com/link/module/127/lecture/1031) as well as [How to Detect & Resolve PErformance Issues](https://docs.mendix.com/howto/monitoring-troubleshooting/detect-and-resolve-performance-issues).
+There is also the Mendix Expert training module [Performance Guidelines](https://gettingstarted.mendixcloud.com/link/module/127/lecture/1031) as well as [How to Detect & Resolve PErformance Issues](/howto/monitoring-troubleshooting/detect-and-resolve-performance-issues).
 
 ![](attachments/overview/high-perf-mendix.png)
 
 ## 2 Overview of High Performance
 
-### 2.1 The Right Level of Attention
+### 2.1 The Right Level of Attention {#right-level}
 
 Mendix is optimized for the easy and fast development and maintenance of apps and microservices that fulfill meaningful business functions. The Mendix modelling best practices enable you to achieve a good snappy performance, especially if you are working on core data in the Mendix app database or using back-end services that perform well to populate screens.
 
@@ -117,7 +117,7 @@ The most cost-effective way for an organization to operate an app landscape is t
 
 ### 3.1 Initial Sizing 
 
-The other factor is the size of the infrastructure. Sizing an app is similar to the levels of attention in the table above in [The Right Level of Attention](The Right Level of Attention).
+The other factor is the size of the infrastructure. Sizing an app is similar to the levels of attention in the table above in [The Right Level of Attention](#right-level).
 
 In the beginning of an app project, a first size assumption is made. When the functionality is built out and this assumption is tested, the sizing may be adapted and/or tuning be required. Small to medium-sized apps are verified with normal functional testing, while critical apps are tested with professional tools in a production-like environment.
 

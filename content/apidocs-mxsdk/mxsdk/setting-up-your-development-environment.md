@@ -10,7 +10,7 @@ This document will lead you through the process of setting up everything you nee
 
 ## 2 Quick Installation
 
-If you know what you are doing, the quick installation instructions below are for you. Otherwise, please skip this paragraph and continue with section [3 Setting Up Your Development Tools](#setting).
+If you know what you are doing, the quick installation instructions below are for you. Otherwise, please skip this paragraph and continue with the [Setting Up Your Development Tools](#setting) section.
 
 For the quick installation, we assume that you have `node` already installed. 
 Set up a new `node` project and install the dependencies using the following steps:
@@ -30,7 +30,7 @@ To set up your development tools, follow these steps:
 
 1.  Install the latest LTS version of [Node.js](https://nodejs.org/). If you need to download it, you can find it on [this page](https://nodejs.org/en/download/releases/).
 
-2.  Open a terminal, on Windows e.g. [Command Prompt](http://windows.microsoft.com/en-us/windows/command-prompt-faq), and run the following command:
+2.  Open a terminal (on Windows, [Command Prompt](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands)) and run the following command:
 
     ```text
     $ node --version

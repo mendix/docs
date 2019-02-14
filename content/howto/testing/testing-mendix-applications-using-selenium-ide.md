@@ -20,8 +20,6 @@ Before starting with this how-to, make sure you have completed the following pre
 
 * Download and install [Firefox](https://www.mozilla.org/nl/firefox/new/)
 * Download and install [Selenium IDE](https://addons.mozilla.org/en-US/firefox/addon/selenium-ide/) (when Selenium IDE is installed, it is then available as a Firefox plugin)
-* Install the Firefox add-on [Firebug](https://addons.mozilla.org/en-US/firefox/addon/firebug/)
-* Install the Firefox add-on [FirePath](https://addons.mozilla.org/en-US/firefox/addon/firepath/)
 
 ### 2.1 Software Versions in This How-To
 

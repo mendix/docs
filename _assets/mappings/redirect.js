@@ -134,6 +134,10 @@ module.exports = {
       from: "/mendixcloud/how-to-link-app-to-node",
       to: "/developerportal/deploy/licensing-apps"
     },
+	{
+      from: "/howtogeneral/support/",
+      to: "/developerportal/support/"
+    },
 	/****************************************************
      * From the App Store (potentially temporary until fixed in product, mapped)
      ****************************************************/

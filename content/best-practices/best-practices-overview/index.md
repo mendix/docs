@@ -14,7 +14,7 @@ The [Mendix Evaluation Guide](https://www.mendix.com/evaluation-guide/) provides
 
 With the **Best Practices** documentation, we want to share information on how to approach typical challenges and solve specific use cases. This documentation is written by experts in the field, and sometimes it refers to real product examples available in the [Mendix App Store](https://appstore.home.mendix.com).
 
-While there are many ways to solve problems, we do not suggest that these are the only ways. We want to present ideas on how to realize solutions that are stable and easy to maintain in areas such as [architecture](architecture/index), UX & design thinking, DevOps & Agile, and quality assurance.
+While there are many ways to solve problems, we do not suggest that these are the only ways. We want to present ideas on how to realize solutions that are stable and easy to maintain in areas such as [architecture](../architecture/index), UX & design thinking, DevOps & Agile, and quality assurance.
 
 ### 1.1 About Best Practices
 
@@ -28,9 +28,9 @@ Best Practices will eventually be valuable for all the people that participate i
 
 These best practices will be expanded on an ongoing basis to cover the following areas:
 
-* [Architecture](architecture/index)
-	* [Integration](architecture/integration/integration-overview)
-	* [Performance](architecture/performance/performance-overview)
+* [Architecture](../architecture/index)
+	* [Integration](../architecture/integration/integration-overview)
+	* [Performance](../architecture/performance/performance-overview)
 	* Microservices
 	* Security
 	* CI/CD & test automation
@@ -41,7 +41,7 @@ These best practices will be expanded on an ongoing basis to cover the following
 
 ### 1.3 Structure of Best Practices
 
-For each category and sub-category of best practices, there will be an overview that covers the breadth of the area discussed. This will be followed by a number of specific areas or use cases that are covered more in detail. These will refer to more detailed information in the [Mendix Reference Guide](/refguide/) or [Mendix How-to's](/howtos/index) that explains the product. The best practices will sometimes include example implementations in the App Store.
+For each category and sub-category of best practices, there will be an overview that covers the breadth of the area discussed. This will be followed by a number of specific areas or use cases that are covered more in detail. These will refer to more detailed information in the [Mendix Reference Guide](/refguide/) or [Mendix How-to's](/howto/) that explains the product. The best practices will sometimes include example implementations in the App Store.
 
 {{% todo %}}[**UPDATE DIAGRAM**]{{% /todo %}}
 

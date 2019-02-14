@@ -1,5 +1,6 @@
 ---
 title: "Architecture Overview"
+category: "Architecture"
 description: "Best practices for architecture."
 menu_order: 1
 draft: true

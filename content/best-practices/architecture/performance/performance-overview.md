@@ -1,5 +1,5 @@
 ---
-title: "High Performance Overview"
+title: "High Performance"
 category: "Architecture"
 menu_order: 2
 description: "Presents a set of guidelines for building high-performance Mendix apps."

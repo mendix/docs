@@ -197,30 +197,19 @@ This test method will open the URL `http://localhost:8080/index.html` in the Fir
 Now that you are on the login window, you will want to log in. To add the second test method, follow these steps:
 
 1. Open Firefox and go to `http://localhost:8080/index.html`.
-2.  Click the "firebug" button in the Firefox toolbar:
-  
-    ![](attachments/18448631/18580294.png)
+2. Use the developer tools to inspect the element.
+3.   Click the **User name** input field. The ID of the this field is _usernameInput_. The CSS selector of an ID is a hashtag (`#`) + the name of the ID. For the **User name** field, this will be _#usernameInput_. The same principle is used for the other steps. The CSS selector _#usernameInput_ is unique. There is one matching node:
 
-3.  Click the **FirePath** tab:
-  
-    ![](attachments/18448631/18580293.png) 
+	![](attachments/18448634/18580373.png)
 
-4.  Click the "inspect element" button:
-  
-    ![](attachments/18448631/18580292.png)
-
-5.  Click the **User name** input field. The ID of the this field is _usernameInput_. The CSS selector of an ID is a hashtag (`#`) + the name of the ID. For the **User name** field, this will be _#usernameInput_. The same principle is used for the other steps.
-  
-    The CSS selector _#usernameInput_ is unique. There is one matching node:
-    ![](attachments/18448634/18580373.png)
-6. Repeat steps 5–6 for the **Password** input field and the **Sign in** button:
+4. Repeat steps 5–6 for the **Password** input field and the **Sign in** button:
 
     Element | CSS Selector
     --- | ---
     **Password** input field | `#passwordInput`
     **Sign in** button | `#loginButton`
 
-7.  Add a new test method called `login`. Use the following code:
+5.  Add a new test method called `login`. Use the following code:
 
     ```java
     @Test(priority=2)

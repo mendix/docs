@@ -10,6 +10,14 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud V3, and other deploym
 
 ## 2019
 
+### February 15th, 2019
+
+#### SAP OData Connector Improvements and Fixes
+
+* We now throw an error which you can catch in a microflow if the destination does not exist, or the app is running locally. Previously the error could not be caught.
+* We fixed some typos in the OData Connector actions.
+* We now provide OData Connector support for Mendix apps which use Oracle DB as their database.
+
 ### February 6th, 2019
 
 #### Fixes

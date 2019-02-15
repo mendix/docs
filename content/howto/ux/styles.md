@@ -102,7 +102,7 @@ You can change the appearance of a button:
 * `btn-bordered`: bordered button
 * `btn-transparent`: transparent background
 * `btn-image`: transparent button with image nicely align
-* `btn-right`: aligns the button to the right
+* `pull-right` or `btn-right`: aligns the button to the right
 * `btn-attached-right`: adds left margin
 * `btn-attached-left`: adds right margin
 * `btn-attached-bottom`: adds top margin

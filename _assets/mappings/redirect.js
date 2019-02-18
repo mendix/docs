@@ -87,14 +87,14 @@ module.exports = {
       from: "/developerportal/howto/deploying-to-the-cloud",
       to: "/developerportal/deploy/mendix-cloud-deploy"
     },
-	{
-      from: "/deployment/on-premises/index",
-      to: "/developerportal/deploy/on-premises-design"
-    },
   {
       from: "/deployment/on-premises/deploy-mendix-on-microsoft-windows",
       to: "/developerportal/deploy/deploy-mendix-on-microsoft-windows"
-  },
+    },
+  {
+      from: "/deployment/on-premises",
+      to: "/developerportal/deploy/on-premises-design"
+    },
 	{
       from: "/developerportal/community-tools/the-mendix-job-board",
       to: "/developerportal/community-tools/mendix-job-board"

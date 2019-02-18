@@ -22,8 +22,10 @@ let mainFolder;
 let SPACES;
 
 const contentHandler = (req, res, next) => {
-    const contentPath = req.params['*'];
-    log(`Handling content: ${contentPath}`);
+    const dirtyPath = req.params['*'];
+    log(`Handling content: ${dirtyPath}`);
+
+    const contentPath = dirtyPath.replace(/(^.*)\.json$/, '$1');
 
     const sourcePath = normalizeSafe(path.resolve(mainFolder, CONTENTFOLDER, contentPath));
     const generatePath = normalizeSafe(path.resolve(mainFolder, GENERATEDFOLDER, contentPath));
@@ -96,6 +98,7 @@ const contentHandler = (req, res, next) => {
                 if (meta !== null) {
                     _.merge(obj, _.omit(meta, ['__content', 'space']));
                     obj.markdown = meta['__content'];
+                    obj.meta = content.toString().replace(meta['__content'], '');
                 }
 
                 if (obj.parent) {

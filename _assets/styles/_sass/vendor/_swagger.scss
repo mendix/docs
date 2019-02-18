@@ -1218,7 +1218,12 @@ $url_2: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/20
 				color: $color_bright_gray_approx;
 			}
 		}
-	}
+    }
+    .parameters-col_name,
+    .parameters-col_status,
+    .response-col_status {
+        width: 25%;
+    }
 	.parameters-col_description {
 		p {
 			font-size: 14px;
@@ -1578,7 +1583,12 @@ $url_2: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/20
 	}
 	.Resizer.vertical.disabled {
 		display: none;
-	}
+    }
+    .try-out__btn {
+        // pointer-events: none;
+        // opacity: 0.3;
+        // display: none;
+    }
 }
 @-webkit-keyframes rotation {
 	to {

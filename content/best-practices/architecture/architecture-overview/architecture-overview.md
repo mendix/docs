@@ -5,9 +5,6 @@ description: "Best practices for architecture."
 menu_order: 1
 draft: true
 ---
-
-`'Single quotes example in code'`
-
 **NEEDS STAGE 4 & STAGE 5 REVIEW.**
 
 ## Introduction

@@ -100,11 +100,13 @@ First actions to take | Check the log files and application metrics for a possib
 
 ### 3.2 CPU Credits on AWS{#burstable}
 
-Apps running on Mendix Cloud V4 use AWS databases to store their data. These databases are classed as *burstable* and *non-burstable*. If a database is **burstable** this means that there is a limit on how long you can use the database when it is consuming CPU resources above a specified 'baseline performance'. This baseline is different for each sort of database and varies from 5% to 20%.
+Apps running on Mendix Cloud V4 use AWS databases to store their data. These databases are classed as *burstable* and *non-burstable*. If a database is **burstable** this means that it has a specified performance baseline. This baseline is different for each sort of database and varies from 5% to 20%.
 
-For example, if you have a database with a baseline performance of 10%, you can only run the database at over 10% CPU resources for a limited time. After this time, the CPU resource usage of your database will be throttled.
+From the AWS documentation: *If a burstable performance instance uses fewer CPU resources than is required for baseline performance (such as when it is idle), the unspent CPU credits are accrued in the CPU credit balance. If a burstable performance instance needs to burst above the baseline performance level, it spends the accrued credits. The more credits that a burstable performance instance has accrued, the more time it can burst beyond its baseline when more performance is needed.*
 
-The following database options use burstable databases:
+For example, if you have a database with a baseline performance of 10%, you can only run the database at over 10% CPU resources for a limited time. How long depends on the CPU credits you have earned during your recent CPU use. After you have used up your credits, the CPU resource usage of your database will be throttled and cannot go above the baseline performance until you have earned more credits by running it below the baseline performance.
+
+The following Mendix database options use burstable databases:
 * Strato (t2.micro database)
 * S (t2.micro)
 * M (t2.small)
@@ -114,13 +116,15 @@ Meso, Iono, Magneto, XL, and XXL databases are *not* burstable.
 
 You can find more details about the credit system, and the different baseline performance percentages for each database type, in the official AWS documentation: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-credits-baseline-concepts.html
 
-If you are using burstable databases, this may impact your performance if your database uses a lot of CPU resources over a sustained period. The **CPU Credit Balance Status** will no longer be **OK**.  You should therefore monitor your database usage carefully if you might be  performing this sort of activity. This can include things like:
+If you are using burstable databases, and your database uses a lot of CPU resources over a sustained period, this may impact your app's performance. If you run out of CPU Credits, the **CPU Credit Balance Status** will no longer be shown as **OK**.  You should therefore monitor your database usage carefully if you expect to be using more than the baseline performance level of CPU resources to ensure that there are periods when the CPU credit balance can be restored.
+
+High CPU usage can be triggered by things like:
 
 * populating the database with a large amount of data (for example, during data migration)
 * badly optimized databases
 * app design which has sustained peak load (for example, reports which analyze a lot of data)
 
-If you do run into issues with your CPU Credit Balance Status, you can look for anomalies in *Application node CPU usage*, *Application node disk throughput*, and *Application node load* and correlate those with application behavior. You can also move to a different database with a higher baseline performance, or one which is not burstable.
+If you do run into issues with your CPU Credit Balance Status unexpectedly, you can look for anomalies in *Database node CPU usage*, *Application node disk throughput*, and *Application node load* and correlate those with application behavior. You can also move to a different database with a higher baseline performance, or one which is not burstable.
 
 ## 4 Cloud V3 Alerting Categories and Thresholds
 

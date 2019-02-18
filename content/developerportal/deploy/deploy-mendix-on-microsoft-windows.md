@@ -205,6 +205,8 @@ Rule | Name | Pattern | Rewrite URL
 3 | ws-doc | `^(ws-doc/)(.*)` | `http://localhost:8080/{R:1}{R:2}`
 4 | ws-file | `^(file)(.*)` | `http://localhost:8080/{R:1}{R:2}`
 5 | link | `^(link/)(.*)` | `http://localhost:8080/{R:1}{R:2}`
+6 | rest | `^(rest/)(.*)` | `http://localhost:8080/{R:1}{R:2}`
+7 | rest-doc | `^(rest-doc/)(.*)` | `http://localhost:8080/{R:1}{R:2}`
 
 Follow the instructions below and replace *[Name]* with the name of the rule in the table above, *[Pattern]* with the regular expression pattern, and *[Rewrite URL]* with the Rewrite URL. Note that some patterns contain a trailing slash, `/`, when they need to point to an exact path (for example, `/ws-doc/mydoc/1234`).
 

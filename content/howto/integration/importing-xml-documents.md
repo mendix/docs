@@ -105,27 +105,27 @@ In this section, you will create the logic to import the customers stored in an 
 
 To create the import logic, follow these steps:
 
-1.  Open the **XMLDocument** overview page. It should look this, using a default layout:
+1. Open the **XMLDocument** overview page. It should look this, using a default layout:
 
     ![](attachments/18448727/18581648.png)
 
-2.  Right-click the toolbar of the data grid widget and select **Add button** > **Action** to add a new action button:
+2. Right-click the toolbar of the data grid widget and select **Add button** > **Action** to add a new action button:
 
     ![](attachments/18448727/18581647.png)
 
-3.  Double-click the new button to open the **Edit Action Button** editor and do the following:<br />
+3. Double-click the new button to open the **Edit Action Button** editor and do the following:<br />
     a. Change the caption to *Import XML Document*<br />
     b. For the **On click** event, select **Call a microflow**, then click **Select** for the microflow, create a new microflow, and name it **XMLDocument_Import**.<br />
     c. Click **OK** to save the properties.<br />
 
     ![](attachments/18448727/18581646.png)
 
-4. Right-click the new **Import XML Document** button and select **Go to microflow** in the context menu. You should see an empty microflow with **XMLDocument** as the input parameter:
+4. Right-click the new **Import XML Document** button and select **Go to on cl microflow** in the context menu. You should see an empty microflow with **XMLDocument** as the input parameter:
 
     ![](attachments/18448727/18581669.png)
 
 5. Open the **Toolbox** and drag an **Import with mapping** activity to the line between the start and end event. This inserts a new import XML activity.
-6.  Double-click the new activity to open the **Import With Mapping** dialog box and do the following:<br />
+6. Double-click the new activity to open the **Import With Mapping** dialog box and do the following:<br />
     a. Select the input paramater **XMLDocument** as the **Variable**.<br />
     b. Select the previously created XML-to-domain mapping **ImportCustomersMapping** as the mapping.<br />
     c. Click **OK** to save the properties.<br />

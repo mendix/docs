@@ -18,7 +18,7 @@ The picture below shows the components of the Web Modeler interface:
 
 ## 2 Opening the Web Modeler
 
-### 2.1 Opening the Web Modeler via the Developer Portal
+### 2.1 Opening the Web Modeler via the Developer Portal {#opening-web-modeler-via-dev-portal}
 
 You can edit an app in the **Web Modeler** by opening your app in the [Developer Portal](https://home.mendix.com) and clicking **Edit App** or choosing the **Edit in Web Modeler** option in the drop-down menu of the **Edit App** button. 
 

@@ -13,7 +13,7 @@ You can write Mendix apps which analyze data held in MindSphere, the open, cloud
 
 This documentation provides more explanation of the MindSphere example app. Please note that this app is not production-ready. It is designed as an example of how you might begin to build a Mendix/MindSphere app.
 
-You can get more detailed information on how to deploy your app to the MindSphere Platform in [Deploying to MindSphere](https://docs.mendix.com/refguide/mindsphere/deploying-to-mindsphere).
+You can get more detailed information on how to deploy your app to the MindSphere Platform in [Deploying to MindSphere](/developerportal/deploy/deploying-to-mindsphere).
 
 ## 2 Prerequisites
 
@@ -90,7 +90,7 @@ More information on creating assets is available in the MindSphere [Asset Manage
 
 To deploy the example app, you will need to configure the app, push it to Cloud Foundry, and set it up in the MindSphere launchpad.
 
-These instructions are available in the deployment documentation: [Deploying to MindSphere](https://docs.mendix.com/developerportal/deploy/deploying-to-mindsphere).
+These instructions are available in the deployment documentation: [Deploying to MindSphere](/developerportal/deploy/deploying-to-mindsphere).
 
 ### 3.1 App Configuration
 
@@ -141,7 +141,7 @@ It is based on the standard Mendix starter app for Mendix version 7.22. It also 
 * MindSphere Theme Pack
 * MindSphere OS Bar Connector
 
-The use of these modules is covered in more detail in [Deploying to MindSphere](https://docs.mendix.com/refguide/mindsphere/deploying-to-mindsphere).
+The use of these modules is covered in more detail in [Deploying to MindSphere](/developerportal/deploy/deploying-to-mindsphere).
 
 It also uses the **MindSphere Asset Management Connector**. This is described in section 6, [MindSphere Asset Management Connector](#assetconnector).
 
@@ -224,7 +224,7 @@ Asset Management (retrieving assets and asset types) is performed using the Mind
 
 The time series information is accessed using Mendix native REST. Native REST can also be used to access MindSphere using other APIs.
 
-For instructions on how to use Mendix native REST see [How To Consume a REST Service](https://docs.mendix.com/howto/integration/consume-a-rest-service).
+For instructions on how to use Mendix native REST see [How To Consume a REST Service](/howto/integration/consume-a-rest-service).
 
 ### 5.5 PUT Time Series
 
@@ -287,7 +287,7 @@ The module adds two actions which a developer can use to retrieve Asset and Asse
 
 ![MindSphere Asset Management APIs actions](attachments/mindsphere-example-app/image18.png)
 
-To use the MindSphere API, you must have an *Access token*. The *MindSphere SSO* module creates one for you by linking the Mendix user to a user set up in MindSphere and creating an access token which authorizes the user. For more information, see [Deploying to MindSphere](https://docs.mendix.com/refguide/mindsphere/deploying-to-mindsphere).
+To use the MindSphere API, you must have an *Access token*. The *MindSphere SSO* module creates one for you by linking the Mendix user to a user set up in MindSphere and creating an access token which authorizes the user. For more information, see [Deploying to MindSphere](/developerportal/deploy/deploying-to-mindsphere).
 
 {{% alert type="info" %}}
 The MindSphere asset management actions should always be preceded by the **Access token** action, to ensure that the access token does not expire.

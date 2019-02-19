@@ -107,6 +107,7 @@ From the AWS documentation: *If a burstable performance instance uses fewer CPU 
 For example, if you have a database with a baseline performance of 10%, you can only run the database at over 10% CPU resources for a limited time. How long depends on the CPU credits you have earned during your recent CPU use. After you have used up your credits, the CPU resource usage of your database will be throttled and cannot go above the baseline performance until you have earned more credits by running it below the baseline performance.
 
 The following Mendix database options use burstable databases:
+
 * Strato (t2.micro database)
 * S (t2.micro)
 * M (t2.small)

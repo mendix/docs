@@ -98,7 +98,6 @@ Now that you've created a menu structure it's time to start using it on pages.
 ## 6 Read More
 
 * [How to Create Your First Two Overview & Detail Pages](create-your-first-two-overview-and-detail-pages)
-* [How to Filter Data on an Overview Page](filtering-data-on-an-overview-page)
 * [How to Set Up the Mendix UI Framework with Just CSS](setup-mendix-ui-framework-with-just-css)
 * [How to Set Up the Mendix UI Framework with Koala](setup-mendix-ui-framework-with-koala)
 * [How to Set Up the Mendix UI Framework with Scout](setup-mendix-ui-framework-with-scout)

@@ -85,7 +85,6 @@ Supporting communities is cool. Therefore I will also show you how to upload you
 
 *   [Create a custom theme with the Mendix UI Framework](create-a-custom-theme-with-the-mendix-ui-framework)
 *   [Layouts and Snippets](layouts-and-snippets)
-*   [Filtering Data on an Overview Page](filtering-data-on-an-overview-page)
 *   [Setup Mendix UI Framework with Scout](setup-mendix-ui-framework-with-scout)
 *   [Setting Up the Navigation Structure](setting-up-the-navigation-structure)
 *   [Setup Mendix UI Framework with Koala](setup-mendix-ui-framework-with-koala)

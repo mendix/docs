@@ -18,5 +18,4 @@ Looking to create great user experiences and a user-friendly graphical user inte
 * [Implement Styles](styles)
 * [Start Styling with Gulp & Sass](style-with-gulp-and-sass)
 * [Create Custom Error Pages](custom-error-page)
-* [Filter Data on an Overview Page](filtering-data-on-an-overview-page)
 * [Style Google Maps](style-google-maps)

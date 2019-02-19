@@ -105,7 +105,6 @@ In the previous section you have constrained the data grid on attributes of the 
 
 *   [Scout and Windows 10 Workaround](scout-and-windows-10-workaround)
 *   [Scout and Windows 10 Workaround](/howto6/scout-and-windows-10-workaround)
-*   [Filtering Data on an Overview Page](filtering-data-on-an-overview-page)
 *   [Layouts and Snippets](layouts-and-snippets)
 *   [Layouts and Snippets](/howto6/layouts-and-snippets)
 *   [Filtering Data on an Overview Page](/howto6/filtering-data-on-an-overview-page)

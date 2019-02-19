@@ -180,7 +180,6 @@ Re-deploy your app to see the shiny new logo:
 
 * [How to Perform the Scout and Windows 10 Workaround](perform-scout-and-windows-10-workaround)
 * [How to Layouts and Snippets](layouts-and-snippets)
-* [How to Filter Data on an Overview Page](filtering-data-on-an-overview-page)
 * [How to Set Up Mendix UI Framework with Just CSS](setup-mendix-ui-framework-with-just-css)
 * [How to Set Up the Navigation Structure](setting-up-the-navigation-structure)
 * [How to Set Up the Mendix UI Framework with Scout](setup-mendix-ui-framework-with-scout)

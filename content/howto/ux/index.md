@@ -8,6 +8,7 @@ Looking to create great user experiences and a user-friendly graphical user inte
 
 ## 2 Main Documents in This Category
 
+* [Implement Best Practices for UX Design](ux-best-practices)
 * [Configure Your Theme](configuring-your-theme)
 * [Create Your First Two Overview & Detail Pages](create-your-first-two-overview-and-detail-pages)
 * [Use Layouts & Snippets](layouts-and-snippets)
@@ -19,5 +20,3 @@ Looking to create great user experiences and a user-friendly graphical user inte
 * [Create Custom Error Pages](custom-error-page)
 * [Filter Data on an Overview Page](filtering-data-on-an-overview-page)
 * [Style Google Maps](style-google-maps)
-* [Implement Best Practices for UX Design](ux-best-practices)
-

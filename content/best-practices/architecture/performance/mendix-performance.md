@@ -1,7 +1,8 @@
 ---
-title: "Performance Child Doc"
+title: "Mendix & High Performance"
 parent: "performance-overview"
-description: "Presents a set of guidelines for building high-performance Mendix apps."
+description: ""
+menu_order: 1
 tags: ["guideline", "best practice", "high performance", "performance", "enterprise", "core"]
 draft: true
 ---

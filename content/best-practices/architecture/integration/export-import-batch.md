@@ -1,6 +1,7 @@
 ---
-title: "Importing, Exporting & Batching"
-parent: "integration-overview"
+title: "Exporting, Importing & Batching"
+parent: "integration-use-cases"
+menu_order: 1
 draft: true
 ---
 

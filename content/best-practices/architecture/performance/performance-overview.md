@@ -1,13 +1,11 @@
 ---
 title: "High Performance"
 category: "Architecture"
-menu_order: 2
+menu_order: 3
 description: "Presents a set of guidelines for building high-performance Mendix apps."
 tags: ["guideline", "best practice", "high performance", "performance", "enterprise", "core"]
 draft: true
 ---
-
-**NEED STAGE 4 REVIEW.**
 
 ## 1 Introduction
 
@@ -18,6 +16,23 @@ This document goes through the main areas for building high-performance core ent
 {{% alert type="info" %}}
 This document is intended for Enterprise Architects, Lead Developers, and senior stakeholders to consider how to achieve the correct stability and performance when using the Mendix Platform for core enterprise systems.
 {{% /alert %}}
+
+### 1.1 Performance Overview
+
+The subject area of performance deals with all the aspects of planning, designing, sizing, scaling, testing, and maintaining systems that handle significant volumes of data, service calls, or users. This subject area also deals with how to secure the stability and availability of these systems.
+
+High performance with Mendix is achieved by taking a serious approach to designing, building, testing, and maintening apps. By architecting the solution for the specific high-volume use case, doing testing and tuning, automating tests, and using higher-skilled resources, virtually any business problem can be solved in a good way with Mendix. This allows companies to position Mendix for core systems and build a set of microservices that cooperate well at the center of their IT strategy.
+
+The performance best practices will cover the following content areas:
+
+* Planning and designing for high-volume
+* Sizing & scaling
+* Testing & tuning
+* Deployments & stability
+* Teams & skills
+* Performance Guidelines
+
+{{% todo %}}[**Add links to list above when available**]{{% /todo %}}
 
 ### 1.1 Use Cases for This Overview
 
@@ -32,6 +47,8 @@ These are the typical use cases when this overview will be helpful:
 #### 1.1.1 Positioning, Portfolio Management & Project Planning
 
 This document can be used by Enterprise Architects to create positioning documents or in the work of portfolio planning. It can also be used as a baseline for technology selection and project initiation.
+
+{{% todo %}}[**GET DIAGRAM UPDATED**]{{% /todo %}}
 
 ![](attachments/overview/can-i-use-mendix.png)
 

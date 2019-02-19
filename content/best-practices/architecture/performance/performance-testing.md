@@ -1,5 +1,5 @@
 ---
-title: "Generic Performance Guidelines"
+title: "Performance Testing"
 parent: "generic-performance-guidelines"
 description: ""
 menu_order: 1

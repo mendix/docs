@@ -14,6 +14,10 @@ module.exports = {
       from: "/howtogeneral/bestpractices/best-practices-security-and-improvements-for-mendix-applications",
       to: "/howto/security/best-practices-security"
     },
+	{
+      from: "/howtogeneral/bestpractices/best-practices-for-app-performance-in-mendix-7",
+      to: "/howto/general/community-best-practices-for-app-performance"
+    },	
 	/****************************************************
      * From the Web Modeler (potentially temporary until fixed in product)
      ****************************************************/

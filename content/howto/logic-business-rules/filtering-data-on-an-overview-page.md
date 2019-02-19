@@ -1,7 +1,6 @@
 ---
 title: "Filter Data on an Overview Page Using XPath"
-category: "UX"
-menu_order: 60
+category: "Logic & Business Rules"
 tags: ["filter", "xpath"]
 ---
 

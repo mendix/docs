@@ -2,7 +2,7 @@
 title: "Filter Data on an Overview Page Using XPath"
 category: "UX"
 menu_order: 60
-tags: []
+tags: ["filter", "xpath"]
 ---
 
 ## 1 Introduction

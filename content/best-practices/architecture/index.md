@@ -8,9 +8,9 @@ layout: wide
 
 {{% partial "cards/arch-overview.html" %}}
 
-{{% partial "cards/arch-performance.html" %}}
-
 {{% partial "cards/arch-integration.html" %}}
+
+{{% partial "cards/arch-performance.html" %}}
 
 {{% partial "cards/arch-microservices.html" %}}
 

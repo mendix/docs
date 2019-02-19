@@ -48,6 +48,8 @@ These are the typical use cases when this overview will be helpful:
 
 This document can be used by Enterprise Architects to create positioning documents or in the work of portfolio planning. It can also be used as a baseline for technology selection and project initiation.
 
+{{% todo %}}[**GET DIAGRAM UPDATED**]{{% /todo %}}
+
 ![](attachments/overview/can-i-use-mendix.png)
 
 #### 1.1.2 Program or Product Expansion

@@ -1,7 +1,7 @@
 ---
 title: "Implement Best Practices for UX Design"
 category: "UX"
-menu_order: 66
+menu_order: 9
 tags: ["ux", "ui", "ux designer", "user experience", "design", "menu", "button", "typography", "card"]
 ---
 

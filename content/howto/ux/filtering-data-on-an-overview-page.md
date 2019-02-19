@@ -1,5 +1,5 @@
 ---
-title: "Filter Data on an Overview Page"
+title: "Filter Data on an Overview Page Using XPath"
 category: "UX"
 menu_order: 60
 tags: []
@@ -9,7 +9,9 @@ tags: []
 
 To filter data on your page, you can use the search bar functionality, or you can add an XPath constraint to your data grid. The search bar contains search fields that allow the end-user to quickly find the information he or she needs. XPath is a hard-coded constraint on your data grid that filters the data.
 
-This how-to will start with preparing a data structure and some example data. After this setup, you will filter your data with a search bar. Then you will filter your data using different XPath constraints. 
+This how-to will start with preparing a data structure and some example data. After this setup, you will filter your data with a search bar. Then you will filter your data using different XPath constraints.
+
+This how-to serves as a comparison for filtering data and emphasizes how to use XPath for the filtering.
 
 **This how-to will teach you how to do the following:**
 

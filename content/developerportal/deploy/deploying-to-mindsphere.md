@@ -21,7 +21,7 @@ You can create Mendix apps which make MindSphere API calls, but which are deploy
 There are some limitations to what you can do in your Mendix app if it is deployed to MindSphere. See section 4, [Limitations](#limitations), for more information.
 {{% /alert %}}
 
-To help you with your first MindSphere apps, there is also an example app which contains modules which call the MindSphere APIs. Please see [MindSphere Assets Example App](https://docs.mendix.com/refguide/mindsphere/mindsphere-example-app) for more information.
+To help you with your first MindSphere apps, there is also an example app which contains modules which call the MindSphere APIs. Please see [MindSphere Assets Example App](/howto/mindsphere/mindsphere-example-app) for more information.
 
 ## 2 Starter App and Theme Pack
 
@@ -486,7 +486,7 @@ To make your Mendix app multi-tenant, do the following:
     This ensures that every object is associated with the Tenant object of the user who creates it.
 2.  Every action on this object must have the following XPath constraint:  
     [MindSphereSingleSignOn.TenantObject_Tenant/MindSphereSingleSignOn.Tenant/MindSphereSingleSignOn.MindSphereAccount_Tenant='[%CurrentUser%]']  
-    This ensures that the user can only retrieve entities which belong to their tenant, in other words, where their Tenant matches the TenantId of the entity. You can copy and paste this constraint from here. You can also copy it from XPath constraint on the *TenantObject* entity in the *MindSphereSingleSignOn* module. For more information on XPath, see [XPath](https://docs.mendix.com/refguide/xpath).
+    This ensures that the user can only retrieve entities which belong to their tenant, in other words, where their Tenant matches the TenantId of the entity. You can copy and paste this constraint from here. You can also copy it from XPath constraint on the *TenantObject* entity in the *MindSphereSingleSignOn* module. For more information on XPath, see [XPath](/refguide/xpath).
 
 {{% alert type="info" %}}
 For consistency, it is recommended that all access to these entities is done through a sub-microflow which contains the XPath constraint. This enforces multi-tenant security.

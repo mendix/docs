@@ -28,12 +28,18 @@ If you plan on publishing an Android app, read Google's overview of [the Android
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Have a Mendix app with mobile support running in the Mendix Cloud, either as a free app or on a licensed cloud node
+
 * Have an account for Adobe PhoneGap Build (you can create one for free [here](https://build.phonegap.com/plans/free-adobeid))
+
 * Have an iOS device (iPhone or iPad) for testing the iOS package that will be produced
+
 * Have an iOS deployment certificate for which your test device is activated
     * You need both a *.p12* certificate file and a *.mobileprovision* profile file
     * For details on how to obtain app signing keys, see [Managing App Signing Keys](/refguide7/managing-app-signing-keys) in the Mendix Reference Guide
+
 * Have Apple iTunes installed on your computer for deploying the iOS package that will be produced on your test device
+
+    
 
 ## 3 Starting the Packaging Process<a name="StartingthePackagingProcess"></a>
 
@@ -117,13 +123,19 @@ To install the iOS app on your test device, follow these steps:
 
 The app should now be visible on your device. Open it and log in to the app with a regular user account (set one up in the Mendix app in your desktop browser if you have not done so yet).
 
-## 7 Examples
+## 7 Publishing an Android Version
+
+From Google's [overview](https://developer.android.com/studio/publish/) I see several prerequisite steps. I wonder if I should include those in the prerequisite list of this document, and if it would be possible to cut that list in two divided by iOS and Android requirements.
+
+I think most of the steps I'll put here will be from Google's [Preparing for Release](https://developer.android.com/studio/publish/preparing) page. I'm not sure, however, if I can put all the steps from that link into this section of the document or if some steps from the link should be integrated into earlier secttions of this document.
+
+## 8 Examples
 
 **How to build a Phonegap app in the cloud**
 
 {{% youtube 7ic625u2YJE %}}
 
-## 8 Read More
+## 9 Read More
 
 * [Mobile How-To's](../mobile/)
 * [How to Deploy your First Hybrid Mobile App](deploy-your-first-hybrid-mobile-app)

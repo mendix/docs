@@ -45,22 +45,28 @@ The view of the **General** tab depends on the Mendix Cloud version on which the
 
 On the right side of the screen, you can find the following action buttons:
 
+* **Restart Application**
 * **Start/Stop Application**
 * **Show Logged in Users**
 * **Change Admin Password**
-* **View Current Log**
 
 #### 2.1.1 Debugger in Mendix Cloud v3
 
 ![](attachments/environments-details/actions-v3.png)
 
-In Mendix Cloud v3 environments, you can click **Enable/Disable Debugging** to enable or disable the debugger option. For more information about enabling the debugger, see [How to Debug Microflows Remotely](/howto7/monitoring-troubleshooting/debug-microflows-remotely)
+In Mendix Cloud v3 environments, you have two additional action buttons:
+
+* **View Current Log**
+* **Enable/Disable Debugging** to enable or disable the debugger option. For more information about enabling the debugger, see [How to Debug Microflows Remotely](/howto7/monitoring-troubleshooting/debug-microflows-remotely)
 
 #### 2.1.2 Debugger in Mendix Cloud v4
 
 ![](attachments/environments-details/actions-v4.png)
 
-In Mendix Cloud v4 environments, the debugger is always enabled. You can click **Show debugger information** to show the settings to connect the debugger in your Mendix Desktop Modeler to your app.
+In Mendix Cloud v4 environments, you have two additional action buttons:
+
+* **View Live Log**
+* **Show debugger information** to show the settings to connect the debugger in your Mendix Desktop Modeler to your app. for Mendix Cloud v4, the debugger is *always* enabled.
 
 ### 2.2 Scaling – Mendix Cloud v4
 
@@ -236,9 +242,13 @@ For more information about log levels, see [How to Set Log Levels](/howto/monito
 
 ## 6 Runtime Tab{#runtime-tab}
 
+On this tab, you can add **Custom Runtime Settings** and **Custom Environment Variables**
+
 ![](attachments/environments-details/runtime.png)   
 
-On this tab, you can perform the following actions:
+### 6.1 Custom Runtime Settings
+
+Use the Custom Runtime Settings section to perform the following actions:
 
 * **Add** a new runtime **setting** with a new **value**
 * **Edit** the runtime setting
@@ -246,7 +256,7 @@ On this tab, you can perform the following actions:
 
 For more information about runtime settings, read the [Custom Settings](/refguide/custom-settings) and [Tricky Custom Settings in Mendix Runtime](/refguide/tricky-custom-runtime-settings) documentation.
 
-The Mendix Cloud uses runtime settings to configure the included systems for logs, backups, and database. Therefore, the following settings are not configurable by users:
+The Mendix Cloud uses runtime settings to configure the included systems for logs, backups, and database. Therefore, the following settings are **not** configurable by users:
 
 * `com.mendix.core.localfilesystem.cleaning.isEnabled`
 * `com.mendix.core.localfilesystem.cleaning.time`
@@ -272,6 +282,10 @@ The Mendix Cloud uses runtime settings to configure the included systems for log
 * `ScheduledEventExecution`
 * `TempPath`
 * `WebServiceClientCertificates`
+
+### 6.2 Custom Environment Variables
+
+Use the Custom Environment Variables to **add**, **Edit**, or **Delete** an environment variable. Unlike the Custom Runtime Settings, the variables you add have to be chosen from a drop-down list.
 
 ## 7 Maintenance Tab
 

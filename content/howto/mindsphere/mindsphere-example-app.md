@@ -4,12 +4,13 @@ category: "Siemens MindSphere"
 #menu_order: Enter the position of the document in the category or under the parent; number by 10 (for first), 20, 30, etc. for easy ordering of other documents in the future if necessary; don't add brackets or quotation marks; if no number is added, the system will add an extremely high number to order the documents, which means that if you only want a document to appear at the top, you only have to add "10" to that specific document, you don't have to order all the other documents in the category/under the parent
 description: "What does the MindSphere Example App do and how does it work?"
 tags: ["Siemens", "MindSphere", "Example", "Asset Management", "Time Series", "REST", "API", "Pump"]
-draft: true
 ---
 
 ## 1 Introduction
 
-You can write Mendix apps which analyze data held in MindSphere, the open, cloud-based IoT operating system from Siemens. To help you build your app, there is an example app which can be downloaded from the Mendix App Store.
+You can write Mendix apps which analyze data held in MindSphere, the open, cloud-based IoT operating system from Siemens. To help you build your app, there is the **Pump Asset Example** app which can be downloaded as the starting point for a new app when you are creating a Mendix app.
+
+![Pump Asset Example App on the Mendix Create New App page](attachments/mindsphere-example-app/create-new-app.png)
 
 This documentation provides more explanation of the MindSphere example app. Please note that this app is not production-ready. It is designed as an example of how you might begin to build a Mendix/MindSphere app.
 
@@ -238,7 +239,7 @@ However, MindSphere will queue this request internally and the data will not be 
 
 The MindSphere Example App uses the MindSphere Asset Management Connector to obtain asset information from MindSphere.
 
-The MindSphereAssetManagementConnector module is the standard connector for managing assets within MindSphere. It can be found in the App Store modules of the example app. It is also available as a stand-alone module in the App Store: [MindSphere Asset Management Connector](https://appstore.home.mendix.com/link/app/108527/).
+The MindSphereAssetManagementConnector module is the standard connector for managing assets within MindSphere. It can be found in the App Store modules of the example app. It is also available as a stand-alone module in the App Store: [MindSphere Asset Management Connector](https://appstore.home.mendix.com/link/app/108806/).
 
 ![MindSphereAssetManagementConnector folder structure](attachments/mindsphere-example-app/image16.png)
 

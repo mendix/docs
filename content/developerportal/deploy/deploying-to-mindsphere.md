@@ -29,16 +29,16 @@ You will need to customize your app to allow it to be deployed to MindSphere and
 
 ### 2.1 Obtaining MindSphere Customization
 
-There are two ways to include the customization your need in your app.
+There are two ways to include the customization you need in your app.
 
 #### 2.1.1 Use the MindSphere Starter App
 
 The MindSphere Starter App contains all the modules and styling which you need to create an app you want to deploy to MindSphere. Choose the MindSphere starter app when creating your Mendix app.
 
-![](attachments/deploying-to-mindsphere/image1.png)
+![Siemens/MindSphere starter app on the Mendix "Create App" screen](attachments/deploying-to-mindsphere/image1.png)
 
 {{% alert type="info" %}}
-This is the recommended approach if you are building a new application, as it will provide all the necessary building blocks to get started.
+This is the recommended approach if you are building a new application as it will provide all the necessary building blocks to get started.
 {{% /alert %}}
 
 #### 2.1.2 Add the MindSphere Theme Pack{#themepack}
@@ -47,10 +47,10 @@ If you have an existing app which was not based on the MindSphere starter app, y
 
 MindSphere_UI_Resources includes the following:
 
-* Atlas UI theme for MindSphere apps
-* updated index.html file
-* new MindSphereLogin.html file
-* New permission denied page (error_page/403.html)
+* an Atlas UI theme for MindSphere apps
+* an updated index.html file
+* a new MindSphereLogin.html file
+* a new permission denied page (error_page/403.html)
 
 {{% alert type="warning" %}}
 The Theme does not contain modules for SSO or the OS Bar. These modules will need to be downloaded separately.
@@ -70,7 +70,7 @@ The SSO module also requires changes to the app theme see section 2.1.2, [Add th
 
 The following constants in the MindSphereSingleSignOn module need to be configured.
 
-![](attachments/deploying-to-mindsphere/image2.png)
+![Folder structure of the MindSphereSingleSignOn module](attachments/deploying-to-mindsphere/image2.png)
 
 **LocalDevelopment**
 
@@ -92,19 +92,19 @@ This is the URL where the public key can be found to enable token validation dur
 
 The MindSphereSingleSignOn module also provides three microflows which are used to support SSO within MindSphere and allow the user’s **tenant** and **email** to be obtained for use within the app.
 
-![](attachments/deploying-to-mindsphere/image3.png)
+![Folder structure showing microflows in the MindSphereSingleSignOn module](attachments/deploying-to-mindsphere/image3.png)
 
 **RegisterSingleSignOn**
 
 This microflow must be added to the *Runtime* tab of the *Project > Settings* dialog, accessed through the *Project Explorer*. It needs to be selected as the *After startup* microflow or added as a sub-microflow to an existing after startup microflow.
 
-![](attachments/deploying-to-mindsphere/image4.png)
+![Project settings dialog](attachments/deploying-to-mindsphere/image4.png)
 
 **DS_MindSphereAccessToken**
 
 This microflow populates the *MindSphereToken* entity.
 
-![](attachments/deploying-to-mindsphere/image5.png)
+![Domain model showing MindSphereToken entity](attachments/deploying-to-mindsphere/image5.png)
 
 If the access token can be retrieved from the environment, this is used. If a valid token cannot be retrieved, *and the app is running locally*, then the user is asked to sign on by providing their credentials manually. This enables the app to be tested locally, without having to be deployed to the MindSphere environment after every change.
 
@@ -115,16 +115,16 @@ If the app cannot retrieve a valid token and is *not* running locally, then an e
 The Access_token attribute needs to be passed as the *Authorization* header in REST calls to MindSphere APIs.
 
 {{% alert type="info" %}}
-The MindSphereToken has a short time before it expires, and therefore it needs to be refreshed before each call to any MindSphere API. This is done using the *Access token* action which returns the latest MindSphereToken.
+The MindSphereToken has a short time before it expires, and therefore needs to be refreshed before each call to any MindSphere API. This is done using the *Access token* action which returns the latest MindSphereToken.
 {{% /alert %}}
 
-![](attachments/deploying-to-mindsphere/image6.png)
+![Section of a microflow showing the Access token action and the Edit Custom HTTP Header dialog in the Call REST action](attachments/deploying-to-mindsphere/image6.png)
 
 **DS_MindSphereAccount**
 
-This microflow populates the *Name* attribute of the *Tenant* entity and the *Email* attribute of the *MindSphereAccount entity from the MindSphere account details of the user.* These are extensions to the Mendix User Object which assist the creation of multi-tenant apps.
+This microflow populates the *Name* attribute of the *Tenant* entity and the *Email* attribute of the *MindSphereAccount* entity from the MindSphere account details of the user. These are extensions to the Mendix User Object which assist the creation of multi-tenant apps.
 
-![](attachments/deploying-to-mindsphere/image7.png)
+![Domain model showing MindSphereAccount, Tenant, and TenantObject.](attachments/deploying-to-mindsphere/image7.png)
 
 {{% alert type="info" %}}
 If the same user logs in using a different tenant, Mendix will treat this as a different user and a User ID will be used within Mendix instead of a user name. 
@@ -161,33 +161,33 @@ The mapping in the starter app is:
 
 In MindSphere, these roles will look like this:
 
-![](attachments/deploying-to-mindsphere/image8.png)
+![MindSphere Authorization Management screen](attachments/deploying-to-mindsphere/image8.png)
 
 And in the Mendix example app they will be mapped to these roles:
 
-![](attachments/deploying-to-mindsphere/image9.png)
+![Mendix Project Security dialog](attachments/deploying-to-mindsphere/image9.png)
 
 ### 2.3 MindSphere OS Bar
 
 All MindSphere apps must have a MindSphere OS Bar. This unifies the UI of all MindSphere apps. It is used for showing the app name, routing back to the Launchpad, and logging out from MindSphere easily. Apps without the MindSphere OS Bar will not be validated for deployment to a MindSphere production environment.
 
-You can see how the MindSphere OS Bar Integration works in [MindSphere OS Bar Integration](https://developer.mindsphere.io/resources/osbar/resources-osbar-getting-started.html#mindsphere-os-bar-integration), on the MindSphere developers website.
+You can see how the MindSphere OS Bar Integration works in [MindSphere OS Bar Integration](https://developer.mindsphere.io/resources/osbar/resources-osbar-getting-started.html#mindsphere-os-bar-integration), on the MindSphere developer website.
 
 The MindSphereOSBarConfig module creates an endpoint which is used by the MindSphere OS Bar to provide tenant context and information about the application. The MindSphereOSBarConfig module is included in the MindSphere starter app, or can be downloaded from the Mendix App Store here: [MindSphere OS Bar Connector](https://appstore.home.mendix.com/link/app/108526/).
 
 {{% alert type="info" %}}
-The MindSphere OS Bar Connector also needs the MindSphere Theme Pack, or manual configuration to the index.html file in order to work. See sections 2.1.2, [Add the MindSphere Theme Pack](#themepack) and 2.4, [index.html Changes](#indexhtmlchanges).
+The MindSphere OS Bar Connector also needs the MindSphere Theme Pack, or manual configuration of the index.html file in order to work. See sections 2.1.2, [Add the MindSphere Theme Pack](#themepack) and 2.4, [index.html Changes](#indexhtmlchanges).
 {{% /alert %}}
 
 #### 2.3.1 Configuring the OS Bar
 
 Within the OS Bar you can see information about the app you are running.
 
-![](attachments/deploying-to-mindsphere/image10.png)
+![Example of the information in the OS Bar](attachments/deploying-to-mindsphere/image10.png)
 
 This is configured as a JSON object held in the string constant **Config** in the *MindSphereOSBarConfig* module.
 
-![](attachments/deploying-to-mindsphere/image11.png)
+![Dialog for setting the Config constant for the OS Bar](attachments/deploying-to-mindsphere/image11.png)
 
 The JSON should contain the following information:
 
@@ -332,7 +332,7 @@ If you are using the starter app, you should create two roles, *user* and *admin
 
 ![](attachments/deploying-to-mindsphere/image8.png)
 
-### 3.2 User Roles
+### 3.3 User Roles
 
 Once you have created the scopes for your app, you will need to assign them to the users who you want to have access to the app.
 

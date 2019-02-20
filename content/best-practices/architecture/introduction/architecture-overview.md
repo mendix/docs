@@ -1,6 +1,6 @@
 ---
 title: "Architecture Overview"
-category: "Architecture"
+parent: "architecture-bp-intro"
 description: "Best practices for architecture."
 menu_order: 2
 draft: true

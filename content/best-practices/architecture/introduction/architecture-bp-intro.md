@@ -1,5 +1,5 @@
 ---
-title: "Architecture Best Practices"
+title: "Introduction"
 category: "Architecture"
 description: "Best practices for architecture."
 menu_order: 1

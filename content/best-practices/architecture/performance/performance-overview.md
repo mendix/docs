@@ -1,5 +1,5 @@
 ---
-title: "Performance Best Practices"
+title: "High Performance"
 category: "Architecture"
 menu_order: 4
 description: "Presents a set of guidelines for building high-performance Mendix apps."

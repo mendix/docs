@@ -10,11 +10,11 @@ draft: true
 
 Mendix is optimized for the easiest and fastest way to develop and maintain apps that fulfil a business function.
 
-The [Mendix Evaluation Guide](https://www.mendix.com/evaluation-guide/) provides a great overview of all the possibilities and features in the Mendix Platform, and the [Mendix Reference Guide](/refguide/) explains the product in detail.
+The [Mendix Evaluation Guide](https://www.mendix.com/evaluation-guide/) provides a great overview of all the possibilities and features in the Mendix Platform, the [Mendix Reference Guide](/refguide/) explains the product in detail, and the [Mendix How-to's](/howto/) provide developers with instructions on how to do things in Mendix.
 
-With the **Best Practices** documentation, we want to share information on how to approach typical challenges and solve specific use cases. This documentation is written by experts in the field, and sometimes it refers to real product examples available in the [Mendix App Store](https://appstore.home.mendix.com).
+With the **Best Practices** documentation, we want to share information on how to approach typical challenges and solve specific use cases. We will be looking at different solution options that may be valid under certain circumstances. 
 
-While there are many ways to solve problems, we do not suggest that these are the only ways. We want to present ideas on how to realize solutions that are stable and easy to maintain in areas such as [architecture](../architecture/index), UX & design thinking, DevOps & Agile, and quality assurance.
+This documentation is written by Mendix employees, and sometimes it refers to real product examples available in the [Mendix App Store](https://appstore.home.mendix.com).
 
 ### 1.1 About Best Practices
 
@@ -24,7 +24,9 @@ Best Practices will eventually be valuable for all the people that participate i
 
 ![](attachments/overview1.png)
 
-### 1.2 Planned Best Practices
+These best practices do not provide complete solutions. Instead, they provide key parts of solutions that can be used for reference and sometimes partly copied. They should always be adapted to the specific situation of the your implementation.
+
+### 1.2 Best Practice Areas
 
 These best practices will be expanded on an ongoing basis to cover the following areas:
 
@@ -41,7 +43,7 @@ These best practices will be expanded on an ongoing basis to cover the following
 
 ### 1.3 Structure of Best Practices
 
-For each category and sub-category of best practices, there will be an overview that covers the breadth of the area discussed. This will be followed by a number of specific areas or use cases that are covered more in detail. These will refer to more detailed information in the [Mendix Reference Guide](/refguide/) or [Mendix How-to's](/howto/) that explains the product. The best practices will sometimes include example implementations in the App Store.
+For each category and sub-category of best practices, there will be an overview that covers the breadth of the area discussed. This will be followed by a number of specific areas or use cases that are covered more in detail. These will refer to more detailed Mendix documentation that explains the product. The best practices will sometimes include example implementations in the App Store.
 
 {{% todo %}}[**UPDATE DIAGRAM**]{{% /todo %}}
 
@@ -55,17 +57,15 @@ Mendix organizes subject matter experts from different parts of the organization
 
 At this point in Mendix, there is an Architecture Guild and a UX Guild, and there is a plan for a DevOps Guild and a Quality Assurance Guild.
 
-Members of these guilds own the content of the best practices. They also own the Best Practices items in the App Store, which are examples of the best ways to implement certain solutions for certain use cases.
+Members of these guilds own the content of the best practices. They also own the Best Practices items in the App Store, which are examples of the best ways to implement things for certain use cases.
 
 {{% todo %}}[**ADD APP STORE LINK WHEN AVAILABLE**]{{% /todo %}}
 
 ### 2.2 How Can These Best Practices Help Me?
 
-If you are relatively new to an area covered by the best practices, the overview document should quickly bring you up to speed with the most important considerations. The overview documents will also help experienced users verify that they have considered the context while providing ideas on how to plan work.
+The overview documents should quickly bring you up to speed with the most important considerations for a particular subject. These overviews are intended for Architects, Managers, Lead Developers, and other senior stakeholders.
 
-The detailed description and use cases are intended for semi-experienced users who have already worked in a respective area so that they can compare against how a Mendix expert sees a specific use case.
-
-A use case is intended to be business-oriented, so it can be solved in many ways. Each Mendix best-practice use case quickly lists the different ways to solve the case, and then it suggests in detail the best way to implement the solution, often while using an example in the App Store.
+The detailed descriptions and use cases are intended for experienced Mendix users who have already worked in a respective area. These documents will list different ways to solve a case and suggest in detail the best ways to implement them.
 
 Some use cases will refer to examples in the App Store. These App Store items are not finished products, instead serving as small reference implementations that solve a single business problem. You can view these as examples for picking up ideas, or you can copy parts of them as starting points for building robust solutions with good error handling.
 
@@ -81,13 +81,13 @@ These best practices are a valuable addition to this activity, as the informatio
 
 ### 2.4 Can I Create Best Practices?
 
-{{% todo %}}[**UPDATE THIS SECTION TO FOCUS ON MVPs INSTEAD?**]{{% /todo %}}
-
-As part of the guild culture, we stimulate creative discussions that lead teams and stakeholderss forward.
+As part of the guild culture, Mendix stimulates creative discussions that lead teams and stakeholderss forward.
 
 As best practices are published, we hope to get feedback and ideas related to the material. If the feedback case is strong and time allows, there will be updates and improvements done by the topic authors.
 
 We will reserve the App Store **Best Practices** category for examples that have been created inside Mendix. This means that you know these App Store items are coming directly  from Mendix and they will be kept up to date.
+
+{{% todo %}}[**ACCURATE NAME OF APP STORE SECTION?**]{{% /todo %}}
 
 ### 2.5 What's Next?
 

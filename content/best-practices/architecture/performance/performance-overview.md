@@ -48,9 +48,7 @@ These are the typical use cases when this overview will be helpful:
 
 This document can be used by Enterprise Architects to create positioning documents or in the work of portfolio planning. It can also be used as a baseline for technology selection and project initiation.
 
-{{% todo %}}[**GET DIAGRAM UPDATED**]{{% /todo %}}
-
-![](attachments/overview/can-i-use-mendix.png)
+![](attachments/overview/high-perf-mendix.png)
 
 #### 1.1.2 Program or Product Expansion
 
@@ -66,7 +64,9 @@ This document is followed by use case-specific guidelines that in turn relate to
 
 There is also the Mendix Expert training module [Performance Guidelines](https://gettingstarted.mendixcloud.com/link/module/127/lecture/1031) as well as [How to Detect & Resolve PErformance Issues](/howto/monitoring-troubleshooting/detect-and-resolve-performance-issues).
 
-![](attachments/overview/high-perf-mendix.png)
+{{% todo %}}[**GET DIAGRAM UPDATED**]{{% /todo %}}
+
+![](attachments/overview/can-i-use-mendix.png)
 
 ## 2 Overview of High Performance
 
@@ -129,6 +129,84 @@ monitoring for all apps is that these measures add to the cost and time for deve
 In some cases, tuning may use Java actions, SQL, and blobbing data. This can improve performance, but it makes maintenance harder and may require higher skill levels for changes and operations.
 
 The most cost-effective way for an organization to operate an app landscape is to approach performance and stability with a conscious knowledge of what is required for each app. Then, you should focus time, investment, and attention on the most critical systems, while leaving other systems lightweight and agile.
+
+## 3 Designing for Volume
+
+When preparing to design and build a system that requires high- volume processing and high levels of availability, it is important to focus in on the specifics of the situation at hand and make the design work in favor of the situation.
+
+{{% todo %}}[**ADD SENTENCE WHEN CROSS-REFERENCED DOC/SECTION AVAILABLE: "For more information on how to design for volume, see "Designing for Volume," which looks at different architecture approaches."**]{{% /todo %}}
+
+You can also reference these use cases:
+
+{{% todo %}}[**ADD LINKS WHEN DOCS/SECTIONS AVAILABLE**]{{% /todo %}}
+
+* High throughput processing
+* Large amount of concurrent users
+* Working on large datasets
+* Working on a geographically distributed system
+* Requirements for high availability
+
+When moving towards core systems with a large amount of functionality, Mendix recommends looking at a microservices architecture.
+
+## 4 Sizing & Scaling
+
+After designing and architecting a system, you need to do a preliminary sizing. There may be more than one app that needs to be sized, in the case of functional scaling or a microservices architecture. For each app, you need to determine the criticality and an initial estimate on the following factors:
+
+* How large the app container should be
+* Should there be load balancing
+* What the app server-level failover is
+* Database fallback scenarios
+* Whether you need customized containers or dynamic scaling
+
+At the end of development, you should revisit the sizing based on realistic tests with realistic test data.
+
+For more information, see [Sizing & Scaling](sizing-scaling).
+
+## 4 Performance Testing & Tuning
+
+For most apps, there is no need for performance testing and tuning during the creation of an app. Functional testing is enough, as it will reveal pages that load slowly that can be tuned.
+
+However, for more critical and high-volume systems, Mendix recommends taking a careful look at how to secure testing and tuning for good performance. This is an iterative approach that can be done during and/or after the creation of a new app or system of apps.
+
+To read more, see [Testing & Tuining](testing-tuning).
+
+{{% todo %}}[**ADD TO ABOVE WHEN CROSS-REFERENCED DOC/SECTION AVAILABLE: "Detecting & Resolving Performance Issues."**]{{% /todo %}}
+
+## 5 Deployments & Stability
+
+Next step is to make sure that deployments are safe and that the apps run correctly in production once they are deployed. There are a number of different strategies to achieve high availability and avoid disturbing business operations.
+
+For details, see [Deployments & Stability](deployments-stability).
+
+## 6 Team & Skills
+
+As the necessary levels of design, architecture, testing, tuning, and app-criticality become clear, you may need to adjust the skills level of your team. Naturally, more critical apps that need to handle more volume will need more experienced designers and developers.
+
+{{% todo %}}[**ADD TO WHEN CROSS-REFERENCED DOC/SECTION AVAILABLE: "For details, see Team and Skills."**]{{% /todo %}}
+
+## 7 Guidelines for Performance
+
+Mendix also provides a set of useful guidelines for the Developers and Testers of Mendix apps that require high-performance. 
+
+{{% todo %}}[**ADD TO WHEN CROSS-REFERENCED DOCS/SECTIONS AVAILABLE: "These are divided into the following documents: "Overview of Performance Guidelines," "-   UX Design for Good Performance," "Modelling Guidelines for Performance," "Domain Model & Indexing," "Data Retrieval/Storage for High Volume," and "Integration Guidelines for High Volume." **]{{% /todo %}}
+
+For more information, see [How to Implement Community Best Practices for App Performance ](/howto/general/community-best-practices-for-app-performance) as well as [Three Tools to Test Your Mendix Application](https://www.mendix.com/blog/three-tools-to-test-your-mendix-application/).
+
+## 8 Summary
+
+In summary, the Mendix Platform can be used for almost all situations found in the business application landscape of a typical enterprise. The most important thing to do is pay the correct amount of attention to team skills, good modelling, tuning, performance-testing, sizing, scaling, and operational monitoring and procedures.
+
+Mendix will often not play well in the area of business intelligence, analytics, and data warehousing. There are also better tools for content management. In addition, there are a lot of great SaaS tools out there that make sense when the functionality is standard across industries and very little customization is needed.
+
+But for almost all other cases, Mendix is a good choice due to the following characteristics:
+* Seamless development
+* Operational experience
+* Speed of development
+* Ease of use
+
+As a Mendix customer, you can decide on system borders, align to your own processes, and make smart functional microservices that fit your functional and technical needs. In addition, as this overview demonstrates, you can build microservices that adapt to the volumes and criticality of your system.
+
+# OLD DRAFT BELOW - MUST BE DIVIDED INTO NEWER DOC(S)
 
 ## 3 Sizing & Scaling
 
@@ -389,15 +467,3 @@ A professional Ops team with professional tooling that owns the alarms, professi
 A professional CI/CD team will enable auto-testing and controlled repeatable deployments, limiting risk and improving availability, which is important for large and critical systems.
 
 At the same time, it is important to be smart with what is required for monitoring and automation so that centralized Ops and CI/CD teams do not stifle the flexibility and agility of DevOps teams that deliver to the business. Not every app needs the same level of monitoring and automation, because then agility is reduced and costs are increased where that is not necessary.
-
-## 7 Summary
-
-In summary, the Mendix platform can be used for almost all the situations found in the business application landscape of a typical enterprise.
-
-It is all a matter of the correct attention being paid to the skills of the team in addition to good app modelling, tuning, performance testing, sizing, scaling, and operational monitoring and following procedures.
-
-Mendix will often not play well in the areas of business intelligence, analytics, and data warehousing, and there are better tools for content management, for example. There are also many great SaaS tools out there that make sense when the functionality is standard cross-industry and very little customization is needed.
-
-But for almost all other cases, Mendix is a good choice for its seamless development and operational experience, speed of development, and ease-of-use. 
-
-The customer can decide the system borders, align with their own processes, and make smart and functional microservices that fit their functional and technical needs. As this document shows, these microservices can adapt to the volume and criticality of the system.

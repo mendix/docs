@@ -59,11 +59,7 @@ Members of these guilds own the content of the best practices. They also own the
 
 {{% todo %}}[**ADD APP STORE LINK WHEN AVAILABLE**]{{% /todo %}}
 
-### 2.2 Are These "Best Practices" or "Good Practices"?
-
-This type of documentation could have been called "good practices," because there is no guarantee that there is not an even better way to solve a specific use case. This documentation simply covers the best way that an experienced Mendix employee in that area knows how to accomplish something. In addition, each best practice is reviewed by someone else in the respective guild.
-
-### 2.3 How Can These Best Practices Help Me?
+### 2.2 How Can These Best Practices Help Me?
 
 If you are relatively new to an area covered by the best practices, the overview document should quickly bring you up to speed with the most important considerations. The overview documents will also help experienced users verify that they have considered the context while providing ideas on how to plan work.
 
@@ -73,7 +69,7 @@ A use case is intended to be business-oriented, so it can be solved in many ways
 
 Some use cases will refer to examples in the App Store. These App Store items are not finished products, instead serving as small reference implementations that solve a single business problem. You can view these as examples for picking up ideas, or you can copy parts of them as starting points for building robust solutions with good error handling.
 
-### 2.4 The Mendix Community& Knowledge Sharing
+### 2.3 The Mendix Community & Knowledge Sharing
 
 There is a great community around Mendix that constantly shares ideas, best practices, and solutions via the [Buzz](/developerportal/collaborate/buzz), [Meetups](https://www.meetup.com/Mendix-Netherlands/), partner presentations, and the [Mendix Forum](https://forum.mendixcloud.com).
 
@@ -83,7 +79,9 @@ This culture of sharing and learning is at the heart of what Mendix believes in:
 
 These best practices are a valuable addition to this activity, as the information and implementations will come directly from Mendix experts in their respective guilds.
 
-### 2.5 Can I Create Best Practices?
+### 2.4 Can I Create Best Practices?
+
+{{% todo %}}[**UPDATE THIS SECTION TO FOCUS ON MVPs INSTEAD?**]{{% /todo %}}
 
 As part of the guild culture, we stimulate creative discussions that lead teams and stakeholderss forward.
 
@@ -91,7 +89,7 @@ As best practices are published, we hope to get feedback and ideas related to th
 
 We will reserve the App Store **Best Practices** category for examples that have been created inside Mendix. This means that you know these App Store items are coming directly  from Mendix and they will be kept up to date.
 
-### 2.6 What's Next?
+### 2.5 What's Next?
 
 Creating thorough documents and examples takes time, and the best practices will be built up gradually over time.
 

@@ -11,7 +11,11 @@ Once you have finished developing a Mendix mobile application, you will want to 
 
 The hybrid mobile app publishing process is based on Adobe PhoneGap. Manually using Adobe PhoneGap is very tedious, because you need both a Microsoft Windows machine and an Apple Mac machine, and they need to be set up with the correctly configured development environments. However, we have integrated the [Adobe PhoneGap Build](https://build.phonegap.com/) service into Mendix to eliminate this burden and to provide support for automatically building the required hybrid mobile packages. Instead of worrying about technical details, you can focus on the essentials: rapidly developing an app to support your business processes.
 
-This how-to leads you step-by-step through the process of packaging your Mendix app as a hybrid mobile app that you can then deploy on your iOS developer device or publish in the Apple App Store.
+This how-to leads you step-by-step through the process of packaging your Mendix app as a hybrid mobile app that you can then deploy on your iOS developer device -- or publish in the Apple App Store, Google Play Store, or Amazon App Store.
+
+Apple provides general information on [publishing an iOS app in the Apple App Store](https://developer.apple.com/programs/ios/distribute.html). Before uploading your app, make sure to check the [App Review Guidelines](https://developer.apple.com/app-store/review/) to make sure your app will be accepted. You require an Apple Developer Account. If you do not have one, [register as an Apple Developer](https://developer.apple.com/register/index.action).
+
+If you plan on publishing an Android app, read Google's overview of [the Android app publishing process](http://developer.android.com/tools/publishing/publishing_overview.html). Before submitting your app to an app store, [review the launch checklist](http://developer.android.com/distribute/tools/launch-checklist.html). Google provides information on [publishing your app in the Google Play Store](http://developer.android.com/distribute/googleplay/index.html), and Amazon provides information on [how to submit your app to the Amazon App Store](https://developer.amazon.com/public/support/submitting-your-app).
 
 **This how-to will teach you how to do the following:**
 

@@ -6,7 +6,7 @@ draft: true
 
 ## Authentication
 
-Each call also requires the parameters 'username' and 'password'. These are the public credentials you will find below; actual authentication of requests is done through API keys.
+Each call also requires the parameters `username` and `password`. These are the public credentials you will find below. The actual authentication of requests is done through API keys.
 
 * username: PlatformAPIUser
 * password: PlatformAPIPassword
@@ -21,145 +21,145 @@ This microflow creates a new sprint for the specified project and returns the ID
 
 | Parameter Name | Parameter Type | Description
 | --- | --- | --- |
-| ApiKey | String | The API Key the application uses to access the Stories API for this project.
-| DurationInWeeks | Integer/Long | Duration of the new sprint in weeks.
-| Name | String | Name of the new sprint.
-| ProjectID | String | The ID of the project.
-| StartDate | Date and time | Start date for the new sprint. If not filled, the sprint will automatically start directly after * the previous sprint. (optional)
-| StartsAfterSprint | Integer/Long | ID of the Sprint directly preceding the new sprint.
+| ApiKey | String | The API key the application uses to access the Stories API for this project.
+| DurationInWeeks | Integer/Long | The duration of the new sprint in weeks.
+| Name | String | The name of the new sprint.
+| ProjectID | String | The ID of the app project.
+| StartDate | Date and time | The start date for the new sprint (optional). If not filled, the sprint will automatically start directly after the previous sprint.
+| StartsAfterSprint | Integer/Long | The ID of the sprint directly preceding the new sprint.
 
 * Return value – Integer/Long
 
-### Microflow CreateStory
+### CreateStory Microflow
 
-This microflow creates a new story in the specified sprint and returns the ID of the new story. Parameters:
+This microflow creates a new story in the specified sprint and returns the ID of the new story. These are the parameters:
 
 | Parameter Name | Parameter Type | Description
 | --- | --- | --- |
-| ApiKey | String | The API Key the application uses to access the Stories API for this project.
-| Description | String | Description of the story (optional)
-| Name | String | Name of the new story.
-| Points | Enumeration StoryPoints | Number of story points. If left empty will be set to 1\. (_1/_2/_3/_5/_8/_13/_20/_/40/_100, optional)
+| ApiKey | String | The API Key the application uses to access the Stories API for this app project.
+| Description | String | A description of the story (optional).
+| Name | String | The name of the new story.
+| Points | Enumeration StoryPoints | The number of story points. If left empty, will be set to 1\. (_1/_2/_3/_5/_8/_13/_20/_/40/_100, optional)
 | ProjectID | String | The ID of the project.
 | SprintID | Integer/Long | The ID of the sprint.
-| StoryType | Enumeration StoryType | The type of the story (Feature or Bug)
+| StoryType | Enumeration StoryType | The type of story (Feature or Bug).
 
 * Return value – Integer/Long
 
-### Microflow CreateTask
+### CreateTask Microflow
 
-This microflow creates a new task for the specified story and returns the ID of the new task. Parameters:
+This microflow creates a new task for the specified story and returns the ID of the new task. These are the parameters:
 
 | Parameter Name | Parameter Type | Description
 | --- | --- | --- |
-| ApiKey | String | The API Key the application uses to access the Stories API for this project.
-| Description | String | Description of the task (optional)
-| Name | String | Name of the new task.
-| ProjectID | String | The ID of the project.
+| ApiKey | String | The API key the application uses to access the Stories API for this app project.
+| Description | String | A description of the task (optional).
+| Name | String | The name of the new task.
+| ProjectID | String | The ID of the app project.
 | StoryID | Integer/Long | The ID of the story.
 
 * Return value – Integer/Long
 
-### Microflow GetSprintByID
+### GetSprintByID Microflow
 
-This microflow retrieves a specific sprint. Parameters:
+This microflow retrieves a specific sprint. These are the parameters:
 
 | Parameter Name | Parameter Type | Description
 | --- | --- | --- |
-| ApiKey | String | The API Key the application uses to access the Stories API for this project.
-| ProjectID | String | The ID of the project.
+| ApiKey | String | The API Key the application uses to access the Stories API for this app project.
+| ProjectID | String | The ID of the app project.
 | SprintID | Integer/Long | The ID of the sprint.
 
 * Return value – Sprint_Transient
 
-### Microflow GetSprints
+### GetSprints Microflow
 
-This microflow retrieves all sprints in a specific project. Parameters:
+This microflow retrieves all sprints in a specific project. These are the parameters:
 
 | Parameter Name | Parameter Type | Description
 | --- | --- | --- |
-| ApiKey | String | The API Key the application uses to access the Stories API for this project.
-| ProjectID | String | The ID of the project.
+| ApiKey | String | The API key the application uses to access the Stories API for this app project.
+| ProjectID | String | The ID of the app project.
 
 * Return value – List of Sprint_Transient
 
-### Microflow GetStories
+### GetStories Microflow
 
-This microflow retrieves all stories in a specific sprint. Parameters:
+This microflow retrieves all stories in a specific sprint. These are the parameters:
 
 | Parameter Name | Parameter Type | Description
 | --- | --- | --- |
-| ApiKey | String | The API Key the application uses to access the Stories API for this project.
-| ProjectID | String | The ID of the project.
+| ApiKey | String | The API key the application uses to access the Stories API for this app project.
+| ProjectID | String | The ID of the app project.
 | SprintID | Integer/Long | The ID of the sprint for which stories are being retrieved.
 
 * Return value – List of Story_Transient
 
-### Microflow GetStoryByID
+### GetStoryByID Microflow
 
-This microflow retrieves a specific story. Parameters:
+This microflow retrieves a specific story. These are the parameters:
 
 | Parameter Name | Parameter Type | Description
 | --- | --- | --- |
-| ApiKey | String | The API Key the application uses to access the Stories API for this project.
-| ProjectID | String | The ID of the project.
+| ApiKey | String | The API Key the application uses to access the Stories API for this app project.
+| ProjectID | String | The ID of the app project.
 | StoryID | Integer/Long | The ID of the story.
 
 * Return value – Story_Transient
 
-### Microflow GetTaskByID
+### GetTaskByID Microflow
 
-This microflow retrieves a specific task. Parameters:
+This microflow retrieves a specific task. These are the parameters:
 
 | Parameter Name | Parameter Type | Description
 | --- | --- | --- |
-| ApiKey | String | The API Key the application uses to access the Stories API for this project.
-| ProjectID | String | The ID of the project.
+| ApiKey | String | The API key the application uses to access the Stories API for this app project.
+| ProjectID | String | The ID of the app project.
 | TaskID | Integer/Long | The ID of the task.
 
 * Return value – Task_Transient
 
-### Microflow GetTasks
+### GetTasks Microflow
 
-This microflow retrieves all tasks for a specific story. Parameters:
+This microflow retrieves all tasks for a specific story. These are the parameters:
 
 | Parameter Name | Parameter Type | Description
 | --- | --- | --- |
-| ApiKey | String | The API Key the application uses to access the Stories API for this project.
-| ProjectID | String | The ID of the project.
+| ApiKey | String | The API key the application uses to access the Stories API for this app project.
+| ProjectID | String | The ID of the app project.
 | StoryID | Integer/Long | The ID of the story for which tasks are being retrieved.
 
 * Return value – List of Task_Transient
 
-### Microflow UpdateStory
+### UpdateStory Microflow
 
-This microflow updates a story with modified information. Parameters:
+This microflow updates a story with modified information. These are the parameters:
 
 | Parameter Name | Parameter Type | Description
 | --- | --- | --- |
-| ApiKey | String | The API Key the application uses to access the Stories API for this project.
-| Description | String | Description of the story (optional)
-| Name | String | Name of the story.
+| ApiKey | String | The API Key the application uses to access the Stories API for this app project.
+| Description | String | Description of the story (optional).
+| Name | String | The name of the story.
 | ParentSprintID | Integer/Long | The ID of the sprint the story is in.
-| Points | Enumeration StoryPoints | Number of story points. (_1/_2/_3/_5/_8/_13/_20/_/40/_100)
+| Points | Enumeration StoryPoints | The number of story points. (_1/_2/_3/_5/_8/_13/_20/_/40/_100)
 | ProjectID | String | The ID of the project.
-| Status | Enumeration BacklogState | Status of the story, (Open/Started/Done)
-| StoryID | Integer/Long | ID of the Story
-| StoryType | Enumeration StoryType | The type of the story (Feature/Bug)
+| Status | Enumeration BacklogState | The status of the story (Open/Started/Done).
+| StoryID | Integer/Long | The ID of the story.
+| StoryType | Enumeration StoryType | The type of story (Feature/Bug).
 
 * Return value – Boolean
 
-### Microflow UpdateTask
+### UpdateTask Microflow
 
-This microflow updates a task with modified information. Parameters:
+This microflow updates a task with modified information. These are the parameters:
 
 | Parameter Name | Parameter Type | Description
 | --- | --- | --- |
-| ApiKey | String | The API Key the application uses to access the Stories API for this project.
-| Description | String | Description of the task (optional)
-| IsCompleted | Boolean | Completion state of the task.
-| Name | String | Name of the new task.
-| ParentStoryID | Integer/Long | The ID of the story the task belongs to.
+| ApiKey | String | The API key the application uses to access the Stories API for this app project.
+| Description | String | A description of the task (optional).
+| IsCompleted | Boolean | The completion state of the task.
+| Name | String | The name of the new task.
+| ParentStoryID | Integer/Long | The ID of the story to which the task belongs.
 | ProjectID | String | The ID of the project.
 | TaskID | Integer/Long | The ID of the task.
 

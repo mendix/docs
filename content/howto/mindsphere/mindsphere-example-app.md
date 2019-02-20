@@ -9,7 +9,9 @@ draft: true
 
 ## 1 Introduction
 
-You can write Mendix apps which analyze data held in MindSphere, the open, cloud-based IoT operating system from Siemens. To help you build your app, there is an example app which can be downloaded from the Mendix App Store.
+You can write Mendix apps which analyze data held in MindSphere, the open, cloud-based IoT operating system from Siemens. To help you build your app, there is the **Pump Asset Example** app which can be downloaded as the starting point for a new app when you are creating a Mendix app.
+
+![Pump Asset Example App on the Mendix Create New App page](attachments/mindsphere-example-app/create-new-app.png)
 
 This documentation provides more explanation of the MindSphere example app. Please note that this app is not production-ready. It is designed as an example of how you might begin to build a Mendix/MindSphere app.
 

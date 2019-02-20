@@ -5,7 +5,8 @@ description: "Best practices for architecture."
 menu_order: 1
 draft: true
 ---
-## Introduction
+
+## 1 Introduction to Mendix Architecture Best Practices
 
 Mendix is optimized for the easiest and fastest way to develop and maintain Apps that fulfil a business function. As the scope grows larger, architecture becomes more important, and it becomes
 relevant to leverage best practices expertise in the area.

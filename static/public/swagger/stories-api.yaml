@@ -13,14 +13,8 @@ basePath: /rest/api/projects
 tags:
   - name: sprints
     description: API for Sprints in a Project
-    externalDocs:
-      description: Find out more
-      url: 'http://mendix.com'
   - name: stories
     description: API for Stories and Sub-Stories in a Project
-    externalDocs:
-      description: Find out more
-      url: 'http://mendix.com'
 schemes:
   - https
 paths:
@@ -844,6 +838,3 @@ definitions:
     type: array
     items:
       $ref: '#/definitions/Story'
-externalDocs:
-  description: Find out more about api
-  url: 'https://docs.mendix.com/apidocs-mxsdk/apidocs/stories-api'

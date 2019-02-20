@@ -35,7 +35,7 @@ There are two ways to include the customization you need in your app.
 
 The MindSphere Starter App contains all the modules and styling which you need to create an app you want to deploy to MindSphere. Choose the MindSphere starter app when creating your Mendix app.
 
-![Siemens/MindSphere starter app on the Mendix "Create App" screen](attachments/deploying-to-mindsphere/image1.png)
+![Siemens/MindSphere starter app on the Mendix "Create New App" screen](attachments/deploying-to-mindsphere/image1.png)
 
 {{% alert type="info" %}}
 This is the recommended approach if you are building a new application as it will provide all the necessary building blocks to get started.
@@ -56,7 +56,7 @@ MindSphere_UI_Resources includes the following:
 The Theme does not contain modules for SSO or the OS Bar. These modules will need to be downloaded separately.
 {{% /alert %}}
 
-### 2.2 Single Sign-On (MindSphereSingleSignOn)
+### 2.2 Single Sign-On (MindSphereSingleSignOn){#mssso}
 
 When running on MindSphere, the MindSphere user can use their MindSphere credentials to log in to your app. This is referred to as Single sign-on (SSO). To do this, you need to use the microflows and resources in the **MindSphereSingleSignOn** module. You will also need the SSO module to get a valid user context during a local test session.
 
@@ -167,7 +167,7 @@ And in the Mendix example app they will be mapped to these roles:
 
 ![Mendix Project Security dialog](attachments/deploying-to-mindsphere/image9.png)
 
-### 2.3 MindSphere OS Bar
+### 2.3 MindSphere OS Bar{#msosbar}
 
 All MindSphere apps must have a MindSphere OS Bar. This unifies the UI of all MindSphere apps. It is used for showing the app name, routing back to the Launchpad, and logging out from MindSphere easily. Apps without the MindSphere OS Bar will not be validated for deployment to a MindSphere production environment.
 

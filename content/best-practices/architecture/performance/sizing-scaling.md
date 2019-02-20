@@ -21,93 +21,54 @@ adequate for a certain situation. It is done in several stages:
 
 ### Initial Sizing 
 
-The other factor is the size of the infrastructure. Sizing an App is similar to
-the levels of attention in the table seen previously.
+The other factor is the size of the infrastructure. Sizing an app is similar to the levels of attention in the table above in [The Right Level of Attention](#right-level).
 
-In the beginning of the project a first assumption is done. When the
-functionality is built out this assumption is tested, and sizing may be adapted,
-and/or tuning be required. Small-Medium Apps are verified with normal functional
-testing, while critical Apps are tested with professional tools in a production
-like environment.
+In the beginning of an app project, a first size assumption is made. When the functionality is built out and this assumption is tested, the sizing may be adapted and/or tuning be required. Small to medium-sized apps are verified with normal functional testing, while critical apps are tested with professional tools in a production-like environment.
 
-The table below gives a basic overview for sizing of a single Mendix App
-instance. Higher load can be handled with additional measures such as horizontal
-scaling, geo-scaling, functional scaling or microservice scaling
+This table presents a basic overview for infrastructure sizing for a single Mendix app instance:
 
-| **Sizing of Infra**      | **S - M**    | **M - L**     | **L - XL**    | **XL - XXL**   | **XXL - Custom Load balanced** |
-| ------------------------ | ------------ | ------------- | ------------- | -------------- | ------------------------------ |
-| *\# Records in DB*       | \< 100k      | \< 1m         | \< 5m         | \< 50m         | 500m or more                   |
-| *\# Concurrent Users*    | \< 20 users  | \< 100 users  | \< 500 users  | \< 5k users    | 200k users or more             |
-| *\# Service calls / sec* | \< 5 calls/s | \< 10 calls/s | \< 50 calls/s | \< 500 calls/s | 2k calls/s or more             |
+|  | S – M | M – L | L – XL | XL – XXL | XXL – Custom Load Balanced |
+| --- | --- | --- | --- | --- | --- |
+| **Number of Records in Database** | < 100k | < 1m | < 5m | < 50m | 500m or more |
+| **Number of Concurrent Users** | < 20 | < 100 | < 500 | < 5k | 200k or more |
+| **Number of Service Calls (per Second)** | < 5 | < 10 | < 50 | < 500 | 2k or more |          |
 
 ### Redundancy for Availability
 
-For more critical systems one often chooses an environment that is larger than
-the volume requires. This decreases the risk for production disturbances due to
-volume. But to also cope for other issues, up-time can be improved by
-redundancy.
+For more critical systems, users often choose an environment that is larger than the volume requires. This decreases the risk for production disturbances due to volume. But to cope with other issues, uptime can be improved by redundancy.
 
-E.g. critical low volume Apps can use small size environments, with additional
-App instances behind a Load-balancer (LB) to increase availability.
+For example, critical low-volume apps can use small-size environments, with additional app instances behind a load-balancer (LB) to increase availability.
 
-| *Redundancy for System Criticality:* | **Low**     | **Medium**  | **High**        | **Core**    | **Business Critical** |
-| ------------------------------------ | ----------- | ----------- | --------------- | ----------- | --------------------- |
-| *Support Level*                      | Gold        | Gold        | Gold - Platinum | Platinum    | Platinum              |
-| *Up time*                            | 95% Biz hrs | 98% Biz hrs | 99.5% Biz hrs   | 99.5% 24/7  | 99.95% 24/7           |
-| *Horizontal Scaling*                 | No          | No          | Recommended     | Yes         | Yes                   |
-| *Fall-back*                          | No          | No          | No              | Recommended | Yes                   |
+This table illustrates redundancy for system criticality:
 
-For very critical systems a Fall-back (FB) database is added to cover for
-un-responsive databases. That DB will be in the same Availability zone, 5 km
-away. Rule of thumb is to also add an additional App instance when adding an FB
-DB configuration.
+|  | Low | Medium | High| Core | Business Critical |
+| --- | --- | --- | --- | --- | --- |
+| **Support Level** | Gold | Gold | Gold–Platinum | Platinum    | Platinum              |
+| **Uptime (in Business Hours)**|  95% | 98% | 99.5% | 99.5% 24/7  | 99.95% 24/7 |
+| **Horizontal Scaling** | No | No | Recommended | Yes | Yes |
+| **Fallback** | No | No | No | Recommended | Yes |
+
+For very critical systems, a fallback (FB) database is added to cover for unresponsive databases. That database should be in the same availability zone, no more than 5 km away. The rule of thumb is to also add an additional app instance when adding an FB database configuration.
 
 ### Scaling
 
-Any system may need to scale over time. Performance testing is often done
-testing at a volume level expected 3-5 years in the future. That ensures the
-infrastructure can handle growth for the next 2-3 years.
+Any system may need to scale over time. Performance testing is often done testing at a volume level expected 3–5 years in the future. That ensures the infrastructure can handle growth for the next 2–3 years. A static scaling plan can be made for the years afterwards, and if this involves deploying to the Mendix Cloud, it is very easy to increase the size.
 
-A Static scaling plan can be made for the years afterwards, and if this is the
-Mendix cloud it is very easy to increase the size.
+Dynamic scaling is possible using cloud-specific configurations (for example, Beanstalk on AWS and K8S on Azure). Dynamic scaling comes at a cost that makes it useful only in cases where traffic fluctuates a lot and in a non-predictable way.
 
-Dynamic scaling is possible using cloud specific configurations, e.g. Beanstalk
-on AWS and K8S on Azure. Dynamic scaling comes at a cost that makes it useful
-only in cases where traffic fluctuates a lot and in a non-predictable way.
+Static windows with a larger capacity can also be set up (for example, double-capacity over "Black Friday" and Christmas). This is cheaper than dynamic scaling and can also be used in a non-standard Mendix setup.
 
-Static windows with larger capacity can also be set up. E.g. double capacity
-over black Friday and Christmas. This is cheaper that dynamic scaling. It can
-also be used in a non-standard Mendix set-up.
+In general, cloud deployment was supposed to enable paying for resources only when needed, but the standard AWS pricelist promotes stable long-term contracts. Accordingly, this is the way Mendix operates by default, and for most cases, this is the most cost-effective option.
 
-In general cloud was supposed to allow paying for resources only when needed,
-but the standard AWS pricelist promotes stable long-term contracts, so this is
-the way Mendix operates by default, and for most cases this is the most
-cost-efficient option.
+### Custom Sizing
 
-### Custom Sizing 
+There are some situations where very specific scaling is needed. A custom infrastructure package can be required to optimize on cost and performance. For example, if you are running an MDM system with little user interaction but a huge amount of data, a normal-sized cloud environment can be used with additional database space.
 
-But there are some situations where very specific scaling is needed. A custom
-infra package can be required, to optimize on cost and performance.
+Another example is an external website with relatively lightweight functionality but many concurrent users. Then, a normal-sized cloud database server may be possible as you scale out to handle more and larger app instances and optimize the app to minimize traffic to the database.
 
-E.g. if running an MDM system with little user interaction but huge amounts of
-data, a normal sized cloud environment can be used with additional DB space.
+For non-global Mendix apps, the limiting factor is often the processing in the database. So, the size of Mendix environments relates to how large the database node is. Often, scaling app instances only makes a noticeable difference up to ~4 app nodes. After that, special tuning is needed, or the environment needs to be sized up with a larger database node.
 
-Another example is an external web-site with relatively lightweight
-functionality but many concurrent users, then a normal sized cloud DB server may
-be possible, while scaling out to have more and larger App instances, while
-optimizing the App to minimize traffic to the DB.
-
-For non-global Apps the limiting factor in Mendix Apps is often the processing
-in the DB, so the size of Mendix environments relate to how large the DB node
-is. Often scaling App instances only makes a noticeable difference up to \~4 App
-nodes. Then special tuning is needed, or the environment is sized up with a
-larger DB node.
-
-The other limiting factor can be the traffic from the Browser to the App
-instance. This can be particularly noticeable for global Apps, since Mendix out
-of the box needs the App server quite a lot while navigating functionality. Some
-tuning can be made here, but another very attractive option is to scale
-geographically, see next section.
+Another limiting factor can be the traffic from the browser to the app instance. This can be particularly noticeable for global apps, since Mendix out-of-the-box needs the app server quite a lot while navigating functionality. Some tuning can be made here, but another attractive option is to scale geographically.
 
 ### Production Sizing 
 

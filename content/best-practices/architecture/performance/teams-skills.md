@@ -36,49 +36,29 @@ directly used. After discussions, the design is changed so that the starting
 screen only has static information and the user clicks into each of the specific
 overview areas.
 
-### DevOps team – Skills Required
+The team that does the development, testing, tuning, and deploying of the apps should be adapted to the volume and criticality of the system to be developed.
 
-The team that does the Development, testing, tuning and deployments of the Apps
-should be adapted to the volume and criticality of the system to be developed.
+Small apps can be created, tested and deployed on the Mendix Cloud by a [citizen developer](https://www.mendix.com/evaluation-guide/evaluation-learning/skills-training#1-what-types-of-users-can-build-apps-with-mendix#personas) without significant technical skills. But as the volume, complexity, and criticality of the apps increases, there is a larger need for more technical resources on board to initially design and review apps in order to make them better and faster.
 
-Small Apps can be created, tested and deployed on the Mendix cloud by a citizen
-developer, without significant technical skills. But as the volume, complexity
-and criticality increases, there is a larger and larger need for more technical
-resources on-board. Initially only to design and review Apps to make them better
-and faster.
+Eventually, projects for critical, core, and high-volume apps may have several technical experts on board as well as a professional performance tuner available for every release to do the testing and tuning correctly.
 
-Eventually projects for critical, core, high-volume Apps may have several
-technical experts on board, and a professional performance tuner available for
-every release to do the testing and tuning correctly.
+This table presents recommendations for your DevOps teams:
 
-| **DevTest Recommended:** | **Citizen Developer** | **Citizen + Solution Sam**                   | **Citizen + Sam +**                                   | **Citizen + Sam + Perf. Expert to test, review and tune** | **Performance Expert to test, review and tune for every release** |
-|                          |               | **design, review** | **Hardcore Harry reviews & tunes** |                 |                    |
-| ------------------------ | ------------- | ------------------ | ---------------------------------- | --------------- | ------------------ |
-| *Functional Size*        | Small App     | Medium App         | Large App                          | Complex App     | XL Core System     |
-| *Criticality of System*  | Low           | Medium             | High                               | Core            | Business Critical  |
-| *Up time requirement*    | 95% Biz hrs   | 98% Biz hrs        | 99% Biz hrs                        | 99% 24/7        | 99.5% 24/7         |
-| *\# Records in DB*       | \< 500k       | \< 1m              | \< 5m                              | \< 50m          | 500m or more       |
-| *\# Concurrent Users*    | \< 100 users  | \< 500 users       | \< 1k users                        | \< 5k users     | 200k users or more |
-| *\# Service calls / sec* | \< 10 calls/s | \< 50 calls/s      | \< 100 calls/s                     | \< 1000 calls/s | 2k calls/s or more |
+| | Citizen Developer | Citizen Developer + Business Developer Design & Review | Citizen Developer + Business Developer + IT Developer Review & Tune | Citizen Developer + Business Developer + Performance Expert Test, Review & Tune | Performance Expert Test, Review & Tune for Every Release |
+| --- | --- | --- | --- | --- | --- |
+| **Functional Size** | Small app | Medium app | Large app | Complex app | XL core system |
+| **Criticality of System** | Low | Medium | High | Core | Business-critical |
+| **Uptime Requirement (in Business Hours)** | 95% | 98% | 99% | 99% 24/7 | 99.5% 24/7 |
+| **Number of Records in Database** | < 500k | < 1m | < 5m | < 50m | 500m or more |
+| **Number of Concurrent Users** | < 100 | < 500 | < 1k | < 5k | 200k or more |
+| **Number of Service Calls (per Second)** | < 10 | < 50 | < 100 | < 1000 | 2k or more |
 
-### Professional Ops team and CICD team
+### Professional Ops Team & CI/CD Team
 
-As solutions become larger and more critical, and for large companies with 100s
-or even 1000s of Apps, the investment in central professional Ops and CICD
-automation becomes obvious.
+In scenarios in which your solutions are becoming larger and more critical and/or your company has 100s or even 1000s of apps, investing in central professional operations and CI/CD automation becomes obvious.
 
-A professional Ops team with professional tooling, that owns the alarms,
-professional monitoring and central log-integration is highly recommended for
-large microservice landscapes.
+A professional Ops team with professional tooling that owns the alarms, professional monitoring, and central log-integration is highly recommended for large microservice landscapes.
 
-A professional CICD team will enable auto testing and controlled repeatable
-deployments, limiting risk and improving availability, which is important for
-large and critical systems.
+A professional CI/CD team will enable auto-testing and controlled repeatable deployments, limiting risk and improving availability, which is important for large and critical systems.
 
-At the same time, be smart on what to require for monitoring and automation not
-to let central Ops and CICD stifle flexibility and agility of DevOps teams that
-deliver to the business. Every App does not need the same level of monitoring
-and automation, because then agility is reduced, and cost increased, where it is
-not needed.
-
--   
+At the same time, it is important to be smart with what is required for monitoring and automation so that centralized Ops and CI/CD teams do not stifle the flexibility and agility of DevOps teams that deliver to the business. Not every app needs the same level of monitoring and automation, because then agility is reduced and costs are increased where that is not necessary.

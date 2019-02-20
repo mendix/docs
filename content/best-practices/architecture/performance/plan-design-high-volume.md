@@ -91,18 +91,11 @@ reducing risk.
 
 ## 4 Microservice Architecture 
 
-Another good way to manage scale is to divide processing into more components.
-One can build a Core enterprise system as a set of separate functional
-microservices that cooperate and can be scaled separately. It splits the load
-and allows optimizing the size per functional area.
+Another good way to manage scale is to divide processing into more components. One can build a core enterprise system as a set of separate functional microservices that cooperate and can be scaled separately. This splits the load and allows for optimizing the size per functional area.
 
-A good Microservice Architecture improves on agility, ease of deployments and
-separation of concerns which makes it a very attractive way to build large
-systems.
+A good microservice architecture improves on agility, ease of deployments, and separation of concerns. This makes it a very attractive way to build large systems.
 
-E.g. there could be a Dashboard App as a landing page, where users log in via
-SSO, where master data is imported and distributed, and where workflow is
-managed, while each specific phase of the business process gets a specific App.
+An example here is a dashboard app use as a landing page. Users log in via SSO, master data is imported and distributed, and workflows can be managed while each specific phase of the business process gets another specific app. 
 
 ## 5 Geo-Scaling Architecture
 
@@ -114,7 +107,15 @@ In many cases, a CDN and DNS resolution via Akamai, for example, is in front and
 
 In some cases, a separate URL is acceptable. Users will then use a regional app that is 90% the same as the other instances. This also helps to eliminate risks from deployments and allows for easier regional specialization and localization.
 
-## 6 Technical Scaling
+### 6 Functional Scaling
+
+{{% todo %}}[**VERIFY THIS SECTION SHOULD STAY HERE IN THIS DOC**]{{% /todo %}}
+
+A way to manage risky and high-volume situations is functional scaling. If there is a reasonable functional separation between different areas, one can deploy the same app several times for each functional area so that they run separately. That will both divide the load and decrease the risk of catastrophic failure.
+
+An example here is a supply-chain scenario with a large set of distribution centers running the same functionality but on different data (for example, only 10% of the orders go to one app). This scaling also allows for phased go-lives, which helps to additionally reduced risk.
+
+## 7 Technical Scaling
 
 When Functional scaling is optimal, we turn to technical *Sizing and Scaling*
 \<link\>

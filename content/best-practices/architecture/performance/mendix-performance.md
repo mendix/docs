@@ -1,5 +1,5 @@
 ---
-title: "Mendix & High Performance"
+title: "High Performance with Mendix"
 parent: "performance-overview"
 description: ""
 menu_order: 1

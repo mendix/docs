@@ -6,7 +6,7 @@ draft: true
 
 ## Authentication
 
-Each call also requires the parameters `username` and `password`. These are the public credentials you will find below. The actual authentication of requests is done through API keys.
+Each call also requires the **username** and **password** parameters. These are the public credentials you will find below. The actual authentication of requests is done through API keys.
 
 * username: PlatformAPIUser
 * password: PlatformAPIPassword

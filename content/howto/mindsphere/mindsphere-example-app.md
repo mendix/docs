@@ -239,7 +239,7 @@ However, MindSphere will queue this request internally and the data will not be 
 
 The MindSphere Example App uses the MindSphere Asset Management Connector to obtain asset information from MindSphere.
 
-The MindSphereAssetManagementConnector module is the standard connector for managing assets within MindSphere. It can be found in the App Store modules of the example app. It is also available as a stand-alone module in the App Store: [MindSphere Asset Management Connector](https://appstore.home.mendix.com/link/app/108527/).
+The MindSphereAssetManagementConnector module is the standard connector for managing assets within MindSphere. It can be found in the App Store modules of the example app. It is also available as a stand-alone module in the App Store: [MindSphere Asset Management Connector](https://appstore.home.mendix.com/link/app/108806/).
 
 ![MindSphereAssetManagementConnector folder structure](attachments/mindsphere-example-app/image16.png)
 

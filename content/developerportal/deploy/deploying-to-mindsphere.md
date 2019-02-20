@@ -42,7 +42,7 @@ This is the recommended approach if you are building a new application as it wil
 
 #### 2.1.2 Add the MindSphere Theme Pack{#themepack}
 
-If you have an existing app which was not based on the MindSphere starter app, you can import the MindSphere Theme Pack (MindSphere_UI_Resources) from the Mendix App Store here: [MindSphere Theme Pack](https://appstore.home.mendix.com/link/app/108531/).
+If you have an existing app which was not based on the MindSphere starter app, you can import the MindSphere Theme Pack (MindSphere_UI_Resources) from the Mendix App Store here: [MindSphere Theme Pack](https://appstore.home.mendix.com/link/app/108803/).
 
 MindSphere_UI_Resources includes the following:
 
@@ -59,7 +59,7 @@ The Theme does not contain modules for SSO or the OS Bar. These modules will nee
 
 When running on MindSphere, the MindSphere user can use their MindSphere credentials to log in to your app. This is referred to as Single sign-on (SSO). To do this, you need to use the microflows and resources in the **MindSphereSingleSignOn** module. You will also need the SSO module to get a valid user context during a local test session.
 
-The MindSphere SSO module is included in the MindSphere starter and example apps. It can also be downloaded separately here: [MindSphere SSO](https://appstore.home.mendix.com/link/app/108532/).
+The MindSphere SSO module is included in the MindSphere starter and example apps. It can also be downloaded separately here: [MindSphere SSO](https://appstore.home.mendix.com/link/app/108805/).
 
 {{% alert type="warning" %}}
 The SSO module also requires changes to the app theme see section 2.1.2, [Add the MindSphere Theme Pack](#themepack).
@@ -172,7 +172,7 @@ All MindSphere apps must have a MindSphere OS Bar. This unifies the UI of all Mi
 
 You can see how the MindSphere OS Bar Integration works in [MindSphere OS Bar Integration](https://developer.mindsphere.io/resources/osbar/resources-osbar-getting-started.html#mindsphere-os-bar-integration), on the MindSphere developer website.
 
-The MindSphereOSBarConfig module creates an endpoint which is used by the MindSphere OS Bar to provide tenant context and information about the application. The MindSphereOSBarConfig module is included in the MindSphere starter app, or can be downloaded from the Mendix App Store here: [MindSphere OS Bar Connector](https://appstore.home.mendix.com/link/app/108526/).
+The MindSphereOSBarConfig module creates an endpoint which is used by the MindSphere OS Bar to provide tenant context and information about the application. The MindSphereOSBarConfig module is included in the MindSphere starter app, or can be downloaded from the Mendix App Store here: [MindSphere OS Bar Connector](https://appstore.home.mendix.com/link/app/108804/).
 
 {{% alert type="info" %}}
 The MindSphere OS Bar Connector also needs the MindSphere Theme Pack, or manual configuration of the index.html file in order to work. See sections 2.1.2, [Add the MindSphere Theme Pack](#themepack) and 2.4, [index.html Changes](#indexhtmlchanges).

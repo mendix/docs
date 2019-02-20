@@ -50,7 +50,16 @@ On the right side of the screen, you can find the following action buttons:
 * **Show Logged in Users**
 * **Change Admin Password**
 
-#### 2.1.1 Debugger in Mendix Cloud v3
+#### 2.1.1 Logging and Debugging in Mendix Cloud v4
+
+![](attachments/environments-details/actions-v4.png)
+
+In Mendix Cloud v4 environments, you have two additional action buttons:
+
+* **View Live Log**
+* **Show debugger information** to show the settings to connect the debugger in your Mendix Desktop Modeler to your app. For Mendix Cloud v4, the debugger is *always* enabled.
+
+#### 2.1.2 Logging and Debugging in Mendix Cloud v3
 
 ![](attachments/environments-details/actions-v3.png)
 
@@ -58,15 +67,6 @@ In Mendix Cloud v3 environments, you have two additional action buttons:
 
 * **View Current Log**
 * **Enable/Disable Debugging** to enable or disable the debugger option. For more information about enabling the debugger, see [How to Debug Microflows Remotely](/howto7/monitoring-troubleshooting/debug-microflows-remotely)
-
-#### 2.1.2 Debugger in Mendix Cloud v4
-
-![](attachments/environments-details/actions-v4.png)
-
-In Mendix Cloud v4 environments, you have two additional action buttons:
-
-* **View Live Log**
-* **Show debugger information** to show the settings to connect the debugger in your Mendix Desktop Modeler to your app. for Mendix Cloud v4, the debugger is *always* enabled.
 
 ### 2.2 Scaling – Mendix Cloud v4
 
@@ -285,7 +285,13 @@ The Mendix Cloud uses runtime settings to configure the included systems for log
 
 ### 6.2 Custom Environment Variables
 
-Use the Custom Environment Variables to **add**, **Edit**, or **Delete** an environment variable. Unlike the Custom Runtime Settings, the variables you add have to be chosen from a drop-down list.
+Use the Custom Environment Variables to **add**, **Edit**, or **Delete** an environment variable.
+
+Unlike the Custom Runtime Settings, the variables you add have to be chosen from a drop-down list. The variables are:
+
+* **DD_API_KEY** – the API key used with Datadog
+* **DD_LOG_LEVEL** – the log level of logging sent to Datadog
+* **APPMETRICS_TARGET** – setting this enables business events to be sent to a different monitoring solution from the technical events 
 
 ## 7 Maintenance Tab
 

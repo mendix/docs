@@ -17,7 +17,7 @@ This document goes through the main areas for building high-performance core ent
 This document is intended for Enterprise Architects, Lead Developers, and senior stakeholders to consider how to achieve the correct stability and performance when using the Mendix Platform for core enterprise systems.
 {{% /alert %}}
 
-### 1.1 Performance Overview
+## 2 Performance Overview
 
 The subject area of performance deals with all the aspects of planning, designing, sizing, scaling, testing, and maintaining systems that handle significant volumes of data, service calls, or users. This subject area also deals with how to secure the stability and availability of these systems.
 
@@ -25,24 +25,30 @@ High performance with Mendix is achieved by taking a serious approach to designi
 
 The performance best practices will cover the following content areas:
 
-* Planning and designing for high-volume
-* Sizing & scaling
-* Testing & tuning
-* Deployments & stability
-* Teams & skills
-* Performance Guidelines
+* [Planning & designing for high-volume](plan-design-high-volume)
+* [Sizing & scaling](sizing-scaling)
+* [Testing & tuning](testing-tuning)
+* [Deployments & stability](deployments-stability)
+* [Teams & skills](teams-skills)
+* [Performance guidelines](performance-guidelines)
 
-{{% todo %}}[**Add links to list above when available**]{{% /todo %}}
-
-### 1.1 Use Cases for This Overview
-
-These are the typical use cases when this overview will be helpful:
+These are the typical use cases when these best practices will be helpful:
 
 * High throughput processing
 * Large amount of concurrent users
 * Working on large data sets
 * Working on a geographically distributed system
-* Requirements for [high availability](https://docs.mendix.com/developerportal/deploy/high-availability)
+* Requirements for [high availability](/developerportal/deploy/high-availability)
+
+## 3 Related Documents
+
+These best practices are followed by use case-specific guidelines that in turn relate to the developer best practices applicable in the different use cases. 
+
+There is also the Mendix Expert training module [Performance Guidelines](https://gettingstarted.mendixcloud.com/link/module/127/lecture/1031) as well as [How to Detect & Resolve PErformance Issues](/howto/monitoring-troubleshooting/detect-and-resolve-performance-issues).
+
+{{% todo %}}[**GET DIAGRAM UPDATED**]{{% /todo %}}
+
+![](attachments/overview/can-i-use-mendix.png)
 
 #### 1.1.1 Positioning, Portfolio Management & Project Planning
 
@@ -57,16 +63,6 @@ The document is also relevant for expanding projects or programs via increased f
 #### 1.1.3 Operational Planning
 
 The document can be helpful when sizing, configuring, managing, operating, and maintaining larger Mendix solutions. It can be useful for discussing infrastructure, operational procedures, and testing.
-
-### 1.2 Related Documents
-
-This document is followed by use case-specific guidelines that in turn relate to the developer best practices applicable in the different use cases. 
-
-There is also the Mendix Expert training module [Performance Guidelines](https://gettingstarted.mendixcloud.com/link/module/127/lecture/1031) as well as [How to Detect & Resolve PErformance Issues](/howto/monitoring-troubleshooting/detect-and-resolve-performance-issues).
-
-{{% todo %}}[**GET DIAGRAM UPDATED**]{{% /todo %}}
-
-![](attachments/overview/can-i-use-mendix.png)
 
 ## 2 Overview of High Performance
 
@@ -208,9 +204,9 @@ As a Mendix customer, you can decide on system borders, align to your own proces
 
 # OLD DRAFT BELOW - MUST BE DIVIDED INTO NEWER DOC(S)
 
-## 3 Sizing & Scaling
+## Sizing & Scaling
 
-### 3.1 Initial Sizing 
+### Initial Sizing 
 
 The other factor is the size of the infrastructure. Sizing an app is similar to the levels of attention in the table above in [The Right Level of Attention](#right-level).
 
@@ -226,7 +222,7 @@ This table presents a basic overview for infrastructure sizing for a single Mend
 
 A higher load can be handled with additional measures such as horizontal scaling, geo-scaling, functional scaling, or microservice scaling.
 
-### 3.2 Redundancy for Availability
+### Redundancy for Availability
 
 For more critical systems, users often choose an environment that is larger than the volume requires. This decreases the risk for production disturbances due to volume. But to cope with other issues, uptime can be improved by redundancy.
 
@@ -243,7 +239,7 @@ This table illustrates redundancy for system criticality:
 
 For very critical systems, a fallback (FB) database is added to cover for unresponsive databases. That database should be in the same availability zone, no more than 5 km away. The rule of thumb is to also add an additional app instance when adding an FB database configuration.
 
-### 3.3 Scaling
+### Scaling
 
 Any system may need to scale over time. Performance testing is often done testing at a volume level expected 3–5 years in the future. That ensures the infrastructure can handle growth for the next 2–3 years. A static scaling plan can be made for the years afterwards, and if this involves deploying to the Mendix Cloud, it is very easy to increase the size.
 
@@ -253,7 +249,7 @@ Static windows with a larger capacity can also be set up (for example, double-ca
 
 In general, cloud deployment was supposed to enable paying for resources only when needed, but the standard AWS pricelist promotes stable long-term contracts. Accordingly, this is the way Mendix operates by default, and for most cases, this is the most cost-effective option.
 
-### 3.4 Custom Sizing 
+### Custom Sizing 
 
 There are some situations where very specific scaling is needed. A custom infrastructure package can be required to optimize on cost and performance. For example, if you are running an MDM system with little user interaction but a huge amount of data, a normal-sized cloud environment can be used with additional database space.
 
@@ -263,23 +259,13 @@ For non-global Mendix apps, the limiting factor is often the processing in the d
 
 Another limiting factor can be the traffic from the browser to the app instance. This can be particularly noticeable for global apps, since Mendix out-of-the-box needs the app server quite a lot while navigating functionality. Some tuning can be made here, but another attractive option is to scale geographically..
 
-### 3.5 Geo Scaling
-
-For global and (often) customer-facing apps, having a snappy user interaction is critical. However, the geographical distance from the browser to the app instance serving the GUI functionality can be so large that it adds a noticeable lag. From Asia to the EU, this could be anywhere between 0.2–1.0 seconds, depending on the network and other factors.
-
-The recommended scaling in this case is a geo-scaled instance running a regional install on each continent (for example, EU, US, Asia, South America, and often China).
-
-In many cases, a CDN and DNS resolution via Akamai, for example, is in front and the closest instance is used. Naturally, this option may require additional functionality to synchronize any data that is needed in more than one geo-location app.
-
-In some cases, a separate URL is acceptable. Users will then use a regional app that is 90% the same as the other instances. This also helps to eliminate risks from deployments and allows for easier regional specialization and localization.
-
-### 3.6 Functional Scaling 
+### Functional Scaling 
 
 A way to manage risky and high-volume situations is functional scaling. If there is a reasonable functional separation between different areas, one can deploy the same app several times for each functional area so that they run separately. That will both divide the load and decrease the risk of catastrophic failure.
 
 An example here is a supply-chain scenario with a large set of distribution centers running the same functionality but on different data (for example, only 10% of the orders go to one app). This scaling also allows for phased go-lives, which helps to additionally reduced risk.
 
-### 3.7 Microservice Architecture 
+### Microservice Architecture 
 
 Another good way to manage scale is to divide processing into more components. One can build a core enterprise system as a set of separate functional microservices that cooperate and can be scaled separately. This splits the load and allows for optimizing the size per functional area.
 
@@ -287,9 +273,9 @@ A good microservice architecture improves on agility, ease of deployments, and s
 
 An example here is a dashboard app use as a landing page. Users log in via SSO, master data is imported and distributed, and workflows can be managed while each specific phase of the business process gets another specific app. 
 
-## 4 Performance Testing & Tuning
+## Performance Testing & Tuning
 
-### 4.1 Test Levels
+### Test Levels
 
 Testing is a time-consuming task and it is important to do the right level of testing for each situation so that you are not wasting time and money and can instead focus on where the testing is really needed.
 
@@ -307,7 +293,7 @@ This table presents the recommended tests for various scenarios:
 
 {{% todo %}}[**FINISH ADDING TABLE INFO**]{{% /todo %}}
 
-### 4.2 Testing & Tuning
+### Testing & Tuning
 
 When it is determined that separated performance testing is desired, follow these steps:
 
@@ -327,7 +313,7 @@ When it is determined that separated performance testing is desired, follow thes
   c. Tune the system (which often involves some limited re-modelling of the app).<br />
 7.  When the tuning is at the right level for maintainability and use, there is a final reassessment of the sizing and scaling of the infrastructure.
 
-### 4.3 The Right Tuning
+### The Right Tuning
 
 There is a balance between tuning, sizing, and maintainability.
 
@@ -342,7 +328,7 @@ More advanced tuning may include SQL and Java, which affects maintainability. In
 
 Testing different options as part of the testing and tuning iterations helps to find the best ways forward.
 
-### 4.4 Types of Performance Testing {#types-testing}
+### Types of Performance Testing {#types-testing}
 
 * **Functional testing** – This is regular testing that includes, for example, unit testing, GUI testing, service testing, and UAT testing with end-users. For small apps, testers can see immediately if there is an issue. Some tuning can be done to fix problems, and retesting can be done afterwards.
 * **Load testing** – This type of testing should give attention to one area of a specific app. This could be a large number of users (often using LoadRunner) or a large amount of service calls (using, for example, Soap UI, JMeter, or any other tool). A defined load and response time must be verified, and if it is not met, tuning, scaling, or both will be required. Nodes should be around 70% utilized at the load level being tested.
@@ -350,7 +336,7 @@ Testing different options as part of the testing and tuning iterations helps to 
 * **Soak Testing** – This is a way to run the full production load through the system over a longer time (for example, 2–3 weeks). This fits the STP scenario and verifies how the system reacts over time, catching memory leaks and other problems. It also often finds functional edge cases, because such a large set of data is run through the system.
 * **Recovery Testing** – This type tests how the app recovers from various crashes. Failover and fallback scenarios are tested. App nodes and/or database servers are taken down, and the expected infrastructure redundancy and/or procedures are verified. In addition, rolling back deployments, restoring from a database backup, and the other potential manual steps required when recovering from a system or deployment failure are tested. The intention is to minimize the time and effects of unplanned downtime.
 
-### 4.5 Test Automation
+### Test Automation
 
 Test automation is another stability enhancer, because the automation never tires of verifying the same thing over and over. This is more important for large and critical systems.
 
@@ -376,7 +362,7 @@ However, for critical systems that need regular performance testing and tuning, 
 
 The performance testing that should be automated depends on the character and functionality of the app or microservice system. Functional and technical analysis will identify which areas are most efficient to automate first.
 
-### 4.6 Different Strategies for Testing, Tuning & Sizing
+### Different Strategies for Testing, Tuning & Sizing
 
 Many strategies can be applied for performance and stability, and not one size
 fits all. For example:
@@ -386,9 +372,9 @@ fits all. For example:
 * Another customer may save on infrastructure by investing in performance testing and tuning
 * And another customer may do stress tests to see where the apps break and then size based on that
 
-## 5 Deployments & Stability
+## Deployments & Stability
 
-### 5.1 High Availability 
+### High Availability 
 
 For high-availability solutions, the focus should be to predict, plan, and manage all the risks for unexpected failures, including incidents during deployments.
 
@@ -400,7 +386,7 @@ For microservice architectures, health checks and administrative pages are imple
 
 For more critical systems, a more professional level of monitoring and alarms should be added, and the process link to recovery actions should be tight. Mendix has great integration with, for example, DataDog for monitoring, trend analysis, and alarms.
 
-### 5.2 Phased Go-Lives & Deployments 
+### Phased Go-Lives & Deployments 
 
 It can be very hard to fix a problem when a tremendous amount of traffic is hitting the system at the same time. It is well known that large providers like Netflix, Facebook, and LinkedIn go live in a phased approach, meaning, they do not provide the entire world with new functionality in one single go-live.
 
@@ -411,7 +397,7 @@ A phased go-live is often a great idea for both very critical and high-volume si
 * **Regional go-live** – for a region or a functional part
 * **Full go-live** – this could also be staged
 
-### 5.3 Zero-Impact Deployments
+### Zero-Impact Deployments
 
 There is a trade-off between risk in deployments, effort in preparing for them, and downtime during deployments. Deployments should be controlled, monitored, managed, and done in periods of less traffic so as to ensure minimal risk and business impact.
 
@@ -421,7 +407,7 @@ Having zero-downtime deployments for an app server is easy in any technology whe
 
 Mendix Cloud enables avoiding this risk by promoting controlled deployments. In addition, customers have implemented zero-downtime deployments with Mendix on Kubernetes. For microservice systems and more critical systems, it is also common to automate the deployment with configuration and do health checks.
 
-### 5.4 More Monitoring for More Critical Apps
+### More Monitoring for More Critical Apps
 
 To manage a solution and handle issues in production, there are levels of monitoring and support required. For critical apps, combining local functional monitoring and support is recommended with more professional central monitoring.
 
@@ -437,9 +423,9 @@ This table presents operations recommendations:
 | **Criticality of System** | Low | Medium | High | Core | Business Critical |
 | **Uptime Requirement (in Business Hours)** | 95% | 98% | 99.5% | 99.5% 24/7 | 99.95% 24/7 |
 
-## 6 Team & Skills
+## Team & Skills
 
-### 6.1 DevOps Team
+### DevOps Team
 
 The team that does the development, testing, tuning, and deploying of the apps should be adapted to the volume and criticality of the system to be developed.
 
@@ -458,7 +444,7 @@ This table presents recommendations for your DevOps teams:
 | **Number of Concurrent Users** | < 100 | < 500 | < 1k | < 5k | 200k or more |
 | **Number of Service Calls (per Second)** | < 10 | < 50 | < 100 | < 1000 | 2k or more |
 
-### 6.2 Professional Ops Team & CI/CD Team
+### Professional Ops Team & CI/CD Team
 
 In scenarios in which your solutions are becoming larger and more critical and/or your company has 100s or even 1000s of apps, investing in central professional operations and CI/CD automation becomes obvious.
 

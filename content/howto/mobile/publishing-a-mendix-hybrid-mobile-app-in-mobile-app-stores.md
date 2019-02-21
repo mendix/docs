@@ -11,17 +11,16 @@ Once you have finished developing a Mendix mobile application, you will want to 
 
 The hybrid mobile app publishing process is based on Adobe PhoneGap. Manually using Adobe PhoneGap is very tedious, because you need both a Microsoft Windows machine and an Apple Mac machine, and they need to be set up with the correctly configured development environments. However, we have integrated the [Adobe PhoneGap Build](https://build.phonegap.com/) service into Mendix to eliminate this burden and to provide support for automatically building the required hybrid mobile packages. Instead of worrying about technical details, you can focus on the essentials: rapidly developing an app to support your business processes.
 
-This how-to leads you step-by-step through the process of packaging your Mendix app as a hybrid mobile app that you can then deploy on your iOS developer device -- or publish in the Apple App Store, Google Play Store, or Amazon App Store.
+This how-to leads you step-by-step through the process of packaging your Mendix app as a hybrid mobile app that you can then deploy on your iOS developer device – or publish in the Apple App Store, Google Play Store, or Amazon App Store.
 
 Apple provides general information on [publishing an iOS app in the Apple App Store](https://developer.apple.com/programs/ios/distribute.html). Before uploading your app, make sure to check the [App Review Guidelines](https://developer.apple.com/app-store/review/) to make sure your app will be accepted. You require an Apple Developer Account. If you do not have one, [register as an Apple Developer](https://developer.apple.com/register/index.action).
-
-If you plan on publishing an Android app, read Google's overview of [the Android app publishing process](http://developer.android.com/tools/publishing/publishing_overview.html). Before submitting your app to an app store, [review the launch checklist](http://developer.android.com/distribute/tools/launch-checklist.html). Google provides information on [publishing your app in the Google Play Store](http://developer.android.com/distribute/googleplay/index.html), and Amazon provides information on [how to submit your app to the Amazon App Store](https://developer.amazon.com/public/support/submitting-your-app).
 
 **This how-to will teach you how to do the following:**
 
 * Complete the packaging process
 * Set up the app signing keys
 * Install an iOS app on a test device
+* Install an Android app on a test device
 
 ## 2 Prerequisites
 
@@ -80,6 +79,13 @@ The **PhoneGap Build: Signing Key Required** page asks you to go to the PhoneGap
 1. Click **Log in to PhoneGap Build**. A new tab will be opened for [https://build.phonegap.com/apps](https://build.phonegap.com/apps), where you can see the PhoneGap Build app that was created by the Mendix Developer Portal for your app. The app is named as you defined it in the **App Info** in [3 Starting the Packaging Process](#StartingthePackagingProcess).
 2. Set up the app signing key for your app in your account.
 3. Configure the app to be built by going to your PhoneGap Build account details. Click the avatar icon at the top-right of the page, and then click **Edit account**.
+
+Depending on if you are publishing an iOS or Android app, consult the respective [Publishing for iOS](anchor) or [Publishing for Android](anchor) sections of this document. Both begin with step 4 of the Setting Up App Signing Keys process.
+
+## Publishing for iOS
+
+Apple provides general information on [publishing an iOS app in the Apple App Store](https://developer.apple.com/programs/ios/distribute.html). Before uploading your app, make sure to check the [App Review Guidelines](https://developer.apple.com/app-store/review/) to make sure your app will be accepted. You require an Apple Developer Account. If you do not have one, [register as an Apple Developer](https://developer.apple.com/register/index.action).
+
 4. Click the **Signing Keys** tab, and under **iOS**, click **add a key ...**.
 5. A pop-up window will prompt you to upload a certificate file and a provisioning profile file. You can get those files from Apple. The certificate is the *.p12* file, and the provisioning profile is the *.mobileprovision* file. For more information, see [Managing App Signing Keys](/refguide7/managing-app-signing-keys) in the Mendix Reference Guide.
 6.  Give the key a title that you can easily recognize, and upload the files.<br>
@@ -123,11 +129,28 @@ To install the iOS app on your test device, follow these steps:
 
 The app should now be visible on your device. Open it and log in to the app with a regular user account (set one up in the Mendix app in your desktop browser if you have not done so yet).
 
-## 7 Publishing an Android Version
+## Publishing for Android
 
 From Google's [overview](https://developer.android.com/studio/publish/) I see several prerequisite steps. I wonder if I should include those in the prerequisite list of this document, and if it would be possible to cut that list in two divided by iOS and Android requirements.
 
 I think most of the steps I'll put here will be from Google's [Preparing for Release](https://developer.android.com/studio/publish/preparing) page. I'm not sure, however, if I can put all the steps from that link into this section of the document or if some steps from the link should be integrated into earlier secttions of this document.
+
+If you plan on publishing an Android app, read Google's overview of [the Android app publishing process](http://developer.android.com/tools/publishing/publishing_overview.html). Before submitting your app to an app store, [review the launch checklist](http://developer.android.com/distribute/tools/launch-checklist.html). Google provides information on [publishing your app in the Google Play Store](http://developer.android.com/distribute/googleplay/index.html), and Amazon provides information on [how to submit your app to the Amazon App Store](https://developer.amazon.com/public/support/submitting-your-app).
+
+To publish an Android app, complete the following steps:
+
+1. Run your Mendix app on hardware or in an emulator: completing the steps on Google's respective [hardware](https://developer.android.com/studio/run/device) or [emulator](https://developer.android.com/studio/run/emulator) websites to test your app.
+2. Attain your keys: To get keys and sign certificates, follow the steps on Google's [Sign your app](https://developer.android.com/studio/publish/preparing) page.
+3. Generate an upload key and keystore: To generate an upload key required for Google Play App signing, use Android Studio to complete the steps listed on the [Generate Key](https://developer.android.com/studio/publish/app-signing#generate-key) section of Google's App Signing page.
+4. Sign your app with your key: To sign your app using Android Studio, and export an app signing key, follow these steps from the [Sign your app with your key](https://developer.android.com/studio/publish/app-signing#sign_release) section of Google's App Signing site.
+5. Opt in your new app: To opt your new app in to the Google Play store, complete the instructions in the [Opt in a new app](https://developer.android.com/studio/publish/app-signing#enroll) section of Google's [Sign your app](https://developer.android.com/studio/publish/app-signing) site.
+6. Upload your Mendix app to the Play Console: To upload your Mendix app to the Play Console follow the instructions on Google's [Upload your app to the Play Console](https://developer.android.com/studio/publish/upload-bundle) site.
+7. Prepare and roll out a release: To create a release of your Mendix app and roll it out, follow the instructions on Google's [Prepare & roll out releases](https://support.google.com/googleplay/android-developer/answer/7159011) support page.
+8. Click the **Publish** button in the Google Play console to publish your app.
+
+{{% todo %}}[check the 1 2 and 3 bullets for plagarism]{{% /todo %}}
+
+9. copy/paste section 5 
 
 ## 8 Examples
 

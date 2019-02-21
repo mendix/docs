@@ -56,7 +56,7 @@ Mendix has made the subject of architecture a lot easier by reducing the number 
 
 But there is still some architecture work remaining so that you can get the best apps working together to serve the business in a secure and robust way that performs well.
 
-Mendix has a very strong base in innovation apps and business differentiating systems (for more information, see [What Can I Build?](https://www.mendix.com/evaluation-guide/what-can-i-build) in the *Mendix Evaluation Guide* as well as Gartner's [Pace-Layered Application Strategy and IT Organizational Design](https://www.gartner.com/binaries/content/assets/events/keywords/applications/apn30/pace-layered-applications-research-report.pdf)). But as many customers have discovered while employing the speed, productivity, and flexibility of the platform, Mendix can be used for the heavy-lifting in a company. At that point, it becomes more important to consider the architecture in order to optimize the solution and make sure it meets requirements for volume and robustness.
+Mendix has a very strong base in innovation apps and business differentiating systems (for more information, see [What Can I Build?](https://www.mendix.com/evaluation-guide/what-can-i-build) in the *Mendix Platform Evaluation Guide* as well as Gartner's [Pace-Layered Application Strategy and IT Organizational Design](https://www.gartner.com/binaries/content/assets/events/keywords/applications/apn30/pace-layered-applications-research-report.pdf)). But as many customers have discovered while employing the speed, productivity, and flexibility of the platform, Mendix can be used for the heavy-lifting in a company. At that point, it becomes more important to consider the architecture in order to optimize the solution and make sure it meets requirements for volume and robustness.
 
 ## 5 When Do I Need the Real Architects?
 
@@ -80,70 +80,73 @@ Systems depend on each other – that is part of life. But dependencies can be m
 
 Integration with people will be covered in the UX and Design Thinking Best Practices. Integrating apps with each other and other systems, things, and devices as well as monitoring are topics covered in the [Integration](../integration/integration-overview) best practices. 
 
-
 ## 7 High Performance
 
 Sometimes the functional and/or technical architecture has to be adapted to the fact that there is a very high volume of users or messages and/or high requirements for availability.
 
-For most Apps created in Mendix so far, this has had a relatively low impact. We model the App, we test it and it performs well, so we can just deploy and have happy users. In some cases, we see something that is slow, and we fix it by simple modelling changes.
+For most apps created in Mendix so far, such issues have had a relatively low impact. The app is modeled, it is tested and performs well, so it is just deployed for happy users. In some cases, when something is slow, it is fixed by simple modelling changes.
 
-But as volume increases this leads to a whole specialization of Architecture that focuses optimizing both architecture and implementation around supporting large volumes and maintain fast response times.
+As volume increases, a specialization of architecture is developing that focuses on optimizing both the architecture and the implementation in order to support large volumes and maintain fast response times.
 
-It may require more planning, more technical expertise, more testing, more tuning and more monitoring in production. This is often the core systems or the most critical systems for enterprises. The primary concern may not be feature development speed, but to get well performing systems that are easy to monitor and maintain, and with great recovery features should something still go wrong
+This may require more planning, technical expertise, testing, tuning, and monitoring in production for what is often the core or most critical system for an enterprise. The primary concern here may not be the speed of feature development, but building systems that perform well, are easy to monitor and maintain, and have great recovery features should something still go wrong.
 
-### Security Architecture
+## 8 Security Architecture
 
-Security architecture is the subject of making sure that no one can penetrate, destroy, disrupt or in any other way interfere with the normal business operations of the IT systems that we build and operate.
+Security architecture inovlves making sure no one can penetrate, destroy, disrupt, or in any way interfere with the normal business operations of an IT system that we build and operate.
 
-The subject is increasingly important, and it is in constant evolution as technology providers get better at defending themselves, and malicious parties, sometimes even state sponsored, are getting better at breaking the same systems.
+This subject is increasingly important. It is in constant evolution as technology providers get better at defending themselves and malicious parties get better at breaking the same systems.
 
-Mendix has good certification for security (more from jasper/bart)….
+Mendix has good certification for security.
 
-The security areas are generally considered as:
+{{% todo %}}[**NEED MORE CONTENT FROM JASPER/BART**]{{% /todo %}}
 
-- Infrastructure security, on e.g. cloud level, deployments etcetera
-- App security, usually on user level, focusing on authentication, authorization and SSO
-- Integration security, focusing on secure service calls, e.g. via SSL, or via secure queueing or SFTP for files
+The following security areas are generally considered for best practices:
 
-### Monitoring and Robustness
+* Infrastructure security
+	* For example, at the cloud level and for deployments
+* App security
+	* Usually at the user level
+	* Focusing on authentication, authorization, and single-sign on (SSO)
+* Integration security
+	* Focusing on secure service calls (for example, via SSL, secure queueing, or SSH File Transfer Protocol (SFTP) for files
 
-For simple Apps and systems Mendix has all required monitoring available on the Mendix Developer Portal
+## 9 Monitoring & Robustness
 
-For VPC solutions the same would be provided by the party that provides the infrastructure, while integration with Mendix.
+For simple apps and systems, Mendix has all the required monitoring available in the [Mendix Developer Portal](/developerportal/operate/). For virtual private cloud (VPC) solutions integrated with Mendix, monitoring capabilities would be provided by the third-party providing the infrastructure.
 
-As there are more Apps created (\&gt;20), and some of them form a part of Microservices systems, there are reasons to start evolving the monitoring of the solution.  A first step for Mx Cloud customers, can be to dedicate one App to the monitoring and control of the others, using the open APIs of Mendix Cloud.
+As you build more and more apps and some of these form a part of a microservices system, there are reasons to start evolving the monitoring of your solution. The first step for [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy) customers is to dedicate one app to monitoring and controlling the other app by using the open [Deploy API](/apidocs-mxsdk/apidocs/deploy-api) for Mendix Cloud.
 
-But for VPC, on prem and when the number of systems increase, and the criticality grows, there is more and more desirable to use professional monitoring, log integration, alarms and recovery mechanisms.
+{{% todo %}}[**VERIFY THAT ABOVE API IS CORRECT TO LINK TO**]{{% /todo %}}
 
-The set-up of such an architecture is largely the role of central IT of the customer, while Mendix connects to the tools and protocols proscribed.
+But for VPC and on-premises solutions as well as when the number of systems increases and criticality grows, it is more desirable to use professional monitoring, log integration, alarms, and recovery mechanisms. The setup of such an architecture is largely the role of the customer's central IT, while Mendix connects to the tools and protocols proscribed.
 
-This section of the architecture best practices, will discuss both how some of these benefits can be achieved both using native Mendix technology, and when connecting to professional tooling.
+The [Robusntess](../robustness/robustness-overview) section of the Architecture Best Practices discusses how these benefits can be achieved by using native Mendix technology or by connecting to professional tooling.
 
-### CI/CD and Test Automation
+## 10 CI/CD & Test Automation
 
-See also the section [Eval Guide - CICD](https://www.mendix.com/evaluation-guide/app-lifecycle/cicd)
+Mendix provides some continuous integration out-of-the-box:
 
-Mendix provides some Continuous integration already out of the Box:
+* Consistency checks between the UI, logic, and database are automatically done by the Desktop Modeller 
+* Consistency checks against other developers' work are automatically done by Team Server
 
-1. Consistency between UI, logic and DB is done by the modeller automatically
-2. Checking into the team server the consistency check is done against other developers work.
+These checks are the same for all Mendix users, because that is part of your app model and is a result of the acceleration that Mendix provides for building good-quality solutions. Some of the testing needed for other solutions (for example, Java solutions) is not needed for Mendix.
 
-This is the same for everybody that makes Mendix solutions, because it is part of the Model, and it is part of the acceleration that Mendix provides to get good quality solutions in a quick way. Some testing that is needed for e.g. Java solutions is not needed for Mendix.
+Mendix provides one-click deployments for [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy), [SAP Cloud Platform](/developerportal/deploy/sap-cloud-platform), [IBM Cloud](/developerportal/deploy/ibm-cloud), and [Siemens MindSphere](/developerportal/deploy/deploying-to-mindsphere). In addition, Mendix provides the [UnitTesting](https://appstore.home.mendix.com/link/app/390/) module in the App Store for testing microflows and [Application Test Suite](/ats/howtos/ht-version-2/install-ats-helper-recorder-2) to automatically test UX functions.
 
-Mendix provides 1-click deployments onto Mendix Cloud, SAP Cloud and IBM Cloud and soon also for RedHat Open-shift Kubernetes.  Mendix provides the Unity test module for testing Microflows, and ATS to automatically test the UX functions.
+But the scope for automation never ends. It is always possible to automate more, and Mendix provides all the required APIs to set up automated testing and deployments.
 
-But the scope for automation never ends. It is always possible to automate more and Mendix provides all required APIs to set up automated testing and deployments.
+This is an area that is evolving very quickly and many companies are making significant investments. There is not one single way to do CI/CD and test automation, because the focus on automation shifts depending on the customer and solution.
 
-This is an area that is evolving very fast and many companies are making significant investments. There is not one single way to do this, and the focus on automation shifts depending on customer and solution.
+Some partners build automation from a Mendix app, some from Jenkins, some others from GitLab CI. Some do mostly test automation, while others focus on deployment automation.
 
-Some partners build automation from a Mendix App, some from Jenkins or GitLab CI. Some do mostly Test automation. Some focus on Deployment automation.
+The most important thing is to take a clear look at your testing needs as well as the benefits and costs, and then make the right decisions on what to automate, what to centralize, what to localiz, and what to continue doing manually via the easy-to-use Mendix Developer Portal.
 
-The important thing is to take a clear look at the needs, the benefits and the costs, and make the right decisions on what to automate, what to centralize, what to localize and what to just continue to do manually via the easy to use Mendix developer portal.
+For more information, see the [CICD](https://www.mendix.com/evaluation-guide/app-lifecycle/cicd) section in the *Mendix Platform Evaluation Guide*.
 
-### Summary
+## 11 Summary
 
-Architecture is a wide subject area, where we will only try to cover the areas where we see the most interest in advice and information.  The Best Practices included are work in progress and constantly changing, as is the world around us, so read this as &quot;one good source of information&quot;.
+Architecture is a wide subject area, so we will only try to cover the areas where we see the most interest in advice and knowledge sharing. The best practices included are works in progress and are constantly changing, so read this as *one good source of information*.
 
-The weather never looks (exactly) the same on two days of one&#39;s life, so it&#39;s important to both look for what is the same, and what is different when you work towards the best solution for your Maker&#39;s challenge.
+The weather never looks exactly the same on two days of one's life, so it is important to both look for what is the same and what is different when you work towards the best solution.
 
 Ultimately, Mendix is there to support you both with technology and consulting.

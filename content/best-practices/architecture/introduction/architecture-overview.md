@@ -10,71 +10,78 @@ draft: true
 
 There are many types of IT architecture, and we hear the term in different contexts. The fact is that architecture is practiced at the highest levels of companies as well as by relative beginner Mendix developers.
 
-&quot;_IT architecture is the art and science of designing and delivering valuable technology strategy&quot;._
+{{% todo %}}[**ARE WE SURE WE WANT TO USE THE QUOTE BELOW? IF SO, WE HAVE DO AN ATTRIBUTE**]{{% /todo %}}
 
-We want to make nice things with technology. We want them to be valuable for the business, we want them to be easy to deliver and maintain, and we want them to be robust in production, while delivering all this value to a reasonable cost.
+According to [IasaGlobal](https://iasaglobal.org/itabok/what-is-it-architecture/), "IT architecture is the art and science of designing and delivering valuable technology strategy."
 
-All the processes that attempt to optimize that formula is to some extent architecture work, and if you work in the IT industry, chances are you do it every day.
+Generally, we want to make nice things with technology that are valuable for the business, easy to deliver and maintain, and robust in production. And we want to deliver all this value at a reasonable cost. The processes that attempt to optimize this formula are part of the work of architecture. So, if you work in the IT industry, chances are you work with architecture every day.
 
-Some work is strategic, like policy, positioning, portfolio or guidelines to define what to do and good ways to do it. So is enterprise architecture road-maps, and business value calculations and measurements.
+Some architecture work is strategic, such as policy, positioning, portfolio, and guidelines for defining what to do and the best ways to do it. This includes enterprise architecture roadmaps as well as business-value calculations and measurements.
 
-Some work is tactical when we work concrete designs, anything from large program solution designs to small system design, App design, Microservice design or even just deciding how to configure a Mendix App in a good way to maximize business value and maintainability.
+Some architecture work is tactical, such as working with concrete designs, small system designs, large program solution designs, app design, and microservice design. Even just deciding how to configure a Mendix app in to maximize business value and maintainability involves architecture work.
 
-### Microservice Architecture
+## 2 Microservice Architecture
 
-With the arrival of Low code platforms, cloud solutions and automation, it has become easier to make Architecture Functional, which is reflected in the trend towards Microservices.
+With the arrival of low-code platforms, cloud solutions, and automation, it has become easier to make architecture functional, which is reflected in the trend towards microservices.
+
+{{% todo %}}[**UPDATE DIAGRAM**]{{% /todo %}}
 
 ![](attachments/arch-over3.png)
 
-An entire subject area will dive into this exiting development.
+The [Microservices best practices](..microservices/microservices-overview) best practices will dive into this exciting development.
 
-### Modern IT Architecture only for Architects?
+## 3 Is Modern IT Architecture Only for Architects?
 
-There are more than architects that work on IT architecture, whether they are aware of it or not. And this trend is getting stronger.
+There are more roles than just architects who work on IT architecture, whether they are aware of this or not. And this trend is getting stronger.
 
-It is emphasized by Microservices, Agile and DevOps. The most techie considerations are increasingly abstracted away by Low code and other cloud-based solutions, and left are more functional decisions, where process and organization play a larger and larger role in architecture decisions.
+This is exemplified by microservices, Agile, and DevOps. The most tech-focused considerations are increasingly abstracted away by low-code and other cloud-based solutions. That leaves room for more functional decisions, where process and organization play a larger role in architecture decisions.
 
-Not only can non-techie people start building solutions in e.g. Mendix, they can understand the architecture considerations, and take part in a more team-oriented and iterative architecture process.
+In addition to building solutions in Mendix, non-tech users can come to understand the architecture considerations in such solutions and take part in a more team-oriented and iterative architecture process.
+
+{{% todo %}}[**UPDATE DIAGRAM**]{{% /todo %}}
 
 ![](attachments/arch-over4.png)
 
-IT Architecture of the future will not separate technical from functional architecture, but rather work on one single solution model, that is understood by all parties, taking business organization, delivery organization, technology, and business process into consideration.
+IT architecture of the future will not separate technical from functional architecture, but rather work on one single solution model that is understood by all parties and takes the business organization, delivery organization, technology, and business process into consideration.
+
+{{% todo %}}[**UPDATE DIAGRAM**]{{% /todo %}}
 
 ![](attachments/arch-over5.png)
 
-And the architecture will have a level of flexibility, as more information is available during the realization of a solution. It could be re-factoring of an App, or splitting an App in smaller parts, discovering reasons to do so based on real knowledge from the actual implementation.
+Architecture needs to have a level of flexibility as more information is made available during the realization of an solution. This could involve refactoring an app or splitting an app into smaller parts based on the real knowledge gained from the actual implementation.
 
-### Mendix and Architecture?
+## 4 Mendix & Architecture
 
-Mendix has made the subject of Architecture a lot easier, by reducing the number of factors to consider, e.g. how to make UI, logic and databases work together, and Mendix simplifies the entire infrastructure and deployment considerations.
+Mendix has made the subject of architecture a lot easier by reducing the number of factors to consider during the development process (for example, how to make the UI, logic, and databases work together). In addition, Mendix simplifies the infrastructure and deployment considerations.
 
-But there is still some architecture work remaining, to get the best Apps to work together to serve the business in a secure, robust and well performing way.
+But there is still some architecture work remaining so that you can get the best apps working together to serve the business in a secure and robust way that performs well.
 
-Mendix has a very strong base in Innovation Apps and Business Differentiating systems (see the pace layered model), but as many customers have discovered the speed, productivity and flexibility of Mendix, they have started using Mendix for the heavy lifting of the company.
+Mendix has a very strong base in innovation apps and business differentiating systems (for more information, see [What Can I Build?](https://www.mendix.com/evaluation-guide/what-can-i-build) in the *Mendix Evaluation Guide* as well as Gartner's [Pace-Layered Application Strategy and IT Organizational Design](https://www.gartner.com/binaries/content/assets/events/keywords/applications/apn30/pace-layered-applications-research-report.pdf)). But as many customers have discovered while employing the speed, productivity, and flexibility of the platform, Mendix can be used for the heavy-lifting in a company. At that point, it becomes more important to consider the architecture in order to optimize the solution and make sure it meets requirements for volume and robustness.
 
-It then becomes more and more important with Architecture, to optimize the solution and make sure it meats requirements for volume and robustness.
+## 5 When Do I Need the Real Architects?
 
-### When Do I Need the Real Architects?
-
-As the solution, the scope, the volumes and the criticality of systems increase, there is an increasing need to have very strong technical people on the team and professional architects to help creating the best solution.
+As the solution, scope, volume, and criticality of a system increases, there is an increasing need to have strong technical people on the team and professional architects to help in creating the best solution.
 
 ![](attachments/arch-over6.png)
 
-It's a matter of natural law, that more thinking, i.e. more architecture, needs to go into larger and more important solutions. There may also be more reason to test and tune the system after functional realization, and requirements for professional monitoring.
+The larger and more important the solution, the more thinking and architecture needs to go into it. There may also be more reasons to test and tune the system after functional realization, in addition to requirements for professional monitoring.
 
-### Good Integration Architecture
+## 6 Good Integration Architecture
 
-One of the most important parts of Architecture is integration. All business Apps need to integrate with people, things, other systems and operational tools to be useful.
+One of the most important parts of architecture is integration. All business apps need to integrate with people, things, other systems, and operational tools to be useful.
 
-The integration with Humans is covered in the _UX and Design thinking_ best practices, but all other integration falls into this category. Integrating Apps with each other and other systems, with things, devices and with monitoring.
+Integration is really the glue that holds the pieces together, and since there are so many different systems, businesses, technologies, and organizations, integration is a hard subject to nail down.
 
-Integration is really the glue that holds the pieces together, and since there are so many different systems, businesses, technologies and organizations, integration is a hard subject to nail down.
+The best thing to have with integration is an open mind while thinking functionally, talking with stakeholders and experts, and considering error scenarios. Then you can develop an overall solution design that makes integration as easy and as clearly defined as possible.
 
-Best is to have an open mind, think functional, have a discussion with stakeholders and experts, consider error scenarios and then make an overall solution design that makes integration as easy and clearly defined as possible.
+Systems depend on each other – that is part of life. But dependencies can be made smaller and more explicit as well as more functionally easy to understand. This helps to make building, operating, and maintaining a solution easier.
 
-Systems do depend on each other. That is part of life. But dependencies can be made smaller and more explicit, and more functionally easy to understand, to get an easy to build, operate and maintained solution.
+{{% todo %}}[**ADD LINK TO SECTION BELOW WHEN AVAILABLE**]{{% /todo %}}
 
-### High Performance
+Integration with people will be covered in the UX and Design Thinking Best Practices. Integrating apps with each other and other systems, things, and devices as well as monitoring are topics covered in the [Integration](../integration/integration-overview) best practices. 
+
+
+## 7 High Performance
 
 Sometimes the functional and/or technical architecture has to be adapted to the fact that there is a very high volume of users or messages and/or high requirements for availability.
 

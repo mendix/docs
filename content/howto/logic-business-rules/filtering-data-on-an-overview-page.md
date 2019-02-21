@@ -28,7 +28,7 @@ Before you continue, make sure that you know how to create the following:
 
 * Domain models (for more information, see [How to Create a Basic Data Layer](../data-models/create-a-basic-data-layer))
 * Overview and detail pages (for more information, see [How to Create Your First Two Overview & Detail Pages](../ux/create-your-first-two-overview-and-detail-pages))
-* Menu items (for more information, see [How to Set Up the Navigation Structure](../ux/setting-up-the-navigation-structure))
+* Menu items (for more information, see [How to Set Up the Navigation Structure](../general/setting-up-the-navigation-structure))
 
 1.  Create the following domain model:
 

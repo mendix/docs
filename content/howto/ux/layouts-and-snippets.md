@@ -213,6 +213,6 @@ In addition, a snippet can define an entity that serves as a context for the wid
 * [How to Set Up the Mendix UI Framework with Scout](setup-mendix-ui-framework-with-scout)
 * [How to Set Up the Mendix UI Framework with Koala](setup-mendix-ui-framework-with-koala)
 * [How to Set Up the Mendix UI Framework with Just CSS](setup-mendix-ui-framework-with-just-css)
-* [How to Set Up the Navigation Structure](setting-up-the-navigation-structure)
+* [How to Set Up the Navigation Structure](../general/setting-up-the-navigation-structure)
 * [How to Create Your First Two Overview & Detail Pages](create-your-first-two-overview-and-detail-pages)
 * [How to Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)

@@ -93,6 +93,6 @@ The Mendix UI Framework uses **Sass**, which relies on Ruby. However, you can in
 *   [How to Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
 *   [How to Use Layouts and Snippets](layouts-and-snippets)
 *   [How to Perform Scout and Windows 10 Workaround](perform-scout-and-windows-10-workaround)
-*   [How to Set Up the Navigation Structure](setting-up-the-navigation-structure)
+*   [How to Set Up the Navigation Structure](../general/setting-up-the-navigation-structure)
 *   [How to Set Up the Mendix UI Framework with just CSS](setup-mendix-ui-framework-with-just-css)
 *   [How to Set Up the Mendix UI Framework with Koala](setup-mendix-ui-framework-with-koala)

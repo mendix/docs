@@ -24,5 +24,5 @@ Scout has not been updated for Windows 10. Therefore, Windows 10 users need to u
 * [How to Set Up the Mendix UI Framework with Just CSS](setup-mendix-ui-framework-with-just-css)
 * [How to Set Up the Mendix UI Framework with Koala](setup-mendix-ui-framework-with-koala)
 * [How to Set Up the Mendix UI Framework with Scout](setup-mendix-ui-framework-with-scout)
-* [How to Set Up the Navigation Structure](setting-up-the-navigation-structure)
+* [How to Set Up the Navigation Structure](../general/setting-up-the-navigation-structure)
 * [How to Use Layouts and Snippets](layouts-and-snippets)

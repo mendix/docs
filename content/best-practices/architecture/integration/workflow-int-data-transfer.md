@@ -13,7 +13,7 @@ In this integration pattern example app, we implemented an example architecture
 consisting of an ordering app and a billing app. The ordering app is responsible
 for managing customer orders. The billing app is responsible for generating
 invoices. A user who creates an order (in the ordering app) needs to approve the
-invoice (in the support app) immediately after creating the order. To support
+invoice (in the support app) imattachmentstely after creating the order. To support
 this workflow, an integration is necessary to transfer the user and data between
 apps.
 
@@ -34,7 +34,7 @@ The integration between the apps consists of two parts:
 The Example Case
 ----------------
 
-![](media/0dbc667798cef38e34f64ab2b156e505.png)
+![](attachments/workflow-int-data-transfer/example-case.png)
 
 You can use this pattern when you have a business process using transactional
 data that starts in one app and ends in another. An example which is used for
@@ -102,7 +102,7 @@ records. The next call to the service will include the later ChangeDate, and so
 will not retrieve the change to order 1 either. So, the change to order 1 can be
 lost.
 
-![](media/ab934083a2782d2fb32e227b0364543e.png)
+![](attachments/workflow-int-data-transfer/workflow-order.png)
 
 To resolve this problem, a different approach is necessary. This approach uses a
 sequence number instead of a time stamp, and assigns that number in another
@@ -136,7 +136,7 @@ deletes in the integration if necessary.
 Continuing Workflow in another App
 ----------------------------------
 
-Pulling data based on a timer causes a delay; the data is not immediately
+Pulling data based on a timer causes a delay; the data is not imattachmentstely
 available in the other app. In some scenarios, this is not acceptable. For
 instance, when a user has created an order and wants to continue working with
 that order in the billing app. We don’t want them to have to wait for the order

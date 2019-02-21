@@ -1,5 +1,5 @@
 ---
-title: "Workflow Integration with Data Transfer"
+title: "Workflow Integration with Data Transfer Example"
 parent: "process-integration"
 menu_order: 1
 draft: true

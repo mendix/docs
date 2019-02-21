@@ -52,4 +52,3 @@ Separate profiles are available for building [offline apps](offline). These apps
 * [Getting the Mendix Mobile App](getting-the-mendix-app)
 * [Managing App Signing Keys](managing-app-signing-keys)
 * [Packaging Hybrid Mobile Apps](packaging-hybrid-mobile-apps)
-* [Publishing Hybrid Mobile Apps](publish-packages-to-mobile-stores)

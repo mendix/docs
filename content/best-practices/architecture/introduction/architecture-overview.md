@@ -1,14 +1,14 @@
 ---
 title: "Architecture Overview"
-parent: "architecture-bp-intro"
+parent: "architecture-intro"
 description: "Best practices for architecture."
 menu_order: 2
 draft: true
 ---
 
-### What is Architecture?
+## 1 What Is IT Architecture?
 
-There are many types of architecture and we hear the term over and over in different contexts. The fact is that architecture is practiced on at the highest level of companies as well as by a relative beginner Mendix developer.
+There are many types of IT architecture, and we hear the term in different contexts. The fact is that architecture is practiced at the highest levels of companies as well as by relative beginner Mendix developers.
 
 &quot;_IT architecture is the art and science of designing and delivering valuable technology strategy&quot;._
 

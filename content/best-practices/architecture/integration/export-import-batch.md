@@ -1,5 +1,5 @@
 ---
-title: "Exporting, Importing & Batching"
+title: "Export, Import & Batch Processing"
 parent: "integration-use-cases"
 menu_order: 1
 draft: true

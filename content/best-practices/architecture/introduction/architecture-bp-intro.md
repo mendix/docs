@@ -5,12 +5,20 @@ description: "Best practices for architecture."
 menu_order: 1
 draft: true
 ---
-## Introduction
 
-Mendix is optimized for the easiest and fastest way to develop and maintain Apps that fulfil a business function. As the scope grows larger, architecture becomes more important, and it becomes
-relevant to leverage best practices expertise in the area.
+## 1 Introduction to Mendix Architecture Best Practices
 
-The Architecture Best Practices complements the sections in the Evaluation Guide: Data Management, Integration, Deployment, DevOps, Architecture and Security.
+Mendix is optimized for the easiest and fastest way to develop and maintain apps that fulfill a business function. As the scope of your apps grows larger, architecture becomes more important. At that point, you should leverage best practices in this area.
+
+The Mendix architecture best practices complements the following sections in the Mendix 
+
+* Evaluation Guide:
+* Data Management
+* Integration
+* Deployment
+* DevOps
+* Architecture
+* Security
 
 ### About Architecture Best Practices
 

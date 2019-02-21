@@ -69,6 +69,6 @@ In this chapter we will create a new app and select a theme from the New App sel
 *   [How to Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
 *   [How to Use Layouts and Snippets](layouts-and-snippets)
 *   [How to Perform the Scout and Windows 10 Workaround](perform-scout-and-windows-10-workaround)
-*   [How to Set Up the Navigation Structure](setting-up-the-navigation-structure)
+*   [How to Set Up the Navigation Structure](../general/setting-up-the-navigation-structure)
 *   [How to Set Up the Mendix UI Framework with Koala](setup-mendix-ui-framework-with-koala)
 *   [How to Set Up the Mendix UI Framework with Scout](setup-mendix-ui-framework-with-scout)

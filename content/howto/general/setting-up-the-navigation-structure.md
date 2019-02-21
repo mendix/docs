@@ -1,6 +1,6 @@
 ---
 title: "Set Up the Navigation Structure"
-category: "UX"
+category: "General"
 menu_order: 30
 tags: []
 ---
@@ -11,7 +11,7 @@ Once you've created some pages you want to give users the ability to access them
 Before starting this how-to make sure you have completed the following prerequisites:
 
 *   [Creating a basic data layer](../data-models/create-a-basic-data-layer)
-*   [Creating your first two Overview and Detail pages](create-your-first-two-overview-and-detail-pages)
+*   [Creating your first two Overview and Detail pages](../ux/create-your-first-two-overview-and-detail-pages)
 
 ## 2 Setting a Default Home Page
 
@@ -93,14 +93,13 @@ Now that you've created a menu structure it's time to start using it on pages.
 6.  Select **Desktop**, **Tablet**, or **Phone** as menu, depending on the device interface you're working on.
 7.  Click **OK** to save the properties. The menu widget is now showing the navigation items created in the navigation editor.
 
-    To prevent repeating the previous steps for every page in your project, the Desktop Modeler supports something called layouts. With layouts you can define a base structure for pages in your project. In a layout you can define where the menu should be rendered and you can simply reuse that layout for the desired pages. You can find out how to use layouts in the following document: [How to Use Layouts and Snippets](layouts-and-snippets).
+    To prevent repeating the previous steps for every page in your project, the Desktop Modeler supports something called layouts. With layouts you can define a base structure for pages in your project. In a layout you can define where the menu should be rendered and you can simply reuse that layout for the desired pages. You can find out how to use layouts in the following document: [How to Use Layouts and Snippets](../ux/layouts-and-snippets).
 
 ## 6 Read More
 
-* [How to Create Your First Two Overview & Detail Pages](create-your-first-two-overview-and-detail-pages)
-* [How to Set Up the Mendix UI Framework with Just CSS](setup-mendix-ui-framework-with-just-css)
-* [How to Set Up the Mendix UI Framework with Koala](setup-mendix-ui-framework-with-koala)
-* [How to Set Up the Mendix UI Framework with Scout](setup-mendix-ui-framework-with-scout)
-* [How to Set Up the Navigation Structure](setting-up-the-navigation-structure)
-* [How to Use Layouts and Snippets](layouts-and-snippets)
+* [How to Create Your First Two Overview & Detail Pages](../ux/create-your-first-two-overview-and-detail-pages)
+* [How to Set Up the Mendix UI Framework with Just CSS](../ux/setup-mendix-ui-framework-with-just-css)
+* [How to Set Up the Mendix UI Framework with Koala](../ux/setup-mendix-ui-framework-with-koala)
+* [How to Set Up the Mendix UI Framework with Scout](../ux/setup-mendix-ui-framework-with-scout)
+* [How to Use Layouts and Snippets](../ux/layouts-and-snippets)
 * [How to Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)

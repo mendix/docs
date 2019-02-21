@@ -22,7 +22,7 @@ Before starting with this how-to, make sure you have completed the following pre
 
 * Know how to create a domain model (for more information, see [How to Create a Basic Data Layer](../data-models/create-a-basic-data-layer))
 * Know how to create overview and detail pages (for more information, see [How to Create Your First Two Overview and Details Pages](../ux/create-your-first-two-overview-and-detail-pages))
-* Know how to create menu items (for more information, see [How to Set Up the Navigation Structure](../ux/setting-up-the-navigation-structure))
+* Know how to create menu items (for more information, see [How to Set Up the Navigation Structure](../general/setting-up-the-navigation-structure))
 
 ## 3 Preparing the Data Structure, GUI, and Example Data
 
@@ -49,7 +49,7 @@ To see the results of this how-to, you must set up a test project with test data
 
 8. Double-click the new button and in the button's properties editor, enter *Set Processing to Complete* for the **Caption**.
 9. Set **On click** to **Call a microflow**, and then select the **IVK_SetOrderToComplete** microflow you just created:
-    
+   
     ![](attachments/8785360/8946804.png)
 
 10. Add the following customer data to your app:

@@ -119,7 +119,7 @@ At the end of development, you should revisit the sizing based on realistic test
 
 For more information, see [Sizing & Scaling](sizing-scaling).
 
-## 4 Performance Testing & Tuning
+## 5 Performance Testing & Tuning
 
 For most apps, there is no need for performance testing and tuning during the creation of an app. Functional testing is enough, as it will reveal pages that load slowly that can be tuned.
 
@@ -129,19 +129,19 @@ To read more, see [Testing & Tuining](testing-tuning).
 
 {{% todo %}}[**ADD TO ABOVE WHEN CROSS-REFERENCED DOC/SECTION AVAILABLE: "Detecting & Resolving Performance Issues."**]{{% /todo %}}
 
-## 5 Deployments & Stability
+## 6 Deployments & Stability
 
 Next step is to make sure that deployments are safe and that the apps run correctly in production once they are deployed. There are a number of different strategies to achieve high availability and avoid disturbing business operations.
 
 For details, see [Deployments & Stability](deployments-stability).
 
-## 6 Team & Skills
+## 7 Team & Skills
 
 As the necessary levels of design, architecture, testing, tuning, and app-criticality become clear, you may need to adjust the skills level of your team. Naturally, more critical apps that need to handle more volume will need more experienced designers and developers.
 
 {{% todo %}}[**ADD TO WHEN CROSS-REFERENCED DOC/SECTION AVAILABLE: "For details, see Team and Skills."**]{{% /todo %}}
 
-## 7 Guidelines for Performance
+## 8 Guidelines for Performance
 
 Mendix also provides a set of useful guidelines for the Developers and Testers of Mendix apps that require high-performance. 
 
@@ -149,7 +149,7 @@ Mendix also provides a set of useful guidelines for the Developers and Testers o
 
 For more information, see [How to Implement Community Best Practices for App Performance ](/howto/general/community-best-practices-for-app-performance) as well as [Three Tools to Test Your Mendix Application](https://www.mendix.com/blog/three-tools-to-test-your-mendix-application/).
 
-## 8 Summary
+## 9 Summary
 
 In summary, the Mendix Platform can be used for almost all situations found in the business application landscape of a typical enterprise. The most important thing to do is pay the correct amount of attention to team skills, good modelling, tuning, performance-testing, sizing, scaling, and operational monitoring and procedures.
 

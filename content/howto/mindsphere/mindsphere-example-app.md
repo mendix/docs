@@ -10,7 +10,6 @@ You can write Mendix apps which analyze data held in MindSphere, the open, cloud
 
 **ADD APP STORE LINK ABOVE**
 
-
 This documentation provides more explanation of the MindSphere example app. Please note that this app is not production-ready. It is designed as an example of how you might begin to build a Mendix/MindSphere app.
 
 You can get more detailed information on how to deploy your app to the MindSphere Platform in [Deploying to MindSphere](/developerportal/deploy/deploying-to-mindsphere).
@@ -29,21 +28,17 @@ You need a MindSphere user account on a developer tenant. This account needs the
 
 ### 2.2 Opening the App in the Desktop Modeler
 
-In the Desktop Modeler, follow these steps:
+Open the (empty) Desktop Modeler and follow these steps:
 
 1. Open the Mendix App Store by clicking the icon in the top-left of the menu bar:
 
-![](attachments/mindsphere-example-app/app-store-icon.png)
+	![](attachments/mindsphere-example-app/app-store-icon.png)
 
-2. Enter *MindSphere* in the search box, and in the results, select {NAME}:
-
-**ADD**
-
-
-3. Click **Download** to start using this starter app:
+2. Enter *MindSphere* in the search box, and in the search results, select **Pump Asset Example**:
 
 **ADD**
 
+3. Click **Download** to create a new app project using this app.
 
 ### 2.3 Assets
 

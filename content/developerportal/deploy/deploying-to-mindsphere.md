@@ -34,7 +34,17 @@ There are two ways to include the customization you need in your app.
 
 The **MindSphere Starter Application** in the Mendix App Store contains all the modules and styling which you need to create an app you want to deploy to MindSphere.
 
-For details on using this starter app, see [How to Use the MindSphere Example App](/howto/mindsphere/mindsphere-example-app).
+Open the (empty) Desktop Modeler and follow these steps:
+
+1. Open the Mendix App Store by clicking the icon in the top-left of the menu bar:
+
+	![](attachments/deploying-to-mindsphere/app-store-icon.png)
+
+2. Enter *MindSphere* in the search box, and in the search results, select **MindSphere Starter Application**:
+
+**ADD**
+
+3. Click **Download** to create a new app project using this app.
 
 {{% alert type="info" %}}
 This is the recommended approach if you are building a new application as it will provide all the necessary building blocks to get started.

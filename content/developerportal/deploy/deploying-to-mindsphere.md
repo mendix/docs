@@ -17,12 +17,12 @@ You can create Mendix apps which make MindSphere API calls, but which are deploy
 {{% /alert %}}
 
 {{% alert type="warning" %}}
-There are some limitations to what you can do in your Mendix app if it is deployed to MindSphere. See section 4, [Limitations](#limitations), for more information.
+There are some limitations to what you can do in your Mendix app if it is deployed to MindSphere. See the [Limitations](#limitations) section for more information.
 {{% /alert %}}
 
-To help you with your first MindSphere apps, there is also an example app which contains modules which call the MindSphere APIs. Please see [MindSphere Assets Example App](/howto/mindsphere/mindsphere-example-app) for more information.
+To help you with your first MindSphere apps, there is also an example app which contains modules which call the MindSphere APIs. Please see [How to Use the MindSphere Example App](/howto/mindsphere/mindsphere-example-app) for more information.
 
-## 2 Starter App and Theme Pack
+## 2 Starter App & Theme Pack
 
 You will need to customize your app to allow it to be deployed to MindSphere and to allow it to be registered via the MindSphere Developer Cockpit and be shown in the launchpad.
 
@@ -97,6 +97,8 @@ The MindSphereSingleSignOn module also provides three microflows which are used 
 
 This microflow must be added to the *Runtime* tab of the *Project > Settings* dialog, accessed through the *Project Explorer*. It needs to be selected as the *After startup* microflow or added as a sub-microflow to an existing after startup microflow.
 
+{{% todo %}}[**CAN YOU MAKE THESE LARGE IMAGES SMALLER**]{{% /todo %}}
+
 ![Project settings dialog](attachments/deploying-to-mindsphere/image4.png)
 
 **DS_MindSphereAccessToken**
@@ -141,7 +143,7 @@ When a new user is identified during SSO, the SSO process generates a random pas
 This policy is set up as the default in the MindSphere starter and example apps and should not be changed.
 {{% /alert %}}
 
-#### 2.2.4 Roles and Scopes
+#### 2.2.4 Roles & Scopes
 
 Using SSO, the Mendix app needs to know which roles to allocate to the user. This enables the app to know whether the user should have, for example, administrator access.
 
@@ -213,15 +215,17 @@ The index.html file can be found in the /theme folder of your project app.
 
 As well as changes to the index.html file, SSO for MindSphere also requires a different login HTML file. This is called MindSphereLogin.html and can also be found in the /theme folder of your project app.
 
+{{% todo %}}[**PLEASE DO STYLE GUIDELINE REVIEW FOR BOTH DOCS: FOR EXAMPLE, FILE NAME ABOVE SHOULD BE ITALICIZED**]{{% /todo %}}
+
 If this file is not in your /theme folder, you can create it following the instructions in section 6.2, MindSphereLogin.html, or by importing the MindSphere_UI_Resources theme pack.
 
-### 2.6 Permission denied page
+### 2.6 Permission Denied Page
 
 The permission denied page will be shown if your app will be called with an invalid token or a token which does not include the value you have specified within the SSO constant ‘CockpitApplicationName’. The SSO module expects to find this file as error_page/403.html within your ‘Theme’ folder.
 
 ![](attachments/deploying-to-mindsphere/image12.png)
 
-## 3 Deploying your app to MindSphere
+## 3 Deploying Your App to MindSphere
 
 ### 3.1 Push to Cloud Foundry
 
@@ -396,6 +400,8 @@ Mendix apps can currently only be deployed to MindSphere running on AWS (Amazon 
 
 ## 5 Development Considerations
 
+{{% todo %}}[**SHOULD THIS BE IN ITS OWN DOC?**]{{% /todo %}}
+
 ### 5.1 Local Testing{#localtesting}
 
 #### 5.1.1 Credentials 
@@ -448,7 +454,7 @@ This should be the tenant that the user has access to in a multi-tenant environm
 
 If you are testing different roles in your app, do not use the demo users. If you switch between demo users, this will not correctly populate the tenant and role information from MindSphere. To test different roles, allocate the role to MxAdmin, redeploy, and log in again.
 
-### 5.2 Multi-tenant{#multitenant}
+### 5.2 Multi-Tenant{#multitenant}
 
 In MindSphere, apps are usually designed to be multi-tenant, meaning that a single instance of the app serves multiple tenants. A tenant is a representation of a real-world organization. It groups users, data, assets, entities, and many kinds of other properties. Access to these resources for users of the same tenant is controlled via the authorization management system.
 
@@ -505,7 +511,7 @@ You have some limits which are set for the user's tenant to be applied to a time
 
 4.  When you want to retrieve the list of limits, call this microflow instead of using the retrieve objects action. This will ensure that tenant-based security is applied.
 
-### 5.3 Cloud Foundry Environment variables
+### 5.3 Cloud Foundry Environment Variables
 
 If you need to set or change the value of any Cloud Foundry Environment Variables, you will have to do this using the CF CLI.
 

@@ -37,10 +37,12 @@ In the Desktop Modeler, follow these steps:
 
 2. Enter *MindSphere* in the search box, and in the results, select {NAME}:
 
+**ADD**
 
 
 3. Click **Download** to start using this starter app:
 
+**ADD**
 
 
 ### 2.3 Assets
@@ -110,6 +112,8 @@ More information on creating assets is available in the MindSphere [Asset Manage
 To deploy the example app, you will need to configure the app, push it to Cloud Foundry, and set it up in the MindSphere launchpad.
 
 These instructions are available in the deployment documentation: [Deploying to MindSphere](/developerportal/deploy/deploying-to-mindsphere).
+
+{{% todo %}}[**HOW TO THE SECTIONS BELOW RELATE TO THE Deploying DOC? DO THEY HAVE TO BE DONE IN ADDITION TO THAT DOC? DOES THE ORDER MATTER? DO THE SECTIONS BELOW NEED TO GO INTO THE Deploying DOC?**]{{% /todo %}}
 
 ### 3.1 App Configuration
 
@@ -201,17 +205,17 @@ To use the app:
 
 ## 5 Notes on App Design
 
-### 5.1 Single Sign-on
+### 5.1 Single Sign-On
 
 The app uses Single Sign-on (SSO) to identify the user. This is initiated in the *Runtime* tab of the Project Settings, where the microflow *MindSphereSingleSignOn.RegisterSingleSignOn* is called on startup. This microflow sets up two configurations for the user.
 
-#### 5.1.1 User role
+#### 5.1.1 User Role
 
 The user is given the role of *user* or *admin* within MindSphere. These roles are translated to MindSphere scopes which are matched to the Mendix user role. With the recommended mapping, a user with the app role *user* in MindSphere will be given the Mendix user role *user*.
 
 See section 3.2, [User Scopes, for a more complete description](#userscopes).
 
-#### 5.1.2 Multi-tenant support
+#### 5.1.2 Multi-Tenant support
 
 The user is also connected to their MindSphere tenant. This enables security to be placed on persistent Mendix entity objects.
 
@@ -255,7 +259,9 @@ However, MindSphere will queue this request internally and the data will not be 
 
 ## 6 MindSphere Asset Management Connector{#assetconnector}
 
-The MindSphere Example App uses the MindSphere Asset Management Connector to obtain asset information from MindSphere.
+{{% todo %}}[**SHOULD THIS SECTION BE ITS OWN DOC?**]{{% /todo %}}
+
+The MindSphere example app uses the MindSphere Asset Management Connector to obtain asset information from MindSphere.
 
 The MindSphereAssetManagementConnector module is the standard connector for managing assets within MindSphere. It can be found in the App Store modules of the example app. It is also available as a stand-alone module in the App Store: [MindSphere Asset Management Connector](https://appstore.home.mendix.com/link/app/108806/).
 
@@ -300,7 +306,7 @@ More information on pagination is available here: [Asset Management Service - Pa
 
 More information on filtering functions is available here: [Asset Management Service - Filtering](https://developer.mindsphere.io/apis/advanced-assetmanagement/api-assetmanagement-references-filtering.html)
 
-### 6.2 How to Use the Connector
+### 6.2 Using the Connector
 
 The module adds two actions which a developer can use to retrieve Asset and AssetType objects, together with their associated Variable objects, from MindSphere using the API. You can find these actions in the **Toolbox** under *MindSphere Asset Management APIs*.
 
@@ -358,8 +364,8 @@ It implements the API call .../api/assetmanagement/v3/assettypes/{Asset type id}
 
 The parameters are as follows:
 
-* Auth token – a string containing an access token, retrieved by the *Access token* action
-* Get query params (optional) – an object of type **GetQueryParams** containing additional parameters for the query (see section 6.1, Asset Management Domain Model(#assetdm), for more details)
-* E tag (optional) – an integer which acts as a counter for optimistic locking
-* Asset type id – a string containing the value which should be matched to the _id attribute of the asset type required. This should be in the format {tenant}.{asset type}
-* Variable (AssetType) – an object of type **AssetType** which is associated with retrieved objects of type **AspectTypeWrapper**, **AspectType**, and **Variable** which contain additional information about this asset type
+* **Auth token** – a string containing an access token, retrieved by the *Access token* action
+* **Get query params** (optional) – an object of type **GetQueryParams** containing additional parameters for the query (see section 6.1, Asset Management Domain Model(#assetdm), for more details)
+* **E tag** (optional) – an integer which acts as a counter for optimistic locking
+* **Asset type id** – a string containing the value which should be matched to the _id attribute of the asset type required. This should be in the format {tenant}.{asset type}
+* **Variable (AssetType)** – an object of type **AssetType** which is associated with retrieved objects of type **AspectTypeWrapper**, **AspectType**, and **Variable** which contain additional information about this asset type

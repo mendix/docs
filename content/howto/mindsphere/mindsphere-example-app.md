@@ -1,16 +1,14 @@
 ---
 title: "MindSphere Example App"
 category: "Siemens MindSphere"
-#menu_order: Enter the position of the document in the category or under the parent; number by 10 (for first), 20, 30, etc. for easy ordering of other documents in the future if necessary; don't add brackets or quotation marks; if no number is added, the system will add an extremely high number to order the documents, which means that if you only want a document to appear at the top, you only have to add "10" to that specific document, you don't have to order all the other documents in the category/under the parent
-description: "What does the MindSphere Example App do and how does it work?"
 tags: ["Siemens", "MindSphere", "Example", "Asset Management", "Time Series", "REST", "API", "Pump"]
 ---
 
 ## 1 Introduction
 
-You can write Mendix apps which analyze data held in MindSphere, the open, cloud-based IoT operating system from Siemens. To help you build your app, there is the **Pump Asset Example** app which can be downloaded as the starting point for a new app when you are creating a Mendix app.
+You can write Mendix apps which analyze data held in MindSphere, the open, cloud-based IoT operating system from Siemens. To help you build your app, there is the **Pump Asset Example** app available in the App Store that can be used as the starting point for a new Mendix app.
 
-![Pump Asset Example App on the Mendix Create New App page](attachments/mindsphere-example-app/create-new-app.png)
+ADD IMAGE
 
 This documentation provides more explanation of the MindSphere example app. Please note that this app is not production-ready. It is designed as an example of how you might begin to build a Mendix/MindSphere app.
 

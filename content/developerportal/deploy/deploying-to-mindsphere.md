@@ -32,9 +32,9 @@ There are two ways to include the customization you need in your app.
 
 #### 2.1.1 Use the MindSphere Starter App
 
-The MindSphere Starter App contains all the modules and styling which you need to create an app you want to deploy to MindSphere. Choose the MindSphere starter app when creating your Mendix app.
+The **MindSphere Starter Application** in the Mendix App Store contains all the modules and styling which you need to create an app you want to deploy to MindSphere. Search for Mindsphere in the App Store when you are creating a new app.
 
-![Siemens/MindSphere starter app on the Mendix "Create New App" screen](attachments/deploying-to-mindsphere/image1.png)
+ADD IMAGE
 
 {{% alert type="info" %}}
 This is the recommended approach if you are building a new application as it will provide all the necessary building blocks to get started.

@@ -32,9 +32,9 @@ There are two ways to include the customization you need in your app.
 
 #### 2.1.1 Use the MindSphere Starter App
 
-The **MindSphere Starter Application** in the Mendix App Store contains all the modules and styling which you need to create an app you want to deploy to MindSphere. Search for Mindsphere in the App Store when you are creating a new app.
+The **MindSphere Starter Application** in the Mendix App Store contains all the modules and styling which you need to create an app you want to deploy to MindSphere.
 
-ADD IMAGE
+For details on using this starter app, see [How to Use the MindSphere Example App](/howto/mindsphere/mindsphere-example-app).
 
 {{% alert type="info" %}}
 This is the recommended approach if you are building a new application as it will provide all the necessary building blocks to get started.
@@ -44,15 +44,15 @@ This is the recommended approach if you are building a new application as it wil
 
 If you have an existing app which was not based on the MindSphere starter app, you can import the MindSphere Theme Pack (MindSphere_UI_Resources) from the Mendix App Store here: [MindSphere Theme Pack](https://appstore.home.mendix.com/link/app/108803/).
 
-MindSphere_UI_Resources includes the following:
+**MindSphere_UI_Resources** includes the following:
 
-* an Atlas UI theme for MindSphere apps
-* an updated index.html file
-* a new MindSphereLogin.html file
-* a new permission denied page (error_page/403.html)
+* An Atlas UI theme for MindSphere apps
+* An updated *index.html* file
+* A new *MindSphereLogin.html* file
+* A new permission-denied page (*error_page/403.html*)
 
 {{% alert type="warning" %}}
-The Theme does not contain modules for SSO or the OS Bar. These modules will need to be downloaded separately.
+The theme does not contain modules for SSO or the OS Bar. These modules will need to be downloaded separately.
 {{% /alert %}}
 
 ### 2.2 Single Sign-On (MindSphereSingleSignOn){#mssso}

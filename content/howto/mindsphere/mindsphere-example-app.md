@@ -1,5 +1,5 @@
 ---
-title: "MindSphere Example App"
+title: "Use the MindSphere Example App"
 category: "Siemens MindSphere"
 tags: ["Siemens", "MindSphere", "Example", "Asset Management", "Time Series", "REST", "API", "Pump"]
 ---
@@ -19,21 +19,29 @@ You can get more detailed information on how to deploy your app to the MindSpher
 
 To deploy your app to MindSphere, you need the prerequisites described below.
 
-### 2.1 Opening the App in the Desktop Modeler
+### 2.1 Roles
+
+You need a MindSphere user account on a developer tenant. This account needs the following core roles:
+
+* mdsp:core:Developer
+* mdsp:core:StandardUser
+* mdsp:core:TenantUser
+
+### 2.2 Opening the App in the Desktop Modeler
 
 In the Desktop Modeler, follow these steps:
 
-1. Open the Mendix App Store.
+1. Open the Mendix App Store by clicking the icon in the top-left of the menu bar:
+
+![](attachments/mindsphere-example-app/app-store-icon.png)
+
+2. Enter *MindSphere* in the search box, and in the results, select {NAME}:
 
 
 
+3. Click **Download** to start using this starter app:
 
-### 2.2 Roles
 
-* A MindSphere user account on a developer tenant. This account needs the following core roles:
-    * mdsp:core:Developer
-    * mdsp:core:StandardUser
-    * mdsp:core:TenantUser
 
 ### 2.3 Assets
 

@@ -97,7 +97,7 @@ The MindSphereSingleSignOn module also provides three microflows which are used 
 
 This microflow must be added to the *Runtime* tab of the *Project > Settings* dialog, accessed through the *Project Explorer*. It needs to be selected as the *After startup* microflow or added as a sub-microflow to an existing after startup microflow.
 
-{{% todo %}}[**CAN YOU MAKE THESE LARGE IMAGES SMALLER**]{{% /todo %}}
+{{% todo %}}[**MAKE LARGE IMAGES SMALLER**]{{% /todo %}}
 
 ![Project settings dialog](attachments/deploying-to-mindsphere/image4.png)
 
@@ -222,6 +222,8 @@ If this file is not in your /theme folder, you can create it following the instr
 ### 2.6 Permission Denied Page
 
 The permission denied page will be shown if your app will be called with an invalid token or a token which does not include the value you have specified within the SSO constant ‘CockpitApplicationName’. The SSO module expects to find this file as error_page/403.html within your ‘Theme’ folder.
+
+{{% todo %}}[**IS THIS SCREENSHOT NECESSARY?**]{{% /todo %}}
 
 ![](attachments/deploying-to-mindsphere/image12.png)
 
@@ -528,6 +530,8 @@ Restarting your app will cause your app to be temporarily unavailable.
 Your app should, as a minimum, meet the requirements of the checklist on the MindSphere developer site here: [Get your Application Ready for Productive Use](https://developer.mindsphere.io/howto/howto-app-publication.html).
 
 ## 6 Appendices
+
+{{% todo %}}[**IF THESE APPENDICES ARE REALLY NECESSARY, SHOULDN'T THEY GO IN PREPARATION SECTIONS ABOVE (LIKE FOR THEME PACK)?]{{% /todo %}}
 
 ### 6.1 index.html{#indexhtml}
 

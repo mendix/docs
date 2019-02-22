@@ -213,9 +213,9 @@ The app uses Single Sign-on (SSO) to identify the user. This is initiated in the
 
 The user is given the role of *user* or *admin* within MindSphere. These roles are translated to MindSphere scopes which are matched to the Mendix user role. With the recommended mapping, a user with the app role *user* in MindSphere will be given the Mendix user role *user*.
 
-See section 3.2, [User Scopes, for a more complete description](#userscopes).
+For a more complete description, see the [User Scopes](#userscopes) section.
 
-#### 5.1.2 Multi-Tenant support
+#### 5.1.2 Multi-Tenant Support
 
 The user is also connected to their MindSphere tenant. This enables security to be placed on persistent Mendix entity objects.
 

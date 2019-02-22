@@ -6,9 +6,10 @@ tags: ["Siemens", "MindSphere", "Example", "Asset Management", "Time Series", "R
 
 ## 1 Introduction
 
-You can write Mendix apps which analyze data held in MindSphere, the open, cloud-based IoT operating system from Siemens. To help you build your app, there is the **Pump Asset Example** app available in the App Store that can be used as the starting point for a new Mendix app.
+You can write Mendix apps which analyze data held in MindSphere, the open, cloud-based IoT operating system from Siemens. To help you build your app, the **Pump Asset Example** app is available in the Mendix App Store and can be used as the starting point for a new Mendix app.
 
-ADD IMAGE
+**ADD APP STORE LINK ABOVE**
+
 
 This documentation provides more explanation of the MindSphere example app. Please note that this app is not production-ready. It is designed as an example of how you might begin to build a Mendix/MindSphere app.
 
@@ -16,14 +17,25 @@ You can get more detailed information on how to deploy your app to the MindSpher
 
 ## 2 Prerequisites
 
-To deploy your app to MindSphere you need the following prerequisites.
+To deploy your app to MindSphere, you need the prerequisites described below.
+
+### 2.1 Opening the App in the Desktop Modeler
+
+In the Desktop Modeler, follow these steps:
+
+1. Open the Mendix App Store.
+
+
+
+
+### 2.2 Roles
 
 * A MindSphere user account on a developer tenant. This account needs the following core roles:
     * mdsp:core:Developer
     * mdsp:core:StandardUser
     * mdsp:core:TenantUser
 
-### 2.1 Assets
+### 2.3 Assets
 
 This example app displays information about pumps. If there are no pump assets created yet for your tenant, you will need to create them using the MindSphere **Asset Manager** in the launchpad.
 

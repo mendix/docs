@@ -10,8 +10,8 @@ You can get the Mendix Mobile app on your mobile device by downloading it from y
 
 Currently, the following mobile operating systems are supported by the Mendix Mobile app:
 
-* iOS version 8 and above
-* Android version 4.1 and above
+* iOS version 9 and above
+* Android version 5.0 and above
 
 To download the Mendix Mobile app, search for "Mendix" in your device's app store, or select one of the download links below:
 

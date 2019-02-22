@@ -7,76 +7,63 @@ draft: true
 
 ## 1 Introduction
 
-Mendix is optimized for the easiest and fastest way to develop and maintain Apps
-that fulfil a business function. Internal integration from GUI to Logic to Data
-within a Mendix App is handled out of the box, in one Model and one deployable.
+Mendix is optimized for easily and quickly developing and maintaining apps that fulfill a business function. Internal integration—from GUI to logic to data—within a Mendix app is handled out-of-the-box in one model and one deployment.
 
-But most solutions also require integration with other Apps and systems.
-Integration is easy in Mendix, but there are many options to choose from, as
-should be the case, because integration is like the glue between components in a
-solution and needs to be adaptable to all possible functional scenarios.
+Most solutions require integration with other apps and systems. Such integration is easy with Mendix, but there are many options to choose from. This should be the case, because integration is like the glue between components in a solution, and it needs to be adaptable for all possible functional scenarios.
 
-As more Core systems are being built using Mendix Microservices, the integration
-part is increasingly important. This document discusses different types of
-integration and when one way to solve the problem may be better than another.
+As more core systems are being built using Mendix microservices, integration is increasingly important. This document discusses different types of integration and when one way to solve the problem may be better than another.
 
-## 2 Performance Overview
+## 2 Integration Overview
 
-This document is intended for architects, stake-holders and lead developers to
-evaluate different integration options that makes solutions stable and easy to
-maintain.
+These best practices are intended for Architects, Lead Developers, and other stakeholders to evaluate different integration options that will make solutions stable and easy to maintain.
+
+The integration best practices will cover the following content areas:
+
+{{% todo %}}[**ADD WHEN CHILD DOCS ADDED UNDER Mendix & Integration**]{{% /todo %}}
 
 ### 2.1 Typical Use Cases
 
-Some typical Integration Cases where this document is helpful are:
+These are the typical use cases when integration best practices will be helpful:
 
--   SSO, AD and Identity integration
-
--   UI and CMS Integration
-
--   Normal System Integration
-
--   Export, Import & Batch
-
--   Master Data Integration
-
--   Data Distribution
-
--   Ops, AI, IoT, BI, Reporting
+* Single sign-on, active directory, and identity integration
+* UI and content management system integration
+* Normal system integration
+* [Export, import, and batch processing](export-import-batch)
+* Master data integration
+* Data distribution
+* Operations, IoT, AI, business intelligence, and reporting
 
 ### 2.2 Solution Architecture & Project Planning
 
-The document can be used by Solution Architects and Lead Developers to get an
-overview of the options available, and what is recommended within Integration,
-leading to better estimates and a good solution architecture.
+The best practices can be used by Solution Architects and Lead Developers to gain an overview of the available options as well as recommendations for integration. This can lead to more realistic estimates and a better solution architecture.
+
+{{% todo %}}[**UPDATE DIAGRAM**]{{% /todo %}}
 
 ![](attachments/integration-overview/solution-architecture.png)
 
-### 2.3 Design or Architecture Review
+### 2.3 Design & Architecture Reviews
 
-The document also helps for performing Design review on existing solutions and
-evaluate options for how things could be solved. This could be for a Legacy
-solution or a larger Mendix solution. Re-considering past decisions and
-re-factoring is part of the Agile model for achieving quickly value, and gradual
-improvements later.
+The best practices will also help when conducting design reviews on existing solutions and evaluating ways to solve issues. This scenario could apply to a legacy solution or a larger Mendix solution. Reconsidering past decisions and refactoring is part of the Agile model for achieving value quickly and making gradual improvements.
 
-### 2.4 Services for Test and Operations
+{{% todo %}}[**IT IS NOT CLEAR HOW SECTIONS 2.4 AND 2.5 RELATE TO USING THESE BEST PRACTICES - THEY JUST TALK ABOUT DIFFERENT TYPES OF INTEGRATION, NOT WHAT IS SPECIFICALLY IN THESE DOCUMENTS OR USE CASES**]{{% /todo %}}
 
-A new category of integration is growing increasingly important in the DevOps
-and Microservices area, that is related to building services that are used to
-automate testing or to drive a good operational overview and support the
-maintenance team.
+### 2.4 Services for Test & Operations
+
+A new category of integration is growing important in the DevOps and microservices areas. This type of integration is related to building services used to automate testing or to drive a coherent operational overview and support the maintenance team.
 
 ### 2.5 IoT & AI
 
-Other new areas are IoT, where event streams become important, and AI and
-Machine learning, where Mendix Apps can use external AI engines to produce
-intelligent Apps
+Other new areas for integration are IoT—where event streams become important—and AI and
+machine learning, where Mendix apps can use external AI engines to produce intelligent apps.
 
 ## 3 Related Documents
 
-This document is followed by Use Case specific guidelines, that in turn relate
-to developer trainings and how-to’s and information in the Mendix 7 reference
-guide.
+The integration best practices include [integration use cases](integration-use-cases) and guidelines. 
+
+{{% todo %}}[**ADD LINKS TO MODULES/DOCS BELOW**]{{% /todo %}}
+
+These in turn relate to developer training modules, how-to’s, and information in the Mendix Reference Guide.
+
+{{% todo %}}[**UPDATE DIAGRAM**]{{% /todo %}}
 
 ![](attachments/integration-overview/integration-related-documents.png)

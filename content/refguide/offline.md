@@ -96,4 +96,4 @@ Mendix does not have a recommended maximum app size for the synchronization proc
 
 The timeout should be set to 30 seconds per entity downloaded. This change was introduced in the [July 3rd, 2018 hybrid app release](/releasenotes/mobile/hybrid-app#7318).
 
-In addition, Mendix recommends limiting the amount of data and syncing as little as possible by configuring security access so that users do not sync entities they do not need.
+In addition, Mendix recommends limiting the amount of data and syncing as much as possible by configuring security access so that users do not sync entities they do not need.

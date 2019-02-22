@@ -32,7 +32,9 @@ The performance best practices will cover the following content areas:
 * [Teams & skills](teams-skills)
 * [Performance guidelines](performance-guidelines)
 
-These are the typical use cases when these best practices will be helpful:
+### 2.1 Typical Use Cases
+
+These are the typical use cases when performance best practices will be helpful:
 
 * High throughput processing
 * Large amount of concurrent users
@@ -42,9 +44,13 @@ These are the typical use cases when these best practices will be helpful:
 
 ## 3 Related Documents
 
-These best practices are followed by use case-specific guidelines that in turn relate to the developer best practices applicable in the different use cases. 
+{{% todo %}}[**ADD LINK TO USE CASES WHEN AVAILABLE/CLARIFIED**]{{% /todo %}}
 
-There is also the Mendix Expert training module [Performance Guidelines](https://gettingstarted.mendixcloud.com/link/module/127/lecture/1031) as well as [How to Detect & Resolve PErformance Issues](/howto/monitoring-troubleshooting/detect-and-resolve-performance-issues).
+The performance best practices include performance use cases and [guidelines](performance-guidelines).
+
+For more information, see [How to Detect & Resolve Performance Issues](/howto/monitoring-troubleshooting/detect-and-resolve-performance-issues) in the Mendix documentation.
+
+In addition, the Mendix Academy also makes available a Mendix Expert training module called [Performance Guidelines](https://gettingstarted.mendixcloud.com/link/module/127/lecture/1031).
 
 {{% todo %}}[**GET DIAGRAM UPDATED**]{{% /todo %}}
 

@@ -182,7 +182,7 @@ For this update, we recommend downloading a fresh hybrid app package from the Me
 
 * We fixed the transparency level in the default styling.
 
-### July 3rd, 2018 (2.0.6 / 2.0.1)
+### July 3rd, 2018 (2.0.6 / 2.0.1) {#7318}
 
 * We increased the default server timeout for offline apps. The new timeout is 30 seconds.
 

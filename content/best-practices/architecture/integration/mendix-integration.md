@@ -5,81 +5,57 @@ menu_order: 1
 draft: true
 ---
 
-Mendix is optimized for the easiest and fastest way to develop and maintain Apps
-that fulfil a business function. Internal integration from GUI to Logic to Data
-within a Mendix App is handled out of the box, in one Model and one deployable.
+## 1 Introduction
 
-But most solutions also require integration with other Apps and systems.
-Integration is easy in Mendix, but there are many options to choose from, as
-should be the case, because integration is like the glue between components in a
-solution and needs to be adaptable to all possible functional scenarios.
+Mendix makes it easy to build, update, and maintain an apps and microservices that
+fulfill business functions. Usually business functions need a GUI, logic, and data. The internal integration of those layers is handled by Mendix, but for most apps and microservice architectures, integration with other systems is necessary.
 
-As more Core systems are being built using Mendix Microservices, the integration
-part is increasingly important. This document discusses different types of
-integration and when one way to solve the problem may be better than another.
-
-Mendix makes it easy to build, update and maintain an App/Microservice that
-fulfils a business function. Usually a business functions need a GUI, some logic
-and data. The internal integration of those layers is handled by Mendix, but for
-most Apps, and in Microservice architectures, there is need for integration with
-other systems.
+{{% todo %}}[**UPDATE DIAGRAM**]{{% /todo %}}
 
 ![](attachments/mendix-integration/feature-requirements.png)
 
-So the Mendix developer does not have to worry about internal App layer’s
-integration, but the solution architect or dev-lead needs to design good
-Microservices and good interfaces to integrate seamlessly with other Apps and
-systems in the enterprise.
+So, you do not have to worry about the integration of internal app layers. However, the Solution Architect or Lead Developer does need to design good microservices and interfaces that can integrate seamlessly with other apps and systems in the enterprise.
 
-Mendix handles a large array of formats and protocols, see [Mendix 7 How To’s -
-integration](https://docs.mendix.com/howto/integration/)*.*
+Mendix handles a large array of formats and protocols. For more information, see the [Integration how-to's](/howto/integration/).
 
-The problem is often to choose the right option amongst a lot of possibilities.
-This document will give an overview of Integration Methods and typical Use
-cases. A specific document will be created for major use-cases.
+The most important thing to do is to choose the right integration option from a lot of possibilities. These best practices will present an overview of integration methods and typical use cases.
 
-Always think Functional First
------------------------------
+## 2 Always Think *Functional* First
 
-The first recommendation is to have an open mind to the integration requirement.
-Think about what the integration need really is and consider more than one
-option for the solution.
+The first best practice is to have an open mind regarding integration requirements. Think about what the integration need really is and consider more than one option for the solution.
 
-Remember that an interface starts inside one system and ends inside one or more
-other systems, and there could be integration components in the middle, so the
-number of options to solve something is quite large.
+It is important to remember that an interface starts inside one system and ends inside one or more other systems. There could also be integration components in the middle, so the
+number of options to decide on can be quite large.
 
-Consider: What triggers the interface? Who needs what data when? Who should
-handle functional errors occurring? Who should handle technical errors? How can
-I minimize integration? How do I build a UX that requires very few service calls
-to load?
+First, consider the following questions:
 
-Then consider which use case it may be, which options are available, and make a
-conscious choice on why one method is chosen over another.
+* What triggers the interface?
+* Who needs what data when?
+* Who should handle functional errors if they occur?
+* Who should handle technical errors?
+* How can integration be minimized?
+* How can a UX be built that requires very few service calls to load?
 
-Use Case Categories
--------------------
+Next, consider which use case applies and which options are available. 
 
-Integration means any kind of interaction between any person, thing, App or
-system for any type of purpose. The scope is enormous. There are hundreds of use
-cases. Scoping out a new project there is a fair chance of finding a new
-use-case type even after years working on integration. So, there is reason to
-have eyes open for what is similar and what is different from cases we already
-know.
+Finally, make a conscious choice about why one method is chosen over another.
 
-Still some Use Cases are very typical and Mendix is working on creating an
-example implementation, and Best Practices related to the most common ones:
+## 3 Use Case Categories
+
+"Integration" means any kind of interaction between any person, thing, app, or system for any type of purpose. The scope is enormous, and there are hundreds of use cases. When scoping out a new project, there is a fair chance you may find a new type of use case, even if you have worked on integration for years. So, there is reason to keep your eyes open for what is similar and what is different in the use cases we already know.
+
+However, there are typical use cases for which Mendix is creating example implementations. These best practices are related to such typical use cases.
+
+{{% todo %}}[**UPDATE DIAGRAM**]{{% /todo %}}
 
 ![](attachments/mendix-integration/common-use-cases.png)
 
-In each of these use-cases we consider different Solution Methods and which
-option is more suitable than others under which condition.
+For each use case, we consider different solution methods and which option is more suitable than others under which condition.
 
-Basic Solution Categories
--------------------------
+## 4 Basic Solution Categories
 
-For most integration related to Mendix, there are 5 solution categories, that
-are almost always used. Sometimes one, sometimes a combination:
+For most of the integration related to Mendix, there are five solution categories that
+are almost always used. Sometimes one is used, and sometimes a combination is used:
 
 ![](attachments/mendix-integration/solution-categories.png)
 

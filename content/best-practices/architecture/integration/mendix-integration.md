@@ -50,7 +50,7 @@ However, there are typical use cases for which Mendix is creating example implem
 
 ![](attachments/mendix-integration/common-use-cases.png)
 
-For each use case, we consider different solution methods and which option is more suitable than others under which condition.
+For each use case, we need consider different solution methods and which solution is most suitable under which condition.
 
 ## 4 Basic Solution Categories
 
@@ -59,22 +59,16 @@ are almost always used. Sometimes one is used, and sometimes a combination is us
 
 ![](attachments/mendix-integration/solution-categories.png)
 
-1.  UI Integration, means e.g. using a DeepLink from the UI of one App, opening
-    the UI of another App, either in the same Tab or another Tab. It also
-    entails CMS integration with e.g. Akamai and other content management
-    systems
+* **UI Integration** – This solution category includes, for example, using a deep link from the UI of one app to open the UI of another app (either in the same browser tab or another tab). It also includes content management system integration with, for example, Akamai and other CMSs.
 
-2.  Service Based Integration, or RPC style integration, uses request-reply and
-    is almost always synchronous
+* **Services** – This is otherwise known as remote procedure call (RPC) integration. This category uses request and reply, and it almost always synchronous.
 
-3.  Event Driven Integration, usually does not have a response, and it used to
-    distribute data large scale, large distance or simply in a decoupled way
+* **Event-Driven** – This category usually does not have a response, and it is used to distribute data at large scales or large distances, or simply distribute data in a decoupled way.
 
-4.  Batch Oriented includes, exporting, moving and importing files
+* **Batch-Oriented** – This category includes exporting, moving, and importing files.
 
-5.  Central Data is a pattern where data is landed and combined in a central
-    place before it is distributed, e.g. this could be an ODS, ETL, BI or Data
-    lake solution.
+* **Central Data** – This category uses a pattern where data is landed and combined in a central
+    place before it is distributed. This could be, for example, an operational data store (ODS); extract, transform, load (ETL); business intelligence (BI); or data lake solution.
 
 Overview of Options
 -------------------

@@ -104,6 +104,8 @@ The table below presents use cases that you can reference  for more detail. The 
 
 ## 4 Integration Styles
 
+{{% todo %}}[**ADD MORE DIAGRAMS/IMAGES IN THE SECTIONS BELOW**]{{% /todo %}}
+
 ### 4.1 Request–Reply (Most Frequently Used)
 
 Request–reply is a collaboration style in which whoever initiates the integration expects a response back from the destination. For most standard interfaces, a request–reply scenario is the easiest way to integrate, because the side of the interface that starts the integration knows directly if the call worked or not.
@@ -144,100 +146,57 @@ Processing data in bulk is also more CPU efficient. If it is periodic, it can us
 
 ### 4.5 API Management & ESBs
 
-All real-time interfaces can be routed via an ESB or API management. It does not
-change very much for the publisher and the consumer except there is a technical
-decoupling point and/or a queueing system.
+All real-time interfaces can be routed via an API management or enterprise service bus (ESB). This does not change very much for the publisher and the consumer except that there is a technical decoupling point and/or a queueing system.
 
-API management or ESBs start making sense when there are \>100 systems and
-several business domains that are organizationally separated. It creates a level
-of stability for services used across the enterprise
+API management or ESBs start making sense when there are \>100 systems and several business domains that are organizationally separated. These can create a level of stability for services used across the enterprise.
 
-This document will not separate that from the case of direct service
-interaction, because functionally it is almost the same thing. Microservice
-recommendation is to use a very thin integration layer, or no layer at all.
+This document will not differentiate from the case of direct service interaction, because functionally that is almost the same thing. The microservice recommendation is to use a very thin integration layer, or no layer at all.
 
-Many people use direct integration within a system, business domain or area,
-while having some API management for external and intra-domain integration.
+Many users use direct integration within a system, business domain, or area while having some API management for external and intra-domain integration.
 
-### 4.6 Integration Layers and Data Hubs
+### 4.6 Integration Layers & Data Hubs
 
-If the integration layer in the middle stores and combines business data before
-re-distributing it to other parties, it is a “central data” integration pattern.
+If the integration layer in the middle stores and combines business data before redistributing it to other parties, it is a “central data” integration pattern.
 
-A typical use-case is if a company has 10 business lines with all different
-ordering systems, but only one single support desk. It then makes sense to store
-all orders in a central point where they can be searched together using SQL
-instead of composite service calls.
+A typical use case here is if a company has 10 business lines with different ordering systems, but only one single support desk. It then makes sense to store all the orders in a central point where they can be searched together using SQL instead of composite service calls. Maybe this would be the support system itself, but it could also be an integration app or operational data store (ODS) serving a global search on orders via services.
 
-Maybe this is the Support system itself, but it could also be an Integration App
-or ODS (Operational Data Store), serving via services a global search on orders.
+Many users use Mendix apps to create such a pattern for a specific area. It is easy to define the data, logic, lookups, and a human workflow to manage errors.
 
-Many people use Mendix Apps to create this pattern for a specific area. It is
-easy to define the data, the logic and lookups and any human workflow to manage
-errors.
+An extract, transform, load (ETL) system works in a similar way by extracting data from one system, storing
+the data from the last extract, maybe combining with reference data, and then sending it on.
 
-ETL systems also work in a similar way, extracting data from one system, storing
-the data from last extract, maybe combining with reference data, and then
-sending it on.
+A data lake functions like an enterprise-wide ODS that doubles as a BI and DWH system. It is a big undertaking to make this work, and there is an issue when trying to combine operational data and snapshot-type data that is used for statistics.
 
-Data Lakes are like an enterprise wide ODS, that doubles as a BI and DWH system.
-It is a big undertaking to make this work, and there is an issue when trying to
-combine operational data, and snap-shot type data that is used for statistics.
+The statistics part of data lakes can feed BI and AI solutions of the future, but Mendix does not recommend using data lakes as operational data due to the varying time-stamps and various layers that the data goes through. For operational data, a relational database and ODS is preferred, as mentioned above.
 
-The statistics part of Data Lakes can feed BI and AI solutions of the future,
-but we do not recommend using Data Lakes as Operational Data, because of the
-varying time-stamps, and various layers the data goes through. For Operational
-Data a relational DB, ODS is preferred, as mentioned above.
+### 4.7 Ops Integration & Test Services
 
-### 4.7 Ops Integration and Test Services
+A new trend that is part of microservices as well as DevOps is to build services and interfaces from live systems that are specifically oriented towards automated testing and health checks on live systems.
 
-A new trend, part of Microservices and DevOps, is also to build services and
-interfaces from live systems that are specifically oriented towards automated
-testing and health checks on live systems.
+A service used to test things in CI/CD pipelines may later be reused to verify a production deployment, check a live system, or collect user metrics for a dashboard.
 
-A service that is used to test things in CICD pipelines, may later be re-used to
-verify a production deployment, or to check a live system, or to collect user
-metrics to a dashboard etcetera.
+For professional operations solutions, there is often an agent per node, shipping data in near-real time towards an application performance monitoring system that is used for root-cause analysis, trend analysis, sizing metrics, and alarms.
 
-For professional Ops solutions there is often an agent per node, shipping in
-near-real-time, data towards an APM (Application Performance Monitoring) system,
-used for root-cause analysis, trend analysis, sizing metrics and alarms
-
-Microservices also often have an Admin page with collected important
-information, both technival and functional KPIs that help maintain the solution,
-and from a local Ops dashboard or App management module, one can deep-link into
-these pages.
+Microservices also often have an admin page where important information is collected. This can include both technical and functional KPIs that help maintain the solution as well as data from a local ops dashboard or app-management module. These pages can be deep-linked for further use.
 
 ## 5 Recommendations
 
-Minimize Integration
---------------------
+### 5.1 Minimize Integration
 
-It may seem obvious, but it is still worth pointing out that the overall
-Solution Design of 1-N Apps working together, should always attempt at finding
-the functional components and interfaces with the least amount of integration
-need, and the least complicated integration.
+{{% todo %}}[**"1-N" CLEAR ENOUGH HERE? REPLACE WITH "one-to-many"?]{{% /todo %}}
 
-That will make the overall solution easier to build and maintain, and it
-simplifies dependencies between Apps. This means that even the decision on which
-Microservices/Apps to build should incorporate integration analyses
+It may seem obvious, but it is still worth pointing out that the overall solution design of 1-N apps working together should always attempt to find the functional components and interfaces with the least amount of integration need and the least complicated integration.
 
-Dependencies are there – Learn to Work with them
-------------------------------------------------
+That will make the overall solution easier to build and maintain, and it will also simplify dependencies between apps. This means that even the decision on which microservices/apps to build should incorporate integration analyses.
 
-Apps working together are dependent on each other. That is part of the business
-process and can not be avoided. Trying to eliminate a functional dependency
-between two Apps, by a technical solution, is not recommended, because it
-usually creates other functional issues with more complex error handling.
+### 5.2 Dependencies Are There, So Learn to Work with Them
 
-E.g. sending data from App A to App B, we may put them on a queue in between in
-an asynchronous event, which seems to eliminate an on-line dependency from a
-synchronous request reply. But in fact error handling becomes much more
-difficult since neither App is aware of the entire travel path of the event, and
-if it goes wrong in the middle nobody is properly notified. A better solution is
-often to poll from App B to App A and get all recently updated records. The App
-that needs the data is in control of the entire interface, and error handling is
-confined to one single place.
+Apps working together are dependent on each other – that is part of the business process and cannot be avoided. Trying to eliminate a functional dependency between two apps via a technical solution is not recommended, because this usually creates other functional issues with more complex error handling.
+
+For example, when sending data from App A to App B, we may put them in a queue in between asynchronous events, which would seem to eliminate an online dependency from a
+synchronous request reply. But in fact, error handling becomes much more
+difficult in this scenario, since neither App A nor App B is aware of the entire travel path of the event, and if something goes wrong in the middle, there is no proper notification. A better solution is often to poll from App B to App A and get all the recently updated records. The app
+that needs the data is then in control of the entire interface, and error handling is confined to one single place.
 
 I.e. in the case above the development dependency is almost eliminated, but the
 run-time situation is less optimal with events than request reply.
@@ -251,54 +210,30 @@ distributed infrastructure, poor network connectivity, many-to-many situations.
 To guarantee delivery one can make asynchronous request replies or use a state /
 process engine monitoring all events in a large supply chain process
 
-Keep it Simple
---------------
+### 5.3 Keep It Simple
 
-Event Driven integration increase drastically in the future, where Linked in is
-using Kafka to distribute posts, metrics and user statistics, and Siemens and
-the rest of the world is bracing for the era of IoT, when almost all devices
-will be connected.
+{{% todo %}}[**VERIFY: "LinkedIn"?**]{{% /todo %}}
 
-But the event driven trend does not change what is already working well for
-normal business Apps. The regular App developer, integrating a few systems for
-regular business processes should keep it as simple as possible.
+Event-driven integration will increase drastically in the future. LinkedIn is already using Kafka to distribute posts, metrics, and user statistics, and Siemens and the rest of the world are bracing for the era of IoT, when almost all devices will be connected.
 
-That usually means request-reply using e.g. REST over Http(s). It allows control
-of the case of non-delivery of information or events, which for normal business
-processes should be managed.
+Howver, the event-driven trend will not change what is already working well for normal business apps. The regular app developer who is integrating a few systems for regular business processes should generally keep it as simple as possible.
 
-Overall Recommendations
------------------------
+This usually means employing request–reply (for example, by using REST over Http(s)). This allows for control in the case of non-delivery of information or events, which should be managed for normal business processes.
 
-Apps should act as actors in a business process. They typically do different
-things, and often they have a different view of the data.
+### 5.4 Overall Recommendations
 
-E.g. the customer portal, the sales funnel, the support and the operations will
-all have product and customer data, but they will have very different views of
-the data. This is good, because they specialize in what is their specific task.
-When specialization is local, we allow smaller interfaces, and thereby more
-autonomous services.
+Apps should act as actors in a business process. They typically do different things, and often they have a different views of the data.
 
-It is good to endorse some basic recommendations:
+For example, a customer portal, sales funnel, support, and operations will all have product and customer data, but they will have very different views of the data. This is good, because they specialize in what is their specific task. When specialization is local, we allow for smaller interfaces, and thereby more autonomous services.
 
-1.  Seek the overall solution that minimizes Integration, because integration is
-    complexity and it creates dependencies in releases and operations
+Mendix endorses the following basic recommendations:
 
-2.  Think functionally first, do not start from the solution, rather define what
-    is really needed, and consider more than one technical solution option
+* Seek the overall solution that minimizes integration, because integration means complexity, and this creates dependencies in releases and operations
+* Think functionally first and do not start from the solution; instead, define what is really needed, and consider more than one technical solution option
+* Use explicit contracts that only transfer the data required in order to make dependencies smaller and shelter apps from each other’s data models
+* Use request–reply when possible for easier error handling
+* Do not be afraid of copying data from one app to another, because this increases processing speed and removes online dependencies
+* Only copy the data that is required in order to limit dependencies
+* Consider consumer-specific contracts if a service is not truly generic and stable, because such contracts can augment autonomy and flexibility in releases
 
-3.  Use explicit contracts that only transfer the data required, in order to
-    make dependencies smaller, and shelter Apps from each other’s data-models
-
-4.  Use request-reply when possible, for easier error handling
-
-5.  Do not be afraid of copying data from one App to another, because it
-    increases processing speed, and removes on-line dependencies
-
-    1.  Only copy the data that is required, to limit dependencies
-
-6.  Consider consumer specific contracts if a service is not truly generic and
-    stable, because they augment autonomy and flexibility in releases
-
-Now continue to look into the specific *Integration Use Cases \<link\>*, and
-example provided.
+To continue learning about integration best practices, read through the specific [Integration Use Cases](integration-use-cases) that are provided.

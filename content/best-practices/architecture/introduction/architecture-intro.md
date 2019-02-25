@@ -8,7 +8,7 @@ draft: true
 
 ## 1 Introduction to Mendix Architecture Best Practices
 
-Mendix is optimized for the easiest and fastest way to develop and maintain apps that fulfill a business function. As the scope of your apps grows larger, architecture becomes more important. At that point, you should leverage best practices in this area.
+Mendix is optimized for the easiest and fastest way to develop and maintain apps that fulfill business functions. As the scope of your apps grows larger, architecture becomes more important. At that point, you should leverage best practices in this area.
 
 The Mendix architecture best practices complements the following sections in the Mendix 
 

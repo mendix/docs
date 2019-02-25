@@ -78,65 +78,47 @@ Plotting functional use cases against basic methods of integration allows us to 
 
 The table below presents use cases that you can reference  for more detail. The table uses the following key:
 
-* A <span>&#10004;</span> indicates the common or preferred use of the method
-	* In some of the latter cases (for example, "Integration with IoT solutions"), the solution will require several methods, so there are several instances of <span>&#10004;</span>
-* An <span>&#10003;</span> indicates possible use in some cases
+* A <span>&#9989;</span> indicates the common or preferred use of the method
+	* In some of the latter cases (for example, "Integration with IoT solutions"), the solution will require several methods, so there are several instances of <span>&#9989;</span>
+* An <span>&#10004;</span> indicates possible use in some cases
 
 {{% todo %}}[**ADD LINKS AS DOCS AVAILABLE**]{{% /todo %}}
 
 | *Use Case* | *UI Integration* | *RPC / Services* | *Events / Queues* | *Export, Import, Batch* | *Central Data* |
 | --- | --- | --- | --- | --- | --- |
-| SSO, AD & Identity integration | <p>&#10003;</p> | <p>&#9745;</p> | | | |
-| Import & Distribute Reference Data | | <p>&#9989;</p> | <p>&#10003;</p> | <p>&#10004;</p> | <p>&#10004;</p> |
-| View & Search Data in Another System  | <p>&#10003;</p> | <p>&#10004;</p> | | | |
-| Use & Refer to Data in Another System | | <p>&#10004;</p> | | | <p>&#10003;</p> |
-| [Process Integration](process-integration) (continue workflow) | <p>&#10004;</p> | <p>&#10003;</p> | <p>&#10003;</p> | | |
-| [Export, Import & Batch Processing](export-import-batch) | | <p>&#10003;</p> | <p>&#10003;</p> | <p>&#10004;</p> | <p>&#10003;</p> |
-| Update Data in the Master App | <p>&#10004;</p> | <p>&#10004;</p> | <p>&#10003;</p> | | |
-| Distribute Master & Transactional Data | | <p>&#10004;</p> | <p>&#10003;</p> | <p>&#10003;</p> | <p>&#10003;</p> |
-| Integration with BI & Reporting | | <p>&#10003;</p> | <p>&#10003;</p> | <p>&#10004;</p> | <p>&#10003;</p> |
-| Mobile Integration & Offline | | <p>&#10004;</p> | <p>&#10003;</p> | | |
-| CMS & CDN Integration | <p>&#10004;</p> | <p>&#10003;</p> | | | |
-| Process Orchestration & State Engines | | <p>&#10004;</p> | <p>&#10003;</p> | | <p>&#10004;</p> |
-| Integration with Ops & Monitoring | <p>&#10003;</p> | <p>&#10003;</p> | <p>&#10004;</p> | <p>&#10003;</p> | <p>&#10004;</p> |
-| Integration with IoT Solutions | | <p>&#10004;</p> | <p>&#10004;</p> | <p>&#10003;</p> | <p>&#10004;</p> |
-| Integration with AI & Machine Learning | | <p>&#10004;</p> | <p>&#10003;</p> | | <p>&#10004;</p> |
+| SSO, AD & Identity integration | <p>&#10003;</p> | <p>&#9989;</p> | | | |
+| Import & Distribute Reference Data | | <p>&#9989;</p> | <p>&#10003;</p> | <p>&#9989;</p> | <p>&#10004;</p> |
+| View & Search Data in Another System  | <p>&#10003;</p> | <p>&#9989;</p> | | | |
+| Use & Refer to Data in Another System | | <p>&#9989;</p> | | | <p>&#10003;</p> |
+| [Process Integration](process-integration) (continue workflow) | <p>&#9989;</p> | <p>&#10003;</p> | <p>&#10003;</p> | | |
+| [Export, Import & Batch Processing](export-import-batch) | | <p>&#10003;</p> | <p>&#10003;</p> | <p>&#9989;</p> | <p>&#10003;</p> |
+| Update Data in the Master App | <p>&#9989;</p> | <p>&#9989;</p> | <p>&#10003;</p> | | |
+| Distribute Master & Transactional Data | | <p>&#9989;</p> | <p>&#10003;</p> | <p>&#10003;</p> | <p>&#10003;</p> |
+| Integration with BI & Reporting | | <p>&#10003;</p> | <p>&#10003;</p> | <p>&#9989;</p> | <p>&#10003;</p> |
+| Mobile Integration & Offline | | <p>&#9989;</p> | <p>&#10003;</p> | | |
+| CMS & CDN Integration | <p>&#9989;</p> | <p>&#10003;</p> | | | |
+| Process Orchestration & State Engines | | <p>&#9989;</p> | <p>&#10003;</p> | | <p>&#9989;</p> |
+| Integration with Ops & Monitoring | <p>&#10003;</p> | <p>&#10003;</p> | <p>&#9989;</p> | <p>&#10003;</p> | <p>&#9989;</p> |
+| Integration with IoT Solutions | | <p>&#9989;</p> | <p>&#9989;</p> | <p>&#10003;</p> | <p>&#9989;</p> |
+| Integration with AI & Machine Learning | | <p>&#9989;</p> | <p>&#10003;</p> | | <p>&#9989;</p> |
 
 ## 4 Integration Styles
 
-### 4.1 Request–Reply Most Frequently Used
+### 4.1 Request–Reply (Most Frequently Used)
 
-Request–reply is a collaboration style that means that who-ever initiates
-integration will expect a response back from the destination. For most standard
-interfaces a request-reply scenario is the easiest way to integrate because the
-side of the interface that starts the integration knows directly if the call
-worked or not.
+Request–reply is a collaboration style in which whoever initiates the integration expects a response back from the destination. For most standard interfaces, a request–reply scenario is the easiest way to integrate, because the side of the interface that starts the integration knows directly if the call worked or not.
 
-I.e. Request-reply is more deterministic and therefore easier to think about. If
-it times out, it’s possible to try later, if that is relevant. If it there is an
-error message, the calling system can react directly: set a flag, start an error
-workflow, or show a good error message on the screen that helps the end user
-correct the problem immediately.
+Request–reply is more deterministic and therefore easier to think about. If it times out, it is possible to try again later (if relevant). If it there is an error message, the calling system can react directly by setting a flag, starting an error workflow, or displaying an error message on the screen that helps the end-user correct the problem immediately.
 
 ### 4.2 UI Integration
 
-Integration via a UI link is becoming more and more common. It allows to develop
-a UI only once in the App where it belongs, and link other users there when they
-need to perform that process.
+Integration via a UI link is becoming more common. This enables developing a UI only once in the app where it belongs, and then linking and directing other users there when they need to perform that process.
 
-In Microservice systems there is often a Dashboard App or portal / landing page
-where people sign in via e.g. SSO. It often contains workflow, overviews and
-status, while when a user wants to perform real work in an area, he is
-deep-linked into another App and works there.
+In microservice systems, there is often a dashboard app, portal, or landing page where people sign in (for example, via single sign-on). This often contains workflows, overviews, and statuses. When the end-user wants to perform real work in an area, they are deep-linked into another app to work there.
 
-Depending on the business requirements, the second App is opened in the same tab
-and the user is un-aware of working in several Apps, or if parallel work in two
-areas is preferred, there could be a separate Tab.
+Depending on the business requirements, the second app can be opened in the same tab so that the end-user is unaware of working in several apps. If parallel work in two areas is preferred, there could be a separate tab opened.
 
-UI integration can also have an advantage for mastering data, since the process
-and UX validations of information is always done in the same way. Then when the
-work is done a relevant part of the new data can be copied back to the other
-App.
+UI integration can also have an advantage for mastering data, since the process and UX validations of information are always done in the same way. When the work is done, a relevant part of the new data can be copied back to the other app.
 
 ### 4.3 Event Driven Trend
 

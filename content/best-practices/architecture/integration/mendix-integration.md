@@ -120,49 +120,29 @@ Depending on the business requirements, the second app can be opened in the same
 
 UI integration can also have an advantage for mastering data, since the process and UX validations of information are always done in the same way. When the work is done, a relevant part of the new data can be copied back to the other app.
 
-### 4.3 Event Driven Trend
+### 4.3 Event-Driven Trends
 
-At this moment Event driven architectures are making their return into
-mainstream of Integration. It follows an increased interest and focus on e.g.
-IoT solutions, distributed networks of actors, central monitoring etcetera.
-Several solution providers promote new, modern paradigms for managing large,
-distributed, high-volume event driven architectures.
+At the moment, event-driven architectures are making their return into the mainstream of integration. This follows an increased interest in and focus on, for example, IoT solutions, distributed networks of actors, and central monitoring. Several solution providers are promoting new paradigms for managing large, distributed, high-volume event driven architectures.
 
-The key with event-streams is that they (often) only flow in one direction. A
-device leaving metrics to an IoT system, does not expect an immediate answer to
-the data it ships. Additionally, there could be very many devices,
-geographically distributed and shipping a lot of data. Request-reply is neither
-needed not practical for inbound IoT, while for e.g. commanding a drone, or
-other device it’s highly recommended.
+The key to event-streams is that they (often) only flow in one direction. A device leaving metrics in an IoT system does not expect an immediate answer to the data it ships. Additionally, there could be very many devices that are geographically distributed and shipping a lot of data. Request–reply is neither needed nor practical for inbound IoT, but for commanding a drone or other device, for example, it is highly recommended.
 
-IoT, AI and Big Data integration is only in the beginning of an expected
-explosion of new IT that will be built next to the existing IT landscape, in the
-coming years and Mendix will together with Siemens invest heavily in this area,
-to be a leader. In that perspective Kafka and other event-based architecture
-will play an important role in the coming years.
+IoT, AI, and Big-Data integration is only the beginning of an expected explosion of new IT that will be built alongside the existing IT landscape. In the coming years, Mendix and Siemens will invest heavily in this area. With this perspective, Kafka and other event-based architectures will play an important role in the coming years.
 
-IoT, AI and BI solutions will probably count as professional systems and require
-professional developers, that handle queues or Kafka, large databases etcetera.
+{{% todo %}}[**VERIFY THAT SIEMENS/INVESTMENT MENTION ABOVE IS OKAY**]{{% /todo %}}
 
-### 4.4 Batch Oriented, Export and Import
+In conclusion, we foresee IoT, AI, and business intelligence (BI) counting as professional systems and requiring professional developers that handle queues, Kafka, and large databases.
 
-Batch oriented integration runs a large set of data at a certain moment.
-Interfaces towards DWH and BI are often bulk and/or snap-shot oriented. The same
-is true for initial loads of systems, or distribution of reference data.
+### 4.4 Batch-Oriented, Export & Import
 
-More and more processes become real-time, but a lot of business processes are
-still periodic in nature, e.g. salary payments, interest calculations. These
-use-cases are best implemented in batch-oriented interfaces.
+Batch oriented integration runs a large set of data at a certain moment. Interfaces towards data warehouse (DWH) and BI are often bulk and/or snapshot oriented. The same is true for initial loads of systems or the distribution of reference data.
 
-Files and DB dumps will stay important in the future. The advantage of batch is
-that systems are decoupled, and the export and import can run at different
-times. The interface can be “re-run” again, and/or use a workflow handles
-errors.
+More processes are becoming real-time, but a lot of business processes are still periodic in nature (for example, salary payments and interest calculations). These use cases are best implemented in batch-oriented interfaces.
 
-Processing data in bulk is also more CPU efficient, and if it is periodic, it
-can usually be done at night, when other load is much lower.
+Files and database dumps will remain important in the future. The advantage of batch is that systems are decoupled and the export and import operations can run at different times. The interface can be “re-run” again and/or use a workflow that handles errors.
 
-### 4.5 API Management and ESBs
+Processing data in bulk is also more CPU efficient. If it is periodic, it can usually be done at night, when other loads are much lower.
+
+### 4.5 API Management & ESBs
 
 All real-time interfaces can be routed via an ESB or API management. It does not
 change very much for the publisher and the consumer except there is a technical

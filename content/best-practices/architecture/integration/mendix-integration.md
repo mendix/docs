@@ -20,7 +20,7 @@ Mendix handles a large array of formats and protocols. For more information, see
 
 The most important thing to do is to choose the right integration option from a lot of possibilities. These best practices will present an overview of integration methods and typical use cases.
 
-## 2 Always Think *Functional* First
+## 2 Always Think *Functionally* First
 
 The first best practice is to have an open mind regarding integration requirements. Think about what the integration need really is and consider more than one option for the solution.
 
@@ -40,7 +40,9 @@ Next, consider which use case applies and which options are available.
 
 Finally, make a conscious choice about why one method is chosen over another.
 
-## 3 Use Case Categories
+## 3 Use Cases & Solutions
+
+### 3.1 Use Case Categories
 
 "Integration" means any kind of interaction between any person, thing, app, or system for any type of purpose. The scope is enormous, and there are hundreds of use cases. When scoping out a new project, there is a fair chance you may find a new type of use case, even if you have worked on integration for years. So, there is reason to keep your eyes open for what is similar and what is different in the use cases we already know.
 
@@ -50,12 +52,13 @@ However, there are typical use cases for which Mendix is creating example implem
 
 ![](attachments/mendix-integration/common-use-cases.png)
 
-For each use case, we need consider different solution methods and which solution is most suitable under which condition.
+For each use case, we need to consider which solution is most suitable under which condition.
 
-## 4 Basic Solution Categories
+### 3.2 Solution Categories
 
-For most of the integration related to Mendix, there are five solution categories that
-are almost always used. Sometimes one is used, and sometimes a combination is used:
+For most integration related to Mendix, there are five solution categories that are almost always used. Sometimes just one is used, and sometimes a combination is used:
+
+{{% todo %}}[UPDATE DIAGRAM]{{% /todo %}}
 
 ![](attachments/mendix-integration/solution-categories.png)
 
@@ -67,128 +70,79 @@ are almost always used. Sometimes one is used, and sometimes a combination is us
 
 * **Batch-Oriented** – This category includes exporting, moving, and importing files.
 
-* **Central Data** – This category uses a pattern where data is landed and combined in a central
-    place before it is distributed. This could be, for example, an operational data store (ODS); extract, transform, load (ETL); business intelligence (BI); or data lake solution.
+* **Central Data** – This category uses a pattern where data is landed and combined in a central place before it is distributed. This could be, for example, an operational data store (ODS); extract, transform, load (ETL); business intelligence (BI); or data lake solution.
 
-Overview of Options
--------------------
+### 3.3 Uses Case & Solution Options
 
-Plotting the Functional Use Cases against the basic methods of integration,
-there are several common options available. That is good, because integration is
-the flexible part of any solution, adapting to how systems, things or people
-communicate. Turn to the Use-Case documents (link docs) for more detail. In the
-table below:
+Plotting functional use cases against basic methods of integration allows us to see that there are several common options available. That is good, because integration needs to be flexible in a solution in order to adapt to how systems, things, or people communicate. 
 
--   Capital “X” indicates common or preferred use of the method
+The table below presents use cases that you can reference  for more detail. The table uses the following key:
 
--   Lower case “x” indicates possible use in some cases
+* A <span>&#9989;</span> indicates the common or preferred use of the method
+	* In some of the latter cases (for example, "Integration with IoT solutions"), the solution will require several methods, so there are several instances of <span>&#9989;</span>
+* An <span>&#10004;</span> indicates possible use in some cases
 
--   In some of the latter cases, e.g. IoT, the solution will require several
-    methods and then there is also several capital “X”
+{{% todo %}}[**ADD LINKS AS DOCS AVAILABLE**]{{% /todo %}}
 
-| *Use Case*                                 | *UI Integration* | *RPC / Services* | *Events / Queues* | *Export, Import, Batch* | *Central Data* |
-|--------------------------------------------|------------------|------------------|-------------------|-------------------------|----------------|
-| 1. SSO, AD and Identity integration        | x                | X                |                   |                         |                |
-| 2. Import and Distribute Reference Data    |                  | X                | x                 | X                       | x              |
-| 3. View and Search Data in another system  | x                | X                |                   |                         |                |
-| 4. Use and refer to Data in another system |                  | X                |                   |                         | x              |
-| 5. Process integration - Continue workflow | X                | x                | x                 |                         |                |
-| 6. Export, Import & Batch integration      |                  | x                | x                 | X                       | x              |
-| 7. Update Data in the Master App           | X                | X                | x                 |                         |                |
-| 8. Distribute Master & Transactional Data  |                  | X                | x                 | x                       | x              |
-| 9. Integration with BI and Reporting       |                  | x                | x                 | X                       | x              |
-| 10. Mobile integration and Off-line        |                  | X                | x                 |                         |                |
-| 11. CMS and CDN Integration                | X                | x                |                   |                         |                |
-| 12. Process Orchestration & State Engines  |                  | X                | x                 |                         | X              |
-| 13. Integration with Ops and Monitoring    | x                | x                | X                 | x                       | X              |
-| 14. Integration with IoT solutions         |                  | X                | X                 | x                       | X              |
-| 14. Integration with AI, Machine Learning  |                  | X                | x                 |                         | X              |
+| *Use Case* | *UI Integration* | *RPC / Services* | *Events / Queues* | *Export, Import, Batch* | *Central Data* |
+| --- | --- | --- | --- | --- | --- |
+| SSO, AD & Identity integration | <p>&#10003;</p> | <p>&#9989;</p> | | | |
+| Import & Distribute Reference Data | | <p>&#9989;</p> | <p>&#10003;</p> | <p>&#9989;</p> | <p>&#10004;</p> |
+| View & Search Data in Another System  | <p>&#10003;</p> | <p>&#9989;</p> | | | |
+| Use & Refer to Data in Another System | | <p>&#9989;</p> | | | <p>&#10003;</p> |
+| [Process Integration](process-integration) (continue workflow) | <p>&#9989;</p> | <p>&#10003;</p> | <p>&#10003;</p> | | |
+| [Export, Import & Batch Processing](export-import-batch) | | <p>&#10003;</p> | <p>&#10003;</p> | <p>&#9989;</p> | <p>&#10003;</p> |
+| Update Data in the Master App | <p>&#9989;</p> | <p>&#9989;</p> | <p>&#10003;</p> | | |
+| Distribute Master & Transactional Data | | <p>&#9989;</p> | <p>&#10003;</p> | <p>&#10003;</p> | <p>&#10003;</p> |
+| Integration with BI & Reporting | | <p>&#10003;</p> | <p>&#10003;</p> | <p>&#9989;</p> | <p>&#10003;</p> |
+| Mobile Integration & Offline | | <p>&#9989;</p> | <p>&#10003;</p> | | |
+| CMS & CDN Integration | <p>&#9989;</p> | <p>&#10003;</p> | | | |
+| Process Orchestration & State Engines | | <p>&#9989;</p> | <p>&#10003;</p> | | <p>&#9989;</p> |
+| Integration with Ops & Monitoring | <p>&#10003;</p> | <p>&#10003;</p> | <p>&#9989;</p> | <p>&#10003;</p> | <p>&#9989;</p> |
+| Integration with IoT Solutions | | <p>&#9989;</p> | <p>&#9989;</p> | <p>&#10003;</p> | <p>&#9989;</p> |
+| Integration with AI & Machine Learning | | <p>&#9989;</p> | <p>&#10003;</p> | | <p>&#9989;</p> |
 
-Integration Styles
-==================
+## 4 Integration Styles
 
-Request Reply most Frequently Used
-----------------------------------
+### 4.1 Request–Reply (Most Frequently Used)
 
-Request-Reply is a collaboration style that means that who-ever initiates
-integration will expect a response back from the destination. For most standard
-interfaces a request-reply scenario is the easiest way to integrate because the
-side of the interface that starts the integration knows directly if the call
-worked or not.
+Request–reply is a collaboration style in which whoever initiates the integration expects a response back from the destination. For most standard interfaces, a request–reply scenario is the easiest way to integrate, because the side of the interface that starts the integration knows directly if the call worked or not.
 
-I.e. Request-reply is more deterministic and therefore easier to think about. If
-it times out, it’s possible to try later, if that is relevant. If it there is an
-error message, the calling system can react directly: set a flag, start an error
-workflow, or show a good error message on the screen that helps the end user
-correct the problem immediately.
+Request–reply is more deterministic and therefore easier to think about. If it times out, it is possible to try again later (if relevant). If it there is an error message, the calling system can react directly by setting a flag, starting an error workflow, or displaying an error message on the screen that helps the end-user correct the problem immediately.
 
-UI Integration
---------------
+### 4.2 UI Integration
 
-Integration via a UI link is becoming more and more common. It allows to develop
-a UI only once in the App where it belongs, and link other users there when they
-need to perform that process.
+Integration via a UI link is becoming more common. This enables developing a UI only once in the app where it belongs, and then linking and directing other users there when they need to perform that process.
 
-In Microservice systems there is often a Dashboard App or portal / landing page
-where people sign in via e.g. SSO. It often contains workflow, overviews and
-status, while when a user wants to perform real work in an area, he is
-deep-linked into another App and works there.
+In microservice systems, there is often a dashboard app, portal, or landing page where people sign in (for example, via single sign-on). This often contains workflows, overviews, and statuses. When the end-user wants to perform real work in an area, they are deep-linked into another app to work there.
 
-Depending on the business requirements, the second App is opened in the same tab
-and the user is un-aware of working in several Apps, or if parallel work in two
-areas is preferred, there could be a separate Tab.
+Depending on the business requirements, the second app can be opened in the same tab so that the end-user is unaware of working in several apps. If parallel work in two areas is preferred, there could be a separate tab opened.
 
-UI integration can also have an advantage for mastering data, since the process
-and UX validations of information is always done in the same way. Then when the
-work is done a relevant part of the new data can be copied back to the other
-App.
+UI integration can also have an advantage for mastering data, since the process and UX validations of information are always done in the same way. When the work is done, a relevant part of the new data can be copied back to the other app.
 
-Event Driven Trend
-------------------
+### 4.3 Event-Driven Trends
 
-At this moment Event driven architectures are making their return into
-mainstream of Integration. It follows an increased interest and focus on e.g.
-IoT solutions, distributed networks of actors, central monitoring etcetera.
-Several solution providers promote new, modern paradigms for managing large,
-distributed, high-volume event driven architectures.
+At the moment, event-driven architectures are making their return into the mainstream of integration. This follows an increased interest in and focus on, for example, IoT solutions, distributed networks of actors, and central monitoring. Several solution providers are promoting new paradigms for managing large, distributed, high-volume event driven architectures.
 
-The key with event-streams is that they (often) only flow in one direction. A
-device leaving metrics to an IoT system, does not expect an immediate answer to
-the data it ships. Additionally, there could be very many devices,
-geographically distributed and shipping a lot of data. Request-reply is neither
-needed not practical for inbound IoT, while for e.g. commanding a drone, or
-other device it’s highly recommended.
+The key to event-streams is that they (often) only flow in one direction. A device leaving metrics in an IoT system does not expect an immediate answer to the data it ships. Additionally, there could be very many devices that are geographically distributed and shipping a lot of data. Request–reply is neither needed nor practical for inbound IoT, but for commanding a drone or other device, for example, it is highly recommended.
 
-IoT, AI and Big Data integration is only in the beginning of an expected
-explosion of new IT that will be built next to the existing IT landscape, in the
-coming years and Mendix will together with Siemens invest heavily in this area,
-to be a leader. In that perspective Kafka and other event-based architecture
-will play an important role in the coming years.
+IoT, AI, and Big-Data integration is only the beginning of an expected explosion of new IT that will be built alongside the existing IT landscape. In the coming years, Mendix and Siemens will invest heavily in this area. With this perspective, Kafka and other event-based architectures will play an important role in the coming years.
 
-IoT, AI and BI solutions will probably count as professional systems and require
-professional developers, that handle queues or Kafka, large databases etcetera.
+{{% todo %}}[**VERIFY THAT SIEMENS/INVESTMENT MENTION ABOVE IS OKAY**]{{% /todo %}}
 
-Batch Oriented, Export and Import
----------------------------------
+In conclusion, we foresee IoT, AI, and business intelligence (BI) counting as professional systems and requiring professional developers that handle queues, Kafka, and large databases.
 
-Batch oriented integration runs a large set of data at a certain moment.
-Interfaces towards DWH and BI are often bulk and/or snap-shot oriented. The same
-is true for initial loads of systems, or distribution of reference data.
+### 4.4 Batch-Oriented, Export & Import
 
-More and more processes become real-time, but a lot of business processes are
-still periodic in nature, e.g. salary payments, interest calculations. These
-use-cases are best implemented in batch-oriented interfaces.
+Batch oriented integration runs a large set of data at a certain moment. Interfaces towards data warehouse (DWH) and BI are often bulk and/or snapshot oriented. The same is true for initial loads of systems or the distribution of reference data.
 
-Files and DB dumps will stay important in the future. The advantage of batch is
-that systems are decoupled, and the export and import can run at different
-times. The interface can be “re-run” again, and/or use a workflow handles
-errors.
+More processes are becoming real-time, but a lot of business processes are still periodic in nature (for example, salary payments and interest calculations). These use cases are best implemented in batch-oriented interfaces.
 
-Processing data in bulk is also more CPU efficient, and if it is periodic, it
-can usually be done at night, when other load is much lower.
+Files and database dumps will remain important in the future. The advantage of batch is that systems are decoupled and the export and import operations can run at different times. The interface can be “re-run” again and/or use a workflow that handles errors.
 
-API Management and ESBs
------------------------
+Processing data in bulk is also more CPU efficient. If it is periodic, it can usually be done at night, when other loads are much lower.
+
+### 4.5 API Management & ESBs
 
 All real-time interfaces can be routed via an ESB or API management. It does not
 change very much for the publisher and the consumer except there is a technical
@@ -205,8 +159,7 @@ recommendation is to use a very thin integration layer, or no layer at all.
 Many people use direct integration within a system, business domain or area,
 while having some API management for external and intra-domain integration.
 
-Integration Layers and Data Hubs
---------------------------------
+### 4.6 Integration Layers and Data Hubs
 
 If the integration layer in the middle stores and combines business data before
 re-distributing it to other parties, it is a “central data” integration pattern.
@@ -236,8 +189,7 @@ but we do not recommend using Data Lakes as Operational Data, because of the
 varying time-stamps, and various layers the data goes through. For Operational
 Data a relational DB, ODS is preferred, as mentioned above.
 
-Ops Integration and Test Services
----------------------------------
+### 4.7 Ops Integration and Test Services
 
 A new trend, part of Microservices and DevOps, is also to build services and
 interfaces from live systems that are specifically oriented towards automated
@@ -256,8 +208,7 @@ information, both technival and functional KPIs that help maintain the solution,
 and from a local Ops dashboard or App management module, one can deep-link into
 these pages.
 
-Recommendations
-===============
+## 5 Recommendations
 
 Minimize Integration
 --------------------

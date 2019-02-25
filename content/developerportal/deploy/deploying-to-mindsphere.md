@@ -78,7 +78,7 @@ When running on MindSphere, the MindSphere user can use their MindSphere credent
 The MindSphere SSO module is included in the MindSphere starter and example apps. It can also be downloaded separately here: [MindSphere SSO](https://appstore.home.mendix.com/link/app/108805/).
 
 {{% alert type="warning" %}}
-The SSO module also requires changes to the app theme see section 2.1.2, [Add the MindSphere Theme Pack](#themepack).
+The SSO module also requires changes to the app theme see the [Add the MindSphere Theme Pack](#themepack) section below..
 {{% /alert %}}
 
 #### 2.2.1 Constants
@@ -97,6 +97,8 @@ This is the name of your app as registered in the MindSphere developer portal. S
 
 **MindGateURL**
 
+{{% todo %}}[**THESE URLs SHOULD BE FORMATTED AS CODE SO AS TO NOT APPEAR AS BROKEN LINKS**]{{% /todo %}}
+
 This is the base URL for all requests to MindSphere APIs. For example, the URL for MindSphere on AWS PROD is https://gateway.eu1.mindsphere.io.
 
 **PublicKeyURL**
@@ -113,7 +115,7 @@ The MindSphereSingleSignOn module also provides three microflows which are used 
 
 This microflow must be added to the *Runtime* tab of the *Project > Settings* dialog, accessed through the *Project Explorer*. It needs to be selected as the *After startup* microflow or added as a sub-microflow to an existing after startup microflow.
 
-{{% todo %}}[**MAKE LARGE IMAGES SMALLER**]{{% /todo %}}
+{{% todo %}}[**SUCH LARGE IMAGES NEED TO BE MADE SMALLER**]{{% /todo %}}
 
 ![Project settings dialog](attachments/deploying-to-mindsphere/image4.png)
 
@@ -336,6 +338,9 @@ To create a new app in the MindSphere launchpad, do the following:
 8.  Click **Register** to register your app with the MindSphere launchpad.
 
     {{% alert type="info" %}}If the app has not been pushed yet, there will be no route set up for the app and you will get an error message. This will be resolved once you have pushed your app to Cloud Foundry{{% /alert %}}
+    
+
+{{% todo %}}[**ADD A LINK ABOVE TO EITHER FEEDBACK WIDGET DOC OR APP STORE ITEM; USE FULL NAME: Mendix Feedback Widget**]{{% /todo %}}
 
 #### 3.2.2 Scopes in Developer Cockpit{#scopes}
 

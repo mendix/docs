@@ -1,16 +1,12 @@
 ---
-title: "MindSphere Example App"
+title: "Use the MindSphere Example App"
 category: "Siemens MindSphere"
-#menu_order: Enter the position of the document in the category or under the parent; number by 10 (for first), 20, 30, etc. for easy ordering of other documents in the future if necessary; don't add brackets or quotation marks; if no number is added, the system will add an extremely high number to order the documents, which means that if you only want a document to appear at the top, you only have to add "10" to that specific document, you don't have to order all the other documents in the category/under the parent
-description: "What does the MindSphere Example App do and how does it work?"
 tags: ["Siemens", "MindSphere", "Example", "Asset Management", "Time Series", "REST", "API", "Pump"]
 ---
 
 ## 1 Introduction
 
-You can write Mendix apps which analyze data held in MindSphere, the open, cloud-based IoT operating system from Siemens. To help you build your app, there is the **Pump Asset Example** app which can be downloaded as the starting point for a new app when you are creating a Mendix app.
-
-![Pump Asset Example App on the Mendix Create New App page](attachments/mindsphere-example-app/create-new-app.png)
+You can write Mendix apps which analyze data held in MindSphere, the open, cloud-based IoT operating system from Siemens. To help you build your app, the [MindSphere Pump Asset Example](https://appstore.home.mendix.com/link/app/108810/) app is available in the Mendix App Store and can be used as the starting point for a new Mendix app.
 
 This documentation provides more explanation of the MindSphere example app. Please note that this app is not production-ready. It is designed as an example of how you might begin to build a Mendix/MindSphere app.
 
@@ -18,14 +14,37 @@ You can get more detailed information on how to deploy your app to the MindSpher
 
 ## 2 Prerequisites
 
-To deploy your app to MindSphere you need the following prerequisites.
+To deploy your app to MindSphere, you need to complete the prerequisites described below.
 
-* A MindSphere user account on a developer tenant. This account needs the following core roles:
-    * mdsp:core:Developer
-    * mdsp:core:StandardUser
-    * mdsp:core:TenantUser
+### 2.1 Roles
 
-### 2.1 Assets
+You need a MindSphere user account on a developer tenant. This account needs the following core roles:
+
+* mdsp:core:Developer
+* mdsp:core:StandardUser
+* mdsp:core:TenantUser
+
+### 2.2 Opening the App in the Desktop Modeler
+
+Open the (empty) Desktop Modeler and follow these steps:
+
+1. Click the icon in the top-left of the menu bar to open the Mendix App Store:
+
+	![](attachments/mindsphere-example-app/app-store-icon.png)
+
+2. Enter *MindSphere* in the search box, and in the search results, select **MindSphere Pump Asset Example**:
+
+	![](attachments/mindsphere-example-app/app-store-search.png)
+
+3. Click **Download** to create a new app project using this app:
+
+	![](attachments/mindsphere-example-app/app-store-download.png)
+
+4. To start the new app project, confirm where to store the app, the app name, and the project directory, then click **OK**:
+
+	![](attachments/mindsphere-example-app/app-store-download-project.png)
+
+### 2.3 Assets
 
 This example app displays information about pumps. If there are no pump assets created yet for your tenant, you will need to create them using the MindSphere **Asset Manager** in the launchpad.
 
@@ -92,6 +111,8 @@ More information on creating assets is available in the MindSphere [Asset Manage
 To deploy the example app, you will need to configure the app, push it to Cloud Foundry, and set it up in the MindSphere launchpad.
 
 These instructions are available in the deployment documentation: [Deploying to MindSphere](/developerportal/deploy/deploying-to-mindsphere).
+
+{{% todo %}}[**HOW TO THE SECTIONS BELOW RELATE TO THE Deploying DOC? DO THEY HAVE TO BE DONE IN ADDITION TO THAT DOC? DOES THE ORDER MATTER? DO THE SECTIONS BELOW NEED TO GO INTO THE Deploying DOC?**]{{% /todo %}}
 
 ### 3.1 App Configuration
 
@@ -183,17 +204,17 @@ To use the app:
 
 ## 5 Notes on App Design
 
-### 5.1 Single Sign-on
+### 5.1 Single Sign-On
 
 The app uses Single Sign-on (SSO) to identify the user. This is initiated in the *Runtime* tab of the Project Settings, where the microflow *MindSphereSingleSignOn.RegisterSingleSignOn* is called on startup. This microflow sets up two configurations for the user.
 
-#### 5.1.1 User role
+#### 5.1.1 User Role
 
 The user is given the role of *user* or *admin* within MindSphere. These roles are translated to MindSphere scopes which are matched to the Mendix user role. With the recommended mapping, a user with the app role *user* in MindSphere will be given the Mendix user role *user*.
 
-See section 3.2, [User Scopes, for a more complete description](#userscopes).
+For a more complete description, see the [User Scopes](#userscopes) section.
 
-#### 5.1.2 Multi-tenant support
+#### 5.1.2 Multi-Tenant Support
 
 The user is also connected to their MindSphere tenant. This enables security to be placed on persistent Mendix entity objects.
 
@@ -237,7 +258,9 @@ However, MindSphere will queue this request internally and the data will not be 
 
 ## 6 MindSphere Asset Management Connector{#assetconnector}
 
-The MindSphere Example App uses the MindSphere Asset Management Connector to obtain asset information from MindSphere.
+{{% todo %}}[**SHOULD THIS SECTION BE ITS OWN DOC?**]{{% /todo %}}
+
+The MindSphere example app uses the MindSphere Asset Management Connector to obtain asset information from MindSphere.
 
 The MindSphereAssetManagementConnector module is the standard connector for managing assets within MindSphere. It can be found in the App Store modules of the example app. It is also available as a stand-alone module in the App Store: [MindSphere Asset Management Connector](https://appstore.home.mendix.com/link/app/108806/).
 
@@ -282,7 +305,7 @@ More information on pagination is available here: [Asset Management Service - Pa
 
 More information on filtering functions is available here: [Asset Management Service - Filtering](https://developer.mindsphere.io/apis/advanced-assetmanagement/api-assetmanagement-references-filtering.html)
 
-### 6.2 How to Use the Connector
+### 6.2 Using the Connector
 
 The module adds two actions which a developer can use to retrieve Asset and AssetType objects, together with their associated Variable objects, from MindSphere using the API. You can find these actions in the **Toolbox** under *MindSphere Asset Management APIs*.
 
@@ -340,8 +363,8 @@ It implements the API call .../api/assetmanagement/v3/assettypes/{Asset type id}
 
 The parameters are as follows:
 
-* Auth token – a string containing an access token, retrieved by the *Access token* action
-* Get query params (optional) – an object of type **GetQueryParams** containing additional parameters for the query (see section 6.1, Asset Management Domain Model(#assetdm), for more details)
-* E tag (optional) – an integer which acts as a counter for optimistic locking
-* Asset type id – a string containing the value which should be matched to the _id attribute of the asset type required. This should be in the format {tenant}.{asset type}
-* Variable (AssetType) – an object of type **AssetType** which is associated with retrieved objects of type **AspectTypeWrapper**, **AspectType**, and **Variable** which contain additional information about this asset type
+* **Auth token** – a string containing an access token, retrieved by the *Access token* action
+* **Get query params** (optional) – an object of type **GetQueryParams** containing additional parameters for the query (see section 6.1, Asset Management Domain Model(#assetdm), for more details)
+* **E tag** (optional) – an integer which acts as a counter for optimistic locking
+* **Asset type id** – a string containing the value which should be matched to the _id attribute of the asset type required. This should be in the format {tenant}.{asset type}
+* **Variable (AssetType)** – an object of type **AssetType** which is associated with retrieved objects of type **AspectTypeWrapper**, **AspectType**, and **Variable** which contain additional information about this asset type

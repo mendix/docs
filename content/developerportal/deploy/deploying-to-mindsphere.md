@@ -225,7 +225,7 @@ The index.html file can be found in the /theme folder of your project app.
 
 As well as changes to the index.html file, SSO for MindSphere also requires a different login HTML file. This is called MindSphereLogin.html and can also be found in the /theme folder of your project app.
 
-{{% todo %}}[**PLEASE DO STYLE GUIDELINE REVIEW FOR BOTH DOCS: FOR EXAMPLE, FILE NAME ABOVE SHOULD BE ITALICIZED**]{{% /todo %}}
+{{% todo %}}[**STYLE GUIDELINE REVIEW: FOR EXAMPLE, ITALICIZE ABOVE FILE NAME**]{{% /todo %}}
 
 If this file is not in your /theme folder, you can create it following the instructions in section 6.2, MindSphereLogin.html, or by importing the MindSphere_UI_Resources theme pack.
 

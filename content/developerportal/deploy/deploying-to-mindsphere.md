@@ -17,7 +17,7 @@ You can create Mendix apps which make MindSphere API calls, but which are deploy
 {{% /alert %}}
 
 {{% alert type="warning" %}}
-There are some limitations to what you can do in your Mendix app if it is deployed to MindSphere. See the [Limitations](#limitations) section for more information.
+There are some limitations to what you can do in your Mendix app if it is deployed to MindSphere. See the [Limitations](#limitations) section below for more information.
 {{% /alert %}}
 
 To help you with your first MindSphere apps, there is also an example app which contains modules which call the MindSphere APIs. Please see [How to Use the MindSphere Example App](/howto/mindsphere/mindsphere-example-app) for more information.
@@ -30,27 +30,33 @@ You will need to customize your app to allow it to be deployed to MindSphere and
 
 There are two ways to include the customization you need in your app.
 
-#### 2.1.1 Use the MindSphere Starter App
+#### 2.1.1 Using the MindSphere Starter App
 
 The **MindSphere Starter Application** in the Mendix App Store contains all the modules and styling which you need to create an app you want to deploy to MindSphere.
 
 Open the (empty) Desktop Modeler and follow these steps:
 
-1. Open the Mendix App Store by clicking the icon in the top-left of the menu bar:
+1. Click the icon in the top-left of the menu bar to open the Mendix App Store:
 
 	![](attachments/deploying-to-mindsphere/app-store-icon.png)
 
 2. Enter *MindSphere* in the search box, and in the search results, select **MindSphere Starter Application**:
 
-**ADD**
+	![](attachments/deploying-to-mindsphere/app-store-search.png)
 
-3. Click **Download** to create a new app project using this app.
+3. Click **Download** to create a new app project using this app:
+
+	![](attachments/deploying-to-mindsphere/app-store-download.png)
+
+4. To start the new app project, confirm where to store the app, the app name, and the project directory, then click **OK**:
+
+	![](attachments/deploying-to-mindsphere/app-store-download-project.png)
 
 {{% alert type="info" %}}
-This is the recommended approach if you are building a new application as it will provide all the necessary building blocks to get started.
+This is the recommended approach if you are building a new application, as it will provide all the necessary building blocks to get started.
 {{% /alert %}}
 
-#### 2.1.2 Add the MindSphere Theme Pack{#themepack}
+#### 2.1.2 Adding the MindSphere Theme Pack{#themepack}
 
 If you have an existing app which was not based on the MindSphere starter app, you can import the MindSphere Theme Pack (MindSphere_UI_Resources) from the Mendix App Store here: [MindSphere Theme Pack](https://appstore.home.mendix.com/link/app/108803/).
 

@@ -6,9 +6,7 @@ tags: ["Siemens", "MindSphere", "Example", "Asset Management", "Time Series", "R
 
 ## 1 Introduction
 
-You can write Mendix apps which analyze data held in MindSphere, the open, cloud-based IoT operating system from Siemens. To help you build your app, the **Pump Asset Example** app is available in the Mendix App Store and can be used as the starting point for a new Mendix app.
-
-**ADD APP STORE LINK ABOVE**
+You can write Mendix apps which analyze data held in MindSphere, the open, cloud-based IoT operating system from Siemens. To help you build your app, the [MindSphere Pump Asset Example](https://appstore.home.mendix.com/link/app/108810/) app is available in the Mendix App Store and can be used as the starting point for a new Mendix app.
 
 This documentation provides more explanation of the MindSphere example app. Please note that this app is not production-ready. It is designed as an example of how you might begin to build a Mendix/MindSphere app.
 
@@ -16,7 +14,7 @@ You can get more detailed information on how to deploy your app to the MindSpher
 
 ## 2 Prerequisites
 
-To deploy your app to MindSphere, you need the prerequisites described below.
+To deploy your app to MindSphere, you need to complete the prerequisites described below.
 
 ### 2.1 Roles
 
@@ -30,15 +28,21 @@ You need a MindSphere user account on a developer tenant. This account needs the
 
 Open the (empty) Desktop Modeler and follow these steps:
 
-1. Open the Mendix App Store by clicking the icon in the top-left of the menu bar:
+1. Click the icon in the top-left of the menu bar to open the Mendix App Store:
 
 	![](attachments/mindsphere-example-app/app-store-icon.png)
 
-2. Enter *MindSphere* in the search box, and in the search results, select **Pump Asset Example**:
+2. Enter *MindSphere* in the search box, and in the search results, select **MindSphere Pump Asset Example**:
 
-**ADD**
+	![](attachments/mindsphere-example-app/app-store-search.png)
 
-3. Click **Download** to create a new app project using this app.
+3. Click **Download** to create a new app project using this app:
+
+	![](attachments/mindsphere-example-app/app-store-download.png)
+
+4. To start the new app project, confirm where to store the app, the app name, and the project directory, then click **OK**:
+
+	![](attachments/mindsphere-example-app/app-store-download-project.png)
 
 ### 2.3 Assets
 

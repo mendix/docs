@@ -86,8 +86,8 @@ The table below presents use cases that you can reference  for more detail. The 
 
 | *Use Case* | *UI Integration* | *RPC / Services* | *Events / Queues* | *Export, Import, Batch* | *Central Data* |
 | --- | --- | --- | --- | --- | --- |
-| SSO, AD & Identity integration | <p>&#10003;</p> | <p>&#10004;</p> | | | |
-| Import & Distribute Reference Data | | <p>&#10004;</p> | <p>&#10003;</p> | <p>&#10004;</p> | <p>&#10004;</p> |
+| SSO, AD & Identity integration | <p>&#10003;</p> | <p>&#9745;</p> | | | |
+| Import & Distribute Reference Data | | <p>&#9989;</p> | <p>&#10003;</p> | <p>&#10004;</p> | <p>&#10004;</p> |
 | View & Search Data in Another System  | <p>&#10003;</p> | <p>&#10004;</p> | | | |
 | Use & Refer to Data in Another System | | <p>&#10004;</p> | | | <p>&#10003;</p> |
 | [Process Integration](process-integration) (continue workflow) | <p>&#10004;</p> | <p>&#10003;</p> | <p>&#10003;</p> | | |

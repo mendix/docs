@@ -7,7 +7,7 @@ draft: true
 
 ## 1 Introduction
 
-Mendix is optimized for easily and quickly developing and maintaining apps that fulfill a business function. Internal integration—from GUI to logic to data—within a Mendix app is handled out-of-the-box in one model and one deployment.
+Internal integration—from GUI to logic to data—within a Mendix app is handled out-of-the-box in one model and one deployment.
 
 Most solutions require integration with other apps and systems. Such integration is easy with Mendix, but there are many options to choose from. This should be the case, because integration is like the glue between components in a solution, and it needs to be adaptable for all possible functional scenarios.
 

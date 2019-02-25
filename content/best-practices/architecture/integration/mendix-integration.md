@@ -20,7 +20,7 @@ Mendix handles a large array of formats and protocols. For more information, see
 
 The most important thing to do is to choose the right integration option from a lot of possibilities. These best practices will present an overview of integration methods and typical use cases.
 
-## 2 Always Think *Functional* First
+## 2 Always Think *Functionally* First
 
 The first best practice is to have an open mind regarding integration requirements. Think about what the integration need really is and consider more than one option for the solution.
 
@@ -50,12 +50,11 @@ However, there are typical use cases for which Mendix is creating example implem
 
 ![](attachments/mendix-integration/common-use-cases.png)
 
-For each use case, we need consider different solution methods and which solution is most suitable under which condition.
+For each use case, we need to consider which solution is most suitable under which condition.
 
 ## 4 Basic Solution Categories
 
-For most of the integration related to Mendix, there are five solution categories that
-are almost always used. Sometimes one is used, and sometimes a combination is used:
+For most integration related to Mendix, there are five solution categories that are almost always used. Sometimes just one is used, and sometimes a combination is used:
 
 ![](attachments/mendix-integration/solution-categories.png)
 
@@ -67,42 +66,37 @@ are almost always used. Sometimes one is used, and sometimes a combination is us
 
 * **Batch-Oriented** – This category includes exporting, moving, and importing files.
 
-* **Central Data** – This category uses a pattern where data is landed and combined in a central
-    place before it is distributed. This could be, for example, an operational data store (ODS); extract, transform, load (ETL); business intelligence (BI); or data lake solution.
+* **Central Data** – This category uses a pattern where data is landed and combined in a central place before it is distributed. This could be, for example, an operational data store (ODS); extract, transform, load (ETL); business intelligence (BI); or data lake solution.
 
-Overview of Options
--------------------
+## 5 Overview of Options
 
-Plotting the Functional Use Cases against the basic methods of integration,
-there are several common options available. That is good, because integration is
-the flexible part of any solution, adapting to how systems, things or people
-communicate. Turn to the Use-Case documents (link docs) for more detail. In the
-table below:
+Plotting functional use cases against basic methods of integration allows us to see that there are several common options available. That is good, because integration needs to be flexible in a solution in order to adapt to how systems, things, or people communicate. 
 
--   Capital “X” indicates common or preferred use of the method
+The table below presents use cases that you can reference  for more detail. The table uses the following key:
 
--   Lower case “x” indicates possible use in some cases
+* An <p>&#10004;</p> indicates the common or preferred use of the method
+	* In some of the latter cases (for example, "Integration with IoT solutions"), the solution will require several methods, so there are several instances of <p>&#10004;</p>
+* An **x** indicates possible use in some cases
 
--   In some of the latter cases, e.g. IoT, the solution will require several
-    methods and then there is also several capital “X”
+{{% todo %}}[**ADD LINKS AS DOCS AVAILABLE**]{{% /todo %}}
 
-| *Use Case*                                 | *UI Integration* | *RPC / Services* | *Events / Queues* | *Export, Import, Batch* | *Central Data* |
-|--------------------------------------------|------------------|------------------|-------------------|-------------------------|----------------|
-| 1. SSO, AD and Identity integration        | x                | X                |                   |                         |                |
-| 2. Import and Distribute Reference Data    |                  | X                | x                 | X                       | x              |
-| 3. View and Search Data in another system  | x                | X                |                   |                         |                |
-| 4. Use and refer to Data in another system |                  | X                |                   |                         | x              |
-| 5. Process integration - Continue workflow | X                | x                | x                 |                         |                |
-| 6. Export, Import & Batch integration      |                  | x                | x                 | X                       | x              |
-| 7. Update Data in the Master App           | X                | X                | x                 |                         |                |
-| 8. Distribute Master & Transactional Data  |                  | X                | x                 | x                       | x              |
-| 9. Integration with BI and Reporting       |                  | x                | x                 | X                       | x              |
-| 10. Mobile integration and Off-line        |                  | X                | x                 |                         |                |
-| 11. CMS and CDN Integration                | X                | x                |                   |                         |                |
-| 12. Process Orchestration & State Engines  |                  | X                | x                 |                         | X              |
-| 13. Integration with Ops and Monitoring    | x                | x                | X                 | x                       | X              |
-| 14. Integration with IoT solutions         |                  | X                | X                 | x                       | X              |
-| 14. Integration with AI, Machine Learning  |                  | X                | x                 |                         | X              |
+| *Use Case* | *UI Integration* | *RPC / Services* | *Events / Queues* | *Export, Import, Batch* | *Central Data* |
+| --- | --- | --- | --- | --- | --- |
+| SSO, AD & Identity integration | x | <p>&#10004;</p> | | | |
+| Import & Distribute Reference Data | | <p>&#10004;</p> | x | <p>&#10004;</p> | <p>&#10004;</p> |
+| View & Search Data in Another System  | x | <p>&#10004;</p> | | | |
+| Use & Refer to Data in Another System | | <p>&#10004;</p> | | | x |
+| [Process Integration](process-integration) (continue workflow) | <p>&#10004;</p> | x | x | | |
+| [Export, Import & Batch Processing](export-import-batch) | | x | x | X | x |
+| Update Data in the Master App | <p>&#10004;</p> | <p>&#10004;</p> | x | | |
+| Distribute Master & Transactional Data | | <p>&#10004;</p> | x | x | x |
+| Integration with BI & Reporting | | x | x | X | x |
+| Mobile Integration & Offline | | <p>&#10004;</p> | x | | |
+| CMS & CDN Integration | <p>&#10004;</p> | x | | | |
+| Process Orchestration & State Engines | | <p>&#10004;</p> | x | | <p>&#10004;</p> |
+| Integration with Ops & Monitoring | x | x | <p>&#10004;</p> | x | X |
+| Integration with IoT Solutions | | <p>&#10004;</p> | <p>&#10004;</p> | x | X |
+| Integration with AI & Machine Learning | | <p>&#10004;</p> | x | | <p>&#10004;</p> |
 
 Integration Styles
 ==================

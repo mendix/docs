@@ -8,9 +8,7 @@ draft: true
 
 ## 1 Introduction 
 
-Mendix is optimized for the easiest and fastest way to develop and maintain apps that fulfil a business function.
-
-The [Mendix Evaluation Guide](https://www.mendix.com/evaluation-guide/) provides a great overview of all the possibilities and features in the Mendix Platform, the [Mendix Reference Guide](/refguide/) explains the product in detail, and the [Mendix How-to's](/howto/) provide developers with instructions on how to do things in Mendix.
+In the Mendix documentation landscape, the [Mendix Evaluation Guide](https://www.mendix.com/evaluation-guide/) provides a great overview of all the possibilities and features in the Mendix Platform, the [Mendix Reference Guide](/refguide/) explains the product in detail, and the [Mendix How-to's](/howto/) provide developers with instructions on how to do things in Mendix.
 
 With the **Best Practices** documentation, we want to share information on how to approach typical challenges and solve specific use cases. We will be looking at different solution options that may be valid under certain circumstances. 
 

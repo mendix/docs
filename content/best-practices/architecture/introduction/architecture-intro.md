@@ -6,6 +6,10 @@ menu_order: 1
 draft: true
 ---
 
+Latin1_General_CI_AS
+
+Latin1\_General\_CI\_AS
+
 ## 1 Introduction to Mendix Architecture Best Practices
 
 Mendix is optimized for the easiest and fastest way to develop and maintain apps that fulfill a business function. As the scope of your apps grows larger, architecture becomes more important. At that point, you should leverage best practices in this area.

@@ -6,13 +6,6 @@ menu_order: 1
 draft: true
 ---
 
-
-The *keytool.exe* program can be found in the “bin” directory of your Java installation. On Windows, it can be found in, for example, *C:\Program Files\Java\jre1.8.0_20\bin*.
-2. Upload keystore to Phonegap Build (My Account/Signing Keys): After creating the key store file, upload it to Adobe PhoneGap Build on your [account page](https://build.phonegap.com/). Go to the **Signing Keys** tab and click **Add a key** under **Android**. Select the key store file, fill in a title for the key, and fill in the alias that you noted down in the previous step. After uploading the key store file, unlock the key. Click the yellow lock icon on the right of the key and fill in both the key store and the key passwords. The key is now ready to be used by your build job.
-
-The *keytool.exe* program can be found in the “bin” directory of your Java installation. On Windows, it can be found in, for example, *C:\Program Files\Java\jre1.8.0/_20\bin*.
-2. Upload keystore to Phonegap Build (My Account/Signing Keys): After creating the key store file, upload it to Adobe PhoneGap Build on your [account page](https://build.phonegap.com/). Go to the **Signing Keys** tab and click **Add a key** under **Android**. Select the key store file, fill in a title for the key, and fill in the alias that you noted down in the previous step. After uploading the key store file, unlock the key. Click the yellow lock icon on the right of the key and fill in both the key store and the key passwords. The key is now ready to be used by your build job.
-   
 ## 1 Introduction to Mendix Architecture Best Practices
 
 Mendix is optimized for the easiest and fastest way to develop and maintain apps that fulfill business functions. As the scope of your apps grows larger, architecture becomes more important. At that point, you should leverage best practices in this area.

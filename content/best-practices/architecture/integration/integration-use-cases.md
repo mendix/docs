@@ -19,7 +19,7 @@ This is an example sequence for an Architect or Lead Developer considering the b
 	a.  Who needs what data when and for which reason? <br />
 	b. Does it need to be real-time? <br />
 	c. What error handling should be there?
-3. What are the functional options? <br />
+3.  What are the functional options? <br />
 	a. How can I operate this interface in production? <br />
 	b. How do we manage errors? <br />
 	c. Real-time or batch? <br />
@@ -27,6 +27,7 @@ This is an example sequence for an Architect or Lead Developer considering the b
 	e. Is there an available integration layer? <br />
 		* If yes, what functions does it handle (for example security, monitoring, queueing, simple mapping)? <br />
 		* An "integration layer" means there are two parts of the integration where you one can choose events, request–reply, or batch separately for the best possible operational solution <br />
+
 4. What are the technical options for each functional option? <br />
 	a. Which protocols are available? <br />
 	b. What will it mean for operations? <br />

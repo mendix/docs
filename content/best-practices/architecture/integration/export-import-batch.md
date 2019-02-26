@@ -24,64 +24,42 @@ Processing data in bulk allows for more optimization and can therefore be made C
 
 ### 1.2 When & Why to Use This Use Case
 
-Batch imports are often applied when data
+Batch imports are often applied to data with the following characteristics:
 
--   Is of a high volume
+* Is of a high volume
+* Has a low rate of change
 
--   Has a low rate of change
+Imports and exports are often executed on a scheduled basis or via manual invocation (instead of being trigger- or event-based).
 
-Imports and exports are often executed on a scheduled basis or manual invocation
-(instead of trigger or event based).
+Besides a mechanism to import or export data, one requires a (safe) manner of transportation of data between source and target system. Mendix supports various manners of transportation for example, (S)FTP, HTTP, file (disk) access, and many others.
 
-Besides a mechanism to import or export data, one requires a (safe) manner of
-transportation of data between source and target system. Mendix supports various
-manners of transportation (e.g. (S)FTP, HTTP, File (disk) access and many
-others). Transportation is not within the scope of this best practice.
+Transportation is not within the scope of this best practice.
 
 ### 1.3 How to Use This Use Case
 
-To apply this use case the following elements are typically needed:
+To apply this use case, the following elements are typically needed:
 
-1.  A defined format to exchange data (e.g. CSV, XML, Excel, Fixed Delimited).
-
-2.  A manner of transporting the data (e.g. (S)FTP, HTTP, File (disk) access).
-
-3.  Possible interpretation (e.g. masks for complex fields or logic to interpret
-    an expected date format).
-
-4.  Possible transformation (e.g. associate an imported Address to master data
-    Country).
+* A defined format to exchange data (for example, CSV, XML, Excel, fixed delimited)
+* A manner of transporting the data (for example, (S)FTP, HTTP, file (disk) access)
+* Possible interpretation (for example, masks for complex fields or logic to interpret an expected date format)
+* Possible transformation (for example, associate an imported address to a master-data     country)
 
 ## 2 Do's & Don'ts
 
 ### 2.1 Do’ s
 
--   Uniquely identify records and store it in the application (to be able to
-    update later; if applicable).
-
--   Index unique identifiers.
-
--   Import data when less other processes are running to avoid interference.
-
--   Consider a strategy to handle deleted data (e.g. mark as deleted and keep in
-    the database or remove during the import).
-
--   Think of correct error handling (e.g. should only a single object fail or
-    the complete batch).
-
--   Preserve a trail of import/export statistics (e.g. how many records were
-    new, changed, removed or exported).
-
--   Implement a process to verify if imports are running successfully. If not,
-    most of the time there should be an action taken (e.g. requesting a record
-    to be resent from source or a correction of data).
+* Uniquely identify records and store themin the application (to be able to update later; if applicable)
+* Index unique identifiers
+* Import data when there are fewer other processes running to avoid interference
+* Consider a strategy to handle deleted data (for example, mark as deleted and keep in the database or remove during the import)
+* Think of the correct error handling (for example, should only a single object fail or  the complete batch)
+* Preserve a trail of import/export statistics (for example, how many records were new, changed, removed or exported)
+* Implement a process to verify if imports are running successfully – if they are not, most of the time there should be an action taken (for example, requesting a record to be resent from the source or correcting the data)
 
 ### 2.2 Don’ts
 
--   Apply batch imports/exports when data is expected to be updated in
-    real-time.
-
--   Apply heavy batch processing during peak hours of system usage.
+* Apply batch imports/exports when data is expected to be updated in real time
+* Apply heavy batch processing during peak hours of system usage
 
 ## 3 Technology Options with the Mendix Platform
 

@@ -8,7 +8,7 @@ module.exports = {
      ****************************************************/
     {
       from: "/howtogeneral/bestpractices/ux-best-practices",
-      to: "/howto/ux/ux-best-practices"
+      to: "/howto7/ux/ux-best-practices"
     },
 	{
       from: "/howtogeneral/bestpractices/best-practices-security-and-improvements-for-mendix-applications",
@@ -219,12 +219,12 @@ module.exports = {
      * From Desktop Modeler version 7 (permanent, mapped)
      ****************************************************/
 	{
-      from: "/refguide/modeler",
-      to: "/refguide/desktop-modeler-overview"
+      from: "/refguide7/modeler",
+      to: "/refguide7/desktop-modeler-overview"
     },
 	{
       from: "/refguide/Modeler",
-      to: "/refguide/desktop-modeler-overview"
+      to: "/refguide7/desktop-modeler-overview"
     },
 	{
       from: "/refguide/download-from-team-server-dialog",

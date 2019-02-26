@@ -9,7 +9,7 @@ draft: true
 
 ## 1 Introduction
 
-Mendix is optimized for the easiest and fastest way to develop and maintain apps that perform well under a normal load. In addition, for core systems and high-volume situations, Mendix is an excellent choice for modeling, testing, tuning, and monitoring your solution.
+Mendix is optimized for easily and quickly developing and maintaing apps that perform well under a normal load. In addition, for core systems and high-volume situations, Mendix is an excellent choice for modeling, testing, tuning, and monitoring your solution.
 
 This document goes through the main areas for building high-performance core enterprise systems using the Mendix Platform.
 

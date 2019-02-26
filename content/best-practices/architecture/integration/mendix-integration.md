@@ -20,7 +20,7 @@ Mendix handles a large array of formats and protocols. For more information, see
 
 The most important thing to do is to choose the right integration option from a lot of possibilities. These best practices will present an overview of integration methods and typical use cases.
 
-## 2 Always Think *Functionally* First
+## 2 Always Think *Functionally* First {#functionally}
 
 The first best practice is to have an open mind regarding integration requirements. Think about what the integration need really is and consider more than one option for the solution.
 
@@ -102,6 +102,7 @@ The table below presents use cases that you can reference  for more detail. The 
 | Integration with IoT Solutions | | <p>&#9989;</p> | <p>&#9989;</p> | <p>&#10003;</p> | <p>&#9989;</p> |
 | Integration with AI & Machine Learning | | <p>&#9989;</p> | <p>&#10003;</p> | | <p>&#9989;</p> |
 
+To read these use cases, start with [Integration Use Cases](integration-use-cases).
 ## 4 Integration Styles
 
 {{% todo %}}[**ADD MORE DIAGRAMS/IMAGES IN THE SECTIONS BELOW**]{{% /todo %}}

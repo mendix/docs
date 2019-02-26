@@ -5,258 +5,138 @@ menu_order: 2
 draft: true
 ---
 
-As described in the *Integration Overview* \<link\> document we recommend always
-thinking of Integration from a functional perspective first. What should this
-interface do for the business solution?
+## 1 Introduction
 
-Deciding on the Best Integration Option
----------------------------------------
+As described in [Mendix & Integration](mendix-integration#functionally), Mendix recommends always thinking of integration from a functional perspective first. The main question you should ask is, what will this integration do for the business solution?
 
-Below is an example sequence for the Architect or Lead Developer that is
-considering the best way to integrate.
+## 2 Deciding on the Best Integration Option
 
-1.  What is the Business Use Case?
+This is an example sequence for an Architect or Lead Developer considering the best way to integrate:
 
-    1.  Use this document to see if one Use Case fits?
+1. What is the business use case? <br />
+	a. Use this document to see if one use csase fits?
+2. What are the functional requirements? <br />
+	a.  Who needs what data when and for which reason? <br />
+	b. Does it need to be real-time? <br />
+	c. What error handling should be there?
+3. What are the functional options? <br />
+	a. How can I operate this interface in production? <br />
+	b. How do we manage errors? <br />
+	c. Real-time or batch? <br />
+	d. Request–reply or events? <br />
+	e. Is there an available integration layer? <br />
+		* If yes, what functions does it handle (for example security, monitoring, queueing, simple mapping)? <br />
+		* An "integration layer" means there are two parts of the integration where you one can choose events, request–reply, or batch separately for the best possible operational solution <br />
+4. What are the technical options for each functional option? <br />
+	a. Which protocols are available? <br />
+	b. What will it mean for operations? <br />
+	c. What is more secure? <br />
+	d. What has better error handling?
+5. Compare the options against each other.
 
-2.  What are the functional requirements?
+It is important to think of the overall solution, and recognize that integration starts inside one system and ends inside (one-to-many) other systems.
 
-    1.  Who needs what data when and for which reason?
+If it gets complicated on one side of an integration, it is often because the other side of the integration is not ideal. Then, the best solution may be to try to change the other side of the integration.
 
-    2.  Does it need to be real-time?
+## 3 Integration Use Cases
 
-    3.  What error handling should be there?
+The integration use cases are introduced below.
 
-3.  What are the functional options?
+{{% todo %}}[**ADD LINKS TO FULL DOCS BELOW ONCE AVAILABLE**]{{% /todo %}}
 
-    1.  How can I operate this interface in Production?
+### 3.1 SSO, AD & Identity Integration 
 
-    2.  How do we manage errors?
+This use case handles security around the following:
 
-    3.  Real-time or Batch?
+* User login integration using standard SSO (for example, SAML and Open ID)
+* Service integration (for example, SSL, tokens, and encryption)
+* Events (for example, securing data on queues)
+* Batch interfaces (for example, using SFTP)
 
-    4.  Request Reply or Events?
+### 3.2 Importing & Distributing Reference Data 
 
-    5.  Is there an available integration layer?
+This use case describes how to manage reference data, such as country codes, currencies, and  product sets. These slow-changing datasets are often maintained in another system and regularly imported into an app (for example, from a CSV file).
 
-        1.  If yes, what functions does it handle? E.g. security, monitoring,
-            queueing and sometimes simple mapping
+Along with a microservices cluster, Mendix recommends using one app as the reference data-importing point and then distributing data from there to the rest of the apps.
 
-        2.  Integration layer means there are two parts of the integration where
-            one can choose e.g. events, request reply, batch separately for the
-            best possible operational solution
+### 3.3 Viewing & Searching Data in Another System 
 
-4.  What are the technical options for each functional option?
+A typical case for integration is using one app to view or search data from another system. This is a simple functional use case, but it has a few technical options that are worth understanding.
 
-    1.  Which protocols are available?
+### 3.4 Using & Referring to Data in Another System
 
-    2.  What will it mean for operations?
+This use case describes how to search and view data in another system as well as store parts of the data locally and set up a functional link between the objects. With such a link, you can  subscribe to updates, reretrieve a new version of the data on request later, or configure a downstream system (for example, finance) to use the reference for its processing.
 
-    3.  What is more secure?
+### 3.5 Process Integration
 
-    4.  What has better error handling?
+Process integration is the most common integration type in most enterprises. As soon as a business process spans more than one app, there is usually some level of process integration needed. For example, when an end-user submits an order in an ordering system, it should go to a fulfilment system and maybe after that to finance. And of course you will want to also inform the customer.
 
-5.  Compare the options against each other
+Process integration involves the integration of transactional data over multiple apps or microservices. This is common type of integration has several flavors:
 
-It is important to think of the overall solution, and recognize that integration
-starts inside 1 system, and ends inside 1-N other systems.
+* **Business events**  – some work finishes in one app, and the next app should be notified to start the next steps of the process
+* **Workflow integration** – a user works in one app and then continues the same process in another app (in some cases this will require the worked-on data to be transferred to the next app)
+* **Process orchestration** – at the end of a business event, several other systems need to be informed and/or updated
+* **State Engine** – a large amount of events are gathered related to different processes in order to determine that all the processes finish correctly
+* **Case Management** – an implementation of a human workflow in phases maintaining a “case” object with data (this case can run in one app, use process orchestration, and act as a state engine, or it can be partially finalized in other apps and use sub-cases)
 
-If it gets very complicated on one side of an interface, it is often because the
-other side is not ideal. Then the best solution may be to try to change the
-other side of the integration.
+Read more in [Process Integration](process-integration).
 
-Integration Use Cases
-=====================
+### 3.6 Export, Import & Batch Processing
 
-The Use Case we intend to cover in the Best Practices section are listed below:
+Even in a real-time world, there is plenty of integration that still makes sense to do in a batch-oriented way. Batch integration is usually decoupled, because one step extracts a file, another step moves the file, and a third step imports the file.
 
-1.  SSO, AD and Identity integration
+This is a great option for reference data and other periodically updated data as well as for initial loads and exports towards DWH solutions, for example.
 
-2.  Import and Distribute Reference Data
+Read more in [Export, Import & Batch Processing](export-import-batch).
 
-3.  View and Search Data in another system
+### 3.7 Master Data Integration
 
-4.  Use and refer to Data in another system
+Master data consists of semi-permanent objects that are used throughout several business processes. That means that several processes and/or departments use the same objects (and often also change the same objects). The most common example is customer data, where a  customer may order products from five different departments but needs to be treated as the same customer.
 
-5.  Process integration
+In its full scope, master data management is a complex process involving the following:
 
-6.  Export, Import & Batch Processing
+* A central place where the master copy of the data is stored
+* Several mechanisms for updating the master data
+* A (normally human) workflow that is managed by data stewards in order to resolve conflicts and de-duplicate data
+* One or more mechanisms for distributing updates to the master data
 
-7.  Master Data Integration
+The best practices will describe how to update data in the master app and how to distribute the data to other subscribing apps.
 
-8.  Update Data in a Master App
+{{% todo %}}[**ADD WHEN RELEASE FOR MX8: ### 3.8 Mobile Integration & Offline**]{{% /todo %}}
 
-9.  Distribute Master Data
+### 3.8 CMS & CDN Integration 
 
-10. Integration with BI and Reporting
+Mendix often needs to integrate with content management systems (CMS) like Magnolia. This allows for external facing apps to have a main menu and marketing material in a CMS system that is specialized for these purposes, while Mendix runs the functional part of the portal.
 
-11. Mobile integration and Off-line
+This use case will also discuss Mendix integration with content delivery node solutions (such as Akamai) for geo-scaled solutions.
 
-12. CMS and CDN Integration
+### 3.9 Integration with BI & Reporting
 
-13. Integration with Ops and Monitoring
+This use case describes several options for how Mendix developers can provide data from the apps towards a DWH, data lake, or other BI tooling using, for example, files, OData, or database dumps.s
 
-14. Integration with AI and IoT solutions
+This use case will also look at creating reports in Mendix apps and integration with data mining tools like Tableau.
 
-A short description will follow below, while for each Use Case there is an
-Overview document specifying the characteristics or the Use Case, the main
-options available and how they compare, and often there will be an example
-implementation made by a Mendix expert, to use as a reference and/or to copy
-pieced from
+### 3.10 Integration with CICD, Ops & Monitoring 
 
-### SSO, AD and Identity integration 
+DevOps is rolling out around the world and many processes—from development and testing to deploying and monitoring—are being automated. Together with cloud and low-code technologies, DevOps is contributing to the digital transformation of the IT industry.
 
-This Use Case handles security around:
+Integration from functional apps towards this automation and operations tooling is becoming increasingly important. These areas will be covered in the use cases:.
 
--   User Log-on integration, using standard SSO, e.g. SAML and Open ID
+* CI/CD integration
+* Test automation (building specific test services)
+* App management
+* Health checks and basic monitoring
+* Business activity monitoring
+* Professional monitoring and trend analysis
+* Security monitoring
 
--   Service integration, e.g. SSL, tokens and encryption
+DevOps involves collaborating and using the same (or similar) tools to improve the
+flexibility of releasing functionality more often while maintaining stable solutions in production.
 
--   Events, e.g. securing data on queues
+### 3.11 Integration with AI & IoT Solutions
 
--   Batch interfaces, e.g. using SFTP
+{{% todo %}}[**"Google" BELOW? NO DOCS ON GOOGLE, BUT EXIST ON SAP - VERIFY**]{{% /todo %}}
 
-### Import and Distribute Reference Data 
+Mendix already integrates well with AI solutions from [IBM](/refguide/ibm/ibm-watson-connector) and Google and with IoT solutions such as [Siemens MindSphere](/howto/mindsphere/). 
 
-This case describes how to manage reference data, such as country codes,
-currencies and even product sets can be reference data. This is slow changing
-data sets often maintained in another system, and regularly imported in your
-Apps from e.g. a CSV file. If we have a Microservices cluster we recommend using
-one App as the reference data importing point, and distributing data from there
-to the rest of the Apps.
-
-### View and Search Data in another system 
-
-A very typical case of integration is when from one App we just want to view or
-search in data from another system. This is a simple functional use-case, but it
-has a few technical options that are worth understanding.
-
-### Use and refer to Data in another system
-
-In this Use Case we not only Search and View data in the other system, we also
-store parts of the data locally and set up a functional link between the
-objects, so that we can either subscribe to updates (one functional case), or
-just be able to re-retrieve a new version of the data on request later (another
-functional case), or simply so that a downstream system (e.g. Finance) can use
-the reference for it’s processing.
-
-### Process integration
-
-Process integration is potentially the most common integration in most
-enterprises. As soon as a Business Process spans more than one App, there is
-usually some level of process integration needed. E.g. when I submit an Order in
-the ordering system it should go to a Fulfilment system and maybe after that to
-Finance and we want to also inform the customer.
-
-Process integration means integration of transactional data over multiple apps
-or microservices. This is probably the most common form of integration and it
-has several flavours:
-
-1.  **Business events**, where some work finishes in one App or Thing and the
-    next App should be notified to start the next steps of the process
-
-2.  **Workflow integration**, where a user works in one App and then continues
-    the same process in another App, in some cases requiring the worked-on data
-    to be transferred to the next App
-
-3.  **Process orchestration**, where at the end of a business event, several
-    other systems need to be informed and/or updated
-
-4.  **State Engine**, where we gather a large amount of events related to
-    different processes, in order to determine that all processes finish
-    correctly
-
-5.  **Case Management**, is an implementation of a human workflow in phases
-    maintaining a “case”-object with data. The case can run in one App and use
-    process orchestration and act as a state engine, or the Case can be
-    partially finalized in other Apps, often using sub-cases.
-
-### Export, Import & Batch Processing
-
-Even in a real-time world there are plenty of integration that still makes sense
-to do in a Batch oriented way. Batch integration is usually decoupled because it
-has one side that Extracts a File, another part moves the file, and in a third
-step the File is imported.
-
-This is great for reference data and other periodically updated data, and for
-initial loads and exports towards e.g. DWH solutions.
-
-### Master Data Integration
-
-Master Data consists of semi-permanent objects that are used throughout several
-business processes. That means that several processes and or departments use the
-same objects and often also change the same objects. The most common example is
-Customer data, where the same customer orders products from 5 different
-departments but wants to be treated as the same customer.
-
-Master data management in the full scope is a complex process involving:
-
-1.  A central place where the Master copy of the data is stored
-
-2.  Several mechanisms for updating the Master data
-
-3.  A solution, normally human workflow managed by data Stewarts, for resolving
-    conflicts and attempt to de-duplicate data
-
-4.  One or more mechanisms for distributing updates to the Master data
-
-In the best practices we will describe how to Update data in the Master App, and
-how to distribute the data to other subscribing Apps.
-
-### Mobile integration and Off-line 
-
-The section on Mobile integration and Off-line Best practices will be filled in
-when Mendix 8 is released, and will relate to the new React Native standard.
-
-### CMS and CDN Integration 
-
-Often Mendix needs to integrate with Content Management Systems (CMS) like
-Magnolia. This allows for external facing Apps to have a main menu and marketing
-material in a CMS system that is specialized for this, while Mendix runs the
-functional part of the Portal.
-
-It also will discuss Mendix integration with Content Delivery Node solutions
-such as Akamai for Geo-scaled solutions.
-
-### Integration with BI and Reporting
-
-This Use Case describes several options for how Mendix developers can provide
-data from the Apps towards a DWH, Data Lake or other BI tooling, using e.g.
-File, OData or DB Dump.
-
-It will also look at creating good Reports in Mendix Apps and integration with
-data mining tools like Tableau.
-
-### Integration with CICD and Ops and Monitoring 
-
-DevOps is rolling out around the world and many processes from development, to
-test to deployments and monitoring are being automated. It is in a way, together
-with Cloud and Low-Code, the Digital Transformation of the IT industry.
-
-Integration from functional Apps towards this automation and Ops tooling is
-becoming increasingly important and we should eventually cover these areas in
-various parts of the Best Practices section.
-
--   CICD integration
-
--   Test Automation – building specific test services?
-
--   App Management
-
--   Health checks and Basic Monitoring
-
--   Business Activity Monitoring
-
--   Professional Monitoring and Trend analysis
-
--   Security Monitoring
-
-Dev and Ops are collaborating and using similar or the same tools to improve the
-flexibility of releasing functionality more often, while maintaining stable
-solutions in production.
-
-### Integration with AI and IoT solutions 
-
-Mendix already integrates well with AI solutions from IBM and Google, and with
-IoT solutions such as MindSphere. This section should describe what to think
-about, and provide simple example implementations to use as a reference.
+This use case describes what to think for this type of integration and provides simple example implementations to use as references.

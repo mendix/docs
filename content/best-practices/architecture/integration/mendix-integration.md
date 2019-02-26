@@ -102,6 +102,7 @@ The table below presents use cases that you can reference  for more detail. The 
 | Integration with IoT Solutions | | <p>&#9989;</p> | <p>&#9989;</p> | <p>&#10003;</p> | <p>&#9989;</p> |
 | Integration with AI & Machine Learning | | <p>&#9989;</p> | <p>&#10003;</p> | | <p>&#9989;</p> |
 
+To read these use cases, start with [Integration Use Cases](integration-use-cases).
 ## 4 Integration Styles
 
 {{% todo %}}[**ADD MORE DIAGRAMS/IMAGES IN THE SECTIONS BELOW**]{{% /todo %}}

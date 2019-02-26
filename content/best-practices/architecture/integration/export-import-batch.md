@@ -26,8 +26,8 @@ Processing data in bulk allows for more optimization and can therefore be made C
 
 Batch imports are often applied to data with the following characteristics:
 
-* Is of a high volume
-* Has a low rate of change
+* High volume
+* Low rate of change
 
 Imports and exports are often executed on a scheduled basis or via manual invocation (instead of being trigger- or event-based).
 
@@ -63,35 +63,26 @@ To apply this use case, the following elements are typically needed:
 
 ## 3 Technology Options with the Mendix Platform
 
-The following patterns are suitable options for batch import/export:
+The following patterns are suitable options for batch import and export:
 
--   Batch
-
-    -   File (e.g. CSV, Excel, XML).
-
-    -   Database (e.g. JDBC).
-
--   RPC
-
-    -   REST
-
-    -   SOAP
-
-    -   OData
+* Batch
+	* File (for example, CSV, Excel, XML)
+	* Database (for example, JDBC)
+* RPC
+	* REST
+	* SOAP
+	* OData
 
 ### 3.1 When to Apply Each Technology Option
 
-The technology chosen is often limited by the environment (e.g. remote system
-only exports its data in a certain manner).
+The technology chosen is often limited by the environment (for example, a remote system only exports its data in a certain manner).
 
-|              | **Pro’s**                                                 | **Cons**                                    |
-|--------------|-----------------------------------------------------------|---------------------------------------------|
-| **Batch**    |  Export/Import is part of Batch integration               |                                             |
-| **File**     | Large volume in one transaction.                          | Intermediate transfer required (e.g. SFTP). |
-| **Database** |                                                           | Connectivity to database required.          |
-| **RPC**      |                                                           | Multiple requests pagination / transactions |
-| **REST**     | Using standard HTTP(S) connectivity. Part of Mendix Core. |                                             |
-| **SOAP**     | Using standard HTTP(S) connectivity.                      |                                             |
-|              | Part of Mendix Core.                                      |                                             |
-| **OData**    | Using standard HTTP(S) connectivity.                      | Doesn’t support binary interface.           |
-|              | Part of Mendix Core.                                      |                                             |
+|     | Pros | Cons |
+| --- | --- | ---|
+| **Batch** | Export/import is part of batch integration | |
+| **File** | Large volume in one transaction. | Intermediate transfer required (for example, SFTP). |
+| **Database** | | Connectivity to database required. |
+| **RPC** | | Multiple requests, pagination, and transactions. |
+| **REST** | Using standard HTTP(S) connectivity. Part of Mendix Core. |   |
+| **SOAP** | Using standard HTTP(S) connectivity. | |
+| **OData** | Using standard HTTP(S) connectivity. | Does not support binary interface. |

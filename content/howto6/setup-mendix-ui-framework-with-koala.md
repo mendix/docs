@@ -24,14 +24,8 @@ Before you can start with this how-to, please make sure you have completed the f
 In this chapter we will create a new app and select a theme from the New App selector.
 
 1.  Open the **Mendix Modeler**.
-2.  Create a **New App** from the **My Apps** screen in the Mendix Modeler.
-
-    ![](attachments/18448712/18581487.png)
-
+2.  Create a **New App** in the Mendix Modeler.
 3.  Select a theme for your app.
-
-    ![](attachments/18448712/18581488.png)
-
 4.  You can now deploy your app or just head over to section 3 to configure Koala.
 
 ## 3\. Configure Koala

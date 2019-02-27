@@ -22,12 +22,8 @@ Before you can start with this how-to, make sure you have completed the followin
 In this chapter we will create a new app and select a theme from the New App selector.
 
 1.  Open the **Mendix Modeler**.
-2.  Create a **New App** from the **My Apps** screen in the Mendix Modeler.
-
-     ![](attachments/18448709/18581431.png)
+2.  Create a **New App**  screen in the Mendix Modeler.
 3.  Select a theme for your app.
-
-    ![](attachments/18448709/18581432.png)
 4.  You can now deploy your app (F5)
 
     ![](attachments/18448709/18581429.png) 

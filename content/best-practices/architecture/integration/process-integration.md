@@ -11,53 +11,25 @@ This document describes some best practices around the scenario when a business 
 
 In most architectures, there are business processes that exceed the functionality of a single microservice app. In that case, there will be some transactional data used in that process that needs to be transferred between the microservices involved.
 
-[**DUPLICATED IN INTEGRATION USE CASES - REMOVE FROM THERE AND KEEP HERE?**]
+Process integration involves the integration of transactional data over multiple apps or microservices. This common type of integration has several flavors:
 
-"Process integration" means the integration of transactional data over multiple apps or microservices. This is probably the most common form of integration and it
-has several flavors:
+1.  **Business events**  – some work finishes in one app, and the next app should be notified to start the next steps of the process
+2.  **Workflow integration** – a user works in one app and then continues the same process in another app (in some cases this will require the worked-on data to be transferred to the next app)
+3.  **Process orchestration** – at the end of a business event, several other systems need to be informed and/or updated
+4.  **State Engine** – a large amount of events are gathered related to different processes in order to determine that all the processes finish correctly
+5.  **Case Management** – an implementation of a human workflow in phases maintaining a “case” object with data (this case can run in one app, use process orchestration, and act as a state engine, or it can be partially finalized in other apps and use sub-cases)
 
-1.  **Business events**, where some work finishes in one App or Thing and the
-    next App should be notified to start the next steps of the process
-
-2.  **Workflow integration**, where a user works in one App and then continues
-    the same process in another App, in some cases requiring the worked-on data
-    to be transferred to the next App
-
-3.  **Process orchestration**, where at the end of a business event, several
-    other systems need to be informed and/or updated
-
-4.  **State Engine**, where we gather a large amount of events related to
-    different processes, in order to determine that all processes finish
-    correctly
-
-5.  **Case Management**, is an implementation of a human workflow in phases
-    maintaining a “case”-object with data. The case can run in one App and use
-    process orchestration and act as a state engine, or the Case can be
-    partially finalized in other Apps, often using sub-cases.
-
-The integration requirements for transactional data differ from the requirements
-for master data and reference data. Transactional data changes often and needs
-to be available for other systems quickly. In cases where a workflow spans
-multiple systems, the data needs to be available almost instantly for the user
-to continue working.
+The integration requirements for transactional data differ from the requirements for master data and reference data. Transactional data changes often and needs to be available for other systems quickly. In cases where a workflow spans multiple systems, the data needs to be available almost instantly for the user to continue working.
 
 ### 1.1 Characteristics of Workflow Integration
 
-Workflow integration relates to using data in a single workflow that is executed
-by one user, where parts of that workflow exists in separate apps. A user needs
-to continue a workflow seamlessly, transitioning from one microservice to the
-next.
+Workflow integration involves using data in a single workflow that is executed by one user where parts of that workflow exist in separate apps. The user needs to continue a workflow seamlessly, transitioning from one microservice to the next.
 
-As a practical example, consider an architecture consisting of an ordering app
-and a billing app. The ordering app is responsible for managing customer orders.
-The billing app is responsible for generating invoices. A user who creates an
-order (in the ordering app) needs to approve the invoice (in the support app)
-immediately after creating the order. To support this workflow, an integration
-is necessary to transfer the user and data between apps.
+As a practical example, consider an architecture consisting of an ordering app and a billing app. The ordering app is responsible for managing customer orders, and the billing app is responsible for generating invoices. A user who creates an order (in the ordering app) needs to approve the invoice (in the billing app) immediately after creating the order. To support this workflow, an integration is necessary to transfer the user and data between apps.
 
 ### 1.2 When & Why to Use This Use Case
 
-Process integration is applied when
+Process integration is applied when the following occurs:
 
 -   A workflow or business process spans multiple apps
 
@@ -67,173 +39,121 @@ Process integration is applied when
 
 -   Data changes need to be available quickly in other apps
 
-Process integration is often implemented in an event-driven way, or triggered by
-user actions in an app.
+Process integration is often implemented in an event-driven way or triggered by user actions in an app.
 
 ### 1.3 How to Use This Use Case
 
-To make transactional data generated by one app (the “owner”) available in
-another (the “client”), there are two main directions:
+To make transactional data generated by one app (the “owner”) available in another (the “client”), there are two main directions:
 
 -   Store a copy of the data in the other app
 
--   Retrieve data on demand whenever they are needed
+-   Retrieve data on demand whenever it is needed
 
-Storing a copy is more fault-tolerant in the sense that when the owner app can’t
-be reached temporarily, the client app can continue to operate. It also performs
-better, since querying the data means querying the local database instead of a
-remote endpoint. So, in cases where the data volume allows this, local copies
-are preferred. When the volume is too great, on-demand retrieves must be used.
+Storing a copy is more fault-tolerant, in the sense that when the owner app cannot be reached temporarily, the client app can continue to operate. It also performs better, since querying the data means querying the local database instead of a remote endpoint. So, in cases where the data volume allows this, local copies are preferred. When the volume is too great, on-demand retrieves must be used.
 
-In this best practice, we will consider the situation where local copies can be
-used, since retrieving data on demand is much simpler architecturally. However,
-for transactional data the data set is usually too big to retrieve the full set
-at once when a transfer occurs, so we will have to work with change sets (or
-“deltas”).
+This best practice considers the situation where local copies can be used, since retrieving data on demand is much simpler architecturally. However, for transactional data, the dataset is usually too big to retrieve the full set at once when a transfer occurs, so change sets (or “deltas”) will have to be worked with.
 
-Building up a local copy of data can be done either by having the client pull
-changes or having the owner push. Both options have advantages and
-disadvantages:
+Building up a local copy of data can be done either by having the client pull changes or having the owner push. This table compares both options:
 
-| **Push**                                                     | **Pull**                                                     |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Orders can be sent immediately on change                     | The support app asks for new orders periodically, so the order information may be slightly outdated (eventual consistency) |
-| Commonly transferred per individual object                   | Commonly transferred in batches (all objects that changed since last pull) |
-| The owner app must know the apps to push to. Each app that needs data must register itself | The owner app does not need to know which apps are using its data. |
-| The owner app must retry pushes on failure                   | The client app can retry or re-pull data orders when necessary |
+| Push | Pull |
+| --- | --- |
+| Orders can be sent immediately on change | The support app asks for new orders periodically, so the order information may be slightly outdated (eventual consistency) |
+| Commonly transferred per individual object | Commonly transferred in batches (all objects that changed since last pull) |
+| The owner app must know the apps to push to; each app that needs data must register itself | The owner app does not need to know which apps are using its data |
+| The owner app must retry pushes on failure | The client app can retry or re-pull data orders when necessary |
 | Recovering from errors in the data transfer is difficult to do in the owner app | Recovery of errors is easy: have the client app re-pull the data |
 
-For microservices, there is a strong recommendation for services to be
-autonomous and decoupled from each other. Additionally, it is typically possible
-for business processes in the whole architecture to tolerate small delays in
-data integration. This leads to a natural choice for pull-based synchronization,
-as it is easier to implement and easier to make fault-tolerant.
+For microservices, it is strongly recommended to make services autonomous and decoupled from each other. Additionally, it is typically possible for business processes in the whole architecture to tolerate small delays in data integration. This leads to a natural choice for pull-based synchronization, as it is easier to implement and easier to make fault-tolerant.
 
-## 2 Do's & Don'ts
+## 2 Recommendations, Do's & Don'ts
 
-### 2.1 Recommendation for Business Events
+### 2.1 Recommendations
 
-In a microservice architecture transaction, the transactional data is best
-shared between apps using a pull-based mechanism.
+#### 2.1.1 For Business Events
 
-### 2.2 Recommendation for Workflow Integration 
+In a microservice architecture transaction, the transactional data is best shared between apps using a pull-based mechanism.
 
-When a user executes a business process spanning multiple apps, he needs to be
-transferred seamlessly between the apps. This is normally accomplished using
-deep links into the client app.
+#### 2.1.2 For Workflow Integration 
 
-In some cases, transactional data needs to be available instantly and the app
-cannot afford to wait for an asynchronous pull-process. When opening the deep
-link, the client app should synchronously trigger the existing pull process to
-retrieve data on demand.
+When a user executes a business process spanning multiple apps, they need to be transferred seamlessly between the apps. This is normally accomplished using deep links into the client app.
+
+In some cases, transactional data needs to be available instantly and the app cannot afford to wait for an asynchronous pull-process. When opening a deep link, the client app should synchronously trigger the existing pull process to retrieve data on demand.
 
 ### 2.3 Do’s
 
--   Share transactional data using a pull-based mechanism, publishing data from
-    the owning app
+-   Share transactional data using a pull-based mechanism, publishing data from the owning app
 
--   Pull data relatively often, both to make data available for use quickly and
-    to prevent the backlog of changed data from building up
+-   Pull data relatively often, both to make data available for use quickly and to prevent the backlog of changed data from building up
 
 -   Provide a global identifier for shared data
 
--   Handle deleted data as “soft deletes” in the owning app. That way, data will
-    not disappear for client and can be recovered if necessary
+-   Handle deleted data as “soft deletes” in the owning app so that data will not disappear for the client and can be recovered if necessary
 
--   Consider a strategy to handle deleted data in a client (e.g. mark as deleted
-    and keep in the database or remove during the pull). The client is free to
-    decide how to do this, separately from the owner,
+-   Consider a strategy to handle deleted data in a client (for example, mark as deleted and keep in the database or remove during the pull) – the client is free to decide how to do this, separately from the owner
 
--   Think of correct error handling – should a client retry, show an error, or
-    work on older data?
+-   Think of the correct error handling – should a client retry, show an error, or work on older data?
 
--   Think of the robustness of the transfer mechanism – is it possible to miss
-    changes if an app is down or updates are sent out-of-order? How can an app
-    recover from this?
+-   Think of the robustness of the transfer mechanism – is it possible to miss changes if an app is down or updates are sent out of order, and how can an app recover from this?
 
--   Create clear (debug) log messages for the data transfer mechanism (e.g. how
-    many records were new, changed, removed).
+-   Create clear (debug) log messages for the data transfer mechanism (for example, how many records were new, changed, or removed)
 
 ### 2.4 Don’ts
 
--   Apply pull-based process integration patterns when the data volume is too
-    great to store a local copy. Consider designing a solution specific to your
-    case instead.
-
--   Create APIs for each technical entity separately. Instead, build an API for
-    a meaningful business object tree, transferring multiple related objects
-    simultaneously.
+-   Apply pull-based process integration patterns when the data volume is too great to store a local copy
+    -   Instead, consider designing a solution specific to your case
+-   Create APIs for each technical entity separately
+    -   Instead, build an API for a meaningful business object tree, transferring multiple related objects
+        simultaneously
 
 ## 3 Technology Options with the Mendix Platform
 
-The Mendix platform supports multiple technologies natively for creating
-integrations between apps:
+The Mendix Platform supports multiple technologies natively for creating integrations between apps:
 
--   REST
+* REST
+* SOAP
+* OData
 
--   SOAP
+To transfer a user from one app to the next in a business process, two options are available:
 
--   OData
+* Page URLs
+* [Deep link module](https://appstore.home.mendix.com/link/app/43/)
 
-To transfer a user from one app to the next in a business process, two options
-are available:
+### 3.1 Transferring Transaction Data or Business Events
 
--   Page URLs
+Creating a pull-based integration mechanism can be done using several technology options. There are pros and cons for this specific case:
 
--   Deep link module
+| | Pros | Cons |
+| --- | --- | --- |
+| **Batch** | N/A | N/A |
+| **File** | N/A | N/A |
+| **Database** | N/A | N/A |
+| **REST** | Intended for publishing data; more efficient message format (JSON); reusable in custom widgets | Less support for data schema validation |
+| **SOAP** | Strong schema support | Intended for operations Verbose message format (XML) |
+| **OData** | Using standard HTTP(S) connectivity; part of Mendix core | Doesn’t support binary interface. |
 
-### Transferring Transaction Data or Business Event
+Given the pros and cons in the table above, it is recommended to build these process integrations using a REST endpoint, especially considering the following points:
 
-Creating a pull-based integration mechanism can be done in using several
-technology options, each of which has its own advantages and disadvantages for
-this specific case.
+* The use case fits the intent (publishing data)
+* The JSON format is easier to work with and more efficient than XML
+* The need for a strong schema is less, since this will be an integration between two apps in the same architecture scope; the data model can be kept consistent in other ways
 
-|              | **Pro’s**                                                    | **Cons**                                             |
-| ------------ | ------------------------------------------------------------ | ---------------------------------------------------- |
-| **Batch**    | N/A                                                          | *N/A*                                                |
-| **File**     | N/A                                                          | N/A                                                  |
-| **Database** | N/A                                                          | N/A                                                  |
-| **REST**     | Intended for publishing data More efficient message format (JSON) Reusable in custom widgets | Less support for data schema validation              |
-| **SOAP**     | Strong schema support                                        | Intended for operations Verbose message format (XML) |
-| **OData**    | Using standard HTTP(S) connectivity.                         | Doesn’t support binary interface.                    |
-|              | Part of Mendix Core.                                         |                                                      |
+A REST endpoint like this can be used for real-time on-demand data retrieval, making it relatively easy to switch to that mechanism if the data volume grows over time.
 
-Given the pros and cons in the table above, it is recommended to build these
-process integrations using a REST endpoint:
+### 3.2 Recommendation for Endpoints
 
--   The use case fits the intent (publishing data).
+Source systems for process data should publish a REST service endpoint for that data. This endpoint can be used by consumers to retrieve the data and store it locally.
 
--   The JSON format is easier to work with and more efficient than XML.
+### 3.3 Continuing Workflow in Another App
 
--   The need for a strong schema is less, since this will be an integration
-    between two apps in the same architecture scope. The data model can be kept
-    consistent in other ways.
+Both options here have pros and cons:
 
-A REST endpoint like this can be used for real-time on-demand data retrieval,
-making it relatively easy to switch to that mechanism if the data volume grows
-over time.
+| | Pros | Cons |
+| --- | --- | --- |
+| **Page URLs** | Built into the Modeler | Only for pages, no parameters possible    |
+| **Deep link module** | Can start microflows; very flexible with link parameters | [Deep link module](https://appstore.home.mendix.com/link/app/43/) (from App Store, with platform support) |
 
-### Recommendation for End-Points
+Page URLs are very easy to use in the Mendix Platform, but the platform currently only supports opening a page and does not support custom parameters. For this case, more flexibility is needed, both to be able to trigger integration logic when opening a link, and to be able to link to specific objects using link parameters.
 
-Source systems for process data should publish a REST service endpoint for that
-data. This endpoint can be used by consumers to retrieve the data and store it
-locally.
+### 3.4 Recommendation for Workflow Integration
 
-### Continuing workflow in another app
-
-Both options here have advantages and disadvantages:
-
-|                    | **Pros**                                                | **Cons**                                 |
-| ------------------ | ------------------------------------------------------- | ---------------------------------------- |
-| *Page URLs*        | Built into modeler                                      | Only for pages No parameters possible    |
-| *Deep link module* | Can start microflows Very flexible with link parameters | App store module (with platform support) |
-
-Page URLs are very easy to use in the Mendix Platform, but currently only
-support opening a page and do not support custom parameters. For this case, more
-flexibility is needed, both to be able to trigger integration logic when opening
-a link, and to be able to link to specific objects using link parameters.
-
-### Recommendation for Workflow integration
-
-Microservices with business processes spanning multiple apps should use the deep
-link module to do process integration.
+Microservices with business processes spanning multiple apps should use the [Deep link module](https://appstore.home.mendix.com/link/app/43/) to do process integration.

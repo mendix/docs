@@ -22,7 +22,7 @@ The Mendix architecture best practices complements the following sections in the
 
 Mendix best practices around architecture will be valuable for architects, designers, business developers, and more technical developers that work on Mendix app projects. The best practices address common areas where the quality of Mendix solutions can improve by using this information or using the examples in the App Store.
 
-{{% todo %}}[**ADD LINK TO APP STORE WHEN AVAILABLE ABOVE; UPDATE DIAGRAM BELOW**]{{% /todo %}}
+{{% todo %}}[**ADD LINK TO APP STORE WHEN AVAILABLE ABOVE; UPDATE DIAGRAM BELOW; EXPLAIN DIAGRAM**]{{% /todo %}}
 
 ![](attachments/arch-over1.png)
 
@@ -41,7 +41,7 @@ These are the architecture subject areas that will be covered:
 
 This diagram presents an overview of the structure of the Architecture Best Practices documentation:
 
-{{% todo %}}[**UPDATE DIAGRAM**]{{% /todo %}}
+{{% todo %}}[**UPDATE DIAGRAM; EXPLAIN DIAGRAM**]{{% /todo %}}
 
 ![](attachments/arch-over2.png)
 

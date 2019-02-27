@@ -10,7 +10,7 @@ draft: true
 Mendix makes it easy to build, update, and maintain an apps and microservices that
 fulfill business functions. Usually business functions need a GUI, logic, and data. The internal integration of those layers is handled by Mendix, but for most apps and microservice architectures, integration with other systems is necessary.
 
-{{% todo %}}[**UPDATE DIAGRAM**]{{% /todo %}}
+{{% todo %}}[**UPDATE DIAGRAM; EXPLAIN DIAGRAM**]{{% /todo %}}
 
 ![](attachments/mendix-integration/feature-requirements.png)
 
@@ -48,7 +48,7 @@ Finally, make a conscious choice about why one method is chosen over another.
 
 However, there are typical use cases for which Mendix is creating example implementations. These best practices are related to such typical use cases.
 
-{{% todo %}}[**UPDATE DIAGRAM**]{{% /todo %}}
+{{% todo %}}[**UPDATE DIAGRAM; EXPLAIN DIAGRAM**]{{% /todo %}}
 
 ![](attachments/mendix-integration/common-use-cases.png)
 
@@ -58,7 +58,7 @@ For each use case, we need to consider which solution is most suitable under whi
 
 For most integration related to Mendix, there are five solution categories that are almost always used. Sometimes just one is used, and sometimes a combination is used:
 
-{{% todo %}}[UPDATE DIAGRAM]{{% /todo %}}
+{{% todo %}}[**UPDATE DIAGRAM; EXPLAIN DIAGRAM**]{{% /todo %}}
 
 ![](attachments/mendix-integration/solution-categories.png)
 
@@ -184,7 +184,7 @@ Microservices also often have an admin page where important information is colle
 
 ### 5.1 Minimize Integration
 
-{{% todo %}}[**"1-N" CLEAR ENOUGH HERE? REPLACE WITH "one-to-many"?]{{% /todo %}}
+{{% todo %}}[**"1-N" CLEAR ENOUGH HERE? REPLACE WITH "one-to-many"?**]{{% /todo %}}
 
 It may seem obvious, but it is still worth pointing out that the overall solution design of 1-N apps working together should always attempt to find the functional components and interfaces with the least amount of integration need and the least complicated integration.
 

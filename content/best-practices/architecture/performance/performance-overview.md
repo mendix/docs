@@ -52,7 +52,7 @@ For more information, see [How to Detect & Resolve Performance Issues](/howto/mo
 
 In addition, the Mendix Academy also makes available a Mendix Expert training module called [Performance Guidelines](https://gettingstarted.mendixcloud.com/link/module/127/lecture/1031).
 
-{{% todo %}}[**GET DIAGRAM UPDATED**]{{% /todo %}}
+{{% todo %}}[**UPDATE DIAGRAM; EXPLAIN DIAGRAM**]{{% /todo %}}
 
 ![](attachments/overview/can-i-use-mendix.png)
 

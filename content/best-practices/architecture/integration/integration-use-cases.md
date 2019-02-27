@@ -73,14 +73,6 @@ This use case describes how to search and view data in another system as well as
 
 Process integration is the most common integration type in most enterprises. As soon as a business process spans more than one app, there is usually some level of process integration needed. For example, when an end-user submits an order in an ordering system, it should go to a fulfilment system and maybe after that to finance. And of course you will want to also inform the customer.
 
-Process integration involves the integration of transactional data over multiple apps or microservices. This common type of integration has several flavors:
-
-* **Business events**  – some work finishes in one app, and the next app should be notified to start the next steps of the process
-* **Workflow integration** – a user works in one app and then continues the same process in another app (in some cases this will require the worked-on data to be transferred to the next app)
-* **Process orchestration** – at the end of a business event, several other systems need to be informed and/or updated
-* **State Engine** – a large amount of events are gathered related to different processes in order to determine that all the processes finish correctly
-* **Case Management** – an implementation of a human workflow in phases maintaining a “case” object with data (this case can run in one app, use process orchestration, and act as a state engine, or it can be partially finalized in other apps and use sub-cases)
-
 Read more in [Process Integration](process-integration).
 
 ### 3.6 Export, Import & Batch Processing

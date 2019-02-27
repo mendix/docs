@@ -1,5 +1,5 @@
 ---
-title: "Mendix Microservices:
+title: "Mendix Microservices"
 parent: "microservices-overview"
 tags: ["microservices"]
 ---

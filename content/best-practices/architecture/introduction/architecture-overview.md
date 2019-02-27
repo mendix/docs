@@ -6,6 +6,10 @@ menu_order: 2
 draft: true
 ---
 
+{{% todo %}}[**NEED TO REVIEW THIS CONTENT SO THAT IT IS NOT DEFINING ARCHITECTURE, BUT STATING THAT THIS IS HOW MENDIX INTERPRETS ARCHITECTURE - DELETE GENERIC STATEMENTS ON TOPICS, REPLACE WITH MENDIX INTERPRETATION/DEFINITION/VISION OF TOPICS**]{{% /todo %}}
+
+{{% todo %}}[**COULD USE 1 MORE DIAGRAM FOR LAST SEVERAL SECTIONS**]{{% /todo %}}
+
 ## 1 What Is IT Architecture?
 
 There are many types of IT architecture, and we hear the term in different contexts. The fact is that architecture is practiced at the highest levels of companies as well as by relative beginner Mendix developers.

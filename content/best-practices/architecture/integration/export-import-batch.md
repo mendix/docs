@@ -5,6 +5,8 @@ menu_order: 1
 draft: true
 ---
 
+{{% todo %}}[**COULD USE 2 DIAGRAMS**]{{% /todo %}}
+
 ## 1 Export, Import & Batch Processing Use Case
 
 The importing and exporting of data is the automated or semi-automated input and output of datasets between different applications. More and more processes are becoming real-time, but a lot of business processes are still periodic in nature (for example, salary payments and interest calculations). These use cases are best implemented in batch-oriented interfaces.

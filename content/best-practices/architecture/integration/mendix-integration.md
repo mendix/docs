@@ -5,6 +5,8 @@ menu_order: 1
 draft: true
 ---
 
+{{% todo %}}[**COULD USE 1-2 DIAGRAMS FOR LAST SEVERAL SECTIONS**]{{% /todo %}}
+
 ## 1 Introduction
 
 Mendix makes it easy to build, update, and maintain an apps and microservices that

@@ -5,6 +5,8 @@ menu_order: 3
 draft: true
 ---
 
+{{% todo %}}[**COULD USE 1 MORE DIAGRAM**]{{% /todo %}}
+
 ## 1 Introduction
 
 Internal integration—from GUI to logic to data—within a Mendix app is handled out-of-the-box in one model and one deployment.

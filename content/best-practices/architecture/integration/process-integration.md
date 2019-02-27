@@ -5,6 +5,8 @@ menu_order: 2
 draft: true
 ---
 
+{{% todo %}}[**NEEDS 2-3 DIAGRAMS**]{{% /todo %}}
+
 ## 1 Process Integration Use Case
 
 This document describes some best practices around the scenario when a business process expands across two apps.

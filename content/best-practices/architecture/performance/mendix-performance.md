@@ -7,6 +7,8 @@ tags: ["guideline", "best practice", "high performance", "performance", "enterpr
 draft: true
 ---
 
+{{% todo %}}[**COULD USE 1-2 MORE DIAGRAMS**]{{% /todo %}}
+
 ## 1 Introduction
 
 This document is intended for architects, senior stake-holders and lead developers to consider how to achieve correct stability and performance when using Mendix as the Platform for Core Enterprise systems.

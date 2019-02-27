@@ -7,6 +7,8 @@ tags: ["guideline", "best practice", "high performance", "performance", "enterpr
 draft: true
 ---
 
+{{% todo %}}[**COULD USE 1 MORE DIAGRAM**]{{% /todo %}}
+
 ## 1 Introduction
 
 Mendix is optimized for easily and quickly developing and maintaing apps that perform well under a normal load. In addition, for core systems and high-volume situations, Mendix is an excellent choice for modeling, testing, tuning, and monitoring your solution.

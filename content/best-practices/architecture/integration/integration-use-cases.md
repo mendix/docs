@@ -5,6 +5,8 @@ menu_order: 2
 draft: true
 ---
 
+{{% todo %}}[**NEEDS 3 DIAGRAMS**]{{% /todo %}}
+
 ## 1 Introduction
 
 As described in [Mendix & Integration](mendix-integration#functionally), Mendix recommends always thinking of integration from a functional perspective first. The main question you should ask is, what will this integration do for the business solution?

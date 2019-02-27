@@ -4,7 +4,7 @@ description: "Best practices overview."
 draft: true
 ---
 
-**NEEDS STAGE 4 REVIEW.**
+{{% todo %}}[**COULD USE 1 MORE DIAGRAM**]{{% /todo %}}
 
 ## 1 Introduction 
 

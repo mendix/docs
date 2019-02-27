@@ -196,22 +196,13 @@ That will make the overall solution easier to build and maintain, and it will al
 
 Apps working together are dependent on each other – that is part of the business process and cannot be avoided. Trying to eliminate a functional dependency between two apps via a technical solution is not recommended, because this usually creates other functional issues with more complex error handling.
 
-For example, when sending data from App A to App B, we may put them in a queue in between asynchronous events, which would seem to eliminate an online dependency from a
-synchronous request reply. But in fact, error handling becomes much more
-difficult in this scenario, since neither App A nor App B is aware of the entire travel path of the event, and if something goes wrong in the middle, there is no proper notification. A better solution is often to poll from App B to App A and get all the recently updated records. The app
-that needs the data is then in control of the entire interface, and error handling is confined to one single place.
+For example, when sending data from App A to App B, we may put them in a queue in between asynchronous events, which would seem to eliminate an online dependency from a synchronous request reply. But in fact, error handling becomes much more difficult in this scenario, since neither App A nor App B is aware of the entire travel path of the event, and if something goes wrong in the middle, there is no proper notification. A better solution is often to poll from App B to App A and get all the recently updated records. The app that needs the data is then in control of the entire interface, and error handling is confined to one single place.
 
-I.e. in the case above the development dependency is almost eliminated, but the
-run-time situation is less optimal with events than request reply.
+In this example scenario, the development dependency is almost eliminated, but the runtime situation is less optimal with events than request–reply. 
 
-Still there are many cases when events make more sense, e.g. real event streams
-from e.g. IoT, Logging or metrics, where data should only flow one way and a
-message can be lost without breaking the business.
+Still, there are many cases when events make more sense (for example, real event streams from IoT, logging, or metrics). In the cases, data should only flow one way, and a message can be lost without breaking the business.
 
-There are also technical reasons to go for events, e.g. very high volume,
-distributed infrastructure, poor network connectivity, many-to-many situations.
-To guarantee delivery one can make asynchronous request replies or use a state /
-process engine monitoring all events in a large supply chain process
+There are also technical reasons to go for events (for example, very high volume, distributed infrastructure, poor network connectivity, many-to-many situations). To guarantee delivery, one can make asynchronous request replies or use a state/process engine to monitor all the events in a large supply chain process.
 
 ### 5.3 Keep It Simple
 

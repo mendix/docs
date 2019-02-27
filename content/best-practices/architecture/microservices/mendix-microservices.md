@@ -6,13 +6,15 @@ tags: ["microservices"]
 
 ## 1 Introduction
 
-This document gives a view on how Mendix microservices architecture is created and what important areas there are to consider.
-
 Microservices is a relatively new concept that has become very popular. By now, microservices are used in many contexts. On the web, one will come across several different styles of microservices, which may prompt the question, “What is the correct way to build microservices?”
 
-{{% todo %}}[**UPDATE DIAGRAM**]{{% /todo %}}
+This document gives a view on how Mendix microservices architecture is created and what important areas there are to consider.
+
+{{% todo %}}[**UPDATE DIAGRAM; EXPLAIN DIAGRAM IN RELATION TO INTRO TEXT**]{{% /todo %}}
 
 ![](attachments/mendix-microservices/build-large.png)
+
+{{% todo %}}[**RESOLVE RK'S COMMENT: "explain where we base our vision upon (a.k.a. Martin Fowler)"**]{{% /todo %}}
 
 Microservices is less of an actual architecture and more of an organizational context. Therefore, it works very well with DevOps. The common goal of microservices is to make components that can be built and maintained by a small team of fewer than 10 people.
 
@@ -34,6 +36,8 @@ These are some benefits of microservices:
 
 ## 2 What Is Microservices Architecture?
 
+{{% todo %}}[**RESOLVE RK'S COMMENT: "I miss autonomy"**]{{% /todo %}}
+
 Having a team with no more than 10 people building one component will help you to build the best possible microservices architecture. In a cross-functional DevOps team, these 10 people would include a Product Owner, Business Analyst, Tester, and an Operations person. This means that 6–8 developers on a team is already a lot.
 
 Having a separate database per microservice is recommended. All the functional parts of a business function are thus grouped together and separated from other business functions via explicit service contracts. This makes each component more self-contained, and it makes the dependencies clear and explicit.
@@ -54,7 +58,7 @@ Eventually, this will lead to un-desired dependencies. And five or ten years lat
 
 ## 3 Mendix Microservices
 
-{{% todo %}}[**CAN WE NAME THIS PARTNER COMPANY OR EVEN THE DEVELOPER? OTHERWISE, IT JUST SOUNDS VAGUELY ATTRIBUTED AND MADE UP**]{{% /todo %}}
+{{% todo %}}[**CAN WE NAME THIS PARTNER COMPANY OR EVEN THE DEVELOPER? OTHERWISE, IT DOESN'T SOUND CREDITABLE, SOUNDS MADE UP**]{{% /todo %}}
 
 A partner developer who recently started using Mendix stated:
 
@@ -147,6 +151,8 @@ Often the split handles different phases of the business process, which means th
 
 If data integrity is still an issue (which is rare), it is worth considering these options:
 
+{{% todo %}}[**RESOLVE RK'S COMMENT: "I think we should deeplink here to more detailed explanation, and even example projects"**]{{% /todo %}}
+
 * Make one main app with the core functionality that acts as the master of most of the data in that microservices cluster. This app owns the data integrity of the system. Then, peel off parts of the functionality that have clear integration, making the main app smaller. This is the primary choice.
 * Shift overview data up to a dashboard or landing page where end-users can get overviews and simple reports. This is also where the integrity between entities can be viewed, maintained, and managed.
 * Make a local operational data store (ODS) app where data from different equivalent services are stored on commit in the other services. The sole purpose of this app is to maintain real-time operational data integrity.
@@ -185,7 +191,7 @@ With a mature and careful approach, Mendix can be used for almost any challengin
 
 ## 7 Customer Portals
 
-Another way to build microservices involves customer portals. These portals often have one single landing page or dashboard with a few microservices below that provide functions or services via REST services or deep links.
+Another domain for building microservices involves customer portals. These portals often have one single landing page or dashboard with a few microservices below that provide functions or services via REST services or deep links.
 
 If you are building a functionally-oriented customer portal, Mendix is ideal for building all the portal parts. Small portals are often only built on one single Mendix app. For larger portals, it is recommended to use a landing page or dashboard app in front, and then deep-link into sub-apps to do more significant work for the logged-in areas of the portal.
 
@@ -193,7 +199,7 @@ If you are building a functionally-oriented customer portal, Mendix is ideal for
 
 ![](attachments/mendix-microservices/functionally-oriented.png)
 
-The main purpose of marketing-oriented portals is to provide a window into an enterprise or department. There is a lot of information, links, and pictures that can be accessed without having to log in. The information is search-optimized, and different pictures are displayed depending on where the user is hovering and clicking. In these cases, Mendix is preferred for the functional parts of the portal that are accessed via REST services or linked to from the public portal pages.
+The main purpose of marketing-oriented portals is to provide a window into an enterprise or department. There is a lot of information, links, and pictures that can be accessed without having to log in. The information is search-optimized, and different pictures are displayed depending on where the user is hovering and clicking. 
 
 {{% todo %}}[**UPDATE DIAGRAM; EXPLAIN DIAGRAM**]{{% /todo %}}
 

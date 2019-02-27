@@ -19,6 +19,8 @@ The Mendix architecture best practices complements the following sections in the
 * [Architecture](https://www.mendix.com/evaluation-guide/enterprise-capabilities/architecture-intro)
 * [Security](https://www.mendix.com/evaluation-guide/enterprise-capabilities/security)
 
+{{% todo %}}[**EXPLAIN WHY THESE BEST PRACTICES WILL BE VALUABLE**]{{% /todo %}}
+
 Mendix best practices around architecture will be valuable for architects, designers, business developers, and more technical developers that work on Mendix app projects. The best practices address common areas where the quality of Mendix solutions can improve by using this information or using the examples in the App Store.
 
 {{% todo %}}[**ADD LINK TO APP STORE WHEN AVAILABLE ABOVE; UPDATE DIAGRAM BELOW; EXPLAIN DIAGRAM**]{{% /todo %}}

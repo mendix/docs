@@ -5,60 +5,44 @@ menu_order: 1
 draft: true
 ---
 
-*The integration pattern has been implemented in an App Store module. It can be
-downloaded at the Best Practices section as Integration Pattern: Process
-Integration.*
+## 1 Introduction
 
-In this integration pattern example app, we implemented an example architecture
-consisting of an ordering app and a billing app. The ordering app is responsible
-for managing customer orders. The billing app is responsible for generating
-invoices. A user who creates an order (in the ordering app) needs to approve the
-invoice (in the support app) imattachmentstely after creating the order. To support
-this workflow, an integration is necessary to transfer the user and data between
-apps.
+{{% todo %}}[**ADD LINK WHEN AVAILABLE BELOW AND UPDATE TEXT AS NECESSARY**]{{% /todo %}}
 
-Both example apps have been built into the same Mendix model to facilitate easy
-distribution and deployment of the demo, but could be split and deployed as two
-separate microservices in a real implementation.
+The integration pattern has been implemented in an App Store module that can be
+downloaded from the **Best Practices** section as **Integration Pattern: Process
+Integration**.
 
-The integration between the apps consists of two parts:
+In this integration pattern example app, an example architecture is implemented that consists  of an ordering app and a billing app. The ordering app is responsible for managing customer orders, and the billing app is responsible for generating invoices. A user who creates an order (in the ordering app) needs to approve the invoice (in the billing app) immediately after creating the order. To support this workflow, an integration is necessary to transfer the user and data between apps.
 
--   The transactional data from the ordering app is shared with the billing app
-    through a REST service endpoint published by the ordering app. The billing
-    app has a scheduled event that periodically pulls data from this service.
+Both example apps have been built into the same Mendix model to facilitate easy distribution and deployment of the demo. However, they could be split and deployed as two separate microservices in a real implementation.
 
--   The user working in the app can seamlessly transition between apps using
-    deep links. When in the ordering workflow, the existing data sharing
-    mechanism is used to get updated data when necessary.
+The integration between the apps consists of the following parts:
 
-The Example Case
-----------------
+* The transactional data from the ordering app is shared with the billing app through a REST service endpoint published by the ordering app. The billing app has a scheduled event that periodically pulls data from this service.
+* The user working in the app can seamlessly transition between apps using deep links. When in the ordering workflow, the existing data-sharing mechanism is used to get updated data when necessary.
+
+## 2 The Example Case
+
+You can use this pattern when you have a business process using transactional data that starts in one app and ends in another. An example is depicted in this diagram:
+
+{{% todo %}}[**UPDATE DIAGRAM**]{{% /todo %}}
 
 ![](attachments/workflow-int-data-transfer/example-case.png)
 
-You can use this pattern when you have a business process using transactional
-data that starts in one app and ends in another. An example which is used for
-this example is depicted in the diagram below.
-
--   Orders can be created in the Ordering app/module. Each order has a status,
+* Orders can be created in the Ordering app/module. Each order has a status,
     which starts at “draft”.
-
--   When an order reaches the “confirmed” status, the Billing app/module needs
+* When an order reaches the “confirmed” status, the Billing app/module needs
     to start a process of its own, so it requires the order data.
-
--   Periodically (every few minutes) the Billing app polls the Ordering app for
+* Periodically (every few minutes) the Billing app polls the Ordering app for
     changed orders and stored them locally.
-
--   When a new order is retrieved, the Billing process starts its own processing
-
--   In the Ordering app, when a user clicks the “confirm” button, he is
+* When a new order is retrieved, the Billing process starts its own processing
+* In the Ordering app, when a user clicks the “confirm” button, he is
     transferred to the invoice screen using a deep link.
-
--   Just prior to opening the screen for the user, the billing app uses the rest
+* Just prior to opening the screen for the user, the billing app uses the rest
     integration to get the order data in time for the user to see the invoice.
 
-Business Event Integration
---------------------------
+## 3 Business Event Integration
 
 In order to successfully implement a pull-based data integration, there are
 several things that need to be in place, and error conditions that must be
@@ -67,13 +51,11 @@ handled. 
 The root of the implementation is a simple REST service that exposes the Order
 data:
 
-### Pulling all Orders
+### 3.1 Pulling all Orders
 
 1.  In the Ordering app, expose Orders as a REST resource.
-
 2.  In the Support app, create a scheduled microflow that calls the Order REST
     endpoint.
-
 3.  In the import mapping of the result, use ‘Find by key’ and ‘If not found,
     create’. This ensures updates are applied to the right objects.
 
@@ -108,12 +90,10 @@ To resolve this problem, a different approach is necessary. This approach uses a
 sequence number instead of a time stamp, and assigns that number in another
 transaction in a way that prevents the problem from occurring:
 
-### Assigned number as continuation token
+### 3.2 Assigned number as continuation token
 
 1.  Add an attribute ConfirmedSequenceNr to the order. 
-
 2.  Use this value as the continuation token instead of the ChangeDate. 
-
 3.  Whenever a change occurs, this value is set to -1. A scheduled event finds
     all orders that should be exposed via get-all and sets ConfirmedSequenceNr
     to the maximum plus 1.
@@ -121,7 +101,7 @@ transaction in a way that prevents the problem from occurring:
 Increasing the ConfirmedSequenceNr is now an operation in the same transaction
 as retrieving the data, so all orders will be synchronized.
 
-### Deleted data
+### 3.3 Deleted data
 
 In the order app, data cannot really be deleted. Instead, a delete is handled by
 marking the object as “removed” using a boolean attribute. Soft-deleted objects
@@ -133,8 +113,7 @@ The billing app is free to decide how to handle deleted data and in the example
 implementation also performs soft deletes. It is also possible to perform “hard”
 deletes in the integration if necessary.
 
-Continuing Workflow in another App
-----------------------------------
+## 4 Continuing Workflow in Another App
 
 Pulling data based on a timer causes a delay; the data is not imattachmentstely
 available in the other app. In some scenarios, this is not acceptable. For
@@ -149,8 +128,7 @@ When the order is finished in the order app, we deep link the user into the
 billing app, passing the order id. The billing app pulls the order and shows the
 page.
 
-Error scenarios
----------------
+## 5 Error Scenarios
 
 The implemented case gracefully deals with several error scenarios:
 
@@ -179,35 +157,30 @@ The implemented case gracefully deals with several error scenarios:
     1.  Behaviour: The support app does not update the continuation token. The
         next time, the pull is retried.
 
-Recommendations
----------------
+## 5 Do's & Don'ts
 
-### Do’s
+### 5.1 Do’s
 
--   Use a REST service to share transactional data between apps.  
+* Use a REST service to share transactional data between apps.  
     *Reference implementation: The “Ordering” module publishes a REST endpoint
     in the “Ordering.OrderService” document. It has operations to get all
     confirmed orders and to get orders with a specific order number.*
-
--   Periodically pull the data from a client app, instead of pushing from the
+* Periodically pull the data from a client app, instead of pushing from the
     owner.  
     *Reference implementation: The billing module has a scheduled event
     “Billing.InvokePull” that does this every minute.*
-
--   Use a special-purpose assigned number to track which objects have been
+* Use a special-purpose assigned number to track which objects have been
     transferred, instead of a change date  
     *Reference implementation: Every Order in the Ordering app has an attribute
     “ConfirmedSequenceNr” which stores the number as described above. The
     scheduled event “InvokeUpdateConfirmedSequenceNumber” updates the numbers of
     changed objects.*
-
--   Provide a global identifier for shared data  
+* Provide a global identifier for shared data  
     *Reference implementation: Each order has an attribute “Number” that is used
     to uniquely identify order. In the owning Ordering module, this is an
     autonumber. In the client Billing module, this is a normal integer, but with
     “unique” validation.*
-
--   Handle deleted data as “soft deletes” in the owning app  
+* Handle deleted data as “soft deletes” in the owning app  
     *Reference implementation: The “Order” entity in the ordering app has a
     before-delete event that prevents a delete action from completing
     successfully. A deleted object should instead have the “State” attribute set
@@ -215,33 +188,29 @@ Recommendations
     are not visible to anyone. Any processing logic should also take this into
     account. Deleted objects are also returned by the published REST service so
     clients can see when objects are deleted.*
-
--   Consider a strategy to handle deleted data in a client  
+* Consider a strategy to handle deleted data in a client  
     *Reference implementation: The “Order” entity in the billing app is also
     protected from deletion by a before-delete event. Deleted objects have the
     “Deleted” attribute set to true. This is automatically performed by the
     import mapping based on the state of the object as returned by the ordering
     app.*
-
--   Create clear (debug) log messages for the data transfer mechanism (e.g. how
+* Create clear (debug) log messages for the data transfer mechanism (e.g. how
     many records were new, changed, removed).  
     *Reference implementation: The integration microflows in the Billing module
     provide several debug- and trace-level messages which can be used to analyse
     the integration behaviour.*
-
--   Use deep links to transfer a user between apps  
+* Use deep links to transfer a user between apps  
     *Reference implementation: The Billing module provides a deep link at
     ‘/link/new_order’, which is used from the Ordering app to transfer the user.
     The transferring microflow is “Ordering.SendUserToBillingApp_Order”, the
     receiving microflow is “Billing.DL_NewOrder”.*
-
--   Re-use the existing asynchronous data transfer mechanism in a synchronous
+* Re-use the existing asynchronous data transfer mechanism in a synchronous
     context if possible  
     *Reference implementation: The deep link microflow “Billing.DL_NewOrder”
     reuses the existing REST endpoints in the Ordering app to retrieve the right
     order just before showing the user the right page.*
 
-### Don’ts
+### 5.2 Don’ts
 
--   Use change-dates to decide which data to sync. It is possible to miss data
+* Use change-dates to decide which data to sync. It is possible to miss data
     in certain scenarios, leading to an inconsistent state

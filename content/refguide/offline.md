@@ -30,7 +30,7 @@ Because synchronization depends on the regular runtime APIs, the models of the a
 
 Synchronization of files is only triggered by modifications to the attributes of the object, not by modifying the contents of the file itself.
 
-## 4 Restrictions
+## 4 Restrictions {#restrictions}
 
 ### 4.1 Microflows
 

@@ -10,19 +10,20 @@ draft: true
 
 Mendix is optimized for the easiest and fastest way to develop and maintain apps that fulfill business functions. As the scope of your apps grows larger, architecture becomes more important. At that point, you should leverage best practices in this area.
 
-The Mendix architecture best practices complements the following sections in the Mendix 
+The Mendix architecture best practices complements the following sections in the Mendix Evaluation Guide:
 
-* Evaluation Guide:
-* Data Management
-* Integration
-* Deployment
-* DevOps
-* Architecture
-* Security
+* [Data Management](https://www.mendix.com/evaluation-guide/app-capabilities/data-management)
+* [Integration](https://www.mendix.com/evaluation-guide/app-capabilities/integration)
+* [Deployment](https://www.mendix.com/evaluation-guide/app-capabilities/deployment)
+* [DevOps](https://www.mendix.com/evaluation-guide/app-lifecycle/devops)
+* [Architecture](https://www.mendix.com/evaluation-guide/enterprise-capabilities/architecture-intro)
+* [Security](https://www.mendix.com/evaluation-guide/enterprise-capabilities/security)
+
+{{% todo %}}[**EXPLAIN WHY THESE BEST PRACTICES WILL BE VALUABLE**]{{% /todo %}}
 
 Mendix best practices around architecture will be valuable for architects, designers, business developers, and more technical developers that work on Mendix app projects. The best practices address common areas where the quality of Mendix solutions can improve by using this information or using the examples in the App Store.
 
-{{% todo %}}[**ADD LINK TO APP STORE WHEN AVAILABLE ABOVE; UPDATE DIAGRAM BELOW**]{{% /todo %}}
+{{% todo %}}[**ADD LINK TO APP STORE WHEN AVAILABLE ABOVE; UPDATE DIAGRAM BELOW; EXPLAIN DIAGRAM**]{{% /todo %}}
 
 ![](attachments/arch-over1.png)
 
@@ -41,7 +42,7 @@ These are the architecture subject areas that will be covered:
 
 This diagram presents an overview of the structure of the Architecture Best Practices documentation:
 
-{{% todo %}}[**UPDATE DIAGRAM**]{{% /todo %}}
+{{% todo %}}[**UPDATE DIAGRAM; EXPLAIN DIAGRAM**]{{% /todo %}}
 
 ![](attachments/arch-over2.png)
 

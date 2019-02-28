@@ -5,6 +5,8 @@ menu_order: 3
 draft: true
 ---
 
+{{% todo %}}[**COULD USE 1 MORE DIAGRAM**]{{% /todo %}}
+
 ## 1 Introduction
 
 Internal integration—from GUI to logic to data—within a Mendix app is handled out-of-the-box in one model and one deployment.
@@ -37,7 +39,7 @@ These are the typical use cases when integration best practices will be helpful:
 
 The best practices can be used by Solution Architects and Lead Developers to gain an overview of the available options as well as recommendations for integration. This can lead to more realistic estimates and a better solution architecture.
 
-{{% todo %}}[**UPDATE DIAGRAM**]{{% /todo %}}
+{{% todo %}}[**UPDATE DIAGRAM; EXPLAIN DIAGRAM**]{{% /todo %}}
 
 ![](attachments/integration-overview/solution-architecture.png)
 
@@ -64,6 +66,6 @@ The integration best practices include [integration use cases](integration-use-c
 
 These in turn relate to developer training modules, how-to’s, and information in the Mendix Reference Guide.
 
-{{% todo %}}[**UPDATE DIAGRAM**]{{% /todo %}}
+{{% todo %}}[**UPDATE DIAGRAM; EXPLAIN DIAGRAM**]{{% /todo %}}
 
 ![](attachments/integration-overview/integration-related-documents.png)

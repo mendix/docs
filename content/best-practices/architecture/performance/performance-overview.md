@@ -7,6 +7,8 @@ tags: ["guideline", "best practice", "high performance", "performance", "enterpr
 draft: true
 ---
 
+{{% todo %}}[**COULD USE 1 MORE DIAGRAM**]{{% /todo %}}
+
 ## 1 Introduction
 
 Mendix is optimized for easily and quickly developing and maintaing apps that perform well under a normal load. In addition, for core systems and high-volume situations, Mendix is an excellent choice for modeling, testing, tuning, and monitoring your solution.
@@ -52,7 +54,7 @@ For more information, see [How to Detect & Resolve Performance Issues](/howto/mo
 
 In addition, the Mendix Academy also makes available a Mendix Expert training module called [Performance Guidelines](https://gettingstarted.mendixcloud.com/link/module/127/lecture/1031).
 
-{{% todo %}}[**GET DIAGRAM UPDATED**]{{% /todo %}}
+{{% todo %}}[**UPDATE DIAGRAM; EXPLAIN DIAGRAM**]{{% /todo %}}
 
 ![](attachments/overview/can-i-use-mendix.png)
 

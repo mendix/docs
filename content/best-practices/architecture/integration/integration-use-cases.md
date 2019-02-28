@@ -5,6 +5,8 @@ menu_order: 2
 draft: true
 ---
 
+{{% todo %}}[**NEEDS 3 DIAGRAMS**]{{% /todo %}}
+
 ## 1 Introduction
 
 As described in [Mendix & Integration](mendix-integration#functionally), Mendix recommends always thinking of integration from a functional perspective first. The main question you should ask is, what will this integration do for the business solution?
@@ -19,14 +21,16 @@ This is an example sequence for an Architect or Lead Developer considering the b
 	a.  Who needs what data when and for which reason? <br />
 	b. Does it need to be real-time? <br />
 	c. What error handling should be there?
-3. What are the functional options? <br />
+3.  What are the functional options? <br />
 	a. How can I operate this interface in production? <br />
 	b. How do we manage errors? <br />
 	c. Real-time or batch? <br />
 	d. Request–reply or events? <br />
-	e. Is there an available integration layer? <br />
-		* If yes, what functions does it handle (for example security, monitoring, queueing, simple mapping)? <br />
-		* An "integration layer" means there are two parts of the integration where you one can choose events, request–reply, or batch separately for the best possible operational solution <br />
+	e.  Is there an available integration layer? <br />
+
+	* If yes, what functions does it handle (for example security, monitoring, queueing, simple mapping)? <br />
+	* An "integration layer" means there are two parts of the integration where you one can choose events, request–reply, or batch separately for the best possible operational solution
+
 4. What are the technical options for each functional option? <br />
 	a. Which protocols are available? <br />
 	b. What will it mean for operations? <br />
@@ -70,14 +74,6 @@ This use case describes how to search and view data in another system as well as
 ### 3.5 Process Integration
 
 Process integration is the most common integration type in most enterprises. As soon as a business process spans more than one app, there is usually some level of process integration needed. For example, when an end-user submits an order in an ordering system, it should go to a fulfilment system and maybe after that to finance. And of course you will want to also inform the customer.
-
-Process integration involves the integration of transactional data over multiple apps or microservices. This is common type of integration has several flavors:
-
-* **Business events**  – some work finishes in one app, and the next app should be notified to start the next steps of the process
-* **Workflow integration** – a user works in one app and then continues the same process in another app (in some cases this will require the worked-on data to be transferred to the next app)
-* **Process orchestration** – at the end of a business event, several other systems need to be informed and/or updated
-* **State Engine** – a large amount of events are gathered related to different processes in order to determine that all the processes finish correctly
-* **Case Management** – an implementation of a human workflow in phases maintaining a “case” object with data (this case can run in one app, use process orchestration, and act as a state engine, or it can be partially finalized in other apps and use sub-cases)
 
 Read more in [Process Integration](process-integration).
 

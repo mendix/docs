@@ -10,6 +10,13 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud V3, and other deploym
 
 ## 2019
 
+### March 5th, 2019
+
+#### Improvements and Fixes
+
+* Removed feedback widget. If you want to report an issue or ask a question please submit a ticket at https://support.mendix.com.
+* Minor fixes and performance improvements.
+
 ### February 15th, 2019
 
 #### SAP OData Connector Improvements and Fixes

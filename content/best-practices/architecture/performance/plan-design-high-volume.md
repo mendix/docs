@@ -9,63 +9,43 @@ draft: true
 
 ## 1 Introduction
 
-Some systems require high-volume processing and high levels of availability. The
-approach should be adapted to achieve the required performance.
+Some systems require high-volume processing and high levels of availability. The architecture approach should thus be adapted to achieve the required performance. 
 
-It starts in the planning and design phase, and it’s important to optimize
-architecture, design, modelling and App structure for the specific case.
+The approach starts with a planning and design phase, during which it is important to optimize the architecture, design, modelling, and app structure for the specific case. Planning for critical and high-performance systems will include some extra items and require some additional skills:
 
-Planning for critical and high-performance systems will include some extra items
-and require some additional skills:
+{{% todo %}}[**ADD LINKS BELOW WHEN AVAILABLE**]{{% /todo %}}
 
--   A design phase in the beginning with UX ideation and architecture workshop,
-    where the process flow and potential *Microservice architecture* \<link\> is
-    defined
+* A design phase in the beginning with UX ideation and architecture workshop, where the process flow and potential [microservice architecture]() is defined
+* Initial [sizing and scaling](sizing-scaling) exercise for a draft design 
+* More peer review of code for trying to tune the model and maintain a good app structure
+* [Performance testing and tuning]() during and/or after the app build, and [automated testing]() is recommended if the scope is large
+* Re-factoring at least once per yearc to re-optimize the structure
+* Automation and training for [deployments] and recovery for high availability
+* Good monitoring in production
 
--   Initial *Sizing* \<link\> exercise, for a draft Infra design
+When deciding which steps to add, the team should be set up, and the necessary skills should be added to the team (for more information, see [Creating a Team for Performance](teams-skills). Naturally, more technical specialists are needed to reach maximum performance.
 
--   More peer review of code, trying to constantly tune the model and maintain a
-    good structure of the App
+{{% todo %}}[**EXPLAIN TABLE BELOW**]{{% /todo %}}
 
--   *Performance testing and Tuning* \<link\> during and/or after the App build,
-    and *automated testing* \<link\> is recommended if the scope is large
-
--   Re-factoring phase at least once per year, to re-optimize structure
-
--   Automation and training for *Deployments* \<link\> and Recovery, for high
-    availability
-
--   Good Monitoring in production
-
-When deciding on which steps to add, the team should be set up, and the
-necessary skills should be added to the team, see *Create and Team for
-Performance* \<link\>. Naturally more technical specialists are needed to reach
-maximum performance.
-
-| **Approach**             | **No action** | **Peer Review & good App structure** | **Design Phase some Perf Test** | **Arch Workshop**  **Prof. Perf Test and Tuning** | **Full attention on Performance** |
-|--------------------------|---------------|--------------------------------------|---------------------------------|---------------------------------------------------|-----------------------------------|
-| *\# Records in DB*       | \< 100k       | \< 1m                                | \< 5m                           | \< 50m                                            | 500m or more                      |
-| *\# Concurrent Users*    | \< 20 users   | \< 100 users                         | \< 500 users                    | \< 5k users                                       | 200k users or more                |
-| *\# Service calls / sec* | \< 5 calls/s  | \< 10 calls/s                        | \< 50 calls/s                   | \< 500 calls/s                                    | 2k calls/s or more                |
+| Approach | No Action | Peer Review & App Structure | Design Phase & Some Perf. Test | Arch. Workshop & Prof. Perf. Test & Tuning | Full Attention on Perf. |
+| --- | --- | --- |--- | --- |--- |
+| # Records in Database | < 100k | < 1m | < 5m | < 50m | 500m or more |
+| # Concurrent Users | < 20 | < 100 | < 500 | < 5k | 200k or more |
+| # Service Calls (per Sec) | < 5  | < 10 calls | < 50 calls | < 500 calls  | 2k calls or more |
 
 ### 2.1 Common Use Cases
 
--   High through-put processing \<link\>
+{{% todo %}}[**ADD LINKS BELOW WHEN AVAILABLE**]{{% /todo %}}
 
--   Large amount of concurrent users \<link\>
-
--   Working on Large Data-sets\<link\>
-
--   Working on a geographically distributed system \<link\>
-
--   Requirements for high availability \<link\>
-
+* High throughput processing 
+* Large amount of concurrent users 
+* Working on large datasets
+* Working on a geographically distributed system
+* Requirements for high availability
 
 ## 2 Architect for Performance
 
-When architecting a normal App the focus is mostly on making it functionally
-sound, with good modules that make it easy to develop and maintain, separating
-concerns and sticking with other best practices considerations.
+When architecting a normal app, the focus is mostly on making it functionally sound. This involves building modules that are easy to develop and maintain, separating concerns, and sticking with other best practice considerations.
 
 When the volume reaches a certain level, the main focus for the architecture
 will switch towards high performance as the first consideration.

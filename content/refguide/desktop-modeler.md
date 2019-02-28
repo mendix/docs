@@ -55,5 +55,4 @@ The following documents provide additional information about using the Desktop M
 * [Projects](project)
 * [Security](security)
 * [Translatable Texts](translatable-texts)
-* [XML](xml-reference-guide)
 * [XPath](xpath)

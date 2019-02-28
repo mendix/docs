@@ -18,7 +18,7 @@ This documentation is written by Mendix employees, and sometimes it refers to re
 
 Best Practices will eventually be valuable for all the people that participate in the application lifecycle, from scoping and estimation to maintenance in production.
 
-{{% todo %}}[**UPDATE DIAGRAM**]{{% /todo %}}
+{{% todo %}}[**UX-UPDATE DIAGRAM**]{{% /todo %}}
 
 ![](attachments/overview1.png)
 
@@ -43,7 +43,7 @@ These best practices will be expanded on an ongoing basis to cover the following
 
 For each category and sub-category of best practices, there will be an overview that covers the breadth of the area discussed. This will be followed by a number of specific areas or use cases that are covered more in detail. These will refer to more detailed Mendix documentation that explains the product. The best practices will sometimes include example implementations in the App Store.
 
-{{% todo %}}[**UPDATE DIAGRAM; EXPLAIN DIAGRAM**]{{% /todo %}}
+{{% todo %}}[**EXPLAIN DIAGRAM; UX-UPDATE DIAGRAM**]{{% /todo %}}
 
 ![](attachments/overview2.png)
 

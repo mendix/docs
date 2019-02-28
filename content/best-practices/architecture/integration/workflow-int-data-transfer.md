@@ -26,191 +26,101 @@ The integration between the apps consists of the following parts:
 
 You can use this pattern when you have a business process using transactional data that starts in one app and ends in another. An example is depicted in this diagram:
 
-{{% todo %}}[**UPDATE DIAGRAM**]{{% /todo %}}
+{{% todo %}}[**UX-UPDATE DIAGRAM**]{{% /todo %}}
 
 ![](attachments/workflow-int-data-transfer/example-case.png)
 
-* Orders can be created in the Ordering app/module. Each order has a status,
-    which starts at “draft”.
-* When an order reaches the “confirmed” status, the Billing app/module needs
-    to start a process of its own, so it requires the order data.
-* Periodically (every few minutes) the Billing app polls the Ordering app for
-    changed orders and stored them locally.
-* When a new order is retrieved, the Billing process starts its own processing
-* In the Ordering app, when a user clicks the “confirm” button, he is
-    transferred to the invoice screen using a deep link.
-* Just prior to opening the screen for the user, the billing app uses the rest
-    integration to get the order data in time for the user to see the invoice.
+1. Orders can be created in the **Ordering app**. Each order has a status, which starts at **Draft**.
+2. When an order reaches the **Confirmed** status, the **Billing app** needs to start a process of its own, so it requires the order data.
+3. Periodically (every few minutes), the **Billing app** polls the **Ordering app** for changed orders and stores them locally.
+4. When a new order is retrieved, the **Billing app** process starts its own processing. 
+5. In the **Ordering app**, when a user clicks the **Confirm** button, they are transferred to the invoice screen using a deep link.
+6. Just before opening the screen for the user, the **Billing app** uses the REST integration to get the order data in time for the user to see the invoice.
 
 ## 3 Business Event Integration
 
-In order to successfully implement a pull-based data integration, there are
-several things that need to be in place, and error conditions that must be
-handled. 
+In order to successfully implement a pull-based data integration, there are several things that need to be in place and error conditions that must be handled. 
 
-The root of the implementation is a simple REST service that exposes the Order
-data:
+### 3.1 Pulling All Orders
 
-### 3.1 Pulling all Orders
+The root of the implementation is a simple REST service that exposes the order data:
 
-1.  In the Ordering app, expose Orders as a REST resource.
-2.  In the Support app, create a scheduled microflow that calls the Order REST
+1.  In the **Ordering app**, orders are exposed as a REST resource.
+2.  In the **Billing app**, a scheduled microflow is created that calls the **Order** REST
     endpoint.
-3.  In the import mapping of the result, use ‘Find by key’ and ‘If not found,
-    create’. This ensures updates are applied to the right objects.
+3.  In the import mapping of the result, **Find by key** and **If not found,
+    create** are used. This ensures updates are applied to the right objects.
 
-This approach has the drawback that for every pull, all Orders are transferred,
-even when they haven’t changed. An obvious way to improve this is to only
-retrieve objects that are changed.
+This approach has the drawback that for every pull, all the orders are transferred, even when they have not changed. An obvious way to improve this is to only retrieve objects that are changed.
 
-At first sight adding a changed date attribute to the order object solves this
-issue. The rest service can then provide all objects that have been changed
-since that date, and the consumer can ask for all objects changed since the last
-call time. In addition to only retrieving changed objects, this approach has the
-additional advantage that the app can reset the continuation token value stored
-in OrderPull whenever they want to re-retrieve changes since a certain time. 
+At first sight, adding a changed date attribute to the order object solves this issue. The REST service can then provide all the objects that have been changed since that date, and the consumer can ask for all objects changed since the last call time. In addition to only retrieving changed objects, this approach has the additional advantage that the app can reset the continuation token value stored in **OrderPull** whenever they want to re-retrieve changes since a certain time. 
 
-However, this implementation has one shortcoming: it might not synchronize all
-orders. When a change to an order 1 occurs, its ChangeDate is set. However, this
-value will only show up in the REST operation once the database transaction
-associated to the change finishes. Since this may be a while if a complex
-calculation occurs after that change, chances are that another change (order 2)
-may occur and be committed before the end of the transaction.
+This implementation has one shortcoming – it might not synchronize all the orders. When a change to an **Order 1** occurs, its **ChangeDate** is set. However, this value will only show up in the REST operation once the database transaction associated to the change finishes. Since this may be a while (if a complex calculation occurs after that change), it is likely that another change (in the form of **Order 2**) will occur and be committed before the end of the transaction.
 
-If the get-all REST operation is called during that time, the operation will
-have a max ChangeDate (i.e. that of order 2) that is after the ChangeDate of
-order 1, even though the change to order 1 is not included in the returned
-records. The next call to the service will include the later ChangeDate, and so
-will not retrieve the change to order 1 either. So, the change to order 1 can be
-lost.
+If the `get-all` REST operation is called during that time, the operation will have a max **ChangeDate** (meaning, that of **Order 2**) that is after the **ChangeDate** of **Order 1**, even though the change to **Order 1** is not included in the returned records. The next call to the service will include the later **ChangeDate**, and so it will not retrieve the change to **Order 1** either. Accordingly, the change to **Order 1** may be lost.
+
+{{% todo %}}[**EXPLAIN DIAGRAM; POSITION OF DIAGRAM IS CORRECT?; UX-UPDATE DIAGRAM**]{{% /todo %}}
 
 ![](attachments/workflow-int-data-transfer/workflow-order.png)
 
-To resolve this problem, a different approach is necessary. This approach uses a
-sequence number instead of a time stamp, and assigns that number in another
-transaction in a way that prevents the problem from occurring:
+### 3.2 Assigned Number as Continuation Token
 
-### 3.2 Assigned number as continuation token
+To resolve this problem of **Order 1** potentially being lost, a different approach is necessary. This approach uses a sequence number instead of a timestamp and assigns that number in another transaction to prevent this problem from occurring:
 
-1.  Add an attribute ConfirmedSequenceNr to the order. 
-2.  Use this value as the continuation token instead of the ChangeDate. 
-3.  Whenever a change occurs, this value is set to -1. A scheduled event finds
-    all orders that should be exposed via get-all and sets ConfirmedSequenceNr
-    to the maximum plus 1.
+1. The **ConfirmedSequenceNr** is added to the order. 
+2. This value is used as the continuation token instead of **ChangeDate**.
+3. Whenever a change occurs, this value is set to `-1`. A scheduled event finds all the orders that should be exposed via `get-all` and sets **ConfirmedSequenceNr** to the maximum plus `1`.
 
-Increasing the ConfirmedSequenceNr is now an operation in the same transaction
-as retrieving the data, so all orders will be synchronized.
+Increasing the **ConfirmedSequenceNr** is now an operation in the same transaction as retrieving the data, so all the orders will be synchronized.
 
-### 3.3 Deleted data
+### 3.3 Deleted Data
 
-In the order app, data cannot really be deleted. Instead, a delete is handled by
-marking the object as “removed” using a boolean attribute. Soft-deleted objects
-are excluded from use in the app through entity access rules and other XPath
-constraints. This is seen as a normal change and processed in the data transfer
-mechanism.
+In the **Order app**, data cannot really be deleted. Instead, a delete is handled by marking the object as  **Removed** using a Boolean attribute. "Soft-deleted" objects are excluded from use in the app through entity access rules and other XPath constraints. This is seen as a normal change and processed in the data transfer mechanism.
 
-The billing app is free to decide how to handle deleted data and in the example
-implementation also performs soft deletes. It is also possible to perform “hard”
-deletes in the integration if necessary.
+The **Billing app** is free to decide how to handle deleted data, and in the example implementation, it also performs soft deletes. It is also possible to perform “hard deletes" in the integration if necessary.
 
-## 4 Continuing Workflow in Another App
+## 4 Continuing the Workflow in Another App
 
-Pulling data based on a timer causes a delay; the data is not imattachmentstely
-available in the other app. In some scenarios, this is not acceptable. For
-instance, when a user has created an order and wants to continue working with
-that order in the billing app. We don’t want them to have to wait for the order
-to by pulled into the billing app.
+Pulling data based on a timer causes a delay, so the data is not immediately available in the other app. In some scenarios, this is not acceptable. For instance, when a user has created an order and wants to continue working with that order in the **Billing app**. You do not want them to have to wait for the order to be pulled into the **Billing app**.
 
-In this case, we could push the order into the billing app. However, we already
-have a data replication mechanism based on pull, so we can reuse that.
+In this case, you can push the order into the **Billing app**. However, a data replication mechanism already exists based on the pull, so that can be reused.
 
-When the order is finished in the order app, we deep link the user into the
-billing app, passing the order id. The billing app pulls the order and shows the
-page.
+When the order is finished in the **Order app**, you need to deep-link the user into the **Billing app** by passing the order ID. The **Billing app** then pulls the order and shows the page.
 
 ## 5 Error Scenarios
 
 The implemented case gracefully deals with several error scenarios:
 
-1.  The order app is temporarily unavailable
-
-    1.  Behaviour: The support app will keep retrying the pull with the same
-        continuation token. As soon as the order app becomes available, it will
-        start pulling all orders that have been changed in the mean time.
-
-2.  The support app is temporarily unavailable
-
-    1.  Behaviour: The deep link from the order app to the support app will show
-        the ‘application unavailable’.
-
-    2.  Resolution: Make sure there is a good [custom error
-        page](https://docs.mendix.com/howto/ux/custom-error-page).
-
-3.  While pulling, the order app returns an error (e.g. the ordering database is
-    unavailable)
-
-    1.  Behaviour: See error scenario 1, the support app will continue polling
-
-4.  While pulling, the support app encounters an error (e.g. the support
-    database is unavailable)
-
-    1.  Behaviour: The support app does not update the continuation token. The
-        next time, the pull is retried.
+| Scenario | Behavior | Resolution |
+| --- | --- | --- |
+| The order app is temporarily unavailable. | The **Billing app** will keep retrying the pull with the same continuation token. As soon as the order app becomes available, it will start pulling all orders that have been changed in the meantime. | |
+| The **Billing app** is temporarily unavailable. | The deep link from the **Order app** to the **Billing app** will show "application unavailable." | Make sure there is a good [custom error page](/howto/ux/custom-error-page). |
+| While pulling, the **Order app** returns an error (for example, the ordering database is unavailable). | See the behavior for **The order app is temporarily unavailable** error handling scenario above, where the **Billing app** will continue polling. | |
+| While pulling, the **Billing app** encounters an error (for example, the support database is unavailable). | Behavior: the **Billing app** does not update the continuation token, so the next time, the pull is retried. | |
 
 ## 5 Do's & Don'ts
 
 ### 5.1 Do’s
 
-* Use a REST service to share transactional data between apps.  
-    *Reference implementation: The “Ordering” module publishes a REST endpoint
-    in the “Ordering.OrderService” document. It has operations to get all
-    confirmed orders and to get orders with a specific order number.*
-* Periodically pull the data from a client app, instead of pushing from the
-    owner.  
-    *Reference implementation: The billing module has a scheduled event
-    “Billing.InvokePull” that does this every minute.*
-* Use a special-purpose assigned number to track which objects have been
-    transferred, instead of a change date  
-    *Reference implementation: Every Order in the Ordering app has an attribute
-    “ConfirmedSequenceNr” which stores the number as described above. The
-    scheduled event “InvokeUpdateConfirmedSequenceNumber” updates the numbers of
-    changed objects.*
-* Provide a global identifier for shared data  
-    *Reference implementation: Each order has an attribute “Number” that is used
-    to uniquely identify order. In the owning Ordering module, this is an
-    autonumber. In the client Billing module, this is a normal integer, but with
-    “unique” validation.*
-* Handle deleted data as “soft deletes” in the owning app  
-    *Reference implementation: The “Order” entity in the ordering app has a
-    before-delete event that prevents a delete action from completing
-    successfully. A deleted object should instead have the “State” attribute set
-    to “Deleted”. The entity access security rules are set so that these objects
-    are not visible to anyone. Any processing logic should also take this into
-    account. Deleted objects are also returned by the published REST service so
-    clients can see when objects are deleted.*
-* Consider a strategy to handle deleted data in a client  
-    *Reference implementation: The “Order” entity in the billing app is also
-    protected from deletion by a before-delete event. Deleted objects have the
-    “Deleted” attribute set to true. This is automatically performed by the
-    import mapping based on the state of the object as returned by the ordering
-    app.*
-* Create clear (debug) log messages for the data transfer mechanism (e.g. how
-    many records were new, changed, removed).  
-    *Reference implementation: The integration microflows in the Billing module
-    provide several debug- and trace-level messages which can be used to analyse
-    the integration behaviour.*
-* Use deep links to transfer a user between apps  
-    *Reference implementation: The Billing module provides a deep link at
-    ‘/link/new_order’, which is used from the Ordering app to transfer the user.
-    The transferring microflow is “Ordering.SendUserToBillingApp_Order”, the
-    receiving microflow is “Billing.DL_NewOrder”.*
-* Re-use the existing asynchronous data transfer mechanism in a synchronous
-    context if possible  
-    *Reference implementation: The deep link microflow “Billing.DL_NewOrder”
-    reuses the existing REST endpoints in the Ordering app to retrieve the right
-    order just before showing the user the right page.*
+* Use a REST service to share transactional data between apps
+	* Reference implementation – the **Ordering** module publishes a REST endpoint in the **Ordering.OrderService** document; it has operations to get all the confirmed orders and to get orders with a specific order number
+* Periodically pull the data from a client app instead of pushing from the owner
+	* Reference implementation –  the **Billing** module has a scheduled event called **Billing.InvokePull** that does this every minute
+* Use a special-purpose assigned number to track which objects have been transferred instead of a change date
+	* Reference implementation – every order in the **Ordering app** has a **ConfirmedSequenceNr** attribute that stores the number as described above; the **InvokeUpdateConfirmedSequenceNumber** scheduled updates the numbers of changed objects.
+* Provide a global identifier for the shared data
+	* Reference implementation – each order has a **Number** attribute that is used to uniquely identify order; in the owning **Ordering** module, this is an auto-number; in the client **Billing** module, this is a normal integer but with a “unique” validation
+* Handle deleted data as “soft deletes” in the owning app
+	* Reference implementation – the **Order** entity in the ordering app has a before-delete event that prevents a delete action from completing successfully; a deleted object should instead have the **State** attribute set to “Deleted”; the entity access security rules are set so that these objects are not visible to anyone, and any processing logic should also take this into account; deleted objects are also returned by the published REST service so clients can see when objects are deleted
+* Consider a strategy to handle deleted data in a client 
+	* Reference implementation – the **Order** entity in the billing app is also protected from deletion by a before-delete event; deleted objects have the **Deleted** attribute set to true; this is automatically performed by the import mapping based on the state of the object as returned by the ordering app
+* Create clear (debug) log messages for the data transfer mechanism (for example, how many records were new, changed, or removed)
+	* Reference implementation – the integration microflows in the **Billing** module provide several debug- and trace-level messages that can be used to analyze the integration behavior
+* Use deep links to transfer a user between apps
+	* Reference implementation – the **Billing** module provides a deep link at `/link/new_order`, which is used from the **Ordering app** to transfer the user; the transferring microflow is **Ordering.SendUserToBillingApp_Order**, and the receiving microflow is **Billing.DL_NewOrder**
+* Reuse the existing asynchronous data transfer mechanism in a synchronous context if possible
+	* Reference implementation – the deep link microflow **Billing.DL_NewOrder** reuses the existing REST endpoints in the **Ordering app** to retrieve the right order just before showing the user the right page
 
 ### 5.2 Don’ts
 
-* Use change-dates to decide which data to sync. It is possible to miss data
-    in certain scenarios, leading to an inconsistent state
+* Use change-dates to decide which data to sync, because it is possible to miss data in certain scenarios, which could lead to an inconsistent state

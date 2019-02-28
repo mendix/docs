@@ -10,7 +10,7 @@ Microservices is a relatively new concept that has become very popular. By now, 
 
 This document gives a view on how Mendix microservices architecture is created and what important areas there are to consider.
 
-{{% todo %}}[**UPDATE DIAGRAM; EXPLAIN DIAGRAM IN RELATION TO INTRO TEXT**]{{% /todo %}}
+{{% todo %}}[**EXPLAIN DIAGRAM; UX-UPDATE DIAGRAM IN RELATION TO INTRO TEXT**]{{% /todo %}}
 
 ![](attachments/mendix-microservices/build-large.png)
 
@@ -18,7 +18,7 @@ This document gives a view on how Mendix microservices architecture is created a
 
 Microservices is less of an actual architecture and more of an organizational context. Therefore, it works very well with DevOps. The common goal of microservices is to make components that can be built and maintained by a small team of fewer than 10 people.
 
-{{% todo %}}[**UPDATE DIAGRAM; EXPLAIN DIAGRAM**]{{% /todo %}}
+{{% todo %}}[**EXPLAIN DIAGRAM; UX-UPDATE DIAGRAM**]{{% /todo %}}
 
 ![](attachments/mendix-microservices/productivity-per-dev.png)
 
@@ -52,7 +52,7 @@ The problems with shared databases and cross-using data will become apparent ove
 
 Eventually, this will lead to un-desired dependencies. And five or ten years later, people will hardly want to touch the system, which by then will be monolithic.
 
-{{% todo %}}[**UPDATE DIAGRAM; EXPLAIN DIAGRAM**]{{% /todo %}}
+{{% todo %}}[**EXPLAIN DIAGRAM; UX-UPDATE DIAGRAM**]{{% /todo %}}
 
 ![](attachments/mendix-microservices/cross-using-data.png)
 
@@ -68,7 +68,7 @@ Mendix promotes keeping together what belongs functionally together. By having a
 
 Other apps or components can only access data and functions via well-defined APIs by using explicit contracts. The APIs are very easy to set up via REST, SOAP, OData, files, or any other mechanism. But access to data and service is controlled via the Mendix Runtime. That way only right caller can only allowed operations that are provided by the App Team who owns the data in that app.
 
-{{% todo %}}[**UPDATE DIAGRAM; EXPLAIN DIAGRAM**]{{% /todo %}}
+{{% todo %}}[**EXPLAIN DIAGRAM; UX-UPDATE DIAGRAM**]{{% /todo %}}
 
 ![](attachments/mendix-microservices/kept-together.png)
 
@@ -80,7 +80,7 @@ This allows you to choose the size of an app based on functional considerations,
 
 When the scope grows, the first thing to do in Mendix is to structure the app in separate modules within the app all using the same database. Ideally, the modules should be as independent as possible. They may copy parts of the same data to have a specific view on the same information.
 
-{{% todo %}}[**UPDATE DIAGRAM; EXPLAIN DIAGRAM**]{{% /todo %}}
+{{% todo %}}[**EXPLAIN DIAGRAM; UX-UPDATE DIAGRAM**]{{% /todo %}}
 
 ![](attachments/mendix-microservices/med-large.png)
 
@@ -106,7 +106,7 @@ There are several ways to do this, and it will depend on the situation that fits
 
 These are the most common patterns:
 
-{{% todo %}}[**UPDATE DIAGRAM; EXPLAIN DIAGRAM**]{{% /todo %}}
+{{% todo %}}[**EXPLAIN DIAGRAM; UX-UPDATE DIAGRAM**]{{% /todo %}}
 
 ![](attachments/mendix-microservices/micro-common-patters.png)
 
@@ -124,7 +124,7 @@ For Java-oriented systems and some other low-code providers, it makes sense to b
 
 In Mendix, the same pattern is built using separate modules inside the app. The same database is used, but the team is ready to split things later when it is clear what the most important thing to separate out is.
 
-{{% todo %}}[**UPDATE DIAGRAM; EXPLAIN DIAGRAM**]{{% /todo %}}
+{{% todo %}}[**EXPLAIN DIAGRAM; UX-UPDATE DIAGRAM**]{{% /todo %}}
 
 ![](attachments/mendix-microservices/system-architects.png)
 
@@ -134,7 +134,7 @@ Mendix has the advantage in this scenario, because the integrity of how data is 
 
 As the scope grows, Mendix splits the app into functional parts with separate process phases and separate data that is owned and managed. In other technologies, people often keep building in the same way, eventually creating a monolith with a lack of control over dependencies.
 
-{{% todo %}}[**UPDATE DIAGRAM; EXPLAIN DIAGRAM**]{{% /todo %}}
+{{% todo %}}[**EXPLAIN DIAGRAM; UX-UPDATE DIAGRAM**]{{% /todo %}}
 
 ![](attachments/mendix-microservices/large-system-architects.png)
 
@@ -159,7 +159,7 @@ If data integrity is still an issue (which is rare), it is worth considering the
 
 If data integrity seems difficult, the system has probably not been split in a good way. Bad splits are characterized by split parts that are too small, business processes ping-ponging back and forth, the same data updating in many places, or integration that is done poorly.
 
-{{% todo %}}[**UPDATE DIAGRAM; EXPLAIN DIAGRAM**]{{% /todo %}}
+{{% todo %}}[**EXPLAIN DIAGRAM; UX-UPDATE DIAGRAM**]{{% /todo %}}
 
 ![](attachments/mendix-microservices/large-cluster.png)
 
@@ -183,7 +183,7 @@ Speed does slow down with size, in whichever direction you turn. However, you ca
 
 Positioning for core systems should be based on technology and approach, as in the [Gartner Pace-Layered Application Strategy](https://www.gartner.com/binaries/content/assets/events/keywords/applications/apn30/pace-layered-applications-research-report.pdf). You should optimize for what each system requires. Sometimes speed is important, sometimes size, and sometimes stability and performance are even more important. The project should adapt to the approach accordingly.
 
-{{% todo %}}[**UPDATE DIAGRAM; EXPLAIN DIAGRAM**]{{% /todo %}}
+{{% todo %}}[**EXPLAIN DIAGRAM; UX-UPDATE DIAGRAM**]{{% /todo %}}
 
 ![](attachments/mendix-microservices/feature-realization.png)
 
@@ -195,13 +195,13 @@ Another domain for building microservices involves customer portals. These porta
 
 If you are building a functionally-oriented customer portal, Mendix is ideal for building all the portal parts. Small portals are often only built on one single Mendix app. For larger portals, it is recommended to use a landing page or dashboard app in front, and then deep-link into sub-apps to do more significant work for the logged-in areas of the portal.
 
-{{% todo %}}[**UPDATE DIAGRAM; EXPLAIN DIAGRAM**]{{% /todo %}}
+{{% todo %}}[**EXPLAIN DIAGRAM; UX-UPDATE DIAGRAM**]{{% /todo %}}
 
 ![](attachments/mendix-microservices/functionally-oriented.png)
 
 The main purpose of marketing-oriented portals is to provide a window into an enterprise or department. There is a lot of information, links, and pictures that can be accessed without having to log in. The information is search-optimized, and different pictures are displayed depending on where the user is hovering and clicking. 
 
-{{% todo %}}[**UPDATE DIAGRAM; EXPLAIN DIAGRAM**]{{% /todo %}}
+{{% todo %}}[**EXPLAIN DIAGRAM; UX-UPDATE DIAGRAM**]{{% /todo %}}
 
 ![](attachments/mendix-microservices/marketing-oriented.png)
 

@@ -98,7 +98,7 @@ The performance testing that should be automated depends on the character and fu
 
 ## 7 Different Strategies for Testing, Tuning & Sizing
 
-Many strategies can be applied for performance and stability, and not one size fits all. For example:
+Many strategies can be applied for performance and stability, because one size does not fit all. For example:
 
 * A bank may be so focused on stability that it requires performance testing and automated testing for all apps, despite the extra costs
 * One customer may prefer to buy more infrastructure to save on performance testing

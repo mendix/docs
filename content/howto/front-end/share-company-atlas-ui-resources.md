@@ -1,6 +1,6 @@
 ---
 title: "Share Company Atlas UI Resources"
-category: "Atlas UI"
+parent: "atlas-ui"
 menu_order: 40
 tags: ["Atlas", "UI", "UX", "user experience"]
 ---

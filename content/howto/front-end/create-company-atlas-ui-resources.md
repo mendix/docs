@@ -1,6 +1,6 @@
 ---
 title: "Create Company Atlas UI Resources"
-category: "Atlas UI"
+parent: "atlas-ui"
 menu_order: 30
 tags: ["Atlas", "UI", "UX", "user experience"]
 frontpage_featured: true

@@ -1,8 +1,8 @@
 ---
 title: "Start Styling with Gulp & Sass"
-category: "UX"
+category: "Front-End"
 menu_order: 50
-tags: ["gulp", "sass", "ux"]
+tags: ["gulp", "sass", "ux", "Front-End"]
 ---
 
 ## 1 Introduction

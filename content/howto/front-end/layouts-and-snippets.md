@@ -1,8 +1,8 @@
 ---
 title: "Use Layouts and Snippets"
-category: "UX"
+category: "Front-End"
 menu_order: 25
-tags: []
+tags: ["Front-End"]
 ---
 
 ## 1 Introduction

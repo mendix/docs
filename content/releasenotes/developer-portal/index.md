@@ -12,7 +12,7 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud V3, and other deploym
 
 ### March 5th, 2019
 
-#### Improvements & Fixes
+#### Feedback & Support
 
 * We removed the [Mendix Feedback Widget](https://appstore.home.mendix.com/link/app/199/) from the Developer Portal. If you want to report an issue or ask a question, please submit a ticket at [Mendix Support](https://support.mendix.com).
 * Minor fixes and performance improvements.

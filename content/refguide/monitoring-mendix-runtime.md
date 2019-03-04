@@ -223,8 +223,6 @@ Memory statistics should only be interpreted by experts, lack of detailed knowle
 
 {{% /alert %}}{{% alert type="warning" %}}
 
-For versions of lower than Mendix 6.6 or Mendix 5.21.5 running on Java8, the information returned in the "memory" part of the response provides incomplete and incorrect information. If you rely on information in this section for these versions we recommend you to upgrade your version to Mendix 6.7 or 5.21.5 or higher.
-
 For backwards compatibility reasons the fields "code", "eden", "tenured", "survivor" and "permanent" are still present but they should not be relied on anymore. They will be removed from Mendix 7 onwards.
 
 {{% /alert %}}
@@ -483,4 +481,4 @@ This request can only be executed when the Mendix Runtime status is "running" (s
 }
 ```
 
-Returns feedback about the Mendix Runtime. "java_version" is available from Mendix 6.6 onwards.
+Returns feedback about the Mendix Runtime.

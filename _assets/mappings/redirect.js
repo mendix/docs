@@ -8,7 +8,7 @@ module.exports = {
      ****************************************************/
     {
       from: "/howtogeneral/bestpractices/ux-best-practices",
-      to: "/howto/ux/ux-best-practices"
+      to: "/howto/front-end/ux-best-practices"
     },
 	{
       from: "/howtogeneral/bestpractices/best-practices-security-and-improvements-for-mendix-applications",

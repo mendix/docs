@@ -46,7 +46,7 @@ Open the (empty) Desktop Modeler and follow these steps:
 
 3. Click **Download** to create a new app project using this app:
 
-	![](attachments/deploying-to-mindsphere/app-store-download.png)
+  {{% image_container width="100%" %}}![](attachments/deploying-to-mindsphere/app-store-download.png){{% /image_container %}}
 
 4. To start the new app project, confirm where to store the app, the app name, and the project directory, then click **OK**:
 

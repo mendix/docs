@@ -43,11 +43,11 @@ Open the (empty) Desktop Modeler and follow these steps:
 2. Enter *MindSphere* in the search box, and in the search results, select **MindSphere Starter Application**:
 
 	![](attachments/deploying-to-mindsphere/app-store-search.png)
-
+  
 3. Click **Download** to create a new app project using this app:
 
-   ![](attachments/deploying-to-mindsphere/app-store-download.png)
-
+	![](attachments/deploying-to-mindsphere/app-store-download.png)
+  
 4. To start the new app project, confirm where to store the app, the app name, and the project directory, then click **OK**:
 
 	![](attachments/deploying-to-mindsphere/app-store-download-project.png)
@@ -97,13 +97,11 @@ This is the name of your app as registered in the MindSphere developer portal. S
 
 **MindGateURL**
 
-{{% todo %}}[**THESE URLs SHOULD BE FORMATTED AS CODE SO AS TO NOT APPEAR AS BROKEN LINKS**]{{% /todo %}}
-
-This is the base URL for all requests to MindSphere APIs. For example, the URL for MindSphere on AWS PROD is https://gateway.eu1.mindsphere.io.
+This is the base URL for all requests to MindSphere APIs. For example, the URL for MindSphere on AWS PROD is `https://gateway.eu1.mindsphere.io`.
 
 **PublicKeyURL**
 
-This is the URL where the public key can be found to enable token validation during the login process. For example, the URL for MindSphere on AWS PROD is https://core.piam.eu1.mindsphere.io/token_keys.
+This is the URL where the public key can be found to enable token validation during the login process. For example, the URL for MindSphere on AWS PROD is `https://core.piam.eu1.mindsphere.io/token_keys`.
 
 #### 2.2.2 Microflows
 
@@ -114,8 +112,6 @@ The MindSphereSingleSignOn module also provides three microflows which are used 
 **RegisterSingleSignOn**
 
 This microflow must be added to the *Runtime* tab of the *Project > Settings* dialog, accessed through the *Project Explorer*. It needs to be selected as the *After startup* microflow or added as a sub-microflow to an existing after startup microflow.
-
-{{% todo %}}[**SUCH LARGE IMAGES NEED TO BE MADE SMALLER**]{{% /todo %}}
 
 ![Project settings dialog](attachments/deploying-to-mindsphere/image4.png)
 
@@ -328,7 +324,10 @@ To create a new app in the MindSphere launchpad, do the following:
 4.  Click the **+** next to the component to add **Endpoints**.
 5.  Specify `/**` as the endpoint to allow you to access all endpoints relevant to your application.
 6.  Set the **content-security-policy** settings to the following  
-    `default-src 'self' 'unsafe-inline' 'unsafe-eval' static.eu1.mindsphere.io sprintr.home.mendix.com; font-src 'self' static.eu1.mindsphere.io fonts.gstatic.com; style-src * 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval' static.eu1.mindsphere.io sprintr.home.mendix.com; img-src * data:;`
+
+    ```
+    default-src 'self' 'unsafe-inline' 'unsafe-eval' static.eu1.mindsphere.io sprintr.home.mendix.com; font-src 'self' static.eu1.mindsphere.io fonts.gstatic.com; style-src * 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval' static.eu1.mindsphere.io sprintr.home.mendix.com; img-src * data:;
+    ```
 
     {{% alert type="info" %}}These content security policy settings are needed to ensure that the MindSphere OS Bar and the Mendix *Feedback* widget are loaded correctly. You may need to set additional CSP settings if you make additional calls to other domains (for example, if you use Google maps from maps.googleapi.com).{{% /alert %}}
 
@@ -509,8 +508,12 @@ To make your Mendix app multi-tenant, do the following:
 
 1.  Make all *permanent* entities which have a **TenantId** attribute a specialization of the MindSphereSingleSignOn.TenantObject entity.  
     This ensures that every object is associated with the Tenant object of the user who creates it.
-2.  Every action on this object must have the following XPath constraint:  
-    [MindSphereSingleSignOn.TenantObject_Tenant/MindSphereSingleSignOn.Tenant/MindSphereSingleSignOn.MindSphereAccount_Tenant='[%CurrentUser%]']  
+2.  Every action on this object must have the following XPath constraint:
+
+    ```java
+    [MindSphereSingleSignOn.TenantObject_Tenant/MindSphereSingleSignOn.Tenant/MindSphereSingleSignOn.MindSphereAccount_Tenant='[%CurrentUser%]']
+    ```
+    
     This ensures that the user can only retrieve entities which belong to their tenant, in other words, where their Tenant matches the TenantId of the entity. You can copy and paste this constraint from here. You can also copy it from XPath constraint on the *TenantObject* entity in the *MindSphereSingleSignOn* module. For more information on XPath, see [XPath](/refguide/xpath).
 
 {{% alert type="info" %}}

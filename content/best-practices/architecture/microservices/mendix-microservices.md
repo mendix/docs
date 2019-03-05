@@ -8,23 +8,27 @@ tags: ["microservices"]
 
 Microservices is a relatively new concept that has become very popular. By now, microservices are used in many contexts. On the web, one will come across several different styles of microservices, which may prompt the question, “What is the correct way to build microservices?”
 
-This document gives a view on how Mendix microservices architecture is created and what important areas there are to consider.
+### 1.1 Microservices by Lewis & Fowler
 
-{{% todo %}}[**EXPLAIN DIAGRAM; UX-UPDATE DIAGRAM IN RELATION TO INTRO TEXT**]{{% /todo %}}
+Mendix bases its view on microservices on the definition created by James Lewis and Martin Fowler from [Thoughtworks](https://www.thoughtworks.com/insights/blog/microservices-nutshell), who coined the term "microservice." They recommend keeping all parts of a business function together in a deployable container and separated from other business functions via explicit service contracts.
 
-![](attachments/mendix-microservices/build-large.png)
+This makes components more self-contained and autonomous, and also makes dependencies clear and explicit.
 
-{{% todo %}}[**RESOLVE RK'S COMMENT: "explain where we base our vision upon (a.k.a. Martin Fowler)"**]{{% /todo %}}
+### 1.2 Why Microservices?
 
-Microservices is less of an actual architecture and more of an organizational context. Therefore, it works very well with DevOps. The common goal of microservices is to make components that can be built and maintained by a small team of fewer than 10 people.
+The reason for utilizing microservices has less to do with actual architecture and more to do with organizational context. The common goal of microservices is to have components that can be built and maintained by a small team with fewer than 10 people. This is due to the fact that development productivity is optimal with 2–4 developers that cooperate, do peer review, and help each other while maintaining slightly different focuses (one developer is more technical, another is business-oriented, another is ops-oriented, etc.).
 
 {{% todo %}}[**EXPLAIN DIAGRAM; UX-UPDATE DIAGRAM**]{{% /todo %}}
 
 ![](attachments/mendix-microservices/productivity-per-dev.png)
 
-Development efficiency is maxed out with 2–3 developers that cooperate, do peer review, and help each other while maintaining slightly different focuses (one developer is more technical, another is business-oriented, another is ops-oriented, etc.).
+At 8–9 developers, your productivity will decrease enough that splitting up the app should be considered. And with more than 10 developers, you should start peeling off parts of the app and separating them, according to microservices theory.
 
-Microservices can guide you to try and optimize the component size and the team size. Functional or architecture reasons may require you to have some apps with 0.5 developers and others with 8 developers. But when you need \>10 developers, according to microservices theory, you should start peeling off parts of that app and separate them.
+Microservices can guide you to try and optimize the component size and the team size, thus it works very well with DevOps.
+
+Beyond team size, there could be many other reasons to split up an app. For example, there could be different processes involved, stakeholder feedback, or scaling requirements. Accordingly, functional or architecture reasons can require you to build one app with only one developer and another app with eight developers.
+
+### 1.3 Typical Benefits
 
 These are some benefits of microservices:
 
@@ -33,6 +37,20 @@ These are some benefits of microservices:
 * Very clear and explicit service contracts with other components that are tested and maintained through the releases of this and other components
 * You can change, deploy, and replace parts of the solution without having to change everything
 * There is less regression testing needed for each release if the service contracts are clear and stable
+
+### 1.4 This Document
+
+This document presents different microservice architecture patterns that fit various business scenarios in relation to Mendix.
+
+Microservices is more relevant if the scope is large. By reading this document, your team will gain a basis for deciding whether app should be split up and for identifying the best microservices pattern to fit a specific business scenario.
+
+
+{{% todo %}}[**EXPLAIN DIAGRAM; UX-UPDATE DIAGRAM IN RELATION TO INTRO TEXT**]{{% /todo %}}
+
+![](attachments/mendix-microservices/build-large.png)
+
+----
+
 
 ## 2 What Is Microservices Architecture?
 
@@ -76,7 +94,7 @@ Other apps or components can only access data and functions via well-defined API
 
 Mendix is a low-code platform that allows for quick development. Six developers can produce quite a significant scope. An advanced ordering app or support app can easily be contained in one single Mendix app.
 
-This allows you to choose the size of an app based on functional considerations, instead of having to break it down based on the microservice consideration that it is too big to be efficient and autonomous.
+This allows you to choose the size of an app based on functional considerations, instead of having to split it up based on the microservice consideration that it is too big to be efficient and autonomous.
 
 When the scope grows, the first thing to do in Mendix is to structure the app in separate modules within the app all using the same database. Ideally, the modules should be as independent as possible. They may copy parts of the same data to have a specific view on the same information.
 
@@ -84,8 +102,7 @@ When the scope grows, the first thing to do in Mendix is to structure the app in
 
 ![](attachments/mendix-microservices/med-large.png)
 
-The increased speed of development in a low-code platform like Mendix means that apps and microservices can be functionally quite large and significant before the rule of having fewer than eight developers on a team comes into play. This enables more scope for selecting an architecture that is
-functionally ideal rather than having to split things for size reasons. 
+The increased speed of development in a low-code platform like Mendix means that apps and microservices can be functionally quite large and significant before the rule of having fewer than eight developers on a team comes into play. This enables more scope for selecting an architecture that is functionally ideal rather than having to split things for size reasons. 
 
 These are some other reasons for having separate apps and microservices:
 
@@ -112,9 +129,9 @@ These are the most common patterns:
 
 * **Process oriented cluster** – This is where several user groups cooperate over several phases in one process. Often, there is a landing page or dashboard app with separate microservices below, each implementing a phase in the business process. The other services are accessed via deep links so that the user does not notice they are working in more than one app. This is also the pattern for larger functionally-oriented customer portals.
 
-* **Main app & peeled-off pieces** – This is a common pattern when data-integrity is important across a larger data scope and where there is a true core functionality that is hard to break up. Certain parts are broken off, like batch-processing, calculations, and configuration of products. Anything that has a small and stable interface towards the main app is a candidate for a separate microservice.
+* **Main app & peeled-off pieces** – This is a common pattern when data-integrity is important across a larger data scope and where there is a true core functionality that is hard to split up. Certain parts are broken off, like batch-processing, calculations, and configuration of products. Anything that has a small and stable interface towards the main app is a candidate for a separate microservice.
 
-* **Separate individual systems** – In this pattern, the initial idea of the app contained more than one business function. To quickly get to an MVP and demo for the stakeholders, the modules were built well within one single app. Not being sure of the best approach for breaking up the modules, the team postponed the decision until later. This app will thus become two separate systems altogether, and each app will be handled by a small and independent team of developers again.
+* **Separate individual systems** – In this pattern, the initial idea of the app contained more than one business function. To quickly get to an MVP and demo for the stakeholders, the modules were built well within one single app. Not being sure of the best approach for spitting up the modules, the team postponed the decision until later. This app will thus become two separate systems altogether, and each app will be handled by a small and independent team of developers again.
 
 * **Marketing-oriented customer portal style** – In this pattern, there is marketing and searchable information in the main pages of a customer portal. This is a microservices pattern found quite frequently on the web, and for these cases, Mendix is an excellent choice for building the microservices below the common portal landing page. For more information, see the *Customer Portals* section below.
 
@@ -145,7 +162,7 @@ When apps are split, Mendix forces the separation of data as well as access to e
 You cannot remove dependencies, so you should try to implement as few of them as possible from the start. In addition, you should try to make any necessary dependencies as simple as possible. The larger the system becomes, the more important it is to make functional components that have clear business-related
 dependencies.
 
-When a business function is so large that you need to break it up into a microservices cluster, you should consider the integrity of data between the apps. Preferably, each app should “own” its part of the data. There will be an overlap, so you must allow for copying data, but whenever possible, each app should own one type of update or business event.
+When a business function is so large that you need to split it up into a microservices cluster, you should consider the integrity of data between the apps. Preferably, each app should “own” its part of the data. There will be an overlap, so you must allow for copying data, but whenever possible, each app should own one type of update or business event.
 
 Often the split handles different phases of the business process, which means that one type of business event often happens in one single app.
 

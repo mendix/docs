@@ -1,6 +1,6 @@
 ---
 title: "Extend Design Properties to Customize Your Web Modeler Experience"
-category: "Atlas UI"
+parent: "atlas-ui"
 menu_order: 60
 tags: ["Atlas", "UI", "UX", "user experience", "web modeler", "customize", "custom"]
 ---

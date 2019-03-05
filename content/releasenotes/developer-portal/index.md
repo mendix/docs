@@ -99,7 +99,7 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud V3, and other deploym
 
 #### Fixes
 
-* We fixed an issue in which [custom error pages](/howto/ux/custom-error-page) did not work for online applications in Mendix Cloud V4.
+* We fixed an issue in which [custom error pages](/howto/front-end/custom-error-page) did not work for online applications in Mendix Cloud V4.
 
 ### November 1st, 2018
 

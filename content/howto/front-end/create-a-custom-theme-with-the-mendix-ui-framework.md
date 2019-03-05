@@ -1,8 +1,8 @@
 ---
 title: "Create a Custom Theme with the Mendix UI Framework"
-category: "UX"
+category: "Front-End"
 menu_order: 40
-tags: []
+tags: ["Front-End"]
 ---
 
 ## 1 Introduction

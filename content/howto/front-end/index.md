@@ -1,5 +1,5 @@
 ---
-title: "UX"
+title: "Front-End"
 ---
 
 ## 1 Introduction 
@@ -8,6 +8,7 @@ Looking to create great user experiences and a user-friendly graphical user inte
 
 ## 2 Main Documents in This Category
 
+* [Atlas UI](atlas-ui)
 * [Implement Best Practices for UX Design](ux-best-practices)
 * [Configure Your Theme](configuring-your-theme)
 * [Create Your First Two Overview & Detail Pages](create-your-first-two-overview-and-detail-pages)

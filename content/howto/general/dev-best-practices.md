@@ -206,7 +206,7 @@ For integrations, you have the following types of microflow:
 
 Pages use a **suffix** to indicate their use.
 
-Pages that show an [overview](/howto/ux/create-your-first-two-overview-and-detail-pages) of a single entity should have a suffix of **_Overview**.
+Pages that show an [overview](/howto/front-end/create-your-first-two-overview-and-detail-pages) of a single entity should have a suffix of **_Overview**.
 
 Pages that are to create, edit, or view entity data, and that are not part of a process, should have the suffix **_New**, **_Edit**, **_NewEdit**, or **_View**.
 

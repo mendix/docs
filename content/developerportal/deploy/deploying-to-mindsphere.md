@@ -241,9 +241,7 @@ If this file is not in your /theme folder, you can create it following the instr
 
 The permission denied page will be shown if your app will be called with an invalid token or a token which does not include the value you have specified within the SSO constant ‘CockpitApplicationName’. The SSO module expects to find this file as error_page/403.html within your ‘Theme’ folder.
 
-{{% todo %}}[**IS THIS SCREENSHOT NECESSARY?**]{{% /todo %}}
-
-![](attachments/deploying-to-mindsphere/image12.png)
+{{% image_container width="50%" %}}![](attachments/deploying-to-mindsphere/image12.png){{% /image_container %}}
 
 ## 3 Deploying Your App to MindSphere
 
@@ -265,7 +263,7 @@ To create a Mendix deployment package from your app, do the following.
 1.  Open your app in the desktop modeler.
 2.  Select **Project** > **Create Deployment Package...**.
 
-    ![](attachments/deploying-to-mindsphere/image13.png)
+    {{% image_container width="355" %}}![](attachments/deploying-to-mindsphere/image13.png){{% /image_container %}}
 
 3.  Select the correct **Development line** and **Revision**.
 4.  Set the **New version** number and add a **Description** if required.
@@ -363,7 +361,7 @@ Once you have created the scopes for your app, you will need to assign them to t
 
 1.  Go to **Settings > Roles** from the MindSphere launchpad.
 
-    ![](attachments/deploying-to-mindsphere/image16.png)
+    {{% image_container width="50%" %}}![](attachments/deploying-to-mindsphere/image16.png){{% /image_container %}}
 
 2.  Choose the app role (scope) you want to assign from the list of **Roles**.
 3.  Click **Edit user assignment**.
@@ -431,7 +429,7 @@ Mendix apps can currently only be deployed to MindSphere running on AWS (Amazon 
 
 When you run your app locally, you will not be able to use SSO to get your credentials. You will be logged on as MxAdmin and will be presented with a login screen the first time that your app attempts to retrieve your access token.
 
-![](attachments/deploying-to-mindsphere/image19.png)
+{{% image_container width="50%" %}}![](attachments/deploying-to-mindsphere/image19.png){{% /image_container %}}
 
 This will use the credentials you have set up under **App Credentials** in the *Authorization Management* tab of the MindSphere Developer Cockpit for this application.
 
@@ -530,7 +528,7 @@ You have some limits which are set for the user's tenant to be applied to a time
 2.  Write a sub-microflow which returns a list of all limits.
 3.  Apply the XPath constraint to the **Retrieve Objects** action.
 
-    ![](attachments/deploying-to-mindsphere/image27.png)
+    {{% image_container width="75%" %}}![](attachments/deploying-to-mindsphere/image27.png){{% /image_container %}}
 
 4.  When you want to retrieve the list of limits, call this microflow instead of using the retrieve objects action. This will ensure that tenant-based security is applied.
 

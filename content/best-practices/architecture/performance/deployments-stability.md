@@ -7,6 +7,8 @@ tags: [ ]
 draft: true
 ---
 
+{{% todo %}}[**NEEDS DIAGRAMS**]{{% /todo %}}
+
 ## 1 High Availability 
 
 For high-availability solutions, the focus should be on predicting, planning, and managing all the risks for unexpected failures, including incidents during deployments. This is where the most significant business impact happens. And because it is unplanned, it often happens when the load is high and the recovery can take time.
@@ -16,7 +18,6 @@ Stress tests help with identifying breaking points. Risk analysis and contingenc
 For microservice architectures, health checks and administrative pages are implemented to assist operations teams. Fault tolerance around deep-links and service calls should provide  good error messages. Mendix recommends log integration for quickly analyzing issues that go across apps.
 
 For critical systems, a more professional level of monitoring and alarms should be added, and the process link to recovery actions should be tight. Mendix has great integration with, for example, DataDog for monitoring, trend analysis, and alarms.
-
 
 ## 2 Phased Go-Lives & Deployments 
 

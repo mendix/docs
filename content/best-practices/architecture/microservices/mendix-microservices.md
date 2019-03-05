@@ -10,7 +10,7 @@ Microservices is a relatively new concept that has become very popular. By now, 
 
 On the web, one will come across several different styles of microservices, which may prompt the question, “What is the correct way to build microservices?”
 
-### 1.1 Microservices by Lewis & Fowler
+### 1.1 "Microservice" Defined by Lewis & Fowler
 
 Mendix bases its view on microservices on the [definition](https://www.thoughtworks.com/insights/blog/microservices-nutshell) created by James Lewis and Martin Fowler from Thoughtworks, who coined the "microservice" term. They recommend keeping all parts of a business function together in a deployable container and separated from other business functions via explicit service contracts.
 

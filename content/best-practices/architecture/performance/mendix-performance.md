@@ -13,17 +13,17 @@ draft: true
 
 This document is intended for architects, senior stake-holders and lead developers to consider how to achieve correct stability and performance when using Mendix as the Platform for Core Enterprise systems.
 
-#### 1.1.1 Positioning, Portfolio Management & Project Planning
+### 1.1 Positioning, Portfolio Management & Project Planning
 
 This document can be used by Enterprise Architects to create positioning documents or in the work of portfolio planning. It can also be used as a baseline for technology selection and project initiation.
 
 ![](C:/Users/adu/Documents/_Repositories/Documentation/GitHub%20docs/content/best-practices/architecture/performance/attachments/overview/high-perf-mendix.png)
 
-#### 1.1.2 Program or Product Expansion
+### 1.2 Program or Product Expansion
 
 The document is also relevant for expanding projects or programs via increased functionality, more users, more geographical regions, or significantly increased volume. It is a guide to what additional measures, methods, and skills are recommended for achieving the next level of volume and stability.
 
-#### 1.1.3 Operational Planning
+### 1.3 Operational Planning
 
 The document can be helpful when sizing, configuring, managing, operating, and maintaining larger Mendix solutions. It can be useful for discussing infrastructure, operational procedures, and testing.
 

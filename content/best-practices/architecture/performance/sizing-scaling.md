@@ -7,23 +7,21 @@ tags: [ ]
 draft: true
 ---
 
-Sizing and Scaling is the exercise of determining which infrastructure is
-adequate for a certain situation. It is done in several stages:
+{{% todo %}}[**NEED DIAGRAMS FOR THIS DOC**]{{% /todo %}}
 
-1.  *Initial Sizing* is done at the beginning to gauge the cost and decide which
-    infrastructure to test with.
+## 1 Introduction
 
-2.  *Production Sizing* is done after all functionality is implemented, a good
-    data set available and realistic performance testing can be done.
+Sizing and scaling is the exercise of determining which infrastructure is adequate for a certain situation. It is done in several stages:
 
-3.  *Continuous Sizing and Scaling* is done in production based on production
-    performance metrics and trends over time
+1. [Initial sizing](#initial) is done at the beginning to gauge the cost and decide which infrastructure to test with.
+2. [Production sizing](#production) is done after all the functionality is implemented, a good dataset is available, and realistic performance testing can be done.
+3. [Continuous sizing and scaling](#continuous) is done in production based on the production performance metrics and trends over time.
 
-### Initial Sizing 
+## 2 Initial Sizing {#initial}
 
-The other factor is the size of the infrastructure. Sizing an app is similar to the levels of attention in the table above in [The Right Level of Attention](#right-level).
+The other factor is the size of the infrastructure. Sizing an app is similar to the levels of attention described in the [Right Level of Attention](mendix-performance#right-level) section of *High Performance with Mendix*.
 
-In the beginning of an app project, a first size assumption is made. When the functionality is built out and this assumption is tested, the sizing may be adapted and/or tuning be required. Small to medium-sized apps are verified with normal functional testing, while critical apps are tested with professional tools in a production-like environment.
+In the beginning of an app project, a first size assumption is made. When the functionality is built and this assumption is tested, the sizing may be adapted and/or tuning be required. Small to medium-sized apps are verified with normal functional testing, while critical apps are tested with professional tools in a production-like environment.
 
 This table presents a basic overview for infrastructure sizing for a single Mendix app instance:
 
@@ -33,9 +31,9 @@ This table presents a basic overview for infrastructure sizing for a single Mend
 | **Number of Concurrent Users** | < 20 | < 100 | < 500 | < 5k | 200k or more |
 | **Number of Service Calls (per Second)** | < 5 | < 10 | < 50 | < 500 | 2k or more |          |
 
-### Redundancy for Availability
+### 2.1 Redundancy for Availability
 
-For more critical systems, users often choose an environment that is larger than the volume requires. This decreases the risk for production disturbances due to volume. But to cope with other issues, uptime can be improved by redundancy.
+For more critical systems, users often choose an environment that is larger than the volume requires. This decreases the risk for production disturbances due to volume. To cope with other issues, uptime can be improved by redundancy.
 
 For example, critical low-volume apps can use small-size environments, with additional app instances behind a load-balancer (LB) to increase availability.
 
@@ -50,7 +48,7 @@ This table illustrates redundancy for system criticality:
 
 For very critical systems, a fallback (FB) database is added to cover for unresponsive databases. That database should be in the same availability zone, no more than 5 km away. The rule of thumb is to also add an additional app instance when adding an FB database configuration.
 
-### Scaling
+### 2.2 Scaling
 
 Any system may need to scale over time. Performance testing is often done testing at a volume level expected 3–5 years in the future. That ensures the infrastructure can handle growth for the next 2–3 years. A static scaling plan can be made for the years afterwards, and if this involves deploying to the Mendix Cloud, it is very easy to increase the size.
 
@@ -60,7 +58,7 @@ Static windows with a larger capacity can also be set up (for example, double-ca
 
 In general, cloud deployment was supposed to enable paying for resources only when needed, but the standard AWS pricelist promotes stable long-term contracts. Accordingly, this is the way Mendix operates by default, and for most cases, this is the most cost-effective option.
 
-### Custom Sizing
+### 2.3 Custom Sizing
 
 There are some situations where very specific scaling is needed. A custom infrastructure package can be required to optimize on cost and performance. For example, if you are running an MDM system with little user interaction but a huge amount of data, a normal-sized cloud environment can be used with additional database space.
 
@@ -70,30 +68,18 @@ For non-global Mendix apps, the limiting factor is often the processing in the d
 
 Another limiting factor can be the traffic from the browser to the app instance. This can be particularly noticeable for global apps, since Mendix out-of-the-box needs the app server quite a lot while navigating functionality. Some tuning can be made here, but another attractive option is to scale geographically.
 
-### Production Sizing 
+## 3 Production Sizing {#production}
 
-Once work starts on building the App, it is possible to start the *Performance
-Testing and Tuning* exercise \<link\>.
+Once work starts on building the App, it is possible to start the [performance testing and tuning](testing-tuning) exercise.
 
-At the end of implementing the full functionality, final the Performance test is
-done under realistic circumstances – simulating massive amounts of users or
-service call, trying to use production data or very similar data.
+At the end of implementing the full functionality, the final performance test is done under realistic circumstances. This would involve simulating massive amounts of users or service calls and then trying to use production or very similar data. Such a test will verify that the initial sizing and scaling was correct and allow for fine-tuning the infrastructure. The CPU of the database server and app server should not be above 70% at the peak load sustained over the estimated peak periods (often ~1 hour).
 
-This will verify the initial sizing and scaling was correct or allow fine-tuning
-of the infrastructure. CPU of DB server and App server should not be above 70%
-at the peak load sustained over the estimated peak periods, often \~1 hour.
+For high availability, the failover is also tested under the full load. This is to see that even with a failing app server, the remaining app servers stay below 70% of CPU and behave in a healthy way.
 
-For high availability the fail-over is also tested under full load, to see that
-even with a failing App Server, the remaining App servers stay below 70% of CPU
-and behave in a healthy way.
+For critical apps, it often makes sense to over-size environments a bit in order to be safe. However, this can also be worked out and optimized via continuous sizing and scaling, as described in the section below.
 
-Naturally – for critical Apps – it often makes sense to over-size environments a
-bit to be rather safe than sorry, but this can also be worked out and optimized
-in the *Continuous Sizing and Scaling.*
+## 4 Continuous Sizing & Scaling {#continuous}
 
-### Continuous Sizing and Scaling
+{{% todo %}}[**ADD LINK FOR "production-level monitoring" WHEN AVAILALBE**]{{% /todo %}}
 
-As the name suggests, this happens continuously based on input from *production
-level monitoring* \<link for later\>. In most cases however, a 5 year plan is
-made in the beginning, and is updated annually, so sizing and scaling is well
-planned ahead of time.
+As the name suggests, continuous sizing & scaling happens continuously based on input from production-level monitoring. However, in most cases, a five-year plan is made in the beginning and is then updated annually, so sizing and scaling is well planned ahead of time.

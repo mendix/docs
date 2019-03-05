@@ -3,8 +3,6 @@ title: "DB2"
 parent: "data-storage"
 ---
 
-Running on IBM DB2 databases has been supported since Mendix 6.10.
-
 ## Page Size of the Table Space
 
 For Mendix to run on DB2, it is very important that the user table space has a page size of at least 8K (but preferably 32K). This is because Mendix uses national character strings (NVARCHAR or VARCHAR with string units CODEUNIT32). This data type consumes more space than an octets-based VARCHAR. For the system administration, Mendix always creates some tables with indexes, which require at least a table space page size of 8K.

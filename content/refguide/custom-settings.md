@@ -44,7 +44,7 @@ The following custom settings can be configured:
 | http.client.MaxConnectionsTotal | Introduced in version 7.19.<br/> The [maximum number of connections allowed across all routes](https://hc.apache.org/httpcomponents-client-ga/httpclient/apidocs/org/apache/http/impl/client/HttpClientBuilder.html#setMaxConnTotal(int)) for Call REST and Call Web Service actions. | 20 |
 | http.client.CleanupAfterSeconds | Introduced in version 7.22.<br/> For Call REST and Call Web Service actions, the first request to a new host wil create an HTTP client that will handle subsequent requests. When there are no new requests to the host for the specified time, the HTTP client will be cleaned up. Default value: 12 * 60 * 60 (12 hours). A value of 0 means no cleanup. |
 | ClusterManagerActionInterval | The interval (in milliseconds) used for performing all cluster manager actions. These actions include, unblocking users, and removing invalid sessions. If nothing is specified the interval is half the SessionTimeout. | 300000 |
-| com.mendix.core.StorageService | Defines which storage service module will be used. The storage service module takes care of storing the actual files associated with 'System.FileDocument' objects, such as uploaded files. Possible values are 'com.mendix.storage.localfilesystem', 'com.mendix.storage.s3', 'com.mendix.storage.azure' (since Mendix 6.6), and 'com.mendix.storage.swift' (since Mendix 6.7). | com.mendix.storage.localfilesystem |
+| com.mendix.core.StorageService | Defines which storage service module will be used. The storage service module takes care of storing the actual files associated with 'System.FileDocument' objects, such as uploaded files. Possible values are 'com.mendix.storage.localfilesystem', 'com.mendix.storage.s3', 'com.mendix.storage.azure', and 'com.mendix.storage.swift'. | com.mendix.storage.localfilesystem |
 | com.mendix.storage.PerformDeleteFromStorage | Introduced in version 7.19.<br/>Defines whether a delete of a Mendix file document should result in an actual delete in the storage service. A reason to not perform an actual delete in the storage service can be when it is also used as a backup service. | true |
 | com.mendix.core.SessionIdCookieName | Defines the name of the cookie value which represents the session id. Can be useful to change when running in a container which assumes a certain name for the session cookie (e.g. Pivotal assumes 'JSESSIONID' as session cookie name). | XASSESSIONID |
 
@@ -106,7 +106,7 @@ Possible values: HSQLDB, MYSQL, ORACLE, POSTGRESQL, SQLSERVER |   |
 | SourceDatabaseUserName | The user name for the connection to the source database. |   |
 | SourceOracleServiceName | Defines the SERVICE_NAME when you have a connection with an Oracle DBMS as source. |   |
 
-## 5 Amazon S3 Storage Service Settings {#aws3}
+## 5 Amazon S3 Storage Service Settings {#aws-s3}
 
 The following settings influence the behavior of the Amazon S3 Storage Service module. Using these settings manually in the Mendix Cloud is strongly discouraged as the files stored in external systems will not be included in backups creation/restoration.
 
@@ -128,12 +128,6 @@ The following settings influence the behavior of the Amazon S3 Storage Service m
 
 ## 6 Microsoft Azure SQL
 
-{{% alert type="info" %}}
-
-This is supported from Mendix version 6.9.
-
-{{% /alert %}}
-
 These settings can be changed to use a Microsoft Azure SQL database for your Mendix application.
 
 First you need to create an Azure SQL database (for information on how to do this, see this [SQL Database Tutorial](https://azure.microsoft.com/en-us/documentation/articles/sql-database-get-started/)). Make sure your Azure firewall settings allow your Mendix application to reach the Azure SQL database (by default, the Azure firewall doesn't allow external connections).
@@ -147,12 +141,6 @@ First you need to create an Azure SQL database (for information on how to do thi
 | DatabasePassword | your-password |   |
 
 ## 7 Microsoft Azure Blob Storage Settings
-
-{{% alert type="info" %}}
-
-This is supported from Mendix version 6.6
-
-{{% /alert %}}
 
 These settings can be used to store files using the Microsoft Azure blob storage service. Server side encryption can be configured through the Azure Portal (see [https://azure.microsoft.com/en-us/documentation/articles/storage-service-encryption/](https://azure.microsoft.com/en-us/documentation/articles/storage-service-encryption/)).
 
@@ -174,12 +162,6 @@ In Mendix 7.7.0, we changed Azure blob storage's default connection protocol fro
 {{% /alert %}}
 
 ## 8 IBM Cloud (Bluemix) Object Storage Settings
-
-{{% alert type="info" %}}
-
-This is supported from Mendix version 6.7.
-
-{{% /alert %}}
 
 These settings can be used to store files using the IBM Cloud object storage service.
 

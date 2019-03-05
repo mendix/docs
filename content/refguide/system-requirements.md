@@ -120,7 +120,7 @@ MxBuild is a Windows and Linux command-line tool that can be used to build a Men
 * Mono v4.6.x or .NET v4.6.2
 * JDK 8.
 
-### 8.2 Mendix Version 6 & Version 7.0.2
+### 8.2 Mendix Version 7.0.2
 
 * Mono v3.1.0 or .NET v4.5
 * JDK 8

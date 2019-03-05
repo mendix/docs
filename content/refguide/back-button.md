@@ -3,12 +3,6 @@ title: "Back Button"
 parent: "button-widgets"
 ---
 
-{{% alert type="info" %}}
-
-The back button has been renamed to 'close page button' in version 6.7.0.
-
-{{% /alert %}}
-
 Pressing this button will close the popup for popup pages, or navigate to the previously visited page for content pages.
 
 ## Button properties

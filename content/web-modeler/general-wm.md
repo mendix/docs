@@ -44,7 +44,7 @@ When the Web Modeler is not enabled, you can click **Edit App** > **Settings**. 
 Only Scrum Masters or custom **App Team roles** with the **App Settings** permission are allowed to enable the Web Modeler.
 {{% /alert %}}    
 
-On the **Settings** page, the Web Modeler can be enabled by upgrading the existing theme of the app to the [Atlas UI](../../howto/atlasui) theme.
+On the **Settings** page, the Web Modeler can be enabled by upgrading the existing theme of the app to the [Atlas UI](../../howto/front-end/atlas-ui) theme.
 
 ![](attachments/general-wm/enable-wm.png)
 

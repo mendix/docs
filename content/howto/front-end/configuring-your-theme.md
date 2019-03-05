@@ -1,8 +1,8 @@
 ---
 title: "Configure Your Theme"
-category: "UX"
+category: "Front-End"
 menu_order: 10
-tags: ["theming", "UX"]
+tags: ["theming", "UX", "Front-End"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

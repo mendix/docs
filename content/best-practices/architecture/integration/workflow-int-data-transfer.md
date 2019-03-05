@@ -94,7 +94,7 @@ The implemented case gracefully deals with several error scenarios:
 | Scenario | Behavior | Resolution |
 | --- | --- | --- |
 | The order app is temporarily unavailable. | The **Billing app** will keep retrying the pull with the same continuation token. As soon as the order app becomes available, it will start pulling all orders that have been changed in the meantime. | |
-| The **Billing app** is temporarily unavailable. | The deep link from the **Order app** to the **Billing app** will show "application unavailable." | Make sure there is a good [custom error page](/howto/ux/custom-error-page). |
+| The **Billing app** is temporarily unavailable. | The deep link from the **Order app** to the **Billing app** will show "application unavailable." | Make sure there is a good [custom error page](/howto/front-end/custom-error-page). |
 | While pulling, the **Order app** returns an error (for example, the ordering database is unavailable). | See the behavior for **The order app is temporarily unavailable** error handling scenario above, where the **Billing app** will continue polling. | |
 | While pulling, the **Billing app** encounters an error (for example, the support database is unavailable). | Behavior: the **Billing app** does not update the continuation token, so the next time, the pull is retried. | |
 

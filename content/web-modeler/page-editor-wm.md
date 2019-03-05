@@ -16,7 +16,7 @@ To view the **Pages** of your app in the Web Modeler, click the **Pages** icon i
 
 {{% alert type="warning" %}}
 
-The Web Modeler supports apps based on the Atlas UI framework only. For details on Atlas UI, see [Atlas UI](../../howto/atlasui/).
+The Web Modeler supports apps based on the Atlas UI framework only. For details on Atlas UI, see [Atlas UI](../../howto/front-end/atlas-ui).
 
 {{% /alert %}}
 
@@ -29,7 +29,7 @@ Pages of the Web Modeler consist of the following components:
 * **Building blocks** – pre-configured  set of elements that speeds up the process of building your page and styling it. For more information, see section [5.1 Building Blocks](#building-blocks). 
 * **Widgets** – single user-interface elements. For more information, see section [5.2. Widgets](#widgets) and [Widgets in the Web Modeler](page-editor-widgets-wm).
 
-The components described above are powered by Atlas UI. For more information, see [Atlas UI](../../howto/atlasui/). 
+The components described above are powered by Atlas UI. For more information, see [Atlas UI](../../howto/front-end/atlas-ui). 
 
 ## 3 Performing Basic Functions {#page-editor-basic-functions}
 

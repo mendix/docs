@@ -1,8 +1,8 @@
 ---
 title: "Start Styling with Gulp & Sass"
-category: "UX"
+category: "Front-End"
 menu_order: 50
-tags: ["gulp", "sass", "ux"]
+tags: ["gulp", "sass", "ux", "Front-End"]
 ---
 
 ## 1 Introduction
@@ -74,4 +74,4 @@ If you encounter issues using this setup, please read the [Troubleshooting](http
 
 * [mendix / ux-theming](https://github.com/mendix/ux-theming)
 * [How to Create a Custom Theme with the Mendix UI Framework](create-a-custom-theme-with-the-mendix-ui-framework)
-* [How to Extend Design Properties to Customize Your Web Modeler Experience](../atlasui/extend-design-properties-to-customize-the-web-modeler-experience)
+* [How to Extend Design Properties to Customize Your Web Modeler Experience](../front-end/extend-design-properties-to-customize-the-web-modeler-experience)

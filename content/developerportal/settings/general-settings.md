@@ -12,7 +12,7 @@ The **General** settings page presents an overview of your app project with the 
 
 * A **Description** of the app
 * The [App Contact](../company-app-roles/manage-roles#change-app-contact) and [Technical Contact](../company-app-roles/technical-contact) for the app
-* Whether the app is supported for the **Web Modeler** and the ability to **Enable Web Modeler** (for details on getting the full Web Modeler experience, see [How to Migrate Existing Projects to Atlas UI](/howto/atlasui/migrate-existing-projects-to-atlasui))
+* Whether the app is supported for the **Web Modeler** and the ability to **Enable Web Modeler** (for details on getting the full Web Modeler experience, see [How to Migrate Existing Projects to Atlas UI](/howto/front-end/migrate-existing-projects-to-atlasui))
 * The **App ID**
 
 {{% image_container width="550" %}}![](attachments/general-settings.png)

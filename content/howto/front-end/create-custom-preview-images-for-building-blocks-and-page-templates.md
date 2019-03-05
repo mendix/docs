@@ -1,6 +1,6 @@
 ---
 title: "Create Custom Preview Images for Building Blocks & Page Templates"
-category: "Atlas UI"
+parent: "atlas-ui"
 menu_order: 50
 tags: ["Atlas", "UI", "UX", "user experience"]
 ---

@@ -1,5 +1,7 @@
 ---
 title: "Atlas UI"
+category: "Front-End"
+menu_order: 9
 tags: ["Atlas", "UI", "UX", "user experience"]
 ---
 
@@ -55,7 +57,7 @@ Widgets are small user interface elements (alerts, buttons, charts, etc.) used t
 
 You can further customize widgets by changing their design properties. Colors, text, and many other variables can be altered to make the widget what you need it to be.
 
-## 3 Main Documents in This Category
+## 3 Read More
 
 * [Get Started with Atlas UI](get-started-with-atlasui)
 * [Migrate Existing Projects to Atlas UI](migrate-existing-projects-to-atlasui)

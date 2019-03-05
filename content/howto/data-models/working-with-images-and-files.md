@@ -53,7 +53,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
     ![](attachments/18448741/18582126.png)
 
-6.  Create an overview and detail page to manage objects of the entity that you just created. If you don't know how to create those pages, take a look at [this](../ux/create-your-first-two-overview-and-detail-pages) how-to. Your detail page should look like this:
+6.  Create an overview and detail page to manage objects of the entity that you just created. If you don't know how to create those pages, take a look at [this](../front-end/create-your-first-two-overview-and-detail-pages) how-to. Your detail page should look like this:
 
     ![](attachments/18448741/18582125.png)
 
@@ -75,5 +75,5 @@ Before starting this how-to, make sure you have completed the following prerequi
 *   [How to Set Up Data Validation](setting-up-data-validation)
 *   [How to Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
 *   [Stories](/developerportal/collaborate/stories)
-*   [How to Perform the Scout and Windows 10 Workaround](../ux/perform-scout-and-windows-10-workaround)
+*   [How to Perform the Scout and Windows 10 Workaround](../front-end/perform-scout-and-windows-10-workaround)
 

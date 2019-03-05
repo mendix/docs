@@ -1,5 +1,6 @@
 ---
 title: "Atlas UI"
+category: "Front-End"
 tags: ["Atlas", "UI", "UX", "user experience"]
 ---
 

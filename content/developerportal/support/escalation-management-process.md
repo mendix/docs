@@ -64,7 +64,7 @@ This is the normal process for a support case:
 
 ### 6.1 Via Email
 
-Send an email to **escalation@mendix.com** (and CC your Customer Success Manager). Ensure you add the following details to your email for an effective event-based escalation process:
+Send an email to **escalation[at]mendix.com** (and CC your Customer Success Manager). Ensure you add the following details to your email for an effective event-based escalation process:
 
 * Case number
 * Organization name
@@ -74,7 +74,7 @@ Send an email to **escalation@mendix.com** (and CC your Customer Success Manager
 
 ### 6.2 Through the Support Ticket
 
-In the case notes, CC **escalation@mendix.com** and in the case note, do the following:
+In the case notes, CC **escalation[at]mendix.com** and in the case note, do the following:
 
 *	Document the problem description
 *	Provide the business use case for the escalation

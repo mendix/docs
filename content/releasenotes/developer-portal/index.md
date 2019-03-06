@@ -10,9 +10,15 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud V3, and other deploym
 
 ## 2019
 
+### March 5th, 2019
+
+#### Feedback & Support
+
+* We removed the [Mendix Feedback Widget](https://appstore.home.mendix.com/link/app/199/) from the Developer Portal. If you want to report an issue or ask a question, please submit a ticket at [Mendix Support](https://support.mendix.com).
+
 ### February 15th, 2019
 
-#### SAP OData Connector Improvements and Fixes
+#### SAP OData Connector Improvements & Fixes
 
 * We now throw an error which you can catch in a microflow if the destination does not exist, or the app is running locally. Previously the error could not be caught.
 * We fixed some typos in the OData Connector actions.

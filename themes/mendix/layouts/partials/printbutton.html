@@ -10,7 +10,6 @@
     {{- $spacename := index $space "space" -}}
     {{- if eq $spacename "Best Practices" -}}
         {{- $basename := $file.TranslationBaseName -}}
-        {{ $basename }}
         {{- if eq $basename "index" -}}
 <a href="index.pdf" target="_blank" class="mx__page__header__pdf-button ignore_proofer"><i class="glyphicon glyphicon-download-alt"></i>Download PDF</a>
         {{- else -}}

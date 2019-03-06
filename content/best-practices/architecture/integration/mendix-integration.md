@@ -64,15 +64,15 @@ For most integration related to Mendix, there are five solution categories that 
 
 ![](attachments/mendix-integration/solution-categories.png)
 
-* **UI Integration** – This solution category includes, for example, using a deep link from the UI of one app to open the UI of another app (either in the same browser tab or another tab). It also includes content management system integration with, for example, Akamai and other CMSs.
+* **UI integration** – This solution category includes, for example, using a deep link from the UI of one app to open the UI of another app (either in the same browser tab or another tab). It also includes content management system integration with, for example, Akamai and other CMSs.
 
 * **Services** – This is otherwise known as remote procedure call (RPC) integration. This category uses request and reply, and it almost always synchronous.
 
-* **Event-Driven** – This category usually does not have a response, and it is used to distribute data at large scales or large distances, or simply distribute data in a decoupled way.
+* **Event-driven** – This category usually does not have a response, and it is used to distribute data at large scales or large distances, or simply distribute data in a decoupled way.
 
-* **Batch-Oriented** – This category includes exporting, moving, and importing files.
+* **Batch-oriented** – This category includes exporting, moving, and importing files.
 
-* **Central Data** – This category uses a pattern where data is landed and combined in a central place before it is distributed. This could be, for example, an operational data store (ODS); extract, transform, load (ETL); business intelligence (BI); or data lake solution.
+* **Central data** – This category uses a pattern where data is landed and combined in a central place before it is distributed. This could be, for example, an operational data store (ODS); extract, transform, load (ETL); business intelligence (BI); or data lake solution.
 
 ### 3.3 Uses Case & Solution Options
 

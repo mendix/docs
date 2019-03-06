@@ -165,7 +165,7 @@ It is based on the standard Mendix starter app for Mendix version 7.22. It also 
 
 The use of these modules is covered in more detail in [Deploying to MindSphere](/developerportal/deploy/deploying-to-mindsphere).
 
-It also uses the **MindSphere Asset Management Connector**. This is described in [MindSphere Asset Management Connector](/refguide/mindsphere/mindsphere-asset-connector).
+It also uses the **MindSphere Asset Management Connector**. This is described in [MindSphere Asset Management Connector](/refguide/mindsphere/mindsphere-asset-management-connector).
 
 To use the app:
 
@@ -240,7 +240,7 @@ The Access Token action is called at the start of every microflow which accesses
 
 ### 5.3 Asset Management
 
-Asset Management (retrieving assets and asset types) is performed using the MindSphere Asset Management Connector. This is described in [MindSphere Asset Management Connector](/refguide/mindsphere/mindsphere-asset-connector).
+Asset Management (retrieving assets and asset types) is performed using the MindSphere Asset Management Connector. This is described in [MindSphere Asset Management Connector](/refguide/mindsphere/mindsphere-asset-management-connector).
 
 ### 5.4 Native REST
 

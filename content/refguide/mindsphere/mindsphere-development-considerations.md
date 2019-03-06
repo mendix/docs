@@ -141,4 +141,4 @@ Your app should, as a minimum, meet the requirements of the checklist on the Min
 
 ## 6 Read More
 
-* [Siemens MindSphere Deployment](/howto/mindsphere/deploying-to-mindsphere)
+* [Siemens MindSphere Deployment](/developerportal/deploy/deploying-to-mindsphere)

@@ -3,6 +3,7 @@ title: "IBM"
 description: "The reference guide category for using IBM resources from Mendix."
 tags: ["IBM", "IBM Cloud", "Watson"]
 notoc: true
+layout: wide
 ---
 
 ## 1 Introduction

@@ -159,6 +159,7 @@ refguide:
     - "Mobile Development"
     - "SAP"
     - "IBM"
+    - "Siemens MindSphere"
 releasenotes:
   space: "Release Notes"
   priority: false

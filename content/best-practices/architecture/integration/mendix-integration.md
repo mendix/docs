@@ -9,6 +9,23 @@ draft: true
 
 ## 1 Introduction
 
+Mendix handles internal integration via one model and one deployment. This out-of-the-box functionality is a major factor for acceleration, and it is what makes Mendix so efficient as a low-code platform. The app developer can just model business functionality, and the integration from the UX down to the data in a database is handled.
+
+If the right Apps or Microservices are created, there will limited or simple external integration. But most larger solutions require integration with other apps and other existing systems, and sometimes must cross firewalls. 
+Such integration is easy with Mendix, but there are many options to choose from. Integration is like the glue between components in a solution, and it needs to be adaptable for all possible functional and technical scenarios.
+As more core systems are being built using Mendix microservices, integration is increasingly important. This document discusses different types of integration and when one way to solve the problem may be better than another.
+
+
+
+
+
+
+
+
+# OLD
+
+## 1 Introduction
+
 Mendix makes it easy to build, update, and maintain an apps and microservices that
 fulfill business functions. Usually business functions need a GUI, logic, and data. The internal integration of those layers is handled by Mendix, but for most apps and microservice architectures, integration with other systems is necessary.
 

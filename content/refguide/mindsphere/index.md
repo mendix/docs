@@ -27,5 +27,5 @@ A guide covering things which you should address when developing for MindSphere.
 
 ## 3 Read More
 
-* [Siemens MindSphere (deployment)](/developerportal/deploy/deploying-to-mindsphere)
-* [MindSphere Example App](/howto/mindsphere/mindsphere-example-app)
+* [Siemens MindSphere - deployment](/developerportal/deploy/deploying-to-mindsphere)
+* [How to Use the Siemens MindSphere Pump Asset Example App](/howto/mindsphere/mindsphere-example-app)

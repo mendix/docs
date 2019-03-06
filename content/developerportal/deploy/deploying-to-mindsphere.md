@@ -20,7 +20,7 @@ You can create Mendix apps which make MindSphere API calls, but which are deploy
 There are some limitations to what you can do in your Mendix app if it is deployed to MindSphere. See the [Limitations](#limitations) section below for more information.
 {{% /alert %}}
 
-To help you with your first MindSphere apps, there is also an example app which contains modules which call the MindSphere APIs. Please see [How to Use the MindSphere Example App](/howto/mindsphere/mindsphere-example-app) for more information.
+To help you with your first MindSphere apps, there is also an example app which contains modules which call the MindSphere APIs. Please see [How to Use the Siemens MindSphere Pump Asset Example App](/howto/mindsphere/mindsphere-example-app) for more information.
 
 ## 2 Starter App & Theme Pack
 
@@ -145,7 +145,7 @@ This microflow populates the *Name* attribute of the *Tenant* entity and the *Em
 If the same user logs in using a different tenant, Mendix will treat this as a different user and a User ID will be used within Mendix instead of a user name. 
 {{% /alert %}}
 
-For advice on how to make your apps multi-tenant, see section 5.2, [Multi-Tenancy](/refguide/mindsphere/mindsphere-development-considerations#multitenancy) in *MindSphere Development Considerations*.
+For advice on how to make your apps multi-tenant, see [Multi-Tenancy](/refguide/mindsphere/mindsphere-development-considerations#multitenancy) in *MindSphere Development Considerations*.
 
 #### 2.2.3 Local User Passwords
 
@@ -329,16 +329,13 @@ To create a new app in the MindSphere launchpad, do the following:
 default-src 'self' 'unsafe-inline' 'unsafe-eval' static.eu1.mindsphere.io sprintr.home.mendix.com; font-src 'self' static.eu1.mindsphere.io fonts.gstatic.com; style-src * 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval' static.eu1.mindsphere.io sprintr.home.mendix.com; img-src * data:;
     ```
 
-    {{% alert type="info" %}}These content security policy settings are needed to ensure that the MindSphere OS Bar and the Mendix *Feedback* widget are loaded correctly. You may need to set additional CSP settings if you make additional calls to other domains (for example, if you use Google maps from maps.googleapi.com).{{% /alert %}}
+    {{% alert type="info" %}}These content security policy settings are needed to ensure that the MindSphere OS Bar and the [Mendix Feedback Widget](https://appstore.home.mendix.com/link/app/199/) are loaded correctly. You may need to set additional CSP settings if you make additional calls to other domains (for example, if you use Google maps from maps.googleapi.com).{{% /alert %}}
 
 7.  Click **Save** to save these details.
 8.  Click **Register** to register your app with the MindSphere launchpad.
 
     {{% alert type="info" %}}If the app has not been pushed yet, there will be no route set up for the app and you will get an error message. This will be resolved once you have pushed your app to Cloud Foundry{{% /alert %}}
     
-
-{{% todo %}}[**ADD A LINK ABOVE TO EITHER FEEDBACK WIDGET DOC OR APP STORE ITEM; USE FULL NAME: Mendix Feedback Widget**]{{% /todo %}}
-
 #### 3.2.2 Scopes in Developer Cockpit{#scopes}
 
 To set up the appropriate scopes in MindSphere, do the following:
@@ -423,8 +420,6 @@ Mendix apps can currently only be deployed to MindSphere running on AWS (Amazon 
 For additional help on local testing, multi-tenancy, and other MindSphere development considerations, see [MindSphere Development Considerations](/refguide/mindsphere/mindsphere-development-considerations).
 
 ## 6 Appendices
-
-{{% todo %}}[**IF THESE APPENDICES ARE REALLY NECESSARY, SHOULDN'T THEY GO IN PREPARATION SECTIONS ABOVE (LIKE FOR THEME PACK)?]{{% /todo %}}
 
 ### 6.1 index.html{#indexhtml}
 

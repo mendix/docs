@@ -1,16 +1,16 @@
 ---
-title: "Use the MindSphere Example App"
+title: "Use the Siemens MindSphere Pump Asset Example App"
 category: "Siemens MindSphere"
 tags: ["Siemens", "MindSphere", "Example", "Asset Management", "Time Series", "REST", "API", "Pump"]
 ---
 
 ## 1 Introduction
 
-You can write Mendix apps which analyze data held in MindSphere, the open, cloud-based IoT operating system from Siemens. To help you build your app, the [MindSphere Pump Asset Example](https://appstore.home.mendix.com/link/app/108810/) app is available in the Mendix App Store and can be used as the starting point for a new Mendix app.
+You can write Mendix apps which analyze data held in MindSphere, the open, cloud-based IoT operating system from Siemens. To help you build your app, the [Siemens MindSphere Pump Asset Example](https://appstore.home.mendix.com/link/app/108810/) app is available in the Mendix App Store and can be used as the starting point for a new Mendix app.
 
 This documentation provides more explanation of the MindSphere example app. Please note that this app is not production-ready. It is designed as an example of how you might begin to build a Mendix/MindSphere app.
 
-You can get more detailed information on how to deploy your app to the MindSphere Platform in [Deploying to MindSphere](/developerportal/deploy/deploying-to-mindsphere).
+You can get more detailed information on how to deploy your app to the MindSphere Platform in [Siemens MindSphere - deployment](/developerportal/deploy/deploying-to-mindsphere).
 
 ## 2 Prerequisites
 
@@ -32,7 +32,7 @@ Open the (empty) Desktop Modeler and follow these steps:
 
 	![](attachments/mindsphere-example-app/app-store-icon.png)
 
-2. Enter *MindSphere* in the search box, and in the search results, select **MindSphere Pump Asset Example**:
+2. Enter *MindSphere* in the search box, and in the search results, select **Siemens MindSphere Pump Asset Example**:
 
 	![](attachments/mindsphere-example-app/app-store-search.png)
 
@@ -110,7 +110,7 @@ More information on creating assets is available in the MindSphere [Asset Manage
 
 To deploy the example app, you will need to configure the app, push it to Cloud Foundry, and set it up in the MindSphere launchpad.
 
-These instructions are available in the deployment documentation: [Deploying to MindSphere](/developerportal/deploy/deploying-to-mindsphere).
+These instructions are available in the deployment documentation: [Siemens MindSphere - deployment](/developerportal/deploy/deploying-to-mindsphere).
 
 {{% todo %}}[**HOW TO THE SECTIONS BELOW RELATE TO THE Deploying DOC? DO THEY HAVE TO BE DONE IN ADDITION TO THAT DOC? DOES THE ORDER MATTER? DO THE SECTIONS BELOW NEED TO GO INTO THE Deploying DOC?**]{{% /todo %}}
 
@@ -153,7 +153,7 @@ Without these core roles, the app will not have access to the asset management o
 
 For more information see the MindSphere documentation [Roles & Scopes for Applications](https://developer.mindsphere.io/concepts/concept-roles-scopes.html#asset-management).
 
-## 4 MindSphere Pump Asset Example App
+## 4 Siemens MindSphere Pump Asset Example App
 
 The **PumpAssetExample** module within the app uses the MindSphereAssetManagementConnector and MindSphere APIs, via Mendix native REST, to create and view time series information for an asset.
 
@@ -163,7 +163,7 @@ It is based on the standard Mendix starter app for Mendix version 7.22. It also 
 * MindSphere Theme Pack
 * MindSphere OS Bar Connector
 
-The use of these modules is covered in more detail in [Deploying to MindSphere](/developerportal/deploy/deploying-to-mindsphere).
+The use of these modules is covered in more detail in [Siemens MindSphere - deployment](/developerportal/deploy/deploying-to-mindsphere).
 
 It also uses the **MindSphere Asset Management Connector**. This is described in [MindSphere Asset Management Connector](/refguide/mindsphere/mindsphere-asset-management-connector).
 

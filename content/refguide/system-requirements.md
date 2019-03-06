@@ -14,7 +14,7 @@ The following frameworks are automatically installed (if necessary):
 * Microsoft .NET Framework 4.6.2
 * Microsoft Visual C++ 2010 SP1 Redistributable Package
 * Microsoft Visual C++ 2013 Redistributable Package
-* Java Development Kit 1.8
+* OpenJDK 8 (support added in Mendix 7.23.3) or Java Development Kit 1.8
 
 {{% alert type="warning" %}}
 

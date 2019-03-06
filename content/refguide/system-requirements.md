@@ -62,11 +62,7 @@ The Mendix Web Modeler is optimized for use with Chrome. While Chrome is the off
 
 ### Java
 
-When running Mendix on a server you will need Java Runtime Environment (JRE) 8.
-
-You can download JREs here:
-
-[http://www.oracle.com/technetwork/java/javase/downloads/index.html](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
+When running Mendix on a server, you will need Java Runtime Environment (JRE) 8. To download an OpenJDK distribution from AdoptOpenJDK see [AdoptOpenJDK downloads](https://adoptopenjdk.net/installation.html). To download a commercial Oracle distribution see [Java SE Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html).
 
 There is an issue since Java 7, causing timeouts when using Web Services with a certain amount of data. You can circumvent this issue by adding the VM params "`-Djava.net.preferIPv4Stack=true`". The Mendix Desktop Modeler will do this for you but if you are running Mendix on premise on a Windows server you will need to do this yourself.
 

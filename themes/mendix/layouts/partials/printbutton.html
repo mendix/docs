@@ -1,1 +1,13 @@
+{{- $pdfLink := replace .Page.URL ".html" ".pdf" -}}
+{{- $site := .Site -}}
+{{- $spaces := .Site.Data.spaces -}}
+{{- $paths := split .File.Dir "/" -}}
+{{- $main := index $paths 0 -}}
+{{- $space := index $spaces $main -}}
+{{- with $space -}}
+    {{- $spacename := index $space "space" -}}
+    {{- if eq $spacename "Best Practices" -}}
+<a href="{{ $pdfLink }}" target="_blank" class="mx__page__header__pdf-button ignore_proofer"><i class="glyphicon glyphicon-download-alt"></i>Download PDF</a>
+    {{- end -}}
+{{- end -}}
 <a class="mx__sub-header__print-button pdf-print" href="#" title="Download PDF"><i class="glyphicon glyphicon-download-alt"></i>Download PDF</a>

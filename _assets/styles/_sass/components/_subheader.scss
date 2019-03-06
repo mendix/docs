@@ -23,6 +23,8 @@ $block: 'mx';
 
     @include element('edit-button') {
       float: right;
+      display: inline-block;
+      margin: 0px 0px 5px 0;
       i {
         margin-right: 3px;
       }

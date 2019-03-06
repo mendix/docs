@@ -9,25 +9,7 @@ draft: true
 
 ## 1 Introduction
 
-Mendix handles internal integration via one model and one deployment. This out-of-the-box functionality is a major factor for acceleration, and it is what makes Mendix so efficient as a low-code platform. The app developer can just model business functionality, and the integration from the UX down to the data in a database is handled.
-
-If the right Apps or Microservices are created, there will limited or simple external integration. But most larger solutions require integration with other apps and other existing systems, and sometimes must cross firewalls. 
-Such integration is easy with Mendix, but there are many options to choose from. Integration is like the glue between components in a solution, and it needs to be adaptable for all possible functional and technical scenarios.
-As more core systems are being built using Mendix microservices, integration is increasingly important. This document discusses different types of integration and when one way to solve the problem may be better than another.
-
-
-
-
-
-
-
-
-# OLD
-
-## 1 Introduction
-
-Mendix makes it easy to build, update, and maintain an apps and microservices that
-fulfill business functions. Usually business functions need a GUI, logic, and data. The internal integration of those layers is handled by Mendix, but for most apps and microservice architectures, integration with other systems is necessary.
+Mendix makes it easy to build, update, and maintain an apps and microservices that fulfill business functions. Usually business functions need a GUI, logic, and data. The internal integration of those layers is handled by Mendix, but for most apps and microservice architectures, integration with other systems is necessary.
 
 {{% todo %}}[**EXPLAIN DIAGRAM; UX-UPDATE DIAGRAM**]{{% /todo %}}
 
@@ -35,11 +17,21 @@ fulfill business functions. Usually business functions need a GUI, logic, and da
 
 So, you do not have to worry about the integration of internal app layers. However, the Solution Architect or Lead Developer does need to design good microservices and interfaces that can integrate seamlessly with other apps and systems in the enterprise.
 
+In Mendix, all the integration goes via the app's runtime server, which is a clear advantage for security and control, as presented in this diagram:
+
+{{% todo %}}[**EXPLAIN DIAGRAM; UX-UPDATE DIAGRAM**]{{% /todo %}}
+
+![](attachments/mendix-integration/runtime.png)
+
 Mendix handles a large array of formats and protocols. For more information, see the [Integration how-to's](/howto/integration/).
 
 The most important thing to do is to choose the right integration option from a lot of possibilities. These best practices will present an overview of integration methods and typical use cases.
 
-## 2 Always Think *Functionally* First {#functionally}
+### 1.1 Security
+
+The standard for security is to almost always use encrypted channels: SSL for service calls and SFTP for files. This always allows an app to be on different clouds and data centers will communicating safely.
+
+### 1.2 Always Think *Functionally* First {#functionally}
 
 The first best practice is to have an open mind regarding integration requirements. Think about what the integration need really is and consider more than one option for the solution.
 
@@ -84,11 +76,8 @@ For most integration related to Mendix, there are five solution categories that 
 * **UI integration** – This solution category includes, for example, using a deep link from the UI of one app to open the UI of another app (either in the same browser tab or another tab). It also includes content management system integration with, for example, Akamai and other CMSs.
 
 * **Services** – This is otherwise known as remote procedure call (RPC) integration. This category uses request and reply, and it almost always synchronous.
-
 * **Event-driven** – This category usually does not have a response, and it is used to distribute data at large scales or large distances, or simply distribute data in a decoupled way.
-
 * **Batch-oriented** – This category includes exporting, moving, and importing files.
-
 * **Central data** – This category uses a pattern where data is landed and combined in a central place before it is distributed. This could be, for example, an operational data store (ODS); extract, transform, load (ETL); business intelligence (BI); or data lake solution.
 
 ### 3.3 Uses Case & Solution Options
@@ -122,9 +111,8 @@ The table below presents use cases that you can reference  for more detail. The 
 | Integration with AI & Machine Learning | | <p>&#9989;</p> | <p>&#10003;</p> | | <p>&#9989;</p> |
 
 To read these use cases, start with [Integration Use Cases](integration-use-cases).
-## 4 Integration Styles
 
-{{% todo %}}[**ADD MORE DIAGRAMS/IMAGES IN THE SECTIONS BELOW**]{{% /todo %}}
+## 4 Integration Styles
 
 ### 4.1 Request–Reply (Most Frequently Used)
 
@@ -132,37 +120,163 @@ Request–reply is a collaboration style in which whoever initiates the integrat
 
 Request–reply is more deterministic and therefore easier to think about. If it times out, it is possible to try again later (if relevant). If it there is an error message, the calling system can react directly by setting a flag, starting an error workflow, or displaying an error message on the screen that helps the end-user correct the problem immediately.
 
-### 4.2 UI Integration
+This diagram shows that within request–reply, there are three basic options:
 
-Integration via a UI link is becoming more common. This enables developing a UI only once in the app where it belongs, and then linking and directing other users there when they need to perform that process.
+* Pulling data or a business event from another system
+* Pushing data to another system or initiating a process there
+* Using a service layer in between, such as API management
+
+{{% todo %}}[**UX-UPDATE DIAGRAM**]{{% /todo %}}
+
+![](attachments/mendix-integration/request-reply.png)
+
+The "puul" request–reply version is the most commonly used option when replicating data from point A to point B. The reason for this is that the system that needs the data is in charge of triggering the interface. To know what has changed, there are 3-4 options, explained in the section “Request-Reply Options”.
+
+{{% todo %}}[**WHERE IS THIS "Request-Reply Options" SECTION?**]{{% /todo %}}
+
+### 4.2 UI Integration
 
 In microservice systems, there is often a dashboard app, portal, or landing page where people sign in (for example, via single sign-on). This often contains workflows, overviews, and statuses. When the end-user wants to perform real work in an area, they are deep-linked into another app to work there.
 
-Depending on the business requirements, the second app can be opened in the same tab so that the end-user is unaware of working in several apps. If parallel work in two areas is preferred, there could be a separate tab opened.
+Integration via a UI link is becoming more common. This enables developing a UI only once in the app where it belongs, and then linking and directing other users there when they need to perform that process.
 
 UI integration can also have an advantage for mastering data, since the process and UX validations of information are always done in the same way. When the work is done, a relevant part of the new data can be copied back to the other app.
+
+These are the main variations, depending on the business requirements:
+
+* The  second app is opened in the same tab, and the user is unaware of working in several apps
+* If parallel work in two areas is preferred, another tab is opened, and the user can work in both aspps simultaneously
+* Mendix is running in a functional portal within another web page that is provided by a content management system (CMS)
+* Mendix is running a portal and using a content delivery network (CDN) such as Akamai to quickly show pictures in a geo-scaled solution
+
+This diagram presents the most typical deep-linking option:
+
+{{% todo %}}[**UX-UPDATE DIAGRAM**]{{% /todo %}}
+
+![](attachments/mendix-integration/ui-int.png)
+
+### 4.3 File Integration & transfer
+
+File integration is highly relevant for many implementations, especially when it comes to pictures and PDFs (for example, for marketing or instruction manuals). Files are also used to extract data from one app and later import it into another app (for more details, see the [Batch Processing, Export & Import](#batch) section below). And, of course, this is used for backup and restore.
+
+Each Mendix app has a dedicated file storage area to which it will write files by default. This is also where the Mendix app log file is located, by default.  The size of this area is large enough to handle most regular file management, and it can be extended if there are special needs to quickly access and show a large number of files.
+
+Depending on the size of the file, the urgency, and the network situation, the app that needs to use a file can read a file from a remote location or copy the file to his own folder first.
+
+The diagram below presents these options with some additional points:
+
+1. Call the source app via REST to request the specific file.
+2. Read and write the files to a shared file location or drive.
+3. Move the file via SFTP, which can be either push or pull. This requires the [SFTP](https://appstore.home.mendix.com/link/app/107256/) App Store module and a Java action.
+4.	Using an enterprise service bus (ESB) or a manager file transfer (MFT) solution usually also requires FTP, where the file is pushed to MFT and pulled from there by subscribers.
+
+{{% todo %}}[**UX-UPDATE DIAGRAM**]{{% /todo %}}
+
+![](attachments/mendix-integration/file-integration.png)
+
+In simple instances and smaller files, a REST call is enough. Considering other interfaces using REST, it is recommended as the first choice.
+
+If there are a lot of (heavy) files, it is better to use a shared location and/or move the files using SFTP, for example.
+
+For the many-to-many file transfers, MFT can be an option. In a small scale, this function can even be built as a Mendix microservice specializing in this.
+
+### 4.4 Batch Processing, Export & Import {#batch}
+
+Even in a "real-time" world, file integration and batch processing remain relevant. Batch processing runs a large set of data at a certain moment. Interfaces towards data warehouse (DWH) and BI are often bulk and/or snapshot oriented. The same is true for initial loads of systems or the distribution of reference data.
+
+Other business processes remain periodic (for example, salary payments), but interest calculations and even monitoring solutions typically have an agent that batches up some data before sending events with many records in order to save on processing power. These use cases are best implemented in batch-oriented interfaces, mostly using files. This means that batch processing, export, and import will stay important in the future.
+
+One advantage of batch is that systems are decoupled, meaning, the export and import can run at different times. The interface can be “re-run” and/or use a workflow that handles errors. Another advantage is that processing bulk is more CPU-efficient, and it can often be done at night, when the other load is lower.
+
+As indicated, files can be read remotely or copied back to the app file space first, based on how close the apps are on the network and depending on the size of the data and other restrictions that may exist.
+
+The most common format is CSV import and export, which also work well with Excel integration. The [Excel importer](https://appstore.home.mendix.com/link/app/72/) module in the Mendix App Store is one of the most commonly used modules available.
+
+When there are text fields in the data, there should be more complex field separators than commas. In the "to" and "from" legacy systems, one can see fixed-length fields, which requires a microflow to be built to read the data correctly using character position.
+
+This diagram shows the three main steps of exporting, moving, and importing a file. Batch processing can involve all three steps, or it can only be related to an export or import. There are extract, transform, load (ETL) system solutions that can perform all three steps and add data mapping in the middle.
+
+{{% todo %}}[**UX-UPDATE DIAGRAM**]{{% /todo %}}
+
+![](attachments/mendix-integration/batch-processing.png)
+
+### 4.5 Database Integration & OData
+
+Mendix can integrate directly with external databases using OSQL, OData, or SQL.
+
+OData is the preferred method if it is available, because it provides a clear contract and is directly supported from the Mendix Platform. However, it does require both sides of the integration to support OData (for example, the integration from Mendix to SAP is well supported via OData contracts).
+
+OData can be used between Mendix apps for reading out data directly and from a BI solution to retrieve data from a Mendix app closer to real-time than using a daily batch-file. The reason to do this could be that a good REST service is not available. It could be an old legacy database where the data model never changes or changes very rarely, so that there is little risk for the calls to fail due to changes in the system below. For a Mendix app to get data from a legacy application that should no longer be changed, it is unlikely that OData is available, and then direct SQL is often used.
+
+In all the cases where database integration is done, it is recommended to have some level or “padding” from the base database tables, so that when things change in the source system, the integration still works:
+
+* For read contracts, a database view is recommended that provides a simplification of the SQL required in the Mendix Java action that calls it
+* Updating and creating objects in the external database via a stored database procedure is recommended, as that can do the necessary validation and perform the update in a consistent way (that the calling app itself should not be aware of)
+
+This diagram presents the most common cases of OData integration and direct database integration.
+
+{{% todo %}}[**UX-UPDATE DIAGRAM**]{{% /todo %}}
+
+![](attachments/mendix-integration/database-int.png)
+
+{{% alert type="warning" %}}
+Never do direct SQL across firewalls.
+{{% /alert %}}
 
 ### 4.3 Event-Driven Trends
 
 At the moment, event-driven architectures are making their return into the mainstream of integration. This follows an increased interest in and focus on, for example, IoT solutions, distributed networks of actors, and central monitoring. Several solution providers are promoting new paradigms for managing large, distributed, high-volume event driven architectures.
 
+The main characteristic for event-driven trends is that the process that produces events or data does not communicate directly to the target system. Rather, it creates an “event” message that is put on a queue for asynchronous delivery. This means that the triggering process will not know directly if the message arrives or if there were errors in the delivery.
+
+#### 4.3.1 What Can Be Used as as Queue?
+
+The queue that is used depends on the situation. It can be an internal queue in the source system, or an external queue management system, such as Kafka or any other standard queueing system on the market.
+
+Mendix itself does not currently provide an external queue management system, but in the App Store, there are connectors to most standard queue managers on the market. There are plans to eventually provide Kafka as a queueing system “under the hood.”
+
+{{% todo %}}[**ADD APP STORE LINKS? VERIFY LAST SENTENCE SHOULD BE KEPT**]{{% /todo %}}
+
+In the App Store, there is an [Process Queue](https://appstore.home.mendix.com/link/app/393/) module available that is used by many customers both as an out-bound queue and an inbound queue. The advantage of this is that there is no external technology to deploy and manage. The limitation with internal queues is that, in the end, a request–reply is required to move the event, or it must be pushed via a file-based interface. This is only a limitation if there are large geographical distances or many subscribers and publishers.
+
+{{% todo %}}[**EXPLAIN DIAGRAM; UX-UPDATE DIAGRAM**]{{% /todo %}}
+
+![](attachments/mendix-integration/queue.png)
+
+#### 4.3.2 Reasons to Go Event-Driven
+
+Always consider a synchronous request–reply as the standard option for integration, because it is the simplest and most robust way to integrate when you want to make sure that the data or event arrives safely in the destination. This means that it is easier to think about and easier to manage errors that way.
+
+There are some clear cases where event-driven integration is preferred:
+
+* If it is truly a one-way communication (meaning, the source of the data/event expects no answer back, and the destination always accepts all messages)
+* There is a very high volume (as in, > 1000 messages per second could mean that request reply becomes less efficient)
+* You can afford to lose a message or two (as occurs with stock tickers, IoT, and logging messages), thus you are looking for trends or having the next message overwrite the previous one
+* Geographical distances or network issues makes direct communication impossible or unstable
+	* If guaranteed delivery is required in this case, it is recommended to use a state engine in the middle, or use an asynchronous request–reply (as in, have a two-way event-driven communication)
+* Where there are many publishers and many subscribers, that should be as fast as possible in the same shape on hundreds of servers around the world or employ user metrics in the same use case (LinkedIn created Kafka to solve this problem)
+
+{{% todo %}}[**ABOVE LINE ABOUT "user metrics" IS UNCLEAR**]{{% /todo %}}
+ 
+In the diagram below, some typical event use cases are shown. Note that Kafka is also a great choice for fire-and-forget, and network distances and ESBs can also handle large volumes.
+
+![](attachments/mendix-integration/event-use-cases.png)
+
+The internal queue provides the best control over delivery of business events in a one-to-one situation, because it only has two parts involved. However, this is not suited for massive volumes or if the two systems are hard to connect via a network.
+
+#### 4.3.3 One-Way Communication
+
 The key to event-streams is that they (often) only flow in one direction. A device leaving metrics in an IoT system does not expect an immediate answer to the data it ships. Additionally, there could be very many devices that are geographically distributed and shipping a lot of data. Request–reply is neither needed nor practical for inbound IoT, but for commanding a drone or other device, for example, it is highly recommended.
 
-IoT, AI, and Big-Data integration is only the beginning of an expected explosion of new IT that will be built alongside the existing IT landscape. In the coming years, Mendix and Siemens will invest heavily in this area. With this perspective, Kafka and other event-based architectures will play an important role in the coming years.
+IoT, AI, and big-data integration is only the beginning of an expected explosion of new IT that will be built alongside the current IT landscape. In the coming years, Mendix and Siemens will invest heavily in this area. With this perspective, Kafka and other event-based architectures will play an important role in the coming years.
 
-{{% todo %}}[**VERIFY THAT SIEMENS/INVESTMENT MENTION ABOVE IS OKAY**]{{% /todo %}}
+#### 4.3.4 IoT, MindSphere & Kafka
 
-In conclusion, we foresee IoT, AI, and business intelligence (BI) counting as professional systems and requiring professional developers that handle queues, Kafka, and large databases.
+IoT, Kafka, and other event-based architecture will play an important role in the coming years. Mendix is working to incorporate Kafka into the platform, and a seamless integration with MindSphere was recently set up.
 
-### 4.4 Batch-Oriented, Export & Import
+{{% todo %}}[**VERIFY CLAIMS FOR KAFKA AND MINDSPHERE**]{{% /todo %}}
 
-Batch oriented integration runs a large set of data at a certain moment. Interfaces towards data warehouse (DWH) and BI are often bulk and/or snapshot oriented. The same is true for initial loads of systems or the distribution of reference data.
-
-More processes are becoming real-time, but a lot of business processes are still periodic in nature (for example, salary payments and interest calculations). These use cases are best implemented in batch-oriented interfaces.
-
-Files and database dumps will remain important in the future. The advantage of batch is that systems are decoupled and the export and import operations can run at different times. The interface can be “re-run” again and/or use a workflow that handles errors.
-
-Processing data in bulk is also more CPU efficient. If it is periodic, it can usually be done at night, when other loads are much lower.
+Mendix will in these cases usually work as the dashboard for event streams and sometimes as the control center for devices and other connected items.
 
 ### 4.5 API Management & ESBs
 
@@ -182,7 +296,7 @@ A typical use case here is if a company has 10 business lines with different ord
 
 Many users use Mendix apps to create such a pattern for a specific area. It is easy to define the data, logic, lookups, and a human workflow to manage errors.
 
-An extract, transform, load (ETL) system works in a similar way by extracting data from one system, storing
+An ETL system works in a similar way by extracting data from one system, storing
 the data from the last extract, maybe combining with reference data, and then sending it on.
 
 A data lake functions like an enterprise-wide ODS that doubles as a BI and DWH system. It is a big undertaking to make this work, and there is an issue when trying to combine operational data and snapshot-type data that is used for statistics.

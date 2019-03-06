@@ -139,8 +139,7 @@ After executing the test case, don't forget to download the video file or give i
 
 To install a hub with a Portal for "Live-View" you need a different browsers.json and docker-compose.yml file. To add a "Live-View" follow these steps:
 
-1. Create a browsers
-.json with VNC browser image:
+1. Create a browsers.json with VNC browser image:
 
    ```
    {

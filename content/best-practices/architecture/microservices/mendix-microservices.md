@@ -54,10 +54,6 @@ Microservices is more relevant if the scope is large. By reading this document, 
 
 Having a team with no more than 10 people owning a component will help you to build the best possible microservices architecture. In a cross-functional DevOps team, these 10 people would include a Product Owner, Business Analyst, Tester, and an Operations person. This means that 6–8 developers on a team is already a lot.
 
-At a microservices training session with [Sam Newman](https://samnewman.io/talks/principles-of-microservices/) in Amsterdam, a relatively new Mendix developer named Jurre Tanja from [Friesland Campina](https://www.frieslandcampina.com/en/) noted the following: 
-
-<blockquote><p>Mendix makes microservices by default. We get feature-based teams, and we don’t have to worry about accessing another app's database directly.</p></blockquote>
-
 Mendix promotes keeping together what belongs functionally together. By having all the parts needed for a business function in one project (which equals one model, which equals one deployable), we can guarantee the integrity between data, UI, and logic starting with the developer through the testing cycles and until it runs as an app in production.
 
 Other apps or components can only access data and functions via well-defined APIs by using explicit contracts. The APIs are very easy to set up via REST, SOAP, OData, files, or any other mechanism. But access to data and service is controlled via the Mendix Runtime. That way only right caller can only allowed operations that are provided by the App Team who owns the data in that app.

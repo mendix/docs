@@ -2,14 +2,13 @@
 title: "MindSphere Asset Management Connector"
 category: "Siemens MindSphere"
 #menu_order: Enter the position of the document in the category or under the parent; number by 10 (for first), 20, 30, etc. for easy ordering of other documents in the future if necessary; don't add brackets or quotation marks; if no number is added, the system will add an extremely high number to order the documents, which means that if you only want a document to appear at the top, you only have to add "10" to that specific document, you don't have to order all the other documents in the category/under the parent
-#description: "Set a description with a maximum of 140 characters; this should describe what the goal of the document is, and it can be different from the document introduction; this is optional, and it can be removed"
-#tags: [Add a maximum of 5-7 tags/keywords; keep them focused on the most important topics of the document; each tag should have quotation marks and be separated by a comma, for example: "Samba", "MxCloud", "cloud", "share"; the tags should be enclosed with brackets and quotation marks]
-draft: true
+description: "Documentation of the MindSphere Asset Management Connector"
+tags: ["MindSphere", "Asset", "Asset Type", "Connector"]
 ---
 
-## 1 Introduction{#assetconnector}
+## 1 Introduction
 
-The MindSphereAssetManagementConnector module is the standard connector for managing assets within MindSphere. It is also available as a stand-alone module in the App Store: [MindSphere Asset Management Connector](https://appstore.home.mendix.com/link/app/108806/). It is also used in the [MindSphere Example App](*********************************). 
+The MindSphereAssetManagementConnector module is the standard connector for managing assets within MindSphere. It is also available as a stand-alone module in the App Store: [MindSphere Asset Management Connector](https://appstore.home.mendix.com/link/app/108806/). It is also used in the [Siemens MindSphere Pump Asset Example](https://appstore.home.mendix.com/link/app/108810/). 
 
 This module contains a Mendix domain model which maps the data structure of MindSphere assets. It also provides two microflow actions which can be used to retrieve assets and asset types from MindSphere:
 

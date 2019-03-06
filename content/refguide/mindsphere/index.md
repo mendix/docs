@@ -2,7 +2,6 @@
 title: "Siemens MindSphere"
 description: "Reference Guides for Apps deployed to MindSphere"
 tags: ["Siemens", "MindSphere"]
-draft: true
 notoc: true
 #layout: wide
 ---

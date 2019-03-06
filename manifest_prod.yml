@@ -8,5 +8,6 @@ applications:
   instances: 2
   domain: mendix.com
   host: docs
+  stack: cflinuxfs3
   env:
     FORCE_HTTPS: true

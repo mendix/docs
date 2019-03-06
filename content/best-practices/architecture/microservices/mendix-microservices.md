@@ -1,6 +1,7 @@
 ---
 title: "Mendix Microservices"
 parent: "microservices-overview"
+draft: true
 tags: ["microservices"]
 ---
 

@@ -8,7 +8,7 @@ tags: ["MindSphere", "deploy", "cloud foundry", "launchpad", "scopes", "roles", 
 
 ## 1 Introduction
 
-MindSphere is the open, cloud-based IoT operating system from Siemens that lets you connect your machines and physical infrastructure to the digital world. It lets you harness big data from billions of intelligent devices, enabling you to uncover transformational insights across your entire business.
+MindSphere is the open, cloud-based, IoT operating system from Siemens that lets you connect your machines and physical infrastructure to the digital world. It lets you harness big data from billions of intelligent devices, enabling you to uncover transformational insights across your entire business.
 
 This documentation is meant for Mendix developers who want to deploy a Mendix app to the MindSphere Platform.
 
@@ -26,29 +26,31 @@ To help you with your first MindSphere apps, there is also an example app which 
 
 You will need to customize your app to allow it to be deployed to MindSphere and to allow it to be registered via the MindSphere Developer Cockpit and be shown in the launchpad.
 
-### 2.1 Obtaining MindSphere Customization
+### 2.1 Obtaining MindSphere Customization Modules
 
-There are two ways to include the customization you need in your app.
+You must include special customization to allow your app to run on MindSphere. There are two ways to include the customization you need in your app.
 
 #### 2.1.1 Using the MindSphere Starter App
 
 The **MindSphere Starter Application** in the Mendix App Store contains all the modules and styling which you need to create an app you want to deploy to MindSphere.
 
-Open the (empty) Desktop Modeler and follow these steps:
+Open the (empty) Desktop Modeler (version 7.22.2 or above) and follow these steps:
 
-1. Click the icon in the top-left of the menu bar to open the Mendix App Store:
+1. Click the icon in the top-right of the menu bar to open the Mendix App Store:
 
 	![](attachments/deploying-to-mindsphere/app-store-icon.png)
 
-2. Enter *MindSphere* in the search box, and in the search results, select **MindSphere Starter Application**:
+2. Enter *MindSphere* in the search box, and click the magnifying glass icon.
+
+3. Select **MindSphere Starter Application** in the search results:
 
 	![](attachments/deploying-to-mindsphere/app-store-search.png)
   
-3. Click **Download** to create a new app project using this app:
+4. Click **Download** to create a new app project using this app:
 
 	![](attachments/deploying-to-mindsphere/app-store-download.png)
   
-4. To start the new app project, confirm where to store the app, the app name, and the project directory, then click **OK**:
+5. To start the new app project, confirm where to store the app, the app name, and the project directory, then click **OK**:
 
 	![](attachments/deploying-to-mindsphere/app-store-download-project.png)
 
@@ -56,20 +58,13 @@ Open the (empty) Desktop Modeler and follow these steps:
 This is the recommended approach if you are building a new application, as it will provide all the necessary building blocks to get started.
 {{% /alert %}}
 
-#### 2.1.2 Adding the MindSphere Theme Pack{#themepack}
+#### 2.1.2 Customizing an Existing App{#existingapp}
 
-If you have an existing app which was not based on the MindSphere starter app, you can import the MindSphere Theme Pack (MindSphere_UI_Resources) from the Mendix App Store here: [MindSphere Theme Pack](https://appstore.home.mendix.com/link/app/108803/).
+If you have an existing app which was not based on the MindSphere starter app, you can import the required customization. There are three modules which you need are:
 
-**MindSphere_UI_Resources** includes the following:
-
-* An Atlas UI theme for MindSphere apps
-* An updated *index.html* file
-* A new *MindSphereLogin.html* file
-* A new permission-denied page (*error_page/403.html*)
-
-{{% alert type="warning" %}}
-The theme does not contain modules for SSO or the OS Bar. These modules will need to be downloaded separately.
-{{% /alert %}}
+* MindSphere SSO from the Mendix App Store here: [Siemens MindSphere SSO](https://appstore.home.mendix.com/link/app/108805/).
+* MindSphere OS Bar Connector (MindSphere_UI_Resources) from the Mendix App Store here: [Siemens MindSphere OS Bar Connector](https://appstore.home.mendix.com/link/app/108804/).
+* MindSphere Theme Pack (MindSphere_UI_Resources) from the Mendix App Store here: [Siemens MindSphere Theme Pack](https://appstore.home.mendix.com/link/app/108803/).
 
 ### 2.2 Single Sign-On (MindSphereSingleSignOn){#mssso}
 
@@ -78,7 +73,7 @@ When running on MindSphere, the MindSphere user can use their MindSphere credent
 The MindSphere SSO module is included in the MindSphere starter and example apps. It can also be downloaded separately here: [MindSphere SSO](https://appstore.home.mendix.com/link/app/108805/).
 
 {{% alert type="warning" %}}
-The SSO module also requires changes to the app theme see the [Add the MindSphere Theme Pack](#themepack) section below..
+The SSO module also requires changes to the app theme see section 2.1.2, [Customizing an Existing App](#existingapp) section.
 {{% /alert %}}
 
 #### 2.2.1 Constants
@@ -191,7 +186,7 @@ You can see how the MindSphere OS Bar Integration works in [MindSphere OS Bar In
 The MindSphereOSBarConfig module creates an endpoint which is used by the MindSphere OS Bar to provide tenant context and information about the application. The MindSphereOSBarConfig module is included in the MindSphere starter app, or can be downloaded from the Mendix App Store here: [MindSphere OS Bar Connector](https://appstore.home.mendix.com/link/app/108804/).
 
 {{% alert type="info" %}}
-The MindSphere OS Bar Connector also needs the MindSphere Theme Pack, or manual configuration of the index.html file in order to work. See sections 2.1.2, [Add the MindSphere Theme Pack](#themepack) and 2.4, [index.html Changes](#indexhtmlchanges).
+The MindSphere OS Bar Connector also needs the MindSphere Theme Pack, or manual configuration of the index.html file in order to work. See sections 2.1.2, [Customizing an Existing App](#existingapp) and 2.4.1, [index.html Changes](#indexhtmlchanges).
 {{% /alert %}}
 
 #### 2.3.1 Configuring the OS Bar
@@ -213,11 +208,20 @@ The JSON should contain the following information:
 
 More information on the structure and content of this JSON object, together with sample JSON, can be found in [App Information](https://developer.mindsphere.io/resources/osbar/resources-osbar-getting-started.html#app-information), on the MindSphere developer site.
 
-### 2.4 index.html Changes{#indexhtmlchanges}
+### 2.4 MindSphere Theme Pack
+
+**MindSphere_UI_Resources** includes the following:
+
+* An Atlas UI theme for MindSphere apps
+* An updated *index.html* file
+* A new *MindSphereLogin.html* file
+* A new permission-denied page (*error_page/403.html*)
+
+#### 2.4.1 index.html Changes{#indexhtmlchanges}
 
 Three changes are required to the standard Mendix index.html file to allow integration with MindSphere. In the starter app, example app, and MindSphere UI theme pack, these have already been implemented. If you are making the app from a different starter app you can make these changes manually. See section 6.1, [index.html](#indexhtml), for details of the changes you need to make.
 
-The changes required are to support:
+The changes are required to support:
 
 * OS Bar – the MindSphere bar needs to be supported by your app
 * XSRF – MindSphere needs to receive an XSRF token to work with your app
@@ -225,17 +229,15 @@ The changes required are to support:
 
 The index.html file can be found in the /theme folder of your project app.
 
-### 2.5 MindSphereLogin.html
+### 2.4.2 MindSphereLogin.html
 
-As well as changes to the index.html file, SSO for MindSphere also requires a different login HTML file. This is called MindSphereLogin.html and can also be found in the /theme folder of your project app.
-
-{{% todo %}}[**STYLE GUIDELINE REVIEW: FOR EXAMPLE, ITALICIZE ABOVE FILE NAME**]{{% /todo %}}
+As well as changes to the index.html file, SSO for MindSphere also requires a different login *.html* file. This is called MindSphereLogin.html and can also be found in the /theme folder of your project app.
 
 If this file is not in your /theme folder, you can create it following the instructions in section 6.2, MindSphereLogin.html, or by importing the MindSphere_UI_Resources theme pack.
 
-### 2.6 Permission Denied Page
+### 2.4.3  Permission Denied Page
 
-The permission denied page will be shown if your app will be called with an invalid token or a token which does not include the value you have specified within the SSO constant ‘CockpitApplicationName’. The SSO module expects to find this file as error_page/403.html within your ‘Theme’ folder.
+The permission denied page will be shown if your app will be called with an invalid token or a token which does not include the value you have specified within the SSO constant ‘CockpitApplicationName’. The SSO module expects to find this MindSphere-compliant file as error_page/403.html within your ‘Theme’ folder.
 
 {{% image_container width="50%" %}}![](attachments/deploying-to-mindsphere/image12.png){{% /image_container %}}
 
@@ -248,8 +250,8 @@ The permission denied page will be shown if your app will be called with an inva
 To deploy your app to MindSphere you need the following prerequisites.
 
 * MindSphere user account on a developer tenant
-* Cloud Foundry Command Line Interface (CF CLI) – this should be downloaded from [https://github.com/cloudfoundry/cli](https://github.com/cloudfoundry/cli)
-* A Cloud Foundry role which allows you to push applications, such as **SpaceDeveloper**; help in setting up Cloud Foundry users can be found in the MindSphere [Cloud Foundry How Tos](https://developer.mindsphere.io/paas/paas-cloudfoundry-howtos.html)
+* Cloud Foundry Command Line Interface (CF CLI) – this can be downloaded from [https://github.com/cloudfoundry/cli](https://github.com/cloudfoundry/cli)
+* A Cloud Foundry role which allows you to push applications, such as **SpaceDeveloper** (help in setting up Cloud Foundry users can be found in the MindSphere [Cloud Foundry How Tos](https://developer.mindsphere.io/paas/paas-cloudfoundry-howtos.html))
 * A MindSphere developer role: either **mdsp:core:Developer** or **mdsp:core:DeveloperAdmin**
 
 #### 3.1.2 Create a Mendix Deployment Package
@@ -293,7 +295,7 @@ By default, the deployment package will be created in the *releases* folder of y
 6.  Depending on your infrastructure and service broker usage, it may take several minutes to create the service instance. Check if your PostgreSQL service has been created successfully using the following command:  
     `cf services`  
     Your service should be listed, and the last operation should be ‘create succeeded’.
-7.  Bind your app to your PostgreSQL service using the command  
+7.  Bind your app to your PostgreSQL service using the command:
     `cf bind-service {app_name} {service_name}`
 8.  Restage your app using the command:  
     `cf restage {app_name}`
@@ -303,12 +305,12 @@ By default, the deployment package will be created in the *releases* folder of y
 If you want to forward this application to an operator later, you will need a proper manifest.yml file.
 
 1.  Log in to your CF CLI with the correct organization and space.
-2.  Use the command  
+2.  Use the command:
     `cf create-app-manifest {app_name}`
 
 #### 3.1.5 Troubleshooting
 
-If you have issues with deploying your app to Cloud Foundry, you may find additional information in [Running a Cloud Foundry-Hosted Application - for Java Developers](https://developer.mindsphere.io/howto/howto-cf-running-app.html). Note that this is not written from the point of view of a Mendix developer, so some information may not be relevant.
+If you have issues with deploying your app to Cloud Foundry, you can find additional information in [Running a Cloud Foundry-Hosted Application - for Java Developers](https://developer.mindsphere.io/howto/howto-cf-running-app.html). Note that this is not written from the point of view of a Mendix developer, so some information may not be relevant.
 
 Ensure that you have configured your proxy settings if these are required.
 
@@ -326,7 +328,7 @@ To create a new app in the MindSphere launchpad, do the following:
 6.  Set the **content-security-policy** settings to the following  
 
     ```java
-default-src 'self' 'unsafe-inline' 'unsafe-eval' static.eu1.mindsphere.io sprintr.home.mendix.com; font-src 'self' static.eu1.mindsphere.io fonts.gstatic.com; style-src * 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval' static.eu1.mindsphere.io sprintr.home.mendix.com; img-src * data:;
+    default-src 'self' 'unsafe-inline' 'unsafe-eval' static.eu1.mindsphere.io sprintr.home.mendix.com; font-src 'self' static.eu1.mindsphere.io fonts.gstatic.com; style-src * 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval' static.eu1.mindsphere.io sprintr.home.mendix.com; img-src * data:;
     ```
 
     {{% alert type="info" %}}These content security policy settings are needed to ensure that the MindSphere OS Bar and the [Mendix Feedback Widget](https://appstore.home.mendix.com/link/app/199/) are loaded correctly. You may need to set additional CSP settings if you make additional calls to other domains (for example, if you use Google maps from maps.googleapi.com).{{% /alert %}}
@@ -361,7 +363,7 @@ Once you have created the scopes for your app, you will need to assign them to t
 
 2.  Choose the app role (scope) you want to assign from the list of **Roles**.
 3.  Click **Edit user assignment**.
-4.  Assign **Available users** to **Assigned users** using the assignment symbols (for example **>** to assign a user).
+4.  Assign **Available users** to **Assigned users** using the assignment symbols (for example `>` to assign a user).
 5.  Click **Close**.
 
     ![](attachments/deploying-to-mindsphere/image17.png)
@@ -378,11 +380,13 @@ If these limitations affect the design of your app, you can still create a Mendi
 
 ### 4.1 Binary File Storage
 
-MindSphere does not currently have a compatible file service available to its Cloud Foundry stack. Therefore, you cannot use any Mendix features which rely on having a file service.
+MindSphere does not currently have a compatible file service available in its Cloud Foundry stack. Therefore, you cannot use any Mendix features which rely on having a file service.
 
 In particular, this means that you cannot use entities which are specializations of the *System.FileDocument* entity. This also includes all entities which are specializations of the *System.Image* entity, as this is also a specialized type of FileDocument.
 
 You can store small amounts of binary information in persistable entities. However, the database management system (DBMS) will have strict limits on the size of binary attributes and using them as a replacement for FileDocument entities can lead to performance issues.
+
+Alternatively, you can use a separate AWS S3 bucket. See [Configuring External Filestore](https://github.com/mendix/cf-mendix-buildpack#configuring-external-filestore) in the *Mendix Cloud Foundry Buildpack GitHub Repository*. Instructions on setting environment variables within MindSphere Cloud Foundry is in the [Cloud Foundry Environment Variables](/refguide/mindsphere/mindsphere-development-considerations#cfenvvars) section of *MindSphere Development Considerations*.
 
 ### 4.2 App Name
 

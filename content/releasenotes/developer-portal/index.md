@@ -15,7 +15,7 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud V3, and other deploym
 #### Fixes
 
 * We have fixed the issue where custom domains were not getting bound to environments if they were added before the environment was initialized. (Tickets 78324, 76159, 76439, 77366, 77504, 78324, 78484)
-* We have fixed the issue which caused the "Running Since" value in the Environment Details to be updated after tranporting an MDA to an environment but where the process was canceled without restarting the environment. (Ticket 76893)
+* We have fixed the issue which caused the "Running Since" value in the Environment Details to be updated after transporting an MDA to an environment but where the process was canceled without restarting the environment. (Ticket 76893)
 * We have fixed the issue regarding unclear application version numbering when building an MDA packages. The "App latest tag" and "Branch latest tag" have been replaced with "App highest tag" and "Branch highest tag" respectively to represent the values more precisely. (Ticket 78699)
 * When building a mobile application package for a new project, the default for permissions is now *disabled*. These are the set of permissions that a mobile (Phonegap) app requires and, previously, all permissions were enabled for new projects by default. This caused Push Notifications to fail if no further configuration was provided.
 * We have fixed the issue which meant that license information was displayed incorrectly in the Developer Portal for some Mendix Cloud V3 production environments. (Ticket 78229, 80336)

@@ -56,7 +56,7 @@ The definition of a tenant on MindSphere is available in the MindSphere document
 
 **UserTenant**
 
-This should be the tenant that the user has access to in a multi-tenant environment. For a developer tenant, this must be the same as the HostTenant. In an operator or iot plan tenant, you can Change this to allow you to test multi-tenant apps.
+This should be the tenant that the user has access to in a multi-tenant environment. For a developer tenant, this must be the same as the HostTenant. In an operator or iot plan tenant, you can change this to allow you to test multi-tenant apps.
 
 ### 2.2 User Roles
 
@@ -112,7 +112,7 @@ For consistency, it is recommended that all access to these entities is done thr
 
 You have some limits which are set for the user's tenant to be applied to a time series. You then want to get a list of all these so that you can display the values to the user.
 
-1.  Create the domain model with the **Limit** entity being a specialization of **MindSphereSingleSignOn.TenantObject**.
+1.  Create the domain model with the **LimitConfig** entity being a specialization of **MindSphereSingleSignOn.TenantObject**.
 
     ![](attachments/mindsphere-development-considerations/image26.png)
 
@@ -121,9 +121,9 @@ You have some limits which are set for the user's tenant to be applied to a time
 
     {{% image_container width="75%" %}}![](attachments/mindsphere-development-considerations/image27.png){{% /image_container %}}
 
-4.  When you want to retrieve the list of limits, call this microflow instead of using the retrieve objects action. This will ensure that tenant-based security is applied.
+4.  When you want to retrieve the list of limits, call this microflow instead of using the retrieve objects action. This will ensure that tenant-based security is always applied.
 
-## 4 Cloud Foundry Environment Variables
+## 4 Cloud Foundry Environment Variables{#cfenvvars}
 
 If you need to set or change the value of any Cloud Foundry Environment Variables, you will have to do this using the CF CLI.
 

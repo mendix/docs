@@ -1,5 +1,5 @@
 ---
-title: "CSV File Import Example"
+title: "File Import Integration with CSV Example"
 parent: "export-import-batch"
 draft: true
 ---
@@ -44,7 +44,7 @@ The reference case shows the following scenario’s:
 
 * Keep track of which records are imported in your current run
 	* This way, it is easy to determine which records have been deleted since the previous import
-	* Reference implementation: **Product.ImportUID**, which is set to a string determined at the beginning of an import
+	* Reference implementation: **Product.ImportReference**, which is set to a string determined at the beginning of an import
 
 	![](attachments/csv/do1.png)
 

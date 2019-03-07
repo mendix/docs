@@ -229,13 +229,13 @@ The changes are required to support:
 
 The index.html file can be found in the /theme folder of your project app.
 
-### 2.4.2 MindSphereLogin.html
+#### 2.4.2 MindSphereLogin.html
 
 As well as changes to the index.html file, SSO for MindSphere also requires a different login *.html* file. This is called MindSphereLogin.html and can also be found in the /theme folder of your project app.
 
 If this file is not in your /theme folder, you can create it following the instructions in section 6.2, MindSphereLogin.html, or by importing the MindSphere_UI_Resources theme pack.
 
-### 2.4.3  Permission Denied Page
+#### 2.4.3  Permission Denied Page
 
 The permission denied page will be shown if your app will be called with an invalid token or a token which does not include the value you have specified within the SSO constant ‘CockpitApplicationName’. The SSO module expects to find this MindSphere-compliant file as error_page/403.html within your ‘Theme’ folder.
 

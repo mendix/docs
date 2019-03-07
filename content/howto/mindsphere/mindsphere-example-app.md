@@ -163,7 +163,7 @@ For more information see the MindSphere documentation [Roles & Scopes for Applic
 
 ## 5 Siemens MindSphere Pump Asset Example App
 
-The **PumpAssetExample** module within the app uses the MindSphereAssetManagementConnector and MindSphere APIs, via Mendix native REST, to create and view time series information for an asset.
+The **PumpAssetExample** module within the app uses the *MindSphere Asset Management Connector* and MindSphere APIs, via Mendix native REST, to create and view time series information for an asset.
 
 It is based on the standard Mendix starter app for Mendix version 7.22. It also has additional modules which are required for integrating with and deploying to MindSphere. These additional modules are:
 
@@ -264,6 +264,6 @@ However, MindSphere will queue this request internally and the data will not be 
 
 ![Part of ACT_PutTimeSeriesData microflow](attachments/mindsphere-example-app/image15.png)
 
-## 6 Read More
+## 7 Read More
 
 * [MindSphere Asset Management Connector](/refguide/mindsphere/mindsphere-asset-management-connector)

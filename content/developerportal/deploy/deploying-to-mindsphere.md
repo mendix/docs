@@ -275,7 +275,7 @@ By default, the deployment package will be created in the *releases* folder of y
 
 #### 3.1.3 Deploying the Application to Cloud Foundry using CF CLI
 
-1.  Log in into MindSphere CF CLI using a one-time code as described in [Running a Cloud Foundry-Hosted Application - for Java Developers](https://developer.mindsphere.io/howto/howto-cf-running-app.html).
+1.  Log in into MindSphere CF CLI using a one-time code as described in [Running a Cloud Foundry-Hosted Application – for Java Developers](https://developer.mindsphere.io/howto/howto-cf-running-app.html).
 2.  Select your org and space using the command:  
     `cf target –o {org_name} -s {space_name}`
 3.  Ensure you are in the same folder as the package you wish to deploy.
@@ -310,7 +310,7 @@ If you want to forward this application to an operator later, you will need a pr
 
 #### 3.1.5 Troubleshooting
 
-If you have issues with deploying your app to Cloud Foundry, you can find additional information in [Running a Cloud Foundry-Hosted Application - for Java Developers](https://developer.mindsphere.io/howto/howto-cf-running-app.html). Note that this is not written from the point of view of a Mendix developer, so some information may not be relevant.
+If you have issues with deploying your app to Cloud Foundry, you can find additional information in [Running a Cloud Foundry-Hosted Application – for Java Developers](https://developer.mindsphere.io/howto/howto-cf-running-app.html). Note that this is not written from the point of view of a Mendix developer, so some information may not be relevant.
 
 Ensure that you have configured your proxy settings if these are required.
 

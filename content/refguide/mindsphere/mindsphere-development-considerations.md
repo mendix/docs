@@ -22,7 +22,7 @@ This will use the credentials you have set up under **App Credentials** in the *
 
 To create the app credentials:
 
-1.  Register this application using the identical application name as that set in the constant **CockpitApplicationName**. See [MindSphere Launchpad Setup](/developerportal/deploy/deploying-to-mindsphere#launchpad) in *Siemens Mindsphere - deployment*.
+1.  Register this application using the identical application name as that set in the constant **CockpitApplicationName**. See [MindSphere Launchpad Setup](/developerportal/deploy/deploying-to-mindsphere#launchpad) in *Siemens Mindsphere – deployment*.
 2.  Go to the **App Credentials** page in the *Authorization Management* tab of the MindSphere Developer Cockpit.
 3.  Click **Issue access** to obtain a token.
 
@@ -141,4 +141,4 @@ Your app should, as a minimum, meet the requirements of the checklist on the Min
 
 ## 6 Read More
 
-* [Siemens MindSphere - deployment](/developerportal/deploy/deploying-to-mindsphere)
+* [Siemens MindSphere – deployment](/developerportal/deploy/deploying-to-mindsphere)

@@ -1,6 +1,6 @@
 ---
 title: "Cloud Foundry"
-category: "Deploy and Manage"
+category: "Deployment"
 menu_order: 50
 description: "How to deploy a Mendix App on a Cloud Foundry environment which does not have Mendix support in the Developer Portal"
 tags: ["Cloud Foundry", "Pivotal", "Deploy", "Bind"]
@@ -182,6 +182,6 @@ If you encounter any problems, you should consult the application logs. These ar
 
 ![](attachments/cloud-foundry-deploy/cf-log.png)
 
-## 9 Related Content
+## 9 Read More
 
 * [Mendix BuildPack Documentation](https://github.com/mendix/cf-mendix-buildpack)

@@ -1,7 +1,8 @@
 ---
 title: "Clear Warning Messages"
 category: "Monitoring & Troubleshooting"
-tags: ["monitoring", "troubleshooting", "warning", "error"]
+menu_order: 1
+tags: ["monitoring", "troubleshooting", "warning", "error", "warning message"]
 ---
 
 ## 1 Introduction
@@ -166,7 +167,7 @@ Variable ‘Variable’ is never used.
 * There are multiple potential causes here
 * The solution involves removing the variable from the microflow, which could mean deleting the retrieve activity or electing to not use the return value of a microflow call
 
-## 4 Related Content
+## 4 Read More
 
 * [How to Find the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
 * [How to Test Web Services Using SoapUI](../testing/testing-web-services-using-soapui)

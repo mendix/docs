@@ -2,7 +2,7 @@
 title: "Buzz"
 category: "Collaboration Tools"
 menu_order: 10
-description: "This page describes the Mendix Buzz, which is the landing page for a Mendix app project."
+description: "Describes the Mendix Buzz, which is the landing page for a Mendix app project."
 tags: ["Buzz","Developer Portal"]
 ---
 
@@ -43,8 +43,8 @@ If you want to hear from various people in your company or on your App Team, cli
 
 In the **Add poll answer** box, you can add various answer choices. This is a great way to collaborate with and get feedback from your App Team!
 
-## 3 Related Content
+## 3 Read More
 
-*   [App Team](team)
-*   [Springs & Stories](stories)
+* [App Team](team)
+* [Stories](stories)
 

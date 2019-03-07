@@ -25,6 +25,10 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Identify the SAP back-end system and OData service you wish to use
 * Create the app in the Mendix Desktop Modeler 7.5.1 or higher
 
+{{% alert type="warning" %}}
+SAP OData Model Creator only supports SAP OData Gateway Services which use OData version 2 or version 3. OData version 4 is not yet supported.
+{{% /alert %}}
+
 ## 3 Generating a Data Model
 
 The SAP OData Model Creator is an app in the App Store. Search for it in the Mendix App Store, or find it here: [SAP OData Model Creator](https://sapodatamodelcreator.mendixcloud.com/). 
@@ -212,10 +216,10 @@ Do not change the names of entities, attributes, or associations in the Domain M
 
 For more information on how to use the imported data model together with the SAP OData Connector, see [How to Use the SAP OData Connector](/howto/sap/use-sap-odata-connector).
 
-## 5 Related Content
+## 5 Read More
 
 * [HCM People Profile Service sample metadata](https://www.sapfioritrial.com/sap/opu/odata/sap/HCM_PEOPLE_PROFILE_SRV/$metadata)
-* [How to Use App Store Content in the Modeler](/community/app-store/use-app-store-content-in-the-modeler)
+* [How to Use App Store Content](/developerportal/app-store/use-app-store-content-in-the-modeler)
 * [How to Use the SAP OData Connector](/howto/sap/use-sap-odata-connector)
 * [SAP OData Connector](https://appstore.home.mendix.com/link/app/74525/Mendix/SAP-OData-Connector)
 * [SAP OData Model Creator](https://sapodatamodelcreator.mendixcloud.com/)

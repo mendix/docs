@@ -1,7 +1,8 @@
 ---
-title: "Import and Export Objects"
+title: "Import & Export Objects"
 category: "Integration"
-tags: ["mpk", "Mendix project packages", "import", "export", "documents", "project", "module", "widget"]
+menu_order: 2
+tags: ["mpk", "project package", "import", "export", "document", "project", "module", "widget"]
 ---
 
 ## 1 Introduction
@@ -153,7 +154,7 @@ To import widgets, follow these steps:
 
 ### 2.5 Importing Content from the App Store
 
-To learn more about importing content from the App Store, see [Use App Store Content in the Desktop Modeler](/community/app-store/use-app-store-content-in-the-modeler).
+To learn more about importing content from the App Store, see [Use App Store Content](/developerportal/app-store/use-app-store-content-in-the-modeler).
 
 ## 3 Exporting Objects
 
@@ -210,7 +211,7 @@ Mendix module documents can be exported as a Mendix package (*.mpk*) file.
     
 2. Enter the **Name** for your package and click **Save**.
 
-## 4 Related Content
+## 4 Read More
 
 * [How to Consume a Complex Web Service](consume-a-complex-web-service)
 * [How to Consume a Simple Web Service](consume-a-simple-web-service)

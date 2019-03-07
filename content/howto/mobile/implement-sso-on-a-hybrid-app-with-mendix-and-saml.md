@@ -1,8 +1,9 @@
 ---
-title: "Implement SSO on a Hybrid App with Mendix and SAML"
-category: "Mobile"
+title: "Implement SSO on a Hybrid App with Mendix & SAML"
+category: "Mobile Development"
+menu_order: 30
 description: "Describes how to address the challenges of implementing SSO in hybrid mobile apps."
-tags: ["SAML", "SSO", "Mobile", "HybridApp", "PhoneGap", "Authentication"]
+tags: ["SAML", "SSO", "mobile", "hybrid app", "phonegap", "authentication"]
 ---
 
 ## 1 Introduction
@@ -15,7 +16,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Have a [PhoneGap Build account](https://build.phonegap.com/)
 * Be familiar with how the [SAML](https://appstore.home.mendix.com/link/app/1174/) module works
-* Read [How to Publish a Mendix Hybrid Mobile App in Mobile App Stores](publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)
+* Read [How to Publish a Mendix Hybrid Mobile App in App Stores](publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)
 * Read [Building a Mobile App with Mendix](https://www.mendix.com/blog/building-mobile-app-mendix/)
 
 ## 3 Context
@@ -69,39 +70,55 @@ To address the [first problem](#firstproblem), when the mobile app is starting t
 
 ```javascript
 MxApp.onConfigReady(function(config) {
-
+	
     var samlLogin = function() {
         var samlWindow = cordova.InAppBrowser.open(window.mx.remoteUrl + "SSO/", "_blank", "location=no,toolbar=no");
         var exitFn = function(){
             navigator.app.exitApp();
         };
         samlWindow.addEventListener("exit", exitFn);
-        var cb = function(event) {
+        var cb = function(event) {        
             if (event.url.indexOf(window.mx.remoteUrl) == 0 && event.url.indexOf("SSO") == -1) {
-
+            
                 samlWindow.removeEventListener("loadstop", cb);
                 samlWindow.removeEventListener("exit", exitFn);
-
+				
                 samlWindow.executeScript({
                     code: "document.cookie;"
                 }, function(values) {
                     var value = values[0] + ";";
-                    var token = new RegExp('AUTH_TOKEN=([^;]+);', 'g').exec(value)[1];
-                    window.localStorage.setItem("mx-authtoken", token);
+                    var token = new RegExp('AUTH_TOKEN=([^;]+);', 'g').exec(value);
+                    var authPromise = new Promise(function(resolve, reject) {
+                        if (token && token.length > 1) {
+                            window.localStorage.setItem("mx-authtoken", token[1]);
+							
+                            window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, function (fs) {
+                                fs.root.getFile(".mx-token", { create: true, exclusive: false }, function (fileEntry) {
+                                    fileEntry.createWriter(function (fileWriter) {
+                                        fileWriter.onwriteend = resolve;
+                                        fileWriter.onerror = reject;
+                                        fileWriter.write(token[1]);
+                                    });
+                                }, reject);
+                            }, reject);
+                        } else {
+                            resolve();
+                        }
+                    });
                     
-                    samlWindow.close();
-
-                    if (window.mx.afterLoginAction) {
-                        window.mx.afterLoginAction();
-                    }
+                    var closeWindow = function() {
+                        samlWindow.close();
+                        if (window.mx.afterLoginAction) {
+                            window.mx.afterLoginAction();
+                        }
+                    };
+                    authPromise.then(closeWindow, closeWindow);
                 });
-
             };
         }
         samlWindow.addEventListener("loadstop", cb);
     }
     config.ui.customLoginFn = samlLogin;
-
 });
 ```
 
@@ -150,10 +167,10 @@ The last thing to do is to check the **Enable mobile authentication token** box 
 
 ![](attachments/implement-sso/saml-module.png)
 
-## 6 Related Content
+## 6 Read More
 
 * [How to Deploy Your First Hybrid Mobile App](deploy-your-first-hybrid-mobile-app)
-* [How to Publish a Mendix Hybrid Mobile App in Mobile App Stores](publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)
+* [How to Publish a Mendix Hybrid Mobile App in App Stores](publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)
 * [How to Debug a Mobile App with Mendix](debug-a-mobile-app)
 * [How to Debug a Hybrid Mobile Application](../monitoring-troubleshooting/debug-a-hybrid-mobile-application)
 * [Building a Mobile App with Mendix](https://www.mendix.com/blog/building-mobile-app-mendix/)

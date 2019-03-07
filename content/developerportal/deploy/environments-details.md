@@ -1,8 +1,8 @@
 ---
 title: "Environment Details"
 parent: "mendix-cloud-deploy"
-menu_order: 60
-description: "Describes the environmental details of your app."
+menu_order: 7
+description: "Describes the environmental details of your app and how to manage the environment."
 tags: ["Deploy","App","Environment","Developer Portal"]
 ---
 
@@ -10,11 +10,11 @@ tags: ["Deploy","App","Environment","Developer Portal"]
 
 To enter the **Environment details** page, go to the [Mendix Portal](http://home.mendix.com), select your licensed app, click **Environments**, and then click **Details** on the specific environment. 
 
-![](attachments/environment-details.png)   
+![](attachments/environments-details/environment-details.png)   
 
 ## 2 General Tab
 
-![](attachments/environment-tab.png)   
+![](attachments/environments-details/environment-tab.png)   
 
 The view of the **General** tab depends on the Mendix Cloud version on which the app is hosted. In this tab, you can find the following information about your environment:
 
@@ -24,7 +24,7 @@ The view of the **General** tab depends on the Mendix Cloud version on which the
    * Orange – the environment has warnings
    * Red – the environment is not working correctly
 
-        ![](attachments/environment-status.png)   
+        ![](attachments/environments-details/environment-status.png)   
 
 * **Running since** date – the date on which the app was started
 * **Mode** – the type of environment (Production, Acceptance, Test)
@@ -45,26 +45,32 @@ The view of the **General** tab depends on the Mendix Cloud version on which the
 
 On the right side of the screen, you can find the following action buttons:
 
+* **Restart Application**
 * **Start/Stop Application**
 * **Show Logged in Users**
 * **Change Admin Password**
+
+#### 2.1.1 Logging and Debugging in Mendix Cloud v4
+
+![](attachments/environments-details/actions-v4.png)
+
+In Mendix Cloud v4 environments, you have two additional action buttons:
+
+* **View Live Log**
+* **Show debugger information** to show the settings to connect the debugger in your Mendix Desktop Modeler to your app. For Mendix Cloud v4, the debugger is *always* enabled.
+
+#### 2.1.2 Logging and Debugging in Mendix Cloud v3
+
+![](attachments/environments-details/actions-v3.png)
+
+In Mendix Cloud v3 environments, you have two additional action buttons:
+
 * **View Current Log**
-
-#### 2.1.1 Debugger in Mendix Cloud v3
-
-![](attachments/actions-v3.png)
-
-In Mendix Cloud v3 environments, you can click **Enable/Disable Debugging** to enable or disable the debugger option. For more information about enabling the debugger, see [How to Debug Microflows Remotely](/howto7/monitoring-troubleshooting/debug-microflows-remotely)
-
-#### 2.1.2 Debugger in Mendix Cloud v4
-
-![](attachments/actions-v4.png)
-
-In Mendix Cloud v4 environments, the debugger is always enabled. You can click **Show debugger information** to show the settings to connect the debugger in your Mendix Desktop Modeler to your app.
+* **Enable/Disable Debugging** to enable or disable the debugger option. For more information about enabling the debugger, see [How to Debug Microflows Remotely](/howto7/monitoring-troubleshooting/debug-microflows-remotely)
 
 ### 2.2 Scaling – Mendix Cloud v4
 
-![](attachments/scale.png)
+![](attachments/environments-details/scale.png)
 
 If your app is hosted in Mendix Cloud v4, you will see a section named **Scaling** in the **General** tab.
 
@@ -115,7 +121,7 @@ In this section, you can find information about the deployment package that is c
 
 ## 3 Model Options Tab
 
-![](attachments/model-options.png)
+![](attachments/environments-details/model-options.png)
 
 On this tab, you can edit the model options described below.
 
@@ -151,7 +157,7 @@ For more information, see [Constants](/refguide/constants).
 
 ## 4 Network Tab
 
-![](attachments/network1.png)
+![](attachments/environments-details/network1.png)
 
 On this tab, you can manage the elements described below.
 
@@ -167,7 +173,7 @@ You can perform the following actions:
 * **Edit**
 * **Delete**
 
-For more information, see [Certificates](certificates) and [How to Configure Custom Domains](/developerportal/howto/custom-domains).
+For more information, see [Certificates](certificates) and [Custom Domains](custom-domains).
 
 ### 4.2 Prevent Embedding Your App in an IFrame
 
@@ -209,7 +215,7 @@ Add client certificates (in the PKCS12 format) or certificate authorities (in th
 
 ## 5 Log Levels Tab
 
-![](attachments/loglevels-tab.png)   
+![](attachments/environments-details/loglevels-tab.png)   
 
 Log levels are used to distinguish the log messages and to highlight the highest priority ones so that they can receive the immediate intervention they require.
 
@@ -219,7 +225,7 @@ On this tab, you can perform the following actions:
 * Change the log level type by clicking the specific level
 * Click **Set all to INFO** to revert all the changes
 
-![](attachments/loglevels.jpg)
+![](attachments/environments-details/loglevels.png)
 
 The log level types are the following:
 
@@ -236,17 +242,21 @@ For more information about log levels, see [How to Set Log Levels](/howto/monito
 
 ## 6 Runtime Tab{#runtime-tab}
 
-![](attachments/runtime.png)   
+On this tab, you can add **Custom Runtime Settings** and **Custom Environment Variables**
 
-On this tab, you can perform the following actions:
+![](attachments/environments-details/runtime.png)   
+
+### 6.1 Custom Runtime Settings
+
+Use the Custom Runtime Settings section to perform the following actions:
 
 * **Add** a new runtime **setting** with a new **value**
 * **Edit** the runtime setting
 * **Delete** the runtime settings
 
-For more information about runtime settings, read the [Custom Settings](/refguide/custom-settings) and [Tricky Custom Settings in Mendix Runtime](/howtogeneral/support/mendix-customsettings-tricky) documentation.
+For more information about runtime settings, read the [Custom Settings](/refguide/custom-settings) and [Tricky Custom Settings in Mendix Runtime](/refguide/tricky-custom-runtime-settings) documentation.
 
-The Mendix Cloud uses runtime settings to configure the included systems for logs, backups, and database. Therefore, the following settings are not configurable by users:
+The Mendix Cloud uses runtime settings to configure the included systems for logs, backups, and database. Therefore, the following settings are **not** configurable by users:
 
 * `com.mendix.core.localfilesystem.cleaning.isEnabled`
 * `com.mendix.core.localfilesystem.cleaning.time`
@@ -273,16 +283,26 @@ The Mendix Cloud uses runtime settings to configure the included systems for log
 * `TempPath`
 * `WebServiceClientCertificates`
 
+### 6.2 Custom Environment Variables
+
+Use the Custom Environment Variables to **add**, **Edit**, or **Delete** an environment variable.
+
+Unlike the Custom Runtime Settings, the variables you add have to be chosen from a drop-down list. The variables are:
+
+* **DD_API_KEY** – the API key used with Datadog
+* **DD_LOG_LEVEL** – the log level of logging sent to Datadog
+* **APPMETRICS_TARGET** – setting this enables business events to be sent to a different monitoring solution from the technical events 
+
 ## 7 Maintenance Tab
 
-![](attachments/maintenance.png)   
+![](attachments/environments-details/maintenance.png)   
 
 There are two types of maintenance:
 
 * Regular weekly maintenance (which does not affect your app), during which you can change the preferred maintenance window
 * Planned maintenance (which will affect your app in some ways), during which you will automatically receive an email about this and you can override the maintenance window
 
-For more information about maintenance, see [How to Configure Maintenance Windows](/developerportal/howto/maintenance-windows).
+For more information about maintenance, see [Maintenance Windows: Configuration](maintenance-windows).
 
 ### 7.1 Preferred Maintenance Window
 

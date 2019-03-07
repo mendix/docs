@@ -1,7 +1,11 @@
 ---
 title: "Published REST Resource"
-parent: "published-rest-services"
-#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
+parent: "published-rest-service"
+menu_order: 50
+description: "The configurable options for a published REST resource"
+tags: ["published REST", "resource"]
+# If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
+# linked from DM: published rest > add resource > help (integration)
 ---
 
 {{% alert type="info" %}}
@@ -12,7 +16,9 @@ The **published REST service** feature was introduced in version 7.10.0.
 
 ## 1 Introduction
 
-A_published REST resource is part of a [published REST service](published-rest-service) and represents a collection of items on which one or more [operations](published-rest-operation) can be defined.
+A published REST resource is part of a [published REST service](published-rest-service) and represents a collection of items on which one or more [operations](published-rest-operation) can be defined.
+
+You can generate a published REST resource from an entity in your domain model. See [Generate a Published REST resource](generate-rest-resource).
 
 ## 2 General
 

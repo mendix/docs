@@ -1,7 +1,11 @@
 ---
 title: "Published REST Services"
 parent: "integration"
-#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
+#menu_order: 
+description: "An overview of published REST services from Mendix apps"
+tags: ["publish", "REST service", "overview", "configuration"]
+# If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
+# linked from integration - published rest > F1 help
 ---
 
 {{% alert type="info" %}}
@@ -36,7 +40,7 @@ If you don't want basic authentication, there are three options:
 Note that web service users cannot access REST services.
 {{% /alert %}}
 
-For more details, see [Published REST Routing](published-rest-routing) and section [3.1 Requires Authentication](published-rest-service#authentication) in *Published REST Service*.
+For more details, see [Published REST Routing](published-rest-routing) and the [Requires Authentication](published-rest-service#authentication) section in *Published REST Service*.
 
 ## <a name="interactive-documentation"></a>4 Documentation
 

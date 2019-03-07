@@ -100,7 +100,7 @@ The same HTTP Headers are required as for a REST call. They do the following:
 ![SOAP web services HTTP headers tab](attachments/sap-destination-with-rest/web-service-http-headers.png)
 
 
-## 4 Related Content
+## 4 Read More
 
 * [SAP Destination Service](/refguide/sap/sap-destination-service)
 * [Consumed Web Services](/refguide/consumed-web-services)

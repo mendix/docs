@@ -1,7 +1,7 @@
 ---
-title: "Mendix SSO: Manage User Logins"
-parent: "mendix-cloud-deploy"
-#menu_order: 
+title: "Manage User Logins with Mendix SSO"
+parent: "integrate-with-mendix-sso"
+menu_order: 72
 description: "How to manage Mendix SSO in your app so that local users and anonymous users are catered for"
 tags: ["SSO", "Single Sign-on", "AppCloudServices", "Local users", "Anonymous users"]
 #Needs a better description of what it does. Needs rewrite to remove launchpad references
@@ -276,7 +276,7 @@ The custom login page can be created in a similar manner as in scenario 2, with 
 
 You can view the implementation by deploying your app to the Mendix Cloud and going to your app, e.g. `https://yourapp.mendixcloud.com/`, and going to the page where you inserted the link. Click on the link, and you should see the custom login page. Test the local account login, and logout. Then test the Mendix account login.
 
-## 3 Related Content
+## 3 Read More
 
 *   [Trends in Mendix Cloud v3](/developerportal/operate/trends)
 *   [Mendix Cloud: Deploy](mendix-cloud-deploy)

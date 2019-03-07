@@ -1,6 +1,6 @@
 ---
 title: "SAP Cloud Platform"
-category: "Deploy and Manage"
+category: "Deployment"
 menu_order: 40
 description: "Reference documentation on SAP Cloud deployment portal"
 tags: ["SAP", "SAP Cloud Platform", "Deployment", "Environment"]
@@ -367,6 +367,10 @@ If you want to delete your app and all its resources, delete the environment and
 
 You can still delete the app and its resources from the SAP Cloud Platform cockpit, but you will then have to remove all the resources individually.
 
-## 9 Related Content
+## 9 Status of SAP Cloud Platform Deployment
+
+The Mendix status page ([https://status.mendix.com/](https://status.mendix.com/)) shows the current status of Mendix services. If you have issues with deploying to SAP Cloud Platform via the Developer Portal, you can check the Mendix status page to see if SAP Cloud Platform deployment is operational (under **Mendix Services**) or if there are other Mendix issues which may be affecting your deployment.
+
+## 10 Read More
 
 * [SAP Single Sign On](/refguide/sap/sap-single-sign-on)

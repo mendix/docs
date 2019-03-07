@@ -2,7 +2,7 @@
 title: "Apps"
 parent: "companyadmin-settings"
 menu_order: 30
-description: "Describes the options available to company administrators in a Mendix app."
+description: "Describes the app settings available to company administrators in a Mendix app."
 tags: ["Company","Admin","Developer Portal"]
 ---
 
@@ -36,7 +36,7 @@ On the **Roles** tab, you can edit and add App Team member roles.
 
 For more information, see the [App Team Member Roles](/developerportal/company-app-roles/index) section of *Company & App Roles*.
 
-## 4 Related Content
+## 4 Read More
 
 * [Company Admin Settings](companyadmin-settings)
 * [Company](company)

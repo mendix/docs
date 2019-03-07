@@ -4,9 +4,9 @@ parent: "reporting"
 ---
 ### Report Chart
 
-A report chart is used to display a data set graphically as a set of vertical bars.
+A report chart is used to display a dataset graphically as a set of vertical bars.
 
-For each object in the data set one or more bars are displayed, depending on the defined Series of the report chart.
+For each object in the dataset one or more bars are displayed, depending on the defined Series of the report chart.
 
 ## Appearance Property
 
@@ -50,13 +50,13 @@ If the chart type is HorizontalBars, the axisses are swapped, and these properti
 
 This is the caption that end users see near the horizontal axis of the chart.
 
-### Data set column
+### Dataset column
 
-This property refers to the column of the data set of which the value is displayed on the horizontal axis.
+This property refers to the column of the dataset of which the value is displayed on the horizontal axis.
 
 ### Format
 
-If the data set column of the horizontal axis has type DateTime, through this property you can choose how the date is displayed.
+If the dataset column of the horizontal axis has type DateTime, through this property you can choose how the date is displayed.
 
 ## Vertical axis Properties
 

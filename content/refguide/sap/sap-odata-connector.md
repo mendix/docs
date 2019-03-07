@@ -16,6 +16,10 @@ The SAP OData Connector is an OData connector written specifically to integrate 
 
 The SAP OData Connector can be used for example in combination with the SAP Data Model of an SAP Fiori Cloud app. For more details, see [SAP Data Models](sap-data-models). Alternatively, you can generate a data model from the metadata of your OData service, exposed from your SAP back-end system. For more details see [How to Use the SAP OData Model Creator](/howto/sap/use-sap-odata-model-creator).
 
+{{% alert type="warning" %}}
+SAP OData Connector only supports SAP OData Gateway Services which use OData version 2 or version 3. OData version 4 is not yet supported.
+{{% /alert %}}
+
 If you are new to the SAP OData Connector, you can try it out by following our how-to: [How to Use the OData Connector](/howto/sap/use-sap-odata-connector). This reference assumes that you know the details of the SAP OData service you want to use.
 
 When running the Mendix application on SAP Cloud Platform, you can choose to use the SAP Destination Service to gain access to your on-premises SAP instance. The SAP Destination Service can be configured to invoke the SAP Connectivity Service in SAP Cloud Platform to find a route to your OData service residing on-premises. This route is configured from the SAP Cloud Connector running as an agent in your on-premises SAP back-end. If no route is configured, the SAP OData Connector will route requests to the public OData service. For more information, see the [SAP Destination Service](sap-destination-service) documentation and the [SAP OData Connector](https://appstore.home.mendix.com/link/app/74525/Mendix/SAP-OData-Connector) in the Mendix App Store.
@@ -591,13 +595,13 @@ This is the type of data which will be returned from the action. There are three
 
 This is the name that you give the result of your Activity. This can be used later in the Microflow to drive logic or to return data. Mendix will suggest a name for you, but you can change it if you want to.
 
-## 5 Related Content
+## 5 Read More
 
 * [Attributes](/refguide/attributes)
 * [Data Types](/refguide/data-types)
 * [Domain Model](/refguide/domain-model)
 * [Entities](/refguide/entities)
-* [How to Use App Store Content in the Modeler](/community/app-store/use-app-store-content-in-the-modeler)
+* [How to Use App Store Content](/developerportal/app-store/use-app-store-content-in-the-modeler)
 * [How to Use the SAP OData Connector](/howto/sap/use-sap-odata-connector)
 * [How to Use the SAP OData Model Creator](/howto/sap/use-sap-odata-model-creator)
 * [OData metadata XML for CRM Task](https://www.sapfioritrial.com/sap/opu/odata/sap/CRM_TASK/$metadata)

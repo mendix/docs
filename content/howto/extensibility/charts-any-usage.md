@@ -115,7 +115,7 @@ To fine tune a Charts widget configuration, follow these steps:
 
 7. Re-run the project to confirm the changes have been applied.
 
-## 7 Related Content
+## 7 Read More
 
 * **Any Chart** properties: [Any Chart Reference Guide](/refguide/charts-any-configuration)
 * The most common chart types:  [Any Chart Cheat Sheet](/refguide/charts-any-cheat-sheet)

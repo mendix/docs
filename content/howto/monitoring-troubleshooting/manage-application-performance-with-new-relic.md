@@ -1,7 +1,8 @@
 ---
 title: "Manage Application Performance with New Relic"
 category: "Monitoring & Troubleshooting"
-tags: []
+menu_order: 13
+tags: ["monitoring", "troubleshooting", "performance", "new relic"]
 ---
 
 ## 1 Introduction
@@ -89,7 +90,7 @@ Your database calls and queries will now be visible on the database page:
 
 For more information on New Relic, see the New Relic documentation here: [https://docs.newrelic.com/](https://docs.newrelic.com/).
 
-## 7 Related Content
+## 7 Read More
 
 * [How to Find the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
 * [How to Clear Warning Messages in Mendix](clear-warning-messages)
@@ -99,5 +100,5 @@ For more information on New Relic, see the New Relic documentation here: [https:
 * [How to Debug Microflows](debug-microflows)
 * [How to Debug Java Actions](debug-java-actions)
 * [How to Handle Common Mendix SSO Errors](handle-common-mendix-sso-errors)
-* [How to Solve Load and Import Errors](solving-load-and-import-errors)
+* [How to Solve Load & Import Errors](solving-load-and-import-errors)
 * [How to Debug Microflows Remotely](debug-microflows-remotely)

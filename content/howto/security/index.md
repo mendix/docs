@@ -1,11 +1,15 @@
 ---
 title: "Security"
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-This category presents details on how to secure your data and make sure that the right user is seeing the data that they're allowed to see.
+## 1 Introduction
 
-## Documents in This Category
+This category of how-to's presents details on how to secure your data and make sure that the right user is seeing the data that they are allowed to see.
 
-* [How to Create a Secure App](create-a-secure-app)
-* [How to Set Up Anonymous User Security](set-up-anonymous-user-security)
-* [How to Set Up Your First Multi-Tenant App](set-up-your-first-multi-tenant-app)
+## 2 Main Documents in This Category
+
+* [Create a Secure App](create-a-secure-app)
+* [Implement Best Practices for App Security](best-practices-security)
+* [Set Up Anonymous User Security](set-up-anonymous-user-security)
+* [Set Up Your First Multi-Tenant App](set-up-your-first-multi-tenant-app)

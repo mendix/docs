@@ -1,6 +1,6 @@
 ---
 title: "Mobile App"
-category: "Deploy and Manage"
+category: "Deployment"
 menu_order: 90
 description: "Describes the Mobile App page in the Mendix Developer Portal."
 tags: ["Developer Portal", "Mobile", "Deploy"]
@@ -31,12 +31,12 @@ In the **General settings** section, you must provide the following information:
 
 * The **Name** of the app
 * The unique **App Identifier** (for example, `com.example.CompanyExpenses`)
-* A **Desciption** of the app
+* A **Description** of the app
 * Whether a 5 digit PIN is enabled or disabled via the **PIN required?** check box
 
 ### 2.2 Profile Settings
 
-If you are targetting Mendix 7.2.0 or above, please specify the navigation profiles to use on phones and tablets.
+If you are targeting Mendix 7.2.0 or above, please specify the navigation profiles to use on phones and tablets.
 
 Make sure the profile identifier corresponds with the one defined in the Modeler.
 
@@ -50,7 +50,7 @@ For more information, see **Availability** in [Offline](/refguide/offline).
 
 By default, Mendix hybrid applications require a set of device permissions. When users install the app or open the app for the first time, they will be asked to grant these permissions. You can use the check boxes below to control which permissions are requested.
 
-The permssions that can be enabled/disabled:
+The permissions that can be enabled/disabled:
 
 * **Calendar**
 * **Camera**
@@ -78,7 +78,7 @@ In these tabs, you will see an overview of all the images that will be used in t
 * **Icons**
 * **Splash screens**
 
-The following image formats are supported: PNG, GIF, JPEG, and BMP. PNG is recommended, as it is compressed without loss of any information and supports transparancy very well.
+The following image formats are supported: PNG, GIF, JPEG, and BMP. PNG is recommended, as it is compressed without loss of any information and supports transparency very well.
 
 If you click **Edit**, you can replace the image by uploading a new file with the same dimensions as the original file.
 
@@ -86,7 +86,7 @@ If you do not upload any images, the default Mendix-branded images that are show
 
 Take note of the required resolutions and file types for the image files, as the system will not allow you to upload images with different resolutions (because your app packages will not function properly).
 
-## 4 Publish for Mobile App Stores
+## 4 Publish for Mobile App Stores {#publish}
 
 On the right side of the screen, you can choose which operating system you want to publish (iOS or Android).
 
@@ -100,8 +100,6 @@ There are two ways that the device can build the packages:
 
 * **Build it in the cloud**
 * **Do it yourself**
-
-For more information, see [How to Publish a Mendix Hybrid Mobile App in Mobile App Stores](/howto/mobile/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores).
 
 ### 4.1 Building It in the Cloud
 
@@ -131,11 +129,11 @@ To generate the app store packages, go to [Build.PhoneGap.com](https://build.pho
 
 {{% youtube 7ic625u2YJE %}}
 
-## 6 Related Content
+## 6 Read More
 
 * [Customizing PhoneGap Build Packages](/refguide/customizing-phonegap-build-packages)
 * [Deploy and Manage](/developerportal/deploy)
 * [Offline](/refguide/offline)
-* [How to Publish a Mendix Hybrid Mobile App in Mobile App Stores](/howto/mobile/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)
+* [How to Publish a Mendix Hybrid Mobile App in App Stores](/howto/mobile/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)
 * [Adobe PhoneGap Build](https://build.phonegap.com/)
 * [Apache Cordova Phonegap Reference Config.xml](https://cordova.apache.org/docs/en/latest/config_ref/)

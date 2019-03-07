@@ -1,11 +1,10 @@
 ---
 title: "Packaging Hybrid Mobile Apps"
-category: "Mobile"
+category: "Mobile Development"
 ---
 
+A Mendix hybrid application is a hybrid of a web and native app. If you want to publish your hybrid app on the Apple App Store or Google Play, you have to wrap your app in a native shell. We use [PhoneGap](http://phonegap.com/) to make hybrid apps. PhoneGap creates a native wrapper around a web application and provides access to native functions through a Javascript API. 
 
-If you want to publish your app on the Apple App Store or Google Play, you have to wrap your app in a native shell. We use [PhoneGap](http://phonegap.com/) to do this. PhoneGap creates a native wrapper around a web application and provides access to native functions through a Javascript API. These apps are also called 'hybrid' apps because they are a hybrid of a web and a native app.
+Once you are ready to distribute your app to test users or publish it on an app store, you need to package your app into a native app. PhoneGap offers tooling to do this yourself, but you will need to install and configure several pieces of software. Furthermore, when building iOS apps, PhoneGap requires you to use a Mac. The easier alternative is to let PhoneGap build the packaging for you.  
 
-Once you are ready to distribute your app to test users or send it to one of the app stores, you need to package your app into a native app. PhoneGap offers tooling to do this, but you will need to install and configure a lot of software and for building iOS apps you will even need a Mac. The alternative is to let PhoneGap build do the packaging for you and we make it easy for you to do so.
-
-Once you have deployed your app to the Mendix Cloud, you can visit the 'Publish' tab in the [Development Portal](https://sprintr.home.mendix.com/). There, you can choose to "Publish for Mobile App Stores".
+We have made this second option even easier for users deploying their apps to the Mendix Cloud. For instructions on how to do this, see the [Publish for Mobile App Stores](/developerportal/deploy/mobileapp#publish) section in *Mobile App*.

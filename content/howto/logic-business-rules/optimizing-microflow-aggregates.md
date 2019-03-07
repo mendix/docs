@@ -1,6 +1,7 @@
 ---
 title: "Optimize Microflow Aggregates"
 category: "Logic & Business Rules"
+menu_order: 7
 tags: ["microflow", "aggregate"]
 #To update screenshots of these microflows in the Desktop Modeler, use the Microflow Screenshots app project.
 ---
@@ -17,7 +18,7 @@ If you do want to use the list but you also want the optimized query, do two sep
 
 ![](attachments/18448676/18580944.png)
 
-## 2 Related Content
+## 2 Read More
 
 * [How to Define Access Rules Using XPath](define-access-rules-using-xpath)
 * [How to Extend Your Application with Custom Java](extending-your-application-with-custom-java)
@@ -27,4 +28,4 @@ If you do want to use the list but you also want the optimized query, do two sep
 * [How to Optimize Retrieve Activities](optimizing-retrieve-activities)
 * [How to Configure Error Handling](set-up-error-handling)
 * [How to Optimize Microflow Aggregates](optimizing-microflow-aggregates)
-* [How to Extract and Use Sub Microflows](extract-and-use-sub-microflows)
+* [How to Extract & Use Sub-Microflows](extract-and-use-sub-microflows)

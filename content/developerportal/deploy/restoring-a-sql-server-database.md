@@ -1,6 +1,7 @@
 ---
-title: "Restoring an SQL Server Database"
+title: "Restore Database on SQL Server"
 parent: "mendix-on-windows-microsoft-sql-server"
+menu_order: 70
 ---
 ## 1 Introduction
 
@@ -35,7 +36,7 @@ To restore the database, follow these steps:
 3. Right-click the database, select **Tasks** > **Restore** > **Database**, which will open the **Restore Database** dialog box.
 4. In the **Source** section of the **General** page, specify the source and the location of the backup sets to restore by selecting **Device** > **Add** and then locating the backup file:
 
-    ![](attachments/18448651/18580646.jpg)
+    ![](attachments/restoring-a-sql-server-database/18580646.jpg)
 
 5. In the **Destination** section of the **General** page, the **Database** field is automatically populated with the name of the database to be restored. To change the name of the database, enter the new name in this field.
 6. In the **Restore plan** section of the **General** page, leave the default as **To the last backup taken** or click **Timeline** to access the **Backup Timeline** dialog box where you can manually select a point in time to stop the recovery action.
@@ -69,7 +70,7 @@ To restore the database, follow these steps:
         * This is not usually necessary unless the database is large and you wish to monitor the status of the restore operation
 9. Click **OK**.
 
-## 5 Related Content
+## 5 Read More
 
 * [How to Troubleshoot an SQL Server](troubleshooting-sql-server)
 * [How to Set Up an SQL Server User](setting-up-a-sql-server-user)
@@ -78,5 +79,4 @@ To restore the database, follow these steps:
 * [How to Set Up a Security Checklist for Your On-Premises Installation](security-checklist-for-your-on-premises-installation)
 * [How to Use Mendix on Windows - Microsoft SQL Server](mendix-on-windows-microsoft-sql-server)
 * [How to Deploy Mendix on Microsoft Windows](deploy-mendix-on-microsoft-windows)
-* [How to Install Mendix on Debian GNU Linux](installing-mendix-on-debian-gnu-linux)
-* [How to Install Mendix on RedHat and CentOS](installing-mendix-on-redhat-and-centos)
+* [U*ix Deployment](unix-like)

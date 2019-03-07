@@ -120,7 +120,7 @@ To view your app, follow these steps:
 
 To use the fifth and final how-to for creating a simple HRM application, see [Build a Simple HRM App 5: Smarten Up Your App with Business Logic](build-a-simple-hrm-app-5-smarten-up-your-app-with-business-logic).
 
-## 5 Related Content
+## 5 Read More
 
 * [Build a Simple HRM App 1: Create, Manage, and Deploy the App](build-a-simple-hrm-app-1-create-manage-and-deploy-the-app)
 * [Build a Simple HRM App 2: First Steps in Building a Rich GUI](build-a-simple-hrm-app-2-first-steps-in-building-a-rich-gui)

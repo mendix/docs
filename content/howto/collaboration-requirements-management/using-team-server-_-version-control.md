@@ -1,6 +1,7 @@
 ---
 title: "Use Team Server for Version Control"
 category: "Collaboration & Requirements Management"
+menu_order: 10
 tags: []
 ---
 ## 1. Team server
@@ -177,7 +178,7 @@ The example shows that you can merge a single revision. It is also possible to m
     *   (Big) feature (work > 1 day)
     *   Integration external work
 
-## 4\. Related Content
+## 4\. Read More
 
 *   [Stories](/developerportal/collaborate/stories)
 *   [Contributing to a GitHub repository](contribute-to-a-github-repository)

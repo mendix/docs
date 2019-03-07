@@ -92,7 +92,7 @@ Wow, you deployed your first app!
 
 To use the second how-to for creating a simple HRM application, see [Build a Simple HRM App 2: Perform the First Steps in Building a Rich GUI](build-a-simple-hrm-app-2-first-steps-in-building-a-rich-gui).
 
-## 6 Related Content
+## 6 Read More
 
 * [Build a Simple HRM App 2: Perform the First Steps in Building a Rich GUI](build-a-simple-hrm-app-2-first-steps-in-building-a-rich-gui)
 * [Build a Simple HRM App 3: Show Related Data in the GUI](build-a-simple-hrm-app-3-show-related-data-in-the-gui)

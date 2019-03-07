@@ -1,6 +1,6 @@
 ---
 title: "Monitoring Mendix Runtime"
-category: "Runtime"
+category: "Mendix Runtime"
 description: "Describes the supported Mendix Runtime monitoring actions."
 tags: ["runtime, json"]
 ---
@@ -222,8 +222,6 @@ Number of database requests. Distinguishes between "select", "update", "insert",
 Memory statistics should only be interpreted by experts, lack of detailed knowledge of the Java memory model can lead to false conclusions.
 
 {{% /alert %}}{{% alert type="warning" %}}
-
-For versions of lower than Mendix 6.6 or Mendix 5.21.5 running on Java8, the information returned in the "memory" part of the response provides incomplete and incorrect information. If you rely on information in this section for these versions we recommend you to upgrade your version to Mendix 6.7 or 5.21.5 or higher.
 
 For backwards compatibility reasons the fields "code", "eden", "tenured", "survivor" and "permanent" are still present but they should not be relied on anymore. They will be removed from Mendix 7 onwards.
 
@@ -448,6 +446,8 @@ In the Mendix Desktop Modeler, a [health check microflow](project-settings) can 
 
 If a health check microflow has been configured, this request will report on the current health status. The "health" value can be either "healthy," "sick," or "unknown" (when no health microflow was configured). For the value "sick," the "diagnosis" value will give the reason the application is not healthy. This reason is the return value of the health check microflow.
 
+The health check microflow gets invoked multiple times per minute. Therefore, it is recommended to make it light-weight and run quickly. Heavy operations may have a significant impact on your application's performance.
+
 {{% alert type="warning" %}}
 
 This request can only be executed when the Mendix Runtime status is "running" (see [Runtime Status](#runtime-status) above).
@@ -481,4 +481,4 @@ This request can only be executed when the Mendix Runtime status is "running" (s
 }
 ```
 
-Returns feedback about the Mendix Runtime. "java_version" is available from Mendix 6.6 onwards.
+Returns feedback about the Mendix Runtime.

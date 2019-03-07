@@ -10,11 +10,11 @@ A report pane has a bottom section and a top section, as described below.
 
 The reports ([report charts](report-chart) and/or [basic reports](basic-reports)) are defined in the bottom section of a report pane.
 
-Each report retrieves its data from a [data set](data-sets).
+Each report retrieves its data from a [dataset](data-sets).
 
 ## Top Section with parameter widgets
 
-If a data set of a report has parameters, the values for those parameters are supplied by the parameter widgets ([drop downs](drop-down) and/or [date range selectors](date-range-selector)) in the top section of the report pane. Through these parameter widgets the end user can filter for which data reports should be displayed.
+If a dataset of a report has parameters, the values for those parameters are supplied by the parameter widgets ([drop downs](drop-down) and/or [date range selectors](date-range-selector)) in the top section of the report pane. Through these parameter widgets the end user can filter for which data reports should be displayed.
 
 ## Behavior Property
 

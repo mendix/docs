@@ -1,34 +1,39 @@
 ---
-title: "API Keys"
-category: "Settings"
-menu_order: 40
-description: "This page describes the API Key settings of your App."
-tags: ["Settings","App","API","Key","Developer Portal"]
+title: "Manage App API Keys"
+category: "App Settings"
+description: "Describes creating API keys for your app."
+tags: ["Settings", "App", "API", "Key", "API key", "Developer Portal"]
 ---
 
 ## 1 Introduction
 
-In **API Keys** there is an overview of the created API Keys for your App with the following information:
+In **API Keys**, there is an overview of the API keys created for your app with the following information:
 
-*   API Key Name
-*   Creation date
-*   Date of last usage 
+*   **API Key Name**
+*   Date of **Creation**
+*   Date **Last Used**
 
-You can delete an API Key by clicking **Revoke**.
+{{% image_container width="550" %}}![](attachments/keys.png)
+{{% /image_container %}}
 
-### 1.1 Create API Key
+Click **Revoke** to delete an app API key.
 
-When you click on **Create API Key** you have to fill in the **API Key name**. After cliking **Generate API Key** you are able to use the API key.
+## 2 Creating an API Key
 
+To create a new app API key, click **Create API Key**  and follow these steps:
 
-{{% alert type="warning" %}}
+1.  Fill in the **API key name**:
 
-For security reasons, the API key will be only displayed once. It will not be displayed again.
+	![](attachments/create-key-1.png)
+	
+2.  Click **Generate API Key** to be able to use the app API key:
 
-{{% /alert %}}
+	![](attachments/create-key-2.png)
 
+	{{% alert type="warning" %}}For security reasons, the app API key will only be displayed once, during **Step 2 of 2**. It will not be displayed again.
+	{{% /alert %}}
 
-## 2 Related Content
+## 3 Read More
 
 * [API Documentation](/apidocs-mxsdk/apidocs)
 * [Mendix Profile](../mendix-profile/index)

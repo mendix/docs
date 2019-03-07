@@ -1,7 +1,8 @@
 ---
 title: "Set Up Error Handling"
 category: "Logic & Business Rules"
-tags: ["error", "error handling", "rollback"]
+menu_order: 8
+tags: ["error", "error handling", "rollback", "microflow", "logic"]
 #To update screenshots of these microflows in the Desktop Modeler, use the Microflow Screenshots app project.
 ---
 
@@ -207,7 +208,7 @@ Consider the following best practices for error handling:
 * Always add custom error handling on integration or e-mail activities
 * Don’t over-do it – you can specify a lot of complicated error handling combinations, but this makes it more difficult (and slower) for the platform to evaluate the microflow, and it also makes it more difficult to predict the exact behavior in case of an exception
 
-## 6 Related Content
+## 6 Read More
 
 * [How to Define Access Rules Using XPath](define-access-rules-using-xpath)
 * [How to Trigger Logic Using Microflows](triggering-logic-using-microflows)

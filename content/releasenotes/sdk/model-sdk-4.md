@@ -1,16 +1,42 @@
 ---
 title: "4"
 parent: "model-sdk"
-#For next release, do not include Impact.
 ---
 
-These are the release notes for the Model SDK version 4.
+These are the release notes for the [Model SDK](/apidocs-mxsdk/mxsdk/) version 4.
+
+## 4.19.0 {#419}
+
+**Release date: February 8th, 2019**
+
+*  We added support for Mendix 7.23.0.
+*  It is now possible to perform operations (such as **delete working copy**) on working copies that have a newer metamodel version than the one this Model SDK supports. This was not possible before, as we checked the metamodel version for every operation. Now, we only check the metamodel version when actually opening a working copy.
+
+## 4.18.0 {#418}
+
+**Release date: December 13th, 2018**
+
+*  We added the ability to use promises instead of callbacks when using the Model SDK. All methods in `ModelSdkClient` and `Model` as well as the `load()` method of model elements now feature promise-based overloads in addition to the original callback-based ones.
+  {{% alert type="info" %}}If you open a working copy using the promise-based methods but you are still using callbacks in other places in your code without passing an error callback (for example, the callback overload of the `load()` method of model elements), be sure to register an error handler on the model using `Model.setErrorHandler()`.{{% /alert %}}
+*  We added support for Mendix 7.22.0.
+  {{% alert type="info" %}}There is a small breaking API change where the property `navigation.NavigationDocument.profiles` is now of a different type to accommodate the introduction of a new type of navigation profile. For now, these profiles can be safely casted to `navigation.NavigationProfile`.{{% /alert %}}
+*  We added a lock type parameter to the `unlockWorkingCopy` API.
+
+## 4.17.0
+
+**Release date: November 30th, 2018**
+
+* We added new working copy lock type `update`.
+* We added support for Mendix 7.21.0.
+* We added new working copy lock type `commit`.
+* We fixed the duplicate processing of events.
+* We upgraded to Node.JS version 10.
 
 ## 4.16.0
 
 **Release date: October 31st, 2018**
 
-| Story | impact | description |
+| Story | Impact | Description |
 |---|---|---|
 | MS-1144 | None | Upgraded to TypeScript 3.1. |
 | MS-1156 | None | Added `onEventProcessed` hook to AbstractModel. |

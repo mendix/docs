@@ -61,7 +61,7 @@ _Default value:_ Horizontal
 
 {{% snippet file="refguide/Tab+index+Property.md" %}}
 
-## Related Content
+## Read More
 
 *   [Data view](data-view)
 *   [Attributes](attributes)

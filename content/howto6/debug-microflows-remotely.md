@@ -72,7 +72,7 @@ If you do not see an overview similar to the one below, then you do not have suf
 1. Go to the **Debugger** dock window.
 2. Click **Connect** and enter the URL and password information in the dialog window.
 
-## 4 Related Content
+## 4 Read More
 
 * [How to Find the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
 * [How to Clear Warning Messages](clear-warning-messages)

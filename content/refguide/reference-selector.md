@@ -201,7 +201,7 @@ Keep in mind that even though you connect an attribute to the reference selector
 
 {{% snippet file="refguide/Tab+index+Property.md" %}}
 
-## Related Content
+## Read More
 
 *   [Data view](data-view)
 *   [Entities](entities)

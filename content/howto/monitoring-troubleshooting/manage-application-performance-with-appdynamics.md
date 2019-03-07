@@ -1,7 +1,8 @@
 ---
 title: "Manage Application Performance with AppDynamics"
 category: "Monitoring & Troubleshooting"
-tags: []
+menu_order: 12
+tags: ["monitoring", "troubleshooting", "performance", "appdynamics"]
 ---
 
 ## 1 Introduction
@@ -162,7 +163,7 @@ Once you have performed all of the steps above for your Mendix application, its 
 
 For more information on AppDynamics, see the AppDynamics documentation here: [https://docs.appdynamics.com/](https://docs.appdynamics.com/).
 
-## 9 Related Content
+## 9 Read More
 
 * [How to Find the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
 * [How to Clear Warning Messages](clear-warning-messages)
@@ -172,5 +173,5 @@ For more information on AppDynamics, see the AppDynamics documentation here: [ht
 * [How to Debug Microflows](debug-microflows)
 * [How to Debug Java Actions](debug-java-actions)
 * [How to Handle Common Mendix SSO Errors](handle-common-mendix-sso-errors)
-* [How to Solve Load and Import Errors](solving-load-and-import-errors)
+* [How to Solve Load & Import Errors](solving-load-and-import-errors)
 * [How to Debug Microflows Remotely](debug-microflows-remotely)

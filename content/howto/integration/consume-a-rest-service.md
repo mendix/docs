@@ -1,7 +1,8 @@
 ---
 title: "Consume a REST Service"
 category: "Integration"
-tags: ["integration", "rest service", "data model"]
+menu_order: 9
+tags: ["integration", "rest service", "data model", "consume"]
 description: "Describes how to get information from a REST service."
 ---
 
@@ -101,7 +102,7 @@ To call the REST service in a microflow, follow these steps:
     ![](attachments/consume-a-rest-service/set-association.png)
 
 15. Click **OK**
- 
+
     ![](attachments/consume-a-rest-service/change-object.png)
 
 16. Click **OK**
@@ -153,7 +154,7 @@ To fill in the CreateInput microflow, follow these steps:
 
 Congratulations! You can now start your app and get summaries from Wikipedia.
 
-## 8 Related Content
+## 8 Read More
 
 * [How to Consume a Complex Web Service](consume-a-complex-web-service)
 * [How to Consume a Simple Web Service](consume-a-simple-web-service)

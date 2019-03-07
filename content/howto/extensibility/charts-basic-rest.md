@@ -100,7 +100,7 @@ To use the REST Data source end point in your chart, follow these steps:
 
     ![Show Chart](attachments/charts/charts-rest-area-chart.png)
 
-## 6 Related Content
+## 6 Read More
 
 * [How to use chart data source REST](charts-basic-create)
 * [How to use Any Chart](charts-any-usage)

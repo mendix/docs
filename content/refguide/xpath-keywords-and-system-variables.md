@@ -3,130 +3,118 @@ title: "XPath Keywords and System Variables"
 parent: "xpath-constraints"
 ---
 
+## 1 Overview
 
-In XPath, several keywords and system variables can be used called as a comparison.
+In XPath, several keywords and system variables can be called as a comparison.
 
-## Keywords
+## 2 Keywords
 
-*   `NULL`
-*   `empty`
+Either of these keywords can be used to check whether an attribute has a value (any value) or if it has been left empty:
 
-Either of these keywords can be used to check whether an attribute has a value (any value) or if it has been left empty.
+* `NULL`
+* `empty`
 
-{{% alert type="info" %}}
+### 2.1 Example
 
-See the following query:
+This query returns all the customers whose name is not known to the system:
 
 ```java
 //Sales.Customer[Name = NULL]
 ```
 
-This query returns all customers whose name is not known to the system.
+These keywords can only be used in conjunction with attributes. The existence of associations cannot be confirmed in this manner. For more information on how to constrain on associations, see [XPath Constraint Functions](xpath-constraint-functions).
 
-{{% /alert %}}{{% alert type="warning" %}}
+## 3 System Variables
 
-These keywords can only be used in conjunction with attributes. The existence of associations cannot be confirmed in this manner. Read [this page](xpath-constraints) for more information on how to constrain on associations.
+System variables can be used to obtain system or date related values. The available tokens are described below.
 
-{{% /alert %}}
-
-## System variables
-
-System variables can be used to obtain system or date related values. The following tokens are available:
-
-### Object related
+### 3.1 Object-Related
 
 | Token | Description |
 | --- | --- |
-| `[%CurrentUser%]` | GUID of the user currently logged on |
-| `[%CurrentObject%]` | GUID of the active object (in the context) |
+| `[%CurrentUser%]` | The GUID of the user currently logged in. |
+| `[%CurrentObject%]` | The GUID of the active object (in the context). |
 
-### Userroles
+### 3.2 User Roles
 
-These will be created for each userrole in your project. Here is an example:
+These will be created for each user role in your app project. Here is an example:
 
 | Token | Description |
 | --- | --- |
-| `[%UserRole_Administrator%]` | The userrole Administrator |
+| `[%UserRole_Administrator%]` | The Administrator user role. |
 
-### Time related
+### 3.3 Time-Related
 
 The following tokens can be used to obtain a date and time value:
 
 | Token | Description |
 | --- | --- |
-| `[%CurrentDateTime%]` | Current date and time |
-| `[%BeginOfCurrentMinute%]` | Date and time at the beginning of the current minute |
-| `[%BeginOfCurrentMinuteUTC%]` | Date and time at the beginning of the current minute in UTC|
-| `[%EndOfCurrentMinute%]` | Date and time at the end of the current minute |
-| `[%EndOfCurrentMinuteUTC%]` | Date and time at the end of the current minute in UTC|
-| `[%BeginOfCurrentHour%]` | Date and time at the beginning of the current hour |
-| `[%BeginOfCurrentHourUTC%]` | Date and time at the beginning of the current hour in UTC |
-| `[%EndOfCurrentHour%]` | Date and time at the end of the current hour |
-| `[%EndOfCurrentHourUTC%]` | Date and time at the end of the current hour in UTC|
-| `[%BeginOfCurrentDay%]` | Date and time at the beginning of the current day |
-| `[%BeginOfCurrentDayUTC%]` | Date and time at the beginning of the current day in UTC |
-| `[%EndOfCurrentDay%]` | Date and time at the end of the current day |
-| `[%EndOfCurrentDayUTC%]` | Date and time at the end of the current day in UTC|
-| `[%BeginOfCurrentWeek%]` | Date and time at the beginning of the current week |
-| `[%BeginOfCurrentWeekUTC%]` | Date and time at the beginning of the current week in UTC|
-| `[%EndOfCurrentWeek%]` | Date and time at the end of the current week |
-| `[%EndOfCurrentWeekUTC%]` | Date and time at the end of the current week in UTC|
-| `[%BeginOfCurrentMonth%]` | Date and time at the beginning of the current month |
-| `[%BeginOfCurrentMonthUTC%]` | Date and time at the beginning of the current month in UTC|
-| `[%EndOfCurrentMonth%]` | Date and time at the end of the current month |
-| `[%EndOfCurrentMonthUTC%]` | Date and time at the end of the current month in UTC|
-| `[%BeginOfCurrentYear%]` | Date and time at the beginning of the current year |
-| `[%BeginOfCurrentYearUTC%]` | Date and time at the beginning of the current year in UTC|
-| `[%EndOfCurrentYear%]` | Date and time at the end of the current year |
-| `[%EndOfCurrentYearUTC%]` | Date and time at the end of the current year in UTC |
+| `[%CurrentDateTime%]` | The current date and time. |
+| `[%BeginOfCurrentMinute%]` | The date and time at the beginning of the current minute. |
+| `[%BeginOfCurrentMinuteUTC%]` | The date and time at the beginning of the current minute in UTC. |
+| `[%EndOfCurrentMinute%]` | The date and time at the end of the current minute. |
+| `[%EndOfCurrentMinuteUTC%]` | The date and time at the end of the current minute in UTC. |
+| `[%BeginOfCurrentHour%]` | The date and time at the beginning of the current hour. |
+| `[%BeginOfCurrentHourUTC%]` | The date and time at the beginning of the current hour in UTC. |
+| `[%EndOfCurrentHour%]` | The date and time at the end of the current hour. |
+| `[%EndOfCurrentHourUTC%]` | The date and time at the end of the current hour in UTC. |
+| `[%BeginOfCurrentDay%]` | The date and time at the beginning of the current day. |
+| `[%BeginOfCurrentDayUTC%]` | The date and time at the beginning of the current day in UTC. |
+| `[%EndOfCurrentDay%]` | The date and time at the end of the current day. |
+| `[%EndOfCurrentDayUTC%]` | The date and time at the end of the current day in UTC. |
+| `[%BeginOfCurrentWeek%]` | The date and time at the beginning of the current week. |
+| `[%BeginOfCurrentWeekUTC%]` | The date and time at the beginning of the current week in UTC. |
+| `[%EndOfCurrentWeek%]` | The date and time at the end of the current week. |
+| `[%EndOfCurrentWeekUTC%]` | The date and time at the end of the current week in UTC. |
+| `[%BeginOfCurrentMonth%]` | The date and time at the beginning of the current month. |
+| `[%BeginOfCurrentMonthUTC%]` | The date and time at the beginning of the current month in UTC. |
+| `[%EndOfCurrentMonth%]` | The date and time at the end of the current month. |
+| `[%EndOfCurrentMonthUTC%]` | The date and time at the end of the current month in UTC. |
+| `[%BeginOfCurrentYear%]` | The date and time at the beginning of the current year. |
+| `[%BeginOfCurrentYearUTC%]` | The date and time at the beginning of the current year in UTC. |
+| `[%EndOfCurrentYear%]` | The date and time at the end of the current year. |
+| `[%EndOfCurrentYearUTC%]` | The date and time at the end of the current year in UTC. |
 
 The following tokens can be used to add or subtract a period of time from a date and time token value:
 
 | Token | Description |
 | --- | --- |
-| `[%DayLength%]` | Length of one day (24 hour) |
-| `[%HourLength%]` | Length of one hour |
-| `[%MinuteLength%]` | Length of one minute |
-| `[%SecondLength%]` | Length of one second |
-| `[%WeekLength%]` | Length of one week (seven days) |
-| `[%YearLength%]` | Length of one year |
-
-These variables must be used as string values, placed between two quotes. Time related tokens combined with period related tokens must be placed within one string. See example 3.
+| `[%DayLength%]` | The length of one day (24 hour). |
+| `[%HourLength%]` | The length of one hour. |
+| `[%MinuteLength%]` | The length of one minute. |
+| `[%SecondLength%]` | The length of one second. |
+| `[%WeekLength%]` | The length of one week (seven days). |
+| `[%YearLength%]` | The length of one year. |
 
 {{% alert type="info" %}}
+These variables must be used as string values and placed between two quotes. Time-related tokens combined with period-related tokens must be placed within one string. See example 3.
+{{% /alert %}}
+
+#### 3.3.1 Examples
+
+This query returns only customers who have registered since the beginning of this week:
 
 ```java
 //Sales.Customer[DateRegistered >= '[%BeginOfCurrentWeek%]']
 ```
 
-This query returns only customers who have registered since the beginning of this week.
-
-{{% /alert %}}{{% alert type="info" %}}
+This query returns only customers who have registered this week:
 
 ```java
 //Sales.Customer[DateRegistered >= '[%BeginOfCurrentWeek%]' and DateRegistered < '[%EndOfCurrentWeek%]']
 ```
 
-This query returns only customers who have registered this week.
-
-{{% /alert %}}{{% alert type="info" %}}
+This query returns only customers who have registered in the past three years:
 
 ```java
 //Sales.Customer[DateRegistered > '[%BeginOfCurrentDay%] - 3 * [%YearLength%]']
 ```
 
-This query returns only customers who have registered in the past three years.
-
-{{% /alert %}}{{% alert type="info" %}}
+This query returns users with the role "Administrator":
 
 ```java
 //System.User[System.UserRoles = '[%UserRole_Administrator%]']
 ```
-
-This query returns users with the role Administrator
-
-{{% /alert %}}{{% alert type="warning" %}}
-
-Because system variables are written as a string (between quotes) it is not possible to use parentheses to group expressions.
-
+{{% alert type="info" %}}
+Because system variables are written as a string (between quotes), it is not possible to use parentheses to group expressions.
 {{% /alert %}}

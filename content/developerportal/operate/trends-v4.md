@@ -1,9 +1,10 @@
 ---
 title: "Trends in Mendix Cloud v4"
 parent: "metrics"
-menu_order: 60
+menu_order: 10
 description: "Describes how to interpret various graphs and trends in the Mendix Cloud v4."
 tags: ["Trends","v4","Mendix Cloud","Developer Portal"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
@@ -283,12 +284,12 @@ Disk utilization is calculated as the disk usage that is used by the user of the
 
 {{% /alert %}}
 
-## 6 Related Content
+## 6 Read More
 
 * [Alerts](monitoring-application-health)
-* [How to Configure Maintenance Windows](/developerportal/howto/maintenance-windows)
-* [How to Migrate to Mendix Cloud v4](/developerportal/deploy/migrating-to-v4)
-* [How to Receive Environment Status Alerts](/developerportal/howto/receive-alerts)
-* [How to View the Mendix Cloud Version and Region](/developerportal/deploy/cloud-version-region)
+* [Maintenance Windows: Configuration](/developerportal/deploy/maintenance-windows)
+* [Migrate to Mendix Cloud v4](/developerportal/deploy/migrating-to-v4)
+* [How to Receive Environment Status Alerts](receive-alerts)
+* [Cloud Version and Region in the Mendix Cloud](/developerportal/deploy/cloud-version-region)
 * [Mendix Cloud v4 - FAQ](/developerportal/deploy/mxcloudv4)
 

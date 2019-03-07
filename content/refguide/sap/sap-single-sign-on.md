@@ -1,5 +1,5 @@
 ---
-title: "SAP Single Sign On"
+title: "SAP Single Sign-On"
 category: "SAP"
 menu_order: 40
 description: "Reference information on SAP Single Sign-On"
@@ -107,6 +107,6 @@ You cannot solve this problem by changing your email address on Mendix. This **d
 
 {{% /alert %}}
 
-## 5 Related Content
+## 5 Read More
 
 * [SAP Cloud Platform](/developerportal/deploy/sap-cloud-platform)

@@ -12,7 +12,7 @@ For details on how this works in Mendix versions 7.0 and 7.1, see [Navigation Be
 
 ## 1 Overview
 
-Managment of profiles is available from the **Navigation** section of a project.
+Management of profiles is available from the **Navigation** section of a project.
 
 ![](attachments/modeler-core/2018-03-01_17-29-32.png)
 

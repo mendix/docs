@@ -1,7 +1,8 @@
 ---
-title: "Install and Configure the SMTP Email Module"
+title: "Install & Configure the SMTP Email Module"
 category: "Extensibility"
-tags: []
+menu_order: 6
+tags: ["extensibility", "smtp", "email"]
 ---
 
 ## 1 Introduction
@@ -33,7 +34,7 @@ In this section, you will install the SMTP Email module and integrate it into an
 
     ![](attachments/19202956/19398974.png)
     
-    {{% alert type="info" %}}The SMTP Email module is community-supported. For details, see section [2.2 Community Category](/community/app-store/app-store-content-support#community-category) of *App Store Content Support*.
+    {{% alert type="info" %}}The SMTP Email module is community-supported. For details, see section [2.2 Community Category](/developerportal/app-store/app-store-content-support#community-category) of *App Store Content Support*.
     {{% /alert %}}
 
 2.  Download and set up the [Encryption Module](https://appstore.home.mendix.com/link/app/1011/Mendix/Encryption), which will allow for protected passwords. 
@@ -157,7 +158,7 @@ The SMTP email module contains a number of other powerful tools. Some of the enh
 
 * Auto-generate emails in workflow steps to have the app send out emails from SMTP behind the scenes
 
-## 7 Related Content
+## 7 Read More
 
 * [How to Use  Connectors and Adapters](use-connectors-and-adapters)
 * [How to Access a Samba Share from the MxCloud](access-a-samba-share-from-the-mxcloud)

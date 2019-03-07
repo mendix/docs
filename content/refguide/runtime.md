@@ -1,32 +1,30 @@
 ---
-title: "Runtime"
+title: "Mendix Runtime"
 ---
 
-The Mendix Runtime executes the model created in the Modeler. It serves pages to the Client and executes microflows, calls web services, generates documents, communicates with the database and much more.
+## 1 Introduction
 
-## Licensing
+The Mendix Runtime executes the application model that is created in the Modeler. It serves pages to the Mendix Client, executes microflows, calls web services, generates documents, communicates with the database, and much more.
 
-You need a license to run an application in production mode. Without a license the Mendix Runtime stops operating after a couple of hours. A license can be obtained through your account manager at Mendix. Afterwards, you can activate your license by following the instructions in [How to Activate Your Mendix License on Microsoft Windows](/developerportal/deploy/activate-a-mendix-license-on-microsoft-windows).
+## 2 Licensing
 
-## API
+You need a license to run an application in production mode. Without a license, the Mendix Runtime stops operating after a couple of hours. A license can be obtained through your account manager at Mendix. Afterwards, you can activate your license by following the instructions in [How to Activate Your Mendix License on Microsoft Windows](/developerportal/deploy/activate-a-mendix-license-on-microsoft-windows).
 
-You can extend the functionality of the runtime by writing Java actions. The API available for Java programmers is available at [API docs](https://apidocs.mendix.com/7/runtime/).
+## 3 APIs
 
-## Integration API documentation
+You can extend the functionality of the Runtime by writing Java actions. For more information,  see the [Runtime API](/apidocs-mxsdk/apidocs/index#runtime) section of *API Documentation*.
 
 {{% alert type="info" %}}
 Links to available API documentation such as WSDLs for published web services are available on the URL path `/api-doc` (for example: `http://localhost:8080/api-doc/`).
 {{% /alert %}}
 
-## Logging
-
-The runtime logs activity at different levels. You can read more about logging and log levels at the [Logging](logging) page.
-
-## Main Documents in This Category
+## 4 Main Documents in This Category
 
 * [Clustered Mendix Runtime](clustered-mendix-runtime)
 * [Customization](custom-settings)
 * [Data Storage](data-storage)
-* [DateTime Handling FAQ](datetime-handling-faq)
+* [Date & Time Handling](datetime-handling-faq)
 * [Logging](logging)
-* [Transient Objects and Gabage Collecting](transient-objects-garbage-collecting)
+* [Monitoring Mendix Runtime](monitoring-mendix-runtime)
+* [Objects & Caching](objects-and-caching)
+* [Transient Objects & Garbage Collecting](transient-objects-garbage-collecting)

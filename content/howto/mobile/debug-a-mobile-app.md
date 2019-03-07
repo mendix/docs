@@ -1,8 +1,9 @@
 ---
 title: "Debug a Mobile App with Mendix"
-category: "Mobile"
+category: "Mobile Development"
+menu_order: 40
 description: "How to set up a mobile app to run from your local machine and debug using Mendix's tools"
-tags: ["Mobile", "debug", "android", "ios"]
+tags: ["mobile", "debug", "android", "ios"]
 ---
 
 ## 1 Introduction

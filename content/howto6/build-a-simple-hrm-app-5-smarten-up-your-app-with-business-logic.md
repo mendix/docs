@@ -133,7 +133,7 @@ To view your app, follow these steps:
 3. Click **PROMOTE**. The level of the employee will change from **Medior** to **Senior**.
 4. Click **PROMOTE**. You will see a message that you cannot promote the employee because the employee is already Senior.
 
-## 5 Related Content
+## 5 Read More
 
 * [Build a Simple HRM App 1: Create, Manage, and Deploy the App](build-a-simple-hrm-app-1-create-manage-and-deploy-the-app)
 * [Build a Simple HRM App 2: First Steps in Building a Rich GUI](build-a-simple-hrm-app-2-first-steps-in-building-a-rich-gui)

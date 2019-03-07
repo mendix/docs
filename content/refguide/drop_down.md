@@ -75,7 +75,7 @@ The empty option caption is available from Mendix 7.2.0.
 
 {{% snippet file="refguide/Tab+index+Property.md" %}}
 
-## Related Content
+## Read More
 
 *   [Data View](data-view)
 *   [Attributes](attributes)

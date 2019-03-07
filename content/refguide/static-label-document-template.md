@@ -1,5 +1,5 @@
 ---
-title: "Static Label (document template)"
+title: "Static Label (Document Template)"
 parent: "document-templates"
 ---
 

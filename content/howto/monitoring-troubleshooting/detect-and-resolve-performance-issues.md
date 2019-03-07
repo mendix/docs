@@ -1,7 +1,7 @@
 ---
 title: "Detect & Resolve Performance Issues"
 category: "Monitoring & Troubleshooting"
-tags: []
+tags: ["monitoring", "troubleshooting", "performance issue", "performance"]
 ---
 Any application can run into performance issues. Here are a number of possible performance issues you may run into, some root causes, and finally how you can resolve them.
 
@@ -185,6 +185,6 @@ If you find that your microflow has a large number of objects to loop over, or e
 
 As always, make sure you look at retrieves and commits performed in your loops, and try to minimize them wherever possible.
 
-## Related Content
+## Read More
 
 [Expert Webinar Series: App Performance](http://ww2.mendix.com/Expert-Webinar.Performance.html)

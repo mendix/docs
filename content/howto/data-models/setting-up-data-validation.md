@@ -1,6 +1,7 @@
 ---
 title: "Set Up Data Validation"
 category: "Data Models"
+menu_order: 2
 tags: []
 ---
 This how-to explains how you can set up data validation with Mendix. Before you can start with this how-to you need to setup a basic data structure, otherwise there won't be any data to validate. If you don't know how to setup a basic data structure, you can take a look at [this how-to](create-a-basic-data-layer).
@@ -26,7 +27,7 @@ This section will explain how you can add validation rules to the domain model o
 
 ## 2 Required Validation on Inputs, Reference Selectors and Drop-downs
 
-The page builder of the Desktop Modeler allows you to configure which inputs are mandatory and what message is shown to the user if the input is empty. If you don't have a detail page yet, take a look at [this](../ux/create-your-first-two-overview-and-detail-pages) how-to.
+The page builder of the Desktop Modeler allows you to configure which inputs are mandatory and what message is shown to the user if the input is empty. If you don't have a detail page yet, take a look at [this](../front-end/create-your-first-two-overview-and-detail-pages) how-to.
 
 1.  Open a **detail page** and double click an input to open its properties.
 2.  Enter a messagefor **Placeholder text**. This message is shown below the input if a user clicks the save button without filling in a value.
@@ -58,7 +59,7 @@ As long as this Microflow returns a boolean value, you are free to add any logic
 
 ## 4 Advanced Validation with a Custom 'Save' Button
 
-Validating user input can also be achieved by overriding the default save button on a detail page. Start by creating an overview and detail page. If you don't know how to create overview and detail pages, take a look at [this](../ux/create-your-first-two-overview-and-detail-pages) how-to. Your detail page should look similar to this:
+Validating user input can also be achieved by overriding the default save button on a detail page. Start by creating an overview and detail page. If you don't know how to create overview and detail pages, take a look at [this](../front-end/create-your-first-two-overview-and-detail-pages) how-to. Your detail page should look similar to this:
 
 ![](attachments/18448742/18582143.png)
 
@@ -103,14 +104,14 @@ Validating user input can also be achieved by overriding the default save button
 15. Select for example **Name** as member.
 16. Enter an error message in the **Template** field. You can use indexes to dynamically insert parameters in the template.
 
-## 5 Related Content
+## 5 Read More
 
-* [How to Work with Images and Files](working-with-images-and-files)
+* [How to Work with Images & Files](working-with-images-and-files)
 * [How to Create a Basic Data Layer](create-a-basic-data-layer)
 * [How to Work with Object Events](working-with-object-events)
 * [How to Denormalize Data to Improve Performance](denormalize-data-to-improve-performance)
 * [How to Set Up Data Validation](setting-up-data-validation)
 * [How to Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
 * [Stories](/developerportal/collaborate/stories)
-* [How to Perform the Scout and Windows 10 Workaround](../ux/perform-scout-and-windows-10-workaround)
+* [How to Perform the Scout and Windows 10 Workaround](../front-end/perform-scout-and-windows-10-workaround)
 

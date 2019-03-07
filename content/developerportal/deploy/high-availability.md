@@ -1,6 +1,9 @@
 ---
 title: "Configure High Availability"
 parent: on-premises-design
+description: "How to install Mendix behind a load balancer for high availability"
+menu_order: 20
+tags: ["high-availability", "on-premises", "clustering", "runtime"]
 ---
 
 ## 1 Introduction
@@ -17,7 +20,7 @@ This how-to describes the requirements and limitations of using a Mendix app in 
 
 ## 3 Mendix High Availability and Load Balancing Configuration
 
-![](attachments/18448663/18580722.png)
+![](attachments/high-availability/18580722.png)
 
 It is possible to use the Mendix Platform in a load-balancing environment. However, it is important to know that the Mendix Platform is not cluster-capable or -aware. The documentation doesn’t state exactly how the Mendix Platform should be configured in a load high availability architecture. Since Mendix doesn’t have many requirements for how it should be installed, there are many options for running Mendix behind a load balancer.
 
@@ -60,9 +63,9 @@ These are some important details:
 
 ### 3.2 Detailed Example of High Availability Architecture
 
-![Example architecture for a High Availability environment](attachments/18448663/18580721.jpg)
+![Example architecture for a High Availability environment](attachments/high-availability/18580721.jpg)
 
-## 4 Related Content
+## 4 Read More
 
 * [How to Configure a Security Checklist for Your On-Premises Installation](security-checklist-for-your-on-premises-installation)
 * [How to Update a Mendix Application](updating-a-mendix-application)

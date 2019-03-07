@@ -13,7 +13,7 @@ Please select a how-to:
     *   [Module Security](module-security)
     *   [Images](images)
     *   [Constants](constants)
-    *   [Data Sets](data-sets)
+    *   [Datasets](data-sets)
     *   [Document Templates](document-templates)
     *   [Enumerations](enumerations)
     *   [Forms](forms)

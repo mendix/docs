@@ -33,7 +33,7 @@ Keep in mind that Google Chrome is the browser used in these documents.
 | :--- | :--- |
 | ATS Helper | The ATS Helper is an extension that you use to get information from a widget. |
 | ATS Recorder | The ATS Recorder tool is used to record your test scripts. |
-| [jQuery Selector Helper](https://chrome.google.com/webstore/detail/jquery-selector-helper/fgnjfdfdoeonimejccacdgananeckabl) | This is a third-party extension for the Google Chrome browser. It helps you create jQuery selectors quickly. It also helps with learning jQuery, because it creates the selector automatically. |
+| [jQuery Selector Helper](https://chrome.google.com/webstore/detail/jquery-unique-selector/cmdmlphjbobhblimniofbnlfkmpcjlgd) | This is a third-party extension for the Google Chrome browser. It helps you create jQuery selectors quickly. It also helps with learning jQuery, because it creates the selector automatically. |
 | [jQuery Injector](https://chrome.google.com/webstore/detail/jquery-injector/ekkjohcjbjcjjifokpingdbdlfekjcgi) | This is a third-party extension for the Chrome brower. It enables you to inject jQuery into the page. Some pages don’t have jQuery or something goes wrong while loading.  |
 
 {{% alert type="info" %}}

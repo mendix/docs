@@ -11,7 +11,7 @@ tags: ["company","admin","Developer Portal", "Company Admin", "expiration settin
 You must be a Company Admin to access this page and these settings.
 {{% /alert %}}
 
-There are four tabs on the **Company ** page with settings to manage:
+There are four tabs on the **Company** page with settings to manage:
 
 ![](attachments/company-profile.png)
 
@@ -37,7 +37,7 @@ You can also view the company email domains. This is important for verifying the
 
 On the **Launchpad Settings** tab, you can select the background image for the [Mendix launchpad](https://home.mendix.com/home/).
 
-## 6 Related Content
+## 6 Read More
 
 * [Company Admin Settings](companyadmin-settings)
 * [Users](nodes)

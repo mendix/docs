@@ -2,7 +2,7 @@
 title: "Users"
 parent: "companyadmin-settings"
 menu_order: 20
-description: "Developer Portal Users"
+description: "Describes how a Company Admin can manage an app's users in the Developer Portal."
 tags: ["company","admin", "Company Admin", Developer Portal", "activate", "deactivate", "user"]
 ---
 
@@ -102,7 +102,7 @@ You can perform the following actions on this tab:
 
 On this tab, you can view all the changes made in the company, such as **Password reset requested** and **Account activated**.
 
-## 5 Related Content
+## 5 Read More
 
 * [Company Admin Settings](companyadmin-settings)
 * [Company](company)

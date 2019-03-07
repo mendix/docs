@@ -206,5 +206,4 @@ In the previous section you have set some access rules to your domain model. In
 
 *   [Security](security)
 *   [Creating a secure app](creating-a-secure-app)
-*   [Required Network Access for connecting to the Mendix Platform](/howtogeneral/support/troubleshoot-network-issues-for-team-server)
 *   [Anonymous User Security](anonymous-user-security)

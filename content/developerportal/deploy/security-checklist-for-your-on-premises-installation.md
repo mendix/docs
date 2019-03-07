@@ -1,7 +1,9 @@
 ---
-title: "Implement Security for Your On-Premises Installation"
-parent: on-premises-design
-tags: []
+title: "Security for Your On-Premises Installation"
+parent: "on-premises-design"
+description: "A checklist for implementing security when deploying Mendix on premises"
+menu_order: 10
+tags: ["security", "on-premises", "user account", "reverse proxy", "firewall", "file access", "admin port"]
 ---
 
 ## 1 Introduction
@@ -10,7 +12,7 @@ This how-to serves as a checklist for implementing security for your on-premises
 
 **This how-to will teach you how to do the following:**
 
-* Use a Mendix version containing the lasteset security patches
+* Use a Mendix version containing the latest security patches
 * Configure file system access
 * Use an HTTP reverse proxy with SSL support
 * Configure your firewall
@@ -44,7 +46,7 @@ You are required to explicitly configure the application to be able to connect f
 
 ## 7 Letting the HTTP Reverse Proxy Serve Static Content
 
-Mendix strongly recommendeds configuring the reverse proxy to directly serve static content from the `web` directory on the root location of the application URL and the Mendix client system (located in the correct version to be used of the installed Mendix runtime distribution) on `/mxclientsystem`. The application process itself should only handle dynamic content (like the `/xas/` and `/ws/` sub-URLs).
+Mendix strongly recommends configuring the reverse proxy to directly serve static content from the `web` directory on the root location of the application URL and the Mendix client system (located in the correct version to be used of the installed Mendix runtime distribution) on `/mxclientsystem`. The application process itself should only handle dynamic content (like the `/xas/` and `/ws/` sub-URLs).
 
 ## 8 Securing Access to the Admin Port (for m2ee-tools and Windows Service Console Access)
 
@@ -58,7 +60,7 @@ Choose a strong password to protect the administrative interface running on the 
 
 NEVER use the Mendix Modeler to directly connect to a production database (for example, by using an SSH tunnel to the database or the Modeler on a Windows server). Because the Modeler is always running in development mode, it will instantaneously reset the password of the "admin user," which is defined in the Modeler to its development default. This likely means there will be an "MxAdmin" user with a password set to "1" (or this account will be created when it does not exist).
 
-## 10 Related Content
+## 10 Read More
 
 * [How to Restore a SQL Server Database](restoring-a-sql-server-database)
 * [How to Troubleshoot an SQL Server](troubleshooting-sql-server)
@@ -66,5 +68,4 @@ NEVER use the Mendix Modeler to directly connect to a production database (for e
 * [How to Set Up a New SQL Server Database](setting-up-a-new-sql-server-database)
 * [How to Set Up a SQL Server User](setting-up-a-sql-server-user)
 * [How to Deploy Mendix on Microsoft Windows](deploy-mendix-on-microsoft-windows)
-* [How to Install Mendix on Debian GNU Linux](installing-mendix-on-debian-gnu-linux)
-* [How to Install Mendix on RedHat and CentOS](installing-mendix-on-redhat-and-centos)
+* [U*ix Deployment](unix-like)

@@ -132,7 +132,7 @@ To view a page in your app, you need to add a menu item so you can navigate to t
 
 To use the fourth how-to for creating a simple HRM application, see [Build a Simple HRM App 4: Enrich the GUI with Filter Options](build-a-simple-hrm-app-4-enrich-the-gui-with-filter-options).
 
-## 5 Related Content
+## 5 Read More
 
 * [Build a Simple HRM App 1: Create, Manage, and Deploy the App](build-a-simple-hrm-app-1-create-manage-and-deploy-the-app)
 * [Build a Simple HRM App 2: Perform the First Steps in Building a Rich GUI](build-a-simple-hrm-app-2-first-steps-in-building-a-rich-gui)

@@ -1,7 +1,7 @@
 ---
 title: "APM 2 Reference Guide"
 category: "Reference Guide"
-menu_order: 20
+menu_order: 10
 ---
 
 {{% alert type="warning" %}}
@@ -42,7 +42,7 @@ The APM tools provide valuable information for analyzing the behavior and perfor
 
 ## 3 Performance Statistics to See Performance Issues in Advance
 
-Performance in applications is difficult to test during the initial/developing stage. The data set is too small and the exact usage by users (for example, their search behavior) is unknown. Even after applying all performance best practices while building a Mendix application, issues will still appear in production. Usually they appear over time as the data set grows, so the question is how can you see them coming.
+Performance in applications is difficult to test during the initial/developing stage. The dataset is too small and the exact usage by users (for example, their search behavior) is unknown. Even after applying all performance best practices while building a Mendix application, issues will still appear in production. Usually they appear over time as the dataset grows, so the question is how can you see them coming.
 
 Mendix APM collects statistical data about microflows, client API requests, and user click paths. These statistics are stored hourly and can be used to see trends before users sound the alarm. It is strongly advised for support to frequently check the longest and most frequently running microflows to see if they can be improved. These statistics can be drilled down into to investigate a performance issue. They show individual actions, loop iterations, and exactly where the obstacles are.
 

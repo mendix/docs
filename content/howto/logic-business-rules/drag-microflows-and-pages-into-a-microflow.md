@@ -1,7 +1,8 @@
 ---
-title: "Drag Microflows and Pages into a Microflow"
+title: "Drag Microflows & Pages into a Microflow"
 category: "Logic & Business Rules"
-tags: []
+menu_order: 4
+tags: ["microflow", "logic", "page"]
 ---
 
 ## 1 Introduction
@@ -35,7 +36,7 @@ Instead of creating a new submicroflow action, it can be easier to drag an exist
 
 ![](attachments/18448680/18580991.gif)
 
-## 6 Related Content
+## 6 Read More
 
 * [How to Define Access Rules Using XPath](define-access-rules-using-xpath)
 * [How to Trigger Logic Using Microflows](triggering-logic-using-microflows)

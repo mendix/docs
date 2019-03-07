@@ -1,5 +1,5 @@
 ---
-title: "Table (document template)"
+title: "Table (Document Template)"
 parent: "document-templates"
 ---
 

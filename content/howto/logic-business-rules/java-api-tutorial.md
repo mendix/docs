@@ -1,7 +1,8 @@
 ---
 title: "Use the Java API"
 category: "Logic & Business Rules"
-tags: []
+menu_order: 13
+tags: ["microflow", "logic", "java", "api"]
 ---
 
 ## 1 Introduction
@@ -109,14 +110,14 @@ for (IMendixObject iMendixObject: getAttachments(sourceObject, context))
 
 After this, all `Attachments` belonging to one `GenericObject` have been copied to another.
 
-## 4 Related Content
+## 4 Read More
 
 * [How to Create a Custom Save Button](create-a-custom-save-button)
 * [How to Create Your First Microflow: Hello World!](create-your-first-microflow-hello-world)
 * [How to Define Access Rules Using XPath](define-access-rules-using-xpath)
-* [How to Drag Microflows and Pages into a Microflow](drag-microflows-and-pages-into-a-microflow)
+* [How to Drag Microflows & Pages into a Microflow](drag-microflows-and-pages-into-a-microflow)
 * [How to Extend Your Application with Custom Java](extending-your-application-with-custom-java)
-* [How to Extract and Use Sub Microflows](extract-and-use-sub-microflows)
+* [How to Extract & Use Sub-Microflows](extract-and-use-sub-microflows)
 * [How to Optimize Microflow Aggregates](optimizing-microflow-aggregates)
 * [How to Optimize Retrieve Activities](optimizing-retrieve-activities)
 * [How to Set Up Error Handling](set-up-error-handling)

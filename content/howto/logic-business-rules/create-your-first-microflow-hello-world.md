@@ -1,7 +1,8 @@
 ---
 title: "Create Your First Microflow: Hello World!"
 category: "Logic & Business Rules"
-tags: []
+menu_order: 1
+tags: ["microflow"]
 ---
 
 ## 1 Introduction
@@ -67,7 +68,7 @@ To edit the new microflow, follow these steps:
 
 7. Locate the new navigation item in the menu bar and click it to see the message.
 
-## 4 Related Content
+## 4 Read More
 
 * [How to Define Access Rules Using XPath](define-access-rules-using-xpath)
 * [How to Trigger Logic Using Microflows](triggering-logic-using-microflows)

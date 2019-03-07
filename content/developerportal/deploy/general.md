@@ -1,51 +1,57 @@
 ---
 title: "General"
-category: "Deploy and Manage"
+category: "Deployment"
 menu_order: 10
-description: "An overview of all the ways in which a Mendix app can be deployed"
+description: "An overview of the DEPLOY section of the Developer Portal"
 tags: ["Deploy", "App", "Developer Portal", "Mendix Cloud", "Cloud Foundry", "Azure", "Docker", "IBM", "SAP", "On-premises", "Kubernetes"]
 ---
 
 ## 1 Introduction
 
-A Mendix application can be deployed in different ways. You can deploy to your local machine for development and testing, you can deploy to the Mendix cloud, Cloud Foundry-based platforms, Azure, AWS, SAP Cloud, or a server you configured yourself.
+Mendix apps can be deployed to many different platforms. Much of the deployment and management of a Mendix app depends on which platform it is deployed to. You can find information about each platform in the sections of documentation which relate specifically to deployment to that platform.
 
-## 2 Locally
+There are, however, a number of issues which are related to all, or multiple platforms. Rather than duplicate this information, these are covered in this section of the documentation.
 
-You can click **Run Locally** in the toolbar to run your app locally. Use the **Open browser** button to directly jump to your app running at localhost. If you plan to deploy to the Mendix Cloud later on and your project contains Java actions, you should enable the **Emulate Cloud Security** setting. For more information, see [Java in the Cloud](java-in-the-cloud).
+The subjects covered in the *General* section of deployment are:
 
-## 3 Mendix Cloud
+* [Secure Outgoing Connections from your Application](securing-outgoing-connections-from-your-application)
+* [Two-Factor Authentication](two-factor-authentication)
+* [Version Downgrade Prevented](version-downgrade-prevention)
 
-The Mendix Cloud is the default deployment option when you get started with the Mendix Platform. As an integrated solution, the Mendix Cloud includes backups, monitoring, high availability, and more.
+## 2 Managing Your Deployed Apps
 
-From within the Modeler, you can view the cloud nodes you have available in the Mendix Cloud. You can create a deployment package (MDA) in the Developer Portal, and from there, you can transport it and start running your application. For more information, see [Mendix Cloud](mendix-cloud-deploy).
+For many of the platforms to which Mendix can be deployed, the **Deploy** category in the Developer Portal allows you to deploy and manage your app.
 
-## 4 IBM
+The Deploy category consists of three sections:
 
-If you create your app from an IBM Starter App, or an IBM Starter Kit on IBM Cloud, then the Developer Portal will lead you through the creation of an environment on IBM Cloud. You can then deploy your app to your IBM environment directly from within the Modeler.
+* Environments
+* Mobile App
+* App Services
 
-For more information, see [IBM Cloud](ibm-cloud).
+   ![](attachments/general/deploy.png)
 
-## 5 SAP
+### 2.1 Environments
 
-If you create your app from an SAP Starter App, the Developer Portal will lead you through the creation of an environment on SAP Cloud Platform. You can then deploy your app to your SAP environment directly from within the Modeler.
+For supported platforms, the **Environments** page allows you to review and configure different aspects of your app. It also allows you to deploy to your chosen platform, configure individual environments, and transport your app between staging environments.
 
-For more information, see [SAP Cloud Platform](sap-cloud-platform).
+For details of the Environments page for **Mendix Cloud** deployments, see [Environments](environments).
 
-## 6 Cloud Foundry
+For details of the Environments page for **IBM** deployments, see [IBM Cloud](ibm-cloud).
 
-From within the Modeler, you can deploy directly to Cloud Foundry-based platforms. To get started, see [cf-mendix-buildpack](https://github.com/mendix/cf-mendix-buildpack) and [Cloud Foundry](cloud-foundry-deploy).
+For details of the Environments page for **SAP** deployments, see [SAP Cloud Platform](sap-cloud-platform).
 
-## 7 Docker and Kubernetes
+Other platforms are not currently supported on the Mendix *Environments* page and you will have to go to the relevant platform portal to monitor and configure your environments.
+​    
+### 2.2 Mobile App
 
-Mendix can be deployed in a Docker container to provide highly scalable solutions and automated delivery pipelines (CI/CD).
+On this page, you can manage and publish your app in mobile app stores.
 
-The Docker buildpack is available here: [Mendix Docker Buildpack](https://github.com/mendix/docker-mendix-buildpack) and instructions for using the buildpack are available here: [Build a Docker Image from a Mendix App Project](/developerportal/deploy/docker-deploy).
+Mendix supports Android and iOS.
 
-## 8 Azure
+For more details, see [Mobile App](mobileapp).  
 
-Deploying to a Azure is possible from the [Azure Marketplace](https://azure.microsoft.com/en-us/marketplace/partners/mendix/mendix-pro/). For details on how to deploy, see [Azure: Deploy](azure-deploy).
+## 2.3 App Services
 
-## 9 On-Premises
+The **App Services** page lets you publish your app service, application, or widget to the Mendix App Store.
 
-To learn how to deploy your Mendix application on-premises, see [How to Deploy Mendix on Microsoft Windows](deploy-mendix-on-microsoft-windows), [How to Install Mendix on Debian GNU Linux](installing-mendix-on-debian-gnu-linux), and [How to Install Mendix on RedHat and CentOS](installing-mendix-on-redhat-and-centos).
+For more details, see [App Services](app-services).  

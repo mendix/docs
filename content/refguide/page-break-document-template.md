@@ -1,5 +1,5 @@
 ---
-title: "Page Break (document template)"
+title: "Page Break (Document Template)"
 parent: "document-templates"
 ---
 

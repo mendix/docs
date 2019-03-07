@@ -1,6 +1,7 @@
 ---
 title: "Introduction to ATS"
-category: "General"
+category: "Application Test Suite"
+menu_order: 10
 ---
 
 ## 1 ATS Start Page
@@ -38,7 +39,7 @@ The **7-Day history chart** reflects the state of your test cases over the past 
 
 The **Recent Tests** section shows you detailed information for all of your test cases and test suites. You can see the passed time since the latest execution and its result. For test suites, the success rate is calculated using the results of all containing test cases.
 
-The data set (which is the data set used by a data-driven test case) is displayed in the **Test Data** column.
+The dataset (which is the dataset used by a data-driven test case) is displayed in the **Test Data** column.
 
 You can open the latest execution log of a failed test case by pressing **Show Log**.
 

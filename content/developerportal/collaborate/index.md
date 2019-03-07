@@ -32,8 +32,4 @@ For details, see [Stories](stories).
 
 The **Documents** page lets you upload files related to the app. It is possible to replace a current file with a newer version, add labels, comment, and download files.
 
-For more, see [Documents](documents).
-
-## 6 Related Content
-
-* [Feedback](../feedback/index)
+For details, see [Documents](documents).

@@ -41,7 +41,7 @@ This module also contains several building blocks for inspiration and as startin
 
 See [Any Chart Widgets](charts-any-configuration) to learn how to configure *Any charts* widgets.
 
-## 4 Related Content
+## 4 Read More
 
 * [Any Chart Configuration](charts-any-configuration)
 * [Any Chart Building Bocks](charts-any-building-bocks)

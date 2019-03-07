@@ -8,7 +8,7 @@ A Mendix project consists of modules: a System module and one or more user-defin
 
 A module always contains exactly one [domain model](domain-model). The domain model is a data model that describes the information in your application domain in an abstract way.
 
-Within a module you can define [module security](module-security) via module roles and specify security settings of those module roles for pages, microflows, entities and data sets.
+Within a module you can define [module security](module-security) via module roles and specify security settings of those module roles for pages, microflows, entities and datasets.
 
 Furthermore, a module can contain many different types of documents. Each type of document is described in its own domain-specific language (DSL). For example, user-interface forms are described by using a visual language with elements like text boxes, tables and grids. Below you see tables grouped by category of all the different kinds of documents you can create within a module.
 
@@ -35,7 +35,7 @@ Furthermore, a module can contain many different types of documents. Each type o
 | Document type | Description |
 | --- | --- |
 | [Constants](constants) | Constants are used to define a constant value, for example: to store an URL to a webservice. |
-| [Data Sets](data-sets) | A data set can be used for reporting and is defined using either an OQL query or a custom Java action. |
+| [Datasets](data-sets) | A dataset can be used for reporting and is defined using either an OQL query or a custom Java action. |
 | [Document Templates](document-templates) | Document Templates are used to model a template needed as input for a document export action which can generate all kinds of documents based on application data. They are composed much in the same way as Forms. |
 | [Java Actions](java-actions) | With Java actions you can extend the functionality of your application in situations where it would be hard to implement this functionality in microflows. You can call a Java action from a microflow. |
 | [Regular Expressions](regular-expressions) | A regular expression describes a set of criteria that a string can match. |

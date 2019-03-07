@@ -1,7 +1,8 @@
 ---
 title: "Monitor Mendix Using JMX"
 category: "Monitoring & Troubleshooting"
-tags: []
+menu_order: 10
+tags: ["monitoring", "troubleshooting", "jmx"]
 ---
 
 ## 1 Introduction
@@ -148,7 +149,7 @@ You can use the same approach with an interface and an implementation class to e
 
 The idea is that you will have a Java Action that you can call in a microflow where you expose arbitrary key value pairs.
 
-## 6 Related Content
+## 6 Read More
 
 * [How to Find the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
 * [How to Clear Warning Messages](clear-warning-messages)
@@ -161,6 +162,3 @@ The idea is that you will have a Java Action that you can call in a microflow wh
 * [How to Debug Microflows](debug-microflows)
 * [How to Debug Microflows Remotely](debug-microflows-remotely)
 * [How to Debug Java Actions Remotely](debug-java-actions-remotely)
-* [Getting Started with the Nexus Maven Repository Manager](http://www.andrejkoelewijn.com/blog/2010/03/09/getting-started-with-nexus-maven-repository-manager/)
-* [Using Eclipse to Debug Your Tomcat Web Application](http://www.andrejkoelewijn.com/blog/2003/10/23/using-eclipse-to-debug-your-tomcat-web-application/)
-* [Profiling Mendix Using JProfiler](http://www.andrejkoelewijn.com/blog/2014/01/15/profiling-mendix-using-jprofiler/)

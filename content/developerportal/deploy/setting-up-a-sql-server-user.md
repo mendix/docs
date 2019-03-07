@@ -1,6 +1,7 @@
 ---
-title: "Set Up an SQL Server User"
+title: "User Set Up on SQL Server"
 parent: "mendix-on-windows-microsoft-sql-server"
+menu_order: 20
 ---
 
 ## 1 Description
@@ -30,11 +31,11 @@ To create a secure environment it is important to make a clear distinction betwe
 
 On this page you can find a step by step instruction on how to: [Set up the database user](setting-up-the-database-user)
 
-## 3 Related Content
+## 3 Read More
 
 *   [Activating a Mendix License on Microsoft Windows](activate-a-mendix-license-on-microsoft-windows)
 *   [Setting Up the Database User](setting-up-the-database-user)
-*   [Troubleshooting](troubleshooting)
+*   [Troubleshooting](troubleshooting-iis)
 *   [Restoring a SQL Server Database](restoring-a-sql-server-database)
 *   [Troubleshooting SQL Server](troubleshooting-sql-server)
 *   [Mendix SQL Maintenance Plans](mendix-sql-maintenance-plans)

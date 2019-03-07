@@ -2,7 +2,7 @@
 title: "Stories"
 category: "Collaboration Tools"
 menu_order: 30
-description: "Describes how to manage your sprints, stories, and labels."
+description: "Describes how to manage the sprints and stories for your app project."
 tags: ["Stories", "Sprint", "Developer Portal"]
 ---
 
@@ -90,7 +90,7 @@ Click **Manage story template** to create and edit the default tasks that you ca
 
 To enable these default tasks, select the **Add default tasks based on story template** check box when creating a [new story](#new-story).
 
-### 3.6 History
+### 3.6 History {#history}
 
 Click **History** to view the history details for stories (via **Show item**) and revert changes if necessary (via **Revert change**):
 
@@ -100,19 +100,37 @@ Click **History** to view the history details for stories (via **Show item**) an
 
 There are various actions to perform when managing stories, which are described below.
 
-### 4.1 Adding Tasks to a Story
+### 4.1 Accessing Story Details {#accessing-details}
+
+Select a story and click **Details** to open the **Story Details** page. 
+
+{{% image_container width="500" %}}
+![](attachments/story-details.png)
+{{% /image_container %}}
+
+On this page, you can perform a variety of actions:
+
+* View the details such as **Type**, date **Created**, etc.
+* Add **Comments** about the story to collaborate
+* Click **Edit** to change the story's **Title**, **Description**, and other details
+* Change the story's **Status** (available statuses are **To-do**, **Running**, and **Done**)
+* Move the story via **Move To Sprint** (see the section [Moving Stories](#moving) below for details)
+* Click **Move to another app** to move the story to a different app's backlog
+* Click **View history** to view the history of changes to the story (see the section [History](#history) above for details)
+
+### 4.2 Adding Tasks to a Story
 
 Stories can be translated into tasks that need to be completed to finish the story.
 
 To add a task to the story, follow these steps:
 
-1. Select the story you created and click Add task:
+1. Select the story you created and click **Add task**:
 
-  ![](attachments/add-task.png)
+	![](attachments/add-task.png)
 
-2. Add a title and description for your task:
+2.  Add a title and description for your task:
 
-  ![](attachments/add-task-description.png)
+	![](attachments/add-task-description.png)
 
 3. Click **Post task** to save the new task for the story.
 
@@ -124,7 +142,7 @@ After you have completed the task, check the box:
 
 ![](attachments/complete-task.png)
 
-### 4.2 Moving Stories
+### 4.3 Moving Stories  {#moving}
 
 If you need to reorder stories or move a story to a different sprint, there are three ways to do this:
 
@@ -142,7 +160,7 @@ If you need to reorder stories or move a story to a different sprint, there are 
 Moving a story will move any tasks and sub-tasks as well.
 {{% /alert %}}
 
-### 4.3 Managing Stories in the Desktop Modeler 
+### 4.4 Managing Stories in the Desktop Modeler 
 
 In addition to managing your sprints in the Developer Portal, you can view them in the Mendix Desktop Modeler.
 
@@ -150,15 +168,15 @@ To manage stories in the Desktop Modeler, follow these steps:
 
 1. Open your app project in the Desktop Modeler by clicking **Edit App** > **Edit in Desktop Modeler**:
 
-  ![](attachments/edit-app.png)
+	![](attachments/edit-app.png)
 
 2. Open the **Stories** pane:
 
-  ![](attachments/view-stories.png)
+	![](attachments/view-stories.png)
 
 3. You will see your active sprints in the **Stories** pane:
 
-  ![](attachments/stories-pane.png)
+	![](attachments/stories-pane.png)
 
 To change the status of a story in the Desktop Modeler, just click the current status. For example, click the **To-do** **Status** to change it to **Running**:
 
@@ -170,6 +188,8 @@ When you return to your app project in the Developer Portal, you will see the ne
 
 Changing the status of a story or updating story points automatically synchronizes the updates between the Developer Portal and the Modeler!
 
-## 5 Related Content
+## 5 Read More
 
+* [Buzz](buzz)
+* [App Team](team)
 * [Feedback](../feedback/index)

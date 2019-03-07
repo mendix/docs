@@ -1,6 +1,6 @@
 ---
 title: "App Services"
-category: "Deploy and Manage"
+category: "Deployment"
 menu_order: 100
 description: "Describes the App Services page in the Developer Portal."
 tags: ["Developer Portal", "App Services", "Deploy"]
@@ -20,7 +20,7 @@ App services are aimed at sharing functionality between your Mendix apps. You ca
 
 On the **App Service** page, you can see a list of the available app services, with whom the app service is shared, and what the current statuses are.
 
-![](attachments/publish-appservice.jpg)
+![](attachments/app-services/publish-appservice.png)
 
 For more information, see [Published App Services](/refguide/published-app-services) in the Mendix Reference Guide as well as the [Mendix App Services: Putting Them to Work for Your Projects](https://www.mendix.com/videos/mendix-app-services-putting-work-projects-pieter-van-balen-mendix-developer/) blog post.
 
@@ -75,7 +75,7 @@ By selecting **Application**, you can publish the application's model in the Men
 
 Click **Go to App Store** to publish your app's model.
 
-For more information, see [How to Share App Store Content](/community/app-store/share-app-store-content).
+For more information, see [How to Share App Store Content](../app-store/share-app-store-content).
 
 ## 4 Widget
 
@@ -83,11 +83,11 @@ By selecting **Widget**, you can upload a widget to the Mendix App Store.
 
 Click **Go to App Store** to upload your widget.
 
-For more information, see [How to Share App Store Content](/community/app-store/share-app-store-content).
+For more information, see [How to Share App Store Content](../app-store/share-app-store-content).
 
-## 5 Related Content
+## 5 Read More
 
 * [Deploy and Manage](/developerportal/deploy)
 * [Mendix App Services: Putting Them to Work for Your Projects](https://www.mendix.com/videos/mendix-app-services-putting-work-projects-pieter-van-balen-mendix-developer/)
 * [Published App Service](/refguide/published-app-services)
-* [How to Share App Store Content](/community/app-store/share-app-store-content)
+* [How to Share App Store Content](../app-store/share-app-store-content)

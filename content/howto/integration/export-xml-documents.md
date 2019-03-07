@@ -1,7 +1,8 @@
 ---
 title: "Export XML Documents"
 category: "Integration"
-tags: []
+menu_order: 4
+tags: ["export", "xml", "integration"]
 ---
 
 ## 1 Introduction
@@ -18,9 +19,9 @@ In enterprise software, it is not likely that you work in a [greenfield](https:/
 Before you can start exporting XML documents, you need data in your application that is used during the export. You first need to set up the data structure and GUI to maintain the customer data. Then you'll create the actual export logic and the corresponding export mapping. So, you need to know how to do the following:
 
 * Create a domain model (for more information, see [How to Create a Basic Data Layer](../data-models/create-a-basic-data-layer))
-* Create a custom file document (for more information, see [How to Work with Images and Files](../data-models/working-with-images-and-files))
-* Create overview and detail pages (for more information, see [How to Create Your First Two Overview and Detail Pages](../ux/create-your-first-two-overview-and-detail-pages))
-* Create menu items, (for more information, see [How to Set Up the Navigation Structure](../ux/setting-up-the-navigation-structure))
+* Create a custom file document (for more information, see [How to Work with Images & Files](../data-models/working-with-images-and-files))
+* Create overview and detail pages (for more information, see [How to Create Your First Two Overview & Detail Pages](../front-end/create-your-first-two-overview-and-detail-pages))
+* Create menu items, (for more information, see [How to Set Up the Navigation Structure](../general/setting-up-the-navigation-structure))
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
@@ -42,10 +43,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 Whether you plan to import documents or export documents, working with XML means that your application must contain an XML schema (also called XSD). An XSD describes the possible contents of an XML file. Based on this XSD, your application knows how to read or write an XML file. If you don't have an XSD file, there are a couple of online XSD generators that accept an XML document as input. For this how-to, you can use [Customers.xsd](attachments/18448731/18581813.xsd).
 
-1.  Right-click your module in the **Project Explorer** and select **Add** > **Mappings** > **XML schema**:
-
-    ![](attachments/18448727/18581698.png)
-
+1.  Right-click your module in the **Project Explorer** and select **Add other** > **XML schema**.
 2.  Enter *CustomersXSD* for the **Name** and click **OK**:
 
     ![](attachments/18448727/18581696.png)
@@ -60,11 +58,9 @@ Whether you plan to import documents or export documents, working with XML means
 
 The XML schema describes what the contents of an XML document should be. We need to create domain-to-XML mapping to define how the data in our application is transformed into a XML document.
 
-1.  Right-click your module in the **Project Explorer** and select **Add** > **Mappings** > **Export mapping**:
+1. Right-click your module in the **Project Explorer** and select **Add other** > **Export mapping**.
 
-    ![](attachments/18448731/18581853.png)
-
-2.  Enter *ExportCustomersMapping* for the **Name**:
+2. Enter *ExportCustomersMapping* for the **Name**:
 
     ![](attachments/18448731/18581849.png)
 
@@ -188,7 +184,7 @@ To create the export logic, follow these steps:
 22. Deploy the application and open the customer overview page.
 23. Click the **Export as XML** button and download the generated XML document.
 
-## 6 Related Content
+## 6 Read More
 
 * [How to Consume a Complex Web Service](consume-a-complex-web-service)
 * [How to Consume a Simple Web Service](consume-a-simple-web-service)

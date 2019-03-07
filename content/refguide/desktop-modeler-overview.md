@@ -4,6 +4,7 @@ category: "Desktop Modeler"
 description: "Describes the Desktop Modeler in general: tabs, menus, shortcut keys."
 menu_order: 10
 tags: ["desktop modeler"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
@@ -121,7 +122,7 @@ Using items in the menu bar of the Modeler, you can create new projects, deploy 
 | More Versioning > Manage Branch Lines | Manages branch lines on the version control server that can be used to develop functionality separately from the main line. |   |
 | More Versioning > Merge Changes Here | Merges changes that were committed in another development line to the development line that is currently opened in the Modeler. |   |
 | More Versioning > Reverse Merge Changes | Allows locally rolling back changes that were committed to the version control repository. These local changes can then be committed as a new revision. |   |
-| More Versioning > Sync with Web Modeler | Syncs your app project with the Web Modeler. For more information, see [How to Sync the Web Modeler with the Desktop Modeler](/howto/web-modeler/syncing-webmodeler-desktop). |   |
+| More Versioning > Sync with Web Modeler | Syncs your app project with the Web Modeler. For more information, see [How to Sync the Web Modeler & Desktop Modeler](/web-modeler/general-sync-webmodeler-desktopmodeler). |   |
 | More Versioning > Finish Sync with Web Modeler | Finishes the sync with the Web Modeler. |   |
 | More Versioning > Cancel Sync with Web Modeler | Cancels the sync with the Web Modeler. |   |
 | More Versioning > Add Snapshot of Data | Creates a snapshot of the built-in database and adds that to the version control repository. This is especially useful for adding test data to your app or for demo purposes. |   |
@@ -152,7 +153,7 @@ Using items in the menu bar of the Modeler, you can create new projects, deploy 
 | Tablet Browser | Shows the tablet mobile client for the currently running project in the browser. | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F9</kbd> |
 | Phone Browser | Shows the mobile client for the currently running project in the browser. | <kbd>Ctrl</kbd> + <kbd>F9</kbd> |
 | Hybrid Phone App Online | Views the app as a phone app online. | |
-| View in the Mendix App | Views the app via the [Mendix mobile app](getting-the-mendix-app). | |
+| View in the Mendix App | Views the app via the [Mendix Mobile app](getting-the-mendix-app). | |
 
 ### 4.6 Language Menu
 

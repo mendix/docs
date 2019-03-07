@@ -1,8 +1,11 @@
 ---
-title: "Set Up Monitoring with New Relic"
-parent: on-premises-design
-tags: []
+title: "Monitoring with New Relic"
+parent: "on-premises-design"
+description: "How to install Mendix behind a load balancer for high availability"
+menu_order: 30
+tags: ["new relic", "on-premises", "monitoring", "setup"]
 ---
+
 When setting up a Mendix application on-premise, you can set up advanced monitoring with New Relic. This works with both Windows and Linux deployments.
 
 ## Preparations
@@ -31,7 +34,7 @@ The configuration section in m2ee.yaml should look something like this:
 
 1.  Add  '-javaagent:/PATH/TO/NEWRELIC.JAR' to your java arguments in the Windows Service Console
 
-![](attachments/18448657/18580677.png)
+![](attachments/setting-up-monitoring-with-new-relic/18580677.png)
 
 {{% alert type="info" %}}
 
@@ -39,7 +42,7 @@ After you restart the application your data should show up in New Relic. Note th
 
 {{% /alert %}}
 
-## Related content
+## Read More
 
 *   [Setting up monitoring with New Relic](setting-up-monitoring-with-new-relic)
 *   [Finding the Root Cause of Runtime Errors](/howto/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)

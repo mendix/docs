@@ -20,7 +20,7 @@ const readJSON = files => Promise.all(files.map(file => readFile(file).then(cont
 
 const parseAndCheck = menuJSON => new Promise((resolve, reject) => {
   const categories = menuJSON.categories !== null ? menuJSON.categories.map(cat => cat.toLowerCase()) : [],
-        categoriesOrig = menuJSON.categories,
+        categoriesOrig = menuJSON.categories !== null ? menuJSON.categories : [],
         pages = menuJSON.pages;
 
   _.forEach(pages, page => {

@@ -4,38 +4,32 @@
 #  priority: 1 - 9 (used for sitemap). If omitted this will not be included, which defaults to 0.5
 #  menu_categories: List with the categories used in the side menu
 apidocs-mxsdk:
-  space: "API & SDK"
+  space: "APIs & SDK"
   priority: false
   menu_categories:
     - "API Documentation"
     - "Mendix Platform SDK"
 aqm:
-  space: "Application Quality Monitor"
+  space: "AQM Guide"
   priority: false
   menu_categories:
-    - "Application Quality Monitor Overview"
+    - "Application Quality Monitor"
 apm:
-  space: "Application Performance Monitor"
+  space: "APM Guide"
   priority: false
   menu_categories:
+    - "Application Performance Monitor"
     - "Installation Guide"
     - "Reference Guide"
     - "Use Cases"
 ats:
-  space: "Application Test Suite"
+  space: "ATS Guide"
   priority: false
   menu_categories:
-    - "General"
+    - "Application Test Suite"
     - "Reference Guide"
     - "How-to's"
     - "Best Practices"
-community:
-  space: "Community"
-  priority: false
-  menu_categories:
-    - "Tools"
-    - "Documentation"
-    - "App Store"
 howto40:
   space: "Mendix 4 How-to's"
   priority: false
@@ -92,23 +86,21 @@ howto:
   priority: 6
   mendix_version: 7
   menu_categories:
-    - "Tutorials"
-    - "Modeling Basics"
+    - "General"
     - "Web Modeler"
-    - "Atlas UI"
-    - "UX"
+    - "Front-End"
     - "Data Models"
     - "Logic & Business Rules"
-    - "Mobile"
+    - "Mobile Development"
     - "Security"
     - "Integration"
     - "SAP"
+    - "Siemens MindSphere"
     - "Extensibility"
-    - "Custom Widget Development"
+    - "Widget Development"
     - "Testing"
     - "Monitoring & Troubleshooting"
     - "Collaboration & Requirements Management"
-    - "Tips & Tricks"
 refguide4:
   space: "Mendix 4 Reference Guide"
   priority: false
@@ -160,21 +152,14 @@ refguide:
   mendix_version: 7
   menu_categories:
     - "General"
-    - "Team Server"
     - "Desktop Modeler"
-    - "Web Modeler"
-    - "Runtime"
+    - "Team Server"
+    - "Mendix Runtime"
     - "Java Programming"
+    - "Mobile Development"
     - "SAP"
     - "IBM"
-    - "Mobile"
-howtogeneral:
-  space: "Best Practices & Support"
-  priority: 6
-  menu_categories:
-    - "Tips & Tricks"
-    - "Best Practices"
-    - "Mendix Support"
+    - "Siemens MindSphere"
 releasenotes:
   space: "Release Notes"
   priority: false
@@ -182,9 +167,8 @@ releasenotes:
     - "Desktop Modeler"
     - "Web Modeler"
     - "Developer Portal"
+    - "Mobile Products"
     - "SDKs"
-    - "Hybrid App"
-    - "Mendix Mobile App"
     - "Add-ons"
     - "What Are Mendix Beta Features?"
 developerportal:
@@ -195,9 +179,31 @@ developerportal:
     - "Company & App Roles"
     - "Collaboration Tools"
     - "Feedback Management"
-    - "Develop"
-    - "Deploy and Manage"
-    - "Operate"
-    - "Settings"
-    - "How-to's"
-
+    - "Development"
+    - "Deployment"
+    - "Operations"
+    - "App Settings"
+    - "Community Tools"
+    - "App Store"
+    - "Mendix Support"
+web-modeler:
+  space: "Web Modeler Guide"
+  priority: false
+  menu_categories:
+    - "Web Modeler General Info"
+    - "Domain Model in the Web Modeler"
+    - "Page Editor in the Web Modeler"
+    - "Navigation Document in the Web Modeler"
+    - "Microflows in the Web Modeler"
+    - "Publishing Your App From the Web Modeler"
+    - "Checks in the Web Modeler"
+    - "Consistency Errors in the Web Modeler"
+    - "Theme Customizer in the Web Modeler"
+    - "App Settings in the Web Modeler"
+best-practices:
+  space: "Best Practices"
+  priority: false
+  draft: true
+  menu_categories:
+    - "Best Practices Overview"
+    - "Architecture"

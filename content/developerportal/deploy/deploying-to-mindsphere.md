@@ -20,7 +20,7 @@ You can create Mendix apps which make MindSphere API calls, but which are deploy
 There are some limitations to what you can do in your Mendix app if it is deployed to MindSphere. See the [Limitations](#limitations) section below for more information.
 {{% /alert %}}
 
-To help you with your first MindSphere apps, there is also an example app which contains modules which call the MindSphere APIs. Please see [How to Use the MindSphere Example App](/howto/mindsphere/mindsphere-example-app) for more information.
+To help you with your first MindSphere apps, there is also an example app which contains modules which call the MindSphere APIs. Please see [How to Use the Siemens MindSphere Pump Asset Example App](/howto/mindsphere/mindsphere-example-app) for more information.
 
 ## 2 Starter App & Theme Pack
 
@@ -89,7 +89,7 @@ The following constants in the MindSphereSingleSignOn module need to be configur
 
 **LocalDevelopment**
 
-These constants are only needed for local development and testing. For details of what needs to be put into the constants in the *LocalDevelopment* folder, please see section 5.1, [Local Testing](#localtesting).
+These constants are only needed for local development and testing. For details of what needs to be put into the constants in the *LocalDevelopment* folder, please see [Local Testing](/refguide/mindsphere/mindsphere-development-considerations#localtesting) in *MindSphere Development Considerations*.
 
 **CockpitApplicationName**
 
@@ -145,7 +145,7 @@ This microflow populates the *Name* attribute of the *Tenant* entity and the *Em
 If the same user logs in using a different tenant, Mendix will treat this as a different user and a User ID will be used within Mendix instead of a user name. 
 {{% /alert %}}
 
-For advice on how to make your apps multi-tenant, see section 5.2, [Multi-tenant](#multitenant).
+For advice on how to make your apps multi-tenant, see [Multi-Tenancy](/refguide/mindsphere/mindsphere-development-considerations#multitenancy) in *MindSphere Development Considerations*.
 
 #### 2.2.3 Local User Passwords
 
@@ -329,16 +329,13 @@ To create a new app in the MindSphere launchpad, do the following:
 default-src 'self' 'unsafe-inline' 'unsafe-eval' static.eu1.mindsphere.io sprintr.home.mendix.com; font-src 'self' static.eu1.mindsphere.io fonts.gstatic.com; style-src * 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval' static.eu1.mindsphere.io sprintr.home.mendix.com; img-src * data:;
     ```
 
-    {{% alert type="info" %}}These content security policy settings are needed to ensure that the MindSphere OS Bar and the Mendix *Feedback* widget are loaded correctly. You may need to set additional CSP settings if you make additional calls to other domains (for example, if you use Google maps from maps.googleapi.com).{{% /alert %}}
+    {{% alert type="info" %}}These content security policy settings are needed to ensure that the MindSphere OS Bar and the [Mendix Feedback Widget](https://appstore.home.mendix.com/link/app/199/) are loaded correctly. You may need to set additional CSP settings if you make additional calls to other domains (for example, if you use Google maps from maps.googleapi.com).{{% /alert %}}
 
 7.  Click **Save** to save these details.
 8.  Click **Register** to register your app with the MindSphere launchpad.
 
     {{% alert type="info" %}}If the app has not been pushed yet, there will be no route set up for the app and you will get an error message. This will be resolved once you have pushed your app to Cloud Foundry{{% /alert %}}
     
-
-{{% todo %}}[**ADD A LINK ABOVE TO EITHER FEEDBACK WIDGET DOC OR APP STORE ITEM; USE FULL NAME: Mendix Feedback Widget**]{{% /todo %}}
-
 #### 3.2.2 Scopes in Developer Cockpit{#scopes}
 
 To set up the appropriate scopes in MindSphere, do the following:
@@ -420,140 +417,9 @@ Mendix apps can currently only be deployed to MindSphere running on AWS (Amazon 
 
 ## 5 Development Considerations
 
-{{% todo %}}[**SHOULD THIS BE IN ITS OWN DOC?**]{{% /todo %}}
-
-### 5.1 Local Testing{#localtesting}
-
-#### 5.1.1 Credentials 
-
-When you run your app locally, you will not be able to use SSO to get your credentials. You will be logged on as MxAdmin and will be presented with a login screen the first time that your app attempts to retrieve your access token.
-
-{{% image_container width="50%" %}}![](attachments/deploying-to-mindsphere/image19.png){{% /image_container %}}
-
-This will use the credentials you have set up under **App Credentials** in the *Authorization Management* tab of the MindSphere Developer Cockpit for this application.
-
-To create the app credentials:
-
-1.  Register this application using the identical application name as that set in the constant **CockpitApplicationName**. See section 3.2, [MindSphere Launchpad Setup](#launchpad).
-2.  Go to the **App Credentials** page in the *Authorization Management* tab of the MindSphere Developer Cockpit.
-3.  Click **Issue access** to obtain a token.
-
-    ![](attachments/deploying-to-mindsphere/image20.png)
-
-4.  Select the access level and click **Submit**
-
-    ![](attachments/deploying-to-mindsphere/image21.png)
-
-5.  Make a note of the **Client ID** and **Client Secret**
-
-    ![](attachments/deploying-to-mindsphere/image22.png)
-
-For more information about creating app credentials, see the documentation on the MindSphere website here: [Self-Hosted Application – Access MindSphere APIs](https://developer.mindsphere.io/howto/howto-selfhosted-api-access.html).
-
-To ensure that the correct application credentials are requested, you have to set the following constants in the **LocalDevelopment** folder of the **MindSphereSingleSignOn** module in addition to the other configuration constants.
-
-![](attachments/deploying-to-mindsphere/image23.png)
-
-**CockpitApplicationVersion**
-
-This is a valid version of the MindSphere app as registered in the Developer Cockpit under the name *CockpitApplicationName*.
-
-**HostTenant**
-
-This should be the tenant where your credentials are stored. It is needed when retrieving your Service Credentials. The **Tenant name** is available from the menu bar in the MindSphere launchpad.
-
-![](attachments/deploying-to-mindsphere/image24.png)
-
-The definition of a tenant on MindSphere is available in the MindSphere document [Definition of Tenant](https://documentation.mindsphere.io/resources/html/settings/en-US/118273564939.html).
-
-**UserTenant**
-
-This should be the tenant that the user has access to in a multi-tenant environment. For a developer tenant, this must be the same as the HostTenant. In an operator or iot plan tenant, you can Change this to allow you to test multi-tenant apps.
-
-#### 5.1.2 User Roles
-
-If you are testing different roles in your app, do not use the demo users. If you switch between demo users, this will not correctly populate the tenant and role information from MindSphere. To test different roles, allocate the role to MxAdmin, redeploy, and log in again.
-
-### 5.2 Multi-Tenant{#multitenant}
-
-In MindSphere, apps are usually designed to be multi-tenant, meaning that a single instance of the app serves multiple tenants. A tenant is a representation of a real-world organization. It groups users, data, assets, entities, and many kinds of other properties. Access to these resources for users of the same tenant is controlled via the authorization management system.
-
-For a MindSphere app to be multi-tenant, each user can only see the data from a single tenant, defined by their login credentials, and cannot access resources of other tenants.
-
-#### 5.2.1 Control through MindSphere APIs
-
-The Authorization HTTP Header (see DS_MindSphereAccessToken in section 2.2.2, Microflows) which is passed for every MindSphere API call ensures that the user can only obtain data which is authorized to them via their tenant.
-
-#### 5.2.2 Control within a Mendix app
-
-If no security is placed on persistent Mendix entity objects, these are accessible to all users of the app (subject to access granted by their user role). This means that any app which stores data in persistent Mendix entities cannot be made multi-tenant without additional security.
-
-MindSphere SSO provides the user’s tenant as the **Name** attribute in the **Tenant** entity.
-
-![](attachments/deploying-to-mindsphere/image25.png)
-
-By utilizing this value when an entity is accessed, the Mendix app can be made multi-tenant.
-
-{{% alert type="warning" %}}
-It is not possible, currently, to generate these access restrictions automatically.
-
-The developer will have to add a rule every time the entity is accessed. See the instructions below.
-{{% /alert %}}
-
-{{% alert type="info" %}}
-It is not necessary to put an access rule on every entity within the domain model. It is only required for: **persistent** entities which have a **TenantId** attribute.
-{{% /alert %}}
-
-To make your Mendix app multi-tenant, do the following:
-
-1.  Make all *permanent* entities which have a **TenantId** attribute a specialization of the MindSphereSingleSignOn.TenantObject entity.  
-    This ensures that every object is associated with the Tenant object of the user who creates it.
-2.  Every action on this object must have the following XPath constraint:
-
-    ```java
-[MindSphereSingleSignOn.TenantObject_Tenant/MindSphereSingleSignOn.Tenant/MindSphereSingleSignOn.MindSphereAccount_Tenant='[%CurrentUser%]']
-    ```
-    
-    This ensures that the user can only retrieve entities which belong to their tenant, in other words, where their Tenant matches the TenantId of the entity. You can copy and paste this constraint from here. You can also copy it from XPath constraint on the *TenantObject* entity in the *MindSphereSingleSignOn* module. For more information on XPath, see [XPath](/refguide/xpath).
-
-{{% alert type="info" %}}
-For consistency, it is recommended that all access to these entities is done through a sub-microflow which contains the XPath constraint. This enforces multi-tenant security.
-{{% /alert %}}
-
-**Example**
-
-You have some limits which are set for the user's tenant to be applied to a time series. You then want to get a list of all these so that you can display the values to the user.
-
-1.  Create the domain model with the **Limit** entity being a specialization of **MindSphereSingleSignOn.TenantObject**.
-
-    ![](attachments/deploying-to-mindsphere/image26.png)
-
-2.  Write a sub-microflow which returns a list of all limits.
-3.  Apply the XPath constraint to the **Retrieve Objects** action.
-
-    {{% image_container width="75%" %}}![](attachments/deploying-to-mindsphere/image27.png){{% /image_container %}}
-
-4.  When you want to retrieve the list of limits, call this microflow instead of using the retrieve objects action. This will ensure that tenant-based security is applied.
-
-### 5.3 Cloud Foundry Environment Variables
-
-If you need to set or change the value of any Cloud Foundry Environment Variables, you will have to do this using the CF CLI.
-
-1.  Use `cf set-env {app_name} {environment_variable_name} {value}`
-2.  You will need to restart the app to use the new value.  
-    Use `cf restart {app_name}`
-
-{{% alert type="warning" %}}
-Restarting your app will cause your app to be temporarily unavailable.
-{{% /alert %}}
-
-### 5.4 Validation
-
-Your app should, as a minimum, meet the requirements of the checklist on the MindSphere developer site here: [Get your Application Ready for Productive Use](https://developer.mindsphere.io/howto/howto-app-publication.html).
+For additional help on local testing, multi-tenancy, and other MindSphere development considerations, see [MindSphere Development Considerations](/refguide/mindsphere/mindsphere-development-considerations).
 
 ## 6 Appendices
-
-{{% todo %}}[**IF THESE APPENDICES ARE REALLY NECESSARY, SHOULDN'T THEY GO IN PREPARATION SECTIONS ABOVE (LIKE FOR THEME PACK)?]{{% /todo %}}
 
 ### 6.1 index.html{#indexhtml}
 

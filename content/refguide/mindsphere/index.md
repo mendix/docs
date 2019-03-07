@@ -2,7 +2,6 @@
 title: "Siemens MindSphere"
 description: "Reference Guides for Apps deployed to MindSphere"
 tags: ["Siemens", "MindSphere"]
-draft: true
 notoc: true
 #layout: wide
 ---
@@ -28,5 +27,5 @@ A guide covering things which you should address when developing for MindSphere.
 
 ## 3 Read More
 
-* [Siemens MindSphere (deployment)](/developerportal/deploy/deploying-to-mindsphere)
-* [MindSphere Example App](/howto/mindsphere/mindsphere-example-app)
+* [Siemens MindSphere - deployment](/developerportal/deploy/deploying-to-mindsphere)
+* [How to Use the Siemens MindSphere Pump Asset Example App](/howto/mindsphere/mindsphere-example-app)

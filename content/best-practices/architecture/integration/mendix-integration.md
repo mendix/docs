@@ -80,38 +80,6 @@ For most integration related to Mendix, there are five solution categories that 
 * **Batch-oriented** – This category includes exporting, moving, and importing files.
 * **Central data** – This category uses a pattern where data is landed and combined in a central place before it is distributed. This could be, for example, an operational data store (ODS); extract, transform, load (ETL); business intelligence (BI); or data lake solution.
 
-### 3.3 Uses Case & Solution Options
-
-Plotting functional use cases against basic methods of integration allows us to see that there are several common options available. That is good, because integration needs to be flexible in a solution in order to adapt to how systems, things, or people communicate. 
-
-The table below presents use cases that you can reference  for more detail. The table uses the following key:
-
-* A <span>&#9989;</span> indicates the common or preferred use of the method
-	* In some of the latter cases (for example, "Integration with IoT solutions"), the solution will require several methods, so there are several instances of <span>&#9989;</span>
-* An <span>&#10004;</span> indicates possible use in some cases
-
-{{% todo %}}[**ADD LINKS AS DOCS AVAILABLE**]{{% /todo %}}
-
-| *Use Case* | *UI Integration* | *RPC / Services* | *Events / Queues* | *Export, Import, Batch* | *Central Data* |
-| --- | --- | --- | --- | --- | --- |
-| SSO, AD & Identity integration | <p>&#10003;</p> | <p>&#9989;</p> | | | |
-| Import & Distribute Reference Data | | <p>&#9989;</p> | <p>&#10003;</p> | <p>&#9989;</p> | <p>&#10004;</p> |
-| View & Search Data in Another System  | <p>&#10003;</p> | <p>&#9989;</p> | | | |
-| Use & Refer to Data in Another System | | <p>&#9989;</p> | | | <p>&#10003;</p> |
-| [Process Integration](process-integration) (continue workflow) | <p>&#9989;</p> | <p>&#10003;</p> | <p>&#10003;</p> | | |
-| [Export, Import & Batch Processing](export-import-batch) | | <p>&#10003;</p> | <p>&#10003;</p> | <p>&#9989;</p> | <p>&#10003;</p> |
-| Update Data in the Master App | <p>&#9989;</p> | <p>&#9989;</p> | <p>&#10003;</p> | | |
-| Distribute Master & Transactional Data | | <p>&#9989;</p> | <p>&#10003;</p> | <p>&#10003;</p> | <p>&#10003;</p> |
-| Integration with BI & Reporting | | <p>&#10003;</p> | <p>&#10003;</p> | <p>&#9989;</p> | <p>&#10003;</p> |
-| Mobile Integration & Offline | | <p>&#9989;</p> | <p>&#10003;</p> | | |
-| CMS & CDN Integration | <p>&#9989;</p> | <p>&#10003;</p> | | | |
-| Process Orchestration & State Engines | | <p>&#9989;</p> | <p>&#10003;</p> | | <p>&#9989;</p> |
-| Integration with Ops & Monitoring | <p>&#10003;</p> | <p>&#10003;</p> | <p>&#9989;</p> | <p>&#10003;</p> | <p>&#9989;</p> |
-| Integration with IoT Solutions | | <p>&#9989;</p> | <p>&#9989;</p> | <p>&#10003;</p> | <p>&#9989;</p> |
-| Integration with AI & Machine Learning | | <p>&#9989;</p> | <p>&#10003;</p> | | <p>&#9989;</p> |
-
-To read these use cases, start with [Integration Use Cases](integration-use-cases).
-
 ## 4 Integration Styles
 
 ### 4.1 Request–Reply (Most Frequently Used)
@@ -223,13 +191,13 @@ This diagram presents the most common cases of OData integration and direct data
 Never do direct SQL across firewalls.
 {{% /alert %}}
 
-### 4.3 Event-Driven Trends
+### 4.6 Event-Driven Trends
 
 At the moment, event-driven architectures are making their return into the mainstream of integration. This follows an increased interest in and focus on, for example, IoT solutions, distributed networks of actors, and central monitoring. Several solution providers are promoting new paradigms for managing large, distributed, high-volume event driven architectures.
 
 The main characteristic for event-driven trends is that the process that produces events or data does not communicate directly to the target system. Rather, it creates an “event” message that is put on a queue for asynchronous delivery. This means that the triggering process will not know directly if the message arrives or if there were errors in the delivery.
 
-#### 4.3.1 What Can Be Used as as Queue?
+#### 4.6.1 What Can Be Used as as Queue?
 
 The queue that is used depends on the situation. It can be an internal queue in the source system, or an external queue management system, such as Kafka or any other standard queueing system on the market.
 
@@ -243,7 +211,7 @@ In the App Store, there is an [Process Queue](https://appstore.home.mendix.com/l
 
 ![](attachments/mendix-integration/queue.png)
 
-#### 4.3.2 Reasons to Go Event-Driven
+#### 4.6.2 Reasons to Go Event-Driven
 
 Always consider a synchronous request–reply as the standard option for integration, because it is the simplest and most robust way to integrate when you want to make sure that the data or event arrives safely in the destination. This means that it is easier to think about and easier to manage errors that way.
 
@@ -257,20 +225,22 @@ There are some clear cases where event-driven integration is preferred:
 * Where there are many publishers and many subscribers, that should be as fast as possible in the same shape on hundreds of servers around the world or employ user metrics in the same use case (LinkedIn created Kafka to solve this problem)
 
 {{% todo %}}[**ABOVE LINE ABOUT "user metrics" IS UNCLEAR**]{{% /todo %}}
- 
+
 In the diagram below, some typical event use cases are shown. Note that Kafka is also a great choice for fire-and-forget, and network distances and ESBs can also handle large volumes.
+
+{{% todo %}}[**UX-UPDATE DIAGRAM**]{{% /todo %}}
 
 ![](attachments/mendix-integration/event-use-cases.png)
 
 The internal queue provides the best control over delivery of business events in a one-to-one situation, because it only has two parts involved. However, this is not suited for massive volumes or if the two systems are hard to connect via a network.
 
-#### 4.3.3 One-Way Communication
+#### 4.6.3 One-Way Communication
 
 The key to event-streams is that they (often) only flow in one direction. A device leaving metrics in an IoT system does not expect an immediate answer to the data it ships. Additionally, there could be very many devices that are geographically distributed and shipping a lot of data. Request–reply is neither needed nor practical for inbound IoT, but for commanding a drone or other device, for example, it is highly recommended.
 
 IoT, AI, and big-data integration is only the beginning of an expected explosion of new IT that will be built alongside the current IT landscape. In the coming years, Mendix and Siemens will invest heavily in this area. With this perspective, Kafka and other event-based architectures will play an important role in the coming years.
 
-#### 4.3.4 IoT, MindSphere & Kafka
+#### 4.6.4 IoT, MindSphere & Kafka
 
 IoT, Kafka, and other event-based architecture will play an important role in the coming years. Mendix is working to incorporate Kafka into the platform, and a seamless integration with MindSphere was recently set up.
 
@@ -278,44 +248,165 @@ IoT, Kafka, and other event-based architecture will play an important role in th
 
 Mendix will in these cases usually work as the dashboard for event streams and sometimes as the control center for devices and other connected items.
 
-### 4.5 API Management & ESBs
+This diagram gives a schematic view of a potential Mendix integration where one app provides a dashboard and the other one is used to control a robot:
 
-All real-time interfaces can be routed via an API management or enterprise service bus (ESB). This does not change very much for the publisher and the consumer except that there is a technical decoupling point and/or a queueing system.
+{{% todo %}}[**UX-UPDATE DIAGRAM**]{{% /todo %}}
 
-API management or ESBs start making sense when there are \>100 systems and several business domains that are organizationally separated. These can create a level of stability for services used across the enterprise.
+![](attachments/mendix-integration/schematic.png)
 
-This document will not differentiate from the case of direct service interaction, because functionally that is almost the same thing. The microservice recommendation is to use a very thin integration layer, or no layer at all.
+This integration is many-to-many and largely event-driven. Using Kafka can be a relevant option if the Mendix app is located far away from the MindSphere implementation.
 
-Many users use direct integration within a system, business domain, or area while having some API management for external and intra-domain integration.
+### 4.7 Integration Apps & Distributed ESBs
 
-### 4.6 Integration Layers & Data Hubs
+Many old legacy systems have a very specific format of communication, which could be from mainframes or any other old technology. To create integration for these systems takes a technical developer. Because building this technical integration repeatedly is not a good idea, it is a good option to create one single adapter or integration app that specializes in the intricacies of that legacy system.
 
-If the integration layer in the middle stores and combines business data before redistributing it to other parties, it is a “central data” integration pattern.
+Other apps can then integrate with the adapter in a simple format using REST or files, for example, and then using the pre-configured functionality. For a typical use case, it could take 3 TCP/IP or RPC calls to do an operation, which the integration app would encapsulate into a single easy-to-use REST service.
 
-A typical use case here is if a company has 10 business lines with different ordering systems, but only one single support desk. It then makes sense to store all the orders in a central point where they can be searched together using SQL instead of composite service calls. Maybe this would be the support system itself, but it could also be an integration app or operational data store (ODS) serving a global search on orders via services.
+Depending on the use case, the integration app may only forward real-time requests to the back-end system, it may cache some requests, or it may even store entire datasets and provide them via services or files. It really depends on how you answer the following questions:
 
-Many users use Mendix apps to create such a pattern for a specific area. It is easy to define the data, logic, lookups, and a human workflow to manage errors.
+* What is the legacy system capable of?
+* Whats is the requirement to use the data from other systems?
 
-An ETL system works in a similar way by extracting data from one system, storing
-the data from the last extract, maybe combining with reference data, and then sending it on.
+In the diagram below, both file and RPC integration is shown to the legacy system. Depending on the situation, you can use one method or both:
 
-A data lake functions like an enterprise-wide ODS that doubles as a BI and DWH system. It is a big undertaking to make this work, and there is an issue when trying to combine operational data and snapshot-type data that is used for statistics.
+{{% todo %}}[**UX-UPDATE DIAGRAM**]{{% /todo %}}
 
-The statistics part of data lakes can feed BI and AI solutions of the future, but Mendix does not recommend using data lakes as operational data due to the varying time-stamps and various layers that the data goes through. For operational data, a relational database and ODS is preferred, as mentioned above.
+![](attachments/mendix-integration/file-rpc.png)
 
-### 4.7 Ops Integration & Test Services
+For example, you can imagine that most interaction happens via a retrieval of data. To make that fast and easy, the integration app imports the relevant data via a file and stores it in a format that is ideal for retrieval, a materialized view, or making parts of the legacy system data easily available via OData.  You will need the updates to be synchronous all the way, so you should use REST in the integration app, which would translate to TCP/IP and update the legacy system as a request reply interface, then informing the user of success or failure.
+
+The benefit of using Mendix for this is that if there is an admin UI needed, it is easy to provide. In effect, you can create a distributed ESB with this pattern.
+
+### 4.8 Integration Layers
+
+Describings all the integration layers available is outside the scope of this document, but it is worth mentioning some standard situations below.
+
+In all of these cases, the integration between the Mendix app and the integration layer has the same properties as integrating between two Mendix apps. The same integration patterns exist, and the same technical protocols can be used.
+
+#### 4.8.1 Typical Layer Options
+
+These are the typical integration layers:
+
+* **Reverse proxy** – This is an integration component that sits in the firewall and provides restricted access to certain domains and IP addresses, providing security for externally provided services.
+* **External API management** – This is a professional and central reverse proxy with consistent logging, security, and protection against denial of service attacks.
+* **Internal API management** – This can also be used by a large enterprise to provide a single technical connection point for all systems. This means that with a new app, you only have to know how to connect to this layer, instead of to all the source systems.
+* **ESB** – This is like an internal API management layer, but it also provides mapping of messages and service orchestration. This can be valuable, but it also tends to become a bottleneck for the delivery of enterprise-wide integration.
+* **ETL tooling** – This is like an ESB, but it focuses on batch processing and BI and DWH integration. It usually stages the data first, does heavy mapping, and then updates the destination. It can do direct database connections or use files.
+* **Managed file transfer (MFT) tooling** – This can create a practical deposit and pickup point with access security for all file interfaces. It often has scheduling included and raises alarms if files do not arrive as expected.
+
+#### 4.8.2 Why Use an Integration Layer?
+
+There are many possible reasons to use an integration layer, but it is far from necessary. Small companies often have only a reverse proxy and do all other integration directly. For such companies, using Mendix integration apps can be cost-effective and an easy way to move towards an integration layer while utilizing the same technology and similar skill sets as for building apps.
+
+For large enterprises, it makes sense to use integration layers between departments and/or geographies. Some enterprises use all the options listed above. 
+
+If there is an existing standard, it is always recommended to stay with it to maintain consistency. Only when productivity is severely impacted should the Lead Architects start looking for ways to make a better standard.
+
+### 4.9 Operational Data Stores
+
+If the integration layer in the middle stores and combines business data before re-distributing it to other parties, it is a “central data” integration pattern, often referred to as an operational data store (ODS).
+
+A typical use case here is if a company has 10 business lines with all different ordering systems, but only one single support desk. It then makes sense to store all the orders in a central point where they can be searched together using SQL instead of composite service calls. 
+
+Mendix apps can also be used for ODS solutions, since it is easy to integrate several disparate systems, store the data, and manage any errors in the integration by creating human workflow for it.
+
+Data lakes are like an enterprise-wide ODS that doubles as a BI and DWH system. It is a big undertaking to make this work, and there is an issue when trying to combine operational data and snapshot-type data used for statistics. Most experience shows that it is unwise to use the same system for DWH and operational data.
+
+### 4.10 Ops Integration & Test Services
 
 A new trend that is part of microservices as well as DevOps is to build services and interfaces from live systems that are specifically oriented towards automated testing and health checks on live systems.
 
 A service used to test things in CI/CD pipelines may later be reused to verify a production deployment, check a live system, or collect user metrics for a dashboard.
 
-For professional operations solutions, there is often an agent per node, shipping data in near-real time towards an application performance monitoring system that is used for root-cause analysis, trend analysis, sizing metrics, and alarms.
+For professional operations solutions, there is often an agent per node, shipping data in near-real time towards an application performance monitoring system [APM](apm/index) that is used for root-cause analysis, trend analysis, sizing metrics, and alarms.
 
-Microservices also often have an admin page where important information is collected. This can include both technical and functional KPIs that help maintain the solution as well as data from a local ops dashboard or app-management module. These pages can be deep-linked for further use.
+[Microservices](../microservices/microservices-overview) also often have an admin page where important information is collected. This can include both technical and functional KPIs that help maintain the solution as well as data from a local ops dashboard or app-management module. These pages can be deep-linked for further use.
 
-## 5 Recommendations
+### 4.11 Overview of Use Case & Solution Options
 
-### 5.1 Minimize Integration
+Plotting functional use cases against basic methods of integration allows us to see that there are several common options available. That is good, because integration needs to be flexible in a solution in order to adapt to how systems, things, or people communicate. 
+
+The table below presents use cases that you can reference  for more detail. The table uses the following key:
+
+* A <span>&#9989;</span> indicates the common or preferred use of the method
+	* In some of the latter cases (for example, "Integration with IoT solutions"), the solution will require several methods, so there are several instances of <span>&#9989;</span>
+* An <span>&#10004;</span> indicates possible use in some cases
+
+{{% todo %}}[**ADD LINKS AS DOCS AVAILABLE**]{{% /todo %}}
+
+| *Use Case* | *UI Integration* | *RPC / Services* | *Events / Queues* | *Export, Import, Batch* | *Central Data* |
+| --- | --- | --- | --- | --- | --- |
+| SSO, AD & Identity integration | <p>&#10003;</p> | <p>&#9989;</p> | | | |
+| Import & Distribute Reference Data | | <p>&#9989;</p> | <p>&#10003;</p> | <p>&#9989;</p> | <p>&#10004;</p> |
+| View & Search Data in Another System  | <p>&#10003;</p> | <p>&#9989;</p> | | | |
+| Use & Refer to Data in Another System | | <p>&#9989;</p> | | | <p>&#10003;</p> |
+| [Process Integration](process-integration) (continue workflow) | <p>&#9989;</p> | <p>&#10003;</p> | <p>&#10003;</p> | | |
+| [Export, Import & Batch Processing](export-import-batch) | | <p>&#10003;</p> | <p>&#10003;</p> | <p>&#9989;</p> | <p>&#10003;</p> |
+| Update Data in the Master App | <p>&#9989;</p> | <p>&#9989;</p> | <p>&#10003;</p> | | |
+| Distribute Master & Transactional Data | | <p>&#9989;</p> | <p>&#10003;</p> | <p>&#10003;</p> | <p>&#10003;</p> |
+| Integration with BI & Reporting | | <p>&#10003;</p> | <p>&#10003;</p> | <p>&#9989;</p> | <p>&#10003;</p> |
+| Mobile Integration & Offline | | <p>&#9989;</p> | <p>&#10003;</p> | | |
+| CMS & CDN Integration | <p>&#9989;</p> | <p>&#10003;</p> | | | |
+| Process Orchestration & State Engines | | <p>&#9989;</p> | <p>&#10003;</p> | | <p>&#9989;</p> |
+| Integration with Ops & Monitoring | <p>&#10003;</p> | <p>&#10003;</p> | <p>&#9989;</p> | <p>&#10003;</p> | <p>&#9989;</p> |
+| Integration with IoT Solutions | | <p>&#9989;</p> | <p>&#9989;</p> | <p>&#10003;</p> | <p>&#9989;</p> |
+| Integration with AI & Machine Learning | | <p>&#9989;</p> | <p>&#10003;</p> | | <p>&#9989;</p> |
+
+To read these use cases, start with [Integration Use Cases](integration-use-cases).
+
+## 5 Decoupling & Dependencies
+
+Integration is something you will always need, but it is often the most difficult part of an implementation. This is partly because the variation in patterns is so large, and partly because it is an unavoidable dependency on another component and team that may not be ready to help.
+
+### 5.1 Example Of Team Dependencies
+
+Even in a situation that seems fully decoupled—where an app is supposed to receive a file and import it—it could happen that since you are implementing a new business function, there is a field you need that is not in that file. Then, you are still dependent on another team to make an update in the file export program.
+
+Because integration involves team dependencies, you have to learn to live with them, be extremely adaptable, and be ready for issues along the line.
+
+### 5.2 Good Services with a Purpose & Avoiding Loops
+
+In another use case, you want to show which customers are impacted when a ship with thousands of containers is stranded in a port. And there are services providing the right data, but they are not good for your purpose.
+
+If you have to retrieve all the containers, call a separate service for each of them that gives you the shipment, and call another service for each shipment to find the company that ordered it, your system will not perform well.
+
+In this case, you would ideally ask the sub-system to create a new service that is optimized for this new business function. If that system is old and impossible to touch, it could make sense to either create a new microservice or integration app that has the single purpose of providing this data. It will import data from the source systems and keep it up-to-date by polling for changes. The dashboard app that the business uses can then be simple and make a real-time call to the integration app, which would then givee a sub-second response.
+
+### 5.3 Scoping Out Integration Early & Implementing Late
+
+Because integration is an external dependency, it makes sense to scope out the required integration early in order to have as much time as possible for getting other teams to provide updated services or files before the go-live date. While waiting, you can use mock services and/or files and connect to the final version towards the end of the project.
+
+### 5.4 Request-Reply Decoupling {#request-reply-decouple}
+
+Decoupling for real-time request-reply interfaces means there is a point in the middle of forwarding requests, so the systems are still not independent. Both the service provider and the consumer must be up and running for the interface to work.
+
+### 5.5 Asynchronous Decoupling 
+
+Decoupling for asynchronous interfaces or files is more obvious. This is because one side of the interface finalizes it’s work at one time, and the other system receives information or data later.
+
+{{% alert type="info" %}}
+However, in both this case and [request-reply decoupling](#request-reply-decouple), there is a functional dependency that cannot be removed and that you have to work with via new and more frequent releases of other apps. If changing a file format or message format, everybody that uses that service or file must be informed.
+{{% /alert %}}
+
+### 5.6 Service Versioning 
+
+This is the standard way to handle service versioning:
+
+1. Provide two separate end points for each service version.
+2. Preferably put the service version in the service end-point name, so that nobody can be mistaken when using it.
+3. Allow consumers to migrate within a certain time limit.
+
+{{% todo %}}[**EXPLAIN DIAGRAM; UX-UPDATE DIAGRAM**]{{% /todo %}}
+
+![](attachments/mendix-integration/service-versioning.png)
+
+### 5.7 Consumer-Oriented Services
+
+A good standard for both security and for limiting dependencies is to not make services too large and generic. This is because each app will get a service that is just adequate to what is needed – not more and not less.
+
+## 6 Recommendations
+
+### 6.1 Minimize Integration
 
 {{% todo %}}[**"1-N" CLEAR ENOUGH HERE? REPLACE WITH "one-to-many"?**]{{% /todo %}}
 
@@ -323,7 +414,7 @@ It may seem obvious, but it is still worth pointing out that the overall solutio
 
 That will make the overall solution easier to build and maintain, and it will also simplify dependencies between apps. This means that even the decision on which microservices/apps to build should incorporate integration analyses.
 
-### 5.2 Dependencies Are There, So Learn to Work with Them
+### 6.2 Dependencies Are There, So Learn to Work with Them
 
 Apps working together are dependent on each other – that is part of the business process and cannot be avoided. Trying to eliminate a functional dependency between two apps via a technical solution is not recommended, because this usually creates other functional issues with more complex error handling.
 
@@ -335,17 +426,15 @@ Still, there are many cases when events make more sense (for example, real event
 
 There are also technical reasons to go for events (for example, very high volume, distributed infrastructure, poor network connectivity, many-to-many situations). To guarantee delivery, one can make asynchronous request replies or use a state/process engine to monitor all the events in a large supply chain process.
 
-### 5.3 Keep It Simple
-
-{{% todo %}}[**VERIFY: "LinkedIn"?**]{{% /todo %}}
+### 6.3 Keep It Simple
 
 Event-driven integration will increase drastically in the future. LinkedIn is already using Kafka to distribute posts, metrics, and user statistics, and Siemens and the rest of the world are bracing for the era of IoT, when almost all devices will be connected.
 
-Howver, the event-driven trend will not change what is already working well for normal business apps. The regular app developer who is integrating a few systems for regular business processes should generally keep it as simple as possible.
+However, the event-driven trend will not change what is already working well for normal business apps. The regular app developer who is integrating a few systems for regular business processes should generally keep it as simple as possible.
 
 This usually means employing request–reply (for example, by using REST over Http(s)). This allows for control in the case of non-delivery of information or events, which should be managed for normal business processes.
 
-### 5.4 Overall Recommendations
+### 6.4 Overall Recommendations
 
 Apps should act as actors in a business process. They typically do different things, and often they have a different views of the data.
 

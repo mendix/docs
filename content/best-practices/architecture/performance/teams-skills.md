@@ -7,21 +7,15 @@ tags: [ ]
 draft: true
 ---
 
-### DevOps
+## 1 DevOps
 
-DevOps means that development and operational resources collaborate in cross
-functional teams around the same objectives, which is to build Operationally
-stable Apps, and making the testing, deployment and monitoring of these Apps as
-easy as possible.
+DevOps means that development and operational resources collaborate in cross-functional teams around the same objective. These objectives are to build operationally-stable apps as well as to make the testing, deployment, and monitoring of these apps as easy as possible.
 
-But it does require both mind-sets. Calling the Development team “DevOps” will
-typically not create the most stable Apps.
+Both a development and an operations mindset is required. Simply calling your development team “DevOps” will typically not create the most stable apps.
 
-For that the DevOps team should have at least one operationally minded person,
-that has experience from supporting critical systems, and over time the
-knowledge will merge into an efficient team.
+A DevOps team should have at least one operationally-minded person who has experience in supporting critical systems. Over time, that knowledge will merge into an efficient DevOps team.
 
-### BizDevOps
+##2 BizDevOps
 
 It’s of course also important to stay very close to the business and involve
 them in the discussions, also around architecture and performance. Thinking

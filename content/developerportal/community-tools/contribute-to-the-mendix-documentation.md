@@ -5,7 +5,7 @@ frontpage_featured: true
 menu_order: 20
 description: "Describes how to add and edit Mendix documentation as a Mendix community member."
 tags: ["documentation", "community"]
-#If moving or renaming this doc file, update the link in the site footer. See Mapping to Products for more details.
+#If moving or renaming this doc file, update the link in the site footer and links in the mendix/docs repo. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
@@ -17,11 +17,15 @@ All the Mendix documentation is stored in a [GitHub repository](https://github.c
 To work on the documentation in GitHub, use Markdown. For details on this easy-to-use syntax, see the [GitHub Guide to Mastering Markdown](https://guides.github.com/features/mastering-markdown/).
 
 {{% alert type="info" %}}
-All documentation contributions may undergo changes after editing according to our internal style guide.
+All documentation contributions may be edited to conform to our internal style guide.
 {{% /alert %}}
 
 {{% alert type="info" %}}
-Quick guide to making a documentation change: fork the [mendix / docs](https://github.com/mendix/docs) repository and create a pull request with our **development** branch as the base.
+**Quick guide to making a documentation change**
+
+1. Fork the **development** branch of the [mendix / docs](https://github.com/mendix/docs) repository
+2. Make your changes
+3. Create a pull request with our **development** branch as the base
 {{% /alert %}}
 
 **This how-to will teach you how to do the following:**
@@ -35,12 +39,12 @@ Before starting with this how-to, make sure you have completed the following pre
 
 * Have a GitHub account (sign up [here](https://github.com/join))
 
-We recommend using the following tools to contribute to the Mendix documentation:
+You can create and edit files online within GitHub. If you want to work outside GitHub, we recommend using the following tools to contribute to the Mendix documentation:
 
 * For writing, editing, and previewing documentation – [Typora](https://typora.io/) or [Visual Studio Code](https://code.visualstudio.com)
 * For committing your documentation – [Sourcetree](https://www.sourcetreeapp.com/) or [GitHub Desktop](https://desktop.github.com/)
 
-## 3 Editing the Documentation
+## 3 Editing the Documentation in GitHub
 
 To edit existing documentation, follow these steps:
 

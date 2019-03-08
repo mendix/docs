@@ -103,6 +103,12 @@ This will render as:
 
 <iframe width='100%' height='491px' frameborder='0' src='https://modelshare.mendix.com/models/fb092960-6fc1-41c0-bb64-d9e70c012bc5/save-example?embed=true' allowfullscreen></iframe>
 
+{{% todo %}}[Test - remove this]{{% /todo %}}
+
+<iframe width='100%' height='491px' frameborder='0' src='https://modelshare.mendix.com/models/0a812a9f-5a2b-40f5-ab06-3f2f51345d67/house?embed=true' allowfullscreen></iframe>
+
+<iframe width='100%' height='491px' frameborder='0' src='https://modelshare.mendix.com/models/0a812a9f-5a2b-40f5-ab06-3f2f51345d67/house'></iframe>
+
 ## 6 Read More
 
 * [How to Contribute to the Mendix Documentation](contribute-to-the-mendix-documentation)

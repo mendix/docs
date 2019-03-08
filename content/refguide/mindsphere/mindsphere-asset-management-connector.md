@@ -39,23 +39,23 @@ GetQueryParams has the following attributes, which match the parameters of the A
 
 | **Attribute** | **Description**                                                                                                    | **Default** | **Example**          |
 | ------------- | ------------------------------------------------------------------------------------------------------------------ | ----------- | -------------------- |
-| Page          | The page of objects requested, this enables you to retrieve a different page of objects                            | 0           | 2                    |
-| Size          | The number of objects returned for each page, this allows you to control the number of items returned in each call | 10          | 15                   |
+| Page          | The page of objects requested – this enables you to retrieve a different page of objects                            | 0           | 2                    |
+| Size          | The number of objects returned for each page – this allows you to control the number of items returned in each call | 10          | 15                   |
 | Sort          | The name of the object attribute to sort the objects                                                               | name        | description          |
-| Filter        | Additional filtering criteria                                                                                      | -           | Name contains "pump" |
+| Filter        | Additional filtering criteria                                                                                      | —           | Name contains "pump" |
 | exploded      | For AssetType objects, specifies if all inherited Variables and Aspects should be included                         | false       | false                |
 
-More information on pagination is available here: [Asset Management Service - Pagination](https://developer.mindsphere.io/apis/advanced-assetmanagement/api-assetmanagement-references-pagination.html).
+More information on pagination is available here: [Asset Management Service – Pagination](https://developer.mindsphere.io/apis/advanced-assetmanagement/api-assetmanagement-references-pagination.html).
 
-More information on filtering functions is available here: [Asset Management Service - Filtering](https://developer.mindsphere.io/apis/advanced-assetmanagement/api-assetmanagement-references-filtering.html)
+More information on filtering functions is available here: [Asset Management Service – Filtering](https://developer.mindsphere.io/apis/advanced-assetmanagement/api-assetmanagement-references-filtering.html)
 
 ## 3 Using the Connector
 
-The module adds two actions which a developer can use to retrieve Asset and AssetType objects, together with their associated Variable objects, from MindSphere using the API. You can find these actions in the **Toolbox** under *MindSphere Asset Management APIs*.
+The module adds two actions which a developer can use to retrieve *Asset* and *AssetType* objects, together with their associated *Variable* objects, from MindSphere using the API. You can find these actions in the **Toolbox** under *MindSphere Asset Management APIs*.
 
 ![MindSphere Asset Management APIs actions](attachments/mindsphere-asset-management-connector/image18.png)
 
-To use the MindSphere API, you must have an *Access token*. The *MindSphere SSO* module creates one for you by linking the Mendix user to a user set up in MindSphere and creating an access token which authorizes the user. For more information, see [Siemens MindSphere - deployment](/developerportal/deploy/deploying-to-mindsphere).
+To use the MindSphere API, you must have an *Access token*. The *MindSphere SSO* module creates one for you by linking the Mendix user to a user set up in MindSphere and creating an access token which authorizes the user. For more information, see [Siemens MindSphere – deployment](/developerportal/deploy/deploying-to-mindsphere).
 
 {{% alert type="info" %}}
 The MindSphere asset management actions should always be preceded by the **Access token** action, to ensure that the access token does not expire.
@@ -65,16 +65,21 @@ The MindSphere asset management actions should always be preceded by the **Acces
 
 ### 3.1 Get All Assets
 
-The **Get All Assets** microflow action retrieves assets which, optionally, match a query. It returns a single object, of type *AssetsResponse*, which is associated with all the assets which match the query. It also returns objects of type **Location**, **AspectType**, and **Variable** which are associated with the assets.
+The **Get All Assets** microflow action retrieves assets which, optionally, match a query. It returns a single object, of type *AssetsResponse*, which is associated with all the **Asset** objects which match the query. It also retrieves objects of type **Location**, **AspectType**, and **Variable** which are associated with the assets.
 
 It implements the API call .../api/assetmanagement/v3/assets?{Get query params}.
 
 ![Get All Assets dialog](attachments/mindsphere-asset-management-connector/image20.png)
 
-* Auth token – a string containing an access token, retrieved by the *Access token* action
-* Get query params (optional) – an object of type **GetQueryParams** containing additional parameters for the query (see section 2, [Asset Management Domain Model](#assetdm), for more details)
-* E tag (optional) – an integer which acts as a counter for optimistic locking
-* Variable (AssetsResponse) – an object of type **AssetsResponse** which is associated with retrieved objects of type **Asset**, **Location**, **Page**, **Lock**, **FileAssignment**, **AspectType**, and **Variable** which contain additional information about these assets
+*Get All Assets* uses the following parameters:
+
+* **Auth token** – a string containing an access token, retrieved by the *Access token* action
+* **Get query params** (optional) – an object of type **GetQueryParams** containing additional parameters for the query (see section 2, [Asset Management Domain Model](#assetdm), for more details)
+* **E tag** (optional) – an integer which acts as a counter for optimistic locking
+
+It returns the following:
+
+* **Variable** (AssetsResponse) – an object of type **AssetsResponse** which is associated with retrieved objects of type **Asset**, **Location**, **Page**, **Lock**, **FileAssignment**, **AspectType**, and **Variable** which contain additional information about these assets
 
 This populates the following entities in the domain model:
 
@@ -95,7 +100,7 @@ By default, MindSphere limits the data returned to the first ten assets. This be
 
 ### 3.2 Get Asset Type by ID
 
-The **Get Asset Type By ID** microflow action gets a single asset type, using its **AssetTypeId**. It also retrieves all the following associated objects:
+The **Get Asset Type By ID** microflow action gets a single **AssetType** object, using its **AssetTypeId**. It also retrieves all the following associated objects:
 
 * Variable
 * AspectType
@@ -111,6 +116,9 @@ The parameters are as follows:
 * **Get query params** (optional) – an object of type **GetQueryParams** containing additional parameters for the query (see section 2, [Asset Management Domain Model](#assetdm), for more details)
 * **E tag** (optional) – an integer which acts as a counter for optimistic locking
 * **Asset type id** – a string containing the value which should be matched to the _id attribute of the asset type required. This should be in the format {tenant}.{asset type}
+
+It returns the following:
+
 * **Variable (AssetType)** – an object of type **AssetType** which is associated with retrieved objects of type **AspectTypeWrapper**, **AspectType**, and **Variable** which contain additional information about this asset type
 
 ## 4 Related Content

@@ -229,13 +229,13 @@ The changes are required to support:
 
 The index.html file can be found in the /theme folder of your project app.
 
-### 2.4.2 MindSphereLogin.html
+#### 2.4.2 MindSphereLogin.html
 
 As well as changes to the index.html file, SSO for MindSphere also requires a different login *.html* file. This is called MindSphereLogin.html and can also be found in the /theme folder of your project app.
 
 If this file is not in your /theme folder, you can create it following the instructions in section 6.2, MindSphereLogin.html, or by importing the MindSphere_UI_Resources theme pack.
 
-### 2.4.3  Permission Denied Page
+#### 2.4.3  Permission Denied Page
 
 The permission denied page will be shown if your app will be called with an invalid token or a token which does not include the value you have specified within the SSO constant ‘CockpitApplicationName’. The SSO module expects to find this MindSphere-compliant file as error_page/403.html within your ‘Theme’ folder.
 
@@ -275,7 +275,7 @@ By default, the deployment package will be created in the *releases* folder of y
 
 #### 3.1.3 Deploying the Application to Cloud Foundry using CF CLI
 
-1.  Log in into MindSphere CF CLI using a one-time code as described in [Running a Cloud Foundry-Hosted Application - for Java Developers](https://developer.mindsphere.io/howto/howto-cf-running-app.html).
+1.  Log in into MindSphere CF CLI using a one-time code as described in [Running a Cloud Foundry-Hosted Application – for Java Developers](https://developer.mindsphere.io/howto/howto-cf-running-app.html).
 2.  Select your org and space using the command:  
     `cf target –o {org_name} -s {space_name}`
 3.  Ensure you are in the same folder as the package you wish to deploy.
@@ -310,7 +310,7 @@ If you want to forward this application to an operator later, you will need a pr
 
 #### 3.1.5 Troubleshooting
 
-If you have issues with deploying your app to Cloud Foundry, you can find additional information in [Running a Cloud Foundry-Hosted Application - for Java Developers](https://developer.mindsphere.io/howto/howto-cf-running-app.html). Note that this is not written from the point of view of a Mendix developer, so some information may not be relevant.
+If you have issues with deploying your app to Cloud Foundry, you can find additional information in [Running a Cloud Foundry-Hosted Application – for Java Developers](https://developer.mindsphere.io/howto/howto-cf-running-app.html). Note that this is not written from the point of view of a Mendix developer, so some information may not be relevant.
 
 Ensure that you have configured your proxy settings if these are required.
 

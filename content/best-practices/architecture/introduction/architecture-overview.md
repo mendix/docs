@@ -11,22 +11,75 @@ draft: true
 {{% todo %}}[**COULD USE 1 MORE DIAGRAM FOR LAST SEVERAL SECTIONS**]{{% /todo %}}
 
 ## 1 What Is IT Architecture?
+IT Architecture is about making nice and valuable things with technology. We want IT assets to be:
+1.	Valuable for the business
+2.	Easy to deliver and maintain
+3.	Secure, stable and robust in production
+4.	All the above at a reasonable cost
+Architecture attempts to optimize that formula. 
+### 1.1 Architecture Areas
+In Mendix we separate three levels of architecture
+•	Enterprise architecture is strategic, such as policy, positioning, portfolio, technology selection and guidelines.
+•	Solution Architecture is tactical, and works on program level, to solve business problems using one or many systems and technologies
+•	System Architecture is the architecture of one functional unit within a solution normally using one technology such as Mendix. In Microservices architecture there may be one large App to start with, that is later split up, but it is still considered one “system” by other teams within the company.
+There are other more generic areas which frequently are referred to:
+•	Technical architecture typically refers to the selection of technology, the infrastructure that it runs on and how it is deployed and provisioned
+•	Security Architecture, that relates to all things around security, functional and technical, e.g. Active Directory, SSO, SSL and SAML etcetera
+As more and more things move to the cloud, the technical architecture is getting two new areas:
+•	Cloud architects plan and design Cloud infrastructure, which components to use and how connectivity towards data-centres and between clouds should happen
+•	CICD Engineering is becoming increasingly important to automate as much as possible in IT delivery and maintenance in line with the DevOps paradigm
+Mendix allows building very good Apps with little technical understanding, but as the scope, complexity, criticality and volumes grow, there is an increased need for good architecture, good integration and skilled technical resources on the project.
 
-There are many types of IT architecture, and we hear the term in different contexts. The fact is that architecture is practiced at the highest levels of companies as well as by relative beginner Mendix developers.
+### 1.2 Mendix & Architecture
 
-{{% todo %}}[**ARE WE SURE WE WANT TO USE THE QUOTE BELOW? IF SO, WE HAVE DO AN ATTRIBUTE**]{{% /todo %}}
+Mendix has made the subject of architecture a lot easier by reducing the number of factors to consider during the development process (for example, how to make the UI, logic, and databases work together). In addition, Mendix simplifies the infrastructure and deployment considerations.
 
-According to [IasaGlobal](https://iasaglobal.org/itabok/what-is-it-architecture/), "IT architecture is the art and science of designing and delivering valuable technology strategy."
+But there is still some architecture work remaining so that you can get the best apps working together to serve the business in a secure and robust way that performs well. As customers have discovered the speed, productivity and flexibility of Mendix, they have started using Mendix for core systems and high volume situations, and then Architecture becomes more important.
 
-Generally, we want to make nice things with technology that are valuable for the business, easy to deliver and maintain, and robust in production. And we want to deliver all this value at a reasonable cost. The processes that attempt to optimize this formula are part of the work of architecture. So, if you work in the IT industry, chances are you work with architecture every day.
+Mendix has a very strong base in innovation apps and business differentiating systems (for more information, see [What Can I Build?](https://www.mendix.com/evaluation-guide/what-can-i-build) in the *Mendix Platform Evaluation Guide* as well as Gartner's [Pace-Layered Application Strategy and IT Organizational Design](https://www.gartner.com/binaries/content/assets/events/keywords/applications/apn30/pace-layered-applications-research-report.pdf)). But as many customers have discovered while employing the speed, productivity, and flexibility of the platform, Mendix can be used for the heavy-lifting in a company. At that point, it becomes more important to consider the architecture in order to optimize the solution and make sure it meets requirements for volume and robustness.
 
-Some architecture work is strategic, such as policy, positioning, portfolio, and guidelines for defining what to do and the best ways to do it. This includes enterprise architecture roadmaps as well as business-value calculations and measurements.
+### 1.3 When Do I Need the Real Architects?
 
-Some architecture work is tactical, such as working with concrete designs, small system designs, large program solution designs, app design, and microservice design. Even just deciding how to configure a Mendix app in to maximize business value and maintainability involves architecture work.
+As the solution, scope, volume, and criticality of a system increases, there is an increasing need to have strong technical people on the team and professional architects to help in creating the best solution.
 
-## 2 Microservice Architecture
+{{% todo %}}[**EXPLAIN DIAGRAM; UX-UPDATE DIAGRAM**]{{% /todo %}}
 
-With the arrival of low-code platforms, cloud solutions, and automation, it has become easier to make architecture functional, which is reflected in the trend towards microservices.
+![](attachments/arch-over6.png)
+
+The larger and more important the solution, the more thinking and architecture needs to go into it. There may also be more reasons to test and tune the system after functional realization, in addition to requirements for professional monitoring.
+
+## 2 Current IT Trends
+
+There are several IT trends converging, where Agile, DevOps, Microservices, Cloud and Automation are at the centre of the evolution:
+As the picture below shows, areas such as SOA (functional architecture), Agile (methodology) and Cloud (infrastructure), are merging into one coherent movement of Enterprise DevOps with automation, microservices and an agile mindset
+
+<<PICTURE>>
+	
+## 2.1 Digitization on All Levels
+This evolution makes a lot of sense: IT teams and methodology, the organization, the infrastructure and the technical components are all related to each other and for optimal results the overall strategy should be beneficial for all these elements.
+Good architecture, technology and organization should deliver Digitization to all levels of the company, from Customer interactions, to Business Operations and all the way down to digitizing IT delivery which Cloud, Low-Code, CICD, Microservices and DevOps are all part of. As the picture below shows, this all leads to people being able to make more @ higher quality, than before.
+
+## 2.2 Business and IT Alignment
+
+<<PICTURE>>
+	
+Enterprise DevOps will provide us with better Business and IT alignment, which is at the heart of what Mendix is trying to provide. When people that innovate in IT and the people that know how the business runs can cooperate more closely, we will iterate towards better architecture, increased digitization and more value to the business.
+The pre-requisite for this entire evolution is the Delivery automation in IT and IT infrastructure. The Cloud and Low-Code platforms enables Biz-DevOps. Small cross-functional teams do not need a DBA and infrastructure experts anymore. They can own the entire life-cycle of the Apps they build – and they can be more functional and therefore also more closely aligned with the business.
+
+<<PICTURE>>
+	
+Automation in infrastructure for Apps also means that managing more components no longer adds significant cost. A double sized cloud container costs approximately 2 times as much. This means that building smaller, functional Microservices is possible. 
+We can adapt the size of Apps to what is most efficient to maintain. Microservices can be quite large when using Low-code, so the App architecture with often align with how the business sees the world.
+All of this means, that we are leaving behind ourselves, the era when Dev, Ops and the Business are separated by a trench of conflicting objectives.  The DevOps teams and the functionally oriented Apps can align with the Business they are supposed to support.
+
+
+## 3 Architecture Subjects Covered
+
+## 3.1 Microservice Architecture
+
+Microservices is a popular way of building IT solutions. It avoids building Monoliths and SOA layered architectures, where dependencies tended to get out of hand.  Instead we make functional, autonomous components that cooperate to fulfil a business function. This suits Mendix very well as described in <link>.
+Mendix uses the definition of microservices by Martin Fowler at Thoughtworks. As shown below microservices are more functional, encapsulating a business process, and they cooperate via business events, more as actors in a business process. 
+
 
 {{% todo %}}[**EXPLAIN DIAGRAM; UX-UPDATE DIAGRAM**]{{% /todo %}}
 
@@ -34,13 +87,10 @@ With the arrival of low-code platforms, cloud solutions, and automation, it has 
 
 The [Microservices best practices](..microservices/microservices-overview) best practices will dive into this exciting development.
 
-## 3 Is Modern IT Architecture Only for Architects?
+Often there is no need to separate technical and functional architecture, but rather work on one single solution model.
+The most techie considerations are increasingly abstracted away by Low code and other cloud-based solutions. Left are more functional decisions. Architecture will be understood by all parties and take business organization, delivery organization, technology, and business process into consideration. 
+The diagram below shows how Business stakeholder, Process owners and Solution architects cooperate towards the best Microservices architecture, taking autonomy, re-use, process, operability and scalability into consideration.
 
-There are more roles than just architects who work on IT architecture, whether they are aware of this or not. And this trend is getting stronger.
-
-This is exemplified by microservices, Agile, and DevOps. The most tech-focused considerations are increasingly abstracted away by low-code and other cloud-based solutions. That leaves room for more functional decisions, where process and organization play a larger role in architecture decisions.
-
-In addition to building solutions in Mendix, non-tech users can come to understand the architecture considerations in such solutions and take part in a more team-oriented and iterative architecture process.
 
 {{% todo %}}[**EXPLAIN DIAGRAM; UX-UPDATE DIAGRAM**]{{% /todo %}}
 
@@ -52,27 +102,9 @@ IT architecture of the future will not separate technical from functional archit
 
 ![](attachments/arch-over5.png)
 
-Architecture needs to have a level of flexibility as more information is made available during the realization of an solution. This could involve refactoring an app or splitting an app into smaller parts based on the real knowledge gained from the actual implementation.
+Architecture needs to have a level of flexibility as more information is made available during the realization of an solution. This could involve refactoring an app or splitting an app into smaller parts based on the real knowledge gained from the actual 
 
-## 4 Mendix & Architecture
-
-Mendix has made the subject of architecture a lot easier by reducing the number of factors to consider during the development process (for example, how to make the UI, logic, and databases work together). In addition, Mendix simplifies the infrastructure and deployment considerations.
-
-But there is still some architecture work remaining so that you can get the best apps working together to serve the business in a secure and robust way that performs well.
-
-Mendix has a very strong base in innovation apps and business differentiating systems (for more information, see [What Can I Build?](https://www.mendix.com/evaluation-guide/what-can-i-build) in the *Mendix Platform Evaluation Guide* as well as Gartner's [Pace-Layered Application Strategy and IT Organizational Design](https://www.gartner.com/binaries/content/assets/events/keywords/applications/apn30/pace-layered-applications-research-report.pdf)). But as many customers have discovered while employing the speed, productivity, and flexibility of the platform, Mendix can be used for the heavy-lifting in a company. At that point, it becomes more important to consider the architecture in order to optimize the solution and make sure it meets requirements for volume and robustness.
-
-## 5 When Do I Need the Real Architects?
-
-As the solution, scope, volume, and criticality of a system increases, there is an increasing need to have strong technical people on the team and professional architects to help in creating the best solution.
-
-{{% todo %}}[**EXPLAIN DIAGRAM; UX-UPDATE DIAGRAM**]{{% /todo %}}
-
-![](attachments/arch-over6.png)
-
-The larger and more important the solution, the more thinking and architecture needs to go into it. There may also be more reasons to test and tune the system after functional realization, in addition to requirements for professional monitoring.
-
-## 6 Good Integration Architecture
+### 3.2 Good Integration with Mendix
 
 One of the most important parts of architecture is integration. All business apps need to integrate with people, things, other systems, and operational tools to be useful.
 
@@ -86,7 +118,8 @@ Systems depend on each other – that is part of life. But dependencies can be m
 
 Integration with people will be covered in the UX and Design Thinking Best Practices. Integrating apps with each other and other systems, things, and devices as well as monitoring are topics covered in the [Integration](../integration/integration-overview) best practices. 
 
-## 7 High Performance
+
+### 3.3 High Performance
 
 Sometimes the functional and/or technical architecture has to be adapted to the fact that there is a very high volume of users or messages and/or high requirements for availability.
 
@@ -96,7 +129,7 @@ As volume increases, a specialization of architecture is developing that focuses
 
 This may require more planning, technical expertise, testing, tuning, and monitoring in production for what is often the core or most critical system for an enterprise. The primary concern here may not be the speed of feature development, but building systems that perform well, are easy to monitor and maintain, and have great recovery features should something still go wrong.
 
-## 8 Security Architecture
+### 3.5 Security Architecture
 
 Security architecture inovlves making sure no one can penetrate, destroy, disrupt, or in any way interfere with the normal business operations of an IT system that we build and operate.
 
@@ -116,7 +149,7 @@ The following security areas are generally considered for best practices:
 * Integration security
 	* Focusing on secure service calls (for example, via SSL, secure queueing, or SSH File Transfer Protocol (SFTP) for files
 
-## 9 Monitoring & Robustness
+### 3.6 Monitoring & Robustness
 
 For simple apps and systems, Mendix has all the required monitoring available in the [Mendix Developer Portal](/developerportal/operate/). For virtual private cloud (VPC) solutions integrated with Mendix, monitoring capabilities would be provided by the third-party providing the infrastructure.
 
@@ -128,7 +161,7 @@ But for VPC and on-premises solutions as well as when the number of systems incr
 
 The [Robusntess](../robustness/robustness-overview) section of the Architecture Best Practices discusses how these benefits can be achieved by using native Mendix technology or by connecting to professional tooling.
 
-## 10 CI/CD & Test Automation
+### 3.7 CI/CD & Test Automation
 
 Mendix provides some continuous integration out-of-the-box:
 
@@ -149,10 +182,11 @@ The most important thing is to take a clear look at your testing needs as well a
 
 For more information, see the [CICD](https://www.mendix.com/evaluation-guide/app-lifecycle/cicd) section in the *Mendix Platform Evaluation Guide*.
 
-## 11 Summary
+## 4 Summary
 
-Architecture is a wide subject area, so we will only try to cover the areas where we see the most interest in advice and knowledge sharing. The best practices included are works in progress and are constantly changing, so read this as *one good source of information*.
-
-The weather never looks exactly the same on two days of one's life, so it is important to both look for what is the same and what is different when you work towards the best solution.
-
-Ultimately, Mendix is there to support you both with technology and consulting.
+Architecture is a wide subject area. Mendix Best Practices will cover the areas where we see the most interest in advice and information.  The Best Practices included are work in progress may be subject to change, as is the world around us.
+The weather never looks (exactly) the same on two days of one’s life, so it’s important to both look for what is the same, and what is different when you work towards the best solution for your Maker’s challenge.
+In an agile manner we should continuously measure and verify our assumptions based on real information as a solution is being created or managed. As reality changes we should fine-tune the architecture.
+<<NEW PICTURE>>
+As the architecture is improved we can improve the quality and value of IT solutions for all the teams building, managing and using the IT solution.
+Ultimately, Mendix is there to support you both with technology and consulting. We provide architecture workshops where we think along with you on any area related to making the next generation IT with Mendix.

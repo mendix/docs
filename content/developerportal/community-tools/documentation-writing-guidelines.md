@@ -96,12 +96,12 @@ When writing for the Mendix Reference Guide, consider these guidelines:
 To embed a model share in the documentation, paste the iframe, for example:
 
 ```html
-<iframe width='100%' height='491px' frameborder='0' src='https://modelshare.mendix.com/models/338b36ca-8dbb-4011-b36d-8459ad055381/save-example?embed=true' allowfullscreen></iframe>
+<iframe width='100%' height='491px' frameborder='0' src='https://modelshare.mendix.com/models/fb092960-6fc1-41c0-bb64-d9e70c012bc5/save-example?embed=true' allowfullscreen></iframe>
 ```
 
 This will render as:
 
-<iframe width='100%' height='491px' frameborder='0' src='https://modelshare.mendix.com/models/338b36ca-8dbb-4011-b36d-8459ad055381/save-example?embed=true' allowfullscreen></iframe>
+<iframe width='100%' height='491px' frameborder='0' src='https://modelshare.mendix.com/models/fb092960-6fc1-41c0-bb64-d9e70c012bc5/save-example?embed=true' allowfullscreen></iframe>
 
 ## 6 Read More
 

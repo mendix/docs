@@ -9,7 +9,6 @@ parent: "data-storage"
 At this point, only [Basic Multilingual Plane](https://en.wikipedia.org/wiki/Plane_(Unicode)#Basic_Multilingual_Plane) unicode characters are supported.
 
 ## Ordering on associated attributes
-
 Retrieving an entity that is sorted on an attribute of one of its associated entities is not supported in SAP HANA. For example, if there are two associated entities *Person* and *Address* and they have *name* and *street* attributes respectively; You can not retrieve `Person` objects sorted on `Person_Address/Address/street`. 
 
 ## Case sensitivity

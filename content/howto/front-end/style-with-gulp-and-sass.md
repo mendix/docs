@@ -7,6 +7,12 @@ tags: ["gulp", "sass", "ux", "Front-End"]
 
 ## 1 Introduction
 
+{{% alert type="info" %}}
+This how-to is based on the blog post [How Do I Start Styling In Mendix (Gulp & Sass)](https://medium.com/@jasonteunissen/how-do-i-start-styling-in-mendix-gulp-sass-6b37ddaf8de6) by Jason Teunissen, UX Consultant at [Appronto](https://developer.mendixcloud.com/link/partnerprofile/8870).
+{{% /alert %}}
+
+How Do I Start Styling In Mendix (Gulp & Sass)
+
 You can use [Gulp](https://gulpjs.com/) to watch the files for any changes you make when styling with Sass. Gulp triggers auto-refresh by default so that your changes are immediately visible in the browser.
 
 **This how-to will teach you how to do the following:**
@@ -45,9 +51,7 @@ To run Gulp, follow these steps:
 ![](attachments/style-with-gulp-and-sass/red.png)
 
 {{% alert type="info" %}}
-
 If you are using Parallels on Mac, you can access your Mendix project on your Mac browser by going to your Parallels machine (for example, `http://10.211.55.3:30001` – this is different on each setup).
-
 {{% /alert %}}
 
 And that's it! Now you are ready to start styling your Mendix app with Sass.
@@ -72,6 +76,7 @@ If you encounter issues using this setup, please read the [Troubleshooting](http
 
 ## 8 Read More
 
+* [How Do I Start Styling In Mendix (Gulp & Sass)](https://medium.com/@jasonteunissen/how-do-i-start-styling-in-mendix-gulp-sass-6b37ddaf8de6)
 * [mendix / ux-theming](https://github.com/mendix/ux-theming)
 * [How to Create a Custom Theme with the Mendix UI Framework](create-a-custom-theme-with-the-mendix-ui-framework)
 * [How to Extend Design Properties to Customize Your Web Modeler Experience](../front-end/extend-design-properties-to-customize-the-web-modeler-experience)

@@ -47,7 +47,7 @@ For each category and sub-category of best practices, there will be an overview 
 
 ![](attachments/overview2.png)
 
-## 2 How Are the Best Practices Created?
+## 2 How Are the Best Practices Created? {#created}
 
 Mendix organizes subject matter experts from different parts of the organization into guilds. Guild members meet frequently to shares problems and ideas, research different areas, and write guidelines and best practices around a subject area.
 
@@ -57,7 +57,7 @@ Members of these guilds own the content of the best practices. They also own the
 
 {{% todo %}}[**ADD APP STORE LINK WHEN AVAILABLE**]{{% /todo %}}
 
-## 3 How Can These Best Practices Help Me?
+## 3 How Can These Best Practices Help Me? {#help}
 
 The overview documents should quickly bring you up to speed with the most important considerations for a particular subject. These overviews are intended for Architects, Managers, Lead Developers, and other senior stakeholders.
 
@@ -65,7 +65,7 @@ The detailed descriptions and use cases are intended for experienced Mendix user
 
 Some use cases will refer to examples in the App Store. These App Store items are not finished products, instead serving as small reference implementations that solve a single business problem. You can view these as examples for picking up ideas, or you can copy parts of them as starting points for building robust solutions with good error handling.
 
-## 4 The Mendix Community & Knowledge Sharing
+## 4 The Mendix Community & Knowledge Sharing {#community}
 
 There is a great community around Mendix that constantly shares ideas, best practices, and solutions via the [Buzz](/developerportal/collaborate/buzz), [Meetups](https://www.meetup.com/Mendix-Netherlands/), partner presentations, and the [Mendix Forum](https://forum.mendixcloud.com).
 

@@ -328,29 +328,29 @@ Plotting functional use cases against basic methods of integration allows us to 
 
 The table below presents use cases that you can reference  for more detail. The table uses the following key:
 
-* A <span>&#9989;</span> indicates the common or preferred use of the method
-	* In some of the latter cases (for example, "Integration with IoT solutions"), the solution will require several methods, so there are several instances of <span>&#9989;</span>
-* An <span>&#10004;</span> indicates possible use in some cases
+* <span>&#10004;</span><span>&#10004;</span> indicates the common or preferred use of the method
+	* In some of the latter cases (for example, "Integration with IoT solutions"), the solution will require several methods, so there are several instances of <span>&#10004;</span><span>&#10004;</span>
+* <span>&#10003;</span> indicates possible use in some cases
 
 {{% todo %}}[**ADD LINKS AS DOCS AVAILABLE**]{{% /todo %}}
 
 | *Use Case* | *UI Integration* | *RPC / Services* | *Events / Queues* | *Export, Import, Batch* | *Central Data* |
 | --- | --- | --- | --- | --- | --- |
-| SSO, AD & Identity integration | <p>&#10003;</p> | <p>&#9989;</p> | | | |
-| Import & Distribute Reference Data | | <p>&#9989;</p> | <p>&#10003;</p> | <p>&#9989;</p> | <p>&#10004;</p> |
-| View & Search Data in Another System  | <p>&#10003;</p> | <p>&#9989;</p> | | | |
-| Use & Refer to Data in Another System | | <p>&#9989;</p> | | | <p>&#10003;</p> |
-| [Process Integration](process-integration) (continue workflow) | <p>&#9989;</p> | <p>&#10003;</p> | <p>&#10003;</p> | | |
-| [Export, Import & Batch Processing](export-import-batch) | | <p>&#10003;</p> | <p>&#10003;</p> | <p>&#9989;</p> | <p>&#10003;</p> |
-| Update Data in the Master App | <p>&#9989;</p> | <p>&#9989;</p> | <p>&#10003;</p> | | |
-| Distribute Master & Transactional Data | | <p>&#9989;</p> | <p>&#10003;</p> | <p>&#10003;</p> | <p>&#10003;</p> |
-| Integration with BI & Reporting | | <p>&#10003;</p> | <p>&#10003;</p> | <p>&#9989;</p> | <p>&#10003;</p> |
-| Mobile Integration & Offline | | <p>&#9989;</p> | <p>&#10003;</p> | | |
-| CMS & CDN Integration | <p>&#9989;</p> | <p>&#10003;</p> | | | |
-| Process Orchestration & State Engines | | <p>&#9989;</p> | <p>&#10003;</p> | | <p>&#9989;</p> |
-| Integration with Ops & Monitoring | <p>&#10003;</p> | <p>&#10003;</p> | <p>&#9989;</p> | <p>&#10003;</p> | <p>&#9989;</p> |
-| Integration with IoT Solutions | | <p>&#9989;</p> | <p>&#9989;</p> | <p>&#10003;</p> | <p>&#9989;</p> |
-| Integration with AI & Machine Learning | | <p>&#9989;</p> | <p>&#10003;</p> | | <p>&#9989;</p> |
+| SSO, AD & Identity integration | <span>&#10003;</span> | <span>&#10004;</span><span>&#10004;</span> | | | |
+| Import & Distribute Reference Data | | <span>&#10004;</span><span>&#10004;</span> | <span>&#10003;</span> | <span>&#10004;</span><span>&#10004;</span> | <span>&#10003;</span> |
+| View & Search Data in Another System  | <span>&#10003;</span> | <span>&#10004;</span><span>&#10004;</span> | | | |
+| Use & Refer to Data in Another System | | <span>&#10004;</span><span>&#10004;</span> | | | <span>&#10003;</span> |
+| [Process Int.](process-integration) (cont. workflow) | <span>&#10004;</span><span>&#10004;</span> | <span>&#10003;</span> | <span>&#10003;</span> | | |
+| [Export, Import & Batch Processing](export-import-batch) | | <span>&#10003;</span> | <span>&#10003;</span> | <span>&#10003;</span><span>&#10003;</span> | <span>&#10003;</span> |
+| Update Data in Master App | <span>&#10004;</span><span>&#10004;</span> | <span>&#10004;</span><span>&#10004;</span> | <span>&#10003;</span> | | |
+| Distribute Master & Transactional Data | | <span>&#10004;</span><span>&#10004;</span> | <span>&#10003;</span> | <span>&#10003;</span> | <span>&#10003;</span> |
+| Int. with BI & Reporting | | <span>&#10003;</span> | <span>&#10003;</span> | <span>&#10004;</span><span>&#10004;</span> | <span>&#10003;</span> |
+| Mobile Int. & Offline | | <span>&#10004;</span><span>&#10004;</span> | <span>&#10003;</span> | | |
+| CMS & CDN Int. | <span>&#10004;</span><span>&#10004;</span> | <span>&#10003;</span> | | | |
+| Process Orch. & State Engines | | <span>&#10004;</span><span>&#10004;</span> | <span>&#10003;</span> | | <span>&#10004;</span><span>&#10004;</span> |
+| Int. with Ops & Monitoring | <span>&#10003;</span> | <span>&#10003;</span> | <span>&#10004;</span><span>&#10004;</span> | <span>&#10003;</span> | <span>&#10004;</span><span>&#10004;</span> |
+| Int. with IoT Solutions | | <span>&#10004;</span><span>&#10004;</span> | <span>&#10004;</span><span>&#10004;</span> | <span>&#10003;</span> | <span>&#10004;</span><span>&#10004;</span> |
+| Int. with AI & Machine Learning | | <span>&#10004;</span><span>&#10004;</span> | <span>&#10003;</span> | | <span>&#10004;</span><span>&#10004;</span> |
 
 To read these use cases, start with [Integration Use Cases](integration-use-cases).
 

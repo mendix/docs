@@ -1,12 +1,10 @@
 ---
 title: "Architecture Overview"
-parent: "architecture-intro"
+category: "Architecture"
 description: "Best practices for architecture."
 menu_order: 2
 draft: true
 ---
-
-{{% todo %}}[**COULD USE 1 MORE DIAGRAM FOR LAST SEVERAL SECTIONS**]{{% /todo %}}
 
 ## 1 How Does Mendix Interpret IT Architecture?
 
@@ -59,34 +57,43 @@ There are several IT trends converging, where Agile, DevOps, Microservices, Clou
 As the picture below shows, areas such as SOA (functional architecture), Agile (methodology) and Cloud (infrastructure), are merging into one coherent movement of Enterprise DevOps with automation, microservices and an agile mindset
 
 {{% todo %}}[**ADD DIAGRAM; EXPLAIN DIAGRAM; UX-UPDATE DIAGRAM**]{{% /todo %}}
+
+![](attachments/it-trends.png)
 	
-## 2.1 Digitization on All Levels
+## 2.1 Digital Transformation on All Levels
 
 This evolution makes sense when the IT teams, methodology, organization, infrastructure, and technical components are all related to each other. For optimal results, the overall strategy should be beneficial for all these elements.
 
 Good architecture, technology, and organization should deliver digital transformation to all levels of the company, from customer interactions to business operations. This should happen all the way down to the digital transformation of IT delivery, of which cloud, low-code, CI/CD, microservices, and DevOps are all a part. As the diagram below presents, this all leads to end-users being able to make work with higher quality than ever before.
 
-{{% todo %}}[**WHAT DIAGRAM BELOW? MISSING?**]{{% /todo %}}
+{{% todo %}}[**UX-UPDATE DIAGRAM**]{{% /todo %}}
+
+![](attachments/digitization.png)
 
 ## 2.2 Business & IT Alignment
 
-{{% todo %}}[**ADD DIAGRAM; EXPLAIN DIAGRAM; UX-UPDATE DIAGRAM**]{{% /todo %}}
-	
+
 Enterprise DevOps will provide us with better business and IT alignment, which is at the heart of what Mendix is trying to provide. When users that innovate in IT and users who know how the business runs can cooperate more closely, they will iterate towards better architecture, increased digitization, and more value added to the business.
 
 The prerequisite for this entire evolution is delivery automation in IT and IT infrastructure. Mendix—as a cloud and low-code platform—enables BizDevOps to the point that small cross-functional teams no longer need database administrators and infrastructure experts. Such teams can own the entire lifecycle of the apps they build, be more functional, and thus align more closely with the business.
 
-{{% todo %}}[**ADD DIAGRAM; EXPLAIN DIAGRAM; UX-UPDATE DIAGRAM**]{{% /todo %}}
-	
-Automation in infrastructure for Apps also means that managing more components no longer adds significant cost. A double sized cloud container costs approximately 2 times as much. This means that building smaller, functional Microservices is possible. 
-We can adapt the size of Apps to what is most efficient to maintain. Microservices can be quite large when using Low-code, so the App architecture with often align with how the business sees the world.
-All of this means, that we are leaving behind ourselves, the era when Dev, Ops and the Business are separated by a trench of conflicting objectives.  The DevOps teams and the functionally oriented Apps can align with the Business they are supposed to support.
+{{% todo %}}[**EXPLAIN DIAGRAM; UX-UPDATE DIAGRAM**]{{% /todo %}}
+
+![](attachments/it-alignment.png)
+
+Automation in infrastructure for apps also means that managing more components no longer adds significant cost. A double-sized cloud container costs approximately twice as much. This means that building smaller functional microservices is possible. 
+
+We can adapt the size of apps to what is most efficient to maintain. Microservices can be quite large when using low-code, so the app architecture will often align with how the business sees the world.
+
+All of this means, that we are leaving behind the era when development, operations, and business are separated by a trench of conflicting objectives.  The DevOps teams and the functionally-oriented apps can align with the business they are supposed to support.
 
 ## 3 Architecture Subjects Covered
 
+{{% todo %}}[**MOVE THIS SECTION (AND SOME SECTIONS ABOVE) INTO Architecture Introduction?**]{{% /todo %}}
+
 The Mendix Architecture Best Practices will cover the architecture subjects described below.
 
-## 3.1 Microservices Architecture
+### 3.1 Microservices Architecture
 
 Microservices is a popular way of building IT solutions. It helps you to avoid building monoliths and SOA-layered architectures, where dependencies tend to get out of control.  Instead, you can make functional autonomous components that cooperate to fulfill a business function. This suits Mendix very well, as is further described in [Mendix Microservices](/microservices/mendix-microservices).
 
@@ -105,10 +112,6 @@ This diagram shows how business stakeholders, process owners, and Solution Archi
 ![](attachments/arch-over4.png)
 
 The IT architecture of the future will not separate technical from functional architecture. Instead, it will work with one single solution model that is understood by all stakeholders, who will then take the business organization, delivery organization, technology, and business processes into consideration. 
-
-{{% todo %}}[**EXPLAIN DIAGRAM; UX-UPDATE DIAGRAM**]{{% /todo %}}
-
-![](attachments/arch-over5.png)
 
 Architecture needs to have a level of flexibility as more information is made available during the realization of a solution. This could involve refactoring an app or splitting an app into smaller parts based on the real knowledge gained from the actual end-users.
 
@@ -200,7 +203,9 @@ The weather never looks (exactly) the same on any two days of your life, so it i
 
 In accordance with Agile methodology, you should continuously measure and verify your assumptions based on real information as a solution is being created or managed. That means as reality changes, you should fine-tune your architecture. And as your architecture is improved, you can improve the quality and value of IT solutions for all the teams building, managing, and using the IT solution.
 
-{{% todo %}}[**ADD DIAGRAM; EXPLAIN DIAGRAM; UX-UPDATE DIAGRAM**]{{% /todo %}}
+{{% todo %}}[**EXPLAIN DIAGRAM; UX-UPDATE DIAGRAM**]{{% /todo %}}
+
+![](attachments/summary.png)
 
 Ultimately, Mendix is there to support you both with technology and consulting. We provide architecture workshops where we think along with you on any area related to making the next generation IT with Mendix.
 

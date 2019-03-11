@@ -6,7 +6,7 @@ notoc: true
 layout: wide
 ---
 
-{{% partial "cards/arch-introduction.html" %}}
+{{% partial "cards/arch-overview.html" %}}
 
 {{% partial "cards/arch-integration.html" %}}
 

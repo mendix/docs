@@ -1,12 +1,12 @@
 ---
-title: "Architecture Introduction"
+title: "About This Category"
 category: "Architecture"
 description: "Best practices for architecture."
 menu_order: 1
 draft: true
 ---
 
-## 1 Introduction to Mendix Architecture Best Practices
+## 1 Introduction
 
 Mendix is optimized for the easiest and fastest way to develop and maintain apps that fulfill business functions. As the scope of your apps grows larger, architecture becomes more important. At that point, you should leverage best practices in this area.
 
@@ -33,7 +33,7 @@ These are the architecture subject areas that will be covered:
 
 * [Integration](integration/integration-overview)
 * [High Performance](performance/performance-overview)
-* Microservices
+* [Microservices](microservices/microservices-overview)
 * Security
 * CI/CD and Test Automation
 * Monitoring and Robustness

@@ -1,31 +1,32 @@
 ---
 title: "Version Control Scenarios"
 parent: "version-control"
+#menu_order: 
+description: "A description of how to work with version control and how to resolve some issues which may arise"
+tags: ["Version Control", "Conflicts", "Resolve", "Merge", "Patch", "Branch", "Development"]
 ---
+
+## 1 Introduction
 
 This page describes some common scenarios of working in the Modeler with version control.
 
-## Starting A Project
+## 2 Starting a Project in the Desktop Modeler
 
-To start a new project with version control you simply choose 'New Project' in the Modeler and make sure that the 'Enable online services' option is enabled. Creating such a project creates a Team Server repository and a Developer Portal project. Also a working copy is created and opened so that you can immediately start working.
+To start a new project with version control, choose **New Project...** in the Modeler. In the **App Settings**, set **Enable online services** to *Yes*. This option creates a Team Server repository and a Developer Portal project.
+
+A working copy is also created in the **Project directory** and is opened in the modeler so that you can start working immediately.
 
 ![](attachments/modeler-core/2018-03-02_11-11-18.png)
 
-## Joining A Project
+## 3 Joining a Project
 
-If someone else has already created a Team Server enabled project you can join it by choosing 'Open Project' in the Modeler. Select the desired Team Server project and the development line you are interested in. The project will be downloaded from the Team Server and opened.
-
-{{% alert type="warning" %}}
-
-If you already have a Developer Portal project that was created by hand, you can enable the Team Server for that project in the Developer Portal by adding the Team Server plugin.
-
-{{% /alert %}}
+If there is already a Team Server enabled project, and you are a team member, you can join it by choosing **Open project...** in the Desktop Modeler. Select *Mendix Team Server* as for **Where is your App stored?**. Choose your app from the **Team Server App** dropdown. The project will be downloaded from the Team Server and opened in the Desktop Modeler.
 
 ![](attachments/modeler-core/2018-03-02_11-13-59.png)
 
-## Day-to-day Development
+## 4 Day-to-day Development
 
-Let us say you have a working copy of a project on disk; you can now start making changes as you would normally do. Saved changes are not immediately visible to others. Only when you are happy with a set of changes, you commit them to the repository. Others can then choose to update and retrieve those changes.
+Let us say you have a working copy of a project on disk. You make changes to the app and save them. Saved changes are not immediately visible to others. When you are happy with a set of changes, you commit them to the repository. Others can then choose to update and retrieve those changes.
 
 {{% alert type="success" %}}
 

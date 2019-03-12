@@ -30,23 +30,27 @@ Let us say you have a working copy of a project on disk. You make changes to the
 
 {{% alert type="success" %}}
 
-We recommend you commit your changes often. In general, you can commit after implementing one feature or fixing one bug. By committing often your work is integrated with the work of others regularly and if any conflicts come up the changes are still fresh in your mind and that of your colleagues. Committing often also helps you to commit small sets of changes. This makes the revisions easier to understand and if you ever need to revert something you can revert a small amount of work instead of a day's worth.
+We recommend you commit your changes often. In general, you can commit after implementing one feature or fixing one bug. By committing often, your work is integrated with the work of others regularly and if any conflicts come up the changes are still fresh in your mind and that of your colleagues. Committing often also helps you to commit small sets of changes. This makes the revisions easier to understand and if you ever need to revert something you can revert a small amount of work instead of a day's worth.
 
 {{% /alert %}}
 
-If you are about to commit and others have committed changes in the meantime, you first have to retrieve those changes by updating. Updating will combine the changes made by others with your changes. Oftentimes the changes can be combined with no problem. If, however, the changes are too close to each other a conflict may arise.
+If you are about to commit and others have committed changes in the meantime, you first have to retrieve those changes by updating. Updating will combine the changes made by others with your changes. The changes can usually be combined with no problem. If, however, the changes are too close to each other a conflict may arise.
 
 {{% alert type="success" %}}
 
-If everyone is committing often you will automatically have to update often. Before you can send your changes to the repository you will have to incorporate changes made by others that are not yet in your working copy. Updating often has the benefit that you receive fewer changes than if you wait a day and integrating those changes with your work is easier to do.
+If everyone is committing often you will automatically have to update often. Before you can send your changes to the repository you will have to incorporate changes made by others that are not yet in your working copy. Frequent updating has the benefit that you receive fewer changes with each update and integrating those changes with your work is easier.
 
 {{% /alert %}}
 
-## Reverting Changes
+## 5 Reverting Changes
 
-Changes that have not been committed yet can be reverted. Let us see you made a lot of changes to a form and you are not happy with the result. You can then revert the form to the original, that is, the state of the form before you started making changes.
+Changes that have not yet been committed can be reverted. Say, for example, that you have made a lot of changes to a form and you are not happy with the result. You can revert the form to the original: that is, the state of the form before you started making changes.
 
-Deletes of documents, folders and modules can also be reverted which will bring them back into the project. Note that you will get back the latest committed version. If you commit, make some changes to a microflow and then delete the microflow, reverting the delete will give you the microflow without the changes.
+Deletes of documents, folders and modules can also be reverted which will bring them back into the project. Note that you will get back the latest *committed* version. For example, if you commit, make some changes to a microflow, and then delete the microflow, reverting the delete will give you the microflow without the changes that you made.
+
+You can revert changes in the *Changes* tab, or from the right-click menu on the document you want to revert.
+
+![Two ways of reverting]{/attachments/modeler-core/revertx2.png}
 
 ## Resolving A Document Conflict
 

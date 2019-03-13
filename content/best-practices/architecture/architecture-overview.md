@@ -60,7 +60,7 @@ As the picture below shows, areas such as SOA (functional architecture), Agile (
 
 ![](attachments/it-trends.png)
 	
-## 2.1 Digital Transformation on All Levels
+### 2.1 Digital Transformation on All Levels
 
 This evolution makes sense when the IT teams, methodology, organization, infrastructure, and technical components are all related to each other. For optimal results, the overall strategy should be beneficial for all these elements.
 
@@ -70,8 +70,7 @@ Good architecture, technology, and organization should deliver digital transform
 
 ![](attachments/digitization.png)
 
-## 2.2 Business & IT Alignment
-
+### 2.2 Business & IT Alignment
 
 Enterprise DevOps will provide us with better business and IT alignment, which is at the heart of what Mendix is trying to provide. When users that innovate in IT and users who know how the business runs can cooperate more closely, they will iterate towards better architecture, increased digitization, and more value added to the business.
 
@@ -131,7 +130,6 @@ Systems depend on each other – that is part of life. But dependencies can be m
 
 Integration with people will be covered in the UX and Design Thinking Best Practices. Integrating apps with each other and other systems, things, and devices as well as monitoring are topics covered in the [Integration](../integration/integration-overview) best practices. 
 
-
 ### 3.3 High Performance
 
 Sometimes the functional and/or technical architecture has to be adapted to the fact that there is a very high volume of users or messages and/or high requirements for availability.
@@ -142,7 +140,7 @@ As volume increases, a specialization of architecture is developing that focuses
 
 This may require more planning, technical expertise, testing, tuning, and monitoring in production for what is often the core or most critical system for an enterprise. The primary concern here may not be the speed of feature development, but building systems that perform well, are easy to monitor and maintain, and have great recovery features should something still go wrong.
 
-### 3.5 Security Architecture
+### 3.4 Security Architecture
 
 Security architecture inovlves making sure no one can penetrate, destroy, disrupt, or in any way interfere with the normal business operations of an IT system that we build and operate.
 
@@ -162,7 +160,7 @@ The following security areas are generally considered for best practices:
 * Integration security
 	* Focusing on secure service calls (for example, via SSL, secure queueing, or SSH File Transfer Protocol (SFTP) for files
 
-### 3.6 Monitoring & Robustness
+### 3.5 Monitoring & Robustness
 
 For simple apps and systems, Mendix has all the required monitoring available in the [Mendix Developer Portal](/developerportal/operate/). For virtual private cloud (VPC) solutions integrated with Mendix, monitoring capabilities would be provided by the third-party providing the infrastructure.
 
@@ -174,7 +172,7 @@ But for VPC and on-premises solutions as well as when the number of systems incr
 
 The [Robusntess](../robustness/robustness-overview) section of the Architecture Best Practices discusses how these benefits can be achieved by using native Mendix technology or by connecting to professional tooling.
 
-### 3.7 CI/CD & Test Automation
+### 3.6 CI/CD & Test Automation
 
 Mendix provides some continuous integration out-of-the-box:
 

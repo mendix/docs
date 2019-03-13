@@ -280,7 +280,7 @@ By default, the deployment package will be created in the *releases* folder of y
     `cf target –o {org_name} -s {space_name}`
 3.  Ensure you are in the same folder as the package you wish to deploy.
 4.  Push your app to MindSphere using the command:  
-    `cf push {app_name} -p "{deployment_package_name}" -m 512MB`
+    `cf push {app_name} -p "{deployment_package_name}" -m 512MB --no-start`
 
     {{% alert type="warning" %}}Your application will not be pushed successfully yet. You still need to bind your app to a PostgreSQL instance as described in the next steps.
     {{% /alert %}}

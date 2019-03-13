@@ -223,27 +223,27 @@ module.exports = {
      * From Desktop Modeler version 7 (permanent, mapped)
      ****************************************************/
 	{
-      from: "/refguide/modeler",
+      from: "/refguide7/modeler",
       to: "/refguide/desktop-modeler-overview"
     },
 	{
-      from: "/refguide/Modeler",
+      from: "/refguide7/Modeler",
       to: "/refguide/desktop-modeler-overview"
     },
 	{
-      from: "/refguide/download-from-team-server-dialog",
+      from: "/refguide7/download-from-team-server-dialog",
       to: "/refguide/download-from-version-control-dialog"
     },
   {
-      from: "/refguide/open-project-dialog",
+      from: "/refguide7/open-project-dialog",
       to: "/refguide/open-app-dialog"
     },
   {
-      from: "/refguide/upload-to-team-server-dialog",
+      from: "/refguide7/upload-to-team-server-dialog",
       to: "/refguide/upload-to-version-control-dialog"
     },
   {
-      from: "/refguide/microflow-expressions",
+      from: "/refguide7/microflow-expressions",
       to: "/refguide/expressions"
     },
 	{
@@ -255,7 +255,7 @@ module.exports = {
       to: "/web-modeler/general-sync-webmodeler-desktopmodeler"
     },	
 	{
-      from: "/howto/solving-load-and-import-errors",
+      from: "/howto7/solving-load-and-import-errors",
       to: "/howto/monitoring-troubleshooting/solving-load-and-import-errors"
     },
 	{

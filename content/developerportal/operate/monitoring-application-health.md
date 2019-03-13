@@ -122,6 +122,22 @@ Warning Threshold | Not used.
 Critical Threshold | If the application's virtual machine should be running but has completely disappeared, or if the JVM process does not respond to any signal anymore.
 First actions to take | Check the log files and application metrics for a possible cause of the crash.
 
+Virtual Machine Error | |
+:---|:---|
+Description | Show the state of the application's virtual machine, or an error state when the issue occurs with a virtual machine.
+Example message | Your application's virtual machine died because of non-recoverable error 1 times in the last minute.
+Warning Threshold | Not used.
+Critical Threshold | If the application's virtual machine should be running but has completely disappeared, or if the JVM process does not respond to any signal anymore.
+First actions to take | Check the log files and application metrics for a possible cause of the error.
+
+Virtual Machine Out Of Memory | |
+:---|:---|
+Description | Show the state of the application's virtual machine, or an error state when the issue occurs with a virtual machine.
+Example message | Your application's virtual machine ran out of memory and died 1 times in the last minute.
+Warning Threshold | Not used.
+Critical Threshold | If the JVM process has run out of memory and the application's virtual machine crashed.
+First actions to take | Check the log files and application metrics for a possible cause of the crash.
+
 ### 3.2 CPU Credits on AWS{#burstable}
 
 Apps running on Mendix Cloud V4 use AWS databases to store their data. These databases are classed as *burstable* and *non-burstable*. If a database is **burstable** this means that it has a specified performance baseline. This baseline is different for each sort of database and varies from 5% to 20%.

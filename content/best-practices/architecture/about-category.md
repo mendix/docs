@@ -27,11 +27,23 @@ Mendix best practices around architecture will be valuable for architects, desig
 
 ![](attachments/arch-over1.png)
 
-## 2 Architecture Subjects
+## 2 Architecture Best Practices Structure
+
+This diagram presents an overview of the structure of the Architecture Best Practices documentation:
+
+{{% todo %}}[**UX-UPDATE DIAGRAM**]{{% /todo %}}
+
+![](attachments/arch-over2.png)
+
+For each subject there is an overview document, and below that, there are a number of in-depth descriptions and business use cases. Some of these documents link to a module in the App Store that demonstrates example modelling reflecting the theory.
+
+{{% todo %}}[**ADD LINK TO APP STORE WHEN AVAILABLE ABOVE**]{{% /todo %}}
+
+## 3 Architecture Subjects
 
 The Mendix Architecture Best Practices will cover the architecture subjects described below.
 
-### 2.1 Integration
+### 3.1 Integration
 
 One of the most important parts of architecture is integration. All business apps need to integrate with people, things, other systems, and operational tools to be useful.
 
@@ -51,7 +63,7 @@ The diagram below shows the most commonly used Mendix integration pattern. These
 
 For more details on Integrating apps with each other and other systems, things, and devices as well as monitoring, see the [Integration Best Practices](../integration/integration-overview).
 
-### 2.2 Performance
+### 3.2 Performance
 
 Sometimes the functional and/or technical architecture has to be adapted to the fact that there is a very high volume of users or messages and/or high requirements for availability.
 
@@ -69,7 +81,7 @@ This diagram shows a real example of a logistics supplier that is using Biz-DevO
 
 In the scenario above, most of the processing is straight-through processing, so the dashboard app is there for human overviews, exceptions, and configuration. The **Input** apps provide a buffer for peaks and enable handling deployments more easily. Finally, the **Process** apps are optimized to do their work as efficiently as possible.
 
-### 2.3 Microservices
+### 3.3 Microservices
 
 Microservices is a popular way of building IT solutions. It helps you to avoid building monoliths and SOA-layered architectures, where dependencies tend to get out of control.  Instead, you can make functional autonomous components that cooperate to fulfill business functions. This suits Mendix very well, as is further described in [Mendix Microservices](/microservices/mendix-microservices).
 
@@ -93,7 +105,7 @@ Architecture needs to have a level of flexibility as more information is made av
 
 The [Microservices Best Practices](..microservices/microservices-overview) will dive into these exciting developments.
 
-### 2.4 Security
+### 3.4 Security
 
 Security architecture inovlves making sure no one can penetrate, destroy, disrupt, or in any way interfere with the normal business operations of an IT system that we build and operate.
 
@@ -118,7 +130,7 @@ The following security areas are generally considered for best practices:
 
 ![](attachments/security.png)
 
-### 2.5 Robustness
+### 3.5 Robustness
 
 For simple apps and systems, Mendix has all the required monitoring available in the [Mendix Developer Portal](/developerportal/operate/). For virtual private cloud (VPC) solutions integrated with Mendix, monitoring capabilities would be provided by the third-party providing the infrastructure.
 
@@ -138,7 +150,7 @@ For VPC and on-premises deployments, there is no Mendix Developer Portal monitor
 
 For details on the benefits that can be achieved by using native Mendix technology or by connecting to professional tooling, see [Robusntess](../robustness/robustness-overview).
 
-### 2.6 CI/CD & Automation
+### 3.6 CI/CD & Automation
 
 Mendix provides some continuous integration out-of-the-box:
 
@@ -163,18 +175,6 @@ This is an area that is evolving very quickly and many companies are making sign
 The most important thing is to take a clear look at your testing needs as well as the benefits and costs, and then make the right decisions on what to automate, what to centralize, what to localiz, and what to continue doing manually via the easy-to-use Mendix Developer Portal.
 
 For more information, see the [CICD](https://www.mendix.com/evaluation-guide/app-lifecycle/cicd) section in the *Mendix Platform Evaluation Guide*.
-
-## 3 Best Practices Structure
-
-This diagram presents an overview of the structure of the Architecture Best Practices documentation:
-
-{{% todo %}}[**UX-UPDATE DIAGRAM**]{{% /todo %}}
-
-![](attachments/arch-over2.png)
-
-For each subject area there is an overview document, and below that, there are a number of in-depth descriptions and business use cases. Some of these documents link to a module in the App Store that demonstrates example modelling reflecting the theory.
-
-{{% todo %}}[**ADD LINK TO APP STORE WHEN AVAILABLE ABOVE**]{{% /todo %}}
 
 ## 4 Summary
 

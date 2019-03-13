@@ -44,11 +44,11 @@ There are a number of categories on the status overview that are related to vari
 
 Application Status | |
 :---|:---|
-Description | Our application runtime sends a heartbeat signal every few minutes to show it is still alive. If no heartbeat timeout has been received for some time, the system will generate an alert. The heartbeat value varies per cluster and we are reducing it over time, but in general is ~5 minutes.|
+Description | Our application runtime sends a heartbeat signal every few minutes to show it is still alive. If no heartbeat timeout has been received for some time, the system will generate an alert.|
 Example message | No runtime heartbeat received for 8m45s.
 Warning Threshold | Not used.                                              |
-Critical Threshold | If the runtime heartbeat of the application is more than 8 minutes, a critical alert will be generated.
-First actions to take | Check the application logs and [https://status.mendix.com/](https://status.mendix.com/).                         |
+Critical Threshold | If the runtime heartbeat of the application has not been recieved for 5 minutes, a critical alert will be generated.
+First actions to take | Check the application logs for issues. Also check [https://status.mendix.com/](https://status.mendix.com/) for any planned maintainance.                         |
 
 Application Container CPU Percentage | |
 :---|:---|

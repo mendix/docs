@@ -1,6 +1,7 @@
 ---
 title: "Version Control Concepts"
 parent: "version-control"
+# To be deleted and some sections put in Using Version Control in the Desktop Modeler
 ---
 
 

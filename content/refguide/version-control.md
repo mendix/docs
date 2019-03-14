@@ -1,6 +1,7 @@
 ---
 title: "Version Control"
 category: "Team Server"
+# To be replaced with completely new Version Control Document
 ---
 
 
@@ -64,7 +65,7 @@ The new version control feature does away with locking. Anyone can edit any docu
 
 Since each revision is stored on the Team Server, you always have not one but dozens of backups of your project. You can always revert changes that you do not like or look at the project as it was a week ago. Together with the reliability and consistency improvements, you can develop with more confidence and we think that this is the best thing about version control.
 
-## Further reading
+## Read More
 
-*   [Concepts](version-control-concepts) - Learn about the terminology of version control.
-*   [Scenarios](version-control-scenarios) - See how version control is used in practice in different scenarios.
+*   [Concepts](version-control-concepts) - Learn about the terminology of version control
+*   [Using Version Control in the Desktop Modeler](using-version-control-in-the-dm)

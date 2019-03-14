@@ -19,7 +19,7 @@ The following frameworks are automatically installed (if necessary):
 * Microsoft .NET Framework 4.6.2
 * Microsoft Visual C++ 2010 SP1 Redistributable Package
 * Microsoft Visual C++ 2013 Redistributable Package
-* OpenJDK 8 (support added in [Mendix 7.23.3](/releasenotes/desktop-modeler/7.23)) or Java Development Kit 1.8
+* Oracle Java Development Kit 1.8
 
 {{% alert type="warning" %}}
 You can choose which JDK is used for building and running locally via the **Edit** > **Preferences** menu item in the Desktop Modeler.

@@ -19,7 +19,7 @@ The following frameworks are automatically installed (if necessary):
 * Microsoft .NET Framework 4.6.2
 * Microsoft Visual C++ 2010 SP1 Redistributable Package
 * Microsoft Visual C++ 2013 Redistributable Package
-* Oracle Java Development Kit 1.8
+* Java Development Kit 1.8
 
 {{% alert type="warning" %}}
 You can choose which JDK is used for building and running locally via the **Edit** > **Preferences** menu item in the Desktop Modeler.

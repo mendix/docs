@@ -9,9 +9,9 @@ tags: ["Version Control", "Conflicts", "Resolve", "Merge", "Patch", "Branch", "D
 
 ## 1 Introduction
 
-This page describes some common scenarios of working in the Modeler with version control.
+This reference guide describes how to use version control the Desktop Modeler. The theory behind how version control works in Mendix, and a definition of the concepts can be found in [Version Contol](version-control).
 
-## 2 Starting a Project in the Desktop Modeler
+## 2 Starting a Project with Version Control
 
 To start a new project with version control do the following:
 
@@ -42,11 +42,19 @@ The project will be downloaded from the Team Server and opened in the Desktop Mo
 
 ## 4 Day-to-day Development
 
-Let us say you have a working copy of a project on disk. You make changes to the app and save them. Saved changes are not immediately visible to others. When you are happy with a set of changes, you commit them to the repository. Others can then choose to update and retrieve those changes.
+Let us say you have a working copy of a project on disk. You make changes to the app and save them. Saved changes are not immediately visible to others. The documents, folders, and modules which have been changed can be identified by looking at the **status**.
+
+When you are happy with a set of changes, you **commit** them to the repository. Others can then choose to update and retrieve those changes.
+
+You can **update** your working copy with changes committed by others.
+
+You can also see a **history** of all the changes which have been committed, no matter who committed them.
 
 ### 4.1 Status
 
-The status of your project is a summary of all the changes in your working copy when compared to the original. The Modeler shows the status both in the project explorer and in the new 'Changes' dock. Different kinds of changes are visualized with different icons.
+The status of your project is a summary of all the changes in your working copy when compared with the original. The Modeler shows the status both in the project explorer and in the **Changes** dock.
+
+The project explorer shows an icon in front of items (documents, folders and modules) that are changed in some way. The different icons indicate the different kinds of changes which have been made.
 
 | Icon | Meaning |
 | --- | --- |
@@ -55,25 +63,36 @@ The status of your project is a summary of all the changes in your working copy 
 | ![](attachments/524294/688175.png) | You added this item. |
 | ![](attachments/524294/688174.png) | You moved this item to another position in the project tree. |
 | ![](attachments/524294/688164.png) | You deleted this item. |
-| ![](attachments/524294/688165.png) | This item is conflicted. We will get back to conflicts later on. |
+| ![](attachments/524294/688165.png) | This item is conflicted. See [Dealing With Conflicts](#conflicts) for more information. |
 
-The project explorer shows an icon in front of items (documents, folders and modules) that are changed in some way. There is only room for one icon and if a document is both modified and moved it is shown as modified.
+{{% alert type="info" %}}
+There is only room for one icon and if a document is both modified and moved it is shown as modified.
+{{% /alert %}}
+
+For example, say that the microflow ChangePassword has been modified. Also a new folder called 'Flows' was added and all microflows were moved inside this folder. In the screenshot you can see that the folders and modules containing changes are depicted with a yellow icon, and the microflows which have been moved have a blue icon. This helps you to quickly see where in the project the changes are.
 
 ![](attachments/modeler-core/2018-02-21_13-27-21.png)
 
-In the screenshot you can see that the microflow ChangePassword has been modified. Also a new folder called 'Flows' was added and all microflows were moved inside this folder. Note that the folders and modules containing changes are depicted with a small yellow circle. This helps you to quickly see where in the project the changes are.
-
-The Changes Dock shows a line for each change to an item. If a document is both modified and moved there are two lines for that document. The dock also shows items that were deleted, something the project explorer cannot do.
+You can see the same information in the Changes Dock. In this case there is an entry for each *change* to an item. If a document is both modified and moved there are *two* lines for that document. The dock also shows items that were deleted, something the project explorer cannot do.
 
 ![](attachments/modeler-core/2018-02-21_13-41-50.png)
 
+{{% alert type="info" %}}
+When you successfully commit your project, this becomes the new original and all the change information is removed from the project explorer and the changes dock.
+{{% /alert %}}
+
 ### 4.2 Committing
 
-We recommend you commit your changes often. In general, you can commit after implementing one feature or fixing one bug. By committing often, your work is integrated with the work of others regularly and if any conflicts come up the changes are still fresh in your mind and that of your colleagues. Committing often also helps you to commit small sets of changes. This makes the revisions easier to understand and if you ever need to revert something you can revert a small amount of work instead of a day's worth.
+Sending changes to the repository is called 'committing'. The idea is that you commit small, consistent pieces of work to the repository. We recommend you commit your changes often. Preferably, the versions in the repository are always error-free, the Modeler will warn against committing while there are errors in your project.
+
+In general, it is a good idea to commit after implementing one feature or fixing one bug. By committing often, your work is integrated with the work of others regularly. The benefits of committing often include:
+
+* if any conflicts arise the changes are still fresh in your mind
+* revisions are easier to understand
+* if you ever need to revert something, you can revert a small chunk of work
 
 If you are about to commit and others have committed changes in the meantime, you first have to retrieve those changes by updating. Updating will combine the changes made by others with your changes. The changes can usually be combined with no problem. If, however, the changes are too close to each other a conflict may arise.
 
-Sending changes to the repository is called 'committing'. The idea is that you commit small, consistent pieces of work to the repository. Examples are implementing a new feature and fixing a bug. The Modeler will warn against committing while there are errors in your project. Preferably, the revisions in the repository are always error-free.
 
 Committing results in a new revision in the repository. You can add the following information to a commit which will be attached to the newly created revision:
 A textual message. You can enter this message in the Modeler when committing and it should be a summary of the changes you made.
@@ -119,7 +138,7 @@ You can revert changes in the *Changes* dock, or from the right-click menu on th
 
 ![Two ways of reverting](attachments/modeler-core/revertx2.png)
 
-## 6 Dealing With Conflicts
+## 6 Dealing With Conflicts{#conflicts}
 
 If you update your app and the changes cannot be merged automatically you will receive a message telling you there are conflicts. A conflict arises when two changes cannot be combined.
 

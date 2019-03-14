@@ -94,6 +94,12 @@ The details page for each add-on and app presents the following item information
 *  The **All versions** tab, which lists all the versions (updates) of the item:
 
 	![](attachments/app-store-overview/content_detail_8.png)
+	
+*  The **Content owners** tab, which lists the [content owners](#co) if this is a protected item
+
+	![](attachments/app-store-overview/)
+	
+{{% todo %}}[**UPDATE ALL SCREENSHOTS IN SECTION WITH NEW TAB NAME; VERIFY NAME OF NEW TAB**]{{% /todo %}}
 
 ### 3.3 Additional Info Section
 
@@ -157,12 +163,57 @@ The **REVIEWS** section of the sidebar menu contains the following options:
 The **MY COMPANY** section of the sidebar menu contains the following options:
 
 * **Profile** – click this to see the profile of your company (the same profile that appears on the [Partners Tab](#partners))
+* **External Downloaders** – click this to go to the [External Downloaders](#ext) page of your company's App Store
+* **Content Owners** – click this to go to the [Content Owners](#co) page of your company's App Store
+
+{{% todo %}}[**UPDATE SCREENSHOT ABOVE FOR NEW MENU ITEMS; VERIFY NAMING AND MENU ITEM ORDER**]{{% /todo %}}
+
+#### 4.1.1 External Downloaders {#ext}
+
+On this page, a Company Admin with the [Can manage App Store](../company-app-roles/manage-roles#app-store-manager) permission can mark private App Store items downloadable for users from outside the company. They can also add the external downloaders who can download these items.
+
+{{% todo %}}[**ADD SCREENSHOT; VERIFY DESCRIPTION**]{{% /todo %}}
+
+This page has two tabs:
+
+* **Users** tab
+	* Here you can enter an email address then click **Add External Downloader** to add that user as an external downloader who can download the App Store items marked on the **Downloadable Content** tab (see below)
+	* External downloaders will receive an email about being able to access the company's private App Store content, and they will then be able to see all the private App Store content they have access to in their [private App Store](#privateappstore)
+	* To remove an external downloader, click the red remove button next to their name
+* **Downloadable Content** tab
+	* Click **Add Item** to mark certain [private App Store](#privateappstore) items as downloadable for external downloaders
+
+{{% todo %}}[**VERIFY UI TEXT, REMOVE BUTTON FUNCTIONALITY, AND ADD ITEM FOR MARKING CONTENT AS DOWNLOADABLE**]{{% /todo %}}
+
+#### 4.1.2 Content Owners {#co}
+
+On this page, a Company Admin with the [Can manage App Store](../company-app-roles/manage-roles#app-store-manager) permission can mark App Store content owners who will have rights to manage protected content.
+
+{{% todo %}}[**ADD SCREENSHOT; VERIFY DESCRIPTION**]{{% /todo %}}
+
+This page has two tabs:
+
+* **Content Owners** tab
+	* Click **Add Content Owner** to mark users from your company as content owners who can manage protected items
+	* To remove a content owner, click the red remove button next to their name
+* **Protected Content** tab
+	* This tab shows the protected App Store items that can only be edited by content owners
+	* Click **Add Item** to mark specific App Store items as protected
+	{{% alert type="info" %}}An App Store item from your company not marked as protected can be edited by anyone in your company.
+	{{% /alert %}}
+	* To remove an item from protection, click the red remove button next to the item's name
+
+{{% todo %}}[**PROTECTED CONTENT IS NOT JUST PRIVATE APP STORE CONTENT, CORRECT?; VERIFY UI TEXT & DESCRIPTIONS**]{{% /todo %}}
 
 ### 4.2 Private App Store {#privateappstore}
 
-The private App Store is where your company can store content that will be available only to the developers in your company. This content will not be reviewed by Mendix.
+The private App Store is where your company can store content that will be available only to the developers in your company [external downloaders](#ext). This content will not be reviewed by Mendix.
+
+If you are marked as an external downloader for App Store content from another company, you will also see that content in your private App Store.
 
 For more information, see the [Adding New App Store Content](share-app-store-content#adding) section of *How to Share App Store Content*.
+
+{{% todo %}}[**VERIFY**]{{% /todo %}}
 
 ### 4.3 Modeler {#modeler}
 

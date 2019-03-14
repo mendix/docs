@@ -14,7 +14,7 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud V3, and other deploym
 
 #### Fixes
 
-* We have fixed the issue which caused the Technical Contact of applications to not to be shown for some users. (Tickets 70285, 77387, 80269, 80929)
+* We fixed an issue that sometimes caused the Technical Contact information to be hidden on the app's *General* page in the Developer Portal. (Tickets 70285, 77387, 80269, 80929)
 
 ### March 7th, 2019
 

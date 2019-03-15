@@ -123,7 +123,7 @@ The following steps describe how to start the node with three Chrome and three F
 
 ## 7 Starting Testing
 
-You can start testing by sending your test script to [http://yourmachinenameorIP:4444/wd/hub](http://localhost:4444/wd/hub). 
+You can start testing by sending your test script to <div style="display: inline">http://yourmachinenameorIP:4444/wd/hub</div>.
 
 {{% alert type="warning" %}}
 Make sure it is reachable from the outside!

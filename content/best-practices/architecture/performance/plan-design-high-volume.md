@@ -7,6 +7,8 @@ tags: [ ]
 draft: true
 ---
 
+{{% todo %}}[**NEEDS DIAGRAMS**]{{% /todo %}}
+
 ## 1 Introduction
 
 Some systems require high-volume processing and high levels of availability. The architecture approach should thus be adapted to achieve the required performance. 

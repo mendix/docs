@@ -7,7 +7,7 @@ draft: true
 
 ## 1 Introduction
 
-{{% todo %}}[**ADD LINK WHEN AVAILABLE BELOW AND UPDATE TEXT AS NECESSARY**]{{% /todo %}}
+{{% todo %}}[**NEEDS DIAGRAMS; ADD LINK WHEN AVAILABLE BELOW AND UPDATE TEXT AS NECESSARY**]{{% /todo %}}
 
 The integration pattern has been implemented in an App Store module that can be
 downloaded from the **Best Practices** section as **Integration Pattern: Process

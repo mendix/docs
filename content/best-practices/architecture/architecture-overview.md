@@ -6,6 +6,8 @@ menu_order: 2
 draft: true
 ---
 
+{{% todo %}}[**COULD USE ANOTHER DIAGRAM IN TOP SECTIONS?**]{{% /todo %}}
+
 ## 1 How Does Mendix Interpret IT Architecture?
 
 IT architecture is about making valuable things with technology, and Mendix wants to apply the following characteristics to your IT assets:

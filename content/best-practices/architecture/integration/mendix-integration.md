@@ -98,7 +98,7 @@ This diagram shows that within request–reply, there are three basic options:
 
 ![](attachments/mendix-integration/request-reply.png)
 
-The "puul" request–reply version is the most commonly used option when replicating data from point A to point B. The reason for this is that the system that needs the data is in charge of triggering the interface. To know what has changed, there are 3-4 options, explained in the section “Request-Reply Options”.
+The "pull" request–reply version is the most commonly used option when replicating data from point A to point B. The reason for this is that the system that needs the data is in charge of triggering the interface. To know what has changed, there are 3-4 options, explained in the section “Request-Reply Options”.
 
 {{% todo %}}[**WHERE IS THIS "Request-Reply Options" SECTION?**]{{% /todo %}}
 
@@ -334,7 +334,7 @@ The table below presents use cases that you can reference  for more detail. The 
 
 {{% todo %}}[**ADD LINKS AS DOCS AVAILABLE**]{{% /todo %}}
 
-| *Use Case* | *UI Integration* | *RPC / Services* | *Events / Queues* | *Export, Import, Batch* | *Central Data* |
+| Use Case | UI Integration | RPC / Services | Events / Queues | Export, Import, Batch | Central Data |
 | --- | --- | --- | --- | --- | --- |
 | SSO, AD & Identity integration | <span>&#10003;</span> | <span>&#10004;</span><span>&#10004;</span> | | | |
 | Import & Distribute Reference Data | | <span>&#10004;</span><span>&#10004;</span> | <span>&#10003;</span> | <span>&#10004;</span><span>&#10004;</span> | <span>&#10003;</span> |

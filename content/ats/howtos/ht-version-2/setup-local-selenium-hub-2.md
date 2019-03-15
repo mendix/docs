@@ -66,7 +66,7 @@ The following steps describe how to start the Selenium hub:
 
 
 
-3.  Check with the following link if the hub works: [http://localhost:4444/grid/console](http://localhost:4444/grid/console)
+3.  Check with the following link if the hub works: <div style="display: inline"http://localhost:4444/grid/console</div>
 
    ![](attachments/setup-local-selenium-index-2/setup-local-selenium-hub-2/grid_hub.png)
 

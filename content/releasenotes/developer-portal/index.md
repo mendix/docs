@@ -10,6 +10,15 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud V3, and other deploym
 
 ## 2019
 
+## March 15th, 2019
+
+### Fixes
+
+* We fixed an found issue where you were not able to change your password on the **Password Has Expired** page. (Tickets 80828, 80882, 80884, 80888, 80997, 81005)
+* We fixed an issue with retrieving stories in the Desktop Modeler. (Tickets 80618, 80623, 80636, 80665, 80685, 80705, 80726, 80738, 80780, 80833, 80834, 80854, 80866, 80935, 81008)
+* We fixed an error that occurred when importing stories from Excel in certain situations.
+* We fixed an issue where you unable to invite referrals to the Mendix Platform.
+
 ### March 14th, 2019
 
 #### Fixes

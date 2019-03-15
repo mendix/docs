@@ -91,9 +91,6 @@ In general, it is a good idea to commit after implementing one feature or fixing
 * revisions are easier to understand
 * if you ever need to revert something, you can revert a small chunk of work
 
-If you are about to commit and others have committed changes in the meantime, you first have to retrieve those changes by updating. Updating will combine the changes made by others with your changes. The changes can usually be combined with no problem. If, however, the changes are too close to each other a conflict may arise.
-
-
 Committing results in a new revision in the repository. You can add the following information to a commit which will be attached to the newly created revision:
 A textual message. You can enter this message in the Modeler when committing and it should be a summary of the changes you made.
 

@@ -12,18 +12,18 @@ As an SAP developer, you want to deploy your Mendix app on the SAP Cloud Platfor
 
 This document describes two ways of managing the SAP Cloud Platform:
 
-* Initial setup of the environment when creating a new app: see section [2 Set Up SAP Cloud Platform for the First Time](#FirstTime)
-* Create a new environment for an existing app: see section [3 Create a New Environment](#NewEnvironment)
+* Initial setup of the environment when creating a new app: see section 2, [Set Up SAP Cloud Platform for the First Time](#FirstTime)
+* Create a new environment for an existing app: see section 3, [Create a New Environment](#NewEnvironment)
 
-## 2 Set Up SAP Cloud Platform for the First Time<a name='FirstTime'></a>
+## 2 Set Up SAP Cloud Platform for the First Time{#FirstTime}
 
 Before you can manage your SAP Cloud Platform using the Developer Portal, you will need to set it up. There are two circumstances under which you will have to set up the SAP Cloud Platform for the first time.
 
-1. You have an existing app which has never been deployed on the SAP Cloud Platform and you want to change the cloud settings. See section [2.1 Change Cloud Settings](#ChangeCloudSettings).
+1. You have an existing app which has never been deployed on the SAP Cloud Platform and you want to change the cloud settings. See section 2.1, [Change Cloud Settings](#ChangeCloudSettings).
 
-2. You are creating a new app from an SAP starter app. See section [2.2 New SAP App](#NewSAPApp).
+2. You are creating a new app from an SAP starter app. See section 2.2, [New SAP App](#NewSAPApp).
 
-### 2.1 Change Cloud Settings<a name='ChangeCloudSettings'></a>
+### 2.1 Change Cloud Settings{#ChangeCloudSettings}
 
 In this scenario, you have an existing app which is running in another environment: for instance, on the Mendix Cloud. To change this, go to the Cloud Settings tab of the General Settings in the Development Portal.
 
@@ -33,9 +33,9 @@ Click **Set up SAP Cloud** and you will be taken to the SAP Cloud Platform welco
 
 ![](attachments/sap-cloud-platform/cloud-settings-landing-page.png)
 
-Click **Getting Started** and then continue with section [2.3 Set Up Region](#SetUpRegion).
+Click **Getting Started** and then continue with section 2.3, [Set Up Region](#SetUpRegion).
 
-### 2.2 New SAP App<a name='NewSAPApp'></a>
+### 2.2 New SAP App{#NewSAPApp}
 
 In this scenario, you choose a Mendix starter app from the **SAP Apps** tab.
 
@@ -43,9 +43,9 @@ In this scenario, you choose a Mendix starter app from the **SAP Apps** tab.
 
 Select the starter app you want and give it a name.
 
-Once the app has been created you can continue with section [2.3 Set Up Region](#SetUpRegion).
+Once the app has been created you can continue with section 2.3, [Set Up Region](#SetUpRegion).
 
-### 2.3 Set Up Region<a name='SetUpRegion'></a>
+### 2.3 Set Up Region{#SetUpRegion}
 
 You are now prompted with an SAP Cloud Platform login screen. Select the region where your SAP Cloud Platform is located.
 
@@ -85,7 +85,7 @@ After the environment has been created successfully, you will see the following 
 
 Your development environment is now configured and you can now develop your app.
 
-## 3 Create a New Environment<a name='NewEnvironment'></a>
+## 3 Create a New Environment{#NewEnvironment}
 
 You can create several environments for your app. For example, you may have created a development environment, but you may want environments for test, acceptance, production, and so forth. Additionally, when you switch from another cloud you need to create at least one environment for your Mendix application.
 
@@ -143,7 +143,7 @@ This is done from the **Environments** page of the Developer Portal:
 
     ![](attachments/sap-cloud-platform/09-sap-env-3.png)
 
-An environment is created; with more than one environment it is possible to transport your application between environments (see section [6 Transport App Between Environments](#TransportApp)).
+An environment is created; with more than one environment it is possible to transport your application between environments (see section 6, [Transport App Between Environments](#TransportApp)).
 
 ![](attachments/sap-cloud-platform/10-sap-env-tap.png)
 
@@ -183,9 +183,9 @@ If you click **Run** in the Desktop Modeler this will automatically:
 
     ![](attachments/sap-cloud-platform/06-sap-build-revision.png)
 
-When the package is ready to be deployed, a green tick will be shown next to the deployment package. To deploy your package, see section [5 Deploy Package](#DeployPackage).
+When the package is ready to be deployed, a green tick will be shown next to the deployment package. To deploy your package, see section 5, [Deploy Package](#DeployPackage).
 
-## 5 Deploy Package<a name='DeployPackage'></a>
+## 5 Deploy Package{#DeployPackage}
 
 ### 5.1 Deploy to an Environment
 
@@ -199,7 +199,7 @@ When the package is ready to be deployed, a green tick will be shown next to the
 
 3.  Click **Transport** to deploy the package to the SAP environment. This will replace any current app deployed to this environment. If the app is already running, you will be asked to stop it so that your new app can be deployed.
 
-### 5.2 Configure the Application<a name='ConfigureTheApplication'></a>
+### 5.2 Configure the Application{#ConfigureTheApplication}
 
 1. You will see confirmation of the package which has been transported.
 
@@ -213,17 +213,25 @@ When the package is ready to be deployed, a green tick will be shown next to the
 
     ![](attachments/sap-cloud-platform/transport-events.png)
 
-4. Click **Continue** to continue to the Start Application confirmation page.
+4. Select any additional services you need for your app. For more information see section 8, [Binding Services](#binding-services).
 
-5. Click **Start Application** to start the application on SAP Cloud Platform.
+    ![](attachments/sap-cloud-platform/transport-services.png)
+
+    {{% alert type="warning" %}}Do not remove any of the services with the status **Services To Be Bound**. For a new app, these services are all required for the correct deployment of the app.{{% /alert %}}
+
+5. Click **Continue** to continue to the Start Application confirmation page.
+
+6. Click **Start Application** to start the application on SAP Cloud Platform.
 
     ![](attachments/sap-cloud-platform/start-application.png)
 
-6. When the application has been started you will receive a confirmation message. Click **OK** and you will be taken to the Environment Details page for the selected environment. See section [7 Environment Details](#EnvironmentDetails).
+    {{% alert type="info" %}}This will bind any services which are in the status **Services To Be Bound**.{{% /alert %}}
+ 
+7. When the application has been started you will receive a confirmation message. Click **OK** and you will be taken to the Environment Details page for the selected environment. See section 7, [Environment Details](#EnvironmentDetails).
 
     ![](attachments/sap-cloud-platform/application-started.png)
 
-## 6 Transport App Between Environments<a name='TransportApp'></a>
+## 6 Transport App Between Environments{#TransportApp}
 
 1. Click **Transport** on the source environment you want to transport to another environment. Environments without deployed apps will have the transport button grayed out and cannot be transported.
 
@@ -235,9 +243,9 @@ When the package is ready to be deployed, a green tick will be shown next to the
 
 3.  Click **Transport** to deploy the package to the SAP environment. This will replace any current app deployed to this environment. If the app is already running, you will be asked to stop it so that your new app can be deployed.
 
-When the app has been transported you will be on the page **Configure the Application**. This has the same options as the **Deploy** pages which are described in section [5.2 Configure the Application](#ConfigureTheApplication).
+When the app has been transported you will be on the page **Configure the Application**. This has the same options as the **Deploy** pages which are described in section 5.2, [Configure the Application](#ConfigureTheApplication).
 
-## 7 Environment Details<a name='EnvironmentDetails'></a>
+## 7 Environment Details{#EnvironmentDetails}
 
 The environment details page contains two tabs: General and Model Options. Open the environment details by clicking **Details** on an environment on the Environments page of the Development Portal. You will also be taken to this page when you successfully deploy or transport your app.
 
@@ -327,9 +335,11 @@ You can see the value of all the constants used by the app. CURRENT VALUE is the
 
 To change a value, select the constant you want to change and click **Edit**.
 
-## 8 Issues
+## 8 Binding Services{#binding-services}
 
-### 8.1 Environment is not Created
+## 9 Issues
+
+### 9.1 Environment is not Created
 
 If you add an environment and it fails to be created it will be shown with a red symbol next to it on the Environments page:
 
@@ -349,7 +359,7 @@ A more detailed description of the reason why the environment creation failed wi
 
 ![](attachments/sap-cloud-platform/failed-description.png)
 
-### 8.2 Deleting an App
+### 9.2 Deleting an App
 
 Note that if you are the last person to leave a Mendix app you can delete the app. However, this will not delete the app or resources on SAP Cloud Platform. You can leave the app by going to the **General** page of the Developer Portal and clicking **Leave app**.
 
@@ -367,10 +377,10 @@ If you want to delete your app and all its resources, delete the environment and
 
 You can still delete the app and its resources from the SAP Cloud Platform cockpit, but you will then have to remove all the resources individually.
 
-## 9 Status of SAP Cloud Platform Deployment
+## 10 Status of SAP Cloud Platform Deployment
 
 The Mendix status page ([https://status.mendix.com/](https://status.mendix.com/)) shows the current status of Mendix services. If you have issues with deploying to SAP Cloud Platform via the Developer Portal, you can check the Mendix status page to see if SAP Cloud Platform deployment is operational (under **Mendix Services**) or if there are other Mendix issues which may be affecting your deployment.
 
-## 10 Read More
+## 11 Read More
 
 * [SAP Single Sign On](/refguide/sap/sap-single-sign-on)

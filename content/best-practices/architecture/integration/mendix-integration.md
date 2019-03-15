@@ -334,7 +334,7 @@ The table below presents use cases that you can reference  for more detail. The 
 
 {{% todo %}}[**ADD LINKS AS DOCS AVAILABLE**]{{% /todo %}}
 
-| *Use Case* | *UI Integration* | *RPC / Services* | *Events / Queues* | *Export, Import, Batch* | *Central Data* |
+| Use Case | UI Integration | RPC / Services | Events / Queues | Export, Import, Batch | Central Data |
 | --- | --- | --- | --- | --- | --- |
 | SSO, AD & Identity integration | <span>&#10003;</span> | <span>&#10004;</span><span>&#10004;</span> | | | |
 | Import & Distribute Reference Data | | <span>&#10004;</span><span>&#10004;</span> | <span>&#10003;</span> | <span>&#10004;</span><span>&#10004;</span> | <span>&#10003;</span> |

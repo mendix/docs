@@ -270,6 +270,10 @@ module.exports = {
       from: "/refguide7/vertical-split-pane",
       to: "/refguide/scroll-container"
     },
+	{
+      from: "/refguide7/Select++Elements",
+      to: "/refguide/select--elements"
+    },
 	/****************************************************
      * From Desktop Modeler version 6 (permanent)
      ****************************************************/

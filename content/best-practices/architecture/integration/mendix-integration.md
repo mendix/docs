@@ -98,7 +98,7 @@ This diagram shows that within request–reply, there are three basic options:
 
 ![](attachments/mendix-integration/request-reply.png)
 
-The "puul" request–reply version is the most commonly used option when replicating data from point A to point B. The reason for this is that the system that needs the data is in charge of triggering the interface. To know what has changed, there are 3-4 options, explained in the section “Request-Reply Options”.
+The "pull" request–reply version is the most commonly used option when replicating data from point A to point B. The reason for this is that the system that needs the data is in charge of triggering the interface. To know what has changed, there are 3-4 options, explained in the section “Request-Reply Options”.
 
 {{% todo %}}[**WHERE IS THIS "Request-Reply Options" SECTION?**]{{% /todo %}}
 

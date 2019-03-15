@@ -64,7 +64,7 @@ In this chapter you will set up the unit testing module and run the example test
     ![](attachments/18448633/18580362.png)
 
 15.  Run the project locally.
-16.  Go to `http://localhost:8080/index.html`.
+16.  Go to <div style="display: inline">http://localhost:8080/index.html</div>.
 17. Click on **UnitTestOverview** in the navigation.
 
     ![](attachments/18448633/18580341.png)

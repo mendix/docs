@@ -6,7 +6,7 @@ tags: ["Siemens", "MindSphere", "Example", "Asset Management", "Time Series", "R
 
 ## 1 Introduction
 
-You can write Mendix apps which analyze data held in MindSphere, the open, cloud-based, IoT operating system from Siemens. To help you build your app, the [Siemens MindSphere Pump Asset Example](https://appstore.home.mendix.com/link/app/108810/) app is available in the Mendix App Store and can be used as the starting point for a new Mendix app.
+You can create Mendix apps which analyze data held in MindSphere, the open, cloud-based, IoT operating system from Siemens. To help you build your app, the [Siemens MindSphere Pump Asset Example](https://appstore.home.mendix.com/link/app/108810/) app is available in the Mendix App Store and can be used as the starting point for a new Mendix app.
 
 This documentation provides more explanation of the MindSphere example app. Please note that this app is not production-ready. It is designed as an example of how you might begin to build a Mendix/MindSphere app.
 

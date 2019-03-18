@@ -247,7 +247,7 @@ When the app has been transported you will be on the page **Configure the Applic
 
 ## 7 Environment Details{#EnvironmentDetails}
 
-The environment details page contains two tabs: General and Model Options. Open the environment details by clicking **Details** on an environment on the Environments page of the Development Portal. You will also be taken to this page when you successfully deploy or transport your app.
+The environment details page contains three tabs: General and Model Options. Open the environment details by clicking **Details** on an environment on the Environments page of the Development Portal. You will also be taken to this page when you successfully deploy or transport your app.
 
 ![](attachments/sap-cloud-platform/environment-details.png)
 

@@ -78,7 +78,7 @@ Modeler Reference Guide | Model SDK API docs
 --- | --- |
 [List View](/refguide/list-view) | [ListView](https://apidocs.mendix.com/modelsdk/latest/classes/pages.listview.html)
 [Data view](/refguide/data-view) | [ListViewTemplate](https://apidocs.mendix.com/modelsdk/latest/classes/pages.listviewtemplate.html)
-[Data view control bar](/refguide/data-view-control-bar) | [DataView](https://apidocs.mendix.com/modelsdk/latest/classes/pages.dataview.html)
+[Footer](/refguide/footer-document-template) | [DataView](https://apidocs.mendix.com/modelsdk/latest/classes/pages.dataview.html)
 | [DataViewControlBar](https://apidocs.mendix.com/modelsdk/latest/classes/pages.dataviewcontrolbar.html)
 | [ConditionalVisibilitySettings](https://apidocs.mendix.com/modelsdk/latest/classes/pages.conditionalvisibilitysettings.html)
 
@@ -159,7 +159,7 @@ Modeler Reference Guide | Model SDK API docs
 [Tab page](/refguide/tab-page) | [TabPage](https://apidocs.mendix.com/modelsdk/latest/classes/pages.tabpage.html)
 [Layout grid](/refguide/layout-grid) | [LayoutGrid](https://apidocs.mendix.com/modelsdk/latest/classes/pages.layoutgrid.html)
 [Container](/refguide/container) | [DivContainer](https://apidocs.mendix.com/modelsdk/latest/classes/pages.divcontainer.html)
-[Vertical Split Pane](/refguide/vertical-split-pane) | [SplitPane](https://apidocs.mendix.com/modelsdk/latest/classes/pages.splitpane.html)
+[Scroll Container](/refguide/scroll-container) | [SplitPane](https://apidocs.mendix.com/modelsdk/latest/classes/pages.splitpane.html)
 [Scroll Container](/refguide/scroll-container) | [ScrollContainer](https://apidocs.mendix.com/modelsdk/latest/classes/pages.scrollcontainer.html)
 
 ## Association widgets

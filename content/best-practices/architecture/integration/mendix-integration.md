@@ -326,13 +326,14 @@ For professional operations solutions, there is often an agent per node, shippin
 
 Plotting functional use cases against basic methods of integration allows us to see that there are several common options available. That is good, because integration needs to be flexible in a solution in order to adapt to how systems, things, or people communicate. 
 
-The table below presents use cases that you can reference  for more detail. The table uses the following key:
-
-![](attachments/mendix-integration/green.png) – indicates the common or preferred use of the method; in some of the latter cases (for example, "Integration with IoT solutions"), the solution will require several methods, so there are several of these indications
-
-![](attachments/mendix-integration/grey.png) – indicates possible use in some cases
+The table below presents use cases that you can reference  for more detail. The table uses the following symbols:
 
 {{% todo %}}[**ADD LINKS AS DOCS AVAILABLE**]{{% /todo %}}
+
+| Symbol | Meaning |
+| --- | --- |
+| ![](attachments/mendix-integration/green.png) | Indicates the common or preferred use of the method. In some of cases (for example, "Integration with IoT solutions"), the solution will require several methods, so several of these symbols are used. |
+| ![](attachments/mendix-integration/grey.png) | Indicates possible use in some cases. |
 
 | Use Case | UI Integration | RPC / Services | Events / Queues | Export, Import, Batch | Central Data |
 | --- | --- | --- | --- | --- | --- |

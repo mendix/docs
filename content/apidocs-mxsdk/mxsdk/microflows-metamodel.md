@@ -150,7 +150,7 @@ Microflows can trigger behavior in the browser: showing and closing pages, showi
 Mendix Modeler Reference Guide | Model SDK API docs
 --- | --- |
 [Show Page](/refguide/show-page) and [Show Home Page](/refguide/show-home-page) |[ShowPageAction](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.showpageaction.html) and [ShowHomePageAction](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.showhomepageaction.html)
-[Close Page](/refguide/close-form) |[CloseFormAction](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.closeformaction.html)
+[Close Page](/refguide/close-page) |[CloseFormAction](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.closeformaction.html)
 [Show Message](/refguide/show-message) |[ShowMessageAction](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.showmessageaction.html)
 [Validation Feedback](/refguide/validation-feedback) |[ValidationFeedbackAction](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.validationfeedbackaction.html)
 [Download File](/refguide/download-file) |[DownloadFileAction](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.downloadfileaction.html)

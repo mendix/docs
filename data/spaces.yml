@@ -87,7 +87,6 @@ howto:
   mendix_version: 7
   menu_categories:
     - "General"
-    - "Web Modeler"
     - "Front-End"
     - "Data Models"
     - "Logic & Business Rules"

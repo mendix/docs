@@ -41,7 +41,7 @@ If some errors appear in the expression, hints with an explanation will be displ
 When you start typing the expression, a list of suggestions appears divided into the following categories:
 
 * **Suggestions from your microflow** – variables or attributes that you have created or retrieved in your microflow
-* **Enumeration values** – values of [enumeration type of attributes](domain-models-enumeration-wm) that can be used in an expression
+* **Enumeration values** – values of [enumeration type of attributes](domain-models-enumeration) that can be used in an expression
 * **Keywords** – key phrases or words that you can use in an expression
 * **Booleans** – true or false expressions
 * **Operators** – code elements that perform logical or mathematical operations. You can use Boolean or relational expressions (for more information, see section [3 Expression Types](#expression-types))

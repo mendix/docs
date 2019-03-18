@@ -18,7 +18,7 @@ In the Web Modeler, associations have the following properties:
 
 *  [Delete behavior](#delete-behavior)
 
-   {{% image_container width="300" %}}![](attachments/domain-models-association-properties-wm/association-properties.png)
+   {{% image_container width="300" %}}![](attachments/domain-models-association-properties/association-properties.png)
    {{% /image_container %}}
 
 In relation to the module the associations can be of two types:
@@ -42,7 +42,7 @@ Multiplicity can be of the following types:
 
 Multiplicity shows the owner and the direction of association if the association is of the one-to-many or many-to-many type. In the domain model it is displayed as an arrow pointing the direction. The owner is the entity the association starts from, so it is located at the start of the arrow. In one-to-one associations both entities are owners. 
 
-{{% image_container width="400" %}}![](attachments/domain-models-association-properties-wm/association-domainmodel.png)
+{{% image_container width="400" %}}![](attachments/domain-models-association-properties/association-domainmodel.png)
 {{% /image_container %}}
 
 You can swap the direction of the multiplicity if its type is one-to-many or many-to-many. In this case you will change the owner of association. 
@@ -74,11 +74,11 @@ In the Web Modeler cross-module association is indicated with the following:
 
 *  An icon next to the entity that has such association: 
 
-   ![](attachments/domain-models-association-properties-wm/association-icon.png)
+   ![](attachments/domain-models-association-properties/association-icon.png)
 
 *  A pop-up window, which displays when you click the icon:
 
-   ![](attachments/domain-models-association-properties-wm/association-pop-up.png)
+   ![](attachments/domain-models-association-properties/association-pop-up.png)
 
 Cross module associations have the following properties:
 
@@ -91,4 +91,4 @@ Cross module associations have the following properties:
 
 ## 6 Read More
 
-* [Domain Model in the Web Modeler](domain-models-wm)
+* [Domain Model in the Web Modeler](domain-models)

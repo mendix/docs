@@ -154,7 +154,7 @@ For details on the benefits that can be achieved by using native Mendix technolo
 
 Mendix provides some continuous integration out-of-the-box:
 
-* Consistency checks between the UI, logic, and database are automatically done by the Desktop Modeller 
+* Consistency checks between the UI, logic, and database are automatically done by the Desktop Modeler 
 * Consistency checks against other developers' work are automatically done by Team Server
 
 These checks are the same for all Mendix users, because that is part of your app model and is a result of the acceleration that Mendix provides for building good-quality solutions. Some of the testing needed for other solutions (for example, Java solutions) is not needed for Mendix.

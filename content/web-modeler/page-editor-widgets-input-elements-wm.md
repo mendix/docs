@@ -25,7 +25,7 @@ You can find the description of input elements available in the Web Modeler in t
 | Text Area          | A text area is used to enter, edit, and display a long text that can take several lines, for example, the description of a product. |
 | Date Picker        | A date picker is used to allow end-users select a date in a calendar, for example, when selecting a day for a delivery. |
 | Drop Down          | A drop-down widget is used to allow end-users pick an option from the preset list of options. For example, users can select a color of a product. |
-| Reference Selector | A reference selector is used to select and display associations. To use the reference selector you need a many-to-one association in the domain model. For more information, see [Association Properties in the Web Modeler](domain-models-association-properties-wm). For example, if a customer has several addresses, the user can select a delivery address from them. In this example, several addresses can be associated with one customer (many-to-one association).<br />The reference selector is displayed as a drop-down. |
+| Reference Selector | A reference selector is used to select and display associations. To use the reference selector you need a many-to-one association in the domain model. For more information, see [Association Properties in the Web Modeler](domain-models-association-properties). For example, if a customer has several addresses, the user can select a delivery address from them. In this example, several addresses can be associated with one customer (many-to-one association).<br />The reference selector is displayed as a drop-down. |
 | Check Box          | A check box widget is used to allow users to mark a value as true or false. For example, users can tick a box to sign up for the newsletter. |
 | Radio Buttons      | Radio buttons are used to allow users select the option from a number of preset ones. For example, users can select from several possible locations for picking an order up. |
 
@@ -45,7 +45,7 @@ Input elements properties consist of the following sections:
 
 ### 3.1 Data Source {#input-elements-design}
 
-**Input Elements** need to be linked to an attribute to show data and to allow end-users to edit it. Different input elements require different [types of attributes](domain-models-attributes-wm). You can find the correspondence between the input elements and attribute types in the table below:
+**Input Elements** need to be linked to an attribute to show data and to allow end-users to edit it. Different input elements require different [types of attributes](domain-models-attributes). You can find the correspondence between the input elements and attribute types in the table below:
 
 | Input Element      | Allowed Attribute Type                                       |
 | ------------------ | ------------------------------------------------------------ |

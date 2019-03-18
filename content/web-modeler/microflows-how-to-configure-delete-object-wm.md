@@ -29,15 +29,15 @@ To list customers' names and to show a more detailed information under the list,
 
 To configure the domain model and create the page, do the following:
 
-1. Open your [domain model](domain-models-wm).
+1. Open your [domain model](domain-models).
 
-2. Create entity *Customer*. For more information on how to create the entity, see section [3 Adding New Entities](domain-models-wm) in *Domain Models Overview in the Web Modeler*.
+2. Create entity *Customer*. For more information on how to create the entity, see section [3 Adding New Entities](domain-models) in *Domain Models Overview in the Web Modeler*.
 
-3.  For the **Customer** entity, create an attribute (for more information on how to create an attribute, see section [4 Adding New Attributes](domain-models-wm) in *Domain Models Overview in the Web Modeler*) and do the following:<br/>
+3.  For the **Customer** entity, create an attribute (for more information on how to create an attribute, see section [4 Adding New Attributes](domain-models) in *Domain Models Overview in the Web Modeler*) and do the following:<br/>
 
     a. Set the **Name** of the attribute to *Name*.<br/>
     
-    b. Set the [**Type**](domain-models-attributes-wm) to **String**.<br/>
+    b. Set the [**Type**](domain-models-attributes) to **String**.<br/>
 
     ![](attachments/microflows-how-to-configure-delete-object-wm/wm-name-attribute.png)<br/>    
     c. Click **Create** to add the new attribute.<br/>

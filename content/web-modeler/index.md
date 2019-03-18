@@ -20,7 +20,7 @@ The Web Modeler enables you to do the following:
 The main documents in the Web Modeler Reference are the following ones:
 
 * [Web Modeler General Info](general-wm) 
-* [Domain Model in the Web Modeler](domain-models-wm)
+* [Domain Model in the Web Modeler](domain-models)
 * [Page Editor in the Web Modeler](page-editor-wm)
 * [Navigation Document in the Web Modeler](navigation-wm)
 * [Microflows in the Web Modeler](microflows-wm)

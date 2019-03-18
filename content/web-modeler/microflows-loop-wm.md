@@ -34,8 +34,8 @@ Let us study a straightforward use-case, where you retrieve a list of orders fro
 
 Make sure you have the following prerequisites:
 
-1. [Create an entity](domain-models-wm#adding-new-entities) in your domain model and name it *Order*.
-2. [Create an attribute](domain-models-wm#adding-new-attributes) of the Boolean type for this entity to indicate the status of an order and name this attribute *Processed*.
+1. [Create an entity](domain-models#adding-new-entities) in your domain model and name it *Order*.
+2. [Create an attribute](domain-models#adding-new-attributes) of the Boolean type for this entity to indicate the status of an order and name this attribute *Processed*.
 3. [Create a microflow](microflows-wm#creating-new-microflow).
 
 To start the use-case, do the following:

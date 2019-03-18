@@ -6,7 +6,7 @@ category: "API Documentation"
 
 ## Introduction
 
-The Permissions API is an [App Service](/refguide6/consumed-app-services) that allows retrieving the [user roles](/refguide6/user-roles) a specific user has in your application. There are several ways in which the roles granted to a user in an application can be changed:
+The Permissions API is an [App Service](/refguide/consumed-app-services) that allows retrieving the [user roles](/refguide/user-roles) a specific user has in your application. There are several ways in which the roles granted to a user in an application can be changed:
 
 *   The role with which the user was invited through the Launchpad, or the role with which the user was invited through the [Invite API](invite-api).
 *   User roles for an individual user can be changed from the Launchpad in the _Manage App Users_ screen, provided the user attempting to change these has sufficient privileges.
@@ -30,7 +30,7 @@ Retrieves the user roles for a specific user, based on their OpenID; this will r
 
 {{% alert type="info" %}}
 
-Note that a request will return a list of [non-persistable objects](/refguide6/persistability). It's up to the implementer of the Permissions API to use these to create a database representation of the roles the user has in the application.
+Note that a request will return a list of [non-persistable objects](/refguide/persistability). It's up to the implementer of the Permissions API to use these to create a database representation of the roles the user has in the application.
 
 {{% /alert %}}
 

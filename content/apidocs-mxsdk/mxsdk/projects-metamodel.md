@@ -12,8 +12,8 @@ A Mendix app model starts with a project. A project contains several top-level o
 
 Modeler Reference Guide | Model SDK API docs
 -|-
-[Project](/refguide6/project) |TypeScript module [projects](https://apidocs.mendix.com/modelsdk/latest/modules/projects.html)
-[Modules](/refguide6/modules) |[Project](https://apidocs.mendix.com/modelsdk/latest/classes/projects.project.html)
+[Project](/refguide/project) |TypeScript module [projects](https://apidocs.mendix.com/modelsdk/latest/modules/projects.html)
+[Modules](/refguide/modules) |[Project](https://apidocs.mendix.com/modelsdk/latest/classes/projects.project.html)
 |[Module](https://apidocs.mendix.com/modelsdk/latest/classes/projects.module.html)
 |[ProjectDocument](https://apidocs.mendix.com/modelsdk/latest/classes/projects.projectdocument.html)
 
@@ -27,10 +27,10 @@ Project-level documents describe project security, project settings, app navigat
 
 Modeler Reference Guide | Model SDK API docs
 -|-
-[Project Settings](/refguide6/project-settings) |[ProjectDocument](https://apidocs.mendix.com/modelsdk/latest/classes/projects.projectdocument.html) and its inheritance hierarchy
-[Project Security](/refguide6/project-security) |
-[Navigation](/refguide6/navigation) |
-[System Texts](/refguide6/system-texts) |
+[Project Settings](/refguide/project-settings) |[ProjectDocument](https://apidocs.mendix.com/modelsdk/latest/classes/projects.projectdocument.html) and its inheritance hierarchy
+[Project Security](/refguide/project-security) |
+[Navigation](/refguide/navigation) |
+[System Texts](/refguide/system-texts) |
 
 
 
@@ -46,8 +46,8 @@ A module consists of a domain model, model security settings and zero or more do
 
 Modeler Reference Guide | Model SDK API docs
 -|-
-[Domain Model](/refguide6/domain-model) | Property [`domainModel`](https://apidocs.mendix.com/modelsdk/latest/classes/projects.module.html#domainmodel) of Project
-[Module Security](/refguide6/module-security) | Property [`moduleSecurity`](https://apidocs.mendix.com/modelsdk/latest/classes/projects.module.html#modulesecurity) of Project
+[Domain Model](/refguide/domain-model) | Property [`domainModel`](https://apidocs.mendix.com/modelsdk/latest/classes/projects.module.html#domainmodel) of Project
+[Module Security](/refguide/module-security) | Property [`moduleSecurity`](https://apidocs.mendix.com/modelsdk/latest/classes/projects.module.html#modulesecurity) of Project
 
 ### Documents
 
@@ -61,7 +61,7 @@ In this sense, Module and Folder behave in the exact same way, and thus inherit 
 
 Modeler Reference Guide | Model SDK API docs
 -|-
-[Modules](/refguide6/modules) |Property [`modules`](https://apidocs.mendix.com/modelsdk/latest/classes/projects.project.html#modules) of Project
+[Modules](/refguide/modules) |Property [`modules`](https://apidocs.mendix.com/modelsdk/latest/classes/projects.project.html#modules) of Project
 |[Module](https://apidocs.mendix.com/modelsdk/latest/classes/projects.module.html)
 |[FolderBase](https://apidocs.mendix.com/modelsdk/latest/classes/projects.folderbase.html)
 |[Folder](https://apidocs.mendix.com/modelsdk/latest/classes/projects.folder.html)

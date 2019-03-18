@@ -46,7 +46,7 @@ The CreateNewApp action returns a String which is the ID of the background job t
 
 ##### Usage from the Modeler
 
-After you have imported the Projects API App Service, an activity called 'CreateNewApp' is available under the 'ProjectsAPI' node in the Action dialog. See also [Consumed App Services](/refguide6/consumed-app-services).
+After you have imported the Projects API App Service, an activity called 'CreateNewApp' is available under the 'ProjectsAPI' node in the Action dialog. See also [Consumed App Services](/refguide/consumed-app-services).
 
 <iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/0b935e5b-5b22-4610-9a65-fb46a4c1a493/call-createnewapp?embed=true" allowfullscreen=""></iframe>
 

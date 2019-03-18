@@ -213,11 +213,11 @@ When the package is ready to be deployed, a green tick will be shown next to the
 
     ![](attachments/sap-cloud-platform/transport-events.png)
 
-4. Select any additional services you need for your app. For more information see section 8, [Binding Services](#binding-services).
+4. Select any additional services you need for your app. For more information see section 7.3, [Binding Services](#binding-services).
 
     ![](attachments/sap-cloud-platform/transport-services.png)
 
-    {{% alert type="warning" %}}Do not remove any of the services with the status **Services To Be Bound**. For a new app, these services are all required for the correct deployment of the app.{{% /alert %}}
+    {{% alert type="warning" %}}In your initial deployment, do not remove any of the services with the status **Services To Be Bound**. For a new app, these services are all required for the correct deployment of the app.{{% /alert %}}
 
 5. Click **Continue** to continue to the Start Application confirmation page.
 
@@ -335,11 +335,11 @@ You can see the value of all the constants used by the app. CURRENT VALUE is the
 
 To change a value, select the constant you want to change and click **Edit**.
 
-## 8 Binding Services{#binding-services}
+### 7.3 Binding Services{#binding-services}
 
-## 9 Issues
+## 8 Issues
 
-### 9.1 Environment is not Created
+### 8.1 Environment is not Created
 
 If you add an environment and it fails to be created it will be shown with a red symbol next to it on the Environments page:
 
@@ -359,7 +359,7 @@ A more detailed description of the reason why the environment creation failed wi
 
 ![](attachments/sap-cloud-platform/failed-description.png)
 
-### 9.2 Deleting an App
+### 8.2 Deleting an App
 
 Note that if you are the last person to leave a Mendix app you can delete the app. However, this will not delete the app or resources on SAP Cloud Platform. You can leave the app by going to the **General** page of the Developer Portal and clicking **Leave app**.
 
@@ -377,10 +377,10 @@ If you want to delete your app and all its resources, delete the environment and
 
 You can still delete the app and its resources from the SAP Cloud Platform cockpit, but you will then have to remove all the resources individually.
 
-## 10 Status of SAP Cloud Platform Deployment
+## 9 Status of SAP Cloud Platform Deployment
 
 The Mendix status page ([https://status.mendix.com/](https://status.mendix.com/)) shows the current status of Mendix services. If you have issues with deploying to SAP Cloud Platform via the Developer Portal, you can check the Mendix status page to see if SAP Cloud Platform deployment is operational (under **Mendix Services**) or if there are other Mendix issues which may be affecting your deployment.
 
-## 11 Read More
+## 10 Read More
 
 * [SAP Single Sign On](/refguide/sap/sap-single-sign-on)

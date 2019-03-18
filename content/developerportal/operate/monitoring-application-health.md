@@ -116,7 +116,7 @@ First actions to take | Since the health check microflow is specific to your app
 
 Virtual Machine Crash | |
 :---|:---|
-Description | Show the state of the application's virtual machine, or an error state when the issue occurs with a virtual machine.
+Description | Show the state of the application's virtual machine, or an error state if there is an issue with a virtual machine.
 Example message | Your application's virtual machine died 1 times in the last minute.
 Warning Threshold | Not used.
 Critical Threshold | If the application's virtual machine should be running but has completely disappeared, or if the JVM process does not respond to any signal anymore.
@@ -124,7 +124,7 @@ First actions to take | Check the log files and application metrics for a possib
 
 Virtual Machine Error | |
 :---|:---|
-Description | Show the state of the application's virtual machine, or an error state when the issue occurs with a virtual machine.
+Description | Show the state of the application's virtual machine, or an error state if there is an issue with a virtual machine.
 Example message | Your application's virtual machine died because of non-recoverable error 1 times in the last minute.
 Warning Threshold | Not used.
 Critical Threshold | If the application's virtual machine should be running but has completely disappeared, or if the JVM process does not respond to any signal anymore.

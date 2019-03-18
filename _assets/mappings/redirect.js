@@ -27,7 +27,7 @@ module.exports = {
      ****************************************************/
 	{
       from: "/refguide/web-modeler/domain-models-association-properties-wm",
-      to: "/web-modeler/domain-models-association-properties-wm"
+      to: "/web-modeler/domain-models-association-properties"
     },
 	{
       from: "/refguide/web-modeler",

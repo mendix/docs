@@ -326,31 +326,32 @@ For professional operations solutions, there is often an agent per node, shippin
 
 Plotting functional use cases against basic methods of integration allows us to see that there are several common options available. That is good, because integration needs to be flexible in a solution in order to adapt to how systems, things, or people communicate. 
 
-The table below presents use cases that you can reference  for more detail. The table uses the following key:
-
-* <span>&#10004;</span><span>&#10004;</span> indicates the common or preferred use of the method
-	* In some of the latter cases (for example, "Integration with IoT solutions"), the solution will require several methods, so there are several instances of <span>&#10004;</span><span>&#10004;</span>
-* <span>&#10003;</span> indicates possible use in some cases
+The table below presents use cases that you can reference  for more detail. The table uses the following symbols:
 
 {{% todo %}}[**ADD LINKS AS DOCS AVAILABLE**]{{% /todo %}}
 
+| Symbol | Meaning |
+| --- | --- |
+| ![](attachments/mendix-integration/green.png) | Indicates the common or preferred use of the method. In some of cases (for example, "Integration with IoT solutions"), the solution will require several methods, so several of these symbols are used. |
+| ![](attachments/mendix-integration/grey.png) | Indicates possible use in some cases. |
+
 | Use Case | UI Integration | RPC / Services | Events / Queues | Export, Import, Batch | Central Data |
 | --- | --- | --- | --- | --- | --- |
-| SSO, AD & Identity integration | <span>&#10003;</span> | <span>&#10004;</span><span>&#10004;</span> | | | |
-| Import & Distribute Reference Data | | <span>&#10004;</span><span>&#10004;</span> | <span>&#10003;</span> | <span>&#10004;</span><span>&#10004;</span> | <span>&#10003;</span> |
-| View & Search Data in Another System  | <span>&#10003;</span> | <span>&#10004;</span><span>&#10004;</span> | | | |
-| Use & Refer to Data in Another System | | <span>&#10004;</span><span>&#10004;</span> | | | <span>&#10003;</span> |
-| [Process Int.](process-integration) (cont. workflow) | <span>&#10004;</span><span>&#10004;</span> | <span>&#10003;</span> | <span>&#10003;</span> | | |
-| [Export, Import & Batch Processing](export-import-batch) | | <span>&#10003;</span> | <span>&#10003;</span> | <span>&#10003;</span><span>&#10003;</span> | <span>&#10003;</span> |
-| Update Data in Master App | <span>&#10004;</span><span>&#10004;</span> | <span>&#10004;</span><span>&#10004;</span> | <span>&#10003;</span> | | |
-| Distribute Master & Transactional Data | | <span>&#10004;</span><span>&#10004;</span> | <span>&#10003;</span> | <span>&#10003;</span> | <span>&#10003;</span> |
-| Int. with BI & Reporting | | <span>&#10003;</span> | <span>&#10003;</span> | <span>&#10004;</span><span>&#10004;</span> | <span>&#10003;</span> |
-| Mobile Int. & Offline | | <span>&#10004;</span><span>&#10004;</span> | <span>&#10003;</span> | | |
-| CMS & CDN Int. | <span>&#10004;</span><span>&#10004;</span> | <span>&#10003;</span> | | | |
-| Process Orch. & State Engines | | <span>&#10004;</span><span>&#10004;</span> | <span>&#10003;</span> | | <span>&#10004;</span><span>&#10004;</span> |
-| Int. with Ops & Monitoring | <span>&#10003;</span> | <span>&#10003;</span> | <span>&#10004;</span><span>&#10004;</span> | <span>&#10003;</span> | <span>&#10004;</span><span>&#10004;</span> |
-| Int. with IoT Solutions | | <span>&#10004;</span><span>&#10004;</span> | <span>&#10004;</span><span>&#10004;</span> | <span>&#10003;</span> | <span>&#10004;</span><span>&#10004;</span> |
-| Int. with AI & Machine Learning | | <span>&#10004;</span><span>&#10004;</span> | <span>&#10003;</span> | | <span>&#10004;</span><span>&#10004;</span> |
+| SSO, AD & Identity integration | ![](attachments/mendix-integration/grey.png) | ![](attachments/mendix-integration/green.png) | | | |
+| Import & Distribute Reference Data | | ![](attachments/mendix-integration/green.png) | ![](attachments/mendix-integration/grey.png) | ![](attachments/mendix-integration/green.png) | ![](attachments/mendix-integration/grey.png) |
+| View & Search Data in Another System  | ![](attachments/mendix-integration/grey.png) | ![](attachments/mendix-integration/green.png) | | | |
+| Use & Refer to Data in Another System | | ![](attachments/mendix-integration/green.png) | | | ![](attachments/mendix-integration/grey.png) |
+| [Process Int.](process-integration) (cont. workflow) | ![](attachments/mendix-integration/green.png) | ![](attachments/mendix-integration/grey.png) | ![](attachments/mendix-integration/grey.png) | | |
+| [Export, Import & Batch Processing](export-import-batch) | | ![](attachments/mendix-integration/grey.png) | ![](attachments/mendix-integration/grey.png) | ![](attachments/mendix-integration/grey.png) | ![](attachments/mendix-integration/grey.png) |
+| Update Data in Master App | ![](attachments/mendix-integration/green.png) | ![](attachments/mendix-integration/green.png) | ![](attachments/mendix-integration/grey.png) | | |
+| Distribute Master & Transactional Data | | ![](attachments/mendix-integration/green.png) | ![](attachments/mendix-integration/grey.png) | ![](attachments/mendix-integration/grey.png) | ![](attachments/mendix-integration/grey.png) |
+| Int. with BI & Reporting | | ![](attachments/mendix-integration/grey.png) | ![](attachments/mendix-integration/grey.png) | ![](attachments/mendix-integration/green.png) | ![](attachments/mendix-integration/grey.png) |
+| Mobile Int. & Offline | | ![](attachments/mendix-integration/green.png) | ![](attachments/mendix-integration/grey.png) | | |
+| CMS & CDN Int. | ![](attachments/mendix-integration/green.png) | ![](attachments/mendix-integration/grey.png) | | | |
+| Process Orch. & State Engines | | ![](attachments/mendix-integration/green.png) | ![](attachments/mendix-integration/grey.png) | | ![](attachments/mendix-integration/green.png) |
+| Int. with Ops & Monitoring | ![](attachments/mendix-integration/grey.png) | ![](attachments/mendix-integration/grey.png) | ![](attachments/mendix-integration/green.png) | ![](attachments/mendix-integration/grey.png) | ![](attachments/mendix-integration/green.png) |
+| Int. with IoT Solutions | | ![](attachments/mendix-integration/green.png) | ![](attachments/mendix-integration/green.png) | ![](attachments/mendix-integration/grey.png) | ![](attachments/mendix-integration/green.png) |
+| Int. with AI & Machine Learning | | ![](attachments/mendix-integration/green.png) | ![](attachments/mendix-integration/grey.png) | | ![](attachments/mendix-integration/green.png) |
 
 To read these use cases, start with [Integration Use Cases](integration-use-cases).
 

@@ -6,7 +6,7 @@ category: "API Documentation"
 
 ## Introduction
 
-The Invite API is an [App Service](/refguide6/consumed-app-services) that enables invitation of new users to your AppCloud application directly from the application. You can use it to allow your users to invite others to the application.
+The Invite API is an [App Service](/refguide/consumed-app-services) that enables invitation of new users to your AppCloud application directly from the application. You can use it to allow your users to invite others to the application.
 
 {{% alert type="info" %}}
 

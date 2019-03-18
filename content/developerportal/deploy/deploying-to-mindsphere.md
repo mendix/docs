@@ -8,7 +8,7 @@ tags: ["MindSphere", "deploy", "cloud foundry", "launchpad", "scopes", "roles", 
 
 ## 1 Introduction
 
-MindSphere is the open, cloud-based, IoT operating system from Siemens that lets you connect your machines and physical infrastructure to the digital world. It lets you harness big data from billions of intelligent devices, enabling you to uncover transformational insights across your entire business.
+MindSphere is the cloud-based, open IoT operating system from Siemens that lets you connect your machines and physical infrastructure to the digital world. It lets you harness big data from billions of intelligent devices, enabling you to uncover transformational insights across your entire business.
 
 This documentation is meant for Mendix developers who want to deploy a Mendix app to the MindSphere Platform.
 

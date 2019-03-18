@@ -109,7 +109,7 @@ The **Object Activities** are described in the table below.
 | [Commit](/refguide/committing-objects)     | **Commit** saves changes you have not saved in the database yet. |
 | [Create Object](/refguide/create-object)   | The **Create Object** action can be used to create a data object. |
 | [Delete](/refguide/deleting-objects)       | **Delete Object** can be used to delete one data object or a list of objects. |
-| [Retrieve](/refguide/retrieve)             | **Retrieve** can be used to get one or more objects, either by directly traversing an [association](domain-models-association-properties-wm) of another object, or by retrieving objects from the database. |
+| [Retrieve](/refguide/retrieve)             | **Retrieve** can be used to get one or more objects, either by directly traversing an [association](domain-models-association-properties) of another object, or by retrieving objects from the database. |
 
 ### 5.3 Client Activities Section {#microflow-client-activities}
 

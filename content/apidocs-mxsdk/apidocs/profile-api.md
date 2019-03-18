@@ -6,7 +6,7 @@ category: "API Documentation"
 
 ## Introduction
 
-The Profile API is an [App Service](/refguide6/consumed-app-services) that allows your AppCloud applications to retrieve profile information of their users from the Mendix Platform.
+The Profile API is an [App Service](/refguide/consumed-app-services) that allows your AppCloud applications to retrieve profile information of their users from the Mendix Platform.
 
 {{% alert type="info" %}}
 
@@ -34,7 +34,7 @@ Retrieves profile information for a user of the application based on the user's 
 
 {{% alert type="info" %}}
 
-Note that a request will return a [non-persistable object](/refguide6/persistability). It's up to the implementer of the Profile API to store the received profile data in the database.
+Note that a request will return a [non-persistable object](/refguide/persistability). It's up to the implementer of the Profile API to store the received profile data in the database.
 
 {{% /alert %}}
 

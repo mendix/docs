@@ -247,7 +247,7 @@ When the app has been transported you will be on the page **Configure the Applic
 
 ## 7 Environment Details{#EnvironmentDetails}
 
-The environment details page contains three tabs: General and Model Options. Open the environment details by clicking **Details** on an environment on the Environments page of the Development Portal. You will also be taken to this page when you successfully deploy or transport your app.
+The environment details page contains three tabs: General, Model Options, and Services. Open the environment details by clicking **Details** on an environment on the Environments page of the Development Portal. You will also be taken to this page when you successfully deploy or transport your app.
 
 ![](attachments/sap-cloud-platform/environment-details.png)
 
@@ -336,6 +336,74 @@ You can see the value of all the constants used by the app. CURRENT VALUE is the
 To change a value, select the constant you want to change and click **Edit**.
 
 ### 7.3 Binding Services{#binding-services}
+
+This tab displays Cloud Foundry services which are bound to the app, waiting to be bound to the app, or available to be bound to the app. These are the services which are available to you in SAP Cloud Platform and are the same services that you can see in the SAP Cloud Platform marketplace.
+
+{{% image_container width="50%" %}}
+![](attachments/sap-cloud-platform/service-tab.png)
+{{% /image_container %}}
+
+{{% alert type="warning" %}}
+There are a number of services which your Mendix app requires. **If you unbind any of these services, your app will probably stop working**:
+
+* destination
+* application logs
+* xsuaa
+* postgresql
+* connectivity
+
+Services should be selected, bound, and unbound through this **Services** page. Changes made in the SAP Cloud Platform Cockpit will *not* be reflected in the Mendix Developer Portal.
+{{% /alert %}}
+
+{{% alert type="info" %}}
+Changes to bound services will not take place immediately. You will have to stop and start your application to activate the changes.
+
+Services which will be bound when the application is stopped and restarted are listed in the category **Services To Be Bound**. You will also see an information message in this case: the button **Review Services** will list the services which are not currently bound.
+{{% /alert %}}
+
+#### 7.3.1 Connecting Services
+
+To connect a service in the section **Available Services**
+
+1. Select one or more services (you can search for them by name).
+2. Select a **Plan** for each service. This must be a plan which is part of your quota for this space.
+3. Select a JSON **File** to upload if you need to add extra configuration.
+4. Click **Connect Services**.
+
+    ![](attachments/sap-cloud-platform/service-connect.png)
+
+    The services you have selected will be added as **Services To Be Bound**. They will not actually be bound until you stop and start the application.
+
+{{% alert type="info" %}}
+If you receive an error, and the service fails to bind please check all aspects of your SAP account. The error message may not provide full information about, for example, which plans you are allowed to choose for a particular service.
+{{% /alert %}}
+
+#### 7.3.2 Unbinding and Removing Services
+
+If you no longer require a service you can unbind it or remove it from your app.
+
+**Unbinding a Service**
+
+1. Click the ellipsis next to the service you want to unbind in the **Bound Services** section.
+2. Select **Unbind Service**.
+
+    ![](attachments/sap-cloud-platform/service-unbind.png)
+
+3. Confirm by clicking **Unbind & Restart App** – if you want to unbind more services or do not want the change to happen immediately, then you can choose *Unbind*. However, this may leave the app in an unstable state.
+
+    ![](attachments/sap-cloud-platform/service-unbind-warning.png)
+
+    Once the service is unbound, it is deleted from the app environment and returned to the list of **Available Services**.
+
+**Removing an Unbound Service**
+
+1. Click the ellipsis next to the service you want to remove in the **Services To Be Bound** section.
+
+2. Select **Remove Service**.
+
+3. Confirm by clicking **Remove**
+
+    The service is deleted from the app environment and returned to the list of **Available Services**.
 
 ## 8 Issues
 

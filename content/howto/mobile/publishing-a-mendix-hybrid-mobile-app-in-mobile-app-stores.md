@@ -151,7 +151,7 @@ After you create your build you can download the resulting APK using a download 
 
 To install your APK, you can either download the APK file using your mobile device's web browser, or transfer the APK file to your Android device using a USB cord.
 
-#### 6.3.1 Option 1: Using Your Device's Browser
+#### 6.2.1 Option 1: Using Your Device's Browser
 
 Go to the PhoneGap install page using your phone browser to continue installation, then follow these instructions:
 1. Tap the Android link to get the APK.
@@ -164,7 +164,7 @@ To install an APK file directly from your Android's **Download** folder:
 3. Tap the **Allow** switch or check box.
 4. Tap the **OK** button if prompted.
 
-#### 6.3.2 Option 2: Using a USB Cord
+#### 6.2.2 Option 2: Using a USB Cord
 
 The second way to install your app is by connecting your device to a machine via USB. To Install an APK from your device's file manager app this way:
 1. Follow the instructions on Google’s [Transfer files between your computer & Android device](https://support.google.com/android/answer/9064445?hl=en) to get the APK onto your device. Remember which folder you transfer the APK into.
@@ -172,15 +172,15 @@ The second way to install your app is by connecting your device to a machine via
 3. Tap the **Install** button.
 4. Tap the **Done** button when prompted. You should now be able to access your installed app via your **App Drawer**, as well as by tapping the **Open** button after the installation completes.
 
-## 6.4 Testing Your App
+## 6.3 Testing Your App
 
 Using your new app, ensure all pages, buttons, and functionality work the way you intended them to. You can test your app using automatic software, such as [BrowserStack](https://www.browserstack.com/), or test your app manually. 
 
-## 6.5 Upload to Play Console
+## 6.4 Upload to Play Console
 
 To upload your Mendix app to the Play Console, follow the instructions on Google's [Upload your app to the Play Console](https://developer.android.com/studio/publish/upload-bundle) site. Before uploading to the Play Console you will have to complete the [signup steps](https://play.google.com/apps/publish/signup/) of signing-in with your Google account, accepting the developer agreement, paying the registration fee, and completing your account details. Once you have satisfied those requirements, you can [upload your app](https://support.google.com/googleplay/android-developer/answer/7159011) to the Play Console.
 
-## 6.6 Create, Review, and Roll out a Release
+## 6.5 Create, Review, and Roll out a Release
 
 1. To create a release of your Mendix app and roll it out, follow the instructions on the [Step 1: Create a release](https://support.google.com/googleplay/android-developer/answer/7159011) section in Google's Prepare & roll out releases page.
 2. To test your app on a real device, complete the steps in Google's [Run apps on a hardware device](https://developer.android.com/studio/run/device) page.

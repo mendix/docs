@@ -273,6 +273,8 @@ The button will change to **Start Application** which you can click to (re)start
 You may need to use this option to stop and start your app after changing one of the settings on this page.
 {{% /alert %}}
 
+If you receive an error trying to start the app, please look at section 8.3, [App Will Not Start](#willnotstart).
+
 #### 7.1.2 Change Admin Password
 
 Click **Change Admin Password** to change the password for the administrator account (by default, MxAdmin) in your Mendix app.
@@ -290,7 +292,7 @@ You will be asked to confirm that this environment should be removed. You will a
 ![](attachments/sap-cloud-platform/delete-environment.png)
 
 {{% alert type="info" %}}
-If you do not select **Remove resources** in this dialog, the resources will be left in SAP Cloud Platform. In this case, they can only be removed individually from within the SAP Cloud Platform cockpit.
+If you do not select **Remove resources** in this dialog, the resources will be left in SAP Cloud Platform. This could be useful if you want to remove the environment but, for some reason, a resource cannot be removed. In this case, the resources can only be removed individually from within the SAP Cloud Platform cockpit.
 {{% /alert %}}
 
 #### 7.1.5 Change Development Mode
@@ -305,7 +307,7 @@ Use the **Instances** slider to change the number of instances of the app which 
 
 Use the **Memory per instance** slider to change the amount of memory allocated to each instance of the app ("user's current memory").
 
-Click **Scale Now** to apply the new settings. If the application is running, it will be stopped and restarted to apply the settings. If it is stopped, the new settings will be used the next time the application is started.
+Click **Scale Now** to apply the new settings. If the application is running, it will be stopped and restarted to apply the settings. If it is stopped it will not be started automatically; the new settings will be used the next time the application is started.
 
 Click **Reset** to return the values to what they were before the sliders were moved.
 
@@ -378,6 +380,8 @@ To connect a service in the section **Available Services**
 If you receive an error, and the service fails to bind please check all aspects of your SAP account. The error message may not provide full information about, for example, which plans you are allowed to choose for a particular service.
 {{% /alert %}}
 
+If you receive an error trying to restart the app, please look at section 8.3, [App Will Not Start](#willnotstart).
+
 #### 7.3.2 Unbinding and Removing Services
 
 If you no longer require a service you can unbind it or remove it from your app.
@@ -444,6 +448,16 @@ If you want to delete your app and all its resources, delete the environment and
 {{% /alert %}}
 
 You can still delete the app and its resources from the SAP Cloud Platform cockpit, but you will then have to remove all the resources individually.
+
+### 8.3 App Will Not Start{#willnotstart}
+
+Under some circumstances an app with a service in the **Services To Be Bound** status will not restart. You will get an error with *Could not bind service...* in the details.
+
+![](attachments/sap-cloud-platform/service-bind-error.png)
+
+This indicates that SAP Cloud Portal is not able to bind the service, even though it has been instantiated correctly. If you remove the service from the app, then the app should restart successfully.
+
+If you are trying to bind more than one new service, it is not possible to identify within the Developer Portal which service is causing the issue. If the culprit is not obvious, you will have to remove all the services or go to SAP Cloud Portal where you can use the service name in the error message to find which service is causing the error.
 
 ## 9 Status of SAP Cloud Platform Deployment
 

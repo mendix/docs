@@ -71,7 +71,7 @@ To generate a keystore for Android, follow these steps:
 2. Open your **Command Prompt** and run your new *keytool.exe* located in your JDK’s bin folder.
 3.  The *keytool.exe* program can be found in the bin directory of your Java installation (for example: *C:\Program Files\Java\jre1.8.0_20\bin*):
 
-	![keytool location](attachments/publishing-a-hybrid-app/cmdjdkexe.png)
+	![keytool location](attachments/managing-app-signing-keys/cmdjdkexe.png)
 	
 4.  Type in the following command line prompt while still pointing to the *keystore.exe*: 
 

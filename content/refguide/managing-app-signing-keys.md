@@ -64,6 +64,8 @@ Once you have downloaded the signing certificate (a *.cer* file), you need to co
 
 Android apps can be developed and deployed to Android devices without signing the apps. However, to publish to app stores, signed apps are required. This requires you generate a keystore and then upload it to Adobe PhoneGap Build.
 
+### 3.1 Generate a Keystore
+
 To generate a keystore for Android:
 1. Install Java JDK either for Mac or Windows. Remember where you installed your JDK, as the JDK bin folder will be used later.
 2. Open your **Command Prompt** and run your new *keytool.exe* located in your JDK’s bin folder.
@@ -87,7 +89,7 @@ To generate a keystore for Android:
 	
 6. Finishing these questions generates a keystore which will be saved into a *file.keystore* file in your current working directory 
 
-### 6.2 Upload Your Keystore to PhoneGap Build
+### 3.2 Upload Your Keystore to PhoneGap Build
 
 After creating the key store file, upload it to Adobe PhoneGap Build on your [account page](https://build.phonegap.com/). Then, complete the following instructions:
 

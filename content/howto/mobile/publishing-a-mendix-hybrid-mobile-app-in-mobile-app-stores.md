@@ -42,7 +42,7 @@ To start the packaging process, follow these steps:
 5.  On the **App Info** tab set up the following settings for your app:</br>
 	a. Fill in the name that your app will have in the app stores and on the device. The **Name**  should correspond to the name set up in your Apple certificate.</br>
 	b. Set the unique **App Identifier** for your app. The **App Identifier** should correspond to the ones set up in your Apple certificate.</br>
-	c. If your app does not employ push notifications, disable the **Push Notifications** permission by unchecking its check box.
+	c. If your app does not employ push notifications, disable the **Push Notifications** permission by clearing its check box.
 6. Select the platforms that you want to support (this how-to assumes that you will choose at least iOS).
 7. Optionally, upload custom-branded app icons and splash screens under the tabs for the different platforms. You can find those tabs next to the **App Info** tab.
 
@@ -144,7 +144,7 @@ After you create your build you can download the resulting APK using a download 
 2. Open **Apps and notifications,** or on a Samsung Galaxy **Biometrics and Security**.
 3. Tap **Install unknown apps** (on certain devices you may have to tap **Special access** first).
 4. Select the browser you wish to use when downloading APK files.
-5. Enable the **Allow from this source** switch or checkbox.
+5. Enable the **Allow from this source** switch or check box.
 6. Tap the **OK** button if prompted.
 
 ### 6.2 Installing Your APK

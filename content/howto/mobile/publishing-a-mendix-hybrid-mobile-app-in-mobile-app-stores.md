@@ -134,7 +134,7 @@ Publish your app by following Apple's [Overview of publishing an app](https://he
 
 If you plan on publishing an Android app, read Google's overview of [the Android app publishing process](http://developer.android.com/tools/publishing/publishing_overview.html). Before submitting your app to an app store, [review the launch checklist](http://developer.android.com/distribute/tools/launch-checklist.html). Google provides information on [publishing your app in the Google Play Store](http://developer.android.com/distribute/googleplay/index.html).
 
-To publish an Android app, you must first complete the [Android](#/refguide/managing-app-signing-keys#android) section of *Managing App Signing Keys* which will detail how to generate a keystore and upload that keystore to PhoneGap build. Creating a keystore is only needed should you wish to publish your app. If you just want to test your app, then do not consult *Managing App Signing Keys* and instead just keep following this document's steps.
+To publish an Android app, you must first complete the [Android](/refguide/managing-app-signing-keys#android) section of *Managing App Signing Keys* which will detail how to generate a keystore and upload that keystore to PhoneGap build. Creating a keystore is only needed should you wish to publish your app. If you just want to test your app, then do not consult *Managing App Signing Keys* and instead just keep following this document's steps.
 
 ### 6.1 Download the resulting Android Binary (APK){#download-apk}
 

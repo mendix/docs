@@ -62,12 +62,13 @@ Once you have downloaded the signing certificate (a *.cer* file), you need to co
 
 ## 3 Android{#android}
 
-Android apps can be developed and deployed to Android devices without signing the apps. However, to publish to app stores, signed apps are required. This requires you generate a keystore and then upload it to Adobe PhoneGap Build.
+Android apps can be developed and deployed to Android devices without signing the apps. However, to publish to app stores, signed apps are required. This requires you to generate a keystore and then upload it to Adobe PhoneGap Build.
 
-To generate a keystore for Android:
+To generate a keystore for Android, follow these steps:
+
 1. Install Java JDK either for Mac or Windows. Remember where you installed your JDK, as the JDK bin folder will be used later.
 2. Open your **Command Prompt** and run your new *keytool.exe* located in your JDK’s bin folder.
-3.  The *keytool.exe* program can be found in the bin directory of your Java installation (for example: *C:\Program Files\Java\jre1.8.0_20\bin*)
+3.  The *keytool.exe* program can be found in the bin directory of your Java installation (for example, *C:\Program Files\Java\jre1.8.0_20\bin*):
 
 	![keytool location](attachments/publishing-a-hybrid-app/cmdjdkexe.png)
 	
@@ -77,21 +78,21 @@ To generate a keystore for Android:
 	"{{keytool -genkey -v -keystore file.keystore -alias YOUR_ALIAS_NAME -storepass YOUR_ALIAS_PWD -keypass YOUR_ALIAS_PWD -keyalg RSA -validity 36500}}"
 	```
 
-	Be sure to replace `YOUR_ALIAS_NAME` and `YOUR_ALIAS_PWD` with your alias name and password.
+	Be sure to replace `YOUR_ALIAS_NAME` and `YOUR_ALIAS_PWD` with your alias name and password:
 	
 	![name and password](attachments/managing-app-signing-keys/ktoolsetup.png)
 	
-5.  Answer the subsequent questions, click **Enter** after each question, and type *yes* when asked to confirm your information 
+5.  Answer the subsequent questions, click **Enter** after each question, and type *yes* when asked to confirm your information: 
 	
 	![info questions](attachments/managing-app-signing-keys/qanda.png)
 	
-6. Finishing these questions generates a keystore which will be saved into a *file.keystore* file in your current working directory 
+6. Finishing these questions generates a keystore which will be saved into a *file.keystore* file in your current working directory. 
 
-### 6.2 Upload Your Keystore to PhoneGap Build
+### 6.2 Uploading Your Keystore to PhoneGap Build
 
-After creating the key store file, upload it to Adobe PhoneGap Build on your [account page](https://build.phonegap.com/). Then, complete the following instructions:
+After creating the keystore file, upload it to Adobe PhoneGap Build on your [PhoneGap account page](https://build.phonegap.com/). Then, complete the following instructions:
 
 1. Go to the **Signing Keys** tab and click **Add a key** under **Android**. 
 2. Select the key store file, fill in a title for the key, and fill in the alias that you noted down in the previous step. 
 3. After uploading the key store file, unlock the key. Click the yellow lock icon on the right of the key and fill in both the key store and the key passwords. The key is now ready to be used by your build job.
-4. Go into your [Developer Portal](https://sprintr.home.mendix.com/index.html), navigate to **Deploy > Mobile app**, and click the **Publish for Mobile App Stores** button. Then click the **Start PhoneGap Build job** button.
+4. In the [Developer Portal](https://sprintr.home.mendix.com/index.html), navigate to **Deploy > Mobile app**, and click the **Publish for Mobile App Stores** button. Then click the **Start PhoneGap Build job** button.

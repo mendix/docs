@@ -103,7 +103,7 @@ You can now deploy your app to your test device. You must use a Mac device for t
 
 To install the iOS app on your test device, follow these steps:
 
-1.  Connect your Apple mobile device to your device. Both devices will show dialogs which ask you to confirm that you trust the devices. Click **Continue** on your device, and **Trust This Computer?** on your mobile device to proceed.
+1.  Connect your Apple mobile device to your device. Both devices will show dialog boxes which ask you to confirm that you trust the devices. Click **Continue** on your device, and **Trust This Computer?** on your mobile device to proceed.
 
 	![trust dialog](attachments/publishing-a-hybrid-app/appletrust.png)
 

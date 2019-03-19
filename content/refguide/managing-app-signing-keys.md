@@ -10,7 +10,7 @@ To create a mobile app, you need platform-specific app signing keys. A mobile ap
 
 Depending on which platforms you want to target, you will need to create the required signing keys. The following sections describe (per platform) how to create those keys.
 
-## 2 iOS{ios}
+## 2 iOS{#ios}
 
 Unfortunately, signing keys is always required for iOS app deployment, even if you just want to test the app on your personal device and do not want to publish to the Apple App Store. This section describes how to create the required files.
 
@@ -60,7 +60,7 @@ Once you have downloaded the signing certificate (a *.cer* file), you need to co
 2. Create from the PEM certificate a password secured. This action requires the PEM certificate, the private key that was created in step 3 earlier, and the password thas was given on the creation of the *ios.csr*: `"C:\OpenSSL\bin\openssl.exe" pkcs12 -export -out "C:\ios.p12" -inkey "C:\private.key" -in "C:\ios_pem.pem"`.
 3. You can upload the signing certificate (now a `.p12` file) and the distribution profile (a `.mobileprovision` file) to Adobe PhoneGap Build on your [account page](https://build.phonegap.com/people/edit). Go to the **Signing Keys** tab and click **Add a key** under **iOS**. Select the two files and give the key a name. Unlock the key by clicking the yellow lock icon on the right of the key and filling in the certificate passphrase. The key is now ready to be used by your build job.
 
-## 3 Android{android}
+## 3 Android{#android}
 
 Android apps can be developed and deployed to Android devices without signing the apps. However, to publish to app stores, signed apps are required. This requires you generate a keystore and then upload it to Adobe PhoneGap Build.
 

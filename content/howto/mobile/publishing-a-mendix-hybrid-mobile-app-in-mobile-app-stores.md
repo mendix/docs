@@ -35,10 +35,10 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 To start the packaging process, follow these steps:
 
-1. Open the [**Developer Portal**](https://sprintr.home.mendix.com/)
-2. Go to the project of the Mendix app that you want to publish
-3. Go to the **Deploy > Mobile app** entry in the side menu of the project
-4. You will be shown the **Publish App for Mobile App Stores** page, where you need to set up some options for your hybrid mobile app
+1. Open the [Developer Portal](https://sprintr.home.mendix.com/).
+2. Go to the project of the Mendix app that you want to publish.
+3. Go to the **Deploy > Mobile app** entry in the side menu of the project.
+4. You will be shown the **Publish App for Mobile App Stores** page, where you need to set up some options for your hybrid mobile app.
 5.  On the **App Info** tab set up the following settings for your app:</br>
 	a. Fill in the name that your app will have in the App Stores and on the device. The **Name**  should correspond to the name set up in your Apple certificate.</br>
 	b. Set the unique **App Identifier** for your app. The **App Identifier** should correspond to the ones set up in your Apple certificate.</br>
@@ -46,7 +46,7 @@ To start the packaging process, follow these steps:
 6. Select the platforms that you want to support (this how-to assumes that you will choose at least iOS).
 7. Optionally, upload custom-branded app icons and splash screens under the tabs for the different platforms. You can find those tabs next to the **App Info** tab.
 
-	* If you do not upload any images, the default Mendix-branded images that are shown will continue to be used
+	* If you do not upload any images, the default Mendix-branded images that are shown will continue to be used.
 
 8. Click **Publish for Mobile App Stores**. You will be presented with the **Build Mobile App Store Packages** page.
 9. Select the environment in which you want to publish. For Free Apps, the only option is **Sandbox**. For apps running on a licensed cloud node, you can choose from **Test**, **Acceptance**, and **Production** (depending on what is available on your cloud node).
@@ -140,12 +140,12 @@ To publish an Android app, you must first complete the [Android](#/refguide/mana
 
 After you create your build you can download the resulting APK using a download link or a QR code. One way to do this is to use your phone browser to navigate to the PhoneGap install page with your APK on it. To enable APK installations:
 
-1. Open your device's **Settings**
-2. Open **Apps and notifications,** or on a Samsung Galaxy **Biometrics and Security**
-3. Tap **Install unknown apps** (on certain devices you may have to tap **Special access** first)
-4. Select the browser you wish to use when downloading APK files
-5. Enable the **Allow from this source** switch or checkbox
-6. Tap the **OK** button if prompted
+1. Open your device's **Settings**.
+2. Open **Apps and notifications,** or on a Samsung Galaxy **Biometrics and Security**.
+3. Tap **Install unknown apps** (on certain devices you may have to tap **Special access** first).
+4. Select the browser you wish to use when downloading APK files.
+5. Enable the **Allow from this source** switch or checkbox.
+6. Tap the **OK** button if prompted.
 
 ### 6.2 Installing Your APK
 
@@ -154,23 +154,23 @@ To install your APK, you can either download the APK file using your mobile devi
 #### 6.3.1 Option 1: Using Your Device's Browser
 
 Go to the PhoneGap install page using your phone browser to continue installation, then follow these instructions:
-1. Tap the Android link to get the APK 
-2. **Navigate** to your browser’s **Downloads** folder, open it, and tap your downloaded app 
-3. On the next screen, tap the **Install** button to install it
+1. Tap the Android link to get the APK.
+2. **Navigate** to your browser’s **Downloads** folder, open it, and tap your downloaded app.
+3. On the next screen, tap the **Install** button to install it.
 
 To install an APK file directly from your Android's **Download** folder:
-1. Tap the **Back** button to see your list of apps
-2. Tap the file manager app you will use to install the APK file
-3. Tap the **Allow** switch or check box
-4. Tap the **OK** button if prompted
+1. Tap the **Back** button to see your list of apps.
+2. Tap the file manager app you will use to install the APK file.
+3. Tap the **Allow** switch or check box.
+4. Tap the **OK** button if prompted.
 
 #### 6.3.2 Option 2: Using a USB Cord
 
 The second way to install your app is by connecting your device to a machine via USB. To Install an APK from your device's file manager app this way:
 1. Follow the instructions on Google’s [Transfer files between your computer & Android device](https://support.google.com/android/answer/9064445?hl=en) to get the APK onto your device. Remember which folder you transfer the APK into.
-2. Open your phone’s file manager, navigate to the folder you transferred your APK to, then tap the APK file to open it
-3. Tap the **Install** button
-4. Tap the **Done** button when prompted. You should now be able to access your installed app via your **App Drawer**, as well as by tapping the **Open** button after the installation completes
+2. Open your phone’s file manager, navigate to the folder you transferred your APK to, then tap the APK file to open it.
+3. Tap the **Install** button.
+4. Tap the **Done** button when prompted. You should now be able to access your installed app via your **App Drawer**, as well as by tapping the **Open** button after the installation completes.
 
 ## 6.4 Testing Your App
 

@@ -87,7 +87,7 @@ To generate a keystore for Android, follow these steps:
 	
 	![info questions](attachments/managing-app-signing-keys/qanda.png)
 	
-6. Finishing these questions generates a keystore which will be saved into a *file.keystore* file in your current working directory 
+6. Finishing these questions generates a keystore which will be saved into a *file.keystore* file in your current working directory. 
 
 ### 3.2 Uploading Your Keystore to PhoneGap Build
 

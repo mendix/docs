@@ -40,7 +40,7 @@ To start the packaging process, follow these steps:
 3. Go to the **Deploy > Mobile app** entry in the side menu of the project.
 4. You will be shown the **Publish App for Mobile App Stores** page, where you need to set up some options for your hybrid mobile app.
 5.  On the **App Info** tab set up the following settings for your app:</br>
-	a. Fill in the name that your app will have in the App Stores and on the device. The **Name**  should correspond to the name set up in your Apple certificate.</br>
+	a. Fill in the name that your app will have in the app stores and on the device. The **Name**  should correspond to the name set up in your Apple certificate.</br>
 	b. Set the unique **App Identifier** for your app. The **App Identifier** should correspond to the ones set up in your Apple certificate.</br>
 	c. If your app does not employ push notifications, disable the **Push Notifications** permission by unchecking its check box.
 6. Select the platforms that you want to support (this how-to assumes that you will choose at least iOS).

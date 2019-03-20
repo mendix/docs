@@ -155,7 +155,11 @@ module.exports = {
      ****************************************************/
 	{
 	  from: "/community/app-store/use-app-store-content-in-the-modeler",
-	  to: "/developerportal/app-store/use-app-store-content-in-the-modeler"
+	  to: "/developerportal/app-store/use-app-store-content"
+    },
+	{
+      from: "/developerportal/app-store/use-app-store-content-in-the-modeler",
+      to: "/developerportal/app-store/use-app-store-content"
     },
 	{
       from: "/mendixcloud/java-in-the-cloud",
@@ -180,10 +184,6 @@ module.exports = {
 	{
       from: "/addons/APM",
       to: "/apm/"
-    },
-	{
-      from: "/developerportal/app-store/use-app-store-content-in-the-modeler",
-      to: "/developerportal/app-store/use-app-store-content"
     },
 	/****************************************************
      * From the Support Portal (potentially temporary until fixed in product, mapped) 

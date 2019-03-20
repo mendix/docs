@@ -55,32 +55,28 @@ In this context, Mendix can save you a lot of time in building interactive websi
 
 ## 4 CMS UI Integration {#cms}
 
-In professional marketing-oriented portals, there is content to be shown depending on a number of factors, from IP address of the user, or where he is hoovering with the mouse, or his last click sequence.
+In professional marketing-oriented portals, which content is shown depends on a number of factors, from the IP address of the end-user to where they are hovering with the mouse or their last click sequence.
 
-This is where Content Management software (CMS) has advanced decisioning, web-site interaction and focus on allowing business-oriented people to change pictures without a new release of software.
+This is where content management systems use advanced decision making and website interaction to enable business-oriented users to change content without a new software release. However, professional CMS systems do not provide an easy way to build functional pages, which is why customers with a CMS system often leverage Mendix for the logged-in pages of their websites.
 
-But professional CMS systems do not provide an easy way to build functional pages, so customers with a CMS system often leverage Mendix for the logged in area of the Web-site.
+To retain one system for statistics on clicking and hovering while avoiding changing URLs, such customers use a reverse proxy down to the Mendix app that sends back the functional UI to display in a pane within their CMS portal.
 
-To retain one system for click and hoovering statistics and to avoid changing URL, they use a reverse proxy down to the Mendix App, that sends back the functional UX to show in a pane within the CMS portal.
+Often there is a specialized Mendix app built for this purpose. This will import the overview information (for example, the last ten tickets and orders) so that the end-user quickly gets an overview and can then follow deep links down to other apps to do specific work in different pages.
 
-Often there is a specialized Mendix App that is built for this purpose, and that imports overview information, e.g. last ten tickets and orders etcetera, so that the user quickly gets an overview, and after that can Deep-link down to other Apps to do specific work in different areas.
+The diagram below shows a CMS system rendering Mendix UI in a part of the browser while the CMS system can keep on pushing marketing content into the other parts of the UI:
 
-The figure below shows a CMS system rendering Mendix UX in a part of the browser while the CMS system can keep on pushing good marketing content into the other parts of the UX.
+![](attachments/ui-integration/cms.png)
 
-![](attachments/ui-integration/6d0336f550a05162d8abbe5edddfb11f.png)
+The overview app already contains the information most users want to see quickly, as it is polling the source apps using REST while deep link are used when more elaborate work is required.
 
-The Overview App already contains the information most users want to see quickly, polling the source Apps using REST, while Deep-Links is used when more elaborate work is required.
+## 5 CDN UI Integration {#cdn}
 
-## CDN UI Integration {#cdn}
+For functional customer portals, Mendix is a great alternative, as a Mendix app can be scaled across the globe by deploying it in several availability zones (for more details, see the [Geo-Scaling Architecture](../performance/plan-design-high-volume#geo-scaled) section of *Planning & Designing for High Volume*).
 
-For functional customer portals, Mendix is a great alternative, and a Mendix  can be scaled across the globe by deploying it in several availability zones, see Geo-Scaled solutions \<link\>.
+It is important to note that for global websites, customer portals, apps, and CMS solutions, the user can be in any place on the planet. To avoid long rendering times and cut the traveling distance for as much content and data as possible, CDN solutions like Akamai can be used. This type of solution caches web content in local nodes and renders the entire page for the users. This is a good solution for providing quick response times across the globe for content-oriented portals, especially when "heavy" content like large images and videos is used.
 
-For global websites, customer portals, apps, and CMS solutions, the user can be in any place on the planet. But to avoid long rendering times and cut the traveling distance for as much content and data as possible, CDN solutions like Akamai can be used. This type of solution caches web content in local nodes and renders the entire page for the users.
+Such a solution cuts off the round-trip to the information source by positioning content delivery nodes around the globe. The nodes share rendered material between themselves and cache the heavy content.
 
-For content-oriented portals, there is another way to provide quick response-times across the globe also for heavy content as large-size pictures or even video style content. It is called Content Deliver Networks, and Akamai is one of the most well-known solutions to provide this.
+![](attachments/ui-integration/cdn.png)
 
-It cuts of the round-trip to the source of the information by having content delivery nodes in very many places around the globe. The nodes share rendered material between themselves and caches all large pictures.
-
-Mendix integrates well with Akamai, directly or via a CMS system as seen in the previous section. It is recommended to contact Mendix for details.
-
-![](attachments/ui-integration/ea4a8b9eccacd015889c27c776bbbf2f.png)
+Mendix integrates well with Akamai, directly or via a CMS system (for more information, see the [CMS UI Integration](#cms) above). For more details, contact [Mendix](https://www.mendix.com/contact-us/).

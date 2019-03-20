@@ -83,7 +83,11 @@ When you successfully commit your project, this becomes the new original and all
 
 ### 4.2 Committing
 
-Sending changes to the repository is called 'committing'. The idea is that you commit small, consistent pieces of work to the repository. We recommend you commit your changes often. Preferably, the versions in the repository are always error-free, the Modeler will warn against committing while there are errors in your project.
+Sending changes to the repository is called *committing*. The idea is that you commit small, consistent pieces of work to the repository. We recommend you commit your changes often. Preferably, the versions in the repository are always error-free, the Modeler will warn against committing while there are errors in your project.
+
+To commit your changes, click the **Commit** button in the *Changes* dock, or choose the **Project > Commit...** menu item.
+
+![Commit Button](attachments/modeler-core/commit-button.png)
 
 In general, it is a good idea to commit after implementing one feature or fixing one bug. By committing often, your work is integrated with the work of others regularly. The benefits of committing often include:
 
@@ -91,37 +95,49 @@ In general, it is a good idea to commit after implementing one feature or fixing
 * revisions are easier to understand
 * if you ever need to revert something, you can revert a small chunk of work
 
-Committing results in a new revision in the repository. You can add the following information to a commit which will be attached to the newly created revision:
-A textual message. You can enter this message in the Modeler when committing and it should be a summary of the changes you made.
+Committing results in a new revision in the repository. You can add the following information in the Desktop Modeler when you perform a commit, and this will be attached to the newly created revision:
 
-A list of Developer Portal stories that relate to the commit. Our advice is to keep commits small and this means that a commit probably relates to one story. The Modeler only shows stories that are currently 'Running' and will not change the state of the Developer Portal story. Setting the status to 'Done' is the responsibility of the team and depends on your definition of done.
+* A textual message. This should be a summary of the changes you made
+* A list of Developer Portal stories that relate to the commit. A small commit will probably relate to one story. The Modeler shows stories that are in the current sprint and do not have a status of *Done*. Adding the story to the commit will not change the state of the Developer Portal story. Setting the status to 'Done' must be done manually and depends on your *definition of done*.
 
 ![](attachments/modeler-core/2018-02-21_13-50-03.png)
 
 The Modeler also attaches some information automatically:
 
-*   The author, i.e. the person who committed.
-*   The date and time of the commit.
-*   The list of changed documents/folder/modules along with the type of the change (modify, add, delete, ...).
-*   The version of the Modeler that was used to commit.
+*   The person who committed (the *author*)
+*   The date and time of the commit
+*   The list of changed documents, folders, and modules along with the type of the change (for example *modify* or *add*)
+*   The version of the Modeler that was used to commit
 
-If you also changed Java source code, added widgets or made other changes that affect files other than the project file you will get a 'Changes on disk' tab page that shows you what disk changes you are about to commit.
+If you also changed Java source code, added widgets or made other changes that affect files other than the project file you will see a **Changes on disk** tab page that shows you what disk changes you are about to commit.
 
-Committing is only allowed if your working copy is up to date with the repository. If someone else committed a change since the last time you updated, you have to update first. The reason for this is that the revision you will create with the commit should incorporate both your changes and the changes by the other person. Updating will combine the latest changes in the repository with your changes. After reviewing the result and fixing possible problems, you can commit again.
+Committing is only allowed if your working copy is up to date with the repository. If someone else committed a change since the last time you updated, you will have to update first. This is because the revision you create with the commit should incorporate both your changes and the changes by the other person. Updating will combine the latest changes in the repository with your changes. After reviewing the result, and fixing any conflicts, you can commit again.
 
 ### 4.3 Updating
 
-If everyone is committing often you will automatically have to update often. Before you can send your changes to the repository you will have to incorporate changes made by others that are not yet in your working copy. Frequent updating has the benefit that you receive fewer changes with each update and integrating those changes with your work is easier.
+Updating retrieves the latest changes from the repository. You need to do this to incorporate any changes made by others that are not yet in your working copy before you can commit your changes to the repository. It is advisable to frequently update so that the number of changes you retrieve is small.
 
-Updating is the process of retrieving the latest changes from the repository. It is advisable to frequently update so that the number of changes you retrieve is small.
+To update the working copy of your app, click the **Update** button in the *Changes* dock, or choose the **Project > Update** menu item.
 
-In the process of updating the original of your working copy is updated as well. Let us say that the last time you updated you received all changes up to and including revision 40\. That means the original for your working copy is revision 40\. You have made some changes to your working copy. Since you started doing that other people on your team have made a total of four commits (41, 42, 43 and 44). If you now update, you will receive those changes and 44 will be the new original to which your changes are compared.
+![Update Button](attachments/modeler-core/update-button.png)
 
-Changes you receive from the repository when updating are combined with the changes you have made to your working copy (if any). Afterwards, your working copy will contain both your changes and the changes you received. Many times combining those changes will work out fine. For example, one person adds a form and another changes a microflow. Or two people both add a tab page to a form. Only if the changes are too close a conflict can arise. For example, two people both change properties of the same data view. You will have to resolve such conflicts before you can commit.
+Changes you receive from the repository when updating are combined with the changes you have made to your working copy (if any). Afterwards, your working copy will contain both your changes and the changes you received. As part of the update, the original of your working copy is updated as well.
+
+For example, if the last time you updated you received all changes up to and including revision 40, this means that the original for your working copy is revision 40. Since you started making changes to your working copy, other people on your team have made another four commits (41, 42, 43 and 44). If you now update, you will receive those changes and 44 will be the new *original* to which your changes are compared.
+
+Usually, combining your changes with the latest revision from the repository will be done automatically. For example, one person may add a form while you are changing a microflow. If the changes are too close, however, a conflict can arise. For example, if one of your team has changed the properties of the same data view which you have also changed. You will have to resolve such conflicts before you can commit. See section 6, [Dealing With Conflicts](#conflicts) for information on how to do this.
+
+If your team is committing often you will have to update often. Frequent updating has the benefit that you receive fewer changes with each update, so integrating those changes with your work is easier.
 
 ### 4.4 History
 
-The history of the project is a list of all revisions that have been committed in reverse chronological order (newest is at top of list). The history form quickly shows you revision number, date, time, author and message of each revision. By selecting a revision you can view additional details such as related Developer Portal stories, changed documents, Modeler version and changes on disk. Icons summarize the kinds of changes that happened in the project; whether there are model changes, disk changes and whether the project was upgraded to a new Modeler version can quickly be checked by looking at the icons.
+The *history* of the project is a list of all revisions that have been committed. To view the history of the project, click the **History** button in the *Changes* dock, or choose the **Project > More Versioning > History...** menu item.
+
+![History Button](attachments/modeler-core/history-button.png)
+
+The revisions are shown in reverse chronological order (newest is at top of list). The history form shows you revision number, date, time, author and message of each revision.
+
+Select a revision to see additional details such as related Developer Portal stories, changed documents, Modeler version and changes on disk. Icons summarize the kinds of changes that happened in the project.
 
 ![](attachments/modeler-core/2018-02-21_14-06-46.png)
 
@@ -129,7 +145,7 @@ The history of the project is a list of all revisions that have been committed i
 
 Changes that have not yet been committed can be reverted. Say, for example, that you have made a lot of changes to a form and you are not happy with the result. You can revert the form to the original: that is, the state of the form before you started making changes.
 
-Deletes of documents, folders and modules can also be reverted which will bring them back into the project. Note that you will get back the latest *committed* version. For example, if you commit, make some changes to a microflow, and then delete the microflow, reverting the delete will give you the microflow without the changes that you made.
+Deletes of documents, folders and modules can also be reverted. This will bring them back into the project. Note that you will get back the latest version you have *committed*. For example, if you commit, make some changes to a microflow, and then delete the microflow, reverting the delete will give you the microflow without the changes that you made.
 
 You can revert changes in the *Changes* dock, or from the right-click menu on the document you want to revert.
 
@@ -189,45 +205,62 @@ A repository can contain a number of development lines. Each development line of
 
 ![](attachments/524294/688156.png)
 
-It is often convenient to have more than one development line. For example, one development line for fixing bugs in the currently deployed version of your project and another line where you develop new functionality. If you then find a bug in the deployed version you can fix it in the corresponding development line irrespective of the state of the development line where new functionality is developed.
+It is often convenient to have more than one development line. For example, one development line for fixing bugs in the currently deployed version of your project and another line where you develop new functionality. If you then find a bug in the deployed version you can fix it in the corresponding development line irrespective of the state of the development line where new functionality is developed. See [Version Control](version-control) for more information about branches.
 
 ### 7.1 When to use a Branch
 
 #### 7.1.1 Patching a Deployed Application
 
-If you want to add some functionality to a deployed application or you want to fix a bug in it, you can now do so without interfering with other development. First, you determine what the version is of the application that is deployed. The Developer Portal can tell you this. For non-cloud projects you can find the version in the metadata.json file that is located next to the deployed project file (model.mdp).
+If you want to add some functionality to a deployed application or you want to fix a bug in it, you can do so without interfering with other development.
 
-Once you know the version number you create a branch based on the tag with the that version number as its name. You can then add the functionality or fix the bug in this newly created branch. After testing that things work as intended you can create a new deployment archive with a higher version number (increase patch or minor version).
+1. Determine the version of the deployed application. This information is in the Developer Portal. Alternatively, you can find the version in the metadata.json file in the **model** subfolder of your deployment package (mda) archive. For example, `"ModelVersion": "1.0.0.16"`
+2. Choose **Project > More Versioning > Manage Branch Lines...** and create a branch based on the tag with the that version number as its name.
+
+    ![](attachments/modeler-core/create-from-tag.png)
+
+3. Add the functionality or fix the bug in this newly created branch.
+4. Testing that things work as intended.
+5. Create a new deployment archive with a higher version number (increase patch or minor version).
 
 {{% alert type="success" %}}
+We advise you to merge the fixed maintenance branch into the main line quickly, if required. If the merge is too complicated to be made automatically, because the main line has changed too much, you will know how to apply the fix by hand to the main line as the changes will still be fresh in your mind.
 
-After applying a fix to a maintenance branch line we advise you to quickly merge it to the main line. The changes are still fresh in your mind and if the merge is too complicated because the main line changed too much you will still know how to apply the fix by hand to the main line. Of course, not all maintenance fixes need to be merged to the main line. Sometimes, it is a fix of something that was completely redesigned or eliminated in the main line and then merging is unnecessary.
-
+Of course, not all maintenance fixes need to be merged to the main line. Sometimes, it is a fix of something that was completely redesigned or eliminated in the main line. In this case, merging is unnecessary.
 {{% /alert %}}
 
 #### 7.1.2 Developing a New Feature Independently
 
-Another reason for creating a branch is if you want to develop a big new feature without interfering with other development. This gives you the freedom to commit a half implemented feature possibly even with errors while other people can still commit and update on the main line. Otherwise, you would have to constantly make sure that your project is error free and does not break other parts of the system. Instead of creating a branch from a tag (as described above) you then create a branch from a revision of the main line.
+Another reason for creating a branch is to develop a big new feature without interfering with other development. This gives you the freedom to commit a half-implemented feature, possibly even with errors, while other people can still commit and update on the main line. Without using a branch line, you would have to constantly make sure that your project is error free and does not break other parts of the system.
+
+Firstly, select **Project > More Versioning > Manage Branch Lines...** and create a branch from a revision of the main line.
 
 ![](attachments/modeler-core/2018-02-28_13-50-39.png)
 
-You then work on the branch for a while until the big feature is done. At that point you can merge the whole branch back to the main line to integrate the feature there. You do this by opening the main line and then choosing 'Project > More Versioning > Merge changes here'. Choose 'Merge feature branch' and then select the branch and click 'Merge'. After resolving any conflicts and errors you can commit the new feature to the main line.
+Now work on the branch until the feature is done and commit the completed work.
 
-![](attachments/modeler-core/2018-02-28_14-05-23.png)
+When you want to merge the whole branch back to the main line to integrate the feature there. Do the following:
 
-The branch can be deleted after merging it back. This is something that cannot be done from the Modeler (yet).
+1. Open the main line.
+2. Choose **Project > More Versioning > Merge changes here**.
+3. Choose **Merge feature branch**.
+
+    ![](attachments/modeler-core/2018-02-28_14-05-23.png)
+
+4. Select the branch and click **Merge**.
+5. Resolve any conflicts and errors.
+6. Commit the new feature to the main line.
+
+You can delete the branch after merging it back, if you want.
 
 ### 7.2 Working with Branches in the Desktop Modeler
 
 #### 7.2.1 Branching
 
-Development lines other than the main line are called branch lines. Our advice would be to develop new features in the main line and to have branch lines for fixing bugs in versions that have been deployed. This is the scenario the Modeler makes easy but other scenarios for more complex projects are supported as well.
+Development lines other than the main line are called branch lines. Our advice would be to develop new features in the *main line* and to use *branch lines* for fixing bugs in versions that have been deployed. This is the scenario the Modeler makes easy but other scenarios for more complex projects are supported as well.
+
+You can create branch lines from the Branch Line Manager which you can find at **Project > More Versioning > Manage Branch Lines...**.
 
 ![](attachments/modeler-core/2018-02-21_14-16-20.png)
-
-![](attachments/524294/688157.png)
-
-Note that revision numbers are unique across all development lines. This means that two commits in the same development line do not always have consecutive numbers, for example the jump from 3 to 6.
 
 #### 7.2.2 Merging
 
@@ -235,43 +268,53 @@ If you have multiple development lines, you sometimes want to port changes from 
 
 Merging is always done while you have a working copy open. The merge will result in extra local changes in that working copy. It is advisable to commit local changes first before merging extra changes into a working copy. Otherwise, the uncommitted local changes and the changes caused by the merge will be combined and it is very hard to untangle them if you are unhappy with the merge. The Modeler will warn you if you have uncommitted changes.
 
-In the picture below revision 5 from the branch line is merged into a working copy of the main line that was at revision 6\. Those merged changes are then committed to form revision 7.
+Choose **Project > More Versioning > Merge Changes Here**.
+
+Choose the appropriate *type of merge*, for example **Port fix**.
 
 ![](attachments/modeler-core/2018-02-21_14-19-47.png)
 
-![](attachments/524294/688155.png)
-
-The example shows that you can merge a single revision. It is also possible to merge a whole range of revisions from one development line to another. If a branch line represents a big new feature that you completely want to integrate into the main line you can merge all revisions of the branch.
+You can merge either a single revision, or a whole range of revisions, from one development line to another. If a branch line represents a big new feature that you want to integrate completely into the main line, you can merge all the revisions of the branch.
 
 #### 7.2.3 Reverse Merging
 
 Reverting changes works for changes that have not been committed yet. Changes that have been committed can never be deleted. However, you can apply the changes 'in reverse' and commit that. This feature is called 'Reverse merging' in the Modeler.
 
-After a reverse merge the project will look like the changes never happened; if you 'reverse merge' the adding of a form, the form will be deleted locally. Just like when you are doing a normal merge, conflicts can arise. In the example, if later commits change the added form, the reverse merge will result in a conflict. After resolving any problems, you can commit the results to the repository.
+Choose **Project > More Versioning > Reverse Merge Changes...**
 
-{{% todo %}}[******************************** How does this work ***************************]{{% /todo %}}
+![](attachments/modeler-core/revert-committed-changes.png)
+
+After a reverse merge the project will look like the changes never happened; if you 'reverse merge' the adding of a form, the form will be deleted locally. Just like when you are doing a normal merge, conflicts can arise. In the example, if later commits change the added form, the reverse merge will result in a conflict. After resolving any problems, you can commit the results to the repository.
 
 ## 8 Versioning a Project Deployed to the Cloud
 
-While developing you can deploy and run your app on your local machine by using the menu item 'Run > Run Locally'. This allows you to test the app as it currently is stored on your local machine.
+### 8.1 Deploying Locally
 
-When you deploy to the cloud, you can choose to use the version of the app stored on your local machine and deploy that to the default environment. If you are using the Mendix Cloud, or other partner cloud (SAP Cloud Platform, for example), choose the menu item **Run > Run** to commit the version of the app stored on your local machine and deploy that to the default environment.
+While developing you can deploy and run your app on your local machine by using the menu item **Run > Run Locally**. This allows you to test the app as it currently is stored on your local machine.
 
-It is also possible to choose a specific development line and revision to deploy to the default environment, or to create a package from. In this case, the Modeler will create a fresh checkout of that revision. This means that this version of the deployment package can always be recreated by you or by other people. In other words, the Modeler does *not* rely on your local files for creating a versioned deployment package.
+### 8.2 Deploying Your Working Copy
+
+When you deploy to the cloud, you can choose to use the version of the app stored on your local machine, the *working copy* and deploy that to the default environment. If you are using the Mendix Cloud, or other partner cloud (SAP Cloud Platform, for example), choose the menu item **Run > Run** to commit the version of the app stored on your local machine and deploy that to the default environment.
+
+### 8.3 Choosing a Specific Development Line and Revision
+
+It is also possible to choose a specific development line and revision to deploy to the default environment, or to create a package from.
+
+In this case, the Modeler will create a fresh checkout of the chosen revision. This means that any team member can always recreate this version of the deployment package. In other words, the Modeler does *not* rely on your local files for creating a versioned deployment package.
 
 {{% alert type="warning" %}}
-You can only create a versioned deployment package of changes that have been committed. If you have local changes that you want to deploy, commit them first.
+You can only create a versioned deployment package of changes that have been committed. If you have local changes that you want to deploy in a versioned deployment package, commit them first.
 {{% /alert %}}
 
-Along with creating the package the Modeler will also create a tag representing this version of your project. If you later want to make modifications to this version independently of other development you can create a branch based on this tag. The name of the tag is simply a version number that you choose.
+When it creates the package, the Modeler will also create a tag representing this version of your project. If you want to make modifications to this version later, independently of other development which has taken place, you can create a branch based on this tag. The name of the tag is a version number that you choose.
 
-### 8.1 Deploying a Specific Version to a Mendix Licensed Cloud Node
+#### 8.3.1 Deploying a Specific Version to a Mendix Licensed Cloud Node
 
 If you are using the Mendix Cloud you can choose **Project > Deploy to Licensed Cloud Node** to dpeloy a specific version.
 
 ![](attachments/modeler-core/2018-02-21_17-05-05.png)
 
-### 8.2 Creating a Deployment Package from a Specific Version
+#### 8.3.2 Creating a Deployment Package from a Specific Version
 
 If you are using a different hosting environment, you create a deployment package using the menu item **Project > Create Deployment Package...**.
 

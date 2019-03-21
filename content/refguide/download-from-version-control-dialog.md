@@ -21,7 +21,7 @@ From the list select the Team Server app you wish to open, then choose the devel
 
 For more information about the Mendix Team Server, see [Team Server](team-server).
 
-For more information about development lines, see [Version Control Concepts](version-control-concepts).
+For more information about development lines, see [Version Control Concepts](version-control).
 
 ### Other SVN server
 

@@ -67,5 +67,4 @@ Since each revision is stored on the Team Server, you always have not one but do
 
 ## Read More
 
-*   [Concepts](version-control-concepts) - Learn about the terminology of version control
 *   [Using Version Control in the Desktop Modeler](using-version-control-in-the-dm)

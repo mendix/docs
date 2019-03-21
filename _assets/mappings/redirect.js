@@ -27,7 +27,7 @@ module.exports = {
      ****************************************************/
 	{
       from: "/refguide/web-modeler/domain-models-association-properties-wm",
-      to: "/web-modeler/domain-models-association-properties-wm"
+      to: "/web-modeler/domain-models-association-properties"
     },
 	{
       from: "/refguide/web-modeler",
@@ -155,7 +155,11 @@ module.exports = {
      ****************************************************/
 	{
 	  from: "/community/app-store/use-app-store-content-in-the-modeler",
-	  to: "/developerportal/app-store/use-app-store-content-in-the-modeler"
+	  to: "/developerportal/app-store/use-app-store-content"
+    },
+	{
+      from: "/developerportal/app-store/use-app-store-content-in-the-modeler",
+      to: "/developerportal/app-store/use-app-store-content"
     },
 	{
       from: "/mendixcloud/java-in-the-cloud",
@@ -269,6 +273,10 @@ module.exports = {
 	{
       from: "/refguide7/vertical-split-pane",
       to: "/refguide/scroll-container"
+    },
+	{
+      from: "/refguide7/Select++Elements",
+      to: "/refguide/select--elements"
     },
 	/****************************************************
      * From Desktop Modeler version 6 (permanent)

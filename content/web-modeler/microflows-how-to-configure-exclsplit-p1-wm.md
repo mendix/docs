@@ -30,17 +30,17 @@ Customers can make an order from this page. However, if the blocked user tries t
 
 In this example we will create a microflow and configure the exclusive split when you want to open different order forms depending on the customer grade. 
 
-This use case will require an exclusive split with attribute of the enumeration type (list of predefined values). For more information on types of attributes, see [Attribute Types in the Web Modeler](domain-models-attributes-wm). 
+This use case will require an exclusive split with attribute of the enumeration type (list of predefined values). For more information on types of attributes, see [Attribute Types in the Web Modeler](domain-models-attributes). 
 
 ### 2.1 Adding an Entity and an Attribute to the Domain Model 
 
 The app will open the corresponding page depending on the grade of a customer, for this we need to create a new entity and a new attribute first. To create the new entity and attribute, do the following:
 
-1. Open your [domain model](domain-models-wm).
-2. Create entity *Customer*. For more information on how to create the entity, see section [3 Adding New Entities](domain-models-wm) in *Domain Models Overview in the Web Modeler*.
-3.  For the **Customer** entity, create attribute (for more information on how to create the attribute, see section [4 Adding New Attributes](domain-models-wm)) and do the following:<br />
+1. Open your [domain model](domain-models).
+2. Create entity *Customer*. For more information on how to create the entity, see section [3 Adding New Entities](domain-models) in *Domain Models Overview in the Web Modeler*.
+3.  For the **Customer** entity, create attribute (for more information on how to create the attribute, see section [4 Adding New Attributes](domain-models)) and do the following:<br />
     a. Set the attribute **Name** to *Grade*.<br />
-    b. Set the [**Type**](domain-models-attributes-wm) to **Enumeration**.<br />
+    b. Set the [**Type**](domain-models-attributes) to **Enumeration**.<br />
     c. Click **Select enumeration** to create a new enumeration.<br />d. In the **Select enumeration** dialog window, click **New**.<br/>
     e. In the **Create new enumeration** dialog window, click **Add Item** (*Grade* is filled out automatically for the **Name**).<br />
 
@@ -124,16 +124,16 @@ If you want to test your microflow by adding it to the pages, see [Configure an 
 
 In this example we will create a microflow and configure the exclusive split when you want to prevent a blocked customer from making an order. The reasons for blocking the customer can be that customer's credit score is too low, or password has expired. 
 
-This use case will require an exclusive split with an attribute of the boolean type (true or false). For more information on the types of attributes, see [Attribute Types](domain-models-attributes-wm).
+This use case will require an exclusive split with an attribute of the boolean type (true or false). For more information on the types of attributes, see [Attribute Types](domain-models-attributes).
 
 ### 3.1 Adding an Entity and an Attribute to the Domain Model 
 
 As we will verify customers by their statuses, we need to create a corresponding attribute for the entity first. For this, do the following:
 
-1. Open your [domain model](domain-models-wm).
-2.  For the Customer entity, create attribute (for more information on how to create the attribute, see section [3 Adding New Attributes](domain-models-wm)),  and do the following: <br />
+1. Open your [domain model](domain-models).
+2.  For the Customer entity, create attribute (for more information on how to create the attribute, see section [3 Adding New Attributes](domain-models)),  and do the following: <br />
     a. Set name to *Blocked*. <br />
-    b. Set the [**Type**](domain-models-attributes-wm) to **Boolean**. <br />
+    b. Set the [**Type**](domain-models-attributes) to **Boolean**. <br />
     c. Click **Create**. 
 
     ![](attachments/microflows-how-to-configure-exclsplit-wm/wm-new-attribute-create-dialog.png)

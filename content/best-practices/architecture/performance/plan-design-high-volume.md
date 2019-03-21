@@ -7,6 +7,8 @@ tags: [ ]
 draft: true
 ---
 
+{{% todo %}}[**NEEDS DIAGRAMS**]{{% /todo %}}
+
 ## 1 Introduction
 
 Some systems require high-volume processing and high levels of availability. The architecture approach should thus be adapted to achieve the required performance. 
@@ -67,7 +69,7 @@ A good microservice architecture improves on agility, ease of deployments, and s
 
 An example of microservice architecture is a dashboard app used as a landing page. Users log in via SSO, master data is imported and distributed, and workflows can be managed while each specific phase of the business process gets another specific app.
 
-## 5 Geo-Scaling Architecture
+## 5 Geo-Scaling Architecture {#geo-scaled}
 
 For global and (often) customer-facing apps, having a snappy user interaction is critical. However, the geographical distance from the browser to the app instance serving the GUI functionality can be so large that it adds a noticeable lag. From Asia to the EU, this could be anywhere between 0.2–1.0 seconds, depending on the network and other factors.
 

@@ -70,7 +70,7 @@ For a MindSphere app to be multi-tenant, each user can only see the data from a 
 
 ### 3.1 Control through MindSphere APIs
 
-The Authorization HTTP Header (see DS_MindSphereAccessToken in section 2.2.2, Microflows) which is passed for every MindSphere API call ensures that the user can only obtain data which is authorized to them via their tenant.
+The Authorization HTTP Header (see DS_MindSphereAccessToken in the [Microflows](/developerportal/deploy/deploying-to-mindsphere#microflows) section of *Siemens Mindsphere – deployment*) which is passed for every MindSphere API call ensures that the user can only obtain data which is authorized to them via their tenant.
 
 ### 3.2 Control within a Mendix app
 
@@ -94,7 +94,7 @@ It is not necessary to put an access rule on every entity within the domain mode
 
 To make your Mendix app multi-tenant, do the following:
 
-1.  Make all *permanent* entities which have a **TenantId** attribute a specialization of the MindSphereSingleSignOn.TenantObject entity.  
+1.  Make all *persistent* entities which have a **TenantId** attribute a specialization of the MindSphereSingleSignOn.TenantObject entity.  
     This ensures that every object is associated with the Tenant object of the user who creates it.
 2.  Every action on this object must have the following XPath constraint:
 

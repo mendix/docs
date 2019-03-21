@@ -98,7 +98,7 @@ In its full scope, master data management is a complex process involving the fol
 
 The best practices will describe how to update data in the master app and how to distribute the data to other subscribing apps.
 
-{{% todo %}}[**ADD WHEN RELEASE FOR MX8: ### 3.8 Mobile Integration & Offline**]{{% /todo %}}
+{{% todo %}}[**ADD WHEN RELEASE FOR MX8: ### 3.8 Mobile Integration & Offline (WHERE STORED?)**]{{% /todo %}}
 
 ### 3.8 CMS & CDN Integration 
 

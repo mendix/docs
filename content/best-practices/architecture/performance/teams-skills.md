@@ -7,6 +7,8 @@ tags: [ ]
 draft: true
 ---
 
+{{% todo %}}[**NEEDS DIAGRAMS**]{{% /todo %}}
+
 ## 1 DevOps
 
 DevOps means that development and operational resources collaborate in cross-functional teams around the same objective. These objectives are to build operationally-stable apps as well as to make the testing, deployment, and monitoring of these apps as easy as possible.
@@ -17,7 +19,7 @@ A DevOps team should have at least one operationally-minded person who has exper
 
 For more information, see the [DevOps Overview](https://www.mendix.com/evaluation-guide/app-lifecycle/devops-overview) section of the *Mendix Platform Evaluation Guide*.
 
-##2 BizDevOps
+## 2 BizDevOps
 
 It is of course also important to stay very close to the business and involve them in the discussions around architecture and performance. Thinking laterally and wide about the best options for solving a business problem—including how to run the processes and integrate with other systems as well as how end-users will work with the apps—allows for a full optimization of the solution.
 

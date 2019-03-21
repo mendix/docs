@@ -118,13 +118,13 @@ The exclusive split is added to the microflow.
 
 {{% alert type="info" %}}
 
-The number of options for the check depend on the number of variables of Boolean type in your microflow and on the number of attributes of Boolean type in your domain model. For more information, see [Domain Model in the Web Modeler](domain-models-wm) and [Attribute Types in the Web Modeler](domain-models-attributes-wm). You can also add a check if an object exists microflow.
+The number of options for the check depend on the number of variables of Boolean type in your microflow and on the number of attributes of Boolean type in your domain model. For more information, see [Domain Model in the Web Modeler](domain-models) and [Attribute Types in the Web Modeler](domain-models-attributes). You can also add a check if an object exists microflow.
 
 {{% /alert %}}
 
 ### 4.3 Adding a Decision
 
-When you add a decision via Mendix Assist that means you add an exclusive split with attribute of enumeration type to your microflow. For more information, see [Exclusive Split in the Web Modeler](microflows-exclusive-split-wm) and [Attribute Types in the Web Modeler](domain-models-attributes-wm). This means, if you do not have parameters with enumeration data type, **Add decision** will not appear in the suggestions.
+When you add a decision via Mendix Assist that means you add an exclusive split with attribute of enumeration type to your microflow. For more information, see [Exclusive Split in the Web Modeler](microflows-exclusive-split-wm) and [Attribute Types in the Web Modeler](domain-models-attributes). This means, if you do not have parameters with enumeration data type, **Add decision** will not appear in the suggestions.
 
 To add the decision, do the following:
 
@@ -139,7 +139,7 @@ The exclusive split is added to the microflow.
 
 {{% alert type="info" %}}
 
-The number of options for **Add a decision** depend on the number of parameters with enumeration data type in your microflow. For more information, see [Domain Model in the Web Modeler](domain-models-wm) and [Attribute Types in the Web Modeler](domain-models-attributes-wm).
+The number of options for **Add a decision** depend on the number of parameters with enumeration data type in your microflow. For more information, see [Domain Model in the Web Modeler](domain-models) and [Attribute Types in the Web Modeler](domain-models-attributes).
 
 {{% /alert %}}
 

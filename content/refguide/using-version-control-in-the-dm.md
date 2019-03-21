@@ -328,16 +328,18 @@ We advise you to always commit and update inside the Modeler because in this way
 
 ### 9.1 TortoiseSVN and Subclipse
 
-If you are doing more advanced changes to files like adding Java actions or resources to your project, you will have to install TortoiseSVN on your computer and perform some operations yourself. You can download it for free at [http://tortoisesvn.tigris.org/](http://tortoisesvn.tigris.org/) (choose version 1.7).
+If you are doing more advanced changes to files, like adding Java actions or resources to your project, you will have to install TortoiseSVN on your computer and perform some operations yourself. You can download it for free at [http://tortoisesvn.tigris.org/](http://tortoisesvn.tigris.org/) (choose version 1.7).
 
 Also, if you are developing Java actions using Eclipse, we advise you to install Subclipse to help you with version control of Java files. You can download Subclipse from the Eclipse Marketplace inside Eclipse or from [http://subclipse.tigris.org/](http://subclipse.tigris.org/).
 
 ### 9.2 Adding Files and Directories
 
-If you add files or directories or delete files using Windows Explorer, the Modeler automatically adds or deletes from version control, too.
+If you add files or directories or delete files using Windows Explorer, the Modeler automatically adds or deletes these from version control, too.
 
 Make sure you use the SVN export feature of TortoiseSVN if you are copying a directory that is already under version control into your project.
 
 ### 9.3 Deleting Files and Directories
 
-If you delete a file from your project, the Modeler will automatically also delete it from the Team Server. If you want to delete a whole directory, you will have to use the delete command of TortoiseSVN. You can execute this command by right-clicking the directory and choosing 'TortoiseSVN > Delete'.
+If you delete a file from your project, the Modeler will automatically also delete it from the Team Server.
+
+If you want to delete a whole directory, you will have to use the delete command of TortoiseSVN. You can execute this command by right-clicking the directory and choosing 'TortoiseSVN > Delete'.

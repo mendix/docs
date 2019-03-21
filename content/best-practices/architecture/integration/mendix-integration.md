@@ -205,7 +205,7 @@ Mendix itself does not currently provide an external queue management system, bu
 
 {{% todo %}}[**ADD APP STORE LINKS? VERIFY LAST SENTENCE SHOULD BE KEPT**]{{% /todo %}}
 
-In the App Store, there is an [Process Queue](https://appstore.home.mendix.com/link/app/393/) module available that is used by many customers both as an out-bound queue and an inbound queue. The advantage of this is that there is no external technology to deploy and manage. The limitation with internal queues is that, in the end, a request–reply is required to move the event, or it must be pushed via a file-based interface. This is only a limitation if there are large geographical distances or many subscribers and publishers.
+In the App Store, there is an [Process Queue](https://appstore.home.mendix.com/link/app/393/) module available that is used by many customers both as an out-bound queue and an inbound queue. The advantage of this is that there is no external technology to deploy and manage. The limitation with internal queues is that, in the end, a request–reply or file system is required to move the event. This is only a limitation if there are large geographical distances or many subscribers and publishers.
 
 {{% todo %}}[**EXPLAIN DIAGRAM; UX-UPDATE DIAGRAM**]{{% /todo %}}
 
@@ -238,13 +238,11 @@ The internal queue provides the best control over delivery of business events in
 
 The key to event-streams is that they (often) only flow in one direction. A device leaving metrics in an IoT system does not expect an immediate answer to the data it ships. Additionally, there could be very many devices that are geographically distributed and shipping a lot of data. Request–reply is neither needed nor practical for inbound IoT, but for commanding a drone or other device, for example, it is highly recommended.
 
-IoT, AI, and big-data integration is only the beginning of an expected explosion of new IT that will be built alongside the current IT landscape. In the coming years, Mendix and Siemens will invest heavily in this area. With this perspective, Kafka and other event-based architectures will play an important role in the coming years.
+IoT, AI, and big-data integration is only the beginning of an expected explosion of new IT that will be built alongside the current IT landscape. In the coming years, Mendix and Siemens will invest heavily in this area.
 
 #### 3.6.4 IoT, MindSphere & Kafka
 
 IoT, Kafka, and other event-based architecture will play an important role in the coming years. Mendix is working to incorporate Kafka into the platform, and a seamless integration with MindSphere was recently set up.
-
-{{% todo %}}[**VERIFY CLAIMS FOR KAFKA AND MINDSPHERE**]{{% /todo %}}
 
 Mendix will in these cases usually work as the dashboard for event streams and sometimes as the control center for devices and other connected items.
 

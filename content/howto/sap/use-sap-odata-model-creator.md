@@ -223,3 +223,4 @@ For more information on how to use the imported data model together with the SAP
 * [How to Use the SAP OData Connector](/howto/sap/use-sap-odata-connector)
 * [SAP OData Connector](https://appstore.home.mendix.com/link/app/74525/Mendix/SAP-OData-Connector)
 * [SAP OData Model Creator](https://sapodatamodelcreator.mendixcloud.com/)
+

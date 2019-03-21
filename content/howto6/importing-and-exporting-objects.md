@@ -163,3 +163,4 @@ Mendix module object packages are stored as Mendix Package (.mpk) files. An obje
 *   [Modules](/refguide6/modules)
 *   [Project](/refguide6/project)
 *   [Common Widgets](/refguide6/common-widgets)
+

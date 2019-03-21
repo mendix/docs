@@ -219,7 +219,7 @@ For more information on how to use the imported data model together with the SAP
 ## 5 Read More
 
 * [HCM People Profile Service sample metadata](https://www.sapfioritrial.com/sap/opu/odata/sap/HCM_PEOPLE_PROFILE_SRV/$metadata)
-* [How to Use App Store Content](/developerportal/app-store/use-app-store-content)
+* [How to Use App Store Content](/developerportal/app-store/app-store-content)
 * [How to Use the SAP OData Connector](/howto/sap/use-sap-odata-connector)
 * [SAP OData Connector](https://appstore.home.mendix.com/link/app/74525/Mendix/SAP-OData-Connector)
 * [SAP OData Model Creator](https://sapodatamodelcreator.mendixcloud.com/)

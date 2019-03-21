@@ -1,7 +1,7 @@
 ---
-title: "Troubleshoot Version Control Issues"
-parent: "using-team-server-_-version-control"
-menu_order: 10
+title: "Solving Known Version Control Issues"
+category: "Collaboration & Requirements Management"
+menu_order: 7
 description: "This document presents a list of problems and fixes for version control issues."
 tags: ["version control", "troubleshoot", "modeler"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -10,6 +10,11 @@ tags: ["version control", "troubleshoot", "modeler"]
 ## 1 Introduction
 
 The Mendix Modeler contains a version control system that supports collaborating with team members. This document presents fixes that can be used when version control problems arise.
+
+For more information and general help on version control, see the following documents:
+
+* [Version Control](/refguide/version-control)
+* [Using Version Control in the Desktop Modeler](/refguide/using-version-control-in-the-dm)
 
 ## 2 Known Problems & Fixes
 

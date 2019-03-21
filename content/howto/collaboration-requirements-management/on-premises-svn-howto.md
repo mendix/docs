@@ -73,5 +73,5 @@ Currently, there's no direct way of creating and storing a new application in yo
 
 ## 7 Read More
 
-* [How to Use Team Server & Version Control](using-team-server-_-version-control)
+* [Version Control](/refguide/version-control)
 * [Team Server Reference Guide](/refguide/team-server)

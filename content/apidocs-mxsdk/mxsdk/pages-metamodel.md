@@ -11,7 +11,7 @@ Pages are defined based on Layouts (see below). Pages, Layouts and Snippets inhe
 ![](attachments/15466567/18582251.svg)
 
 
-Mendix Modeler Reference Guide | Model SDK API docs
+Reference Guide | Model SDK API docs
 --- | --- |
 [Pages overview](/refguide/pages) | [Page](https://apidocs.mendix.com/modelsdk/latest/classes/pages.page.html)
 [Page](/refguide/page) | [FormBase](https://apidocs.mendix.com/modelsdk/latest/classes/pages.formbase.html)

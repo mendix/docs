@@ -6,6 +6,10 @@ module.exports = {
 	/****************************************************
      * How-to's version 7 (potentially temporary until verified, unmapped)
      ****************************************************/
+    {
+      from: "/howtogeneral/bestpractices/ux-best-practices",
+      to: "/howto/front-end/ux-best-practices"
+    },
 	{
       from: "/howtogeneral/bestpractices/best-practices-security-and-improvements-for-mendix-applications",
       to: "/howto/security/best-practices-security"

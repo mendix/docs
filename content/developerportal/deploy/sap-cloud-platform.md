@@ -215,7 +215,7 @@ When the package is ready to be deployed, a green tick will be shown next to the
 
 4. Select any additional services you need for your app. For more information see section 7.3, [Binding Services](#binding-services).
 
-    ![](attachments/sap-cloud-platform/transport-services.png)
+    {{% image_container width="75%" %}}![](attachments/sap-cloud-platform/transport-services.png){{% /image_container %}}
 
     {{% alert type="warning" %}}In your initial deployment, do not remove any of the services with the status **Services To Be Bound**. For a new app, these services are all required for the correct deployment of the app.{{% /alert %}}
 
@@ -337,7 +337,7 @@ You can see the value of all the constants used by the app. CURRENT VALUE is the
 
 To change a value, select the constant you want to change and click **Edit**.
 
-### 7.3 Binding Services{#binding-services}
+### 7.3 Services Tab{#binding-services}
 
 This tab displays Cloud Foundry services which are bound to the app, waiting to be bound to the app, or available to be bound to the app. These are the services which are available to you in SAP Cloud Platform and are the same services that you can see in the SAP Cloud Platform marketplace.
 

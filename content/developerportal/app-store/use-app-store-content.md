@@ -165,3 +165,4 @@ To delete a theme, remove the *.zip* file from your project's **theme** folder.
 * [Common Widget Properties](/refguide/common-widget-properties)
 * [How to Install the SMTP Email Module](/howto/extensibility/install-and-configure-the-smtp-module)
 * [My Top 5 Mendix Widgets for Speeding Up Application Development](http://www.mendix.com/blog/top-5-mendix-widgets-speeding-application-development/)
+

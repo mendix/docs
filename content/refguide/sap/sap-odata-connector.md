@@ -612,3 +612,4 @@ This is the name that you give the result of your Activity. This can be used lat
 * [SAP OData Model Creator](https://sapodatamodelcreator.mendixcloud.com/)
 * [SAP Data Models](sap-data-models)
 * [OData Query Options](/refguide/odata-query-options)
+

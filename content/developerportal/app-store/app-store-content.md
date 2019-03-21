@@ -31,15 +31,15 @@ To download content from the App Store via the Desktop Modeler, follow these ste
 2. Open the project in which you would like to install a component.
 3. Click the App Store icon in the top menu bar to open it in the Desktop Modeler:
 
-    ![](attachments/use-app-store-content/toolbar.png)
+    ![](attachments/app-store-content/toolbar.png)
 
 4. On the App Store overview page, you find a project or component to use in your app. Use the **Search** bar to find a specific project or component. You can also filter the content with the **Categories** in order to get a general view of what is available to download.
 
-    ![](attachments/use-app-store-content/18582345.png)
+    ![](attachments/app-store-content/18582345.png)
 
 5. Click the title of the item or **Read more** to view the item details:
 
-    ![](attachments/use-app-store-content/item_details.png)
+    ![](attachments/app-store-content/item_details.png)
 
 6. When you have found the App Store item you want to download into your app, click **Download**:
     * A project will be created on your hard-drive and will be opened in the Desktop Modeler
@@ -47,7 +47,7 @@ To download content from the App Store via the Desktop Modeler, follow these ste
 
     Make sure that you download the correct version of the content from the App Store, because the widget or module version needs to be compatible with the Desktop Modeler version you are using. Do not download a widget that has a higher release version than the Desktop Modeler you are using. You can access older versions of the widgets in the **All Versions** tab in the App Store and download the most compatible version:
 
-    ![](attachments/use-app-store-content/18580437.png)
+    ![](attachments/app-store-content/18580437.png)
 
 ## 4 Using a Widget in the Desktop Modeler {#widget}
 
@@ -62,24 +62,24 @@ To add the Radiobutton List widget from the App Store via the Desktop Modeler, f
 
 	* Click **Add widget**, then browse the list of **Add-on widgets**:
 
-		{{% image_container width="350" %}}![](attachments/use-app-store-content/18580440.png)
+		{{% image_container width="350" %}}![](attachments/app-store-content/18580440.png)
 		{{% /image_container %}}
 
 	* Right-click the drop zone where you want to use the widget, select **Add Widget**, then browse the list of **Add-on widgets**:
 
-		![](attachments/use-app-store-content/18580439.png)
+		![](attachments/app-store-content/18580439.png)
 
 	To delete a widget, remove the *.mpk* file from your project's widgets folder.
 
 3.  Select the **Attribute Radiobutton List** widget, which will be placed in your app page:
 
-	![](attachments/use-app-store-content/18580438.png)
+	![](attachments/app-store-content/18580438.png)
 
 ### 4.2 Using the Widget
 
 Each widget that you download from the App Store is different and has different ways of being used. For more information on what the widget does and how it can be implemented, check out the **Documentation** tab specific to each widget in the App Store:
 
-![](attachments/use-app-store-content/18580433.png)
+![](attachments/app-store-content/18580433.png)
 
 Most widgets will require you to configure them. This is why when you drop the widget into a page, you will often see an error in the **Errors** list.
 
@@ -87,18 +87,18 @@ To resolve this widget error, follow these steps:
 
 1.  Open the error view and review the error message:
 
-	![](attachments/use-app-store-content/18580436.png)
+	![](attachments/app-store-content/18580436.png)
 
 	In this example, the **Target attribute** property in the radio button is required.
 
 2.  Double-click the radio button to open all of its options in the **Edit Custom Widget** editor. Notice that the **Target attribute** is empty or set to none:
 
-	![](attachments/use-app-store-content/18580435.png)
+	![](attachments/app-store-content/18580435.png)
 
 3.  Click **Select**, which will open the **Select Attribute** dialog box.
 4.  Select the attribute that you want to display as a radio button. Note that the radio button works on Booleans and enumeration attribute types.
 
-	![](attachments/use-app-store-content/18580434.png)
+	![](attachments/app-store-content/18580434.png)
 
 ## 5 Using a Module in the Desktop Modeler {#downloading}
 
@@ -113,7 +113,7 @@ To add the Google Maps module from the App Store via the Desktop Modeler, follow
 1. Download the [Google Maps Module](https://appstore.home.mendix.com/link/app/174/).
 2.  In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your project:
 
-	![](attachments/use-app-store-content/18580431.png)
+	![](attachments/app-store-content/18580431.png)
 
 	{{% alert type="warning" %}}If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard App Store content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.
 	{{% /alert %}}
@@ -121,7 +121,7 @@ To add the Google Maps module from the App Store via the Desktop Modeler, follow
 3. Click **Import** on the **Import Module** dialog box, and a pop-up stating that “The app was successfully imported into the project” will appear. Click **OK**.
 4.  Open the **Project Explorer** to view the Google Maps module. Note that unlike a widget, a module will be visible in your Project Explorer and will contain a domain model, pages, and microflow logic. A module downloaded from the App Store will store files if the module contains files (for example, userlib or resource files). In addition, a module downloaded from the App Store will have a light blue icon to differentiate it from the development modules.
 
-	![](attachments/use-app-store-content/18580430.png)
+	![](attachments/app-store-content/18580430.png)
 
 ### 5.2 Using the Module
 
@@ -135,7 +135,7 @@ To use the Google Maps module in the Desktop Modeler, follow these steps:
 
 1. Add the **Location Map Overview** and **Location Overview** menu items to your app's **Navigation**:
 
-    ![](attachments/use-app-store-content/18580429.png)
+    ![](attachments/app-store-content/18580429.png)
 
 2. Review the Google Map by running your app locally and adding some locations.
 
@@ -165,3 +165,4 @@ To delete a theme, remove the *.zip* file from your project's **theme** folder.
 * [Common Widget Properties](/refguide/common-widget-properties)
 * [How to Install the SMTP Email Module](/howto/extensibility/install-and-configure-the-smtp-module)
 * [My Top 5 Mendix Widgets for Speeding Up Application Development](http://www.mendix.com/blog/top-5-mendix-widgets-speeding-application-development/)
+

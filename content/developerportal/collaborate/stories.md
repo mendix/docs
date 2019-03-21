@@ -23,7 +23,7 @@ To add a new story, click **New story** and fill in some details, including what
 
 ![](attachments/story-example.png)
 
-### 2.2 Creating a New Sprint
+### 2.2 Creating a New Sprint {#sprint}
 
 To add a new sprint, click **New sprint** and fill in some details, including the name of the sprint or release and where it should be located in the structure of your **Stories** page.
 

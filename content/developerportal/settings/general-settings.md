@@ -28,6 +28,8 @@ Click **Cloud Settings** to select the cloud platform on which to deploy your ap
 Only users with the **App Settings** permission can change cloud platforms. For default roles, only the **SCRUM Master** has this permission. For more details, see the [App Team Roles](../company-app-roles/index#app-team-roles) section of *Company & App Roles*.
 {{% /alert %}}
 
+{{% todo %}}[**UPDATE SCREENSHOT FOR NEW WEBHOOKS BUTTON]{{% /todo %}}
+
 ![](attachments/cloudsettings.png)
 
 If you select a non-Mendix cloud platform like SAP, you will be redirected to a page to complete the setup. If you select Mendix Cloud, no additional setup is needed.
@@ -39,7 +41,39 @@ Specific steps for configuring different cloud platforms are provided here:
 * [IBM Cloud](../deploy/ibm-cloud)
 * [On-Premises](../deploy/on-premises-design)
 
-## 3 Editing App Info
+## 3 Managing Webhooks
+
+{{% todo %}}[**VERIFY POSITION OF BUTTON; THIS WILL DETERMINE POSITION OF SECTION IN DOC]{{% /todo %}}
+
+{{% todo %}}[**VERIFY ROLE/PERMISSIONS BELOW]{{% /todo %}}
+
+{{% alert type="info" %}}
+Only [Company Admins](../company-app-roles/companyadmin-settings) or users with the **App Settings** permission can manage webhooks.
+{{% /alert %}}
+
+{{% todo %}}[**ADD DESCRIPTION OF WEBHOOK BELOW**]{{% /todo %}}
+
+Mendix A webhook enables the Developer Portal to talk to another website and post updated Developer Portal content (for example, sprint updates and new stories) to that website. For example, if [Mansystems](https://developer.mendixcloud.com/link/partnerprofile/1068) wants to follow the changes in their app project, they will create a service with a certain URL (see the required [URL](#url) below) that keeps track of the data. Changes in the app project in the Developer Portal are then sent to that URL.
+
+Click **Manage Webhooks** to manage your app's webhooks. On the **Webhooks** page, you can add a new webook and edit or delete existing webhooks.
+
+Each webhook requires the following details:
+
+{{% todo %}}[**VERIFY ALL DESCRIPTIONS BELOW**]{{% /todo %}}
+
+* **Name** – the name of the webook
+* <a name="url"></a>**URL** – the URL to which the webhook will connect 
+* **Secret** – the secret used by the Developer Portal to sign the data payload in order to identify the source of the data to the receiving URL
+* **Version** – the version of the webhooks feature to be used
+* **Events** – what types of data will be sent via the webook (you must select at least one)
+	* [Sprints](../collaborate/index#sprint)
+	* [Stories](../collaborate/stories)
+
+To edit the above details for an existing webhook, click **Edit**.
+
+To delete an existing webhook, click **Delete**.
+
+## 4 Editing App Info
 
 {{% alert type="info" %}}
 Only users with the **App Settings** permission can edit the application information.
@@ -54,11 +88,11 @@ Click **Edit App Info** to edit the following details:
 {{% image_container width="450" %}}![](attachments/edit.png)
 {{% /image_container %}}
 
-## 4 Leaving the App
+## 5 Leaving the App
 
 To leave the app, click **Leave App**. For details on leaving, deleting, and deactivating an app, see [How to Leave & Delete an App](leave-delete-app).
 
-## 5 Read More
+## 6 Read More
 
-* [How to Leave & Delete an App](leave-delete-app)
-* [How to Manage Deep Links](manage-deeplinks)
+* [Leave & Delete an App](leave-delete-app)
+* [Manage Deep Links](manage-deeplinks)

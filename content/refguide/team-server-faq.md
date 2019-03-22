@@ -42,8 +42,8 @@ The modeler automates most of this process; you can simply merge development lin
 
 ### How do I resolve a conflict when two changes cannot be combined?
 
-Resolving a conflict can be done in by using the 'Use mine' and 'Use theirs' button in the version control dock. [Read more](version-control-scenarios)
+Resolving a conflict can be done in by using the 'Use mine' and 'Use theirs' button in the version control dock. [Read more](using-version-control-in-the-dm)
 
 ### How can I access the history of my project?
 
-The history of the project is a list of all revisions that have been committed in reverse chronological order. The history form quickly shows you revision number, date, time, author and message of each revision; it can be accessed from within the Mendix Desktop Modeler as well as the Developer Portal. [Read more](version-control-scenarios)
+The history of the project is a list of all revisions that have been committed in reverse chronological order. The history form quickly shows you revision number, date, time, author and message of each revision; it can be accessed from within the Mendix Desktop Modeler as well as the Developer Portal. [Read more](using-version-control-in-the-dm)

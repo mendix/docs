@@ -3,7 +3,7 @@ title: "Branch Line Manager Dialog"
 parent: "dialogs"
 ---
 
-Use this dialog to create and delete [branch lines](version-control-concepts) of an app that's stored on a version control server.
+Use this dialog to create and delete [branch lines](version-control) of an app that's stored on a version control server.
 
 A branch line allows independent development from other development lines. There are two main reasons for creating a branch line:
 1. To do maintenance development on a version of your app that is running in production. You can keep on developing in the main line while you fix issues in the branch line.

@@ -1,6 +1,6 @@
 ---
 title: "Events Section in Widgets of the Web Modeler"
-parent: "page-editor-widgets-wm"
+parent: "page-editor-widgets"
 description: "Describes the Events section in widgets properties in the Mendix Web Modeler."
 tags: ["web modeler", "page editor", "widgets", "on click action", "events"]
 ---
@@ -11,7 +11,7 @@ The **Events** section is a section in the **Properties** tab that is common for
 
 In the **Events** section, you can set the **On Click Action** for widgets and specify what action will be performed when users click the widget. For example, you can specify that when a user clicks a profile image, the page with the user's personal account will open. 
 
-{{% image_container width="300" %}}![](attachments/page-editor-widgets-events-section-wm/wm-events-section.png)
+{{% image_container width="300" %}}![](attachments/page-editor-widgets-events-section/events-section.png)
 {{% /image_container %}}
 
 ## 2 On Click Action {#on-click-action}  
@@ -47,7 +47,7 @@ Let us study an example: you want to create a new customer by clicking the **New
 
 Thus, when setting the on-click action of the **New** button to **Page**, you need to enable the **Create Object** option and select the **Customer** entity.
 
-![](attachments/page-editor-widgets-events-section-wm/wm-create-object-example.png)
+![](attachments/page-editor-widgets-events-section/create-object-example.png)
 
 If you enable **Create Object** option, you need to set the following:
 
@@ -58,7 +58,7 @@ If you enable **Create Object** option, you need to set the following:
 
 When you set the **On Click Action** to **Open Link**, several properties are available. 
 
-{{% image_container width="300" %}}![](attachments/page-editor-widgets-events-section-wm/wm-open-link-action.png)
+{{% image_container width="300" %}}![](attachments/page-editor-widgets-events-section/open-link-action.png)
 {{% /image_container %}}
 
 See the description in the table below:
@@ -70,7 +70,7 @@ See the description in the table below:
 
 ### 2.3 Delete Object Action {#delete-object-action}
 
-Behavior of the **Delete Object** action depends on a data container it is placed in: a [list view](page-editor-data-view-list-view-wm#list-view-properties) or a [data view](page-editor-data-view-list-view-wm#data-view-properties). 
+Behavior of the **Delete Object** action depends on a data container it is placed in: a [list view](page-editor-data-view-list-view#list-view-properties) or a [data view](page-editor-data-view-list-view#data-view-properties). 
 
 #### 2.3.1 Delete Object Action in a List View
 
@@ -78,7 +78,7 @@ If you place the **Delete Object** in a list view, the corresponding list view i
 
 For example, you have a page with a list view showing customer names. A **Delete** button is placed inside the list next to each name. Thus, if you click **Delete** in a line that says "Peter", this customer and all customer's details will be deleted. 
 
-{{% image_container width="350" %}}![](attachments/page-editor-widgets-events-section-wm/wm-list-view-delete.png)
+{{% image_container width="350" %}}![](attachments/page-editor-widgets-events-section/list-view-delete.png)
 {{% /image_container %}}
 
 
@@ -86,9 +86,9 @@ For example, you have a page with a list view showing customer names. A **Delete
 
 When placed on a data view, **Delete Object** will delete the connected object. For example, you opened a page with customer's details. The details are placed in a data view. You have **Save** and **Delete** buttons at the bottom of the page. When you press **Delete**, the customer "John" and customer's details will be deleted and the page will be closed. 
 
-{{% image_container width="350" %}}![](attachments/page-editor-widgets-events-section-wm/wm-data-view-delete.png)
+{{% image_container width="350" %}}![](attachments/page-editor-widgets-events-section/data-view-delete.png)
 {{% /image_container %}}
 
 ## 3 Read More
 
-* [Widgets in the Web Modeler](page-editor-widgets-wm)
+* [Widgets in the Web Modeler](page-editor-widgets)

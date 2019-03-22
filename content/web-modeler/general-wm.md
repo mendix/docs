@@ -103,7 +103,7 @@ The top menu provides the following options:
 | Top menu item | Shortcut | Description |
 |------|------|------|
 | Mx Logo | None | The Mx logo is the return button to return to the [Developer Portal](https://home.mendix.com) of the app. |
-| [Pages](page-editor-wm) | 1 | Shows a list of all pages in the app. After you select a page, it opens in the Web Modeler. |
+| [Pages](page-editor) | 1 | Shows a list of all pages in the app. After you select a page, it opens in the Web Modeler. |
 | [Domain Models](domain-models) | 2 | Shows the domain models of the app. |
 | [Microflows](microflows-wm) | 3 | Shows a list of all microflows in the app.  After clicking a microflow, it will open in the Web Modeler. |
 | [Navigation Document](navigation-wm) | 4 | Shows a configured menu in the form of a navigation tree. You can expand the menu structure of the navigation tree up to two levels with an unlimited amount of pages. |

@@ -11,7 +11,7 @@ The page editor allows a user to define the end-user interface of a Mendix appli
 
 To view the **Pages** of your app in the Web Modeler, click the **Pages** icon in the left menu bar of the Web Modeler.
 
-{{% image_container width="300" %}}![](attachments/page-editor-wm/wm-pages-icon.png)
+{{% image_container width="300" %}}![](attachments/page-editor/pages-icon.png)
 {{% /image_container %}}
 
 {{% alert type="warning" %}}
@@ -27,7 +27,7 @@ Pages of the Web Modeler consist of the following components:
 * **Layouts** structure your pages. Every page is based on a layout. For example, **Atlas_Default** or **PopupLayout** are types of layouts you can choose when creating a page.
 * **Templates** – a starting point for creating new pages. Every time you create a new page, you select a template depending on data you want to display on your page and the way you want to display it: a list, a dashboard, a form. For example, **Dashboard Action Tiles**, **List Default**, **Master Detail** are types of templates. 
 * **Building blocks** – pre-configured  set of elements that speeds up the process of building your page and styling it. For more information, see section [5.1 Building Blocks](#building-blocks). 
-* **Widgets** – single user-interface elements. For more information, see section [5.2. Widgets](#widgets) and [Widgets in the Web Modeler](page-editor-widgets-wm).
+* **Widgets** – single user-interface elements. For more information, see section [5.2. Widgets](#widgets) and [Widgets in the Web Modeler](page-editor-widgets).
 
 The components described above are powered by Atlas UI. For more information, see [Atlas UI](../../howto/front-end/atlas-ui). 
 
@@ -43,7 +43,7 @@ To open a page in the Web Modeler, do the following:
 
 2.  In the displayed list of app pages, select the one you want to open and click it.
 
-    {{% image_container width="400" %}}![](attachments/page-editor-wm/wm-opening-a-page.png)
+    {{% image_container width="400" %}}![](attachments/page-editor/opening-a-page.png)
     {{% /image_container %}}
 
 The selected page is opened. 
@@ -55,13 +55,13 @@ To create a new page in the Web Modeler, do the following:
 1. Click the **Pages** icon.
 2.  Click **New** in the top right corner of the displayed side panel.
 
-    {{% image_container width="400" %}}![](attachments/page-editor-wm/wm-new-page.png)
+    {{% image_container width="400" %}}![](attachments/page-editor/new-page.png)
     {{% /image_container %}}
 
 3. In the **Create new page** dialog window, fill out the title of the page, select the layout and the page template.  
 4.  Click **Create**.
 
-    ![](attachments/page-editor-wm/wm-create-new-page-dialog.png)
+    ![](attachments/page-editor/create-new-page-dialog.png)
 
 A new page is created.
 
@@ -73,7 +73,7 @@ To delete a page in the Web Modeler, do the following:
 2. Open the **Properties** tab.
 3.  Click **Delete** at the bottom of the **Properties** tab.
 
-    ![](attachments/page-editor-wm/wm-page-delete.png)
+    ![](attachments/page-editor/page-delete.png)
 
    The selected page is deleted.
 
@@ -83,7 +83,7 @@ To view an element and its [properties](#page-editor-properties), click this ele
 
 The selected element is indicated with an blue border. Additionally, if the element is inside a data container (data view or a list view), it will be indicated with a data container icon.
 
-{{% image_container width="400" %}}![](attachments/page-editor-wm/wm-input-widget-example.png)
+{{% image_container width="400" %}}![](attachments/page-editor/input-widget-example.png)
 {{% /image_container %}}
 
 ## 4 Breadcrumb Trail
@@ -97,7 +97,7 @@ The breadcrumb trail serves two functions:
 
 For example, when you select a button on a page, you will see that it is placed in a container, which is in a column.  Whereas, the column is in a row, and this row is placed in a layout grid on the page.
 
-![](attachments/page-editor-wm/wm-breadcrumb.png)
+![](attachments/page-editor/breadcrumb.png)
 
 To view information on the element click this element in the breadcrumb trail and its properties are displayed automatically.
 
@@ -107,7 +107,7 @@ You can also view the information on Navigation layout by clicking it in the bre
 
 The following options will be displayed in the **Properties** tab:
 
-{{% image_container width="300" %}}![](attachments/page-editor-wm/wm-navigation-layout.png)
+{{% image_container width="300" %}}![](attachments/page-editor/navigation-layout.png)
 {{% /image_container %}}
 
 ## 5 Toolbox Tab
@@ -123,7 +123,7 @@ This tab consists of the following:
 
 Building blocks consist of pre-set widgets that allow you to build a page faster: you only need to drag-and-drop them to the page.  
 
-![](attachments/page-editor-wm/wm-buildingblocks.png)
+![](attachments/page-editor/buildingblocks.png)
 
 Building blocks of the Web Modeler are divided into the following categories:
 
@@ -146,7 +146,7 @@ To insert a building block, drag and drop the selected building block on the pag
 
 If you want to read documentation on a particular building block and to know more about how and when to use it, click the small icon in the top right corner of the building block.
 
-![](attachments/page-editor-wm/wm-info-icon-building-blocks.png)
+![](attachments/page-editor/info-icon-building-blocks.png)
 
 {{% alert type="info" %}}
 
@@ -156,7 +156,7 @@ Building Blocks categories may differ because Atlas UI can be customized using t
 
 ### 5.2 Widgets {#widgets}
 
-Widgets are single user-interface elements that can be configured. For more information, see [Widgets in the Web Modeler](page-editor-widgets-wm). 
+Widgets are single user-interface elements that can be configured. For more information, see [Widgets in the Web Modeler](page-editor-widgets). 
 
 {{% alert type="info" %}}
 
@@ -168,10 +168,10 @@ You can update widgets in the [App Settings](app-settings-wm).
 
 The **Properties** tab displays the properties of the currently selected element and differs depending on this element. 
 
-{{% image_container width="300" %}}![](attachments/page-editor-wm/wm-properties.png)
+{{% image_container width="300" %}}![](attachments/page-editor/properties.png)
 {{% /image_container %}}
 
 
 ## 7 Read More
 
-* [Data View & List View Properties in the Web Modeler](page-editor-data-view-list-view-wm)
+* [Data View & List View Properties in the Web Modeler](page-editor-data-view-list-view)

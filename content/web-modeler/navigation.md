@@ -9,11 +9,11 @@ tags: ["web modeler", "navigation", "app menu"]
 
 A navigation document shows a configured menu of your app in a form of a tree. You can create items and sub-items in your navigation. 
 
-![](attachments/navigation-wm/wm-nagigation-wm-vs-app.png)
+![](attachments/navigation/nagigation-wm-vs-app.png)
 
 Open the **Navigation Document** by clicking the corresponding icon in the left menu bar.
 
-{{% image_container width="300" %}}![](attachments/navigation-wm/wm-navigation-icon.png)
+{{% image_container width="300" %}}![](attachments/navigation/navigation-icon.png)
 {{% /image_container %}}
 
 {{% alert type="info" %}}
@@ -29,7 +29,7 @@ Properties of the menu items consists of the following sections:
 * [Events](#events-section-navigation) 
 * [General](#general-section-navigation) 
 
-{{% image_container width="300" %}}![](attachments/navigation-wm/wm-navigation-properties.png)
+{{% image_container width="300" %}}![](attachments/navigation/navigation-properties.png)
 {{% /image_container %}}
 
 ### 2.1 Events Section {#events-section-navigation}
@@ -71,7 +71,7 @@ To create a new navigation item, do the following:
 
 2.  Click a plus at the end of the navigation tree to create a menu item, or click a plus next to the existing navigation item to create its sub-item
 
-    ![](attachments/navigation-wm/wm-adding-navigation-items.png)
+    ![](attachments/navigation/adding-navigation-items.png)
 
 3. Specify the properties of the created item if needed (For more information, see [Properties of Menu Items](#properties-of-menu-items)). 
 

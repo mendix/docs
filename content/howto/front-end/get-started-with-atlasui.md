@@ -42,7 +42,7 @@ Note that when you click **Edit App** for any Atlas UI app, it will automaticall
 
 ## 4 Exploring the Mendix Web Modeler
 
-Your app is ready to be built. In the **Toolbox** in the [page editor](/web-modeler/page-editor-wm), you will find building blocks and widgets you can build your pages with. 
+Your app is ready to be built. In the **Toolbox** in the [page editor](/web-modeler/page-editor), you will find building blocks and widgets you can build your pages with. 
 
 ![Web Modeler Page Example](attachments/get-started-with-atlasui/start_explore_the_mendix_wm.png)
 
@@ -54,7 +54,7 @@ All these resources have been created with Atlas UI. Each building block has an 
 
 ## 5 Choosing a Page Template
 
-You can choose a page template when you create a new page. For information on how to create a new page and perform other basic functions, see section [3 Performing Basic Functions](/web-modeler/page-editor-wm#page-editor-basic-functions) in Page Editor in the *Web Modeler Guide*. 
+You can choose a page template when you create a new page. For information on how to create a new page and perform other basic functions, see section [3 Performing Basic Functions](/web-modeler/page-editor#page-editor-basic-functions) in Page Editor in the *Web Modeler Guide*. 
 
 For example, **Dashboard Action Tiles**, **Dashboard Charts**, **Dashboard Expenses** are page templates. 
 
@@ -73,5 +73,5 @@ The **[Theme Customizer](/web-modeler/theme-customizer-wm)** allows you to custo
 * [How to Migrate Existing Projects to Atlas UI](migrate-existing-projects-to-atlasui)
 * [How to Share Company Atlas UI Resources](share-company-atlas-ui-resources)
 * [Web Modeler General Info](/web-modeler/general-wm) 
-* [Page Editor in the Web Modeler](/web-modeler/page-editor-wm)
+* [Page Editor in the Web Modeler](/web-modeler/page-editor)
 * [Theme Customizer in the Web Modeler](/web-modeler/theme-customizer-wm)

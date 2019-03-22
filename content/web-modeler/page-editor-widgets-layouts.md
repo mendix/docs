@@ -95,7 +95,7 @@ In the **Row Layout** section you can change the way columns in a row are arrang
 
 In the example below, you can see that you can select different row layouts for different types of devices and check the way the layout is shown in your app. 
 
-![Row Layouts for Different Devices](attachments/page-editor-widgets-layouts-wm/wm-row-layout-scheme.png)
+![Row Layouts for Different Devices](attachments/page-editor-widgets-layouts/row-layout-scheme.png)
 
 ## 3 Container Overview {#container-overview}
 

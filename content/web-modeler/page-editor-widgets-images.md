@@ -1,6 +1,6 @@
 ---
 title: "Image Widgets in the Web Modeler"
-parent: "page-editor-widgets-wm"
+parent: "page-editor-widgets"
 description: "Describes image widgets in the Mendix Web Modeler."
 menu_order: 30
 tags: ["web modeler", "page editor", "image", "image widgets", "widgets"]
@@ -8,14 +8,14 @@ tags: ["web modeler", "page editor", "image", "image widgets", "widgets"]
 
 ## 1 Introduction 
 
-Image [widgets](page-editor-widgets-wm) are used to show images to the users. 
+Image [widgets](page-editor-widgets) are used to show images to the users. 
 
 There are two image widgets in the Web Modeler:
 
 * Image – allows you to show a static (non-changing) image in your app
 *  Dynamic image – allows you to show a dynamic image (for example, a relevant profile picture that is different for each customer) in your app
 
-   {{% image_container width="350" %}}![](attachments/page-editor-widgets-images-wm/wm-image-widgets.png)
+   {{% image_container width="350" %}}![](attachments/page-editor-widgets-images/image-widgets.png)
    {{% /image_container %}}
 
 {{% alert type="info" %}}
@@ -30,7 +30,7 @@ You can switch between static and dynamic image in the **General** section, as w
 
 Before configuring settings in the **General** section for the **Dynamic Image**, keep in mind that it can only function inside a data container (a list view or a data view). You can either place widget in an existing data container; or click **Wrap with a new data view** in **Properties** to create a data view automatically and place an input element inside it. 
 
-{{% image_container width="350" %}}![](attachments/page-editor-widgets-images-wm/wm-dynamic-image-data-view.png)
+{{% image_container width="350" %}}![](attachments/page-editor-widgets-images/dynamic-image-data-view.png)
 {{% /image_container %}}
 
 Settings available for **Static Image** and **Dynamic Image** are described in the table below:
@@ -52,7 +52,7 @@ You can choose the **On Click Action** in the **Events** section. The **On Click
 
 ### 3.1 Events Section for the Static Image {#events-static-image}
 
-For more information on the **Events** section for the static image, see [Events Section in Widgets of the Web Modeler](page-editor-widgets-events-section-wm).
+For more information on the **Events** section for the static image, see [Events Section in Widgets of the Web Modeler](page-editor-widgets-events-section).
 
 ### 3.2 Events Section for the Dynamic Image {#events-dynamic-image}
 
@@ -64,9 +64,9 @@ The following actions are available for the dynamic image:
 
 ## 4 Design Section
 
-For information on the **Design** section and its properties, see [Design Section in Widgets of the Web Modeler](page-editor-widgets-design-section-wm).
+For information on the **Design** section and its properties, see [Design Section in Widgets of the Web Modeler](page-editor-widgets-design-section).
 
 ## 5 Read More
 
-* [Page Editor in the Web Modeler](page-editor-wm) 
-* [Widgets in the Web Modeler](page-editor-widgets-wm)
+* [Page Editor in the Web Modeler](page-editor) 
+* [Widgets in the Web Modeler](page-editor-widgets)

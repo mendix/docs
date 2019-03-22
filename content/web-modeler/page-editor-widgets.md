@@ -9,7 +9,7 @@ tags: ["web modeler", "page editor", "pages", "widgets"]
 
 Widgets are single user-interface elements that can be configured: for example, a drop-down menu or different kinds of buttons.
 
-{{% image_container width="300" %}}![](attachments/page-editor-widgets-wm/wm-widgets-examples.png)
+{{% image_container width="300" %}}![](attachments/page-editor-widgets/widgets-examples.png)
 {{% /image_container %}}
 
 Widgets in the Web Modeler are grouped by category and can be classified by their origin.
@@ -24,25 +24,25 @@ To view widgets in the Web Modeler, do the following:
 
 3. In the **Toolbox** tab, click **Widgets**.
 
-   ![](attachments/page-editor-widgets-wm/wm-toolbox-widgets.png)
+   ![](attachments/page-editor-widgets/toolbox-widgets.png)
 
 ## 3 Widgets by Category {#widget-categories}
 
 Widgets of the Web Modeler are divided into categories that you can see when you open the **Widgets** tab.
 
-{{% image_container width="350" %}}![](attachments/page-editor-widgets-wm/wm-widgets-categories.png)
+{{% image_container width="350" %}}![](attachments/page-editor-widgets/widgets-categories.png)
 {{% /image_container %}}
 
 Widget categories are described in the table below:
 
 | Widget Category                                         | Description                                                  | Link to More Detailed Documentation                          |
 | ------------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [Data Containers](page-editor-data-view-list-view-wm)   | Contains a data view (the starting point for showing the contents of one object), and list view (the starting point for showing the contents of list of objects). | [Data View & List View Properties in the Web Modeler](page-editor-data-view-list-view-wm) |
-| [Input Elements](page-editor-widgets-input-elements-wm) | Contains elements that can be used for inputting data.       | [Input Element Widgets in the Web Modeler](page-editor-widgets-input-elements-wm) |
-| [Images](page-editor-widgets-images-wm)                 | Contains image display widgets.                              | [Image Widgets in the Web Modeler](page-editor-widgets-images-wm) |
-| [Text](page-editor-widgets-text-wm)                     | Contains text display widgets.                               | [Text Widgets in the Web Modeler](page-editor-widgets-text-wm) |
-| [Buttons](page-editor-widgets-buttons-wm)               | Contains a variety of buttons for placing on a page.         | [Button Widgets in the Web Modeler](page-editor-widgets-buttons-wm) |
-| [Layouts](page-editor-widgets-layouts-wm)               | Contains layouts for controlling the placing widgets.        | [Layout Widgets in the Web Modeler](page-editor-widgets-layouts-wm) |
+| [Data Containers](page-editor-data-view-list-view)   | Contains a data view (the starting point for showing the contents of one object), and list view (the starting point for showing the contents of list of objects). | [Data View & List View Properties in the Web Modeler](page-editor-data-view-list-view) |
+| [Input Elements](page-editor-widgets-input-elements) | Contains elements that can be used for inputting data.       | [Input Element Widgets in the Web Modeler](page-editor-widgets-input-elements) |
+| [Images](page-editor-widgets-images)                 | Contains image display widgets.                              | [Image Widgets in the Web Modeler](page-editor-widgets-images) |
+| [Text](page-editor-widgets-text)                     | Contains text display widgets.                               | [Text Widgets in the Web Modeler](page-editor-widgets-text) |
+| [Buttons](page-editor-widgets-buttons)               | Contains a variety of buttons for placing on a page.         | [Button Widgets in the Web Modeler](page-editor-widgets-buttons) |
+| [Layouts](page-editor-widgets-layouts)               | Contains layouts for controlling the placing widgets.        | [Layout Widgets in the Web Modeler](page-editor-widgets-layouts) |
 | [Menus](/refguide/menu-widgets)                                | Contains menu creation widgets. Currently, these widgets can be configured only in the Desktop Modeler. | [Menu Widgets](/refguide/menu-widgets) in the *Desktop Modeler* category |
 | Display                                                 | Contains widgets which display changing elements on a page, for example a map, or a progress bar. This category consists of the App Store widgets. | section [4 Widgets by Origin](#widgets-by-origin)            |
 | Charts                                                  | Contains different charts. This category consist of the App Store widgets. | section [4 Widgets by Origin](#widgets-by-origin)            |
@@ -71,16 +71,16 @@ To add an App Store widget, do the following:
 
     a. Find a category with the **View App Store widgets** option and click it.  <br />
 
-    {{% image_container width="300" %}}![](attachments/page-editor-widgets-wm/wm-view-app-store-widgets.png)
+    {{% image_container width="300" %}}![](attachments/page-editor-widgets/view-app-store-widgets.png)
     {{% /image_container %}}<br />
 
     b.  Start typing the name of the category or of a specific widget in the **Search** field. <br />
 
-    ![](attachments/page-editor-widgets-wm/wm-slider.png)
+    ![](attachments/page-editor-widgets/slider.png)
 
 3.  Click the cloud icon to download the widget and add it to your project.
 
-    ![](attachments/page-editor-widgets-wm/wm-app-store-download.png)
+    ![](attachments/page-editor-widgets/app-store-download.png)
 
 The widget is now added to your project, you can simply drag and drop it to the page to use it. You can also view settings of this widget in the **App Settings**.  For more information on managing widgets in your app, see [App Settings in the Web Modeler](app-settings-wm).
 
@@ -90,6 +90,8 @@ Some similar widgets are packaged together: downloading one of these widgets wil
 
 {{% /alert %}}
 
-* [Page Editor in the Web Modeler](page-editor-wm)
+## 6 Read More 
+
+* [Page Editor in the Web Modeler](page-editor)
 * [App Settings in the Web Modeler](app-settings-wm)
 * [App Store Overview](/developerportal/app-store/app-store-overview)

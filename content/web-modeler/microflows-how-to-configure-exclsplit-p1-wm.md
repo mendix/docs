@@ -99,7 +99,7 @@ To configure the exclusive split with the attribute or parameter of the enumerat
 8. To open a corresponding order form (page) for customers with the bronze grade, select **Show Page** in the **Toolbox**, drag and drop it to flow labelled **Bronze** in the microflow. 
 9.  Open the properties for the **Show Page** activity and do the following:<br />
     a. Click the **Select a page** field.<br />
-    b. In the **Select Page** dialog window, click **New page**, and [create a page](page-editor-wm) for customer grade **Bronze**. 
+    b. In the **Select Page** dialog window, click **New page**, and [create a page](page-editor) for customer grade **Bronze**. 
     **Note** After you create a page, it will be added to the **Select field** automatically.<br />
 
     ![](attachments/microflows-how-to-configure-exclsplit-wm/wm-show-page-select-page.png) <br />

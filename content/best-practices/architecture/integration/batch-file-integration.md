@@ -1,5 +1,5 @@
 ---
-title: "Batch-File Integration"
+title: "Batch File Integration"
 parent: "integration-use-cases"
 menu_order: 6
 draft: true

@@ -1,70 +1,127 @@
 ---
 title: "Version Control"
-category: "Team Server"
+#description: "Set a description with a maximum of 140 characters; this should describe what the goal of the document is, and it can be different from the document introduction; this is optional, and it can be removed"
+tags: ["Version Control", "Application Lifecycle Management", "Commit"]
 ---
 
+## 1 Introduction
 
-Version 3.0 of the Mendix Desktop Modeler contains a major new feature called Version Control. This feature falls under the umbrella of Application Life Cycle Management. It takes the two aspects of collaboration and revision management to a whole new level and is significantly more powerful than what comes before it. The new version control feature entails a new way of working and these pages are meant to guide you on your way.
+Version Control allows you to manage your app development in two ways:
 
-Before we look at this new feature, let us first look at how these aspects are dealt with in version 2.x of our technology so that you get a feel for the context and for the problems the new feature solves.
+* Firstly, it allows you to store (*commit*) the current revision of your model and all its resources. You give it an identifier so that you can get that revision again and share it with other team members.
+* Secondly, it allows work to take place on multiple *development lines* so that several different features can be worked on at once. These development lines can then be *merged* back together so that your *main line* contains all the completed features that have been worked on separately.
 
-## In version 2.x
+Version control in Mendix is built on top of [Apache Subversion](https://subversion.apache.org/) and the concepts will be familiar to Subversion users. Mendix simplifies Subversion commands by building them into the Modelers and Developer Portal.
 
-In version 2.5 of the Mendix Platform collaboration was handled through working on a centralized database. Everyone on the team connects to a PostgreSQL or SqlServer database and works directly on this one copy of the project. There is a locking mechanism to prevent two people from updating the same document at the same time.
+## 2 Concepts
 
-An attractive feature is that there is just one copy of the model and that brings with it a certain simplicity. The problem with this approach, however, is that there is just one copy of the model. Every time someone saves a document those changes are stored in the central database. The changes may not form a consistent whole yet because you still have to update some other documents before your new feature is done. If another person of the team opens or refreshes the project at this time he or she will get those changes and all the errors that come with it. There is currently no way to bundle a consistent set of changes that relate to a new feature and 'save' them to the central repository at once. This is especially problematic if you are working on a feature that takes a lot of time to implement.
+### 2.1 Team Server
 
-Other problems with this approach are performance and reliability. Working on a remote database is slower than on a local file and if the internet connection fails during a database operation there is sometimes no way to tell in what state the database is.
+The Team Server is where all the committed versions of Mendix app projects are stored. If you commit a revision of an app, it is stored on the Team Server.
 
-Support for dealing with different revisions of your project in versions 2.x is lacking. On a multi-developer project the model itself is on a database server while the resources, such as widgets and Java actions, are in your file system. Often Subversion is used to store the resources which makes it possible to track changes and revert them. The model, being on the database server, lives a life of its own. With discipline, you can make frequent backups (.mpr file) of the database and upload that along with the resources, but this method is not without its problems. The model is a monolithic unit in the eyes of Subversion and changes cannot be inspected or merged from one place to another.
+To commit to the Team Server you will need to have a role in the project which allows you to edit the project. For more information, see section [App Team Roles](/developerportal/company-app-roles#app-team-roles) in *Company & App Roles*.
 
-In practice all this means this many reasonable requests can not be met: show me the state of the project last Friday before we started implementing this big new feature; give me the version that is currently online so that I can fix this reported bug; apply the bug fix from the deployed version also to the new version we are working on now; what did person X change last week in this form?
+### 2.2 Repository
 
-In short, it is time for a new way of collaboration and revision management.
+Within the *Team Server* each app is stored in a repository. This repository contains all the *committed revisions* for the *branches* of the app.
 
-## In version 3.0
+### 2.3 Revision
 
-In the version 3.0 there is a central repository that contains both the model and the resources. Each person working on the project has a local copy of both model and resources. There are explicit actions to commit local changes to the repository and to retrieve changes by others from the repository. We build on top of Subversion that supports this style of working.
+A revision is the version of your app at a moment in time, stored on the *Team Server*.
 
-We chose Subversion because of its popularity, maturity and solid Windows support. Building on top of Subversion means that we inherit its reliable protocols for sending and receiving changes. Subversion has a lot of operations that allow us to support advanced features like branching and merging. The Modeler simplifies Subversion commands by providing a layer over them. All common operations can be executed right from the Modeler.
+Each revision of your app is given a unique number to identify it and enable you to find it in future. A new revision is created from the *Desktop Modeler* when the app is committed to the Repository.
 
-### Features
+### 2.4 Working Copy
 
-Let us look at a list of features of this this solution and see how it not only tackles the inadequacies of the current situation but offers a lot more power as well:
-Scalable - People work independently on local copies and not on one model. This means that more people can work on the same project without constant interference with each other.
+A working copy is the version of your app which is currently being worked on in the Modelers. There is one working copy, the local model, for each development line of the app when it is being developed with the Desktop Modeler. This model is held locally, on each computer where development work is taking place.
 
-*   _Reliable_ - Subversion handles the sending and retrieving of changes and does a good job of handling unreliable connections.
-*   _Consistent_ - Model and resources are both stored in one repository and are always in sync.
-*   _Fast_ - Since everyone is working on a local copy many operations no longer depend on an internet connection and are consequently much faster.
-*   _Work offline_ - Another welcome consequence of working on local copies is that you can now work without an internet connection.
-*   _Simple_ - By providing a interface layer the Modeler simplifies Subversion commands. Often Subversion was already used for resources and now the Modeler takes care of those as well. It automatically ignores, adds, renames and deletes the right files.
-*   _Powerful_ - Subversion supports lots of operations out of the box that can handle all advanced scenarios like independent lines of development, porting a fix from one line to another, and reverting changes.
+There is also one working copy, held in the *cloud*, which is worked on by the Web Modeler. Only one developer at a time can edit this.
 
-To make all this work the Modeler needed a new file format. Apart from being a necessary change it also brings performance improvements. Memory consumption of both the Modeler and Runtime when opening large projects is cut in half. Also, when deploying a project the runtime reads the model up to five times faster.
+### 2.5 Merge
 
-### Combining and conflicts
+Merging is the action of taking one *revision* of an app and applying the differences which have been made in a different revision. See section 3.3, [Merging Branches](#merging-branches) for more information.
 
-Subversion takes care of a lot of things automatically. What it cannot do is combine changes to the model (.mpr), because that file is simply a big, binary file. The Modeler takes care of combining changes to the model. Whenever you retrieve changes from the repository they are combined with any local changes you have. A lot of the time the changes can be combined without problems. One person creates a new form, the other updates an existing form. Or one person deletes a document and the other changes three other documents. Those changes can easily be combined. Also, the Modeler is smart enough to recognize when a document has been moved somewhere else and has no problem combining someone else's changes into that moved document.
+If any of the differences cannot be applied, then there is a *conflict*.
 
-Combining even happens inside documents. You add a tab page to a large form and if another person does the same, you end up with a form with two extra tab pages. The same holds for two people adding different attributes to an entity (or to two different entities). Or someone changing the properties of a microflow action and another rewriting another part of the microflow. In general, the algorithm that combines changes can do a much better job than traditional text-based algorithms because the structure of the model is known.
+### 2.6 Conflict
 
-However, changes that are too close to each other can cause conflicts. If two people both change properties of the same data view, these changes cannot be combined. In this case the form will be marked as conflicted and you have to edit the data view yourself to get the desired end result. Conflicts also happen at the level of the project structure. If you delete a form and another person makes changes to that form, the form will be restored and marked as conflicted. You can then decide whether those changes are still relevant or whether the document should be deleted anyway.
+A conflict occurs when a revision of the app cannot be merged into the working copy automatically. This happens when the same document has been changed in two different places and these changes cannot be reconciled. Examples are the following:
 
-After resolving all conflicts, you can upload your changes that are now combined with those from the repository. Conflicts can be minimized by communication among team members and by uploading and downloading changes often.
+* the properties of a widget are changed in both places but to different settings
+* a document is moved or deleted in one place but has been changed in a different way in the other place.
 
-### A New Way Of Working
+When a conflict occurs, a developer has to intervene to decide how it should be resolved before it can be committed to the Team Server as a new revision.
 
-Version Control changes the way you collaborate on a project. Instead of having one model where everyone directly saves all their changes, you work on your own copy of the project and choose an appropriate moment for uploading your changes to the repository and downloading changes from others.
+### 2.7 Update
 
-Uploading your changes is called 'committing'. A commit is accompanied by a user-supplied message describing the changes so that you can quickly see what has happened when reviewing commits. Retrieving changes by others is called 'updating' and, like commit, is an explicit action. It can be compared to 'refresh' in the old way of working. However, it does not happen automatically when you open a project.
+Updating is the action, invoked in the Desktop Modeler, which gets the latest revision of the current *development line* from the Team Server repository and merges the differences into the current working copy.
 
-The fact that commit and update are explicit actions helps you focus on your work without bumping into other people's work all the time. However, it is advisable to commit and update often. It is good to have commits that are small, understandable pieces of work. For example, fixing one bug in the system or implementing one feature. By committing and updating often you also reduce the chance of conflicts because you are confronted with changes by others more quickly.
+### 2.8 Commit
 
-The new version control feature does away with locking. Anyone can edit any document they like and renaming an item can no longer fail because of documents being locked anymore. The Modeler takes care of combining all changes. Only if changes are too close to each other conflicts can arise. This is the drawback of not having locking. We think the advantages of working independently outweigh this one disadvantage.
+Committing is the action, invoked in the Desktop Modeler, of sending all your changes to the *repository* and making a new *revision*.
 
-Since each revision is stored on the Team Server, you always have not one but dozens of backups of your project. You can always revert changes that you do not like or look at the project as it was a week ago. Together with the reliability and consistency improvements, you can develop with more confidence and we think that this is the best thing about version control.
+### 2.9 Development Line
 
-## Further reading
+Development of an app is done in a Development Line where a set of related changes is made. There are two types of Development Line: *Main Lines* and *Branch Lines.*
 
-*   [Concepts](version-control-concepts) - Learn about the terminology of version control.
-*   [Scenarios](version-control-scenarios) - See how version control is used in practice in different scenarios.
+#### 2.9.1 Main Line
+
+The Main Line is the initial development line for the app and is usually kept as the version which will be deployed to the production environment. Simple apps, and apps which do not require a high degree of collaboration, may only have a main line.
+
+#### 2.9.2 Branch Line
+
+A Branch line is a way of making an independent set of changes which can be tested away from the Main Line.
+
+See section 3, [Branches](#branches), for more information on how branch lines can be used.
+
+### 2.10 Tag
+
+A Tag is a way of identifying a commit in addition to the *revision* number. It is specified by the developer and has four parts:
+
+* Major: used to identify significant new functionality, a new user interface, or other important change
+* Minor: used to identify new functionality which augments the main function of the app
+* Patch: used to identify a *fix* to an error in a previously-released app
+* Revision: this is added automatically and is the revision number of the commit
+
+## 3 Branches{#branches}
+
+With more complex apps, you may want to manage your code in a more sophisticated way. For example, you may want to develop new features separately from the currently deployed version of your app so that you can fix any bugs without having to release all the new features.
+
+This is done using *branch lines*.
+
+### 3.1 Main Line
+
+All apps are developed along the main line (also referred to as *trunk*). Here you have all development happening along a single line, with all changes built upon the previous revision:
+
+![](attachments/version-control/image1.png)
+
+### 3.2 Branch Line
+
+When you add a branch line, you take a copy of an existing *revision* and work separately on that copy. Changes made to one branch do not impact any other branches.
+
+In Mendix each revision within a *repository* is given a unique version number. This means that version numbers given to revisions along any chosen branch line may not be consecutive.
+
+![](attachments/version-control/image2.png)
+
+### 3.3 Merging Branches{#merging-branches}
+
+You may have a branch line which will continue independently and never need to be combined with any other development lines. For example, you may create a branch for a particular release of your app and only ever use it to fix bugs in that release.
+
+On the other hand, you may want to add the features from one branch line into another development line. Two cases for doing this are:
+
+* you develop new features in a branch line and want to include them in your main development line
+* you want to take advantage of a bug fix which was made on another branch line
+
+You can merge a specific revision of a branch line into your current *working copy*. If, for example, you were working on the main line updated to revision 6, you can *merge* revision 5 from another branch line into your working copy. Then you can commit the result to create revision 7.
+
+![](attachments/version-control/image3.png)
+
+There may be conflicts during the merge, and these will have to be resolved before you can commit your app.
+
+Note that *errors* can be introduced by the *merge* process even if no conflicts are identified during the merge. Errors are inconsistencies which are flagged in the Modelers and will prevent the app from being deployed. They could lead to a revision not being deployable, so it is important to check for errors after you have done a merge.
+
+
+## 4 Main Documents in This Category
+
+* [Using Version Control in the Desktop Modeler](using-version-control-in-the-dm)
+* [Team Server](team-server)

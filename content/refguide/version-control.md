@@ -103,7 +103,7 @@ In Mendix each revision within a *repository* is given a unique version number. 
 
 ![](attachments/version-control/image2.png)
 
-### Merging Branches{#merging-branches}
+### 3.3 Merging Branches{#merging-branches}
 
 You may have a branch line which will continue independently and never need to be combined with any other development lines. For example, you may create a branch for a particular release of your app and only ever use it to fix bugs in that release.
 
@@ -119,3 +119,9 @@ You can merge a specific revision of a branch line into your current *working co
 There may be conflicts during the merge, and these will have to be resolved before you can commit your app.
 
 Note that *errors* can be introduced by the *merge* process even if no conflicts are identified during the merge. Errors are inconsistencies which are flagged in the Modelers and will prevent the app from being deployed. They could lead to a revision not being deployable, so it is important to check for errors after you have done a merge.
+
+
+## 4 Main Documents in This Category
+
+* [Version Control](version-control)
+* [Team Server](team-server)

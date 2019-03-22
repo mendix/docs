@@ -1,7 +1,7 @@
 ---
 title: "Using Version Control in the Desktop Modeler"
 category: "Version Control"
-#menu_order: 
+menu_order: 10
 description: "How to work with version control and how to resolve some issues which may arise"
 tags: ["Version Control", "Conflicts", "Resolve", "Merge", "Patch", "Branch", "Development"]
 # Renamed from version-control-scenarios
@@ -326,7 +326,7 @@ The Modeler takes care of some file management automatically. If you add or remo
 
 We advise you to always commit and update inside the Modeler because in this way useful metadata is added to your revisions. The Modeler has ways to recover from external updates or merges but it is best to not depend on that.
 
-### 9.1 TortoiseSVN and Subclipse
+### 9.1 TortoiseSVN and Subclipse{#tortoisesvn-subclipse}
 
 If you are doing more advanced changes to files, like adding Java actions or resources to your project, you will have to install TortoiseSVN on your computer and perform some operations yourself. You can download it for free at [http://tortoisesvn.tigris.org/](http://tortoisesvn.tigris.org/) (choose version 1.7).
 

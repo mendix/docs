@@ -24,7 +24,7 @@ For version control, the Mendix Modeler uses the [Subversion](https://subversion
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Have knowledge of Subversion
-* Have have access to an SVN server (for details, see [3 On-Premises Version Control Server](#3))
+* Have have access to an SVN server
 * You know the location of the SVN server – usually this is an address similar to an internet URL (for example, `https://svn.example.com:9876/repos/myapp`)
 * You possess credentials (username and password) that give you access to the SVN server
 

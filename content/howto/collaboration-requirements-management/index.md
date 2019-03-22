@@ -10,7 +10,7 @@ This category of how-to's presents information on using version control via the 
 ## 2 Main Documents in This Category
 
 * [Solving Known Version Control Issues](troubleshoot-version-control-issues)
-* [Troubleshoot Network Issues for Connecting to Team Server](troubleshoot-network-issues-for-team-server.md)
+* [Troubleshoot Network Issues for Connecting to Team Server](troubleshoot-network-issues-for-team-server)
 * [Contribute to a GitHub Repository](contribute-to-a-github-repository)
 * [Start Your Own GitHub Repository](starting-your-own-repository)
 * [Share the Development Database](sharing-the-development-database)

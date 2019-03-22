@@ -1,6 +1,6 @@
 ---
 title: "Team Server FAQ"
-category: "Team Server"
+parent: "team-server"
 ---
 
 

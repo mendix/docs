@@ -1,6 +1,6 @@
 ---
 title: "Using Version Control in the Desktop Modeler"
-parent: "version-control"
+category: "Version Control"
 #menu_order: 
 description: "How to work with version control and how to resolve some issues which may arise"
 tags: ["Version Control", "Conflicts", "Resolve", "Merge", "Patch", "Branch", "Development"]

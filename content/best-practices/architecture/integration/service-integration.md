@@ -83,7 +83,7 @@ The reason for this is that the system that needs the data is in charge of trigg
 
 Pushing data to another system is useful when there is validation in the destination (for example, to change the master data). If there is a validation error, the user should see it directly while in the process of changing the data so that they can correct it immediately.
 
-## 5 Database Integration & OData
+## 5 Database Integration & OData {#db-odata}
 
 Mendix can integrate directly with external databases using OSQL, OData, or SQL.
 

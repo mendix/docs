@@ -25,7 +25,7 @@ ETL tools are often used to keep DWH solutions updated. They can perform the ent
 * Using OData for more frequent and smaller updates
 * Using the Mendix datbase backup file
 
-## 3 File Integration & Transfer {#file-integration}
+## 2 File Integration & Transfer {#file-integration}
 
 File integration is highly relevant for many implementations, especially when it comes to images and PDFs (for example, marketing or instruction manuals). Files are also used to extract data from one app and later import it into another app, and of course for backup-and-restore.
 
@@ -46,9 +46,9 @@ In simple instances and smaller files, a REST call is enough. Considering other 
 
 For many-to-many file transfers, MFT can be an option. At a small scale, this function can even be built as a Mendix microservice specializing in this.
 
-## 4 Batch Processing, Export& Import {#export-import}
+## 3 Batch Processing, Export & Import {#export-import}
 
-Even in real time, file integration and batch processing remain relevant. Batch processing runs a large set of data at a certain moment. For example, interfaces towards data warehousing and business intelligence are often bulk- and/or snapshot-oriented. The same is true for initial loads of systems or the distribution of reference data.
+Even in real time, file integration and batch processing remain relevant. Batch processing runs a large set of data at a certain moment. For example, interfaces towards data warehousing (DWH) and business intelligence (BI) are often bulk- and/or snapshot-oriented. The same is true for initial loads of systems or the distribution of reference data.
 
 Other business processes remain periodic. For example, salary payments, interest calculations, and even monitoring solutions typically have an agent that batches up some data before sending events with many records in order to save on processing power.
 
@@ -58,26 +58,26 @@ One advantage of batch processing is that systems are decoupled, which means the
 
 Files can be read remotely or copied back to the app file space first. This should be based on how close the apps are on the network as well as on the size of the data and any other restrictions that may exist.
 
-START: The most common format is [CSV](csv) import and export, which also works well with Excel integration. The [Excel Importer](https://appstore.home.mendix.com/link/app/72/) module in the Mendix App Store is one of the most commonly used modules of all.
+The most common format is [CSV](csv) import and export, which also works well with Excel integration. The [Excel Importer](https://appstore.home.mendix.com/link/app/72/) module in the Mendix App Store is a popular and useful module.
 
-When there are text fields in the data, there should be more complex field separators than commas, and to and from legacy systems one can see fixed-length fields which requires a Microflow to be built to read the data correctly using character position.
+When there are text fields in the data, there should be more complex field separators than commas. In addition, you can see fixed-length fields in to-and-from legacy systems. Such a scenario requires building a microflow to read the data correctly using character position.
 
-![](attachments/batch-file-integration/2a018208f33d503a55c14c8bb0c1430f.png)
+This diagram shows the three main steps of batch processing – export, move, and import file:
 
-The figure shows the main 3 steps: Export, Move and Import File. Batch processing can involve all 3 steps or only be related to an Export or an Import. There are ETL solutions that can perform all three steps and add data mapping in the middle.
+![](attachments/batch-file-integration/export-import.png)
 
-Integration to DWH and BI
--------------------------
+Batch processing can involve all three steps, or it may only be related to an export or import. There are extract-transform-load (ETL) solutions that can perform all three steps and add data mapping in the middle.
 
-DWH and BI solutions often have some kind of ETL solution that allows the DWH team to stage data, compare the new data with the existing data, do validation and transformation and finally update the core tables of the DWH solution. The Staging area of DWH solutions often follow the data-model of the source system 
+## 4 Integration to DWH & BI
 
-The figure below shows the three most used methods: OData, Files or DB back-up:
+DWH and BI solutions often have some kind of ETL solution that allows the DWH team to stage data, compare new data with existing data, do validation and transformation, and finally update the core tables of the DWH solution. The staging area of DWH solutions often follow the data model of the source system.
 
-![](attachments/batch-file-integration/45ff3bd109b3b8534ddb3f99d8596943.png)
+This diagram presents the three most used methods for such a solution: OData, Files or DB back-up:
 
-The requirement is often to export certain tables or parts of the data, which ETL/DWH combines with a lot of other data inside the DWH. In that case a File interface is a good choice. It is simple to build, it rarely changes, and there is full decoupling of the solutions. I.e. technically the systems are not directly connected, and functionally there is an agreed format in the middle that usually can stay stable.
+![](attachments/batch-file-integration/dwh.png)
 
-OData is a better choice if the requirement is to collect data close to real-time, which is more a BI solution or Business dashboard, or something that uses statistical data in real-time to fine-tune processes. BI can poll e.g. every 5 minutes for changes, see *OData and DB integration* \<link\>. It requires the BI solution to have a direct link to the App, and to avoid DB changes in the Mendix App having impact on the contracts it is recommended to use a DB view in Mendix.
+Exporting certain tables or parts of the data is often required, and ETL/DWH combines this with a lot of other data inside the DWH. In that case, a file interface is a good choice, as it is simple to build and rarely changes, and there is full decoupling of the solutions. This means that technically the systems are not directly connected, and functionally there is an agreed format in the middle that can usually stay stable.
 
-Some DWH solutions want *all* data from an App. In other cases, there are complex relations between the objects with several many-to-many relations that need to be intact when arriving in the DWH. This may require many Files or OData connections, while the DWH still has complexity in re-storing consistency of the data. If this is the requirement the ETL/DWH solution can use the Mendix DB back-up of the App, which contains all data with all relations fully intact. Naturally with sensitive data one must trust the DWH team to have the same 
-security level that the App itself provides.
+OData is a better choice if the requirement is to collect data close to real-time. This may resemble a BI solution, business dashboard, or something that uses statistical data in real-time to fine-tune processes. For example, BI can poll every 5 minutes for changes (for more information, see the [Database Integration & OData](service-integration#db-odata) section of *Service Integration*). This requires the BI solution to have a direct link to the app. In addition, to avoid database changes in the Mendix app impacting the contracts, using a database view in Mendix is recommended.
+
+Some DWH solutions want *all* the data from an app. In some cases, there are complex relations between the objects with several many-to-many relations that need to be intact when arriving in the DWH. This may require many files or OData connections, while the DWH still has complexity in re-storing the consistency of the data. If this is required, the ETL/DWH solution can use the Mendix database backup of the app, which will contain all data with all relations fully intact. Naturally, with sensitive data, you must trust the DWH team to have the same security level that the app itself provides.

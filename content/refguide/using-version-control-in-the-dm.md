@@ -222,7 +222,7 @@ If you want to add some functionality to a deployed application or you want to f
 4. Testing that things work as intended.
 5. Create a new deployment archive with a higher version number (increase patch or minor version).
 
-{{% alert type="success" %}}
+{{% alert type="info" %}}
 We advise you to merge the fixed maintenance branch into the main line quickly, if required. If the merge is too complicated to be made automatically, because the main line has changed too much, you will know how to apply the fix by hand to the main line as the changes will still be fresh in your mind.
 
 Of course, not all maintenance fixes need to be merged to the main line. Sometimes, it is a fix of something that was completely redesigned or eliminated in the main line. In this case, merging is unnecessary.

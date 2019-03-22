@@ -123,5 +123,5 @@ Note that *errors* can be introduced by the *merge* process even if no conflicts
 
 ## 4 Main Documents in This Category
 
-* [Version Control](version-control)
+* [Using Version Control in the Desktop Modeler](using-version-control-in-the-dm)
 * [Team Server](team-server)

@@ -34,39 +34,41 @@ A typical use-case is if a company has 10 business lines with all different orde
 These are a few of the main ways the central data pattern is used:
 
 * **Operational data store (ODS)** – This combines the same type of data from different processes and is used in operational processes
-  * For details, see the [Operational Data Stores (ODS)](#ods) section below
+	* For details, see the [Operational Data Stores (ODS)](#ods) section below
 * **DWH** – This is used for combining all types of data from the company and providing data for statistics, reporting, and business intelligence (BI)
-  * For details, see the [Operational & Data Warehouse Data](#owd) section below
+	* For details, see the [Operational & Data Warehouse Data](#owd) section below
 * **Data lakes** – These have been popular recently as a Hadoop-style DWH good for statistics, reporting, and BI
-  * Data Lakes should not provide operational data, since the time stamp of combined data may be different
-  * For details, see the [Operational & Data Warehouse Data](#owd) section below
+	* Data Lakes should not provide operational data, since the time stamp of combined data may be different
+	* For details, see the [Operational & Data Warehouse Data](#owd) section below
 * **BI solutions** – These extract data from a DWH or data lake, for example
-  * This is often statistical data for management overviews, machine learning, or AI, or it is used to fine-tune processes in smart Mendix apps
-  * For more information, see the [Integration to DWH & BI](batch-file-integration#int) section of *Batch-File Integration*
+	* This is often statistical data for management overviews, machine learning, or AI, or it is used to fine-tune processes in smart Mendix apps
+	* For more information, see the [Integration to DWH & BI](batch-file-integration#int) section of *Batch File Integration*
 * **Extract-transform-load (ETL) solutions** – These are usually used for integration towards DWH solutions
-  * They are beneficial for massive data volumes and can compare new data with previous loads 
-  * For more information, see the [Integration to DWH & BI](batch-file-integration#int) section of *Batch-File Integration*
+	* They are beneficial for massive data volumes and can compare new data with previous loads 
+	* For more information, see the [Integration to DWH & BI](batch-file-integration#int) section of *Batch File Integration*
 
 ## 3 Operational Data Stores (ODS)  {#ods}
 
-START: If the integration layer in the middle stores and combines business data before re-distributing it to other parties, it is a “central data” integration pattern, often referred to as Operational Data Store (ODS).
+If the integration layer in the middle stores and combines business data before re-distributing it to other parties, it is a central data integration pattern, often referred to as an ODS.
 
-Mendix Apps are often used for ODS solutions, since it is easy to integrate to several disparate systems, easy to store the data and easy to manage any errors in the integration by creating human workflow for it.
+Mendix apps are often used for ODS solutions, since it is easy to integrate to several disparate systems, store the data, and manage any errors in the integration by creating a human workflow for it.
 
-In the figure below there are many business lines with different Ordering systems, but there is also three different systems that need to search between the entire set of orders and give overviews of current orders across business lines. The decision was made to specialize a Microservice in the tasks of:
+In this diagram, there are many business lines with different ordering systems, but there are also three different systems that need to search between the entire set of orders and give overviews of the current orders across business lines:
 
-1.  Collect all relevant orders 
-2.  Provide good views and searches on the total set of orders.
+![](attachments/central-data/ods.png)
 
-![](attachments/central-data/52d5c72ddfe5c64bcba80ee804c771b4.png)
+The decision was made to specialize a microservice for the following tasks:
 
-ODS solutions are supposed to combine data, but if they try to do too many things they become slow to change and manage. It is wise to have a limited area of scope for an ODS.
+* Collecting all relevant orders 
+* Provoiding good views and searches on the total set of orders
 
-Rather create another ODS when it gets difficult to provide flexibility for more than one purpose. E.g. an Orders ODS can send on overview ordering information to the Customer ODS, which means they both can evolve autonomously. 
+ODS solutions are supposed to combine data, but if they try to do too many things, they become slow to change and manage. It is wise to have a limited area of scope for an ODS.
+
+You should create another ODS when it gets difficult to provide flexibility for more than one purpose. For example, an orders ODS can send overview ordering information to a customer ODS, which means they can both evolve autonomously.
 
 ## 4 Operational & Data Warehouse Data {#owd}
 
-It’s good to keep operational data flows separate from the statistical, BI and DWH data, unless using statistics or historical data as *reference data* in operational flows. The only patterns that should *provide* operational data is the ODS, and in some cases ETL solutions used operationally.
+START: It’s good to keep operational data flows separate from the statistical, BI and DWH data, unless using statistics or historical data as *reference data* in operational flows. The only patterns that should *provide* operational data is the ODS, and in some cases ETL solutions used operationally.
 
 Data Lakes were recently popular as an enterprise wide Hadoop style DWH solution that attempts to double as an enterprise wide ODS. But it’s an almost impossible undertaking to make this work nicely. Snap-shot type data used for statistics makes a slow and un-reliable source for operational information.
 

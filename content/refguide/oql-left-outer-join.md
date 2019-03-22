@@ -20,3 +20,13 @@ The path Crm.Customer/Crm.Customer_Address/Crm.Address defines a path from the e
 
 `ON <constraint>`
 Constrains the specified entity in the JOIN component of the FROM clause. The constraint syntax is similar as those of the WHERE clause. Only the entities and from-aliases from the current JOIN element and each previous one can be used in the constraint.
+
+**Example 1**
+Using a left (outer) join to get records of table A that have no association in table B.
+Say you have Entities 'Customer' and 'Order' where a customer can have an association to multiple orders. You want to retrieve all Customers that have no Order at all.
+
+    from MyModule.Customer
+    left outer join Customer/MyModule.Customer_Order/MyModule.Order as Order
+    where Order/ID is null
+    select Customer/Name as Name,
+    Customer/<anyotherattribute> as <anyotherattribute>

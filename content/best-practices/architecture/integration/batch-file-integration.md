@@ -1,5 +1,5 @@
 ---
-title: "Batch-File Integration"
+title: "Batch File Integration"
 parent: "integration-use-cases"
 menu_order: 6
 draft: true
@@ -68,7 +68,7 @@ This diagram shows the three main steps of batch processing – export, move, an
 
 Batch processing can involve all three steps, or it may only be related to an export or import. There are extract-transform-load (ETL) solutions that can perform all three steps and add data mapping in the middle.
 
-## 4 Integration to DWH & BI
+## 4 Integration to DWH & BI {#int}
 
 DWH and BI solutions often have some kind of ETL solution that allows the DWH team to stage data, compare new data with existing data, do validation and transformation, and finally update the core tables of the DWH solution. The staging area of DWH solutions often follow the data model of the source system.
 

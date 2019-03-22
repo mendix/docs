@@ -14,7 +14,7 @@ An example of a consistency error is when you do not specify the entity property
 
 ## 2 List View Consistency Errors 
 
-If you do not configure a data source for a [list view](page-editor-data-view-list-view-wm#list-view-properties) properly, you will get a consistency error. 
+If you do not configure a data source for a [list view](page-editor-data-view-list-view#list-view-properties) properly, you will get a consistency error. 
 
 The scheme below shows that the data source of the list view has been set to **Database**, but the specific entity that needs to be retrieved from the database has not been set. This results in a consistency error.![List View Errors Cause](attachments/consistency-errors-pages-wm/wm-list-view-error.png)
 
@@ -28,7 +28,7 @@ The table below describes the most common errors you can come across when config
 
 ## 3 Data View Consistency Errors 
 
-Not configuring a data source for a [data view](page-editor-data-view-list-view-wm#data-view-properties) in a proper way results in consistency errors. For example, you selected a list widget as the data source, but you have not selected the specific list you would like the data view to listen to.
+Not configuring a data source for a [data view](page-editor-data-view-list-view#data-view-properties) in a proper way results in consistency errors. For example, you selected a list widget as the data source, but you have not selected the specific list you would like the data view to listen to.
 
 {{% image_container width="350" %}}![Data View Properties Not Configured](attachments/consistency-errors-pages-wm/wm-data-view-error.png)
 {{% /image_container %}}
@@ -56,7 +56,7 @@ Possible errors that you can get when a page is expecting a context that is unav
 
 When a page expects a context that is not passed to it from another page or a microflow, you will get consistency errors. 
 
-Let us study an example: the **Customers** page contains a list view with a list of all customer names (**Customer** is set as **Entity** in the **Data Source** properties), and a **Details** button outside of the list view (placed in a [container](page-editor-widgets-layouts-wm#container-overview) only). The **Details** button opens a **Customer Details** page when a user clicks it (the **On Click Action** for the button is set to **Page** and the **Create Object** option is disabled). 
+Let us study an example: the **Customers** page contains a list view with a list of all customer names (**Customer** is set as **Entity** in the **Data Source** properties), and a **Details** button outside of the list view (placed in a [container](page-editor-widgets-layouts#container-overview) only). The **Details** button opens a **Customer Details** page when a user clicks it (the **On Click Action** for the button is set to **Page** and the **Create Object** option is disabled). 
 
 ![Button Properties on the Customers Page](attachments/consistency-errors-pages-wm/wm-customers-page.png)
 
@@ -127,7 +127,7 @@ To fix this error you can either place a button within a list view that will pas
 
 ## 5 Input Elements Consistency Errors
 
-The most common errors for [input elements](page-editor-widgets-input-elements-wm) (such as, a text box, a drop-down, a check box, etcetera) , their causes, and ways to fix them are described in the table below. 
+The most common errors for [input elements](page-editor-widgets-input-elements) (such as, a text box, a drop-down, a check box, etcetera) , their causes, and ways to fix them are described in the table below. 
 
 | Text in the Checks Panel                                     | Cause of an Error                                            | Way to Fix                                                   |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -136,9 +136,9 @@ The most common errors for [input elements](page-editor-widgets-input-elements-w
 
 ## 6 Image Widgets Consistency Errors
 
-The most common consistency errors for [static image widgets](page-editor-widgets-images-wm) can occur when you place an image widget on a page, but do not select an actual image for it. 
+The most common consistency errors for [static image widgets](page-editor-widgets-images) can occur when you place an image widget on a page, but do not select an actual image for it. 
 
-[Dynamic images](page-editor-widgets-images-wm) need to be placed inside a data container (a data view or a list view) and an entity should be selected for them. 
+[Dynamic images](page-editor-widgets-images) need to be placed inside a data container (a data view or a list view) and an entity should be selected for them. 
 
 {{% image_container width="350" %}}![Dynamic Image Properties](attachments/consistency-errors-pages-wm/wm-dynamic-image-properties.png)
 {{% /image_container %}}
@@ -153,7 +153,7 @@ Errors for static and dynamic images are described in the table below.
 
 ## 7 On Click Action Consistency Errors 
 
-You can specify an **On Click Action** for different widgets, for example, for buttons or images. For more details about on click actions, see [Events Section in Widgets of the Web Modeler](page-editor-widgets-events-section-wm).
+You can specify an **On Click Action** for different widgets, for example, for buttons or images. For more details about on click actions, see [Events Section in Widgets of the Web Modeler](page-editor-widgets-events-section).
 
 The most common consistency errors appear when you do not configure the on click action entirely. For example, you select a microflow as an on click action, but do not select the microflow itself. 
 
@@ -163,7 +163,7 @@ To fix the consistency errors, finish configuring the on click action (for examp
 
 ##  8 Read More
 
-* [Page Editor in the Web Modeler](page-editor-wm)
+* [Page Editor in the Web Modeler](page-editor)
 * [Navigation Consistency Errors in the Web Modeler](consistency-errors-navigation-wm)
 * [Microflow Editor Consistency Errors in the Web Modeler](consistency-errors-microflows-wm)
 * [Checks in the Web Modeler](checks-wm)

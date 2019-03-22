@@ -120,7 +120,7 @@ The **Client Activities** are described in the table below.
 | Activity                            | Description                                                  |
 | ----------------------------------- | ------------------------------------------------------------ |
 | [Close Page](/refguide/close-page)         | This activity closes the currently open page.                |
-| [Show Home Page](/refguide/show-home-page) | The **Show Home Page** action navigates to the home page for the current user. It goes to the same page as the user goes to after signing in and respects role-based home pages. For details on setting the home page, see [Navigation Document in the Web Modeler](navigation-wm). |
+| [Show Home Page](/refguide/show-home-page) | The **Show Home Page** action navigates to the home page for the current user. It goes to the same page as the user goes to after signing in and respects role-based home pages. For details on setting the home page, see [Navigation Document in the Web Modeler](navigation). |
 | [Show Message](/refguide/show-message)     | With the **Show Message** action you can show a blocking or non-blocking message to the user. (Non-blocking message lets users continue their work in the app with the pop-up open, while the blocking message does not let the user continue work until the pop-up window is closed. ) |
 | [Show Page](/refguide/show-page)           | With this action you can show a page to the end user.        |
 

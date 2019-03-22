@@ -1,6 +1,6 @@
 ---
 title: "Input Element Widgets in the Web Modeler"
-parent: "page-editor-widgets-wm"
+parent: "page-editor-widgets"
 description: "Describes input widgets in the Mendix Web Modeler."
 menu_order: 20
 tags: ["web modeler", "page editor", "input widgets", "widgets"]
@@ -8,11 +8,11 @@ tags: ["web modeler", "page editor", "input widgets", "widgets"]
 
 ## 1 Introduction 
 
-**Input Elements** are [widgets](page-editor-widgets-wm) in the Web Modeler that are typically used to allow end-users enter or edit data.  
+**Input Elements** are [widgets](page-editor-widgets) in the Web Modeler that are typically used to allow end-users enter or edit data.  
 
 **Input Elements** can only function inside a data container (a list view or a data view). You can either place widget in an existing data container; or click **Wrap with a new data view** in **Properties** to create a data view automatically and place an input element inside it. 
 
-{{% image_container width="350" %}}![](attachments/page-editor-widgets-input-elements-wm/wm-wrap-in-data-view.png)
+{{% image_container width="350" %}}![](attachments/page-editor-widgets-input-elements/wrap-in-data-view.png)
 {{% /image_container %}}
 
 ## 2 Input Elements Overview
@@ -31,7 +31,7 @@ You can find the description of input elements available in the Web Modeler in t
 
 {{% alert type="info" %}}
 
-Apart from the standard input widgets, you can also [download widgets from the Mendix App Store](https://appstore.home.mendix.com/index3.html) to your app. For more information, see section [4 Widgets by Origin](page-editor-widgets-wm#widgets-by-origin) in *Widgets in the Web Modeler*.
+Apart from the standard input widgets, you can also [download widgets from the Mendix App Store](https://appstore.home.mendix.com/index3.html) to your app. For more information, see section [4 Widgets by Origin](page-editor-widgets#widgets-by-origin) in *Widgets in the Web Modeler*.
 
 {{% /alert %}}
 
@@ -83,9 +83,9 @@ Specific properties of the input elements are described in the table below:
 
 ## 4 Design Section {#input-elements-design}
 
-For information on the **Design** section and its properties, see [Design Section in Widgets of the Web Modeler](page-editor-widgets-design-section-wm).
+For information on the **Design** section and its properties, see [Design Section in Widgets of the Web Modeler](page-editor-widgets-design-section).
 
 ## 5 Read More
 
-* [Page Editor in the Web Modeler](page-editor-wm) 
-* [Widgets in the Web Modeler](page-editor-widgets-wm)
+* [Page Editor in the Web Modeler](page-editor) 
+* [Widgets in the Web Modeler](page-editor-widgets)

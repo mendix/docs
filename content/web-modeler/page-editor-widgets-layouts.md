@@ -1,7 +1,7 @@
 ---
 
 title: "Layout Widgets in the Web Modeler"
-parent: "page-editor-widgets-wm"
+parent: "page-editor-widgets"
 description: "Describes layout widgets in the Mendix Web Modeler."
 menu_order: 60
 tags: ["web modeler", "page editor", "layout", "layout widgets", "widgets"]
@@ -22,18 +22,18 @@ There are three layout widgets:
 
 The **Layout Grid** is a widget that helps you to configure a page and make it responsive immediately. This means that a layout grid has a built-in behavior to show how a page will look like on different devices. Switch **Device** modes in the top bar to see how a page will be displayed on a phone, tablet or desktop.
 
-{{% image_container width="350" %}}![Device Modes](attachments/page-editor-widgets-layouts-wm/wm-device-modes.png)
+{{% image_container width="350" %}}![Device Modes](attachments/page-editor-widgets-layouts/device-modes.png)
 {{% /image_container %}}
 
 Layout grid contains [columns and rows](#columns-and-rows). 
 
 A row consists of items that are placed next to each other in a responsive (desktop) view. 
 
-![Row Example](attachments/page-editor-widgets-layouts-wm/wm-row-example.png)
+![Row Example](attachments/page-editor-widgets-layouts/row-example.png)
 
 A column is a cell inside a row. You can place one or several elements inside a column, for example, you can place two buttons inside it.
 
-{{% image_container width="400" %}}![Column Example](attachments/page-editor-widgets-layouts-wm/wm-column-example.png)
+{{% image_container width="400" %}}![Column Example](attachments/page-editor-widgets-layouts/column-example.png)
 {{% /image_container %}}
 
 Use a column to align items in a row.  For more information on rows and columns, see section [2.2 Row and Column Properties](#columns-and-rows). 
@@ -44,13 +44,13 @@ Layout grid properties consist of the following sections:
 
 * [Expand](#expand-section) 
 * [General](#general-section)
-* [Design](page-editor-widgets-design-section-wm)
+* [Design](page-editor-widgets-design-section)
 
 #### 2.1.1 Expand Section {#expand-section}
 
 The **Expand** section > **Add Row** allows you to add a row above or below the selected one to create more space to place widgets in. 
 
-{{% image_container width="300" %}}![Expand Section](attachments/page-editor-widgets-layouts-wm/wm-layout-grid-expand-row.png)
+{{% image_container width="300" %}}![Expand Section](attachments/page-editor-widgets-layouts/layout-grid-expand-row.png)
 {{% /image_container %}}
 
 To add a row, select a row in the layout grid and click one of the buttons in **Add Row**. A row identical to the selected one will be inserted.
@@ -67,7 +67,7 @@ The **General** section of the layout grid contains the **Full Width** property.
 
 #### 2.1.3 Design Section
 
-For information on the **Design** section and its properties, see [Design Section in Widgets of the Web Modeler](page-editor-widgets-design-section-wm).
+For information on the **Design** section and its properties, see [Design Section in Widgets of the Web Modeler](page-editor-widgets-design-section).
 
 ### 2.2 Row and Column Properties {#columns-and-rows}
 
@@ -76,7 +76,7 @@ For information on the **Design** section and its properties, see [Design Sectio
 * [Expand](#expand-section) 
 * [Row Layout](#row-layout)
 
-{{% image_container width="300" %}}![Row and Column Properties](attachments/page-editor-widgets-layouts-wm/wm-row-and-column-sections.png)
+{{% image_container width="300" %}}![Row and Column Properties](attachments/page-editor-widgets-layouts/row-and-column-sections.png)
 {{% /image_container %}}
 
 #### 2.2.1 Expand Section
@@ -95,27 +95,27 @@ In the **Row Layout** section you can change the way columns in a row are arrang
 
 In the example below, you can see that you can select different row layouts for different types of devices and check the way the layout is shown in your app. 
 
-![Row Layouts for Different Devices](attachments/page-editor-widgets-layouts-wm/wm-row-layout-scheme.png)
+![Row Layouts for Different Devices](attachments/page-editor-widgets-layouts/row-layout-scheme.png)
 
 ## 3 Container Overview {#container-overview}
 
 A **Container** is used as a layout element where you can place a widget or a group of widgets and simultaneously style, drag or delete them. For example, you can place a section title and input widgets for filling out program's details in one container, and subsequently reposition the whole container at once to a different location on the page. 
 
-{{% image_container width="400" %}}![Container Example](attachments/page-editor-widgets-layouts-wm/wm-container.png)
+{{% image_container width="400" %}}![Container Example](attachments/page-editor-widgets-layouts/container.png)
 {{% /image_container %}}
 
-Container properties consist of the **Design** section. For information, see [Design Section in Widgets of the Web Modeler](page-editor-widgets-design-section-wm).
+Container properties consist of the **Design** section. For information, see [Design Section in Widgets of the Web Modeler](page-editor-widgets-design-section).
 
 ## 4 Group Box Overview {#group-box-overview}
 
 A group box is used to group widgets together. The group box can be configured to collapse or expand dynamically with all the elements inside it. 
 
-{{% image_container width="400" %}}![Group Box Example](attachments/page-editor-widgets-layouts-wm/wm-group-box.png)
+{{% image_container width="400" %}}![Group Box Example](attachments/page-editor-widgets-layouts/group-box.png)
 {{% /image_container %}}
 
 ### 4.1 Group Box Properties
 
-Group box properties consist of the **General** section and the **Design** section. For information on the **Design** section and its properties, see [Design Section in Widgets of the Web Modeler](page-editor-widgets-design-section-wm).
+Group box properties consist of the **General** section and the **Design** section. For information on the **Design** section and its properties, see [Design Section in Widgets of the Web Modeler](page-editor-widgets-design-section).
 
 Properties available in the **General** section are described in the table below.
 
@@ -129,7 +129,7 @@ Properties available in the **General** section are described in the table below
 
 A tab container is a container that is used to show information categorized into tabs. This can be useful if the amount of information that you would like to display is larger than the amount of space on the screen. For example, you can show a list of customers on one tab, and orders on the other one. 
 
-{{% image_container width="400" %}}![Tab Container Example](attachments/page-editor-widgets-layouts-wm/wm-tab-container-example.png)
+{{% image_container width="400" %}}![Tab Container Example](attachments/page-editor-widgets-layouts/tab-container-example.png)
 {{% /image_container %}}
 
 You can place a widget or a group of widgets inside each tab and configure information in them separately. 
@@ -140,17 +140,17 @@ In the **General** section, you can configure the following properties:
 
 *  **Tabs** – use radio buttons to switch from one tab to another; click the tab and drag it to change the order of tabs; click the **Edit** icon to open the tab properties and configure it (for more information, see section [5.3 Tab Properties](#tab-properties))
 
-	{{% image_container width="300" %}}![](attachments/page-editor-widgets-layouts-wm/wm-tab-container-tabs-property.png)
+	{{% image_container width="300" %}}![](attachments/page-editor-widgets-layouts/tab-container-tabs-property.png)
 	{{% /image_container %}}
 
 *  **Add New Tab** – adds a new tab to your tab container; tab properties will open automatically (for more information, see section [5.3 Tab Properties](#tab-properties))
 
-	{{% image_container width="300" %}}![](attachments/page-editor-widgets-layouts-wm/wm-add-new-tab.png)
+	{{% image_container width="300" %}}![](attachments/page-editor-widgets-layouts/add-new-tab.png)
 	{{% /image_container %}}
 
 ### 5.2 Tab Container Design Properties
 
-For information on the **Design** section and its properties, see [Design Section in Widgets of the Web Modeler](page-editor-widgets-design-section-wm).
+For information on the **Design** section and its properties, see [Design Section in Widgets of the Web Modeler](page-editor-widgets-design-section).
 
 ### 5.3 Tab Properties {#tab-properties}
 
@@ -160,10 +160,10 @@ Each tab has the following properties:
 
 *  **Default Tab** – defines which tab is active when the page is opened. If no tab is set as the default one, the first tab page will be shown. By default, none of the tabs are set as a default tab.
 
-	{{% image_container width="300" %}}![](attachments/page-editor-widgets-layouts-wm/wm-tab-properties.png)
+	{{% image_container width="300" %}}![](attachments/page-editor-widgets-layouts/tab-properties.png)
 	{{% /image_container %}}
 
 ## 6 Read More
 
-* [Page Editor in the Web Modeler](page-editor-wm) 
-* [Widgets in the Web Modeler](page-editor-widgets-wm)
+* [Page Editor in the Web Modeler](page-editor) 
+* [Widgets in the Web Modeler](page-editor-widgets)

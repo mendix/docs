@@ -30,7 +30,7 @@ As all Web Modeler changes are auto-saved, the collaborative development is indi
 
 1. **Committing Your Changes** – if your team members are working on the same development line in the Desktop Modeler and they click **Update**, your screen gets locked for a few moments while your changes are automatically committed to the Team Server and then applied to the Desktop Modeler. For more information on the collaborative development process in the Desktop Modeler, see section [4 Desktop Modeler Perspective]() in *Collaborative Development* in *Version Control*.
 
-   {{% image_container width="350" %}]![Committing Changes Dialog Box](attachments/general-collaborative-development/committing-changes.png)
+    {{% image_container width="350" %}}![Committing Changes Dialog Box](attachments/general-collaborative-development/committing-changes.png)
    {{% /image_container %}}
 
 2.  **Syncing Changes** – your screen gets locked for a few moments each time the Desktop Modeler users commit. <br/>

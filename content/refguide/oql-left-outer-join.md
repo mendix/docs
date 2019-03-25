@@ -17,7 +17,7 @@ LEFT [ OUTER ] JOIN entity_path [ ON <constraint> ]
 
 ```
 
-`*entity_path`
+`entity_path`
 
 This specifies the entity to join and the path from an earlier defined entity in the FROM clause to this entity.
 The path Crm.Customer/Crm.Customer_Address/Crm.Address defines a path from the earlier defined entity Crm.Customer to the new entity Crm.Address.

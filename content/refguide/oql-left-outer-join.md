@@ -14,7 +14,6 @@ The syntax is as following:
 
 ```
 LEFT [ OUTER ] JOIN entity_path [ ON <constraint> ]
-
 ```
 
 `entity_path`
@@ -33,10 +32,11 @@ In this scenario, you are using a left (outer) join to get the records in table 
 For example, you have the entities **Customer** and **Order**, where a customer can have an association to multiple orders. You want to retrieve all the customers that have no orders at all.
 
 ```
-from MyModule.Customer
-left outer join Customer/MyModule.Customer_Order/MyModule.Order as Order
-where Order/ID is null
-select Customer/Name as Name,
-Customer/<anyotherattribute> as <anyotherattribute>
+SELECT 
+  Customer/Name as Name,
+  Customer/<anyotherattribute> as <anyotherattribute>
+FROM MyModule.Customer
+  LEFT OUTER JOIN Customer/MyModule.Customer_Order/MyModule.Order as Order
+WHERE Order/ID IS NULL
 ```
 

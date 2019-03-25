@@ -80,3 +80,11 @@ This is a Mendix-specific scope that is used by internal Mendix applications as 
 ### 2.6 Change the Deployment Cloud Target of a Mendix Application Scope {#mx:app:cloudswitch}
 
 This is a Mendix-specific scope that is used by internal Mendix applications as well as by SAP and IBM (as strategic Mendix partners). This scope allows a website/application to change the platform to which an app will be deployed.
+
+### 2.7 Retrieve the stories and sprints in your project {#mx:app:stories:read}
+
+This scope is used with mendix platform api's. This scope allows the users to read stories and sprint details in your project.  
+
+### 2.8 Make changes to the stories and sprints in your project {#mx:app:stories:write}
+
+This scope is used with mendix platform api's. This scope allows the users to make changes to stories and sprint in your project.

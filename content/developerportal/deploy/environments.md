@@ -60,7 +60,10 @@ Next to the deployment package info, if you click **Details**, the following ite
 * Size of the package
 * Description of the package
 * A build output
-* An overview of the environments that are currently running on this deployment package
+
+{{% todo %}}[**Check whether this is true**]{{% /todo %}}
+
+* An overview of the environments that are currently running on this deployment package (not available for [flexible environments](mendix-cloud-deploy#flexible-environments))
 
 **Actions**
 

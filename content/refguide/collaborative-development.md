@@ -135,7 +135,9 @@ To create a new branch line, do the following:
 
 3.  In the **Create Branch Line** dialog window, set the following: <br/>
 
-	a. What line you are creating a new line from: the main line, a branch line, or a tagged version. For more information on these concepts, see section [2 Concepts](version-control#concepts) in *Version Control*. <br/> b. Select revision if needed. <br/>
+	a. What line you are creating a new line from: the main line, a branch line, or a tagged version. For more information on these concepts, see section [2 Concepts](version-control#concepts) in *Version Control*. <br/> 
+	
+	b. Select revision if needed. <br/>
 
 	c. Type the name of the new line. 
 

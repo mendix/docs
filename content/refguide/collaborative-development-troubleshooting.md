@@ -89,5 +89,5 @@ You can do one of the following:
 ## 7 Read More
 
 * [Version Control](version-control) 
-* [Collaborative Development in the Web Modeler](general-collaborative-development)
+* [Collaborative Development in the Web Modeler](/web-modeler/general-collaborative-development)
 * [Migration From the Sync Process to Collaborative Development](collaborative-development-migration)

@@ -78,6 +78,8 @@ If you click **Deploy**, the package from the team server will be transported to
 
 ### 2.2 Environments
 
+#### 2.2.1 Standard Licensed Environments
+
 ![](attachments/environments/deploy-environments.png)
 
 In this section, you have the an overview of all the available environments with the following details:
@@ -107,6 +109,12 @@ There are two actions you can take :
 * **Details** of the selected environment – information about the details available are documented here: [Details](environments-details)
 
 * **Transport to ...** – initiates the staging of an environment to the next stage: acceptance or production
+
+#### 2.2.2 Flexible Environments
+
+If your node supports flexible environments you will see a slightly different format for the list of environments.
+
+
 
 ### 2.3 Activity
 

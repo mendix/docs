@@ -13,7 +13,7 @@ Version Control allows you to manage your app development in two ways:
 
 Version control in Mendix is built on top of [Apache Subversion](https://subversion.apache.org/) and the concepts will be familiar to Subversion users. Mendix simplifies Subversion commands by building them into the Modelers and Developer Portal.
 
-## 2 Concepts
+## 2 Concepts {#concepts}
 
 ### 2.1 Team Server
 

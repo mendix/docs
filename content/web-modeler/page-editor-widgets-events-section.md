@@ -42,7 +42,7 @@ When you set the **On Click Action** to **Open Page**, you can enable the **Crea
 
 Let us study an example: you want to create a new customer by clicking the **New** button. This button will open a page where you can fill in a new customer's details and save them. However, the *Customer Details* page needs to get data first, in other words, it expects the object *Customer* to be passed to it. 
 
-{{% image_container width="350" %}}![Data View Expects the Customer Object](attachments/consistency-errors-pages-wm/wm-data-view-customer.png)
+{{% image_container width="350" %}}![Data View Expects the Customer Object](attachments/consistency-errors-pages/data-view-customer.png)
 {{% /image_container %}}
 
 Thus, when setting the on-click action of the **New** button to **Page**, you need to enable the **Create Object** option and select the **Customer** entity.

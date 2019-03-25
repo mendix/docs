@@ -30,15 +30,15 @@ The most common errors you can come across when configuring a domain model are d
 
 *  Delete behavior of an entity the association starts from is set to *Delete {name of entity} object(s) as well* and the delete behavior of an entity the association points to is set to *Delete {name of entity} object only if it is not associated with {name of other entity} object(s)*
 
-    ![Delete Behavior Error Example One](attachments/consistency-errors-domain-model-wm/wm-delete-behavior-error-example1.png)
+    ![Delete Behavior Error Example One](attachments/consistency-errors-domain-model/delete-behavior-error-example1.png)
 
 *  Delete behavior of the entity the association starts from is set to *Delete {name of entity} object only if it is not associated with {name of other entity} object(s)* and the delete behavior of the entity the association points to is set to *Delete {name of entity} object(s) as well*
 
-    ![Delete Behavior Error Example Two](attachments/consistency-errors-domain-model-wm/wm-delete-behavior-error-example2.png)
+    ![Delete Behavior Error Example Two](attachments/consistency-errors-domain-model/delete-behavior-error-example2.png)
 
 *  Delete behavior of both entities in association is set to *Delete {name of entity} object only if it is not associated with {name of other entity} object(s)*
 
-    ![Delete Behavior Error Example Three](attachments/consistency-errors-domain-model-wm/wm-delete-behavior-error-example3.png)
+    ![Delete Behavior Error Example Three](attachments/consistency-errors-domain-model/delete-behavior-error-example3.png)
 
 You can fix the delete behavior errors in one of following ways:
 
@@ -50,7 +50,7 @@ For more information on delete behavior, see section [4 Delete Behavior](domain-
 
 ## 3 Read More
 
-* [Page Editor Consistency Errors in the Web Modeler](consistency-errors-pages-wm)
-* [Navigation Consistency Errors in the Web Modeler](consistency-errors-navigation-wm)
-* [Microflow Editor Consistency Errors in the Web Modeler](consistency-errors-microflows-wm)
-* [Checks Overview in the Web Modeler](checks-wm)
+* [Page Editor Consistency Errors in the Web Modeler](consistency-errors-pages)
+* [Navigation Consistency Errors in the Web Modeler](consistency-errors-navigation)
+* [Microflow Editor Consistency Errors in the Web Modeler](consistency-errors-microflows)
+* [Checks Overview in the Web Modeler](checks)

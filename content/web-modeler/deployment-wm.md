@@ -89,15 +89,15 @@ The list below shows you the examples of the environment statuses you may see (n
 
 Deployment statuses are divided into the following ones:
 
-1.  If your project does not have [consistency errors](consistency-errors-wm), your application will be deployed and the dialog box with the information on the last deployment highlighted in green will be opened.  
+1.  If your project does not have [consistency errors](consistency-errors), your application will be deployed and the dialog box with the information on the last deployment highlighted in green will be opened.  
 
 	![Your App Has Consistency Errors](attachments/deployment-wm/wm-your-app-is-running-no-errors.png)
 
-2.  If your app has [consistency errors](consistency-errors-wm), you need to fix them first and then click the **Update** button again. If you do not click the **Update** button after solving consistency errors and click **View app**, the last successfully deployed version of your app will open without the recent changes. 
+2.  If your app has [consistency errors](consistency-errors), you need to fix them first and then click the **Update** button again. If you do not click the **Update** button after solving consistency errors and click **View app**, the last successfully deployed version of your app will open without the recent changes. 
 
 	![Last Publish Has Consistency Errors in the Web Modeler](attachments/deployment-wm/wm-app-has-errors.png)
 
-For more information on how to view consistency errors and to fix them , see [Checks Overview in the Web Modeler](checks-wm) and [Consistency Errors in the Web Modeler](consistency-errors-wm). 
+For more information on how to view consistency errors and to fix them , see [Checks Overview in the Web Modeler](checks) and [Consistency Errors in the Web Modeler](consistency-errors). 
 
 ## 5 Retrieving Your App Status {#retrieving-app-status}
 
@@ -125,5 +125,5 @@ For technical information for app administrators, see [Web Modeler Deployment Se
 
 ## 6 Read More
 
-* [Checks in the Web Modeler](checks-wm)
-* [Consistency Errors in the Web Modeler](consistency-errors-wm)
+* [Checks in the Web Modeler](checks)
+* [Consistency Errors in the Web Modeler](consistency-errors)

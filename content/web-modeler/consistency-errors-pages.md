@@ -16,7 +16,7 @@ An example of a consistency error is when you do not specify the entity property
 
 If you do not configure a data source for a [list view](page-editor-data-view-list-view#list-view-properties) properly, you will get a consistency error. 
 
-The scheme below shows that the data source of the list view has been set to **Database**, but the specific entity that needs to be retrieved from the database has not been set. This results in a consistency error.![List View Errors Cause](attachments/consistency-errors-pages-wm/wm-list-view-error.png)
+The scheme below shows that the data source of the list view has been set to **Database**, but the specific entity that needs to be retrieved from the database has not been set. This results in a consistency error.![List View Errors Cause](attachments/consistency-errors-pages/list-view-error.png)
 
 The table below describes the most common errors you can come across when configuring a list view,  causes of these errors, and ways to fix them. 
 
@@ -30,7 +30,7 @@ The table below describes the most common errors you can come across when config
 
 Not configuring a data source for a [data view](page-editor-data-view-list-view#data-view-properties) in a proper way results in consistency errors. For example, you selected a list widget as the data source, but you have not selected the specific list you would like the data view to listen to.
 
-{{% image_container width="350" %}}![Data View Properties Not Configured](attachments/consistency-errors-pages-wm/wm-data-view-error.png)
+{{% image_container width="350" %}}![Data View Properties Not Configured](attachments/consistency-errors-pages/data-view-error.png)
 {{% /image_container %}}
 
 The table below describes the most common errors you can come across when configuring a data view,  causes of these errors, and ways to fix them. 
@@ -50,7 +50,7 @@ Possible errors that you can get when a page is expecting a context that is unav
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | The selected page {Name of the page} expects an object of type {type of object}, which is not available here. | The page has a data view that expects an object of a particular type to be passed to it. This error occurs when the page is opened from another page, which does not have this object available. For a more detailed example, see section [4.1 Error Fix Example 1](#error-example-1). | Make sure that the object is passed to the page which has a configured data view on it. For more information, see section  [4.1 Error Fix Example 1](#error-example-1). |
 | The selected page {Name of page} expects an object of type X, which is not compatible with the object of type Y that is available here. | You have a widget (for example, a button) that opens a page. The page has a data view that expects an object of particular type to be passed to it. However, the widget is placed inside a data container with another type of object. For a detailed example, see section [4.2 Error Fix Example 2](#error-example-2). | Make sure that the button is placed in the correct data container and passes the correct type of object to the page. For more information, see section [4.2 Error Fix Example 2](#error-example-2). |
-| The selected {Name of the page} expects an object of type {type of object} and cannot be used as a home page. Change the page or use a microflow to provide the page with an object. | You have set a page that expects an object to be passed to it (for example, a page with a data view) as the home page. But by default the home page has no object that is passed to it, because it is the starting point for your user. For a more detailed example, see section [2.2 Error Fix When the Home Page Expects an Object](consistency-errors-navigation-wm#home-page-expects-an-object) in *Navigation Consistency Errors in the Web Modeler*. | Set a different  page as the home page. Alternatively, you can use a microflow that will open the home page and pass a specific object to it. For more information, see section [2.2 Error Fix When the Home Page Expects an Object](consistency-errors-navigation-wm#home-page-expects-an-object) in *Navigation Consistency Errors in the Web Modeler*. |
+| The selected {Name of the page} expects an object of type {type of object} and cannot be used as a home page. Change the page or use a microflow to provide the page with an object. | You have set a page that expects an object to be passed to it (for example, a page with a data view) as the home page. But by default the home page has no object that is passed to it, because it is the starting point for your user. For a more detailed example, see section [2.2 Error Fix When the Home Page Expects an Object](consistency-errors-navigation#home-page-expects-an-object) in *Navigation Consistency Errors in the Web Modeler*. | Set a different  page as the home page. Alternatively, you can use a microflow that will open the home page and pass a specific object to it. For more information, see section [2.2 Error Fix When the Home Page Expects an Object](consistency-errors-navigation#home-page-expects-an-object) in *Navigation Consistency Errors in the Web Modeler*. |
 
 ### 4.1 Error Fix Example 1 {#error-example-1}
 
@@ -58,16 +58,16 @@ When a page expects a context that is not passed to it from another page or a mi
 
 Let us study an example: the **Customers** page contains a list view with a list of all customer names (**Customer** is set as **Entity** in the **Data Source** properties), and a **Details** button outside of the list view (placed in a [container](page-editor-widgets-layouts#container-overview) only). The **Details** button opens a **Customer Details** page when a user clicks it (the **On Click Action** for the button is set to **Page** and the **Create Object** option is disabled). 
 
-![Button Properties on the Customers Page](attachments/consistency-errors-pages-wm/wm-customers-page.png)
+![Button Properties on the Customers Page](attachments/consistency-errors-pages/customers-page.png)
 
 However, the **Customer Details** page has a data view that expects an object *Customer* to be passed to it. In other words, this page needs to get data first to be able to display it. 
 
-{{% image_container width="350" %}}![Data View Expects the Customer Object](attachments/consistency-errors-pages-wm/wm-data-view-customer.png)
+{{% image_container width="350" %}}![Data View Expects the Customer Object](attachments/consistency-errors-pages/data-view-customer.png)
 {{% /image_container %}}
 
 As this object is not passed to it from the **Customers** page, you get a consistency error.
 
-![Example of Error When Context is Unavailable](attachments/consistency-errors-pages-wm/wm-object-error.png)
+![Example of Error When Context is Unavailable](attachments/consistency-errors-pages/object-error.png)
 
 As the **Details** button to the **Customers** page is outside a data container (a data view or a list view) it does not know which Customer (object) it should pass. The way of fixing this error depends on the following:
 
@@ -82,7 +82,7 @@ If you want the **Customer Details** page to open the details of a specific cust
 
 2.  Drag the **Details** button inside the list view.
 
-    {{% image_container width="350" %}}![List View Example](attachments/consistency-errors-pages-wm/wm-list-view-content.png)
+    {{% image_container width="350" %}}![List View Example](attachments/consistency-errors-pages/list-view-content.png)
     {{% /image_container %}}
 
 
@@ -96,7 +96,7 @@ If you want to create a new customer and fill in the customer's details on the *
 
 2. Open properties for the **Details** button > the **Events** section and enable the **Create Object** option.
 
-     {{% image_container width="350" %}}![Create Object Option Enabled](attachments/consistency-errors-pages-wm/wm-create-object-option-enabled.png)
+     {{% image_container width="350" %}}![Create Object Option Enabled](attachments/consistency-errors-pages/create-object-option-enabled.png)
      {{% /image_container %}}
 
 3. Set **Customer** as **Entity**.
@@ -111,7 +111,7 @@ If a widget opens a page and this widget is inside a data container of entity X,
 
 Let us study an example: you have a **New** button on the **Engineers** page that opens the **Tasks** page. 
 
-{{% image_container width="350" %}}![A Button on Engineers Page](attachments/consistency-errors-pages-wm/wm-engineers-page.png)
+{{% image_container width="350" %}}![A Button on Engineers Page](attachments/consistency-errors-pages/engineers-page.png)
 {{% /image_container %}}
 
 The button is placed inside a list view; the list view's data source is set to entity *Engineer* in **Properties** > **Data Source**.
@@ -120,7 +120,7 @@ The Tasks page has a data view on it, but the data view's data source is set to 
 
 This means that data view expects the object of type *SmartTask* passed to it, but the **Engineers** page is passing the object of type *Engineer*. As a result you get a consistency error.
 
-{{% image_container width="350" %}}![List View on the Tasks Page](attachments/consistency-errors-pages-wm/wm-tasks-page-list-view.png)
+{{% image_container width="350" %}}![List View on the Tasks Page](attachments/consistency-errors-pages/tasks-page-list-view.png)
 {{% /image_container %}}
 
 To fix this error you can either place a button within a list view that will pass the correct type of data to the page (place the button inside the list view and set its data source to entity *SmartTask*), or change the data source of the data view on the **Tasks** page to entity *Engineer*. 
@@ -140,7 +140,7 @@ The most common consistency errors for [static image widgets](page-editor-widget
 
 [Dynamic images](page-editor-widgets-images) need to be placed inside a data container (a data view or a list view) and an entity should be selected for them. 
 
-{{% image_container width="350" %}}![Dynamic Image Properties](attachments/consistency-errors-pages-wm/wm-dynamic-image-properties.png)
+{{% image_container width="350" %}}![Dynamic Image Properties](attachments/consistency-errors-pages/dynamic-image-properties.png)
 {{% /image_container %}}
 
 Errors for static and dynamic images are described in the table below. 
@@ -157,13 +157,13 @@ You can specify an **On Click Action** for different widgets, for example, for b
 
 The most common consistency errors appear when you do not configure the on click action entirely. For example, you select a microflow as an on click action, but do not select the microflow itself. 
 
-![On Click Action Error](attachments/consistency-errors-pages-wm/wm-on-click-action-error.png)
+![On Click Action Error](attachments/consistency-errors-pages/on-click-action-error.png)
 
 To fix the consistency errors, finish configuring the on click action (for example, for an on click action *Page*, select a particular page that should open), or change the on click action to another one. 
 
 ##  8 Read More
 
 * [Page Editor in the Web Modeler](page-editor)
-* [Navigation Consistency Errors in the Web Modeler](consistency-errors-navigation-wm)
-* [Microflow Editor Consistency Errors in the Web Modeler](consistency-errors-microflows-wm)
-* [Checks in the Web Modeler](checks-wm)
+* [Navigation Consistency Errors in the Web Modeler](consistency-errors-navigation)
+* [Microflow Editor Consistency Errors in the Web Modeler](consistency-errors-microflows)
+* [Checks in the Web Modeler](checks)

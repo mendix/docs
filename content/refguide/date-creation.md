@@ -3,10 +3,11 @@ title: "Date creation"
 parent: "expressions"
 ---
 
+Date-objects for a certain date can be created by using [parseDateTime](parse-and-format-date-function-calls). This takes a Date-string and a format-string as parameters and returns a Date-object. See the [parseDateTime](parse-and-format-date-function-calls) for more details.
 
-Dates can be created with the `dateTime` and `dateTimeUTC` functions. The difference between the two is that `dateTime` uses the calendar of the session used in this function call and `dateTimeUTC` uses the UTC calendar. The system session runs as UTC by default but this can be configured in the [project settings](project-settings).
+Date-variables of type string can be created with the `dateTime` and `dateTimeUTC` functions. The difference between the two is that `dateTime` uses the calendar of the session used in this function call and `dateTimeUTC` uses the UTC calendar. The system session runs as UTC by default but this can be configured in the [project settings](project-settings).
 
-These functions takes between one and 6 input parameters. These represent, in order:
+These functions takes between one and 6 input parameters and returns a string. These represent, in order:
 
 1.  years
     Type: Integer, four digits and greater than 1799
@@ -92,3 +93,4 @@ returns
 ```java
 "Mon Jan 01 01:01:01 CET 2007"
 ```
+

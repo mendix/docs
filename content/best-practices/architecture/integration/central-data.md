@@ -68,29 +68,31 @@ You should create another ODS when it gets difficult to provide flexibility for 
 
 ## 4 Operational & Data Warehouse Data {#owd}
 
-START: It’s good to keep operational data flows separate from the statistical, BI and DWH data, unless using statistics or historical data as *reference data* in operational flows. The only patterns that should *provide* operational data is the ODS, and in some cases ETL solutions used operationally.
+It is good to keep operational data flows separate from statistical, BI, and DWH data unless you are using statistics or historical data as reference data in operational flows. The only patterns that should provide operational data are the [ODS pattern](#ods) and, in some cases, ETL solutions used operationally.
 
-Data Lakes were recently popular as an enterprise wide Hadoop style DWH solution that attempts to double as an enterprise wide ODS. But it’s an almost impossible undertaking to make this work nicely. Snap-shot type data used for statistics makes a slow and un-reliable source for operational information.
+Data lakes have been popular as an enterprise-wide Hadoop-style DWH solution that attempts to double as an enterprise-wide ODS. However, it is an almost impossible undertaking to make this work nicely. Snapshot-type data used for statistics makes for a slow and unreliable source of operational information.
 
-A DWH per definition does not store operational data. Time-stamp differences in the incoming data and the methods used to merge it means that it cannot be used as a reliable source. On the other side of the DWH we get statistical data, metrics, reports or potentially snapshots of previous moments in time. This information can be used *in* operational processes to fine tune them.
+A DWH per definition does not store operational data. Time-stamp differences in the incoming data and the methods used to merge it means that DWH cannot be used as a reliable data source. However, on the other side of the DWH, you can get statistical data, metrics, reports, and snapshots of previous moments in time that can be used in operational processes to fine-tune them.
 
-E.g. for home-delivery we can keep track if someone responds at the door over time and decide to change delivery pattern based on this information. The fact that someone rarely is home is statistical data from DWH solutions, that changes rarely, but is used as reference data for routing delivery services. This pattern will evolve more with IoT and combined with AI becomes machine learning patterns.
+An example use case is a home delivery system in which you keep track of whether the recipients are answering their doors over time. You can then decide to change the delivery pattern based on this information. If a recipient is rarely home, that is statistical data from the DWH solution that may rarely change, but it can be used as reference data for routing delivery services. This pattern will evolve more with IoT, and when combined with AI, will be developed into machine-learning patterns.
 
-The figure shows a number of Apps in a process that share business events and to an Event manager, that knows the status of each process. The Event manager shares all data with a Data lake (or DWH) that processes the data into various data collections. One of those collections is sent to a Mendix App that manages that reference data and provides it back to three of the Apps that “learn” from the past results.
+This diagram presents a number of apps in a process that shares business events with an event manager that knows the status of each process:
 
-![](attachments/central-data/48fe3237dbd553aebca92faebf9fea51.png)
+![](attachments/central-data/owd.png)
 
-## 5 Small ODS and Large DWH
------------------------
+The event manager shares all the data with a data lake (or DWH), which processes the data into various data collections. One of those collections is sent to a Mendix app that manages that reference data and provides it back to three of the apps that “learn” from the past results.
 
-The other reason to keep operational data separate from DWH solutions is that Operational processes change often, and different business units need flexibility and autonomy from each other. Even if it seems like 2 use-cases need the same data, they may have *very* different needs when it comes to data-model and functionality.
 
-If different use-cases become difficult to combine easily, it can be better to have different ODS microservices covering each a reasonable scope, retaining flexibility and maintainability. ODS solutions are better as Microservices than as behemoths.
+## 5 Small ODS & Large DWH
 
-Data Lakes and DWH solutions on the other hand are large, enterprise wide, generic, incredibly complex and quite far from the people that work in the business. This is a set of attributes that make them very in-efficient to use for operational processes. The data flows slowly through. It is often enough to have an update every month in a report. All business units share the DWH, so inherently changing things will take time. A DWH is in a way a *necessary* Monolith.
+The other reason to keep operational data separate from DWH solutions is that operational processes change often, and different business units need flexibility and autonomy from each other. Even if it seems like two use cases need the same data, they may have very different needs when it comes to data models and functionality.
+
+If different use cases become difficult to easily combine, it may be better to have different ODS microservices covering each a reasonable scope in order to retain flexibility and maintainability. ODS solutions are better as microservices than as behemoths.
+
+However, data lakes and DWH solutions are large, enterprise-wide, generic, incredibly complex, and quite far from the people that work in the business. This set of attributes makes them inefficient for use in operational processes. The data flows through the system slowly, and it is often enough to update every month in a report. All the business units share the DWH, so changing things takes time. A DWH is in a way a "necessary" monolith.
 
 ## 6 Mendix for ODS
 
-ODS solutions are similar to a legacy adapter or Integration App \<link\>, in that they can collect and store data from one or more systems and provide them in an easier to use format or combined with data from other places.
+An ODS solution is similar to a legacy adapter or an integration app, in that it can collect and store data from one or more systems and provide the data in a format that is easier to use or that is combined with data from other places.
 
-Mendix is a very good choice for ODS solutions, having strong integration capability, UX for managing data or errors should need be, and very easy to create and maintain REST services for providing the data. For DWH we have no customer that tried to use Mendix. That is for other technologies to handle.
+Mendix is a good choice for ODS solutions because of its strong integration capabilities, UX for managing data and errors, and REST services that are easy to create and maintain for providing the data. There is no Mendix customer that has tried to use Mendix for DWH, because that is for other technologies to handle.

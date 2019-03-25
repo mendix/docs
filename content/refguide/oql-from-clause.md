@@ -7,7 +7,7 @@ parent: "oql"
 
 The `FROM` clause specifies the entities or other source from which the data must be retrieved. This clause starts with the `FROM` keyword, following by an entity name. To select data from other entities as well, add these entities via the `JOIN` keywords. This syntax is a little more strict than the official `SQL FROM` clause syntax.
 
-The syntax is as following:
+This is an example of the full syntax:
 
 ```
 FROM
@@ -34,12 +34,13 @@ This specifies another OQL query from which data must be retrieved. This will be
 ## 4 JOIN
 
 This specifies a path to entity to join into this query. There are four different types of JOINS supported:
- 1. INNER JOIN
- 2. LEFT OUTER JOIN
- 3. RIGHT OUTER JOIN
- 4. FULL JOIN
 
-The syntax is as following:
+* INNER JOIN
+* LEFT OUTER JOIN
+* RIGHT OUTER JOIN
+* FULL JOIN
+
+The syntax is as follows:
 
 ```
  { INNER | { { LEFT | RIGHT | FULL } [ OUTER ] } } JOIN
@@ -59,13 +60,13 @@ This constrains the specified entity in the `JOIN` part of the `FROM` clause. Th
 
 This part is optional. The system will generate the appropriate JOIN condition based on the specified `entity_path`.
 
-### 4.3 JOIN types
+### 4.3 JOIN Types
 
 #### 4.3.1 INNER JOIN
 
-An INNER JOIN is the most common join operation between entities and represents the default join type. The query compares each row of entity A with each row of entity B to find all the pairs of rows that have an association and satisfy the `JOIN` predicate. If the association exists and the `JOIN` predicate is satisfied, the column values for each matched pair of rows of A and B are combined into a resulting row.
+An `NNER JOIN` is the most common join operation between entities and represents the default join type. The query compares each row of entity A with each row of entity B to find all the pairs of rows that have an association and satisfy the `JOIN` predicate. If the association exists and the `JOIN` predicate is satisfied, the column values for each matched pair of rows of A and B are combined into a resulting row.
 
-The syntax is as following:
+The syntax is as follows:
 
 ```
 [ INNER ] JOIN entity_path [ ON <constraint> ]
@@ -73,11 +74,11 @@ The syntax is as following:
 
 #### 4.3.2 LEFT OUTER JOIN
 
-With a LEFT OUTER JOIN construction, the query compares each row of entity A with each row of entity B to find all pairs of rows which have an association and thus satisfy the `JOIN` predicate. When the association exists and the the `JOIN` predicate is satisfied, column values for each matched pair of rows of A and B are combined into a resulting row.
+With a `LEFT OUTER JOIN` construction, the query compares each row of entity A with each row of entity B to find all pairs of rows which have an association and thus satisfy the `JOIN` predicate. When the association exists and the the `JOIN` predicate is satisfied, column values for each matched pair of rows of A and B are combined into a resulting row.
 
 However, in contrast to the INNER JOIN construction, the query will also return rows of entity A which do not match entity B. When columns of entity B are specified, these columns contain a null value for these rows.
 
-The syntax is as following:
+The syntax is as follows:
 
 ```
 LEFT [ OUTER ] JOIN entity_path [ ON <constraint> ]
@@ -85,11 +86,11 @@ LEFT [ OUTER ] JOIN entity_path [ ON <constraint> ]
 
 #### 4.3.3 RIGHT OUTER JOIN
 
-With a RIGHT OUTER JOIN construction, the query compares each row of entity A with each row of entity B to find all pairs of rows which have an association and thus satisfy the `JOIN` predicate. If the association exists and the `JOIN` predicate is satisfied, the column values for each matched pair of rows of A and B are combined into a resulting row.
+With a `RIGHT OUTER JOIN` construction, the query compares each row of entity A with each row of entity B to find all pairs of rows which have an association and thus satisfy the `JOIN` predicate. If the association exists and the `JOIN` predicate is satisfied, the column values for each matched pair of rows of A and B are combined into a resulting row.
 
 However, in contrast to the INNER JOIN construction, rows from entity B that do not match entity A will also be returned. When columns of entity A are specified, these columns contain a null value for these rows.
 
-The syntax is as following:
+The syntax is as follows:
 
 ```
 RIGHT [ OUTER ] JOIN entity_path [ ON <constraint> ]
@@ -97,11 +98,11 @@ RIGHT [ OUTER ] JOIN entity_path [ ON <constraint> ]
 
 #### 4.3.4 FULL OUTER JOIN
 
-With a FULL OUTER JOIN construction, the query compares each row of entity A with each row of entity B to find all pairs of rows which have an association and thus satisfy the join-predicate. When the association exists and the join-predicate is satisfied, column values for each matched pair of rows from A and B are combined into a result row.
+With a `FULL OUTER JOIN` construction, the query compares each row of entity A with each row of entity B to find all pairs of rows which have an association and thus satisfy the join-predicate. When the association exists and the join-predicate is satisfied, column values for each matched pair of rows from A and B are combined into a result row.
 
 However, in contrast to the INNER JOIN construction, data from entities that do _not_ match will also be returned. For these rows, columns of missing entities will contain null values.
 
-The syntax is as following:
+The syntax is as follows:
 
 ```
 FULL [ OUTER ] JOIN entity_path [ ON <constraint> ]

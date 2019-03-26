@@ -11,7 +11,7 @@ In this document, we will explain how to solve the most common consistency error
 
 An example of a consistency error is when you set a drag and drop a **Create Object** activity to the microflow, but do not specify what entity should be used as a data source to create the object. 
 
-![Microflow Error Example](attachments/consistency-errors-microflows-wm/wm-microflow-error-example.png)
+![Microflow Error Example](attachments/consistency-errors-microflows/microflow-error-example.png)
 
 ## 2 Properties Not Set Consistency Errors 
 
@@ -65,6 +65,6 @@ Some consistency errors may be connected with settings in the Desktop Modeler. T
 ## 5 Read More
 
 * [Microflows in the Web Modeler](microflows-wm)
-* [Page Editor Consistency Errors in the Web Modeler](consistency-errors-pages-wm)
-* [Navigation Consistency Errors in the Web Modeler](consistency-errors-navigation-wm)
-* [Checks in the Web Modeler](checks-wm)
+* [Page Editor Consistency Errors in the Web Modeler](consistency-errors-pages)
+* [Navigation Consistency Errors in the Web Modeler](consistency-errors-navigation)
+* [Checks in the Web Modeler](checks)

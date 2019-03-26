@@ -14,15 +14,15 @@ Expressions can be used to create or change an object or a variable based on log
 The **Expression** tab is opened when you configure the following activities in the microflow:
 
 *  [End Event](/refguide/end-event)
-*  [Exclusive Split](microflows-exclusive-split-wm)
+*  [Exclusive Split](microflows-exclusive-split)
 *  [Create Object](/refguide/create-object)
 *  [Change Object](/refguide/change-object)
 *  [Create Variable](/refguide/create-variable) 
 *  [Change Variable](/refguide/change-variable)
 
-![](attachments/microflows-expressions-wm/wm-expression-tab.png)
+![](attachments/microflows-expressions/expression-tab.png)
 
-For more information, see [Setting and Changing a Value for Different Activities in the Microflows in the Web Modeler](microflows-setting-and-changing-value-wm).
+For more information, see [Setting and Changing a Value for Different Activities in the Microflows in the Web Modeler](microflows-setting-and-changing-value).
 
 ## 2 Writing the Expression
 
@@ -33,7 +33,7 @@ There are two ways of writing an expression:
 
 If some errors appear in the expression, hints with an explanation will be displayed. 
 
-{{% image_container width="350" %}}![](attachments/microflows-expressions-wm/wm-expression-error.png)
+{{% image_container width="350" %}}![](attachments/microflows-expressions/expression-error.png)
 {{% /image_container %}}
 
 ### 2.1 Writing the Expression Using Suggestions
@@ -46,7 +46,7 @@ When you start typing the expression, a list of suggestions appears divided into
 * **Booleans** – true or false expressions
 * **Operators** – code elements that perform logical or mathematical operations. You can use Boolean or relational expressions (for more information, see section [3 Expression Types](#expression-types))
 
-![](attachments/microflows-expressions-wm/wm-expressions-list.png)
+![](attachments/microflows-expressions/expressions-list.png)
 
 To write an expression using suggestions, do the following:
 
@@ -77,17 +77,17 @@ Let us study two examples that illustrate how the expression can be used.
 
 You have an exclusive split and you want to write an expression that checks whether the customer grade is gold and the price of the order is more than 100 (you can configure a discount after the split that is allowed if this expression is true). 
 
-![](attachments/microflows-expressions-wm/wm-example-excl-split.png) 
+![](attachments/microflows-expressions/example-excl-split.png) 
 
 The expression will look the following way:
 
-![](attachments/microflows-expressions-wm/wm-expression-excl-split.png)
+![](attachments/microflows-expressions/expression-excl-split.png)
 
 #### 2.3.2 Example 2
 
 A common example is when you first check if the object (in our example the object is *Customer*) exists. And then you check if the Customer's name matches a particular one (in our example Customer's name is *Mendix*). The expression will look the following way:
 
-![](attachments/microflows-expressions-wm/wm-customer-empty-and-name-example.png)
+![](attachments/microflows-expressions/customer-empty-and-name-example.png)
 
 
 
@@ -111,5 +111,5 @@ An overview of the possibilities with expressions can be found below:
 
 ## 4 Read More
 
-* [Microflows in the Web Modeler](microflows-wm)
-* [Setting and Changing a Value for Different Activities in the Microflows in the Web Modeler](microflows-setting-and-changing-value-wm)
+* [Microflows in the Web Modeler](microflows)
+* [Setting and Changing a Value for Different Activities in the Microflows in the Web Modeler](microflows-setting-and-changing-value)

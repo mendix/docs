@@ -1,6 +1,6 @@
 ---
 title: "Mendix Assist"
-parent: "microflows-wm"
+parent: "microflows"
 menu_order: 10
 description: "Describes Mendix Assist in the Mendix Web Modeler."
 tags: ["web modeler", "mendix assist", "AI", "assistant"]
@@ -14,9 +14,9 @@ Mendix Assist was built using Machine Learning analysis of over twelve million a
 
 ## 2 Mendix Assist Overview
 
-Mendix Assist is enabled by default and is displayed as a blue dot in the flow of a [microflow](microflows-wm). A bow-tie appears on the dot when you hover over it. 
+Mendix Assist is enabled by default and is displayed as a blue dot in the flow of a [microflow](microflows). A bow-tie appears on the dot when you hover over it. 
 
-![](attachments/mx-assist-wm/wm-mendix-assist-icon.png)
+![](attachments/mx-assist/mendix-assist-icon.png)
 
 {{% alert type="info" %}}
 
@@ -26,7 +26,7 @@ It is possible to add activities in a regular way without using Mendix Assist.
 
 Click the bow-tie to see Mendix Assist recommendations. 
 
-{{% image_container width="350" %}}![](attachments/mx-assist-wm/wm-mx-assist-recommendations.png)
+{{% image_container width="350" %}}![](attachments/mx-assist/mx-assist-recommendations.png)
 {{% /image_container %}}
 
 Mendix Assist lists the top 5 recommendations from the most probable to less probable ones for the particular microflow. Click the suggestion to proceed with it and insert it into a microflow. For more information, see section [4 Adding Activities and Elements with Mendix Assist](#add-activities).
@@ -40,7 +40,7 @@ Some activities still need to be configured in **Properties** to function correc
 Once you have selected an activity or an event to insert to the microflow using Mendix Assist, the
 information dialog with brief description of this activity/event is displayed above the flow.
 
-![](attachments/mx-assist-wm/wm-info-dialog.png)
+![](attachments/mx-assist/info-dialog.png)
 
 The following options are available in the information dialog window:
 
@@ -52,7 +52,7 @@ The following options are available in the information dialog window:
 
 To open settings of Mendix Assist, click the gear icon in the top right corner of the information dialog.
 
-![](attachments/mx-assist-wm/wm-settings-mx-assist.png)
+![](attachments/mx-assist/settings-mx-assist.png)
 
 Settings available for Mendix Assist are described in the table below:
 
@@ -63,7 +63,7 @@ Settings available for Mendix Assist are described in the table below:
 
 You can also enable/disable Mendix Assist by clicking the information icon in the top bar of the Web Modeler. 
 
-{{% image_container width="300" %}}![](attachments/mx-assist-wm/wm-info-icon-setting.png)
+{{% image_container width="300" %}}![](attachments/mx-assist/info-icon-setting.png)
 {{% /image_container %}}
 
 {{% alert type="info" %}}
@@ -84,16 +84,16 @@ To add an activity (such as **Change Object**, **Show Page**, **Create Object**,
 
 3.  Click the selected activity to add it to the flow.
 
-    {{% image_container width="350" %}}![](attachments/mx-assist-wm/wm-mx-assist-list.png)
+    {{% image_container width="350" %}}![](attachments/mx-assist/mx-assist-list.png)
     {{% /image_container %}}
 
 The activity is added to the flow.
 
 ### 4.2 Adding a Check {#add-check}
 
-Adding a check means that you will add an exclusive split with Boolean attribute type: your flow will be split into one flow labeled *true* and another one labeled *false*. For more information, see [Exclusive Split in the Web Modeler](microflows-exclusive-split-wm).   
+Adding a check means that you will add an exclusive split with Boolean attribute type: your flow will be split into one flow labeled *true* and another one labeled *false*. For more information, see [Exclusive Split in the Web Modeler](microflows-exclusive-split).   
 
-{{% image_container width="300" %}}![](attachments/mx-assist-wm/wm-check-added.png)
+{{% image_container width="300" %}}![](attachments/mx-assist/check-added.png)
 {{% /image_container %}}
 
 {{% alert type="info" %}}
@@ -109,7 +109,7 @@ To add the check, do the following:
 
 2.  Find **Add a check** in the suggestions.
 
-    {{% image_container width="350" %}}![](attachments/mx-assist-wm/wm-adding-check.png)
+    {{% image_container width="350" %}}![](attachments/mx-assist/adding-check.png)
     {{% /image_container %}}
 
 3. The number of options for the check will be opened, select the check that you want to add and click it. 
@@ -124,7 +124,7 @@ The number of options for the check depend on the number of variables of Boolean
 
 ### 4.3 Adding a Decision
 
-When you add a decision via Mendix Assist that means you add an exclusive split with attribute of enumeration type to your microflow. For more information, see [Exclusive Split in the Web Modeler](microflows-exclusive-split-wm) and [Attribute Types in the Web Modeler](domain-models-attributes). This means, if you do not have parameters with enumeration data type, **Add decision** will not appear in the suggestions.
+When you add a decision via Mendix Assist that means you add an exclusive split with attribute of enumeration type to your microflow. For more information, see [Exclusive Split in the Web Modeler](microflows-exclusive-split) and [Attribute Types in the Web Modeler](domain-models-attributes). This means, if you do not have parameters with enumeration data type, **Add decision** will not appear in the suggestions.
 
 To add the decision, do the following:
 
@@ -132,7 +132,7 @@ To add the decision, do the following:
 
 2. Find **Add a decision** in the suggestions and select it.
 
-    {{% image_container width="350" %}}![](attachments/mx-assist-wm/wm-adding-decision.png)
+    {{% image_container width="350" %}}![](attachments/mx-assist/adding-decision.png)
     {{% /image_container %}}
 
 The exclusive split is added to the microflow.
@@ -146,5 +146,5 @@ The number of options for **Add a decision** depend on the number of parameters 
 ## 5 Read More
 
 * [Web Modeler General Info](general-wm)
-* [Microflows in the Web Modeler](microflows-wm)
-* [Exclusive Split in the Web Modeler](microflows-exclusive-split-wm)
+* [Microflows in the Web Modeler](microflows)
+* [Exclusive Split in the Web Modeler](microflows-exclusive-split)

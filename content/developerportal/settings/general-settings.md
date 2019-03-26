@@ -43,7 +43,7 @@ Specific steps for configuring different cloud platforms are provided here:
 
 ## 3 Managing Webhooks
 
-{{% todo %}}[**VERIFY POSITION OF BUTTON; THIS WILL DETERMINE POSITION OF SECTION IN DOC**]{{% /todo %}}
+Click **Manage Webhooks** to manage your app's webhooks. A webhook enables the Developer Portal to talk to another website and post updated Developer Portal content (for example, sprint updates and new stories) to that website. For example, if [Mansystems](https://developer.mendixcloud.com/link/partnerprofile/1068) wants to follow the changes in their app project, they will create a service with a certain URL (see the required [URL](#url) below) that keeps track of the data. Changes in the app project in the Developer Portal are then sent to that URL.
 
 {{% todo %}}[**VERIFY ROLE/PERMISSIONS BELOW**]{{% /todo %}}
 
@@ -51,17 +51,11 @@ Specific steps for configuring different cloud platforms are provided here:
 Only [Company Admins](../company-app-roles/companyadmin-settings) or users with the **App Settings** permission can manage webhooks.
 {{% /alert %}}
 
-{{% todo %}}[**ADD DESCRIPTION OF WEBHOOK BELOW; ADD LINK TO TECHNICAL DOC WHEN AVAILABLE**]{{% /todo %}}
+On the **Webhooks** page, you can add a new webook and edit or delete existing webhooks.
 
-A webhook enables the Developer Portal to talk to another website and post updated Developer Portal content (for example, sprint updates and new stories) to that website. For example, if [Mansystems](https://developer.mendixcloud.com/link/partnerprofile/1068) wants to follow the changes in their app project, they will create a service with a certain URL (see the required [URL](#url) below) that keeps track of the data. Changes in the app project in the Developer Portal are then sent to that URL.
-
-Click **Manage Webhooks** to manage your app's webhooks. On the **Webhooks** page, you can add a new webook and edit or delete existing webhooks.
-
-{{% todo %}}[**ADD SCREENSHOT**]{{% /todo %}}
+{{% todo %}}[**ADD SCREENSHOT; VERIFY POSITION OF BUTTON; THIS WILL DETERMINE POSITION OF SECTION IN DOC**]{{% /todo %}}
 
 Each webhook requires the following details:
-
-{{% todo %}}[**VERIFY ALL DESCRIPTIONS BELOW**]{{% /todo %}}
 
 * **Name** – the name of the webook
 * <a name="url"></a>**URL** – the URL to which the webhook will connect 
@@ -70,6 +64,10 @@ Each webhook requires the following details:
 * **Events** – what types of data will be sent via the webook (you must select at least one)
 	* [Sprints](../collaborate/index#sprint)
 	* [Stories](../collaborate/stories)
+
+{{% alert type="info" %}}
+For details on the technical configuration of webhooks, see [Webhooks](/apidocs-mxsdk/apidocs/webhooks) in the *API Documentation*.
+{{% /alert %}}
 
 To edit the above details for an existing webhook, click **Edit**.
 

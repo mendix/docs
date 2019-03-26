@@ -45,7 +45,7 @@ As all Web Modeler changes are auto-saved, the collaborative development is indi
 
     b.  There are project conflicts which should be solved in the Desktop Modeler before the Desktop Modeler user can commit again. Your screen is unlocked without any changes to your app.  
 
-3.  **Switching Contents** – in the Desktop Modeler, users can change the branch line the Web Modeler is enabled for. For more information on managing branches, see section [5 Managing Development Lines](#managing-branches) in the *Collaborative Development* in *Version Control*. 
+3.  **Switching Contents** – in the Desktop Modeler, users can change the branch line the Web Modeler is enabled for. For more information on managing branches, see section [5 Managing Development Lines](/refguide/collaborative-development#managing-branches) in the *Collaborative Development* in *Version Control*. 
 	During this process the Web Modeler gets locked for a few moments, all changes are auto-saved on the current development line, and a pop-up dialog is shown that the Desktop Modeler user is changing the branch line for the Web Modeler. This means that the contents of your app will change. 
 
 	{{% image_container width="350" %}}![Switching Contents Dialog Box](attachments/general-collaborative-development/switching-branches.png)

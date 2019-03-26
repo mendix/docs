@@ -1,7 +1,7 @@
 ---
 title: "UI Integration"
-parent: "integration-use-cases"
-menu_order: 4
+parent: "integration-overview"
+menu_order: 3
 draft: true
 ---
 

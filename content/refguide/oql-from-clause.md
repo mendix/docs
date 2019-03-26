@@ -18,7 +18,7 @@ FROM
 
     {
         { INNER | { { LEFT | RIGHT | FULL } [ OUTER ] } } JOIN
-        entity_name [ [ AS ] from_alias ]
+        entity_path [ [ AS ] from_alias ]
         ON <constraint>
     } [ ,...n ]
 ```
@@ -44,7 +44,7 @@ The syntax is as follows:
 
 ```
  { INNER | { { LEFT | RIGHT | FULL } [ OUTER ] } } JOIN
-        entity_name [ [ AS ] from_alias ]
+        entity_path [ [ AS ] from_alias ]
         [ ON <constraint> ]
 ```
 

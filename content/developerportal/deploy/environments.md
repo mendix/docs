@@ -60,10 +60,7 @@ Next to the deployment package info, if you click **Details**, the following ite
 * Size of the package
 * Description of the package
 * A build output
-
-{{% todo %}}[**Check whether this is true**]{{% /todo %}}
-
-* An overview of the environments that are currently running on this deployment package (not available for [flexible environments](mendix-cloud-deploy#flexible-environments))
+* An overview of the environments that are currently running on this deployment package
 
 **Actions**
 
@@ -84,11 +81,12 @@ If you click **Deploy**, the package from the team server will be transported to
 
 In this section, you have the an overview of all the available environments with the following details:
 
+* Environment name
+* Environment status
 * Name of the deployment package
 * The version of the deployment package
 * Runtime (the Modeler version)
 * The URL of the app
-* The alert status of the environment
 
 There are three types of environment statuses:
 
@@ -114,7 +112,29 @@ There are two actions you can take :
 
 If your node supports flexible environments you will see a slightly different format for the list of environments.
 
+![](attachments/environments/deploy-flex-environments.png)
 
+This shows a similar list of details (the differences are highlighted):
+
+* Environment status
+* Environment name
+* **PROD** will be checked if this environment is a production environment (this is set when the environment is first created)
+* Name and version of the deployment package
+* Runtime (the Modeler version)
+* **PLAN** indicates the plan for this environment - you can see more information about the plan on the *Details* page.
+* The URL of the app
+
+**Reordering Environments**
+
+
+
+**Actions**
+
+For flexible environments there is only one action you can take :
+
+* **Details** of the selected environment – information about the details available are documented here: [Details](environments-details)
+
+There is no concept of staging, and you need to deploy your app directly to the target environment.
 
 ### 2.3 Activity
 

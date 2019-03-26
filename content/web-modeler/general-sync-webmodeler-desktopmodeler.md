@@ -12,7 +12,7 @@ menu_order: 10
 
 {{% alert type="info" %}}
 
-The sync process is available for apps with Mendix version 7.23.2 and below. If you project has Mendix version 7.23.3 and above, see [Collaborative Development in the Web Modeler](general-collaborative-development).
+The sync process is available for apps with Mendix version 7.23.2 and below. If your project has Mendix version 7.23.3 and above, see [Collaborative Development in the Web Modeler](general-collaborative-development).
 
 {{% /alert %}}
 

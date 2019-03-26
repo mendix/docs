@@ -1,5 +1,5 @@
 ---
-title: "Collaborative Development Troubleshooting"
+title: "Troubleshooting Collaborative Development"
 parent: "collaborative-development"
 description: "Describes troubleshooting for collaborative development between the Mendix Desktop Modeler and the Mendix Web Modeler"
 tags: ["desktop modeler", "web modeler", "collaborative development", "troubleshooting", "troubleshoot"]

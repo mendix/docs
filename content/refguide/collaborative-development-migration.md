@@ -46,8 +46,8 @@ Click **Open the Developer Portal** and follow the procedure described above.
 
 If you ignore this message, you will be able to work in the Web Modeler, but will not be able to retrieve changes from it and to synchronize its changes with the Desktop Modeler. 
 
-## 4 Read More
+## 3 Read More
 
 * [Version Control](version-control)
-* [Collaborative Development Troubleshooting](collaborative-development-troubleshooting)
+* [Troubleshooting Collaborative Development](collaborative-development-troubleshooting)
 * [Collaborative Development in the Web Modeler](/web-modeler/general-collaborative-development)

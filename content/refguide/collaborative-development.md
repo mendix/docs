@@ -129,9 +129,9 @@ To create a new branch line, do the following:
 
 1. Click **Project** > **More Versioning** > **Manage Branch Lines**. 
 
-2. In the **Branch Line Manager** dialog window, you see the list of existing development lines. Click **New** to create a branch line. <br/>
+2.  In the **Branch Line Manager** dialog window, you see the list of existing development lines. Click **New** to create a branch line. <br/>
 
-  ![Creating New Branch](attachments/collaborative-development/creating-new-branch.png)<br/>
+	![Creating New Branch](attachments/collaborative-development/creating-new-branch.png)<br/>
 
 3.  In the **Create Branch Line** dialog window, set the following: <br/>
 
@@ -169,4 +169,5 @@ You cannot delete the Web Modeler enabled branch. If you need to delete this bra
 
 * [Version Control](version-control)
 * [Migration From the Sync Process to Collaborative Development](collaborative-development-migration)
+* [Troubleshooting Collaborative Development](collaborative-development-troubleshooting)
 * [Collaborative Development in the Web Modeler](/web-modeler/general-collaborative-development)

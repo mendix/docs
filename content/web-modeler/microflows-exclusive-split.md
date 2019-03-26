@@ -36,7 +36,7 @@ The parameters and entities which you would like to use in configuring the condi
 
 ### 2.2 Configuring the Condition with an Expression {#expression-tab}
 
-You can also configure the condition by writing the expression. For more information, see [Microflow Expressions in the Web Modeler](microflows-expressions-wm).
+You can also configure the condition by writing the expression. For more information, see [Microflow Expressions in the Web Modeler](microflows-expressions).
 
 ## 3 Cases
 

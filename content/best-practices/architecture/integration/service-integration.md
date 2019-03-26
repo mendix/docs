@@ -1,7 +1,7 @@
 ---
 title: "Service Integration"
-parent: "integration-use-cases"
-menu_order: 3
+parent: "integration-overview"
+menu_order: 2
 draft: true
 ---
 

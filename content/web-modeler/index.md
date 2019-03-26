@@ -23,7 +23,7 @@ The main documents in the Web Modeler Reference are the following ones:
 * [Domain Model in the Web Modeler](domain-models)
 * [Page Editor in the Web Modeler](page-editor)
 * [Navigation Document in the Web Modeler](navigation)
-* [Microflows in the Web Modeler](microflows-wm)
+* [Microflows in the Web Modeler](microflows)
 * [Publishing Your App From the Web Modeler](deployment-wm)
 * [Checks in the Web Modeler](checks)
 * [Consistency Errors in the Web Modeler](consistency-errors)

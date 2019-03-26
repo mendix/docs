@@ -25,14 +25,14 @@ Examples of using microflows can be the following:
 
 To view the microflows of your app in the Web Modeler, click the **Microflows** icon in the left menu bar:
 
-{{% image_container width="300" %}}![Microflow Icon](attachments/microflows-wm/wm-micflows-icon.png)
+{{% image_container width="300" %}}![Microflow Icon](attachments/microflows/micflows-icon.png)
 {{% /image_container %}}
 
 ## 2 Concepts and Definitions 
 
-A microflow is like a flow chart. On a new microflow the start event (a starting point of the microflow represented by a green dot) and the end event (an end point of the microflow represented by a red dot) exist by default. They are also connected by a sequence flow (a line with an arrow), where you can add new events and activities. For more information, see section [3 Creating a New Microflow](#creating-new-microflow). If Mendix Assist is on, it will be represented with a blue dot in the middle. For more information, see [Mendix Assist](mx-assist-wm).
+A microflow is like a flow chart. On a new microflow the start event (a starting point of the microflow represented by a green dot) and the end event (an end point of the microflow represented by a red dot) exist by default. They are also connected by a sequence flow (a line with an arrow), where you can add new events and activities. For more information, see section [3 Creating a New Microflow](#creating-new-microflow). If Mendix Assist is on, it will be represented with a blue dot in the middle. For more information, see [Mendix Assist](mx-assist).
 
-![New Microflow](attachments/microflows-wm/wm-new-microflow-created.png)
+![New Microflow](attachments/microflows/new-microflow-created.png)
 
 Before you start configuring microflows, familiarize yourself with the concepts and notions that the microflow editor uses:
 
@@ -51,12 +51,12 @@ To create a new microflow and to start building a microflow, do the following:
 1. Click the **Microflow** icon in the left menu bar. 
 2.  Click **New** on the **Microflows** side panel.
 
-    {{% image_container width="350" %}}![Adding New Microflow](attachments/microflows-wm/wm-new-microflow.png)
+    {{% image_container width="350" %}}![Adding New Microflow](attachments/microflows/new-microflow.png)
     {{% /image_container %}}
 
 3.  Fill out the name of the microflow in the pop-up dialog and click **Create**.
 
-    ![Create New Microflow Dialog](attachments/microflows-wm/wm-new-microflow-dialog.png)    
+    ![Create New Microflow Dialog](attachments/microflows/new-microflow-dialog.png)    
 
 The new microflow is created, you can now start adding logic to it by adding events or activities. 
 
@@ -79,7 +79,7 @@ In the **Toolbox** tab, you can see that the microflow contains three sections w
 
 ### 5.1 General {#microflow-general-section}
 
-{{% image_container width="300" %}}![Microflow General Properties](attachments/microflows-wm/wm-microflows-general-properties.png)
+{{% image_container width="300" %}}![Microflow General Properties](attachments/microflows/microflows-general-properties.png)
 {{% /image_container %}}
 
 Elements available in the **General** section are described in the table below.
@@ -90,14 +90,14 @@ Elements available in the **General** section are described in the table below.
 | [Break Event](/refguide/break-event)                    | A break event is used in loops only to stop iterating over a list of objects and continue with the rest of the flow in the microflow. For more information, see [Break Event](/refguide/break-event) in the *Desktop Modeler* category. |
 | [Continue Event](/refguide/continue-event)              | A continue event is used in loops only to stop the current iteration and start the iteration of the next object. For more information, see [Continue Event](/refguide/continue-event) in the *Desktop Modeler* category. |
 | [End Event](/refguide/end-event)                        | An end event defines the location where the microflow will stop. There can be more than one end event, for example when an exclusive split is used in the microflow. So, the number of end events depends on the number of possible outcomes of the microflow. For more information, see [End Event](/refguide/end-event) in the *Desktop Modeler* category. |
-| [Exclusive Split](microflows-exclusive-split-wm) | An exclusive split splits the microflow flow. Use an exclusive split when you want to add conditions. For example, you want to show different order forms for the customers with different grades. Thus, an exclusive split creates different flows. With the help of an exclusive split the app makes a decision based on a condition and follows one and only one of the outgoing flows. |
-| [Loop](microflows-loop-wm)                       | A loop is used to iterate over a list of objects and perform actions on each item of the list. For example, you can retrieve a list of orders from your database, then loop over this list and mark orders as processed. |
+| [Exclusive Split](microflows-exclusive-split) | An exclusive split splits the microflow flow. Use an exclusive split when you want to add conditions. For example, you want to show different order forms for the customers with different grades. Thus, an exclusive split creates different flows. With the help of an exclusive split the app makes a decision based on a condition and follows one and only one of the outgoing flows. |
+| [Loop](microflows-loop)                       | A loop is used to iterate over a list of objects and perform actions on each item of the list. For example, you can retrieve a list of orders from your database, then loop over this list and mark orders as processed. |
 | [Merge](/refguide/merge)                                | A merge can be used to combine flows into one.  If previously you split the microflow flow and now one and the same action needs to be executed for these separated flows, you can combine the two (or more) paths using a merge. |
 | [Parameter](/refguide/parameter)                        | A parameter is an input data for the microflow and can be used in any activity in the microflow. |
 
 ### 5.2 Object Activities {#microflow-object-activities}
 
-{{% image_container width="350" %}}![Microflow Object Activities](attachments/microflows-wm/wm-object-activities.png)
+{{% image_container width="350" %}}![Microflow Object Activities](attachments/microflows/object-activities.png)
 {{% /image_container %}}
 
 The **Object Activities** are described in the table below.
@@ -113,7 +113,7 @@ The **Object Activities** are described in the table below.
 
 ### 5.3 Client Activities Section {#microflow-client-activities}
 
-![Microflow Client Activities](attachments/microflows-wm/wm-client-activities.png)
+![Microflow Client Activities](attachments/microflows/client-activities.png)
 
 The **Client Activities** are described in the table below.
 
@@ -126,7 +126,7 @@ The **Client Activities** are described in the table below.
 
 ### 5.4 Variable Activities
 
-![Microflow Variable Activities](attachments/microflows-wm/wm-var-activities.png)
+![Microflow Variable Activities](attachments/microflows/variable-activities.png)
 
 The **Variable Activities** are described in the table below:
 
@@ -137,17 +137,17 @@ The **Variable Activities** are described in the table below:
 
 For example, you can first create a variable named *Discount* to a microflow, and then change the variable Discount depending on the type of the customer's grade. You can give a discount for customers with Gold and Silver grades. 
 
-{{% image_container width="400" %}}![Example a Microflow](attachments/microflows-wm/wm-example-of-using-var-activities.png)
+{{% image_container width="400" %}}![Example a Microflow](attachments/microflows/example-of-using-var-activities.png)
 {{% /image_container %}}
 
 ## 6 Flows {#flows} 
 
 Flows are lines connecting the elements. You can find the description of flows in the table below:
 
-| Flow                                  | Image                                                        | Description                                                  |
-| ------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Sequence Flow                         | ![Sequence Flow](attachments/microflows-wm/wm-sequence-flow.png) | A sequence flow is an arrow that links events, activities, splits and merges with each other. Thus, it defines the order of execution. Flows always flow in one direction where elements follow each other up one by one. Splits always lead to one direction so it is not possible that multiple flows take place simultaneously. |
-| [Annotation Flow](/refguide/annotation-flow) | ![Annotation Flow](attachments/microflows-wm/wm-annotation-flow.png) | An annotation flow is a connection that can be used to link an annotation to a flow object(s). |
+| Flow                                         | Image                                                        | Description                                                  |
+| -------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Sequence Flow                                | ![Sequence Flow](attachments/microflows/sequence-flow.png)   | A sequence flow is an arrow that links events, activities, splits and merges with each other. Thus, it defines the order of execution. Flows always flow in one direction where elements follow each other up one by one. Splits always lead to one direction so it is not possible that multiple flows take place simultaneously. |
+| [Annotation Flow](/refguide/annotation-flow) | ![Annotation Flow](attachments/microflows/annotation-flow.png) | An annotation flow is a connection that can be used to link an annotation to a flow object(s). |
 
 ## 7 Activity Icons 
 
@@ -155,15 +155,15 @@ When configuring the activities of the microflows you will notice icons above or
 
 | Name                  | Image Example                                                | Description                                                  |
 | --------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Entity                | ![Entity icon](attachments/microflows-wm/wm-entity-icon.png) | Indicates that the data source for the activity is an entity. |
-| Value                 | ![Value Icon](attachments/microflows-wm/wm-simple-value-icon.png) | Indicates that the data source for the activity is a simple value, such as decimal, boolean, date and time, etc. |
-| Commit                | ![Commit Icon](attachments/microflows-wm/wm-commit-icon.png) | Indicates that the object will be committed. Committing means that the changes will be saved in the database. This can be useful, for example, when you want an object *NewCustomer* to be saved and updated in the tables that contain information about customers. |
-| Commit without events | ![Commit Without Events Icon](attachments/microflows-wm/wm-commit-with-no-events-icon.png) | Indicates that the object will be committed but without events. This means that the object will be saved in the database, but event handlers will not be triggered. For example, the information about a new customer will be saved, but the tables containing information about new customers will not be updated. |
-| Refresh in Client     | ![Refresh in Client Icon](attachments/microflows-wm/wm-refresh-in-client-icon.png) | Indicates that the result of the activity will be displayed to the end-user. |
+| Entity                | ![Entity icon](attachments/microflows/entity-icon.png)       | Indicates that the data source for the activity is an entity. |
+| Value                 | ![Value Icon](attachments/microflows/simple-value-icon.png)  | Indicates that the data source for the activity is a simple value, such as decimal, boolean, date and time, etc. |
+| Commit                | ![Commit Icon](attachments/microflows/commit-icon.png)       | Indicates that the object will be committed. Committing means that the changes will be saved in the database. This can be useful, for example, when you want an object *NewCustomer* to be saved and updated in the tables that contain information about customers. |
+| Commit without events | ![Commit Without Events Icon](attachments/microflows/commit-with-no-events-icon.png) | Indicates that the object will be committed but without events. This means that the object will be saved in the database, but event handlers will not be triggered. For example, the information about a new customer will be saved, but the tables containing information about new customers will not be updated. |
+| Refresh in Client     | ![Refresh in Client Icon](attachments/microflows/refresh-in-client-icon.png) | Indicates that the result of the activity will be displayed to the end-user. |
 
 ## 8 Read More
 
 * [The Web Modeler General Info](general-wm)
-* [Exclusive Split in the Web Modeler](microflows-exclusive-split-wm)
-* [Microflow Expressions in the Web Modeler](microflows-expressions-wm)
-* [Setting and Changing a Value for Different Activities in the Microflows in the Web Modeler](microflows-setting-and-changing-value-wm)
+* [Exclusive Split in the Web Modeler](microflows-exclusive-split)
+* [Microflow Expressions in the Web Modeler](microflows-expressions)
+* [Setting and Changing a Value for Different Activities in the Microflows in the Web Modeler](microflows-setting-and-changing-value)

@@ -103,5 +103,5 @@ Now the new object of type *Customer* will be created and passed to the home pag
 * [Navigation Document in the Web Modeler](navigation)
 * [Page Editor Consistency Errors in the Web Modeler](consistency-errors-pages)
 * [Microflow Editor Consistency Errors in the Web Modeler](consistency-errors-microflows)
-* [Microflows in the Web Modeler](microflows-wm)
+* [Microflows in the Web Modeler](microflows)
 * [Checks in the Web Modeler](checks)

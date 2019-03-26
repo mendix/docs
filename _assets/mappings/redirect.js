@@ -35,11 +35,11 @@ module.exports = {
     },
 	{
       from: "/refguide/web-modeler/microflows-wm",
-      to: "/web-modeler/microflows-wm"
+      to: "/web-modeler/microflows"
     },
 	{
       from: "/refguide/web-modeler/microflows-expressions-wm",
-      to: "/web-modeler/microflows-expressions-wm"
+      to: "/web-modeler/microflows-expressions"
     },
 	{
       from: "/refguide/web-modeler/app-settings-wm",

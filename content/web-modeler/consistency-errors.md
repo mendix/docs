@@ -27,4 +27,4 @@ Consistency errors can occur in the following editors of the modeler:
 * [Checks in the Web Modeler](checks)
 * [Page Editor in the Web Modeler](page-editor)
 * [Navigation Document in the Web Modeler](navigation)
-* [Microflows in the Web Modeler](microflows-wm)
+* [Microflows in the Web Modeler](microflows)

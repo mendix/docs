@@ -17,7 +17,7 @@ There are two ways to configure a condition for the exclusive split:
 * [With **Variables/ Attributes**](#variables-attributes-tab) ( for example, you can use it to create different flows for an attribute of the enumeration type)
 *  [With an **Expression**](#expression-tab) (for example, you can create a comparison with it)
 
-   ![](attachments/microflows-exclusive-split-wm/wm-configure-condition-dialog-excl-split.png)
+   ![](attachments/microflows-exclusive-split/configure-condition-dialog-excl-split.png)
 
 ### 2.1 Configuring the Condition with Variables or Attributes {#variables-attributes-tab}
 
@@ -44,11 +44,11 @@ The number of available cases depends on the selected **Condition**.
 
 For the Boolean type of the parameter or attribute, two values are possible: true and false.  
 
-![](attachments/microflows-exclusive-split-wm/wm-exclusive-split-boolean.png)
+![](attachments/microflows-exclusive-split/exclusive-split-boolean.png)
 
 The number of cases available for the enumeration type depends on the corresponding enumeration constants/values. There is also the empty case available for enumeration. If the enumeration parameter or attribute of an object is unassigned, the sequence flow with the caption (empty) is followed.
 
-![](attachments/microflows-exclusive-split-wm/wm-exclusive-split-enumeration.png)
+![](attachments/microflows-exclusive-split/exclusive-split-enumeration.png)
 
 ## 4 Caption
 
@@ -56,7 +56,7 @@ The caption describes what happens in this element.
 
 ## 5 Read More
 
-* [Microflows in the Web Modeler](microflows-wm)
-* [Microflow Expressions in the Web Modeler](microflows-expressions-wm)
-* [How to Configure an Exclusive Split in the Web Modeler](microflows-how-to-configure-exclsplit-wm) 
+* [Microflows in the Web Modeler](microflows)
+* [Microflow Expressions in the Web Modeler](microflows-expressions)
+* [How to Configure an Exclusive Split in the Web Modeler](microflows-how-to-configure-exclsplit) 
 

@@ -10,7 +10,7 @@ tags: ["web modeler", "microflows", "merge", "expression", "change object"]
 
 This how-to explains how you can add advanced logic to a microflow by configuring a merge and a change object activity in the Mendix Web Modeler. 
 
-A merge is used to combine flows into one. If you split the microflow flow (with an exclusive split) and now one and the same action needs to be executed for these separated flows, you can combine the two (or more) flows using a merge. For more information on exclusive split, see [Exclusive Split in the Web Modeler](microflows-exclusive-split-wm).
+A merge is used to combine flows into one. If you split the microflow flow (with an exclusive split) and now one and the same action needs to be executed for these separated flows, you can combine the two (or more) flows using a merge. For more information on exclusive split, see [Exclusive Split in the Web Modeler](microflows-exclusive-split).
 
 **This how-to will teach you how to do the following:**
 
@@ -19,7 +19,7 @@ A merge is used to combine flows into one. If you split the microflow flow (with
 
 This how-to describes the following use case: 
 
-In  [How to Configure an Exclusive Split in the Web Modeler Step 1: Build the Domain Model & Configure a Microflow ](microflows-how-to-configure-exclsplit-p1-wm) we have configured the exclusive split to open a specific page depending on the customer's grade. In case the customer's grade is not indicated, the error message is shown. So we have four flows after the exclusive split: 
+In  [How to Configure an Exclusive Split in the Web Modeler Step 1: Build the Domain Model & Configure a Microflow ](microflows-how-to-configure-exclsplit-p1) we have configured the exclusive split to open a specific page depending on the customer's grade. In case the customer's grade is not indicated, the error message is shown. So we have four flows after the exclusive split: 
 
 * Showing a page for bronze  grade customers
 * Showing a page for silver grade customers
@@ -32,7 +32,7 @@ In this how-to we will merge flows for bronze, silver, and gold customer grades 
 
 To start this tutorial, make sure you have completed the following prerequisites:
 
-* Create the microflow with the exclusive split: [How to Configure an Exclusive Split in the Web Modeler Step 1: Build the Domain Model & Configure a Microflow](microflows-how-to-configure-exclsplit-p1-wm)
+* Create the microflow with the exclusive split: [How to Configure an Exclusive Split in the Web Modeler Step 1: Build the Domain Model & Configure a Microflow](microflows-how-to-configure-exclsplit-p1)
 
 ## 3 Creating a Merge
 
@@ -40,11 +40,11 @@ To create a merge for gold, silver, and bronze customer grades in a microflow, f
 
 1. Open the microflow named *Show_grade_specific_page*.
 
-    ![](attachments/microflows-how-to-merge-and-change-object-wm/wm-microflow-without-merge.png)
+    ![](attachments/microflows-how-to-merge-and-change-object/microflow-without-merge.png)
 
 2. Open the **Toolbox** tab > the **General** section, drag and drop the **Merge** activity at the end event of the flow labelled **Bronze**. 
 
-    ![](attachments/microflows-how-to-merge-and-change-object-wm/wm-adding-merge.png)
+    ![](attachments/microflows-how-to-merge-and-change-object/adding-merge.png)
 
 3. To merge the flow labelled **Gold** with the **Bronze** one, do the following:<br/>
 
@@ -52,19 +52,19 @@ To create a merge for gold, silver, and bronze customer grades in a microflow, f
 
     b. Hover over the **Show Page** activity.<br/>
 
-    ![](attachments/microflows-how-to-merge-and-change-object-wm/wm-hover-over.png)<br/>
+    ![](attachments/microflows-how-to-merge-and-change-object/hover-over.png)<br/>
 
     c. Click one of the dots that will turn into an arrow.<br/>
 
     d. Drag the arrow to the merge. Now the **Show Page activity** is connected to the merge.
 
-    ![](attachments/microflows-how-to-merge-and-change-object-wm/wm-connecting-activity-and-merge.png)<br/> 
+    ![](attachments/microflows-how-to-merge-and-change-object/connecting-activity-and-merge.png)<br/> 
 
 4. Repeat step 3 for the flow labelled **Silver**. 
 
 As a result, we have three flows merged into one.
 
-![](attachments/microflows-how-to-merge-and-change-object-wm/wm-flows-into-one.png)
+![](attachments/microflows-how-to-merge-and-change-object/flows-into-one.png)
 
 ## 4 Configuring Change Object
 
@@ -78,14 +78,14 @@ Now we will add logic to the microflow. We have merged three flows into one, bec
 
     b. In the **Create New Attribute** dialog window, set **Name** to *Active* and **Type** to *Boolean*.<br/> 
 
-    ![](attachments/microflows-how-to-merge-and-change-object-wm/wm-new-attribute-active.png)<br/>
+    ![](attachments/microflows-how-to-merge-and-change-object/new-attribute-active.png)<br/>
 
     c. Click **Create**.
 
 2. Now we will configure a new activity in the microflow. Open the microflow named *Show_grade_specific_page*.
 3.  In the **Toolbox** > **Object Activities** select the **Change Object** activity, drag and drop it after the merge in the microflow.
 
-     ![](attachments/microflows-how-to-merge-and-change-object-wm/wm-change-object-added.png)
+     ![](attachments/microflows-how-to-merge-and-change-object/change-object-added.png)
 
 4.  In the **Properties** tab for the **Change Object** activity, do the following:<br/>
 
@@ -93,17 +93,17 @@ Now we will add logic to the microflow. We have merged three flows into one, bec
 
     b. Click **Add New Value**.<br/>
 
-    ![](attachments/microflows-how-to-merge-and-change-object-wm/wm-change-object-add-new-value.png)<br/>
+    ![](attachments/microflows-how-to-merge-and-change-object/change-object-add-new-value.png)<br/>
 
     c. In the **Change value** dialog window, select the attribute named **Active**, then click the **Expression** tab, and type *true*. This means that after the order form is opened for a specific customer, the customer's status is set to active (active=true), no matter what grade this customer has.<br/> 
 
-    ![](attachments/microflows-how-to-merge-and-change-object-wm/wm-change-value-expression-editor.png)<br/>
+    ![](attachments/microflows-how-to-merge-and-change-object/change-value-expression-editor.png)<br/>
 
     d. Click **Add** to finish setting the value for the **Active** attribute.<br/>
 
     e. In the **Properties** tab > the **Behavior** section do the following: leave the **Commit** option set to **Yes**, since we are not planning to change the object further and want our changes to be saved (committed) to the database.  <br/>
 
-    ![](attachments/microflows-how-to-merge-and-change-object-wm/wm-change-object-properties.png)
+    ![](attachments/microflows-how-to-merge-and-change-object/change-object-properties.png)
 
 Congratulations! Now we have the microflow that works the following way:
 

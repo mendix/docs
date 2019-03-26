@@ -161,6 +161,10 @@ If you click **Run** in the Desktop Modeler this will automatically:
 * deploy the deployment package to the first available environment (this will replace any app which is currently running in this environment)
 {{% /alert %}}
 
+{{% alert type="warning" %}}
+You will still have to deploy your app in the Developer Portal the very first time to ensure that all the services are bound correctly.
+{{% /alert %}}
+
 1. Go to the **Environments** page of the Developer Portal.
 
     ![](attachments/sap-cloud-platform/environments-page.png)
@@ -458,6 +462,20 @@ Under some circumstances an app with a service in the **Services To Be Bound** s
 This indicates that SAP Cloud Portal is not able to bind the service, even though it has been instantiated correctly. If you remove the service from the app, then the app should restart successfully.
 
 If you are trying to bind more than one new service, it is not possible to identify within the Developer Portal which service is causing the issue. If the culprit is not obvious, you will have to remove all the services or go to SAP Cloud Portal where you can use the service name in the error message to find which service is causing the error.
+
+### 8.4 An Error Occurs While Deploying App From Desktop Modeler
+
+If an app is deployed to SAP using the Desktop Modeler **Run** button before it has been started from the Developer Portal, the deployment will fail. This is because the marketplace services have not been bound.
+
+{{% image_container width="50%" %}}
+![](attachments/sap-cloud-platform/error-desktop-modeler.png)
+{{% /image_container %}}
+
+If you use the Developer Portal to look at the details of the environment to which you are deploying, you will see that the services are still waiting to be bound.
+
+![](attachments/sap-cloud-platform/error-not-bound.png)
+
+Start the app from the Developer Portal to bind the services. Once they are bound, you can deploy your app from the Desktop Modeler, as usual.
 
 ## 9 Status of SAP Cloud Platform Deployment
 

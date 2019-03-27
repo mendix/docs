@@ -315,7 +315,8 @@ Use the Custom Environment Variables to **add**, **Edit**, or **Delete** an envi
 Unlike the Custom Runtime Settings, the variables you add have to be chosen from a drop-down list. The variables are:
 
 * **DD_API_KEY** – the API key used with Datadog
-* **DATABASE_CONNECTION_PARAMS** – the log level of logging sent to Datadog
+* **DD_LOG_LEVEL** – the log level of logging sent to Datadog
+* **DATABASE_CONNECTION_PARAMS** – Additional JDBC parameters for PostgreSQL databases, see the [Mendix Cloud Foundry Buildpack](https://github.com/mendix/cf-mendix-buildpack) for more information
 * **APPMETRICS_TARGET** – setting this enables business events to be sent to a different monitoring solution from the technical events 
 
 ## 7 Maintenance Tab
@@ -325,7 +326,7 @@ Unlike the Custom Runtime Settings, the variables you add have to be chosen from
 There are two types of maintenance:
 
 * Regular weekly maintenance (which does not affect your app), during which you can change the preferred maintenance window
-* Planned maintenance (which will affect your app in some ways), during which you will automatically receive an email about this and you can override the maintenance window
+* Planned maintenance (which will affect your app in some ways), about which you will automatically receive an email and you can override the maintenance window if necessary
 
 For more information about maintenance, see [Maintenance Windows: Configuration](maintenance-windows).
 

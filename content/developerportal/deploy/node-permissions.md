@@ -46,15 +46,9 @@ To access the node permissions, do the following:
 
 ![](attachments/node-permissions/node-permissions.png)
 
-3. Select the environment for which you want to change permissions.
+3. Select the environment for which you want to change permissions from the dropdown.
 
-    * For licensed nodes *without* flexible environments, click the environment name
-
-        ![](attachments/node-permissions/node-environments.png)
-
-    * for licensed nodes *with* flexible environments, select the environment name from the dropdown
-
-        ![](attachments/node-permissions/node-flexible-environments.png)
+    ![](attachments/node-permissions/node-flexible-environments.png)
 
 4. Complete two-factor authentication, if required for the selected environment.
 

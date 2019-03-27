@@ -30,7 +30,7 @@ To enable the new process for a project, do the following:
 
 	![](attachments/collaborative-development-migration/enable-new-mode.png)
 	
-3. After enabling the new process in the Developer Portal, close the Desktop Modeler and reopen the project for the change to take effect.
+3. After enabling the new process in the Developer Portal, close the Desktop Modeler and reopen it for the change to take effect.
 
 The Web Modeler can now be used for collaborative development in projects with Mendix version 7.23.3 or above.
 

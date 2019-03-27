@@ -78,7 +78,7 @@ Properties available in the **General** section are described in the table below
 | Caption     | Defines the text that will be shown on the button. Buttons have preset captions depending on the action they perform. For more information, see section [3.1 Default Caption](#default-caption). |
 | Icon        | Determines the icon that will be shown in front of the caption of the button. |
 | Render Mode | Defines the way the button will be shown to the end-user. Possible options are the following: <ul><li>**Button** – the widget will be rendered as a button</li><li>**Link** – the widget will be rendered as a hyperlink</li></ul>Default render mode: Button |
-| Style       | Applies a predefined styling to the button. Possible options are the following: <ul><li>Default</li><li>Inverse</li><li>Primary</li><li>Info</li><li>Success</li><li>Warning</li><li>Danger</li></ul>Default value for all buttons except the **Save Changes** button: Default<br />Default value for the **Save Changes** button: Success<br />The color for each style depends on your settings in the **Theme Customizer**. For details, see [Theme Customizer in the Web Modeler](theme-customizer-wm). |
+| Style       | Applies a predefined styling to the button. Possible options are the following: <ul><li>Default</li><li>Inverse</li><li>Primary</li><li>Info</li><li>Success</li><li>Warning</li><li>Danger</li></ul>Default value for all buttons except the **Save Changes** button: Default<br />Default value for the **Save Changes** button: Success<br />The color for each style depends on your settings in the **Theme Customizer**. For details, see [Theme Customizer in the Web Modeler](theme-customizer). |
 
 ### 3.1 Default Caption {#default-caption}
 

@@ -7,7 +7,7 @@ tags: ["web modeler", "app viewing", "checks", "errors"]
 
 ## 1 Introduction 
 
-When [publishing your app](deployment-wm#publishing-your-app), the Web Modeler checks the app you created on [consistency errors](consistency-errors). If there are any, the app cannot be published, and you see the **Checks** button goes red with the number of errors indicated.
+When [publishing your app](publishing-app#publishing-your-app), the Web Modeler checks the app you created on [consistency errors](consistency-errors). If there are any, the app cannot be published, and you see the **Checks** button goes red with the number of errors indicated.
 
 ![](attachments/checks/checks-button.png)
 
@@ -92,5 +92,5 @@ The information displayed in the table of the **Checks** panel is represented be
 ## 4 Read More
 
 * [Consistency Errors in the Web Modeler](consistency-errors)
-* [Publishing Your App From the Web Modeler](deployment-wm)
+* [Publishing Your App From the Web Modeler](publishing-app)
 * [The Web Modeler General Info](general-wm)

@@ -343,6 +343,9 @@ You will automatically receive **email notifications** about planned maintenance
 
 ![](attachments/environments-details/tags.png)
 
-You can add tags to your environment which can be used for third-party logging solutions.
+You can set tags on your environment. These are arbitrary strings that are not interpreted by the Developer Portal. Tags serve two purposes:
+
+* Custom tags can be added to metrics for third-party metrics solutions
+* Tags can serve as selection criteria for grouping environments into a landscape management dashboard which can be used for third-party logging solutions
 
 For example, you may wish to use tags when logging with *Datadog*. You can find more information on this at [Getting started with tags](https://docs.datadoghq.com/tagging/) on the *Datadog* site.

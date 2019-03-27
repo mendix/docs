@@ -123,14 +123,18 @@ The previous steps explained how to deploy a deployment package to the Mendix Cl
 
 1. Open the [Developer Portal](http://home.mendix.com).
 2. Open your app.
-2. Go to **Environments**.
-3. In the **Deployment Package Repository**, choose the preferred deployment package and click **Deploy**.
-4. Select the preferred environment, and then click **Continue**. (If you are using *flexible environments*, you will only have to click on the environment to select it)
-5. Click **Transport**. If asked to do so, clean the environment.
-6. Configure the constants (if necessary) by clicking **Constants** and **Edit constants value**. This can also be done in a later stage in the settings.
-7. Configure the scheduled events (if necessary) by clicking **Scheduled Events**. 0
-8. Click **Continue**.
-9. Click **Start application**. If asked, click **Synchronize database**.
+3. Go to **Environments**.
+4. In the **Deployment Package Repository**, choose the preferred deployment package and click **Deploy**.
+5. Click the environment to which you want to deploy the package.
+6. Click **Transport**.
+
+    ![](attachments/mendix-cloud-deploy/transport-to-flex.png)
+
+7. If asked to do so, clean the environment.
+8. Configure the constants (if necessary) by clicking **Constants** and **Edit constants value**. This can also be done in a later stage in the settings.
+9. Configure the scheduled events (if necessary) by clicking **Scheduled Events**.
+10. Click **Continue**.
+11. Click **Start application**. If asked, click **Synchronize database**.
 
 The app is now deployed and the administrative account can be configured.
 

@@ -64,7 +64,7 @@ Once the page is created, you can customize it.
 
 ## 6 Customizing Your Theme
 
-The **[Theme Customizer](/web-modeler/theme-customizer-wm)** allows you to customize your app in the Web Modeler. For more information on how you can style your app with it, see [Theme Customizer](/web-modeler/theme-customizer-wm) in the *Web Modeler Guide*. 
+The **[Theme Customizer](/web-modeler/theme-customizer)** allows you to customize your app in the Web Modeler. For more information on how you can style your app with it, see [Theme Customizer](/web-modeler/theme-customizer) in the *Web Modeler Guide*. 
 
 ## 7 Read More
 
@@ -74,4 +74,4 @@ The **[Theme Customizer](/web-modeler/theme-customizer-wm)** allows you to custo
 * [How to Share Company Atlas UI Resources](share-company-atlas-ui-resources)
 * [Web Modeler General Info](/web-modeler/general-wm) 
 * [Page Editor in the Web Modeler](/web-modeler/page-editor)
-* [Theme Customizer in the Web Modeler](/web-modeler/theme-customizer-wm)
+* [Theme Customizer in the Web Modeler](/web-modeler/theme-customizer)

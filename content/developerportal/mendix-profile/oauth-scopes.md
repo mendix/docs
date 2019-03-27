@@ -81,10 +81,11 @@ This is a Mendix-specific scope that is used by internal Mendix applications as 
 
 This is a Mendix-specific scope that is used by internal Mendix applications as well as by SAP and IBM (as strategic Mendix partners). This scope allows a website/application to change the platform to which an app will be deployed.
 
-### 2.7 Retrieve the stories and sprints in your project {#mx:app:stories:read}
+### 2.7 Retrieve the Stories & Sprints in Your Project {#mx:app:stories:read}
 
-This scope is used with mendix platform api's. This scope allows the users to read stories and sprint details in your project.  
+This is used with the Mendix Platform [Stories APIs](/apidocs-mxsdk/apidocs/). This scope allows a website/application or partner to read stories and sprint details in your app project.
 
-### 2.8 Make changes to the stories and sprints in your project {#mx:app:stories:write}
+### 2.8 Make Changes to the Stories & Sprints in Your Project {#mx:app:stories:write}
 
-This scope is used with mendix platform api's. This scope allows the users to make changes to stories and sprint in your project.
+This is used with the Mendix Platform [Stories APIs](/apidocs-mxsdk/apidocs/). This scope allows a website/application or partner to make changes to stories and sprints in your app project.
+

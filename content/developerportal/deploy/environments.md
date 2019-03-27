@@ -126,7 +126,9 @@ This shows a similar list of details (the differences are highlighted):
 
 **Reordering Environments**
 
+If you are the [Technical Contact](/developerportal/company-app-roles/technical-contact) you can reorder the environments by dragging and dropping:
 
+![](attachments/environments/reorder-environments.gif)
 
 **Actions**
 

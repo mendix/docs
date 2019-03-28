@@ -124,6 +124,8 @@ This shows a similar list of details (the differences are highlighted):
 * **PLAN** indicates the plan for this environment - you can see more information about the plan on the *Details* page.
 * The URL of the app
 
+You can use the **Search...** box to find a specific environment.
+
 **Reordering Environments**
 
 If you are the [Technical Contact](/developerportal/company-app-roles/technical-contact) you can reorder the environments by dragging and dropping:

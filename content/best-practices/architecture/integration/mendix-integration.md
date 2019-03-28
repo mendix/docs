@@ -15,8 +15,6 @@ other systems.
 
 This diagram presents how Mendix keeps all these parts together and checks consistency in the app model:
 
-{{% todo %}}[**UX-UPDATE DIAGRAM**]{{% /todo %}}
-
 ![](attachments/mendix-integration/feature-requirements.png)
 
 So, you do not have to worry about the integration of internal app layers. However, the Solution Architect or Lead Developer does need to design good microservices and interfaces that can integrate seamlessly with other apps and systems in the enterprise.
@@ -59,7 +57,7 @@ Finally, make a conscious choice about why one method is chosen over another.
 
 However, there are typical use cases for which Mendix is creating example implementations. These best practices are related to such typical use cases.
 
-{{% todo %}}[**EXPLAIN DIAGRAM; UX-UPDATE DIAGRAM**]{{% /todo %}}
+{{% todo %}}[**EXPLAIN DIAGRAM**]{{% /todo %}}
 
 ![](attachments/mendix-integration/common-use-cases.png)
 
@@ -69,7 +67,7 @@ For each use case, we need to consider which solution is most suitable under whi
 
 For most of the integration related to Mendix, there are five solution categories that are almost always used. Sometimes just one is used, and sometimes a combination is used:
 
-{{% todo %}}[**EXPLAIN DIAGRAM; UX-UPDATE DIAGRAM**]{{% /todo %}}
+{{% todo %}}[**EXPLAIN DIAGRAM**]{{% /todo %}}
 
 ![](attachments/mendix-integration/solution-categories.png)
 

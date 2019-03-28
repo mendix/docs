@@ -12,35 +12,35 @@ Mendix promotes keeping together what belongs functionally together. By having a
 
 Other apps or components can only access the data and functions via well-defined APIs using explicit contracts. The APIs are easy to set up via REST, SOAP, OData, files, or any other mechanism. Access to data, files, and functions is controlled via Mendix Runtime. That way, only the right caller can perform the predefined operations provided by the app. Dependencies are thus defined and kept under control.
 
-In the diagram below, the three parts of a Mendix app are shown. The browser talks exclusively with the [Mendix Runtime](/refguide/runtime), and this is the only component that works directly on data in the database. Backup and restore is easy, as it affects only this app.
+In the diagram below, the three parts of a Mendix app are shown. The browser and external services talk exclusively with the [Mendix Runtime](/refguide/runtime), which is the only component that works directly on data in the database. Backup and restore is easy, as only this app is affected.
 
+![](attachments/mendix-microservices2/mm-intro.png)
 
-![](attachments/mendix-microservices2/90263dd28da16309020d74661675ea90.png)
+This is why Mendix works well for creating all types of microservices: business-oriented microservices that are like applications, API-oriented microservices that do not have a UI, and .NET-styled microservices that share a database. 
 
-In the figure above the three parts of a Mendix App is shown. The browser and external services talks exclusively with the Mendix run-time, which is the only component that works directly on data in the database. Back-up and restore is easy, and effects only this App.
-
-This is why Mendix works well for creating all types of Microservices: Fowler’s business oriented services that are like Apps or applications, the API oriented ones that do not have a UX, and the .NET style services that share a database, see *Three Microservices Patterns* \<link\>.
+For more information, see [Three Microservice Patterns](three-microservice-patterns).
 
 ## 2 What Happens When the Scope Grows?
 
-When the scope grows, the first thing to do in Mendix is to structure the app in separate modules within the same App. Ideally modules should be as independent as possible. They may copy parts of the same data to have a specific view on the same information, while maintaining more autonomy this way.
+When the scope grows, the first thing to do in Mendix is structure the app in separate modules within the same App. Ideally modules should be as independent as possible. They may copy parts of the same data to have a specific view on the same information while maintaining more autonomy in this way.
 
-![](attachments/mendix-microservices2/7e5ac58368e85b84e011917c9c24eab3.png)
+{{% todo %}}[**EXPLAIN DIAGRAM**]{{% /todo %}}
 
-The increased speed of development in a low-code platform like Mendix means that apps and microservices can be functionally quite large and significant before the rule of having fewer than eight developers on a team comes into play. An advanced ordering app or support app can easily be contained in one single Mendix app.
+![](attachments/mendix-microservices2/med-large.png)
 
-This allows you to choose the size of an app based on functional considerations, instead of having to break it down based on the microservice size consideration. These are some other reasons for having separate apps and microservices: 
+The increased speed of development in a low-code platform like Mendix means that apps and microservices can be functionally quite large and significant before the rule of having fewer than eight developers on a team comes into play. An advanced ordering app or support app can easily be contained in one single Mendix app. 
 
--   To separate business functions from each other
--   To allow for the autonomy of evolution for different stakeholder
-    organizations
--   To have different release cycles
--   To fulfil different operational requirements
--   For scalability
--   To separate complicated integration and batch processes
--   Different security requirements, e.g. customer portals
+This allows you to choose the size of an app based on functional considerations, instead of having to split it up based on the microservice size consideration. These are some other reasons for having separate apps and microservices: 
 
-## 3 When the Scope Grows Even More?
+* Separate business functions from each other
+* Allow for the autonomy of evolution for different stakeholder organizations
+* Follow different release cycles
+* Fulfill different operational requirements
+* Improve scalability
+* Sparate complicated integration and batch processes
+* Fulfill different security requirements (for example, in customer portals)
+
+## 3 What Happens When the Scope Grows Even More?
 
 When the scope increases further and it is still one business function, we can split things up and create a system of apps working together as a microservices cluster. The microservices cluster is treated from the outside as one single *system*, but it is built, tested, and deployed as a set of independent functional components by \~1-8 DevOps teams.
 

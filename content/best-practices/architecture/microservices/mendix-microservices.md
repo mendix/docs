@@ -72,7 +72,7 @@ When the scope grows, the first thing to do in Mendix is to structure the app in
 
 The increased speed of development in a low-code platform like Mendix means that apps and microservices can be functionally quite large and significant before the rule of having fewer than eight developers on a team comes into play. An advanced ordering app or support app can easily be contained in one single Mendix app. 
 
-This allows you to choose the size of an app based on functional considerations, instead of having to split it up based on the microservice consideration. These are some other reasons for having separate apps and microservices: 
+This allows you to choose the size of an app based on functional considerations, instead of having to split it up based on the microservice size consideration. These are some other reasons for having separate apps and microservices: 
 
 * Separate business functions from each other
 * Allow for the autonomy of evolution for different stakeholder organizations

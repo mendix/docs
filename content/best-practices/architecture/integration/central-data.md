@@ -16,7 +16,7 @@ The central data pattern reflects the ability to do the following:
 
 This diagram displays some typical ways to use the data:
 
-![](attachments/central-data/intro.png)
+![](attachments/central-data/cd-intro.png)
 
 * Viewing combined data using real-time services
 * Polling for combined updates (rather than polling many systems)

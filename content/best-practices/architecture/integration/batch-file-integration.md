@@ -11,7 +11,7 @@ Batch integration is still relevant for many business processes that are periodi
 
 {{% todo %}}[**EXPLAIN DIAGRAM**]{{% /todo %}}
 
-![](attachments/batch-file-integration/intro.png)
+![](attachments/batch-file-integration/bfi-intro.png)
 
 Often for a Mendix app to be built, there is already a file available from other systems. The task then is to transport it to the app via a REST service for smaller files or FTP for larger files and then import it.
 

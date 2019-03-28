@@ -8,12 +8,12 @@ tags: ["microservices"]
 
 ## 1 Introduction
 
-Mendix promotes keeping together what belongs functionally together. By having all parts needed for a business function in one project = one model = deployable, we guarantee integrity between data, UI, and logic starting from the developer through testing cycles and until it runs as an app in production. 
+Mendix promotes keeping together what belongs functionally together. By having all the parts needed for a business function in one project (which equals one model and thus one deployable), we guarantee the integrity between data, UI, and logic starting from development through testing cycles until it runs as an app in production. 
 
-Other apps or components can only access data and functions via well-defined
-APIs using explicit contracts.
+Other apps or components can only access the data and functions via well-defined APIs using explicit contracts. The APIs are easy to set up via REST, SOAP, OData, files, or any other mechanism. Access to data, files, and functions is controlled via Mendix Runtime. That way, only the right caller can perform the predefined operations provided by the app. Dependencies are thus defined and kept under control.
 
-The APIs are very easy to set up via REST, SOAP, OData, files, or any other mechanism. Access to data, files and functions is controlled via Mendix Runtime. That way only the right caller can do pre-defined operations provided by the App. Thereby dependencies are defined and kept under control.
+In the diagram below, the three parts of a Mendix app are shown. The browser talks exclusively with the [Mendix Runtime](/refguide/runtime), and this is the only component that works directly on data in the database. Backup and restore is easy, as it affects only this app.
+
 
 ![](attachments/mendix-microservices2/90263dd28da16309020d74661675ea90.png)
 

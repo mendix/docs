@@ -13,7 +13,7 @@ To start with service integration, consider this scenario: a user is filling in 
 
 Service integration should first be considered as the default method for integration. Only if there are strong reasons to avoid synchronous request-reply, then UI integration, batch processing, or event processing should be considered.
 
-![](attachments/service-integration/intro.png)
+![](attachments/service-integration/si-intro.png)
 
 ## 2 What Is Service Integration?
 

@@ -19,7 +19,7 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud V3, and other deploym
     * The Technical Contact can rename the environments
     * The Technical Contact can re-order the environments
 * As part of support for Flexible Environments we have made the following changes:
-    * When deploying your application via the Developer Portal you can choose the destination environment **CHECK THIS** The Desktop Modeler will always deploy to your Test environment. **CHECK THIS**
+    * When deploying your application via the Developer Portal you can choose the destination environment
     * When viewing metrics, logs, backups, etc. you will have to choose the environment using a drop-down rather than clicking directly on the environment you want
 * We have added the ability to manage tags through the Developer Portal, in addition to the current method which involved using the API
 

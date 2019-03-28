@@ -26,7 +26,7 @@ The Mendix Cloud automatically monitors the health and status of apps that are d
 
 	![](attachments/18580000.png)
 
-	{{% alert type="warning" %}}The Acceptance and Production buttons at the top let you switch between viewing the status for your production and acceptance node. Note that accessing production information may require additional authentication and is subject to your project's security settings.{{% /alert %}}
+	{{% alert type="warning" %}}The dropdown at the top lets you switch between viewing the status for your node environments. Note that accessing production information may require additional authentication and is subject to your project's security settings.{{% /alert %}}
 
 4.  If one of the status items is not listed as **OK**, click the line to show an additional information box with details about the error.
 
@@ -259,7 +259,7 @@ To access the history of the alerts from your app, follow these steps:
 
     The overview shows alert types and details including date and time. The alert types provide a broad indication of the type of error that occurred, such as critical log messages or failures of the health check microflow. Recovery notifications will also be shown here.
 
-    The Acceptance and Production buttons at the top let you switch between viewing the status for your production and acceptance node. Note that accessing production information may require additional authentication and is subject to your project's security settings.
+    The dropdown at the top lets you switch between viewing the status for your node environments. Note that accessing production information may require additional authentication and is subject to your project's security settings.
 
 3. Click **Details**. This will open the alert details, which contains additional information. More information might be available in your application's log file.
 

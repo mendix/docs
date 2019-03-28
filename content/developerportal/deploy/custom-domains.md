@@ -16,6 +16,10 @@ The Mendix Cloud supports adding custom domains such as `https://myapp.mycompany
 This option is provided for licensed apps. You cannot add custom domains to free apps.
 {{% /alert %}}
 
+{{% alert type="warning" %}}
+You may not immediately see changes which affect DNS routing. This is because of DNS caching, where changes are not visible until the cache is updated.
+{{% /alert %}}
+
 **This how-to will teach you how to do the following:**
 
 * Generate a certificate request for your custom domain

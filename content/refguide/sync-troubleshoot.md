@@ -1,6 +1,6 @@
 ---
-title: "Troubleshoot Syncing the Desktop Modeler with the Web Modeler"
-parent: "general-sync-webmodeler-desktopmodeler"
+title: "Troubleshooting the Desktop Modeler with the Web Modeler Sync Process"
+parent: "sync-webmodeler-desktopmodeler"
 description: "This document presents a list of problems and fixes for issues around synchronization between the Mendix Desktop Modeler and Web Modeler."
 tags: ["synchronization", "sync", "web modeler", "desktop modeler", "troubleshoot"]
 ---

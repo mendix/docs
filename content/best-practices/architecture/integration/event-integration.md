@@ -13,7 +13,7 @@ The main characteristic for event-driven trends is that the process that produce
 
 The diagram below presents the basic characteristic of most event-based solutions, which is that the process creating the event is not directly connected to the process that uses it:
 
-![](attachments/event-integration/intro.png)
+![](attachments/event-integration/ei-intro.png)
 
 ## 2 Types of Event-Driven Integration
 

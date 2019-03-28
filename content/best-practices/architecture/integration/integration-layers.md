@@ -19,7 +19,7 @@ This means that if the team that owns the integration layer is adequately staffe
 
 As this diagram presents, Mendix prefers a mixed strategy in which local connections between closely related microservices and apps can and should be direct, while a thin integration layer is good for communication that is organizationally or network-wise farther away:
 
-![](attachments/integration-layers/intro.png)
+![](attachments/integration-layers/il-intro.png)
 
 ##2 Different Integration Layers
 

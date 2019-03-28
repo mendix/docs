@@ -8,10 +8,6 @@ tags: ["microservices"]
 
 ## 1 Introduction
 
-Microservices is a relatively new concept that has become very popular. By now, microservices are used in many contexts. 
-
-On the web, one will come across several different styles of microservices, which may prompt the question, “What is the correct way to build microservices?”
-
 ### 1.1 "Microservice" Defined by Lewis & Fowler
 
 Mendix bases its view on microservices on the [definition](https://www.thoughtworks.com/insights/blog/microservices-nutshell) created by James Lewis and Martin Fowler from Thoughtworks, who coined the "microservice" term. They recommend keeping all parts of a business function together in a deployable container and separated from other business functions via explicit service contracts.
@@ -76,7 +72,7 @@ When the scope grows, the first thing to do in Mendix is to structure the app in
 
 The increased speed of development in a low-code platform like Mendix means that apps and microservices can be functionally quite large and significant before the rule of having fewer than eight developers on a team comes into play. An advanced ordering app or support app can easily be contained in one single Mendix app. 
 
-This allows you to choose the size of an app based on functional considerations, instead of having to split it up based on the microservice consideration. These are some other reasons for having separate apps and microservices: 
+This allows you to choose the size of an app based on functional considerations, instead of having to split it up based on the microservice size consideration. These are some other reasons for having separate apps and microservices: 
 
 * Separate business functions from each other
 * Allow for the autonomy of evolution for different stakeholder organizations

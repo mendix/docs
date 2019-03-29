@@ -66,7 +66,7 @@ To upload the deployment package, follow these steps:
 
 #### 3.2.2 Backing Up
 
-Transfer the backup data of the app on Mendix Cloud v3 to the app on Mendix Cloud v4 by follow these steps:
+Transfer the backup data of the app on Mendix Cloud v3 to the app on Mendix Cloud v4 by following these steps:
 
 1. Download a backup from your app hosted in Mendix Cloud v3 (for details, see [How to Download a Backup](/developerportal/operate/download-backup)).
 

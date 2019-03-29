@@ -4,6 +4,7 @@ category: "Deployment"
 menu_order: 45
 description: "Describes how to deploy a Mendix app to the MindSphere launchpad"
 tags: ["MindSphere", "deploy", "cloud foundry", "launchpad", "scopes", "roles", "sso", "XSRF", "limitations"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction

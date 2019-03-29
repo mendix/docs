@@ -10,7 +10,7 @@ menu_order: 05
 
 {{% alert type="info" %}}
 
-Collaborative development is only available if your project has Mendix version 7.23.3 or above. For projects that have Mendix version 7.23.2 and below, see [Sync the Web Modeler & Desktop Modeler](general-sync-webmodeler-desktopmodeler).
+Collaborative development is only available if your project has Mendix version 7.23.3 or above. For projects that have Mendix version 7.23.2 and below, see [Sync the Web Modeler & Desktop Modeler](/refguide/sync-webmodeler-desktopmodeler).
 
 {{% /alert %}}
 

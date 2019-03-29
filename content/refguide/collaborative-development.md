@@ -2,6 +2,7 @@
 title: "Collaborative Development"
 category: "Version Control"
 description: "Describes the process of collaborative development between the Mendix Desktop Modeler and the Mendix Web Modeler"
+frontpage_featured: true
 tags: ["desktop modeler", "web modeler", "collaborative development", "sync"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -10,7 +11,7 @@ tags: ["desktop modeler", "web modeler", "collaborative development", "sync"]
 
 {{% alert type="info" %}}
 
-Collaborative development is only available if your project has Mendix version 7.23.3 or above. For projects that have Mendix version 7.23.2 and below, see [Sync the Web Modeler & Desktop Modeler](/web-modeler/general-sync-webmodeler-desktopmodeler).
+Collaborative development is only available if your project has Mendix version 7.23.3 or above. For projects that have Mendix version 7.23.2 and below, see [Sync the Web Modeler & Desktop Modeler](sync-webmodeler-desktopmodeler).
 
 For information on migrating from the old sync process to the new collaborative development, see  [Migration From the Sync Process to Collaborative Development](collaborative-development-migration). 
 

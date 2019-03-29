@@ -15,8 +15,6 @@ The **General** settings page presents an overview of your app project with the 
 * Whether the app is supported for the **Web Modeler** and the ability to **Enable Web Modeler** (for details on getting the full Web Modeler experience, see [How to Migrate Existing Projects to Atlas UI](/howto/front-end/migrate-existing-projects-to-atlasui))
 * The **App ID**
 
-{{% todo %}}[**UPDATE SCREENSHOT BELOW FOR NEW WEBHOOKS BUTTON**]{{% /todo %}}
-
 {{% image_container width="550" %}}![](attachments/general-settings.png)
 {{% /image_container %}}
 
@@ -45,15 +43,14 @@ Specific steps for configuring different cloud platforms are provided here:
 
 Click **Manage Webhooks** to manage your app's webhooks. A webhook enables the Developer Portal to talk to another website and post updated Developer Portal content (for example, sprint updates and new stories) to that website. For example, if [Mansystems](https://developer.mendixcloud.com/link/partnerprofile/1068) wants to follow the changes in their app project, they will create a service with a certain URL (see the required [URL](#url) below) that keeps track of the data. Changes in the app project in the Developer Portal are then sent to that URL.
 
-{{% todo %}}[**VERIFY ROLE/PERMISSIONS BELOW**]{{% /todo %}}
-
 {{% alert type="info" %}}
 Only [Company Admins](../company-app-roles/companyadmin-settings) or users with the **App Settings** permission can manage webhooks.
 {{% /alert %}}
 
 On the **Webhooks** page, you can add a new webook and edit or delete existing webhooks.
 
-{{% todo %}}[**ADD SCREENSHOT; VERIFY POSITION OF BUTTON; THIS WILL DETERMINE POSITION OF SECTION IN DOC**]{{% /todo %}}
+{{% image_container width="550" %}}![](attachments/webhooks-list.png)
+{{% /image_container %}}
 
 Each webhook requires the following details:
 

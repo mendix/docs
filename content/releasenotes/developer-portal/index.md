@@ -14,7 +14,7 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud V3, and other deploym
 
 #### Improvements
 
-* We have introduced *Flexible Environments*. This means that you can have more than three environments for your licensed node. More information is available [here](/developerportal/deploy/mendix-cloud-deploy#flexible-environments). If you need more than three environments, contact [Mendix Support](/developerportal/support/). Features of Flexible Environments include the following:
+* We have introduced *Flexible Environments* for Mendix Cloud v4. This means that you can have more than three environments for your licensed node. More information is available [here](/developerportal/deploy/mendix-cloud-deploy#flexible-environments). If you need more than three environments, contact [Mendix Support](/developerportal/support/). Features of Flexible Environments include the following:
     * You can search for the environment for which you want to see details
     * The Technical Contact can rename the environments
     * The Technical Contact can re-order the environments
@@ -22,6 +22,10 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud V3, and other deploym
     * When deploying your application via the Developer Portal you can choose the destination environment
     * When viewing metrics, logs, backups, etc. you will have to choose the environment using a drop-down rather than clicking directly on the environment you want
 * We have added the ability to manage tags through the Developer Portal, in addition to the current method which involved using the API
+
+* We have changed Mendix deployment to **SAP Cloud Portal** so that the Cloud Foundry stack cflinuxfs3 is used. Previously, Mendix apps were using cflinuxfs2, which has been deprecated by SAP. 
+
+    The next time that you deploy a new, or existing, Mendix app to *SAP Cloud Portal* from the Mendix Developer Portal, the new stack will be applied to your app.
 
 ### March 21st, 2019
 

@@ -10,7 +10,7 @@ tags: ["microservices"]
 
 There are three basic types of microservices that may be used in different situations:
 
-{{% todo %}}[**A LINK TO WHERE FOLWER AND LEWIS ACTUALLY SAY THIS WOULD BE GOOD; OTHERWISE, THE IMPRESSION IS THAT THIS IS A PARAPHRASE WITHOUT ATTRIBUTION, AND EVEN THAT ALL 3 TYPES ARE BASED ON THEIR THINKING**]{{% /todo %}}
+{{% todo %}}[**A LINK TO WHERE FOWLER AND LEWIS ACTUALLY SAY THIS WOULD BE GOOD; OTHERWISE, THE IMPRESSION IS THAT THIS IS A PARAPHRASE WITHOUT ATTRIBUTION, AND EVEN THAT ALL 3 TYPES ARE BASED ON THEIR THINKING**]{{% /todo %}}
 
 * **Business-oriented microservices** – Fowler and Lewis suggest these usually cover a business function and are autonomous, giving the full advantage of the microservices architecture pattern. These microservices have UX, logic, and data.
 * **API-oriented microservices** – These microservices are smaller and request-reply oriented. These are really closer to SOA layers, and they are good for generic functions behind web portals, for example. These microservices normally have only logic and data, as the UX is externally developed.
@@ -27,65 +27,70 @@ Mendix contains the UX, logic, and data layers, so it is easy to provide microse
 
 The sections below will take a closer look at these patterns.
 
-## 2 Microservices by Lewis and Fowler
+## 2 Business-Oriented Microservices by Lewis and Fowler
 
 Mendix bases its views on the [definition of microservices](https://martinfowler.com/microservices/#what) created by James Lewis and Martin Fowler from Thoughtworks. They recommend keeping all the parts of a business function together in a deployable container and separated from other business functions via explicit service contracts.
 
-In [Microservices: a definition of this new architectural term](https://martinfowler.com/articles/microservices.html), they explain the following:
+{{% todo %}}[**A LINK TO WHERE FOWLER AND LEWIS ACTUALLY SAY THIS WOULD BE GOOD; OTHERWISE, THE IMPRESSION IS THAT THIS IS A QUOTE WITHOUT ATTRIBUTION**]{{% /todo %}}
 
-{{% todo %}}[**VERIFY QUOTE ACCURACY; ADD FOOTNOTE?**]{{% /todo %}}
+>The Microservice architecture style is an approach to build large applications as a suite of smaller parts where each microservice:
+>- Is built around a business capability,
+>-   Runs its own process,
+>-   Communicate via a light weight mechanism,
+>-   Is independently deployable
+>-   by an automated deployment machinery
 
->The Microservice architecture style is an approach to build large applications as a suite of smaller parts where each microservice:*
+This approach makes the component more self-contained and autonomous, and the dependencies are clear and explicit.
 
--   *Is built around a business capability,*
--   *Runs its own process,*
--   *Communicate via a light weight mechanism,*
--   *Is independently deployable*
--   *by an automated deployment machinery*” \<blue box?\>
-
-It makes the component more self-contained and autonomous, and dependencies are clear and explicit. In the figure below. The figure below shows how a large system is being divided in functionally independent pieces that work together, often as actors in a business process.
-
--   We split the system in smaller autonomous pieces that work together
--   This we call a Microservices architecture “System” or “Cluster”
--   Each service contains a business function and speaks with other business
-    function microservicesattachments/three-microservices-patternsservices or deep-links
+This diagram shows how a large system can be divided into functionally-independent pieces that work together as actors in a business process:
 
 ![](attachments/three-microservices-patterns/0e68e5477045c7c1bce41181f9fd796b.png)
 
-Note that the large system has GUI, Logic and Data, and that means that at least some microservices in the MSA situation will also have a GUI. In fact the split is functional so most of them will have all three layers to fulfil a business function.
+The division is accomplished in this way:
 
-## 3 API style Microservices – Without UX
+* The system is split into smaller autonomous pieces that work together (which is called a "system" or "cluster" in microservics architecture terminology)
+* Each service contains a business function and speaks with other business functions or deep links
 
-Many people associate Microservices with APIs and API gateways, because there are API management platforms that market those types of microservices. This school focuses on the “*services*” part of the name and it is closer to a SOA layered model than the Fowler-Lewis microservices.
+{{% alert type="info" %}}
+When a large system has GUI, logic, and data, at least some microservices in the microservices architecture will also have a GUI. In fact, the split is functional, so most of them will have all three layers to fulfil a business function.
+{{% /alert %}}
 
-API style “microservices” will provide one or more request-reply functions, usually in REST, that can be used by one or more UX components or web-applications, usually on the other side of an API management layer to handle security and access.
+## 3 API-Style Microservices (Without UX)
 
-The improvement from SOA layered architecture is that these are relatively small and independent, and should try to fulfil a business function, and they can have data in them. We go from 4-8 layers with a central ESB in between, to only 3-4 layers using a light-weight API management gateway between microservices and to the UX layer.
+Many people associate microservices with APIs and API gateways, because there are API management platforms that market those types of microservices. This pattern focuses on the “services” part of microservices, and it is closer to an SOA-layered model than the Fowler-Lewis microservices pattern.
 
-Mendix is used in this way to a great advantage at many places, and a typical use-case for this is a Marketing oriented customer portal, where some areas are text and picture oriented information, and some areas are functional, see *Marketing Portals*.
+API-style microservices provide one or more request-reply functions (usually in REST) that can be used by one or more UX components or web applications. This usually occurs on the other side of an API management layer that handles security and access.
 
-The figure below shows a typical architecture based on “headless” Microservices.
+The improvement from SOA-layered architecture is that these microservices are relatively small and independent. They should try to fulfil a business function, and they can have data in them. In this pattern, you are going from 4–8 layers with a central ESB in between, to only 3–4 layers using a lightweight API management gateway between the microservices and UX layer.
 
-Since they are small and contain relatively little data, they often expose and enrich functionality from legacy systems. Simple workflow is usually handled in the UX layer to the extent that workflow is required.
+Mendix can be used in this way to great advantage. A typical use case here is a marketing-oriented customer portal where some areas contain text and images and some areas are functional. For more information, see the [Marketing Portals](mendix-microservices#marketing-portal) section of *Mendix Microservices*.
+
+This diagram compares the business-oriented microservices approach—where data and functions are shared only via well-defined service calls—to a typical architecture based on “headless” microservices:
 
 ![](attachments/three-microservices-patterns/6e3dff3bb697181b31ba4145f5c2c960.png)
 
-This pattern is useful in a large enterprise that wants to provide generic request-reply based services to be used in several channels, e.g. several mobile Apps and several customer-oriented portals.
+Since these microservices are small and contain relatively little data, they often expose and enrich functionality from legacy systems. A simple workflow is usually handled in the UX layer, to the extent that a workflow is required.
 
-This pattern is less efficient for process heavy business applications and internal business department portals, where often concentrating the functionality to a Business Oriented microservices cluster is more efficient.
+This pattern is useful in a large enterprise that wants to provide generic request-reply based services to be used in several channels (for example, in several mobile apps and customer-oriented portals).
+
+This pattern is less efficient for process-heavy business applications and internal business department portals, where often concentrating the functionality in a business-oriented microservices cluster is more efficient.
 
 ## 4 Shared Database Microservices 
 
-In Mendix the consistency between the layers UX – Logic – Data is very important, and it is part of the model that is created. Mendix Apps on the Mendix cloud do not share a database because then Apps would be dependent on each other and it would be hard to guarantee quality and consistency from Dev to Ops. The developers do not need to know about SQL and about which database is used.
+In Mendix, consistency between the layers of UX, logic, and data is very important. This consistency should be part of the model that is created. Mendix apps on the Mendix Cloud do not share a database, because if they did, the apps would be dependent on each other and it would be hard to guarantee quality and consistency from development to operations. Accordingly, Mendix developers do not need to know about SQL and which database is used.
 
-For most other App building platforms, the Apps are not deployed *with* the database, but rather they *point* to a database and have various ease of integration to and from the database. There is often a DBA that sets up a separate database that developers of different Apps will use.
+For most other app-building platforms, the apps are not deployed *with* the database. Rather, they *point* to a database via a configured ease of integration to and from that database. There is often a Database Administrator who sets up a separate database that developers of different apps will use.
 
-In that situation the common standard is to share a database between Apps. This may can be a good pattern when there are a few Apps that act like modules in one single application. They are still separately deployable which is a benefit, but of course they all depend on the same database. Deployments of one App will contain changes to the database, that can affect data other Apps etcetera. I.e. there is some separation of function, but not as good as for Business Oriented microservices.
+In this scenario, the common standard is to share a database between apps. This can be a good pattern when there are a few apps that act like modules in one single application. They will still be separately deployable, which is a benefit, but they will depend on the same database. This means that deployments of one app will contain changes to the database, which can affect the data of other apps. There is some separation of functions, but not as much as for business-oriented microservices.
 
-The figure below shows the shared DB pattern where Apps are using and updating the same database tables, which will gain speed in the short term, but make the system very hard to maintain in the long term, see also *Why Not Share a Database?*.
+This diagram presents the shared database pattern (on the right), where apps are using and updating the same database tables:
 
 ![](attachments/three-microservices-patterns/0e2dad99c7f5f0a548490fdd58a9e79c.png)
 
-On the right side is a pattern with Business Oriented microservices, sharing data and functions only via well-defined service calls.
+This pattern will gain speed in the short term, but it will make the system very hard to maintain in the long term. For more details, see *Why Not Share a Database?*.
 
-In the definition of Microservices as suggested by Fowler, Lewis and Newman, it is not recommended to share the same Database for microservices, at least not if the Apps are directly accessing each-other’s data. The reason is that dependencies grow in the same way as they would for a Monolith.
+{{% todo %}}[**ADD CROSS-REFERENCE ABOVE ONCE DETERMINED**]{{% /todo %}}
+
+{{% todo %}}[**A LINK TO WHERE FOWLER, LEWIS, AND NEWMAN ACTUALLY SAID THE DETAIL BELOW WOULD BE GOOD; OTHERWISE, THE IMPRESSION IS THAT THIS IS A PARAPHRASE WITHOUT ATTRIBUTION**]{{% /todo %}}
+
+In summary, the explanation of microservices as suggested by Fowler, Lewis, and Newman does not recommend sharing the same database for microservices, at least not if the apps are directly accessing each other’s data. The reason for this is that dependencies will grow in the same way as they would for a monolith.

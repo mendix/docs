@@ -65,7 +65,7 @@ If you are building a functionally-oriented customer portal, Mendix is ideal for
 
 ![](attachments/mendix-microservices/functionally-oriented.png)
 
-## 5 Marketing Portals
+## 5 Marketing Portals {#marketing-portal}
 
 The main purpose of marketing-oriented portals is to provide a window into an enterprise or department. There is a lot of information, links, and pictures that can be accessed without having to log in. The information is search-optimized, and different images are displayed depending on where the user is hovering and clicking. In these cases, using Mendix is preferred for the functional parts of the portal.
 

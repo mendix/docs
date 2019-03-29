@@ -8,13 +8,13 @@ frontpage_featured: true
 
 ## 1 Introduction {#web-modeler-overview}
 
-The Mendix Web Modeler is the place where you can create, view and edit your Mendix applications without going into technical details. For this purpose you can use the [Desktop Modeler](/refguide/desktop-modeler-overview) and [do a sync with Desktop Modeler](general-sync-webmodeler-desktopmodeler) anytime. 
+The Mendix Web Modeler is the place where you can create, view and edit your Mendix applications without going into technical details. For this purpose you can use the [Desktop Modeler](/refguide/desktop-modeler-overview) and [do a sync with Desktop Modeler](/refguide/sync-webmodeler-desktopmodeler) anytime. 
 
 With the Web Modeler you can create and edit applications in your browser without installing software on your PC.   
 
 The picture below shows the components of the Web Modeler interface:
 
-![](attachments/general-wm/wm-modeler-home-page.png)
+![](attachments/general/home-page.png)
 
 ## 2 Opening the Web Modeler
 
@@ -22,7 +22,7 @@ The picture below shows the components of the Web Modeler interface:
 
 You can edit an app in the **Web Modeler** by opening your app in the [Developer Portal](https://home.mendix.com) and clicking **Edit App** or choosing the **Edit in Web Modeler** option in the drop-down menu of the **Edit App** button. 
 
-{{% image_container width="350" %}}![](attachments/general-wm/open-wm.png)
+{{% image_container width="350" %}}![](attachments/general/edit-app-button.png)
 {{% /image_container %}}
 
 {{% alert type="warning" %}}
@@ -38,7 +38,7 @@ Some apps are not suitable for the Web Modeler. The following ones are not suita
 
 When the Web Modeler is not enabled, you can click **Edit App** > **Settings**. For more information, see [Developer Portal Settings](../../developerportal/settings/).
 
-![](attachments/general-wm/wm-not-enabled.png)
+![](attachments/general/not-enabled.png)
 
 {{% alert type="info" %}}
 Only Scrum Masters or custom **App Team roles** with the **App Settings** permission are allowed to enable the Web Modeler.
@@ -46,7 +46,7 @@ Only Scrum Masters or custom **App Team roles** with the **App Settings** permis
 
 On the **Settings** page, the Web Modeler can be enabled by upgrading the existing theme of the app to the [Atlas UI](../../howto/front-end/atlas-ui) theme.
 
-![](attachments/general-wm/enable-wm.png)
+![](attachments/general/enabling.png)
 
 ### 2.2 Opening the Web Modeler via the Desktop Modeler
 
@@ -56,9 +56,9 @@ You can also open your app in the Web Modeler via the Desktop Modeler. Do the fo
 
 2.  Click the globe icon in the top right corner (only available if the Web Modeler is enabled).
 
-    ![](attachments/general-wm/webmodeler-thru-desktop-modeler.png)
+    ![](attachments/general/globe-icon.png)
 
-3. [Do the sync](general-sync-webmodeler-desktopmodeler) to see the latest changes made in the Desktop Modeler reflected in the Web Modeler. 
+3. [Do the sync](/refguide/sync-webmodeler-desktopmodeler) to see the latest changes made in the Desktop Modeler reflected in the Web Modeler. 
 
 The app opens in the Web Modeler.
 
@@ -66,7 +66,7 @@ The app opens in the Web Modeler.
 
 After clicking **Edit in Web Modeler** you may need to upgrade your app to the latest version.
 
-{{% image_container width="350" %}}![](attachments/general-wm/upgrade-wm.png)
+{{% image_container width="350" %}}![](attachments/general/upgrade.png)
 {{% /image_container %}}
 
 {{% alert type="info" %}}
@@ -80,7 +80,7 @@ If you are working in a team with others, it is wise to check with your team mem
 
 After opening the Web Modeler,  the home page of the app opens. 
 
-![](attachments/general-wm/wm-home-page-general.png)
+![](attachments/general/home-page-general.png)
 
 You can change the view of your page to different views by clicking the corresponding icons:
 
@@ -88,16 +88,16 @@ You can change the view of your page to different views by clicking the correspo
 *  Tablet
 *  Responsive (Desktop)    
 
-	{{% image_container width="350" %}}![](attachments/general-wm/wm-view.png)
+	{{% image_container width="350" %}}![](attachments/general/view.png)
 	{{% /image_container %}}
 
 ## 5 Left Menu Bar
 
-The menu on the left side of the Web Modeler has a top and a bottom menu.
+The menu on the left side of the Web Modeler is divided into a top and a bottom menu.
 
 The top menu provides the following options:
 
-{{% image_container width="350" %}}![](attachments/general-wm/wm-menu-up.png)
+{{% image_container width="350" %}}![](attachments/general/left-menu-bar-top.png)
 {{% /image_container %}}
 
 | Top menu item | Shortcut | Description |
@@ -110,7 +110,7 @@ The top menu provides the following options:
 
 The bottom menu bar provides the following options:
 
-![](attachments/general-wm/wm-menu-bottom.png)
+![](attachments/general/left-menu-bar-bottom.png)
 
 | Bottom menu item | Description |
 |------|------|
@@ -122,7 +122,7 @@ The bottom menu bar provides the following options:
 
 The top right menu of the Web Modeler consists of the **Toolbox**, **Properties** , and **Buzz** tabs. 
 
-![](attachments/general-wm/wm-toolbox.png)
+![](attachments/general/toolbox-properties-buzz.png)
 
 | Tab        | Description                                                  |
 | ---------- | ------------------------------------------------------------ |
@@ -134,7 +134,7 @@ The top right menu of the Web Modeler consists of the **Toolbox**, **Properties*
 
 The top bar provides the following options:
 
-![](attachments/general-wm/wm-top-bar.png)
+![](attachments/general/top-bar.png)
 
 | Top bar item | Description |
 |------|------|
@@ -143,7 +143,7 @@ The top bar provides the following options:
 | Recent documents drop-down menu | A document that you are currently viewing is displayed in this option. When you click the drop-down menu, documents that you have recently viewed are displayed in the list. You can click the document to open it. |
 | [Publish button](publishing-app) | Deploy and run the app. Update your app to deploy the latest changes you made in the Web Modeler. Once deployed, click **View** to view your app in action. For more information, see [Deploying Your App From the Web Modeler](publishing-app) |
 | [Checks button](checks) | Shows the errors and warnings currently in your app. If there are any errors in the app, you will not be able to publish your app, until you have solved them. For more information on errors, see [Consistency Errors in the Web Modeler](consistency-errors).<br />You can also use C shortcut to view the **Checks** panel. |
-| Information icon | Here you can find following information:<ul><li>**About** – shows the information on the [Web Modeler version and Mendix version](general-versions-wm) </li><li>**Keyboard Shortcuts** – opens the list of shortcuts in the Web Modeler</li><li>**Take a Product Tour** – starts a  the guided product introduction tour and shows you around the Web Modeler</li><li>**Ask the Community** – a link to the [Mendix Forum](https://forum.mendixcloud.com/index4.html) where you can ask questions and explore the knowledge offered by the entire Mendix Community<li>**Check the  Documentation** – a link to the [Web Modeler Documentation](index)</li><li>**Contact Mendix Support** – a link to the [Support Portal](https://support.mendix.com/hc/en-us)<li>**Mendix Academy** – a link to the [Mendix Academy](https://gettingstarted.mendixcloud.com)</li><li>**Mendix Assist Is ON** – a setting that enables/disables [Mendix Assist](mx-assist)</li><li>**Edit in Desktop Modeler** – opens your app in the Desktop Modeler</li></ul> |
+| Information icon | Here you can find following information:<ul><li>**About** – shows the information on the [Web Modeler version and Mendix version](general-versions) </li><li>**Keyboard Shortcuts** – opens the list of shortcuts in the Web Modeler</li><li>**Take a Product Tour** – starts a  the guided product introduction tour and shows you around the Web Modeler</li><li>**Ask the Community** – a link to the [Mendix Forum](https://forum.mendixcloud.com/index4.html) where you can ask questions and explore the knowledge offered by the entire Mendix Community<li>**Check the  Documentation** – a link to the [Web Modeler Documentation](index)</li><li>**Contact Mendix Support** – a link to the [Support Portal](https://support.mendix.com/hc/en-us)<li>**Mendix Academy** – a link to the [Mendix Academy](https://gettingstarted.mendixcloud.com)</li><li>**Mendix Assist Is ON** – a setting that enables/disables [Mendix Assist](mx-assist)</li><li>**Edit in Desktop Modeler** – opens your app in the Desktop Modeler</li></ul> |
 
 ## 8 Cut/Copy/Paste Function 
 
@@ -158,4 +158,6 @@ Mind the following characteristics when using cut/copy/paste:
 
 ## 9 Read More
 
-* [How to Sync the Web Modeler & Desktop Modeler](general-sync-webmodeler-desktopmodeler)
+* [Domain Model in the Web Modeler](domain-models)
+* [Microflows in the Web Modeler](microflows)
+* [Page Editor in the Web Modeler](page-editor)

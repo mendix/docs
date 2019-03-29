@@ -93,4 +93,4 @@ The information displayed in the table of the **Checks** panel is represented be
 
 * [Consistency Errors in the Web Modeler](consistency-errors)
 * [Publishing Your App From the Web Modeler](publishing-app)
-* [The Web Modeler General Info](general-wm)
+* [The Web Modeler General Info](general)

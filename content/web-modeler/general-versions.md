@@ -15,14 +15,14 @@ The **Mendix Desktop Modeler** version is the version of the app project you are
 
 The **Web Modeler version** and the **Mendix version** (**Mendix Desktop Modeler version**) can be viewed by clicking the info icon **About** in the top-right corner of the Web Modeler.
 
-{{% image_container width="500" %}}![](attachments/general-versions-wm/wm-about-dialog.png)
+{{% image_container width="500" %}}![](attachments/general-versions/about-dialog.png)
 {{% /image_container %}}
 
 ## 2  Upgrading to the Next Version
 
 The **Web Modeler version** is updated continuously (even daily), which will provide you with the latest user interface features for editing your app. However, when there is a new **Mendix Desktop Modeler version**, an orange top-bar is displayed, informing you that you can upgrade your app to the next version.   
 
-![](attachments/general-versions-wm/wm-top-bar-upgrade.png)
+![](attachments/general-versions/top-bar-upgrade.png)
 
 This means that when you upgrade, you upgrade your app to a new **Mendix Desktop Modeler version**. When you see the upgrade notification, you can either stay on the current version and continue working (although you might not have the newest Mendix Platform features and improvements), or you can upgrade to the newest version. 
 

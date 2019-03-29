@@ -137,7 +137,7 @@ Before you can deploy a package to IBM Cloud you have to create it.
 
 It is not possible to deploy your app directly from the Web Modeler. The Web Modeler is not currently aware of target environments apart from the Mendix Cloud v4. You will have to make use of the Desktop Modeler.
 
-Sync your app with the Desktop Modeler as described in [Sync the Web Modeler & Desktop Modeler](/web-modeler/general-sync-webmodeler-desktopmodeler).
+Sync your app with the Desktop Modeler as described in [Sync the Web Modeler & Desktop Modeler](/refguide/sync-webmodeler-desktopmodeler).
 
 Once you have your app in the Desktop Modeler, you can do one of the following: 
 

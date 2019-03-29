@@ -47,26 +47,26 @@ module.exports = {
     },
 	{
       from: "/howto/web-modeler/syncing-webmodeler-desktop",
-      to: "/web-modeler/general-sync-webmodeler-desktopmodeler"
+      to: "/refguide/sync-webmodeler-desktopmodeler"
     },
 	/****************************************************
      * Web Modeler Guide (potentially temporary until verified, unmapped)
      ****************************************************/
 	{
       from: "/howto/start-with-a-blank-app",
-      to: "/web-modeler/general-wm"
+      to: "/web-modeler/general"
     },
     {
       from: "/howto/tutorials/create-a-to-do-app",
-      to: "/web-modeler/general-wm"
+      to: "/web-modeler/general"
     },
     {
       from: "/howto/tutorials/build-a-simple-hrm-app",
-      to: "/web-modeler/general-wm"
+      to: "/web-modeler/general"
     },
     {
       from: "/howto/tutorials/build-an-iot-app",
-      to: "/web-modeler/general-wm"
+      to: "/web-modeler/general"
     },
 	/****************************************************
      * From the Developer Portal (potentially temporary until fixed in product, mapped) 
@@ -256,7 +256,11 @@ module.exports = {
     },
 	{
       from: "/refguide7/desktop-webmodeler",
-      to: "/web-modeler/general-sync-webmodeler-desktopmodeler"
+      to: "/refguide/sync-webmodeler-desktopmodeler"
+    },	
+	{
+      from: "/web-modeler/general-sync-webmodeler-desktopmodeler-wm",
+      to: "/refguide/sync-webmodeler-desktopmodeler"
     },	
 	{
       from: "/howto7/solving-load-and-import-errors",

@@ -7,7 +7,7 @@ tags: ["desktop modeler", "web modeler", "collaborative development", "migration
 
 ## 1 Introduction 
 
-For projects with Mendix version 7.23.3 or above, the [sync process](/web-modeler/general-sync-webmodeler-desktopmodeler) between the Desktop Modeler and the Web Modeler is replaced by [collaborative development](collaborative-development) with the Web Modeler.
+For projects with Mendix version 7.23.3 or above, the [sync process](/refguide/sync-webmodeler-desktopmodeler) between the Desktop Modeler and the Web Modeler is replaced by [collaborative development](collaborative-development) with the Web Modeler.
 
 The new collaborative development process is automatically used for newly created apps with Mendix version 7.23.3 and above. 
 

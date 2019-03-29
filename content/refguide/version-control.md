@@ -16,7 +16,7 @@ Version control in Mendix is built on top of [Apache Subversion](https://subvers
 
 {{% alert type="info" %}}The processes involving the Web Modeler described here apply to collaborative working in Mendix versions 7.23.3 and above.
 
-Mendix versions 7.23.2 and below use a different method to sync work between the Web and Desktop Modelers. See [Sync the Web Modeler & Desktop Modeler](/web-modeler/general-sync-webmodeler-desktopmodeler) for more information.
+Mendix versions 7.23.2 and below use a different method to sync work between the Web and Desktop Modelers. See [Sync the Web Modeler & Desktop Modeler](sync-webmodeler-desktopmodeler) for more information.
 {{% /alert %}}
 
 ## 2 Concepts {#concepts}

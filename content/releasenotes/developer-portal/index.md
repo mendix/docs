@@ -10,6 +10,19 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud V3, and other deploym
 
 ## 2019
 
+### March 29th, 2019
+
+#### Improvements
+
+* We have introduced *Flexible Environments*. This means that you can have more than three environments for your licensed node. More information is available [here](/developerportal/deploy/mendix-cloud-deploy#flexible-environments). If you need more than three environments, contact [Mendix Support](/developerportal/support/). Features of Flexible Environments include the following:
+    * You can search for the environment for which you want to see details
+    * The Technical Contact can rename the environments
+    * The Technical Contact can re-order the environments
+* As part of support for Flexible Environments we have made the following changes:
+    * When deploying your application via the Developer Portal you can choose the destination environment
+    * When viewing metrics, logs, backups, etc. you will have to choose the environment using a drop-down rather than clicking directly on the environment you want
+* We have added the ability to manage tags through the Developer Portal, in addition to the current method which involved using the API
+
 ### March 21st, 2019
 
 #### Improvements

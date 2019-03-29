@@ -256,7 +256,7 @@ module.exports = {
     },
 	{
       from: "/refguide7/desktop-webmodeler",
-      to: "/web-modeler/general-sync-webmodeler-desktopmodeler"
+      to: "/refguide/sync-webmodeler-desktopmodeler"
     },	
 	{
       from: "/howto7/solving-load-and-import-errors",

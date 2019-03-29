@@ -47,7 +47,7 @@ module.exports = {
     },
 	{
       from: "/howto/web-modeler/syncing-webmodeler-desktop",
-      to: "/web-modeler/general-sync-webmodeler-desktopmodeler"
+      to: "/refguide/sync-webmodeler-desktopmodeler"
     },
 	/****************************************************
      * Web Modeler Guide (potentially temporary until verified, unmapped)

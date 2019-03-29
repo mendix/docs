@@ -71,8 +71,6 @@ Mendix will in these cases usually work as the dashboard for event streams and s
 
 This diagram gives a schematic view of a potential Mendix integration where one app provides a dashboard and the other one is used to control a robot:
 
-{{% todo %}}[**UX-UPDATE DIAGRAM**]{{% /todo %}}
-
 ![](attachments/event-integration/schematic.png)
 
 This integration is many-to-many and largely event-driven. Using Kafka can be a relevant option if the Mendix app is located far away from the MindSphere implementation.

@@ -20,10 +20,6 @@ See [Company & App Roles](/developerportal/company-app-roles/index) to learn mor
 
 Node permissions allow you to give specific access to your nodes to individual members of a team.
 
-To access the node settings, click **Security** and open the **Node Permissions** tab.
-
-![](attachments/node-permissions/node-permissions.png)
-
 ### 2.1 User Roles for Managing Permissions
 
 Only users with the *Technical Contact* role can manage the permission settings for the cloud node.
@@ -40,25 +36,41 @@ You can change permissions for team members in the *App Team* tab: see [App Team
 
 {{% /alert %}}
 
-### 2.2 Node Permissions
+### 2.3 Accessing Node Permissions
+
+To access the node permissions, do the following:
+
+1. Click **Security** for your app.
+
+2. Open the **Node Permissions** tab.
+
+![](attachments/node-permissions/node-permissions.png)
+
+3. Select the environment for which you want to change permissions from the dropdown.
+
+    ![](attachments/node-permissions/node-flexible-environments.png)
+
+4. Complete two-factor authentication, if required for the selected environment.
+
+### 2.3 Node Permissions
 
 The Technical Contact can set the following node permissions.
 
 ![](attachments/node-permissions/nodepermission.png)
 
-#### 2.2.1 Transport Rights
+#### 2.3.1 Transport Rights
 
 With Transport Rights you can deploy new versions of the application to the node. You can also create new deployment packages, stop and start the environment, and change configuration settings such as constants and scheduled events.
 
 For more information about deployment, see [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy).
 
-#### 2.2.2 Access to Backups
+#### 2.3.2 Access to Backups
 
 The Access to Backups permission grants access to the backups of the environment. You can view, [create](/developerportal/operate/create-backup), [download](/developerportal/operate/download-backup), and [restore](/developerportal/operate/restore-backup) backups.
 
 For more information, see [Backups](/developerportal/operate/backups).
 
-#### 2.2.3 Receive Alerts
+#### 2.3.3 Receive Alerts
 
 When Receives Alerts is checked, this user will receive an email when an alert is triggered.
 
@@ -69,7 +81,7 @@ Alerts are triggered by any of the following circumstances:
 * the health check fails
 * one of a number of infrastructure problems occurs
 
-#### 2.2.4 API Rights
+#### 2.3.4 API Rights
 
 With API rights, you can use the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api) to get programmatic access to the environment.
 
@@ -81,7 +93,7 @@ Other permissions are needed in addition to *API Rights*.
 For example, to access backups via the API you need *Access to Backups* in addition to *API Rights*.
 {{% /alert %}}
 
-#### 2.2.5 Access to Monitoring
+#### 2.3.5 Access to Monitoring
 
 With the Access to Monitoring permission, you can view the application metrics, logs, and alerts under the **Operate** category in the [Developer Portal](http://home.mendix.com). This allows you to successfully operate your Mendix Cloud environments.
 

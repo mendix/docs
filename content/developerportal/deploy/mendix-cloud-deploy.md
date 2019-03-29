@@ -52,9 +52,13 @@ You can upgrade a Free App to a licensed node with a *node* in the Mendix Cloud.
 
 ### 1.2 Licensed App
 
-A licensed app runs on a *node* which has a minimum of two environments: **production** and **acceptance**. A third environment, **test**, can be added, if required. Your licensed app is linked to a node and can be deployed to any of these environments.
+A licensed app runs on a *node* which has a minimum of two environments: **production** and **acceptance**. A third environment, **test**, can be added, if required, or you can decide to use [Flexible Environments](#flexible-environments). Your licensed app is linked to a node and can be deployed to any of these environments.
 
 By default, apps are deployed to the Mendix Cloud **v4**. Features which are covered in the default documentation are for **v4**. Some customers with special requirements may use Mendix Cloud **v3**, and will have to refer to the **v3** documentation where the features differ from **v4**.
+
+### 1.3 Flexible Environments{#flexible-environments}
+
+In some circumstances, you might find that the two or three standard environments you get with a licensed app are not sufficient. In this case you can request a Mendix Cloud V4 node with *Flexible Environments*. With Flexible Environments you can specify how many environments you want in your node and you can decide what they should be called.
 
 ## 2 Deploying an App to the Mendix Cloud
 
@@ -119,13 +123,18 @@ The previous steps explained how to deploy a deployment package to the Mendix Cl
 
 1. Open the [Developer Portal](http://home.mendix.com).
 2. Open your app.
-2. Go to **Environments**.
-3. In the **Deployment Package Repository**, choose the preferred deployment package and click **Deploy**.
-4. Select the preferred environment, and then click **Continue**.
-5. Click **Transport**. If asked to do so, clean the environment.
-6. Configure the constants (if necessary) by clicking **Constants** and **Edit constants value**. This can also be done in a later stage in the settings.
-7. Click **Continue**.
-8. Click **Start application**. If asked, click **Synchronize database**.
+3. Go to **Environments**.
+4. In the **Deployment Package Repository**, choose the preferred deployment package and click **Deploy**.
+5. Click the environment to which you want to deploy the package.
+6. Click **Transport**.
+
+    ![](attachments/mendix-cloud-deploy/transport-to-flex.png)
+
+7. If asked to do so, clean the environment.
+8. Configure the constants (if necessary) by clicking **Constants** and **Edit constants value**. This can also be done in a later stage in the settings.
+9. Configure the scheduled events (if necessary) by clicking **Scheduled Events**.
+10. Click **Continue**.
+11. Click **Start application**. If asked, click **Synchronize database**.
 
 The app is now deployed and the administrative account can be configured.
 

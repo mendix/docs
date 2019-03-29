@@ -42,7 +42,7 @@ You can find the trends by following these steps:
 4. Click **Metrics** under the **Operate** category.
 5. Select the environment you want to monitor under the **Trends** tab.
 
-    ![](attachments/environment.jpg)
+    ![](attachments/environment.png)
 
 ## 4 Application Statistics
 

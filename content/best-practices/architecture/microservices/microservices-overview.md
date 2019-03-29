@@ -11,7 +11,7 @@ Microservices is a relatively new concept that has become very popular. Microser
 
 ## 2 Business-Oriented Microservices
 
-Mendix bases its view on microservices on the [definition](https://martinfowler.com/microservices/#what) created by James Lewis and Martin Fowler from Thoughtworks, who coined the "microservice" term. They recommend keeping all parts of a business function together in an app (microservice) so that all the parts are owned by one team and the functionality can evolve autonomously.
+Mendix bases its views on the [definition of microservices](https://martinfowler.com/microservices/#what) created by James Lewis and Martin Fowler from Thoughtworks, who coined the "microservice" term. They recommend keeping all parts of a business function together in an app (microservice) so that all the parts are owned by one team and the functionality can evolve autonomously.
 
 This diagram presents functionally-oriented microservices where the business can understand the architecture and interactions, which is ideal for business-IT alignment:
 

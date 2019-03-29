@@ -32,7 +32,7 @@ Follow these steps to create a backup of a licensed app:
 4. Click **Backups** under the **Operate** category.
 5. Select the environment from which you want to download the backup.
 
-    ![](attachments/create-backup/environment.jpg)
+    ![](attachments/create-backup/environment.png)
 
 6. Click **Create Backup**.
 

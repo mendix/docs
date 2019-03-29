@@ -49,7 +49,7 @@ Logs on Mendix Cloud V3 are rotated and archived every 5MB. The logs are kept fo
 Action Button | Performs the Action
 :---|:---
 Download archived log | download a log selected from the list underneath
-Fetch current Log | view the current log on the screen and download it, if required
+Fetch current log file | view the current log on the screen and download it, if required
 
 ## 4 Apps on SAP Cloud Platform
 

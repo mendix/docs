@@ -47,11 +47,11 @@ The required event category subscription is **stories**.
         "UpdatedAt": "2019-03-22T16:08:14.452Z"
     },
     "Story": {
-        "StoryId": 920,
-        "ParentId": 890,
+        "StoryId": 123,
+        "ParentId": 546,
         "ParentType": "Sprint",
-        "Name": "sdfdsfdsf dsfds",
-        "Description": "fdsfdsfdsf",
+        "Name": "Add email address as a mandatory field to the Employee object",
+        "Description": "Need to add email address to the Employees to be able to contact them.",
         "Status": "Running",
         "StoryType": "Feature",
         "HasSubStories": false,

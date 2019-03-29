@@ -11,7 +11,7 @@ menu_order: 10
 
 {{% alert type="info" %}}
 
-The sync process is available for apps with Mendix version 7.23.2 and below. If your project has Mendix version 7.23.3 and above, see [Collaborative Development in the Web Modeler](general-collaborative-development).
+The sync process is available for apps with Mendix version 7.23.2 and below. If your project has Mendix version 7.23.3 and above, see [Collaborative Development](collaborative-development).
 
 {{% /alert %}}
 
@@ -74,7 +74,7 @@ If you do not have anything to commit, you can also click **Cancel sync/Unlock W
 
 Synchronization of the Web Modeler with the Desktop Modeler is a multi-step process. The steps described below take place after clicking **Sync with Web Modeler** in the Desktop Modeler:
 
-![](/attachments/sync-webmodeler-desktopmodeler/sync-with-wm.png)
+![](attachments/sync-webmodeler-desktopmodeler/sync-with-wm.png)
 
 ### 4.1 Desktop Modeler Commit Check
 

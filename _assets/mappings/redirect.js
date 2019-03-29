@@ -259,6 +259,10 @@ module.exports = {
       to: "/refguide/sync-webmodeler-desktopmodeler"
     },	
 	{
+      from: "/web-modeler/general-sync-webmodeler-desktopmodeler-wm",
+      to: "/refguide/sync-webmodeler-desktopmodeler"
+    },	
+	{
       from: "/howto7/solving-load-and-import-errors",
       to: "/howto/monitoring-troubleshooting/solving-load-and-import-errors"
     },

@@ -14,7 +14,7 @@ With the Web Modeler you can create and edit applications in your browser withou
 
 The picture below shows the components of the Web Modeler interface:
 
-![](attachments/general-wm/wm-modeler-home-page.png)
+![](attachments/general/home-page.png)
 
 ## 2 Opening the Web Modeler
 
@@ -22,7 +22,7 @@ The picture below shows the components of the Web Modeler interface:
 
 You can edit an app in the **Web Modeler** by opening your app in the [Developer Portal](https://home.mendix.com) and clicking **Edit App** or choosing the **Edit in Web Modeler** option in the drop-down menu of the **Edit App** button. 
 
-{{% image_container width="350" %}}![](attachments/general-wm/open-wm.png)
+{{% image_container width="350" %}}![](attachments/general/edit-app-button.png)
 {{% /image_container %}}
 
 {{% alert type="warning" %}}
@@ -38,7 +38,7 @@ Some apps are not suitable for the Web Modeler. The following ones are not suita
 
 When the Web Modeler is not enabled, you can click **Edit App** > **Settings**. For more information, see [Developer Portal Settings](../../developerportal/settings/).
 
-![](attachments/general-wm/wm-not-enabled.png)
+![](attachments/general/not-enabled.png)
 
 {{% alert type="info" %}}
 Only Scrum Masters or custom **App Team roles** with the **App Settings** permission are allowed to enable the Web Modeler.
@@ -46,7 +46,7 @@ Only Scrum Masters or custom **App Team roles** with the **App Settings** permis
 
 On the **Settings** page, the Web Modeler can be enabled by upgrading the existing theme of the app to the [Atlas UI](../../howto/front-end/atlas-ui) theme.
 
-![](attachments/general-wm/enable-wm.png)
+![](attachments/general/enabling.png)
 
 ### 2.2 Opening the Web Modeler via the Desktop Modeler
 
@@ -56,7 +56,7 @@ You can also open your app in the Web Modeler via the Desktop Modeler. Do the fo
 
 2.  Click the globe icon in the top right corner (only available if the Web Modeler is enabled).
 
-    ![](attachments/general-wm/webmodeler-thru-desktop-modeler.png)
+    ![](attachments/general/globe-icon.png)
 
 3. [Do the sync](/refguide/sync-webmodeler-desktopmodeler) to see the latest changes made in the Desktop Modeler reflected in the Web Modeler. 
 
@@ -66,7 +66,7 @@ The app opens in the Web Modeler.
 
 After clicking **Edit in Web Modeler** you may need to upgrade your app to the latest version.
 
-{{% image_container width="350" %}}![](attachments/general-wm/upgrade-wm.png)
+{{% image_container width="350" %}}![](attachments/general/upgrade.png)
 {{% /image_container %}}
 
 {{% alert type="info" %}}
@@ -80,7 +80,7 @@ If you are working in a team with others, it is wise to check with your team mem
 
 After opening the Web Modeler,  the home page of the app opens. 
 
-![](attachments/general-wm/wm-home-page-general.png)
+![](attachments/general/home-page-general.png)
 
 You can change the view of your page to different views by clicking the corresponding icons:
 
@@ -88,16 +88,16 @@ You can change the view of your page to different views by clicking the correspo
 *  Tablet
 *  Responsive (Desktop)    
 
-	{{% image_container width="350" %}}![](attachments/general-wm/wm-view.png)
+	{{% image_container width="350" %}}![](attachments/general/view.png)
 	{{% /image_container %}}
 
 ## 5 Left Menu Bar
 
-The menu on the left side of the Web Modeler has a top and a bottom menu.
+The menu on the left side of the Web Modeler is divided into a top and a bottom menu.
 
 The top menu provides the following options:
 
-{{% image_container width="350" %}}![](attachments/general-wm/wm-menu-up.png)
+{{% image_container width="350" %}}![](attachments/general/left-menu-bar-top.png)
 {{% /image_container %}}
 
 | Top menu item | Shortcut | Description |
@@ -110,7 +110,7 @@ The top menu provides the following options:
 
 The bottom menu bar provides the following options:
 
-![](attachments/general-wm/wm-menu-bottom.png)
+![](attachments/general/left-menu-bar-bottom.png)
 
 | Bottom menu item | Description |
 |------|------|
@@ -122,7 +122,7 @@ The bottom menu bar provides the following options:
 
 The top right menu of the Web Modeler consists of the **Toolbox**, **Properties** , and **Buzz** tabs. 
 
-![](attachments/general-wm/wm-toolbox.png)
+![](attachments/general/toolbox-properties-buzz.png)
 
 | Tab        | Description                                                  |
 | ---------- | ------------------------------------------------------------ |
@@ -134,7 +134,7 @@ The top right menu of the Web Modeler consists of the **Toolbox**, **Properties*
 
 The top bar provides the following options:
 
-![](attachments/general-wm/wm-top-bar.png)
+![](attachments/general/top-bar.png)
 
 | Top bar item | Description |
 |------|------|
@@ -158,4 +158,6 @@ Mind the following characteristics when using cut/copy/paste:
 
 ## 9 Read More
 
-* [How to Sync the Web Modeler & Desktop Modeler](/refguide/sync-webmodeler-desktopmodeler)
+* [Domain Model in the Web Modeler](domain-models)
+* [Microflows in the Web Modeler](microflows)
+* [Page Editor in the Web Modeler](page-editor)

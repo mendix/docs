@@ -39,7 +39,7 @@ paths:
           description: Sprint Object
           required: true
           schema:
-            $ref: '#/definitions/Sprint'
+            $ref: '#/definitions/SprintInput'
       responses:
         '201':
           description: OK
@@ -150,7 +150,7 @@ paths:
           description: Sprint object that needs to be updated
           required: true
           schema:
-            $ref: '#/definitions/Sprint'
+            $ref: '#/definitions/SprintInput'
       responses:
         '204':
           description: On successful Sprint update
@@ -254,7 +254,7 @@ paths:
         '201':
           description: OK
           schema:
-            $ref: '#/definitions/CreatedStory'
+            $ref: '#/definitions/StoryCreated'
         '400':
           description: Incorrect Input
           schema:
@@ -416,7 +416,7 @@ paths:
           description: Story object that needs to be updated
           required: true
           schema:
-            $ref: '#/definitions/Story'
+            $ref: '#/definitions/UpdateStoryInput'
       responses:
         '204':
           description: On successful Story update
@@ -539,8 +539,6 @@ definitions:
     properties:
       location:
         type: string
-        example: >-
-          http://localhost:8080/rest/api/projects/v1/d3bc06c2-a82d-4afb-8a64-998437c84656/sprints/281
         description: Location of the created resource
       Sprint:
         $ref: '#/definitions/SprintResponse'
@@ -555,7 +553,7 @@ definitions:
   SprintResponse:
     type: object
     properties:
-      SprintID:
+      SprintId:
         type: integer
         example: 281
         description: Sprint ID. This is auto generated ID. Ignored incase of POST.
@@ -574,10 +572,6 @@ definitions:
       IsActiveSprint:
         type: boolean
         description: Is it an active Sprint?
-        example: false
-      Deleted:
-        type: boolean
-        description: Has the Sprint been Deleted?
         example: false
       CreationDate:
         type: string
@@ -600,7 +594,7 @@ definitions:
         type: boolean
         description: Is this a backlog Sprint?
         example: false
-  Sprint:
+  SprintInput:
     type: object
     properties:
       SprintId:
@@ -630,61 +624,6 @@ definitions:
     type: array
     items:
       $ref: '#/definitions/SprintResponse'
-  CreatedStory:
-    type: object
-    properties:
-      StoryId:
-        type: integer
-        description: Story ID.
-      ParentId:
-        type: integer
-        description: Id of the Parent .
-      Name:
-        type: string
-        description: Name of the Story/Sub-Story
-      Description:
-        type: string
-        description: Description of the Story/Sub-Story
-      Status:
-        type: string
-        enum:
-          - To-do
-          - Running
-          - Done
-        description: Status of the Story. For Sub-Stories it is limited to [ To-do , Done]
-      StoryType:
-        type: string
-        enum:
-          - Feature
-          - Bug
-        description: Type of the story. Present only incase of Story. For sub stories this field is not present.
-      HasSubStories:
-        type: boolean
-        description: Whether the Story/Sub-Story has any Sub-Stories
-        example: true
-      Points:
-        type: integer
-        enum:
-          - 1
-          - 2
-          - 3
-          - 5
-          - 8
-          - 13
-          - 20
-          - 40
-          - 100
-        description: How many points assigned to the story.Present only incase of Story. For sub stories this field is not present.
-      CreationDate:
-        type: string
-        format: date-time
-        description: Creation date of the Story.
-        example: '2019-01-23T10:07:51.943Z'
-      FinishDate:
-        type: string
-        format: date-time
-        description: Date when Story was completed.
-        example: '2019-01-23T10:07:51.943Z'
 
   CreateStoryInput:
     type: object
@@ -720,7 +659,47 @@ definitions:
     required:
       - Name
       - StoryType
-
+  UpdateStoryInput:
+    type: object
+    properties:
+      ParentId:
+        type: integer
+        description: Mandatory. Id of the Parent. If the ParentId is a SprintId , It creates a Story. If the ParentId is a StoryId , It creates a Sub-Story. If the ParentId is a Sub-Story , It creates a Sub-Story to this sub-story.
+      Description:
+        type: string
+        description: Description of the (sub-)story
+      Name:
+        type: string
+        description: Name of the Story/Sub-Story. mandatory for all cases.
+      Points:
+        type: integer
+        enum:
+          - 1
+          - 2
+          - 3
+          - 5
+          - 8
+          - 13
+          - 20
+          - 40
+          - 100
+        description: How many points assigned to the story. Optional Input. Ignored incase of Sub-Story. If the provided values are not one of the specified in enum. It will be ignored.
+      StoryType:
+        type: string
+        enum:
+          - Feature
+          - Bug
+        description: Type of the story. Mandatory For Story. Ignored for Sub-Story.
+      Status:
+        type: string
+        enum:
+          - To-do
+          - Running
+          - Done
+        description: Status of the Story
+    required:
+      - Name
+      - StoryType
   Story:
     type: object
     properties:
@@ -825,16 +804,22 @@ definitions:
         description: Date when Sub-Story was completed.
         example: '2019-01-23T10:07:51.943Z'
       SubStoriesIds:
-        type: array
-        items:
-          type: integer
-          description: StoryIds of the Sub-Stories.
-        example:
-          - 1
-          - 2
-          - 3
-          - 4
+        type: object
+        properties:
+          Ids:
+            type: object
+            $ref: '#/definitions/Ids'
   ArrayOfStories:
     type: array
     items:
       $ref: '#/definitions/Story'
+  Id:
+    type: object
+    properties:
+      StoryId:
+        type: integer
+        description: Id of the Story.
+  Ids:
+    type: array
+    items:
+      $ref: '#/definitions/Id'

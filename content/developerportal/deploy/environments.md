@@ -144,26 +144,6 @@ There is no concept of staging, and you need to deploy your app directly to the 
 
 ![](attachments/environments/activity.png)
 
-This section shows the following activity types:
-
-Activity Type | Explanation
------------- | -------------
-Backup Created | A backup has been manually created.
-Backup Restore Started | A backup restore has been manually started.
-Backup Restored | The backup restore has been restored.
-Clean | The environment has been cleaned.
-Custom Domain | Changes were made to the custom domain.
-Database Backup Downloaded | The database backup has been downloaded.
-Migration | The app has been migrated from one node to another node.
-Error | An error has occurred while uploading an *.mda* file.
-Files Backup Downloaded | Backup files have been downloaded.
-Maintenance | The admin password has been changed.
-MDA Uploaded | An *.mda* file has been uploaded.
-Started Manually | The application has been started manually.
-Stopped Manually | The application has been stopped manually.
-Technical Contact Changed | The Technical Contact has been changed.
-Transportation | A new deployment package has been transported to an environment.
-
 {{% alert type="info" %}}
 Operations carried out by the Mendix Operations Desk are not currently logged on the activity log.
 

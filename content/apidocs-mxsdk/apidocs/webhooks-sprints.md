@@ -9,11 +9,11 @@ Webhooks allow you to build or set up Mendix Platform connectors that subscribe 
 
 Every POST payload contains the following delivery information as part of the header:
 
-* `MxAPI-Projects-EventCategory` – the sprints
+* `MxAPI-Projects-EventCategory` – the types of event subscribed to (for example, sprints)
 * `MxAPI-Projects-Delivery` – a random UUID
 * `MxAPI-Signature` –  the HMAC hex digest (asymmetric hash using the *HMAC_SHA256* hash algorithm) of the response body, which is calculated using the hash (the hashes secret provided in the webhooks setting using the *SHA-256* hash algorithm with the length as 50)
 	* For example, `(gNh407kBD1wkpHfwIrjWcTMjw4rKxIKX0s5b48FYOys=)`
-* `MxAPI-Webhooks-Version` – the version of the webhooks payload (for example, 1.0)
+* `MxAPI-Webhooks-Version` – the version of the webhooks payload (for example, 1)
 * `MxAPI-Webhooks-Version-Expiry` – the expiry date for this version (empty if it is the latest version)
 * `User-Agent` – `Mx-Platform`
 
@@ -31,7 +31,7 @@ The required event category subscription is **stories**.
 
 ## 4 Payload
 
-* `Action` – created/updated
+* `Action` – whether the item was created or updated
 * `Meta` – metadata information about the resources
 * `Resource` – the current state of the resource
 * `Sender`  – the user who triggered the event
@@ -47,11 +47,11 @@ The required event category subscription is **stories**.
         "UpdatedAt": "2019-03-22T16:08:14.452Z"
     },
     "Story": {
-        "StoryId": 920,
-        "ParentId": 890,
+        "StoryId": 123,
+        "ParentId": 546,
         "ParentType": "Sprint",
-        "Name": "sdfdsfdsf dsfds",
-        "Description": "fdsfdsfdsf",
+        "Name": "Add email address as a mandatory field to the Employee object",
+        "Description": "Need to add email address to the Employees to be able to contact them.",
         "Status": "Running",
         "StoryType": "Feature",
         "HasSubStories": false,
@@ -69,9 +69,9 @@ The required event category subscription is **stories**.
         }
     },
     "Project": {
-        "Name": "jira-integration-test",
+        "Name": "Stock Management",
         "AppId": "dd2824e1-1c76-453a-aeaa-4d4304d46fd3",
-        "Avatar": "http://localhost:8080/document/image?uuid=afffa450-079e-4f75-8b62-dd970d579484&target=internal&thumb=false&v=2",
+        "Avatar": "http://sprintr.home.mendix.dev/document/image?uuid=afffa450-079e-4f75-8b62-dd970d579484&target=internal&thumb=false&v=2",
         "Company": {
             "AccountId": "5f84b213-c1c5-4236-ac1e-de9ccdc2ffb3",
             "DisplayName": "Mendix"

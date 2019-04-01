@@ -15,8 +15,6 @@ The **General** settings page presents an overview of your app project with the 
 * Whether the app is supported for the **Web Modeler** and the ability to **Enable Web Modeler** (for details on getting the full Web Modeler experience, see [How to Migrate Existing Projects to Atlas UI](/howto/front-end/migrate-existing-projects-to-atlasui))
 * The **App ID**
 
-{{% todo %}}[**UPDATE SCREENSHOT BELOW FOR NEW WEBHOOKS BUTTON**]{{% /todo %}}
-
 {{% image_container width="550" %}}![](attachments/general-settings.png)
 {{% /image_container %}}
 
@@ -51,7 +49,8 @@ Only [Company Admins](../company-app-roles/companyadmin-settings) or users with 
 
 On the **Webhooks** page, you can add a new webook and edit or delete existing webhooks.
 
-{{% todo %}}[**ADD SCREENSHOT; VERIFY POSITION OF BUTTON; THIS WILL DETERMINE POSITION OF SECTION IN DOC**]{{% /todo %}}
+{{% image_container width="550" %}}![](attachments/webhooks-list.png)
+{{% /image_container %}}
 
 Each webhook requires the following details:
 

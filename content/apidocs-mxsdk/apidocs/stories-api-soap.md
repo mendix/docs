@@ -1,7 +1,6 @@
 ---
 title: "SOAP API"
 parent: "stories-api"
-draft: true
 ---
 
 ## 1 Authentication
@@ -30,7 +29,7 @@ This microflow creates a new sprint for the specified project and returns the ID
 
 * Return value – Integer/Long
 
-### CreateStory Microflow
+### 2.2 CreateStory Microflow
 
 This microflow creates a new story in the specified sprint and returns the ID of the new story. These are the parameters:
 
@@ -46,7 +45,7 @@ This microflow creates a new story in the specified sprint and returns the ID of
 
 * Return value – Integer/Long
 
-### CreateTask Microflow
+### 2.3 CreateTask Microflow
 
 This microflow creates a new task for the specified story and returns the ID of the new task. These are the parameters:
 
@@ -60,7 +59,7 @@ This microflow creates a new task for the specified story and returns the ID of 
 
 * Return value – Integer/Long
 
-### GetSprintByID Microflow
+### 2.4 GetSprintByID Microflow
 
 This microflow retrieves a specific sprint. These are the parameters:
 
@@ -72,7 +71,7 @@ This microflow retrieves a specific sprint. These are the parameters:
 
 * Return value – Sprint_Transient
 
-### GetSprints Microflow
+### 2.5 GetSprints Microflow
 
 This microflow retrieves all sprints in a specific project. These are the parameters:
 
@@ -83,7 +82,7 @@ This microflow retrieves all sprints in a specific project. These are the parame
 
 * Return value – List of Sprint_Transient
 
-### GetStories Microflow
+### 2.6 GetStories Microflow
 
 This microflow retrieves all stories in a specific sprint. These are the parameters:
 
@@ -95,7 +94,7 @@ This microflow retrieves all stories in a specific sprint. These are the paramet
 
 * Return value – List of Story_Transient
 
-### GetStoryByID Microflow
+### 2.7 GetStoryByID Microflow
 
 This microflow retrieves a specific story. These are the parameters:
 
@@ -107,7 +106,7 @@ This microflow retrieves a specific story. These are the parameters:
 
 * Return value – Story_Transient
 
-### GetTaskByID Microflow
+### 2.8 GetTaskByID Microflow
 
 This microflow retrieves a specific task. These are the parameters:
 
@@ -119,7 +118,7 @@ This microflow retrieves a specific task. These are the parameters:
 
 * Return value – Task_Transient
 
-### GetTasks Microflow
+### 2.9 GetTasks Microflow
 
 This microflow retrieves all tasks for a specific story. These are the parameters:
 
@@ -131,7 +130,7 @@ This microflow retrieves all tasks for a specific story. These are the parameter
 
 * Return value – List of Task_Transient
 
-### UpdateStory Microflow
+### 2.10 UpdateStory Microflow
 
 This microflow updates a story with modified information. These are the parameters:
 
@@ -149,7 +148,7 @@ This microflow updates a story with modified information. These are the paramete
 
 * Return value – Boolean
 
-### UpdateTask Microflow
+### 2.11 UpdateTask Microflow
 
 This microflow updates a task with modified information. These are the parameters:
 

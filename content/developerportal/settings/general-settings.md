@@ -26,11 +26,11 @@ The sections below describe the actions you can perform on this page.
 In the **Web Modeler** section, you can see whether the Web Modeler is enabled for the app. You can also do the following:
 
 
-*  Enable the Web Modeler if it has not been enabled yet by clicking **Enable Web Modeler**:
+*  Enable the Web Modeler if it has not been enabled yet by clicking **Enable Web Modeler**
 
 	![](attachments/not-enabled.png)
 
-*  Enable collaborative development with the Web Modeler for apps using Mendix version [7.23.3](/releasenotes/desktop-modeler/7.23#7233) and above by clicking **Enable Now** (for more information on the collaborative development process, see [Collaborative Development](/refguide/collaborative-development)):
+*  Enable collaborative development with the Web Modeler for apps using Mendix version [7.23.3](/releasenotes/desktop-modeler/7.23#7233) and above by clicking **Enable Now** (for more information on the collaborative development process, see [Collaborative Development](/refguide/collaborative-development))
 
 	![](attachments/enable-new-mode.png)
 

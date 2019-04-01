@@ -17,6 +17,20 @@ It is also possible to leave and delete an app here as well as manage deep links
 
 For more information, see [Manage General App Settings](general-settings).
 
+### 2.1 The Web Modeler Section
+
+In the **Web Modeler** section, you can see if the Web Modeler is enabled for the current app. 
+
+You can also do the following:
+
+*  Enable the Web Modeler if it has not been enabled yet
+
+	![](attachments/not-enabled.png)
+
+*  Enable collaborative development with the Web Modeler for apps using Mendix version 7.23.3 and above (for more information on collaborative development process, see [Collaborative Development](/refguide/collaborative-development)) 
+
+	![](attachments/enable-new-mode.png)
+
 ## 3 Security
 
 In **Security**, there are two tabs with app and node permissions, as described below.

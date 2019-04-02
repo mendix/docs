@@ -73,7 +73,7 @@ The main purpose of marketing-oriented portals is to provide a window into an en
 
 ![](attachments/mendix-microservices/marketing-oriented.png)
 
-For more information, see the [Website Integration](../integration/ui-integration#web) and [CMS UI Integration](../integration/ui-integration#) sections of *UI Integration*.
+For more information, see the [Website Integration](../integration/ui-integration#web) and [CMS UI Integration](../integration/ui-integration#cdn) sections of *UI Integration*.
 
 ## 6 Summary
 

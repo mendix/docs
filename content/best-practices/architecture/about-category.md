@@ -57,7 +57,7 @@ The diagram below shows the most commonly used Mendix integration pattern. These
 
 {{% todo %}}[**ADD LINK TO SECTION BELOW WHEN AVAILABLE**]{{% /todo %}}
 
-For more details on Integrating apps with each other and other systems, things, and devices as well as monitoring, see the [Integration Best Practices](../integration/integration-overview).
+For more details on Integrating apps with each other and other systems, things, and devices as well as monitoring, see the [Integration Best Practices](integration/integration-overview).
 
 ### 3.2 Performance
 
@@ -77,7 +77,7 @@ In the scenario above, most of the processing is straight-through processing, so
 
 ### 3.3 Microservices
 
-Microservices is a popular way of building IT solutions. It helps you to avoid building monoliths and SOA-layered architectures, where dependencies tend to get out of control.  Instead, you can make functional autonomous components that cooperate to fulfill business functions. This suits Mendix very well, as is further described in [Mendix Microservices](/microservices/mendix-microservices).
+Microservices is a popular way of building IT solutions. It helps you to avoid building monoliths and SOA-layered architectures, where dependencies tend to get out of control.  Instead, you can make functional autonomous components that cooperate to fulfill business functions. This suits Mendix very well, as is further described in [Mendix Microservices](microservices/mendix-microservices).
 
 This diagram shows how microservices are more functional in encapsulating a business process and cooperating via business events to the point that they are "actors" themselves in a business process:
 
@@ -93,7 +93,7 @@ The IT architecture of the future will not separate technical from functional ar
 
 Architecture needs to have a level of flexibility as more information is made available during the realization of a solution. This could involve refactoring an app or splitting an app into smaller parts based on the real knowledge gained from the actual end-users.
 
-The [Microservices Best Practices](..microservices/microservices-overview) will dive into these exciting developments.
+The [Microservices Best Practices](microservices/microservices-overview) will dive into these exciting developments.
 
 ### 3.4 Security
 
@@ -134,7 +134,7 @@ Some users build a log integration component or connect to a central one. For mo
 
 For VPC and on-premises deployments, there is no Mendix Developer Portal monitoring available. In these  cases, an app-management or central-monitoring solution is highly desirable. That is because the customer in this scenario is responsible for their monitoring. The setup of log integration and central monitoring is largely the role of the customer's central IT, while Mendix connects to the tools and protocols proscribed.
 
-For details on the benefits that can be achieved by using native Mendix technology or by connecting to professional tooling, see [Robusntess](../robustness/robustness-overview).
+For details on the benefits that can be achieved by using native Mendix technology or by connecting to professional tooling, see [Robusntess](robustness/robustness-overview).
 
 ### 3.6 CI/CD & Automation
 

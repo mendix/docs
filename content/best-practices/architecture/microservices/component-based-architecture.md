@@ -40,7 +40,6 @@ This is the recommended approach for applying CBA in Agile Mendix app projects:
 *   Apply CBA when triggered by a real demand
 *   Manage the CBA process using measurements of model quality
 *   Model with CBA in mind by using the Mendix Platform's module development tools
-    *   Apply [best practices for modeling](dev-best-practices)
     *   Minimize unexpected dependencies between modules
     *   Make use of Mendix [App Services](/developerportal/deploy/app-services)
 

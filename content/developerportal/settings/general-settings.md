@@ -12,7 +12,8 @@ The **General** settings page presents an overview of your app project with the 
 
 * A **Description** of the app
 * The [App Contact](../company-app-roles/manage-roles#change-app-contact) and [Technical Contact](../company-app-roles/technical-contact) for the app
-* Whether the app is supported for the **Web Modeler** and the ability to **Enable Web Modeler** (for details on getting the full Web Modeler experience, see [How to Migrate Existing Projects to Atlas UI](/howto/front-end/migrate-existing-projects-to-atlasui))
+* Whether the app is enabled for the **Web Modeler** (for details, see the [Web Modeler](#web) section below)
+
 * The **App ID**
 
 {{% image_container width="550" %}}![](attachments/general-settings.png)
@@ -20,7 +21,21 @@ The **General** settings page presents an overview of your app project with the 
 
 The sections below describe the actions you can perform on this page.
 
-## 2 Editing Cloud Settings
+## 2 Web Modeler {#web}
+
+In the **Web Modeler** section, you can see whether the Web Modeler is enabled for the app. You can also do the following:
+
+
+*  Enable the Web Modeler if it has not been enabled yet by clicking **Enable Web Modeler**
+
+	![](attachments/not-enabled.png)
+
+*  Enable collaborative development with the Web Modeler for apps using Mendix version [7.23.3](/releasenotes/desktop-modeler/7.23#7233) and above by clicking **Enable Now** (for more information on the collaborative development process, see [Collaborative Development](/refguide/collaborative-development))
+
+	![](attachments/enable-new-mode.png)
+
+
+## 3 Editing Cloud Settings
 
 Click **Cloud Settings** to select the cloud platform on which to deploy your app. The selection of cloud platforms available will depend on the features of your Mendix account.
 
@@ -39,7 +54,7 @@ Specific steps for configuring different cloud platforms are provided here:
 * [IBM Cloud](../deploy/ibm-cloud)
 * [On-Premises](../deploy/on-premises-design)
 
-## 3 Editing App Info
+## 4 Editing App Info
 
 {{% alert type="info" %}}
 Only users with the **App Settings** permission can edit the application information.
@@ -54,11 +69,11 @@ Click **Edit App Info** to edit the following details:
 {{% image_container width="450" %}}![](attachments/edit.png)
 {{% /image_container %}}
 
-## 4 Leaving the App
+## 5 Leaving the App
 
 To leave the app, click **Leave App**. For details on leaving, deleting, and deactivating an app, see [How to Leave & Delete an App](leave-delete-app).
 
-## 5 Read More
+## 6 Read More
 
 * [How to Leave & Delete an App](leave-delete-app)
 * [How to Manage Deep Links](manage-deeplinks)

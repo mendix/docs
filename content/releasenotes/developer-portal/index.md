@@ -25,7 +25,7 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud V3, and other deploym
 
 * We have changed Mendix deployment to **SAP Cloud Portal** so that the Cloud Foundry stack cflinuxfs3 is used. Previously, Mendix apps were using cflinuxfs2, which has been deprecated by SAP. 
 
-    The next time that you deploy a new, or existing, Mendix app to *SAP Cloud Portal* from the Mendix Developer Portal, the new stack will be applied to your app.
+    The next time that you deploy a new, or existing, Mendix app to *SAP Cloud Platform* from the Mendix Developer Portal, the new stack will be applied to your app.
 
 ### March 21st, 2019
 

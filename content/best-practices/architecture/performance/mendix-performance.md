@@ -17,7 +17,7 @@ This document is intended for architects, senior stake-holders and lead develope
 
 This document can be used by Enterprise Architects to create positioning documents or in the work of portfolio planning. It can also be used as a baseline for technology selection and project initiation.
 
-![](C:/Users/adu/Documents/_Repositories/Documentation/GitHub%20docs/content/best-practices/architecture/performance/attachments/overview/high-perf-mendix.png)
+![](attachments/overview/high-perf-mendix.png)
 
 ### 1.2 Program or Product Expansion
 

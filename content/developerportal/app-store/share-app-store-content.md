@@ -20,7 +20,7 @@ The App Store is driven by contributions from members of the Mendix community wh
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Familiarize yourself with the [App Store Overview](app-store-overview) and [How to Use App Store Content](use-app-store-content)
+* Familiarize yourself with the [App Store Overview](app-store-overview) and [How to Use App Store Content](app-store-content)
 
 ## 3 App Store Content Development Guidelines {#submission}
 
@@ -204,4 +204,5 @@ To update content that has already been published, follow these steps:
 ## 6 Read More
 
 * [App Store Overview](app-store-overview)
-* [How to Use App Store Content](use-app-store-content)
+* [How to Use App Store Content](app-store-content)
+

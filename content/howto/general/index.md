@@ -18,4 +18,3 @@ Learn some basics about starting to model a Mendix app with the introductory how
 * [Minimize the Number of In-Use Objects in Your Session](minimize-number)
 
 
-

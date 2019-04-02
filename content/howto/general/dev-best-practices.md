@@ -39,7 +39,7 @@ The [user roles](/refguide/user-roles) should have logical names that reflect th
 
 Each user role should correspond to only one module role per module. In other words, a user role should not map to multiple module roles within the same module. This helps to keep the number of applicable module roles for a user to a minimum, which reduces complexity in understanding the security model and reduces the performance impact of complex security rules.
 
-## 3. Naming Conventions
+## 3 Naming Conventions
 
 ### 3.1 Modules
 
@@ -250,7 +250,7 @@ You can define the [home pages](/refguide/show-home-page) per device and role in
 | Role based home page | Tablet  | Home_Tablet_{Userrole}  |
 | Role based home page | Mobile  | Home_Phone_{Userrole}   |
 
-## 4. General Guidelines & Best Practices
+## 4 General Guidelines & Best Practices
 
 ### 4.1 Domain Models
 

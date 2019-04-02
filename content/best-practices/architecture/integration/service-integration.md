@@ -1,7 +1,7 @@
 ---
 title: "Service Integration"
-parent: "integration-use-cases"
-menu_order: 3
+parent: "integration-overview"
+menu_order: 2
 draft: true
 ---
 
@@ -13,7 +13,7 @@ To start with service integration, consider this scenario: a user is filling in 
 
 Service integration should first be considered as the default method for integration. Only if there are strong reasons to avoid synchronous request-reply, then UI integration, batch processing, or event processing should be considered.
 
-![](attachments/service-integration/intro.png)
+![](attachments/service-integration/si-intro.png)
 
 ## 2 What Is Service Integration?
 
@@ -83,7 +83,7 @@ The reason for this is that the system that needs the data is in charge of trigg
 
 Pushing data to another system is useful when there is validation in the destination (for example, to change the master data). If there is a validation error, the user should see it directly while in the process of changing the data so that they can correct it immediately.
 
-## 5 Database Integration & OData
+## 5 Database Integration & OData {#db-odata}
 
 Mendix can integrate directly with external databases using OSQL, OData, or SQL.
 

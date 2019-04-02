@@ -1,5 +1,7 @@
 ---
 title: "Team Server"
+category: "Version Control"
+menu_order: 20
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -11,7 +13,6 @@ You can manage Team Server access from the Developer Portal, which allows Mendix
 
 The Team Server also connects the capture-and-develop phase of the Agile application lifecycle. When you start working on the next version of your application, you just open the Modeler to see the user stories planned for the current sprint and start working on them. If a user story is based on user feedback, you can directly jump to the form mentioned in the metadata of the feedback and start implementing the requested change. 
 
-## 2 Main Documents in This Category
+## 2 Read More
 
 * [Team Server FAQ](team-server-faq)
-* [Version Control](version-control)

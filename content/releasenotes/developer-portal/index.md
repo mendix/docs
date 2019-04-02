@@ -10,6 +10,14 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud V3, and other deploym
 
 ## 2019
 
+### April 4th, 2019
+
+#### Improvements
+
+* We have introduced a [REST version](/apidocs-mxsdk/apidocs/stories-api/stories-api-rest) of the *Stories API*. This allows you to create, retrieve, or update the sprints or stories of your Mendix app projects while using basic HTTP commands, such as `POST` or `GET`.
+* As part of the REST Stories API feature, we created two new scopes. For more information, see the [Retrieve the Stories & Sprints in Your Project](/developerportal/mendix-profile/oauth-scopes#mx:app:stories:read) and [Make Changes to the Stories & Sprints in Your Project](/developerportal/mendix-profile/oauth-scopes#mx:app:stories:write) sections of *OAuth & Scopes*.
+* We have added the ability to create webhooks for your app projects. These webhooks can be configured to send information when sprints change and/or stories change. For more information, see the [Managing Webhooks](/developerportal/settings/general-settings#webhooks) section of *Manage General App Settings* as well as [Webhooks](/apidocs-mxsdk/apidocs/webhooks-sprints) in the *API Documentation*.
+
 ### March 29th, 2019
 
 #### Improvements

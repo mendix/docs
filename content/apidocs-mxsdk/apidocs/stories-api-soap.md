@@ -1,5 +1,5 @@
 ---
-title: "SOAP API"
+title: "SOAP Stories API"
 parent: "stories-api"
 ---
 

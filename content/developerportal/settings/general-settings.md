@@ -34,7 +34,6 @@ In the **Web Modeler** section, you can see whether the Web Modeler is enabled f
 
 	![](attachments/enable-new-mode.png)
 
-
 ## 3 Editing Cloud Settings
 
 Click **Cloud Settings** to select the cloud platform on which to deploy your app. The selection of cloud platforms available will depend on the features of your Mendix account.
@@ -69,7 +68,7 @@ Click **Edit App Info** to edit the following details:
 {{% image_container width="450" %}}![](attachments/edit.png)
 {{% /image_container %}}
 
-## 4 Managing Webhooks
+## 4 Managing Webhooks {#webhooks}
 
 Click **Manage Webhooks** to manage your app's webhooks. A webhook enables the Developer Portal to talk to another website and post updated Developer Portal content (for example, sprint updates and new stories) to that website. For example, if [Mansystems](https://developer.mendixcloud.com/link/partnerprofile/1068) wants to follow the changes in their app project, they will create a service with a certain URL (see the required [URL](#url) below) that keeps track of the data. Changes in the app project in the Developer Portal are then sent to that URL.
 

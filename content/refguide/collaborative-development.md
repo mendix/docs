@@ -29,7 +29,7 @@ The collaborative development process between the Desktop Modeler and the Web Mo
 
 1. Every change made in the Web Modeler is automatically saved to the Web Modeler working copy. Multiple users can view the project in the Web Modeler at the same time: one user can edit it and others are in read-only mode. 
 
-2.  When Desktop Modeler users open a project, they are notified if the WM is enabled for this development line. 
+2.  When Desktop Modeler users open a project, they are notified if the Web Modeler is enabled for this development line. 
 
     ![Collaborative Development Enabled Notification](attachments/collaborative-development/collaborative-development-enabled-notification.png)
 

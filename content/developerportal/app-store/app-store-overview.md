@@ -23,7 +23,7 @@ The home page of the Mendix App Store presents various content categories:
 Category | Description
 --- | ---
 **Featured** | The most important and useful App Store content as determined by Mendix (think of it as a "staff picks" section). 
-**Connectors**, **Modules**, **Widgets** | Add-on categories and sub-categories (for example, Internet-of-Things and Authentication). 
+**Connectors**, **Mobile**, **Modules**, **Widgets** | Add-on categories and sub-categories (for example, Internet-of-Things and Authentication). 
 **New content** | The most recently uploaded content. 
 **Recent updates** | The most recently updated content. 
 **Most popular** | Content that has been downloaded the most in the past seven days. 
@@ -38,11 +38,14 @@ The App Store sidebar menu lists all the pages that you can browse for content.
 
 For details on add-ons, see [Add-On Details Page](#AddonDetailsPage).
 
-You can also access the following pages:
+For details on the Desktop Modeler in the App Store, see [Modeler](#modeler).
 
-* [My App Store](#myappstore)
+{{% todo %}}[**UPDATE LINKS BELOW**]{{% /todo %}}
+
+You can also access the [My App Store Dashboard](#myappstore)
+
+?
 * [Private App Store](#privateappstore)
-* [Modeler](#modeler)
 * [Solutions](#solutions)
 * [Partners](#partners)
 
@@ -99,6 +102,7 @@ The details page for each add-on and app presents the following item information
 
 	![](attachments/app-store-overview/)
 	
+
 {{% todo %}}[**UPDATE ALL SCREENSHOTS IN SECTION WITH NEW TAB NAME; VERIFY NAME OF NEW TAB**]{{% /todo %}}
 
 ### 3.3 Additional Info Section
@@ -134,7 +138,7 @@ In the **Developer Info** section, you can see the following information:
 
 ## 4 Other Pages
 
-### 4.1 My App Store {#myappstore}
+### 4.1 My App Store > Dashboard {#myappstore}
 
 The **My App Store** page presents all of your App Store activity:
 
@@ -227,6 +231,8 @@ Clicking the **Related downloads** option will open a page with information rela
 
 ### 4.4 Solutions {#solutions}
 
+{{% todo %}}[**VERIFY SECTION WILL BE REMOVED**]{{% /todo %}}
+
 The **Solutions** page lists off-the-shelf products that are available for reference:
 
 ![](attachments/app-store-overview/solutions.png)
@@ -238,6 +244,8 @@ Hovering your mouse pointer over a solution tile will bring up a summary of the 
 Solutions are not available for download. There is only an **Open** button, which will take you to the specific supplementary page for the solution.
 
 ### 4.5 Partners {#partners}
+
+{{% todo %}}[**VERIFY SECTION WILL BE REMOVED**]{{% /todo %}}
 
 The **Partners** page lists selected App Store partner companies:
 

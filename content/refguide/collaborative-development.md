@@ -17,7 +17,7 @@ For information on migrating from the old sync process to the new collaborative 
 
 {{% /alert %}}
 
-Collaborative development is the process of sharing app model changes when a team of more than one person is working on the app. Collaborative development allows the team members work together on one project in the Desktop Modeler and the Web Modeler and easily synchronize changes using [version control](version-control). The Desktop Modeler can be used to work on different branches of an app, while the Web Modeler can be enabled for one of these branches. 
+Collaborative development is the process of sharing app model changes when a team of more than one person is working on the app. Collaborative development allows the team members to work together on one project in the Desktop Modeler and the Web Modeler and easily synchronize changes using [version control](version-control). The Desktop Modeler can be used to work on different branches of an app, while the Web Modeler can be enabled for one of these branches. 
 
 Collaborative development is enabled by default for new apps created via the Developer Portal, while for projects created in Mendix version 7.23.2 and below you might need to enable the Web Modeler in the Developer Portal. For more information, see [Migration From the Sync Process to Collaborative Development](collaborative-development-migration).
 
@@ -33,7 +33,7 @@ The collaborative development process between the Desktop Modeler and the Web Mo
 
     ![Collaborative Development Enabled Notification](attachments/collaborative-development/collaborative-development-enabled-notification.png)
 
-3. The Desktop Modeler creates a local working copy that the Desktop Modeler user works on. To get changes from the Team Server the user needs to click **Update **(the latest revision is then retrieved from the Team Server, containing commits from other Desktop Modeler users and the latest changes from the Web Modeler).
+3. The Desktop Modeler creates a local working copy that the Desktop Modeler user works on. To get changes from the Team Server the user needs to click **Update** (the latest revision is then retrieved from the Team Server, containing commits from other Desktop Modeler users and the latest changes from the Web Modeler).
 
 4. After the Desktop Modeler user clicks **Update**, the latest changes from the Web Modeler are committed automatically to the Team Server before the Desktop Modeler receives the update from it. The latest revision from the Team Server is merged into the Desktop Modeler's local working copy. 
 
@@ -79,13 +79,13 @@ We recommend you update your project and commit changes often to avoid multiple 
 
 {{% /alert %}}
 
-If your project has conflicts, the Web Modeler will be unlocked without receiving your changes. You need to resolve conflicts in the Desktop Modeler first to be able to complete the merge and commit again. 
+If your project has conflicts, the Web Modeler will be unlocked without receiving your changes. You need to resolve the conflicts in the Desktop Modeler first to be able to complete the merge and commit again. 
 
 Your changes will be sent to the Web Modeler automatically if there are no conflicts. For more information on the collaborative development process in the Web Modeler, see [Collaborative Development in the Web Modeler](/web-modeler/general-collaborative-development) in the *Web Modeler Guide*.
 
 ### 4.3 Viewing History of Commits
 
-You can see all the changes committed to the development line via **Project** > **More Versioning** > **History**
+You can see all the changes committed to the current development line via **Project** > **More Versioning** > **History**
 
 ![History Dialog Box](attachments/collaborative-development/history.png)
 
@@ -93,7 +93,7 @@ You can see all the changes committed to the development line via **Project** > 
 
 ## 5 Managing Development Lines in the Desktop Modeler {#managing-branches}
 
-In the Desktop Modeler, you can enable the Web Modeler for a development line (the main line or branch lines). You can also create and delete branch lines. 
+In the Desktop Modeler, you can enable the Web Modeler for a development line (the main line or a branch line). You can also create and delete branch lines. 
 
 For collaborative development you need to enable the Web Modeler for one of development lines. 
 
@@ -116,7 +116,7 @@ To enable the Web Modeler for a development line or switch it to another develop
 
 	![Globe Icon in the Branch Line Manager](attachments/collaborative-development/globe-icon.png)<br/>
 
-2.  Select the line you want to enable the Web Modeler for and click **Enable for the Web Modeler** option. <br/>
+2.  Select the line you want to enable the Web Modeler for and click **Enable for the Web Modeler**. <br/>
 
 	![Branch Line Manager - Enabling Another Branch](attachments/collaborative-development/enable-another-branch.png) 
 
@@ -142,7 +142,7 @@ To create a new branch line, do the following:
 
 	c. Type the name of the new line. 
 
-4.  After you have configured all settings, click **OK.** 
+4.  After you have configured all the settings, click **OK.** 
 
 	![Create Branch Line Dialog](attachments/collaborative-development/create-branch-dialog.png) 
 
@@ -150,7 +150,7 @@ You have created a new branch line.
 
 ### 5.3 Deleting a Branch Line
 
-To delete a branch, do the following:
+To delete a branch line, do the following:
 
 1. Click **Project** > **More Versioning** > **Manage Branch Lines**. 
 

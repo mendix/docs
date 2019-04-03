@@ -175,7 +175,7 @@ Data grid specific actions are the following ones:
 
 *  **Search Bar Toggle Button** – opens or hides the search bar when you click it and is specific for the data grid. This button cannot be used if the data source is set to *Microflow*. Note that if the **Show Search Control** property is set to **Always**, there is no search bar toggle button, as the search bar is always open
 
-    ![](/attachments/page-editor-data-grid/search-bar-toggle-button.png)
+    ![](attachments/page-editor-data-grid/search-bar-toggle-button.png)
 
 * **Create** – allows end-users to create new objects in a grid (for more information, see section [2.5.1.1 Grid Create Button](#grid-create-button))
 
@@ -214,7 +214,7 @@ Users can edit new objects in the location specified in the **Edit Location** op
 
 In the **Events** section, you can select the actions performed automatically when an end-user clicks an item in the grid. You can also determine whether the user can select items, and the way the user can select them. 
 
-![](/attachments/page-editor-data-grid/data-grid-events.png)
+![](attachments/page-editor-data-grid/data-grid-events.png)
 
 The **Events** section properties are described in the table below: 
 

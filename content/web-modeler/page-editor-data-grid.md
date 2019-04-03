@@ -102,7 +102,7 @@ You can select the type of the search field in the **Search Field Properties**. 
 
 Search field can be of three types:
 
-​	![](attachments/page-editor-data-grid/search-field-types.png)
+	![](attachments/page-editor-data-grid/search-field-types.png)
 
 * **Input** – search results are filtered by comparing them to the given search term. If the search value matches the attribute value, this object will be a part of the search result. Possible attribute types: AutoNumber, Date and Time, Integer, Long, String, Decimal
 * **Range** –  will apply a filter based on whether the search term falls between the values of two selected attributes. Possible attribute types: AutoNumber, Date and Time, Integer, Long, Decimal
@@ -114,9 +114,9 @@ The following properties are common for all types of search fields:
 
 * **Label** – the name of the search field
 
-* **Default Value** – defines a  prefilled value for the search field
+*  **Default Value** – defines a  prefilled value for the search field
 
-  ![](attachments/page-editor-data-grid/search-fields-common-properties.png)
+    ![](attachments/page-editor-data-grid/search-fields-common-properties.png)
 
 ##### 2.4.2.3 Input and Drop-down Search Field Specific Properties
 
@@ -124,9 +124,9 @@ Input and drop-down search fields have the following specific properties:
 
 * **Attribute** – the value of the selected attribute will be compared to the search term.  
 
-* **Comparison** – the method used to compare the attribute with the search term. 
+*  **Comparison** – the method used to compare the attribute with the search term. 
 
-  ![](attachments/page-editor-data-grid/input-and-drop-down-search-field-properties.png)
+    ![](attachments/page-editor-data-grid/input-and-drop-down-search-field-properties.png)
 
 ##### 2.4.2.4 Range Search Field Specific Properties
 
@@ -138,9 +138,9 @@ A range search field has the following specific properties:
 
 * **Maximum Value** – determines which attribute of the entity the search term must fall below 
 
-  * **Include Maximum Value** –  when enabled, the maximum value is included into the range
+  *  **Include Maximum Value** –  when enabled, the maximum value is included into the range
 
-  ![](attachments/page-editor-data-grid/range-search-field-properties.png)
+    ![](attachments/page-editor-data-grid/range-search-field-properties.png)
 
 ### 2.5 Control Bar {#grid-control-bar}
 
@@ -148,15 +148,15 @@ The control bar allows you to control the objects displayed in the data grid by 
 
 The **Control Bar** section properties are described below: 
 
-* **Show Paging Controls** –  indicates if the buttons for paging through the data grid are visible. Hide these buttons if you are sure that the data grid will contain only one page
+*  **Show Paging Controls** –  indicates if the buttons for paging through the data grid are visible. Hide these buttons if you are sure that the data grid will contain only one page
 
-  ![](attachments/page-editor-data-grid/control-bar-show-paging-controls.png)
+    ![](attachments/page-editor-data-grid/control-bar-show-paging-controls.png)
 
 * **Show Buttons** – determines whether the buttons defined in the **Buttons** section are shown. If disabled, none of the buttons will be accessible in any way, other than the one designated as the **On Click Action**. For more information, see sections [2.5.1 Grid Action Button](#grid-action-button) and [2.6 Events](#grid-events)
 
-* **Buttons** – lists buttons in the control bar. A button set as **On Click Action** in the **Events** section will be indicated as *On Click Action.* This means that even if buttons are hidden, when the end-user clicks or double clicks (depending on settings in the [**Events**](#grid-events) section) the grid item, the default button (action) will be triggered
+*  **Buttons** – lists buttons in the control bar. A button set as **On Click Action** in the **Events** section will be indicated as *On Click Action.* This means that even if buttons are hidden, when the end-user clicks or double clicks (depending on settings in the [**Events**](#grid-events) section) the grid item, the default button (action) will be triggered
 
-  ![](attachments/page-editor-data-grid/control-bar-default-button.png)
+    ![](attachments/page-editor-data-grid/control-bar-default-button.png)
 
   * **Edit** icon – depending on the button navigates you either to [**Grid Action Button** properties](#grid-action-button), or to [**Search Bar Toggle** properties](#search-bar-toggle)
   * **Add Button** – navigates you to [**Grid Action Button** properties](#grid-action-button), where you can configure a new button for the data grid. When you create a new button, the action of this button is added to the list of possible on-click actions in the **Events** section (for more information, see section [2.6 Events](#grid-events))
@@ -173,9 +173,9 @@ In the **On Click Action** section, you can select a data grid specific action f
 
 Data grid specific actions are the following ones:
 
-* **Search Bar Toggle Button** – opens or hides the search bar when you click it and is specific for the data grid. This button cannot be used if the data source is set to *Microflow*. Note that if the **Show Search Control** property is set to **Always**, there is no search bar toggle button, as the search bar is always open
+*  **Search Bar Toggle Button** – opens or hides the search bar when you click it and is specific for the data grid. This button cannot be used if the data source is set to *Microflow*. Note that if the **Show Search Control** property is set to **Always**, there is no search bar toggle button, as the search bar is always open
 
-  ![](/attachments/page-editor-data-grid/search-bar-toggle-button.png)
+    ![](/attachments/page-editor-data-grid/search-bar-toggle-button.png)
 
 * **Create** – allows end-users to create new objects in a grid (for more information, see section [2.5.1.1 Grid Create Button](#grid-create-button))
 

@@ -11,7 +11,11 @@ Once you finish implementing the steps described in [How to Implement Push Notif
 
 Once you have your apps built and running, you can send your first push notifications. This can be done easily using the administration pages that should be included in your application (for details, see [Setting Up the Administration Pages](implementation-guide#setting) in *How to Implement Push Notifications*). 
 
-## 2 Sending a Push Notification to a Device
+## 2 Using APNS instead of FCM for IOS Devices
+When you check the box to enable push notifications in [Configuring FCM in Your Application](setting-up-google-firebase-cloud-messaging-server#7-configuring-fcm-in-your-application), it automatically includes a reference to a file called GoogleService-info.plist. Therefore, in order to successfully use FCM push notifications with IOS, you must include the file GoogleService-info.plist in your application source. When you add this file, it causes the push widget to register your iOS device with FCM and share the FCM registration token with your Mendix backend server. Due to this, you must use FCM to send messages to IOS devices. If you would like to use APNS instead of FCM for your IOS devices, then you will have to remove the reference to GoogleService-info.plist from the config.xml file. By doing this, you will not need to include the GoogleService-info.plist file, and can then use APNS to send messages to iOS devices
+
+
+## 3 Sending a Push Notification to a Device
 
 Follow these steps to send a push notification to a device:
 

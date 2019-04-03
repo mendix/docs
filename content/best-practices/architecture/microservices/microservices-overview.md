@@ -107,8 +107,8 @@ For large, core, or shared systems that are built as a cluster of microservices,
 
 ## 7 Summary
 
-Microservices are here to stay, and there are several versions available out there that all are better than monoliths and SOA-layered architectures. For more information, see [Three Microservices Patterns](three-micoservice-patterns).
+Microservices are here to stay, and there are several versions available out there that all are better than monoliths and SOA-layered architectures. For more information, see [Three Microservices Patterns](three-microservice-patterns).
 
 Mendix is ideally placed for this microservices evolution, since the platform keeps the technical layers of UX, logic, and data together in one container in order to streamline the development of business functionality.
 
-This evolution also positions Mendix as a great choice for really big systems, built as a cluster of smaller collaborating microservices. For details, see [Mendix Microservices](mendix-microservices) and [Large Microservice Clusters](large-microservices-clusters).
+This evolution also positions Mendix as a great choice for really big systems, built as a cluster of smaller collaborating microservices. For details, see [Mendix Microservices](mendix-microservices) and [Large Microservice Clusters](large-microservice-clusters).

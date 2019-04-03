@@ -70,7 +70,7 @@ The data source determines which objects will be shown in the list view. For gen
 | Microflow            | A data source that runs a selected microflow and displays a return value (i.e. a list of objects). For more technical information, see [Microflow Source](/refguide/microflow-source) in the *Desktop Modeler* category. |
 | XPath                | Currently, this data source can only be configured in the Desktop Modeler. For more information, see [XPath Source](/refguide/xpath-source). |
 | Nanoflow             | Currently, this data source can only be configured in the Desktop Modeler. For more information, see [Nanoflows](/refguide/nanoflows). |
-| Association          | Currently, this data source can only be configured in the Desktop Modeler. For more information, see [Association Source](/refguide/association-source). |
+| Association          | Available when a list view is placed inside another data container, for example, a data view. The list view is filled with the objects linked to the data view object by an association. For example, you can show all orderlines for a customer. |
 
 ### 3.2 Events
 

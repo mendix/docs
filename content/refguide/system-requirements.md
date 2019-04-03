@@ -67,6 +67,7 @@ The browser you use needs to have JavaScript turned on.
 * [MySQL](mysql) 5.5, 5.6, 5.7
 * [Oracle Database](oracle) 11g Release 2, 12c Release 1
 * PostgreSQL 9.2, 9.3, 9.4, 9.5, 9.6, 10
+* [SAP HANA](saphana) 2.00.040.00.1545918182
 
 ### 5.4 Java
 

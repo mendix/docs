@@ -30,6 +30,8 @@ The data source determines which objects will be shown in the data grid.
 
 ![](attachments/page-editor-data-grid/data-grid-data-source.png)
 
+The **Data Source** section properties are described in the table below:
+
 | Data Source Property | Description                                                  |
 | -------------------- | ------------------------------------------------------------ |
 | Database             | A data source that determines that the object or objects shown are retrieved directly from the database. You need to select an **Entity** (that you have in the domain model), or create a new entity, if you set database as the data source. <br />When you select an existing entity, the [grid columns](#grid-columns) are automatically created for each attribute of this entity. <br/>After you have selected an entity, you can create one or more **Constraint** items. Constraints are used to limit (filter) data in a list view. To add a constraint, select an attribute and an operator for it (the number of the available operators depend on the type of the attribute), and select a value. For example, to display a list of customers with only Gold grade, select an enumeration *Grade* as an attribute, select *Equals* as an operator, and set a value to *Gold*. <br />**Note** You can choose only the following types of attributes for constraints: AutoNumber, Boolean, Decimal, Enumeration, Integer, Long, and String. |
@@ -44,6 +46,8 @@ For general information on data sources, see [Data Sources](/refguide/data-sourc
 In **Columns** section, you can set the width for the data grid columns, add columns, edit, and delete them. 
 
 ![](attachments/page-editor-data-grid/data-grid-columns-section.png)
+
+The **Columns** section properties are described in the table below:
 
 | Property        | Description                                                  |
 | --------------- | ------------------------------------------------------------ |
@@ -140,7 +144,7 @@ A range search field has the following specific properties:
 
   *  **Include Maximum Value** –  when enabled, the maximum value is included into the range
 
-    ![](attachments/page-editor-data-grid/range-search-field-properties.png)
+      ![](attachments/page-editor-data-grid/range-search-field-properties.png)
 
 ### 2.5 Control Bar {#grid-control-bar}
 
@@ -195,7 +199,7 @@ Data grid specific actions are the following ones:
 
 	*  **Date Export Format** – defines how dates will be exported. When *Date value* is selected, date values will be exported as real dates, allowing Excel functions on them. When *Text* is selected, date values will be exported exactly as shown in the data grid without allowing Excel to format them.
 
-    ![](attachments/page-editor-data-grid/grid-export-to-excel-button.png)
+      ![](attachments/page-editor-data-grid/grid-export-to-excel-button.png)
 
 #### 2.5.1.1 Grid Create Button {#grid-create-button}
 

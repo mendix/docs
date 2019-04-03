@@ -1,0 +1,825 @@
+swagger: '2.0'
+info:
+  description: >-
+    This is api description for the Stories API. With these api you can manage
+    to create , update and retrieve Sprints and Stories for a project
+  version: v1.0
+  title: Stories API
+  termsOfService: '#'
+  contact:
+    email: communities@mendix.com
+host: sprintr.home.mendix.com
+basePath: /rest/api/projects
+tags:
+  - name: sprints
+    description: API for Sprints in a Project
+  - name: stories
+    description: API for Stories and Sub-Stories in a Project
+schemes:
+  - https
+paths:
+  '/v1/{ProjectId}/sprints':
+    post:
+      tags:
+        - sprints
+      summary: Create a new sprint in the project
+      description: ''
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - name: ProjectId
+          in: path
+          description: ID of the Project
+          required: true
+          type: string
+        - in: body
+          name: body
+          description: Sprint Object
+          required: true
+          schema:
+            $ref: '#/definitions/SprintInput'
+      responses:
+        '201':
+          description: OK
+          schema:
+            $ref: '#/definitions/SprintCreated'
+        '400':
+          description: Incorrect Input
+          schema:
+            $ref: '#/definitions/Error400'
+        '401':
+          description: Authentication Failed
+          schema:
+            $ref: '#/definitions/Error401'
+        '403':
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/Error403'
+        '404':
+          description: Project Not Found
+          schema:
+            $ref: '#/definitions/Error404'
+        '410':
+          description: Unsupported Version
+          schema:
+            $ref: '#/definitions/Error410'
+        '500':
+          description: Unexpected Error
+          schema:
+            $ref: '#/definitions/Error500'
+    get:
+      tags:
+        - sprints
+      summary: Get the list of Sprints
+      description: ''
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - name: ProjectId
+          in: path
+          description: ID of the Project
+          required: true
+          type: string
+        - name: offset
+          in: query
+          description: offset for the beginning of the new item list. Default is 0.
+          type: integer
+        - name: limit
+          in: query
+          description: >-
+            limit of the number of items to fetch per call. Default is 0, which
+            retrieves all.
+          type: integer
+      responses:
+        '200':
+          description: OK
+          schema:
+            $ref: '#/definitions/ArrayOfSprints'
+        '400':
+          description: Incorrect Input
+          schema:
+            $ref: '#/definitions/Error400'
+        '401':
+          description: Authentication Failed
+          schema:
+            $ref: '#/definitions/Error401'
+        '403':
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/Error403'
+        '404':
+          description: Project Not Found
+          schema:
+            $ref: '#/definitions/Error404'
+        '410':
+          description: Unsupported Version
+          schema:
+            $ref: '#/definitions/Error410'
+        '500':
+          description: Unexpected Error
+          schema:
+            $ref: '#/definitions/Error500'
+  '/v1/{ProjectId}/sprints/{SprintId}':
+    put:
+      tags:
+        - sprints
+      summary: Update an existing Sprint.
+      description: ''
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - name: ProjectId
+          in: path
+          description: ID of the Project
+          required: true
+          type: string
+        - name: SprintId
+          in: path
+          description: ID of Sprint to update
+          required: true
+          type: integer
+          format: int64
+        - in: body
+          name: body
+          description: Sprint object that needs to be updated
+          required: true
+          schema:
+            $ref: '#/definitions/SprintInput'
+      responses:
+        '204':
+          description: On successful Sprint update
+        '400':
+          description: Incorrect Input
+          schema:
+            $ref: '#/definitions/Error400'
+        '401':
+          description: Authentication Failed
+          schema:
+            $ref: '#/definitions/Error401'
+        '403':
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/Error403'
+        '404':
+          description: Project/Story Not Found
+          schema:
+            $ref: '#/definitions/Error404'
+        '410':
+          description: Unsupported Version
+          schema:
+            $ref: '#/definitions/Error410'
+        '500':
+          description: Unexpected Error
+          schema:
+            $ref: '#/definitions/Error500'
+    get:
+      tags:
+        - sprints
+      summary: Get an existing Sprint
+      description: ''
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - name: ProjectId
+          in: path
+          description: ID of the Project
+          required: true
+          type: string
+        - name: SprintId
+          in: path
+          description: ID of Sprint to get
+          required: true
+          type: integer
+      responses:
+        '200':
+          description: OK
+          schema:
+            $ref: '#/definitions/SprintResponse'
+        '400':
+          description: Incorrect Input
+          schema:
+            $ref: '#/definitions/Error400'
+        '401':
+          description: Authentication Failed
+          schema:
+            $ref: '#/definitions/Error401'
+        '403':
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/Error403'
+        '404':
+          description: Sprint Not Found
+          schema:
+            $ref: '#/definitions/Error404'
+        '410':
+          description: Unsupported Version
+          schema:
+            $ref: '#/definitions/Error410'
+        '500':
+          description: Unexpected Error
+          schema:
+            $ref: '#/definitions/Error500'
+  '/v1/{ProjectId}/stories':
+    post:
+      tags:
+        - stories
+      summary: Create new story or sub-story
+      description: >-
+        Type of Story is decided based on the type of the Parent , which is found using ParentId. If the ParentId is a Sprint , as Story gets created. If the ParentId is Story a substory gets created. If the ParentId is a Sub-story a sub-story to this sub-story is created.
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - name: ProjectId
+          in: path
+          description: ID of the Project
+          required: true
+          type: string
+        - in: body
+          name: body
+          description: Story object that needs to be Created
+          required: true
+          schema:
+            $ref: '#/definitions/CreateStoryInput'
+      responses:
+        '201':
+          description: OK
+          schema:
+            $ref: '#/definitions/StoryCreated'
+        '400':
+          description: Incorrect Input
+          schema:
+            $ref: '#/definitions/GenericError'
+        '401':
+          description: Authentication Failed
+          schema:
+            $ref: '#/definitions/GenericError'
+        '403':
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/GenericError'
+        '404':
+          description: Project/Story Not Found
+          schema:
+            $ref: '#/definitions/GenericError'
+        '410':
+          description: Unsupported Version
+          schema:
+            $ref: '#/definitions/GenericError'
+        '500':
+          description: Unexpected Error
+          schema:
+            $ref: '#/definitions/GenericError'
+  '/v1/{ProjectId}/sprints/{SprintId}/stories':
+    get:
+      tags:
+        - stories
+      summary: Get list of stories for a Sprint
+      description: ''
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - name: ProjectId
+          in: path
+          description: ID of the Project
+          required: true
+          type: string
+        - name: SprintId
+          in: path
+          description: ID of the Sprint
+          required: true
+          type: integer
+        - name: offset
+          in: query
+          description: >-
+            offset of the beginning of new item list. Default is 0 (starts from
+            beginning)
+          type: integer
+        - name: limit
+          in: query
+          description: >-
+            limit of the number of items to fetch. Default limit is configurable
+            using constant
+          type: integer
+      responses:
+        '200':
+          description: OK
+          schema:
+            $ref: '#/definitions/ArrayOfStories'
+        '400':
+          description: Incorrect Input
+          schema:
+            $ref: '#/definitions/Error400'
+        '401':
+          description: Authentication Failed
+          schema:
+            $ref: '#/definitions/Error401'
+        '403':
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/Error403'
+        '404':
+          description: Sprint not found
+          schema:
+            $ref: '#/definitions/Error404'
+        '410':
+          description: Unsupported Version
+          schema:
+            $ref: '#/definitions/Error410'
+        '500':
+          description: Unexpected Error
+          schema:
+            $ref: '#/definitions/Error500'
+  '/v1/{ProjectId}/stories/{StoryId}':
+    get:
+      tags:
+        - stories
+      summary: Get an existing Story or sub-story
+      description: ''
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - name: ProjectId
+          in: path
+          description: ID of the Project
+          required: true
+          type: string
+        - name: StoryId
+          in: path
+          description: ID of Story to get
+          required: true
+          type: integer
+      responses:
+        '200':
+          description: OK
+          schema:
+            $ref: '#/definitions/Story'
+        '400':
+          description: Incorrect Input
+          schema:
+            $ref: '#/definitions/Error400'
+        '401':
+          description: Authentication Failed
+          schema:
+            $ref: '#/definitions/Error401'
+        '403':
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/Error403'
+        '404':
+          description: Sprint not found
+          schema:
+            $ref: '#/definitions/Error404'
+        '410':
+          description: Unsupported Version
+          schema:
+            $ref: '#/definitions/Error410'
+        '500':
+          description: Unexpected Error
+          schema:
+            $ref: '#/definitions/Error500'
+    put:
+      tags:
+        - stories
+      summary: Update an existing Story or sub-story
+      description: ''
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - name: ProjectId
+          in: path
+          description: ID of the Project
+          required: true
+          type: string
+        - name: StoryId
+          in: path
+          description: ID of Story to get
+          required: true
+          type: integer
+        - in: body
+          name: body
+          description: Story object that needs to be updated
+          required: true
+          schema:
+            $ref: '#/definitions/UpdateStoryInput'
+      responses:
+        '204':
+          description: On successful Story update
+        '400':
+          description: Incorrect Input
+          schema:
+            $ref: '#/definitions/Error400'
+        '401':
+          description: Authentication Failed
+          schema:
+            $ref: '#/definitions/Error401'
+        '403':
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/Error403'
+        '404':
+          description: Project or Sprint not found
+          schema:
+            $ref: '#/definitions/Error404'
+        '409':
+          description: >-
+            State of the Resourse doesn't permit the update. For e.g. If you are
+            trying to update sprintId of sub-story , it is not allowed. Only
+            main stories can be moved to different sprint. When the sprint for
+            main story is updated , update for substories should be done too.
+          schema:
+            $ref: '#/definitions/GenericError'
+        '410':
+          description: Unsupported Version. Mention documentation details.
+          schema:
+            $ref: '#/definitions/Error410'
+        '500':
+          description: Unexpected Error. Mention support details
+          schema:
+            $ref: '#/definitions/Error500'
+securityDefinitions:
+  api_key:
+    type: apiKey
+    name: MxID3-Token
+    description: 'JWT token for authorize user for scope MX:XXXX'
+    in: header
+definitions:
+  GenericError:
+    type: object
+    properties:
+      code:
+        type: integer
+        description: Code for the Exception.
+      message:
+        type: string
+        description: Unexpected behaviour. Mention support details.
+  Error400:
+    type: object
+    properties:
+      code:
+        type: integer
+        example: 400
+        description: Code for the Exception.
+      message:
+        type: string
+        example: Input is invalid.
+        description: Invalid input provided.
+  Error401:
+    type: object
+    properties:
+      code:
+        type: integer
+        example: 401
+        description: Code for the Exception.
+      message:
+        type: string
+        example: Authentication failed.
+        description: Invalid credentials provided.
+  Error403:
+    type: object
+    properties:
+      code:
+        type: integer
+        example: 403
+        description: Code for the Exception.
+      message:
+        type: string
+        example: Unauthorized user.
+        description: User is not authorized to perform this action.
+  Error404:
+    type: object
+    properties:
+      code:
+        type: integer
+        example: 404
+        description: Code for the Exception.
+      message:
+        type: string
+        example: Project not found or user does not have access to it.
+        description: Specified item is not found.
+  Error410:
+    type: object
+    properties:
+      code:
+        type: integer
+        example: 410
+        description: Code for the Exception.
+      message:
+        type: string
+        example: Unsupported version
+        description: used unsupported version of the API
+  Error500:
+    type: object
+    properties:
+      code:
+        type: integer
+        example: 500
+        description: Code for the Exception.
+      message:
+        type: string
+        example: Unexpected error
+        description: Unexpected error occurred.
+  SprintCreated:
+    type: object
+    properties:
+      location:
+        type: string
+        description: Location of the created resource
+      Sprint:
+        $ref: '#/definitions/SprintResponse'
+  StoryCreated:
+    type: object
+    properties:
+      location:
+        type: string
+        description: Location of the created resource
+      story:
+        $ref: '#/definitions/Story'
+  SprintResponse:
+    type: object
+    properties:
+      SprintId:
+        type: integer
+        example: 281
+        description: Sprint ID. This is auto generated ID. Ignored incase of POST.
+      Name:
+        type: string
+        description: Name of the sprint.
+        example: Test From API
+      HasStories:
+        type: boolean
+        description: Does the Sprint have stories?
+        example: false
+      Completed:
+        type: boolean
+        description: Is the Sprint complete?
+        example: false
+      IsActiveSprint:
+        type: boolean
+        description: Is it an active Sprint?
+        example: false
+      CreationDate:
+        type: string
+        format: date-time
+        description: Creation date of the Sprint.
+        example: '2019-01-23T10:07:51.943Z'
+      StartDate:
+        type: string
+        format: date-time
+        example: '2018-12-05T00:00:00.000Z'
+        description: >-
+          Start date for the sprint. If not filled, the sprint will
+          automatically start directly after .
+      EndDate:
+        type: string
+        format: date-time
+        example: '2018-12-18T23:59:59.000Z'
+        description: End date for the sprint.
+      IsBacklog:
+        type: boolean
+        description: Is this a backlog Sprint?
+        example: false
+  SprintInput:
+    type: object
+    properties:
+      SprintId:
+        type: integer
+        description: Sprint ID. This is auto generated ID. Ignored incase of POST.
+      DurationInWeeks:
+        type: integer
+        format: int64
+        description: Duration of the new sprint in weeks.
+      Name:
+        type: string
+        description: Name of the new sprint.
+      StartsAfterSprint:
+        type: integer
+        format: int32
+        description: ID of the Sprint directly preceding the new sprint.
+      StartDate:
+        type: string
+        format: date-time
+        description: >-
+          Start date for the new sprint. If not filled, the sprint will
+          automatically start directly after .
+    required:
+      - DurationInWeeks
+      - Name
+  ArrayOfSprints:
+    type: array
+    items:
+      $ref: '#/definitions/SprintResponse'
+
+  CreateStoryInput:
+    type: object
+    properties:
+      ParentId:
+        type: integer
+        description: Mandatory. Id of the Parent. If the ParentId is a SprintId , It creates a Story. If the ParentId is a StoryId , It creates a Sub-Story. If the ParentId is a Sub-Story , It creates a Sub-Story to this sub-story.
+      Description:
+        type: string
+        description: Description of the (sub-)story
+      Name:
+        type: string
+        description: Name of the Story/Sub-Story. mandatory for all cases.
+      Points:
+        type: integer
+        enum:
+          - 1
+          - 2
+          - 3
+          - 5
+          - 8
+          - 13
+          - 20
+          - 40
+          - 100
+        description: How many points assigned to the story. Optional Input. Ignored incase of Sub-Story. If the provided values are not one of the specified in enum. It will be ignored.
+      StoryType:
+        type: string
+        enum:
+          - Feature
+          - Bug
+        description: Type of the story. Mandatory For Story. Ignored for Sub-Story.
+    required:
+      - Name
+      - StoryType
+  UpdateStoryInput:
+    type: object
+    properties:
+      ParentId:
+        type: integer
+        description: Mandatory. Id of the Parent. If the ParentId is a SprintId , It creates a Story. If the ParentId is a StoryId , It creates a Sub-Story. If the ParentId is a Sub-Story , It creates a Sub-Story to this sub-story.
+      Description:
+        type: string
+        description: Description of the (sub-)story
+      Name:
+        type: string
+        description: Name of the Story/Sub-Story. mandatory for all cases.
+      Points:
+        type: integer
+        enum:
+          - 1
+          - 2
+          - 3
+          - 5
+          - 8
+          - 13
+          - 20
+          - 40
+          - 100
+        description: How many points assigned to the story. Optional Input. Ignored incase of Sub-Story. If the provided values are not one of the specified in enum. It will be ignored.
+      StoryType:
+        type: string
+        enum:
+          - Feature
+          - Bug
+        description: Type of the story. Mandatory For Story. Ignored for Sub-Story.
+      Status:
+        type: string
+        enum:
+          - To-do
+          - Running
+          - Done
+        description: Status of the Story
+    required:
+      - Name
+      - StoryType
+  Story:
+    type: object
+    properties:
+      StoryId:
+        type: integer
+        description: Story ID. This is an auto generated ID. Ignored in case of POST.
+      ParentId:
+        type: integer
+        description: Id of the Sprint the story is part of.
+      ParentType:
+        type: string
+        enum:
+          - Sprint
+          - Story
+          - Sub-story
+        description: Type of the Parent
+      Name:
+        type: string
+        description: Name of the Story
+      Description:
+        type: string
+        description: Description of the Story
+      Status:
+        type: string
+        enum:
+          - To-do
+          - Running
+          - Done
+        description: Status of the Story
+      StoryType:
+        type: string
+        enum:
+          - Feature
+          - Bug
+        description: Type of the story.
+      HasSubStories:
+        type: boolean
+        description: Whether the Story has any Sub-Stories
+        example: true
+      Points:
+        type: integer
+        enum:
+          - 1
+          - 2
+          - 3
+          - 5
+          - 8
+          - 13
+          - 20
+          - 40
+          - 100
+        description: How many points assigned to the story.
+      CreationDate:
+        type: string
+        format: date-time
+        description: Creation date of the Story.
+        example: '2019-01-23T10:07:51.943Z'
+      FinishDate:
+        type: string
+        format: date-time
+        description: Date when Story was completed.
+        example: '2019-01-23T10:07:51.943Z'
+      SubStories:
+        type: array
+        items:
+          $ref: '#/definitions/SubStory'
+  SubStory:
+    type: object
+    properties:
+      StoryId:
+        type: integer
+        description: >-
+          Id of this sub-story. This is an auto generated ID. Ignored in case of
+          POST.
+      ParentId:
+        type: integer
+        description: Id of the Parent Story.
+      Name:
+        type: string
+        description: Name of the Sub-Story
+      Description:
+        type: string
+        description: Description of the Sub-Story
+      Status:
+        type: string
+        enum:
+          - To-do
+          - Done
+        description: Status of the Sub-Story.
+      HasSubStories:
+        type: boolean
+        description: Whether the Sub-Story has any Children.
+        example: true
+      CreationDate:
+        type: string
+        format: date-time
+        description: Creation date of the Sub-Story.
+        example: '2019-01-23T10:07:51.943Z'
+      FinishDate:
+        type: string
+        format: date-time
+        description: Date when Sub-Story was completed.
+        example: '2019-01-23T10:07:51.943Z'
+      SubStoriesIds:
+        type: object
+        properties:
+          Ids:
+            type: object
+            $ref: '#/definitions/Ids'
+  ArrayOfStories:
+    type: array
+    items:
+      $ref: '#/definitions/Story'
+  Id:
+    type: object
+    properties:
+      StoryId:
+        type: integer
+        description: Id of the Story.
+  Ids:
+    type: array
+    items:
+      $ref: '#/definitions/Id'

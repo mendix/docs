@@ -14,8 +14,6 @@ This document describes all the different sections of the App Store.
 
 ## 2 App Store Home Page
 
-### 2.1 Categories
-
 The home page of the Mendix App Store presents various content categories:
 
 ![](attachments/app-store-overview/home_page.png)
@@ -23,7 +21,7 @@ The home page of the Mendix App Store presents various content categories:
 Category | Description
 --- | ---
 **Featured** | The most important and useful App Store content as determined by Mendix (think of it as a "staff picks" section). 
-**Connectors**, **Mobile**, **Modules**, **Widgets** | Add-on categories and sub-categories (for example, Internet-of-Things and Authentication). 
+**Connectors**, **Mobile**, **Widgets**, **Modules** | Add-on categories and sub-categories (for example, Internet-of-Things and Authentication). 
 **New content** | The most recently uploaded content. 
 **Recent updates** | The most recently updated content. 
 **Most popular** | Content that has been downloaded the most in the past seven days. 
@@ -31,23 +29,6 @@ Category | Description
 **Top App Store contributors** | The top 10 App Store contributors of the last 30 days. Clicking the name of the developer will bring you to their Mendix Profile. Clicking **View full leaderboard** will take you to the [Mendix Leaderboards](https://developer.mendixcloud.com/link/topappstore30) page.
 
 To see a detail page for each category, click **View more**.
-
-### 2.2 Sidebar Menu
-
-The App Store sidebar menu lists all the pages that you can browse for content.
-
-For details on add-ons, see [Add-On Details Page](#AddonDetailsPage).
-
-For details on the Desktop Modeler in the App Store, see [Modeler](#modeler).
-
-{{% todo %}}[**UPDATE LINKS BELOW**]{{% /todo %}}
-
-You can also access the [My App Store Dashboard](#myappstore)
-
-?
-* [Private App Store](#privateappstore)
-* [Solutions](#solutions)
-* [Partners](#partners)
 
 ## 3 Add-On Details Page {#AddonDetailsPage}
 
@@ -69,9 +50,8 @@ The header for each add-on presents the following details:
 	* **Open** – click this to open a supplementary page for the content (for example, the [Atlas UI](https://atlas.mendix.com/) page, where you can learn more about the Mendix Atlas UI Design language)
 	* **Download** – click this to download the content
 		* This is only available for content that has a file attached (meaning, all shared  Desktop Modeler content, but not promotions; for details on sharing  Desktop Modeler content, see [How to Share App Store Content](share-app-store-content))
+		* The best practice is to download content from the App Store that is accessible in the  Desktop Modeler, because it then downloads directly into the  Desktop Modeler (for details, see [How to Use App Store Content](use-app-store-content-in-the-modeler))
 		* For details on how to import downloaded App Store content into the Desktop Modeler, see [How to Import & Export Objects](/howto/integration/importing-and-exporting-objects)
-		{{% alert type="info" %}}The best practice is to download content from the App Store that is accessible in the  Desktop Modeler, because it then downloads directly into the  Desktop Modeler (for details, see [How to Use App Store Content](use-app-store-content-in-the-modeler)).
-		{{% /alert %}}
 
 ### 3.2 Tabs
 
@@ -98,12 +78,9 @@ The details page for each add-on and app presents the following item information
 
 	![](attachments/app-store-overview/content_detail_8.png)
 	
-*  The **Content owners** tab, which lists the [content owners](#co) if this is a protected item
+*  The **Content managers** tab, which lists the [content managers](#cm) if this is protected App Store content
 
-	![](attachments/app-store-overview/)
-	
-
-{{% todo %}}[**UPDATE ALL SCREENSHOTS IN SECTION WITH NEW TAB NAME; VERIFY NAME OF NEW TAB**]{{% /todo %}}
+	![](attachments/app-store-overview/content_detail_9.png)
 
 ### 3.3 Additional Info Section
 
@@ -136,136 +113,152 @@ In the **Developer Info** section, you can see the following information:
 * The company for which the developer works
     * Clicking the company name will bring you to the company's [Partner Profile](../community-tools/how-to-set-up-your-partner-profile)
 
-## 4 Other Pages
+## 4 My App Store
 
-### 4.1 My App Store > Dashboard {#myappstore}
+{{% todo %}}[**VERIFY ALL TEXT & SCREENSHOTS FOR ANY UI TEXT CHANGES**]{{% /todo %}}
 
-The **My App Store** page presents all of your App Store activity:
+### 4.1 Dashboard {#dashboard}
 
-* Your numbers for **PUBLISHED CONTENT** and **SUBMITTED REVIEWS**
-* **Notifications** on content you favorited
+The **Dashboard** page presents all of your App Store activity:
+
+* Your numbers for **Published Content** and **Submitted Reviews**
+* **Notifications** on content you have favorited
+* Content **Drafts** you have created
 * Your content **Favorites**
 
 ![](attachments/app-store-overview/my_app_store.png)
 
-The **MY APP STORE** section of the sidebar menu contains the following options:
+In the sidebar menu of your dashboard, you will see menu items for your App Store activity above the menu items for your company's App Store activity.
 
-* **Published** – click this to see the content you have published as well as the content your company has published on the **Published content** page
-    * On the **Published by me** tab, you can see the last version of the content you published
-        * Click **Manage** to edit the current draft version, create a new draft version (for details, see [How to Share App Store Content](share-app-store-content)), or unpublish content
-    * On the **Published by my company** tab, you can see all of the content published by your company
-        * Click **Manage** to edit content, create a new draft version, or unpublish the content version you had published (if you are an organization administrator, you can unpublish any content)
-* **Favorites** – click this to see the content you have favorited
-* **Stats** – click this to see the content that has been downloaded the most in the previous month on the **Downloads overview** page
-    * Clicking specific App Store content on this page will show you a **Downloads per month** graph as well as **User Reviews**
+#### 4.2 My Content
 
-The **REVIEWS** section of the sidebar menu contains the following options:
+START: On this page, you can see the App Store content for which you have created at least one version.
 
-* **Submitted** – click this to see the reviews that you have submitted as well as the reviews your company has submitted
-* **Received** – click this to see the reviews that your content has received as well as the reviews that your company's content has received
+![](attachments/app-store-overview/my-content.png)
 
-The **MY COMPANY** section of the sidebar menu contains the following options:
+You may see certain labels on the content. Details on the **Protected** label are described below via the **Enable protection** button. For details on the **Company only** label, see the [Adding New App Store Content](share-app-store-content#private-app-store) section of *How to Share App Store Content*.
 
-* **Profile** – click this to see the profile of your company (the same profile that appears on the [Partners Tab](#partners))
-* **External Downloaders** – click this to go to the [External Downloaders](#ext) page of your company's App Store
-* **Content Owners** – click this to go to the [Content Owners](#co) page of your company's App Store
+Clicking **Manage** opens the content management page:
 
-{{% todo %}}[**UPDATE SCREENSHOT ABOVE FOR NEW MENU ITEMS; VERIFY NAMING AND MENU ITEM ORDER**]{{% /todo %}}
+![](attachments/app-store-overview/content-management.png)
 
-#### 4.1.1 External Downloaders {#ext}
+On this page, you will see the following buttons (depending on your role and permissions):
 
-On this page, a Company Admin with the [Can manage App Store](../company-app-roles/manage-roles#app-store-manager) permission can mark private App Store items downloadable for users from outside the company. They can also add the external downloaders who can download these items.
+{{% todo %}}[**SHOULD PROBABLY DUPLICATE THE PERMISSION PARTS TO Company Content PART BELOW, SINCE THEY WILL ONLY BE VALID THERE - FOR CONTENT YOU HAVE CREATED, YOU SHOULD HAVE ACCESS TO ALL THESE BUTTONS?; VERIFY ALL BELOW; ADD CROSS-REFERENCES**]{{% /todo %}}
 
-{{% todo %}}[**ADD SCREENSHOT; VERIFY DESCRIPTION**]{{% /todo %}}
+* <a name="protect"></a>**Enable protection**/**Disable protection** – click this to toggle the protection level for the content
+	* If the content is protected, only [content managers](#cm) are able to manage it
+	* Enabling protection assigns the **Protected** label to the content
+	* If the content is protected, only content managers will see this button
+* **Create new draft version** – click this to create a new draft version of the content (for details, see [])
+	* If this content is protected, only content manager will see this button
+* **Unpublish** – click this to remove that version from the content
+	* If this content is protected, only content managers will see this button
+* **Edit** – click this to edit the content (for details, see the [Adding New App Store Content](share-app-store-content#edit) section of *How to Share App Store Content*)
+	* If this content is protected, only content managers will see this button
 
-This page has two tabs:
+#### 4.3 Shared with Me {#shared-with-me}
 
-* **Users** tab
-	* Here you can enter an email address then click **Add External Downloader** to add that user as an external downloader who can download the App Store items marked on the **Downloadable Content** tab (see below)
-	* External downloaders will receive an email about being able to access the company's private App Store content, and they will then be able to see all the private App Store content they have access to in their [private App Store](#privateappstore)
-	* To remove an external downloader, click the red remove button next to their name
-* **Downloadable Content** tab
-	* Click **Add Item** to mark certain [private App Store](#privateappstore) items as downloadable for external downloaders
+{{% todo %}}[**ADD CROSS-REFERENCE; GET NEW SCREENSHOT WITH DATA**]{{% /todo %}}
 
-{{% todo %}}[**VERIFY UI TEXT, REMOVE BUTTON FUNCTIONALITY, AND ADD ITEM FOR MARKING CONTENT AS DOWNLOADABLE**]{{% /todo %}}
+This page contains content shared with you by other companies have marked you as an [external downloader]().
 
-#### 4.1.2 Content Owners {#co}
+![](attachments/app-store-overview/shared-with-me.png)
 
-On this page, a Company Admin with the [Can manage App Store](../company-app-roles/manage-roles#app-store-manager) permission can mark App Store content owners who will have rights to manage protected content.
+#### 4.4 Reviews
 
-{{% todo %}}[**ADD SCREENSHOT; VERIFY DESCRIPTION**]{{% /todo %}}
+{{% todo %}}[**GET NEW SCREENSHOT WITH DATA**]{{% /todo %}}
 
-This page has two tabs:
+This page contains reviews of **Your content** by other users as well as **Your reviews** that you have written of other content.
 
-* **Content Owners** tab
-	* Click **Add Content Owner** to mark users from your company as content owners who can manage protected items
-	* To remove a content owner, click the red remove button next to their name
-* **Protected Content** tab
-	* This tab shows the protected App Store items that can only be edited by content owners
-	* Click **Add Item** to mark specific App Store items as protected
-	{{% alert type="info" %}}An App Store item from your company not marked as protected can be edited by anyone in your company.
-	{{% /alert %}}
-	* To remove an item from protection, click the red remove button next to the item's name
+![](attachments/app-store-overview/your-reviews.png)
 
-{{% todo %}}[**PROTECTED CONTENT IS NOT JUST PRIVATE APP STORE CONTENT, CORRECT?; VERIFY UI TEXT & DESCRIPTIONS**]{{% /todo %}}
+#### 4.5 Notifications
 
-### 4.2 Private App Store {#privateappstore}
+This page presents a history of notifications on content you have worked on:
 
-The private App Store is where your company can store content that will be available only to the developers in your company [external downloaders](#ext). This content will not be reviewed by Mendix.
+![](attachments/app-store-overview/notifications.png)
 
-If you are marked as an external downloader for App Store content from another company, you will also see that content in your private App Store.
+## 5 Your Company's App Store
 
-For more information, see the [Adding New App Store Content](share-app-store-content#adding) section of *How to Share App Store Content*.
+### 5.1 Company Content
 
-{{% todo %}}[**VERIFY**]{{% /todo %}}
+On this page, you can see all the content your company has published:
 
-### 4.3 Modeler {#modeler}
+![](attachments/app-store-overview/company-content.png)
 
-On the **Modeler** page, you can download any version of the  Desktop Modeler you need by clicking  **Download** for the latest release or the donwload icon for a specific older release:
+{{% todo %}}[**VERIFY Manage BUTTON AVAILABILITY BELOW**]{{% /todo %}}
 
-![](attachments/app-store-overview/modeler.png)
+The **Manage** button is available to you for the following content:
 
-Clicking the **Release notes** icon will open the [ Desktop Modeler release notes](/releasenotes/desktop-modeler/) for that particular version.
+* Content you have published
+* Your company's content that is not protected
+* Your company's content that is protected for which you are a [content manager](#cm)
 
-Clicking the **Related downloads** option will open a page with information relating to that Desktop Modeler version.
+For details on managing company content, see the [Managing Content](#managing) section above.
 
-### 4.4 Solutions {#solutions}
+### 5.2 Shared with Others {#shared}
 
-{{% todo %}}[**VERIFY SECTION WILL BE REMOVED**]{{% /todo %}}
+{{% alert type="info" %}}
+This menu item and page are only visible to Company Admins with the [Can manage App Store](../company-app-roles/manage-roles#app-store-manager) permission.
+{{% /alert %}}
 
-The **Solutions** page lists off-the-shelf products that are available for reference:
+This page contains company-only content that is shared with external downloaders. To set these external downloaders, click **View all people outside your company...** to be taken to the [External Downloaders](#ext) page.
 
-![](attachments/app-store-overview/solutions.png)
+To set the accessible content, click **Share content**, which opens the **Company-only content** dialog box. Here you see a list of company-only content from your company's [private App Store](share-app-store-content#private-app-store) that can be shared by selecting it and clicking **Save**:
 
-Hovering your mouse pointer over a solution tile will bring up a summary of the solution:
+![](attachments/app-store-overview/company-only-content.png)
 
-![](attachments/app-store-overview/solution_example.png)
+Once the content is shared, it is shared with external downloaders and listed on this page:
 
-Solutions are not available for download. There is only an **Open** button, which will take you to the specific supplementary page for the solution.
+![](attachments/app-store-overview/shared-with-others.png)
 
-### 4.5 Partners {#partners}
+There are two buttons available for shared content:
 
-{{% todo %}}[**VERIFY SECTION WILL BE REMOVED**]{{% /todo %}}
+* **Remove** – click this to remove the content from being shared with others
+* **View** – click this to go to the App Store page for the content
 
-The **Partners** page lists selected App Store partner companies:
+### 5.3 Reviews
 
-![](attachments/app-store-overview/partners.png)
+{{% todo %}}[**GET NEW SCREENSHOT WITH DATA**]{{% /todo %}}
 
-Hovering your mouse pointer over a partner tile will bring up a summary of the company:
+This page contains reviews of **Your company's content** as well as **Your company's reviews** that various users from your company have written of other content.
 
-![](attachments/app-store-overview/partner_summary.png)
+![](attachments/app-store-overview/your-company-reviews.png)
 
-Clicking the partner name will bring you to that partner's App Store details page:
+### 5.4 User Groups
 
-![](attachments/app-store-overview/partners_detail3.png)
+{{% alert type="info" %}}
+This menu item and page are only visible to Company Admins with the [Can manage App Store](../company-app-roles/manage-roles#app-store-manager) permission.
+{{% /alert %}}
 
-On the **Apps & Add-ons** tab of the partner details page, you can browse the apps and add-ons that the partner has contributed to the App Store.
+You can configure your user groups for various levels of access to your company's private App Store. The available user groups are described in the sections below.
 
-On the **More info** tab, you can view documents that provide more information on what the partner company does:
+#### 5.4.1 Content Managers {#cm}
 
-![](attachments/app-store-overview/partners_detail2.png)
+On this page, you can add App Store content managers who will have rights to manage [protected content](#protect).
 
-## 5 Read More
+{{% todo %}}[**UPDATE SCREENSHOT FOR BLUE BOX; VERIFY DESCRIPTION**]{{% /todo %}}
+
+![](attachments/app-store-overview/content-managers.png)
+
+Click **Add** to select users from your company as content managers who can manage protected items:
+
+![](attachments/app-store-overview/add-user.png)
+
+To remove a content manager, click the red remove button next to their name
+
+####  5.4.2 External Downloaders {#ext}
+
+On this page, you can add external downloaders from outside your company who you can share private App Store company-only content with via the [Shared with Others](#shared) page.
+
+![](attachments/app-store-overview/external-downloaders.png)
+
+To add an external downloader, enter an email address in the box and click **Add**. If the external downloader is registered with Mendix, they will receive an email notifying them of access to private App Store content. They can then see all the private App Store content shared with them in their [Shared with Me](#shared-with-me) page.
+
+To remove an external downloader, click **Remove** next to their name.
+
+## 6 Read More
 
 * [How to Use App Store Content](use-app-store-content-in-the-modeler)
 * [How to Share App Store Content](share-app-store-content)

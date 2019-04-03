@@ -89,6 +89,7 @@ To add content to the App Store, follow these steps:
 
   * **Share** – components that can be downloaded using the Desktop Modeler – if you select this option, continue to [step #3](#three) below
   * **Promote** – a way to advertise a component or solution while not making it downloadable – if you select this option, continue to [step #4](#four) below
+
 3. <a name="three"></a>When adding Desktop Modeler content, select **your content source**:
 
   *  If you select **Select from GitHub**, follow these steps:<br />
@@ -113,16 +114,19 @@ To add content to the App Store, follow these steps:
 4. <a name="four"></a>In the **Publish to** drop-down menu, select the location where you want to publish your content:
 
   * **Public App Store (visible for anyone)** – your content will be available to every developer in the Mendix community (this content will have to be reviewed and approved by Mendix before it is available)
-  * <a name="private-app-store"></a>**Private App Store (visible for your company)** – your content will be available only to the developers in your company and [external downloaders](../app-store/app-store-overview#ext); this content will not be reviewed by Mendix
-5. In the bottom half of the **DRAFT** screen, do the following:<br />
-  a. Enter a **Name** for your content.<br />
-  b. Select a category for your content from the **Category** drop-down menu (for example, **Connectors**).<br />
-  c. If you have published a demo using your content, enter the **Demo URL**.<br />
-  d. Click **Upload Image** to upload an image for your app.<br />
+  * <a name="private-app-store"></a>**Private App Store (visible for your company)** – your content will receive the **Company only** label and be available only to the developers in your company as well as [external downloaders](../app-store/app-store-overview#ext); this content will not be reviewed by Mendix
 
-  ![](attachments/share-app-store-content/add_content_3.png)
+5. In the **Content protection** section, you can choose to **Enable protection** or **Disable protection** for the content. This will determine which members of your company can manage the content. For more information, see the [ Content Managers](app-store-overview#cm) section of *App Store Overview*.
 
-6. On the **Overview** tab in the bottom half of the **Share your content** screen, you can do the following:
+6.  <a name="edit"></a>In the bottom half of the **DRAFT** screen, do the following:<br />
+	a. Enter a **Name** for your content.<br />
+	b. Select a category for your content from the **Category** drop-down menu (for example, **Connectors**).<br />
+	c. If you have published a demo using your content, enter the **Demo URL**.<br />
+	d. Click **Upload Image** to upload an image for your app.<br />
+
+	![](attachments/share-app-store-content/add_content_3.png)
+
+8. On the **Overview** tab in the bottom half of the **Share your content** screen, you can do the following:
 
   * Enter an overview **Description** of your content (for example, "Node control is an native Android app that gives a system administrator access to the Mendix Cloud nodes being administered. From the app, the status of the different environments within a node can be monitored and an environment can be started or stopped.")
   * Upload screenshots by clicking **Add screenshots** and selecting images of the content from your computer
@@ -131,7 +135,7 @@ To add content to the App Store, follow these steps:
   {{% image_container width="400" %}}![](attachments/share-app-store-content/add_content_4.png)
   {{% /image_container %}}
 
-7. <a name="doc-tab"></a>On the **Documentation** tab, you can write or edit the documentation that should accompany your app in the editor. Note that this is only applicable when the **Use GitHub readme.md** check box is not checked, and you are only able to edit the documentation of your own and your company's content.
+9. <a name="doc-tab"></a>On the **Documentation** tab, you can write or edit the documentation that should accompany your app in the editor. Note that this is only applicable when the **Use GitHub readme.md** check box is not checked, and you are only able to edit the documentation of your own and your company's content.
 
   * The documentation template includes the following sections that you must fill out in order to submit your content:
   	* An extended **Description** of the content
@@ -147,45 +151,46 @@ To add content to the App Store, follow these steps:
   {{% image_container width="450" %}}![](attachments/share-app-store-content/add_content_5.png)
   {{% /image_container %}}
 
-8. Note that there is nothing for you to do on the **Statistics** and **All versions** tabs. The **Statistics** tab will chart the downloads of your content over time. The **All versions** tab will list the various versions of your content that have been updated.
-9. In the **Version Details** section on the bottom-right of the screen, do the following:<br />
-  a. Check the **Beta version** check-box if the content is in beta.<br />
-  b. Select the **Modeler version** on which you built the content.<br />
-  c.  Select the type of **License** you want applied to your app (if applicable):<br />
+10. Note that there is nothing for you to do on the **Statistics** and **All versions** tabs. The **Statistics** tab will chart the downloads of your content over time. The **All versions** tab will list the various versions of your content that have been updated.
 
-  * **Apache V2** (for more information, see [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0))
-  * **GNU General Public License, version 3** (for more information, see [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html))
-  * **Mendix EULA** (for more information, see [Mendix Terms of Use](https://www.mendix.com/terms-of-use/))
-  * **MIT** (for more information, see [MIT License](https://opensource.org/licenses/MIT))
+11. In the **Version Details** section on the bottom-right of the screen, do the following:<br />
+   a. Check the **Beta version** check-box if the content is in beta.<br />
+   b. Select the **Modeler version** on which you built the content.<br />
+   c.  Select the type of **License** you want applied to your app (if applicable):<br />
 
-  {{% image_container width="300" %}}![](attachments/share-app-store-content/add_content_8.png)
-  {{% /image_container %}}
+   * **Apache V2** (for more information, see [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0))
+   * **GNU General Public License, version 3** (for more information, see [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html))
+   * **Mendix EULA** (for more information, see [Mendix Terms of Use](https://www.mendix.com/terms-of-use/))
+   * **MIT** (for more information, see [MIT License](https://opensource.org/licenses/MIT))
 
-  You can request other license types to be added as **License** options by clicking the **Feedback** button on the right side of the App Store screen.
+   {{% image_container width="300" %}}![](attachments/share-app-store-content/add_content_8.png)
+   {{% /image_container %}}
 
-10. After entering the information for your content, you can click one of these buttons in the middle of the screen:
+   You can request other license types to be added as **License** options by clicking the **Feedback** button on the right side of the App Store screen.
 
-  {{% image_container width="300" %}}![](attachments/share-app-store-content/add_content_7.png)
-  {{% /image_container %}}
+12. After entering the information for your content, you can click one of these buttons in the middle of the screen:
 
-  * Click **Cancel** to cancel your changes to the content information
-  * Click **Delete Draft** to delete the draft of the content information you are working on
-  * Click **Save draft** to save the draft of the content information, which will open the **Draft version** section at the top of the screen:
+   {{% image_container width="300" %}}![](attachments/share-app-store-content/add_content_7.png)
+   {{% /image_container %}}
 
-  {{% image_container width="350" %}}![](attachments/share-app-store-content/add_content_6.png)
-  {{% /image_container %}}
+   * Click **Cancel** to cancel your changes to the content information
+   * Click **Delete Draft** to delete the draft of the content information you are working on
+   * Click **Save draft** to save the draft of the content information, which will open the **Draft version** section at the top of the screen:
 
-  In this section, you can do the following:
+   {{% image_container width="350" %}}![](attachments/share-app-store-content/add_content_6.png)
+   {{% /image_container %}}
 
-  * In the **Status** section, if applicable, click the **error** link (for example, **(7 error(s))**) to bring up the **Warning** pop-up window that lists the information you need enter or fix before you submit the content
-  * Click **Back** to go to the list of content drafts in the **My App Store** tab
-  * Click **Edit** to continue editing the content information
-  * Click **Submit for approval** to submit your App Store content for approval at Mendix
+   In this section, you can do the following:
+
+   * In the **Status** section, if applicable, click the **error** link (for example, **(7 error(s))**) to bring up the **Warning** pop-up window that lists the information you need enter or fix before you submit the content
+   * Click **Back** to go to the list of content drafts in the **My App Store** tab
+   * Click **Edit** to continue editing the content information
+   * Click **Submit for approval** to submit your App Store content for approval at Mendix
 
 ## 5 Updating Existing App Store Content {#updating}
 
 {{% alert type="info" %}}
-If an existing App Store item is protected, you can only update it if you are a content owner. For more details, see the [Content Owners](app-store-overview#co) section of *App Store Overview*.
+If an existing App Store item is protected, you can only update it if you are a content owner. For more details, see the [Content Managers](app-store-overview#cm) section of *App Store Overview*.
 {{% /alert %}}
 
 {{% todo %}}[**VERIFY DESCRIPTION**]{{% /todo %}}

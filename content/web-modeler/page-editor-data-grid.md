@@ -102,7 +102,7 @@ You can select the type of the search field in the **Search Field Properties**. 
 
 Search field can be of three types:
 
-	![](attachments/page-editor-data-grid/search-field-types.png)
+![](attachments/page-editor-data-grid/search-field-types.png)
 
 * **Input** – search results are filtered by comparing them to the given search term. If the search value matches the attribute value, this object will be a part of the search result. Possible attribute types: AutoNumber, Date and Time, Integer, Long, String, Decimal
 * **Range** –  will apply a filter based on whether the search term falls between the values of two selected attributes. Possible attribute types: AutoNumber, Date and Time, Integer, Long, Decimal

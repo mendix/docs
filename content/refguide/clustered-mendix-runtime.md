@@ -37,7 +37,9 @@ Scaling out can be done using the Pivotal App Manager. Using the Pivotal App Man
 
 Mendix Runtime has the concept of a Cluster Leader. This is a single node within a Mendix Runtime Cluster that performs cluster management activities. Those activities are:
 
-* `Session Expiration handling` - removing sessions after they have expired (not been used for a configured timespan)
+* `Session expiration handling` 
+  * Pre  7.23.4 : the cluster leader removes sessions after they have expired (not been used for a configured timespan)
+  * From 7.23.4 : each node expires (not been used for a configured timespan) its sessions and, as part of that, removes the session persisted in the database. In exceptional cases, for example a node crash, some sessions may not be have been removed from the database, in this case the leader takes performs a clean up of the sessions.
 * `Cluster node expiration handling` - removing cluster nodes after they have expired (not giving a heartbeat for a configured timespan)
 * `Background job expiration handling` - removing data about background jobs after the information has expired (older than a specific timespan)
 * `Unblocking blocked users`
@@ -144,6 +146,6 @@ Persistent Sessions also store a 'last active' date upon each request. To improv
 
 {{% alert type="warning" %}}
 
-Overriding the default values for `SessionTimeout` and `ClusterManagerActionInterval` custom settings can impact the behavior of keep alive and results in an unexpected session logout. In particular, the best practice is to set the `ClusterManagerActionInterval` to half of the `SessionTimeout` so that each node gets the chance to run at least once before the Cluster Leader attempts to delete a session.
+Overriding the default values for `SessionTimeout` and `ClusterManagerActionInterval` custom settings can impact the behavior of keep alive and results in an unexpected session logout. In particular, the best practice is to set the `ClusterManagerActionInterval` to half of the `SessionTimeout` so that each node gets the chance to run at least once before the Cluster Leader (pre 7.23.4) or a node (from 7.23.4) attempts to delete a session.
 
 {{% /alert %}}

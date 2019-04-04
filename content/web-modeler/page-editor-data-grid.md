@@ -177,7 +177,7 @@ In the **On Click Action** section, you can select a data grid specific action f
 
 Data grid specific actions are the following ones:
 
-*  **Search Bar Toggle Button** – opens or hides the search bar when you click it and is specific for the data grid. This button cannot be used if the data source is set to *Microflow*. Note that if the **Show Search Control** property is set to **Always**, there is no search bar toggle button, as the search bar is always open
+*  <a name="search-bar-toggle"></a> **Search Bar Toggle Button** – opens or hides the search bar when you click it and is specific for the data grid. This button cannot be used if the data source is set to *Microflow*. Note that if the **Show Search Control** property is set to **Always**, there is no search bar toggle button, as the search bar is always open
 
     ![](attachments/page-editor-data-grid/search-bar-toggle-button.png)
 

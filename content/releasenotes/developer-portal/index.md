@@ -10,6 +10,12 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud V3, and other deploym
 
 ## 2019
 
+### April 5th, 2019
+
+#### Improvements
+
+* We made general improvements to the performance of the Developer Portal
+
 ### April 4th, 2019
 
 #### Fixes

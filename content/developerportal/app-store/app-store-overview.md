@@ -43,14 +43,14 @@ The header for each add-on presents the following details:
 * The **Name** and **Category** of the item
 * The review average (in stars) and the number of reviews
 * The number of times the item has been downloaded
-* A heart for favoriting the item (so it will appear in your list of favorites on the [My App Store tab](#myappstore))
+* A heart for favoriting the item (so it will appear in your list of favorites on the [Dashboard](#dashboard)
 * The following buttons (depending on the type of item and what the developer added to share):
 	* **Preview** – click this to preview more information or a demo about the content
 		* This is only available if the developer has included a demo URL when sharing the content (for details on sharing content, see [How to Share App Store Content](share-app-store-content))
 	* **Open** – click this to open a supplementary page for the content (for example, the [Atlas UI](https://atlas.mendix.com/) page, where you can learn more about the Mendix Atlas UI Design language)
 	* **Download** – click this to download the content
 		* This is only available for content that has a file attached (meaning, all shared  Desktop Modeler content, but not promotions; for details on sharing  Desktop Modeler content, see [How to Share App Store Content](share-app-store-content))
-		* The best practice is to download content from the App Store that is accessible in the  Desktop Modeler, because it then downloads directly into the  Desktop Modeler (for details, see [How to Use App Store Content](use-app-store-content); and for details on importing downloaded App Store content into the Desktop Modeler, see [How to Import & Export Objects](/howto/integration/importing-and-exporting-objects))
+		* The best practice is to download content from the App Store that is accessible in the  Desktop Modeler, because it then downloads directly into the  Desktop Modeler (for details, see [How to Use App Store Content](app-store-content); and for details on importing downloaded App Store content into the Desktop Modeler, see [How to Import & Export Objects](/howto/integration/importing-and-exporting-objects))
 
 ### 3.2 Tabs
 
@@ -59,7 +59,7 @@ The details page for each add-on and app presents the following item information
 *  **Overview** tab – contains following sections:
 	* **Description** – a description of the item
 	* **Screenshots** – screenshots of the item
-	* **User Reviews** – user reviews of the item; to leave a review for the item, click **Add Review** – a section will open where you can add text, rate the content, and submit the review (your reviews will be listed on the [My App Store tab](#myappstore))
+	* **User Reviews** – user reviews of the item; to leave a review for the item, click **Add Review** – a section will open where you can add text, rate the content, and submit the review (your reviews will be listed on your [Reviews](#my-reviews) page)
 
 	![](attachments/app-store-overview/content_detail_5.png)
 
@@ -125,7 +125,7 @@ The **Dashboard** page presents your App Store activity:
 
 ![](attachments/app-store-overview/my_app_store.png)
 
-#### 4.2 My Content
+#### 4.2 My Content {#content}
 
 On this page, you can see the App Store content for which you have created at least one version:
 
@@ -183,7 +183,7 @@ The **Manage** button is available to you for the following content:
 * Your company's content that is not protected
 * Your company's content that is [protected](#protect) for which you are a [content manager](#cm)
 
-For details on managing company content, see the [Managing Content](#managing) section above.
+For details on how to manage content, see the [My Content](#content) section above.
 
 ### 5.2 Shared with Others {#shared}
 

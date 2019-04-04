@@ -154,7 +154,7 @@ To import widgets, follow these steps:
 
 ### 2.5 Importing Content from the App Store
 
-To learn more about importing content from the App Store, see [Use App Store Content](/developerportal/app-store/use-app-store-content-in-the-modeler).
+To learn more about importing content from the App Store, see [Use App Store Content](/developerportal/app-store/app-store-content).
 
 ## 3 Exporting Objects
 
@@ -226,3 +226,4 @@ Mendix module documents can be exported as a Mendix package (*.mpk*) file.
 * [Modules](/refguide7/modules)
 * [Project](/refguide7/project)
 * [Common Widgets](/refguide7/common-widgets)
+

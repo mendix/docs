@@ -10,6 +10,54 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud V3, and other deploym
 
 ## 2019
 
+### April 4th, 2019
+
+#### Fixes
+
+* We have fixed an issue with changing [Node Permissions](/developerportal/deploy/node-permissions).
+
+### March 29th, 2019
+
+#### Improvements
+
+* We have introduced *Flexible Environments* for Mendix Cloud v4. This means that you can have more than three environments for your licensed node. More information is available [here](/developerportal/deploy/mendix-cloud-deploy#flexible-environments). If you need more than three environments, contact [Mendix Support](/developerportal/support/). Features of Flexible Environments include the following:
+    * You can search for the environment for which you want to see details
+    * The Technical Contact can rename the environments
+    * The Technical Contact can re-order the environments
+* As part of support for Flexible Environments we have made the following changes:
+    * When deploying your application via the Developer Portal you can choose the destination environment
+    * When viewing metrics, logs, backups, etc. you will have to choose the environment using a drop-down rather than clicking directly on the environment you want
+* We have added the ability to manage tags through the Developer Portal, in addition to the current method which involved using the API
+
+* We have changed Mendix deployment to **SAP Cloud Platform** so that the Cloud Foundry stack cflinuxfs3 is used. Previously, Mendix apps were using cflinuxfs2, which has been deprecated by SAP (see [SAP release note from 14 March, 2019](https://help.sap.com/doc/43b304f99a8145809c78f292bfc0bc58/Cloud/en-US/98bf747111574187a7c76f8ced51cfeb.html?sel1=Cloud%20Foundry%20Environment&sel3=Announcement)). 
+
+    The next time that you deploy a new, or existing, Mendix app to *SAP Cloud Platform* from the Mendix Developer Portal, the new stack will be applied to your app.
+
+### March 21st, 2019
+
+#### Improvements
+
+* We have added the ability to manage *SAP Cloud Platform* Cloud Foundry Marketplace services from within the Mendix Developer Portal.
+
+#### Known Issue
+
+* If an app is deployed to SAP from the Desktop Modeler *before it has been started from the Developer Portal*, the deployment will fail because the marketplace services have not been bound. Please ensure that apps are first deployed from the Developer Portal before trying to deploy them from the Desktop Modeler.
+
+### March 15th, 2019
+
+#### Fixes
+
+* We fixed an found issue where you were not able to change your password on the **Password Has Expired** page. (Tickets 80828, 80882, 80884, 80888, 80997, 81005)
+* We fixed an issue with retrieving stories in the Desktop Modeler. (Tickets 80618, 80623, 80636, 80665, 80685, 80705, 80726, 80738, 80780, 80833, 80834, 80854, 80866, 80935, 81008)
+* We fixed an error that occurred when importing stories from Excel in certain situations.
+* We fixed an issue where you unable to invite referrals to the Mendix Platform.
+
+### March 14th, 2019
+
+#### Fixes
+
+* We fixed an issue that sometimes caused the Technical Contact information to be hidden on the app's *General* page in the Developer Portal. (Tickets 70285, 77387, 80269, 80929)
+
 ### March 7th, 2019
 
 #### Fixes

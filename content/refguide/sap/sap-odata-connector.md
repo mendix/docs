@@ -601,7 +601,7 @@ This is the name that you give the result of your Activity. This can be used lat
 * [Data Types](/refguide/data-types)
 * [Domain Model](/refguide/domain-model)
 * [Entities](/refguide/entities)
-* [How to Use App Store Content](/developerportal/app-store/use-app-store-content-in-the-modeler)
+* [How to Use App Store Content](/developerportal/app-store/app-store-content)
 * [How to Use the SAP OData Connector](/howto/sap/use-sap-odata-connector)
 * [How to Use the SAP OData Model Creator](/howto/sap/use-sap-odata-model-creator)
 * [OData metadata XML for CRM Task](https://www.sapfioritrial.com/sap/opu/odata/sap/CRM_TASK/$metadata)
@@ -612,3 +612,4 @@ This is the name that you give the result of your Activity. This can be used lat
 * [SAP OData Model Creator](https://sapodatamodelcreator.mendixcloud.com/)
 * [SAP Data Models](sap-data-models)
 * [OData Query Options](/refguide/odata-query-options)
+

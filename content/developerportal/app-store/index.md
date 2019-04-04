@@ -12,6 +12,7 @@ Mendix delivers a robust platform for the rapid development of apps. To make you
 ## 2 Documents in This Category
 
 * [App Store Overview](app-store-overview)
-* [Use App Store Content](use-app-store-content-in-the-modeler)
+* [Use App Store Content](app-store-content)
 * [Share App Store Content](share-app-store-content)
 * [App Store Content Support](app-store-content-support)
+

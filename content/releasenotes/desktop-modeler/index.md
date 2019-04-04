@@ -23,4 +23,4 @@ For updates on the status of Team Server as well as deployment options and other
 
 {{% /alert %}}
 
-
+More in-depth information about our latest features can be found on [Mendix Platform Releases](https://www.mendix.com/releases/).

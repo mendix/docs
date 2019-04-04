@@ -23,15 +23,13 @@ The Mendix architecture best practices complements the following sections in the
 
 Mendix best practices around architecture will be valuable for architects, designers, business developers, and more technical developers that work on Mendix app projects. The best practices address common areas where the quality of Mendix solutions can improve by using this information or using the examples in the App Store.
 
-{{% todo %}}[**ADD LINK TO APP STORE WHEN AVAILABLE ABOVE; UX-UPDATE DIAGRAM BELOW; EXPLAIN DIAGRAM**]{{% /todo %}}
+{{% todo %}}[**ADD LINK TO APP STORE WHEN AVAILABLE ABOVE; EXPLAIN DIAGRAM**]{{% /todo %}}
 
 ![](attachments/arch-over1.png)
 
 ## 2 Architecture Best Practices Structure
 
 This diagram presents an overview of the structure of the Architecture Best Practices documentation:
-
-{{% todo %}}[**UX-UPDATE DIAGRAM**]{{% /todo %}}
 
 ![](attachments/arch-over2.png)
 
@@ -55,13 +53,11 @@ Systems depend on each other – that is part of life. But dependencies can be m
 
 The diagram below shows the most commonly used Mendix integration pattern. These are synchronous services, mostly using REST, which is extremely easy. However, files, queues, Kafka, RPC, and many other technologies are possible.
 
-{{% todo %}}[**UX-UPDATE DIAGRAM**]{{% /todo %}}
-
 ![](attachments/request-reply2.png)
 
 {{% todo %}}[**ADD LINK TO SECTION BELOW WHEN AVAILABLE**]{{% /todo %}}
 
-For more details on Integrating apps with each other and other systems, things, and devices as well as monitoring, see the [Integration Best Practices](../integration/integration-overview).
+For more details on Integrating apps with each other and other systems, things, and devices as well as monitoring, see the [Integration Best Practices](integration/integration-overview).
 
 ### 3.2 Performance
 
@@ -75,19 +71,15 @@ This may require more planning, technical expertise, testing, tuning, and monito
 
 This diagram shows a real example of a logistics supplier that is using Biz-DevOps teams aligned with business areas to build high performance apps that are tested to handle 1000 orders per second. Performance testing and tuning is part of the process, and good architecture and operation decisions keep this business-critical solution stable.
 
-{{% todo %}}[**UX-UPDATE DIAGRAM**]{{% /todo %}}
-
 ![](attachments/logistics-domain.png)
 
 In the scenario above, most of the processing is straight-through processing, so the dashboard app is there for human overviews, exceptions, and configuration. The **Input** apps provide a buffer for peaks and enable handling deployments more easily. Finally, the **Process** apps are optimized to do their work as efficiently as possible.
 
 ### 3.3 Microservices
 
-Microservices is a popular way of building IT solutions. It helps you to avoid building monoliths and SOA-layered architectures, where dependencies tend to get out of control.  Instead, you can make functional autonomous components that cooperate to fulfill business functions. This suits Mendix very well, as is further described in [Mendix Microservices](/microservices/mendix-microservices).
+Microservices is a popular way of building IT solutions. It helps you to avoid building monoliths and SOA-layered architectures, where dependencies tend to get out of control.  Instead, you can make functional autonomous components that cooperate to fulfill business functions. This suits Mendix very well, as is further described in [Mendix Microservices](microservices/mendix-microservices).
 
 This diagram shows how microservices are more functional in encapsulating a business process and cooperating via business events to the point that they are "actors" themselves in a business process:
-
-{{% todo %}}[**UX-UPDATE DIAGRAM**]{{% /todo %}}
 
 ![](attachments/arch-over3.png)
 
@@ -95,15 +87,13 @@ There is often no need to separate technical and functional architecture. Instea
 
 This diagram shows how business stakeholders, process owners, and Solution Architects cooperate towards the best microservices architecture while taking autonomy, reuse, processes, operability, and scalability into consideration:
 
-{{% todo %}}[**UX-UPDATE DIAGRAM**]{{% /todo %}}
-
 ![](attachments/arch-over4.png)
 
 The IT architecture of the future will not separate technical from functional architecture. Instead, it will work with one single solution model that is understood by all stakeholders, who will then take the business organization, delivery organization, technology, and business processes into consideration. 
 
 Architecture needs to have a level of flexibility as more information is made available during the realization of a solution. This could involve refactoring an app or splitting an app into smaller parts based on the real knowledge gained from the actual end-users.
 
-The [Microservices Best Practices](..microservices/microservices-overview) will dive into these exciting developments.
+The [Microservices Best Practices](microservices/microservices-overview) will dive into these exciting developments.
 
 ### 3.4 Security
 
@@ -126,8 +116,6 @@ The following security areas are generally considered for best practices:
 	* Focusing on user authentication, authorization, and single-sign on (SSO)
 	* Microflow and data authorization, usually at the role level, to make sure the user does not perform actions they are not allowed to
 
-{{% todo %}}[**UX-UPDATE DIAGRAM**]{{% /todo %}}
-
 ![](attachments/security.png)
 
 ### 3.5 Robustness
@@ -135,8 +123,6 @@ The following security areas are generally considered for best practices:
 For simple apps and systems, Mendix has all the required monitoring available in the [Mendix Developer Portal](/developerportal/operate/). For virtual private cloud (VPC) solutions integrated with Mendix, monitoring capabilities would be provided by the third-party providing the infrastructure.
 
 This diagram presents the primary and out-of-the-box monitoring that is available in the Mendix Developer Portal:
-
-{{% todo %}}[**UX-UPDATE DIAGRAM**]{{% /todo %}}
 
 ![](attachments/clustering.png)
 
@@ -148,13 +134,13 @@ Some users build a log integration component or connect to a central one. For mo
 
 For VPC and on-premises deployments, there is no Mendix Developer Portal monitoring available. In these  cases, an app-management or central-monitoring solution is highly desirable. That is because the customer in this scenario is responsible for their monitoring. The setup of log integration and central monitoring is largely the role of the customer's central IT, while Mendix connects to the tools and protocols proscribed.
 
-For details on the benefits that can be achieved by using native Mendix technology or by connecting to professional tooling, see [Robusntess](../robustness/robustness-overview).
+For details on the benefits that can be achieved by using native Mendix technology or by connecting to professional tooling, see [Robusntess](robustness/robustness-overview).
 
 ### 3.6 CI/CD & Automation
 
 Mendix provides some continuous integration out-of-the-box:
 
-* Consistency checks between the UI, logic, and database are automatically done by the Desktop Modeller 
+* Consistency checks between the UI, logic, and database are automatically done by the Desktop Modeler 
 * Consistency checks against other developers' work are automatically done by Team Server
 
 These checks are the same for all Mendix users, because that is part of your app model and is a result of the acceleration that Mendix provides for building good-quality solutions. Some of the testing needed for other solutions (for example, Java solutions) is not needed for Mendix.
@@ -165,8 +151,6 @@ But the scope for automation never ends. It is always possible to automate more,
 
 * Continuous integration and test automation, often run nightly
 * App management and deployment automation, used for UAT and PRD deployments and the management of apps after deployment
-
-{{% todo %}}[**UX-UPDATE DIAGRAM**]{{% /todo %}}
 
 ![](attachments/automation.png)
 
@@ -183,8 +167,6 @@ Architecture is a wide subject area, so the Mendix Architecture Best Practices w
 The weather never looks (exactly) the same on any two days of your life, so it is important to both look for what is similar and what is different when you work towards the best solution for your challenges.
 
 In accordance with Agile methodology, you should continuously measure and verify your assumptions based on real information as a solution is being created or managed. That means as reality changes, you should fine-tune your architecture.
-
-{{% todo %}}[**UX-UPDATE DIAGRAM**]{{% /todo %}}
 
 ![](attachments/summary.png)
 

@@ -7,7 +7,7 @@ draft: true
 
 ## 1 Introduction
 
-{{% todo %}}[**ADD LINK WHEN AVAILABLE BELOW AND UPDATE TEXT AS NECESSARY**]{{% /todo %}}
+{{% todo %}}[**NEEDS DIAGRAMS; ADD LINK WHEN AVAILABLE BELOW AND UPDATE TEXT AS NECESSARY**]{{% /todo %}}
 
 The integration pattern has been implemented in an App Store module that can be
 downloaded from the **Best Practices** section as **Integration Pattern: Process
@@ -25,8 +25,6 @@ The integration between the apps consists of the following parts:
 ## 2 The Example Case
 
 You can use this pattern when you have a business process using transactional data that starts in one app and ends in another. An example is depicted in this diagram:
-
-{{% todo %}}[**UX-UPDATE DIAGRAM**]{{% /todo %}}
 
 ![](attachments/workflow-int-data-transfer/example-case.png)
 
@@ -59,7 +57,7 @@ This implementation has one shortcoming – it might not synchronize all the ord
 
 If the `get-all` REST operation is called during that time, the operation will have a max **ChangeDate** (meaning, that of **Order 2**) that is after the **ChangeDate** of **Order 1**, even though the change to **Order 1** is not included in the returned records. The next call to the service will include the later **ChangeDate**, and so it will not retrieve the change to **Order 1** either. Accordingly, the change to **Order 1** may be lost.
 
-{{% todo %}}[**EXPLAIN DIAGRAM; POSITION OF DIAGRAM IS CORRECT?; UX-UPDATE DIAGRAM**]{{% /todo %}}
+{{% todo %}}[**EXPLAIN DIAGRAM; POSITION OF DIAGRAM IS CORRECT?**]{{% /todo %}}
 
 ![](attachments/workflow-int-data-transfer/workflow-order.png)
 

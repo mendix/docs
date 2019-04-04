@@ -6,6 +6,8 @@ menu_order: 2
 draft: true
 ---
 
+{{% todo %}}[**COULD USE ANOTHER DIAGRAM IN TOP SECTIONS?**]{{% /todo %}}
+
 ## 1 How Does Mendix Interpret IT Architecture?
 
 IT architecture is about making valuable things with technology, and Mendix wants to apply the following characteristics to your IT assets:
@@ -47,7 +49,7 @@ But as many customers have discovered while employing the speed, productivity, a
 
 As the solution, scope, volume, and criticality of a system increases, there is an increased need to have strong technical people on the team and professional architects to help in creating the best solution.
 
-{{% todo %}}[**EXPLAIN DIAGRAM; UX-UPDATE DIAGRAM**]{{% /todo %}}
+{{% todo %}}[**EXPLAIN DIAGRAM**]{{% /todo %}}
 
 ![](attachments/arch-over6.png)
 
@@ -59,15 +61,13 @@ There are several IT trends converging, and Agile, DevOps, microservices, cloud,
 
 As the diagram below presents, areas such as SOA (functional architecture), Agile (methodology), and cloud (infrastructure) are merging into one coherent movement of enterprise DevOps with automation, microservices, and an Agile mindset.
 
-{{% todo %}}[**ADD DIAGRAM; EXPLAIN DIAGRAM; UX-UPDATE DIAGRAM**]{{% /todo %}}
+{{% todo %}}[**ADD DIAGRAM; EXPLAIN DIAGRAM**]{{% /todo %}}
 
 ![](attachments/it-trends.png)
 	
 This evolution makes sense when the IT teams, methodology, organization, infrastructure, and technical components are all related to each other. For optimal results, the overall strategy should be beneficial for all these elements.
 
 Good architecture, technology, and organization should deliver digital transformation to all levels of the company, from customer interactions to business operations. This should happen all the way down to the digital transformation of IT delivery, of which cloud, low-code, CI/CD, microservices, and DevOps are all a part. As the diagram below presents, this all leads to end-users being able to make work with higher quality than ever before.
-
-{{% todo %}}[**UX-UPDATE DIAGRAM**]{{% /todo %}}
 
 ![](attachments/digitization.png)
 
@@ -77,7 +77,7 @@ Enterprise DevOps will provide better business and IT alignment, which is at the
 
 The prerequisite for this entire evolution is delivery automation in IT and IT infrastructure. Mendix—as a cloud and low-code platform—enables BizDevOps to the point that small cross-functional teams no longer need database administrators and infrastructure experts. Such teams can own the entire lifecycle of the apps they build, be more functional, and thus align more closely with the business.
 
-{{% todo %}}[**EXPLAIN DIAGRAM; UX-UPDATE DIAGRAM**]{{% /todo %}}
+{{% todo %}}[**EXPLAIN DIAGRAM**]{{% /todo %}}
 
 ![](attachments/it-alignment.png)
 

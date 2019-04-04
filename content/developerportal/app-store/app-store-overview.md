@@ -250,6 +250,7 @@ To remove an external downloader, click **Remove** next to their name.
 
 ## 6 Read More
 
-* [How to Use App Store Content](use-app-store-content-in-the-modeler)
+* [How to Use App Store Content](app-store-content)
 * [How to Share App Store Content](share-app-store-content)
 * [App Store Content Support](app-store-content-support)
+

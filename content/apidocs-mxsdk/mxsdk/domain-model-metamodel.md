@@ -14,12 +14,12 @@ The entities can also relate to each other through generalizations. Finally, you
 
 ![](attachments/14091498/16842837.svg)
 
-Mendix Modeler Reference Guide | Model SDK API docs
+Reference Guide | Model SDK API docs
 -|
-[Domain Model](/refguide6/domain-model) | TypeScript module [domainmodels](https://apidocs.mendix.com/modelsdk/latest/modules/domainmodels.html)
-[Entities](/refguide6/entities) | [DomainModel](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.domainmodel.html)
-[Attributes](/refguide6/attributes) | [Entity](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.entity.html)
-[Associations](/refguide6/associations) | [Association](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.association.html)
+[Domain Model](/refguide/domain-model) | TypeScript module [domainmodels](https://apidocs.mendix.com/modelsdk/latest/modules/domainmodels.html)
+[Entities](/refguide/entities) | [DomainModel](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.domainmodel.html)
+[Attributes](/refguide/attributes) | [Entity](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.entity.html)
+[Associations](/refguide/associations) | [Association](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.association.html)
 | [Attribute](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.attribute.html)
 
 ## Attributes
@@ -34,9 +34,9 @@ Entities can have multiple attributes. Each attribute has a specific type.
 
 ![](attachments/14091498/16842841.svg)
 
-Mendix Modeler Reference Guide | Model SDK API docs
+Reference Guide | Model SDK API docs
 -|
-[Attributes](/refguide6/attributes) | Property [`attributes`](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.entity.html#attributes) of Entity
+[Attributes](/refguide/attributes) | Property [`attributes`](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.entity.html#attributes) of Entity
 | [Attribute](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.attribute.html)
 | [AttributeType](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.attributetype.html)
 
@@ -50,9 +50,9 @@ An `Entity` instance has a `generalization` property with which to define this r
 
 ![](attachments/14091498/16842839.svg)
 
-Mendix Modeler Reference Guide | Model SDK API docs
+Reference Guide | Model SDK API docs
 -|
-[Entities](/refguide6/entities) (section "Inheritance Properties") | Property [`generalization`](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.entity.html#generalization) of Entity
+[Entities](/refguide/entities) (section "Inheritance Properties") | Property [`generalization`](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.entity.html#generalization) of Entity
 | [GeneralizationBase](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.generalizationbase.html)
 | [Generalization](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.generalization.html)
 | [NoGeneralization](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.nogeneralization.html)
@@ -65,9 +65,9 @@ To secure access to the data in a Mendix app, you can define access rules for en
 
 ![](attachments/14091498/16842835.svg)
 
-Mendix Modeler Reference Guide | Model SDK API docs
+Reference Guide | Model SDK API docs
 -|
-[Access rules](/refguide6/access-rules) | Property [`accessRules`](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.entity.html#accessrules) of Entity
+[Access rules](/refguide/access-rules) | Property [`accessRules`](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.entity.html#accessrules) of Entity
 | [AccessRule](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.accessrule.html)
 | Property [`xpathConstraint`](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.accessrule.html#xpathconstraint) of AccessRule
 | [ModuleRole](https://apidocs.mendix.com/modelsdk/latest/classes/security.modulerole.html)
@@ -80,9 +80,9 @@ For each attribute of an entity, it is possible to define a validation rule. The
 
 ![](attachments/14091498/16842834.svg)
 
-Mendix Modeler Reference Guide | Model SDK API docs
+Reference Guide | Model SDK API docs
 -|
-[Validation Rules](/refguide6/validation-rules) | Property [`validationRules`](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.entity.html#validationrules) of Entity
+[Validation Rules](/refguide/validation-rules) | Property [`validationRules`](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.entity.html#validationrules) of Entity
 | [ValidationRule](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.validationrule.html)
 | [RuleInfo](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.ruleinfo.html)
 
@@ -94,8 +94,8 @@ An entity can have multiple indexes. Each index consists of a set of indexed att
 
 ![](attachments/14091498/16842836.svg)
 
-Mendix Modeler Reference Guide | Model SDK API docs
+Reference Guide | Model SDK API docs
 -|
-[Indexes](/refguide6/indexes) | Property [`indexes`](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.entity.html#indexes) of Entity
+[Indexes](/refguide/indexes) | Property [`indexes`](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.entity.html#indexes) of Entity
 | [Index](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.index.html)
 | [IndexedAttribute](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.indexedattribute.html)

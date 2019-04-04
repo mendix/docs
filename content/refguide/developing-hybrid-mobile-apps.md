@@ -23,10 +23,6 @@ For more information about how to download the Mendix Mobile app, see [Getting t
 
 Your mobile device has to be on the same network as your development machine for the Mendix Mobile app to work. If this is the case and the connection still fails, make sure that communication between devices is allowed in the Wi-Fi access point.
 
-{{% /alert %}}{{% alert type="warning" %}}
-
-The Mendix Mobile app does not yet support running [offline-enabled](offline) apps.
-
 {{% /alert %}}
 
 ## 3 Read More

@@ -23,9 +23,9 @@ All documentation contributions may be edited to conform to our internal style g
 {{% alert type="info" %}}
 **Quick guide to making a documentation change**
 
-1. Fork the **development** branch of the [mendix / docs](https://github.com/mendix/docs) repository
-2. Make your changes
-3. Create a pull request with our **development** branch as the base
+1. Fork the **development** branch of the [mendix / docs](https://github.com/mendix/docs) repository.
+2. Make your changes.
+3. Create a pull request with our **development** branch as the base.
 {{% /alert %}}
 
 **This how-to will teach you how to do the following:**

@@ -8,7 +8,7 @@ tags: ["MindSphere", "deploy", "cloud foundry", "launchpad", "scopes", "roles", 
 
 ## 1 Introduction
 
-MindSphere is the open, cloud-based, IoT operating system from Siemens that lets you connect your machines and physical infrastructure to the digital world. It lets you harness big data from billions of intelligent devices, enabling you to uncover transformational insights across your entire business.
+MindSphere is the cloud-based, open IoT operating system from Siemens that lets you connect your machines and physical infrastructure to the digital world. It lets you harness big data from billions of intelligent devices, enabling you to uncover transformational insights across your entire business.
 
 This documentation is meant for Mendix developers who want to deploy a Mendix app to the MindSphere Platform.
 
@@ -63,7 +63,7 @@ This is the recommended approach if you are building a new application, as it wi
 If you have an existing app which was not based on the MindSphere starter app, you can import the required customization. There are three modules which you need are:
 
 * MindSphere SSO from the Mendix App Store here: [Siemens MindSphere SSO](https://appstore.home.mendix.com/link/app/108805/).
-* MindSphere OS Bar Connector (MindSphere_UI_Resources) from the Mendix App Store here: [Siemens MindSphere OS Bar Connector](https://appstore.home.mendix.com/link/app/108804/).
+* MindSphere OS Bar Connector from the Mendix App Store here: [Siemens MindSphere OS Bar Connector](https://appstore.home.mendix.com/link/app/108804/).
 * MindSphere Theme Pack (MindSphere_UI_Resources) from the Mendix App Store here: [Siemens MindSphere Theme Pack](https://appstore.home.mendix.com/link/app/108803/).
 
 ### 2.2 Single Sign-On (MindSphereSingleSignOn){#mssso}
@@ -98,7 +98,7 @@ This is the base URL for all requests to MindSphere APIs. For example, the URL f
 
 This is the URL where the public key can be found to enable token validation during the login process. For example, the URL for MindSphere on AWS PROD is `https://core.piam.eu1.mindsphere.io/token_keys`.
 
-#### 2.2.2 Microflows
+#### 2.2.2 Microflows{#microflows}
 
 The MindSphereSingleSignOn module also provides three microflows which are used to support SSO within MindSphere and allow the user’s **tenant** and **email** to be obtained for use within the app.
 
@@ -106,7 +106,7 @@ The MindSphereSingleSignOn module also provides three microflows which are used 
 
 **RegisterSingleSignOn**
 
-This microflow must be added to the *Runtime* tab of the *Project > Settings* dialog, accessed through the *Project Explorer*. It needs to be selected as the *After startup* microflow or added as a sub-microflow to an existing after startup microflow.
+This microflow must be added as the *After startup* microflow or added as a sub-microflow to an existing after startup microflow. You can do this on the *Runtime* tab of the *Project > Settings* dialog, accessed through the *Project Explorer*.
 
 ![Project settings dialog](attachments/deploying-to-mindsphere/image4.png)
 

@@ -6,7 +6,7 @@ tags: ["Web Modeler"]
 
 ## 1 Introduction 
 
-The Mendix Platform includes the [Web Modeler](general-wm) in addition to the [Desktop Modeler](/refguide/desktop-modeler-overview). The Web Modeler is a collaborative, no-code, web-based application development environment. It enables business developers and users with minimal coding or software development experience to create  web and mobile applications without having to know how to code.
+The Mendix Platform includes the [Web Modeler](general) in addition to the [Desktop Modeler](/refguide/desktop-modeler-overview). The Web Modeler is a collaborative, no-code, web-based application development environment. It enables business developers and users with minimal coding or software development experience to create  web and mobile applications without having to know how to code.
 
 The Web Modeler enables you to do the following: 
 
@@ -19,13 +19,13 @@ The Web Modeler enables you to do the following:
 
 The main documents in the Web Modeler Reference are the following ones:
 
-* [Web Modeler General Info](general-wm) 
-* [Domain Model in the Web Modeler](domain-models-wm)
-* [Page Editor in the Web Modeler](page-editor-wm)
-* [Navigation Document in the Web Modeler](navigation-wm)
-* [Microflows in the Web Modeler](microflows-wm)
-* [Publishing Your App From the Web Modeler](deployment-wm)
-* [Checks in the Web Modeler](checks-wm)
-* [Consistency Errors in the Web Modeler](consistency-errors-wm)
-* [Theme Customizer in the Web Modeler](theme-customizer-wm)
+* [Web Modeler General Info](general) 
+* [Domain Model in the Web Modeler](domain-models)
+* [Page Editor in the Web Modeler](page-editor)
+* [Navigation Document in the Web Modeler](navigation)
+* [Microflows in the Web Modeler](microflows)
+* [Publishing Your App From the Web Modeler](publishing-app)
+* [Checks in the Web Modeler](checks)
+* [Consistency Errors in the Web Modeler](consistency-errors)
+* [Theme Customizer in the Web Modeler](theme-customizer)
 * [App Settings in the Web Modeler](app-settings-wm)

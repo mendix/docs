@@ -14,7 +14,7 @@ To enter the **Environment details** page, go to the [Mendix Portal](http://home
 
 ## 2 General Tab
 
-![](attachments/environments-details/environment-tab.png)   
+![](attachments/environments-details/environment-details-general.png)   
 
 The view of the **General** tab depends on the Mendix Cloud version on which the app is hosted. In this tab, you can find the following information about your environment:
 
@@ -27,19 +27,24 @@ The view of the **General** tab depends on the Mendix Cloud version on which the
         ![](attachments/environments-details/environment-status.png)   
 
 * **Running since** date – the date on which the app was started
-* **Mode** – the type of environment (Production, Acceptance, Test)
+* **Name** – the type of environment (Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy#flexible-environments)): see section 2.2 [Naming of Environments](#naming) for more information
 * **URL** – the URL of the app
+* **Project ID** – the unique identifier for your Mendix app
+* **Environment ID** – the unique identifier of this environment
 * **Custom domains** – the custom domains of the app
 * **Java Version**
    * Up to Mendix version 5.17, the version of Java is 1.7
    * In Mendix version 5.18, you can choose between Java version 1.7 and 1.8
    * From Mendix version 6, you cannot choose the Java version, and it is always version 1.8
-* **Runtime version** – Mendix version
-* **Administrator user name**
-* The **Database Status** is **Running** by default
+* **Web Modeler Target** – whether this environment is the one where apps will be deployed from the Web Modeler - see [Web Modeler Deployment Settings](web-modeler-deployment-settings) for more information
+* **Plan** – (*Cloud V4 only*) the type of plan covered by this licence
+* **Instances** – (*Cloud V4 only*) A summary of the number and memory allocation of *instances* of this environment: see section 2.3, [Scaling...](#scaling) for more information
+* **Database Status** – (*Cloud V3 only*) this is **Running** by default
 * **Database Version** – the PostgreSQL version that is supporting the database
 * **Region** - the region where the app is hosted
 * **Mendix Cloud Version** – Mendix Cloud v3/Mendix Cloud v4
+
+At the bottom of the page there are three overview sections. These are described below in section 2.4, [Overviews](#overviews)
 
 ### 2.1 Actions
 
@@ -68,11 +73,23 @@ In Mendix Cloud v3 environments, you have two additional action buttons:
 * **View Current Log**
 * **Enable/Disable Debugging** to enable or disable the debugger option. For more information about enabling the debugger, see [How to Debug Microflows Remotely](/howto7/monitoring-troubleshooting/debug-microflows-remotely)
 
-### 2.2 Scaling – Mendix Cloud v4
+### 2.2 Naming of Environments – Flexible Environments in Mendix Cloud v4{#naming}
+
+If you are the [Technical Contact](/developerportal/company-app-roles/technical-contact) of the app, you can rename the environments as you wish.
+
+Click the **Change** button next to the name of the environment.
+
+{{% alert type="info" %}}
+The name must be at least two characters and consist of alphanumeric characters and hyphens (`a-z`, `A-Z`, `0-9`, and `-`) but cannot begin or end with a hyphen.
+
+If you rename an environment, it may take up to 15 minutes before you can access an app via its URL. This is because the URL includes the name of the environment and the old value needs to be removed from the DNS cache. It may take considerably longer for the change to be visible worldwide.
+{{% /alert %}}
+
+### 2.3 Scaling – Mendix Cloud v4{#scaling}
+
+If your app is hosted in Mendix Cloud v4, you will see a section named **Instances** in the **General** tab. Click the **Change scaling** button to see the options for changing the scaling.
 
 ![](attachments/environments-details/scale.png)
-
-If your app is hosted in Mendix Cloud v4, you will see a section named **Scaling** in the **General** tab.
 
 In **Scaling**, there are two sliders that you can control:
 
@@ -87,16 +104,30 @@ If you have 1GB RAM of the **Total Allocated Memory**, you have one instance ava
 
 To scale your memory over multiple instances, you need more memory.
 
-### 2.3 Overviews
+### 2.4 Overviews{#overviews}
 
-At the bottom of the page, there are two overview grids with information about the information below.
+At the bottom of the page, there are three overview grids with information about the information below.
 
-#### 2.3.1 License
+#### 2.4.1 Deployment Package Details
+
+In this section, you can find information about the deployment package that is currently loaded into the environment:
+
+* **Name** of the deployment package
+* **Version** of the deployment package
+* **Runtime** version of Mendix used to create the app
+* **Size (MB)** of the deployment package
+* **Upload date** of the deployment package
+
+#### 2.4.2 Plan Details - Mendix Cloud v4
+
+This section shows details of the plan which applies to this environment.
+
+#### 2.4.3 License
 
 The license overview contains the following information:
 
 * **Company** owning the license
-* **License type**
+* **Is Production** shows if this environment is licensed as a production environment
 * **Expiration date**
 * **Runtime mode** (Production, Acceptance, Test)
 * **Limitations**
@@ -106,18 +137,10 @@ The license overview contains the following information:
 
 The limitation types are the following:
 
-* **Concurrent** – the amount of named users that are logged in simultaneously
-* **Concurrent anonymous** – the amount of anonymous users that are logged in simultaneously
-* **Named** – the amount of named users registered in the database that are allowed to use the application
+* **Concurrent** – the number of named users that are logged in simultaneously
+* **Concurrent anonymous** – the number of anonymous users that are logged in simultaneously
+* **Named** – the number of named users registered in the database that are allowed to use the application
 
-#### 2.3.2 Loaded Deployment Package
-
-In this section, you can find information about the deployment package that is currently loaded into the environment:
-
-* **Size (MB)** of the deployment package
-* **Upload date** of the deployment package
-* **Version** of the deployment package
-* **Name** of the deployment package
 
 ## 3 Model Options Tab
 
@@ -157,7 +180,9 @@ For more information, see [Constants](/refguide/constants).
 
 ## 4 Network Tab
 
+{{% image_container width="50%" %}}
 ![](attachments/environments-details/network1.png)
+{{% /image_container %}}
 
 On this tab, you can manage the elements described below.
 
@@ -291,6 +316,7 @@ Unlike the Custom Runtime Settings, the variables you add have to be chosen from
 
 * **DD_API_KEY** – the API key used with Datadog
 * **DD_LOG_LEVEL** – the log level of logging sent to Datadog
+* **DATABASE_CONNECTION_PARAMS** – Additional JDBC parameters for PostgreSQL databases, see the [Mendix Cloud Foundry Buildpack](https://github.com/mendix/cf-mendix-buildpack) for more information
 * **APPMETRICS_TARGET** – setting this enables business events to be sent to a different monitoring solution from the technical events 
 
 ## 7 Maintenance Tab
@@ -300,7 +326,7 @@ Unlike the Custom Runtime Settings, the variables you add have to be chosen from
 There are two types of maintenance:
 
 * Regular weekly maintenance (which does not affect your app), during which you can change the preferred maintenance window
-* Planned maintenance (which will affect your app in some ways), during which you will automatically receive an email about this and you can override the maintenance window
+* Planned maintenance (which will affect your app in some ways), about which you will automatically receive an email and you can override the maintenance window if necessary
 
 For more information about maintenance, see [Maintenance Windows: Configuration](maintenance-windows).
 
@@ -313,3 +339,14 @@ You can view and change the preferred maintenance.
 When a maintenance operation is planned, it will show up under **Planned Maintenance**. By default, this will be planned in your preferred maintenance window. You can override the maintenance window of a specific maintenance operation by clicking **Override**.
 
 You will automatically receive **email notifications** about planned maintenance.
+
+## 8 Tags Tab
+
+![](attachments/environments-details/tags.png)
+
+You can set tags on your environment. These are arbitrary strings that are not interpreted by the Developer Portal. Tags serve two purposes:
+
+* Custom tags can be added to metrics for third-party metrics solutions
+* Tags can serve as selection criteria for grouping environments into a landscape management dashboard which can be used for third-party logging solutions
+
+For example, you may wish to use tags when logging with *Datadog*. You can find more information on this at [Getting started with tags](https://docs.datadoghq.com/tagging/) on the *Datadog* site.

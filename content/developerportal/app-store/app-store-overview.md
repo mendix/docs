@@ -153,8 +153,6 @@ On this page, you will see the following buttons (depending on your permissions)
 
 This page contains content shared with you by other companies have marked you as an [external downloader]().
 
-{{% todo %}}[**MANAGE BUTTON SHOULD BE VISIBLE FOR EXTERNAL DOWNLOADERS? DELETE FROM SCREENSHOT?**]{{% /todo %}}
-
 ![](attachments/app-store-overview/shared-with-me.png)
 
 #### 4.4 Reviews
@@ -218,29 +216,21 @@ This page contains reviews of **Your company's content** as well as **Your compa
 This menu item and page are only visible to Company Admins with the [Can manage App Store](../company-app-roles/manage-roles#app-store-manager) permission.
 {{% /alert %}}
 
-You can configure your user groups for various levels of access to your company's private App Store. The available user groups are described in the sections below.
+You can configure your user groups for various levels of access to your company's App Store. The available user groups are described in the sections below.
 
 #### 5.4.1 Content Managers {#cm}
 
-On this page, you can add App Store content managers for your company who will have rights to manage [protected content](#protect).
-
-{{% todo %}}[**UPDATE SCREENSHOT FOR BLUE BOX**]{{% /todo %}}
+On this page, you can add App Store content managers for your company who will have rights to manage [protected content](#protect). To add a new content manager, enter their email address in the available field and click **Add**:
 
 ![](attachments/app-store-overview/content-managers.png)
 
-Click **Add** to select users who can manage protected content:
-
-![](attachments/app-store-overview/add-user.png)
-
-To remove a content manager, click the red **Remove** button next to their name
+To remove a content manager, click **Remove** next to their name
 
 ####  5.4.2 External Downloaders {#ext}
 
-{{% todo %}}[**UPDATE SCREENSHOT FOR BLUE BOX**]{{% /todo %}}
-
 On this page, you can add external downloaders from outside your company who you can share your company's private App Store content with via the [Shared with Others](#shared) page.
 
-To add an external downloader, enter an email address in the box and click Add:
+To add an external downloader, enter their email address in the box and click Add:
 
 ![](attachments/app-store-overview/external-downloaders.png)
 

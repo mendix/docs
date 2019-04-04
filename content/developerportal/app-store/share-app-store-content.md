@@ -193,8 +193,6 @@ To add content to the App Store, follow these steps:
 If an existing App Store item is protected, you can only update it if you are a content owner. For more details, see the [Content Managers](app-store-overview#cm) section of *App Store Overview*.
 {{% /alert %}}
 
-{{% todo %}}[**VERIFY DESCRIPTION**]{{% /todo %}}
-
 To update content that has already been published, follow these steps:
 
 1. Go to the information page for the content you want to update (for example, by selecting **Published** on the **My App Store** tab and finding an app you want to update).

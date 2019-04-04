@@ -93,7 +93,7 @@ Now that you have your new app, or have imported the MindSphere modules into an 
 
 ### 4.1 Configuring Single Sign-On (MindSphereSingleSignOn)
 
-The following constants in the MindSphereSingleSignOn module need to be configured.
+The following items in the MindSphereSingleSignOn module need to be configured.
 
 ![Folder structure of the MindSphereSingleSignOn module](attachments/deploying-to-mindsphere/image2.png)
 
@@ -300,6 +300,8 @@ The SSO module also requires changes to the app theme see section 2.1.2, [Custom
 
 #### 6.1.1 Constants
 
+![Folder structure of the MindSphereSingleSignOn module](attachments/deploying-to-mindsphere/image2.png)
+
 **CockpitApplicationName**
 
 This is the name of your app as registered in the MindSphere developer portal. See [Running a Cloud Foundry-Hosted Application](https://developer.mindsphere.io/howto/howto-cf-running-app.html#configure-the-application-via-the-developer-cockpit) for more information.
@@ -461,60 +463,18 @@ The permission denied page will be shown if your app will be called with an inva
 
 {{% image_container width="50%" %}}![](attachments/deploying-to-mindsphere/image12.png){{% /image_container %}}
 
-## 7 Limitations{#limitations}
+## 7 Development Considerations
 
-The following limitations apply to Mendix apps which are deployed to MindSphere.
+See [MindSphere Development Considerations](/refguide/mindsphere/mindsphere-development-considerations) for additional help on:
 
-If these limitations affect the design of your app, you can still create a Mendix app to use MindSphere APIs from outside MindSphere.
+* local testing
+* multi-tenancy
+* limitations
+* other MindSphere development considerations
 
-### 7.1 Binary File Storage
+## 8 Appendices
 
-MindSphere does not currently have a compatible file service available in its Cloud Foundry stack. Therefore, you cannot use any Mendix features which rely on having a file service.
-
-In particular, this means that you cannot use entities which are specializations of the *System.FileDocument* entity. This also includes all entities which are specializations of the *System.Image* entity, as this is also a specialized type of FileDocument.
-
-You can store small amounts of binary information in persistable entities. However, the database management system (DBMS) will have strict limits on the size of binary attributes and using them as a replacement for FileDocument entities can lead to performance issues.
-
-Alternatively, you can use a separate AWS S3 bucket. See [Configuring External Filestore](https://github.com/mendix/cf-mendix-buildpack#configuring-external-filestore) in the *Mendix Cloud Foundry Buildpack GitHub Repository*. Instructions on setting environment variables within MindSphere Cloud Foundry is in the [Cloud Foundry Environment Variables](/refguide/mindsphere/mindsphere-development-considerations#cfenvvars) section of *MindSphere Development Considerations*.
-
-### 7.2 App Name{#appname}
-
-There are no limitations on what you call your app within Mendix. However, when you deploy the app to MindSphere, the app name registered in the Developer Cockpit must have the following characteristics:
-
-* Contains only *lowercase* alphanumeric characters, `-`, `_` and `.`
-* Starts with a letter
-* Length does not exceed 40 characters
-* Is unique within your tenant
-
-If you want to keep your names consistent, you should bear these constraints in mind when naming your Mendix app.
-
-### 7.3 Roles and Scopes
-
-At present, MindSphere only supports two roles. You should take this into account when designing security within your Mendix app.
-
-It is recommended that you create two scopes for your MindSphere app, **user** and **admin** which will map to identically-named user roles in your Mendix app.
-
-### 7.4 Logout from MindSphere
-
-If the user logs out from MindSphere, the Mendix app will not delete the session cookie.
-
-![](attachments/deploying-to-mindsphere/image18.png)
-
-{{% alert type="warning" %}}
-In some circumstances, this could lead to another user *using the same app on the same browser on the same computer*, picking up the session from the previous user if the cookie has not yet expired.
-{{% /alert %}}
-
-### 7.5 Cloud Services Platform 
-
-Mendix apps can currently only be deployed to MindSphere running on AWS (Amazon Web Services). They cannot currently be deployed to MindSphere running on Microsoft Azure.
-
-## 8 Development Considerations
-
-For additional help on local testing, multi-tenancy, and other MindSphere development considerations, see [MindSphere Development Considerations](/refguide/mindsphere/mindsphere-development-considerations).
-
-## 9 Appendices
-
-### 9.1 index.html{#indexhtml}
+### 8.1 index.html{#indexhtml}
 
 Various changes need to be made to the standard Mendix index.html file to ensure compatibility with MindSphere.
 
@@ -522,7 +482,7 @@ The index.html file is located in the /theme folder of your app project.
 
 If you use the MindSphere starter or example apps, or the Mendix MindSphere theme, then these changes will already have been made.
 
-#### 9.1.1 OS Bar
+#### 8.1.1 OS Bar
 
 For the OS Bar to work correctly in your Mendix app, the following script has to be added within the `<head> tags of index.html.
 ```javascript
@@ -555,7 +515,7 @@ For the OS Bar to work correctly in your Mendix app, the following script has to
 </script>
 ```
 
-#### 9.1.2 SSO
+#### 8.1.2 SSO
 
 To allow SSO, the usual login.html needs to be replaced with a different file (MindSphereLogin.html).
 
@@ -574,7 +534,7 @@ document.cookie = "originURI=/MindSphereLogin.html";
 If MindSphereLogin.html does not exist in your /theme folder, you will have to create it. See section 6.2, [MindSphereLogin.html](#mindspherelogin).
 {{% /alert %}}
 
-#### 9.1.3 XSRF
+#### 8.1.3 XSRF
 
 In index.html, before the before the line `<script src="mxclientsystem/mxui/mxui.js?{{cachebust}}"></script>`, the following script needs to be included in the file.
 ```javascript
@@ -614,7 +574,7 @@ function getCookie(name) {
 // MindSphere specific part-2: ends
 </script>
 ```
-### 9.2 MindSphereLogin.html{#mindspherelogin}
+### 8.2 MindSphereLogin.html{#mindspherelogin}
 
 The MindSphereLogin.html file should have the following content.
 ```html

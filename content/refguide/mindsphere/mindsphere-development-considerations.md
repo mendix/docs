@@ -131,7 +131,54 @@ You have some limits which are set for the user's tenant to be applied to a time
 
 4.  When you want to retrieve the list of limits, call this microflow instead of using the retrieve objects action. This will ensure that tenant-based security is always applied.
 
-## 4 Cloud Foundry Environment Variables{#cfenvvars}
+## 4 Limitations{#limitations}
+
+The following limitations apply to Mendix apps which are deployed to MindSphere.
+
+If these limitations affect the design of your app, you can still create a Mendix app to use MindSphere APIs from outside MindSphere.
+
+### 4.1 Binary File Storage
+
+MindSphere does not currently have a compatible file service available in its Cloud Foundry stack. Therefore, you cannot use any Mendix features which rely on having a file service.
+
+In particular, this means that you cannot use entities which are specializations of the *System.FileDocument* entity. This also includes all entities which are specializations of the *System.Image* entity, as this is also a specialized type of FileDocument.
+
+You can store small amounts of binary information in persistable entities. However, the database management system (DBMS) will have strict limits on the size of binary attributes and using them as a replacement for FileDocument entities can lead to performance issues.
+
+Alternatively, you can use a separate AWS S3 bucket. See [Configuring External Filestore](https://github.com/mendix/cf-mendix-buildpack#configuring-external-filestore) in the *Mendix Cloud Foundry Buildpack GitHub Repository*. Instructions on setting environment variables within MindSphere Cloud Foundry is in the [Cloud Foundry Environment Variables](/refguide/mindsphere/mindsphere-development-considerations#cfenvvars) section of *MindSphere Development Considerations*.
+
+### 4.2 App Name{#appname}
+
+There are no limitations on what you call your app within Mendix. However, when you deploy the app to MindSphere, the app name registered in the Developer Cockpit must have the following characteristics:
+
+* Contains only *lowercase* alphanumeric characters, `-`, `_` and `.`
+* Starts with a letter
+* Length does not exceed 40 characters
+* Is unique within your tenant
+
+If you want to keep your names consistent, you should bear these constraints in mind when naming your Mendix app.
+
+### 4.3 Roles and Scopes
+
+At present, MindSphere only supports two roles. You should take this into account when designing security within your Mendix app.
+
+It is recommended that you create two scopes for your MindSphere app, **user** and **admin** which will map to identically-named user roles in your Mendix app.
+
+### 4.4 Logout from MindSphere
+
+If the user logs out from MindSphere, the Mendix app will not delete the session cookie.
+
+![](attachments/deploying-to-mindsphere/image18.png)
+
+{{% alert type="warning" %}}
+In some circumstances, this could lead to another user *using the same app on the same browser on the same computer*, picking up the session from the previous user if the cookie has not yet expired.
+{{% /alert %}}
+
+### 4.5 Cloud Services Platform 
+
+Mendix apps can currently only be deployed to MindSphere running on AWS (Amazon Web Services). They cannot currently be deployed to MindSphere running on Microsoft Azure.
+
+## 5 Cloud Foundry Environment Variables{#cfenvvars}
 
 If you need to set or change the value of any Cloud Foundry Environment Variables, you will have to do this using the CF CLI.
 
@@ -143,10 +190,10 @@ If you need to set or change the value of any Cloud Foundry Environment Variable
 Restarting your app will cause your app to be temporarily unavailable.
 {{% /alert %}}
 
-## 5 Validation
+## 6 Validation
 
 Your app should, as a minimum, meet the requirements of the checklist on the MindSphere developer site here: [Get your Application Ready for Productive Use](https://developer.mindsphere.io/howto/howto-app-publication.html).
 
-## 6 Read More
+## 7 Read More
 
 * [Siemens MindSphere – deployment](/developerportal/deploy/deploying-to-mindsphere)

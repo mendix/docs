@@ -62,6 +62,14 @@ This should be the tenant that the user has access to in a multi-tenant environm
 
 If you are testing different roles in your app, do not use the demo users. If you switch between demo users, this will not correctly populate the tenant and role information from MindSphere. To test different roles, allocate the role to MxAdmin, redeploy, and log in again.
 
+## 3 MindSphereToken
+
+This contains Access_token attribute which needs to be passed as the Authorization header in REST calls to MindSphere APIs.
+
+To improve security of your app, it is recommended that you delete MindSphereToken before showing a page or reaching the end of the microflow.
+
+![Section of a microflow showing the Access token action and the Edit Custom HTTP Header dialog in the Call REST action](attachments/mindsphere-development-considerations/delete-mindspheretoken.png)
+
 ## 3 Multi-Tenancy{#multitenancy}
 
 In MindSphere, apps are usually designed to be multi-tenant, meaning that a single instance of the app serves multiple tenants. A tenant is a representation of a real-world organization. It groups users, data, assets, entities, and many kinds of other properties. Access to these resources for users of the same tenant is controlled via the authorization management system.

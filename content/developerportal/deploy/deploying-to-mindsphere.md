@@ -334,7 +334,7 @@ This microflow populates the *MindSphereToken* entity.
 
 ![Domain model showing MindSphereToken entity](attachments/deploying-to-mindsphere/image5.png)
 
-If the access token can be retrieved from the environment, this is used. If a valid token cannot be retrieved, *and the app is running locally*, then the user is asked to sign on by providing their credentials manually. This enables the app to be tested locally, without having to be deployed to the MindSphere environment after every change.
+If the access token can be retrieved from the environment, this is used. If a valid token cannot be retrieved, *and the app is running locally*, then the user is asked to sign on by providing their credentials manually. This enables the app to be tested locally, without having to be deployed to the MindSphere environment after every change. You should check whether the access token has been successfully retrieved using the query `${MindSphereTokenName} != empty`. For example, `$MindSphereToken != empty` in the scenario shown in the image below.
 
 {{% alert type="warning" %}}
 If the app cannot retrieve a valid token and is *not* running locally, then an error is returned.

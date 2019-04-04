@@ -10,11 +10,25 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud V3, and other deploym
 
 ## 2019
 
-### April 4th, 2019
+### April 16th, 2019
+
+#### Improvements
+
+* We have introduced a [REST Stories API](/apidocs-mxsdk/apidocs/stories-api/stories-api-rest). This allows you to create, retrieve, or update the sprints or stories of your Mendix app projects while using basic HTTP commands, such as `POST` or `GET`.
+* We have also introduced a [SOAP Stories API](/apidocs-mxsdk/apidocs/stories-api/stories-api-soap).
+* As part of the REST Stories API feature, we created two new scopes. For more information, see the [Retrieve the Stories & Sprints in Your Project](/developerportal/mendix-profile/oauth-scopes#mx:app:stories:read) and [Make Changes to the Stories & Sprints in Your Project](/developerportal/mendix-profile/oauth-scopes#mx:app:stories:write) sections of *OAuth & Scopes*.
+
+### April 8th, 2019
 
 #### Improvements
 
 * We have added the ability to create webhooks for your app projects. These webhooks can be configured to send information when sprints change and/or stories change. For more information, see the [Managing Webhooks](/developerportal/settings/general-settings#webhooks) section of *Manage General App Settings* as well as [Webhooks](/apidocs-mxsdk/apidocs/webhooks-sprints) in the *API Documentation*.
+
+### April 4th, 2019
+
+#### Fixes
+
+* We have fixed an issue with changing [Node Permissions](/developerportal/deploy/node-permissions).
 
 ### March 29th, 2019
 
@@ -29,7 +43,7 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud V3, and other deploym
     * When viewing metrics, logs, backups, etc. you will have to choose the environment using a drop-down rather than clicking directly on the environment you want
 * We have added the ability to manage tags through the Developer Portal, in addition to the current method which involved using the API
 
-* We have changed Mendix deployment to **SAP Cloud Portal** so that the Cloud Foundry stack cflinuxfs3 is used. Previously, Mendix apps were using cflinuxfs2, which has been deprecated by SAP. 
+* We have changed Mendix deployment to **SAP Cloud Platform** so that the Cloud Foundry stack cflinuxfs3 is used. Previously, Mendix apps were using cflinuxfs2, which has been deprecated by SAP (see [SAP release note from 14 March, 2019](https://help.sap.com/doc/43b304f99a8145809c78f292bfc0bc58/Cloud/en-US/98bf747111574187a7c76f8ced51cfeb.html?sel1=Cloud%20Foundry%20Environment&sel3=Announcement)). 
 
     The next time that you deploy a new, or existing, Mendix app to *SAP Cloud Platform* from the Mendix Developer Portal, the new stack will be applied to your app.
 

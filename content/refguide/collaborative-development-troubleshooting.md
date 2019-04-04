@@ -30,19 +30,19 @@ Normally, the Web Modeler working copy is synchronized with the Desktop Modeler 
 
 You can do one of the following:
 
-1.  **Merge** (recommended)–  the Desktop Modeler will try to merge the unsynchronized changes from the Web Modeler automatically. Your local changes (if any) will be combined with Web Modeler changes. The changes from the Web Modeler are stored in an automatically created branch to ensure that there no changes lost in the process. The branch is visible in the branch line manager. This process can result in one of the following: <br/>
+1.  **Merge** (recommended)–  the Desktop Modeler will try to merge the unsynchronized changes from the Web Modeler automatically. Your local changes (if any) will be combined with the Web Modeler changes. The changes from the Web Modeler are stored in an automatically created branch to ensure that there no changes lost in the process. The branch is visible in the branch line manager. This process can result in one of the following: <br/>
 
-	a.  If the merge process finishes successfully (without conflicts) the created branch is merged to your working copy and you get the Web Modeler changes. You need to review the merged changes and commit them to get the Web Modeler and the Desktop Modeler in sync again. And afterwards you can delete the automatically created branch.<br/>
+	a.  If the merge process finishes successfully (without conflicts) the created branch is merged to your working copy and you get the Web Modeler changes. You need to review the merged changes and commit them to get the Web Modeler and the Desktop Modeler in sync again. And afterwards you can delete the automatically-created branch.<br/>
 
-	b. If there are any merge conflicts found in the process, you need to resolve them and commit the changes afterwards. Once you resolve the conflicts and commit the changes, you can delete this automatically created branch.<br/>
+	b. If there are any merge conflicts found in the process, you need to resolve them and commit the changes afterwards. Once you resolve the conflicts and commit the changes, you can delete this automatically-created branch.<br/>
 
 	![](attachments/collaborative-development-troubleshooting/automatically-created-branch.png)
 
-2. **Resolve Later** –  the changes can be merged later. In the meanwhile changes from the Web Modeler and the Team Server development line will not be kept in sync. In this case, the dialog will appear later when committing/updating/merging changes. 
+2. **Resolve Later** –  the changes can be merged later. In the meanwhile, changes from the Web Modeler and the Team Server development line will not be kept in sync. In this case, the dialog will appear again when committing/updating/merging changes. 
 
 ## 4 Failed Merging the Desktop Modeler and the Web Modeler Changes 
 
-When the Web Modeler enabled branch with the commit outside the Desktop Modeler is being merged with another line, you will see the following message:
+When the Web Modeler enabled branch with the commit outside the Desktop Modeler is being merged with a different line, you will see the following message:
 
 ![](attachments/collaborative-development-troubleshooting/cannot-merge-automatically.png)
 
@@ -60,9 +60,9 @@ You can choose one of the following:
 
 2. **Merge Anyway** – the merge will continue without changes from the Web Modeler. In this case only the changes from the Desktop Modeler will be included. The Desktop Modeler and the Web Modeler will be out of sync, and you will need to resolve this issue later. See section [3 The Desktop Modeler & the Web Modeler Are Out of Sync](#out-of-sync)
 
-## 5 The Repository Service Unavailable
+## 5 The Repository Service Is Unavailable
 
-During the **Update** operation, the changes are requested from the Web Modeler and integrated into the current project.  There is an additional step **Retrieve branch status** in the update process. During this step Web Modeler changes are retrieved. 
+During the **Update** operation, changes are requested from the Web Modeler and integrated into the current project.  There is an additional step **Retrieve branch status** in the update process. During this step, Web Modeler changes are retrieved. 
 
 ![](attachments/collaborative-development-troubleshooting/retrieving-branch-status.png)
 
@@ -74,7 +74,7 @@ You can do one of the following:
 
 1. **Cancel** (recommended) – the operation will be cancelled, you can try again later, when the network problems are solved 
 
-2. **Proceed** – the update process will continue, but the changes from Web Modeler will not be retrieved. The Desktop Modeler and the Web Modeler will be out of sync, and you will need to resolve this issue later. See section [3 The Desktop Modeler & the Web Modeler Are Out of Sync](#out-of-sync)
+2. **Proceed** – the update process will continue, but the changes from the Web Modeler will not be retrieved. The Desktop Modeler and the Web Modeler will be out of sync, and you will need to resolve this issue later. See section [3 The Desktop Modeler & the Web Modeler Are Out of Sync](#out-of-sync)
 
 ## 6 Another Operation Is in Progress
 

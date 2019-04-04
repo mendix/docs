@@ -14,8 +14,8 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud V3, and other deploym
 
 #### Improvements
 
-* We have introduced a [REST Stories API](/apidocs-mxsdk/apidocs/stories-api/stories-api-rest). This allows you to create, retrieve, or update the sprints or stories of your Mendix app projects while using basic HTTP commands, such as `POST` or `GET`.
-* We have also introduced a [SOAP Stories API](/apidocs-mxsdk/apidocs/stories-api/stories-api-soap).
+* We have introduced a [REST Stories API](/apidocs-mxsdk/apidocs/stories-api-rest). This allows you to create, retrieve, or update the sprints or stories of your Mendix app projects while using basic HTTP commands, such as `POST` or `GET`.
+* We have also introduced a [SOAP Stories API](/apidocs-mxsdk/apidocs/stories-api-soap).
 * As part of the REST Stories API feature, we created two new scopes. For more information, see the [Retrieve the Stories & Sprints in Your Project](/developerportal/mendix-profile/oauth-scopes#mx:app:stories:read) and [Make Changes to the Stories & Sprints in Your Project](/developerportal/mendix-profile/oauth-scopes#mx:app:stories:write) sections of *OAuth & Scopes*.
 
 ### April 8th, 2019

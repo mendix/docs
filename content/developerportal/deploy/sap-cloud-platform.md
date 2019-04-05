@@ -354,7 +354,6 @@ This tab displays Cloud Foundry services which are bound to the app, waiting to 
 There are a number of services which your Mendix app requires. **If you unbind any of these services, your app will probably stop working**:
 
 * destination
-* application logs
 * xsuaa
 * database (PostgreSQL or SAP HANA schema)
 * connectivity

@@ -150,6 +150,14 @@ module.exports = {
       from: "/howtogeneral/support/",
       to: "/developerportal/support/"
     },
+	{
+      from: "/community/app-store/",
+      to: "/developerportal/app-store/"
+    },
+	{
+      from: "/community/app-store/app-store-overview",
+      to: "/developerportal/app-store/app-store-overview"
+    },
 	/****************************************************
      * From the App Store (potentially temporary until fixed in product, mapped)
      ****************************************************/

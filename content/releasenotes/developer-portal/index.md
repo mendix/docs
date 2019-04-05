@@ -12,9 +12,9 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud V3, and other deploym
 
 ### April 5th, 2019
 
-#### Improvements
+#### Fixes
 
-* We made general improvements to the performance of the Developer Portal
+* We fixed an issue with the Mendix Cloud where the CPU utilization was not consistent and could cause system instability.
 
 ### April 4th, 2019
 

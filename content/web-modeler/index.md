@@ -28,4 +28,4 @@ The main documents in the Web Modeler Reference are the following ones:
 * [Checks in the Web Modeler](checks)
 * [Consistency Errors in the Web Modeler](consistency-errors)
 * [Theme Customizer in the Web Modeler](theme-customizer)
-* [App Settings in the Web Modeler](app-settings-wm)
+* [App Settings in the Web Modeler](app-settings)

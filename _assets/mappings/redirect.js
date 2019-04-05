@@ -43,7 +43,7 @@ module.exports = {
     },
 	{
       from: "/refguide/web-modeler/app-settings-wm",
-      to: "/web-modeler/app-settings-wm"
+      to: "/web-modeler/app-settings"
     },
 	{
       from: "/howto/web-modeler/syncing-webmodeler-desktop",

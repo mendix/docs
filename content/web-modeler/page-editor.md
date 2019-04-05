@@ -160,7 +160,7 @@ Widgets are single user-interface elements that can be configured. For more info
 
 {{% alert type="info" %}}
 
-You can update widgets in the [App Settings](app-settings-wm). 
+You can update widgets in the [App Settings](app-settings). 
 
 {{% /alert %}}
 

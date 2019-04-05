@@ -115,7 +115,7 @@ The bottom menu bar provides the following options:
 | Bottom menu item | Description |
 |------|------|
 | Search (magnifying glass) icon | Helps you search through microflows, entities, and pages. Start typing the name of the item you are looking for and the search feature will return any matches it finds, using exact matches as well as fuzzy matches based on the characters entered. <br />You can also use "/" shortcut to search through your app. |
-| [App Settings](app-settings-wm) | Shows an overview of all widgets and their status. Widgets are user interface elements (alerts, buttons, charts, etc.) contained in the building blocks. They are used to build pages from. |
+| [App Settings](app-settings) | Shows an overview of all widgets and their status. Widgets are user interface elements (alerts, buttons, charts, etc.) contained in the building blocks. They are used to build pages from. |
 | [Theme Customizer](theme-customizer) | Here you can style your app with custom branding, colors, and typography. |
 
 ## 6 Toolbox, Properties, and Buzz

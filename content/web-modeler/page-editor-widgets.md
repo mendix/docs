@@ -82,7 +82,7 @@ To add an App Store widget, do the following:
 
     ![](attachments/page-editor-widgets/app-store-download.png)
 
-The widget is now added to your project, you can simply drag and drop it to the page to use it. You can also view settings of this widget in the **App Settings**.  For more information on managing widgets in your app, see [App Settings in the Web Modeler](app-settings-wm).
+The widget is now added to your project, you can simply drag and drop it to the page to use it. You can also view settings of this widget in the **App Settings**.  For more information on managing widgets in your app, see [App Settings in the Web Modeler](app-settings).
 
 {{% alert type="info" %}}
 
@@ -93,5 +93,5 @@ Some similar widgets are packaged together: downloading one of these widgets wil
 ## 6 Read More 
 
 * [Page Editor in the Web Modeler](page-editor)
-* [App Settings in the Web Modeler](app-settings-wm)
+* [App Settings in the Web Modeler](app-settings)
 * [App Store Overview](/developerportal/app-store/app-store-overview)

@@ -413,9 +413,13 @@ If you no longer require a service you can unbind it or remove it from your app.
 
     The service is deleted from the app environment and returned to the list of **Available Services**.
 
-## 8 Issues
+## 8 Databases in SAP Cloud Platform
 
-### 8.1 Environment is not Created
+Mendix can run using different type of database for its backend.
+
+## 9 Issues
+
+### 9.1 Environment is not Created
 
 If you add an environment and it fails to be created it will be shown with a red symbol next to it on the Environments page:
 
@@ -435,7 +439,7 @@ A more detailed description of the reason why the environment creation failed wi
 
 ![](attachments/sap-cloud-platform/failed-description.png)
 
-### 8.2 Deleting an App
+### 9.2 Deleting an App
 
 Note that if you are the last person to leave a Mendix app you can delete the app. However, this will not delete the app or resources on SAP Cloud Platform. You can leave the app by going to the **General** page of the Developer Portal and clicking **Leave app**.
 
@@ -453,7 +457,7 @@ If you want to delete your app and all its resources, delete the environment and
 
 You can still delete the app and its resources from the SAP Cloud Platform cockpit, but you will then have to remove all the resources individually.
 
-### 8.3 App Will Not Start{#willnotstart}
+### 9.3 App Will Not Start{#willnotstart}
 
 Under some circumstances an app with a service in the **Services To Be Bound** status will not restart. You will get an error with *Could not bind service...* in the details.
 
@@ -463,7 +467,7 @@ This indicates that SAP Cloud Portal is not able to bind the service, even thoug
 
 If you are trying to bind more than one new service, it is not possible to identify within the Developer Portal which service is causing the issue. If the culprit is not obvious, you will have to remove all the services or go to SAP Cloud Portal where you can use the service name in the error message to find which service is causing the error.
 
-### 8.4 An Error Occurs While Deploying App From Desktop Modeler
+### 9.4 An Error Occurs While Deploying App From Desktop Modeler
 
 If an app is deployed to SAP using the Desktop Modeler **Run** button before it has been started from the Developer Portal, the deployment will fail. This is because the marketplace services have not been bound.
 
@@ -477,10 +481,10 @@ If you use the Developer Portal to look at the details of the environment to whi
 
 Start the app from the Developer Portal to bind the services. Once they are bound, you can deploy your app from the Desktop Modeler, as usual.
 
-## 9 Status of SAP Cloud Platform Deployment
+## 10 Status of SAP Cloud Platform Deployment
 
 The Mendix status page ([https://status.mendix.com/](https://status.mendix.com/)) shows the current status of Mendix services. If you have issues with deploying to SAP Cloud Platform via the Developer Portal, you can check the Mendix status page to see if SAP Cloud Platform deployment is operational (under **Mendix Services**) or if there are other Mendix issues which may be affecting your deployment.
 
-## 10 Read More
+## 11 Read More
 
 * [SAP Single Sign On](/refguide/sap/sap-single-sign-on)

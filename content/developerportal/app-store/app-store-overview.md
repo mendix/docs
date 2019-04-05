@@ -43,7 +43,7 @@ The header for each add-on presents the following details:
 * The **Name** and **Category** of the item
 * The review average (in stars) and the number of reviews
 * The number of times the item has been downloaded
-* A heart for favoriting the item (so it will appear in your list of favorites on the [Dashboard](#dashboard)
+* A heart for favoriting the item (so it will appear in your list of favorites on the [Dashboard](#dashboard))
 * The following buttons (depending on the type of item and what the developer added to share):
 	* **Preview** – click this to preview more information or a demo about the content
 		* This is only available if the developer has included a demo URL when sharing the content (for details on sharing content, see [How to Share App Store Content](share-app-store-content))
@@ -77,7 +77,7 @@ The details page for each add-on and app presents the following item information
 
 	![](attachments/app-store-overview/content_detail_8.png)
 	
-*  **Content managers** tab – lists the [content managers](#cm) if this is protected App Store content
+*  **Content managers** tab – lists the [content managers](#cm) if this is protected App Store content:
 
 	![](attachments/app-store-overview/content_detail_9.png)
 
@@ -143,7 +143,7 @@ Clicking **Manage** opens the content management page:
 On this page, you will see the following buttons (depending on your permissions):
 
 * <a name="protect"></a>**Enable protection**/**Disable protection** – click this to toggle the protection level for the content
-  * Enabling protection assigns the **Protected** label to the content and means that only [content managers](#cm) are able to manage it
+  * Enabling protection assigns the **Protected** label to the content, which means only [content managers](#cm) are able to manage it
   * This button is only visible to Company Admins with the [Can manage App Store](../company-app-roles/manage-roles#app-store-manager) permission
 * **Create new draft version** – click this to create a new draft version of the content (for details on creating a draft version, see the [Adding New App Store Content](share-app-store-content#edit) section of *How to Share App Store Content*)
 * **Unpublish** – click this to remove that version from the content
@@ -151,13 +151,13 @@ On this page, you will see the following buttons (depending on your permissions)
 
 #### 4.3 Shared with Me {#shared-with-me}
 
-This page contains content shared with you by other companies have marked you as an [external downloader]().
+This page contains content shared with you by other companies have marked you as an [external downloader]():
 
 ![](attachments/app-store-overview/shared-with-me.png)
 
 #### 4.4 Reviews
 
-This page contains reviews of **Your content** by other users as well as **Your reviews** that you have written of other content.
+This page contains reviews of **Your content** by other users as well as **Your reviews** that you have written of other content:
 
 ![](attachments/app-store-overview/your-reviews.png)
 
@@ -191,7 +191,7 @@ This menu item and page are only visible to Company Admins with the [Can manage 
 
 This page contains company-only content that is shared with external downloaders. To set these external downloaders, click **View all people outside your company...** to be taken to the [External Downloaders](#ext) page.
 
-To set the accessible content, click **Share content**, which opens the **Company-only content** dialog box. Here you see a list of company-only content from your company's [private App Store](share-app-store-content#private-app-store) that can be shared by selecting it and clicking **Save**:
+To set the accessible content, click **Share content**, which opens the **Company-only content** dialog box. Here you see a list of company-only content from your company's [private App Store](share-app-store-content#private-app-store) that can be shared by making a selection and clicking **Save**:
 
 ![](attachments/app-store-overview/company-only-content.png)
 
@@ -206,7 +206,7 @@ There are two buttons available for shared content:
 
 ### 5.3 Reviews
 
-This page contains reviews of **Your company's content** as well as **Your company's reviews** that various users from your company have written of other content.
+This page contains reviews of **Your company's content** as well as **Your company's reviews** that users from your company have written of other content.
 
 ![](attachments/app-store-overview/your-company-reviews.png)
 
@@ -216,7 +216,7 @@ This page contains reviews of **Your company's content** as well as **Your compa
 This menu item and page are only visible to Company Admins with the [Can manage App Store](../company-app-roles/manage-roles#app-store-manager) permission.
 {{% /alert %}}
 
-You can configure your user groups for various levels of access to your company's App Store. The available user groups are described in the sections below.
+You can configure user groups for various levels of access to your company's App Store. The available user groups are described in the sections below.
 
 #### 5.4.1 Content Managers {#cm}
 

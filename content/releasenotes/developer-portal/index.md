@@ -10,6 +10,12 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud V3, and other deploym
 
 ## 2019
 
+### April 5th, 2019
+
+#### Fixes
+
+* We fixed an issue with the Developer Portal where the memory utilization was not optimized and could cause system instability. This change does not affect memory utilization of customer apps.
+
 ### April 4th, 2019
 
 #### Fixes

@@ -426,6 +426,10 @@ This database service should not be unbound from your environment: see [Services
 
 ### 8.2 Running Mendix on SAP HANA
 
+{{% alert type="info" %}}
+You can only use SAP HANA as the Mendix database for Mendix version 7.23.3 and above.
+{{% /alert %}}
+
 SAP HANA works in a different way to PostgreSQL.
 
 If you select an SAP HANA database, a SAP HANA *schema* service will be added to your space and when you deploy your app it will be bound to the PostgreSQL service. This schema service defines access to a separate SAP HANA DB service, which also needs to be running in the same space as your app.

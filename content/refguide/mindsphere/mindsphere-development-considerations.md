@@ -190,6 +190,19 @@ If you need to set or change the value of any Cloud Foundry Environment Variable
 Restarting your app will cause your app to be temporarily unavailable.
 {{% /alert %}}
 
+## 6 Licensing Your App
+
+When you initially deploy a Mendix App, it is treated as a *Free App*. For a MindSphere app the most important restrictions are:
+
+* You can have a maximum of ten users
+* The App will go into sleep mode after 1-2 hours
+
+For a full list of limitations, see the [Free App](/developerportal/deploy/mendix-cloud-deploy#free-app) section of *Mendix Cloud*. Note that this also includes restrictions which apply specifically to apps which are deployed to the Mendix Cloud.
+
+To license your app, you need to obtain a license key from [Mendix Support](https://support.mendix.com) at https://support.mendix.com.
+
+Instructions for licensing apps are available in the [License Activation](https://github.com/mendix/cf-mendix-buildpack#license-activation) section of the *Mendix Cloud Foundry Buildpack Readme*. Refer to [Cloud Foundry Environment Variables](#cfenvvars), above, for instructions on changing Cloud Foundry environment variables.
+
 ## 6 Validation
 
 Your app should, as a minimum, meet the requirements of the checklist on the MindSphere developer site here: [Get your Application Ready for Productive Use](https://developer.mindsphere.io/howto/howto-app-publication.html).

@@ -18,7 +18,7 @@ You can create Mendix apps which make MindSphere API calls, but which are deploy
 {{% /alert %}}
 
 {{% alert type="warning" %}}
-There are some limitations to what you can do in your Mendix app if it is deployed to MindSphere. See the [Limitations](#limitations) section below for more information.
+There are some limitations to what you can do in your Mendix app if it is deployed to MindSphere. See the [Limitations](/refguide/mindsphere/mindsphere-development-considerations#limitations) section of *MindSphere Development Considerations* for more information.
 {{% /alert %}}
 
 {{% alert type="info" %}}

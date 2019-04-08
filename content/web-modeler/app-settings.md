@@ -12,13 +12,13 @@ tags: ["web modeler", "settings", "widgets"]
 
 To open the **App Settings**, click the gear icon at the left menu bar.
 
-![](attachments/app-settings-wm/wm-app-settings-icon.png)
+![](attachments/app-settings/app-settings-icon.png)
 
 ## 2 Widget Overview in App Settings
 
 **App Settings** contains **Widget Overview** – an overview of all App Store widgets and local widgets in your project.
 
-![](attachments/app-settings-wm/wm-widget-overview.png)
+![](attachments/app-settings/widget-overview.png)
 
 The following types of widgets are included into the widget overview of the App Settings:
 

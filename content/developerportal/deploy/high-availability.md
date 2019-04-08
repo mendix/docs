@@ -1,12 +1,18 @@
 ---
 title: "Configure High Availability"
 parent: on-premises-design
-description: "How to install Mendix behind a load balancer for high availability"
+description: "How to install Mendix (version 6 and below) behind a load balancer for high availability"
 menu_order: 20
 tags: ["high-availability", "on-premises", "clustering", "runtime"]
 ---
 
 ## 1 Introduction
+
+{{% alert type="info" %}}
+This page is only applicable for apps created in Mendix version 6 and below.
+
+For creating high availability apps in Mendix version 7 and above, please refer to [Clustered Mendix Runtime](/refguide/clustered-mendix-runtime).
+{{% /alert %}}
 
 This how-to describes the requirements and limitations of using a Mendix app in a high-availability architecture.
 
@@ -22,7 +28,7 @@ This how-to describes the requirements and limitations of using a Mendix app in 
 
 ![](attachments/high-availability/18580722.png)
 
-It is possible to use the Mendix Platform in a load-balancing environment. However, it is important to know that the Mendix Platform is not cluster-capable or -aware. The documentation doesn’t state exactly how the Mendix Platform should be configured in a load high availability architecture. Since Mendix doesn’t have many requirements for how it should be installed, there are many options for running Mendix behind a load balancer.
+It is possible to use the Mendix Platform in a load-balancing environment. However, it is important to know that the version 6 Mendix Platform is not cluster-capable or -aware. The documentation doesn’t state exactly how the Mendix Platform should be configured in a load high availability architecture. Since Mendix doesn’t have many requirements for how it should be installed, there are many options for running Mendix behind a load balancer.
 
 This document explains the requirements for installing Mendix on a server behind a load balancer. The basic requirements for Mendix running behind a load balancer are having sticky sessions, a shared database, and non-persistent high-availability sessions.
 

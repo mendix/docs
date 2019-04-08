@@ -4,6 +4,7 @@ category: "Deployment"
 menu_order: 40
 description: "Reference documentation on SAP Cloud deployment portal"
 tags: ["SAP", "SAP Cloud Platform", "Deployment", "Environment"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
@@ -75,7 +76,7 @@ You will now be asked to provide the final details for the SAP Cloud Platform de
 
 You will be able to choose a Domain, Organization, and Space which is configured for you in this region.
 
-If you do not choose a Custom database, you will still be able to choose from a range of different Postgres databases. Please ensure that the database you choose is supported by your quota plan for this region and organization.
+If you do not choose a Custom database, you will still be able to choose from a range of different databases, PostgreSQL and SAP HANA for example. Please ensure that the database you choose is supported by your quota plan for this region and organization. See [Databases in SAP Cloud Platform]{#databases}, below, for important information on using SAP HANA as your database.
 
 If you select **Yes** for **Custom database?**, you will be asked for the Name and the Plan.
 
@@ -127,7 +128,7 @@ This is done from the **Environments** page of the Developer Portal:
 
 7.  Set **Development Mode** to Yes if you want the application to run with the Mendix security level of Prototype/demo, or Off (no security). This is not recommended for acceptance or production environments.
 
-8.  Select the database you would like to use. Be aware that even if a specific database is part of the Marketplace it could still be unavailable because of limitations imposed by the quota of your Organization.
+8.  Select the database you would like to use. Be aware that even if a specific database is part of the Marketplace it could still be unavailable because of limitations imposed by the quota of your Organization. See [Databases in SAP Cloud Platform]{#databases}, below, for important information on using SAP HANA as your database.
 
     If you choose **Custom database** you will need to enter a name for the database and the plan.
 
@@ -353,9 +354,8 @@ This tab displays Cloud Foundry services which are bound to the app, waiting to 
 There are a number of services which your Mendix app requires. **If you unbind any of these services, your app will probably stop working**:
 
 * destination
-* application logs
 * xsuaa
-* postgresql
+* database (PostgreSQL or SAP HANA schema)
 * connectivity
 
 Services should be selected, bound, and unbound through this **Services** page. Changes made in the SAP Cloud Platform Cockpit will *not* be reflected in the Mendix Developer Portal.
@@ -413,9 +413,46 @@ If you no longer require a service you can unbind it or remove it from your app.
 
     The service is deleted from the app environment and returned to the list of **Available Services**.
 
-## 8 Issues
+## 8 Databases in SAP Cloud Platform{#databases}
 
-### 8.1 Environment is not Created
+Mendix needs access to a relational database backend and can run using different types of database. For deployment to SAP Cloud Platform, you have the choice of PostgreSQL or SAP HANA.
+
+### 8.1 Running Mendix on PostgreSQL
+
+When you create your environment on SAP Cloud Platform, you can select a PostgreSQL database. During the creation of the environment, a PostgreSQL service will be added to your space and, when you deploy your app, it will be bound to the PostgreSQL service.
+
+This database service should not be unbound from your environment: see [Services Tab](#binding-services), above, for more information on required services.
+
+### 8.2 Running Mendix on SAP HANA
+
+{{% alert type="info" %}}
+You can only use SAP HANA as the Mendix database for Mendix version 7.23.3 and above.
+
+There are also some differences in the way that Mendix can be used with SAP HANA compared to PostgreSQL databases – see (SAP HANA – Known Issues)[/refguide/saphana].
+{{% /alert %}}
+
+SAP HANA works in a different way to PostgreSQL.
+
+If you select an SAP HANA database, an SAP HANA *schema* service will be added to your space and when you deploy your app it will be bound to the PostgreSQL service. This schema service defines access to a separate SAP Cloud Platform, SAP HANA service, which also needs to be running in the same space as your app.
+
+{{% alert type="warning" %}}
+Please bear the following in mind when using SAP HANA as your Mendix database:
+
+* You must create and configure the SAP HANA *service* yourself in the SAP Cloud Platform cockpit. It is *not* created for you by the Mendix Developer Portal. The configuration of this service is not possible through the Mendix Developer Portal.
+
+* Do *not* attempt to add the SAP HANA *service* to your app. It is the SAP HANA *schema* which needs to be bound to your app.
+
+* Do *not* use the *Services* tab or the *SAP Cloud Platform Marketplace* to add **both a PostgreSQL database and an SAP HANA schema** to your app. If you do this it is not possible to predict which database your Mendix app will choose to bind.
+
+* Do *not* unbind the SAP HANA schema service from your environment: see [Services Tab](#binding-services), above, for more information on required services.
+
+{{% /alert %}}
+
+If you have issues with your app running on SAP HANA, you will need to use the SAP Cloud Platform cockpit to investigate. The Mendix Developer Portal does not have information on the status or configuration of the SAP HANA service.
+
+## 9 Issues
+
+### 9.1 Environment is not Created
 
 If you add an environment and it fails to be created it will be shown with a red symbol next to it on the Environments page:
 
@@ -435,7 +472,7 @@ A more detailed description of the reason why the environment creation failed wi
 
 ![](attachments/sap-cloud-platform/failed-description.png)
 
-### 8.2 Deleting an App
+### 9.2 Deleting an App
 
 Note that if you are the last person to leave a Mendix app you can delete the app. However, this will not delete the app or resources on SAP Cloud Platform. You can leave the app by going to the **General** page of the Developer Portal and clicking **Leave app**.
 
@@ -453,7 +490,7 @@ If you want to delete your app and all its resources, delete the environment and
 
 You can still delete the app and its resources from the SAP Cloud Platform cockpit, but you will then have to remove all the resources individually.
 
-### 8.3 App Will Not Start{#willnotstart}
+### 9.3 App Will Not Start{#willnotstart}
 
 Under some circumstances an app with a service in the **Services To Be Bound** status will not restart. You will get an error with *Could not bind service...* in the details.
 
@@ -463,7 +500,7 @@ This indicates that SAP Cloud Portal is not able to bind the service, even thoug
 
 If you are trying to bind more than one new service, it is not possible to identify within the Developer Portal which service is causing the issue. If the culprit is not obvious, you will have to remove all the services or go to SAP Cloud Portal where you can use the service name in the error message to find which service is causing the error.
 
-### 8.4 An Error Occurs While Deploying App From Desktop Modeler
+### 9.4 An Error Occurs While Deploying App From Desktop Modeler
 
 If an app is deployed to SAP using the Desktop Modeler **Run** button before it has been started from the Developer Portal, the deployment will fail. This is because the marketplace services have not been bound.
 
@@ -477,10 +514,10 @@ If you use the Developer Portal to look at the details of the environment to whi
 
 Start the app from the Developer Portal to bind the services. Once they are bound, you can deploy your app from the Desktop Modeler, as usual.
 
-## 9 Status of SAP Cloud Platform Deployment
+## 10 Status of SAP Cloud Platform Deployment
 
 The Mendix status page ([https://status.mendix.com/](https://status.mendix.com/)) shows the current status of Mendix services. If you have issues with deploying to SAP Cloud Platform via the Developer Portal, you can check the Mendix status page to see if SAP Cloud Platform deployment is operational (under **Mendix Services**) or if there are other Mendix issues which may be affecting your deployment.
 
-## 10 Read More
+## 11 Read More
 
 * [SAP Single Sign On](/refguide/sap/sap-single-sign-on)

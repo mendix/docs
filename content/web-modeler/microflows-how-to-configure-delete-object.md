@@ -1,6 +1,6 @@
 ---
-title: "Configure a Delete Object Action in the Web Modeler"
-category: "Microflows in the Web Modeler"
+title: "Configure a Delete Object Action"
+category: "Microflows"
 menu_order: 80
 description: "This how to describes the process of configuring a delete object action in a data view and a list view in the Mendix Web Modeler."
 tags: ["web modeler", "page editor", "delete object", "list view", "data view", "how to"]
@@ -19,7 +19,7 @@ This how-to describes the following use case:  you want to be able to delete the
 
 {{% alert type="info" %}}
 
-You can configure the **Delete Object** on click action for such widgets as buttons or a static image. In this how-to we use a **Delete** button as an example of widget with **Delete Object** on click action. For more information, see the [Delete Object Action](page-editor-widgets-events-section#delete-object-action) section in *Events Section in Widgets of the Web Modeler* in the *Web Modeler* category.
+You can configure the **Delete Object** on click action for such widgets as buttons or a static image. In this how-to we use a **Delete** button as an example of widget with **Delete Object** on click action. For more information, see the [Delete Object Action](page-editor-widgets-events-section#delete-object-action) section in *Events Section in Widgets* in the *Web Modeler* category.
 
 {{% /alert %}}
 
@@ -31,9 +31,9 @@ To configure the domain model and create the page, do the following:
 
 1. Open your [domain model](domain-models).
 
-2. Create entity *Customer*. For more information on how to create the entity, see section [3 Adding New Entities](domain-models) in *Domain Models Overview in the Web Modeler*.
+2. Create entity *Customer*. For more information on how to create the entity, see section [3 Adding New Entities](domain-models) in *Domain Models Overview*.
 
-3.  For the **Customer** entity, create an attribute (for more information on how to create an attribute, see section [4 Adding New Attributes](domain-models) in *Domain Models Overview in the Web Modeler*) and do the following:<br/>
+3.  For the **Customer** entity, create an attribute (for more information on how to create an attribute, see section [4 Adding New Attributes](domain-models) in *Domain Models Overview*) and do the following:<br/>
 
     a. Set the **Name** of the attribute to *Name*.<br/>
     
@@ -46,7 +46,7 @@ To configure the domain model and create the page, do the following:
 
 4. Repeat step 3 to create an attribute *Address* of string type.
 
-5.  Now we need a page where customers' names will be listed. Create a blank page and name it *Customers*. For more information on creating pages, see section [3.2 Creating a New Page](page-editor) in the *Page Editor in the Web Modeler*.<br/>
+5.  Now we need a page where customers' names will be listed. Create a blank page and name it *Customers*. For more information on creating pages, see section [3.2 Creating a New Page](page-editor) in the *Page Editor*.<br/>
 
     ![](attachments/microflows-how-to-configure-delete-object/create-page.png)
 
@@ -94,7 +94,7 @@ Now we will configure a list view and will add a button with [**Delete Object** 
 
     ![](attachments/microflows-how-to-configure-delete-object/delete-button-properties.png)
 
-We have created the page that lists the customers names. If a user clicks **Delete** in one of the lines, the customer who is indicated in this line will be deleted from the app along with the customer's details. For more information, see section [2.3 Delete Object Action](page-editor-widgets-events-section#delete-object-action) in *Events Section in Widgets of the Web Modeler* in the *Web Modeler* category.
+We have created the page that lists the customers names. If a user clicks **Delete** in one of the lines, the customer who is indicated in this line will be deleted from the app along with the customer's details. For more information, see section [2.3 Delete Object Action](page-editor-widgets-events-section#delete-object-action) in *Events Section in Widgets*.
 
 ## 4 Configuring a Delete Object Action in a Data View
 
@@ -164,6 +164,6 @@ The workflow for the **Delete** button in the data view (the red **Delete** butt
 
    ![](attachments/microflows-how-to-configure-delete-object/published-page-example.png)
 
-For more information, see section [2.3 Delete Object Action](page-editor-widgets-events-section#delete-object-action) in *Events Section in Widgets of the Web Modeler* in the *Web Modeler* category.
+For more information, see section [2.3 Delete Object Action](page-editor-widgets-events-section#delete-object-action) in *Events Section in Widgets* in the *Web Modeler* category.
 
 Congratulations! You have configured **Delete** buttons in a list view and in a data view. 

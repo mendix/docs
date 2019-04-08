@@ -1,13 +1,13 @@
 ---
-title: "Microflow Editor Consistency Errors in the Web Modeler"
-category: "Consistency Errors in the Web Modeler"
+title: "Microflow Editor Consistency Errors"
+category: "Consistency Errors"
 description: "Describes microflow consistency errors in the Mendix Web Modeler and the way to fix them."
 tags: ["web modeler", "consistency errors", "checks", "errors", "microflow"]
 ---
 
 ## 1 Introduction 
 
-In this document, we will explain how to solve the most common consistency errors that can occur when configuring microflows in the Web Modeler. For more information on microflows, see [Microflows in the Web Modeler](microflows).
+In this document, we will explain how to solve the most common consistency errors that can occur when configuring microflows in the Web Modeler. For more information on microflows, see [Microflows](microflows).
 
 An example of a consistency error is when you set a drag and drop a **Create Object** activity to the microflow, but do not specify what entity should be used as a data source to create the object. 
 
@@ -64,7 +64,7 @@ Some consistency errors may be connected with settings in the Desktop Modeler. T
 
 ## 5 Read More
 
-* [Microflows in the Web Modeler](microflows)
-* [Page Editor Consistency Errors in the Web Modeler](consistency-errors-pages)
-* [Navigation Consistency Errors in the Web Modeler](consistency-errors-navigation)
-* [Checks in the Web Modeler](checks)
+* [Microflows](microflows)
+* [Page Editor Consistency Errors](consistency-errors-pages)
+* [Navigation Consistency Errors](consistency-errors-navigation)
+* [Checks](checks)

@@ -1,6 +1,6 @@
 ---
-title: "Exclusive Split in the Web Modeler"
-category: "Microflows in the Web Modeler"
+title: "Exclusive Split"
+category: "Microflows"
 menu_order: 20
 description: "Describes the exclusive split in the Mendix Web Modeler."
 tags: ["web modeler", "microflow", "exclusive split"]
@@ -36,7 +36,7 @@ The parameters and entities which you would like to use in configuring the condi
 
 ### 2.2 Configuring the Condition with an Expression {#expression-tab}
 
-You can also configure the condition by writing the expression. For more information, see [Microflow Expressions in the Web Modeler](microflows-expressions).
+You can also configure the condition by writing the expression. For more information, see [Microflow Expressions](microflows-expressions).
 
 ## 3 Cases
 
@@ -56,7 +56,7 @@ The caption describes what happens in this element.
 
 ## 5 Read More
 
-* [Microflows in the Web Modeler](microflows)
-* [Microflow Expressions in the Web Modeler](microflows-expressions)
-* [How to Configure an Exclusive Split in the Web Modeler](microflows-how-to-configure-exclsplit) 
+* [Microflows](microflows)
+* [Microflow Expressions](microflows-expressions)
+* [How to Configure an Exclusive Split](microflows-how-to-configure-exclsplit) 
 

@@ -1,5 +1,5 @@
 ---
-title: "Text Widgets in the Web Modeler"
+title: "Text Widgets"
 parent: "page-editor-widgets"
 description: "Describes typography widgets in the Mendix Web Modeler."
 menu_order: 40
@@ -31,7 +31,7 @@ To configure **Content** without adding attributes, you can do one of the follow
 
 To configure **Content** and add attributes to it, do the following:
 
-1. Place the widget (**Text**, **Paragraph**, or **Heading**) inside a data container (a list view or a data view) and set an entity for the list view/data view. For more information, see [Data View & List View Properties in the Web Modeler](page-editor-data-view-list-view). This is necessary to allow attributes of the selected entity to be inserted into the text. 
+1. Place the widget (**Text**, **Paragraph**, or **Heading**) inside a data container (a list view or a data view) and set an entity for the list view/data view. For more information, see [Data View & List View Properties](page-editor-data-view-list-view). This is necessary to allow attributes of the selected entity to be inserted into the text. 
 
 2.  Open **Properties** of the **Text**, **Paragraph**, or **Heading**, delete the default text in the **General** section > **Content** and start typing the message you want to show to the end-user.  
 
@@ -64,7 +64,7 @@ The render mode defines the way a text will be shown to the end-user. Basically,
 
 ## 3 Page Title General Properties {#page-title-widget}
 
-The page title widget sets the title of the current page and displays it. This title also appears as the page title in your browser tab.  The title will be displayed in the **H1** style of the **Theme Customizer**. For details, see [Theme Customizer in the Web Modeler](theme-customizer).
+The page title widget sets the title of the current page and displays it. This title also appears as the page title in your browser tab.  The title will be displayed in the **H1** style of the **Theme Customizer**. For details, see [Theme Customizer](theme-customizer).
 
 If you want to change the name of the page, do the following:
 
@@ -87,9 +87,9 @@ You can put several **Title** widgets on your page, but they will all display th
 
 ## 4 Design Section {#input-elements-design}
 
-For information on the **Design** section and its properties, see [Design Section in Widgets of the Web Modeler](page-editor-widgets-design-section).
+For information on the **Design** section and its properties, see [Design Section in Widgets](page-editor-widgets-design-section).
 
 ## 5 Read More
 
-* [Page Editor in the Web Modeler](page-editor) 
-* [Widgets in the Web Modeler](page-editor-widgets)
+* [Page Editor](page-editor) 
+* [Widgets](page-editor-widgets)

@@ -1,5 +1,5 @@
 ---
-title: "Image Widgets in the Web Modeler"
+title: "Image Widgets"
 parent: "page-editor-widgets"
 description: "Describes image widgets in the Mendix Web Modeler."
 menu_order: 30
@@ -54,7 +54,7 @@ You can choose the **On Click Action** in the **Events** section. The **On Click
 
 The static image and the dynamic image share the properties in the **Events** section, except for one property that is [specific for the dynamic image](#events-dynamic-image). 
 
-For more information on the **Events** section for static and dynamic images, see [Events Section in Widgets of the Web Modeler](page-editor-widgets-events-section).
+For more information on the **Events** section for static and dynamic images, see [Events Section in Widgets](page-editor-widgets-events-section).
 
 ### 3.2 Dynamic Image Specific Property {#events-dynamic-image}
 
@@ -62,9 +62,9 @@ The dynamic image has a specific on-click action **Enlarge on Click**. The full-
 
 ## 4 Design Section
 
-For information on the **Design** section and its properties, see [Design Section in Widgets of the Web Modeler](page-editor-widgets-design-section).
+For information on the **Design** section and its properties, see [Design Section in Widgets](page-editor-widgets-design-section).
 
 ## 5 Read More
 
-* [Page Editor in the Web Modeler](page-editor) 
-* [Widgets in the Web Modeler](page-editor-widgets)
+* [Page Editor](page-editor) 
+* [Widgets](page-editor-widgets)

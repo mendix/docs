@@ -419,7 +419,7 @@ Mendix needs access to a relational database backend and can run using different
 
 ### 8.1 Running Mendix on PostgreSQL
 
-When you create your environment on SAP Cloud Platform, you can select a PostgreSQL database. During the creation of the environment, a PostgreSQL service will be added to your space and when you deploy your app it will be bound to the PostgreSQL service.
+When you create your environment on SAP Cloud Platform, you can select a PostgreSQL database. During the creation of the environment, a PostgreSQL service will be added to your space and, when you deploy your app, it will be bound to the PostgreSQL service.
 
 This database service should not be unbound from your environment: see [Services Tab](#binding-services), above, for more information on required services.
 
@@ -427,26 +427,28 @@ This database service should not be unbound from your environment: see [Services
 
 {{% alert type="info" %}}
 You can only use SAP HANA as the Mendix database for Mendix version 7.23.3 and above.
+
+There are also some differences in the way that Mendix can be used with SAP HANA compared to PostgreSQL databases – see (SAP HANA – Known Issues)[/refguide/saphana].
 {{% /alert %}}
 
 SAP HANA works in a different way to PostgreSQL.
 
-If you select an SAP HANA database, a SAP HANA *schema* service will be added to your space and when you deploy your app it will be bound to the PostgreSQL service. This schema service defines access to a separate SAP HANA DB service, which also needs to be running in the same space as your app.
+If you select an SAP HANA database, an SAP HANA *schema* service will be added to your space and when you deploy your app it will be bound to the PostgreSQL service. This schema service defines access to a separate SAP Cloud Platform, SAP HANA service, which also needs to be running in the same space as your app.
 
 {{% alert type="warning" %}}
 Please bear the following in mind when using SAP HANA as your Mendix database:
 
-* You must create and configure the SAP HANA **DB** service yourself in the SAP Cloud Platform cockpit. It is *not* created for you by the Mendix Developer Portal. The configuration of this service is not possible through the Mendix Developer Portal.
+* You must create and configure the SAP HANA *service* yourself in the SAP Cloud Platform cockpit. It is *not* created for you by the Mendix Developer Portal. The configuration of this service is not possible through the Mendix Developer Portal.
 
-* Do *not* attempt to add the SAP HANA **DB** service to your app. It is the SAP HANA *schema* which needs to be bound to your app.
+* Do *not* attempt to add the SAP HANA *service* to your app. It is the SAP HANA *schema* which needs to be bound to your app.
 
-* Do *not* use the *Services* tab or the *SAP Cloud Platform Marketplace* to add **both a PostgreSQL database and an SAP HANA schema** to your app. In this case it is not possible to predict which database your Mendix app will choose to bind.
+* Do *not* use the *Services* tab or the *SAP Cloud Platform Marketplace* to add **both a PostgreSQL database and an SAP HANA schema** to your app. If you do this it is not possible to predict which database your Mendix app will choose to bind.
 
 * Do *not* unbind the SAP HANA schema service from your environment: see [Services Tab](#binding-services), above, for more information on required services.
 
 {{% /alert %}}
 
-If you have issues with your app running on SAP HANA, you will need to use the SAP Cloud Platform cockpit to investigate. The Mendix Developer Portal does not have information on the status or configuration of the SAP HANA database service.
+If you have issues with your app running on SAP HANA, you will need to use the SAP Cloud Platform cockpit to investigate. The Mendix Developer Portal does not have information on the status or configuration of the SAP HANA service.
 
 ## 9 Issues
 

@@ -16,7 +16,7 @@ The request needs to be of the **POST** type with **No Authorization** and the f
 * Content-Type: **application/json**
 * X-M2EE-Authentication: **yourM2EEPassword_Base64Encoded**
 
-The M2EE password is NOT the super administrator password, but a separate password. If you have the application deployed on premises, you can set this password in the **settings.yaml** file, which is located in the **Apps/YourProject** folder. If you are running the application from the Desktop Modeler, the M2EE password is set automatically by Mendix, and you can retrieve it from the enviornment variables of your application process.
+The M2EE password is NOT the super administrator password, but a separate password. If you have the application deployed on premises, you can set this password in the **settings.yaml** file, which is located in the **Apps/YourProject** folder. If you are running the application from the Desktop Modeler, the M2EE password is set automatically by Mendix, and you can retrieve it from the environment variables of your application process.
 
 Read the next sections to find out which monitoring actions are supported.
 
@@ -110,7 +110,7 @@ This request returns the current executions of actions known by the Mendix Runti
 **Response**
 
 ```java
-"{
+{
   "feedback":
   {
     "requests":
@@ -194,10 +194,10 @@ This request returns the current executions of actions known by the Mendix Runti
       "committed_nonheap":72777728,
       "permanent":0,
       "used_heap":125300600
-  },
-  "result":0
-}"
-
+    },
+     "result":0
+  }
+}
 ```
 
 <u>Requests</u>
@@ -391,7 +391,7 @@ Shows which users are currently logged in. If a user has multiple sessions, this
       "java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)",
       "java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)",
       "java.lang.Thread.run(Thread.java:745)"
-    ],
+    ]
   },
   "result":0
 }

@@ -428,7 +428,7 @@ This database service should not be unbound from your environment: see [Services
 {{% alert type="info" %}}
 You can only use SAP HANA as the Mendix database for Mendix version 7.23.3 and above.
 
-There are also some differences in the way that Mendix can be used with SAP HANA compared to PostgreSQL databases – see (SAP HANA – Known Issues)[/refguide/saphana].
+There are also some differences in the way that Mendix can be used with SAP HANA compared to PostgreSQL databases – see [SAP HANA – Known Issues](/refguide/saphana).
 {{% /alert %}}
 
 SAP HANA works in a different way to PostgreSQL.

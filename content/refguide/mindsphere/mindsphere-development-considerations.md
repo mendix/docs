@@ -8,13 +8,50 @@ tags: ["MindSphere", "Credentials", "Multi-Tenant", "Environment Variables", "Lo
 
 ## 1 Introduction
 
-When developing a Mendix app which will be deployed to MindSphere, there are a number of extra things you need to take into consideration. These are discussed below. 
+When developing a Mendix app which will be deployed to MindSphere, there are a number of extra things you need to take into consideration. These are discussed below.
+
+## 2 Atlas UI
+
+### 2.1 MindSphere Icons as SVGs
+
+You can select MindSphere icons to be displayed as SVGs in your application.
+
+1. Open the properties of the widget which can display an icon (for example a button).
+2. Click **Select...** next to the Icon.
+3. Select an **Image** as the icon type.
+4. Find the image that you want and click **Select**. The MindSphere icons are in the module *MindSphere_UI_Resources*.
+
+![Add icon as an image](attachments/mindsphere-development-considerations/svg-icon.png)
+
+{{% alert type="info" %}}
+You cannot change the color of these icons from within Mendix.
+{{% /alert %}}
+
+### 2.2 MindSphere Icons as Icon Font
+
+The MindSphere Theme Pack provides a font which contains icons. This means that you can use MindSphere icons in any page element where you can assign a class.
+
+To do this:
+
+1. Find the icon you wish to use. These have the same names as the icons in the MindSphere Theme Pack and are listed in the *Project Explorer* dock under **Project '…' > App Store modules > MindSphere_UI_Resources > Icons**.
+
+    ![List of MindSphere icons](attachments/mindsphere-development-considerations/mindsphere-icons.png)
+
+2. Open the properties of the element to which you wish to add an icon.
+3. Set **Icon** to *(none)*.
+3. Add the class `iconMdsp {icon-name}`.
+
+    ![Add an icon as CSS](attachments/mindsphere-development-considerations/css-icon.png)
+
+{{% alert type="info" %}}
+You will not see the icon in the Desktop Modeler when it is in *Edit mode*. Switch to *View mode* to confirm that you have selected the correct icon.
+{{% /alert %}}
 
 ## 2 Local Testing{#localtesting}
 
 ### 2.1 Credentials 
 
-When you run your app locally, you will not be able to use SSO to get your credentials. You will be logged on as MxAdmin and will be presented with a login screen the first time that your app attempts to retrieve your access token.
+When you run your app locally, you will not be able to use SSO to get your credentials. You will be logged on as MxAdmin and will be presented with a login screen either when the app starts, or the first time that your app attempts to retrieve your access token, depending on the value of the constant *AskForAppCredsOnStartUp*.
 
 {{% image_container width="50%" %}}![](attachments/mindsphere-development-considerations/image19.png){{% /image_container %}}
 
@@ -42,9 +79,25 @@ To ensure that the correct application credentials are requested, you have to se
 
 ![](attachments/mindsphere-development-considerations/image23.png)
 
+**AskForAppCredsOnStartUp**
+
+Set this to *True* if you want your app to ask for credentials as soon as it starts up, before the first page is displayed. If this is set to *False* then the app will ask for credentials the first time that it attempts to retrieve your access token.
+
+If you have microflows consuming MindSphere APIs which are triggered on the home page the will work the first time the page is displayed.
+
+{{% alert type="info" %}}
+This setting has no effect on apps which are deployed to the cloud. The credentials page is only shown for local deployments.
+{{% /alert %}}
+
 **CockpitApplicationVersion**
 
 This is a valid version of the MindSphere app as registered in the Developer Cockpit under the name *CockpitApplicationName*.
+
+**EnableLocalMindSphereApiReverseProxy**
+
+Set this to *True* to enable a reverse proxy for MindSphere API calls directly from the html pages (for example, the calls from the MindSphere OS Bar).
+
+This adds a new endpoint `/api/**` to the app. An access token is added to all calls from the UI to MindSphere and these are forwarded directly. This setting is needed if you use MindSphere WebComponents during local development, as the WebComponents request data direct calls to MindSphere APIs without any Microflows.
 
 **HostTenant**
 
@@ -88,7 +141,11 @@ MindSphere SSO provides the user’s tenant as the **Name** attribute in the **T
 
 ![](attachments/mindsphere-development-considerations/image25.png)
 
-By utilizing this value when an entity is accessed, the Mendix app can be made multi-tenant.
+In addition, MindSphere SSO will identify whether the current user is a subtenant using **IsSubTenantUser** and, if so, will populate the name of the subtenant in **SubtenantId**. More information about subtenants can be found in the MindSphere documentation [Subtenants](https://developer.mindsphere.io/apis/core-tenantmanagement/api-tenantmanagement-overview.html#subtenants).
+
+**How To Make Your App Multi-Tenant**
+
+By utilizing the **Tenant** when an entity is accessed, the Mendix app can be made multi-tenant.
 
 {{% alert type="warning" %}}
 It is not possible, currently, to generate these access restrictions automatically.

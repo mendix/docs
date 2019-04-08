@@ -1,5 +1,5 @@
 ---
-title: "Configure a Delete Object Action"
+title: "Configuring a Delete Object Action"
 category: "Microflows"
 menu_order: 80
 description: "This how to describes the process of configuring a delete object action in a data view and a list view in the Mendix Web Modeler."
@@ -19,7 +19,7 @@ This how-to describes the following use case:  you want to be able to delete the
 
 {{% alert type="info" %}}
 
-You can configure the **Delete Object** on click action for such widgets as buttons or a static image. In this how-to we use a **Delete** button as an example of widget with **Delete Object** on click action. For more information, see the [Delete Object Action](page-editor-widgets-events-section#delete-object-action) section in *Events Section in Widgets* in the *Web Modeler* category.
+You can configure the **Delete Object** on click action for such widgets as buttons or a static image. In this how-to we use a **Delete** button as an example of widget with **Delete Object** on click action. For more information, see the [Delete Object Action](page-editor-widgets-events-section#delete-object-action) section in *Events Section in Widgets*.
 
 {{% /alert %}}
 
@@ -164,6 +164,6 @@ The workflow for the **Delete** button in the data view (the red **Delete** butt
 
    ![](attachments/microflows-how-to-configure-delete-object/published-page-example.png)
 
-For more information, see section [2.3 Delete Object Action](page-editor-widgets-events-section#delete-object-action) in *Events Section in Widgets* in the *Web Modeler* category.
+For more information, see section [2.3 Delete Object Action](page-editor-widgets-events-section#delete-object-action) in *Events Section in Widgets*.
 
 Congratulations! You have configured **Delete** buttons in a list view and in a data view. 

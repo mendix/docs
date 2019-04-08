@@ -1,5 +1,5 @@
 ---
-title: "Configure Merge & Change Object Activities"
+title: "Configuring Merge & Change Object Activities"
 category: "Microflows"
 menu_order: 70
 description: "This how to describes the process of configuring a merge and a change object activity in the Mendix Web Modeler."

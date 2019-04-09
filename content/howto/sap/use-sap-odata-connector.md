@@ -39,7 +39,7 @@ To get started quickly, you can download one of the SAP data models available in
 
 If you want to use an SAP data model that is not available in the Mendix App Store, you can generate the SAP data model based on an OData service from an SAP back-end system. 
 
-For more information, see [SAP Data Models](/refguide/sap/sap-data-models) and [Use the SAP OData Model Creator](use-sap-odata-model-creator).
+For more information, see [SAP Data Models](/refguide7/sap/sap-data-models) and [Use the SAP OData Model Creator](use-sap-odata-model-creator).
 
 ## 3 Using the SAP OData Connector
 
@@ -87,6 +87,6 @@ Congratulations! You can now run your app and see a list of the customers availa
 
 ## 4 Read More
 
-* [SAP OData Connector](/refguide/sap/sap-odata-connector)
-* [SAP Data Models](/refguide/sap/sap-data-models)
+* [SAP OData Connector](/refguide7/sap/sap-odata-connector)
+* [SAP Data Models](/refguide7/sap/sap-data-models)
 

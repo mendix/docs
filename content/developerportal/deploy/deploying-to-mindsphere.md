@@ -376,7 +376,7 @@ When a new user is identified during SSO, the SSO process generates a random pas
 This policy is set up as the default in the MindSphere starter and example apps and should not be changed.
 {{% /alert %}}
 
-#### 6.1.4 Roles & Scopes
+#### 6.1.4 Roles & Scopes{#rolesscopes}
 
 Using SSO, the Mendix app needs to know which roles to allocate to the user. This enables the app to know whether the user should have, for example, administrator access.
 

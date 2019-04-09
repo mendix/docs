@@ -58,5 +58,5 @@ The caption describes what happens in this element.
 
 * [Microflows](microflows)
 * [Microflow Expressions](microflows-expressions)
-* [Configuring an Exclusive Split](microflows-how-to-configure-exclsplit) 
+* [Configure an Exclusive Split](microflows-how-to-configure-exclsplit) 
 

@@ -1,5 +1,5 @@
 ---
-title: "Configuring a Delete Object Action"
+title: "Configure a Delete Object Action"
 category: "Microflows"
 menu_order: 80
 description: "This how to describes the process of configuring a delete object action in a data view and a list view in the Mendix Web Modeler."

@@ -1,7 +1,7 @@
 ---
 title: "Component-Based Architecture"
 parent: "microservices-overview"
-menu_order: 4
+menu_order: 6
 draft: true
 tags: ["best practice", "component", "component-based development", "component-based", "cbd"]
 ---

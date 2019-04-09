@@ -1,5 +1,5 @@
 ---
-title: "Data View & List View Properties in the Web Modeler"
+title: "Data View & List View Properties"
 parent: "page-editor-widgets"
 description: "Describes the data view and list view in the Page Editor of the Mendix Web Modeler."
 menu_order: 10
@@ -34,7 +34,7 @@ The data source determines which object will be shown in the data view. For gene
 
 | Data Source Property | Description                                                  |
 | -------------------- | ------------------------------------------------------------ |
-| Context              | A data source determining that wherever you are opening the page from, you are passing the selected object. For example, when you add the **Show Page** activity in the microflow, you select the page and the object to pass. (For more information on the microflows, see [Microflows in the Web Modeler](microflows).) That means that when the page is opened in the microflow, the object of this type is provided and will be shown in the data view on the page. For more technical information on the context source, see [Context Source](/refguide/entity-path-source) in the *Desktop Modeler* category. |
+| Context              | A data source determining that wherever you are opening the page from, you are passing the selected object. For example, when you add the **Show Page** activity in the microflow, you select the page and the object to pass. (For more information on the microflows, see [Microflows](microflows).) That means that when the page is opened in the microflow, the object of this type is provided and will be shown in the data view on the page. For more technical information on the context source, see [Context Source](/refguide/entity-path-source) in the *Desktop Modeler* category. |
 | Microflow            | A data source that runs a selected microflow and displays a return value. For more technical information, see [Microflow Source](/refguide/microflow-source) in the *Desktop Modeler* category. |
 | List widget          | A data source that allows a data view to display detailed information on an object in the list widget (list view) on the same page. For more technical information, see [Listen To Widget Source](/refguide/microflow-source) in the *Desktop Modeler* category. |
 
@@ -47,7 +47,7 @@ In the **General** section, you can enable/disable the  following options:
 
 ### 2.3 Design {#design-section-data-view}
 
-For information on the **Design** section and its properties, see [Design Section in Widgets of the Web Modeler](page-editor-widgets-design-section).
+For information on the **Design** section and its properties, see [Design Section in Widgets](page-editor-widgets-design-section).
 
 ## 3 List View Properties {#list-view-properties}
 
@@ -76,7 +76,7 @@ The data source determines which objects will be shown in the list view. For gen
 
  You can choose the **On Click Action** in the **Events** section. The **On Click Action** defines what action is performed when the user clicks a row of the list view. 
 
-For more information on the **Events** section and on click actions, see [Events Section in Widgets of the Web Modeler](page-editor-widgets-events-section). 
+For more information on the **Events** section and on click actions, see [Events Section in Widgets](page-editor-widgets-events-section). 
 
 ### 3.3 General {#general-section-list-view}
 
@@ -91,8 +91,8 @@ In the **General** section, you can select the number of rows to be displayed on
 
 ### 3.4 Design Section {#design-section-list-view}
 
-For information on the **Design** section and its properties, see [Design Section in Widgets of the Web Modeler](page-editor-widgets-design-section).
+For information on the **Design** section and its properties, see [Design Section in Widgets](page-editor-widgets-design-section).
 
 ## 4 Read More
 
-* [Page Editor in the Web Modeler](page-editor)
+* [Page Editor](page-editor)

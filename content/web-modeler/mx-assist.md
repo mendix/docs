@@ -1,6 +1,6 @@
 ---
 title: "Mendix Assist"
-parent: "microflows"
+category: "Microflows"
 menu_order: 10
 description: "Describes Mendix Assist in the Mendix Web Modeler."
 tags: ["web modeler", "mendix assist", "AI", "assistant"]
@@ -91,7 +91,7 @@ The activity is added to the flow.
 
 ### 4.2 Adding a Check {#add-check}
 
-Adding a check means that you will add an exclusive split with Boolean attribute type: your flow will be split into one flow labeled *true* and another one labeled *false*. For more information, see [Exclusive Split in the Web Modeler](microflows-exclusive-split).   
+Adding a check means that you will add an exclusive split with Boolean attribute type: your flow will be split into one flow labeled *true* and another one labeled *false*. For more information, see [Exclusive Split](microflows-exclusive-split).   
 
 {{% image_container width="300" %}}![](attachments/mx-assist/check-added.png)
 {{% /image_container %}}
@@ -118,13 +118,13 @@ The exclusive split is added to the microflow.
 
 {{% alert type="info" %}}
 
-The number of options for the check depend on the number of variables of Boolean type in your microflow and on the number of attributes of Boolean type in your domain model. For more information, see [Domain Model in the Web Modeler](domain-models) and [Attribute Types in the Web Modeler](domain-models-attributes). You can also add a check if an object exists microflow.
+The number of options for the check depend on the number of variables of Boolean type in your microflow and on the number of attributes of Boolean type in your domain model. For more information, see [Domain Model](domain-models) and [Attribute Types](domain-models-attributes). You can also add a check if an object exists microflow.
 
 {{% /alert %}}
 
 ### 4.3 Adding a Decision
 
-When you add a decision via Mendix Assist that means you add an exclusive split with attribute of enumeration type to your microflow. For more information, see [Exclusive Split in the Web Modeler](microflows-exclusive-split) and [Attribute Types in the Web Modeler](domain-models-attributes). This means, if you do not have parameters with enumeration data type, **Add decision** will not appear in the suggestions.
+When you add a decision via Mendix Assist that means you add an exclusive split with attribute of enumeration type to your microflow. For more information, see [Exclusive Split](microflows-exclusive-split) and [Attribute Types](domain-models-attributes). This means, if you do not have parameters with enumeration data type, **Add decision** will not appear in the suggestions.
 
 To add the decision, do the following:
 
@@ -139,12 +139,12 @@ The exclusive split is added to the microflow.
 
 {{% alert type="info" %}}
 
-The number of options for **Add a decision** depend on the number of parameters with enumeration data type in your microflow. For more information, see [Domain Model in the Web Modeler](domain-models) and [Attribute Types in the Web Modeler](domain-models-attributes).
+The number of options for **Add a decision** depend on the number of parameters with enumeration data type in your microflow. For more information, see [Domain Model in the Web Modeler](domain-models) and [Attribute Types](domain-models-attributes).
 
 {{% /alert %}}
 
 ## 5 Read More
 
-* [Web Modeler General Info](general)
-* [Microflows in the Web Modeler](microflows)
-* [Exclusive Split in the Web Modeler](microflows-exclusive-split)
+* [General Info](general)
+* [Microflows](microflows)
+* [Exclusive Split](microflows-exclusive-split)

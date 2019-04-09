@@ -1,6 +1,6 @@
 ---
-title: "Page Editor Consistency Errors in the Web Modeler"
-category: "Consistency Errors in the Web Modeler"
+title: "Page Editor Consistency Errors"
+category: "Consistency Errors"
 description: "Describes consistency errors in the page editor in the Mendix Web Modeler and the way to fix them."
 menu_order: 
 tags: ["web modeler", "consistency errors", "checks", "errors", "page editor"]
@@ -50,7 +50,7 @@ Possible errors that you can get when a page is expecting a context that is unav
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | The selected page {Name of the page} expects an object of type {type of object}, which is not available here. | The page has a data view that expects an object of a particular type to be passed to it. This error occurs when the page is opened from another page, which does not have this object available. For a more detailed example, see section [4.1 Error Fix Example 1](#error-example-1). | Make sure that the object is passed to the page which has a configured data view on it. For more information, see section  [4.1 Error Fix Example 1](#error-example-1). |
 | The selected page {Name of page} expects an object of type X, which is not compatible with the object of type Y that is available here. | You have a widget (for example, a button) that opens a page. The page has a data view that expects an object of particular type to be passed to it. However, the widget is placed inside a data container with another type of object. For a detailed example, see section [4.2 Error Fix Example 2](#error-example-2). | Make sure that the button is placed in the correct data container and passes the correct type of object to the page. For more information, see section [4.2 Error Fix Example 2](#error-example-2). |
-| The selected {Name of the page} expects an object of type {type of object} and cannot be used as a home page. Change the page or use a microflow to provide the page with an object. | You have set a page that expects an object to be passed to it (for example, a page with a data view) as the home page. But by default the home page has no object that is passed to it, because it is the starting point for your user. For a more detailed example, see section [2.2 Error Fix When the Home Page Expects an Object](consistency-errors-navigation#home-page-expects-an-object) in *Navigation Consistency Errors in the Web Modeler*. | Set a different  page as the home page. Alternatively, you can use a microflow that will open the home page and pass a specific object to it. For more information, see section [2.2 Error Fix When the Home Page Expects an Object](consistency-errors-navigation#home-page-expects-an-object) in *Navigation Consistency Errors in the Web Modeler*. |
+| The selected {Name of the page} expects an object of type {type of object} and cannot be used as a home page. Change the page or use a microflow to provide the page with an object. | You have set a page that expects an object to be passed to it (for example, a page with a data view) as the home page. But by default the home page has no object that is passed to it, because it is the starting point for your user. For a more detailed example, see section [2.2 Error Fix When the Home Page Expects an Object](consistency-errors-navigation#home-page-expects-an-object) in *Navigation Consistency Errors*. | Set a different  page as the home page. Alternatively, you can use a microflow that will open the home page and pass a specific object to it. For more information, see section [2.2 Error Fix When the Home Page Expects an Object](consistency-errors-navigation#home-page-expects-an-object) in *Navigation Consistency Errors*. |
 
 ### 4.1 Error Fix Example 1 {#error-example-1}
 
@@ -153,7 +153,7 @@ Errors for static and dynamic images are described in the table below.
 
 ## 7 On Click Action Consistency Errors 
 
-You can specify an **On Click Action** for different widgets, for example, for buttons or images. For more details about on click actions, see [Events Section in Widgets of the Web Modeler](page-editor-widgets-events-section).
+You can specify an **On Click Action** for different widgets, for example, for buttons or images. For more details about on click actions, see [Events Section in Widgets](page-editor-widgets-events-section).
 
 The most common consistency errors appear when you do not configure the on click action entirely. For example, you select a microflow as an on click action, but do not select the microflow itself. 
 
@@ -163,7 +163,7 @@ To fix the consistency errors, finish configuring the on click action (for examp
 
 ##  8 Read More
 
-* [Page Editor in the Web Modeler](page-editor)
-* [Navigation Consistency Errors in the Web Modeler](consistency-errors-navigation)
-* [Microflow Editor Consistency Errors in the Web Modeler](consistency-errors-microflows)
-* [Checks in the Web Modeler](checks)
+* [Page Editor](page-editor)
+* [Navigation Consistency Errors](consistency-errors-navigation)
+* [Microflow Editor Consistency Errors](consistency-errors-microflows)
+* [Checks](checks)

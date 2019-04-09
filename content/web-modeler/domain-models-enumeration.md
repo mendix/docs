@@ -1,6 +1,6 @@
 ---
-title: "Enumeration in the Web Modeler"
-category: "Domain Model in the Web Modeler"
+title: "Enumeration"
+category: "Domain Model"
 description: "Describes an attribute of the enumeration type in the Mendix Web Modeler."
 tags: ["web modeler", "domain model", "attributes", "attribute types", "enumeration"]
 ---
@@ -25,7 +25,7 @@ To create a new enumeration, do the following:
 
 1. Open your [domain model](domain-models).
 
-2. Select an entity you want to create the attribute for. For more information on how to create the entity, see section [3 Adding New Entities](domain-models#adding-new-entities) in *Domain Models Overview in the Web Modeler*.
+2. Select an entity you want to create the attribute for. For more information on how to create the entity, see section [3 Adding New Entities](domain-models#adding-new-entities) in *Domain Models Overview*.
 
 3.  To create a new attribute of the enumeration type, click **New attribute** and do the following:<br />
     a. Set the attribute **Name**. In our example, the name of the attribute is *Grade*.<br />
@@ -52,7 +52,7 @@ You can also set an existing enumeration for attributes of the enumeration type.
 
 1. Open your [domain model](domain-models).
 
-2. Select an entity you want to create the attribute for. For more information on how to create the entity, see section [3 Adding New Entities](domain-models#adding-new-entities) in *Domain Models Overview in the Web Modeler*.
+2. Select an entity you want to create the attribute for. For more information on how to create the entity, see section [3 Adding New Entities](domain-models#adding-new-entities) in *Domain Models Overview*.
 
 3.  To create a new attribute of the enumeration type, click **New attribute** and do the following:<br />
 
@@ -70,9 +70,9 @@ The existing enumeration is selected for the attribute of the enumeration type.
 
 ## 4 Properties
 
-For details on properties of attributes of the enumeration type, see section [3 Attribute Properties](domain-models-attributes#attribute-properties) in *Attribute Types in the Web Modeler*. 
+For details on properties of attributes of the enumeration type, see section [3 Attribute Properties](domain-models-attributes#attribute-properties) in *Attribute Types*. 
 
 ## 5 Read More
 
-* [Domain Model in the Web Modeler](domain-models)
-* [Attribute Types in the Web Modeler](domain-models-attributes) 
+* [Domain Model](domain-models)
+* [Attribute Types](domain-models-attributes) 

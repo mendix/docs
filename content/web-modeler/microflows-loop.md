@@ -1,6 +1,6 @@
 ---
-title: "Loops in the Web Modeler"
-category: "Microflows in the Web Modeler"
+title: "Loops"
+category: "Microflows"
 menu_order: 30
 description: "Describes a loop in the Mendix Web Modeler."
 tags: ["web modeler", "microflow", "loop", "loops"]
@@ -31,7 +31,7 @@ Loop properties consists of the **Data Source** section and are described below:
 
 Let us study a straightforward use-case, where you retrieve a list of orders from your database, loop over this list, and mark orders as processed as a result. 
 
-![Loop Example in the Web Modeler](attachments/microflows-loop/loop-example.png)
+![Loop Example](attachments/microflows-loop/loop-example.png)
 
 Make sure you have the following prerequisites:
 
@@ -91,4 +91,4 @@ As a result, we have a list of orders retrieved to our microflow, and a loop tha
 
 ## 4 Read More
 
-* [Microflows in the Web Modeler](microflows)
+* [Microflows](microflows)

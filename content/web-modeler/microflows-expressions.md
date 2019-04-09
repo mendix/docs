@@ -22,7 +22,7 @@ The **Expression** tab is opened when you configure the following activities in 
 
 ![](attachments/microflows-expressions/expression-tab.png)
 
-For more information, see [Setting and Changing a Value for Different Activities in the Microflows](microflows-setting-and-changing-value).
+For more information, see [Set & Change a Value for Different Activities in the Microflows](microflows-setting-and-changing-value).
 
 ## 2 Writing the Expression
 
@@ -112,4 +112,4 @@ An overview of the possibilities with expressions can be found below:
 ## 4 Read More
 
 * [Microflows](microflows)
-* [Setting and Changing a Value for Different Activities in the Microflows](microflows-setting-and-changing-value)
+* [Set & Change a Value for Different Activities in the Microflows](microflows-setting-and-changing-value)

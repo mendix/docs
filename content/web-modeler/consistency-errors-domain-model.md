@@ -7,7 +7,7 @@ tags: ["web modeler", "consistency errors", "errors", "domain model"]
 
 ## 1 Introduction 
 
-In this document, we will explain how to solve the most common consistency errors that can occur when configuring the domain model in the Desktop Modeler. For more information on domain models, see [Domain Model Overview](domain-models).
+In this document, we will explain how to solve the most common consistency errors that can occur when configuring the domain model in the Desktop Modeler. For more information on domain models, see [Domain Model](domain-models).
 
 An example of a consistency error is having the same name for two entities.
 
@@ -53,4 +53,4 @@ For more information on delete behavior, see section the [Delete Behavior](domai
 * [Page Editor Consistency Errors](consistency-errors-pages)
 * [Navigation Consistency Errors](consistency-errors-navigation)
 * [Microflow Editor Consistency Errors](consistency-errors-microflows)
-* [Checks Overview](checks)
+* [Checks](checks)

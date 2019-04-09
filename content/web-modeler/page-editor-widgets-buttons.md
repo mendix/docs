@@ -1,5 +1,5 @@
 ---
-title: "Button Widgets in the Web Modeler"
+title: "Button Widgets"
 parent: "page-editor-widgets"
 description: "Describes button widgets in the Mendix Web Modeler."
 menu_order: 50
@@ -27,7 +27,7 @@ The following **Buttons** are available in the Web Modeler as default widgets:
 
 {{% alert type="info" %}}
 
-Apart from the default button widgets, you can also [download widgets from the Mendix App Store](https://appstore.home.mendix.com/index3.html) to your app. For more information, see section [4 Widgets by Origin](page-editor-widgets#widgets-by-origin) in *Widgets in the Web Modeler*.
+Apart from the default button widgets, you can also [download widgets from the Mendix App Store](https://appstore.home.mendix.com/index3.html) to your app. For more information, see section [4 Widgets by Origin](page-editor-widgets#widgets-by-origin) in *Widgets*.
 
 {{% /alert %}}
 
@@ -46,7 +46,7 @@ You can change preset properties, and make the button perform another action.
 
 {{% /alert %}}
 
-For more information on the **Events** section and on click actions, see [Events Section in Widgets of the Web Modeler](page-editor-widgets-events-section).
+For more information on the **Events** section and on click actions, see [Events Section in Widgets](page-editor-widgets-events-section).
 
 ### 2.1 Default Properties in the Events Section {#default-properties}
 
@@ -59,7 +59,7 @@ You can find the list of default actions and properties that need to be configur
 
 | Button         | Default Action | Properties to be Configured                                  |
 | -------------- | -------------- | ------------------------------------------------------------ |
-| Open Page      | Page           | **Page** (Select page) <br />If you want to create a new object and pass it as a context to the selected page, enable **Create Object** (disabled by default) and select an **Entity**. For more information on see section [2.1 Create Object Option](page-editor-widgets-events-section#create-object-option) in *Events Section in Widgets of the Web Modeler*. |
+| Open Page      | Page           | **Page** (Select page) <br />If you want to create a new object and pass it as a context to the selected page, enable **Create Object** (disabled by default) and select an **Entity**. For more information on see section [2.1 Create Object Option](page-editor-widgets-events-section#create-object-option) in *Events Section in Widgets*. |
 | Call Microflow | Microflow      | **Microflow** (Select microflow)                             |
 | Create Object  | Create Object  | **Page** (Select page) and **Entity** (Select entity)        |
 | Save Changes   | Save Changes   | None                                                         |
@@ -67,7 +67,7 @@ You can find the list of default actions and properties that need to be configur
 | Cancel Changes | Cancel Changes | None                                                         |
 | Close Page     | Close Page     | None                                                         |
 | Sign Out       | Sign Out       | None                                                         |
-| Open Link      | Open Link      | For **Open Link** you need to configure the following properties: <ul><li>**Link Type** (*Default value*: Web)</li><li>**Source** (*Default value*: Use literal value)</li><li>**Url**</li></ul> For more information on these properties, see section [2.2 Open Link Action](page-editor-widgets-events-section#open-link-action) in *Events Section in Widgets of the Web Modeler*. |
+| Open Link      | Open Link      | For **Open Link** you need to configure the following properties: <ul><li>**Link Type** (*Default value*: Web)</li><li>**Source** (*Default value*: Use literal value)</li><li>**Url**</li></ul> For more information on these properties, see section [2.2 Open Link Action](page-editor-widgets-events-section#open-link-action) in *Events Section in Widgets*. |
 
 ## 3 General Section
 
@@ -78,7 +78,7 @@ Properties available in the **General** section are described in the table below
 | Caption     | Defines the text that will be shown on the button. Buttons have preset captions depending on the action they perform. For more information, see section [3.1 Default Caption](#default-caption). |
 | Icon        | Determines the icon that will be shown in front of the caption of the button. |
 | Render Mode | Defines the way the button will be shown to the end-user. Possible options are the following: <ul><li>**Button** – the widget will be rendered as a button</li><li>**Link** – the widget will be rendered as a hyperlink</li></ul>Default render mode: Button |
-| Style       | Applies a predefined styling to the button. Possible options are the following: <ul><li>Default</li><li>Inverse</li><li>Primary</li><li>Info</li><li>Success</li><li>Warning</li><li>Danger</li></ul>Default value for all buttons except the **Save Changes** button: Default<br />Default value for the **Save Changes** button: Success<br />The color for each style depends on your settings in the **Theme Customizer**. For details, see [Theme Customizer in the Web Modeler](theme-customizer). |
+| Style       | Applies a predefined styling to the button. Possible options are the following: <ul><li>Default</li><li>Inverse</li><li>Primary</li><li>Info</li><li>Success</li><li>Warning</li><li>Danger</li></ul>Default value for all buttons except the **Save Changes** button: Default<br />Default value for the **Save Changes** button: Success<br />The color for each style depends on your settings in the **Theme Customizer**. For details, see [Theme Customizer](theme-customizer). |
 
 ### 3.1 Default Caption {#default-caption}
 
@@ -98,9 +98,9 @@ Properties available in the **General** section are described in the table below
 
 ## 4 Design Section
 
-For information on the **Design** section and its properties, see [Design Section in Widgets of the Web Modeler](page-editor-widgets-design-section).
+For information on the **Design** section and its properties, see [Design Section in Widgets](page-editor-widgets-design-section).
 
 ## 5 Read More
 
-* [Page Editor in the Web Modeler](page-editor) 
-* [Widgets in the Web Modeler](page-editor-widgets)
+* [Page Editor](page-editor) 
+* [Widgets](page-editor-widgets)

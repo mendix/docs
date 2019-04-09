@@ -40,6 +40,6 @@ You have selected the environment for the Web Modeler.
 
 ## 3 Read More
 
-*   [Deploying Your App From the Web Modeler](/web-modeler/publishing-app)
+*   [Publishing Your App](/web-modeler/publishing-app)
 *   [Mendix Cloud](mendix-cloud-deploy)
 *   [Environments](environments)

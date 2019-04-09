@@ -1,5 +1,5 @@
 ---
-title: "Navigation Document in the Web Modeler"
+title: "Navigation Document"
 description: "Describes the navigation menu in the Mendix Web Modeler."
 menu_order: 40
 tags: ["web modeler", "navigation", "app menu"]
@@ -77,4 +77,4 @@ To create a new navigation item, do the following:
 
 ## 4 Read More
 
-* [The Web Modeler General Info](general)
+* [General Info](general)

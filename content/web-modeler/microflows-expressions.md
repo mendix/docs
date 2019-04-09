@@ -1,6 +1,6 @@
 ---
-title: "Microflow Expressions in the Web Modeler"
-category: "Microflows in the Web Modeler"
+title: "Microflow Expressions"
+category: "Microflows"
 menu_order: 40
 description: "Describes the microflow expressions available in the Mendix Web Modeler."
 tags: ["web modeler", "microflow", "set value", "variable"]
@@ -22,7 +22,7 @@ The **Expression** tab is opened when you configure the following activities in 
 
 ![](attachments/microflows-expressions/expression-tab.png)
 
-For more information, see [Setting and Changing a Value for Different Activities in the Microflows in the Web Modeler](microflows-setting-and-changing-value).
+For more information, see [Setting and Changing a Value for Different Activities in the Microflows](microflows-setting-and-changing-value).
 
 ## 2 Writing the Expression
 
@@ -111,5 +111,5 @@ An overview of the possibilities with expressions can be found below:
 
 ## 4 Read More
 
-* [Microflows in the Web Modeler](microflows)
-* [Setting and Changing a Value for Different Activities in the Microflows in the Web Modeler](microflows-setting-and-changing-value)
+* [Microflows](microflows)
+* [Setting and Changing a Value for Different Activities in the Microflows](microflows-setting-and-changing-value)

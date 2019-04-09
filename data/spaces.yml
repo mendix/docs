@@ -189,7 +189,7 @@ web-modeler:
   space: "Web Modeler Guide"
   priority: false
   menu_categories:
-    - "Web Modeler General Info"
+    - "General Info"
     - "Domain Model"
     - "Page Editor"
     - "Navigation Document"

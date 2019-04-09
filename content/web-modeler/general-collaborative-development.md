@@ -1,6 +1,6 @@
 ---
 title: "Collaborative Development in the Web Modeler"
-category: "Web Modeler General Info"
+category: "General Info"
 description: This document describes the process of collaborative development between the Mendix Web Modeler and the Mendix Desktop Modeler from the perspective of the Web Modeler.
 tags: ["web modeler", "desktop modeler", "collaborative development", "sync"]
 menu_order: 05

@@ -145,6 +145,6 @@ The number of options for **Add a decision** depend on the number of parameters 
 
 ## 5 Read More
 
-* [Web Modeler General Info](general)
+* [General Info](general)
 * [Microflows](microflows)
 * [Exclusive Split](microflows-exclusive-split)

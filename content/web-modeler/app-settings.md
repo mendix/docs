@@ -36,5 +36,5 @@ In the App Settings the following columns are displayed:
 
 ## 3 Read More
 
-* [The Web Modeler General Info](general)
+* [General Info](general)
 * [App Store Content Support](/developerportal/app-store/app-store-content-support)

@@ -2,8 +2,8 @@
 title: "Siemens MindSphere"
 category: "Deployment"
 menu_order: 45
-description: "Describes how to deploy a Mendix app to the MindSphere launchpad"
-tags: ["MindSphere", "deploy", "cloud foundry", "launchpad", "scopes", "roles", "sso", "XSRF", "limitations"]
+description: "Describes how to deploy a Mendix app to MindGate, the MindSphere launchpad"
+tags: ["MindSphere", "deploy", "cloud foundry", "launchpad", "scopes", "roles", "sso", "XSRF", "limitations", "MindGate"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -22,13 +22,13 @@ There are some limitations to what you can do in your Mendix app if it is deploy
 {{% /alert %}}
 
 {{% alert type="info" %}}
-You can easily copy code examples shown within grey blocks into the clipboard. Hover the cursor over the code block and click the copy icon at its top right.
+You can easily copy code examples shown within grey blocks into the clipboard. Hover the cursor over the code block and click the copy button which appears.
 
 ![](attachments/deploying-to-mindsphere/copy-from-documentation.png)
 
 {{% /alert %}}
 
-To help you with your first MindSphere apps, there is also an example app which contains modules which call the MindSphere APIs. Please see [How to Use the Siemens MindSphere Pump Asset Example App](/howto/mindsphere/mindsphere-example-app) for more information.
+To help you with your first MindSphere apps, there is also an example app which contains modules which call the MindSphere APIs. See [How to Use the Siemens MindSphere Pump Asset Example App](/howto/mindsphere/mindsphere-example-app) for more information.
 
 ## 2 Prerequisites{#prerequisites}
 
@@ -41,7 +41,7 @@ To deploy your app to MindSphere you need the following prerequisites.
 
 ## 3 Including Required MindSphere Modules
 
-You must customize your app to allow it to be deployed to MindSphere, allow it to be registered via the MindSphere Developer Cockpit, and be shown in the launchpad. This is done through MindSphere customization modules. There are two ways to include the customization you need in your app.
+You must customize your app to allow it to be deployed to MindSphere, registered via the MindSphere Developer Cockpit, and shown in the launchpad. This is done through MindSphere customization modules. There are two ways to include the customization you need in your app.
 
 ### 3.1 Using the MindSphere Starter App
 
@@ -99,13 +99,13 @@ The following items in the MindSphereSingleSignOn module need to be configured.
 
 #### 4.1.1 CockpitApplicationName
 
-This must be identical to the name of your app as registered in the MindSphere developer portal. It must, therefore, fit the constraints listed in [App Name](#appname), below.
+This must be identical to the name of your app as registered in the MindSphere developer portal. It must, therefore, fit the constraints listed in the [App Name](/refguide/mindsphere/mindsphere-development-considerations#appname) section of *MindSphere Development Considerations*.
 
 [//]: # (MindGateURL and PublicKeyURL do not need to be changed until there are more MindSphere environments)
 
 #### 4.1.2 RegisterSingleSignOn
 
-This microflow must be added as the *After startup* microflow or added as a sub-microflow to an existing after startup microflow.
+This microflow must be added as the *After startup* microflow or added as a sub-microflow of an existing after startup microflow.
 
 {{% alert type="info" %}}
 If you are using the MindSphere Starter Application, this will already be set up as the *After startup* microflow.
@@ -138,13 +138,13 @@ More information on the structure and content of this JSON object, together with
 
 ### 5.1 Pushing to Cloud Foundry
 
-Before you continue, ensure you have fulfilled the prerequisites described in the section [prerequisites](#prerequisites), above.
+Before you continue, ensure you have fulfilled the prerequisites described in the section [Prerequisites](#prerequisites), above.
 
 #### 5.1.1 Creating a Mendix Deployment Package
 
-To create a Mendix deployment package from your app, do the following.
+To create a Mendix deployment package from your app, do the following:
 
-1.  Open your app in the desktop modeler.
+1.  Open your app in the Desktop Modeler.
 2.  Select **Project** > **Create Deployment Package...**.
 
     {{% image_container width="355" %}}![](attachments/deploying-to-mindsphere/image13.png){{% /image_container %}}
@@ -161,6 +161,8 @@ By default, the deployment package will be created in the *releases* folder of y
 
 #### 5.1.2 Deploying the Application to Cloud Foundry using CF CLI
 
+To deploy your deployment package, do the following:
+
 1. Log in into MindSphere CF CLI using a one-time code as described in [Running a Cloud Foundry-Hosted Application – for Java Developers](https://developer.mindsphere.io/howto/howto-cf-running-app.html) in the MindSphere documentation.
 
     {{% alert type="info" %}}If you need to configure proxies for Cloud Foundry, use the Windows `set` command. For example, `set http_proxy=http://my.proxy.ip:1234`.{{% /alert %}}
@@ -171,7 +173,7 @@ By default, the deployment package will be created in the *releases* folder of y
     cf target –o {org_name} -s {space_name}
     ```
 
-    {{% alert type="info" %}}If you cannot target your org or space, you need to be added to your org. See [Cloud Foundry How Tos](https://developer.mindsphere.io/paas/paas-cloudfoundry-howtos.html) in the MindSphere documentation.{{% /alert %}}
+    {{% alert type="info" %}}If you cannot target your org or space, you probably need to be added to your org. See [Cloud Foundry How Tos](https://developer.mindsphere.io/paas/paas-cloudfoundry-howtos.html) in the MindSphere documentation.{{% /alert %}}
 
 3.  Create a PostgreSQL instance using the command:
 
@@ -183,11 +185,11 @@ By default, the deployment package will be created in the *releases* folder of y
 
     For more information see [Using the a9s PostgreSQL](https://developer.mindsphere.io/paas/a9s-postgresql/using.html) on the MindSphere developers site.
 
-4.  Ensure you are in the same folder as the package you wish to deploy.
-
-5.  Depending on your infrastructure and service broker usage, it may take several minutes to create the service instance. Check if your PostgreSQL service has been created successfully using the following command:  
+4.  Depending on your infrastructure and service broker usage, it may take several minutes to create the service instance. Check if your PostgreSQL service has been created successfully using the following command:  
     `cf services`  
     Your service should be listed, and the last operation should be ‘create succeeded’.
+
+5.  Ensure you are in the same folder as the package you wish to deploy.
 
 6. Create a `manifest.yml` file with at least the following content:
 
@@ -248,7 +250,7 @@ To create a new app in the MindSphere launchpad, do the following:
 13.  Click **Save** to save these details.
 14.  Click **Register** to register your app with the MindSphere launchpad.
 
-    {{% alert type="info" %}}If the app has not been pushed yet, there will be no route set up for the app and you will get an error message. This will be resolved once you have pushed your app to Cloud Foundry{{% /alert %}}
+    	{{% alert type="info" %}}If the app has not been pushed yet, there will be no route set up for the app and you will get an error message. This will be resolved once you have pushed your app to Cloud Foundry{{% /alert %}}
     
 #### 5.2.2 Setting Application Scopes in Developer Cockpit{#scopes}
 
@@ -284,18 +286,22 @@ Once you have created the scopes for your app, you will need to assign them to t
 The user will have to log out and log in again for this assignment to take effect.
 {{% /alert %}}
 
+{{% alert type="success" %}}
+Your app is now set up and users can run it from within the MindSphere Developer Cockpit.
+{{% /alert %}}
+
 ## 6 The Modules
 
 This section contains more information about the MindSphere modules and what they are used for.
 
 ### 6.1 Single Sign-On (MindSphereSingleSignOn){#mssso}
 
-When running on MindSphere, the MindSphere user can use their MindSphere credentials to log in to your app. This is referred to as Single sign-on (SSO). To do this, you need to use the microflows and resources in the **MindSphereSingleSignOn** module. You will also need the SSO module to get a valid user context during a local test session.
+When running on MindSphere, the MindSphere user can use their MindSphere credentials to log in to your app. This is referred to as Single Sign-On (SSO). To do this, you need to use the microflows and resources in the **MindSphereSingleSignOn** module. You will also need the SSO module to get a valid user context during a local test session.
 
 The MindSphere SSO module is included in the MindSphere starter and example apps. It can also be downloaded separately here: [MindSphere SSO](https://appstore.home.mendix.com/link/app/108805/).
 
 {{% alert type="warning" %}}
-The SSO module also requires changes to the app theme see section 2.1.2, [Customizing an Existing App](#existingapp) section.
+The SSO module also requires changes to the app theme see the section [Customizing an Existing App](#existingapp), above.
 
 Please ensure that you download the latest version of the [Theme Pack](#msthemepack) module when you download the SSO module.
 {{% /alert %}}
@@ -303,6 +309,10 @@ Please ensure that you download the latest version of the [Theme Pack](#msthemep
 #### 6.1.1 Constants
 
 ![Folder structure of the MindSphereSingleSignOn module](attachments/deploying-to-mindsphere/image2.png)
+
+**LocalDevelopment**
+
+These constants are only needed for local development and testing. For details of what needs to be put into the constants in the *LocalDevelopment* folder, please see [Local Testing](/refguide/mindsphere/mindsphere-development-considerations#localtesting) in *MindSphere Development Considerations*.
 
 **CockpitApplicationName**
 
@@ -316,10 +326,6 @@ This is the base URL for all requests to MindSphere APIs. For example, the URL f
 
 This is the URL where the public key can be found to enable token validation during the login process. For example, the URL for MindSphere on AWS PROD is `https://core.piam.eu1.mindsphere.io/token_keys`.
 
-**LocalDevelopment**
-
-These constants are only needed for local development and testing. For details of what needs to be put into the constants in the *LocalDevelopment* folder, please see [Local Testing](/refguide/mindsphere/mindsphere-development-considerations#localtesting) in *MindSphere Development Considerations*.
-
 #### 6.1.2 Microflows{#microflows}
 
 The MindSphereSingleSignOn module also provides three microflows which are used to support SSO within MindSphere and allow the user’s **tenant** and **email** to be obtained for use within the app.
@@ -328,7 +334,7 @@ The MindSphereSingleSignOn module also provides three microflows which are used 
 
 **RegisterSingleSignOn**
 
-This microflow must be added as the *After startup* microflow or added as a sub-microflow to an existing after startup microflow. You can do this on the *Runtime* tab of the *Project > Settings* dialog, accessed through the *Project Explorer*.
+This microflow must be added as the *After startup* microflow or added as a sub-microflow to an existing after startup microflow. You can do this on the *Runtime* tab of the *Project > Settings* dialog, accessed through the *Project Explorer* dock.
 
 ![Project settings dialog](attachments/deploying-to-mindsphere/image4.png)
 
@@ -380,7 +386,7 @@ This policy is set up as the default in the MindSphere starter and example apps 
 
 Using SSO, the Mendix app needs to know which roles to allocate to the user. This enables the app to know whether the user should have, for example, administrator access.
 
-MindSphere apps have two roles: user and admin. Each MindSphere user is given one or both of these roles. As well as defining access to MindSphere core roles, these roles are also mapped to application scopes. For information on how to set up scopes in MindSphere, see section 3.2.2, [Scopes in Developer Cockpit](#scopes).
+MindSphere apps have two roles: user and admin. Each MindSphere user is given one or both of these roles. As well as defining access to MindSphere core roles, these roles are also mapped to application scopes. For information on how to set up scopes in MindSphere, see the [Setting Application Scopes in Developer Cockpit](#scopes) section, above.
 
 During the login process, MindSphere application scopes are mapped to Mendix roles automatically. The comparison ignores upper- and lower-case differences. If the roles match, then that Mendix role is assigned to the user.
 
@@ -410,7 +416,7 @@ You can see how the MindSphere OS Bar Integration works in [MindSphere OS Bar In
 The MindSphereOSBarConfig module creates an endpoint which is used by the MindSphere OS Bar to provide tenant context and information about the application. The MindSphereOSBarConfig module is included in the MindSphere starter app, or can be downloaded from the Mendix App Store here: [MindSphere OS Bar Connector](https://appstore.home.mendix.com/link/app/108804/).
 
 {{% alert type="info" %}}
-The MindSphere OS Bar Connector also needs the MindSphere Theme Pack, or manual configuration of the index.html file in order to work. See sections 2.1.2, [Customizing an Existing App](#existingapp) and 2.4.1, [index.html Changes](#indexhtmlchanges).
+The MindSphere OS Bar Connector also needs the MindSphere Theme Pack, or manual configuration of the index.html file in order to work. See the sections [Customizing an Existing App](#existingapp) and [index.html Changes](#indexhtmlchanges).
 {{% /alert %}}
 
 #### 6.2.1 Configuring the OS Bar
@@ -446,9 +452,9 @@ More information on the structure and content of this JSON object, together with
 
 #### 6.3.1 Atlas UI Theme
 
-See [MindSphere Development Considerations](/refguide/mindsphere-development-considerations) for a discussion about using the MindSphere Atlas UI Theme.
+See section [Atlas UI](/refguide/mindsphere/mindsphere-development-considerations#atlasui) of *MindSphere Development Considerations* for a discussion about using the MindSphere Atlas UI Theme.
 
-#### 6.3.1 index.html Changes{#indexhtmlchanges}
+#### 6.3.2 index.html Changes{#indexhtmlchanges}
 
 Three changes are required to the standard Mendix index.html file to allow integration with MindSphere. In the starter app, example app, and MindSphere UI theme pack, these have already been implemented. If you are making the app from a different starter app you can make these changes manually. See the [index.html](#indexhtml) section, below, for details of the changes you need to make.
 
@@ -460,32 +466,31 @@ The changes are required to support:
 
 The index.html file can be found in the /theme folder of your project app.
 
-#### 6.3.2 mindspherelogin.html
+#### 6.3.3 mindspherelogin.html
 
 As well as changes to the index.html file, SSO for MindSphere also requires a different login *.html* file. This is called mindspherelogin.html and can also be found in the /theme folder of your project app.
 
 If this file is not in your /theme folder, you can create it following the instructions in the [mindspherelogin.html](#mindspherelogin) section, below, or by importing the MindSphere_UI_Resources theme pack.
 
-#### 6.3.3  Permission Denied Page
+#### 6.3.4  Permission Denied Page
 
-This is the general permission denied page, and will be shown if your app is called with an invalid token. The SSO module expects to find this MindSphere-compliant file as error_page/403.html within your ‘Theme’ folder.
+This is the general *permission denied* page, and will be shown if your app is called with an invalid token. The SSO module expects to find this MindSphere-compliant file as error_page/403.html within your ‘Theme’ folder.
 
-#### 6.3.4  No Authorization Information Found Page
+#### 6.3.5  No Authorization Information Found Page
 
-The No Authorization Information Found page (NoJWT.html) will be shown if your app is called without a valid token. This happens when the app URL is called directly and not via MindGate (Launchpad). For example, if you have a self-hosted, or Mendix Cloud, deployment. The SSO module expects to find this MindSphere-compliant file as error_page/NoJWT.html within your ‘Theme’ folder.
+The *No Authorization Information Found* page (NoJWT.html) will be shown if your app is called without a valid token. This happens when the app URL is called directly and not via MindGate (launchpad). For example, if you have a self-hosted, or Mendix Cloud, deployment. The SSO module expects to find this MindSphere-compliant file as error_page/NoJWT.html within your ‘Theme’ folder.
 
-#### 6.3.5  CockpitApplicationName Not Found in the Provided Authorization Information Page
+#### 6.3.6  CockpitApplicationName Not Found in the Provided Authorization Information Page
 
-The CockpitApplicationName does not match MindSphere token page will be shown if your app is called with a token which does not include the value (as the *audience* claim of the JWT) you have specified within the SSO constant ‘CockpitApplicationName’. The SSO module expects to find this MindSphere-compliant file as error_page/CockpitApplicationName.html within your ‘Theme’ folder.
+The *CockpitApplicationName does not match MindSphere token* page will be shown if your app is called with a token which does not include the value (as the *audience* claim of the JWT) you have specified within the SSO constant ‘CockpitApplicationName’. The SSO module expects to find this MindSphere-compliant file as error_page/CockpitApplicationName.html within your ‘Theme’ folder.
 
 ## 7 Development Considerations
 
-See [MindSphere Development Considerations](/refguide/mindsphere/mindsphere-development-considerations) for additional help on:
+See [MindSphere Development Considerations](/refguide/mindsphere/mindsphere-development-considerations) for additional help on such things as:
 
 * local testing
 * multi-tenancy
 * limitations
-* other MindSphere development considerations
 
 ## 8 Appendices
 
@@ -499,7 +504,7 @@ If you use the MindSphere starter or example apps, or the Mendix MindSphere them
 
 #### 8.1.1 OS Bar
 
-For the OS Bar to work correctly in your Mendix app, the following script has to be added within the `<head> tags of index.html. Please note the comments in the code regarding the order in which things need to be done if you are inserting this manually.
+For the OS Bar to work correctly in your Mendix app, the following script has to be added within the `<head>` tags of index.html. Please note the comments in the code regarding the order in which things need to be done if you are inserting this manually.
 
 ```javascript
 <script>

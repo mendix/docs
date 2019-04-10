@@ -166,7 +166,7 @@ See section [Atlas UI](/refguide/mindsphere/mindsphere-development-consideration
 
 The MindSphere starter app, example app, and Theme Pack have an updated `index.html` file to allow integration with MindSphere.
 
-If you are making the app from a different starter app you can make these three changes manually. See the [index.html](#indexhtml) section, below, for details of the changes you need to make.
+If you are developing your app from a different starter app you can make these three changes manually. See the [index.html](#indexhtml) section, below, for details of the changes you need to make.
 
 The changes are required to support:
 

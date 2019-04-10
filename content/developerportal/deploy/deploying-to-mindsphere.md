@@ -2,7 +2,7 @@
 title: "Siemens MindSphere"
 category: "Deployment"
 menu_order: 45
-description: "Describes how to deploy a Mendix app to the MindSphere Gateway"
+description: "Describes how to register a Mendix app at the MindSphere Gateway and integrate it into the MindSphere Launchpad"
 tags: ["MindSphere", "deploy", "cloud foundry", "launchpad", "scopes", "roles", "sso", "XSRF", "limitations", "Gateway"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---

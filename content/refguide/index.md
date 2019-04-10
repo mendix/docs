@@ -8,8 +8,9 @@ The *Mendix Reference Guide* covers important topics on the  [Desktop Modeler](d
 
 Before installing Mendix 7, please read [System Requirements](system-requirements). If you have been using version 6 of the Mendix Platform, we recommend reading [Moving from 6 to 7](moving-from-6-to-7).
 
-If you are looking for step-by-step guides on performing various Mendix actions, browse the [Mendix How-to's](/howto7).
+If you are looking for step-by-step guides on performing various Mendix actions, browse the [Mendix How-to's](/howto7/index).
 
 The *Mendix Reference Guide* is divided into the following categories:
 
 {{% category_block %}}
+

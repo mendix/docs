@@ -4,7 +4,7 @@ module.exports = {
      * POTENTIALLY TEMPORARY REDIRECTS
      ****************************************************/
 	/****************************************************
-     * How-to's version 7 (potentially temporary until verified, unmapped)
+     * How-to's version 7 (COULD BE LEFT AS PERMANENT FOR MOST CURRENT VERSION; COULD BE RENAMED FOR 7)
      ****************************************************/
     {
       from: "/howtogeneral/bestpractices/ux-best-practices",
@@ -23,7 +23,7 @@ module.exports = {
       to: "/howto/front-end/configuring-your-theme"
     },
 	/****************************************************
-     * From the Web Modeler (potentially temporary until fixed in product)
+     * From the Web Modeler (potentially temporary until fixed in product, mapped)
      ****************************************************/
 	{
       from: "/refguide/web-modeler/domain-models-association-properties-wm",
@@ -48,25 +48,6 @@ module.exports = {
 	{
       from: "/howto/web-modeler/syncing-webmodeler-desktop",
       to: "/refguide/sync-webmodeler-desktopmodeler"
-    },
-	/****************************************************
-     * Web Modeler Guide (potentially temporary until verified, unmapped)
-     ****************************************************/
-	{
-      from: "/howto/start-with-a-blank-app",
-      to: "/web-modeler/general"
-    },
-    {
-      from: "/howto/tutorials/create-a-to-do-app",
-      to: "/web-modeler/general"
-    },
-    {
-      from: "/howto/tutorials/build-a-simple-hrm-app",
-      to: "/web-modeler/general"
-    },
-    {
-      from: "/howto/tutorials/build-an-iot-app",
-      to: "/web-modeler/general"
     },
 	/****************************************************
      * From the Developer Portal (potentially temporary until fixed in product, mapped) 
@@ -230,6 +211,17 @@ module.exports = {
     {
       from: "/docs/",
       to: "/"
+    },
+	/****************************************************
+     * Web Modeler Guide (permanent, unmapped)
+     ****************************************************/
+	{
+      from: "/howto/tutorials/",
+      to: "/web-modeler/general"
+    },
+	{
+      from: "/howto/tutorials/mendix-tutorials",
+      to: "/web-modeler/general"
     },
 	/****************************************************
      * From Desktop Modeler version 7 (permanent, mapped)

@@ -53,21 +53,21 @@ This is the recommended approach if you are building a new application, as it wi
 
 Open the Desktop Modeler (version 7.22.2 or above) and follow these steps:
 
-1. Click the icon in the top-right of the menu bar to open the Mendix App Store:
+1. Click the icon in the top-right of the menu bar to open the Mendix App Store.
 
 	![](attachments/deploying-to-mindsphere/app-store-icon.png)
 
 2. Enter *MindSphere* in the search box, and press <kbd>Enter</kbd>.
 
-3. Select **MindSphere Starter Application** in the search results:
+3. Select **MindSphere Starter Application** in the search results.
 
 	![](attachments/deploying-to-mindsphere/app-store-search.png)
   
-4. Click **Download** to create a new app project using this app:
+4. Click **Download** to create a new app project using this app.
 
 	![](attachments/deploying-to-mindsphere/app-store-download.png)
   
-5. To start the new app project, confirm where to store the app, the app name, and the project directory, then click **OK**:
+5. To start the new app project, confirm where to store the app, the app name, and the project directory, then click **OK**.
 
 	![](attachments/deploying-to-mindsphere/app-store-download-project.png)
 
@@ -75,17 +75,17 @@ Open the Desktop Modeler (version 7.22.2 or above) and follow these steps:
 
 If you have an existing app which was not based on the MindSphere starter app, you must import the required customization. The three modules which must be imported are:
 
-* MindSphere SSO from the Mendix App Store here: [Siemens MindSphere SSO](https://appstore.home.mendix.com/link/app/108805/).
+* MindSphere SSO from the Mendix App Store here: [Siemens MindSphere SSO](https://appstore.home.mendix.com/link/app/108805/)
 
-  This module enables users who are logged in to MindSphere to use your app without having to log in again. It also enables you to test your app locally. For more information, see the [Single Sign-On](#mssso) section, below.
+  This module enables users who are logged in to MindSphere to use your app without having to log in again. It also enables you to test your app locally. For more information, see the [Single Sign-On](/refguide/mindsphere/mindsphere-module-details#mssso) section of *MindSphere Module Details*.
 
-* MindSphere OS Bar Connector from the Mendix App Store here: [Siemens MindSphere OS Bar Connector](https://appstore.home.mendix.com/link/app/108804/).
+* MindSphere OS Bar Connector from the Mendix App Store here: [Siemens MindSphere OS Bar Connector](https://appstore.home.mendix.com/link/app/108804/)
 
-  This integrates the mandatory MindSphere OS Bar with your app. For more information, see the [MindSphere OS Bar](#msosbar) section, below.
+  This integrates the mandatory MindSphere OS Bar with your app. For more information, see the [MindSphere OS Bar](/refguide/mindsphere/mindsphere-module-details#msosbar) section of *MindSphere Module Details*.
 
-* MindSphere Theme Pack (MindSphere_UI_Resources) from the Mendix App Store here: [Siemens MindSphere Theme Pack](https://appstore.home.mendix.com/link/app/108803/).
+* MindSphere Theme Pack (MindSphere_UI_Resources) from the Mendix App Store here: [Siemens MindSphere Theme Pack](https://appstore.home.mendix.com/link/app/108803/)
 
-  This applies MindSphere styling to your app and includes some additional custom files which are required for the correct operation of your app. For more information, see the [MindSphere Theme Pack](#msthemepack) section, below.
+  This applies MindSphere styling to your app and includes some additional custom files which are required for the correct operation of your app. For more information, see the [MindSphere Theme Pack](/refguide/mindsphere/mindsphere-module-details#msthemepack) section of *MindSphere Module Details*.
 
 ## 4 Configuring the Modules
 
@@ -99,13 +99,13 @@ The following items in the MindSphereSingleSignOn module need to be configured.
 
 #### 4.1.1 CockpitApplicationName
 
-This must be identical to the name of your app as registered in the MindSphere developer portal. It must, therefore, fit the constraints listed in the [App Name](/refguide/mindsphere/mindsphere-development-considerations#appname) section of *MindSphere Development Considerations*.
+The value of *CockpitApplicationName* must be identical to the name of your app as registered in the MindSphere developer portal. It must, therefore, fit the constraints listed in the [App Name](/refguide/mindsphere/mindsphere-development-considerations#appname) section of *MindSphere Development Considerations*.
 
 [//]: # (MindGateURL and PublicKeyURL do not need to be changed until there are more MindSphere environments)
 
 #### 4.1.2 RegisterSingleSignOn
 
-This microflow must be added as the *After startup* microflow or added as a sub-microflow of an existing after startup microflow.
+The *RegisterSingleSignOn* microflow must be added as the **After startup** microflow or added as a sub-microflow of an existing *after startup* microflow.
 
 {{% alert type="info" %}}
 If you are using the MindSphere Starter Application, this will already be set up as the *After startup* microflow.
@@ -163,7 +163,7 @@ By default, the deployment package will be created in the *releases* folder of y
 
 To deploy your deployment package, do the following:
 
-1. Log in into MindSphere CF CLI using a one-time code:
+1. Log in to MindSphere CF CLI using a one-time code:
 
     * Enter `cf login -a https://api.cf.{region}.{mindsphere-domain} --sso`
     * Open the URL printed by the CLI and log in using your WebKey credentials to get a One Time Code
@@ -247,14 +247,14 @@ To create a new app in the MindSphere launchpad, do the following:
       default-src 'self' 'unsafe-inline' 'unsafe-eval' static.eu1.mindsphere.io sprintr.home.mendix.com; font-src 'self' static.eu1.mindsphere.io fonts.gstatic.com; style-src * 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval' static.eu1.mindsphere.io sprintr.home.mendix.com; img-src * data:;
       ```
 
-      {{% alert type="info" %}}These content security policy settings are needed to ensure that the MindSphere OS Bar and the [Mendix Feedback Widget](https://appstore.home.mendix.com/link/app/199/) are loaded correctly. You may need to set additional CSP settings if you make additional calls to other domains (for example, if you use Google maps from maps.googleapi.com).{{% /alert %}}
+      {{% alert type="info" %}}These content security policy (CSP) settings are needed to ensure that the MindSphere OS Bar and the [Mendix Feedback Widget](https://appstore.home.mendix.com/link/app/199/) are loaded correctly. You may need to set additional CSP settings if you make additional calls to other domains (for example, if you use Google maps from maps.googleapi.com).{{% /alert %}}
 
       ![](attachments/deploying-to-mindsphere/image14.png)
 
 13.  Click **Save** to save these details.
 14.  Click **Register** to register your app with the MindSphere launchpad.
 
-    	{{% alert type="info" %}}If the app has not been pushed yet, there will be no route set up for the app and you will get an error message. This will be resolved once you have pushed your app to Cloud Foundry{{% /alert %}}
+    	{{% alert type="info" %}}If the app has not been pushed yet, there will be no route set up for the app and you will get an error message. This will be resolved once you have pushed your app to Cloud Foundry.{{% /alert %}}
     
 #### 5.2.2 Setting Application Scopes in Developer Cockpit{#scopes}
 
@@ -267,7 +267,7 @@ To set up the appropriate scopes in MindSphere, do the following:
 
     ![](attachments/deploying-to-mindsphere/image15.png)
 
-If you are using the starter app, you should create two roles, *user* and *admin*.
+If you are using the starter app, you should create two scopes, *user* and *admin*.
 
 ![](attachments/deploying-to-mindsphere/image8.png)
 

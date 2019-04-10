@@ -171,7 +171,7 @@ It is based on the standard Mendix starter app for Mendix version 7.22. It also 
 * MindSphere Theme Pack
 * MindSphere OS Bar Connector
 
-The use of these modules is covered in more detail in [Siemens MindSphere – deployment](/developerportal/deploy/deploying-to-mindsphere).
+The use of these modules is covered in more detail in [MindSphere Module Details](/refguide/mindsphere/mindsphere-module-details).
 
 It also uses the **MindSphere Asset Management Connector**. This is described in [MindSphere Asset Management Connector](/refguide/mindsphere/mindsphere-asset-management-connector).
 
@@ -220,7 +220,7 @@ The app uses Single Sign-on (SSO) to identify the user. This is initiated in the
 
 The user is given the role of *user* or *admin* within MindSphere. These roles are translated to MindSphere scopes which are matched to the Mendix user role. With the recommended mapping, a user with the app role *user* in MindSphere will be given the Mendix user role *user*.
 
-For a more complete description, see the [User Scopes](#userscopes) section.
+For a more complete description, see the [User Scopes](#userscopes) section, above.
 
 #### 6.1.2 Multi-Tenant Support
 

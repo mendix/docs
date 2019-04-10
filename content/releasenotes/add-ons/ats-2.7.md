@@ -12,7 +12,7 @@ parent: "ats-2"
 We are happy to announce that ATS now supports mobile testing for web applications. With a Browserstack account you can test on Android 6 and 7 on real mobile devices. 
 
 * The format of test cases and the functions that are used to test on desktop devices also work the same way on mobile devices.
-* ATS functions are context aware, meaning that they can detect whey are run on mobile and interact with native dialogs, for example when setting a date field. All native input elements are set by automating the native dialogs, with the exception of drop downs which are set directly.
+* ATS functions are context aware, meaning that they detect the device and interact accordingly. For example when setting a date field on mobile the native date dialog is used. All native input elements are set by automating the native dialogs, with the exception of drop downs which are set directly.
 * You can use the ATS recorder even if you have different pages for desktop and mobile. 
 
 For all the details please refer to the [mobile section in the ATS reference guide](/ats/refguide/rg-version-2/mobile).

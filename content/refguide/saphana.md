@@ -29,7 +29,7 @@ For example, `contains('OneTwo', 'one')` will return `false`.
 
  #### Sorting, Grouping, and Aggregating
 
- It is not possible to sort, group or use aggregate functions such as `count()` on unlimited strings or strings with a specified length greater than 5000\. This is because such long or unlimited strings are implemented with the data type NCLOB. Consider decreasing the length of the string attribute or removing it from data grids.  
+ It is not possible to sort, group or use aggregate functions such as `count()` on unlimited strings or strings with a specified length greater than 5000\. This is because such long or unlimited strings are implemented with the data type CLOB. Consider decreasing the length of the string attribute or removing it from data grids.  
 
  #### Select DISTINCT attribute of type CLOB
 

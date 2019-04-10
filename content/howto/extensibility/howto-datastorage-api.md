@@ -29,9 +29,9 @@ This how to describes how you can build the following microflow actions:
 
     ![Microflow actions toolbox](attachments/dsapi/image001.png)
 
-For more information on Java programming for Mendix, see [Java Programming](/refguide/java-programming).
+For more information on Java programming for Mendix, see [Java Programming](/refguide7/java-programming).
 
-For more information on calling Java actions from a microflow, see [Java Actions](/refguide/java-actions).
+For more information on calling Java actions from a microflow, see [Java Actions](/refguide7/java-actions).
 
 ## 2 Retrieving Advanced Xpath
 

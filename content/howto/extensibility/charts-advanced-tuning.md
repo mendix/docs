@@ -113,10 +113,10 @@ To create custom a configuration, follow these steps:
 
 ## 6 Read More
 
-Reference guide for the [advanced properties](/refguide/charts-configuration#advanced)
+Reference guide for the [advanced properties](/refguide7/charts-configuration#advanced)
 
-Layout options: [cheat sheet](/refguide/charts-advanced-cheat-sheet#layout-all)  
-Configuration options: [cheat sheet](/refguide/charts-advanced-cheat-sheet#config-options)  
-Data series options: [cheat sheet](/refguide/charts-advanced-cheat-sheet#data-series)  
+Layout options: [cheat sheet](/refguide7/charts-advanced-cheat-sheet#layout-all)  
+Configuration options: [cheat sheet](/refguide7/charts-advanced-cheat-sheet#config-options)  
+Data series options: [cheat sheet](/refguide7/charts-advanced-cheat-sheet#data-series)  
 
 Full reference: https://plot.ly/javascript/

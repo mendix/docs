@@ -205,4 +205,4 @@ To add the error handling for those situations when the OrderID parameter is fil
 
 ## 6 Read More
 
-* For more information on creating published REST services in Mendix (including GET, POST, and DELETE operations), see [Published REST Services](/refguide/published-rest-services)
+* For more information on creating published REST services in Mendix (including GET, POST, and DELETE operations), see [Published REST Services](/refguide7/published-rest-services)

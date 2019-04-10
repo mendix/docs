@@ -13,11 +13,12 @@ When developing a Mendix app which will be deployed to MindSphere, there are a n
 * [Atlas UI](#atlasui)
 * [Cloud Foundry Environment Variables](#cfenvvars)
 * [Licensing Your App](#licensing)
-* [Limitations](#limitations)
 * [Local Testing](#localtesting)
 * [MindSphereToken](#mstoken)
 * [Multi-Tenancy](#multitenancy)
 * [Validation](#validation)
+
+Finally, there is a section on some [Limitations](#limitations) which apply to Mendix apps deployed to MindSphere.
 
 ## 2 Atlas UI{#atlasui}
 
@@ -85,58 +86,9 @@ To license your app, you need to obtain a license key from [Mendix Support](http
 
 Instructions for licensing apps are available in the [License Activation](https://github.com/mendix/cf-mendix-buildpack#license-activation) section of the *Mendix Cloud Foundry Buildpack Readme*. Refer to [Cloud Foundry Environment Variables](#cfenvvars), above, for instructions on changing Cloud Foundry environment variables.
 
-## 5 Limitations{#limitations}
+## 5 Local Testing{#localtesting}
 
-The following limitations apply to Mendix apps which are deployed to MindSphere.
-
-If these limitations affect the design of your app, you can still create a Mendix app to use MindSphere APIs from outside MindSphere.
-
-### 5.1 Binary File Storage
-
-MindSphere does not currently have a compatible file service available in its Cloud Foundry stack. Therefore, you cannot use any Mendix features which rely on having a file service.
-
-In particular, this means that you cannot use entities which are specializations of the *System.FileDocument* entity. This also includes all entities which are specializations of the *System.Image* entity, as this is also a specialized type of FileDocument.
-
-You can store small amounts of binary information in persistable entities. However, the database management system (DBMS) will have strict limits on the size of binary attributes and using them as a replacement for FileDocument entities can lead to performance issues.
-
-Alternatively, you can use a separate AWS S3 bucket. See [Configuring External Filestore](https://github.com/mendix/cf-mendix-buildpack#configuring-external-filestore) in the *Mendix Cloud Foundry Buildpack GitHub Repository*. Refer to [Cloud Foundry Environment Variables](#cfenvvars), above, for instructions on changing Cloud Foundry environment variables.
-
-### 5.2 App Name{#appname}
-
-There are no limitations on what you call your app within Mendix. However, when you deploy the app to MindSphere, the app name registered in the Developer Cockpit must have the following characteristics:
-
-* Contains only *lowercase* alphanumeric characters and, optionally, the symbols `-`, `_` and `.`
-* Starts with a letter
-* Length does not exceed 40 characters
-* Is unique within your tenant
-
-If you want to use the same app name in both Mendix and MindSphere, you should bear these constraints in mind when naming your Mendix app.
-
-### 5.3 Roles and Scopes
-
-At present, MindSphere only supports two roles. You should take this into account when designing security within your Mendix app.
-
-It is recommended that you create two scopes for your MindSphere app, **user** and **admin** which will map to identically-named user roles in your Mendix app.
-
-There is a more detailed discussion of MindSphere and Mendix roles and scopes in the [Roles & Scopes](/developerportal/deploy/deploying-to-mindsphere#rolesscopes) section of *Siemens MindSphere – deploy*.
-
-### 5.4 Logout from MindSphere
-
-If the user logs out from MindSphere, the Mendix app will not delete the session cookie.
-
-![](attachments/mindsphere-development-considerations/image18.png)
-
-{{% alert type="warning" %}}
-In some circumstances, this could lead to another user *using the same app in the same browser on the same computer*, picking up the session from the previous user if the cookie has not yet expired.
-{{% /alert %}}
-
-### 5.5 Cloud Services Platform 
-
-Mendix apps can currently only be deployed to MindSphere running on AWS (Amazon Web Services). They cannot currently be deployed to MindSphere running on Microsoft Azure.
-
-## 6 Local Testing{#localtesting}
-
-### 6.1 Credentials 
+### 5.1 Credentials 
 
 When you run your app locally, you will not be able to use SSO to get your credentials. You will be logged on as MxAdmin and will be presented with a login screen either when the app starts, or the first time that your app attempts to retrieve your access token, depending on the value of the constant *AskForAppCredsOnStartUp*.
 
@@ -198,29 +150,39 @@ The definition of a tenant on MindSphere is available in the MindSphere document
 
 This should be the tenant that the user has access to in a multi-tenant environment. For a developer tenant, this must be the same as the HostTenant. In an operator or iot plan tenant, you can change this to allow you to test multi-tenant apps.
 
-### 6.2 User Roles
+### 5.2 User Roles
 
 If you are testing different roles in your app, do not use the demo users. If you switch between demo users, this will not correctly populate the tenant and role information from MindSphere. To test different roles, allocate the role to MxAdmin, redeploy, and log in again.
 
-## 7 MindSphereToken{#mstoken}
+#### 5.3 Local User Passwords
 
-This contains the Access_token attribute which needs to be passed as the Authorization header in REST calls to MindSphere APIs.
+Local users should not be created for your MindSphere app.
 
-To improve security of your app, it is recommended that you delete MindSphereToken before showing a page or reaching the end of the microflow.
+When a new user is identified during SSO, the SSO process generates a random password for the user. The password policy for your app needs to accept these randomly generated passwords. The password generation algorithm generates passwords of a fixed length, so the password policy should not be set to require more characters.
+
+{{% alert type="info" %}}
+This policy is set up as the default in the MindSphere starter and example apps and should not be changed.
+{{% /alert %}}
+
+## 6 Authorizing MindSphere REST Calls{#mstoken}
+
+The **MindSphereToken** entity contains the *Access_token* attribute which needs to be passed as the Authorization header in REST calls to MindSphere APIs.
+
+To improve security of your app, it is recommended that you delete the MindSphereToken object returned by the *Access token* action before showing a page or reaching the end of the microflow.
 
 ![Section of a microflow showing the Access token action and the Edit Custom HTTP Header dialog in the Call REST action](attachments/mindsphere-development-considerations/delete-mindspheretoken.png)
 
-## 8 Multi-Tenancy{#multitenancy}
+## 7 Multi-Tenancy{#multitenancy}
 
 In MindSphere, apps are usually designed to be multi-tenant, meaning that a single instance of the app serves multiple tenants. A tenant is a representation of a real-world organization. It groups users, data, assets, entities, and many kinds of other properties. Access to these resources for users of the same tenant is controlled via the authorization management system.
 
 For a MindSphere app to be multi-tenant, each user can only see the data from a single tenant, defined by their login credentials, and cannot access resources of other tenants.
 
-### 8.1 Control through MindSphere APIs
+### 7.1 Control through MindSphere APIs
 
 The Authorization HTTP Header (see DS_MindSphereAccessToken in the [Microflows](/developerportal/deploy/deploying-to-mindsphere#microflows) section of *Siemens Mindsphere – deployment*) which is passed for every MindSphere API call ensures that the user can only obtain data which is authorized to them via their tenant.
 
-### 8.2 Control within a Mendix app
+### 7.2 Control within a Mendix app
 
 If no security is placed on persistent Mendix entity objects, these are accessible to all users of the app (subject to access granted by their user role). This means that any app which stores data in persistent Mendix entities cannot be made multi-tenant without additional security.
 
@@ -275,9 +237,58 @@ You have some limits which are set for the user's tenant to be applied to a time
 
 4.  When you want to retrieve the list of limits, call this microflow instead of using the retrieve objects action. This will ensure that tenant-based security is always applied.
 
-## 9 Validation{#validation}
+## 8 Validation{#validation}
 
 Your app should, as a minimum, meet the requirements of the checklist on the MindSphere developer site here: [Get your Application Ready for Productive Use](https://developer.mindsphere.io/howto/howto-app-publication.html).
+
+## 9 Limitations{#limitations}
+
+The following limitations apply to Mendix apps which are deployed to MindSphere.
+
+If these limitations affect the design of your app, you can still create a Mendix app to use MindSphere APIs from outside MindSphere.
+
+### 9.1 Binary File Storage
+
+MindSphere does not currently have a compatible file service available in its Cloud Foundry stack. Therefore, you cannot use any Mendix features which rely on having a file service.
+
+In particular, this means that you cannot use entities which are specializations of the *System.FileDocument* entity. This also includes all entities which are specializations of the *System.Image* entity, as this is also a specialized type of FileDocument.
+
+You can store small amounts of binary information in persistable entities. However, the database management system (DBMS) will have strict limits on the size of binary attributes and using them as a replacement for FileDocument entities can lead to performance issues.
+
+Alternatively, you can use a separate AWS S3 bucket. See [Configuring External Filestore](https://github.com/mendix/cf-mendix-buildpack#configuring-external-filestore) in the *Mendix Cloud Foundry Buildpack GitHub Repository*. Refer to [Cloud Foundry Environment Variables](#cfenvvars), above, for instructions on changing Cloud Foundry environment variables.
+
+### 9.2 App Name{#appname}
+
+There are no limitations on what you call your app within Mendix. However, when you deploy the app to MindSphere, the app name registered in the Developer Cockpit must have the following characteristics:
+
+* Contains only *lowercase* alphanumeric characters and, optionally, the symbols `-`, `_` and `.`
+* Starts with a letter
+* Length does not exceed 40 characters
+* Is unique within your tenant
+
+If you want to use the same app name in both Mendix and MindSphere, you should bear these constraints in mind when naming your Mendix app.
+
+### 9.3 Roles and Scopes
+
+At present, MindSphere only supports two roles. You should take this into account when designing security within your Mendix app.
+
+It is recommended that you create two scopes for your MindSphere app, **user** and **admin** which will map to identically-named user roles in your Mendix app.
+
+There is a more detailed discussion of MindSphere and Mendix roles and scopes in the [Roles & Scopes](/developerportal/deploy/deploying-to-mindsphere#rolesscopes) section of *Siemens MindSphere – deploy*.
+
+### 9.4 Logout from MindSphere
+
+If the user logs out from MindSphere, the Mendix app will not delete the session cookie.
+
+![](attachments/mindsphere-development-considerations/image18.png)
+
+{{% alert type="warning" %}}
+In some circumstances, this could lead to another user *using the same app in the same browser on the same computer*, picking up the session from the previous user if the cookie has not yet expired.
+{{% /alert %}}
+
+### 9.5 Cloud Services Platform 
+
+Mendix apps can currently only be deployed to MindSphere running on AWS (Amazon Web Services). They cannot currently be deployed to MindSphere running on Microsoft Azure.
 
 ## 10 Read More
 

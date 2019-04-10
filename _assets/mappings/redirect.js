@@ -228,7 +228,7 @@ module.exports = {
      ****************************************************/
 	{
       from: "/refguide7/modeler",
-      to: "/refguide7/desktop-modeler-overview"
+      to: "/refguide/desktop-modeler-overview"
     },
 	{
       from: "/refguide7/Modeler",

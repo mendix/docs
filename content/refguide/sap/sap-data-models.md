@@ -12,7 +12,7 @@ Mendix apps can consume OData services exposed by SAP back-end systems. To do th
 
 The SAP OData Connector needs to know details of the OData service which has been exposed. This involves mapping the data structures exposed by the OData service (via the $metadata URL) to entities and attributes of the domain model. This information is created as a Mendix module (.mpk) file which can be imported into your Mendix app.
 
-Any OData service can be used to generate a data model using the SAP OData Model Creator. See [How To Use the SAP OData Model Creator](/howto/sap/use-sap-odata-model-creator) for instructions on how to do this.
+Any OData service can be used to generate a data model using the SAP OData Model Creator. See [How To Use the SAP OData Model Creator](/howto7/sap/use-sap-odata-model-creator) for instructions on how to do this.
 
 To accelerate the consumption of the SAP Business Suite services, Mendix also provides the full set of Business Suite for SAP Fiori Cloud apps as modules in the Mendix App Store. See section [3 SAP Data Models in the App Store](#appstoremodels).
 
@@ -60,4 +60,4 @@ For example, if you need a CRM app, it is recommended to use a **Field Sales Rep
 ## 4 Read More
 
 * [SAP OData Connector](sap-odata-connector)
-* [How To Use the SAP OData Model Creator](/howto/sap/use-sap-odata-model-creator)
+* [How To Use the SAP OData Model Creator](/howto7/sap/use-sap-odata-model-creator)

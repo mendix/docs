@@ -9,16 +9,15 @@ parent: "ats-2"
 
 ### Mobile testing
 
-We are happy to announce that ATS now supports mobile testing for web applications. With a Browserstack account you can test on Android 6 and 7 on real mobile devices. 
+We are happy to announce that ATS now supports mobile testing for web applications. With a Browserstack account, you can test on Android 6 and 7 on real mobile devices. 
 
-* The format of test cases and the functions that are used to test on desktop devices also work the same way on mobile devices.
-* ATS functions are context aware, meaning that they detect the device and interact accordingly. For example when setting a date field on mobile the native date dialog is used. All native input elements are set by automating the native dialogs, with the exception of drop downs which are set directly.
+* The format of test cases and the functions that are used to test on desktop devices work the same way on mobile devices.
+* ATS functions are context-aware, meaning, they detect the device and interact accordingly. For example, when setting a date field on mobile, the native date dialog box is used. All native input elements are set by automating the native dialog boxes, with the exception of drop-down menus, which are set directly.
 * You can use the ATS recorder even if you have different pages for desktop and mobile. 
 
-For all the details please refer to the [mobile section in the ATS reference guide](/ats/refguide/rg-version-2/mobile).
+For more details, refer to [Mobile](/ats/refguide/rg-version-2/mobile) in the *ATS Reference Guide*.
 
 _Please note that this feature is still in beta._
-
 
 ### Add an option to rerun only the not passed test cases from a test suite or a job
 

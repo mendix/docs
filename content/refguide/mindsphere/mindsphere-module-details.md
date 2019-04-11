@@ -19,9 +19,9 @@ When running on MindSphere, the MindSphere user can use their MindSphere credent
 The MindSphere SSO module is included in the MindSphere starter and example apps. It can also be downloaded separately here: [MindSphere SSO](https://appstore.home.mendix.com/link/app/108805/).
 
 {{% alert type="warning" %}}
-The SSO module also requires changes to the app theme see the section [Customizing an Existing App](#existingapp), above.
+The SSO module also requires changes to the app theme see the section on [MindSphere Theme Pack](#msthemepack), below.
 
-Please ensure that you download the latest version of the [Theme Pack](#msthemepack) module when you download the SSO module.
+Please ensure that you also download the **latest version** of the MindSphere Theme Pack when you download the SSO module.
 {{% /alert %}}
 
 ### 2.1 Constants
@@ -84,6 +84,8 @@ This microflow populates the *Name* attribute of the *Tenant* entity and the *Em
 
 ![Domain model showing MindSphereAccount, Tenant, and TenantObject.](attachments/mindsphere-module-details/image7.png)
 
+In addition, MindSphere SSO will identify whether the current user is a subtenant using **IsSubTenantUser** and, if so, will populate the name of the subtenant in **SubtenantId**. More information about subtenants can be found in the MindSphere documentation [Subtenants](https://developer.mindsphere.io/apis/core-tenantmanagement/api-tenantmanagement-overview.html#subtenants).
+
 {{% alert type="info" %}}
 If the same user logs in using a different tenant, Mendix will treat this as a different user and a User ID will be used within Mendix instead of a user name. 
 {{% /alert %}}
@@ -94,7 +96,7 @@ For advice on how to make your apps multi-tenant, see [Multi-Tenancy](/refguide/
 
 Using SSO, the Mendix app needs to know which roles to allocate to the user. This enables the app to know whether the user should have, for example, administrator access.
 
-MindSphere apps have two roles: user and admin. Each MindSphere user is given one or both of these roles. As well as defining access to MindSphere core roles, these roles are also mapped to application scopes. For information on how to set up scopes in MindSphere, see the [Setting Application Scopes in Developer Cockpit](#scopes) section, above.
+MindSphere apps have two roles: user and admin. Each MindSphere user is given one or both of these roles. As well as defining access to MindSphere core roles, these roles are also mapped to application scopes. For information on how to set up scopes in MindSphere, see the [Setting Application Scopes in Developer Cockpit](/developerportal/deploy/deploying-to-mindsphere#scopes) section in *Siemens MindSphere – deploy*.
 
 During the login process, MindSphere application scopes are mapped to Mendix roles automatically. The comparison ignores upper- and lower-case differences. If the roles match, then that Mendix role is assigned to the user.
 
@@ -124,7 +126,7 @@ You can see how the MindSphere OS Bar Integration works in [MindSphere OS Bar In
 The MindSphereOSBarConfig module creates an endpoint which is used by the MindSphere OS Bar to provide tenant context and information about the application. The MindSphereOSBarConfig module is included in the MindSphere starter app, or can be downloaded from the Mendix App Store here: [MindSphere OS Bar Connector](https://appstore.home.mendix.com/link/app/108804/).
 
 {{% alert type="info" %}}
-The MindSphere OS Bar Connector also needs the MindSphere Theme Pack, or manual configuration of the index.html file in order to work. See the sections [Customizing an Existing App](#existingapp) and [index.html Changes](#indexhtmlchanges).
+The MindSphere OS Bar Connector also needs the MindSphere Theme Pack, or manual configuration of the index.html file, in order to work. See [Customizing an Existing App](/developerportal/deploy/deploying-to-mindsphere#existingapp) in *Siemens MindSphere – deploy* and [index.html Changes](#indexhtmlchanges), below, for more information.
 {{% /alert %}}
 
 ### 3.1 Configuring the OS Bar

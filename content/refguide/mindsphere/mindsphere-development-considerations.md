@@ -29,7 +29,7 @@ The MindSphere Theme Pack includes two ways of including MindSphere icons in you
 You can select MindSphere icons from the MindSphere Theme Pack to be displayed as SVGs in your application.
 
 1. Open the properties of a widget which can display an icon (for example a button).
-2. Click **Select...** next to the Icon.
+2. Click **Select...** next to *Icon*.
 3. Select **Image** as the icon type.
 4. Find the image that you want and click **Select**. The MindSphere icons are in the module *MindSphere_UI_Resources*.
 
@@ -144,7 +144,7 @@ This is a valid version of the MindSphere app as registered in the Developer Coc
 
 Set this to *True* to enable a reverse proxy for MindSphere API calls which are made directly from the html pages (for example, the calls from the MindSphere OS Bar).
 
-This adds a new endpoint `/api/**` to the app. An access token is added to all calls from the UI to MindSphere and these are forwarded directly. This setting is needed if you use MindSphere WebComponents during local development, as the WebComponents request data direct calls to MindSphere APIs without any Microflows.
+This adds a new endpoint `/api/**` to the app. An access token is added to all calls from the UI to MindSphere and these are forwarded directly. This setting is needed if you use MindSphere WebComponents during local development, as the WebComponents request direct data calls to MindSphere APIs without any Microflows.
 
 **HostTenant**
 
@@ -259,7 +259,7 @@ Alternatively, you can use a separate AWS S3 bucket. See [Configuring External F
 
 ### 9.2 App Name{#appname}
 
-There are no limitations on what you call your app within Mendix. However, when you deploy the app to MindSphere, the app name registered in the Developer Cockpit must have the following characteristics:
+There are few limitations on what you call your app within Mendix. However, when you deploy the app to MindSphere, the app name registered in the Developer Cockpit must have the following characteristics:
 
 * Contains only *lowercase* alphanumeric characters and, optionally, the symbols `-`, `_` and `.`
 * Starts with a letter
@@ -274,7 +274,7 @@ At present, MindSphere only supports two roles. You should take this into accoun
 
 It is recommended that you create two scopes for your MindSphere app, **user** and **admin** which will map to identically-named user roles in your Mendix app.
 
-There is a more detailed discussion of MindSphere and Mendix roles and scopes in the [Roles & Scopes](/developerportal/deploy/deploying-to-mindsphere#rolesscopes) section of *Siemens MindSphere – deploy*.
+There is a more detailed discussion of MindSphere and Mendix roles and scopes in the [Roles & Scopes](mindsphere-module-details) section of *MindSphere Module Details*.
 
 ### 9.4 Logout from MindSphere
 
@@ -293,3 +293,4 @@ Mendix apps can currently only be deployed to MindSphere running on AWS (Amazon 
 ## 10 Read More
 
 * [Siemens MindSphere – deployment](/developerportal/deploy/deploying-to-mindsphere)
+* [MindSphere Module Details](mindsphere-module-details)

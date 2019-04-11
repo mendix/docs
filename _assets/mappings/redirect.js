@@ -31,7 +31,45 @@ module.exports = {
       to: "/refguide/sync-webmodeler-desktopmodeler"
     },
 	/****************************************************
-     * Developer Portal Guide (potentially temporary, unmapped) 
+     * From the Support Portal (potentially temporary until fixed in product, mapped) 
+     ****************************************************/
+	{
+      from: "/community/app-store-content-support",
+      to: "/developerportal/app-store/app-store-content-support"
+    },
+	{
+      from: "/mendixcloud/custom-domains",
+      to: "/developerportal/deploy/custom-domains"
+    },
+	{
+      from: "/developerportal/howto/how-to-link-app-to-node",
+      to: "/developerportal/deploy/licensing-apps"
+    },
+	{
+      from: "/developerportal/howto/how-to-link-a-different-app-to-a-node",
+      to: "/developerportal/deploy/licensing-apps"
+    },
+	{
+      from: "/developerportal/support/new-app-request-template",
+      to: "/developerportal/support/new-app-node-request-template"
+    },
+	{
+      from: "/developerportal/support/export-a-project-package",
+      to: "/refguide/export-project-package-dialog"
+    },
+	/****************************************************
+     * PERMANENT REDIRECTS
+     ****************************************************/
+    {
+      from: "/docs/Overview",
+      to: "/"
+    },
+    {
+      from: "/docs/",
+      to: "/"
+    },
+	/****************************************************
+     * Developer Portal Guide (permanent, unmapped) 
      ****************************************************/
     {
       from: "/howtogeneral/mendixcloud/trends",
@@ -81,43 +119,9 @@ module.exports = {
       from: "/community/app-store/app-store-overview",
       to: "/developerportal/app-store/app-store-overview"
     },
-	/****************************************************
-     * From the Support Portal (potentially temporary until fixed in product, mapped) 
-     ****************************************************/
 	{
-      from: "/community/app-store-content-support",
-      to: "/developerportal/app-store/app-store-content-support"
-    },
-	{
-      from: "/mendixcloud/custom-domains",
-      to: "/developerportal/deploy/custom-domains"
-    },
-	{
-      from: "/developerportal/howto/how-to-link-app-to-node",
-      to: "/developerportal/deploy/licensing-apps"
-    },
-	{
-      from: "/developerportal/howto/how-to-link-a-different-app-to-a-node",
-      to: "/developerportal/deploy/licensing-apps"
-    },
-	{
-      from: "/developerportal/support/new-app-request-template",
-      to: "/developerportal/support/new-app-node-request-template"
-    },
-	{
-      from: "/developerportal/support/export-a-project-package",
-      to: "/refguide/export-project-package-dialog"
-    },
-	/****************************************************
-     * PERMANENT REDIRECTS
-     ****************************************************/
-    {
-      from: "/docs/Overview",
-      to: "/"
-    },
-    {
-      from: "/docs/",
-      to: "/"
+      from: "/deployment/mendixcloud/sending-email",
+      to: "/developerportal/deploy/sending-email"
     },
 	/****************************************************
      * From the Developer Portal (permanent, mapped) 
@@ -194,6 +198,17 @@ module.exports = {
       to: "/apm/"
     },
 	/****************************************************
+     * Web Modeler Guide (permanent, unmapped)
+     ****************************************************/
+	{
+      from: "/howto/tutorials/",
+      to: "/web-modeler/general"
+    },
+	{
+      from: "/howto/tutorials/mendix-tutorials",
+      to: "/web-modeler/general"
+    },
+	/****************************************************
      * How-to's (permanent, unmapped)
      ****************************************************/
     {
@@ -213,15 +228,11 @@ module.exports = {
       to: "/howto/front-end/configuring-your-theme"
     },
 	/****************************************************
-     * Web Modeler Guide (permanent, unmapped)
-     ****************************************************/
+     * How-to's version 7 (permanent, unmapped)
+     ****************************************************/	
 	{
-      from: "/howto/tutorials/",
-      to: "/web-modeler/general"
-    },
-	{
-      from: "/howto/tutorials/mendix-tutorials",
-      to: "/web-modeler/general"
+      from: "/howto/ux/configuring-your-theme",
+      to: "/howto/front-end/configuring-your-theme"
     },
 	/****************************************************
      * From Desktop Modeler version 7 (permanent, mapped)
@@ -233,6 +244,14 @@ module.exports = {
 	{
       from: "/refguide7/Modeler",
       to: "/refguide/desktop-modeler-overview"
+    },
+	{
+      from: "/refguide7/desktop-webmodeler",
+      to: "/refguide/sync-webmodeler-desktopmodeler"
+    },
+	{
+      from: "/web-modeler/general-sync-webmodeler-desktopmodeler-wm",
+      to: "/refguide/sync-webmodeler-desktopmodeler"
     },
 	{
       from: "/refguide7/download-from-team-server-dialog",
@@ -253,14 +272,6 @@ module.exports = {
 	{
       from: "/deployment/cloud-foundry/",
       to: "/developerportal/deploy/cloud-foundry-deploy"
-    },
-	{
-      from: "/refguide7/desktop-webmodeler",
-      to: "/refguide/sync-webmodeler-desktopmodeler"
-    },	
-	{
-      from: "/web-modeler/general-sync-webmodeler-desktopmodeler-wm",
-      to: "/refguide/sync-webmodeler-desktopmodeler"
     },	
 	{
       from: "/howto7/solving-load-and-import-errors",

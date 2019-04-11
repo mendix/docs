@@ -31,7 +31,45 @@ module.exports = {
       to: "/refguide/sync-webmodeler-desktopmodeler"
     },
 	/****************************************************
-     * Developer Portal Guide (potentially temporary, unmapped) 
+     * From the Support Portal (potentially temporary until fixed in product, mapped) 
+     ****************************************************/
+	{
+      from: "/community/app-store-content-support",
+      to: "/developerportal/app-store/app-store-content-support"
+    },
+	{
+      from: "/mendixcloud/custom-domains",
+      to: "/developerportal/deploy/custom-domains"
+    },
+	{
+      from: "/developerportal/howto/how-to-link-app-to-node",
+      to: "/developerportal/deploy/licensing-apps"
+    },
+	{
+      from: "/developerportal/howto/how-to-link-a-different-app-to-a-node",
+      to: "/developerportal/deploy/licensing-apps"
+    },
+	{
+      from: "/developerportal/support/new-app-request-template",
+      to: "/developerportal/support/new-app-node-request-template"
+    },
+	{
+      from: "/developerportal/support/export-a-project-package",
+      to: "/refguide/export-project-package-dialog"
+    },
+	/****************************************************
+     * PERMANENT REDIRECTS
+     ****************************************************/
+    {
+      from: "/docs/Overview",
+      to: "/"
+    },
+    {
+      from: "/docs/",
+      to: "/"
+    },
+	/****************************************************
+     * Developer Portal Guide (permanent, unmapped) 
      ****************************************************/
     {
       from: "/howtogeneral/mendixcloud/trends",
@@ -81,43 +119,9 @@ module.exports = {
       from: "/community/app-store/app-store-overview",
       to: "/developerportal/app-store/app-store-overview"
     },
-	/****************************************************
-     * From the Support Portal (potentially temporary until fixed in product, mapped) 
-     ****************************************************/
 	{
-      from: "/community/app-store-content-support",
-      to: "/developerportal/app-store/app-store-content-support"
-    },
-	{
-      from: "/mendixcloud/custom-domains",
-      to: "/developerportal/deploy/custom-domains"
-    },
-	{
-      from: "/developerportal/howto/how-to-link-app-to-node",
-      to: "/developerportal/deploy/licensing-apps"
-    },
-	{
-      from: "/developerportal/howto/how-to-link-a-different-app-to-a-node",
-      to: "/developerportal/deploy/licensing-apps"
-    },
-	{
-      from: "/developerportal/support/new-app-request-template",
-      to: "/developerportal/support/new-app-node-request-template"
-    },
-	{
-      from: "/developerportal/support/export-a-project-package",
-      to: "/refguide/export-project-package-dialog"
-    },
-	/****************************************************
-     * PERMANENT REDIRECTS
-     ****************************************************/
-    {
-      from: "/docs/Overview",
-      to: "/"
-    },
-    {
-      from: "/docs/",
-      to: "/"
+      from: "/deployment/mendixcloud/sending-email",
+      to: "/developerportal/deploy/sending-email"
     },
 	/****************************************************
      * From the Developer Portal (permanent, mapped) 

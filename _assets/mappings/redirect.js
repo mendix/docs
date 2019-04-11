@@ -4,25 +4,6 @@ module.exports = {
      * POTENTIALLY TEMPORARY REDIRECTS
      ****************************************************/
 	/****************************************************
-     * How-to's version 7 (COULD BE LEFT AS PERMANENT FOR MOST CURRENT VERSION; COULD BE RENAMED FOR 7)
-     ****************************************************/
-    {
-      from: "/howtogeneral/bestpractices/ux-best-practices",
-      to: "/howto/front-end/ux-best-practices"
-    },
-	{
-      from: "/howtogeneral/bestpractices/best-practices-security-and-improvements-for-mendix-applications",
-      to: "/howto/security/best-practices-security"
-    },
-	{
-      from: "/howtogeneral/bestpractices/best-practices-for-app-performance-in-mendix-7",
-      to: "/howto/general/community-best-practices-for-app-performance"
-    },	
-	{
-      from: "/howto/ux/configuring-your-theme",
-      to: "/howto/front-end/configuring-your-theme"
-    },
-	/****************************************************
      * From the Web Modeler (potentially temporary until fixed in product, mapped)
      ****************************************************/
 	{
@@ -48,45 +29,6 @@ module.exports = {
 	{
       from: "/howto/web-modeler/syncing-webmodeler-desktop",
       to: "/refguide/sync-webmodeler-desktopmodeler"
-    },
-	/****************************************************
-     * From the Developer Portal (potentially temporary until fixed in product, mapped) 
-     ****************************************************/
-	{
-      from: "/developerportal/settings/technical-contact",
-      to: "/developerportal/company-app-roles/technical-contact"
-    }, 
-    {
-      from: "/developerportal/general/technical-contact",
-      to: "/developerportal/company-app-roles/technical-contact"
-    },	 
-	{
-      from: "/deployment/mendixcloud/certificates",
-      to: "/developerportal/deploy/certificates"
-    },
-	{
-      from: "/refguide/certificates",
-      to: "/developerportal/deploy/certificates"
-    },
-	{
-      from: "/mendixcloud/monitoring-application-health",
-      to: "/developerportal/operate/monitoring-application-health"
-    },
-	{
-      from: "/developerportal/howto/deploying-to-the-cloud",
-      to: "/developerportal/deploy/mendix-cloud-deploy"
-    },
-  {
-      from: "/deployment/on-premises/deploy-mendix-on-microsoft-windows",
-      to: "/developerportal/deploy/deploy-mendix-on-microsoft-windows"
-    },
-  {
-      from: "/deployment/on-premises",
-      to: "/developerportal/deploy/on-premises-design"
-    },
-	{
-      from: "/developerportal/community-tools/the-mendix-job-board",
-      to: "/developerportal/community-tools/mendix-job-board"
     },
 	/****************************************************
      * Developer Portal Guide (potentially temporary, unmapped) 
@@ -140,41 +82,6 @@ module.exports = {
       to: "/developerportal/app-store/app-store-overview"
     },
 	/****************************************************
-     * From the App Store (potentially temporary until fixed in product, mapped)
-     ****************************************************/
-	{
-	  from: "/community/app-store/use-app-store-content-in-the-modeler",
-	  to: "/developerportal/app-store/app-store-content"
-    },
-	{
-      from: "/developerportal/app-store/use-app-store-content-in-the-modeler",
-      to: "/developerportal/app-store/app-store-content"
-    },
-	{
-      from: "/mendixcloud/java-in-the-cloud",
-      to: "/developerportal/deploy/java-in-the-cloud"
-    },
-	{
-      from: "/mendixcloud/security-constraints-in-the-mendix-cloud",
-      to: "/developerportal/deploy/java-in-the-cloud"
-    },
-	{
-      from: "/howto50/Contributing+to+a+GitHub+repository",
-      to: "/howto/collaboration-requirements-management/contribute-to-a-github-repository"
-    },
-	{
-      from: "/howto/collaboration-project-management/contribute-to-a-github-repository",
-      to: "/howto/collaboration-requirements-management/contribute-to-a-github-repository"
-    },
-	{
-      from: "/mendixcloud/Integrate+your+app+with+Mendix+SSO",
-      to: "/developerportal/deploy/integrate-with-mendix-sso"
-    },
-	{
-      from: "/addons/APM",
-      to: "/apm/"
-    },
-	/****************************************************
      * From the Support Portal (potentially temporary until fixed in product, mapped) 
      ****************************************************/
 	{
@@ -211,6 +118,99 @@ module.exports = {
     {
       from: "/docs/",
       to: "/"
+    },
+	/****************************************************
+     * From the Developer Portal (permanent, mapped) 
+     ****************************************************/
+	{
+      from: "/developerportal/settings/technical-contact",
+      to: "/developerportal/company-app-roles/technical-contact"
+    }, 
+    {
+      from: "/developerportal/general/technical-contact",
+      to: "/developerportal/company-app-roles/technical-contact"
+    },	 
+	{
+      from: "/deployment/mendixcloud/certificates",
+      to: "/developerportal/deploy/certificates"
+    },
+	{
+      from: "/refguide/certificates",
+      to: "/developerportal/deploy/certificates"
+    },
+	{
+      from: "/mendixcloud/monitoring-application-health",
+      to: "/developerportal/operate/monitoring-application-health"
+    },
+	{
+      from: "/developerportal/howto/deploying-to-the-cloud",
+      to: "/developerportal/deploy/mendix-cloud-deploy"
+    },
+  {
+      from: "/deployment/on-premises/deploy-mendix-on-microsoft-windows",
+      to: "/developerportal/deploy/deploy-mendix-on-microsoft-windows"
+    },
+  {
+      from: "/deployment/on-premises",
+      to: "/developerportal/deploy/on-premises-design"
+    },
+	{
+      from: "/developerportal/community-tools/the-mendix-job-board",
+      to: "/developerportal/community-tools/mendix-job-board"
+    },
+	/****************************************************
+     * From the App Store (permanent, mapped)
+     ****************************************************/
+	{
+	  from: "/community/app-store/use-app-store-content-in-the-modeler",
+	  to: "/developerportal/app-store/app-store-content"
+    },
+	{
+      from: "/developerportal/app-store/use-app-store-content-in-the-modeler",
+      to: "/developerportal/app-store/app-store-content"
+    },
+	{
+      from: "/mendixcloud/java-in-the-cloud",
+      to: "/developerportal/deploy/java-in-the-cloud"
+    },
+	{
+      from: "/mendixcloud/security-constraints-in-the-mendix-cloud",
+      to: "/developerportal/deploy/java-in-the-cloud"
+    },
+	{
+      from: "/howto50/Contributing+to+a+GitHub+repository",
+      to: "/howto/collaboration-requirements-management/contribute-to-a-github-repository"
+    },
+	{
+      from: "/howto/collaboration-project-management/contribute-to-a-github-repository",
+      to: "/howto/collaboration-requirements-management/contribute-to-a-github-repository"
+    },
+	{
+      from: "/mendixcloud/Integrate+your+app+with+Mendix+SSO",
+      to: "/developerportal/deploy/integrate-with-mendix-sso"
+    },
+	{
+      from: "/addons/APM",
+      to: "/apm/"
+    },
+	/****************************************************
+     * How-to's (permanent, unmapped)
+     ****************************************************/
+    {
+      from: "/howtogeneral/bestpractices/ux-best-practices",
+      to: "/howto/front-end/ux-best-practices"
+    },
+	{
+      from: "/howtogeneral/bestpractices/best-practices-security-and-improvements-for-mendix-applications",
+      to: "/howto/security/best-practices-security"
+    },
+	{
+      from: "/howtogeneral/bestpractices/best-practices-for-app-performance-in-mendix-7",
+      to: "/howto/general/community-best-practices-for-app-performance"
+    },	
+	{
+      from: "/howto/ux/configuring-your-theme",
+      to: "/howto/front-end/configuring-your-theme"
     },
 	/****************************************************
      * Web Modeler Guide (permanent, unmapped)

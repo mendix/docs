@@ -194,6 +194,17 @@ module.exports = {
       to: "/apm/"
     },
 	/****************************************************
+     * Web Modeler Guide (permanent, unmapped)
+     ****************************************************/
+	{
+      from: "/howto/tutorials/",
+      to: "/web-modeler/general"
+    },
+	{
+      from: "/howto/tutorials/mendix-tutorials",
+      to: "/web-modeler/general"
+    },
+	/****************************************************
      * How-to's (permanent, unmapped)
      ****************************************************/
     {
@@ -213,15 +224,11 @@ module.exports = {
       to: "/howto/front-end/configuring-your-theme"
     },
 	/****************************************************
-     * Web Modeler Guide (permanent, unmapped)
-     ****************************************************/
+     * How-to's version 7 (permanent, unmapped)
+     ****************************************************/	
 	{
-      from: "/howto/tutorials/",
-      to: "/web-modeler/general"
-    },
-	{
-      from: "/howto/tutorials/mendix-tutorials",
-      to: "/web-modeler/general"
+      from: "/howto/ux/configuring-your-theme",
+      to: "/howto/front-end/configuring-your-theme"
     },
 	/****************************************************
      * From Desktop Modeler version 7 (permanent, mapped)
@@ -233,6 +240,14 @@ module.exports = {
 	{
       from: "/refguide7/Modeler",
       to: "/refguide/desktop-modeler-overview"
+    },
+	{
+      from: "/refguide7/desktop-webmodeler",
+      to: "/refguide/sync-webmodeler-desktopmodeler"
+    },
+	{
+      from: "/web-modeler/general-sync-webmodeler-desktopmodeler-wm",
+      to: "/refguide/sync-webmodeler-desktopmodeler"
     },
 	{
       from: "/refguide7/download-from-team-server-dialog",
@@ -253,14 +268,6 @@ module.exports = {
 	{
       from: "/deployment/cloud-foundry/",
       to: "/developerportal/deploy/cloud-foundry-deploy"
-    },
-	{
-      from: "/refguide7/desktop-webmodeler",
-      to: "/refguide/sync-webmodeler-desktopmodeler"
-    },	
-	{
-      from: "/web-modeler/general-sync-webmodeler-desktopmodeler-wm",
-      to: "/refguide/sync-webmodeler-desktopmodeler"
     },	
 	{
       from: "/howto7/solving-load-and-import-errors",

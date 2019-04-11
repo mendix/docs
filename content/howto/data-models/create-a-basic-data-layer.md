@@ -137,13 +137,13 @@ To configure the delete behavior, double-click the **Order_Customer** associatio
 
 ## 8 Read More
 
-* [How to Work with Images & Files](working-with-images-and-files)
-* [How to Denormalize Data to Improve Performance](denormalize-data-to-improve-performance)
-* [How to Set Up Data Validation](setting-up-data-validation)
-* [How to Work with Object Events](working-with-object-events)
-* [How to Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
+* [Work with Images & Files](working-with-images-and-files)
+* [Denormalize Data to Improve Performance](denormalize-data-to-improve-performance)
+* [Set Up Data Validation](setting-up-data-validation)
+* [Work with Object Events](working-with-object-events)
+* [Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
 * [Stories](/developerportal/collaborate/stories)
-* [How to Define Access Rules Using XPath](../logic-business-rules/define-access-rules-using-xpath)
-* [How to Perform the Scout and Windows 10 Workaround](../front-end/perform-scout-and-windows-10-workaround)
-* [How to Create Your First Two Overview & Detail Pages](../front-end/create-your-first-two-overview-and-detail-pages)
+* [Define Access Rules Using XPath](../logic-business-rules/define-access-rules-using-xpath)
+* [Perform the Scout and Windows 10 Workaround](../front-end/perform-scout-and-windows-10-workaround)
+* [Create Your First Two Overview & Detail Pages](../front-end/create-your-first-two-overview-and-detail-pages)
 

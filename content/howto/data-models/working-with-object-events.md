@@ -1,6 +1,7 @@
 ---
 title: "Work with Object Events"
 category: "Data Models"
+menu_order: 3
 tags: ["microflow"]
 #To update screenshots of these microflows in the Desktop Modeler, use the Microflow Screenshots app project.
 ---
@@ -63,7 +64,7 @@ Clicking a Delete button or triggering a delete activity will initiate the delet
 
 ![](attachments/18448744/18582171.png)
 
-## 5 Related Content
+## 5 Read More
 
 * [How to Work with Images & Files](working-with-images-and-files)
 * [How to Create a Basic Data Layer](create-a-basic-data-layer)
@@ -71,4 +72,4 @@ Clicking a Delete button or triggering a delete activity will initiate the delet
 * [How to Set Up Data Validation](setting-up-data-validation)
 * [How to Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
 * [Stories](/developerportal/collaborate/stories)
-* [How to Perform the Scout and Windows 10 Workaround](../ux/perform-scout-and-windows-10-workaround)
+* [How to Perform the Scout and Windows 10 Workaround](../front-end/perform-scout-and-windows-10-workaround)

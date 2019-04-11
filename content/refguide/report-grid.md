@@ -12,7 +12,7 @@ This shows the reported data in a grid.
 
 ### Data Set
 
-This is the data set that determines the data that will be shown in the report grid.
+This is the dataset that determines the data that will be shown in the report grid.
 
 ## General Properties
 

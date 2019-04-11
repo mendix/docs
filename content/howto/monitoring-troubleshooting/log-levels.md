@@ -96,7 +96,7 @@ To set the level of custom log messages that you have created via a microflow, f
 
 ![](attachments/18448575/18580028.png)
 
-## 4 Related Content
+## 4 Read More
 
 * [How to Find the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
 * [How to Clear Warning Messages in Mendix](clear-warning-messages)

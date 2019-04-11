@@ -2,7 +2,7 @@
 title: "OAuth & Scopes"  
 category: "Mendix Profile"  
 tags: ["oath", "profile", "login", "Developer Portal", "scopes"]  
-description: "This page describes the authorizations and scopes"
+description: "Describes OAuth, authorizations, and scopes as used by Mendix."
 ---
 
 ## 1 Introduction

@@ -1,6 +1,6 @@
 ---
 title: "Clustered Mendix Runtime"
-category: "Runtime"
+category: "Mendix Runtime"
 description: "This page describes the impact and its behavior of running Mendix Runtime as a Cluster. Using the Cluster functionality you can setup your Mendix application to run behind a load balancer to enable a failover and/or high availability architecture."
 tags: ["runtime", "cluster", "load balancer", "failover", "pivotal"]
 ---
@@ -13,7 +13,9 @@ Mendix 7 contains a completely new build approach for clustering. The main featu
 
 ## 2 Clustering Support
 
-Using clustering is only supported in combination with Cloud Foundry. Clustering support is built in natively into our Cloud Foundry buildpack implementation. This means that you can simply scale up using Cloud Foundry. The buildpack ensures that your system automatically starts behaving as a cluster.
+Clustering support is built natively into our Cloud Foundry buildpack implementation. This means that you can simply scale up using Cloud Foundry. The buildpack ensures that your system automatically starts behaving as a cluster.
+
+Clustering is also supported on Kubernetes, but you will have to use a *StatefulSet*. There is more information on this in section 4.2.1, *Some Notes on Scaling*, of the document [Run Mendix on Kubernetes](/developerportal/deploy/run-mendix-on-kubernetes#scaling).
 
 ## 3 Cluster Infrastructure
 

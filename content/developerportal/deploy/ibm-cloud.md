@@ -4,9 +4,10 @@ category: "Deployment"
 description: "Describes how to deploy a Mendix app to the IBM Cloud"
 menu_order: 30
 tags: ["Deployment", "IBM", "IBM Cloud", "Environment"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1    Introduction
+## 1 Introduction
 
 As a Mendix user with an IBM Cloud account you have access to many IBM resources which you want to use in a Mendix app. This how-to shows you how to create a Mendix app on the Mendix platform and then deploy it to IBM Cloud.
 
@@ -130,9 +131,20 @@ Your IBM Kubernetes environment is now configured. Go to section 3.3 [Creating a
 
 ### 3.3 Creating a Package for IBM Cloud {#create-package}
 
-Before you can deploy a package to IBM Cloud you have to create it. At any time, you can create a new deployment package from a committed version of the project. If you are working with the Desktop Modeler you will have to commit the project first.
+Before you can deploy a package to IBM Cloud you have to create it.
 
-#### 3.3.1 Deploying from Within the Desktop Modeler
+#### 3.3.1 Deploying from Within the Web Modeler
+
+It is not possible to deploy your app directly from the Web Modeler. The Web Modeler is not currently aware of target environments apart from the Mendix Cloud v4. You will have to make use of the Desktop Modeler.
+
+Sync your app with the Desktop Modeler as described in [Sync the Web Modeler & Desktop Modeler](/refguide/sync-webmodeler-desktopmodeler).
+
+Once you have your app in the Desktop Modeler, you can do one of the following: 
+
+* deploy it directly from the Desktop Modeler (see section 3.3.2, [Deploying from Within the Desktop Modeler](#deploy-dm))
+* commit from the Desktop Modeler and then deploy it from the Developer Portal (see section 3.3.3, [Deploying from the Developer Portal](#deploy-dp))
+
+#### 3.3.2 Deploying from Within the Desktop Modeler{#deploy-dm}
 
 You can deploy your app automatically from the Desktop Modeler. However, you will have less control over the deployment than deploying from the Developer Portal.
 
@@ -144,7 +156,9 @@ Click **Run** in the Desktop Modeler. This will automatically:
 
 You will still need to go to IBM Cloud and manually deploy the package; a message within the Desktop Modeler will let you know when the package is ready and will give you the link to IBM Cloud. See section 3.4 [Deploying a Package to IBM Cloud](#deploy-package) for instructions on how to do the deployment.
 
-#### 3.3.2 Deploying from the Developer Portal
+#### 3.3.3 Deploying from the Developer Portal{#deploy-dp}
+
+At any time, you can create a new deployment package from a committed version of the project. If you are working with the Desktop Modeler you will have to commit the project first.
 
 To create a package for IBM Cloud within Developer Portal, follow these steps:
 
@@ -324,7 +338,11 @@ To change the memory and instances configuration temporarily, do the following:
 
     {{% alert type="info" %}}Unlike the memory and instance configuration, values that you change here are changed permanently and will not be overwritten the next time you deploy the app.{{% /alert %}}
 
-## 5 Related Content
+## 5 Status of IBM Cloud Deployment
+
+The Mendix status page ([https://status.mendix.com/](https://status.mendix.com/)) shows the current status of Mendix services. If you have issues with deploying to IBM via the Developer Portal, you can check the Mendix status page to see if IBM Cloud deployment is operational (under **Mendix Services**) or if there are other Mendix issues which may be affecting your deployment.
+
+## 6 Read More
 
 * [IBM Cloud account](https://console.bluemix.net/registration/)
 * [Mendix Desktop Modeler](https://appstore.home.mendix.com/link/modelers/)

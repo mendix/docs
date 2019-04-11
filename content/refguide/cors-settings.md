@@ -1,7 +1,11 @@
 ---
-title: "CORS Settings"
-parent: "published-rest-services"
-#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
+title: "CORS Settings for Published REST Services"
+parent: "published-rest-service"
+menu_order: 60
+description: "Additional options for controlling access to a published REST service"
+tags: ["CORS", "security", "origin", "domain", "access"]
+# If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
+# linked from DM: published rest > Enable CORS > Settings > Help (integration)
 ---
 
 {{% alert type="info" %}}
@@ -11,6 +15,8 @@ The CORS settings feature was introduced in Mendix version 7.18.0.
 {{% /alert %}}
 
 ## 1 Introduction
+
+Cross-Origin Resource Sharing (CORS) uses additional HTTP headers to tell a browser to give access to selected resources from a server in a different origin (domain).
 
 When you enable CORS in a [published REST service](published-rest-service), by default all websites on all servers are allowed to access your service. The **CORS Settings** dialog box allows you to configure this type of access on a more detailed level.
 

@@ -28,12 +28,6 @@ This leads to four scenarios, for which different solutions should be implemente
 
 Based on your need to support local users and/or anonymous users, implement the solution mentioned in the table. The final four sections of this How To each describe one of the solutions.
 
-{{% alert type="warning" %}}
-
-Anonymous users are not supported on Sandboxes, only on non-free editions.
-
-{{% /alert %}}
-
 ### 2.1 Automatically log users in with their Mendix account
 
 When only users with a Mendix Account are supported in your app, it makes sense to just log users in automatically. This means that they should be redirected to `/openid/login` when they reach the app, i.e., when they open `/index.html`. Add the four lines marked with a pound sign (`#`) to your custom index.html file in the theme directory in the project root (do not copy the pound signs):
@@ -276,7 +270,7 @@ The custom login page can be created in a similar manner as in scenario 2, with 
 
 You can view the implementation by deploying your app to the Mendix Cloud and going to your app, e.g. `https://yourapp.mendixcloud.com/`, and going to the page where you inserted the link. Click on the link, and you should see the custom login page. Test the local account login, and logout. Then test the Mendix account login.
 
-## 3 Related Content
+## 3 Read More
 
 *   [Trends in Mendix Cloud v3](/developerportal/operate/trends)
 *   [Mendix Cloud: Deploy](mendix-cloud-deploy)

@@ -245,7 +245,7 @@ Deploy the application to Kubernetes:
 kubectl create -f mendix-app.yaml
 ```
 
-#### 4.2.1 Some Notes on Scaling
+#### 4.2.1 Some Notes on Scaling{#scaling}
 
 The Mendix 7 Runtime is stateless, meaning that a client can talk to any server instance. However, scheduled events and database migrations should be handled by only one instance. For this, we use a container index count. The pod with index 0 will always trigger the schedule events and deal with database updates in case of an upgrade version.
 
@@ -291,7 +291,7 @@ minikube service mendix-app-service --url
 
 Congratulations! You have deployed your first Mendix app in Kubernetes.
 
-## 5 Related Content
+## 5 Read More
 
 * [Docker: Deploy](docker-deploy)
 * [Mendix Docker Buildpack](https://github.com/mendix/docker-mendix-buildpack)

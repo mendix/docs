@@ -1,10 +1,19 @@
 ---
 title: "Scheduled Events"
 category: "Desktop Modeler"
+#menu_order: 
+description: "Options for configuring scheduled events"
+tags: ["Scheduled Event", "Execution properties", "Timing", "intervals", "scheduling issues", "time zones", "daylight saving"]
 ---
 
 
 With scheduled events you can let the runtime execute a microflow at a specific moment in time. The event can also be repeated with a given interval, for example every day.
+
+A scheduled event is added to your module as a document (right-click on your module and you will find it listed under *Add other...*).
+
+{{% alert type="warning" %}}
+Scheduled events can be tested locally, but they will not be run if your app is deployed as a Free App. See the Free App section of [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy#free-app) for more information on Free App limitations.
+{{% /alert %}}
 
 ## Common Properties
 

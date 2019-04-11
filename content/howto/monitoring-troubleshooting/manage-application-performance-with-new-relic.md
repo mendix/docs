@@ -90,7 +90,7 @@ Your database calls and queries will now be visible on the database page:
 
 For more information on New Relic, see the New Relic documentation here: [https://docs.newrelic.com/](https://docs.newrelic.com/).
 
-## 7 Related Content
+## 7 Read More
 
 * [How to Find the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
 * [How to Clear Warning Messages in Mendix](clear-warning-messages)

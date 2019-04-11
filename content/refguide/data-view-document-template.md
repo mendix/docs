@@ -1,5 +1,5 @@
 ---
-title: "Data View (document template)"
+title: "Data View (Document Template)"
 parent: "document-templates"
 ---
 
@@ -11,7 +11,7 @@ A data view showing orderline information
 
 ## Common Properties
 
-{{% snippet file="refguide/Name+Property.md" %}}
+{{% snippet file="refguide7/Name+Property.md" %}}
 
 ## Data Source Properties
 

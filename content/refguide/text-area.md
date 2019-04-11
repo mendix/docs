@@ -63,47 +63,47 @@ The placeholder text is shown when no text has been entered yet. It can be used 
 
 ## Validation Properties
 
-{{% snippet file="refguide/Widget+Validation.md" %}}
+{{% snippet file="refguide7/Widget+Validation.md" %}}
 
 ## Data Source Properties
 
-{{% snippet file="refguide/Attribute+Path+Property.md" %}}
+{{% snippet file="refguide7/Attribute+Path+Property.md" %}}
 
-{{% snippet file="refguide/Label+Property.md" %}}
+{{% snippet file="refguide7/Label+Property.md" %}}
 
 ## Editability Properties
 
-{{% snippet file="refguide/Editable+Property.md" %}}
+{{% snippet file="refguide7/Editable+Property.md" %}}
 
-{{% snippet file="refguide/Read+Only+Style.md" %}}
+{{% snippet file="refguide7/Read+Only+Style.md" %}}
 
-{{% snippet file="refguide/Condition+Property.md" %}}
+{{% snippet file="refguide7/Condition+Property.md" %}}
 
 ## Visibility Properties
 
-{{% snippet file="refguide/Visibility+Property.md" %}}
+{{% snippet file="refguide7/Visibility+Property.md" %}}
 
-{{% snippet file="refguide/Visibility+Property+With+Module+Roles+Simple.md" %}}
+{{% snippet file="refguide7/Visibility+Property+With+Module+Roles+Simple.md" %}}
 
 ## Events Properties
 
-{{% snippet file="refguide/On+Change+Event.md" %}}
+{{% snippet file="refguide7/On+Change+Event.md" %}}
 
-{{% snippet file="refguide/On+Enter+event.md" %}}
+{{% snippet file="refguide7/On+Enter+event.md" %}}
 
-{{% snippet file="refguide/On+Leave+Event.md" %}}
+{{% snippet file="refguide7/On+Leave+Event.md" %}}
 
 ## Common Properties
 
-{{% snippet file="refguide/Name+Property.md" %}}
+{{% snippet file="refguide7/Name+Property.md" %}}
 
-{{% snippet file="refguide/Class+Property.md" %}}
+{{% snippet file="refguide7/Class+Property.md" %}}
 
-{{% snippet file="refguide/Style+Property.md" %}}
+{{% snippet file="refguide7/Style+Property.md" %}}
 
-{{% snippet file="refguide/Tab+index+Property.md" %}}
+{{% snippet file="refguide7/Tab+index+Property.md" %}}
 
-## Related Content
+## Read More
 
 *   [Data view](data-view)
 *   [Attributes](attributes)

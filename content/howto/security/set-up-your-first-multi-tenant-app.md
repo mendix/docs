@@ -1,6 +1,7 @@
 ---
 title: "Set Up Your First Multi-Tenant App"
 category: "Security"
+menu_order: 40
 description: "Introduction to multi-tenant app development."
 tags: ["Multitenancy", "Multi-tenant", "Security", "Users"]
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Denormalize Data to Improve Performance"
 category: "Data Models"
+menu_order: 6
 tags: []
 ---
 
@@ -141,7 +142,7 @@ Now the application is ready to store redundant data, but you still need to keep
 
 20. Run the application and create some customers and orders. You should now see an up-to-date value for the TotalOrderAmount.
 
-## 5 Related Content
+## 5 Read More
 
 * [How to Work with Images & Files](working-with-images-and-files)
 * [How to Create a Basic Data Layer](create-a-basic-data-layer)
@@ -150,7 +151,7 @@ Now the application is ready to store redundant data, but you still need to keep
 * [How to Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
 * [Stories](/developerportal/collaborate/stories)
 * [How to Define Access Rules Using XPath](../logic-business-rules/define-access-rules-using-xpath)
-* [How to Perform the Scout and Windows 10 Workaround](../ux/perform-scout-and-windows-10-workaround)
+* [How to Perform the Scout and Windows 10 Workaround](../front-end/perform-scout-and-windows-10-workaround)
 * [Attributes](/refguide7/attributes)
 * [Event Handlers](/refguide7/event-handlers)
 

@@ -29,7 +29,7 @@ The widgets contain several settings which can be changed in the Modeler to cust
 
 **Dynamic Series Chart**
 
-From version 1.4 of the basic charts you can create charts with a variable number of data series. For instructions on how to do this, see [How to Create a Dynamic Series Chart](/howto/extensibility/charts-dynamic-series).
+From version 1.4 of the basic charts you can create charts with a variable number of data series. For instructions on how to do this, see [How to Create a Dynamic Series Chart](/howto7/extensibility/charts-dynamic-series).
 
 ## 3 Any Chart {#any-chart}
 
@@ -41,7 +41,7 @@ This module also contains several building blocks for inspiration and as startin
 
 See [Any Chart Widgets](charts-any-configuration) to learn how to configure *Any charts* widgets.
 
-## 4 Related Content
+## 4 Read More
 
 * [Any Chart Configuration](charts-any-configuration)
 * [Any Chart Building Bocks](charts-any-building-bocks)

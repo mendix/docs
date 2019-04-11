@@ -49,7 +49,7 @@ Mendix applications built on Mendix versions 7.11 or 7.12 can now be tested and 
 * We fixed the **Unfocus Web Element** function.
 * We removed the second set value action from the search dialog box when you are adding a new test step to a test case or action.
 * We fixed the issue that sometimes set the selected values in a function/action call to empty when adding a new step to the test case or action.
-* Data-driven test cases can now also be executed also when the data set contains an empty number. This previously worked only for empty text fields.
+* Data-driven test cases can now also be executed also when the dataset contains an empty number. This previously worked only for empty text fields.
 * Custom actions did not work when used as a pre-condition for a test step. This has been fixed.
 * A recorded login action was not working when executed because of an incorrect password. We fixed that.
 * Recording the login step did not capture the password properly, so it had to be set again after recording. Also, the login via Mendix SSO (MxID) was not recorded. Both issues have been been fixed.

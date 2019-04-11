@@ -31,9 +31,9 @@ This is the Mendix **environment**.
 
 In a **node** in the Mendix Cloud, you may have one, or more, of these *environments*. More information about *nodes* can be found here: [Nodes](/developerportal/company-app-roles/nodes).
 
-For a **Free App**, your app has a single *Sandbox* environment which allows you to test your app. However, this comes with restrictions on how long it will run and the number of users it will support. You cannot scale the app, and the operational capabilities are limited.
+For a **Free App**, your app has a single *Sandbox* environment which allows you to test your app. However, this comes with restrictions on how long it will run and the number of users it will support. You cannot scale the app, and the operational capabilities are limited. For more details on the restrictions of a Free App, see [Mendix Cloud](mendix-cloud-deploy#free-app)
 
-In a **licensed node** you have everything you need to stage and deploy your app. You can have several different *environments* to support development: test, acceptance, and production, for example. You can scale these environments by providing more memory or multiple instances, and you can configure and monitor them using the tools in the *Developer Portal*.
+In a **licensed node** you have everything you need to stage and deploy your app. You can have several different *environments* to support development: test, acceptance, and production, for example. With [Flexible Environments](mendix-cloud-deploy#flexible-environments) in Mendix Cloud V4, you can even specify the number and names of your environments. You can scale licensed environments by providing more memory or multiple instances, and you can configure and monitor them using the tools in the *Developer Portal*.
 
 This document describes how you can link apps to a licensed node.
 
@@ -67,7 +67,7 @@ For the specific case of swapping two apps between licensed nodes, see the guida
 
 When you remove an app from its environment you may want to take the data (database and file store) with it. It is a good idea, in any case, to take backups before performing major activities.
 
-The documentation on downloading a backup is here: [Download a Backup](/developerportal/operate/how-to-download-a-backup). 
+The documentation on downloading a backup is here: [Download a Backup](/developerportal/operate/download-backup). 
 
 {{% alert type="warning" %}}
 When you unlink your *Free App* from its Sandbox environment, the environment will be permanently deleted. This means that you will not be able to recover any data once the app is unlinked.
@@ -79,7 +79,7 @@ If you are unlinking from a *licensed node*, the node is NOT deleted and data is
 
 Before you can link an app to a new environment, you need to unlink it from its current environment. All apps will be created as a *Free App* by default the first time they are deployed. In most cases, therefore, you will have to unlink them.
 
-### 4.2.1 Unlinking a Free App
+### 4.2.1 Unlinking a Free App{#unlink}
 
 1.  Go to the **[Developer Portal](http://home.mendix.com)**.
 
@@ -183,7 +183,7 @@ After you have linked your App to a licensed node it will be using the resources
 
 If you want to use the data which was originally in your app, you will need to restore the backup from your old node.
 
-The documentation on restoring a backup is here: [Restore a Backup](/developerportal/operate/how-to-restore-a-backup).
+The documentation on restoring a backup is here: [Restore a Backup](/developerportal/operate/restore-backup).
 
 ## 5 Exchange Linked Apps Between Nodes {#exchange-apps}
 
@@ -211,6 +211,6 @@ To link **App A** to **Node 2** and **App B** to **Node 1**, follow these steps:
 
 You have now swapped App A and App B between nodes.
 
-## 6 Related Content
+## 6 Read More
 
 *   [Mendix Cloud](mendix-cloud-deploy)

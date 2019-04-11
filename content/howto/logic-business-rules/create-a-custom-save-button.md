@@ -17,8 +17,8 @@ Mendix uses visual models called microflows to define the logic of your applicat
 Before starting with this how-to, make sure you have completed the following prerequisites:
 
 * Create a basic data layer (for details, see [How to Create a Basic Data Layer](../data-models/create-a-basic-data-layer))
-* Create overview and detail pages for the customer object (for details, see [How to Create Your First Two Overview & Detail Pages](../ux/create-your-first-two-overview-and-detail-pages))
-* Create a menu item to access the customer overview page (for details, see [How to Set Up the Navigation Structure](../ux/setting-up-the-navigation-structure))
+* Create overview and detail pages for the customer object (for details, see [How to Create Your First Two Overview & Detail Pages](../front-end/create-your-first-two-overview-and-detail-pages))
+* Create a menu item to access the customer overview page (for details, see [How to Set Up the Navigation Structure](../general/setting-up-the-navigation-structure))
 
 ## 3 Replacing the Default Save Button with a Custom Save Button
 
@@ -78,7 +78,7 @@ To replace the default Save button with a custom one, follow these steps:
 
     ![](attachments/18448679/18580979.png)
 
-## 6 Related Content
+## 6 Read More
 
 * [How to Define Access Rules Using XPath](define-access-rules-using-xpath)
 * [How to Trigger Logic Using Microflows](triggering-logic-using-microflows)

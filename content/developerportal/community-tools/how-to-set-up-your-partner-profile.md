@@ -2,6 +2,7 @@
 title: "Set Up Your Partner Profile"
 category: "Community Tools"
 menu_order: 60
+description: "Describes how to configure the various parts of your Mendix Partner Profile, such as projects."
 tags: ["authorized", "expert", "professional", "4 p's"]
 ---
 
@@ -216,3 +217,7 @@ The [Meet Our Partners page](https://developer.mendixcloud.com/openid/login?imme
 * Whether your company is Expert (which will get the most weight in sorting), Professional, or Authorized (for more information, see the [Capability Tracks](#capability) section)
 * The total amount of certified developers (note that developers with multiple certifications count as one certified developer)
 * The total number of projects you have published on your Partner Profile
+
+## 11 Read More
+
+* [Mendix Jobs Board](mendix-job-board)

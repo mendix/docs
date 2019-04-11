@@ -70,43 +70,59 @@ To address the [first problem](#firstproblem), when the mobile app is starting t
 
 ```javascript
 MxApp.onConfigReady(function(config) {
-
+	
     var samlLogin = function() {
         var samlWindow = cordova.InAppBrowser.open(window.mx.remoteUrl + "SSO/", "_blank", "location=no,toolbar=no");
         var exitFn = function(){
             navigator.app.exitApp();
         };
         samlWindow.addEventListener("exit", exitFn);
-        var cb = function(event) {
+        var cb = function(event) {        
             if (event.url.indexOf(window.mx.remoteUrl) == 0 && event.url.indexOf("SSO") == -1) {
-
+            
                 samlWindow.removeEventListener("loadstop", cb);
                 samlWindow.removeEventListener("exit", exitFn);
-
+				
                 samlWindow.executeScript({
                     code: "document.cookie;"
                 }, function(values) {
                     var value = values[0] + ";";
-                    var token = new RegExp('AUTH_TOKEN=([^;]+);', 'g').exec(value)[1];
-                    window.localStorage.setItem("mx-authtoken", token);
+                    var token = new RegExp('AUTH_TOKEN=([^;]+);', 'g').exec(value);
+                    var authPromise = new Promise(function(resolve, reject) {
+                        if (token && token.length > 1) {
+                            window.localStorage.setItem("mx-authtoken", token[1]);
+							
+                            window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, function (fs) {
+                                fs.root.getFile(".mx-token", { create: true, exclusive: false }, function (fileEntry) {
+                                    fileEntry.createWriter(function (fileWriter) {
+                                        fileWriter.onwriteend = resolve;
+                                        fileWriter.onerror = reject;
+                                        fileWriter.write(token[1]);
+                                    });
+                                }, reject);
+                            }, reject);
+                        } else {
+                            resolve();
+                        }
+                    });
                     
-                    samlWindow.close();
-
-                    if (window.mx.afterLoginAction) {
-                        window.mx.afterLoginAction();
-                    }
+                    var closeWindow = function() {
+                        samlWindow.close();
+                        if (window.mx.afterLoginAction) {
+                            window.mx.afterLoginAction();
+                        }
+                    };
+                    authPromise.then(closeWindow, closeWindow);
                 });
-
             };
         }
         samlWindow.addEventListener("loadstop", cb);
     }
     config.ui.customLoginFn = samlLogin;
-
 });
 ```
 
-To address the [second problem](#secondproblem), after a successful authentication against the IdP, Mendix stores a token in the device’s local storage. The system will use that token from that moment on to create a new session for the user. The session is created in Mendix only, so a new authentication against the IdP will not be performed again. This token is a TokenInformation (part of the System module) object, and it can be accessed/edited in microflows. By default, this local token will never expire, but this can be overridden by changing the `com.mendix.webui.HybridAppLoginTimeOut` [custom runtime setting](/refguide/custom-settings). The downside of this approach is that access rights will not be updated upon login, since no interaction is done with the IdP. However, in most systems using SSO, user and role provisioning is handled separately from the authentication, so this might not be an issue.
+To address the [second problem](#secondproblem), after a successful authentication against the IdP, Mendix stores a token in the device’s local storage. The system will use that token from that moment on to create a new session for the user. The session is created in Mendix only, so a new authentication against the IdP will not be performed again. This token is a TokenInformation (part of the System module) object, and it can be accessed/edited in microflows. By default, this local token will never expire, but this can be overridden by changing the `com.mendix.webui.HybridAppLoginTimeOut` [custom runtime setting](/refguide7/custom-settings). The downside of this approach is that access rights will not be updated upon login, since no interaction is done with the IdP. However, in most systems using SSO, user and role provisioning is handled separately from the authentication, so this might not be an issue.
 
 ### 5.2 The Hybrid App Package
 
@@ -151,7 +167,7 @@ The last thing to do is to check the **Enable mobile authentication token** box 
 
 ![](attachments/implement-sso/saml-module.png)
 
-## 6 Related Content
+## 6 Read More
 
 * [How to Deploy Your First Hybrid Mobile App](deploy-your-first-hybrid-mobile-app)
 * [How to Publish a Mendix Hybrid Mobile App in App Stores](publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)

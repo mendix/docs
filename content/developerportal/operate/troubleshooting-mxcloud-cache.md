@@ -43,8 +43,8 @@ For example, if you have 50500 entities in cache and 50000 are of type Car.Tyre,
 
 The cache statistics might also help you identify the most commonly used entities in your application.
 
-## 3 Related Content
+## 3 Read More
 
 * [Metrics](metrics)
-* [Security - Node Permissions](/developerportal/deploy/node-permissions)
+* [Node Permissions](/developerportal/deploy/node-permissions)
 * [Running Now Metrics](troubleshooting-mxcloud-runningnow)

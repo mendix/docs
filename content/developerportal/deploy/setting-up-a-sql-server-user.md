@@ -31,7 +31,7 @@ To create a secure environment it is important to make a clear distinction betwe
 
 On this page you can find a step by step instruction on how to: [Set up the database user](setting-up-the-database-user)
 
-## 3 Related Content
+## 3 Read More
 
 *   [Activating a Mendix License on Microsoft Windows](activate-a-mendix-license-on-microsoft-windows)
 *   [Setting Up the Database User](setting-up-the-database-user)

@@ -37,7 +37,7 @@ For the basics of building toolbox actions, see the [Introducing the Mendix Conn
 
 ## 2 Creating Generic Actions Using Type Parameters
 
-Let's start with type parameters. Mendix 6.6 introduced a new **Type parameters** tab in the Java action definition dialog box, as illustrated in the image below. You can use a type parameter if you want to ensure that certain parameters of your action share the same entity but you do not know the name of this entity when defining the actions.
+Let's start with type parameters. In the **Type parameters** tab in the Java action definition dialog box, you can use a type parameter if you want to ensure that certain parameters of your action share the same entity but you do not know the name of this entity when defining the actions.
 
 For example, suppose you want to create an action that takes two objects of the same entity and returns a list containing both objects. You can use a type parameter to guarantee that both the input parameters for specifying the objects and the resulting list all use the same entity.
 

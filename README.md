@@ -6,7 +6,9 @@ Build status:
   * master [![Build Status](https://secure.travis-ci.org/mendix/docs.png?branch=master)](https://travis-ci.org/mendix/docs)
   * development [![Build Status](https://secure.travis-ci.org/mendix/docs.png?branch=development)](https://travis-ci.org/mendix/docs)
 
-Want to contribute? Take a look at [How to Contribute to the Mendix Documentation](https://docs.mendix.com/community/documentation/contribute-to-the-mendix-documentation).
+## Contribute
+
+Want to contribute? Take a look at [How to Contribute to the Mendix Documentation](https://docs.mendix.com/developerportal/community-tools/contribute-to-the-mendix-documentation).
 
 ## Development
 
@@ -69,14 +71,7 @@ To use it, follow these steps:
     docker-compose build
     ```
 
-3.  Once the above command finishes, run:
-
-    ```sh
-    docker-compose run app yarn
-    ```
-
-    which will install the node dependencies.
-4.  Then run:
+3.  Then run:
 
     ```sh
     docker-compose up

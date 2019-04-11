@@ -2,7 +2,7 @@
 title: "Stories"
 category: "Collaboration Tools"
 menu_order: 30
-description: "Describes how to manage your sprints, stories, and labels."
+description: "Describes how to manage the sprints and stories for your app project."
 tags: ["Stories", "Sprint", "Developer Portal"]
 ---
 
@@ -23,7 +23,7 @@ To add a new story, click **New story** and fill in some details, including what
 
 ![](attachments/story-example.png)
 
-### 2.2 Creating a New Sprint
+### 2.2 Creating a New Sprint {#sprint}
 
 To add a new sprint, click **New sprint** and fill in some details, including the name of the sprint or release and where it should be located in the structure of your **Stories** page.
 
@@ -111,16 +111,22 @@ Select a story and click **Details** to open the **Story Details** page.
 On this page, you can perform a variety of actions:
 
 * View the details such as **Type**, date **Created**, etc.
-* Add **Comments** about the story to collaborate
-* Click **Edit** to change the story's **Title**, **Description**, and other details
-* Change the story's **Status** (available statuses are **To-do**, **Running**, and **Done**)
-* Move the story via **Move To Sprint** (see the section [Moving Stories](#moving) below for details)
+* Click **Edit** to edit the **Title**, **Description**, **Story type**, **Story points**, **Status**, and **Labels** of the story as well as see the history of edits done on the story
+* View the story's **Status** and click to update it (the available statuses are **To-do**, **Running**, and **Done**)
+* View the **Sprint** that contains the story as well as move the story via **Move To Sprint** (for details, see the [Moving Stories](#moving) section below)
 * Click **Move to another app** to move the story to a different app's backlog
-* Click **View history** to view the history of changes to the story (see the section [History](#history) above for details)
+* Click **View history** to view the history of changes to the story (for more information, see the [History](#history) section above)
 
-### 4.2 Adding Tasks to a Story
+Also on this page, you can access the following tabs:
 
-Stories can be translated into tasks that need to be completed to finish the story.
+* **Comments** – on this tab, you can view and add comments about the story to collaborate with your App Team
+* **Tasks** – you can see the tasks that were added to the story here (for more information, see the [Adding Tasks to a Story](#adding) section below)
+* **Feedback** – here you can see the feedback item linked to the story (for details, see the [Adding a Feedback Item to Your Backlog](../feedback/index#adding) section of *Feedback Management*)
+* **Revisions** –  on this tab, you can see the committed revision of the app project that is linked to the story (which is configured in the [Related stories](/refguide/commit-dialog#stories) tab of the **Commit** dialog box in the Desktop Modeler)
+
+### 4.2 Adding Tasks to a Story {#adding}
+
+Stories of the **Feature** type can be translated into tasks that need to be completed to finish the story.
 
 To add a task to the story, follow these steps:
 
@@ -188,6 +194,8 @@ When you return to your app project in the Developer Portal, you will see the ne
 
 Changing the status of a story or updating story points automatically synchronizes the updates between the Developer Portal and the Modeler!
 
-## 5 Related Content
+## 5 Read More
 
+* [Buzz](buzz)
+* [App Team](team)
 * [Feedback](../feedback/index)

@@ -1,5 +1,5 @@
 ---
-title: "Title (document template)"
+title: "Title (Document Template)"
 parent: "document-templates"
 ---
 
@@ -18,4 +18,4 @@ See [Style](style)
 
 ## Common Properties
 
-{{% snippet file="refguide/Name+Property.md" %}}
+{{% snippet file="refguide7/Name+Property.md" %}}

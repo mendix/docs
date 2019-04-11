@@ -33,8 +33,8 @@ This how-to was written based on Modeler version 5.20. All the images, names, an
 
     ![](attachments/7831572/8945665.png)
 
-2. Create overview and detail pages to manage objects of the **Customer** type (for details on how to create overview and detail pages, see [How to Create Your First Two Overview & Detail Pages](../ux/create-your-first-two-overview-and-detail-pages).
-3. Create a menu item to access the customer overview page (for details on how to create menu items, see [How to Set Up the Navigation Structure](../ux/setting-up-the-navigation-structure).
+2. Create overview and detail pages to manage objects of the **Customer** type (for details on how to create overview and detail pages, see [How to Create Your First Two Overview & Detail Pages](../front-end/create-your-first-two-overview-and-detail-pages).
+3. Create a menu item to access the customer overview page (for details on how to create menu items, see [How to Set Up the Navigation Structure](../general/setting-up-the-navigation-structure).
 4. Run the application and add some data to expose in the web service.
 
 ## <a name="4"></a>4 Creating a Published Web Service
@@ -54,7 +54,7 @@ To create a published web service, follow these steps:
 
         ![](attachments/18448728/18581713.png)
 
-    * On the **Settings** tab, you can configure the other settings. Do change them before publishing your web service, especially the **Target namespace** (for details on these settings, see [Published Web Service](/refguide/published-web-service) in the Mendix Reference Guide):
+    * On the **Settings** tab, you can configure the other settings. Do change them before publishing your web service, especially the **Target namespace** (for details on these settings, see [Published Web Service/published-web-service) in the Mendix Reference Guide):
 
         ![](attachments/18448728/18581712.png)
 
@@ -150,7 +150,7 @@ When exposing a web service, consider the following things:
 * Because you may not want to publish a "_type" attribute with an underscore ("`_`") in front of it, you can change the WSDL name by changing the last column in the selected attribute window
 * If an attribute is renamed after it is published, the name in the WSDL does not automatically change (because that would break the customer's implementation)
 
-## 10 Related Content
+## 10 Read More
 
 * [How to Consume a Complex Web Service](consume-a-complex-web-service)
 * [How to Consume a Simple Web Service](consume-a-simple-web-service)

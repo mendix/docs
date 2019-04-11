@@ -107,6 +107,6 @@ You cannot solve this problem by changing your email address on Mendix. This **d
 
 {{% /alert %}}
 
-## 5 Related Content
+## 5 Read More
 
 * [SAP Cloud Platform](/developerportal/deploy/sap-cloud-platform)

@@ -42,7 +42,7 @@ You can find the trends by following these steps:
 4. Click **Metrics** under the **Operate** category.
 5. Select the environment you want to monitor under the tab **Trends**.
 
-![](attachments/environment.jpg)
+![](attachments/environment.png)
 
 ## 3 Application Statistics
 
@@ -168,13 +168,13 @@ Disk utilization is calculated as the disk usage that is used by the user of the
 
 {{% /alert %}}
 
-## 6 Related Content
+## 6 Read More
 
 * [Alerts](monitoring-application-health)
-* [Database Maintenance: Size Reduction](/howtogeneral/support/database-maintenance-size-reduction)
-* [How to Calculate the Total Amount of Diskspace of a Cloud App Environment](/howtogeneral/support/how-to-calculate-diskspace-of-a-cloud-app-environment)
-* [How to Configure Maintenance Windows](/developerportal/deploy/maintenance-windows)
-* [How to Migrate to Mendix Cloud v4](/developerportal/deploy/migrating-to-v4)
+* [Database Size Reduction](database-size-reduction)
+* [How to Calculate the Total Amount of Diskspace of a Cloud App Environment](calculate-diskspace-of-a-cloud-app-environment)
+* [Maintenance Windows: Configuration](/developerportal/deploy/maintenance-windows)
+* [Migrate to Mendix Cloud v4](/developerportal/deploy/migrating-to-v4)
 * [How to Receive Environment Status Alerts](receive-alerts)
-* [How to View the Mendix Cloud Version and Region](/developerportal/deploy/cloud-version-region)
-* [Mendix Cloud v4 - FAQ](/developerportal/deploy/mxcloudv4)
+* [Cloud Version and Region in the Mendix Cloud](/developerportal/deploy/cloud-version-region)
+* [Mendix Cloud V4](/developerportal/deploy/mxcloudv4)

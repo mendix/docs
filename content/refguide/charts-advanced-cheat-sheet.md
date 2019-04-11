@@ -582,7 +582,7 @@ See more properties here: [Range Selector](https://plot.ly/javascript/reference/
 
 ### 3.6 Multiple Y Axes Data Properties {#multiple-y-axes-data-properties}
 
-Displays two different Y axes with different scales, according to the ranges of the data sets.
+Displays two different Y axes with different scales, according to the ranges of the datasets.
 
 ``` json
 [

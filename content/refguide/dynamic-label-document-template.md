@@ -1,5 +1,5 @@
 ---
-title: "Dynamic label (document template)"
+title: "Dynamic Label (Document Template)"
 parent: "document-templates"
 ---
 
@@ -63,7 +63,7 @@ results in the following text
 
 ## Common Properties
 
-{{% snippet file="refguide/Name+Property.md" %}}
+{{% snippet file="refguide7/Name+Property.md" %}}
 
 ## Data Source Properties
 

@@ -158,7 +158,7 @@ The SMTP email module contains a number of other powerful tools. Some of the enh
 
 * Auto-generate emails in workflow steps to have the app send out emails from SMTP behind the scenes
 
-## 7 Related Content
+## 7 Read More
 
 * [How to Use  Connectors and Adapters](use-connectors-and-adapters)
 * [How to Access a Samba Share from the MxCloud](access-a-samba-share-from-the-mxcloud)

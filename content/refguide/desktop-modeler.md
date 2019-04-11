@@ -1,11 +1,9 @@
 ---
 title: "Desktop Modeler"
 description: "Describes the various features of the Mendix Modeler, including document templates, the domain model, microflows, modules, pages, and security."
-#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 tags: ["Mendix", "Desktop Modeler", "Documents"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.1 Introduction
 ---
-
-## 1 Introduction
 
 The Mendix Desktop Modeler is the most powerful tool for creating, viewing, and editing your Mendix applications. This category describes the various features of the Desktop Modeler, including document templates, the domain model, microflows, modules, pages, and security.
 
@@ -33,7 +31,7 @@ The following documents in the **Desktop Modeler** category of the *Mendix Refer
 * [Java actions](java-actions)
 * [Rules](rules)
 * [Enumerations](enumerations)
-* [Data sets](data-sets)
+* [Datasets](data-sets)
 * [Constants](constants)
 * [Regular expressions](regular-expressions)
 * [Scheduled events](scheduled-events)
@@ -57,5 +55,4 @@ The following documents provide additional information about using the Desktop M
 * [Projects](project)
 * [Security](security)
 * [Translatable Texts](translatable-texts)
-* [XML](xml-reference-guide)
 * [XPath](xpath)

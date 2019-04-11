@@ -28,53 +28,15 @@ These are the possible values:
 * **Date and time**
 * **Custom** (see below for more details)
 
-{{% alert type="info" %}}
-
-A date picker with a custom date format cannot be editable.
-
-{{% /alert %}}
-
 ### 2.2 Custom Date Format
 
 If you choose 'Custom' as the date format (see above) this property determines how the attribute value is formatted. The custom date format is a string that allows for any combination of symbols found in the table below. Any punctuation will be rendered literally.
 
-| Symbol | No. | Example | Description |
-| --- | --- | --- | --- |
-| G | 1 | AD | The era |
-| y | 1, 3..n | 2010 | Year |
-| y | 2 | 10 | Year |
-| Y | 1, 3..n | 2009 | Week year, use in combination with `w` for [week number](https://en.wikipedia.org/wiki/Week#Week_numbering) formatting |
-| Y | 2 | 09 | Week year, use in combination with `w` for [week number](https://en.wikipedia.org/wiki/Week#Week_numbering) formatting |
-| M | 1..2 | 09 | Month |
-| M | 3 | Sept |
-| M | 4 | September |
-| w | 1..2 | 27 | Week of year, use for [week number](https://en.wikipedia.org/wiki/Week#Week_numbering) formatting |
-| d | 1..2 | 12 | Day of month |
-| D | 1..3 | 93 | Day of year |
-| a | 1 | AM | AM or PM |
-| h | 1..2 | 11 | Hour (1-12) |
-| H | 1..2 | 13 | Hour (0-23) |
-| k | 1..2 | 10 | Hour (1-24) |
-| K | 1..2 | 0 | Hour (0-11) |
-| m | 1..2 | 59 | Minute, use one or two for zero padding |
-| s | 1..2 | 12 | Second, use one or two for zero padding |
-| S | 1..3 | 153 | Milliseconds |
-| E | 1..2 | 05 | Day of week |
-| E | 3 | Thu | Day of week |
-| E | 4 | Thursday | Day of week |
-| z | 1..4 | Pacific Standard Time | Time zone |
-| Z | 1..3 | -04:00 | Time zone offset |
-| Z | 4 | GMT-04:00 | Time zone offset |
+{{% snippet file="refguide7/Custom+Date+Format+Tokens.md" %}}
 
-These are some examples:
-
-| Format | Example Output |
-| --- | --- |
-| `EEEE d MMMM yyy G, h:mm a ss's` | Tuesday 29 March 2011 AD, 1:37 PM 48s |
-| `h:mm a` | 1:37 PM |
-| `yyy D KK:mm` | 2011 88 01:26 |
-| `EEEE MMMM d yyy` | Tuesday March 29 2011 |
-| `EEE, MMM dd, ''yy` | Wed, Jul 04, '01 |
+{{% alert type="info" %}}
+Even though a date picker with a custom date format is editable (as of Mendix 7.21.0), the calendar drop-down button will not be shown if the custom format does not represent the full date (meaning, the year [`y`-`yyyy`], month [`M`-`MMMM`], or day of month [`d`-`dd`] tokens are missing in the custom format).
+{{% /alert %}}
 
 ### 2.3 Placeholder Text
 
@@ -82,47 +44,47 @@ The placeholder text is shown if the date attribute is empty. It can be used to 
 
 ## 3 Validation Properties
 
-{{% snippet file="refguide/Widget+Validation.md" %}}
+{{% snippet file="refguide7/Widget+Validation.md" %}}
 
 ## 4 Data Source Properties
 
-{{% snippet file="refguide/Attribute+Path+Property.md" %}}
+{{% snippet file="refguide7/Attribute+Path+Property.md" %}}
 
-{{% snippet file="refguide/Label+Property.md" %}}
+{{% snippet file="refguide7/Label+Property.md" %}}
 
 ## 5 Editability Properties
 
-{{% snippet file="refguide/Editable+Property.md" %}}
+{{% snippet file="refguide7/Editable+Property.md" %}}
 
-{{% snippet file="refguide/Read+Only+Style.md" %}}
+{{% snippet file="refguide7/Read+Only+Style.md" %}}
 
-{{% snippet file="refguide/Condition+Property.md" %}}
+{{% snippet file="refguide7/Condition+Property.md" %}}
 
 ## 6 Visibility Properties
 
-{{% snippet file="refguide/Visibility+Property.md" %}}
+{{% snippet file="refguide7/Visibility+Property.md" %}}
 
-{{% snippet file="refguide/Visibility+Property+With+Module+Roles+Simple.md" %}}
+{{% snippet file="refguide7/Visibility+Property+With+Module+Roles+Simple.md" %}}
 
 ## 7 Events Properties
 
-{{% snippet file="refguide/On+Change+Event.md" %}}
+{{% snippet file="refguide7/On+Change+Event.md" %}}
 
-{{% snippet file="refguide/On+Enter+event.md" %}}
+{{% snippet file="refguide7/On+Enter+event.md" %}}
 
-{{% snippet file="refguide/On+Leave+Event.md" %}}
+{{% snippet file="refguide7/On+Leave+Event.md" %}}
 
 ## 8 Common Properties
 
-{{% snippet file="refguide/Name+Property.md" %}}
+{{% snippet file="refguide7/Name+Property.md" %}}
 
-{{% snippet file="refguide/Class+Property.md" %}}
+{{% snippet file="refguide7/Class+Property.md" %}}
 
-{{% snippet file="refguide/Style+Property.md" %}}
+{{% snippet file="refguide7/Style+Property.md" %}}
 
-{{% snippet file="refguide/Tab+index+Property.md" %}}
+{{% snippet file="refguide7/Tab+index+Property.md" %}}
 
-## 9 Related Content
+## 9 Read More
 
 *   [Data View](data-view)
 *   [Attributes](attributes)

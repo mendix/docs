@@ -77,7 +77,7 @@ RETURN @NewSeqVal
 END;
 ```
 
-## 5 Related Content
+## 5 Read More
 
 * [How to Activate a Mendix License on Microsoft Windows](activate-a-mendix-license-on-microsoft-windows)
 * [How to Set Up the Database User](setting-up-the-database-user)

@@ -65,14 +65,14 @@ You can manage the alerts by yourself, follow these steps:
 
     ![](attachments/receive-alerts/email-alerts.png)
 
-## 4 Related Content
+## 4 Read More
 
 * [Alerts](monitoring-application-health)
 * [Application Trends in Mendix Cloud v3](trends)
 * [Application Trends in Mendix Cloud v4](trends-v4)
 * [How to Manage Company & App Roles](/developerportal/company-app-roles/manage-roles)
 * [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy)
-* [Mendix Cloud v4 - FAQ](/developerportal/deploy/mxcloudv4)
+* [Mendix Cloud V4](/developerportal/deploy/mxcloudv4)
 * [Company & App Roles](/developerportal/company-app-roles/index)
-* [Security - Node Permissions](/developerportal/deploy/node-permissions) 
+* [Node Permissions](/developerportal/deploy/node-permissions) 
 * [Technical Contact](/developerportal/company-app-roles/technical-contact)

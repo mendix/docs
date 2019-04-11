@@ -6,7 +6,7 @@ tags: ["Mendix", "Developer Portal", "Platform Services"]
 
 ## 1 What Is the Developer Portal?
 
-The key components of the entire Mendix Platform are the [Desktop Modeler](/refguide/desktop-modeler), [Web Modeler](/refguide/web-modeler/), and the [Developer Portal](http://home.mendix.com). The Developer Portal is where Mendix developers can collaborate, deploy, and manage their apps, company, and users. 
+The key components of the entire Mendix Platform are the [Desktop Modeler](/refguide/desktop-modeler), [Web Modeler](/web-modeler), and the [Developer Portal](http://home.mendix.com). The Developer Portal is where Mendix developers can collaborate, deploy, and manage their apps, company, and users. 
 
 The Mendix Developer Portal takes a lightweight and social approach to enterprise project collaboration. The portal provides a unique combination of requirements management tools and social activity streams, offering a way to interact with colleagues, app project team members, and even external stakeholders involved in app projects.
 
@@ -60,7 +60,7 @@ The [Mendix Academy](https://gettingstarted.mendixcloud.com/link/home) offers bo
 
 ## 8 Forum
 
-In the [Mendix Forum](/developerportal/community-tools/mendix-forum), you can interact with the Mendix community to help out with [questions](https://forum.mendixcloud.com/link/questions/91882) and answers on the best ways to use Mendix as well as propose ideas for improving the Mendix Platform:
+In the [Mendix Forum](/developerportal/community-tools/mendix-forum), you can interact with the Mendix community to help out with [questions](https://forum.mendixcloud.com/link/questions/) and answers on the best ways to use Mendix as well as propose [ideas](https://forum.mendixcloud.com/link/ideas/) for improving the Mendix Platform:
 
 ![](attachments/developerportal-forum.png)
 
@@ -70,6 +70,18 @@ The [Mendix Documentation](https://docs.mendix.com/) is open to the Mendix commu
 
 ![](attachments/developerportal-docs.png)
 
-## 10 Document Categories
+## 10 Getting Assistance
+
+Clicking the question icon in the Developer Portal brings up the options Mendix provides for getting assistance:
+
+![](attachments/developerportal-assistance.png)
+
+* **Ask the Community** – click this to go to the [Mendix Forum](https://forum.mendixcloud.com/index4.html)
+* **Check the Documentation** – click this to go to the [Mendix Documentation](https://docs.mendix.com/)
+* **Contact Mendix Support** – click this to go to [Mendix Support](https://support.mendix.com/hc/en-us)
+
+## 11 Document Categories
+
+The *Developer Portal Guide* is divided into the following categories:
 
 {{% category_block %}}

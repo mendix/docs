@@ -124,8 +124,6 @@ _Default value_: Yes
 
 ### Enable clustering support
 
-TODO
-
 _Default value_: No
 
 ## Modeler

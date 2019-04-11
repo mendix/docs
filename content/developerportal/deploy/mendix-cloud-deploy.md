@@ -3,7 +3,7 @@ title: "Mendix Cloud"
 category: "Deployment"
 menu_order: 20
 description: "Describes how to deploy to the Mendix Cloud."
-tags: ["Deploy","Mendix Cloud","Developer Portal"]
+tags: ["Deploy","Mendix Cloud","Developer Portal", "Free app", "licensed", "limitations"]
 frontpage_featured: true
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -12,11 +12,29 @@ frontpage_featured: true
 
 The Mendix Cloud is a public cloud service for Mendix applications; this is the default deployment option for Mendix applications. You can deploy either a limited **Free App** or an app running on a licensed cloud node.
 
-### 1.1 Free App
+### 1.1 Free App{#free-app}
 
 If you are new to the Mendix community and would like to deploy and share your own app, you can do so for free on our public cloud offering. The Free App environment (sometimes referred to as the Sandbox) allows any Mendix developer to create and share their applications with their users. Note that a Free App does not support complex or large applications.
 
-<!-- Add a link here to something that shows the difference between a Free App and a Licensed App -->
+A Free App has a number of limitations compared to a licensed app. The main limitations are summarized in the table below:
+
+| Feature                                     | Free App                                                     | Licensed App                                                 |
+| ------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| **Number of Users**                         | Maximum ten users.                                           | Depends on your pricing plan.                                |
+| **Sleep Mode**                              | Goes into Sleep Mode after an hour or so of inactivity and automatically resumes when a user accesses it. All your data is retained while the app is in Sleep Mode. | Does not have a Sleep Mode.                                  |
+| **Storage**                                 | 100MB of data and 100MB of file storage space.               | Depends on your pricing plan.                                |
+| **Scheduled Events**                        | Are not run.                                                 | Are run and can be configured from the Developer Portal.     |
+| **Environments**                            | Single environment in the Mendix Cloud.                      | A node in the cloud which has one or more environments, for example, production, acceptance, and test. |
+| **Deployment**                              | Can only be deployed to the cloud from the Desktop or Web Modeler. | Can be deployed from a modeler, or from the Developer Portal. |
+| **Custom Domains**                          | Not available.                                               | Can be configured from the Developer Portal.                 |
+| **Access Restriction Profiles**             | Not available.                                               | Can be configured from the Developer Portal.                 |
+| **Client Certificates**                     | Not available.                                               | Can be configured from the Developer Portal.                 |
+| **Starting and stopping your app manually** | Not available.                                               | Available in the Developer Portal.                           |
+| **Constants and Runtime Settings**          | Defined in modeler.                                          | Configurable through environment variables and settings in the Developer Portal. |
+| **Scalability**                             | Only one instance and a fixed amount of memory.              | Configurable in the Developer Portal.                        |
+| **Metrics, Alerts, and Log Levels**         | Not available.                                               | Available.                                                   |
+| **Historic Archived Logs**                  | Not available, only live logs are available.                 | Available.                                                   |
+| **Backups**                                 | Performed daily, cannot be triggered manually. Stored up to two weeks. |Performed daily, can also be created manually. Kept for up to one year, depending on your plan. |
 
 {{% alert type="info" %}}
 Free apps are part of our community edition and require Mendix version 6 or higher.
@@ -26,7 +44,7 @@ If you are not currently a customer but would prefer to use a licensed cloud nod
 If you are an existing customer, you should deploy into your licensed cloud node.
 {{% /alert %}}
 
-A Free App will go to sleep after an hour or so of inactivity. If you access it while it is inactive, you will see the image below. If, after a couple of minutes, your app does not wake up, please contact our support team at [support.mendix.com](http://support.mendix.com).
+As noted in the table above, a Free App will go to sleep after an hour or so of inactivity. If you access it while it is inactive, you will see the image below. If, after a couple of minutes, your app does not wake up, please contact our support team at [support.mendix.com](http://support.mendix.com).
 
 ![](attachments/mendix-cloud-deploy/appresumed.png)
 
@@ -34,9 +52,13 @@ You can upgrade a Free App to a licensed node with a *node* in the Mendix Cloud.
 
 ### 1.2 Licensed App
 
-A licensed app runs on a *node* which has a minimum of two environments: **production** and **acceptance**. A third environment, **test**, can be added, if required. Your licensed app is linked to a node and can be deployed to any of these environments.
+A licensed app runs on a *node* which has a minimum of two environments: **production** and **acceptance**. A third environment, **test**, can be added, if required, or you can decide to use [Flexible Environments](#flexible-environments). Your licensed app is linked to a node and can be deployed to any of these environments.
 
 By default, apps are deployed to the Mendix Cloud **v4**. Features which are covered in the default documentation are for **v4**. Some customers with special requirements may use Mendix Cloud **v3**, and will have to refer to the **v3** documentation where the features differ from **v4**.
+
+### 1.3 Flexible Environments{#flexible-environments}
+
+In some circumstances, you might find that the two or three standard environments you get with a licensed app are not sufficient. In this case you can request a Mendix Cloud V4 node with *Flexible Environments*. With Flexible Environments you can specify how many environments you want in your node and you can decide what they should be called.
 
 ## 2 Deploying an App to the Mendix Cloud
 
@@ -101,13 +123,18 @@ The previous steps explained how to deploy a deployment package to the Mendix Cl
 
 1. Open the [Developer Portal](http://home.mendix.com).
 2. Open your app.
-2. Go to **Environments**.
-3. In the **Deployment Package Repository**, choose the preferred deployment package and click **Deploy**.
-4. Select the preferred environment, and then click **Continue**.
-5. Click **Transport**. If asked to do so, clean the environment.
-6. Configure the constants (if necessary) by clicking **Constants** and **Edit constants value**. This can also be done in a later stage in the settings.
-7. Click **Continue**.
-8. Click **Start application**. If asked, click **Synchronize database**.
+3. Go to **Environments**.
+4. In the **Deployment Package Repository**, choose the preferred deployment package and click **Deploy**.
+5. Click the environment to which you want to deploy the package.
+6. Click **Transport**.
+
+    ![](attachments/mendix-cloud-deploy/transport-to-flex.png)
+
+7. If asked to do so, clean the environment.
+8. Configure the constants (if necessary) by clicking **Constants** and **Edit constants value**. This can also be done in a later stage in the settings.
+9. Configure the scheduled events (if necessary) by clicking **Scheduled Events**.
+10. Click **Continue**.
+11. Click **Start application**. If asked, click **Synchronize database**.
 
 The app is now deployed and the administrative account can be configured.
 
@@ -127,11 +154,14 @@ If you want to choose whether you want to run your app locally or in the Sandbox
 
 ![](attachments/mendix-cloud-deploy/runapp.jpg)
 
-## 6 Related Content
+## 6 Status of Deployment
+
+The Mendix status page ([https://status.mendix.com/](https://status.mendix.com/)) shows the current status of Mendix services. If you have issues with deployment, you can check the Mendix status page to see if deployment is operational (under **Mendix Services**) or if there are other Mendix issues which may be affecting your deployment.
+
+## 7 Read More
 
 * [AppCloudServices](https://appstore.home.mendix.com/link/app/934/); the **AppCloudServices** module allows your app to integrate with services on the Mendix Cloud
-* [How to Configure Custom Domains](custom-domains)
+* [Custom Domains](custom-domains)
 * [Licensing Apps](licensing-apps)
 * [How to Manage Company & App Roles](/developerportal/company-app-roles/manage-roles)
 * [Company & App Roles](/developerportal/company-app-roles/index)
-* [How to Set Up Two-Factor Authentication With Google Authenticator](/howtogeneral/support/how-to-set-up-two-factor-authentication-with-google-authenticator)

@@ -34,7 +34,7 @@ Before trying to solve the problems, it's useful to discover the origin of the p
 
 ### 3.1 Is This a Team Server Project?
 
-If your project is a [Team Server](/refguide7/team-server) project, and you just did a [download or update](../collaboration-requirements-management/using-team-server-_-version-control) from the server, the problem may have been added in a revision that was recently committed to the Team Server. You can check who made the most recent commit in the **Develop** menu item in the top menu of your Project Dashboard in the [Mendix Dev Portal](https://sprintr.home.mendix.com).
+If your project is a [Team Server](/refguide7/team-server) project, and you just did a [download or update](/refguide7/using-version-control-in-the-dm) from the server, the problem may have been added in a revision that was recently committed to the Team Server. You can check who made the most recent commit in the **Develop** menu item in the top menu of your Project Dashboard in the [Mendix Dev Portal](https://sprintr.home.mendix.com).
 
 If the latest change on your branch line was committed by someone other than yourself, please inform the person about the problem.
 
@@ -56,7 +56,7 @@ The most likely cause for these kinds of errors is a faulty script that was run 
 
 Finally, in the unlikely event that you encounter this error while working on your project with the Mendix Desktop Modeler, it's best to contact Mendix support and open a ticket to get help with the problem.
 
-## 5 Related Content
+## 5 Read More
 
 *   [Clearing Warning Messages in Mendix](clear-warning-messages)
 *   [Common Mendix SSO Errors](handle-common-mendix-sso-errors)

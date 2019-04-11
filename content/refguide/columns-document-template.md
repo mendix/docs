@@ -1,5 +1,5 @@
 ---
-title: "Columns (document template)"
+title: "Columns (Document Template)"
 parent: "data-grid-document-template"
 ---
 

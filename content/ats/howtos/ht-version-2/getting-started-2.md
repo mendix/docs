@@ -186,13 +186,13 @@ For further documentation on how-to create a test case see [How-to create a test
 
 #### 4.2.2 Test Data Tab
 
-In this tab, you can connect your data sets to a test case. Use the arrow to select the data set you need and click **Save**. A new menu will appear in which you can see the data set fields that are available to select. You can also use this menu to check if you selected the correct data set.
+In this tab, you can connect your datasets to a test case. Use the arrow to select the dataset you need and click **Save**. A new menu will appear in which you can see the dataset fields that are available to select. You can also use this menu to check if you selected the correct dataset.
 
 ![](attachments/getting-started-2/test-data-tab.png)
 
 {{% alert type="info" %}}
 
-If you do not use the data set, make sure to disconnect it. ATS will remember where you selected the data set fields as input, so if you reconnect the data set, ATS will automatically set the correct input.
+If you do not use the dataset, make sure to disconnect it. ATS will remember where you selected the dataset fields as input, so if you reconnect the dataset, ATS will automatically set the correct input.
 
 {{% /alert %}}
 

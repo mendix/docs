@@ -1,5 +1,5 @@
 ---
-title: "Template Grid (document template)"
+title: "Template Grid (Document Template)"
 parent: "document-templates"
 ---
 
@@ -31,7 +31,7 @@ This defines the amount of columns the template grid will contain.
 
 ## Common Properties
 
-{{% snippet file="refguide/Name+Property.md" %}}
+{{% snippet file="refguide7/Name+Property.md" %}}
 
 ## Data Source Properties
 

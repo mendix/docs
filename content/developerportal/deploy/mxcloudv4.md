@@ -2,6 +2,7 @@
 title: "Mendix Cloud V4"
 parent: "mendix-cloud-deploy"
 menu_order: 50
+description: "Frequently asked questions about Mendix Cloud V4"
 tags: ["Cloud", "Mendix Cloud", "V4", "Version 4", "FAQ", "V3", "AWS", "Amazon Web Services"]
 ---
 
@@ -11,7 +12,7 @@ Mendix Cloud v4 is the latest version of the Mendix Cloud: where licensed Mendix
 
 V4 was launched in Q1 2017. As in v3, applications are deployed via the Mendix Developer Portal or our [APIs](/apidocs-mxsdk/apidocs/deploy-api). Unlike v3, the applications run on Cloud Foundry clusters that are deployed on highly available Amazon Web Services (AWS) regions. Apps can run in the EU, US, Japan, or the UK.
 
-## 2 What Does the v4 Rollout Look Like, and What Is the Status of v3?
+## 2 What Is the Status of Mendix Cloud v3?
 
 New apps will be launched on Mendix Cloud v4 by default. Customers that need to stay on v3 because they use a VPN can still get new apps on v3 for the foreseeable future. Mendix Cloud v3 will be supported for several more years; no end-of-support or end-of-life dates have been set yet.
 
@@ -49,17 +50,17 @@ Data in Japan is currently backed up in Australia.
 
 No, we do not. The Cloud Foundry API does not map one-to-one to our deployment options, our authorization model, or our cloud resource usage. However, deployment to the Mendix Cloud can be automated using the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api).
 
-## 6 How Do I Access the Underlying AWS Resources, and How Can You Deploy in My AWS account?
+## 6 How Do I Access the Underlying AWS Resources, and How Can I Deploy in My AWS account?
 
-Mendix Cloud v4 runs in Mendix's own AWS account, and you can not interact with the AWS APIs directly via our credentials. We do not offer [VPC peering](http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide/Welcome.html) or VPC connections. All access to Mendix-hosted AWS resources (such as EC2, RDS, and S3) is done via our APIs, such as the [Database API](https://apidocs.mendix.com/7/runtime/com/mendix/core/Core.html#retrieveXPathQuery-com.mendix.systemwideinterfaces.core.IContext-java.lang.String-) and [FileDocument API](https://apidocs.mendix.com/7/runtime/com/mendix/core/Core.html#storeFileDocumentContent-com.mendix.systemwideinterfaces.core.IContext-com.mendix.systemwideinterfaces.core.IMendixObject-java.io.InputStream-) in Runtime, and the cloud resources via the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api).
+Mendix Cloud v4 runs in Mendix's own AWS account, and you can not interact with the AWS APIs directly via our credentials. We do not offer [VPC peering](http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide/Welcome.html) or VPC connections. All access to Mendix-hosted AWS resources (such as EC2, RDS, and S3) is done via our APIs, such as the [Database API](https://apidocs.mendix.com/7/runtime/com/mendix/core/Core.html#retrieveXPathQuery-com.mendix.systemwideinterfaces.core.IContext-java.lang.String-) and [FileDocument API](https://apidocs.mendix.com/7/runtime/com/mendix/core/Core.html#storeFileDocumentContent-com.mendix.systemwideinterfaces.core.IContext-com.mendix.systemwideinterfaces.core.IMendixObject-java.io.InputStream-) in Runtime, and the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api) for cloud resources.
 
-However, you can launch services on your own AWS account in the same region to minimize latency, and you can access those services from connectors in your app. The [AWS IoT Connector](https://appstore.home.mendix.com/link/app/2868/Mendix/AWS-IoT-Connector) from the Mendix App Store is a good example.
+You can, however, launch services on your own AWS account in the same region to minimize latency, and you can access those services via connectors in your app. The [AWS IoT Connector](https://appstore.home.mendix.com/link/app/2868/Mendix/AWS-IoT-Connector) from the Mendix App Store is a good example.
 
 ## 7 There Is No Deployment in My Desired AWS Region, When Will Mendix Launch There?
 
 We add regions based on customer demand. If you would like a different region, contact your Mendix Customer Success Manager to see what we can offer. Note that we any request will need to take into account the costs of launching a complete Cloud Foundry cluster, with backup services, monitoring, etc. 
 
-You can also consider running your Mendix app using your own AWS account in a different AWS region. You can do this using Docker, and there are some documents on how to do this here: [Docker](docker-deploy). If you do this, however, you will not receive all the benefits of running in the Mendix Cloud.
+You can also consider running your Mendix app using your own AWS account in a different AWS region. You can do this using Docker, and there is some information on how to do this here: [Docker](docker-deploy). If you do this, however, you will not receive all the benefits of running in the Mendix Cloud.
 
 ## 8 What Are the Limitations?
 
@@ -95,8 +96,13 @@ There are some features missing in v4. Mendix will implement the following featu
 * In some circumstances your app can run out of file connections. This is indicated by the following entry in the logfile: *com.amazonaws.http.AmazonHttpClient executeHelper Unable to execute HTTP request: Timeout waiting for connection from pool*. To resolve this:
     * Update all App Store modules to the latest version – older versions may not close file connections correctly
     * If using Mendix 6, upgrade to version 6.10.16 or above; for Mendix 7, upgrade to version 7.16 or above
-    * Increase the number of available file connections (default is 50) by adding the *com.mendix.storage.s3.MaxConnections* setting on the **Environments > Runtime > Custom Runtime Settings** in the Developer Portal – see [Customization – Amazon S3 Storage Service Settings](/refguide/custom-settings#5-amazon-s3-storage-service-settings) for more information
+    * Increase the number of available file connections (default is 50) by adding the *com.mendix.storage.s3.MaxConnections* setting on the **Environments > Runtime > Custom Runtime Settings** in the Developer Portal – see [Customization – Amazon S3 Storage Service Settings](/refguide/custom-settings#aws-s3) for more information
+* The platform automatically restarts application instances due to routine platform updates, which can be up to several times a week. If you review logs for an app that is functioning normally and you see recent messages about a series of instance restarts for no apparent reason, platform updates are probably the reason. This is normal and ok!
 
-## 12 Related Content
+    In the majority of cases, the platform will start a new instance of your application, before gracefully stopping the old one. This ensures that there is no downtime. You can verify this in the logs of your application.
+    
+    If you want a second layer of assurance that you will not have downtime in this situation, we advise you to use Mendix 7+ and to scale your application to multiple instances.
 
-* [How to Migrate to Mendix Cloud v4](migrating-to-v4)
+## 12 Read More
+
+* [Migrate to Mendix Cloud v4](migrating-to-v4)

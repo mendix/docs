@@ -66,7 +66,7 @@ The following steps describe how to start the Selenium hub:
 
 
 
-3.  Check with the following link if the hub works: [http://localhost:4444/grid/console](http://localhost:4444/grid/console)
+3.  Check with the following link if the hub works: `http://localhost:4444/grid/console`
 
    ![](attachments/setup-local-selenium-index-2/setup-local-selenium-hub-2/grid_hub.png)
 
@@ -123,7 +123,7 @@ The following steps describe how to start the node with three Chrome and three F
 
 ## 7 Starting Testing
 
-You can start testing by sending your test script to [http://yourmachinenameorIP:4444/wd/hub](http://localhost:4444/wd/hub). 
+You can start testing by sending your test script to `http://yourmachinenameorIP:4444/wd/hub`.
 
 {{% alert type="warning" %}}
 Make sure it is reachable from the outside!

@@ -62,11 +62,8 @@ You should now have an overview page like this:
 How-to's
 
 *   [Scout and Windows 10 Workaround](scout-and-windows-10-workaround)
-*   [Scout and Windows 10 Workaround](/howto6/scout-and-windows-10-workaround)
-*   [Filtering Data on an Overview Page](filtering-data-on-an-overview-page)
-*   [Layouts and Snippets](layouts-and-snippets)
+*   [Scout and Windows 10 Workaround]*   [Layouts and Snippets](layouts-and-snippets)
 *   [Layouts and Snippets](/howto6/layouts-and-snippets)
-*   [Filtering Data on an Overview Page](/howto6/filtering-data-on-an-overview-page)
 *   [Setup Mendix UI Framework with just CSS](setup-mendix-ui-framework-with-just-css)
 *   [Setting Up the Navigation Structure](setting-up-the-navigation-structure)
 *   [Creating your first two Overview and Detail pages](creating-your-first-two-overview-and-detail-pages)

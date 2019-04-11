@@ -22,8 +22,10 @@ let mainFolder;
 let SPACES;
 
 const contentHandler = (req, res, next) => {
-    const contentPath = req.params[0];
-    log(`Handling content: ${contentPath}`);
+    const dirtyPath = req.params['*'];
+    log(`Handling content: ${dirtyPath}`);
+
+    const contentPath = dirtyPath.replace(/(^.*)\.json$/, '$1');
 
     const sourcePath = normalizeSafe(path.resolve(mainFolder, CONTENTFOLDER, contentPath));
     const generatePath = normalizeSafe(path.resolve(mainFolder, GENERATEDFOLDER, contentPath));
@@ -96,6 +98,7 @@ const contentHandler = (req, res, next) => {
                 if (meta !== null) {
                     _.merge(obj, _.omit(meta, ['__content', 'space']));
                     obj.markdown = meta['__content'];
+                    obj.meta = content.toString().replace(meta['__content'], '');
                 }
 
                 if (obj.parent) {
@@ -195,7 +198,7 @@ const contentHandler = (req, res, next) => {
             }),
         (sourceObj, targetObj) => {
             _.merge(sourceObj, targetObj, { path: normalizeSafe('/' + contentPath) });
-
+            res.header('content-type', 'json');
             res.send(200, sourceObj);
         }
     )
@@ -228,6 +231,7 @@ const pagesHandler = (req, res, next) => {
                 })
                 .map(p => normalizeSafe(p)))
         .then(files => {
+            res.header('content-type', 'json');
             res.send(200, files.filter(p =>
                 p !== '/' && p !== '/search/' &&
                 p !== '/index' && p !== '/search/index'
@@ -254,6 +258,7 @@ const snippetsHandler = (req, res, next) => {
             };
         }))))
         .then(files => {
+            res.header('content-type', 'json');
             res.send(200, files);
         })
         .catch(e => {
@@ -270,7 +275,8 @@ const spacesHandler = (req, res, next) => {
         const obj = SPACES[spaceID];
         obj.id = spaceID;
         spaceArr.push(obj);
-    })
+    });
+    res.header('content-type', 'json');
     res.send(200, spaceArr);
     return next();
 };
@@ -280,11 +286,12 @@ const spawn = (folder) => {
     SPACES = YAML.load(path.resolve(mainFolder, 'data/spaces.yml'));
 
     server = restify.createServer();
+    server.use(restify.plugins.queryParser());
 
-    server.get(/^\/content\/(.*)/, contentHandler);
-    server.get(/^\/pages/, pagesHandler);
-    server.get(/^\/snippets/, snippetsHandler);
-    server.get(/^\/spaces/, spacesHandler)
+    server.get('/content/*', contentHandler);
+    server.get('/pages/', pagesHandler);
+    server.get('/snippets/', snippetsHandler);
+    server.get('/spaces/', spacesHandler)
 
     server.listen(7000, () => {
         log(`Server listening on ${server.url}`);

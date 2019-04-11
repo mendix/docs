@@ -2,7 +2,7 @@
 title: "Mendix Mobile App"
 category: "Mobile Products"
 menu_order: 20
-description: "These are the release notes for the Mendix mobile app."
+description: "These are the release notes for the Mendix Mobile app."
 toc-level: 1
 ---
 
@@ -35,7 +35,7 @@ To download the **Mendix** mobile app, select one of the download links below:
 
 ### Fixes
 
-* Deep links (for example, links to your Mendix app) opened using the Mendix mobile app are now properly sanitized.
+* Deep links (for example, links to your Mendix app) opened using the Mendix Mobile app are now properly sanitized.
 
 ### Known Issues
 
@@ -79,7 +79,7 @@ To download the **Mendix** mobile app, select one of the download links below:
 
 ### Bug Fixes
 
-* We fixed support for iOS 11: loading a Mendix hybrid app (for example, by using the QR scanner or from the **Apps** page) caused the Mendix mobile app to crash. This issue has been resolved.
+* We fixed support for iOS 11: loading a Mendix hybrid app (for example, by using the QR scanner or from the **Apps** page) caused the Mendix Mobile app to crash. This issue has been resolved.
 
 ### Known Issue
 
@@ -116,14 +116,14 @@ To download the **Mendix** mobile app, select one of the download links below:
 
 We have added two new features to accelerate your app delivery projects:
 
-* Easily test your hybrid mobile Mendix apps on your phone by scanning the QR code shown in the Mendix Modeler from the convenience of the Mendix mobile app.
-* Review the capabilities of Atlas UI and the Mendix Platform through the showcases accessible through the Mendix mobile app. The above features are available without logging in. However, you still need to log in if you want to use **Buzz**.
+* Easily test your hybrid mobile Mendix apps on your phone by scanning the QR code shown in the Mendix Modeler from the convenience of the Mendix Mobile app.
+* Review the capabilities of Atlas UI and the Mendix Platform through the showcases accessible through the Mendix Mobile app. The above features are available without logging in. However, you still need to log in if you want to use **Buzz**.
 
 ## 4.1.0
 
 **Release date: April 7th, 2017**
 
-With this release, we greatly improved the user experience of the Mendix mobile app.
+With this release, we greatly improved the user experience of the Mendix Mobile app.
 
 ### New Functionality
 

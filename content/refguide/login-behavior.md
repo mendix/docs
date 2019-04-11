@@ -1,6 +1,6 @@
 ---
 title: "Login Behavior"
-category: "Runtime"
+category: "Mendix Runtime"
 description: "Describes default and customized login behavior in Runtime."
 tags: ["Runtime", "login"]
 ---

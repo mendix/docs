@@ -80,7 +80,7 @@ For more information about the call types of test steps, see [Test Step](test-st
 
 ## 4 Test Data
 
-Under the **Test Data** tab, you can set a master data set for your test case. You can now link the fields of the master data set to your test steps. Note that the test case runs a separate session for every record in the master data set. For more information on how to use data sets in your test cases, see [Data Driven Testing](test-data).
+Under the **Test Data** tab, you can set a master dataset for your test case. You can now link the fields of the master dataset to your test steps. Note that the test case runs a separate session for every record in the master dataset. For more information on how to use datasets in your test cases, see [Data Driven Testing](test-data).
 
 ## 5 Show Usages
 

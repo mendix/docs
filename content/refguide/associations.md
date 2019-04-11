@@ -1,55 +1,29 @@
 ---
 title: "Associations"
-parent: "domain-model"
+parent: "entities"
+menu_order: 30
 tags: ["domain model", "association"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
-An association describes a relation between entities. In the domain model, an association is represented by a line or arrow between two entities.
+The **Associations** tab is a tab in the entity properties and has the following settings:
 
-The value of the association can only be viewed or edited from the object of the entity that is the _owner_ of the association. Either one entity or both entities can be the owner of the association. If one entity is the owner, there is an arrow that points from the owner to the other entity. If both entities are owner, there is a line between the two entities.
+* [Name](#name) 
+* [Type](#type)
+* [Owner](#owner)
+* [Parent/Child](#parent-child)  
 
-The cardinality (or number of referred objects) of an association is indicated by the number one (`1`) or a star (`*`) at either side of the association.
+![](attachments/associations/dm-entity-properties-associations-tab.png)
 
-The arrow here indicates that **Order** is the owner of the association, and the `1` and `*` indicate that one customer is associated with many orders:
+For more information on associations, see [Association and Their Properties](association-properties). 
 
-![](attachments/domain-model-editor/918217.png)
+## 2 Name {#name}
 
-An association between a persistable entity and a non-persistable entity must start in the non-persistable entity and have the owner **Default**.
+The name of the association is used to refer to it from forms, microflows, XPath constraints, etcetera.
 
-## 2 Behavior Properties
-
-### 2.1 Delete Behavior
-
-Delete behavior defines what should happen to the associated object when an object is deleted. The following options can be configured for each end of the association.
-
-| Value | Description |
-| --- | --- |
-| delete {name of entity} object but keep {name of other entity} object(s) | When an object is deleted, the associated object(s) are not deleted. |
-| delete {name of entity> object and {name of other entity} object(s) as well | When an object is deleted, the associated object(s) are also deleted. |
-| delete {name of entity> object only if it is not associated with {name of other entity} object(s) | An object can only be deleted if it is not associated with any other object(s). |
-
-* *Default value*: delete {name of entity} object but keep {name of other entity} object(s)
-
-This delete behavior is used if you want to delete any associated **Profile** when a **Customer** is deleted:
-
-![](attachments/domain-model-editor/918143.png)
-
-This delete behavior is used if you want to be able to delete a **Customer** only if it is not associated with any **Order**:
-
-![](attachments/domain-model-editor/918146.png)
-
-## 3 Common Properties
-
-### 3.1 Name
-
-The name of the association is used to refer to it from forms, microflows, XPath constraints, etc.
-
-## 4 Type Properties
-
-### 4.1 Type
+## 3 Type {#type}
 
 This property defines whether an association is a reference (single) or a reference set (plural).
 
@@ -66,16 +40,37 @@ The examples for this property are combined with the example of the owner proper
 
 {{% /alert %}}
 
-### 4.2 Owner
+## 4 Owner {#owner}
 
 This property defines whether an association has one or two owners. If there is one owner, the owner is located at the start of the arrow.
 
 | Value | Description |
 | --- | --- |
-| Default | Only one entity is the owner (namely, the one where the arrow starts). |
-| Both | Both entities are owner. |
+| Default | Only one entity is the owner (the parent). |
+| Both | Both entities are owners. |
 
 * *Default value*: Default
+
+## 5 Type and Owner Relation to Multiplicity and Navigability
+
+**Type** and **Owner** properties of an entity are related to **[Multiplicity](association-properties#multiplicity)** and **[Navigability](association-properties#navigability)** properties of an association. When you change **Type** or **Owner**, you change **Multiplicity** and **Navigability** as well. 
+
+You can find correspondence between **Type**/**Owner** and **Multiplicity**/**Navigability** in the table below.
+
+|                                                              | Type          | Owner   |
+| ------------------------------------------------------------ | ------------- | ------- |
+| **Multiplicity**: one-to-one <br />**Navigability**: not available | Reference     | Both    |
+| **Multiplicity**: one-to-many <br />**Navigability**: not available | Reference     | Default |
+| **Multiplicity**: many-to-many <br />**Navigability**: X objects refer to Y objects | Reference set | Default |
+| **Multiplicity**: many-to-many <br />**Navigability**: X and Y objects refer to each other | Reference set | Both    |
+
+For more information on multiplicity and navigability, see section [2.3 Multiplicity](association-properties#multiplicity) and section [2.4 Navigability](association-properties#navigability) in *Associations and Their Properties*.
+
+## 6 Parent/Child {#parent-child}
+
+Parent and child settings show you the direction of the association. Parent defines an entity the association starts from, and child defines an entity the association ends with.
+
+## 7 Association Examples
 
 Drawing an association from the **Order** entity to the **Customer** entity results in the following:
 
@@ -155,7 +150,8 @@ A many-to-many association where both entities are owners is created by setting 
 
 In this example, an **Accountant** can have multiple **Groups** and a **Group** can have multiple **Accountants**:
 
-![](attachments/domain-model-editor/918125.png)
+{{% image_container width="500" %}}![](attachments/domain-model-editor/918125.png)
+{{% /image_container %}}
 
 In XML, instances of these entities and their association look as follows (note that the association is stored both in the **Accountant** element and the **Group** element):
 
@@ -185,3 +181,8 @@ In XML, instances of these entities and their association look as follows (note 
 </Group>
 
 ```
+
+## 8 Read More
+
+* [Associations and Their Properties](association-properties)
+* [Entities](entities)

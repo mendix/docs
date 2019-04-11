@@ -1,8 +1,9 @@
 ---
 title: "Mendix MVP Program"
 category: "Community Tools"
-tags: ["community", "mvp"]
 menu_order: 50
+description: "Describes how the Mendix Community MVP program works."
+tags: ["community", "mvp"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -66,3 +67,7 @@ The benefits of being an MVP include the following:
 Mendix reserves the right to make MVP selection decisions and to revoke MVP status at any time at its sole discretion. Acceptance of the MVP designation constitutes permission for Mendix to use MVPs' names and/or likenesses for advertising and promotional purposes without additional compensation.
 
 By participating in the MVP program, each MVP agrees to release, indemnify, defend, and hold Mendix directors, officers, employees, sponsors and agents (including advertising and promotion agencies ), and any other organizations related to the MVP program, harmless from any and all claims, injuries, damages, expenses, or losses to person or property and/or liabilities of any nature that in any way arise from participation in the MVP program including without limitation the following: (i) any condition caused by events beyond Mendix’s control that may cause the MVP program to be disrupted or corrupted; and (ii) any injuries, losses, or damages (compensatory, direct, incidental, consequential, or otherwise) of any kind arising in connection with or as a result of the MVP designation or from participation in the MVP program.
+
+## 6 Read More
+
+* [Mendix Profile](../mendix-profile/index)

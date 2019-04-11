@@ -149,7 +149,7 @@ You can use the same approach with an interface and an implementation class to e
 
 The idea is that you will have a Java Action that you can call in a microflow where you expose arbitrary key value pairs.
 
-## 6 Related Content
+## 6 Read More
 
 * [How to Find the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
 * [How to Clear Warning Messages](clear-warning-messages)

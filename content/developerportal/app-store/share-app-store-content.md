@@ -3,6 +3,7 @@ title: "Share App Store Content"
 category: "App Store"
 menu_order: 30
 tags: ["app store", "public app store", "private app store", widget", "module"]
+description: "Describes how to create and share Mendix App Store content."
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -19,7 +20,7 @@ The App Store is driven by contributions from members of the Mendix community wh
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Familiarize yourself with the [App Store Overview](app-store-overview) and [How to Use App Store Content](use-app-store-content-in-the-modeler)
+* Familiarize yourself with the [App Store Overview](app-store-overview) and [How to Use App Store Content](app-store-content)
 
 ## 3 App Store Content Development Guidelines {#submission}
 
@@ -200,7 +201,8 @@ To update content that has already been published, follow these steps:
 	{{% image_container width="350" %}}![](attachments/share-app-store-content/update_content_2.png)
 	{{% /image_container %}}
 
-## 6 Related Content
+## 6 Read More
 
 * [App Store Overview](app-store-overview)
-* [How to Use App Store Content](use-app-store-content-in-the-modeler)
+* [How to Use App Store Content](app-store-content)
+

@@ -12,6 +12,7 @@ const { normalizeSafe } = require('upath');
 const commandLineHelpers = require('./command_line');
 
 const { cyan, red } = commandLineHelpers.colors;
+const externalLog = commandLineHelpers.log('html check');
 
 const readFile = Promise.promisify(require('fs').readFile);
 const writeFile = Promise.promisify(require('fs').writeFile);
@@ -19,6 +20,7 @@ const writeFile = Promise.promisify(require('fs').writeFile);
 const ASYNCLIMIT = 50;
 let TESTED = [];
 let TOTAL = 0;
+let PERC = 0;
 
 const throwError = (plugin, error) => {
   gulpErrorLog = commandLineHelpers.log(`err:${plugin}`);
@@ -131,34 +133,49 @@ const readHtmlFile = filePath => new Promise((resolve, reject) => {
 const readHtmlFiles = paths => Promise.all(_.map(paths, file => readHtmlFile(file)));
 
 const checkLink = (url, cb) => {
-  //console.log(url);
-  request({
+  let res = {
     url: url,
-    followRedirect: true
-  }, (err, response, body) => {
-    //console.log(url, response ? response.statusCode : 'ERR: ' + err);
-    let res = {
+    err: null,
+    code: null
+  }
+
+  try {
+    request({
       url: url,
-      err: null,
-      code: null
-    }
-    if (err) {
-      res.err = err;
-    } else {
-      res.code = response ? response.statusCode : -1;
-    }
+      followRedirect: true,
+      method: 'HEAD',
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36',
+        'Cookie': 'cpc=10; path=/;',
+      }
+    }, (err, response, body) => {
+      //console.log(url, response ? response.statusCode : 'ERR: ' + err);
+      if (err) {
+        res.err = err;
+      } else {
+        // console.log('[+] ', url, response.headers)
+        res.code = response ? response.statusCode : -1;
+      }
+      TESTED.push(res);
+      const percentage = Math.round(100 * (TESTED.length / TOTAL));
+      if (percentage !== PERC && percentage % 10 === 0) {
+        externalLog(percentage + "% TESTED");
+        PERC = percentage;
+      }
+      cb();
+    });
+  } catch (error) {
+    res.err = error;
     TESTED.push(res);
-    if (100 * (TESTED.length / TOTAL) % 10 === 0) {
-      console.log(100 * (TESTED.length / TOTAL) + "% TESTED");
-    }
     cb();
-  });
+  }
 }
 
 const checkLinks = urls => new Promise((resolve, reject) => {
-  console.log('checkLinks', urls.length)
+  externalLog('checkLinks', urls.length)
   TESTED = [];
   TOTAL = urls.length;
+  PERC = 0;
   async.eachLimit(urls, ASYNCLIMIT, checkLink, asyncErr => {
     if (asyncErr) {
       reject(asyncErr);

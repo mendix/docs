@@ -1,5 +1,6 @@
 ---
 title: "Mobile Development"
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
@@ -51,4 +52,3 @@ Separate profiles are available for building [offline apps](offline). These apps
 * [Getting the Mendix Mobile App](getting-the-mendix-app)
 * [Managing App Signing Keys](managing-app-signing-keys)
 * [Packaging Hybrid Mobile Apps](packaging-hybrid-mobile-apps)
-* [Publishing Hybrid Mobile Apps](publish-packages-to-mobile-stores)

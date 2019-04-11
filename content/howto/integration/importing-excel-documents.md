@@ -15,10 +15,10 @@ Adding large amounts of data to your application, for example rootdata or data f
 Before starting this how-to, make sure you know how to do the following:
 
 * Create domain models (see [How to Create a Basic Data Layer](../data-models/create-a-basic-data-layer))
-* Create overview and detail pages (see [How to Create Your First Two Overview & Detail Pages](../ux/create-your-first-two-overview-and-detail-pages))
-* Create menu items (see [How to Set Up the Navigation Structure](../ux/setting-up-the-navigation-structure))
+* Create overview and detail pages (see [How to Create Your First Two Overview & Detail Pages](../front-end/create-your-first-two-overview-and-detail-pages))
+* Create menu items (see [How to Set Up the Navigation Structure](../general/setting-up-the-navigation-structure))
 * Create microflows (see [How to Create Your First Microflow: Hello World!](../logic-business-rules/create-your-first-microflow-hello-world)
-* Add App Store content to your app (see [How to Use App Store Content](/developerportal/app-store/use-app-store-content-in-the-modeler))
+* Add App Store content to your app (see [How to Use App Store Content](/developerportal/app-store/app-store-content))
 * Secure your applications (see [How to Create a Secure App](../security/create-a-secure-app))
 
 ## 3 Preparing the Data Structure, GUI, and Modules
@@ -33,10 +33,10 @@ Follow these steps:
 
     The 'XLSFile' object inherits from the 'Filedocument' object. If you don't know how to achieve this, please take a look at [How to Work with Images & Files](../data-models/working-with-images-and-files).
 2. Create **Overview** and **Detail** pages to manage objects of type **Customer** and **Order**.
-3.  Create **menu items **to access the **Order** and the **Customer** overview pages.
+3.  Create menu items to access the **Order** and the **Customer** overview pages.
 4.  Download the **Excel Importer** and **Mx Model Reflection** modules from the appstore.
-5.  Create **menu items** for the **ExcelImportOverview** and the **MxObjects_Overview** pages. Those pages already exist within the _**USE_ME** folders of the downloaded modules.
-6.  Configure the **Administrator** user role to have the **Configurator** modu lerole for the **Excel Importer** module, and the **ModelAdministrator** module role for the **Mx Model Reflection** module.
+5.  Create menu items for the **ExcelImportOverview** and the **MxObjects_Overview** pages. Those pages already exist within the _**USE_ME** folders of the downloaded modules.
+6.  Configure the **Administrator** user role to have the **Configurator** module role for the **Excel Importer** module, and the **ModelAdministrator** module role for the **Mx Model Reflection** module.
 
 ## 4 Preparing the Logic for the Data Import
 
@@ -269,7 +269,7 @@ Once you have completed an Excel template you can export the template for exampl
 
     {{% /alert %}}
 
-## 10 Related Content
+## 10 Read More
 
 * [How to Consume a Complex Web Service](consume-a-complex-web-service)
 * [How to Consume a Simple Web Service](consume-a-simple-web-service)
@@ -282,3 +282,4 @@ Once you have completed an Excel template you can export the template for exampl
 * [How to Consume a REST Service](consume-a-rest-service)
 * [How to Expose Data to BI Tools Using OData](exposing-data-to-bi-tools-using-odata)
 * [The Export to CSV Button](/refguide7/export-to-csv-button)
+

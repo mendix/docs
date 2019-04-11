@@ -30,7 +30,7 @@ To create an Area Chart with data from a REST service, follow these steps:
 
 {{% alert type="info" %}}
 
-For more information on publishing a REST API refer to this Mendix document: [Published REST Operation](/refguide/published-rest-operation)
+For more information on publishing a REST API refer to this Mendix document: [Published REST Operation](/refguide7/published-rest-operation)
 
 {{% /alert %}}
 
@@ -100,7 +100,7 @@ To use the REST Data source end point in your chart, follow these steps:
 
     ![Show Chart](attachments/charts/charts-rest-area-chart.png)
 
-## 6 Related Content
+## 6 Read More
 
 * [How to use chart data source REST](charts-basic-create)
 * [How to use Any Chart](charts-any-usage)

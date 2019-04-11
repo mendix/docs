@@ -83,7 +83,7 @@ To deploy an app to the cloud, follow these steps:
 3. When the deployment process is complete, click **View App** to open the app in your browser:
     ![](attachments/14091670/14385450.png)
 
-## 8 Related Content
+## 8 Read More
 
 * [Build a Simple HRM App 1: Create, Manage, and Deploy the App](build-a-simple-hrm-app-1-create-manage-and-deploy-the-app)
 * [Build a Simple HRM App 2: Perform the First Steps to Build a Rich GUI](build-a-simple-hrm-app-2-first-steps-in-building-a-rich-gui)

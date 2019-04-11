@@ -218,7 +218,7 @@ These are some other query examples:
 * `http://localhost:8080/odata/Expenses/Expenses?$filter=DateOfBirth+gt+datetime'1995-01-01T00:00:00'`
 * `http://localhost:8080/odata/Expenses/Expenses?$filter=DateOfBirth+gt+datetime'2005-01-01T00:00:00'&$orderby=DateOfBirth`
 
-## 7 Related Content
+## 7 Read More
 
 * [How to Consume a Complex Web Service](consume-a-complex-web-service)
 * [How to Consume a Simple Web Service](consume-a-simple-web-service)

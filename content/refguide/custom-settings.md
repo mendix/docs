@@ -1,11 +1,12 @@
 ---
-title: "Customization"
-category: "Runtime"
-description: "Describes custom server, log file, database, Amazon S3 storage service, Microsoft Azure, IBM Bluemix object storage, and web client settings in Mendix."
-tags: ["Runtime", "Customization", "Settings", "Configuration", "IBM Cloud", "Amazon S3", "Microsoft Azure", "Custom Settings"]
+title: "Runtime Customization"
+category: "Mendix Runtime"
+description: "Describes custom settings for server, log file, database, Amazon S3 storage service, Microsoft Azure, IBM Bluemix object storage, web client, and proxy server in Mendix."
+tags: ["Runtime", "Customization", "Settings", "Configuration", "IBM Cloud", "Amazon S3", "Microsoft Azure", "Custom Settings", "Proxy"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Custom Settings
+## 1 Custom Runtime Settings
 
 You can use custom server settings to configure the Runtime beyond the standard possibilities offered by the Modeler.
 
@@ -41,8 +42,9 @@ The following custom settings can be configured:
 | SessionTimeout | Defines after how much time session becomes invalid (in milliseconds). After that timeout a session becomes applicable for removal. The session won't be destroyed until the next time the cluster manager evaluates the active sessions. | 600000 |
 | http.client.MaxConnectionsPerRoute | Introduced in version 7.19.<br/> The [maximum number of connections for a route](https://hc.apache.org/httpcomponents-client-ga/httpclient/apidocs/org/apache/http/impl/client/HttpClientBuilder.html#setMaxConnPerRoute(int)) for Call REST and Call Web Service actions. | 2 |
 | http.client.MaxConnectionsTotal | Introduced in version 7.19.<br/> The [maximum number of connections allowed across all routes](https://hc.apache.org/httpcomponents-client-ga/httpclient/apidocs/org/apache/http/impl/client/HttpClientBuilder.html#setMaxConnTotal(int)) for Call REST and Call Web Service actions. | 20 |
+| http.client.CleanupAfterSeconds | Introduced in version 7.22.<br/> For Call REST and Call Web Service actions, the first request to a new host wil create an HTTP client that will handle subsequent requests. When there are no new requests to the host for the specified time, the HTTP client will be cleaned up. Default value: 12 * 60 * 60 (12 hours). A value of 0 means no cleanup. |
 | ClusterManagerActionInterval | The interval (in milliseconds) used for performing all cluster manager actions. These actions include, unblocking users, and removing invalid sessions. If nothing is specified the interval is half the SessionTimeout. | 300000 |
-| com.mendix.core.StorageService | Defines which storage service module will be used. The storage service module takes care of storing the actual files associated with 'System.FileDocument' objects, such as uploaded files. Possible values are 'com.mendix.storage.localfilesystem', 'com.mendix.storage.s3', 'com.mendix.storage.azure' (since Mendix 6.6), and 'com.mendix.storage.swift' (since Mendix 6.7). | com.mendix.storage.localfilesystem |
+| com.mendix.core.StorageService | Defines which storage service module will be used. The storage service module takes care of storing the actual files associated with 'System.FileDocument' objects, such as uploaded files. Possible values are 'com.mendix.storage.localfilesystem', 'com.mendix.storage.s3', 'com.mendix.storage.azure', and 'com.mendix.storage.swift'. | com.mendix.storage.localfilesystem |
 | com.mendix.storage.PerformDeleteFromStorage | Introduced in version 7.19.<br/>Defines whether a delete of a Mendix file document should result in an actual delete in the storage service. A reason to not perform an actual delete in the storage service can be when it is also used as a backup service. | true |
 | com.mendix.core.SessionIdCookieName | Defines the name of the cookie value which represents the session id. Can be useful to change when running in a container which assumes a certain name for the session cookie (e.g. Pivotal assumes 'JSESSIONID' as session cookie name). | XASSESSIONID |
 
@@ -104,7 +106,7 @@ Possible values: HSQLDB, MYSQL, ORACLE, POSTGRESQL, SQLSERVER |   |
 | SourceDatabaseUserName | The user name for the connection to the source database. |   |
 | SourceOracleServiceName | Defines the SERVICE_NAME when you have a connection with an Oracle DBMS as source. |   |
 
-## 5 Amazon S3 Storage Service Settings
+## 5 Amazon S3 Storage Service Settings {#aws-s3}
 
 The following settings influence the behavior of the Amazon S3 Storage Service module. Using these settings manually in the Mendix Cloud is strongly discouraged as the files stored in external systems will not be included in backups creation/restoration.
 
@@ -119,14 +121,12 @@ The following settings influence the behavior of the Amazon S3 Storage Service m
 | com.mendix.storage.s3.UseV2Auth | Let the authentication policy use 'Signature Version 2' instead of the default 'Signature Version 4'. Set this setting to 'true' when the endpoint does not support 'Signature Version 4'. | false |
 | com.mendix.storage.s3.EncryptionKeys | List of keys which can be used to encrypt and decrypt data at rest in S3\. The right key to decrypt the data with is automatically selected depending on with which key it was encrypted. Each encryption key consists of a key id, the encryption algorithm and the actual key (Base64 encoded). Example: ![](attachments/Custom+Settings/code_snippet_2.png) |   |
 | com.mendix.storage.s3.MaxConnections | Overrides the default maximum connections limit in the Amazon S3 service. The default value is enough for most applications, so we do not recommend explicitly setting this to a custom value unless a larger maximum connections limit is absolutely necessary. | [DEFAULT_MAX_CONNECTIONS](https://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/ClientConfiguration.html#DEFAULT_MAX_CONNECTIONS) field of the ClientConfiguration interface in the AWS SDK for Java. |
+| com.mendix.storage.s3.ClientExecutionTimeout | Sets the amount of time (in milliseconds) to allow a call to the storage service to complete. A value of 0 means no timeout. For more information, see the [AWS Java SDK](https://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/ClientConfiguration.html#setClientExecutionTimeout-int-). | 0 (no timeout) |
+| com.mendix.storage.s3.ConnectionTimeout | Sets the amount of time to wait (in milliseconds) when initially establishing a connection before giving up and timing out. A value of 0 means infinity and is not recommended. For more information, see the [AWS Java SDK](https://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/ClientConfiguration.html#setConnectionTimeout-int-). | 10.000 (10 seconds) |
+| com.mendix.storage.s3.SocketTimeout | Sets the amount of time to wait (in milliseconds) for data to be transfered over an established, open connection before the connection times out and is closed.  A value of 0 means infinity and is not recommended. For more information, see the [AWS Java SDK](https://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/ClientConfiguration.html#setSocketTimeout-int-). | 50.000 (50 seconds) |
+| com.mendix.storage.s3.RequestTimeout | Sets the amount of time to wait (in milliseconds) for the request to complete before giving up and timing out. A value of 0 means no timeout. For more information, see [the AWS Java SDK](https://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/ClientConfiguration.html#setRequestTimeout-int-). | 0 (no timeout) |
 
 ## 6 Microsoft Azure SQL
-
-{{% alert type="info" %}}
-
-This is supported from Mendix version 6.9.
-
-{{% /alert %}}
 
 These settings can be changed to use a Microsoft Azure SQL database for your Mendix application.
 
@@ -142,12 +142,6 @@ First you need to create an Azure SQL database (for information on how to do thi
 
 ## 7 Microsoft Azure Blob Storage Settings
 
-{{% alert type="info" %}}
-
-This is supported from Mendix version 6.6
-
-{{% /alert %}}
-
 These settings can be used to store files using the Microsoft Azure blob storage service. Server side encryption can be configured through the Azure Portal (see [https://azure.microsoft.com/en-us/documentation/articles/storage-service-encryption/](https://azure.microsoft.com/en-us/documentation/articles/storage-service-encryption/)).
 
 | Name | Description | Default value |
@@ -158,6 +152,8 @@ These settings can be used to store files using the Microsoft Azure blob storage
 | com.mendix.storage.azure.Container | Name of the container containing the blob. The container is created if it does not exist yet. |   |
 | com.mendix.storage.azure.ParallelismFactor | Maximum number of parallel multi-part file uploads / downloads. We advise you not to change this setting unless you experience slow file transfers for large files. Choosing larger values will lead to higher memory usage. | 5 |
 |com.mendix.storage.azure.UseHttps| Introduced in version 7.7. For enabling or disabling secure connections using HTTPS. Can be `true` or `false`. | `true` |
+| com.mendix.storage.azure.TimeoutIntervalInMs | Sets the amount of time (in milliseconds) to allow a call to the storage service to complete. For more information, see [the Azure Libraries](https://azure.github.io/azure-sdk-for-java/com/microsoft/azure/storage/RequestOptions.html#setTimeoutIntervalInMs-java.lang.Integer-). | No timeout |
+| com.mendix.storage.azure.MaximumExecutionTimeInMs | Sets the maximum execution time (in milliseconds) to use when making this request. For more information, see [the Azure Libraries](https://azure.github.io/azure-sdk-for-java/com/microsoft/azure/storage/RequestOptions.html#setMaximumExecutionTimeInMs-java.lang.Integer-). | No maximum time |
 
 {{% alert type="warning" %}}
 
@@ -166,12 +162,6 @@ In Mendix 7.7.0, we changed Azure blob storage's default connection protocol fro
 {{% /alert %}}
 
 ## 8 IBM Cloud (Bluemix) Object Storage Settings
-
-{{% alert type="info" %}}
-
-This is supported from Mendix version 6.7.
-
-{{% /alert %}}
 
 These settings can be used to store files using the IBM Cloud object storage service.
 
@@ -202,3 +192,12 @@ The following settings influence the behavior of the Mendix web client.
 | com.mendix.webui.HybridAppLoginTimeOut | Determines how many minutes your token will remain valid before re-authenticating using your full credentials. This setting defaults to -1, which is equal to no timeout. | -1 |
 | com.mendix.webui.FeedbackSizeWarningThreshold | Introduced in version 7.0. A warning is logged when the feedback size exceeds the threshold. Feedback is sent from server to client to instruct (for example, to refresh objects or to open a page). They are serialized as "instructions" in the server response. If there are too many instructions, this can have performance implications, as they all have to be serialized to the client. For this reason, a warning is logged when the threshold is exceeded. | 5000 |
 | com.mendix.webui.StateSizeWarningThreshold | Introduced in version 7.0. A warning is logged when the state size exceeds the threshold. The state consists of changes in objects and of objects not committed to the database (yet). If there is too much state, this will have performance implications, as the whole state has to be serialized to the client. For this reason, a warning is logged when the threshold is exceeded. | 100 |
+
+## 10 Proxy Settings
+
+The following settings allow you to use a proxy.
+
+| Name | Description | Default value |
+| --- | --- | --- |
+| http.proxyHost | Defines the hostname of the proxyserver |  |
+| http.proxyPort | Defines the portnumber of the proxyserver |  |

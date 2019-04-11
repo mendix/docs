@@ -11,7 +11,7 @@ To add custom logic to your Mendix application you can use microflows. Microflow
 Before starting this how-to make sure you complete the following prerequisites:
 
 *   [Creating a basic data layer](../data-models/create-a-basic-data-layer)
-*   [Creating your first two Overview and Detail pages](../ux/create-your-first-two-overview-and-detail-pages)
+*   [Creating your first two Overview and Detail pages](../front-end/create-your-first-two-overview-and-detail-pages)
 
 ## 2 Triggering Logic Using a Page Button
 
@@ -140,7 +140,7 @@ There are two more advanced settings:
 *   **Maintain selection after microflow** – this is only for grid microflow buttons and specifies whether the selection of the data should be maintained after executing the microflow
 *   **Abort on validation errors** – you can choose to abort the microflow on validation errors  here
 
-## 3 Related Content
+## 3 Read More
 
 *   [Defining access rules using XPath](define-access-rules-using-xpath)
 *   [Extending Your Application with Custom Java](extending-your-application-with-custom-java)

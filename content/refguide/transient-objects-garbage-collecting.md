@@ -1,6 +1,7 @@
 ---
 title: "Transient Objects & Garbage Collecting"
-category: "Runtime"
+parent: "runtime-java"
+menu_order: 1
 description: "This page will explain the life cycle of both persistable and non-persistable objects, and how they flow through the platform memory."
 tags: ["persistable", "non-persistable", "transient", "objects", "garbage", "collecing"]
 ---
@@ -9,9 +10,9 @@ tags: ["persistable", "non-persistable", "transient", "objects", "garbage", "col
 
 This page will explain the life cycle of both persistable and non-persistable objects, and how they flow through the platform memory. In order to understand the behavior of transient objects there are a few facts that you need to be aware off:
 
-*   A Transient Object (also known as a non-persistable object) is an object that is considered temporary and only exists in memory
-*   Changed Persistable Objects that are not committed only exist in memory and behave similar to Transient Objects
-*   The Mendix Platform will remove objects automatically when they are no longer ‘used’ (the definition of ‘used’ will be explained later)
+*   A transient object (also known as a non-persistable object) is an object that is considered temporary and only exists in memory
+*   Changed persistable objects that are not committed only exist in memory and behave similar to transient objects
+*   The Mendix Platform will remove objects automatically when they are no longer "used" (the definition of "used" will be explained later)
 
 ## 2 Behavior in Mendix 7
 
@@ -69,9 +70,10 @@ Choosing the right level for the threshold is crucial because when it's set too 
 #### 4.2.2 Acting on Large Request State Problems
 
 When the request state exceeds the configured threshold, you can look at the following list of possible causes (or a combination of them):
- * a problem in a widget (in case the widget does not unsubscribe itself from updates on objects which it has shown at a point in time)
- * too many objects are associated with the current session or user
- * non-persistable objects associate an object shown in a widget in a layout (meaning that this object stays in-use as long as this layout is shown, usually a long time)
+
+* A problem in a widget (in case the widget does not unsubscribe itself from updates on objects which it has shown at a point in time)
+* Too many objects are associated with the current session or user
+* Non-persistable objects associate an object shown in a widget in a layout (meaning that this object stays in-use as long as this layout is shown, usually a long time)
 
 In order to find the root cause of this state size, you need to make a state overview dump using the developer tools in the client. This allows you to see the objects that are in the state and why they are not garbage collected.
 
@@ -79,6 +81,6 @@ In order to find the root cause of this state size, you need to make a state ove
 
 For every request to the Mendix Runtime—be it from the client or via web service calls—objects are cleaned up at the end of the request. This means that if you create a lot of temporary objects in a microflow, they will occupy Runtime memory until the end of the request.
 
-## 6 Related Content
+## 6 Read More
 
-*   [Java Memory Usage with Mendix](java-memory-usage-with-mendix)
+*   [Java Memory Usage](java-memory-usage)

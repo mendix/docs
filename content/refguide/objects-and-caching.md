@@ -1,6 +1,6 @@
 ---
-title: "Mendix Objects & Caching"
-category: "Runtime"
+title: "Objects & Caching"
+category: "Mendix Runtime"
 description: "This page describes how objects interact with each other within a runtime request."
 tags: ["runtime", "MendixObject", "caching", "context", "session", "request", "microflow"]
 ---

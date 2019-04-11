@@ -4,6 +4,7 @@ category: "Operations"
 menu_order: 10
 description: "This page describes the Metrics page of the Developer Portal."
 tags: ["Operate","App","Trends","Running now","Cache","Metrics","Developer Portal"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
@@ -25,7 +26,7 @@ There are two types of **Trends** depending on which **Mendix Cloud version** th
 *   [Trends in Mendix Cloud v4](/developerportal/operate/trends-v4)
 
 You can find the Mendix Cloud version of your App in the **environment details**. 
-For more information, see [How to View the Mendix Cloud Version and Region](/developerportal/deploy/cloud-version-region).
+For more information, see [Cloud Version and Region in the Mendix Cloud](/developerportal/deploy/cloud-version-region).
 
 ## 3 Running Now
 
@@ -66,8 +67,7 @@ The version 7 runtime is stateless and does not cache Mendix objects on the serv
 *   User sessions with the amount of entities. If you select a user session you can click **Details** to see which entities are used.
 
 
-## 5 Related Content
+## 5 Read More
 
-* [How to Calculate the Total Amount of Diskspace of a Cloud App Environment](/howtogeneral/support/how-to-calculate-diskspace-of-a-cloud-app-environment)
-* [Database Maintenance: Size Reduction](/howtogeneral/support/database-maintenance-size-reduction)
+* [Database Size Reduction](database-size-reduction)
 * [Environment details](/developerportal/deploy/environments-details)

@@ -12,7 +12,7 @@ If you have a licensed app, you need to select an environment for the Web Modele
 
 {{% alert type="info" %}}
 
-By default the environment is not selected for the Web Modeler. Thus, when you try to publish, you will get a warning message. For more information, see [Deploying Your App From the Web Modeler](/refguide/web-modeler/deployment-wm) in the *Web Modeler* category.
+By default the environment is not selected for the Web Modeler. Thus, when you try to publish, you will get a warning message. For more information, see [Publishing Your App From the Web Modeler](/web-modeler/publishing-app).
 
 {{% /alert %}}
 
@@ -38,8 +38,8 @@ To select the environment for the Web Modeler, do the following:
 
 You have selected the environment for the Web Modeler. 
 
-## 3 Related Content
+## 3 Read More
 
-*   [Deploying Your App From the Web Modeler](/refguide/web-modeler/deployment-wm)
+*   [Publishing Your App](/web-modeler/publishing-app)
 *   [Mendix Cloud](mendix-cloud-deploy)
 *   [Environments](environments)

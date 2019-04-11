@@ -222,7 +222,7 @@ List of objects with the following key-value pairs:
 
 *   _Status_ (String): Status of the environment. Possible values: Empty, Stopped, Running
 *   _Url_ (String): URL to access your application.
-*   _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production.
+*   _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy#flexible-environments).
 *   _ModelVersion_ (String): The version number of the package deployed in your environment.
 *   _MendixVersion_ (String): The Mendix version number of the package deployed in your environment.
 *   _Production_ (Boolean): A flag indicating if this environment is a production environment.
@@ -285,7 +285,7 @@ An object with the following key-value pairs:
 
 *   _Status_ (String): Status of the environment. Possible values: Empty, Stopped, Running
 *   _Url_ (String): URL to access your application.
-*   _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production.
+*   _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy#flexible-environments).
 *   _ModelVersion_ (String): The version number of the package deployed in your environment.
 *   _MendixVersion_ (String): The Mendix version number of the package deployed in your environment.
 *   _Production_ (Boolean): A flag indicating if this environment is a production environment.
@@ -296,7 +296,7 @@ An object with the following key-value pairs:
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
 | 400 | INVALID_PARAMETERS | Not enough parameters given. Please set AppId and Mode parameters. |
-| 400 | INVALID_ENVIRONMENT | Could not parse environment mode 'mode'. Valid options are 'Test', 'Acceptance' and 'Production'. |
+| 400 | INVALID_ENVIRONMENT | Could not parse environment mode 'mode'. Valid options are Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy#flexible-environments). |
 | 404 | ENVIRONMENT_NOT_FOUND | Environment not found. |
 
 **Example Output**
@@ -405,7 +405,7 @@ An object with the following key-value pair:
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
 | 400 | INVALID_PARAMETERS | Not enough parameters given. Please set AppId and Mode parameters. |
-| 400 | INVALID_ENVIRONMENT | Could not parse environment mode 'mode'. Valid options are 'Test', 'Acceptance' and 'Production'. |
+| 400 | INVALID_ENVIRONMENT | Could not parse environment mode 'mode'. Valid options are Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy#flexible-environments). |
 | 404 | ENVIRONMENT_NOT_FOUND | Environment not found |
 | 404 | NO_SUCH_STARTJOB | Job not found. |
 | 500 | NO_PACKAGE | Cannot start app. There should be a package configured for this environment. |
@@ -457,7 +457,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
 | 400 | INVALID_PARAMETERS | Not enough parameters given. Please set AppId and Mode parameters. |
-| 400 | INVALID_ENVIRONMENT | Could not parse environment mode 'mode'. Valid options are 'Test', 'Acceptance' and 'Production'. |
+| 400 | INVALID_ENVIRONMENT | Could not parse environment mode 'mode'. Valid options are Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy#flexible-environments). |
 | 404 | ENVIRONMENT_NOT_FOUND | Environment not found |
 | 500 | STOP_FAILED | Cannot stop app: reason |
 
@@ -510,7 +510,7 @@ An object with the following key-value pairs:
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
 | 400 | INVALID_PARAMETERS | Not enough parameters given. Please set AppId and Mode parameters. |
-| 400 | INVALID_ENVIRONMENT | Could not parse environment mode 'mode'. Valid options are 'Test', 'Acceptance' and 'Production'. |
+| 400 | INVALID_ENVIRONMENT | Could not parse environment mode 'mode'. Valid options are Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy#flexible-environments). |
 | 404 | PACKAGE_NOT_FOUND | No package found for this environment |
 
 **Example Output**
@@ -601,7 +601,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/transport
 **Request Parameters**
 
 *   _AppId_ (String): Sub-domain name of an app.
-*   _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production.
+*   _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy#flexible-environments).
 *   _PackageId_ (String): ID of the deployment package
 
 **Example Request**
@@ -626,7 +626,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
 | 400 | INVALID_PARAMETERS | Not enough parameters given. Please set AppId and Mode parameters. |
-| 400 | INVALID_ENVIRONMENT | Could not parse environment mode 'mode'. Valid options are 'Test', 'Acceptance' and 'Production'. |
+| 400 | INVALID_ENVIRONMENT | Could not parse environment mode 'mode'. Valid options are Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy#flexible-environments). |
 | 400 | INVALID_RUNTIME_VERSION | This Runtime version is not supported on this environment. (For Mendix Cloud v4, using a Mendix version of 6 or newer is required.) |
 | 403 | NO_ACCESS | You do not have access |
 | 403 | TRANSPORT_NOT_ALLOWED | No access to transport to environment 'mode'. |
@@ -651,7 +651,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/clean
 **Request Parameters**
 
 *   _AppId_ (String): Sub-domain name of an app.
-*   _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production.
+*   _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy#flexible-environments).
 
 **Example Request**
 
@@ -671,7 +671,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
 | 400 | INVALID_PARAMETERS | Not enough parameters given. Please set AppId and Mode parameters. |
-| 400 | INVALID_ENVIRONMENT | Could not parse environment mode 'mode'. Valid options are 'Test', 'Acceptance' and 'Production'. |
+| 400 | INVALID_ENVIRONMENT | Could not parse environment mode 'mode'. Valid options are Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy#flexible-environments). |
 | 403 | ENVIRONMENT_NOT_STOPPED | Environment needs to be stopped. |
 | 404 | ENVIRONMENT_NOT_FOUND | Environment not found. |
 | 500 | ENVIRONMENT_CLEAN_FAILED | Unable to clean the environment. Please contact support. |
@@ -704,7 +704,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/settings
 **Request Parameters**
 
 *   _AppId_ (String): Sub-domain name of an app.
-*   _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production.
+*   _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy#flexible-environments).
 
 **Example Request**
 
@@ -724,7 +724,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
 | 400 | INVALID_PARAMETERS | Not enough parameters given. Please set AppId and Mode parameters. |
-| 400 | INVALID_ENVIRONMENT | Could not parse environment mode 'mode'. Valid options are 'Test', 'Acceptance' and 'Production'. |
+| 400 | INVALID_ENVIRONMENT | Could not parse environment mode 'mode'. Valid options are Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy#flexible-environments). |
 | 404 | ENVIRONMENT_NOT_FOUND | Environment not found. |
 
 **Example Output**
@@ -767,7 +767,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/settings/
 **Request Parameters**
 
 *   _AppId_ (String): Subdomain name of an app.
-*   _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production.
+*   _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy#flexible-environments).
 *   _Body_: JSON collection retrieved with GET method at the same URI
 
 **Example Request**
@@ -808,7 +808,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
 | 400 | INVALID_PARAMETERS | Not enough parameters given. Please set AppId and Mode parameters. |
-| 400 | INVALID_ENVIRONMENT | Could not parse environment mode 'mode'. Valid options are 'Test', 'Acceptance' and 'Production'. |
+| 400 | INVALID_ENVIRONMENT | Could not parse environment mode 'mode'. Valid options are Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy#flexible-environments). |
 | 400 | CONSTANT_NOT_FOUND | Constant not found: constant name. |
 | 400 | CUSTOM_SETTING_NOT_SUPPORTED | Custom setting not supported. |
 | 400 | SCHEDULED_EVENT_NOT_FOUND | Scheduled Event not found: scheduled event name. |
@@ -856,7 +856,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/snapshots
 **Request Parameters**
 
 *   _AppId_ (String): Sub-domain name of an app.
-*   _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production.
+*   _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy#flexible-environments).
 
 **Example Request**
 
@@ -877,7 +877,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
 | 400 | INVALID_PARAMETERS | Not enough parameters given. Please set AppId and Mode parameters. |
-| 400 | INVALID_ENVIRONMENT | Could not parse environment mode 'mode'. Valid options are 'Test', 'Acceptance' and 'Production'. |
+| 400 | INVALID_ENVIRONMENT | Could not parse environment mode 'mode'. Valid options are Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy#flexible-environments). |
 | 403 | NO_ACCESS | The user does not have access to the backups of this environment. |
 | 404 | ENVIRONMENT_NOT_FOUND | Environment not found. |
 | 500 | SNAPSHOT_LISTING_FAILED | An error occurred while listing the backups. Please contact support. |
@@ -921,7 +921,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/snapshots/
 **Request Parameters**
 
 *   _AppId_ (String): Subdomain name of an app.
-*   _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production.
+*   _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy#flexible-environments).
 *   _SnapshotId_ (String): Identifier of the backup
 
 **Example Request**
@@ -942,7 +942,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
 | 400 | INVALID_PARAMETERS | Not enough parameters given. Please set AppId and Mode parameters. |
-| 400 | INVALID_ENVIRONMENT | Could not parse environment mode 'mode'. Valid options are 'Test', 'Acceptance' and 'Production'. |
+| 400 | INVALID_ENVIRONMENT | Could not parse environment mode 'mode'. Valid options are Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy#flexible-environments). |
 | 403 | NO_ACCESS | The user does not have access to the backups of this environment. |
 | 404 | ENVIRONMENT_NOT_FOUND | Environment not found. |
 | 404 | SNAPSHOT_NOT_FOUND | Snapshot not found. |
@@ -973,7 +973,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/snapshots
 **Request Parameters**
 
 *   _AppId_ (String): Subdomain name of an app.
-*   _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production.
+*   _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy#flexible-environments).
 *   _Comment_ (String): Optional comment for this snapshot.
 
 
@@ -998,7 +998,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
-| 400 | INVALID_ENVIRONMENT | Could not parse environment mode 'mode'. Valid options are 'Test', 'Acceptance', and 'Production'. |
+| 400 | INVALID_ENVIRONMENT | Could not parse environment mode 'mode'. Valid options are Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy#flexible-environments). |
 | 403 | NO_ACCESS | The user does not have access to the backups of this environment. |
 | 404 | ENVIRONMENT_NOT_FOUND | Environment not found. |
 
@@ -1031,7 +1031,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/restore/<S
 **Request Parameters**
 
 *   _AppId_ (String): Subdomain name of an app.
-*   _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production.
+*   _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy#flexible-environments).
 *   _SnapshotId_ (String): ID of the snapshot to be restored.
 
 **Example Request**
@@ -1051,7 +1051,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
-| 400 | INVALID_ENVIRONMENT | Could not parse environment mode 'mode'. Valid options are 'Test', 'Acceptance', and 'Production'. |
+| 400 | INVALID_ENVIRONMENT | Could not parse environment mode 'mode'. Valid options are Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy#flexible-environments). |
 | 400 | NOT_FOUND| Invalid snapshot ID <SnapshotId>. Either the snapshot does not exist or it belongs to a different application. |
 | 400 | ERROR_NOT_ALLOWED| Please stop loft before restarting a backup. |
 | 403 | NO_ACCESS | The user does not have access to the backups of this environment. |
@@ -1087,7 +1087,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/scale
 **Request Parameters**
 
 *   _AppId_ (String): Subdomain name of an app.
-*   _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production.
+*   _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy#flexible-environments).
 
 **Example Request**
 
@@ -1152,7 +1152,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/tags
 **Request Parameters**
 
 - _AppId_ (String): Subdomain name of an app.
-- _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production.
+- _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy#flexible-environments).
 
 **Example Request**
 
@@ -1201,7 +1201,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/tags
 **Request Parameters**
 
 - _AppId_ (String): Subdomain name of an app.
-- _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production.
+- _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy#flexible-environments).
 
 **Example Request**
 
@@ -1247,7 +1247,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/tags
 **Request Parameters**
 
 - _AppId_ (String): Subdomain name of an app.
-- _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production.
+- _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy#flexible-environments).
 
 **Example Request**
 
@@ -1299,7 +1299,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/logs/<Date
 **Request Parameters**
 
 - _AppId_ (String): Subdomain name of an app.
-- _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production.
+- _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy#flexible-environments).
 - _Date_ (String): Date of the desired log (YYYY-MM-DD). Inserting a future date will provide the logs for the current day.
 
 **Example Request**

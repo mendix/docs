@@ -2,7 +2,7 @@
 title: "Modeling Environments"
 category: "Development"
 menu_order: 10
-description: "This page describes the options available for editing your app as well as how to view the overview of revisions and commits."
+description: "Describes the options available for editing your app as well as how to view the overview of revisions and commits."
 tags: ["Edit", "Desktop Modeler", "Web Modeler", "Team Server", "Developer Portal", "commit"]
 ---
 
@@ -34,7 +34,11 @@ The **What's next?** section at the bottom of the page presents the following op
 
 ## 3  Web Modeler
 
-With the Web Modeler, you can design beautiful apps by leveraging the integrated Atlas UI in the WYSIWYG page editor. You can visually add your app’s domain model and business logic, all from the convenience of your web browser.
+With the [Web Modeler](/web-modeler), you can design beautiful apps by leveraging the integrated Atlas UI in the WYSIWYG page editor. You can visually add your app’s domain model and business logic, all from the convenience of your web browser.
 
 Click **Edit in Web Modeler** to open the app in the Web Modeler. Note that this is for Atlas UI-based apps only. If you need to enable the Web Modeler for your app project, click **Enable Web Modeler in Settings**, which will take you to the [General Settings](../settings/general-settings) page of your app project to do this.
 
+## 4 Read More
+
+* [Team Server Overview](team-server)
+* [Plan App Development](planning-development)

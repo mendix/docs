@@ -50,7 +50,15 @@ A complete configuration may look like this:
 
 ![](attachments/use-a-client-certificate/example-custom-settings.png)
 
-You can use an empty path to specify that you do not want to use a client certificate, even when the server accepts one. The following sample uses client certificate `Mx1.pfx` for `WebService1` and no client certificate for `WebService2`:
+You can use an empty path for `ClientCertficateUsages` to specify that you do not want to use a client certificate, even when the server accepts one. To do this, you need to add the **Value** `{"<endpoint>":""}` (replace `<endpoint>` with the actual endpoint).
+
+{{% alert type="info" %}}
+
+Be sure to drop `https://` from a URL endpoint.
+
+{{% /alert %}}
+
+The following sample uses client certificate `Mx1.pfx` for `WebService1` and no client certificate for `WebService2`:
 
 ```
 { "Module.WebService1": "D:\\App\\Mx1.pfx", "Module.WebService2": "" }
@@ -58,7 +66,7 @@ You can use an empty path to specify that you do not want to use a client certif
 
 {{% alert type="info" %}}
 
-The possibility to use an empty path was introduced in Mendix version 7.18.0.
+The possibility to use an empty path was introduced in Mendix version 7.19.0.
 
 {{% /alert %}}
 
@@ -77,9 +85,10 @@ To configure client certificates in the Mendix Cloud, follow these steps:
 3. Click **Network** and scroll down to **Certificates for outgoing connections**.
 4. Click **Add client certificate**. Upload the certificate files.
 5. Only follow these steps if you are using more than one client certificate in your app:<br>
-    a. After the files have been uploaded, they appear in the list. Double-click an item in the list.<br>
-    b. In the **Pin Client Certificate to Web Services** section of the **Details** screen, you can specify which client certificate belongs to which service:<br>
-       * For web services, enter the name of the web service (for example, *ModuleName.WebServiceName*)<br>
-       * For REST services, enter the host name of the endpoint (for example, *example.com*)<br>
-    d. Close the **Details** screen.<br>
+	a. After the files have been uploaded, they appear in the list. Double-click an item in the list.<br>
+	b. In the **Pin Client Certificate to Web Services** section of the **Details** screen, you can specify which client certificate belongs to which service:<br>
+		* For web services, enter the name of the web service (for example, *ModuleName.WebServiceName*)<br>
+		* For REST services, enter the host name of the endpoint (for example, *example.com*)<br>
+	d. Close the **Details** screen.<br>
+
 6. Click **Stop application** and then **Start application**.

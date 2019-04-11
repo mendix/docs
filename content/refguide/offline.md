@@ -12,7 +12,7 @@ We define an offline application as the portion of a Mendix app that is accessib
 
 To access the offline application, you need to have a mobile device that runs a correctly configured [PhoneGap](http://phonegap.com/) hybrid application. The app will require an internet connection the first time it is opened in order to download the necessary resources from the server. After the initial synchronization, the data will remain available in the app, even without an internet connection. Please note that the offline profile will be used, even if there is an internet connection available.
 
-## 3 Synchronization<a name="synchronization"></a>
+## 3 Synchronization {#synchronization}
 
 The first time an [offline-enabled](configuring-hybrid-mobile-apps-to-run-offline) mobile application is run, it will retrieve all the data it requires to run offline from the server. After that, it will remain in offline mode until a synchronization event is triggered. Remaining in offline mode will significantly improve the performance of your application. Synchronization can be triggered by either the server or the user. The server will automatically resynchronize the app if it is opened after a new model is uploaded, in order to prevent inconsistencies. The user can trigger a synchronization by triggering a sync action, for example from an [action button](action-button). 
 
@@ -30,7 +30,7 @@ Because synchronization depends on the regular runtime APIs, the models of the a
 
 Synchronization of files is only triggered by modifications to the attributes of the object, not by modifying the contents of the file itself.
 
-## 4 Restrictions
+## 4 Restrictions {#restrictions}
 
 ### 4.1 Microflows
 
@@ -89,3 +89,17 @@ Spreadsheets are generated through direct database interaction, which is not ava
 Offline-enabled apps are only supported on the iOS and Android platforms.
 
 For more information on offline apps, see [Configuring Hybrid Mobile Apps to Run Offline](configuring-hybrid-mobile-apps-to-run-offline).
+
+### 4.14 Synchronization
+
+Mendix does not have a recommended maximum app size for the synchronization process. This process depends on the amount of data as well as the connection quality and speed of the mobile device. 
+
+The timeout should be set to 30 seconds per entity downloaded. This change was introduced in the [July 3rd, 2018 hybrid app release](/releasenotes/mobile/hybrid-app#7318).
+
+In addition, Mendix recommends limiting the amount of data and syncing as much as possible by configuring security access so that users do not sync entities they do not need.
+
+### 4.15 Read-Only Attributes
+
+There is a restriction with creating and syncing objects with read-only attributes from an offline app. The offline app does not know access rules, so it will allow a user that creates an object offline to edit all attributes, regardless of whether the user actually has write access to them. When syncing the object, this will result in errors, as access rules will be applied when committing the object.
+
+Please note that this does not apply to changing existing objects.

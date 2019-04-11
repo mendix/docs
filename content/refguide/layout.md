@@ -36,19 +36,19 @@ As a consequence of this behavior, user experience can be improved significantly
 
 ## 3 Common Properties
 
-{{% snippet file="refguide/Document+Name+Property.md" %}}
+{{% snippet file="refguide7/Document+Name+Property.md" %}}
 
-{{% snippet file="refguide/Documentation+Property.md" %}}
+{{% snippet file="refguide7/Documentation+Property.md" %}}
 
-{{% snippet file="refguide/Document+Class+Property.md" %}}
+{{% snippet file="refguide7/Document+Class+Property.md" %}}
 
-{{% snippet file="refguide/Style+Property.md" %}}
+{{% snippet file="refguide7/Style+Property.md" %}}
 
 ## 4 Designer Properties
 
-{{% snippet file="refguide/Canvas+Width+Property.md" %}}
+{{% snippet file="refguide7/Canvas+Width+Property.md" %}}
 
-{{% snippet file="refguide/Canvas+Height+Property.md" %}}
+{{% snippet file="refguide7/Canvas+Height+Property.md" %}}
 
 ## 5 General Properties
 
@@ -65,8 +65,8 @@ Every layout has a layout type, which determines the purpose of the layout and h
 | **Responsive** | Use this layout for pages that will work fine on all types of devices. The [layout grid](layout-grid) and other widgets make it possible to create responsive pages. |
 | **Tablet specific** | Use this layout for pages on a tablet if the responsive option is not sufficient (for example, if different use cases with different user interfaces have to be supported). |
 | **Phone specific** | Use this layout for pages on a phone if the responsive option is not sufficient (for example, if different use cases with different user interfaces have to be supported). |
-| **Modal pop-up** | Use this layout for pages that should appear as modal pop-up windows. |
-| **Pop-up** | Use this layout for pages that should appear as non-modal pop-up windows. |
+| **Modal pop-up** | Use this layout for pages that should appear as [modal pop-up windows](https://www.wikiwand.com/en/Modal_window). |
+| **Pop-up** | Use this layout for pages that should appear as modeless pop-up windows. |
 
 ## 6 Page Generation Properties<a name="pgp"></a>
 

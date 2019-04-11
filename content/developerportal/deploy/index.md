@@ -19,7 +19,7 @@ This section of the Developer Portal Guide contains step-by-step instructions, a
 
 You can click **Run Locally** in the toolbar to run your app locally. Use the **View** button to directly jump to your app running at localhost.
 
-If you plan to deploy to version 3 (V3) of the Mendix Cloud later on, *and* your project contains Java actions, you should enable the **Emulate Cloud Security** setting. For more information, see [Java in the Cloud](java-in-the-cloud).
+If you plan to deploy to version 3 (V3) of the Mendix Cloud later on, *and* your project contains Java actions, you should enable the **Emulate Cloud Security** setting. For more information, see [V3: Java in Mendix Cloud](java-in-the-cloud).
 
 ## 3 Mendix Cloud
 
@@ -55,4 +55,4 @@ Deploying to Azure is possible from the [Azure Marketplace](https://azure.micros
 
 ## 9 On-Premises
 
-To learn how to deploy your Mendix application on-premises, see [How to Deploy Mendix on Microsoft Windows](deploy-mendix-on-microsoft-windows), [How to Install Mendix on Debian GNU Linux](installing-mendix-on-debian-gnu-linux), and [How to Install Mendix on RedHat and CentOS](installing-mendix-on-redhat-and-centos).
+To learn how to deploy your Mendix application on-premises, see [How to Deploy Mendix on Microsoft Windows](deploy-mendix-on-microsoft-windows) and [U*ix Deployment](unix-like).

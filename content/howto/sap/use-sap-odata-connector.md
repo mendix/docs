@@ -23,11 +23,15 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Get the SAP OData Connector module
 * Get an SAP data model
 
+{{% alert type="warning" %}}
+SAP OData Connector only supports SAP OData Gateway Services which use OData version 2 or version 3. OData version 4 is not yet supported.
+{{% /alert %}}
+
 ### 2.1 Getting the SAP OData Connector Module
 
 To be able to use the OData Connector; first create your project. Inside the desktop modeler, navigate to the Mendix App Store to download the [SAP OData Connector](https://appstore.home.mendix.com/link/app/74525/Mendix/SAP-OData-Connector) module. You will then find this module in your app project's App Store modules.
 
-For more information, see [How to Use App Store Content](/developerportal/app-store/use-app-store-content-in-the-modeler).
+For more information, see [How to Use App Store Content](/developerportal/app-store/app-store-content).
 
 ### 2.2 Getting an SAP Data Model
 
@@ -35,7 +39,7 @@ To get started quickly, you can download one of the SAP data models available in
 
 If you want to use an SAP data model that is not available in the Mendix App Store, you can generate the SAP data model based on an OData service from an SAP back-end system. 
 
-For more information, see [SAP Data Models](/refguide/sap/sap-data-models) and [Use the SAP OData Model Creator](use-sap-odata-model-creator).
+For more information, see [SAP Data Models](/refguide7/sap/sap-data-models) and [Use the SAP OData Model Creator](use-sap-odata-model-creator).
 
 ## 3 Using the SAP OData Connector
 
@@ -81,7 +85,8 @@ To create a page to show the objects in a list, follow these steps:
 
 Congratulations! You can now run your app and see a list of the customers available in the public **Check Price and Availability** application of [SAP Fiori Cloud Demo](https://www.sapfioritrial.com/sites?helpset=trial&sap-client=001#PriceAndAvailability-check).
 
-## 4 Related Content
+## 4 Read More
 
-* [SAP OData Connector](/refguide/sap/sap-odata-connector)
-* [SAP Data Models](/refguide/sap/sap-data-models)
+* [SAP OData Connector](/refguide7/sap/sap-odata-connector)
+* [SAP Data Models](/refguide7/sap/sap-data-models)
+

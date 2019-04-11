@@ -2,6 +2,7 @@
 title: "App Store Overview"
 category: "App Store"
 menu_order: 10
+description: "Presents an overview of how to find and use content from the Mendix App Store."
 tags: ["app store", "widget", "connector", "module", "partner"]
 ---
 
@@ -33,11 +34,12 @@ To see a detail page for each category, click **View more**.
 
 ### 2.2 Sidebar Menu
 
-The App Store sidebar menu lists all the pa Itemsges that you can browse for content.
+The App Store sidebar menu lists all the pages that you can browse for content.
 
 For details on add-ons, see [Add-On Details Page](#AddonDetailsPage).
 
 You can also access the following pages:
+
 * [My App Store](#myappstore)
 * [Private App Store](#privateappstore)
 * [Modeler](#modeler)
@@ -65,7 +67,7 @@ The header for each add-on presents the following details:
 	* **Download** – click this to download the content
 		* This is only available for content that has a file attached (meaning, all shared  Desktop Modeler content, but not promotions; for details on sharing  Desktop Modeler content, see [How to Share App Store Content](share-app-store-content))
 		* For details on how to import downloaded App Store content into the Desktop Modeler, see [How to Import & Export Objects](/howto/integration/importing-and-exporting-objects)
-		{{% alert type="info" %}}The best practice is to download content from the App Store that is accessible in the  Desktop Modeler, because it then downloads directly into the  Desktop Modeler (for details, see [How to Use App Store Content](use-app-store-content-in-the-modeler)).
+		{{% alert type="info" %}}The best practice is to download content from the App Store that is accessible in the  Desktop Modeler, because it then downloads directly into the  Desktop Modeler (for details, see [How to Use App Store Content](app-store-content)).
 		{{% /alert %}}
 
 ### 3.2 Tabs
@@ -204,8 +206,9 @@ On the **More info** tab, you can view documents that provide more information o
 
 ![](attachments/app-store-overview/partners_detail2.png)
 
-## 5 Related Content
+## 5 Read More
 
-* [App Store Content Support](app-store-content-support)
+* [How to Use App Store Content](app-store-content)
 * [How to Share App Store Content](share-app-store-content)
-* [How to Use App Store Content](use-app-store-content-in-the-modeler)
+* [App Store Content Support](app-store-content-support)
+

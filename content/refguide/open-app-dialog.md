@@ -1,6 +1,7 @@
 ---
 title: "Open App Dialog"
 parent: "dialogs"
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
@@ -17,7 +18,7 @@ From the list select the Team Server app you wish to open, then choose the devel
 
 For more information about the Mendix Team Server, see [Team Server](team-server).
 
-For more information about development lines, see [Version Control Concepts](version-control-concepts).
+For more information about development lines, see [Version Control](version-control).
 
 ### 2.2 Other SVN Server
 

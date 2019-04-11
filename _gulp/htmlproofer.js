@@ -5,6 +5,7 @@ const path = require('path');
 const fs = require('fs');
 const shell = require('shelljs');
 const _ = require('lodash');
+const sha1 = require('sha1');
 const cheerio = require('cheerio');
 const Promise = require('bluebird');
 const moment = require('moment');
@@ -40,6 +41,9 @@ const parseHtmlFile = file => new Promise((resolve, reject) => {
 
   if (file.content) {
     const $ = cheerio.load(file.content);
+
+    const draft = $('head').data('draft');
+    file.draft = !!draft;
 
     // remove obsolete stuff
     $('pre, code').remove();
@@ -95,7 +99,7 @@ const parseHtmlFile = file => new Promise((resolve, reject) => {
         return true;
       } else if (href.indexOf('#') === 0) {
         file.anchorLinks.push(href.trim().replace('#',''));
-      } else if (href.indexOf('http') === 0) {
+      } else if (href.indexOf('http://') === 0 || href.indexOf('https://') === 0) {
         file.external.links.push(href.trim());
       } else if (href.indexOf('mailto') === 0) {
         file.external.mailto.push(href.trim());
@@ -223,7 +227,11 @@ const validateFiles = files => Promise.resolve(_.map(files, file => {
         }
       }
     } else if (!isFile(fullPath)) {
-      file[errorKey].push(`${red('[LINK]   ')} ${cyan(link)} does not exist. Path: ${cyan(linkPath)} (.html | index.html) is unresolved`);
+      if (file.draft) {
+        file[warningKey].push(`${yellow('[DRAFT]')} ${red('[LINK]   ')} ${cyan(link)} does not exist. Path: ${cyan(linkPath)} (.html | index.html) is unresolved`);
+      } else {
+        file[errorKey].push(`${red('[LINK]   ')} ${cyan(link)} does not exist. Path: ${cyan(linkPath)} (.html | index.html) is unresolved`);
+      }
       verbose && console.log(`err ${file.path}`, link);
     }
   });
@@ -236,8 +244,13 @@ const validateFiles = files => Promise.resolve(_.map(files, file => {
       return;
     }
     if (!isFile(fullPath)) {
-      file[errorKey].push(`${red('[IMAGE]  ')} ${cyan(image)} does not exist. Path: ${cyan(fullPath)} is unresolved`);
-      verbose && console.log(`err image ${file.path}`, image);
+      if (file.draft) {
+        file[warningKey].push(`${yellow('[DRAFT]')} ${red('[IMAGE]  ')} ${cyan(image)} does not exist. Path: ${cyan(fullPath)} is unresolved`);
+        verbose && console.log(`err image ${file.path}`, image);
+      } else {
+        file[errorKey].push(`${red('[IMAGE]  ')} ${cyan(image)} does not exist. Path: ${cyan(fullPath)} is unresolved`);
+        verbose && console.log(`err image ${file.path}`, image);
+      }
     }
   });
 
@@ -249,8 +262,13 @@ const validateFiles = files => Promise.resolve(_.map(files, file => {
       return;
     }
     if (!isFile(fullPath)) {
-      file[errorKey].push(`${red('[VIDEO]  ')} ${cyan(video)} does not exist. Path: ${cyan(fullPath)} is unresolved`);
-      verbose && console.log(`err image ${file.path}`, video);
+      if (file.draft) {
+        file[warningKey].push(`${yellow('[DRAFT]')} ${red('[VIDEO]  ')} ${cyan(video)} does not exist. Path: ${cyan(fullPath)} is unresolved`);
+        verbose && console.log(`err image ${file.path}`, video);
+      } else {
+        file[errorKey].push(`${red('[VIDEO]  ')} ${cyan(video)} does not exist. Path: ${cyan(fullPath)} is unresolved`);
+        verbose && console.log(`err image ${file.path}`, video);
+      }
     }
   });
 
@@ -294,7 +312,19 @@ const checkAllLinks = (links, files) => {
     })
 }
 
-const writeUpdateFeed = files => new Promise((resolve, reject) => {
+const writeUpdateFeed = files => new Promise(async (resolve, reject) => {
+  const recommendations = files
+    .filter(file => file.time !== null && !!file.seoTitle)
+    .map(file => {
+      const title = file.seoTitle.replace(' | Mendix Documentation', '');
+      const basePath = file.basePath.replace('index.html', '').replace('.html','');
+      const url = 'https://' + normalizeSafe(`docs.mendix.com${basePath}`);
+      return {
+        id: `docs-${sha1(url)}`,
+        title,
+        url
+      }
+    });
   const updateFiles = _.chain(files)
     .filter(file => file.time !== null && !!file.seoTitle)
     .map(file => {
@@ -326,25 +356,36 @@ const writeUpdateFeed = files => new Promise((resolve, reject) => {
   });
 
   _.forEach(updateFiles, update => {
+    const title = update.seoTitle;
+    const url = 'https://' + normalizeSafe(`docs.mendix.com${update.basePath}`);
     feed.item({
-      title: update.seoTitle,
+      title,
       description: '',
-      url: 'https://' + normalizeSafe(`docs.mendix.com${update.basePath}`),
+      url,
       date: update.dateObj
-    })
+    });
   });
 
   const feedDest = path.join(SOURCEPATH, '/feed.xml');
+  const recommenderDest = path.join(SOURCEPATH, '/recommendations.json');
 
   fs.writeFile(feedDest, feed.xml({ indent: true }), err => {
     if (err) {
       rssLog(`Error writing /feed.xml: ${red(err)}`)
+      resolve(files);
     } else {
       rssLog(`Update feed written to ${cyan(feedDest)}`);
+      fs.writeFile(recommenderDest, JSON.stringify(recommendations, null, 4), err => {
+        if (err) {
+          rssLog(`Error writing /recommendations.json: ${red(err)}`)
+        } else {
+          rssLog(`Recommendations JSON written to ${cyan(recommenderDest)}`);
+        }
+        resolve(files);
+      });
     }
-    resolve(files);
   });
-})
+});
 
 const checkExternal = files => {
   const total = _.flatten(_.map(files, file => file.external && file.external.links ? file.external.links : [])),
@@ -371,7 +412,7 @@ const checkHTMLFiles = (opts) => getFiles(SOURCEPATH)
     console.log('\n======= Errors: ' + errors.length);
     if (errors.length > 0) {
       _.forEach(errors, file => {
-        console.log(`\nFile: ${cyan(file.basePath)} has the following errors:\n`);
+        console.log(`\nFile: ${file.draft ? yellow('DRAFT ') : ''}${cyan(file.basePath)} has the following errors:\n`);
         _.forEach(file.errors, error => {
           console.log(red('   + ') + error);
         })
@@ -380,7 +421,7 @@ const checkHTMLFiles = (opts) => getFiles(SOURCEPATH)
     console.log('\n======= Warnings: ' + warnings.length);
     if (warnings.length > 0) {
       _.forEach(warnings, file => {
-        console.log(`\nFile: ${cyan(file.basePath)} has the following warnings:\n`);
+        console.log(`\nFile: ${file.draft ? yellow('DRAFT ') : ''}${cyan(file.basePath)} has the following warnings:\n`);
         _.forEach(file.warnings, error => {
           console.log(yellow('   + ') + error);
         })

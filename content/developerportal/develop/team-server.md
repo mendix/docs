@@ -2,7 +2,7 @@
 title: "Team Server Overview"
 category: "Development"
 menu_order: 20
-description: "This page describes the overview of Team Server revisions and commits."
+description: "Describes the overview of Team Server revisions and commits."
 tags: ["Desktop Modeler", "Team Server", "Developer Portal", "commit", "branch"]
 ---
 
@@ -47,7 +47,7 @@ Related stories will only appear if you select them in the **Commit** dialog box
 
 ![](attachments/commit-story.png)
 
-## 5 Related Content
+## 5 Read More
 
 * [Stories](/developerportal/collaborate/stories)
 * [Company & App Roles](/developerportal/company-app-roles/index)

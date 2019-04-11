@@ -25,11 +25,11 @@ The general notion of software quality embraces a variety of quality aspects, of
 
 ## 3 Implemented Checks for Best Practices
 
-AQM includes automated checks for a subset of the [Mendix Development Best Practices](/howtogeneral/bestpractices/dev-best-practices). The following checks are currently implemented in AQM:
+AQM includes automated checks for a subset of the [Mendix Development Best Practices](/howto/general/dev-best-practices). The following checks are currently implemented in AQM:
 
 |Check Code|Check Name|
 |----------|----------|
-|MF-1|[Microflow – elements – Using more than 25 elements in a microflow is discouraged](/howtogeneral/bestpractices/dev-best-practices#421-size)|
-|MF-2|[Microflow – documentation – All complex microflows (more than 10 activities and/or 2 splits) must have an annotation describing the purpose of the microflow](/howtogeneral/bestpractices/dev-best-practices#422-documentation-and-annotations)|
-|DM-1|[Domain model – entities – Using more than two inheritance levels on domain entities is discouraged](/howtogeneral/bestpractices/dev-best-practices#412-inheritance)|
-|DM-2|[Domain model – entities – Using calculated attribute values is discouraged](/howtogeneral/bestpractices/dev-best-practices#411-attributes)|
+|MF-1|[Microflow – elements – Using more than 25 elements in a microflow is discouraged](/howto/general/dev-best-practices#size)|
+|MF-2|[Microflow – documentation – All complex microflows (more than 10 activities and/or 2 splits) must have an annotation describing the purpose of the microflow](/howto/general/dev-best-practices#documentation-and-annotations)|
+|DM-1|[Domain model – entities – Using more than two inheritance levels on domain entities is discouraged](/howto/general/dev-best-practices#inheritance)|
+|DM-2|[Domain model – entities – Using calculated attribute values is discouraged](/howto/general/dev-best-practices#attributes)|

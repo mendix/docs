@@ -15,8 +15,8 @@ To see the results of this how-to it is necessary that you setup a test project 
 Before you continue, make sure that you know how to create:
 
 *   **Domain models**, if you need more info, take a look at this [how-to](../data-models/create-a-basic-data-layer).
-*   **Overview and detail pages**, if you need more info, take a look at this [how-to](../ux/create-your-first-two-overview-and-detail-pages).
-*   **Menu items**, if you need more info, take a look at this [how-to](../ux/setting-up-the-navigation-structure).
+*   **Overview and detail pages**, if you need more info, take a look at this [how-to](../front-end/create-your-first-two-overview-and-detail-pages).
+*   **Menu items**, if you need more info, take a look at this [how-to](../general/setting-up-the-navigation-structure).
 
 1.  Create the following domain model:
 
@@ -103,7 +103,7 @@ In the previous section you retrieved a list of orders with the status 'Processi
 
     For each object the flow inside the loop is executed. The flow starts at the element that has no incoming sequence flows. A loop can contain all elements used in microflows, with the exception of start and stop events. Additionally, a loop (and only a loop) can contain break events and continue events.
 
-    The iterator which looks the same as an input object represents the variable that holds one element of the list for each iteration. Beneath it the name of the variable is shown in black and the type of the variable in blue. For more information take a look at this [documentation](/refguide7/loop?utm_source=businessmodeler&utm_medium=software&utm_campaign=modeler)
+    The iterator which looks the same as an input object represents the variable that holds one element of the list for each iteration. Beneath it the name of the variable is shown in black and the type of the variable in blue. For more information, see [Loop](/refguide7/loop).
 
     {{% /alert %}}
 
@@ -238,7 +238,7 @@ In the previous sections you filtered the list of orders from database on attrib
 
     ![](attachments/18448686/18581110.png)
 
-## 7 Related Content
+## 7 Read More
 
 *   [Defining access rules using XPath](define-access-rules-using-xpath)
 *   [Extending Your Application with Custom Java](extending-your-application-with-custom-java)

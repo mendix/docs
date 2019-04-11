@@ -4,7 +4,7 @@
 #  priority: 1 - 9 (used for sitemap). If omitted this will not be included, which defaults to 0.5
 #  menu_categories: List with the categories used in the side menu
 apidocs-mxsdk:
-  space: "API & SDK"
+  space: "APIs & SDK"
   priority: false
   menu_categories:
     - "API Documentation"
@@ -30,21 +30,6 @@ ats:
     - "Reference Guide"
     - "How-to's"
     - "Best Practices"
-howto40:
-  space: "Mendix 4 How-to's"
-  priority: false
-  mendix_version: 4
-  noindex: true
-  menu_categories:
-    - "General"
-    - "Modeler"
-    - "Java Programming"
-    - "Deployment"
-    - "Custom Widgets"
-    - "Debugging"
-  banner:
-    type: 'warning'
-    text: 'You are browsing the documentation of an unsupported version of Mendix. Please find the latest version of the How-To&#39;s <a href="/howto/">here</a>.'
 howto50:
   space: "Mendix 5 How-to's"
   priority: false
@@ -86,41 +71,20 @@ howto:
   priority: 6
   mendix_version: 7
   menu_categories:
-    - "Modeling Basics"
-    - "Web Modeler"
-    - "Atlas UI"
-    - "UX"
+    - "General"
+    - "Front-End"
     - "Data Models"
     - "Logic & Business Rules"
     - "Mobile Development"
     - "Security"
     - "Integration"
     - "SAP"
+    - "Siemens MindSphere"
     - "Extensibility"
-    - "Custom Widget Development"
+    - "Widget Development"
     - "Testing"
     - "Monitoring & Troubleshooting"
     - "Collaboration & Requirements Management"
-    - "Tips & Tricks"
-refguide4:
-  space: "Mendix 4 Reference Guide"
-  priority: false
-  mendix_version: 4
-  noindex: true
-  menu_categories:
-    - "App Platform"
-    - "Team Server"
-    - "Modeler"
-    - "Runtime"
-    - "Client"
-    - "Java Programming"
-    - "Release Notes"
-    - "System Requirements"
-    - "Moving from 3 to 4"
-    - "Deployment"
-  banner:
-    type: 'warning'
-    text: 'You are browsing the documentation of an unsupported version of Mendix. Please find the latest version of the Reference Guide <a href="/refguide/">here</a>.'
 refguide5:
   space: "Mendix 5 Reference Guide"
   priority: false
@@ -153,21 +117,14 @@ refguide:
   mendix_version: 7
   menu_categories:
     - "General"
-    - "Team Server"
     - "Desktop Modeler"
-    - "Web Modeler"
-    - "Runtime"
+    - "Version Control"
+    - "Mendix Runtime"
     - "Java Programming"
     - "Mobile Development"
     - "SAP"
     - "IBM"
-howtogeneral:
-  space: "Best Practices & Support"
-  priority: 6
-  menu_categories:
-    - "Tips & Tricks"
-    - "Best Practices"
-    - "Mendix Support"
+    - "Siemens MindSphere"
 releasenotes:
   space: "Release Notes"
   priority: false
@@ -175,8 +132,8 @@ releasenotes:
     - "Desktop Modeler"
     - "Web Modeler"
     - "Developer Portal"
-    - "SDKs"
     - "Mobile Products"
+    - "SDKs"
     - "Add-ons"
     - "What Are Mendix Beta Features?"
 developerportal:
@@ -193,6 +150,25 @@ developerportal:
     - "App Settings"
     - "Community Tools"
     - "App Store"
-
-
-
+    - "Mendix Support"
+web-modeler:
+  space: "Web Modeler Guide"
+  priority: false
+  menu_categories:
+    - "General Info"
+    - "Domain Model"
+    - "Page Editor"
+    - "Navigation Document"
+    - "Microflows"
+    - "Publishing Your App"
+    - "Checks"
+    - "Consistency Errors"
+    - "Theme Customizer"
+    - "App Settings"
+best-practices:
+  space: "Best Practices"
+  priority: false
+  draft: true
+  menu_categories:
+    - "Best Practices Overview"
+    - "Architecture"

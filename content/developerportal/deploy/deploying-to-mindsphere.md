@@ -213,10 +213,10 @@ To deploy your deployment package, do the following:
 7.  Push your app to MindSphere using the command:
 
     ```bash
-    cf push {app_name} -p "{deployment_package_name}"
+    cf push -p "{deployment_package_name}"
     ```
 
-    For example: `cf push myapp -p "myapp.mda"`
+    For example: `cf push -p "myapp.mda"`
 
 #### 5.1.3 Troubleshooting
 
@@ -249,6 +249,7 @@ To create a new app in the MindSphere launchpad, do the following:
 9. Click **Edit icon** to upload an **App Icon** for your app.
 
 10. Fill in the **Component > Name**. This must be identical to the {app_name} you set in the *manifest.yml* file.
+
 11.  Click the **+** next to the component to add **Endpoints**.
 
 12.  Specify `/**` as the endpoint to allow you to access all endpoints relevant to your application, and click **Save**.
@@ -282,7 +283,11 @@ To set up the appropriate scopes in MindSphere, do the following:
 
     ![](attachments/deploying-to-mindsphere/image15.png)
 
+{{% alert type="info" %}}
 If you are using the starter app, you should create two scopes, *user* and *admin*.
+{{% /alert %}}
+
+For an explanation of the relationship between Mendix roles and MindSphere roles, see section [Roles & Scopes](/refguide/mindsphere/mindsphere-module-details#rolesscopes) in *MindSphere Module Details*.
 
 ![](attachments/deploying-to-mindsphere/image8.png)
 

@@ -202,6 +202,8 @@ For more information, see [Certificates](certificates) and [Custom Domains](cust
 
 ### 4.2 HTTP Headers
 
+HTTP Headers allows you to set various values of 
+
 {{% alert type="info" %}}
 This replaces the option to prevent embedding your app in an IFrame with more flexible options to set HTTP Headers.
 {{% /alert %}}

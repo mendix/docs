@@ -40,13 +40,13 @@ The following entries are required in the **General** tab:
 
 |Entry|Description
 |-----|-----|
-|Location|$DestinationObject/Url followed by any additional parameters|
+|Location|`$DestinationObject/Url` followed by any additional parameters|
 |Proxy configuration|Override|
-|Use proxy|true|
-|Host|$DestinationObject/ProxyHost|
-|Port|$DestinationObject/ProxyPort|
-|Username|$DestinationObject/SapConnectivityProxyCredentials|
-|Password|empty|
+|Use proxy|`true`|
+|Host|`$DestinationObject/ProxyHost`|
+|Port|`$DestinationObject/ProxyPort`|
+|Username|`$DestinationObject/SapConnectivityProxyCredentials`|
+|Password|`empty`|
 
 ![REST general tab](attachments/sap-destination-with-rest/rest-general.png)
 
@@ -59,9 +59,9 @@ The following HTTP Headers do the following:
 
 |Key|Value|
 |---|---|
-|SAP-Connectivity-Authentication|$DestinationObject/SapConnectivityAuthentication|
-|Proxy-Authorization|'Bearer ' + $DestinationObject/SapConnectivityProxyCredentials|
-|Accept|'application/json'|
+|SAP-Connectivity-Authentication|`$DestinationObject/SapConnectivityAuthentication`|
+|Proxy-Authorization|`'Bearer ' + $DestinationObject/SapConnectivityProxyCredentials`|
+|Accept|`'application/json'`|
 
 ![REST HTTP headers tab](attachments/sap-destination-with-rest/rest-http-headers.png)
 
@@ -74,13 +74,13 @@ The following entries are required in the **Operation** tab:
 |Entry|Description
 |-----|-----|
 |Override location|*Checked*|
-|Location|$DestinationObject/Url|
+|Location|`$DestinationObject/Url`|
 |Proxy configuration|Override|
-|Use proxy|true|
-|Host|$DestinationObject/ProxyHost|
-|Port|$DestinationObject/ProxyPort|
-|Username|$DestinationObject/SapConnectivityProxyCredentials|
-|Password|empty|
+|Use proxy|`true`|
+|Host|`$DestinationObject/ProxyHost`|
+|Port|`$DestinationObject/ProxyPort`|
+|Username|`$DestinationObject/SapConnectivityProxyCredentials`|
+|Password|`empty`|
 
 ![SOAP web service general tab](attachments/sap-destination-with-rest/web-service-general.png)
 
@@ -93,9 +93,9 @@ The same HTTP Headers are required as for a REST call. They do the following:
 
 |Key|Value|
 |---|---|
-|SAP-Connectivity-Authentication|$DestinationObject/SapConnectivityAuthentication|
-|Proxy-Authorization|'Bearer ' + $DestinationObject/SapConnectivityProxyCredentials|
-|Accept|'application/json'|
+|SAP-Connectivity-Authentication|`$DestinationObject/SapConnectivityAuthentication`|
+|Proxy-Authorization|`'Bearer ' + $DestinationObject/SapConnectivityProxyCredentials`|
+|Accept|`'application/json'`|
 
 ![SOAP web services HTTP headers tab](attachments/sap-destination-with-rest/web-service-http-headers.png)
 

@@ -206,15 +206,17 @@ To deploy your deployment package, do the following:
       - {service_instance}
     ```
 
+    {{% alert type="info" %}}The `disk_quota` and `memory` must be at least **512M** to enable a Mendix app to run.{{% /alert %}}
+
     For more information on the configuration of manifest files, see [Configuring the manifest file](https://developer.mindsphere.io/howto/howto-cf-single-manifest.html#configuring-the-manifest-file) on the MindSphere developers site.
 
 7.  Push your app to MindSphere using the command:
 
     ```bash
-    cf push {app_name} -p "{deployment_package_name}" -m {required_memory}
+    cf push {app_name} -p "{deployment_package_name}"
     ```
 
-    For example: `cf push myapp -p "myapp.mda" -m 512MB`
+    For example: `cf push myapp -p "myapp.mda"`
 
 #### 5.1.3 Troubleshooting
 
@@ -229,19 +231,31 @@ Ensure that you have configured your proxy settings if these are required.
 To create a new app in the MindSphere launchpad, do the following:
 
 1.  Go to the **Developer Cockpit > Dashboard**.
+
 2.  Click **Create new application**.
-3.  Fill in the **Name** of your app. This must be identical to the value of *CockpitApplicationName* which you set in the SSO module of your app.
-4. Fill in the **Display Name** of your app, as you want it shown in the Launchpad.
-5. Fill in a **Description** of your app, if required.
-6. Fill in a **Version** for your app.
-7. Upload an **App Icon** for your app.
-8. Fill in the **Component > Name**. This must be identical to the {app_name} you set in the *manifest.yml* file.
-9.  Click the **+** next to the component to add **Endpoints**.
-10.  Specify `/**` as the endpoint to allow you to access all endpoints relevant to your application, and click **Save**.
 
-11. Fill in the **Cloud Foundry Direct URL**. This can be found using the cloud foundry command `cf app {app_name}`.
+3.  Set the **Type** to *Standard*.
 
-12.  Set the **Configurations > content-security-policy** *Value* to the following:
+4.  Set the **Infrastructure** to *MindSphere Cloud Foundry*.
+
+5. Fill in the **Display Name** of your app, as you want it shown in the Launchpad.
+
+6.  Fill in the **Internal Name** of your app. This must be identical to the value of *CockpitApplicationName* which you set in the SSO module of your app.
+
+7. Fill in a **Version** for your app.
+
+8. Fill in a **Description** of your app, if required.
+
+9. Click **Edit icon** to upload an **App Icon** for your app.
+
+10. Fill in the **Component > Name**. This must be identical to the {app_name} you set in the *manifest.yml* file.
+11.  Click the **+** next to the component to add **Endpoints**.
+
+12.  Specify `/**` as the endpoint to allow you to access all endpoints relevant to your application, and click **Save**.
+
+13. Fill in the **Cloud Foundry Direct URL**. This can be found using the cloud foundry command `cf app {app_name}`.
+
+14.  Set the **Configurations > content-security-policy** *Value* to the following (hover your mouse over the text and you will be able to copy the contents to your clipboard):
 
       ```http
       default-src 'self' 'unsafe-inline' 'unsafe-eval' static.eu1.mindsphere.io sprintr.home.mendix.com; font-src 'self' static.eu1.mindsphere.io fonts.gstatic.com; style-src * 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval' static.eu1.mindsphere.io sprintr.home.mendix.com; img-src * data:;
@@ -251,8 +265,9 @@ To create a new app in the MindSphere launchpad, do the following:
 
       ![](attachments/deploying-to-mindsphere/image14.png)
 
-13.  Click **Save** to save these details.
-14.  Click **Register** to register your app with the MindSphere launchpad.
+15.  Click **Save** to save these details.
+
+16.  Click **Register** to register your app with the MindSphere launchpad.
 
     	{{% alert type="info" %}}If the app has not been pushed yet, there will be no route set up for the app and you will get an error message. This will be resolved once you have pushed your app to Cloud Foundry.{{% /alert %}}
     
@@ -270,6 +285,10 @@ To set up the appropriate scopes in MindSphere, do the following:
 If you are using the starter app, you should create two scopes, *user* and *admin*.
 
 ![](attachments/deploying-to-mindsphere/image8.png)
+
+{{% alert type="info" %}}
+You will also need to use the **Add Core Role** option to add *Core Roles* to your app if it makes calls to MindSphere. The ones you need to add will depend on which features of MindSphere you are using.
+{{% /alert %}}
 
 #### 5.2.3 Assigning User Roles
 

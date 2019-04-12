@@ -65,7 +65,7 @@ You can only add one icon per element.
 
 The **MindSphereToken** entity contains the *Access_token* attribute which needs to be passed as the Authorization header in REST calls to MindSphere APIs.
 
-To improve security of your app, it is recommended that you delete the MindSphereToken object returned by the *Access token* action before showing a page or reaching the end of the microflow.
+To improve security of your app, it is recommended that you delete the MindSphereToken object returned by the *Access token* action, provided by the MindSphere SSO module, before showing a page or reaching the end of the microflow.
 
 ![Section of a microflow showing the Access token action and the Edit Custom HTTP Header dialog in the Call REST action](attachments/mindsphere-development-considerations/delete-mindspheretoken.png)
 
@@ -75,7 +75,7 @@ If you need to set or change the value of any Cloud Foundry Environment Variable
 
 1.  Use `cf set-env {app_name} {environment_variable_name} {value}`
 2.  You will need to restart the app to use the new value.  
-    Use `cf restart {app_name}`
+    Use `cf restage {app_name}`
 
 {{% alert type="warning" %}}
 Restarting your app will cause your app to be temporarily unavailable.
@@ -106,8 +106,10 @@ This will use the credentials you have set up under **App Credentials** in the *
 
 To create the app credentials:
 
-1.  Register this application using the identical application name as that set in the constant **CockpitApplicationName**. See [MindSphere Launchpad Setup](/developerportal/deploy/deploying-to-mindsphere#launchpad) in *Siemens Mindsphere – deployment*.
+1.  Register this application using the identical application name as that set in the constant **CockpitApplicationName**, and a valid version number which is the same as the one you set in *CockpitApplicationVersion*, below . See also, [MindSphere Launchpad Setup](/developerportal/deploy/deploying-to-mindsphere#launchpad) in *Siemens Mindsphere – deployment*.
+
 2.  Go to the **App Credentials** page in the *Authorization Management* tab of the MindSphere Developer Cockpit.
+
 3.  Click **Issue access** to obtain a token.
 
     ![](attachments/mindsphere-development-considerations/image20.png)
@@ -138,13 +140,13 @@ This setting has no effect on apps which are deployed to the cloud. The credenti
 
 **CockpitApplicationVersion**
 
-This is a valid version of the MindSphere app as registered in the Developer Cockpit under the name *CockpitApplicationName*.
+This is the version of the MindSphere app linked to the application credentials, as registered in the Developer Cockpit under the name *CockpitApplicationName*.
 
 **EnableLocalMindSphereApiReverseProxy**
 
 Set this to *True* to enable a reverse proxy for MindSphere API calls which are made directly from the html pages (for example, the calls from the MindSphere OS Bar).
 
-This adds a new endpoint `/api/**` to the app. An access token is added to all calls from the UI to MindSphere and these are forwarded directly. This setting is needed if you use MindSphere WebComponents during local development, as the WebComponents request direct data calls to MindSphere APIs without any Microflows.
+This endpoint forwards all calls to \api… from within native HTML pages, and adds a MindSphere token to them. For example, the calls from the MindSphere OS Bar.
 
 **HostTenant**
 

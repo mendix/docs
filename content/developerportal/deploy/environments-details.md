@@ -200,6 +200,22 @@ You can perform the following actions:
 
 For more information, see [Certificates](certificates) and [Custom Domains](custom-domains).
 
+### 4.2 HTTP Headers
+
+{{% alert type="info" %}}
+This replaces the option to prevent embedding your app in an IFrame with more flexible options to set HTTP Headers.
+{{% /alert %}}
+
+* Access-Control-Allow-Origin
+* Content-Security-Policy
+* Referrer-Policy
+* X-Content-Type-Options
+* X-Frame-Options
+* X-Permitted-Cross-Domain-Policies
+* X-XSS-Protection
+
+
+<!-->
 ### 4.2 Prevent Embedding Your App in an IFrame
 
 Your application can be embedded in another site using an IFrame. To prevent this, you can deny embedding using the setting below. This will set an X-Frame-Options header for each HTTP response from your app. Please note that Chrome will ignore the **Allow from specific domain** option.
@@ -210,6 +226,8 @@ The embedding options are:
 * **Never allow**
 * **Allow on the same domain**
 * **Allow from specific domain**
+
+-->
 
 ### 4.3 Path-Based Access Restrictions
 

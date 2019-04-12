@@ -202,34 +202,39 @@ For more information, see [Certificates](certificates) and [Custom Domains](cust
 
 ### 4.2 HTTP Headers
 
-HTTP Headers allows you to set various values of 
+HTTP Headers allows you to set the values of selected HTTP headers. These allow the client and the server to pass additional information with the request or the response and can control the behavior of your Mendix app.
 
 {{% alert type="info" %}}
 This replaces the option to prevent embedding your app in an IFrame with more flexible options to set HTTP Headers.
 {{% /alert %}}
 
-* Access-Control-Allow-Origin
-* Content-Security-Policy
-* Referrer-Policy
-* X-Content-Type-Options
-* X-Frame-Options
-* X-Permitted-Cross-Domain-Policies
-* X-XSS-Protection
+The HTTP headers which are supported in the Mendix Developer Portal are:
 
+| Header | Description | Additional Information |
+| --- | --- | --- |
+| Access-Control-Allow-Origin | indicates whether the response can be shared with requesting code from the given origin | |
+| Content-Security-Policy | allows web site administrators to control resources the user agent is allowed to load for a given page | a string value<br/>*for more information see the W3C recommendation [Content Security Policy Level 2](https://www.w3.org/TR/CSP2/)* |
+| Referrer-Policy | governs which referrer information should be included with requests made | |
+| X-Content-Type-Options | indicate that the MIME types advertised in the Content-Type headers should not be changed and be followed | |
+| X-Frame-Options | indicates whether or not a browser should be allowed to render a page in a `<frame>`, `<iframe>`, `<embed>` or `<object>` | This was the value set previously to prevent embedding in an IFrame |
+| X-Permitted-Cross-Domain-Policies | specifies whether this page can load resources from a different domain | |
+| X-XSS-Protection | stops pages from loading when they detect reflected cross-site scripting (XSS) attacks | |
 
-<!-->
-### 4.2 Prevent Embedding Your App in an IFrame
+There are three types of value for these headers:
 
-Your application can be embedded in another site using an IFrame. To prevent this, you can deny embedding using the setting below. This will set an X-Frame-Options header for each HTTP response from your app. Please note that Chrome will ignore the **Allow from specific domain** option.
+* Choose a value from a dropdown
 
-The embedding options are:
+   ![](attachments/environments-details/http-header-dropdown.png)
 
-* **Allow**
-* **Never allow**
-* **Allow on the same domain**
-* **Allow from specific domain**
+* Choose a value from a dropdown and specify a URL
 
--->
+   ![](attachments/environments-details/http-header-url.png)
+
+* Enter the required values as a string
+
+   ![](attachments/environments-details/http-header-string.png)
+
+Additional information can be found in the Mozilla developer guide [HTTP headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers).
 
 ### 4.3 Path-Based Access Restrictions
 

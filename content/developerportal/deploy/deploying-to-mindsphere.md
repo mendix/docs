@@ -35,6 +35,7 @@ To help you with your first MindSphere apps, there is also an example app which 
 To deploy your app to MindSphere you need the following prerequisites.
 
 * A MindSphere user account on a developer tenant
+* [Mendix Desktop Modeler](https://appstore.home.mendix.com/index3.html)
 * The Cloud Foundry Command Line Interface (CF CLI) – this can be downloaded from [https://github.com/cloudfoundry/cli](https://github.com/cloudfoundry/cli)
 * A Cloud Foundry role which allows you to push applications, such as `SpaceDeveloper` (help in setting up Cloud Foundry users can be found in the MindSphere [Cloud Foundry How Tos](https://developer.mindsphere.io/paas/paas-cloudfoundry-howtos.html))
 * A MindSphere developer role: either `mdsp:core:Developer` or `mdsp:core:DeveloperAdmin`

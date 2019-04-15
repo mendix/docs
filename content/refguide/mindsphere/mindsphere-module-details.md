@@ -162,7 +162,7 @@ More information on the structure and content of this JSON object, together with
 
 ### 4.1 Atlas UI Theme
 
-See section [Atlas UI](/refguide/mindsphere/mindsphere-development-considerations#atlasui) of *MindSphere Development Considerations* for a discussion about using the MindSphere Atlas UI Theme.
+See also section [MindSphere Icons](/refguide/mindsphere/mindsphere-development-considerations#atlasui) of *MindSphere Development Considerations* for a discussion about adding icons from the MindSphere Atlas UI Theme.
 
 ### 4.2 index.html Changes{#indexhtmlchanges}
 

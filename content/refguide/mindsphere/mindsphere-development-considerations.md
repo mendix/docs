@@ -10,58 +10,17 @@ tags: ["MindSphere", "Credentials", "Multi-Tenant", "Environment Variables", "Lo
 
 When developing a Mendix app which will be deployed to MindSphere, there are a number of extra things you need to take into consideration. The following subjects are discussed below:
 
-* [Atlas UI](#atlasui)
 * [Authorizing MindSphere REST Calls](#mstoken)
 * [Cloud Foundry Environment Variables](#cfenvvars)
 * [Licensing Your App](#licensing)
 * [Local Testing](#localtesting)
+* [MindSphere Icons](#atlasui)
 * [Multi-Tenancy](#multitenancy)
 * [Validation](#validation)
 
 Finally, there is a section on some [Limitations](#limitations) which apply to Mendix apps deployed to MindSphere.
 
-## 2 Atlas UI{#atlasui}
-
-The MindSphere Theme Pack includes two ways of including MindSphere icons in your app.
-
-### 2.1 MindSphere Icons as SVGs
-
-You can select MindSphere icons from the MindSphere Theme Pack to be displayed as SVGs in your application.
-
-1. Open the properties of a widget which can display an icon (for example a button).
-2. Click **Select...** next to *Icon*.
-3. Select **Image** as the icon type.
-4. Find the image that you want and click **Select**. The MindSphere icons are in the module *MindSphere_UI_Resources*.
-
-![Add icon as an image](attachments/mindsphere-development-considerations/svg-icon.png)
-
-{{% alert type="info" %}}
-You cannot change the color of these icons from within Mendix.
-{{% /alert %}}
-
-### 2.2 MindSphere Icons as an Icon Font
-
-The MindSphere Theme Pack provides a font which contains icons. This means that you can use a MindSphere icon in any page element where you can assign a class.
-
-To do this:
-
-1. Find the icon you wish to use. These have the same names as the icons in the MindSphere Theme Pack and are listed in the *Project Explorer* dock under **Project '…' > App Store modules > MindSphere_UI_Resources > Icons**.
-
-    ![List of MindSphere icons](attachments/mindsphere-development-considerations/mindsphere-icons.png)
-
-2. Open the properties of the element to which you wish to add an icon.
-3. Set **Icon** to *(none)*.
-3. Add the class `iconMdsp {icon-name}`.
-
-    ![Add an icon as CSS](attachments/mindsphere-development-considerations/css-icon.png)
-
-{{% alert type="info" %}}
-You will not see the icon in the Desktop Modeler when it is in *Edit mode*. Switch to *View mode* to confirm that you have selected the correct icon.
-
-You can only add one icon per element.
-{{% /alert %}}
-
-## 3 Authorizing MindSphere REST Calls{#mstoken}
+## 2 Authorizing MindSphere REST Calls{#mstoken}
 
 The **MindSphereToken** entity contains the *Access_token* attribute which needs to be passed as the Authorization header in REST calls to MindSphere APIs.
 
@@ -69,7 +28,7 @@ To improve security of your app, it is recommended that you delete the MindSpher
 
 ![Section of a microflow showing the Access token action and the Edit Custom HTTP Header dialog in the Call REST action](attachments/mindsphere-development-considerations/delete-mindspheretoken.png)
 
-## 4 Cloud Foundry Environment Variables{#cfenvvars}
+## 3 Cloud Foundry Environment Variables{#cfenvvars}
 
 If you need to set or change the value of any Cloud Foundry Environment Variables, you will have to do this using the Cloud Foundry Command Line Interface (CF CLI).
 
@@ -81,7 +40,7 @@ If you need to set or change the value of any Cloud Foundry Environment Variable
 Restarting your app will cause your app to be temporarily unavailable.
 {{% /alert %}}
 
-## 5 Licensing Your App{#licensing}
+## 4 Licensing Your App{#licensing}
 
 When you initially deploy a Mendix App, it is treated as a *Free App*. For a MindSphere app the most important restrictions are:
 
@@ -94,9 +53,9 @@ To license your app, you need to obtain a license key from [Mendix Support](http
 
 Instructions for licensing apps are available in the [License Activation](https://github.com/mendix/cf-mendix-buildpack#license-activation) section of the *Mendix Cloud Foundry Buildpack Readme*. Refer to [Cloud Foundry Environment Variables](#cfenvvars), above, for instructions on changing Cloud Foundry environment variables.
 
-## 6 Local Testing{#localtesting}
+## 5 Local Testing{#localtesting}
 
-### 6.1 Credentials 
+### 5.1 Credentials 
 
 When you run your app locally, you will not be able to use SSO to get your credentials. You will be logged on as MxAdmin and will be presented with a login screen either when the app starts, or the first time that your app attempts to retrieve your access token, depending on the value of the constant *AskForAppCredsOnStartUp*.
 
@@ -162,11 +121,11 @@ The definition of a tenant on MindSphere is available in the MindSphere document
 
 This should be the tenant that the user has access to in a multi-tenant environment. For a developer tenant, this must be the same as the HostTenant. In an operator or iot plan tenant, you can change this to allow you to test multi-tenant apps.
 
-### 6.2 User Roles
+### 5.2 User Roles
 
 If you are testing different roles in your app, do not use the demo users. If you switch between demo users, this will not correctly populate the tenant and role information from MindSphere. To test different roles, allocate the role to MxAdmin, redeploy, and log in again.
 
-#### 6.3 Local User Passwords
+#### 5.3 Local User Passwords
 
 Local users should not be created for your MindSphere app.
 
@@ -174,6 +133,47 @@ When a new user is identified during SSO, the SSO process generates a random pas
 
 {{% alert type="info" %}}
 This policy is set up as the default in the MindSphere starter and example apps and should not be changed.
+{{% /alert %}}
+
+## 6 MindSphere Icons{#atlasui}
+
+The MindSphere Theme Pack includes two ways of including MindSphere icons in your app.
+
+### 6.1 MindSphere Icons as SVGs
+
+You can select MindSphere icons from the MindSphere Theme Pack to be displayed as SVGs in your application.
+
+1. Open the properties of a widget which can display an icon (for example a button).
+2. Click **Select...** next to *Icon*.
+3. Select **Image** as the icon type.
+4. Find the image that you want and click **Select**. The MindSphere icons are in the module *MindSphere_UI_Resources*.
+
+![Add icon as an image](attachments/mindsphere-development-considerations/svg-icon.png)
+
+{{% alert type="info" %}}
+You cannot change the color of these icons from within Mendix.
+{{% /alert %}}
+
+### 6.2 MindSphere Icons as an Icon Font
+
+The MindSphere Theme Pack provides a font which contains icons. This means that you can use a MindSphere icon in any page element where you can assign a class.
+
+To do this:
+
+1. Find the icon you wish to use. These have the same names as the icons in the MindSphere Theme Pack and are listed in the *Project Explorer* dock under **Project '…' > App Store modules > MindSphere_UI_Resources > Icons**.
+
+    ![List of MindSphere icons](attachments/mindsphere-development-considerations/mindsphere-icons.png)
+
+2. Open the properties of the element to which you wish to add an icon.
+3. Set **Icon** to *(none)*.
+3. Add the class `iconMdsp {icon-name}`.
+
+    ![Add an icon as CSS](attachments/mindsphere-development-considerations/css-icon.png)
+
+{{% alert type="info" %}}
+You will not see the icon in the Desktop Modeler when it is in *Edit mode*. Switch to *View mode* to confirm that you have selected the correct icon.
+
+You can only add one icon per element.
 {{% /alert %}}
 
 ## 7 Multi-Tenancy{#multitenancy}

@@ -89,11 +89,57 @@ To send your runtime information to Datadog, you need to provide the Datadog API
 
 ## 4 Customizing the Metrics Agent
 
-By default, Mendix will pass a log of *all microflow* executions and a wide range of Mendix activities and request handlers to Datadog.
+By default, Mendix will pass a log of request handlers to Datadog.
 
-**Activities**
+The following Mendix *requests handler* calls will be passed to Datadog:
 
-The following Mendix activities will be passed to Datadog:
+* `WebserviceRequestHandler`
+* `ServiceRequestHandler` – OData requests
+* `RestRequestHandler`
+* `ProcessorRequestHandler`
+* `ClientRequestHandler`
+* `FileRequestHandler`
+* `PageUrlRequestHandler`
+
+However, it is possible to add activities and microflows to be passed to DataDog, and to restrict which request handler calls are sent, by using JSON to configure the metrics agent. 
+
+### 4.1 Format of Metrics Agent Configuration
+
+You can specify which request handlers, microflows, and activities are reported to Datadog using a JSON configuration with the following format:
+
+```json
+{
+  "requestHandlers": [
+    {
+      "name": "*" | "<requesthandler>"
+    }
+  ],
+  "microflows": [
+    {
+      "name": "*" | <microflow>
+    }
+  ],
+  "activities": [
+    {
+      "name": "*" | "<activity>"
+    }
+  ]
+}
+
+
+```
+
+| Value | What is Sent | Note |
+| --- | --- | --- |
+| `"name": "*"` | all | default |
+| `"name": "<requesthandler>"` | all request handler calls of this type | see list of request handlers above |
+| `"name": "<microflow>"` | each time this microflow is run | format is `<module>.<microflow>`<br />for example `TrainingManagement.ACT_CancelScheduledCourse`
+| `"name": "<activity>"` | all activities of this type | click activities<sup><small>1</small></sup> below to see the list of options |
+
+
+**<details><summary><sup><small>[1]</small></sup>Activities (click to see list)</summary>**
+
+The following Mendix activities can be passed to Datadog:
 
 * `CastObject`
 * `ChangeObject`
@@ -111,81 +157,21 @@ The following Mendix activities will be passed to Datadog:
 * `CallWebService`
 * `ImportWithMapping`
 * `ExportWithMapping`
-
-**Request Handlers**
-
-The following Mendix activities will be passed to Datadog:
-
-* `WebserviceRequestHandler`
-* `ServiceRequestHandler` – OData requests
-* `RestRequestHandler`
-* `ProcessorRequestHandler`
-* `ClientRequestHandler`
-* `FileRequestHandler`
-* `PageUrlRequestHandler`
-
-However, it is possible to restrict the activities which are passed to DataDog by using JSON to configure the metrics agent. 
-
-### 4.1 Format of Metrics Agent Configuration
-
-You can specify which request handlers, microflows, and activities are reported to Datadog, together with the sample rate.
-
-```json
-{
-  "standardSampleRate": <samplerate>,
-  "requestHandlers": [
-    {
-      "name": "*" | "<requesthandler>",
-      "sampleRate": <samplerate>
-    }
-  ],
-  "microflows": [
-    {
-      "name": "*" | <microflow>,
-      "sampleRate": <samplerate>
-    }
-  ],
-  "activities": [
-    {
-      "name": "*" | "<activity>",
-      "sampleRate": <samplerate>
-    }
-  ]
-}
-
-
-```
-
-| Value | What is Sent | Note |
-| --- | --- | --- |
-| `"name": "*"` | all | default |
-| `"name": "<requesthandler>"` | all request handler calls of this type | see list of request handlers above |
-| `"name": "<microflow>"` | each time this microflow is run | format is `<module>.<microflow>`<br />for example `TrainingManagement.ACT_CancelScheduledCourse`
-| `"name": "<activity>"` | all activities of this type | see list of activities above |
-| `"standardSampleRate": <samplerate>` | the proportion of samples to send for all items | value between 0 and 1, <br/>optional |
-| `"sampleRate": <samplerate>` | the proportion of samples to send for this item | value between 0 and 1, <br/>optional |
+</details>
 
 **Example**
 
 The following example will send logs for:
 
-* SOAP, OData, and REST calls (`WebserviceRequestHandler`, `ServiceRequestHandler`, and `RestRequestHandler`)
+* all request handlers
 * the microflow `After_Startup` in the module `Administration`
-* all activities
-* sampled at a frequency of 0.50
+* `CreateObject` and `DeleteObject` activities
 
 ```json
 {
-  "standardSampleRate": 0.50,
   "requestHandlers": [
     {
-      "name": "WebserviceRequestHandler"
-    }
-    {
-      "name": "ServiceRequestHandler"
-    },
-    {
-      "name": "RestRequestHandler"
+      "name": "*"
     }
   ],
   "microflows": [
@@ -195,7 +181,10 @@ The following example will send logs for:
   ],
   "activities": [
     {
-      "name": "*"
+      "name": "CreateObject"
+    },
+    {
+      "name": "DeleteObject"
     }
   ]
 }

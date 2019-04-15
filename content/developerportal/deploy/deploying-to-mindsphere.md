@@ -198,14 +198,10 @@ To deploy your deployment package, do the following:
 
 6.  Create a `manifest.yml` file with at least the following content:
 
-    <code class="language-yml">
+    ```yml
     applications:
-    - name: {app_name}
-      disk_quota: {disk_quota_size}
-      memory: {memory_size}
     services:
-      - {service_instance}
-    </code>
+    ```
 
     {{% alert type="info" %}}`disk_quota_size` and `memory_size` must be at least **512M** to enable a Mendix app to run.<br />See the *Cloud Foundry* [App Manifest Attribute Reference](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest-attributes.html) for more information on valid specifications for memory and disk quota sizes.{{% /alert %}}
     

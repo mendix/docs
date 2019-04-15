@@ -198,7 +198,7 @@ To deploy your deployment package, do the following:
 
 6. Create a `manifest.yml` file with at least the following content:
 
-    ```yml
+    ```
     applications:
     - name: {app_name}
       disk_quota: {disk_quota_size}
@@ -207,9 +207,7 @@ To deploy your deployment package, do the following:
       - {service_instance}
     ```
 
-    {{% alert type="info" %}}`disk_quota_size` and `memory_size` must be at least **512M** to enable a Mendix app to run.
-    
-    See the *Cloud Foundry* [App Manifest Attribute Reference](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest-attributes.html) for more information on valid specifications for memory and disk quota sizes.({{% /alert %}}
+    {{% alert type="info" %}}`disk_quota_size` and `memory_size` must be at least **512M** to enable a Mendix app to run.<br /><br />See the *Cloud Foundry* [App Manifest Attribute Reference](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest-attributes.html) for more information on valid specifications for memory and disk quota sizes.{{% /alert %}}
 
     For more information on the configuration of manifest files, see [Configuring the manifest file](https://developer.mindsphere.io/howto/howto-cf-single-manifest.html#configuring-the-manifest-file) on the MindSphere developers site.
 
@@ -273,7 +271,7 @@ To create a new app in the MindSphere launchpad, do the following:
 
 16.  Click **Register** to register your app with the MindSphere launchpad.
 
-    	{{% alert type="info" %}}If the app has not been pushed yet, there will be no route set up for the app and you will get an error message. This will be resolved once you have pushed your app to Cloud Foundry.{{% /alert %}}
+    {{% alert type="info" %}}If the app has not been pushed yet, there will be no route set up for the app and you will get an error message. This will be resolved once you have pushed your app to Cloud Foundry.{{% /alert %}}
     
 #### 5.2.2 Setting Application Scopes in Developer Cockpit{#scopes}
 

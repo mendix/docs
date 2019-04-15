@@ -1,7 +1,7 @@
 ---
 title: "MindSphere Module Details"
 category: "Siemens MindSphere"
-#menu_order: Enter the position of the document in the category or under the parent; number by 10 (for first), 20, 30, etc. for easy ordering of other documents in the future if necessary; don't add brackets or quotation marks; if no number is added, the system will add an extremely high number to order the documents, which means that if you only want a document to appear at the top, you only have to add "10" to that specific document, you don't have to order all the other documents in the category/under the parent
+menu_order: 40
 description: "A detailed description of the modules which are required for deployment to MindSphere"
 tags: ["MindSphere"]
 ---
@@ -92,7 +92,7 @@ If the same user logs in using a different tenant, Mendix will treat this as a d
 
 For advice on how to make your apps multi-tenant, see [Multi-Tenancy](/refguide/mindsphere/mindsphere-development-considerations#multitenancy) in *MindSphere Development Considerations*.
 
-### 2.4 Roles & Scopes{#rolesscopes}
+### 2.3 Roles & Scopes{#rolesscopes}
 
 Using SSO, the Mendix app needs to know which roles to allocate to the user. This enables the app to know whether the user should have, for example, administrator access.
 

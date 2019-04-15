@@ -1,7 +1,7 @@
 ---
 title: "MindSphere Development Considerations"
 category: "Siemens MindSphere"
-#menu_order: Enter the position of the document in the category or under the parent; number by 10 (for first), 20, 30, etc. for easy ordering of other documents in the future if necessary; don't add brackets or quotation marks; if no number is added, the system will add an extremely high number to order the documents, which means that if you only want a document to appear at the top, you only have to add "10" to that specific document, you don't have to order all the other documents in the category/under the parent
+menu_order: 20
 description: "A description of some extra considerations to be taken into account when developing for deployment to MindSphere"
 tags: ["MindSphere", "Credentials", "Multi-Tenant", "Environment Variables", "Local", "Styling", "UI", "Icons", "Limitations", "Licensing", "Validation"]
 ---
@@ -125,7 +125,7 @@ This should be the tenant that the user has access to in a multi-tenant environm
 
 If you are testing different roles in your app, do not use the demo users. If you switch between demo users, this will not correctly populate the tenant and role information from MindSphere. To test different roles, allocate the role to MxAdmin, redeploy, and log in again.
 
-#### 5.3 Local User Passwords
+### 5.3 Local User Passwords
 
 Local users should not be created for your MindSphere app.
 

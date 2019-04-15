@@ -89,7 +89,7 @@ To send your runtime information to Datadog, you need to provide the Datadog API
 
 ## 4 Customizing the Metrics Agent
 
-By default, Mendix will pass a log of *all microflow* executions, and a wide range of Mendix activities and request handlers to Datadog.
+By default, Mendix will pass a log of *all microflow* executions and a wide range of Mendix activities and request handlers to Datadog.
 
 **Activities**
 
@@ -159,8 +159,9 @@ You can specify which request handlers, microflows, and activities are reported 
 | Value | What is Sent | Note |
 | --- | --- | --- |
 | `"name": "*"` | all | default |
-| `"name": "<activity>"` | all activities of this type | see list of activities above |
+| `"name": "<requesthandler>"` | all request handler calls of this type | see list of request handlers above |
 | `"name": "<microflow>"` | each time this microflow is run | format is `<module>.<microflow>`<br />for example `TrainingManagement.ACT_CancelScheduledCourse`
+| `"name": "<activity>"` | all activities of this type | see list of activities above |
 | `"standardSampleRate": <samplerate>` | the proportion of samples to send for all items | value between 0 and 1, <br/>optional |
 | `"sampleRate": <samplerate>` | the proportion of samples to send for this item | value between 0 and 1, <br/>optional |
 
@@ -171,9 +172,11 @@ The following example will send logs for:
 * SOAP, OData, and REST calls (`WebserviceRequestHandler`, `ServiceRequestHandler`, and `RestRequestHandler`)
 * the microflow `After_Startup` in the module `Administration`
 * all activities
+* sampled at a frequency of 0.50
 
 ```json
 {
+  "standardSampleRate": 0.50,
   "requestHandlers": [
     {
       "name": "WebserviceRequestHandler"

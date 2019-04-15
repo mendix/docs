@@ -44,7 +44,7 @@ To deploy your app to MindSphere you need the following prerequisites.
 
 You must customize your app to allow it to be deployed to MindSphere, registered via the MindSphere Developer Cockpit, and shown in the launchpad. This is done through MindSphere customization modules. There are two ways to include the customization you need in your app.
 
-### 3.1 Using the MindSphere Starter App
+### 3.1 Option A: Using the MindSphere Starter App
 
 The **MindSphere Starter Application** in the Mendix App Store contains all the modules and styling which you need to create an app you want to deploy to MindSphere.
 
@@ -72,7 +72,7 @@ Open the Desktop Modeler (version 7.22.2 or above) and follow these steps:
 
 	![](attachments/deploying-to-mindsphere/app-store-download-project.png)
 
-### 3.2 Customizing an Existing App{#existingapp}
+### 3.2 Option B: Customizing an Existing App{#existingapp}
 
 If you have an existing app which was not based on the MindSphere starter app, you must import the required customization. The three modules which must be imported are:
 

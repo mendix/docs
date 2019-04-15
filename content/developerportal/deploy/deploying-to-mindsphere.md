@@ -88,7 +88,7 @@ If you have an existing app which was not based on the MindSphere starter app, y
 
   This applies MindSphere styling to your app and includes some additional custom files which are required for the correct operation of your app. For more information, see the [MindSphere Theme Pack](/refguide/mindsphere/mindsphere-module-details#msthemepack) section of *MindSphere Module Details*.
 
-## 4 Configuring the Modules
+## 4 Configuring the Modules{#configure-modules}
 
 Now that you have your new app, or have imported the MindSphere modules into an existing app, you need to configure the modules to allow your app to work with MindSphere.
 
@@ -100,13 +100,13 @@ The following items in the MindSphereSingleSignOn module need to be configured.
 
 #### 4.1.1 CockpitApplicationName
 
-The value of *CockpitApplicationName* must be identical to the name of your app as registered in the MindSphere developer portal. It must, therefore, fit the constraints listed in the [App Name](/refguide/mindsphere/mindsphere-development-considerations#appname) section of *MindSphere Development Considerations*.
+Enter the name of your app as registered in the MindSphere developer portal as the value of *CockpitApplicationName*.
 
-[//]: # (MindGateURL and PublicKeyURL do not need to be changed until there are more MindSphere environments)
+These two values must be identical and must, therefore, fit the constraints listed in the [App Name](/refguide/mindsphere/mindsphere-development-considerations#appname) section of *MindSphere Development Considerations*.
 
 #### 4.1.2 RegisterSingleSignOn
 
-The *RegisterSingleSignOn* microflow must be added as the **After startup** microflow or added as a sub-microflow of an existing *after startup* microflow.
+Add the *RegisterSingleSignOn* microflow as the **After startup** microflow or added as a sub-microflow of an existing *after startup* microflow.
 
 {{% alert type="info" %}}
 If you are using the MindSphere Starter Application, this will already be set up as the *After startup* microflow.
@@ -118,7 +118,7 @@ If you are are modifying an existing app, you can do this on the *Runtime* tab o
 
 ### 4.2 Configuring the MindSphere OS Bar (MindSphereOSBarConfig)
 
-The OS Bar shows information about the app you are running.
+Change the OS Bar to show information about the app you are running.
 
 ![Example of the information in the OS Bar](attachments/deploying-to-mindsphere/image10.png)
 
@@ -139,7 +139,7 @@ More information on the structure and content of this JSON object, together with
 
 ### 5.1 Pushing to Cloud Foundry
 
-Before you continue, ensure you have fulfilled the prerequisites described in the section [Prerequisites](#prerequisites), above.
+Before you continue, ensure you have fulfilled the prerequisites described in the section [Prerequisites](#prerequisites) and configured the MindSphere modules as described in the section [Configuring the Modules](#configure-modules), above.
 
 #### 5.1.1 Creating a Mendix Deployment Package
 

@@ -110,15 +110,17 @@ To create the app credentials:
 
 2.  Go to the **App Credentials** page in the *Authorization Management* tab of the MindSphere Developer Cockpit.
 
-3.  Click **Issue access** to obtain a token.
+3.  Choose your app.
+
+4.  Click **Issue access** to obtain a token.
 
     ![](attachments/mindsphere-development-considerations/image20.png)
 
-4.  Select the access level and click **Submit**
+5.  Select the access level and click **Submit**
 
     ![](attachments/mindsphere-development-considerations/image21.png)
 
-5.  Make a note of the **Client ID** and **Client Secret**
+6.  Make a note of the **Client ID** and **Client Secret**
 
     ![](attachments/mindsphere-development-considerations/image22.png)
 

@@ -201,13 +201,15 @@ To deploy your deployment package, do the following:
     ```yml
     applications:
     - name: {app_name}
-      disk_quota: 512M
-      memory: 512M
+      disk_quota: {disk_quota_size}
+      memory: {memory_size}
     services:
       - {service_instance}
     ```
 
-    {{% alert type="info" %}}The `disk_quota` and `memory` must be at least **512M** to enable a Mendix app to run.{{% /alert %}}
+    {{% alert type="info" %}}`disk_quota_size` and `memory_size` must be at least **512M** to enable a Mendix app to run.
+    
+    See the *Cloud Foundry* [App Manifest Attribute Reference](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest-attributes.html) for more information on valid specifications for memory and disk quota sizes.({{% /alert %}}
 
     For more information on the configuration of manifest files, see [Configuring the manifest file](https://developer.mindsphere.io/howto/howto-cf-single-manifest.html#configuring-the-manifest-file) on the MindSphere developers site.
 

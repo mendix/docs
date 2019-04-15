@@ -200,6 +200,7 @@ To deploy your deployment package, do the following:
 
     ```yml
     applications:
+    - name: {app_name}
     services:
     ```
 

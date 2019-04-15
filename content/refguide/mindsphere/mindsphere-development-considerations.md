@@ -184,7 +184,7 @@ For a MindSphere app to be multi-tenant, each user can only see the data from a 
 
 ### 7.1 Control through MindSphere APIs
 
-The Authorization HTTP Header (see DS_MindSphereAccessToken in the [Microflows](/developerportal/deploy/deploying-to-mindsphere#microflows) section of *Siemens Mindsphere – deployment*) which is passed for every MindSphere API call ensures that the user can only obtain data which is authorized to them via their tenant.
+The Authorization HTTP Header (see DS_MindSphereAccessToken in the [Microflows](mindsphere-module-details#microflows) section of *MindSphere Module Details*) which is passed for every MindSphere API call ensures that the user can only obtain data which is authorized to them via their tenant.
 
 ### 7.2 Control within a Mendix app
 

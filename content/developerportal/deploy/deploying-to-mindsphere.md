@@ -198,6 +198,7 @@ To deploy your deployment package, do the following:
 
 6.  Create a `manifest.yml` file with at least the following content:
 
+
     ```yml
     applications:
     - name: {app_name}

@@ -12,6 +12,10 @@ tags: ["Datadog", "Mendix Cloud", "v4", "monitoring", "analysis"]
 
 This document explains how to configure your Mendix Cloud v4 app to send data to Datadog.
 
+{{% alert type="warning" %}}
+Datadog is not supported in Mendix Cloud v3, nor in default deployment buildpacks for other cloud platforms.
+{{% /alert %}}
+
 ## 2 Datadog API Key
 
 To make use of Datadog you will need a Datadog API key. If you already use Datadog, skip to section 2.2 [Existing Datadog User](#existing-datadog-user) to learn how to get one.
@@ -83,9 +87,133 @@ To send your runtime information to Datadog, you need to provide the Datadog API
 
 8. **Restart** the application.
 
-## 4 Additional Information
+## 4 Customizing the Metrics Agent
 
-### 4.1 Log Levels
+By default, Mendix will pass a log of *all microflow* executions, and a wide range of Mendix activities and request handlers to Datadog.
+
+**Activities**
+
+The following Mendix activities will be passed to Datadog:
+
+* `CastObject`
+* `ChangeObject`
+* `CommitObject`
+* `CreateObject`
+* `DeleteObject`
+* `RetrieveObject`
+* `RollbackObject`
+* `AggregateList`
+* `ChangeList`
+* `ListOperation`
+* `JavaAction`
+* `Microflow`
+* `CallRestService`
+* `CallWebService`
+* `ImportWithMapping`
+* `ExportWithMapping`
+
+**Request Handlers**
+
+The following Mendix activities will be passed to Datadog:
+
+* `WebserviceRequestHandler`
+* `ServiceRequestHandler` – OData requests
+* `RestRequestHandler`
+* `ProcessorRequestHandler`
+* `ClientRequestHandler`
+* `FileRequestHandler`
+* `PageUrlRequestHandler`
+
+However, it is possible to restrict the activities which are passed to DataDog by using JSON to configure the metrics agent. 
+
+### 4.1 Format of Metrics Agent Configuration
+
+You can specify which request handlers, microflows, and activities are reported to Datadog, together with the sample rate.
+
+```json
+{
+  "standardSampleRate": <samplerate>,
+  "requestHandlers": [
+    {
+      "name": "*" | "<requesthandler>",
+      "sampleRate": <samplerate>
+    }
+  ],
+  "microflows": [
+    {
+      "name": "*" | <microflow>,
+      "sampleRate": <samplerate>
+    }
+  ],
+  "activities": [
+    {
+      "name": "*" | "<activity>",
+      "sampleRate": <samplerate>
+    }
+  ]
+}
+
+
+```
+
+| Value | What is Sent | Note |
+| --- | --- | --- |
+| `"name": "*"` | all | default |
+| `"name": "<activity>"` | all activities of this type | see list of activities above |
+| `"name": "<microflow>"` | each time this microflow is run | format is `<module>.<microflow>`<br />for example `TrainingManagement.ACT_CancelScheduledCourse`
+| `"standardSampleRate": <samplerate>` | the proportion of samples to send for all items | value between 0 and 1, <br/>optional |
+| `"sampleRate": <samplerate>` | the proportion of samples to send for this item | value between 0 and 1, <br/>optional |
+
+**Example**
+
+The following example will send logs for:
+
+* SOAP, OData, and REST calls (`WebserviceRequestHandler`, `ServiceRequestHandler`, and `RestRequestHandler`)
+* the microflow `After_Startup` in the module `Administration`
+* all activities
+
+```json
+{
+  "requestHandlers": [
+    {
+      "name": "WebserviceRequestHandler"
+    }
+    {
+      "name": "ServiceRequestHandler"
+    },
+    {
+      "name": "RestRequestHandler"
+    }
+  ],
+  "microflows": [
+    {
+      "name": "Administration.After_Startup"
+    }
+  ],
+  "activities": [
+    {
+      "name": "*"
+    }
+  ]
+}
+```
+
+### 4.2 Passing a Configuration to the Metrics Agent
+
+You pass the configuration to the metrics agent by adding a *Custom Runtime Setting* to your Mendix Cloud environment.
+
+1. Go to the **Environments** page of your app.
+2. Click **Details** next to the environment you have configured for Datadog.
+3. Add the **Custom Runtime Setting** *MetricsAgentConfig* with the value of the JSON required for your configuration.
+
+    ![](attachments/datadog-metrics/metrics-agent-config.png)
+
+4. Click **Save**.
+5. Restart your app to apply the new settings.
+
+## 5 Additional Information
+
+### 5.1 Log Levels
 
 The valid values for **DD_LOG_LEVEL** are:
 
@@ -95,16 +223,16 @@ The valid values for **DD_LOG_LEVEL** are:
 * INFO
 * DEBUG
 
-### 4.2 Datadog Events Log
+### 5.2 Datadog Events Log
 
 The Datadog Events log contains events which come from your app: those are the same events that would appear in the Mendix Console. It does not contain events from the environment.
 
 ![Example events log](attachments/datadog-metrics/datadog-event-log.png)
 
-### 4.3 Datadog Issues
+### 5.3 Datadog Issues
 
 If you have any issues related to accessing Datadog, please contact their support here: [Support | Datadog](https://www.datadoghq.com/support/), or by email at [support@datadoghq.com](mailto:support@datadoghq.com).
 
-## 5 Related Content
+## 6 Read More
 
 * [Metrics](metrics)

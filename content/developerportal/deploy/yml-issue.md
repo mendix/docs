@@ -8,6 +8,30 @@ description: "Explore issue around displaying YML code block"
 draft: true
 ---
 
+## Simplest example with hyphen?
+
+1. List item
+
+    ```
+    - line begins with hyphen
+    ```
+
+## Try double indenting - doesn't look right in preview!?
+
+1. List item
+
+        ```
+        - line begins with hyphen
+        ```
+
+## Replace hyphen with `&#45;` code (&#45;) hyphen?
+
+1. List item
+
+    ```
+    &#45; line begins with hyphen
+    ```
+
 ## Indented code block - not yml?
 
 1. Create a `manifest.yml` file with at least the following content:

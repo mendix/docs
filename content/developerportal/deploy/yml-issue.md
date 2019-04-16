@@ -8,6 +8,36 @@ description: "Explore issue around displaying YML code block"
 draft: true
 ---
 
+## Play with double indenting
+
+1. List item
+
+    ```yml
+        - begins with hyphen
+    ```
+
+
+## Simplest example with hyphen?
+
+1. List item
+
+    ```
+    - line begins with hyphen
+    ```
+
+## Lots of code with hyphens?
+
+1. List item
+
+    ```yml
+        applications:
+        - name: {app_name}
+        disk_quota: {disk_quota_size}
+        memory: {memory_size}
+        services:
+          - {service_instance}
+    ```
+
 ## Only one hyphen in lots of lines?
 
 1. List item
@@ -45,14 +75,6 @@ draft: true
     No hyphen
         - line begins with hyphen double indented
     No hyphen
-    ```
-
-## Simplest example with hyphen?
-
-1. List item
-
-    ```
-    - line begins with hyphen
     ```
 
 ## Is it just the yml - NO YML is OK not indented?

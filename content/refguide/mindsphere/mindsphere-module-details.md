@@ -216,7 +216,7 @@ You will only have to make the changes below if you are configuring your existin
 For the OS Bar to work correctly in your Mendix app, the following script has to be added within the `<head>` tags of index.html. Please note the comments in the code regarding the order in which things need to be done if you are inserting this manually.
 
 {{% alert type="info" %}}
-dojoConfig and the call to load mxui.js must also be removed from their original positions in the file.
+*dojoConfig* and the call to load *mxui.js* must also be removed from their original positions in the file.
 {{% /alert %}}
 
 ```javascript

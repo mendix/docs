@@ -12,9 +12,7 @@ This category includes reference guides for using MindSphere with Mendix.
 
 ## 2 Main Documents in This Category
 
-### [MindSphere Asset Management Connector](mindsphere-asset-management-connector)
-
-A guide on how to use the MindSphere Asset Management Connector to retrieve assets and asset types from MindSphere
+There are three documents in this category.
 
 ### [MindSphere Development Considerations](mindsphere-development-considerations)
 
@@ -24,6 +22,14 @@ A guide covering things which you should address when developing for MindSphere.
 * Multi tenancy
 * Cloud Foundry environment variables
 * Validation
+
+### [MindSphere Module Details](mindsphere-module-details)
+
+More technical details about the MindSphere modules that you need to include in your Mendix app to enable it to run on MindSphere.
+
+### [MindSphere Asset Management Connector](mindsphere-asset-management-connector)
+
+A guide on how to use the MindSphere Asset Management Connector to retrieve assets and asset types from MindSphere
 
 ## 3 Read More
 

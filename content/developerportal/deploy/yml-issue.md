@@ -43,7 +43,7 @@ draft: true
 
     ```
     No hyphen
-     - line begins with hyphen not position 1
+        - line begins with hyphen double indented
     No hyphen
     ```
 

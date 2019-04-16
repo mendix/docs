@@ -111,9 +111,7 @@ This endpoint forwards all calls to \api… from within native HTML pages, and a
 
 **HostTenant**
 
-This should be the tenant where your credentials are stored. It is needed when retrieving your Service Credentials. The **Tenant name** is available from the menu bar in the MindSphere launchpad.
-
-![](attachments/mindsphere-development-considerations/image24.png)
+This should be the tenant where your credentials are stored. It is needed when retrieving your Service Credentials.
 
 The definition of a tenant on MindSphere is available in the MindSphere document [Definition of Tenant](https://documentation.mindsphere.io/resources/html/settings/en-US/118273564939.html).
 
@@ -124,6 +122,10 @@ This should be the tenant that the user has access to in a multi-tenant environm
 ### 5.2 User Roles
 
 If you are testing different roles in your app, do not use the demo users. If you switch between demo users, this will not correctly populate the tenant and role information from MindSphere. To test different roles, allocate the role to MxAdmin, redeploy, and log in again.
+
+The MxAdmin role is found In the **Administrator** tab of the *Security* settings of your app.
+
+![](attachments/mindsphere-development-considerations/mxadmin-roles.png)
 
 ### 5.3 Local User Passwords
 

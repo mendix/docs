@@ -4,6 +4,7 @@ category: "Siemens MindSphere"
 menu_order: 40
 description: "A detailed description of the modules which are required for deployment to MindSphere"
 tags: ["MindSphere"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
@@ -213,6 +214,10 @@ You will only have to make the changes below if you are configuring your existin
 #### 5.1.1 OS Bar
 
 For the OS Bar to work correctly in your Mendix app, the following script has to be added within the `<head>` tags of index.html. Please note the comments in the code regarding the order in which things need to be done if you are inserting this manually.
+
+{{% alert type="info" %}}
+*dojoConfig* and the call to load *mxui.js* must also be removed from their original positions in the file.
+{{% /alert %}}
 
 ```javascript
 <script>

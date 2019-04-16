@@ -8,6 +8,76 @@ description: "Explore issue around displaying YML code block"
 draft: true
 ---
 
+## Is it just the yml?
+
+```yml
+applications:
+- name: {app_name}
+  disk_quota: {disk_quota_size}
+  memory: {memory_size}
+services:
+  - {service_instance}
+```
+
+## Indented yml?
+
+6. Create a `manifest.yml` file with at least the following content:
+
+    ```yml
+    applications:
+    - name: {app_name}
+      disk_quota: {disk_quota_size}
+      memory: {memory_size}
+    services:
+      - {service_instance}
+    ```
+
+## Simplest Original?
+
+6. Create a `manifest.yml` file with at least the following content:
+
+    ```yml
+    applications:
+    - name: {app_name}
+      disk_quota: {disk_quota_size}
+      memory: {memory_size}
+    services:
+      - {service_instance}
+    ```
+
+    {{% alert type="info" %}}`disk_quota_size` and `memory_size` must be at least **512M** to enable a Mendix app to run.
+    
+    See the *Cloud Foundry* [App Manifest Attribute Reference](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest-attributes.html) for more information on valid specifications for memory and disk quota sizes.({{% /alert %}}
+
+    For more information on the configuration of manifest files, see [Configuring the manifest file](https://developer.mindsphere.io/howto/howto-cf-single-manifest.html#configuring-the-manifest-file) on the MindSphere developers site.
+
+## Simplified original
+
+### 5.1 Level 3
+
+#### 5.1.2 Deploying the Application to Cloud Foundry using CF CLI
+
+To deploy your deployment package, do the following:
+
+6. Create a `manifest.yml` file with at least the following content:
+
+    ```yml
+    applications:
+    - name: {app_name}
+      disk_quota: {disk_quota_size}
+      memory: {memory_size}
+    services:
+      - {service_instance}
+    ```
+
+    {{% alert type="info" %}}`disk_quota_size` and `memory_size` must be at least **512M** to enable a Mendix app to run.
+    
+    See the *Cloud Foundry* [App Manifest Attribute Reference](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest-attributes.html) for more information on valid specifications for memory and disk quota sizes.({{% /alert %}}
+
+    For more information on the configuration of manifest files, see [Configuring the manifest file](https://developer.mindsphere.io/howto/howto-cf-single-manifest.html#configuring-the-manifest-file) on the MindSphere developers site.
+
+7.  Push your app to MindSphere using the command:
+
 ## 5 ORIGINAL ISSUE SECTION 5.1.2 Step 6 Deploying Your App to MindSphere
 
 ### 5.1 Pushing to Cloud Foundry
@@ -201,3 +271,5 @@ See [MindSphere Development Considerations](/refguide/mindsphere/mindsphere-deve
 * local testing
 * multi-tenancy
 * limitations
+
+{{% todo %}}[REMOVE DOCUMENT AFTER TESTING]{{% /todo %}}

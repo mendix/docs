@@ -8,6 +8,45 @@ description: "Explore issue around displaying YML code block"
 draft: true
 ---
 
+## Only one hyphen in lots of lines?
+
+1. List item
+
+    ```
+    No hyphen
+    No hyphen
+    No hyphen
+    No hyphen
+    No hyphen
+    No hyphen
+    No hyphen
+    No hyphen
+    - line begins with hyphen position 1
+    No hyphen
+    No hyphen
+    No hyphen
+    No hyphen
+    No hyphen
+    ```
+
+## Hyphen not in position 1?
+
+1. List item
+
+    ```
+     - line begins with hyphen
+    ```
+
+## Hyphen not in position 1, multi-line?
+
+1. List item
+
+    ```
+    No hyphen
+     - line begins with hyphen not position 1
+    No hyphen
+    ```
+
 ## Simplest example with hyphen?
 
 1. List item
@@ -16,7 +55,18 @@ draft: true
     - line begins with hyphen
     ```
 
-## Try double indenting - doesn't look right in preview!?
+## Is it just the yml - NO YML is OK not indented?
+
+```yml
+applications:
+- name: {app_name}
+  disk_quota: {disk_quota_size}
+  memory: {memory_size}
+services:
+  - {service_instance}
+```
+
+## Try double indenting - NO?
 
 1. List item
 
@@ -24,7 +74,7 @@ draft: true
         - line begins with hyphen
         ```
 
-## Replace hyphen with `&#45;` code (&#45;) hyphen?
+## Replace hyphen with `&#45;` code (&#45;) hyphen - NO?
 
 1. List item
 
@@ -73,7 +123,7 @@ draft: true
     - name: {app_name}
     ```
 
-## Indented no hyphens?
+## Indented no hyphens - OK?
 
 1. List item
 
@@ -95,17 +145,5 @@ draft: true
     services:
       - {service_instance}
     ```
-
-## Is it just the yml - NO?
-
-```yml
-applications:
-- name: {app_name}
-  disk_quota: {disk_quota_size}
-  memory: {memory_size}
-services:
-  - {service_instance}
-```
-
 
 {{% todo %}}[REMOVE DOCUMENT AFTER TESTING]{{% /todo %}}

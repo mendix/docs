@@ -33,19 +33,29 @@ To improve security of your app, it is recommended that you delete the MindSpher
 If you need to set or change the value of any Cloud Foundry Environment Variables, you will have to do this using the Cloud Foundry Command Line Interface (CF CLI).
 
 1.  Use `cf set-env {app_name} {environment_variable_name} {value}`
-2.  You will need to restart the app to use the new value.  
+2.  You will need to restage the app to use the new value.  
     Use `cf restage {app_name}`
 
 {{% alert type="warning" %}}
-Restarting your app will cause your app to be temporarily unavailable.
+Restaging your app will cause your app to be temporarily unavailable.
+
+If you do **not** restage your app, it will continue to run using the old values. If your app is an unlicensed (free) app, it will stop running after a time and this could cause the environment to be restarted and pick up the new environment variable values without an explicit restage.
 {{% /alert %}}
+
+**Mendix Constants**
+
+Your project will define the default values for [constants](/refguide/constants). You can override these default values with Cloud Foundry environment variables. To do this, you need to replace the dot with an underscore and prefix the name with `MX_`. For example, a constant `MyConstant` in module `MyModule` (that is, `MyModule.MyConstant`), in app `MyApp` could be set to `ABC123` like this:
+
+```bash
+    cf set-env MyApp MX_MyModule_MyConstant "ABC123"
+```
 
 ## 4 Licensing Your App{#licensing}
 
 When you initially deploy a Mendix App, it is treated as a *Free App*. For a MindSphere app the most important restrictions are:
 
 * You can have a maximum of ten users
-* The app will go into sleep mode after 1-2 hours
+* The app will go into sleep mode after 1-2 hours: this could cause the Cloud Foundry environment to be restarted and pick up the latest values of environment variables.
 
 For a full list of limitations, see the [Free App](/developerportal/deploy/mendix-cloud-deploy#free-app) section of *Mendix Cloud*. Note that this also includes restrictions which apply specifically to apps which are deployed to the Mendix Cloud.
 

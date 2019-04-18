@@ -417,7 +417,7 @@ If you no longer require a service you can unbind it or remove it from your app.
 
 The services which are created by the Mendix Developer Portal will be named automatically. You will see these names in the SAP Cloud Platform cockpit. The name of the service will normally be **App name** + **_** + **Environment Name** + **_** + **a random 6-character suffix**. All spaces will be removed from the app and environment names. For example, `MyApp_Development_c7sd9q`.
 
-However, the maximum length for the service name is 50 characters and if this limit would be exceeded by the name created above an alternative service name will be used. The format of this is **Environment Name** + **_** + **a random 6-character suffix**. If the Environment name is longer than 43 characters, only the first 43 characters are used.
+However, the maximum length for the service name is 50 characters. If this limit would be exceeded by the name created above, an alternative service name will be used. The format of this is **Environment Name** + **_** + **a random 6-character suffix**. If the Environment name is longer than 43 characters, only the first 43 characters are used.
 
 ## 8 Databases in SAP Cloud Platform{#databases}
 

@@ -1,14 +1,15 @@
 ---
-title: "Licensing Mendix Cloud Apps"
-# New document which replaces four others
-parent: "mendix-cloud-deploy"
-menu_order: 15
-description: "Licensing apps for production by linking them to a licensed cloud node."
+title: "Licensing Apps"
+parent: "general"
+menu_order: 5
+description: "How to apply licenses to apps which are outside Mendix Cloud"
 tags: ["App", "Node", "Developer Portal", "Deploy", "Link", "Unlink", "Licensed", "Sandbox", "Upgrade", "Mendix Cloud", "V3", "V4"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
+
+
 
 To run Mendix apps in production on the Mendix Cloud, they must be linked to a licensed node. Without a licensed node you can still deploy your app and test it, however it will only run for a couple of hours before shutting down, and is restricted in the number of users it can have.
 

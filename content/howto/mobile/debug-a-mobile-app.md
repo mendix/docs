@@ -409,7 +409,7 @@ For more help with Android remote debugging, check out [Get Started with Remote 
 
 ## Read More
 
-* [How to Debug Java Actions](howto/monitoring-troubleshooting/debug-java-actions)
-* [How to Find the Root Cause of Runtime Errors](howto/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
-* [How to Clear Warning Messages in Mendix](howto/monitoring-troubleshooting/clear-warning-messages)
-* [How to Debug Microflows](howto/monitoring-troubleshooting/debug-microflows)
+* [How to Debug Java Actions](/howto/monitoring-troubleshooting/debug-java-actions)
+* [How to Find the Root Cause of Runtime Errors](/howto/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
+* [How to Clear Warning Messages in Mendix](/howto/monitoring-troubleshooting/clear-warning-messages)
+* [How to Debug Microflows](/howto/monitoring-troubleshooting/debug-microflows)

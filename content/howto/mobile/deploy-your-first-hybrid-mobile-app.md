@@ -64,4 +64,4 @@ If you want to install this application as a native app on your device, you can 
 
 ## 5 Read More
 
-* [How to Debug a Hybrid Mobile Application](../monitoring-troubleshooting/debug-a-hybrid-mobile-application)
+* [How To Debug a Mobile App with Mendix ](howto/mobile/debug-a-mobile-app)

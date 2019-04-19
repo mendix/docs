@@ -58,9 +58,9 @@ Finally, in the unlikely event that you encounter this error while working on yo
 
 ## 5 Read More
 
+* [Debug a Mobile App with Mendix](howto/mobile/debug-a-mobile-app)
 *   [Clearing Warning Messages in Mendix](clear-warning-messages)
 *   [Common Mendix SSO Errors](handle-common-mendix-sso-errors)
-*   [Debug a Hybrid Mobile Application](debug-a-hybrid-mobile-application)
 *   [Debugging Java Actions](debug-java-actions)
 *   [Debugging Java actions remotely](debug-java-actions-remotely)
 *   [Debugging Microflows](debug-microflows)

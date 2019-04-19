@@ -21,7 +21,7 @@ Please take note of the following limitations regarding beta features:
     * We value feedback, including tickets describing problems with beta features, but these tickets will not be handled according to your SLA
     * We cannot guarantee timely fixes for any problems you encounter with beta features 
 * Beta features may introduce breaking changes
-    * Even though we aim for backwards compatibility, Mendix can not guarantee backwards compatibility between monthly releases for beta features
+    * Even though we aim for backwards compatibility, Mendix cannot guarantee backwards compatibility between monthly releases for beta features
 * Beta features may change in future releases, depending on the feedback
 * Beta features may be incomplete; future releases may include more functionality to complete the feature
 

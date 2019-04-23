@@ -30,7 +30,7 @@ To create an Area Chart with data from a REST service, follow these steps:
 
 {{% alert type="info" %}}
 
-For more information on publishing a REST API refer to this Mendix document: [Published REST Operation](/refguide/published-rest-operation)
+For more information on publishing a REST API refer to this Mendix document: [Published REST Operation](/refguide7/published-rest-operation)
 
 {{% /alert %}}
 

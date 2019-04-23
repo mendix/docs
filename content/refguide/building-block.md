@@ -22,15 +22,15 @@ As the purpose of building blocks is to facilitate design rather than functional
 
 ## 2 Common Properties
 
-{{% snippet file="refguide/Document+Name+Property.md" %}}
+{{% snippet file="refguide7/Document+Name+Property.md" %}}
 
-{{% snippet file="refguide/Documentation+Property.md" %}}
+{{% snippet file="refguide7/Documentation+Property.md" %}}
 
 ## 3 Designer Properties
 
-{{% snippet file="refguide/Canvas+Width+Property.md" %}}
+{{% snippet file="refguide7/Canvas+Width+Property.md" %}}
 
-{{% snippet file="refguide/Canvas+Height+Property.md" %}}
+{{% snippet file="refguide7/Canvas+Height+Property.md" %}}
 
 ## 4 General Properties
 

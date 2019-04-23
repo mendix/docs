@@ -1,5 +1,5 @@
 ---
-title: "Image Widgets in the Web Modeler"
+title: "Image Widgets"
 parent: "page-editor-widgets"
 description: "Describes image widgets in the Mendix Web Modeler."
 menu_order: 30
@@ -46,27 +46,25 @@ Settings available for **Static Image** and **Dynamic Image** are described in t
 | Height  Unit  | Static and Dynamic Images | The height of an image can be specified in the following ways:  <br /><ul><li>**Auto** – the height of the given image is used.</li><li>**Pixels** – the height is specified in a number of pixels. If you specify both width and height, the image will be scaled automatically: the proportions will be kept, the picture will not be stretched.</li><li>**Percentage** –  the height is specified in a percentage of the original height. It can be larger than its original height in which case the image is stretched.</li></ul><br />Default value for **Height Unit**: Auto |
 | Height        | Static and Dynamic Images | The **Height** option is only displayed when **Pixels** or **Percentage** are selected for the **Height Unit**. It specifies the height of the image in pixels or percentage. |
 
-## 3 Events Section
+## 3 Events Section 
 
-You can choose the **On Click Action** in the **Events** section. The **On Click Action** defines what action is performed when the user clicks a [static image](#events-static-image) or a [dynamic image](#events-dynamic-image).
+You can choose the **On Click Action** in the **Events** section. The **On Click Action** defines what action is performed when the user clicks an image.
 
-### 3.1 Events Section for the Static Image {#events-static-image}
+### 3.1 Common Properties
 
-For more information on the **Events** section for the static image, see [Events Section in Widgets of the Web Modeler](page-editor-widgets-events-section).
+The static image and the dynamic image share the properties in the **Events** section, except for one property that is [specific for the dynamic image](#events-dynamic-image). 
 
-### 3.2 Events Section for the Dynamic Image {#events-dynamic-image}
+For more information on the **Events** section for static and dynamic images, see [Events Section in Widgets](page-editor-widgets-events-section).
 
-The following actions are available for the dynamic image:
+### 3.2 Dynamic Image Specific Property {#events-dynamic-image}
 
-* **Nothing** – no action is taken when the user clicks an image
-* **Microflow** – the selected microflow is executed 
-* **Enlarge** –  the image is shown full screen 
+The dynamic image has a specific on-click action **Enlarge on Click**. The full-size image will be displayed when the user clicks it. This property overrides other on-click actions. 
 
 ## 4 Design Section
 
-For information on the **Design** section and its properties, see [Design Section in Widgets of the Web Modeler](page-editor-widgets-design-section).
+For information on the **Design** section and its properties, see [Design Section in Widgets](page-editor-widgets-design-section).
 
 ## 5 Read More
 
-* [Page Editor in the Web Modeler](page-editor) 
-* [Widgets in the Web Modeler](page-editor-widgets)
+* [Page Editor](page-editor) 
+* [Widgets](page-editor-widgets)

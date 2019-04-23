@@ -1,6 +1,6 @@
 ---
-title: "Configure an Exclusive Split in the Web Modeler"
-category: "Microflows in the Web Modeler"
+title: "Configure an Exclusive Split"
+category: "Microflows"
 menu_order: 60
 description: "This how-to describes the process of configuring an exclusive split in the Mendix Web Modeler."
 tags: ["web modeler", "microflows", "exclusive split", "domain model", "how to"]

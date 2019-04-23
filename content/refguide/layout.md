@@ -36,19 +36,19 @@ As a consequence of this behavior, user experience can be improved significantly
 
 ## 3 Common Properties
 
-{{% snippet file="refguide/Document+Name+Property.md" %}}
+{{% snippet file="refguide7/Document+Name+Property.md" %}}
 
-{{% snippet file="refguide/Documentation+Property.md" %}}
+{{% snippet file="refguide7/Documentation+Property.md" %}}
 
-{{% snippet file="refguide/Document+Class+Property.md" %}}
+{{% snippet file="refguide7/Document+Class+Property.md" %}}
 
-{{% snippet file="refguide/Style+Property.md" %}}
+{{% snippet file="refguide7/Style+Property.md" %}}
 
 ## 4 Designer Properties
 
-{{% snippet file="refguide/Canvas+Width+Property.md" %}}
+{{% snippet file="refguide7/Canvas+Width+Property.md" %}}
 
-{{% snippet file="refguide/Canvas+Height+Property.md" %}}
+{{% snippet file="refguide7/Canvas+Height+Property.md" %}}
 
 ## 5 General Properties
 

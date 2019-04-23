@@ -26,7 +26,7 @@ We will start by providing the Modeler as an example of what the REST service re
     ![Screenshot of the result of the rest call](attachments/consume-a-rest-service/get-call-result.png)
 
 2. Copy the whole JSON snippet.
-3.  Now you need to add a new JSON structure to your app. A [JSON structure](../../refguide/json-structures) contains sample JSON that you can use in the app. To do this, follow these steps in the Desktop Modeler:<br>
+3.  Now you need to add a new JSON structure to your app. A [JSON structure](../../refguide7/json-structures) contains sample JSON that you can use in the app. To do this, follow these steps in the Desktop Modeler:<br>
     a. Right-click the module in the **Project Explorer**.<br>
     b. Select **Add** > **Mapping** > **JSON structure**.<br>
     c. Paste the JSON snippet.<br>
@@ -38,7 +38,7 @@ We will start by providing the Modeler as an example of what the REST service re
 
 ## 3 Creating an Import Mapping
 
-An [import mapping](../../refguide/import-mappings) specifies how the JSON relates to [entities](../../refguide/entities). Here we will generate those entities, but generally you can map the JSON to any entity you like.
+An [import mapping](../../refguide7/import-mappings) specifies how the JSON relates to [entities](../../refguide7/entities). Here we will generate those entities, but generally you can map the JSON to any entity you like.
 
 To create an import mapping:
 
@@ -74,7 +74,7 @@ To add an input entity to the domain model, follow these steps:
 
 ## 5 Calling the REST Service in a Microflow
 
-You will now call the REST service in a [microflow](../../refguide/microflows). The microflow takes an **Input** as a parameter and sets the associated **Summary**.
+You will now call the REST service in a [microflow](../../refguide7/microflows). The microflow takes an **Input** as a parameter and sets the associated **Summary**.
 
 To call the REST service in a microflow, follow these steps:
 

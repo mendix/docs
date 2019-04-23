@@ -4,26 +4,7 @@ module.exports = {
      * POTENTIALLY TEMPORARY REDIRECTS
      ****************************************************/
 	/****************************************************
-     * How-to's version 7 (potentially temporary until verified, unmapped)
-     ****************************************************/
-    {
-      from: "/howtogeneral/bestpractices/ux-best-practices",
-      to: "/howto/front-end/ux-best-practices"
-    },
-	{
-      from: "/howtogeneral/bestpractices/best-practices-security-and-improvements-for-mendix-applications",
-      to: "/howto/security/best-practices-security"
-    },
-	{
-      from: "/howtogeneral/bestpractices/best-practices-for-app-performance-in-mendix-7",
-      to: "/howto/general/community-best-practices-for-app-performance"
-    },	
-	{
-      from: "/howto/ux/configuring-your-theme",
-      to: "/howto/front-end/configuring-your-theme"
-    },
-	/****************************************************
-     * From the Web Modeler (potentially temporary until fixed in product)
+     * From the Web Modeler (potentially temporary until fixed in product, mapped)
      ****************************************************/
 	{
       from: "/refguide/web-modeler/domain-models-association-properties-wm",
@@ -43,72 +24,52 @@ module.exports = {
     },
 	{
       from: "/refguide/web-modeler/app-settings-wm",
-      to: "/web-modeler/app-settings-wm"
+      to: "/web-modeler/app-settings"
     },
 	{
       from: "/howto/web-modeler/syncing-webmodeler-desktop",
       to: "/refguide/sync-webmodeler-desktopmodeler"
     },
 	/****************************************************
-     * Web Modeler Guide (potentially temporary until verified, unmapped)
+     * From the Support Portal (potentially temporary until fixed in product, mapped) 
      ****************************************************/
 	{
-      from: "/howto/start-with-a-blank-app",
-      to: "/web-modeler/general"
+      from: "/community/app-store-content-support",
+      to: "/developerportal/app-store/app-store-content-support"
     },
-    {
-      from: "/howto/tutorials/create-a-to-do-app",
-      to: "/web-modeler/general"
+	{
+      from: "/mendixcloud/custom-domains",
+      to: "/developerportal/deploy/custom-domains"
     },
-    {
-      from: "/howto/tutorials/build-a-simple-hrm-app",
-      to: "/web-modeler/general"
+	{
+      from: "/developerportal/howto/how-to-link-app-to-node",
+      to: "/developerportal/deploy/licensing-apps"
     },
-    {
-      from: "/howto/tutorials/build-an-iot-app",
-      to: "/web-modeler/general"
+	{
+      from: "/developerportal/howto/how-to-link-a-different-app-to-a-node",
+      to: "/developerportal/deploy/licensing-apps"
+    },
+	{
+      from: "/developerportal/support/new-app-request-template",
+      to: "/developerportal/support/new-app-node-request-template"
+    },
+	{
+      from: "/developerportal/support/export-a-project-package",
+      to: "/refguide/export-project-package-dialog"
     },
 	/****************************************************
-     * From the Developer Portal (potentially temporary until fixed in product, mapped) 
+     * PERMANENT REDIRECTS
      ****************************************************/
-	{
-      from: "/developerportal/settings/technical-contact",
-      to: "/developerportal/company-app-roles/technical-contact"
-    }, 
     {
-      from: "/developerportal/general/technical-contact",
-      to: "/developerportal/company-app-roles/technical-contact"
-    },	 
-	{
-      from: "/deployment/mendixcloud/certificates",
-      to: "/developerportal/deploy/certificates"
+      from: "/docs/Overview",
+      to: "/"
     },
-	{
-      from: "/refguide/certificates",
-      to: "/developerportal/deploy/certificates"
-    },
-	{
-      from: "/mendixcloud/monitoring-application-health",
-      to: "/developerportal/operate/monitoring-application-health"
-    },
-	{
-      from: "/developerportal/howto/deploying-to-the-cloud",
-      to: "/developerportal/deploy/mendix-cloud-deploy"
-    },
-  {
-      from: "/deployment/on-premises/deploy-mendix-on-microsoft-windows",
-      to: "/developerportal/deploy/deploy-mendix-on-microsoft-windows"
-    },
-  {
-      from: "/deployment/on-premises",
-      to: "/developerportal/deploy/on-premises-design"
-    },
-	{
-      from: "/developerportal/community-tools/the-mendix-job-board",
-      to: "/developerportal/community-tools/mendix-job-board"
+    {
+      from: "/docs/",
+      to: "/"
     },
 	/****************************************************
-     * Developer Portal Guide (potentially temporary, unmapped) 
+     * Developer Portal Guide (permanent, unmapped) 
      ****************************************************/
     {
       from: "/howtogeneral/mendixcloud/trends",
@@ -150,8 +111,59 @@ module.exports = {
       from: "/howtogeneral/support/",
       to: "/developerportal/support/"
     },
+	{
+      from: "/community/app-store/",
+      to: "/developerportal/app-store/"
+    },
+	{
+      from: "/community/app-store/app-store-overview",
+      to: "/developerportal/app-store/app-store-overview"
+    },
+	{
+      from: "/deployment/mendixcloud/sending-email",
+      to: "/developerportal/deploy/sending-email"
+    },
 	/****************************************************
-     * From the App Store (potentially temporary until fixed in product, mapped)
+     * From the Developer Portal (permanent, mapped) 
+     ****************************************************/
+	{
+      from: "/developerportal/settings/technical-contact",
+      to: "/developerportal/company-app-roles/technical-contact"
+    }, 
+    {
+      from: "/developerportal/general/technical-contact",
+      to: "/developerportal/company-app-roles/technical-contact"
+    },	 
+	{
+      from: "/deployment/mendixcloud/certificates",
+      to: "/developerportal/deploy/certificates"
+    },
+	{
+      from: "/refguide/certificates",
+      to: "/developerportal/deploy/certificates"
+    },
+	{
+      from: "/mendixcloud/monitoring-application-health",
+      to: "/developerportal/operate/monitoring-application-health"
+    },
+	{
+      from: "/developerportal/howto/deploying-to-the-cloud",
+      to: "/developerportal/deploy/mendix-cloud-deploy"
+    },
+  {
+      from: "/deployment/on-premises/deploy-mendix-on-microsoft-windows",
+      to: "/developerportal/deploy/deploy-mendix-on-microsoft-windows"
+    },
+  {
+      from: "/deployment/on-premises",
+      to: "/developerportal/deploy/on-premises-design"
+    },
+	{
+      from: "/developerportal/community-tools/the-mendix-job-board",
+      to: "/developerportal/community-tools/mendix-job-board"
+    },
+	/****************************************************
+     * From the App Store (permanent, mapped)
      ****************************************************/
 	{
 	  from: "/community/app-store/use-app-store-content-in-the-modeler",
@@ -186,42 +198,41 @@ module.exports = {
       to: "/apm/"
     },
 	/****************************************************
-     * From the Support Portal (potentially temporary until fixed in product, mapped) 
+     * Web Modeler Guide (permanent, unmapped)
      ****************************************************/
 	{
-      from: "/community/app-store-content-support",
-      to: "/developerportal/app-store/app-store-content-support"
+      from: "/howto/tutorials/",
+      to: "/web-modeler/general"
     },
 	{
-      from: "/mendixcloud/custom-domains",
-      to: "/developerportal/deploy/custom-domains"
-    },
-	{
-      from: "/developerportal/howto/how-to-link-app-to-node",
-      to: "/developerportal/deploy/licensing-apps"
-    },
-	{
-      from: "/developerportal/howto/how-to-link-a-different-app-to-a-node",
-      to: "/developerportal/deploy/licensing-apps"
-    },
-	{
-      from: "/developerportal/support/new-app-request-template",
-      to: "/developerportal/support/new-app-node-request-template"
-    },
-	{
-      from: "/developerportal/support/export-a-project-package",
-      to: "/refguide/export-project-package-dialog"
+      from: "/howto/tutorials/mendix-tutorials",
+      to: "/web-modeler/general"
     },
 	/****************************************************
-     * PERMANENT REDIRECTS
+     * How-to's (permanent, unmapped)
      ****************************************************/
     {
-      from: "/docs/Overview",
-      to: "/"
+      from: "/howtogeneral/bestpractices/ux-best-practices",
+      to: "/howto/front-end/ux-best-practices"
     },
-    {
-      from: "/docs/",
-      to: "/"
+	{
+      from: "/howtogeneral/bestpractices/best-practices-security-and-improvements-for-mendix-applications",
+      to: "/howto/security/best-practices-security"
+    },
+	{
+      from: "/howtogeneral/bestpractices/best-practices-for-app-performance-in-mendix-7",
+      to: "/howto/general/community-best-practices-for-app-performance"
+    },	
+	{
+      from: "/howto/ux/configuring-your-theme",
+      to: "/howto/front-end/configuring-your-theme"
+    },
+	/****************************************************
+     * How-to's version 7 (permanent, unmapped)
+     ****************************************************/	
+	{
+      from: "/howto/ux/configuring-your-theme",
+      to: "/howto/front-end/configuring-your-theme"
     },
 	/****************************************************
      * From Desktop Modeler version 7 (permanent, mapped)
@@ -233,6 +244,14 @@ module.exports = {
 	{
       from: "/refguide7/Modeler",
       to: "/refguide/desktop-modeler-overview"
+    },
+	{
+      from: "/refguide7/desktop-webmodeler",
+      to: "/refguide/sync-webmodeler-desktopmodeler"
+    },
+	{
+      from: "/web-modeler/general-sync-webmodeler-desktopmodeler-wm",
+      to: "/refguide/sync-webmodeler-desktopmodeler"
     },
 	{
       from: "/refguide7/download-from-team-server-dialog",
@@ -253,14 +272,6 @@ module.exports = {
 	{
       from: "/deployment/cloud-foundry/",
       to: "/developerportal/deploy/cloud-foundry-deploy"
-    },
-	{
-      from: "/refguide7/desktop-webmodeler",
-      to: "/refguide/sync-webmodeler-desktopmodeler"
-    },	
-	{
-      from: "/web-modeler/general-sync-webmodeler-desktopmodeler-wm",
-      to: "/refguide/sync-webmodeler-desktopmodeler"
     },	
 	{
       from: "/howto7/solving-load-and-import-errors",

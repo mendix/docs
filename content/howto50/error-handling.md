@@ -15,7 +15,7 @@ While updating or creating your objects you do not want any of the users to see 
 
 ## Transactions prevent two processes from using the same object at the same time
 
-When an object is updated, the platform will place a lock on that object for the duration of the transaction. That means that while the transaction is running, no other transactions are allowed to read or write in that same object. As soon as the transaction has finished, the lock will be released automatically and any waiting processes will continue normally. Please note that this isn't the same as preventing two users from editing the same object. It is still possible for two users to open the same object, and change it 10ms after each other. The the latest change will still be applied.
+When an object is updated, the platform will place a lock on that object for the duration of the transaction. That means that while the transaction is running, no other transactions are allowed to read or write in that same object. As soon as the transaction has finished, the lock will be released automatically and any waiting processes will continue normally. Please note that this isn't the same as preventing two users from editing the same object. It is still possible for two users to open the same object, and change it 10ms after each other. The latest change will still be applied.
 
 ## Error Handling Components
 

@@ -5,6 +5,8 @@ tags: ["Mendix", "Desktop Modeler", "Documents"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.1 Introduction
 ---
 
+## 1 Introduction
+
 The Mendix Desktop Modeler is the most powerful tool for creating, viewing, and editing your Mendix applications. This category describes the various features of the Desktop Modeler, including document templates, the domain model, microflows, modules, pages, and security.
 
 For more introductory information, see [Desktop Modeler Overview](desktop-modeler-overview)

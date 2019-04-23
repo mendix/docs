@@ -1,7 +1,7 @@
 ---
 title: "MindSphere Asset Management Connector"
 category: "Siemens MindSphere"
-#menu_order: Enter the position of the document in the category or under the parent; number by 10 (for first), 20, 30, etc. for easy ordering of other documents in the future if necessary; don't add brackets or quotation marks; if no number is added, the system will add an extremely high number to order the documents, which means that if you only want a document to appear at the top, you only have to add "10" to that specific document, you don't have to order all the other documents in the category/under the parent
+menu_order: 60
 description: "Documentation of the MindSphere Asset Management Connector"
 tags: ["MindSphere", "Asset", "Asset Type", "Connector"]
 ---
@@ -121,6 +121,6 @@ It returns the following:
 
 * **Variable (AssetType)** – an object of type **AssetType** which is associated with retrieved objects of type **AspectTypeWrapper**, **AspectType**, and **Variable** which contain additional information about this asset type
 
-## 4 Related Content
+## 4 Read More
 
-* [How to Use the Siemens MindSphere Pump Asset Example App](/howto/mindsphere/mindsphere-example-app)
+* [How to Use the Siemens MindSphere Pump Asset Example App](/howto7/mindsphere/mindsphere-example-app)

@@ -7,7 +7,7 @@ parent: "tab-container"
 
 ## General Properties
 
-{{% snippet file="refguide/Caption+Property.md" %}}
+{{% snippet file="refguide7/Caption+Property.md" %}}
 
 ### Default tab page
 
@@ -23,4 +23,4 @@ _Default value:_ True
 
 ## Visibility Properties
 
-{{% snippet file="refguide/Visible+Property.md" %}}
+{{% snippet file="refguide7/Visible+Property.md" %}}

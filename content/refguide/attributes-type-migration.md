@@ -27,6 +27,7 @@ Key | Means
 **X** | Conversion not possible. The original column will be removed and a new column will be created with default values for the existing rows.
 
 ![Table of conversions - click to enlarge](attachments/attributes-type-migration/conversion-table.png)
+(*Click the image to enlarge*)
 
 ### 2.3 Manual Conversion
 

@@ -1,6 +1,7 @@
 ---
 title: "Uniqueness Constraint Migration"
 parent: "data-storage"
+menu_order: 30
 ---
 
 To ease the development and deployment improvements of an application, data validation was handled in the Mendix Runtime before Mendix 7. This meant that older data could remain in the database unchanged, even if newer versions of your domain model would add more strict validation rules.

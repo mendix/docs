@@ -1,6 +1,7 @@
 ---
 title: "SAP HANA"
 parent: "data-storage"
+menu_order: 70
 ---
 
 ## 1 Introduction

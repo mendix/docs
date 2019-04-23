@@ -1,6 +1,7 @@
 ---
 title: "Oracle"
 parent: "data-storage"
+menu_order: 60
 ---
 
 ## 1 Introduction

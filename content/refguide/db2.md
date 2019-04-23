@@ -1,6 +1,7 @@
 ---
 title: "DB2"
 parent: "data-storage"
+menu_order: 40
 ---
 
 ## 1 Introduction

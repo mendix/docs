@@ -1,6 +1,7 @@
 ---
 title: "MySQL/MariaDB"
 parent: "data-storage"
+menu_order: 50
 ---
 
 ## 1 Introduction

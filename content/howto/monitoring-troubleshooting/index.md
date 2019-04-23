@@ -14,7 +14,6 @@ Stay updated on the health of your app and reference these documents troubleshoo
 * [Debug Microflows](debug-microflows)
 * [Debug Microflows Remotely](debug-microflows-remotely)
 * [Handle Common Mendix SSO Errors](handle-common-mendix-sso-errors)
-* [Debug a Hybrid Mobile Application](debug-a-hybrid-mobile-application)
 * [Debug Java Actions](debug-java-actions)
 * [Debug Java Actions Remotely](debug-java-actions-remotely)
 * [Find the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)

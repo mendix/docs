@@ -58,13 +58,13 @@ Finally, in the unlikely event that you encounter this error while working on yo
 
 ## 5 Read More
 
-*   [Clearing Warning Messages in Mendix](clear-warning-messages)
-*   [Common Mendix SSO Errors](handle-common-mendix-sso-errors)
-*   [Debug a Hybrid Mobile Application](debug-a-hybrid-mobile-application)
-*   [Debugging Java Actions](debug-java-actions)
-*   [Debugging Java actions remotely](debug-java-actions-remotely)
-*   [Debugging Microflows](debug-microflows)
-*   [Debugging Microflows Remotely](debug-microflows-remotely)
-*   [Finding the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
-*   [Log Levels](log-levels)
-*   [Monitoring Mendix using JMX](monitoring-mendix-using-jmx)
+* [Debug a Mobile App with Mendix](../mobile/debug-a-mobile-app)
+* [Clearing Warning Messages in Mendix](clear-warning-messages)
+* [Common Mendix SSO Errors](handle-common-mendix-sso-errors)
+* [Debugging Java Actions](debug-java-actions)
+* [Debugging Java actions remotely](debug-java-actions-remotely)
+* [Debugging Microflows](debug-microflows)
+* [Debugging Microflows Remotely](debug-microflows-remotely)
+* [Finding the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
+* [Log Levels](log-levels)
+* [Monitoring Mendix using JMX](monitoring-mendix-using-jmx)

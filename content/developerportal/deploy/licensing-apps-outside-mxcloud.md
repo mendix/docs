@@ -33,4 +33,12 @@ To run Mendix apps in production on the Mendix Cloud, they must be linked to a l
 
 ## 9 Windows Server
 
+To license Mendix on Microsoft Windows you need to:
 
+1. Obtain the server id of your server
+2. Request a license key from Mendix Support
+3. Insert the license key on the server.
+
+Full instructions on how to do this can be found in [MS Windows: Activate a Mendix License on Microsoft Windows](activate-a-mendix-license-on-microsoft-windows).
+
+## 10 Read More

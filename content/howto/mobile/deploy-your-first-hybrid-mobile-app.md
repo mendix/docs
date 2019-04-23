@@ -64,4 +64,4 @@ If you want to install this application as a native app on your device, you can 
 
 ## 5 Read More
 
-* [How to Debug a Mobile App with Mendix ](./debug-a-mobile-app)
+* [Debug a Mobile App with Mendix](../debug-a-mobile-app)

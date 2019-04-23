@@ -17,13 +17,30 @@ To use your app in a production environment, you need to license it. The method 
 
 ## 2 Obtaining a Mendix License
 
+For all deployment options apart from [IBM Cloud Portal](#ibm), you will need to obtain a Mendix license from Mendix support.
+
+1. Go to the [Mendix Support Portal](https://support.mendix.com) home page.
+2. Click **Submit a request** at the top-right of the page
+3. Submit the request. The type of request depends on where you want to deploy your app.
+    * For **Mendix Cloud**, submit a request of issue type *Standard change: New App*
+    * For an *existing* app on **Microsoft Windows** submit a request of issue type *Key Change request (on-premises)* 
+    * For **All other deployment, except IBM Cloud Portal**, submit a request of issue type *Standard change: (Re)new license*
+
 ## 3 Mendix Cloud
 
 To run Mendix apps in production on the Mendix Cloud, they must be linked to a licensed node in the Mendix Cloud. This process is described in a separate document: [Licensing Mendix Cloud Apps](licensing-apps).
 
 ## 4 SAP Cloud Platform
 
-## 5 IBM Cloud Portal
+To license a Mendix app on SAP Cloud Platform, you need to supply a *Subscription Secret* which is linked to your app.
+
+You can add this subscription secret as part of creating an environment on SAP Cloud Platform. You can also add, or change, the subscription secret on the *Environment Details* page of the environment you wish to license.
+
+For more information, see [SAP Cloud Platform - deploy](sap-cloud-platform).
+
+## 5 IBM Cloud Portal{#ibm}
+
+
 
 ## 6 Siemens MindSphere
 
@@ -33,7 +50,7 @@ To run Mendix apps in production on the Mendix Cloud, they must be linked to a l
 
 ## 9 Windows Server
 
-To license Mendix on Microsoft Windows you need to:
+To license a Mendix app on Microsoft Windows you need to:
 
 1. Obtain the server id of your server
 2. Request a license key from Mendix Support
@@ -42,3 +59,5 @@ To license Mendix on Microsoft Windows you need to:
 Full instructions on how to do this can be found in [MS Windows: Activate a Mendix License on Microsoft Windows](activate-a-mendix-license-on-microsoft-windows).
 
 ## 10 Read More
+
+* [Submit a Support Request](/developerportal/support/submit-support-request)

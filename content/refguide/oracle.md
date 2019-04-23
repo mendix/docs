@@ -7,13 +7,13 @@ parent: "data-storage"
 
 #### 1.1 Comparison Functions
 
-Oracle does not support unlimited strings or strings with a specified size greater than 2000 characters when using equal (`=`) or not equal (`!=`) operators in XPath constraints. However, it supports functions including `contains()`, `starts-with()`, and `ends-with()`.
+Oracle does not support unlimited strings or strings with a specified size greater than 2000 characters when using the equal (`=`) or not equal (`!=`) operators in XPath constraints. However, it supports functions including `contains()`, `starts-with()`, and `ends-with()`.
 
 #### 1.2 Sorting, Grouping & Aggregating
 
 It is not possible to sort, group, or use aggregate functions such as `count()` on unlimited strings or strings with a specified length greater than 2000 characters. This is because such long or unlimited strings are implemented with the data type CLOB. Consider decreasing the length of the string attribute or removing it from data grids.
 
-#### 1.3 Select DISTINCT Attribute of Type CLOB
+#### 1.3 Selecting DISTINCT Attribute of Type CLOB
 
 Selecting DISTINCT attributes of the string type with a size greater than 2000 characters is not supported by Mendix due to a known Oracle limitation of selecting DISTINCT columns with a CLOB data type. When you run into this limitation, you may encounter an exception in the logs with a message like this: **Error Msg = ORA-06502: PL/SQL: numeric or value error: character string buffer too small**.
 

@@ -26,38 +26,7 @@ Key | Means
 **\*<sup><small>note</small></sup>** | Conversion is not always possible, or data will be changed during conversion. See related note for more information. If conversion is not possible, the behavior is the same as for "**X**", below.
 **X** | Conversion not possible. The original column will be removed and a new column will be created with default values for the existing rows.
 
-| from/to  | to AutoNumber | to Binary | to Boolean | to DateTime | to Decimal | to Enum | to Float/Currency | to HashString | to Integer | to Long | to String (limited) | to String (unlimited)
-| --- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---:
-| **from AutoNumber** | | **X** | **X** | **X** | **&#x2713;** | **X** | **&#x2713;** | **X** | **X** | **&#x2713;** | **\*<sup><small>1</small></sup>** | **&#x2713;**
-| **from Binary** | **X** | | **X** | **X** | **X** | **X** | **X** | **X** | **X** | **X** | **X** | **X**
-| **from Boolean** | **X** | **X** | | **X** | **X** | **X** | **X** | **X** | **X** | **X** | **\*<sup><small>2</small></sup>**| **\*<sup><small>3</small></sup>**
-| **from DateTime** | **X** | **X** | **X** | | **X** | **X** | **X** | **X** | **X** | **X** | **X** | **X**
-| **from Decimal** | **&#x2713;** | **X** | **X** | **X** | | **X** | **X** | **X** | **X** | **X** | **\*<sup><small>1</small></sup>** | **&#x2713;**
-| **from Enum** | **X** | **X** | **X** | **X** | **X** | | **X** | **X** | **X** | **X** | **\*<sup><small>4</small></sup>** | **\*<sup><small>5</small></sup>**
-| **from Float/Currency** | **&#x2713;** | **X** | **X** | **X** | **\*<sup><small>6</small></sup>**  | **X** | | **X** | **X** | **&#x2713;** | **\*<sup><small>7</small></sup>** | **&#x2713;**
-| **from HashString** | **X** | **X** | **X** | **X** | **X** | **X** | **X** | | **X** | **X** | **\*<sup><small>8</small></sup>** | **&#x2713;**
-| **from Integer** | **&#x2713;** | **X** | **X** | **X** | **&#x2713;** | **X** | **&#x2713;** | **X** | | **&#x2713;** | **\*<sup><small>9</small></sup>** | **&#x2713;**
-| **from Long** | **&#x2713;** | **X** | **X** | **X** | **&#x2713;** | **X** | **&#x2713;** | **X** | **X** | | **\*<sup><small>1</small></sup>** | **&#x2713;**
-| **from String (limited)** | **X** | **X** | **X** | **X** | **X** | **X** | **X** | **X** | **X** | **X** | | **&#x2713;**
-| **from String (unlimited)** | **X** | **X** | **X** | **X** | **X** | **X** | **X** | **X** | **X** | **X** | **\*<sup><small>8</small></sup>** |
-
-<sup><small>[1]</small></sup> Conversion only possible if length >= 20.
-
-<sup><small>[2]</small></sup> Conversion only possible if length >= 5. Converted to a string by the database, so the value for true and false differs per database.
-
-<sup><small>[3]</small></sup> Converted to a string by the database, so the value differs per database.
-
-<sup><small>[4]</small></sup> The name of the enumeration value will be used. The value will be shortened to the right length if it does not fit in the new type.
-
-<sup><small>[5]</small></sup> The name of the enumeration value will be used.
-
-<sup><small>[6]</small></sup> Conversion only possible for actual values which have at most 20 digits before the decimal point.
-
-<sup><small>[7]</small></sup> Conversion only possible if length >= 24.
-
-<sup><small>[8]</small></sup> The value will be shortened to the right length if it does not fit in the new type.
-
-<sup><small>[9]</small></sup> Conversion only possible if length >= 11.
+![Table of conversions - click to enlarge](attachments/attributes-type-migration/conversion-table.png)
 
 ### 2.3 Manual Conversion
 

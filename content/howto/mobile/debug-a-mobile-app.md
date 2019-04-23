@@ -406,3 +406,10 @@ You can use PhoneGap Build to build the native application and tell it to intial
 You can now take advantage of all the debugging tools you know and love with Mendix, including offline breakpoints, quick updates/refreshes, and the Chrome Developer Tools.
 
 For more help with Android remote debugging, check out [Get Started with Remote Debugging Android Devices](https://developers.google.com/web/tools/chrome-devtools/remote-debugging/).
+
+## Read More
+
+* [Debug Java Actions](/howto/monitoring-troubleshooting/debug-java-actions)
+* [Find the Root Cause of Runtime Errors](/howto/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
+* [Clear Warning Messages in Mendix](/howto/monitoring-troubleshooting/clear-warning-messages)
+* [Debug Microflows](/howto/monitoring-troubleshooting/debug-microflows)

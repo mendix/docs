@@ -202,7 +202,7 @@ For more information, see [Certificates](certificates) and [Custom Domains](cust
 
 ### 4.2 HTTP Headers
 
-HTTP Headers allows you to set the values of selected HTTP headers. These allow the client and the server to pass additional information with the request or the response and can control the behavior of your Mendix app.
+HTTP Headers allows you to set the values of selected HTTP response headers. These allow the server to pass additional information with the response which the browser will interpret to control the behavior of your Mendix app.
 
 {{% alert type="info" %}}
 This replaces the option to prevent embedding your app in an IFrame with more flexible options to set HTTP Headers.

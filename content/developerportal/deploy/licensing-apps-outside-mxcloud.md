@@ -4,7 +4,7 @@ parent: "general"
 menu_order: 5
 description: "How to apply licenses to apps which are outside Mendix Cloud"
 tags: ["App", "Developer Portal", "License", "Subscription Secret", "Upgrade", "SAP", "IBM", "Siemens MindSphere"]
-#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
+# NB have left out AWS and Azure Marketplace offerings for now, pending further research.
 ---
 
 ## 1 Introduction
@@ -94,12 +94,23 @@ docker run -it \
 
 To license a Mendix app on Microsoft Windows you need to:
 
-1. Obtain the server id of your server
-2. Request a license key from Mendix Support
+1. Obtain the server id of your server.
+2. Request a license key from Mendix Support.
 3. Insert the license key on the server.
 
 Full instructions on how to do this can be found in [MS Windows: Activate a Mendix License on Microsoft Windows](activate-a-mendix-license-on-microsoft-windows).
 
-## 10 Read More
+## 10 Unix-like
+
+To license a Mendix app on Linux, or another Unix-like operating system, you need to:
+
+1. Open the interactive m2ee console.
+2. Use the command `show_license_information` to obtain the server id of your server.
+3. Request a license key from Mendix Support.
+4. Activate your license on the server using the m2ee command `activate_license`.
+
+More instructions on how to do this can be found in [Unix Deployment](unix-like).
+
+## 11 Read More
 
 * [Submit a Support Request](/developerportal/support/submit-support-request)

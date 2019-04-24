@@ -2,7 +2,7 @@
 title: "Checks"
 description: "Describes checks during publishing process in the Mendix Web Modeler."
 menu_order: 60
-tags: ["web modeler", "app viewing", "checks", "errors"]
+tags: ["web modeler", "app viewing", "checks", "errors", "consistency errors"]
 ---
 
 ## 1 Introduction 

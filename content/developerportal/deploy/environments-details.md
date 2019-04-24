@@ -208,7 +208,7 @@ HTTP Headers allows you to set the values of selected HTTP response headers. The
 This replaces the option to prevent embedding your app in an IFrame with more flexible options to set HTTP Headers.
 {{% /alert %}}
 
-The HTTP headers which are supported in the Mendix Developer Portal are:
+For Mendix Cloud v3, only *X-Frame-Options* is supported. For Mendix Cloud v4 the HTTP headers which are supported in the Mendix Developer Portal are:
 
 | Header | Description | Additional Information |
 | --- | --- | --- |

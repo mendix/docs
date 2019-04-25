@@ -228,25 +228,26 @@ module.exports = {
       to: "/howto/front-end/configuring-your-theme"
     },
 	/****************************************************
-     * How-to's version 7 (permanent, unmapped)
-     ****************************************************/	
-	{
-      from: "/howto/ux/configuring-your-theme",
-      to: "/howto/front-end/configuring-your-theme"
-    },
-	/****************************************************
-     * From Desktop Modeler version 7 (permanent, mapped)
+     * From Desktop Modeler version 8 (permanent as backups, mapped)
      ****************************************************/
 	{
-      from: "/refguide7/modeler",
-      to: "/refguide/desktop-modeler-overview"
+      from: "/refguide8/modeler",
+      to: "/refguide/modeling"
     },
 	{
-      from: "/refguide7/Modeler",
-      to: "/refguide/desktop-modeler-overview"
+      from: "/refguide8/Modeler",
+      to: "/refguide/modeling"
     },
 	{
-      from: "/refguide7/desktop-webmodeler",
+      from: "/refguide8/desktop-modeler",
+      to: "/refguide/modeling"
+    },
+	{
+      from: "/refguide8/desktop-modeler-overview",
+      to: "/refguide/studio-pro-overview"
+    },
+	{
+      from: "/refguide8/desktop-webmodeler",
       to: "/refguide/sync-webmodeler-desktopmodeler"
     },
 	{
@@ -254,19 +255,19 @@ module.exports = {
       to: "/refguide/sync-webmodeler-desktopmodeler"
     },
 	{
-      from: "/refguide7/download-from-team-server-dialog",
+      from: "/refguide8/download-from-team-server-dialog",
       to: "/refguide/download-from-version-control-dialog"
     },
   {
-      from: "/refguide7/open-project-dialog",
+      from: "/refguide8/open-project-dialog",
       to: "/refguide/open-app-dialog"
     },
   {
-      from: "/refguide7/upload-to-team-server-dialog",
+      from: "/refguide8/upload-to-team-server-dialog",
       to: "/refguide/upload-to-version-control-dialog"
     },
   {
-      from: "/refguide7/microflow-expressions",
+      from: "/refguide8/microflow-expressions",
       to: "/refguide/expressions"
     },
 	{
@@ -274,24 +275,90 @@ module.exports = {
       to: "/developerportal/deploy/cloud-foundry-deploy"
     },	
 	{
-      from: "/howto7/solving-load-and-import-errors",
+      from: "/howto8/solving-load-and-import-errors",
       to: "/howto/monitoring-troubleshooting/solving-load-and-import-errors"
     },
 	{
-      from: "/refguide7/drop-down-widget",
+      from: "/refguide8/drop-down-widget",
       to: "/refguide/drop_down"
     },
 	{
-      from: "/refguide7/horizontal-split-pane",
+      from: "/refguide8/horizontal-split-pane",
       to: "/refguide/scroll-container"
+    },
+	{
+      from: "/refguide8/vertical-split-pane",
+      to: "/refguide/scroll-container"
+    },
+	{
+      from: "/refguide8/Select++Elements",
+      to: "/refguide/select--elements"
+    },
+	/****************************************************
+     * How-to's version 7 (permanent, unmapped)
+     ****************************************************/	
+	{
+      from: "/howto7/ux/configuring-your-theme",
+      to: "/howto7/front-end/configuring-your-theme"
+    },
+	/****************************************************
+     * From Desktop Modeler version 7 (permanent, mapped)
+     ****************************************************/
+	{
+      from: "/refguide7/modeler",
+      to: "/refguide7/desktop-modeler-overview"
+    },
+	{
+      from: "/refguide7/Modeler",
+      to: "/refguide7/desktop-modeler-overview"
+    },
+	{
+      from: "/refguide7/desktop-webmodeler",
+      to: "/refguide7/sync-webmodeler-desktopmodeler"
+    },
+	{
+      from: "/web-modeler/general-sync-webmodeler-desktopmodeler-wm",
+      to: "/refguide7/sync-webmodeler-desktopmodeler"
+    },
+	{
+      from: "/refguide7/download-from-team-server-dialog",
+      to: "/refguide7/download-from-version-control-dialog"
+    },
+  {
+      from: "/refguide7/open-project-dialog",
+      to: "/refguide7/open-app-dialog"
+    },
+  {
+      from: "/refguide7/upload-to-team-server-dialog",
+      to: "/refguide7/upload-to-version-control-dialog"
+    },
+  {
+      from: "/refguide7/microflow-expressions",
+      to: "/refguide7/expressions"
+    },
+	{
+      from: "/deployment/cloud-foundry/",
+      to: "/developerportal/deploy/cloud-foundry-deploy"
+    },	
+	{
+      from: "/howto7/solving-load-and-import-errors",
+      to: "/howto7/monitoring-troubleshooting/solving-load-and-import-errors"
+    },
+	{
+      from: "/refguide7/drop-down-widget",
+      to: "/refguide7/drop_down"
+    },
+	{
+      from: "/refguide7/horizontal-split-pane",
+      to: "/refguide7/scroll-container"
     },
 	{
       from: "/refguide7/vertical-split-pane",
-      to: "/refguide/scroll-container"
+      to: "/refguide7/scroll-container"
     },
 	{
       from: "/refguide7/Select++Elements",
-      to: "/refguide/select--elements"
+      to: "/refguide7/select--elements"
     },
 	/****************************************************
      * From Desktop Modeler version 6 (permanent)

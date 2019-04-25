@@ -24,15 +24,15 @@ To be able to create such a domain model, there are several questions that you n
 2.  Which SDK classes do you need to use?
 3.  How do you use those SDK classes?
 
-The answer to the first question is directly based on functional requirements: you need to create two entities, one association, and set the generalization of one of the two entities. For the answers to the second and third question you need to combine information from several sources of information: the [Studio Pro Guide](/refguide/), [References](reference-documentation), and the [Model SDK API](https://apidocs.mendix.com/modelsdk/latest/index.html) documentation.
+The answer to the first question is directly based on functional requirements: you need to create two entities, one association, and set the generalization of one of the two entities. For the answers to the second and third question you need to combine information from several sources of information: the [*Studio Pro Guide*](/refguide/), [References](reference-documentation), and the [Model SDK API](https://apidocs.mendix.com/modelsdk/latest/index.html) documentation.
 
-The Studio Pro Guide gives an overview of what can be configured for different parts of the Mendix app model, the Metamodel reference guide specifies in detail which actual programmable objects are available in the SDK, and the Model SDK API docs provide the precise API details needed to write the actual code.
+The *Studio Pro Guide* gives an overview of what can be configured for different parts of the Mendix app model, the Metamodel reference guide specifies in detail which actual programmable objects are available in the SDK, and the Model SDK API docs provide the precise API details needed to write the actual code.
 
 This how-to will guide you through the collection of the necessary information from these sources to create the domain model. At the same time, it will explain the general concepts and structure of the SDK documentation. This will enable you to find the information that you need to manipulate other parts of the app model as well.
 
 ## 2 Creating Entities
 
-First, you start with creation of the two entities, `Customer` and `Invoice`. Entities have some basic properties, such as their `name` and `documentation`. You can see these in Studio Pro in the Properties pane when you have selected an entity. These properties are documented in the Studio Pro Guide under the [Entities](/refguide/entities) topic.
+First, you start with creation of the two entities, `Customer` and `Invoice`. Entities have some basic properties, such as their `name` and `documentation`. You can see these in Studio Pro in the Properties pane when you have selected an entity. These properties are documented in the *Studio Pro Guide* under the [Entities](/refguide/entities) topic.
 
 The relevant concept in the app model can be found in the Metamodel reference guide. In this case, you are working on the domain model, so the [Domain Model](domain-model-metamodel) page is the starting point. In the Overview section, `Entity` is visible, which is the likely candidate for creation of new domain model entities.
 
@@ -66,7 +66,7 @@ invoice.location = { x: 400, y: 100 };
 
 ### 2.1 Resources
 
-Studio Pro Guide
+*Studio Pro Guide*
 
 *   [Domain Model](/refguide/domain-model)
 *   [Entities](/refguide/entities)
@@ -88,7 +88,7 @@ Model SDK API docs
 
 The next step is to create an association between the `Customer` and `Invoice` entities to define their relationship: a `Customer` can have zero or more `Invoices`.
 
-The Studio Pro Guide explains that [Associations](/refguide/associations) have an owner and are a reference (set). In the metamodel reference guide for the [domain model](domain-model-metamodel), the overview shows that an `Association` inherits from `AssociationBase`, which means that, besides its own properties,  it has all the properties of `AssociationBase`. The metamodel reference documentation graph shows that `Entity` and `Association` are related through `child` and `parent` properties on `Association` (the arrows point from `Association` to `Entity`). The `child` and `parent` properties define the target and source of the association arrows in the domain model editor, respectively.
+The *Studio Pro Guide* explains that [Associations](/refguide/associations) have an owner and are a reference (set). In the metamodel reference guide for the [domain model](domain-model-metamodel), the overview shows that an `Association` inherits from `AssociationBase`, which means that, besides its own properties,  it has all the properties of `AssociationBase`. The metamodel reference documentation graph shows that `Entity` and `Association` are related through `child` and `parent` properties on `Association` (the arrows point from `Association` to `Entity`). The `child` and `parent` properties define the target and source of the association arrows in the domain model editor, respectively.
 
 So those two properties need to be set to point to the correct entities. The exact overview of all available properties for associations can be found in the Model SDK API documentation of the relevant object, in this case [`Association`](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.association.html) .
 
@@ -124,7 +124,7 @@ invoices.parentConnection = { "x": 0, "y": 30 };
 
 ### 3.1 Resources
 
-Studio Pro Guide
+*Studio Pro Guide*
 
 *   [Associations](/refguide/associations)
 
@@ -139,7 +139,7 @@ Model SDK API docs
 
 ## 4 Configuring a Generalization
 
-Finally, you want to configure the `Customer` entity to be a specialization of `Administration.Account`, so that customers can log into the app. The Studio Pro Guide describes inheritance on the [Entities](/refguide/entities) page. Entities that are a specialization of another entity inherit all its properties and behavior.
+Finally, you want to configure the `Customer` entity to be a specialization of `Administration.Account`, so that customers can log into the app. The *Studio Pro Guide* describes inheritance on the [Entities](/refguide/entities) page. Entities that are a specialization of another entity inherit all its properties and behavior.
 
 The metamodel in the  reference guide contains a section 'Generalization relationships' with a diagram that shows how the metamodel for inheritance is structured.
 
@@ -180,7 +180,7 @@ customer.generalization = generalization;
 
 ### 4.1 Resources
 
-Studio Pro Guide
+*Studio Pro Guide*
 
 *   [Entities](/refguide/entities)
 

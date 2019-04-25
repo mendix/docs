@@ -11,7 +11,7 @@ The Mendix Feedback API allows you to retrieve, add and manage feedback for your
 
 To use the API, you need to set up a **Consumed Web Service** using the WDSL for this service, available here: [Get WSDL](attachments/9535499/19398864.wsdl). You can find out how to do this in [How to Consume a Complex Web Service](/howto/integration/consume-a-complex-web-service).
 
-The actions in the feedback API can then be called in a microflow using the **Call web service** action. This is described in the Studio Pro Guide here: [Call Web Service Action](/refguide/call-web-service-action).
+The actions in the feedback API can then be called in a microflow using the **Call web service** action. This is described in the *Studio Pro Guide* here: [Call Web Service Action](/refguide/call-web-service-action).
 
 {{% alert type="info" %}}
 

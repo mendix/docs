@@ -111,7 +111,7 @@ Once the status is retrieved, you will normally see **Your app is running** dial
 
 However, Studio may fail to get your environment status. This can happen when there is no deployment environment; technically it means that the app has been unlinked from one environment and is not linked to another environment yet. In this case you will not be able to publish. 
 
-Web Modeler can fail to get your environment status in the following cases:
+Studio can fail to get your environment status in the following cases:
 
 *  Your app was a Free App, was unlinked from the Free App environment by an app administrator, but was not upgraded to the licensed app (for more information on Free Apps and licensed apps, see section [2 Publishing Your App](#publishing-your-app)) 
 

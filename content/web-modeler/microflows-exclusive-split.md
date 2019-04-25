@@ -3,7 +3,7 @@ title: "Exclusive Split"
 category: "Microflows"
 menu_order: 20
 description: "Describes the exclusive split in Mendix Studio."
-tags: ["web modeler", "microflow", "exclusive split"]
+tags: ["studio", "microflow", "exclusive split"]
 ---
 
 ## 1 Introduction 

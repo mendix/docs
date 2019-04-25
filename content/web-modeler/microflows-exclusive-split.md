@@ -2,11 +2,13 @@
 title: "Exclusive Split"
 category: "Microflows"
 menu_order: 20
-description: "Describes the exclusive split in the Mendix Web Modeler."
+description: "Describes the exclusive split in Mendix Studio."
 tags: ["web modeler", "microflow", "exclusive split"]
 ---
 
 ## 1 Introduction 
+
+This document describes an exclusive split in Mendix Studio. 
 
 An exclusive split makes a decision based on a condition and follows one and only one of the outgoing flows. For example, you need to use an exclusive split to show different order forms for the customers with different grades, or to prevent a blocked customer from making orders.
 

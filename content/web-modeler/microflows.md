@@ -1,14 +1,14 @@
 ---
 title: "Microflows"
-description: "Describes the microflows in the Mendix Web Modeler."
+description: "Describes the microflows in Mendix Studio."
 menu_order: 50
-tags: ["web modeler", "microflow"]
+tags: ["studio", "microflow"]
 #If moving or renaming this doc file or section 5 Toolbox, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction 
 
-The Web Modeler has a lot of built-in logic that works out of the box (for example, buttons). But if you want to add custom logic, you need to create microflows.
+Mendix Studio has a lot of built-in logic that works out of the box (for example, buttons). But if you want to add custom logic, you need to create microflows.
 
 Microflows is a visual way of expressing what traditionally ends up in textual program code.  A microflow can perform actions such as creating and changing objects, showing pages, and making choices. 
 
@@ -23,7 +23,7 @@ Examples of using microflows can be the following:
 *  You check the values that a user has entered, and you either show the user an error message or  another page
 *  You're creating a to-do list and you want to use custom logic when the status of the item on the list has changed
 
-To view the microflows of your app in the Web Modeler, click the **Microflows** icon in the left menu bar:
+To view the microflows of your app in Studio, click the **Microflows** icon in the left menu bar:
 
 {{% image_container width="300" %}}![Microflow Icon](attachments/microflows/micflows-icon.png)
 {{% /image_container %}}
@@ -87,9 +87,9 @@ Elements available in the **General** section are described in the table below.
 | Element                                          | Description                                                  |
 | ------------------------------------------------ | ------------------------------------------------------------ |
 | [Annotation](/refguide/annotation)                     | An annotation is an element that can be used to put comments in a microflow. |
-| [Break Event](/refguide/break-event)                    | A break event is used in loops only to stop iterating over a list of objects and continue with the rest of the flow in the microflow. For more information, see [Break Event](/refguide/break-event) in the *Desktop Modeler* category. |
-| [Continue Event](/refguide/continue-event)              | A continue event is used in loops only to stop the current iteration and start the iteration of the next object. For more information, see [Continue Event](/refguide/continue-event) in the *Desktop Modeler* category. |
-| [End Event](/refguide/end-event)                        | An end event defines the location where the microflow will stop. There can be more than one end event, for example when an exclusive split is used in the microflow. So, the number of end events depends on the number of possible outcomes of the microflow. For more information, see [End Event](/refguide/end-event) in the *Desktop Modeler* category. |
+| [Break Event](/refguide/break-event)                    | A break event is used in loops only to stop iterating over a list of objects and continue with the rest of the flow in the microflow. For more information, see [Break Event](/refguide/break-event) in the *Mendix Studio Pro Guide*. |
+| [Continue Event](/refguide/continue-event)              | A continue event is used in loops only to stop the current iteration and start the iteration of the next object. For more information, see [Continue Event](/refguide/continue-event) in the *Mendix Studio Pro Guide*. |
+| [End Event](/refguide/end-event)                        | An end event defines the location where the microflow will stop. There can be more than one end event, for example when an exclusive split is used in the microflow. So, the number of end events depends on the number of possible outcomes of the microflow. For more information, see [End Event](/refguide/end-event) in the *Mendix Studio Pro Guide*. |
 | [Exclusive Split](microflows-exclusive-split) | An exclusive split splits the microflow flow. Use an exclusive split when you want to add conditions. For example, you want to show different order forms for the customers with different grades. Thus, an exclusive split creates different flows. With the help of an exclusive split the app makes a decision based on a condition and follows one and only one of the outgoing flows. |
 | [Loop](microflows-loop)                       | A loop is used to iterate over a list of objects and perform actions on each item of the list. For example, you can retrieve a list of orders from your database, then loop over this list and mark orders as processed. |
 | [Merge](/refguide/merge)                                | A merge can be used to combine flows into one.  If previously you split the microflow flow and now one and the same action needs to be executed for these separated flows, you can combine the two (or more) paths using a merge. |

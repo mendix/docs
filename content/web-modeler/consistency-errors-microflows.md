@@ -1,13 +1,13 @@
 ---
 title: "Microflow Editor Consistency Errors"
 category: "Consistency Errors"
-description: "Describes microflow consistency errors in the Mendix Web Modeler and the way to fix them."
-tags: ["web modeler", "consistency errors", "checks", "errors", "microflow"]
+description: "Describes microflow consistency errors in Mendix Studio and the way to fix them."
+tags: ["studio", "consistency errors", "checks", "errors", "microflow"]
 ---
 
 ## 1 Introduction 
 
-In this document, we will explain how to solve the most common consistency errors that can occur when configuring microflows in the Web Modeler. For more information on microflows, see [Microflows](microflows).
+In this document, we will explain how to solve the most common consistency errors that can occur when configuring microflows in Mendix Studio. For more information on microflows, see [Microflows](microflows).
 
 An example of a consistency error is when you set a drag and drop a **Create Object** activity to the microflow, but do not specify what entity should be used as a data source to create the object. 
 
@@ -53,14 +53,14 @@ The most common errors of this type are described in the table below.
 | Variable {variable name} is defined but not in scope at this location. | Change Variable                                  | You have added a **Change Variable** activity to the microflow before an activity that creates this variable. | Change the order of the activities in the microflow placing the activity that creates a variable first. Only after that you will be able to change it: add a **Create Variable** activity before **Change Variable**. |
 | Undefined variable {variable name}                           | Create Variable/ Change Variable                 | A variable that is not available anymore is used in the microflow. You have deleted an activity that provided the variable. **Parameter**, **Create Object**, or **Create Variable** can provide variables for the microflow, and that variable was used for **Create Variable** or **Change Variable** activities. | Add an activity that will provide the microflow with a variable that is missing, or select another variable for the **Create Variable**/ **Change Variable** activity in properties. |
 
-## 4 Errors Connected with Desktop Modeler Settings
+## 4 Errors Connected with Studio Pro Settings
 
-Some consistency errors may be connected with settings in the Desktop Modeler. The most common errors of this type are described in the table below. 
+Some consistency errors may be connected with settings in Mendix Studio Pro. The most common errors of this type are described in the table below. 
 
 | Text in the Checks Panel                                     | Element/ Activity | Cause of an Error                                            | Way to Fix                                                   |
 | ------------------------------------------------------------ | ----------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| The selected microflow {name of the microflow} no longer exists. | Microflow         | You have deleted a microflow that is selected in the Desktop Modeler > **Project Settings** > **Runtime** > **After startup** or **Before shutdown** options. For more information on **After startup** /**Before shutdown** microflows, see section [7 After-Startup and Before-Shutdown Microflows](/refguide/clustered-mendix-runtime#startup-shutdown-microflows) in Clustered Mendix Runtime in the *Runtime category*. | There two ways to fix the error: <ul><li>In the Web Modeler: create a microflow with the same name</li><li>In the Desktop Modeler: open **Project** > **Settings**, in the **Project Settings** pop-up dialog  open the **Runtime** tab and either select a different microflow for **After startup** / **Before shutdown** options, or set these options to **None**.</li></ul> For information on how to sync the Web Modeler with the Desktop Modeler, see [Syncing the Web Modeler & Desktop Modeler](/refguide/sync-webmodeler-desktopmodeler). |
-| After startup microflow should return a boolean.             | Microflow         | This microflow is selected in the Desktop Modeler > **Project Settings** > **Runtime** > **After startup** or **Before shutdown** options, and should return a Boolean. For more information on **After startup** /**Before shutdown** microflows, see section [7 After-Startup and Before-Shutdown Microflows](/refguide/clustered-mendix-runtime#startup-shutdown-microflows) in Clustered Mendix Runtime in *Runtime category*. | Open the properties of the microflow's end event > the **Return Value** section, select **Value** option > set **Data Type** to Boolean and configure the **Value**. |
+| The selected microflow {name of the microflow} no longer exists. | Microflow         | You have deleted a microflow that is selected in Studio Pro > **Project Settings** > **Runtime** > **After startup** or **Before shutdown** options. For more information on **After startup** /**Before shutdown** microflows, see section [7 After-Startup and Before-Shutdown Microflows](/refguide/clustered-mendix-runtime#startup-shutdown-microflows) in Clustered Mendix Runtime in the *Runtime category*. | There two ways to fix the error: <ul><li>In Studio: create a microflow with the same name</li><li>In Studio Pro: open **Project** > **Settings**, in the **Project Settings** pop-up dialog  open the **Runtime** tab and either select a different microflow for **After startup** / **Before shutdown** options, or set these options to **None**.</li></ul> |
+| After startup microflow should return a boolean.             | Microflow         | This microflow is selected in Studio Pro > **Project Settings** > **Runtime** > **After startup** or **Before shutdown** options, and should return a Boolean. For more information on **After startup** /**Before shutdown** microflows, see section [7 After-Startup and Before-Shutdown Microflows](/refguide/clustered-mendix-runtime#startup-shutdown-microflows) in Clustered Mendix Runtime in *Runtime category*. | Open the properties of the microflow's end event > the **Return Value** section, select **Value** option > set **Data Type** to Boolean and configure the **Value**. |
 
 ## 5 Read More
 

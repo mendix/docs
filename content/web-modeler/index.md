@@ -1,14 +1,14 @@
 ---
-title: "Web Modeler Guide"
-tags: ["Web Modeler"]
+title: "Studio Guide"
+tags: ["studio"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction 
 
-The Mendix Platform includes the [Web Modeler](general) in addition to the [Desktop Modeler](/refguide/desktop-modeler-overview). The Web Modeler is a collaborative, no-code, web-based application development environment. It enables business developers and users with minimal coding or software development experience to create  web and mobile applications without having to know how to code.
+The Mendix Platform includes [Mendix Studio](general) in addition to [Studio Pro](/refguide/desktop-modeler-overview). Studio is a collaborative, no-code, web-based application development environment. It enables business developers and users with minimal coding or software development experience to create  web and mobile applications without having to know how to code.
 
-The Web Modeler enables you to do the following: 
+Studio enables you to do the following: 
 
 * Develop application user interfaces with styled building blocks and widgets
 * Create domain models for reading and writing data in an application
@@ -17,7 +17,7 @@ The Web Modeler enables you to do the following:
 
 ## 2 Main Documents in This Category
 
-The main documents in the Web Modeler Reference are the following ones:
+The main documents in the Studio Guide are the following ones:
 
 * [General Info](general) 
 * [Domain Model](domain-models)

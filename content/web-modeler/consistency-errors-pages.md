@@ -1,14 +1,14 @@
 ---
 title: "Page Editor Consistency Errors"
 category: "Consistency Errors"
-description: "Describes consistency errors in the page editor in the Mendix Web Modeler and the way to fix them."
+description: "Describes consistency errors in the page editor in Mendix Studio and the way to fix them."
 menu_order: 
-tags: ["web modeler", "consistency errors", "checks", "errors", "page editor"]
+tags: ["studio", "consistency errors", "checks", "errors", "page editor"]
 ---
 
 ## 1 Introduction 
 
-In this document, we will explain how to solve the most common consistency errors that can occur you  configure pages in the Web Modeler.
+In this document, we will explain how to solve the most common consistency errors that can occur you  configure pages in Mendix Studio.
 
 An example of a consistency error is when you do not specify the entity property of a data view on a page. 
 
@@ -24,7 +24,7 @@ The table below describes the most common errors you can come across when config
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | No entity configured for the data source of this list view. Select an entity or change the data source. | The **Database** (or **XPath**/**Association**) option is selected as the data source for the list view on the page has been set, but the **Entity** property is not specified. | Open the list view's properties > the **Data Source** section and select an entity in the **Entity** field. |
 | No microflow configured for the data source of this list view. Select a microflow or change the data source. | The data source is set to **Microflow**, but no specific microflow is selected. | Open the list view's properties > the **Data Source** section and select a microflow in the **Microflow** field, or change the type of the data source. |
-| No nanoflow configured for the data source of this list view. Select a nanoflow or change the data source. | A nanoflow is selected as the data source, but no specific nanoflow is selected. | Open the Desktop Modeler and select a nanoflow for this list view, or change the type of the data source. |
+| No nanoflow configured for the data source of this list view. Select a nanoflow or change the data source. | A nanoflow is selected as the data source, but no specific nanoflow is selected. | Open Studio Pro and select a nanoflow for this list view, or change the type of the data source. |
 
 ## 3 Data View Consistency Errors 
 

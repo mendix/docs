@@ -2,14 +2,14 @@
 title: "Microflow Expressions"
 category: "Microflows"
 menu_order: 40
-description: "Describes the microflow expressions available in the Mendix Web Modeler."
-tags: ["web modeler", "microflow", "set value", "variable"]
+description: "Describes the microflow expressions available in Mendix Studio."
+tags: ["studio", "microflow", "set value", "variable"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction 
 
-Expressions can be used to create or change an object or a variable based on logic. 
+This document describes microflow expressions in Mendix Studio. Expressions can be used to create or change an object or a variable based on logic. 
 
 The **Expression** tab is opened when you configure the following activities in the microflow:
 
@@ -67,7 +67,7 @@ If you want to write the expression manually, pay attention to the following:
 
 * Variables in the microflow can be called in an expression by inserting the dollar sign followed by the name of the variable. For example, *$Customer* refers to the variable *Customer*  
 * Attributes and associations of object variables are accessed using a slash, for example, *$Customer/Name*, *$Customer/Grade* refer to the attributes Name and Grade of the entity Customer 
-* Unary, Boolean, and relational types of expressions are available in the Web Modeler (for more information, see section [3 Expression Types](#expression-types))
+* Unary, Boolean, and relational types of expressions are available in Studio (for more information, see section [3 Expression Types](#expression-types))
 
 ### 2.3 Examples of the Expression
 

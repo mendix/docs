@@ -1,8 +1,8 @@
 ---
 title: "Association Properties"
 category: "Domain Model"
-description: "Describes the association properties in the Mendix Web Modeler."
-tags: ["web modeler", "domain model"]
+description: "Describes the association properties in Mendix Studio."
+tags: ["studio", "domain model"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -10,7 +10,7 @@ tags: ["web modeler", "domain model"]
 
 An association describes a relation between entities. In the domain model, an association is represented by a line or arrow between two entities.
 
-In the Web Modeler, associations have the following properties:
+In Mendix Studio, associations have the following properties:
 
 * [Name](#name)
 
@@ -57,7 +57,7 @@ Delete behavior defines what should happen to the associated object when an obje
 | Delete {name of entity} object(s) as well                    | When an object is deleted, the associated object(s) are also deleted. |
 | Delete {name of entity} object only if it is not associated with {name of other entity} object(s) | An object can only be deleted if it is not associated with any other object(s). |
 
-For examples of delete behavior configuring, see section [7 Delete Behavior](../../howto/data-models/create-a-basic-data-layer#delete-behavior) in *How to Create a Basic Data Layer* in *Data Models* category.
+For examples of delete behavior configuring, see section [7 Delete Behavior](../../howto/data-models/create-a-basic-data-layer#delete-behavior) in *How to Create a Basic Data Layer* in the *Mendix Studio Pro How-to’s*.
 
 
 ## 5 Cross-Module Associations {#cross-module-associations}
@@ -66,11 +66,11 @@ Cross-module association makes an association between entities of different modu
 
 {{% alert type="info" %}}
 
- You cannot create separate modules in the Web Modeler. But if you have different modules in the Desktop Modeler, you can see the list of different domain models and make cross-module associations in the Web Modeler. 
+ You cannot create separate modules in Studio. But if you have different modules in Studio Pro, you can see the list of different domain models and make cross-module associations in Studio. 
 
 {{% /alert %}}
 
-In the Web Modeler cross-module association is indicated with the following:
+In Studio, cross-module association is indicated with the following:
 
 *  An icon next to the entity that has such association: 
 

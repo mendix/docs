@@ -1,13 +1,13 @@
 ---
 title: "Enumeration"
 category: "Domain Model"
-description: "Describes an attribute of the enumeration type in the Mendix Web Modeler."
-tags: ["web modeler", "domain model", "attributes", "attribute types", "enumeration"]
+description: "Describes an attribute of the enumeration type in Mendix Studio."
+tags: ["studio", "domain model", "attributes", "attribute types", "enumeration"]
 ---
 
 ## 1 Introduction 
 
-An enumeration is a type of an attribute that has a list of predefined options. The enumeration has one or more items (values). Each item represents one option. For example, the status of a customer grade can be Bronze, Silver, and Gold. So, the enumeration for the customer grade will consist of three items: *Bronze*, *Silver*, *Gold*.  For more information, see [Enumeration Items](#enumeration-items). 
+This document describes an enumeration attribute type in Mendix Studio. An enumeration is a type of an attribute that has a list of predefined options. The enumeration has one or more items (values). Each item represents one option. For example, the status of a customer grade can be Bronze, Silver, and Gold. So, the enumeration for the customer grade will consist of three items: *Bronze*, *Silver*, *Gold*.  For more information, see [Enumeration Items](#enumeration-items). 
 
 ## 2 Enumeration Items {#enumeration-items}
 

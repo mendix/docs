@@ -1,15 +1,15 @@
 ---
 title: "Domain Model"
-description: "Describes the domain models in the Mendix Web Modeler."
+description: "Describes the domain models in Mendix Studio."
 menu_order: 20
-tags: ["web modeler", "domain model"]
+tags: ["studio", "domain model"]
 ---
 
 ## 1 Introduction
 
 The domain model is a data model that describes the information in your application domain in an abstract way. It is central to the architecture of your application. 
 
-The domain model in the Web Modeler consists of the following:
+The domain model in Studio consists of the following:
 
 * [Entities](#entity)
 * [Associations](domain-models-association-properties) 
@@ -27,7 +27,7 @@ The rows in the table are CDs. The type of the two rows is "CD" and this is the 
 
 {{% /alert %}}
 
-To view the **Domain Models** of your app in the Web Modeler, click the **Domain Models** icon in the left menu bar of the Web Modeler.
+To view the **Domain Models** of your app in Studio, click the **Domain Models** icon in the left menu bar of Studio.
 
 {{% image_container width="350" %}}![](attachments/domain-models/domain-model.png)
 {{% /image_container %}}
@@ -52,7 +52,7 @@ The **Auto Arrange** option above the domain model groups and aligns entities by
 | [Attribute](domain-models-attributes) | Attributes are characteristics that describe and/or identify the entity. For example, a *Customer* entity typically has attributes for the name of the customer, an e-mail address, and other personal information. If we draw a parallel with databases, the attribute is a column. | Name<br />Type |
 | [Association](domain-models-association-properties) | An association describes a relation between entities. In the domain model, an association is represented by a line/arrow between two entities. If we draw a parallel with databases, the association is a foreign key. | Name<br />[Multiplicity](domain-models-association-properties#multiplicity)<br />[Delete behavior](domain-models-association-properties#delete-behavior) |
 
-For examples and more technical details, see [Domain Model](/refguide/domain-model), [Entities](/refguide/entities), [Attributes](/refguide/attributes), and [Associations](/refguide/associations) in the *Desktop Modeler* category of the Mendix Reference Guide. 
+For examples and more technical details, see [Domain Model](/refguide/domain-model), [Entities](/refguide/entities), [Attributes](/refguide/attributes), and [Associations](/refguide/associations) in the *Studio Pro Guide*. 
 
 ## 3 Adding New Entities {#adding-new-entities}
 

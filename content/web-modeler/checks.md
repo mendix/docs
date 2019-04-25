@@ -7,7 +7,7 @@ tags: ["studio", "app viewing", "checks", "errors", "consistency errors"]
 
 ## 1 Introduction 
 
-When [publishing your app](publishing-app#publishing-your-app), Studio checks the app you created on [consistency errors](consistency-errors). If there are any, the app cannot be published, and you see the **Checks** button goes red with the number of errors indicated.
+When [publishing your app](publishing-app#publishing-your-app), Mendix Studio checks the app you created on [consistency errors](consistency-errors). If there are any, the app cannot be published, and you see the **Checks** button goes red with the number of errors indicated.
 
 ![](attachments/checks/checks-button.png)
 

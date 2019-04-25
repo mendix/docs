@@ -2,9 +2,9 @@
 
 title: "Layout Widgets"
 parent: "page-editor-widgets"
-description: "Describes layout widgets in the Mendix Web Modeler."
+description: "Describes layout widgets in Mendix Studio."
 menu_order: 60
-tags: ["web modeler", "page editor", "layout", "layout widgets", "widgets"]
+tags: ["studio", "page editor", "layout", "layout widgets", "widgets"]
 ---
 
 ## 1 Introduction 

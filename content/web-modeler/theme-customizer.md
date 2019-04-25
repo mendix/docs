@@ -1,13 +1,13 @@
 ---
 title: "Theme Customizer"
-description: "Describes the Theme Customizer in the Mendix Web Modeler."
+description: "Describes the Theme Customizer in Mendix Studio."
 menu_order: 80
-tags: ["web modeler", "theme customizer", "atlas ui"]
+tags: ["studio", "theme customizer", "atlas ui"]
 ---
 
 ## 1 Introduction 
 
-The **Theme Customizer** is a tool that helps you customize your app. For example, you can adjust colors, upload logo, change text style, thus making your app look the way you want.
+The **Theme Customizer** is a tool that helps you customize your app in Mendix Studio. For example, you can adjust colors, upload logo, change text style, thus making your app look the way you want.
 
 ![Default Style vs. Customized Style](attachments/theme-customizer/default-vs-customized.png)
 

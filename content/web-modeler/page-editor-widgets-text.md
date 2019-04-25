@@ -1,9 +1,9 @@
 ---
 title: "Text Widgets"
 parent: "page-editor-widgets"
-description: "Describes typography widgets in the Mendix Web Modeler."
+description: "Describes typography widgets in Mendix Studio."
 menu_order: 40
-tags: ["web modeler", "page editor", "typography", "text widgets", "widgets"]
+tags: ["studio", "page editor", "typography", "text widgets", "widgets"]
 ---
 
 ## 1 Introduction 

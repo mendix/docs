@@ -1,14 +1,14 @@
 ---
 title: "Input Element Widgets"
 parent: "page-editor-widgets"
-description: "Describes input widgets in the Mendix Web Modeler."
+description: "Describes input widgets in Mendix Studio."
 menu_order: 20
-tags: ["web modeler", "page editor", "input widgets", "widgets"]
+tags: ["studio", "page editor", "input widgets", "widgets"]
 ---
 
 ## 1 Introduction 
 
-**Input Elements** are [widgets](page-editor-widgets) in the Web Modeler that are typically used to allow end-users enter or edit data.  
+**Input Elements** are [widgets](page-editor-widgets) in Mendix Studio that are typically used to allow end-users enter or edit data.  
 
 **Input Elements** can only function inside a data container (a list view or a data view). You can either place widget in an existing data container; or click **Wrap with a new data view** in **Properties** to create a data view automatically and place an input element inside it. 
 
@@ -17,7 +17,7 @@ tags: ["web modeler", "page editor", "input widgets", "widgets"]
 
 ## 2 Input Elements Overview
 
-You can find the description of input elements available in the Web Modeler in the table below:
+You can find the description of input elements available in Studio in the table below:
 
 | Input Element      | Description                                                  |
 | ------------------ | ------------------------------------------------------------ |
@@ -69,7 +69,7 @@ Common properties of input elements are described in the table below:
 | ----------- | ------------------------------------------------------------ |
 | Show Label  | Enable this property if you want to show a label (name) of a widget to the end-user. <br />*This property is enabled by default.* |
 | Label       | This property only appears if **Show Label** is enabled. Specify the name that will be displayed to the end-users. When you select an attribute, the name of the attribute is filled out as a label. |
-| Editability | Editability indicates whether the end-user will be able to change the value displayed by the widget. Possible values are the following: <ul><li>Editable – the value displayed by the widget is editable</li><li>Read-only – the value is in read-only mode</li><li>Conditional – the widget is editable only if specified conditions are met (this option can be configured in the Desktop Modeler only)</li></ul>{{%alert type="info" %}}If an attribute set for the widget's data source is of the AutoNumber type, the widget is set into read-only mode by default and the **Editability** setting itself is disabled, because attributes of this type are generated automatically.<br />{{%/alert %}} |
+| Editability | Editability indicates whether the end-user will be able to change the value displayed by the widget. Possible values are the following: <ul><li>Editable – the value displayed by the widget is editable</li><li>Read-only – the value is in read-only mode</li><li>Conditional – the widget is editable only if specified conditions are met (this option can be configured in Studio Pro only)</li></ul>{{%alert type="info" %}}If an attribute set for the widget's data source is of the AutoNumber type, the widget is set into read-only mode by default and the **Editability** setting itself is disabled, because attributes of this type are generated automatically.<br />{{%/alert %}} |
 
 #### 3.2.2 Specific Properties
 

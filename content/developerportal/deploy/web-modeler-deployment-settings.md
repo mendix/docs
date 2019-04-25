@@ -1,42 +1,42 @@
 ---
-title: "Web Modeler Deployment Settings"
+title: "Studio Deployment Settings"
 parent: "mendix-cloud-deploy"
 menu_order: 10
-description: "Describes how to set deployment for the Web Modeler."
-tags: ["node","developer portal","deploy", "web modeler", "settings"]
+description: "Describes how to set deployment for Mendix Studio."
+tags: ["node","developer portal","deploy", "web modeler", "Studio", "settings"]
 ---
 
 ## 1 Introduction
 
-If you have a licensed app, you need to select an environment for the Web Modeler separately. For more information on licensed apps and environments, see [Mendix Cloud](mendix-cloud-deploy) and [Environments](environments). 
+If you have a licensed app, you need to select an environment for Mendix Studio separately. For more information on licensed apps and environments, see [Mendix Cloud](mendix-cloud-deploy) and [Environments](environments). 
 
 {{% alert type="info" %}}
 
-By default the environment is not selected for the Web Modeler. Thus, when you try to publish, you will get a warning message. For more information, see [Publishing Your App From the Web Modeler](/web-modeler/publishing-app).
+By default the environment is not selected for Studio. Thus, when you try to publish, you will get a warning message. For more information, see [Publishing Your App – Studio](/web-modeler/publishing-app).
 
 {{% /alert %}}
 
-## 2 Selecting Web Modeler Deployment Environment 
+## 2 Selecting the Studio Deployment Environment 
 
-To select the environment for the Web Modeler, do the following:
+To select the environment for Studio, do the following:
 
 1.  Open **Deploy** > **Environments** in the left menu bar in the Developer Portal.
 
     ![Environments in the Developer Portal](attachments/web-modeler-deployment-settings/developer-portal-deploy-environments.png)
 
-2.  In the **Deploy** tab > **Environments** section, select the environment that you want to select for the Web Modeler deployment by clicking **Details**. 
+2.  In the **Deploy** tab > **Environments** section, select the environment that you want to select for Studio deployment by clicking **Details**. 
 
     ![Details of an Environment in the Developer Portal](attachments/web-modeler-deployment-settings/developer-portal-environments-details.png)
 
-3.  In the **General** tab, select **Web Modeler Target** and click **Change**.
+3.  In the **General** tab, select **Studio Target** and click **Change**.
 
     ![](attachments/web-modeler-deployment-settings/developer-portal-web-modeler-target.png)
 
-4. In the **Select Web Modeler Target** dialog window, click the drop-down menu and select the environment. 
+4. In the **Select Studio Target** dialog window, click the drop-down menu and select the environment. 
 
 5. Click **Save**.
 
-You have selected the environment for the Web Modeler. 
+You have selected the environment for Studio. 
 
 ## 3 Read More
 

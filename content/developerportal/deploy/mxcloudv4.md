@@ -72,7 +72,7 @@ A VPN (which is already deprecated in favor of client certificates) will not be 
 
 These are the differences between Mendix Cloud v3 and Mendix Cloud v4:
 
-* In Cloud v4, the debugger is always active, and the button shows the credentials to connect the Desktop Modeler to it
+* In Cloud v4, the debugger is always active, and the button shows the credentials to connect Mendix Studio Pro to it
 * The Java security manager is no longer in place
     * The Java security manager is used in v3 to enforce standardization and to act as an additional security layer
     * In Cloud Foundry, short-lived containers already ensure standardization, and apps are completely isolated from the management network; therefore, the Java security manager will not be enabled on the new environment

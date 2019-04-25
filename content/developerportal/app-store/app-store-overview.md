@@ -65,9 +65,9 @@ The header for each add-on presents the following details:
 		* This is only available if the developer has included a demo URL when sharing the content (for details on sharing content, see [How to Share App Store Content](share-app-store-content))
 	* **Open** – click this to open a supplementary page for the content (for example, the [Atlas UI](https://atlas.mendix.com/) page, where you can learn more about the Mendix Atlas UI Design language)
 	* **Download** – click this to download the content
-		* This is only available for content that has a file attached (meaning, all shared  Desktop Modeler content, but not promotions; for details on sharing  Desktop Modeler content, see [How to Share App Store Content](share-app-store-content))
-		* For details on how to import downloaded App Store content into the Desktop Modeler, see [How to Import & Export Objects](/howto/integration/importing-and-exporting-objects)
-		{{% alert type="info" %}}The best practice is to download content from the App Store that is accessible in the  Desktop Modeler, because it then downloads directly into the  Desktop Modeler (for details, see [How to Use App Store Content](app-store-content)).
+		* This is only available for content that has a file attached (meaning all shared Studio Pro content, but not promotions); for details on sharing Studio Pro content, see [How to Share App Store Content](share-app-store-content))
+		* For details on how to import downloaded App Store content into Studio Pro, see [How to Import & Export Objects](/howto/integration/importing-and-exporting-objects)
+		{{% alert type="info" %}}The best practice is to download content from the App Store that is accessible in Studio Pro, because it then downloads directly into Studio Pro (for details, see [How to Use App Store Content](app-store-content)).
 		{{% /alert %}}
 
 ### 3.2 Tabs
@@ -81,7 +81,7 @@ The details page for each add-on and app presents the following item information
 
 	![](attachments/app-store-overview/content_detail_5.png)
 
-*  The **Documentation** tab can include details on typical usage scenarios, features and limitations, depedencies, intallation and configuration, and frequently asked questions
+*  The **Documentation** tab can include details on typical usage scenarios, features and limitations, dependencies, installation and configuration, and frequently asked questions
 
 	![](attachments/app-store-overview/content_detail_6.png)
 
@@ -104,7 +104,7 @@ The details page for each add-on and app presents the following item information
 In the **Additional Info** section, you can see the following information (depending on the type of content):
 
 * The **Latest version** number of the item
-* The  Desktop Modeler version that the item **Requires** to work
+* The Studio Pro version that the item **Requires** to work
 * When the item was **Published**
 * The type of **License** for the item
 * The type of support Mendix offers for the item (for more information, see [App Store Content Support](app-store-content-support))
@@ -166,13 +166,13 @@ For more information, see the [Adding New App Store Content](share-app-store-con
 
 ### 4.3 Modeler {#modeler}
 
-On the **Modeler** page, you can download any version of the  Desktop Modeler you need by clicking  **Download** for the latest release or the donwload icon for a specific older release:
+On the **Modeler** page, you can download any version of Studio Pro you need by clicking  **Download** for the latest release or the download icon for a specific older release:
 
 ![](attachments/app-store-overview/modeler.png)
 
-Clicking the **Release notes** icon will open the [ Desktop Modeler release notes](/releasenotes/desktop-modeler/) for that particular version.
+Clicking the **Release notes** icon will open the [Studio Pro release notes](/releasenotes/desktop-modeler/) for that particular version.
 
-Clicking the **Related downloads** option will open a page with information relating to that Desktop Modeler version.
+Clicking the **Related downloads** option will open a page with information relating to that Studio Pro version.
 
 ### 4.4 Solutions {#solutions}
 

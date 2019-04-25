@@ -1,13 +1,13 @@
 ---
 title: "Checks"
-description: "Describes checks during publishing process in the Mendix Web Modeler."
+description: "Describes checks during publishing process in Mendix Studio."
 menu_order: 60
-tags: ["web modeler", "app viewing", "checks", "errors", "consistency errors"]
+tags: ["studio", "app viewing", "checks", "errors", "consistency errors"]
 ---
 
 ## 1 Introduction 
 
-When [publishing your app](publishing-app#publishing-your-app), the Web Modeler checks the app you created on [consistency errors](consistency-errors). If there are any, the app cannot be published, and you see the **Checks** button goes red with the number of errors indicated.
+When [publishing your app](publishing-app#publishing-your-app), Studio checks the app you created on [consistency errors](consistency-errors). If there are any, the app cannot be published, and you see the **Checks** button goes red with the number of errors indicated.
 
 ![](attachments/checks/checks-button.png)
 
@@ -15,7 +15,7 @@ When [publishing your app](publishing-app#publishing-your-app), the Web Modeler 
 
 To display checks for your app and view the faulty elements in it, do the following:
 
-1. Click **Publish** in the top-right of the Web Modeler.
+1. Click **Publish** in the top-right of Studio.
 
 2.  In the pop-up window, click **Update**.
 
@@ -38,7 +38,7 @@ To display checks for your app and view the faulty elements in it, do the follow
 
     ![](attachments/checks/viewing-error.png)
 
-7. To close the panel, either click the close button in the top-right corner of the panel, or click **Checks** in the top-right corner of the Web Modeler. 
+7. To close the panel, either click the close button in the top-right corner of the panel, or click **Checks** in the top-right corner of Studio. 
 
 {{% alert type="info" %}}
 
@@ -52,7 +52,7 @@ The **Checks** panel consist of three buttons indicating the type of a check and
 
 ### 3.1 Types of Checks {#checks-types}
 
-There are three types of checks in the Web Modeler. Each button is colored differently at the top of the **Checks** panel and has its own icon.
+There are three types of checks in Studio. Each button is colored differently at the top of the **Checks** panel and has its own icon.
 
 ![](attachments/checks/button-colors.png)
 

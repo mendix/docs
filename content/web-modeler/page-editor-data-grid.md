@@ -1,12 +1,14 @@
 ---
 title: "Data Grid Properties"
 parent: "page-editor-widgets"
-description: "Describes a data grid in the page editor of the Mendix Web Modeler."
+description: "Describes a data grid in the page editor of Mendix Studio."
 menu_order: 15
-tags: ["web modeler", "page editor", "pages", "data view", "list view"]
+tags: ["studio", "page editor", "pages", "data view", "list view"]
 ---
 
 ## 1 Introduction 
+
+This document describes a data grid in Mendix Studio.
 
 A data grid shows a list of objects in a table format. For example, a data grid can show all the program items for an event. Using controls, end-users can browse, search, and edit objects in the data grid.
 
@@ -36,10 +38,10 @@ The **Data Source** section properties are described in the table below:
 | -------------------- | ------------------------------------------------------------ |
 | Database             | A data source that determines that the object or objects shown are retrieved directly from the database. You need to select an **Entity** (that you have in the domain model), or create a new entity, if you set database as the data source. <br />When you select an existing entity, the [grid columns](#grid-columns) are automatically created for each attribute of this entity. <br/>After you have selected an entity, you can create one or more **Constraint** items. Constraints are used to limit (filter) data in a list view. To add a constraint, select an attribute and an operator for it (the number of the available operators depend on the type of the attribute), and select a value. For example, to display a list of customers with only Gold grade, select an enumeration *Grade* as an attribute, select *Equals* as an operator, and set a value to *Gold*. <br />**Note** You can choose only the following types of attributes for constraints: AutoNumber, Boolean, Decimal, Enumeration, Integer, Long, and String. |
 | Microflow            | A data source that runs a selected microflow and displays a return value (i.e. a list of objects). |
-| XPath                | Currently, this data source can only be configured in the Desktop Modeler. For more information, see [XPath Source](/refguide/xpath-source). |
+| XPath                | Currently, this data source can only be configured in Studio Pro. For more information, see [XPath Source](/refguide/xpath-source). |
 | Association          | Available to data grids placed inside a data view or a list view. The data grid is filled with the objects linked to a data view/list view object by an association. Sorting columns and searching is not possible in data widgets with an association data source. |
 
-For general information on data sources, see [Data Sources](/refguide/data-sources) in the *Desktop Modeler* category.
+For general information on data sources, see [Data Sources](/refguide/data-sources) in the *Studio Pro Guide*.
 
 ### 2.2 Columns {#grid-columns}
 

@@ -1,13 +1,13 @@
 ---
 title: "Events Section in Widgets"
 parent: "page-editor-widgets"
-description: "Describes the Events section in widgets properties in the Mendix Web Modeler."
-tags: ["web modeler", "page editor", "widgets", "on click action", "events"]
+description: "Describes the Events section in widgets properties in Mendix Studio."
+tags: ["studio", "page editor", "widgets", "on click action", "events"]
 ---
 
 ## 1 Introduction 
 
-The **Events** section is a section in the **Properties** tab that is common for different widgets in the Web Modeler, for example, for a static image, buttons, list view, and data view. 
+The **Events** section is a section in the **Properties** tab that is common for different widgets in Mendix Studio, for example, for a static image, buttons, list view, and data view. 
 
 In the **Events** section, you can set the **On Click Action** for widgets and specify what action will be performed when users click the widget. For example, you can specify that when a user clicks a profile image, the page with the user's personal account will open. 
 

@@ -1,8 +1,8 @@
 ---
 title: "Design Section in Widgets"
 parent: "page-editor-widgets"
-description: "Describes the Design section in widgets properties in the Mendix Web Modeler."
-tags: ["web modeler", "page editor", "widgets", "on click action", "events"]
+description: "Describes the Design section in widgets properties in Mendix Studio."
+tags: ["studio", "page editor", "widgets", "on click action", "events"]
 ---
 
 ## 1 Introduction 

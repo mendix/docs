@@ -2,11 +2,13 @@
 title: "Set & Change a Value for Different Activities in the Microflows"
 category: "Microflows"
 menu_order: 50
-description: "Describes the process of setting the initial value for objects or variables in the Mendix Web Modeler."
-tags: ["web modeler", "microflow", "set value", "variable"]
+description: "Describes the process of setting the initial value for objects or variables in Mendix Studio."
+tags: ["studio", "microflow", "set value", "variable"]
 ---
 
 ## 1 Introduction 
+
+This document describes how to set and change values for various activities in microflows of Mendix Studio.
 
 You need to assign a value to an object/variable, when you configure the properties of the following activities:
 

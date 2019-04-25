@@ -1,14 +1,14 @@
 ---
 title: "Step 2: Embed the Microflow in Your App"
 parent: "microflows-how-to-configure-exclsplit"
-description: "This how to describes the process of configuring an exclusive split in the Mendix Web Modeler."
+description: "This how to describes the process of configuring an exclusive split in in Mendix Studio."
 menu_order: 20
-tags: ["web modeler", "microflows", "exclusive split", "pages"]
+tags: ["studio", "microflows", "exclusive split", "pages"]
 ---
 
 ## 1 Introduction 
 
-You have configured microflows and exclusive splits with enumeration attribute type and Boolean attribute type, now you can validate the microflows by adding them to pages. This how-to explains how you can add microflows with exclusive splits to pages in the Web Modeler. 
+You have configured microflows and exclusive splits with enumeration attribute type and Boolean attribute type, now you can validate the microflows by adding them to pages. This how-to explains how you can add microflows with exclusive splits to pages in Mendix Studio. 
 
 **This how-to will teach you how to do the following:**
 

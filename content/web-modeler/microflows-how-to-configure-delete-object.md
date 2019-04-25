@@ -2,13 +2,13 @@
 title: "Configure a Delete Object Action"
 category: "Microflows"
 menu_order: 80
-description: "This how to describes the process of configuring a delete object action in a data view and a list view in the Mendix Web Modeler."
-tags: ["web modeler", "page editor", "delete object", "list view", "data view", "how to"]
+description: "This how to describes the process of configuring a delete object action in a data view and a list view in Mendix Studio."
+tags: ["studio", "page editor", "delete object", "list view", "data view", "how to"]
 ---
 
 ## 1 Introduction 
 
-This how-to explains how you can configure a delete object action in the Mendix Web Modeler. 
+This how-to explains how you can configure a delete object action in Mendix Studio. 
 
 **This how-to will teach you how to do the following:**
 
@@ -90,7 +90,7 @@ Now we will configure a list view and will add a button with [**Delete Object** 
 
     ![](attachments/microflows-how-to-configure-delete-object/container-for-the-delete-button.png)
 
-7.  In **Properties** for the **Delete** button, you can see that the **On Click** action is set to **Delete Object** automatically, and caption is set to **Delete**, because the widget is preconfigured in the Web Modeler.
+7.  In **Properties** for the **Delete** button, you can see that the **On Click** action is set to **Delete Object** automatically, and caption is set to **Delete**, because the widget is preconfigured in Studio.
 
     ![](attachments/microflows-how-to-configure-delete-object/delete-button-properties.png)
 

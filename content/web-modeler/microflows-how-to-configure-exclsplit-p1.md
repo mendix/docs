@@ -1,14 +1,14 @@
 ---
 title: "Step 1: Build the Domain Model & Configure a Microflow"
 parent: "microflows-how-to-configure-exclsplit"
-description: "This how-to describes the process of configuring an exclusive split in the Mendix Web Modeler."
+description: "This how-to describes the process of configuring an exclusive split in Mendix Studio."
 menu_order: 10
-tags: ["web modeler", "microflows", "exclusive split", "domain model", ]
+tags: ["studio", "microflows", "exclusive split", "domain model", ]
 ---
 
 ## 1 Introduction
 
-This how-to explains how you can configure an exclusive split in the microflow editor of the Web Modeler. 
+This how-to explains how you can configure an exclusive split in the microflow editor of Mendix Studio. 
 
 An exclusive split is an activity which is used to model conditions or decisions in the logic of your app. For more information on the exclusive split, see [Exclusive Split](microflows-exclusive-split). 
 

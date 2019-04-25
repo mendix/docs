@@ -1,13 +1,13 @@
 ---
 title: "Navigation Document"
-description: "Describes the navigation menu in the Mendix Web Modeler."
+description: "Describes the navigation menu in Mendix Studio."
 menu_order: 40
-tags: ["web modeler", "navigation", "app menu"]
+tags: ["studio", "navigation", "app menu"]
 ---
 
 ## 1 Introduction 
 
-A navigation document shows a configured menu of your app in a form of a tree. You can create items and sub-items in your navigation. 
+A navigation document in Mendix Studio shows a configured menu of your app in a form of a tree. You can create items and sub-items in your navigation. 
 
 ![](attachments/navigation/nagigation-wm-vs-app.png)
 
@@ -18,7 +18,7 @@ Open the **Navigation Document** by clicking the corresponding icon in the left 
 
 {{% alert type="info" %}}
 
-In the Web Modeler, you are viewing and editing a Responsive type of the navigation profile, while there are more types of profiles in the Desktop Modeler. For more information on profiles in the Desktop Modeler, see section [2 Profiles](/refguide/navigation#profiles) in *Navigation in Mendix 7.4 & Above* in the *Desktop Modeler* category. 
+In Studio, you are viewing and editing a Responsive type of the navigation profile, while there are more types of profiles in Studio Pro. For more information on profiles in Studio Pro, see section [2 Profiles](/refguide/navigation#profiles) in *Navigation in Mendix 7.4 & Above* in the *Mendix Studio Pro Guide*. 
 
 {{% /alert %}}
 

@@ -2,13 +2,13 @@
 title: "Mendix Assist"
 category: "Microflows"
 menu_order: 10
-description: "Describes Mendix Assist in the Mendix Web Modeler."
-tags: ["web modeler", "mendix assist", "AI", "assistant"]
+description: "Describes Mendix Assist in Mendix Studio."
+tags: ["studio", "mendix assist", "AI", "assistant"]
 ---
 
 ## 1 Introduction 
 
-Mendix Assist is an Artificially Intelligence powered agent that helps you configure microflows in the Web Modeler. It gives unexperienced users recommendations on configuring the next step of the microflow based on activities, parameters, and events that already exist in the microflow.
+Mendix Assist is an Artificially Intelligence powered agent that helps you configure microflows in Mendix Studio. It gives unexperienced users recommendations on configuring the next step of the microflow based on activities, parameters, and events that already exist in the microflow.
 
 Mendix Assist was built using Machine Learning analysis of over twelve million anonymized application flows built with Mendix. Mendix uses Deep Learning to detect best practice patterns in microflows. Based on these patterns Mendix Assist predicts the best options for the next activity in a microflow. Moreover, Mendix Assist keeps learning by analyzing new microflows being built.  
 
@@ -61,7 +61,7 @@ Settings available for Mendix Assist are described in the table below:
 | Mendix Assist Is ON/OFF      | Click a slider to enable/disable the tool.                   |
 | Information Dialog Is ON/OFF | Click a slider to enable/disable the information dialog window. **Note** The information dialog window is disabled if Mendix Assist is OFF. |
 
-You can also enable/disable Mendix Assist by clicking the information icon in the top bar of the Web Modeler. 
+You can also enable/disable Mendix Assist by clicking the information icon in the top bar of Mendix Studio. 
 
 {{% image_container width="300" %}}![](attachments/mx-assist/info-icon-setting.png)
 {{% /image_container %}}
@@ -139,7 +139,7 @@ The exclusive split is added to the microflow.
 
 {{% alert type="info" %}}
 
-The number of options for **Add a decision** depend on the number of parameters with enumeration data type in your microflow. For more information, see [Domain Model in the Web Modeler](domain-models) and [Attribute Types](domain-models-attributes).
+The number of options for **Add a decision** depend on the number of parameters with enumeration data type in your microflow. For more information, see [Domain Model in Studio](domain-models) and [Attribute Types](domain-models-attributes).
 
 {{% /alert %}}
 

@@ -1,28 +1,28 @@
 ---
 title: "Page Editor"
-description: "Describes the page editor in the Mendix Web Modeler."
+description: "Describes the page editor in Mendix Studio."
 menu_order: 30
-tags: ["web modeler", "page editor", "pages"]
+tags: ["studio", "page editor", "pages"]
 ---
 
 ## 1 Introduction 
 
 The page editor allows a user to define the end-user interface of a Mendix application. 
 
-To view the **Pages** of your app in the Web Modeler, click the **Pages** icon in the left menu bar of the Web Modeler.
+To view the **Pages** of your app in Mendix Studio, click the **Pages** icon in the left menu bar of Studio.
 
 {{% image_container width="300" %}}![](attachments/page-editor/pages-icon.png)
 {{% /image_container %}}
 
 {{% alert type="warning" %}}
 
-The Web Modeler supports apps based on the Atlas UI framework only. For details on Atlas UI, see [Atlas UI](../../howto/front-end/atlas-ui).
+Studio supports apps based on the Atlas UI framework only. For details on Atlas UI, see [Atlas UI](../../howto/front-end/atlas-ui).
 
 {{% /alert %}}
 
 ## 2 Components
 
-Pages of the Web Modeler consist of the following components:
+Pages of Studio consist of the following components:
 
 * **Layouts** structure your pages. Every page is based on a layout. For example, **Atlas_Default** or **PopupLayout** are types of layouts you can choose when creating a page.
 * **Templates** – a starting point for creating new pages. Every time you create a new page, you select a template depending on data you want to display on your page and the way you want to display it: a list, a dashboard, a form. For example, **Dashboard Action Tiles**, **List Default**, **Master Detail** are types of templates. 
@@ -35,9 +35,9 @@ The components described above are powered by Atlas UI. For more information, se
 
 ### 3.1 Opening Pages
 
-After opening the Web Modeler, it automatically opens the home page of the app.
+After opening Studio, it automatically opens the home page of the app.
 
-To open a page in the Web Modeler, do the following:
+To open a page in Studio, do the following:
 
 1. Click the **Pages** icon in the left menu bar. 
 
@@ -50,7 +50,7 @@ The selected page is opened.
 
 ### 3.2 Creating a New Page {#creating-new-page}
 
-To create a new page in the Web Modeler, do the following:
+To create a new page in Studio, do the following:
 
 1. Click the **Pages** icon.
 2.  Click **New** in the top right corner of the displayed side panel.
@@ -67,7 +67,7 @@ A new page is created.
 
 ### 3.3 Deleting a Page
 
-To delete a page in the Web Modeler, do the following:
+To delete a page in Studio, do the following:
 
 1. Open the page you want to delete.
 2. Open the **Properties** tab.
@@ -88,7 +88,7 @@ The selected element is indicated with an blue border. Additionally, if the elem
 
 ## 4 Breadcrumb Trail
 
-When you select an item on your page, there appears a breadcrumb trail in the left bottom corner of the Web Modeler.
+When you select an item on your page, there appears a breadcrumb trail in the left bottom corner of Studio.
 
 The breadcrumb trail serves two functions:
 
@@ -125,7 +125,7 @@ Building blocks consist of pre-set widgets that allow you to build a page faster
 
 ![](attachments/page-editor/buildingblocks.png)
 
-Building blocks of the Web Modeler are divided into the following categories:
+Building blocks of Studio are divided into the following categories:
 
 | Building Block | Description                                                  |
 | -------------- | ------------------------------------------------------------ |
@@ -150,7 +150,7 @@ If you want to read documentation on a particular building block and to know mor
 
 {{% alert type="info" %}}
 
-Building Blocks categories may differ because Atlas UI can be customized using the Desktop Modeler.
+Building Blocks categories may differ because Atlas UI can be customized using Studio Pro.
 
 {{% /alert %}}
 

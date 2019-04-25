@@ -2,8 +2,8 @@
 title: "Loops"
 category: "Microflows"
 menu_order: 30
-description: "Describes a loop in the Mendix Web Modeler."
-tags: ["web modeler", "microflow", "loop", "loops"]
+description: "Describes a loop in Mendix Studio."
+tags: ["studio", "microflow", "loop", "loops"]
 ---
 
 ## 1 Introduction 

@@ -1,9 +1,9 @@
 ---
 title: "Button Widgets"
 parent: "page-editor-widgets"
-description: "Describes button widgets in the Mendix Web Modeler."
+description: "Describes button widgets in Mendix Studio."
 menu_order: 50
-tags: ["web modeler", "page editor", "button", "widgets"]
+tags: ["studio", "page editor", "button", "widgets"]
 ---
 
 ## 1 Introduction 
@@ -13,7 +13,7 @@ Button [widgets](page-editor-widgets) allow the user to perform various actions,
 {{% image_container width="300" %}}![](attachments/page-editor-widgets-buttons/button-widgets.png)
 {{% /image_container %}}
 
-The following **Buttons** are available in the Web Modeler as default widgets:
+The following **Buttons** are available in Mendix Studio as default widgets:
 
 * Open Page
 * Call Microflow

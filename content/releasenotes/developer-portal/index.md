@@ -10,6 +10,12 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud V3, and other deploym
 
 ## 2019
 
+### April 30th, 2019
+
+#### Improvements
+
+* With the beta release of Mendix Studio and Mendix Studio Pro (Mendix version 8), we have updated all mentions of *Web Modeler* to *Studio* and *Desktop Modeler* to *Studio Pro* across the Developer Portal.
+
 ### April 8th, 2019
 
 #### Improvements

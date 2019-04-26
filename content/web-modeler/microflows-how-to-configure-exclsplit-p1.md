@@ -10,7 +10,7 @@ tags: ["web modeler", "microflows", "exclusive split", "domain model", ]
 
 This how-to explains how you can configure an exclusive split in the microflow editor of the Web Modeler. 
 
-An exclusive split is an activity which is used to model conditions or decisions in the logic of your app. For more information on the exclusive split, see [Exclusive Split in the Web Modeler](microflows-exclusive-split). 
+An exclusive split is an activity which is used to model conditions or decisions in the logic of your app. For more information on the exclusive split, see [Exclusive Split](microflows-exclusive-split). 
 
 **This how-to will teach you how to do the following:**
 
@@ -30,14 +30,14 @@ Customers can make an order from this page. However, if the blocked user tries t
 
 In this example we will create a microflow and configure the exclusive split when you want to open different order forms depending on the customer grade. 
 
-This use case will require an exclusive split with attribute of the enumeration type (list of predefined values). For more information on types of attributes, see [Attribute Types in the Web Modeler](domain-models-attributes). 
+This use case will require an exclusive split with attribute of the enumeration type (list of predefined values). For more information on types of attributes, see [Attribute Types](domain-models-attributes). 
 
 ### 2.1 Adding an Entity and an Attribute to the Domain Model 
 
 The app will open the corresponding page depending on the grade of a customer, for this we need to create a new entity and a new attribute first. To create the new entity and attribute, do the following:
 
 1. Open your [domain model](domain-models).
-2. Create entity *Customer*. For more information on how to create the entity, see section [3 Adding New Entities](domain-models) in *Domain Models Overview in the Web Modeler*.
+2. Create entity *Customer*. For more information on how to create the entity, see section [3 Adding New Entities](domain-models) in *Domain Models Overview*.
 3.  For the **Customer** entity, create attribute (for more information on how to create the attribute, see section [4 Adding New Attributes](domain-models)) and do the following:<br />
     a. Set the attribute **Name** to *Grade*.<br />
     b. Set the [**Type**](domain-models-attributes) to **Enumeration**.<br />

@@ -77,7 +77,7 @@ When publishing a web or REST service, you should consider whether this service 
 
 Mendix offers the following options for providing authentication for your services:
 
-* User name and password validation, specified within the Mendix Modeler (for details, see [Published Web Services](/refguide/published-web-services))
+* User name and password validation, specified within the Mendix Modeler (for details, see [Published Web Services](/refguide7/published-web-services))
 * Client certificates and IP ranges, which are specified in the Mendix Cloud – these can be found at the network tab of your node’s environment details as **Access Restriction Profiles**
 
 ## 6 Using the Encryption Module When Storing Sensitive Information
@@ -113,7 +113,7 @@ By default, Mendix forces a strong password policy. The same password policy tha
 
 It is very tempting to simplify the password constraints for development purposes (for example, making it possible to use a single character to login). However, we recommend avoiding this approach so that deployments will continue to force a strong password policy.
 
-The password policy can be set by via the guidelines described in [Password Policy](/refguide/password-policy).
+The password policy can be set by via the guidelines described in [Password Policy](/refguide7/password-policy).
 
 ## 9 Renaming the Administrator User
 

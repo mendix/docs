@@ -19,7 +19,7 @@ The Mendix Desktop Modeler enables you to build apps on the Mendix Platform. Thi
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* You need a Windows environment to install the Modeler (see [System Requirements](/refguide/system-requirements) for the full list of supported systems and required frameworks)
+* You need a Windows environment to install the Modeler (see [System Requirements](/refguide7/system-requirements) for the full list of supported systems and required frameworks)
 
 ## 3 Download the Mendix Desktop Modeler
 
@@ -68,5 +68,5 @@ This concludes the how-to about installing the Mendix Desktop Modeler.
 
 ## 5 Read More
 
-* [Desktop Modeler](/refguide/desktop-modeler)
-* [Desktop Modeler Overview](/refguide/desktop-modeler-overview)
+* [Desktop Modeler](/refguide7/desktop-modeler)
+* [Desktop Modeler Overview](/refguide7/desktop-modeler-overview)

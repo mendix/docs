@@ -142,4 +142,4 @@ In the previous section you have constrained the data grid on attributes of the 
 
 ## 9 Read More
 
-*   [XPath Constraints](/refguide/xpath-constraints)
+*   [XPath Constraints](/refguide7/xpath-constraints)

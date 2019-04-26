@@ -14,15 +14,16 @@ Beta features are part of regular Mendix releases. By default they are disabled.
 
 Please take note of the following limitations regarding beta features:
 
-* Beta features may be incomplete; future releases may include more functionality to complete the feature
-* Beta features may change in future releases, depending on the feedback
-    * Even though we aim for backwards compatibility, Mendix can not guarantee backwards compatibility between monthly releases for beta features.
-* Beta features are not covered by any SLA
-    * We value feedback, including tickets describing problems with beta features, but these tickets will not be handled according to your SLA
-    * We cannot guarantee timely fixes for any problems you encounter with beta features
 * Beta features should not be used for production applications
     * We do not offer production support on beta features
     * Beta features may contain bugs, which could potentially lead to data corruption
+* Beta features are not covered by any SLA
+    * We value feedback, including tickets describing problems with beta features, but these tickets will not be handled according to your SLA
+    * We cannot guarantee timely fixes for any problems you encounter with beta features 
+* Beta features may introduce breaking changes
+    * Even though we aim for backwards compatibility, Mendix cannot guarantee backwards compatibility between monthly releases for beta features
+* Beta features may change in future releases, depending on the feedback
+* Beta features may be incomplete; future releases may include more functionality to complete the feature
 
 ## 3 Testing Beta Features
 

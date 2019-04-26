@@ -9,21 +9,21 @@ The add button can only be used in the reference set selector. With this button,
 
 ## Common Properties
 
-{{% snippet file="refguide/Class+Property.md" %}}
+{{% snippet file="refguide7/Class+Property.md" %}}
 
-{{% snippet file="refguide/Style+Property.md" %}}
+{{% snippet file="refguide7/Style+Property.md" %}}
 
 ## General Properties
 
-{{% snippet file="refguide/Caption+Property.md" %}}
+{{% snippet file="refguide7/Caption+Property.md" %}}
 
-{{% snippet file="refguide/Tooltip+Property.md" %}}
+{{% snippet file="refguide7/Tooltip+Property.md" %}}
 
-{{% snippet file="refguide/Image+Property.md" %}}
+{{% snippet file="refguide7/Image+Property.md" %}}
 
-{{% snippet file="refguide/Button+Style+Property.md" %}}
+{{% snippet file="refguide7/Button+Style+Property.md" %}}
 
-{{% snippet file="refguide/Is+default+button+Property.md" %}}
+{{% snippet file="refguide7/Is+default+button+Property.md" %}}
 
 ### Page
 
@@ -33,6 +33,6 @@ See [Opening Pages](opening-pages). Note that opening select pages in content is
 
 ## Visibility Properties
 
-{{% snippet file="refguide/Visibility+Property.md" %}}
+{{% snippet file="refguide7/Visibility+Property.md" %}}
 
-{{% snippet file="refguide/Visibility+Property+With+Module+Roles+Simple.md" %}}
+{{% snippet file="refguide7/Visibility+Property+With+Module+Roles+Simple.md" %}}

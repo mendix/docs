@@ -1,5 +1,5 @@
 ---
-title: "Page Editor in the Web Modeler"
+title: "Page Editor"
 description: "Describes the page editor in the Mendix Web Modeler."
 menu_order: 30
 tags: ["web modeler", "page editor", "pages"]
@@ -27,7 +27,7 @@ Pages of the Web Modeler consist of the following components:
 * **Layouts** structure your pages. Every page is based on a layout. For example, **Atlas_Default** or **PopupLayout** are types of layouts you can choose when creating a page.
 * **Templates** – a starting point for creating new pages. Every time you create a new page, you select a template depending on data you want to display on your page and the way you want to display it: a list, a dashboard, a form. For example, **Dashboard Action Tiles**, **List Default**, **Master Detail** are types of templates. 
 * **Building blocks** – pre-configured  set of elements that speeds up the process of building your page and styling it. For more information, see section [5.1 Building Blocks](#building-blocks). 
-* **Widgets** – single user-interface elements. For more information, see section [5.2. Widgets](#widgets) and [Widgets in the Web Modeler](page-editor-widgets).
+* **Widgets** – single user-interface elements. For more information, see section [5.2. Widgets](#widgets) and [Widgets](page-editor-widgets).
 
 The components described above are powered by Atlas UI. For more information, see [Atlas UI](../../howto/front-end/atlas-ui). 
 
@@ -156,11 +156,11 @@ Building Blocks categories may differ because Atlas UI can be customized using t
 
 ### 5.2 Widgets {#widgets}
 
-Widgets are single user-interface elements that can be configured. For more information, see [Widgets in the Web Modeler](page-editor-widgets). 
+Widgets are single user-interface elements that can be configured. For more information, see [Widgets](page-editor-widgets). 
 
 {{% alert type="info" %}}
 
-You can update widgets in the [App Settings](app-settings-wm). 
+You can update widgets in the [App Settings](app-settings). 
 
 {{% /alert %}}
 
@@ -174,4 +174,4 @@ The **Properties** tab displays the properties of the currently selected element
 
 ## 7 Read More
 
-* [Data View & List View Properties in the Web Modeler](page-editor-data-view-list-view)
+* [Data View & List View Properties](page-editor-data-view-list-view)

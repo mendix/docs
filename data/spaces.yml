@@ -30,21 +30,6 @@ ats:
     - "Reference Guide"
     - "How-to's"
     - "Best Practices"
-howto40:
-  space: "Mendix 4 How-to's"
-  priority: false
-  mendix_version: 4
-  noindex: true
-  menu_categories:
-    - "General"
-    - "Modeler"
-    - "Java Programming"
-    - "Deployment"
-    - "Custom Widgets"
-    - "Debugging"
-  banner:
-    type: 'warning'
-    text: 'You are browsing the documentation of an unsupported version of Mendix. Please find the latest version of the How-To&#39;s <a href="/howto/">here</a>.'
 howto50:
   space: "Mendix 5 How-to's"
   priority: false
@@ -100,25 +85,6 @@ howto:
     - "Testing"
     - "Monitoring & Troubleshooting"
     - "Collaboration & Requirements Management"
-refguide4:
-  space: "Mendix 4 Reference Guide"
-  priority: false
-  mendix_version: 4
-  noindex: true
-  menu_categories:
-    - "App Platform"
-    - "Team Server"
-    - "Modeler"
-    - "Runtime"
-    - "Client"
-    - "Java Programming"
-    - "Release Notes"
-    - "System Requirements"
-    - "Moving from 3 to 4"
-    - "Deployment"
-  banner:
-    type: 'warning'
-    text: 'You are browsing the documentation of an unsupported version of Mendix. Please find the latest version of the Reference Guide <a href="/refguide/">here</a>.'
 refguide5:
   space: "Mendix 5 Reference Guide"
   priority: false
@@ -189,17 +155,17 @@ web-modeler:
   space: "Web Modeler Guide"
   priority: false
   menu_categories:
-    - "Web Modeler General Info"
-    - "Domain Model in the Web Modeler"
-    - "Page Editor in the Web Modeler"
-    - "Navigation Document in the Web Modeler"
-    - "Microflows in the Web Modeler"
-    - "Publishing Your App From the Web Modeler"
-    - "Checks in the Web Modeler"
-    - "Consistency Errors in the Web Modeler"
-    - "Theme Customizer in the Web Modeler"
-    - "App Settings in the Web Modeler"
-best-practices:
+    - "General Info"
+    - "Domain Model"
+    - "Page Editor"
+    - "Navigation Document"
+    - "Microflows"
+    - "Publishing Your App"
+    - "Checks"
+    - "Consistency Errors"
+    - "Theme Customizer"
+    - "App Settings"
+best-practices7:
   space: "Best Practices"
   priority: false
   draft: true

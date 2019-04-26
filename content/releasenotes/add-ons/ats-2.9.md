@@ -13,8 +13,8 @@ Mendix applications that are based on [Mendix version 7.22.2](../desktop-modeler
 
 ### Improvements
 
-* We added support for [authentication widgets](/refguide/authentication-widgets). Login pages built with authentication widgets can now be recorded and tested with ATS.
-* We added support for clicking on [static images](/refguide/static-image-document-template). Clicks on images can now be recorded and tested with ATS.
+* We added support for [authentication widgets](/refguide7/authentication-widgets). Login pages built with authentication widgets can now be recorded and tested with ATS.
+* We added support for clicking on [static images](/refguide7/static-image-document-template). Clicks on images can now be recorded and tested with ATS.
 
 ### Fixes
 

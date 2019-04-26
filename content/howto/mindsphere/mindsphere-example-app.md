@@ -171,9 +171,9 @@ It is based on the standard Mendix starter app for Mendix version 7.22. It also 
 * MindSphere Theme Pack
 * MindSphere OS Bar Connector
 
-The use of these modules is covered in more detail in [Siemens MindSphere – deployment](/developerportal/deploy/deploying-to-mindsphere).
+The use of these modules is covered in more detail in [MindSphere Module Details](/refguide/mindsphere/mindsphere-module-details).
 
-It also uses the **MindSphere Asset Management Connector**. This is described in [MindSphere Asset Management Connector](/refguide/mindsphere/mindsphere-asset-management-connector).
+It also uses the **MindSphere Asset Management Connector**. This is described in [MindSphere Asset Management Connector](/refguide7/mindsphere/mindsphere-asset-management-connector).
 
 To use the app:
 
@@ -183,7 +183,7 @@ To use the app:
 
     ![Example App Home page](attachments/mindsphere-example-app/image8.png)
 
-3.  If you are running locally, you will need to provide *Client ID* and *Client Secret* credentials for your app. See [MindSphere Development Considerations](/refguide/mindsphere/mindsphere-development-considerations) for more information on how to do this.
+3.  If you are running locally, you will need to provide *Client ID* and *Client Secret* credentials for your app. See [MindSphere Development Considerations](/refguide7/mindsphere/mindsphere-development-considerations) for more information on how to do this.
 
     If you are running in the MindSphere launchpad, you will be logged on using Single Sign-on.
 
@@ -220,7 +220,7 @@ The app uses Single Sign-on (SSO) to identify the user. This is initiated in the
 
 The user is given the role of *user* or *admin* within MindSphere. These roles are translated to MindSphere scopes which are matched to the Mendix user role. With the recommended mapping, a user with the app role *user* in MindSphere will be given the Mendix user role *user*.
 
-For a more complete description, see the [User Scopes](#userscopes) section.
+For a more complete description, see the [User Scopes](#userscopes) section above.
 
 #### 6.1.2 Multi-Tenant Support
 
@@ -248,7 +248,7 @@ The *Access Token* action is called at the start of every microflow which access
 
 ### 6.3 Asset Management
 
-Asset Management (retrieving assets and asset types) is performed using the MindSphere Asset Management Connector. This is described in [MindSphere Asset Management Connector](/refguide/mindsphere/mindsphere-asset-management-connector).
+Asset Management (retrieving assets and asset types) is performed using the MindSphere Asset Management Connector. This is described in [MindSphere Asset Management Connector](/refguide7/mindsphere/mindsphere-asset-management-connector).
 
 ### 6.4 Native REST
 
@@ -266,4 +266,4 @@ However, MindSphere will queue this request internally and the data will not be 
 
 ## 7 Read More
 
-* [MindSphere Asset Management Connector](/refguide/mindsphere/mindsphere-asset-management-connector)
+* [MindSphere Asset Management Connector](/refguide7/mindsphere/mindsphere-asset-management-connector)

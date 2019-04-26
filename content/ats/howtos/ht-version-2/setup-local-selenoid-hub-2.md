@@ -27,9 +27,9 @@ The following components are needed to set up a local Selenoid hub:
 
 The following steps describe how to install the hub and nodes with Docker-Compose:
 
-1. Create a folder or a directory to place your docker-compose.yml and browser.json files.
+1. Create a folder or a directory to place your docker-compose.yml and browsers.json files.
 2. Create a folder or directory to place your video files.
-3. Create a browser.json in your folder/directory (/docker)
+3. Create a browsers.json in your folder/directory (/docker)
 
    ```
       {
@@ -137,9 +137,9 @@ After executing the test case, don't forget to download the video file or give i
 
 ## 6 Optional: Installing a Hub with a Portal with "Live-View"
 
-To install a hub with a Portal for "Live-View" you need a different browser.json and docker-compose.yml file. To add a "Live-View" follow these steps:
+To install a hub with a Portal for "Live-View" you need a different browsers.json and docker-compose.yml file. To add a "Live-View" follow these steps:
 
-1. Create a browser.json with VNC browser image:
+1. Create a browsers.json with VNC browser image:
 
    ```
    {

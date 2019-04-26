@@ -1,6 +1,6 @@
 ---
-title: "Widgets in the Web Modeler"
-category: "Page Editor in the Web Modeler"
+title: "Widgets"
+category: "Page Editor"
 description: "Describes widgets in the Mendix Web Modeler."
 tags: ["web modeler", "page editor", "pages", "widgets"]
 ---
@@ -14,7 +14,7 @@ Widgets are single user-interface elements that can be configured: for example, 
 
 Widgets in the Web Modeler are grouped by category and can be classified by their origin.
 
-## 2 Viewing Widgets in the Web Modeler
+## 2 Viewing Widgets
 
 To view widgets in the Web Modeler, do the following:
 
@@ -37,12 +37,12 @@ Widget categories are described in the table below:
 
 | Widget Category                                      | Description                                                  | Link to More Detailed Documentation                          |
 | ---------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Data Containers                                      | Contains a data view (the starting point for showing the contents of one object),  list view (the starting point for showing the contents of list of objects), and a data grid (shows a list of objects in a table format). | [Data View & List View Properties in the Web Modeler](page-editor-data-view-list-view)<br />[Data Grid Properties in the Web Modeler](page-editor-data-grid) |
-| [Input Elements](page-editor-widgets-input-elements) | Contains elements that can be used for inputting data.       | [Input Element Widgets in the Web Modeler](page-editor-widgets-input-elements) |
-| [Images](page-editor-widgets-images)                 | Contains image display widgets.                              | [Image Widgets in the Web Modeler](page-editor-widgets-images) |
-| [Text](page-editor-widgets-text)                     | Contains text display widgets.                               | [Text Widgets in the Web Modeler](page-editor-widgets-text)  |
-| [Buttons](page-editor-widgets-buttons)               | Contains a variety of buttons for placing on a page.         | [Button Widgets in the Web Modeler](page-editor-widgets-buttons) |
-| [Layouts](page-editor-widgets-layouts)               | Contains layouts for controlling the placing widgets.        | [Layout Widgets in the Web Modeler](page-editor-widgets-layouts) |
+| Data Containers                                      | Contains a data view (the starting point for showing the contents of one object),  list view (the starting point for showing the contents of list of objects), and a data grid (shows a list of objects in a table format). | [Data View & List View Properties](page-editor-data-view-list-view)<br />[Data Grid Properties](page-editor-data-grid) |
+| [Input Elements](page-editor-widgets-input-elements) | Contains elements that can be used for inputting data.       | [Input Element Widgets](page-editor-widgets-input-elements) |
+| [Images](page-editor-widgets-images)                 | Contains image display widgets.                              | [Image Widgets](page-editor-widgets-images) |
+| [Text](page-editor-widgets-text)                     | Contains text display widgets.                               | [Text Widgets](page-editor-widgets-text)  |
+| [Buttons](page-editor-widgets-buttons)               | Contains a variety of buttons for placing on a page.         | [Button Widgets](page-editor-widgets-buttons) |
+| [Layouts](page-editor-widgets-layouts)               | Contains layouts for controlling the placing widgets.        | [Layout Widgets](page-editor-widgets-layouts) |
 | [Menus](/refguide/menu-widgets)                      | Contains menu creation widgets. Currently, these widgets can be configured only in the Desktop Modeler. | [Menu Widgets](/refguide/menu-widgets) in the *Desktop Modeler* category |
 | Display                                              | Contains widgets which display changing elements on a page, for example a map, or a progress bar. This category consists of the App Store widgets. | section [4 Widgets by Origin](#widgets-by-origin)            |
 | Charts                                               | Contains different charts. This category consist of the App Store widgets. | section [4 Widgets by Origin](#widgets-by-origin)            |
@@ -82,7 +82,7 @@ To add an App Store widget, do the following:
 
     ![](attachments/page-editor-widgets/app-store-download.png)
 
-The widget is now added to your project, you can simply drag and drop it to the page to use it. You can also view settings of this widget in the **App Settings**.  For more information on managing widgets in your app, see [App Settings in the Web Modeler](app-settings-wm).
+The widget is now added to your project, you can simply drag and drop it to the page to use it. You can also view settings of this widget in the **App Settings**.  For more information on managing widgets in your app, see [App Settings](app-settings).
 
 {{% alert type="info" %}}
 
@@ -92,6 +92,6 @@ Some similar widgets are packaged together: downloading one of these widgets wil
 
 ## 6 Read More 
 
-* [Page Editor in the Web Modeler](page-editor)
-* [App Settings in the Web Modeler](app-settings-wm)
+* [Page Editor](page-editor)
+* [App Settings](app-settings)
 * [App Store Overview](/developerportal/app-store/app-store-overview)

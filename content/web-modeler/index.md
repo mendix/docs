@@ -19,13 +19,13 @@ The Web Modeler enables you to do the following:
 
 The main documents in the Web Modeler Reference are the following ones:
 
-* [Web Modeler General Info](general) 
-* [Domain Model in the Web Modeler](domain-models)
-* [Page Editor in the Web Modeler](page-editor)
-* [Navigation Document in the Web Modeler](navigation)
-* [Microflows in the Web Modeler](microflows)
-* [Publishing Your App From the Web Modeler](publishing-app)
-* [Checks in the Web Modeler](checks)
-* [Consistency Errors in the Web Modeler](consistency-errors)
-* [Theme Customizer in the Web Modeler](theme-customizer)
-* [App Settings in the Web Modeler](app-settings-wm)
+* [General Info](general) 
+* [Domain Model](domain-models)
+* [Page Editor](page-editor)
+* [Navigation Document](navigation)
+* [Microflows](microflows)
+* [Publishing Your App](publishing-app)
+* [Checks](checks)
+* [Consistency Errors](consistency-errors)
+* [Theme Customizer](theme-customizer)
+* [App Settings](app-settings)

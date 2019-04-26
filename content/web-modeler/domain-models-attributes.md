@@ -1,6 +1,6 @@
 ---
-title: "Attribute Types in the Web Modeler"
-category: "Domain Model in the Web Modeler"
+title: "Attribute Types"
+category: "Domain Model"
 description: "Describes attribute types in the Mendix Web Modeler."
 tags: ["web modeler", "domain model", "attributes", "attribute types"]
 ---
@@ -49,10 +49,10 @@ You can find the description of specific properties that differ per attribute ty
 | Property                                 | Attribute Type | Description                                                  |
 | ---------------------------------------- | -------------- | ------------------------------------------------------------ |
 | Localize                                 | Date and Time  | Indicates if local time or server time is used. **Use local time** means the local time zone of a user will be used. **Use server time** means UTC  will be set for all users. <br />*Default value: Use local time* |
-| [Enumeration](domain-models-enumeration) | Enumeration    | With this property you can define an enumeration (predefined list of options), by creating a new list or choosing from existing enumerations. For more information, see [Enumeration in the Web Modeler](domain-models-enumeration). |
+| [Enumeration](domain-models-enumeration) | Enumeration    | With this property you can define an enumeration (predefined list of options), by creating a new list or choosing from existing enumerations. For more information, see [Enumeration](domain-models-enumeration). |
 | Length                                   | String         | Specifies whether the length of a string is limited or unlimited. In the case the length is limited, the **Max-Length** property specifies the maximum number of characters that can be stored in the attribute . <br />*Default value: Unlimited* |
 
 ## 4 Read More
 
-* [Domain Model in the Web Modeler](domain-models)
-* [Enumeration in the Web Modeler](domain-models-enumeration)
+* [Domain Model](domain-models)
+* [Enumeration](domain-models-enumeration)

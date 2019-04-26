@@ -1,5 +1,5 @@
 ---
-title: "Microflows in the Web Modeler"
+title: "Microflows"
 description: "Describes the microflows in the Mendix Web Modeler."
 menu_order: 50
 tags: ["web modeler", "microflow"]
@@ -120,7 +120,7 @@ The **Client Activities** are described in the table below.
 | Activity                            | Description                                                  |
 | ----------------------------------- | ------------------------------------------------------------ |
 | [Close Page](/refguide/close-page)         | This activity closes the currently open page.                |
-| [Show Home Page](/refguide/show-home-page) | The **Show Home Page** action navigates to the home page for the current user. It goes to the same page as the user goes to after signing in and respects role-based home pages. For details on setting the home page, see [Navigation Document in the Web Modeler](navigation). |
+| [Show Home Page](/refguide/show-home-page) | The **Show Home Page** action navigates to the home page for the current user. It goes to the same page as the user goes to after signing in and respects role-based home pages. For details on setting the home page, see [Navigation Document](navigation). |
 | [Show Message](/refguide/show-message)     | With the **Show Message** action you can show a blocking or non-blocking message to the user. (Non-blocking message lets users continue their work in the app with the pop-up open, while the blocking message does not let the user continue work until the pop-up window is closed. ) |
 | [Show Page](/refguide/show-page)           | With this action you can show a page to the end user.        |
 
@@ -163,7 +163,7 @@ When configuring the activities of the microflows you will notice icons above or
 
 ## 8 Read More
 
-* [The Web Modeler General Info](general)
-* [Exclusive Split in the Web Modeler](microflows-exclusive-split)
-* [Microflow Expressions in the Web Modeler](microflows-expressions)
-* [Setting and Changing a Value for Different Activities in the Microflows in the Web Modeler](microflows-setting-and-changing-value)
+* [General Info](general)
+* [Exclusive Split](microflows-exclusive-split)
+* [Microflow Expressions](microflows-expressions)
+* [Set & Change a Value for Different Activities in the Microflows](microflows-setting-and-changing-value)

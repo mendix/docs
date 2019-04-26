@@ -18,6 +18,19 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud V3, and other deploym
 * For App Store administrators, you can now set [content managers](/developerportal/app-store/app-store-overview.md #cm) who are allowed to manage your company content by marking it as protected.
 * You can now share private App Store content with [external downloaders](/developerportal/app-store/app-store-overview.md #ext) from other companies.
 
+### April 8th, 2019
+
+#### Improvements
+
+* We have added the ability to create webhooks for your app projects. These webhooks can be configured to send information when sprints change and/or stories change. For more information, see the [Managing Webhooks](/developerportal/settings/general-settings#webhooks) section of *How to Manage General App Settings* as well as [Webhooks](/apidocs-mxsdk/apidocs/webhooks-sprints) in the *API Documentation*.
+* We have added support for SAP HANA in the Developer Portal. You can now choose to deploy to SAP Cloud Platform using an SAP HANA database schema. For more information see [SAP Cloud Platform](/developerportal/deploy/sap-cloud-platform).
+
+### April 5th, 2019
+
+#### Fixes
+
+* We fixed an issue with the Developer Portal where the memory utilization was not optimized and could cause system instability. This change does not affect memory utilization by customer apps.
+
 ### April 4th, 2019
 
 #### Fixes
@@ -36,9 +49,7 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud V3, and other deploym
     * When deploying your application via the Developer Portal you can choose the destination environment
     * When viewing metrics, logs, backups, etc. you will have to choose the environment using a drop-down rather than clicking directly on the environment you want
 * We have added the ability to manage tags through the Developer Portal, in addition to the current method which involved using the API
-* We have changed Mendix deployment to **SAP Cloud Platform** so that the Cloud Foundry stack cflinuxfs3 is used. Previously, Mendix apps were using cflinuxfs2, which has been deprecated by SAP (see [SAP release note from 14 March, 2019](https://help.sap.com/doc/43b304f99a8145809c78f292bfc0bc58/Cloud/en-US/98bf747111574187a7c76f8ced51cfeb.html?sel1=Cloud%20Foundry%20Environment&sel3=Announcement)). 
-
-    The next time that you deploy a new, or existing, Mendix app to *SAP Cloud Platform* from the Mendix Developer Portal, the new stack will be applied to your app.
+* We have changed Mendix deployment to **SAP Cloud Platform** so that the Cloud Foundry stack cflinuxfs3 is used. Previously, Mendix apps were using cflinuxfs2, which has been deprecated by SAP. See [Cloud Foundry Environment – Deprecation of cflinuxfs2](https://help.sap.com/doc/43b304f99a8145809c78f292bfc0bc58/Cloud/en-US/98bf747111574187a7c76f8ced51cfeb.html?from=2018-11-08&sel3=Announcement&sel1=Cloud%20Foundry%20Environment&to=2018-11-08) SAP release note from 8 November 2018, and [Rapid Application Development by Mendix – Stack Switch](https://help.sap.com/doc/43b304f99a8145809c78f292bfc0bc58/Cloud/en-US/98bf747111574187a7c76f8ced51cfeb.html?from=2019-03-29&to=2019-03-29&sel3=Announcement) SAP release note from 29 March 2019 for more information. The next time that you deploy a new, or existing, Mendix app to *SAP Cloud Platform* from the Mendix Developer Portal, the new stack will be applied to your app.
 
 ### March 21st, 2019
 
@@ -112,7 +123,7 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud V3, and other deploym
 * We released an upgraded version of the [IBM Watson Connector Suite](https://appstore.home.mendix.com/link/app/2860/), which supports IBM Watson SDK version 6.11.0 and adds additional microflow actions.
 * We released an upgraded version of the [IBM Watson Connector Suite Example Project](https://appstore.home.mendix.com/link/app/2880/), which includes the new IBM Watson Connector Suite.
 * We released an upgraded version of the IBM Watson Blank App starter app, which includes the new IBM Watson Connector Suite.
-* For more information see [IBM Watson Connector](https://docs.mendix.com/refguide/ibm/ibm-watson-connector).
+* For more information see [IBM Watson Connector](https://docs.mendix.com/refguide7/ibm/ibm-watson-connector).
 
 ### January 21st, 2019
 
@@ -239,7 +250,7 @@ The Web Modeler can now be enabled for all types of apps. You can do this on the
 
 #### SAP OData Connector Version 4.0.0
 
-This version of the SAP OData Connector allows you to use the destination services of SAP Cloud Platform. This simplifies configuration, authentication and endpoint management when integrating your application, running in SAP Cloud Platform, with SAP backend services. See [SAP Destination Service](/refguide/sap/sap-destination-service).
+This version of the SAP OData Connector allows you to use the destination services of SAP Cloud Platform. This simplifies configuration, authentication and endpoint management when integrating your application, running in SAP Cloud Platform, with SAP backend services. See [SAP Destination Service](/refguide7/sap/sap-destination-service).
 
 The following authentication types are currently supported in SAP Destination Services:
 
@@ -265,7 +276,7 @@ We now configure Destination Service in the scope of XSUAA. This means that we a
 
 #### Breaking Changes
 
-* The new **SAP OData Connector** will break existing projects which are using the SAP Cloud Connector. The SAP OData Connector no longer supports the “Use Cloud Connector” attribute. This is now embedded in the destination service configuration. See [SAP Destination Service](/refguide/sap/sap-destination-service) for more details.
+* The new **SAP OData Connector** will break existing projects which are using the SAP Cloud Connector. The SAP OData Connector no longer supports the “Use Cloud Connector” attribute. This is now embedded in the destination service configuration. See [SAP Destination Service](/refguide7/sap/sap-destination-service) for more details.
 
 #### Fixes
 

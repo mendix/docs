@@ -13,8 +13,8 @@ The Mendix Modeler contains a version control system that supports collaborating
 
 For more information and general help on version control, see the following documents:
 
-* [Version Control](/refguide/version-control)
-* [Using Version Control in the Desktop Modeler](/refguide/using-version-control-in-the-dm)
+* [Version Control](/refguide7/version-control)
+* [Using Version Control in the Desktop Modeler](/refguide7/using-version-control-in-the-dm)
 
 ## 2 Known Problems & Fixes
 
@@ -49,7 +49,7 @@ If you are using the Desktop Modeler version 7.18 or higher, follow these steps:
 
 ### 2.4 Getting an Error with the Message `<project folder> is already locked`
 
-1. Install TortoiseSVN, as suggested in [System Requirements](/refguide/system-requirements). Use version 1.7.x, which can be downloaded [here](https://sourceforge.net/projects/tortoisesvn/files/1.7.15/).
+1. Install TortoiseSVN, as suggested in [System Requirements](/refguide7/system-requirements). Use version 1.7.x, which can be downloaded [here](https://sourceforge.net/projects/tortoisesvn/files/1.7.15/).
 2. Go to the parent directory (folder) of your project (this is the folder with the **<folder_name>** from the error message).
 3. Right-click to open the folder's context menu.
 4. On the **TortoiseSVN** sub-menu, select **Clean up**.
@@ -63,7 +63,7 @@ Remove your user settings and restart the Modeler.
 
 ### 2.6 Getting an Error with the Message `SharpSvn.SvnRepositoryIOException: At least one property change failed; repository is unchanged` {#error-with-message}
 
-1. Install TortoiseSVN, as suggested in [System Requirements](/refguide/system-requirements). Use version 1.7.x, which can be downloaded from [Sourceforge](https://sourceforge.net/projects/tortoisesvn/files/1.7.15/).
+1. Install TortoiseSVN, as suggested in [System Requirements](/refguide7/system-requirements). Use version 1.7.x, which can be downloaded from [Sourceforge](https://sourceforge.net/projects/tortoisesvn/files/1.7.15/).
 2. Open the project folder via the Desktop Modeler by choosing **Show Project Directory in Explorer** from the **Project** menu.
 3. Right-click the white background of the project folder.
 4. Select **TortoiseSVN > Properties**.
@@ -127,7 +127,7 @@ Note that a conflict is reported on the project *folder*. This usually means tha
 
 To resolve a conflict on the svn:ignore property, perform the following steps.
 
-1. Install TortoiseSVN, as suggested in [System Requirements](/refguide/system-requirements). Use version 1.7.x, which can be downloaded from [Sourceforge](https://sourceforge.net/projects/tortoisesvn/files/1.7.15/).
+1. Install TortoiseSVN, as suggested in [System Requirements](/refguide7/system-requirements). Use version 1.7.x, which can be downloaded from [Sourceforge](https://sourceforge.net/projects/tortoisesvn/files/1.7.15/).
 2. Open the project directory in the Windows File Explorer
 3. Right-click the white background and choose **TortoiseSVN > Edit Conflicts**.
 

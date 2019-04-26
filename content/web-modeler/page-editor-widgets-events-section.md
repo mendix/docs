@@ -1,5 +1,5 @@
 ---
-title: "Events Section in Widgets of the Web Modeler"
+title: "Events Section in Widgets"
 parent: "page-editor-widgets"
 description: "Describes the Events section in widgets properties in the Mendix Web Modeler."
 tags: ["web modeler", "page editor", "widgets", "on click action", "events"]
@@ -91,4 +91,4 @@ When placed on a data view, **Delete Object** will delete the connected object. 
 
 ## 3 Read More
 
-* [Widgets in the Web Modeler](page-editor-widgets)
+* [Widgets](page-editor-widgets)

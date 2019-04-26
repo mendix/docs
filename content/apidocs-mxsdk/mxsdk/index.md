@@ -30,14 +30,15 @@ Browse the  documentation below about the Mendix metamodel as well as external r
 
 ### 2.2 Mendix Model SDK
 
-*  Manipulating existing models:
+* [Mendix Model SDK](https://apidocs.mendix.com/modelsdk/latest/index.html)
+* [Mendix Model SDK Release Notes](/releasenotes/sdk/model-sdk)
+* Manipulating existing models:
     * [Finding Things in the Model](finding-things-in-the-model)
     * [Loading Things in the Model](loading-units-and-elements)
     * [Changing Things in the Model](changing-things-in-the-model)
     * [Closing the Server Connection](closing-the-server-connection)
 * [Generating Code from the Model](generating-code-from-the-model)
 * [Working with when.js and Promises in TypeScript](working-with-when.js-and-promises-in-typescript)
-* [Model SDK API Docs](https://apidocs.mendix.com/modelsdk/latest/index.html)
 
 ### 2.3 Other Resources
 

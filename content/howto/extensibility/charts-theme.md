@@ -117,6 +117,6 @@ To change the font in all charts in the app, follow these steps:
 
 ## 4 Read More
 
-* [Charts reference guide](/refguide/chart-widgets)
-* [Layout samples](/refguide/charts-advanced-cheat-sheet#layout-all)
-* [Configuration samples](/refguide/charts-advanced-cheat-sheet#config-options)
+* [Charts reference guide](/refguide7/chart-widgets)
+* [Layout samples](/refguide7/charts-advanced-cheat-sheet#layout-all)
+* [Configuration samples](/refguide7/charts-advanced-cheat-sheet#config-options)

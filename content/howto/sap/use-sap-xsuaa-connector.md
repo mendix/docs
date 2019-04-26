@@ -26,7 +26,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Create an SAP app using an SAP starter app
 * Select and deploy the app to an SAP account and subaccount where you have authority to configure security
-* Set the security level for the project to at least Prototype/demo to use SAP Authentication; for more information see [Project Security](/refguide/project-security) and for instructions on setting security levels, see [How To Create a Secure App](../security/create-a-secure-app)
+* Set the security level for the project to at least Prototype/demo to use SAP Authentication; for more information see [Project Security](/refguide7/project-security) and for instructions on setting security levels, see [How To Create a Secure App](../security/create-a-secure-app)
 * Setup the app with the following two **User roles** in **Project ... > Security**: Supervisor and Inspector
 
 	![](attachments/use-sap-xsuaa-connector/add-roles-to-app.png)
@@ -234,8 +234,8 @@ You can picture the authentication as shown below:
 
 * [How To Create a Secure App](../security/create-a-secure-app)
 * [How To Use App Store Content](/developerportal/app-store/app-store-content)
-* [Project Security](/refguide/project-security)
+* [Project Security](/refguide7/project-security)
 * [SAP Cloud Platform XSUAA Connector](https://appstore.home.mendix.com/link/app/78091/)
-* [SAP XSUAA Connector](/refguide/sap/sap-xsuaa-connector)
+* [SAP XSUAA Connector](/refguide7/sap/sap-xsuaa-connector)
 * [SAP Cloud Platform cockpit](https://account.hana.ondemand.com/cockpit#/home/allaccounts)
 

@@ -1,7 +1,7 @@
 ---
 title: "Extensibility"
 description: "A selection of how to's that explain how to use connectors and adapters from the App Store."
-tags: ["widget", "app store", "connectors", "adapters"]
+tags: ["widget", "app store", "connectors", "adapters", "charts"]
 ---
 
 ## 1 Introduction

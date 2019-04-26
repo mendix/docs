@@ -40,7 +40,7 @@ To create a line chart with the **Any Chart** widget, follow these steps:
 
 1. Create a page with a data view (Chart context).
 2. Add the Any Chart widget in the data view.
-3. Select the line chart sample from the [Any Chart cheat sheet](../../refguide/charts-any-cheat-sheet#line-chart):
+3. Select the line chart sample from the [Any Chart cheat sheet](../../refguide7/charts-any-cheat-sheet#line-chart):
 
     ```json
     [ { "x": [ 1, 2 ], "y": [ 1, 2 ], "type": "scatter" } ]
@@ -117,9 +117,9 @@ To fine tune a Charts widget configuration, follow these steps:
 
 ## 7 Read More
 
-* **Any Chart** properties: [Any Chart Reference Guide](/refguide/charts-any-configuration)
-* The most common chart types:  [Any Chart Cheat Sheet](/refguide/charts-any-cheat-sheet)
-* The most common settings: [Configuration Cheat Sheet](/refguide/charts-advanced-cheat-sheet)
+* **Any Chart** properties: [Any Chart Reference Guide](/refguide7/charts-any-configuration)
+* The most common chart types:  [Any Chart Cheat Sheet](/refguide7/charts-any-cheat-sheet)
+* The most common settings: [Configuration Cheat Sheet](/refguide7/charts-advanced-cheat-sheet)
 * The full JSON reference: [https://plot.ly/javascript/reference/](https://plot.ly/javascript/reference/)
-* Mendix modeler documentation: [JSON structures](/refguide/json-structures)
-* Mendix modeler documentation: [Export Mappings](/refguide/export-mappings)  
+* Mendix modeler documentation: [JSON structures](/refguide7/json-structures)
+* Mendix modeler documentation: [Export Mappings](/refguide7/export-mappings)  

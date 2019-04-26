@@ -1,13 +1,13 @@
 ---
-title: "Domain Model Consistency Errors in the Web Modeler"
-category: "Consistency Errors in the Web Modeler"
+title: "Domain Model Consistency Errors"
+category: "Consistency Errors"
 description: "Describes domain model consistency errors in the Mendix Web Modeler and the way to fix them."
 tags: ["web modeler", "consistency errors", "errors", "domain model"]
 ---
 
 ## 1 Introduction 
 
-In this document, we will explain how to solve the most common consistency errors that can occur when configuring the domain model in the Desktop Modeler. For more information on domain models, see [Domain Model Overview in the Web Modeler](domain-models).
+In this document, we will explain how to solve the most common consistency errors that can occur when configuring the domain model in the Desktop Modeler. For more information on domain models, see [Domain Model](domain-models).
 
 An example of a consistency error is having the same name for two entities.
 
@@ -46,11 +46,11 @@ You can fix the delete behavior errors in one of following ways:
 * Set delete behavior of both entities to *Keep {name of entity} object(s)* 
 * Set delete behavior of both entities to *Delete {name of entity} object(s) as well*.
 
-For more information on delete behavior, see section [4 Delete Behavior](domain-models-association-properties#delete-behavior) in *Association Properties in the Web Modeler*.
+For more information on delete behavior, see section the [Delete Behavior](domain-models-association-properties#delete-behavior) section in *Association Properties*.
 
 ## 3 Read More
 
-* [Page Editor Consistency Errors in the Web Modeler](consistency-errors-pages)
-* [Navigation Consistency Errors in the Web Modeler](consistency-errors-navigation)
-* [Microflow Editor Consistency Errors in the Web Modeler](consistency-errors-microflows)
-* [Checks Overview in the Web Modeler](checks)
+* [Page Editor Consistency Errors](consistency-errors-pages)
+* [Navigation Consistency Errors](consistency-errors-navigation)
+* [Microflow Editor Consistency Errors](consistency-errors-microflows)
+* [Checks](checks)

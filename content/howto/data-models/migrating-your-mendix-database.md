@@ -32,7 +32,7 @@ The most commonly used custom settings for database migration are:
 *   SourceDatabaseUserName
 *   SourceDatabasePassword
 
-See [Custom Settings](/refguide/custom-settings) for more information on the full list of available settings. These settings can be configured as follows:
+See [Custom Settings](/refguide7/custom-settings) for more information on the full list of available settings. These settings can be configured as follows:
 
 * Modeler: in **Project Explorer**, expand **Project**, double-click **Settings**, edit a configuration, go to the right-most tab called **Custom**:
 

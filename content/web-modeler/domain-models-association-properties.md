@@ -1,6 +1,6 @@
 ---
-title: "Association Properties in the Web Modeler"
-category: "Domain Model in the Web Modeler"
+title: "Association Properties"
+category: "Domain Model"
 description: "Describes the association properties in the Mendix Web Modeler."
 tags: ["web modeler", "domain model"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -91,4 +91,4 @@ Cross module associations have the following properties:
 
 ## 6 Read More
 
-* [Domain Model in the Web Modeler](domain-models)
+* [Domain Model](domain-models)

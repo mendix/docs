@@ -34,7 +34,6 @@ In the **Web Modeler** section, you can see whether the Web Modeler is enabled f
 
 	![](attachments/enable-new-mode.png)
 
-
 ## 3 Editing Cloud Settings
 
 Click **Cloud Settings** to select the cloud platform on which to deploy your app. The selection of cloud platforms available will depend on the features of your Mendix account.
@@ -69,11 +68,42 @@ Click **Edit App Info** to edit the following details:
 {{% image_container width="450" %}}![](attachments/edit.png)
 {{% /image_container %}}
 
-## 5 Leaving the App
+## 5 Managing Webhooks {#webhooks}
+
+Click **Manage Webhooks** to manage your app's webhooks. A webhook enables the Developer Portal to talk to another website and post updated Developer Portal content (for example, sprint updates and new stories) to that website. For example, if [Mansystems](https://developer.mendixcloud.com/link/partnerprofile/1068) wants to follow the changes in their app project, they will create a service with a certain URL (see the required [URL](#url) below) that keeps track of the data. Changes in the app project in the Developer Portal are then sent to that URL.
+
+{{% alert type="info" %}}
+Only [Company Admins](../company-app-roles/companyadmin-settings) or users with the **App Settings** permission can manage webhooks.
+{{% /alert %}}
+
+On the **Webhooks settings** page, you can add a new webook and edit or delete existing webhooks:
+
+{{% image_container width="550" %}}![](attachments/webhooks-list.png)
+{{% /image_container %}}
+
+After clicking **New** to create a new webhook, fill in the following details:
+
+* **Name** – the name of the webook
+* <a name="url"></a>**URL** – the URL to which the webhook will connect 
+* **Secret** – the secret used by the Developer Portal to sign the data payload in order to identify the source of the data to the receiving URL (this appears when creating and editing a webhook, but it will not be displayed on the **Webhooks settings** page)
+* **Version** – the version of the webhooks feature to be used
+* **Events** – what types of data will be sent via the webook (you must select at least one; this appears when creating and editing a webhook, but it will not be displayed on the **Webhooks settings** page)
+  * [Sprints](../collaborate/stories#sprint)
+  * [Stories](../collaborate/stories)
+
+To edit the above details for an existing webhook, click **Edit**.
+
+To delete an existing webhook, click **Delete**.
+
+{{% alert type="info" %}}
+For details on the technical configuration of webhooks, see [Webhooks](/apidocs-mxsdk/apidocs/webhooks-sprints) in the *API Documentation*.
+{{% /alert %}}
+
+## 6 Leaving the App
 
 To leave the app, click **Leave App**. For details on leaving, deleting, and deactivating an app, see [How to Leave & Delete an App](leave-delete-app).
 
-## 6 Read More
+## 7 Read More
 
-* [How to Leave & Delete an App](leave-delete-app)
-* [How to Manage Deep Links](manage-deeplinks)
+* [Leave & Delete an App](leave-delete-app)
+* [Manage Deep Links](manage-deeplinks)

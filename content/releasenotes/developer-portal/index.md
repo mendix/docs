@@ -10,6 +10,14 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud V3, and other deploym
 
 ## 2019
 
+### April 29th, 2019
+
+#### App Store Improvements
+
+* We created a new App Store menu structure, so it is now easier to navigate through your created content. If you are a [Company Admin](/developerportal/company-app-roles/manage-roles#app-store-manager) with certain permissions, you will see additional menu items to help you manage private and public company content.
+* For App Store administrators, you can now set [content managers](/developerportal/app-store/app-store-overview.md #cm) who are allowed to manage your company content by marking it as protected.
+* You can now share private App Store content with [external downloaders](/developerportal/app-store/app-store-overview.md #ext) from other companies.
+
 ### April 4th, 2019
 
 #### Fixes
@@ -28,7 +36,6 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud V3, and other deploym
     * When deploying your application via the Developer Portal you can choose the destination environment
     * When viewing metrics, logs, backups, etc. you will have to choose the environment using a drop-down rather than clicking directly on the environment you want
 * We have added the ability to manage tags through the Developer Portal, in addition to the current method which involved using the API
-
 * We have changed Mendix deployment to **SAP Cloud Platform** so that the Cloud Foundry stack cflinuxfs3 is used. Previously, Mendix apps were using cflinuxfs2, which has been deprecated by SAP (see [SAP release note from 14 March, 2019](https://help.sap.com/doc/43b304f99a8145809c78f292bfc0bc58/Cloud/en-US/98bf747111574187a7c76f8ced51cfeb.html?sel1=Cloud%20Foundry%20Environment&sel3=Announcement)). 
 
     The next time that you deploy a new, or existing, Mendix app to *SAP Cloud Platform* from the Mendix Developer Portal, the new stack will be applied to your app.

@@ -42,7 +42,7 @@ If your application needs to access certain PropertyPermissions from Java action
 ## 4 Emulating Cloud Security {#emulate-cloud-security}
 
 {{% alert type="warning" %}}
-The ability to emulate cloud security was removed from Mendix versions 7.21 and above: see [Release Notes for Desktop Modeler Version 7.21](/releasenotes/desktop-modeler/7.21).
+The ability to emulate cloud security was removed from Mendix versions 7.21 and above: see [Release Notes for Studio Pro Version 7.21](/releasenotes/desktop-modeler/7.21).
 {{% /alert %}}
 
 Before deploying to the cloud, it is strongly recommended that you first test your Java actions locally by emulating cloud security. This will make sure you encounter no surprises with regard to cloud security when the application is actually deployed to the Cloud. This will potentially save a lot of time, as it is much harder to debug this kind of issue in the Cloud than locally.

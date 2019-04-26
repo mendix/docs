@@ -9,8 +9,8 @@ These are the release notes for the [Model SDK](/apidocs-mxsdk/mxsdk/) version 4
 
 **Release date: April 26th, 2019**
 
-* We added support for Mendix 8.0.0-beta1.
-* We fixed rename for by-name references which refer to the base class.
+* We added support for Mendix 8.0.0 Beta 1.
+* We fixed the rename for by-name references that refer to the base class.
 
 ## 4.19.0 {#419}
 

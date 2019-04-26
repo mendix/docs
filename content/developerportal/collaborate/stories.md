@@ -172,7 +172,7 @@ In addition to managing your sprints in the Developer Portal, you can view them 
 
 To manage stories in Studio Pro, follow these steps:
 
-1. Open your app project in Studio Pro by clicking **Edit App** > **Edit in Studio Pro**:
+1. Open your app project in Studio Pro by clicking **Edit App** > **Edit in Mendix Studio Pro**:
 
 	![](attachments/edit-app.png)
 

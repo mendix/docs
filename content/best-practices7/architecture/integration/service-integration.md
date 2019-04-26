@@ -171,7 +171,7 @@ A new trend (which is part of microservices and DevOps) is to build services fro
 
 This diagram presents three typical parts covered via IT delivery automation, which is a very common form of process orchestration:
 
-![](attachments/service-integration/automation.png)
+![](attachments/service-integration/automation-service.png)
 
 CI/CD & test automation is often done with Jenkins, GitHub CI, or AKS. However, there are Mendix customers that run on Mendix Cloud and do CI/CD with a Mendix app calling Mendix Cloud APIs while using test systems like [ATS](/ats/index) or specific test services. Typically, this chain is run nightly and gives a report each morning to the DevOps team on the issues found.
 

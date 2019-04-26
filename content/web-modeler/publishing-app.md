@@ -2,7 +2,7 @@
 title: "Publishing Your App"
 description: "Describes the publishing (deployment) process in the Mendix Web Modeler."
 menu_order: 55
-tags: ["web modeler", "deployment", "publishing", "app publishing", "deploy", "deploying"]
+tags: ["web modeler", "deployment", "publishing", "app publishing", "deploy", "deploying", "publish"]
 ---
 
 ## 1 Introduction

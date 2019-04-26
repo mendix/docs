@@ -5,6 +5,13 @@ parent: "model-sdk"
 
 These are the release notes for the [Model SDK](/apidocs-mxsdk/mxsdk/) version 4.
 
+## 4.20.0 {#420}
+
+**Release date: April 26th, 2019**
+
+* We added support for Mendix 8.0.0 Beta 1.
+* We fixed the rename for by-name references that refer to the base class.
+
 ## 4.19.0 {#419}
 
 **Release date: February 8th, 2019**

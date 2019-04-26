@@ -165,7 +165,7 @@ web-modeler:
     - "Consistency Errors"
     - "Theme Customizer"
     - "App Settings"
-best-practices:
+best-practices7:
   space: "Best Practices"
   priority: false
   draft: true

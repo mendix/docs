@@ -150,7 +150,7 @@ To add content to the App Store, follow these steps:
 8. Note that there is nothing for you to do on the **Statistics** and **All versions** tabs. The **Statistics** tab will chart the downloads of your content over time. The **All versions** tab will list the various versions of your content that have been updated.
 9.  In the **Version Details** section on the bottom-right of the screen, do the following:<br />
 	a. Check the **Beta version** check-box if the content is in beta.<br />
-	b. Select the **Studio Pro version** on which you built the content.<br />
+	b. Select the **Mendix Studio Pro version** on which you built the content.<br />
 	c.  Select the type of **License** you want applied to your app (if applicable):<br />
 
 	* **Apache V2** (for more information, see [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0))

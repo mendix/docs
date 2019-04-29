@@ -27,9 +27,9 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 Creating a New Project Based on the Quickstart App{#quickstartapp}
 
-{{% todo %}}[add link to native mobile quickstart app template when it comes online]{{% /todo %}}
+{{% todo %}}[add link to MakeItNative app when it comes online]{{% /todo %}}
 
-For details on making an app using the Native Mobile Quickstart app template, download the Mendix Native Developer App, and using the Mendix Native Developer App to view changes to your app, see the sections below.
+For details on making an app using the Native Mobile Quickstart app template, download the Make It Native app, and using the Make It Native app to view changes to your app, see the sections below.
 
 ### 3.1 Starting a Quickstarter App Project
 
@@ -59,17 +59,17 @@ To start a new app based on a template, follow these steps:
 
 	{{% image_container width="500" %}}![database dialog box](attachments/getting-started-with-native-mobile/database-dialog.png){{% /image_container %}}
 
-At this point you have a running native app. To view your app on a mobile device, however, you need to download the Mendix Native Developer App.
+At this point you have a running native app. To view your app on a mobile device, however, you need to download the Make It Native app.
 
-### 3.2 Downloading the Mendix Native Developer App
+### 3.2 Downloading the Make It Native App
 
-To view your app on a mobile device, you must install the Mendix Native Developer App. The sections below describe two options for doing this.
+To view your app on a mobile device, you must install the Make It Native app. The sections below describe two options for doing this.
 
 {{% todo %}}[replace screenshot below with two app store screens when they get new logos?]{{% /todo %}}
 
 #### Option 1: Use the App Store for Your Device
 
-In the app store for your device, search for the Mendix Native Developer App and install it to your mobile device:
+In the app store for your device, search for the Make It Native app and install it to your mobile device:
 
 {{% image_container width="500" %}}![dev app on googleplay](attachments/getting-started-with-native-mobile/mendix-dev-app-googleplay.png){{% /image_container %}}
 
@@ -77,18 +77,18 @@ In the app store for your device, search for the Mendix Native Developer App and
 
 {{% todo %}}[The two app store buttons mentioned below do not exist yet. Update with pic later.]{{% /todo %}}
 
-Alternatively, you can navigate to the Mendix Native Developer App using Mendix Studio Pro: 
+Alternatively, you can navigate to the Make It Native app using Mendix Studio Pro: 
 
 1. In Mendix Studio Pro, click the drop-down menu next to the **View button**, and then click **View in the Mendix App**.
-2. This will bring up a dialog box. In the **Native mobile** tab, click either **Go to play store** or **Go to app store** to be brought to the Google Play or Apple App Store pages for the Mendix Native Developer App.
-3. In the iOS or Android app store, you can download the Mendix Native Developer App to your device of choice.
+2. This will bring up a dialog box. In the **Native mobile** tab, click either **Go to play store** or **Go to app store** to be brought to the Google Play or Apple App Store pages for the Make It Native app.
+3. In the iOS or Android app store, you can download the Make It Native app to your device of choice.
 
 ### 3.3 Viewing Your App on Your Testing Device
 
 Viewing your app on a mobile device will allow you to test native features and other aspects of your app. This section is written for mobile devices, but you may use an Android emulator mentioned in the [Prerequisites](#prerequisites) section above. To view your app, follow these steps:
 
 1. Locate your app's QR code in Mendix Studio Pro by clicking the drop-down menu next to the **View** button, then selecting **View in the Mendix App** and navigating to the **Native mobile** tab. Here you will see your test app's QR code.
-2. Start the Mendix Native Developer App by tapping its icon on your device.
+2. Start the Make It Native app by tapping its icon on your device.
 3.  Tap the  **Scan a QR Code** button:
 
 	{{% image_container width="500" %}}![Scan QR Code](attachments/getting-started-with-native-mobile/scan-qr.png){{% /image_container %}}
@@ -98,13 +98,13 @@ Viewing your app on a mobile device will allow you to test native features and o
 
 {{% alert type="warning" %}}
 
-Your mobile device has to be on the same network as your development machine for the Mendix Native Developer App to work. If this is the case and the connection still fails, make sure that communication between devices is allowed in the Wi-Fi access point.
+Your mobile device has to be on the same network as your development machine for the Make It Native app to work. If this is the case and the connection still fails, make sure that communication between devices is allowed in the Wi-Fi access point.
 
 {{% /alert %}}
 
-Now you can see your app on your device. While this is just a template app, whenever you make changes you will be able to view them live on your Mendix Native Developer App.
+Now you can see your app on your device. While this is just a template app, whenever you make changes you will be able to view them live on your Make It Native app.
 
-You may notice an **Enable dev mode** toggle on the Mendix Native Developer App home page. Turning this toggle on will give you more detailed warning messages during error screens, as well as additional functionality on the developer app menu.
+You may notice an **Enable dev mode** toggle on the Make It Native app home page. Turning this toggle on will give you more detailed warning messages during error screens, as well as additional functionality on the developer app menu.
 
 {{% image_container width="500" %}}![enable dev mode](attachments/getting-started-with-native-mobile/enable-dev-mode.png){{% /image_container %}}
 	
@@ -112,7 +112,7 @@ You may notice an **Enable dev mode** toggle on the Mendix Native Developer App 
 
 ### 3.4 Viewing Changes to Your App on Your Testing Device {#viewingchanges}
 
-To see how changes made in Mendix Studio Pro are displayed live on a running Mendix Native Developer App, make a small change to your app.
+To see how changes made in Mendix Studio Pro are displayed live on your testing device, make a small change to your app.
 
 1.  Put a text widget on your app's home page. Then, write some text into it. In this example, "Native rules!" has been added: 
 

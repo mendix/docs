@@ -7,6 +7,13 @@ description: "Provides details on updating your project from Desktop Modeler ver
 
 {{% todo %}}[Work in Progress]{{% /todo %}}
 
+## 1 Introduction
+
+{{% alert type="info" %}}
+This document is being written and will be available later today
+{{% /alert %}}
+
+<!--
 ## 1 General Information
 
 To move your app to Mendix version 8 from a previous version, do the following:
@@ -60,3 +67,6 @@ See the image below for an indication of where you might find the error in your 
 ![Location of Layouts Error](attachments/moving-from-7-to-8/layout-error-location.png)
 
 To resolve this issue, use the previous version of Mendix to change the invalid **Layout type** (in the example above, `Legacy`) to a valid value.
+
+-->
+

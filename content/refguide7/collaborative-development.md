@@ -11,39 +11,39 @@ tags: ["desktop modeler", "web modeler", "collaborative development", "sync"]
 
 {{% alert type="info" %}}
 
-Collaborative development is only available if your project has Mendix version 7.23.3 or above. For projects that have Mendix version 7.23.2 and below, see [Sync Studio & Desktop Modeler](sync-webmodeler-desktopmodeler).
+Collaborative development is only available if your project has Mendix version 7.23.3 or above. For projects that have Mendix version 7.23.2 and below, see [Sync the Web Modeler & Desktop Modeler](sync-webmodeler-desktopmodeler).
 
 For information on migrating from the old sync process to the new collaborative development, see  [Migration From the Sync Process to Collaborative Development](collaborative-development-migration). 
 
 {{% /alert %}}
 
-Collaborative development is the process of sharing app model changes when a team of more than one person is working on the app. Collaborative development allows the team members to work together on one project in the Desktop Modeler and Studio and easily synchronize changes using [version control](version-control). The Desktop Modeler can be used to work on different branches of an app, while Studio can be enabled for one of these branches. 
+Collaborative development is the process of sharing app model changes when a team of more than one person is working on the app. Collaborative development allows the team members to work together on one project in the Desktop Modeler and the Web Modeler and easily synchronize changes using [version control](version-control). The Desktop Modeler can be used to work on different branches of an app, while the Web Modeler can be enabled for one of these branches. 
 
-Collaborative development is enabled by default for new apps created via the Developer Portal, while for projects created in Mendix version 7.23.2 and below you might need to enable Studio in the Developer Portal. For more information, see [Migration From the Sync Process to Collaborative Development](collaborative-development-migration).
+Collaborative development is enabled by default for new apps created via the Developer Portal, while for projects created in Mendix version 7.23.2 and below you might need to enable the Web Modeler in the Developer Portal. For more information, see [Migration From the Sync Process to Collaborative Development](collaborative-development-migration).
 
 ## 2 Collaborative Development Overview
 
 Desktop Modeler users can collaborate with each other through [version control](version-control) via **Commit** and **Update** operations. 
 
-The collaborative development process between the Desktop Modeler and Studio consists of the following steps:
+The collaborative development process between the Desktop Modeler and the Web Modeler consists of the following steps:
 
-1. Every change made in Studio is automatically saved to Studio working copy. Multiple users can view the project in Studio at the same time: one user can edit it and others are in read-only mode. 
+1. Every change made in the Web Modeler is automatically saved to the Web Modeler working copy. Multiple users can view the project in the Web Modeler at the same time: one user can edit it and others are in read-only mode. 
 
-2.  When Desktop Modeler users open a project, they are notified if Studio is enabled for this development line. 
+2.  When Desktop Modeler users open a project, they are notified if the Web Modeler is enabled for this development line. 
 
     ![Collaborative Development Enabled Notification](attachments/collaborative-development/collaborative-development-enabled-notification.png)
 
-3. The Desktop Modeler creates a local working copy that the Desktop Modeler user works on. To get changes from the Team Server the user needs to click **Update** (the latest revision is then retrieved from the Team Server, containing commits from other Desktop Modeler users and the latest changes from Studio).
+3. The Desktop Modeler creates a local working copy that the Desktop Modeler user works on. To get changes from the Team Server the user needs to click **Update** (the latest revision is then retrieved from the Team Server, containing commits from other Desktop Modeler users and the latest changes from the Web Modeler).
 
-4. After the Desktop Modeler user clicks **Update**, the latest changes from Studio are committed automatically to the Team Server before the Desktop Modeler receives the update from it. The latest revision from the Team Server is merged into the Desktop Modeler's local working copy. 
+4. After the Desktop Modeler user clicks **Update**, the latest changes from the Web Modeler are committed automatically to the Team Server before the Desktop Modeler receives the update from it. The latest revision from the Team Server is merged into the Desktop Modeler's local working copy. 
 
 5.  The Desktop Modeler user works on the project and, once the user finishes some functionality (for example, fixes a bug or creates a new feature), they click **Commit**. The user enters a commit message and confirms it. This triggers the same process as during an update (described in step 4), and the Desktop Modeler working copy is updated with the latest revision from the Team Server.
 
     There are two possible outcomes of this merge:<br/>
 
-    a.   There are no conflicts, the Desktop Modeler user changes are committed to the Team  Server. Afterwards Studio gets the latest revision from the Team Server and is unlocked; the Desktop Modeler user changes are visible to Web Modeler users. Other Desktop Modeler users will get the changes once they do an update. <br/>
+    a.   There are no conflicts, the Desktop Modeler user changes are committed to the Team  Server. Afterwards the Web Modeler gets the latest revision from the Team Server and is unlocked; the Desktop Modeler user changes are visible to Web Modeler users. Other Desktop Modeler users will get the changes once they do an update. <br/>
 
-    b. There are conflicts, the Desktop Modeler commit process is stopped. Studio is unlocked without getting changes from the Desktop Modeler user. The Desktop Modeler user needs to resolve the merge conflicts first to before being able to do a commit again.
+    b. There are conflicts, the Desktop Modeler commit process is stopped. The Web Modeler is unlocked without getting changes from the Desktop Modeler user. The Desktop Modeler user needs to resolve the merge conflicts first to before being able to do a commit again.
 
 {{% alert type="info" %}}
 
@@ -53,11 +53,11 @@ When the Desktop Modeler user wants to deploy the app to the cloud, they click t
 
 ## 3 Web Modeler Perspective
 
-For information on collaborative development from Studio perspective, see [Collaborative Development in Studio](/studio/general-collaborative-development) in the *Web Modeler Guide*. 
+For information on collaborative development from the Web Modeler perspective, see [Collaborative Development in the Web Modeler](/studio/general-collaborative-development) in the *Web Modeler Guide*. 
 
 ## 4 Desktop Modeler Perspective
 
-When you connect to a project which has collaborative development turned on, you see which development line (the main line or a branch line) Studio is enabled for. For information on enabling collaborative development, see [Migration From the Sync Process to Collaborative Development](collaborative-development-migration). 
+When you connect to a project which has collaborative development turned on, you see which development line (the main line or a branch line) the Web Modeler is enabled for. For information on enabling collaborative development, see [Migration From the Sync Process to Collaborative Development](collaborative-development-migration). 
 
 Click the drop-down to select another line or click **OK** to open the currently selected line. 
 
@@ -79,9 +79,9 @@ We recommend you update your project and commit changes often to avoid multiple 
 
 {{% /alert %}}
 
-If your project has conflicts, Studio will be unlocked without receiving your changes. You need to resolve the conflicts in the Desktop Modeler first to be able to complete the merge and commit again. 
+If your project has conflicts, the Web Modeler will be unlocked without receiving your changes. You need to resolve the conflicts in the Desktop Modeler first to be able to complete the merge and commit again. 
 
-Your changes will be sent to Studio automatically if there are no conflicts. For more information on the collaborative development process in Studio, see [Collaborative Development in Studio](/studio/general-collaborative-development) in the *Web Modeler Guide*.
+Your changes will be sent to the Web Modeler automatically if there are no conflicts. For more information on the collaborative development process in the Web Modeler, see [Collaborative Development in the Web Modeler](/studio/general-collaborative-development) in the *Web Modeler Guide*.
 
 ### 4.3 Viewing History of Commits
 
@@ -93,36 +93,36 @@ You can see all the changes committed to the current development line via **Proj
 
 ## 5 Managing Development Lines in the Desktop Modeler {#managing-branches}
 
-In the Desktop Modeler, you can enable Studio for a development line (the main line or a branch line). You can also create and delete branch lines. 
+In the Desktop Modeler, you can enable the Web Modeler for a development line (the main line or a branch line). You can also create and delete branch lines. 
 
-For collaborative development you need to enable Studio for one of development lines. 
+For collaborative development you need to enable the Web Modeler for one of development lines. 
 
-### 5.1 Enabling Studio for a Development Line {#active-branch-for-the-wm}
+### 5.1 Enabling the Web Modeler for a Development Line {#active-branch-for-the-wm}
 
-To share your model changes between Studio and the Desktop Modeler, you need to enable Studio for one of development lines. 
+To share your model changes between the Web Modeler and the Desktop Modeler, you need to enable the Web Modeler for one of development lines. 
 
-Whether Studio is enabled for a development line by default, depends on your project:
+Whether the Web Modeler is enabled for a development line by default, depends on your project:
 
-* Studio is enabled for the main line by default in the following cases:
+* The Web Modeler is enabled for the main line by default in the following cases:
   * For a new project created via the Developer Portal
-  * For an existing project that has Studio enabled
-* Studio is not enabled for any development line in the following cases:
+  * For an existing project that has the Web Modeler enabled
+* The Web Modeler is not enabled for any development line in the following cases:
   * For a new project created via the Desktop Modeler
   * For an existing project that does not have Web Modeler enabled
 
-To enable Studio for a development line or switch it to another development line, do the following: 
+To enable the Web Modeler for a development line or switch it to another development line, do the following: 
 
-1.  Click **Project** > **More Versioning** > **Manage Branch Lines**. In the **Branch Line Manager** dialog window, you can see the development line that Studio is enabled for (if any) is marked with a globe icon in the first column.<br/> 
+1.  Click **Project** > **More Versioning** > **Manage Branch Lines**. In the **Branch Line Manager** dialog window, you can see the development line that the Web Modeler is enabled for (if any) is marked with a globe icon in the first column.<br/> 
 
 	![Globe Icon in the Branch Line Manager](attachments/collaborative-development/globe-icon.png)<br/>
 
-2.  Select the line you want to enable Studio for and click **Enable for Studio**. <br/>
+2.  Select the line you want to enable the Web Modeler for and click **Enable for the Web Modeler**. <br/>
 
 	![Branch Line Manager - Enabling Another Branch](attachments/collaborative-development/enable-another-branch.png) 
 
-The development line for Studio has been selected.   
+The development line for the Web Modeler has been selected.   
 
-When you switch Studio to another development line, Studio gets locked for a few moments during this process, a pop-up dialog is shown to its users that the Desktop Modeler user is changing the line for Studio. All changes from Studio are committed to the current development line, and only after that the line is changed. 
+When you switch the Web Modeler to another development line, the Web Modeler gets locked for a few moments during this process, a pop-up dialog is shown to its users that the Desktop Modeler user is changing the line for the Web Modeler. All changes from the Web Modeler are committed to the current development line, and only after that the line is changed. 
 
 ### 5.2 Creating a New Branch Line
 
@@ -162,7 +162,7 @@ You have deleted the branch.
 
 {{% alert type="info" %}}
 
-You cannot delete Studio enabled branch. If you need to delete this branch, enable Studio for another line, and only then delete the branch. 
+You cannot delete the Web Modeler enabled branch. If you need to delete this branch, enable the Web Modeler for another line, and only then delete the branch. 
 
 {{% /alert %}}
 
@@ -171,4 +171,4 @@ You cannot delete Studio enabled branch. If you need to delete this branch, enab
 * [Version Control](version-control)
 * [Migration From the Sync Process to Collaborative Development](collaborative-development-migration)
 * [Troubleshooting Collaborative Development](collaborative-development-troubleshooting)
-* [Collaborative Development in Studio](/studio/general-collaborative-development)
+* [Collaborative Development in the Web Modeler](/studio/general-collaborative-development)

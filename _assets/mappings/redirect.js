@@ -28,7 +28,7 @@ module.exports = {
     },
 	{
       from: "/howto/web-modeler/syncing-webmodeler-desktop",
-      to: "/refguide7/sync-webmodeler-desktopmodeler"
+      to: "/refguide/sync-webmodeler-desktopmodeler"
     },
 	/****************************************************
      * From the Support Portal (potentially temporary until fixed in product, mapped) 

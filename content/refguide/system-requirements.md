@@ -12,7 +12,7 @@ This document presents the system requirements for the various parts of the Mend
 
 ## 2 Desktop Modeler
 
-The Mendix [Desktop Modeler](desktop-modeler) supports Windows 7, 8, and 10. It supports both 32-bit and 64-bit variations, but 64-bit is recommended.
+Mendix [Studio Pro](modeling) supports Windows 7, 8, and 10. It supports both 32-bit and 64-bit variations, but 64-bit is recommended.
 
 The following frameworks are automatically installed (if necessary):
 

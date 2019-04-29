@@ -69,7 +69,7 @@ This opens the **Customize offline synchronziation** dialog which is used for ov
 | Download setting | Description |
 ----------------------------------
 | All objects | Download all objects of this entity type |
-| By XPath    | Download only those objects matching the specified [XPath constraint](xpath-constraint) |
+| By XPath    | Download only those objects matching the specified [XPath constraint](xpath-constraints) |
 | Nothing     | Don't download any objects of this entity type |
 
 ![](attachments/core/customize-offline-synchronization.png)

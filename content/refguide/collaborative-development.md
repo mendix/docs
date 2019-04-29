@@ -11,15 +11,15 @@ tags: ["desktop modeler", "web modeler", "collaborative development", "sync"]
 
 {{% alert type="info" %}}
 
-Collaborative development is only available if your project has Mendix version 7.23.3 or above. For projects that have Mendix version 7.23.2 and below, see [Sync the Web Modeler & Desktop Modeler](sync-webmodeler-desktopmodeler).
+Collaborative development is only available if your project has Mendix version 7.23.3 or above. For projects that have Mendix version 7.23.2 and below, see [Sync the Web Modeler & Desktop Modeler](/refguide7/sync-webmodeler-desktopmodeler).
 
-For information on migrating from the old sync process to the new collaborative development, see  [Migration From the Sync Process to Collaborative Development](collaborative-development-migration). 
+For information on migrating from the old sync process to the new collaborative development, see  [Migration From the Sync Process to Collaborative Development](/refguide7/collaborative-development-migration). 
 
 {{% /alert %}}
 
 Collaborative development is the process of sharing app model changes when a team of more than one person is working on the app. Collaborative development allows the team members to work together on one project in the Desktop Modeler and the Web Modeler and easily synchronize changes using [version control](version-control). The Desktop Modeler can be used to work on different branches of an app, while the Web Modeler can be enabled for one of these branches. 
 
-Collaborative development is enabled by default for new apps created via the Developer Portal, while for projects created in Mendix version 7.23.2 and below you might need to enable the Web Modeler in the Developer Portal. For more information, see [Migration From the Sync Process to Collaborative Development](collaborative-development-migration).
+Collaborative development is enabled by default for new apps created via the Developer Portal, while for projects created in Mendix version 7.23.2 and below you might need to enable the Web Modeler in the Developer Portal. For more information, see [Migration From the Sync Process to Collaborative Development](/refguide7/collaborative-development-migration).
 
 ## 2 Collaborative Development Overview
 
@@ -57,7 +57,7 @@ For information on collaborative development from the Web Modeler perspective, s
 
 ## 4 Desktop Modeler Perspective
 
-When you connect to a project which has collaborative development turned on, you see which development line (the main line or a branch line) the Web Modeler is enabled for. For information on enabling collaborative development, see [Migration From the Sync Process to Collaborative Development](collaborative-development-migration). 
+When you connect to a project which has collaborative development turned on, you see which development line (the main line or a branch line) the Web Modeler is enabled for. For information on enabling collaborative development, see [Migration From the Sync Process to Collaborative Development](/refguide7/collaborative-development-migration). 
 
 Click the drop-down to select another line or click **OK** to open the currently selected line. 
 
@@ -169,6 +169,6 @@ You cannot delete the Web Modeler enabled branch. If you need to delete this bra
 ## 6 Read More
 
 * [Version Control](version-control)
-* [Migration From the Sync Process to Collaborative Development](collaborative-development-migration)
+* [Migration From the Sync Process to Collaborative Development](/refguide7/collaborative-development-migration)
 * [Troubleshooting Collaborative Development](collaborative-development-troubleshooting)
 * [Collaborative Development in the Web Modeler](/studio/general-collaborative-development)

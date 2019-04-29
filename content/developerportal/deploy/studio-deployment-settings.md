@@ -22,15 +22,15 @@ To select the environment for Studio, do the following:
 
 1.  Open **Deploy** > **Environments** in the left menu bar in the Developer Portal.
 
-    ![Environments in the Developer Portal](attachments/web-modeler-deployment-settings/developer-portal-deploy-environments.png)
+    ![Environments in the Developer Portal](attachments/studio-deployment-settings/developer-portal-deploy-environments.png)
 
 2.  In the **Deploy** tab > **Environments** section, select the environment that you want to select for Studio deployment by clicking **Details**. 
 
-    ![Details of an Environment in the Developer Portal](attachments/web-modeler-deployment-settings/developer-portal-environments-details.png)
+    ![Details of an Environment in the Developer Portal](attachments/studio-deployment-settings/developer-portal-environments-details.png)
 
 3.  In the **General** tab, select **Studio Target** and click **Change**.
 
-    ![](attachments/web-modeler-deployment-settings/developer-portal-web-modeler-target.png)
+    ![](attachments/studio-deployment-settings/developer-portal-web-modeler-target.png)
 
 4. In the **Select Studio Target** dialog window, click the drop-down menu and select the environment. 
 

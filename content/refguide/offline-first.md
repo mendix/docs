@@ -17,7 +17,7 @@ Mendix enables offline-first apps using the following components:
 	* A [native profile](navigation-profile) with an optional bottom bar for navigation
 	* [Nanoflows](nanoflows) to execute logic and behavior
 	* JavaScript actions for integration with native APIs
-	* A [synchronization action](action-button#on-click) enabling synchronization with the server
+	* A [synchronization action](action-button#events-on-click) enabling synchronization with the server
 
 During development, the Mendix App from the [App Store](https://itunes.apple.com/us/app/mendix/id458058946?mt=8) or [Google Play](https://play.google.com/store/apps/details?id=com.mendix.SprintrMobile&gl=NL) can be used to preview your Mendix app on a device or in an emulator. The first time it is opened, your app will require an internet connection to download necessary resources from the server. After this initial synchronization, data will remain available in the app even without an internet connection. Subsequent synchronizations will only be performed when requested by the user.
 

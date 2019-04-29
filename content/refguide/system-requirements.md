@@ -35,9 +35,9 @@ The [Team Server](team-server) is implemented using Subversion, and the Modeler 
 * The HTTP port (TCP 80) needs to be open
 * WebDAV (verbs within the HTTP protocol) needs to be enabled on the proxy server (if any)
 
-## 4 Web Modeler
+## 4 Mendix Studio
 
-The [Mendix Web Modeler](/studio) is optimized for use with Google Chrome. While Chrome is the officially supported browser, you can also use the Web Modeler with other popular browsers like Mozilla Firefox, Apple Safari, and Microsoft Edge. 
+[Mendix Studio](/studio) is optimized for use with Google Chrome. While Chrome is the officially supported browser, you can also use the Web Modeler with other popular browsers like Mozilla Firefox, Apple Safari, and Microsoft Edge. 
 
 {{% alert type="info" %}}
 The browser you use needs to have JavaScript turned on.
@@ -81,7 +81,7 @@ There is an issue since Java 7 that causes timeouts when using web services with
 
 Jetty is built into the [Mendix Runtime](runtime), so an application server is not required.
 
-## 6 Browsers
+## 6 Browsers {#browsers}
 
 ### 6.1 Desktop Browsers
 

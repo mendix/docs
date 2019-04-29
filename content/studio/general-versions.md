@@ -40,7 +40,7 @@ Also, specific company policies may be in place for approving software upgrades.
 
 The latest **Studio version** supports a range of recent **Mendix Studio Pro versions**. While we encourage users to upgrade to a new Mendix Studio Pro version as soon as possible, in many cases it is possible to postpone the upgrade and still make use of the latest Studio features.
 
-Even when you are editing an app that does not have a range of recent **Mendix Studio Pro versions**, Studio in many cases will still be available for use. An older version of Studio will automatically be loaded when you open this project in Studio. This Studio version will not contain the latest Studio features, but it will still allow you to edit the app. For more information on the latest changes to Studio, see the [Studio Release Notes](../../releasenotes/web-modeler).
+Even when you are editing an app that does not have a range of recent **Mendix Studio Pro versions**, Studio in many cases will still be available for use. An older version of Studio will automatically be loaded when you open this project in Studio. This Studio version will not contain the latest Studio features, but it will still allow you to edit the app. For more information on the latest changes to Studio, see the [Studio Release Notes](../../releasenotes/studio).
 
 {{% alert type="info" %}} 
 
@@ -50,4 +50,4 @@ Studio has a minimum supported **Mendix Studio version**. This means that if the
 
 ## 4 Read More
 
-* [Studio Release Notes](../../releasenotes/web-modeler)
+* [Studio Release Notes](../../releasenotes/studio)

@@ -12,7 +12,7 @@ If you have a licensed app, you need to select an environment for Mendix Studio 
 
 {{% alert type="info" %}}
 
-By default the environment is not selected for Studio. Thus, when you try to publish, you will get a warning message. For more information, see [Publishing Your App – Studio](/web-modeler/publishing-app).
+By default the environment is not selected for Studio. Thus, when you try to publish, you will get a warning message. For more information, see [Publishing Your App – Studio](/studio/publishing-app).
 
 {{% /alert %}}
 
@@ -40,6 +40,6 @@ You have selected the environment for Studio.
 
 ## 3 Read More
 
-*   [Publishing Your App](/web-modeler/publishing-app)
+*   [Publishing Your App](/studio/publishing-app)
 *   [Mendix Cloud](mendix-cloud-deploy)
 *   [Environments](environments)

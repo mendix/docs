@@ -29,7 +29,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 {{% todo %}}[add link to native mobile quickstart app template when it comes online]{{% /todo %}}
 
-For details on making an app using the Native Mobile Quickstart app template, downloading the Mendix Native Developer App, and using the Mendix Native Developer App to view changes to your app, see the sections below.
+For details on making an app using the Native Mobile Quickstart app template, download the Mendix Native Developer App, and using the Mendix Native Developer App to view changes to your app, see the sections below.
 
 ### 3.1 Starting a Quickstarter App Project
 
@@ -108,7 +108,7 @@ You may notice an **Enable dev mode** toggle on the Mendix Native Developer App 
 
 {{% image_container width="500" %}}![enable dev mode](attachments/getting-started-with-native-mobile/enable-dev-mode.png){{% /image_container %}}
 	
-For more information on debugging, see [Debugging A Native Mobile App].{{% todo %}}[(link to future debug doc)]{{% /todo %}}
+{{% todo %}}[link to future debug doc - For more information on debugging, see Debugging A Native Mobile App]{{% /todo %}}
 
 ### 3.4 Viewing Changes to Your App on Your Testing Device {#viewingchanges}
 
@@ -127,11 +127,11 @@ To see how changes made in Mendix Studio Pro are displayed live on a running Men
 Should you get an error screen while testing your app, there are easy ways to restart it: 
 
 * Tap your test app with three fingers to restart your app
-* With the **Enable dev mode** toggle turned on, hold a three-fingered tap to bring up the developer app menu – here you can access **ADVANCED SETTINGS** and **ENABLE REMOTE JS DEBUGGING** detailed in [Debugging A Native Mobile App]{{% todo %}}[(link to future debug doc)]{{% /todo %}}
+* With the **Enable dev mode** toggle turned on, hold a three-fingered tap to bring up the developer app menu – here you can access **ADVANCED SETTINGS** and **ENABLE REMOTE JS DEBUGGING** 
+
+{{% todo %}}[(link to future debug doc at the end of the last bullet above)]{{% /todo %}}
 
 ## 4 Read More
 
-{{% todo %}}[add refguide link when refguide doc is published]{{% /todo %}}
-
 * [Build Pluggable Widgets](../extensibility/pluggable-widgets)
-* [Native Styling]
+* [Native Styling](/refguide/native-styling-refguide)

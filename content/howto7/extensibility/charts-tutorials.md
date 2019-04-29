@@ -3,7 +3,7 @@ title: "Use the Charts Widgets"
 category: "Extensibility"
 menu_order: 10
 description: "These how-to's will guide you in using charts in Mendix apps."
-tags: ["build", "app", "web modeler", "desktop modeler", "charts", "extensibility"]
+tags: ["build", "app", "charts", "extensibility"]
 ---
 
 The following how-to's are available here:

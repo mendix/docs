@@ -2,7 +2,7 @@
 title: "Migration From the Sync Process to Collaborative Development"
 parent: "collaborative-development"
 description: "Describes the migration process from the sync process to new collaborative development between the Mendix Desktop Modeler and the Mendix Web Modeler"
-tags: ["desktop modeler", "web modeler", "collaborative development", "migration", "sync"]
+tags: ["desktop modeler", "collaborative development", "migration", "sync"]
 ---
 
 ## 1 Introduction 

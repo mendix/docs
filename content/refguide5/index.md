@@ -3,7 +3,7 @@ title: "Mendix 5 Reference Guide"
 notoc: true
 ---
 
-Browse the complete reference guide of the Mendix app platform. Read the [release notes here](/releasenotes/desktop-modeler/5).
+Browse the complete reference guide of the Mendix app platform. Read the [release notes here](/releasenotes/studio-pro/5).
 
 See the [System Requirements](system-requirements) page before installing Mendix 5. If you have been using version 4 of our technology, we advise you to read the page: [Moving from 4 to 5](moving-from-4-to-5)
 

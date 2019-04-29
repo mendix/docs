@@ -10,7 +10,7 @@ tags: ["Any Chart", "Charts", "Building Blocks", "Widget", "Desktop Modeler"]
 
 Any Chart is a widget which is available in the Mendix app store here: [Any Chart module](https://appstore.home.mendix.com/link/app/106517/). The Any Chart widget enables you to build all the chart types that are possible with Plotly.js. More about Plotly.js is available here: https://plot.ly/javascript/reference/.
 
-Any Chart building blocks are pre-configured page building blocks with the basic properties of a chart already defined. They can be placed on a Mendix page in the same way as any other widget or building block. They contain samples of the **data** and **Layout** objects which are required to create a chart. These objects are used for demo purposes at run time when there is no Source attribute selected or when rendering sample data in the web modeler preview.
+Any Chart building blocks are pre-configured page building blocks with the basic properties of a chart already defined. They can be placed on a Mendix page in the same way as any other widget or building block. They contain samples of the **data** and **Layout** objects which are required to create a chart. These objects are used for demo purposes at run time when there is no Source attribute selected or when rendering sample data in the Studio preview.
 
 ## Properties
 
@@ -28,7 +28,7 @@ A data JSON array based on https://plot.ly/javascript/reference/.
 The attribute data will merge and overwrite **Static** data.
 
 #### Sample data
-Data for preview. It will be merged with the **Static data** in the web modeler or at runtime when no **Source attribute** is selected.
+Data for preview. It will be merged with the **Static data** in Mendix Studio or at runtime when no **Source attribute** is selected.
 
 #### Mode
 The development mode adds a button to the charts when running the app which is used to toggle a live editor for the advanced configuration options.
@@ -43,7 +43,7 @@ A JSON object based on https://plot.ly/javascript/reference/.
 The attribute layout will merge and overwrite static layout options.
 
 #### Sample layout
-Layout options for preview. It will be merged with the 'Static' in the web modeler or at runtime when no 'Source attribute' is selected.
+Layout options for preview. It will be merged with the 'Static' in Mendix Studio or at runtime when no 'Source attribute' is selected.
 
 {{% alert type="info" %}}
 For more a detailed description of Any Chart configuration, see [Any Chart Widgets](charts-any-configuration)

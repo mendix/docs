@@ -38,7 +38,7 @@ You now have access to your app **Buzz** in the [Developer Portal](/developerpor
 ![Edit App Button in the Developer POrtal](attachments/get-started-with-atlasui/start_edit_your_app.png)
 {{% /image_container %}}
 
-Note that when you click **Edit App** for any Atlas UI app, it will automatically open in the Web Modeler. If you need to edit the app in the Desktop Modeler, click the drop-down menu on the **Edit App** button and select **Edit in Desktop Modeler**.
+Note that when you click **Edit App** for any Atlas UI app, it will automatically open in Mendix Studio. If you need to edit the app in Studio Pro, click the drop-down menu on the **Edit App** button and select **Edit in Studio Pro**.
 
 ## 4 Exploring the Mendix Web Modeler
 

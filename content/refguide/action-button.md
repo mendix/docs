@@ -34,7 +34,7 @@ _Default value_ : false.
 
 {{% snippet file="refguide/Tab+index+Property.md" %}}
 
-## Events properties {#on-click}
+## Events properties {#events-on-click}
 
 {{% snippet file="refguide/On+Click+Event+Action.md" %}}
 

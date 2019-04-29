@@ -27,7 +27,7 @@ The name property defines the name of the attribute. This name is used to refer 
 If you delete an attribute in your entity and then create a new attribute with the same name, Mendix will consider it a new and different attribute. This means that upon deployment the old column will be dropped, including its data. Then a new, empty, column with the same name will be created.
 {{% /alert %}}
 
-## 3 Type
+## 3 Type {#type}
 
 ### 3.1 Type
 

@@ -3,7 +3,7 @@ title: "Team Server Overview"
 category: "Development"
 menu_order: 20
 description: "Describes the overview of Team Server revisions and commits."
-tags: ["Desktop Modeler", "Studio Pro", "Team Server", "Developer Portal", "commit", "branch"]
+tags: ["Studio Pro", "Team Server", "Developer Portal", "commit", "branch"]
 ---
 
 ## 1 Introduction

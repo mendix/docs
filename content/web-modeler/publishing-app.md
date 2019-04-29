@@ -121,7 +121,7 @@ Web Modeler can fail to get your environment status in the following cases:
 
 	![Deploy Failed, No Environment for the Web Modeler](attachments/publishing-app/no-environment.png)
 
-For technical information for app administrators, see [Web Modeler Deployment Settings](/developerportal/deploy/web-modeler-deployment-settings) in *Developer Portal Guide*. 
+For technical information for app administrators, see [Web Modeler Deployment Settings](/developerportal/deploy/studio-deployment-settings) in *Developer Portal Guide*. 
 
 ## 6 Read More
 

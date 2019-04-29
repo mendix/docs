@@ -69,9 +69,9 @@ To view your app on a mobile device, you must install the Make It Native app. Th
 
 #### Option 1: Use the App Store for Your Device
 
-In the app store for your device, search for the Make It Native app and install it to your mobile device:
+Search for the Make It Native app in the App Store or download it from [Google Play](https://play.google.com/store/apps/details?id=com.mendix.developerapp) and install it to your mobile device:
 
-{{% image_container width="500" %}}![dev app on googleplay](attachments/getting-started-with-native-mobile/mendix-dev-app-googleplay.png){{% /image_container %}}
+{{% image_container width="500" %}}![native app on googleplay](attachments/getting-started-with-native-mobile/make-it-native-googleplay.png){{% /image_container %}}
 
 #### Option 2: Using Mendix Studio Pro
 

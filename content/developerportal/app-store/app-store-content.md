@@ -2,20 +2,20 @@
 title: "Use App Store Content"
 category: "App Store"
 menu_order: 20
-tags: ["app store", "modeler"]
-description: "Covers the basics of how to access the App Store from the Desktop Modeler and provides examples of how to add a widget and module to your app."
+tags: ["app store", "modeler", "Studio Pro"]
+description: "Covers the basics of how to access the App Store from Studio Pro and provides examples of how to add a widget and module to your app."
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
-This how-to covers the basics of accessing the App Store from the Desktop Modeler and provides examples of how to add a widget and a module to your application.
+This how-to covers the basics of accessing the App Store from Studio Pro and provides examples of how to add a widget and a module to your application.
 
 **This how-to will teach you how to do the following:**
 
-* Install content from the App Store via the Desktop Modeler
-* Download widgets and modules from the App Store into the Modeler
-* Use other App Store content in the Desktop Modeler
+* Install content from the App Store via Studio Pro
+* Download widgets and modules from the App Store into Studio Pro
+* Use other App Store content in Studio Pro
 
 ## 2 Prerequisites
 
@@ -25,11 +25,11 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 Downloading Content from the App Store {#downloading2}
 
-To download content from the App Store via the Desktop Modeler, follow these steps:
+To download content from the App Store via Studio Pro, follow these steps:
 
-1. Open the Desktop Modeler and log in with your Mendix credentials.
+1. Open Studio Pro and log in with your Mendix credentials.
 2. Open the project in which you would like to install a component.
-3. Click the App Store icon in the top menu bar to open it in the Desktop Modeler:
+3. Click the App Store icon in the top menu bar to open it in Studio Pro:
 
     ![](attachments/app-store-content/toolbar.png)
 
@@ -42,20 +42,20 @@ To download content from the App Store via the Desktop Modeler, follow these ste
     ![](attachments/app-store-content/item_details.png)
 
 6. When you have found the App Store item you want to download into your app, click **Download**:
-    * A project will be created on your hard-drive and will be opened in the Desktop Modeler
+    * A project will be created on your hard-drive and will be opened in Studio Pro
     * A component will be downloaded directly into your project
 
-    Make sure that you download the correct version of the content from the App Store, because the widget or module version needs to be compatible with the Desktop Modeler version you are using. Do not download a widget that has a higher release version than the Desktop Modeler you are using. You can access older versions of the widgets in the **All Versions** tab in the App Store and download the most compatible version:
+    Make sure that you download the correct version of the content from the App Store, because the widget or module version needs to be compatible with the Studio Pro version you are using. Do not download a widget that has a higher release version than the Studio Pro you are using. You can access older versions of the widgets in the **All Versions** tab in the App Store and download the most compatible version:
 
     ![](attachments/app-store-content/18580437.png)
 
-## 4 Using a Widget in the Desktop Modeler {#widget}
+## 4 Using a Widget in Studio Pro {#widget}
 
 In this section, you will learn how to add a widget to your app project. You can follow the same steps to download any App Store widget you need.
 
 ### 4.1 Adding the Widget
 
-To add the Radiobutton List widget from the App Store via the Desktop Modeler, follow these steps:
+To add the Radiobutton List widget from the App Store via Studio Pro, follow these steps:
 
 1. Download the [RadioButton List](https://appstore.home.mendix.com/link/app/20/) widget (for reference, follow the steps in the [Downloading Content from the App Store](#downloading2) section above).
 2.  A widget downloaded from the App Store is placed in your app project structure. You can find the widget and start using it in the following ways:
@@ -100,7 +100,7 @@ To resolve this widget error, follow these steps:
 
 	![](attachments/app-store-content/18580434.png)
 
-## 5 Using a Module in the Desktop Modeler {#downloading}
+## 5 Using a Module in Studio Pro {#downloading}
 
 In addition to widgets, you can download entire modules from the App Store (for example, the [Excel Importer](https://appstore.home.mendix.com/link/app/72/)). The modules include whole functionalities and integrations that can be very helpful when you are building your applications.
 
@@ -108,7 +108,7 @@ In this section, you will learn how to add the Google Maps module as an example 
 
 ### 5.1 Adding a Module from the App Store
 
-To add the Google Maps module from the App Store via the Desktop Modeler, follow these steps:
+To add the Google Maps module from the App Store via Studio Pro, follow these steps:
 
 1. Download the [Google Maps Module](https://appstore.home.mendix.com/link/app/174/).
 2.  In the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your project:
@@ -131,7 +131,7 @@ Each module that you download from the App Store is different, and some modules 
 Sometimes additional widgets are added when you download a module. For example, the Google Maps widget is included when you download the Google Maps module.
 {{% /alert %}}
 
-To use the Google Maps module in the Desktop Modeler, follow these steps:
+To use the Google Maps module in Studio Pro, follow these steps:
 
 1. Add the **Location Map Overview** and **Location Overview** menu items to your app's **Navigation**:
 

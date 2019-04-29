@@ -61,7 +61,7 @@ To develop widgets and submit them to the App Store, follow these guidelines:
 To develop modules and submit them to the App Store, follow these guidelines:
 
 * Create a folder named **USE_ME** and add the microflows and pages that are relevant for the user
-* Create an empty folder with the version number as its name, which will appear in the Desktop Modeler's Project Explorer
+* Create an empty folder with the version number as its name, which will appear in Studio Pro's Project Explorer
 * If you add any userlib *jar* files, make sure they are accompanied by a *MyModule.RequiredLib* file so that users know where the *jar* files come from
 * Verify that the module's Java actions compile correctly (the easiest way to check is to create a deployment package, as it will clean the deployment folder and rebuild the app; for more information, see [Create Deployment Package Dialog](/developerportal/deploy/environments) and [Environments](../deploy/environments))
 * Reduce the use of layouts – using snippets will result in fewer module dependencies and will reduce the number of potential errors (for example, missing layouts)
@@ -87,9 +87,9 @@ To add content to the App Store, follow these steps:
 
 2. The **DRAFT** page will open, where you need to select the purpose of your contribution:
 
-	* **Share** – components that can be downloaded using the Desktop Modeler – if you select this option, continue to [step #3](#three) below
+	* **Share** – components that can be downloaded using Studio Pro – if you select this option, continue to [step #3](#three) below
 	* **Promote** – a way to advertise a component or solution while not making it downloadable – if you select this option, continue to [step #4](#four) below
-3.  <a name="three"></a>When adding Desktop Modeler content, select **your content source**:
+3.  <a name="three"></a>When adding Studio Pro content, select **your content source**:
 
 	*  If you select **Select from GitHub**, follow these steps:<br />
 		a. Select the type of GitHub profile (**Organisation** or **User**) where the content is stored.<br />
@@ -138,7 +138,7 @@ To add content to the App Store, follow these steps:
 		* The **Typical usage scenario** for the content
 		* The **Features and limitations** for the content
 	* These sections are optional:
-		* Any **Dependencies** (for example, the required Desktop Modeler version, modules, images, and styles)
+		* Any **Dependencies** (for example, the required Studio Pro version, modules, images, and styles)
 		* The **Installation** steps and details
 		* The **Configuration** steps and details
 		* Any **Known bugs**
@@ -150,7 +150,7 @@ To add content to the App Store, follow these steps:
 8. Note that there is nothing for you to do on the **Statistics** and **All versions** tabs. The **Statistics** tab will chart the downloads of your content over time. The **All versions** tab will list the various versions of your content that have been updated.
 9.  In the **Version Details** section on the bottom-right of the screen, do the following:<br />
 	a. Check the **Beta version** check-box if the content is in beta.<br />
-	b. Select the **Modeler version** on which you built the content.<br />
+	b. Select the **Mendix Studio Pro version** on which you built the content.<br />
 	c.  Select the type of **License** you want applied to your app (if applicable):<br />
 
 	* **Apache V2** (for more information, see [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0))

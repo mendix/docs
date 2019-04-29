@@ -34,7 +34,7 @@ The **What's next?** section at the bottom of the page presents the following op
 
 ## 3  Mendix Studio
 
-With [Studio](/web-modeler), you can design beautiful apps by leveraging the integrated Atlas UI in the WYSIWYG page editor. You can visually add your app’s domain model and business logic, all from the convenience of your web browser.
+With [Studio](/studio), you can design beautiful apps by leveraging the integrated Atlas UI in the WYSIWYG page editor. You can visually add your app’s domain model and business logic, all from the convenience of your web browser.
 
 Click **Edit in Studio** to open the app in Studio. Note that this is for Atlas UI-based apps only. If you need to enable Studio for your app project, click **Enable Studio in Settings**, which will take you to the [General Settings](../settings/general-settings) page of your app project to do this.
 

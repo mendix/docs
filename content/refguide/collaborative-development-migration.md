@@ -52,4 +52,4 @@ If you ignore this message, you will be able to work in the Web Modeler, but wil
 
 * [Version Control](version-control)
 * [Troubleshooting Collaborative Development](collaborative-development-troubleshooting)
-* [Collaborative Development in the Web Modeler](/web-modeler/general-collaborative-development)
+* [Collaborative Development in the Web Modeler](/studio/general-collaborative-development)

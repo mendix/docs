@@ -121,7 +121,7 @@ Studio can fail to get your environment status in the following cases:
 
 	![Deploy Failed, No Environment for Studio](attachments/publishing-app/no-environment.png)
 
-For technical information for app administrators, see [Studio Deployment Settings](/developerportal/deploy/web-modeler-deployment-settings) in *Developer Portal Guide*. 
+For technical information for app administrators, see [Studio Deployment Settings](/developerportal/deploy/studio-deployment-settings) in *Developer Portal Guide*. 
 
 ## 6 Read More
 

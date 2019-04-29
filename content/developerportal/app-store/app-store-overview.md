@@ -49,8 +49,8 @@ The header for each add-on presents the following details:
 		* This is only available if the developer has included a demo URL when sharing the content (for details on sharing content, see [How to Share App Store Content](share-app-store-content))
 	* **Open** – click this to open a supplementary page for the content (for example, the [Atlas UI](https://atlas.mendix.com/) page, where you can learn more about the Mendix Atlas UI Design language)
 	* **Download** – click this to download the content
-		* This is only available for content that has a file attached (meaning, all shared  Desktop Modeler content, but not promotions; for details on sharing  Desktop Modeler content, see [How to Share App Store Content](share-app-store-content))
-		* The best practice is to download content from the App Store that is accessible in the  Desktop Modeler, because it then downloads directly into the  Desktop Modeler (for details, see [How to Use App Store Content](app-store-content); and for details on importing downloaded App Store content into the Desktop Modeler, see [How to Import & Export Objects](/howto/integration/importing-and-exporting-objects))
+		* This is only available for content that has a file attached (meaning, all shared Studio Pro content, but not promotions; for details on sharing Studio Pro content, see [How to Share App Store Content](share-app-store-content))
+		* The best practice is to download content from the App Store that is accessible in the  Desktop Modeler, because it then downloads directly into Studio Pro (for details, see [How to Use App Store Content](app-store-content); and for details on importing downloaded App Store content into Studio Pro, see [How to Import & Export Objects](/howto/integration/importing-and-exporting-objects))
 
 ### 3.2 Tabs
 
@@ -90,7 +90,7 @@ The details page for each add-on and app presents the following item information
 In the **Additional Info** section, you can see the following information (depending on the type of content):
 
 * The **Latest version** number of the item
-* The  Desktop Modeler version that the item **Requires** to work
+* The Studio Pro version that the item **Requires** to work
 * When the item was **Published**
 * The type of **License** for the item
 * The type of support Mendix offers for the item (for more information, see [App Store Content Support](app-store-content-support))

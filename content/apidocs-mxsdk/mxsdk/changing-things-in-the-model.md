@@ -25,7 +25,7 @@ function createEntity(domainModel : domainmodels.DomainModel, entityName : strin
 	newEntity.name = entityName;
 	domainModel.entities.push(newEntity);
 
-	// location on the canvas in the Mendix Modeler:
+	// location on the canvas in the Mendix Studio Pro:
 	newEntity.location = { 'x': 100, 'y': 100 };
 
     // new attribute (which is by default a string attribute):

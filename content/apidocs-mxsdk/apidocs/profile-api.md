@@ -18,7 +18,7 @@ The service is part of the [AppCloudServices module](https://appstore.home.mendi
 
 {{% alert type="info" %}}
 
-When importing version 1.3.0 of the AppCloudServices module over earlier versions, you need to replace existing calls to AppCloudServices.RetrieveDisplayName with calls to AppCloudServices.RetrieveUserProfile. This new microflow returns a new entity (UserProfile) that contains, besides the Display Name that was already returned, a lot of other fields, e.g. Email Address, Company Name, and Avatar URL. Because the old microflow has been removed, the modeler will generate errors where the old microflow was used. You can replace those occurrences with calls to the new microflow.
+When importing version 1.3.0 of the AppCloudServices module over earlier versions, you need to replace existing calls to AppCloudServices.RetrieveDisplayName with calls to AppCloudServices.RetrieveUserProfile. This new microflow returns a new entity (UserProfile) that contains, besides the Display Name that was already returned, a lot of other fields, e.g. Email Address, Company Name, and Avatar URL. Because the old microflow has been removed, Studio Pro will generate errors where the old microflow was used. You can replace those occurrences with calls to the new microflow.
 
 If you previously deployed your app with an older version of the AppCloudServices module, you will need to update the value of the "AppCloudServices.ProfileServiceLocation" constant in the Developer Portal on first re-deployment. The new value should be "[https://profile.mendixcloud.com/ws/ProfileService/3/soap1](https://profile.mendixcloud.com/ws/ProfileService/3/soap1)".
 

@@ -22,7 +22,7 @@ As a Mendix user with an IBM Cloud account you have access to many IBM resources
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Have an [IBM Cloud account](https://console.bluemix.net/registration/)
-* Download the [Mendix Desktop Modeler](https://appstore.home.mendix.com/link/modelers/) – you will need 7.11.0 or higher
+* Download [Mendix Studio Pro](https://appstore.home.mendix.com/link/modelers/) – you will need 7.11.0 or higher
 * Be familiar with the basic concepts of editing and deploying a Mendix app
 * Be familiar with the basic concepts of IBM Starter Kits and Toolchain
 
@@ -133,32 +133,32 @@ Your IBM Kubernetes environment is now configured. Go to section 3.3 [Creating a
 
 Before you can deploy a package to IBM Cloud you have to create it.
 
-#### 3.3.1 Deploying from Within the Web Modeler
+#### 3.3.1 Deploying from Within Mendix Studio
 
-It is not possible to deploy your app directly from the Web Modeler. The Web Modeler is not currently aware of target environments apart from the Mendix Cloud v4. You will have to make use of the Desktop Modeler.
+It is not possible to deploy your app directly from Studio. Studio is not currently aware of target environments apart from the Mendix Cloud v4. You will have to make use of Studio Pro.
 
-Sync your app with the Desktop Modeler as described in [Sync the Web Modeler & Desktop Modeler](/refguide/sync-webmodeler-desktopmodeler).
+Sync your app with Studio Pro as described in [Collaborative Development](/refguide/collaborative-development).
 
-Once you have your app in the Desktop Modeler, you can do one of the following: 
+Once you have your app in Studio Pro, you can do one of the following: 
 
-* deploy it directly from the Desktop Modeler (see section 3.3.2, [Deploying from Within the Desktop Modeler](#deploy-dm))
-* commit from the Desktop Modeler and then deploy it from the Developer Portal (see section 3.3.3, [Deploying from the Developer Portal](#deploy-dp))
+* deploy it directly from Studio Pro (see section 3.3.2, [Deploying from Within Studio Pro](#deploy-dm))
+* commit from Studio Pro and then deploy it from the Developer Portal (see section 3.3.3, [Deploying from the Developer Portal](#deploy-dp))
 
-#### 3.3.2 Deploying from Within the Desktop Modeler{#deploy-dm}
+#### 3.3.2 Deploying from Within Studio Pro{#deploy-dm}
 
-You can deploy your app automatically from the Desktop Modeler. However, you will have less control over the deployment than deploying from the Developer Portal.
+You can deploy your app automatically from Studio Pro. However, you will have less control over the deployment than deploying from the Developer Portal.
 
-Click **Run** in the Desktop Modeler. This will automatically:
+Click **Run** in Studio Pro. This will automatically:
 
 * commit the project
 * generate a deployment package from the latest commit in the current branch
 * push the deployment package to IBM Cloud
 
-You will still need to go to IBM Cloud and manually deploy the package; a message within the Desktop Modeler will let you know when the package is ready and will give you the link to IBM Cloud. See section 3.4 [Deploying a Package to IBM Cloud](#deploy-package) for instructions on how to do the deployment.
+You will still need to go to IBM Cloud and manually deploy the package; a message within Studio Pro will let you know when the package is ready and will give you the link to IBM Cloud. See section 3.4 [Deploying a Package to IBM Cloud](#deploy-package) for instructions on how to do the deployment.
 
 #### 3.3.3 Deploying from the Developer Portal{#deploy-dp}
 
-At any time, you can create a new deployment package from a committed version of the project. If you are working with the Desktop Modeler you will have to commit the project first.
+At any time, you can create a new deployment package from a committed version of the project. If you are working with Studio Pro you will have to commit the project first.
 
 To create a package for IBM Cloud within Developer Portal, follow these steps:
 
@@ -226,7 +226,7 @@ To create a package for IBM Cloud within Developer Portal, follow these steps:
 
     ![](attachments/ibm-cloud/pushrequest.png)
 
-    Alternatively, follow the link you are given in the Desktop Modeler.
+    Alternatively, follow the link you are given in Studio Pro.
 
     You may need to configure your browser to allow the IBM Cloud page to open.
 
@@ -345,4 +345,4 @@ The Mendix status page ([https://status.mendix.com/](https://status.mendix.com/)
 ## 6 Read More
 
 * [IBM Cloud account](https://console.bluemix.net/registration/)
-* [Mendix Desktop Modeler](https://appstore.home.mendix.com/link/modelers/)
+* [Mendix Studio Pro](https://appstore.home.mendix.com/link/modelers/)

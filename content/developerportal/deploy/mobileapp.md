@@ -38,7 +38,7 @@ In the **General settings** section, you must provide the following information:
 
 If you are targeting Mendix 7.2.0 or above, please specify the navigation profiles to use on phones and tablets.
 
-Make sure the profile identifier corresponds with the one defined in the Modeler.
+Make sure the profile identifier corresponds with the one defined in Mendix Studio Pro.
 
 * **Phone profile**
 * **Tablet profile**

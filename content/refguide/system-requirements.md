@@ -10,33 +10,34 @@ description: "Presents the system requirements for using the Mendix Platform."
 
 This document presents the system requirements for the various parts of the Mendix Platform.
 
-## 2 Studio Pro
+## 2 Desktop Modeler
 
-Mendix Studio Pro runs on 64-bit versions of Windows 7, 8, and 10.
+The Mendix [Desktop Modeler](desktop-modeler) supports Windows 7, 8, and 10. It supports both 32-bit and 64-bit variations, but 64-bit is recommended.
 
 The following frameworks are automatically installed (if necessary):
 
 * Microsoft .NET Framework 4.6.2
 * Microsoft Visual C++ 2010 SP1 Redistributable Package
 * Microsoft Visual C++ 2013 Redistributable Package
-* AdoptOpenJDK 8 (installed automatically if you do not have this or Java Development Kit 1.8 already installed) or Java Development Kit 1.8
+* AdoptOpenJDK 8 (installed automatically as of [Mendix 7.23.3](/releasenotes/desktop-modeler/7.23#7233) if you do not have this or Java Development Kit 1.8 already installed) or Java Development Kit 1.8
 
-	{{% alert type="warning" %}} You can choose which JDK is used for building and running locally via the **Edit** > **Preferences** menu item in Studio Pro.
-	{{% /alert %}}
+{{% alert type="warning" %}}
+You can choose which JDK is used for building and running locally via the **Edit** > **Preferences** menu item in the Desktop Modeler.
+{{% /alert %}}
 
-* If you want to use TortoiseSVN in combination with Studio Pro, download the latest version (1.7.x) from [Sourceforge](http://sourceforge.net/projects/tortoisesvn/files/?source=navbar)
+If you want to use TortoiseSVN in combination with the Desktop Modeler, download the latest version 1.7.x from [Sourceforge](http://sourceforge.net/projects/tortoisesvn/files/?source=navbar).
 
 ## 3 Team Server
 
-The [Team Server](team-server) is implemented using Subversion, and Studio Pro uses the HTTPS protocol to communicate with that server. To access the Team Server from within Studio Pro, the network at your location needs the following settings:
+The [Team Server](team-server) is implemented using Subversion, and the Modeler uses the HTTPS protocol to communicate with that server. To access the Team Server from within the Desktop Modeler, the network at your location needs the following settings:
 
 * The HTTPS port (TCP 443) needs to be open
 * The HTTP port (TCP 80) needs to be open
 * WebDAV (verbs within the HTTP protocol) needs to be enabled on the proxy server (if any)
 
-## 4 Studio
+## 4 Web Modeler
 
-[Mendix Studio](/studio) is optimized for use with Google Chrome. While Chrome is the officially supported browser, you can also use Studio with other popular browsers like Mozilla Firefox, Apple Safari, and Microsoft Edge. 
+The [Mendix Web Modeler](/studio) is optimized for use with Google Chrome. While Chrome is the officially supported browser, you can also use the Web Modeler with other popular browsers like Mozilla Firefox, Apple Safari, and Microsoft Edge. 
 
 {{% alert type="info" %}}
 The browser you use needs to have JavaScript turned on.
@@ -65,22 +66,22 @@ The browser you use needs to have JavaScript turned on.
 * Azure SQL v12 (support is not independently verified and is available only through compatible versions of SQL Server)
 * [MySQL](mysql) 5.5, 5.6, 5.7
 * [Oracle Database](oracle) 11g Release 2, 12c Release 1
-* [SAP HANA](saphana)
 * PostgreSQL 9.2, 9.3, 9.4, 9.5, 9.6, 10
+* [SAP HANA](saphana) 2.00.040.00.1545918182
 
 ### 5.4 Java
 
 When running Mendix on a server, you will need Java Runtime Environment (JRE) 8. To download an OpenJDK distribution from AdoptOpenJDK, see [AdoptOpenJDK Installation](https://adoptopenjdk.net/installation.html). To download a commercial Oracle distribution, see [Java SE Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html).
 
 {{% alert type="info" %}}
-There is an issue since Java 7 that causes timeouts when using web services with a certain amount of data. You can circumvent this issue by adding the VM params `-Djava.net.preferIPv4Stack=true`. Mendix Studio Pro will do this for you, but if you are running Mendix on premises on a Windows server, you will need to do this yourself. For more information about this issue, see [HotSpot (64bit server) hangs on socket read (JVM 1.7 bug?) - updated](http://blog.bielu.com/2011/11/hotspot-64bit-server-hangs-on-socket.html) and [Possible Bug in Java 7](https://forums.oracle.com/forums/thread.jspa?messageID=9985748).
+There is an issue since Java 7 that causes timeouts when using web services with a certain amount of data. You can circumvent this issue by adding the VM params `-Djava.net.preferIPv4Stack=true`. The Mendix Desktop Modeler will do this for you, but if you are running Mendix on premises on a Windows server, you will need to do this yourself. For more information about this issue, see [HotSpot (64bit server) hangs on socket read (JVM 1.7 bug?) - updated](http://blog.bielu.com/2011/11/hotspot-64bit-server-hangs-on-socket.html) and [Possible Bug in Java 7](https://forums.oracle.com/forums/thread.jspa?messageID=9985748).
 {{% /alert %}}
 
 ### 5.5 Application Server
 
 Jetty is built into the [Mendix Runtime](runtime), so an application server is not required.
 
-## 6 Browsers{#browsers}
+## 6 Browsers
 
 ### 6.1 Desktop Browsers
 
@@ -92,8 +93,9 @@ Jetty is built into the [Mendix Runtime](runtime), so an application server is n
 
 ### 6.2 Mobile Browsers
 
-* iOS 12 and above (Safari)
+* iOS 9 and above (Safari)
 * Android 5.0 and above
+* Windows Phone 8 and above
 
 ### 6.3 Hybrid Preview
 
@@ -103,12 +105,19 @@ Using a hybrid preview is not the same as using an emulator. A hybrid preview on
 
 For Mendix apps and the [Mendix Mobile app](getting-the-mendix-app):
 
-* iOS 12 and above
+* iOS 9 and above
 * Android 5.0 and above
 
 ## 8 MxBuild{#mxbuild}
 
-MxBuild is a Windows and Linux command-line tool that can be used to build a Mendix Deployment Package. For more information, see [MxBuild](mxbuild).
+MxBuild is a Windows and Linux command-line tool that can be used to build a Mendix Deployment Package. See [MxBuild](mxbuild) for more information.
+
+### 8.1 Mendix Version 7.1 & Above
 
 * Mono v4.6.x or .NET v4.6.2
+* JDK 8.
+
+### 8.2 Mendix Version 7.0.2
+
+* Mono v3.1.0 or .NET v4.5
 * JDK 8

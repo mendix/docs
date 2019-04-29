@@ -14,8 +14,6 @@ This document describes all the different sections of the App Store.
 
 ## 2 App Store Home Page
 
-### 2.1 Categories
-
 The home page of the Mendix App Store presents various content categories:
 
 ![](attachments/app-store-overview/home_page.png)
@@ -23,7 +21,7 @@ The home page of the Mendix App Store presents various content categories:
 Category | Description
 --- | ---
 **Featured** | The most important and useful App Store content as determined by Mendix (think of it as a "staff picks" section). 
-**Connectors**, **Modules**, **Widgets** | Add-on categories and sub-categories (for example, Internet-of-Things and Authentication). 
+**Connectors**, **Mobile**, **Widgets**, **Modules** | Add-on categories and sub-categories (for example, Internet-of-Things and Authentication). 
 **New content** | The most recently uploaded content. 
 **Recent updates** | The most recently updated content. 
 **Most popular** | Content that has been downloaded the most in the past seven days. 
@@ -31,20 +29,6 @@ Category | Description
 **Top App Store contributors** | The top 10 App Store contributors of the last 30 days. Clicking the name of the developer will bring you to their Mendix Profile. Clicking **View full leaderboard** will take you to the [Mendix Leaderboards](https://developer.mendixcloud.com/link/topappstore30) page.
 
 To see a detail page for each category, click **View more**.
-
-### 2.2 Sidebar Menu
-
-The App Store sidebar menu lists all the pages that you can browse for content.
-
-For details on add-ons, see [Add-On Details Page](#AddonDetailsPage).
-
-You can also access the following pages:
-
-* [My App Store](#myappstore)
-* [Private App Store](#privateappstore)
-* [Modeler](#modeler)
-* [Solutions](#solutions)
-* [Partners](#partners)
 
 ## 3 Add-On Details Page {#AddonDetailsPage}
 
@@ -59,41 +43,43 @@ The header for each add-on presents the following details:
 * The **Name** and **Category** of the item
 * The review average (in stars) and the number of reviews
 * The number of times the item has been downloaded
-* A heart for favoriting the item (so it will appear in your list of favorites on the [My App Store tab](#myappstore))
+* A heart for favoriting the item (so it will appear in your list of favorites on the [Dashboard](#dashboard))
 * The following buttons (depending on the type of item and what the developer added to share):
 	* **Preview** – click this to preview more information or a demo about the content
 		* This is only available if the developer has included a demo URL when sharing the content (for details on sharing content, see [How to Share App Store Content](share-app-store-content))
 	* **Open** – click this to open a supplementary page for the content (for example, the [Atlas UI](https://atlas.mendix.com/) page, where you can learn more about the Mendix Atlas UI Design language)
 	* **Download** – click this to download the content
-		* This is only available for content that has a file attached (meaning, all shared  Desktop Modeler content, but not promotions; for details on sharing  Desktop Modeler content, see [How to Share App Store Content](share-app-store-content))
-		* For details on how to import downloaded App Store content into the Desktop Modeler, see [How to Import & Export Objects](/howto/integration/importing-and-exporting-objects)
-		{{% alert type="info" %}}The best practice is to download content from the App Store that is accessible in the  Desktop Modeler, because it then downloads directly into the  Desktop Modeler (for details, see [How to Use App Store Content](app-store-content)).
-		{{% /alert %}}
+		* This is only available for content that has a file attached (meaning, all shared Studio Pro content, but not promotions; for details on sharing Studio Pro content, see [How to Share App Store Content](share-app-store-content))
+		* The best practice is to download content from the App Store that is accessible in the  Desktop Modeler, because it then downloads directly into Studio Pro (for details, see [How to Use App Store Content](app-store-content); and for details on importing downloaded App Store content into Studio Pro, see [How to Import & Export Objects](/howto/integration/importing-and-exporting-objects))
 
 ### 3.2 Tabs
 
 The details page for each add-on and app presents the following item information tabs:
 
-*  The **Overview** tab with the following sections:
+*  **Overview** tab – contains following sections:
 	* **Description** – a description of the item
 	* **Screenshots** – screenshots of the item
-	* **User Reviews** – user reviews of the item; to leave a review for the item, click **Add Review** – a section will open where you can add text, rate the content, and submit the review (your reviews will be listed on the [My App Store tab](#myappstore))
+	* **User Reviews** – user reviews of the item; to leave a review for the item, click **Add Review** – a section will open where you can add text, rate the content, and submit the review (your reviews will be listed on your [Reviews](#my-reviews) page)
 
 	![](attachments/app-store-overview/content_detail_5.png)
 
-*  The **Documentation** tab can include details on typical usage scenarios, features and limitations, depedencies, intallation and configuration, and frequently asked questions
+*  **Documentation** tab – can include details on typical usage scenarios, features and limitations, depedencies, intallation and configuration, and frequently asked questions:
 
 	![](attachments/app-store-overview/content_detail_6.png)
 
 	* Clicking **Edit documentation** will open a text editor where you can edit the App Store item's documentation
 
-*  The **Statistics** tab charts the downloads of the item over time:
+*  **Statistics** tab –  charts the downloads of the item over time:
 
 	![](attachments/app-store-overview/content_detail_7.png)
 
-*  The **All versions** tab, which lists all the versions (updates) of the item:
+*  **All versions** tab – lists all the versions (updates) of the item:
 
 	![](attachments/app-store-overview/content_detail_8.png)
+	
+*  **Content managers** tab – lists the [content managers](#cm) if this is protected App Store content:
+
+	![](attachments/app-store-overview/content_detail_9.png)
 
 ### 3.3 Additional Info Section
 
@@ -104,7 +90,7 @@ The details page for each add-on and app presents the following item information
 In the **Additional Info** section, you can see the following information (depending on the type of content):
 
 * The **Latest version** number of the item
-* The  Desktop Modeler version that the item **Requires** to work
+* The Studio Pro version that the item **Requires** to work
 * When the item was **Published**
 * The type of **License** for the item
 * The type of support Mendix offers for the item (for more information, see [App Store Content Support](app-store-content-support))
@@ -121,92 +107,138 @@ In the **Additional Info** section, you can see the following information (depen
 In the **Developer Info** section, you can see the following information:
 
 * The name, job title, and Mendix level of the App Store content developer
-    * Clicking the developer name will bring you to their Mendix Profile
+	* Clicking the developer name will bring you to their [Mendix Profile](/developerportal/mendix-profile/index)
 * The numbers for **Added items**, **Updated items**, and **Reviews added** in the Mendix App Store
 * The company for which the developer works
-    * Clicking the company name will bring you to the company's [Partner Profile](../community-tools/how-to-set-up-your-partner-profile)
+	* Clicking the company name will bring you to the company's [Partner Profile](../community-tools/how-to-set-up-your-partner-profile)
 
-## 4 Other Pages
+## 4 My App Store
 
-### 4.1 My App Store {#myappstore}
+### 4.1 Dashboard {#dashboard}
 
-The **My App Store** page presents all of your App Store activity:
+The **Dashboard** page presents your App Store activity:
 
-* Your numbers for **PUBLISHED CONTENT** and **SUBMITTED REVIEWS**
-* **Notifications** on content you favorited
+* Your numbers for **Published Content** and **Submitted Reviews**
+* **Notifications** on content you created and favorited
+* Content **Drafts** you have created
 * Your content **Favorites**
 
 ![](attachments/app-store-overview/my_app_store.png)
 
-The **MY APP STORE** section of the sidebar menu contains the following options:
+### 4.2 My Content {#content}
 
-* **Published** – click this to see the content you have published as well as the content your company has published on the **Published content** page
-    * On the **Published by me** tab, you can see the last version of the content you published
-        * Click **Manage** to edit the current draft version, create a new draft version (for details, see [How to Share App Store Content](share-app-store-content)), or unpublish content
-    * On the **Published by my company** tab, you can see all of the content published by your company
-        * Click **Manage** to edit content, create a new draft version, or unpublish the content version you had published (if you are an organization administrator, you can unpublish any content)
-* **Favorites** – click this to see the content you have favorited
-* **Stats** – click this to see the content that has been downloaded the most in the previous month on the **Downloads overview** page
-    * Clicking specific App Store content on this page will show you a **Downloads per month** graph as well as **User Reviews**
+On this page, you can see the App Store content for which you have created at least one version:
 
-The **REVIEWS** section of the sidebar menu contains the following options:
+![](attachments/app-store-overview/my-content.png)
 
-* **Submitted** – click this to see the reviews that you have submitted as well as the reviews your company has submitted
-* **Received** – click this to see the reviews that your content has received as well as the reviews that your company's content has received
+{{% alert type="info" %}}You may see certain labels on the content:</br>
+* **Protected** – details on this label are described below via the [Enable protection](#protect) button; if the content is protected, only [content managers](#cm) are able to manage it</br>
+* **Company only** – this is your company 's private App Store content (for details on how this is configured, see the [Adding New App Store Content](share-app-store-content#private-app-store) section of *How to Share App Store Content*); this content can be shared with [external downloaders](#ext)</br>
+{{% /alert %}}
 
-The **MY COMPANY** section of the sidebar menu contains the following options:
+Clicking **Manage** opens the content management page:
 
-* **Profile** – click this to see the profile of your company (the same profile that appears on the [Partners Tab](#partners))
+![](attachments/app-store-overview/content-management.png)
 
-### 4.2 Private App Store {#privateappstore}
+On this page, you will see the following buttons (depending on your permissions):
 
-The private App Store is where your company can store content that will be available only to the developers in your company. This content will not be reviewed by Mendix.
+* <a name="protect"></a>**Enable protection**/**Disable protection** – click this to toggle the protection level for the content
+  * Enabling protection assigns the **Protected** label to the content, which means only [content managers](#cm) are able to manage it
+  * This button is only visible to Company Admins with the [Can manage App Store](../company-app-roles/manage-roles#app-store-manager) permission
+* **Create new draft version** – click this to create a new draft version of the content (for details on creating a draft version, see the [Adding New App Store Content](share-app-store-content#edit) section of *How to Share App Store Content*)
+* **Unpublish** – click this to remove that version from the content
+* **Edit** – click this to edit the content (for details on editing, see step 6 of the [Adding New App Store Content](share-app-store-content#edit) section of *How to Share App Store Content*)
 
-For more information, see the [Adding New App Store Content](share-app-store-content#adding) section of *How to Share App Store Content*.
+### 4.3 Shared with Me {#shared-with-me}
 
-### 4.3 Modeler {#modeler}
+This page contains content shared with you by other companies have marked you as an [external downloader]():
 
-On the **Modeler** page, you can download any version of the  Desktop Modeler you need by clicking  **Download** for the latest release or the donwload icon for a specific older release:
+![](attachments/app-store-overview/shared-with-me.png)
 
-![](attachments/app-store-overview/modeler.png)
+### 4.4 Reviews{#my-reviews}
 
-Clicking the **Release notes** icon will open the [ Desktop Modeler release notes](/releasenotes/desktop-modeler/) for that particular version.
+This page contains reviews of **Your content** by other users as well as **Your reviews** that you have written of other content:
 
-Clicking the **Related downloads** option will open a page with information relating to that Desktop Modeler version.
+![](attachments/app-store-overview/your-reviews.png)
 
-### 4.4 Solutions {#solutions}
+### 4.5 Notifications
 
-The **Solutions** page lists off-the-shelf products that are available for reference:
+This page presents a history of notifications on content you have contributed to:
 
-![](attachments/app-store-overview/solutions.png)
+![](attachments/app-store-overview/notifications.png)
 
-Hovering your mouse pointer over a solution tile will bring up a summary of the solution:
+## 5 Your Company's App Store
 
-![](attachments/app-store-overview/solution_example.png)
+### 5.1 Company Content
 
-Solutions are not available for download. There is only an **Open** button, which will take you to the specific supplementary page for the solution.
+On this page, you can see all the content your company has published:
 
-### 4.5 Partners {#partners}
+![](attachments/app-store-overview/company-content.png)
 
-The **Partners** page lists selected App Store partner companies:
+The **Manage** button is available to you for the following content:
 
-![](attachments/app-store-overview/partners.png)
+* Content you have published
+* Your company's content that is not protected
+* Your company's content that is [protected](#protect) for which you are a [content manager](#cm)
 
-Hovering your mouse pointer over a partner tile will bring up a summary of the company:
+For details on how to manage content, see the [My Content](#content) section above.
 
-![](attachments/app-store-overview/partner_summary.png)
+### 5.2 Shared with Others {#shared}
 
-Clicking the partner name will bring you to that partner's App Store details page:
+{{% alert type="info" %}}
+This menu item and page are only visible to Company Admins with the [Can manage App Store](../company-app-roles/manage-roles#app-store-manager) permission.
+{{% /alert %}}
 
-![](attachments/app-store-overview/partners_detail3.png)
+This page contains company-only content that is shared with external downloaders. To set these external downloaders, click **View all people outside your company...** to be taken to the [External Downloaders](#ext) page.
 
-On the **Apps & Add-ons** tab of the partner details page, you can browse the apps and add-ons that the partner has contributed to the App Store.
+To set the accessible content, click **Share content**, which opens the **Company-only content** dialog box. Here you see a list of company-only content from your company's [private App Store](share-app-store-content#private-app-store) that can be shared by making a selection and clicking **Save**:
 
-On the **More info** tab, you can view documents that provide more information on what the partner company does:
+![](attachments/app-store-overview/company-only-content.png)
 
-![](attachments/app-store-overview/partners_detail2.png)
+Once the content is saved, it is shared with external downloaders and listed on this page:
 
-## 5 Read More
+![](attachments/app-store-overview/shared-with-others.png)
+
+There are two buttons available for shared content:
+
+* **Remove** – click this to remove the content from being shared with external downloaders
+* **View** – click this to go to the App Store page for the content
+
+### 5.3 Reviews
+
+This page contains reviews of **Your company's content** as well as **Your company's reviews** that users from your company have written of other content.
+
+![](attachments/app-store-overview/your-company-reviews.png)
+
+### 5.4 User Groups
+
+{{% alert type="info" %}}
+This menu item and page are only visible to Company Admins with the [Can manage App Store](../company-app-roles/manage-roles#app-store-manager) permission.
+{{% /alert %}}
+
+You can configure user groups for various levels of access to your company's App Store. The available user groups are described in the sections below.
+
+#### 5.4.1 Content Managers {#cm}
+
+On this page, you can add App Store content managers for your company who will have rights to manage [protected content](#protect). To add a new content manager, enter their email address in the available field and click **Add**:
+
+![](attachments/app-store-overview/content-managers.png)
+
+To remove a content manager, click **Remove** next to their name
+
+####  5.4.2 External Downloaders {#ext}
+
+On this page, you can add external downloaders from outside your company who you can share your company's private App Store content with via the [Shared with Others](#shared) page.
+
+To add an external downloader, enter their email address in the box and click Add:
+
+![](attachments/app-store-overview/external-downloaders.png)
+
+If the external downloader is registered with Mendix, they will receive an email notifying them of access to private App Store content. They can then see all the private App Store content shared with them in their [Shared with Me](#shared-with-me) page.
+
+To remove an external downloader, click **Remove** next to their name.
+
+## 6 Read More
 
 * [How to Use App Store Content](app-store-content)
 * [How to Share App Store Content](share-app-store-content)

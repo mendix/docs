@@ -12,7 +12,7 @@ The **General** settings page presents an overview of your app project with the 
 
 * A **Description** of the app
 * The [App Contact](../company-app-roles/manage-roles#change-app-contact) and [Technical Contact](../company-app-roles/technical-contact) for the app
-* Whether the app is enabled for the **Web Modeler** (for details, see the [Web Modeler](#web) section below)
+* Whether the app is enabled for Mendix **Studio** (for details, see the [Mendix Studio](#web) section below)
 
 * The **App ID**
 
@@ -21,16 +21,16 @@ The **General** settings page presents an overview of your app project with the 
 
 The sections below describe the actions you can perform on this page.
 
-## 2 Web Modeler {#web}
+## 2 Mendix Studio {#web}
 
-In the **Web Modeler** section, you can see whether the Web Modeler is enabled for the app. You can also do the following:
+In the **Studio** section, you can see whether Studio is enabled for the app. You can also do the following:
 
 
-*  Enable the Web Modeler if it has not been enabled yet by clicking **Enable Web Modeler**
+*  Enable Studio if it has not been enabled yet by clicking **Enable Studio**
 
 	![](attachments/not-enabled.png)
 
-*  Enable collaborative development with the Web Modeler for apps using Mendix version [7.23.3](/releasenotes/desktop-modeler/7.23#7233) and above by clicking **Enable Now** (for more information on the collaborative development process, see [Collaborative Development](/refguide/collaborative-development))
+*  Enable collaborative development with Studio for apps using Mendix version [7.23.3](/releasenotes/desktop-modeler/7.23#7233) and above by clicking **Enable Now** (for more information on the collaborative development process, see [Collaborative Development](/refguide/collaborative-development))
 
 	![](attachments/enable-new-mode.png)
 
@@ -76,18 +76,18 @@ Click **Manage Webhooks** to manage your app's webhooks. A webhook enables the D
 Only [Company Admins](../company-app-roles/companyadmin-settings) or users with the **App Settings** permission can manage webhooks.
 {{% /alert %}}
 
-On the **Webhooks settings** page, you can add a new webook and edit or delete existing webhooks:
+On the **Webhooks settings** page, you can add a new webhook and edit or delete existing webhooks:
 
 {{% image_container width="550" %}}![](attachments/webhooks-list.png)
 {{% /image_container %}}
 
 After clicking **New** to create a new webhook, fill in the following details:
 
-* **Name** – the name of the webook
+* **Name** – the name of the webhook
 * <a name="url"></a>**URL** – the URL to which the webhook will connect 
 * **Secret** – the secret used by the Developer Portal to sign the data payload in order to identify the source of the data to the receiving URL (this appears when creating and editing a webhook, but it will not be displayed on the **Webhooks settings** page)
 * **Version** – the version of the webhooks feature to be used
-* **Events** – what types of data will be sent via the webook (you must select at least one; this appears when creating and editing a webhook, but it will not be displayed on the **Webhooks settings** page)
+* **Events** – what types of data will be sent via the webhook (you must select at least one; this appears when creating and editing a webhook, but it will not be displayed on the **Webhooks settings** page)
   * [Sprints](../collaborate/stories#sprint)
   * [Stories](../collaborate/stories)
 

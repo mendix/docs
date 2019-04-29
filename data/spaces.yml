@@ -163,7 +163,7 @@ releasenotes:
   priority: false
   menu_categories:
     - "Desktop Modeler"
-    - "Web Modeler"
+    - "Studio"
     - "Developer Portal"
     - "Mobile Products"
     - "SDKs"
@@ -184,8 +184,8 @@ developerportal:
     - "Community Tools"
     - "App Store"
     - "Mendix Support"
-web-modeler:
-  space: "Web Modeler Guide"
+studio:
+  space: "Studio Guide"
   priority: false
   menu_categories:
     - "General Info"

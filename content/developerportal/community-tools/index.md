@@ -81,7 +81,7 @@ For more information, see the [App Store Overview](../app-store/app-store-overvi
 
 ## 7 Documentation
 
-The [Mendix Documentation](https://docs.mendix.com/) covers all aspects of the Mendix Platform. The reference guide includes in-depth information on Mendix Studio, Studio Pro, and Team Server. The how-to's present detailed instructions for building and customizing apps with Mendix. The API documentation contains several different sections, such as the Deploy API and Team Server API.
+The [Mendix Documentation](https://docs.mendix.com/) covers all aspects of the Mendix Platform. The Mendix Studio Pro Guide includes in-depth information on Mendix Studio, Studio Pro, and Team Server. The Mendix Studio Pro How-To's present detailed instructions for building and customizing apps with Mendix. The API documentation contains several different sections, such as the Deploy API and Team Server API.
 
 The **Documentation** section of the Developers site presents the latest updates on the documentation site:
 
@@ -89,7 +89,7 @@ The **Documentation** section of the Developers site presents the latest updates
 ![](attachments/the-community-site/Documentation.png)
 {{% /image_container %}}
 
-Click a document title to go to that specific page in the documentation. Click **Documentation** to go to the main [Mendix Documentation page](https://docs.mendix.com/), where you can browse release notes, reference guides, how, APIs and SDKs, add-on documentation, and much more.
+Click a document title to go to that specific page in the documentation. Click **Documentation** to go to the main [Mendix Documentation page](https://docs.mendix.com/), where you can browse release notes, reference guides, how-to's, APIs and SDKs, add-on documentation, and much more.
 
 ## 8 Developer Spotlight
 

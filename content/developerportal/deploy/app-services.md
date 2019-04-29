@@ -22,7 +22,7 @@ On the **App Service** page, you can see a list of the available app services, w
 
 ![](attachments/app-services/publish-appservice.png)
 
-For more information, see [Published App Services](/refguide/published-app-services) in the Mendix Reference Guide as well as the [Mendix App Services: Putting Them to Work for Your Projects](https://www.mendix.com/videos/mendix-app-services-putting-work-projects-pieter-van-balen-mendix-developer/) blog post.
+For more information, see [Published App Services](/refguide/published-app-services) in the Mendix Studio Pro Guide as well as the [Mendix App Services: Putting Them to Work for Your Projects](https://www.mendix.com/videos/mendix-app-services-putting-work-projects-pieter-van-balen-mendix-developer/) blog post.
 
 ### 2.1 Settings
 

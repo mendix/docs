@@ -12,7 +12,7 @@ tags: ["support", "incident", "standard change", "URL", "change URL", "license",
 In order for Mendix Support to pick up and process your support request it's important to provide the right information. This will speed up the processing of your request and minimizes back-and-forth communication between Mendix Support and the submitter. Here is a list of items that the Support staff needs and uses to process an incident ticket.
 
 {{% alert type="warning" %}}
-For critial production incidents, please contact Mendix Support by phone. Find the phone number for your region on the [Support Portal home page](https://support.mendix.com).
+For critical production incidents, please contact Mendix Support by phone. Find the phone number for your region on the [Support Portal home page](https://support.mendix.com).
 {{% /alert %}}
 
 ## 2 Useful Links To Check Before Submitting a Request
@@ -30,7 +30,7 @@ This is the basic information that is required for a ticket:
 *   A detailed description of the action that was performed when the error was received
 *   A description of the desired goal (optional)
 
-Alo select the affecteda app in the request. For more information, read [How to Change the Affected Apps for Which You Can Submit Requests](change-affected-apps).
+Also select the affected app in the request. For more information, read [How to Change the Affected Apps for Which You Can Submit Requests](change-affected-apps).
 
 ## 4 Specifications
 
@@ -45,27 +45,27 @@ Depending on the type of request it is helpful to provide additional information
 
 *   The Project ID
 
-### 4.3 Modeler Problem – Modeler Issues
+### 4.3 Problems and Issues in Studio and Studio Pro
 
-*   Modeler type (Desktop Modeler or Web Modeler)
-*   Modeler version
+*   Studio type (Studio or Studio Pro)
+*   Mendix version
 *   Test project - read [How To Export A Mendix Project Package](/refguide/export-project-package-dialog) for more information
 *   Reproducible steps
 
 ### 4.4 App Store Content Problem – Module, Widget, Theme Issues
 
 *   Name of the content
-*   Modeler version
+*   Mendix version
 *   Test project - read [How To Export A Mendix Project Package](/refguide/export-project-package-dialog) for more information
 *   Reproducible steps
 
 {{% alert type="info" %}}
-Not all App Store content is compatible with every Mendix Modeler version and not all App Store content is supported by Mendix. For more information, see [App Store Content Support](/developerportal/app-store/app-store-content-support).
+Not all App Store content is compatible with every version of Studio Pro, and not all App Store content is supported by Mendix. For more information, see [App Store Content Support](/developerportal/app-store/app-store-content-support).
 {{% /alert %}}
 
 ### 4.5 Mobile Problem
 
-*   Operating System and the version _(Andriod x.x / iOS x.x)_. For example: Android 6.1.
+*   Operating System and the version _(Android x.x / iOS x.x)_. For example: Android 6.1.
 
 {{% alert type="info" %}}
 For Windows Phone, please ask Mendix Support about the current support conditions.

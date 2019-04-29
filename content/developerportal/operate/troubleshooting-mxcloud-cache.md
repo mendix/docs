@@ -1,5 +1,5 @@
 ---
-title: "Cache Metrics (Runtime Lower than Version 7.0)"
+title: "Cache Metrics (Runtime Version 6)"
 parent: "metrics"
 menu_order: 40
 description: "How to troubleshoot the cache in your node."
@@ -10,9 +10,9 @@ tags: ["App","Troubleshoot","Developer Portal","Cache","Mendix Cloud"]
 
 {{% alert type="info" %}}
 
-This information is only relevant for apps built using Desktop Modeler/Runtime versions 4, 5, and 6.
+This information is only relevant for apps built using Mendix Studio Pro/Runtime version 6.
 
-The version 7 runtime is stateless and does not cache Mendix objects on the server. See the [Mendix Desktop Modeler Release Notes 7.0](/releasenotes/desktop-modeler/7.0) for more information.
+Runtime versions 7.0 and above are stateless and do not cache Mendix objects on the server. See the [Mendix Desktop Modeler Release Notes 7.0](/releasenotes/desktop-modeler/7.0) for more information.
 
 {{% /alert %}}
 
@@ -39,7 +39,7 @@ If you fear your application might contain a memory leak you should always check
 ![](attachments/troubleshooting-mxcloud-cache/troubleshooting-mxcloud-cache-img4.png)
 
 In this case, you can refer back to the **Cache** tab. And see how many of each entity type are in cache and what session is keeping them in cache. You might be able to deduce the most likely source of the memory leak this way. 
-For example, if you have 50500 entities in cache and 50000 are of type Car.Tyre, you might want to look into all places where you process a lot of Car. Tyre entities to see if you made a mistake somewhere that could explain the memory leak.
+For example, if you have 50500 entities in cache and 50000 are of type Car.Tire, you might want to look into all places where you process a lot of Car.Tire entities to see if you made a mistake somewhere that could explain the memory leak.
 
 The cache statistics might also help you identify the most commonly used entities in your application.
 

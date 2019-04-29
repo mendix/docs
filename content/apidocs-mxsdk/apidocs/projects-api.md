@@ -44,7 +44,7 @@ The CreateNewApp operation will create a new app and corresponding project. As p
 
 The CreateNewApp action returns a String which is the ID of the background job that has been scheduled to create your new app.
 
-##### Usage from the Modeler
+##### Usage from Studio Pro
 
 After you have imported the Projects API App Service, an activity called 'CreateNewApp' is available under the 'ProjectsAPI' node in the Action dialog. See also [Consumed App Services](/refguide/consumed-app-services).
 
@@ -72,9 +72,9 @@ The `ProjectsAPI.JobState` enumeration can have the values `Running`, `Completed
 
 The `Result` element contains the job result, in case it has completed. For `CreateNewApp` this is the Project ID of the newly created app. For `ExposeTeamServerRevisionAsOnlineWorkingCopy`, this is the working copy ID on the Model Server. For `CommitOnlineWorkingCopyChangesToTeamServer`, it's the new revision number for the corresponding Team Server project.
 
-##### Usage From the Modeler
+##### Usage From Studio Pro
 
-The following Model Share shows how to use the RetrieveJobStatus call from the Modeler.
+The following Model Share shows how to use the RetrieveJobStatus call from Studio Pro.
 
 <iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/7f0be770-bd1a-4fa8-9928-ca89b857d8b2/retrievejobstatus-usage?embed=true" allowfullscreen=""></iframe>
 
@@ -134,7 +134,7 @@ The ExposeTeamServerAsWorkingCopy action returns a String which is the Job ID of
 
 The CommitOnlineWorkingCopyChangesToTeamServer action returns a String which is the Job ID of the background job that was queued for execution. The returned Job ID may be used as input for the RetrieveJobStatus action.
 
-##### Usage from the Modeler
+##### Usage from Studio Pro
 
 <iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/f326c491-f2c0-4bfd-a6f7-ea35658ba80d/commitonlineworkingcopychangestoteamserver-usage?embed=true" allowfullscreen=""></iframe>
 

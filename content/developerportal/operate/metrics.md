@@ -55,11 +55,11 @@ The details of an Action Stack are:
 
 ## 4 Cache
 
-The Mendix runtime versions 4, 5, and 6 have an object cache for non-persistent objects. In this tab you can see how many objects of each type currently live in memory. You can also see the same information broken down per user session.
+Mendix runtime version 6 has an object cache for non-persistent objects. In this tab you can see how many objects of each type currently live in memory. You can also see the same information broken down per user session.
 
 {{% alert type="info" %}}
 
-The version 7 runtime is stateless and does not cache Mendix objects on the server. See the [Mendix Desktop Modeler Release Notes 7.0](/releasenotes/desktop-modeler/7.0) for more information.
+Runtime versions 7 and above are stateless and do not cache Mendix objects on the server. See the [Mendix Desktop Modeler Release Notes 7.0](/releasenotes/desktop-modeler/7.0) for more information.
 
 {{% /alert %}}
 

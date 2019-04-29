@@ -19,8 +19,8 @@ Want to know more about all the possibilities this opens up? Take a look at the 
 
 These steps use the [Company Expenses](https://appstore.home.mendix.com/link/app/240/) (CE) app as an example. To incorporate the AppCloudServices module into an existing app, follow these steps:
 
-1. Open your app project in the Desktop Modeler.
-2. Open the **App Store** inside the Mendix Modeler.
+1. Open your app project in Mendix Studio Pro.
+2. Open the **App Store** inside Studio Pro.
 3. Search for "AppCloudServices," then open and download the Mendix **AppCloudServices** module.
 4.  Select **Add as a new module** and click **Import**. The module should now be visible in the **Project Explorer**:
 

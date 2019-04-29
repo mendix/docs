@@ -29,22 +29,22 @@ Using the ATS Recorder is the easiest and least time-consuming way to create tes
 * Reduce the use of custom widgets
 
 {{% alert type="info" %}}
-To perform the steps in this chapter you must have access to your app in the Mendix Modeler.
+To perform the steps in this chapter you must have access to your app in Mendix Studio Pro.
 {{% /alert %}}
 
 The next chapters give a description of how to take each step and how it increases ATS Recorder and ATS Helper coverage of your AUT.
 
 ### 3.1 Giving Snippets a Unique Name 
 
-When developers create a snippet in Mendix and reuse that snippet on the same page, the ATS Recorder cannot distinguish them. This can also be the case when developers use several snippets on one page. The ATS Recorder cannot distinguish the snippets, as they do not have a unique name. You enable unique snippet names in the Mendix modeler by adding a constant to your project with certain properties.
+When developers create a snippet in Mendix and reuse that snippet on the same page, the ATS Recorder cannot distinguish them. This can also be the case when developers use several snippets on one page. The ATS Recorder cannot distinguish the snippets, as they do not have a unique name. You enable unique snippet names in Mendix Studio Pro by adding a constant to your project with certain properties.
 
 {{% alert type="info" %}}
 This only works for Mendix version 6.10 and above.
 {{% /alert %}}
 
-To add a constant in the Mendix modeler follow these steps:
+To add a constant in Mendix Studio Pro follow these steps:
 
-1. Open your project in the Mendix modeler and open the project settings.
+1. Open your project in Mendix Studio Pro and open the project settings.
 2. In the **Configuration** tab click **New**. This opens the **New Configuration** dialog.
 3. In the dialog click the **Constants** tab and click **New**. This opens the **Select Constant** dialog.
 4. Select a module in this dialog where you want to add the constant and click **New**. This opens the **Add Constant** dialog.
@@ -59,11 +59,11 @@ To add a constant in the Mendix modeler follow these steps:
 6. Click **OK**. This opens the **New Constant Value** dialog.
 7. Click **OK** in the **New Constant Value** dialog and click **OK** in the **New Configuration** dialog.
 
-You now added the constant in the Mendix modeler. If you have this constant anywhere in your project, the mx-name classes of snippets are longer and unique.
+You now added the constant in Mendix Studio Pro. If you have this constant anywhere in your project, the mx-name classes of snippets are longer and unique.
 
 ### 3.2 Giving Widgets a Unique Name
 
-Your application has many buttons, images, and menu widgets etc. on each page. It is possible that those widgets have the same mx-name, for example, mx-name-actionButton1. The recorder can often record these widgets, but when you run your test case it might fail. It might fail because ATS interacts with the first widget it finds with that mx-name. Changing the name in the Mendix modeler to a unique name solves this problem:
+Your application has many buttons, images, and menu widgets etc. on each page. It is possible that those widgets have the same mx-name, for example, mx-name-actionButton1. The recorder can often record these widgets, but when you run your test case it might fail. It might fail because ATS interacts with the first widget it finds with that mx-name. Changing the name in Mendix Studio Pro to a unique name solves this problem:
 
 ![](attachments/increase-recorder-coverage-2/changed-mx-name.png)
 
@@ -90,7 +90,7 @@ In case the widget doesn't have a unique mx-name or an mx-name at all, the follo
 
 ### 4.1 Giving Buttons a Unique Name in ATS
 
-The previous chapter described that ATS can interact with the correct widget by giving it a unique name in the Mendix modeler. Another way to let ATS interact with the correct widget is by adding another mx-name in the ATS action. The mechanics are the same as the **Search Context** input parameter. ATS will search for the widget with the second mx-name inside the widget with the first mx-name. For example: 'container8 microflowButton2' ATS searches for the microflowbutton inside the container. ATS searches for the second mx-name within the first mx-name:
+The previous chapter described that ATS can interact with the correct widget by giving it a unique name in Mendix Studio Pro. Another way to let ATS interact with the correct widget is by adding another mx-name in the ATS action. The mechanics are the same as the **Search Context** input parameter. ATS will search for the widget with the second mx-name inside the widget with the first mx-name. For example: 'container8 microflowButton2' ATS searches for the microflowbutton inside the container. ATS searches for the second mx-name within the first mx-name:
 
 ![](attachments/increase-recorder-coverage-2/2-mx-names.png)
 
@@ -106,7 +106,7 @@ The ATS Recorder cannot record the options in the navigation list, as they do no
 
 ![](attachments/increase-recorder-coverage-2/no-mx-name-listview-app-e.png)
 
-You can manually enter a class in the **Class** of the modeler with an mx-name to solve this:
+You can manually enter a class in the **Class** of Mendix Studio Pro with an mx-name to solve this:
 
 ![](attachments/increase-recorder-coverage-2/mx-name-listview.png)
 

@@ -8,23 +8,23 @@ module.exports = {
      ****************************************************/
 	{
       from: "/refguide/web-modeler/domain-models-association-properties-wm",
-      to: "/web-modeler/domain-models-association-properties"
+      to: "/studio/domain-models-association-properties"
     },
 	{
       from: "/refguide/web-modeler",
-      to: "/web-modeler/"
+      to: "/studio/"
     },
 	{
       from: "/refguide/web-modeler/microflows-wm",
-      to: "/web-modeler/microflows"
+      to: "/studio/microflows"
     },
 	{
       from: "/refguide/web-modeler/microflows-expressions-wm",
-      to: "/web-modeler/microflows-expressions"
+      to: "/studio/microflows-expressions"
     },
 	{
       from: "/refguide/web-modeler/app-settings-wm",
-      to: "/web-modeler/app-settings"
+      to: "/studio/app-settings"
     },
 	{
       from: "/howto/web-modeler/syncing-webmodeler-desktop",
@@ -202,11 +202,11 @@ module.exports = {
      ****************************************************/
 	{
       from: "/howto/tutorials/",
-      to: "/web-modeler/general"
+      to: "/studio/general"
     },
 	{
       from: "/howto/tutorials/mendix-tutorials",
-      to: "/web-modeler/general"
+      to: "/studio/general"
     },
 	/****************************************************
      * How-to's (permanent, unmapped)

@@ -25,19 +25,19 @@ A Free App has a number of limitations compared to a licensed app. The main limi
 | **Storage**                                 | 100MB of data and 100MB of file storage space.               | Depends on your pricing plan.                                |
 | **Scheduled Events**                        | Are not run.                                                 | Are run and can be configured from the Developer Portal.     |
 | **Environments**                            | Single environment in the Mendix Cloud.                      | A node in the cloud which has one or more environments, for example, production, acceptance, and test. |
-| **Deployment**                              | Can only be deployed to the cloud from the Desktop or Web Modeler. | Can be deployed from a modeler, or from the Developer Portal. |
+| **Deployment**                              | Can only be deployed to the cloud from Mendix Studio or Studio Pro. | Can be deployed from the Studios, or from the Developer Portal. |
 | **Custom Domains**                          | Not available.                                               | Can be configured from the Developer Portal.                 |
 | **Access Restriction Profiles**             | Not available.                                               | Can be configured from the Developer Portal.                 |
 | **Client Certificates**                     | Not available.                                               | Can be configured from the Developer Portal.                 |
 | **Starting and stopping your app manually** | Not available.                                               | Available in the Developer Portal.                           |
-| **Constants and Runtime Settings**          | Defined in modeler.                                          | Configurable through environment variables and settings in the Developer Portal. |
+| **Constants and Runtime Settings**          | Defined in Studio Pro                                        | Configurable through environment variables and settings in the Developer Portal. |
 | **Scalability**                             | Only one instance and a fixed amount of memory.              | Configurable in the Developer Portal.                        |
 | **Metrics, Alerts, and Log Levels**         | Not available.                                               | Available.                                                   |
 | **Historic Archived Logs**                  | Not available, only live logs are available.                 | Available.                                                   |
 | **Backups**                                 | Performed daily, cannot be triggered manually. Stored up to two weeks. |Performed daily, can also be created manually. Kept for up to one year, depending on your plan. |
 
 {{% alert type="info" %}}
-Free apps are part of our community edition and require Mendix version 6 or higher.
+Free apps are part of our community edition.
 
 If you are not currently a customer but would prefer to use a licensed cloud node you can find more information on our pricing page: [Mendix Platform Pricing](http://www.mendix.com/pricing).
 
@@ -67,7 +67,7 @@ It has never been easier to deploy a Mendix application to the cloud. This how-t
 **This how-to will teach you how to do the following:**
 
 * Deploy a licensed app to the Mendix Cloud
-* Deploy via the Mendix Modeler
+* Deploy via Mendix Studio Pro
 * Deploy the app to an environment
 * Deploy a Free App to the Mendix Cloud
 
@@ -85,11 +85,11 @@ Before starting this how-to, make sure you have completed the prerequisites desc
 
 ## 3 Deploying a Licensed App to the Mendix Cloud
 
-There are two methods for deploying your app to the Mendix Cloud. The first option is directly via the Mendix Modeler, and the second is through the Developer Portal.
+There are two methods for deploying your app to the Mendix Cloud. The first option is directly via Studio Pro, and the second is through the Developer Portal.
 
-### 3.1 Deploying via the Modeler
+### 3.1 Deploying via the Studio Pro
 
-1. Open the [Modeler](http://appstore.home.mendix.com/link/modeler/).
+1. Open [Studio Pro](http://appstore.home.mendix.com/link/modeler/).
 2. Open the licensed app.
 3. Click **Project** in the top menu bar and select **Deploy to licensed cloud node**:
 
@@ -105,7 +105,7 @@ There are two methods for deploying your app to the Mendix Cloud. The first opti
 
 ### 3.2 Creating a Package from Team Server in the Developer Portal
 
-An app can also be deployed without using the Modeler. To do this, follow these steps:
+An app can also be deployed without using Studio Pro. To do this, follow these steps:
 
 1. Go to the [Developer Portal](http://home.mendix.com).
 2. Click **Apps** in the top navigation panel.
@@ -140,11 +140,11 @@ The app is now deployed and the administrative account can be configured.
 
 ## 5 Deploying a Free App to the Mendix Cloud
 
-With a Free App, it's only possible to deploy your app to a Sandbox environment using a Mendix Modeler. There are two methods to do that.
+With a Free App, it's only possible to deploy your app to a Sandbox environment using Studio or Studio Pro. There are two methods to do that.
 
 ### 5.1 Method 1
 
-Once you have created and worked on your App, you will want to share it with others in the Free App. You can deploy your Free App to a Sandbox environment by clicking **Run** at the top of your Mendix Modeler. This will automatically deploy your app to a Sandbox.
+Once you have created and worked on your App, you will want to share it with others in the Free App. You can deploy your Free App to a Sandbox environment by clicking **Run** at the top of Studio Pro. This will automatically deploy your app to a Sandbox.
 
 ![](attachments/mendix-cloud-deploy/runapp2.jpg)
 

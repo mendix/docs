@@ -8,7 +8,7 @@ A Mendix application on a Windows server can be updated using the Mendix Service
 
 The service console creates a backup of the project files, this allows you to restore a previous deployment. But before every update it is recommended to create a backup of your data and uploaded files. The Mendix Service Console does not do this for you. 
 
-## 1\. Using the Update app button
+## 1 Using the Update app button
 
 1.  You can update the application by clicking on the button ‘Update app’. ![Step 1, Start the update process](attachments/updating-a-mendix-app/18580701.png)
 
@@ -26,9 +26,9 @@ This process will copy the new version of the project software into the configur
 You’ll see an progress bar appear after clicking the ‘OK’ button once the process has been completed the project software version has been updated. 
 ![](attachments/updating-a-mendix-app/18580699.png)
 
-## 2\. Update The Mendix Runtime version
+## 2 Update The Mendix Runtime version
 
-1.  After updating the Mendix application version it could happen that the Service Console shows the message ‘needed, but missing’. This would mean that the required server distribution is not installed on the server. You can download the server distribution from [home.mendix.com](http://home.mendix.com/), the server distribution can be found under the related downloads from the specific Mendix Modeler. The server distribution is a .tar.gz file
+1.  After updating the Mendix application version it could happen that the Service Console shows the message ‘needed, but missing’. This would mean that the required server distribution is not installed on the server. You can download the server distribution from [home.mendix.com](http://home.mendix.com/), the server distribution can be found under the related downloads from the specific Mendix Studio Pro version. The server distribution is a .tar.gz file
     ![Step 4, a missing Runtime version](attachments/updating-a-mendix-app/18580697.png)
 2.  Press the button ‘Add Server’ and select the required server distribution (.tar.gz). The Service Console will extract the server distribution to the same folder as the other server distributions.
 
@@ -52,7 +52,7 @@ The user that is configured as the Service Account should have Read&Execute priv
 
 {{% /alert %}}
 
-## 3\. Read More
+## 3 Read More
 
 *   [Restoring a SQL Server database](restoring-a-sql-server-database)
 *   [Troubleshooting SQL Server](troubleshooting-sql-server)

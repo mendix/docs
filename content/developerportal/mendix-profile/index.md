@@ -108,7 +108,7 @@ These are points you can gain through activity in the [Mendix App Store](https:/
 | Publish an app | 50 | n/a |
 | Publish a new app version | 25 | n/a |
 | Add an app review | 5 | n/a |
-| Download the [Desktop Modeler](https://appstore.home.mendix.com/link/modelers/) | 5 | 5 |
+| Download [Mendix Studio Pro](https://appstore.home.mendix.com/link/modelers/) | 5 | 5 |
 | Download an app from the App Store | 1 | 5 |
 
 ### 7.3 Platform Points
@@ -229,7 +229,7 @@ When you click **Details** for feedback on an app of which you are an App Team m
 
 ### 9.4 Team Server
 
-Changes made through the Desktop Modeler are stored in the Mendix Team Server. This section provides an overview of the revisions you have committed.
+Changes made through Studio Pro are stored in the Mendix Team Server. This section provides an overview of the revisions you have committed.
 
 {{% image_container width="500" %}}![](attachments/team-server.png)
 {{% /image_container %}}

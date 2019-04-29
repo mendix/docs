@@ -155,7 +155,7 @@ This page contains content shared with you by other companies have marked you as
 
 ![](attachments/app-store-overview/shared-with-me.png)
 
-### 4.4 Reviews
+### 4.4 Reviews{#my-reviews}
 
 This page contains reviews of **Your content** by other users as well as **Your reviews** that you have written of other content:
 

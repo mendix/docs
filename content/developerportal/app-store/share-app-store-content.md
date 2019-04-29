@@ -155,10 +155,9 @@ To add content to the App Store, follow these steps:
 	a. Check the **Beta version** check-box if the content is in beta.<br />
 	b. Select the **Mendix Studio Pro version** on which you built the content.<br />
 	c.  Select the type of **License** you want applied to your app (if applicable):<br />
-
-		* **Apache V2** (for more information, see [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0))
-		* **GNU General Public License, version 3** (for more information, see [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html))
-		* **Mendix EULA** (for more information, see [Mendix Terms of Use](https://www.mendix.com/terms-of-use/))
+		* **Apache V2** (for more information, see [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0))<br />
+		* **GNU General Public License, version 3** (for more information, see [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html))<br />
+		* **Mendix EULA** (for more information, see [Mendix Terms of Use](https://www.mendix.com/terms-of-use/))<br />
    * **MIT** (for more information, see [MIT License](https://opensource.org/licenses/MIT))
 
 	{{% image_container width="300" %}}![](attachments/share-app-store-content/add_content_8.png)

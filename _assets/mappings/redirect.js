@@ -26,10 +26,6 @@ module.exports = {
       from: "/refguide/web-modeler/app-settings-wm",
       to: "/web-modeler/app-settings"
     },
-	{
-      from: "/howto/web-modeler/syncing-webmodeler-desktop",
-      to: "/refguide/sync-webmodeler-desktopmodeler"
-    },
 	/****************************************************
      * From the Support Portal (potentially temporary until fixed in product, mapped) 
      ****************************************************/
@@ -245,14 +241,6 @@ module.exports = {
 	{
       from: "/refguide8/desktop-modeler-overview",
       to: "/refguide/studio-pro-overview"
-    },
-	{
-      from: "/refguide8/desktop-webmodeler",
-      to: "/refguide/sync-webmodeler-desktopmodeler"
-    },
-	{
-      from: "/web-modeler/general-sync-webmodeler-desktopmodeler-wm",
-      to: "/refguide/sync-webmodeler-desktopmodeler"
     },
 	{
       from: "/refguide8/download-from-team-server-dialog",

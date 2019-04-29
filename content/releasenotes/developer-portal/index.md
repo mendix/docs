@@ -15,8 +15,8 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud V3, and other deploym
 #### App Store Improvements
 
 * We created a new App Store menu structure, so it is now easier to navigate through your created content. If you are a [Company Admin](/developerportal/company-app-roles/manage-roles#app-store-manager) with certain permissions, you will see additional menu items to help you manage private and public company content.
-* For App Store administrators, you can now set [content managers](/developerportal/app-store/app-store-overview.md #cm) who are allowed to manage your company content by marking it as protected.
-* You can now share private App Store content with [external downloaders](/developerportal/app-store/app-store-overview.md #ext) from other companies.
+* For App Store administrators, you can now set [content managers](/developerportal/app-store/app-store-overview#cm) who are allowed to manage your company content by marking it as protected.
+* You can now share private App Store content with [external downloaders](/developerportal/app-store/app-store-overview#ext) from other companies.
 
 ### April 8th, 2019
 

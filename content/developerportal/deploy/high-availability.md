@@ -1,7 +1,7 @@
 ---
 title: "Configure High Availability"
 parent: on-premises-design
-description: "How to install Mendix (version 6 and below) behind a load balancer for high availability"
+description: "How to install Mendix version 6 behind a load balancer for high availability"
 menu_order: 20
 tags: ["high-availability", "on-premises", "clustering", "runtime"]
 ---
@@ -9,7 +9,7 @@ tags: ["high-availability", "on-premises", "clustering", "runtime"]
 ## 1 Introduction
 
 {{% alert type="info" %}}
-This page is only applicable for apps created in Mendix version 6 and below.
+This page is only applicable for apps created in Mendix version 6.
 
 For creating high availability apps in Mendix version 7 and above, please refer to [Clustered Mendix Runtime](/refguide/clustered-mendix-runtime).
 {{% /alert %}}

@@ -1,7 +1,7 @@
 ---
 title: "Development"
 description: "Introduces the documents that describe developing in Mendix via the Developer Portal."
-tags: ["Edit", "Desktop Modeler", "Web Modeler", "Team Server", "Developer Portal", "commit"]
+tags: ["Edit", "Desktop Modeler", "Web Modeler", "Studio", "Studio Pro", "Team Server", "Developer Portal", "commit"]
 ---
 
 ## 1 Introduction
@@ -10,6 +10,6 @@ As you work with your [App Team](../collaborate/team) to develop your app projec
 
 ## 2 Documents in This Category
 
-* [Modeling Environments](modeling-environments)
+* [App Modeling Environments](modeling-environments)
 * [Team Server Overview](team-server)
 * [Plan App Development](planning-development)

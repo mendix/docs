@@ -8,7 +8,7 @@ tags: ["Stories", "Sprint", "Developer Portal"]
 
 ## 1 Introduction
 
-In **Stories**, you are able to manage sprints, stories, and labels. These components are often used in an Agile development environment, in which teams work in short development cycles of 2–4 weeks. By adding your sprints to Mendix, you will have a clear overview of your tasks and can easily view the status of your development cycle. You can also manage the progress of tasks and sprints from within the Desktop Modeler.
+In **Stories**, you are able to manage sprints, stories, and labels. These components are often used in an Agile development environment, in which teams work in short development cycles of 2–4 weeks. By adding your sprints to Mendix, you will have a clear overview of your tasks and can easily view the status of your development cycle. You can also manage the progress of tasks and sprints from within Mendix Studio Pro.
 
 ![](attachments/stories.png)
 
@@ -122,7 +122,7 @@ Also on this page, you can access the following tabs:
 * **Comments** – on this tab, you can view and add comments about the story to collaborate with your App Team
 * **Tasks** – you can see the tasks that were added to the story here (for more information, see the [Adding Tasks to a Story](#adding) section below)
 * **Feedback** – here you can see the feedback item linked to the story (for details, see the [Adding a Feedback Item to Your Backlog](../feedback/index#adding) section of *Feedback Management*)
-* **Revisions** –  on this tab, you can see the committed revision of the app project that is linked to the story (which is configured in the [Related stories](/refguide/commit-dialog#stories) tab of the **Commit** dialog box in the Desktop Modeler)
+* **Revisions** –  on this tab, you can see the committed revision of the app project that is linked to the story (which is configured in the [Related stories](/refguide/commit-dialog#stories) tab of the **Commit** dialog box in Studio Pro)
 
 ### 4.2 Adding Tasks to a Story {#adding}
 
@@ -166,13 +166,13 @@ If you need to reorder stories or move a story to a different sprint, there are 
 Moving a story will move any tasks and sub-tasks as well.
 {{% /alert %}}
 
-### 4.4 Managing Stories in the Desktop Modeler 
+### 4.4 Managing Stories in Mendix Studio Pro 
 
-In addition to managing your sprints in the Developer Portal, you can view them in the Mendix Desktop Modeler.
+In addition to managing your sprints in the Developer Portal, you can view them in Studio Pro.
 
-To manage stories in the Desktop Modeler, follow these steps:
+To manage stories in Studio Pro, follow these steps:
 
-1. Open your app project in the Desktop Modeler by clicking **Edit App** > **Edit in Desktop Modeler**:
+1. Open your app project in Studio Pro by clicking **Edit App** > **Edit in Mendix Studio Pro**:
 
 	![](attachments/edit-app.png)
 
@@ -184,7 +184,7 @@ To manage stories in the Desktop Modeler, follow these steps:
 
 	![](attachments/stories-pane.png)
 
-To change the status of a story in the Desktop Modeler, just click the current status. For example, click the **To-do** **Status** to change it to **Running**:
+To change the status of a story in Studio Pro, just click the current status. For example, click the **To-do** **Status** to change it to **Running**:
 
 ![](attachments/stories-to-do.png)
 
@@ -192,7 +192,7 @@ When you return to your app project in the Developer Portal, you will see the ne
 
 ![](attachments/stories-status-update.png)
 
-Changing the status of a story or updating story points automatically synchronizes the updates between the Developer Portal and the Modeler!
+Changing the status of a story or updating story points automatically synchronizes the updates between the Developer Portal and Studio Pro!
 
 ## 5 Read More
 

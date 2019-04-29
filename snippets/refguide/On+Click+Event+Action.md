@@ -76,7 +76,7 @@ This flag indicates whether the current page should be closed.
 
 #### Sync Automatically (Only for "Save changes") {#on-click-sync-automatically}
 
-When an object is saved in a Mendix application running in an [offline profile](hybrid-mobile), this information is stored in a local database until it can be synchronized with the server. In practice, this means that uploading a new object to the server requires two distinct actions: saving the object and [syncing it](offline-first#synchronization).
+When an object is saved in a Mendix application running in an offline profile, this information is stored in a local database until it can be synchronized with the server (for more information on the capabilities of offline apps, see [Offline First](offline-first). In practice, this means that uploading a new object to the server requires two distinct actions: saving the object and [syncing it](offline-first#synchronization).
 
 This flag indicates whether synchronization should happen when the save button is clicked.
 

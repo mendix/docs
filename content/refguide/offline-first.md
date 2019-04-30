@@ -94,7 +94,7 @@ By default Mendix automatically analyzes your app's data model to determine whic
 
 Depending on the use-case, more fine-grained synchronization controls might be required. Therefore, an app's initial synchronization configuration can be customized to override the default configuration. It is possible to limit what is downloaded by using [XPath Constraints](xpath-constraints), or by disallowing downloads for an entity altogether. If you have custom widgets or JavaScript actions which use an entity not used anywhere else in your offline profile, you can use customizable synchronization to synchronize such entities to your device.
 
-## 3 Building Your Offline App
+## 3 Building Your Offline App{#building-offline-app}
 
 Some app features require a connection to the server. In offline apps, certain features have limited functionality.
 

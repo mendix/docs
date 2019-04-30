@@ -1,6 +1,6 @@
 ---
 title: "Offline First"
-category: "General"
+parent: "general-parent"
 menu_order: 40
 tags: ["offline", "native", "mobile"]
 ---

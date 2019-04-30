@@ -1,7 +1,6 @@
 ---
 title: "Deploy API"
 category: "API Documentation"
-#menu_order: Enter the position of the document in the category or under the parent; number by 10 (for first), 20, 30, etc. for easy ordering of other documents in the future if necessary; don't add brackets or quotation marks; if no number is added, the system will add an extremely high number to order the documents, which means that if you only want a document to appear at the top, you only have to add "10" to that specific document, you don't have to order all the other documents in the category/under the parent
 description: "APIs which can be used to deploy Mendix apps to licensed nodes"
 tags: ["API", "deploy", "licensed", "deployment", "cloud"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.

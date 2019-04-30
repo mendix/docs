@@ -8,7 +8,7 @@ tags: ["native", "mobile", "developer", "test"]
 
 ## 1 Introduction
 
-To use Mendix Studo Pro's native app capabilities, you can download the Native Mobile Quickstart app. This app gives you a native page, a native phone profile to enable native device navigation, and a native layout with menus and buttons that leverage native features.
+To use Mendix Studio Pro's native app capabilities, you can either start using a Blank app or download the Native Mobile Quickstart app. This how-to uses the latter, because it is optimized to quickly build a native mobile app. Out of the box this app gives you a native page, a native phone profile to enable native device navigation, a native layout with menus, and native widgets and actions which leverage device capabilities.
 
 The Native Mobile Quickstart app also includes four modules:
 

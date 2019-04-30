@@ -229,12 +229,12 @@ You can specify that your app uses a specific stack using the following command 
 cf push -p "{deployment_package_name}" -s {stack_name}
 ```
 
-For exampl: `cf push -p "myapp.mda" -s cflinuxfs3`
+For example: `cf push -p "myapp.mda" -s cflinuxfs3`
 
 {{% alert type="warning" %}}
 Apps pushed to MindSphere before the end of April 2019 may have used `cflinuxfs2` as the default.
 
-If this is the case, the stack must be updated to `cflinexfs3` as support for Cloud Foundry stack `cflinuxfs2` was removed from MindSphere in April 2019. See [Migrating applications from the cflinuxfs2 stack to the cflinuxfs3 (i.e. (Bionic Beaver) stack](https://community.plm.automation.siemens.com/t5/Developer-Space/Migrating-applications-from-the-cflinuxfs2-stack-to-the/m-p/582029#M1621) on the *Siemens Developer Space* for more information.
+If this is the case, the stack must be updated to `cflinexfs3`, as support for Cloud Foundry stack `cflinuxfs2` was removed from MindSphere in April 2019. See [Migrating applications from the cflinuxfs2 stack to the cflinuxfs3(Bionic Beaver) stack](https://community.plm.automation.siemens.com/t5/Developer-Space/Migrating-applications-from-the-cflinuxfs2-stack-to-the/m-p/582029#M1621) in the *Siemens Developer Space* for more information.
 
 You can find out which stack your application is using with the following command:
 

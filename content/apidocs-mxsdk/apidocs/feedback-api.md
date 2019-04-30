@@ -20,6 +20,8 @@ Each call also requires the parameters 'username' and 'password'. These are the 
 * username: PlatformAPIUser
 * password: PlatformAPIPassword
 
+These are the public credentials, you don't need to create your own credentials.
+
 {{% /alert %}}
 
 ## API Calls

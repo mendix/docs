@@ -75,4 +75,4 @@ Currently, there is no direct way of creating and storing a new application in y
 ## 7 Read More
 
 * [Version Control](/refguide/version-control)
-* [Team Server Reference Guide](/refguide/team-server)
+* [Team Server](/refguide/team-server)

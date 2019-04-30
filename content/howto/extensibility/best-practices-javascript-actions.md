@@ -148,7 +148,7 @@ function CameraStart(targetSize, pictureSource, correctOrientation, waterMark) {
 
 {{% todo %}}["All input types are described in the reference guide." goes in para below this, write "write javascript actions" refguide, add link]{{% /todo %}}
 
-For more information on choosing correct input types, see this document's [Better APIs](#betterapis) section below.
+For more information on choosing correct input types, see the [Better APIs](#betterapis) section below.
 
 ### 2.2 Coding the Actions
 

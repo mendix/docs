@@ -29,6 +29,8 @@ To run any scripts that you wrote yourself, or to run scripts downloaded from in
 Set-ExecutionPolicy RemoteSigned
 ```
 
+## 2 Example
+
 This example shows how to create your own continuous deployment script using our APIs. Most functions in this example you may recognize from our Dev Center. The idea of this example is to create a new build of the latest revision every night. You can of course run this as often as you want. If the latest revision has not been built yet our buildserver will create a new build for you, otherwise nothing needs to be done for continuous deployment. While our buildserver is creating a new build for you, you can poll the result of the buildjob using the jobId parameter.
 
 After the buildserver is the environment is cleaned to have a clean start. First the application needs to be stopped before the environment can be cleaned. When that's done you can transport the package created by the buildserver to the cleaned environment. Because starting can take a while, it stars asynchronous. You can poll to see if the application has been started with the _startJobId_. When the application has been started you can use the application for your tests.

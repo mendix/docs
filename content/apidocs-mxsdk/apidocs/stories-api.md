@@ -3,8 +3,7 @@ title: "Stories API"
 category: "API Documentation"
 ---
 
-
-## Documentation
+## 1 Introduction
 
 The Mendix Stories API allows you to retrieve, create and update the sprints, stories and tasks in your Mendix projects.
 
@@ -19,9 +18,9 @@ Each call also requires the parameters 'username' and 'password'. These are the 
 
 [Get WSDL](attachments/9535497/19398865.wsdl)
 
-## Published Microflows
+## 2 Published Microflows
 
-### Microflow CreateSprint
+### 2.1 Microflow CreateSprint
 
 This microflow creates a new sprint for the specified project and returns the ID of the new sprint.
 
@@ -36,7 +35,7 @@ This microflow creates a new sprint for the specified project and returns the ID
 
 * Return value – Integer/Long
 
-### Microflow CreateStory
+### 2.2 Microflow CreateStory
 
 This microflow creates a new story in the specified sprint and returns the ID of the new story. Parameters: 
 
@@ -52,7 +51,7 @@ This microflow creates a new story in the specified sprint and returns the ID of
 
 * Return value – Integer/Long
 
-### Microflow CreateTask
+### 2.3 Microflow CreateTask
 
 This microflow creates a new task for the specified story and returns the ID of the new task. Parameters:
 
@@ -66,7 +65,7 @@ This microflow creates a new task for the specified story and returns the ID of 
 
 * Return value – Integer/Long
 
-### Microflow GetSprintByID
+### 2.4 Microflow GetSprintByID
 
 This microflow retrieves a specific sprint. Parameters: 
 
@@ -78,7 +77,7 @@ This microflow retrieves a specific sprint. Parameters:
 
 * Return value – Sprint_Transient
 
-### Microflow GetSprints
+### 2.5 Microflow GetSprints
 
 This microflow retrieves all sprints in a specific project. Parameters: 
 
@@ -89,7 +88,7 @@ This microflow retrieves all sprints in a specific project. Parameters:
 
 * Return value – List of Sprint_Transient
 
-### Microflow GetStories
+### 2.6 Microflow GetStories
 
 This microflow retrieves all stories in a specific sprint. Parameters: 
 
@@ -101,7 +100,7 @@ This microflow retrieves all stories in a specific sprint. Parameters:
 
 * Return value – List of Story_Transient
 
-### Microflow GetStoryByID
+### 2.7 Microflow GetStoryByID
 
 This microflow retrieves a specific story. Parameters: 
 
@@ -113,7 +112,7 @@ This microflow retrieves a specific story. Parameters:
 
 * Return value – Story_Transient
 
-### Microflow GetTaskByID
+### 2.8 Microflow GetTaskByID
 
 This microflow retrieves a specific task. Parameters: 
 
@@ -125,7 +124,7 @@ This microflow retrieves a specific task. Parameters:
 
 * Return value – Task_Transient
 
-### Microflow GetTasks
+### 2.9 Microflow GetTasks
 
 This microflow retrieves all tasks for a specific story. Parameters: 
 
@@ -137,7 +136,7 @@ This microflow retrieves all tasks for a specific story. Parameters:
 
 * Return value – List of Task_Transient
 
-### Microflow UpdateStory
+### 2.10 Microflow UpdateStory
 
 This microflow updates a story with modified information. Parameters: 
 
@@ -155,7 +154,7 @@ This microflow updates a story with modified information. Parameters:
 
 * Return value – Boolean
 
-### Microflow UpdateTask
+### 2.11 Microflow UpdateTask
 
 This microflow updates a task with modified information. Parameters: 
 

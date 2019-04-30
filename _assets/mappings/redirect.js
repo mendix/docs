@@ -224,7 +224,7 @@ module.exports = {
       to: "/howto/front-end/configuring-your-theme"
     },
 	/****************************************************
-     * From Desktop Modeler version 8 (permanent as backups, mapped)
+     * From Studio Pro version 8 (permanent as backups, mapped)
      ****************************************************/
 	{
       from: "/refguide8/modeler",

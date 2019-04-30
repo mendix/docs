@@ -77,7 +77,7 @@ Test the app for any unexpected results.
 Congratulations! Your app has been successfully upgraded to Mendix 8 and you can continue working as normal.
 {{% /alert %}}
 
-## 3 Deprecated and Removed APIs(#deprecated-apis)
+## 3 Deprecated and Removed APIs{#deprecated-apis}
 
 Deprecated Java actions should be fixed in Mendix 7, before you migrate the app project to Mendix 8.
 
@@ -85,7 +85,7 @@ Fix the deprecations in your Java actions by importing your project into your Ja
 
 Details of removed and deprecated APIs will be added to the *Breaking Changes* section of the [Studio Pro version 8 release notes](/releasenotes/desktop-modeler/).
 
-## 4 Attributes of Type Float and Currency
+## 4 Attributes of Type Float and Currency{#float-currency}
 
 Attributes of type Float and Currency were deprecated in Mendix version 7, and have now been removed from Mendix version 8. If your app contains attributes of type Float and/or Currency, these will need to be converted to type Decimal.
 

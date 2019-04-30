@@ -1,19 +1,19 @@
 ---
 title: "Publishing Your App"
-description: "Describes the publishing (deployment) process in the Mendix Web Modeler."
+description: "Describes the publishing (deployment) process in Mendix Studio."
 menu_order: 55
 tags: ["deployment", "publishing", "app publishing", "deploy", "deploying", "publish"]
 ---
 
 ## 1 Introduction
 
-Deployment means getting your app up and running in a cloud environment to make it available for the end-users. The term "publish" is used to describe the same process in the Web Modeler interface. 
+Deployment means getting your app up and running in a cloud environment to make it available for the end-users. The term "publish" is used to describe the same process in the Studio interface. 
 
 ## 2 Publishing Your App {#publishing-your-app}
 
 When you publish your app, you deploy it to a cloud environment. A cloud environment is a location in the cloud that can host your app, and deployment is a process to put the latest version of your app in that location. For more information for app administrators, see [Environments](/developerportal/deploy/environments) in *Developer Portal Guide*.
 
-By default all apps created in the Web Modeler are Free Apps. A Free App is a complete deployment environment in the Mendix Cloud with some limitations. You can upgrade your Free App to a licensed app. The main differences between a Free App and a licensed app are described in the table below: 
+By default all apps created in Mendix Studio are Free Apps. A Free App is a complete deployment environment in the Mendix Cloud with some limitations. You can upgrade your Free App to a licensed app. The main differences between a Free App and a licensed app are described in the table below: 
 
 |                     | Free App                                                     | Licensed App                                                 |
 | ------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -24,14 +24,14 @@ By default all apps created in the Web Modeler are Free Apps. A Free App is a co
 
 To publish your application, follow these steps:
 
-1. Click **Publish** in the top-bar of the Web Modeler (the dialog with your app status will open). 
-2.  Once your cloud environment has been set up, you will see the **Update** button. Click it to push the latest changes from the Web Modeler to the published app or to publish the app for the first time. 
+1. Click **Publish** in the top-bar of Mendix Studio (the dialog box with your app status will open). 
+2.  Once your cloud environment has been set up, you will see the **Update** button. Click it to push the latest changes from Mendix Studio to the published app or to publish the app for the first time. 
 
     ![Publishing and Updating Your App](attachments/publishing-app/publish-and-update-buttons.png)
 
 {{% alert type="info" %}}
 
-If the Web Modeler is not able to retrieve the status of your environment yet, you will not see the **Update** button. For more information, see section [5 Retrieving Your App Status](#retrieving-app-status). 
+If Mendix Studio is not able to retrieve the status of your environment yet, you will not see the **Update** button. For more information, see section [5 Retrieving Your App Status](#retrieving-app-status). 
 
 {{% /alert %}}
 
@@ -101,7 +101,7 @@ For more information on how to view consistency errors and to fix them , see [Ch
 
 ## 5 Retrieving Your App Status {#retrieving-app-status}
 
-Before the deployment can start, the Web Modeler needs to get the environment status from the cloud. Thus, when you click the **Publish** button, you may see the dialog box "Retrieving app environment status", meaning that the Web Modeler is getting the status of the deployed application from the cloud. 
+Before the deployment can start, Mendix Studio needs to get the environment status from the cloud. Thus, when you click the **Publish** button, you may see the dialog box "Retrieving app environment status", meaning that Mendix Studio is getting the status of the deployed application from the cloud. 
 
 ![Retrieving App Environment Status](attachments/publishing-app/retrieving-app-status.png)
 
@@ -109,19 +109,19 @@ Once the status is retrieved, you will normally see **Your app is running** dial
 
 ![](attachments/publishing-app/your-app-is-running.png)
 
-However, the Web Modeler may fail to get your environment status. This can happen when there is no deployment environment; technically it means that the app has been unlinked from one environment and is not linked to another environment yet. In this case you will not be able to publish. 
+However, Mendix Studio may fail to get your environment status. This can happen when there is no deployment environment; technically it means that the app has been unlinked from one environment and is not linked to another environment yet. In this case you will not be able to publish. 
 
-Web Modeler can fail to get your environment status in the following cases:
+Mendix Studio can fail to get your environment status in the following cases:
 
 *  Your app was a Free App, was unlinked from the Free App environment by an app administrator, but was not upgraded to the licensed app (for more information on Free Apps and licensed apps, see section [2 Publishing Your App](#publishing-your-app)) 
 
 	![Failing to Get App Environment Status](attachments/publishing-app/unlinked-app.png)
 
-*  Your app is a licensed app, and no environment has been set for the Web Modeler deployment by an app administrator
+*  Your app is a licensed app, and no environment has been set for Mendix Studio deployment by an app administrator
 
-	![Deploy Failed, No Environment for the Web Modeler](attachments/publishing-app/no-environment.png)
+	![Deploy Failed, No Environment for Studio](attachments/publishing-app/no-environment.png)
 
-For technical information for app administrators, see [Web Modeler Deployment Settings](/developerportal/deploy/studio-deployment-settings) in *Developer Portal Guide*. 
+For technical information for app administrators, see [Studio Deployment Settings](/developerportal/deploy/studio-deployment-settings) in the *Developer Portal Guide*. 
 
 ## 6 Read More
 

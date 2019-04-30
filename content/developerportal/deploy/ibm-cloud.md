@@ -22,7 +22,7 @@ As a Mendix user with an IBM Cloud account you have access to many IBM resources
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Have an [IBM Cloud account](https://console.bluemix.net/registration/)
-* Download [Mendix Studio Pro](https://appstore.home.mendix.com/link/modelers/) – you will need 7.11.0 or higher
+* Download [Mendix Studio Pro](https://appstore.home.mendix.com/link/modelers/) – you will need version 7.11.0 or higher
 * Be familiar with the basic concepts of editing and deploying a Mendix app
 * Be familiar with the basic concepts of IBM Starter Kits and Toolchain
 

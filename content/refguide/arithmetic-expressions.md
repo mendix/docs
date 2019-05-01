@@ -1,6 +1,7 @@
 ---
 title: "Arithmetic Expressions"
 parent: "expressions"
+tags: ["studio pro"]
 ---
 
 ## 1 Introduction

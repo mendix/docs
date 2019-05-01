@@ -1,6 +1,7 @@
 ---
 title: "Aggregate List"
 parent: "list-activities"
+tags: ["studio pro"]
 ---
 
 {{% alert type="info" %}}

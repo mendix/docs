@@ -2,6 +2,7 @@
 title: "Attribute Type Migration"
 parent: "data-storage"
 menu_order: 10
+tags: ["studio pro"]
 ---
 
 ## 1 Introduction

@@ -1,6 +1,7 @@
 ---
 title: "Actions"
 parent: "published-app-services"
+tags: ["studio pro"]
 ---
 
 ## 1 Introduction
@@ -39,7 +40,7 @@ Describes the action. The consumer will see this description their overview.
 
 ![](attachments/16713720/16843923.png)
 
-### 3.1 Microflow parameter
+### 3.1 Microflow Parameter
 
 Defines the name of the parameter in the microflow
 
@@ -47,15 +48,15 @@ Defines the name of the parameter in the microflow
 
 Defines the type of the parameter.
 
-### 3.3 Can be empty
+### 3.3 Can Be Empty
 
 Defines whether a value is can be empty as an input parameter.
 
-### 3.4 Action parameter
+### 3.4 Action Parameter
 
 Defines the name of the parameter in the app service action call. This is initially copied from the microflow parameter name but can be modified. There are three reserved parameter names that are not allowed to be used: **username**, **password** and **appservicelocation** (case insensitive).
 
-### 3.5 Exposed attributes and associations
+### 3.5 Exposed Attributes & Associations
 
 ![](attachments/16713720/16843922.png)
 
@@ -65,7 +66,7 @@ A button is available for complex types (e.g. an entity from your domain model),
 
 Defines what kind of object will be returned by the action. This can be a simple type (like an integer or string), or a complex type (i.e. an entity from your entity model)
 
-### 4.1 Can be empty
+### 4.1 Can Be Empty
 
 Defines whether the return value can be **empty**.
 

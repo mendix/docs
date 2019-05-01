@@ -40,7 +40,7 @@ By using role-based home pages, you can show different home pages for different 
 
 For each role-based home page, you can specify the user role it applies to and the target (page or microflow) that will be opened.
 
-### 2.3 Authentication
+### 2.3 Authentication {#authentication}
 
 If an [anonymous user](anonymous-users) tries to access a resource to which the user has no access, the configured [sign-in page](authentication-widgets) will be displayed, prompting the user to sign in.
 

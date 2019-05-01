@@ -104,19 +104,33 @@ To submit a request with Mendix Support, follow these steps:
 
     ![](attachments/how-to-submit-a-ticket---quick-reference-for-endusers/204371709-pic2.png)
 
-    You can select from the following issues:<br>
-    * **Incident**<br>
-    * **Request for Information**<br>
-    * **Standard change: New App**<br>
-    * **Standard change: Add App Resources/File Storage**<br>
-    * **Standard change: Change Mendix URL**<br>
-    * **Standard change: (Re)new license**<br>
-    * **Standard change: Assign Company Admin**<br>
-    * **Standard change: Request ATS license**<br>
-    * **Standard change: Reset Google authenticator**<br>
-    * **Key Change request (on-premises)**<br>
-    * **Standard change**<br>
-    * **Non-Standard change**<br>
+    You can select from the following issues:
+
+    * **Request for Information** - general questions
+
+    * **Incident** - app is down, other platform issue
+
+    * **Standard change: Change On-Prem Licensed Node** - you need a new license key for an existing app, for example you have new hardware configuration
+
+    * **Standard change: Offboard Licensed Node** - remove a licensed node which you no longer need (all platforms)
+
+    * **Standard change: Change Mendix Cloud Container Size** - all vertical scaling changes, for example memory or database size
+    
+    * **Standard Change: Change Mendix Cloud File Storage** - increase or decrease file storage size
+
+    * **Standard change: Change Mendix Cloud URL** - change a non-custom Mendix URL (i.e. something.mendixcloud.com)
+
+    * **Standard change: Change Company Admin** - Make an existing Mendix user the company admin [link]
+
+    * **Standard change: Request ATS license** - If you want to use ATS[link] you will need to obtain a license
+
+    * **Standard change: Request APM License** - If you want to use APM[link] you will need to obtain a license
+
+    * **Standard change: Reset Google authenticator** - If you are using Google authenticator for 2FA[link] you may need to reset this (for example, if you get a new phone)
+
+    * **Standard change** - Other changes which can be made on the platform, but for which you do not have access
+
+    * **Non-Standard change** - any other changes not covered by other issues
     
 3.  Fill in the fields for the issue type you selected.
 

@@ -31,7 +31,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 		* `brew install node@8`
 * Install [npm](https://www.npmjs.com/) with the following command: `npm install npm@latest -g`
 * Install [Yeoman](https://yeoman.io/) with the following command: `npm install yo -g`
-* Install the Mendix Widget Generator with the following command: `npm install generator-mx-widget -g`
+* Install the Mendix Pluggable Widget Generator with the following command: `npm install @mendix/generator-widget -g`
 * Install an integrated development environment (IDE) of your choice (Mendix recommends [Microsoft Visual Studio Code](https://code.visualstudio.com/))
 * Have a basic understanding of [TypeScript](https://www.typescriptlang.org/)
 
@@ -70,14 +70,14 @@ The following steps will teach you to build a pluggable input widget, and show y
 
 ### 3.2 Widget Scaffolding
 
-The MX-Widget Generator is the quickest way to start developing a widget. It creates a widget’s recommended folder structure and files.
+The Pluggable Widget Generator is the quickest way to start developing a widget. It creates a widget’s recommended folder structure and files.
 
 Using a terminal or command line, navigate to your new Mendix app project’s folder, create a new folder named *CustomWidgets*, and start the generator using:
 
 ```
 mkdir CustomWidgets
 cd CustomWidgets
-yo mx-widget TextBox
+yo @mendix/widget TextBox
 ```
 
 The generator will ask some questions in the setup. Select the **TypeScript, For web and hybrid mobile apps, Empty widget, No unit test,** and **No end-to-end tests** options:

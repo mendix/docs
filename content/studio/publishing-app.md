@@ -3,6 +3,7 @@ title: "Publishing Your App"
 description: "Describes the publishing (deployment) process in Mendix Studio."
 menu_order: 55
 tags: ["deployment", "publishing", "app publishing", "deploy", "deploying", "publish"]
+---
 
 ## 1 Introduction
 

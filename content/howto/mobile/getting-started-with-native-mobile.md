@@ -27,9 +27,9 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 Creating a New Project Based on the Quickstart App{#quickstartapp}
 
-{{% todo %}}[add link to MakeItNative app when it comes online]{{% /todo %}}
+{{% todo %}}[add Apple App Store link to MakeItNative app]{{% /todo %}}
 
-For details on making an app using the Native Mobile Quickstart app template, download the Make It Native app, and using the Make It Native app to view changes to your app, see the sections below.
+For details on making an app using the Native Mobile Quickstart app template, download the [Make It Native](https://play.google.com/store/apps/details?id=com.mendix.developerapp) app. Using the Make It Native app to view the changes to your app, see the sections below.
 
 ### 3.1 Starting a Quickstarter App Project
 

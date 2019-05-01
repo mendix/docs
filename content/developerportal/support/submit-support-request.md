@@ -106,6 +106,8 @@ To submit a request with Mendix Support, follow these steps:
 
     You can select from the following issues:
 
+{{% todo %}}[Review and improved text and links]{{% /todo %}}
+
     * **Request for Information** - general questions
 
     * **Incident** - app is down, other platform issue

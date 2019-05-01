@@ -183,7 +183,7 @@ To do this:
     ![Add an icon as CSS](attachments/mindsphere-development-considerations/css-icon.png)
 
 {{% alert type="info" %}}
-You will not see the icon in Studio Pro when it is in *Edit mode*. Switch to *View mode* to confirm that you have selected the correct icon.
+You will not see the icon in Studio Pro when it is in *Structure mode*. Switch to *Design mode* to confirm that you have selected the correct icon.
 
 You can only add one icon per element.
 {{% /alert %}}

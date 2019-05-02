@@ -90,7 +90,7 @@ howto:
   priority: 7
   mendix_version: 8
   menu_categories:
-    - "General"
+    - "General Info"
     - "Front-End"
     - "Data Models"
     - "Logic & Business Rules"
@@ -152,7 +152,7 @@ refguide:
   priority: 8
   mendix_version: 8
   menu_categories:
-    - "General"
+    - "General Info"
     - "App Modeling"
     - "Version Control"
     - "Mendix Runtime"

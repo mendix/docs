@@ -293,7 +293,7 @@ module.exports = {
      * Release Notes (permanent, mapped)
      ****************************************************/
 	 {
-      from: "/releasenotes/desktop-modeler",
+      from: "/releasenotes/desktop-modeler/",
       to: "/releasenotes/studio-pro/"
     },
 	/****************************************************

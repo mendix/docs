@@ -101,7 +101,7 @@ When you have specific design requirements, you will need to build custom classe
 			<ViewStyle properties>
 		},
 		icon: {
-		}
+		},
 		caption: {
 			<TextStyle properties>
 		}
@@ -118,7 +118,7 @@ When you have specific design requirements, you will need to build custom classe
 			backgroundColor: "transparent"
 		},
 		icon: {
-		}
+		},
 		caption: {
 		}
 	}

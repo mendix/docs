@@ -296,6 +296,10 @@ module.exports = {
       from: "/releasenotes/desktop-modeler/",
       to: "/releasenotes/studio-pro/"
     },
+	{
+      from: "/releasenotes/desktop-modeler/8.0",
+      to: "/releasenotes/studio-pro/8.0"
+    },
 	/****************************************************
      * From Desktop Modeler version 7 (permanent, mapped)
      ****************************************************/

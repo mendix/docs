@@ -1,5 +1,5 @@
 ---
-title: "XPath quarter-from-dateTime"
+title: "XPath Quarter-from-DateTime"
 parent: "xpath-constraint-functions"
 ---
 

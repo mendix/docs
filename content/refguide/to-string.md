@@ -1,5 +1,5 @@
 ---
-title: "To string"
+title: "To String"
 parent: "expressions"
 ---
 

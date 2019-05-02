@@ -1,5 +1,5 @@
 ---
-title: "XPath day-of-year-from-dateTime"
+title: "XPath Day-of-Year-from-DateTime"
 parent: "xpath-constraint-functions"
 ---
 

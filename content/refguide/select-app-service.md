@@ -1,5 +1,5 @@
 ---
-title: "Select app service"
+title: "Select App Service"
 parent: "consumed-app-services"
 ---
 

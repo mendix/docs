@@ -1,5 +1,5 @@
 ---
-title: "Parsing and Formatting Decimal Function Calls"
+title: "Parsing & Formatting Decimal Function Calls"
 parent: "expressions"
 ---
 

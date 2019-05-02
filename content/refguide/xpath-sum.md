@@ -1,5 +1,5 @@
 ---
-title: "XPath sum"
+title: "XPath Sum"
 parent: "xpath-query-functions"
 ---
 

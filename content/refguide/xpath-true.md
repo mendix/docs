@@ -1,5 +1,5 @@
 ---
-title: "XPath true"
+title: "XPath True"
 parent: "xpath-constraint-functions"
 ---
 

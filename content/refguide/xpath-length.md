@@ -1,5 +1,5 @@
 ---
-title: "XPath length"
+title: "XPath Length"
 parent: "xpath-constraint-functions"
 ---
 

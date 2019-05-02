@@ -1,5 +1,5 @@
 ---
-title: "Special checks"
+title: "Special Checks"
 parent: "expressions"
 ---
 

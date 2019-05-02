@@ -1,6 +1,6 @@
 ---
 title: "Windows Service"
-category: "Desktop Modeler"
+category: "Studio Pro"
 ---
 
 To download the Windows Service, go to the Desktop Modeler page in the [Mendix App Store](https://appstore.home.mendix.com/link/modelers) and open **Related downloads**.

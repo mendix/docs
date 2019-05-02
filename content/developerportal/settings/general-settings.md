@@ -30,7 +30,7 @@ In the **Studio** section, you can see whether Studio is enabled for the app. Yo
 
 	![](attachments/not-enabled.png)
 
-*  Enable collaborative development with Studio for apps using Mendix version [7.23.3](/releasenotes/desktop-modeler/7.23#7233) and above by clicking **Enable Now** (for more information on the collaborative development process, see [Collaborative Development](/refguide/collaborative-development))
+*  Enable collaborative development with Studio for apps using Mendix version [7.23.3](/releasenotes/studio-pro/7.23#7233) and above by clicking **Enable Now** (for more information on the collaborative development process, see [Collaborative Development](/refguide/collaborative-development))
 
 	![](attachments/enable-new-mode.png)
 

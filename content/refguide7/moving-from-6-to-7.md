@@ -7,7 +7,7 @@ description: "Provides details on updating your project from Mendix 6 to Mendix 
 
 ## 1 Introduction
 
-For up-to-date details about all the new major improvements being added in Mendix 7, see the [Desktop Modeler version 7 release notes](/releasenotes/desktop-modeler/7).
+For up-to-date details about all the new major improvements being added in Mendix 7, see the [Desktop Modeler 7 release notes](/releasenotes/studio-pro/7).
 
 This document will help you to update your project from Mendix 6 to Mendix 7. It contains the following topics:
 
@@ -30,7 +30,7 @@ Seriously, make a backup!
 
 ### 2.2 Converting to the Latest Mendix 6 Version
 
-Conversion to Mendix 7 will work for projects created with version 6.0.0 or higher. However, we advise converting to the latest Mendix 6 version before converting to the latest Mendix 7 version. For details on the latest Mendix 6 version, see the [Desktop Modeler version 6.10 release notes](/releasenotes/desktop-modeler/6.10).
+Conversion to Mendix 7 will work for projects created with version 6.0.0 or higher. However, we advise converting to the latest Mendix 6 version before converting to the latest Mendix 7 version. For details on the latest Mendix 6 version, see the [Desktop Modeler version 6.10 release notes](/releasenotes/studio-pro/6.10).
 
 ### 2.3 Fixing Errors, Warnings & Deprecations
 
@@ -40,7 +40,7 @@ Fix errors, warnings, and deprecations as much as possible. Take special note of
 
 Fix the deprecations in your Java actions by importing your project in Eclipse and solving all the deprecations in the **Problems** tab. 
 
-For details on the removed and deprecated APIs, see the **Breaking changes** section of the [Desktop Modeler version 7 release notes](/releasenotes/desktop-modeler/7.0#BreakingChanges).
+For details on the removed and deprecated APIs, see the **Breaking changes** section of the [Desktop Modeler version 7 release notes](/releasenotes/studio-pro/7.0#BreakingChanges).
 
 ## 3 Converting!
 
@@ -145,7 +145,7 @@ For more information, see [Layouts](layout#layout-type) and the blog post [Layou
 
 #### 6.1.3 Apply Context & Remove from Context
 
-The **Apply context** and **Remove from context** options of the reference selector, data grid, and template grid data sources were deprecated long ago (in [Mendix 5.19.0](/releasenotes/desktop-modeler/5.19)), and they have now been removed. You will now get consistency errors in places where you used them. We suggest using explicit XPath constraints instead.
+The **Apply context** and **Remove from context** options of the reference selector, data grid, and template grid data sources were deprecated long ago (in [Mendix 5.19.0](/releasenotes/studio-pro/5.19)), and they have now been removed. You will now get consistency errors in places where you used them. We suggest using explicit XPath constraints instead.
 
 ### 6.2 Removed Client APIs
 

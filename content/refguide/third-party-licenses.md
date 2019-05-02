@@ -1,6 +1,6 @@
 ---
 title: "Third-Party Licenses"
-category: "General"
+category: "General Info"
 menu_order: 70
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "Create and Test a Native Mobile App"
+title: "Create & Test a Native Mobile App"
 parent: "native-mobile"
 menu_order: 10
 description: A how-to for creating a native mobile Mendix app and viewing it on a mobile device.

@@ -1,6 +1,6 @@
 ---
 title: "Find Your Way in an App Project"
-category: "General"
+category: "General Info"
 menu_order: 6
 tags: ["project", "navigation", "usage"]
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Find Unused App Project Items"
-category: "General"
+category: "General Info"
 menu_order: 7
 tags: ["unused", "item", "usage"]
 ---

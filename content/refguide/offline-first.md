@@ -1,7 +1,7 @@
 ---
 title: "Offline First"
 category: "Mobile Development"
-menu_order: 30
+menu_order: 3
 tags: ["offline", "native", "mobile"]
 ---
 

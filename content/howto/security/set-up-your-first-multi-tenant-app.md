@@ -56,7 +56,7 @@ In the domain model, one delete prevention rule on the **TenantUser_Tenant** ass
 The **ProjectUserRole** entity is used for duplication of the **System.Userrole** instances.
 
 {{% alert type="info" %}}
-The `ProjectUserRole_UserRole is 1-*` association is due to the deprecation notice in Mendix 7.5.0 that states, "Cross-module association to the System module must have the Owner property set to Default."
+The `ProjectUserRole_UserRole is 1-*` association is due to the deprecation notice that states, "Cross-module association to the System module must have the Owner property set to Default."
 {{% /alert %}}
 
 This is the domain model of the multi-tenant administration module:

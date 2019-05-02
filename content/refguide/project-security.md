@@ -34,7 +34,7 @@ All other security settings are only visible if the security level is 'Prototype
 
 ### Check security (only for security level Production)
 
-If the security level is production, you can specify whether the consistency of security settings should be checked. For each user role the Modeler checks which forms are accessible, either directly in the menu bar or indirectly by following forms and microflows. For each of those forms, the Modeler checks whether referred attributes and associations are accessible for the current user role. If not, an error is added to the error list. These errors are only shown if there are no other errors.
+If the security level is production, you can specify whether the consistency of security settings should be checked. For each user role Studio Pro checks which forms are accessible, either directly in the menu bar or indirectly by following forms and microflows. For each of those forms, Studio Pro checks whether referred attributes and associations are accessible for the current user role. If not, an error is added to the error list. These errors are only shown if there are no other errors.
 
 ### Project status
 

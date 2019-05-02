@@ -8,12 +8,6 @@ tags: ["published REST", "resource"]
 # linked from DM: published rest > add resource > help (integration)
 ---
 
-{{% alert type="info" %}}
-
-The **published REST service** feature was introduced in version 7.10.0.
-
-{{% /alert %}}
-
 ## 1 Introduction
 
 A published REST resource is part of a [published REST service](published-rest-service) and represents a collection of items on which one or more [operations](published-rest-operation) can be defined.

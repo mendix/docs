@@ -7,7 +7,7 @@ tags: ["Support", "custom settings"]
 
 ## 1 Introduction
 
-There are many custom settings in Mendix, most of which are described in [Custom Settings](/refguide/custom-settings) in the Mendix Reference Guide.
+There are many custom settings in Mendix, most of which are described in [Custom Settings](/refguide/custom-settings).
 
 However, a few of the more commonly used custom settings can be misunderstood or have effects that one might not expect. That is why we would like to give these settings a bit of special attention and more thoroughly explain the consequences of changing them.
 
@@ -34,7 +34,7 @@ Increasing the session timeout can improve the user experience, especially on mo
 
 Since the frequency of the session timeout checks and other important events is tied to the `ClusterManagerActionInterval`, it makes sense to not use the default of half the session timeout when the value is increased by a lot (for example, 24 hours or more). It might make sense to put a maximum value on `ClusterManagerActionInterval`, regardless of how high the value of `SessionTimeout` is set. An approximate figure is 15 minutes, but ultimately this will depend on the functional requirements of the application.
 
-With the introduction of stateless runtime in Mendix 7, the potential of memory usage leading to problems has been reduced for two reasons. The first reason is the ability to run in a horizontally scaled environment. Multiple runtimes will mean unintended memory usage is also divided over those runtimes, reducing the impact of any one idle user session. But the main (and second) reason is that most of the memory usage has been moved to the client. So instead of all entities in the memory ending up on the application node, a large share of them will end up in the browser of the client. This should significantly reduce the potential strain on the application node that can be caused by increasing the `SessionTimeout` default value to a much higher value. If you are setting the timeout to a very high value in Mendix 6, you should consider using one node size larger than you would use otherwise.
+With stateless runtime, the potential of memory usage leading to problems has been reduced for two reasons. The first reason is the ability to run in a horizontally scaled environment. Multiple runtimes will mean unintended memory usage is also divided over those runtimes, reducing the impact of any one idle user session. But the main (and second) reason is that most of the memory usage has been moved to the client. So instead of all entities in the memory ending up on the application node, a large share of them will end up in the browser of the client. This should significantly reduce the potential strain on the application node that can be caused by increasing the `SessionTimeout` default value to a much higher value. If you are setting the timeout to a very high value in Mendix 6, you should consider using one node size larger than you would use otherwise.
 
 Another important matter that can be affected by increasing the session timeout is the user restrictions imposed by your Mendix license. Longer sessions might mean more concurrent users at any given time. This is something to keep in mind when deciding on the specifics of the license you will need to run your application.
 

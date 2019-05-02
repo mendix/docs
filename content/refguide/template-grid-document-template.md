@@ -31,7 +31,7 @@ This defines the amount of columns the template grid will contain.
 
 ## Common Properties
 
-{{% snippet file="refguide7/Name+Property.md" %}}
+{{% snippet file="refguide/Name+Property.md" %}}
 
 ## Data Source Properties
 

@@ -18,16 +18,16 @@ In this how-to we will go through how to setup the [Mendix UI Framework](https:/
 
 Before you can start with this how-to, please make sure you have completed the following prerequisites.
 
-*   Download the latest [Mendix Modeler](https://appstore.mendix.com)
+*   Download the latest [Mendix Studio Pro](https://appstore.mendix.com)
 *   Download [Koala](http://koala-app.com/) ([or use a different compiler](http://sass-lang.com/install))
 *   Download text editor [Sublime Text](http://www.sublimetext.com/)
 
-## 3 Creating a New App in the Mendix Desktop Modeler
+## 3 Creating a New App in Mendix Studio Pro
 
 In this chapter we will create a new app and select a starter app from the New App selector.
 
-1.  Open the **Mendix Modeler**.
-2.  Create a **New App** from the **My Apps** screen in the Mendix Desktop Modeler.
+1.  Open Mendix Studio Pro.
+2.  Create a **New App** from the **My Apps** screen in Mendix Studio Pro.
 
     ![](attachments/18448712/18581487.png)
 
@@ -70,11 +70,11 @@ The Mendix UI Framework uses **Sass**, which relies on Ruby. However, you can in
 
 ## 6 Read More
 
-* [How to Create Your First Two Overview & Detail Pages](create-your-first-two-overview-and-detail-pages)
-* [How to Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
-* [How to Use Layouts and Snippets](layouts-and-snippets)
-* [How to Perform the Scout and Windows 10 Workaround](perform-scout-and-windows-10-workaround)
-* [How to Set Up the Navigation Structure](../general/setting-up-the-navigation-structure)
-* [How to Set Up the Mendix UI Framework with Just CSS](setup-mendix-ui-framework-with-just-css)
-* [How to Set Up the Mendix UI Framework with Scout](setup-mendix-ui-framework-with-scout)
-* [How to Set Up the Mendix UI Framework](setup-mendix-ui-framework)
+* [Create Your First Two Overview & Detail Pages](create-your-first-two-overview-and-detail-pages)
+* [Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
+* [Use Layouts and Snippets](layouts-and-snippets)
+* [Perform the Scout and Windows 10 Workaround](perform-scout-and-windows-10-workaround)
+* [Set Up the Navigation Structure](../general/setting-up-the-navigation-structure)
+* [Set Up the Mendix UI Framework with Just CSS](setup-mendix-ui-framework-with-just-css)
+* [Set Up the Mendix UI Framework with Scout](setup-mendix-ui-framework-with-scout)
+* [Set Up the Mendix UI Framework](setup-mendix-ui-framework)

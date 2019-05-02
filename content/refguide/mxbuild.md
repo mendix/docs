@@ -14,16 +14,16 @@ The version of MxBuild which you need is dependent on the version of the Mendix 
 
 {{% alert type="info" %}}
 
-Mendix versions 7.18.1 and above include a build number in the version, and this has to be included in the link path. For example:
+A build number is included in the version, and this has to be included in the link path. For example:
 
-* 7.17.2
-* 7.18.1.40272
+* 8.1.2
+* 8.1.2.40272
 
-You can find the build number in path of your Mendix installation (for example `C:\Program Files\Mendix\7.18.1.40272`).
+You can find the build number in path of your Mendix installation (for example `C:\Program Files\Mendix\8.1.2.40272`).
 
 {{% /alert %}}
 
-So, MxBuild for Mendix version 7.18.1 is found at [https://cdn.mendix.com/runtime/mxbuild-7.18.1.40272.tar.gz](https://cdn.mendix.com/runtime/mxbuild-7.18.1.40272.tar.gz).
+So, the MxBuild for Mendix version 8.1.2 would be found at [https://cdn.mendix.com/runtime/mxbuild-8.1.2.40272.tar.gz](https://cdn.mendix.com/runtime/mxbuild-8.1.2.40272.tar.gz).
 
 You can extract the files using your favorite archival tool, such as [7-Zip](https://www.7-zip.org/).
 
@@ -121,7 +121,7 @@ The following table describes the various properties of the *problems* JSON obje
 | --- | --- |
 | `name` | A unique identifier of the problem, or `null` when the consistency check is not yet defined in the Mendix Metamodel. |
 | `severity` | Describes the type of problem: `Warning`, `Error` or `Deprecation`. |
-| `message` | The description of the problem. This is the same as the message in the 'Errors' dock of the Mendix Modeler. |
+| `message` | The description of the problem. This is the same as the message in the 'Errors' dock of Mendix Studio Pro. |
 | `locations` | Contains zero or more objects that describe the location in the Mendix project where the problem occurs (see the following table). |
 
 The location(s) associated with the problem have the following properties:

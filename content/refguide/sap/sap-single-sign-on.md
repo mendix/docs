@@ -14,9 +14,9 @@ One implication of this is that you must use the same username (in the form of a
 
 ## 2 Logging on to Mendix Using SSO
 
-When you log on to the Mendix Desktop Modeler, you have the option to use SAP authentication or Mendix authentication.
+When you log on to Mendix Studio Pro, you have the option to use SAP authentication or Mendix authentication.
 
-![](attachments/sap-single-sign-on/sign-in-to-modeler.png)
+![](attachments/sap-single-sign-on/sign-in.png)
 
 {{% alert type="warning" %}}
 
@@ -34,13 +34,13 @@ You can enter your **Username** and Mendix **Password** and click **Sign in**. T
 
 You can click **SAP** to ask to use your SAP credentials. These are region based, so you will be asked to select a region:
 
-![](attachments/sap-single-sign-on/dm-select-sap-region.png)
+![](attachments/sap-single-sign-on/select-sap-region.png)
 
 Select the region and you will be asked for your **SAP credentials**.
 
 ![](attachments/sap-single-sign-on/sap-login-screen.png)
 
-Enter the correct credentials and you will be signed in to the Desktop Modeler.
+Enter the correct credentials and you will be signed in to Studio Pro.
 
 ## 3 Creating and Deploying Apps Using SSO
 

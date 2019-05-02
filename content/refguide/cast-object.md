@@ -1,6 +1,7 @@
 ---
 title: "Cast Object"
 parent: "object-activities"
+tags: ["studio pro"]
 ---
 
 {{% alert type="info" %}}

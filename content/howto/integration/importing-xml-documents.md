@@ -80,7 +80,7 @@ To create the XML-to-domain mapping, follow these steps:
 
 	![](attachments/18448727/18581655.png)
 
-6. Open the connector (from the lower-right side of the Modeler or from the **View** menu).
+6. Open the connector (from the lower-right side of the Studio Pro or from the **View** menu).
 7.  Drag the entity **Customer** from the connector to the place-holder in the mapping editor:
 
 	![](attachments/18448727/18581681.png)  

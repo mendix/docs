@@ -4,55 +4,44 @@ parent: "data-grid"
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+## 1 Introduction
 
 The control bar of the template grid, data grid, and reference set selector allows you to manipulate the objects displayed by means of buttons. By default, both grids will be created with a new, edit, and delete button in the control bar. The control bar can also include a number of selection options and spreadsheet export buttons, as well as microflow buttons for custom actions. 
 
-## Control bar buttons
+## 2 Control Bar Buttons
 
-### Search button
+### Search Button
 
-See [Search button](search-button).
+See [Search Button](search-button).
 
-### Add button
+### Add Button
 
-See [Add button](add-button).
+See [Add Button](add-button).
 
-### Action button
+### Action Button
 
-See [Action button](grid-action-button).
+See [Action Button](grid-action-button).
 
-### Create button
+### Remove Button
 
-See [Create Button](grid-new-button).
+See [Remove Button](remove-button).
 
-### Edit button
+### Select Button
 
-See [Edit button](edit-button).
+See [Select Button](select-button).
 
-### Remove button
+### Select All Button
 
-See [Remove button](remove-button).
+See [Select All Button](select-all-button).
 
-### Delete button
+### Deselect All Button
 
-See [Delete button](delete-button).
+See [Deselect All Button](deselect-all-button).
 
-### Select button
+### Export to Excel Button
 
-See [Select button](select-button).
+See [Export to excel Button](export-to-excel-button).
 
-### Select all button
+### Export to CSV Button
 
-See [Select all button](select-all-button).
-
-### Deselect all button
-
-See [Deselect all button](deselect-all-button).
-
-### Export to Excel button
-
-See [Export to excel button](export-to-excel-button).
-
-### Export to CSV button
-
-See [Export to CSV button](export-to-csv-button).
+See [Export to CSV Button](export-to-csv-button).

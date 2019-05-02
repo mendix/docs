@@ -12,7 +12,7 @@ This page contains useful class names that can be used to make your app more bea
 
 Class names can be entered in two locations:
 
-* The **Properties** panel of the Modeler
+* The **Properties** panel of Studio Pro
 * The **Properties** pop-up window for the widget
 
 **This how-to will teach you how to do the following:**

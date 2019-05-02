@@ -8,14 +8,6 @@ tags: ["published REST", "resource", "entity", "operations", "expose"]
 # linked from DM: domain model > entity (right-click) > Expose as REST resource > Help (integration)
 ---
 
-{{% alert type="info" %}}
-
-This feature was introduced in version 7.16.0.
-
-The option to generate **Patch** was introduced in version 7.17.0.
-
-{{% /alert %}}
-
 ## 1 Introduction
 
 You can publish a REST resource with basic operations based on an entity by right-clicking an entity in the domain model and selecting **Expose as REST resource**. Alternatively, you can drag an entity or message definition onto the list of resources of a published REST service. This page describes the options you have once you perform one of these actions.

@@ -5,7 +5,7 @@ parent: "xpath-constraints"
 
 ## 1 For XPath Query Constraints
 
-The following operators can be used in XPath query constraints, both in the Modeler and in Java code:
+The following operators can be used in XPath query constraints, both in Studio Pro and in Java code:
 
 | Operator | Description | Example | Return value |
 | --- | --- | --- | --- |

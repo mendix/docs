@@ -3,8 +3,7 @@ title: "Permissions API"
 category: "API Documentation"
 ---
 
-
-## Introduction
+## 1 Introduction
 
 The Permissions API is an [App Service](/refguide/consumed-app-services) that allows retrieving the [user roles](/refguide/user-roles) a specific user has in your application. There are several ways in which the roles granted to a user in an application can be changed:
 
@@ -20,11 +19,11 @@ The Permissions API will require the EnvironmentUUID and EnvironmentPassword par
 
 The service is part of the [AppCloudServices module](https://appstore.home.mendix.com/link/app/934/Mendix/AppCloudServices), which is available from the App Store, and it's included in the default themes when creating a new application. Both of these options include a default implementation of the Permissions API.
 
-## API Calls
+## 2 API Calls
 
-### GetRolesForOpenID
+### 2.1 GetRolesForOpenID
 
-#### Description
+#### 2.1.1 Description
 
 Retrieves the user roles for a specific user, based on their OpenID; this will return a list of AppRole objects representing the user roles the user has.
 
@@ -34,11 +33,11 @@ Note that a request will return a list of [non-persistable objects](/refguide/pe
 
 {{% /alert %}}
 
-#### Available in
+#### 2.1.2 Available In
 
-API Version 1
+API Version 1.
 
-#### Parameters
+#### 2.1.3 Parameters
 
 | Name | Parameter type | Required | Description |
 | --- | --- | --- | --- |
@@ -46,13 +45,13 @@ API Version 1
 | EnvironmentUUID | String | Yes | UUID of the requesting environment. This should be the value of the AppCloudServices.EnvironmentUUID constant, which the Mendix Developer Portal will fill in automatically. |
 | EnvironmentPassword | String | Yes | Password of the requesting environment. This should be the value of the AppCloudServices.EnvironmentUUID constant, which the Mendix Developer Portal will fill in automatically. |
 
-#### Return type
+#### 2.1.4 Return type
 
-List of PermissionsAPI.AppRole objects
+List of PermissionsAPI.AppRole objects.
 
 ![](attachments/18449570/18582265.png)
 
-##### AppRole
+##### 2.1.4.1 AppRole
 
 | Attribute | Type | Description |
 | --- | --- | --- |

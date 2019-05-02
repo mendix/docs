@@ -52,7 +52,7 @@ Before starting this how-to, make sure you have completed the following prerequi
     
     {{% alert type="info" %}}In these *.html* files, you can only refer to external resources or resources under the absolute path `/error_page/`; the `/error_page/` path is the only one that will be available when the application is stopped.{{% /alert %}}
 
-5. Commit the changes in the Desktop Modeler.
+5. Commit the changes in Studio Pro.
 
 {{% alert type="warning" %}}
 It might take up to an hour to before the custom error page is visible when the app is offline.

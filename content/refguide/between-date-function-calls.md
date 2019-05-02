@@ -1,18 +1,21 @@
 ---
 title: "Between Date Function Calls"
 parent: "expressions"
+tags: ["studio pro"]
 ---
+
+## 1 Introduction
 
 Functions for calculating the differences between two dates.
 
-## millisecondsBetween
+## 2 millisecondsBetween
 
 *   First date
     Type: DateTime
 *   Second date
     Type: DateTime
 
-### Output
+### 2.1 Output
 
 Returns the difference between the two dates, as a Decimal, measured in milliseconds.
 
@@ -28,14 +31,14 @@ results in
 2000
 ```
 
-## secondsBetween
+## 3 secondsBetween
 
 *   First date
     Type: DateTime
 *   Second date
     Type: DateTime
 
-### Output
+### 3.1 Output
 
 Returns the difference between the two dates, as a Decimal, measured in seconds.
 
@@ -51,14 +54,14 @@ results in
 62
 ```
 
-## minutesBetween
+## 4 minutesBetween
 
 *   First date
     Type: DateTime
 *   Second date
     Type: DateTime
 
-### Output
+### 4.1 Output
 
 Returns the difference between the two dates, as a Decimal, measured in minutes.
 
@@ -74,14 +77,14 @@ results in
 1
 ```
 
-## hoursBetween
+## 5 hoursBetween
 
 *   First date
     Type: DateTime
 *   Second date
     Type: DateTime
 
-### Output
+### 5.1 Output
 
 Returns the difference between the two dates, as a Decimal, measured in hours.
 
@@ -97,14 +100,14 @@ results in
 2.5
 ```
 
-## daysBetween
+## 6 daysBetween
 
 *   First date
     Type: DateTime
 *   Second date
     Type: DateTime
 
-### Output
+### 6.1 Output
 
 Returns the difference between the two dates as a positive Decimal measured in days. Time is taken into consideration, so comparing `date-x 0:00` with `date-x 06:00` will result in `0.25000000`.
 
@@ -120,14 +123,14 @@ results in
 43
 ```
 
-## weeksBetween
+## 7 weeksBetween
 
 *   First date
     Type: DateTime
 *   Second date
     Type: DateTime
 
-### Output
+### 7.1 Output
 
 Returns the difference between the two dates, as a Decimal, measured in weeks.
 

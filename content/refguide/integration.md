@@ -1,12 +1,12 @@
 ---
 title: "Integration"
-category: "Desktop Modeler"
+category: "App Modeling"
 ---
 
 
 Integration with other applications (other than Mendix) can be done using REST or SOAP/Web Services. Mendix can import and export data from XML and JSON.
 
-Integration between Mendix applications is done best with App Services (see [Published App Services](published-app-services) and [Consumed App Services](consumed-app-services) ). Some of the most often used terms are explained below.
+Integration between Mendix applications is done best with REST services (for details, see [Published REST Services](published-rest-services) and [Call REST Service Action](call-rest-action)). Some of the terms used most often are explained below.
 
 {{% alert type="info" %}}
 For [Call REST Service Action](call-rest-action) and JSON support in [Mapping Documents](mapping-documents), see [Consumed REST Services](consumed-rest-services).

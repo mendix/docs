@@ -22,13 +22,7 @@ Mendix will intelligently detect if pages share a layout, so no user input is re
 
 ## 2 Placeholder Management<a name="phm"></a>
 
-{{% alert type="info" %}}
-
-The method for mapping placeholders described in this section was introduced in Mendix 7.9.0. Older versions make use of the placeholder properties described in [6 Page Generation Properties](#pgp).
-
-{{% /alert %}}
-
-A layout contains one or more placeholders. One of these placeholders must be named **Main**, and it can be differentiated from the others by a darker shade of blue. Unlike most other widgets, the name of a placeholder carries a special significance. When a user switches a page from one layout to another, the placeholder names will be used to map the content of the page to the new layout. For every placeholder that has content in the current layout, the Modeler will search for a placeholder with the same name in the new one. As the Main placeholder is mandatory, the user can always be assured that at least some of the page content will be salvaged. Any content found in placeholders not present in the new layout will be moved above the canvas, where it can easily be redistributed over the new placeholders.
+A layout contains one or more placeholders. One of these placeholders must be named **Main**, and it can be differentiated from the others by a darker shade of blue. Unlike most other widgets, the name of a placeholder carries a special significance. When a user switches a page from one layout to another, the placeholder names will be used to map the content of the page to the new layout. For every placeholder that has content in the current layout, Studio Pro will search for a placeholder with the same name in the new one. As the Main placeholder is mandatory, the user can always be assured that at least some of the page content will be salvaged. Any content found in placeholders not present in the new layout will be moved above the canvas, where it can easily be redistributed over the new placeholders.
 
 The placeholder naming scheme also has an impact on [page templates](page-templates). When creating a new page, the template will map its content based on the names of the placeholders in its preview layout. Consequently, a template might describe the content for a placeholder that is not available in the selected layout. To prevent this, a compatible layout is automatically pre-selected when clicking a page template in the create new page dialog. If an incompatible layout is then selected manually, all the content for the missing placeholders will be discarded. 
 
@@ -36,19 +30,19 @@ As a consequence of this behavior, user experience can be improved significantly
 
 ## 3 Common Properties
 
-{{% snippet file="refguide7/Document+Name+Property.md" %}}
+{{% snippet file="refguide/Document+Name+Property.md" %}}
 
-{{% snippet file="refguide7/Documentation+Property.md" %}}
+{{% snippet file="refguide/Documentation+Property.md" %}}
 
-{{% snippet file="refguide7/Document+Class+Property.md" %}}
+{{% snippet file="refguide/Document+Class+Property.md" %}}
 
-{{% snippet file="refguide7/Style+Property.md" %}}
+{{% snippet file="refguide/Style+Property.md" %}}
 
 ## 4 Designer Properties
 
-{{% snippet file="refguide7/Canvas+Width+Property.md" %}}
+{{% snippet file="refguide/Canvas+Width+Property.md" %}}
 
-{{% snippet file="refguide7/Canvas+Height+Property.md" %}}
+{{% snippet file="refguide/Canvas+Height+Property.md" %}}
 
 ## 5 General Properties
 
@@ -68,22 +62,3 @@ Every layout has a layout type, which determines the purpose of the layout and h
 | **Modal pop-up** | Use this layout for pages that should appear as [modal pop-up windows](https://www.wikiwand.com/en/Modal_window). |
 | **Pop-up** | Use this layout for pages that should appear as modeless pop-up windows. |
 
-## 6 Page Generation Properties<a name="pgp"></a>
-
-{{% alert type="warning" %}}
-
-This section (along with the placeholder properties described below) was removed in Mendix 7.9.0 in favor of name-based placeholder mapping. For a full explanation, see [2 Placeholder Management](#phm). 
-
-{{% /alert %}}
-
-### 6.1 Main Placeholder
-
-This property defines the placeholder in which the Modeler places the page content when generating a page. For example, when you generate an edit page for the edit button of a data grid, the resulting page will contain a data view in the gap of the main placeholder.
-
-### 6.2 Save Button Placeholder
-
-This property defines the placeholder in which the Modeler places the save button when generating a page. If no save button placeholder is defined, the save button is placed in the data view control bar if possible.
-
-### 6.3 Cancel Button Placeholder
-
-This property defines the placeholder in which the Modeler places the cancel button when generating a page. If no save button placeholder is defined, the cancel button is placed in the data view control bar if possible.

@@ -72,7 +72,7 @@ The graphical notation of nanoflows is based on the [Business Process Model and 
 
 A nanoflow is composed of elements. The following categories are used:
 
-* [Events](#events) represent the start and end points of a nanoflow and special operations in a loop
+* [Events](#events) represent the start and endpoints of a nanoflow and special operations in a loop
 * [Flows](#flows) form the connection between elements
 * [Gateways](#gateways) deal with making choices and merging different paths again
 * [Activities](#activities) are the actions that are executed in a nanoflow
@@ -80,7 +80,7 @@ A nanoflow is composed of elements. The following categories are used:
 
 ### 5.1 Events<a name="events"></a>
 
-Events represent the start and end points of a nanoflow and special operations in a loop.
+Events represent the start and endpoints of a nanoflow and special operations in a loop.
 
 | Graphic | Name | Description |
 | --- | --- | --- |
@@ -168,7 +168,7 @@ Artifacts provide the nanoflow with input and allow comments to be made.
 
 ## 6 Variable Usages
 
-The Modeler visualizes which variables are used by selected object(s). It does this by showing the used variables in white text on a blue background. Conversely, elements that use the variable(s) defined by the selected object(s) are marked with the word **Usage** in white text on a green background.
+Studio Pro visualizes which variables are used by selected object(s). It does this by showing the used variables in white text on a blue background. Conversely, elements that use the variable(s) defined by the selected object(s) are marked with the word **Usage** in white text on a green background.
 
 In the example below, the parameter **AccountPasswordData** is highlighted because it is used in the selected activity. And the activity **Save password** has a usage label because it uses the variable defined by the selected activity.
 
@@ -180,7 +180,7 @@ When an error occurs in a nanoflow, all the changes that have been made to objec
 
 ## 8 Nanoflow Debugging
 
-Step-by-step debugging is not supported yet. For now, we recommend using log message actions, which are shown in the console log of the Desktop Modeler (for version 7.13.0 and above).
+Step-by-step debugging is not supported yet. For now, we recommend using log message actions, which are shown in the console log of Studio Pro.
 
 ## 9 Security
 

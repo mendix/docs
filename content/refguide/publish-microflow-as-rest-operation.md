@@ -8,12 +8,6 @@ tags: ["Microflow", "REST", "operation", "resource"]
 # linked from DM: edit microflow > (right-click) Publish as REST service operation > New > Help (integration)
 ---
 
-{{% alert type="info" %}}
-
-This feature was introduced in version 7.15.0.
-
-{{% /alert %}}
-
 ## 1 Introduction
 
 To publish a microflow as a REST service operation, right-click in the microflow editor and select **Publish as REST service operation**.

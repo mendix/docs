@@ -20,7 +20,7 @@ The MxModelReflection module is a commonly used module in most apps. The purpose
 
 ### 2.1 Download the MxModelReflection Module
 
-1. Open the **Mendix App Store** from within the modeler.
+1. Open the **Mendix App Store** from within Studio Pro.
 2. Search for the keyword **Reflection.**
 
     ![](attachments/18448688/18581166.png)
@@ -29,7 +29,7 @@ The MxModelReflection module is a commonly used module in most apps. The purpose
 
 ### 2.2 Download the 'Excel Exporter' Module
 
-1.  Open the **Mendix App Store** from within the modeler.
+1.  Open the **Mendix App Store** from within Studio Pro.
 2.  Search for the keyword "Excel."
 
 	![](attachments/18448732/18581910.png)
@@ -40,7 +40,7 @@ Ensure the module has downloaded successfully and is now a new module in your pr
 
 {{% alert type="warning" %}}
 
-Depending on the layout selected when the project was created, errors in the modeler may arise due to the new module's default layouts. To correct this, open each page that has an error and update the layout to the desired layout within the app.
+Depending on the layout selected when the project was created, errors in Studio Pro may arise due to the new module's default layouts. To correct this, open each page that has an error and update the layout to the desired layout within the app.
 
 {{% /alert %}}
 

@@ -1,7 +1,7 @@
 ---
 title: "Extensibility"
 description: "A selection of how to's that explain how to use connectors and adapters from the App Store."
-tags: ["widget", "app store", "connectors", "adapters", "charts"]
+tags: ["widget", "app store", "connectors", "adapters"]
 ---
 
 ## 1 Introduction
@@ -10,6 +10,8 @@ One of the strengths of Mendix is that it is easy to connect your Mendix applica
 
 ## 2 Main Documents in This Category
 
+* [Building Pluggable Widgets](pluggable-widgets)
+* [Write JavaScript Actions](write-javascript-actions)
 * [Use the Charts Widgets](charts-tutorials)
 * [Access a Samba Share from the MxCloud](access-a-samba-share-from-the-mxcloud)
 * [Get Started with the TimeSeries Connector](get-started-with-the-timeseries-connector)
@@ -18,3 +20,5 @@ One of the strengths of Mendix is that it is easy to connect your Mendix applica
 * [Install & Configure the SMTP Email Module](install-and-configure-the-smtp-module)
 * [Use Connectors & Adapters](use-connectors-and-adapters)
 * [Visualize Data Using the ChartsJS Module](visualize-data-using-the-chartsjs-module)
+* [Write JavaScript Actions](write-javascript-actions)
+

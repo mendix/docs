@@ -1,12 +1,13 @@
 ---
-title: "Numeric formatting"
+title: "Numeric Formatting"
 parent: "consumed-web-services"
 ---
-## Behavior in your Mendix application
+
+## 1 Behavior in Your Mendix Application
 
 A number will be translated into XML untouched, except that any trailing zeroes will be stripped and the representation will always be in non-scientific notation. The used rounding mode is configured in the [Project Settings](project-settings).
 
-## XML Schema facets
+## 2 XML Schema Facets
 
 How numbers in XML should be represented can be specified in an XSD (or WSDL) by using schema facets.
 
@@ -32,8 +33,3 @@ Mendix does not enforce compliance to these restrictions unless 'validate agains
 | 999.99 | 2 | 1 | 999.99 | Not possible to format correctly, so left untouched. |
 | 1.19E-17 | undefined | undefined | 0.0000000000000000119 |   |
 
-## Known issue
-
-There is currently a limitation on the way Float values are rendered to XML, when the XML schema requires a xsd:decimal.
-
-If, in a web service call action, you pass a Float parameter with a large number of fraction digits using a simple or advanced parameter mapping, a higher number of digits is preserved than when using an Export Mapping for the same purpose.

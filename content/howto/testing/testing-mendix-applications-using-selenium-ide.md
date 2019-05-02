@@ -38,7 +38,7 @@ All images, names, and steps in this how-to are based on these versions. When us
 
 Follow these steps to install and run the Company Expenses app:
 
-1. Open the Mendix Destkop Modeler.
+1. Open Mendix Studio Pro.
 2.  Click the App Store icon in the top toolbar:
 
 	![](attachments/18448631/18580298.png)
@@ -48,7 +48,7 @@ Follow these steps to install and run the Company Expenses app:
 
 	![](attachments/18448631/18580282.png)
 
-5.  Click **Download** and then **OK**. This will open the Company Expenses app in the Modeler.
+5.  Click **Download** and then **OK**. This will open the Company Expenses app in Studio Pro.
 
 	![](attachments/18448631/18580296.png)
 
@@ -122,8 +122,8 @@ You need to find the right locator, which will tell Selenium IDE which GUI eleme
 	The element with the target `id=mxui_widget_NumberInput_1_input` does not exist on the page. The number in the ID is not always the same. You need to find another target selector for the same element.
 
 13. Repeat steps 3 through 6.
-14. Find a unique selector for the **Amount** field. Mendix uses CSS classes to identify page content like widgets and pop-up windows. You can use these classes in Selenium to manipulate pages and verify data. Widgets can be given a name in the Mendix Modeler. These names appear in the HTML document as class names prefixed by `mx-name-`. For instance, a grid named `EmployeeGrid` will get a CSS class `mx-name-EmployeeGrid`. This is true for all widgets.
-15. Open the **Desktop_Expense_NewEdit_Admin** page in the Modeler:
+14. Find a unique selector for the **Amount** field. Mendix uses CSS classes to identify page content like widgets and pop-up windows. You can use these classes in Selenium to manipulate pages and verify data. Widgets can be given a name in Mendix Studio Pro. These names appear in the HTML document as class names prefixed by `mx-name-`. For instance, a grid named `EmployeeGrid` will get a CSS class `mx-name-EmployeeGrid`. This is true for all widgets.
+15. Open the **Desktop_Expense_NewEdit_Admin** page in Studio Pro:
 
 	![](attachments/18448631/18580285.png)
 
@@ -143,7 +143,7 @@ You need to find the right locator, which will tell Selenium IDE which GUI eleme
 	![](attachments/18448631/18580284.png)
 
 21. Click **Run current test case**. The test will fail because it can not find the element with the target `css=input.form-control.mx-focus`.
-22. Open the **Desktop_Expense_NewEdit_Admin** page in the Modeler.
+22. Open the **Desktop_Expense_NewEdit_Admin** page in Studio Pro.
 23. Click the **Description** box. The name of this box is `referenceSelector1` and it will have the CSS class `mx-name-referenceSelector1`.
 24. Enter `.mx-name-referenceSelector1` in your developer tools and press <kbd>Enter</kbd>. Two elements should be found: one in the pop-up window and one on the page in the background. To retrieve the element of the active page, you need to add `.mx-window-active` to the target.
 25. Enter `.mx-window-active .mx-name-referenceSelector1` in your developer tools and press <kbd>Enter</kbd>. There should only be one matching node, so you have now found a unique selector for the **Type** box. 
@@ -215,15 +215,15 @@ Now the test steps will have `mx-name-` CSS selectors rather than the Selenium d
 
 ## 5 Read More
 
-* [How to Create Automated Tests with TestNG](create-automated-tests-with-testng)
-* [How to Test Microflows Using the UnitTesting Module](testing-microflows-using-the-unittesting-module)
-* [How to Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
-* [How to Clear Warning Messages in Mendix](../monitoring-troubleshooting/clear-warning-messages)
-* [How to Test Web Services Using SoapUI](testing-web-services-using-soapui)
-* [How to Monitor Mendix Using JMX](../monitoring-troubleshooting/monitoring-mendix-using-jmx)
-* [How to Debug Java Actions Remotely](../monitoring-troubleshooting/debug-java-actions-remotely)
-* [How to Log Levels](../monitoring-troubleshooting/log-levels)
-* [How to Debug Java Actions](../monitoring-troubleshooting/debug-java-actions)
+* [Automated Tests with TestNG](create-automated-tests-with-testng)
+* [Test Microflows Using the UnitTesting Module](testing-microflows-using-the-unittesting-module)
+* [Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
+* [Clear Warning Messages in Mendix](../monitoring-troubleshooting/clear-warning-messages)
+* [Test Web Services Using SoapUI](testing-web-services-using-soapui)
+* [Monitor Mendix Using JMX](../monitoring-troubleshooting/monitoring-mendix-using-jmx)
+* [Debug Java Actions Remotely](../monitoring-troubleshooting/debug-java-actions-remotely)
+* [Log Levels](../monitoring-troubleshooting/log-levels)
+* [Debug Java Actions](../monitoring-troubleshooting/debug-java-actions)
 
 Learn more about this topic using the following helpful link:
 

@@ -67,7 +67,7 @@ To specify an import or export mapping, the user needs to do a number of things:
 
 ## 6 Tip: Important Windows
 
-Mapping documents rely heavily on two windows. If they are not visible in the Modeler, they can be enabled from the **View menu**.
+Mapping documents rely heavily on two windows. If they are not visible in Studio Pro, they can be enabled from the **View menu**.
 
 *   **Properties window**. Details of individual mapping elements are shown here.
 *   **Connector window**. Entities from the connector window are dragged into the mapping document.

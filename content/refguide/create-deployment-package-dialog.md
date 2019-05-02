@@ -25,7 +25,7 @@ Choose a version for the deployment package. The version consists of four number
 
 The other numbers are free to choose but it is wise to use a convention for the numbering. Major versions typically contain major new feature or rewrites of existing features. A minor version contains small new features and fixes. A patch solves minor issues and should not change the data model of the application. A patch release should be interchangeable with another patch release with no changes to the data.
 
-The Modeler will show you the latest version that you created a package for (if any). You can increase major, minor or patch according to the convention you use.
+Studio Pro will show you the latest version that you created a package for (if any). You can increase major, minor or patch according to the convention you use.
 
 ## 6 Description (for Versioned)
 
@@ -33,4 +33,4 @@ You can enter a custom description for this deployment package. It is purely for
 
 ## 7 Disk Location
 
-The location where the deployment package will be placed is shown here. This is not editable. All packages are placed in a directory **releases** inside your project directory. This directory is automatically ignored so that these packages will not be committed to the repository. You can always recreate a deployment package (assuming you have the Modeler version you used) so there is no need to put them on the Team Server.
+The location where the deployment package will be placed is shown here. This is not editable. All packages are placed in a directory **releases** inside your project directory. This directory is automatically ignored so that these packages will not be committed to the repository. You can always recreate a deployment package (assuming you have Studio Pro version you used) so there is no need to put them on the Team Server.

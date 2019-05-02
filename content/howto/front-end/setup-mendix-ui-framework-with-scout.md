@@ -18,22 +18,19 @@ In this how-to we will go through how to setup the [Mendix UI Framework](https:/
 
 Before you can start with this how-to, please make sure you have completed the following prerequisites.
 
-*   Download the latest [Mendix Desktop Modeler](https://appstore.mendix.com)
+*   Download the latest version of [Mendix Studio Pro](https://appstore.mendix.com)
 *   Download [Scout](http://mhs.github.io/scout-app/) ([or use a different compiler](http://sass-lang.com/install))
 *   Download text editor [Sublime Text](http://www.sublimetext.com/)
 
-## 3 Creating a new App in the Mendix Desktop Modeler
+## 3 Creating a new App in Mendix Studio Pro
 
 In this chapter we will create a new app based on a starter app from the New App selector.
 
-1.  Open the **Mendix Desktop Modeler**.
-2.  Create a **New App** from the **My Apps** screen in the Mendix Desktop Modeler.
+1.  Open **Mendix Studio Pro** to the **My Apps** screen.
+2.  Create a **New App**.
+3.  Select a starter app for your app:
 
-     ![](attachments/18448706/18581412.png)
-3.  Select a starter app for your app.
-
-    ![](attachments/18448706/18581411.png)
-4.  You can now deploy your app or just head over to section 3 to configure Scout.
+	![](attachments/18448706/18581411.png)
 
 ## 4 Configuring Scout
 
@@ -89,10 +86,10 @@ The Mendix UI Framework uses **Sass**, which relies on Ruby. However, you can in
 
 ## 6 Read More
 
-*   [How to Create Your First Two Overview & Detail Pages](create-your-first-two-overview-and-detail-pages)
-*   [How to Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
-*   [How to Use Layouts and Snippets](layouts-and-snippets)
-*   [How to Perform Scout and Windows 10 Workaround](perform-scout-and-windows-10-workaround)
-*   [How to Set Up the Navigation Structure](../general/setting-up-the-navigation-structure)
-*   [How to Set Up the Mendix UI Framework with just CSS](setup-mendix-ui-framework-with-just-css)
-*   [How to Set Up the Mendix UI Framework with Koala](setup-mendix-ui-framework-with-koala)
+*   [Create Your First Two Overview & Detail Pages](create-your-first-two-overview-and-detail-pages)
+*   [Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
+*   [Use Layouts and Snippets](layouts-and-snippets)
+*   [Perform Scout and Windows 10 Workaround](perform-scout-and-windows-10-workaround)
+*   [Set Up the Navigation Structure](../general/setting-up-the-navigation-structure)
+*   [Set Up the Mendix UI Framework with just CSS](setup-mendix-ui-framework-with-just-css)
+*   [Set Up the Mendix UI Framework with Koala](setup-mendix-ui-framework-with-koala)

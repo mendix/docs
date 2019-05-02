@@ -2,7 +2,7 @@
 title: "SAP Leonardo Machine Learning Foundation Connector"
 category: "SAP"
 menu_order: 50
-description: "Reference Guide to using the SAP Leonardo Machine Learning Foundation Connector with images and text."
+description: "Documentation for using the SAP Leonardo Machine Learning Foundation Connector with images and text."
 tags: ["SAP", "Leonardo", "Machine Learning", "AI"]
 ---
 

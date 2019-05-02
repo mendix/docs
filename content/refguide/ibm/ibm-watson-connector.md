@@ -2,7 +2,7 @@
 title: "IBM Watson Connector"
 category: "IBM"
 #parent: "Enter the parent document filename of this document if necessary (for example, "push-notifications")"
-description: "A reference guide to the Mendix IBM Watson connectors"
+description: "A reference for the Mendix IBM Watson connectors"
 tags: ["IBM", "Watson", "AI", "Translation", "Image Analysis", "Assistant", "Speech to Text", "Text to Speech", "Tone Analyzer", "Visual Recognition", "Face Detection", "Image Classification"]
 ---
 
@@ -66,7 +66,7 @@ Not all Watson services are currently supported by the IBM Watson Connector Suit
 
 These connectors are based on version 6.11.0 of the [Watson SDK](https://github.com/watson-developer-cloud/java-sdk).
 
-If there is no connector for the service you want, you can use Mendix native REST to use the service yourself. See [How to Consume a REST Service](/howto7/integration/consume-a-rest-service).
+If there is no connector for the service you want, you can use Mendix native REST to use the service yourself. See [How to Consume a REST Service](/howto/integration/consume-a-rest-service).
 {{% /alert %}}
 
 ## 2 Connector Actions: Assistant{#WatsonAssistant}
@@ -150,7 +150,7 @@ The AssistantMessageResponse contains the following:
 * Association to *AssistantIntent* which gives more information on what Watson Assistant interpreted as the intention of the input
 * Association to *AssistantEntity* which gives more information on which (dialog skill) entities Watson interpreted as being referred to
 
-![Domain model for Watson Assistant connector actions](attachments/ibm-watson-connector/assistant-dm.png)
+![Domain model for Watson Assistant connector actions](attachments/ibm-watson-connector/assistant.png)
 
 ## 3 Connector Actions: Speech To Text{#SpeechToText}
 
@@ -196,7 +196,7 @@ This is the name you want to give to the object of type SpeechReturn which is re
 
 The domain model for this action allows for several interim responses. In this implementation, however, you will only get final results (with `_final` set to true) because the connector cannot analyze a stream, only a complete file.
 
-![Domain model for Speech to Text connector actions](attachments/ibm-watson-connector/speechtotext-dm.png)
+![Domain model for Speech to Text connector actions](attachments/ibm-watson-connector/speechtotext-microflow.png)
 
 If Watson detects that the speech file contains multiple sentences or speakers, each recognized sentence will be provided via a separate **Result** object.
 
@@ -264,7 +264,7 @@ This is a string containing the text to be analyzed. You can submit no more than
 
 This is the name you wish to assign to an object of type ToneAnalyzerResponse which is the response received from Watson. This is associated with the responses from the Tone Analyzer.
 
-![Domain model for Tone Analyzer connector actions](attachments/ibm-watson-connector/toneanalyzer-dm.png)
+![Domain model for Tone Analyzer connector actions](attachments/ibm-watson-connector/toneanalyzer.png)
 
 {{% alert type="info" %}}
 In the previous version of the Tone Analyzer, tones were split into *Tone Categories*. This additional level of categorization has been removed from the current version of the Tone Analyzer.
@@ -373,7 +373,7 @@ The languages are not explicit in the parameters of the action, but are identifi
 
 You can create the objects of entity type Language using the *Get Identifiable Languages* action, described [above](#getIdentifiableLanguages).
 
-![Domain model for Translation connector actions](attachments/ibm-watson-connector/translation-dm.png)
+![Domain model for Translation connector actions](attachments/ibm-watson-connector/translation.png)
 
 {{% alert type="info" %}}
 Note that not all pairs of languages are supported. For example, you can translate to and from English and Spanish and English and Portuguese. However, there is no model in Watson to translate Spanish to Portuguese. The IBM Watson Connector Suite does not check whether there is a valid model before it passes the language pair to Watson.
@@ -473,7 +473,7 @@ This is the name of the list of Classifier objects returned from Watson.
 
 Associated with each of the classifier objects will be zero or more **ClassifierClass** objects. Each of these contain the **Name** of content which Watson has identified using the classifier, and the **Score** which is an indication of the confidence that Watson has that it has correctly identified the content, with 1.0 indicating complete confidence in the identification.
 
-![Domain model for Visual Recognition connector actions](attachments/ibm-watson-connector/visualrecognition-dm.png)
+![Domain model for Visual Recognition connector actions](attachments/ibm-watson-connector/visualrecognition.png)
 
 ### 7.2 Visual Recognition – Create Classifier{#createClassifier}
 
@@ -523,7 +523,7 @@ This is an object of type Classifier. This is associated with the following obje
 
 The **Name** attribute of the Classifier is the name of the classifier which will be created by Watson. For example "Mammals" for a classifier identifying mammals.
 
-![Domain model for Visual Recognition connector actions](attachments/ibm-watson-connector/visualrecognition-dm.png)
+![Domain model for Visual Recognition connector actions](attachments/ibm-watson-connector/visualrecognition.png)
 
 #### 7.2.4 Variable (String)
 
@@ -656,7 +656,7 @@ The microflow does the following:
 * If the VCAP_SERVICE environment variable does exist it will contain the credentials, in JSON format, of all the services which have been allocated to your project on IBM Cloud
 * The action **Import with mapping** is used, together with the mapping **USE_ME > JsonMapping > VCAP_Import_Mapping** to populate an object of type **Config** (see [Import Mapping Action](../import-mapping-action) for more information)
 
-    ![Domain model for Watson VCAP Management](attachments/ibm-watson-connector/vcap-dm.png)
+    ![Domain model for Watson VCAP Management](attachments/ibm-watson-connector/vcap.png)
 
 * A list of all the **ConfigItem** objects associated with the **Config** item which has just been created is retrieved
 * This list is passed to the microflow **IVK_CreateOrUpdateService** which creates an object of type **WatsonServiceConfig** for each item in the list which contains credentials for a Watson service
@@ -697,7 +697,7 @@ The enumeration **WatsonServiceConfigType** contains a *Name* which reflects the
 
 The IBM Watson Connector Suite does not yet have actions for all the APIs of the services which it does support. For example the APIs which allow you to build a conversation without using the IBM Watson Conversation Workspaces Tool.
 
-In addition, the following IBM AI services are not yet supported at all by the IBM Watson Connector Suite. However, you can connect to them yourself using the native Mendix activities for consuming REST services. See [How to Consume a REST Service](/howto7/integration/consume-a-rest-service).
+In addition, the following IBM AI services are not yet supported at all by the IBM Watson Connector Suite. However, you can connect to them yourself using the native Mendix activities for consuming REST services. See [How to Consume a REST Service](/howto/integration/consume-a-rest-service).
 
 1. AI OpenScale
 2. Compare Comply
@@ -714,7 +714,7 @@ In addition, the following IBM AI services are not yet supported at all by the I
 ## 11 Read More
 
 * [Getting started with Watson and IBM Cloud](https://cloud.ibm.com/docs/services/watson/index.html)
-* [How to Consume a REST Service](/howto7/integration/consume-a-rest-service)
+* [How to Consume a REST Service](/howto/integration/consume-a-rest-service)
 * [IBM Cloud](https://www.ibm.com/cloud/)
 * [IBM Watson Connector Suite](https://appstore.home.mendix.com/link/app/2860/)
 * [IBM Watson website](https://www.ibm.com/watson/products-services/)

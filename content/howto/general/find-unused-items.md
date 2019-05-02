@@ -13,7 +13,7 @@ During the development of your application it might occur that specific function
 
 In this how-to, you will learn how you can find unused items within your model.
 
-1. In the top toolbar of the Desktop Modeler, click **Edit** > **Find** Advanced (or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>F</kbd>.
+1. In the top toolbar of Studio Pro, click **Edit** > **Find** Advanced (or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>F</kbd>.
 
 2. Select **Unused items** as **search for** option
 
@@ -33,10 +33,10 @@ Any objects which are excluded from the project won't show up in the unused item
 
 ## 3 Setting Unused Objects to "Used" 
 
-Some pages and microflows are only used from Java code and will be listed as an unused item because the Modeler can't look into Java source code. To prevent anyone from removing these objects you can mark the page or microflow as "used." In this part of the How-To you will learn how to do so.
+Some pages and microflows are only used from Java code and will be listed as an unused item because Studio Pro can't look into Java source code. To prevent anyone from removing these objects you can mark the page or microflow as "used." In this part of the How-To you will learn how to do so.
 
 1.  Open the page or microflow which needs to be marked as used.
-2.  Change the **Mark as used** property from **no** to **yes** in the properties table of the Modeler.
+2.  Change the **Mark as used** property from **no** to **yes** in the properties table of Studio Pro.
     ![](attachments/find-unused-items/18581608.png)
 3.  **Save** the object.
 

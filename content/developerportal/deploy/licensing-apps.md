@@ -38,7 +38,7 @@ In a **licensed node** you have everything you need to stage and deploy your app
 This document describes how you can link apps to a licensed node.
 
 {{% alert type="warning" %}}
-These instructions will not move databases, file storage, or any other environment configurations to another node. Only the deployment package of a Mendix **model** – the app as built in the Modeler – is moved.
+These instructions will not move databases, file storage, or any other environment configurations to another node. Only the deployment package of a Mendix **model** – the app as built in Mendix Studio Pro – is moved.
 {{% /alert %}}
 
 ## 3 Prerequisites

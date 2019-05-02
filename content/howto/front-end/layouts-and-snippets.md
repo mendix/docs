@@ -101,7 +101,7 @@ These are some layout examples:
 
 {{% alert type="info" %}}
 
-By adjusting the canvas width, you can emulate the end-user's view of the page in the Modeler. For example, the desktop layout has a canvas width of 800, and the default phone layouts have a width of 500. The property canvas width only applies to the view in the Modeler, and the actual width of the page depends on the opened browser or the optional pop-up window size.
+By adjusting the canvas width, you can emulate the end-user's view of the page in Studio Pro. For example, the desktop layout has a canvas width of 800, and the default phone layouts have a width of 500. The property canvas width only applies to the view in Studio Pro, and the actual width of the page depends on the opened browser or the optional pop-up window size.
 
 {{% /alert %}}
 
@@ -163,12 +163,7 @@ At the heart of the navigation model in Mendix, are three device types: Desktop,
 
 When a user visits a Mendix application, she is automatically redirected to the home page of the appropriate device type (for details, see the section [Redirection to Device Types](#RedirectiontoDeviceTypes)).
 
-For more information on navigation profiles, see the following for reference:
-
-* [Navigation in Mendix 7.4 & Above](/refguide7/navigation)
-* [Navigation in Mendix Versions 7.2 & 7.3](/refguide7/navigation-in-72-and-73)
-* [Navigation Before Mendix Version 7.2](/refguide7/navigation-before-72)
-* [Solving Issues with Navigation Profile Conversion to 7.4](/refguide7/navigation-conversion-to-74)
+For more information on navigation profiles, see [Navigation in Mendix](/refguide/navigation).
 
 ### 5.7 Menu Document
 
@@ -208,11 +203,11 @@ In addition, a snippet can define an entity that serves as a context for the wid
 
 ## 7 Read More
 
-* [How to Perform the Scout and Windows 10 Workaround](perform-scout-and-windows-10-workaround)
-* [How to Use Layouts and Snippets](layouts-and-snippets)
-* [How to Set Up the Mendix UI Framework with Scout](setup-mendix-ui-framework-with-scout)
-* [How to Set Up the Mendix UI Framework with Koala](setup-mendix-ui-framework-with-koala)
-* [How to Set Up the Mendix UI Framework with Just CSS](setup-mendix-ui-framework-with-just-css)
-* [How to Set Up the Navigation Structure](../general/setting-up-the-navigation-structure)
-* [How to Create Your First Two Overview & Detail Pages](create-your-first-two-overview-and-detail-pages)
-* [How to Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
+* [Perform the Scout and Windows 10 Workaround](perform-scout-and-windows-10-workaround)
+* [Use Layouts and Snippets](layouts-and-snippets)
+* [Set Up the Mendix UI Framework with Scout](setup-mendix-ui-framework-with-scout)
+* [Set Up the Mendix UI Framework with Koala](setup-mendix-ui-framework-with-koala)
+* [Set Up the Mendix UI Framework with Just CSS](setup-mendix-ui-framework-with-just-css)
+* [Set Up the Navigation Structure](../general/setting-up-the-navigation-structure)
+* [Create Your First Two Overview & Detail Pages](create-your-first-two-overview-and-detail-pages)
+* [Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)

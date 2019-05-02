@@ -30,9 +30,7 @@ The variable that refers to the object or list of objects that will be deleted. 
 If the microflow is called from the client, the deletion is not reflected in the client if **Refresh in client** is set to *No*. If set to *Yes*, the deletion is reflected across the client, which includes reloading relevant [data sources](data-sources).
 
 {{% alert type="info" %}}
-
-As of 7.19.0, deletions are always reflected in the client. [Data sources](data-sources) are only reloaded if **Refresh in client** is set to *Yes*.
-
+Deletions are always reflected in the client. [Data sources](data-sources) are only reloaded if **Refresh in client** is set to *Yes*.
 {{% /alert %}}
 
 _Default value_: No

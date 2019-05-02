@@ -6,7 +6,7 @@ menu_order: 50
 
 ## 1 Introduction
 
-To help you to find out how you can write code to alter your model, the SDK ships with a nice reverse engineering tool. Given a [fully loaded model unit](loading-units-and-elements), you can generate the JavaScript code that would create that very same unit using code. This way, you can build a template model in the Mendix Modeler, then generate the code you would need to write to achieve the same.
+To help you to find out how you can write code to alter your model, the SDK ships with a nice reverse engineering tool. Given a [fully loaded model unit](loading-units-and-elements), you can generate the JavaScript code that would create that very same unit using code. This way, you can build a template model in Studio Pro, then generate the code you would need to write to achieve the same.
 
 ## 2 For the Impatient
 

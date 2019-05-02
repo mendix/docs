@@ -7,7 +7,7 @@ tags: ["monitoring", "troubleshooting", "debug", "microflow"]
 
 ## 1 Introduction
 
-The Mendix Modeler has a built-in consistency checker that validates if the application you are building contains any obvious errors. This dramatically reduces the amount of technical errors during run-time, but the Modeler isn't able to check if your app contains functional errors. This is mainly a manual practice, but Mendix does support enough tools to make this easier. If you run into a functional error in any of the microflows, you can easily debug them with the debugger.
+Mendix Studio Pro has a built-in consistency checker that validates if the application you are building contains any obvious errors. This dramatically reduces the amount of technical errors during run-time, but Studio Pro isn't able to check if your app contains functional errors. This is mainly a manual practice, but Mendix does support enough tools to make this easier. If you run into a functional error in any of the microflows, you can easily debug them with the debugger.
 
 **This how-to will teach you how to do the following:**
 
@@ -46,7 +46,7 @@ The best practice is to have the **Debugger** and **Variables** panes at differe
 Breakpoints are points in a microflow where the application will halt execution. This is useful to analyze the application execution and data up to that point. You can add breakpoints at any point in your microflow by following these steps:
 
 1. Run your application locally.
-2. Open the microflow that needs debugging in the Modeler.
+2. Open the microflow that needs debugging in Studio Pro.
 3. Right-click any of the activities or splits in the microflow and select **Add breakpoint**. This sets a breakpoint on the selected step in the microflow, which is visually represented by a red dot:
     ![](attachments/18448571/18580020.png)
     You can open an overview of all the breakpoints by going to **View** > **Breakpoints**:
@@ -61,7 +61,7 @@ Breakpoints are points in a microflow where the application will halt execution.
 2. Do whatever is needed to trigger the microflow that you want to debug:
     * As an end-user of the application, you will see a progress bar on the application
     * As a developer of the application, you will see the Mendix icon flashing on the panes task bar
-3. Click the icon on the panes task bar to open the Modeler. The element with the breakpoint that interrupts this microflow should be highlighted with a red border:
+3. Click the icon on the panes task bar to open Studio Pro. The element with the breakpoint that interrupts this microflow should be highlighted with a red border:
     ![](attachments/18448571/18580010.png)
 4. Open the **Debugger** pane from the **View** menu:
     ![](attachments/18448571/18580009.png)
@@ -106,13 +106,13 @@ To use breakpoint conditions, follow these steps:
 
 ## 8 Read More
 
-* [How to Find the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
-* [How to Clear Warning Messages in Mendix](clear-warning-messages)
-* [How to Test Web Services Using SoapUI](../testing/testing-web-services-using-soapui)
-* [How to Monitor Mendix Using JMX](monitoring-mendix-using-jmx)
-* [How to Debug Java Actions Remotely](debug-java-actions-remotely)
-* [How to Log Levels](log-levels)
-* [How to Debug Java Actions](debug-java-actions)
-* [How to Handle Common Mendix SSO Errors](handle-common-mendix-sso-errors)
-* [How to Debug Microflows Remotely](debug-microflows-remotely)
-* [Microflow Element Common Properties](/refguide7/microflow-element-common-properties)
+* [Find the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
+* [Clear Warning Messages in Mendix](clear-warning-messages)
+* [Test Web Services Using SoapUI](../testing/testing-web-services-using-soapui)
+* [Monitor Mendix Using JMX](monitoring-mendix-using-jmx)
+* [Debug Java Actions Remotely](debug-java-actions-remotely)
+* [Log Levels](log-levels)
+* [Debug Java Actions](debug-java-actions)
+* [Handle Common Mendix SSO Errors](handle-common-mendix-sso-errors)
+* [Debug Microflows Remotely](debug-microflows-remotely)
+* [Microflow Element Common Properties](/refguide/microflow-element-common-properties)

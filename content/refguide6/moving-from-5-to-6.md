@@ -38,7 +38,7 @@ As much as possible, you should fix errors and warnings. Take special note of th
 
 ### 2.4 Fixing Deprecations in Java Actions
 
-Fix deprecations in your Java actions by importing your project into Eclipse and solving all the deprecations in the **Problems** tab. For details on the removed and deprecated APIs, see "Removed Features" section of the [Mendix 6.0.0 release notes](/releasenotes/desktop-modeler/6.0).
+Fix deprecations in your Java actions by importing your project into Eclipse and solving all the deprecations in the **Problems** tab. For details on the removed and deprecated APIs, see "Removed Features" section of the [Mendix 6.0.0 release notes](/releasenotes/studio-pro/6.0).
 
 ### 2.5 Double Checking the Project Changes
 

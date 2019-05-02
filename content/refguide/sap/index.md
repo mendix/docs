@@ -1,6 +1,6 @@
 ---
 title: "SAP"
-description: "Reference guide category for users who need material on consuming SAP services."
+description: "Documentation for users who need material on consuming SAP services."
 tags: ["SAP", "OData", "XSUAA", "Destination Services", "Fiori"]
 ---
 

@@ -8,12 +8,6 @@ tags: ["CORS", "security", "origin", "domain", "access"]
 # linked from DM: published rest > Enable CORS > Settings > Help (integration)
 ---
 
-{{% alert type="info" %}}
-
-The CORS settings feature was introduced in Mendix version 7.18.0.
-
-{{% /alert %}}
-
 ## 1 Introduction
 
 Cross-Origin Resource Sharing (CORS) uses additional HTTP headers to tell a browser to give access to selected resources from a server in a different origin (domain).

@@ -25,23 +25,23 @@ If you plan to deploy to version 3 (V3) of the Mendix Cloud later on, *and* your
 
 The Mendix Cloud is the default deployment option when you get started with the Mendix Platform. As an integrated solution, a licensed node on the Mendix Cloud includes multiple environments, backups, monitoring, high availability, and more.
 
-From within the Desktop Modeler, you can view the cloud nodes you have available in the Mendix Cloud. You can create a deployment package (MDA) in the Developer Portal and, from there, you can transport it and start running your application. For more information, see [Mendix Cloud](mendix-cloud-deploy).
+From within Mendix Studio Pro, you can view the cloud nodes you have available in the Mendix Cloud. You can create a deployment package (MDA) in the Developer Portal and, from there, you can transport it and start running your application. For more information, see [Mendix Cloud](mendix-cloud-deploy).
 
 ## 4 IBM Cloud
 
-If you create your app from an IBM Starter App, or an IBM Starter Kit on IBM Cloud, then the Developer Portal will lead you through the creation of an environment on IBM Cloud. You can then deploy your app to your IBM environment directly from within the Modeler.
+If you create your app from an IBM Starter App, or an IBM Starter Kit on IBM Cloud, then the Developer Portal will lead you through the creation of an environment on IBM Cloud. You can then deploy your app to your IBM environment directly from within Studio Pro.
 
 For more information, see [IBM Cloud](ibm-cloud).
 
 ## 5 SAP Cloud Platform
 
-If you create your app from an SAP Starter App, the Developer Portal will lead you through the creation of an environment on SAP Cloud Platform. You can then deploy your app to your SAP Cloud Platform environment directly from within the Modeler.
+If you create your app from an SAP Starter App, the Developer Portal will lead you through the creation of an environment on SAP Cloud Platform. You can then deploy your app to your SAP Cloud Platform environment directly from within Studio Pro.
 
 For more information, see [SAP Cloud Platform](sap-cloud-platform).
 
 ## 6 Cloud Foundry
 
-From within the Modeler, you can deploy directly to Cloud Foundry-based platforms. To get started, see [Cloud Foundry](cloud-foundry-deploy) and the Cloud Foundry Buildpack:[Cloud Foundry Mendix Buildpack](https://github.com/mendix/cf-mendix-buildpack).
+From within Studio Pro, you can deploy directly to Cloud Foundry-based platforms. To get started, see [Cloud Foundry](cloud-foundry-deploy) and the Cloud Foundry Buildpack:[Cloud Foundry Mendix Buildpack](https://github.com/mendix/cf-mendix-buildpack).
 
 ## 7 Docker and Kubernetes
 

@@ -8,12 +8,6 @@ tags: ["publish", "REST service", "overview", "configuration"]
 # linked from integration - published rest > F1 help
 ---
 
-{{% alert type="info" %}}
-
-The **published REST service** feature was introduced in version 7.10.0.
-
-{{% /alert %}}
-
 ## 1 Introduction
 
 Add a [published REST service](published-rest-service) to expose your entities and microflows to other apps using the REST standard.

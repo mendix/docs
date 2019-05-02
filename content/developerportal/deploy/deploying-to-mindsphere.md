@@ -35,7 +35,7 @@ To help you with your first MindSphere apps, there is also an example app which 
 To deploy your app to MindSphere you need the following prerequisites.
 
 * A MindSphere user account on a developer tenant
-* [Mendix Desktop Modeler](https://appstore.home.mendix.com/index3.html)
+* [Mendix Studio Pro](https://appstore.home.mendix.com/index3.html)
 * The Cloud Foundry Command Line Interface (CF CLI) – this can be downloaded from [https://github.com/cloudfoundry/cli](https://github.com/cloudfoundry/cli)
 * A Cloud Foundry role which allows you to push applications, such as `SpaceDeveloper` (help in setting up Cloud Foundry users can be found in the MindSphere [Cloud Foundry How Tos](https://developer.mindsphere.io/paas/paas-cloudfoundry-howtos.html))
 * A MindSphere developer role: either `mdsp:core:Developer` or `mdsp:core:DeveloperAdmin`
@@ -52,7 +52,7 @@ The **MindSphere Starter Application** in the Mendix App Store contains all the 
 This is the recommended approach if you are building a new application, as it will provide all the necessary building blocks to get started.
 {{% /alert %}}
 
-Open the Desktop Modeler (version 7.22.2 or above) and follow these steps:
+Open Studio Pro (version 7.22.2 or above) and follow these steps:
 
 1. Click the icon in the top-right of the menu bar to open the Mendix App Store.
 
@@ -145,7 +145,7 @@ Before you continue, ensure you have fulfilled the prerequisites described in th
 
 To create a Mendix deployment package from your app, do the following:
 
-1.  Open your app in the Desktop Modeler.
+1.  Open your app in Studio Pro.
 2.  Select **Project** > **Create Deployment Package...**.
 
     {{% image_container width="355" %}}![](attachments/deploying-to-mindsphere/image13.png){{% /image_container %}}

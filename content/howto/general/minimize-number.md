@@ -7,13 +7,13 @@ tags: ["object", "session", "architecture", "stateless", "runtime"]
 
 ## 1 Introduction
 
-In Mendix 7, we introduced a completely new stateless architecture. All the application state that was kept in the Mendix Runtime in earlier versions is now kept by the Mendix Client in the browser. By “state,” we mean non-persistable entities (NPEs) and persistable entities that have not yet been committed to the database.
+Mendix has a completely stateless architecture. All the application state that was kept in the Mendix Runtime in earlier versions is now kept by the Mendix Client in the browser. By “state,” we mean non-persistable entities (NPEs) and persistable entities that have not yet been committed to the database.
 
 This new approach has important advantages, such as the ability to easily scale the app horizontally. However, there are also some new things to keep in mind when developing for this new architecture, in order to prevent performance degradation of the Mendix Client.
 
 ## 2 Overview
 
-The stateless architecture of Mendix 7 means that all temporary objects are stored in the Mendix Client (browser), instead of in the Mendix Runtime. However, since the objects are used in microflows, the Mendix Runtime will need them to be able to execute a microflow. For this reason, the state is transferred by the browser to the server when a request is sent.
+The stateless architecture means that all temporary objects are stored in the Mendix Client (browser), instead of in the Mendix Runtime. However, since the objects are used in microflows, the Mendix Runtime will need them to be able to execute a microflow. For this reason, the state is transferred by the browser to the server when a request is sent.
 
 The Mendix Mendix Client that runs in the browser determines which objects are relevant for the current page and microflows you want to execute. It does this based on the possibility of retrieving objects from the microflow parameters by following the relations from that object. Only objects that can be retrieved are transferred to the server to optimize performance. However, since there are many flexible ways to retrieve objects, Mendix must be conservative in this. There will often be more objects sent than are strictly necessary to be able to execute a microflow.
 
@@ -68,7 +68,7 @@ Then link the object to the current session when you create it in a microflow:
 Because it is always possible to look at the current **Session** object, any objects related to the current session can also always be retrieved. The Mendix Client must then always keep these objects around; they will never be removed.
 
 {{% alert type="info" %}}
-There is a drawback here as well: since the objects will never be removed, they will be in memory indefinitely. It is very important to remove these objects as soon as they are not necessary any more.
+There is a drawback here as well: since the objects will never be removed, they will be in memory indefinitely. It is very important to remove these objects as soon as they are not necessary anymore.
 {{% /alert %}}
 
 ## 6 Integrations

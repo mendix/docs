@@ -2,7 +2,7 @@
 title: "Associations"
 parent: "entities"
 menu_order: 30
-tags: ["domain model", "association"]
+tags: ["domain model", "association", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -15,7 +15,7 @@ The **Associations** tab is a tab in the entity properties and has the following
 * [Owner](#owner)
 * [Parent/Child](#parent-child)  
 
-![](attachments/associations/dm-entity-properties-associations-tab.png)
+![](attachments/associations/entity-properties-associations-tab.png)
 
 For more information on associations, see [Association and Their Properties](association-properties). 
 

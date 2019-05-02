@@ -6,79 +6,121 @@ parent: "integration"
 
 ## 1 Introduction
 
-In the Modeler, entities can be exposed as [OData resources](published-odata-resource) by adding a new published OData service. You can expose any number of related resources in a published OData service. By default, the non-qualified names of entities are used in the URI to uniquely identify them, but you can override the name of the resource as well.
+In Studio Pro, entities can be exposed as [OData resources](published-odata-resource) by adding a new published OData service. You can expose any number of related resources in a published OData service. By default, the non-qualified names of entities are used in the URI to uniquely identify them, but you can override the name of the resource as well.
 
-## 2 OData Version
+The standard used for OData in Mendix is [OData version 3](http://www.odata.org/documentation/odata-version-3-0) with the default representation set to Atom XML. Not all parts of the standard are implemented. If something is not documented here, it is has not yet been added.
 
-The standard used for OData in Mendix is [OData version 3](http://www.odata.org/documentation/odata-version-3-0)) with the default representation set to Atom XML. Not all parts of the standard are implemented. If something is not documented here, it is has not yet been added.
+This document describes the options available to you when you create a published OData service, and ends with some runtime considerations.
 
-## 3 Query Options
+## 2 General
 
-For details on how to filter the OData response, refer to [OData Query Options](odata-query-options).
-
-## 4 Supported Types
-
-For details on how Mendix attributes are represented in OData, refer to [OData Representation](odata-representation).
-
-## 5 Service Name
+### 2.1 Service Name
 
 The service name is used to create a unique URI for the OData service. Thus, the service name should be well-formed in accordance with [RFC 3986](https://tools.ietf.org/html/rfc3986) and [RFC 3987](https://tools.ietf.org/html/rfc3987).
 
-## 6 Resources
+### 2.2 Version
 
-A [resource](published-odata-resource) is a network-accessible data object representing an entity, identified by a URI. You can add, edit, or remove resources and their unique identifiers from the **Resources** tab. 
+Use the **version** field to assign a version number to the service. This number will be shown in the API documentation.
 
-## 7 Service Namespace
+### 2.3 Namespace
 
 In OData, the namespace is used to refer to data types. On the **Settings** tab, you can customize this namespace. You can change it to any value which starts with a letter followed by letters, digits, or dots with a maximum length of 512 characters.
 
-## 8 Performance
+## 2.4 Resources
 
-When exposing entities through OData, the entities are retrieved from the Mendix database in a streaming fashion, to avoid out-of-memory errors in the Mendix runtime.
+A [resource](published-odata-resource) is a network-accessible data object representing an entity, identified by a URI.
 
-## 9 Associations
+## 3 Settings
+
+### 3.1 Associations
 
 You can choose how you want to represent associations. For more information, see the [Associations](odata-representation#associations) section of *OData Representation*.
 
-## 10 Security
+### 3.2 Security
 
-To be able to consume OData in Mendix, you need to have two types of access rights: access right to the OData service as well as the right to the specific entities you are retrieving. Access can be granted either via authenticating as a user or via an anonymous user as long as the associated user role has access to both the OData service and the entities.
+You can configure security for the OData service when [Project Security](project-security) is enabled.
 
-### 10.1 Authenticated Access
+<a name="authentication"></a>
+#### 3.2.1 Requires Authentication
+
+{{% alert type="info" %}}
+
+The **No Authentication** feature was introduced in version 8.0.0. In earlier versions, it was always **Username and password**.
+
+The **Active Session** and **Custom** authentications were also introduced in version 8.0.0.
+
+{{% /alert %}}
+
+Select whether clients need to authenticate or not. Choose _No_ to allow access to the resources without restrictions. Choose _Yes_ to be able to select which authentication methods to support.
+
+Even when you choose _Yes_, you can still expose OData resources to anonymous users. For detailed information on allowing anonymous users, refer to [Anonymous User Role](anonymous-users).
+
+#### 3.2.2 Authentication Methods
+
+If authentication is required, you can select which authentication methods you would like to support.
+
+* Select **Username and password** to allow clients to authenticate themselves using a username and a password in the **Authorization** header (this is called "basic authentication")
+* Select **Active session** to allow access from JavaScript inside your current application
+* Select **Custom** to authenticate using a microflow (this microflow is called every time a user wants to access a resource)
+
+Check more than one authentication method to have the service try each of them. It will first try **Custom** authentication, then **Username and password**, and then **Active session**.
+
+<a name="username-password"></a>
+##### 3.2.2.1 Username and Password
 
 Authentication can be done by including basic authentication in the HTTP header of the call. To do this you need to construct a header called **Authorization** and its content should be constructed as follows:
 
-1.  Username and password are combined into a string "username:password"
-2.  The resulting string is then encoded using the [RFC2045-MIME](https://tools.ietf.org/html/rfc2045) variant of Base64, except not limited to 76 char/line
+1.  Username and password are combined into a string "username:password".
+2.  The resulting string is then encoded using the [RFC2045-MIME](https://tools.ietf.org/html/rfc2045) variant of Base64 (except not limited to 76 char/line).
 3.  The authorization method and a single space (meaning, "Basic " is then put before the encoded string).
 
 This result is a header which looks like `Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==`.
 
-### 10.2 Anonymous Access
+<a name="authentication-active-session"></a>
+##### 3.2.2.2 Active session
 
-With project security enabled, OData resources can still be exposed to anonymous users. For detailed information on allowing anonymous users, refer to [Anonymous User Role](anonymous-users).
+When you check this authentication method, the JavaScript in your app can access the REST service using the current user's session.
 
-### 10.3 Project Security Off
+To prevent cross-site request forgery, the `X-Csrf-Token` header needs to be set on each request, for example:
 
-If project security is off, for debugging purposes you can retrieve all data without needing to authenticate and without any security being applied. This is not possible in a production environment.
+```
+var xmlHttp = new XMLHttpRequest();
+xmlHttp.open("GET", "http://mysite/odata/myservice/myresource", false);
+xmlHttp.setRequestHeader("X-Csrf-Token", mx.session.getConfig("csrftoken"));
+xmlHttp.send(null);
+```
 
-### 10.4 Role-Based Access
+<a name="authentication-microflow"></a>
+##### 3.2.2.3 Custom
 
-If security is enabled, it is required to configure which users have access rights to a specific OData service document. This can be done by opening the specific Published OData service document, navigating to the Settings tab and changing the allowed roles in the Security section. By default, no allowed user roles are selected. The security settings are reflected in [Module Security](module-security).
+Specify which microflow to use for custom authentication.
 
-![](attachments/16713721/16843927.png)
+The microflow may take an [HttpRequest](http-request-and-response-entities#http-request) as a parameter, so it can inspect the incoming request.
 
-### 10.5 How Security Works
+The microflow may also take an [HttpResponse](http-request-and-response-entities#http-response) as a parameter. When the microflow sets the status code of this response to something other then **200**, this value is returned and the operation will not be executed. Any headers set on the response are returned (except when the microflow returns an empty user).
 
-1.  Typically, the client issues an initial anonymous request. The anonymous request is then validated against the OData service. If anonymous access is not granted to the respective OData service, the server will return with error code 401 (Unauthorized) and the response will include the WWW-Authenticate header to instruct the client to authenticate with basic authentication.
-2.  If the client fails to provide correct credentials or does not provide a basic authentication at all, the server returns error code 401 (Unauthorized) and the WWW-Authenticate header, just as in the previous step.
-3.  If the client is granted access (either anonymously or through basic authentication), the client access rights will be checked against the security configuration of the OData resources. All accessible resources are described in the Metadata XML document available under the root URL of the service with `/$metadata` appended.
-4.  Each time the client makes a call to an OData service, whether it is a service description, or metadata, or resource, the authentication information will be re-evaluated.
+The authentication microflow should return a User.
 
-### 11 API Documentation
+There are three possible outcomes of the authentication microflow:
+
+  * When the status code of the HttpResponse parameter is set to something other then **200**, this value is returned and the operation will not be executed
+  * When the resulting User is not empty, the operation is executed in the context of that user
+  * When the resulting User is empty, the next authentication method is attempted (when there are no other authentication methods, the result is **404 Not Found**)
+
+#### 3.2.3 Allowed Roles
+
+The allowed roles define which [module role](module-role) a user must have to be able to access the service. This option is only available when **Requires authentication** is set to **Yes**.
+
+### 5 Runtime considerations
 
 Once your OData-enabled app is running, an overview of exposed OData resources is available on the root URL followed by `/odata-doc/`. For example, `http://localhost:8080/odata-doc/` You can copy and paste the links into for instance Excel to establish a link between your OData resources and Excel.
 
 {{% alert type="warning" %}}
 While the API documentation for OData resources is enabled by default, access to it may be restricted by the administrator for apps running in production.
 {{% /alert %}}
+
+For details on how to filter the OData response, refer to [OData Query Options](odata-query-options).
+
+For details on how Mendix attributes are represented in OData, refer to [OData Representation](odata-representation).
+
+When exposing entities through OData, the entities are retrieved from the Mendix database in a streaming fashion, to avoid out-of-memory errors in the Mendix runtime.

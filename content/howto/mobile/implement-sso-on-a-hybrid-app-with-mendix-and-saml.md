@@ -1,6 +1,6 @@
 ---
 title: "Implement SSO on a Hybrid App with Mendix & SAML"
-category: "Mobile Development"
+parent: "hybrid-mobile"
 menu_order: 30
 description: "Describes how to address the challenges of implementing SSO in hybrid mobile apps."
 tags: ["SAML", "SSO", "mobile", "hybrid app", "phonegap", "authentication"]
@@ -122,7 +122,7 @@ MxApp.onConfigReady(function(config) {
 });
 ```
 
-To address the [second problem](#secondproblem), after a successful authentication against the IdP, Mendix stores a token in the device’s local storage. The system will use that token from that moment on to create a new session for the user. The session is created in Mendix only, so a new authentication against the IdP will not be performed again. This token is a TokenInformation (part of the System module) object, and it can be accessed/edited in microflows. By default, this local token will never expire, but this can be overridden by changing the `com.mendix.webui.HybridAppLoginTimeOut` [custom runtime setting](/refguide7/custom-settings). The downside of this approach is that access rights will not be updated upon login, since no interaction is done with the IdP. However, in most systems using SSO, user and role provisioning is handled separately from the authentication, so this might not be an issue.
+To address the [second problem](#secondproblem), after a successful authentication against the IdP, Mendix stores a token in the device’s local storage. The system will use that token from that moment on to create a new session for the user. The session is created in Mendix only, so a new authentication against the IdP will not be performed again. This token is a TokenInformation (part of the System module) object, and it can be accessed/edited in microflows. By default, this local token will never expire, but this can be overridden by changing the `com.mendix.webui.HybridAppLoginTimeOut` [custom runtime setting](/refguide/custom-settings). The downside of this approach is that access rights will not be updated upon login, since no interaction is done with the IdP. However, in most systems using SSO, user and role provisioning is handled separately from the authentication, so this might not be an issue.
 
 ### 5.2 The Hybrid App Package
 
@@ -145,7 +145,7 @@ To use the hybrid app package, follow these steps:
     ![](attachments/implement-sso/entry.js.png)
 
 6.  Add the JavaScript code provided in [5.1 The JavaScript](#javascript) under `MxApp.onConfigReady(function(config) {`. Your *Entry.js* file should now look like this:
-  ​     
+    ​     
     ![](attachments/implement-sso/entry.js-with-fix.png)
 
 7.  Create the PhoneGap Build package by following the instructions in the **Through Uploading to PhoneGap Build** section of the [Mendix PhoneGap Build App Template documentation](https://github.com/mendix/hybrid-app-template#through-uploading-to-phonegap-build). Be sure to read the **Prerequisites** and **Build on PhoneGap** sections of this documentation as well. This is an overview of the steps:<br>
@@ -169,8 +169,8 @@ The last thing to do is to check the **Enable mobile authentication token** box 
 
 ## 6 Read More
 
-* [How to Deploy Your First Hybrid Mobile App](deploy-your-first-hybrid-mobile-app)
-* [How to Publish a Mendix Hybrid Mobile App in App Stores](publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)
-* [How to Debug a Mobile App with Mendix](debug-a-mobile-app)
-* [How to Debug a Hybrid Mobile Application](../monitoring-troubleshooting/debug-a-hybrid-mobile-application)
+* [Deploy Your First Hybrid Mobile App](deploy-your-first-hybrid-mobile-app)
+* [Publish a Mendix Hybrid Mobile App in App Stores](publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)
+* [Debug a Mobile App with Mendix](debug-a-mobile-app)
+* [Debug a Hybrid Mobile Application](../monitoring-troubleshooting/debug-a-hybrid-mobile-application)
 * [Building a Mobile App with Mendix](https://www.mendix.com/blog/building-mobile-app-mendix/)

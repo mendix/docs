@@ -9,7 +9,7 @@ The following table shows an overview of all the supported widgets in ATS.
 
 ## 2 Standard Widgets
 
-We support all the widgets that are included in the Mendix Modeler:
+We support all the widgets that are included in Mendix Studio Pro:
 
 | Name | Supported in Execution | Supported in Recording |
 | ---- | :--------------------: | :--------------------: |

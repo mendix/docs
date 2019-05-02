@@ -10,34 +10,34 @@ description: "Presents the system requirements for using the Mendix Platform."
 
 This document presents the system requirements for the various parts of the Mendix Platform.
 
-## 2 Desktop Modeler
+## 2 Mendix Studio Pro
 
-The Mendix [Desktop Modeler](desktop-modeler) supports Windows 7, 8, and 10. It supports both 32-bit and 64-bit variations, but 64-bit is recommended.
+Mendix [Studio Pro](modeling) supports Windows 7, 8, and 10. It supports both 32-bit and 64-bit variations, but 64-bit is recommended.
 
 The following frameworks are automatically installed (if necessary):
 
 * Microsoft .NET Framework 4.6.2
 * Microsoft Visual C++ 2010 SP1 Redistributable Package
 * Microsoft Visual C++ 2013 Redistributable Package
-* AdoptOpenJDK 8 (installed automatically as of [Mendix 7.23.3](/releasenotes/desktop-modeler/7.23#7233) if you do not have this or Java Development Kit 1.8 already installed) or Java Development Kit 1.8
+* AdoptOpenJDK 8 (installed automatically as of [Mendix 7.23.3](/releasenotes/studio-pro/7.23#7233) if you do not have this or Java Development Kit 1.8 already installed) or Java Development Kit 1.8
 
 {{% alert type="warning" %}}
-You can choose which JDK is used for building and running locally via the **Edit** > **Preferences** menu item in the Desktop Modeler.
+You can choose which JDK is used for building and running locally via the **Edit** > **Preferences** menu item in Studio Pro.
 {{% /alert %}}
 
-If you want to use TortoiseSVN in combination with the Desktop Modeler, download the latest version 1.7.x from [Sourceforge](http://sourceforge.net/projects/tortoisesvn/files/?source=navbar).
+If you want to use TortoiseSVN in combination with Studio Pro, download the latest version 1.7.x from [Sourceforge](http://sourceforge.net/projects/tortoisesvn/files/?source=navbar).
 
 ## 3 Team Server
 
-The [Team Server](team-server) is implemented using Subversion, and the Modeler uses the HTTPS protocol to communicate with that server. To access the Team Server from within the Desktop Modeler, the network at your location needs the following settings:
+The [Team Server](team-server) is implemented using Subversion, and Studio Pro uses the HTTPS protocol to communicate with that server. To access the Team Server from within Studio Pro, the network at your location needs the following settings:
 
 * The HTTPS port (TCP 443) needs to be open
 * The HTTP port (TCP 80) needs to be open
 * WebDAV (verbs within the HTTP protocol) needs to be enabled on the proxy server (if any)
 
-## 4 Web Modeler
+## 4 Mendix Studio
 
-The [Mendix Web Modeler](/web-modeler) is optimized for use with Google Chrome. While Chrome is the officially supported browser, you can also use the Web Modeler with other popular browsers like Mozilla Firefox, Apple Safari, and Microsoft Edge. 
+[Mendix Studio](/studio) is optimized for use with Google Chrome. While Chrome is the officially supported browser, you can also use Mendix Studio with other popular browsers like Mozilla Firefox, Apple Safari, and Microsoft Edge. 
 
 {{% alert type="info" %}}
 The browser you use needs to have JavaScript turned on.
@@ -74,14 +74,14 @@ The browser you use needs to have JavaScript turned on.
 When running Mendix on a server, you will need Java Runtime Environment (JRE) 8. To download an OpenJDK distribution from AdoptOpenJDK, see [AdoptOpenJDK Installation](https://adoptopenjdk.net/installation.html). To download a commercial Oracle distribution, see [Java SE Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html).
 
 {{% alert type="info" %}}
-There is an issue since Java 7 that causes timeouts when using web services with a certain amount of data. You can circumvent this issue by adding the VM params `-Djava.net.preferIPv4Stack=true`. The Mendix Desktop Modeler will do this for you, but if you are running Mendix on premises on a Windows server, you will need to do this yourself. For more information about this issue, see [HotSpot (64bit server) hangs on socket read (JVM 1.7 bug?) - updated](http://blog.bielu.com/2011/11/hotspot-64bit-server-hangs-on-socket.html) and [Possible Bug in Java 7](https://forums.oracle.com/forums/thread.jspa?messageID=9985748).
+There is an issue since Java 7 that causes timeouts when using web services with a certain amount of data. You can circumvent this issue by adding the VM params `-Djava.net.preferIPv4Stack=true`. Mendix Studio Pro will do this for you, but if you are running Mendix on premises on a Windows server, you will need to do this yourself. For more information about this issue, see [HotSpot (64bit server) hangs on socket read (JVM 1.7 bug?) - updated](http://blog.bielu.com/2011/11/hotspot-64bit-server-hangs-on-socket.html) and [Possible Bug in Java 7](https://forums.oracle.com/forums/thread.jspa?messageID=9985748).
 {{% /alert %}}
 
 ### 5.5 Application Server
 
 Jetty is built into the [Mendix Runtime](runtime), so an application server is not required.
 
-## 6 Browsers
+## 6 Browsers {#browsers}
 
 ### 6.1 Desktop Browsers
 

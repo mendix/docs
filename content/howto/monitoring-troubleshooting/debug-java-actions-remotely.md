@@ -14,7 +14,11 @@ To debug the Java actions used in a Mendix microflow, you need to make some conf
 * Edit the server configuration
 * Configure remote debugging
 
-## 2 Editing the Server Configuration with Extra JVM Parameters
+## 2 Prerequisites
+
+None.
+
+## 3 Editing the Server Configuration with Extra JVM Parameters
 
 In this section, you will learn how to configure the security at the prototype/demo level. Be aware that this level of security is only applicable for development/demo purposes. This level is available for the quick development of demo applications. It simulates security without the more complex configuration of data access. When deploying to the Mendix cloud, production security is mandatory.
 
@@ -28,7 +32,7 @@ To edit the server configuration with extra JVM parameters, follow these steps:
 
 4. Next, start your application in Mendix.
 
-## 3 Configuring Remote Debugging
+## 4 Configuring Remote Debugging
 
 In your Java IDE, you need to configure remote debugging. This screenshot shows the configuration in IntelliJ:
 
@@ -38,7 +42,7 @@ In your Java IDE, you need to configure remote debugging. This screenshot shows 
 2. Place some breakpoints in your Java code.
 3. Start debugging.
 
-## 4 Read More
+## 5 Read More
 
 * [Find the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
 * [Clear Warning Messages in Mendix](clear-warning-messages)

@@ -106,33 +106,31 @@ To submit a request with Mendix Support, follow these steps:
 
     You can select from the following issues:
 
-{{% todo %}}[Review and improved text and links]{{% /todo %}}
+    * **Request for Information** – general questions about Mendix
 
-    * **Request for Information** - general questions
+    * **Incident** – if your app is down, or you are experiencing another platform issue
 
-    * **Incident** - app is down, other platform issue
+    * **Standard change: Change On-Prem Licensed Node** – request a new license key for an *existing* app (for example, if you have new hardware configuration)
 
-    * **Standard change: Change On-Prem Licensed Node** - you need a new license key for an existing app, for example you have new hardware configuration
+    * **Standard change: Offboard Licensed Node** – remove a licensed node or app which you no longer need (applies to all platforms)
 
-    * **Standard change: Offboard Licensed Node** - remove a licensed node which you no longer need (all platforms)
-
-    * **Standard change: Change Mendix Cloud Container Size** - all vertical scaling changes, for example memory or database size
+    * **Standard change: Change Mendix Cloud Container Size** – all vertical scaling changes for a container which require downtime (for example, changing memory or database size)
     
-    * **Standard Change: Change Mendix Cloud File Storage** - increase or decrease file storage size
+    * **Standard Change: Change Mendix Cloud File Storage** – increase or decrease file storage size
 
-    * **Standard change: Change Mendix Cloud URL** - change a non-custom Mendix URL (i.e. something.mendixcloud.com)
+    * **Standard change: Change Mendix Cloud URL** – change a *non-custom* Mendix URL (i.e. something.mendixcloud.com)
 
-    * **Standard change: Change Company Admin** - Make an existing Mendix user the company admin [link]
+    * **Standard change: Change Company Admin** – make an existing Mendix user the company admin (see [Company & App Roles](/developerportal/company-app-roles/) for more information)
 
-    * **Standard change: Request ATS license** - If you want to use ATS[link] you will need to obtain a license
+    * **Standard change: Request ATS license** – obtain a license to use ATS (see [ATS Guide](/ats/) for more information)
 
-    * **Standard change: Request APM License** - If you want to use APM[link] you will need to obtain a license
+    * **Standard change: Request APM License** – obtain a license to use APM (see [APM Guide](/apm/) for more information)
 
-    * **Standard change: Reset Google authenticator** - If you are using Google authenticator for 2FA[link] you may need to reset this (for example, if you get a new phone)
+    * **Standard change: Reset Google authenticator** – reset the Google authenticator, if you are using it for [2FA](/developerportal/deploy/two-factor-authentication) (for example, if you get a new phone)
 
-    * **Standard change** - Other changes which can be made on the platform, but for which you do not have access
+    * **Standard change** – other changes which can be made on the platform, but for which you do not have access
 
-    * **Non-Standard change** - any other changes not covered by other issues
+    * **Non-Standard change** – any other changes not covered by other issues, above
     
 3.  Fill in the fields for the issue type you selected.
 

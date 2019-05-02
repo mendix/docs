@@ -7,7 +7,7 @@ description: "Provides details on updating your project from Mendix 6 to Mendix 
 
 ## 1 Introduction
 
-For up-to-date details about all the new major improvements being added in Mendix 7, see the [Desktop Modeler version 7 release notes](/releasenotes/studio-pro/7).
+For up-to-date details about all the new major improvements being added in Mendix 7, see the [Desktop Modeler 7 release notes](/releasenotes/studio-pro/7).
 
 This document will help you to update your project from Mendix 6 to Mendix 7. It contains the following topics:
 

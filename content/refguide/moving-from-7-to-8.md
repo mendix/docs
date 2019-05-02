@@ -9,7 +9,7 @@ description: "Provides details on updating your project from Desktop Modeler ver
 
 When converting your Mendix app project from Desktop Modeler version 7 to Studio Pro version 8, there is a recommended series of steps you need to take. These are documented below.
 
-For information about new features in Mendix 8, see [Studio Pro version 8 release notes](/releasenotes/desktop-modeler/).
+For information about new features in Mendix 8, see [Studio Pro 8 release notes](/releasenotes/studio-pro/).
 
 {{% alert type="warning" %}}
 Mendix version 8, and Studio Pro 8, are still in beta. There may be additional breaking changes and update requirements introduced in future beta releases and when Mendix version 8 is make *generally available* (GA).
@@ -83,7 +83,7 @@ Deprecated Java actions should be fixed in Mendix 7, before you migrate the app 
 
 Fix the deprecations in your Java actions by importing your project into your Java IDE (Eclipse, for example) and reviewing and solving all the deprecations.
 
-Details of removed and deprecated APIs will be added to the *Breaking Changes* section of the [Studio Pro version 8 release notes](/releasenotes/desktop-modeler/).
+Details of removed and deprecated APIs will be added to the *Breaking Changes* section of the [Studio Pro 8 release notes](/releasenotes/studio-pro/).
 
 ## 4 Attributes of Type Float and Currency{#float-currency}
 
@@ -131,11 +131,11 @@ If your original project was version 7.23.2 or below and you want to work collab
 
 Follow the instructions in [Migration From the Sync Process to Collaborative Development](/refguide7/collaborative-development-migration).
 
-[//]: # (Java Action Parameters - Java Action code generation can break the code in beta 2. See Ivan Zub)
+[//]: # "Java Action Parameters - Java Action code generation can break the code in beta 2. See Ivan Zub"
 
-[//]: # (open JDK 11 - future betas)
+[//]: # "open JDK 11 - future betas"
 
-[//]: # (Widget DOM Changes - future betas)
+[//]: # "Widget DOM Changes - future betas"
 
 ## 7 Troubleshooting
 

@@ -52,25 +52,25 @@ To generate mappings, do the following:
 
     ![General mappings dialog](attachments/message-definitions/generate-mappings.png)
 
-## 3 Defining a Message Definition{#message-definition}
+## 4 Defining a Message Definition{#message-definition}
 
 In the message definitions document, click **Add** to create a new message definition or **Edit** to edit an existing message definition.
 
-### 3.1 General
+### 4.1 General
 
 The message definition is defined in the **General** tab.
 
 ![The Message Definition General tab](attachments/message-definitions/message-definition.png)
 
-#### 3.1.1 Name
+#### 4.1.1 Name
 
 The name of the message definition.
 
-#### 3.1.2 Entity
+#### 4.1.2 Entity
 
 An entity in your app project domain model(s) on which to base the message definition. Using this message definition, you will be able to export and import individual objects and lists of objects of this entity type.
 
-#### 3.1.3 Structure
+#### 4.1.3 Structure
 
 The structure tree shows the attributes and some of the associations of the entity. Use the **Filter** to find specific attributes.
 
@@ -85,6 +85,6 @@ The structure tree shows the attributes and some of the associations of the enti
 | Example value | A typical value for an attribute. | y | For a published REST service, this value shows up in the [interactive documentation](published-rest-services#interactive-documentation).<br />A date/time value is specified in the format `year-month-day` or `year-month-day hour:minute:second`. |
 | Public Documentation | Additional information to be displayed in the [interactive documentation](published-rest-services#interactive-documentation). | y | |
 
-## 3.2 Documentation
+### 4.2 Documentation
 
 Use the **Documentation** tab to describe what the message definition is used for.

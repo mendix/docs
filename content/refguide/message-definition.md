@@ -1,7 +1,6 @@
 ---
 title: "Message Definition"
 parent: "message-definitions"
-draft: true
 ---
 
 {{% todo %}}[TO BE DELETED once parent document has been reviewed]{{% /todo %}}

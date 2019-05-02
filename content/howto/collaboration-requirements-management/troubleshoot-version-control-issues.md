@@ -1,5 +1,5 @@
 ---
-title: "Solving Known Version Control Issues"
+title: "Solve Known Version Control Issues"
 category: "Collaboration & Requirements Management"
 menu_order: 7
 description: "This document presents a list of problems and fixes for version control issues."

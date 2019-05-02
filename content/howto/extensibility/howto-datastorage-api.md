@@ -1,5 +1,5 @@
 ---
-title: "Use Mendix Data Storage APIs to Build Reusable microflow Actions"
+title: "Use Mendix Data Storage APIs to Build Reusable Microflow Actions"
 category: "Extensibility"
 menu_order: 5
 description: "Describes creating custom microflow actions using Data Storage APIs."

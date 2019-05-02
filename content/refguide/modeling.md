@@ -13,7 +13,7 @@ For more introductory information, see [Studio Pro Overview](studio-pro-overview
 
 ## 2 Main Documents in This Category
 
-Your Mendix app is called an app project in Studio Pro. An app project consists of different types of items, such as pages and microflows. These are generically referred to as documents, and they are stored in modules and folders.
+Your Mendix app is called an *app project* in Studio Pro. An app project consists of different types of items, such as pages and microflows. These are generically referred to as documents, and they are stored in modules and folders.
 
 To add a document to your app project, right-click the destination module or folder in Studio Pro's **Project Explorer**:
 

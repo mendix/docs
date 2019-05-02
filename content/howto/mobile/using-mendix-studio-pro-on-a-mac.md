@@ -1,5 +1,5 @@
 ---
-title: "Create and Test Native Mobile Apps on a Mac"
+title: "Create & Test Native Mobile Apps on a Mac"
 parent: "native-mobile"
 menu_order: 40
 description: "This how-to will allow you to start making native Mendix apps on your Mac device."

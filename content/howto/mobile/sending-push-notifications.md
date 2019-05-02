@@ -1,5 +1,5 @@
 ---
-title: "Sending Push Notifications"
+title: "Send Push Notifications"
 parent: "push-notifications"
 menu_order: 20
 tags: ["mobile", "push notification", "mobile", "microflow"]

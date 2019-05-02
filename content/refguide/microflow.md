@@ -89,8 +89,8 @@ _Default value:_ No
 
 ### 6.1 Mark as Used
 
-You can search for unused items (Ctrl+Shift+F, Search for = Unused items) in the Modeler. Microflows that are only called from Java code will be listed as unused because the Modeler cannot look inside Java source code.
+You can search for unused items (Ctrl+Shift+F, Search for = Unused items) in Studio Pro. Microflows that are only called from Java code will be listed as unused because Studio Pro cannot look inside Java source code.
 
-By setting the propery 'Mark as used' to 'Yes' you specify that the document is used implicitly and the Modeler will no longer list it when searching for unused items.
+By setting the propery 'Mark as used' to 'Yes' you specify that the document is used implicitly and Studio Pro will no longer list it when searching for unused items.
 
 _Default value:_ No

@@ -47,15 +47,7 @@ _Default value:_ Drop-down
 This property represents the caption for the empty option in the drop-down reference selector shown to the user. Setting the caption is not available if the Select Using property set to the Page option. This is a translable text. For more details, see [Translatable Texts](translatable-texts).
 
 {{% alert type="info" %}}
-
 Filling out the caption for an empty option increases the user experience of your application. It also helps screen-reader users to operate the application easily.
-
-{{% /alert %}}
-
-{{% alert type="info" %}}
-
-The empty option caption is available from Mendix 7.2.0.
-
 {{% /alert %}}
 
 ### Select Page
@@ -65,9 +57,7 @@ The select page property determines which page is opened when the select page bu
 See [Opening Pages](opening-pages). Note that opening select pages in content is prohibited.
 
 {{% alert type="success" %}}
-
 You can generate a new page to show by right-clicking the widget and selecting 'Generate select page...'.
-
 {{% /alert %}}
 
 ### Go-To Page
@@ -82,11 +72,11 @@ See [Opening Pages](opening-pages) for more details.
 
 ## Validation Properties
 
-{{% snippet file="refguide7/Widget+Validation.md" %}}
+{{% snippet file="refguide/Widget+Validation.md" %}}
 
 ## Formatting Properties
 
-{{% snippet file="refguide7/Numeric+Formatting+Properties.md" %}}
+{{% snippet file="refguide/Numeric+Formatting+Properties.md" %}}
 
 ### Date Format (Only for Attributes of Type Date and Time)
 
@@ -171,35 +161,35 @@ Keep in mind that even though you connect an attribute to the reference selector
 
 {{% /alert %}}
 
-{{% snippet file="refguide7/Label+Property.md" %}}
+{{% snippet file="refguide/Label+Property.md" %}}
 
 ## Editability Properties
 
-{{% snippet file="refguide7/Editable+Property.md" %}}
+{{% snippet file="refguide/Editable+Property.md" %}}
 
-{{% snippet file="refguide7/Read+Only+Style.md" %}}
+{{% snippet file="refguide/Read+Only+Style.md" %}}
 
-{{% snippet file="refguide7/Condition+Property.md" %}}
+{{% snippet file="refguide/Condition+Property.md" %}}
 
 ## Visibility Properties
 
-{{% snippet file="refguide7/Visibility+Property.md" %}}
+{{% snippet file="refguide/Visibility+Property.md" %}}
 
-{{% snippet file="refguide7/Visibility+Property+With+Module+Roles+Simple.md" %}}
+{{% snippet file="refguide/Visibility+Property+With+Module+Roles+Simple.md" %}}
 
 ## Events Properties
 
-{{% snippet file="refguide7/On+Change+Event.md" %}}
+{{% snippet file="refguide/On+Change+Event.md" %}}
 
 ## Common Properties
 
-{{% snippet file="refguide7/Name+Property.md" %}}
+{{% snippet file="refguide/Name+Property.md" %}}
 
-{{% snippet file="refguide7/Class+Property.md" %}}
+{{% snippet file="refguide/Class+Property.md" %}}
 
-{{% snippet file="refguide7/Style+Property.md" %}}
+{{% snippet file="refguide/Style+Property.md" %}}
 
-{{% snippet file="refguide7/Tab+index+Property.md" %}}
+{{% snippet file="refguide/Tab+index+Property.md" %}}
 
 ## Read More
 

@@ -4,7 +4,7 @@ parent: "data-sources"
 ---
 
 
-If database is selected as the data source for a widget then the object or objects shown are retrieved directly from the database with a query. This data source is also supported in [offline](offline) applications in which case the data will come from the database on the mobile device. 
+If database is selected as the data source for a widget then the object or objects shown are retrieved directly from the database with a query. This data source is also supported in [offline](offline-first) applications in which case the data will come from the database on the mobile device. 
 
 {{% alert type="success" %}}
 

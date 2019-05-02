@@ -3,7 +3,7 @@ title: "Use Any Chart"
 parent: "charts-tutorials"
 menu_order: 20
 description: "How to use the Any Chart widget to create advanced charts"
-tags: ["Any Chart", "Advanced Charts", "Charts", "Desktop Modeler", "Widgets"]
+tags: ["Any Chart", "Advanced Charts", "Charts", "Studio Pro", "Widgets"]
 ---
 
 ## 1 Introduction
@@ -24,7 +24,7 @@ With **Any Chart** you can build all the chart types that are possible with Plot
 
 Before starting this how-to, make sure you have the following prerequisites:
 
-* The latest Mendix modeler
+* The latest version of Mendix Studio Pro
 * The latest **Any Chart** widget module from the [Mendix App Store](https://appstore.home.mendix.com/link/app/106517/Mendix/AnyChart)
 * An understanding of JSON data structures
 
@@ -32,7 +32,7 @@ Before starting this how-to, make sure you have the following prerequisites:
 
 An **Any Chart** widget can be configured with a JSON **Data** array and **Layout** object. The configuration can be set statically, via the **Source attribute** or with the **Sample data**.
 
-The configuration in the **Source attribute** will be merged into the static settings and will overwrite any common properties. The **Sample data** is for demo purposes at run time when there is no **Source** attribute selected or when rendering sample data in the modeler preview.
+The configuration in the **Source attribute** will be merged into the static settings and will overwrite any common properties. The **Sample data** is for demo purposes at run time when there is no **Source** attribute selected or when rendering sample data in the Studio Pro preview.
 
 ## 4 Creating a Chart
 
@@ -40,13 +40,13 @@ To create a line chart with the **Any Chart** widget, follow these steps:
 
 1. Create a page with a data view (Chart context).
 2. Add the Any Chart widget in the data view.
-3. Select the line chart sample from the [Any Chart cheat sheet](../../refguide7/charts-any-cheat-sheet#line-chart):
+3. Select the line chart sample from the [Any Chart cheat sheet](../../refguide/charts-any-cheat-sheet#line-chart):
 
     ```json
     [ { "x": [ 1, 2 ], "y": [ 1, 2 ], "type": "scatter" } ]
     ```
 
-4. In the modeler, copy the data into the Any Chart widget property tab **Data**, field **Static**.
+4. In Studio Pro, copy the data into the Any Chart widget property tab **Data**, field **Static**.
 5. Run the project to confirm the chart renders correctly.
 6. Split the data into static and dynamic parts that are going to be generated from the domain model.
 
@@ -89,7 +89,7 @@ If need be, the layout can also be generated in the same way as the data. In mos
 
 ## 6 Fine tuning
 
-Editing the JSON configuration in the modeler can be cumbersome. With the live preview editor, developers can directly see the output of their changes. 
+Editing the JSON configuration in Studio Pro can be cumbersome. With the live preview editor, developers can directly see the output of their changes. 
 
 {{% alert type="warning" %}}
 
@@ -111,15 +111,15 @@ To fine tune a Charts widget configuration, follow these steps:
 
 5. Edit Static or Data settings.
 
-6. Copy the new settings and apply them in the modeler.
+6. Copy the new settings and apply them in Studio Pro.
 
 7. Re-run the project to confirm the changes have been applied.
 
 ## 7 Read More
 
-* **Any Chart** properties: [Any Chart Reference Guide](/refguide7/charts-any-configuration)
-* The most common chart types:  [Any Chart Cheat Sheet](/refguide7/charts-any-cheat-sheet)
-* The most common settings: [Configuration Cheat Sheet](/refguide7/charts-advanced-cheat-sheet)
+* **Any Chart** properties: [Any Chart](/refguide/charts-any-configuration)
+* The most common chart types:  [Any Chart Cheat Sheet](/refguide/charts-any-cheat-sheet)
+* The most common settings: [Configuration Cheat Sheet](/refguide/charts-advanced-cheat-sheet)
 * The full JSON reference: [https://plot.ly/javascript/reference/](https://plot.ly/javascript/reference/)
-* Mendix modeler documentation: [JSON structures](/refguide7/json-structures)
-* Mendix modeler documentation: [Export Mappings](/refguide7/export-mappings)  
+* [JSON Structures](/refguide/json-structures)
+* [Export Mappings](/refguide/export-mappings)  

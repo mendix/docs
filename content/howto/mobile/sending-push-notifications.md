@@ -1,8 +1,8 @@
 ---
-title: "Send Push Notifications"
+title: "Sending Push Notifications"
 parent: "push-notifications"
 menu_order: 20
-tags: ["mobile", "push notifications", "microflow"]
+tags: ["mobile", "push notification", "mobile", "microflow"]
 ---
 
 ## 1 Overview

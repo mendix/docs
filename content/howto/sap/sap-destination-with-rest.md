@@ -17,7 +17,7 @@ This how-to will teach you how to configure a REST or SOAP call to use the confi
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Have a Mendix app which can be deployed to SAP Cloud Platform
-* Configured a **PrincipalPropagation** destination to an *on-premise* REST or SOAP service in your SAP Cloud Platform account; see [SAP Destination Service](/refguide7/sap/sap-destination-service) for more information
+* Configured a **PrincipalPropagation** destination to an *on-premise* REST or SOAP service in your SAP Cloud Platform account; see [SAP Destination Service](/refguide/sap/sap-destination-service) for more information
 * Imported an **SAP OData Connector** version higher than 4.0.0 into your app
 
 ## 3 Writing Your Microflow
@@ -40,13 +40,13 @@ The following entries are required in the **General** tab:
 
 |Entry|Description
 |-----|-----|
-|Location|`$DestinationObject/Url` followed by any additional parameters|
+|Location|$DestinationObject/Url followed by any additional parameters|
 |Proxy configuration|Override|
-|Use proxy|`true`|
-|Host|`$DestinationObject/ProxyHost`|
-|Port|`$DestinationObject/ProxyPort`|
-|Username|`$DestinationObject/SapConnectivityProxyCredentials`|
-|Password|`empty`|
+|Use proxy|true|
+|Host|$DestinationObject/ProxyHost|
+|Port|$DestinationObject/ProxyPort|
+|Username|$DestinationObject/SapConnectivityProxyCredentials|
+|Password|empty|
 
 ![REST general tab](attachments/sap-destination-with-rest/rest-general.png)
 
@@ -59,9 +59,9 @@ The following HTTP Headers do the following:
 
 |Key|Value|
 |---|---|
-|SAP-Connectivity-Authentication|`$DestinationObject/SapConnectivityAuthentication`|
-|Proxy-Authorization|`'Bearer ' + $DestinationObject/SapConnectivityProxyCredentials`|
-|Accept|`'application/json'`|
+|SAP-Connectivity-Authentication|$DestinationObject/SapConnectivityAuthentication|
+|Proxy-Authorization|'Bearer ' + $DestinationObject/SapConnectivityProxyCredentials|
+|Accept|'application/json'|
 
 ![REST HTTP headers tab](attachments/sap-destination-with-rest/rest-http-headers.png)
 
@@ -74,13 +74,13 @@ The following entries are required in the **Operation** tab:
 |Entry|Description
 |-----|-----|
 |Override location|*Checked*|
-|Location|`$DestinationObject/Url`|
+|Location|$DestinationObject/Url|
 |Proxy configuration|Override|
-|Use proxy|`true`|
-|Host|`$DestinationObject/ProxyHost`|
-|Port|`$DestinationObject/ProxyPort`|
-|Username|`$DestinationObject/SapConnectivityProxyCredentials`|
-|Password|`empty`|
+|Use proxy|true|
+|Host|$DestinationObject/ProxyHost|
+|Port|$DestinationObject/ProxyPort|
+|Username|$DestinationObject/SapConnectivityProxyCredentials|
+|Password|empty|
 
 ![SOAP web service general tab](attachments/sap-destination-with-rest/web-service-general.png)
 
@@ -93,16 +93,16 @@ The same HTTP Headers are required as for a REST call. They do the following:
 
 |Key|Value|
 |---|---|
-|SAP-Connectivity-Authentication|`$DestinationObject/SapConnectivityAuthentication`|
-|Proxy-Authorization|`'Bearer ' + $DestinationObject/SapConnectivityProxyCredentials`|
-|Accept|`'application/json'`|
+|SAP-Connectivity-Authentication|$DestinationObject/SapConnectivityAuthentication|
+|Proxy-Authorization|'Bearer ' + $DestinationObject/SapConnectivityProxyCredentials|
+|Accept|'application/json'|
 
 ![SOAP web services HTTP headers tab](attachments/sap-destination-with-rest/web-service-http-headers.png)
 
 
 ## 4 Read More
 
-* [SAP Destination Service](/refguide7/sap/sap-destination-service)
-* [Consumed Web Services](/refguide7/consumed-web-services)
-* [Consumed Web Service](/refguide7/consumed-web-service)
-* [Call Web Service Action](/refguide7/call-web-service-action)
+* [SAP Destination Service](/refguide/sap/sap-destination-service)
+* [Consumed Web Services](/refguide/consumed-web-services)
+* [Consumed Web Service](/refguide/consumed-web-service)
+* [Call Web Service Action](/refguide/call-web-service-action)

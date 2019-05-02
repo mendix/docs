@@ -3,7 +3,7 @@ title: "App Modeling Environments"
 category: "Development"
 menu_order: 10
 description: "Describes the options available for editing your app"
-tags: ["Edit", "Desktop Modeler", "Web Modeler", "Developer Portal", "Studio", "Studio Pro"]
+tags: ["Edit", "Studio Pro", "Studio", "Developer Portal", "Studio", "Studio Pro"]
 ---
 
 ## 1 Introduction

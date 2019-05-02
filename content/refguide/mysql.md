@@ -16,7 +16,7 @@ Mendix only supports the InnoDB storage engine, with row-based logging enabled.
 
 ## 3 Transaction Isolation
 
-Mendix uses the `Read Committed` transaction isolation level by default, starting with the release of Mendix 7.2. Only row-based logging can be used in the case of this transaction isolation level. You should set the `binlog_format` database configuration value to `ROW` or `MIXED`. For more information, see [`binlog_format` for MySQL](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_format) or [`binlog_format` for MariaDB](https://mariadb.com/kb/en/mariadb/replication-and-binary-log-server-system-variables/#binlog_format).
+Mendix uses the `Read Committed` transaction isolation level by default. Only row-based logging can be used in the case of this transaction isolation level. You should set the `binlog_format` database configuration value to `ROW` or `MIXED`. For more information, see [`binlog_format` for MySQL](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_format) or [`binlog_format` for MariaDB](https://mariadb.com/kb/en/mariadb/replication-and-binary-log-server-system-variables/#binlog_format).
 
 ## 4 SAVEPOINT Exception Does Not Exist
 
@@ -34,4 +34,4 @@ MariaDB supports an identical configuration for time zone conversions.
 
 ## 6 Database Creation
 
-New MySQL database creation is supported for Mendix 7.18 and above. The user must have enough access rights to be able to create a database.
+To create a new MySQL database, the user must have enough access rights to be able to create a database.

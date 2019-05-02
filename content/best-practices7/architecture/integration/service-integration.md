@@ -63,7 +63,7 @@ If there is a time-out, it is possible to try later, if that is relevant. If it 
 
 This diagram describes how within request-reply, there are three basic options to move data or an event from one app to the next:
 
-![](attachments/service-integration/transfer-data.png)
+![](attachments/service-integration/request-reply.png)
 
 The options for moving data can be described like this:
 

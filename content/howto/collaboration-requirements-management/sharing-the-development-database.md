@@ -4,9 +4,12 @@ category: "Collaboration & Requirements Management"
 menu_order: 40
 tags: []
 ---
-All Mendix applications need a database running in the background. While developing an application it is advised to use the standard built-in database that is supplied with the Mendix Modeler. This how-to will teach you how to open and manage the data stored inside the built-in database.
 
-## 1\. Prerequisites
+## 1 Introduction
+
+All Mendix applications need a database running in the background. While developing an application it is advised to use the standard built-in database that is supplied with Mendix Studio Pro. This how-to will teach you how to open and manage the data stored inside the built-in database.
+
+## 2 Prerequisites
 
 To get the most out of the built in database, the following prerequisites have to be in place:
 
@@ -15,15 +18,15 @@ To get the most out of the built in database, the following prerequisites have t
 3.  A running application
 4.  Some data in the database to commit SQL queries to
 
-## 2\. Type of database
+## 3 Type of Database
 
 The built-in database is a flatfile database called HSQLDB (HyperSQL DataBase). This is the leading SQL relational database software written in Java. It offers a small, fast multithreaded and transactional database engine with in-memory and disk-based tables and supports embedded and server modes. It includes a powerful command line SQL tool and simple GUI query tools.
 
 HSQLDB has been constantly developed over 12 years and is used as a database and persistence engine. It is known for its small size, ability to execute completely or partly in memory, its flexibility and speed.
 
-Therefore this type of database is excellent to use while developing and running applications in the Mendix Modeler on a local machine. Thanks to this built in functionality, the developer doesn't have to run a local database engine and management tools.
+Therefore this type of database is excellent to use while developing and running applications in Mendix Studio Pro on a local machine. Thanks to this built in functionality, the developer doesn't have to run a local database engine and management tools.
 
-## 3\. Select the preferred database
+## 4 Select the Preferred Database
 
 One application can make use of many different databases. Take the following steps to select the preferred database (if there is more than one configured)
 
@@ -32,11 +35,11 @@ One application can make use of many different databases. Take the following ste
   
     ![](attachments/18448637/18580427.png)
 
-## 4\. Start the database viewer
+## 5 Start the Database Viewer
 
 To start the built in database viewer, the following steps have to be applied:
 
-1.  Run the application locally (If it is the first time, the Modeler will ask to create the new database. Press 'yes'.)
+1.  Run the application locally (If it is the first time, Studio Pro will ask to create the new database. Press 'yes'.)
 
     ![](attachments/18448637/18580426.png)
 
@@ -50,7 +53,7 @@ To start the built in database viewer, the following steps have to be applied:
 
 This is the database manager. On the left pane all tables from all modules in the running application are showed. On the right top pane it is possible to enter SQL queries and on the right lower pane the results from the entered SQL query will be shown.
 
-## 5\. Execute queries
+## 6 Execute Queries
 
 Queries can be executed in two ways. It can be done directly from the command line (top right pane) in SQL script, or via the explorer on the left pane. For more information about SQL, visit the following page: [http://www.w3schools.com/sql/](http://www.w3schools.com/sql/). To execute queries from the database explorer (left pane), the following steps have to be applied:
 
@@ -68,7 +71,7 @@ Queries can be executed in two ways. It can be done directly from the command li
 
 On the bottom right pane, the results are shown and a total of 50 rows is retrieved from the database. From the standard actions it is also possible to delete, update and insert records. The standard actions can also be customized to retrieve, update or delete specific data. Advanced knowledge about the SQL language is needed to get the desired results.
 
-## 6\. Commit a data snapshot
+## 7 Commit a Data Snapshot
 
 The built-in database can easily be shared with other members of the team. Like the business logic itself, it is possible to commit a snapshot of the database to the team server. To do this, take the following steps:
 
@@ -79,7 +82,7 @@ The built-in database can easily be shared with other members of the team. Like 
 2.  Press 'Yes' to commit if one already exists, then add the informational message and press 'OK'
 3.  The data is now committed to the team server and can be used by other team members
 
-## 7\. Update a data snapshot
+## 8 Update a Data Snapshot
 
 To import a data snapshot into the model, the app project has to be updated since the last database snapshot has been committed by another team member. To get the data from the committed database snapshot the following steps have to be applied:
 
@@ -99,10 +102,10 @@ Make sure the names of the databases aren't the same or make a copy of your own 
 
 {{% /alert %}}
 
-## 8\. Read More
+## 9 Read More
 
 *   [Stories](/developerportal/collaborate/stories)
 *   [Contributing to a GitHub repository](contribute-to-a-github-repository)
 *   [Starting your own repository](starting-your-own-repository)
-*   [Version Control](/refguide7/version-control)
+*   [Version Control](/refguide/version-control)
 *   [How to Use the Feedback Widget](/developerportal/feedback/use-feedback-widget)

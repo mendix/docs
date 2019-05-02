@@ -14,7 +14,7 @@ If you need full control over the output format, consider using the data type sp
 
 ### Input Parameters
 
-A value that should be converted to a String. Supported [types](data-types): Integer/Long, Decimal, Float (deprecated), DateTime and Enumeration. In case of Enumeration, returns the key of the enumeration value, not the caption. See also [Enumerations in expressions](enumerations-in-expressions).
+A value that should be converted to a String. Supported [types](data-types): Integer/Long, Decimal, DateTime, Boolean and Enumeration. In case of Enumeration, returns the key of the enumeration value, not the caption. See also [Enumerations in expressions](enumerations-in-expressions).
 
 ```java
 toString(1.4)
@@ -36,4 +36,16 @@ returns:
 
 ```java
 'Mon Jan 01 00:00:00 CET 2007'
+```
+
+with a Boolean:
+
+```java
+toString(true)
+``` 
+
+returns:
+
+```java
+'true'
 ```

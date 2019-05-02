@@ -27,7 +27,7 @@ A reporting tool like Tableau or Excel can discover what data and functionality 
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Open the [Company Expenses sample app](https://appstore.home.mendix.com/link/app/240/Mendix/Company-Expenses) from the Mendix App Store in the Modeler
+* Open the [Company Expenses sample app](https://appstore.home.mendix.com/link/app/240/Mendix/Company-Expenses) from the Mendix App Store in Studio Pro
     * Add some expense reports to the app so that you have data to work with in this how-to
 * Install Excel 2013
 * Download and install [Tableau](http://www.tableau.com/) (you can use the trial version for 14 days)
@@ -36,7 +36,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 A published OData service can be used by third-party applications to read data from a Mendix application. In this chapter, you will create and configure such a service.
 
-1. Open the Modeler and add a new folder to the **Expenses** folder called **OData Services**.
+1. Open Studio Pro and add a new folder to the **Expenses** folder called **OData Services**.
 2. Right-click the OData Service folder and select **Add** > **Published services** > **Published OData service**:
 
     ![](attachments/18448736/18582029.png)
@@ -220,16 +220,16 @@ These are some other query examples:
 
 ## 7 Read More
 
-* [How to Consume a Complex Web Service](consume-a-complex-web-service)
-* [How to Consume a Simple Web Service](consume-a-simple-web-service)
-* [How to Export XML Documents](export-xml-documents)
-* [How to Import Excel Documents](importing-excel-documents)
-* [How to Expose a Web Service](expose-a-web-service)
-* [How to Enable Selenium Support](selenium-support)
-* [How to Synchronize User Accounts Using the LDAP Module](synchronizing-user-accounts-using-the-ldap-module)
-* [How to Import XML Documents](importing-xml-documents)
-* [How to Consume a REST Service](consume-a-rest-service)
-* [How to Expose Data to BI Tools Using OData](exposing-data-to-bi-tools-using-odata)
-* [Publishing OData Services](/refguide7/published-odata-services)
-* [OData Representation](/refguide7/odata-representation)
-* [OData Query Options](/refguide7/odata-query-options)
+* [Consume a Complex Web Service](consume-a-complex-web-service)
+* [Consume a Simple Web Service](consume-a-simple-web-service)
+* [Export XML Documents](export-xml-documents)
+* [Import Excel Documents](importing-excel-documents)
+* [Expose a Web Service](expose-a-web-service)
+* [Enable Selenium Support](selenium-support)
+* [Synchronize User Accounts Using the LDAP Module](synchronizing-user-accounts-using-the-ldap-module)
+* [Import XML Documents](importing-xml-documents)
+* [Consume a REST Service](consume-a-rest-service)
+* [Expose Data to BI Tools Using OData](exposing-data-to-bi-tools-using-odata)
+* [Publishing OData Services](/refguide/published-odata-services)
+* [OData Representation](/refguide/odata-representation)
+* [OData Query Options](/refguide/odata-query-options)

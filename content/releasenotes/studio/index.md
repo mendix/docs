@@ -1,5 +1,5 @@
 ---
-title: "Web Modeler"
+title: "Studio"
 ---
 
 The release notes for Mendix Studio are correlated with the version ranges of the [Mendix Studio Pro](../studio-pro/index): 

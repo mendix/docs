@@ -39,12 +39,6 @@ It is important to correctly configure the target namespace before publishing yo
 
 ### 3.4 Generated XML
 
-{{% alert type="info" %}}
-
-The **Generated XML** feature was introduced in version 7.13.0.
-
-{{% /alert %}}
-
 Select **Include tags for associations** if you need to include tags for associations in XML. This is usually not necessary, and support for this will be removed in a future version.
 
 To see the effect of this check box, consider a person with two dogs and a cat. When you do not select **Include tags for associations**, the XML looks like this:

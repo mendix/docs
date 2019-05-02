@@ -3,7 +3,7 @@ title: "Project Settings"
 parent: "project"
 #menu_order:
 description: "Settings which apply to the project app as a whole."
-tags: ["project", "app", "configuration", "runtime", "desktop modeler", "languages", "certificate", "theme", "hashing", "hashing algorithm"]
+tags: ["project", "app", "configuration", "runtime", "Studio Pro", "languages", "certificate", "theme", "hashing", "hashing algorithm"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -13,13 +13,13 @@ In the **Project Settings** dialog box, you can alter the settings that are appl
 
 The categories described below are available.
 
-## 2 Configurations
+## 2 Configurations Tab
 
-A configuration is a group of settings with a name. You can define any number of configurations. The active configuration (meaning, the one that will be used when running your application) is determined by the drop-down menu in the toolbar of the Modeler.
+A configuration is a group of settings with a name. You can define any number of configurations. The active configuration (meaning, the one that will be used when running your application) is determined by the drop-down menu in the toolbar of Studio Pro.
 
 For the settings in a configuration, see [Configuration](configuration).
 
-## 3 Runtime
+## 3 Runtime Tab
 
 These settings influence the behavior of the Runtime when running your application.
 
@@ -169,7 +169,7 @@ In production, this only works with licenses based on concurrent users.
 
 ### 3.12 Uniqueness Validation
 
-This option can have two different values: **Runtime** and **Database**. For Mendix 7.3 and above, **Database** will be the default value for new projects, but old projects will still have **Runtime** as the default value.
+This option can have two different values: **Runtime** and **Database**. **Database** will be the default value.
 
 #### 3.12.1 Database
 
@@ -179,7 +179,7 @@ Database is the recommended setting, because it ensures data accuracy at the hig
 
 #### 3.12.2 Runtime
 
-**Runtime** was the default setting prior to Mendix 7.3. This meant that the uniqueness of attributes and associations was handled in the Mendix Runtime and not at the database level.
+When **Runtime** is selected, the uniqueness of attributes and associations is handled in the Mendix Runtime and not at the database level.
 
 #### 3.12.3 Switching Uniqueness Validation Values
 
@@ -199,54 +199,34 @@ Falling back to the **Runtime** option will remove the unique constraints from t
 
 ### 3.13 Web Service Calls {#web-service-calls}
 
-{{% alert type="info" %}}
-
-This setting was added in version 7.15 to introduce an optimized implementation.
-
-{{% /alert %}}
-
 The way web services are called has been optimized, which means you can use custom proxy settings for each web service call. However, this implementation does not support complex schemas that use a policy reference with an algorithm suite. This configuration option allows you to use the old implementation, in case you need this feature.
 
-## 4 Modeler
+## 4 Languages Tab
 
-These settings determine the behavior of the Modeler for this project. The settings apply to everyone that is working on this project.
-
-### 4.1 Bundle Widgets When Running Locally
-
-When deploying to the cloud, custom widgets are bundled to optimize client-server communication. When deploying locally, this step is skipped to accelerate startup duration. In some cases, this may obfuscate errors triggered by faulty custom widgets.
-
-If this option is set, custom widgets will also be bundled locally. This mimics the production deployment, eliminating risk at the cost of start-up time.
-
-### 4.2 Suggest Lower-Case Names in Microflows
-
-When enabled, the variable names that the Modeler suggests in microflows will start with a lower-case letter instead of an upper-case letter.
-
-## 5 Languages
-
-### 5.1 Default Language
+### 4.1 Default Language
 
 The default language indicates the language that is used when a user has not chosen a language. The default language is also used as a fall-back language when a certain text is not translated to another language.
 
-### 5.2 Languages
+### 4.2 Languages
 
 This is the list of languages in which your application will be available for users.
 
-For each language, you can configure whether to check that all mandatory texts have a value. The default language is always checked. If a language is not checked and certain texts are not translated in the Modeler, the default language is used as fall-back language. This means that you can run your application even though you have only partially translated your interface into a new language.
+For each language, you can configure whether to check that all mandatory texts have a value. The default language is always checked. If a language is not checked and certain texts are not translated in Studio Pro, the default language is used as fall-back language. This means that you can run your application even though you have only partially translated your interface into a new language.
 
-## 6 Certificates
+## 5 Certificates Tab
 
 Certificates are used to connect to web services over HTTPS when the following requirements are met:
 
 * The server uses a self-signed certificate authority, and/or
 * A client certificate (certificate with a private key) is required
 
-These certificates can be imported into the Modeler using the **Import** button. Certificate authority files usually have a *.crt* extension, and client certificates usually have a *.p12* or *.pfx* extension. After importing, use **View details** to acquire more information concerning the certificate.
+These certificates can be imported into Studio Pro using the **Import** button. Certificate authority files usually have a *.crt* extension, and client certificates usually have a *.p12* or *.pfx* extension. After importing, use **View details** to acquire more information concerning the certificate.
 
 Client certificates added here will be used whenever a server accepts a client certificate. If you upload more than one client certificate, one of them will be chosen based on the requirements of the server. If you need more control over client certificates, you should not upload the certificates here, but use [custom settings](custom-settings) *ClientCertificates*, *ClientCertificatePasswords*, and *ClientCertificateUsages*.
 
 {{% alert type="warning" %}}
 
-When running from the Modeler or from Eclipse, the certificates will be used automatically to connect over *HTTPS*. When running on a server, the location of the certificate files has to be specified in the configuration file.
+When running from Studio Pro or from Eclipse, the certificates will be used automatically to connect over *HTTPS*. When running on a server, the location of the certificate files has to be specified in the configuration file.
 
 {{% /alert %}}
 {{% alert type="warning" %}}
@@ -275,23 +255,17 @@ For background information, see [Transport Layer Security (TLS) Renegotiation Is
 
 {{% /alert %}}
 
-## 7 Theme
+## 6 Theme
 
-### 7.1 UI Resources Package
-
-{{% alert type="info" %}}
-
-The option to designate a custom UI resources package was added in Mendix 7.9.0.
-
-{{% /alert %}}
+### 6.1 UI Resources Package
 
 The look and feel of a Mendix application is governed by the [UI Resources package](ui-resources-package). This package supplies the project with all the required theme information accompanied by matching page templates and building blocks. The module which is designated as the UI Resources package is governed by the **UI resources package** setting. Generally, this is automatically updated when a new UI Resources package is imported. However, with this setting, the desired module can also be set manually.
 
-### 7.2 Theme ZIP File
+### 6.2 Theme ZIP File
 
 {{% alert type="warning" %}}
 
-[Deprecated] The use of a ZIP file to configure a project's theme is deprecated. As of 7.9.0, a [UI Resources package](ui-resources-package) is the preferred method of sharing themes.
+[Deprecated] The use of a ZIP file to configure a project's theme is deprecated. A [UI Resources package](ui-resources-package) is the preferred method of sharing themes.
 
 {{% /alert %}}
 
@@ -304,3 +278,17 @@ Switching from a ZIP file to a UI Resources package is straightforward:
 2. Then, use the **UI resources package** setting described above to select a module. Ideally, this module should only contain UI documents, such as page templates and building blocks. This will allow you to export and import the module to other projects without worrying about reference errors.
 
 3. Lastly, set the **Theme ZIP file** setting to **None**.
+
+## 7 Miscellaneous Tab
+
+These settings determine the behavior of Studio Pro for this project. The settings apply to everyone that is working on this project.
+
+### 7.1 Bundle Widgets When Running Locally
+
+When deploying to the cloud, custom widgets are bundled to optimize client-server communication. When deploying locally, this step is skipped to accelerate startup duration. In some cases, this may obfuscate errors triggered by faulty custom widgets.
+
+If this option is set, custom widgets will also be bundled locally. This mimics the production deployment, eliminating risk at the cost of start-up time.
+
+### 7.2 Suggest Lower-Case Names in Microflows
+
+When enabled, the variable names that Studio Pro suggests in microflows will start with a lower-case letter instead of an upper-case letter.

@@ -1,8 +1,10 @@
 ---
 title: "Association Source"
 parent: "data-sources"
+tags: ["studio pro"]
 ---
 
+## 1 Introduction
 
 The association source is a data source available to nested [data grids](data-grid), [template grids](template-grid), and [list views](list-view). This will fill the widget with the objects linked to an object already in the context by manner of an association. For this to function the data widget needs to be nested within another data widget to provide that context.
 
@@ -14,8 +16,8 @@ Sorting columns and searching is not possible in data widgets with an associatio
 
 {{% /alert %}}
 
-## Properties
+## 2 Properties
 
-### Entity (Path)
+### 2.1 Entity (Path)
 
 The entity (path) property specifies the association by which the widget is populated. The only objects that will appear in the widget are those that are linked to the object in the containing widget by manner of the association selected.

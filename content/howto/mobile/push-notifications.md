@@ -1,6 +1,6 @@
 ---
 title: "Include Push Notifications"
-category: "Mobile Development"
+parent: "hybrid-mobile"
 menu_order: 10
 tags: ["mobile", "push notification"]
 ---
@@ -20,7 +20,7 @@ The Mendix push notifications functionality makes it easy for developers to incl
 
 To use push notifications, make sure you have the following:
 
-* Mendix Desktop Modeler from the [App Store](https://appstore.home.mendix.com/link/modeler)
+* Mendix Studio Pro from the [App Store](https://appstore.home.mendix.com/link/modeler)
 * The Mendix [Push Notifications Connector](https://appstore.home.mendix.com/link/app/3003/)
 * A mobile device (to get started, we recommend an Android device connected to your development machine via a data cable)
 * A [Adobe PhoneGap Build](https://build.phonegap.com/) account
@@ -53,8 +53,8 @@ For more information on contributing to this repository, see [How to Contribute 
 
 ## 7 Documents in This Sub-Category
 
-* [How to Implement Push Notifications](implementation-guide)
-* [How to Send Push Notifications](sending-push-notifications)
-* [How to Set Up the Firebase Cloud Messaging Server](setting-up-google-firebase-cloud-messaging-server)
-* [How to Set Up the Apple Push Notification Server](setting-up-apple-push-notification-server)
-* [How to Test the Push Notifications Implementation](testing-the-implementation)
+* [Implement Push Notifications](implementation-guide)
+* [Send Push Notifications](sending-push-notifications)
+* [Set Up the Firebase Cloud Messaging Server](setting-up-google-firebase-cloud-messaging-server)
+* [Set Up the Apple Push Notification Server](setting-up-apple-push-notification-server)
+* [Test the Push Notifications Implementation](testing-the-implementation)

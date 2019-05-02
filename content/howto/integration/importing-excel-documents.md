@@ -8,7 +8,7 @@ tags: ["import", "excel", "integration"]
 
 ## 1 Introduction
 
-Adding large amounts of data to your application, for example rootdata or data from an external application, can be very time consuming. In order to save time and effort, this process can be automated by using the 'Excel Importer' module. In this How-to you will setup import templates, and import data into your application by using the 'Excel Importer'.
+Adding large amounts of data to your application, for example reference data or data from an external application, can be very time consuming. In order to save time and effort, this process can be automated by using the 'Excel Importer' module. In this How-to you will setup import templates, and import data into your application by using the 'Excel Importer'.
 
 ## 2 Prerequisites
 
@@ -99,31 +99,22 @@ Based on the structure of the file you want to import, you will setup your templ
 6.  Click on the arrow next to **Reference to import objects** box.
 7.  Select the **MyFirstModule.Customer_XLSFile** association.
 
-    {{% alert type="warning" %}}
+    {{% alert type="warning" %}}By setting the association to the XLS File, the XLS file is saved on disk and the imported data is linked to the source file.{{% /alert %}}
 
-     By setting the association to the XLS File, the XLS file is saved on disk and the imported data is linked to the source file.
-
-    {{% /alert %}}
 8.  Set **Import Action** to **Synchronize objects**.
   
     ![](attachments/18448735/18581965.png)
 
-    {{% alert type="warning" %}}
+    {{% alert type="warning" %}}For this example you will be using a simple Excel file, with just one sheet and columnheaders at the first row. If a more comprehensive Excel file is used you can change these values at the Sheet nr, Header row nr, and Import from row nr boxes.{{% /alert %}}
 
-    For this example you will be using a simple Excel file, with just one sheet and columnheaders at the first row. If a more comprehensive Excel file is used you can change these values at the Sheet nr, Header row nr, and Import from row nr boxes.
-
-    {{% /alert %}}
 9.  Under the **Connect columns to attributes** section, click on **New** to create a mapping from the Excel sheet column to the proper Mendix attribute.
   
     ![](attachments/18448735/18581964.png)
 
 10. Add the column number, this should correspond with the column number from the value on the Excel file you want to map
 
-    {{% alert type="warning" %}}
+    {{% alert type="warning" %}}The number of the first column in Excel is 0, the second 1, etc.{{% /alert %}}
 
-    The number of the first column in Excel is 0, the second 1, etc.
-
-    {{% /alert %}}
 11. Define the Excel column header as the **Caption** value.
 12. Choose **Attribute** as a **type**.
 13. Click on the arrow next to the **Attribute** box.
@@ -136,17 +127,13 @@ Based on the structure of the file you want to import, you will setup your templ
 
 15. Repeat steps 9 to 14 for each attribute of the **Customer** object.
 
-    {{% alert type="warning" %}}
-
-    If the mapping is setup right, a green check will appear in front of the row.
-
-    {{% /alert %}}
+    {{% alert type="warning" %}}If the mapping is setup right, a green check will appear in front of the row.{{% /alert %}}
 
 16. For the mapping of attribute **Name** set the key value to **Yes**, to prevent a customer from being duplicated.
   
     ![](attachments/18448735/18581961.png)
 
-17. After creating all the mappings for the **Customer** object attributes, also create mappings for the **Order** object attributes by repeating steps 9 to 11. Because the **Order** object is associated to the **Customer** object, the mapping setup will be slightly different. The additional steps are discribed below.
+17. After creating all the mappings for the **Customer** object attributes, also create mappings for the **Order** object attributes by repeating steps 9 to 11. Because the **Order** object is associated to the **Customer** object, the mapping setup will be slightly different. The additional steps are described below.
 18. Choose **Reference** instead of **Attribute** as a type.
 19. Click on the arrow next to the **Reference** box, here you will select over which association the Order is linked to the Customer.
   
@@ -234,18 +221,11 @@ In the previous steps you have manually added all the columns to your import tem
 
 10.  Click on **Connecting matching attributes**.![](attachments/18448735/18581934.png)
 
-     {{% alert type="warning" %}}
+     {{% alert type="warning" %}}The attributes of the selected Mendix Object which have the same name as the Caption will be automatically matched.{{% /alert %}}
 
-     The attributes of the selected Mendix Object which have the same name as the Caption will be automatically matched.
-
-     {{% /alert %}}
 11.  To complete the template repeat the same actions as performed in chapter 4.
 
-     {{% alert type="warning" %}}
-
-     Keep in mind that you have to set a key attribute for as well as the **Customer **object as the **Order** object
-
-     {{% /alert %}}
+     {{% alert type="warning" %}}Keep in mind that you have to set a key attribute for as well as the **Customer** object as the **Order** object.{{% /alert %}}
 
 ## 9 Exporting/Importing the Template
 
@@ -263,23 +243,18 @@ Once you have completed an Excel template you can export the template for exampl
 
 5.  You have now imported a complete import template.
 
-    {{% alert type="warning" %}}
-
-    You will have a duplicate import template in your app, but in a real life situation you would import this template in a different environment/database where this template is not created yet.
-
-    {{% /alert %}}
+    {{% alert type="warning" %}}You will have a duplicate import template in your app, but in a real life situation you would import this template in a different environment/database where this template is not created yet.{{% /alert %}}
 
 ## 10 Read More
 
-* [How to Consume a Complex Web Service](consume-a-complex-web-service)
-* [How to Consume a Simple Web Service](consume-a-simple-web-service)
-* [How to Export XML documents](export-xml-documents)
+* [Consume a Complex Web Service](consume-a-complex-web-service)
+* [Consume a Simple Web Service](consume-a-simple-web-service)
+* [Export XML documents](export-xml-documents)
 * [Importing Excel Documents](importing-excel-documents)
-* [How to Expose a Web Service](expose-a-web-service)
+* [Expose a Web Service](expose-a-web-service)
 * [Selenium Support](selenium-support)
-* [How to Synchronize User Accounts Using the LDAP Module](synchronizing-user-accounts-using-the-ldap-module)
-* [How to Import XML Documents](importing-xml-documents)
-* [How to Consume a REST Service](consume-a-rest-service)
-* [How to Expose Data to BI Tools Using OData](exposing-data-to-bi-tools-using-odata)
-* [The Export to CSV Button](/refguide7/export-to-csv-button)
-
+* [Synchronize User Accounts Using the LDAP Module](synchronizing-user-accounts-using-the-ldap-module)
+* [Import XML Documents](importing-xml-documents)
+* [Consume a REST Service](consume-a-rest-service)
+* [Expose Data to BI Tools Using OData](exposing-data-to-bi-tools-using-odata)
+* [The Export to CSV Button](/refguide/export-to-csv-button)

@@ -200,7 +200,7 @@ The Authorization HTTP Header (see DS_MindSphereAccessToken in the [Microflows](
 
 ### 7.2 Control within a Mendix app
 
-If no security is placed on persistent Mendix entity objects, these are accessible to all users of the app (subject to access granted by their user role). This means that any app which stores data in persistent Mendix entities cannot be made multi-tenant without additional security.
+If no security is placed on persistable Mendix entity objects, these are accessible to all users of the app (subject to access granted by their user role). This means that any app which stores data in persistable Mendix entities cannot be made multi-tenant without additional security.
 
 MindSphere SSO provides the user’s tenant as the **Name** attribute in the **Tenant** entity.
 
@@ -219,12 +219,12 @@ The developer will have to add a rule every time the entity is accessed. See the
 {{% /alert %}}
 
 {{% alert type="info" %}}
-It is not necessary to put an access rule on every entity within the domain model. It is only required for: **persistent** entities which have a **TenantId** attribute.
+It is not necessary to put an access rule on every entity within the domain model. It is only required for: **persistable** entities which have a **TenantId** attribute.
 {{% /alert %}}
 
 To make your Mendix app multi-tenant, do the following:
 
-1.  Make all *persistent* entities which have a **TenantId** attribute a specialization of the MindSphereSingleSignOn.TenantObject entity.  
+1.  Make all *persistable* entities which have a **TenantId** attribute a specialization of the MindSphereSingleSignOn.TenantObject entity.  
     This ensures that every object is associated with the Tenant object of the user who creates it.
 2.  Every action on this object must have the following XPath constraint:
 

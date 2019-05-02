@@ -78,7 +78,7 @@ The following example illustrates how you can use the OQL APIs for reporting pur
 *	OQL is expressed in entity and attribute names instead of table names and column names. This makes it easier to use, as you do not have to know the technical data model as stored in the database
 *	OQL is database vendor independent, so you can run the same OQL statement on all databases supported by Mendix
 
-The following non-persistent entity shows what data you are interested in for your report:
+The following non-persistable entity shows what data you are interested in for your report:
 
 * For every department you want to know
     * its name,
@@ -170,7 +170,7 @@ The Java implementation below implements the following steps:
 
 You can find the complete Java source code on GitHub: [RetrieveAdvancedSQL](https://github.com/ako/QueryApiBlogPost/blob/master/javasource/hr/actions/RetrieveAdvancedSql.java).
 
-You now have a generic SQL action that can be used in microflows to retrieve data from your application database. The query in this example returns the same data as the OQL earlier, so you can reuse the non-persistent entity DepartmentSummary as defined previously.
+You now have a generic SQL action that can be used in microflows to retrieve data from your application database. The query in this example returns the same data as the OQL earlier, so you can reuse the non-persistable entity DepartmentSummary as defined previously.
 
 ![](attachments/dsapi/image029.png)
 

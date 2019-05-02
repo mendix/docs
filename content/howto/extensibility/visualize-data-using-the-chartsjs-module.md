@@ -23,7 +23,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 *   Know how to download app store modules
 *   Know how to configure a domain model
 *   Know how to create microflows and pages
-*   Know how to create non-persistant entities
+*   Know how to create non-persistable entities
 
 ## 3 Implementing ChartJS in an Existing Project
 
@@ -59,7 +59,7 @@ To see a working domain model already configured in an application, you can go t
     ![](attachments/19202962/19398994.png)
     
 4.  For the Series attribute, create a new enumeration named **Series** that contains the values **Series 1** and **Series 2**.
-5.  Create a non-persistant **ChartWrapper** entity with no attributes:
+5.  Create a non-persistable **ChartWrapper** entity with no attributes:
 
     ![](attachments/19202962/19398997.png)
 

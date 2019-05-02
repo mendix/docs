@@ -31,7 +31,7 @@ To set up the domain model for use with the plotly REST service endpoint, follow
 1. **Image** should be a specialization of the **System.Image** entity, so set **Generalization** to *System.Image*.
 
     ![image entity](attachments/charts/plotly-api/charts-call-rest-image-entity.png)
-1. **DataSource** should be non-persistent with **Data** and **Layout** string attributes.
+1. **DataSource** should be non-persistable with **Data** and **Layout** string attributes.
 
     ![DataSource entity](attachments/charts/plotly-api/charts-call-rest-data-source-entity.png)
 

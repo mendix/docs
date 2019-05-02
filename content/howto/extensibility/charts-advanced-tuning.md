@@ -102,7 +102,7 @@ To create custom a configuration, follow these steps:
 2. Select **Configuration** from the drop down menu.
 3. Edit the **Custom settings**, change them to `{ "displayModeBar": true }`.
 4. Add more Custom settings as desired. See [here](https://plot.ly/javascript/configuration-options/) for more configuration settings.
-5. The changes made in the editor are not persistent; copy the required settings.
+5. The changes made in the editor are not persistable; copy the required settings.
 6. Paste the new configuration into the **Configuration options** property in the **Advanced** tab.
     ![chart editor](attachments/charts/charts-widget-properties-advanced-config.png)
 7. Change **Mode** to **Advanced**, set Studio Pro to remove the **Toggle Editor** button.

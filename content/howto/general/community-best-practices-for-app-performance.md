@@ -28,14 +28,14 @@ If you made a simple and sound design of the app's domain models, consider the f
 * Create indexes on entities that will get more than 100 records and that will be searched by anything besides Mendix references/IDs.
 * Minimize the use of calculated attributes, as they fire on every retrieve and per row for a list retrieve. You seldom need these for conditional visibility.
 * Minimize the use and work of event handlers, because they fire on every event (for example, commit).
-* Minimize the use of reference set associations. Mendix retrieves the IDs (per row for a list retrieve) on every query. So, many references—and especialy reference sets—cause extra queries and thus extra load on the database.
+* Minimize the use of reference set associations. Mendix retrieves the IDs (per row for a list retrieve) on every query. So, many references—and especially reference sets—cause extra queries and thus extra load on the database.
 * Consider archiving data if your volume grows too large and you do not need all the data all the time. You can even consider creating two identical entities, one with the data currently being used, and the other with all the data that is only used for reporting or other historic reasons.
 * Consider denormalizing the data, which means copying attribute values to other entities. This is so the data is not retrieved every time from the source. If data does not change a lot, this can save a lot of queries. However, you need to build the logic to keep the copied attributes in sync!
 * Don't use multiple levels of inheritance and too many specializations on entities that will contain a substantial amount of data, especially when you are using domain model XPath access on entities. This will generate complex queries adding XPaths for every specialization's security rules and, on a large dataset, will lead to slow queries. Consider the following alternatives:
 	* Combine attributes in one entity and add an enum to determine its specialization.
 	* Add separate entities for specializations with a one-to-one relation. Depending on UI needs, this one-to-one relation might be a normal reference from specialization to generalization to save prefetching time.
-	* Add a non-persistent layer with inheritance that is populated by your business logic.
-* Don't use temporary associations on persistent entities. Use a non-persistent entity for your screen/UI logic here.
+	* Add a non-persistable layer with inheritance that is populated by your business logic.
+* Don't use temporary associations on persistable entities. Use a non-persistable entity for your screen/UI logic here.
 
 {{% alert type="info" %}}
 
@@ -86,7 +86,7 @@ Indexes is a topic with a long history of best practices from the database world
 ## 7 XPath Best Practices
 
 * Avoid "unequal" and "not" clauses in XPath. Often they can be rewritten to positive statements, like `<boolean>=false()`, `<enum> = valueA`, `<enum> = valueB`, `integer>valueA`, or `integer<valueB`.
-* Combine paths to the same assoicated entity if query logic allows this.
+* Combine paths to the same associated entity if query logic allows this.
 * In older PostgreSQL databases, it was wise to start the XPath with attribute clauses, since the database query optimizer was processing clauses in order. Nowadays, it is claimed that the query optimizer has improved, and this "rule" is no longer needed.
 * Make sure that the attributes used are indexed.
 

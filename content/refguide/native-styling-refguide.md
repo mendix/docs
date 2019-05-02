@@ -55,7 +55,7 @@ export const ActionButton = {
 		// ViewStyle properties
 		borderWidth: 3
 	},
-	caption:
+	caption: {
 		// TextStyle properties
 		fontSize: 20
 	},

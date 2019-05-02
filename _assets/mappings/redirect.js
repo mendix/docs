@@ -56,6 +56,9 @@ module.exports = {
 	/****************************************************
      * PERMANENT REDIRECTS
      ****************************************************/
+	 /****************************************************
+     * Documents (permanent, unmapped) 
+     ****************************************************/
     {
       from: "/docs/Overview",
       to: "/"
@@ -63,6 +66,43 @@ module.exports = {
     {
       from: "/docs/",
       to: "/"
+    },
+	/****************************************************
+     * Studio Guide (permanent, unmapped)
+     ****************************************************/
+	{
+      from: "/howto/tutorials/",
+      to: "/studio/general"
+    },
+	{
+      from: "/howto/tutorials/mendix-tutorials",
+      to: "/studio/general"
+    },
+	/****************************************************
+     * How-to's (permanent, unmapped)
+     ****************************************************/
+    {
+      from: "/howtogeneral/bestpractices/ux-best-practices",
+      to: "/howto/front-end/ux-best-practices"
+    },
+	{
+      from: "/howtogeneral/bestpractices/best-practices-security-and-improvements-for-mendix-applications",
+      to: "/howto/security/best-practices-security"
+    },
+	{
+      from: "/howtogeneral/bestpractices/best-practices-for-app-performance-in-mendix-7",
+      to: "/howto/general/community-best-practices-for-app-performance"
+    },	
+	{
+      from: "/howto/ux/configuring-your-theme",
+      to: "/howto/front-end/configuring-your-theme"
+    },
+	/****************************************************
+     * How-to's version 7 (permanent, unmapped)
+     ****************************************************/	
+	{
+      from: "/howto7/ux/configuring-your-theme",
+      to: "/howto7/front-end/configuring-your-theme"
     },
 	/****************************************************
      * Developer Portal Guide (permanent, unmapped) 
@@ -193,105 +233,6 @@ module.exports = {
       from: "/addons/APM",
       to: "/apm/"
     },
-	/****************************************************
-     * Web Modeler Guide (permanent, unmapped)
-     ****************************************************/
-	{
-      from: "/howto/tutorials/",
-      to: "/studio/general"
-    },
-	{
-      from: "/howto/tutorials/mendix-tutorials",
-      to: "/studio/general"
-    },
-	/****************************************************
-     * How-to's (permanent, unmapped)
-     ****************************************************/
-    {
-      from: "/howtogeneral/bestpractices/ux-best-practices",
-      to: "/howto/front-end/ux-best-practices"
-    },
-	{
-      from: "/howtogeneral/bestpractices/best-practices-security-and-improvements-for-mendix-applications",
-      to: "/howto/security/best-practices-security"
-    },
-	{
-      from: "/howtogeneral/bestpractices/best-practices-for-app-performance-in-mendix-7",
-      to: "/howto/general/community-best-practices-for-app-performance"
-    },	
-	{
-      from: "/howto/ux/configuring-your-theme",
-      to: "/howto/front-end/configuring-your-theme"
-    },
-	/****************************************************
-     * From Studio Pro version 8 (permanent as backups, mapped)
-     ****************************************************/
-	{
-      from: "/refguide8/modeler",
-      to: "/refguide/modeling"
-    },
-	{
-      from: "/refguide8/Modeler",
-      to: "/refguide/modeling"
-    },
-	{
-      from: "/refguide8/desktop-modeler",
-      to: "/refguide/modeling"
-    },
-	{
-      from: "/refguide8/desktop-modeler-overview",
-      to: "/refguide/studio-pro-overview"
-    },
-	{
-      from: "/refguide8/download-from-team-server-dialog",
-      to: "/refguide/download-from-version-control-dialog"
-    },
-  {
-      from: "/refguide8/open-project-dialog",
-      to: "/refguide/open-app-dialog"
-    },
-  {
-      from: "/refguide8/upload-to-team-server-dialog",
-      to: "/refguide/upload-to-version-control-dialog"
-    },
-  {
-      from: "/refguide8/microflow-expressions",
-      to: "/refguide/expressions"
-    },
-	{
-      from: "/deployment/cloud-foundry/",
-      to: "/developerportal/deploy/cloud-foundry-deploy"
-    },	
-	{
-      from: "/howto8/solving-load-and-import-errors",
-      to: "/howto/monitoring-troubleshooting/solving-load-and-import-errors"
-    },
-	{
-      from: "/refguide8/drop-down-widget",
-      to: "/refguide/drop_down"
-    },
-	{
-      from: "/refguide8/horizontal-split-pane",
-      to: "/refguide/scroll-container"
-    },
-	{
-      from: "/refguide8/vertical-split-pane",
-      to: "/refguide/scroll-container"
-    },
-	{
-      from: "/refguide8/Select++Elements",
-      to: "/refguide/select--elements"
-    },
-	/****************************************************
-     * How-to's version 7 (permanent, unmapped)
-     ****************************************************/	
-	{
-      from: "/howto7/ux/configuring-your-theme",
-      to: "/howto7/front-end/configuring-your-theme"
-    },
-	/****************************************************
-     * Release Notes (permanent, mapped)
-     ****************************************************/
 	{
       from: "/releasenotes/desktop-modeler/",
       to: "/releasenotes/studio-pro/"
@@ -439,6 +380,65 @@ module.exports = {
 	{
       from: "/releasenotes/desktop-modeler/6.0",
       to: "/releasenotes/studio-pro/6.0"
+    },
+	/****************************************************
+     * From Studio Pro version 8 (permanent as backups, mapped)
+     ****************************************************/
+	{
+      from: "/refguide8/modeler",
+      to: "/refguide/modeling"
+    },
+	{
+      from: "/refguide8/Modeler",
+      to: "/refguide/modeling"
+    },
+	{
+      from: "/refguide8/desktop-modeler",
+      to: "/refguide/modeling"
+    },
+	{
+      from: "/refguide8/desktop-modeler-overview",
+      to: "/refguide/studio-pro-overview"
+    },
+	{
+      from: "/refguide8/download-from-team-server-dialog",
+      to: "/refguide/download-from-version-control-dialog"
+    },
+  {
+      from: "/refguide8/open-project-dialog",
+      to: "/refguide/open-app-dialog"
+    },
+  {
+      from: "/refguide8/upload-to-team-server-dialog",
+      to: "/refguide/upload-to-version-control-dialog"
+    },
+  {
+      from: "/refguide8/microflow-expressions",
+      to: "/refguide/expressions"
+    },
+	{
+      from: "/deployment/cloud-foundry/",
+      to: "/developerportal/deploy/cloud-foundry-deploy"
+    },	
+	{
+      from: "/howto8/solving-load-and-import-errors",
+      to: "/howto/monitoring-troubleshooting/solving-load-and-import-errors"
+    },
+	{
+      from: "/refguide8/drop-down-widget",
+      to: "/refguide/drop_down"
+    },
+	{
+      from: "/refguide8/horizontal-split-pane",
+      to: "/refguide/scroll-container"
+    },
+	{
+      from: "/refguide8/vertical-split-pane",
+      to: "/refguide/scroll-container"
+    },
+	{
+      from: "/refguide8/Select++Elements",
+      to: "/refguide/select--elements"
     },
 	/****************************************************
      * From Desktop Modeler version 7 (permanent, mapped)

@@ -290,6 +290,13 @@ module.exports = {
       to: "/howto7/front-end/configuring-your-theme"
     },
 	/****************************************************
+     * Release Notes (permanent, mapped)
+     ****************************************************/
+	 {
+      from: "/releasenotes/desktop-modeler",
+      to: "/releasenotes/studio-pro/"
+    },
+	/****************************************************
      * From Desktop Modeler version 7 (permanent, mapped)
      ****************************************************/
 	{

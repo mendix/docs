@@ -19,7 +19,7 @@ The following frameworks are automatically installed (if necessary):
 * Microsoft .NET Framework 4.6.2
 * Microsoft Visual C++ 2010 SP1 Redistributable Package
 * Microsoft Visual C++ 2013 Redistributable Package
-* AdoptOpenJDK 8 (installed automatically as of [Mendix 7.23.3](/releasenotes/desktop-modeler/7.23#7233) if you do not have this or Java Development Kit 1.8 already installed) or Java Development Kit 1.8
+* AdoptOpenJDK 8 (installed automatically as of [Mendix 7.23.3](/releasenotes/studio-pro/7.23#7233) if you do not have this or Java Development Kit 1.8 already installed) or Java Development Kit 1.8
 
 {{% alert type="warning" %}}
 You can choose which JDK is used for building and running locally via the **Edit** > **Preferences** menu item in Studio Pro.

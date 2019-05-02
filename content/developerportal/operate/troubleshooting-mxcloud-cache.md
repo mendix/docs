@@ -12,7 +12,7 @@ tags: ["App","Troubleshoot","Developer Portal","Cache","Mendix Cloud"]
 
 This information is only relevant for apps built using Mendix Studio Pro/Runtime version 6.
 
-Runtime versions 7.0 and above are stateless and do not cache Mendix objects on the server. See the [Mendix Desktop Modeler Release Notes 7.0](/releasenotes/desktop-modeler/7.0) for more information.
+Runtime versions 7.0 and above are stateless and do not cache Mendix objects on the server. See the [Mendix Desktop Modeler Release Notes 7.0](/releasenotes/studio-pro/7.0) for more information.
 
 {{% /alert %}}
 

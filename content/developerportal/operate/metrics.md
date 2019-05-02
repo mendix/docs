@@ -59,7 +59,7 @@ Mendix runtime version 6 has an object cache for non-persistent objects. In this
 
 {{% alert type="info" %}}
 
-Runtime versions 7 and above are stateless and do not cache Mendix objects on the server. See the [Mendix Desktop Modeler Release Notes 7.0](/releasenotes/desktop-modeler/7.0) for more information.
+Runtime versions 7 and above are stateless and do not cache Mendix objects on the server. See the [Mendix Desktop Modeler Release Notes 7.0](/releasenotes/studio-pro/7.0) for more information.
 
 {{% /alert %}}
 

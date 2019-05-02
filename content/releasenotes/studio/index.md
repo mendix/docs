@@ -2,7 +2,7 @@
 title: "Studio"
 ---
 
-The release notes for Mendix Studio are correlated with the version ranges of the [Mendix Studio Pro](../desktop-modeler/index): 
+The release notes for Mendix Studio are correlated with the version ranges of the [Mendix Studio Pro](../studio-pro/index): 
 
 * [7.23 & Above](7.23-and-above)
 * [7.15–7.22](7.15-7.22)

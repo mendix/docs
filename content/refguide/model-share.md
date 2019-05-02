@@ -1,6 +1,6 @@
 ---
 title: "Model Share"
-category: "General"
+category: "General Info"
 menu_order: 30
 ---
 

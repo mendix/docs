@@ -1,6 +1,6 @@
 ---
 title: "Install Mendix Studio Pro"
-category: "General"
+category: "General Info"
 menu_order: 1
 description: "Follow this how-to to learn how to install Mendix Studio Pro."
 toc-level: "2"

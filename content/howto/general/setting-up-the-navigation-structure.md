@@ -1,6 +1,6 @@
 ---
 title: "Set Up the Navigation Structure"
-category: "General"
+category: "General Info"
 menu_order: 30
 tags: []
 ---

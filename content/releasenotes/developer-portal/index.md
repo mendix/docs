@@ -10,7 +10,7 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud V3, and other deploym
 
 ## 2019
 
-### April 30th, 2019
+### May 2nd, 2019
 
 #### Improvements
 

@@ -300,6 +300,146 @@ module.exports = {
       from: "/releasenotes/desktop-modeler/8.0",
       to: "/releasenotes/studio-pro/8.0"
     },
+	{
+      from: "/releasenotes/desktop-modeler/7.23",
+      to: "/releasenotes/studio-pro/7.23"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/7.22",
+      to: "/releasenotes/studio-pro/7.22"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/7.21",
+      to: "/releasenotes/studio-pro/7.21"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/7.20",
+      to: "/releasenotes/studio-pro/7.20"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/7.19",
+      to: "/releasenotes/studio-pro/7.19"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/7.18",
+      to: "/releasenotes/studio-pro/7.18"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/7.17",
+      to: "/releasenotes/studio-pro/7.17"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/7.16",
+      to: "/releasenotes/studio-pro/7.16"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/7.15",
+      to: "/releasenotes/studio-pro/7.15"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/7.14",
+      to: "/releasenotes/studio-pro/7.14"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/7.13",
+      to: "/releasenotes/studio-pro/7.13"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/7.12",
+      to: "/releasenotes/studio-pro/7.12"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/7.11",
+      to: "/releasenotes/studio-pro/7.11"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/7.10",
+      to: "/releasenotes/studio-pro/7.10"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/7.9",
+      to: "/releasenotes/studio-pro/7.9"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/7.8",
+      to: "/releasenotes/studio-pro/7.8"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/7.7",
+      to: "/releasenotes/studio-pro/7.7"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/7.6",
+      to: "/releasenotes/studio-pro/7.6"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/7.5",
+      to: "/releasenotes/studio-pro/7.5"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/7.4",
+      to: "/releasenotes/studio-pro/7.4"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/7.3",
+      to: "/releasenotes/studio-pro/7.3"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/7.2",
+      to: "/releasenotes/studio-pro/7.2"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/7.1",
+      to: "/releasenotes/studio-pro/7.1"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/7.0",
+      to: "/releasenotes/studio-pro/7.0"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/6.10",
+      to: "/releasenotes/studio-pro/6.10"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/6.9",
+      to: "/releasenotes/studio-pro/6.9"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/6.8",
+      to: "/releasenotes/studio-pro/6.8"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/6.7",
+      to: "/releasenotes/studio-pro/6.7"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/6.6",
+      to: "/releasenotes/studio-pro/6.6"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/6.5",
+      to: "/releasenotes/studio-pro/6.5"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/6.4",
+      to: "/releasenotes/studio-pro/6.4"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/6.3",
+      to: "/releasenotes/studio-pro/6.3"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/6.2",
+      to: "/releasenotes/studio-pro/6.2"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/6.1",
+      to: "/releasenotes/studio-pro/6.1"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/6.0",
+      to: "/releasenotes/studio-pro/6.0"
+    },
 	/****************************************************
      * From Desktop Modeler version 7 (permanent, mapped)
      ****************************************************/

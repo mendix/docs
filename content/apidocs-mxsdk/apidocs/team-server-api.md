@@ -72,7 +72,7 @@ List of objects with the following key-value pairs:
 }]
 ```
 
-### 3.2 Retrieve Branch
+### 3.2 Retrieve Branch{#retrieve-branch}
 
 Retrieves a specific branch that belongs to the team server project of a specific app which the authenticated user has access to as a regular user.
 

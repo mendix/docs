@@ -1,5 +1,5 @@
 ---
-title: "Offline First"
+title: "Offline-First"
 category: "Mobile Development"
 menu_order: 3
 tags: ["offline", "native", "mobile"]
@@ -10,7 +10,7 @@ tags: ["offline", "native", "mobile"]
 Offline-first applications work regardless of the connection, providing a continuous experience. Pages and logic interact with an offline database on the device itself, and data is synchronized with the server when possible. This results in a snappier UI, increased reliability, and improved device battery life.
 
 {{% alert type="info" %}}
-It is important to understand that offline-first is an architectural concept and not an approach based on  the network state of the device. Offline first apps do not rely on a connection but can use connections. For example, you can use a Google Maps widget or push notifications.
+It is important to understand that offline-first is an architectural concept and not an approach based on  the network state of the device. Offline-first apps do not rely on a connection but can use connections. For example, you can use a Google Maps widget or push notifications.
 {{% /alert %}}
 
 Mendix supports building offline-first applications for [Native mobile apps](native-mobile) and [Hybrid mobile apps](hybrid-mobile) . Both Native and Hybrid apps share the same core, giving them the same offline-first capabilities. Please note that Native mobile apps are always offline-first and for Hybrid mobile apps it depends on the navigation profile that is configured. The data is stored on the device in a local database and files are stored on file storage of the device.

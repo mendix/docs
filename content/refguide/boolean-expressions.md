@@ -1,5 +1,5 @@
 ---
-title: "Boolean expressions"
+title: "Boolean Expressions"
 parent: "expressions"
 tags: ["studio pro"]
 ---

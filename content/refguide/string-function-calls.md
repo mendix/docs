@@ -500,9 +500,9 @@ The `+` operator can be used to concatenate two strings or a string and a number
 ### Input Parameters
 
 * First parameter
-    * Type: string, integer/long, float, or decimal
+    * Type: string, integer/long, decimal
 * Second parameter
-    * Type: string, integer/long, float, or decimal
+    * Type: string, integer/long, decimal
 
 At least one of the parameters must be of type string.
 

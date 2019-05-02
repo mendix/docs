@@ -7,7 +7,7 @@ tags: ["java", "connector kit", "microflow action", "parameter type", "aws", "am
 output:
   word_document: default
   html_document: default
-#To update screenshots of these microflows in the Desktop Modeler, use the SlackRekognition-main-master app project, which is saved locally in Other Resources > Documentation Backups (No Update).
+#To update screenshots of these microflows in Studio Pro, use the SlackRekognition-main-master app project, which is saved locally in Other Resources > Documentation Backups (No Update).
 ---
 
 ## 1 Introduction
@@ -94,7 +94,7 @@ The action uses the following parameters:
 
 The return type is a list of new initialized objects.
 
-As you can see below, this action uses a new parameter type (**Microflow**) to indicate that the user needs to specify a microflow. When using the action, the Modeler will show a list of microflows to make this as easy to use as possible.
+As you can see below, this action uses a new parameter type (**Microflow**) to indicate that the user needs to specify a microflow. When using the action, Studio Pro will show a list of microflows to make this as easy to use as possible.
 
 ![Initialize list using microflow action parameters](attachments/how-to-connector-kit/initialize_list_mf_pars.png)
 

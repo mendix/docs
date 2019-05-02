@@ -20,26 +20,19 @@ This how-to presents creating a custom theme with the Mendix UI Framework.
 
 Before starting with this how-to, make sure you have completed the following prerequisites:
 
-* Download the latest [Mendix Desktop Modeler](https://appstore.mendix.com/) (5.18.0 or later)
+* Download the latest version of [Mendix Studio Pro](https://appstore.mendix.com/) (5.18.0 or later)
 * Download [Scout](http://mhs.github.io/scout-app/) (or use a different compiler, such as [Sass](http://sass-lang.com/install))
 * Download your preferred text editor (such as [Sublime Text](http://www.sublimetext.com/))
 
-## 3 Creating a New App in the Mendix Desktop Modeler
+## 3 Creating a New App in Mendix Studio Pro
 
 To create a new app and select a theme from the **New App** selector, follow these steps:
 
-1. Open the Mendix Desktop Modeler.
-2.  On the **My Apps** screen (accessible by clicking the drop-down menu arrow next to your name in the upper-right corner of the Modeler), click **New App**.
-
-    ![](attachments/18448706/18581412.png)
-
+1. Open Mendix Studio Pro to the **My Apps** screen.
+2. Click **New App**.
 3.  Select the Mendix theme for your app:
 
-    ![](attachments/18448711/18581484.png)
-
-4.  You can now deploy your app (press the F5 key):
-
-    ![](attachments/18448711/18581480.jpg) 
+	![](attachments/18448711/18581484.png)
 
 ## 4 Configuring Scout
 
@@ -162,15 +155,15 @@ Re-deploy your app, which will now look like this:
 
 ![](attachments/18448711/18581467.png)
 
-This should give you a better understanding of how variables work and of the theme structure. In the next section, we will change the logo in the Modeler and make a small theming adjustment.
+This should give you a better understanding of how variables work and of the theme structure. In the next section, we will change the logo in Studio Pro and make a small theming adjustment.
 
-### 6.4 Changing the Logo in the Modeler
+### 6.4 Changing the Logo in Studio Pro
 
 Use this logo to replace "Company Name" in the topbar:
 
 ![](attachments/18448711/18581471.png)
 
-In the Modeler, go to the **Sidebar_Full_Responsive** layout and replace the image. Leave the caption blank, because the caption "go shopping" is already in the new image.
+In Studio Pro, go to the **Sidebar_Full_Responsive** layout and replace the image. Leave the caption blank, because the caption "go shopping" is already in the new image.
 
 Re-deploy your app to see the shiny new logo:
 
@@ -178,11 +171,11 @@ Re-deploy your app to see the shiny new logo:
 
 ## 7 Read More
 
-* [How to Perform the Scout and Windows 10 Workaround](perform-scout-and-windows-10-workaround)
-* [How to Layouts and Snippets](layouts-and-snippets)
-* [How to Set Up Mendix UI Framework with Just CSS](setup-mendix-ui-framework-with-just-css)
-* [How to Set Up the Navigation Structure](../general/setting-up-the-navigation-structure)
-* [How to Set Up the Mendix UI Framework with Scout](setup-mendix-ui-framework-with-scout)
-* [How to Set Up the Mendix UI Framework with Koala](setup-mendix-ui-framework-with-koala)
-* [How to Create Your First Two Overview & Detail Pages](create-your-first-two-overview-and-detail-pages)
-* [How to Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
+* [Perform the Scout and Windows 10 Workaround](perform-scout-and-windows-10-workaround)
+* [Layouts and Snippets](layouts-and-snippets)
+* [Set Up Mendix UI Framework with Just CSS](setup-mendix-ui-framework-with-just-css)
+* [Set Up the Navigation Structure](../general/setting-up-the-navigation-structure)
+* [Set Up the Mendix UI Framework with Scout](setup-mendix-ui-framework-with-scout)
+* [Set Up the Mendix UI Framework with Koala](setup-mendix-ui-framework-with-koala)
+* [Create Your First Two Overview & Detail Pages](create-your-first-two-overview-and-detail-pages)
+* [Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)

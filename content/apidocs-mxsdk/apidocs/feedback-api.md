@@ -5,7 +5,7 @@ description: "API to access Mendix app feedback from within the app"
 tags: ["Feedback", "Developer Portal", "API"]
 ---
 
-## Introduction
+## 1 Introduction
 
 The Mendix Feedback API allows you to retrieve, add and manage feedback for your Mendix projects.
 
@@ -22,9 +22,9 @@ Each call also requires the parameters 'username' and 'password'. These are the 
 
 {{% /alert %}}
 
-## API Calls
+## 2 API Calls
 
-### AcceptFeedback
+### 2.1 AcceptFeedback
 
 This call **accepts** the specified feedback item. This means that the app team has accepted the feedback and added this feedback as a story to the sprint.
 
@@ -36,7 +36,7 @@ This call **accepts** the specified feedback item. This means that the app team 
 
 * Return value – Boolean
 
-### AddFeedback
+### 2.2 AddFeedback
 
 This call **adds a new feedback item** to the project and returns the ID of the new feedback item.
 
@@ -52,7 +52,7 @@ This call **adds a new feedback item** to the project and returns the ID of the 
 
 * Return value – Integer/Long
 
-### CloseFeedback
+### 2.3 CloseFeedback
 
 This call **closes** the specified feedback item.
 
@@ -65,7 +65,7 @@ This call **closes** the specified feedback item.
 
 * Return value – Enumeration IssueState (see below for possible values)
 
-### DeleteFeedback
+### 2.4 DeleteFeedback
 
 This call **deletes** the specified feedback item.
 
@@ -77,7 +77,7 @@ This call **deletes** the specified feedback item.
 
 * Return value – Boolean
 
-### GetFeedbackItems
+### 2.5 GetFeedbackItems
 
 This call **retrieves a list of all feedback items** for the project which satisfy the IssueState filter.
 
@@ -89,7 +89,7 @@ This call **retrieves a list of all feedback items** for the project which satis
 
 * Return value – List of Issue
 
-### GetSingleFeedbackItem
+### 2.6 GetSingleFeedbackItem
 
 This call **retrieves a single feedback item** by ID.
 

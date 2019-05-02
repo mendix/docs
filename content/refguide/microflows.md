@@ -39,7 +39,7 @@ The graphical notation of microflows is based on the [Business Process Model and
 
 A microflow is composed of elements. Below is a categorized overview of all elements. The following categories are used:
 
-*   [Events](#events) represent start and end points of a microflow and special operations in a loop.
+*   [Events](#events) represent start and endpoints of a microflow and special operations in a loop.
 *   [Flows](#flows) form the connection between elements.
 *   [Gateways](#gateways) deal with making choices and merging different paths again.
 *   [Activities](#activities) are the actions that are executed in a microflow.
@@ -48,7 +48,7 @@ A microflow is composed of elements. Below is a categorized overview of all elem
 
 ## 4 Events<a name="events"></a>
 
-Events represent start and end points of a microflow and special operations in a loop.
+Events represent start and endpoints of a microflow and special operations in a loop.
 
 | Graphic | Name | Description |
 | --- | --- | --- |
@@ -98,7 +98,7 @@ Artifacts provide the microflow with input and allow comments to be made.
 
 ## 9 Variable Usages
 
-The Modeler visualizes which variables are used by the selected object(s). It does this by showing the used variables in white text on a blue background. Conversely, elements that use the variable(s) defined by the selected object(s) are marked with the word 'Usage' in white text on a green background.
+Studio Pro visualizes which variables are used by the selected object(s). It does this by showing the used variables in white text on a blue background. Conversely, elements that use the variable(s) defined by the selected object(s) are marked with the word 'Usage' in white text on a green background.
 
 In the example below, the parameter **AccountPasswordData** is highlighted because it is used in the selected activity. And the activity **Save password** has a usage label because it uses the variable defined by the selected activity.
 
@@ -167,5 +167,5 @@ In microflows that apply entity access, which are recognizable by their yellow b
 
 If you want to see what happens while a microflow is executing, you can use the microflow debugger. See the following how-tos:
 
-*   [Debugging Microflows](/howto7/monitoring-troubleshooting/debug-microflows)
-*   [Debugging Microflows Remotely](/howto7/monitoring-troubleshooting/debug-microflows-remotely)
+*   [Debugging Microflows](/howto/monitoring-troubleshooting/debug-microflows)
+*   [Debugging Microflows Remotely](/howto/monitoring-troubleshooting/debug-microflows-remotely)

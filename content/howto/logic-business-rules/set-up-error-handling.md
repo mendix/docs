@@ -3,7 +3,7 @@ title: "Set Up Error Handling"
 category: "Logic & Business Rules"
 menu_order: 8
 tags: ["error", "error handling", "rollback", "microflow", "logic"]
-#To update screenshots of these microflows in the Desktop Modeler, use the Microflow Screenshots app project.
+#To update screenshots of these microflows in , use the Microflow Screenshots app project.
 ---
 
 ## 1 Introduction
@@ -40,7 +40,7 @@ Please note that this isn't the same as preventing two users from editing the sa
 | **Error Handling – Custom Without Rollback** | ![](attachments/18448677/18580965.png) | Any action taken inside the microflow can be reverted, but everything that happened before the error will be kept.The microflow will continue over the custom error handler flow.
 | **Continue** | ![](attachments/18448677/18580952.png) | Any action taken inside the microflow can be reverted, but everything that happened before the error will be kept. The microflow will continue as if nothing happened. Avoid using this option – you should only use this in the more complicated combinations of multiple error handlers. You want to make sure that you at least log the error message. If it breaks, you need to know about it.
 | **End Event** | ![](attachments/18448677/18580962.png) | This is the end of the microflow transaction and all actions are executed at the end of the main microflow.|
-| **Error End Event** | ![](attachments/18448677/18580963.png) | This re-throws the error to all parent microflows after executing the custom activities. For more details, see [Error Event](/refguide7/error-event) in the Mendix Reference Guide.
+| **Error End Event** | ![](attachments/18448677/18580963.png) | This re-throws the error to all parent microflows after executing the custom activities. For more details, see [Error Event](/refguide/error-event) in the *Mendix Studio Pro Guide*.
 
 ## 4 Error Handling Transactions
 

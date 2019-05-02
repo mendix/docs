@@ -16,7 +16,7 @@ Creating company UI resources is a great way to let Mendix developers quickly cr
 
 ## 2 Exporting Your Company Atlas UI Resources
 
-When your custom resources are ready to be shared with multiple developers or apps, you can export the module from the **Project Explorer** in the Desktop Modeler. To do this, right-click the **UI Resources** module, export it, and save it:
+When your custom resources are ready to be shared with multiple developers or apps, you can export the module from the **Project Explorer** in Studio Pro. To do this, right-click the **UI Resources** module, export it, and save it:
 
 ![](attachments/howto/sharing_export_uiresources.png)
 
@@ -47,9 +47,9 @@ This section describes how Mendix developers in your company can benefit from th
 
 A UI Resources module is a great way to keep all the UI resources centralized in your application. It would be a lot of work to download the UI Resources module every time a Mendix developer starts a new Mendix app. An easier way to share the UI Resources for new Mendix apps is to create a blank company starter app with the UI Resources module already included. This blank app can also be extended with logic and data, depending on what your Mendix developers need to quickly create Mendix applications.
 
-Let’s start with creating a new Mendix application in the Mendix Developer Portal or directly in the Mendix Desktop Modeler:
+Let’s start with creating a new Mendix application in the Mendix Developer Portal or directly in Mendix Studio Pro:
 
-1.  Under the **Starter Apps** tab, select the **Blank App**, and open the new app in the Desktop Modeler.
+1.  Under the **Starter Apps** tab, select the **Blank App**, and open the new app in Studio Pro.
 
     ![](attachments/howto/sharing_createnewapp.png)
 
@@ -57,7 +57,7 @@ Let’s start with creating a new Mendix application in the Mendix Developer Por
 
     ![](attachments/howto/sharing_delete_module.png)
 
-3. Now it’s time to import your company UI resources (if you have not created the UI resources yet, see [How to Create Company UI Resources](create-company-atlas-ui-resources)). Import these resources by clicking **App Store** in the top toolbar of the Desktop Modeler, and then selecting **UI Resources** in the left sidebar **Categories** menu.
+3. Now it’s time to import your company UI resources (if you have not created the UI resources yet, see [How to Create Company UI Resources](create-company-atlas-ui-resources)). Import these resources by clicking **App Store** in the top toolbar of Studio Pro, and then selecting **UI Resources** in the left sidebar **Categories** menu.
 4. Download the company UI resources module you have created.
 5. When the download is complete, the UI resources will be visible in the **App Store modules** in **Project Explorer**.  Be sure to check if all the errors are resolved before continuing.
 
@@ -82,26 +82,26 @@ These are examples of app impression images:
 
 ### 4.2 Using the UI Resources Module from the Mendix App Store
 
-The UI Resources module can be easily downloaded through the Mendix App Store in the Desktop Modeler. By downloading the UI Resources module in existing Mendix apps, developers can benefit from all the new UI resources.
+The UI Resources module can be easily downloaded through the Mendix App Store in Studio Pro. By downloading the UI Resources module in existing Mendix apps, developers can benefit from all the new UI resources.
 
 To use the UI Resources module from teh Mendix App Store, follow these steps:
 
-1.  Open the Mendix App Store in the Desktop Modeler and then select **UI Resources** in the left sidebar **Categories** menu:
+1.  Open the Mendix App Store in Studio Pro and then select **UI Resources** in the left sidebar **Categories** menu:
 
-    ![](attachments/howto/sharing_appstore_modeler.png)
+    ![](attachments/howto/sharing.png)
 
     The available UI resources will appear in the middle section of the App Store. The **Private** label indicates that the UI resources are only available for your company.
 
 2. Select the UI resources that have been created by your company:
 
-    ![](attachments/howto/sharing_appstoredetail_modeler.png)
+    ![](attachments/howto/sharing_detail.png)
 
 3. To download the UI resources inside your project, click **Download**. After downloading your company's UI Resources module, it will appear under **App Store modules**. The module can always be updated by downloading a new version from the Mendix App Store when new resources are added.
 
 ## 5 Read More
 
-* [How to Get Started with Atlas UI](get-started-with-atlasui)
-* [How to Create Company Atlas UI Resources](create-company-atlas-ui-resources)
-* [How to Create Custom Preview Images for Building Blocks & Page Templates](create-custom-preview-images-for-building-blocks-and-page-templates)
-* [How to Extend Design Properties to Customize the Web Modeler Experience](extend-design-properties-to-customize-the-web-modeler-experience)
-* [How to Migrate Existing Projects to Atlas UI](migrate-existing-projects-to-atlasui)
+* [Get Started with Atlas UI](get-started-with-atlasui)
+* [Create Company Atlas UI Resources](create-company-atlas-ui-resources)
+* [Create Custom Preview Images for Building Blocks & Page Templates](create-custom-preview-images-for-building-blocks-and-page-templates)
+* [Extend Design Properties to Customize Your Studio Experience](extend-design-properties-to-customize)
+* [Migrate Existing Projects to Atlas UI](migrate-existing-projects-to-atlasui)

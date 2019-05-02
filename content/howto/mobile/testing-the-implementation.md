@@ -5,11 +5,11 @@ menu_order: 60
 tags: ["mobile", "push notification"]
 ---
 
-## 1 Introduction
+## 1 Introuction
 
 Once you finish implementing the steps described in [How to Implement Push Notifications](implementation-guide), you need to test whether everything works correctly. As a prerequisite, you will need to build (new) versions of your mobile application. You can refer to the [hybrid app package documentation](https://github.com/mendix/hybrid-app-template/) for instructions. Please note that, during this process, you will need to put the *google-services.json* and *GoogleService-Info.plist* files in the config folder.
 
-Once you have your apps built and running, you can send your first push notifications. This can be done easily using the administration pages that should be included in your application (for details, see [Setting Up the Administration Pages](implementation-guide#setting) in *How to Implement Push Notifications*). 
+Once you have your apps bulit and running, you can send your first push notifications. This can be done easily using the administration pages that should be included in your application (for details, see [Setting Up the Administration Pages](implementation-guide#setting) in *How to Implement Push Notifications*). 
 
 ## 2 Sending a Push Notification to a Device
 

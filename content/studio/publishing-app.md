@@ -1,8 +1,8 @@
 ---
 title: "Publishing Your App"
-description: "Describes the publishing (deployment) process in the Mendix Studio."
+description: "Describes the publishing (deployment) process in Mendix Studio."
 menu_order: 55
-tags: ["studio", "deployment", "publishing", "app publishing", "deploy", "deploying", "publish"]
+tags: ["deployment", "publishing", "app publishing", "deploy", "deploying", "publish"]
 ---
 
 ## 1 Introduction
@@ -31,7 +31,7 @@ To publish your application, follow these steps:
 
 {{% alert type="info" %}}
 
-If Studio is not able to retrieve the status of your environment yet, you will not see the **Update** button. For more information, see section [5 Retrieving Your App Status](#retrieving-app-status). 
+If Studio is not able to retrieve the status of your environment yet, you will not see the **Update** button. For more information, see section [Retrieving Your App Status](#retrieving-app-status). 
 
 {{% /alert %}}
 
@@ -101,7 +101,7 @@ For more information on how to view consistency errors and to fix them , see [Ch
 
 ## 5 Retrieving Your App Status {#retrieving-app-status}
 
-Before the deployment can start, Studio needs to get the environment status from the cloud. Thus, when you click the **Publish** button, you may see the dialog box "Retrieving app environment status", meaning that Studio is getting the status of the deployed application from the cloud. 
+Before the deployment can start, Studio needs to get the environment status from the cloud. Thus, when you click the **Publish** button, you may see the dialog box **Retrieving app environment status**, meaning that Studio is getting the status of the deployed application from the cloud.
 
 ![Retrieving App Environment Status](attachments/publishing-app/retrieving-app-status.png)
 

@@ -9,14 +9,14 @@ tags: ["database", "migrate", "postgresql", "export", "import"]
 
 This document explains how to migrate the data in an existing Mendix database to another Mendix database. This can be useful if you want to migrate from one type of database to another, for example MS SQL Server to PostgreSQL.
 
-**After completing this how-to you will know:**
+**After completing this how-to you will know how to do the following:**
 
-*   How to migrate a non-PostgreSQL database to a PostgreSQL database
-*   How to export a PostgreSQL database
-*   How to upload an exported PostgreSQL database to the Mendix cloud
-*   How to export a Mendix cloud database
-*   How to import into an on-premise PostgreSQL database
-*   How to migrate a PostgreSQL database to a non-PostgreSQL database
+* Migrate a non-PostgreSQL database to a PostgreSQL database
+* Export a PostgreSQL database
+* Upload an exported PostgreSQL database to the Mendix cloud
+* Export a Mendix cloud database
+* Import into an on-premise PostgreSQL database
+* Migrate a PostgreSQL database to a non-PostgreSQL database
 
 ## 2 Overview
 
@@ -32,9 +32,9 @@ The most commonly used custom settings for database migration are:
 *   SourceDatabaseUserName
 *   SourceDatabasePassword
 
-See [Custom Settings](/refguide7/custom-settings) for more information on the full list of available settings. These settings can be configured as follows:
+See [Custom Settings](/refguide/custom-settings) for more information on the full list of available settings. These settings can be configured as follows:
 
-* Modeler: in **Project Explorer**, expand **Project**, double-click **Settings**, edit a configuration, go to the right-most tab called **Custom**:
+* Studio Pro: in **Project Explorer**, expand **Project**, double-click **Settings**, edit a configuration, go to the right-most tab called **Custom**:
 
   ![](attachments/migrating/19398970.png) 
 
@@ -44,7 +44,7 @@ See [Custom Settings](/refguide7/custom-settings) for more information on the fu
 
 * m2ee-tools: add the custom settings to the mxruntime section. See [https://github.com/mendix/m2ee-tools/blob/develop/examples/full-documented-m2ee.yaml](https://github.com/mendix/m2ee-tools/blob/develop/examples/full-documented-m2ee.yaml)
 
-You can migrate databases using either the Modeler, the Service Console or m2ee-tools. The Service Console gives you the advantage of seeing a progress bar during the copy process, which is handy if you copy a lot of data which takes a long time to execute.
+You can migrate databases using either Studio Pro, the Service Console or m2ee-tools. The Service Console gives you the advantage of seeing a progress bar during the copy process, which is handy if you copy a lot of data which takes a long time to execute.
 
 {{% alert type="info" %}}
 

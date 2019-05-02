@@ -18,11 +18,11 @@ See [Microflow Element Common Properties](microflow-element-common-properties) f
 
 ### 2.1 Data Type
 
-Defines what kind of data can be stored in the variable. A variable can have one of the following [data types](data-types): Boolean, Enumeration, Decimal, Float (deprecated), Integer/Long or String.
+Defines what kind of data can be stored in the variable. A variable can have one of the following [data types](data-types): Boolean, Enumeration, Decimal, Integer/Long or String.
 
 ### 2.2 Initial Value
 
-Defines the initial value of the variable. The value is entered using an [expression](expressions) (the result of the microflow expression should match the data type of the variable).
+Defines the initial value of the variable. The value is entered using an [expression](expressions) (the expressionsult of the microflow expression should match the data type of the variable).
 
 ## 3 Output Properties
 

@@ -21,7 +21,7 @@ When running, Mendix projects publish webservices documentation. The address is 
 
 ### WSDL
 
-This is an XML document that is computer readable. This means that the modeler can read this document and automatically figure out how to interact with the webservice.
+This is an XML document that is computer readable. This means that Studio Pro can read this document and automatically figure out how to interact with the webservice.
 
 ### Example request/response xml messages
 

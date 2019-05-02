@@ -31,7 +31,7 @@ In this section, you will learn how to install the ChartJS widget.
 
 ### 3.1 Finding and Downloading the ChartJS Widget from the App Store
 
-1.  Using the in-Modeler App Store browser, find the **ChartJS** widget:
+1.  Using the App Store browser in Studio Pro, find the **ChartJS** widget:
 
     ![](attachments/19202962/19398991.png)
     
@@ -96,7 +96,7 @@ To make this sample project actually generate charts, the first thing to do is c
 
 ### 3.5 Configuring the ChartJS Widget
 
-The ChartJS widgets are configured through the familiar modeler widget dialogue box.  We must configure the ChartJS module to reference our Charting domain model.
+The ChartJS widgets are configured through the familiar Studio Pro widget dialog box.  We must configure the ChartJS module to reference our Charting domain model.
 
 1. Set the entity for the chart to be the created **Chart** entity:
 

@@ -1,14 +1,10 @@
 ---
 title: "Message Definition"
 parent: "message-definitions"
-#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
+draft: true
 ---
 
-{{% alert type="info" %}}
-
-This feature was introduced in version 7.10.0.
-
-{{% /alert %}}
+{{% todo %}}[TO BE DELETED once parent document has been reviewed]{{% /todo %}}
 
 ## 1 Introduction
 

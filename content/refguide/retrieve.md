@@ -65,7 +65,7 @@ When you know you have only one object or you only want to use the first object 
 
 {{% alert type="warning" %}}
 
-Nanoflows do not support this property.
+Date functions, user-role tokens, computations based on tokens, and following associations aren't supported in xpath constraints when retrieve activity is in a nanoflow.
 
 {{% /alert %}}
 

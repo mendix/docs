@@ -6,11 +6,11 @@ tags: ["xml", "widget"]
 
 ## 1 Requirements
 
-This document assumes you have a basic understanding of XML and the Mendix Modeler. For more information on XML, visit [W3 Schools - XML](http://w3schools.com/xml/). To learn more about the Mendix Modeler, watch the [Getting Started](https://gettingstarted.mendixcloud.com/index.html) videos.
+This document assumes you have a basic understanding of XML and Mendix Studio Pro. For more information on XML, visit [W3 Schools - XML](http://w3schools.com/xml/). To learn more about Mendix Studio Pro, watch the [Getting Started](https://gettingstarted.mendixcloud.com/index.html) videos.
 
 ## 2 Start of the Widget XML
 
-An XML file always starts with the XML version and encoding declaration. These are standard and should be present in every XML file. The Mendix Modeler uses the widget XML file to create the property input fields, which show up when you add your widget to a form. Our widget declaration XML starts at the `<widget>` element. This is the root element that will contain all our settings for this widget.
+An XML file always starts with the XML version and encoding declaration. These are standard and should be present in every XML file. Mendix Studio Pro uses the widget XML file to create the property input fields, which show up when you add your widget to a form. Our widget declaration XML starts at the `<widget>` element. This is the root element that will contain all our settings for this widget.
 
 ## 3 Widget Element {#Widgets-XMLreferenceguide-Widgetattributes}
 
@@ -20,7 +20,7 @@ An XML file always starts with the XML version and encoding declaration. These a
 | --- | --- |
 | id | The id is where your widget is located. The path to the js file, starting at the root folder, separated by dots. Note that this is case-sensitive. |
 | needsEntityContext | This boolean determines whether your widget requires an object to be passed as the EntityContext and is required. If this is set to "true", the widget can only be used within a dataview or a templategrid. If set to "false", the widget can be used anywhere, but won't have an object passed to it automatically. |
-| offlineCapable | This boolean determines whether your widget can be used on pages that are accessible through the offline profile. If this attribute is not set, or set to "false", the widget cannot be used offline. If set to "true", the widget can be used offline. Keep in mind that there are a number of restrictions when working offline. Calling a microflows or fetching data using XPath are examples of features that are not supported offline. For a comprehensive list of restrictions see the [Restrictions](/refguide7/offline#restrictions) section of *Offline*. |
+| offlineCapable | This boolean determines whether your widget can be used on pages that are accessible through the offline profile. If this attribute is not set, or set to "false", the widget cannot be used offline. If set to "true", the widget can be used offline. Keep in mind that there are a number of restrictions when working offline. Calling a microflows or fetching data using XPath are examples of features that are not supported offline. For a comprehensive list of restrictions see the [Building Your Offline App](/refguide/offline-first#building-offline-app) section of *Offline First*. |
 | xmlns | The XML namespace used by the widget. The value of this attribute is the same for every widget. `<widget id="HelloWorld.widget.helloworld" needsEntityContext="true" xmlns="http://www.mendix.com/widget/1.0/">` |
 
 ### 3.2 Child elements {#Widgets-XMLreferenceguide-id}
@@ -29,9 +29,9 @@ Inside the widget element are 4 child elements.
 
 | Element | Description |
 | --- | --- |
-| Name | The name property is what your widget will be called in the Mendix Modeler. It will also be used to name the different instances of your widget by adding a number to the end of it each time it is used in a form. |
+| Name | The name property is what your widget will be called in Mendix Studio Pro. It will also be used to name the different instances of your widget by adding a number to the end of it each time it is used in a form. |
 | Description | The description determines the mouse-over tooltip over your widget in the Custom Widgets toolbar. |
-| Icon | Every element or widget in the Modeler has its own icon. Your new widget's icon can be defined with this property. It is a [Base64](http://en.wikipedia.org/wiki/Base64) representation of the image, so that it can be used in an XML file. |
+| Icon | Every element or widget in Studio Pro has its own icon. Your new widget's icon can be defined with this property. It is a [Base64](http://en.wikipedia.org/wiki/Base64) representation of the image, so that it can be used in an XML file. |
 | Properties | The individual property elements will be grouped inside the “properties” element as in the code snippet below. |
 
 ```xml
@@ -47,7 +47,7 @@ Inside the widget element are 4 child elements.
 
 ## 4 Property element {#Widgets-XMLreferenceguide-Name}
 
-Any properties you define in your widget XML file can be set using the Mendix Modeler and they will be passed to your JavaScript file, so you can use them in your widget.
+Any properties you define in your widget XML file can be set using Mendix Studio Pro and they will be passed to your JavaScript file, so you can use them in your widget.
 
 ### 4.1 Child elements
 
@@ -55,8 +55,8 @@ Every property element contains at least the following 3 child elements.
 
 | Element | Description |
 | --- | --- |
-| Caption | This element is used to add the name of the property. This is how it will show up in the Properties list in the Mendix Modeler. |
-| Category | This element defines in what category this property will be shown in the Properties list in the Mendix Modeler. Common categories are “Behavior”, “Appearance” and “Data source”. |
+| Caption | This element is used to add the name of the property. This is how it will show up in the Properties list in Mendix Studio Pro. |
+| Category | This element defines in what category this property will be shown in the Properties list in Mendix Studio Pro. Common categories are “Behavior”, “Appearance” and “Data source”. |
 | Description | This element is used to add a useful description of the property, so the end user knows what it’s for. |
 
 ### 4.2 Attributes
@@ -92,7 +92,7 @@ The **required** attribute defaults to "true".
 
 ### 5.1 Attribute
 
-A property of type Attribute is always related to an entity: it uses the entityContext if it is set on true, otherwise an entityProperty is required. It enables the user in the Mendix Modeler to select one of the attributes of the related entity (optionally over an association).
+A property of type Attribute is always related to an entity: it uses the entityContext if it is set on true, otherwise an entityProperty is required. It enables the user in Mendix Studio Pro to select one of the attributes of the related entity (optionally over an association).
 
 ```xml
 <property key="backgroundColor" type="attribute" entityProperty="color">
@@ -111,7 +111,7 @@ An attribute property has an extra required child element: a list of attributeTy
 *   Binary
 *   Boolean
 *   DateTime
-*   Decimal (Modeler > v5.13)
+*   Decimal
 *   Enum
 *   HashString
 *   Integer
@@ -130,13 +130,13 @@ A property of type Boolean requires the attribute defaultValue.
 </property>
 ```
 
-What it looks like in the Mendix Modeler:
+What it looks like in Mendix Studio Pro:
 
 ![](attachments/xml-reference/16844049.png)
 
 ### 5.2.1 Entity
 
-A property of the type Entity allows the user to configure a non-persistable entity in the Mendix Modeler. This entity can then be used in your JavaScript to retrieve all the necessary information.
+A property of the type Entity allows the user to configure a non-persistable entity in Mendix Studio Pro. This entity can then be used in your JavaScript to retrieve all the necessary information.
 
 ```xml
 <property key="color" type="entity" isPath="optional" allowNonPersistableEntities="true" pathType="reference">
@@ -162,7 +162,7 @@ The EntityConstraint lets you put a constraint on either the entity you specify 
 
 The enumeration property has an extra required child element: a list of enumerationValues. An enumerationValue contains a **key** attribute and a **caption** within their tag.
 
-This presents the user with a dropdown list of options, based on the **captions** in the Mendix Modeler. The **keys** will reach your widget's JavaScript as an enumeration.
+This presents the user with a dropdown list of options, based on the **captions** in Mendix Studio Pro. The **keys** will reach your widget's JavaScript as an enumeration.
 
 It requires a default value to be set, which should correspond with one of the enumerationValue keys.
 
@@ -179,7 +179,7 @@ It requires a default value to be set, which should correspond with one of the e
     </property>
 ```
 
-What it looks like in the Mendix Modeler:
+What it looks like in Mendix Studio Pro:
 
 ![](attachments/xml-reference/16844042.jpg)
 
@@ -200,7 +200,7 @@ For forms containing a data view, remember that calling a form  with a dataview,
 
 ### 5.2.5 Image
 
-The image property lets the user select an image from the Mendix Modeler's images to pass it to the widget.
+The image property lets the user select an image from Mendix Studio Pro's images to pass it to the widget.
 
 ```xml
 <property key="picture" type="image">
@@ -224,7 +224,7 @@ The integer property lets you to pass an integer to the widget.  This property r
 
 ### 5.2.7 Microflow
 
-The Microflow property allows a user to select a microflow in the Mendix Modeler. There are three options:
+The Microflow property allows a user to select a microflow in Mendix Studio Pro. There are three options:
 
 1.  If needsEntityContext is set to "true", the selected microflow is required to have the context entity as an input parameter (as this will automatically be passed into it).
 2.  If needsEntityContext is set to false and no entityProperty attribute is specified, the microflow will have no input parameters.
@@ -239,21 +239,20 @@ The Microflow property allows a user to select a microflow in the Mendix Modeler
 </property>
 ```
 
-The Microflow property has an extra required child element: returnType. Use this to set what type of variable you expect as a return value. The Modeler will then enforce this on the microflow that is assigned.
+The Microflow property has an extra required child element: returnType. Use this to set what type of variable you expect as a return value. Studio Pro will then enforce this on the microflow that is assigned.
 
 Possible return types:
 
 *   Void
 *   Boolean
 *   Integer
-*   Float
 *   DateTime
 *   String
 *   Object
 
 ### 5.2.8 Nanoflow
 
-The Nanoflow property allows a user to select a nanoflow in the Mendix Modeler. There are three options:
+The Nanoflow property allows a user to select a nanoflow in Mendix Studio Pro. There are three options:
 
 1.  If needsEntityContext is set to "true", the selected nanoflow is required to have the context entity as an input parameter (as this will automatically be passed into it).
 2.  If needsEntityContext is set to false and no entityProperty attribute is specified, the nanoflow will have no input parameters.
@@ -268,14 +267,13 @@ The Nanoflow property allows a user to select a nanoflow in the Mendix Modeler. 
 </property>
 ```
 
-The Nanoflow property has an extra required child element: returnType. Use this to set what type of variable you expect as a return value. The Modeler will then enforce this on the nanoflow that is assigned.
+The Nanoflow property has an extra required child element: returnType. Use this to set what type of variable you expect as a return value. Studio Pro will then enforce this on the nanoflow that is assigned.
 
 Possible return types:
 
 *   Void
 *   Boolean
 *   Integer
-*   Float
 *   DateTime
 *   String
 *   Object
@@ -305,7 +303,7 @@ The object property is an array of packaged sub-properties. It packages multiple
 </property>
 ```
 
-What it looks like in the Mendix Modeler:
+What it looks like in Mendix Studio Pro:
 
 ![](attachments/xml-reference/16844048.png)
 
@@ -323,7 +321,7 @@ The string property lets you to pass a string to the widget.
 
 ### 5.2.11 TranslatableString
 
-The translatableString property is similar to a normal string property, except you can add translated versions of the default value for different languages. To achieve this, the `translatableString` property has an extra required child element: a list of translations. The Mendix Modeler language will match the assigned <translation> value.
+The translatableString property is similar to a normal string property, except you can add translated versions of the default value for different languages. To achieve this, the `translatableString` property has an extra required child element: a list of translations. The Mendix Studio Pro language will match the assigned <translation> value.
 
 ```xml
 <property key="translatableMessage" type="translatableString">
@@ -337,7 +335,7 @@ The translatableString property is similar to a normal string property, except y
 </property>
 ```
 
-What it looks like in the Mendix Modeler:
+What it looks like in Mendix Studio Pro:
 
 ![](attachments/xml-reference/16844045.png)
 
@@ -347,4 +345,4 @@ Remember to use the correct language notation according to the [Java supported l
 
 ## 6 Read More
 
-*   [Getting started with the Widget Development Plugin for Adobe Brackets](../widget-development/use-the-widget-development-plugin-for-adobe-brackets)
+*   [Widget Development](index)

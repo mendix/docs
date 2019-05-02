@@ -19,7 +19,7 @@ To put the best practices in perspective, let's quote some of the giants. First,
 
 Other best practices might conflict with performance best practices. For example, security might require event handlers, and performance requires minimizing them. Good architecture is often a trade-off between different quality aspects. So, make motivated choices.
 
-This document contains sections covering parts of the Mendix Modeler where you can consider performance for domain models (with a special section on indexes), microflows, and pages. Other sections cover parts of the infrastructure for special performance considerations in Mendix domain-specific languages, such as XPath, expressions, and OQL.
+This document contains sections covering parts of Mendix Studio Pro where you can consider performance for domain models (with a special section on indexes), microflows, and pages. Other sections cover parts of the infrastructure for special performance considerations in Mendix domain-specific languages, such as XPath, expressions, and OQL.
 
 ## 2 Domain Model Best Practices
 

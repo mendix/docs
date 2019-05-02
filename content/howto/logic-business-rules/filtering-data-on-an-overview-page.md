@@ -82,7 +82,7 @@ In the previous section you set up a basic data structure and created some sampl
 
 ## 5 Filtering a List of Orders with the "Open" Status Using XPath 
 
-In the previous section you used the search bar to filter data on your overview page. Now you will add an XPath constraint on the Orders data grid. With an XPath constraint on a data grid you can (hard coded) filter the objects shown in the list. Mendix XPath is one of the Mendix query languages designed to retrieve data. XPath uses path expressions to select data of Mendix objects and their attributes or associations. To learn more about XPath, see [XPath Constraints](/refguide7/xpath-constraints). In this section you will constrain the data grid so it will only display orders with status 'Open'.
+In the previous section you used the search bar to filter data on your overview page. Now you will add an XPath constraint on the Orders data grid. With an XPath constraint on a data grid you can (hard coded) filter the objects shown in the list. Mendix XPath is one of the Mendix query languages designed to retrieve data. XPath uses path expressions to select data of Mendix objects and their attributes or associations. To learn more about XPath, see [XPath Constraints](/refguide/xpath-constraints). In this section you will constrain the data grid so it will only display orders with status 'Open'.
 
 1.  Select the **Order** data grid and in the **Properties** pane on the right, change **Data source** > **Type** to **XPath**, and then click the **XPath Constraint** field:
 
@@ -142,4 +142,4 @@ In the previous section you have constrained the data grid on attributes of the 
 
 ## 9 Read More
 
-*   [XPath Constraints](/refguide7/xpath-constraints)
+*   [XPath Constraints](/refguide/xpath-constraints)

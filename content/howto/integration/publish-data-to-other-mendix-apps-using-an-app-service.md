@@ -103,5 +103,5 @@ You can now go ahead and deploy the app. This will publish your app service.
 
 ## 9 Read More
 
-* [How to Expose a Web Service](expose-a-web-service)
-* [How to Expose Data to BI Tools Using OData](exposing-data-to-bi-tools-using-odata)
+* [Expose a Web Service](expose-a-web-service)
+* [Expose Data to BI Tools Using OData](exposing-data-to-bi-tools-using-odata)

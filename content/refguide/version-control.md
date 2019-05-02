@@ -1,6 +1,6 @@
 ---
 title: "Version Control"
-#description: "Set a description with a maximum of 140 characters; this should describe what the goal of the document is, and it can be different from the document introduction; this is optional, and it can be removed"
+#description: "This document gives definitions and explains the version control  process"
 tags: ["Version Control", "Application Lifecycle Management", "Commit", "Collaborate"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -12,12 +12,7 @@ Version Control allows you to manage your app development in two ways:
 * Firstly, it allows you to store ([*commit*](#commit)) the current revision of your model and all its resources. You give it an identifier so that you can get that revision again and share it with other team members.
 * Secondly, it allows work to take place on multiple [*development lines*](#development-line) so that several different features can be worked on at once. These development lines can then be [*merged*](#merge) back together so that your *main line* contains all the completed features that have been worked on separately.
 
-Version control in Mendix is built on top of [Apache Subversion](https://subversion.apache.org/) and the concepts will be familiar to Subversion users. Mendix simplifies Subversion commands by building them into the Modelers and Developer Portal.
-
-{{% alert type="info" %}}The processes involving the Web Modeler described here apply to collaborative working in Mendix versions 7.23.3 and above.
-
-Mendix versions 7.23.2 and below use a different method to sync work between the Web and Desktop Modelers. See [Sync the Web Modeler & Desktop Modeler](sync-webmodeler-desktopmodeler) for more information.
-{{% /alert %}}
+Version control in Mendix is built on top of [Apache Subversion](https://subversion.apache.org/) and the concepts will be familiar to Subversion users. Mendix simplifies Subversion commands by building them into Studio Pro, Studio, and the Developer Portal.
 
 ## 2 Concepts {#concepts}
 
@@ -35,16 +30,16 @@ Within the *Team Server* each app is stored in a repository. This repository con
 
 A revision is the version of your app at a moment in time, stored on the *Team Server*.
 
-Each revision of your app is given a unique number to identify it and enable you to find it in future. A new revision is created from the *Desktop Modeler* in two circumstances:
+Each revision of your app is given a unique number to identify it and enable you to find it in future. A new revision is created from *Studio Pro* in two circumstances:
 
-* The app is committed to the Repository
-* A Desktop Modeler working copy is updated from the Web Modeler working copy
+* The app is committed to the repository
+* A Studio Pro working copy is updated from a Studio working copy
 
 ### 2.4 Working Copy
 
-A working copy is the version of your app which is currently being worked on in the Modelers. For the Desktop Modeler, there is one working copy for each development line of the app. This model is held locally, on each computer where development work is taking place.
+A working copy is the version of your app which is currently being worked on in Studio Pro or Studio. For Studio Pro, there is one working copy for each development line of the app. This model is held locally, on each computer where development work is taking place.
 
-For the Web Modeler, there is one additional working copy, held in the *cloud.* Only one developer at a time can edit this.
+For Studio, there is one additional working copy, held in the *cloud*. Only one developer at a time can edit this.
 
 ### 2.5 Merge{#merge}
 
@@ -54,7 +49,7 @@ If any of the differences cannot be applied, then there is a *conflict*.
 
 ### 2.6 Conflict
 
-A conflict occurs when two versions of the app cannot be combined automatically. This happens when the same document has been changed in the Desktop Modeler working copy and a committed *revision* and these changes cannot be reconciled. Examples are the following:
+A conflict occurs when two versions of the app cannot be combined automatically. This happens when the same document has been changed in a Studio Pro working copy and a committed *revision* and these changes cannot be reconciled. Examples are the following:
 
 * the properties of a widget are changed in the revision and the working copy but to different settings
 * a document is moved or deleted in the revision but has been changed in a different way in the working copy.
@@ -63,19 +58,19 @@ When a conflict occurs, a developer has to intervene to decide how it should be 
 
 ### 2.7 Update
 
-Updating is the action, invoked in the Desktop Modeler, which gets the latest revision of the current *development line* from the Team Server repository and merges the differences into the current working copy.
+Updating is the action, invoked in Studio Pro, which gets the latest revision of the current *development line* from the Team Server repository and merges the differences into the current working copy.
 
-If the Web Modeler is enabled for this development line, the process first ensures that the Web Modeler working copy is stored as a new revision.
+If Studio is enabled for this development line, the process first ensures that the Studio working copy is stored as a new revision.
 
 ### 2.8 Commit{#commit}
 
-Committing is the action, invoked in the Desktop Modeler, of sending all your changes to the *repository* and making a new *revision*.
+Committing is the action, invoked in Studio Pro, of sending all your changes to the *repository* and making a new *revision*.
 
-If the Web Modeler is enabled for this development line, the process first ensures that the Web Modeler working copy is stored as a new revision and merged into the working copy of the Desktop Modeler. If there are not conflicts, the changes are then sent to the repository to make a new revision.
+If Studio is enabled for this development line, the process first ensures that the Studio working copy is stored as a new revision and merged into the working copy of Studio Pro. If there are not conflicts, the changes are then sent to the repository to make a new revision.
 
 ### 2.9 Development Line{#development-line}
 
-Development of an app is done in a Development Line where a set of related changes is made. There are two types of Development Line: *Main Lines* and *Branch Lines.*
+Development of an app is done in a Development Line where a set of related changes is made. There are two types of development line: the *Main Line* and *Branch Lines*.
 
 #### 2.9.1 Main Line
 
@@ -83,17 +78,17 @@ The Main Line is the initial development line for the app and is usually kept as
 
 #### 2.9.2 Branch Line
 
-A Branch line is a way of making an independent set of changes which can be tested away from the Main Line.
+A Branch Line is a way of making an independent set of changes which can be tested away from the Main Line.
 
 See section 4, [Branches](#branches), for more information on how branch lines can be used.
 
-### 2.10 Web Modeler Enabled
+### 2.10 Studio Enabled
 
-You may enable the Web Modeler for one of the development lines. This means that a developer can make changes to the app through the Web Modeler and share changes with the team. All changes will be linked to the selected branch and committed as revisions to that branch. Changes made to other development lines will not be available in the Web Modeler.
+You may enable Studio for one of the development lines. This means that a developer can make changes to the app through Studio and share changes with the team. All changes will be linked to the selected branch and committed as revisions to that branch. Changes made to other development lines will not be available in Studio.
 
-The Web Modeler cannot be used to develop the app if it is not enabled for any development lines.
+Studio cannot be used to develop the app if it is not enabled for any development lines.
 
-For starter apps created via the Developer Portal, the main line of a new app will be Web Modeler enabled.
+For starter apps created via the Developer Portal, the main line of a new app will be Studio enabled.
 
 ### 2.11 Tag
 
@@ -104,61 +99,65 @@ A Tag is a way of identifying a commit in addition to the *revision* number. It 
 * Patch: used to identify a *fix* to an error in a previously-released app
 * Revision: this is added automatically and is the revision number of the commit
 
+### 2.12 Repository Service
+
+The Repository Service manages communication between Studio or Studio Pro and other supporting services (for example, Team Server). The developer will not generally be aware that they are communicating via the Repository Service.
+
 ## 3 Version Control Processes for a Single Branch
 
-The figure below shows how two developers might work on a *Web Modeler enabled* development line of an app. One developer is working in the Web Modeler, and one in the Desktop Modeler. They both work on the same development line (for example, the Main Line).
+The figure below shows how two developers might work on a *Studio enabled* development line of an app. One developer is working in Studio, and one in Studio Pro. They both work on the same development line (for example, the Main Line).
 
 ![](attachments/version-control/image1.png)
 
-### 3.1 Work in Web Modeler Only
+### 3.1 Work in Studio Only
 
-The developer works on the app in the Web Modeler. They start with the app in state 1, this can be a new app or a revision of the app. Changes are made continuously to the working copy for the Web Modeler, stored in the cloud.
+The developer works on the app in Studio. They start with the app in state 1, this can be a new app or a revision of the app. Changes are made continuously to the working copy for Studio, stored in the cloud.
 
 ![](attachments/version-control/image2.png)
 
-### 3.2 Work in Desktop Modeler Only
+### 3.2 Work in Studio Pro Only
 
-Another (or the same) developer opens the app for the first time in the Desktop Modeler. A new revision (state 2) is created on the Team Server from the current state of the Web Modeler working copy. It is downloaded to the local machine as the working copy for the Desktop Modeler. The Web Modeler is locked temporarily so that the Web Modeler working copy is stable while it is copied.
+Another (or the same) developer opens the app for the first time in Studio Pro. A new revision (state 2) is created on the Team Server from the current state of the Studio working copy. It is downloaded to the local machine as the working copy for Studio Pro. Studio is locked temporarily so that the Studio working copy is stable while it is copied.
 
-The developer works in the Desktop Modeler on the local working copy of the app. There is no work done in the Web Modeler in this scenario.
+The developer works in Studio Pro on the local working copy of the app. There is no work done in Studio in this scenario.
 
-The developer can commit this to the Team Server repository at any time to make a new revision (state 3). This revision is copied into the Web Modeler working copy and the developer using the Web Modeler will get the changes automatically.
+The developer can commit this to the Team Server repository at any time to make a new revision (state 3). This revision is copied into the Studio working copy and the developer using Studio will get the changes automatically.
 
 ![](attachments/version-control/image3.png)
 
-### 3.3 Work in Both Modelers
+### 3.3 Work in Studio & Studio Pro
 
-Two developers are working on the same *development line* of the same app at the same time. One is using the Desktop Modeler, the other is using the Web Modeler. Changes from both Modelers are stored in the respective working copies: on the local machine for the Desktop Modeler and in the cloud for the Web Modeler.
+Two developers are working on the same *development line* of the same app at the same time. One is using Studio Pro, the other is using Studio. Changes from Studio Pro and Studio are stored in the respective working copies: on the local machine for Studio Pro and in the cloud for Studio.
 
 ![](attachments/version-control/image4.png)
 
-### 3.4 Update Desktop Modeler Working Copy
+### 3.4 Update Studio Pro Working Copy
 
-The developer using the Desktop Modeler wants to include the changes made by the developer using the Web Modeler. They choose to update their working copy.
+The developer using Studio Pro wants to include the changes made by the developer using Studio. They choose to update their working copy.
 
-All the changes from the Web Modeler working copy are put into a new revision on the Team Server (state 4). This revision is merged into the Desktop Modeler working copy. While the Desktop Modeler working copy is being updated, the Web Modeler is locked temporarily so that the Web Modeler working copy is stable while it is copied.
+All the changes from the Studio working copy are put into a new revision on the Team Server (state 4). This revision is merged into the Studio Pro working copy. While the Studio Pro working copy is being updated, Studio is locked temporarily so that the Studio working copy is stable while it is copied.
 
 {{% alert type="info" %}}
-This will also pick up changes from other developers using the Desktop Modeler, if they have committed changes to this branch.
+This will also pick up changes from other developers using Studio Pro, if they have committed changes to this branch.
 {{% /alert %}}
 
-If there are conflicts, the developer using the Desktop Modeler will have to resolve them before they can commit the changes to the Team Server repository.
+If there are conflicts, the developer using Studio Pro will have to resolve them before they can commit the changes to the Team Server repository.
 
 ![](attachments/version-control/image5.png)
 
 ### 3.5 Commit Changes to Team Server Repository
 
-The developer using the Desktop Modeler wants to commit a new revision to the Team Server. This will enable the developer using the Web Modeler, or a different developer using the Desktop Modeler, to see and work with the changes the developer has made. It also means that the revision can be deployed to the cloud.
+The developer using Studio Pro wants to commit a new revision to the Team Server. This will enable the developer using Studio, or a different developer using Studio Pro, to see and work with the changes the developer has made. It also means that the revision can be deployed to the cloud.
 
 The developer selects to commit, and the following things happen:
 
-* The Web Modeler is locked temporarily
-* The Web Modeler working copy is committed as a revision (restore point – state 5)
-* The revision just created (state 5) is merged with the Desktop Modeler working copy
+* Studio is locked temporarily
+* The Studio working copy is committed as a revision (restore point – state 5)
+* The revision just created (state 5) is merged with the Studio Pro working copy
 
-If there are no merge *conflicts*, the updated Desktop Modeler working copy is committed as a new revision (state 6) and the Web Modeler is updated to the new revision and unlocked.
+If there are no merge *conflicts*, the updated Studio Pro working copy is committed as a new revision (state 6) and the Studio working copy is updated to the new revision and unlocked.
 
-If there are conflicts, the developer using the Desktop Modeler will need to resolve these. The Web Modeler will be unlocked, without receiving any of the changes from the Desktop Modeler, while they do this. The developer using the Desktop Modeler then needs to commit again, and the process starts from the beginning (the Web Modeler is locked ready for a new revision to be committed from the Web Modeler Working Copy).
+If there are conflicts, the developer using Studio Pro will need to resolve these. Studio will be unlocked, without receiving any of the changes from Studio Pro, while they do this. The developer using Studio Pro then needs to commit again, and the process starts from the beginning (Studio is locked ready for a new revision to be committed from the Studio Working Copy).
 
 ![](attachments/version-control/image6.png)
 
@@ -176,7 +175,7 @@ All apps are developed along the main line (also referred to as *trunk*). Here y
 
 This is the case for the version control processes described in section 3, Version Control Processes for a Single Branch.
 
-Initially, developers using the Web Modeler only have access to the development line for which the Web Modeler is enabled. They can be switched to another development line, however, by a developer using the Desktop Modeler.
+Initially, developers using Studio only have access to the development line for which Studio is enabled. They can be switched to another development line, however, by a developer using Studio Pro.
 
 ### 4.2 Branch Line
 
@@ -201,9 +200,9 @@ You can merge a specific revision of a branch line into your current *working co
 
 As with the examples in section 3, Version Control Processes for a Single Branch, there may be conflicts during the merge, and these will have to be resolved before you can commit the changes to your app.
 
-Note that *errors* can be introduced by the *merge* process even if no conflicts are identified during the merge. Errors are inconsistencies which are flagged in the Modelers and will prevent the app from being deployed. They could lead to a revision not being deployable, so it is important to check for errors after you have done a merge.
+Note that *errors* can be introduced by the *merge* process even if no conflicts are identified during the merge. Errors are inconsistencies which are flagged in Studio and Studio Pro and will prevent the app from being deployed. They could lead to a revision not being deployable, so it is important to check for errors after you have done a merge.
 
 ## 5 Main Documents in This Category
 
-* [Using Version Control in the Desktop Modeler](using-version-control-in-the-dm)
+* [Using Version Control in Studio Pro](using-version-control-in-studio-pro)
 * [Team Server](team-server)

@@ -8,33 +8,32 @@ tags: ["Team Server", "network", "troubleshoot", "firewall"]
 
 ## 1 Introduction
 
-The Mendix Modeler needs to connect to Team Server, which is where all your projects are stored.
+Mendix Studio Pro needs to connect to Team Server, which is where all your projects are stored.
 
-**This how-to will teach you how to do the following:**
+**This how-to explains the following:**
 
-*   How to troubleshoot network issues when downloading projects from and uploading projects to Team Server
 *   Which permissions and settings are required to connect to Team Server
 
-## 2 Troubleshooting Downloading a Team Server Project
+## 2 Troubleshooting Team Server Project Network Settings
 
-Being unable to download the Team Server project would indicate that the security configuration of your company network is blocking access to `https://home.mendix.com` and `https://teamserver.sprintr.com/`. If this solution does not work, please submit a request with Mendix Support at [support.mendix.com](https://support.mendix.com/).
+Being unable to download the Team Server project can indicate that the security configuration of your company network is blocking access to `https://home.mendix.com` and `https://teamserver.sprintr.com/`.
 
-## 3 Enabling Firewall Access to Team Server
-
-Team Server is implemented using Subversion and the Mendix Modeler uses the HTTPS (TCP) protocol to communicate with that server. To access Team Server from within the Modeler the network at your location needs the following settings:
+Team Server is implemented using Subversion and Mendix Studio Pro uses the HTTPS (TCP) protocol to communicate with that server. To access Team Server from within Studio Pro, the network at your location needs the following settings:
 
 *   The HTTPS port (TCP 443) needs to be open
 *   The HTTP port (TCP 80) needs to be open
-*   WebDAV - verbs within the HTTP protocol - needs to be enabled on the proxy server (if any)
+*   WebDAV - verbs within the HTTP protocol - needs to be enabled on any proxy server
 
-You can look up the IP address of [https://teamserver.sprintr.com/](http://teamserver.sprintr.com/), however, Mendix reserves the right to, at any time and without notification to the customer, change the IP address. This could happen if we move to a different infrastructure for example.
+Mendix Studio Pro connects to `https://teamserver.sprintr.com/` and with the domains shown in the diagram below over HTTPS on port 443. These domains should be added to the firewall white list:
 
-If needed, inform your IT department that the Mendix Modeler connects to [https://teamserver.sprintr.com/](https://teamserver.sprintr.com/). This will enable them to determine the correct firewall/proxy settings.
+![Domains home.mendix.com, cloud.mendix.com, and teamserver.sprintr.com need to be accessible on port 443 from your network](attachments/troubleshoot-team-server/networkaccessmendixplatform.jpg)
 
-The Mendix Modeler connects with the domains stated below over HTTPS on port 443. These domains should be added to the firewall white list:
+You can look up the IP address of `https://teamserver.sprintr.com/`. Bear in mind, however, that Mendix reserves the right to change the IP address at any time, and without notification to the customer. This could happen if we move to a different infrastructure, for example.
 
-![](attachments/troubleshoot-team-server/networkaccessmendixplatform.jpg)
+{{% alert type="info" %}}
+Contact your network administrator and give them this information to allow them to configure your network (for example, firewall and proxy settings) correctly.
+{{% /alert %}}
 
-* [home.mendix.com](http://mendix.com/) – enables logging in to use the Mendix Modeler
-* [cloud.home.mendix.com](http://cloud.home.mendix.com/) – enables deploying your app to the Mendix Cloud
+## 3 Still Having Problems?
 
+If this solution does not work, submit a request to Mendix Support at [support.mendix.com](https://support.mendix.com/).

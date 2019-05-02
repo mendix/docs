@@ -68,4 +68,4 @@ Documentation for the document template.
 
 ### Canvas width
 
-The canvas width determines the width of the canvas on which you are building the document template in the Modeler. This property has no effect on the application whatsoever.
+The canvas width determines the width of the canvas on which you are building the document template in Studio Pro. This property has no effect on the application whatsoever.

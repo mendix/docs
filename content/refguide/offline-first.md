@@ -1,7 +1,7 @@
 ---
 title: "Offline First"
-parent: "general-parent"
-menu_order: 40
+category: "Mobile Development"
+menu_order: 30
 tags: ["offline", "native", "mobile"]
 ---
 

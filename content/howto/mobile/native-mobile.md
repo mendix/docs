@@ -1,7 +1,7 @@
 ---
 title: "Native Mobile"
 category: "Mobile Development"
-menu_order: 9
+menu_order: 1
 tags: ["mobile", "native"]
 ---
 
@@ -13,6 +13,6 @@ You build Mendix native mobile apps the same way you build web or hybrid apps. Y
 
 ## 2 Documents in This Sub-Category
 
-* [Create and Test a Native Mobile App](getting-started-with-native-mobile)
-* [Create and Test Native Mobile Apps on a Mac](using-mendix-studio-pro-on-a-mac)
+* [Create & Test a Native Mobile App](getting-started-with-native-mobile)
+* [Create & Test Native Mobile Apps on a Mac](using-mendix-studio-pro-on-a-mac)
 * [Native Styling](native-styling)

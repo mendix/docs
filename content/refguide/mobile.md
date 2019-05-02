@@ -35,4 +35,4 @@ Mendix's native mobile apps are always configured with offline-first capabilitie
 
 * [Native Mobile](native-mobile)
 * [Hybrid Mobile](hybrid-mobile)
-* [General](general-parent)
+* [Offline First](offline-first)

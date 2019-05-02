@@ -29,11 +29,11 @@ The [import mapping](import-mappings) defines how to transform the XML or JSON i
 
 ### 3.2 Input Content Type
 
-If the import mapping is based on a [message definition](message-definition), it can import both XML and JSON. Select whether the input variable contains XML or JSON.
+If the import mapping is based on a [message definitions](message-definitions), it can import both XML and JSON. Select whether the input variable contains XML or JSON.
 
 ### 3.3 The Input Contains
 
-If the import mapping is based on a [message definition](message-definition), it can import both single objects and lists. Select whether the input variable contains a single object or a list of objects.
+If the import mapping is based on a [message definitions](message-definitions), it can import both single objects and lists. Select whether the input variable contains a single object or a list of objects.
 
 ### 3.4 If No Object Was Found
 

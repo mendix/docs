@@ -1,6 +1,6 @@
 ---
 title: "Native Mobile"
-category: "Mobile Development"
+category: "Mobile"
 menu_order: 1
 tags: ["mobile", "native"]
 ---

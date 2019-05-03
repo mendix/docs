@@ -17,7 +17,7 @@ This how-to will show you how to specify a preview image that will be rendered i
 Before starting with this how-to, make sure you have completed the following prerequisites:
 
 * Download and install [Mendix Studio Pro](https://appstore.home.mendix.com/link/modelers/)
-* Read [Widget Development](index)
+* Read [Custom Widgets](index)
 
 ## 3 Adding a Preview Image to Your Custom Widget Package
 
@@ -31,6 +31,3 @@ After packaging your custom widget, the image provided will be rendered in Studi
 
 Please note that older versions of Studio Pro ignore this image and render a grey rectangle as usual.
 
-## 4 Read More
-
-* [Widget Development](index)

@@ -203,7 +203,7 @@ studio:
     - "Checks"
     - "Consistency Errors"
     - "Theme Customizer"
-    - "App Settings"
+    - "Settings"
 best-practices:
   space: "Mendix 7 Best Practices"
   priority: false

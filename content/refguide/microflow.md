@@ -38,7 +38,7 @@ Error microflow defines which microflow is executed when concurrent execution is
 
 ## 4 Output Properties
 
-### 4.1 Return type
+### 4.1 Return Type
 
 The return type defines what information the microflow returns. The caller of the microflow will get a result of this type. See [Data Types](data-types) for the possible return types.
 
@@ -50,7 +50,7 @@ A microflow could return whether or not the committing of an object should conti
 
 ## 5 Security Properties
 
-### 5.1 Allowed roles
+### 5.1 Allowed Roles
 
 Allowed roles defines to which [module role](module-role) the user must have to be able to execute the microflow.
 
@@ -62,14 +62,12 @@ Note that these roles are only checked when the microflow is executed from the c
 
 See also [Module Security](module-security).
 
-### 5.2 Apply entity access
+### 5.2 Apply Entity Access
 
 This property indicates whether entity access based on the current user is applied when performing operations on objects. Applying entity access limits the objects that are retrieved by the [retrieve action](retrieve) to only those that the current user is allowed to see. Similarly, to reading and writing attributes and associations the entity access of the current user is applied. If entity access is not applied on the other hand, all operations are allowed and all objects are retrieved.
 
 {{% alert type="warning" %}}
-
-Microflows that apply entity access have a yellow background; microflows that do not have a white background.
-
+Microflows that apply entity access have an **Entity Access** tag in the editor.
 {{% /alert %}}
 
 | Option | Description |
@@ -78,9 +76,7 @@ Microflows that apply entity access have a yellow background; microflows that do
 | No | Entity access is not applied. |
 
 {{% alert type="success" %}}
-
 By default entity access is not applied. Set 'Apply entity access' to 'Yes' if you want to perform some actions that respect the access rights of the current user.
-
 {{% /alert %}}
 
 _Default value:_ No

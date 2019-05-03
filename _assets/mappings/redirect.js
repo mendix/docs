@@ -460,6 +460,10 @@ module.exports = {
       to: "/refguide7/sync-webmodeler-desktopmodeler"
     },
 	{
+      from: "/howto/web-modeler/syncing-webmodeler-desktop",
+      to: "/refguide7/sync-webmodeler-desktopmodeler"
+    },
+	{
       from: "/refguide7/download-from-team-server-dialog",
       to: "/refguide7/download-from-version-control-dialog"
     },

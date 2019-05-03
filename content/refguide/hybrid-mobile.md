@@ -1,6 +1,6 @@
 ---
 title: "Hybrid Mobile"
-category: "Mobile Development"
+category: "Mobile"
 menu_order: 2
 tags: ["mobile", "hybrid"]
 ---

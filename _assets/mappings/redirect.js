@@ -198,6 +198,10 @@ module.exports = {
       from: "/developerportal/community-tools/the-mendix-job-board",
       to: "/developerportal/community-tools/mendix-job-board"
     },
+	{
+      from: "/refguide/publish-packages-to-mobile-stores",
+      to: "/howto/mobile/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores"
+    },
 	/****************************************************
      * From the App Store (permanent, mapped)
      ****************************************************/
@@ -440,6 +444,10 @@ module.exports = {
       from: "/refguide8/Select++Elements",
       to: "/refguide/select--elements"
     },
+	{
+      from: "/refguide8/Developing+Hybrid+Mobile+Apps",
+      to: "/refguide/developing-hybrid-mobile-apps"
+    },
 	/****************************************************
      * From Desktop Modeler version 7 (permanent, mapped)
      ****************************************************/
@@ -457,6 +465,10 @@ module.exports = {
     },
 	{
       from: "/web-modeler/general-sync-webmodeler-desktopmodeler-wm",
+      to: "/refguide7/sync-webmodeler-desktopmodeler"
+    },
+	{
+      from: "/howto/web-modeler/syncing-webmodeler-desktop",
       to: "/refguide7/sync-webmodeler-desktopmodeler"
     },
 	{
@@ -498,6 +510,10 @@ module.exports = {
 	{
       from: "/refguide7/Select++Elements",
       to: "/refguide7/select--elements"
+    },
+	{
+      from: "/refguide7/Developing+Hybrid+Mobile+Apps",
+      to: "/refguide7/developing-hybrid-mobile-apps"
     },
 	/****************************************************
      * From Desktop Modeler version 6 (permanent)

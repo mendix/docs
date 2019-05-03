@@ -1,6 +1,6 @@
 ---
 title: "Use XML in Widget Development"
-category: "Widget Development"
+category: "Custom Widgets"
 tags: ["xml", "widget"]
 ---
 
@@ -342,7 +342,3 @@ What it looks like in Mendix Studio Pro:
 {{% alert type="info" %}}
 Remember to use the correct language notation according to the [Java supported locales](http://java.sun.com/javase/6/docs/technotes/guides/intl/locale.doc.html).
 {{% /alert %}}
-
-## 6 Read More
-
-*   [Widget Development](index)

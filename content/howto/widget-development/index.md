@@ -1,5 +1,5 @@
 ---
-title: "Widget Development"
+title: "Custom Widgets"
 tags: ["widget", "develop widget", "customize"]
 ---
 

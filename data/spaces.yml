@@ -89,21 +89,21 @@ howto:
   space: "Mendix 8 How-to's"
   priority: 7
   mendix_version: 8
-  menu_categories:
+  menu_categories:  
     - "General Info"
+    - "Collaboration & Requirements Management"
     - "Front-End"
+    - "Mobile Development"
     - "Data Models"
     - "Logic & Business Rules"
-    - "Mobile Development"
-    - "Security"
     - "Integration"
-    - "SAP"
-    - "Siemens MindSphere"
     - "Extensibility"
     - "Widget Development"
+    - "Security"
     - "Testing"
     - "Monitoring & Troubleshooting"
-    - "Collaboration & Requirements Management"
+    - "SAP"
+    - "Siemens MindSphere"    
   banner:
     type: 'info'
     text: 'You are browsing the documentation for Mendix 8, which is currently a beta release. For more information, see <a href="/releasenotes/beta-features/index">What Are Mendix Beta Features?</a>.'

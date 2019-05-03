@@ -198,6 +198,10 @@ module.exports = {
       from: "/developerportal/community-tools/the-mendix-job-board",
       to: "/developerportal/community-tools/mendix-job-board"
     },
+	{
+      from: "/refguide/publish-packages-to-mobile-stores",
+      to: "/howto/mobile/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores"
+    },
 	/****************************************************
      * From the App Store (permanent, mapped)
      ****************************************************/

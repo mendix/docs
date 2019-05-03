@@ -259,7 +259,7 @@ gulp.task('algolia', `Push Algolia indexes`, done => {
  PDFS
 **************************************************/
 gulp.task('pdf', `Generate PDFs`, done => {
-  const bestPracticesFolder = 'best-practices7';
+  const bestPracticesFolder = 'best-practices';
   generatePDF({
     src: path.join(CONFIG.CONTENTFOLDER, bestPracticesFolder),
     dist: path.join(CONFIG.DIST_FOLDER, bestPracticesFolder),

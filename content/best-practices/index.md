@@ -1,6 +1,6 @@
 ---
-title: "Mendix 7 Best Practices"
-description: "Best practices."
+title: "Mendix Best Practices"
+description: "Mendix Best practices."
 draft: true
 notoc: true
 layout: wide

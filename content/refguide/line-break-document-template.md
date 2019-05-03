@@ -1,5 +1,5 @@
 ---
-title: "Line break (Document Template)"
+title: "Line Break (Document Template)"
 parent: "document-templates"
 ---
 

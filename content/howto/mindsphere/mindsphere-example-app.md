@@ -224,7 +224,7 @@ For a more complete description, see the [User Scopes](#userscopes) section.
 
 #### 6.1.2 Multi-Tenant Support
 
-The user is also connected to their MindSphere tenant. This enables security to be placed on persistent Mendix entity objects.
+The user is also connected to their MindSphere tenant. This enables security to be placed on persistable Mendix entity objects.
 
 MindSphere SSO provides the user’s tenant as the **Name** attribute in the **Tenant** entity.
 

@@ -1,5 +1,5 @@
 ---
-title: "Unary expressions"
+title: "Unary Expressions"
 parent: "expressions"
 ---
 

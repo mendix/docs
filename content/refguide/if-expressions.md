@@ -1,5 +1,5 @@
 ---
-title: "If expressions"
+title: "If Expressions"
 parent: "expressions"
 ---
 

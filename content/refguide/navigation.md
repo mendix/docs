@@ -53,7 +53,7 @@ All the users accessing the Mendix app from a browser on a phone will automatica
 
 ### 2.5 Native Phone
 
-A Mendix app can be installed on a phone as a native application which has the benefit of a more responsive UI. The app will also be [offline first](offline-first): all data is stored on the phone and only synchronized with the server on request.
+A Mendix app can be installed on a phone as a native application which has the benefit of a more responsive UI. The app will also be [offline-first](offline-first), which means all the data is stored on the phone and only synchronized with the server on request.
 
 ## 3 Redirection to Profiles {#redirection}
 

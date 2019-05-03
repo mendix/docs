@@ -4,6 +4,9 @@ parent: "search-bar"
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+## Introduction
+
+To add a drop-down search field to your data grid, right-click within the search bar in your data grid and choose **Add search field > Drop-down**.
 
 ## Common Properties
 

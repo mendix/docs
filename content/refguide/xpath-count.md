@@ -1,5 +1,5 @@
 ---
-title: "XPath count"
+title: "XPath Count"
 parent: "xpath-query-functions"
 ---
 

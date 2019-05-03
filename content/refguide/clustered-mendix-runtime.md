@@ -64,7 +64,7 @@ For more information about configuring the Mendix Runtime to store files on thes
 
 ## 7 After-Startup & Before-Shutdown Microflows {#startup-shutdown-microflows}
 
-It is possible to configure `After-Startup` and `Before-Shutdown` microflows in Mendix. In a Mendix cluster, this means that those microflows are called per node. This lets you register request handlers and other activities. However, doing database maintainance during these microflows is strongly discouraged, because it might impact other nodes of the same cluster. There is no possibility to run a microflow on cluster startup or shutdown.
+It is possible to configure `After-Startup` and `Before-Shutdown` microflows in Mendix. In a Mendix cluster, this means that those microflows are called per node. This lets you register request handlers and other activities. However, doing database maintenance during these microflows is strongly discouraged, because it might impact other nodes of the same cluster. There is no possibility to run a microflow on cluster startup or shutdown.
 
 ## 8 Cluster Limitations
 
@@ -82,7 +82,7 @@ For the reason described above, the **Disallow concurrent execution** property o
 
 ## 9 Dirty State in a Cluster
 
-When a user signs in to a Mendix application and starts going through a certain application flow, the system can temporararily retain some data while not persisting it yet in the database. The data is retained in the Mendix Client memory and communicated on behalf of the user to a Mendix Runtime node.
+When a user signs in to a Mendix application and starts going through a certain application flow, the system can temporarily retain some data while not persisting it yet in the database. The data is retained in the Mendix Client memory and communicated on behalf of the user to a Mendix Runtime node.
 
 For example, imagine you are booking a vacation through a Mendix app with a flight, hotel, and rental car. In the first step, you select and configure the flight, in the second one your hotel, in the third your rental car, and in the final step, you confirm the booking and payment. Each of these steps could be in a different screen, but when you go from step one to step two, you would still like to remember your booked flight. This is called the "dirty state." The data is not finalized yet, but should be retained between different requests. Because it is necessary to reliably scale out and support failover scenarios, the state cannot be stored in the memory of one Mendix Runtime node between requests. Therefore, the state is returned to the caller (the Mendix Client) and added to subsequent requests, so that every node can work with that state for those requests.
 

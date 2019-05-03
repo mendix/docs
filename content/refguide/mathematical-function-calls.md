@@ -1,5 +1,5 @@
 ---
-title: "Mathematical function calls"
+title: "Mathematical Function Calls"
 parent: "expressions"
 ---
 

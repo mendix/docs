@@ -8,7 +8,7 @@ tags: ["native", "mobile", "developer", "test"]
 
 ## 1 Introduction
 
-To use Mendix Studio Pro's native app capabilities, you can either start using a Blank app or download the Native Mobile Quickstart app. This how-to uses the latter, because it is optimized to quickly build a native mobile app. Out of the box this app gives you a native page, a native phone profile to enable native device navigation, a native layout with menus, and native widgets and actions which leverage device capabilities.
+To use Mendix Studio Pro's native app capabilities, you can either start using a Blank app or download the [Native Mobile Quickstart](https://appstore.home.mendix.com/link/app/109511/) app from the Mendix App Store. This how-to uses the latter, because it is optimized to quickly build a native mobile app. Out of the box this app gives you a native page, a native phone profile to enable native device navigation, a native layout with menus, and native widgets and actions which leverage device capabilities.
 
 The Native Mobile Quickstart app also includes four modules:
 
@@ -29,7 +29,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 {{% todo %}}[add Apple App Store link to MakeItNative app]{{% /todo %}}
 
-For details on making an app using the Native Mobile Quickstart app template, download the [Make It Native](https://play.google.com/store/apps/details?id=com.mendix.developerapp) app. Using the Make It Native app to view the changes to your app, see the sections below.
+For details on making a Mendix app using the Native Mobile Quickstart app template, download the [Make It Native](https://play.google.com/store/apps/details?id=com.mendix.developerapp) app. Using the Make It Native app to view the changes to your Mendix app, see the sections below.
 
 ### 3.1 Starting a Quickstarter App Project
 
@@ -69,7 +69,7 @@ To view your app on a mobile device, you must install the Make It Native app. Th
 
 #### Option 1: Use the App Store for Your Device
 
-Search for the Make It Native app in the App Store or download it from [Google Play](https://play.google.com/store/apps/details?id=com.mendix.developerapp) and install it to your mobile device:
+Download the Make It Native app from [Google Play](https://play.google.com/store/apps/details?id=com.mendix.developerapp) (coming soon for iOS) and install it on your mobile device:
 
 {{% image_container width="500" %}}![native app on googleplay](attachments/getting-started-with-native-mobile/make-it-native-googleplay.png){{% /image_container %}}
 

@@ -1,5 +1,5 @@
 ---
-title: "Date creation"
+title: "Date Creation"
 parent: "expressions"
 ---
 

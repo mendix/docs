@@ -86,7 +86,7 @@ This graph shows the total number of threads that exist inside the running JVM p
 
 ### <a name="Trends-appmxruntimecache"></a>3.8 Object Cache
 
-Non-Persistent Entities live in the JVM memory and are garbage collected regularly. If you have a memory leak, the number of objects in memory will grow over time. This might be a problem. In this graph you can monitor the number of Mendix Objects that live in memory.
+Non-Persistable Entities live in the JVM memory and are garbage collected regularly. If you have a memory leak, the number of objects in memory will grow over time. This might be a problem. In this graph you can monitor the number of Mendix Objects that live in memory.
 
 ## 4 Database Statistics
 

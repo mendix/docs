@@ -1,5 +1,5 @@
 ---
-title: "Table row"
+title: "Table Row"
 parent: "table"
 ---
 

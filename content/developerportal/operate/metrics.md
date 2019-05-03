@@ -55,7 +55,7 @@ The details of an Action Stack are:
 
 ## 4 Cache
 
-Mendix runtime version 6 has an object cache for non-persistent objects. In this tab you can see how many objects of each type currently live in memory. You can also see the same information broken down per user session.
+Mendix runtime version 6 has an object cache for non-persistable objects. In this tab you can see how many objects of each type currently live in memory. You can also see the same information broken down per user session.
 
 {{% alert type="info" %}}
 

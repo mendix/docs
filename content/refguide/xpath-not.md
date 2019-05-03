@@ -1,5 +1,5 @@
 ---
-title: "XPath not"
+title: "XPath Not"
 parent: "xpath-constraint-functions"
 ---
 

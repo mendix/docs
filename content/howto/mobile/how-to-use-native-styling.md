@@ -17,7 +17,7 @@ With Mendix 8, you have the capacity to alter design properties with Mendix Stud
 
 ### 3 Customizing the Quickstart App
 
-The Native Mobile Quickstart app is styled using an Atlas UI Resources package. This package consists of:
+The [Native Mobile Quickstart](https://appstore.home.mendix.com/link/app/109511/) app is styled using an Atlas UI Resources package. This package consists of:
 
 * Widgets
 * Building blocks
@@ -101,7 +101,7 @@ When you have specific design requirements, you will need to build custom classe
 			<ViewStyle properties>
 		},
 		icon: {
-		}
+		},
 		caption: {
 			<TextStyle properties>
 		}
@@ -118,7 +118,7 @@ When you have specific design requirements, you will need to build custom classe
 			backgroundColor: "transparent"
 		},
 		icon: {
-		}
+		},
 		caption: {
 		}
 	}

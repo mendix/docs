@@ -1,8 +1,8 @@
 ---
 title: "Data Filters"
-menu_order: 
+menu_order: 52
 description: "Describes data filtering in page and microflow editors in Mendix Studio."
-tags: ["studio", "microflow", "filter", "filters", "filtering", "data", "data filtering", "retrieve", "page", "data view", "list view", "data grid", "xpath", "constraints"]
+tags: ["studio", "microflow", "filter", "filters", "filtering", "data", "data filtering", "retrieve", "page", "xpath", "constraints"]
 ---
 
 ## 1 Introduction 
@@ -13,7 +13,7 @@ In Mendix Studio, you can filter data in pages and microflows.
 
 ![](attachments/filters/retrieve-from-database.png)
 
-*In a page*, you can add a filter to data containers: a data view, a list view, and a data grid. The data source of the data container should be the database. 
+*In a page*, you can add a filter to a list view and a data grid. The data source of the list view or the data grid should be **Database**. 
 
 ![](attachments/filters/page-database.jpg)
 
@@ -67,7 +67,7 @@ To create a new filter, do the following:
 
 1. To add a filter to a *microflow*, open the **Retrieve** action properties. 
 
-    To add a filter to a *page*, open properties of a data container (a data view, a list view, or a data grid).
+    To add a filter to a *page*, open properties of a list view or a data grid).
 
 2. Make sure the database is selected as the data source and that an entity is selected.
 
@@ -114,7 +114,7 @@ To delete a filter, do the following:
 
 1. In a *microflow*, navigate to properties of the **Retrieve** action. 
 
-    In a *page*, navigate to properties of a data container.
+    In a *page*, navigate to properties of a list view or a data grid.
 
 2. Click the **Filter** field.
 

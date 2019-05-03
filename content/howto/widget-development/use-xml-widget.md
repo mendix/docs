@@ -1,6 +1,6 @@
 ---
 title: "Use XML in Widget Development"
-category: "Widget Development"
+category: "Custom Widgets"
 tags: ["xml", "widget"]
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Add a Preview Image for a Custom Widget"
-category: "Widget Development"
+category: "Custom Widgets"
 tags: ["image", "preview", "widget", "custom"]
 ---
 

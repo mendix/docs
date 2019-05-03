@@ -91,7 +91,7 @@ howto:
   mendix_version: 8
   menu_categories:  
     - "General Info"
-    - "Collaboration & Requirements Management"
+    - "Collaboration"
     - "Front-End"
     - "Mobile Development"
     - "Data Models"

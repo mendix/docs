@@ -1,6 +1,6 @@
 ---
 title: "Troubleshoot Network Issues for Connecting to Team Server"
-category: "Collaboration & Requirements Management"
+category: "Collaboration"
 menu_order: 14
 description: "Describes troubleshooting connection issues as well as the permissions and settings required to connect to Team Server."
 tags: ["Team Server", "network", "troubleshoot", "firewall"]

@@ -1,6 +1,6 @@
 ---
 title: "Start Your Own Repository"
-category: "Collaboration & Requirements Management"
+category: "Collaboration"
 menu_order: 30
 tags: []
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Solve Known Version Control Issues"
-category: "Collaboration & Requirements Management"
+category: "Collaboration"
 menu_order: 7
 description: "This document presents a list of problems and fixes for version control issues."
 tags: ["version control", "troubleshoot", "Studio Pro"]

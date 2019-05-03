@@ -1,6 +1,6 @@
 ---
 title: "Work with an On-Premises Version Control Server"
-category: "Collaboration & Requirements Management"
+category: "Collaboration"
 menu_order: 60
 tags: ["on-premises"]
 ---

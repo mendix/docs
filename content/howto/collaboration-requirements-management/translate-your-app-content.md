@@ -1,6 +1,6 @@
 ---
 title: "Translate Your App Content"
-category: "Collaboration & Requirements Management"
+category: "Collaboration"
 menu_order: 50
 tags: []
 ---

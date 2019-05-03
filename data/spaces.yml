@@ -204,7 +204,7 @@ studio:
     - "Consistency Errors"
     - "Theme Customizer"
     - "App Settings"
-best-practices7:
+best-practices:
   space: "Mendix 7 Best Practices"
   priority: false
   draft: true

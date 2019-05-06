@@ -3,6 +3,7 @@ title: "Create a Custom Theme with the Mendix UI Framework"
 category: "Front-End"
 menu_order: 40
 tags: ["Front-End"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction

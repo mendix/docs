@@ -234,6 +234,10 @@ module.exports = {
       to: "/developerportal/deploy/integrate-with-mendix-sso"
     },
 	{
+      from: "/howto/ux/create-a-custom-theme-with-the-mendix-ui-framework",
+      to: "/howto/front-end/create-a-custom-theme-with-the-mendix-ui-framework"
+    },
+	{
       from: "/addons/APM",
       to: "/apm/"
     },

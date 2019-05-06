@@ -40,7 +40,7 @@ Right now the input is editable for any user at all times. However, the input sh
 
 To add these restrictions, follow the instructions below:
 
-1. In *TextBox.xml* add the enumeration attribute for `Editable`: 
+1. In *TextBox.xml* add the enumeration attribute for `Editable` inside `propertyGroup` (where you put the attribute inside `propertyGroup` will affect how the attribute renders in the Mendix Studios): 
 
 	```ts
 	<property key="editable" type="enumeration" defaultValue="default">
@@ -55,7 +55,7 @@ To add these restrictions, follow the instructions below:
 
 2. Run `npm run build` to update the TypeScript definitions inside *TextBoxProps.d.ts*. 
 
-3. Now add read-only functionality to your widget. In *TextBox.tsx*, add a function to check if the input should be disabled and pass it to in the `TextInput` component:
+3. Now add read-only functionality to your widget. In *TextBox.tsx*, replace the `render` function with the code below to check if the input should be disabled and pass it to in the `TextInput` component:
 
 	```ts
 	render(): ReactNode {
@@ -81,7 +81,7 @@ To add these restrictions, follow the instructions below:
 
 4. In *components/TextInput.tsx*, add the `disabled` property to the `InputProps` interface and set the HTML input attribute to `disabled`:
 
-	```javascript
+	```ts
 	import { CSSProperties, ChangeEvent, Component, ReactNode, createElement } from "react";
 	import classNames from "classnames";
 	export interface InputProps {
@@ -173,7 +173,7 @@ This section will teach you to add validation to your TextBox widget. Using micr
 	* The component has a `displayName` for debugging and error messages
 	* A `function` component can also have default properties which are set directly on the prototype
 
-4. In *TextBox.tsx*, the validation feedback can be accessed though the attribute `validation` property and shown in the `Alert` component:
+4. In *TextBox.tsx*, the validation feedback can be accessed though the attribute `validation` property and shown in the `Alert` component. Replace the `render` function with the following code:
 
 	```ts
 	render(): ReactNode {
@@ -193,15 +193,22 @@ This section will teach you to add validation to your TextBox widget. Using micr
 	}
 	```
 
-	After altering this code, run `npm run build` to update the widget. Next, in Mendix Studio Pro, press <kbd>F4</kbd> to synchronize your project directory, and then right-click your TextBox widget and select **Update widget**. Then click **Run Locally**, and click **View** to see your changes. 
+Next, add `Fragment` to the current React import (shown below), and add a new `Alert` import underneath the existing imports in *TextBox.tsx*:
 
+	```ts
+	import { Component, ReactNode, Fragment, createElement } from "react";
+	import { Alert } from "./components/Alert";
+	```
+	
+	After altering this code, run `npm run build` to update the widget. Next, in Mendix Studio Pro, press <kbd>F4</kbd> to synchronize your project directory, and then right-click your TextBox widget and select **Update widget**. Then click **Run Locally**, and click **View** to see your changes. 
+	
 	Explaining the code:
 	
 	* React nodes each require a root element – to create a non-rendering element and group the container elements, a `Fragment` can be used
 	* When there is no error the validation will be empty, the `Alert` will not show, and the component will return `null`
-
+	
 	Now, your widget will show validation feedback from its microflow:
-
+	
 	{{% image_container width="350" %}}![validation feedback demo](attachments/pluggable-part-two/microflowwithvalidationfeedback.png){{% /image_container %}}
 
 ### 3.3 Customizing Validation
@@ -209,7 +216,7 @@ This section will teach you to add validation to your TextBox widget. Using micr
 Validation can come from a modeled microflow or nanoflow, but can also be widget specific. For this sample you will learn to implement a custom, required message which will show when the input is empty.
 
 
-1.  In *TextBox.xml* add the `requiredMessage` property:
+1.  In *TextBox.xml*, add the `requiredMessage` property inside `propertyGroup`:
 
 	```xml
 	<property key="requiredMessage" type="textTemplate" required="false">
@@ -226,7 +233,7 @@ Validation can come from a modeled microflow or nanoflow, but can also be widget
 	* `textTemplate` strings are translatable strings which can also have attributes and data values
 	* Default values can be added to the XML and are language specific
 
-2. In *TextBox.tsx* add a validation handler to the attribute:
+2. In *TextBox.tsx*, add a validation handler to the attribute after the `onUpdate` function:
 
 	```ts
 	componentDidMount() {
@@ -263,7 +270,7 @@ Until now the components did not keep any state. Each keystroke passed through t
 {{% alert type="warning" %}}
 Limitation: The implementation in this sample will cause the onChange event to trigger when the validation fails. A failed validation will prevent the real change in the attribute, thus the actual value will not be changed.{{% /alert %}}
 
-1.  In the *TextBox.xml* add the `onChange` action:
+1.  In *TextBox.xml*, add the `onChange` action inside `propertyGroup`:
 
 	```xml
 	<property key="onChangeAction" type="action" required="false">
@@ -278,33 +285,48 @@ Limitation: The implementation in this sample will cause the onChange event to t
 
 	![various actions](attachments/pluggable-part-two/variousactions.png)
 
-2. In *TextBox.tsx* check if `onChangeAction` is available and call the execute function `onLeave` when the value is changed. When doing this, replace the `onUpdate` function with your new `onLeave` function:
+2. In *TextBox.tsx*, check if `onChangeAction` is available and call the execute function `onLeave` when the value is changed. When doing this, replace the `onUpdate` function with your new `onLeave` function:
    
 	```ts
-	private readonly onLeaveHandle = this.onLeave.bind(this);
-	render(): ReactNode {
-		const value = this.props.textAttribute.value || "";
-		const validationFeedback = this.props.textAttribute.validation;
-		return <Fragment>
-			<TextInput
-				value={value}
-				style={this.props.style}
-				className={this.props.class}
-				tabIndex={this.props.tabIndex}
-				disabled={this.isReadOnly()}
-				onLeave={this.onLeaveHandle}
-			/>
-			<Alert>{validationFeedback}</Alert>
-		</Fragment>;
-	}
-	private onLeave(value: string, isChanged: boolean) {
-		if (!isChanged) {
-			return;
+	class TextBox extends Component<TextBoxContainerProps> {
+		private readonly onLeaveHandle = this.onLeave.bind(this);
+		componentDidMount() {
+			this.props.textAttribute.setValidator(this.validator.bind(this));
 		}
-		const { textAttribute, onChangeAction } = this.props;
-		textAttribute.setValue(value);
-		if (onChangeAction && onChangeAction.canExecute) {
-onChangeAction.execute();
+		render(): ReactNode {
+			const value = this.props.textAttribute.value || "";
+			const validationFeedback = this.props.textAttribute.validation;
+			return <Fragment>
+				<TextInput
+					value={value}
+					style={this.props.style}
+					className={this.props.class}
+					tabIndex={this.props.tabIndex}
+					disabled={this.isReadOnly()}
+					onLeave={this.onLeaveHandle}
+				/>
+				<Alert>{validationFeedback}</Alert>
+			</Fragment>;
+		}
+		private isReadOnly(): boolean {
+			return this.props.editable === "default" || this.props.textAttribute.readOnly;
+		}
+		private onLeave(value: string, isChanged: boolean) {
+			if (!isChanged) {
+				return;
+			}
+			const { textAttribute, onChangeAction } = this.props;
+			textAttribute.setValue(value);
+			if (onChangeAction && onChangeAction.canExecute) {
+				onChangeAction.execute();
+			}
+		}
+		private validator(value: string | undefined): string | undefined {
+			const { requiredMessage } = this.props;
+			if (requiredMessage && requiredMessage.value && !value) {
+				return requiredMessage.value;
+			}
+			return;
 		}
 	}
 	```
@@ -380,7 +402,7 @@ onChangeAction.execute();
 
 To make the input widget more accessible for people using screen readers, you will need to provide hints about the input. 
 
-1. In the *TextBox.tsx*, file pass the `id`, `required`, and `hasError` properties:
+1. In *TextBox.tsx*, replace the `render` function with `id`, `required`, and `hasError` properties:
    
 	```ts
 	render(): ReactNode {
@@ -404,9 +426,11 @@ To make the input widget more accessible for people using screen readers, you wi
 	}
 	```
 
-2. In `components/Alert.tsx`, add the `id` and `alert`properties:
+2. In *components/Alert.tsx*, add the `id` and `alert`properties:
 
 	```ts
+	import { FunctionComponent, createElement } from "react";
+	import classNames from "classnames";
 	export interface AlertProps {
 		id?: string;
 		alertStyle?: "default" | "primary" | "success" | "info" | "warning" | "danger";
@@ -420,7 +444,7 @@ To make the input widget more accessible for people using screen readers, you wi
 	Alert.defaultProps = { alertStyle: "danger" };
 	```
 
-3. In *components/TextInput.tsx*, add the `id` property to the `InputProps` and pass from it from the `TextBox` component to the `TextInput` component. Then add the `id` and `aria` attributes to be rendered:
+3. In *components/TextInput.tsx*, add the `id` property to the `InputProps` and pass it from the `TextBox` component to the `TextInput` component:
 
 	```ts
 	export interface InputProps {
@@ -432,9 +456,14 @@ To make the input widget more accessible for people using screen readers, you wi
 		tabIndex?: number;
 		hasError?: boolean;
 		required?: boolean;
+		disabled?: boolean;
 		onLeave?: (value: string, changed: boolean) => void;
 	}
-
+	```
+	
+	Then add the `id` and `aria` attributes to be rendered:
+	
+	```ts
 	render(): ReactNode {
 		const className = classNames("form-control", this.props.className);
 		const labelledby = `${this.props.id}-label` 
@@ -472,15 +501,27 @@ To easily view changes to your widget while in Mendix Studio or Mendix Studio Pr
 To add preview mode functionality, create a new file *src/TextBox.webmodeler.tsx* and add this code to it:
 
 ```ts
-import { Component, ReactNode, createElement } from "react";
-import { TextBoxWebModelerProps } from "../typings/TextBoxProps";
+import { Component, createElement, ReactNode } from "react";
+import { TextBoxPreviewProps, VisibilityMap } from "../typings/TextBoxProps";
 import { TextInput } from "./components/TextInput";
-// tslint:disable-next-line class-name
-export class preview extends Component<TextBoxWebModelerProps> {
-	render(): ReactNode {
-		const value = `[${this.props.textAttribute}]`;
-		return <TextInput value={value} disabled={this.props.editable === "never"} />;
-	}
+
+declare function require(name: string): string;
+
+// eslint-disable-next-line @typescript-eslint/class-name-casing
+export class preview extends Component<TextBoxPreviewProps> {
+    render(): ReactNode {
+        const value = `[${this.props.textAttribute}]`;
+        return <TextInput value={value} disabled={this.props.editable === "never"} />;
+    }
+}
+
+export function getVisibleProperties(_valueMap: TextBoxPreviewProps, visibilityMap: VisibilityMap): VisibilityMap {
+    /* To hide any property in Mendix Studio, please assign the property in visibilityMap to false */
+    return visibilityMap;
+}
+
+export function getPreviewCss(): string {
+    return require("./ui/TextBox.css");
 }
 ```
 

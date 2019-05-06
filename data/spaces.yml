@@ -106,7 +106,7 @@ howto:
     - "Siemens MindSphere"    
   banner:
     type: 'info'
-    text: 'You are browsing the documentation for Mendix 8, which is currently a beta release. For more information, see <a href="/releasenotes/beta-features/index">What Are Mendix Beta Features?</a>.'
+    text: 'You are browsing the documentation for Mendix 8, which is currently a beta release. For more information, see <a href="/releasenotes/beta-features/index">Mendix Beta Features</a>.'
 refguide5:
   space: "Mendix 5 Reference Guide"
   priority: false
@@ -163,7 +163,7 @@ refguide:
     - "Siemens MindSphere"
   banner:
     type: 'info'
-    text: 'You are browsing the documentation for Mendix 8, which is currently a beta release. For more information, see <a href="/releasenotes/beta-features/index">What Are Mendix Beta Features?</a>.'
+    text: 'You are browsing the documentation for Mendix 8, which is currently a beta release. For more information, see <a href="/releasenotes/beta-features/index">Mendix Beta Features</a>.'
 releasenotes:
   space: "Release Notes"
   priority: false
@@ -174,7 +174,7 @@ releasenotes:
     - "Mobile Products"
     - "SDKs"
     - "Add-ons"
-    - "What Are Mendix Beta Features?"
+    - "Mendix Beta Features"
 developerportal:
   space: "Developer Portal Guide"
   priority: false

@@ -200,7 +200,11 @@ This section will teach you to add validation to your TextBox widget. Using micr
 	import { Alert } from "./components/Alert";
 	```
 	
-	After altering this code, run `npm run build` to update the widget. Next, in Mendix Studio Pro, press <kbd>F4</kbd> to synchronize your project directory, and then right-click your TextBox widget and select **Update widget**. Then click **Run Locally**, and click **View** to see your changes. 
+	After altering this code, do the following to see your changes:<br/>
+		a. Run `npm run build` to update the widget.<br/>
+		b. In Mendix Studio Pro, press <kbd>F4</kbd> to synchronize your project directory.<br/>
+		c. Right-click your TextBox widget and select **Update widget**. Then click **Run Locally**.<br/>
+		d. Click **View** to see your changes. 
 	
 	Explaining the code:
 	

@@ -38,13 +38,13 @@ In the **General settings** section, you must provide the following information:
 
 If you are targeting Mendix 7.2.0 or above, please specify the navigation profiles to use on phones and tablets.
 
-Make sure the profile identifier corresponds with the one defined in the Modeler.
+Make sure the profile identifier corresponds with the one defined in Mendix Studio Pro.
 
 * **Phone profile**
 * **Tablet profile**
 * **Enable offline capabilities?** (available offline apps)
 
-For more information, see **Availability** in [Offline](/refguide/offline).
+For more information, see **Availability** in [Offline](/refguide/offline-first).
 
 ### 2.3 Permissions
 
@@ -133,7 +133,7 @@ To generate the app store packages, go to [Build.PhoneGap.com](https://build.pho
 
 * [Customizing PhoneGap Build Packages](/refguide/customizing-phonegap-build-packages)
 * [Deploy and Manage](/developerportal/deploy)
-* [Offline](/refguide/offline)
+* [Offline](/refguide/offline-first)
 * [How to Publish a Mendix Hybrid Mobile App in App Stores](/howto/mobile/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)
 * [Adobe PhoneGap Build](https://build.phonegap.com/)
 * [Apache Cordova Phonegap Reference Config.xml](https://cordova.apache.org/docs/en/latest/config_ref/)

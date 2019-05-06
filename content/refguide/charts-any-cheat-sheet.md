@@ -371,4 +371,4 @@ This *cheat sheet* lists the most common chart types, together with a visual sam
 
 * Full chart documentation is here: [https://plot.ly/javascript/](https://plot.ly/javascript/)
 * [Any Chart Widget](charts-any-configuration)
-* [How to Use Any Chart](/howto7/extensibility/charts-any-usage)
+* [How to Use Any Chart](/howto/extensibility/charts-any-usage)

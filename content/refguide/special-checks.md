@@ -1,5 +1,5 @@
 ---
-title: "Special checks"
+title: "Special Checks"
 parent: "expressions"
 ---
 
@@ -72,11 +72,7 @@ isNew($object1)
 ## Checking Whether an Object Is Synced<a name="synced"></a>
 
 {{% alert type="info" %}}
-
 This function is available only in expressions for [conditional visibility or editability](conditions), as only they are evaluated client-side.
-
-This was added in Mendix 7.1.
-
 {{% /alert %}}
 
 ### Input
@@ -87,7 +83,7 @@ Type: Any type of object.
 
 ### Output
 
-Returns whether the changes done to the object [offline](offline) have been synchronized to the runtime database. In web profiles and [hybrid profiles](hybrid-phone-profile) without offline support, this always returns `true`.
+Returns whether the changes done to the object [offline](offline-first) have been synchronized to the runtime database. In web profiles and [hybrid profiles](navigation#hybrid-profiles) without offline support, this always returns `true`.
 
 Type: Boolean.
 

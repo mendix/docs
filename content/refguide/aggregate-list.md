@@ -1,6 +1,7 @@
 ---
 title: "Aggregate List"
 parent: "list-activities"
+tags: ["studio pro"]
 ---
 
 {{% alert type="info" %}}
@@ -39,7 +40,7 @@ Defines which type of aggregation is applied.
 
 ### 3.2 Attribute
 
-Defines which attribute of the objects in the list is used to aggregate over. This must be a numeric attribute (Long, Integer, Float (deprecated), Currency (deprecated) or Decimal). When using the 'Count' function it is not necessary to select an attribute, as it simply counts the number of objects in the list.
+Defines which attribute of the objects in the list is used to aggregate over. This must be a numeric attribute (Long, Integer, or Decimal). When using the 'Count' function it is not necessary to select an attribute, as it simply counts the number of objects in the list.
 
 ## 4 Output
 

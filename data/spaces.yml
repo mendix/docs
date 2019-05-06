@@ -50,7 +50,7 @@ howto50:
     - "Collaboration & Project Management"
 howto6:
   space: "Mendix 6 How-to's"
-  priority: 5
+  priority: false
   mendix_version: 6
   noindex: true
   menu_categories:
@@ -66,7 +66,7 @@ howto6:
     - "Testing"
     - "Monitoring & Troubleshooting"
     - "Collaboration & Project Management"
-howto:
+howto7:
   space: "Mendix 7 How-to's"
   priority: 6
   mendix_version: 7
@@ -85,6 +85,28 @@ howto:
     - "Testing"
     - "Monitoring & Troubleshooting"
     - "Collaboration & Requirements Management"
+howto:
+  space: "Mendix 8 How-to's"
+  priority: 7
+  mendix_version: 8
+  menu_categories:  
+    - "General Info"
+    - "Collaboration"
+    - "Front-End"
+    - "Mobile"
+    - "Data Models"
+    - "Logic & Business Rules"
+    - "Integration"
+    - "Extensibility"
+    - "Custom Widgets"
+    - "Security"
+    - "Testing"
+    - "Monitoring & Troubleshooting"
+    - "SAP"
+    - "Siemens MindSphere"    
+  banner:
+    type: 'info'
+    text: 'You are browsing the documentation for Mendix 8, which is currently a beta release. For more information, see <a href="/releasenotes/beta-features/index">Mendix Beta Features</a>.'
 refguide5:
   space: "Mendix 5 Reference Guide"
   priority: false
@@ -100,7 +122,7 @@ refguide5:
     - "Proactive Maintenance"
 refguide6:
   space: "Mendix 6 Reference Guide"
-  priority: 6
+  priority: false
   mendix_version: 6
   noindex: true
   menu_categories:
@@ -111,7 +133,7 @@ refguide6:
     - "Java Programming"
     - "Mobile"
     - "Proactive Maintenance"
-refguide:
+refguide7:
   space: "Mendix 7 Reference Guide"
   priority: 7
   mendix_version: 7
@@ -125,17 +147,34 @@ refguide:
     - "SAP"
     - "IBM"
     - "Siemens MindSphere"
+refguide:
+  space: "Studio Pro 8 Guide"
+  priority: 8
+  mendix_version: 8
+  menu_categories:
+    - "General Info"
+    - "App Modeling"
+    - "Version Control"
+    - "Mendix Runtime"
+    - "Mobile"
+    - "Java Programming"
+    - "SAP"
+    - "IBM"
+    - "Siemens MindSphere"
+  banner:
+    type: 'info'
+    text: 'You are browsing the documentation for Mendix 8, which is currently a beta release. For more information, see <a href="/releasenotes/beta-features/index">Mendix Beta Features</a>.'
 releasenotes:
   space: "Release Notes"
   priority: false
   menu_categories:
-    - "Desktop Modeler"
-    - "Web Modeler"
+    - "Studio Pro"
+    - "Studio"
     - "Developer Portal"
     - "Mobile Products"
     - "SDKs"
     - "Add-ons"
-    - "What Are Mendix Beta Features?"
+    - "Mendix Beta Features"
 developerportal:
   space: "Developer Portal Guide"
   priority: false
@@ -151,8 +190,8 @@ developerportal:
     - "Community Tools"
     - "App Store"
     - "Mendix Support"
-web-modeler:
-  space: "Web Modeler Guide"
+studio:
+  space: "Studio Guide"
   priority: false
   menu_categories:
     - "General Info"
@@ -166,7 +205,7 @@ web-modeler:
     - "Theme Customizer"
     - "App Settings"
 best-practices:
-  space: "Best Practices"
+  space: "Expert Best Practices"
   priority: false
   draft: true
   menu_categories:

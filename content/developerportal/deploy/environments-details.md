@@ -32,11 +32,8 @@ The view of the **General** tab depends on the Mendix Cloud version on which the
 * **Project ID** – the unique identifier for your Mendix app
 * **Environment ID** – the unique identifier of this environment
 * **Custom domains** – the custom domains of the app
-* **Java Version**
-   * Up to Mendix version 5.17, the version of Java is 1.7
-   * In Mendix version 5.18, you can choose between Java version 1.7 and 1.8
-   * From Mendix version 6, you cannot choose the Java version, and it is always version 1.8
-* **Web Modeler Target** – whether this environment is the one where apps will be deployed from the Web Modeler - see [Web Modeler Deployment Settings](web-modeler-deployment-settings) for more information
+* **Java Version** – always version 1.8
+* **Studio Target** – whether this environment is the one where apps will be deployed from Studio - see [Studio Deployment Settings](studio-deployment-settings) for more information
 * **Plan** – (*Cloud V4 only*) the type of plan covered by this licence
 * **Instances** – (*Cloud V4 only*) A summary of the number and memory allocation of *instances* of this environment: see section 2.3, [Scaling...](#scaling) for more information
 * **Database Status** – (*Cloud V3 only*) this is **Running** by default
@@ -62,7 +59,7 @@ On the right side of the screen, you can find the following action buttons:
 In Mendix Cloud v4 environments, you have two additional action buttons:
 
 * **View Live Log**
-* **Show debugger information** to show the settings to connect the debugger in your Mendix Desktop Modeler to your app. For Mendix Cloud v4, the debugger is *always* enabled.
+* **Show debugger information** to show the settings to connect the debugger in Studio Pro to your app. For Mendix Cloud v4, the debugger is *always* enabled.
 
 #### 2.1.2 Logging and Debugging in Mendix Cloud v3
 

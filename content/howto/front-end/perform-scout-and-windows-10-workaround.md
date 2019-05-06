@@ -20,9 +20,9 @@ Scout has not been updated for Windows 10. Therefore, Windows 10 users need to u
 
 ## 3 Read More
 
-* [How to Create Your First Two Overview & Detail Pages](create-your-first-two-overview-and-detail-pages)
-* [How to Set Up the Mendix UI Framework with Just CSS](setup-mendix-ui-framework-with-just-css)
-* [How to Set Up the Mendix UI Framework with Koala](setup-mendix-ui-framework-with-koala)
-* [How to Set Up the Mendix UI Framework with Scout](setup-mendix-ui-framework-with-scout)
-* [How to Set Up the Navigation Structure](../general/setting-up-the-navigation-structure)
-* [How to Use Layouts and Snippets](layouts-and-snippets)
+* [Create Your First Two Overview & Detail Pages](create-your-first-two-overview-and-detail-pages)
+* [Set Up the Mendix UI Framework with Just CSS](setup-mendix-ui-framework-with-just-css)
+* [Set Up the Mendix UI Framework with Koala](setup-mendix-ui-framework-with-koala)
+* [Set Up the Mendix UI Framework with Scout](setup-mendix-ui-framework-with-scout)
+* [Set Up the Navigation Structure](../general/setting-up-the-navigation-structure)
+* [Use Layouts and Snippets](layouts-and-snippets)

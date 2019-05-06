@@ -11,7 +11,7 @@ The following frameworks are automatically installed (if necessary):
 
 * Microsoft .NET Framework 4.5
 * Microsoft Visual C++ 2010 SP1 Redistributable Package
-* OpenJDK 8 (support added in [Mendix 6.10.18](/releasenotes/desktop-modeler/6.10)) or Java Development Kit 1.8
+* OpenJDK 8 (support added in [Mendix 6.10.18](/releasenotes/studio-pro/6.10)) or Java Development Kit 1.8
 
 {{% alert type="warning" %}}
 

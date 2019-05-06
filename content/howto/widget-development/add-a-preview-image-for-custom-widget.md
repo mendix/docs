@@ -1,12 +1,12 @@
 ---
 title: "Add a Preview Image for a Custom Widget"
-category: "Widget Development"
+category: "Custom Widgets"
 tags: ["image", "preview", "widget", "custom"]
 ---
 
 ## 1 Introduction
 
-This how-to will show you how to specify a preview image that will be rendered in the Modeler.
+This how-to will show you how to specify a preview image that will be rendered in Studio Pro.
 
 **This how-to will teach you how to do the following:**
 
@@ -16,8 +16,8 @@ This how-to will show you how to specify a preview image that will be rendered i
 
 Before starting with this how-to, make sure you have completed the following prerequisites:
 
-* Download and install the [Mendix Modeler](https://appstore.home.mendix.com/link/modelers/)
-* Read [How to Get Start with the Widget Development Plugin for Adobe Brackets](use-the-widget-development-plugin-for-adobe-brackets)
+* Download and install [Mendix Studio Pro](https://appstore.home.mendix.com/link/modelers/)
+* Read [Custom Widgets](index)
 
 ## 3 Adding a Preview Image to Your Custom Widget Package
 
@@ -25,12 +25,9 @@ You need to put an image file named *preview.png* next to your custom widget XML
 
 ![](attachments/Custom+Widget+Preview+Image/01_Folder_View.png)
 
-After packaging your custom widget, the image provided will be rendered in the Modeler whenever it is used:
+After packaging your custom widget, the image provided will be rendered in Studio Pro whenever it is used:
 
-![](attachments/Custom+Widget+Preview+Image/02_Modeler_Preview.png)
+![](attachments/Custom+Widget+Preview+Image/02_Preview.png)
 
-Please note that older versions of the Modeler ignore this image and render a grey rectangle as usual.
+Please note that older versions of Studio Pro ignore this image and render a grey rectangle as usual.
 
-## 4 Read More
-
-* [How to Use the Widget Development Plugin for Adobe Brackets](use-the-widget-development-plugin-for-adobe-brackets)

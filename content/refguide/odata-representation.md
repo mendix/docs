@@ -13,10 +13,8 @@ This document describes how entities are represented in a published OData servic
 | Autonumber | Edm.Int64 | 1 | 1 |
 | Binary (not supported) <sup>1</sup> |   |   |   |
 | Boolean | Edm.Boolean | true | true |
-| Currency (**deprecated**) | Edm.Double | 0.7882389488923784 | 0.7882389488923784 |
 | Date and time | Edm.DateTimeOffset | Fri, 19 Dec 2014 10:27:27 GMT | 2014-12-19T10:27:27.000Z |
 | Enumeration | Edm.String | Color.Blue | Blue |
-| Float (**deprecated**) | Edm.Double | 0.7882389488923784 | 0.7882389488923784 |
 | Big decimal  | Edm.Decimal | 0.3333333333333333333333333333333333 | 0.3333333333333333333333333333333333 |
 | Hashed string | Edm.String | HashPassword | HashPassword |
 | Integer  | Edm.Int64 | 50 | 50 |
@@ -34,10 +32,6 @@ In the settings of the OData service, you can choose how associations are repres
 
 ### 2.1 As a Link
 
-{{% alert type="info" %}}
-This was introduced in version 7.21.
-{{% /alert %}}
-
 When you choose to represent associations as links, each object contains a link for each of its associations. The associated object(s) can be retrieved via those links.
 
 This means that you can only expose an association when the entity on the other side is a resource of this service as well. This also means that you cannot publish the same entity more than once in the same service (because in that case, it would not be clear where the link should point to).
@@ -45,9 +39,5 @@ This means that you can only expose an association when the entity on the other 
 Using this method, you can expose both sides of the association and you can expose many-to-many associations.
 
 ### 2.2 As an Associated Object ID
-
-{{% alert type="info" %}}
-This feature has been deprecated since version 7.21.
-{{% /alert %}}
 
 When you choose to represent assocations as an associated object ID, the ID of the associated object is represented as an `Edm.Int64` property. If the association refers to more than one object, you can not expose it from that side.

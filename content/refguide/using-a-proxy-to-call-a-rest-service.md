@@ -26,7 +26,7 @@ Alternatively, you can specify JVM parameters in your `.m2eerc` under JVM parame
 ...
 ```
 
-Or directly (when running locally from the Modeler or calling from Eclipse):
+Or directly (when running locally from Studio Pro or calling from Eclipse):
 
 ```java
 -Dhttp.proxyHost=myproxyserver.com  -Dhttp.proxyPort=3128 -Dhttp.proxyUser=myusername -Dhttp.proxyPassword=mypassword

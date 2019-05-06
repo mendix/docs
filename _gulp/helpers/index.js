@@ -35,6 +35,10 @@ const isFile = filePath => {
   return shell.test('-f', filePath);
 }
 
+const isDir = filePath => {
+  return shell.test('-d', filePath);
+}
+
 const touchFile = filePath => {
   const parsed = path.parse(filePath);
   if (!shell.test('-d', parsed.dir)) {
@@ -189,6 +193,7 @@ module.exports = {
   gulpErr: throwError,
   touch: touchFile,
   isFile,
+  isDir,
   readJSON,
   getFiles,
   getAllFiles,

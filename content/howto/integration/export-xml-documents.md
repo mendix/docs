@@ -75,7 +75,7 @@ The XML schema describes what the contents of an XML document should be. We need
 
     ![](attachments/18448731/18581810.png)
 
-5. Open the **Connector** pane, which should be in the bottom-right corner of the Modeler:
+5. Open the **Connector** pane, which should be in the bottom-right corner of Studio Pro:
 
     ![](attachments/18448731/18581817.png)
 
@@ -125,7 +125,7 @@ To create the export logic, follow these steps:
     ![](attachments/18448731/18581802.png)
 
 5. Select the input parameter and delete it.
-6. Open the **Toolbox**, which should be on the bottom-right of the Modeler (you can also open it from the **View** menu).
+6. Open the **Toolbox**, which should be on the bottom-right of Studio Pro (you can also open it from the **View** menu).
 7. Drag a **Retrieve** activity from the **Toolbox** to the line between the start event and end event.
 8. Double-click the activity to open the **Retrieve Objects** properties editor and do the following:
     * For **Source**, select **From database**
@@ -186,12 +186,12 @@ To create the export logic, follow these steps:
 
 ## 6 Read More
 
-* [How to Consume a Complex Web Service](consume-a-complex-web-service)
-* [How to Consume a Simple Web Service](consume-a-simple-web-service)
-* [How to Import Excel Documents](importing-excel-documents)
-* [How to Expose a Web Service](expose-a-web-service)
-* [How to Enable Selenium Support](selenium-support)
-* [How to Synchronize User Accounts Using the LDAP Module](synchronizing-user-accounts-using-the-ldap-module)
-* [How to Import XML Documents](importing-xml-documents)
-* [How to Consume a REST Service](consume-a-rest-service)
-* [How to Expose Data to BI Tools Using OData](exposing-data-to-bi-tools-using-odata)
+* [Consume a Complex Web Service](consume-a-complex-web-service)
+* [Consume a Simple Web Service](consume-a-simple-web-service)
+* [Import Excel Documents](importing-excel-documents)
+* [Expose a Web Service](expose-a-web-service)
+* [Enable Selenium Support](selenium-support)
+* [Synchronize User Accounts Using the LDAP Module](synchronizing-user-accounts-using-the-ldap-module)
+* [Import XML Documents](importing-xml-documents)
+* [Consume a REST Service](consume-a-rest-service)
+* [Expose Data to BI Tools Using OData](exposing-data-to-bi-tools-using-odata)

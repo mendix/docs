@@ -1,7 +1,7 @@
 ---
 title: "Trends in Mendix Cloud v3"
 parent: "metrics"
-menu_order: 5
+menu_order: 10
 description: "Describes how to interpret various graphs and trends in the Mendix Cloud v3."
 tags: ["Trends","v3","Mendix Cloud","Developer Portal"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -78,7 +78,7 @@ More information on this graph is available in a Tech Blog post: [What's in my J
 
 ### <a name="Trends-appm2eeserverthreadpool"></a>3.6 Threadpool for Handling External Requests
 
-The application server thread pool graph shows the number of concurrent requests that are being handled bij the Mendix Runtime, but only when they're initiated by a remote API, like the way the normal web-based client communicates, or by calling web services. Because creating a new thread that can concurrently process a request is an expensive operation, there's a pool of threads being held that can quickly start processing new incoming requests. This pool automatically grows and shrinks according to the number of requests that are flowing through the application.
+The application server thread pool graph shows the number of concurrent requests that are being handled by the Mendix Runtime, but only when they're initiated by a remote API, like the way the normal web-based client communicates, or by calling web services. Because creating a new thread that can concurrently process a request is an expensive operation, there's a pool of threads being held that can quickly start processing new incoming requests. This pool automatically grows and shrinks according to the number of requests that are flowing through the application.
 
 ### <a name="Trends-appmxruntimethreads"></a>3.7 Total Number of Threads in the JVM Process
 
@@ -86,7 +86,7 @@ This graph shows the total number of threads that exist inside the running JVM p
 
 ### <a name="Trends-appmxruntimecache"></a>3.8 Object Cache
 
-Mendix 4.0 introduced Non-Persistent Entities which live in the JVM memory and are garbage collected regularly. If you have a memory leak, the number of objects in memory will grow over time. This might be a problem. In this graph you can monitor the number of Mendix Objects that live in memory.
+Non-Persistable Entities live in the JVM memory and are garbage collected regularly. If you have a memory leak, the number of objects in memory will grow over time. This might be a problem. In this graph you can monitor the number of Mendix Objects that live in memory.
 
 ## 4 Database Statistics
 

@@ -1,6 +1,6 @@
 ---
 title: "Publish a Mendix Hybrid Mobile App in Mobile App Stores"
-category: "Mobile Development"
+parent: "hybrid-mobile"
 menu_order: 60
 tags: ["mobile", "app store", "phonegap"]
 ---
@@ -28,7 +28,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Have an iOS deployment certificate and a provisioning file for which your test device is activated
 * Have an Android device for testing the APK package that will be produced
 	* You need both a *.p12* certificate file and a *.mobileprovision* profile file 
-	* For details on how to obtain app signing keys, see the [iOS](/refguide7/managing-app-signing-keys#ios) section of *Managing App Signing Keys*
+	* For details on how to obtain app signing keys, see the [iOS](/refguide/managing-app-signing-keys#ios) section of *Managing App Signing Keys*
 * Have Apple iTunes installed on your computer for deploying the iOS package that will be produced on your test device
 
 ## 3 Starting the Packaging Process{#starting-the-packaging-process}
@@ -54,8 +54,8 @@ To start the packaging process, follow these steps:
 	* For Free Apps, the only option is **Sandbox**
 	* For apps running on a licensed cloud node, you can choose from **Test**, **Acceptance**, and **Production** (depending on what is available on your cloud node)
 	* For apps using [Flexible Environments](/developerportal/deploy/mendix-cloud-deploy#flexible-environments) you will be able to select the environment from a drop-down list of environments.
-
-10. Leave the default choice of how to build the package **Build Mobile App Store packages for me by sending the build configuration to Adobe PhoneGap Build** selected. You can use the alternative option to manually download a PhoneGap Build package, which you can then inspect, modify, and upload manually to Adobe PhoneGap Build (for more information, see [Customizing PhoneGap Build Packages](/refguide7/customizing-phonegap-build-packages)). This is unnecessary in most scenarios.
+	
+10. Leave the default choice of how to build the package **Build Mobile App Store packages for me by sending the build configuration to Adobe PhoneGap Build** selected. You can use the alternative option to manually download a PhoneGap Build package, which you can then inspect, modify, and upload manually to Adobe PhoneGap Build (for more information, see [Customizing PhoneGap Build Packages](/refguide/customizing-phonegap-build-packages)). This is unnecessary in most scenarios.
 11. Before proceeding, you must accept linking your PhoneGap account to your Mendix account:
 
 	![phonegap authorization](attachments/publishing-a-hybrid-app/phonegap-authorization-dialog.png)
@@ -139,7 +139,7 @@ Publish your app by following Apple's [Overview of publishing an app](https://he
 
 If you plan on publishing an Android app, read Google's overview of [the Android app publishing process](http://developer.android.com/tools/publishing/publishing_overview.html). Before submitting your app to an app store, [review the launch checklist](http://developer.android.com/distribute/tools/launch-checklist.html). Google provides information on [publishing your app in the Google Play Store](http://developer.android.com/distribute/googleplay/index.html).
 
-To publish an Android app, you must first complete the [Android](/refguide7/managing-app-signing-keys#android) section of *Managing App Signing Keys* which will detail how to generate a keystore and upload that keystore to PhoneGap build. Creating a keystore is only needed should you wish to publish your app. If you just want to test your app, then do not consult *Managing App Signing Keys* and instead just keep following this document's steps.
+To publish an Android app, you must first complete the [Android](/refguide/managing-app-signing-keys#android) section of *Managing App Signing Keys* which will detail how to generate a keystore and upload that keystore to PhoneGap build. Creating a keystore is only needed should you wish to publish your app. If you just want to test your app, then do not consult *Managing App Signing Keys* and instead just keep following this document's steps.
 
 ### 6.1 Download the resulting Android Binary (APK){#download-apk}
 

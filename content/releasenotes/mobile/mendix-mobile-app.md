@@ -67,7 +67,7 @@ To download the **Mendix** mobile app, select one of the download links below:
 
 ### Deprecations and Removals
 
-* We removed support for custom profiles (which were deprecated with Mendix [7.4](../desktop-modeler/7.4)).
+* We removed support for custom profiles (which were deprecated with Mendix [7.4](../studio-pro/7.4)).
 
 ### Known Issue
 

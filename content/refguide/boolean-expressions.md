@@ -1,14 +1,14 @@
 ---
-title: "Boolean expressions"
+title: "Boolean Expressions"
 parent: "expressions"
+tags: ["studio pro"]
 ---
-### Boolean expressions
 
-
+## 1 Introduction
 
 Boolean expressions can be used to perform logical operations such as checking if two conditions hold.
 
-## and
+## 2 and
 
 Combines two Boolean expressions and only returns True if both of the expressions evaluate to True.
 
@@ -28,7 +28,7 @@ evaluates to False, because only the second expression is True.
 
 {{% /alert %}}
 
-## or
+## 3 or
 
 Combines two Boolean expressions, and returns True if at least one of the expressions evaluates to True.
 
@@ -50,15 +50,15 @@ The following example returns False, because both expressions evaluate to False:
 
 {{% /alert %}}
 
-## not
+## 4 not
 
 The function 'not' negates the specified Boolean expression.
 
-### Input
+### 4.1 Input
 
 An expression of type Boolean.
 
-### Output
+### 4.2 Output
 
 Returns the negation of the specified expression. If the expression evaluates to True, it returns False; otherwise it returns True.
 

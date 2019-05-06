@@ -1,13 +1,13 @@
 ---
 title: "Page Editor Consistency Errors"
 parent: "consistency-errors"
-description: "Describes consistency errors in the Mendix Desktop Modeler and the way to fix them."
-tags: ["desktop modeler", "consistency errors", "checks", "errors", "pages"]
+description: "Describes consistency errors in Mendix Studio Pro and the way to fix them."
+tags: ["Studio Pro", "consistency errors", "checks", "errors", "pages"]
 ---
 
 ## 1 Introduction 
 
-In this document, we will explain how to solve the most common consistency errors that can occur when configuring pages in the Desktop Modeler. An example of a consistency error is when you do not specify the entity property of a data view on a page. 
+In this document, we will explain how to solve the most common consistency errors that can occur when configuring pages in Studio Pro. An example of a consistency error is when you do not specify the entity property of a data view on a page. 
 
 ## 2 List View Consistency Errors 
 
@@ -15,7 +15,7 @@ If you do not configure a [data source](data-sources) for a [list view](list-vie
 
 The scheme below shows that the data source of the list view has been set to **Database**, but the specific entity that needs to be retrieved from the database has not been set. This results in a consistency error. 
 
-![Data Source Consistency Error Scheme](attachments/consistency-errors-pages/dm-list-view-error.png)
+![Data Source Consistency Error Scheme](attachments/consistency-errors-pages/list-view-error.png)
 
 The table below describes the most common errors you can come across when configuring a list view,  causes of these errors, and ways to fix them. 
 
@@ -30,7 +30,7 @@ The table below describes the most common errors you can come across when config
 
 Not configuring a [data source](data-sources) for a [data view](data-view) in a proper way results in consistency errors. For example, you have selected **Listen to widget** as a data source, but you have not selected the specific **List widget** you are pointing to.
 
-![Data View With no List Widget Configured](attachments/consistency-errors-pages/dm-data-view-no-list-widget.png)
+![Data View With no List Widget Configured](attachments/consistency-errors-pages/data-view-no-list-widget.png)
 
 The table below describes the most common errors you can come across when configuring a data view,  causes of these errors, and ways to fix them. 
 
@@ -56,15 +56,15 @@ When a page expects a context that is not passed to it from a calling page or a 
 
 Let us study an example: the **Customers** page contains a list view with a list of all customer names (**Customer** is set as **Entity** in the **Data Source** properties), and a **Details** button outside of the list view (placed in a [container](container) only). The **Details** button opens a **Customer Details** page when a user clicks it (the **On Click Action** for the button is set to **Page**). 
 
-![Button Properties on the Customers Page](attachments/consistency-errors-pages/dm-customers-page.png)
+![Button Properties on the Customers Page](attachments/consistency-errors-pages/customers-page.png)
 
 However, the **Customer Details** page has a data view that expects an object *Customer* to be passed to it. In other words, this page needs to get data first to be able to display it. 
 
-![Data View Expects the Customer Object](attachments/consistency-errors-pages/dm-data-view-customer.png)
+![Data View Expects the Customer Object](attachments/consistency-errors-pages/data-view-customer.png)
 
 As this object is not passed to it from the **Customers** page, you get a consistency error.
 
-![Example of Error When Context is Unavailable](attachments/consistency-errors-pages/dm-object-error.png)
+![Example of Error When Context is Unavailable](attachments/consistency-errors-pages/object-error.png)
 
 As the **Details** button to the **Customers** page is outside a data container, it does not know which Customer (object) to pass. The way of fixing this error depends on the following:
 
@@ -79,7 +79,7 @@ If you want the **Customer Details** page to open the details of a specific cust
 
 2.  Drag the **Details** button inside the list view.
 
-    ![The Details Button Example](attachments/consistency-errors-pages/dm-details-button-inside-the-list-view.png)
+    ![The Details Button Example](attachments/consistency-errors-pages/details-button-inside-the-list-view.png)
 
 Now the button gets the object of type *Customer* from the list view on the **Customers** page, and it will be passed to the **Customer Details** page. As a result, the details of a particular customer is displayed on the **Customer Details** page. 
 
@@ -95,7 +95,7 @@ If you want to create a new customer and fill in the customer's details on the *
 
 4.  Set **Customer Details** as **Page**.
 
-    ![On Click Event Example](attachments/consistency-errors-pages/dm-button-create-object.png)
+    ![On Click Event Example](attachments/consistency-errors-pages/button-create-object.png)
 
 5. Change the button's caption from **Details** to **Add**, as this button will now create a new customer instead of showing the details of an existing customer.
 
@@ -107,7 +107,7 @@ If a widget opens a page and this widget is inside a data container of entity X,
 
 Let us study an example: you have a **Details** button on the **Engineers** page that opens the **Tasks** page. 
 
-![A Button on Engineers Page](attachments/consistency-errors-pages/dm-engineers-page.png)
+![A Button on Engineers Page](attachments/consistency-errors-pages/engineers-page.png)
 
 The button is placed inside a list view; the list view's data source is set to entity *Engineer* in **Properties** > **Data Source**.
 
@@ -115,7 +115,7 @@ The Tasks page has a data view on it, but the data view's data source is set to 
 
 This means that data view expects the object of type *SmartTask* passed to it, but the **Engineers** page is passing the object of type *Engineer*.
 
-![Data Source Example](attachments/consistency-errors-pages/dm-tasks-page-list-view.png)
+![Data Source Example](attachments/consistency-errors-pages/tasks-page-list-view.png)
 
 To fix this error you can do one of the following:
 
@@ -141,7 +141,7 @@ A reference selector is a widget that is used to display and edit one-to-many as
 
 For example, you have several employees who are associated with one city where they work. This is a one-to-many association: multiple *Employees* objects are associated with one *City* object.  Associations that refer to a single object in this manner are *references*, as opposed to *reference sets*, in which multiple objects can refer to multiple other objects. In a reference, the "single object" side of the association is always the association's owner. For more information on associations and their types, see [Associations](associations).
 
-![One-to-many Association](attachments/consistency-errors-pages/dm-many-to-one-association.png)
+![One-to-many Association](attachments/consistency-errors-pages/many-to-one-association.png)
 
 If you have a wrong type of association, you will get a consistency error: *Association {Name} must be a reference (not a reference set)*.
 
@@ -151,7 +151,7 @@ To fix this error, do one the following:
 
 2.  In **Properties of Association** dialog window, change **Multiplicity** to one-to-many (in our example, multiple 'Employee' objects are associated with one 'City' objects).
 
-    ![Multiplicity for One-to-many Association](attachments/consistency-errors-pages/dm-one-to-many-multiplicity.png)
+    ![Multiplicity for One-to-many Association](attachments/consistency-errors-pages/one-to-many-multiplicity.png)
 
 3. Click **OK** to save changes.
 
@@ -163,7 +163,7 @@ Reference set selector and input set selector are widgets that are used to displ
 
 For example, you have several employees who can visit customers in different cities during the week. Thus, many employees are associated with many cities, this is a many-to-many association between an *Employee* entity and a *City* entity (multiple employees are associated with multiple cities). Associations that refer to multiple objects in this manner are *reference set*. For more information on associations and their types, see [Associations](associations). 
 
-![Many-to-many Association](attachments/consistency-errors-pages/dm-many-to-many-association.png)
+![Many-to-many Association](attachments/consistency-errors-pages/many-to-many-association.png)
 
 If you have a wrong type of association, you will get a consistency error: *Association {Name} must be a reference set (not a reference)*.
 
@@ -173,7 +173,7 @@ To fix the error, do one of the following:
 
 2.  In **Properties of Association** dialog window, change **Multiplicity** to many-to-many (in our example, multiple 'Employee' objects are associated with multiple 'City' objects).
 
-    ![Multiplicity for Many-to-many Association](attachments/consistency-errors-pages/dm-changing-multiplicity.png)
+    ![Multiplicity for Many-to-many Association](attachments/consistency-errors-pages/changing-multiplicity.png)
 
 3. Click **OK** to save changes.
 
@@ -189,11 +189,11 @@ Let us study an example when you have two entities in your domain model: **Citie
 
 The arrow is always pointing away from the context towards the widget. If you want employees to choose the cities, the owner of the association should be an *Employee* entity. Mind that a data container (for example, a data view) where you place a reference set selector or an input reference set selector, should have its data source set to **Context** >**Employee**.  
 
-![Data View Properties: Employee Entity](attachments/consistency-errors-pages/dm-data-view-employee-context.png)
+![Data View Properties: Employee Entity](attachments/consistency-errors-pages/data-view-employee-context.png)
 
 If you want to view employees that belong to each city, the *City* entity should be the owner. A data container (for example, a data view) where you place a reference set selector or an input reference set selector, should have its data source set to **Context** >**City**. 
 
-![Data View Properties: City Entity](attachments/consistency-errors-pages/dm-data-view-city-context.png)
+![Data View Properties: City Entity](attachments/consistency-errors-pages/data-view-city-context.png)
 
 If you want to combine both, the ownership should be set to *Both*. Then you can place the reference set selector or the input reference set selector to data containers with data source set to either *City* or *Employee* entities. 
 
@@ -205,7 +205,7 @@ To change the ownership, do the following:
 
 3.  In the entity properties > the **Associations** tab, change the **Owner** to **Default** or **Both** depending on your use-case.
 
-    ![Owner Property](attachments/consistency-errors-pages/dm-selecting-the-owner.png)
+    ![Owner Property](attachments/consistency-errors-pages/selecting-the-owner.png)
 
 You have changed the owner of the association.
 
@@ -233,7 +233,7 @@ The most common consistency errors are connected with not configuring the on cli
 
 To fix the consistency errors, finish configuring the on click event (for example, for an on click event **Show a page**, select a particular page that should open), or change the on click action. 
 
-![On Click Event Example](attachments/consistency-errors-pages/dm-on-click-event.png)
+![On Click Event Example](attachments/consistency-errors-pages/on-click-event.png)
 
 ##  9 Read More
 

@@ -70,7 +70,7 @@ client.platform()
 	})
 	.done(
 	() => {
-		myLog("Done. Check the result in the Mendix Modeler.");
+		myLog("Done. Check the result in Studio Pro.");
 	},
 	error => {
 		console.log("Something went wrong:");

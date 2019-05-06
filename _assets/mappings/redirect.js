@@ -8,27 +8,23 @@ module.exports = {
      ****************************************************/
 	{
       from: "/refguide/web-modeler/domain-models-association-properties-wm",
-      to: "/web-modeler/domain-models-association-properties"
+      to: "/studio/domain-models-association-properties"
     },
 	{
       from: "/refguide/web-modeler",
-      to: "/web-modeler/"
+      to: "/studio/"
     },
 	{
       from: "/refguide/web-modeler/microflows-wm",
-      to: "/web-modeler/microflows"
+      to: "/studio/microflows"
     },
 	{
       from: "/refguide/web-modeler/microflows-expressions-wm",
-      to: "/web-modeler/microflows-expressions"
+      to: "/studio/microflows-expressions"
     },
 	{
       from: "/refguide/web-modeler/app-settings-wm",
-      to: "/web-modeler/app-settings"
-    },
-	{
-      from: "/howto/web-modeler/syncing-webmodeler-desktop",
-      to: "/refguide/sync-webmodeler-desktopmodeler"
+      to: "/studio/app-settings"
     },
 	/****************************************************
      * From the Support Portal (potentially temporary until fixed in product, mapped) 
@@ -60,6 +56,9 @@ module.exports = {
 	/****************************************************
      * PERMANENT REDIRECTS
      ****************************************************/
+	 /****************************************************
+     * Documents (permanent, unmapped) 
+     ****************************************************/
     {
       from: "/docs/Overview",
       to: "/"
@@ -67,6 +66,43 @@ module.exports = {
     {
       from: "/docs/",
       to: "/"
+    },
+	/****************************************************
+     * Studio Guide (permanent, unmapped)
+     ****************************************************/
+	{
+      from: "/howto/tutorials/",
+      to: "/studio/general"
+    },
+	{
+      from: "/howto/tutorials/mendix-tutorials",
+      to: "/studio/general"
+    },
+	/****************************************************
+     * How-to's (permanent, unmapped)
+     ****************************************************/
+    {
+      from: "/howtogeneral/bestpractices/ux-best-practices",
+      to: "/howto/front-end/ux-best-practices"
+    },
+	{
+      from: "/howtogeneral/bestpractices/best-practices-security-and-improvements-for-mendix-applications",
+      to: "/howto/security/best-practices-security"
+    },
+	{
+      from: "/howtogeneral/bestpractices/best-practices-for-app-performance-in-mendix-7",
+      to: "/howto/general/community-best-practices-for-app-performance"
+    },	
+	{
+      from: "/howto/ux/configuring-your-theme",
+      to: "/howto/front-end/configuring-your-theme"
+    },
+	/****************************************************
+     * How-to's version 7 (permanent, unmapped)
+     ****************************************************/	
+	{
+      from: "/howto7/ux/configuring-your-theme",
+      to: "/howto7/front-end/configuring-your-theme"
     },
 	/****************************************************
      * Developer Portal Guide (permanent, unmapped) 
@@ -162,6 +198,10 @@ module.exports = {
       from: "/developerportal/community-tools/the-mendix-job-board",
       to: "/developerportal/community-tools/mendix-job-board"
     },
+	{
+      from: "/refguide/publish-packages-to-mobile-stores",
+      to: "/howto/mobile/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores"
+    },
 	/****************************************************
      * From the App Store (permanent, mapped)
      ****************************************************/
@@ -194,79 +234,194 @@ module.exports = {
       to: "/developerportal/deploy/integrate-with-mendix-sso"
     },
 	{
+      from: "/howto/ux/create-a-custom-theme-with-the-mendix-ui-framework",
+      to: "/howto/front-end/create-a-custom-theme-with-the-mendix-ui-framework"
+    },
+	{
       from: "/addons/APM",
       to: "/apm/"
     },
+	{
+      from: "/releasenotes/desktop-modeler/",
+      to: "/releasenotes/studio-pro/"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/8.0",
+      to: "/releasenotes/studio-pro/8.0"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/7.23",
+      to: "/releasenotes/studio-pro/7.23"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/7.22",
+      to: "/releasenotes/studio-pro/7.22"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/7.21",
+      to: "/releasenotes/studio-pro/7.21"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/7.20",
+      to: "/releasenotes/studio-pro/7.20"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/7.19",
+      to: "/releasenotes/studio-pro/7.19"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/7.18",
+      to: "/releasenotes/studio-pro/7.18"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/7.17",
+      to: "/releasenotes/studio-pro/7.17"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/7.16",
+      to: "/releasenotes/studio-pro/7.16"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/7.15",
+      to: "/releasenotes/studio-pro/7.15"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/7.14",
+      to: "/releasenotes/studio-pro/7.14"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/7.13",
+      to: "/releasenotes/studio-pro/7.13"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/7.12",
+      to: "/releasenotes/studio-pro/7.12"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/7.11",
+      to: "/releasenotes/studio-pro/7.11"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/7.10",
+      to: "/releasenotes/studio-pro/7.10"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/7.9",
+      to: "/releasenotes/studio-pro/7.9"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/7.8",
+      to: "/releasenotes/studio-pro/7.8"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/7.7",
+      to: "/releasenotes/studio-pro/7.7"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/7.6",
+      to: "/releasenotes/studio-pro/7.6"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/7.5",
+      to: "/releasenotes/studio-pro/7.5"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/7.4",
+      to: "/releasenotes/studio-pro/7.4"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/7.3",
+      to: "/releasenotes/studio-pro/7.3"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/7.2",
+      to: "/releasenotes/studio-pro/7.2"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/7.1",
+      to: "/releasenotes/studio-pro/7.1"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/7.0",
+      to: "/releasenotes/studio-pro/7.0"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/6.10",
+      to: "/releasenotes/studio-pro/6.10"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/6.9",
+      to: "/releasenotes/studio-pro/6.9"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/6.8",
+      to: "/releasenotes/studio-pro/6.8"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/6.7",
+      to: "/releasenotes/studio-pro/6.7"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/6.6",
+      to: "/releasenotes/studio-pro/6.6"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/6.5",
+      to: "/releasenotes/studio-pro/6.5"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/6.4",
+      to: "/releasenotes/studio-pro/6.4"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/6.3",
+      to: "/releasenotes/studio-pro/6.3"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/6.2",
+      to: "/releasenotes/studio-pro/6.2"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/6.1",
+      to: "/releasenotes/studio-pro/6.1"
+    },
+	{
+      from: "/releasenotes/desktop-modeler/6.0",
+      to: "/releasenotes/studio-pro/6.0"
+    },
 	/****************************************************
-     * Web Modeler Guide (permanent, unmapped)
+     * From Studio Pro version 8 (permanent as backups, mapped)
      ****************************************************/
 	{
-      from: "/howto/tutorials/",
-      to: "/web-modeler/general"
+      from: "/refguide8/modeler",
+      to: "/refguide/modeling"
     },
 	{
-      from: "/howto/tutorials/mendix-tutorials",
-      to: "/web-modeler/general"
-    },
-	/****************************************************
-     * How-to's (permanent, unmapped)
-     ****************************************************/
-    {
-      from: "/howtogeneral/bestpractices/ux-best-practices",
-      to: "/howto/front-end/ux-best-practices"
+      from: "/refguide8/Modeler",
+      to: "/refguide/modeling"
     },
 	{
-      from: "/howtogeneral/bestpractices/best-practices-security-and-improvements-for-mendix-applications",
-      to: "/howto/security/best-practices-security"
+      from: "/refguide8/desktop-modeler",
+      to: "/refguide/modeling"
     },
 	{
-      from: "/howtogeneral/bestpractices/best-practices-for-app-performance-in-mendix-7",
-      to: "/howto/general/community-best-practices-for-app-performance"
-    },	
-	{
-      from: "/howto/ux/configuring-your-theme",
-      to: "/howto/front-end/configuring-your-theme"
-    },
-	/****************************************************
-     * How-to's version 7 (permanent, unmapped)
-     ****************************************************/	
-	{
-      from: "/howto/ux/configuring-your-theme",
-      to: "/howto/front-end/configuring-your-theme"
-    },
-	/****************************************************
-     * From Desktop Modeler version 7 (permanent, mapped)
-     ****************************************************/
-	{
-      from: "/refguide7/modeler",
-      to: "/refguide/desktop-modeler-overview"
+      from: "/refguide8/desktop-modeler-overview",
+      to: "/refguide/studio-pro-overview"
     },
 	{
-      from: "/refguide7/Modeler",
-      to: "/refguide/desktop-modeler-overview"
-    },
-	{
-      from: "/refguide7/desktop-webmodeler",
-      to: "/refguide/sync-webmodeler-desktopmodeler"
-    },
-	{
-      from: "/web-modeler/general-sync-webmodeler-desktopmodeler-wm",
-      to: "/refguide/sync-webmodeler-desktopmodeler"
-    },
-	{
-      from: "/refguide7/download-from-team-server-dialog",
+      from: "/refguide8/download-from-team-server-dialog",
       to: "/refguide/download-from-version-control-dialog"
     },
   {
-      from: "/refguide7/open-project-dialog",
+      from: "/refguide8/open-project-dialog",
       to: "/refguide/open-app-dialog"
     },
   {
-      from: "/refguide7/upload-to-team-server-dialog",
+      from: "/refguide8/upload-to-team-server-dialog",
       to: "/refguide/upload-to-version-control-dialog"
     },
   {
-      from: "/refguide7/microflow-expressions",
+      from: "/refguide8/microflow-expressions",
       to: "/refguide/expressions"
     },
 	{
@@ -274,24 +429,95 @@ module.exports = {
       to: "/developerportal/deploy/cloud-foundry-deploy"
     },	
 	{
-      from: "/howto7/solving-load-and-import-errors",
+      from: "/howto8/solving-load-and-import-errors",
       to: "/howto/monitoring-troubleshooting/solving-load-and-import-errors"
     },
 	{
-      from: "/refguide7/drop-down-widget",
+      from: "/refguide8/drop-down-widget",
       to: "/refguide/drop_down"
     },
 	{
-      from: "/refguide7/horizontal-split-pane",
+      from: "/refguide8/horizontal-split-pane",
       to: "/refguide/scroll-container"
+    },
+	{
+      from: "/refguide8/vertical-split-pane",
+      to: "/refguide/scroll-container"
+    },
+	{
+      from: "/refguide8/Select++Elements",
+      to: "/refguide/select--elements"
+    },
+	{
+      from: "/refguide8/Developing+Hybrid+Mobile+Apps",
+      to: "/refguide/developing-hybrid-mobile-apps"
+    },
+	/****************************************************
+     * From Desktop Modeler version 7 (permanent, mapped)
+     ****************************************************/
+	{
+      from: "/refguide7/modeler",
+      to: "/refguide7/desktop-modeler-overview"
+    },
+	{
+      from: "/refguide7/Modeler",
+      to: "/refguide7/desktop-modeler-overview"
+    },
+	{
+      from: "/refguide7/desktop-webmodeler",
+      to: "/refguide7/sync-webmodeler-desktopmodeler"
+    },
+	{
+      from: "/web-modeler/general-sync-webmodeler-desktopmodeler-wm",
+      to: "/refguide7/sync-webmodeler-desktopmodeler"
+    },
+	{
+      from: "/howto/web-modeler/syncing-webmodeler-desktop",
+      to: "/refguide7/sync-webmodeler-desktopmodeler"
+    },
+	{
+      from: "/refguide7/download-from-team-server-dialog",
+      to: "/refguide7/download-from-version-control-dialog"
+    },
+  {
+      from: "/refguide7/open-project-dialog",
+      to: "/refguide7/open-app-dialog"
+    },
+  {
+      from: "/refguide7/upload-to-team-server-dialog",
+      to: "/refguide7/upload-to-version-control-dialog"
+    },
+  {
+      from: "/refguide7/microflow-expressions",
+      to: "/refguide7/expressions"
+    },
+	{
+      from: "/deployment/cloud-foundry/",
+      to: "/developerportal/deploy/cloud-foundry-deploy"
+    },	
+	{
+      from: "/howto7/solving-load-and-import-errors",
+      to: "/howto7/monitoring-troubleshooting/solving-load-and-import-errors"
+    },
+	{
+      from: "/refguide7/drop-down-widget",
+      to: "/refguide7/drop_down"
+    },
+	{
+      from: "/refguide7/horizontal-split-pane",
+      to: "/refguide7/scroll-container"
     },
 	{
       from: "/refguide7/vertical-split-pane",
-      to: "/refguide/scroll-container"
+      to: "/refguide7/scroll-container"
     },
 	{
       from: "/refguide7/Select++Elements",
-      to: "/refguide/select--elements"
+      to: "/refguide7/select--elements"
+    },
+	{
+      from: "/refguide7/Developing+Hybrid+Mobile+Apps",
+      to: "/refguide7/developing-hybrid-mobile-apps"
     },
 	/****************************************************
      * From Desktop Modeler version 6 (permanent)

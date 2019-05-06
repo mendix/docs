@@ -6,7 +6,7 @@ parent: "dialogs"
 
 ## 1 Introduction
 
-Use this dialog to open apps. Apps can be located on the Team Server, on another SVN server, or on the local disk. When opening an app from the Team Server or another SVN server, the Modeler will check whether you have already downloaded this app. If so, it will simply open it. If not, the app will be downloaded from the version control server first.
+Use this dialog to open apps. Apps can be located on the Team Server, on another SVN server, or on the local disk. When opening an app from the Team Server or another SVN server, Studio Pro will check whether you have already downloaded this app. If so, it will simply open it. If not, the app will be downloaded from the version control server first.
 
 ## 2 Location
 
@@ -40,6 +40,6 @@ If you already have the selected development line of the app on disk, you will s
 
 {{% alert type="warning" %}}
 
-The Modeler remembers all app that you open. In this way it can point you to existing downloads of version controlled apps. If you move an app directory, the Modeler will not know about that directory anymore and offer to download a fresh copy. If you want to continue using the existing download, you will have to open it via the **Locally on disk** option.
+Studio Pro remembers all apps that you open. In this way it can point you to existing downloads of version controlled apps. If you move an app directory, Studio Pro will not know about that directory anymore and offer to download a fresh copy. If you want to continue using the existing download, you will have to open it via the **Locally on disk** option.
 
 {{% /alert %}}

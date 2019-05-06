@@ -23,7 +23,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 *   Know how to download app store modules
 *   Know how to configure a domain model
 *   Know how to create microflows and pages
-*   Know how to create non-persistant entities
+*   Know how to create non-persistable entities
 
 ## 3 Implementing ChartJS in an Existing Project
 
@@ -31,7 +31,7 @@ In this section, you will learn how to install the ChartJS widget.
 
 ### 3.1 Finding and Downloading the ChartJS Widget from the App Store
 
-1.  Using the in-Modeler App Store browser, find the **ChartJS** widget:
+1.  Using the App Store browser in Studio Pro, find the **ChartJS** widget:
 
     ![](attachments/19202962/19398991.png)
     
@@ -59,7 +59,7 @@ To see a working domain model already configured in an application, you can go t
     ![](attachments/19202962/19398994.png)
     
 4.  For the Series attribute, create a new enumeration named **Series** that contains the values **Series 1** and **Series 2**.
-5.  Create a non-persistant **ChartWrapper** entity with no attributes:
+5.  Create a non-persistable **ChartWrapper** entity with no attributes:
 
     ![](attachments/19202962/19398997.png)
 
@@ -96,7 +96,7 @@ To make this sample project actually generate charts, the first thing to do is c
 
 ### 3.5 Configuring the ChartJS Widget
 
-The ChartJS widgets are configured through the familiar modeler widget dialogue box.  We must configure the ChartJS module to reference our Charting domain model.
+The ChartJS widgets are configured through the familiar Studio Pro widget dialog box.  We must configure the ChartJS module to reference our Charting domain model.
 
 1. Set the entity for the chart to be the created **Chart** entity:
 

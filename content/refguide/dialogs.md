@@ -1,9 +1,9 @@
 ---
 title: "Dialog Boxes"
-category: "Desktop Modeler"
+category: "App Modeling"
 ---
 
-The following pages describe the various dialog boxes present in the Modeler:
+The following pages describe the various dialog boxes present in Studio Pro:
 
 General
 

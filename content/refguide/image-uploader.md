@@ -1,5 +1,5 @@
 ---
-title: "Image uploader"
+title: "Image Uploader"
 parent: "file-widgets"
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -38,29 +38,29 @@ This property determines the width of the generated thumbnail in pixels. However
 
 This property determines the height of the generated thumbnail in pixels. However, the aspect ratio of the image will remain the same during thumbnail generation.
 
-{{% snippet file="refguide7/Label+Property.md" %}}
+{{% snippet file="refguide/Label+Property.md" %}}
 
 ## Editability properties
 
-{{% snippet file="refguide7/Editable+Property.md" %}}
+{{% snippet file="refguide/Editable+Property.md" %}}
 
-{{% snippet file="refguide7/Condition+Property.md" %}}
+{{% snippet file="refguide/Condition+Property.md" %}}
 
 ## Visibility properties
 
-{{% snippet file="refguide7/Visibility+Property.md" %}}
+{{% snippet file="refguide/Visibility+Property.md" %}}
 
-{{% snippet file="refguide7/Visibility+Property+With+Module+Roles+Simple.md" %}}
+{{% snippet file="refguide/Visibility+Property+With+Module+Roles+Simple.md" %}}
 
 ## Common properties
 
-{{% snippet file="refguide7/Name+Property.md" %}}
+{{% snippet file="refguide/Name+Property.md" %}}
 
-{{% snippet file="refguide7/Class+Property.md" %}}
+{{% snippet file="refguide/Class+Property.md" %}}
 
-{{% snippet file="refguide7/Style+Property.md" %}}
+{{% snippet file="refguide/Style+Property.md" %}}
 
-{{% snippet file="refguide7/Tab+index+Property.md" %}}
+{{% snippet file="refguide/Tab+index+Property.md" %}}
 
 ## Related articles
 

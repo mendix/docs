@@ -1,15 +1,9 @@
 ---
 title: "UI Resources Package"
-category: "Desktop Modeler"
+category: "App Modeling"
 ---
 
 ## 1 Introduction
-
-{{% alert type="info" %}}
-
-The option to designate a custom UI resources package was added in Mendix 7.9.0. In older versions, theme information was stored in theme ZIP files stored in the **theme** folder. The required ZIP file could be selected in the Runtime tab of the app's [project settings](project-settings).
-
-{{% /alert %}}
 
 The UI resources package is a specific [module](modules) marked by a green icon in the Project Explorer, that determines the projects look and feel. It does this in two distinct ways. First, the package supplies the project with all the page documents required to create well-designed, consistent pages, such as [page templates](page-templates) and [building blocks](building-block). Second, the package contains theme information, which allows users to easily switch out themes that complement the accompanying page documents. 
 
@@ -31,7 +25,7 @@ Within the package, top-level folders are treated as categories for the purposes
 
 To facilitate sorting, UI resources package folder names can be prefixed with a number. Any folder names starting with a number followed by a period and a space will appear in the Create Page wizard in numeric (rather than alphabetic) order. The prefix will be omitted. For example, folders with the names *10. Administration* and *9. Banking* will appear as *Banking, Administration*. 
 
-The same principles apply to building blocks with regards to the **Building blocks** tab of the Modeler **Toolbox**. Any building blocks or page templates found in modules other than the UI resources package will appear in the generic **Local** category, which is always sorted on top.
+The same principles apply to building blocks with regards to the **Building blocks** tab of Studio Pro **Toolbox**. Any building blocks or page templates found in modules other than the UI resources package will appear in the generic **Local** category, which is always sorted on top.
 
 Additionally, adding page templates and building blocks to the UI resources package ensures that they remain in sync with the project's theme, even when importing them into a different project. 
 

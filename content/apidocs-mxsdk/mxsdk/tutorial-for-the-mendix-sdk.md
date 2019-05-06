@@ -25,7 +25,7 @@ Following the installation of the Mendix SDK, you will get a script that will:
 *   make a simple change to that workingCopy
 *   commit the change to the workingCopy
 
-You'll be able to run that script and see the results in the Desktop Modeler.
+You'll be able to run that script and see the results in Studio Pro.
 
 For details, see [How to Create Your First Script](creating-your-first-script)
 

@@ -24,13 +24,13 @@ The advantages of Cloud Foundry are:
 * Extending to more software architectures via custom buildpacks
 * Automatic health monitoring and recovery
 
-Mendix is compatible with all known versions of Cloud Foundry as long as there are compatible database services (for example, PostgreSQL or MySQL) and custom buildpacks can be used. Cloud Foundry is supported in the Desktop Modeler and external file store support for FileDocuments can be set up with Amazon S3 or compatible systems.
+Mendix is compatible with all known versions of Cloud Foundry as long as there are compatible database services (for example, PostgreSQL or MySQL) and custom buildpacks can be used. Cloud Foundry is supported in Mendix Studio Pro and external file store support for FileDocuments can be set up with Amazon S3 or compatible systems.
 
 For more information on running Mendix apps on Cloud Foundry, see the [Mendix Cloud Foundry BuildPack](https://github.com/mendix/cf-mendix-buildpack). This Git also explains how Mendix apps can also be deployed to Cloud Foundry environments using command line instructions.
 
-**In this how-to you will learn how to do the following using the Desktop Modeler and browser-based configuration options:**
+**In this how-to you will learn how to do the following using Studio Pro and browser-based configuration options:**
 
-* Configure Cloud Foundry in the modeler and the service providing it
+* Configure Cloud Foundry in Studio Pro and the service providing it
 * Add services to the app
 * Deploy your app to Cloud Foundry
 * Troubleshoot
@@ -48,14 +48,14 @@ Only use the instructions in this document if you have specific requirements whi
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Download the latest version of the Mendix Modeler from the [Mendix App Store](https://appstore.home.mendix.com/link/modelers)
+* Download the latest version of Studio Pro from the [Mendix App Store](https://appstore.home.mendix.com/link/modelers)
 * Have access to a service account with the rights to create new applications and services. One service which you can use is [Pivotal Web Services](https://run.pivotal.io/) which is free to try for a limited period.
 
-## 3 Configuring Cloud Foundry in the Desktop Modeler {#3}
+## 3 Configuring Cloud Foundry in Studio Pro {#3}
 
-To deploy a Mendix app to Cloud Foundry, you have to configure the settings in the Modeler.
+To deploy a Mendix app to Cloud Foundry, you have to configure the settings in Studio Pro.
 
-1.  Open the Modeler, click **Run**, and select **Edit Cloud Foundry Settings**:
+1.  Open Studio Pro, click **Run**, and select **Edit Cloud Foundry Settings**:
 
 	![](attachments/cloud-foundry-deploy/edit-cf-settings.png)
 
@@ -106,7 +106,7 @@ This how-to will describe adding the database and file store only. Additional se
 
 ## 4 Add a Database Service to Your App
 
-To configure the Cloud Foundry environment, you will need to go to the console for your platform. You must logon with the same credentials which you used when creating Cloud Foundry environment from the Desktop Modeler.
+To configure the Cloud Foundry environment, you will need to go to the console for your platform. You must logon with the same credentials which you used when creating a Cloud Foundry environment from Studio Pro.
 
 All these consoles have similar features which allow you to select services, bind them to your app, and view details of the environment and the app. Some example consoles are:
 
@@ -156,7 +156,7 @@ You may need to configure your file store by using environment variables. See th
 
 ## 6 Deploy Your App to Cloud Foundry
 
-1. Open the Modeler
+1. Open Studio Pro
 2. Open the app you want to deploy to Cloud Foundry.
 3.  Click the arrow for the **Run** options and select **Run on Cloud Foundry**:
 
@@ -166,9 +166,9 @@ The Mendix app will now be deployed to the configured Cloud Foundry app and star
 
 ## 7 Cloud Foundry Environment Variables
 
-After deploying an app from the Modeler, two variables will be added automatically to the application environment.
+After deploying an app from Studio Pro, two variables will be added automatically to the application environment.
 
-* **ADMIN_PASSWORD** – the password of the default admin of your Mendix app. Note that if you haven't changed it in the Modeler, you will be unable to deploy your app until you change it to something more secure
+* **ADMIN_PASSWORD** – the password of the default admin of your Mendix app. Note that if you haven't changed it in Studio Pro, you will be unable to deploy your app until you change it to something more secure
 * **DEVELOPMENT_MODE**  – *true* by default; this allows the app to be run in the cloud without security being turned on: change it to false to run the app in production 
 
 ![](attachments/cloud-foundry-deploy/app-variables.png)

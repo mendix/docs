@@ -62,7 +62,7 @@ By including services in the initial applications as modules, they are prepared 
 To transit from modules to a CB architecture, Mendix recommends the following approach:
 
 1. Extract reusable services from the application module on demand only if and when another application needs the same functionality.
-2. Publish the service in your [private App Store](/developerportal/app-store/app-store-overview#privateappstore)
+2. Publish the service in your [private App Store](/developerportal/app-store/share-app-store-content#private-app-store)
 3. Designate an owner to be in charge of maintaining the awareness of reusable services so that similar functionality is not rebuilt elsewhere.
 
 ## 3 CBA for Divide & Conquer

@@ -47,8 +47,6 @@ There are also four actions you can perform, which are described below.
 
 In this section, you can click **Create a Package from Team Server** and select a branch containing the revision you would like to build.
 
-Only branches where the latest revision is Mendix 5 and above will be displayed here. If you need to build other revisions, please do so manually from the Mendix Modeler.
-
 #### 2.1.2 Uploading
 
 When you click **Upload**, you can upload an *.mda* file from your local device.
@@ -85,7 +83,7 @@ In this section, you have the an overview of all the available environments with
 * Environment status
 * Name of the deployment package
 * The version of the deployment package
-* Runtime (the Modeler version)
+* Runtime (Mendix Studio Pro version)
 * The URL of the app
 
 There are three types of environment statuses:
@@ -120,7 +118,7 @@ This shows a similar list of details (the differences are highlighted):
 * Environment name
 * **PROD** will be checked if this environment is a production environment (this is set when the environment is first created)
 * Name and version of the deployment package
-* Runtime (the Modeler version)
+* Runtime (Mendix Studio Pro version)
 * **PLAN** indicates the plan for this environment - you can see more information about the plan on the *Details* page.
 * The URL of the app
 

@@ -1,5 +1,5 @@
 ---
-title: "Use Mendix Data Storage APIs to Build Reusable microflow Actions"
+title: "Use Mendix Data Storage APIs to Build Reusable Microflow Actions"
 category: "Extensibility"
 menu_order: 5
 description: "Describes creating custom microflow actions using Data Storage APIs."
@@ -11,12 +11,12 @@ output:
 
 ## 1 Introduction
 
-The Mendix Modeler supports two query languages to retrieve data:
+Mendix Studio Pro supports two query languages to retrieve data:
 
 * Xpath as an easy to use query language to retrieve objects
 * OQL is a SQL based language, more focused on powerful reporting facilities
 
-You can use these query languages in the Mendix Modeler, but both languages are also available through a Java API. You can use these APIs to implement powerful reusable microflow actions through the Connector Kit. In addition to Xpath and OQL, the Mendix APIs also enable you to use standard SQL on your Mendix database.
+You can use these query languages in Mendix Studio Pro, but both languages are also available through a Java API. You can use these APIs to implement powerful reusable microflow actions through the Connector Kit. In addition to Xpath and OQL, the Mendix APIs also enable you to use standard SQL on your Mendix database.
 
 This how to describes how you can build the following microflow actions:
 
@@ -29,15 +29,15 @@ This how to describes how you can build the following microflow actions:
 
     ![Microflow actions toolbox](attachments/dsapi/image001.png)
 
-For more information on Java programming for Mendix, see [Java Programming](/refguide7/java-programming).
+For more information on Java programming for Mendix, see [Java Programming](/refguide/java-programming).
 
-For more information on calling Java actions from a microflow, see [Java Actions](/refguide7/java-actions).
+For more information on calling Java actions from a microflow, see [Java Actions](/refguide/java-actions).
 
 ## 2 Retrieving Advanced Xpath
 
 The goal is to create a microflow action where a user can specify an Xpath expression and which result entities are expected. The action will execute the XPath statement and return the resulting list of objects.
 
-In practice, this is not a very useful microflow action as you can already do this with the standard Retrieve action in the Mendix modeler. The goal, however, is to illustrate how you can use the Xpath Java API.
+In practice, this is not a very useful microflow action as you can already do this with the standard Retrieve action in Mendix Studio Pro. The goal, however, is to illustrate how you can use the Xpath Java API.
 
 The Java action needs the following parameters:
 
@@ -78,7 +78,7 @@ The following example illustrates how you can use the OQL APIs for reporting pur
 *	OQL is expressed in entity and attribute names instead of table names and column names. This makes it easier to use, as you do not have to know the technical data model as stored in the database
 *	OQL is database vendor independent, so you can run the same OQL statement on all databases supported by Mendix
 
-The following non-persistent entity shows what data you are interested in for your report:
+The following non-persistable entity shows what data you are interested in for your report:
 
 * For every department you want to know
     * its name,
@@ -129,7 +129,7 @@ The result is a generic OQL action that you can use in your microflows as follow
 
 ## 4 Retrieving Objects Using OQL Specified in a Dataset
 
-Instead of coding the OQL statement in a string parameter, you can also use a Dataset. This has the benefit the that Mendix Modeler will validate your OQL query.
+Instead of coding the OQL statement in a string parameter, you can also use a Dataset. This has the benefit the that Mendix Studio Pro will validate your OQL query.
 
 ![](attachments/dsapi/image040.png)
 
@@ -145,9 +145,9 @@ Below is the Java code to get the Dataset OQL, execute the OQL, and retrieve the
 
 ![](attachments/dsapi/image043.png)
 
-## 5 Retrieving Objects Using SQL (Beta - Mendix 7 and Above)
+## 5 Retrieving Objects Using SQL
 
-As of Mendix 7, a new API is available to allow you to execute SQL queries on the application database. (This feature is currently in beta). Using this API, you can create a microflow action to execute SQL: similar to the action for OQL in the previous sections.
+An API is available to allow you to execute SQL queries on the application database. (This feature is currently in beta). Using this API, you can create a microflow action to execute SQL: similar to the action for OQL in the previous sections.
 
 The definition of the Java action resembles the OQL action, but instead of an OQL parameter you have an SQL parameter.
 
@@ -170,7 +170,7 @@ The Java implementation below implements the following steps:
 
 You can find the complete Java source code on GitHub: [RetrieveAdvancedSQL](https://github.com/ako/QueryApiBlogPost/blob/master/javasource/hr/actions/RetrieveAdvancedSql.java).
 
-You now have a generic SQL action that can be used in microflows to retrieve data from your application database. The query in this example returns the same data as the OQL earlier, so you can reuse the non-persistent entity DepartmentSummary as defined previously.
+You now have a generic SQL action that can be used in microflows to retrieve data from your application database. The query in this example returns the same data as the OQL earlier, so you can reuse the non-persistable entity DepartmentSummary as defined previously.
 
 ![](attachments/dsapi/image029.png)
 

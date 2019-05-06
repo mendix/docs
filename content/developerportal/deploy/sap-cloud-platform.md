@@ -150,12 +150,12 @@ An environment is created; with more than one environment it is possible to tran
 
 ## 4 Create Package from Team Server
 
-At any time, you can create a new deployment package from a committed version of the project. If you are working with the Desktop Modeler you will first have to commit the project.
+At any time, you can create a new deployment package from a committed version of the project. If you are working with Mendix Studio Pro, you will first have to commit the project.
 
 {{% alert type="info" %}}
-You can also deploy your app (the steps in sections 4 and 5.1 of this How-To) automatically from the Desktop Modeler. However, you will then have less control over the deployment.
+You can also deploy your app (the steps in sections 4 and 5.1 of this How-To) automatically from Studio Pro. However, you will then have less control over the deployment.
 
-If you click **Run** in the Desktop Modeler this will automatically:
+If you click **Run** in Studio Pro this will automatically:
 
 * commit the project
 * generate a deployment package
@@ -413,6 +413,12 @@ If you no longer require a service you can unbind it or remove it from your app.
 
     The service is deleted from the app environment and returned to the list of **Available Services**.
 
+#### 7.3.3 Service Names
+
+The services which are created by the Mendix Developer Portal will be named automatically. You will see these names in the SAP Cloud Platform cockpit. The name of the service will normally be **App name** + **_** + **Environment Name** + **_** + **a random 6-character suffix**. All spaces will be removed from the app and environment names. For example, `MyApp_Development_c7sd9q`.
+
+However, the maximum length for the service name is 50 characters. If this limit would be exceeded by the name created above, an alternative service name will be used. The format of this is **Environment Name** + **_** + **a random 6-character suffix**. If the Environment name is longer than 43 characters, only the first 43 characters are used.
+
 ## 8 Databases in SAP Cloud Platform{#databases}
 
 Mendix needs access to a relational database backend and can run using different types of database. For deployment to SAP Cloud Platform, you have the choice of PostgreSQL or SAP HANA.
@@ -500,9 +506,9 @@ This indicates that SAP Cloud Portal is not able to bind the service, even thoug
 
 If you are trying to bind more than one new service, it is not possible to identify within the Developer Portal which service is causing the issue. If the culprit is not obvious, you will have to remove all the services or go to SAP Cloud Portal where you can use the service name in the error message to find which service is causing the error.
 
-### 9.4 An Error Occurs While Deploying App From Desktop Modeler
+### 9.4 An Error Occurs While Deploying App From Studio Pro
 
-If an app is deployed to SAP using the Desktop Modeler **Run** button before it has been started from the Developer Portal, the deployment will fail. This is because the marketplace services have not been bound.
+If an app is deployed to SAP using the Studio Pro **Run** button before it has been started from the Developer Portal, the deployment will fail. This is because the marketplace services have not been bound.
 
 {{% image_container width="50%" %}}
 ![](attachments/sap-cloud-platform/error-desktop-modeler.png)
@@ -512,7 +518,7 @@ If you use the Developer Portal to look at the details of the environment to whi
 
 ![](attachments/sap-cloud-platform/error-not-bound.png)
 
-Start the app from the Developer Portal to bind the services. Once they are bound, you can deploy your app from the Desktop Modeler, as usual.
+Start the app from the Developer Portal to bind the services. Once they are bound, you can deploy your app from Studio Pro, as usual.
 
 ## 10 Status of SAP Cloud Platform Deployment
 

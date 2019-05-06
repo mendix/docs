@@ -1,5 +1,5 @@
 ---
-title: "XPath minutes-from-dateTime"
+title: "XPath Minutes-from-DateTime"
 parent: "xpath-constraint-functions"
 ---
 

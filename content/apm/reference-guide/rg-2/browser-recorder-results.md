@@ -66,6 +66,6 @@ Request timing information is not yet available for Mendix 7.6 or higher.
 A recorded user action has two details:
 
 * **Event Target** – the location at which the user action took place
-* **Widget path** – the path of the Mendix widget names from **Event Target** to the layout (inner to outer); this can be used to locate the exact widget in the Mendix Modeler
+* **Widget path** – the path of the Mendix widget names from **Event Target** to the layout (inner to outer); this can be used to locate the exact widget in Mendix Studio Pro
 
 ![](attachments/Performance_browser_recording_UserAction.png)

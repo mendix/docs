@@ -1,14 +1,19 @@
 ---
 title: "Constants"
-category: "Desktop Modeler"
+category: "App Modeling"
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+Constants are used to define configuration values. These can differ per environment.
 
-Constants are used to define configuration values that can differ per environment. When running the application locally or in a sandbox, the values as defined in the Modeler are used. When running the application on a production environment such as the Mendix Cloud, the values should be configured separately in that environment.
+When running the application on SAP Cloud Platform, or a licensed Mendix Cloud environment, you can configure each environment separately using the *Model Options* tab of the *Environment Details* page to set your constants. See [Environment Details](/developerportal/deploy/environments-details) for more information.
 
-{{% alert type="success" %}}
-The value for a constant can be overridden in a [Configuration](configuration). This allows you to run locally using different values for one or more constants, without having to change the default value for the constant every time.
+For other cloud environments, IBM Cloud Portal or MindSphere for example, the constants can be accessed as *Environment Variables* in, for instance, Cloud Foundry. The constant is exposed with the name **module** + **.** + **constant**. For example `mymodule.myconstant`.
+
+When running the application locally or in a sandbox, the values defined in Studio Pro are used.
+
+{{% alert type="info" %}}
+The value for a constant can also be overridden in a [Configuration](configuration). This allows you to run locally using different values for one or more constants, without having to change the default value for the constant every time.
 {{% /alert %}}
 
 Constants can be used in:
@@ -30,7 +35,7 @@ This field is for documentation purpose only: end users will never see it, and i
 
 ### Type
 
-The [data type](data-types) of the constant. This determines what kind of values a constant can hold. Supported data types are String, Boolean, Date and time, Float (deprecated), Decimal and Integer/Long.
+The [data type](data-types) of the constant. This determines what kind of values a constant can hold. Supported data types are String, Boolean, Date and time, Decimal and Integer/Long.
 
 ## Value Properties
 

@@ -1,5 +1,5 @@
 ---
-title: "Parse integer"
+title: "Parse Integer"
 parent: "expressions"
 ---
 

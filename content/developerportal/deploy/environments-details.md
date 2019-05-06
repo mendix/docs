@@ -32,9 +32,9 @@ The view of the **General** tab depends on the Mendix Cloud version on which the
 * **Project ID** – the unique identifier for your Mendix app
 * **Environment ID** – the unique identifier of this environment
 * **Custom domains** – the custom domains of the app
-* **Java Version** – always version 1.8
+* **Java Version** – Oracle version 1.8 or AdoptOpenJDK version 8
 * **Studio Target** – whether this environment is the one where apps will be deployed from Studio - see [Studio Deployment Settings](studio-deployment-settings) for more information
-* **Plan** – (*Cloud V4 only*) the type of plan covered by this licence
+* **Plan** – (*Cloud V4 only*) the type of plan covered by this license
 * **Instances** – (*Cloud V4 only*) A summary of the number and memory allocation of *instances* of this environment: see section 2.3, [Scaling...](#scaling) for more information
 * **Database Status** – (*Cloud V3 only*) this is **Running** by default
 * **Database Version** – the PostgreSQL version that is supporting the database
@@ -197,7 +197,7 @@ You can perform the following actions:
 
 For more information, see [Certificates](certificates) and [Custom Domains](custom-domains).
 
-### 4.2 HTTP Headers
+### 4.2 HTTP Headers{#http-headers}
 
 HTTP Headers allows you to set the values of selected HTTP response headers. These allow the server to pass additional information with the response which the browser will interpret to control the behavior of your Mendix app.
 

@@ -10,6 +10,20 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud V3, and other deploym
 
 ## 2019
 
+### May 7th, 2019
+
+#### Improvements
+
+* We have extended the range of HTTP Headers which are supported in the Developer Portal. Previously, only *X-Frame-Options* was supported. See [Environment Details](/developerportal/deploy/environments-details#http-headers) for more information.
+
+* We clarified which logs can be downloaded from the Developer Portal by changing the button text from *Download Today's Log* to *Download Current Log*
+
+#### Fixes
+
+* For Mendix Cloud V4 deployments of Mendix apps version 7.23.1 and above, the correct Java version is displayed on the Environment Details page.
+
+* We resolved an issue where some team members were not visible in Node Permissions after an app was relinked (Tickets 70285, 79708, 79824, 80557, 81713, and 82591).
+
 ### May 2nd, 2019
 
 #### Improvements

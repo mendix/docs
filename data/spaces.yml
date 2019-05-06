@@ -205,7 +205,7 @@ studio:
     - "Theme Customizer"
     - "App Settings"
 best-practices:
-  space: "Mendix 7 Best Practices"
+  space: "Expert Best Practices"
   priority: false
   draft: true
   menu_categories:

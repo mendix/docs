@@ -7,13 +7,13 @@ tags: ["offline", "native", "mobile"]
 
 ## 1 Introduction
 
-Offline-first applications work regardless of the connection in order to provide a continuous experience. Pages and logic interact with an offline database on the device itself, and data is synchronized with the server when possible. This results in a snappier UI, increased reliability, and improved device battery life.
+Offline-first applications work regardless of the connection in order to provide a continuous experience. Pages and logic interact with an offline database on the device itself, and data is synchronized with the server on first startup after deploy and when configured. This results in a snappier UI, increased reliability, and improved device battery life.
 
 {{% alert type="info" %}}
 It is important to understand that offline-first is an architectural concept and not an approach based on the network state of the device. Offline-first apps do not rely on a connection, but they can use connections (for example, you can use a Google Maps widget or push notifications).
 {{% /alert %}}
 
-Mendix supports building offline-first applications for [native mobile](native-mobile) and [hybrid mobile](hybrid-mobile) apps . Both native and hybrid apps share the same core, and this gives them the same offline-first capabilities. Native mobile apps are always offline-first, but for hybrid mobile apps, it depends on the navigation profile that is configured. The data is stored on the device in a local database, and the files are stored on the file storage of the device.
+Mendix supports building offline-first applications for [native mobile](native-mobile) and [hybrid mobile](hybrid-mobile) apps. Both native and hybrid apps share the same core, and this gives them the same offline-first capabilities. Native mobile apps are always offline-first, but for hybrid mobile apps, it depends on the navigation profile that is configured. The data is stored on the device in a local database, and the files are stored on the file storage of the device.
 
 Mendix Studio Pro performs validations to make sure your app follows an offline-first approach and works even when there is no connection.
 
@@ -66,7 +66,7 @@ Depending on the use-case, more fine-grained synchronization controls might be r
 
 Furthermore, it is possible to disable downloads for an entity. This can be very useful in cases where the objects should only be uploaded, for example a `Feedback` entity.
 
-If you have custom widgets or JavaScript actions which use an entity that cannot be detected by Studio Pro  in your offline-first profile (because its only used in the code), you can use customizable synchronization to include such entities.
+If you have custom widgets or JavaScript actions which use an entity that cannot be detected by Studio Pro in your offline-first profile (because its only used in the code), you can use customizable synchronization to include such entities.
 
 {{% todo %}}[include customsync.png]{{% /todo %}}
 
@@ -97,7 +97,7 @@ During the synchronization, changed and new objects are committed. An object's s
 * An error occurs during the execution of a before- or after-commit event microflow
 * The object is not valid according to domain-level validation rules
 
-When a synchronization error occurs because of one the reasons above, an object's commit is skipped, its changes are ignored, and references from other objects to it become invalid.
+When a synchronization error occurs because of one the reasons above, an object's commit is skipped, its changes are ignored, and references from other objects to it become invalid. Objects referencing such skipped object, which are not triggering errors, will be synchronized normally.
 
 {{% alert type="warning" %}}
 The behavior described above will be available as of [Mendix version 8 GA](/releasenotes/studio-pro/8.0). Before this version is available and there is a synchronization error occurs because of one the reasons listed above, the synchronization is aborted and the data is reverted on the local device. It is thus very important to prevent these situations.
@@ -108,7 +108,10 @@ The behavior described above will be available as of [Mendix version 8 GA](/rele
 To avoid the problems mentioned above, we suggest following these best practices:
 
 * Do not remove, rename, or change the type of entities or their attributes in offline apps after your initial release
+	* This may cause objects or values to be no longer accessible to offline users
 	* If needed, you can do an "in-between" release that is still backwards-compatible, and then make the changes in the next release after all the apps are synchronized
+* Do not delete objects which can be synced to offline users
+	* This will result in lost changes on those objects when attempted to synchronize them
 * Avoid using domain-level validation for offline entities – use nanoflows or input validation instead
 	* It is also a good practice to validate again on the server using microflows
 * When committing objects that are being referenced by other objects, make sure the other objects are also committed

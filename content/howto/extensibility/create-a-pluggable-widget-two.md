@@ -193,7 +193,7 @@ This section will teach you to add validation to your TextBox widget. Using micr
 	}
 	```
 
-Next, add `Fragment` to the current React import (shown below), and add a new `Alert` import underneath the existing imports in *TextBox.tsx*:
+5. Add `Fragment` to the current React import (shown below), and add a new `Alert` import underneath the existing imports in *TextBox.tsx*:
 
 	```ts
 	import { Component, ReactNode, Fragment, createElement } from "react";

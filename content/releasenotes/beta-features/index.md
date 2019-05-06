@@ -1,25 +1,23 @@
 ---
-title: "What Are Mendix Beta Features?"
-#description: "Set a description with a maximum of 140 characters; this should describe what the goal of the document is, and it can be different from the document introduction; this is optional, and it can be removed"
+title: "Mendix Beta Features"
 tags: ["Beta", "Studio Pro", "Features", "Feature Flags"]
 #notoc: true
 #layout: wide
-#draft: true
 #toc-level: "3"
 ---
 
 ## 1 Introduction
 
-Mendix releases beta versions in two circumstances.
+Mendix releases beta versions in two circumstances:
 
-1. Where a new product or product version is introduced and is made available to early adopters for assessment and allow them to try new features.
-2. Where individual features are introduced which are, in principal, production ready but are either subject to change or need to be reviewed by a broader audience.
+* When a new product or product version is introduced and is made available to early adopters for assessment so that they can try new features
+* When individual features are introduced which are, in principal, production-ready but are either subject to change or need to be reviewed by a broader audience
 
 We release these beta features and products to collect feedback on their implementation so that we can improve them. We value any feedback, as it enables us to provide you with the best possible product.
 
-## 2 Beta Products
+## 2 What Are Mendix Beta Products?
 
-These are products which have new features which can be assessed and used by *early adopter* developers. One example might be a new major version of Mendix Studio Pro, These are released in beta as the feature sets may not be complete and developers may find gaps in functionality which Mendix is still working on.
+These are products which have new features which can be assessed and used by *early-adopter developers*. One example might be a new major version of Mendix Studio Pro. These products are released in beta, as the feature sets may not be complete and developers may find gaps in functionality which Mendix is still working on.
 
 ## 3 Beta Features Overview
 
@@ -38,7 +36,7 @@ If you would like to test a beta feature, consider the following:
 * Feedback on the quality of the beta feature will be evaluated by the PM
 * When there is a strong desire to take a beta feature into production, please contact your CSM to see if special arrangements are possible
 
-## 4 Limitations of Beta Features and Products
+## 4 Limitations of Beta Features & Products
 
 Please take note of the following limitations regarding beta features:
 

@@ -2,7 +2,6 @@
 title: "Model Changes When Security Is Enabled in Studio"
 parent: "security"
 description: "Describes checks and changes in the project when security is enabled in Mendix Studio."
-menu_order: 
 tags: ["studio pro", "security", "studio"]
 ---
 
@@ -40,10 +39,10 @@ To enable single sign-on the following checks and changes are performed:
 
 The AppCloudServices module also adds user management to your app, and when you deploy your app in the AppCloud, it will now be automatically added to your [Launchpad](https://home.mendix.com/home/). With user management you can manage app users.
 
-{{% alert type="info" %}}If your project already has the AppCloudServices module installed, you will not be able to enable security from Studio. You will need to set it manually in Studio Pro meeting the following requirements: 
+{{% alert type="info" %}}If your project already has the AppCloudServices module installed, you will not be able to enable security from Studio. You can only set security manually in Studio Pro meeting the following requirements: 
 
 * Security should be set to **Production** <br/>
-* The AppCloudServices module  should be set up to enable single sign on (For more information on how to set the module up, see [Mendix Single Sign On](/developerportal/deploy/integrate-with-mendix-sso) in the *Developer Portal Guide*.)
+* The AppCloudServices module should be set up to enable single sign on (For more information on how to set the module up, see [Mendix Single Sign On](/developerportal/deploy/integrate-with-mendix-sso) in the *Developer Portal Guide*)
 
 {{% /alert %}}
 

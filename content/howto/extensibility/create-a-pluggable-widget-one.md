@@ -206,7 +206,7 @@ The input works, but the styling could be improved. In the next code snippets, y
 
 ![custom widget](attachments/pluggable-part-one/customwidgetedit.png)
 
-1. In *TextBox.tsx* pass the properties from the runtime to the `TextInput` component:
+1. In *TextBox.tsx*, pass the properties from the runtime to the `TextInput` component:
 
 	```ts
 	class TextBox extends Component<TextBoxContainerProps> {
@@ -222,7 +222,7 @@ The input works, but the styling could be improved. In the next code snippets, y
 	}
 	```
 
-2. In *components/TextInput.tsx* add the attributes to the interface and render them in the input:
+2. In *components/TextInput.tsx*, add the attributes to the interface and render them in the input:
 
 	```ts
 	import { CSSProperties, Component, ReactNode, createElement } from "react";
@@ -260,7 +260,7 @@ The input works, but the styling could be improved. In the next code snippets, y
 
 While the Mendix input widgets come with labels, you will need to add one to TextBox manually. With the new API it is easy to add a label to any widget.
 
-1.  In the *TextBox.xml* file add attribute `<systemProperty />` inside the existing property group:
+1.  In the *TextBox.xml* file, add attribute `<systemProperty />` inside the existing property group:
 
 	```xml
 	<systemProperty key="Label" />
@@ -270,7 +270,7 @@ While the Mendix input widgets come with labels, you will need to add one to Tex
 
 	![edit text box two](attachments/pluggable-part-one/edittextboxtwo.png)
 
-2.  In the page editor the label is previewed:
+2.  Preview the label in the page editor:
 
 	![edit data view one](attachments/pluggable-part-one/editdataviewone.png)
 
@@ -282,7 +282,7 @@ While the Mendix input widgets come with labels, you will need to add one to Tex
 
 The value from the attribute can be displayed and updated using the other input, however you cannot change the value directly from within your widget. You can close the loop by following these steps. 
 
-1. In *TextBox.tsx* create a function that will update the attribute, and pass it to the `TextInput` component:
+1. In *TextBox.tsx*, create a function that will update the attribute and pass it to the `TextInput` component:
 
 	```ts
 	class TextBox extends Component<TextBoxContainerProps> {
@@ -307,7 +307,7 @@ The value from the attribute can be displayed and updated using the other input,
 	
 	* JavaScript can pass functions from one object to another – this way, the Mendix API stays in the container `TextBox component` and provides a function to the display component to pass updates back to the attribute
 	* When a function is passed to another component, the function might have a scoping issue – this can be solved by binding the context `this` to the function before passing it to the display component (for more information, see this [freeCodeCamp blog post](https://medium.freecodecamp.org/this-is-why-we-need-to-bind-event-handlers-in-class-components-in-react-f7ea1a6f93eb))
-2. In *components/TextInput.tsx* handle the change events of the input and pass the new value to the `onUpdate` function of the container component:
+2. In *components/TextInput.tsx*, handle the change events of the input and pass the new value to the `onUpdate` function of the container component:
 
 	```ts
 	import { CSSProperties, ChangeEvent, Component, ReactNode, createElement } from "react";

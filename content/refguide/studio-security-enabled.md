@@ -17,7 +17,7 @@ Users can enable security from Studio. While the Studio user simply clicks the *
 When security is enabled, a number of checks and changes are done at several levels.
 
 1. Studio checks if security is enabled. If security is set to **Prototype/demo** or **Production**, the process stops. If security is off, steps described below are executed. 
-2. The AppCloudServices module is set up if the project does not have them yet (for more information on this process, see the [Modules Set Up](#module-set-up) section). If AppCloudServices module has been already installed for this project, the process stops. 
+2. The AppCloudServices module is set up if the project does not have them yet (for more information on this process, see the [Modules Set Up](#module-set-up) section). If the AppCloudServices module has been already installed for this project, the process stops. 
 3. Studio does checks and changes (if necessary) to [demo users](demo-users) , [module roles](module-security) , and [user roles](user-roles) (for more information on this process, see the [Module Roles and Demo Users Set Up](#module-roles-and-demo-users) section).
 4. Studio sets access rules for entities (and their attributes and associations), if entities do not have access rules yet (for more information on this process, see the [Entity Access Set Up](#entity-access) section).
 5. Studio checks if *index.html* and *login.html* files exist, backs them up, and replaces them with a new version (for more information on this process, see the [Files Set Up](#files-set-up) section).

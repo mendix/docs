@@ -152,6 +152,7 @@ Open the **(YourMendixProject)/CustomWidgets/TextBox** folder in your IDE of cho
 5. The container component *TextBox.tsx* receives the properties in the runtime, and forwards the data to the display component. The container works like glue between the Mendix application and the display component. Override the class lines in *TextBox.tsx* until they look like this:
 
 	```ts
+	import { Component, ReactNode, createElement } from “react”; 
 	import { TextInput } from "./components/TextInput";
 	class TextBox extends Component<TextBoxContainerProps> {
 		render(): ReactNode {
@@ -169,15 +170,19 @@ Open the **(YourMendixProject)/CustomWidgets/TextBox** folder in your IDE of cho
 6. Override the class lines in *Textbox.webmodeler.tsx* until they look like this:
 
 	```ts
-	// tslint:disable-next-line class-name
-	export class preview extends Component<TextBoxWebModelerProps> {
+	import { TextInput } from "./components/TextInput";
+	
+	declare function require(name: string): string;
+	
+	// eslint-disable-next-line @typescript-eslint/class-name-casing
+	export class preview extends Component<TextBoxPreviewProps> {
 		render(): JSX.Element {
 			return <TextInput value={this.props.textAttribute} />;
 		}
 	}
 	```
 	
-	Before moving on from this step, you should remove the import lines concerning "Hello World" sample text from *Textbox.webmodeler.tsx* and *Textbox.tsx*, as they are no longer in use.	
+	Before moving on from this step, you should remove the import lines concerning "Hello World" sample text from *TextBox.webmodeler.tsx* and *TextBox.tsx*, as these lines are no longer in use.	
 7.  Add a test widget to the project home page:<br />
 	a. To find your widget for the first time you need to refresh from the files system. Use <kbd>F4</kbd> or select **Project > Synchronize Project Directory** from the Mendix Studio Pro menu.<br />
 	b. Navigate to **Home > Add widget** in the editor menu.<br />
@@ -221,7 +226,7 @@ The input works, but the styling could be improved. In the next code snippets, y
 
 	```ts
 	import { CSSProperties, Component, ReactNode, createElement } from "react";
-	import * as classNames from "classnames";
+	import classNames from "classnames";
 	export interface InputProps {
 		value: string;
 		className?: string;
@@ -255,12 +260,10 @@ The input works, but the styling could be improved. In the next code snippets, y
 
 While the Mendix input widgets come with labels, you will need to add one to TextBox manually. With the new API it is easy to add a label to any widget.
 
-1.  In the *TextBox.xml* file add attribute `<systemProperty />` to the property group:
+1.  In the *TextBox.xml* file add attribute `<systemProperty />` inside the existing property group:
 
 	```xml
-	<propertyGroup caption="Data source">
-		<systemProperty key="Label" />
-	</propertyGroup>
+	<systemProperty key="Label" />
 	```
 
 	This will add the **Show label** radio buttons in the widget properties tab **Data source**. When **Show label** is set to true it will automatically render the label for you in the page editor and the browser:

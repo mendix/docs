@@ -1,6 +1,6 @@
 ---
-title: "Mendix Best Practices"
-description: "Mendix Best practices."
+title: "Expert Best Practices"
+description: "Mendix Expert Best practices."
 draft: true
 notoc: true
 layout: wide

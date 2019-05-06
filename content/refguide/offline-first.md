@@ -45,8 +45,8 @@ For example, when a committed `City` object refers to an uncommitted `Country` o
 The upload phase executes the following operations after validation:
 
 1. It detects all the changes made to the local database. The local database can be modified only by committing an object. Such an object can be a new object created (while offline), or it can be an existing object previously sychronized from the server.
-<a name="steptwo"></a>2. If there are changed or new file objects, their contents are uploaded to the server and stored temporarily. Each file is uploaded in a separate network request.
-<a name="stepthree"></a>3. All the changed and new objects are committed to the server, and the content of the files are linked to the objects. This step is performed in a single network request. Any configured before- or after-commit event handlers on these objects will run as usual.
+2. <a name="steptwo"></a>If there are changed or new file objects, their contents are uploaded to the server and stored temporarily. Each file is uploaded in a separate network request.
+3. <a name="stepthree"></a>All the changed and new objects are committed to the server, and the content of the files are linked to the objects. This step is performed in a single network request. Any configured before- or after-commit event handlers on these objects will run as usual.
 
 ### 2.2 Download Phase {#download}
 
@@ -97,7 +97,7 @@ During the synchronization, changed and new objects are committed. An object's s
 * An error occurs during the execution of a before- or after-commit event microflow
 * The object is not valid according to domain-level validation rules
 
-When a synchronization error occurs because of one the reasons above, an object's commit is skipped, its changes are ignored, and references from other objects to it become invalid. Objects referencing such skipped object, which are not triggering errors, will be synchronized normally. Such situation is likely to be a modeling error and is logged on the server.
+When a synchronization error occurs because of one the reasons above, an object's commit is skipped, its changes are ignored, and references from other objects to it become invalid. Objects referencing such a skipped object (which are not triggering errors) will be synchronized normally. Such a situation is likely to be a modeling error and is logged on the server.
 
 {{% alert type="warning" %}}
 The behavior described above will be available as of [Mendix version 8 GA](/releasenotes/studio-pro/8.0). Before this version is available and there is a synchronization error occurs because of one the reasons listed above, the synchronization is aborted and the data is reverted on the local device. It is thus very important to prevent these situations.

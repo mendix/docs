@@ -16,16 +16,16 @@ Security is a way of controlling access to your app. For example, you can decide
 
 Whether security is enabled for your app by default, depends on app's type and version. You can come across the following cases:
 
-1. If your app has been created in the Developer Portal with Mendix version 7.23.3 or above, security is enabled by default, so you can view and edit [roles and permissions](#roles-and-permissions). For more information on versions, see [Web Modeler Version & Mendix Version Correlation](general-versions)
+1. If your app has been created in the Developer Portal with Mendix version 7.23.3 or above, you can enable security in Studio and view and edit [roles and permissions](#roles-and-permissions). For more information on versions, see [Web Modeler Version & Mendix Version Correlation](general-versions)
 
 2. If your app has been created in the Developer Portal with Mendix version below 7.23.3, or has been labelled as private content, or has been customized by your team specifically for your company, the security state depends on Studio Pro:<br/>
-    a.  If security is off in Studio Pro, then you can enable security in Studio. In this case, when you try to [publish the app](deployment), you will be prompted to enable security. <br/>
+    a.  If security is off in Studio Pro, then you can enable security in Studio. In this case, when you try to [publish the app](publishing-app), you will be prompted to enable security. <br/>
 
     ![Secure Your App Pop-up Window](attachments/settings-security/security-pop-up.png)<br/>
 
     b. If security is set to the **Prototype/demo** or **Production** level in Studio Pro and settings are compatible with Studio, you can view and edit **Roles and Permissions** in Studio. (For more information on what security settings are compatible with Studio, see the [Studio Compatibility](/refguide/studio-security-enabled#studio-compatible) section in *Model Changes When Security Is Enabled in Studio*.)
 
-    ![](attachments/app-settings-security/roles-and-permissions-screen.png)
+    ![](attachments/settings-security/roles-and-permissions-screen.png)
 
     c. If security is set to the **Prototype/demo** or **Production** level in Studio Pro and settings are not compatible with Studio, you can view (not edit) **Roles and Permissions** in Studio. (For more information on security settings compatible with Studio, see the [Studio Compatibility](/refguide/studio-security-enabled#studio-compatible) section in *Model Changes When Security Is Enabled in Studio*.)
 
@@ -63,7 +63,7 @@ In apps created via the Developer Portal, there are two app roles:
 
 {{% alert type="warning" %}}
 
-When security is enabled, these two app roles will have full access to your app. While you cannot edit the Administrator role, we recommend you to review permissions for the User role. 
+When security is enabled, these two app roles will have full access to your app. We recommend you to review permissions for the User role. 
 
 {{% /alert %}}
 
@@ -81,7 +81,7 @@ The **Page Access** and **Microflow Access** tabs contain a table where all page
 
 As a result, you will get a matrix specific for each role. 
 
-![The Page Access Tab Example](attachments/app-settings-security/page-access-tab.png)
+![The Page Access Tab Example](attachments/settings-security/page-access-tab.png)
 
 ### 3.1 Creating a New Role
 

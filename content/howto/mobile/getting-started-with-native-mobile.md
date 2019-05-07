@@ -77,7 +77,7 @@ Alternatively, you can navigate to the Make It Native app using Mendix Studio Pr
 
 {{% todo %}}Remove alert when app is added to Apple App store {{% /todo %}}
 
-To view your app on a mobile device (or emulator), you must download and install the Make It Native app. You can download the Make It Native app from [Google Play](https://play.google.com/store/apps/details?id=com.mendix.developerapp) (coming soon for iOS) and install it on your mobile device:
+To view your app on a mobile device (or emulator), you must download and install the Make It Native app. You can download the Make It Native app from [Google Play](https://play.google.com/store/apps/details?id=com.mendix.developerapp) and install it on your mobile device:
 
 {{% image_container width="500" %}}![native app on googleplay](attachments/getting-started-with-native-mobile/make-it-native-googleplay.png){{% /image_container %}}
 

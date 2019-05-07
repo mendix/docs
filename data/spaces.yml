@@ -199,12 +199,13 @@ studio:
     - "Page Editor"
     - "Navigation Document"
     - "Microflows"
+    - "Data Filters"
     - "Publishing Your App"
     - "Checks"
     - "Consistency Errors"
     - "Theme Customizer"
     - "App Settings"
-best-practices:
+   best-practices:
   space: "Expert Best Practices"
   priority: false
   draft: true

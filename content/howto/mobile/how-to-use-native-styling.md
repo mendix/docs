@@ -8,7 +8,7 @@ tags: ["styling", "design", "classes", "native"]
 
 ## 1 Introduction
 
-With Mendix 8, you have the capacity to alter design properties with Mendix Studio Pro. Furthermore, because all native mobile styling is written in JavaScript, you have new ways of applying your styling customizations.
+With Mendix 8, you have the capacity to alter design properties with Mendix Studio Pro. Furthermore, because all native mobile styling is written in JavaScript, you have new ways of applying your styling customizations. For more details on native styling, class names, and widget styling, see [Native Styling](/refguide/native-styling-refguide).
 
 ## 2 Prerequisites 
 
@@ -39,9 +39,17 @@ These resources let you style your app with a wide variety of interface parts. H
 	![default button](attachments/how-to-use-native-styling/default-button.png)
 
 3. Open *theme/styles/mobile/core/variables.js* using your IDE of choice.
-4.  Change the `brand.primary` from **#0595DB** to *rosybrown*:
+4. Change the `brand.primary` from **#0595DB** to *rosybrown*:
 
-	![rosybrown code](attachments/how-to-use-native-styling/rosybrown-code.png)
+	```javascript
+	//Brand Style
+	export const brand = {
+		primary: 'rosybrown',
+		success: '#76CA02',
+		warning: '#f99b1d',
+		danger: '#ed1c24',
+	};
+	```
 
 5. Save your file.
 6.  Click **Run locally** to apply your changes:
@@ -52,7 +60,7 @@ These resources let you style your app with a wide variety of interface parts. H
 
 ## 4 Classes
 
-Classes are groups of styling properties which define how certain elements of your app will be rendered. Once you make a class, one which applies to a button for example, you can reuse that class to easily style subsequent buttons in the same way. For a list of the classes already provided to you, see [Mendix Atlas UI](../front-end/atlas-ui). To learn how to apply a class to a widget, follow the steps below.
+Classes are groups of styling properties which define how certain elements of your app will be rendered. Once you make a class, one which applies to a button for example, you can reuse that class to easily style subsequent buttons in the same way. To learn how to apply a class to a widget, follow the steps below.
 
 1. Place a second button widget on your app's home page.
 2. Run your app to view your button.
@@ -176,6 +184,7 @@ Congratulations! By completing this how-to, you have learned how to alter a styl
 
 ## 8 Read More
 
-* [Native Styling](native-styling)
+* [Implement Native Styling](native-styling)
+* [Native Styling](/refguide/native-styling-refguide)
 * [Mendix Atlas UI](../front-end/atlas-ui)
 * [Create and Test a Native Mobile App](getting-started-with-native-mobile)

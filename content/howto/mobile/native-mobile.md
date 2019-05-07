@@ -15,4 +15,4 @@ You build Mendix native mobile apps the same way you build web or hybrid apps. Y
 
 * [Create & Test a Native Mobile App](getting-started-with-native-mobile)
 * [Create & Test Native Mobile Apps on a Mac](using-mendix-studio-pro-on-a-mac)
-* [Native Styling](native-styling)
+* [Implement Native Styling](native-styling)

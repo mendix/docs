@@ -199,6 +199,7 @@ studio:
     - "Page Editor"
     - "Navigation Document"
     - "Microflows"
+    - "Data Filters"
     - "Publishing Your App"
     - "Checks"
     - "Consistency Errors"

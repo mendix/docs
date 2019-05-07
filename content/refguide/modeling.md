@@ -42,8 +42,8 @@ The following documents in this category describe the documents you can add:
 * [JSON structures](json-structures)
 * [XML schemas](xml-schemas)
 * [Export mappings](export-mappings) and [import mappings](import-mappings)
-* [Consumed app services (deprecated)](consumed-app-services) (deprecated) and [consumed web services](consumed-web-services)
-* [Published REST services](published-rest-services), [published web services](published-web-services), [published OData services](published-odata-services), and [published app services (deprecated)](published-app-services) 
+* [Consumed web services](consumed-web-services) and [consumed app services (deprecated)](consumed-app-services)
+* [Published web services](published-web-services), [published REST services](published-rest-services), [published OData services](published-odata-services), and [published app services (deprecated)](published-app-services) 
 
 ## 3 Other Documents in This Category
 

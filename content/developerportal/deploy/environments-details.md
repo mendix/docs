@@ -32,9 +32,9 @@ The view of the **General** tab depends on the Mendix Cloud version on which the
 * **Project ID** – the unique identifier for your Mendix app
 * **Environment ID** – the unique identifier of this environment
 * **Custom domains** – the custom domains of the app
-* **Java Version** – always version 1.8
+* **Java Version** – Oracle version 1.8 or AdoptOpenJDK version 8
 * **Studio Target** – whether this environment is the one where apps will be deployed from Studio - see [Studio Deployment Settings](studio-deployment-settings) for more information
-* **Plan** – (*Cloud V4 only*) the type of plan covered by this licence
+* **Plan** – (*Cloud V4 only*) the type of plan covered by this license
 * **Instances** – (*Cloud V4 only*) A summary of the number and memory allocation of *instances* of this environment: see section 2.3, [Scaling...](#scaling) for more information
 * **Database Status** – (*Cloud V3 only*) this is **Running** by default
 * **Database Version** – the PostgreSQL version that is supporting the database
@@ -197,16 +197,41 @@ You can perform the following actions:
 
 For more information, see [Certificates](certificates) and [Custom Domains](custom-domains).
 
-### 4.2 Prevent Embedding Your App in an IFrame
+### 4.2 HTTP Headers{#http-headers}
 
-Your application can be embedded in another site using an IFrame. To prevent this, you can deny embedding using the setting below. This will set an X-Frame-Options header for each HTTP response from your app. Please note that Chrome will ignore the **Allow from specific domain** option.
+HTTP Headers allows you to set the values of selected HTTP response headers. These allow the server to pass additional information with the response which the browser will interpret to control the behavior of your Mendix app.
 
-The embedding options are:
+{{% alert type="info" %}}
+This replaces the option to prevent embedding your app in an IFrame with more flexible options to set HTTP Headers.
+{{% /alert %}}
 
-* **Allow**
-* **Never allow**
-* **Allow on the same domain**
-* **Allow from specific domain**
+For Mendix Cloud v3, only *X-Frame-Options* is supported. For Mendix Cloud v4 the HTTP headers which are supported in the Mendix Developer Portal are:
+
+| Header | Description | Additional Information |
+| --- | --- | --- |
+| Access-Control-Allow-Origin | indicates whether the response can be shared with requesting code from the given origin | |
+| Content-Security-Policy | allows web site administrators to control resources the user agent is allowed to load for a given page | a string value<br/>*for more information see the W3C recommendation [Content Security Policy Level 2](https://www.w3.org/TR/CSP2/)* |
+| Referrer-Policy | governs which referrer information should be included with requests made | |
+| X-Content-Type-Options | indicate that the MIME types advertised in the Content-Type headers should not be changed and be followed | |
+| X-Frame-Options | indicates whether or not a browser should be allowed to render a page in a `<frame>`, `<iframe>`, `<embed>` or `<object>` | This was the value set previously to prevent embedding in an IFrame |
+| X-Permitted-Cross-Domain-Policies | specifies whether this page can load resources from a different domain | |
+| X-XSS-Protection | stops pages from loading when they detect reflected cross-site scripting (XSS) attacks | |
+
+There are three types of value for these headers:
+
+* Choose a value from a dropdown
+
+   ![](attachments/environments-details/http-header-dropdown.png)
+
+* Choose a value from a dropdown and specify a URL
+
+   ![](attachments/environments-details/http-header-url.png)
+
+* Enter the required values as a string
+
+   ![](attachments/environments-details/http-header-string.png)
+
+Additional information can be found in the Mozilla developer guide [HTTP headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers).
 
 ### 4.3 Path-Based Access Restrictions
 

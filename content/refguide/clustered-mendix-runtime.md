@@ -109,7 +109,7 @@ It is important to realize that when calling external web services in Mendix to 
 To reduce the performance impact of large requests and responses, an app developer should be aware of the following scenarios that cause large requests and responses:
 
 * A microflow that creates a large number of non-persistable entities and shows them in a page
-* A microflow that calls a web service or app service to retrieve external data and convert them to non-persistable entities
+* A microflow that calls a web service to retrieve external data and convert them to non-persistable entities
 * A page that has multiple microflow data source data views, each causing the state transferred to the Mendix Runtime to handle the microflow
 
 {{% alert type="warning" %}}

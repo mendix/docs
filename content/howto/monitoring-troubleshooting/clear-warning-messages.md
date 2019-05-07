@@ -98,11 +98,11 @@ Events have no effect inside a non-editable context.
 
 {{% alert type="warning" %}}
 
-Microflow ‘microflowname’ is accessible through the server API because it specifies allowed roles.  This is unnecessary because the microflow is not used from navigation, a page or a published app service.
+Microflow ‘microflowname’ is accessible through the server API because it specifies allowed roles. This is unnecessary because the microflow is not used from navigation or a page.
 
 {{% /alert %}}
 
-* There is no need for a microflow that is not accessed through navigation, a page, or a published app service to have security roles allowed
+* There is no need for a microflow that is not accessed through navigation or a page to have security roles allowed
 * This can lead to a security problem, and the assigned roles should be removed
 
 {{% alert type="warning" %}}

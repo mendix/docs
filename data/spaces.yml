@@ -205,7 +205,7 @@ studio:
     - "Consistency Errors"
     - "Theme Customizer"
     - "App Settings"
- best-practices:
+best-practices:
   space: "Expert Best Practices"
   priority: false
   draft: true

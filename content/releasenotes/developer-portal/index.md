@@ -14,7 +14,9 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud V3, and other deploym
 
 #### Improvements
 
-* We have extended the range of HTTP Headers which are supported in the Developer Portal. Previously, only *X-Frame-Options* was supported. See [Environment Details](/developerportal/deploy/environments-details#http-headers) for more information.
+* For Mendix Cloud V4, we have extended the range of HTTP Headers which are supported in the Developer Portal. Previously, only *X-Frame-Options* was supported. See [Environment Details](/developerportal/deploy/environments-details#http-headers) for more information.
+
+    If you add or change these settings, you will need to redeploy your app before the changes take effect.
 
 * For Mendix Cloud V4 deployments of Mendix apps version 7.23.1 and above, we now support AdoptOpenJDK, and the relevant Java version is displayed on the Environment Details page.
 

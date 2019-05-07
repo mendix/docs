@@ -231,6 +231,8 @@ There are three types of value for these headers:
 
    ![](attachments/environments-details/http-header-string.png)
 
+The changes to the headers will be implemented when the app is redeployed.
+
 Additional information can be found in the Mozilla developer guide [HTTP headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers).
 
 ### 4.3 Path-Based Access Restrictions

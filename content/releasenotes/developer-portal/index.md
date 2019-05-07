@@ -10,13 +10,39 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud V3, and other deploym
 
 ## 2019
 
-### April 26th, 2019
+### May , 2019
 
 #### Improvements
 
 * We have introduced a [REST Stories API](/apidocs-mxsdk/apidocs/stories-api-rest). This allows you to create, retrieve, or update the sprints or stories of your Mendix app projects while using basic HTTP commands, such as `POST` or `GET`.
 * We have also introduced a [SOAP Stories API](/apidocs-mxsdk/apidocs/stories-api-soap).
 * As part of the REST Stories API feature, we created two new scopes. For more information, see the [Retrieve the Stories & Sprints in Your Project](/developerportal/mendix-profile/oauth-scopes#mx:app:stories:read) and [Make Changes to the Stories & Sprints in Your Project](/developerportal/mendix-profile/oauth-scopes#mx:app:stories:write) sections of *OAuth & Scopes*.
+
+### May 7th, 2019
+
+#### Improvements
+
+* For Mendix Cloud V4, we have extended the range of HTTP Headers which are supported in the Developer Portal. Previously, only *X-Frame-Options* was supported. See [Environment Details](/developerportal/deploy/environments-details#http-headers) for more information. If you add or change these settings, you will need to redeploy your app before the changes take effect.
+* For Mendix Cloud V4 deployments of Mendix apps version 7.23.1 and above, we now support AdoptOpenJDK, and the relevant Java version is displayed on the Environment Details page.
+* We clarified which logs can be downloaded from the Developer Portal by changing the button text from *Download Today's Log* to *Download Current Log*
+
+#### Fixes
+
+* We resolved an issue where some team members were not visible in Node Permissions after an app was relinked (Tickets 70285, 79708, 79824, 80557, 81713, and 82591).
+
+### May 2nd, 2019
+
+#### Improvements
+
+* With the beta release of Mendix Studio and Mendix Studio Pro (Mendix version 8), we have updated all mentions of *Web Modeler* to *Mendix Studio* and *Desktop Modeler* to *Mendix Studio Pro* across the Developer Portal.
+
+### April 29th, 2019
+
+#### App Store Improvements
+
+* We created a new App Store menu structure, so it is now easier to navigate through your created content. If you are a [Company Admin](/developerportal/company-app-roles/manage-roles#app-store-manager) with certain permissions, you will see additional menu items to help you manage private and public company content.
+* For App Store administrators, you can now set [content managers](/developerportal/app-store/app-store-overview#cm) who are allowed to manage your company content by marking it as protected.
+* You can now share private App Store content with [external downloaders](/developerportal/app-store/app-store-overview#ext) from other companies.
 
 ### April 8th, 2019
 
@@ -49,10 +75,7 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud V3, and other deploym
     * When deploying your application via the Developer Portal you can choose the destination environment
     * When viewing metrics, logs, backups, etc. you will have to choose the environment using a drop-down rather than clicking directly on the environment you want
 * We have added the ability to manage tags through the Developer Portal, in addition to the current method which involved using the API
-
-* We have changed Mendix deployment to **SAP Cloud Platform** so that the Cloud Foundry stack cflinuxfs3 is used. Previously, Mendix apps were using cflinuxfs2, which has been deprecated by SAP. See [Cloud Foundry Environment – Deprecation of cflinuxfs2](https://help.sap.com/doc/43b304f99a8145809c78f292bfc0bc58/Cloud/en-US/98bf747111574187a7c76f8ced51cfeb.html?from=2018-11-08&sel3=Announcement&sel1=Cloud%20Foundry%20Environment&to=2018-11-08) SAP release note from 8 November 2018, and [Rapid Application Development by Mendix – Stack Switch](https://help.sap.com/doc/43b304f99a8145809c78f292bfc0bc58/Cloud/en-US/98bf747111574187a7c76f8ced51cfeb.html?from=2019-03-29&to=2019-03-29&sel3=Announcement) SAP release note from 29 March 2019 for more information.
-
-    The next time that you deploy a new, or existing, Mendix app to *SAP Cloud Platform* from the Mendix Developer Portal, the new stack will be applied to your app.
+* We have changed Mendix deployment to **SAP Cloud Platform** so that the Cloud Foundry stack cflinuxfs3 is used. Previously, Mendix apps were using cflinuxfs2, which has been deprecated by SAP. See [Cloud Foundry Environment – Deprecation of cflinuxfs2](https://help.sap.com/doc/43b304f99a8145809c78f292bfc0bc58/Cloud/en-US/98bf747111574187a7c76f8ced51cfeb.html?from=2018-11-08&sel3=Announcement&sel1=Cloud%20Foundry%20Environment&to=2018-11-08) SAP release note from 8 November 2018, and [Rapid Application Development by Mendix – Stack Switch](https://help.sap.com/doc/43b304f99a8145809c78f292bfc0bc58/Cloud/en-US/98bf747111574187a7c76f8ced51cfeb.html?from=2019-03-29&to=2019-03-29&sel3=Announcement) SAP release note from 29 March 2019 for more information. The next time that you deploy a new, or existing, Mendix app to *SAP Cloud Platform* from the Mendix Developer Portal, the new stack will be applied to your app.
 
 ### March 21st, 2019
 

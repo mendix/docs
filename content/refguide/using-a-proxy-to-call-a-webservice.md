@@ -1,5 +1,5 @@
 ---
-title: "Using a proxy to call a webservice"
+title: "Using a Proxy to Call a Web Service"
 parent: "consumed-web-services"
 ---
 

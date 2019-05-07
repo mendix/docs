@@ -1,5 +1,5 @@
 ---
-title: "Widget Development"
+title: "Custom Widgets"
 tags: ["widget", "develop widget", "customize"]
 ---
 
@@ -41,9 +41,7 @@ For details on the widget life cycle, reference this documentation:
 
 In the past we created widgets using Brackets and a plugin. With the new JavaScript/Node.JS tools that have recently come out, we deprecated this way of creating widgets. The new way of creating widgets is done using Yeoman and a generator.
 
-For a quick tutorial on using the widget generator, see [How to Scaffold a Widget with the Yeoman Widget Generator](scaffold-a-widget-with-the-yeoman-widget-generator).
-
-This information is also covered in [Expert Series: Kickstart Your Widget Development](https://www.youtube.com/watch?v=MZ0Ihu2QGYY).
+This information is covered in [Expert Series: Kickstart Your Widget Development](https://www.youtube.com/watch?v=MZ0Ihu2QGYY).
 
 ### 3.4 Interacting with Mendix Runtime
 
@@ -82,5 +80,3 @@ Within the Mendix Community of developers, there are plenty of widget developers
 ## 5 Main Documents in This Category
 
 * [Add a Preview Image for a Custom Widget](add-a-preview-image-for-custom-widget)
-* [Scaffold a Widget with the Yeoman Widget Generator](scaffold-a-widget-with-the-yeoman-widget-generator)
-* [Use the Widget Development Plugin for Adobe Brackets](use-the-widget-development-plugin-for-adobe-brackets)

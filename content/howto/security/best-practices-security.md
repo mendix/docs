@@ -77,7 +77,7 @@ When publishing a web or REST service, you should consider whether this service 
 
 Mendix offers the following options for providing authentication for your services:
 
-* User name and password validation, specified within the Mendix Modeler (for details, see [Published Web Services](/refguide7/published-web-services))
+* User name and password validation, specified within Mendix Studio Pro (for details, see [Published Web Services](/refguide/published-web-services))
 * Client certificates and IP ranges, which are specified in the Mendix Cloud – these can be found at the network tab of your node’s environment details as **Access Restriction Profiles**
 
 ## 6 Using the Encryption Module When Storing Sensitive Information
@@ -109,11 +109,11 @@ Your application can gain the following benefits from using an identity provider
 
 ## 8 Applying a Strong Password Policy
 
-By default, Mendix forces a strong password policy. The same password policy that is configured in the Mendix Modeler is also used for apps running in a hosted environment (for example, on test, acceptance, and production).
+By default, Mendix forces a strong password policy. The same password policy that is configured in Mendix Studio Pro is also used for apps running in a hosted environment (for example, on test, acceptance, and production).
 
 It is very tempting to simplify the password constraints for development purposes (for example, making it possible to use a single character to login). However, we recommend avoiding this approach so that deployments will continue to force a strong password policy.
 
-The password policy can be set by via the guidelines described in [Password Policy](/refguide7/password-policy).
+The password policy can be set by via the guidelines described in [Password Policy](/refguide/password-policy).
 
 ## 9 Renaming the Administrator User
 
@@ -121,9 +121,9 @@ Each application requires power users who should be able to administer technical
 
 This information can be exploited by an attacker (for example, by trying to guess the password). Even though Mendix will block the user for  about 5 minutes after three unsuccessful login attempts, renaming the default MxAdmin user is recommended.
 
-The user name of the administrator can be changed in the Desktop Modeler's **Project Security** settings on the **Administrator** tab.
+The user name of the administrator can be changed in 's **Project Security** settings on the **Administrator** tab.
 
-When deployed to the Mendix Cloud, the information about the administrator user name and role is taken into account when using the **Change admin password** button on the environment. After changing the settings in the Desktop Modeler and redeploying the application, a successful admin password change will trigger the creation of a user in the app with the new name and role.
+When deployed to the Mendix Cloud, the information about the administrator user name and role is taken into account when using the **Change admin password** button on the environment. After changing the settings in  and redeploying the application, a successful admin password change will trigger the creation of a user in the app with the new name and role.
 
 {{% alert type="info" %}}
 At this point, the application does not automatically remove the user with the previous user name. Removing the old **MxAdmin** account has to be done manually.
@@ -141,7 +141,7 @@ By using an SSL connection and adding the public key of the endpoint within your
 
 There are several scenarios possible for protecting your outgoing connections using encryption. These depend on the infrastructure possibilities and protocols used. For more information, see [How to Secure Outgoing Connections from Your App](/developerportal/deploy/securing-outgoing-connections-from-your-application).
 
-You can add individual certificates in your project’s settings in the Desktop Modeler. Test, acceptance, and production environments require their certificates to be uploaded to the Mendix Cloud (for more information, see [Certificates](/developerportal/deploy/certificates)).
+You can add individual certificates in your project’s settings in . Test, acceptance, and production environments require their certificates to be uploaded to the Mendix Cloud (for more information, see [Certificates](/developerportal/deploy/certificates)).
 
 ## 11 Preventing Your App from Being Embedded in an IFrame
 
@@ -156,7 +156,7 @@ As an application grows in functionality, it also increases the chance of contai
 To keep your project hygiene at a good level, perform the following steps:
 
 * Remove unused modules, widgets, and Java libraries
-* Remove microflows that are not being used (these appear as warnings in the Modeler)
+* Remove microflows that are not being used (these appear as warnings in Studio Pro)
 * Avoid using components with known vulnerabilities (like Java or JavaScript libraries)
 
 A good source of known vulnerabilities is the [Common Vulnerabilities and Exposures website](https://cve.mitre.org/).

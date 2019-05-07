@@ -1,5 +1,5 @@
 ---
-title: "XML Inheritance and Choice"
+title: "XML Inheritance & Choice"
 parent: "mapping-documents"
 ---
 

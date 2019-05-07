@@ -35,7 +35,7 @@ To help you with your first MindSphere apps, there is also an example app which 
 To deploy your app to MindSphere you need the following prerequisites.
 
 * A MindSphere user account on a developer tenant
-* [Mendix Desktop Modeler](https://appstore.home.mendix.com/index3.html)
+* [Mendix Studio Pro](https://appstore.home.mendix.com/index3.html)
 * The Cloud Foundry Command Line Interface (CF CLI) – this can be downloaded from [https://github.com/cloudfoundry/cli](https://github.com/cloudfoundry/cli)
 * A Cloud Foundry role which allows you to push applications, such as `SpaceDeveloper` (help in setting up Cloud Foundry users can be found in the MindSphere [Cloud Foundry How Tos](https://developer.mindsphere.io/paas/paas-cloudfoundry-howtos.html))
 * A MindSphere developer role: either `mdsp:core:Developer` or `mdsp:core:DeveloperAdmin`
@@ -52,7 +52,7 @@ The **MindSphere Starter Application** in the Mendix App Store contains all the 
 This is the recommended approach if you are building a new application, as it will provide all the necessary building blocks to get started.
 {{% /alert %}}
 
-Open the Desktop Modeler (version 7.22.2 or above) and follow these steps:
+Open Studio Pro (version 7.22.2 or above) and follow these steps:
 
 1. Click the icon in the top-right of the menu bar to open the Mendix App Store.
 
@@ -145,7 +145,7 @@ Before you continue, ensure you have fulfilled the prerequisites described in th
 
 To create a Mendix deployment package from your app, do the following:
 
-1.  Open your app in the Desktop Modeler.
+1.  Open your app in Studio Pro.
 2.  Select **Project** > **Create Deployment Package...**.
 
     {{% image_container width="355" %}}![](attachments/deploying-to-mindsphere/image13.png){{% /image_container %}}
@@ -219,7 +219,33 @@ To deploy your deployment package, do the following:
 
     For example: `cf push -p "myapp.mda"`
 
-#### 5.1.3 Troubleshooting
+#### 5.1.3 Cloud Foundry Stack
+
+You should always use the latest available Cloud Foundry stack. The latest stack in MindSphere is `cflinuxfs3`. Apps pushed to MindSphere will use this stack.
+
+You can specify that your app uses a specific stack using the following command line option when you push your app:
+
+```bash
+cf push -p "{deployment_package_name}" -s {stack_name}
+```
+
+For example: `cf push -p "myapp.mda" -s cflinuxfs3`
+
+{{% alert type="warning" %}}
+Apps pushed to MindSphere before the end of April 2019 may have used `cflinuxfs2` as the default.
+
+If this is the case, the stack must be updated to `cflinuxfs3` as support for Cloud Foundry stack `cflinuxfs2` was removed from MindSphere in April 2019. See [Migrating applications from the cflinuxfs2 stack to the cflinuxfs3 (Bionic Beaver) stack](https://community.plm.automation.siemens.com/t5/Developer-Space/Migrating-applications-from-the-cflinuxfs2-stack-to-the/m-p/582029#M1621) in the *Siemens Developer Space* for more information.
+
+You can find out which stack your application is using with the following command:
+
+```bash
+cf app {app_name}
+```
+{{% /alert %}}
+
+For more information about Cloud Foundry stacks on MindSphere, see [How Can I Find the Stack my App is using?](https://developer.mindsphere.io/paas/paas-cloudfoundry-howtos.html#how-can-i-find-the-stack-my-app-is-using) in *Cloud Foundry How Tos* on the *MindSphere Developer* site.
+
+#### 5.1.4 Troubleshooting
 
 If you have issues with deploying your app to Cloud Foundry, you can find additional information in [Running a Cloud Foundry-Hosted Application – for Java Developers](https://developer.mindsphere.io/howto/howto-cf-running-app.html). Note that this is not written from the point of view of a Mendix developer, so some information may not be relevant.
 

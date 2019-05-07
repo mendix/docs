@@ -20,8 +20,6 @@ The charts widget provides a basic implementation of different types of chart (f
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Install the latest Mendix desktop modeler
-
 * Download the latest [Charts Widget](https://appstore.home.mendix.com/link/app/105695/) from the Mendix App Store
 
 ## 3 Implementing the Charts Widget in an Existing Project
@@ -118,6 +116,6 @@ To view the chart, follow these steps:
 
 ## 4 Read More
 
-* [How to Use a Chart With a REST Data Source](charts-basic-rest)
-* [How to Use Any Chart](charts-any-usage)
-* [How to Use Charts Themes](charts-theme)
+* [Use a Chart With a REST Data Source](charts-basic-rest)
+* [Use Any Chart](charts-any-usage)
+* [Use Charts Themes](charts-theme)

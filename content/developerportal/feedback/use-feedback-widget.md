@@ -10,7 +10,7 @@ tags: ["collaboration", "feedback and collaboration", "widget", "developer porta
 
 With Mendix, you can make use of the fully integrated feedback cycle functionality. Mendix supports enabling the end-user to provide feedback out of the box. This feedback is then reviewed, processed, and converted into actionable [user stories](../collaborate/stories).
 
-The [Mendix Feedback Widget](https://appstore.home.mendix.com/link/app/199/) enables you to collaborate more easily and quickly than ever before when developing an app project. With this widget, you can make use of the fully integrated Mendix app feedback cycle as well as access editing capabilities in the Web Modeler, check out a mobile view of the app, and easily share the app via email.
+The [Mendix Feedback Widget](https://appstore.home.mendix.com/link/app/199/) enables you to collaborate more easily and quickly than ever before when developing an app project. With this widget, you can make use of the fully integrated Mendix app feedback cycle, access the editing capabilities in Mendix Studio, check out a mobile view of the app, and easily share the app via email.
 
 ![](attachments/widget.png)
 
@@ -60,7 +60,7 @@ For details on how to see all the feedback you have submitted, see the [Feedback
 
 #### 3.1.2 Editing an App
 
-Clicking the **Edit** icon opens the app page in the Web Modeler. If you have permissions to edit the app, you can start editing and collaborating right away!
+Clicking the **Edit** icon opens the app page in Studio. If you have permissions to edit the app, you can start editing and collaborating right away!
 
 #### 3.1.3 Viewing an App
 
@@ -91,7 +91,7 @@ The sections below describe how to make sure you have the latest version of the 
 
 To ensure you have the latest version of the widget included in your app, follow these steps:
 
-1.  Download the latest version of the [Mendix Feedback Widget](https://appstore.home.mendix.com/link/app/199/) from the App Store (as accessed through the Desktop Modeler):
+1.  Download the latest version of the [Mendix Feedback Widget](https://appstore.home.mendix.com/link/app/199/) from the App Store (as accessed through Studio Pro):
 
 	{{% image_container width="450" %}}![](attachments/app-store.png)
 	{{% /image_container %}}

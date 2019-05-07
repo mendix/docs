@@ -8,9 +8,9 @@ A scroll container region is part of a [Scroll Container](scroll-container), and
 
 ## Common Properties
 
-{{% snippet file="refguide7/Class+Property.md" %}}
+{{% snippet file="refguide/Class+Property.md" %}}
 
-{{% snippet file="refguide7/Style+Property.md" %}}
+{{% snippet file="refguide/Style+Property.md" %}}
 
 ## General Properties
 

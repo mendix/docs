@@ -43,12 +43,6 @@ If the [export mapping](export-mappings) requires an input, you can select a var
 
 ### 2.4 Content Type
 
-{{% alert type="info" %}}
-
-This feature was introduced in version 7.10.0.
-
-{{% /alert %}}
-
 If the [export mapping](export-mappings) is based on a message definition, it can export both XML and JSON. Choose which type of output you want.
 
 ## 3 Validation Properties

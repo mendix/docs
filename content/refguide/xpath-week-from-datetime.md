@@ -1,5 +1,5 @@
 ---
-title: "XPath week-from-dateTime"
+title: "XPath Week-from-DateTime"
 parent: "xpath-constraint-functions"
 ---
 

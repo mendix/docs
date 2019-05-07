@@ -1,6 +1,6 @@
 ---
 title: "Start Your Own Repository"
-category: "Collaboration & Requirements Management"
+category: "Collaboration"
 menu_order: 30
 tags: []
 ---
@@ -17,7 +17,7 @@ In this how-to you will learn how to set up a GitHub repository. The repository 
 
 ## 3 Creating Your Repo
 
-First of all, your repo needs a name. We advise you use the same name that it is/will be published under in the App Store, and then using normal CamelCase to replace spaces. For example: "My first app" would be "Mendix/MyFirstApp" on GitHub.
+First of all, your repo needs a name. We advise you use the same name that it is/will be published under in the App Store, and then using normal CamelCase to replace spaces. For example: "My first app" would be `Mendix/MyFirstApp` on GitHub.
 
 Same as with the description. It should say what the App does, so it would be easiest to keep this in line with the App on the App Store.
 
@@ -25,9 +25,7 @@ Same as with the description. It should say what the App does, so it would be ea
 
 ## 4 Folder Structure
 
-When making a new widget, we suggest you use the [App Store Widget Boilerplate](https://github.com/mendix/AppStoreWidgetBoilerplate), available on GitHub.
-
-It's a set-up with everything you need to get started developing a Mendix widget.
+When making a new widget, we suggest you use the [App Store Widget Boilerplate](https://github.com/mendix/AppStoreWidgetBoilerplate), available on GitHub. This has everything you need to get started developing a Mendix widget.
 
 ## 5 Releases
 
@@ -39,7 +37,7 @@ If you want to make a new release for the App Store, we advise you start off wit
 
 *   [Stories](/developerportal/collaborate/stories)
 *   [Contributing to a GitHub repository](contribute-to-a-github-repository)
-*   [Version Control](/refguide7/version-control)
+*   [Version Control](/refguide/version-control)
 *   [How to Use the Feedback Widget](/developerportal/feedback/use-feedback-widget)
 *   [Sharing the Development Database](sharing-the-development-database)
 

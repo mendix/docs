@@ -1,5 +1,5 @@
 ---
-title: "Export to CSV button"
+title: "Export to CSV Button"
 parent: "control-bar"
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -11,15 +11,15 @@ The csv export function relies on a specific data retrieval method. As such, it 
 
 ## Common properties
 
-{{% snippet file="refguide7/Class+Property.md" %}}
+{{% snippet file="refguide/Class+Property.md" %}}
 
-{{% snippet file="refguide7/Style+Property.md" %}}
+{{% snippet file="refguide/Style+Property.md" %}}
 
 ## Formatting properties
 
 ### Decimal separator
 
-The string used to separate the fractional part from the whole part in Float, Currency and Decimal values.
+The string used to separate the fractional part from the whole part in Decimal values.
 
 _Default value:_ .
 
@@ -37,15 +37,15 @@ _Default value:_ ;
 
 ## General properties
 
-{{% snippet file="refguide7/Caption+Property.md" %}}
+{{% snippet file="refguide/Caption+Property.md" %}}
 
-{{% snippet file="refguide7/Tooltip+Property.md" %}}
+{{% snippet file="refguide/Tooltip+Property.md" %}}
 
-{{% snippet file="refguide7/Image+Property.md" %}}
+{{% snippet file="refguide/Image+Property.md" %}}
 
-{{% snippet file="refguide7/Button+Style+Property.md" %}}
+{{% snippet file="refguide/Button+Style+Property.md" %}}
 
-{{% snippet file="refguide7/Is+default+button+Property.md" %}}
+{{% snippet file="refguide/Is+default+button+Property.md" %}}
 
 ### Maximum number of rows
 
@@ -61,6 +61,6 @@ If true, the date format of the column is used, otherwise a format that is recog
 
 ## Visibility properties
 
-{{% snippet file="refguide7/Visibility+Property.md" %}}
+{{% snippet file="refguide/Visibility+Property.md" %}}
 
-{{% snippet file="refguide7/Visibility+Property+With+Module+Roles+Simple.md" %}}
+{{% snippet file="refguide/Visibility+Property+With+Module+Roles+Simple.md" %}}

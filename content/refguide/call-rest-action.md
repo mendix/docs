@@ -1,6 +1,7 @@
 ---
 title: "Call REST Service Action"
 parent: "microflow-activities"
+tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -27,12 +28,6 @@ The **HTTP method** property defines the HTTP method to use when calling a REST 
 Set **Use timeout on request** to **Yes** to be able specify how long the Call REST activity should wait for the REST endpoint to respond. If the REST endpoint has not responded after the number of seconds in **Timeout (s)**, an exception will occur and the microflow will roll back or go into your custom error handler.
 
 ### 2.3 Proxy Configuration
-
-{{% alert type="info" %}}
-
-This feature was introduced in version 7.15.0.
-
-{{% /alert %}}
 
 In almost all cases, you can ignore this setting. **Use project settings** is a good default value.
 

@@ -54,7 +54,7 @@ These are the settings on the **User settings** dialog box":
 * **Statistics period** determines if the statistics by default open with hourly or daily data
 * **Time zone** determines your time zone for the proper representation of date/time information
 
-Clicking **Delete account** deletes your account, including the Modeler environments belonging to your account. After the deletion, you will navigate to the Mendix Developer Portal. Apps are not deleted at this time.
+Clicking **Delete account** deletes your account, including Mendix Studio Pro environments belonging to your account. After the deletion, you will navigate to the Mendix Developer Portal. Apps are not deleted at this time.
 
 ## 4 Cleanups
 

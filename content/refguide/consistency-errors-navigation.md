@@ -1,13 +1,13 @@
 ---
 title: "Navigation Consistency Errors"
 parent: "consistency-errors"
-description: "Describes consistency errors in the Mendix Desktop Modeler and the way to fix them."
-tags: ["desktop modeler", "consistency errors", "checks", "errors", "navigation"]
+description: "Describes consistency errors in Mendix Studio Pro and the way to fix them."
+tags: ["Studio Pro", "consistency errors", "checks", "errors", "navigation"]
 ---
 
 ## 1 Introduction 
 
-In this document, we will explain how to solve the most common consistency errors that can occur when configuring navigation in the Desktop Modeler. 
+In this document, we will explain how to solve the most common consistency errors that can occur when configuring navigation in Studio Pro. 
 
 An example of a consistency error is when you set a page that has a data view as a menu item. 
 
@@ -26,7 +26,7 @@ When you set a page with a data view as a menu item, you get a consistency error
 
 For example, you have created a menu item called **Program** for a **Responsive** [profile](navigation-profile). This menu item opens the **Program** page. However, the **Program** page has a data view on it and expects a *ProgramItem* object to be passed to it, so that it can show the program details of a specific *ProgramItem* on the page. As a result, you get a consistency error, as no object is passed to this page from the navigation.
 
-![Scheme Showing the Menu Item Error](attachments/consistency-errors-navigation/dm-page-expects-an-object-error.png)
+![Scheme Showing the Menu Item Error](attachments/consistency-errors-navigation/page-expects-an-object-error.png)
 
 To fix the error, you can create an object and pass it to the page. Do the following:
 
@@ -40,7 +40,7 @@ To fix the error, you can create an object and pass it to the page. Do the follo
 
     c. Set **Program** as **On click page**. <br/>
 
-    ![Menu Item Properties](attachments/consistency-errors-navigation/dm-menu-item-properties.png)<br/>
+    ![Menu Item Properties](attachments/consistency-errors-navigation/menu-item-properties.png)<br/>
 
 Now when a user clicks the menu item, a new *ProgramItem* object will be created and passed to the page.
 
@@ -50,7 +50,7 @@ If you set a page that expects an object to be passed to it as a home page for a
 
 Let us study an example: you have added a data view that expects an object of type *Customer* to the home page of the responsive profile, and you get a consistency error. 
 
-![Home Page Error](attachments/consistency-errors-navigation/dm-home-page-error.png)
+![Home Page Error](attachments/consistency-errors-navigation/home-page-error.png)
 
 You can fix this error by creating a microflow that will that will create a new *Customer* object and pass it to the page. Do the following:
 
@@ -58,7 +58,7 @@ You can fix this error by creating a microflow that will that will create a new 
 
 2.  In **Default home page field** click **Select**.
 
-    ![Default Home Page Setting](attachments/consistency-errors-navigation/dm-default-home-page-field.png)
+    ![Default Home Page Setting](attachments/consistency-errors-navigation/default-home-page-field.png)
 
 3. In the **Select Navigation Target** dialog window, click **New**, then select **Create Microflow**.
 
@@ -68,7 +68,7 @@ You can fix this error by creating a microflow that will that will create a new 
 
 6.  For the **Create Object** activity, set **Entity** to **Customer**. 
 
-    ![Create Object Properties](attachments/consistency-errors-navigation/dm-create-object-properties.png)
+    ![Create Object Properties](attachments/consistency-errors-navigation/create-object-properties.png)
 
 7. Add Show Page activity to the microflow and do the following in the **Show Page** pop-up dialog:<br/>
 
@@ -78,7 +78,7 @@ You can fix this error by creating a microflow that will that will create a new 
 
 Now the new object of type *Customer* will be created and passed to the home page.
 
-![Open Home Page Microflow](attachments/consistency-errors-navigation/dm-open-home-page-microflow.png)
+![Open Home Page Microflow](attachments/consistency-errors-navigation/open-home-page-microflow.png)
 
 
 ## 3 Read More

@@ -15,12 +15,12 @@ The navigation tree widget shows a configured menu in the form of a tree. Items 
 
 ## Common Properties
 
-{{% snippet file="refguide7/Name+Property.md" %}}
+{{% snippet file="refguide/Name+Property.md" %}}
 
-{{% snippet file="refguide7/Class+Property.md" %}}
+{{% snippet file="refguide/Class+Property.md" %}}
 
-{{% snippet file="refguide7/Style+Property.md" %}}
+{{% snippet file="refguide/Style+Property.md" %}}
 
 ## General Properties
 
-{{% snippet file="refguide7/Menu+Source+Properties.md" %}}
+{{% snippet file="refguide/Menu+Source+Properties.md" %}}

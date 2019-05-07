@@ -13,10 +13,10 @@ This document will focus on executing an SQL (_Structured Query Language_) _Stat
 The **Execute statement** action (present in the Database Connector module) provides a consistent environment for Mendix projects to perform an arbitrary SQL _Statement_ on relational external databases.
 JDBC (_Java Database Connectivity_) API, a standard Java API, is used when this Java action attempts to connect with a Relational Database for which a JDBC driver exists.
 
-**After completing this how-to you will know:**
+**After completing this how-to you will know how to do the following:**
 
-*   How to execute SQL statements on relational external databases with the help of Database connector module.
-*   How to configure 'Execute statement' action.
+* Execute SQL statements on relational external databases with the help of Database connector module.
+* Configure 'Execute statement' action.
 
 ## 2 Prerequisites for the Execute Statement Action
 
@@ -60,4 +60,4 @@ The Execute statement action's result is either an Integer or a Long value which
 
 ## 6 Read More
 
-*   [How to execute an SQL statement on an external database](execute-an-sql-statement-on-an-external-database)
+*   [Execute an SQL Statement on an External Database](execute-an-sql-statement-on-an-external-database)

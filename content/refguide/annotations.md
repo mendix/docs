@@ -1,9 +1,11 @@
 ---
 title: "Annotations"
 parent: "domain-model"
-tags: ["domain model", "annotation"]
+tags: ["domain model", "annotation", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
+
+## 1 Introduction
 
 An annotation is an element that can be used to put comments in a domain model.
 
@@ -15,8 +17,8 @@ An order entity contains both a total amount and a discount attribute. You add a
 
 {{% /alert %}}
 
-## Common Properties
+## 2 Common Properties
 
-### Caption
+### 2.1 Caption
 
 The caption property contains the text of the annotation.

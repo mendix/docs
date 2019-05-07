@@ -10,7 +10,7 @@ A Mendix app model starts with a project. A project contains several top-level o
 
 ![](attachments/16057002/16842800.svg)
 
-Modeler Reference Guide | Model SDK API docs
+Studio Pro Guide | Model SDK API docs
 -|-
 [Project](/refguide/project) |TypeScript module [projects](https://apidocs.mendix.com/modelsdk/latest/modules/projects.html)
 [Modules](/refguide/modules) |[Project](https://apidocs.mendix.com/modelsdk/latest/classes/projects.project.html)
@@ -25,7 +25,7 @@ Project-level documents describe project security, project settings, app navigat
 
 ![](attachments/16057002/16842801.svg)
 
-Modeler Reference Guide | Model SDK API docs
+Studio Pro Guide | Model SDK API docs
 -|-
 [Project Settings](/refguide/project-settings) |[ProjectDocument](https://apidocs.mendix.com/modelsdk/latest/classes/projects.projectdocument.html) and its inheritance hierarchy
 [Project Security](/refguide/project-security) |
@@ -44,7 +44,7 @@ A module consists of a domain model, model security settings and zero or more do
 
 ![](attachments/16057002/18582255.svg)
 
-Modeler Reference Guide | Model SDK API docs
+Studio Pro Guide | Model SDK API docs
 -|-
 [Domain Model](/refguide/domain-model) | Property [`domainModel`](https://apidocs.mendix.com/modelsdk/latest/classes/projects.module.html#domainmodel) of Project
 [Module Security](/refguide/module-security) | Property [`moduleSecurity`](https://apidocs.mendix.com/modelsdk/latest/classes/projects.module.html#modulesecurity) of Project
@@ -59,7 +59,7 @@ In this sense, Module and Folder behave in the exact same way, and thus inherit 
 
 ![](attachments/16057002/18582254.svg)
 
-Modeler Reference Guide | Model SDK API docs
+Studio Pro Guide | Model SDK API docs
 -|-
 [Modules](/refguide/modules) |Property [`modules`](https://apidocs.mendix.com/modelsdk/latest/classes/projects.project.html#modules) of Project
 |[Module](https://apidocs.mendix.com/modelsdk/latest/classes/projects.module.html)

@@ -1,5 +1,5 @@
 ---
-title: "XPath id"
+title: "XPath ID"
 parent: "xpath-query-functions"
 ---
 

@@ -22,7 +22,6 @@ The data type can be one of the following:
 *   BOOLEAN
 *   DATETIME
 *   DECIMAL
-*   FLOAT (deprecated)
 *   INTEGER
 *   LONG
 *   STRING

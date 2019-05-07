@@ -1,5 +1,5 @@
 ---
-title: "XPath min"
+title: "XPath Min"
 parent: "xpath-query-functions"
 ---
 

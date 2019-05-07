@@ -1,12 +1,7 @@
 ---
 title: "Action Call Activities"
 parent: "activities"
+tags: ["studio pro"]
 ---
 
-## Microflow Call
-
-See [Microflow Call](microflow-call).
-
-## Java Action Call
-
-See [Java Action Call](java-action-call).
+For details, see [Microflow Call](microflow-call) and [Java Action Call](java-action-call).

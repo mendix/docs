@@ -1,5 +1,5 @@
 ---
-title: "XPath max"
+title: "XPath Max"
 parent: "xpath-query-functions"
 ---
 

@@ -6,6 +6,10 @@ menu_order: 1
 draft: true
 ---
 
+{{% alert type="info" %}}
+The Mendix Architecture Best Practices were written for [Mendx version 7](/releasenotes/studio-pro/7). They will be updated for Mendix 8 and future versions as necessary.
+{{% /alert %}}
+
 ## 1 Introduction
 
 Mendix is optimized for the easiest and fastest way to develop and maintain apps that fulfill business functions. As the scope of your apps grows larger, architecture becomes more important. At that point, you should leverage best practices in this area.

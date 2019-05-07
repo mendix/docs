@@ -32,7 +32,7 @@ The *Other SVN server* option is only available when support for other SVN serve
 
 ### Locally on disk
 
-Select this option if you don't need to upload the new app to a version control server. In this case it will only be stored on the local disk of the computer that's running the Modeler.
+Select this option if you don't need to upload the new app to a version control server. In this case it will only be stored on the local disk of the computer that's running Studio Pro.
 
 ## Disk location
 

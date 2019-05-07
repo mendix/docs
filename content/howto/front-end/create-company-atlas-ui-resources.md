@@ -18,13 +18,13 @@ Creating Atlas UI resources for your company is a great way to keep your company
 
 ## 2 Creating Page Templates
 
-The Atlas UI resources include a large variety of page templates to use. When creating an app, a lot of pages you create will be custom-made, and developers may want to reuse these page templates within the app or in other apps without having to start from scratch. This is now possible in the Mendix Desktop Modeler.
+The Atlas UI resources include a large variety of page templates to use. When creating an app, a lot of pages you create will be custom-made, and developers may want to reuse these page templates within the app or in other apps without having to start from scratch. This is now possible in Mendix Studio Pro.
 
 In the example below, we’ll go through the steps of creating a new page template and talk about how the page template behaves in a local project and in the **UI Resources** module.
 
 ### 2.1 Example Scenario
 
-In the Desktop Modeler, go to the **Project Explorer** of your app and right-click the page you want to use as the page template. In this example, we are using a dashboard page.
+In Studio Pro, go to the **Project Explorer** of your app and right-click the page you want to use as the page template. In this example, we are using a dashboard page.
 
 ![](attachments/howto/creating_page_templates.png)
 
@@ -64,8 +64,8 @@ Name the building block you want to create:
 
 The building block is now a new document type in the module with its own icon. In the building block **Properties** pane, there are two properties important for the building block:
 
-* **Display name** – the name of the building block that will show in the **Toolbox** pane of the Modeler
-* **Image** – the building block preview image that will be shown in the **Toolbox** pane of the Modeler
+* **Display name** – the name of the building block that will show in the **Toolbox** pane of Studio Pro
+* **Image** – the building block preview image that will be shown in the **Toolbox** pane of Studio Pro
 
 ![](attachments/howto/creating_bb_properties.png)
 
@@ -81,13 +81,13 @@ Let’s begin by placing our page template inside the **UI_Resources** module un
 
 ![](attachments/howto/creating_moving_local.png)
 
-In our example, the new page template has been added to the dashboard category. When we now create a new page in the Mendix Desktop Modeler, the **Homepage Template** is available in the **Create Page** wizard under the **Dashboards** category:
+In our example, the new page template has been added to the dashboard category. When we now create a new page in Mendix Studio Pro, the **Homepage Template** is available in the **Create Page** wizard under the **Dashboards** category:
 
 ![](attachments/howto/creating_open_pt.png)
 
 The **UI_Resources** module has been organized with folders that can be renamed and used as categories for page templates and building blocks. The sorting is done using numbers in front of the name, which can be altered to change the order in which they appear. Page templates and building blocks can be placed inside the same folder to reuse the same category names.
 
-Adding an underscore to the folder name in the Desktop Modeler (for example, **_Layouts**) ensures that the folder doesn’t get added to the categories for page templates or building blocks.
+Adding an underscore to the folder name in Studio Pro (for example, **_Layouts**) ensures that the folder doesn’t get added to the categories for page templates or building blocks.
 
 ## 5 Export Company Atlas UI Resources
 
@@ -99,8 +99,8 @@ The module can now be imported in other apps or uploaded to the [Mendix App Stor
 
 ## 6 Read More
 
-* [How to Get Started with Atlas UI](get-started-with-atlasui)
-* [How to Create Custom Preview Images for Building Blocks & Page Templates](create-custom-preview-images-for-building-blocks-and-page-templates)
-* [How to Extend Design Properties to Customize the Web Modeler Experience](extend-design-properties-to-customize-the-web-modeler-experience)
-* [How to Migrate Existing Projects to Atlas UI](migrate-existing-projects-to-atlasui)
-* [How to Share Company Atlas UI Resources](share-company-atlas-ui-resources)
+* [Get Started with Atlas UI](get-started-with-atlasui)
+* [Create Custom Preview Images for Building Blocks & Page Templates](create-custom-preview-images-for-building-blocks-and-page-templates)
+* [Extend Design Properties to Customize Your Studio Experience](extend-design-properties-to-customize)
+* [Migrate Existing Projects to Atlas UI](migrate-existing-projects-to-atlasui)
+* [Share Company Atlas UI Resources](share-company-atlas-ui-resources)

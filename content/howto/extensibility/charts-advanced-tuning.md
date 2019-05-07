@@ -3,7 +3,7 @@ title: "Fine-Tune a Chart with Advanced Settings"
 parent: "charts-tutorials"
 menu_order: 30
 description: "Describes the settings you can use to change chart layouts and types"
-tags: ["Desktop Modeler", "Charts", "Layout", "Chart Type"]
+tags: ["Studio Pro", "Charts", "Layout", "Chart Type"]
 ---
 
 ## 1 Introduction
@@ -20,9 +20,9 @@ The individual Charts widgets can be fine-tuned with advanced settings. The sett
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Installed the latest Mendix modeler
+* Installed the latest version of Mendix Studio Pro
 * Downloaded the latest [Chart Widget](https://appstore.home.mendix.com/link/app/105695/) from the Mendix App Store
-* Setup a chart, see [How to create a chart](charts-basic-create)
+* Setup a chart, see [How to Create a Chart](charts-basic-create)
 
 ## 3 Changing the Layout {#layout-changes}
 
@@ -64,7 +64,7 @@ To create a custom layout, follow these steps:
 
     ![chart editor](attachments/charts/charts-widget-properties-advanced-layout.png)
 
-12. Change the **Mode** back to **Advanced** in the  modeler, this will remove the Toggle Editor button from the chart.  
+12. Change the **Mode** back to **Advanced** in Studio Pro, this will remove the Toggle Editor button from the chart.  
 
 {{% alert type="warning" %}}
 
@@ -85,7 +85,7 @@ To create a custom configuration, follow these steps:
 3. Edit the **Custom settings**; change them to `{ "type": "line" }`.
     ![chart editor](attachments/charts/charts-widget-bar-line-combination.png)
 4. Copy the the custom settings.
-5. In the modeler, open the **Series 1** configuration.
+5. In Studio Pro, open the **Series 1** configuration.
 6. Paste the new configuration for the data into the **(Layout) Options** property in the **Advanced** tab.
 
     ![chart editor](attachments/charts/charts-widget-bar-line-combination-properties.png)
@@ -102,10 +102,10 @@ To create custom a configuration, follow these steps:
 2. Select **Configuration** from the drop down menu.
 3. Edit the **Custom settings**, change them to `{ "displayModeBar": true }`.
 4. Add more Custom settings as desired. See [here](https://plot.ly/javascript/configuration-options/) for more configuration settings.
-5. The changes made in the editor are not persistent; copy the required settings.
+5. The changes made in the editor are not persistable; copy the required settings.
 6. Paste the new configuration into the **Configuration options** property in the **Advanced** tab.
     ![chart editor](attachments/charts/charts-widget-properties-advanced-config.png)
-7. Change **Mode** to **Advanced** set modeler, to remove the **Toggle Editor** button.
+7. Change **Mode** to **Advanced**, set Studio Pro to remove the **Toggle Editor** button.
 
     {{% alert type="warning" %}}Please note that the advanced settings only apply to the chart in Advanced or Developer mode{{% /alert %}}
 
@@ -113,10 +113,10 @@ To create custom a configuration, follow these steps:
 
 ## 6 Read More
 
-Reference guide for the [advanced properties](/refguide7/charts-configuration#advanced)
+Reference for the [advanced properties](/refguide/charts-configuration#advanced)
 
-Layout options: [cheat sheet](/refguide7/charts-advanced-cheat-sheet#layout-all)  
-Configuration options: [cheat sheet](/refguide7/charts-advanced-cheat-sheet#config-options)  
-Data series options: [cheat sheet](/refguide7/charts-advanced-cheat-sheet#data-series)  
+Layout options: [cheat sheet](/refguide/charts-advanced-cheat-sheet#layout-all)  
+Configuration options: [cheat sheet](/refguide/charts-advanced-cheat-sheet#config-options)  
+Data series options: [cheat sheet](/refguide/charts-advanced-cheat-sheet#data-series)  
 
 Full reference: https://plot.ly/javascript/

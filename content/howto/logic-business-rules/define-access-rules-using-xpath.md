@@ -7,7 +7,7 @@ tags: ["microflow", "logic", "access rule", "xpath"]
 
 ## 1 Introduction
 
-The access rules of an entity define what a user is allowed to do with the objects of the entity. Users can be allowed to create and/or delete objects and to view and/or edit member values. A member is an attribute or an association of an entity. Furthermore, the set of objects available for viewing, editing, and removing can be limited by means of an XPath constraint (for details, see [XPath Constraints](/refguide7/xpath-constraints) in the Mendix Reference Guide). For more information on access rules, see [Access Rules](/refguide7/access-rules) in the Mendix Reference Guide.
+The access rules of an entity define what a user is allowed to do with the objects of the entity. Users can be allowed to create and/or delete objects and to view and/or edit member values. A member is an attribute or an association of an entity. Furthermore, the set of objects available for viewing, editing, and removing can be limited by means of an XPath constraint (for details, see [XPath Constraints](/refguide/xpath-constraints) in the *Mendix Studio Pro Guide*). For more information on access rules, see [Access Rules](/refguide/access-rules) in the *Mendix Studio Pro Guide*.
 
 In this how-to, you will prepare a data structure (including security), a GUI, and some example data for customers, orders, and a financial administrator account. After this preparation, you will define the access rules for the Order entity using XPath on the payment status. The XPath will constrain the order so it can only be seen by a financial administrator when the payment status of the order is set to "paid."
 
@@ -76,11 +76,11 @@ To define the access rules on the Order entity using XPath, follow these steps:
 
 ## 4 Read More
 
-* [How to Trigger Logic Using Microflows](triggering-logic-using-microflows)
-* [How to Create a Custom Save Button](create-a-custom-save-button)
-* [How to Extend Your Application with Custom Java](extending-your-application-with-custom-java)
-* [How to Work with Lists in a Microflow](working-with-lists-in-a-microflow)
-* [How to Optimize Retrieve Activities](optimizing-retrieve-activities)
-* [How to Configure Error Handling](set-up-error-handling)
-* [How to Optimize Microflow Aggregates](optimizing-microflow-aggregates)
-* [How to Extract & Use Sub-Microflows](extract-and-use-sub-microflows)
+* [Trigger Logic Using Microflows](triggering-logic-using-microflows)
+* [Create a Custom Save Button](create-a-custom-save-button)
+* [Extend Your Application with Custom Java](extending-your-application-with-custom-java)
+* [Work with Lists in a Microflow](working-with-lists-in-a-microflow)
+* [Optimize Retrieve Activities](optimizing-retrieve-activities)
+* [Configure Error Handling](set-up-error-handling)
+* [Optimize Microflow Aggregates](optimizing-microflow-aggregates)
+* [Extract & Use Sub-Microflows](extract-and-use-sub-microflows)

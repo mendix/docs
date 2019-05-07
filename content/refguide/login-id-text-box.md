@@ -1,5 +1,5 @@
 ---
-title: "Login Id Text Box"
+title: "Login ID Text Box"
 parent: "authentication-widgets"
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -11,13 +11,13 @@ It must be placed on a page together with a [login id text box](login-id-text-bo
 
 ## Common Properties
 
-{{% snippet file="refguide7/Name+Property.md" %}}
+{{% snippet file="refguide/Name+Property.md" %}}
 
-{{% snippet file="refguide7/Class+Property.md" %}}
+{{% snippet file="refguide/Class+Property.md" %}}
 
-{{% snippet file="refguide7/Style+Property.md" %}}
+{{% snippet file="refguide/Style+Property.md" %}}
 
-{{% snippet file="refguide7/Tab+index+Property.md" %}}
+{{% snippet file="refguide/Tab+index+Property.md" %}}
 
 ## General Properties
 
@@ -25,4 +25,4 @@ It must be placed on a page together with a [login id text box](login-id-text-bo
 
 The placeholder text is shown when no text has been entered yet. It can be used to give a hint to the user about what kind of text should be entered.
 
-{{% snippet file="refguide7/Login+Label+Properties.md" %}}
+{{% snippet file="refguide/Login+Label+Properties.md" %}}

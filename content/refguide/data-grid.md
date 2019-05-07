@@ -1,5 +1,5 @@
 ---
-title: "Data grid"
+title: "Data Grid"
 parent: "data-widgets"
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -15,13 +15,13 @@ A data grid showing accounts.
 
 ## Common Properties
 
-{{% snippet file="refguide7/Name+Property.md" %}}
+{{% snippet file="refguide/Name+Property.md" %}}
 
-{{% snippet file="refguide7/Class+Property.md" %}}
+{{% snippet file="refguide/Class+Property.md" %}}
 
-{{% snippet file="refguide7/Style+Property.md" %}}
+{{% snippet file="refguide/Style+Property.md" %}}
 
-{{% snippet file="refguide7/Tab+index+Property.md" %}}
+{{% snippet file="refguide/Tab+index+Property.md" %}}
 
 ### General Properties
 
@@ -43,7 +43,7 @@ This property indicates with the buttons to page through the information in the 
 
 _Default value:_ True
 
-{{% snippet file="refguide7/Column+Width+Properties.md" %}}
+{{% snippet file="refguide/Column+Width+Properties.md" %}}
 
 #### Number of Rows
 
@@ -104,7 +104,7 @@ The data source determines which objects will be shown in the data grid. For gen
 
 #### Type
 
-The data grid supports the following types of data sources: [Database Source](database-source), [XPath Source](xpath-source), [Association Source](association-source), [Microflow Source](microflow-source). The database and XPath sources retrieve objects from the database and supports searching and sorting. The database source can also be used in [offline](offline) applications. The association source follows an association from the enclosing data view to get to the objects. Finally, the microflow source calculates the list of objects by executing a microflow.
+The data grid supports the following types of data sources: [Database Source](database-source), [XPath Source](xpath-source), [Association Source](association-source), [Microflow Source](microflow-source). The database and XPath sources retrieve objects from the database and supports searching and sorting. The database source can also be used in [offline](offline-first) applications. The association source follows an association from the enclosing data view to get to the objects. Finally, the microflow source calculates the list of objects by executing a microflow.
 
 #### Other Properties
 
@@ -117,9 +117,9 @@ See the corresponding data source for its properties:
 
 ### Visibility Properties
 
-{{% snippet file="refguide7/Visibility+Property.md" %}}
+{{% snippet file="refguide/Visibility+Property.md" %}}
 
-{{% snippet file="refguide7/Visibility+Property+With+Module+Roles+Simple.md" %}}
+{{% snippet file="refguide/Visibility+Property+With+Module+Roles+Simple.md" %}}
 
 ## Components
 

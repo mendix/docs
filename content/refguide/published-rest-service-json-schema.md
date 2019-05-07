@@ -6,12 +6,6 @@ description: "Describes the JSON schemas for operation request bodies and operat
 tags: ["published REST", "JSON", "Schema", "operation", "request body", "result", "message definition"]
 ---
 
-{{% alert type="info" %}}
-
-Support for *JSON Schema* was added in version 7.14.0.
-
-{{% /alert %}}
-
 ## 1 Introduction
 
 When you [publish a rest service](published-rest-services), an [OpenApi (Swagger) documentation page](published-rest-services#interactive-documentation) is generated for it. It includes a description of the structure of the messages that the service can receive and return. This structure is described using JSON Schema.
@@ -46,11 +40,9 @@ The schema of an attribute depends on the attribute type:
 | Autonumber     | `{ "type": "integer", "format": "int64" }` |
 | Binary         | `{ "type": "string", "format": "binary" }` |
 | Boolean        | `{ "type": "boolean" }` |
-| Currency       | `{ "type": "number" }` |
 | Date and time  | `{ "type": "string", "format": "date-time" }` |
 | Decimal        | `{ "type": "number" }` |
 | Enumeration    | `{ "type": "string", "enum": ["Male", "Female"] }` |
-| Float          | `{ "type": "number" }` |
 | Hashed string  | `{ "type": "string" }` |
 | Integer        | `{ "type": "integer", "format": "int32" }` |
 | Long           | `{ "type": "integer", "format": "int64" }` |
@@ -118,4 +110,3 @@ When the microflow returns a primitive, the schema depends on the type:
 | Enumeration      | `{ "type": "file" }` |
 | Integer/Long     | `{ "type": "integer" }` |
 | String           | `{ "type": "file" }` |
-| Float            | `{ "type": "number" }` |

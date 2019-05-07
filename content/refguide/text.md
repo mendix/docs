@@ -15,7 +15,7 @@ Text widget placed in a data view, showing a greeting message to the user.
 
 {{% /alert %}}
 
-If you start typing in any empty container the Modeler will automatically generate a text widget to display your text.
+If you start typing in any empty container Studio Pro will automatically generate a text widget to display your text.
 
 ## General properties
 
@@ -43,14 +43,14 @@ _Default value:_ Text
 
 ## Visibility properties
 
-{{% snippet file="refguide7/Visibility+Property.md" %}}
+{{% snippet file="refguide/Visibility+Property.md" %}}
 
-{{% snippet file="refguide7/Visibility+Property+With+Module+Roles+Simple.md" %}}
+{{% snippet file="refguide/Visibility+Property+With+Module+Roles+Simple.md" %}}
 
 ## Common properties
 
-{{% snippet file="refguide7/Name+Property.md" %}}
+{{% snippet file="refguide/Name+Property.md" %}}
 
-{{% snippet file="refguide7/Class+Property.md" %}}
+{{% snippet file="refguide/Class+Property.md" %}}
 
-{{% snippet file="refguide7/Style+Property.md" %}}
+{{% snippet file="refguide/Style+Property.md" %}}

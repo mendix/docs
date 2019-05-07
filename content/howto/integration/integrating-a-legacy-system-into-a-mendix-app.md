@@ -40,7 +40,7 @@ For this how-to, we will use the publicly available Google Books API (for detail
 1. The API we will use has a JSON structure.
 2.  Construct the appropriate data model for this JSON.
 
-    {{% alert type="warning" %}}Every REST service will have a different specific JSON structure. For details on how to build JSON data structures in Mendix, see [JSON Structures](/refguide7/json-structures).
+    {{% alert type="warning" %}}Every REST service will have a different specific JSON structure. For details on how to build JSON data structures in Mendix, see [JSON Structures](/refguide/json-structures).
 
     {{% /alert %}}
 3. Create a non-persistable search entity called **BookSearch** that allows the user to enter an author and title. This should be linked to a second object:
@@ -87,14 +87,14 @@ For further documentation and to see the GitHub project for REST services, see t
 
 ## 4 Read More
 
-* [How to Consume a Complex Web Service](consume-a-complex-web-service)
-* [How to Consume a Simple Web Service](consume-a-simple-web-service)
-* [How to Export XML Documents](export-xml-documents)
-* [How to Import Excel Documents](importing-excel-documents)
-* [How to Expose a Web Service](expose-a-web-service)
-* [How to Configure Selenium Support](selenium-support)
-* [How to Synchronize User Accounts Using the LDAP Module](synchronizing-user-accounts-using-the-ldap-module)
-* [How to Import XML Documents](importing-xml-documents)
-* [How to Consume a REST Service](consume-a-rest-service)
-* [How to Expose Data to BI Tools Using OData](exposing-data-to-bi-tools-using-odata)
+* [Consume a Complex Web Service](consume-a-complex-web-service)
+* [Consume a Simple Web Service](consume-a-simple-web-service)
+* [Export XML Documents](export-xml-documents)
+* [Import Excel Documents](importing-excel-documents)
+* [Expose a Web Service](expose-a-web-service)
+* [Configure Selenium Support](selenium-support)
+* [Synchronize User Accounts Using the LDAP Module](synchronizing-user-accounts-using-the-ldap-module)
+* [Import XML Documents](importing-xml-documents)
+* [Consume a REST Service](consume-a-rest-service)
+* [Expose Data to BI Tools Using OData](exposing-data-to-bi-tools-using-odata)
 * [Extending Salesforce with Mendix, an Alternative to Force.com](https://www.mendix.com/blog/extending-salesforce-mendix-alternative-force-com/)

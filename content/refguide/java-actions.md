@@ -1,6 +1,6 @@
 ---
 title: "Java Actions"
-category: "Desktop Modeler"
+category: "App Modeling"
 description: "Describes using Java Actions to extend the functionality of your Mendix app."
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -11,7 +11,7 @@ With Java actions you can extend the functionality of your application in situat
 
 {{% alert type="info" %}}
 
-Each Java action defined in the Modeler corresponds to a file *{name of Java action}.java* in the subdirectory *javasource{module name}/actions* of the project directory.
+Each Java action defined in Studio Pro corresponds to a file *{name of Java action}.java* in the subdirectory *javasource{module name}/actions* of the project directory.
 
 The skeletons of these *.java* files are generated automatically when you deploy for Eclipse (in the **Project** menu). For more information about creating the Java code in these files, see [Java Programming](java-programming).
 
@@ -52,21 +52,9 @@ The **Microflow** parameter type allows users of Java actions to pass a microflo
 
 The **Import mapping** parameter type allows users of Java actions to pass an import mapping into a Java action. In the generated Java action template code, this type is represented as a string (as in, the name of the import mapping).
 
-{{% alert type="info" %}}
-
-The Import mapping parameter type was introduced in Mendix 7.2.0.
-
-{{% /alert %}}
-
 #### 2.2.4 Export Mapping Type
 
 The **Export mapping** parameter type allows users of Java Actions to pass an export mapping into a Java action. In the generated Java action template code, this type is represented as a string (the name of the export mapping).
-
-{{% alert type="info" %}}
-
-The Export mapping parameter type was introduced in version 7.2.0.
-
-{{% /alert %}}
 
 #### 2.2.5 Return Type
 

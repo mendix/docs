@@ -1,13 +1,16 @@
 ---
 title: "Activities"
 parent: "common-elements"
+tags: ["studio pro"]
 ---
+
+## 1 Introduction
 
 Activities represent the actions that are executed in a microflow.
 
 The following types of activities are available:
 
-## Object Activitities
+## 2 Object Activitities
 
 Object activities can be used to create and manipulate objects. The [domain model](domain-model) defines the object types ([entities](entities)) that can be used.
 
@@ -21,7 +24,7 @@ Object activities can be used to create and manipulate objects. The [domain mode
 | [![](attachments/819203/917866.png)](retrieve) | [Retrieve](retrieve) | Retrieve can be used to get one (or more) associated objects of another object. Furthermore the activity can also get one (or more) objects directly from the database. |
 | [![](attachments/819203/918119.png)](rollback-object) | [Rollback object](rollback-object) | Rollback object can be used to undo changes (that have not been committed) that were made to the object in the part of the microflow preceding the activity. Furthermore it deletes objects that have been created but have never been committed. |
 
-## List Activitities
+## 3 List Activitities
 
 List activities can be used to create and manipulate lists of objects.
 
@@ -32,7 +35,7 @@ List activities can be used to create and manipulate lists of objects.
 | [![](attachments/819203/918009.png)](create-list) | [Create list](create-list) | Create list can be used to create a (empty) list variable. |
 | [![](attachments/819203/917792.png)](list-operation) | [List operation](list-operation) | List operation can be used to combine or compare two list with objects of the same entity. |
 
-## Action Call Activities
+## 4 Action Call Activities
 
 Action call activities can be used to call another microflow or to call a Java action.
 
@@ -41,7 +44,7 @@ Action call activities can be used to call another microflow or to call a Java a
 | [![](attachments/819203/918018.png)](java-action-call) | [Java Action call](java-action-call) | Java Action call can be used to call a Java action. Arguments can be passed to the action and the result can be stored in a variable. |
 | [![](attachments/819203/918001.png)](microflow-call) | [Microflow call](microflow-call) | Microflow call can be used to call another microflow. Arguments can be passed to the microflow and the result can be stored in a variable. |
 
-## Variable Activitities
+## 5 Variable Activitities
 
 Variable activities can be used to create or change a variable within a microflow.
 
@@ -50,7 +53,7 @@ Variable activities can be used to create or change a variable within a microflo
 | [![](attachments/819203/918011.png)](change-variable) | [Change variable](change-variable) | Change variable can be used to change the value of a variable. |
 | [![](attachments/819203/918110.png)](create-variable) | [Create variable](create-variable) | Create variable can be used to create a new variable. |
 
-## Client Activitities
+## 6 Client Activitities
 
 Client activities can be used to have the web client of your application perform an action, such as showing a different page or downloading a file.
 
@@ -63,11 +66,11 @@ Client activities can be used to have the web client of your application perform
 | [![](attachments/819203/918097.png)](validation-feedback) | [Validation feedback](validation-feedback) | Validation feedback can be used to display a red text below a widget that displays an attribute or association. |
 | ![](attachments/16713769/17661963.png) | [Show home page](show-home-page) | Show home Page can be used to navigate to the home page for the current user. |
 
-## Integration Activitities
+## 7 Integration Activitities
 
 See [Microflow Activities](microflow-activities).
 
-## Document Generation Activitities
+## 8 Document Generation Activitities
 
 | Graphic | Name | Description |
 | --- | --- | --- |

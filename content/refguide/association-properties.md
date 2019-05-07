@@ -1,7 +1,7 @@
 ---
 title: "Associations & Their Properties"
 parent: "domain-model"
-tags: ["domain model", "association"]
+tags: ["domain model", "association", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -27,7 +27,7 @@ An association between a persistable entity and a non-persistable entity must st
 
 If you double-click an association, its properties are opened. 
 
-![Association Properties](attachments/association-properties/dm-association-properties.png)
+![Association Properties](attachments/association-properties/association-properties.png)
 
 
 Associations have the following properties:

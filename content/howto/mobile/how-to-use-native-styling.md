@@ -8,7 +8,7 @@ tags: ["styling", "design", "classes", "native"]
 
 ## 1 Introduction
 
-With Mendix 8, you have the capacity to alter design properties with Mendix Studio Pro. Furthermore, because all native mobile styling is written in JavaScript, you have new ways of applying your styling customizations. For more details on native styling, class names, and widget styling, see the [Native Styling Reference Guide](/refguide/native-styling-refguide).
+With Mendix 8, you have the capacity to alter design properties with Mendix Studio Pro. Furthermore, because all native mobile styling is written in JavaScript, you have new ways of applying your styling customizations. For more details on native styling, class names, and widget styling, see [Native Styling](/refguide/native-styling-refguide).
 
 ## 2 Prerequisites 
 
@@ -184,7 +184,7 @@ Congratulations! By completing this how-to, you have learned how to alter a styl
 
 ## 8 Read More
 
-* [Native Styling](native-styling)
+* [Implement Native Styling](native-styling)
 * [Native Styling Reference Guide](/refguide/native-styling-refguide)
 * [Mendix Atlas UI](../front-end/atlas-ui)
 * [Create and Test a Native Mobile App](getting-started-with-native-mobile)

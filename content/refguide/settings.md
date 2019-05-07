@@ -3,6 +3,9 @@ title: "Settings"
 parent: "consumed-app-services"
 ---
 
+{{% alert type="info" %}}
+App services are deprecated and marked for removal. Use a [consumed web service](consumed-web-services) to consume existing app services.
+{{% /alert %}}
 
 In the settings screen, you see the version of the app service, its icon and a short description. Three tabs are selectable: 'Actions', 'Settings' and 'Documentation'.
 

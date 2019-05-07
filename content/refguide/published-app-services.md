@@ -7,7 +7,7 @@ parent: "integration"
 ## 1 Introduction
 
 {{% alert type="info" %}}
-App services were deprecated in version 7.23.4 and are marked for removal. Use a [published web service](published-web-services) or a [published REST service](published-rest-services) instead.
+App services are deprecated and marked for removal. Use a [published web service](published-web-services) or a [published REST service](published-rest-services) instead.
 {{% /alert %}}
 
 An app service can be created via **File** > **New Document**.

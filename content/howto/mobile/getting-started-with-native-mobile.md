@@ -71,19 +71,34 @@ Alternatively, you can navigate to the Make It Native app using Mendix Studio Pr
 
 1. In Mendix Studio Pro, click the drop-down menu next to the **View button**, and then click **View in the Mendix App**.
 2. This will bring up a dialog box. In the **Native mobile** tab, click either **Go to play store** or **Go to app store** to be brought to the Google Play Store or Apple App Store pages for the Make It Native app.
-3. In the iOS or Android app store, you can download the Make It Native app to your device.{{% /todo %}}
+3. In the Apple or Android app store, you can download the Make It Native app to your device.{{% /todo %}}
 
 {{% todo %}}[replace screenshot below with two app store screens when they get new logos?]{{% /todo %}}
 
 {{% todo %}}Remove alert when app is added to Apple App store {{% /todo %}}
 
-To view your app on a mobile device (or emulator), you must download and install the Make It Native app. You can download the Make It Native app from [Google Play](https://play.google.com/store/apps/details?id=com.mendix.developerapp) and install it on your mobile device:
+#### 3.2.1 Downloading for Android
+
+To view your app on an Android device (or emulator), you must download and install the Make It Native app from [Google Play](https://play.google.com/store/apps/details?id=com.mendix.developerapp):
 
 {{% image_container width="500" %}}![native app on googleplay](attachments/getting-started-with-native-mobile/make-it-native-googleplay.png){{% /image_container %}}
 
+#### 3.2.2 Downloading for iOS {#downloading-for-ios}
+
+To view your app on a iOS device, you currently need to use TestFlight to install the Make It Native app:
+
+1. Download the [TestFlight](https://itunes.apple.com/us/app/testflight/id899247664?mt=8) app for your iOS device.
+2.  On your device, either [click here](https://testflight.apple.com/join/KrcEFwo7), or scan the QR code below (which will trigger a notification you must tap) using your iOS device's standard camera app:
+
+	![testflight qr code](attachments/getting-started-with-native-mobile/testflight-qr-code.png)
+
+3. Click the **Install** button to install your Make It Native TestFlight app:
+
+	![testflight app](attachments/getting-started-with-native-mobile/testflight-install.png)
+
 {{% alert type="info" %}}
 
-The iOS version of the Make It Native app will be released soon. If you need to test on an iOS device, please contact [Danny Roest](mailtodanny.roest@mendix.com) to access the app via Apple's TestFlight.
+The iOS version of the Make It Native app will be released soon to the public Apple App Store
 
 {{% /alert %}}
 

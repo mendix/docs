@@ -83,7 +83,7 @@ To view your app on a Android device (or emulator), you must download and instal
 
 {{% image_container width="500" %}}![native app on googleplay](attachments/getting-started-with-native-mobile/make-it-native-googleplay.png){{% /image_container %}}
 
-#### Downloading For iOS {downloading-for-ios}
+#### Downloading For iOS {#downloading-for-ios}
 
 To view your app on a iOS device, you currently need to use TestFlight to install the Make It Native app:
 

@@ -71,19 +71,19 @@ Alternatively, you can navigate to the Make It Native app using Mendix Studio Pr
 
 1. In Mendix Studio Pro, click the drop-down menu next to the **View button**, and then click **View in the Mendix App**.
 2. This will bring up a dialog box. In the **Native mobile** tab, click either **Go to play store** or **Go to app store** to be brought to the Google Play Store or Apple App Store pages for the Make It Native app.
-3. In the iOS or Android app store, you can download the Make It Native app to your device.{{% /todo %}}
+3. In the Apple or Android app store, you can download the Make It Native app to your device.{{% /todo %}}
 
 {{% todo %}}[replace screenshot below with two app store screens when they get new logos?]{{% /todo %}}
 
 {{% todo %}}Remove alert when app is added to Apple App store {{% /todo %}}
 
-#### Downloading For Android
+#### 3.2.1 Downloading for Android
 
-To view your app on a Android device (or emulator), you must download and install the Make It Native app. You can download the Make It Native app from [Google Play](https://play.google.com/store/apps/details?id=com.mendix.developerapp) and install it on your mobile device:
+To view your app on an Android device (or emulator), you must download and install the Make It Native app from [Google Play](https://play.google.com/store/apps/details?id=com.mendix.developerapp):
 
 {{% image_container width="500" %}}![native app on googleplay](attachments/getting-started-with-native-mobile/make-it-native-googleplay.png){{% /image_container %}}
 
-#### Downloading For iOS {#downloading-for-ios}
+#### 3.2.2 Downloading for iOS {#downloading-for-ios}
 
 To view your app on a iOS device, you currently need to use TestFlight to install the Make It Native app:
 
@@ -98,7 +98,7 @@ To view your app on a iOS device, you currently need to use TestFlight to instal
 
 {{% alert type="info" %}}
 
-The iOS version of the Make It Native app will be released soon to the public App Store
+The iOS version of the Make It Native app will be released soon to the public Apple App Store
 
 {{% /alert %}}
 

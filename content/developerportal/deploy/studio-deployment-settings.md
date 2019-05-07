@@ -40,6 +40,6 @@ You have selected the environment for Studio.
 
 ## 3 Read More
 
-*   [Publishing Your App](/studio/publishing-app)
+*   [Previewing & Publishing Your App](/studio/publishing-app)
 *   [Mendix Cloud](mendix-cloud-deploy)
 *   [Environments](environments)

@@ -93,9 +93,8 @@ Jetty is built into the [Mendix Runtime](runtime), so an application server is n
 
 ### 6.2 Mobile Browsers
 
-* iOS 9 and above (Safari)
+* iOS 12 and above (Safari)
 * Android 5.0 and above
-* Windows Phone 8 and above
 
 ### 6.3 Hybrid Preview
 
@@ -105,7 +104,7 @@ Using a hybrid preview is not the same as using an emulator. A hybrid preview on
 
 For Mendix apps and the [Mendix Mobile app](getting-the-mendix-app):
 
-* iOS 9 and above
+* iOS 12 and above
 * Android 5.0 and above
 
 ## 8 MxBuild{#mxbuild}

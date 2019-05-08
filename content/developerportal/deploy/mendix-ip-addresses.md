@@ -30,16 +30,16 @@ Mendix uses the following static IP addresses. If you need further information, 
 
 #### 2.2.1 Mendix Cloud V4
 
-| Region | Cluster | IP Addresses |
-| --- | --- | ---|
-| Free Apps: | prod-1-eu-west-1 | `52.211.106.230` <br /> `52.18.20.119` <br /> `52.18.122.238` |
-| EU:  | prod-2-eu-central-1 | `52.58.42.15` <br /> `35.157.102.14` <br /> `35.156.112.28` |
-| US: | prod-3-us-east-1 |  `52.205.207.103` <br /> `52.55.243.62` <br /> `34.197.224.250` |
-| AP:  | prod-4-ap-northeast-1 | `52.198.238.110` <br /> ` 13.113.58.15` <br /> ` 52.193.228.1` |
-| EU: | prod-5-eu-west-2 |  `35.177.185.47` <br /> ` 52.56.174.215` <br /> ` 18.130.169.15` |
-| EU: | prod-6-eu-west-1 |  `52.18.10.62` <br /> ` 52.208.39.99` <br /> `99.80.177.69` |
-| EU: | nonprod-1 |  `52.215.29.203` <br /> `52.30.161.181` <br /> `52.30.191.229` |
-| EU: | concourse NAT gateway |  `3.121.171.188` <br /> `3.121.171.96` |
+| Region | IP Addresses |
+| --- | ---|
+| Ireland (eu-west-1)<sup><small>[*]</small></sup> | `52.211.106.230` <br /> `52.18.20.119` <br /> `52.18.122.238` |
+| Frankfurt (eu-central-1) | `52.58.42.15` <br /> `35.157.102.14` <br /> `35.156.112.28` |
+| North Virginia (us-east-1) | `52.205.207.103` <br /> `52.55.243.62` <br /> `34.197.224.250` |
+| Tokyo (ap-northeast-1) |  `52.198.238.110` <br /> ` 13.113.58.15` <br /> ` 52.193.228.1` |
+| London (eu-west-2) | `35.177.185.47` <br /> ` 52.56.174.215` <br /> ` 18.130.169.15` |
+| Ireland (eu-west-1) | `52.18.10.62` <br /> ` 52.208.39.99` <br /> `99.80.177.69` |
+
+<sup><small>*</small></sup> Free Apps cluster
 
 #### 2.2.2 Mendix Cloud V3 (XS4/BIT)
 

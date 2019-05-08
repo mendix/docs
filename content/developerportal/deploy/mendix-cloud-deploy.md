@@ -20,7 +20,7 @@ A Free App has a number of limitations compared to a licensed app. The main limi
 
 | Feature                                     | Free App                                                     | Licensed App                                                 |
 | ------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| **Number of Users**                         | Maximum ten users.                                           | Depends on your pricing plan.                                |
+| **Number of Users**                         | Unlimited users.                                             | Depends on your pricing plan.                                |
 | **Sleep Mode**                              | Goes into Sleep Mode after an hour or so of inactivity and automatically resumes when a user accesses it. All your data is retained while the app is in Sleep Mode. | Does not have a Sleep Mode.                                  |
 | **Storage**                                 | 100MB of data and 100MB of file storage space.               | Depends on your pricing plan.                                |
 | **Scheduled Events**                        | Are not run.                                                 | Are run and can be configured from the Developer Portal.     |

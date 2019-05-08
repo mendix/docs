@@ -163,13 +163,11 @@ Demo users are a demonstration of each user role existing in your app. You can u
 
 You can test how your app looks like for different roles the following way:
 
-1. [Publish your app](publishing-app).
+1. [Preview your app](publishing-app).
 
-2.  Select the **Desktop preview** in **View app**.
+2.  Select the **Responsive view** mode.
 
-    ![](attachments/settings-security/desktop-preview.png)
-
-3. When viewing your app, click a user icon in the right-hand side of the screen:
+3. Click a user icon in the right-hand side of the screen:
 
     ![](attachments/settings-security/user-icon.png)
 

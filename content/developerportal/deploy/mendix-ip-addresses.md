@@ -30,7 +30,7 @@ Mendix uses the following static IP addresses. If you need further information, 
 
 #### 2.2.1 Mendix Cloud V4
 
-| Region | URL | IP Addresses |
+| Region | Cluster | IP Addresses |
 | --- | --- | ---|
 | Free Apps: | prod-1-eu-west-1 | `52.211.106.230` <br /> `52.18.20.119` <br /> `52.18.122.238` |
 | EU:  | prod-2-eu-central-1 | `52.58.42.15` <br /> `35.157.102.14` <br /> `35.156.112.28` |

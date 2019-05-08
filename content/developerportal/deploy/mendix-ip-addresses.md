@@ -13,7 +13,7 @@ An Internet Protocol address (IP address) is simply the address of a device on a
 
 Mendix uses one IP address when someone connects to your Mendix application (Incoming IP) and a different IP address for when your application connects to outside services (Outgoing IP).
 
-{{% alert type="success" %}}
+{{% alert type="info" %}}
 Mendix will endeavor to maintain the current static IP addresses. However, both incoming and outgoing IP addresses may change for operational reasons. This is subject to a 48-hour notice period.
 {{% /alert %}}
 

@@ -25,7 +25,7 @@ The main documents in the Studio Guide are the following ones:
 * [Navigation Document](navigation)
 * [Microflows](microflows)
 * [Data Filters](filters)
-* [Publishing Your App](publishing-app)
+* [Previewing & Publishing Your App](publishing-app)
 * [Checks](checks)
 * [Consistency Errors](consistency-errors)
 * [Theme Customizer](theme-customizer)

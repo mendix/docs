@@ -4,24 +4,23 @@ category: "Integration"
 menu_order: 6
 tags: ["excel", "excel export", "excel exporter", "integration"]
 ---
+
 ## 1 Introduction
 
-Each application can export items to Excel format from a Data Grid as standard functionality in the platform (add an Export to Excel button on a Data Grid). However, in instances where more customized Excel documents are required, applications can leverage Mendix App Store content to create custom Excel documents based off of configurable templates. To achieve this, the app will require two Mendix App Store modules and the subsequent configuration of the documents.
+It is standard Mendix functionality to export items from a data grid in a Mendix application to the Excel format via an **Export to Excel** button. However, in instances where more customized Excel documents are required, an app can leverage Mendix App Store content to create custom Excel documents based off of configurable templates. To achieve this, your app will require two Mendix App Store modules and the subsequent configuration of the documents.
 
-## 2 Download the Required Modules from the Mendix App Store
+## 2 Downloading the Required App Store Modules
 
-In this part of the how to you will learn how to download the necessary modules from the Mendix App Store. This is a very quick process, in that in just a few clicks the modules will be imported into your project. The modules that are required for this process are 'MxModelReflection' and 'Excel Exporter'.
+In this section, you will learn how to download the necessary modules from the Mendix App Store. In just a few clicks, the modules will be imported into your app project. The modules required for this process are [Mx Model reflection](https://appstore.home.mendix.com/link/app/69/) and [Excel exporter](https://appstore.home.mendix.com/link/app/726/).
 
 {{% alert type="info" %}}
-
-The MxModelReflection module is a commonly used module in most apps. The purpose of this module is to allow the app to reflect into the domain model (entities and attributes) and microflow definitions at runtime.
-
+The Mx Model reflection module is used in most Mendix apps. The purpose of this module is to enable the app to reflect into the domain model (entities and attributes) and microflow definitions at runtime.
 {{% /alert %}}
 
-### 2.1 Download the MxModelReflection Module
+To download the modules, follow these steps:
 
 1. Open the **Mendix App Store** from within Studio Pro.
-2. Search for the keyword **Reflection.**
+2. Search for the keyword *reflection* and select **Mx Model reflection**:
 
     ![](attachments/18448688/18581166.png)
 

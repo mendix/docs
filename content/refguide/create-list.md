@@ -1,6 +1,7 @@
 ---
 title: "Create List"
 parent: "list-activities"
+tags: ["studio pro"]
 ---
 
 ## 1 Introduction

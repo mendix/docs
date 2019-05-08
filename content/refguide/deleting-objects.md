@@ -1,6 +1,7 @@
 ---
 title: "Delete Object(s)"
 parent: "object-activities"
+tags: ["studio pro"]
 ---
 
 {{% alert type="info" %}}

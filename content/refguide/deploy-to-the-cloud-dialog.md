@@ -1,6 +1,7 @@
 ---
 title: "Deploy To The Cloud Dialog"
 parent: "dialogs"
+tags: ["studio pro"]
 ---
 Use this dialog to create a versioned deployment package and upload it to your app in the Mendix Cloud.
 

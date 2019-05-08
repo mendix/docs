@@ -2,7 +2,7 @@
 title: "Mendix IP Addresses"
 parent: "mendix-cloud-deploy"
 #description: ""
-tags: ["mendix cloud", "ip address"]
+tags: ["mendix cloud", "IP address", "Cloud Portal"]
 ---
 
 ## 1 Introduction

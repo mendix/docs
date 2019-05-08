@@ -14,7 +14,7 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud V3, and other deploym
 
 #### Fixes
 
-* We fixed an issue where the Mendix feedback widget stopped working for apps deployed to Mendix Cloud V3 because of a change to HTTP Headers. (Ticket 83001)
+* We fixed an issue where the Mendix feedback widget stopped working for apps deployed to Mendix Cloud because of a change to HTTP Headers. (Ticket 83001)
 
 ### May 7th, 2019
 

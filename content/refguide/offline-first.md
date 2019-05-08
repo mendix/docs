@@ -68,7 +68,7 @@ Furthermore, it is possible to disable downloads for an entity. This can be very
 
 If you have custom widgets or JavaScript actions which use an entity that cannot be detected by Studio Pro in your offline-first profile (because its only used in the code), you can use customizable synchronization to include such entities.
 
-{{% todo %}}[include customsync.png]{{% /todo %}}
+{{% image_container width="450" %}}![custom synchronization](attachments/offline-first/custom-sync.png){{% /image_container %}}
 
 ### 2.4 Error Handling
 
@@ -88,7 +88,7 @@ If a network error occurs during the download phase, no data is updated on the d
 
 If the synchronization is called from a nanoflow, the error can be handled using nanoflow error handling. In other cases (for example, synchronization called from a button or at startup), a message will be displayed to the user that the data could not be synchronized.
 
-#### 2.4.2 Model- or Data-Related Errors {#othererrors}
+#### 2.4.2 Model or Data-Related Errors {#othererrors}
 
 During the synchronization, changed and new objects are committed. An object's synchronization might encounter problems due to the following reasons:
 
@@ -100,7 +100,7 @@ During the synchronization, changed and new objects are committed. An object's s
 When a synchronization error occurs because of one the reasons above, an object's commit is skipped, its changes are ignored, and references from other objects to it become invalid. Objects referencing such a skipped object (which are not triggering errors) will be synchronized normally. Such a situation is likely to be a modeling error and is logged on the server.
 
 {{% alert type="warning" %}}
-The behavior described above will be available as of [Mendix version 8 GA](/releasenotes/studio-pro/8.0). Before this version is available and there is a synchronization error occurs because of one the reasons listed above, the synchronization is aborted and the data is reverted on the local device. It is thus very important to prevent these situations.
+The behavior described above will be available as of [Mendix version 8.0 GA](/releasenotes/studio-pro/8.0) and [Mendix version 7.23.5](](/releasenotes/studio-pro/7.23). Before these versions are available and a synchronization error occurs for one the reasons listed above, the synchronization is aborted and the data is reverted on the local device. It is thus very important to prevent these situations.
 {{% /alert %}}
 
 ### 2.4.3 Preventing Synchronization Issues
@@ -115,7 +115,7 @@ To avoid the problems mentioned above, we suggest following these best practices
 If synchronization is triggered using a synchronize action in a nanoflow and an error occurs, it is possible to handle the error gracefully using the nanoflow error handling.
 
 {{% alert type="info" %}}
-This functionality is available as of Mendix 8 Beta.
+Graceful error handling using nanoflows is available as of Mendix 8 Beta.
 {{% /alert %}}
 
 ### 2.4.4 Conflict Resolution

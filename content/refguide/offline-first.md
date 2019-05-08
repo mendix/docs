@@ -99,8 +99,7 @@ During the synchronization, changed and new objects are committed. An object's s
 
 If a synchronization error occurs for one the reasons listed above, the synchronization is aborted and the data is reverted on the local device. It is thus very important to prevent these situations.
 
-{{% todo %}}[add the following text, or some version of it, after 7.23.5/GA : ALERTTEXT The following will be available as of [Mendix version 8.0 GA](/releasenotes/studio-pro/8.0) and [Mendix 7.23.5] (**ADD LINK HERE**) 
-When a synchronization error occurs because of one the reasons above, an object's commit is skipped, its changes are ignored, and references from other objects to it become invalid. Objects referencing such a skipped object (which are not triggering errors) will be synchronized normally. Such a situation is likely to be a modeling error and is logged on the server. ALERT]{{% /todo %}}
+{{% todo %}}[add the following text, or some version of it, after 7.23.5/GA : ALERTTEXT The following will be available as of Mendix version 8.0 GA (**ADD LINK HERE**) and Mendix 7.23.5 (**ADD LINK HERE**) -- When a synchronization error occurs because of one the reasons above, an object's commit is skipped, its changes are ignored, and references from other objects to it become invalid. Objects referencing such a skipped object (which are not triggering errors) will be synchronized normally. Such a situation is likely to be a modeling error and is logged on the server. ALERT]{{% /todo %}}
 
 ### 2.4.3 Preventing Synchronization Issues
 

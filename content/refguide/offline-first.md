@@ -88,7 +88,7 @@ If a network error occurs during the download phase, no data is updated on the d
 
 If the synchronization is called from a nanoflow, the error can be handled using nanoflow error handling. In other cases (for example, synchronization called from a button or at startup), a message will be displayed to the user that the data could not be synchronized.
 
-#### 2.4.2 Model or Data-Related Errors {#othererrors}
+#### 2.4.2 Model- or Data-Related Errors {#othererrors}
 
 During the synchronization, changed and new objects are committed. An object's synchronization might encounter problems due to the following reasons:
 

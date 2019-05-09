@@ -1,6 +1,7 @@
 ---
 title: "On Click Event"
 parent: "page-concepts"
+tags: ["studio pro"]
 ---
 ### On click
 

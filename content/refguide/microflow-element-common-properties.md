@@ -1,6 +1,7 @@
 ---
 title: "Microflow Element Common Properties"
 parent: "common-elements"
+tags: ["studio pro"]
 ---
 
 ## 1 Introduction

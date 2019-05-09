@@ -1,6 +1,7 @@
 ---
 title: "Module Status"
 parent: "project-security"
+tags: ["studio pro"]
 ---
 
 

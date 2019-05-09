@@ -1,6 +1,7 @@
 ---
 title: "Listen to Widget Source"
 parent: "data-sources"
+tags: ["studio pro"]
 ---
 
 

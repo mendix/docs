@@ -1,6 +1,7 @@
 ---
 title: "Module Security"
 parent: "modules"
+tags: ["studio pro"]
 ---
 
 ## 1 Introduction

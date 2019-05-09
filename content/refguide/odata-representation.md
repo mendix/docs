@@ -1,6 +1,7 @@
 ---
 title: "OData Representation"
 parent: "published-odata-services"
+tags: ["studio pro"]
 ---
 
 This document describes how entities are represented in a published OData service.

@@ -2,7 +2,7 @@
 title: "Monitoring Mendix Runtime"
 category: "Mendix Runtime"
 description: "Describes the supported Mendix Runtime monitoring actions."
-tags: ["runtime, json"]
+tags: ["runtime, json", "studio pro"]
 ---
 
 ## 1 Introduction

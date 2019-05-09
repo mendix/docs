@@ -1,6 +1,7 @@
 ---
 title: "Object Activities"
 parent: "activities"
+tags: ["studio pro"]
 ---
 
 

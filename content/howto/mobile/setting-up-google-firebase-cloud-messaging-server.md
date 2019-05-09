@@ -67,7 +67,7 @@ On this page, press **Generate new private key**. Store the resulting file in a 
 
 The file you just created gives API access to all available Firebase services for your app. If you want a more restrictive service account, click **Manage all service accounts** in the top-right of the screen, then create a service account that is restricted to using the Cloud Messaging functionality.
 
-## 6 Downloading the Google Services Config Files
+## 6 Downloading the Google Services Config Files {#downloading-the-google-services-config-files}
 
 In addition to the back-end configuration set up in the previous steps, you will need additional files that will be bundled as part of your mobile application. To obtain these, again click the cogwheel in the top-left of the screen and select **Project settings**. Then navigate to the **General** tab.
 

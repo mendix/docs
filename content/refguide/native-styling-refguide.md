@@ -605,8 +605,8 @@ The widget’s style properties are as follows:
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
-| `container` | All ViewStyle properties. |  |
-| `loadingOverlay` | All ViewStyle properties. |  |
+| `container` | All ViewStyle properties |  |
+| `loadingOverlay` | All ViewStyle properties |  |
 | `loadingIndicator` | `color` | This is the color of the loading indicator. |
 | `marker` | `color` | This is the color of the location marker. |
 | `marker` | `opacity` | This is the opacity of the location marker. |

@@ -1,6 +1,7 @@
 ---
 title: "Common Widget Properties"
 parent: "common-widgets"
+tags: ["studio pro"]
 ---
 
 These are properties that are shared by many widgets. For a complete list of properties, take a look at the relevant widget.

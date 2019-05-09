@@ -1,6 +1,7 @@
 ---
 title: "Export XML"
 parent: "integration-activities"
+tags: ["studio pro"]
 ---
 
 

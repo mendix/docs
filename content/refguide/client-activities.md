@@ -1,6 +1,7 @@
 ---
 title: "Client Activities"
 parent: "activities"
+tags: ["studio pro"]
 ---
 
 ## Close Page

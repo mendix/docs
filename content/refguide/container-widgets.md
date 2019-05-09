@@ -1,6 +1,7 @@
 ---
 title: "Container Widgets"
 parent: "pages"
+tags: ["studio pro"]
 ---
 
 

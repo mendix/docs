@@ -1,6 +1,7 @@
 ---
 title: "Call Web Service"
 parent: "integration-activities"
+tags: ["studio pro"]
 ---
 
 {{% alert type="warning" %}}

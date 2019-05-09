@@ -1,6 +1,7 @@
 ---
 title: "Create Deployment Package Dialog"
 parent: "dialogs"
+tags: ["studio pro"]
 ---
 
 ## 1 Introduction

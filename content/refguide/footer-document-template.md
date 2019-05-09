@@ -1,6 +1,7 @@
 ---
 title: "Footer (Document Template)"
 parent: "document-templates"
+tags: ["studio pro"]
 ---
 
 

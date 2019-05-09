@@ -1,6 +1,7 @@
 ---
 title: "Dialog Boxes"
 category: "App Modeling"
+tags: ["studio pro"]
 ---
 
 The following pages describe the various dialog boxes present in Studio Pro:

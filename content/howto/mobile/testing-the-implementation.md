@@ -7,7 +7,11 @@ tags: ["mobile", "push notification"]
 
 ## 1 Introduction
 
-Once you finish implementing the steps described in [How to Implement Push Notifications](implementation-guide), you need to test whether your push notifications work correctly. To begin testing your push notifications, you will need to build new versions of your mobile application:
+Once you finish implementing the steps described in [How to Implement Push Notifications](implementation-guide), you need to test whether your push notifications work correctly. 
+
+## 2 Prerequisites
+
+To begin testing your push notifications, you will need to build new versions of your mobile application:
 
 1. Navigate the [Mendix Portal](https://sprintr.home.mendix.com/index.html), then click your app.
 2. Click **Deploy** > **Mobile App**.
@@ -21,17 +25,17 @@ To successfully use FCM push notifications, you must put the *google-services.js
 
 When you add these files, it causes the **PushNotifications** widget to register your device with FCM, and then share the FCM registration token with your Mendix back-end server. This means you must use FCM to send messages to your devices. 
 
-### 1.1 Using APNS Instead of FCM for iOS Devices
+### 2.1 Using APNS Instead of FCM for iOS Devices
 
 If you would like to use APNS instead of FCM for your iOS devices, then you will have to delete the reference to *GoogleService-info.plist* from *config.xml*. By doing this, you will not need to include the *GoogleService-info.plist* file, and can then use APNS to send messages to iOS devices.
 
-## 2 Building Your Mobile App
+## 3 Building Your Mobile App
 
 Now that you have set up your hybrid app for push notifications you may continue building it. by following the [hybrid app package documentation](https://github.com/mendix/hybrid-app-template/). Once you have a running app, continue to the section below. 
 
-## 3 Sending a Push Notification to a Device
+## 4 Sending a Push Notification to a Device
 
-Follow these steps to send a push notification to a device:
+Follow these steps to test and send a push notification to a device:
 
 1. Open your application in the browser and log in as administrator (for example, MxAdmin`).
 2. To be able to log in into your hybrid mobile application, you will need to create a new user. Typically, this can be done from the administration pages of your application. If you have anonymous access enabled, this step is of course not necessary.
@@ -41,3 +45,5 @@ Follow these steps to send a push notification to a device:
 	![](attachments/19955741/21168174.png)
 
 5. Fill in the title and the message in the form and press **Send**. Your device should receive a new push notification. If your hybrid mobile app is currently running in the foreground, the notification will be displayed in the app. Otherwise, it will be shown as a standard push notification.
+
+If you saw the notification, congratulations! By following this document, you have successfully tested push notifications on your device.

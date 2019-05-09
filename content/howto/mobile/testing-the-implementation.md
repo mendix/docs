@@ -5,13 +5,31 @@ menu_order: 60
 tags: ["mobile", "push notification"]
 ---
 
-## 1 Introuction
+## 1 Introduction
 
-Once you finish implementing the steps described in [How to Implement Push Notifications](implementation-guide), you need to test whether everything works correctly. As a prerequisite, you will need to build (new) versions of your mobile application. You can refer to the [hybrid app package documentation](https://github.com/mendix/hybrid-app-template/) for instructions. Please note that, during this process, you will need to put the *google-services.json* and *GoogleService-Info.plist* files in the config folder.
+Once you finish implementing the steps described in [How to Implement Push Notifications](implementation-guide), you need to test whether everything works correctly. As a prerequisite, you will need to build new versions of your mobile application. To build an app which supports push notifications, follow these instructions:
 
-Once you have your apps bulit and running, you can send your first push notifications. This can be done easily using the administration pages that should be included in your application (for details, see [Setting Up the Administration Pages](implementation-guide#setting) in *How to Implement Push Notifications*). 
+1. Navigate the [Mendix Portal](https://sprintr.home.mendix.com/index.html), then click on your app.
+2. Click **Deploy** > **Mobile App**.
+3. Make sure the check box **Permissions** > **Push Notifications** is selected.
+4. Click the **Publish for Mobile App Stores** button.
+5. Select the **Do it yourself** check box, make sure your preferred environment is selected, and then click the **Download Customizable Package** button. 
 
-## 2 Sending a Push Notification to a Device
+This will give you a *.zip* project that you can use to customize your app according to the [hybrid app package documentation](https://github.com/mendix/hybrid-app-template/). The project contains a *config.xml* file that refers to *google-services.json* and *GoogleService-info.plist* files. 
+
+To successfully use FCM push notifications, you must put the *google-services.json* and *GoogleService-Info.plist* files – obtained in [Downloading the Google Services Config Files](setting-up-google-firebase-cloud-messaging-server#downloading-the-google-services-config-files) – in your app's **config** folder.
+
+When you add these files, it causes the PushNotifications widget to register your device with FCM, and then share the FCM registration token with your Mendix backend server. This means you must use FCM to send messages to your devices. 
+
+### 1.1 Using APNS Instead of FCM for IOS Devices
+
+If you would like to use APNS instead of FCM for your iOS devices, then you will have to delete the reference to *GoogleService-info.plist* from *config.xml*. By doing this, you will not need to include the *GoogleService-info.plist* file, and can then use APNS to send messages to iOS devices.
+
+## 2 Building Your Mobile App
+
+Now that you have set up your hybrid app for push notifications you may continue building it. by following the [hybrid app package documentation](https://github.com/mendix/hybrid-app-template/). Once you have a running app, continue to the section below. 
+
+## 3 Sending a Push Notification to a Device
 
 Follow these steps to send a push notification to a device:
 

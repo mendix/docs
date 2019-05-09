@@ -2,7 +2,7 @@
 title: "Hybrid Mobile"
 category: "Mobile"
 menu_order: 2
-tags: ["mobile", "hybrid"]
+tags: ["mobile", "hybrid", "studio pro"]
 ---
 
 ## 1 Introduction

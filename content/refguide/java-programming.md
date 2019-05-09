@@ -1,6 +1,7 @@
 ---
 title: "Java Programming"
 description: "Describes how to use the Mendix Java library and use Eclipse as an environment to write your Mendix Java Actions."
+tags: ["studio pro"]
 ---
 
 ## 1 Introduction

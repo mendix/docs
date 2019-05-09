@@ -21,7 +21,7 @@ Furthermore, a module can contain many different types of documents. Each type o
 | [Pages](pages) | [Data view](data-view), [Data grid](data-grid), [Table](table), [Text box](text-box) | Forms are used to create a user interface for the end user. They are composed of components that are called widgets. |
 | [Microflows](microflows) | [Activities](activities), [Sequence Flow](sequence-flow) | Microflows describe the the logic of your application. They are composed of activities that manipulate objects, interact with the client etcetera. |
 | [Enumerations](enumerations) |   | An enumeration is a set of predefined values, for example: in a webshop, an enumeration called MemberType could have the values Gold and Silver. |
-| [Consumed App Services](consumed-app-services) |   | App services are the preferred way of connecting Mendix applications to each other. An app service can be imported and its content can be used. |
+
 
 ## 3 Page Resources
 
@@ -57,6 +57,5 @@ Furthermore, a module can contain many different types of documents. Each type o
 
 | Document type | Description |
 | --- | --- |
-| [Published App Services](published-app-services) | A microflow can be published an an app service action so that it can be consumed by other Mendix applications. |
 | [Published OData Services](published-odata-services) | Persistent entities can be exposed as an OData resource, so that they can be imported by third-party applications such as Excel. |
 | [Published Web Services](published-web-services) | A microflow can be published as a web service operation so that it can be called by third-party applications. |

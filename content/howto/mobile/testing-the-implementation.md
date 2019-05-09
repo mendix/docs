@@ -17,7 +17,7 @@ Once you finish implementing the steps described in [How to Implement Push Notif
 
 This will give you a *.zip* project that you can use to customize your app according to the [hybrid app package documentation](https://github.com/mendix/hybrid-app-template/). The project contains a *config.xml* file that refers to *google-services.json* and *GoogleService-info.plist* files. 
 
-To successfully use FCM push notifications, you must put the *google-services.json* and *GoogleService-Info.plist* files – obtained in [Downloading the Google Services Config Files](setting-up-google-firebase-cloud-messaging-server#downloading-the-google-services-config-files) – in your app's **config** folder.
+To successfully use FCM push notifications, you must put the *google-services.json* and *GoogleService-Info.plist* files – obtained in the [Downloading the Google Services Config Files](setting-up-google-firebase-cloud-messaging-server#downloading-the-google-services-config-files) section of *Set Up the Google Firebase Cloud Messaging Server* – in your app's **config** folder.
 
 When you add these files, it causes the PushNotifications widget to register your device with FCM, and then share the FCM registration token with your Mendix backend server. This means you must use FCM to send messages to your devices. 
 

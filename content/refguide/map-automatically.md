@@ -1,6 +1,7 @@
 ---
 title: "Map Automatically"
 parent: "mapping-documents"
+tags: ["studio pro"]
 ---
 
 

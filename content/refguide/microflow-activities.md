@@ -1,6 +1,7 @@
 ---
 title: "Microflow Activities"
 parent: "integration"
+tags: ["studio pro"]
 ---
 ## Integration Activitities
 

@@ -2,6 +2,7 @@
 title: "MySQL/MariaDB"
 parent: "data-storage"
 menu_order: 50
+tags: ["studio pro"]
 ---
 
 ## 1 Introduction

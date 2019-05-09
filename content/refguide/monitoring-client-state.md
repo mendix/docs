@@ -1,6 +1,7 @@
 ---
 title: "Monitoring Client State"
 parent: "runtime"
+tags: ["studio pro"]
 ---
 
 The state is in the client (web browser). This allows the server to be scaled to multiple instances. As the state now resides in the client, it can be useful to monitor what's in the state and why at a given time.

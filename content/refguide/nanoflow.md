@@ -1,6 +1,7 @@
 ---
 title: "Nanoflow Properties"
 parent: "nanoflows"
+tags: ["studio pro"]
 ---
 
 ## 1 Introduction

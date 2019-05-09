@@ -1,6 +1,7 @@
 ---
 title: "Mathematical Function Calls"
 parent: "expressions"
+tags: ["studio pro"]
 ---
 
 ## 1 max

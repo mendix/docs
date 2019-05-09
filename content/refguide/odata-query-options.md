@@ -1,7 +1,7 @@
 ---
 title: "OData Query Options"
 parent: "published-odata-services"
-tags: ["OData", "filter", "count", "sort", "select", "page"]
+tags: ["OData", "filter", "count", "sort", "select", "page", "studio pro"]
 ---
 
 ## 1 Introduction

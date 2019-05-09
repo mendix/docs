@@ -7,7 +7,7 @@ tags: ["mobile", "push notification"]
 
 ## 1 Introduction
 
-Once you finish implementing the steps described in [How to Implement Push Notifications](implementation-guide), you need to test whether everything works correctly. As a prerequisite, you will need to build new versions of your mobile application. To build an app which supports push notifications, follow these instructions:
+Once you finish implementing the steps described in [How to Implement Push Notifications](implementation-guide), you need to test whether your push notifications work correctly. To begin testing your push notifications, you will need to build new versions of your mobile application:
 
 1. Navigate the [Mendix Portal](https://sprintr.home.mendix.com/index.html), then click on your app.
 2. Click **Deploy** > **Mobile App**.

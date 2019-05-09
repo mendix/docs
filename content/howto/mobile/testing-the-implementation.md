@@ -9,7 +9,7 @@ tags: ["mobile", "push notification"]
 
 Once you finish implementing the steps described in [How to Implement Push Notifications](implementation-guide), you need to test whether your push notifications work correctly. To begin testing your push notifications, you will need to build new versions of your mobile application:
 
-1. Navigate the [Mendix Portal](https://sprintr.home.mendix.com/index.html), then click on your app.
+1. Navigate the [Mendix Portal](https://sprintr.home.mendix.com/index.html), then click your app.
 2. Click **Deploy** > **Mobile App**.
 3. Make sure the check box **Permissions** > **Push Notifications** is selected.
 4. Click the **Publish for Mobile App Stores** button.
@@ -19,9 +19,9 @@ This will give you a *.zip* project that you can use to customize your app accor
 
 To successfully use FCM push notifications, you must put the *google-services.json* and *GoogleService-Info.plist* files – obtained in the [Downloading the Google Services Config Files](setting-up-google-firebase-cloud-messaging-server#downloading-the-google-services-config-files) section of *Set Up the Google Firebase Cloud Messaging Server* – in your app's **config** folder.
 
-When you add these files, it causes the PushNotifications widget to register your device with FCM, and then share the FCM registration token with your Mendix backend server. This means you must use FCM to send messages to your devices. 
+When you add these files, it causes the **PushNotifications** widget to register your device with FCM, and then share the FCM registration token with your Mendix back-end server. This means you must use FCM to send messages to your devices. 
 
-### 1.1 Using APNS Instead of FCM for IOS Devices
+### 1.1 Using APNS Instead of FCM for iOS Devices
 
 If you would like to use APNS instead of FCM for your iOS devices, then you will have to delete the reference to *GoogleService-info.plist* from *config.xml*. By doing this, you will not need to include the *GoogleService-info.plist* file, and can then use APNS to send messages to iOS devices.
 

@@ -507,7 +507,7 @@ The widget’s style properties are as follows:
 | `indicator` | `color` | This is the color of the indicator (this defaults to `gray`). |
 | `indicator` | `size` | Possible values for indicator are `large` and `small` (this defaults to `large`). |
 
-The default class to style the navigation is named `com_mendix_widget_native_activityindicator_ActivityIndicator`.
+The default class to style all activity indicators is named `com_mendix_widget_native_activityindicator_ActivityIndicator`.
 
 ### 10.2 App Events
 
@@ -532,11 +532,17 @@ The widget’s style properties are as follows:
 | `container` | All ViewStyle properties |      |
 | `text` | All TextStyle properties |      |
 
-The default class to style the navigation is named `com_mendix_widget_native_badge_Badge`.
+The default class to style all badges is named `com_mendix_widget_native_badge_Badge`.
 
 ### 10.4 Barcode Scanner
 
-The barcode scanner widget allows your app to scan barcodes and QR codes. This widget only renders a camera view which does not support any styling.
+The barcode scanner widget allows your app to scan barcodes and QR codes. This widget renders a camera view in a stylable container.
+
+| Element | Style Properties    | Description |
+| --- | --- | --- |
+| `container` | All ViewStyle properties |  |
+
+The default class to style all barcode scanner widgets is named `com_mendix_widget_native_barcodescanner_BarcodeScanner`.
 
 ### 10.5 Feedback
 
@@ -600,6 +606,8 @@ The widget’s style properties are as follows:
 | Element | Style Properties    | Description |
 | --- | --- | --- |
 | `container` | All ViewStyle properties. |  |
+| `loadingOverlay` | All ViewStyle properties. |  |
+| `loadingIndicator` | `color` | This is the color of the loading indicator. |
 | `marker` | `color` | This is the color of the location marker. |
 | `marker` | `opacity` | This is the opacity of the location marker. |
 
@@ -619,15 +627,17 @@ The widget’s style properties are as follows:
 
 ```xml
 <container>
-	<bar><fill/><bar>
+	<bar><fill/></bar>
+	<validationMessage/>
 </container>
 ```
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
 | `container` | All ViewStyle properties |  |
-| `bar` | All ViewStyle properties |   |
+| `bar` | All ViewStyle properties |  |
 | `fill` | `backgroundColor` | This is the background color of the filled progress bar portion. |
+| `validationMessage` | All TextStyle properties |  |
 
 The default class to style all progress bars is named `com_mendix_widget_native_progressbar_ProgressBar`.
 
@@ -641,7 +651,8 @@ The widget’s style properties are as follows:
 
 ```xml
 <container>
-	<circle><fill/><circle>
+	<circle><fill/></circle>
+	<validationMessage/>
 </container>
 ```
 
@@ -655,6 +666,7 @@ The widget’s style properties are as follows:
 | `fill` | `width` | This is the width of the progress circle. |
 | `fill` | `lineCapRounded` | This determines if the rotating line’s front tip is rounded off or not. |
 | `text` | All TextStyle properties |  |
+| `validationMessage` | All TextStyle properties |  |
 
 The default class to style all progress circles is named `com_mendix_widget_native_progresscircle_ProgressCircle`.
 
@@ -692,10 +704,12 @@ The widget’s style properties are as follows:
 ```xml
 <container>
 	<track><highlight/><marker/></track>
+	<validationMessage/>
 </container>
 
 <container>
 	<trackDisabled><highlightDisabled/><markerDisabled/></trackDisabled>
+	<validationMessage/>
 </container>
 ```
 
@@ -709,6 +723,7 @@ The widget’s style properties are as follows:
 | `marker` | All ViewStyle properties |    |
 | `markerActive` | All ViewStyle properties |    |
 | `markerDisabled` | All ViewStyle properties |    |
+| `validationMessage` | All TextStyle properties |    |
 
 The default class to style all range slider inputs is named `com_mendix_widget_native_rangeslider_RangeSlider`.
 
@@ -764,12 +779,14 @@ The widget’s style properties are as follows:
   <button><text>Standard</text></button>
   <activeButton><activeButtonText>Sattelite</activeButtonText></activeButton>
   <button><text>Hybrid</text></button>
-</conrtainer>
+  <validationMessage/>
+</container>
 
 <containerDisabled>
   <button><text>Standard</text></button>
   <activeButton><activeButtonText>Sattelite</activeButtonText></activeButton>
   <button><text>Hybrid</text></button>
+  <validationMessage/>
 </containerDisabled>
 ```
 
@@ -781,8 +798,9 @@ The widget’s style properties are as follows:
 | `text` | All TextStyle properties |       |
 | `activeButton` | All ViewStyle properties |       |
 | `activeButtonText` | All TextStyle properties |       |
+| `validationMessage` | All TextStyle properties |       |
 
-The default class to style all toggle buttons is named `om_mendix_widget_native_togglebuttons_ToggleButtons`.
+The default class to style all toggle buttons is named `com_mendix_widget_native_togglebuttons_ToggleButtons`.
 
 ### 10.16 Video Player
 
@@ -797,6 +815,7 @@ The widget’s style properties are as follows:
 | `container` | All ViewStyle properties |        |
 | `indicator` | `color` | The loading indicator color. |
 | `video` | All ViewStyle properties |      |
+| `errorMessage` | All TextStyle properties |      |
 
 The default class to style all video players is named `com_mendix_widget_native_videoplayer_VideoPlayer`.
 

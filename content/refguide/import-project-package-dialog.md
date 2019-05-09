@@ -1,6 +1,7 @@
 ---
 title: "Import Project Package"
 parent: "dialogs"
+tags: ["studio pro"]
 ---
 Use this dialog to create a new app from a Mendix project package (.mpk) file. The new app can either be stored in a version control server or locally on disk.
 

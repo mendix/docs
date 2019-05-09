@@ -1,6 +1,7 @@
 ---
 title: "Layout Widgets"
 parent: "pages"
+tags: ["studio pro"]
 ---
 
 

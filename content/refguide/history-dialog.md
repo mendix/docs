@@ -1,6 +1,7 @@
 ---
 title: "History Dialog"
 parent: "dialogs"
+tags: ["studio pro"]
 ---
 ## 1 Introduction
 

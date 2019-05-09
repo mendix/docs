@@ -2,6 +2,7 @@
 title: "Studio Pro 8 Guide"
 notoc: true
 description: "The various sections of the Mendix Studio Pro Guide provide details on the features and functionality of the Mendix Platform."
+tags: ["studio pro"]
 frontpage_featured: true
 ---
 

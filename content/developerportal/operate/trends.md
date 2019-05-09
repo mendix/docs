@@ -16,9 +16,7 @@ To track the usage growth of your app and to debug performance problems, the Men
 To view the **Trends**, you must have permission to **Access the Monitoring**.
 
 {{% alert type="info" %}}
-
-Note that only the [Technical Contact](../company-app-roles/technical-contact) is allowed to grand the node permissions.
-
+Note that only the [Technical Contact](../company-app-roles/technical-contact) is allowed to grant the node permissions.
 {{% /alert %}}
 
 Assign this permission by following these steps:

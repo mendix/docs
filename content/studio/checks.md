@@ -11,7 +11,7 @@ When [publishing your app](publishing-app#publishing-your-app), Mendix Studio ch
 
 ![](attachments/checks/checks-button.png)
 
-## 2 Viewing Checks for Your App and Interacting with the Checks Panel {#viewing-checks}
+## 2 Viewing Checks and Interacting with the Checks Panel {#viewing-checks}
 
 To display checks for your app and view the faulty elements in it, do the following:
 

@@ -15,7 +15,7 @@ Mendix 7 contains a completely new build approach for clustering. The main featu
 
 Clustering support is built natively into our Cloud Foundry buildpack implementation. This means that you can simply scale up using Cloud Foundry. The buildpack ensures that your system automatically starts behaving as a cluster.
 
-Clustering is also supported on Kubernetes, but you will have to use a *StatefulSet*. There is more information on this in section 4.2.1, *Some Notes on Scaling*, of the document [Run Mendix on Kubernetes](/developerportal/deploy/run-mendix-on-kubernetes#scaling).
+Clustering is also supported on Kubernetes, but you will have to use a *StatefulSet*. There is more information on this in the *Some Notes on Scaling* section [How to Run Mendix on Kubernetes](/developerportal/deploy/run-mendix-on-kubernetes#scaling).
 
 ## 3 Cluster Infrastructure
 
@@ -38,8 +38,8 @@ Scaling out can be done using the Pivotal App Manager. Using the Pivotal App Man
 Mendix Runtime has the concept of a cluster leader. This is a single node within a Mendix Runtime cluster that performs cluster management activities. Those activities are:
 
 * `Session Expiration handling` - removing sessions after they have expired (not been used for a configured timespan)
-	* For version [7.23.4](/releasenotes/desktop-modeler/7.23#7234) and above – each node expires its sessions (after not having been used for a configured timespan) and removes the session persisted in the database; in exceptional cases (for example, a node crash), some sessions may not be removed from the database, in which case the cluster leader performs a clean-up of the sessions
-	* For version [7.23.3](/releasenotes/desktop-modeler/7.23#7233) and below – the cluster leader removes sessions after they have expired (having not been used for a configured timespan)
+	* For version [7.23.4](/releasenotes/studio-pro/7.23#7234) and above – each node expires its sessions (after not having been used for a configured timespan) and removes the session persisted in the database; in exceptional cases (for example, a node crash), some sessions may not be removed from the database, in which case the cluster leader performs a clean-up of the sessions
+	* For version [7.23.3](/releasenotes/studio-pro/7.23#7233) and below – the cluster leader removes sessions after they have expired (having not been used for a configured timespan)
 * `Cluster node expiration handling` - removing cluster nodes after they have expired (not giving a heartbeat for a configured timespan)
 * `Background job expiration handling` - removing data about background jobs after the information has expired (older than a specific timespan)
 * `Unblocking blocked users`
@@ -146,5 +146,5 @@ To support seamless clustering, sessions will always be persisted in the databas
 Persistent Sessions also store a 'last active' date upon each request. To improve this particular aspect of the performance, the 'last active' date attribute of a session is no longer committed to the database immediately on each request. Instead, this information is queued for an action to run at a configurable interval to be stored in the Mendix Database. This action verifies whether the session has not been logged out by another node and whether the last active date is more recent than the one in the database. The interval can be configured by setting `ClusterManagerActionInterval` (value in milliseconds).
 
 {{% alert type="warning" %}}
-Overriding the default values for `SessionTimeout` and `ClusterManagerActionInterval` custom settings can impact the behavior of keep alive and results in an unexpected session logout. In particular, the best practice is to set the `ClusterManagerActionInterval` to half of the `SessionTimeout` so that each node gets the chance to run at least once before the cluster leader (version [7.23.3](/releasenotes/desktop-modeler/7.23#7233) and below) or a node (version [7.23.4](/releasenotes/desktop-modeler/7.23#7234) and above) attempts to delete a session.
+Overriding the default values for `SessionTimeout` and `ClusterManagerActionInterval` custom settings can impact the behavior of keep alive and results in an unexpected session logout. In particular, the best practice is to set the `ClusterManagerActionInterval` to half of the `SessionTimeout` so that each node gets the chance to run at least once before the cluster leader (version [7.23.3](/releasenotes/studio-pro/7.23#7233) and below) or a node (version [7.23.4](/releasenotes/studio-pro/7.23#7234) and above) attempts to delete a session.
 {{% /alert %}}

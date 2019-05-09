@@ -3,7 +3,6 @@ title: "General Info"
 description: "Describes various features of Mendix Studio."
 menu_order: 10
 tags: ["studio", "studio pro"]
-frontpage_featured: true
 ---
 
 ## 1 Introduction {#studio-overview}

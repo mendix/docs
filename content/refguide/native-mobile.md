@@ -3,6 +3,7 @@ title: "Native Mobile"
 category: "Mobile"
 menu_order: 1
 tags: ["mobile", "native"]
+frontpage_featured: true
 ---
 
 ## 1 Introduction

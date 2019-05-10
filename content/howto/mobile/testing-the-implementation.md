@@ -13,11 +13,11 @@ Once you finish implementing the steps described in [How to Implement Push Notif
 
 To begin testing your push notifications, you will need to build new versions of your mobile application:
 
-1. Navigate the [Mendix Portal](https://sprintr.home.mendix.com/index.html), then click your app.
+1. Navigate to the [Developer Portal](https://sprintr.home.mendix.com/index.html), then click your app.
 2. Click **Deploy** > **Mobile App**.
 3. Make sure the check box **Permissions** > **Push Notifications** is selected.
-4. Click the **Publish for Mobile App Stores** button.
-5. Select the **Do it yourself** check box, make sure your preferred environment is selected, and then click the **Download Customizable Package** button. 
+4. Click **Publish for Mobile App Stores**.
+5. Select the **Do it yourself** check box, make sure your preferred environment is selected, and then click **Download Customizable Package**. 
 
 This will give you a *.zip* project that you can use to customize your app according to the [hybrid app package documentation](https://github.com/mendix/hybrid-app-template/). The project contains a *config.xml* file that refers to *google-services.json* and *GoogleService-info.plist* files. 
 
@@ -39,8 +39,8 @@ Follow these steps to test and send a push notification to a device:
 
 1. Open your application in the browser and log in as administrator (for example, MxAdmin`).
 2. To be able to log in into your hybrid mobile application, you will need to create a new user. Typically, this can be done from the administration pages of your application. If you have anonymous access enabled, this step is of course not necessary.
-3. Open your hybrid mobile app and log in. If you are testing offline-mode, press the sync button to send the pending device registration request to the server.
-4.  Open the **Push Notifications Administration** page. Back in the administrator view of your web application, navigate to the **Devices** tab in the Push Notifications administration page. Here you should see one device in the list of registered devices, which is the device that you used to log in to your hybrid mobile application. Continue by selecting the device and press **New Message**.
+3. Open your hybrid mobile app and log in. If you are testing offline-mode, click the sync button to send the pending device registration request to the server.
+4.  Open the **Push Notifications Administration** page. Back in the administrator view of your web application, navigate to the **Devices** tab in the Push Notifications administration page. Here you should see one device in the list of registered devices, which is the device that you used to log in to your hybrid mobile application. Continue by selecting the device and click **New Message**.
 
 	![](attachments/19955741/21168174.png)
 

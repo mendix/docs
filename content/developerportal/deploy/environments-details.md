@@ -8,7 +8,7 @@ tags: ["Deploy","App","Environment","Developer Portal"]
 
 ## 1 Introduction
 
-To enter the **Environment details** page, go to the [Mendix Portal](http://home.mendix.com), select your licensed app, click **Environments**, and then click **Details** on the specific environment. 
+To enter the **Environment details** page, go to the [Developer Portal](http://home.mendix.com), select your licensed app, click **Environments**, and then click **Details** on the specific environment. 
 
 ![](attachments/environments-details/environment-details.png)   
 
@@ -205,7 +205,7 @@ HTTP Headers allows you to set the values of selected HTTP response headers. The
 This replaces the option to prevent embedding your app in an IFrame with more flexible options to set HTTP Headers.
 {{% /alert %}}
 
-For Mendix Cloud v3, only *X-Frame-Options* is supported. For Mendix Cloud v4 the HTTP headers which are supported in the Mendix Developer Portal are:
+For Mendix Cloud v3, only *X-Frame-Options* is supported. For Mendix Cloud v4 the HTTP headers which are supported in the Developer Portal are:
 
 | Header | Description | Additional Information |
 | --- | --- | --- |

@@ -27,7 +27,7 @@ If you need a *Subscription Secret* to deploy to SAP Cloud Platform you will nee
 
 For all other licenses, do the following:
 
-1. Open the [New App Request](https://newnode.mendix.com/) app.
+1. Open the [Request New App Node](https://newnode.mendix.com/) app.
 
 2. Fill in the basic information, such as app name and hosting type.
 
@@ -35,7 +35,7 @@ For all other licenses, do the following:
 
 4. Save the app details.
 
-Mendix Support will contact you via the support portal.
+Mendix Support will contact the technical contact via a ticket in the support portal.
 
 If you are hosting your app outside the Mendix Cloud, Mendix support will provide you with two parts to your key:
 * *UUID* – this is a unique identifier for your license, based on where it is being deployed. 

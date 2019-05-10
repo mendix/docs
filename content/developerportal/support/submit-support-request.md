@@ -110,6 +110,8 @@ To submit a request with Mendix Support, follow these steps:
 
     * **Incident** – if your app is down, or you are experiencing another platform issue
 
+    * **Standard change: Request New Licensed Node** - Please use the [Request New App Node](https://newnode.mendix.com) app unless you are requesting an SAP Subscription Secret.
+
     * **Standard change: Change On-Prem Licensed Node** – request a new license key for an *existing* app (for example, if you have new hardware configuration)
 
     * **Standard change: Offboard Licensed Node** – remove a licensed node or app which you no longer need (applies to all platforms)

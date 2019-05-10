@@ -10,9 +10,9 @@ tags: ["Support", "app node", "node", "license", "subscription secret"]
 
 If you want to deploy your app to a new licensed node in the Mendix Cloud or on-premises/Virtual Private Cloud, you can request one from Mendix support.
 
-Fill in all the required details for this new licensed app node in the [New Licensed Node App](https://newnode.mendix.com/).
+Fill in all the required details for this new licensed app node in the [Request New App Node](https://newnode.mendix.com/) app.
 
-Mendix Support will reach out to the technical contact with the app details. Mendix Support will also check if your request matches your entitlements on resources (number of apps, cloud resources).
+Mendix Support will contact the technical contact for the app via a ticket in the support portal, and provide the app details. Mendix Support will also check if your request matches your entitlement to resources (number of apps, cloud resources).
 
 {{% alert type="info" %}}
 If you need a *Subscription Secret* for your app deployed to SAP, please create a ticket with [Mendix Support](https://support.mendix.com).

@@ -32,6 +32,12 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud V3, and other deploym
 
 * We resolved an issue where some team members were not visible in Node Permissions after an app was relinked (Tickets 70285, 79708, 79824, 80557, 81713, and 82591).
 
+### May 3rd, 2019
+
+#### Improvements
+
+* We released **Free Edition** of Mendix. This removes the limit of 10 named users on Free Apps which are deployed to the Mendix Cloud.
+
 ### May 2nd, 2019
 
 #### Improvements

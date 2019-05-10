@@ -23,20 +23,23 @@ The app will check for a license each time it is started.
 
 For all deployment options, apart from [IBM Cloud Portal](#ibm), you will need to obtain a Mendix license from Mendix support.
 
-1. Go to the [Mendix Support Portal](https://support.mendix.com) home page.
-2. Click **Submit a request** at the top-right of the page
-3. Submit the request. The type of request depends on where you want to deploy your app.
-    * For **Mendix Cloud**, submit a request of issue type *Standard change: New App*
-    * For an *existing* app on **Microsoft Windows** submit a request of issue type *Key Change request (on-premises)* 
-    * For **All other deployment, except IBM Cloud Portal**, submit a request of issue type *Standard change: (Re)new license*
-4. You will need to provide additional information about your app. In particular, you will need a server id if you are deploying the app locally.
+If you need a *Subscription Secret* to deploy to SAP Cloud Platform you will need to create a ticket with [Mendix Support](https://support.mendix.com).
 
-Depending on how you are deploying your app, Mendix support will either provide you with two parts to your key:
+For all other licenses, do the following:
 
+1. Open the [New App Request](https://newnode.mendix.com/) app.
+
+2. Fill in the basic information, such as app name and hosting type.
+
+3. Provide additional information about your app, if required by the type of hosting. For example, you will need to provide the server id if you are deploying the app locally on a Virtual Machine.
+
+4. Save the app details.
+
+Mendix Support will contact you via the support portal.
+
+If you are hosting your app outside the Mendix Cloud, Mendix support will provide you with two parts to your key:
 * *UUID* – this is a unique identifier for your license, based on where it is being deployed. 
 * *LicenseKey* – this is a base64 string.
-
-or with a single *Subscription Secret*.
 
 An example UUID is aab8a0a1-1370-467e-918d-3a243b0ae160. LicenseKey is a very long base64 string.
 

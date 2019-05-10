@@ -1,6 +1,7 @@
 ---
 title: "Select App Service"
 parent: "consumed-app-services"
+tags: ["studio pro"]
 ---
 
 {{% alert type="info" %}}

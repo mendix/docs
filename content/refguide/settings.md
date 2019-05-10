@@ -1,6 +1,7 @@
 ---
 title: "Settings"
 parent: "consumed-app-services"
+tags: ["studio pro"]
 ---
 
 {{% alert type="info" %}}

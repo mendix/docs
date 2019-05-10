@@ -1,6 +1,7 @@
 ---
 title: "XPath Day-from-DateTime"
 parent: "xpath-constraint-functions"
+tags: ["studio pro"]
 ---
 
 ## 1 Overview

@@ -1,8 +1,8 @@
 ---
 title: "Table (Document Template)"
 parent: "document-templates"
+tags: ["studio pro"]
 ---
-
 
 Tables can be used to change the layout of the form. They contain a number of rows and columns and the intersection of the two is called a cell. Each cell can contain widgets. Cells can be merged horizontally and vertically to allow for asymmetric layouts.
 Tables can be used both in- and outside the data view or templategrid widgets.

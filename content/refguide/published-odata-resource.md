@@ -1,6 +1,7 @@
 ---
 title: "Published OData Resource"
 parent: "published-odata-services"
+tags: ["studio pro"]
 ---
 {{% alert type="warning" %}}
 

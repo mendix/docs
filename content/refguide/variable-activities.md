@@ -1,8 +1,8 @@
 ---
 title: "Variable Activities"
 parent: "activities"
+tags: ["studio pro"]
 ---
-
 
 ## Create Variable
 

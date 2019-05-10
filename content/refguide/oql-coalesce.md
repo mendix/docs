@@ -1,6 +1,7 @@
 ---
 title: "OQL COALESCE"
 parent: "oql-functions"
+tags: ["studio pro"]
 ---
 
 

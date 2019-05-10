@@ -1,6 +1,7 @@
 ---
 title: "OQL Where Clause"
 parent: "oql"
+tags: ["studio pro"]
 ---
 
 

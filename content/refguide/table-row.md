@@ -1,8 +1,8 @@
 ---
 title: "Table Row"
 parent: "table"
+tags: ["studio pro"]
 ---
-
 
 A table consists of a number of rows divided into [table cells](table-cell).
 

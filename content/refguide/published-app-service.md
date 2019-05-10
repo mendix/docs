@@ -1,6 +1,7 @@
 ---
 title: "Published App Service"
 parent: "published-app-services"
+tags: ["studio pro"]
 ---
 
 {{% alert type="info" %}}

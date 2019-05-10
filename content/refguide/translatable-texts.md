@@ -1,9 +1,9 @@
 ---
 title: "Translatable Texts"
 category: "App Modeling"
+tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
-
 
 All texts that are presented to the end user can be translated to different languages. Examples include [labels](label), the captions of [buttons](button-widgets) and [data grid](data-grid) columns, [menu items](menu-item) and [messages](show-message) that are sent from a [microflow](microflows).
 

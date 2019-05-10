@@ -10,6 +10,10 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud V3, and other deploym
 
 ## 2019
 
+### May 13th, 2019
+
+* We released a fix to support displaying apps made with future versions of Mendix Studio and Mendix Studio Pro in the Launchpad.
+
 ### May 9th, 2019
 
 #### Fixes

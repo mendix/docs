@@ -89,30 +89,21 @@ You can change the view of your page to different views clicking the correspondi
 
 ## 5 Left Menu Bar
 
-The menu on the left side of Studio is divided into a top and a bottom menu.
+The left menu bar provides the following options:
 
-The top menu provides the following options:
-
-{{% image_container width="350" %}}![](attachments/general/left-menu-bar-top.png)
+{{% image_container width="350" %}}![](attachments/general/left-menu-bar.png)
 {{% /image_container %}}
 
-| Top menu item | Shortcut | Description |
+| Menu item | Shortcut | Description |
 |------|------|------|
 | Mx Logo | None | The Mx logo is the return button to return to the [Developer Portal](https://home.mendix.com) of the app. |
 | [Pages](page-editor) | 1 | Shows a list of all pages in the app. After you select a page, it opens in Studio. |
 | [Domain Models](domain-models) | 2 | Shows the domain models of the app. |
 | [Microflows](microflows) | 3 | Shows a list of all microflows in the app.  After clicking a microflow, it will open in Studio. |
 | [Navigation Document](navigation) | 4 | Shows a configured menu in the form of a navigation tree. You can expand the menu structure of the navigation tree up to two levels with an unlimited amount of pages. |
-
-The bottom menu bar provides the following options:
-
-![](attachments/general/left-menu-bar-bottom.png)
-
-| Bottom menu item | Description |
-|------|------|
-| Search (magnifying glass) icon | Helps you search through microflows, entities, and pages. Start typing the name of the item you are looking for and the search feature will return any matches it finds, using exact matches as well as fuzzy matches based on the characters entered. <br />You can also use "/" shortcut to search through your app. |
-| [App Settings](app-settings) | Shows an overview of all widgets and their status. Widgets are user interface elements (alerts, buttons, charts, etc.) contained in the building blocks. They are used to build pages from. |
-| [Theme Customizer](theme-customizer) | Here you can style your app with custom branding, colors, and typography. |
+| Search (magnifying glass) icon | <kbd>/</kbd> | Helps you search through microflows, entities, and pages. Start typing the name of the item you are looking for and the search feature will return any matches it finds, using exact matches as well as fuzzy matches based on the characters entered. <br />You can also use "/" shortcut to search through your app. |
+| [App Settings](app-settings) | None | Shows an overview of all widgets and their status. Widgets are user interface elements (alerts, buttons, charts, etc.) contained in the building blocks. They are used to build pages from. |
+| [Theme Customizer](theme-customizer) | None | Here you can style your app with custom branding, colors, and typography. |
 
 ## 6 Toolbox, Properties, and Buzz
 

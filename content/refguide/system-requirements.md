@@ -108,16 +108,9 @@ For Mendix apps and the [Mendix Mobile app](getting-the-mendix-app):
 * iOS 12 and above
 * Android 5.0 and above
 
-## 8 MxBuild{#mxbuild}
+## 8 MxBuild {#mxbuild}
 
-MxBuild is a Windows and Linux command-line tool that can be used to build a Mendix Deployment Package. See [MxBuild](mxbuild) for more information.
-
-### 8.1 Mendix Version 7.1 & Above
+MxBuild is a Windows and Linux command-line tool that can be used to build a Mendix Deployment Package. For more information, see [MxBuild](mxbuild).
 
 * Mono v4.6.x or .NET v4.6.2
 * JDK 8.
-
-### 8.2 Mendix Version 7.0.2
-
-* Mono v3.1.0 or .NET v4.5
-* JDK 8

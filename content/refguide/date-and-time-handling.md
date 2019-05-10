@@ -1,6 +1,7 @@
 ---
 title: "Date & Time Handling"
 category: "Mendix Runtime"
+tags: ["studio pro"]
 ---
 
 ## 1 Introduction

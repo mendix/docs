@@ -2,7 +2,7 @@
 title: "Java Memory Usage"
 parent: "runtime-java"
 menu_order: 2
-tags: ["runtime", "java", "memory usage", "memory"]
+tags: ["runtime", "java", "memory usage", "memory", "studio pro"]
 ---
 
 The Java memory is divided in different Memory Usage blocks. Each of these blocks are a snapshot of the actual memory usage of that segment. Each of the memory usage blocks can be broken down into four different values

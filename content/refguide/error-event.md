@@ -1,6 +1,7 @@
 ---
 title: "Error Event"
 parent: "events"
+tags: ["studio pro"]
 ---
 
 {{% alert type="info" %}}

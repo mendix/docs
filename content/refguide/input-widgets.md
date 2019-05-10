@@ -1,6 +1,7 @@
 ---
 title: "Input Widgets"
 parent: "pages"
+tags: ["studio pro"]
 ---
 
 

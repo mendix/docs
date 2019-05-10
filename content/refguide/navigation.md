@@ -2,6 +2,7 @@
 title: "Navigation in Mendix"
 parent: "project"
 description: "Describes the concept of navigation in apps and the properties of a profile."
+tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

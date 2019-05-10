@@ -1,6 +1,7 @@
 ---
 title: "Data Grid (Document Template)"
 parent: "document-templates"
+tags: ["studio pro"]
 ---
 
 

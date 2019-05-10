@@ -1,6 +1,7 @@
 ---
 title: "Database Source"
 parent: "data-sources"
+tags: ["studio pro"]
 ---
 
 

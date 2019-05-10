@@ -1,8 +1,9 @@
 ---
 title: "Moving from Desktop Modeler Version 7 to Studio Pro 8"
-category: "General"
+category: "General Info"
 menu_order: 20
 description: "Provides details on updating your project from Desktop Modeler version 7 to Studio Pro version 8 , including sections on converting your project and deprecated features."
+tags: ["studio pro"]
 ---
 
 ## 1 Introduction
@@ -12,7 +13,7 @@ When converting your Mendix app project from Desktop Modeler version 7 to Studio
 For information about new features in Mendix 8, see [Studio Pro 8 release notes](/releasenotes/studio-pro/).
 
 {{% alert type="warning" %}}
-Mendix version 8, and Studio Pro 8, are still in beta. There may be additional breaking changes and update requirements introduced in future beta releases and when Mendix version 8 is make *generally available* (GA).
+Mendix version 8 and Studio Pro 8 are still in beta. There may be additional breaking changes and update requirements introduced in future beta releases and when Mendix version 8 is made generally available (GA).
 {{% /alert %}}
 
 ## 2 Converting Your Project
@@ -28,9 +29,7 @@ Make sure that you have either committed your latest changes to Team Server, or 
 You should always convert your project from the latest release of Mendix version 7.
 
 1. Download the latest version of Desktop Modeler version 7.
-
 2. Open your app in the latest version of the Desktop Modeler version 7.
-
 3. Allow it to upgrade the app, if necessary.
 
 ### 2.3 Review Your Mendix 7 Project
@@ -47,17 +46,17 @@ It is recommended that you backup/commit your project at this point so that you 
 
 You can now close the project in Desktop Modeler version 7.
 
-### 2.5 Upgrade Your Project to Version 8
+### 2.5 Upgrade Your App Project to Version 8
 
 Mendix will upgrade your app project for you.
 
 Open the project in Mendix Studio Pro version 8 and allow Studio Pro to update your app to version 8.
 
-### 2.6 Review Errors, Warnings, and Deprecations in Studio Pro
+### 2.6 Review Errors, Warnings & Deprecations in Studio Pro
 
 Review all error messages and messages about deprecated items and make changes where necessary.
 
-If you are using one, or both, of the deprecated data types Currency and Float you will see errors. See the section [Attributes of Type Float and Currency](#float-currency), below, for more information.
+If you are using one, or both, of the deprecated data types Currency and Float you will see errors. See the section [Attributes of Type Float and Currency](#float-currency) below for more information.
 
 ### 2.7 Upgrade All Widgets
 
@@ -67,7 +66,7 @@ Check if there is a newer version of your App Store modules available in the App
 
 In general you should not remove and reimport modules, unless this is recommended in the release notes. If you do remove and reimport them, you may lose data or configuration related to the module.
 
-### 2.8 Review and Test Your App
+### 2.8 Review & Test Your App
 
 Finally, review the sections below and ensure that you have made all the changes necessary.
 
@@ -77,7 +76,7 @@ Test the app for any unexpected results.
 Congratulations! Your app has been successfully upgraded to Mendix 8 and you can continue working as normal.
 {{% /alert %}}
 
-## 3 Deprecated and Removed APIs{#deprecated-apis}
+## 3 Deprecated & Removed APIs{#deprecated-apis}
 
 Deprecated Java actions should be fixed in Mendix 7, before you migrate the app project to Mendix 8.
 
@@ -85,7 +84,7 @@ Fix the deprecations in your Java actions by importing your project into your Ja
 
 Details of removed and deprecated APIs will be added to the *Breaking Changes* section of the [Studio Pro 8 release notes](/releasenotes/studio-pro/).
 
-## 4 Attributes of Type Float and Currency{#float-currency}
+## 4 Attributes of Type Float & Currency{#float-currency}
 
 Attributes of type Float and Currency were deprecated in Mendix version 7, and have now been removed from Mendix version 8. If your app contains attributes of type Float and/or Currency, these will need to be converted to type Decimal.
 
@@ -119,7 +118,7 @@ The next time your app is run locally or deployed the database will be converted
 **This database conversion could take a long time!** We suggest that you first test the data conversion on a representative dataset, so that you can estimate how long it will take to convert your production database.
 {{% /alert %}}
 
-## 5 64-bit Studio Pro
+## 5 64-Bit Studio Pro
 
 Mendix Desktop Modeler version 7 was 64-bit application but could also run on 32-bit.
 
@@ -131,7 +130,7 @@ If your original project was version 7.23.2 or below and you want to work collab
 
 Follow the instructions in [Migration From the Sync Process to Collaborative Development](/refguide7/collaborative-development-migration).
 
-[//]: # "Java Action Parameters - Java Action code generation can break the code in beta 2. See Ivan Zub"
+[//]: # "Java Action Parameters - Java Action code generation can break the code in beta 2. See Ivan"
 
 [//]: # "open JDK 11 - future betas"
 

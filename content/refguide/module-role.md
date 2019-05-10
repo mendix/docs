@@ -1,6 +1,7 @@
 ---
 title: "Module Role"
 parent: "module-security"
+tags: ["studio pro"]
 ---
 
 

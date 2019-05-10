@@ -1,6 +1,7 @@
 ---
 title: "Show Message"
 parent: "client-activities"
+tags: ["studio pro"]
 ---
 
 {{% alert type="info" %}}

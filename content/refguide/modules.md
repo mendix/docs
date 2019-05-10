@@ -1,6 +1,7 @@
 ---
 title: "Modules"
 category: "App Modeling"
+tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -40,7 +41,7 @@ Furthermore, a module can contain many different types of documents. Each type o
 | [Document Templates](document-templates) | Document Templates are used to model a template needed as input for a document export action which can generate all kinds of documents based on application data. They are composed much in the same way as Forms. |
 | [Java Actions](java-actions) | With Java actions you can extend the functionality of your application in situations where it would be hard to implement this functionality in microflows. You can call a Java action from a microflow. |
 | [Regular Expressions](regular-expressions) | A regular expression describes a set of criteria that a string can match. |
-| [Rules](rules) | A rule defines a set of criteria, with a certain input the rule will result in a boolean or enumeration depending on the criteria met. It can be called from an exclusive split to determine the direction the microflow should go once the exclusive split is reached. |
+| [Rules](rules) | A rule defines a set of criteria, with a certain input the rule will result in a Boolean or enumeration depending on the criteria met. It can be called from an exclusive split to determine the direction the microflow should go once the exclusive split is reached. |
 | [Scheduled Events](scheduled-events) | A scheduled event is used to execute a microflow at a certain point in time. You can also schedule it to repeat after a given time. For example, a scheduled event can run every morning at 6 A.M. |
 
 ## 5 Consumed Services
@@ -57,5 +58,5 @@ Furthermore, a module can contain many different types of documents. Each type o
 | Document type | Description |
 | --- | --- |
 | [Published REST Services](published-rest-services) | A microflow can be published as a REST service operation so that it can be consumed by other Mendix applications. |
-| [Published OData Services](published-odata-services) | Persistent entities can be exposed as an OData resource, so that they can be imported by third-party applications such as Excel. |
+| [Published OData Services](published-odata-services) | Persistable entities can be exposed as an OData resource, so that they can be imported by third-party applications such as Excel. |
 | [Published Web Services](published-web-services) | A microflow can be published as a web service operation so that it can be called by third-party applications. |

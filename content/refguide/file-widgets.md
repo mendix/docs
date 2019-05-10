@@ -1,6 +1,7 @@
 ---
 title: "File Widgets"
 parent: "pages"
+tags: ["studio pro"]
 ---
 
 

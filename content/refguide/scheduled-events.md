@@ -1,7 +1,6 @@
 ---
 title: "Scheduled Events"
 category: "App Modeling"
-#menu_order: 
 description: "Options for configuring scheduled events"
 tags: ["Scheduled Event", "Execution properties", "Timing", "intervals", "scheduling issues", "time zones", "daylight saving"]
 ---

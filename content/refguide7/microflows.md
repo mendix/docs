@@ -159,7 +159,7 @@ Click [here](http://www.w3.org/TR/soap12-part1/#soapfault) for more information 
 
 {{% alert type="warning" %}}
 
-In microflows that apply entity access, which are recognizable by their yellow background, it is not possible to inspect the attributes of error objects for security reasons. You can pass the error object to a submicroflow that does not apply entity access and inspect the attributes there.
+In microflows that apply entity access, it is not possible to inspect the attributes of error objects for security reasons. You can pass the error object to a submicroflow that does not apply entity access and inspect the attributes there.
 
 {{% /alert %}}
 

@@ -1,5 +1,6 @@
 ---
-title: "Mobile Development"
+title: "Mobile"
+tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -35,4 +36,4 @@ Mendix's native mobile apps are always configured with offline-first capabilitie
 
 * [Native Mobile](native-mobile)
 * [Hybrid Mobile](hybrid-mobile)
-* [General](general-parent)
+* [Offline First](offline-first)

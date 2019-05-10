@@ -1,6 +1,7 @@
 ---
 title: "XPath Source"
 parent: "data-sources"
+tags: ["studio pro"]
 ---
 
 ## 1 Overview

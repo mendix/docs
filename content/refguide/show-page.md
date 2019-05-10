@@ -1,6 +1,7 @@
 ---
 title: "Show Page"
 parent: "client-activities"
+tags: ["studio pro"]
 ---
 
 ## 1 Introduction

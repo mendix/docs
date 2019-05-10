@@ -15,7 +15,7 @@ Mendix 7 contains a completely new build approach for clustering. The main featu
 
 Clustering support is built natively into our Cloud Foundry buildpack implementation. This means that you can simply scale up using Cloud Foundry. The buildpack ensures that your system automatically starts behaving as a cluster.
 
-Clustering is also supported on Kubernetes, but you will have to use a *StatefulSet*. There is more information on this in section 4.2.1, *Some Notes on Scaling*, of the document [Run Mendix on Kubernetes](/developerportal/deploy/run-mendix-on-kubernetes#scaling).
+Clustering is also supported on Kubernetes, but you will have to use a *StatefulSet*. There is more information on this in the *Some Notes on Scaling* section [How to Run Mendix on Kubernetes](/developerportal/deploy/run-mendix-on-kubernetes#scaling).
 
 ## 3 Cluster Infrastructure
 
@@ -35,9 +35,11 @@ Scaling out can be done using the Pivotal App Manager. Using the Pivotal App Man
 
 ## 4 Cluster Leader, Cluster Slaves
 
-Mendix Runtime has the concept of a Cluster Leader. This is a single node within a Mendix Runtime Cluster that performs cluster management activities. Those activities are:
+Mendix Runtime has the concept of a cluster leader. This is a single node within a Mendix Runtime cluster that performs cluster management activities. Those activities are:
 
 * `Session Expiration handling` - removing sessions after they have expired (not been used for a configured timespan)
+	* For version [7.23.4](/releasenotes/studio-pro/7.23#7234) and above – each node expires its sessions (after not having been used for a configured timespan) and removes the session persisted in the database; in exceptional cases (for example, a node crash), some sessions may not be removed from the database, in which case the cluster leader performs a clean-up of the sessions
+	* For version [7.23.3](/releasenotes/studio-pro/7.23#7233) and below – the cluster leader removes sessions after they have expired (having not been used for a configured timespan)
 * `Cluster node expiration handling` - removing cluster nodes after they have expired (not giving a heartbeat for a configured timespan)
 * `Background job expiration handling` - removing data about background jobs after the information has expired (older than a specific timespan)
 * `Unblocking blocked users`
@@ -45,13 +47,13 @@ Mendix Runtime has the concept of a Cluster Leader. This is a single node within
 * `Performing database synchronization after new deploy`
 * `Clear persistent sessions after new deploy` - to invalidate all existing sessions such that they get in sync with the latest model version
 
-These activities are only performed by the Cluster Leader. If the Cluster Leader is not running, the cluster will still function, however, the above mentioned activities will not be performed.
+These activities are only performed by the cluster leader. If the Cluster Leader is not running, the cluster will still function, however, the above mentioned activities will not be performed.
 
-Which cluster node becomes the Cluster Leader and which one becomes a Cluster Slave is determined by the Cloud Foundry Buildpack.
+Which cluster node becomes the cluster leader and which one becomes a cluster slave is determined by the Cloud Foundry Buildpack.
 
 ## 5 Cluster Startup
 
-The Cluster Leader is responsible for performing the database synchronization. So if a new app deploy has been detected, all Cluster Slaves will wait until the Cluster Leader finishes the database synchronization. When the database synchronization has finished, the Cluster Slaves and Cluster Leader will automatically become fully functional.
+The cluster leader is responsible for performing the database synchronization. So if a new app deploy has been detected, all Cluster slaves will wait until the cluster leader finishes the database synchronization. When the database synchronization has finished, the cluster slaves and cluster leader will automatically become fully functional.
 
 If no database synchronization is required, all cluster nodes will become fully functional directly after startup.
 
@@ -66,6 +68,7 @@ It is possible to configure `After-Startup` and `Before-Shutdown` microflows in 
 ## 8 Cluster Limitations
 
 ### 8.1 Microflow Debugging
+
 While running a multi-node cluster it is not predictable on which node a microflow will be executed. Therefore, it is not possible to debug such a microflow execution in a cluster from the Mendix Modeler. However, you can still debug a microflow while running a single instance of the Mendix Runtime.
 
 ### 8.2 Cluster-Wide Locking (Guaranteed Single Execution)
@@ -78,7 +81,7 @@ For the reason described above, the **Disallow concurrent execution** property o
 
 ## 9 Dirty State in a Cluster
 
-When a user signs in to a Mendix application and starts going through a certain application flow, the system can temporararily retain some data while not persisting it yet in the database. The data is retained in the Mendix Client memory and communicated on behalf of the user to a Mendix Runtime node.
+When a user signs in to a Mendix application and starts going through a certain application flow, the system can temporarily retain some data while not persisting it yet in the database. The data is retained in the Mendix Client memory and communicated on behalf of the user to a Mendix Runtime node.
 
 For example, imagine you are booking a vacation through a Mendix app that consists of a flight, hotel, and rental car. In the first step you would select and configure the flight, in the second one your hotel, in the third your rental car, and in the final step you confirm the booking and payment. Each of these steps could be in a different screen, but when you go from step one to step two you would still like to remember your booked flight. This is called the 'dirty state'. The data is not finalized yet, but should be retained between different requests. As reliably scaling out and supporting failover scenarios is necessary, the state can not be stored in the memory of one Mendix Runtime node between requests. Therefore, the state is returned to the caller (the Mendix Client) and added to subsequent requests, so that every node can work with that state for those requests.
 
@@ -143,7 +146,5 @@ To support seamless clustering, sessions will always be persisted in the databas
 Persistent Sessions also store a 'last active' date upon each request. To improve this particular aspect of the performance, the 'last active' date attribute of a session is no longer committed to the database immediately on each request. Instead, this information is queued for an action to run at a configurable interval to be stored in the Mendix Database. This action verifies whether the session has not been logged out by another node and whether the last active date is more recent than the one in the database. The interval can be configured by setting `ClusterManagerActionInterval` (value in milliseconds).
 
 {{% alert type="warning" %}}
-
-Overriding the default values for `SessionTimeout` and `ClusterManagerActionInterval` custom settings can impact the behavior of keep alive and results in an unexpected session logout. In particular, the best practice is to set the `ClusterManagerActionInterval` to half of the `SessionTimeout` so that each node gets the chance to run at least once before the Cluster Leader attempts to delete a session.
-
+Overriding the default values for `SessionTimeout` and `ClusterManagerActionInterval` custom settings can impact the behavior of keep alive and results in an unexpected session logout. In particular, the best practice is to set the `ClusterManagerActionInterval` to half of the `SessionTimeout` so that each node gets the chance to run at least once before the cluster leader (version [7.23.3](/releasenotes/studio-pro/7.23#7233) and below) or a node (version [7.23.4](/releasenotes/studio-pro/7.23#7234) and above) attempts to delete a session.
 {{% /alert %}}

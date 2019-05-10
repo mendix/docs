@@ -10,6 +10,34 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud V3, and other deploym
 
 ## 2019
 
+### May 9th, 2019
+
+#### Fixes
+
+* We fixed an issue where the Mendix feedback widget stopped working for apps deployed to Mendix Cloud because of a change to HTTP Headers. (Ticket 83001)
+
+### May 7th, 2019
+
+#### Improvements
+
+* For Mendix Cloud V4, we have extended the range of HTTP Headers which are supported in the Developer Portal. Previously, only *X-Frame-Options* was supported. See [Environment Details](/developerportal/deploy/environments-details#http-headers) for more information.
+
+    If you add or change these settings, you will need to redeploy your app before the changes take effect.
+
+* For Mendix Cloud V4 deployments of Mendix apps version 7.23.1 and above, we now support AdoptOpenJDK, and the relevant Java version is displayed on the Environment Details page.
+
+* We clarified which logs can be downloaded from the Developer Portal by changing the button text from *Download Today's Log* to *Download Current Log*
+
+#### Fixes
+
+* We resolved an issue where some team members were not visible in Node Permissions after an app was relinked (Tickets 70285, 79708, 79824, 80557, 81713, and 82591).
+
+### May 3rd, 2019
+
+#### Improvements
+
+* We released **Free Edition** of Mendix. This removes the limit of 10 named users on Free Apps which are deployed to the Mendix Cloud.
+
 ### May 2nd, 2019
 
 #### Improvements

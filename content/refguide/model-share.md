@@ -1,7 +1,8 @@
 ---
 title: "Model Share"
-category: "General"
+category: "General Info"
 menu_order: 30
+tags: ["studio pro"]
 ---
 
 

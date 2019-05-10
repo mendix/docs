@@ -1,6 +1,7 @@
 ---
 title: "Navigation Profile"
 parent: "navigation"
+tags: ["studio pro"]
 description: "Describes the Mendix profile properties and profile buttons."
 ---
 

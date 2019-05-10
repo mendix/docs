@@ -1,9 +1,9 @@
 ---
 title: "MxBuild"
-category: "General"
+category: "General Info"
 menu_order: 50
 description: "Describes MxBuild which is a command-line tool for building and deploying Mendix Apps"
-tags: ["Build", "Deploy", "deployment package", "command-line"]
+tags: ["Build", "Deploy", "deployment package", "command-line", "studio pro"]
 ---
 
 ## 1 Introduction

@@ -2,6 +2,7 @@
 title: "Uniqueness Constraint Migration"
 parent: "data-storage"
 menu_order: 30
+tags: ["studio pro"]
 ---
 
 ## 1 Introduction

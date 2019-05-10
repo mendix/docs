@@ -89,24 +89,24 @@ howto:
   space: "Mendix 8 How-to's"
   priority: 7
   mendix_version: 8
-  menu_categories:
-    - "General"
+  menu_categories:  
+    - "General Info"
+    - "Collaboration"
     - "Front-End"
+    - "Mobile"
     - "Data Models"
     - "Logic & Business Rules"
-    - "Mobile Development"
-    - "Security"
     - "Integration"
-    - "SAP"
-    - "Siemens MindSphere"
     - "Extensibility"
-    - "Widget Development"
+    - "Custom Widgets"
+    - "Security"
     - "Testing"
     - "Monitoring & Troubleshooting"
-    - "Collaboration & Requirements Management"
+    - "SAP"
+    - "Siemens MindSphere"    
   banner:
     type: 'info'
-    text: 'You are browsing the documentation for Mendix 8, which is currently a beta release. For more information, see <a href="/releasenotes/beta-features/index">What Are Mendix Beta Features?</a>.'
+    text: 'You are browsing the documentation for Mendix 8, which is currently a beta release. For more information, see <a href="/releasenotes/beta-features/index">Mendix Beta Features</a>.'
 refguide5:
   space: "Mendix 5 Reference Guide"
   priority: false
@@ -152,18 +152,18 @@ refguide:
   priority: 8
   mendix_version: 8
   menu_categories:
-    - "General"
+    - "General Info"
     - "App Modeling"
     - "Version Control"
     - "Mendix Runtime"
+    - "Mobile"
     - "Java Programming"
-    - "Mobile Development"
     - "SAP"
     - "IBM"
     - "Siemens MindSphere"
   banner:
     type: 'info'
-    text: 'You are browsing the documentation for Mendix 8, which is currently a beta release. For more information, see <a href="/releasenotes/beta-features/index">What Are Mendix Beta Features?</a>.'
+    text: 'You are browsing the documentation for Mendix 8, which is currently a beta release. For more information, see <a href="/releasenotes/beta-features/index">Mendix Beta Features</a>.'
 releasenotes:
   space: "Release Notes"
   priority: false
@@ -174,7 +174,7 @@ releasenotes:
     - "Mobile Products"
     - "SDKs"
     - "Add-ons"
-    - "What Are Mendix Beta Features?"
+    - "Mendix Beta Features"
 developerportal:
   space: "Developer Portal Guide"
   priority: false
@@ -199,13 +199,14 @@ studio:
     - "Page Editor"
     - "Navigation Document"
     - "Microflows"
-    - "Publishing Your App"
+    - "Data Filters"
+    - "Previewing & Publishing Your App"
     - "Checks"
     - "Consistency Errors"
     - "Theme Customizer"
     - "App Settings"
-best-practices7:
-  space: "Mendix 7 Best Practices"
+best-practices:
+  space: "Expert Best Practices"
   priority: false
   draft: true
   menu_categories:

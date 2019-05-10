@@ -13,7 +13,7 @@ For more introductory information, see [Studio Pro Overview](studio-pro-overview
 
 ## 2 Main Documents in This Category
 
-Your Mendix app is called an app project in Studio Pro. An app project consists of different types of items, such as pages and microflows. These are generically referred to as documents, and they are stored in modules and folders.
+Your Mendix app is called an *app project* in Studio Pro. An app project consists of different types of items, such as pages and microflows. These are generically referred to as documents, and they are stored in modules and folders.
 
 To add a document to your app project, right-click the destination module or folder in Studio Pro's **Project Explorer**:
 
@@ -42,8 +42,8 @@ The following documents in this category describe the documents you can add:
 * [JSON structures](json-structures)
 * [XML schemas](xml-schemas)
 * [Export mappings](export-mappings) and [import mappings](import-mappings)
-* [Consumed app services (deprecated)](consumed-app-services) (deprecated) and [consumed web services](consumed-web-services)
-* [Published REST services](published-rest-services), [published web services](published-web-services), [published OData services](published-odata-services), and [published app services (deprecated)](published-app-services) 
+* [Consumed web services](consumed-web-services) and [consumed app services (deprecated)](consumed-app-services)
+* [Published web services](published-web-services), [published REST services](published-rest-services), [published OData services](published-odata-services), and [published app services (deprecated)](published-app-services) 
 
 ## 3 Other Documents in This Category
 

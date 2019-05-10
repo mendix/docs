@@ -3,7 +3,6 @@ title: "General Info"
 description: "Describes various features of Mendix Studio."
 menu_order: 10
 tags: ["studio", "studio pro"]
-frontpage_featured: true
 ---
 
 ## 1 Introduction {#studio-overview}
@@ -77,11 +76,9 @@ If you are working in a team with others, it is wise to check with your team mem
 
 ## 4 Switching App Modes
 
-After opening Studio,  the home page of the app opens. 
+After opening Studio, the home page of the app opens. 
 
-![](attachments/general/home-page-general.png)
-
-You can change the view of your page to different views by clicking the corresponding icons:
+You can change the view of your page to different views clicking the corresponding icons:
 
 *  Mobile
 *  Tablet
@@ -140,7 +137,8 @@ The top bar provides the following options:
 | Status icon | Shows the internet connection status of Studio. If  status is green, Studio is connected. When grey, Studio is offline. |
 | Undo/Redo actions | Undo or redo the last action. You can also use Ctrl+Z and Ctrl+Y shortcuts correspondingly. |
 | Recent documents drop-down menu | A document that you are currently viewing is displayed in this option. When you click the drop-down menu, documents that you have recently viewed are displayed in the list. You can click the document to open it. |
-| [Publish button](publishing-app) | Deploy and run the app. Update your app to deploy the latest changes you made in Studio. Once deployed, click **View** to view your app in action. For more information, see [Publishing Your App](publishing-app) |
+| [Preview button](publishing-app) | Preview your how app will look like after it is published. For more information, see [Previewing & Publishing Your App](publishing-app). |
+| [Publish button](publishing-app) | Deploy and run the app. Update your app to deploy the latest changes you made in Studio. Once deployed, click **View** to view your app in action. For more information, see [Previewing & Publishing Your App](publishing-app) |
 | [Checks button](checks) | Shows the errors and warnings currently in your app. If there are any errors in the app, you will not be able to publish your app, until you have solved them. For more information on errors, see [Consistency Errors](consistency-errors).<br />You can also use C shortcut to view the **Checks** panel. |
 | Information icon | Here you can find following information:<ul><li>**About** – shows the information on the [Studio version and Mendix version](general-versions) </li><li>**Keyboard Shortcuts** – opens the list of shortcuts in Studio</li><li>**Take a Product Tour** – starts a  the guided product introduction tour and shows you around Studio</li><li>**Ask the Community** – a link to the [Mendix Forum](https://forum.mendixcloud.com/index4.html) where you can ask questions and explore the knowledge offered by the entire Mendix Community<li>**Check the  Documentation** – a link to the [Studio Guide](index)</li><li>**Contact Mendix Support** – a link to the [Support Portal](https://support.mendix.com/hc/en-us)<li>**Mendix Academy** – a link to the [Mendix Academy](https://gettingstarted.mendixcloud.com)</li><li>**Mendix Assist Is ON** – a setting that enables/disables [Mendix Assist](mx-assist)</li><li>**Edit in Studio Pro** – opens your app in Studio Pro</li></ul> |
 

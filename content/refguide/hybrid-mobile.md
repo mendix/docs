@@ -1,8 +1,8 @@
 ---
 title: "Hybrid Mobile"
-category: "Mobile Development"
-menu_order: 9
-tags: ["mobile", "hybrid"]
+category: "Mobile"
+menu_order: 2
+tags: ["mobile", "hybrid", "studio pro"]
 ---
 
 ## 1 Introduction

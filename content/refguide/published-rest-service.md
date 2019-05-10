@@ -3,7 +3,7 @@ title: "Published REST Service"
 parent: "published-rest-services"
 menu_order: 10
 description: "Configuration options for a published REST service"
-tags: ["published REST", "service", "reserved URL prefixes", "swagger", "security", "CORS", "resources", "operation", "how-to"]
+tags: ["published REST", "service", "reserved URL prefixes", "swagger", "security", "CORS", "resources", "operation", "how-to", "studio pro"]
 ---
 
 ## 1 Introduction

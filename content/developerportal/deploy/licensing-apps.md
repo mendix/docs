@@ -10,7 +10,7 @@ tags: ["App", "Node", "Developer Portal", "Deploy", "Link", "Unlink", "Licensed"
 
 ## 1 Introduction
 
-To run Mendix apps in production on the Mendix Cloud, they must be linked to a licensed node. Without a licensed node you can still deploy your app and test it, however it will only run for a couple of hours before shutting down, and is restricted in the number of users it can have.
+To run Mendix apps in production on the Mendix Cloud, they must be linked to a licensed node. Without a licensed node you can still deploy your app and test it, however it will only run for a couple of hours before shutting down, cannot be scaled and has limited operational information available.
 
 This page explains how you can link your app to a licensed cloud node. It covers:
 
@@ -31,7 +31,7 @@ This is the Mendix **environment**.
 
 In a **node** in the Mendix Cloud, you may have one, or more, of these *environments*. More information about *nodes* can be found here: [Nodes](/developerportal/company-app-roles/nodes).
 
-For a **Free App**, your app has a single *Sandbox* environment which allows you to test your app. However, this comes with restrictions on how long it will run and the number of users it will support. You cannot scale the app, and the operational capabilities are limited. For more details on the restrictions of a Free App, see [Mendix Cloud](mendix-cloud-deploy#free-app)
+For a **Free App**, your app has a single *Sandbox* environment which allows you to test your app. However, this comes with restrictions on how long it will run. In addition, you cannot scale the app, and the operational capabilities are limited. For more details on the restrictions of a Free App, see [Mendix Cloud](mendix-cloud-deploy#free-app)
 
 In a **licensed node** you have everything you need to stage and deploy your app. You can have several different *environments* to support development: test, acceptance, and production, for example. With [Flexible Environments](mendix-cloud-deploy#flexible-environments) in Mendix Cloud V4, you can even specify the number and names of your environments. You can scale licensed environments by providing more memory or multiple instances, and you can configure and monitor them using the tools in the *Developer Portal*.
 

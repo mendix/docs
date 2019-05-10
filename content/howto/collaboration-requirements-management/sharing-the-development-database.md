@@ -1,6 +1,6 @@
 ---
 title: "Share the Development Database"
-category: "Collaboration & Requirements Management"
+category: "Collaboration"
 menu_order: 40
 tags: []
 ---

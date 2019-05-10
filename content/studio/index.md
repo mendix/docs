@@ -2,6 +2,7 @@
 title: "Studio Guide"
 tags: ["studio"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
+frontpage_featured: true
 ---
 
 ## 1 Introduction 
@@ -24,7 +25,8 @@ The main documents in the Studio Guide are the following ones:
 * [Page Editor](page-editor)
 * [Navigation Document](navigation)
 * [Microflows](microflows)
-* [Publishing Your App](publishing-app)
+* [Data Filters](filters)
+* [Previewing & Publishing Your App](publishing-app)
 * [Checks](checks)
 * [Consistency Errors](consistency-errors)
 * [Theme Customizer](theme-customizer)

@@ -1,6 +1,7 @@
 ---
-title: "Special checks"
+title: "Special Checks"
 parent: "expressions"
+tags: ["studio pro"]
 ---
 
 ## Checking for an Empty Object

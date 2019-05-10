@@ -1,6 +1,7 @@
 ---
 title: "Commit Object(s)"
 parent: "object-activities"
+tags: ["studio pro"]
 ---
 
 ## 1 Introduction

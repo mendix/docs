@@ -1,10 +1,11 @@
 ---
 title: "Published App Service"
 parent: "published-app-services"
+tags: ["studio pro"]
 ---
 
 {{% alert type="info" %}}
-App services were deprecated in version 7.23.4 and are marked for removal. Use a [published web service](published-web-services) or a [published REST service](published-rest-services) instead.
+App services are deprecated and marked for removal. Use a [published web service](published-web-services) or a [published REST service](published-rest-services) instead.
 {{% /alert %}}
 
 ## 1 General Tab

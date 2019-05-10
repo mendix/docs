@@ -1,6 +1,7 @@
 ---
 title: "Logging Activities"
 parent: "activities"
+tags: ["studio pro"]
 
 ---
 

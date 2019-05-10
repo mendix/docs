@@ -1,9 +1,9 @@
 ---
 title: "Third-Party Licenses"
-category: "General"
+category: "General Info"
 menu_order: 70
+tags: ["studio pro"]
 ---
-
 
 Mendix uses various third-party libraries that have their own licenses. All the licenses are available when you download the freely available [Mendix Studio Pro](https://appstore.home.mendix.com/link/modelers/) installation. They can be found in various sub-folders of your **Mendix** installation folder:
 

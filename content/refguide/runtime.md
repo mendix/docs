@@ -1,5 +1,6 @@
 ---
 title: "Mendix Runtime"
+tags: ["studio pro", "runtime"]
 ---
 
 ## 1 Introduction

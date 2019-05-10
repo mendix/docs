@@ -460,7 +460,7 @@ Consider these additional technical suggestions for best API practices:
 * Favor enumerations for limited options over a free format string – for example: source "Camera”,  "Gallery", or "User choice"
 * Prefer Boolean options for binary parameter – for example: 'Blocking dialog' (true / false)
 * Prefer primitive return types – do not return objects where possible, but use return String or Decimal instead
-* Do not change objects; create new non-persistent entity (NPE) objects instead – NPE objects should be shipped with the action in a module, and can be reused in various unrelated nanoflows
+* Do not change objects; create new non-persistable entity (NPE) objects instead – NPE objects should be shipped with the action in a module, and can be reused in various unrelated nanoflows
 * When you are not working, make NPE objects depend on the Entity or Generic parameters (this way, you can restrict hardcoded entity names which could generate errors when the entities are renamed in the domain model)
 * Validate input, and never trust that the developer is using the action correctly – for more information, see the [Handling Input](#handlinginput) section of this document above
 * Provide sensible defaults for input parameters whenever possible

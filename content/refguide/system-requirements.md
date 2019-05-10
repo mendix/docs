@@ -1,8 +1,9 @@
 ---
 title: "System Requirements"
-category: "General"
+category: "General Info"
 menu_order: 10
 description: "Presents the system requirements for using the Mendix Platform."
+tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -12,7 +13,7 @@ This document presents the system requirements for the various parts of the Mend
 
 ## 2 Mendix Studio Pro
 
-Mendix [Studio Pro](modeling) supports Windows 7, 8, and 10. It supports both 32-bit and 64-bit variations, but 64-bit is recommended.
+Mendix [Studio Pro](modeling) supports 64-bit versions of Windows 7, 8, and 10. Windows 7 must be at least Service Pack 1.
 
 The following frameworks are automatically installed (if necessary):
 
@@ -93,9 +94,8 @@ Jetty is built into the [Mendix Runtime](runtime), so an application server is n
 
 ### 6.2 Mobile Browsers
 
-* iOS 9 and above (Safari)
+* iOS 12 and above (Safari)
 * Android 5.0 and above
-* Windows Phone 8 and above
 
 ### 6.3 Hybrid Preview
 
@@ -105,19 +105,12 @@ Using a hybrid preview is not the same as using an emulator. A hybrid preview on
 
 For Mendix apps and the [Mendix Mobile app](getting-the-mendix-app):
 
-* iOS 9 and above
+* iOS 12 and above
 * Android 5.0 and above
 
-## 8 MxBuild{#mxbuild}
+## 8 MxBuild {#mxbuild}
 
-MxBuild is a Windows and Linux command-line tool that can be used to build a Mendix Deployment Package. See [MxBuild](mxbuild) for more information.
-
-### 8.1 Mendix Version 7.1 & Above
+MxBuild is a Windows and Linux command-line tool that can be used to build a Mendix Deployment Package. For more information, see [MxBuild](mxbuild).
 
 * Mono v4.6.x or .NET v4.6.2
 * JDK 8.
-
-### 8.2 Mendix Version 7.0.2
-
-* Mono v3.1.0 or .NET v4.5
-* JDK 8

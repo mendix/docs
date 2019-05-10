@@ -2,6 +2,7 @@
 title: "SAP HANA"
 parent: "data-storage"
 menu_order: 70
+tags: ["studio pro"]
 ---
 
 ## 1 Introduction

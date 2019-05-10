@@ -1,6 +1,7 @@
 ---
 title: "Style"
 parent: "document-templates"
+tags: ["studio pro"]
 ---
 
 

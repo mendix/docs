@@ -1,6 +1,7 @@
 ---
 title: "XPath Month-From-DateTime"
 parent: "xpath-constraint-functions"
+tags: ["studio pro"]
 ---
 
 ## 1 Overview

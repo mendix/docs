@@ -1,6 +1,7 @@
 ---
 title: "Preferences Dialog"
 parent: "dialogs"
+tags: ["studio pro"]
 ---
 This dialog contains Studio Pro-wide user-specific settings.
 

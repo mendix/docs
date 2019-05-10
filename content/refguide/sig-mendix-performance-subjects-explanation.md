@@ -1,6 +1,7 @@
 ---
 title: "SIG–Mendix Performance Subjects"
 category: "Mendix Runtime"
+tags: ["studio pro"]
 ---
 
 ## 1 Introduction

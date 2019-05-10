@@ -1,8 +1,8 @@
 ---
 title: "Team Server FAQ"
 parent: "team-server"
+tags: ["studio pro"]
 ---
-
 
 ## General Questions
 

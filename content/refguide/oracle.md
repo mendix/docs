@@ -2,6 +2,7 @@
 title: "Oracle"
 parent: "data-storage"
 menu_order: 60
+tags: ["studio pro"]
 ---
 
 ## 1 Introduction

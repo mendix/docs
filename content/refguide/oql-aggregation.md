@@ -1,6 +1,7 @@
 ---
 title: "OQL Aggregation"
 parent: "oql-expressions"
+tags: ["studio pro"]
 ---
 
 

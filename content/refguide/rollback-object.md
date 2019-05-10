@@ -1,6 +1,7 @@
 ---
 title: "Rollback Object"
 parent: "object-activities"
+tags: ["studio pro"]
 ---
 
 ## 1 Introduction

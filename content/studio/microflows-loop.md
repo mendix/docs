@@ -1,5 +1,5 @@
 ---
-title: "Loops"
+title: "Loop"
 category: "Microflows"
 menu_order: 30
 description: "Describes a loop in Mendix Studio."
@@ -24,7 +24,7 @@ Loop properties consists of the **Data Source** section and are described below:
 
 *  **Loop Variable Name** – refers to the name of the list item that is currently being worked on
 
-	{{% image_container width="350" %}}![Data Source Properties of a Loop]		(attachments/microflows-loop/loop-properties.png)
+	{{% image_container width="350" %}}![Data Source Properties of a Loop](attachments/microflows-loop/loop-properties.png)
 	{{% /image_container %}}
 
 ## 3 Loop Example {#loop-example}
@@ -41,13 +41,13 @@ Make sure you have the following prerequisites:
 
 To start the use-case, do the following:
 
-1. Open a microflow to add a loop to.
+1. Open a microflow you want to add a loop to.
 
 2. First of all, we need to get the list of orders we will loop over. Do the following: <br />
 
     a. In the **Toolbox**, select **Retrieve**, drag and drop it to the microflow. <br />
 
-    b. In **Properties** > the **Data Source** section, select **From Database**, and set *Order* as an entity for this activity. <br />
+    b. In **Properties** > the **Data Source** section, select **From Database**, and set *Order* as an entity for this activity. (The **Range** property is set to **All** by default.)<br />
 
     {{% image_container width="350" %}}![Retrieve Object Properties](attachments/microflows-loop/retrieve-properties.png)
     {{% /image_container %}}
@@ -67,13 +67,13 @@ To start the use-case, do the following:
 
     a. In the **Toolbox**, select **Change Object**, drag and drop it inside the loop .<br />
 
-    b. In **Properties** > the **Data Source** section for the **Change Object** activity, set **Variable** to **Order**.<br/>
+    b. In **Properties** > the **Data Source** section for the **Change Object** activity, set **Object** to **Order**.<br/>
 
     c. When the **Change Members** option appears, click **Add New Value**.<br />
 
     ![Change Object Properties in Loop Example](attachments/microflows-loop/change-object-properties.png)
 
-5. In the **Change value** dialogue window,  do the following:<br />
+5. In the **Change value** dialogue window, do the following:<br />
 
     a. Set **Select an Attribute or Association** to **Processed (Boolean)**.<br />
 

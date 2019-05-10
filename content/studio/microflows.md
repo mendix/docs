@@ -84,16 +84,16 @@ In the **Toolbox** tab, you can see that the microflow contains three sections w
 
 Elements available in the **General** section are described in the table below.
 
-| Element                                          | Description                                                  |
-| ------------------------------------------------ | ------------------------------------------------------------ |
-| [Annotation](/refguide/annotation)                     | An annotation is an element that can be used to put comments in a microflow. |
-| [Break Event](/refguide/break-event)                    | A break event is used in loops only to stop iterating over a list of objects and continue with the rest of the flow in the microflow. For more information, see [Break Event](/refguide/break-event) in the *Mendix Studio Pro Guide*. |
-| [Continue Event](/refguide/continue-event)              | A continue event is used in loops only to stop the current iteration and start the iteration of the next object. For more information, see [Continue Event](/refguide/continue-event) in the *Mendix Studio Pro Guide*. |
-| [End Event](/refguide/end-event)                        | An end event defines the location where the microflow will stop. There can be more than one end event, for example when an exclusive split is used in the microflow. So, the number of end events depends on the number of possible outcomes of the microflow. For more information, see [End Event](/refguide/end-event) in the *Mendix Studio Pro Guide*. |
+| Element                                       | Description                                                  |
+| --------------------------------------------- | ------------------------------------------------------------ |
+| Annotation                                    | An annotation is an element that can be used to put comments in a microflow. |
+| Break Event                                   | A break event is used in loops only to stop iterating over a list of objects and continue with the rest of the flow in the microflow. For more information, see [Break Event](/refguide/break-event) in the *Mendix Studio Pro Guide*. |
+| Continue Event                                | A continue event is used in loops only to stop the current iteration and start the iteration of the next object. For more information, see [Continue Event](/refguide/continue-event) in the *Mendix Studio Pro Guide*. |
+| End Event                                     | An end event defines the location where the microflow will stop. There can be more than one end event, for example when an exclusive split is used in the microflow. So, the number of end events depends on the number of possible outcomes of the microflow. For more information, see [End Event](/refguide/end-event) in the *Mendix Studio Pro Guide*. |
 | [Exclusive Split](microflows-exclusive-split) | An exclusive split splits the microflow flow. Use an exclusive split when you want to add conditions. For example, you want to show different order forms for the customers with different grades. Thus, an exclusive split creates different flows. With the help of an exclusive split the app makes a decision based on a condition and follows one and only one of the outgoing flows. |
 | [Loop](microflows-loop)                       | A loop is used to iterate over a list of objects and perform actions on each item of the list. For example, you can retrieve a list of orders from your database, then loop over this list and mark orders as processed. |
-| [Merge](/refguide/merge)                                | A merge can be used to combine flows into one.  If previously you split the microflow flow and now one and the same action needs to be executed for these separated flows, you can combine the two (or more) paths using a merge. |
-| [Parameter](/refguide/parameter)                        | A parameter is an input data for the microflow and can be used in any activity in the microflow. |
+| Merge                                         | A merge can be used to combine flows into one.  If previously you split the microflow flow and now one and the same action needs to be executed for these separated flows, you can combine the two (or more) paths using a merge. For more information, see [Merge](/refguide/merge) in the *Mendix Studio Pro Guide*. |
+| Parameter                                     | A parameter is an input data for the microflow and can be used in any activity in the microflow. For more information, see [Parameter](/refguide/parameter) in the *Mendix Studio Pro Guide*. |
 
 ### 5.2 Object Activities {#microflow-object-activities}
 
@@ -102,14 +102,14 @@ Elements available in the **General** section are described in the table below.
 
 The **Object Activities** are described in the table below.
 
-| Activity                            | Description                                                  |
-| ----------------------------------- | ------------------------------------------------------------ |
-| [Aggregate List](/refguide/aggregate-list) | **Aggregate List** can be used to calculate aggregated values such as the maximum, minimum, sum, average, and total amount of objects over a list of data objects. |
-| [Change Object](/refguide/change-object)   | Can be used to change an existing data object or properties of this object. |
-| [Commit](/refguide/committing-objects)     | **Commit** saves changes you have not saved in the database yet. |
-| [Create Object](/refguide/create-object)   | The **Create Object** action can be used to create a data object. |
-| [Delete](/refguide/deleting-objects)       | **Delete Object** can be used to delete one data object or a list of objects. |
-| [Retrieve](/refguide/retrieve)             | **Retrieve** can be used to get one or more objects, either by directly traversing an [association](domain-models-association-properties) of another object, or by retrieving objects from the database. |
+| Activity       | Description                                                  |
+| -------------- | ------------------------------------------------------------ |
+| Aggregate List | **Aggregate List** can be used to calculate aggregated values such as the maximum, minimum, sum, average, and total amount of objects over a list of data objects. For more information, see [Aggregate List](/refguide/aggregate-list) in the *Mendix Studio Pro Guide*. |
+| Change Object  | Can be used to change an existing data object or properties of this object. For more information, see [Change Object](/refguide/change-object) in the *Mendix Studio Pro Guide*. |
+| Commit         | **Commit** saves changes you have not saved in the database yet. For more information, see [Commit](/refguide/committing-objects) in the *Mendix Studio Pro Guide*. |
+| Create Object  | The **Create Object** action can be used to create a data object. For more information, see [Create Object](/refguide/create-object) in the *Mendix Studio Pro Guide*. |
+| Delete         | **Delete Object** can be used to delete one data object or a list of objects. For more information, see [Delete](/refguide/deleting-objects) in the *Mendix Studio Pro Guide*. |
+| Retrieve       | **Retrieve** can be used to get one or more objects, either by directly traversing an [association](domain-models-association-properties) of another object, or by retrieving objects from the database. For more information, see [Retrieve](/refguide/retrieve) in the *Mendix Studio Pro Guide*. |
 
 ### 5.3 Client Activities Section {#microflow-client-activities}
 
@@ -117,12 +117,12 @@ The **Object Activities** are described in the table below.
 
 The **Client Activities** are described in the table below.
 
-| Activity                            | Description                                                  |
-| ----------------------------------- | ------------------------------------------------------------ |
-| [Close Page](/refguide/close-page)         | This activity closes the currently open page.                |
-| [Show Home Page](/refguide/show-home-page) | The **Show Home Page** action navigates to the home page for the current user. It goes to the same page as the user goes to after signing in and respects role-based home pages. For details on setting the home page, see [Navigation Document](navigation). |
-| [Show Message](/refguide/show-message)     | With the **Show Message** action you can show a blocking or non-blocking message to the user. (Non-blocking message lets users continue their work in the app with the pop-up open, while the blocking message does not let the user continue work until the pop-up window is closed. ) |
-| [Show Page](/refguide/show-page)           | With this action you can show a page to the end user.        |
+| Activity       | Description                                                  |
+| -------------- | ------------------------------------------------------------ |
+| Close Page     | This activity closes the currently open page. For more information, see [Close Page](/refguide/close-page) in the *Mendix Studio Pro Guide*. |
+| Show Home Page | The **Show Home Page** action navigates to the home page for the current user. It goes to the same page as the user goes to after signing in and respects role-based home pages. For more information, see [Show Home Page](/refguide/show-home-page) in the *Mendix Studio Pro Guide*. <br />For details on setting the home page, see [Navigation Document](navigation). |
+| Show Message   | With the **Show Message** action you can show a blocking or non-blocking message to the user. (Non-blocking message lets users continue their work in the app with the pop-up open, while the blocking message does not let the user continue work until the pop-up window is closed. ) For more information, see [Show Message](/refguide/show-message) in the *Mendix Studio Pro Guide*. |
+| Show Page      | With this action you can show a page to the end user. For more information, see [Show Page](/refguide/show-page) in the *Mendix Studio Pro Guide*. |
 
 ### 5.4 Variable Activities
 
@@ -130,10 +130,10 @@ The **Client Activities** are described in the table below.
 
 The **Variable Activities** are described in the table below:
 
-| Activity                              | Description                                                  |
-| ------------------------------------- | ------------------------------------------------------------ |
-| [Change Variable](/refguide/change-variable) | This activity is used to change the value of an existing variable in the current microflow. |
-| [Create Variable](/refguide/create-variable) | With this activity you can create a variable and assign a value to it. The variable can be used to store, change, and reuse a value in activities of the microflow. |
+| Activity        | Description                                                  |
+| --------------- | ------------------------------------------------------------ |
+| Change Variable | This activity is used to change the value of an existing variable in the current microflow. For more information, see [Change Variable](/refguide/change-variable) in the *Mendix Studio Pro Guide*. |
+| Create Variable | With this activity you can create a variable and assign a value to it. The variable can be used to store, change, and reuse a value in activities of the microflow. For more information, see [Create Variable](/refguide/create-variable) in the *Mendix Studio Pro Guide*. |
 
 For example, you can first create a variable named *Discount* to a microflow, and then change the variable Discount depending on the type of the customer's grade. You can give a discount for customers with Gold and Silver grades. 
 
@@ -144,10 +144,10 @@ For example, you can first create a variable named *Discount* to a microflow, an
 
 Flows are lines connecting the elements. You can find the description of flows in the table below:
 
-| Flow                                         | Image                                                        | Description                                                  |
-| -------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Sequence Flow                                | ![Sequence Flow](attachments/microflows/sequence-flow.png)   | A sequence flow is an arrow that links events, activities, splits and merges with each other. Thus, it defines the order of execution. Flows always flow in one direction where elements follow each other up one by one. Splits always lead to one direction so it is not possible that multiple flows take place simultaneously. |
-| [Annotation Flow](/refguide/annotation-flow) | ![Annotation Flow](attachments/microflows/annotation-flow.png) | An annotation flow is a connection that can be used to link an annotation to a flow object(s). |
+| Flow            | Image                                                        | Description                                                  |
+| --------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Sequence Flow   | ![Sequence Flow](attachments/microflows/sequence-flow.png)   | A sequence flow is an arrow that links events, activities, splits and merges with each other. Thus, it defines the order of execution. Flows always flow in one direction where elements follow each other up one by one. Splits always lead to one direction so it is not possible that multiple flows take place simultaneously. |
+| Annotation Flow | ![Annotation Flow](attachments/microflows/annotation-flow.png) | An annotation flow is a connection that can be used to link an annotation to a flow object(s). For more information, see [Annotation Flow](/refguide/annotation-flow) in the *Mendix Studio Pro Guide*. |
 
 ## 7 Activity Icons 
 

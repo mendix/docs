@@ -9,7 +9,7 @@ tags: ["mobile", "push notification", "apple", "server"]
 
 In order to proceed you need an Apple developer license and a device running Mac OS X.
 
-We assume that you already have the app signing key with provisioning profile and can freely build and install your mobile app (if not, please refer to [this how-to](publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)). Take into account that your App ID should use `Explicit App ID` and have `Push Notifications` turned on so you can receive push notifications with your app.
+This how-to assumes that you already have the app signing key with provisioning profile and can freely build and install your mobile app (if not, please refer to [this how-to](publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)). Take into account that your App ID should use `Explicit App ID` and have `Push Notifications` turned on so you can receive push notifications with your app.
 
 ![](attachments/19955752/20217895.png)
 
@@ -24,7 +24,7 @@ If everything is set up and you can build and deploy your application, you can p
 
 Follow the steps below to obtain and set up an Apple Push Notifications key from Apple.
 
-### 2.1 Logging In to the Apple Developer Center
+### 2.1 Logging Into the Apple Developer Center
 
 Log in to Apple Developer and navigate to [https://developer.apple.com/account/ios/authkey/](https://developer.apple.com/account/ios/authkey/).
 
@@ -38,7 +38,7 @@ Press the download button and store the key in a secure place. Also, copy the **
 
 ### 2.4 Configuring APNs in Your Application
 
-For the last step, you need to configure APNs within your application. This can be done by logging into your application as a user with the Administrator role and navigating to the **PushNotifications_Administration** page that was set up in [step 7](implementation-guide#setting) of *How to Implement Push Notifications*.
+For the last step, you need to configure APNs within your application. This can be done by logging into your application as a user with the Administrator role and navigating to the **PushNotifications_Administration** page that was set up in the [Setting Up the Project Security for Your Module](implementation-guide#setting) section of *How to Implement Push Notifications*.
 
 For this purpose, do the following:
 
@@ -72,11 +72,11 @@ The wizard now explains how to create a Certificate Signing Request (CSR). Read 
 
 Download your Apple Push Notification service SSL certificate and add it to your Keychain.
 
-This certificate needs to be converted into the *.p12* format. If you do not know how to do this, refer to [What is app signing?](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingCertificates/MaintainingCertificates.html).
+This certificate needs to be converted into the *.p12* format. If you do not know how to do this, refer to Apple's [What is app signing?](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingCertificates/MaintainingCertificates.html).
 
 ### 3.5 Configuring APNs in Your Application
 
-For the last step, you need to configure APNs within your application. This can be done by logging into your application as a user with Administrator role and navigating to the **PushNotifications_Administration** page that was set up in [step 7](implementation-guide#setting) of *How to Implement Push Notifications*.
+For the last step, you need to configure APNs within your application. This can be done by logging into your application as a user with Administrator role and navigating to the **PushNotifications_Administration** page that was set up in the [Setting Up the Project Security for Your Module](implementation-guide#setting) section of *How to Implement Push Notifications*.
 
 For this purpose, do the following:
 
@@ -86,3 +86,8 @@ For this purpose, do the following:
   *	Choose the **Stage** that corresponds to the type of certificate you have created
 * Add your Apple Push Notification service SSL certificate in the *.p12* format
   *	Enter the password that you used during creation of the certificate
+
+## 4 Read More
+
+* [Implement Push Notifications](implementation-guide)
+* [Publish a Mendix Hybrid Mobile App in Mobile App Stores](publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)

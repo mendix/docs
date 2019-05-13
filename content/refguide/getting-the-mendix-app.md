@@ -9,10 +9,7 @@ The **Mendix** mobile app is a free app that allows you to collaborate with your
 
 You can get the Mendix Mobile app on your mobile device by downloading it from your device's app store. You will need to do this once for every device you're developing on.
 
-Currently, the following mobile operating systems are supported by the Mendix Mobile app:
-
-* iOS version 9 and above
-* Android version 5.0 and above
+For information on which mobile operating systems are supported by the Mendix Mobile app, see the [Mobile Operating Systems](system-requirements#mobileos) section of *System Requirements*.
 
 To download the Mendix Mobile app, search for "Mendix" in your device's app store, or select one of the download links below:
 

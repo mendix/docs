@@ -11,7 +11,7 @@ tags: ["App", "Developer Portal", "License", "Subscription Secret", "Upgrade", "
 
 Mendix allows you to build **Free Apps** which give you the opportunity to try things out and to build and test apps using all the functionality of Mendix. You can deploy these to the Mendix Cloud, or to another public or private cloud of your choice, for example SAP Cloud Platform.
 
-However, Free Apps are restricted in how long they run, and how many people can use them. They will stop running after around 2 hours and are limited to ten users.  A full list of restrictions is available in [Mendix Cloud](mendix-cloud-deploy) – note that some of these restrictions are specific to Free Apps running on Mendix Cloud.
+However, Free Apps are restricted in how long they run; they will stop running after around 2 hours. If they are run outside the Mendix Cloud, they cannot have more than ten users. There are also restrictions on how they can be configured. A full list of restrictions is available in [Mendix Cloud](mendix-cloud-deploy) – note that some of these restrictions are specific to Free Apps running on Mendix Cloud.
 
 To use your app in a production environment, you need to license it. The method for doing this differs depending on the environment to which you are deploying your app.
 

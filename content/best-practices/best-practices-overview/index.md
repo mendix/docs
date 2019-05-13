@@ -39,12 +39,16 @@ These best practices will be expanded on an ongoing basis to cover the following
 
 For each category and sub-category of best practices, there will be an overview that covers the breadth of the area discussed. This will be followed by a number of specific areas or use cases that are covered more in detail. These will refer to more detailed Mendix documentation that explains the product. The best practices will sometimes include example implementations in the App Store.
 
-In most cases there will be these components of documentation:
-1. Overview of an area of Best Praactices
-2.1 In depth descriptions of subjects in that area
-2.2 Use-cases around that area
-3.1 References to Evaluation Guide, Release Notes, Reference Guide, How-To's
-3.2 References to examples in the App Store
+In most cases, the Best Practices will include these components:
+
+* Overview of the area of Best Practices
+* In-depth descriptions of subjects in that area
+	* Use cases in the area
+* References to other Mendix documentation
+	* [Reference guide](/refguide/) and [how-to](/howto/) documentation (depending on the Mendix version used for the Best Practices)
+	* [Release notes](/releasenotes/)
+	* [Mendix Platform Evaluation Guide](https://www.mendix.com/evaluation-guide/)
+* References to examples in the [Mendix App Store](https://appstore.home.mendix.com/index3.html)
 
 ![](attachments/overview2.png)
 
@@ -54,8 +58,7 @@ Mendix organizes subject matter experts from different parts of the organization
 
 At this point in Mendix, there is an Architecture Guild and a UX Guild, and there is a plan for a DevOps Guild and a Quality Assurance Guild.
 
-Members of these guilds own the content of the best practices. They also own the Best Practices items in the App Store, which are examples of the best ways to implement things for certain use cases.
-Example the Process Queue from Mendix: https://appstore.home.mendix.com/link/app/393/
+Members of these guilds own the content of the Best Practices. They also own the Best Practices items in the App Store, which are examples of the best ways to implement things for certain use cases. One example of such an App Store item is the [Process Queue](https://appstore.home.mendix.com/link/app/393/) module.
 
 ## 3 How Can These Best Practices Help Me? {#help}
 

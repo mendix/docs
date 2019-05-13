@@ -1,24 +1,21 @@
 ---
-title: "App Settings"
-description: "Describes the App Settings in Mendix Studio."
-menu_order: 90
+title: "Widget Overview"
+category: "Settings"
+description: "Describes the Widget Overview tab in Mendix Studio."
+menu_order: 20
 tags: ["studio", "settings", "widgets"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
-**App Settings** contains information on Mendix App Store widgets and local widgets in your app. For more details on widgets, see [Widgets](page-editor-widgets).
-
-To open the **App Settings**, click the gear icon at the left menu bar.
-
-![](attachments/app-settings/app-settings-icon.png)
+**Widget Overview** contains information on Mendix App Store widgets and local widgets in your app. For more details on widgets, see [Widgets](page-editor-widgets).
 
 ## 2 Widget Overview in App Settings
 
 **App Settings** contains **Widget Overview** – an overview of all App Store widgets and local widgets in your project.
 
-![](attachments/app-settings/widget-overview.png)
+![](attachments/settings-widget-overview/widget-overview.png)
 
 The following types of widgets are included into the widget overview of the App Settings:
 

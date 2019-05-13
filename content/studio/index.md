@@ -30,4 +30,4 @@ The main documents in the Studio Guide are the following ones:
 * [Checks](checks)
 * [Consistency Errors](consistency-errors)
 * [Theme Customizer](theme-customizer)
-* [App Settings](app-settings)
+* [Settings](settings)

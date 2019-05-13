@@ -1,6 +1,7 @@
 ---
 title: "Date Picker"
 parent: "input-widgets"
+tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -35,7 +36,7 @@ If you choose 'Custom' as the date format (see above) this property determines h
 {{% snippet file="refguide/Custom+Date+Format+Tokens.md" %}}
 
 {{% alert type="info" %}}
-Even though a date picker with a custom date format is editable (as of Mendix 7.21.0), the calendar drop-down button will not be shown if the custom format does not represent the full date (meaning, the year [`y`-`yyyy`], month [`M`-`MMMM`], or day of month [`d`-`dd`] tokens are missing in the custom format).
+Even though a date picker with a custom date format is editable, the calendar drop-down button will not be shown if the custom format does not represent the full date (meaning, the year [`y`-`yyyy`], month [`M`-`MMMM`], or day of month [`d`-`dd`] tokens are missing in the custom format).
 {{% /alert %}}
 
 ### 2.3 Placeholder Text

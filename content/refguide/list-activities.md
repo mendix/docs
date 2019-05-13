@@ -1,6 +1,7 @@
 ---
 title: "List Activities"
 parent: "activities"
+tags: ["studio pro"]
 ---
 ## Aggregate
 

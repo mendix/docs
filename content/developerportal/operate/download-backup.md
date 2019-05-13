@@ -58,5 +58,5 @@ To download a backup of a licensed app, follow these steps:
 ## 5 Read More
 
 * [How to Create a Backup](create-backup)
-* [Licensing Apps](/developerportal/deploy/licensing-apps)
+* [Licensing Mendix Cloud Apps](/developerportal/deploy/licensing-apps)
 * [How to Restore a Backup](restore-backup)

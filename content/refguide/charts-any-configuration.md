@@ -1,9 +1,9 @@
 ---
 title: "Any Chart Widgets"
 parent: "chart-widgets"
-description: "A reference guide on the configuration of the Any Chart widget to pass the correct values to plotly. This enables you to draw a wide variety of charts"
+description: "A reference for the configuration of the Any Chart widget to pass the correct values to plotly. This enables you to draw a wide variety of charts"
 menu_order: 30
-tags: ["Any Chart", "Reference Guide", "Options", "Configuration", "Charts"]
+tags: ["Any Chart", "Options", "Configuration", "Charts", "studio pro"]
 ---
 
 ## 1 Introduction
@@ -16,7 +16,7 @@ Any Charts are configured with a JSON **Data** array and **Layout** object. The 
 
 The layout JSON, which can be created dynamically or retrieved from the database, will be merged into the static settings and will overwrite any common properties.
 
-The Sample data is for demo purposes. It is shown at run time when there is no Source attribute selected, and when rendering the chart in the modeler preview.
+The Sample data is for demo purposes. It is shown at run time when there is no Source attribute selected, and when rendering the chart in Studio Pro preview.
 
 ## 2. Location of Any Chart Widget
 
@@ -42,7 +42,7 @@ The **Source attribute** contains a JSON structure which will merge with, and ov
 
 ### Sample data
 
-The data for previewing the chart. This will be merged with the **Static data** in the modeler or at runtime when no **Source attribute** is selected.
+The data for previewing the chart. This will be merged with the **Static data** in Studio Pro or at runtime when no **Source attribute** is selected.
 
 ### Mode
 
@@ -64,7 +64,7 @@ This is an unlimited length string attribute of the entity which forms the conte
 
 ### Sample layout
 
-Layout options for preview. It will be merged with the *Static* layout in the modeler or at runtime when no *Source attribute* is selected.
+Layout options for preview. It will be merged with the *Static* layout in Studio Pro or at runtime when no *Source attribute* is selected.
 
 ## 5 Configuration options
 

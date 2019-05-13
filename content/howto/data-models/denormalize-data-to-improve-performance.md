@@ -2,7 +2,7 @@
 title: "Denormalize Data to Improve Performance"
 category: "Data Models"
 menu_order: 6
-tags: []
+tags: ["studio pro"]
 ---
 
 ## 1 Introduction
@@ -27,7 +27,7 @@ Let's assume that the domain model contains two related entities called Customer
 To show the total order amount, there are two options:
 
 * First option: create a calculated attribute in the Customer entity to compute the total order amount (the downside of this option is that the calculated attributes bring down the performance of overview pages)
-* Second option: create a persistent attribute in the Customer entity that stores the total order amount in the database – this is called denormalization (the downside of this option is that the redundant data needs to be kept in sync, but this is easy with Mendix event handlers)
+* Second option: create a persistable attribute in the Customer entity that stores the total order amount in the database – this is called denormalization (the downside of this option is that the redundant data needs to be kept in sync, but this is easy with Mendix event handlers)
 
 To enable denormalization, follow these steps:
 
@@ -39,7 +39,7 @@ To enable denormalization, follow these steps:
 
     ![](attachments/18448743/18582168.png)
 
-3. Add a currency attribute **TotalOrderAmount**.
+3. Add a decimal attribute **TotalOrderAmount**.
 4. Create an overview and detail page for the *Customer* entity.
 5. Make sure the customer overview page shows the **TotalOrderAmount** value.
 6. Make sure the order detail page has a mandatory reference selector to select the customer.
@@ -55,7 +55,7 @@ Now the application is ready to store redundant data, but you still need to keep
     * Select **Commit** as the **Event**
     * Select **Yes** for **Pass the event object**
     * Click **Select...** to open the microflow selector
- 
+
     ![](attachments/18448743/18582166.png)
 
 4. On the microflow selector, click **New** and enter a name for the new microflow (for example, *Order_AfterCommit*).
@@ -68,7 +68,7 @@ Now the application is ready to store redundant data, but you still need to keep
 
     ![](attachments/18448743/18582150.png)
 
-7.  Open the **Toolbox**, which should be docked in the bottom-right corner of the Modeler. If you can't find the **Toolbox** there, you can open it from the **View** menu:
+7.  Open the **Toolbox**, which should be docked in the bottom-right corner of Studio Pro. If you can't find the **Toolbox** there, you can open it from the **View** menu:
 
     ![](attachments/18448743/18582163.png)
 
@@ -133,9 +133,6 @@ Now the application is ready to store redundant data, but you still need to keep
     * Select **TotalOrderAmount** as the **Member**
     * Enter *$SumTotalprice* as the **Value**
     * Click **OK** to save the change item
-
-    ![](attachments/18448743/18582151.png)
-
 19. Click **OK** again to save the activity. Your microflow should now look like this:
 
     ![](attachments/18448743/18582150.png)
@@ -144,14 +141,14 @@ Now the application is ready to store redundant data, but you still need to keep
 
 ## 5 Read More
 
-* [How to Work with Images & Files](working-with-images-and-files)
-* [How to Create a Basic Data Layer](create-a-basic-data-layer)
-* [How to Set Up Data Validation](setting-up-data-validation)
-* [How to Work with Object Events](working-with-object-events)
-* [How to Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
+* [Work with Images & Files](working-with-images-and-files)
+* [Create a Basic Data Layer](create-a-basic-data-layer)
+* [Set Up Data Validation](setting-up-data-validation)
+* [Work with Object Events](working-with-object-events)
+* [Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
 * [Stories](/developerportal/collaborate/stories)
-* [How to Define Access Rules Using XPath](../logic-business-rules/define-access-rules-using-xpath)
-* [How to Perform the Scout and Windows 10 Workaround](../front-end/perform-scout-and-windows-10-workaround)
-* [Attributes](/refguide7/attributes)
-* [Event Handlers](/refguide7/event-handlers)
+* [Define Access Rules Using XPath](../logic-business-rules/define-access-rules-using-xpath)
+* [Perform the Scout and Windows 10 Workaround](../front-end/perform-scout-and-windows-10-workaround)
+* [Attributes](/refguide/attributes)
+* [Event Handlers](/refguide/event-handlers)
 

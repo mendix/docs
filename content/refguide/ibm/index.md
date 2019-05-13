@@ -1,7 +1,7 @@
 ---
 title: "IBM"
 notoc: true
-description: "The reference guide category for using IBM resources from Mendix."
+description: "Documentation describing using IBM resources from Mendix."
 tags: ["IBM", "IBM Cloud", "Watson"]
 # does notoc have to be the second item?
 ---

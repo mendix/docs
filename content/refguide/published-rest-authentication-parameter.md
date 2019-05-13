@@ -6,12 +6,6 @@ description: "The parameters which are passed to the custom authentication micro
 tags: ["published REST", "custom authentication", "microflow", "parameters", "arguments", "query", "header"]
 ---
 
-{{% alert type="info" %}}
-
-This feature was introduced in version 7.17.0. Prior to that, all authentication microflow parameters were query parameters.
-
-{{% /alert %}}
-
 ## 1 Introduction
 
 The custom authentication microflow of a published REST service is executed whenever a client calls one of the operation. The client's requests contains headers and may contain query parameters, which can be passed to the authentication microflow. 

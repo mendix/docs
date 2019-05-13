@@ -1,6 +1,7 @@
 ---
-title: "XPath hours-from-dateTime"
+title: "XPath Hours-from-DateTime"
 parent: "xpath-constraint-functions"
+tags: ["studio pro"]
 ---
 
 ## 1 Overview

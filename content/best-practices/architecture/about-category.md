@@ -6,6 +6,10 @@ menu_order: 1
 draft: true
 ---
 
+{{% alert type="info" %}}
+The Mendix Architecture Best Practices were written for [Mendx version 7](/releasenotes/studio-pro/7). They will be updated for Mendix 8 and future versions as necessary.
+{{% /alert %}}
+
 ## 1 Introduction
 
 Mendix is optimized for the easiest and fastest way to develop and maintain apps that fulfill business functions. As the scope of your apps grows larger, architecture becomes more important. At that point, you should leverage best practices in this area.
@@ -77,7 +81,7 @@ In the scenario above, most of the processing is straight-through processing, so
 
 ### 3.3 Microservices
 
-Microservices is a popular way of building IT solutions. It helps you to avoid building monoliths and SOA-layered architectures, where dependencies tend to get out of control.  Instead, you can make functional autonomous components that cooperate to fulfill business functions. This suits Mendix very well, as is further described in [Mendix Microservices](microservices/mendix-microservices).
+Microservices is a popular way of building IT solutions. It helps you to avoid building monoliths and SOA-layered architectures, where dependencies tend to get out of control. Instead, you can make functional autonomous components that cooperate to fulfill business functions. This suits Mendix very well, as is further described in [Mendix Microservices](microservices/mendix-microservices).
 
 This diagram shows how microservices are more functional in encapsulating a business process and cooperating via business events to the point that they are "actors" themselves in a business process:
 

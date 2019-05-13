@@ -1,10 +1,9 @@
 ---
 title: "Report Date Parameter"
 parent: "report-widgets"
+tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
-
-
 
 With the report date parameter, the user can specify the DateTime parameter of the dataset, which is then used for filtering the data displayed in the [Report](report-widgets).
 

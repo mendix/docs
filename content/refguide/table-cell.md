@@ -1,8 +1,8 @@
 ---
-title: "Table cell"
+title: "Table Cell"
 parent: "table"
+tags: ["studio pro"]
 ---
-
 
 Each section of a table row or column is called a cell. Cells can contain a wide variety of widgets.
 

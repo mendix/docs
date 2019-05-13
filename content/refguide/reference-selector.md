@@ -1,6 +1,7 @@
 ---
 title: "Reference Selector"
 parent: "input-widgets"
+tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -47,15 +48,7 @@ _Default value:_ Drop-down
 This property represents the caption for the empty option in the drop-down reference selector shown to the user. Setting the caption is not available if the Select Using property set to the Page option. This is a translable text. For more details, see [Translatable Texts](translatable-texts).
 
 {{% alert type="info" %}}
-
 Filling out the caption for an empty option increases the user experience of your application. It also helps screen-reader users to operate the application easily.
-
-{{% /alert %}}
-
-{{% alert type="info" %}}
-
-The empty option caption is available from Mendix 7.2.0.
-
 {{% /alert %}}
 
 ### Select Page
@@ -65,9 +58,7 @@ The select page property determines which page is opened when the select page bu
 See [Opening Pages](opening-pages). Note that opening select pages in content is prohibited.
 
 {{% alert type="success" %}}
-
 You can generate a new page to show by right-clicking the widget and selecting 'Generate select page...'.
-
 {{% /alert %}}
 
 ### Go-To Page

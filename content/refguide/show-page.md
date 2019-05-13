@@ -1,6 +1,7 @@
 ---
 title: "Show Page"
 parent: "client-activities"
+tags: ["studio pro"]
 ---
 
 ## 1 Introduction
@@ -27,7 +28,7 @@ The [page](page) to show to the end user. If the Object to pass is specified, th
 
 {{% alert type="success" %}}
 
-You can generate a new page to show by clicking 'Select...' and then 'New'. If you have selected an Object to pass the Modeler will automatically generate a data view to edit that object.
+You can generate a new page to show by clicking 'Select...' and then 'New'. If you have selected an Object to pass Studio Pro will automatically generate a data view to edit that object.
 
 {{% /alert %}}
 

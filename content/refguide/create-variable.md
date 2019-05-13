@@ -1,6 +1,7 @@
 ---
 title: "Create Variable"
 parent: "variable-activities"
+tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -18,7 +19,7 @@ See [Microflow Element Common Properties](microflow-element-common-properties) f
 
 ### 2.1 Data Type
 
-Defines what kind of data can be stored in the variable. A variable can have one of the following [data types](data-types): Boolean, Enumeration, Decimal, Float (deprecated), Integer/Long or String.
+Defines what kind of data can be stored in the variable. A variable can have one of the following [data types](data-types): Boolean, Enumeration, Decimal, Integer/Long or String.
 
 ### 2.2 Initial Value
 

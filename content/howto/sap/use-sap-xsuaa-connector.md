@@ -75,7 +75,7 @@ If your app already had XSUAA included, your login.html file may have been modif
 
 If login.html does not support XSUAA then you need to add the SSO login button to the landing page. Do this by following these steps:
 
-1. In the top menu of the Desktop Modeler, select **Project** > **Show Project Directory in Explorer**.
+1. In the top menu of , select **Project** > **Show Project Directory in Explorer**.
 2. Open the **theme** folder.
 3. Open **login.html** for editing.
 4. Locate this line:
@@ -232,10 +232,9 @@ You can picture the authentication as shown below:
 
 ## 6 Read More
 
-* [How To Create a Secure App](../security/create-a-secure-app)
-* [How To Use App Store Content](/developerportal/app-store/app-store-content)
+* [Create a Secure App](../security/create-a-secure-app)
+* [Use App Store Content](/developerportal/app-store/app-store-content)
 * [Project Security](/refguide/project-security)
 * [SAP Cloud Platform XSUAA Connector](https://appstore.home.mendix.com/link/app/78091/)
 * [SAP XSUAA Connector](/refguide/sap/sap-xsuaa-connector)
 * [SAP Cloud Platform cockpit](https://account.hana.ondemand.com/cockpit#/home/allaccounts)
-

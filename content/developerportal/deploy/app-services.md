@@ -16,13 +16,13 @@ The **App Services** page provides an overview of possible resources that can be
 
 ## 2 App Service
 
-App services are aimed at sharing functionality between your Mendix apps. You can create app services in the Mendix Modeler and publish the created app content and functionality within your company or to the entire Mendix Community. Users of your app service can directly drag actions that you designed into their microflows in the Modeler and use your entities and data in their apps. 
+App services are aimed at sharing functionality between your Mendix apps. You can create app services in Mendix Studio Pro and publish the created app content and functionality within your company or to the entire Mendix Community. Users of your app service can directly drag actions that you designed into their microflows in Studio Pro and use your entities and data in their apps. 
 
 On the **App Service** page, you can see a list of the available app services, with whom the app service is shared, and what the current statuses are.
 
 ![](attachments/app-services/publish-appservice.png)
 
-For more information, see [Published App Services](/refguide/published-app-services) in the Mendix Reference Guide as well as the [Mendix App Services: Putting Them to Work for Your Projects](https://www.mendix.com/videos/mendix-app-services-putting-work-projects-pieter-van-balen-mendix-developer/) blog post.
+For more information, see [Published App Services](/refguide/published-app-services) in the Mendix Studio Pro Guide as well as the [Mendix App Services: Putting Them to Work for Your Projects](https://www.mendix.com/videos/mendix-app-services-putting-work-projects-pieter-van-balen-mendix-developer/) blog post.
 
 ### 2.1 Settings
 
@@ -46,7 +46,7 @@ In this tab, you can manage the following:
 
 * **General**
     * Edit the **Name** of the app service that will be published
-    * View the original **Modeler name** of the app service
+    * View the original **Studio Pro name** of the app service
     * Add or edit a **Description** of the app service
     * Add or edit tags
 * **Avatar**
@@ -58,7 +58,7 @@ In this tab, you can manage the following:
 In this tab, you can perform the following actions:
 
 * Write the **Release notes** that are aimed at describing the changes between the two versions
-* View the **Documentation** that is defined in the Modeler during the creation of the app service
+* View the **Documentation** that is defined in Studio Pro during the creation of the app service
 * View the **Service calls** that are used in the app service
 
 #### 2.1.3 Screenshots

@@ -1,9 +1,9 @@
 ---
-title: "Tab container"
+title: "Tab Container"
 parent: "container-widgets"
+tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
-
 
 Tab containers are used to show information categorized into multiple tab pages. This can be very useful if the amount of information that has to be displayed is larger than the amount of space on the screen.
 

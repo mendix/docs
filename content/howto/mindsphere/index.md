@@ -10,7 +10,7 @@ The how-to's in this category will teach you how to integrate Mendix with MindSp
 
 ## 2 Main Documents in This Category
 
-* [How to Use the Siemens MindSphere Pump Asset Example App](mindsphere-example-app)
+* [Use the Siemens MindSphere Pump Asset Example App](mindsphere-example-app)
 
 ## 3 Read More
 

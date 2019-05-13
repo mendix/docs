@@ -1,6 +1,7 @@
 ---
 title: "Operations"
 parent: "published-web-services"
+tags: ["studio pro"]
 ---
 
 

@@ -7,11 +7,7 @@ draft: true
 
 ## 1 Introduction
 
-Mendix makes it easy to build, update and maintain an App/Microservice that
-fulfils a business function. Usually a business functions need a GUI, some logic
-and data. The internal integration of those layers is handled by Mendix, but for
-most Apps, and in Microservice architectures, there is need for integration with
-other systems.
+Mendix makes it easy to build, update, and maintain an app or microservice that fulfils a business function. Usually a business functions need a GUI, some logic, and data. The internal integration of those layers is handled by Mendix, but for most apps as well as microservice architectures, there is a need for integration with other systems.
 
 This diagram presents how Mendix keeps all these parts together and checks consistency in the app model:
 

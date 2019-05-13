@@ -1,7 +1,7 @@
 ---
 title: "Edit Cloud Foundry Settings Dialog"
 parent: "dialogs"
-tags: ["Cloud Foundry", "Deploy"]
+tags: ["Cloud Foundry", "Deploy", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 Use this dialog to specify the information necessary for deploying your app to a Cloud Foundry instance.
@@ -32,11 +32,11 @@ The second (and final) configure step will allow you to select an app in the Clo
 
 ### Organization
 
-Select the organization you want to use. Note that at least one organization must already be configured in the Cloud Foundry instance; it is not possible to create a new one from within the Mendix Modeler.
+Select the organization you want to use. Note that at least one organization must already be configured in the Cloud Foundry instance; it is not possible to create a new one from within Mendix Studio Pro.
 
 ### Space
 
-Select the space you want to use. Note that at least one space must already be configured in the Cloud Foundry instance; it is not possible to create a new one from within the Mendix Modeler.
+Select the space you want to use. Note that at least one space must already be configured in the Cloud Foundry instance; it is not possible to create a new one from within Mendix Studio Pro.
 
 ### App
 

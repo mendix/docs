@@ -1,6 +1,7 @@
 ---
 title: "Retrieve"
 parent: "object-activities"
+tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -65,7 +66,7 @@ When you know you have only one object or you only want to use the first object 
 
 {{% alert type="warning" %}}
 
-Nanoflows do not support this property.
+Date functions, user-role tokens, computations based on tokens, and following associations aren't supported in xpath constraints when retrieve activity is in a nanoflow.
 
 {{% /alert %}}
 

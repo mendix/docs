@@ -21,17 +21,17 @@ To fix this, make sure the **AppCloudServices.StartAppCloudServices** microflow 
 
 ## 3 Realm Verification Errors
 
-These are commonly caused by compatibility issues with JAR files in the `<projectpath>/userlib` directory of your project. For details on the most common compatibility issues, refer to [Troubleshooting](/refguide7/troubleshooting) in the Mendix Reference Guide.
+These are commonly caused by compatibility issues with JAR files in the `<projectpath>/userlib` directory of your project. For details on the most common compatibility issues, refer to [Troubleshooting](/refguide/troubleshooting) in the *Mendix Studio Pro Guide*.
 
 ## 4 Read More
 
-* [How to Find the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
-* [How to Clear Warning Messages in Mendix](clear-warning-messages)
-* [How to Test Web Services Using SoapUI](../testing/testing-web-services-using-soapui)
-* [How to Monitor Mendix Using JMX](monitoring-mendix-using-jmx)
-* [How to Debug Java Actions Remotely](debug-java-actions-remotely)
-* [How to Configure Log Levels](log-levels)
-* [How to Debug Microflows](debug-microflows)
-* [How to Debug Java Actions](debug-java-actions)
-* [How to Handle Common Mendix SSO Errors](handle-common-mendix-sso-errors)
-* [How to Debug Microflows Remotely](debug-microflows-remotely)
+* [Find the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
+* [Clear Warning Messages in Mendix](clear-warning-messages)
+* [Test Web Services Using SoapUI](../testing/testing-web-services-using-soapui)
+* [Monitor Mendix Using JMX](monitoring-mendix-using-jmx)
+* [Debug Java Actions Remotely](debug-java-actions-remotely)
+* [Configure Log Levels](log-levels)
+* [Debug Microflows](debug-microflows)
+* [Debug Java Actions](debug-java-actions)
+* [Handle Common Mendix SSO Errors](handle-common-mendix-sso-errors)
+* [Debug Microflows Remotely](debug-microflows-remotely)

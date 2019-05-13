@@ -39,7 +39,7 @@ Listed below are some examples of reasons to initiate an escalation:
 
 * Management of a major problem, especially where impact to business is high and the problem is taking too long to isolate the cause of the incidents
 * A prolonged outage that exceeds or threaten to exceed the SLA or timeframe
-* Frequently recurring or multiple related hig-priority incidents where the priority is related to business impact and urgency
+* Frequently recurring or multiple related high-priority incidents where the priority is related to business impact and urgency
 * Security breaches identified or reported by a customer without a workaround that is mutually agreed upon
 * Risk of potential or actual damage to the customer's or provider's reputation
 * Data loss or risk of potential data loss
@@ -57,7 +57,7 @@ This is the normal process for a support case:
   ![](attachments/escalation-management-process/zendesk.png)
 
 3. Once the ticket has been submitted, this incoming ticket is assigned to a Support Engineer.
-4. This engineer will come to a solution most of the time, sometimes after discussion with a Technical Support Lead and, if needed, with our second-line team (as in, Modeler, Client, Core, or Expert Services).
+4. This engineer will come to a solution most of the time, sometimes after discussion with a Technical Support Lead and, if needed, with our second-line team (as in, Studios, Client, Core, or Expert Services).
 5.	If the gap between the customer's expectation and the Mendix possibilities cannot be solved, the escalation is started.
 
 ## 6 Methods to Escalate My Support Case

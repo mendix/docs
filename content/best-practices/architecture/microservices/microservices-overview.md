@@ -47,7 +47,7 @@ These are some benefits of using microservices:
 
 The reason why microservices are better than monoliths and service-oriented architecture (SOA) layers is that they allow for the better management of size of and dependencies between teams and components.
 
-### 4.1 Monoliths Have Too Many Internal Dependencies
+### 4.1 Monoliths Have Too Many Internal Dependencies {#monolith}
 
 Teams simply become too large when working on monoliths. In addition, developers specialize on small parts of the monolith without understanding the functional overview or the impact of changes on the entire monolith. Teams reuse functions and data too much, and over time, every small change may have significant impact.
 

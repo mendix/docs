@@ -1,11 +1,12 @@
 ---
 title: "Commit Dialog"
 parent: "dialogs"
+tags: ["studio pro"]
 ---
 
 ## 1 Introduction
 
-The **Commit** dialog box is used for committing changes to the Team Server. You can enter a message and - if applicable - select related stories.
+The commit dialog is used for committing changes to the Team Server. You can enter a message and - if applicable - select related stories.
 
 ## 2 Message
 

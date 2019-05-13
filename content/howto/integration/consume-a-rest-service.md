@@ -18,7 +18,7 @@ In your Mendix app, you can use information from REST services. This how-to show
 
 The Wikipedia REST service allows you to retrieve the summary of a page. This service can be reached at `https://en.wikipedia.org/api/rest_v1/page/summary/{title}`, where `{title}` is the title of a page.
 
-We will start by providing the Modeler as an example of what the REST service returns:
+We will start by providing Studio Pro as an example of what the REST service returns:
 
 1. Open your browser and go to [https://en.wikipedia.org/api/rest_v1/page/summary/Tahiti](https://en.wikipedia.org/api/rest_v1/page/summary/Tahiti)
    * This calls the REST service with a GET request – the result is the summary of the [Tahiti page on Wikipedia](https://en.wikipedia.org/wiki/Tahiti) in the JSON format
@@ -26,7 +26,7 @@ We will start by providing the Modeler as an example of what the REST service re
     ![Screenshot of the result of the rest call](attachments/consume-a-rest-service/get-call-result.png)
 
 2. Copy the whole JSON snippet.
-3.  Now you need to add a new JSON structure to your app. A [JSON structure](../../refguide/json-structures) contains sample JSON that you can use in the app. To do this, follow these steps in the Desktop Modeler:<br>
+3.  Now you need to add a new JSON structure to your app. A [JSON structure](../../refguide/json-structures) contains sample JSON that you can use in the app. To do this, follow these steps in :<br>
     a. Right-click the module in the **Project Explorer**.<br>
     b. Select **Add** > **Mapping** > **JSON structure**.<br>
     c. Paste the JSON snippet.<br>
@@ -50,7 +50,7 @@ To create an import mapping:
     ![](attachments/consume-a-rest-service/import-mapping.png)
 
 5. Click **OK**. You will now see the structure on the right.
-6. Click **Map automatically** in the editor toolbar. The Modeler will inform you that it has applied some changes. That means that it has generated entities that match the JSON structure.
+6. Click **Map automatically** in the editor toolbar. Studio Pro will inform you that it has applied some changes. That means that it has generated entities that match the JSON structure.
 7. Click **Close**.
 
 ## 4 Adding an Input Entity to the Domain Model
@@ -85,7 +85,7 @@ To call the REST service in a microflow, follow these steps:
 
     ![](attachments/consume-a-rest-service/location.png)
 
-5. On the **Response** tab, set **Response handling** to **Apply import mapping** (or to **Import mapping for the entire response**, depending on your Modeler version).
+5. On the **Response** tab, set **Response handling** to **Apply import mapping** (or to **Import mapping for the entire response**, depending on your Studio Pro version).
 6. Click **Select** and double-click **Import_mapping**.
 7. For **Variable**, enter *Summary*.
 
@@ -156,10 +156,10 @@ Congratulations! You can now start your app and get summaries from Wikipedia.
 
 ## 8 Read More
 
-* [How to Consume a Complex Web Service](consume-a-complex-web-service)
-* [How to Consume a Simple Web Service](consume-a-simple-web-service)
-* [How to Export XML Documents](export-xml-documents)
-* [How to Import XML Documents](importing-xml-documents)
-* [How to Import Excel Documents](importing-excel-documents)
-* [How to Expose a Web Service](expose-a-web-service)
-* [How to Expose Data to BI Tools Using OData](exposing-data-to-bi-tools-using-odata)
+* [Consume a Complex Web Service](consume-a-complex-web-service)
+* [Consume a Simple Web Service](consume-a-simple-web-service)
+* [Export XML Documents](export-xml-documents)
+* [Import XML Documents](importing-xml-documents)
+* [Import Excel Documents](importing-excel-documents)
+* [Expose a Web Service](expose-a-web-service)
+* [Expose Data to BI Tools Using OData](exposing-data-to-bi-tools-using-odata)

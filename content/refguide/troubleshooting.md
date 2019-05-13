@@ -1,8 +1,8 @@
 ---
 title: "Troubleshooting"
 category: "Java Programming"
+tags: ["studio pro"]
 ---
-
 
 ## JAR Compatibility List
 

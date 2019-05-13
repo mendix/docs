@@ -147,4 +147,4 @@ You can now add Google Analytics-tracking to your Mendix application! This widge
 
 ## 19 Read More
 
-* [How to Access a Samba Share from the MxCloud](access-a-samba-share-from-the-mxcloud)
+* [Access a Samba Share from the MxCloud](access-a-samba-share-from-the-mxcloud)

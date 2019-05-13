@@ -1,7 +1,7 @@
 ---
 title: "Domain Model"
-category: "Desktop Modeler"
-tags: ["domain model", "entity", "association", "annotation"]
+category: "App Modeling"
+tags: ["domain model", "entity", "association", "annotation", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -20,7 +20,7 @@ Here is a domain model that defines customers and orders. The line between them 
 
 ## Technical Appendix
 
-In the database every entity is stored in one separate table and has columns for the attributes defined in the Modeler, the system attributes and a unique identifier for the object. If an entity has specializations there is also a column indicating which specialization the object belongs to. An association is stored in a cross-table with the identifiers (ID) of both objects.
+In the database every entity is stored in one separate table and has columns for the attributes defined in Studio Pro, the system attributes and a unique identifier for the object. If an entity has specializations there is also a column indicating which specialization the object belongs to. An association is stored in a cross-table with the identifiers (ID) of both objects.
 
 Take a look at the following domain model.
 

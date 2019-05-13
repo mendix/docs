@@ -24,7 +24,7 @@ Before starting with this how-to, make sure you have completed the following pre
 * Download and install [Eclipse](http://www.eclipse.org/downloads/)
 *  Download [Selenium Client & WebDriver](http://www.seleniumhq.org/download/):
    ![](attachments/18448634/18580399.png) 
-* Open the [Company Expenses app](https://appstore.home.mendix.com/link/app/240/Mendix/Company-Expenses) in the Modeler and run it locally
+* Open the [Company Expenses app](https://appstore.home.mendix.com/link/app/240/Mendix/Company-Expenses) in Studio Pro and run it locally
 
 ## 3 Creating a Java Project
 
@@ -230,7 +230,7 @@ This test method contains the following test steps:
 
 Now that you are logged in, you will want to navigate to the **Expenses** tab. To add the third test method, follow these steps:
 
-1.  Open the Desktop Modeler, and in the **Project Explorer**, open the **Desktop_AdminMenu** page:
+1.  Open , and in the **Project Explorer**, open the **Desktop_AdminMenu** page:
   
     ![](attachments/18448634/18580390.png)
 
@@ -259,7 +259,7 @@ Now that you are logged in, you will want to navigate to the **Expenses** tab. T
 
 Now that you are on the **Expenses** tab, you will want to create a new expense. To add the fourth test method, follow these steps:
 
-1. Open the Modeler and then open the **Desktop_AdminMenu** page.
+1. Open Studio Pro and then open the **Desktop_AdminMenu** page.
 2.  Select the **New Expense** button:
   
     ![](attachments/18448634/18580387.png)
@@ -316,7 +316,7 @@ Now that you are on the **Expenses** tab, you will want to create a new expense.
 
 After you have created an expense, you will want to sign out. To add the fifth test method, follow these steps:
 
-1. Open Modeler and then open the **Desktop_MyInfo** snippet.
+1. Open Studio Pro and then open the **Desktop_MyInfo** snippet.
 2.  Find the name of the following element:
 
     | Element | Name |

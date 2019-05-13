@@ -1,6 +1,6 @@
 ---
 title: "Debug a Mobile App with Mendix"
-category: "Mobile Development"
+parent: "hybrid-mobile"
 menu_order: 40
 description: "How to set up a mobile app to run from your local machine and debug using Mendix's tools"
 tags: ["mobile", "debug", "android", "ios"]
@@ -35,7 +35,7 @@ This is perhaps the easiest combination of mobile target platform and developmen
 
 ### 4.1 macOS Configuration
 
-Since the Mendix Modeler only runs on Mendix, we need to make sure that your virtual (windows) machine can be accessed by the outsideworld. To do that, the network setting much be shared between the virtual machine and your Mac, and the appropriate ports forwarded. Follow these steps to configure your development environment with Parallels:
+Since Mendix Studio Pro only runs on Mendix, we need to make sure that your virtual (windows) machine can be accessed by the outsideworld. To do that, the network setting much be shared between the virtual machine and your Mac, and the appropriate ports forwarded. Follow these steps to configure your development environment with Parallels:
 
 1. Open the Parallels **Configure** dialog.
 

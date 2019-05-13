@@ -1,5 +1,5 @@
 ---
-title: "Collaboration & Requirements Management"
+title: "Collaboration"
 tags: ["collaboration", "requirements", "management"]
 ---
 

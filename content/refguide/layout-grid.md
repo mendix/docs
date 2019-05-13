@@ -1,6 +1,7 @@
 ---
-title: "Layout grid"
+title: "Layout Grid"
 parent: "container-widgets"
+tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -65,7 +66,7 @@ This property determines the width of the layout grid.
 | Value | Description |
 | --- | --- |
 | Full width | The layout grid spans the full width of the available space and will stretch and shrink. |
-| Fixed width | The layout grid has a fixed width but it is still responsive to viewport changes. Note that the width is not configurable in the modeler but is determined by Bootstrap. |
+| Fixed width | The layout grid has a fixed width but it is still responsive to viewport changes. Note that the width is not configurable in Studio Pro but is determined by Bootstrap. |
 
 {{% alert type="warning" %}}
 

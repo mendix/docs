@@ -3,6 +3,7 @@ title: "Example Implementation"
 parent: "deploy-api"
 ---
 
+## 1 Introduction
 
 This is a PowerShell script to build and redeploy a Mendix app; this is only an example and can be written in the language of your choice.
 
@@ -27,6 +28,8 @@ To run any scripts that you wrote yourself, or to run scripts downloaded from in
 ```java
 Set-ExecutionPolicy RemoteSigned
 ```
+
+## 2 Example
 
 This example shows how to create your own continuous deployment script using our APIs. Most functions in this example you may recognize from our Dev Center. The idea of this example is to create a new build of the latest revision every night. You can of course run this as often as you want. If the latest revision has not been built yet our buildserver will create a new build for you, otherwise nothing needs to be done for continuous deployment. While our buildserver is creating a new build for you, you can poll the result of the buildjob using the jobId parameter.
 

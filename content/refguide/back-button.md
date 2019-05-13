@@ -1,11 +1,14 @@
 ---
 title: "Back Button"
 parent: "button-widgets"
+tags: ["studio pro"]
 ---
+
+## 1 Introduction
 
 Pressing this button will close the popup for popup pages, or navigate to the previously visited page for content pages.
 
-## Button properties
+## 2 Button Properties
 
 {{% snippet file="refguide/Caption+Property.md" %}}
 
@@ -17,7 +20,7 @@ Pressing this button will close the popup for popup pages, or navigate to the pr
 
 {{% snippet file="refguide/Button+Style+Property.md" %}}
 
-## Common properties
+## 3 Common Properties
 
 {{% snippet file="refguide/Name+Property.md" %}}
 
@@ -27,7 +30,7 @@ Pressing this button will close the popup for popup pages, or navigate to the pr
 
 {{% snippet file="refguide/Tab+index+Property.md" %}}
 
-## Visibility properties
+## 4 Visibility Properties
 
 {{% snippet file="refguide/Visibility+Property.md" %}}
 

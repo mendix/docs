@@ -1,6 +1,7 @@
 ---
-title: "Data grid"
+title: "Data Grid"
 parent: "data-widgets"
+tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -104,7 +105,7 @@ The data source determines which objects will be shown in the data grid. For gen
 
 #### Type
 
-The data grid supports the following types of data sources: [Database Source](database-source), [XPath Source](xpath-source), [Association Source](association-source), [Microflow Source](microflow-source). The database and XPath sources retrieve objects from the database and supports searching and sorting. The database source can also be used in [offline](offline) applications. The association source follows an association from the enclosing data view to get to the objects. Finally, the microflow source calculates the list of objects by executing a microflow.
+The data grid supports the following types of data sources: [Database Source](database-source), [XPath Source](xpath-source), [Association Source](association-source), [Microflow Source](microflow-source). The database and XPath sources retrieve objects from the database and supports searching and sorting. The database source can also be used in [offline](offline-first) applications. The association source follows an association from the enclosing data view to get to the objects. Finally, the microflow source calculates the list of objects by executing a microflow.
 
 #### Other Properties
 

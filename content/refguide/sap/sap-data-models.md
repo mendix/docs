@@ -31,7 +31,7 @@ The Data Model module contains up to four resources which help to consume the OD
 
 ### 2.1 Domain Model
 
-Each Mendix SAP data model (previously referred to as "service modules") has a domain model that describes the information in the OData service. The domain model consists of entities and their relations represented by associations. For more information, see [Domain Model](../domain-model) in the Mendix Reference Guide.
+Each Mendix SAP data model (previously referred to as "service modules") has a domain model that describes the information in the OData service. The domain model consists of entities and their relations represented by associations. For more information, see [Domain Model](../domain-model).
 
 ![](attachments/sap-data-models/sap-service-example.png)
 

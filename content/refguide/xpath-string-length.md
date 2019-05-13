@@ -1,6 +1,7 @@
 ---
-title: "XPath string-length"
+title: "XPath String-Length"
 parent: "xpath-constraint-functions"
+tags: ["studio pro"]
 ---
 
 

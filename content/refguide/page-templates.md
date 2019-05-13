@@ -1,6 +1,7 @@
 ---
 title: "Page Templates"
 parent: "pages"
+tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -8,15 +9,9 @@ parent: "pages"
 
 Page templates are the starting point for creating new pages. Every time a new page is created, a page template is selected as a baseline that can then be edited to match the pages specific needs. 
 
-When creating a new page, the user is presented with an overview of all the compatible page templates in the project. Prior to Mendix 7.9.0, this was a static selection designed to match most generic scenarios. Mendix 7.9.0 introduced page templates as a document type, allowing users to edit existing page templates and even create entirely new ones.
+When creating a new page, the user is presented with an overview of all the compatible page templates in the project. Page templates as document types allow users to edit existing page templates and even create entirely new ones.
 
 ## 2 Custom Page Templates
-
-{{% alert type="info" %}}
-
-The option to edit and manage custom page templates was added in Mendix 7.9.0.
-
-{{% /alert %}}
 
 By mapping out the common design patterns of a project, a great deal of the initial work involved in creating new pages can be mitigated. 
 

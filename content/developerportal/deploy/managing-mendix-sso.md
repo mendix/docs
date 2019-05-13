@@ -73,7 +73,7 @@ When only users with a Mendix Account are supported in your app, it makes sense 
 
 ```
 
-If you do not have a custom index.html yet, you can take the one that is generated on deployment by the modeler, and customize it. Find that file and copy it to the theme/ directory:
+If you do not have a custom index.html yet, you can take the one that is generated on deployment by Studio Pro, and customize it. Find that file and copy it to the theme/ directory:
 
 1.  From the menu bar, choose Project → Deploy for Eclipse
 2.  Then choose Project → Show Project Directory in Explorer

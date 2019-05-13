@@ -11,7 +11,7 @@ tags: ["Mendix Cloud Version","Mendix Cloud Region","Developer Portal"]
 Sometimes you need to know which Mendix Cloud version your environment is running in, as there are differences in the feature sets of Mendix Cloud v3 and v4. This document shows you how to find the Mendix Cloud version and region of your app.
 
 {{% alert type="info" %}}
-This information is only available if you have a licensed app running in the Mendix Cloud. For more information, see [Licensing Apps](licensing-apps).
+This information is only available if you have a licensed app running in the Mendix Cloud. For more information, see [Licensing Mendix Cloud Apps](licensing-apps).
 {{% /alert %}}
 
 ## 2 Mendix Cloud Region and Version

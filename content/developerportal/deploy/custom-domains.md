@@ -240,5 +240,5 @@ To reach the root certificate, you have to link your certificate via the interme
 * [Certificates](certificates)
 * [Environments](environments)
 * [Mendix Cloud: Deploy](mendix-cloud-deploy)
-* [Licensing Apps](licensing-apps)
+* [Licensing Mendix Cloud Apps](licensing-apps)
 * [Company & App Roles](/developerportal/company-app-roles/index).

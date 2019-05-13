@@ -101,7 +101,7 @@ However, if all of the following are true, you should increase the `ConnectionPo
 
 In general, we see that increasing the `ConnectionPoolingMaxActive` value to a (much) higher number is very rarely the right action to take, even if it is unfortunately the action usually taken when you run into connection pooling issues.s
 
-In addition, keep in mind that changing this value for an application running in the Mendix Cloud will also require an adjustment on the database node that only Mendix can make. So, before changing the value, please file a ticket in the [Mendix Support portal](https://support.mendix.com/hc/en-us) stating the number to which you intend to change the value.
+In addition, keep in mind that changing this value for an application running in the Mendix Cloud will also require an adjustment on the database node that only Mendix can make. So, before changing the value, please file a ticket in the [Mendix Support Portal](https://support.mendix.com/hc/en-us) stating the number to which you intend to change the value.
 
 ## 5 Read More
 

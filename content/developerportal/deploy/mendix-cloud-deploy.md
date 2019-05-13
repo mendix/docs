@@ -48,7 +48,7 @@ As noted in the table above, a Free App will go to sleep after an hour or so of 
 
 ![](attachments/mendix-cloud-deploy/appresumed.png)
 
-You can upgrade a Free App to a licensed node with a *node* in the Mendix Cloud. Instructions for doing this are here: [Licensing Apps](licensing-apps).
+You can upgrade a Free App to a licensed node with a *node* in the Mendix Cloud. Instructions for doing this are here: [Licensing Mendix Cloud Apps](licensing-apps).
 
 ### 1.2 Licensed App
 
@@ -79,7 +79,7 @@ Before starting this how-to, make sure you have completed the prerequisites desc
 * You must have deployment permissions
 * Your Google Authenticator must be enabled
 
-### 2.1 Prerequisites for a Free App
+### 2.2 Prerequisites for a Free App
 
 * You must have created an app
 
@@ -162,6 +162,6 @@ The Mendix status page ([https://status.mendix.com/](https://status.mendix.com/)
 
 * [AppCloudServices](https://appstore.home.mendix.com/link/app/934/); the **AppCloudServices** module allows your app to integrate with services on the Mendix Cloud
 * [Custom Domains](custom-domains)
-* [Licensing Apps](licensing-apps)
+* [Licensing Mendix Cloud Apps](licensing-apps)
 * [How to Manage Company & App Roles](/developerportal/company-app-roles/manage-roles)
 * [Company & App Roles](/developerportal/company-app-roles/index)

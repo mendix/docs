@@ -142,15 +142,15 @@ You cannot delete or edit the Administrator role.
 
 There are two ways to set access for specific pages/microflows in your app:
 
-1. To set access via **Roles and Permissions**, do the following:
-    1.1  Open **Roles and Permissions** > **Page**/**Microflow Access** tab.
+1.  To set access via **Roles and Permissions**, do the following:<br/>
+    1.1  Open **Roles and Permissions** > **Page**/**Microflow Access** tab.<br/>
     1.2 Find the user role in the column and tick the box next to a page/microflow to open access for it, or untick – to restrict access. In the example below, we have restricted page access for the User.<br/>
 
     ![](attachments/settings-security/page-access-example.png)
 
-2.  To set access for a page/microflow via properties of this page/microflow , do the following: 
-	2.1 Open the page/microflow.
-    2.2. Go to **Properties** > the **Permissions** section and tick/untick **Allowed Roles** to grant/restrict access. 
+2.  To set access for a page/microflow via properties of this page/microflow , do the following: <br/>
+	2.1 Open the page/microflow.<br/>
+    2.2. Go to **Properties** > the **Permissions** section and tick/untick **Allowed Roles** to grant/restrict access.<br/> 
 
 	![](attachments/settings-security/permissions-section.png)
 

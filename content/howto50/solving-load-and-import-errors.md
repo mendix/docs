@@ -60,4 +60,4 @@ Finally, in the unlikely event that you encounter this error while working on yo
 * [Debugging Microflows](debugging-microflows)
 * [Debugging Microflows Remotely](debugging-microflows-remotely)
 * [Finding the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
-* [Licensing Apps](/developerportal/deploy/licensing-apps)
+* [Licensing Mendix Cloud Apps](/developerportal/deploy/licensing-apps)

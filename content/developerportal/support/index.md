@@ -34,7 +34,7 @@ For more details about the idea forum, see [The Mendix Forum](/developerportal/c
 
 ## 4 Accessing Mendix Support
 
-You can access the Mendix Support team through the [Support Portal](https://support.mendix.com), via email (support@mendix.com), or by phone (phone numbers are listed in the Support Portal). Please note that critical tickets always need to be accompanied by a phone call to speed up the triage of the issue. In the Support Portal, you can check the status of your personal tickets, check all the submitted tickets on your applications, and provide updates on them.
+You can access the Mendix Support team through the [Mendix Support Portal](https://support.mendix.com), via email (support@mendix.com), or by phone (phone numbers are listed in the Support Portal). Please note that critical tickets always need to be accompanied by a phone call to speed up the triage of the issue. In the Support Portal, you can check the status of your personal tickets, check all the submitted tickets on your applications, and provide updates on them.
 
 ## 5 What We Expect from You
 

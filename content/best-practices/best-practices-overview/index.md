@@ -4,8 +4,6 @@ description: "Best practices overview."
 draft: true
 ---
 
-{{% todo %}}[**COULD USE 1 MORE DIAGRAM**]{{% /todo %}}
-
 ## 1 Introduction 
 
 In the Mendix documentation landscape, the [Mendix Evaluation Guide](https://www.mendix.com/evaluation-guide/) provides a great overview of all the possibilities and features in the Mendix Platform, the [Mendix Reference Guide](/refguide/) explains the product in detail, and the [Mendix How-to's](/howto/) provide developers with instructions on how to do things in Mendix.
@@ -41,7 +39,12 @@ These best practices will be expanded on an ongoing basis to cover the following
 
 For each category and sub-category of best practices, there will be an overview that covers the breadth of the area discussed. This will be followed by a number of specific areas or use cases that are covered more in detail. These will refer to more detailed Mendix documentation that explains the product. The best practices will sometimes include example implementations in the App Store.
 
-{{% todo %}}[**EXPLAIN DIAGRAM**]{{% /todo %}}
+In most cases there will be these components of documentation:
+1. Overview of an area of Best Praactices
+2.1 In depth descriptions of subjects in that area
+2.2 Use-cases around that area
+3.1 References to Evaluation Guide, Release Notes, Reference Guide, How-To's
+3.2 References to examples in the App Store
 
 ![](attachments/overview2.png)
 
@@ -52,8 +55,7 @@ Mendix organizes subject matter experts from different parts of the organization
 At this point in Mendix, there is an Architecture Guild and a UX Guild, and there is a plan for a DevOps Guild and a Quality Assurance Guild.
 
 Members of these guilds own the content of the best practices. They also own the Best Practices items in the App Store, which are examples of the best ways to implement things for certain use cases.
-
-{{% todo %}}[**ADD APP STORE LINK WHEN AVAILABLE**]{{% /todo %}}
+Example the Process Queue from Mendix: https://appstore.home.mendix.com/link/app/393/
 
 ## 3 How Can These Best Practices Help Me? {#help}
 
@@ -78,10 +80,6 @@ These best practices are a valuable addition to this activity, as the informatio
 As part of the guild culture, Mendix stimulates creative discussions that lead teams and stakeholderss forward.
 
 As best practices are published, we hope to get feedback and ideas related to the material. If the feedback case is strong and time allows, there will be updates and improvements done by the topic authors.
-
-We will reserve the App Store **Best Practices** category for examples that have been created inside Mendix. This means that you know these App Store items are coming directly  from Mendix and they will be kept up to date.
-
-{{% todo %}}[**ACCURATE NAME OF APP STORE SECTION?**]{{% /todo %}}
 
 ## 6 What's Next?
 

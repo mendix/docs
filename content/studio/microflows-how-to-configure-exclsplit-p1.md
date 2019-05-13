@@ -76,7 +76,7 @@ To configure the exclusive split with the attribute or parameter of the enumerat
     ![](attachments/microflows-how-to-configure-exclsplit/parameter-properties.png)
 
 5. In the **Properties** of the exclusive split, click the **Configure condition** field.
-6.  In the **Configure condition** pop-up window, we need to select the attribute that the condition will be based on. So, click the **Variables/Attributes** tab, select the **Grade Customer_grade** condition, and click **Save**. 
+6.  In the **Configure condition** pop-up window, we need to select an attribute that the condition will be based on. So, click the **Variables/Attributes** tab, select the **Grade Customer_grade** condition, and click **Save**. 
 
     ![](attachments/microflows-how-to-configure-exclsplit/configure-condition-grade.png)
 
@@ -92,7 +92,7 @@ To configure the exclusive split with the attribute or parameter of the enumerat
     ![](attachments/microflows-how-to-configure-exclsplit/excl-split-go-back.png) <br/>
    
     d. Click **Add New Case** in the **Cases** section.<br />
-    e. Repeat steps b-d to add all possible cases: **Silver**, **Gold** and **Empty** (a case when the customer's grade is not set). 
+    e. Repeat steps b-d to add all possible cases: **Silver**, **Gold**, and **Empty** (a case when the customer's grade is not set). 
 
     ![](attachments/microflows-how-to-configure-exclsplit/excl-split-possible-cases.png) 
 

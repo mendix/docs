@@ -2,7 +2,7 @@
 title: "Set Up the Navigation Structure"
 category: "General Info"
 menu_order: 30
-tags: []
+tags: ["studio pro"]
 ---
 Once you've created some pages you want to give users the ability to access them. The easiest way to do this is by using a navigation menu. The navigation editor of Studio Pro allows you define navigation menus for desktop, tablet and phone interfaces. It also allows you to define which page is shown as a default home page depending on the user role.
 

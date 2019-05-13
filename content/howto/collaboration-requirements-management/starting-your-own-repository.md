@@ -2,7 +2,7 @@
 title: "Start Your Own Repository"
 category: "Collaboration"
 menu_order: 30
-tags: []
+tags: ["studio pro"]
 ---
 
 ## 1 Introduction

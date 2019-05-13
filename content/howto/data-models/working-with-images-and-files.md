@@ -2,7 +2,7 @@
 title: "Work with Images & Files"
 category: "Data Models"
 menu_order: 4
-tags: []
+tags: ["studio pro"]
 ---
 
 ## 1 Introduction

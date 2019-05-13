@@ -1,6 +1,7 @@
 ---
 title: "General Info"
 description: "These introductory how-to's describe Mendix Studio Pro basics and best practices."
+tags: ["studio pro"]
 ---
 
 ## 1 Introduction

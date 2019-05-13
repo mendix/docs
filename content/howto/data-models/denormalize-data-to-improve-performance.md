@@ -2,7 +2,7 @@
 title: "Denormalize Data to Improve Performance"
 category: "Data Models"
 menu_order: 6
-tags: []
+tags: ["studio pro"]
 ---
 
 ## 1 Introduction

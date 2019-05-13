@@ -2,7 +2,7 @@
 title: "Translate Your App Content"
 category: "Collaboration"
 menu_order: 50
-tags: []
+tags: ["studio pro"]
 ---
 
 ## 1 Introduction

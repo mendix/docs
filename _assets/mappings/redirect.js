@@ -24,8 +24,8 @@ module.exports = {
     },
 	{
       from: "/refguide/web-modeler/app-settings-wm",
-      to: "/studio/app-settings"
-    },
+      to: "/studio/settings-widget-overview"
+    },	
 	/****************************************************
      * From the Support Portal (potentially temporary until fixed in product, mapped) 
      ****************************************************/

@@ -1,5 +1,6 @@
 ---
 title: "Front-End"
+tags: ["studio pro"]
 ---
 
 ## 1 Introduction 

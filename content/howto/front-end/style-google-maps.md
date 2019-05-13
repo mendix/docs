@@ -2,7 +2,7 @@
 title: "Style Google Maps"
 category: "Front-End"
 menu_order: 65
-tags: []
+tags: ["studio pro"]
 ---
 
 ## 1. Introduction

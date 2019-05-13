@@ -79,8 +79,6 @@ If you are working in a team with others, it is wise to check with your team mem
 
 After opening Studio,  the home page of the app opens. 
 
-![](attachments/general/home-page-general.png)
-
 You can change the view of your page to different views by clicking the corresponding icons:
 
 *  Mobile

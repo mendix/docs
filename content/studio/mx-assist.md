@@ -29,7 +29,7 @@ Click the bow-tie to see Mendix Assist recommendations.
 {{% image_container width="350" %}}![](attachments/mx-assist/mx-assist-recommendations.png)
 {{% /image_container %}}
 
-Mendix Assist lists the top 5 recommendations from the most probable to less probable ones for the particular microflow. Click the suggestion to proceed with it and insert it into a microflow. For more information, see section [4 Adding Activities and Elements with Mendix Assist](#add-activities).
+Mendix Assist lists the top five recommendations from the most probable to less probable ones for the particular microflow. Click the suggestion to proceed with it and insert it into a microflow. For more information, see section [4 Adding Activities and Elements with Mendix Assist](#add-activities).
 
 {{% alert type="info" %}}
 

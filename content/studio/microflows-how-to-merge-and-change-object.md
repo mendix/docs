@@ -58,7 +58,7 @@ To create a merge for gold, silver, and bronze customer grades in a microflow, f
 
     d. Drag the arrow to the merge. Now the **Show Page activity** is connected to the merge.
 
-    ![](attachments/microflows-how-to-merge-and-change-object/connecting-activity-and-merge.png)<br/> 
+    ![](attachments/microflows-how-to-merge-and-change-object/connecting-activity-and-merge.png)<br/>
 
 4. Repeat step 3 for the flow labelled **Silver**. 
 
@@ -112,4 +112,4 @@ Congratulations! Now we have the microflow that works the following way:
    b. If the customer does not have a grade, the error message pops up.<br/>
 2. If the customer has the grade, the customer's status is set to active irrespective of the grade once the order form is opened.
 
-Now you can publish and view your app. For more information, see [Previewing & Publishing Your App](publishing-app).
+Now you can preview or publish your app. For more information, see [Previewing & Publishing Your App](publishing-app).

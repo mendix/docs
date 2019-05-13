@@ -30,7 +30,7 @@ For more information on the functions of these activities, see [Microflows](micr
 
 1. Add the **Create Object**/**Change Object** activity to a microflow. For more information, see section [4 Adding New Event or Activity](microflows#adding-activity-to-microflow) in *Microflows*.
 2. Click the activity to view its properties.
-3.  Select the data source (an entity) for the activity, then click **Add New Value**
+3.  Select the data source for the activity, then click **Add New Value**
 
     ![](attachments/microflows-setting-and-changing-value/add-new-value.png)
 

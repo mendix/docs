@@ -26,9 +26,9 @@ There are two ways to configure a condition for the exclusive split:
 The following elements can be used as an exclusive split condition in the **Variable/Attributes** tab:
 
 * Variable with Boolean data type
-* Variable with Enumeration data type
+* Variable with enumeration data type
 * Attribute  of Boolean type
-* Attribute of Enumeration type
+* Attribute of enumeration type
 
 {{% alert type="info" %}}
 

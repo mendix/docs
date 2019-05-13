@@ -21,7 +21,7 @@ The app will check for a license each time it is started.
 
 ## 2 Obtaining a Mendix License
 
-For all deployment options, apart from [IBM Cloud Portal](#ibm), you will need to obtain a Mendix license from Mendix support.
+For all deployment options, apart from [IBM Cloud Portal](#ibm), you will need to obtain a Mendix license from Mendix support. See [IBM Cloud Portal](#ibm), below, for more information on how to license apps deployed to the IBM Cloud Portal.
 
 If you need a *Subscription Secret* to deploy to SAP Cloud Platform you will need to create a ticket with [Mendix Support](https://support.mendix.com).
 
@@ -38,16 +38,18 @@ For all other licenses, do the following:
 Mendix Support will contact the technical contact via a ticket in the Support Portal.
 
 If you are hosting your app outside the Mendix Cloud, Mendix support will provide you with two parts to your key:
-* *UUID* – this is a unique identifier for your license, based on where it is being deployed. 
+* *LicenseId* – this is a unique identifier for your license, based on where it is being deployed. 
 * *LicenseKey* – this is a base64 string.
 
-An example UUID is aab8a0a1-1370-467e-918d-3a243b0ae160. LicenseKey is a very long base64 string.
+An example LicenseId is aab8a0a1-1370-467e-918d-3a243b0ae160. LicenseKey is a very long base64 string.
 
-## 3 Mendix Cloud
+## 3 Activating a Mendix License
+
+### 3.1 Mendix Cloud
 
 To run Mendix apps in production on the Mendix Cloud, they must be linked to a licensed node in the Mendix Cloud. This process is described in a separate document: [Licensing Mendix Cloud Apps](licensing-apps).
 
-## 4 SAP Cloud Platform
+### 3.2 SAP Cloud Platform
 
 To license a Mendix app on SAP Cloud Platform, you need to supply a *Subscription Secret* which is linked to your app.
 
@@ -55,45 +57,45 @@ You can add this subscription secret as part of creating an environment on SAP C
 
 For more information, see [SAP Cloud Platform - deploy](sap-cloud-platform).
 
-## 5 IBM Cloud Portal{#ibm}
+### 3.3 IBM Cloud Portal{#ibm}
 
 To license a Mendix app on IBM Cloud Portal, you need to bind the [Mendix Platform Service](https://cloud.ibm.com/catalog/services/mendix-platform-service) on the IBM Cloud Portal to your app.
 
 This process needs to be done through the IBM Cloud Portal and is documented in [Mendix Platform](https://cloud.ibm.com/docs/services/Mendix-Rapid-Application-Development-Platform) in the *IBM Cloud* documentation. 
 
-## 6 Siemens MindSphere
+### 3.4 Siemens MindSphere
 
 To license a MindSphere app, you need to provide your *License ID* and *License Key* as Cloud Foundry environment variables. See [Cloud Foundry](#cloudfoundry), below, for instructions on how to do this.
 
-## 7 Cloud Foundry{#cloudfoundry}
+### 3.5 Cloud Foundry{#cloudfoundry}
 
 To activate a license on your app running on Cloud Foundry you need the license credentials provided by Mendix Support.
 
-The two environment variables `LICENSE_ID` and `LICENSE_KEY` need to be set to the values of the *UUID* and *LicenseKey* provided by Mendix Support. This is done through the following two commands.
+The two environment variables `LICENSE_ID` and `LICENSE_KEY` need to be set to the values of the *LicenseId* and *LicenseKey* provided by Mendix Support. This is done through the following two commands.
 
 ```bash
-cf set-env <YOUR_APP> LICENSE_ID <UUID>
+cf set-env <YOUR_APP> LICENSE_ID <LicenseId>
 cf set-env <YOUR_APP> LICENSE_KEY <LicenseKey>
 ```
 Where `<YOUR_APP>` is the name of your app.
 
 The app needs to be restarted for the environment variables to be read and the license to become effective.
 
-## 8 Docker
+### 3.6 Docker
 
 To activate a license on your app running in a Docker container you need the license credentials provided by Mendix Support.
 
-Two additional environment variables, `LICENSE_ID` and `LICENSE_KEY`, need to be set to the values of the *UUID* and *LicenseKey* provided by Mendix Support. This is done by adding them to the startup command for your container.
+Two additional environment variables, `LICENSE_ID` and `LICENSE_KEY`, need to be set to the values of the *LicenseId* and *LicenseKey* provided by Mendix Support. This is done by adding them to the startup command for your container.
 
 ```bash
 docker run -it \
   … \
-  -e LICENSE_ID=<UUID> \
+  -e LICENSE_ID=<LicenseId> \
   -e LICENSE_KEY=<LICENSE_KEY> \
   mendix/mendix-buildpack:…
 ```
 
-## 9 Windows Server
+### 3.7 Windows Server
 
 To license a Mendix app on Microsoft Windows you need to:
 
@@ -103,7 +105,7 @@ To license a Mendix app on Microsoft Windows you need to:
 
 Full instructions on how to do this can be found in [MS Windows: Activate a Mendix License on Microsoft Windows](activate-a-mendix-license-on-microsoft-windows).
 
-## 10 Unix-like
+### 3.8 Unix-like Server
 
 To license a Mendix app on Linux, or another Unix-like operating system, you need to:
 
@@ -114,6 +116,6 @@ To license a Mendix app on Linux, or another Unix-like operating system, you nee
 
 More instructions on how to do this can be found in [Unix Deployment](unix-like).
 
-## 11 Read More
+## 4 Read More
 
 * [Submit a Support Request](/developerportal/support/submit-support-request)

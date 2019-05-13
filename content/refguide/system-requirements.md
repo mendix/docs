@@ -101,7 +101,7 @@ Jetty is built into the [Mendix Runtime](runtime), so an application server is n
 
 Using a hybrid preview is not the same as using an emulator. A hybrid preview only shows a resized view of an app to give an impression of what that app might look like on a mobile device. Some hybrid app functionality will not be supported in this browser view. Full tests always need to be done on a device or emulator. Offline apps can only be previewed in Google Chrome.
 
-## 7 Mobile Operating Systems
+## 7 Mobile Operating Systems {#mobileos}
 
 For Mendix apps and the [Mendix Mobile app](getting-the-mendix-app):
 

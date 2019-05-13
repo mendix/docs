@@ -44,6 +44,8 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud V3, and other deploym
 
 * We released **Free Edition** of Mendix. This removes the limit of 10 named users on Free Apps which are deployed to the Mendix Cloud.
 
+    To take advantage of the *Free Edition* for an existing app, you need to redeploy your app.
+
 ### May 2nd, 2019
 
 #### Improvements

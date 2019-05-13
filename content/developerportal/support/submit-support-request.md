@@ -17,7 +17,7 @@ For critical production incidents, please contact Mendix Support by phone. Find 
 
 ## 2 Useful Links To Check Before Submitting a Request
 
-Before submitting a new Support request, check these Mendix resources to make sure your question has not already been answered:
+Before submitting a new support request, check these Mendix resources to make sure your question has not already been answered:
 
 * [Mendix Forum](https://forum.mendix.com)
 * [Mendix Documentation](https://docs.mendix.com/)
@@ -34,11 +34,11 @@ Also select the affected app in the request. For more information, read [How to 
 
 ## 4 Specifications
 
-Depending on the type of request it is helpful to provide additional information. The scenarios below list what additional information should be provided. 
+Depending on the type of request it is helpful to provide additional information. The scenarios below list what additional information should be provided.
 
 ### 4.1 Cloud Problem – Deployment Issues
 
-* Attach a log file (.txt) 
+* Attach a log file (.txt)
 * The date and time of the incident
 
 ### 4.2 Team Server Problem – Project Issues
@@ -68,13 +68,13 @@ Not all App Store content is compatible with every version of Studio Pro, and no
 * Operating System and the version _(Android x.x / iOS x.x)_. For example: Android 6.1.
 
 {{% alert type="info" %}}
-For Windows Phone, please ask Mendix Support about the current support conditions.
+For Windows Phone, please ask Mendix Support about the current support conditions.
 {{% /alert %}}
 
 ### 4.6 Browser Problem
 
 * Operating System _(Windows x / iOS x)_. For example: Windows 10.
-* Browser name and the version _(Chrome x.x/ Safari x.x / Firefox x.x / IE x.x)_ for example: Chrome 54.0.2840.99
+* Browser name and the version _(Chrome x.x/ Safari x.x / Firefox x.x / IE x.x)_ for example: Chrome 54.0.2840.99
 
 ## 5 Support Portal Home Page
 
@@ -102,35 +102,51 @@ To submit a request with Mendix Support, follow these steps:
 1. Click **Submit a request**.
 2.  Select an issue from the drop-down menu:
 
-	![](attachments/submit/204371709-pic2.png)
+    ![](attachments/submit/204371709-pic2.png)
 
-	You can select from the following issues:<br>
-	* **Incident**<br>
-	* **Request for Information**<br>
-	* **Standard change: New App**<br>
-	* **Standard change: Add App Resources/File Storage**<br>
-	* **Standard change: Change Mendix URL**<br>
-	* **Standard change: (Re)new license**<br>
-	* **Standard change: Assign Company Admin**<br>
-	* **Standard change: Request ATS license**<br>
-	* **Standard change: Reset Google authenticator**<br>
-	* **Key Change request (on-premises)**<br>
-	* **Standard change**<br>
-	* **Non-Standard change**<br>
-  
+    You can select from the following issues:
+
+    * **Request for Information** – general questions about Mendix
+
+    * **Incident** – if your app is down, or you are experiencing another platform issue
+
+    * **Standard change: Request New Licensed Node** - Please use the [Request New App Node](https://newnode.mendix.com) app unless you are requesting an SAP Subscription Secret
+
+    * **Standard change: Change On-Prem Licensed Node** – request a new license key for an *existing* app (for example, if you have new hardware configuration)
+
+    * **Standard change: Offboard Licensed Node** – remove a licensed node or app which you no longer need (applies to all platforms)
+
+    * **Standard change: Change Mendix Cloud Container Size** – all vertical scaling changes for a container which require downtime (for example, changing memory or database size)
+    
+    * **Standard Change: Change Mendix Cloud File Storage** – increase or decrease file storage size
+
+    * **Standard change: Change Mendix Cloud URL** – change a *non-custom* Mendix URL (i.e. something.mendixcloud.com)
+
+    * **Standard change: Change Company Admin** – make an existing Mendix user the company admin (see [Company & App Roles](/developerportal/company-app-roles/) for more information)
+
+    * **Standard change: Request ATS license** – obtain a license to use ATS (see [ATS Guide](/ats/) for more information)
+
+    * **Standard change: Request APM License** – obtain a license to use APM (see [APM Guide](/apm/) for more information)
+
+    * **Standard change: Reset Google authenticator** – reset the Google authenticator, if you are using it for [2FA](/developerportal/deploy/two-factor-authentication) (for example, if you get a new phone)
+
+    * **Standard change** – other changes which can be made on the platform, but for which you do not have access
+
+    * **Non-Standard change** – any other changes not covered by other issues, above
+    
 3.  Fill in the fields for the issue type you selected.
 
-	There are certain fields that are obligatory. The most important field is the **Affected App**. You can choose any app to which you have access. You access level is determined by your project role in the Developer Portal. There is always a default company account that you can use to submit general tickets. 
+There are certain fields that are obligatory. The most important field is the **Affected App**. You can choose any app to which you have access. You access level is determined by your project role in the Developer Portal. There is always a default company account that you can use to submit general tickets.
 
-	Other fields only appear for certain issues, like in this example:
+Other fields only appear for certain issues, like in this example:
 
-	![](attachments/submit/204371789-pic3.png)
+![](attachments/submit/204371789-pic3.png)
 
-	When you enter the subject of the request, the Mendix Support Portal will suggest relevant documentation for you to read before before submitting the request:
+When you enter the subject of the request, the Mendix Support Portal will suggest relevant documentation for you to read before before submitting the request:
 
-	![](attachments/submit/204371769-pic4.png) 
+![](attachments/submit/204371769-pic4.png)
 
-	If that does not help you solve your issue, you can submit the request.
+If that does not help you solve your issue, you can submit the request.
 
 ## 7 Request Priority {#request-priority}
 
@@ -165,7 +181,7 @@ You can add large attachments such as project files to the ticket. Please note t
 
 Click **Submit a request** when you're ready to submit the request:
 
-![](attachments/submit/204407825-pic6.png) 
+![](attachments/submit/204407825-pic6.png)
 
 ## 8 Overview of Requests
 
@@ -183,16 +199,16 @@ The ticket can have the following statuses:
 
 * **Open** – the ticket is in the Mendix Support department
 * **Pending** – the ticket is awaiting your reply
-	* You will receive one reminder email before the Mendix Support Portal automatically closes the ticket
-	* If you reply, the ticket will be automatically set to **Open** again
+    * You will receive one reminder email before the Mendix Support Portal automatically closes the ticket
+    * If you reply, the ticket will be automatically set to **Open** again
 * **On-hold** – the ticket has been forwarded to the Mendix second-line support
-	* You will be informed on the R&D status and the planned version once a response has been received from the second-line
+    * You will be informed on the R&D status and the planned version once a response has been received from the second-line
 * **Solved** – the ticket has been solved
-	* If you reply, the ticket will be automatically opened again
-	* You can close the ticket yourself by checking the box **Please consider this request solved**
-	* The ticket will be closed for comments automatically after a set number of days, after which you can a follow-up ticket
+    * If you reply, the ticket will be automatically opened again
+    * You can close the ticket yourself by checking the box **Please consider this request solved**
+    * The ticket will be closed for comments automatically after a set number of days, after which you can a follow-up ticket
 
- ![](attachments/submit/204371829-pic9.png)
+![](attachments/submit/204371829-pic9.png)
 
 ## 10 Submitting a Feature Request
 

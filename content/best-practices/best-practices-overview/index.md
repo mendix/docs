@@ -45,9 +45,9 @@ In most cases, the Best Practices will include these components:
 * In-depth descriptions of subjects in that area
 	* Use cases in the area
 * References to other Mendix documentation
-	* [Reference guide](/refguide/) and [how-to](/howto/) documentation (depending on the Mendix version used for the Best Practices)
+	* [Reference-guide](/refguide/) and [how-to](/howto/) documentation (depending on the Mendix version used for the Best Practices)
 	* [Release notes](/releasenotes/)
-	* [Mendix Platform Evaluation Guide](https://www.mendix.com/evaluation-guide/)
+	* [Platform Evaluation Guide](https://www.mendix.com/evaluation-guide/)
 * References to examples in the [Mendix App Store](https://appstore.home.mendix.com/index3.html)
 
 ![](attachments/overview2.png)

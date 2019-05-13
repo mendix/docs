@@ -1,8 +1,8 @@
 ---
 title: "Runtime Customization"
 category: "Mendix Runtime"
-description: "Describes custom settings for server, log file, database, Amazon S3 storage service, Microsoft Azure, IBM Bluemix object storage, web client, and proxy server in Mendix."
-tags: ["Runtime", "Customization", "Settings", "Configuration", "IBM Cloud", "Amazon S3", "Microsoft Azure", "Custom Settings", "Proxy", "studio pro"]
+description: "Describes custom settings for server, log file, database, Amazon S3 storage service, IBM Cloud Object Storage, Microsoft Azure, IBM Bluemix object storage, web client, and proxy server in Mendix."
+tags: ["Runtime", "Customization", "Settings", "Configuration", "IBM Cloud", "Amazon S3", "IBM Cloud Object Storage", "Microsoft Azure", "Custom Settings", "Proxy", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -106,21 +106,22 @@ Possible values: HSQLDB, MYSQL, ORACLE, POSTGRESQL, SQLSERVER |   |
 | SourceDatabaseUserName | The user name for the connection to the source database. |   |
 | SourceOracleServiceName | Defines the SERVICE_NAME when you have a connection with an Oracle DBMS as source. |   |
 
-## 5 Amazon S3 Storage Service Settings {#aws-s3}
+## 5 S3 Storage Service Settings {#aws-s3}{#s3}
 
 The following settings influence the behavior of the Amazon S3 Storage Service module. Using these settings manually in the Mendix Cloud is strongly discouraged as the files stored in external systems will not be included in backups creation/restoration.
+The following settings influence the behavior of the S3 Storage Service module. This module can be used for both Amazon S3 Storage and IBM Cloud Object Storage. Using these settings manually in the Mendix Cloud is strongly discouraged as the files stored in external systems will not be included in backups creation/restoration.
 
 | Name | Description | Default value |
 | --- | --- | --- |
-| com.mendix.storage.s3.AccessKeyId | Acts as the username to authenticate with the Amazon S3 service. |   |
-| com.mendix.storage.s3.SecretAccessKey | Acts as the password to authenticate with the Amazon S3 service. |   |
+| com.mendix.storage.s3.AccessKeyId | Acts as the username to authenticate with the S3 service. |   |
+| com.mendix.storage.s3.SecretAccessKey | Acts as the password to authenticate with the S3 service. |   |
 | com.mendix.storage.s3.BucketName | Name of the bucket where the files are stored on S3. |   |
 | com.mendix.storage.s3.ResourceNameSuffix | Suffix for the keys under which objects are stored. This can be used when buckets are divided into different segments for different users with different credentials (e.g. store objects as "[key].customer1" for customer1 and as "[key].customer2" for customer2) |   |
 | com.mendix.storage.s3.PerformDeleteFromStorage | Deprecated. Use `com.mendix.storage.PerformDeleteFromStorage`.<br/>Defines whether a delete of a Mendix File Document should result in an actual delete in the storage service. A reason to not perform an actual delete in the storage service can be when it's also used as a backup service. | true |
-| com.mendix.storage.s3.EndPoint | Overrides the default Amazon Web Services (AWS) endpoint. Use this setting when the storage service is on a non-AWS location. Both the endpoint (e.g. 's3.example.com') or the full URL, including the protocol, are supported (e.g. `https://s3.example.com`). Note that when setting a custom endpoint path style access will be enabled. For more information, see [Class S3ClientOptions](http://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/s3/S3ClientOptions.html#withPathStyleAccess(boolean)). |   |
+| com.mendix.storage.s3.EndPoint | Overrides the default endpoint. This setting is required when the storage is on a non-AWS location (e.g. for IBM Cloud Object Storage). Both the endpoint (e.g. 's3.example.com') or the full URL, including the protocol, are supported (e.g. `https://s3.example.com`). Note that when setting a custom endpoint path style access will be enabled. For more information, see [Class S3ClientOptions](http://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/s3/S3ClientOptions.html#withPathStyleAccess(boolean)). |   |
 | com.mendix.storage.s3.UseV2Auth | Let the authentication policy use 'Signature Version 2' instead of the default 'Signature Version 4'. Set this setting to 'true' when the endpoint does not support 'Signature Version 4'. | false |
 | com.mendix.storage.s3.EncryptionKeys | List of keys which can be used to encrypt and decrypt data at rest in S3\. The right key to decrypt the data with is automatically selected depending on with which key it was encrypted. Each encryption key consists of a key id, the encryption algorithm and the actual key (Base64 encoded). Example: ![](attachments/Custom+Settings/code_snippet_2.png) |   |
-| com.mendix.storage.s3.MaxConnections | Overrides the default maximum connections limit in the Amazon S3 service. The default value is enough for most applications, so we do not recommend explicitly setting this to a custom value unless a larger maximum connections limit is absolutely necessary. | [DEFAULT_MAX_CONNECTIONS](https://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/ClientConfiguration.html#DEFAULT_MAX_CONNECTIONS) field of the ClientConfiguration interface in the AWS SDK for Java. |
+| com.mendix.storage.s3.MaxConnections | Overrides the default maximum connections limit in the S3 service. The default value is enough for most applications, so we do not recommend explicitly setting this to a custom value unless a larger maximum connections limit is absolutely necessary. | [DEFAULT_MAX_CONNECTIONS](https://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/ClientConfiguration.html#DEFAULT_MAX_CONNECTIONS) field of the ClientConfiguration interface in the AWS SDK for Java. |
 | com.mendix.storage.s3.ClientExecutionTimeout | Sets the amount of time (in milliseconds) to allow a call to the storage service to complete. A value of 0 means no timeout. For more information, see the [AWS Java SDK](https://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/ClientConfiguration.html#setClientExecutionTimeout-int-). | 0 (no timeout) |
 | com.mendix.storage.s3.ConnectionTimeout | Sets the amount of time to wait (in milliseconds) when initially establishing a connection before giving up and timing out. A value of 0 means infinity and is not recommended. For more information, see the [AWS Java SDK](https://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/ClientConfiguration.html#setConnectionTimeout-int-). | 10.000 (10 seconds) |
 | com.mendix.storage.s3.SocketTimeout | Sets the amount of time to wait (in milliseconds) for data to be transfered over an established, open connection before the connection times out and is closed.  A value of 0 means infinity and is not recommended. For more information, see the [AWS Java SDK](https://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/ClientConfiguration.html#setSocketTimeout-int-). | 50.000 (50 seconds) |

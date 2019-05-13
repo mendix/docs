@@ -28,7 +28,7 @@ If security has already been set to **Prototype/demo** or **Production** in Stud
 
 {{% /alert %}}
 
-## 3 Modules Set Up
+## 3 Modules Set Up {#module-set-up}
 
 When security is enabled in Studio, the [AppCloudServices module](/developerportal/deploy/integrate-with-mendix-sso) is set up. This module enables single sign-on and user management in your app.
 
@@ -95,7 +95,7 @@ When you enable security, Studio creates access rules for all entities (and thei
 
   *  All roles in the current module, except anonymous roles, have *read* and *write* access for attributes
 
-     {{% alert type="note" %}}There are cases where entities inherit from System.Image or System.FileDocument. Some of those inherited attributes cannot be set to read/write, so they are set to read-only. 
+     {{% alert type="info" %}}There are cases where entities inherit from System.Image or System.FileDocument. Some of those inherited attributes cannot be set to read/write, so they are set to read-only. 
      {{% /alert %}}
   
 * All roles in the current module, except anonymous roles, have *read* and *write* access for associations if the entity is the association owner 

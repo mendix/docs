@@ -79,7 +79,7 @@ Before starting this how-to, make sure you have completed the prerequisites desc
 * You must have deployment permissions
 * Your Google Authenticator must be enabled
 
-### 2.1 Prerequisites for a Free App
+### 2.2 Prerequisites for a Free App
 
 * You must have created an app
 

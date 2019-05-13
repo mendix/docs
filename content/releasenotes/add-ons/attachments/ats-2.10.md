@@ -24,14 +24,14 @@ On the Browserstack side, we added the following features:
 * For individual test case executions in Browserstack, **Sessions** now correctly displays the test case name instead of the job name. For test cases with an attached dataset, the test case name is suffixed with the index of the dataset record.
 * Test case executions in Browserstack now show the result from ATS.
 
-![Browserstack-ATS integration](attachments/results/browserstack.png)
+![Browserstack-ATS integration](/ats/refguide/rg-version-2/attachments/results/browserstack.png)
 
 On the ATS side, we added the following features:
 
 * A link now exists to the Selenium session in Browserstack for each test case that was executed in Browserstack. You can use this in case the recording video does not load in ATS, or if you want to see the Browserstack logs. You can find the link under the **Recording** tab.
 * To make it easier to navigate from Browserstack to ATS, we added options to look up jobs by the job GUID and by the individual test case logs via the Browserstack session ID. Both options can be found on the **Test Runs** page under the **Jobs** tab.
 
-![Browserstack-ATS integration](attachments/results/lookup.gif)
+![Browserstack-ATS integration](/ats/refguide/rg-version-2/attachments/results/lookup.gif)
 
 Nomenclature:
 

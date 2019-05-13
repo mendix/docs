@@ -160,7 +160,7 @@ There are two ways to set access for specific pages/microflows in your app:
 
 Demo users are a demonstration of each user role existing in your app. You can use demo users to review how your app looks like for each user role. For more technical information, see [Demo Users](/refguide/demo-users). 
 
-### 4.1 Testing Your Roles
+### 4.1 Testing Your Roles {#testing-your-roles}
 
 You can test how your app looks like for different roles the following way:
 

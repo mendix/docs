@@ -17,7 +17,7 @@ For critical production incidents, please contact Mendix Support by phone. Find 
 
 ## 2 Useful Links To Check Before Submitting a Request
 
-Before submitting a new Support request, check these Mendix resources to make sure your question has not already been answered:
+Before submitting a new support request, check these Mendix resources to make sure your question has not already been answered:
 
 * [Mendix Forum](https://forum.mendix.com)
 * [Mendix Documentation](https://docs.mendix.com/)
@@ -110,7 +110,7 @@ To submit a request with Mendix Support, follow these steps:
 
     * **Incident** – if your app is down, or you are experiencing another platform issue
 
-    * **Standard change: Request New Licensed Node** - Please use the [Request New App Node](https://newnode.mendix.com) app unless you are requesting an SAP Subscription Secret.
+    * **Standard change: Request New Licensed Node** - Please use the [Request New App Node](https://newnode.mendix.com) app unless you are requesting an SAP Subscription Secret
 
     * **Standard change: Change On-Prem Licensed Node** – request a new license key for an *existing* app (for example, if you have new hardware configuration)
 

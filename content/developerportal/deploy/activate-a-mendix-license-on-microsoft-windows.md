@@ -40,7 +40,7 @@ In this section, you will retrieve the server ID from your Mendix server, which 
 
 ## 4 Retrieve the License Key by Submitting a Ticket
 
-In this section, you will submit your server ID in the Mendix support portal to request a license key for your server.
+In this section, you will submit your server ID in the Mendix Support Portal to request a license key for your server.
 
 1. Open your browser and navigate to [https://support.mendix.com](https://support.mendix.com).
 2. Create a new ticket:

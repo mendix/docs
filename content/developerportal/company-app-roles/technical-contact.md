@@ -36,7 +36,7 @@ These are some details about managing licenses (renewals, activation, and upgrad
 * Mendix is responsible for Mendix Cloud app renewals
 * Contact your Customer Success Manager (CSM) if you want to expand the license
 
-You can submit requests in the [Support Portal](https://support.mendix.com) for questions, changes, and incidents.
+You can submit requests in the [Mendix Support Portal](https://support.mendix.com) for questions, changes, and incidents.
 
 ### 2.2 On-Premises
 

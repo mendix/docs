@@ -35,7 +35,7 @@ For all other licenses, do the following:
 
 4. Save the app details.
 
-Mendix Support will contact the technical contact via a ticket in the support portal.
+Mendix Support will contact the technical contact via a ticket in the Support Portal.
 
 If you are hosting your app outside the Mendix Cloud, Mendix support will provide you with two parts to your key:
 * *UUID* – this is a unique identifier for your license, based on where it is being deployed. 

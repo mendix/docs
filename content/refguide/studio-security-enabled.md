@@ -56,7 +56,7 @@ After the **After startup** microflow is set up, Studio checks if the *Administr
 
 2.  After that, Studio checks if the Administrator and the User roles exist in each module of your project and if they are linked to the corresponding project roles. 
 
-	![](attachments/studio-security-enabled/module-roles.png)<br/>
+	![](attachments/studio-security-enabled/module-roles.png)
 
     Possible outcomes of this check are the following:<br/>
     a. If the model has two or more module roles in one module that are connected to the Administrator project role or the User project role, then it will be Studio incompatible. Studio will not change anything in these roles, but roles and permissions will not be editable in Studio.<br/>
@@ -91,14 +91,14 @@ When you enable security, Studio creates access rules for all entities (and thei
 
 	![](attachments/studio-security-enabled/start-up-microflow.png)
 
-* All roles in the current module, except anonymous roles, get *create* and *delete* rights for entities. The following rules are created for attributes and associations of these entities:
+*  All roles in the current module, except anonymous roles, get *create* and *delete* rights for entities. The following rules are created for attributes and associations of these entities:
 
-  * All roles in the current module, except anonymous roles, have *read* and *write* access for attributes
+  *  All roles in the current module, except anonymous roles, have *read* and *write* access for attributes
 
-    {{% alert type="note" %}}There are cases where entities inherit from System.Image or System.FileDocument. Some of those inherited attributes cannot be set to read/write, so they are set to read-only.  
-    {{% /alert %}}
-
-  * All roles in the current module, except anonymous roles, have *read* and *write* access for associations if the entity is the association owner 
+     {{% alert type="note" %}}There are cases where entities inherit from System.Image or System.FileDocument. Some of those inherited attributes cannot be set to read/write, so they are set to read-only. 
+     {{% /alert %}}
+  
+* All roles in the current module, except anonymous roles, have *read* and *write* access for associations if the entity is the association owner 
 
 {{% alert type="info" %}}
 
@@ -114,7 +114,7 @@ As the last stage, Studio applies the following changes to *index.html* and *log
 
 1. If the *login.html* file exist, Studio backs it up in the same folder under the name *login_backup_year-month-day_hour-minute.html*, indicating the date and time of the backup. Studio also creates a new file under the name *login.html* 
 
-   If the *login.html* file does not exist, Studio creates it under the name *login.html* 
+    If the *login.html* file does not exist, Studio creates it under the name *login.html* 
 
 2. In the*index.html* file, Studio replaces `document.cookie = "originURI=/login.html";` with `document.cookie = "originURI=/openid/login";`.
 

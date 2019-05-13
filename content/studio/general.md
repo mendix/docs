@@ -103,7 +103,7 @@ The left menu bar provides the following options:
 | [Microflows](microflows)             | 3            | Shows a list of all microflows in the app.  After clicking a microflow, it will open in Studio. |
 | [Navigation Document](navigation)    | 4            | Shows a configured menu in the form of a navigation tree. You can expand the menu structure of the navigation tree up to two levels with an unlimited amount of pages. |
 | Search (magnifying glass) icon       | <kbd>/</kbd> | Helps you search through microflows, entities, and pages. Start typing the name of the item you are looking for and the search feature will return any matches it finds, using exact matches as well as fuzzy matches based on the characters entered. <br />You can also use "/" shortcut to search through your app. |
-| [Settings](settings)                 | None         | Shows an overview of all widgets and their status. Widgets are user interface elements (alerts, buttons, charts, etc.) contained in the building blocks. They are used to build pages from. |
+| [Settings](settings)                 | None         | **Settings** consists of **Roles and Permissions** and **Widgets Overview**. <br />Via **[Roles and Permissions](settings-security)** you can manage access to your app for different type of users.  <br />The [**Widgets Overview**](settings-widget-overview) gives you an overview of all widgets and their status. Widgets are user interface elements (alerts, buttons, charts, etc.) that are used to build pages. |
 | [Theme Customizer](theme-customizer) | None         | Here you can style your app with custom branding, colors, and typography. |
 
 ## 6 Toolbox, Properties, and Buzz

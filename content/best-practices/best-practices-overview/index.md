@@ -27,7 +27,7 @@ These best practices will be expanded on an ongoing basis to cover the following
 * [Architecture](../architecture/index)
 	* [Integration](../architecture/integration/integration-overview)
 	* [Performance](../architecture/performance/performance-overview)
-	* Microservices
+	* [Microservices](../architecture/performance/microservices-overview)
 	* Security
 	* CI/CD & test automation
 	* Monitoring & robustness
@@ -42,13 +42,12 @@ For each category and sub-category of best practices, there will be an overview 
 In most cases, the Best Practices will include these components:
 
 * Overview of the area of Best Practices
-* In-depth descriptions of subjects in that area
-	* Use cases in the area
+* In-depth descriptions of subjects in that area or a use case from that area
 * References to other Mendix documentation
 	* [Reference-guide](/refguide/) and [how-to](/howto/) documentation (depending on the Mendix version used for the Best Practices)
 	* [Release notes](/releasenotes/)
 	* [Platform Evaluation Guide](https://www.mendix.com/evaluation-guide/)
-* References to examples in the [Mendix App Store](https://appstore.home.mendix.com/index3.html)
+* In the future there, will be examples in the [Mendix App Store](https://appstore.home.mendix.com/index3.html)
 
 ![](attachments/overview2.png)
 

@@ -1,7 +1,7 @@
 ---
-title: "Process Integration 2"
+title: "Workflow Integration"
 parent: "integration-use-cases"
-menu_order: 3
+menu_order: 2
 draft: true
 ---
 

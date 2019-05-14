@@ -97,4 +97,4 @@ For information on the **Design** section and its properties, see [Design Sectio
 
 ## 4 Read More
 
-* [Page Editor](page-editor)
+* [Pages](page-editor)

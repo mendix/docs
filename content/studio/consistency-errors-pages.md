@@ -163,7 +163,7 @@ To fix the consistency errors, finish configuring the on click action (for examp
 
 ##  8 Read More
 
-* [Page Editor](page-editor)
+* [Pages](page-editor)
 * [Navigation Consistency Errors](consistency-errors-navigation)
 * [Microflow Editor Consistency Errors](consistency-errors-microflows)
 * [Checks](checks)

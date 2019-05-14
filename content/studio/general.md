@@ -148,4 +148,4 @@ Mind the following characteristics when using cut/copy/paste:
 
 * [Domain Model](domain-models)
 * [Microflows](microflows)
-* [Page Editor](page-editor)
+* [Pages](page-editor)

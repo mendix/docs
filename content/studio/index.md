@@ -22,7 +22,7 @@ The main documents in the Studio Guide are the following ones:
 
 * [General Info](general) 
 * [Domain Model](domain-models)
-* [Page Editor](page-editor)
+* [Pages](page-editor)
 * [Navigation Document](navigation)
 * [Microflows](microflows)
 * [Data Filters](filters)

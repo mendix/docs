@@ -152,7 +152,7 @@ Open the **(YourMendixProject)/CustomWidgets/TextBox** folder in your IDE of cho
 5. The container component *TextBox.tsx* receives the properties in the runtime, and forwards the data to the display component. The container works like glue between the Mendix application and the display component. Override the class lines in *TextBox.tsx* until they look like this:
 
 	```ts
-	import { Component, ReactNode, createElement } from “react”; 
+	import { Component, ReactNode, createElement } from "react"; 
 	import { TextInput } from "./components/TextInput";
 	class TextBox extends Component<TextBoxContainerProps> {
 		render(): ReactNode {
@@ -167,16 +167,17 @@ Open the **(YourMendixProject)/CustomWidgets/TextBox** folder in your IDE of cho
 	Explaining the code:
 	
 	* The `textAttribute` is an object that will automatically have the actual data stored in the attribute – when the data is changed, it will cause an update of the component, and the new data will be displayed in the input
-6. Override the class lines in *Textbox.webmodeler.tsx* until they look like this:
+6. Alter *Textbox.webmodeler.tsx* by adding the `TextInput` import to *Textbox.webmodeler.tsx*:
 
-	```ts
+	```ts	
 	import { TextInput } from "./components/TextInput";
+	```
 	
-	declare function require(name: string): string;
+	Then, override the class lines in *Textbox.webmodeler.tsx* until they look like this:
 	
-	// eslint-disable-next-line @typescript-eslint/class-name-casing
+	```ts
 	export class preview extends Component<TextBoxPreviewProps> {
-		render(): JSX.Element {
+		render(): ReactNode {
 			return <TextInput value={this.props.textAttribute} />;
 		}
 	}
@@ -260,13 +261,15 @@ The input works, but the styling could be improved. In the next code snippets, y
 
 While the Mendix input widgets come with labels, you will need to add one to TextBox manually. With the new API it is easy to add a label to any widget.
 
-1.  In the *TextBox.xml* file, add attribute `<systemProperty />` inside the existing property group:
+1.  In the *TextBox.xml* file, add attribute `<propertyGroup caption="Label">` with its child `<systemProperty />` above the existing `<propertyGroup caption="Data source">`:
 
 	```xml
-	<systemProperty key="Label" />
+	<propertyGroup caption="Label">
+		<systemProperty key="Label" />
+	</propertyGroup>
 	```
 
-	This will add the **Show label** radio buttons in the widget properties tab **Data source**. When **Show label** is set to true it will automatically render the label for you in the page editor and the browser:
+	This will add the **Show label** radio buttons in the widget properties tab **Label**. When **Show label** is set to true, it will automatically render the label for you in the page editor and the browser:
 
 	![edit text box two](attachments/pluggable-part-one/edittextboxtwo.png)
 

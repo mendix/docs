@@ -8,17 +8,21 @@ draft: true
 ## 1 What Is Process Integration?
 
 Process integration is a wide and important area that promises automation, digitization, and operational improvement. Often there is a significant business case for this type of IT development, where companies can gain on their competition by being more
-efficient, running lower costs, and providing better and faster service to customers. 
+efficient, running lower costs, and providing better and faster services. 
 
 When a business process runs across several systems, there will be some type of process integration. There are many ways this can be done:
 
-* **Business event Integration**: Work finishes in one App or Thing. The next App is notified to start the next step of the process automatically. This avoids e.g. sending emails and/or re-typing information into another system.
-* **Workflow integration**: A user works in one App and then continues the same process in another App, using e.g. a Deep-Link. By allowing this integration we can have specialized Microservices or Apps that evolve separately, but for the user it seems to be the same system. Refer to Workflow Itnegration Use Case.
-* **Case Management**: Human workflow in phases maintaining a “case”-object with data and status. The case is routed to different user group baskets, and/or sub-cases are created and completed in other systems. This is the best way to support a cross-departmental process, where several user-groups are involved with approvals and coordination.
-* **Process orchestration**: A system actively orchestrates a process across several systems, keeping track of status, re-trying when required, and escalating to human workflow when required. This is useful to automate transaction processing for e.g. banks or provisioning a bill-of-materials and/or when a business event should lead to updates in several systems in parallel.
-* **State Engine/Event Manager**: Passively gathering events related to a process that runs across several systems, to determine that the process finishes correctly, and taking action when something is wrong. This is useful to monitor and manage a chain of Business events (e.g. packages for Track & Trace), or for high volume asynchronous process orchestration.
+* **Business event Integration** – Work finishes in one app, and the next app is notified to start the next step of the process automatically. This avoids, for example, sending emails and having to retype information into another system.
+* **Workflow integration** – A user works in one app and then continues the same process in another app (for example, via a deep link). By enabling this integration, you can have specialized apps or microservices that evolve separately, but for the end-user it seems to be the same system. For more information, refer to [Workflow Integration with Data Transfer Example](workflow-int-data-transfer).
+* **Case Management** – Human workflow in phases maintains a “case” object with data and status. The case is routed to different user-group baskets and/or sub-cases are created and completed in other systems. This is the best way to support a cross-departmental process, where several user groups are involved with approvals and coordination.
+* **Process orchestration** – A system actively orchestrates a process across several systems, keeping track of status, re-trying when required, and escalating to human workflow when required. This is useful for automating transaction processing (for example, in banks), for provisioning a bill of materials, and when a business event should lead to updates in several systems in parallel.
+* **State Engine/Event Manager** – Events are passively gathered related to a process that runs across several systems. This is to determine that the process finishes correctly and that actions can be taken when something is wrong. This is useful for monitoring and managing a chain of business events (for example, packages for track-and-trace) and for high-volume asynchronous process orchestration.
 
-I.e. quite a significant part of all integration and automation is related to process integration. The areas which are **not** in this category are e.g. BI, DWH, Master data Management, and most IoT solutions (that are just collecting data).
+As you can see, a quite a significant part of all integration and automation is related to process integration. The areas which are **not** in this category include the following examples:
+* BI
+* DWH
+* Master data management
+* Most IoT solutions (that are just collecting data)
 
 ## 2 Business Events – Process Flow
 

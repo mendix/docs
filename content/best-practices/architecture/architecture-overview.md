@@ -15,7 +15,7 @@ IT architecture is about making valuable things with technology. The Mendix Plat
 * Secure, stable, and robust in production
 * All the above at a reasonable cost
 
-<<ADD Picture sent>>
+![](attachments/arch-over7.png)
 
 ## 2 Current IT Trends
 

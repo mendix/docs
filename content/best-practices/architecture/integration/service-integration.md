@@ -146,24 +146,16 @@ The integration requirements for transactional data differ from the requirements
 
 ## 8 Process Orchestration & Case Management
 
-In rare cases, a process will finish and several systems will need to be updated at the same time. This process will run over several systems, so you will need a place that knows what the current status is and what to do next.
-
-This pattern was common with business process management (BPM) engines when many people tried to use BPM for almost all situations, which was not very valuable. It was eventually seen that most processes where humans are involved are not deterministic.
-
-For this option, most work is done “when possible” in “phases” where certain pre-conditions are completed first. This leads to case-management systems, which can be quite valuable especially for support desks, where a top-level ticket can be sent around, or sub-tickets can be orchestrated that other teams and support desks take care of.
-
-A problem with process-based work is that, depending on the sector and the type of work, there are different ways of interacting and working. The consequence is that it is often hard to fit real work onto specific BPM and case-management engines. 
-
-Simple process engines and case-management systems can be easily created with Mendix apps. The advantage here is that you get only what you need, and the way of working can be adapted to the case at hand.
-
-In the diagram below, a support app has been given the task of process orchestration for the operationalization of a newly sold product:
+In this diagram, a support app has been given the task of process orchestration for the operationalization of a newly sold product:
 
 ![](attachments/service-integration/process.png)
 
 These are the reasons for this setup:
 
 * The support app already deals with cases and the distribution of tasks
-* If there is an issue, the customer is likely to call Support
+* If there is an issue, the end-user is likely to call support
+
+For more information on process orchestration and case management, see [Workflow Integration](workflow-integration).
 
 ## 9 Ops Integration & Test Services
 

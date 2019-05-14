@@ -146,16 +146,16 @@ The integration requirements for transactional data differ from the requirements
 
 ## 8 Process Orchestration & Case Management
 
-Process Orchestration and Case Management is treated in a separate section, see Process Integration.
+In this diagram, a support app has been given the task of process orchestration for the operationalization of a newly sold product:
 
-In the diagram below, a support app has been given the task of process orchestration for the operationalization of a newly sold product:
+![](attachments/service-integration/process.png)
 
-!These are the reasons for this setup:
+These are the reasons for this setup:
 
 * The support app already deals with cases and the distribution of tasks
-* If there is an issue, the customer is likely to call Support
+* If there is an issue, the end-user is likely to call support
 
-[](attachments/service-integration/process.png)
+For more information on process orchestration and case management, see [Workflow Integration](workflow-integration).
 
 ## 9 Ops Integration & Test Services
 

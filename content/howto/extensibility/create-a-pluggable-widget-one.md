@@ -167,7 +167,7 @@ Open the **(YourMendixProject)/CustomWidgets/TextBox** folder in your IDE of cho
 	Explaining the code:
 	
 	* The `textAttribute` is an object that will automatically have the actual data stored in the attribute – when the data is changed, it will cause an update of the component, and the new data will be displayed in the input
-6. Next you must alter *Textbox.webmodeler.tsx*. Add the `TextInput` import to *Textbox.webmodeler.tsx*:
+6. Alter *Textbox.webmodeler.tsx*. Add the `TextInput` import to *Textbox.webmodeler.tsx*:
 
 	```ts	
 	import { TextInput } from "./components/TextInput";

@@ -1,7 +1,7 @@
 ---
 title: "Integration Use Cases"
 parent: "integration-overview"
-menu_order: 50
+menu_order: 10
 draft: true
 ---
 

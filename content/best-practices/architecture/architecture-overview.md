@@ -6,9 +6,9 @@ menu_order: 2
 draft: true
 ---
 
-## 1 Why Best Practices on Architecture
+## 1 Why Best Practices on Architecture?
 
-IT architecture is about making valuable things with technology. The Mendix Platform is a key enabler to achieve this goal. Organizations that use Mendix and the Partners that help them realize their goals, can use the Best Practices on Architecture to make sure the IT Assets meet the goals:
+IT architecture is about making valuable things with technology, and the Mendix Platform is a key enabler for achieving this goal. Organizations that use the Mendix Platform and the [Mendix partners](https://www.mendix.com/solution-providers/) that help them to realize their goals can use the Architecture Best Practices to make sure their IT assets meet the following goals:
 
 * Valuable for the business
 * Easy to deliver and maintain
@@ -19,23 +19,21 @@ IT architecture is about making valuable things with technology. The Mendix Plat
 
 ## 2 Current IT Trends
 
-There are several IT trends converging, and Agile, DevOps, microservices, cloud, and automation are at the center of the evolution.
-
-As the diagram below presents, areas such as SOA (functional architecture), Agile (methodology), and cloud (infrastructure) are merging into one coherent movement of enterprise DevOps with automation, microservices, and an Agile mindset.
+There are several IT trends converging recently, and Agile, DevOps, microservices, cloud, and automation are at the center of the evolution. As the diagram below presents, areas such as SOA (functional architecture), Agile (methodology), and cloud (infrastructure) are merging into one coherent movement of enterprise DevOps with automation, microservices, and an Agile mindset.
 
 ![](attachments/it-trends.png)
 	
 This evolution makes sense when the IT teams, methodology, organization, infrastructure, and technical components are all related to each other. For optimal results, the overall strategy should be beneficial for all these elements.
 
-Good architecture, technology, and organization should deliver digital transformation to all levels of the company, from customer interactions to business operations. This should happen all the way down to the digital transformation of IT delivery, of which cloud, low-code, CI/CD, microservices, and DevOps are all a part. As the diagram below presents, this all leads to end-users being able to make work with higher quality than ever before.
+Good architecture, technology, and organization should deliver digital transformation to all levels of an organization, from customer interactions to business operations. This should happen all the way down to the digital transformation of IT delivery, of which cloud, low-code, CI/CD, microservices, and DevOps are all a part. As this diagram presents, this all leads to organizations being able to make work with higher quality than ever before:
 
 ![](attachments/digitization.png)
 
 ## 3 Business & IT Alignment
 
-Enterprise DevOps will provide better business and IT alignment, which is at the heart of what Mendix is trying to provide. When users that innovate in IT and users who know how the business runs can cooperate more closely, they will iterate towards better architecture, increased digitization, and more value added to the business.
+Enterprise DevOps will enable better business and IT alignment, which is at the heart of what Mendix is trying to provide. When users that innovate in IT and users who know how the business runs can cooperate more closely, they will iterate towards better architecture, increased digitization, and more value added to the business.
 
-The prerequisite for this entire evolution is delivery automation in IT and IT infrastructure. Mendix—as a cloud and low-code platform—enables BizDevOps to the point that small cross-functional teams no longer need database administrators and infrastructure experts. Such teams can own the entire lifecycle of the apps they build, be more functional, and thus align more closely with the business.
+The prerequisite for this entire evolution is delivery automation in IT and IT infrastructure. As a cloud and low-code platform, Mendix enables BizDevOps to the point that small cross-functional teams no longer need database administrators and infrastructure experts. Such teams can own the entire lifecycle of the apps they build, be more functional, and thus align more closely with the business.
 
 {{% todo %}}[**EXPLAIN DIAGRAM**]{{% /todo %}}
 
@@ -45,7 +43,7 @@ Automation in infrastructure for apps also means that managing more components n
 
 You can adapt the size of apps to what is most efficient to maintain. Microservices can be quite large when using low-code, so the app architecture will often align with how the business sees the world.
 
-All of this means, that we are leaving behind the era when development, operations, and business are separated by a trench of conflicting objectives.  The DevOps teams and the functionally-oriented apps can align with the business they are supposed to support.
+All of this means that we are leaving behind the era when the development, operations, and business are separated by a trench of conflicting objectives. The DevOps teams and the functionally-oriented apps can align with the business they are supposed to support.
 
 ### 4 Architecture Areas
 
@@ -77,9 +75,8 @@ But as many customers have discovered while employing the speed, productivity, a
 
 As the solution, scope, volume, and criticality of a system increases, there is an increased need to have strong technical people on the team and professional architects to help in creating the best solution.
 
-The diagram shows that as solutions grow larger and larger, the Program that implements the solution needs to add more technical and more senior resources in order to architect, design, build and roll out the solution correctly.
+This diagram shows that as solutions grow larger, the team implementing the solution needs to add more technical and senior resources in order to architect, design, build, and roll out the solution correctly:
 
 ![](attachments/arch-over6.png)
 
 The larger and more important the solution, the more thinking and architecture needs to go into it. There may also be more reasons to test and tune the system after functional realization, in addition to requirements for professional monitoring.
-

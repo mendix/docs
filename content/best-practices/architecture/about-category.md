@@ -122,7 +122,7 @@ This diagram presents the primary and out-of-the-box monitoring that is availabl
 
 ![](attachments/clustering.png)
 
-DevOps teams are constantly improving their operational capabilities. As you build more apps and some of these form a part of a microservices system, there are reasons to start evolving the monitoring of your solution. A first step for [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy) end-users can be to dedicate one app to monitoring and controlling the other apps by using the open [Deploy API](/apidocs-mxsdk/apidocs/deploy-api) for Mendix Cloud. You can then also build health checks on the other apps that are called from this control app.
+DevOps teams are constantly improving their operational capabilities. As you build more apps and some of these form a part of a microservices system, there are reasons to start evolving the monitoring of your solution. A first step for [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy) organizations can be to dedicate one app to monitoring and controlling the other apps by using the open [Deploy API](/apidocs-mxsdk/apidocs/deploy-api) for Mendix Cloud. You can then also build health checks on the other apps that are called from this control app.
 
 Some users build a log integration component or connect to a central one. For more professional apps and enterprise-level stability requirements, it is common to have a central monitoring solution such as [Data Dog](https://www.datadoghq.com/).
 

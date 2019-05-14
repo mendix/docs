@@ -153,7 +153,7 @@ In this diagram, a support app has been given the task of process orchestration 
 These are the reasons for this setup:
 
 * The support app already deals with cases and the distribution of tasks
-* If there is an issue, the end-user is likely to call support
+* If there is an issue, the organization is likely to call support
 
 For more information on process orchestration and case management, see [Workflow Integration](workflow-integration).
 

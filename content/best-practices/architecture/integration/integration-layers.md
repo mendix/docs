@@ -9,7 +9,7 @@ draft: true
 
 For large enterprises with a lot of departments and hundreds or thousdands of systems, it makes sense to create integration layers. These layers can be used for messaging and events, all the integration between departments, and long distance integration.
 
-Integration layers provide a level of decoupling, but this comes with the cost of introducing an additional dependency that can affect all projects. However, a benefit of integration layers is that apps are only allowed to connect to one single technology where maybe an enterprise-wide message header can be used that would be useful for BI and logging.
+Integration layers provide a level of decoupling, but this comes with the cost of introducing an additional dependency that can affect all projects. However, a benefit of integration layers is that apps are only allowed to connect to one single technology, where for example an enterprise-wide message header can be used that would be useful for BI and logging.
 
 In one scenario, if you are introducing a new Mendix app that needs to call 35 services from 20 different systems and all of those services already exist, then aligning with only the integration layer team—instead of 20 different teams—is an organizational benefit.
 

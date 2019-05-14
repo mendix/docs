@@ -21,7 +21,7 @@ As this diagram presents, Mendix prefers a mixed strategy in which local connect
 
 ![](attachments/integration-layers/il-intro.png)
 
-##2 Different Integration Layers
+## 2 Different Integration Layers
 
 Describing all the possible integration layers available is outside the scope of this best practices document. However, some standard cases worth mentioning are listed below.
 

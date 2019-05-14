@@ -23,11 +23,7 @@ The Mendix architecture best practices complements the following sections in the
 * [Architecture](https://www.mendix.com/evaluation-guide/enterprise-capabilities/architecture-intro)
 * [Security](https://www.mendix.com/evaluation-guide/enterprise-capabilities/security)
 
-{{% todo %}}[**EXPLAIN WHY THESE BEST PRACTICES WILL BE VALUABLE**]{{% /todo %}}
-
-Mendix best practices around architecture will be valuable for architects, designers, business developers, and more technical developers that work on Mendix app projects. The best practices address common areas where the quality of Mendix solutions can improve by using this information or using the examples in the App Store.
-
-{{% todo %}}[**ADD LINK TO APP STORE WHEN AVAILABLE ABOVE; EXPLAIN DIAGRAM**]{{% /todo %}}
+Mendix Best Practices goes one step deeper than the [Platform Evaluation Guide](https://www.mendix.com/evaluation-guide/) and looks at various aspects of implementing Mendix apps into the enterprise IT landscape. These Best Practices describe how to do integration in different cases, achieve a good performance at high volume, split systems into microservices, and much more. These details will be valuable for Enterprise Architects, Solution Architects, Designers, Business Developers, and Lead Developers.
 
 ![](attachments/arch-over1.png)
 
@@ -37,9 +33,7 @@ This diagram presents an overview of the structure of the Architecture Best Prac
 
 ![](attachments/arch-over2.png)
 
-For each subject there is an overview document, and below that, there are a number of in-depth descriptions and business use cases. Some of these documents link to a module in the App Store that demonstrates example modelling reflecting the theory.
-
-{{% todo %}}[**ADD LINK TO APP STORE WHEN AVAILABLE ABOVE**]{{% /todo %}}
+For each subject there is an overview document, and below that, there are a number of in-depth descriptions and business use cases. In the future, there will be example modules in the App Store that reflect key parts of the theory.
 
 ## 3 Architecture Subjects
 
@@ -55,13 +49,9 @@ The best thing to have with integration is an open mind while thinking functiona
 
 Systems depend on each other – that is part of life. But dependencies can be made smaller and more explicit as well as more functionally easy to understand. This helps to make building, operating, and maintaining a solution easier.
 
-The diagram below shows the most commonly used Mendix integration pattern. These are synchronous services, mostly using REST, which is extremely easy. However, files, queues, Kafka, RPC, and many other technologies are possible.
+The diagram below shows the most commonly used Mendix integration pattern. These are synchronous services, mostly using REST, which is very easy to accomplish (for more information, see [Integration](integration/service-integration)). However, files, queues, Kafka, RPC, and many other technologies are also possible.
 
 ![](attachments/request-reply2.png)
-
-{{% todo %}}[**ADD LINK TO SECTION BELOW WHEN AVAILABLE**]{{% /todo %}}
-
-For more details on Integrating apps with each other and other systems, things, and devices as well as monitoring, see the [Integration Best Practices](integration/integration-overview).
 
 ### 3.2 Performance
 
@@ -105,9 +95,11 @@ Security architecture inovlves making sure no one can penetrate, destroy, disrup
 
 This subject is increasingly important. It is in constant evolution as technology providers get better at defending themselves and malicious parties get better at breaking the same systems.
 
-Mendix has good certification for security.
+Mendix has various certifications for security. For details, see:
 
-{{% todo %}}[**NEED MORE CONTENT FROM JASPER/BART**]{{% /todo %}}
+* [Security](https://www.mendix.com/evaluation-guide/enterprise-capabilities/security) in the *Platform Evaluation Guide*
+* [Security How-to's](https://docs.mendix.com/howto7/security/) in the Mendix documentation
+* [Authentication & Single Sign-On](https://gettingstarted.mendixcloud.com/link/module/115/lecture/933) in the Mendix Academy
 
 The following security areas are generally considered for best practices: 
 
@@ -130,9 +122,7 @@ This diagram presents the primary and out-of-the-box monitoring that is availabl
 
 ![](attachments/clustering.png)
 
-Beyond that, teams are constantly improving their monitoring capabilities. As you build more and more apps and some of these form a part of a microservices system, there are reasons to start evolving the monitoring of your solution. The first step for [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy) customers is to dedicate one app to monitoring and controlling the other app by using the open [Deploy API](/apidocs-mxsdk/apidocs/deploy-api) for Mendix Cloud.
-
-{{% todo %}}[**VERIFY THAT ABOVE API IS CORRECT TO LINK TO**]{{% /todo %}}
+DevOps teams are constantly improving their operational capabilities. As you build more apps and some of these form a part of a microservices system, there are reasons to start evolving the monitoring of your solution. A first step for [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy) organizations can be to dedicate one app to monitoring and controlling the other apps by using the open [Deploy API](/apidocs-mxsdk/apidocs/deploy-api) for Mendix Cloud. You can then also build health checks on the other apps that are called from this control app.
 
 Some users build a log integration component or connect to a central one. For more professional apps and enterprise-level stability requirements, it is common to have a central monitoring solution such as [Data Dog](https://www.datadoghq.com/).
 
@@ -176,9 +166,7 @@ In accordance with Agile methodology, you should continuously measure and verify
 
 As your architecture is improved, you can improve the quality and value of IT solutions for all the teams building, managing, and using the IT solution.
 
-Ultimately, Mendix is there to support you both with technology and consulting. We provide architecture workshops where we think along with you on any area related to making the next generation IT with Mendix.
-
-{{% todo %}}[**ADD DIAGRAM ABOUT ARCHITECTURE WORKSHOP WITH CONTACT EMAIL ADDRESS**]{{% /todo %}}
+Ultimately, Mendix is there to support you both with technology and consulting. We provide architecture workshops where we think along with you on any area related to making the next generation IT with Mendix. Please contact the Mendix Architecture Guild via <DIS_Architecture_Guild@mendix.com> for more information.
 
 ## 5 Read More
 

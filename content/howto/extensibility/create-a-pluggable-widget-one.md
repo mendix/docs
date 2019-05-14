@@ -314,7 +314,7 @@ The value from the attribute can be displayed and updated using the other input,
 
 	```ts
 	import { CSSProperties, ChangeEvent, Component, ReactNode, createElement } from "react";
-	import * as classNames from "classnames";
+	import classNames from "classnames";
 	export interface InputProps {
 		value: string;
 		className?: string;

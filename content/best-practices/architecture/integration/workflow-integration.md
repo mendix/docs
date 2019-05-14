@@ -13,13 +13,7 @@ This document describes some best practices around the scenario when a business 
 
 In most architectures, there are business processes that exceed the functionality of a single microservice app. In that case, there will be some transactional data used in that process that needs to be transferred between the microservices involved.
 
-Process integration involves the integration of transactional data over multiple apps or microservices. This common type of integration has several flavors:
-
-* **Business events**  – some work finishes in one app, and the next app should be notified to start the next steps of the process
-* **Workflow integration** – a user works in one app and then continues the same process in another app (in some cases this will require the worked-on data to be transferred to the next app)
-* **Process orchestration** – at the end of a business event, several other systems need to be informed and/or updated
-* **State engine** – a large amount of events are gathered related to different processes in order to determine that all the processes finish correctly
-* **Case management** – an implementation of a human workflow in phases maintaining a “case” object with data (this case can run in one app, use process orchestration, and act as a state engine, or it can be partially finalized in other apps and use sub-cases)
+Process integration involves the integration of transactional data over multiple apps or microservices. This common type of integration has several flavors. For details, see [Process Integration](process-integration).
 
 The integration requirements for transactional data differ from the requirements for master data and reference data. Transactional data changes often and needs to be available for other systems quickly. In cases where a workflow spans multiple systems, the data needs to be available almost instantly for the user to continue working.
 

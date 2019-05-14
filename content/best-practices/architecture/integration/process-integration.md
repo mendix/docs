@@ -1,7 +1,7 @@
 ---
 title: "Process Integration"
 parent: "integration-overview"
-menu_order: 3
+menu_order: 4
 draft: true
 ---
 
@@ -13,7 +13,7 @@ efficient, running lower costs, and providing better and faster service to custo
 When a business process runs across several systems, there will be some type of process integration. There are many ways this can be done:
 
 * **Business event Integration**: Work finishes in one App or Thing. The next App is notified to start the next step of the process automatically. This avoids e.g. sending emails and/or re-typing information into another system.
-* **Workflow integration**: A user works in one App and then continues the same process in another App, using e.g. a Deep-Link. By allowing this integration we can have specialized Microservices or Apps that evolve separately, but for the user it seems to be the same system.
+* **Workflow integration**: A user works in one App and then continues the same process in another App, using e.g. a Deep-Link. By allowing this integration we can have specialized Microservices or Apps that evolve separately, but for the user it seems to be the same system. Refer to Workflow Itnegration Use Case.
 * **Case Management**: Human workflow in phases maintaining a “case”-object with data and status. The case is routed to different user group baskets, and/or sub-cases are created and completed in other systems. This is the best way to support a cross-departmental process, where several user-groups are involved with approvals and coordination.
 * **Process orchestration**: A system actively orchestrates a process across several systems, keeping track of status, re-trying when required, and
     escalating to human workflow when required. This is useful to automate

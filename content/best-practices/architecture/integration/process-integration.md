@@ -24,24 +24,24 @@ As you can see, a quite a significant part of all integration and automation is 
 * Master data management
 * Most IoT solutions (that are just collecting data)
 
-## 2 Business Events – Process Flow
+## 2 Business Events & Process Flow
 
-The most common process integration is probably Business Events, i.e. some part of the process finishes in one App, which should trigger something to happen in the next App or system of Apps.
+The most common process integration is for business events. This means that some part of a  process finishes in one app, and this should trigger something to happen in the next app or system of apps.
 
-The “Business Event” messages can be transferred in in different ways depending on the requirements, the most common options are:
+The business-event messages can be transferred in in different ways depending on the requirements. These are the most common options:
 
--   **Use REST Pull from the next system,** which is the simplest and most commonly used option, which works well for a majority of situations
--   **Use Message Broker in the middle,** or any other external queuing system when there is High Volume, Large Distance or Poor Network:
--   **Use REST Push end-to-end** when the destination system should validate the     business event, especially when there is an end-user working in the source system and that can correct information directly
+* **Use REST Pull from the next system** – this is the simplest and most commonly used option, which works well for a majority of situations
+* **Use a message broker in the middle** – you can use a message broker or any other external queuing system when there is a high volume, large distance, or poor network
+* **Use REST Push end-to-end** – this is the best option when the destination system should validate the business event, especially when there is a user working in the source system who can correct information directly
 
-Using a real business example:
+This is a real business example:
 
-1.  An Order is completed in the Ordering App
-2.  A message goes to the Packaging App, where shipment is prepared
-3.  Packaging App, calls the Shipment App, that sends the shipment
-4.  Shipment App calls Notification App, that sends a message to the customer.
+1. An order is completed in an ordering app.
+2. A message goes to a packaging app, where a shipment is prepared.
+3. The packaging app calls the shipment app, which sends the shipment.
+4. The shipment app calls a notification app, which sends a message to the customer.
 
-The figure below shows the three main cases, and after that each case is
+This diagram displays shows the three main cases, and after that each case is
 described:
 
 ![](process-integration/2e8b281d4d37acfc134d721f220c6457.png)

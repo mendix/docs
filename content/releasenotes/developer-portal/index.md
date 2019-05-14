@@ -16,6 +16,12 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud V3, and other deploym
 
 * We fixed an issue for users deploying to SAP Cloud Portal where newly-bound services were bound correctly but did not appear in the Mendix Developer Portal. (Ticket 81418)
 
+### May 10th, 2019
+
+#### Improvements
+
+* We have changed the way you request a license for a new app. You can now request a license using the [Request New App Node](https://newnode.mendix.com/) app. Other requests should continue to be made through the [Support Portal](https://support.mendix.com).
+
 ### May 9th, 2019
 
 #### Fixes

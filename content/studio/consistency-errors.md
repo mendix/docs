@@ -15,15 +15,15 @@ Errors need to be solved before your app can be published. An example of a consi
 
 Consistency errors can occur in the following editors of Mendix Studio:
 
-* Page editor (For information on consistency error in the page editor, see [Page Editor Consistency Errors](consistency-errors-pages))
+* Pages (For information on consistency error in the page editor, see [Page Consistency Errors](consistency-errors-pages))
 * Navigation document (For information on consistency error in the navigation, see [Navigation Consistency Errors](consistency-errors-navigation))
-* Microflows editor (For information on consistency error in the navigation, see [Microflow Editor Consistency Errors](consistency-errors-microflows))
+* Microflows (For information on consistency error in the microflow editor, see [Microflow Consistency Errors](consistency-errors-microflows))
 
 ##  2 Read More
 
-* [Page Editor Consistency Errors](consistency-errors-pages)
+* [Page Consistency Errors](consistency-errors-pages)
 * [Navigation Consistency Errors](consistency-errors-navigation)
-* [Microflow Editor Consistency Errors](consistency-errors-microflows)
+* [Microflow Consistency Errors](consistency-errors-microflows)
 * [Checks](checks)
 * [Pages](page-editor)
 * [Navigation Document](navigation)

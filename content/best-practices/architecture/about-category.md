@@ -166,7 +166,7 @@ In accordance with Agile methodology, you should continuously measure and verify
 
 As your architecture is improved, you can improve the quality and value of IT solutions for all the teams building, managing, and using the IT solution.
 
-Ultimately, Mendix is there to support you both with technology and consulting. We provide architecture workshops where we think along with you on any area related to making the next generation IT with Mendix. Please contact the Architecture Guild via [DIS_Architecture_Guild@mendix.com](DIS_Architecture_Guild@mendix.com) for more information.
+Ultimately, Mendix is there to support you both with technology and consulting. We provide architecture workshops where we think along with you on any area related to making the next generation IT with Mendix. Please contact the Architecture Guild via DIS_Architecture_Guild@mendix.com for more information.
 
 ## 5 Read More
 

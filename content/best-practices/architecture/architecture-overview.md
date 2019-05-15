@@ -35,7 +35,7 @@ Enterprise DevOps will enable better business and IT alignment, which is at the 
 
 The prerequisite for this entire evolution is delivery automation in IT and IT infrastructure. As a cloud and low-code platform, Mendix enables BizDevOps to the point that small cross-functional teams no longer need database administrators and infrastructure experts. Such teams can own the entire lifecycle of the apps they build, be more functional, and thus align more closely with the business.
 
-{{% todo %}}[**EXPLAIN DIAGRAM**]{{% /todo %}}
+The diagram below shows how we have entered a new era of IT evolution, enabled by automation around IT infrastructure (Cloud) and IT development (Low Code like Mendix). That automation makes it possible for small business focused teams to evolve new IT components all the way from design to operations with little or minimal support from an Ops department. It also makes the cost of managing more components negligeable, allowing to build smaller functional components (Microservices), that in turn allows teams and business units to be autonomous and evolve a lot faster. As a result - Business and IT can cooperate a lot closer and easier than before, and automation, digitization, collaboration and other efficiency enhancing developments can be accellerated, putting some organizations that adopt this new paradigm ahead of the ones that do not.
 
 ![](attachments/it-alignment.png)
 

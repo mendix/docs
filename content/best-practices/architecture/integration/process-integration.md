@@ -21,7 +21,7 @@ When a business process runs across several systems, there will be some type of 
 
 * **Case Management** – Human workflow in phases maintains a “case” object with data and status. The case is routed to different user-group baskets and/or sub-cases are created and completed in other systems. This is the best way to support a cross-departmental process, where several user groups are involved with approvals and coordination.
 
-	![](attchments/process-integration/process-int3.png)
+	![](attachments/process-integration/process-int3.png)
 
 * **Process orchestration** – A system actively orchestrates a process across several systems, keeping track of status, re-trying when required, and escalating to human workflow when required. This is useful for automating transaction processing (for example, in banks), for provisioning a bill of materials, and when a business event should lead to updates in several systems in parallel.
 

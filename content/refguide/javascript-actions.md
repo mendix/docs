@@ -12,7 +12,7 @@ With JavaScript actions, you can extend the functionality of your application in
 
 {{% alert type="info" %}}
 
-Each JavaScript action defined in Mendix Studio Pro corresponds to a file *{name of JavaScript action}.js* in the subdirectory *javascriptsource{module name}/actions/* of the project directory.
+Each JavaScript action defined in Mendix Studio Pro corresponds to a file *{name of JavaScript action}.js* in the subdirectory **javascriptsource{module name}/actions/** of the project directory.
 
 The skeletons of these *.js* files are generated automatically when you save the action, and  the JavaScript actions can immediately be edited in the embedded code editor.
 
@@ -32,17 +32,17 @@ A JavaScript action has zero or more parameters. You use parameters to pass data
 
 Each parameter has a name, type, category, and description. 
 
-Use categories to keep the parameters apart in a [JavaScript Action Call](javascript-action-call). If you do not specify a category, the parameter will appear in the **Input** group.
+Use categories to keep parameters apart in a [JavaScript Action Call](javascript-action-call). If you do not specify a category, the parameter will appear in the **Input** group.
 
 The parameter types supported by JavaScript actions are described below.
 
 #### 2.2.1 Object
 
-The object parameter type allows the user to pass a Mendix object to a JavaScript action. You must also select its Entity type, which can be either a specific entity or a type parameter. In the generated JavaScript action template code, this type is represented as an MxObject.
+The object parameter type allows you to pass a Mendix object to a JavaScript action. You must also select its Entity type, which can be either a specific entity or a type parameter. In the generated JavaScript action template code, this type is represented as an MxObject.
 
 #### 2.2.2 List
 
-The list parameter type allows the user to pass a list of Mendix objects to a JavaScript action. You must also select its entity type, which can be either a specific entity or a type parameter. In the generated JavaScript action template code, this type is represented as an array of MxObjects.
+The list parameter type allows you to pass a list of Mendix objects to a JavaScript action. You must also select its entity type, which can be either a specific entity or a type parameter. In the generated JavaScript action template code, this type is represented as an array of MxObjects.
 
 #### 2.2.1 Entity Type
 
@@ -50,27 +50,27 @@ The entity parameter type is a placeholder. It stands in for an entity that will
 
 #### 2.2.2 Boolean Type 
 
-The Boolean parameter type allows users to pass a Boolean value to a JavaScript action. 
+The Boolean parameter type allows you to pass a Boolean value to a JavaScript action. 
 
 #### 2.2.3 Date and Time Type
 
-The date and time parameter type allows JavaScript action users to pass a date and time value to a JavaScript action. In the generated JavaScript action code, this type will be represented as a JavaScript `Date`.
+The date and time parameter type allows you to pass a date and time value to a JavaScript action. In the generated JavaScript action code, this type will be represented as a JavaScript `Date`.
 
 #### 2.2.4 Decimal Type
 
-The decimal parameter type allows JavaScript action users to pass a decimal value to a JavaScript action. In the generated JavaScript action code, this type will be represented as a [Big](https://www.npmjs.com/package/big-js) object.
+The decimal parameter type allows you to pass a decimal value to a JavaScript action. In the generated JavaScript action code, this type will be represented as a [Big](https://www.npmjs.com/package/big-js) object.
 
 #### 2.2.5 Enumeration Type
 
-The enumeration parameter type allows JavaScript action users to pass a enumeration value to a JavaScript action. In the generated JavaScript action code, this type will be represented as a string.
+The enumeration parameter type allows you to pass a enumeration value to a JavaScript action. In the generated JavaScript action code, this type will be represented as a string.
 
 #### 2.2.6 Integer/Long Type
 
-The integer/long parameter type allows JavaScript action users to pass a decimal value to a JavaScript action. In the generated JavaScript action code, this type will be represented as a [Big](https://www.npmjs.com/package/big-js) object.
+The integer/long parameter type allows you to pass a decimal value to a JavaScript action. In the generated JavaScript action code, this type will be represented as a [Big](https://www.npmjs.com/package/big-js) object.
 
 #### 2.2.7 String Type
 
-The string parameter type allows JavaScript action users to pass a string value to a JavaScript action.
+The string parameter type allows you to pass a string value to a JavaScript action.
 
 #### 2.2.8 Return Type
 
@@ -84,13 +84,13 @@ A JavaScript action has zero or more type parameters. Each type parameter should
 
 ### 4 Expose as Nanoflow Action
 
-By selecting **Expose as nanoflow action** in a JavaScript action's **Settings** tab, it is possible to expose the JavaScript action as a nanoflow action. Exposing the JavaScript action will make it appear in the **Toolbox** window when editing a nanoflow in the category of your choice. When this action is used in a nanoflow, it will show the provided caption and icon.
+By selecting **Expose as nanoflow action** in a JavaScript action's **Settings** tab, it is possible to expose a JavaScript action as a nanoflow action. Exposing the JavaScript action will make it appear in the **Toolbox** window when editing a nanoflow in the category of your choice. When this action is used in a nanoflow, it will show the provided caption and icon.
 
-A caption and category are required when exposing a JavaScript action, but an icon is optional. When no icon is selected, the default JavaScript action icon is used. The recommended size for the icon is 16x16 pixels.
+A caption and category are required when exposing a JavaScript action, but an icon is optional. When no icon is selected, the default JavaScript action icon is used. The recommended size for an icon is 16x16 pixels.
 
 ## 5 Documentation
 
-In the **Documentation** tab of the JavaScript action's **Settings** tab, you can document the JavaScript action. The documentation is copied into the JavaScript action as comment on the function in the corresponding *.js* file.
+In the **Documentation** tab of the JavaScript action's **Settings** tab, you can document a JavaScript action. Your documentation is copied into the JavaScript action as comment on the function in the corresponding *.js* file.
 
 ## 6 Code
 

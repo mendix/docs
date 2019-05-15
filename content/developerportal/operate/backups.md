@@ -109,7 +109,11 @@ Backup Details | Cloud Version | Description
 
 At the bottom of the screen, you can click **Delete** to delete this particular backup.
 
-## 4 Read More
+## 4 Known issues
+
+Specifically in **Mendix Cloud V4**, backups that contain a very large number of files (roughly, greater than 50,000) will experience slow performance for all backup operations (create, download, restore, upload). This is beacuse there is an inherent overhead associated with each file; as the number of files because very large, this overhead becomes quite significant, on the order of hours.
+
+## 5 Read More
 
 * [How to Create a Backup](create-backup)
 * [How to Download a Backup](download-backup)

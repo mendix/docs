@@ -75,7 +75,14 @@ For most of the integration related to Mendix, there are five basic solution cat
 
 ## 6 Overview of Use Cases & Solution Options
 
-Plotting functional use cases against basic methods of integration allows you to see there are several common options available. That is good, because integration needs to be flexible in a solution for the architect to select the best option for a specific situation. For example, you may choose not to change an old system leading to another choice than if we built two new apps.
+Plotting functional use cases against basic methods of integration allows you to see there are several common options available. That is good, because integration needs to be flexible in a solution for the architect to select the best option for a specific situation. 
+
+For example, you may choose not to change an old system leading to another choice than if we built two new apps.
+
+It means that we may choose the less ideal way to integrate in order not to change an old system.
+If we were building 2 new Apps we would make another choice.
+
+For example, you may have to choose a less ideal way to integrate in order to not change an old system. This may in fact be a better solution than building two new apps.
 
 {{% todo %}}[**CLARIFY SENTENCE ABOVE**]{{% /todo %}}
 

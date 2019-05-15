@@ -50,7 +50,7 @@ For more information on delete behavior, see section the [Delete Behavior](domai
 
 ## 3 Read More
 
-* [Page Editor Consistency Errors](consistency-errors-pages)
+* [Page Consistency Errors](consistency-errors-pages)
 * [Navigation Consistency Errors](consistency-errors-navigation)
-* [Microflow Editor Consistency Errors](consistency-errors-microflows)
+* [Microflow Consistency Errors](consistency-errors-microflows)
 * [Checks](checks)

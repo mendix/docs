@@ -1,5 +1,5 @@
 ---
-title: "Page Editor Consistency Errors"
+title: "Page Consistency Errors"
 category: "Consistency Errors"
 description: "Describes consistency errors in the page editor in Mendix Studio and the way to fix them."
 menu_order: 
@@ -165,5 +165,5 @@ To fix the consistency errors, finish configuring the on click action (for examp
 
 * [Pages](page-editor)
 * [Navigation Consistency Errors](consistency-errors-navigation)
-* [Microflow Editor Consistency Errors](consistency-errors-microflows)
+* [Microflow Consistency Errors](consistency-errors-microflows)
 * [Checks](checks)

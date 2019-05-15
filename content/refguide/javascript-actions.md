@@ -66,7 +66,7 @@ The enumeration parameter type allows JavaScript action users to pass a enumerat
 
 #### 2.2.6 Integer/Long Type
 
-The integer/long parameter type allows JavaScript action users to pass a decimal value to a JavaScript action. In the generated JavaScript action code, this type will be represented as a [Big](https://www.npmjs.com/package/big-js).
+The integer/long parameter type allows JavaScript action users to pass a decimal value to a JavaScript action. In the generated JavaScript action code, this type will be represented as a [Big](https://www.npmjs.com/package/big-js) object.
 
 #### 2.2.7 String Type
 
@@ -74,7 +74,7 @@ The string parameter type allows JavaScript action users to pass a string value 
 
 #### 2.2.8 Return Type
 
-**revisit this section**
+**get suggestions from Marco to increase clarity**
 
 The return parameter type determines the type of data a JavaScript action returns. Because many APIs are asynchronous, you can also return a `Promise` object which resolves to this type. You can even use the result of a JavaScript action in the nanoflow in which you call it. In any type you can use for parameters, you can also use a return type.
 
@@ -101,6 +101,6 @@ In the **Code** tab of the JavaScript action's **Settings** tab, you can edit th
 ## Read More
 
 * [JavaScript Action Call](javascript-action-call)
-* [Microflows](microflows)
+* [Nanoflows](nanoflows)
 * [Java Action Call](java-action-call)
 * [Microflow Call](microflow-call)

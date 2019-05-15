@@ -41,6 +41,5 @@ This property determines if the result of the JavaScript action will be stored i
 ## 4 Read More
 
 * [JavaScript Actions](jsactionsrefguide)
-* [Microflows](microflows)
+* [Nanoflows](nanoflows)
 * [Java Action Call](java-action-call)
-* [Microflow Call](microflow-call)

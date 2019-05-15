@@ -74,9 +74,7 @@ The string parameter type allows JavaScript action users to pass a string value 
 
 #### 2.2.8 Return Type
 
-**get suggestions from Marco to increase clarity**
-
-The return parameter type determines the type of data a JavaScript action returns. Because many APIs are asynchronous, you can also return a `Promise` object which resolves to this type. You can even use the result of a JavaScript action in the nanoflow in which you call it. In any type you can use for parameters, you can also use a return type.
+The return parameter type determines the type of data a JavaScript action returns. Because many APIs are asynchronous, you can also return a `Promise` object which resolves to this type. The return value of the JavaScript action can be stored as a variable. This variable can be used in the nanoflow where it is called. In any type you can use for parameters, you can also use a return type.
 
 ### 3 Type Parameters
 

@@ -96,10 +96,7 @@ This is the flow for this ordering process example:
 1. The end-user creates an order in the ordering app.
 2. The customer searches for the the customer in the customer app and allows the end-user to select it in the ordering app.
 3. If the customer is not found, the end-user clicks **Create User** in the ordering app UI. Via a deep link, the end-user is taken to the customer app UI.
-4. The customer is created and stored in the customer app, after which the end-user is linked back to the same context/order in the ordering app.
-	{{% alert type="info" %}}
-	The data should be saved in the ordering app to be available when the end-user comes back. Alternatively, selecting the customer can be made to be the first step in the ordering process.
-	{{% /alert %}}
+4. The customer is created and stored in the customer app, after which the end-user is linked back to the same context/order in the ordering app. Note that the data should be saved in the ordering app to be available when the end-user comes back. Alternatively, selecting the customer can be made to be the first step in the ordering process.
 5. Before control is handed over to the user in the ordering app, the customer data is retrieved and stored in the relevant fields on the order. This is then displayed in the ordering app UI.
 
 ## 4 Process Orchestration {#po}

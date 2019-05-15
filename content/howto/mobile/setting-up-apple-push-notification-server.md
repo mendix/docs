@@ -38,7 +38,7 @@ Press the download button and store the key in a secure place. Also, copy the **
 
 ### 2.4 Configuring APNs in Your Application
 
-For the last step, you need to configure APNs within your application. This can be done by logging into your application as a user with the Administrator role and navigating to the **PushNotifications_Administration** page that was set up in [step 7](implementation-guide#setting) of *How to Implement Push Notifications*.
+For the last step, you need to configure APNs within your application. This can be done by logging into your application as a user with the Administrator role and navigating to the **PushNotifications_Administration** page that was set up in the [Setting Up the Project Security for Your Module](implementation-guide#setting) step of *How to Implement Push Notifications*.
 
 For this purpose, do the following:
 
@@ -52,7 +52,7 @@ For this purpose, do the following:
 
 ## 3 Option B: Using an SSL certificate
 
-Follow the stepsbelow to obtain and set up an Apple Push Notifications service SSL certificate from Apple.
+Follow the steps below to obtain and set up an Apple Push Notifications service SSL certificate from Apple.
 
 ### 3.1 Logging in to the Apple Developer Center
 
@@ -76,7 +76,7 @@ This certificate needs to be converted into the *.p12* format. If you do not kno
 
 ### 3.5 Configuring APNs in Your Application
 
-For the last step, you need to configure APNs within your application. This can be done by logging into your application as a user with Administrator role and navigating to the **PushNotifications_Administration** page that was set up in [step 7](implementation-guide#setting) of *How to Implement Push Notifications*.
+For the last step, you need to configure APNs within your application. This can be done by logging into your application as a user with Administrator role and navigating to the **PushNotifications_Administration** page that was set up in the [Setting Up the Project Security for Your Module](implementation-guide#setting) step of *How to Implement Push Notifications*.
 
 To configure your APNs, do the following:
 

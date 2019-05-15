@@ -7,7 +7,20 @@ draft: true
 
 ## 1 Introduction
 
-For large enterprises with a lot of departments and hundreds or thousdands of systems, it makes sense to create integration layers. These layers can be used for messaging and events, all the integration between departments, and long distance integration.
+For large enterprises with several departments and hundreds of systems, it makes sense to create integration layers. These layers provide one or more benefits to an organization:
+1. A form of decoupling between systems and departments, so every app does not connect directly to every other app
+2. A connectivity layer between networks, e.g. 
+   a) between cloud and premises
+   b) between geographies or areas
+   c) between customoer systems and external companies (as an external API gateway) 
+3. Provide a messaging platform with queue management
+
+As we are moving from SOA architectures towards Microservices with "dumb pipes and smart end-points" we see that:
+1. Integration layers get thinner, i.e. they usually do less functionally than before, often no transformation at all
+2. We rarely have Integration layers within a systems, i.e. we usually do not have an integration layer between the UI and the Database of an app or a system 
+3. We rarely have Integration layers between apps that belong to the same system, or even between apps that are owned by the same department and built by the same DevOps tribe
+
+The diagram below shows how previously systems crossed integration layers but that is no longer common. In the old way every single UI interaction usually lead to interaction across the integration layer to an external data source. In the new world, with Microservices we keep the data in the Microservices, and use either a thin API management layers for communicating full business events, or we have no integration layer at all.
 
 Integration layers provide a level of decoupling, but this comes with the cost of introducing an additional dependency that can affect all projects. However, a benefit of integration layers is that apps are only allowed to connect to one single technology, where for example an enterprise-wide message header can be used that would be useful for BI and logging.
 

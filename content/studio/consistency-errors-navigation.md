@@ -101,7 +101,7 @@ Now the new object of type *Customer* will be created and passed to the home pag
 ## 3 Read More
 
 * [Navigation Document](navigation)
-* [Page Editor Consistency Errors](consistency-errors-pages)
-* [Microflow Editor Consistency Errors](consistency-errors-microflows)
+* [Page Consistency Errors](consistency-errors-pages)
+* [Microflow Consistency Errors](consistency-errors-microflows)
 * [Microflows](microflows)
 * [Checks](checks)

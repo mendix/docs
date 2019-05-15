@@ -28,7 +28,7 @@ After microflows are created, you can add them to pages to run them in your app.
 
 To embed the microflow with an exclusive split (the attribute of the enumeration type) to pages, do the following:
 
-1. Сreate a page for the existing customers details and name it *Customer_details*. For more information on creating pages, see section [3.2 Creating a New Page](page-editor) in the *Page Editor*.
+1. Сreate a page for the existing customers details and name it *Customer_details*. For more information on creating pages, see section [3.2 Creating a New Page](page-editor) in *Pages*.
 2.  In **Toolbox**>**Widgets** >**Data Containers**, find **Data View**.
 
     ![](attachments/microflows-how-to-configure-exclsplit/data-view.png)

@@ -1,6 +1,6 @@
 ---
 title: "Widgets"
-category: "Page Editor"
+category: "Pages"
 description: "Describes widgets in Mendix Studio."
 tags: ["studio", "page editor", "pages", "widgets"]
 ---
@@ -92,6 +92,6 @@ Some similar widgets are packaged together: downloading one of these widgets wil
 
 ## 6 Read More 
 
-* [Page Editor](page-editor)
+* [Pages](page-editor)
 * [Settings](settings)
 * [App Store Overview](/developerportal/app-store/app-store-overview)

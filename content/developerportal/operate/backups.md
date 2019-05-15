@@ -111,7 +111,7 @@ At the bottom of the screen, you can click **Delete** to delete this particular 
 
 ## 4 Known issues
 
-Specifically in **Mendix Cloud V4**, backups that contain a very large number of files (roughly, greater than 50,000) will experience slow performance for all backup operations (create, download, restore, upload). This is beacuse there is an inherent overhead associated with each file; as the number of files because very large, this overhead becomes quite significant, on the order of hours.
+**Mendix Cloud V4** backups that contain a very large number of files (that is, greater than about 50,000) will experience slow performance for _all_ backup operations (create, download, restore, and upload). This is because of the inherent overhead associated with each file; as the number of files increases, this overhead becomes quite significant, and can be in the order of hours.
 
 ## 5 Read More
 

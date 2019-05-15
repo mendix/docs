@@ -15,6 +15,12 @@ The SAP OData Connector is a specific SAP connector for integrating with SAP bac
 * Add the SAP OData Connector to your Mendix app
 * Configure the SAP OData Connector
 
+{{% alert type="warning" %}}
+The SAP OData endpoint which is used in this how-to has been moved, so this example will no longer work when run.
+
+We are investigating a new SAP OData endpoint and will update this how-to as soon as we can.
+{{% /alert %}}
+
 ## 2 Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:

@@ -7,7 +7,21 @@ draft: true
 
 ## 1 Introduction
 
-For large enterprises with a lot of departments and hundreds or thousdands of systems, it makes sense to create integration layers. These layers can be used for messaging and events, all the integration between departments, and long distance integration.
+For large enterprises with several departments and hundreds of systems, it makes sense to create integration layers. These layers provide one or more benefits to an organization:
+
+* A form of decoupling between systems and departments, so that every app does not connect directly to every other app.
+* A connectivity layer between networks, for example between cloud and premises, geographies or areas, and customer systems and external companies (as an external API gateway) 
+* A messaging platform with queue management
+
+As you move away from SOA architectures towards microservices with "dumb pipes and smart end-points," you can observe the following points:
+
+* Integration layers are getting thinner, meaning, they usually do less functionally than before, with often no transformation at all
+* There are rarely integration layers within systems, meaning, you usually do not have an integration layer between the UI and the database of an app or a system
+* You rarely have integration layers between apps that belong to the same system, or even between apps that are owned by the same department and built by the same DevOps tribe
+
+The diagram below shows how systems previously crossed integration layers, but that is no longer common. In the old way, every single UI interaction usually led to interaction across the integration layer to an external data source. In the new world of microservices, you keep the data in the microservices. Then you use either a thin API management layer for communicating full business events or no integration layer at all.
+
+![](attachments/integration-layers/il-intro1.png)
 
 Integration layers provide a level of decoupling, but this comes with the cost of introducing an additional dependency that can affect all projects. However, a benefit of integration layers is that apps are only allowed to connect to one single technology, where for example an enterprise-wide message header can be used that would be useful for BI and logging.
 
@@ -19,7 +33,7 @@ This means that if the team that owns the integration layer is adequately staffe
 
 As this diagram presents, Mendix prefers a mixed strategy in which local connections between closely related microservices and apps can and should be direct, while a thin integration layer is good for communication that is organizationally or network-wise farther away:
 
-![](attachments/integration-layers/il-intro.png)
+![](attachments/integration-layers/il-intro2.png)
 
 ## 2 Different Integration Layers
 

@@ -7,26 +7,37 @@ draft: true
 
 ## 1 Introduction
 
+Service integration means using a synchronous request-reply as the integration paradigm. This is most commonly done via REST and OData, and sometimes via SOAP. In addition, older versions of RPC calls usually over TCFP/IP are synchronous.
+
 It is easy to understand synchronous request-reply interfaces, because the service either works or it does not. Furthermore, the initiating process gets feedback instantly. This makes error handling easier, because the same system that initiates the call also gets information about the result and can take a relevant action.
 
-To start with service integration, consider this scenario: a user is filling in an order or a form, and they need to be informed of things such as mistakes in their entries or that the product they requested is out of stock.
+Service integration should first be considered as the default method for integration. Only when there are strong reasons to avoid synchronous request-reply should other options be considered. 
 
-Service integration should first be considered as the default method for integration. Only if there are strong reasons to avoid synchronous request-reply, then UI integration, batch processing, or event processing should be considered.
+In a typical scenario, an app end-user is filling in an order or a form, and they need to be informed of mistakes in their entries or that the product they requested is out of stock, for example (as visualized in the diagram below). The systems are tightly coupled, because the second app has to be up and running for this to work. However, the end-user is able to decide how they want to proceed when there is an error or a time-out. The end-user is in this case fully part of this interaction.
 
-![](attachments/service-integration/si-intro.png)
+![](attachments/service-integration/si-intro1.png)
+
+In another typcial scenario, the user interaction is separated from the integration, meaning it is "functionally asynchonous." However, a technically synchronous integration mechanism is still preferred for retrieving the event, using a REST pull request from the second app to get the next business event(s) (as visualized in the diagram below). This means that the two apps are decoupled from each other. The first app can operate without the second app being up and running, and vice versa. The first app needs to implement something that acts as a queue, using either the last updated time stamp, using a "picked-up-flag," or the Mendix [Process Queue](https://appstore.home.mendix.com/link/app/393/) App Store module. The last two options are most recommended.
+
+{{% alert type="info" %}}
+"Functionally asynchronous" means that the process that results in a business event does not complete the integration end-to-end. Instead, it may already create a REST message and put it on an internal queue for later delivery.
+{{% /alert %}}
+
+![](attachments/service-integration/si-intro2.png)
 
 ## 2 What Is Service Integration?
 
-Service-based integration (or remote procedure call (RPC) integration) is request-reply and almost always synchronous. It works like this:
+Service-based integration is request-reply and almost always synchronous. It follows this flow:
 
-1. One system initiates the call and waits for an answer. There should be a time-out configured.
+1. One system initiates the call and waits for an answer. 
+	* There should be a time-out configured, after which the integration is abandoned
 2. The originating system will know the result of the call immediately:
-	* A time-out if the destination system was unavailable
 	* A success status if the operation succeeded
+	* A time-out if the destination system was unavailable
 	* A set of data that was requested in the call
 	* An error with information about why the call did not work
 
-Synchronous calls can be used for almost anything as long as the other system is directly reachable through the network.
+Synchronous calls can be used for almost anything where you want to assure that messages arrive safely. However, it is necessary that the other system is directly reachable through the network.  If the network is unreliable, geograpgical distances are large, or volumes are extremely high, then synchronous calls can be more difficult. In that case, there may be reasons to implement other mechanisms, which usually become more functionally complex. Additionally, for IoT and logging scenarios where there is a many-to-one or many-to-many situation and commmunication is truly one-directional, there is usually no reason to be synchronous.
 
 This diagram presents the main functional cases:
 

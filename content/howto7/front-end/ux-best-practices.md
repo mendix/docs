@@ -64,8 +64,6 @@ Good balance goes a long way. How often an object is used determines where it sh
 
 If you only have five buttons, they might not need to go in a drop-down menu at all. But if you have six buttons, that’s a different story.
 
-**[Jason: can you clarify the difference between having 5 and 6 buttons? Or is that some humor?]**
-
 ## 4 Let the User Know Where They Are in the App
 
 When your app has a consistent design system and brand style, all the pages may start to feel the same to the end-user. Soon enough, the end-user may feel like they are walking through a forest of pages, unable to recall if they have seen a particular page before, or if they are actually on a different page with a similar state.

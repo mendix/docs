@@ -1,5 +1,5 @@
 ---
-title: "Microflow Editor Consistency Errors"
+title: "Microflow Consistency Errors"
 category: "Consistency Errors"
 description: "Describes microflow consistency errors in Mendix Studio and the way to fix them."
 tags: ["studio", "consistency errors", "checks", "errors", "microflow"]
@@ -66,6 +66,6 @@ Some consistency errors may be connected with settings in Mendix Studio Pro. The
 ## 5 Read More
 
 * [Microflows](microflows)
-* [Page Editor Consistency Errors](consistency-errors-pages)
+* [Page Consistency Errors](consistency-errors-pages)
 * [Navigation Consistency Errors](consistency-errors-navigation)
 * [Checks](checks)

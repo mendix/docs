@@ -66,5 +66,5 @@ For information on the **Design** section and its properties, see [Design Sectio
 
 ## 5 Read More
 
-* [Page Editor](page-editor) 
+* [Pages](page-editor) 
 * [Widgets](page-editor-widgets)

@@ -18,7 +18,7 @@ Besides operating as a powerful social platform, Mendix also provides tools for 
 
 The Developer Portal can be used separately from other Mendix products, and the [Mendix Feedback Widget](feedback/use-feedback-widget) can be included in any web application. As a whole, the Mendix Platform offers an open, well-defined API, enabling third-party developers to create their own widgets, plugins, and any other innovative products they come up with.
 
-The Developer Portal is integrated with the menu items described below.
+The Developer Portal is integrated using the menu items described below. Follow the highlighted links for more information.
 
 ## 2 Buzz {#buzz}
 

@@ -49,37 +49,35 @@ For example, a data replication can be identified as functionally asynchonous, m
 
 ## 4 Best Practices for Integration Design
 
-* Think before you integrate. There is a chance that a simpler approach can make the project a lot easier to build, test, deploy and manage in production.
-* List all the planned integration early, and maintain the list through the project 
-* How can I make the overall integration simple, e.g. by choosing the right apps or microservices? Too much and too complex integration is a sign that apps should be merged or the functional division is sub-optimal.
-* Start addressing external teams where we depend on integration early. If the other team would need to make changes to make our app work, that needs to be identified imediatelly.
-* Even if there are existing external services, make sure that they are adequate, e.g. avoid all types of loops on services because they tend to make apps slow. If the source app can collect information internally with SQL it is more efficient and integration will be faster. 
-* Then design the integration well. What triggers the interface? Who needs what data when? Can I cache the data (store a local copy)?
-* What functional errors can occur and how do I manage them? What technical errors can occur and how do I manage them?
-* How can the overall integration complexity be minimized?
-* Consider which integration use case applies and which technical options are available, e.g. using the Mendix integration best practices
-* Finally, make a conscious choice about why one method is chosen over another.
+* Think before you integrate. There is a chance that a simpler approach can make the app a lot easier to build, test, deploy and manage in production.
+* List all the planned integration early, and maintain the list through the project.
+* Think about how you can make the overall integration simple (for example, by choosing the right apps or microservices). Integration that is too much and too complex is a sign that apps should be merged or that the functional division is sub-optimal.
+* Start addressing external teams for integration dependencies early. If the other teams need to make changes to make your app work, those needs to be identified immediately.
+* If there are existing external services, make sure they are adequate. For example, you should avoid all types of loops on services, because they tend to make apps slow. If your source app can collect information internally with SQL, that is more efficient and the integration will be faster. 
+* Design the integration well. Consider what triggers the interface, who needs what data and when, and whether you can cache the data (by storing a local copy).
+* Plan for what functional errors can occur and how to manage them.
+* Consider how to minimize the overall integration complexity.
+* Analyze which integration use case applies and which technical options are available. Use these [Integration](integration-overview) Best Practices as references!
+* Make a conscious choice about why one method is chosen over another.
 
-## 5 Use Case Categories and Best Practices
-
-See section https://documentation-accp.cfapps.io/best-practices/architecture/integration/integration-overview
-
-## 6 Basic Solution Categories
+## 5 Basic Solution Categories
 
 For most of the integration related to Mendix, there are five basic solution categories that are almost always used. Sometimes just one is used, and sometimes a combination is used:
 
 ![](attachments/mendix-integration/solution-categories.png)
 
-* [UI integration](ui-integration) – This solution category includes, for example, using a deep link from the UI of one app to open the UI of another app (either in the same browser tab or another tab). It also includes website, content management system, and content delivery network integration.
-* [Service integration](service-integration) – This is otherwise known as remote procedure call (RPC) integration. This category uses request and reply, and it almost always synchronous. The request-reply interfaces with REST and SOAP. There is also database integration with OData and SQL, business event and process integration, process orchestration, integration apps, and distributed ESBs.
-* [Event-driven integration](event-integration) – This category usually does not have a response, and it is used to distribute data at large scales or large distances, or simply distribute data in a decoupled way. Event-driven integration can involve IoT, metrics, and social media, as well as state engines and event management.
-* **Batch-oriented integration** – This category includes exporting, moving, and importing files as well as file integration.
-* **Central data** – This category uses a pattern where data is landed and combined in a central place before it is distributed. This could be, for example, an operational data store (ODS); extract, transform, load (ETL); business intelligence (BI); or data lake solution.
-* **Integration Layers & Gateways** – This category involves ESB, internal and external API management, and other gateways.
+* [Service Integration](service-integration) – This is otherwise known as remote procedure call (RPC) integration. This category uses request and reply, and it almost always synchronous. The request-reply interfaces with REST and SOAP. There is also database integration with OData and SQL, business event and process integration, process orchestration, integration apps, and distributed ESBs.
+* [UI Integration](ui-integration) – This solution category includes, for example, using a deep link from the UI of one app to open the UI of another app (either in the same browser tab or another tab). It also includes website, content management system, and content delivery network integration.
+* [Event-Based Integration](event-integration) – This category usually does not have a response, and it is used to distribute data at large scales or large distances, or simply distribute data in a decoupled way. Event-driven integration can involve IoT, metrics, and social media, as well as state engines and event management.
+* [Batch File Integration](batch-file-integration) – This category includes exporting, moving, and importing files as well as file integration.
+* [Central Data](central-data) – This category uses a pattern where data is landed and combined in a central place before it is distributed. This could be, for example, an operational data store (ODS); extract, transform, load (ETL); business intelligence (BI); or data lake solution.
+* [Integration Layers](integration-layers) – This category involves ESB, internal and external API management, and other gateways.
 
-## 7 Overview of Use Case & Solution Options
+## 6 Overview of Use Cases & Solution Options
 
-Plotting functional use cases against basic methods of integration allows us to see that there are several common options available. That is good, because integration needs to be flexible in a solution for the designer to be able to select the best option for a specific situation. E.g. we may choose not to change an old system leading to another choice than if we built two new apps. 
+Plotting functional use cases against basic methods of integration allows you to see there are several common options available. That is good, because integration needs to be flexible in a solution for the architect to select the best option for a specific situation. For example, you may choose not to change an old system leading to another choice than if we built two new apps.
+
+{{% todo %}}[**CLARIFY SENTENCE ABOVE**]{{% /todo %}}
 
 The table below presents use cases that you can reference  for more detail. The table uses the following symbols:
 
@@ -108,4 +106,4 @@ The table below presents use cases that you can reference  for more detail. The 
 | Int. with IoT Solutions | | ![](attachments/mendix-integration/green.png) | ![](attachments/mendix-integration/green.png) | ![](attachments/mendix-integration/grey.png) | ![](attachments/mendix-integration/green.png) |
 | Int. with AI & Machine Learning | | ![](attachments/mendix-integration/green.png) | ![](attachments/mendix-integration/grey.png) | | ![](attachments/mendix-integration/green.png) |
 
-To read these use cases, start with [Integration Use Cases](integration-use-cases).
+For more details, see [Integration Use Cases](integration-use-cases).

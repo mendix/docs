@@ -7,45 +7,47 @@ draft: true
 
 ## 1 Introduction
 
-Mendix makes it easy to build, update, and maintain an app or microservice that fulfils a business function. The recommendation is to try to keep as much of a business function as possible in the App to minimize external integration and complexity, which in turn makes the DevOps team more independent and sevelopment and maintenance even faster and more efficient. But most apps will need some external integration to other apps, systems, API layers, things or humans as well.
+Mendix makes it easy to build, update, and maintain an application or microservice that fulfils a business function. The best practice is to try and keep as much of a business function as possible in an app to minimize external integration and complexity. In turn, this will make your DevOps teams more independent while making development and maintenance even faster and more efficient. However, most apps will need some external integration with other apps, systems, API layers, things, and human workflows.
 
-Mendix is very good at integrating with virually any other technology and this chapter gives an overview of how Mendix integrates to different formats and how it does this so securely and easily that some organizations build  Mendix apps whoS focus is almost entirely on integration.
+The Mendix Platform is very good at integrating with virually any other technology. This Best Practices section provides an overview of how Mendix integrates with different formats and how it does this so securely and easily, some organizations even build Mendix apps whose entire focus is entirely on integration.
 
-<< Add picture 1 from email >>
+![](attachments/mendix-integration/mi-intro.png)
 
-### 1.1 Internal Integration within each App is for Free
+## 2 Internal & External Integration with Mendix
 
-This diagram presents how Mendix keeps all these parts together from design to operations, and the platform checks the consistency in the app model before allowing changes to be committed to the team server:
+The sections below summarize the basic approaches to internal and external integration in the Mendix Platform.
+
+### 2.1 Internal Integration Within Each App for Free
+
+This diagram presents how the Mendix Platform keeps everything together—from design to operations—and checks the consistency in the app model before allowing changes to be committed to the [Team Server](/refguide7/team-server):
 
 ![](attachments/mendix-integration/feature-requirements.png)
 
-So, you do not have to worry about the integration of internal app layers. The communication between an Apps own UX layer, Run-time server, data-base and file-store are all private and handled automatically by the Mendix platform itself. It is a strong recommendation to not interfer with these mechanisms and always integrate via defined services or file contracts,  handled by the Mendix run-time server, see figure below.
+This means that you do not have to worry about the integration of internal app layers. The communication between an app's own UX layer, runtime server, database, and file store are all private and handled automatically by the Mendix Platform itself. Mendix strongly recommends not interferring with these mechanisms and always integrating via defined services or file contracts, as handled by the Mendix Runtime server.
 
+### 2.1 External Integration by Contract & Secured
 
-### 1.1 External Integration by Contract and Secured
-
-In Mendix, all external integration goes via the app's runtime server as presented in the diagram below. This internal Mendix architecture means that the Mendix model is in control of all integration, which also makes it more secure and easy to maintain. 
+In Mendix, all external integration occurs via the app's runtime server, as presented in the diagram below. This internal Mendix architecture means that the Mendix model is in control of all integration, which also makes everything more secure and easy to maintain. 
 
 ![](attachments/mendix-integration/runtime.png)
 
-Mendix handles a large array of formats and protocols out of the box. For more information, see the [Integration how-to's](/howto/integration/). If there is a format that is not immediatelly supported, e.g. to an old legacy system, then it is easy to extend Mendix with a new adapter using the Platform SDK. 
+Mendix handles a large array of formats and protocols out of the box (for more information, see the [Integration How-to's](/howto/integration/). If there is a format that is not immediateley supported (for example, with a specific old legacy system), then it is easy to extend Mendix with a new adapter using the [Mendix Platform SDK](/apidocs-mxsdk/mxsdk/).
 
-Mendix recommends using REST Services, OData contracts or SOAP for real-time integration, SFTP for files and Kafka or a queue management system for distributed architectures. Mendix recommend avoiding any direct database queries to the Mendix database. In fact this option is disabled on Mendix Cloud. This is because the platform can not check external SQL risking problems in production. Poor SQL can destroy things in the app and  when things change in the Domain Model the platform can not warn the developer of broken links.
+Mendix recommends using REST services, OData contracts, or SOAP for real-time integration; SFTP for files; and Kafka or a queue management system for distributed architectures. Mendix also recommends avoiding any direct database queries to the Mendix database. In fact, this option is disabled on Mendix Cloud, because the platform cannot check external SQL, which raises the risk of problems in production. Poor SQL can destroy things in an app, and when things change in the domain model, the platform cannot warn the developer of broken links.
 
-The standard for security on external integration is to use encrypted channels: SSL for service calls and SFTP for files. This always allows an app to be on different clouds and data centers will communicating safely. In fact the App itself and its separate components are harder
+The standard for security on external integration is to use encrypted channels, meaning, SSL for service calls and SFTP for files. This always allows an app to be on different clouds, with data centers will communicate safely.
 
-### 2 Think *Functionally* First {#functionally}
+### 3 Thinking *Functionally* First {#functionally}
 
-The most important thing for good solutions is to choose the right integration option from a lot of possibilities. These best practices will present an overview of integration methods and typical use cases.  The first best practice is to have an open mind regarding integration requirements. Think about what the integration really needs to do and consider more than one option for the solution.
+The most important thing for good solutions is to choose the right integration option from a lot of possibilities. These best practices will present an overview of integration methods and typical use cases. The first best practice is to have an open mind regarding integration requirements. This means thinking about what the integration really needs to accomplish and consider more than one option for the solution.
 
-In the time of SOA layers a central ESB would take care of quite a lot of integration functionality, such as transformation, routing, re-tries, queueing and even combining services. In the modern era of Microservices we aim for "dumb pipes and smart end-points", i.e. we almost always put transformation in the app itself, and within a close cluster of apps we do all integration directly, leaving for larger enterprises a thin API management layers or a message broket for communications between departments, networks and geographies.
+In the days of SOA layers, a central ESB would take care of a lot of integration functionality, such as transformation, routing, re-tries, queueing, and even combining services. In the modern era of microservices, you should aim for "dumb pipes and smart end-points," which means you should almost always put transformation into the app itself. This also means that within a close cluster of apps, you should do all the integration directly, leaving for larger enterprises a thin API management layer or a message broker for communications between departments, networks, and geographies.
 
-This means that interface functionality starts inside one app and ends inside another system and the Mendix developer needs to think through the entire interaction functioally and technically. The best practice is to think functionally first. and then compare different technical options to see which one has least errors to manage and is the easiest to maintain through separate deployments of the two apps being integrated.
+In turn, this means interface functionality starts inside one app and ends inside another system, so a Mendix developer needs to think through the entire interaction functionally and technically. The best practice is to think functionally first. Then, the different technical options should be compared to see which one has the fewest errors to manage and is the easiest to maintain through separate deployments of the apps being integrated.
 
-For example a data replication can be identified as functionally asynchonous, i.e. the process creating the business event with data does not have to be directly aware when the second app receives the information. In this case the most simple and stable implementation could be to use the Mendix Process Queue <<LINK AppStore> in the first app. Then implement a synchronous REST call from the second app to the first app, picking up the next message.
+For example, a data replication can be identified as functionally asynchonous, meaning, the process creating the business event with data does not have to be directly aware when the second app receives the information. In this case, the simplest and most stable implementation is to use the [Process Queue](https://appstore.home.mendix.com/link/app/393/) module available from the Mendix App Store in the first app. Then, you would implement a synchronous REST call from the second app to the first app, picking up the next message.
 
-
-## 3 Best Practices for Integration Design:
+## 4 Best Practices for Integration Design
 
 * Think before you integrate. There is a chance that a simpler approach can make the project a lot easier to build, test, deploy and manage in production.
 * List all the planned integration early, and maintain the list through the project 
@@ -58,11 +60,11 @@ For example a data replication can be identified as functionally asynchonous, i.
 * Consider which integration use case applies and which technical options are available, e.g. using the Mendix integration best practices
 * Finally, make a conscious choice about why one method is chosen over another.
 
-## 4 Use Case Categories and Best Practices
+## 5 Use Case Categories and Best Practices
 
 See section https://documentation-accp.cfapps.io/best-practices/architecture/integration/integration-overview
 
-## 3 Basic Solution Categories
+## 6 Basic Solution Categories
 
 For most of the integration related to Mendix, there are five basic solution categories that are almost always used. Sometimes just one is used, and sometimes a combination is used:
 
@@ -75,7 +77,7 @@ For most of the integration related to Mendix, there are five basic solution cat
 * **Central data** – This category uses a pattern where data is landed and combined in a central place before it is distributed. This could be, for example, an operational data store (ODS); extract, transform, load (ETL); business intelligence (BI); or data lake solution.
 * **Integration Layers & Gateways** – This category involves ESB, internal and external API management, and other gateways.
 
-## 4 Overview of Use Case & Solution Options
+## 7 Overview of Use Case & Solution Options
 
 Plotting functional use cases against basic methods of integration allows us to see that there are several common options available. That is good, because integration needs to be flexible in a solution for the designer to be able to select the best option for a specific situation. E.g. we may choose not to change an old system leading to another choice than if we built two new apps. 
 

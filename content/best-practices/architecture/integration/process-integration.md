@@ -13,19 +13,24 @@ efficient, running lower costs, and providing better and faster services.
 When a business process runs across several systems, there will be some type of process integration. There are many ways this can be done:
 
 * **Business event Integration** – Work finishes in one app, and the next app is notified to start the next step of the process automatically. This avoids, for example, sending emails and having to retype information into another system.
-<<Figure 1>>
+
+	![](attachments/process-integration/process-int1.png)
 
 * **Workflow integration** – A user works in one app and then continues the same process in another app (for example, via a deep link). By enabling this integration, you can have specialized apps or microservices that evolve separately, but for the end-user it seems to be the same system. For more information, refer to [Workflow Integration with Data Transfer Example](workflow-int-data-transfer).
-<< Figure 2 >>
+
+	![](attachments/process-integration/process-int2.png)
 
 * **Case Management** – Human workflow in phases maintains a “case” object with data and status. The case is routed to different user-group baskets and/or sub-cases are created and completed in other systems. This is the best way to support a cross-departmental process, where several user groups are involved with approvals and coordination.
-<<Figure 3>>
+
+	![](attchments/process-integration/process-int3.png)
 
 * **Process orchestration** – A system actively orchestrates a process across several systems, keeping track of status, re-trying when required, and escalating to human workflow when required. This is useful for automating transaction processing (for example, in banks), for provisioning a bill of materials, and when a business event should lead to updates in several systems in parallel.
-<<Figure 4>>
+
+	![](attachments/process-integration/process-int4.png)
 
 * **State Engine/Event Manager** – Events are passively gathered related to a process that runs across several systems. This is to determine that the process finishes correctly and that actions can be taken when something is wrong. This is useful for monitoring and managing a chain of business events (for example, packages for track-and-trace) and for high-volume asynchronous process orchestration.
-<<Figure 5>>
+
+	![](attachments/process-integration/process-int5.png)
 
 ## 2 Business Events & Process Flow
 
@@ -39,7 +44,8 @@ These are the most common options:
 This diagram displays shows the three main cases, and after that each case is
 described:
 
-<<Figure 6 - somewhat simplified and put Push as fisst option>>
+![](attachments/process-integration/process-int6.png)
+
 1.  **Validation required in Destination**: **Use REST Push** to the next
     system:
 
@@ -70,7 +76,9 @@ described:
 ### 2.1 Selecting the Best Option
 
 REST Pull from App 2 to App 1 should be the default option. It is the most robust and both apps can be re-deployed independently.
+
 REST Push is good when we want App 2 to validate the business event, and to be sure App 1 and App 2 are always in synch. But this means that we may not be able to finish the process in App 1 when App 2 is down.
+
 Queues should be used in some cases, e.g. for distributed networks, IoT style integration and sometimes where almsost all processing is automatic straight through processing, then often together with an Event Manager, to handle exceptions in the over-all flow.
 Kafka can be used for one-way communications, such as IoT, central logging or any other situation where there is a high volume, many-to-many distributed integration situation
 
@@ -84,19 +92,19 @@ With *Workflow integration* we mean that human workflow is handled across severa
 
 The pattern is a common for *Microservices*: The process is so large and/or contains functionally separate parts. It makes sense to split the “system” in a set of Microservices. There is often a Dashboard App, where all user-groups log in and where they have the right to access different parts of the process via Deep-links.
 
-<< Figure 7 >
+![](attachments/process-integration/process-int7.png)
 
 ### 3.2 Example with complex Products in separate Apps
 
 A real example is for the insurance sector shown in the diagram below. Insurance products can be quite complicated, and by having a separate app for each product this insurance provider could shorten time-to-market for new offerings drastically. The customer or agent works in the portal, but when selecting a product, the actual detailed ordering and configuration of that product is local and done in a separate app. When the work there is done, the user is re-directed back to the main app, and key parts of the data copied over to be visible there as well.
 
-<< Figure 8 >>
+![](attachments/process-integration/process-int8.png)
 
 ### 3.3 Create customer in separate App
 
 In the diagram below  the Customer App is separated from the Ordering App, because managing customer data is quite different from ordering, and because customer data is used and shared across all the phases in this system. The Customer App has a lot of validation and logic, contained in both the UX and Micro-flows we do not want to copy to the other Apps,
 
-![](process-integration/b008ebf323f96d188e5beb8eb4ead4f1.png)
+![](attachments/process-integration/b008ebf323f96d188e5beb8eb4ead4f1.png)
 
 In this use-case the same user enters both customer information (if new) and the ordering information. We then get a workflow across two Apps where data needs to be copied directly after the transaction in the 2nd App, to be used in the Ordering App directly after created in the Customer App. 
 
@@ -121,7 +129,7 @@ Mendix is a platform to build processes and work on. It provides a good alternat
 
 In the figure below, the Support App has been given the task of *Process Orchestration* for the operationalization of a newly sold product. The reason was: 1) The Support App already deals with cases and distribution of tasks, 2) If there is an issue the customer is likely to call Support.
 
-![](process-integration/20b9dfca8ea45d36f2aa420ce5891fe8.png)
+![](attachments/process-integration/20b9dfca8ea45d36f2aa420ce5891fe8.png)
 
 ## 5 Case Management
 
@@ -135,7 +143,7 @@ A more complex process could be a Patent application or Corporate loan or Bond i
 
 The figure below shows a typical situation. A Case is triggered from the outside or from a Core system. The Intake phase collects and validates required data and the case is planned. After that a due diligence or research phase done in an App specializing in that. Then a decision maker in the Case system can decide to proceed and create a proposal, which requires document creation and legal capabilities. After that a negotiation phase specializing in internal and external collaboration. New Proposals can be created. In the end a Contract is signed and other systems are initiated, including the Core system, similar to Process orchestration.
 
-![](process-integration/ead44dfe290dfb3a10200fc0108f5cdb.png)
+![](attachments/process-integration/ead44dfe290dfb3a10200fc0108f5cdb.png)
 
 ## 6 Event Managers
 
@@ -151,7 +159,7 @@ To make sure that messages are not lost and processes not half-way finished, and
 
 See the section *State Engines, Event Managers*, in *Event driven architectures.* Mendix makes very good cases to handle steps in straight-through processing Apps, and can act as Event Manager for most cases except when the volumes are extreme.
 
-![](process-integration/ad53661fa341bde24503ba5f2320e772.png)
+![](attachments/process-integration/ad53661fa341bde24503ba5f2320e772.png)
 
 ## 7 Summary
 

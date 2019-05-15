@@ -63,6 +63,8 @@ The Best Practices will also help when conducting design reviews on existing sol
 
 A new category of integration is growing important in the DevOps and microservices areas. This type of integration is related to building services used to automate testing or to drive a coherent operational overview and support the maintenance team.
 
+![](attachments/integration-overview/int-ov7.png)
+
 ## 3 Related Documents
 
 The Best Practices for integration include [Integration Use Cases](integration-use-cases) and guidelines. 

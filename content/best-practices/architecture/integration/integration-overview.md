@@ -4,44 +4,48 @@ category: "Architecture"
 menu_order: 3
 draft: true
 ---
-<<ADD Logo Figure 1 from email- Just to see if they like it?>>>
 
 ## 1 Introduction
 
-Most solutions require integration with other apps and systems. Such integration is easy with Mendix, but there are many options to choose from. This should be the case, because integration is like the glue between components in a solution, and it needs to be adaptable for all possible functional scenarios. 
+Most solutions (which are made up of various applications) require integration with other apps and systems. Such integration is easy with Mendix, but there are many options to choose from. Integration is like the glue between components in a solution, and it needs to be adaptable for all possible functional scenarios. 
 
-As more core systems are being built using Mendix microservices, integration is increasingly important, as is the use of a set of Microservices together performing a business funtion. We call that a Microservices "system".
+As more core systems are built using Mendix microservices, integration is increasingly important, as is using a set of microservices together to perform a business funtion. That is called a microservices "system."
 
-Integration Best Practices positions Mendix Apps in a number of roles in a typical enteprise architecte. We consider typical integration options and recommend, where possible, the most easy and/or stable way to integratie Mendix apps or systems of Mendix microservices into a landscape. In the future there will be more and more concrete use-cases created, with example implementations available in the App Store.
+These Best Practices for integration position Mendix apps in a number of roles in a typical enteprise architecture. The Best Practices consider typical integration options and recommend (where possible) the easiest and/or most stable way to integrate Mendix apps or microservice systems into a landscape.
 
-The figure in the picture illustrates the question this section tries to address.
+This diagram illustrates the question this section tries to address:
 
-<< ADD Figure 2 from Email>>
+![](attachments/integration-overview/int-ov2.png)
 
-Note: Internal integration of a business function, the GUI-logic-data integration within a Mendix app is handled out-of-the-box in the Mendix platform which means that a typical Mendix project has much less integration points than e.g. a SOA layered architecture project, where every user story typically passes 3-5 technical layers.
+{{% alert type="info" %}}
+Internal integration of a business function via GUI–logic–data integration within a Mendix app is handled out-of-the-box in the Mendix Platform. This means that a typical Mendix app project has many fewer integration points than, for example, an SOA-layered architecture project, where every user story typically passes 3–5 technical layers.
+{{% /alert %}}
 
 ## 2 Integration Overview
 
-Integration best practices are intended for Architects, Lead Developers, and other stakeholders to evaluate different integration options that will make solutions stable and easy to maintain.
+The Best Practices for integration are intended for Architects, Lead Developers, and other stakeholders to evaluate different integration options that will make solutions stable and easy to maintain.
 
-The integration best practices will cover the following content areas:
+These Best Practices will cover the following content areas:
 
-<<ADD Logo Figure 3 from email- Just to see if they like it?>>>
+![](attachments/integration-overview/int-ov3.png)
 
-These are the typical use cases we intend to describe in this section.
+These are the typical use cases that will be described:
 
-<<ADD Logo Figure 4 from email- Just to see if they like it?>>>
+![](attachments/integration-overview/int-ov4.png)
 
-At this time only usecases for LINK <<Workflow Integration>> and LINK <<Export Import and Batch Processing>> are completed
+{{% alert type="info" %}}
+At this time, only use cases for [Export, Import & Batch Processing](export-import-batch) and [Workflow Integration](workflow-integration) are available.
+{{% /alert %}}
 
-### 2.1 Enterprise Architecture, Positioning, Project validation
+### 2.1 Enterprise Architecture, Positioning & Project Validation
 
-Integration Best Practices do not focus on positioning, but since the figures show Mendix in a number of roles, integrated with other systems in the enterprise it has the potential to be useful in this area. 
+Best Practices for integration do not focus on positioning. But since Mendix applications are shown in a number of roles as integrated with other systems in the enterprise, these Best Practices can be useful in this area. 
 
-So Enterprise and Domain architects can scan  these documents  for typical use cases and eaxmples of how Mendidx has been used, in order to position Mendix within the enterprise, or validate for which projects and which roles Menidx apps may be useful. 
-The diagram shows the basic steps expected:
+Enterprise and Domain Architects can scan these Best Practices for typical use cases and examples of how Mendidx has been used. This is useful for positioning Mendix within the enterprise and validating for which projects and roles Menidx apps may be useful.
 
-<<ADD Logo Figure 5 from email- Just to see if they like it?>>>
+This diagram presents the basic steps of this process:
+
+![](attachments/integration-overview/int-ov5.png)
 
 ### 2.2 Solution Architecture & Project Planning
 
@@ -51,8 +55,9 @@ Solution Architects and Lead Developers will gain an overview of the available o
 
 ### 2.3 Design & Architecture Reviews
 
-The best practices will also help when conducting design reviews on existing solutions and evaluating ways to solve issues. This scenario could apply to a legacy solution or a larger Mendix solution. Reconsidering past decisions and refactoring is part of the Agile model for achieving value quickly and making gradual improvements.
+The Best Practices will also help when conducting design reviews on existing solutions and evaluating ways to solve issues. This scenario could apply to a legacy solution or a larger Mendix solution. Reconsidering past decisions and refactoring is part of the Agile model for achieving value quickly and making gradual improvements.
 
+![](attachments/integration-overview/int-ov6.png)
 
 ### 2.4 Services for Test & Operations
 
@@ -60,10 +65,15 @@ A new category of integration is growing important in the DevOps and microservic
 
 ## 3 Related Documents
 
-The integration best practices include [integration use cases](integration-use-cases) and guidelines. 
+The Best Practices for integration include [Integration Use Cases](integration-use-cases) and guidelines. 
 
-These in turn relate to the Evaluation Guide, the developer training modules, how-to’s, and the Mendix Reference Guide.
-<<Link to Evaluation Guide on Integration>>
-<<LINK to Training module on Integration>>
-<<Link to How To on Integration>>
-<<Link to Reference Guide on INtegration>>
+These use cases are supplemented by the following documentation and training material:
+
+* [Integration](/refguide7/integration) in the *Mendix 7 Reference Guide*
+* [Integration](/howto7/integration/) in the *Mendix 7 How-to's*
+* [Integration](https://www.mendix.com/evaluation-guide/app-capabilities/integration) in the *Mendix Platform Evaluation Guide*
+* [Integration Authentication](https://gettingstarted.mendixcloud.com/link/module/117/lecture/944) in the *Mendix Academy*
+
+
+
+

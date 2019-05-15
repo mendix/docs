@@ -20,7 +20,7 @@ The JavaScript action that is called by this activity.
 
 ### 2.2 Arguments
 
-For each parameter of the JavaScript action you have to supply an argument of the same type. The values of the arguments are made explicit using [expressions](expressions).
+For each parameter of the JavaScript action you have to supply an argument of the same type. The values of the arguments are defined using [expressions](expressions).
 
 ## 3 Output Properties
 

@@ -78,7 +78,7 @@ This certificate needs to be converted into the *.p12* format. If you do not kno
 
 For the last step, you need to configure APNs within your application. This can be done by logging into your application as a user with Administrator role and navigating to the **PushNotifications_Administration** page that was set up in the [Setting Up the Project Security for Your Module](implementation-guide#setting) step of *How to Implement Push Notifications*.
 
-To configure your APNs, do the following:
+To configure your APNs, complete the following steps:
 
 1. Create a new APNs configuration, and choose a name for the new configuration.
 2. Select **Enabled**.

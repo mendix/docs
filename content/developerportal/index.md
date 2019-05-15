@@ -28,13 +28,9 @@ In the company [Buzz](collaborate/buzz), you can communicate with the users in y
 
 ## 3 Apps
 
-In **Apps**, you can find your nodes, sandboxes, and company's apps:
+In [Apps](/developerportal/apps-list/index), you can find your free and licensed apps, nodes, and other apps created by your company:
 
 ![](attachments/developerportal-apps.png)
-
-After you select an app, you can collaborate, develop, deploy, and operate the app with your App Team:
-
-![](attachments/apps.png)
 
 ## 4 People
 

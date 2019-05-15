@@ -5,7 +5,7 @@ menu_order: 30
 tags: ["mobile", "push notification", "apple", "server"]
 ---
 
-## 1 Introduction
+## 1 Introduction {#intro}
 
 In order to proceed you need an Apple developer license and a device running Mac OS X.
 
@@ -78,11 +78,13 @@ This certificate needs to be converted into the *.p12* format. If you do not kno
 
 For the last step, you need to configure APNs within your application. This can be done by logging into your application as a user with Administrator role and navigating to the **PushNotifications_Administration** page that was set up in [step 7](implementation-guide#setting) of *How to Implement Push Notifications*.
 
-For this purpose, do the following:
+To configure your APNs, do the following:
 
-* Create a new APNs configuration, and choose a name for the new configuration
-* Choose a topic for the new configuration (you can freely choose one)
-  *	Set the **Authentication Type** to **Certificate**
-  *	Choose the **Stage** that corresponds to the type of certificate you have created
-* Add your Apple Push Notification service SSL certificate in the *.p12* format
-  *	Enter the password that you used during creation of the certificate
+1. Create a new APNs configuration, and choose a name for the new configuration.
+2. Select **Enabled**.
+3. Set the **Default topic** to the App ID that you configured in the [Introduction](#intro) section above. 
+4. If you previously enabled **Base on DTAP mode**, make sure to specify the DTAP mode to which this configuration applies.
+5. Set the **Authentication Type** to **Certificate**.
+6. Choose the **Stage** that corresponds to the type of certificate you have created.
+7. Add your Apple Push Notification service SSL certificate in the *.p12* format.
+8. Enter the password that you used during creation of the certificate.

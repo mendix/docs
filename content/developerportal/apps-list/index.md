@@ -74,8 +74,6 @@ You will see all the apps created by people in your [company](/developerportal/c
 
 ![List of apps for my company](attachments/company-apps-list.png)
 
-You will see all the apps for which you are a team member.
-
 You can change the way the list is displayed in the same way as for the list of your own apps. However, you cannot change the sort order, and you will not see the ellipsis with the quick actions which you get for the list of your apps.
 
 If you click an app for which you are not a team member you will see some app details.
@@ -86,11 +84,11 @@ If you are a team member you will be taken to the app [Buzz](/developerportal/co
 
 ### 3.2 Changing the View
 
-As with **My Apps** you can either see the your apps as a list or as tiles. You can swap between the two views by clicking on the matching icon: ![Icon to switch between views](attachments/view-switch.png)
+As with **My Apps** you can either see the apps as a list or as tiles. You can swap between the two views by clicking on the matching icon: ![Icon to switch between views](attachments/view-switch.png)
 
 ### 3.3 Searching for an App
 
-You can find a specific app by typing the search term(s) by the magnifying glass icon.
+You can find a specific app by typing the search term by the magnifying glass icon.
 
 ![Example of a search for the word "First"](attachments/search-company-apps.png)
 

@@ -6,7 +6,7 @@ tags: ["My Apps", "My Company's Apps", "Nodes"]
 
 ## 1 Introduction
 
-The **Apps** menu item will show you a summary of _your_ apps, and allow you to see all the apps for your company, and all the nodes to which you have access.
+The **Apps** menu item will show you a summary of your apps, and allow you to see all the apps for your company, and all the nodes to which you have access.
 
 You get to the apps list by clicking **Apps** in the top menu bar of the Developer Portal.
 
@@ -14,7 +14,7 @@ You get to the apps list by clicking **Apps** in the top menu bar of the Develop
 
 You can see different lists of apps by clicking the down arrow next to the page title:
 
-![Page menu showing My Apps, My Company's Apps, and Nodes]()
+![Page menu showing My Apps, My Company's Apps, and Nodes](attachments/apps-page-menu.png)
 
 See below for a description of these lists and the options for each list.
 
@@ -28,15 +28,13 @@ Click on an app to see the [app details]().
 
 You can either see the your apps as a list:
 
-![Apps shown in a list]()
+![Apps shown in a list](attachments/apps-list.png)
 
 or as tiles:
 
-![Apps shown as tiles]()
+![Apps shown as tiles](attachments/apps-tiles.png)
 
-You can swap between the two views by clicking on the matching icon:
-
-![Icon to switch between views]()
+You can swap between the two views by clicking on the matching icon: ![Icon to switch between views](attachments/view-switch.png)
 
 ### 2.2 Sorting the View
 
@@ -46,13 +44,13 @@ Using the dropdown you can choose the list of apps sorted by:
 * Alphabetical order of **App Name**
 * Alphabetical order of **Company**
 
-![Dropdown for the display order of your apps]()
+![Dropdown for the display order of your apps](attachments/sort-dropdown.png)
 
 ### 2.3 Searching for an App
 
 You can find a specific app by typing the search term(s) by the magnifying glass icon and pressing <kbd>Enter</kbd>.
 
-![Example of a search for the word "First"]()
+![Example of a search for the word "First"](attachments/search-apps.png)
 
 ### 2.4 Actions
 
@@ -80,9 +78,9 @@ You can only delete your app if you are the only team member for this app.
 
 ## 3 My Company's Apps
 
-You will see all the apps created by people in your [company]().
+You will see all the apps created by people in your [company](/developerportal/company-app-roles/index).
 
-![List of apps for my company]()
+![List of apps for my company](attachments/company-apps-list.png)
 
 You will see all the apps for which you are a team member.
 
@@ -110,7 +108,7 @@ You can swap between the two views by clicking on the matching icon:
 
 ![Icon to switch between views]()
 
-### 2.3 Searching for an App
+### 3.3 Searching for an App
 
 You can find a specific app by typing the search term(s) by the magnifying glass icon and pressing <kbd>Enter</kbd>.
 

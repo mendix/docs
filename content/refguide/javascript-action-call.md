@@ -8,7 +8,11 @@ tags: ["javascript", "return", "variable", "studio pro"]
 
 ## 1 Introduction
 
-The JavaScript action call activity can be used to call a [JavaScript action](javascript-actions). Arguments can be passed to the action, and the result can be stored in a variable. This activity can be used in nanoflows, but not in microflows.
+The JavaScript action call activity can be used to call a [JavaScript action](javascript-actions):
+
+![javascript action call properties](attachments/javascript-action-call/properties.png)
+
+Arguments can be passed to the action, and the result can be stored in a variable. This activity can be used in nanoflows, but not in microflows.
 
 ## 2 Action Properties
 

@@ -14,13 +14,13 @@ With JavaScript actions, you can extend your application's functionality in ways
 
 Each JavaScript action defined in Mendix Studio Pro corresponds to a file *{name of JavaScript action}.js* in the subdirectory **javascriptsource{module name}/actions/** in your project directory.
 
-The skeletons of these *.js* files are generated automatically when you save the action, and  the JavaScript actions can immediately be edited in the embedded code editor.
+The skeletons of these *.js* files are generated automatically when you save the action, and the JavaScript actions can immediately be edited in the embedded code editor.
 
 {{% /alert %}}
 
 ## 2 Settings
 
-The settings for JavaScript actions, and their implications, are detailed below.
+The settings for JavaScript actions and their implications are detailed below.
 
 ### 2.1 Name
 

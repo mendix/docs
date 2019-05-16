@@ -22,7 +22,7 @@ See below for a description of these lists and the options for each list.
 
 You will see all the apps for which you are a team member.
 
-Click on an app to see the [app details]().
+Click on an app to see the app [Buzz](/developerportal/collaborate/buzz).
 
 ### 2.1 Changing the View
 
@@ -56,25 +56,17 @@ You can find a specific app by typing the search term(s) by the magnifying glass
 
 By clicking the ellipsis (…) in the app tile or list, you can quickly perform a number of actions.
 
-![Quick actions menu for an app]()
+![Quick actions menu for an app](attachments/quick-action-menu.png)
 
-#### 2.4.1 Edit in Mendix Studio Pro
+The actions available depend on the app selected. The actions include
 
-#### 2.4.2 Project Management
-
-#### 2.4.3 View Production
-
-This will open the production version of the app.
-
-#### 2.4.4 View Acceptance
-
-This will open the acceptance version of the app.
-
-#### 2.4.5 App Info
-
-#### 2.4.6 Delete App
-
-You can only delete your app if you are the only team member for this app.
+* Edit in Mendix Studio
+* Edit in Mendix Studio Pro – for apps where Mendix Studio is not enabled
+* Project Management – opens the app [Buzz](/developerportal/collaborate/buzz)
+* View Production – opens the production version of the app (this will be the sandbox version of a Free App)
+* View Acceptance – opens the acceptance version of the app
+* App Info – opens the [general settings](/developerportal/settings/general-settings) of the app
+* Delete App – allows you to delete your app, provided you are the only team member of the app
 
 ## 3 My Company's Apps
 
@@ -86,34 +78,26 @@ You will see all the apps for which you are a team member.
 
 You can perform similar actions on this list to the list of your apps. However, you cannot change the sort order, and you will not see the ellipsis with the quick actions which you get for the list of your apps.
 
-### 3.1 App Summary Details???
+If you click an app for which you are not a team member you will see some app details.
 
-If you click an app for which you are not a team member you will see a summary of the app.
+![Example of app details](attachments/app-details.png)
 
-![Example of an app summary]()
-
-If you are a team member you will be taken to the [app details]().
+If you are a team member you will be taken to the app [Buzz](/developerportal/collaborate/buzz).
 
 ### 3.2 Changing the View
 
-As with You can either see the your apps as a list:
-
-![Apps shown in a list]()
-
-or as tiles:
-
-![Apps shown as tiles]()
-
-You can swap between the two views by clicking on the matching icon:
-
-![Icon to switch between views]()
+As with **My Apps** you can either see the your apps as a list or as tiles. You can swap between the two views by clicking on the matching icon: ![Icon to switch between views](attachments/view-switch.png)
 
 ### 3.3 Searching for an App
 
-You can find a specific app by typing the search term(s) by the magnifying glass icon and pressing <kbd>Enter</kbd>.
+You can find a specific app by typing the search term(s) by the magnifying glass icon.
 
-![Example of a search for the word "First"]()
+![Example of a search for the word "First"](attachments/search-company-apps.png)
 
 ## 4 Nodes
 
-This shows a list of all the Mendix Cloud nodes to which you have access.
+This shows a list of all the licensed Mendix Cloud nodes to which you have access.
+
+![List of licensed Mendix cloud nodes](attachments/nodes-list.png)
+
+Clicking the **Details button** will take you to the [Environments](/developerportal/deploy/environments) page for the app which is deployed to this node.

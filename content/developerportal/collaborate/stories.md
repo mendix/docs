@@ -121,7 +121,7 @@ Also on this page, you can access the following tabs:
 
 * **Comments** – on this tab, you can view and add comments about the story to collaborate with your App Team
 * **Tasks** – you can see the tasks that were added to the story here (for more information, see the [Adding Tasks to a Story](#adding) section below)
-* **Feedback** – here you can see the feedback item linked to the story (for details, see the [Adding a Feedback Item to Your Backlog](../feedback/index#adding) section of *Feedback Management*)
+* **Feedback** – here you can see the feedback item linked to the story (for details, see the [Adding a Feedback Item to Your Backlog](feedback#adding) section of *Feedback Management*)
 * **Revisions** –  on this tab, you can see the committed revision of the app project that is linked to the story (which is configured in the [Related stories](/refguide/commit-dialog#stories) tab of the **Commit** dialog box in Studio Pro)
 
 ### 4.2 Adding Tasks to a Story {#adding}
@@ -198,4 +198,4 @@ Changing the status of a story or updating story points automatically synchroniz
 
 * [Buzz](buzz)
 * [App Team](team)
-* [Feedback](../feedback/index)
+* [Feedback](feedback)

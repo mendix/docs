@@ -1,5 +1,6 @@
 ---
 title: "Feedback Management"
+category: "Collaboration Tools"
 description: "Describes how to manage feedback on your Mendix app in the Developer Portal."
 tags: ["Feedback","Developer Portal", "feedback widget"]
 ---
@@ -8,7 +9,7 @@ tags: ["Feedback","Developer Portal", "feedback widget"]
 
 On the **Feedback** page of the Developer Portal, you can view and manage the feedback that has been submitted about an app.
 
-![](attachments/feedback.png)
+![](attachments/feedback/feedback.png)
 
 This feedback comes from different sources:
 
@@ -51,7 +52,7 @@ These are the general feedback actions available on the tabs of the **Feedback**
 
 Clicking on the title of a feedback item or on **Details** opens the item's details page:
 
-![](attachments/feedbacklist.jpg)
+![](attachments/feedback/feedbacklist.jpg)
 
 You can perform various actions for reviewing and processing a feedback item on this page, which are described below.
 
@@ -59,13 +60,13 @@ You can perform various actions for reviewing and processing a feedback item on 
 
 To review the feedback and start any necessary investigation, you can read the description and then click **Details** for technical details about the feedback item:
 
-![](attachments/feedback-details.png)
+![](attachments/feedback/feedback-details.png)
 
 On the item's details page, you can also **Turn email updates on/off**. This is useful for when you comment on a feedback item and perform further [processing](#processing) actions on it.
 
 In the **Leave a comment** box, you can post a comment and start an exchange with the Mendix community member who submitted the feedback. This is a good place to ask for clarification. You can also attach files to your comment.
 
-![](attachments/comment.png)
+![](attachments/feedback/comment.png)
 
 ### 3.2 Processing a Feedback Item {#processing}
 
@@ -91,7 +92,7 @@ After clicking **Accept feedback**, you can create a story on the basis of the f
 3. Select the sprint (or backlog) to which you want to add the story in **Plan for sprint**.
 4. Select the label(s) (if available ) to be added to the story under **Assign labels**.
 
-    ![](attachments/accept-feedback.png)
+    ![](attachments/feedback/accept-feedback.png)
 
 Once a feedback item is connected to a user story, the user who submitted the story will automatically be updated on the progress made on that story:
 

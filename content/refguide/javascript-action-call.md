@@ -40,7 +40,7 @@ This property determines if the result of the JavaScript action will be stored i
 
 ## 4 Read More
 
-* [JavaScript Actions](jsactionsrefguide)
+* [JavaScript Actions](javascript-actions)
 * [Write JavaScript Actions](/howto/extensibility/write-javascript-actions)
 * [Nanoflows](nanoflows)
 * [Java Action Call](java-action-call)

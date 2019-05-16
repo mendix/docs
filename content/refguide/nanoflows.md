@@ -135,7 +135,7 @@ List activities can be used to create and manipulate lists of objects.
 
 #### 5.4.3 Action Call Activities
 
-The [JavaScript action call](javascript-action-call.md) activity executes a JavaScript action.
+The [JavaScript action call](javascript-action-call) activity executes a JavaScript action.
 
 #### 5.4.4 Variable Activities
 

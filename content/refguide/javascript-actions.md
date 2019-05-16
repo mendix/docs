@@ -100,5 +100,6 @@ In the **Code** tab of the JavaScript action's **Settings** tab, you can edit th
 
 * [JavaScript Action Call](javascript-action-call)
 * [Nanoflows](nanoflows)
+* [Write JavaScript Actions](/howto/extensibility/write-javascript-actions)
 * [Java Action Call](java-action-call)
 * [Microflow Call](microflow-call)

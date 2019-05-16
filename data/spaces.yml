@@ -196,7 +196,7 @@ studio:
   menu_categories:
     - "General Info"
     - "Domain Model"
-    - "Page Editor"
+    - "Pages"
     - "Navigation Document"
     - "Microflows"
     - "Data Filters"

@@ -4,6 +4,7 @@ category: "General Info"
 description: This document describes the process of collaborative development between Mendix Studio and Mendix Studio from the perspective of Mendix Studio.
 tags: ["studio", "collaborative development", "sync"]
 menu_order: 05
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction

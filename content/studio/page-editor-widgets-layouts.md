@@ -165,5 +165,5 @@ Each tab has the following properties:
 
 ## 6 Read More
 
-* [Page Editor](page-editor) 
+* [Pages](page-editor) 
 * [Widgets](page-editor-widgets)

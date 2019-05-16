@@ -22,13 +22,21 @@ The skeletons of these *.js* files are generated automatically when you save the
 
 The settings for JavaScript actions and their implications are detailed below.
 
+**insert javascript-action-settings-no-para.png**
+
 ### 2.1 Name
 
 This setting handles a JavaScript action's name, which a nanoflow refers to when performing a call to it. This name is also the name of the generated *.js* file.
 
 ### 2.2 Parameters
 
-A JavaScript action has zero or more parameters. You use parameters to pass data into a JavaScript action. In a JavaScript action's code, you can access the parameters' values. Each parameter has a name, type, category, and description. 
+A JavaScript action has zero or more parameters. You use parameters to pass data into a JavaScript action. 
+
+**insert parameter-naming.png**
+
+In a JavaScript action's code, you can access the parameters' values. Each parameter has a name, type, category, and description. 
+
+**make a pic of a javascript action's code / parameter values therein**
 
 Use categories to keep parameters apart in a [JavaScript Action Call](javascript-action-call). If you do not specify a category, the parameter will appear in the **Input** group.
 
@@ -80,11 +88,19 @@ In any type you can use for parameters, you can also use a return type.
 
 A type parameter is a placeholder for an entity type which will be filled with a specific entity when called in a nanoflow. Type parameters can be used when configuring the data type of a parameter, which allows users to pass an object or list of an arbitrary entity type.
 
+**insert type-parameter.png **
+
 A JavaScript action has zero or more type parameters. Each type parameter should have a unique name.
 
 ### 4 Expose as Nanoflow Action
 
-By selecting **Expose as nanoflow action** in a JavaScript action's **Settings** tab, it is possible to expose a JavaScript action as a nanoflow action. Exposing the JavaScript action will make it appear in the **Toolbox** window when editing a nanoflow in the category of your choice. When this action is used in a nanoflow, it will show the provided caption and icon.
+By selecting **Expose as nanoflow action** in a JavaScript action's **Settings** tab, it is possible to expose a JavaScript action as a nanoflow action. 
+
+**insert expose-jsaction.png**
+
+Exposing the JavaScript action will make it appear in the **Toolbox** window when editing a nanoflow in the category of your choice. When this action is used in a nanoflow, it will show the provided caption and icon.
+
+**insert workshop-exposed.png**
 
 A caption and category are required when exposing a JavaScript action, but an icon is optional. When no icon is selected, the default JavaScript action icon is used. The recommended size for an icon is 16x16 pixels.
 

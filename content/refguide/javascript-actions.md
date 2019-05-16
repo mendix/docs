@@ -18,11 +18,15 @@ The skeletons of these *.js* files are generated automatically when you save the
 
 {{% /alert %}}
 
+For a tutorial on creating, configuring, and using a JavaScript action see this [Write JavaScript Actions](/howto/extensibility/write-javascript-actions) how-to.
+
 ## 2 Settings
 
-The settings for JavaScript actions and their implications are detailed below.
+After double-clicking a JavaScript action in your **Project Explorer** you will see that JavaScript action's settings: 
 
-**insert javascript-action-settings-no-para.png**
+![javascript settings](attachments/javascript-actions/javascript-action-settings-no-para.png)
+
+The settings for JavaScript actions and their implications are detailed below.
 
 ### 2.1 Name
 
@@ -30,13 +34,13 @@ This setting handles a JavaScript action's name, which a nanoflow refers to when
 
 ### 2.2 Parameters
 
-A JavaScript action has zero or more parameters. You use parameters to pass data into a JavaScript action. 
+A JavaScript action has zero or more parameters. You may add a parameter by clicking **Parameters** > **+ Add**, and then use that parameter to pass data into a JavaScript action:
 
-**insert parameter-naming.png**
+![parameter](attachments/javascript-actions/parameter-naming.png)
 
-In a JavaScript action's code, you can access the parameters' values. Each parameter has a name, type, category, and description. 
+Each parameter has a name, type, category, and description. In a JavaScript action's **Code** tab, you can see its parameters' values and handle its implementation:
 
-**make a pic of a javascript action's code / parameter values therein**
+![parameter code](attachments/javascript-actions/parameter-code.png)
 
 Use categories to keep parameters apart in a [JavaScript Action Call](javascript-action-call). If you do not specify a category, the parameter will appear in the **Input** group.
 

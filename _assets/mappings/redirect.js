@@ -53,6 +53,13 @@ module.exports = {
       from: "/developerportal/support/export-a-project-package",
       to: "/refguide/export-project-package-dialog"
     },
+  /****************************************************
+   * From App Store Documentation (until documentation edited)
+   ******************************************************/
+  {
+      from: "https://docs.mendix.com/developerportal/feedback/use-feedback-widget",
+      to: "https://docs.mendix.com/developerportal/collaborate/use-feedback-widget"
+  },
 	/****************************************************
      * PERMANENT REDIRECTS
      ****************************************************/

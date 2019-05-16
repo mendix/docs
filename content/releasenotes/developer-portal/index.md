@@ -10,6 +10,12 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud V3, and other deploym
 
 ## 2019
 
+### May 16th, 2019
+
+#### Improvements
+
+* We re-designed the app user management page for Mendix SSO-enabled environents on the developer portal.
+
 ### May 13th, 2019
 
 #### Fixes

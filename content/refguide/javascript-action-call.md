@@ -12,7 +12,7 @@ The JavaScript action call activity can be used to call a [JavaScript action](ja
 
 ## 2 Action Properties
 
-Understanding action properties will allow you to integrate JavaScript actions into your nanoflows.
+Use action properties to integrate JavaScript actions into your nanoflows.
 
 ### 2.1 JavaScript Action
 
@@ -24,7 +24,7 @@ For each JavaScript action parameter, you must supply an argument of the same ty
 
 ## 3 Output Properties
 
-Understanding output properties will allow you to customize the action result of your JavaScript action. When set up properly, output properties will allow action results to be handled by your nanoflow.
+Output properties allow you to customize the action result of your JavaScript action. When set up properly, output properties enable action results to be handled by your nanoflow.
 
 ### 3.1 Return Type
 

@@ -8,7 +8,9 @@ tags: ["SAML", "SSO", "mobile", "hybrid app", "phonegap", "authentication"]
 
 ## 1 Introduction
 
-This how-to will describe the challenges behind implementing SSO (single sign-on) in hybrid mobile apps and teach you how this can be solved in Mendix app projects.
+This how-to will describe the challenges behind implementing SSO (single sign-on) in hybrid mobile apps and teach you how this can be solved in Mendix app projects.<br>
+ {{% alert type="warning" %}} The implementation described in this how-to will _not_ work when you have enabled anonymous users in your project. Disable anonymous users in your project to use this implementation.
+ {{% /alert %}}<br>
 
 ## 2 Prerequisites
 

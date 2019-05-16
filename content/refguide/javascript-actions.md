@@ -18,7 +18,7 @@ The skeletons of these *.js* files are generated automatically when you save the
 
 {{% /alert %}}
 
-For a tutorial on creating, configuring, and using a JavaScript action see this [Write JavaScript Actions](/howto/extensibility/write-javascript-actions) how-to.
+For a tutorial on creating, configuring, and using a JavaScript action, see this [Write JavaScript Actions](/howto/extensibility/write-javascript-actions) how-to.
 
 ## 2 Settings
 

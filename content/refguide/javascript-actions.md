@@ -8,11 +8,11 @@ tags: ["javascript", "javascript action", "parameter", "studio pro"]
 
 ## 1 Introduction
 
-With JavaScript actions, you can extend the functionality of your application in ways nanoflows alone cannot. To use a JavaScript action, call it from a nanoflow using the [JavaScript Action Call](javascript-action-call).
+With JavaScript actions, you can extend your application's functionality in ways nanoflows alone cannot. To use a JavaScript action, call it from a nanoflow using the [JavaScript Action Call](javascript-action-call).
 
 {{% alert type="info" %}}
 
-Each JavaScript action defined in Mendix Studio Pro corresponds to a file *{name of JavaScript action}.js* in the subdirectory **javascriptsource{module name}/actions/** of the project directory.
+Each JavaScript action defined in Mendix Studio Pro corresponds to a file *{name of JavaScript action}.js* in the subdirectory **javascriptsource{module name}/actions/** in your project directory.
 
 The skeletons of these *.js* files are generated automatically when you save the action, and  the JavaScript actions can immediately be edited in the embedded code editor.
 
@@ -28,9 +28,7 @@ This setting handles a JavaScript action's name, which a nanoflow refers to when
 
 ### 2.2 Parameters
 
-A JavaScript action has zero or more parameters. You use parameters to pass data into a JavaScript action. In a JavaScript action's code, you can access the parameters' values.
-
-Each parameter has a name, type, category, and description. 
+A JavaScript action has zero or more parameters. You use parameters to pass data into a JavaScript action. In a JavaScript action's code, you can access the parameters' values. Each parameter has a name, type, category, and description. 
 
 Use categories to keep parameters apart in a [JavaScript Action Call](javascript-action-call). If you do not specify a category, the parameter will appear in the **Input** group.
 
@@ -38,7 +36,7 @@ The parameter types supported by JavaScript actions are described below.
 
 #### 2.2.1 Object
 
-The object parameter type allows you to pass a Mendix object to a JavaScript action. You must also select its Entity type, which can be either a specific entity or a type parameter. In the generated JavaScript action template code, this type is represented as an MxObject.
+The object parameter type allows you to pass a Mendix object to a JavaScript action. You must also select its entity type, which can be either a specific entity or a type parameter. In the generated JavaScript action template code, this type is represented as an MxObject.
 
 #### 2.2.2 List
 
@@ -74,7 +72,9 @@ The string parameter type allows you to pass a string value to a JavaScript acti
 
 #### 2.2.8 Return Type
 
-The return parameter type determines the type of data a JavaScript action returns. Because many APIs are asynchronous, you can also return a `Promise` object which resolves to this type. The return value of the JavaScript action can be stored as a variable. This variable can be used in the nanoflow where it is called. In any type you can use for parameters, you can also use a return type.
+The return parameter type determines the type of data a JavaScript action returns. Because many APIs are asynchronous, you can also return a `Promise` object which resolves to this type. The return value of the JavaScript action can be stored as a variable. This variable can be used in the nanoflow where it is called. 
+
+In any type you can use for parameters, you can also use a return type.
 
 ### 3 Type Parameters
 

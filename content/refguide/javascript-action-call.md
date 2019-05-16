@@ -12,7 +12,7 @@ The JavaScript action call activity can be used to call a [JavaScript action](ja
 
 ## 2 Action Properties
 
-Understanding action properties will allow you to integrate JavaScript actions into your nanoflow.
+Understanding action properties will allow you to integrate JavaScript actions into your nanoflows.
 
 ### 2.1 JavaScript Action
 
@@ -20,7 +20,7 @@ This property sets the JavaScript action called by an activity.
 
 ### 2.2 Arguments
 
-For each parameter of the JavaScript action you must supply an argument of the same type. The values of the arguments are defined using [expressions](expressions).
+For each JavaScript action parameter, you must supply an argument of the same type. The values of the arguments are defined using [expressions](expressions).
 
 ## 3 Output Properties
 
@@ -41,5 +41,6 @@ This property determines if the result of the JavaScript action will be stored i
 ## 4 Read More
 
 * [JavaScript Actions](jsactionsrefguide)
+* [Write JavaScript Actions](/howto/extensibility/write-javascript-actions)
 * [Nanoflows](nanoflows)
 * [Java Action Call](java-action-call)

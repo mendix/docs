@@ -16,6 +16,12 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud V3, and other deploym
 
 * We made several changes to our maintenance window management to ensure that environments are completely locked during maintenance.
 
+### May 16th, 2019
+
+#### Improvements
+
+* We re-designed the app user management page of the Developer Portal for Mendix Cloud environments which are enabled for single sign-on (SSO).
+
 ### May 13th, 2019
 
 #### Fixes

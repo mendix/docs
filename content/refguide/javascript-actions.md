@@ -105,7 +105,7 @@ An icon is optional when exposing a JavaScript action. When no icon is selected,
 
 ## 5 Documentation Settings
 
-In the **Documentation** tab of the JavaScript action's **Settings** tab, you can document a JavaScript action: 
+In the **Documentation** tab, press **Edit** to document a JavaScript action: 
 
 ![documentation](attachments/javascript-actions/documentation-pro.png)
 

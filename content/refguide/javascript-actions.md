@@ -20,7 +20,7 @@ The skeletons of these *.js* files are generated automatically when you save the
 
 For a tutorial on creating, configuring, and using a JavaScript action, see this [Write JavaScript Actions](/howto/extensibility/write-javascript-actions) how-to.
 
-## 2 Settings
+## 2 General Settings
 
 After double-clicking a JavaScript action in your **Project Explorer** you will see that JavaScript action's settings: 
 
@@ -48,47 +48,22 @@ Use categories to keep parameters apart in a [JavaScript Action Call](javascript
 
 The parameter types supported by JavaScript actions are described below.
 
-#### 2.2.1 Object
+#### 2.2.1 Name
 
-The object parameter type allows you to pass a Mendix object to a JavaScript action. You must also select its entity type, which can be either a specific entity or a type parameter. In the generated JavaScript action template code, this type is represented as an MxObject.
+#### 2.2.2. Type
 
-#### 2.2.2 List
-
-The list parameter type allows you to pass a list of Mendix objects to a JavaScript action. You must also select its entity type, which can be either a specific entity or a type parameter. In the generated JavaScript action template code, this type is represented as an array of MxObjects.
-
-#### 2.2.1 Entity Type
-
-The entity parameter type is a placeholder. It stands in for an entity that will be replaced with a new entity's name when it is called in a nanoflow. Additionally, the entity type can be used to fill in a type parameter. In the generated JavaScript action template code, this type is represented as a string.
-
-#### 2.2.2 Boolean Type 
-
-The Boolean parameter type allows you to pass a Boolean value to a JavaScript action. 
-
-#### 2.2.3 Date and Time Type
-
-The date and time parameter type allows you to pass a date and time value to a JavaScript action. In the generated JavaScript action code, this type will be represented as a JavaScript `Date`.
-
-#### 2.2.4 Decimal Type
-
-The decimal parameter type allows you to pass a decimal value to a JavaScript action. In the generated JavaScript action code, this type will be represented as a [Big](https://www.npmjs.com/package/big-js) object.
-
-#### 2.2.5 Enumeration Type
-
-The enumeration parameter type allows you to pass a enumeration value to a JavaScript action. In the generated JavaScript action code, this type will be represented as a string.
-
-#### 2.2.6 Integer/Long Type
-
-The integer/long parameter type allows you to pass a decimal value to a JavaScript action. In the generated JavaScript action code, this type will be represented as a [Big](https://www.npmjs.com/package/big-js) object.
-
-#### 2.2.7 String Type
-
-The string parameter type allows you to pass a string value to a JavaScript action.
-
-#### 2.2.8 Return Type
-
-The return parameter type determines the type of data a JavaScript action returns. Because many APIs are asynchronous, you can also return a `Promise` object which resolves to this type. The return value of the JavaScript action can be stored as a variable. This variable can be used in the nanoflow where it is called. 
-
-In any type you can use for parameters, you can also use a return type.
+|   Name   |   Description   |
+| ---- | ---- |
+|  Object    |   The object parameter type allows you to pass a Mendix object to a JavaScript action. You must also select its entity type, which can be either a specific entity or a type parameter. In the generated JavaScript action template code, this type is represented as an MxObject. |
+|   List   |   The list parameter type allows you to pass a list of Mendix objects to a JavaScript action. You must also select its entity type, which can be either a specific entity or a type parameter. In the generated JavaScript action template code, this type is represented as an array of MxObjects. |
+|   Entity   |   The entity parameter type is a placeholder. It stands in for an entity that will be replaced with a new entity's name when it is called in a nanoflow. Additionally, the entity type can be used to fill in a type parameter. In the generated JavaScript action template code, this type is represented as a string.  |
+|   Boolean   |   The Boolean parameter type allows you to pass a Boolean value to a JavaScript action.  |
+|   Date and Time   |  The date and time parameter type allows you to pass a date and time value to a JavaScript action. In the generated JavaScript action code, this type will be represented as a JavaScript `Date`.  |
+|   Decimal   |  The decimal parameter type allows you to pass a decimal value to a JavaScript action. In the generated JavaScript action code, this type will be represented as a [Big](https://www.npmjs.com/package/big-js) object.  |
+|   Enumeration   |  The enumeration parameter type allows you to pass a enumeration value to a JavaScript action. In the generated JavaScript action code, this type will be represented as a string.  |
+|   Integer/Long   |  The integer/long parameter type allows you to pass a decimal value to a JavaScript action. In the generated JavaScript action code, this type will be represented as a [Big](https://www.npmjs.com/package/big-js) object.  |
+|   String   |  The string parameter type allows you to pass a string value to a JavaScript action. |
+|   Return   |   The return parameter type determines the type of data a JavaScript action returns. Because many APIs are asynchronous, you can also return a `Promise` object which resolves to this type. The return value of the JavaScript action can be stored as a variable. This variable can be used in the nanoflow where it is called. In any type you can use for parameters, you can also use a return type.   |
 
 ### 3 Type Parameters
 
@@ -124,7 +99,7 @@ Your documentation is copied into the JavaScript action as comment on the functi
 
 In the **Code** tab of the JavaScript action's **Settings** tab, you can edit the JavaScript action code without leaving Studio Pro. The editor is based on the [Monaco Editor](https://microsoft.github.io/monaco-editor/index.html). It offers features such as syntax highlighting and code completion.
 
-## Read More
+## 7 Read More
 
 * [JavaScript Action Call](javascript-action-call)
 * [Nanoflows](nanoflows)

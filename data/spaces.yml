@@ -181,6 +181,7 @@ developerportal:
   menu_categories:
     - "Mendix Profile"
     - "Company & App Roles"
+    - "Apps List"
     - "Collaboration Tools"
     - "Development"
     - "Deployment"

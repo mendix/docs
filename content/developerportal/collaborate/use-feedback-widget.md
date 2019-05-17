@@ -1,6 +1,6 @@
 ---
 title: "Use the Mendix Feedback Widget"
-category: "Feedback Management"
+parent: "feedback"
 description: "Describes how to use the Mendix Feedback Widget for providing feedback, editing, and sharing apps."
 tags: ["collaboration", "feedback and collaboration", "widget", "developer portal", "event app"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -12,7 +12,7 @@ With Mendix, you can make use of the fully integrated feedback cycle functionali
 
 The [Mendix Feedback Widget](https://appstore.home.mendix.com/link/app/199/) enables you to collaborate more easily and quickly than ever before when developing an app project. With this widget, you can make use of the fully integrated Mendix app feedback cycle, access the editing capabilities in Mendix Studio, check out a mobile view of the app, and easily share the app via email.
 
-![](attachments/widget.png)
+![](attachments/feedback/widget.png)
 
 {{% alert type="warning" %}}
 This how-to covers the Mendix Feedback Widget [version 6.0.0 and above](#above) as well as [version 5.1.3 and below](#below). There are different usage and configuration steps for these different versions of the widget.
@@ -42,17 +42,17 @@ This version of the Mendix Feedback can be used in a variety of ways, which are 
 
 When you click the **Feedback** icon, the platform first checks if you are signed in. If you are already signed in, you will be in **Feedback Mode** right away. If you are not signed in, you will need to either **Sign in to Mendix** or **Continue as a guest** to enter the feedback mode:
 
-![](attachments/feedback-mode.png)
+![](attachments/feedback/feedback-mode.png)
 
 Once you are in feedback mode, you can click anywhere on the screen to leave a comment:
 
-![](attachments/add-comment.png)
+![](attachments/feedback/add-comment.png)
 
 And voila! A screenshot is created automatically of the current page, which you can choose to attach to your feedback. After clicking **Send**, your feedback will go straight to the **Feedback** page of your app project in the Developer Portal. For more information, see [Feedback](index).
 
 When you are done leaving feedback, you need to exit the feedback mode by clicking this button:
 
-![](attachments/exit.png)
+![](attachments/feedback/exit.png)
 
 {{% alert type="info" %}}
 For details on how to see all the feedback you have submitted, see the [Feedback](../mendix-profile/index#feedback) section of *Mendix Profile*.
@@ -66,7 +66,7 @@ Clicking the **Edit** icon opens the app page in Studio. If you have permissions
 
 When you click the **Mobile view**  icon, a pop-up window is displayed that enables viewing your app on a mobile device:
 
-![](attachments/view-app.png)
+![](attachments/feedback/view-app.png)
 
 You can access this mobile view by installing the [Mendix Mobile app](https://play.google.com/store/apps/details?id=com.mendix.SprintrMobile) and then scanning the QR code in the pop-up window.
 
@@ -76,7 +76,7 @@ For more information, see [Getting the Mendix Mobile App](/refguide/getting-the-
 
 When you click the **Share** icon on the widget, a pop-up window appears for sharing your app via **Email**:
 
-{{% image_container width="450" %}}![](attachments/share.png)
+{{% image_container width="450" %}}![](attachments/feedback/share.png)
 {{% /image_container %}}
 
 You can add as many email addresses as you like and email your app to colleagues for further collaboration and feedback.
@@ -93,22 +93,22 @@ To ensure you have the latest version of the widget included in your app, follow
 
 1.  Download the latest version of the [Mendix Feedback Widget](https://appstore.home.mendix.com/link/app/199/) from the App Store (as accessed through Studio Pro):
 
-	{{% image_container width="450" %}}![](attachments/app-store.png)
+	{{% image_container width="450" %}}![](attachments/feedback/app-store.png)
 	{{% /image_container %}}
 
 2.  When the latest widget is included in your app, you need to ensure that the widget is added to the homepage of the application. Open the homepage from your app's **Project** > **Navigation**:
 
-	![](attachments/show-page.png)
+	![](attachments/feedback/show-page.png)
 
 3.  If the widget has not been added automatically, add it to the desired page or layout by selecting **Add widget** > **Add-on widgets** > **Feedback & Collaboration Widget** and dropping it into a position in the page:
 
-	![](attachments/feedback-collaboration-widget.png)
+	![](attachments/feedback/feedback-collaboration-widget.png)
 
 #### 3.2.2 Configuring the Widget
 
 You can configure the widget for certain actions in your app project (for example, to allow screenshots, to hide the Mendix logo, and to hide the **Share** button). All the properties are explained in the properties dialog box for the widget:
 
-![](attachments/widget-properties.png)
+![](attachments/feedback/widget-properties.png)
 
 ## 4 Widget Version 5.1.3 & Below {#below}
 
@@ -128,7 +128,7 @@ To provide feedback via the Mendix Feedback Widget, follow these steps:
 2. Fill in the feedback you want to send to Mendix. The feedback can be an **Issue**, **Idea**, or **Question**. A description of the feedback (in **Additional information**) and a screenshot of the screen (via the **Include a snapshot of this page** check box) are recommended.
 3.  Click **Send Feedback**:
 
-	{{% image_container width="500" %}}![](attachments/feedback-example.png)
+	{{% image_container width="500" %}}![](attachments/feedback/feedback-example.png)
 	{{% /image_container %}}
 
 After clicking **Send feedback**, your feedback will go straight to the [Feedback](index) page of your app project in the Developer Portal.
@@ -146,13 +146,13 @@ To configure the Mendix Feedback Widget, follow these steps:
 3. Select the **Username attribute** that stores the name of the user and the **Email address attribute**. This will be used to automatically fill in the name and email address of the user who is logged in when submitting feedback in the app.
 4.  Decide whether you want to allow users to upload a file and screenshot to the feedback item (via **Allow file upload** and **Allow screenshot upload**, respectively). 
 
-	{{% image_container width="500" %}}![](attachments/edit-widget.png)
+	{{% image_container width="500" %}}![](attachments/feedback/edit-widget.png)
 	{{% image_container width="500" %}}
 
 5.  Open the **Configuration** tab of the widget properties.
 6.  Ensure that the **Feedback server** is set to `https://sprintr.home.mendix.com/`.
 7.  Ensure that the **Project identifier** is filled in correctly. The project identifier is your **App ID**, and it is automatically filled in for the Mendix Feedback Widget. If necessary, you can find the identifier of your app in the [Developer Portal](http://home.mendix.com) by opening your app and clicking **General** under the **Settings** category:
 
-	![](attachments/generalsettings.png)
+	![](attachments/feedback/generalsettings.png)
 
 8.  If you have configured multiple home pages for different user roles, you need to add the Mendix Feedback Widget to each home page for the user role from which you want to gather feedback. This can easily be done by copying the configured widget to the other relevant layouts and pages.

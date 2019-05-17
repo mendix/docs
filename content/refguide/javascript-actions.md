@@ -22,7 +22,7 @@ For a tutorial on creating, configuring, and using a JavaScript action, see this
 
 ## 2 General Settings
 
-After double-clicking a JavaScript action in your **Project Explorer** you will see that JavaScript action's settings: 
+After double-clicking a JavaScript action in your **Project Explorer** you will see the JavaScript action's settings: 
 
 ![javascript settings](attachments/javascript-actions/javascript-action-settings-no-para.png)
 
@@ -38,7 +38,7 @@ A JavaScript action can have zero or more parameters. Each parameter should have
 
 ![parameter](attachments/javascript-actions/parameter-naming.png)
 
-Each parameter has a name, type, category, and description. In a JavaScript action's **Code** tab, you can see its parameters' values and handle its implementation:
+In a JavaScript action's **Code** tab, you can see its parameters' values and handle its implementation. Each parameter has a name (1), type (2), category, description (3), and return type (4):
 
 ![parameter code](attachments/javascript-actions/parameter-code.png)
 
@@ -49,6 +49,8 @@ You will see a parameter's category, parameter name, and description in the **Ca
 The parameter types supported by JavaScript actions are described below.
 
 #### 2.2.1 Name
+
+This setting handles the parameter's name. **get some other info on this**
 
 #### 2.2.2. Type
 

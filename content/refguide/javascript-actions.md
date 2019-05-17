@@ -34,7 +34,7 @@ This setting handles a JavaScript action's name, which a nanoflow refers to when
 
 ### 2.2 Parameters
 
-A JavaScript action can have zero or more parameters. Each parameter should have a unique name. You may add a parameter by clicking **Parameters** > **Add**, and then use that parameter to pass data into a JavaScript action:
+Parameters pass data to the JavaScript actions. For example, if you had a JavaScript action which multiplied numbers, parameters would define the numbers to be multiplied. A JavaScript action can have zero or more parameters. Each parameter should have a unique name. You may add a parameter by clicking **Parameters** > **Add**, and then customize that parameter to pass data into a JavaScript action:
 
 ![parameter](attachments/javascript-actions/parameter-naming.png)
 
@@ -50,7 +50,7 @@ The parameter types supported by JavaScript actions are described below.
 
 #### 2.2.1 Name
 
-This setting handles the parameter's name. **get some other info on this**
+This setting handles the parameter's name. A name is required, names must start with a letter and contain only letters. Spaces are not permitted in names.
 
 #### 2.2.2. Type
 
@@ -72,6 +72,8 @@ This setting handles the parameter's name. **get some other info on this**
 Use categories to keep parameters apart in a [JavaScript Action Call](javascript-action-call). Categories are useful for making logical groups of parameters when your project has several parameters. If you do not specify a category, the parameter will appear in the **Input** group.
 
 #### 2.2.4 Description
+
+Descriptions may contain both upper- and lower-case letters, numbers, and symbols.
 
 ### 3 Type Parameter Settings
 
@@ -96,8 +98,6 @@ Exposing the JavaScript action will make it appear in the **Toolbox** window whe
 A caption is required when exposing a JavaScript action. This caption will accompany your JavaScript action inside the nanoflow **Toolbox** window and can give helpful reminder information about your JavaScript action there.
 
 #### 4.2 Category
-
-**check against 2.2.3 for similarities/differences**
 
 A category is required when exposing a JavaScript action. Use categories to organize JavaScript actions with similar purposes together in the nanoflow **Toolbox** window.
 

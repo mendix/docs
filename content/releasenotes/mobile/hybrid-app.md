@@ -16,6 +16,22 @@ If you're using the advanced flow, you can get the latest version of the Hybrid 
 
 ## 2019
 
+### May 14th, 2019 (4.1.0 / 4.1.0)
+
+We updated **Cordova Android** to version 7.1.4.
+
+You now have more control over the target architecture for your app (applies to Android only).
+The `npm run package` command now produces a project that targets all supported architectures (x86, x86_64, arm, and arm64). This means that you can publish one APK that is used for all devices.
+
+If, however, you want more control over the target architecture, then you can use the following variants:
+
+```
+$ npm run package:x86               # prepare `build` directory for x86, or
+$ npm run package:x86_64            # prepare `build` directory for x86_64, or
+$ npm run package:arm               # prepare `build` directory for arm, or
+$ npm run package:arm64             # prepare `build` directory for arm64
+```
+
 ### January 28th, 2019 (4.0.5 / 4.0.0)
 
 We fixed an issue on iOS where the app did not fill the entire screen after the keyboard was hidden.

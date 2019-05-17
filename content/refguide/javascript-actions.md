@@ -34,7 +34,7 @@ This setting handles a JavaScript action's name, which a nanoflow refers to when
 
 ### 2.2 Parameters
 
-A JavaScript action has zero or more parameters. You may add a parameter by clicking **Parameters** > **Add**, and then use that parameter to pass data into a JavaScript action:
+A JavaScript action can have zero or more parameters. Each parameter should have a unique name. You may add a parameter by clicking **Parameters** > **Add**, and then use that parameter to pass data into a JavaScript action:
 
 ![parameter](attachments/javascript-actions/parameter-naming.png)
 
@@ -73,15 +73,15 @@ Use categories to keep parameters apart in a [JavaScript Action Call](javascript
 
 ### 3 Type Parameter Settings
 
-A type parameter is a placeholder for an entity type which will be filled with a specific entity when called in a nanoflow. Type parameters can be used when configuring the data type of a parameter, which allows users to pass an object or list of an arbitrary entity type. They can be accessed in **Settings** > **Type parameters**:
+A type parameter is a placeholder for an entity type which will be filled with a specific entity when called in a nanoflow. Type parameters can be used when configuring the data type of a parameter, which allows users to pass an object or list of an arbitrary entity type. They can easily be added, edited, or deleted:
 
 ![type parameter](attachments/javascript-actions/type-parameter.png)
 
-A JavaScript action has zero or more type parameters. Each type parameter should have a unique name.
+A JavaScript action can have zero or more type parameters. Each type parameter should have a unique name.
 
 ### 4 Expose as Nanoflow Action Settings
 
-By selecting **Settings** > **Expose as nanoflow action**, it is possible to expose a JavaScript action as a nanoflow action. This sample action has been given *Sample Action* caption text, assigned *Workshop* as its category, and given no icon:
+In the **Expose as nanoflow action** tab, it is possible to expose a JavaScript action as a nanoflow action. This sample action has been given *Sample Action* caption text, assigned *Workshop* as its category, and given no icon:
 
 ![expose action](attachments/javascript-actions/expose-jsaction.png)
 

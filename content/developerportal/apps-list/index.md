@@ -82,11 +82,11 @@ If you click an app for which you are not a team member you will see some app de
 
 If you are a team member you will be taken to the app [Buzz](/developerportal/collaborate/buzz).
 
-### 3.2 Changing the View
+### 3.1 Changing the View
 
 As with **My Apps** you can either see the apps as a list or as tiles. You can swap between the two views by clicking on the matching icon: ![Icon to switch between views](attachments/view-switch.png)
 
-### 3.3 Searching for an App
+### 3.2 Searching for an App
 
 You can find a specific app by typing the search term by the magnifying glass icon.
 

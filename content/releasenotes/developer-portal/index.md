@@ -10,6 +10,12 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud V3, and other deploym
 
 ## 2019
 
+### May 17th, 2019
+
+#### Fixes
+
+* We made several changes to our maintenance window management to ensure that environments are completely locked during maintenance.
+
 ### May 16th, 2019
 
 #### Improvements

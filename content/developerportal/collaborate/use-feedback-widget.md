@@ -3,7 +3,8 @@ title: "Use the Mendix Feedback Widget"
 parent: "feedback"
 description: "Describes how to use the Mendix Feedback Widget for providing feedback, editing, and sharing apps."
 tags: ["collaboration", "feedback and collaboration", "widget", "developer portal", "event app"]
-#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
+# If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
+# Linked from documentation for Feedback widget: https://appstore.home.mendix.com/link/app/199/
 ---
 
 ## 1 Introduction

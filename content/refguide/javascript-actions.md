@@ -34,7 +34,7 @@ This setting handles a JavaScript action's name, which a nanoflow refers to when
 
 ### 2.2 Parameters
 
-A JavaScript action has zero or more parameters. You may add a parameter by clicking **Parameters** > **+ Add**, and then use that parameter to pass data into a JavaScript action:
+A JavaScript action has zero or more parameters. You may add a parameter by clicking **Parameters** > **Add**, and then use that parameter to pass data into a JavaScript action:
 
 ![parameter](attachments/javascript-actions/parameter-naming.png)
 
@@ -42,7 +42,7 @@ Each parameter has a name, type, category, and description. In a JavaScript acti
 
 ![parameter code](attachments/javascript-actions/parameter-code.png)
 
-Use categories to keep parameters apart in a [JavaScript Action Call](javascript-action-call). Categories are useful for making logical groups of parameters when your project has several parameters. If you do not specify a category, the parameter will appear in the **Input** group. You will see a parameter's category, parameter name, and description in the **Call JavaScript Action** dialog window after double-clicking its activity in your nanoflow:
+You will see a parameter's category, parameter name, and description in the **Call JavaScript Action** dialog window after double-clicking its activity in your nanoflow:
 
 ![call javascript action dialog](attachments/javascript-actions/call-js-action-dialog.png)
 
@@ -65,7 +65,13 @@ The parameter types supported by JavaScript actions are described below.
 |   String   |  The string parameter type allows you to pass a string value to a JavaScript action. |
 |   Return   |   The return parameter type determines the type of data a JavaScript action returns. Because many APIs are asynchronous, you can also return a `Promise` object which resolves to this type. The return value of the JavaScript action can be stored as a variable. This variable can be used in the nanoflow where it is called. In any type you can use for parameters, you can also use a return type.   |
 
-### 3 Type Parameters
+#### 2.2.3 Category
+
+Use categories to keep parameters apart in a [JavaScript Action Call](javascript-action-call). Categories are useful for making logical groups of parameters when your project has several parameters. If you do not specify a category, the parameter will appear in the **Input** group.
+
+#### 2.2.4 Description
+
+### 3 Type Parameter Settings
 
 A type parameter is a placeholder for an entity type which will be filled with a specific entity when called in a nanoflow. Type parameters can be used when configuring the data type of a parameter, which allows users to pass an object or list of an arbitrary entity type. They can be accessed in **Settings** > **Type parameters**:
 
@@ -73,19 +79,31 @@ A type parameter is a placeholder for an entity type which will be filled with a
 
 A JavaScript action has zero or more type parameters. Each type parameter should have a unique name.
 
-### 4 Expose as Nanoflow Action
+### 4 Expose as Nanoflow Action Settings
 
-By selecting **Settings** > **Expose as nanoflow action**, it is possible to expose a JavaScript action as a nanoflow action:
+By selecting **Settings** > **Expose as nanoflow action**, it is possible to expose a JavaScript action as a nanoflow action. This sample action has been given *Sample Action* caption text, assigned *Workshop* as its category, and given no icon:
 
 ![expose action](attachments/javascript-actions/expose-jsaction.png)
 
-Exposing the JavaScript action will make it appear in the **Toolbox** window when editing a nanoflow in the category of your choice: 
+Exposing the JavaScript action will make it appear in the **Toolbox** window when editing a nanoflow in the category of your choice. When this action is used in a nanoflow, it will show the caption and icon you provided. The category and caption are apparent here, and the default icon is being displayed as no custom one was assigned: 
 
 ![workshop exposed](attachments/javascript-actions/workshop-exposed.png)
 
-When this action is used in a nanoflow, it will show the provided caption and icon. A caption and category are required when exposing a JavaScript action, but an icon is optional. When no icon is selected, the default JavaScript action icon is used. The recommended size for an icon is 16x16 pixels.
+#### 4.1 Caption
 
-## 5 Documentation
+A caption is required when exposing a JavaScript action. This caption will accompany your JavaScript action inside the nanoflow **Toolbox** window and can give helpful reminder information about your JavaScript action there.
+
+#### 4.2 Category
+
+**check against 2.2.3 for similarities/differences**
+
+A category is required when exposing a JavaScript action. Use categories to organize JavaScript actions with similar purposes together in the nanoflow **Toolbox** window.
+
+#### 4.3 Icon
+
+An icon is optional when exposing a JavaScript action. When no icon is selected, the default JavaScript action icon is used. The recommended size for an icon is 16x16 pixels.
+
+## 5 Documentation Settings
 
 In the **Documentation** tab of the JavaScript action's **Settings** tab, you can document a JavaScript action: 
 
@@ -95,7 +113,7 @@ Your documentation is copied into the JavaScript action as comment on the functi
 
 ![documentation js file](attachments/javascript-actions/documentation-js-file.png)
 
-## 6 Code
+## 6 Code Settings
 
 In the **Code** tab of the JavaScript action's **Settings** tab, you can edit the JavaScript action code without leaving Studio Pro. The editor is based on the [Monaco Editor](https://microsoft.github.io/monaco-editor/index.html). It offers features such as syntax highlighting and code completion.
 

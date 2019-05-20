@@ -70,30 +70,30 @@ For periodic interactions that handle large datasets (for example, in reporting,
 
 ## 3 Request-Reply to Transfer Data
 
-The diagram below shows the most typical ways to transfer data in real-time:
+The diagram below shows the most typical methods for transferring data in real-time:
 
 ![](attachments/service-integration/request-reply.png)
 
-* Pulling data/business event from the destination – this is the most common way and the easiest to operate
-* Pushing data/business event to the destination – this is a good way to validate data in the destination before it can be stored ther
+* Pulling data/business event from the destination – this is the most common method and the easiest to operate
+* Pushing data/business event to the destination – this is a good method for validating data in the destination before it can be stored ther
 * Using a service layer in between, such as API management or a message broker – using a service layer (with queues or with transformation) can further decouple the apps, and this is recommended if there is a large organizational or geographical distance between the apps
 * Using OData to retrieve "remote objects" – this is a tighter integration that is more closely linked to the data model; this method will be strengthened in a future version of Mendix, and it should be very useful when apps are close (meaning, within microservices systems)
 
 ### 3.1 REST Pull Request-Reply to Transfer Data {#pull-transfer}
 
-The REST-pull request-reply is the default option when replicating data from point A to point B. The system that needs the data is in charge of triggering the interface and the apps do not need to by up and running at the same time for this to work. To know what has changed, there are at least 3 options:
+The REST `pull` request-reply is the default option when replicating data from point A to point B. The system that needs the data is in charge of triggering the interface, and the apps do not need to be up and running at the same time for this to work. To see what has changed, there are at least three options:
 
-1. Use the last-updated-time-stamp of the record to retrieve "all changes since <last time stamp>". This is quite robust, but for high volume there are some edge cases where this can miss an update.
-2. Use a flag on the base table that indicates the record changed, and its re-set when the change is picked up. For more than one subscriber there would be more than one flag, see https://documentation-accp.cfapps.io/best-practices/architecture/integration/workflow-int-data-transfer.
-3. Use the Mendix [Process Queue](https://appstore.home.mendix.com/link/app/393/) App Store module. In this case the source App already maps the data into a REST JSON message that is ready to picked up from the out-bound queue.
+1. Use the last updated time stamp of the record to retrieve `all changes since <last time stamp>`. This is quite robust, but for high volumes, there are some edge cases where this can miss an update.
+2. Use a flag on the base table that indicates the record changed, which is reset when the change is picked up. For more than one subscriber, there will be more than one flag (for details, see [Workflow Integration with Data Transfer Example](data-transfer)).
+3. Use the Mendix [Process Queue](https://appstore.home.mendix.com/link/app/393/) App Store module. In this case, the source app will already map the data into a REST JSON message that is ready to be picked up from the outbound queue.
 
-<< FIGURE B>>
+![](attachments/service-integration/pull-transfer.png)
 
-The last two options are the most recommended. 
+Options 2 and 3 are the most recommended. 
 
-Option 3 has an additional advantage that the transformation to a business event or transaction takes place directly. I.e. we already created a REST message, so we know that it reflects the exact situation when the change happened. The service call will also be slighly faster, because this work is already done.
+Option 3 has an additional advantage in that the transformation to a business event or transaction takes place directly. Because you will have already created a REST message, you will know that it reflects the exact situation when the change happened. The service call will also be slighly faster, because this work is already done.
 
-However if the subscribing App only is interested in the latest stage, there is no use to receive "every save" in the source system, and then Option 2, using a flag, is the easiest and most efficient method, see https://documentation-accp.cfapps.io/best-practices/architecture/integration/workflow-int-data-transfer.
+However, if the subscribing app is only interested in the latest stage, there is no need to receive "every save" in the source system. In that case, using option 2 with a flag is the easiest and most efficient method (for more information, see [Workflow Integration with Data Transfer Example](data-transfer)).
 
 ### 3.2 REST Push Request-Reply When Validation Is Needed
 

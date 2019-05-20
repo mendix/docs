@@ -97,12 +97,13 @@ However, if the subscribing app is only interested in the latest stage, there is
 
 ### 3.2 REST Push Request-Reply When Validation Is Needed
 
-Pushing data to another system is useful when there is validation in the destination (for example, to change master data). If there is a validation error, the user should see it directly while in the process of changing the data so that they can correct it immediately, or at least an error workflow should be considered.
+Pushing data to another system is useful when there is validation in the destination (for example, to change the master data). If there is a validation error, the user should see it directly while in the process of changing the data so that they can correct it immediately. You should at least consider an error workflow.
 
-There are technically two options to do this:
-1. Pushing directly from the process that changes the data. This is typical when an end-user interacts with the system so he will receive errors directly from the source service, potentially showing the error messages to him, so he can correct data or take other action.
-2. Use the Mendix [Process Queue](https://appstore.home.mendix.com/link/app/393/) App Store module as described above, and then have a separate process that tries (and re-tries) to push these messages to the destination. Still receiving validation messages, but in this case the end-user is not directly informed, but will get a task later to correct something.
-3. Using the process queue on the destination side, means that the message will arrive on the destination app, but without full validation there. I.e. the destination side has a separate process that gets them from the queue and updates the domain model.
+There are technically two options for doing  this:
+
+1. Push directly from the process that changes the data. This is typical for when an end-user is interacting with the system, so they will receive errors directly from the source service. The error messages can potentially be shown to the end-user so they can correct the data or take another action.
+2. Use the Mendix [Process Queue](https://appstore.home.mendix.com/link/app/393/) App Store module, and then have a separate process that tries (and retries) to push these messages to the destination. Validation messages will still be received, but in this case, the end-user is not directly informed, instead receiving a task later to correct something.
+3. Use the [Process Queue](https://appstore.home.mendix.com/link/app/393/) module on the destination side, which means that the message will arrive on the destination app but without the full validation there. I.e. the destination side has a separate process that gets them from the queue and updates the domain model.
 
 << FIGURE C >>
 

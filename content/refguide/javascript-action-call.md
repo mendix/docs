@@ -1,6 +1,6 @@
 ---
 title: "JavaScript Action Call"
-category: "Action Call Activities"
+parent: "action-call-activities"
 menu_order: 20
 description: "This reference guide explains the properties of the JavaScript action call activity."
 tags: ["javascript", "return", "variable", "studio pro"]

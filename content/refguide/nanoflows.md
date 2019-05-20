@@ -134,7 +134,11 @@ List activities can be used to create and manipulate lists of objects.
 | [![](attachments/819203/918007.png)](change-list) | [Change list](change-list) | Can be used to change the content of a list variable. |
 | [![](attachments/819203/918009.png)](create-list) | [Create list](create-list) | Can be used to create a (empty) list variable. |
 
-#### 5.4.3 Variable Activities
+#### 5.4.3 Action Call Activities
+
+The [JavaScript action call](javascript-action-call) activity executes a JavaScript action.
+
+#### 5.4.4 Variable Activities
 
 Variable activities can be used to create or change a variable within a microflow.
 
@@ -143,7 +147,7 @@ Variable activities can be used to create or change a variable within a microflo
 | [![](attachments/819203/918011.png)](change-variable) | [Change variable](change-variable) | Can be used to change the value of a variable. |
 | [![](attachments/819203/918110.png)](create-variable) | [Create variable](create-variable) | Can be used to create a new variable. |
 
-#### 5.4.4 Client Activities
+#### 5.4.5 Client Activities
 
 Client activities can be used to have the web client of your application perform an action, such as showing a different page or downloading a file.
 

@@ -1,7 +1,7 @@
 ---
 title: "Event-Based Integration"
 parent: "integration-overview"
-menu_order: 5
+menu_order: 4
 draft: true
 ---
 
@@ -9,11 +9,19 @@ draft: true
 
 At the moment, event-driven architectures are making their return into the mainstream of integration. This follows an increased interest in and focus on, for example, IoT solutions, distributed networks of actors, and central monitoring. Several solution providers are promoting new paradigms for managing large, distributed, high-volume event driven architectures.
 
-The main characteristic for event-driven trends is that the process that produces events or data does not communicate directly to the target system. Rather, it creates an “event” message that is put on a queue for asynchronous delivery. This means that the triggering process will not know directly if the message arrives or if there were errors in the delivery.
-
-The diagram below presents the basic characteristic of most event-based solutions, which is that the process creating the event is not directly connected to the process that uses it:
+The diagram below presents a basic event-driven integration example:
 
 ![](attachments/event-integration/ei-intro.png)
+
+The main characteristic for event-driven integration is that the process that produces events or data does not communicate directly to the target system. Rather, it creates an “event” message that is put on a queue for asynchronous delivery. This means that the triggering process does not know if the message arrives or if there were errors in the delivery. If status or errors need to be handled in the source system, there is a need for a separate interface and a separate process or workflow for this.
+
+Event-driven integration is quite important in the following scenarios:
+
+* There is truly one-directional integration, as is needed in most IoT and metrics solutions (For example, when updating stock tickers where every new update overwrites the old one)
+* When synchronous communication is hard to achieve, due to one of the following factors:
+	* The uptime of the destination system is hard to predict
+	* The destination system is far away network-wise or geographically (which means events will be more practical)
+  	* There is high-volume, distributed, many-to-many, one-to-very-many, or very-many-to-one communication (for example, status updates on social media servers), in which case Kafka or other event-driven solutions are superior
 
 ## 2 Types of Event-Driven Integration
 

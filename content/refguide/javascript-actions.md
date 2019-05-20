@@ -13,9 +13,9 @@ With JavaScript actions, you can extend your application's functionality in ways
 
 {{% alert type="info" %}}
 
-Each JavaScript action defined in Mendix Studio Pro corresponds to a file *{name of JavaScript action}.js* in the subdirectory **javascriptsource{module name}/actions/** in your project directory.
+Each JavaScript action defined in Mendix Studio Pro corresponds to a file *{JavaScript action name}.js* in the subdirectory **javascriptsource{module name}/actions/** in your project directory.
 
-The skeletons of these *.js* files are generated automatically when you save the action, and the JavaScript actions can immediately be edited in the embedded code editor.
+The skeletons of these *.js* files are generated automatically when you save an action, and those JavaScript actions can immediately be edited in the embedded code editor.
 
 {{% /alert %}}
 
@@ -35,7 +35,7 @@ This setting handles a JavaScript action's name, which a nanoflow refers to when
 
 ### 2.2 Parameters
 
-Parameters pass data to the JavaScript actions. For example, if you had a JavaScript action which multiplied numbers, parameters would define the numbers to be multiplied. A JavaScript action can have zero or more parameters. Each parameter should have a unique name. You may add a parameter by clicking **Parameters** > **Add**, and then customize that parameter to pass data into a JavaScript action:
+Parameters pass data to JavaScript actions. For example, if you had a JavaScript action which multiplied numbers, parameters would define the numbers to be multiplied. A JavaScript action can have zero or more parameters. Each parameter should have a unique name. You may add a parameter by clicking **Parameters** > **Add**, and then customize that parameter to pass data into a JavaScript action:
 
 ![parameter](attachments/javascript-actions/parameter-naming.png)
 
@@ -51,7 +51,7 @@ The parameter types supported by JavaScript actions are described below.
 
 #### 2.2.1 Name
 
-This setting handles the parameter's name. A name is required, names must start with a letter and contain only letters. Spaces are not permitted in names.
+This setting handles the parameter's name. A name is required. Names must start with a letter and contain only letters. Spaces are not permitted in names.
 
 #### 2.2.2. Type
 

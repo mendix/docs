@@ -50,15 +50,15 @@ Synchronous calls can be used for almost anything where you want to assure that 
 
 These are some typical synchronous service scenarios:
 
-* Request-reply interfaces with REST and SOAP
-* Data retrieval with OData, REST, SOAP, or direct SQL
-* Legacy integration to older RPC protocols on mid-range systems or to mainframe transactions
-* API management and other external gateways to, for example, EDI, SWIFT, or EDIFACT protocols for busines-to-business transactions
-* Process orchestration where we need to know that the target received and processed the message
-* Transeferring business events when using internal queues
-* CI/CD and test automation orchestration
+* Request-reply interfaces with REST and SOAP (for more information, see the [Request-Reply to Transfer Data](#transfer) section below)
+* Transferring business events when using internal queues (for details, see the [REST Pull Request-Reply to Transfer Data](#pull-transfer) and [REST Push Request-Reply When Validation Is Needed](#push-transfer) sections below)
+* Data retrieval with OData, REST, SOAP, or direct SQL (for more information, see [Database Integration & OData](#db-odata))
+* Legacy integration with older RPC protocols on mid-range systems or with mainframe transactions (for more information, see [Integration Apps & Adapters](#adapters))
+* API management and other external gateways to, for example, EDI, SWIFT, or EDIFACT protocols for busines-to-business transactions (for details, see [Integration Layers](integration-layers))
+* Process orchestration where you need to know that the target received and processed the message (for details, see [Process Integration](process-integration))
+* CI/CD integration, test automation, and some health-checks for monitoring (for details, see [Ops & CI/CD Integration](
 
-Synchronous integration styles are the most commonly used and easiest to manage, because there are no moving parts between the two systems. It is possible to estimate that more than 50% of all integration is synchronous request-reply in the current landcape.
+Synchronous integration styles are easy to manage, because there are no moving parts between the two systems. It is possible to estimate that more than 50% of all integration is synchronous request-reply in the current landcape.
 
 ### 2.2 Where Not to Use Synchronous Integration?
 
@@ -68,7 +68,7 @@ For IoT and logging scenarios where there are many-to-one or many-to-many situat
 
 For periodic interactions that handle large datasets (for example, in reporting, billing, and invoicing), there is no reason to be working in real-time. Furthermore, processing will be slower and take more CPU power if transactions are processed one by one via services. For details on such cases, see [Export, Import & Batch Processing](export-import-batch).
 
-## 3 Request-Reply to Transfer Data
+## 3 Request-Reply to Transfer Data {#transfer}
 
 The diagram below shows the most typical methods for transferring data in real-time:
 
@@ -95,7 +95,7 @@ Option 3 has an additional advantage in that the transformation to a business ev
 
 However, if the subscribing app is only interested in the latest stage, there is no need to receive "every save" in the source system. In that case, using option 2 with a flag is the easiest and most efficient method (for more information, see [Workflow Integration with Data Transfer Example](data-transfer)).
 
-### 3.2 REST Push Request-Reply When Validation Is Needed
+### 3.2 REST Push Request-Reply When Validation Is Needed {#push-transfer}
 
 Pushing data to another system is useful when there is validation in the destination (for example, to change the master data). If there is a validation error, the user should see it directly while in the process of changing the data so that they can correct it immediately. You should at least consider an error workflow.
 
@@ -163,7 +163,7 @@ A good architectural guideline is to avoid tightly coupling the data models of d
 Never do SQL across firewalls, because that would open a hole where an external party could do anything to the database.
 {{% /alert %}}
 
-## 5 Integration Apps & Adapters
+## 5 Integration Apps & Adapters {#adapters}
 
 Many old legacy systems have a very specific format of communication, which could be from mainframes or any other old technology. A technical developer is needed for creating good integration with these systems.
 
@@ -184,15 +184,17 @@ The benefit of using Mendix in this type of scenario is that if there is an admi
 
 ## 6 Summary
 
-Request-reply integration is an easy way to integrate systems, and it should be considered the default integration option. The most important thing to consider is that the other system needs to be up and running for the integration to work. Using `pull` requests solves this for most cases, and means that work can continue in the first app while later other work continues in the other systems. For simplicity and easier error management, it is recommended in most cases to use a Mendix internal queue, instead of external queue managers or message brokers. However, there are exceptions when an integration layer is preferred.
+Request-reply integration is an easy way to integrate systems, and it should be considered the default integration option. The most important thing to consider is that the other system needs to be up and running for the integration to work. Using `pull` requests solves this for most cases, and means that work can continue in the first app while later other work continues in the other systems. 
 
-In some cases, you will want the business interaction to be direct across the two apps and be informed directly (for example, to get validations and confirmations directly back to the end-user). The business function then requires both apps to be up and running. This does make sense in many cases, so it should be selected when it is the better option. This is the way most SaaS solutions work. When you need to update them from another app, you will call a service and get the results back.
+If queue functionality is required, using Mendix internal queues is recommended, because there are fewer moving parts and fewer places where things can fail. However, there are exceptions for when an integration layer is preferred (for details, see [Integration Layers](integration-layers)).
 
-For BI and microservice systems as well as for retrieving data from SAP, OData provides a new paradigm that will be both easy to build and easy to control. More details will be provided for a future Mendix version.
+In some cases, you want the business interaction to be direct across the two apps (for example, to get validations and confirmations directly back to the end-user). This is the way most SaaS solutions work. When you need to update them from another app, you call a service and get the results back. The business function then requires both apps to be up and running. 
+
+For BI and microservice systems as well as for retrieving data from SAP, OData provides a new paradigm that is easy to build and control. OData usage will be significantly strengthened in a future Mendix release.
 
 For legacy databases and history databases, there may be a reason to use direct SQL. In that case, database views annd stored procedures are preferred to using direct SQL statements.
 
-In order of relevance and priority, Mendix prefers the protocols in this order for synchronous interactions:
+In order of relevance and priority for synchronous interactions, Mendix prefers the protocols in this order :
 
 1. REST
 2. OData
@@ -201,22 +203,4 @@ In order of relevance and priority, Mendix prefers the protocols in this order f
 5. SQL to database view or stored procedure
 6. Direct SQL
 
-The Mendix Platform has a very rich and good integration functionality. Several organizations use Mendix to build integration apps and adapters to various systems or shared data apps that provide combined datasets.
-
-## 7 Ops Integration & Test Services 
-
-{{% todo %}}[Move to separate chapter]{{% /todo %}}
-
-A new trend (which is part of microservices and DevOps) is to build services from live systems that are specifically oriented towards automated testing and health checks on live systems. A service that is used to test things in CI/CD pipelines may later be reused to verify a production deployment, check a live system, or collect user metrics for a dashboard.
-
-This diagram presents three typical parts covered via IT delivery automation, which is a very common form of process orchestration:
-
-![](attachments/service-integration/automation-service.png)
-
-CI/CD & test automation is often done with Jenkins, GitHub CI, or AKS. However, there are Mendix customers that run on Mendix Cloud and do CI/CD with a Mendix app calling Mendix Cloud APIs while using test systems like [ATS](/ats/index) or specific test services. Typically, this chain is run nightly and gives a report each morning to the DevOps team on the issues found.
-
-The new app in the diagram above has the [UnitTesting](https://appstore.home.mendix.com/link/app/390/) module installed and unit tests configured for key microflows. It also has specific test services that cover full functional scenarios and a health check that is used in production. Finally, the app has an admin page with collected technical and functional KPIs that help with maintaining the solution.
-
-From the app management dashboard, you have an overview of everything that is needed as well as a deep link to the admin page for closer inspection when required. You can  make deployments possible here (if that is user-friendly) by calling the APIs of the Mendix Cloud (or, if on VPC, by calling Jenkins or Azure DevOps).
-
-For professional operations solutions, there is often an agent per node that is shipping data in near-real time towards an application performance monitoring ([APM](https://docs.mendix.com/apm/)) system (such as Data Dog) that is used for root-cause analysis, trend analysis, sizing metrics, and alarms.
+The Mendix Platform has very rich integration functionality. Several organizations use Mendix to build integration apps and adapters to various systems or shared data apps that provide combined datasets.

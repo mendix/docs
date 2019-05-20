@@ -112,13 +112,13 @@ In the **Documentation** tab, press **Edit** to document a JavaScript action:
 
 ![documentation](attachments/javascript-actions/documentation-pro.png)
 
-Your documentation is copied into the JavaScript action as comment on the function in the corresponding *.js* file:
+Documentation is visible in the **Code** tab. Your documentation also is copied into the JavaScript action as comment on the function in the corresponding *.js* file:
 
 ![documentation js file](attachments/javascript-actions/documentation-js-file.png)
 
 ## 6 Code Settings
 
-In the **Code** tab of the JavaScript action's **Settings** tab, you can edit the JavaScript action code without leaving Studio Pro. The editor is based on the [Monaco Editor](https://microsoft.github.io/monaco-editor/index.html). It offers features such as syntax highlighting and code completion.
+In the **Code** tab, you can edit the JavaScript action code without leaving Studio Pro. The editor is based on the [Monaco Editor](https://microsoft.github.io/monaco-editor/index.html). It offers features such as syntax highlighting and code completion.
 
 ## 7 Read More
 

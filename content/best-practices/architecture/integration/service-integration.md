@@ -105,105 +105,107 @@ There are technically two options for doing  this:
 2. Use the Mendix [Process Queue](https://appstore.home.mendix.com/link/app/393/) App Store module, and then have a separate process that tries (and retries) to push these messages to the destination. Validation messages will still be received, but in this case, the end-user is not directly informed, instead receiving a task later to correct something.
 3. Use the [Process Queue](https://appstore.home.mendix.com/link/app/393/) module on the destination side, which means that the message will arrive on the destination app but without the full validation there. I.e. the destination side has a separate process that gets them from the queue and updates the domain model.
 
-<< FIGURE C >>
+![](attachments/service-integration/push-validation.png)
 
-The choice for pushing data is usually validation related. But it could also be that the destination system is unable to poll for new data, as is often the case for SaaS solutions. E.g. creating an order in SAP or Siebel will be a push request.
+The choice for pushing data is usually validation-related. However, it could also be that the destination system is unable to poll for new data, as is often the case for SaaS solutions (for example, creating an order in SAP or Siebel will be a push request).
 
-The choice between Option 1 and 2 will be depending on if we want the end-user to fix things directly (Option 1), or if we want him to be able to finish his work, and handle errors later (Option 2).
-Option 3 is often preferred as an alternative to Option 1 when less validation errors are expected, or when the validation would take too long for an end-user to be waiting. The end-user is  assured that the business event has arrived in the destination, and he can continue working on something else. Any exceptions later would have to be transferred separatelly back to the source, if required. Compare this with submitting an order on line and getting an email confirmation or error message later.
+The choice between options 1 and 2 will depend on if you want the end-user to fix things directly (via option 1) or finish their work and then handle the errors (via option 2).
 
-### 3.3 Using a Message Broker or other Integration Layer
+Option 3 is often preferred as an alternative to option 1, when less validation errors are expected or when the validation would take too long for an end-user to be waiting. With option 3, the end-user is assured that the business event has arrived in the destination, and they can continue working on something else. Any exceptions later will have to be transferred separately back to the source, if required. Compare this with submitting an order online and getting an email confirmation or error message later.
 
-Using an integration layer will provide a level of decoupling, but also another dependency, another place to maintain integration functionality, and another place where things can go wrong.
+### 3.3 Using a Message Broker or Other Integration Layer
 
-Still in many instances Integration layers are used for a variaty of reasons:
-1. There is a desire for functional decoupling, so allowing e.g. an ESB to tranform the messages on the way
-2. There is a large distance in network or geography, and the integration layer handles these distances
-3. Integration layers are almost always up and running while destination systems may not be, and then the integration layer can queue up messages, see also Event base integration https://documentation-accp.cfapps.io/best-practices/architecture/integration/event-integration
-4. There is a standard at an organization to use a specific integration layer between e.g. departments, which provides a standard gateway for integration
+Using an integration layer will provide a level of decoupling. However, it is important to note that this will be another dependency, another place to maintain the integration functionality, and another place where things can go wrong.
 
-In the case of using an Integration layer for transfering or replicating data we would expect the source system to push a message to the integration layer, receiving just an acknowledgement of reception. This could be REST Push or any other format, but the call is always synchrnous. Even Kafka and queue managers have their own APIs, and there are modules in the Mendix App store to make these calls easy.
+Integration layers are used in many instances for a variaty of reasons:
 
-Please refer to the section https://documentation-accp.cfapps.io/best-practices/architecture/integration/integration-layers for more information on this.
+* There is a desire for functional decoupling (for example, to allow an ESB to tranform the messages on the way)
+* There is a large distance in the network or geography, and the integration layer can handle these distances
+* Because integration layers are almost always up and running while destination systems may not be, the integration layer can queue up messages (for more information, see [Event-Based Integration](event-integration)
+* There is a standard at an organization to use a specific integration layer between departments, for example, which provides a standard gateway for integration
 
-### 3.4 Using OData Retrieve
+When using an integration layer for transfering or replicating data, you would expect the source system to push a message to the integration layer and then just receive an acknowledgement of reception. This could be a REST `push` or any other format, but the call will always be synchronous. Even Kafka and queue managers have their own APIs, and there are modules in the Mendix App store to make these calls easy.
 
-In Mendix 8, when the Data Hub will be available, OData contracts will be much easier to use, and will make some data replication un-necessary, at least within microservices clusters. An app can "provide" OData objects and REST services to the rest of the Mendix apps in the same organization, that can "consume" these. This will simplify use of both REST and OData at the same time as it increases the control over integration.
+For more details, refer to [Integration Layers](integration-layers).
 
-For some data transfer use-cases, especially for BI and within Microservices clusters, it will make sense to use OData. Data is then retrieved from another app's data tables more or less automatically, to be used in the Widgets of the other app, with the caveat that domain models can become more tightly linked. This being the reason why it should probably be in "organizationally close" situation, where teams are aware of developments, and/or in e.g. BI where the business risk to changes is smaller.
+### 3.4 Using OData Retrieve {#odata-retrieve}
+
+For some data transfer use cases (especially for BI and within microservice clusters), it makes sense to use OData. In such cases, data is retrieved from another app's data tables more or less automatically and is then used in the widgets of the other app, with the caveat that domain models can become more tightly linked. Because of this, OData should be used in "organizationally-close situations" where teams are aware of developments, or in BI situations where the business risk to changes is smaller.
+
+In a future version of Mendix, OData contracts will be easier to use and will make some data replication unnecessary (at least within microservices clusters). An app will then be able to "provide" OData objects and REST services to the rest of the Mendix apps in the same organization that can "consume" these. This will simplify the use of both REST and OData while increasing control over integration.
 
 ## 4 Database Integration & OData {#db-odata}
 
-Mendix can integrate directly with external databases using OSQL, OData, or SQL. But Mendix does not allow integration directly into its own database. This is to avoid risk and to use clear contracts in the communication. OData then provides a solution to easily access data tables in Mendix from an OData enabled system. Writing with OData to a Mendix app will not be allowed in the first releases, so for pushing a change a REST service is required.
+Mendix can integrate directly with external databases using OSQL, OData, or SQL. But Mendix does not allow integration directly into its own database. This is to avoid risks and to use clear contracts in the communication. OData then provides a solution for easily accessing data tables in Mendix from an OData-enabled system. Writing with OData to a Mendix app will not be allowed in the first releases, so for pushing a change, a REST service is required.
 
-OData provides a clear contract and is directly supported from the Mendix Platform. Both sides of the integration are required to support the OData. For example, the integration from Mendix to [SAP](/refguide/sap/sap-odata-connector) is well supported via OData contracts, in all recent versions of SAP.
+OData provides a clear contract and is directly supported from the Mendix Platform. Both sides of the integration are required to support the OData. For example, the integration from Mendix to [SAP](/refguide/sap/sap-odata-connector) is well supported via OData contracts in all recent versions of SAP.
 
-The typical Data use cases are:
+These are the typical data use cases:
 
-1. OData can be used between Mendix apps for reading out data directly from Widgets in the UI. At any point in this interaction some data can be saved locally, in effect creating a data transfer, see section 3.4
-2. OData can be used from BI solutions to retrieve data from a Mendix app close to real-time
-3. OData is used for integrating with SAP solutions (or any other external system that supports OData)
+* USe OData between Mendix apps for reading out data directly from widgets in the UI; at any point in this interaction, some data can be saved locally, in effect creating a data transfer (for details, see the [Using OData Retrieve](#odata-retrieve) section below)
+* Use OData from BI solutions to retrieve data from a Mendix app close to real-time
+* Use OData for integrating with SAP solutions (or any other external system that supports OData)
 
-Sometimes within a Microservice cluster where Mendix plays a role, there is a need for e.g. a very large History database, which for BI reasons can be an external database. Since this is 'within' the same system, Mendix then interacts diretly with an external database. 
+Sometimes within a microservice cluster where Mendix plays a role, there is a need for a very large history database. For BI reasons, this can be an external database. Since this is "within" the same system, Mendix then interacts diretly with an external database.
 
-Other common reasons to use direct SQL is for older systems or databases. There may be no OData, REST or SOAP options. There could be an  RPC, and if it has the required functions it is recommended to use that, building a small "adapter" maybe using Java actions. But if even the RPC is in-adequate we come to the last resort option of connecting directly to an external database.
+Other common reasons to use direct SQL is for older systems or databases. There may be no OData, REST, or SOAP options. There could be an RPC, and using that by building a small "adapter" using Java actions is recommended if it has the required functions. But if the RPC is inadequate, the last resort option is connecting directly to an external database.
 
-4. Retrieving data from a legacy system or other database, using SQL, preferrably on a Database view
-5. Updating data in a legacy system or database, preferably calling a stored procedure
+These are further use cases:
 
-![](attachments/service-integration/odata.png) ---replace <<Figure D>>
+* Retrieve data from a legacy system or other database, using SQL, preferrably on a database view
+* Update data in a legacy system or database, preferably via calling a stored procedure
 
-A good architectural guideline is to avoid coupling the data-models of different systems tightly. Each data-model is adapted to what that app is focusing on doing, and it is good to leave freedom of developing the datamodel without impacting other apps and systems. That is why OData is better than direct Database interactions, and if you have to go directly on a Database, it is wise to use database views and stored procedures as a "padding" between the underlaying data-model and the service interaction.
+![](attachments/service-integration/odata.png)
+
+A good architectural guideline is to avoid tightly coupling the data models of different systems. Each data model is adapted to what that app is focusing on doing, and it is good to allow for the freedom of developing a data model without impacting other apps and systems. That is why OData is better than direct database interactions. If you have to go directly on a database, it is wise to use database views and stored procedures as a "padding" between the underlaying data model and the service interaction.
 
 {{% alert type="warning" %}}
-Never do SQL across firewalls, because it would open a hole where an external party could do anything to the database.
+Never do SQL across firewalls, because that would open a hole where an external party could do anything to the database.
 {{% /alert %}}
 
-## 5 Integration Apps and Adapteres
+## 5 Integration Apps & Adapters
 
-Many old legacy systems have a very specific format of communication, which could be from mainframes or any other old technology. To create good integration with these systems takes a technical developer.
+Many old legacy systems have a very specific format of communication, which could be from mainframes or any other old technology. A technical developer is needed for creating good integration with these systems.
 
-To build this technical integration repeatedly is not a good idea. There is the option to create one single adapter or integration app that specializes in the intricacies of that legacy system.
+To build this technical integration repeatedly is not a good idea. There is the option to create one single adapter or integration app that specializes in the intricacies of that legacy system. Other apps can then integrate with the adapter in a simple format using, for example, REST or files and pre-configured functionality. As an example scenario, it could take 3 TCP/IP RPC calls to do an operation, which the integration app encapsulates into one single easy-to-use REST service.
 
-Other apps can then integrate with the adapter in a simple format using, for example, REST or files and pre-configured functionality. As an example scenario, it could take 3 TCP/IP RPC calls to do an operation, which the integration app encapsulates into one single easy-to-use REST service.
-
-Depending on the case, the integration app may only forward real-time requests to the back-end system, cache some requests, or even store entire datasets and provide them via services or files. It really depends on the following questions:
+Depending on the case, the integration app may only forward real-time requests to the back-end system, cache some requests, or even store entire datasets and provide them via services or files. This really depends on how you answer the following questions:
 
 * What is the legacy system capable of?
-* What is the requirement to use the data from other systems?
+* What is the requirement for using data from other systems?
 
-In the diagram below, both file and RPC integration is shown to the legacy system. Depending on the situation one can use one method or both.
+In the diagram below, both file and RPC integration is shown to the legacy system. Depending on the situation, you can use one method or both.
 
 ![](attachments/service-integration/rpc.png)
 
-For example, imagine that most of the interaction is the retrieval of data. To make that fast and easy, the integration app imports the relevant data via a file and stores it in a format that is ideal for retrieval with a materialized view that makes parts of the legacy system data easily available via OData. For the updates, you prefer them to be synchronous all the way, so you use REST into the integration app. That will translate to TCP/IP and update the legacy system as a request-reply interface, informing the user of success or failure
+For example, imagine that most of the interaction is the retrieval of data. To make that fast and easy, the integration app imports the relevant data via a file and stores it in a format that is ideal for retrieval with a materialized view that makes parts of the legacy system data easily available via OData. For the updates, it is preferred that they are synchronous all the way, so you use REST into the integration app. That will translate to TCP/IP and update the legacy system as a request-reply interface, informing the user of success or failure
 
-The benefit of using Mendix in this type of scenario is that if there is an admin UI needed, it is easy to provide. In effect, with this pattern you can create a distributed ESB.
+The benefit of using Mendix in this type of scenario is that if there is an admin UI needed, that is easy to build. In effect, with this pattern, you can create a distributed ESB.
 
 ## 6 Summary
 
-Request Reply integration is an easy way to integrate systems, and should be considered the default option. The one thing to consider is that the other system needs to be up and running for the integration to work. 
+Request-reply integration is an easy way to integrate systems, and it should be considered the default integration option. The most important thing to consider is that the other system needs to be up and running for the integration to work. Using `pull` requests solves this for most cases, and means that work can continue in the first app while later other work continues in the other systems. For simplicity and easier error management, it is recommended in most cases to use a Mendix internal queue, instead of external queue managers or message brokers. However, there are exceptions when an integration layer is preferred.
 
-As described in this section, using pull requests solves this  for most cases. This means that work can continue in the first app while later other work continues in the other systems. For simplicity and easier error management, we would in most cases recommend using a Mendix internal queue, instead of exteranl queue managers or message brokers, but there are exceptions when an integration layer is preferred.
+In some cases, you will want the business interaction to be direct across the two apps and be informed directly (for example, to get validations and confirmations directly back to the end-user). The business function then requires both apps to be up and running. This does make sense in many cases, so it should be selected when it is the better option. This is the way most SaaS solutions work. When you need to update them from another app, you will call a service and get the results back.
 
-In some cases we want the business interaction to be direct across the two apps, to be informed directly, e.g. to get validations and confirmations directly back to an end-user. The business function then requires both apps to be up and running. THis does make sense in many cases, so it should not be avoided, it should be selected when its better. It is the way most SaaS solutions work. When we need to update them from another app we call a service and get the results back.
+For BI and microservice systems as well as for retrieving data from SAP, OData provides a new paradigm that will be both easy to build and easy to control. More details will be provided for a future Mendix version.
 
-For BI and microservice systems and for retrieving data from SAP, OData provides a new paradigm that will be both easy to build and easy to control. More details will be provided when the Data Hub is released in Mendix 8.
+For legacy databases and history databases, there may be a reason to use direct SQL. In that case, database views annd stored procedures are preferred to using direct SQL statements.
 
-For Legacy databases and for e.g. History databases, there may be a reason to use direct SQL, and then DB views annd stored procedures are preferred to using direct SQL statements.
-
-In order of relevance and priority, for synchronous interactions, we would prefer the protocols in this order:
+In order of relevance and priority, Mendix prefers the protocols in this order for synchronous interactions:
 
 1. REST
 2. OData
 3. SOAP
 4. Other RPC
-5. SQL to DB view or stored procedure
+5. SQL to database view or stored procedure
 6. Direct SQL
 
-Mendix has very rich and good integration functionality, and several organizations use Mendix to build integration apps and adapters to various systems, or shared data apps, that provide a combined data-sets.
+The Mendix Platform has a very rich and good integration functionality. Several organizations use Mendix to build integration apps and adapters to various systems or shared data apps that provide combined datasets.
 
-## 7 Ops Integration & Test Services <<Move to separate Chapter>>
+## 7 Ops Integration & Test Services 
+
+{{% todo %}}[Move to separate chapter]{{% /todo %}}
 
 A new trend (which is part of microservices and DevOps) is to build services from live systems that are specifically oriented towards automated testing and health checks on live systems. A service that is used to test things in CI/CD pipelines may later be reused to verify a production deployment, check a live system, or collect user metrics for a dashboard.
 

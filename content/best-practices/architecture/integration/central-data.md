@@ -1,7 +1,7 @@
 ---
 title: "Central Data"
 parent: "integration-overview"
-menu_order: 7
+menu_order: 6
 draft: true
 ---
 

@@ -28,40 +28,42 @@ This diagram presents the most typical deep-linking option in a simple form:
 
 ![](attachments/ui-integration/deep.png)
 
-Integration via a UI link is becoming more and more common. It enables developing a UI only once in the app where it belongs, and then linking other users there when they need to perform a workflow there. Most users use the [Deep link module](https://appstore.home.mendix.com/link/app/43/) available from the Mendix App Store.
+Integration via a UI link is becoming more and more common. This enables developing a UI only once in the app where it belongs, and then linking other end-users there when they need to perform a workflow there. This is mostly accomplished via the [Deep link module](https://appstore.home.mendix.com/link/app/43/) available from the Mendix App Store.
 
 Sometimes when using deep links, it is necessary to send data over to the second app or back to the first app. This is done using [service integration](service-integration). As an example scenario, you need to open a UI for creating a customer in the customer master app, while right after creation, the customer is already available in the first app.
 
 UI integration can also have an advantage for mastering data, since the process for UI validations of information is always done in the same way. Accordingly, when the work is done in one app, a relevant part of the new data can be copied back to the other app.
 
-## 3 Weblink Integration for Web Sites {#web}
+## 3 Web Link Integration for Websites {#web}
 
-Websites are different from web apps in that they are mostly passive. This means that the end-user is more browsing information rather than interacting with the site to enter e.g. complex orders. There are several solutions for providing nice-looking read-only web pages to deliver content and marketing in a way that is easy to optimize for Google searches. However, as soon as there is more logic or UX interaction involved, web-site solutions become inefficient for building functionality.
+Websites are different from web apps in that they are mostly passive. This means that a website end-user is mostly browsing information, rather than interacting with the site in more complex ways (for example, by entering orders). There are several solutions for providing nice-looking read-only web pages to deliver content and marketing in ways that are easy to optimize for Google searches. However, as soon as there is more logic or UX interaction involved, website solutions become inefficient for building functionality.
 
-The diagram shows a typical set-up: The web-site has a landing page, information, product catalog, documentation, and blogs in the website area, while Q/A, collaboration, and work-oriented parts are all built in Mendix. All important information in the web-site can be search engine optimized. All functional parts can be quickly created, modified, maintained and secured where needed.
+The diagram below shows a typical setup: a website has a landing page, information, product catalog, documentation, and blog posts in the website area, while Q/A, collaboration, and work-oriented parts are all built into Mendix applications. All the important information in the website can be search engine-optimized. Additionally, all the functional parts can be quickly created, modified, maintained, and secured where needed.
 
-![](attachments/ui-integration/web.png)  <<UPDATE FIGURE A>>
+![](attachments/ui-integration/web.png)
 	
-Many organizations combine a content-oriented website solution with functionality rich Mendix apps. Some build all the logged-in portals and pages in Mendix, ensuring that a good security system for access to restricted functions and business data. I.e. the full web-site consists of:
+Many organizations combine a content-oriented website solution with Mendix apps that are rich in functionality. Some organizations build all of their logged-in portals and pages via the Mendix Platform, ensuring a good security system for access to restricted functions and business data. 
+
+In that way, a full organization website consists of the following components:
 
 * Marketing-oriented website software for the landing page and read-only pages
-* One or several Mendix apps covering the functional parts of the website
+* One or several Mendix applications covering the functional parts of the website
 
-The integration down from the website to the Mendix apps is done via normal web links and URLs. The integration between Mendix Apps is done via Deep-links, as described above. In this context, Mendix saves a lot of time in building interactive websites and customer portals.
+The integration down from the website to the Mendix apps is done via normal web links and URLs. The integration between Mendix apps is done via deep links, as described above. In this context, the Mendix Platform saves you a lot of time in building interactive websites and customer portals.
 
-## 4 CMS Integration fpr Customer Portals {#cms}
+## 4 CMS Integration for Customer Portals {#cms}
 
-Many websites and portals use Mendix apps for the functional parts where user interaction is required. When aligning the UI design themes, this works very well. However large companies often use a professional CMS system (Content Management System) to generate the marketing-oriented portals. CMS systems select content depending on user behavious and track the click and hoovering statistics.
+Many websites and portals use Mendix applications for the functional parts where user interaction is required. When aligning UI design themes, this works very well. However, large organizations often use a professional content management system (CMS) to generate the marketing-oriented portals. A CMS selects content depending on user behaviors and tracks the click and hovering statistics.
 
-The diagram below shows a CMS system rendering Mendix UI in a part of the browser while the CMS system can keep on pushing marketing content into the other parts of the UI:
+This diagram shows a CMS rendering Mendix UI in a part of the browser while the CMS can keep pushing marketing content into the other parts of the UI:
 
 ![](attachments/ui-integration/cms.png)
 
-It is still slow and costly to develop functional pages in CMS systems, so several organizations have used Mendix together with a CMS solution, for the active parts of the customer portal. There are a few options to do this, contact Mendix Expert Services for more information. Often the Mendix UI goes through a proxy and renders in the same web-portal where the CMS system is running.
+Developing pages in a CMS is still slow and costly, so several organizations use the Mendix Platform along with a CMS solution for the active parts of their customer portals. There are a few options for doing this, and often the Mendix UI will go through a proxy and render in the same web portal where the CMS system is running. You can contact the Mendix Architecture Guild via <DIS_Architecture_Guild@mendix.com> for more information. 
 
-With this solution the marketing teams can use the CMS system and decisioning to show the relevant marketintg content to each different  business users, without a new software release. While the functional and active parts of the Customer Portal, are easy to build and maintain using the Mendix rapid application development platform.
+With such a solution, marketing teams can use the CMS and decisioning to show relevant marketing content to different business users without a new software release. At the same time, building and maintaining the functional and active parts of the customer portal can be easily done via the Mendix Platform.
 
-Often there is a specialized Mendix app built for the purpose of interacting with the CMS customer portal. This app imports the overview information (for example, the last ten tickets and orders) so that the end-user quickly gets an overview and can then follow deep links down to other apps to do specific work in different pages.
+Often, there is a specialized Mendix application built for the purpose of interacting with the CMS customer portal. This app imports the overview information (for example, the last ten tickets and orders) so that the end-user quickly gets an overview and can then follow deep links down to other apps and do specific work in different pages.
 
 ## 5 CDN Integration for Global Portals and Apps {#cdn}
 

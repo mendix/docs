@@ -31,6 +31,7 @@ The following documents in this category describe the documents you can add:
 * [Building blocks](building-block)
 * [Page templates](page-templates)
 * [Java actions](java-actions)
+* [JavaScript Actions](javascript-actions)
 * [Rules](rules)
 * [Enumerations](enumerations)
 * [Datasets](data-sets)

@@ -1,6 +1,6 @@
 ---
 title: "JavaScript Actions"
-category: "Action Call Activities"
+parent: "action-call-activities"
 menu_order: 10
 description: "This reference guide details the ways JavaScript Actions can extend the functionality of your Mendix app."
 tags: ["javascript", "javascript action", "parameter", "studio pro"]

@@ -24,12 +24,12 @@ You now have more control over the target architecture for your Android apps. Th
 
 To enable more control over the target architecture, use the following variants:
 
-| Npm command             |           Description                        |
-| ----------------------- | ------------------------------------------------- |
-|`$ npm run package:x86`    |           Prepares `build` directory for x86|
-|`$ npm run package:x86_64` |           Prepares `build` directory for x86_64|
-|`$ npm run package:arm`    |           Prepares `build` directory for arm|
-|`$ npm run package:arm64`  |           Prepares `build` directory for arm64|
+| npm Command             |           Description                        |
+| --- | --- |
+|`$ npm run package:x86`    |           Prepares `build` directory for x86.|
+|`$ npm run package:x86_64` |           Prepares `build` directory for x86_64.|
+|`$ npm run package:arm`    |           Prepares `build` directory for arm.|
+|`$ npm run package:arm64`  |           Prepares `build` directory for arm64.|
 
 ### January 28th, 2019 (4.0.5 / 4.0.0)
 

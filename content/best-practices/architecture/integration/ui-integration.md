@@ -65,7 +65,7 @@ With such a solution, marketing teams can use the CMS and decisioning to show re
 
 Often, there is a specialized Mendix application built for the purpose of interacting with the CMS customer portal. This app imports the overview information (for example, the last ten tickets and orders) so that the end-user quickly gets an overview and can then follow deep links down to other apps and do specific work in different pages.
 
-## 5 CDN Integration for Global Portals and Apps {#cdn}
+## 5 CDN Integration for Global Portals & Apps {#cdn}
 
 As seen in the sections above, the Mendix Platform is a great option for building functional customer portals as well as collaborating with websites, a CMS, or a document management system. Some organizations have even used a pure Mendix solution to develop full customer portals with basic content-management and document-management capabilities included.
 

@@ -1,6 +1,7 @@
 ---
 title: "JavaScript Action Call"
 category: "Action Call Activities"
+menu_order: 20
 description: "This reference guide explains the properties of the JavaScript action call activity."
 tags: ["javascript", "return", "variable", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.

@@ -4,10 +4,6 @@ parent: "activities"
 tags: ["studio pro", "javascript", "javascript actions"]
 ---
 
-## JavaScript Actions
-
-See [JavaScript Actions](javascript-actions).
-
 ## JavaScript Action Call
 
 See [JavaScript Action Call](javascript-action-call).

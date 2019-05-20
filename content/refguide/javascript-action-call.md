@@ -9,11 +9,9 @@ tags: ["javascript", "return", "variable", "studio pro"]
 
 ## 1 Introduction
 
-The JavaScript action call activity can be used to call a [JavaScript action](javascript-actions):
+The JavaScript action call activity can be used to call a [JavaScript action](javascript-actions). Arguments can be passed to the action, and the result can be stored in a variable. This activity can be used in nanoflows, but not in microflows:
 
 ![javascript action call properties](attachments/javascript-action-call/properties.png)
-
-Arguments can be passed to the action, and the result can be stored in a variable. This activity can be used in nanoflows, but not in microflows.
 
 ## 2 Action Properties
 
@@ -25,7 +23,10 @@ This property sets the JavaScript action called by an activity.
 
 ### 2.2 Arguments
 
-For each JavaScript action parameter, you must supply an argument of the same type. The values of the arguments are defined using [expressions](expressions).
+An argument is the input data that you are passing to the JavaScript action. For each JavaScript action parameter, you must supply an argument of the same type. The values of the arguments are defined using [expressions](expressions):
+
+![argument](attachments/javascript-action-call/argument-edit.png)
+
 
 ## 3 Output Properties
 
@@ -35,7 +36,7 @@ Output properties allow you to customize the action result of your JavaScript ac
 
 The return type property is the data type of the JavaScript action's result. The return type is defined by the JavaScript action.
 
-### 3.2 Use Return Value
+### 3.2 Use Return Variable
 
 This property determines if the returned value from the JavaScript action should be stored in a variable.
 

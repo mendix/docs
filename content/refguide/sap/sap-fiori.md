@@ -12,7 +12,7 @@ This document explains extra configuration you need to make when running your ap
 
 ## 2 SAP Fiori Launchpad
 
-If you want to run your app from the **SAP Fiori Launchpad** you will need to configure your Mendix app. This is because the SAP Fiori Launchpad contains a timeout which does not identify that an unmodified Mendix App is still actively being used.
+If you want to run your app from the **SAP Fiori Launchpad** you will need to configure your Mendix app. The session management of SAP Fiori Launchpad and the Mendix App are decoupled so you need to tell SAP Fiori Launchpad that the app is still active. If SAP Fiori Launchpad does not hear from your app for twenty minutes, it will timeout.
 
 To prevent the timeout being activated incorrectly, you need to add the **Fiori Launchpad Session Heartbeat** widget to every page of your app. The widget sends a message to the SAP Fiori Launchpad when the page is opened or refreshed. This extends the timeout by another twenty minutes.
 
@@ -82,7 +82,13 @@ Since you will need to put it on every page of your app, it is recommended that 
 
 For more Information about managing layouts, see [How to Use Layouts & Snippets](/howto/front-end/layouts-and-snippets).
 
-## 3 Mendix Building Blocks
+## 3 Known Issues
+
+### 3.1 SAP Fiori Client
+
+If you are using an Android or iOS device, you can use Mendix apps from SAP Fiori Launchpad with a browser. However, owning to security constraints set in the client, it is not currently possible to use the **SAP Fiori Client** app to access your Mendix app.
+
+## 4 Mendix Building Blocks
 
 You can use Mendix building blocks to create an SAP Fiori themed app. To use these building blocks, you can either:
 
@@ -90,176 +96,176 @@ You can use Mendix building blocks to create an SAP Fiori themed app. To use the
 
 * add the **SAP Fiori UI Package** to your app: this can be downloaded from the App Store here – https://appstore.home.mendix.com/link/app/107625/
 
-### 3.1 Datagrid Border Fullpage
+### 4.1 Datagrid Border Fullpage
 
 ![](attachments/sap-fiori/image1.png)
 
-### 3.2 Datagrid Fullpage
+### 4.2 Datagrid Fullpage
 
 ![](attachments/sap-fiori/image2.png)
 
-### 3.3 Flex Container Left
+### 4.3 Flex Container Left
 
 ![](attachments/sap-fiori/image4.png)
 
-### 3.4 Flex Container Left Center
+### 4.4 Flex Container Left Center
 
 ![](attachments/sap-fiori/image3.png)
 
-### 3.5 Flex Container Right
+### 4.5 Flex Container Right
 
 ![](attachments/sap-fiori/image6.png)
 
-### 3.6 Flex Container Right Center
+### 4.6 Flex Container Right Center
 
 ![](attachments/sap-fiori/image5.png)
 
-### 3.7 Footer Accept Reject Edit Delete
+### 4.7 Footer Accept Reject Edit Delete
 
 ![](attachments/sap-fiori/image10.png)
 
-### 3.8 Footer Confirm
+### 4.8 Footer Confirm
 
 ![](attachments/sap-fiori/image7.png)
 
-### 3.9 Footer Edit Delete
+### 4.9 Footer Edit Delete
 
 ![](attachments/sap-fiori/image8.png)
 
 
-### 3.10 Footer Icons
+### 4.10 Footer Icons
 
 ![](attachments/sap-fiori/image11.png)
 
-### 3.11 Footer Save Close
+### 4.11 Footer Save Close
 
 ![](attachments/sap-fiori/image9.png)
 
-### 3.12 Footer Text Icons
+### 4.12 Footer Text Icons
 
 ![](attachments/sap-fiori/image12.png)
 
-### 3.13 Form Horizontal
+### 4.13 Form Horizontal
 
 ![](attachments/sap-fiori/image15.png)
 
-### 3.14 Form Horizontal Columns
+### 4.14 Form Horizontal Columns
 
 ![](attachments/sap-fiori/image13.png)
 
-### 3.15 Form Horizontal Line
+### 4.15 Form Horizontal Line
 
 ![](attachments/sap-fiori/image14.png)
 
-### 3.16 Form Readonly Compact
+### 4.16 Form Readonly Compact
 
 ![](attachments/sap-fiori/image16.png)
 
-### 3.17 Form Vertical
+### 4.17 Form Vertical
 
 ![](attachments/sap-fiori/image19.png)
 
-### 3.18 Form Vertical Columns
+### 4.18 Form Vertical Columns
 
 ![](attachments/sap-fiori/image17.png)
 
-### 3.19 Form Vertical Line
+### 4.19 Form Vertical Line
 
 ![](attachments/sap-fiori/image18.png)
 
-### 3.20 List
+### 4.20 List
 
 ![](attachments/sap-fiori/image28.png)
 
-### 3.21 List Border
+### 4.21 List Border
 
 ![](attachments/sap-fiori/image21.png)
 
-### 3.22 List Border Header
+### 4.22 List Border Header
 
 ![](attachments/sap-fiori/image20.png)
 
-### 3.23 List Header
+### 4.23 List Header
 
 ![](attachments/sap-fiori/image22.png)
 
-### 3.24 List Item Default
+### 4.24 List Item Default
 
 ![](attachments/sap-fiori/image23.png)
 
-### 3.25 List Item Description
+### 4.25 List Item Description
 
 ![](attachments/sap-fiori/image24.png)
 
-### 3.26 List Item Icon
+### 4.26 List Item Icon
 
 ![](attachments/sap-fiori/image25.png)
 
-### 3.27 List Item Info
+### 4.27 List Item Info
 
 ![](attachments/sap-fiori/image26.png)
 
-### 3.28 List Item Multiline
+### 4.28 List Item Multiline
 
 ![](attachments/sap-fiori/image27.png)
 
-### 3.29 Mainheader
+### 4.29 Mainheader
 
 ![](attachments/sap-fiori/image30.png)
 
-### 3.30 Mainheader Columns
+### 4.30 Mainheader Columns
 
 ![](attachments/sap-fiori/image29.png)
 
-### 3.31 Object Status
+### 4.31 Object Status
 
 ![](attachments/sap-fiori/image31.png)
 
-### 3.32 Pageheader Columns
+### 4.32 Pageheader Columns
 
 ![](attachments/sap-fiori/image33.png)
 
-### 3.33 Pageheader Columns Title
+### 4.33 Pageheader Columns Title
 
 ![](attachments/sap-fiori/image32.png)
 
-### 3.34 Pageheader Content
+### 4.34 Pageheader Content
 
 ![](attachments/sap-fiori/image35.png)
 
-### 3.35 Pageheader Content Item
+### 4.35 Pageheader Content Item
 
 ![](attachments/sap-fiori/image34.png)
 
-### 3.36 Pageheader Default
+### 4.36 Pageheader Default
 
 ![](attachments/sap-fiori/image36.png)
 
-### 3.37 Pageheader Space Between
+### 4.37 Pageheader Space Between
 
 ![](attachments/sap-fiori/image37.png)
 
-### 3.38 Pageheader Title Buttons
+### 4.38 Pageheader Title Buttons
 
 ![](attachments/sap-fiori/image38.png)
 
-### 3.39 Tile
+### 4.39 Tile
 
 ![](attachments/sap-fiori/image39.png)
 
-### 3.40 Wizard
+### 4.40 Wizard
 
 ![](attachments/sap-fiori/image43.png)
 
-### 3.41 Wizard Step
+### 4.41 Wizard Step
 
 ![](attachments/sap-fiori/image42.png)
 
-### 3.42 Wizard Step Active
+### 4.42 Wizard Step Active
 
 ![](attachments/sap-fiori/image40.png)
 
-### 3.43 Wizard Step Visited
+### 4.43 Wizard Step Visited
 
 ![](attachments/sap-fiori/image41.png)
 

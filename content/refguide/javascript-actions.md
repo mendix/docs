@@ -74,7 +74,7 @@ Use categories to keep parameters apart in a [JavaScript Action Call](javascript
 
 #### 2.2.4 Description
 
-Descriptions may contain both upper- and lower-case letters, numbers, and symbols.
+For projects with several parameters, descriptions serve as useful reminders of parameters' exact purposes. Descriptions also allow you to describe your parameters to project collaborators. Descriptions may contain both upper- and lower-case letters, numbers, and symbols.
 
 ### 3 Type Parameter Settings
 

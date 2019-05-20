@@ -50,15 +50,15 @@ Synchronous calls can be used for almost anything where you want to assure that 
 
 These are some typical synchronous service scenarios:
 
-* Request-reply interfaces with REST and SOAP
-* Data retrieval with OData, REST, SOAP, or direct SQL
-* Legacy integration to older RPC protocols on mid-range systems or to mainframe transactions
-* API management and other external gateways to, for example, EDI, SWIFT, or EDIFACT protocols for busines-to-business transactions
-* Process orchestration where we need to know that the target received and processed the message
-* Transeferring business events when using internal queues
-* CI/CD and test automation orchestration
+* Request-reply interfaces with REST and SOAP, see section 3
+* Transeferring business events when using internal queues, see section 3.1 and 3.2
+* Data retrieval with OData, REST, SOAP, or direct SQL, see section 4
+* Legacy integration to older RPC protocols on mid-range systems or to mainframe transactions, see section 5
+* API management and other external gateways to, for example, EDI, SWIFT, or EDIFACT protocols for busines-to-business transactions, see <<INtegration Layers>> https://documentation-accp.cfapps.io/best-practices/architecture/integration/integration-layers
+* Process orchestration where we need to know that the target received and processed the message, see section <<Process Integration>> https://documentation-accp.cfapps.io/best-practices/architecture/integration/process-integration
+* CI/CD integration, test automation and some health-checks for monitoring, see <<Ops and CI/CD Integration>>
 
-Synchronous integration styles are the most commonly used and easiest to manage, because there are no moving parts between the two systems. It is possible to estimate that more than 50% of all integration is synchronous request-reply in the current landcape.
+Synchronous integration styles are easy to manage, because there are no moving parts between the two systems. It is possible to estimate that more than 50% of all integration is synchronous request-reply in the current landcape.
 
 ### 2.2 Where Not to Use Synchronous Integration?
 
@@ -184,15 +184,17 @@ The benefit of using Mendix in this type of scenario is that if there is an admi
 
 ## 6 Summary
 
-Request-reply integration is an easy way to integrate systems, and it should be considered the default integration option. The most important thing to consider is that the other system needs to be up and running for the integration to work. Using `pull` requests solves this for most cases, and means that work can continue in the first app while later other work continues in the other systems. For simplicity and easier error management, it is recommended in most cases to use a Mendix internal queue, instead of external queue managers or message brokers. However, there are exceptions when an integration layer is preferred.
+Request-reply integration is an easy way to integrate systems, and it should be considered the default integration option. The most important thing to consider is that the other system needs to be up and running for the integration to work. Using `pull` requests solves this for most cases, and means that work can continue in the first app while later other work continues in the other systems. 
 
-In some cases, you will want the business interaction to be direct across the two apps and be informed directly (for example, to get validations and confirmations directly back to the end-user). The business function then requires both apps to be up and running. This does make sense in many cases, so it should be selected when it is the better option. This is the way most SaaS solutions work. When you need to update them from another app, you will call a service and get the results back.
+If queue functionality is required, it is recommended to use a Mendix internal queues, because there are less moving parts and less places things can fail. However, there are exceptions when an integration layer is preferred see section <<Integration Layers>> https://documentation-accp.cfapps.io/best-practices/architecture/integration/integration-layers
 
-For BI and microservice systems as well as for retrieving data from SAP, OData provides a new paradigm that will be both easy to build and easy to control. More details will be provided for a future Mendix version.
+In some cases, you want the business interaction to be direct across the two apps. For example, to get validations and confirmations directly back to the end-user. This is the way most SaaS solutions work. When you need to update them from another app: you call a service and get the results back. The business function then requires both apps to be up and running. 
+
+For BI and microservice systems as well as for retrieving data from SAP, OData provides a new paradigm that is both easy to build and easy to control. More details will be provided when the Mendix Data Hub is released.
 
 For legacy databases and history databases, there may be a reason to use direct SQL. In that case, database views annd stored procedures are preferred to using direct SQL statements.
 
-In order of relevance and priority, Mendix prefers the protocols in this order for synchronous interactions:
+In order of relevance and priority for synchronous interactions, Mendix prefers the protocols in this order :
 
 1. REST
 2. OData
@@ -201,7 +203,7 @@ In order of relevance and priority, Mendix prefers the protocols in this order f
 5. SQL to database view or stored procedure
 6. Direct SQL
 
-The Mendix Platform has a very rich and good integration functionality. Several organizations use Mendix to build integration apps and adapters to various systems or shared data apps that provide combined datasets.
+The Mendix Platform has very rich integration functionality. Several organizations use Mendix to build integration apps and adapters to various systems or shared data apps that provide combined datasets.
 
 ## 7 Ops Integration & Test Services 
 

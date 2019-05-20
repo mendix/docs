@@ -67,38 +67,37 @@ Often, there is a specialized Mendix application built for the purpose of intera
 
 ## 5 CDN Integration for Global Portals and Apps {#cdn}
 
-As seen in the sections above Mendix is a great alternative for functional customer portals, collaborating with Web-sites, a CMS system and/or a document management system. For simpler customer and employee portals Mendix can do all the tasks above.
+As seen in the sections above, the Mendix Platform is a great option for building functional customer portals as well as collaborating with websites, a CMS, or a document management system. Some organizations have even used a pure Mendix solution to develop full customer portals with basic content-management and document-management capabilities included.
 
-For global websites, customer portals and apps the user can be in any place on the planet. To avoid long rendering times and cut the traveling distance for as much content and data as possible, CDN (Content Delivery Nodes) solutions should be used. CDN solutions cache content in local nodes and renders the entire page for the users. This provides quick response times across the globe, especially when using large images and videos.
+Global websites, customer portals, and applications have end-users located anywhere on the planet, so they need to avoid long rendering times. To cut the traveling distance for as much content and data as possible, content delivery nodes (CDN) solutions should be used. CDN solutions cache content in local nodes and render the entire page for the users. This enables providing quick response times across the globe, especially when large images and videos are used.
 
-The diagram below shows a typical set-up. All web-pages are rendered close to the end-user browser location using a CDN solution, that provides a first secutity layer and caches all static or semi-static information, limiting the round-trips to the underlaying systems, which could be a web-site, a CMS system and several Mendix apps: 
+The diagram below shows a typical setup. All web pages are rendered close to the end-user browser location using a CDN solution, which provides a first secutity layer and caches all static or semi-static information, limiting the round-trips to the underlaying systems, which could be a website, a CMS system, and several Mendix apps: 
 
 ![](attachments/ui-integration/cdn.png)
 
-A Web-site runs the frame, and Mendix provides the active pages where the user collaborates with the organization. The CMS system no longer runs the frame, but is providing the right content at the right time. 
+In this setup, a website runs the frame, and Mendix provides the active pages where the user collaborates with the organization. The CMS system no longer runs the frame, but it is providing the right content at the right time. 
 
-For the static content this provides a huge advantage in rendering time. For Mendix apps, it can save up to 50% of the content round-trips. CDN systems also have faster and better interntet routing, which can provide a 50% improvement in Asia and South America, and around 10% within Europe. 
+For the static content, this setup provides a huge advantage in rendering time. For Mendix apps, this setup can save up to 50% of the content round-trips. CDN systems also have faster and better internet routing, which can provide a 50% improvement in Asia and South America, and around 10% within Europe. 
 
-The advatages with CDN solutions are so siginficant that almost all global portals and apps use CDN solutions these days, and it works very well with Mendix apps as well. When Customer portals and apps need to be globally deployed and accessible Mendix usually combines a global deployment strategy with a CDN solution for re-direction and additional proximity to cached static content.
+The advatages with CDN solutions are so siginficant that almost all global portals and applications use CDN solutions these days. This also works very well with Mendix. When customer portals and apps need to be globally deployed and accessible, Mendix usually combines a global deployment strategy with a CDN solution for redirection and additional proximity to cached static content. Such a strategy looks like this:
 
 1. Deploy several instances globally in different availability zones. They may collaborate with each other if required.
-2. Use a CDN solution (Content Delivery Node), so further increase availability and speed of UX interactions
+2. Use a CDN solution to further increase the availability and speed of UX interactions.
 
-For more details, see the [Geo-Scaling Architecture](../performance/plan-design-high-volume#geo-scaled) section of *Planning & Designing for High Volume*). If it is a Customer Portal most people work locally in their region, so will mostly log into their closest instance, while CDN can re-direct them back there when travelling, or we copy the required data over to work locally also when travelling.
+For more details, see the [Geo-Scaling Architecture](../performance/plan-design-high-volume#geo-scaled) section of *Planning & Designing for High Volume*).
 
-When using CDN solutions the external APIs are often also made available via the content nodes. This the same advantages proximity and caching advantages as for UX, while also providing some API management functions like protection against Denial-of-service attacks,  throttling, and Bot management.
+In a customer portal, most end-users work locally in their region, so they will mostly log into their closest instance. A CDN can re-direct them back there when they are travelling, or the required data can also be copied over to work locally when travelling.
+
+When using CDN solutions, the external APIs are often also made available via the content nodes. This has the same proximity and caching advantages as for UX, while also providing some API management functions like protection against denial-of-service attacks, throttling, and bot management.
  
-Akamai is the most established solution with 240 000 nodes in 240 countries, while AWS and Azure have good competing solutions available.
+Akamai is the most established solution with 240,000 nodes in 240 countries, while AWS and Azure have good competing solutions available.
 
 ## 6 Summary
 
-UX integration is becoming increasingly common and allows a Microservices strategy for building and maintaining systems, while providing a unified "one-system" experience to the end-users. The Mendix Deep-links provides a secure way to integrate viw UX components and transferring the context over to the other app.
+UI integration is becoming increasingly common, and it enables a microservices strategy for building and maintaining systems while providing a unified "one-system" experience to end-users. Mendix deep links provide a secure way to integrate UX components and transfer the context over to another app.
 
-UX integration is also used for a variety of Web-sites, Customer portals and Global solutions:
-* Web-sites use web-links to Mendix Apps for the functional part of the site
-* Marketing oriented CMS based customer portals render Mendix UX panes within the CMS based web-page-frame
+UI integration is also used for a variety of websites, customer portals, and global solutions:
+
+* Websites use web links to Mendix apps for the functional part of the websites
+* Marketing-oriented CMS-based customer portals render Mendix UI panes within CMS-based web-page frames
 * Global apps and portals use CDN solutions to provide snappy UX experiences across the globe
-
-
-
-

@@ -7,7 +7,7 @@ draft: true
 
 ## 1 Introduction
 
-Service integration means using a synchronous request-reply as the integration paradigm. This is most commonly done via REST and OData, and sometimes via SOAP. In addition, older versions of RPC calls, SQL database interactions and many Mainframe transactions are  synchronous. It is easy to understand synchronous request-reply interfaces. The initiating process gets feedback instantly. This makes error handling easier, because the same system that initiates the call also gets information about the result and can take a relevant action.
+Service integration means using synchronous request-reply as the integration paradigm. This is most commonly done via REST and OData, and sometimes via SOAP. In addition, older versions of RPC calls, SQL database interactions, and many mainframe transactions are  synchronous. It is easy to understand synchronous request-reply interfaces, as the initiating process gets feedback instantly. This makes error handling easier, because the same system that initiates the call also gets information about the result and can take a relevant action.
 
 Service integration should be considered the default method for integration. Only when there are strong reasons to avoid synchronous request-reply should other options be considered. 
 
@@ -15,12 +15,12 @@ In a typical scenario, an app end-user is filling in an order or a form, and the
 
 ![](attachments/service-integration/si-intro1.png)
 
-In another typcial scenario, the user interaction is separated from the integration, meaning it is "functionally asynchonous." However, a technically synchronous integration mechanism is still preferred for retrieving the event, using a REST pull request from the second app to get the next business event(s) (as visualized in the diagram below). This means that the two apps are decoupled from each other. The first app can operate without the second app being up and running, and vice versa. The first app needs to implement something that acts as a queue, see section 3.1.
+In another typical scenario, the user interaction is separated from the integration, meaning it is "functionally asynchonous." However, a technically synchronous integration mechanism is still preferred for retrieving the event, using a REST `pull` request from the second app to get the next business event(s) (as visualized in the diagram below). This means that the two apps are decoupled from each other. The first app can operate without the second app being up and running, and vice versa. The first app needs to implement something that acts as a queue (for more information, see the [REST Pull Request-Reply to Transfer Data](#pull-transfer) section below).
 
 ![](attachments/service-integration/si-intro2.png)
 
 {{% alert type="info" %}}
-"Functionally asynchronous" means that the process that results in a business event does not complete the integration end-to-end. Instead, it may already create a REST message and put it on an internal queue for later delivery.
+"Functionally asynchronous" means the process that results in a business event does not complete the integration end-to-end. Instead, it may already create a REST message and put it on an internal queue for later delivery.
 {{% /alert %}}
 
 ## 2 What Is Service Integration?
@@ -36,7 +36,7 @@ Service-based integration is request-reply and almost always synchronous. It fol
 	* A set of data that was requested in the call
 	* An error with information about why the call did not work
 
-This diagram presents the main functional cases, where the rounded shape represents a process or microflow within an app:
+The diagram below presents the following main functional cases, where the rounded shape represents a process or microflow within an app:
 
 * Pulling for new data or events to process from the source app
 * Initiating a function remotely and often receiving results back
@@ -44,44 +44,42 @@ This diagram presents the main functional cases, where the rounded shape represe
 
 ![](attachments/service-integration/cases.png)
 
-### 2.1 Where to use Synchronous Integration
+### 2.1 Where to Use Synchronous Integration?
 
-Synchronous calls can be used for almost anything where you want to assure that messages arrive safely. It is easy to design, build, deploy and operate and it has the easiest error handling  so it should be the default method for most integration. Below are some typical synchronous service scenarios:
+Synchronous calls can be used for almost anything where you want to assure that messages arrive safely. They are easy to design, build, deploy, and operate, and they have the easiest error handling. This means they should be the default method for most integration.
+
+These are some typical synchronous service scenarios:
 
 * Request-reply interfaces with REST and SOAP
-* Data retrieval with OData, REST, SOAP or direct SQL
-* Legacy integration to older RPC protocols on mid-range systems or to Mainframe transactions
-* API Management and other external gateways to e.g. EDI, SWIFT or EDIFACT protocols for busines to business transactions
+* Data retrieval with OData, REST, SOAP, or direct SQL
+* Legacy integration to older RPC protocols on mid-range systems or to mainframe transactions
+* API management and other external gateways to, for example, EDI, SWIFT, or EDIFACT protocols for busines-to-business transactions
 * Process orchestration where we need to know that the target received and processed the message
-* Transeferring Business events when using internal queues, as shown in the example above
+* Transeferring business events when using internal queues
 * CI/CD and test automation orchestration
 
-Synchronous integration styles are the most commonly used and easiest to manage, because there are no moving parts between the two systems. It is hard to give an exact number but  well more than 50% of all integration is synchronous request-reply in the current landcape.
+Synchronous integration styles are the most commonly used and easiest to manage, because there are no moving parts between the two systems. It is possible to estimate that more than 50% of all integration is synchronous request-reply in the current landcape.
 
-### 2.1 Where not to use Synchronous?
+### 2.2 Where Not to Use Synchronous Integration?
 
-For synchronous to work it is necessary that the other system is directly reachable through the network. If the network is unreliable, geograpgical distances are large, or volumes are extremely high, then synchronous calls can be more difficult. In that case, there may be reasons to implement other mechanisms. Often integration becomes more functionally complex in these cases, because to fully guarantee delivery end to end, one should implement two interfaces: one to send an event and one going back acknowledging the reception, see <<Event driven Integration>>.
+For synchronous integration to work, it is necessary that the other system is directly reachable through the network. If the network is unreliable, geographical distances are large, or volumes are extremely high, the synchronous calls can be more difficult to accomplish. In that case, there may be reasons to implement other mechanisms. Integration will often become more functionally complex in these cases, because to fully guarantee delivery end to end, you should implement two interfaces: one to send the event, and one going back acknowledging the reception. For details, see [Event-Based Integration](event-integration).
 
-For IoT and logging scenarios where there is a many-to-one or many-to-many situation, often distributed and where commmunication is truly one-directional, there is no reason to be synchronous, and it would in fact be very hard to realize as synchronous communication. In these cases Kafka, a Message broker, or file interaction are recommended, see <<Event driven Integration>>.
+For IoT and logging scenarios where there are many-to-one or many-to-many situations, which are often distributed and where commmunication is truly one-directional, there is no reason to be synchronous. In fact, it would be very hard to realize such situations as synchronous communication. In these cases, Mendix recommends using Kafka, a message broker, or file interaction. For more information, see [Event-Based Integration](event-integration).
 
-For periodic interactions that handle large data sets, often in reporting, billing, invoicing etcetera, there is no reason to be working in real-time and processing will be slower and take more CPU power if transactions are processed one by one via services. IN these cases please see <<Export, Import, Batch processing>>.
+For periodic interactions that handle large datasets (for example, in reporting, billing, and invoicing), there is no reason to be working in real-time. Furthermore, processing will be slower and take more CPU power if transactions are processed one by one via services. For details on such cases, see [Export, Import & Batch Processing](export-import-batch).
 
 ## 3 Request-Reply to Transfer Data
 
-The diagram below shows the three most typical ways to transfer data in real-time:
+The diagram below shows the most typical ways to transfer data in real-time:
 
-* Pulling data or a business event from the destination
-* Pushing data or a business event to the destination
-* Using a service layer in between, such as API management or a message broker
-* Using OData to retrieve "remote objects"
+![](attachments/service-integration/request-reply.png)
 
-![](attachments/service-integration/request-reply.png)  << Replace Figure A>>
+* Pulling data/business event from the destination – this is the most common way and the easiest to operate
+* Pushing data/business event to the destination – this is a good way to validate data in the destination before it can be stored ther
+* Using a service layer in between, such as API management or a message broker – using a service layer (with queues or with transformation) can further decouple the apps, and this is recommended if there is a large organizational or geographical distance between the apps
+* Using OData to retrieve "remote objects" – this is a tighter integration that is more closely linked to the data model; this method will be strengthened in a future version of Mendix, and it should be very useful when apps are close (meaning, within microservices systems)
 
-Pulling data is the most common and easiest one to operate. Pushing data is good when we need to validate the data in destination before it can be stored there. Using a service layer, with queues or with transformation, can further decouple the apps, and is recommended if there is a large distance, organizationally or geographically, between the apps. 
-
-OData and remote objects is a tighter integration, more closely linked to the data-model. This method will be strengthened  in the Data Hub in Mendix 8, and should be very useful at least when apps are close, e.g. within microservices systems.
-
-### 3.1 REST Pull Request-Reply to Transfer Data
+### 3.1 REST Pull Request-Reply to Transfer Data {#pull-transfer}
 
 The REST-pull request-reply is the default option when replicating data from point A to point B. The system that needs the data is in charge of triggering the interface and the apps do not need to by up and running at the same time for this to work. To know what has changed, there are at least 3 options:
 
@@ -97,7 +95,7 @@ Option 3 has an additional advantage that the transformation to a business event
 
 However if the subscribing App only is interested in the latest stage, there is no use to receive "every save" in the source system, and then Option 2, using a flag, is the easiest and most efficient method, see https://documentation-accp.cfapps.io/best-practices/architecture/integration/workflow-int-data-transfer.
 
-### 4.2 REST Push Request-Reply When Validation Is Needed
+### 3.2 REST Push Request-Reply When Validation Is Needed
 
 Pushing data to another system is useful when there is validation in the destination (for example, to change master data). If there is a validation error, the user should see it directly while in the process of changing the data so that they can correct it immediately, or at least an error workflow should be considered.
 
@@ -113,7 +111,7 @@ The choice for pushing data is usually validation related. But it could also be 
 The choice between Option 1 and 2 will be depending on if we want the end-user to fix things directly (Option 1), or if we want him to be able to finish his work, and handle errors later (Option 2).
 Option 3 is often preferred as an alternative to Option 1 when less validation errors are expected, or when the validation would take too long for an end-user to be waiting. The end-user is  assured that the business event has arrived in the destination, and he can continue working on something else. Any exceptions later would have to be transferred separatelly back to the source, if required. Compare this with submitting an order on line and getting an email confirmation or error message later.
 
-### 4.3 Using a Message Broker or other Integration Layer
+### 3.3 Using a Message Broker or other Integration Layer
 
 Using an integration layer will provide a level of decoupling, but also another dependency, another place to maintain integration functionality, and another place where things can go wrong.
 
@@ -127,7 +125,7 @@ In the case of using an Integration layer for transfering or replicating data we
 
 Please refer to the section https://documentation-accp.cfapps.io/best-practices/architecture/integration/integration-layers for more information on this.
 
-### 4.4 Using OData Retrieve
+### 3.4 Using OData Retrieve
 
 In Mendix 8, when the Data Hub will be available, OData contracts will be much easier to use, and will make some data replication un-necessary, at least within microservices clusters. An app can "provide" OData objects and REST services to the rest of the Mendix apps in the same organization, that can "consume" these. This will simplify use of both REST and OData at the same time as it increases the control over integration.
 
@@ -160,7 +158,7 @@ A good architectural guideline is to avoid coupling the data-models of different
 Never do SQL across firewalls, because it would open a hole where an external party could do anything to the database.
 {{% /alert %}}
 
-## 6 Integration Apps and Adapteres
+## 5 Integration Apps and Adapteres
 
 Many old legacy systems have a very specific format of communication, which could be from mainframes or any other old technology. To create good integration with these systems takes a technical developer.
 
@@ -181,7 +179,7 @@ For example, imagine that most of the interaction is the retrieval of data. To m
 
 The benefit of using Mendix in this type of scenario is that if there is an admin UI needed, it is easy to provide. In effect, with this pattern you can create a distributed ESB.
 
-## 7 Summary
+## 6 Summary
 
 Request Reply integration is an easy way to integrate systems, and should be considered the default option. The one thing to consider is that the other system needs to be up and running for the integration to work. 
 
@@ -204,8 +202,7 @@ In order of relevance and priority, for synchronous interactions, we would prefe
 
 Mendix has very rich and good integration functionality, and several organizations use Mendix to build integration apps and adapters to various systems, or shared data apps, that provide a combined data-sets.
 
-
-## 9 Ops Integration & Test Services <<Move to separate Chapter>>
+## 7 Ops Integration & Test Services <<Move to separate Chapter>>
 
 A new trend (which is part of microservices and DevOps) is to build services from live systems that are specifically oriented towards automated testing and health checks on live systems. A service that is used to test things in CI/CD pipelines may later be reused to verify a production deployment, check a live system, or collect user metrics for a dashboard.
 

@@ -1,7 +1,6 @@
 ---
 title: "JavaScript Actions"
-category: "Action Call Activities"
-menu_order: 10
+category: "App Modeling"
 description: "This reference guide details the ways JavaScript Actions can extend the functionality of your Mendix app."
 tags: ["javascript", "javascript action", "parameter", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -53,7 +52,7 @@ The parameter types supported by JavaScript actions are described below.
 
 This setting handles the parameter's name. A name is required. Names must start with a letter and contain only letters. Spaces are not permitted in names.
 
-#### 2.2.2. Type
+#### 2.2.2 Type
 
 |   Name   |   Description   |
 | ---- | ---- |
@@ -76,7 +75,7 @@ Use categories to keep parameters apart in a [JavaScript Action Call](javascript
 
 For projects with several parameters, descriptions serve as useful reminders of parameters' exact purposes. Descriptions also allow you to describe your parameters to project collaborators. Descriptions may contain both upper- and lower-case letters, numbers, and symbols.
 
-### 3 Type Parameter Settings
+## 3 Type Parameter Settings
 
 A type parameter is a placeholder for an entity type which will be filled with a specific entity when called in a nanoflow. Type parameters can be used when configuring the data type of a parameter, which allows users to pass an object or list of an arbitrary entity type. They can easily be added, edited, or deleted:
 
@@ -84,7 +83,7 @@ A type parameter is a placeholder for an entity type which will be filled with a
 
 A JavaScript action can have zero or more type parameters. Each type parameter should have a unique name.
 
-### 4 Expose as Nanoflow Action Settings
+## 4 Expose as Nanoflow Action Settings
 
 In the **Expose as nanoflow action** tab, it is possible to expose a JavaScript action as a nanoflow action. This sample action has been given *Sample Action* caption text, assigned *Workshop* as its category, and given no icon:
 
@@ -94,15 +93,15 @@ Exposing the JavaScript action will make it appear in the **Toolbox** window whe
 
 ![workshop exposed](attachments/javascript-actions/workshop-exposed.png)
 
-#### 4.1 Caption
+### 4.1 Caption
 
 A caption is required when exposing a JavaScript action. This caption will accompany your JavaScript action inside the nanoflow **Toolbox** window and can give helpful reminder information about your JavaScript action there.
 
-#### 4.2 Category
+### 4.2 Category
 
 A category is required when exposing a JavaScript action. Use categories to organize JavaScript actions with similar purposes together in the nanoflow **Toolbox** window.
 
-#### 4.3 Icon
+### 4.3 Icon
 
 An icon is optional when exposing a JavaScript action. When no icon is selected, the default JavaScript action icon is used. The recommended size for an icon is 16x16 pixels.
 

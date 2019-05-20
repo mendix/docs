@@ -1,13 +1,14 @@
 ---
 title: "Mendix IP Addresses"
 parent: "mendix-cloud-deploy"
-#description: ""
-tags: ["mendix cloud", "IP address", "Cloud Portal"]
+menu_order: 38
+description: "A list of static IP addresses used by the Mendix cloud"
+tags: ["Mendix cloud", "IP address", "Cloud Portal"]
 ---
 
 ## 1 Introduction
 
-An Internet Protocol address (IP address) is simply the address of a device on a network that other devices can understand. It can be used to locate, communicate and identify that device on a network (Internet or local).
+An Internet Protocol address (IP address) is simply the address of a device on a network that other devices can understand. It can be used to locate, identify, and communicate with that device on the network (Internet or local).
 
 ## 2 Definitions
 
@@ -16,7 +17,6 @@ Mendix uses one IP address when someone connects to your Mendix application (Inc
 {{% alert type="info" %}}
 Mendix will endeavor to maintain the current static IP addresses. However, both incoming and outgoing IP addresses may change for operational reasons. This is subject to a 48-hour notice period.
 {{% /alert %}}
-
 
 ### 2.1 Incoming IP
 
@@ -52,7 +52,7 @@ Mendix uses the following static IP addresses. If you need further information, 
 
 **Why does the IP address need to change?**
 
-Because Mendix provides a Platform we need to keep our infrastructure flexible. As a result, even though Mendix servers use static IP addresses, those IP addresses are subject to change occasionally. Since these are manual changes we provide a 48-hour notice. Please note that a longer notice period would hinder our operational capabilities.
+Because Mendix provides a platform we need to keep our infrastructure flexible. As a result, even though Mendix servers use static IP addresses, those IP addresses are subject to change occasionally. Since these are manual changes we provide a 48-hour notice. Please note that a longer notice period would hinder our operational capabilities.
 
 **In the past we have received the same IP address for multiple environments and/or applications. How is that possible?**
 
@@ -62,7 +62,7 @@ The outgoing IP address is the same for multiple environments and applications b
 
 **Which IP address should be whitelisted on our firewall?**
 
-Usually you configure your firewall with rules for Incoming traffic to your network. Therefore you need to use the outgoing IP address of the Mendix application.
+Usually you configure your firewall with rules for *incoming* traffic to your network. Therefore you need to use the *outgoing IP address* of the Mendix application.
 
 ## 4 Read More
 

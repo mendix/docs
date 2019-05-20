@@ -25,7 +25,7 @@ For a tutorial on creating, configuring, and using a JavaScript action, see this
 
 After double-clicking a JavaScript action in your **Project Explorer** you will see the JavaScript action's settings: 
 
-![javascript settings](attachments/javascript-actions/javascript-action-settings-no-para.png)
+{{% image_container width="400" %}}![javascript settings](attachments/javascript-actions/javascript-action-settings-no-para.png){{% /image_container %}}
 
 The settings for JavaScript actions and their implications are detailed below.
 
@@ -45,7 +45,7 @@ In a JavaScript action's **Code** tab, you can see its parameters' values and ha
 
 You will see a parameter's category (1), parameter name (2), and description (3) in the **Call JavaScript Action** dialog window after double-clicking its activity in your nanoflow:
 
-![call javascript action dialog](attachments/javascript-actions/call-js-action-dialog.png)
+{{% image_container width="400" %}}![call javascript action dialog](attachments/javascript-actions/call-js-action-dialog.png){{% /image_container %}}
 
 The parameter types supported by JavaScript actions are described below.
 
@@ -80,7 +80,7 @@ For projects with several parameters, descriptions serve as useful reminders of 
 
 A type parameter is a placeholder for an entity type which will be filled with a specific entity when called in a nanoflow. Type parameters can be used when configuring the data type of a parameter, which allows users to pass an object or list of an arbitrary entity type. They can easily be added, edited, or deleted:
 
-![type parameter](attachments/javascript-actions/type-parameter.png)
+{{% image_container width="450" %}}![type parameter](attachments/javascript-actions/type-parameter.png){{% /image_container %}}
 
 A JavaScript action can have zero or more type parameters. Each type parameter should have a unique name.
 
@@ -88,7 +88,7 @@ A JavaScript action can have zero or more type parameters. Each type parameter s
 
 In the **Expose as nanoflow action** tab, it is possible to expose a JavaScript action as a nanoflow action. This sample action has been given *Sample Action* caption text, assigned *Workshop* as its category, and given no icon:
 
-![expose action](attachments/javascript-actions/expose-jsaction.png)
+{{% image_container width="450" %}}![expose action](attachments/javascript-actions/expose-jsaction.png){{% /image_container %}}
 
 Exposing the JavaScript action will make it appear in the **Toolbox** window when editing a nanoflow in the category of your choice. When this action is used in a nanoflow, it will show the caption and icon you provided. The category and caption are apparent here, and the default icon is being displayed as no custom one was assigned: 
 
@@ -110,11 +110,11 @@ An icon is optional when exposing a JavaScript action. When no icon is selected,
 
 In the **Documentation** tab, press **Edit** to document a JavaScript action: 
 
-![documentation](attachments/javascript-actions/documentation-pro.png)
+{{% image_container width="450" %}}![documentation](attachments/javascript-actions/documentation-pro.png){{% /image_container %}}
 
 Documentation is visible in the **Code** tab. Your documentation also is copied into the JavaScript action as comment on the function in the corresponding *.js* file:
 
-![documentation js file](attachments/javascript-actions/documentation-js-file.png)
+{{% image_container width="450" %}}![documentation js file](attachments/javascript-actions/documentation-js-file.png){{% /image_container %}}
 
 ## 6 Code Settings
 

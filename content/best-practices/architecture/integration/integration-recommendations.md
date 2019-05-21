@@ -73,7 +73,7 @@ In an example use case, you are sending data from app A to app B. You may put th
 
 In this use case, the development dependency is almost eliminated. However, the runtime situation is less optimal with the events than with request-reply. 
 
-Still, there are many use cases when events make more sense. For example, in real event streams from IoT, logging, or metrics, the data should only flow one way, and a message can be lost without breaking the business.
+Still, there are many use cases when events make more sense. For example, in real event streams from logging or metrics, the data should only flow one way, and a message can be lost without breaking the business.
 
 There are also technical reasons to go for events. For example, in situations with very high volume, distributed infrastructure, poor network connectivity, or many-to-many situations, events should be considered. To guarantee delivery, you can make asynchronous request-replies, or use a state/process engine to monitor all the events in a large supply chain process.
 

@@ -5,7 +5,9 @@ menu_order: 11
 draft: true
 ---
 
-{{% todo %}}[**NEEDS 3 DIAGRAMS**]{{% /todo %}}
+{{% todo %}}[**NEEDS DIAGRAMS**]{{% /todo %}}
+
+{{% todo %}}[**MENTIONS OF IoT, AI, AND MACHINE LEARNING SHOULD BE REMOVED/REWRITTEN OUT OF THIS DOCUMENT**]{{% /todo %}}
 
 ## 1 Introduction
 

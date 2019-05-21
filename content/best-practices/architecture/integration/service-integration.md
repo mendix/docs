@@ -15,7 +15,7 @@ In a typical scenario, an app end-user is filling in an order or a form, and the
 
 ![](attachments/service-integration/si-intro1.png)
 
-In another typical scenario, the user interaction is separated from the integration, meaning it is "functionally asynchonous." However, a technically synchronous integration mechanism is still preferred for retrieving the event, using a REST `pull` request from the second app to get the next business event(s) (as visualized in the diagram below). This means that the two apps are decoupled from each other. The first app can operate without the second app being up and running, and vice versa. The first app needs to implement something that acts as a queue (for more information, see the [REST Pull Request-Reply to Transfer Data](#pull-transfer) section below).
+In another typical scenario, the user interaction is separated from the integration, meaning it is "functionally asynchonous." However, a technically synchronous integration mechanism is still preferred for retrieving the event, using a REST pull request from the second app to get the next business event(s) (as visualized in the diagram below). This means that the two apps are decoupled from each other. The first app can operate without the second app being up and running, and vice versa. The first app needs to implement something that acts as a queue (for more information, see the [REST Pull Request-Reply to Transfer Data](#pull-transfer) section below).
 
 ![](attachments/service-integration/si-intro2.png)
 
@@ -64,7 +64,7 @@ Synchronous integration styles are easy to manage, because there are no moving p
 
 For synchronous integration to work, it is necessary that the other system is directly reachable through the network. If the network is unreliable, geographical distances are large, or volumes are extremely high, the synchronous calls can be more difficult to accomplish. In that case, there may be reasons to implement other mechanisms. Integration will often become more functionally complex in these cases, because to fully guarantee delivery end to end, you should implement two interfaces: one to send the event, and one going back acknowledging the reception. For details, see [Event-Based Integration](event-integration).
 
-For IoT and logging scenarios where there are many-to-one or many-to-many situations, which are often distributed and where commmunication is truly one-directional, there is no reason to be synchronous. In fact, it would be very hard to realize such situations as synchronous communication. In these cases, Mendix recommends using Kafka, a message broker, or file interaction. For more information, see [Event-Based Integration](event-integration).
+For logging scenarios where there are many-to-one or many-to-many situations, which are often distributed and where commmunication is truly one-directional, there is no reason to be synchronous. In fact, it would be very hard to realize such situations as synchronous communication. In these cases, Mendix recommends using Kafka, a message broker, or file interaction. For more information, see [Event-Based Integration](event-integration).
 
 For periodic interactions that handle large datasets (for example, in reporting, billing, and invoicing), there is no reason to be working in real-time. Furthermore, processing will be slower and take more CPU power if transactions are processed one by one via services. For details on such cases, see [Export, Import & Batch Processing](export-import-batch).
 
@@ -81,7 +81,7 @@ The diagram below shows the most typical methods for transferring data in real-t
 
 ### 3.1 REST Pull Request-Reply to Transfer Data {#pull-transfer}
 
-The REST `pull` request-reply is the default option when replicating data from point A to point B. The system that needs the data is in charge of triggering the interface, and the apps do not need to be up and running at the same time for this to work. To see what has changed, there are at least three options:
+The REST pull request-reply is the default option when replicating data from point A to point B. The system that needs the data is in charge of triggering the interface, and the apps do not need to be up and running at the same time for this to work. To see what has changed, there are at least three options:
 
 1. Use the last updated time stamp of the record to retrieve `all changes since <last time stamp>`. This is quite robust, but for high volumes, there are some edge cases where this can miss an update.
 2. Use a flag on the base table that indicates the record changed, which is reset when the change is picked up. For more than one subscriber, there will be more than one flag (for details, see [Workflow Integration with Data Transfer Example](data-transfer)).
@@ -124,7 +124,7 @@ Integration layers are used in many instances for a variaty of reasons:
 * Because integration layers are almost always up and running while destination systems may not be, the integration layer can queue up messages (for more information, see [Event-Based Integration](event-integration)
 * There is a standard at an organization to use a specific integration layer between departments, for example, which provides a standard gateway for integration
 
-When using an integration layer for transfering or replicating data, you would expect the source system to push a message to the integration layer and then just receive an acknowledgement of reception. This could be a REST `push` or any other format, but the call will always be synchronous. Even Kafka and queue managers have their own APIs, and there are modules in the Mendix App store to make these calls easy.
+When using an integration layer for transfering or replicating data, you would expect the source system to push a message to the integration layer and then just receive an acknowledgement of reception. This could be a REST push or any other format, but the call will always be synchronous. Even Kafka and queue managers have their own APIs, and there are modules in the Mendix App store to make these calls easy.
 
 For more details, refer to [Integration Layers](integration-layers).
 
@@ -184,7 +184,7 @@ The benefit of using Mendix in this type of scenario is that if there is an admi
 
 ## 6 Summary
 
-Request-reply integration is an easy way to integrate systems, and it should be considered the default integration option. The most important thing to consider is that the other system needs to be up and running for the integration to work. Using `pull` requests solves this for most cases, and means that work can continue in the first app while later other work continues in the other systems. 
+Request-reply integration is an easy way to integrate systems, and it should be considered the default integration option. The most important thing to consider is that the other system needs to be up and running for the integration to work. Using pull requests solves this for most cases, and means that work can continue in the first app while later other work continues in the other systems. 
 
 If queue functionality is required, using Mendix internal queues is recommended, because there are fewer moving parts and fewer places where things can fail. However, there are exceptions for when an integration layer is preferred (for details, see [Integration Layers](integration-layers)).
 

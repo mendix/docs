@@ -22,7 +22,7 @@ This diagram displays some typical ways to use the data:
 * Polling for combined updates (rather than polling many systems)
 * Receiving files or batches (for example, of the day’s updates)
 * Processing the data and streaming a new combination of data on to the next queue or Kafka
-* Business intelligence and statistics that can be used for machine learning and AI
+* Business intelligence and statistics
 * Reporting of all kinds (for example, financial, business, and operational)
 
 For many scenarios, it is better to specialize a system to handle subscriptions and combine data from different sources with different formats than to build it.
@@ -41,7 +41,7 @@ These are a few of the main ways the central data pattern is used:
 	* Data Lakes should not provide operational data, since the time stamp of combined data may be different
 	* For details, see the [Operational & Data Warehouse Data](#owd) section below
 * **BI solutions** – These extract data from a DWH or data lake, for example
-	* This is often statistical data for management overviews, machine learning, or AI, or it is used to fine-tune processes in smart Mendix apps
+	* This is often statistical data for management overviews, or it is used to fine-tune processes in smart Mendix apps
 	* For more information, see the [Integration to DWH & BI](batch-file-integration#int) section of *Batch File Integration*
 * **Extract-transform-load (ETL) solutions** – These are usually used for integration towards DWH solutions
 	* They are beneficial for massive data volumes and can compare new data with previous loads 
@@ -74,7 +74,7 @@ Data lakes have been popular as an enterprise-wide Hadoop-style DWH solution tha
 
 A DWH per definition does not store operational data. Time-stamp differences in the incoming data and the methods used to merge it means that DWH cannot be used as a reliable data source. However, on the other side of the DWH, you can get statistical data, metrics, reports, and snapshots of previous moments in time that can be used in operational processes to fine-tune them.
 
-An example use case is a home delivery system in which you keep track of whether the recipients are answering their doors over time. You can then decide to change the delivery pattern based on this information. If a recipient is rarely home, that is statistical data from the DWH solution that may rarely change, but it can be used as reference data for routing delivery services. This pattern will evolve more with IoT, and when combined with AI, will be developed into machine-learning patterns.
+An example use case is a home delivery system in which you keep track of whether the recipients are answering their doors over time. You can then decide to change the delivery pattern based on this information. If a recipient is rarely home, that is statistical data from the DWH solution that may rarely change, but it can be used as reference data for routing delivery services.
 
 This diagram presents a number of apps in a process that shares business events with an event manager that knows the status of each process:
 

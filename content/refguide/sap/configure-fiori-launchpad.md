@@ -109,17 +109,17 @@ Since you will need to put it on every page of your app, it is recommended that 
 
 2. Click the *navigation layout* name on the page breadcrumb trail.
 
-    ![Select Atlas_Default navigation layout from the page breadcrumb](attachments/sap-fiori/select-layout.png)
+    ![Select Atlas_Default navigation layout from the page breadcrumb](attachments/configure-fiori-launchpad/select-layout.png)
 
 3. Drag the **Fiori Launchpad Session Heartbeat** widget into the layout page header.
 
-    ![Drag widget into navigation layout header](attachments/sap-fiori/add-fiori-widget.png)
+    ![Drag widget into navigation layout header](attachments/configure-fiori-launchpad/add-fiori-widget.png)
 
 4. Save the updated navigation layout.
 
 5. Your page, and all other pages based on this navigation layout, now has the *Fiori Launchpad Session Heartbeat* widget which will be activated every time the page is opened or refreshed.
 
-    ![Fiori widget has been added](attachments/sap-fiori/fiori-widget-added.png)
+    ![Fiori widget has been added](attachments/configure-fiori-launchpad/fiori-widget-added.png)
 
 For more Information about managing layouts, see [How to Use Layouts & Snippets](/howto/front-end/layouts-and-snippets).
 

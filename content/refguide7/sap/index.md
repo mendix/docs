@@ -18,4 +18,3 @@ SAP and Mendix offer you the ability to extend the digital core of SAP with low-
 * [SAP Leonardo Machine Learning Foundation Connector](sap-leonardo-connector)
 * [SAP Fiori / Mendix Building Blocks](sap-fiori-building-blocks)
 * [SAP Cloud Connector](sap-cloud-connector)
-

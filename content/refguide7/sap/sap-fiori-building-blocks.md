@@ -1,5 +1,5 @@
 ---
-title: "SAP Fiori / Mendix Building Blocks"
+title: "SAP Fiori UI Building Blocks"
 category: "SAP"
 menu_order: 100
 description: "A summary of the building blocks which can be used to make an SAP Fiori themed app"

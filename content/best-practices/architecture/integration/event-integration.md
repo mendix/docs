@@ -5,6 +5,8 @@ menu_order: 4
 draft: true
 ---
 
+{{% todo %}}[**MENTIONS OF IoT, AI, AND MACHINE LEARNING SHOULD BE REMOVED/REWRITTEN OUT OF THIS DOCUMENT**]{{% /todo %}}
+
 ## 1 Introduction
 
 At the moment, event-driven architectures are making their return into the mainstream of integration. This follows an increased interest in and focus on, for example, IoT solutions, distributed networks of actors, and central monitoring. Several solution providers are promoting new paradigms for managing large, distributed, high-volume event driven architectures.
@@ -69,7 +71,7 @@ The internal queue provides the best control over delivery of business events in
 
 The key to event-streams is that they (often) only flow in one direction. A device leaving metrics in an IoT system does not expect an immediate answer to the data it ships. Additionally, there could be very many devices that are geographically distributed and shipping a lot of data. Request–reply is neither needed nor practical for inbound IoT, but for commanding a drone or other device, for example, it is highly recommended.
 
-IoT, AI, and big-data integration is only the beginning of an expected explosion of new IT that will be built alongside the current IT landscape. In the coming years, Mendix and Siemens will invest heavily in this area.
+Big-data integration is only the beginning of an expected explosion of new IT that will be built alongside the current IT landscape. In the coming years, Mendix and Siemens will invest heavily in this area.
 
 ### 4.2 IoT, MindSphere, Kafka
 

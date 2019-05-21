@@ -5,13 +5,15 @@ menu_order: 7
 draft: true
 ---
 
+{{% todo %}}[**MENTIONS OF IoT, AI, AND MACHINE LEARNING SHOULD BE REMOVED/REWRITTEN OUT OF THIS DOCUMENT**]{{% /todo %}}
+
 ## 1 What Is Process Integration?
 
 Process integration is a wide and important area that promises automation, digitization, and operational improvement. Often there is a significant business case for this type of IT development, where companies can gain on their competition by being more efficient, running lower costs, and providing better and faster services.
 
 When a business process runs across several systems, there will be some type of process integration. There are many ways this can be done:
 
-* **Business event Integration** – Work finishes in one app, and the next app is notified to start the next step of the process automatically. This avoids, for example, sending emails and having to retype information into another system.
+* **Business event integration** – Work finishes in one app, and the next app is notified to start the next step of the process automatically. This avoids, for example, sending emails and having to retype information into another system.
 
 	![](attachments/process-integration/process-int1.png)
 
@@ -19,7 +21,7 @@ When a business process runs across several systems, there will be some type of 
 
 	![](attachments/process-integration/process-int2.png)
 
-* **Case Management** – Human workflow in phases maintains a “case” object with data and status. The case is routed to different user-group baskets and/or sub-cases are created and completed in other systems. This is the best way to support a cross-departmental process, where several user groups are involved with approvals and coordination.
+* **Case management** – Human workflow in phases maintains a “case” object with data and status. The case is routed to different user-group baskets and/or sub-cases are created and completed in other systems. This is the best way to support a cross-departmental process, where several user groups are involved with approvals and coordination.
 
 	![](attachments/process-integration/process-int3.png)
 
@@ -27,7 +29,7 @@ When a business process runs across several systems, there will be some type of 
 
 	![](attachments/process-integration/process-int4.png)
 
-* **State Engine/Event Manager** – Events are passively gathered related to a process that runs across several systems. This is to determine that the process finishes correctly and that actions can be taken when something is wrong. This is useful for monitoring and managing a chain of business events (for example, packages for track-and-trace) and for high-volume asynchronous process orchestration.
+* **State engine/event manager** – Events are passively gathered related to a process that runs across several systems. This is to determine that the process finishes correctly and that actions can be taken when something is wrong. This is useful for monitoring and managing a chain of business events (for example, packages for track-and-trace) and for high-volume asynchronous process orchestration.
 
 	![](attachments/process-integration/process-int5.png)
 

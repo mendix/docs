@@ -51,14 +51,16 @@ The entry point into the Mendix escalation process is through your support case.
 
 This is the normal process for a support case:
 
-1. Navigate to the [Mendix Support homepage](https://support.mendix.com/hc/en-us).
-2. Submit a request:
+1. Navigate to the [Mendix Support](https://support.mendix.com/hc/en-us).
+2. Click **Submit a request**, which will open this form:
 
   ![](attachments/escalation-management-process/zendesk.png)
 
 3. Once the ticket has been submitted, this incoming ticket is assigned to a Support Engineer.
-4. This engineer will come to a solution most of the time, sometimes after discussion with a Technical Support Lead and, if needed, with our second-line team (as in, Studios, Client, Core, or Expert Services).
-5.	If the gap between the customer's expectation and the Mendix possibilities cannot be solved, the escalation is started.
+
+The Support Engineer will come to a solution most of the time, sometimes after discussion with a Technical Support Lead and, if needed, with our second-line team (for the Mendix Studios, Client, Core, or Expert Services).
+
+If the gap between the customer's expectation and the Mendix Platform possibilities cannot be resolved, an escalation is started.
 
 ## 6 Methods to Escalate My Support Case
 

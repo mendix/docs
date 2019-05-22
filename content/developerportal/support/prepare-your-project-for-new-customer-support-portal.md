@@ -1,5 +1,5 @@
 ---
-title: "On-Premises Customers: Prepare Your Project for the New Support Portal"
+title: "Prepare Your Project for the Support Portal (for On-Premises Users)"
 category: "Mendix Support"
 menu_order: 60
 description: "Describes what you need to do with an on-premises app project to prepare it for Mendix Support."
@@ -7,58 +7,51 @@ tags: ["on-premises", "support"]
 ---
 
 ## 1 Introduction
-In July 2016 Mendix released a new Support Portal. Using the Support Portal customers can select an affected app for a submitted request. The apps that can be selected will be based on the project authorization of that user (regardless of their organization). All users that have a role that has the authorization *Edit permissions on Deploy or Capture* will be able to submit and view tickets for the app that is connected to that project.
 
-The Support Portal needs to know the project identification for on-premises apps so it can show the correct apps. Therefore, we are asking all on-premises customers to provide us with the ProjectID of their projects. Please invite all team members that you want to be able to submit tickets and provide them with the specified role, then email the project information to Mendix Support.
+In the [Mendix Support Portal](https://support.mendix.com/hc/en-us), users can select an affected app for a submitted request. The apps that can be selected are based on the project authorization of the user (regardless of their organization). Users that have an **Edit** permission for **Deploy** or **Capture** are able to submit and view tickets for the app connected to that project.
 
-The steps in this how-to should be done for every new app that is created if you want to be able to submit ticket requests in the Support Portal. We recommend setting this up as a standard process when creating a new application.
+Mendix Support needs to know the app project identification for on-premises apps so it can show the correct apps. Therefore, Mendix asks that on-premises users provide the **App ID** of their projects. Please invite all the [App Team](../collaborate/team) members who should be able to submit tickets and provide them with the specified role, then contact Mendix Support with the project information.
+
+The steps in this how-to should be done for every new app that is created if you want to be able to submit ticket requests in the Mendix Support Portal. Setting this up as a standard process when creating a new Mendix application is recommended.
 
 **This how-to will teach you how to do the following:**
 
-*   How to configure project authorization to select affected application(s) in new Customer Support tool
+* Configure project authorization to select affected application(s) in the Mendix Support Portal
 
-## 2 Prerequisites
+## 2 Giving Team Members Access to Submit Tickets
 
-Before starting this how-to, make sure you have completed the following prerequisites:
+There are two ways to give team members access to submit tickets: by assigning the correct role to a user when adding them as an App Team member, or by changing the role of existing App Team members.
 
-*   Have a Mendix project ready
+### 2.1 Giving a New App Team Member Access
 
-## 3 Give Team Members Access To Submit Tickets
-There are two ways to give team members access to submit tickets: by assigning the correct role to a user when adding them as team members to a project or by changing the role of existing project members.
+To add users to a project's App Team and give them access to submit tickets for a specific app, follow these steps:
 
-### 3.1 Give New Project Members Access
-To add users to the project and give them access to submit tickets for a specific app, follow these steps:
-
-1.  Go to the **Overview** screen of your app.
-2.  Invite the users that should be able to submit/view tickets concerning this project to the project.
+1. Go to the [App Team](../collaborate/team) page of your app project in the Mendix Developer Portal.
+2. Click **Invite Memmber** to invite the users who should be able to submit/view Support tickets concerning this app project.
 3.  Assign one of the following roles to users you want to give access to creating tickets for the app:
-    * Business Engineer
-    * Product Owner
-    * SCRUM Master
+	* **Business Engineer**
+	* **Product Owner**
+	* **SCRUM Master**
+	
+	These roles have an **Edit** permission set for **Deploy** or **Capture**, thus they can submit/view Support tickets for the app project. For more details on setting permissions, see the [Managing the Team](../collaborate/team#managing) section of *App Team*.
 
-    > Team members who can access the Develop or Capture tabs can submit tickets for the app.
+4. To finalize the setup, email [support@mendix.com](http://support.mendix.com/) with the **App name** and **App ID** (both of which can be found on the [General](../settings/general-settings) page for the app project).
 
-4.  To finalize the setup send an email to [support@mendix.com](http://support.mendix.com/) with the Project Name, ProjectID and the name of the applicable app.
+### 2.2 Giving Existing App Team Members Access
 
-        > The ProjectID can be found on the General Settings tab in the Project Settings.
-
-### 3.2 Give Existing Project Members Access
 To give existing project members access to submit tickets, follow these steps:
 
-1.  Open your app in the **Developer Portal**.
-2.  Go to **Settings**.
-3.  Go to the **Project Security** tab.
-4.  Change the role for the user that needs access to submit tickets to on of the following:
-    * Business Engineer
-    * Product Owner
-    * SCRUM Master
+1. Go to the **Security** page of your app project in the Mendix Developer Portal.
+2.  Change the **ROLE** for the user who needs access to one of the following:
+	* **Business Engineer**
+	* **Product Owner**
+	* **SCRUM Master**
 
-    > You can customize and create your own roles on the *Role settings* page.
+	You can also click **Role settings** to create your own roles and customize the permissions for existing roles. For more information, see the [Editing App Team Roles](../company-app-roles/manage-roles#edit-app-team-roles) section of *How to Manage Company & App Roles*.
 
-5.  To finalize the setup send an email to [support@mendix.com](http://support.mendix.com/) with the Project Name, ProjectID and the name of the applicable app.
+3. To finalize the setup, email [support@mendix.com](http://support.mendix.com/) with the **App name** and **App ID**.
 
-## 4 Read More
+## 3 Read More
 
 * [On-Premises](../deploy/on-premises-design)
-* [How to Change the Affected Apps for Which You Can Submit Requests](change-affected-apps)
-* 
+* [How to Change the Affected Apps for Which You Can Submit Requests](change-affected-apps) 

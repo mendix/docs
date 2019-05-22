@@ -180,13 +180,13 @@ Type | Explanation
 
 ### <a name="Trends-dbpgtableindexsizeVERSIONmain"></a>5.2 Index vs. Table Size
 
-This database size graph shows the disk space used for storing indexes and actual data. Remember, indexes actually occupy memory space and disk storage, as they're just parts of your data copied, stored, and sorted in another way! Besides your data, indexes also have to be read into the system memory to be able to use them.
+This database size graph shows the disk space used for storing indexes and actual data. If you need to know the total memory you are using, note that the space taken by indexes is *included* in the tables value. The index value is shown separately so that you can see how large the indexes are, as they need to be read into the system memory to be able to use them.
 
 These are the types:
 
 Type | Explanation
 ------------ | -------------
-**tables** | Amount of space taken by the database.
+**tables** | Total space taken by the database.
 **indexes** | Amount of space taken by the indexes in the database.
 
 ### 5.3 Application Node

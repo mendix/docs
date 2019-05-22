@@ -120,7 +120,7 @@ Open the **(YourMendixProject)/CustomWidgets/TextBox** folder in your IDE of cho
 
 	This process will bundle the widget and generate the properties into *typings/TextBoxProperties.d.ts*.
 	
-	{{% alert type="info" %}}The console will show the error below, as we did not implement our `TextInput` component. We will solve the error in section 3.5 of this how-to:{{% /alert %}}
+	{{% alert type="info" %}}The console will show the error below, as we did not implement our `TextInput` component. We will solve the error in the [Labeling the Input](#label-input) of this how-to.{{% /alert %}}
 	
 	```
 	ERROR in ./src/TextBox.tsx
@@ -167,6 +167,7 @@ Open the **(YourMendixProject)/CustomWidgets/TextBox** folder in your IDE of cho
 	Explaining the code:
 	
 	* The `textAttribute` is an object that will automatically have the actual data stored in the attribute – when the data is changed, it will cause an update of the component, and the new data will be displayed in the input
+	
 6. Alter *Textbox.webmodeler.tsx* by adding the `TextInput` import to *Textbox.webmodeler.tsx*:
 
 	```ts	
@@ -257,7 +258,7 @@ The input works, but the styling could be improved. In the next code snippets, y
 
 	![styled widgets](attachments/pluggable-part-one/styledinputwidgets.png)
 
-### 3.5 Making the Input Labeled
+### 3.5 Labeling the Input{#label-input}
 
 While the Mendix input widgets come with labels, you will need to add one to TextBox manually. With the new API it is easy to add a label to any widget.
 

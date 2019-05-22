@@ -1,6 +1,7 @@
 ---
 title: "Data Storage"
 category: "Mendix Runtime"
+tags: ["studio pro"]
 ---
 
 Data storage is the data foundation of the Mendix runtime. Data storage does the following:

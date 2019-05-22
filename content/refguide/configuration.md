@@ -1,17 +1,18 @@
 ---
 title: "Configuration"
 parent: "project-settings"
+tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 
-A configuration is a group of settings with a name. You can define any number of configurations. The active configuration, i.e. the one that will be used when running your application, is determined by the drop-down in the toolbar of the Modeler.
+A configuration is a group of settings with a name. You can define any number of configurations. The active configuration, i.e. the one that will be used when running your application, is determined by the drop-down in the toolbar of Studio Pro.
 
 You can use configurations to have different database settings for different people working on your project. Maybe one person has SQL Server on their computer and the other Postgres. You can also have a shared configuration for connecting to a database server that you both have access to.
 
 {{% alert type="warning" %}}
 
-When you are deploying your application to a server or the Mendix cloud you will have to configure settings below there. See the [deployment guide](/developerportal/deploy/mendix-cloud-deploy) for more information.
+When you are deploying your application to a server or the Mendix cloud you will have to configure settings below there. See [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy) for more information.
 
 {{% /alert %}}
 
@@ -100,7 +101,7 @@ Constants have a default value that you can override per configuration. You only
 
 ## Custom
 
-You can use custom server settings to configure the Runtime beyond the standard possibilities offered by the Modeler.
+You can use custom server settings to configure the Runtime beyond the standard possibilities offered by Studio Pro.
 
 {{% alert type="warning" %}}
 

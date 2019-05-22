@@ -2,7 +2,7 @@
 title: "Work with Images & Files"
 category: "Data Models"
 menu_order: 4
-tags: []
+tags: ["studio pro"]
 ---
 
 ## 1 Introduction
@@ -68,12 +68,12 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 6 Read More
 
-*   [How to Work with Images & Files](working-with-images-and-files)
-*   [How to Create a Basic Data Layer](create-a-basic-data-layer)
-*   [How to Work with Object Events](working-with-object-events)
-*   [How to Denormalize Data to Improve Performance](denormalize-data-to-improve-performance)
-*   [How to Set Up Data Validation](setting-up-data-validation)
-*   [How to Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
+*   [Work with Images & Files](working-with-images-and-files)
+*   [Create a Basic Data Layer](create-a-basic-data-layer)
+*   [Work with Object Events](working-with-object-events)
+*   [Denormalize Data to Improve Performance](denormalize-data-to-improve-performance)
+*   [Set Up Data Validation](setting-up-data-validation)
+*   [Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
 *   [Stories](/developerportal/collaborate/stories)
-*   [How to Perform the Scout and Windows 10 Workaround](../front-end/perform-scout-and-windows-10-workaround)
+*   [Perform the Scout and Windows 10 Workaround](../front-end/perform-scout-and-windows-10-workaround)
 

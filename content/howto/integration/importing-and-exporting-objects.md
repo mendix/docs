@@ -7,7 +7,7 @@ tags: ["mpk", "project package", "import", "export", "document", "project", "mod
 
 ## 1 Introduction
 
-In Mendix, you don't need to reinvent the wheel. You can save time by importing modules others have created and by exporting new modules for others to use. The App Store provides this functionality on a macro level. You can also use the Desktop Modeler's built-in import and export functions to share content between your own apps, import unofficial modules, and share entire projects.
+In Mendix, you don't need to reinvent the wheel. You can save time by importing modules others have created and by exporting new modules for others to use. The App Store provides this functionality on a macro level. You can also use 's built-in import and export functions to share content between your own apps, import unofficial modules, and share entire projects.
 
 {{% alert type="warning" %}}
 Please note throughout this how-to that Mendix packages are stored as Mendix package (*.mpk*) files. These are not compatible with each other; you cannot, for example, import individual *modules* from a *project* package.
@@ -15,7 +15,7 @@ Please note throughout this how-to that Mendix packages are stored as Mendix pac
 
 **This how-to will teach you how to do the following:**
 
-* Import and export the following Desktop Modeler objects:
+* Import and export the following Studio Pro objects:
     * projects
     * modules
     * widgets
@@ -33,7 +33,7 @@ A Mendix package (*.mpk*) file can store a complete Mendix project.
 
 To import a complete Mendix project package, follow these steps:
 
-1. Click the **File** menu in the Desktop Modeler and select **Import Project Package...**:
+1. Click the **File** menu in  and select **Import Project Package...**:
 
     ![](attachments/18448739/18582103.png)
 
@@ -47,7 +47,7 @@ To import a complete Mendix project package, follow these steps:
     * Provide an **App name** (by default, it will be named as it was in the Mendix package file)
     * Determine the local folder where you would like to store your project in **Project directory**
    
-3.  Click **OK**, and your project will be loaded in the Desktop Modeler.
+3.  Click **OK**, and your project will be loaded in .
 
 ### 2.2 Importing Module Packages
 
@@ -74,7 +74,7 @@ To import module packages, follow these steps:
 
 5. Click **OK**. You will see your new or replaced module in the **Project Explorer**.
 
-    You will also see your changes in the **Changes** section of the Desktop Modeler. In this example, the existing module has been deleted and replaced by the newly imported module:
+    You will also see your changes in the **Changes** section of . In this example, the existing module has been deleted and replaced by the newly imported module:
 
     ![](attachments/18448739/18582109.png)
 
@@ -106,12 +106,12 @@ The package can contain a single example of one of the following:
 * XML schema
 * Export mapping
 * Import mapping
-* Consumed app service
+* Consumed app service (deprecated)
 * Consumed web service
 * Published REST service
 * Published web service
 * Published OData service
-* Published app service
+* Published app service (deprecated)
 
 To import module objects, follow these steps:
 
@@ -154,7 +154,7 @@ To import widgets, follow these steps:
 
 ### 2.5 Importing Content from the App Store
 
-To learn more about importing content from the App Store, see [Use App Store Content](/developerportal/app-store/use-app-store-content-in-the-modeler).
+To learn more about importing content from the App Store, see [Use App Store Content](/developerportal/app-store/app-store-content).
 
 ## 3 Exporting Objects
 
@@ -162,7 +162,7 @@ To learn more about importing content from the App Store, see [Use App Store Con
 
 To export a project, follow these steps:
 
-1. Click the **File** menu in the Desktop Modeler and select **Export Project Package...**
+1. Click the **File** menu in  and select **Export Project Package...**
 
     ![](attachments/18448739/18582091.png)
 
@@ -213,16 +213,16 @@ Mendix module documents can be exported as a Mendix package (*.mpk*) file.
 
 ## 4 Read More
 
-* [How to Consume a Complex Web Service](consume-a-complex-web-service)
-* [How to Consume a Simple Web Service](consume-a-simple-web-service)
-* [How to Export XML Documents](export-xml-documents)
-* [How to Import Excel Documents](importing-excel-documents)
-* [How to Expose a Web Service](expose-a-web-service)
-* [How to Configure Selenium Support](selenium-support)
-* [How to Synchronize User Accounts Using the LDAP Module](synchronizing-user-accounts-using-the-ldap-module)
-* [How to Import XML Documents](importing-xml-documents)
-* [How to Consume a REST Service](consume-a-rest-service)
-* [How to Expose Data to BI Tools Using OData](exposing-data-to-bi-tools-using-odata)
-* [Modules](/refguide7/modules)
-* [Project](/refguide7/project)
-* [Common Widgets](/refguide7/common-widgets)
+* [Consume a Complex Web Service](consume-a-complex-web-service)
+* [Consume a Simple Web Service](consume-a-simple-web-service)
+* [Export XML Documents](export-xml-documents)
+* [Import Excel Documents](importing-excel-documents)
+* [Expose a Web Service](expose-a-web-service)
+* [Configure Selenium Support](selenium-support)
+* [Synchronize User Accounts Using the LDAP Module](synchronizing-user-accounts-using-the-ldap-module)
+* [Import XML Documents](importing-xml-documents)
+* [Consume a REST Service](consume-a-rest-service)
+* [Expose Data to BI Tools Using OData](exposing-data-to-bi-tools-using-odata)
+* [Modules](/refguide/modules)
+* [Project](/refguide/project)
+* [Common Widgets](/refguide/common-widgets)

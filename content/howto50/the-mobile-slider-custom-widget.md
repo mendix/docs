@@ -28,7 +28,7 @@ We have prepared a Mendix hybrid mobile project on GitHub for you with all the s
 1.  Go to **[https://github.com/mendix/MobileSlider](https://github.com/mendix/MobileSlider).**
 2.  Click on **Download ZIP** to download the latest version.
 3.  You can find the test project in the **"test"** directory fully configured and ready to use.
-4.  The app is available on [http://localhost:8109/](http://localhost:8109/) once you start running it in Mendix.
+4.  The app is available on `http://localhost:8109/` once you start running it in Mendix.
 
 
 

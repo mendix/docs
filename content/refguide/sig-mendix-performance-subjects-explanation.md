@@ -1,6 +1,7 @@
 ---
 title: "SIG–Mendix Performance Subjects"
 category: "Mendix Runtime"
+tags: ["studio pro"]
 ---
 
 ## 1 Introduction
@@ -24,7 +25,7 @@ The Mendix Platform consists of the following components:
 
 *   App Store – a portal with hundreds of publicly available building blocks to speed up app development
 
-*   Mendix Modeler – multi-user modeling studio of the Mendix Platform
+*   Mendix Studio Pro – multi-user modeling studio of the Mendix Platform
 *   Team Server – a central repository for managing application model versions
 *   Runtime environment – runs applications using a server part (Mendix Runtime) and a client part (Mendix Client)
 *   Build – creates deployment packages from artifacts such as models, style sheets, and custom Java classes
@@ -62,7 +63,7 @@ This basic scenario can be modeled in Mendix using the following two pages:
   * This page can be reached from the first page using the New and Edit buttons
 
 
-The following sections outline the actions involved when executing these pages. As stated earlier, this pattern can be seen in many Mendix applications, but the exact runtime result depends on many details and design decisions taken while building the application using the Mendix Modeler. More advanced data models and pages will result in more (complex) queries.
+The following sections outline the actions involved when executing these pages. As stated earlier, this pattern can be seen in many Mendix applications, but the exact runtime result depends on many details and design decisions taken while building the application using Mendix Studio Pro. More advanced data models and pages will result in more (complex) queries.
 
 ### 3.1 Read Object Required to Display Object Table
 
@@ -392,7 +393,7 @@ This XPath expression is processed in a number of steps to a database query:
 
 ### 5.4 Scalability
 
-The Mendix Runtime can run as a single process, or it can be horizontally scaled to facilitate more concurrent users and improve availability. In this scenario, multiple Mendix Modeler instances are running. These instances run independently, there will not be any communication between the processes.
+The Mendix Runtime can run as a single process, or it can be horizontally scaled to facilitate more concurrent users and improve availability. In this scenario, multiple Mendix Studio Pro instances are running. These instances run independently, there will not be any communication between the processes.
 
 #### 5.4.1 Single Instance
 

@@ -1,6 +1,7 @@
 ---
 title: "Developing Hybrid Mobile Apps"
-category: "Mobile Development"
+parent: "hybrid-mobile"
+tags: ["studio pro"]
 ---
 
 ## 1 Introduction
@@ -13,7 +14,7 @@ These apps are also called "hybrid" apps because they are a hybrid of a web and 
 
 While developing a hybrid mobile app, you can quickly preview it in in the browser by using the **View Hybrid Phone App Online** or **View Hybrid Tablet App Online** from the toolbar or through the **Run** menu.
 
-However, when you use native widgets on your hybrid pages, some of these widgets might not work in the browser. Some of these widgets will offer an alternative implementation for when they are running in an ordinary browser; others will not work at all. To see what your app will look like inside the PhoneGap wrapper, you can use the Mendix Mobile app. In the Desktop Modeler, you can reach the hybrid mobile app dialog box via **View in the Mendix App** in the toolbar or through the **Run** menu. It shows a QR code that can be scanned with that app. This is a quick way to load your app into a PhoneGap compatible environment.
+However, when you use native widgets on your hybrid pages, some of these widgets might not work in the browser. Some of these widgets will offer an alternative implementation for when they are running in an ordinary browser; others will not work at all. To see what your app will look like inside the PhoneGap wrapper, you can use the Mendix Mobile app. In Studio Pro, you can reach the hybrid mobile app dialog box via **View in the Mendix App** in the toolbar or through the **Run** menu. It shows a QR code that can be scanned with that app. This is a quick way to load your app into a PhoneGap compatible environment.
 
 ![](attachments/Developing+Hybrid+Mobile+Apps/View_Hybrid_Mobile_App_Popup.png)
 
@@ -22,10 +23,6 @@ For more information about how to download the Mendix Mobile app, see [Getting t
 {{% alert type="warning" %}}
 
 Your mobile device has to be on the same network as your development machine for the Mendix Mobile app to work. If this is the case and the connection still fails, make sure that communication between devices is allowed in the Wi-Fi access point.
-
-{{% /alert %}}{{% alert type="warning" %}}
-
-The Mendix Mobile app does not yet support running [offline-enabled](offline) apps.
 
 {{% /alert %}}
 

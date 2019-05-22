@@ -10,12 +10,6 @@ Some services require you to authenticate using a client certificate. This how-t
 
 Let's assume that you already have an app that calls a service. For details on how to configure this, have a look at [How to Consume a REST Service](consume-a-rest-service) or [How to Consume a Simple Web Service](consume-a-simple-web-service).
 
-{{% alert type="info" %}}
-
-Client certificates for REST services were introduced in version 7.2.0.
-
-{{% /alert %}}
-
 This how-to will teach you how to do the following:
 
 * Configure to run locally
@@ -63,12 +57,6 @@ The following sample uses client certificate `Mx1.pfx` for `WebService1` and no 
 ```
 { "Module.WebService1": "D:\\App\\Mx1.pfx", "Module.WebService2": "" }
 ```
-
-{{% alert type="info" %}}
-
-The possibility to use an empty path was introduced in Mendix version 7.19.0.
-
-{{% /alert %}}
 
 ## 4 Running in the Cloud
 

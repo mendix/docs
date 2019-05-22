@@ -1,6 +1,6 @@
 {{- $featuredPages := where .Site.Pages ".Params.frontpage_featured" true -}}
 {{- with $featuredPages -}}
-  <h2 class="frontpage__featured__title">Featured</h2>
+  <h2 class="frontpage__featured__title">Featured Docs</h2>
   <ul class="frontpage__featured__list">
     {{- range . -}}
       <li class="frontpage__featured__list__item">

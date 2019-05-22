@@ -1,10 +1,11 @@
 ---
 title: "Scroll Container"
 parent: "container-widgets"
+tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-A scroll container is used to divide the layout in regions (for details on regions, see [Scroll Container Region](scroll-container-region) in the Mendix Reference Guide) such as the header, sidebar, or footer. A scroll container must be the only top-level widget. Apart from that, a scroll container can only be placed directly in another scroll container.
+A scroll container is used to divide the layout in regions (for details on regions, see [Scroll Container Region](scroll-container-region)) such as the header, sidebar, or footer. A scroll container must be the only top-level widget. Apart from that, a scroll container can only be placed directly in another scroll container.
 
 Scroll containers may be placed on navigation layouts as well as on pages.
 
@@ -67,16 +68,16 @@ _Default value:_ Center
 
 ### Enable Top
 
-Determines whether the scroll container should contain a top region (for details on regions, see [Scroll Container Region](scroll-container-region) in the Mendix Reference Guide).
+Determines whether the scroll container should contain a top region (for details on regions, see [Scroll Container Region](scroll-container-region)).
 
 ### Enable Bottom
 
-Determines whether the scroll container should contain a bottom region (for details on regions, see [Scroll Container Region](scroll-container-region) in the Mendix Reference Guide).
+Determines whether the scroll container should contain a bottom region.
 
 ### Enable Left
 
-Determines whether the scroll container should contain a left region (for details on regions, see [Scroll Container Region](scroll-container-region) in the Mendix Reference Guide).
+Determines whether the scroll container should contain a left region.
 
 ### Enable Right
 
-Determines whether the scroll container should contain a right region (for details on regions, see [Scroll Container Region](scroll-container-region) in the Mendix Reference Guide).
+Determines whether the scroll container should contain a right region.

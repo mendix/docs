@@ -19,12 +19,12 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 *  Have Eclipse installed (download it [here](https://eclipse.org/))
 
-	{{% alert type="info" %}}You can use any text editor to create custom Java actions, but we highly recommend using Eclipse. The Modeler contains a **Deploy for Eclipse** feature verifying that everything that needs to be configured in Eclipse is done automatically. All you have to do is import the project into your Eclipse working environment.
+	{{% alert type="info" %}}You can use any text editor to create custom Java actions, but we highly recommend using Eclipse. Studio Pro contains a **Deploy for Eclipse** feature verifying that everything that needs to be configured in Eclipse is done automatically. All you have to do is import the project into your Eclipse working environment.
 {{% /alert %}}
 
 * Have an app project with the **Asset Manager** starter app (**Create App** > **Asset Manager**)
 
-## 3 Adding a Java Action in the Modeler
+## 3 Adding a Java Action in Studio Pro
 
 1. Right-click the **MyFirstModule** module and select **Add other** > **Resources** > **Java action**.
 2. Enter *ReverseAssetName* for the **Name** of the new Java action and click **OK**.
@@ -42,7 +42,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 	![](attachments/extend-custom-java/return.png)
 
-5. Select **Project** > **Deploy for Eclipse** from the top Modeler toolbar.
+5. Select **Project** > **Deploy for Eclipse** from the top Studio Pro toolbar.
 
 ## 4 Editing the Java Action in Eclipse
 
@@ -63,18 +63,18 @@ To edit the Java action in Eclipse, follow these steps:
 	{{% image_container width="400" %}}![](attachments/extend-custom-java/import3.png)
 	{{% /image_container %}}
 
-	{{% alert type="info" %}}If you don't know what the project directory is, select **Project** > **Show Project Directory in Explorer** in the Modeler.
+	{{% alert type="info" %}}If you don't know what the project directory is, select **Project** > **Show Project Directory in Explorer** in Studio Pro.
 	{{% /alert %}}
 
 5.  Double-click **ReverseAssetName.java** in the **Package Explorer** of Eclipse:
 
 	![](attachments/extend-custom-java/package-explorer.png)
 
-	In the Java code, there is a placeholder marked with `//BEGIN USER CODE` and `//END USER CODE` comment statements. This is where you can add your own Java code. The modeler will never overwrite the code between those two statements.
+	In the Java code, there is a placeholder marked with `//BEGIN USER CODE` and `//END USER CODE` comment statements. This is where you can add your own Java code. Studio Pro will never overwrite the code between those two statements.
 
 	![](attachments/extend-custom-java/java1.png)
 
-	As you can see, the Modeler generated a variable for `inputAssets`. You can use that variable to get the name of the asset and reverse it like this:
+	As you can see, Studio Pro generated a variable for `inputAssets`. You can use that variable to get the name of the asset and reverse it like this:
 
 	```java
 String assetsAssetName = this.inputAssets.getAssetName(this.getContext());
@@ -89,7 +89,7 @@ return new StringBuilder(assetsAssetName).reverse().toString();
 
 ## 5 Calling the Java Action from a Microflow
 
-1. Back in the Modeler, locate the **Assets** page via **Project Explorer**.
+1. Back in Studio Pro, locate the **Assets** page via **Project Explorer**.
 2.  Under **{AssetName}, right-click and select **Add widget**:
 
 	{{% image_container width="300" %}}![](attachments/extend-custom-java/add-widget.png)
@@ -164,11 +164,11 @@ return new StringBuilder(assetsAssetName).reverse().toString();
 
 ## 7 Read More
 
-* [How to Define Access Rules Using XPath](define-access-rules-using-xpath)
-* [How to Trigger Logic Using Microflows](triggering-logic-using-microflows)
-* [How to Create a Custom Save Button](create-a-custom-save-button)
-* [How to Work with Lists in a Microflow](working-with-lists-in-a-microflow)
-* [How to Optimize Retrieve Activities](optimizing-retrieve-activities)
-* [How to Set Up Error Handling](set-up-error-handling)
-* [How to Optimize Microflow Aggregates](optimizing-microflow-aggregates)
-* [How to Extract & Use Sub-Microflows](extract-and-use-sub-microflows)
+* [Define Access Rules Using XPath](define-access-rules-using-xpath)
+* [Trigger Logic Using Microflows](triggering-logic-using-microflows)
+* [Create a Custom Save Button](create-a-custom-save-button)
+* [Work with Lists in a Microflow](working-with-lists-in-a-microflow)
+* [Optimize Retrieve Activities](optimizing-retrieve-activities)
+* [Set Up Error Handling](set-up-error-handling)
+* [Optimize Microflow Aggregates](optimizing-microflow-aggregates)
+* [Extract & Use Sub-Microflows](extract-and-use-sub-microflows)

@@ -1,15 +1,20 @@
 ---
-title: "Troubleshoot Version Control Issues"
-parent: "using-team-server-_-version-control"
-menu_order: 10
+title: "Solve Known Version Control Issues"
+category: "Collaboration"
+menu_order: 7
 description: "This document presents a list of problems and fixes for version control issues."
-tags: ["version control", "troubleshoot", "modeler"]
+tags: ["version control", "troubleshoot", "Studio Pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
-The Mendix Modeler contains a version control system that supports collaborating with team members. This document presents fixes that can be used when version control problems arise.
+Mendix Studio Pro contains a version control system that supports collaborating with team members. This document presents fixes that can be used when version control problems arise.
+
+For more information and general help on version control, see the following documents:
+
+* [Version Control](/refguide/version-control)
+* [Using Version Control in Studio Pro](/refguide/using-version-control-in-studio-pro)
 
 ## 2 Known Problems & Fixes
 
@@ -19,30 +24,27 @@ Below is a list of known problems and steps to fix them.
 
 ![Error dialog with proxy authentication failed](attachments/troubleshoot-version-control/oopsproxy.png)
 
-This error means that the Modeler has problems reaching the version control server because of a proxy server.
+This error means that Studio Pro has problems reaching the version control server because of a proxy server.
 
-The proxy settings can be changed in the Modeler by selecting **Edit** > **Preferences** and then the **Advanced** tab. In the **Proxy server** section, you can change the proxy authentication settings. Fill in the correct **User name** and **Password** for the proxy server.
+The proxy settings can be changed in Studio Pro by selecting **Edit** > **Preferences** and then the **Advanced** tab. In the **Proxy server** section, you can change the proxy authentication settings. Fill in the correct **User name** and **Password** for the proxy server.
 
 ![Proxy settings](attachments/troubleshoot-version-control/proxysettings.png)
 
 ### 2.2 Getting an Error Containing Another `SharpSvn.SvnAuthenticationException`
 
-If you are using the Desktop Modeler version 7.18 or higher, sign out and then sign back in.
-
-If you are using a Desktop Modeler version lower than 7.18, follow these steps:
-
-1. Remove all the files from the *\Users\<your username>\AppData\Roaming\Subversion\auth\svn.simple* folder.
-2. Remove all the files from the *\Users\<your username>\AppData\Local\Mendix\svnconfig\auth\svn.simple* folder.
+This should be resolved if you sign out of Studio Pro and then sign back in.
 
 ### 2.3 Getting an Error with the Message `Connection timed out`
 
-If you are using the Desktop Modeler version 7.18 or higher, follow these steps:
+Follow these steps:
 
 1. Open the *\Users\<username>\AppData\Roaming\Subversion\servers* file with any text editor.
 2. Add the text `http-timeout = 5000` under the section `[global]`.
 3. Save the file.
 
 ### 2.4 Getting an Error with the Message `<project folder> is already locked`
+
+Follow these steps:
 
 1. Install TortoiseSVN, as suggested in [System Requirements](/refguide/system-requirements). Use version 1.7.x, which can be downloaded [here](https://sourceforge.net/projects/tortoisesvn/files/1.7.15/).
 2. Go to the parent directory (folder) of your project (this is the folder with the **<folder_name>** from the error message).
@@ -51,15 +53,17 @@ If you are using the Desktop Modeler version 7.18 or higher, follow these steps:
 
 ### 2.5 Getting an Error with the Message `System.Security.Cryptography.CryptographicException: Key not valid for use in specified state`
 
-Remove your user settings and restart the Modeler.
+Follow these steps to remove your user settings and restart Studio Pro.
 
 1. Rename *\Users\<username>\AppData\Local\Mendix\Settings.sqlite* to *Settings.sqlite.old* 
-2. Restart the Modeler.
+2. Restart Studio Pro.
 
 ### 2.6 Getting an Error with the Message `SharpSvn.SvnRepositoryIOException: At least one property change failed; repository is unchanged` {#error-with-message}
 
+Follow these steps:
+
 1. Install TortoiseSVN, as suggested in [System Requirements](/refguide/system-requirements). Use version 1.7.x, which can be downloaded from [Sourceforge](https://sourceforge.net/projects/tortoisesvn/files/1.7.15/).
-2. Open the project folder via the Desktop Modeler by choosing **Show Project Directory in Explorer** from the **Project** menu.
+2. Open the project folder via Studio Pro by choosing **Show Project Directory in Explorer** from the **Project** menu.
 3. Right-click the white background of the project folder.
 4. Select **TortoiseSVN > Properties**.
 5. Double-click the `svn:ignore` property.
@@ -71,8 +75,7 @@ Remove your user settings and restart the Modeler.
 11. Replace the current content by pasting from the clipboard: <kbd>Ctrl</kbd>+<kbd>A</kbd> followed by <kbd>Ctrl</kbd>+<kbd>V</kbd>.
 12. Click **OK** to close the `svn:ignore` property dialog.
 13. Click **OK** to close the `properties` dialog.
-
-Restart the Desktop Modeler.
+14. Restart Studio Pro.
 
 You can now commit your app project.
 
@@ -89,6 +92,8 @@ You will need to resolve the conflict before you can commit your app project to 
 #### 2.7.1 Example
 
 In this example, we will focus on merging a branch into the main line. On the main line the list of ignored files is this:
+
+[//]: # "modeler-merge-marker has not yet been renamed for Studio Pro"
 
 ```
 modeler-merge-marker
@@ -146,11 +151,11 @@ To resolve a conflict on the svn:ignore property, perform the following steps.
 10. Right-click the white background of the project directory and choose **TortoiseSVN > Edit Conflicts** again.
 11. This time click **Resolve using local property**.
 
-You have resolved the conflict and can commit from the Desktop Modeler.
+You have resolved the conflict and can commit from Studio Pro.
 
 ## 3 Other Problems
 
-If the solutions here do not work for your version control problems, please submit a request with [Mendix Support](https://support.mendix.com/).
+If the solutions here do not work for your version control problems, please submit a request to [Mendix Support](https://support.mendix.com/).
 
 ## 4 Read More
 

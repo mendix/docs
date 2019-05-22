@@ -59,7 +59,7 @@ This means that you can now try to get the skills available that are identified 
 
 Now that you have identified which people will be part of the conversion, we need to make sure that they have the right knowledge to work on the conversion. They might get into situations where they will have to make a choice about how to go forward. How will they make the right choice? Do they have enough know-how and insight into the capabilities to make such a decision? To help you in getting the knowledge needed you can do the following:
 
-*   Read the [release notes](/releasenotes/desktop-modeler/)
+*   Read the [release notes](/releasenotes/studio-pro/)
 *   Read [blogs and how-to's](https://developers.mendix.com/) on related topics
 *   Follow a Mendix 4 to Mendix 5 conversion workshop. Contact Mendix for more information about this custom workshop
 
@@ -193,7 +193,7 @@ Resolve all of your model deprecations and warnings that are coming up because o
 
 There are two deprecations that we will highlight here, **currency** and **use main placeholder for pop-ups**.
 
-The currency data type is deprecated because of the introduction of a new data type called Decimal. This new type was introduced in [Mendix 5.14](/releasenotes/desktop-modeler/5.14). You will have two logical options to solve your deprecation messages. You can convert your currency data type to a float or to a decimal. Please read the following [guide](/refguide5/data-types) to determine what works for your project.
+The currency data type is deprecated because of the introduction of a new data type called Decimal. This new type was introduced in [Mendix 5.14](/releasenotes/studio-pro/5.14). You will have two logical options to solve your deprecation messages. You can convert your currency data type to a float or to a decimal. Please read the following [guide](/refguide5/data-types) to determine what works for your project.
 
 The second deprecation is the **Use main placeholder for pop-ups** property of a layout. You can read the following [article](https://www.mendix.com/blog/feature-find-page-open-locations/) to learn how to deal with that situation.
 

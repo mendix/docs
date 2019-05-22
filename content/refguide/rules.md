@@ -14,7 +14,7 @@ Rules are very similar to microflows; see the documentation on [Microflows](micr
 
 *   The return type has to be Boolean or enumeration
 
-*   A rule has a different background in the Modeler so that you can quickly spot whether you are working on a rule
+*   A rule has a different background in Studio Pro so that you can quickly spot whether you are working on a rule
 
 *   A rule cannot change data in the database; the actions to create, delete, change and rollback objects are not available in rules
 

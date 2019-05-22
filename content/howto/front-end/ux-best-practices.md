@@ -7,6 +7,10 @@ tags: ["ux", "ui", "ux designer", "user experience", "design", "menu", "button",
 
 ## 1 Introduction
 
+{{% alert type="info" %}}
+This how-to is based on the blog post [Common UX Mistakes Made by Business Developers](https://blog.prototypr.io/common-ux-mistakes-made-by-business-developers-e837d0b31379) by Jason Teunissen, UX Consultant at [Appronto](https://developer.mendixcloud.com/link/partnerprofile/8870).
+{{% /alert %}}
+
 In a Mendix App Team, the UX Designer's job is to improve the user experience of applications in as many ways as possible. However, sometimes logical solutions from a development perspective are not the best solutions from a UX perspective. 
 
 This set of best practices is for UX Designers to think carefully about what they can add to app development process.
@@ -59,8 +63,6 @@ Think about your interface as a physical space. Consider the following scenario:
 Good balance goes a long way. How often an object is used determines where it should go in a drawer, which translates to: How often a button is needed determines where it should go in a drop-down menu.
 
 If you only have five buttons, they might not need to go in a drop-down menu at all. But if you have six buttons, that’s a different story.
-
-**[Jason: can you clarify the difference between having 5 and 6 buttons? Or is that some humor?]**
 
 ## 4 Let the User Know Where They Are in the App
 
@@ -213,5 +215,5 @@ These are the basic UX best practices outlined in this document:
 
 ## 11 Read More
 
-* [Common UX Mistakes Made by Business Developers (You Know Who You Are...)](https://blog.prototypr.io/common-ux-mistakes-made-by-business-developers-e837d0b31379)
+* [Common UX Mistakes Made by Business Developers](https://blog.prototypr.io/common-ux-mistakes-made-by-business-developers-e837d0b31379)
 

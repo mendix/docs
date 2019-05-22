@@ -1,6 +1,7 @@
 ---
 title: "Import XML"
 parent: "integration-activities"
+tags: ["studio pro"]
 ---
 
 {{% alert type="warning" %}}

@@ -8,7 +8,7 @@ tags: ["SAP", "integration", "OData", "BAPI"]
 
 ## 1 Introduction<a name="Introduction"></a>
 
-This reference guide describes the actions and domain model of the SAP OData Connector module. 
+This documentation describes the actions and domain model of the SAP OData Connector module. 
 
 The SAP OData Connector is an OData connector written specifically to integrate with SAP back-end systems like SAP Business Suite (SAP ERP 6.0), SAP S/4HANA, SAP S/4HANA Cloud, and SAP SuccessFactors. The SAP OData Connector can be used for all SAP back-end systems that have OData enabled, both in the cloud and on-premises. For ECC, SAP Gateway will be used to expose the traditional BAPI interface as an OData service.
 
@@ -50,13 +50,13 @@ These parameters are described in section [4. Connector Action Parameters](#Conn
 
 ### 2.3 Domain Models
 
-This reference guide describes two different domain models.
+This documentation describes two different domain models.
 
 1. The SAP Service Domain Model – this is a Mendix domain model which represents the data model of the SAP OData service. This is the one which holds the data you are working with and is described first.
 
 2. The SAP OData Connector Domain Model – this contains entities which are used by the SAP OData Connector itself: for example, to construct the request which needs to be sent to the OData service. A description of this domain model is included for completeness in section [2.3.2 SAP OData Connector Domain Model](#ConnectorDM)
 
-For more information on domain models, see [Domain Model](/refguide/domain-model) in the Mendix Reference Guide.
+For more information on domain models, see [Domain Model](/refguide/domain-model).
 
 #### 2.3.1 SAP Service Domain Model
 
@@ -81,7 +81,7 @@ The examples used in this guide are based on the **SAP My Tasks for Field Sales 
 
 This data model can be obtained in the following ways:
 
-* You can download it from the App Store [here](https://appstore.home.mendix.com/link/app/89942/). If you download it within the Desktop Modeler, it will be saved in Project Explorer under **Project {name}** > **App Store modules** > **CRM_TASK**.
+* You can download it from the App Store [here](https://appstore.home.mendix.com/link/app/89942/). If you download it within Studio Pro, it will be saved in Project Explorer under **Project {name}** > **App Store modules** > **CRM_TASK**.
 * You can create it using the OData metadata XML for Customer Relationship Management Tasks, which can be found at [https://www.sapfioritrial.com/sap/opu/odata/sap/CRM_TASK/$metadata](https://www.sapfioritrial.com/sap/opu/odata/sap/CRM_TASK/$metadata). Save this file and then, using the instructions in [How to Use SAP OData Model Creator](/howto/sap/use-sap-odata-model-creator), import it into your app.
 
 Make sure that you review the value of the constant containing the URL of the SAP service you are using after you have imported the data model into your app.
@@ -107,7 +107,7 @@ Here is the domain model of the SAP OData Connector:
 
 ![](attachments/sap-odata-connector/domainmodel-sapodataconnector.png)
 
-This domain model is part of the SAP OData Connector module and can be found in **Project ... > App Store module > SAPODataConnector**. Each entity (see [Entities](/refguide/entities) in the Mendix Reference Guide) contains one or more attributes (see [Attributes](/refguide/attributes) in the Mendix Reference Guide):
+This domain model is part of the SAP OData Connector module and can be found in **Project ... > App Store module > SAPODataConnector**. Each [entity](/refguide/entities) contains one or more [attributes](/refguide/attributes):
 
 * **ODataObject** – represents the generic OData object; all entities which can be manipulated directly in the SAP OData service domain model are specializations of this
   * **meta objectURI** – the address given by the OData service to the OData object
@@ -601,7 +601,7 @@ This is the name that you give the result of your Activity. This can be used lat
 * [Data Types](/refguide/data-types)
 * [Domain Model](/refguide/domain-model)
 * [Entities](/refguide/entities)
-* [How to Use App Store Content](/developerportal/app-store/use-app-store-content-in-the-modeler)
+* [How to Use App Store Content](/developerportal/app-store/app-store-content)
 * [How to Use the SAP OData Connector](/howto/sap/use-sap-odata-connector)
 * [How to Use the SAP OData Model Creator](/howto/sap/use-sap-odata-model-creator)
 * [OData metadata XML for CRM Task](https://www.sapfioritrial.com/sap/opu/odata/sap/CRM_TASK/$metadata)

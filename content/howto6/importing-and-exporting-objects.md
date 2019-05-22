@@ -102,7 +102,7 @@ Mendix module packages are stored as Mendix Package (.mpk) files. However, you n
 
 ### Importing Content from the App Store
 
-To learn more about importing content from the App Store, see [Use App Store Content](/developerportal/app-store/use-app-store-content-in-the-modeler).
+To learn more about importing content from the App Store, see [Use App Store Content](/developerportal/app-store/app-store-content).
 
 ## Exporting Objects
 
@@ -163,3 +163,4 @@ Mendix module object packages are stored as Mendix Package (.mpk) files. An obje
 *   [Modules](/refguide6/modules)
 *   [Project](/refguide6/project)
 *   [Common Widgets](/refguide6/common-widgets)
+

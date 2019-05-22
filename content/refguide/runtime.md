@@ -1,10 +1,11 @@
 ---
 title: "Mendix Runtime"
+tags: ["studio pro", "runtime"]
 ---
 
 ## 1 Introduction
 
-The Mendix Runtime executes the application model that is created in the Modeler. It serves pages to the Mendix Client, executes microflows, calls web services, generates documents, communicates with the database, and much more.
+The Mendix Runtime executes the application model that is created in Studio Pro. It serves pages to the Mendix Client, executes microflows, calls web services, generates documents, communicates with the database, and much more.
 
 ## 2 Licensing
 

@@ -26,7 +26,7 @@ The Mendix Cloud automatically monitors the health and status of apps that are d
 
 	![](attachments/18580000.png)
 
-	{{% alert type="warning" %}}The Acceptance and Production buttons at the top let you switch between viewing the status for your production and acceptance node. Note that accessing production information may require additional authentication and is subject to your project's security settings.{{% /alert %}}
+	{{% alert type="warning" %}}The dropdown at the top lets you switch between viewing the status for your node environments. Note that accessing production information may require additional authentication and is subject to your project's security settings.{{% /alert %}}
 
 4.  If one of the status items is not listed as **OK**, click the line to show an additional information box with details about the error.
 
@@ -44,19 +44,43 @@ There are a number of categories on the status overview that are related to vari
 
 Application Status | |
 :---|:---|
-Description | Our application runtime sends a heartbeat signal every few minutes to show it is still alive. If no heartbeat timeout has been received for some time, the system will generate an alert. The heartbeat value varies per cluster and we are reducing it over time, but in general is ~5 minutes.|
+Description | Our application runtime sends a heartbeat signal every few minutes to show it is still alive. If no heartbeat timeout has been received for some time, the system will generate an alert.|
 Example message | No runtime heartbeat received for 8m45s.
 Warning Threshold | Not used.                                              |
-Critical Threshold | If the runtime heartbeat of the application is more than 8 minutes, a critical alert will be generated.
-First actions to take | Check the application logs and [https://status.mendix.com/](https://status.mendix.com/).                         |
+Critical Threshold | If the runtime heartbeat of the application has not been recieved for 5 minutes, a critical alert will be generated.
+First actions to take | Check the application logs for issues. Also check [https://status.mendix.com/](https://status.mendix.com/) for any planned maintainance.                         |
+
+Application Container CPU Percentage | |
+:---|:---|
+Description | Track the CPU utlilzation of the application container |
+Example message | Application container 34234543-6543-6543-6543-153d247b6543 - Instance Index: 0 has high CPU usage: 90.5
+Warning Threshold | CPU utilization is between 75% and 85%. |
+Critical Threshold | CPU utilization is higher than 85%.
+First actions to take | Inspect the trends for **Application node CPU usage** combined with all **Application Statistics** for anomalies and correlate those with application behavior. |
+
+Application Container Disk Percentage | |
+:---|:---|
+Description | Track the disk utlilzation for the database belonging to the application |
+Example message | Application container 34234543-6543-6543-6543-153d247b6543 - Instance Index: 0 has high disk usage: 90.5
+Warning Threshold | Disk utilization is between 75% and 85%. |
+Critical Threshold | Disk utilization is higher than 85%.
+First actions to take | Inspect the trends for **Application node CPU usage** combined with all **Application Statistics** for anomalies and correlate those with application behavior. |
+
+Application Container Memory Percentage | |
+:---|:---|
+Description | Track the memory utlilzation for the database belonging to the application |
+Example message | Application container 34234543-6543-6543-6543-153d247b6543 - Instance Index: 0 has high memory usage: 90.5
+Warning Threshold | Memory utilization is between 75% and 85%. |
+Critical Threshold | memory utilization is higher than 85%.
+First actions to take | Inspect the trends for **Application node operating system memory** combined with all **Application Statistics** for anomalies and correlate those with application behavior. |
 
 CPU Credit Balance status | |
 :---|:---|
 Description | This only appears if you run into a warning or a critical Credit Balance. See section 3.2, [CPU Credits on AWS](#burstable) for a more detailed discussion
 Example message | Application container 34234543-6543-6543-6543-153d247b6543 - Instance Index: 0 has low cpu credit balance: 16.315528
-Warning Threshold | -
-Critical Threshold | -
-First actions to take | Inspect the trends for *Application node CPU usage* combined with *Application node disk throughput* and *Application node load* for anomalies and correlate those with application behavior.
+Warning Threshold | Credit balance goes below 80.0
+Critical Threshold | Credit balance goes below 20.0
+First actions to take | Inspect the trends for **Application node CPU usage** combined with **Application node disk throughput** and **Application node load** for anomalies and correlate those with application behavior.
 
 Critical Logs | |
 :---|:---|
@@ -68,10 +92,10 @@ First actions to take | Inspect the application log file and look up the CRITICA
 
 Database CPU Utilization | |
 :---|:---|
-Description | The overall system load of the application server. High values indicate high CPU load because of application activity, and/or the CPU is spending too much time waiting for disk reads or writes.
-Example message | Database has 95% CPU Utilization.
+Description | Track the CPU utlilzation for the database belonging to the application
+Example message | Database has 95% CPU utilization.
 Warning Threshold | Not used.
-Critical Threshold | System load is higher than 90%.
+Critical Threshold | CPU utilization is higher than 90%. 
 First actions to take | Inspect the trends for **Application node CPU usage** combined with **Application node disk throughput** and **Application node load** for anomalies and correlate those with application behavior.
 
 Database Free Space | |
@@ -92,10 +116,26 @@ First actions to take | Since the health check microflow is specific to your app
 
 Virtual Machine Crash | |
 :---|:---|
-Description | Show the state of the application's virtual machine, or an error state when the issue occurs with a virtual machine.
+Description | Show the state of the application's virtual machine, or an error state if there is an issue with a virtual machine.
 Example message | Your application's virtual machine died 1 times in the last minute.
 Warning Threshold | Not used.
 Critical Threshold | If the application's virtual machine should be running but has completely disappeared, or if the JVM process does not respond to any signal anymore.
+First actions to take | Check the log files and application metrics for a possible cause of the crash.
+
+Virtual Machine Error | |
+:---|:---|
+Description | Show the state of the application's virtual machine, or an error state if there is an issue with a virtual machine.
+Example message | Your application's virtual machine died because of non-recoverable error 1 times in the last minute.
+Warning Threshold | Not used.
+Critical Threshold | If the application's virtual machine should be running but has completely disappeared, or if the JVM process does not respond to any signal anymore.
+First actions to take | Check the log files and application metrics for a possible cause of the error.
+
+Virtual Machine Out Of Memory | |
+:---|:---|
+Description | Show the state of the application's virtual machine, or an error state when the issue occurs with a virtual machine.
+Example message | Your application's virtual machine ran out of memory and died 1 times in the last minute.
+Warning Threshold | Not used.
+Critical Threshold | If the JVM process has run out of memory and the application's virtual machine crashed.
 First actions to take | Check the log files and application metrics for a possible cause of the crash.
 
 ### 3.2 CPU Credits on AWS{#burstable}
@@ -137,8 +177,8 @@ CPU | |
 :---|:---|
 Description | Overall system load of the application server. High values indicate high CPU load because of application activity, and/or the CPU is spending too much time waiting for disk reads or writes.
 Example message | System load: CRITICAL (9.6, 10.19, 10.84)
-Warning Threshold | System load is higher than 2.8 over the last 15, 10, and 5 minutes, with a maximum deviation of 20% between the values.
-Critical Threshold | System load is higher than 6.0 over the last 15, 10 and 5 minutes, with a maximum deviation of 20% between the values.
+Warning Threshold | System load is higher than 2.8 over the last 1, 5 and 15, with a maximum deviation of 20% between the values.
+Critical Threshold | System load is higher than 6.0 over the last 1, 5 and 15 minutes, with a maximum deviation of 20% between the values.
 First actions to take | Inspect the trends for *Application node CPU usage* combined with *Application node disk throughput* and *Application node load* for anomalies and correlate those with application behavior.
 
 Critical Logs | |
@@ -219,7 +259,7 @@ To access the history of the alerts from your app, follow these steps:
 
     The overview shows alert types and details including date and time. The alert types provide a broad indication of the type of error that occurred, such as critical log messages or failures of the health check microflow. Recovery notifications will also be shown here.
 
-    The Acceptance and Production buttons at the top let you switch between viewing the status for your production and acceptance node. Note that accessing production information may require additional authentication and is subject to your project's security settings.
+    The dropdown at the top lets you switch between viewing the status for your node environments. Note that accessing production information may require additional authentication and is subject to your project's security settings.
 
 3. Click **Details**. This will open the alert details, which contains additional information. More information might be available in your application's log file.
 

@@ -60,7 +60,7 @@ To add an XML schema (XSD), follow these steps:
 
 4. Click **OK** to save the XML schema, which you will be using in the following steps.
 
-## 5 Create XML-to-Domain mapping
+## 5 Create XML-to-Domain Mapping
 
 The XML schema describes what the possible contents of an XML file are, but we need to create an XML-to-domain mapping to define how the data in the XML document is imported into the application.
 
@@ -80,7 +80,7 @@ To create the XML-to-domain mapping, follow these steps:
 
 	![](attachments/18448727/18581655.png)
 
-6. Open the connector (from the lower-right side of the Modeler or from the **View** menu).
+6. Open the connector (from the lower-right side of the Studio Pro or from the **View** menu).
 7.  Drag the entity **Customer** from the connector to the place-holder in the mapping editor:
 
 	![](attachments/18448727/18581681.png)  
@@ -120,7 +120,7 @@ To create the import logic, follow these steps:
 
     ![](attachments/18448727/18581646.png)
 
-4. Right-click the new **Import XML Document** button and select **Go to on cl microflow** in the context menu. You should see an empty microflow with **XMLDocument** as the input parameter:
+4. Right-click the new **Import XML Document** button and select **Go to on click microflow** in the context menu. You should see an empty microflow with **XMLDocument** as the input parameter:
 
     ![](attachments/18448727/18581669.png)
 
@@ -154,3 +154,4 @@ To import the XML file, follow these steps:
 * [How to Consume a REST Service](consume-a-rest-service)
 * [How to Expose Data to BI Tools Using OData](exposing-data-to-bi-tools-using-odata)
 * [Exporting to a CSV Button](/refguide7/export-to-csv-button)
+

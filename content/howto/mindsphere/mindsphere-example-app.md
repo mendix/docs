@@ -86,9 +86,9 @@ To create your assets, perform the following steps:
 
 More information on creating assets is available in the MindSphere [Asset Manager – System Manual](https://documentation.mindsphere.io/resources/html/asset-manager/en-US/index.html).
 
-## 3 Opening the App in the Desktop Modeler
+## 3 Opening the App in Studio Pro
 
-Open the (empty) Desktop Modeler, version 7.22.2 or above, and follow these steps:
+Open Studio Pro without opening an app and follow these steps:
 
 1. Click the icon in the top-right of the menu bar to open the Mendix App Store:
 
@@ -165,7 +165,7 @@ For more information see the MindSphere documentation [Roles & Scopes for Applic
 
 The **PumpAssetExample** module within the app uses the *MindSphere Asset Management Connector* and MindSphere APIs, via Mendix native REST, to create and view time series information for an asset.
 
-It is based on the standard Mendix starter app for Mendix version 7.22. It also has additional modules which are required for integrating with and deploying to MindSphere. These additional modules are:
+This is based on a standard Mendix starter app. It also has additional modules which are required for integrating with and deploying to MindSphere. These additional modules are:
 
 * MindSphere SSO
 * MindSphere Theme Pack
@@ -177,7 +177,7 @@ It also uses the **MindSphere Asset Management Connector**. This is described in
 
 To use the app:
 
-1.  View the app either from the MindSphere launchpad, or by running the app locally from the Desktop Modeler and clicking **View**.
+1.  View the app either from the MindSphere launchpad, or by running the app locally from Studio Pro and clicking **View**.
 
 2.  Click **Go to Assets** to view a list of assets.
 
@@ -224,7 +224,7 @@ For a more complete description, see the [User Scopes](#userscopes) section.
 
 #### 6.1.2 Multi-Tenant Support
 
-The user is also connected to their MindSphere tenant. This enables security to be placed on persistent Mendix entity objects.
+The user is also connected to their MindSphere tenant. This enables security to be placed on persistable Mendix entity objects.
 
 MindSphere SSO provides the user’s tenant as the **Name** attribute in the **Tenant** entity.
 

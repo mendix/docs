@@ -43,11 +43,11 @@ In the image above, the template for the message is **Email not sent to customer
 
 The stack trace is a list of method calls from the point when the application was started to the point where the exception occurred. 
 
-In the Modeler, log messages that include a stack trace are marked with a paperclip icon. Double-clicking this icon shows the stack trace.
+In Studio Pro, log messages that include a stack trace are marked with a paperclip icon. Double-clicking this icon shows the stack trace.
 
 ### 2.2 Level<a name="Level"></a>
 
-The log level defines the severity of the log message. In the Modeler, this is represented by different colors and an icon. 
+The log level defines the severity of the log message. In Studio Pro, this is represented by different colors and an icon. 
 
 These are the log levels used by Mendix: 
 
@@ -62,9 +62,9 @@ These are the log levels used by Mendix:
 
 ## 3 Setting the Log Levels
 
-In this section of the how-to, you will learn how to configure the log levels of the logging messages produced by the system. The different levels highlighted in [3.2 Level](#Level) can be applied to custom logging and to the predefined logging produced by the Mendix Modeler. 
+In this section of the how-to, you will learn how to configure the log levels of the logging messages produced by the system. The different levels highlighted in [3.2 Level](#Level) can be applied to custom logging and to the predefined logging produced by Mendix Studio Pro. 
 
-This section will define how to configure both the log levels in custom logging and the predefined logging created by the Modeler.
+This section will define how to configure both the log levels in custom logging and the predefined logging created by Studio Pro.
 
 ### 3.1 Advanced Features of the Console
 
@@ -98,13 +98,13 @@ To set the level of custom log messages that you have created via a microflow, f
 
 ## 4 Read More
 
-* [How to Find the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
-* [How to Clear Warning Messages in Mendix](clear-warning-messages)
-* [How to Test Web Services Using SoapUI](../testing/testing-web-services-using-soapui)
-* [How to Monitor Mendix Using JMX](monitoring-mendix-using-jmx)
-* [How to Log Levels](log-levels)
-* [How to Debug Microflows](debug-microflows)
-* [How to Debug Microflows Remotely](debug-microflows-remotely)
-* [How to Debug Java Actions](debug-java-actions)
-* [How to Debug Java Actions Remotely](debug-java-actions-remotely)
-* [How to Handle Common Mendix SSO Errors](handle-common-mendix-sso-errors)
+* [Find the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
+* [Clear Warning Messages in Mendix](clear-warning-messages)
+* [Test Web Services Using SoapUI](../testing/testing-web-services-using-soapui)
+* [Monitor Mendix Using JMX](monitoring-mendix-using-jmx)
+* [Log Levels](log-levels)
+* [Debug Microflows](debug-microflows)
+* [Debug Microflows Remotely](debug-microflows-remotely)
+* [Debug Java Actions](debug-java-actions)
+* [Debug Java Actions Remotely](debug-java-actions-remotely)
+* [Handle Common Mendix SSO Errors](handle-common-mendix-sso-errors)

@@ -21,7 +21,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 The Basics
 
-To enable the cloud debugging, you need to get a URL and a password from the cloud and add that information to the Modeler. The steps below will explain where you can gather all the necessary information. 
+To enable the cloud debugging, you need to get a URL and a password from the cloud and add that information to Studio Pro. The steps below will explain where you can gather all the necessary information. 
 
 {{% alert type="info" %}}
 
@@ -58,9 +58,9 @@ Debugging in production is not recommended. However, if you are debugging in the
 
     If you want to disable the debugger, click **Disable Debugging** on the **Environment Details** screen.
 
-### 3.2 How to Enable Cloud Debugging in Your Modeler
+### 3.2 How to Enable Cloud Debugging in Studio Pro
 
-Once you have the unique URL and password, there are two methods for connecting the modeler to the cloud environment. 
+Once you have the unique URL and password, there are two methods for connecting Studio Pro to the cloud environment. 
 
 {{% alert type="warning" %}}
 
@@ -68,7 +68,7 @@ If you do not see an overview similar to the one below, then you do not have suf
 
 {{% /alert %}}
 
-#### 3.2.1 First Method for Connecting the Modeler to the Cloud Environment
+#### 3.2.1 First Method for Connecting Studio Pro to the Cloud Environment
 
 1. Go to the **Run** tab and select **Connect debugger...**:
 
@@ -78,21 +78,21 @@ If you do not see an overview similar to the one below, then you do not have suf
 
     ![](attachments/18448576/18580047.png)
 
-#### 3.2.2 Second Method for Connecting the Modeler to the Cloud Environment
+#### 3.2.2 Second Method for Connecting Studio Pro to the Cloud Environment
 
 1. Go to the **Debugger** dock window.
 2. Click **Connect** and enter the URL and password information in the dialog window.
 
 ## 4 Read More
 
-* [How to Find the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
-* [How to Clear Warning Messages](clear-warning-messages)
-* [How to Test Web Services Using SoapUI](../testing/testing-web-services-using-soapui)
-* [How to Monitor Mendix Using JMX](monitoring-mendix-using-jmx)
-* [How to Debug Java Actions Remotely](debug-java-actions-remotely)
-* [How to Log Levels](log-levels)
-* [How to Debug Microflows](debug-microflows)
-* [How to Debug Java Actions](debug-java-actions)
-* [How to Handle Common Mendix SSO Errors](handle-common-mendix-sso-errors)
+* [Find the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
+* [Clear Warning Messages](clear-warning-messages)
+* [Test Web Services Using SoapUI](../testing/testing-web-services-using-soapui)
+* [Monitor Mendix Using JMX](monitoring-mendix-using-jmx)
+* [Debug Java Actions Remotely](debug-java-actions-remotely)
+* [Log Levels](log-levels)
+* [Debug Microflows](debug-microflows)
+* [Debug Java Actions](debug-java-actions)
+* [Handle Common Mendix SSO Errors](handle-common-mendix-sso-errors)
 * [The Ultimate Debugger](http://www.mendix.com/tech-blog/the-ultimate-debugger/) 
-* [Debug Live Apps in the Cloud](http://www.mendix.com/tech-blog/new-goodies-for-mendix-app-platform-users-mendix-business-modeler-4-3-release-today/)
+

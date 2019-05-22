@@ -10,6 +10,132 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud V3, and other deploym
 
 ## 2019
 
+### May 17th, 2019
+
+#### Fixes
+
+* We made several changes to our maintenance window management to ensure that environments are completely locked during maintenance.
+
+### May 16th, 2019
+
+#### Improvements
+
+* We re-designed the app user management page of the Developer Portal for Mendix Cloud environments which are enabled for single sign-on (SSO).
+
+### May 13th, 2019
+
+#### Fixes
+
+* We fixed an issue for users deploying to SAP Cloud Portal where newly-bound services were bound correctly but did not appear in the Mendix Developer Portal. (Ticket 81418)
+
+### May 10th, 2019
+
+#### Improvements
+
+* We have changed the way you request a license for a new app. You can now request a license using the [Request New App Node](https://newnode.mendix.com/) app. Other requests should continue to be made through the [Support Portal](https://support.mendix.com).
+
+### May 9th, 2019
+
+#### Fixes
+
+* We fixed an issue where the Mendix feedback widget stopped working for apps deployed to Mendix Cloud because of a change to HTTP Headers. (Ticket 83001)
+
+### May 7th, 2019
+
+#### Improvements
+
+* For Mendix Cloud V4, we have extended the range of HTTP Headers which are supported in the Developer Portal. Previously, only *X-Frame-Options* was supported. See [Environment Details](/developerportal/deploy/environments-details#http-headers) for more information.
+
+    If you add or change these settings, you will need to redeploy your app before the changes take effect.
+
+* For Mendix Cloud V4 deployments of Mendix apps version 7.23.1 and above, we now support AdoptOpenJDK, and the relevant Java version is displayed on the Environment Details page.
+
+* We clarified which logs can be downloaded from the Developer Portal by changing the button text from *Download Today's Log* to *Download Current Log*
+
+#### Fixes
+
+* We resolved an issue where some team members were not visible in Node Permissions after an app was relinked (Tickets 70285, 79708, 79824, 80557, 81713, and 82591).
+
+### May 3rd, 2019
+
+#### Improvements
+
+* We released **Free Edition** of Mendix. This removes the limit of 10 named users on Free Apps which are deployed to the Mendix Cloud.
+
+    To take advantage of the *Free Edition* for an existing app, you need to redeploy your app.
+
+### May 2nd, 2019
+
+#### Improvements
+
+* With the beta release of Mendix Studio and Mendix Studio Pro (Mendix version 8), we have updated all mentions of *Web Modeler* to *Mendix Studio* and *Desktop Modeler* to *Mendix Studio Pro* across the Developer Portal.
+
+### April 29th, 2019
+
+#### App Store Improvements
+
+* We created a new App Store menu structure, so it is now easier to navigate through your created content. If you are a [Company Admin](/developerportal/company-app-roles/manage-roles#app-store-manager) with certain permissions, you will see additional menu items to help you manage private and public company content.
+* For App Store administrators, you can now set [content managers](/developerportal/app-store/app-store-overview#cm) who are allowed to manage your company content by marking it as protected.
+* You can now share private App Store content with [external downloaders](/developerportal/app-store/app-store-overview#ext) from other companies.
+
+### April 8th, 2019
+
+#### Improvements
+
+* We have added the ability to create webhooks for your app projects. These webhooks can be configured to send information when sprints change and/or stories change. For more information, see the [Managing Webhooks](/developerportal/settings/general-settings#webhooks) section of *How to Manage General App Settings* as well as [Webhooks](/apidocs-mxsdk/apidocs/webhooks-sprints) in the *API Documentation*.
+* We have added support for SAP HANA in the Developer Portal. You can now choose to deploy to SAP Cloud Platform using an SAP HANA database schema. For more information see [SAP Cloud Platform](/developerportal/deploy/sap-cloud-platform).
+
+### April 5th, 2019
+
+#### Fixes
+
+* We fixed an issue with the Developer Portal where the memory utilization was not optimized and could cause system instability. This change does not affect memory utilization by customer apps.
+
+### April 4th, 2019
+
+#### Fixes
+
+* We have fixed an issue with changing [Node Permissions](/developerportal/deploy/node-permissions).
+
+### March 29th, 2019
+
+#### Improvements
+
+* We have introduced *Flexible Environments* for Mendix Cloud v4. This means that you can have more than three environments for your licensed node. More information is available [here](/developerportal/deploy/mendix-cloud-deploy#flexible-environments). If you need more than three environments, contact [Mendix Support](/developerportal/support/). Features of Flexible Environments include the following:
+    * You can search for the environment for which you want to see details
+    * The Technical Contact can rename the environments
+    * The Technical Contact can re-order the environments
+* As part of support for Flexible Environments we have made the following changes:
+    * When deploying your application via the Developer Portal you can choose the destination environment
+    * When viewing metrics, logs, backups, etc. you will have to choose the environment using a drop-down rather than clicking directly on the environment you want
+* We have added the ability to manage tags through the Developer Portal, in addition to the current method which involved using the API
+* We have changed Mendix deployment to **SAP Cloud Platform** so that the Cloud Foundry stack cflinuxfs3 is used. Previously, Mendix apps were using cflinuxfs2, which has been deprecated by SAP. See [Cloud Foundry Environment – Deprecation of cflinuxfs2](https://help.sap.com/doc/43b304f99a8145809c78f292bfc0bc58/Cloud/en-US/98bf747111574187a7c76f8ced51cfeb.html?from=2018-11-08&sel3=Announcement&sel1=Cloud%20Foundry%20Environment&to=2018-11-08) SAP release note from 8 November 2018, and [Rapid Application Development by Mendix – Stack Switch](https://help.sap.com/doc/43b304f99a8145809c78f292bfc0bc58/Cloud/en-US/98bf747111574187a7c76f8ced51cfeb.html?from=2019-03-29&to=2019-03-29&sel3=Announcement) SAP release note from 29 March 2019 for more information. The next time that you deploy a new, or existing, Mendix app to *SAP Cloud Platform* from the Mendix Developer Portal, the new stack will be applied to your app.
+
+### March 21st, 2019
+
+#### Improvements
+
+* We have added the ability to manage *SAP Cloud Platform* Cloud Foundry Marketplace services from within the Mendix Developer Portal.
+
+#### Known Issue
+
+* If an app is deployed to SAP from the Desktop Modeler *before it has been started from the Developer Portal*, the deployment will fail because the marketplace services have not been bound. Please ensure that apps are first deployed from the Developer Portal before trying to deploy them from the Desktop Modeler.
+
+### March 15th, 2019
+
+#### Fixes
+
+* We fixed an found issue where you were not able to change your password on the **Password Has Expired** page. (Tickets 80828, 80882, 80884, 80888, 80997, 81005)
+* We fixed an issue with retrieving stories in the Desktop Modeler. (Tickets 80618, 80623, 80636, 80665, 80685, 80705, 80726, 80738, 80780, 80833, 80834, 80854, 80866, 80935, 81008)
+* We fixed an error that occurred when importing stories from Excel in certain situations.
+* We fixed an issue where you unable to invite referrals to the Mendix Platform.
+
+### March 14th, 2019
+
+#### Fixes
+
+* We fixed an issue that sometimes caused the Technical Contact information to be hidden on the app's *General* page in the Developer Portal. (Tickets 70285, 77387, 80269, 80929)
+
 ### March 7th, 2019
 
 #### Fixes
@@ -57,7 +183,7 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud V3, and other deploym
 * We released an upgraded version of the [IBM Watson Connector Suite](https://appstore.home.mendix.com/link/app/2860/), which supports IBM Watson SDK version 6.11.0 and adds additional microflow actions.
 * We released an upgraded version of the [IBM Watson Connector Suite Example Project](https://appstore.home.mendix.com/link/app/2880/), which includes the new IBM Watson Connector Suite.
 * We released an upgraded version of the IBM Watson Blank App starter app, which includes the new IBM Watson Connector Suite.
-* For more information see [IBM Watson Connector](https://docs.mendix.com/refguide/ibm/ibm-watson-connector).
+* For more information see [IBM Watson Connector](https://docs.mendix.com/refguide7/ibm/ibm-watson-connector).
 
 ### January 21st, 2019
 
@@ -184,7 +310,7 @@ The Web Modeler can now be enabled for all types of apps. You can do this on the
 
 #### SAP OData Connector Version 4.0.0
 
-This version of the SAP OData Connector allows you to use the destination services of SAP Cloud Platform. This simplifies configuration, authentication and endpoint management when integrating your application, running in SAP Cloud Platform, with SAP backend services. See [SAP Destination Service](/refguide/sap/sap-destination-service).
+This version of the SAP OData Connector allows you to use the destination services of SAP Cloud Platform. This simplifies configuration, authentication and endpoint management when integrating your application, running in SAP Cloud Platform, with SAP backend services. See [SAP Destination Service](/refguide7/sap/sap-destination-service).
 
 The following authentication types are currently supported in SAP Destination Services:
 
@@ -210,7 +336,7 @@ We now configure Destination Service in the scope of XSUAA. This means that we a
 
 #### Breaking Changes
 
-* The new **SAP OData Connector** will break existing projects which are using the SAP Cloud Connector. The SAP OData Connector no longer supports the “Use Cloud Connector” attribute. This is now embedded in the destination service configuration. See [SAP Destination Service](/refguide/sap/sap-destination-service) for more details.
+* The new **SAP OData Connector** will break existing projects which are using the SAP Cloud Connector. The SAP OData Connector no longer supports the “Use Cloud Connector” attribute. This is now embedded in the destination service configuration. See [SAP Destination Service](/refguide7/sap/sap-destination-service) for more details.
 
 #### Fixes
 

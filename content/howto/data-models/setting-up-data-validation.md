@@ -2,7 +2,7 @@
 title: "Set Up Data Validation"
 category: "Data Models"
 menu_order: 2
-tags: []
+tags: ["studio pro"]
 ---
 This how-to explains how you can set up data validation with Mendix. Before you can start with this how-to you need to setup a basic data structure, otherwise there won't be any data to validate. If you don't know how to setup a basic data structure, you can take a look at [this how-to](create-a-basic-data-layer).
 
@@ -10,7 +10,7 @@ This how-to explains how you can set up data validation with Mendix. Before you 
 
 This section will explain how you can add validation rules to the domain model of your module. Validation rules are always triggered when changes to an object are committed. Please note that validation rules can only be applied on entities that are persistable.
 
-1.  Open a **domain model** in the Desktop Modeler.
+1.  Open a **domain model** in Studio Pro.
 2.  Double click a persistable entity to open its **properties.**
 3.  Open the **Validation Rules** tab page.
 
@@ -27,7 +27,7 @@ This section will explain how you can add validation rules to the domain model o
 
 ## 2 Required Validation on Inputs, Reference Selectors and Drop-downs
 
-The page builder of the Desktop Modeler allows you to configure which inputs are mandatory and what message is shown to the user if the input is empty. If you don't have a detail page yet, take a look at [this](../front-end/create-your-first-two-overview-and-detail-pages) how-to.
+The page builder of Studio Pro allows you to configure which inputs are mandatory and what message is shown to the user if the input is empty. If you don't have a detail page yet, take a look at [this](../front-end/create-your-first-two-overview-and-detail-pages) how-to.
 
 1.  Open a **detail page** and double click an input to open its properties.
 2.  Enter a messagefor **Placeholder text**. This message is shown below the input if a user clicks the save button without filling in a value.
@@ -40,7 +40,7 @@ Please note that a _required_ validation rule on entity level overrules this pro
 
 Validation rules are great for simple validations, but Mendix also offers ways to handle more complex validations. The domain model allows you to define event handlers on entity level. The 'Before Commit' and 'After Commit' events are always triggered when an object is committed to the database. The 'After Commit' is most commonly used to calculate values of de-normalised data. With the 'Before Commit' event you can execute a microflow that must return a boolean value. If the microflow returns 'false', the entire commit is aborted otherwise the object is stored in the database. This mechanism is great for data validation. This section will explain how you can validate data by use of the 'Before Commit' event.
 
-1.  Open a **domain model** in the Desktop Modeler.
+1.  Open a **domain model** in Studio Pro.
 2.  Double click an entity to open its **properties**.
 3.  Open the **Event handlers** tab page.
 4.  Click **New** to start configuring a new event handler for this entity.
@@ -106,12 +106,12 @@ Validating user input can also be achieved by overriding the default save button
 
 ## 5 Read More
 
-* [How to Work with Images & Files](working-with-images-and-files)
-* [How to Create a Basic Data Layer](create-a-basic-data-layer)
-* [How to Work with Object Events](working-with-object-events)
-* [How to Denormalize Data to Improve Performance](denormalize-data-to-improve-performance)
-* [How to Set Up Data Validation](setting-up-data-validation)
-* [How to Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
+* [Work with Images & Files](working-with-images-and-files)
+* [Create a Basic Data Layer](create-a-basic-data-layer)
+* [Work with Object Events](working-with-object-events)
+* [Denormalize Data to Improve Performance](denormalize-data-to-improve-performance)
+* [Set Up Data Validation](setting-up-data-validation)
+* [Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
 * [Stories](/developerportal/collaborate/stories)
-* [How to Perform the Scout and Windows 10 Workaround](../front-end/perform-scout-and-windows-10-workaround)
+* [Perform the Scout and Windows 10 Workaround](../front-end/perform-scout-and-windows-10-workaround)
 

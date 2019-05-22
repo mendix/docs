@@ -44,7 +44,7 @@ To import a web service using the wizard, follow these steps:
 
     ![](attachments/consume-complex/port.png)
 
-6. This will bring up the **Select Ports** pop-up window asking you to select a web service port. Click **OK** to select the default. The Modeler now imports the operations.
+6. This will bring up the **Select Ports** pop-up window asking you to select a web service port. Click **OK** to select the default. Studio Pro now imports the operations.
 7. On the **New Web Service Operation** dialog box, you can now review the services and operations available to the imported web service. Select a web service operation and click **Next**.
 
     ![](attachments/consume-complex/18581784.png)
@@ -66,13 +66,13 @@ When finished the wizard will add to your model based on the options selected:
 * The imported service
 * An XML to domain mapping
 * A microflow in which the web service operation is called
-* Domain model entities (by default, the Modeler creates non-persistent entities)
+* Domain model entities (by default, Studio Pro creates non-persistable entities)
 
 ![](attachments/consume-complex/18581781.png)
 
 ## 3 Importing a Web Service Directly
 
-An alternative to using the wizard described above is to import a web service document directly into your project. For more information, see [Consumed Web Services](/refguide7/consumed-web-services) in the Mendix Reference Guide.
+An alternative to using the wizard described above is to import a web service document directly into your project. For more information, see [Consumed Web Services](/refguide/consumed-web-services) in the *Mendix Studio Pro Guide*.
 
 To import a web service directly, follow these steps:
 
@@ -104,7 +104,7 @@ To configure the web service call, follow these steps:
 
     {{% /alert %}}
 
-2. If you are creating your own microflow, add the Call Web Service activity to the microflow. For details on how to add activities to microflows, see [Activities](/refguide7/activities) in the Mendix Reference Guide.
+2. If you are creating your own microflow, add the Call Web Service activity to the microflow. For details on how to add activities to microflows, see [Activities](/refguide/activities) in the *Mendix Studio Pro Guide*.
 3. Double-click the activity to open the **Call Web Service** wizard and in the **Operation** section, click **Select...** for **Operation**.
 4. This opens the **Select Web Service Operation** dialog box, where you can choose the operation for this web service call:
 
@@ -138,12 +138,12 @@ To configure the web service call, follow these steps:
 
 ## 5 Read More
 
-* [How to Consume a Simple Web Service](consume-a-simple-web-service)
-* [How to Export XML Documents](export-xml-documents)
-* [How to Import Excel Documents](importing-excel-documents)
-* [How to Expose a Web Service](expose-a-web-service)
-* [How to Use Selenium Support](selenium-support)
-* [How to Synchronize User Accounts Using the LDAP Mmodule](synchronizing-user-accounts-using-the-ldap-module)
-* [How to Import XML Documents](importing-xml-documents)
-* [How to Consume a REST Service](consume-a-rest-service)
-* [How to Expose Data to BI tools Using OData](exposing-data-to-bi-tools-using-odata)
+* [Consume a Simple Web Service](consume-a-simple-web-service)
+* [Export XML Documents](export-xml-documents)
+* [Import Excel Documents](importing-excel-documents)
+* [Expose a Web Service](expose-a-web-service)
+* [Use Selenium Support](selenium-support)
+* [Synchronize User Accounts Using the LDAP Mmodule](synchronizing-user-accounts-using-the-ldap-module)
+* [Import XML Documents](importing-xml-documents)
+* [Consume a REST Service](consume-a-rest-service)
+* [Expose Data to BI tools Using OData](exposing-data-to-bi-tools-using-odata)

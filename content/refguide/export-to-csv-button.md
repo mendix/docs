@@ -1,6 +1,7 @@
 ---
-title: "Export to CSV button"
+title: "Export to CSV Button"
 parent: "control-bar"
+tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -19,7 +20,7 @@ The csv export function relies on a specific data retrieval method. As such, it 
 
 ### Decimal separator
 
-The string used to separate the fractional part from the whole part in Float, Currency and Decimal values.
+The string used to separate the fractional part from the whole part in Decimal values.
 
 _Default value:_ .
 

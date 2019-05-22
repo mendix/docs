@@ -27,7 +27,7 @@ The priority levels are determined based on the impact and urgency of the reques
 
 ## 3 Priority Matrix
 
-![](attachments/how-to-submit-a-ticket---quick-reference-for-endusers/204371729-pic5.png)
+![](attachments/submit/204371729-pic5.png)
 
 If Mendix provides a workaround, the impact can never be higher than **Medium**.
 

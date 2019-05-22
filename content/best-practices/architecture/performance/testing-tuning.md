@@ -11,7 +11,7 @@ draft: true
 
 ## 1 Introduction
 
-Performance testing and tuning is really the core of the recipe for apps that start reaching the limits of what normal modelling allows for. Professional testing tools and monitoring is used, and a skilled and experienced Mendix modeller will run the tests, analyze the results, change things, and test again. In this way, they will optimize the app for the specific high-volume situation it needs to handle.
+Performance testing and tuning is really the core of the recipe for apps that start reaching the limits of what normal modelling allows for. Professional testing tools and monitoring is used, and a skilled and experienced Mendix developer will run the tests, analyze the results, change things, and test again. In this way, they will optimize the app for the specific high-volume situation it needs to handle.
 
 ## 2 Test Levels
 

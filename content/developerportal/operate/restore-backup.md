@@ -1,7 +1,7 @@
 ---
 title: "Restore a Backup"
 parent: "backups"
-menu_order: 3
+menu_order: 30
 description: "How to restore a backup."
 tags: ["Backup", "Restore", "Mendix Cloud", "Developer Portal", "backup file format"]
 ---
@@ -20,11 +20,11 @@ You can only restore a backup if you have sufficient rights to the target node. 
 
 Mendix Cloud makes nightly backups, and you can also manually request that a backup is made. If you want to restore one of these backups to the node from which it was backed-up just follow the steps below.
 
-If you want to restore a backup to a different cloud node, or have your backup stored locally, then see section 3 [Restoring a Backup for a Different Licensed Cloud Node](#restore-local-backup).
+If you want to restore a backup to a different cloud node, or have your backup stored locally, then see [Restoring a Backup for a Different Licensed Cloud Node](#restore-local-backup), below.
 
 1. Go to the **Backups** page of the *Developer Portal* for your app.
 
-2. Select the environment to which the backup should be restored (for example *Test*).
+2. Select the environment to which the backup should be restored (for example *Acceptance*).
 
     ![](attachments/restore-a-backup/environment.png)
 
@@ -46,7 +46,7 @@ To transfer backups between environments, you will need a downloaded backup file
 
 1. Go to the **Backups** page of the *Developer Portal* for your app.
 
-2. Select the environment to which the backup should be restored (for example *Test*).
+2. Select the environment to which the backup should be restored (for example *Acceptance*).
 
     ![](attachments/restore-a-backup/environment.png)
 
@@ -60,7 +60,7 @@ To transfer backups between environments, you will need a downloaded backup file
 
 5. Upload the *.db* or *.gz* backup file.
 
-6. In Mendix Cloud **V4** you will now need to restore your backup which is held in the Mendix Cloud, as described in section 2 [Restoring a Backup for the Same Licensed Cloud Node](#restore-cloud-backup).
+6. In Mendix Cloud **V4** you will now need to restore your backup which is held in the Mendix Cloud, as described in [Restoring a Backup for the Same Licensed Cloud Node](#restore-cloud-backup), above.
 
 ## 4 Restoring a Backup for a Free App
 

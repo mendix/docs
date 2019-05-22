@@ -3,7 +3,7 @@ title: "Use the Charts Theme"
 parent: "charts-tutorials"
 menu_order: 40
 description: "Hos to set up a theme which will be applied to all the charts created with charts widgets in an app"
-tags: ["Charts", "Theme", "Widget", "Desktop Modeler"]
+tags: ["Charts", "Theme", "Widget", "Studio Pro"]
 ---
 
 ## 1 Introduction
@@ -19,7 +19,6 @@ The look of individual **Charts** widgets can be fine tuned with advanced settin
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Download the latest Mendix desktop modeler
 * Download the latest [Chart Widget](https://appstore.home.mendix.com/link/app/105695/) from the Mendix App Store
 * Setup a chart: see [How to create a charts](charts-basic-create)
 
@@ -69,7 +68,7 @@ To create the required custom configuration easily, follow these steps:
 
     {{% alert type="warning" %}}Please note that the editor changes will not persist. They need to be stored in the advanced settings of the widget or stored in the theme.{{% /alert %}}
 
-12. In the desktop modeler, set **Mode** in the chart widget to **Advanced**, to remove the Toggle Editor button.
+12. In Studio Pro, set **Mode** in the chart widget to **Advanced**, to remove the Toggle Editor button.
 
     {{% alert type="warning" %}}Please note that the theme settings only apply to charts in Advanced or Developer mode.{{% /alert %}}
 
@@ -77,7 +76,7 @@ To create the required custom configuration easily, follow these steps:
 
 To add a theme file which will apply to all charts in the app, follow these steps:
 
-1. From the desktop modeler, go to the menu **Project > Show Project Directory in Explorer**.
+1. From Studio Pro, go to the menu **Project > Show Project Directory in Explorer**.
 
 1. Open the **theme** folder.
 
@@ -117,6 +116,6 @@ To change the font in all charts in the app, follow these steps:
 
 ## 4 Read More
 
-* [Charts reference guide](/refguide/chart-widgets)
+* [Charts](/refguide/chart-widgets)
 * [Layout samples](/refguide/charts-advanced-cheat-sheet#layout-all)
 * [Configuration samples](/refguide/charts-advanced-cheat-sheet#config-options)

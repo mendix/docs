@@ -1,5 +1,6 @@
 const markdownpdf = require('markdown-pdf');
-const { getFiles } = require('./helpers');
+const { getFiles, isDir, gulpErr } = require('./helpers');
+const { log, colors } = require('./helpers/command_line');
 const split = require('split');
 const through = require('through');
 const duplexer = require('duplexer');
@@ -15,6 +16,7 @@ let toBuild = 0;
 let lastParsed = -1;
 
 const pluginID = gutil.colors.cyan('[PDF]');
+const logUtil = log('PDF');
 
 function preProcessMd () {
     // Split the input stream by lines
@@ -126,8 +128,14 @@ const markdownToPDF = file => new Promise((resolve, reject) => {
 
 const generatePDF = async (opts) => {
     // TODO: Remove this to enable PDFs on production
+    logUtil(`Building pdf is only supported in draft modus, draft is set to: ${colors.cyan(opts.drafts)}`);
     if (!opts.drafts) {
-        opts.cb && opts.cb();
+        opts.cb && opts.cb(false);
+        return;
+    }
+    if (!isDir(opts.src)) {
+        gulpErr('pdf', colors.red(`Folder: "${opts.src}" is not a dir!`));
+        opts.cb && opts.cb(true);
         return;
     }
     const allMarkdownFiles = await getFiles(opts.src, '.md');
@@ -148,7 +156,7 @@ const generatePDF = async (opts) => {
 
     await Promise.all(mappedFiles.map(file => limit(() => markdownToPDF(file))));
 
-    opts.cb && opts.cb();
+    opts.cb && opts.cb(false);
 }
 
 module.exports = generatePDF;

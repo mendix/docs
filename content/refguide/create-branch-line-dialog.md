@@ -1,11 +1,12 @@
 ---
 title: "Create Branch Line Dialog"
 parent: "dialogs"
+tags: ["studio pro"]
 ---
 
 ## 1 Introduction
 
-Use this dialog to create a new [branch line](version-control-concepts) in your app.
+Use this dialog to create a new [branch line](version-control#branches) in your app.
 
 A branch line allows independent development from other development lines. There are two main reasons for creating a branch line:
 

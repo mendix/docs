@@ -4,8 +4,6 @@ description: "Best practices overview."
 draft: true
 ---
 
-{{% todo %}}[**COULD USE 1 MORE DIAGRAM**]{{% /todo %}}
-
 ## 1 Introduction 
 
 In the Mendix documentation landscape, the [Mendix Evaluation Guide](https://www.mendix.com/evaluation-guide/) provides a great overview of all the possibilities and features in the Mendix Platform, the [Mendix Reference Guide](/refguide/) explains the product in detail, and the [Mendix How-to's](/howto/) provide developers with instructions on how to do things in Mendix.
@@ -16,9 +14,7 @@ This documentation is written by Mendix employees, and sometimes it refers to re
 
 ### 1.1 About Best Practices
 
-Best Practices will eventually be valuable for all the people that participate in the application lifecycle, from scoping and estimation to maintenance in production.
-
-{{% todo %}}[**UX-UPDATE DIAGRAM**]{{% /todo %}}
+Mendix Expert Best Practices will eventually be valuable for all the people that participate in the application lifecycle, from scoping and estimation to maintenance in production.
 
 ![](attachments/overview1.png)
 
@@ -31,7 +27,7 @@ These best practices will be expanded on an ongoing basis to cover the following
 * [Architecture](../architecture/index)
 	* [Integration](../architecture/integration/integration-overview)
 	* [Performance](../architecture/performance/performance-overview)
-	* Microservices
+	* [Microservices](../architecture/performance/microservices-overview)
 	* Security
 	* CI/CD & test automation
 	* Monitoring & robustness
@@ -43,7 +39,15 @@ These best practices will be expanded on an ongoing basis to cover the following
 
 For each category and sub-category of best practices, there will be an overview that covers the breadth of the area discussed. This will be followed by a number of specific areas or use cases that are covered more in detail. These will refer to more detailed Mendix documentation that explains the product. The best practices will sometimes include example implementations in the App Store.
 
-{{% todo %}}[**EXPLAIN DIAGRAM; UX-UPDATE DIAGRAM**]{{% /todo %}}
+In most cases, the Best Practices will include these components:
+
+* Overview of the area of Best Practices
+* In-depth descriptions of subjects in that area or a use case from that area
+* References to other Mendix documentation
+	* [Reference-guide](/refguide/) and [how-to](/howto/) documentation (depending on the Mendix version used for the Best Practices)
+	* [Release notes](/releasenotes/)
+	* [Platform Evaluation Guide](https://www.mendix.com/evaluation-guide/)
+* In the future there, will be examples in the [Mendix App Store](https://appstore.home.mendix.com/index3.html)
 
 ![](attachments/overview2.png)
 
@@ -53,9 +57,7 @@ Mendix organizes subject matter experts from different parts of the organization
 
 At this point in Mendix, there is an Architecture Guild and a UX Guild, and there is a plan for a DevOps Guild and a Quality Assurance Guild.
 
-Members of these guilds own the content of the best practices. They also own the Best Practices items in the App Store, which are examples of the best ways to implement things for certain use cases.
-
-{{% todo %}}[**ADD APP STORE LINK WHEN AVAILABLE**]{{% /todo %}}
+Members of these guilds own the content of the Best Practices. They also own the Best Practices items in the App Store, which are examples of the best ways to implement things for certain use cases. One example of such an App Store item is the [Process Queue](https://appstore.home.mendix.com/link/app/393/) module.
 
 ## 3 How Can These Best Practices Help Me? {#help}
 
@@ -80,10 +82,6 @@ These best practices are a valuable addition to this activity, as the informatio
 As part of the guild culture, Mendix stimulates creative discussions that lead teams and stakeholderss forward.
 
 As best practices are published, we hope to get feedback and ideas related to the material. If the feedback case is strong and time allows, there will be updates and improvements done by the topic authors.
-
-We will reserve the App Store **Best Practices** category for examples that have been created inside Mendix. This means that you know these App Store items are coming directly  from Mendix and they will be kept up to date.
-
-{{% todo %}}[**ACCURATE NAME OF APP STORE SECTION?**]{{% /todo %}}
 
 ## 6 What's Next?
 

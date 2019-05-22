@@ -1,7 +1,7 @@
 ---
 title: "Trends in Mendix Cloud v4"
 parent: "metrics"
-menu_order: 10
+menu_order: 20
 description: "Describes how to interpret various graphs and trends in the Mendix Cloud v4."
 tags: ["Trends","v4","Mendix Cloud","Developer Portal"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -42,7 +42,7 @@ You can find the trends by following these steps:
 4. Click **Metrics** under the **Operate** category.
 5. Select the environment you want to monitor under the **Trends** tab.
 
-    ![](attachments/environment.jpg)
+    ![](attachments/environment.png)
 
 ## 4 Application Statistics
 
@@ -158,7 +158,7 @@ This graph shows the total number of threads that exist inside the running JVM p
 
 ### <a name="Trends-appmxruntimecache"></a>4.8 Object Cache
 
-Mendix 4.0 introduced non-persistent entities that live in the JVM memory and are garbage-collected regularly. If you have a memory leak, the number of objects in memory will grow over time. This might be a problem. In this graph, you can monitor the number of Mendix objects that live in memory.
+Non-persistable entities live in the JVM memory and are garbage-collected regularly. If you have a memory leak, the number of objects in memory will grow over time. This might be a problem. In this graph, you can monitor the number of Mendix objects that live in memory.
 
 ## 5 Database Statistics
 

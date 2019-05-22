@@ -35,7 +35,7 @@ Click the settings icon in the top-right corner of the screen to configure your 
 
 ![](attachments/18448572/18580021.png)
 
-On the configure screen, fill in the same settings that you used to start weinre, which should be [http://1.2.3.4:9090](http://1.2.3.4:9090) (wherein `1.2.3.4` is your local IP).
+On the configure screen, fill in the same settings that you used to start weinre, which should be `http://1.2.3.4:9090` (wherein `1.2.3.4` is your local IP).
 
 You can now navigate to the same address on your local browser to start the debugging session.
 

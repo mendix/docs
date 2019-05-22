@@ -1,54 +1,44 @@
 ---
-title: "Arithmetic expressions"
+title: "Arithmetic Expressions"
 parent: "expressions"
+tags: ["studio pro"]
 ---
 
+## 1 Introduction
 
-A number of arithmetic expressions are supported, all of which work on numeric types (Integer/Long, Float and Decimal).
+A number of arithmetic expressions are supported, all of which work on numeric types (Integer/Long, and Decimal).
 
-## Multiplication
+## 2 Multiplication
 
 Multiplies two numbers.
 
-### Input parameters
+### 2.1 Input parameters
 
 *   First number
-    Type: Integer/Long, Float or Decimal
+    Type: Integer/Long, Decimal
 *   Second number
-    Type: Integer/Long, Float or Decimal
+    Type: Integer/Long, Decimal
 
-### Output
+### 2.2 Output
 
 If the two inputs are both of type Integer/Long, the result is of type Integer/Long.
 
 If any of the two inputs is of type Decimal, the result is of type Decimal.
 
-if any of the two inputs is of type Float and they're both not of type Decimal, the result is of type Float.
-
-```java
-3 * 4
-```
-
-results in
-
-```java
-12
-```
-
-## Division
+## 3 Division
 
 Divides two numbers. You can use either the `div` or colon ( : ) syntax, as can be seen below in the examples. The colon ( : ) syntax is inspired by the divide symbol `÷`. We cannot use the more conventional slash ( / ) syntax because that would conflict with the slash we use for separating objects and members.
 
-### Input parameters
+### 3.1 Input Parameters
 
 *   First number
-    Type: Integer/Long, Float or Decimal
+    Type: Integer/Long, Decimal
 *   Second number
-    Type: Integer/Long, Float or Decimal
+    Type: Integer/Long, Decimal
 
-### Output
+### 3.2 Output
 
-If any of the two inputs is of type Decimal, the result is of type Decimal. Otherwise the result is of type Float.
+If any of the two inputs is of type Decimal, the result is of type Decimal.
 
 "div" syntax:
 
@@ -74,24 +64,22 @@ results in
 4.0
 ```
 
-## Modulo
+## 4 Modulo
 
 Calculates the remainder of the division of one number by another. In other words, m modulo n corresponds to: m = p + k*n, where p is the result of the operation m modulo n.
 
-### Input parameters
+### 4.1 Input parameters
 
 *   First number
-    Type: Integer/Long, Float or Decimal
+    Type: Integer/Long, Decimal
 *   Second number
-    Type: Integer/Long, Float or Decimal
+    Type: Integer/Long, Decimal
 
-### Output
+### 4.2 Output
 
 If the two inputs are both of type Integer/Long, the result is of type Integer/Long.
 
 If any of the two inputs is of type Decimal, the result is of type Decimal.
-
-if any of the two inputs is of type Float and they're both not of type Decimal, the result is of type Float.
 
 ```java
 23 mod 5
@@ -102,20 +90,7 @@ results in an Integer/Long with value
 ```java
 3
 ```
-
-Alternatively,
-
-```java
-23 mod 5.6
-```
-
-results in a Float with value
-
-```java
-0.6
-```
-
-## Addition
+## 5 Addition
 
 Adds two numbers.
 
@@ -125,20 +100,18 @@ See [String function calls](string-function-calls) for more information.
 
 {{% /alert %}}
 
-### Input parameters
+### 5.1 Input Parameters
 
 *   First number
-    Type: Integer/Long, Float or Decimal
+    Type: Integer/Long, Decimal
 *   Second number
-    Type: Integer/Long, Float or Decimal
+    Type: Integer/Long, Decimal
 
-### Output
+### 5.2 Output
 
 If the two inputs are both of type Integer/Long, the result is of type Integer/Long.
 
 If any of the two inputs is of type Decimal, the result is of type Decimal.
-
-if any of the two inputs is of type Float and they're both not of type Decimal, the result is of type Float.
 
 ```java
 -3 + 4
@@ -150,34 +123,22 @@ results in an Integer/Long with value
 1
 ```
 
-```java
-4.5 + 3
-```
-
-results in a Float with value
-
-```java
-7.5
-```
-
-## Subtraction
+## 6 Subtraction
 
 Subtracts the second input from the first.
 
-### Input parameters
+### 6.1 Input Parameters
 
 *   First number
-    Type: Integer/Long, Float or Decimal
+    Type: Integer/Long, Decimal
 *   Second number
-    Type: Integer/Long, Float or Decimal
+    Type: Integer/Long, Decimal
 
-### Output
+### 6.2 Output
 
 If the two inputs are both of type Integer/Long, the result is of type Integer/Long.
 
 If any of the two inputs is of type Decimal, the result is of type Decimal.
-
-if any of the two inputs is of type Float and they're both not of type Decimal, the result is of type Float.
 
 ```java
 5 - 4
@@ -187,14 +148,4 @@ results in an Integer/Long with value
 
 ```java
 1
-```
-
-```java
-34.4 - 3.1
-```
-
-results in a Float with value
-
-```java
-31.3
 ```

@@ -2,7 +2,7 @@
 title: "Chart Advanced Cheat Sheet"
 parent: "chart-widgets"
 menu_order: 20
-tags: ["Charts", "Advanced", "Desktop Modeler", "Layout Controls", "Data Properties", "Series Properties"]
+tags: ["Charts", "Advanced", "Studio Pro", "Layout Controls", "Data Properties", "Series Properties", "studio pro"]
 ---
 
 ## 1 Introduction

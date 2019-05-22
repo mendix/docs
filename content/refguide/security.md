@@ -1,10 +1,11 @@
 ---
 title: "Security"
-category: "Desktop Modeler"
+category: "App Modeling"
+tags: ["studio pro"]
 ---
 
 
-Security in Mendix has two sides: you want different people to see different parts of your application and you want to prevent unauthorized access. Both of these can be managed from the Modeler. Access to forms, data and microflows can be limited to authorized users.
+Security in Mendix has two sides: you want different people to see different parts of your application and you want to prevent unauthorized access. Both of these can be managed from Studio Pro. Access to forms, data and microflows can be limited to authorized users.
 
 ## Security Levels
 

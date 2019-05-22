@@ -15,7 +15,7 @@ These types of validation actions should be used throughout your project.
 
 However you will often run into situations where you need to be able to show or process your validation rules in a different way than just as validation feedback. On option that gives you more control is building one large string message variable. The validation microflow should return that message. If anything has been returned, the object is invalid.
 
-Or if you need to differentiate between the different validation messages you can also build a list of (non-)persistent objects, instead of appending a message you should create an object and add the object to a list. Also take a look at the validation best practices.
+Or if you need to differentiate between the different validation messages you can also build a list of (non-)persistable objects, instead of appending a message you should create an object and add the object to a list. Also take a look at the validation best practices.
 
 ![](attachments/translatable/18581627.png)
 

@@ -1,6 +1,7 @@
 ---
 title: "OQL Limit Clause"
 parent: "oql"
+tags: ["studio pro"]
 ---
 
 

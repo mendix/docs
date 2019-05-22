@@ -8,9 +8,11 @@ tags: ["Operate", "App", "Developer Portal", "Backup"]
 
 ## 1 Introduction
 
-Backups in the Mendix Cloud have two parts: database and file documents. A backup is created every night or on-demand, as described in section 3, [Backups](#backups). A full backup of the database is made. File documents are backed up incrementally. 
+Backups are created every night or on-demand, as described in the [Backups](#backups) section, below.
 
-Additionally, a replication/failover add-on can be purchased that will enable incremental backups with a 15 minute interval for both the database and file documents.
+Backups in the Mendix Cloud have two parts: the database and file documents. A full backup of the database is made each time, while file documents are backed up incrementally. 
+
+You can also buy a replication/failover add-on to enable incremental backups with a 15 minute interval for both the database and file documents.
 
 ## 2 Creation and Retention Schedules
 
@@ -84,7 +86,7 @@ As the download files are generated "on the fly" (meaning, while in progress), i
 
 You can choose the **destination** environment to which you want to restore the backup. This allows you to, for example, restore a production environment backup to an acceptance environment.
 
-If you restore a backup that was originally deployed with an older Modeler version, you will get a warning. You can still restore the backup, but you will have to deploy the older model later on. 
+If you restore a backup that was originally deployed with an older Mendix version, you will get a warning. You can still restore the backup, but you will have to deploy the older model later on. 
 
 {{% alert type="info" %}}
 In Mendix Cloud V4, if the restore takes too long, the system will show a timeout message. The restore will continue behind the scenes, and you can track the progress of the restore by inspecting your database free disk space graphs. While the database free disk space keeps decreasing, the restore is still in progress. If the database free disk space is constant, the restore has stopped and you can try to start your application. If this happens regularly, consider upgrading to a database plan with more CPU cores, so that the restore can be executed faster.
@@ -104,15 +106,19 @@ Backup Details | Cloud Version | Description
 **ID**/ <br /> **Snapshot id** | V3 <br /> V4 | Unique identifier for the backup *snapshot*
 **Date**/ <br /> **Created on** | V3 <br /> V4 | The creation date of the backup
 **Expires on** | V3 & V4 | The date on which the backup will be removed from the system
-**Model version** | V3 & V4 | The version of the deployment package used during backup creation
+**Mendix version** | V3 & V4 | The version of the deployment package used during backup creation
 **Comment** | V3 & V4 | A specific comment added to the backup
 
 At the bottom of the screen, you can click **Delete** to delete this particular backup.
 
-## 4 Read More
+## 4 Known issues
+
+**Mendix Cloud V4** backups that contain a very large number of files (that is, greater than about 50,000) will experience slow performance for _all_ backup operations (create, download, restore, and upload). This is because of the inherent overhead associated with each file; as the number of files increases, this overhead becomes quite significant, and can be in the order of hours.
+
+## 5 Read More
 
 * [How to Create a Backup](create-backup)
 * [How to Download a Backup](download-backup)
 * [How to Restore a Backup](restore-backup)
-* [How to Restore a Backup Locally(database-size-reduction)
+* [How to Restore a Backup Locally](database-size-reduction)
 * [Database Size Reduction](database-size-reduction)

@@ -44,7 +44,7 @@ Before starting this how-to, make sure you have the following prerequisites:
 
 * The Mendix Deployment Archive (MDA) of your Mendix project
 
-* The Mendix server distribution corresponding with your Modeler (see the [Mendix App Store](https://appstore.home.mendix.com/link/modelers))
+* The Mendix server distribution corresponding with your Mendix Studio Pro version (see the [Mendix App Store](https://appstore.home.mendix.com/link/modelers))
 
 * A database with sufficient security rights
 
@@ -56,7 +56,7 @@ Before starting this how-to, make sure you have the following prerequisites:
 
 To download and install the Mendix Service Console, follow these steps:
 
-1. Download the latest version of the Mendix Service Console by following the **Related downloads** link from the [Desktop Modeler Download Page](https://appstore.home.mendix.com/link/modelers) of the App Store.
+1. Download the latest version of the Mendix Service Console by following the **Related downloads** link from the [Studio Pro Download Page](https://appstore.home.mendix.com/link/modelers) of the App Store.
 
     ![](attachments/deploy-mendix-on-windows/service_console_download.png)
 
@@ -112,7 +112,7 @@ To deploy a Mendix app using the Mendix Service Console, follow these steps:
 
     ![](attachments/deploy-mendix-on-windows/18580727.png)
 
-6. Now select the **MDA** file that was created in the Modeler and contains your application logic. After the installation of your MDA file, you will see which Mendix server (Mendix runtime) version is needed.
+6. Now select the **MDA** file that was created in Studio Pro and contains your application logic. After the installation of your MDA file, you will see which Mendix server (Mendix runtime) version is needed.
 
 7. Configure the **Database Settings**:
 

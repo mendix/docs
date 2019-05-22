@@ -9,97 +9,36 @@ tags: ["support", "incident", "standard change", "URL", "change URL", "license",
 
 ## 1 Introduction
 
-In order for Mendix Support to pick up and process your support request it's important to provide the right information. This will speed up the processing of your request and minimizes back-and-forth communication between Mendix Support and the submitter. Here is a list of items that the Support staff needs and uses to process an incident ticket.
+In order for Mendix Support to pick up and process your support request, it is important to provide the right information. This will speed up the processing of your request and minimize back-and-forth communication between you and Mendix Support. The details below are what Mendix Support needs and uses to process an incident ticket.
 
 {{% alert type="warning" %}}
-For critical production incidents, please contact Mendix Support by phone. Find the phone number for your region on the [Support Portal home page](https://support.mendix.com).
+For critical production incidents, please contact Mendix Support by [phone](https://support.mendix.com).
 {{% /alert %}}
 
-## 2 Useful Links To Check Before Submitting a Request
+## 2 Checking Useful Links Before Submitting a Request
 
-Before submitting a new support request, check these Mendix resources to make sure your question has not already been answered:
+Before submitting a new Menix Support request, check these resources to make sure your question has not already been answered:
 
 * [Mendix Forum](https://forum.mendix.com)
 * [Mendix Documentation](https://docs.mendix.com/)
+* [Mendix Platform status](https://status.mendix.com)
 
-## 3 General Information
+If you cannot find the answer to your question on the Mendix Forum or in the Mendix documentation, you can submit a support request. The Mendix Support Portal will walk you through the ticket creation by asking for relevant information based on the type of request. 
 
-This is the basic information that is required for a ticket:
+## 3 Submitting a New Request
+
+You can access the Mendix Support Portal at [support.mendix.com](https://support.mendix.com).
+
+This is the basic information required for a ticket:
 
 * A detailed description of the exact error
 * A detailed description of the action that was performed when the error was received
 * A description of the desired goal (optional)
-
-Also select the affected app in the request. For more information, read [How to Change the Affected Apps for Which You Can Submit Requests](change-affected-apps).
-
-## 4 Specifications
-
-Depending on the type of request it is helpful to provide additional information. The scenarios below list what additional information should be provided.
-
-### 4.1 Cloud Problem – Deployment Issues
-
-* Attach a log file (.txt)
-* The date and time of the incident
-
-### 4.2 Team Server Problem – Project Issues
-
-* The Project ID
-
-### 4.3 Problems and Issues in Studio and Studio Pro
-
-* Studio type (Studio or Studio Pro)
-* Mendix version
-* Test project - read [How To Export A Mendix Project Package](/refguide/export-project-package-dialog) for more information
-* Reproducible steps
-
-### 4.4 App Store Content Problem – Module, Widget, Theme Issues
-
-* Name of the content
-* Mendix version
-* Test project - read [How To Export A Mendix Project Package](/refguide/export-project-package-dialog) for more information
-* Reproducible steps
-
-{{% alert type="info" %}}
-Not all App Store content is compatible with every version of Studio Pro, and not all App Store content is supported by Mendix. For more information, see [App Store Content Support](/developerportal/app-store/app-store-content-support).
-{{% /alert %}}
-
-### 4.5 Mobile Problem
-
-* Operating System and the version _(Android x.x / iOS x.x)_. For example: Android 6.1.
-
-{{% alert type="info" %}}
-For Windows Phone, please ask Mendix Support about the current support conditions.
-{{% /alert %}}
-
-### 4.6 Browser Problem
-
-* Operating System _(Windows x / iOS x)_. For example: Windows 10.
-* Browser name and the version _(Chrome x.x/ Safari x.x / Firefox x.x / IE x.x)_ for example: Chrome 54.0.2840.99
-
-## 5 Support Portal Home Page
-
-You can access the Mendix Support Portal at [support.mendix.com](https://support.mendix.com).
-
-![](attachments/submit/204371689-pic1.png)
-
-This home page enables accessing various Mendix sites that provide important information and tools:
-
-* [Mendix documentation](https://docs.mendix.com)
-* [Mendix release notes](/releasenotes/)
-* [Mendix Forum](https://forum.mendix.com)
-* [Mendix App Store](https://appstore.mendix.com)
-* [Mendix Platform status](https://status.mendix.com)
-* [Mendix Developer Portal](https://home.mendix.com)
-
-The search box lets you search through the Mendix Documentation for relevant information.
-
-## 6 Submitting a New Request
-
-If you cannot find the answer to a question on the Mendix Forum or in the Mendix documentation, you can submit a support request. The Mendix Support Portal will walk you through the ticket creation by asking for relevant information based on the type of request. 
+* The affected app (for more information, see [How to Change the Affected Apps for Which You Can Submit Requests](change-affected-apps))
 
 To submit a request with Mendix Support, follow these steps:
 
-1. Click **Submit a request**.
+1. Click **Submit a request** in the top-right corner of the portal.
 2.  Select an issue from the drop-down menu:
 
     ![](attachments/submit/204371709-pic2.png)
@@ -148,7 +87,7 @@ When you enter the subject of the request, the Mendix Support Portal will sugges
 
 If that does not help you solve your issue, you can submit the request.
 
-## 7 Request Priority {#request-priority}
+## 5 Request Priority {#request-priority}
 
 You can select the priority that you feel the request should have. Please note the SLA regulations for this priority (which can be checked online as well).
 
@@ -183,7 +122,51 @@ Click **Submit a request** when you're ready to submit the request:
 
 ![](attachments/submit/204407825-pic6.png)
 
-## 8 Overview of Requests
+## 6 Providing Specifications & Additional Information
+
+Depending on the type of request, providing additional information may be helpful. The scenarios below list what additional information should be provided.
+
+### 6.1 Cloud Problems & Deployment Issues
+
+* Log file (*.txt*)
+* Date and time of the incident
+
+### 6.2 Team Server Problems & Project Issues
+
+* [App ID](../settings/general-settings)
+
+### 6.3 Studio & Studio Pro Problems
+
+* Mendix Studio type (Studio or Studio Pro)
+* Mendix version
+* Test project (for details, see [How To Export A Mendix Project Package](/refguide/export-project-package-dialog))
+* Reproducible steps
+
+### 6.4 App Store Content Problems & Module, Widget & Theme Issues
+
+* Name of the App Store item
+* Mendix version
+* Test project (for details, see [How To Export A Mendix Project Package](/refguide/export-project-package-dialog))
+* Reproducible steps
+
+{{% alert type="info" %}}
+Not all App Store content is compatible with every version of Studio Pro, and not all App Store content is supported by Mendix. For more information, see [App Store Content Support](/developerportal/app-store/app-store-content-support).
+{{% /alert %}}
+
+### 6.5 Mobile Problems
+
+* Operating system and version (Android x.x or iOS x.x; for example, Android 6.1)
+
+{{% alert type="info" %}}
+For Windows Phone, please contact Mendix Support for the current support conditions.
+{{% /alert %}}
+
+### 6.6 Browser Problems
+
+* Operating System (Windows x or iOS x; for example, Windows 10)
+* Browser name and version (Chrome x.x, Firefox x.x, IE x.x, or Safari x.x; for example, Chrome 54.0.2840.99)
+
+## 7 Overview of Requests
 
 By clicking your name in the top-right side of  the screen, you can select **My activities** and see all the requests that you have submitted as well as all the requests that have been submitted on the apps to which you have access:
 
@@ -191,7 +174,7 @@ By clicking your name in the top-right side of  the screen, you can select **My 
 
 When you click **Follow** for an app, you will be informed of all the changes on requests on that specific app.
 
-## 9 Viewing & Updating Tickets
+## 8 Viewing & Updating Tickets
 
 From the overview, you can easily open a specific ticket, or you can search for a ticket by using the **Search** requests option. Once you have opened a ticket, you can add comments to the ticket assignee or add new attachments.
 
@@ -210,11 +193,11 @@ The ticket can have the following statuses:
 
 ![](attachments/submit/204371829-pic9.png)
 
-## 10 Submitting a Feature Request
+## 9 Submitting a Feature Request
 
 On the [Mendix Idea Forum](https://forum.mendix.com/ideaforum/), Mendix captures ideas and requests from customers and developers in the Mendix community. Each quarter, this forum is treated as a short-list of the top features that the Mendix community supports via topics with the most upvotes.
 
-## 11 Read More
+## 10 Read More
 
 * [Ticket Priority](ticket-priority)
 * [Escalation Management Process](escalation-management-process)

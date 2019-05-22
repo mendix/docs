@@ -182,7 +182,13 @@ You can test how your app looks like for different roles the following way:
 
 The default user roles or user roles that you have created can be assigned to Mendix accounts. Accounts that have user roles assigned to them are **App Users**. 
 
-Once the app is published, you can manage app users. To do so, open **Roles and Permissions** and click **Manage Users** in the top-right of the screen. 
+{{% alert type="info" %}}
+
+You can manage app users only after you publish your app.
+
+{{% /alert %}}
+
+Open **Roles and Permissions** and click **Manage Users** in the top-right of the screen. 
 
 ![](attachments/settings-security/manage-users-button.png)
 

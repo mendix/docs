@@ -8,7 +8,9 @@ tags: ["Developer Portal", "App Services", "Deploy"]
 
 ## 1 Introduction
 
-{{% alert type="info" %}} App services are deprecated and marked for removal. Use a published web service or a published REST service instead. {{% /alert %}}
+{{% alert type="info" %}}
+App services are deprecated and marked for removal. Use a [published web service](published-web-services) or a [published REST service](published-rest-services) instead.
+{{% /alert %}}
 
 The **App Services** page provides an overview of possible resources that can be published to the [Mendix App Store](https://appstore.home.mendix.com/):
 

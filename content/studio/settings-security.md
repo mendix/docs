@@ -186,9 +186,9 @@ Once the app is published, you can manage app users. To do so, open **Roles and 
 
 ![](attachments/settings-security/manage-users-button.png)
 
-You will be navigated to [Mendix launchpad](https://home.mendix.com/home/), where you can invite people to your app, edit app roles assigned to them, or delete them from app users. 
+You will be navigated to the Developer Portal > **General** > **App User Management**, where you can invite people to your app, edit app roles assigned to them, or delete them from app users. 
 
-If you have created a new role, you need to publish the app first to be able to see and assign this role in [Mendix launchpad](https://home.mendix.com/home/).
+If you have created a new role, you need to publish the app first to be able to see and assign this role in the Developer Portal.
 
 {{% alert type="info" %}}
 

@@ -1,5 +1,5 @@
 ---
-title: "New App Node Request"
+title: "Make a New App Node Request"
 category: "Mendix Support"
 menu_order: 65
 tags: ["Support", "app node", "node", "license", "subscription secret"]
@@ -8,21 +8,21 @@ tags: ["Support", "app node", "node", "license", "subscription secret"]
 
 ## 1 Requesting a New License
 
-If you want to deploy your app to a new licensed node in the Mendix Cloud or on-premises/Virtual Private Cloud, you can request one from Mendix support.
+If you want to deploy your app to a new licensed node in the Mendix Cloud or on-premises/virtual private cloud, you can request one from Mendix Support.
 
-Fill in all the required details for this new licensed app node in the [Request New App Node](https://newnode.mendix.com/) app.
+Fill in all the required details for this new licensed app node in the [Request New App Node](https://newnode.mendix.com/) app. This app replaces the *New App Node Request Template*.
 
-Mendix Support will contact the technical contact for the app via a ticket in the Support Portal, and provide the app details. Mendix Support will also check if your request matches your entitlement to resources (number of apps, cloud resources).
+Mendix Support will contact the technical contact for the app via a ticket in the [Mendix Support Portal](https://support.mendix.com), and provide the app details. Mendix Support will also check if your request matches your entitlement to resources (number of apps, cloud resources).
 
 {{% alert type="info" %}}
-If you need a *Subscription Secret* for your app deployed to SAP, please create a ticket with [Mendix Support](https://support.mendix.com).
+If you need a **Subscription Secret** for your app deployed to SAP, please submit a request with [Mendix Support](https://support.mendix.com).
+{{% /alert %}}
 
+{{% alert type="info" %}}
 Apps in the IBM Cloud Portal are licensed in a different way – see [IBM Cloud](/developerportal/deploy/ibm-cloud) for more information.
 {{% /alert %}}
 
-This replaces the *New App Node Request Template*.
-
 ## 2 Read More
 
-More information on deployment options and be found in [Deployment Options](/developerportal/deploy/).
-More information on licensing your apps can be found in [Licensing Apps](/developerportal/deploy/licensing-apps-outside-mxcloud).
+* [Deployment Options](/developerportal/deploy/)
+* [Licensing Apps](/developerportal/deploy/licensing-apps-outside-mxcloud)

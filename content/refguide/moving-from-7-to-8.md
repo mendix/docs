@@ -136,9 +136,13 @@ Follow the instructions in [Migration From the Sync Process to Collaborative Dev
 
 [//]: # "Widget DOM Changes - future betas"
 
-## 7 Troubleshooting
+## 7 Mendix Cloud Version 3
 
-### 7.1 Cannot Open Project: `Layout … has an invalid value …`
+Apps made in Mendix Studio Pro cannot be deployed to *Version 3* of the Mendix Cloud. If you are using a licensed Mendix Cloud V3 node, then we recommend that you upgrade to Mendix Cloud V4. If this is not possible, you will need to continue to use Mendix version 7 to create and maintain your apps.
+
+## 8 Troubleshooting
+
+### 8.1 Cannot Open Project: `Layout … has an invalid value …`
 
 Very rarely, you may receive a message similar to the one below when opening a project in Mendix Studio Pro 8 which needs to be upgraded from a previous version of Mendix.
 

@@ -61,7 +61,7 @@ You need to have enabled two-factor authentication. See [Two-Factor Authenticati
 
 You have deployed an app: either as a free app, or to a licensed node. You now want to link it to a licensed node, or to a different licensed node.
 
-For the specific case of swapping two apps between licensed nodes, see the guidance in section 5 [Exchange Linked Apps Between Nodes](#exchange-apps).
+For the specific case of swapping two apps between licensed nodes, see the guidance in the [Exchange Linked Apps Between Nodes](#exchange-apps) section.
 
 ### 4.1 Backing Up{#backing-up}
 
@@ -87,7 +87,7 @@ Before you can link an app to a new environment, you need to unlink it from its 
 
 3.  Go to **Environments** in the left navigation panel.
 
-    If the environments tab shows the following message, then your app is not currently linked to a node and you can go straight to section 4.3 [Connect Your App to a Licensed Node](#connect-app).
+    If the environments tab shows the following message, then your app is not currently linked to a node and you can go straight to the section [Connect Your App to a Licensed Node](#connect-app).
 
     ![](attachments/licensing-apps/link-node.png)
    
@@ -109,7 +109,7 @@ Your app has now been unlinked from the Sandbox environment.
 
 It is not possible to unlink an app from a licensed node. The only way to do this is to connect another app to the licensed node; this will unlink the existing app automatically.
 
-An example of how this behavior can be used is given in section 5 [Exchange Linked Apps Between Nodes](#exchange-apps).
+An example of how this behavior can be used is given in the section [Exchange Linked Apps Between Nodes](#exchange-apps).
 
 ### 4.3 Connecting Your App to a Licensed Node{#connect-app}
 
@@ -201,7 +201,7 @@ To link **App A** to **Node 2** and **App B** to **Node 1**, follow these steps:
 
 1. Create a new empty app **App C** which is not connected to any environment.
 
-2. Link **App C** to **Node 1** (see section 4.3 [Connecting Your App to a Licensed Node](#connect-app). This will unlink **App A**.
+2. Link **App C** to **Node 1** (see [Connecting Your App to a Licensed Node](#connect-app), above). This will unlink **App A**.
 
 3. Now that **App A** is unlinked from **Node 1**, it can be linked to **Node 2**.
 

@@ -20,9 +20,9 @@ This document explains how to configure your Mendix Cloud v4 app to send data to
 Datadog is not supported in Mendix Cloud v3, nor in default deployment buildpacks for other cloud platforms.
 {{% /alert %}}
 
-## 2 Datadog API Key
+## 2 Datadog API Key{#api-key}
 
-To make use of Datadog you will need a Datadog API key. If you already use Datadog, skip to section 2.2 [Existing Datadog User](#existing-datadog-user) to learn how to get one.
+To make use of Datadog you will need a Datadog API key. If you already use Datadog, skip to the [Existing Datadog User](#existing-datadog-user) section to learn how to get one.
 
 ### 2.1 New Datadog User
 
@@ -42,7 +42,7 @@ If you are new to Datadog, you will need to get an account first.
 
     ![Source install script shows DD_API_KEY=your API key](attachments/datadog-metrics/dd-api-key.png)
 
-5. You now need to use this API key with your app: see section 3 [Connect Node to Datadog](#connect-node).
+5. You now need to use this API key with your app: see [Connect Node to Datadog](#connect-node).
 
 ### 2.2 Existing Datadog User{#existing-datadog-user}
 
@@ -76,7 +76,7 @@ To send your runtime information to Datadog, you need to provide the Datadog API
 
     ![Dropdown containing custom environment variable names](attachments/datadog-metrics/environment-variable-dd-api-key.png)
 
-6. Enter the Datadog **API key** obtained in section 2 as the *Value* of the Environment Variable.
+6. Enter the Datadog **API key**, obtained in the [Datadog API Key](#api-key) section, above, as the *Value* of the Environment Variable.
 
 7. Add a second **Custom Environment Variable**:
 

@@ -110,7 +110,7 @@ To set up IBM Cloud, follow these steps:
 
     ![](attachments/ibm-cloud/deploymentconfigured.png)
 
-    Your IBM Cloud Foundry environment is now configured. Go to section 3.3 [Creating a Package for IBM Cloud](#create-package) to learn how to create a package which will deploy to IBM Cloud.
+    Your IBM Cloud Foundry environment is now configured. Go to [Creating a Package for IBM Cloud](#create-package), below, to learn how to create a package which will deploy to IBM Cloud.
 
 #### 3.2.2 Deploying to Kubernetes
 
@@ -127,7 +127,7 @@ To set up IBM Cloud, follow these steps:
 
     ![](attachments/ibm-cloud/deploymentconfigured.png)
 
-Your IBM Kubernetes environment is now configured. Go to section 3.3 [Creating a Package for IBM Cloud](#create-package) to learn how to create a package which will deploy to IBM Cloud.
+Your IBM Kubernetes environment is now configured. Go to [Creating a Package for IBM Cloud](#create-package), below, to learn how to create a package which will deploy to IBM Cloud.
 
 ### 3.3 Creating a Package for IBM Cloud {#create-package}
 
@@ -141,8 +141,8 @@ Sync your app with Studio Pro as described in [Collaborative Development](/refgu
 
 Once you have your app in Studio Pro, you can do one of the following: 
 
-* deploy it directly from Studio Pro (see section 3.3.2, [Deploying from Within Studio Pro](#deploy-dm))
-* commit from Studio Pro and then deploy it from the Developer Portal (see section 3.3.3, [Deploying from the Developer Portal](#deploy-dp))
+* deploy it directly from Studio Pro (see the [Deploying from Within Studio Pro](#deploy-dm) section)
+* commit from Studio Pro and then deploy it from the Developer Portal (see the [Deploying from the Developer Portal](#deploy-dp) section)
 
 #### 3.3.2 Deploying from Within Studio Pro{#deploy-dm}
 
@@ -154,7 +154,7 @@ Click **Run** in Studio Pro. This will automatically:
 * generate a deployment package from the latest commit in the current branch
 * push the deployment package to IBM Cloud
 
-You will still need to go to IBM Cloud and manually deploy the package; a message within Studio Pro will let you know when the package is ready and will give you the link to IBM Cloud. See section 3.4 [Deploying a Package to IBM Cloud](#deploy-package) for instructions on how to do the deployment.
+You will still need to go to IBM Cloud and manually deploy the package; a message within Studio Pro will let you know when the package is ready and will give you the link to IBM Cloud. See [Deploying a Package to IBM Cloud](#deploy-package) for instructions on how to do the deployment.
 
 #### 3.3.3 Deploying from the Developer Portal{#deploy-dp}
 

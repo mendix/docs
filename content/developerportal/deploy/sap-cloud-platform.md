@@ -13,16 +13,16 @@ As an SAP developer, you want to deploy your Mendix app on the SAP Cloud Platfor
 
 This document describes two ways of managing the SAP Cloud Platform:
 
-* Initial setup of the environment when creating a new app: see section 2, [Set Up SAP Cloud Platform for the First Time](#FirstTime)
-* Create a new environment for an existing app: see section 3, [Create a New Environment](#NewEnvironment)
+* Initial setup of the environment when creating a new app: see the section [Set Up SAP Cloud Platform for the First Time](#FirstTime)
+* Create a new environment for an existing app: see the section [Create a New Environment](#NewEnvironment)
 
 ## 2 Set Up SAP Cloud Platform for the First Time{#FirstTime}
 
 Before you can manage your SAP Cloud Platform using the Developer Portal, you will need to set it up. There are two circumstances under which you will have to set up the SAP Cloud Platform for the first time.
 
-1. You have an existing app which has never been deployed on the SAP Cloud Platform and you want to change the cloud settings. See section 2.1, [Change Cloud Settings](#ChangeCloudSettings).
+1. You have an existing app which has never been deployed on the SAP Cloud Platform and you want to change the cloud settings. See [Change Cloud Settings](#ChangeCloudSettings).
 
-2. You are creating a new app from an SAP starter app. See section 2.2, [New SAP App](#NewSAPApp).
+2. You are creating a new app from an SAP starter app. See [New SAP App](#NewSAPApp).
 
 ### 2.1 Change Cloud Settings{#ChangeCloudSettings}
 
@@ -34,7 +34,7 @@ Click **Set up SAP Cloud** and you will be taken to the SAP Cloud Platform welco
 
 ![](attachments/sap-cloud-platform/cloud-settings-landing-page.png)
 
-Click **Getting Started** and then continue with section 2.3, [Set Up Region](#SetUpRegion).
+Click **Getting Started** and then continue with [Set Up Region](#SetUpRegion).
 
 ### 2.2 New SAP App{#NewSAPApp}
 
@@ -44,7 +44,7 @@ In this scenario, you choose a Mendix starter app from the **SAP Apps** tab.
 
 Select the starter app you want and give it a name.
 
-Once the app has been created you can continue with section 2.3, [Set Up Region](#SetUpRegion).
+Once the app has been created you can continue with [Set Up Region](#SetUpRegion).
 
 ### 2.3 Set Up Region{#SetUpRegion}
 
@@ -144,7 +144,7 @@ This is done from the **Environments** page of the Developer Portal:
 
     ![](attachments/sap-cloud-platform/09-sap-env-3.png)
 
-An environment is created; with more than one environment it is possible to transport your application between environments (see section 6, [Transport App Between Environments](#TransportApp)).
+An environment is created; with more than one environment it is possible to transport your application between environments (see [Transport App Between Environments](#TransportApp), below).
 
 ![](attachments/sap-cloud-platform/10-sap-env-tap.png)
 
@@ -188,7 +188,7 @@ You will still have to deploy your app in the Developer Portal the very first ti
 
     ![](attachments/sap-cloud-platform/06-sap-build-revision.png)
 
-When the package is ready to be deployed, a green tick will be shown next to the deployment package. To deploy your package, see section 5, [Deploy Package](#DeployPackage).
+When the package is ready to be deployed, a green tick will be shown next to the deployment package. To deploy your package, follow the instructions in the [Deploy Package](#DeployPackage) section, below.
 
 ## 5 Deploy Package{#DeployPackage}
 
@@ -218,7 +218,7 @@ When the package is ready to be deployed, a green tick will be shown next to the
 
     ![](attachments/sap-cloud-platform/transport-events.png)
 
-4. Select any additional services you need for your app. For more information see section 7.3, [Binding Services](#binding-services).
+4. Select any additional services you need for your app. For more information see [Binding Services](#binding-services), below.
 
     {{% image_container width="75%" %}}![](attachments/sap-cloud-platform/transport-services.png){{% /image_container %}}
 
@@ -232,7 +232,7 @@ When the package is ready to be deployed, a green tick will be shown next to the
 
     {{% alert type="info" %}}This will bind any services which are in the status **Services To Be Bound**.{{% /alert %}}
  
-7. When the application has been started you will receive a confirmation message. Click **OK** and you will be taken to the Environment Details page for the selected environment. See section 7, [Environment Details](#EnvironmentDetails).
+7. When the application has been started you will receive a confirmation message. Click **OK** and you will be taken to the Environment Details page for the selected environment. See [Environment Details](#EnvironmentDetails), below.
 
     ![](attachments/sap-cloud-platform/application-started.png)
 
@@ -248,7 +248,7 @@ When the package is ready to be deployed, a green tick will be shown next to the
 
 3.  Click **Transport** to deploy the package to the SAP environment. This will replace any current app deployed to this environment. If the app is already running, you will be asked to stop it so that your new app can be deployed.
 
-When the app has been transported you will be on the page **Configure the Application**. This has the same options as the **Deploy** pages which are described in section 5.2, [Configure the Application](#ConfigureTheApplication).
+When the app has been transported you will be on the page **Configure the Application**. This has the same options as the **Deploy** pages which are described above in the [Configure the Application](#ConfigureTheApplication) section.
 
 ## 7 Environment Details{#EnvironmentDetails}
 
@@ -278,7 +278,7 @@ The button will change to **Start Application** which you can click to (re)start
 You may need to use this option to stop and start your app after changing one of the settings on this page.
 {{% /alert %}}
 
-If you receive an error trying to start the app, please look at section 8.3, [App Will Not Start](#willnotstart).
+If you receive an error trying to start the app, please refer to the [App Will Not Start](#willnotstart) section under *Issues*, below.
 
 #### 7.1.2 Change Admin Password
 
@@ -384,7 +384,7 @@ To connect a service in the section **Available Services**
 If you receive an error, and the service fails to bind please check all aspects of your SAP account. The error message may not provide full information about, for example, which plans you are allowed to choose for a particular service.
 {{% /alert %}}
 
-If you receive an error trying to restart the app, please look at section 8.3, [App Will Not Start](#willnotstart).
+If you receive an error trying to restart the app, please refer to the [App Will Not Start](#willnotstart) section under *Issues*, below.
 
 #### 7.3.2 Unbinding and Removing Services
 

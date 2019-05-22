@@ -44,7 +44,7 @@ For more information see [Service credentials for Watson services](https://cloud
 If you have an existing Watson service it may give a *Username* and *Password* in the credentials. To obtain credentials in the correct format, you will have to create a **new** service which has *API Key* and *URL* as the credentials. It is not possible to obtain the API Key/URL style of credentials for an existing service which uses Username/Password credentials.
 {{% /alert %}}
 
-If you are running your app on IBM Cloud and the Watson resources have been added to your IBM Cloud project, the credentials can be picked up automatically via VCAP. See section 8, [Watson Service Configuration](#WatSerCon) for more information on VCAP. This section also covers the IBM Watson Connector Suite configuration for storing credentials. If you are testing your app locally, or in another environment, you will need to enter these credentials manually when you use the connector in your Mendix app.
+If you are running your app on IBM Cloud and the Watson resources have been added to your IBM Cloud project, the credentials can be picked up automatically via VCAP. See the [Watson Service Configuration](#WatSerCon) section, below, for more information on VCAP. This section also covers the IBM Watson Connector Suite configuration for storing credentials. If you are testing your app locally, or in another environment, you will need to enter these credentials manually when you use the connector in your Mendix app.
 
 #### 1.1.2 IBM Watson Connector Suite
 
@@ -98,11 +98,11 @@ This action creates a new session for the [Watson Assistant](https://cloud.ibm.c
 
 #### 2.1.1 Apikey
 
-This is a string containing the API key assigned to the Watson Assistant service in your IBM Cloud. See section 1.1.1 [IBM Cloud](#IBMCloud) for more details.
+This is a string containing the API key assigned to the Watson Assistant service in your IBM Cloud. See the section [IBM Cloud](#IBMCloud) for more details.
 
 #### 2.1.2 Url
 
-This is a string containing the URL assigned to the Watson Assistant service in your IBM Cloud.  See section 1.1.1 [IBM Cloud](#IBMCloud) for more details.
+This is a string containing the URL assigned to the Watson Assistant service in your IBM Cloud.  See the section [IBM Cloud](#IBMCloud) for more details.
 
 #### 2.1.3 Assistant
 
@@ -122,11 +122,11 @@ This action sends a message from your app to a specified session. This will use 
 
 #### 2.2.1 Apikey
 
-This is a string containing the API key assigned to the Watson Assistant service in your IBM Cloud. See section 1.1.1 [IBM Cloud](#IBMCloud) for more details.
+This is a string containing the API key assigned to the Watson Assistant service in your IBM Cloud. See the section [IBM Cloud](#IBMCloud) for more details.
 
 #### 2.2.2 Url
 
-This is a string containing the URL assigned to the Watson Assistant service in your IBM Cloud.  See section 1.1.1 [IBM Cloud](#IBMCloud) for more details.
+This is a string containing the URL assigned to the Watson Assistant service in your IBM Cloud.  See the section [IBM Cloud](#IBMCloud) for more details.
 
 #### 2.2.3 Session Context
 
@@ -162,11 +162,11 @@ More information on the APIs for the IBM Watson Speech to Text service is availa
 
 ### 3.1 Apikey
 
-This is a string containing the API key assigned to the Speech to Text service in your IBM Cloud. See section 1.1.1 [IBM Cloud](#IBMCloud) for more details.
+This is a string containing the API key assigned to the Speech to Text service in your IBM Cloud. See the section [IBM Cloud](#IBMCloud) for more details.
 
 ### 3.2 Url
 
-This is a string containing the URL assigned to the Speech to Text service in your IBM Cloud.  See section 1.1.1 [IBM Cloud](#IBMCloud) for more details.
+This is a string containing the URL assigned to the Speech to Text service in your IBM Cloud.  See the section [IBM Cloud](#IBMCloud) for more details.
 
 ### 3.3 Audio File
 
@@ -212,11 +212,11 @@ More information on the APIs for the IBM Watson text to speech service is availa
 
 ### 4.1 Apikey
 
-This is a string containing the API key assigned to the Text to Speech service in your IBM Cloud. See section 1.1.1 [IBM Cloud](#IBMCloud) for more details.
+This is a string containing the API key assigned to the Text to Speech service in your IBM Cloud. See the section [IBM Cloud](#IBMCloud) for more details.
 
 ### 4.2 Url
 
-This is a string containing the URL assigned to the Text to Speech service in your IBM Cloud.  See section 1.1.1 [IBM Cloud](#IBMCloud) for more details.
+This is a string containing the URL assigned to the Text to Speech service in your IBM Cloud.  See the section [IBM Cloud](#IBMCloud) for more details.
 
 ### 4.3 Text
 
@@ -250,11 +250,11 @@ More information on the APIs for the IBM Watson Analyze Tone service is availabl
 
 ### 5.1 Apikey
 
-This is a string containing the API key assigned to the Tone Analyzer service in your IBM Cloud. See section 1.1.1 [IBM Cloud](#IBMCloud) for more details.
+This is a string containing the API key assigned to the Tone Analyzer service in your IBM Cloud. See the section [IBM Cloud](#IBMCloud) for more details.
 
 ### 5.2 Url
 
-This is a string containing the URL assigned to the Tone Analyzer service in your IBM Cloud.  See section 1.1.1 [IBM Cloud](#IBMCloud) for more details.
+This is a string containing the URL assigned to the Tone Analyzer service in your IBM Cloud.  See the section [IBM Cloud](#IBMCloud) for more details.
 
 ### 5.3 Text
 
@@ -308,11 +308,11 @@ Note that [Translate Language](#translate-language) cannot translate between any
 
 #### 6.1.1 Apikey
 
-This is a string containing the API key assigned to the Language Translator service in your IBM Cloud. See section 1.1.1 [IBM Cloud](#IBMCloud) for more details.
+This is a string containing the API key assigned to the Language Translator service in your IBM Cloud. See the section [IBM Cloud](#IBMCloud) for more details.
 
 #### 6.1.2 Url
 
-This is a string containing the URL assigned to the Language Translator service in your IBM Cloud.  See section 1.1.1 [IBM Cloud](#IBMCloud) for more details.
+This is a string containing the URL assigned to the Language Translator service in your IBM Cloud.  See the section [IBM Cloud](#IBMCloud) for more details.
 
 #### 6.1.3 Variable (List of Language)
 
@@ -337,11 +337,11 @@ The IBM Watson Connector Suite does not support the creation and deletion of cus
 
 #### 6.2.1 Apikey
 
-This is a string containing the API key assigned to the Language Translator service in your IBM Cloud. See section 1.1.1 [IBM Cloud](#IBMCloud) for more details.
+This is a string containing the API key assigned to the Language Translator service in your IBM Cloud. See the section [IBM Cloud](#IBMCloud) for more details.
 
 #### 6.2.2 Url
 
-This is a string containing the URL assigned to the Language Translator service in your IBM Cloud.  See section 1.1.1 [IBM Cloud](#IBMCloud) for more details.
+This is a string containing the URL assigned to the Language Translator service in your IBM Cloud.  See the section [IBM Cloud](#IBMCloud) for more details.
 
 #### 6.2.3 Languages
 
@@ -349,7 +349,7 @@ This is a list of objects of type **Language**. You can create this list using t
 
 Each translation model which is retrieved from the service will have a pair of languages, a source language and a target language. The languages on the model are associated with the languages in the supplied list. These languages are used in the **Translate Language** action to identify the source and target languages.
 
-More information can be found in section 6.3 [Translation - Translate Language](#translate-language)
+More information can be found in the [Translation - Translate Language](#translate-language) section.
 
 #### 6.2.4 Variable (List of TranslationModel)
 
@@ -387,11 +387,11 @@ More information on the APIs for the IBM Watson Language Translation service is 
 
 #### 6.3.1 Apikey
 
-This is a string containing the API key assigned to the Language Translator service in your IBM Cloud. See section 1.1.1 [IBM Cloud](#IBMCloud) for more details.
+This is a string containing the API key assigned to the Language Translator service in your IBM Cloud. See the section [IBM Cloud](#IBMCloud) for more details.
 
 #### 6.3.2 Url
 
-This is a string containing the URL assigned to the Language Translator service in your IBM Cloud.  See section 1.1.1 [IBM Cloud](#IBMCloud) for more details.
+This is a string containing the URL assigned to the Language Translator service in your IBM Cloud.  See the section [IBM Cloud](#IBMCloud) for more details.
 
 #### 6.3.3 Translation
 
@@ -439,11 +439,11 @@ More information on the APIs for the IBM Watson Visual Recognition service is av
 
 #### 7.1.1 Apikey
 
-This is a string containing the API key assigned to the Visual Recognition service in your IBM Cloud. See section 1.1.1 [IBM Cloud](#IBMCloud) for more details.
+This is a string containing the API key assigned to the Visual Recognition service in your IBM Cloud. See the section [IBM Cloud](#IBMCloud) for more details.
 
 #### 7.1.2 Url
 
-This is a string containing the URL assigned to the Visual Recognition service in your IBM Cloud.  See section 1.1.1 [IBM Cloud](#IBMCloud) for more details.
+This is a string containing the URL assigned to the Visual Recognition service in your IBM Cloud.  See the section [IBM Cloud](#IBMCloud) for more details.
 
 #### 7.1.3 Visual Request Object
 
@@ -508,11 +508,11 @@ Values for the classifier status are:
 
 #### 7.2.1 Apikey
 
-This is a string containing the API key assigned to the Visual Recognition service in your IBM Cloud. See section 1.1.1 [IBM Cloud](#IBMCloud) for more details.
+This is a string containing the API key assigned to the Visual Recognition service in your IBM Cloud. See the section [IBM Cloud](#IBMCloud) for more details.
 
 #### 7.2.2 Url
 
-This is a string containing the URL assigned to the Visual Recognition service in your IBM Cloud.  See section 1.1.1 [IBM Cloud](#IBMCloud) for more details.
+This is a string containing the URL assigned to the Visual Recognition service in your IBM Cloud.  See the section [IBM Cloud](#IBMCloud) for more details.
 
 #### 7.2.3 Classifier
 
@@ -535,11 +535,11 @@ This is the name of a string containing the ID of the new classifier.
 
 #### 7.3.1 Apikey
 
-This is a string containing the API key assigned to the Visual Recognition service in your IBM Cloud. See section 1.1.1 [IBM Cloud](#IBMCloud) for more details.
+This is a string containing the API key assigned to the Visual Recognition service in your IBM Cloud. See the section [IBM Cloud](#IBMCloud) for more details.
 
 #### 7.3.2 Url
 
-This is a string containing the URL assigned to the Visual Recognition service in your IBM Cloud.  See section 1.1.1 [IBM Cloud](#IBMCloud) for more details.
+This is a string containing the URL assigned to the Visual Recognition service in your IBM Cloud.  See the section [IBM Cloud](#IBMCloud) for more details.
 
 #### 7.3.3 Classifier id
 
@@ -563,11 +563,11 @@ This action allows you to analyze and get data about faces in images. Responses 
 
 #### 7.4.1 Apikey
 
-This is a string containing the API key assigned to the Visual Recognition service in your IBM Cloud. See section 1.1.1 [IBM Cloud](#IBMCloud) for more details.
+This is a string containing the API key assigned to the Visual Recognition service in your IBM Cloud. See the section [IBM Cloud](#IBMCloud) for more details.
 
 #### 7.4.2 Url
 
-This is a string containing the URL assigned to the Visual Recognition service in your IBM Cloud.  See section 1.1.1 [IBM Cloud](#IBMCloud) for more details.
+This is a string containing the URL assigned to the Visual Recognition service in your IBM Cloud.  See the section [IBM Cloud](#IBMCloud) for more details.
 
 #### 7.4.3 Image
 
@@ -613,11 +613,11 @@ This action returns a list of *custom* classifiers which can be used in visual r
 
 #### 7.5.1 Apikey
 
-This is a string containing the API key assigned to the Visual Recognition service in your IBM Cloud. See section 1.1.1 [IBM Cloud](#IBMCloud) for more details.
+This is a string containing the API key assigned to the Visual Recognition service in your IBM Cloud. See the section [IBM Cloud](#IBMCloud) for more details.
 
 #### 7.5.2 Url
 
-This is a string containing the URL assigned to the Visual Recognition service in your IBM Cloud.  See section 1.1.1 [IBM Cloud](#IBMCloud) for more details.
+This is a string containing the URL assigned to the Visual Recognition service in your IBM Cloud.  See the section [IBM Cloud](#IBMCloud) for more details.
 
 #### 7.5.3 Variable (List of Classifier)
 

@@ -125,7 +125,7 @@ Changes you receive from the repository when updating are combined with the chan
 
 For example, if the last time you updated you received all changes up to and including revision 40, this means that the original for your working copy is revision 40. Since you started making changes to your working copy, other people on your team have made another four commits (41, 42, 43 and 44). If you now update, you will receive those changes and 44 will be the new *original* to which your changes are compared.
 
-Usually, combining your changes with the latest revision from the repository will be done automatically. For example, one person may add a form while you are changing a microflow. If the changes are too close, however, a conflict can arise. For example, if one of your team has changed the properties of the same data view which you have also changed. You will have to resolve such conflicts before you can commit. See section 6, [Dealing With Conflicts](#conflicts) for information on how to do this.
+Usually, combining your changes with the latest revision from the repository will be done automatically. For example, one person may add a form while you are changing a microflow. If the changes are too close, however, a conflict can arise. For example, if one of your team has changed the properties of the same data view which you have also changed. You will have to resolve such conflicts before you can commit. See the  [Dealing With Conflicts](#conflicts) section, below, for information on how to do this.
 
 If your team is committing often you will have to update often. Frequent updating has the benefit that you receive fewer changes with each update, so integrating those changes with your work is easier.
 
@@ -310,7 +310,7 @@ When it creates the package, Studio Pro will also create a tag representing this
 
 #### 8.3.1 Deploying a Specific Version to a Mendix Licensed Cloud Node
 
-If you are using the Mendix Cloud you can choose **Project > Deploy to Licensed Cloud Node** to dpeloy a specific version.
+If you are using the Mendix Cloud you can choose **Project > Deploy to Licensed Cloud Node** to deploy a specific version.
 
 ![](attachments/using-version-control-in-studio-pro/2018-02-21_17-05-05.png)
 

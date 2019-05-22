@@ -73,44 +73,46 @@ Using Kafka is a relevant option for this case, especially when the Mendix app i
 
 ## 5 State Engines & Event Managers {#state}
 
-A good example of event based processing is for packages sent by a postal service sometimes take longer than anticipated to be delivered, and the receiver needs to find out where the package is, so uses a Track and Trace system. Track and Trace in turn is fed by an Event manager that scopes up all events in the chain an that way knows what has happened to a package and where it is in the process. 
+A good example of event-based processing occurs when a package sent by post takes longer to be delivered than anticipated and the receiver needs to find out where the package is, so they use a track-and-trace system. A track-and-trace system is fed by an event manager that gathers all the events in a chain and thus knows what has happened to the package and where it is in the process. 
 
 ![](attachments/event-integration/state.png)
 
-Theses processes are very high-volume and 99% straight-through processing and involve a chain of systems as is often the case in Supply-Chain and logistics solutions. Sometimes, the real world does not exactly match the data in the systems and there are many exceptions. 
+Theses processes have very high volumes and 99% straight-through processing. Furthermore, they involve a chain of systems, as is often the case in supply-chain and logistics solutions. Sometimes, the real world does not exactly match the data in the systems, and there can be many exceptions. 
 
-When one stage of the process finishes, the system pushes the event to a queue of some kind (for more information, see [Using Queues with Mendix](#queues) below). The systems are  decoupled, but it requires an Event Manager or State Enging to manage any errors in the process
+When one stage of the process finishes, the system pushes the event to a queue of some kind (for details, see [Using Queues with Mendix](#queues) below). The systems are decoupled, but an event manager or state engine is required to manage any errors in the process.
 
-The Event Manager collects events from a number of systems, devices, and scanners that are part of the process and puts together what the status is. 
+The event manager collects events from a number of systems, devices, and scanners that are part of the process. Then it puts together what the status is. 
 
 ## 6 Using Queues with Mendix {#queues}
 
 ### 6.1 Using Internal Queues
 
-Mendix itself does not currently provide an external queue management system. So most organizations use the Mendix internal queues instead, which means there is only one technology and fewer places to look for errors and one less deployment point. 
+Mendix itself does not currently provide an external queue management system, so most organizations use Mendix internal queues instead. This means that there is only one technology used, fewer places to look for errors, and one fewer deployment point.
 
-In the Mendix App Store, there are two options for internal queue. Please contact Mendix Expert Services if you hesitate on which one to use.
+In the Mendix App Store, there are two options for internal queues:
 
-1. The queue provided by Mendix Expert Services: [Process Queue](https://appstore.home.mendix.com/link/app/393/)
-2. A Queue provided by Webflight, [Queue] https://appstore.home.mendix.com/link/app/106628/
+* The queue module provided by Mendix Expert Services: [Process Queue](https://appstore.home.mendix.com/link/app/393/)
+* A queue module provided by [WebFlight](https://developer.mendixcloud.com/link/partnerprofile/17438): [Queue](https://appstore.home.mendix.com/link/app/106628/)
 
-There are plans to provide Kafka as a queueing system for Mendix “under the hood." in future releases.
+Please contact the Mendix Architecture Guild via <DIS_Architecture_Guild@mendix.com> if you need advice on which one to use.
 
-### 6.1 Using External Queues
+There are plans to provide Kafka as a queueing system for Mendix “under the hood" in a future release.
 
-Many customers also use Mendix with external queues like Rabbit MQ, IBM MQ, and HornetQ. In the Mendix App Store, there are connectors to most standard queue managers on the market. A limitation can be the queue size or the time-to live, which is often limited. In really high-volume situations, customers can use a Mendix input app as a queue, which would have almost indefinite depth and no limits on time-to-live.
+### 6.2 Using External Queues
 
-Queues often used with Mendix are 
+Many customers also use the Mendix Platform with external queues like [RabbitMQ](https://www.rabbitmq.com/), [IBM MQ](https://www.ibm.com/support/knowledgecenter/en/SSFKSJ_8.0.0/com.ibm.mq.pro.doc/q001020_.htm), and [HornetQ](http://hornetq.blogspot.com/2015/06/hornetq-apache-donation-and-apache.html). In the Mendix App Store, there are connectors to most standard queue managers on the market. A limitation can be the queue size or the time-to-live, which is often limited. In really high-volume situations, customers can use a Mendix input app as a queue, which would have almost indefinite depth and no limits on time-to-live.
 
-* Kafka, https://appstore.home.mendix.com/link/app/67994/
-* Rabbit MQ, https://appstore.home.mendix.com/link/app/3066/ 
-* MQTT for Azure IoT https://appstore.home.mendix.com/link/app/3066/
-* MindSphere, see https://docs.mendix.com/refguide/mindsphere/
+These are the queue connectors often used with Mendix: 
+
+* [Kafka Connector](https://appstore.home.mendix.com/link/app/67994/)
+* [Rabbit MQ Connector](https://appstore.home.mendix.com/link/app/31947/) 
+* [MQTT Client](https://appstore.home.mendix.com/link/app/3066/)
+* [Siemens MindSphere](https://docs.mendix.com/refguide/mindsphere/)
 
 Other connectors exist or are very easy to build with a Java action if required. 
 
-## Summary
+## 7 Summary
 
-Event driven interfaces play a role in the business applications world, when synchronous calls are difficult to do or manage, or when it is a one-way communication. Even when it is a functionally asynchronous interaction, it is often implemented in Mendix using an internal queue, see <<Service Integration>>, but in some cases an ESB, message broker, Kafka or external queues are used, see << Integration Layers>>
+Event-driven interfaces play a role in the business applications world when synchronous calls are difficult to do or manage or when there is one-way communication. Even when the interaction is functionally asynchronous, it is often implemented in the Mendix Platform using an internal queue (for details, see [Service Integration](service-integration)). However, in some cases, an ESB, message broker, Kafka, or external queue is used (for more information, see [Integration Layers](integration-layers)).
 
-In the rapidly expanding area of IoT, user metrics and monitoring, event streaming solutions are becoming much more common. The extreme volumes and the many subscribers and publishers make Kafka and other similar solutions very attractive. Mendix apps interact very well with these frameworks, providing dashboards, rules and/or easy integration.
+In the rapidly expanding area of IoT, with user metrics and monitoring, event-streaming solutions are becoming much more common. The extreme volumes and the many subscribers and publishers make Kafka and similar solutions very attractive. Mendix apps interact well with these frameworks, providing dashboards, rules, and easy integration.

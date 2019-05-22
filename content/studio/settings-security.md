@@ -188,7 +188,7 @@ You can manage app users only after you publish your app.
 
 {{% /alert %}}
 
-Open **Roles and Permissions** and click **Manage Users** in the top-right of the screen. 
+To manage app users, open **Roles and Permissions** and click **Manage Users** in the top-right of the screen. 
 
 ![](attachments/settings-security/manage-users-button.png)
 

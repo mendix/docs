@@ -8,7 +8,7 @@ Although our platform is highly accessible and new versions of our products are 
 
 Mendix Support is here to answer any questions and solve any issues that you might have. We try to make your journey as frictionless as possible.
 
-### 1.1 Service Level Agreements
+### 1.1 Service Level Agreements {#sla}
 
 We are available for all users of the Mendix platform, and we are bound by service-level agreements (SLA) to our licensed customers. Licensed customers can select their type of SLA level: **Platform** or **Platinum**. The SLA level determines the specific agreement on the following points:
 

@@ -42,10 +42,10 @@ These are a few of the main ways the central data pattern is used:
 	* For details, see the [Operational & Data Warehouse Data](#owd) section below
 * **BI solutions** – These extract data from a DWH or data lake, for example
 	* This is often statistical data for management overviews, or it is used to fine-tune processes in smart Mendix apps
-	* For more information, see the [Integration to DWH & BI](batch-file-integration#int) section of *Batch Integration*
+	* For more information, see the [Integration to DWH & BI](batch-integration#int) section of *Batch Integration*
 * **Extract-transform-load (ETL) solutions** – These are usually used for integration towards DWH solutions
 	* They are beneficial for massive data volumes and can compare new data with previous loads 
-	* For more information, see the [Integration to DWH & BI](batch-file-integration#int) section of *Batch Integration*
+	* For more information, see the [Integration to DWH & BI](batch-integration#int) section of *Batch Integration*
 
 ## 3 Operational Data Stores (ODS)  {#ods}
 

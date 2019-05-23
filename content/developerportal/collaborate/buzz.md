@@ -23,7 +23,7 @@ In the Developer Portal, the Buzz lets you see Mendix app activity in your compa
     * You can see your fellow **Team** members on the right side of the app's Buzz page
       * To invite new [App Team](team) members, click the **+** icon
       * Click **Show all** to go to the **Team** page for the app  
-    * You can see recent **App Feedback** on the right side of the page as well
+    * You can also see the app project's **Recent Stories** as well as recent **App Feedback** on the right side of the page
 
 ## 2 Communicating on the Buzz
 

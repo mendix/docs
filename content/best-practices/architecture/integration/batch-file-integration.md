@@ -13,7 +13,7 @@ Batch integration is relevant for business processes that are periodic or when a
 2. Move the data
 3. Import the data
 
-<![](attachments/batch-file-integration/bfi-intro.png)
+![](attachments/batch-file-integration/bi-intro.png)
 
 ### 1.1 Reasons to use Batch Processing
 
@@ -47,7 +47,7 @@ There area three typical examples where Mendix plays a role in master and refere
 
 The diagram below shows an example for managing shared product and customer data across Mendix apps and other systems such as engineering and finance systems.
 
-<< FIGURE 2 - NEW >>
+![](attachments/batch-file-integration/bi-2.png)
 
 1. New or changed product definitions should only be shared at decided moments, so the business process is periodic and all three down-stream systems need to have the data at the same time. I.e. this is a perfect case for Batch integration with files. New data will only be shared at night, when no ordering occurs, and only some nights when marketing, sales and engineering agree it can be released. An FTP server (or any nother file transfer management system) acts as a central point of contact for files.
 2. A customer master data app is outside in Order-to-cash cluster to serve other areas as well. It can be reached via deep-link to create new customers when required, and this data is transferred almost directly to be able to place orders against it. 
@@ -71,7 +71,7 @@ In rare cases, the file space can be extended by filing a support ticket. This c
 
 The diagram shows different options to share or transfer files between two apps. In almost all cases the source app creates the file locally first after which it is transferred. The exception is when a shared folder location is available, in which case both apps can write and read from the same folder.
 
-![](attachments/batch-file-integration/file-integration.png)  <<FIGURE 3>>
+![](attachments/batch-file-integration/file-integration.png)
 
 The five examples are:
 
@@ -86,7 +86,7 @@ In larger organizations the file and batch process management can be quite elabo
 
 In the example below the customer can browse all products, register usage of specific products and download information and documentation related to these producst. In this case the file management is at the core of the solution.
 
-<<FIGURE 4 - NEW>>
+![](attachments/batch-file-integration/bi-4.png)
 
 1. The departments that own the product groups will send files with information to the Portal, e.g. product sheets with meta data, manuals, pictures and 3D models. Updates are periodic, so batch processing is a good way to handle updates.
 2. The Mendix Customer Portal app will poll for new product files and move them to the expanded internal file storage area, registering in the database some file-metadata, linking files to products or product groups.
@@ -100,7 +100,7 @@ Batch processing runs a large set of data at a certain moment. For example, inte
 
 The diagram shows the three main steps of batch processing: export, move, and import file
 
-![](attachments/batch-file-integration/export-import.png)   <<FIGURE 5>>
+![](attachments/batch-file-integration/export-import.png)
 
 Typically the Extract happens at a different time from the Import. The moving of the file can be done separatelly as well, but often the destination app polls a location for a file. When the file appears, it copies the file and triggers the import.
 
@@ -135,10 +135,4 @@ When the DWH wants almost all the data, when the domain model is complex, or whe
 Even as the world moves towards real-time, batch processing provides more efficient processing or the ability to move processing to a time of the day with the app instance is less busy. It alson provides decoupling for business processes that anyway are periodic in nature.
 
 Batch processing is required in almost all enterprises and Mendix support this very well, with an internal scheduler, and good export and import functionality. Mendix apps have an internal file storage area and can also move or get files using a central FTP server or another managed file transfer solution available in the company.
-
-
-
-
-
-
 

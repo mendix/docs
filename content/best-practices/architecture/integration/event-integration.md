@@ -85,7 +85,7 @@ The event manager collects events from a number of systems, devices, and scanner
 
 ## 6 Using Queues with Mendix {#queues}
 
-### 6.1 Using Internal Queues
+### 6.1 Using Internal Queues {#internal-queues}
 
 Mendix itself does not currently provide an external queue management system, so most organizations use Mendix internal queues instead. This means that there is only one technology used, fewer places to look for errors, and one fewer deployment point.
 

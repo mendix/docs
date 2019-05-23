@@ -76,7 +76,7 @@ Microflows that apply entity access have an **Entity Access** tag in the editor.
 | Yes | Entity access is applied to retrieving and manipulating objects. The rights of current user are taken into account. |
 | No | Entity access is not applied. |
 
-{{% alert type="success" %}}
+{{% alert type="info" %}}
 By default entity access is not applied. Set 'Apply entity access' to 'Yes' if you want to perform some actions that respect the access rights of the current user.
 {{% /alert %}}
 

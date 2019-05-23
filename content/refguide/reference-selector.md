@@ -18,7 +18,7 @@ To use a reference selector you need a many-to-one association in the domain mod
 
 The reference selector is similar to a [Report Parameter](report-parameter) except that it allows users to choose from a list of objects with which to fill an association rather than items listed in an enumeration. The selector requires you to choose an entity with which the parent object shares a reference. It will also require you to choose which attribute from that referenced entity you wish to display in the selector.
 
-{{% alert type="success" %}}
+{{% alert type="info" %}}
 
 If you only want to _display_ information, you can also use the text box. This has the added advantage that you can follow more than one association step.
 
@@ -35,7 +35,7 @@ The reference selector allows the end user to select objects by using either a d
 | Page | Select the reference using a pop-up page. |
 | Drop-down | Select the reference using a drop-down. |
 
-{{% alert type="success" %}}
+{{% alert type="info" %}}
 
 The advantage of a selecting using a drop-down is that it is very efficient; no page needs to be opened. The advantage of selecting using a page is that the end user can search the objects. If there are a lot of objects (say, more than 20) to select from, selecting using a page is advisable.
 
@@ -57,7 +57,7 @@ The select page property determines which page is opened when the select page bu
 
 See [Opening Pages](opening-pages). Note that opening select pages in content is prohibited.
 
-{{% alert type="success" %}}
+{{% alert type="info" %}}
 You can generate a new page to show by right-clicking the widget and selecting 'Generate select page...'.
 {{% /alert %}}
 

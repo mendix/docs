@@ -1,7 +1,10 @@
 ---
-title: "Upload To Version Control Server"
+title: "Upload to Version Control Server"
 parent: "dialogs"
+tags: ["studio pro"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
+
 Use this dialog to upload an app that is not yet stored in a version control server.
 
 ## Location

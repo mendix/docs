@@ -1,7 +1,7 @@
 ---
-title: "Data view"
+title: "Data View"
 parent: "data-widgets"
-tags: ["Page", "Display", "widget", "object"]
+tags: ["Page", "Display", "widget", "object", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -102,23 +102,13 @@ See the corresponding data source for specific properties:
 * [Microflow source](microflow-source) - a microflow returning only one object
 * [Listen to widget source](listen-to-grid-source) - any widget returning only one object
 
-### 6.3 Use Schema
-
-{{% alert type="info" %}}
-
-This property has been deprecated in version 7.2.0 and is marked for removal in version 8.0.0.
-
-{{% /alert %}}
-
-Curently this has no effect.
-
 ## 7 Visibility Properties
 
 {{% snippet file="refguide/Visibility+Property.md" %}}
 
 {{% snippet file="refguide/Visibility+Property+With+Module+Roles+Simple.md" %}}
 
-## 8 Related Content
+## 8 Read More
 
 * [Entities](entities)
 * [Associations](associations)

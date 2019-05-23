@@ -1,12 +1,13 @@
 ---
 title: "Debug Java Actions"
 category: "Monitoring & Troubleshooting"
-tags: []
+menu_order: 6
+tags: ["monitoring", "troubleshooting", "debug", "java action"]
 ---
 
 ## 1 Introduction
 
-The Mendix Modeler has a built-in debugger to solve errors on the microflow level. A microflow can be extended with custom Java actions, but because these actions are text-based, they can only be checked on compile errors. If you run into an error in any of the Java actions, you can easily debug them by utilizing the debugger of Eclipse.
+Mendix Studio Pro has a built-in debugger to solve errors on the microflow level. A microflow can be extended with custom Java actions, but because these actions are text-based, they can only be checked on compile errors. If you run into an error in any of the Java actions, you can easily debug them by utilizing the debugger of Eclipse.
 
 **This how-to will teach you how to do the following:**
 
@@ -20,7 +21,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Install [Eclipse](https://eclipse.org/)
 * Add a Java action and open the project in Eclipse
 * Read [How to Extend Your Application with Custom Java](../logic-business-rules/extending-your-application-with-custom-java)
-* Deploy the application for Eclipse by selecting **Deploy for Eclipse** from the project menu in the Modeler (you should redo this every time you make changes in the Modeler):
+* Deploy the application for Eclipse by selecting **Deploy for Eclipse** from the project menu in Studio Pro (you should redo this every time you make changes in Studio Pro):
     ![](attachments/18448685/18581045.png)
 
 ## 3 Setting Breakpoints
@@ -59,15 +60,15 @@ Before starting this how-to, make sure you have completed the following prerequi
 5. Place your cursor on any of the variables in the Java action to see its value in a pop-up window:
     ![](attachments/18448578/18580057.png)
 
-## 5 Related Content
+## 5 Read More
 
-* [How to Find the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
-* [How to Clear Warning Messages in Mendix](clear-warning-messages)
-* [How to Test Web Services Using SoapUI](../testing/testing-web-services-using-soapui)
-* [How to Monitor Mendix Using JMX](monitoring-mendix-using-jmx)
-* [How to Debug Java Actions Remotely](debug-java-actions-remotely)
-* [How to Log Levels](log-levels)
-* [How to Debug Microflows](debug-microflows)
-* [How to Common Mendix SSO Errors](handle-common-mendix-sso-errors)
-* [How to Debug Microflows Remotely](debug-microflows-remotely)
-* [Java Actions](/refguide7/java-actions)
+* [Find the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
+* [Clear Warning Messages in Mendix](clear-warning-messages)
+* [Test Web Services Using SoapUI](../testing/testing-web-services-using-soapui)
+* [Monitor Mendix Using JMX](monitoring-mendix-using-jmx)
+* [Debug Java Actions Remotely](debug-java-actions-remotely)
+* [Log Levels](log-levels)
+* [Debug Microflows](debug-microflows)
+* [Common Mendix SSO Errors](handle-common-mendix-sso-errors)
+* [Debug Microflows Remotely](debug-microflows-remotely)
+* [Java Actions](/refguide/java-actions)

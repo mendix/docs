@@ -1,6 +1,8 @@
 ---
 title: "Set Up Your Partner Profile"
 category: "Community Tools"
+menu_order: 60
+description: "Describes how to configure the various parts of your Mendix Partner Profile, such as projects."
 tags: ["authorized", "expert", "professional", "4 p's"]
 ---
 
@@ -25,7 +27,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 To log in to the Partner Profile, edit it, and make it public, follow these steps:
 
 1. Log in to your own Mendix Community Profile [here](https://developer.mendixcloud.com/openid/login?immediate=true&continuation=link/ownprofile/). Now Mendix knows who you are and which company is attached to your account.
-2. At the top of your Community Profile, you will see your role and comapny (for example, "Senior Developer at **Finaps**"). When your company is a partner, the company name is clickable. Click your company name to go to its Partner Profile. 
+2. At the top of your Community Profile, you will see your role and company (for example, "Senior Developer at **Finaps**"). When your company is a partner, the company name is clickable. Click your company name to go to its Partner Profile. 
 3.  If you are authorized as a Partner Profile Editor, click **Edit Partner Profile** to edit the profile:
 
     ![](attachments/how-to-set-up-your-partner-profile/edit-partner-profile.png)
@@ -215,3 +217,7 @@ The [Meet Our Partners page](https://developer.mendixcloud.com/openid/login?imme
 * Whether your company is Expert (which will get the most weight in sorting), Professional, or Authorized (for more information, see the [Capability Tracks](#capability) section)
 * The total amount of certified developers (note that developers with multiple certifications count as one certified developer)
 * The total number of projects you have published on your Partner Profile
+
+## 11 Read More
+
+* [Mendix Jobs Board](mendix-job-board)

@@ -22,7 +22,7 @@ This how-to serves as a checklist for implementing security for your on-premises
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Use a Mendix version containing the latest security patches
-    * If your app runs in the Mendix Cloud and uses Mendix version 3.3.3, 4.3.0, or higher, it will automatically comply with this checklist once it is deployed
+    * If your app runs in the Mendix Cloud, it will automatically comply with this checklist once it is deployed
 
 ## 3 Using an Unprivileged Dedicated User Account for Every Application
 
@@ -56,11 +56,11 @@ The admin port will by default only allow connections from the local host. In ca
 
 Choose a strong password to protect the administrative interface running on the admin TCP port. Set this password to a long random string (when using the Windows Service Console, this is automatically done.) It is not used manually anywhere, and it is only used in the background by administrative tools like m2ee-tools and the Windows Service Console to be able to connect back to the Mendix application after it has been started for administrative tasks.
 
-## 9 Do Not Connect to a Production Database Using the Modeler
+## 9 Do Not Connect to a Production Database Using Studio Pro
 
-NEVER use the Mendix Modeler to directly connect to a production database (for example, by using an SSH tunnel to the database or the Modeler on a Windows server). Because the Modeler is always running in development mode, it will instantaneously reset the password of the "admin user," which is defined in the Modeler to its development default. This likely means there will be an "MxAdmin" user with a password set to "1" (or this account will be created when it does not exist).
+**Never** use Mendix Studio Pro to directly connect to a *production* database (for example, by using an SSH tunnel to the database or Studio Pro on a Windows server). Because Studio Pro is always running in development mode, it will instantaneously reset the password of the "admin user," which is defined in Studio Pro, to its development default. This likely means there will be an "MxAdmin" user with a password set to "1" (or this account will be created when it does not exist).
 
-## 10 Related Content
+## 10 Read More
 
 * [How to Restore a SQL Server Database](restoring-a-sql-server-database)
 * [How to Troubleshoot an SQL Server](troubleshooting-sql-server)
@@ -68,5 +68,4 @@ NEVER use the Mendix Modeler to directly connect to a production database (for e
 * [How to Set Up a New SQL Server Database](setting-up-a-new-sql-server-database)
 * [How to Set Up a SQL Server User](setting-up-a-sql-server-user)
 * [How to Deploy Mendix on Microsoft Windows](deploy-mendix-on-microsoft-windows)
-* [How to Install Mendix on Debian GNU Linux](installing-mendix-on-debian-gnu-linux)
-* [How to Install Mendix on RedHat and CentOS](installing-mendix-on-redhat-and-centos)
+* [U*ix Deployment](unix-like)

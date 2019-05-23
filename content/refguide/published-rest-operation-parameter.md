@@ -1,19 +1,22 @@
 ---
-title: "Published REST Operation Parameter"
-parent: "published-rest-services"
+title: "Operation Parameters for Published REST"
+parent: "published-rest-service"
+menu_order: 20
+description: "Configure a published REST Operation by adding parameters to an operation "
+tags: ["published REST", "operation", "parameter", "resource", "mapping", "not found", "commit"]
+# If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
+# linked from DM integration - published rest > select resource > add operation for resource > add parameter > help)
 ---
 
 ## 1 Introduction
 
-When a client calls a published REST operation, they call a URL with an optional query string and possibly a body. These parameters can be passed to the microflow and import mapping as path parameters, query parameters, and body parameters respectively. When you add or edit a parameter in a published REST operation, you can specify the settings described below. 
+When a client calls a published REST operation, they call a URL with an optional query string and possibly a body. These parameters can be passed to the microflow and import mapping as path parameters, query parameters, and body parameters respectively.
+
+<!-- needs clarifying, 2 things cannot map to three things 'respectively' -->
+
+When you add or edit a parameter in a published REST operation, you can specify the settings described below. These settings are in the *add parameter* pop-up dialog in the *add operation for resource* dialog.
 
 ## 2 General
-
-{{% alert type="info" %}}
-
-These fields were introduced as read-only in the parameter list in version 7.12.0, and as read-only in the dialog box in version 7.14.0. They are editable since version 7.17.0.
-
-{{% /alert %}}
 
 ### 2.1 Parameter Type
 
@@ -42,33 +45,15 @@ The mapping group is only shown for body parameters.
 
 ## 3.1 Import Mapping
 
-{{% alert type="info" %}}
-
-This feature was introduced in version 7.14.0
-
-{{% /alert %}}
-
 Specify the import mapping that converts the body of the request (JSON or XML) into an Object or a List.
 
 You can use an import mapping that takes a primitive parameter (string, integer, etcetera) if the operation has no more than one path parameter with that type. The value of that path parameter will be passed to the microflow. If there is no path parameter, and empty value will be passed to the import mapping.
 
 ## 3.2 If No Object Was Found
 
-{{% alert type="info" %}}
-
-This feature was introduced in version 7.17.0
-
-{{% /alert %}}
-
 You can indicate what should happen **if no object was found** when the import mapping has checked the box **decide this at the place where the mapping gets used**. Typically this is **Create** for **POST** operations and **Error** for **PUT** and **PATCH** operations.
 
 ## 3.3 Commit
-
-{{% alert type="info" %}}
-
-This feature was introduced in version 7.14.0
-
-{{% /alert %}}
 
 You can indicate whether the import mapping should commit the objects that it creates or changes. You can choose between the following:
 

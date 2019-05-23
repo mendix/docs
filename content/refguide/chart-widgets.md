@@ -1,7 +1,7 @@
 ---
 title: "Chart Widgets"
 parent: "pages"
-tags: ["Charts", "Any Chart", "Desktop Modeler", "Pages"]
+tags: ["Charts", "Any Chart", "Studio Pro", "Pages"]
 ---
 
 ## 1 Introduction
@@ -25,7 +25,7 @@ With Mendix Charts you can quickly create beautiful charts. The following charts
 * **Pie** chart – a pie or a doughnut chart
 * **Time series** – show data ordered by time
 
-The widgets contain several settings which can be changed in the Modeler to customize the look and feel and also offer support for on click events and custom tooltips. See [Chart Configuration](charts-configuration) to learn how to configure Mendix charts.
+The widgets contain several settings which can be changed in Studio Pro to customize the look and feel and also offer support for on click events and custom tooltips. See [Chart Configuration](charts-configuration) to learn how to configure Mendix charts.
 
 **Dynamic Series Chart**
 
@@ -41,7 +41,7 @@ This module also contains several building blocks for inspiration and as startin
 
 See [Any Chart Widgets](charts-any-configuration) to learn how to configure *Any charts* widgets.
 
-## 4 Related Content
+## 4 Read More
 
 * [Any Chart Configuration](charts-any-configuration)
 * [Any Chart Building Bocks](charts-any-building-bocks)

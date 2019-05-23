@@ -1,54 +1,39 @@
 ---
 title: "Mobile"
+tags: ["studio pro"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
-Mendix allows you to quickly build apps for mobile devices. This document gives an overview of mobile app development with Mendix and points to relevant documentation pages.
+Mendix allows you to quickly build true [native mobile apps](#nativemobile) and [hybrid apps](#hybridmobile). This document gives an overview of mobile app development with Mendix. 
 
-## 2 Navigation
+With Mendix, you can create different channels (for example, responsive, hybrid mobile, native phone) from a single model using navigation profiles. These mobile profiles can be added and removed separately. If you add a profile, you must also provide a home page for it. For more information on navigation profiles, see [Navigation](navigation). 
 
-Every app starts at the home page. You can specify different home pages for phones and tablets in the [Navigation](navigation) document. The mobile profiles can be added and removed separately. If you add a profile, you also have to provide its home page. Apart from the home page, different home page for different user roles can be specified. In addition, there is a default menu that can be used in [menu widgets](menu-widgets).
+## 2 Native Mobile Apps {#nativemobile}
 
-![](attachments/modeler-core/18582284.png)
+With Mendix 8, it is possible to build fully native mobile apps. Native mobile apps differ from hybrid apps: they do not render inside a web view, but use native UI elements instead. This results in fast performance, smooth animations, natural interaction patterns (like swipe gestures), and improved access to all native device capabilities.  To make such responsive native apps, Mendix leverages the popular open-source framework [React Native](https://facebook.github.io/react-native/).
 
-## 3 Layout
+You build Mendix native mobile apps the same way you build web or hybrid apps. You can use pages, widgets, nanoflows, JavaScript actions, microflows, and many other familiar elements to build your app. For more information on how to to build a native app, see [How to Create and Test a Native Mobile App](/howto/mobile/getting-started-with-native-mobile).
 
-In theory, you can show the whole desktop site on mobile devices, but you probably want to have optimized pages with simpler layouts and less information. [Layouts](layout) help you to create pages that suit a device.
+There are some differences, however, between building native apps and building hybrid apps. For example, the set of widgets (and their available properties) differs slightly when optimizing for native mobile apps. In addition, native apps' theming and styling is based on JavaScript instead of SASS/CSS. For more information on styling, see [Native Styling](native-styling-refguide). 
 
-For mobile devices, you might want to have a layout that hides the menu in a collapsible [sidebar](sidebar-toggle-button).
+## 3 Hybrid Mobile Apps {#hybridmobile}
 
-You will need at least one layout per supported device type (desktop, tablet, phone) to optimize your app, but you can create as many as you like.
+Mendix's hybrid mobile apps are versatile apps viewed through mobile web browsers. Some mobile device features, however, cannot be accessed through the HTML and JavaScript on which these apps are built.
 
-![](attachments/modeler-core/16844053.png)
+Mendix uses [Cordova](https://cordova.apache.org/) in combination with [PhoneGap Build](http://build.phonegap.com/) to build mobile apps which can leverage certain device features and be published to the Apple App Store or Google Play store. Cordova creates a native wrapper around a web application and provides access to native functions through a JavaScript API. These apps are called "hybrid" because they are hybrids of both web and native apps.
 
-## 4 Widgets
+For your hybrid app to access a device's native functions, Mendix provides several widgets in the [Mendix App Store](https://appstore.home.mendix.com/index3.html). You can also build your own custom widgets or JavaScript actions  which leverage native features. For more information on building custom widgets or JavaScript actions, see [How to Build Pluggable Widgets](/howto/extensibility/pluggable-widgets) and [How to Write JavaScript Actions](/howto/extensibility/write-javascript-actions).
 
-Some widgets are more suitable to mobile use than others. For example, the [data grid](data-grid) is not very well suited because of its reliance on multiple columns and multiple search fields. The [list view](list-view) is a simpler, more compact widget for showing a list of objects. [Data views](data-view) lend themselves equally to mobile and desktop usage, but of course this depends on all the widgets you place inside. Some custom widgets can only be used in hybrid mobile apps, because they access native features of the device.
+## 4 Offline-First Apps
 
-## 5 Hybrid Mobile Apps
+With Mendix, you can build apps which work regardless of internet connection. Offline-first applications provide end-users with a continuous experience and the confidence that their data is secure in all situations. Pages and logic interact with an offline database on the device itself, and data is synchronized with the server when possible. This results in a nicer UI, increased reliability, and improved device battery life. For detailed information on offline-first app capabilities, see [Offline First](offline-first).
 
-Mendix apps can simply be viewed in mobile web browsers. However, some features of mobile devices cannot be accessed through HTML and JavaScript.
+Mendix's native mobile apps are always configured with offline-first capabilities. When building a hybrid mobile app, you can choose to build an online app which continously connects with a server, or an offline-first app that works even without an internet connection. This can be configured by choosing the corresponding navigation profile in Mendix Studio Pro. For more instructions on setting up such a profile, see [Navigation](navigation).
 
-If you want to publish your app in the Apple App Store or Google Play, you have to wrap the app in a native shell. We use [PhoneGap](http://phonegap.com/) to do this. PhoneGap creates a native wrapper around a web application and provides access to native functions through a Javascript API. These apps are also called "hybrid" apps, because they are a hybrid of a web and a native app. Mendix facilitates the creation of hybrid mobile apps in a number of ways.
+## 5 Main Documents in This Category
 
-### 5.1 Hybrid Mobile Widgets
-
-To access native functions of the device, we provide a number of PhoneGap widgets in the Mendix App Store. And, of course, you can build your own custom widgets that use native features. PhoneGap widgets can be recognized by their special icon. You can also search for them by via **Edit** > **Find Advanced** in the Mendix Desktop Modeler.
-
-![](attachments/modeler-core/16844052.png)
-
-### 5.2 Offline Apps
-
-Separate profiles are available for building [offline apps](offline). These apps can run even when there is no network connection available, because they store their data on the device itself. When the device connects to the network, the user can synchronize with the main application. Note that there are some restrictions compared to connected apps.
-
-## 6 Documents in This Category
-
-* [Configuring Hybrid Mobile Apps To Run Offline](configuring-hybrid-mobile-apps-to-run-offline)
-* [Customizing Hybrid Mobile Apps](customizing-hybrid-mobile-apps)
-* [Customizing PhoneGap Build Packages](customizing-phonegap-build-packages)
-* [Developing Hybrid Mobile Apps](developing-hybrid-mobile-apps)
-* [Getting the Mendix Mobile App](getting-the-mendix-app)
-* [Managing App Signing Keys](managing-app-signing-keys)
-* [Packaging Hybrid Mobile Apps](packaging-hybrid-mobile-apps)
-* [Publishing Hybrid Mobile Apps](publish-packages-to-mobile-stores)
+* [Native Mobile](native-mobile)
+* [Hybrid Mobile](hybrid-mobile)
+* [Offline First](offline-first)

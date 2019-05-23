@@ -1,8 +1,8 @@
 ---
-title: "Row (document template)"
+title: "Row (Document Template)"
 parent: "table-document-template"
+tags: ["studio pro"]
 ---
-
 
 Rows are part of a table. They contain cells which in turn can contain other widgets.
 

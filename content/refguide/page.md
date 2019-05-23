@@ -1,18 +1,27 @@
 ---
 title: "Page"
 parent: "pages"
+tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
-{{% alert type="warning" %}}
+{{% alert type="info" %}}
 
 This document describes the properties of a page. For details on what pages are for and what kind of widgets can be placed on them, see [Pages](pages).
 
 {{% /alert %}}
 
 Pages define the end-user interface of a Mendix application. Every page is based on a [layout](layout). A page fills the "gaps" defined by a layout with widgets such as the [data view](data-view) and [data grid](data-grid).
+
+{{% alert type="info" %}}
+It is possible to switch to a WYSIWYG editor for your page by clicking the **Design mode** button in the page editor.
+You can return to the structural editor by clicking **Structure mode**
+
+![Design mode and Structure mode buttons](attachments/pages/design-mode.png)
+
+{{% /alert %}}
 
 ## 2 Common Properties
 
@@ -34,7 +43,7 @@ Pages define the end-user interface of a Mendix application. Every page is based
 
 ### 4.1 Title
 
-The title of the page that is shown using the [page title widget](page-title). If the page is shown in a pop-up window, the title appears in the title bar of the pop-up. The title can be overridden from places where forms are opened to make it possible to reuse a page for different purposes. For example, a [grid create button](grid-new-button) and an [edit button](edit-button) can refer to the same page, but they override the titles to **New** and **Edit**, respectively.
+The title of the page that is shown using the [page title widget](page-title). If the page is shown in a pop-up window, the title appears in the title bar of the pop-up. The title can be overridden from places where forms are opened to make it possible to reuse a page for different purposes. For example, a [grid create button](grid-new-button) and an [action button](action-button) (for editing) can refer to the same page, but they override the titles to **New** and **Edit**, respectively.
 
 ### 4.2 Layout
 
@@ -56,7 +65,7 @@ In simple e-commerce applications, the URLs can be configured as follows:
 
 ### 5.1 Visible For
 
-These are the module roles for which the page is visible. This has an effect on [menu widgets](menu-widgets) and on buttons that are visible only if allowed (for example, the [edit button](edit-button)).
+These are the module roles for which the page is visible. This has an effect on [menu widgets](menu-widgets) and on buttons that are visible only if allowed (for example, an [action button](action-button) for editing).
 
 For more information, see [Module Security](module-security).
 
@@ -86,14 +95,14 @@ Specifies whether the pop-up is resizable (Yes) or fixed-size (No).
 
 Configures the behavior of the popup close button (the little cross in the top-right corner). The default behavior of the popup close button is to rollback any changes and close the popup. If you want to customize the behavior of the popup close button, you can point to a button on the page. When the popup close button is clicked, it will then act as if the selected button is clicked. If the selected button is not available the popup close button will revert back to the default behavior.
 
- _Default value:_ Default (cancel)
+*Default value:* Default (cancel)
 
 ## 7 Usage Properties
 
 ### 7.1 Mark as Used
 
-You can search for unused items in the Modeler by pressing <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F</kbd>. Pages that are only used from Java code will be listed as unused, because the Modeler cannot look inside Java source code.
+You can search for unused items in Studio Pro by pressing <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F</kbd>. Pages that are only used from Java code will be listed as unused, because Studio Pro cannot look inside Java source code.
 
-By setting the propery **Mark as used** to **Yes**, you specify that the document is used implicitly and the Modeler will no longer list it when searching for unused items.
+By setting the propery **Mark as used** to **Yes**, you specify that the document is used implicitly and Studio Pro will no longer list it when searching for unused items.
 
 *Default value:* No

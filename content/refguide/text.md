@@ -1,9 +1,9 @@
 ---
 title: "Text"
 parent: "common-widgets"
+tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
-
 
 The text widget shows text which can optionally contain parameters. Every parameter is replaced with the value of the attribute it refers to. The text widget is the recommended way to show text to the user.
 
@@ -15,7 +15,7 @@ Text widget placed in a data view, showing a greeting message to the user.
 
 {{% /alert %}}
 
-If you start typing in any empty container the Modeler will automatically generate a text widget to display your text.
+If you start typing in any empty container Studio Pro will automatically generate a text widget to display your text.
 
 ## General properties
 

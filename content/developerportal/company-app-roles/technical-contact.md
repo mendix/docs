@@ -2,7 +2,7 @@
 title: "Technical Contact"
 category: "Company & App Roles"
 menu_order: 30
-description: "This page describes the role of a Mendix Technical Contact."
+description: "Describes the role of a Mendix Technical Contact."
 tags: ["Technical Contact","Settings","Developer Portal"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -29,14 +29,14 @@ For apps in the Mendix Cloud, the Technical Contact is the first point of contac
 * Can receive alerts from the Mendix app when problems arise (for example, CPU load is high, running out of disk space)
 * Can configure the alert settings in the **Monitoring** tab of the cloud node
 
-As a Technical Contact, you can perform all the regular operations on the Mendix Cloud node in the [Developer Portal](http://home.mendix.com). Additionally, you can manage the access rights of your team members so that they can deploy, stop and start the app, and perform other actions. For more information, see [Security & Node Permissions](/developerportal/deploy/node-permissions).
+As a Technical Contact, you can perform all the regular operations on the Mendix Cloud node in the [Developer Portal](http://home.mendix.com). Additionally, you can manage the access rights of your team members so that they can deploy, stop and start the app, and perform other actions. For more information, see [Node Permissions](/developerportal/deploy/node-permissions).
 
 These are some details about managing licenses (renewals, activation, and upgrades):
 
 * Mendix is responsible for Mendix Cloud app renewals
 * Contact your Customer Success Manager (CSM) if you want to expand the license
 
-You can submit requests in the [Support Portal](https://support.mendix.com) for questions, changes, and incidents.
+You can submit requests in the [Mendix Support Portal](https://support.mendix.com) for questions, changes, and incidents.
 
 ### 2.2 On-Premises
 
@@ -53,7 +53,7 @@ You can submit requests in the [Mendix Support Portal](https://support.mendix.co
 
 For details on how to change the Technical Contact, see the [Changing the Technical Contact](manage-roles#change-technical-contact) section of *How to Manage Company & App Roles*.
 
-## 4 Related Content
+## 4 Read More
 
 * [Company & App Roles](/developerportal/company-app-roles/index)
 * [Company Admin Settings](/developerportal/company-app-roles/companyadmin-settings)

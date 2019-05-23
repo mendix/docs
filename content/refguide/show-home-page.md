@@ -1,6 +1,7 @@
 ---
 title: "Show Home Page"
 parent: "client-activities"
+tags: ["studio pro"]
 ---
 
 {{% alert type="info" %}}

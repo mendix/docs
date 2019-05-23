@@ -1,15 +1,20 @@
 ---
-title: "XPath true"
+title: "XPath True"
 parent: "xpath-constraint-functions"
+tags: ["studio pro"]
 ---
 
+## 1 Overview
 
-The function `true()` returns the boolean value `true`.
+The function `true()` returns the Boolean value `true`.
 
-To use the values `true` or `false` in XPath queries, it is necessary to either call true()/false() functions or to enclose the values in quotation marks.
+To use the values `true` or `false` in XPath queries, it is necessary to either call `true()` or `false()` functions, or to enclose the values in quotation marks.
+
+## 2 Example
+
+This query returns all the customers who are classified as "gold customers":
 
 ```java
 //Sales.Customer[IsGoldCustomer = true()]
 ```
 
-This query returns all customers who are classified as gold customers.

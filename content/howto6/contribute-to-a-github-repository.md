@@ -41,10 +41,10 @@ To submit changes, follow these guidelines:
 * After feedback has been given, Mendix expects a response within two weeks
     * After two weeks, we may close the pull request if it isn't showing any activity
 
-## 5 Related Content
+## 5 Read More
 
 * [Managing Your Application Requirements with Mendix](/developerportal/collaborate/stories)
 * [Starting Your Own Repository](starting-your-own-repository)
 * [Using Team Server – Version Control](using-team-server-version-control)
-* [Gathering User Feedback](/developerportal/feedback/use-feedback-widget)
+* [Gathering User Feedback](/developerportal/collaborate/use-feedback-widget)
 * [Sharing the Development Database](sharing-the-development-database)

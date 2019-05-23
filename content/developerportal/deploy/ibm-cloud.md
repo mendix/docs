@@ -4,9 +4,10 @@ category: "Deployment"
 description: "Describes how to deploy a Mendix app to the IBM Cloud"
 menu_order: 30
 tags: ["Deployment", "IBM", "IBM Cloud", "Environment"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1    Introduction
+## 1 Introduction
 
 As a Mendix user with an IBM Cloud account you have access to many IBM resources which you want to use in a Mendix app. This how-to shows you how to create a Mendix app on the Mendix platform and then deploy it to IBM Cloud.
 
@@ -21,8 +22,8 @@ As a Mendix user with an IBM Cloud account you have access to many IBM resources
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Have an [IBM Cloud account](https://console.bluemix.net/registration/)
-* Download the [Mendix Desktop Modeler](https://appstore.home.mendix.com/link/modelers/) – you will need 7.11.0 or higher
-* Be familiar with the basic concepts of editing and deploying a Mendix app; if you are new to Mendix, the [Starter App Tutorial](/howto/tutorials/starter-apps) will introduce you to these concepts
+* Download [Mendix Studio Pro](https://appstore.home.mendix.com/link/modelers/) – you will need version 7.11.0 or higher
+* Be familiar with the basic concepts of editing and deploying a Mendix app
 * Be familiar with the basic concepts of IBM Starter Kits and Toolchain
 
 ## 3 Creating the New App and Setting Up IBM Cloud
@@ -109,7 +110,7 @@ To set up IBM Cloud, follow these steps:
 
     ![](attachments/ibm-cloud/deploymentconfigured.png)
 
-    Your IBM Cloud Foundry environment is now configured. Go to section 3.3 [Creating a Package for IBM Cloud](#create-package) to learn how to create a package which will deploy to IBM Cloud.
+    Your IBM Cloud Foundry environment is now configured. Go to [Creating a Package for IBM Cloud](#create-package), below, to learn how to create a package which will deploy to IBM Cloud.
 
 #### 3.2.2 Deploying to Kubernetes
 
@@ -126,25 +127,38 @@ To set up IBM Cloud, follow these steps:
 
     ![](attachments/ibm-cloud/deploymentconfigured.png)
 
-Your IBM Kubernetes environment is now configured. Go to section 3.3 [Creating a Package for IBM Cloud](#create-package) to learn how to create a package which will deploy to IBM Cloud.
+Your IBM Kubernetes environment is now configured. Go to [Creating a Package for IBM Cloud](#create-package), below, to learn how to create a package which will deploy to IBM Cloud.
 
 ### 3.3 Creating a Package for IBM Cloud {#create-package}
 
-Before you can deploy a package to IBM Cloud you have to create it. At any time, you can create a new deployment package from a committed version of the project. If you are working with the Desktop Modeler you will have to commit the project first.
+Before you can deploy a package to IBM Cloud you have to create it.
 
-#### 3.3.1 Deploying from Within the Desktop Modeler
+#### 3.3.1 Deploying from Within Mendix Studio
 
-You can deploy your app automatically from the Desktop Modeler. However, you will have less control over the deployment than deploying from the Developer Portal.
+It is not possible to deploy your app directly from Studio. Studio is not currently aware of target environments apart from the Mendix Cloud v4. You will have to make use of Studio Pro.
 
-Click **Run** in the Desktop Modeler. This will automatically:
+Sync your app with Studio Pro as described in [Collaborative Development](/refguide/collaborative-development).
+
+Once you have your app in Studio Pro, you can do one of the following: 
+
+* deploy it directly from Studio Pro (see the [Deploying from Within Studio Pro](#deploy-dm) section)
+* commit from Studio Pro and then deploy it from the Developer Portal (see the [Deploying from the Developer Portal](#deploy-dp) section)
+
+#### 3.3.2 Deploying from Within Studio Pro{#deploy-dm}
+
+You can deploy your app automatically from Studio Pro. However, you will have less control over the deployment than deploying from the Developer Portal.
+
+Click **Run** in Studio Pro. This will automatically:
 
 * commit the project
 * generate a deployment package from the latest commit in the current branch
 * push the deployment package to IBM Cloud
 
-You will still need to go to IBM Cloud and manually deploy the package; a message within the Desktop Modeler will let you know when the package is ready and will give you the link to IBM Cloud. See section 3.4 [Deploying a Package to IBM Cloud](#deploy-package) for instructions on how to do the deployment.
+You will still need to go to IBM Cloud and manually deploy the package; a message within Studio Pro will let you know when the package is ready and will give you the link to IBM Cloud. See [Deploying a Package to IBM Cloud](#deploy-package) for instructions on how to do the deployment.
 
-#### 3.3.2 Deploying from the Developer Portal
+#### 3.3.3 Deploying from the Developer Portal{#deploy-dp}
+
+At any time, you can create a new deployment package from a committed version of the project. If you are working with Studio Pro you will have to commit the project first.
 
 To create a package for IBM Cloud within Developer Portal, follow these steps:
 
@@ -153,7 +167,7 @@ To create a package for IBM Cloud within Developer Portal, follow these steps:
 2.  Open the **Environments** page.
 
     You are now ready to create a deployment package which you will then push to IBM Cloud.
- 
+
 3.  Click **Create package from teamserver**.
 
     ![](attachments/ibm-cloud/createpackage.png)
@@ -212,7 +226,7 @@ To create a package for IBM Cloud within Developer Portal, follow these steps:
 
     ![](attachments/ibm-cloud/pushrequest.png)
 
-    Alternatively, follow the link you are given in the Desktop Modeler.
+    Alternatively, follow the link you are given in Studio Pro.
 
     You may need to configure your browser to allow the IBM Cloud page to open.
 
@@ -324,8 +338,11 @@ To change the memory and instances configuration temporarily, do the following:
 
     {{% alert type="info" %}}Unlike the memory and instance configuration, values that you change here are changed permanently and will not be overwritten the next time you deploy the app.{{% /alert %}}
 
-## 5 Related Content
+## 5 Status of IBM Cloud Deployment
+
+The Mendix status page ([https://status.mendix.com/](https://status.mendix.com/)) shows the current status of Mendix services. If you have issues with deploying to IBM via the Developer Portal, you can check the Mendix status page to see if IBM Cloud deployment is operational (under **Mendix Services**) or if there are other Mendix issues which may be affecting your deployment.
+
+## 6 Read More
 
 * [IBM Cloud account](https://console.bluemix.net/registration/)
-* [Mendix Desktop Modeler](https://appstore.home.mendix.com/link/modelers/)
-* [Starter App Tutorial](/howto/tutorials/starter-apps)
+* [Mendix Studio Pro](https://appstore.home.mendix.com/link/modelers/)

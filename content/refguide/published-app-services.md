@@ -1,10 +1,15 @@
 ---
 title: "Published App Services"
 parent: "integration"
+tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
+
+{{% alert type="info" %}}
+App services are deprecated and marked for removal. Use a [published web service](published-web-services) or a [published REST service](published-rest-services) instead.
+{{% /alert %}}
 
 An app service can be created via **File** > **New Document**.
 

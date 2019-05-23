@@ -58,7 +58,7 @@ The following steps describe how to install your hub and nodes with Docker-Compo
      volumes:
        - /dev/shm:/dev/shm
      privileged: true
-     ```
+    ```
 
 3. Open a console and give the following command from the folder/directory where you placed your docker-compose.yml:
 
@@ -80,7 +80,7 @@ The first time it will start pulling the images from the Docker hub.
    docker_hub_1       /opt/bin/entry_point.sh   Up      0.0.0.0:4444->4444/tcp
    ```
 
-5.  Check with the following link if the hub works: [http://localhost:4444/grid/console](http://localhost:4444/grid/console) Note: You can also replace localhost with the server name or IP-address of the Docker host.
+5.  Check with the following link if the hub works: `http://localhost:4444/grid/console`. Note: You can also replace localhost with the server name or IP-address of the Docker host.
 
    ![](attachments/setup-local-selenium-index-2/setup-local-docker-selenium-hub-2/docker_grid.png)
 
@@ -88,7 +88,7 @@ The first time it will start pulling the images from the Docker hub.
 
 ## 4 Starting Testing
 
-You can start testing by sending your test script to: [http://yourmachinenameorIP:4444/wd/hub](http://localhost:4444/wd/hub). Make sure it is reachable from the outside!
+You can start testing by sending your test script to: `http://yourmachinenameorIP:4444/wd/hub`. Make sure it is reachable from the outside!
 
 ## 5 Optional: Scaling Your Nodes
 

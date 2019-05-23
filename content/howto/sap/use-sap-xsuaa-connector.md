@@ -31,7 +31,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 	![](attachments/use-sap-xsuaa-connector/add-roles-to-app.png)
 
-* Ensure the app behaves differently according to the user role, so you can see the effect of setting up the roles in XSUAA. For example, give each role a different starting page as described here: [How To Set Up the Navigation Structure](../ux/setting-up-the-navigation-structure)
+* Ensure the app behaves differently according to the user role, so you can see the effect of setting up the roles in XSUAA. For example, give each role a different starting page as described here: [How To Set Up the Navigation Structure](../general/setting-up-the-navigation-structure)
 
 ## 3 Getting the SAP XSUAA Connector Module
 
@@ -39,7 +39,7 @@ The SAP app may already have the SAP XSUAA Connector installed. Look in **Projec
 
 If the SAP XSUAA Connector is not already in your project, download it from the App Store. It can be found here: [SAP Cloud Platform XSUAA Connector](https://appstore.home.mendix.com/link/app/78091/).
 
-For more information, see [How to Use App Store Content in the Modeler](/developerportal/app-store/use-app-store-content-in-the-modeler).
+For more information, see [How to Use App Store Content](/developerportal/app-store/app-store-content).
 
 ## 4 Using the Connector
 
@@ -75,7 +75,7 @@ If your app already had XSUAA included, your login.html file may have been modif
 
 If login.html does not support XSUAA then you need to add the SSO login button to the landing page. Do this by following these steps:
 
-1. In the top menu of the Desktop Modeler, select **Project** > **Show Project Directory in Explorer**.
+1. In the top menu of , select **Project** > **Show Project Directory in Explorer**.
 2. Open the **theme** folder.
 3. Open **login.html** for editing.
 4. Locate this line:
@@ -230,10 +230,10 @@ You can picture the authentication as shown below:
 
 ![](attachments/use-sap-xsuaa-connector/xsuaa-diagram-config-via-group.png)
 
-## 6 Related Content
+## 6 Read More
 
-* [How To Create a Secure App](../security/create-a-secure-app)
-* [How To Use App Store Content in the Modeler](/developerportal/app-store/use-app-store-content-in-the-modeler)
+* [Create a Secure App](../security/create-a-secure-app)
+* [Use App Store Content](/developerportal/app-store/app-store-content)
 * [Project Security](/refguide/project-security)
 * [SAP Cloud Platform XSUAA Connector](https://appstore.home.mendix.com/link/app/78091/)
 * [SAP XSUAA Connector](/refguide/sap/sap-xsuaa-connector)

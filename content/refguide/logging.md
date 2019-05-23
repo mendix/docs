@@ -1,6 +1,7 @@
 ---
 title: "Logging"
-category: "Runtime"
+category: "Mendix Runtime"
+tags: ["studio pro"]
 ---
 
 

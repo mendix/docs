@@ -1,11 +1,13 @@
 ---
 title: "Mendix Forum"
 category: "Community Tools"
+description: "Describes the Mendix Forum, where the Mendix community can ask and answer questions as well as post ideas for how to improve the Mendix Platform."
+menu_order: 10
 ---
 
 ## 1 Introduction
 
-The [Mendix Forum](https://forum.mendixcloud.com/index3.html) is where the Mendix Community comes together to help each other out with questions and answers and to propose ideas for improving the Mendix Platform.
+The [Mendix Forum](https://forum.mendixcloud.com/index3.html) is where the Mendix community comes together to help each other out with questions and answers and to propose ideas for improving the Mendix Platform.
 
 The forum is closely integrated with the [Mendix Profile](../mendix-profile/index) so that Mendix community members can see all the interesting and useful information about who is participating in the forum. If someone clicks your name anywhere on the forum, your Mendix Profile will open, so make sure you [set your profile to public](../mendix-profile/index#public) so everyone can see your details and progress!
 
@@ -89,7 +91,7 @@ On this page, you can read the full descriptive text of the question and do the 
 	* The date and time of the **Last activity** on the question (meaning, when it was last updated)
 	* The **Category** of the question
 	* The **Tags** applied to the question (when you click a tag, the overview page will list questions with that same tag)
-	* The **Modeler version** set when the question was asked (for more information, see the [Asking Your Question](#AskingYourQuestion) section)
+	* The **Mendix version** set when the question was asked (for more information, see the [Asking Your Question](#AskingYourQuestion) section)
 * Click the up or down arrow buttons to upvote or downvote the question based on its usefulness (**2**)
 * Click the heart to favorite the question (**3**)
 * Click **Add comment** to write and submit a comment on the question (**4**)
@@ -139,7 +141,7 @@ To ask your own question on the forum, follow these steps:
 
 	* The **Title** of your question (remember, this is how forum users will first see your question, so make the title descriptive and interesting)
 	* The text of your question (add all the details about your question to make it searchable and so other users can answer it; consider including steps to reproduce the issue)
-	* The **Modeler version** on which you encountered the issue you have a question about
+	* The **Mendix version** on which you encountered the issue you have a question about
 	* The **Category** that reflects your question (for example, **Connectors**, **Databases**, **Security**)
 	* The **Tag(s)** that reflect the topic of your question (which other users can use to filter the list of questions)
 
@@ -175,8 +177,6 @@ Each idea specifies the following elements:
 * When the idea was created (**10**)
 
 #### 3.1.1 Sorting the Ideas
-
-The Sort by drop-down menu at the top of the screen has three options for sorting the questions on this page: Last Updated, Newest, and Most Popular.
 
 The **Sort by** drop-down menu at the top of the screen has three options for sorting the ideas on this page: **Last Updated**, **Newest**, and **Most Votes**.
 
@@ -215,9 +215,11 @@ On this page, you can read the full descriptive text of the idea and do the foll
         * **Closed** – the idea has been reviewed by the Product Managers but it has not been accepted
     * The **Category** of the idea
     * The **Tags** applied to the idea (clicking a tag will list ideas with that same tag under the **Ideas** tab)
-* Click **Vote** to upvote the idea (**2**)
-    * By upvoting ideas, you can show the Mendix Community and the Product Managers what you would like to see added to the Mendix Platform
-    * The upvotes will be used as input for the Product Managers and the Mendix Community MVPs to decide which features will be nominated for implementation
+* <a name="upvoting"></a>Click **Vote** to upvote the idea (**2**)
+    * By upvoting ideas, you can show the Mendix community and Product Managers what you would like to see added to the Mendix Platform
+
+		{{% alert type="info" %}}The upvotes will be used as input for the Product Managers and Mendix Community MVPs to decide which features will be nominated for implementation. Please note that the level of impact also needs to be considered.
+		{{% /alert %}}
 * Click the star to favorite the idea (**3**)
 * Submit a comment on the idea (**4**)
 
@@ -250,3 +252,7 @@ To submit your own idea to the idea forum, follow these steps:
 3. Click **Submit your idea**.
 
 Mendix looks forward to hearing all of your ideas!
+
+## 4 Read More
+
+* [How to Contribute to the Documentation](contribute-to-the-mendix-documentation]

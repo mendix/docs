@@ -1,7 +1,8 @@
 ---
 title: "Create Your First Microflow: Hello World!"
 category: "Logic & Business Rules"
-tags: []
+menu_order: 1
+tags: ["microflow"]
 ---
 
 ## 1 Introduction
@@ -48,7 +49,7 @@ To edit the new microflow, follow these steps:
 
     ![](attachments/18448678/18580974.png)
 
-2.  Open the **Toolbox** in the bottom-right corner of the Modeler:
+2.  Open the **Toolbox** in the bottom-right corner of Studio Pro:
     
     ![](attachments/18448678/18580967.png)
 
@@ -67,14 +68,14 @@ To edit the new microflow, follow these steps:
 
 7. Locate the new navigation item in the menu bar and click it to see the message.
 
-## 4 Related Content
+## 4 Read More
 
-* [How to Define Access Rules Using XPath](define-access-rules-using-xpath)
-* [How to Trigger Logic Using Microflows](triggering-logic-using-microflows)
-* [How to Create a Custom Save Button](create-a-custom-save-button)
-* [How to Extend Your Application with Custom Java](extending-your-application-with-custom-java)
-* [How to Work with Lists in a Microflow](working-with-lists-in-a-microflow)
-* [How to Optimize the Retrieve Activities](optimizing-retrieve-activities)
-* [How to Configure Error Handling](set-up-error-handling)
-* [How to Optimize Microflow Aggregates](optimizing-microflow-aggregates)
-* [How to Extract and Use Sub-Microflows](extract-and-use-sub-microflows)
+* [Define Access Rules Using XPath](define-access-rules-using-xpath)
+* [Trigger Logic Using Microflows](triggering-logic-using-microflows)
+* [Create a Custom Save Button](create-a-custom-save-button)
+* [Extend Your Application with Custom Java](extending-your-application-with-custom-java)
+* [Work with Lists in a Microflow](working-with-lists-in-a-microflow)
+* [Optimize the Retrieve Activities](optimizing-retrieve-activities)
+* [Configure Error Handling](set-up-error-handling)
+* [Optimize Microflow Aggregates](optimizing-microflow-aggregates)
+* [Extract and Use Sub-Microflows](extract-and-use-sub-microflows)

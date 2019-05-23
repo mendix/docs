@@ -2,11 +2,12 @@
 title: "Build Microflow Actions Using the Mendix Connector Kit"
 category: "Extensibility"
 description: "Describes creating custom Microflow actions using advanced Connector Kit options."
-tags: ["Java","Connector Kit","microflow action","parameter type", "AWS", "Amazon Web Services"]
+menu_order: 4
+tags: ["java", "connector kit", "microflow action", "parameter type", "aws", "amazon web services"]
 output:
   word_document: default
   html_document: default
-#To update screenshots of these microflows in the Desktop Modeler, use the SlackRekognition-main-master app project, which is saved locally in Other Resources > Documentation Backups (No Update).
+#To update screenshots of these microflows in Studio Pro, use the SlackRekognition-main-master app project, which is saved locally in Other Resources > Documentation Backups (No Update).
 ---
 
 ## 1 Introduction
@@ -36,7 +37,7 @@ For the basics of building toolbox actions, see the [Introducing the Mendix Conn
 
 ## 2 Creating Generic Actions Using Type Parameters
 
-Let's start with type parameters. Mendix 6.6 introduced a new **Type parameters** tab in the Java action definition dialog box, as illustrated in the image below. You can use a type parameter if you want to ensure that certain parameters of your action share the same entity but you do not know the name of this entity when defining the actions.
+Let's start with type parameters. In the **Type parameters** tab in the Java action definition dialog box, you can use a type parameter if you want to ensure that certain parameters of your action share the same entity but you do not know the name of this entity when defining the actions.
 
 For example, suppose you want to create an action that takes two objects of the same entity and returns a list containing both objects. You can use a type parameter to guarantee that both the input parameters for specifying the objects and the resulting list all use the same entity.
 
@@ -93,7 +94,7 @@ The action uses the following parameters:
 
 The return type is a list of new initialized objects.
 
-As you can see below, this action uses a new parameter type (**Microflow**) to indicate that the user needs to specify a microflow. When using the action, the Modeler will show a list of microflows to make this as easy to use as possible.
+As you can see below, this action uses a new parameter type (**Microflow**) to indicate that the user needs to specify a microflow. When using the action, Studio Pro will show a list of microflows to make this as easy to use as possible.
 
 ![Initialize list using microflow action parameters](attachments/how-to-connector-kit/initialize_list_mf_pars.png)
 

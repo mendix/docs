@@ -47,7 +47,7 @@ At this section you can view the following information about the running request
 
 ### 2.3 Cache
 
-Mendix 4 and up have an object cache for non-persistent objects. Here you can see how many objects of each type currently live in memory, and the same but broken down per user session.
+The object cache contains non-persistable objects. Here you can see how many objects of each type currently live in memory, and the same but broken down per user session.
 
 At this section you can view the following:
 

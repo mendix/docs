@@ -176,7 +176,7 @@ You can now add and edit employees!
 
 To use the third how-to for creating a simple HRM application, see [Build a Simple HRM App 3: Show Related Data in the GUI](build-a-simple-hrm-app-3-show-related-data-in-the-gui).
 
-## 6 Related Content
+## 6 Read More
 
 * [Build a Simple HRM App 1: Create, Manage, and Deploy the App](build-a-simple-hrm-app-1-create-manage-and-deploy-the-app)
 * [Build a Simple HRM App 3: Show Related Data in the GUI](build-a-simple-hrm-app-3-show-related-data-in-the-gui)

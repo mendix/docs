@@ -1,6 +1,7 @@
 ---
 title: "Log Message"
 parent: "logging-activities"
+tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -22,7 +23,7 @@ See [Microflow Element Common Properties](microflow-element-common-properties) f
 
 ### 2.1 Log Level
 
-The log level defines the severity of the log message. In the modeler console dock, messages have a different color and an icon for some log levels.
+The log level defines the severity of the log message. In the Studio Pro **Console** pane, messages have a different color and an icon for some log levels.
 
 | Option | Icon | Description |
 | --- | --- | --- |
@@ -39,7 +40,7 @@ _Default value:_ Info
 
 The log node name is a microflow expression that defines the source of the log message. For example, if you log messages from an email module, the log node name could be 'Email module'.
 
-{{% alert type="success" %}}
+{{% alert type="info" %}}
 
 It is advised to use a [constant](constants) for the log node name. This prevents typing errors and makes it easier to change the log node name afterwards.
 
@@ -53,7 +54,7 @@ Template defines the text of the message. The template can contain parameters th
 
 For each parameter in the template you define a microflow expression of which the value will be inserted at the position of the parameter. Parameters need to be entered using [expressions](expressions) resulting in a string.
 
-{{% alert type="success" %}}
+{{% alert type="info" %}}
 
 With parameters you can customize your message with data specific to the situation. For example, the message "An e-mail has been sent to customer {1}." with parameter `$customer/FullName` will show the full name of the customer to whom an e-mail has been sent.
 
@@ -61,10 +62,10 @@ With parameters you can customize your message with data specific to the situati
 
 ### 2.5 Include Latest Stack Trace
 
-Defines whether to include the stack trace of the latest error in this log message. In the modeler, log messages that include a stack trace are marked with a paperclip icon:
+Defines whether to include the stack trace of the latest error in this log message. In Studio Pro, log messages that include a stack trace are marked with a paperclip icon:
 
 ![](attachments/819203/917892.png)
 
 Double-clicking these log messages shows the stack trace.
 
-This option also applies to `$latestSoapFault`. If you define an error handler for a web service call, and it catches a soap fault error, checking this box will add the stacktrace to the logline in the modeler.
+This option also applies to `$latestSoapFault`. If you define an error handler for a web service call, and it catches a soap fault error, checking this box will add the stacktrace to the logline in Studio Pro.

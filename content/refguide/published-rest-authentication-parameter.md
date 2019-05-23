@@ -1,13 +1,10 @@
 ---
-title: "Parameters for the Custom Authentication Microflow"
-parent: "published-rest-services"
+title: "Custom Authentication Microflow Parameters"
+parent: "published-rest-technical-details"
+menu_order: 40
+description: "The parameters which are passed to the custom authentication microflow for a published REST service"
+tags: ["published REST", "custom authentication", "microflow", "parameters", "arguments", "query", "header"]
 ---
-
-{{% alert type="info" %}}
-
-This feature was introduced in version 7.17.0. Prior to that, all authentication microflow parameters were query parameters.
-
-{{% /alert %}}
 
 ## 1 Introduction
 

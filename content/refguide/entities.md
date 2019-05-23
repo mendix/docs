@@ -1,7 +1,7 @@
 ---
 title: "Entities"
 parent: "domain-model"
-tags: ["domain model", "entity", "attribute", "validation rule", "even handler", "access rule"]
+tags: ["domain model", "entity", "entities", "attribute", "validation rule", "even handler", "access rule", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -32,13 +32,10 @@ The rows in the table are CDs. The type of the two rows is 'CD' and this is the 
 ## Components
 
 *   [Attributes](attributes)
-
+*   [Associations](associations)
 *   [Validation Rules](validation-rules)
-
 *   [Event Handlers](event-handlers)
-
 *   [Indexes](indexes)
-
 *   [Access Rules](access-rules)
 
 ## General Properties {#entities-general-properties}
@@ -85,7 +82,7 @@ This property defines whether the entity contains the system attribute 'createdD
 | True | Entity contains the system attribute 'createdDate'. |
 | False | Entity does not contain the system attribute 'createdDate'. |
 
-_Default value:_ True
+_Default value:_ False
 
 ### Store 'changedDate'
 
@@ -96,7 +93,7 @@ This property defines whether the entity contains the system attribute 'changedD
 | True | Entity contains the system attribute 'changedDate'. |
 | False | Entity does not contain the system attribute 'changedDate'. |
 
-_Default value:_ True
+_Default value:_ False
 
 ### Store 'owner'
 
@@ -107,7 +104,7 @@ This property defines whether the entity has the system association 'owner'. Thi
 | True | Entity has the system association 'owner'. |
 | False | Entity does not have the system association 'owner'. |
 
-_Default value:_ True
+_Default value:_ False
 
 ### Store 'changedBy'
 
@@ -118,4 +115,4 @@ This property defines whether the entity has the system association 'changedBy'.
 | True | Entity has the system association 'changedBy'. |
 | False | Entity does not have the system association 'changedBy'. |
 
-_Default value:_ True
+_Default value:_ False

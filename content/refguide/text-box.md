@@ -1,9 +1,9 @@
 ---
 title: "Text Box"
 parent: "input-widgets"
+tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
-
 
 A text box can be used to display and/or edit a textual value.
 
@@ -91,7 +91,7 @@ The placeholder text is shown when no text has been entered yet. It can be used 
 
 {{% snippet file="refguide/Tab+index+Property.md" %}}
 
-## Related Content
+## Read More
 
 *   [Data view](data-view)
 *   [Attributes](attributes)

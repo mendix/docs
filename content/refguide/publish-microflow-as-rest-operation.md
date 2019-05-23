@@ -1,13 +1,12 @@
 ---
-title: "Publishing a Microflow as a REST Operation"
+title: "Publish a Microflow as a REST Operation"
 parent: "published-rest-services"
+menu_order: 30
+description: "How to publish a Microflow as a REST Operation"
+tags: ["Microflow", "REST", "operation", "resource"]
+# If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
+# linked from DM: edit microflow > (right-click) Publish as REST service operation > New > Help (integration)
 ---
-
-{{% alert type="info" %}}
-
-This feature was introduced in version 7.15.0.
-
-{{% /alert %}}
 
 ## 1 Introduction
 
@@ -19,7 +18,7 @@ Notice that if the microflow takes more than one parameter of an object or list 
 
 After you click **Publish as REST service operation**, you need to select a resource under which to publish the microflow. There are several options:
 
-* If you already have a service and a resouce under which to publish the microflow, select it and click **Select**
+* If you already have a service and a resource under which to publish the microflow, select it and click **Select**
 * If you already have a service but you want to create a resource, select the service and click **New**
 * If you want to create a new service, select a module or folder and click **New**
 

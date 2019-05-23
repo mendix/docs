@@ -1,7 +1,8 @@
 ---
 title: "Find the Root Cause of Runtime Errors"
 category: "Monitoring & Troubleshooting"
-tags: []
+menu_order: 8
+tags: ["monitoring", "troubleshooting", "runtime error", "runtime", "error"]
 ---
 
 ## 1 Introduction
@@ -12,9 +13,9 @@ This how to will show you how to find the information necessary to locate the ro
 
 * Find the root cause of runtime errors via two methods
 
-## 2 Method #1 – Using the Modeler
+## 2 Method #1 – Using Studio Pro
 
-If the application is deployed from the Modeler, the information is located in the console:
+If the application is deployed from Studio Pro, the information is located in the console:
 
 ![](attachments/18448574/18580024.png)
 
@@ -50,15 +51,15 @@ Go to the section of the log that corresponds to the time of the error. There wi
 
 With these three pieces of information, you shouold be able to find the cause of the error. If you cannot determine the cause from this information, you can put in a break point in the specified microflow and debug the situation.
 
-## 4 Related Content
+## 4 Read More
 
-* [How to Clear Warning Messages](clear-warning-messages)
-* [How to Test Web Services Using SoapUI](../testing/testing-web-services-using-soapui)
-* [How to Monitor Mendix Using JMX](monitoring-mendix-using-jmx)
-* [How to Debug Java Actions Remotely](debug-java-actions-remotely)
-* [How to Log Levels](log-levels)
-* [How to Debug Microflows](debug-microflows)
-* [How to Debug Microflows Remotely](debug-microflows-remotely)
-* [How to Debug Java Actions](debug-java-actions)
-* [How to Handle Common SSO Errors](handle-common-mendix-sso-errors)
+* [Clear Warning Messages](clear-warning-messages)
+* [Test Web Services Using SoapUI](../testing/testing-web-services-using-soapui)
+* [Monitor Mendix Using JMX](monitoring-mendix-using-jmx)
+* [Debug Java Actions Remotely](debug-java-actions-remotely)
+* [Log Levels](log-levels)
+* [Debug Microflows](debug-microflows)
+* [Debug Microflows Remotely](debug-microflows-remotely)
+* [Debug Java Actions](debug-java-actions)
+* [Handle Common SSO Errors](handle-common-mendix-sso-errors)
 * [The Root Cause of Runtime Errors and Resolving the 2 Most Common Issues](http://www.mendix.com/blog/the-root-cause-of-runtime-errors-and-resolving-the-2-most-common-issues/)

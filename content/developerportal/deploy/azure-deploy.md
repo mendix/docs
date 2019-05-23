@@ -4,6 +4,7 @@ category: "Deployment"
 description: "Describes how to deploy a Mendix app to the IBM Cloud"
 menu_order: 70
 tags: ["Deployment", "Azure", "Microsoft", "Environment"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 Mendix is now available in the Microsoft Azure marketplace as an App that can run on a virtual server in the cloud. This means you can run your own Mendix server for an hour, day, week, or even a year, and gives you full control over the environment. This how-to will guide you through a couple of simple steps to get your Mendix app up and running.
@@ -29,7 +30,7 @@ Before you can start with this how-to, please make sure you have completed the f
 *   Install [WinSCP](https://winscp.net/eng/download.php)
 *   Install [Putty](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html)
 *   Register for an [Azure account](https://azure.microsoft.com/nl-nl/account/)
-*   [Mendix Modeler ](https://appstore.home.mendix.com/link/modelers/)5.18+ installed
+*   [Mendix Studio Pro](https://appstore.home.mendix.com/link/modelers/) installed
 
 ## 2 Adding Mendix from the Azure marketplace
 
@@ -81,19 +82,13 @@ The image is now provisioning.
 
 Now that you've got your Mendix instance up and running, it's time to run an app on it. To do this you need to create a deployment package of your Mendix app and upload it to the Azure instance.
 
-1.  Open the **Mendix Modeler**.
+1.  Open **Studio Pro**.
 2.  **Log in** with your Mendix credentials.
 3.  Open a **project** you want to run on the Mendix Azure instance.
 4.  Create a deployment package of your project (**F7**).
     ![](attachments/azure-deploy/19398858.png)
 
 5.  The deployment package will be stored in the **releases** folder of your project folder.
-
-{{% alert type="warning" %}}
-
-Your app must be converted to Mendix 5.18 or higher before it can run on Azure.
-
-{{% /alert %}}
 
 ## 3 Uploading the Deployment Package to Azure
 
@@ -216,7 +211,7 @@ The Mendix instance on Azure is now fully configured and ready for use. Let's tr
 **Congratulations! You have successfully deployed a Mendix app on Microsoft Azure.**
 ![](attachments/azure-deploy/19398863.png)
 
-## 7 Related content
+## 7 Read More
 
 *   [Trends in Mendix Cloud v3](/developerportal/operate/trends)
 *   [Mendix Cloud: Deploy](mendix-cloud-deploy)

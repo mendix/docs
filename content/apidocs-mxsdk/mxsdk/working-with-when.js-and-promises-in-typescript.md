@@ -1,15 +1,15 @@
 ---
 title: "Working with when.js and Promises in TypeScript"
-category: "Mendix Platform SDK"
-menu_order: 50
+parent: "reference-documentation"
 ---
+
 On this page you will find an explanation about the use of _promises_ in the Mendix SDK.
 
 ## What's a promise and why do you want to use it?
 
 Some of the operations you perform when, for instance, loading a working copy in the Model Server, take some time to complete. In regular (synchronous) programming, you would have to wait for each operation to complete before you could start with the next one.
 
-In an asynchronous programming paradigm, you can start operations in the background and continue with other stuff while you are waiting for the background jobs to complete. Traditional JavaScript uses [callback functions](http://recurial.com/programming/understanding-callback-functions-in-javascript/) to achieve this. However, these tend to become [very complicated](http://know.cujojs.com/tutorials/async/async-programming-is-messy.html.md) when you have multiple nested, callbacks. This phenomenon is known as _callback hell_. Hence, the need for [ _promises_ ](http://know.cujojs.com/tutorials/async/simplifying-async-with-promises).
+In an asynchronous programming paradigm, you can start operations in the background and continue with other stuff while you are waiting for the background jobs to complete. Traditional JavaScript uses [callback functions](https://www.impressivewebs.com/callback-functions-javascript/) to achieve this. However, these tend to become [very complicated](http://know.cujojs.com/tutorials/async/async-programming-is-messy.html.md) when you have multiple nested, callbacks. This phenomenon is known as _callback hell_. Hence, the need for [ _promises_ ](http://know.cujojs.com/tutorials/async/simplifying-async-with-promises).
 
 A _promise_ is an object that will eventually either get a value (the promise is _fulfilled_), or it will be _rejected_ if something goes wrong. Promises can be _chained_ , meaning that a command _y_ will only be executed once the promise for _x_ is fulfilled.
 
@@ -70,7 +70,7 @@ client.platform()
 	})
 	.done(
 	() => {
-		myLog("Done. Check the result in the Mendix Modeler.");
+		myLog("Done. Check the result in Studio Pro.");
 	},
 	error => {
 		console.log("Something went wrong:");
@@ -80,7 +80,7 @@ client.platform()
 
 Note that `workingCopy.commit()` returns a `Promise<[Revision](https://apidocs.mendix.com/platformsdk/latest/classes/_mendix_platform_sdk_.revision.html)``>`. You ignore this value in our success handler (line 68), but you could have used it for instance to show the revision number to the user.
 
-{{% alert type="success" %}}
+{{% alert type="info" %}}
 
 Always either [return a promise to a caller, or end it with `done`](https://github.com/cujojs/when/blob/master/docs/api.md#promisethen-vs-promisedone) (From the when.js documentation).
 
@@ -118,7 +118,7 @@ function loadAllDocumentsAsPromise(documents: projects.IDocument[]): when.Promis
 
 In the snippet above, `documents.map( doc => loadAsPromise(doc))` transforms the documents[] array into a Promise of an array of Documents. Using [when.all](https://github.com/cujojs/when/wiki/Examples#whenall), you return a promise that resolves only when all documents have been loaded. Only then you can make sure that you do not enter `done()` before the promise has been resolved.
 
-{{% alert type="success" %}}
+{{% alert type="info" %}}
 
 You can load model units or elements using the convenience method `loadAsPromise`, which is available in the Mendix Platform SDK as a way to load and get `promise` as an output instead of having to use a callback function.
 

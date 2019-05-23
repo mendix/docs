@@ -11,8 +11,8 @@ You can create a new app project in one click and leave the app project just as 
 
 Your ability to delete and deactivate an app depends on your App Team role:
 
-* A **SCRUM Master** is allowed to deactivate and delete an app (even when there are still App Team members for the app)
-* A custom role with the **App Settings** permission is also allowed to deactivate and delete an app (even when there are still App Team members for the app)
+* A **SCRUM Master** is allowed to deactivate and delete an app
+* A custom role with the **App Settings** permission is also allowed to deactivate and delete an app
 * A **Company Admin** is allowed to delete, deactivate, and activate all the company's apps (with or without App Team members for the app)
 
 For more information on roles, see [Company & App Roles](/developerportal/company-app-roles/index).
@@ -60,13 +60,18 @@ If you want to leave and delete your app, follow these steps:
 		* Note that because a deactivated app will still exist in the company, only a Company Admin can re-activate the app and invite members to it – for details, see [How to Deactivate & Activate an App](../company-app-roles/deactivate-activate-app))
 	* Click **Continue and delete app** to leave and fully delete the app from your company
 
-	![](attachments/delete-confirmation.png) 
+	![](attachments/delete-confirmation.png)
 
-## 4 Related Content
+
+## 4 Alternative Method
+
+If you are the only team member of an app, you can also delete it directly from your list of apps. See [Apps List](/developerportal/apps-list/index) for more information.
+
+## 5 Read More
 
 * [Apps](../company-app-roles/apps)
-* [How to Deactivate & Activate an App](../company-app-roles/deactivate-activate-app))
+* [How to Deactivate & Activate an App](../company-app-roles/deactivate-activate-app)
 * [Company Admin Settings](../company-app-roles/companyadmin-settings)
-* [General](general-settings)
-* [How to Manage Company & App Roles](../company-app-roles/manage-roles)
+* [How to Manage General Settings](general-settings)
 * [Company & App Roles](../company-app-roles/index)
+* [How to Manage Company & App Roles](../company-app-roles/manage-roles)

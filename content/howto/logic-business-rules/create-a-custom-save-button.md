@@ -1,7 +1,8 @@
 ---
 title: "Create a Custom Save Button"
 category: "Logic & Business Rules"
-tags: []
+menu_order: 3
+tags: ["microflow", "logic", "save button"]
 ---
 ## 1 Introduction
 
@@ -16,8 +17,8 @@ Mendix uses visual models called microflows to define the logic of your applicat
 Before starting with this how-to, make sure you have completed the following prerequisites:
 
 * Create a basic data layer (for details, see [How to Create a Basic Data Layer](../data-models/create-a-basic-data-layer))
-* Create overview and detail pages for the customer object (for details, see [How to Create Your First Two Overview and Detail Pages](../ux/create-your-first-two-overview-and-detail-pages))
-* Create a menu item to access the customer overview page (for details, see [How to Set Up the Navigation Structure](../ux/setting-up-the-navigation-structure))
+* Create overview and detail pages for the customer object (for details, see [How to Create Your First Two Overview & Detail Pages](../front-end/create-your-first-two-overview-and-detail-pages))
+* Create a menu item to access the customer overview page (for details, see [How to Set Up the Navigation Structure](../general/setting-up-the-navigation-structure))
 
 ## 3 Replacing the Default Save Button with a Custom Save Button
 
@@ -47,7 +48,7 @@ To replace the default Save button with a custom one, follow these steps:
     
     ![](attachments/18448679/18580984.png)
 
-2. Open the **Toolbox** from the bottom-right corner of the Modeler:
+2. Open the **Toolbox** from the bottom-right corner of Studio Pro:
 
     ![](attachments/8784287/8946802.png)
 
@@ -77,16 +78,15 @@ To replace the default Save button with a custom one, follow these steps:
 
     ![](attachments/18448679/18580979.png)
 
-## 6 Related Content
+## 6 Read More
 
-* [How to Define Access Rules Using XPath](define-access-rules-using-xpath)
-* [How to Trigger Logic Using Microflows](triggering-logic-using-microflows)
-* [How to Extend Your Application with Custom Java](extending-your-application-with-custom-java)
-* [How to Work With Lists in a Microflow](working-with-lists-in-a-microflow)
-* [How to Optimize Retrieve Activities](optimizing-retrieve-activities)
-* [How to Configure Error Handling](set-up-error-handling)
-* [How to Optimize Microflow Aggregates](optimizing-microflow-aggregates)
-* [How to Extract and Use Submicroflows](extract-and-use-sub-microflows)
-* [Button Widgets](/refguide7/button-widgets)
-* [Create Button](/refguide7/new-button)
-* [Microflow Activities](/refguide7/activities)
+* [Define Access Rules Using XPath](define-access-rules-using-xpath)
+* [Trigger Logic Using Microflows](triggering-logic-using-microflows)
+* [Extend Your Application with Custom Java](extending-your-application-with-custom-java)
+* [Work With Lists in a Microflow](working-with-lists-in-a-microflow)
+* [Optimize Retrieve Activities](optimizing-retrieve-activities)
+* [Configure Error Handling](set-up-error-handling)
+* [Optimize Microflow Aggregates](optimizing-microflow-aggregates)
+* [Extract and Use Submicroflows](extract-and-use-sub-microflows)
+* [Button Widgets](/refguide/button-widgets)
+* [Microflow Activities](/refguide/activities)

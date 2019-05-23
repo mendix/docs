@@ -1,6 +1,7 @@
 ---
 title: "Create a Basic Data Layer"
 category: "Data Models"
+menu_order: 1
 tags: ["data layer", "domain model", "entities", "enumerations", "associations"]
 ---
 
@@ -21,7 +22,7 @@ The domain model consists of entities and associations. An entity is the bluepri
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Download and install the [Mendix Desktop Modeler](https://appstore.home.mendix.com/link/modelers/)
+* Download and install [Mendix Studio Pro](https://appstore.home.mendix.com/link/modelers/)
 * Create a new app or have an existing app project available
 
 ## 3 Creating Entities and Attributes
@@ -40,7 +41,7 @@ To create entities and their attributes, follow these steps:
 
     ![](attachments/18448745/18582190.png) 
 
-    By default, the Modeler creates a persistent entity, which means that the app's database will be able to store objects of this type of entity.
+    By default, Studio Pro creates a persistable entity, which means that the app's database will be able to store objects of this type of entity.
 4. Start typing directly to change the name of the entity into **Customer**:
 
     ![](attachments/18448745/18582189.png)
@@ -134,15 +135,15 @@ To configure the delete behavior, double-click the **Order_Customer** associatio
 
     ![](attachments/18448745/18582208.png)
 
-## 8 Related Content
+## 8 Read More
 
-* [How to Work with Images and Files](working-with-images-and-files)
-* [How to Denormalize Data to Improve Performance](denormalize-data-to-improve-performance)
-* [How to Set Up Data Validation](setting-up-data-validation)
-* [How to Work with Object Events](working-with-object-events)
-* [How to Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
+* [Work with Images & Files](working-with-images-and-files)
+* [Denormalize Data to Improve Performance](denormalize-data-to-improve-performance)
+* [Set Up Data Validation](setting-up-data-validation)
+* [Work with Object Events](working-with-object-events)
+* [Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
 * [Stories](/developerportal/collaborate/stories)
-* [How to Define Access Rules Using XPath](../logic-business-rules/define-access-rules-using-xpath)
-* [How to Perform the Scout and Windows 10 Workaround](../ux/perform-scout-and-windows-10-workaround)
-* [How to Create Your First Two Overview and Detail Pages](../ux/create-your-first-two-overview-and-detail-pages)
+* [Define Access Rules Using XPath](../logic-business-rules/define-access-rules-using-xpath)
+* [Perform the Scout and Windows 10 Workaround](../front-end/perform-scout-and-windows-10-workaround)
+* [Create Your First Two Overview & Detail Pages](../front-end/create-your-first-two-overview-and-detail-pages)
 

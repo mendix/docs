@@ -1,6 +1,7 @@
 ---
 title: "Demo Users"
 parent: "project-security"
+tags: ["studio pro"]
 ---
 
 ## 1 Introduction

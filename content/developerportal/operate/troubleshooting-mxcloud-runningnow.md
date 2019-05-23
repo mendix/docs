@@ -1,7 +1,7 @@
 ---
 title: "Running Now Metrics"
 parent: "metrics"
-#menu_order: 60
+menu_order: 30
 description: "How to troubleshoot the running now in your node."
 tags: ["App","Troubleshoot","Developer Portal","Running now","Mendix Cloud"]
 ---
@@ -31,11 +31,11 @@ You can use the information displayed in the **Running now** tab for various pur
 * If you have a performance or memory problem the listed actions (and their **Details** page(s)) might help you pinpoint the most likely cause of the problem
 * If the above alone is not enough, you can combine the information in this tab page with the information in the **Cache** tab page, the [Logs](logs) page, and the **Trends** tab page to gather more information
 
-## 3 Related Content
+## 3 Read More
 
 * [Alerts](monitoring-application-health)
 * [Application Trends in Mendix Cloud v3](trends)
 * [Application Trends in Mendix Cloud v4](trends-v4)
 * [Metrics](metrics)
-* [Security - Node Permissions](/developerportal/deploy/node-permissions)
+* [Node Permissions](/developerportal/deploy/node-permissions)
 * [Cache Metrics](troubleshooting-mxcloud-cache)

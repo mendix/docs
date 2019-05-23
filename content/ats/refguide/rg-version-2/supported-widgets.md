@@ -9,10 +9,11 @@ The following table shows an overview of all the supported widgets in ATS.
 
 ## 2 Standard Widgets
 
-We support all the widgets that are included in the Mendix Modeler:
+We support all the widgets that are included in Mendix Studio Pro:
 
 | Name | Supported in Execution | Supported in Recording |
 | ---- | :--------------------: | :--------------------: |
+| Authentication | ![](attachments/supported-widgets/green.png) Yes | ![](attachments/supported-widgets/green.png) Yes |
 | Button |![](attachments/supported-widgets/green.png) Yes | ![](attachments/supported-widgets/green.png) Yes |
 | CheckBox | ![](attachments/supported-widgets/green.png) Yes | ![](attachments/supported-widgets/green.png) Yes |
 | Confirmation Dialog | ![](attachments/supported-widgets/green.png) Yes | ![](attachments/supported-widgets/green.png) Yes |
@@ -32,6 +33,7 @@ We support all the widgets that are included in the Mendix Modeler:
 | TabContainer | ![](attachments/supported-widgets/green.png) Yes | ![](attachments/supported-widgets/green.png) Yes |
 | SearchInput DropDown | ![](attachments/supported-widgets/green.png) Yes | ![](attachments/supported-widgets/green.png) Yes |
 | SearchInput Text | ![](attachments/supported-widgets/green.png) Yes | ![](attachments/supported-widgets/green.png) Yes |
+| StaticImage | ![](attachments/supported-widgets/green.png) Yes | ![](attachments/supported-widgets/green.png) Yes |
 | TemplateGrid | ![](attachments/supported-widgets/green.png) Yes | ![](attachments/supported-widgets/green.png) Yes |
 | TextArea | ![](attachments/supported-widgets/green.png) Yes | ![](attachments/supported-widgets/green.png) Yes |
 | TextBox | ![](attachments/supported-widgets/green.png) Yes | ![](attachments/supported-widgets/green.png) Yes |

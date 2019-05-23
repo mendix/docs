@@ -3,7 +3,7 @@ title: "Any Chart Cheat Sheet"
 parent: "chart-widgets"
 description: "Shows, with examples, how the most common types of chart can be configured using the Any Chart Widget"
 menu_order: 50
-tags: ["Any Chart", "Examples", "Charts", "Widget"]
+tags: ["Any Chart", "Examples", "Charts", "Widget", "studio pro"]
 ---
 
 ## 1 Introduction
@@ -367,7 +367,7 @@ This *cheat sheet* lists the most common chart types, together with a visual sam
 }
 ```
 
-## 7 Related Content
+## 7 Read More
 
 * Full chart documentation is here: [https://plot.ly/javascript/](https://plot.ly/javascript/)
 * [Any Chart Widget](charts-any-configuration)

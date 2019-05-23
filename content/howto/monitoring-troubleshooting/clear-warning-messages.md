@@ -1,7 +1,8 @@
 ---
 title: "Clear Warning Messages"
 category: "Monitoring & Troubleshooting"
-tags: ["monitoring", "troubleshooting", "warning", "error"]
+menu_order: 1
+tags: ["monitoring", "troubleshooting", "warning", "error", "warning message"]
 ---
 
 ## 1 Introduction
@@ -15,7 +16,7 @@ This how-to explains how to eliminate design time warnings. While these warnings
 
 ## 2 Viewing Warning Messages
 
-Warning messages can be seen in the **Error List** tab of the Modeler (by default shown at the bottom of the Modeler). Note that the **Warnings** box must be selected for them to display.
+Warning messages can be seen in the **Error List** tab of Studio Pro (by default shown at the bottom of Studio Pro). Note that the **Warnings** box must be selected for them to display.
 
 ![](attachments/18448568/18579992.png)
 
@@ -33,7 +34,7 @@ To get more information, double-click or right-click the warning.
 
 {{% /alert %}}
 
-* This will not affect the project in this version of the Modeler, but it may cause problems when upgrading
+* This will not affect the project in this version of Studio Pro, but it may cause problems when upgrading
 * In this example, the pop-up layout must be adjusted in order to no longer use the main placeholder
 
 {{% alert type="warning" %}}
@@ -97,11 +98,11 @@ Events have no effect inside a non-editable context.
 
 {{% alert type="warning" %}}
 
-Microflow ‘microflowname’ is accessible through the server API because it specifies allowed roles.  This is unnecessary because the microflow is not used from navigation, a page or a published app service.
+Microflow ‘microflowname’ is accessible through the server API because it specifies allowed roles. This is unnecessary because the microflow is not used from navigation or a page.
 
 {{% /alert %}}
 
-* There is no need for a microflow that is not accessed through navigation, a page, or a published app service to have security roles allowed
+* There is no need for a microflow that is not accessed through navigation or a page to have security roles allowed
 * This can lead to a security problem, and the assigned roles should be removed
 
 {{% alert type="warning" %}}
@@ -166,16 +167,16 @@ Variable ‘Variable’ is never used.
 * There are multiple potential causes here
 * The solution involves removing the variable from the microflow, which could mean deleting the retrieve activity or electing to not use the return value of a microflow call
 
-## 4 Related Content
+## 4 Read More
 
-* [How to Find the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
-* [How to Test Web Services Using SoapUI](../testing/testing-web-services-using-soapui)
-* [How to Monitor Mendix Using JMX](monitoring-mendix-using-jmx)
-* [How to Debug Java Actions Remotely](debug-java-actions-remotely)
-* [How to Configure Log Levels](log-levels)
-* [How to Debug Microflows](debug-microflows)
-* [How to Debug Java Actions](debug-java-actions)
-* [How to Handle Common Mendix SSO Errors](handle-common-mendix-sso-errors)
-* [How to Debug Microflows Remotely](debug-microflows-remotely)
+* [Find the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
+* [Test Web Services Using SoapUI](../testing/testing-web-services-using-soapui)
+* [Monitor Mendix Using JMX](monitoring-mendix-using-jmx)
+* [Debug Java Actions Remotely](debug-java-actions-remotely)
+* [Configure Log Levels](log-levels)
+* [Debug Microflows](debug-microflows)
+* [Debug Java Actions](debug-java-actions)
+* [Handle Common Mendix SSO Errors](handle-common-mendix-sso-errors)
+* [Debug Microflows Remotely](debug-microflows-remotely)
 
-Several warnings relate to improper security. For more information on this, see [Project Security](/refguide7/project-security) in the Mendix Reference Guide.
+Several warnings relate to improper security. For more information on this, see [Project Security](/refguide/project-security) in the *Mendix Studio Pro Guide*.

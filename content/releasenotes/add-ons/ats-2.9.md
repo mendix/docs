@@ -3,13 +3,52 @@ title: "2.9"
 parent: "ats-2"
 ---
 
+## 2.9.5 
+
+**Release date: February 12th, 2019**
+
+### Support for Mendix 7.22.2
+
+Mendix applications that are based on [Mendix version 7.22.2](../studio-pro/7.22) can now be recorded and tested with ATS.
+
+### Improvements
+
+* We added support for [authentication widgets](/refguide7/authentication-widgets). Login pages built with authentication widgets can now be recorded and tested with ATS.
+* We added support for clicking on [static images](/refguide7/static-image-document-template). Clicks on images can now be recorded and tested with ATS.
+
+### Fixes
+
+* We fixed an issue where a click was not be recorded on some buttons in Mendix versions 7.18+.
+* In rare cases under a very high testing load, jobs got stuck in the queued status. We have added additional checks to prevent this from happening.
+* In some scenarios, the **Recordings** tab was not available in ATS. We addressed this issue by changing the way recordings are retrieved.
+* We fixed a UI issue where double-clicking on an item in an ATS repository showed a generic error message.
+
+## 2.9.4
+
+**Release date: December 4th, 2018**
+
+### Improvements
+
+* We have added the option to refresh the app roles from the App Settings page. After clicking the refresh button, the app roles for all users currently in the current app will be queried from the Mendix Developer Portal and updated in ATS, according to the standard rules for updating roles in ATS. Users who no longer have access to the corresponding project in the Developer Portal will be removed from the app. New members of an app project in the Developer Portal have to log in to ATS and accept the terms and conditions before they can become members of an app in ATS.
+* We have continued optimize how tests results are processed in ATS. We expect that this will reduce the delay in seeing the results for a test.
+
+### (Potentially) Breaking change
+
+Due to complaints about flaky tests that were caused by long on-change change microflows (>500 ms), we have decided to change the behavior of the **Set Value** function. 
+
+In previous versions, the Set Value function typed in a value in an input field and kept the focus on the field. Therefore, the on-change and on-leave microflows were not triggered until a later test step, where another element on the page was focused (for example, via a click). This was done deliberately, as we felt that it was natural user behavior (as in, keeping the focus until an interaction occurs with another element on the page).
+
+Since ATS version 2.9.4, the Set Value function unfocuses the widget after setting the value and waits for the on-change and on-leave microflows to finish before proceeding with the next steps in a test case. We hope that this makes tests more stable when on-change microflows are used, since the wait ensures that such microflows have finished executing before proceeding with the test.
+
+We do not expect this change to cause any issues with existing tests. However, if you notice strage behavior related to the Set Value function after the update, please inform us by submiting a support ticket.
+
 ## 2.9.3
 
 **Release date: October 15th, 2018**
 
 ### Improvements
 
-* We have optimized the way data set records are stored for executed data-driven test cases. We expect this will improve the performance of processing the results for data-driven test cases.
+* We have optimized the way dataset records are stored for executed data-driven test cases. We expect this will improve the performance of processing the results for data-driven test cases.
 * We have refactored the code for fetching video recordings, making the recordings available sooner in ATS.
 
 ### Fixes

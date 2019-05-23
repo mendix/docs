@@ -1,15 +1,12 @@
 ---
-title: "Mendix 7 How-to's"
+title: "Studio Pro 8 How-to's"
 notoc: true
 description: "Step-by-step guides on various Mendix topics that will teach you how to build and customize apps."
+tags: ["studio pro"]
 ---
 
-## 1 Introduction to the Mendix 7 How-to's
+Browse the *Studio Pro 8 How-to's* to find step-by-step guides that will teach you how to build and customize apps with Mendix.
 
-Browse the how-to's in various categories to find step-by-step guides that will teach you how to build and customize apps with Mendix.
-
-You can also browse [Mendix Reference Guide](/refguide7/index), [Developer Portal](/developerportal/index), and [Release Notes](/releasenotes/index) if you are looking for more in-depth descriptions of the various features of the Mendix Platform.
-
-## 2 Document Categories
+The *Studio Pro 8 How-to's* are divided into the following categories:
 
 {{% category_block %}}

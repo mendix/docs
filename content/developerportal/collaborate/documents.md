@@ -2,7 +2,7 @@
 title: "Documents"
 category: "Collaboration Tools"
 menu_order: 50
-description: "Describes how to manage your documents."
+description: "Describes how to manage the documents in your app project."
 tags: ["Documents", "Developer Portal"]
 ---
 
@@ -53,7 +53,7 @@ Under **Details**, you can perform the following actions:
 
 To upload a new version of a document, select the document and click **New version**.
 
-## 3 Related Content
+## 3 Read More
 
 * [Buzz](buzz)
 * [App Team](team)

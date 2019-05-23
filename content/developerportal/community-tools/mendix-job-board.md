@@ -1,6 +1,8 @@
 ---
 title: "Mendix Jobs Board"
 category: "Community Tools"
+menu_order: 40
+description: "Describes the board where the Mendix community can post and find job opportunities."
 tags: ["job", "job board", "job dashboard"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -85,3 +87,7 @@ The [Mendix job dashboard](https://developers.mendix.com/jobs/job-dashboard/) li
     * This is useful when you're posting multiple positions that have similar descriptions
 * **Delete** — click this to delete old and obsolete jobs
     * Keep in mind that this is permanent and cannot be reversed!
+
+## 5 Read More
+
+* [Mendix Profile](../mendix-profile/index)

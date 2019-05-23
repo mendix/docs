@@ -2,7 +2,7 @@
 title: "App Team"
 category: "Collaboration Tools"
 menu_order: 20
-description: "This page describes the Team page of the Developer Portal."
+description: "Describes the Team page of the Developer Portal."
 tags: ["Team","Developer Portal"]
 ---
 
@@ -22,14 +22,14 @@ On the **Team** page, you will see an overview with the following information ab
 
 ![](attachments/team.png)
 
-### 2 Managing the Team
+### 2 Managing the Team {#managing}
 
 When you click **Manage Team** in the top-right corner of the screen, you will be forwarded to the **Settings** > **Security** page. 
 
 {{% alert type="info" %}}Only the following roles can see the **Manage Team** button:<br />
 * [SCRUM Master](../company-app-roles/index#app-team-roles)<br />
 * [Company Admin](../company-app-roles/#company-admin)<br />
-* A custom role with **App Settings** permission<br />
+* A custom role with **App Settings** permission
 {{% /alert %}}
 
 ![](attachments/team-security.png)
@@ -55,9 +55,10 @@ To invite members, click **Invite Member** on the **Team** and follow these step
 2. Add a personal message (optional).
 3. Confirm the invitation(s).
 
-## 4 Related Content
+## 4 Read More
 
 * [Company & App Roles](/developerportal/company-app-roles/index)
 * [How to Manage Company & App Roles](/developerportal/company-app-roles/manage-roles)
 * [Company Admin Settings](/developerportal/company-app-roles/companyadmin-settings)
 * [Settings](/developerportal/settings)
+* [Stories](stories)

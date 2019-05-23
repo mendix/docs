@@ -1,7 +1,8 @@
 ---
 title: "Set Up Anonymous User Security"
 category: "Security"
-tags: []
+menu_order: 30
+tags: ["anonymous", "security"]
 ---
 
 ## 1 Introduction
@@ -17,7 +18,7 @@ When creating an anonymous user role, always make sure you give it as little acc
 
 ## 2 Transient Objects
 
-When you set access to a transient object, the security rules you specify should be whatever you functionally need. Transient objects only live in the session cache from the user that created the object; therefore, an anonymous user is never able to access any information that wasn't created specifically for or by them. However, it is a completely different situation for a persistent object.
+When you set access to a transient object, the security rules you specify should be whatever you functionally need. Transient objects only live in the session cache from the user that created the object; therefore, an anonymous user is never able to access any information that wasn't created specifically for or by them. However, it is a completely different situation for a persistable object.
 
 ## 3 Write Access
 
@@ -50,7 +51,7 @@ Limiting the navigation or page display is not the same thing as security. All d
 
 For example, to download a file, it is possible to get the UR (for example, `https://myMendixApp.com/file?fileID=2804771`). All that is necessary is to try random numbers until a file is found that is accessible. Unless you specify instance or object access, in that case, the platform would always validate the request against your privileges before presenting the information.
 
-## 7 Related Content
+## 7 Read More
 
 * [Creating a Secure App](create-a-secure-app)
 * [Anonymous User Security](set-up-anonymous-user-security)

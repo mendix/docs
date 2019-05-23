@@ -1,7 +1,7 @@
 ---
 title: "Use a Client Certificate"
 category: "Integration"
-tags: ["integration", "web service"]
+tags: ["integration", "web service", "client certficate"]
 ---
 
 ## 1 Introduction
@@ -9,12 +9,6 @@ tags: ["integration", "web service"]
 Some services require you to authenticate using a client certificate. This how-to describes how to configure your app to do this.
 
 Let's assume that you already have an app that calls a service. For details on how to configure this, have a look at [How to Consume a REST Service](consume-a-rest-service) or [How to Consume a Simple Web Service](consume-a-simple-web-service).
-
-{{% alert type="info" %}}
-
-Client certificates for REST services were introduced in version 7.2.0.
-
-{{% /alert %}}
 
 This how-to will teach you how to do the following:
 
@@ -50,17 +44,19 @@ A complete configuration may look like this:
 
 ![](attachments/use-a-client-certificate/example-custom-settings.png)
 
-You can use an empty path to specify that you do not want to use a client certificate, even when the server accepts one. The following sample uses client certificate `Mx1.pfx` for `WebService1` and no client certificate for `WebService2`:
+You can use an empty path for `ClientCertficateUsages` to specify that you do not want to use a client certificate, even when the server accepts one. To do this, you need to add the **Value** `{"<endpoint>":""}` (replace `<endpoint>` with the actual endpoint).
+
+{{% alert type="info" %}}
+
+Be sure to drop `https://` from a URL endpoint.
+
+{{% /alert %}}
+
+The following sample uses client certificate `Mx1.pfx` for `WebService1` and no client certificate for `WebService2`:
 
 ```
 { "Module.WebService1": "D:\\App\\Mx1.pfx", "Module.WebService2": "" }
 ```
-
-{{% alert type="info" %}}
-
-The possibility to use an empty path was introduced in Mendix version 7.18.0.
-
-{{% /alert %}}
 
 ## 4 Running in the Cloud
 
@@ -72,14 +68,15 @@ You will only be able to follow the steps below if you have the correct access r
 
 To configure client certificates in the Mendix Cloud, follow these steps:
 
-1. Go to the [Mendix Cloud Portal](https://cloud.home.mendix.com/) and click **Details** next to your app.
+1. Go to the [Mendix Developer Portal](https://home.mendix.com/) and go to the **Environments** page for your app.
 2. Each environment has its own configuration. Click **Details** next one of the environments.
 3. Click **Network** and scroll down to **Certificates for outgoing connections**.
 4. Click **Add client certificate**. Upload the certificate files.
 5. Only follow these steps if you are using more than one client certificate in your app:<br>
-    a. After the files have been uploaded, they appear in the list. Double-click an item in the list.<br>
-    b. In the **Pin Client Certificate to Web Services** section of the **Details** screen, you can specify which client certificate belongs to which service:<br>
-       * For web services, enter the name of the web service (for example, *ModuleName.WebServiceName*)<br>
-       * For REST services, enter the host name of the endpoint (for example, *example.com*)<br>
-    d. Close the **Details** screen.<br>
+	a. After the files have been uploaded, they appear in the list. Double-click an item in the list.<br>
+	b. In the **Pin Client Certificate to Web Services** section of the **Details** screen, you can specify which client certificate belongs to which service:<br>
+		* For web services, enter the name of the web service (for example, *ModuleName.WebServiceName*)<br>
+		* For REST services, enter the host name of the endpoint (for example, *example.com*)<br>
+	d. Close the **Details** screen.<br>
+
 6. Click **Stop application** and then **Start application**.

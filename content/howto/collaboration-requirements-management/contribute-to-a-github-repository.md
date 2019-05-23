@@ -1,7 +1,8 @@
 ---
 title: "Contribute to a GitHub Repository"
-category: "Collaboration & Requirements Management"
-tags: ["github"]
+category: "Collaboration"
+menu_order: 20
+tags: ["GitHub"]
 ---
 ## 1 Introduction
 
@@ -25,7 +26,7 @@ To make changes to an existing repository, follow these guidelines:
 
 * Create a new branch from where you want to base your work on your fork (this is usually the repository's master branch)
 * To quickly create a branch based on master, use `git checkout -b fix/master/my_contribution master`
-    * Avoiding working directly on the master branch is adivsed
+    * Avoiding working directly on the master branch is advised
 * Make commits of logical units
 * Check for unnecessary whitespace with `git diff --check` before committing.
 * Make sure you have added the necessary tests for your changes
@@ -41,10 +42,10 @@ To submit changes, follow these guidelines:
 * After feedback has been given, Mendix expects a response within two weeks
     * After two weeks, we may close the pull request if it isn't showing any activity
 
-## 5 Related Content
+## 5 Read More
 
 * [Stories](/developerportal/collaborate/stories)
 * [How to Start Your Own Repository](starting-your-own-repository)
-* [How to Use Team Server – Version Control](using-team-server-_-version-control)
-* [How to Use the Feedback Widget](/developerportal/feedback/use-feedback-widget)
+* [Version Control](/refguide/version-control)
+* [How to Use the Feedback Widget](/developerportal/collaborate/use-feedback-widget)
 * [How to Share the Development Database](sharing-the-development-database)

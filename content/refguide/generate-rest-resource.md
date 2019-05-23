@@ -1,15 +1,12 @@
 ---
-title: "Generating a REST Resource"
+title: "Generate a Published REST Resource"
 parent: "published-rest-services"
+menu_order: 20
+description: "Generate a published REST resource from an entity"
+tags: ["published REST", "resource", "entity", "operations", "expose", "studio pro"]
+# If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
+# linked from DM: domain model > entity (right-click) > Expose as REST resource > Help (integration)
 ---
-
-{{% alert type="info" %}}
-
-This feature was introduced in version 7.16.0.
-
-The option to generate **Patch** was introduced in version 7.17.0.
-
-{{% /alert %}}
 
 ## 1 Introduction
 

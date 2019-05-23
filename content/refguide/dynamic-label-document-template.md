@@ -1,6 +1,7 @@
 ---
-title: "Dynamic label (document template)"
+title: "Dynamic Label (Document Template)"
 parent: "document-templates"
+tags: ["studio pro"]
 ---
 
 

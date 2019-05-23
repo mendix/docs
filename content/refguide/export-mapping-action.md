@@ -1,6 +1,7 @@
 ---
 title: "Export Mapping Action"
 parent: "microflow-activities"
+tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -42,12 +43,6 @@ If the [export mapping](export-mappings) requires an input, this field shows the
 If the [export mapping](export-mappings) requires an input, you can select a variable of the correct type.
 
 ### 2.4 Content Type
-
-{{% alert type="info" %}}
-
-This feature was introduced in version 7.10.0.
-
-{{% /alert %}}
 
 If the [export mapping](export-mappings) is based on a message definition, it can export both XML and JSON. Choose which type of output you want.
 

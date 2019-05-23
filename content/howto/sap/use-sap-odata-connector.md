@@ -15,19 +15,29 @@ The SAP OData Connector is a specific SAP connector for integrating with SAP bac
 * Add the SAP OData Connector to your Mendix app
 * Configure the SAP OData Connector
 
+{{% alert type="warning" %}}
+The SAP OData endpoint which is used in this how-to has been moved, so this example will no longer work when run.
+
+We are investigating a new SAP OData endpoint and will update this how-to as soon as we can.
+{{% /alert %}}
+
 ## 2 Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Create the app in the Mendix Desktop Modeler 7.5.1 or higher
+* Create the app in Mendix Studio Pro
 * Get the SAP OData Connector module
 * Get an SAP data model
 
+{{% alert type="warning" %}}
+SAP OData Connector only supports SAP OData Gateway Services which use OData version 2 or version 3. OData version 4 is not yet supported.
+{{% /alert %}}
+
 ### 2.1 Getting the SAP OData Connector Module
 
-To be able to use the OData Connector; first create your project. Inside the desktop modeler, navigate to the Mendix App Store to download the [SAP OData Connector](https://appstore.home.mendix.com/link/app/74525/Mendix/SAP-OData-Connector) module. You will then find this module in your app project's App Store modules.
+To be able to use the OData Connector; first create your project. Inside , navigate to the Mendix App Store to download the [SAP OData Connector](https://appstore.home.mendix.com/link/app/74525/Mendix/SAP-OData-Connector) module. You will then find this module in your app project's App Store modules.
 
-For more information, see [How to Use App Store Content in the Modeler](/developerportal/app-store/use-app-store-content-in-the-modeler).
+For more information, see [How to Use App Store Content](/developerportal/app-store/app-store-content).
 
 ### 2.2 Getting an SAP Data Model
 
@@ -51,7 +61,7 @@ This is NOT the very similar SAP data model, **SAP Check Price and Availability 
 
 To create the microflow for this retrieve, follow these steps:
 
-1. Create a microflow in the Desktop Modeler.
+1. Create a microflow in .
 2. From the **Toolbox**, drag the **Get List** operator into your microflow.
 3. Fill in the required fields of the Get List connector. For this example, you should use these settings:
     * **Query** – `@SAPCheckPriceandAvailability.SRA016_PRICE_AVAIL_SRV_URL +'/' + toString(SAPCheckPriceandAvailability.EntitySetNames.Customers)`
@@ -81,7 +91,7 @@ To create a page to show the objects in a list, follow these steps:
 
 Congratulations! You can now run your app and see a list of the customers available in the public **Check Price and Availability** application of [SAP Fiori Cloud Demo](https://www.sapfioritrial.com/sites?helpset=trial&sap-client=001#PriceAndAvailability-check).
 
-## 4 Related Content
+## 4 Read More
 
 * [SAP OData Connector](/refguide/sap/sap-odata-connector)
 * [SAP Data Models](/refguide/sap/sap-data-models)

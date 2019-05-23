@@ -1,18 +1,19 @@
 ---
 title: "Test Web Services Using SoapUI"
 category: "Testing"
-tags: []
+menu_order: 30
+tags: ["test", "testing", "web service", "soapui"]
 ---
 
 ## 1 Introduction
 
 You can publish your own webservices in a Mendix application. These webservices consist of operations. Other applications can then call operations of this webservice and you can return a result. This result is based on a microflow that will be executed when the webservice is called. With SoapUI you can create (automated) tests for these webservices.
 
-**After completing this how-to you will know:**
+**After completing this how-to, you will know how to do the following:**
 
-*   How to create a SOAP project with SoapUI.
-*   How to create assertions in SoapUI.
-*   How to build an automated test using SoapUI.
+* Create a SOAP project with SoapUI.
+* Create assertions in SoapUI.
+*  Build an automated test using SoapUI.
 
 ## 2 Preparation
 
@@ -23,7 +24,6 @@ Before you can start with this how-to, make sure you have completed the followin
 
 | Software | Version used in this how-to |
 | --- | --- |
-| Mendix Desktop Modeler | 5.20.0 |
 | SoapUI | 5.2.0 |
 
 {{% alert type="warning" %}}
@@ -36,7 +36,7 @@ All images, names and steps in this how-to are based on these versions. When usi
 
 In the how-to [Exposing a web service](../integration/expose-a-web-service) you already published the microflow _GetCustomers_ as web service operation. In this chapter you will create two more microflow and publish them as web service operation.
 
-1.  Open the **Mendix Desktop Modeler**.
+1.  Open Studio Pro.
 2.  Open the project you created in the how-to [Exposing a web service](../integration/expose-a-web-service).
 3.  Create a **Microflow** that creates a customer and returns a boolean. 
 
@@ -53,7 +53,7 @@ In this chapter you will create a new SOAP project.
 1.  Open **SoapUI**.
 2.  Press **CTRL+N** to create a new SOAP project.
     ![](attachments/18448632/18580339.png)
-3.  Run the project locally in the **Mendix Desktop Modeler**.
+3.  Run the project locally in Studio Pro.
 4.  Go to `http://localhost:8080/ws-doc/`.
     ![](attachments/18448632/18580314.png)
 5.  Enter the URL of the WSDL schema in the **Initial WSDL** field in SoapUI.
@@ -219,7 +219,7 @@ In this chapter you will learn how to run the testcase you created in previous c
 
 Congratulations! You have just created your first automated test with SoapUI.
 
-## 9 Related Content
+## 9 Read More
 
 *   [Finding the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
 *   [Clearing Warning Messages in Mendix](../monitoring-troubleshooting/clear-warning-messages)

@@ -1,11 +1,13 @@
 ---
 title: "Build API"
 category: "API Documentation"
+description: "An API to allow the triggering of deployment package builds, and to get information about existing deployment packages."
+tags: ["API", "Build Server", "Team Server", "Deployment package", "Mendix Cloud"]
 ---
 
-## Introduction
+## 1 Introduction
 
-The Build API allows you to manage deployment packages and create new deployment packages using our build server. You will need the information from the Teamserver API as input for these API calls.
+The Build API allows you to manage deployment packages and create new deployment packages using our build server. You will need the information from the Teamserver API as input for these API calls. You will also need to provide authentication for each call; this is described in [Authentication](authentication).
 
 {{% alert type="info" %}}
 This API is designed for apps which are deployed to the Mendix Cloud.
@@ -15,37 +17,36 @@ The image below provides a domain model representation of the concepts discussed
 
 ![](attachments/deploy-api/api-model.png)
 
-## API calls
+## 2 API calls
 
-### Retrieve packages
+### 2.1 Retrieve packages
 
-#### Description
+#### 2.1.1 Description
 
 Retrieves all deployment packages that are available for a specific app that the authenticated user has access to as a regular user. These packages can be found if you click **Details** on an app in the **Nodes** screen in the Mendix Platform.
 
-```java
- HTTP Method: GET
- URL: [https://deploy.mendix.com/api/1/apps/<AppId>/packages/ (https://deploy.mendix.com/api/1/apps/<AppId>/packages/)]
+```http
+HTTP Method: GET
+URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages/ 
 ```
 
-#### Request
+#### 2.1.2 Request
 
-##### Parameter
+##### 2.1.2.1 Parameter
 
 *   _AppId_ (String) : Subdomain name of an app.
 
-##### Example
+##### 2.1.2.2 Example
 
-```java
-GET /api/ 1 /apps/calc/packages/ HTTP/ 1.1
+```http
+GET /api/1/apps/calc/packages/ HTTP/1.1
 Host: deploy.mendix.com
-
 Accept: */*
 Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 ```
 
-#### Output
+#### 2.1.3 Output
 
 List of objects with the following key-value pairs:
 
@@ -60,15 +61,15 @@ List of objects with the following key-value pairs:
     Possible values: Succeeded, Queued, Building, Uploading and Failed.
 *   _Size_ (Long) : Size of the package in bytes.
 
-##### Error codes:
+##### 2.1.3.1 Error codes:
 
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
 | 400 | INVALID_APPID | Invalid AppId |
 
-##### Example
+##### 2.1.3.2 Example
 
-```java
+```json
 [{
      "Name" :  "Main line-1.1.5.9.mda" ,
      "Status" :  "Succeeded" ,
@@ -90,60 +91,63 @@ List of objects with the following key-value pairs:
 }]
 ```
 
-### Retrieve Package
+### 2.2 Retrieve Package{#retrieve-package}
 
-#### Description
+#### 2.2.1 Description
 
 Retrieves a specific deployment package that is available for a specific app that the authenticated user has access to as a regular user. This package can be found if you click **Details** on an app in the **Nodes** screen in the Mendix Platform.
 
-```java
+```http
 HTTP Method: GET
- URL: [https://deploy.mendix.com/api/1/apps/<AppId>/packages/<PackageId> (https://deploy.mendix.com/api/1/apps/<AppId>/packages/<PackageId>)]
+URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages/<PackageId>
 ```
 
-#### Request
+#### 2.2.2 Request
 
-##### Parameters
+##### 2.2.2.1 Parameters
 
 *   _AppId_ (String) : Subdomain name of an app.
 *   _PackageId_ (String) : Id of the deployment package.
 
-##### Example
+##### 2.2.2.2 Example
 
-```java
-GET /api/ 1 /apps/calc/packages/b3d14e53- 2654 - 4534 -b374-9179a69ef3cf HTTP/ 1.1
+```http
+GET /api/1/apps/calc/packages/b3d14e53-2654-4534-b374-9179a69ef3cf HTTP/1.1
 Host: deploy.mendix.com
-
 Accept: */*
 Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 ```
 
-#### Output
+#### 2.2.3 Output
 
 An object with the following key-value pairs:
 
-*   _PackageId_ (String) : Unique identification of the package.
-*   _Name_ (String) : Name of the package.
-*   _Description_ (String) : Description of the package.
-*   _Version_ (String) : Package version. This is also the name of the tag on the project team server.
-*   _Creator_ (String) : Uploader or creator of this package.
+*   _PackageId_ (String) : Unique identification of the package
+*   _Name_ (String) : Name of the package
+*   _Description_ (String) : Description of the package
+*   _Version_ (String) : Package version. This is also the name of the tag on the project team server
+*   _Creator_ (String) : Uploader or creator of this package
 *   _CreationDate_ (Date) : Date that the package became available in the portal. This can be the
-    upload date or the date that a build was created in the portal.
-*   _Status_ (String) : Status of the package. A package is ready to use if the status is 'Succeeded'.
-    Possible values: Succeeded, Queued, Building, Uploading and Failed.
-*   _Size_ (Long) : Size of the package in bytes.
+    upload date or the date that a build was created in the portal
+*   _Status_ (String) : Status of the package. A package is ready to use if the status is 'Succeeded'. Possible values: 
+     * Succeeded
+     * Queued
+     * Building
+     * Uploading
+     * Failed
+*   _Size_ (Long) : Size of the package in bytes
 
-##### Error codes
+##### 2.2.3.1 Error codes
 
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
 | 400 | INVALID_PARAMETERS | Not enough parameters given. Please set AppId and PackageId parameters. |
 | 404 | PACKAGE_NOT_FOUND | Package or build job not found |
 
-##### Example
+##### 2.2.3.2 Example
 
-```java
+```json
 {
      "Name" :  "Main line-2.5.4.63.mda" ,
      "Status" :  "Succeeded" ,
@@ -156,26 +160,26 @@ An object with the following key-value pairs:
 }
 ```
 
-### Delete package
+### 2.3 Delete package
 
-#### Description
+#### 2.3.1 Description
 
 Deletes a specific deployment package that is available for a specific app that the authenticated user has access to as a regular user. This package can be found if you click **Details** on an app in the **Nodes** screen in the Mendix Platform.
 
-```java
- HTTP Method: DELETE
- URL: [https://deploy.mendix.com/api/1/apps/<AppId>/packages/<PackageId> (https://deploy.mendix.com/api/1/apps/<AppId>/packages/<PackageId>)]
+```http
+HTTP Method: DELETE
+URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages/<PackageId>
 ```
 
-#### Request
+#### 2.3.2 Request
 
-##### Parameters
+##### 2.3.2.1 Parameters
 
 *   _AppId_ (String) : Subdomain name of an app
 *   _PackageId_ (String) : Id of the deployment package
 
-```java
-DELETE /api/ 1 /apps/calc/packages/b3d14e53- 2654 - 4534 -b374-9179a69ef3cf HTTP/ 1.1
+```http
+DELETE /api/1/apps/calc/packages/b3d14e53-2654-4534-b374-9179a69ef3cf HTTP/1.1
 Host: deploy.mendix.com
 
 Accept: */*
@@ -183,7 +187,7 @@ Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 ```
 
-##### Error codes
+##### 2.3.2.2 Error codes
 
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
@@ -191,32 +195,31 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 | 404 | PACKAGE_NOT_FOUND | Package or build job not found. |
 | 409 | PACKAGE_IN_USE | Package is still in use. |
 
-### Download package
+### 2.4 Download package
 
 Downloads a specific deployment package that is available for a specific app that the authenticated user has access to as a regular user. This package can be found if you click **Details** on an app in the **Nodes** screen in the Mendix Platform.
 
-```java
- HTTP Method: GET
- URL: [https://deploy.mendix.com/api/1/apps/<AppId>/packages/<PackageId>/download (https://deploy.mendix.com/api/1/apps/<AppId>/packages/<PackageId>/download)]
+```http
+HTTP Method: GET
+URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages/<PackageId>/download
 ```
 
-#### Request
+#### 2.4.1 Request
 
 Parameters
 
 *   _AppId_ (String) : Subdomain name of an app.
 *   _PackageId_ (String) : Id of the deployment package.
 
-```java
-GET /api/ 1 /apps/calc/packages/b3d14e53- 2654 - 4534 -b374-9179a69ef3cf/download HTTP/ 1.1
+```http
+GET /api/1/apps/calc/packages/b3d14e53-2654-4534-b374-9179a69ef3cf/download HTTP/1.1
 Host: deploy.mendix.com
-
 Accept: */*
 Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 ```
 
-#### Output
+#### 2.4.2 Output
 
 Error codes
 
@@ -226,22 +229,22 @@ Error codes
 | 404 | PACKAGE_NOT_FOUND | Package or build job not found. |
 | 500 | BUILD_NOT_SUCCEEDED | Build not successful finished. |
 
-### Start building deployment package
+### 2.5 Start building deployment package{#start-building-deployment-package}
 
 Start the process to build a deployment package, based on the team server project of a specific app that the authenticated user has access to as a regular user. This package can be found if you click **Details** on an app in the **Nodes** screen in the Mendix Platform. For a Sandbox, this will also trigger a deployment of the new package.
 
-```java
+```http
 HTTP Method: POST
- URL: [https://deploy.mendix.com/api/1/apps/<AppId>/packages/ (https://deploy.mendix.com/api/1/apps/<AppId>/packages/)]
+URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages/
 ```
 
-#### Request
+#### 2.5.1 Request
 
-##### Parameter
+##### 2.5.1.1 Parameter
 
 *   _AppId_ (String) : Subdomain name of an app.
 
-##### Payload
+##### 2.5.1.2 Payload
 
 An object with the following key-value pairs:
 
@@ -250,12 +253,11 @@ An object with the following key-value pairs:
 *   _Version_ (String) : Package version. This will also be the name of the tag on the project team server.
 *   _Description_ (String) : Description of the package.
 
-##### Example
+##### 2.5.1.3 Example
 
-```java
-POST /api/ 1 /apps/calc/packages/ HTTP/ 1.1
+```http
+POST /api/1/apps/calc/packages/ HTTP/1.1
 Host: deploy.mendix.com
-
 Accept: */*
 Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
@@ -268,12 +270,17 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 }
 ```
 
-#### Output
+#### 2.5.2 Output
+
+{{% alert type="info" %}}
+You will receive a response to indicate that the build has started. Depending on the complexity of your app, it may take some time before it is complete.
+
+You can find out the status of your build by looking at the `status` from a [Retrieve Package](#retrieve-package) call. The status will be *Succeeded* once the package has been built successfully.
+{{% /alert %}}
 
 An object with the following key-value pair:
 
-*   _PackageId_ (String) : Unique identification of the package. This string can be used to get the build status
-    of the package later.
+*   _PackageId_ (String) : Unique identification of the package. This string can be used to get the build status of the package later.
 
 Error codes
 
@@ -285,10 +292,12 @@ Error codes
 | 404 | APP_NOT_FOUND | App not found. |
 | 500 | BUILD_FAILED | Build job failed. |
 
-##### Example
+##### 2.5.2.1 Example
 
 ```java
 {
      "PackageId" :  "b3d14e53-2654-4534-b374-9179a69ef3cf"
 }
 ```
+
+If `calc` is the example app, you can find the status of the build by using `GET /api/1/apps/calc/packages/b3d14e53-2654-4534-b374-9179a69ef3cf HTTP/1.1` and looking for a return `status` of `Succeeded`.

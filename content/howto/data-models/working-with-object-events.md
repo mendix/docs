@@ -1,13 +1,16 @@
 ---
 title: "Work with Object Events"
 category: "Data Models"
+menu_order: 3
 tags: ["microflow"]
-#To update screenshots of these microflows in the Desktop Modeler, use the Microflow Screenshots app project.
+#To update screenshots of these microflows in Studio Pro, use the Microflow Screenshots app project.
 ---
+
+## 1 Introduction
 
 When working with the Mendix Platform, objects are created, removed, or reverted back to the original. Based on the state of the object and the object events that are specified in the domain model, different actions are taken by the platform to guarantee data consistency. 
 
-## 1 Create
+## 2 Create
 
 Wherever an object is initialized, all the events are always executed. The default **Create** button, a create activity in a microflow, and web services will always follow the steps described in the image below.
 
@@ -20,13 +23,21 @@ Wherever an object is initialized, all the events are always executed. The defau
 
 ![](attachments/18448744/18582173.png)
 
-## 2 Commit
+## 3 Commit
 
-When an object is committed through a default Save button, a commit activity, or web services, it will always trigger the commit events. The platform will also evaluate all associated objects. To guarantee data consistency, the platform will also autocommit associated objects.
+When an object is committed through a default Save button, a commit activity, or web services, it will always trigger the commit events. The platform will also evaluate all associated objects. To guarantee data consistency, the platform may also autocommit associated objects.
 
 An autocommit is an automatic commit from the platform, which is done to keep the domain model in sync. If your application ends up having autocommitted objects, then you will have a modeling error. Since an association is also a member of an object, the association will be stored in the database as well. This means that if you create an order line inside an order and the order line is the parent of the association, when you commit the order line, the order will be autocommitted.
 
-If you end up with autocommited objects, it is always because of a modeling error. At some point in time, an association was set to a new object, the associated object was committed, and all of its associations were committed as well to keep all the data consistent.
+{{% alert type="warning" %}}
+An autocommit is not the same as an explicit commit!
+
+If a rollback is triggered for any reason (for example, if the user session is terminated by the user closing the browser), then autocommitted objects will be deleted from the database. See [Persistability](/refguide/persistability) for more information about how Mendix handles persistable objects.
+{{% /alert %}}
+
+If you end up with autocommitted objects, it is always because of a modeling error. At some point in time, an association was set to a new object, the associated object was committed, and all of its associations were committed as well to keep all the data consistent.
+
+For both explicitly committed and autocommitted objects, the following will occur:
 
 * Events: all before and after events are executed, and if any before-rollback event returns false, an exception can be thrown
     * If an exception occurs during an event, all the applied changes are reverted with the default error handling behavior
@@ -37,7 +48,7 @@ If you end up with autocommited objects, it is always because of a modeling erro
 
 ![](attachments/18448744/18582172.png)
 
-## 3 Rollback
+## 4 Rollback
 
 Pressing a Cancel button or triggering a rollback activity will initiate the rollback events. These actions are not triggered in the case of a rollback because of an error.
 
@@ -49,7 +60,7 @@ Pressing a Cancel button or triggering a rollback activity will initiate the rol
 
 ![](attachments/18448744/18582170.png)
 
-## 4 Delete
+## 5 Delete
 
 Clicking a Delete button or triggering a delete activity will initiate the delete events. In addition, when an object is removed through the configured delete behavior, it will execute all before and after events.
 
@@ -63,12 +74,12 @@ Clicking a Delete button or triggering a delete activity will initiate the delet
 
 ![](attachments/18448744/18582171.png)
 
-## 5 Related Content
+## 6 Read More
 
-* [How to Work with Images and Files](working-with-images-and-files)
-* [How to Create a Basic Data Layer](create-a-basic-data-layer)
-* [How to Denormalize Data to Improve Performance](denormalize-data-to-improve-performance)
-* [How to Set Up Data Validation](setting-up-data-validation)
-* [How to Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
+* [Work with Images & Files](working-with-images-and-files)
+* [Create a Basic Data Layer](create-a-basic-data-layer)
+* [Denormalize Data to Improve Performance](denormalize-data-to-improve-performance)
+* [Set Up Data Validation](setting-up-data-validation)
+* [Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
 * [Stories](/developerportal/collaborate/stories)
-* [How to Perform the Scout and Windows 10 Workaround](../ux/perform-scout-and-windows-10-workaround)
+* [Perform the Scout and Windows 10 Workaround](../front-end/perform-scout-and-windows-10-workaround)

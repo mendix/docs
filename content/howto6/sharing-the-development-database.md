@@ -3,7 +3,7 @@ title: "Sharing the Development Database"
 category: "Collaboration & Project Management"
 tags: []
 ---
-All Mendix applications need a database running in the background. While developing an application it is advised to use the standard built-in database that is supplied with the Mendix Modeler. This how-to will teach you how to open and manage the data stored inside the built-in database.
+All Mendix apps need a database running in the background. While developing an application it is advised to use the standard built-in database that is supplied with the Mendix Modeler. This how-to will teach you how to open and manage the data stored inside the built-in database.
 
 ## 1\. Prerequisites
 
@@ -88,5 +88,5 @@ Make sure the names of the databases aren't the same or make a copy of your own 
 *   [Contributing to a GitHub repository](contribute-to-a-github-repository)
 *   [Starting your own repository](starting-your-own-repository)
 *   [Using Team Server - Version Control](using-team-server-version-control)
-*   [How to Use the Mendix Feedback Widget](/developerportal/feedback/use-feedback-widget)
+*   [How to Use the Mendix Feedback Widget](/developerportal/collaborate/use-feedback-widget)
 *   [Sharing the Development Database](sharing-the-development-database)

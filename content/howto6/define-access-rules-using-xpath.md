@@ -68,7 +68,7 @@ To define the access rules on the Order entity using XPath, follow these steps:
 5. When you log in with the **Financial Administrator** account, you will see that only completed orders are shown in the orders overview:
     ![](attachments/18448681/18580994.png)
 
-## 5 Related Content
+## 5 Read More
 
 * [How to Trigger Logic Using Microflows](triggering-logic-using-microflows)
 * [How to Create a Custom Save Button](create-a-custom-save-button)

@@ -86,7 +86,7 @@ To replace the default Save button with a custom one, follow these steps:
 5. Click **OK** to save the properties. The microflow should now look like this:
     ![](attachments/18448679/18580979.png)
 
-## 6 Related Content
+## 6 Read More
 
 * [How to Define Access Rules Using XPath](define-access-rules-using-xpath)
 * [How to Trigger Logic Using Microflows](triggering-logic-using-microflows)

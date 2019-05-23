@@ -1,15 +1,16 @@
 ---
-title: "HttpRequest and HttpResponse System Entities"
+title: "HttpRequest & HttpResponse System Entities"
 parent: "integration"
+tags: ["studio pro"]
 ---
 
 ## 1 Introduction
 
-![](attachments/http-request-and-response-entities/http-request-and-response-domain-model.png)
-
 `HttpRequest` is a system entity that represents a request to a server. `HttpResponse` represents the response from the server. Use these entities when [publishing](published-rest-services) or [consuming](consumed-rest-services) REST services.
 
-## 2 HttpRequest<a name="http-request"></a>
+![](attachments/http-request-and-response-entities/http-request-and-response-domain-model.png)
+
+## 2 HttpRequest {#http-request}
 
 The `HttpRequest` entity has the following attributes:
 
@@ -21,7 +22,7 @@ The `HttpRequest` entity has the following attributes:
 
 You can retrieve the request headers via the `HttpHeaders` association.
 
-## 3 HttpResponse<a name="http-response"></a>
+## 3 HttpResponse {#http-response}
 
 The `HttpResponse` entity has the following attributes:
 

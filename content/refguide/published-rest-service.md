@@ -1,17 +1,16 @@
 ---
 title: "Published REST Service"
 parent: "published-rest-services"
+menu_order: 10
+description: "Configuration options for a published REST service"
+tags: ["published REST", "service", "reserved URL prefixes", "swagger", "security", "CORS", "resources", "operation", "how-to", "studio pro"]
 ---
-
-{{% alert type="info" %}}
-
-The **published REST service** feature was introduced in version 7.10.0.
-
-{{% /alert %}}
 
 ## 1 Introduction
 
 Use a published REST service to expose your entities and microflows to other apps using the REST standard.
+
+This document describes the published REST service configuration options shown when the published REST service is opened in Studio Pro.
 
 ## 2 General
 
@@ -25,24 +24,12 @@ When service is initially created, service name is used in the creation of the d
 
 ### 2.2 Version
 
-{{% alert type="info" %}}
-
-The **Version** feature was introduced in version 7.12.0.
-
-{{% /alert %}}
-
 Version is used to display version information in [OpenAPI (Swagger) documentation page](open-api). You can set any string in the version field, but it is recomended to follow [semantic versioning](https://semver.org/) scheme.
 
 By default, version is set to "1.0.0".
 
 <a name="location"></a>
 ### 2.3 Location
-
-{{% alert type="info" %}}
-
-**Location** is editable in Mendix versions 7.12.0 and above.
-
-{{% /alert %}}
 
 Location shows URL on which a service can be reached.
 
@@ -80,24 +67,13 @@ The public documentation is used in the service's [OpenAPI 2.0 (Swagger) Documen
 <a name="export-swagger-json"></a>
 ### 2.5 Export swagger.json
 
-To save a service's [OpenAPI (Swagger) documentation](open-api) somewhere on your machine, simply right-click the service in the **Project Explorer** and select **Export swagger.json** (or just click the **Export swagger.json** button, depending on your Modeler version). This is a machine-readable file in the [OpenAPI 2.0 file format](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md). Most API tools support this format.
+To save a service's [OpenAPI (Swagger) documentation](open-api) somewhere on your machine, simply right-click the service in the **Project Explorer** and select **Export swagger.json** (or just click the **Export swagger.json** button, depending on your Studio Pro version). This is a machine-readable file in the [OpenAPI 2.0 file format](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md). Most API tools support this format.
 
 When the app is running, this file is available under `/rest-doc/servicename/swagger.json`.
 
 ## 3 Security
 
-<a name="authentication"></a>
-### 3.1 Requires Authentication
-
-{{% alert type="info" %}}
-
-The **No Authentication** feature was introduced in version 7.11.0. In earlier versions, it was always **Username and password**.
-
-The **Active Session** authentication was introduced in version 7.13.0
-
-The **Custom** authentication was introduced in version 7.17.0
-
-{{% /alert %}}
+### 3.1 Requires Authentication {#authentication}
 
 Select whether clients need to authenticate or not.
 
@@ -171,6 +147,6 @@ Resources and Operations are appended to [Location](#location) to form a URL on 
 
 {{% youtube HzrFkv0U4n8 %}}
 
-## 8 Related Content
+## 8 Read More
 
 For more information on which operation gets executed for a given request URL, see [Published REST Routing](published-rest-routing).

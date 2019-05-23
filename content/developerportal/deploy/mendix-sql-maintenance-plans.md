@@ -154,7 +154,7 @@ In this section, you are going to create a new maintenance plan called **MP_SYSD
 
     ![](attachments/mendix-sql-maintenance-plans/18580655.png)
 
-## 4 Related Content
+## 4 Read More
 
 * [How to Restore an SQL Server Database](restoring-a-sql-server-database)
 * [How to Troubleshoot SQL Server](troubleshooting-sql-server)
@@ -162,5 +162,4 @@ In this section, you are going to create a new maintenance plan called **MP_SYSD
 * [How to Set Up an SQL Server User](setting-up-a-sql-server-user)
 * [How to Configure a Security Checklist for Your On-Premises Installation](security-checklist-for-your-on-premises-installation)
 * [How to Deploy Mendix on Microsoft Windows](deploy-mendix-on-microsoft-windows)
-* [How to Install Mendix on Debian GNU Linux](installing-mendix-on-debian-gnu-linux)
-* [How to Install Mendix on RedHat and CentOS](installing-mendix-on-redhat-and-centos)
+* [U*ix Deployment](unix-like)

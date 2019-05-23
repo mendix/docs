@@ -45,7 +45,7 @@ After setting up all the prerequisites, you can start writing a first script tha
     function loadDomainModel(workingCopy: OnlineWorkingCopy): Promise<domainmodels.DomainModel> {
         const dm = workingCopy.model().allDomainModels().filter(dm => dm.containerAsModule.name === 'MyFirstModule')[0];
 
-        return new Promise((resolve, reject) => dm.load(resolve));
+        return dm.load();
     }
 
     main();
@@ -72,9 +72,9 @@ const project = await client.platform().createNewApp(`NewApp-${Date.now()}`);
 const workingCopy = await project.createWorkingCopy();
 ```
 
-The `createNewApp()` call is where you actually kick off the process that will create a new project in the Mendix Platform which will also create a commit in the Team Server repository. By using `await`, you're waiting for the asynchoronous call for creating the app and resuming the code afterwards. The result of this call will be accessible via the Mendix Modeler, but in order to be able to manipulate it using the SDK, you need to expose it as an online working copy. The subsequent call `createWorkingCopy()` will exactly do that.
+The `createNewApp()` call is where you actually kick off the process that will create a new project in the Mendix Platform which will also create a commit in the Team Server repository. By using `await`, you're waiting for the asynchoronous call for creating the app and resuming the code afterwards. The result of this call will be accessible via Studio Pro, but in order to be able to manipulate it using the SDK, you need to expose it as an online working copy. The subsequent call `createWorkingCopy()` will exactly do that.
 
-If you create an online working copy from an existing app on the Team Server, be sure your app has been saved using the latest Mendix Desktop Modeler version. Earlier versions might not be supported!
+If you create an online working copy from an existing app on the Team Server, be sure your app has been saved using the latest Mendix Studio Pro version. Earlier versions might not be supported!
 
 #### 2.1.3 Lines 12-15
 
@@ -137,11 +137,11 @@ For more information, see [Async Await](https://basarat.gitbooks.io/typescript/d
 
 Note that the steps for project creation (line 3) and committing to the Team Server (line 10) can take some time, so please be patient. Be aware that 'revision -1' refers to the latest revision, and that 'branch null' is equal to mainline.
 
-## 4 Opening the App in the Mendix Modeler
+## 4 Opening the App in Studio Pro
 
 1.  In the Mendix [Developer Portal](https://sprintr.home.mendix.com/), navigate to your Projects. The app you just created should be visible at the top of the list.
-2.  Open the new project, and on the right hand side click on **Edit in Modeler**.
-3.  If you have the latest [Mendix Desktop Modeler](https://appstore.home.mendix.com/link/modelers/), it will start and load the app you just created from the Team Server.
+2.  Open the new project, and on the right hand side click on **Edit**.
+3.  If you have the latest [Mendix Studio Pro](https://appstore.home.mendix.com/link/modelers/), it will start and load the app you just created from the Team Server.
 
 ## 5 Next Step
 

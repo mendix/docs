@@ -1,26 +1,26 @@
 ---
-title: "Mendix SSO: Integrate your App"
+title: "Mendix Single Sign-On"
 parent: "mendix-cloud-deploy"
 menu_order: 70
 description: "Use the AppCloudServices module to add Single Sign-on to your app using the user's Mendix credentials"
 tags: ["AppCloudServices", "SSO", "Single Sign On", "Mendix credentials"]
+#Ownership claimed by Identity Services Team.
 #Needs to be rewritten to remove AppCloud references and just concentrate on SSO. Also needs to be tested.
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
-The **AppCloudServices** module allows you to integrate your app with the Mendix Cloud, including the Single Sign-on (SSO) feature. You can add these services to your existing app with the AppCloudServices module, available here: [https://appstore.home.mendix.com/link/app/934/](https://appstore.home.mendix.com/link/app/934/).
+The [AppCloudServices module](https://appstore.home.mendix.com/link/app/934/) module allows you to integrate your app with the Mendix Cloud, including the single sign-on (SSO) feature.
 
 Want to know more about all the possibilities this opens up? Take a look at the [New Mendix AppCloud Ignites Application Innovation by Connecting All Custom Apps, Developers, Data, and Users in One Enterprise Cloud Ecosystem](http://www.mendix.com/press/new-mendix-appcloud/) blog post.
 
-This how-to explains how you can incorporate the AppCloudServices module into your existing app.
-
 ## 2 Steps & Example
 
-This how-to uses the [Company Expenses](https://appstore.home.mendix.com/link/app/240/) (CE) app.
+These steps use the [Company Expenses](https://appstore.home.mendix.com/link/app/240/) (CE) app as an example. To incorporate the AppCloudServices module into an existing app, follow these steps:
 
-1. Open your app project in the Desktop Modeler.
-2. Open the **App Store** inside the Mendix Modeler.
+1. Open your app project in Mendix Studio Pro.
+2. Open the **App Store** inside Studio Pro.
 3. Search for "AppCloudServices," then open and download the Mendix **AppCloudServices** module.
 4.  Select **Add as a new module** and click **Import**. The module should now be visible in the **Project Explorer**:
 
@@ -62,7 +62,7 @@ This how-to uses the [Company Expenses](https://appstore.home.mendix.com/link/ap
 
 Congratulations! Your app now makes use of the AppCloud services. When you deploy your upgraded app in the AppCloud, it will now be automatically added to your [Launchpad](https://home.mendix.com/home/). Opening the app from your Launchpad will automatically log you in with your Mendix account, and you can easily invite other Mendix accounts through app user management.
 
-## 3 Related Content
+## 3 Read More
 
 *   [Different user logins when integrated with Mendix SSO](managing-mendix-sso)
 *   [Trends in Mendix Cloud v3](/developerportal/operate/trends)

@@ -726,7 +726,7 @@ This is a great book that can help you understand what JavaScript is all about:
 
 [http://addyosmani.com/resources/essentialjsdesignpatterns/book/](http://addyosmani.com/resources/essentialjsdesignpatterns/book/) 
 
-## 9 Related Content
+## 9 Read More
 
 * [Create a Chainable Custom Widget](create-a-chainable-custom-widget)
 * [Get Started with the Widget Development Plugin for Adobe Brackets](getting-started-with-the-widget-development-plugin-for-adobe-brackets)

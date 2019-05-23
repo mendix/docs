@@ -1,6 +1,7 @@
 ---
 title: "Import Mapping Action"
 parent: "microflow-activities"
+tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -19,13 +20,7 @@ With the Import Mapping action, you can import the data stored in an XML or JSON
 
 ### 2.1 Variable
 
-The input variable can either be a string, a file document, or an [HttpRequest](http-request-and-response-entities#http-request). The content of the file document or HttpRequest should be XML or JSON.
-
-{{% alert type="info" %}}
-
-Support for HttpRequest was added in version 7.11.0. Earlier versions needed a string variable that contained the HttpRequest content.
-
-{{% /alert %}}
+The input variable can either be a string, a file document, an [HttpRequest](http-request-and-response-entities#http-request), or an [HttpRequest](http-request-and-response-entities#http-response). The content of the file document, HttpRequest, or HttpResponse should be XML or JSON.
 
 ## 3 Import Mapping
 
@@ -35,31 +30,13 @@ The [import mapping](import-mappings) defines how to transform the XML or JSON i
 
 ### 3.2 Input Content Type
 
-{{% alert type="info" %}}
-
-This feature was introduced in version 7.10.0.
-
-{{% /alert %}}
-
-If the import mapping is based on a [message definition](message-definition), it can import both XML and JSON. Select whether the input variable contains XML or JSON.
+If the import mapping is based on a [message definitions](message-definitions), it can import both XML and JSON. Select whether the input variable contains XML or JSON.
 
 ### 3.3 The Input Contains
 
-{{% alert type="info" %}}
-
-This feature was introduced in version 7.10.0.
-
-{{% /alert %}}
-
-If the import mapping is based on a [message definition](message-definition), it can import both single objects and lists. Select whether the input variable contains a single object or a list of objects.
+If the import mapping is based on a [message definitions](message-definitions), it can import both single objects and lists. Select whether the input variable contains a single object or a list of objects.
 
 ### 3.4 If No Object Was Found
-
-{{% alert type="info" %}}
-
-This feature was introduced in version 7.17.0.
-
-{{% /alert %}}
 
 You can indicate what should happen **if no object was found** when the import mapping has checked the box **decide this at the place where the mapping gets used**.
  

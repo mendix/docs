@@ -1,6 +1,7 @@
 ---
 title: "Reference Selector"
 parent: "input-widgets"
+tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -17,7 +18,7 @@ To use a reference selector you need a many-to-one association in the domain mod
 
 The reference selector is similar to a [Report Parameter](report-parameter) except that it allows users to choose from a list of objects with which to fill an association rather than items listed in an enumeration. The selector requires you to choose an entity with which the parent object shares a reference. It will also require you to choose which attribute from that referenced entity you wish to display in the selector.
 
-{{% alert type="success" %}}
+{{% alert type="info" %}}
 
 If you only want to _display_ information, you can also use the text box. This has the added advantage that you can follow more than one association step.
 
@@ -34,7 +35,7 @@ The reference selector allows the end user to select objects by using either a d
 | Page | Select the reference using a pop-up page. |
 | Drop-down | Select the reference using a drop-down. |
 
-{{% alert type="success" %}}
+{{% alert type="info" %}}
 
 The advantage of a selecting using a drop-down is that it is very efficient; no page needs to be opened. The advantage of selecting using a page is that the end user can search the objects. If there are a lot of objects (say, more than 20) to select from, selecting using a page is advisable.
 
@@ -47,15 +48,7 @@ _Default value:_ Drop-down
 This property represents the caption for the empty option in the drop-down reference selector shown to the user. Setting the caption is not available if the Select Using property set to the Page option. This is a translable text. For more details, see [Translatable Texts](translatable-texts).
 
 {{% alert type="info" %}}
-
 Filling out the caption for an empty option increases the user experience of your application. It also helps screen-reader users to operate the application easily.
-
-{{% /alert %}}
-
-{{% alert type="info" %}}
-
-The empty option caption is available from Mendix 7.2.0.
-
 {{% /alert %}}
 
 ### Select Page
@@ -64,10 +57,8 @@ The select page property determines which page is opened when the select page bu
 
 See [Opening Pages](opening-pages). Note that opening select pages in content is prohibited.
 
-{{% alert type="success" %}}
-
+{{% alert type="info" %}}
 You can generate a new page to show by right-clicking the widget and selecting 'Generate select page...'.
-
 {{% /alert %}}
 
 ### Go-To Page
@@ -201,7 +192,7 @@ Keep in mind that even though you connect an attribute to the reference selector
 
 {{% snippet file="refguide/Tab+index+Property.md" %}}
 
-## Related Content
+## Read More
 
 *   [Data view](data-view)
 *   [Entities](entities)

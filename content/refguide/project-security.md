@@ -1,18 +1,19 @@
 ---
 title: "Project Security"
 parent: "project"
+tags: ["studio pro"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-
-{{% alert type="info" %}}
-
-For more general information on security, see [Security](security).
-
-{{% /alert %}}
+## 1 Introduction
 
 In the project security dialog you can configure security settings related to the project, such as the security level, user roles, administrator access, and anonymous users.
 
-## Security Level
+{{% alert type="info" %}}
+For more general information on security, see [Security](security).
+{{% /alert %}}
+
+## 2 Security Level {#level}
 
 The security level defines how security is applied and which security settings need to be configured.
 
@@ -23,20 +24,18 @@ The security level defines how security is applied and which security settings n
 | Production | Full security is applied. | Administrator and anonymous access, user roles, and security for forms, microflows, entities, and reports. |
 
 {{% alert type="warning" %}}
-
 Security levels 'Off' and 'Prototype / demo' are only allowed in development and test. For acceptance and production you need to use the 'Production' security level and configure all security settings accordingly.
-
-{{% /alert %}}{{% alert type="info" %}}
-
-All other security settings are only visible if the security level is 'Prototype / demo' or 'Production'.
-
 {{% /alert %}}
 
-### Check security (only for security level Production)
+{{% alert type="info" %}}
+All other security settings are only visible if the security level is 'Prototype / demo' or 'Production'.
+{{% /alert %}}
 
-If the security level is production, you can specify whether the consistency of security settings should be checked. For each user role the Modeler checks which forms are accessible, either directly in the menu bar or indirectly by following forms and microflows. For each of those forms, the Modeler checks whether referred attributes and associations are accessible for the current user role. If not, an error is added to the error list. These errors are only shown if there are no other errors.
+### 2.1 Check Security (Production Security Level)
 
-### Project status
+If the security level is production, you can specify whether the consistency of security settings should be checked. For each user role Studio Pro checks which forms are accessible, either directly in the menu bar or indirectly by following forms and microflows. For each of those forms, Studio Pro checks whether referred attributes and associations are accessible for the current user role. If not, an error is added to the error list. These errors are only shown if there are no other errors.
+
+### 2.2 Project Status
 
 The project status indicates the security status for the current project security level.
 
@@ -45,15 +44,15 @@ The project status indicates the security status for the current project securit
 | Complete | All security settings for the current security level have been configured. |
 | Incomplete | Some security settings for the current security level need to be configured. See the module status for more information. |
 
-## Extra Settings
+## 3 Extra Settings
 
 When the security level is set to 'Prototype / demo' or 'Production', a number of tab pages with extra settings are shown.
 
-## Module Status
+## 4 Module Status
 
-The module status overview shows the security status for each module. It shows the total number of items for which security needs to be configured, as well as the number of items for which security has been configured already. At the 'Prototype / demo' security level, the status of form access and microflow access is shown. Additionally, at the 'Production' security level, the status of entity access and data set access (if applicable) is shown.
+The module status overview shows the security status for each module. It shows the total number of items for which security needs to be configured, as well as the number of items for which security has been configured already. At the 'Prototype / demo' security level, the status of form access and microflow access is shown. Additionally, at the 'Production' security level, the status of entity access and dataset access (if applicable) is shown.
 
-## User Roles
+## 5 User Roles
 
 A user role aggregates a number of access rights on data, forms and microflows. An end-user of the application is assigned one or more user roles by an administrator, and gets all access rights that these user roles represent.
 
@@ -63,7 +62,7 @@ The purpose of the distinction between user roles and module roles is to make a 
 
 End-users of your application only see the user roles and not the module roles.
 
-### General Properties
+### 5.1 General Properties
 
 **Name**
 
@@ -81,7 +80,7 @@ A list of module roles of which the access rights are accumulated in the user ro
 
 This specifies whether the consistency of security settings is checked for this user role. You can choose to not check security for a user role. For example, user roles that are used only for web service users do not need to be checked because they never sign in to the client. See [Project Security](project-security) for more information on the security check.
 
-### User Management Properties
+### 5.2 User Management Properties
 
 **Users with this user role can manage users with at most the following user roles**
 
@@ -92,7 +91,7 @@ A user role can be allowed to manage users with a number of other user roles (in
 | All | End-users with this user role can manage all users and grant all user roles. Usually this option should only be configured for an administrator. |
 | Selected | End-users with this user role can manage users that have at most the selected user roles, and can grant only the selected user roles. If no user roles are selected, end-users with this user role cannot manage users at all. |
 
-## Administrator
+## 6 Administrator
 
 **User Name**
 
@@ -117,7 +116,7 @@ This role may be helpful in case for some reason you have exceeded your user lic
 
 {{% /alert %}}
 
-## Demo Users
+## 7 Demo Users
 
 In this section of the Project Security settings, you can define demo users that may be used during the development phase of your application for testing purposes, or to show the application to other people.
 
@@ -144,7 +143,7 @@ Here you can configure whether the specified demo users are created and accessib
 | Yes | Demo users are enabled. A user switcher is shown in the right margin of your application. |
 | No | Demo users are disabled. The user switcher is not shown in the application. |
 
-### Demo User Properties
+### 7.1 Demo User Properties
 
 **Username**
 
@@ -162,7 +161,7 @@ The entity of the demo user. This must be the System.User entity, or a specializ
 
 Here you can select the user roles of the demo user. Each demo user must have one or more roles.
 
-## <a name="anonymous-users"></a>Anonymous Users
+## 8 Anonymous Users {#anonymous-users}
 
 **Allow anonymous users**
 
@@ -206,7 +205,7 @@ An anonymous user in a web shop adds some items to her shopping cart and then cl
 
 {{% /alert %}}
 
-## Password Policy
+## 9 Password Policy
 
 You can specify a number of requirements for passwords. These requirements will be enforced when creating new users or changing passwords of existing users.
 

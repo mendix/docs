@@ -1,6 +1,7 @@
 ---
 title: "Published Web Services"
 parent: "integration"
+tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -21,7 +22,7 @@ When running, Mendix projects publish webservices documentation. The address is 
 
 ### WSDL
 
-This is an XML document that is computer readable. This means that the modeler can read this document and automatically figure out how to interact with the webservice.
+This is an XML document that is computer readable. This means that Studio Pro can read this document and automatically figure out how to interact with the webservice.
 
 ### Example request/response xml messages
 

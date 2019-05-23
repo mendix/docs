@@ -95,7 +95,7 @@ Each App Team role has access to permission areas based on the following factors
 
 * Who can edit the backlog and current [sprint](../collaborate/stories)
 * Who can edit the app [model](../develop/modeling-environments)
-* Who has access to [cloud node](../deploy/node-permissions) information (please note that node permissions must be provisioned by the [Technical Contact](#technical-contact))
+* Who has the correct [Node Permissions](../deploy/node-permissions) for access to the node information (please note that node permissions must be provisioned by the [Technical Contact](#technical-contact))
 * Who can change the app's [general settings](../settings/general-settings)
 
 These are the predefined App Team roles:
@@ -110,10 +110,8 @@ SCRUM Master | The Scrum Master of the Agile App Team. In addition to contributi
 
 For details on how to manage App Team roles, see the [Editing App Team Roles](manage-roles#edit-app-team-roles) section of *How to Manage Company & App Roles*.
 
-## 5 Related Content
+## 5 Main Documents in This Category
 
-* [Mendix Profile](../mendix-profile/index)
-* [How to Manage Company & App Roles](/developerportal/company-app-roles/manage-roles)
-* [Company Admin Settings](/developerportal/company-app-roles/companyadmin-settings)
+* [Manage Company & App Roles](manage-roles)
+* [Company Admin Settings](companyadmin-settings)
 * [Technical Contact](technical-contact)
-* [Settings](/developerportal/settings)

@@ -1,13 +1,14 @@
 ---
-title: "Page title"
+title: "Page Title"
 parent: "common-widgets"
+tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 
 The page title widget shows the title of the [page](page) on which it is used. This can be the title defined on the page itself or the override title defined when showing a page.
 
-{{% alert type="success" %}}
+{{% alert type="info" %}}
 
 The page title widget makes it possible to embed the page title in a [layout](layout), as it will show the title of the page that uses the layout.
 

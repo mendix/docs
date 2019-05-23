@@ -1,7 +1,9 @@
 ---
 title: "User Roles"
 parent: "project-security"
+tags: ["studio pro"]
 ---
+
 A user role aggregates a number of access rights on data, forms and microflows. An end-user of the application is assigned one or more user roles by an administrator, and gets all access rights that these user roles represent.
 
 Every user role has one or more [module roles](module-role), which means that users with that user role have all the access rights that are defined for those module roles. A typical user role has module role System.User and at least one other module role.

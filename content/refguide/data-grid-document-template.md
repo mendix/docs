@@ -1,6 +1,7 @@
 ---
-title: "Data Grid (document template)"
+title: "Data Grid (Document Template)"
 parent: "document-templates"
+tags: ["studio pro"]
 ---
 
 
@@ -55,7 +56,7 @@ See [Style](style)
 
 ### Name
 
-The internal name of the widget. You can use this to give sensible names to widgets. The name property also appears in the generated HTML: the widget DOM element automatically includes the class '`mx-name-{NAME}`', which can be useful for [Selenium testing](/howto7/integration/selenium-support).
+The internal name of the widget. You can use this to give sensible names to widgets. The name property also appears in the generated HTML: the widget DOM element automatically includes the class '`mx-name-{NAME}`', which can be useful for [Selenium testing](/howto/integration/selenium-support).
 
 ## Data Source Properties
 

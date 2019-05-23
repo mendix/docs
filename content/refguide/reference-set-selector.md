@@ -1,6 +1,7 @@
 ---
 title: "Reference Set Selector"
 parent: "input-widgets"
+tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -163,7 +164,7 @@ See [Selectable Objects Properties](reference-selector) of the reference selecto
 
 {{% snippet file="refguide/Visibility+Property+With+Module+Roles+Simple.md" %}}
 
-## Related Content
+## Read More
 
 *   [Data view](data-view)
 *   [Entities](entities)

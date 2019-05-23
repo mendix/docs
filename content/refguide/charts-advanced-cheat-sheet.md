@@ -2,7 +2,7 @@
 title: "Chart Advanced Cheat Sheet"
 parent: "chart-widgets"
 menu_order: 20
-tags: ["Charts", "Advanced", "Desktop Modeler", "Layout Controls", "Data Properties", "Series Properties"]
+tags: ["Charts", "Advanced", "Studio Pro", "Layout Controls", "Data Properties", "Series Properties", "studio pro"]
 ---
 
 ## 1 Introduction
@@ -582,7 +582,7 @@ See more properties here: [Range Selector](https://plot.ly/javascript/reference/
 
 ### 3.6 Multiple Y Axes Data Properties {#multiple-y-axes-data-properties}
 
-Displays two different Y axes with different scales, according to the ranges of the data sets.
+Displays two different Y axes with different scales, according to the ranges of the datasets.
 
 ``` json
 [

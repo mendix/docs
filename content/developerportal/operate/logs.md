@@ -20,7 +20,11 @@ This is the default Mendix deployment for a licensed app.
 
 For apps deployed to Mendix Cloud Version 4 (V4), you can select which environment you want logs for. Production logs will require two-step authentication.
 
-You can view the current log, download it, or view and download an archived log.
+You can view the live (current) log, download it, or view and download an archived log.
+
+{{% alert type="info" %}}
+The live log is displayed in the local time of the browser. All other logs have timestamps in UTC.
+{{% /alert %}}
  
 Logs on Mendix Cloud V4 are rotated and archived every day. The logs are kept for at least 3 months.
 
@@ -28,15 +32,15 @@ Logs on Mendix Cloud V4 are rotated and archived every day. The logs are kept fo
 
 Action Button | Performs the Action
 :---|:---
-Download archived log | download a log selected from the list underneath 
-Download today's log file | download today's log
+Download Archived Log | download a log selected from the list underneath 
+Download Current Log | download the log which is currently being written to
 View Live Log | view today's log on the screen
 
 ## 3 Apps Deployed to Mendix Cloud Version 3
 
 For apps deployed to Mendix Cloud Version 3 (V3), you can select which environment you want logs for. Production logs will require two-step authentication.
 
-You can fetch the current log and download it, or you can view and download an archived log.
+You can fetch the current log and download it, or you can view and download an archived log. All timestamps are shown in UTC.
  
 Logs on Mendix Cloud V3 are rotated and archived every 5MB. The logs are kept for at least 3 months.
 
@@ -44,10 +48,10 @@ Logs on Mendix Cloud V3 are rotated and archived every 5MB. The logs are kept fo
 
 Action Button | Performs the Action
 :---|:---
-Download archived log | download a log selected from the list underneath
-Fetch current Log | view the current log on the screen and download it, if required
+Download Archived Log | download a log selected from the list underneath
+Download Current Log | view the current log on the screen and download it, if required
 
-## 4 Apps SAP Cloud Platform
+## 4 Apps on SAP Cloud Platform
 
 For apps deployed to SAP Cloud Platform you can see the logs using Kibana. 
 

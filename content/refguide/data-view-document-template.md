@@ -1,6 +1,7 @@
 ---
-title: "Data View (document template)"
+title: "Data View (Document Template)"
 parent: "document-templates"
+tags: ["studio pro"]
 ---
 
 

@@ -44,6 +44,14 @@ $block: 'mx';
       max-width: 80%;
     }
 
+    @include modifier('wide') {
+      @include mq("md") {
+        float: left;
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+
     @include element('header') {
       @include element('head') {
         margin: 0;
@@ -79,6 +87,19 @@ $block: 'mx';
         width: 100%;
         height: 20px;
         padding: 4px;
+      }
+      @include element('pdf-button') {
+        @include clearfix();
+        font-size: 12px;
+        margin: 0 0 5px 5px;
+        display: inline-block;
+        float: right;
+        i {
+          margin-right: 3px;
+        }
+        &:hover {
+          text-decoration: none;
+        }
       }
     }
 
@@ -211,6 +232,20 @@ $block: 'mx';
         margin: 0 auto;
         display: block;
         text-align: center;
+      }
+    }
+
+    .todo {
+      position: relative;
+      border-width: 2px;
+      &:before {
+        content: 'todo';
+        position: absolute;
+        top: -8px;
+        left: -1px;
+        font-size: 11px;
+        font-weight: bold;
+        color: #F00;
       }
     }
   }

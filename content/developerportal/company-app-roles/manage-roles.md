@@ -2,7 +2,7 @@
 title: "Manage Company & App Roles"
 category: "Company & App Roles"
 menu_order: 10
-description: "This page describes how to add extra Company Admins and change the App Roles."
+description: "Describes how to add extra Company Admins and change the App Roles."
 tags: ["Company Admin","Company Contact","App Contact","Technical Contact","Node Permissions","App Team","Role","Developer Portal"]
 ---
 
@@ -24,7 +24,7 @@ Before starting this how-to, make sure you have completed the prerequisites desc
 
 * To add extra Company Admins, you need to be a **Company Admin**
 * To change the App Contact, you need to have a **SCRUM Master** role or possess the App Team **Settings** permission 
-* To change the Technical Contact, you need to be a **Technical Contact **
+* To change the Technical Contact, you need to be a **Technical Contact**
 
 ## 3 Adding a Company Admin
 
@@ -43,10 +43,11 @@ When you are a Company Admin, you can add extra Company Admins by following thes
 3. Click **Add Company Admin**.
 4.  Select the users that should be changed into Company Admins, then select the permissions:
 
-    * **Can manage Company** – can manage all the settings of the company
-    * **Can manage Users** – can manage only the **Users** page of the company settings
-    * **Can manage Apps** – can manage only the **Apps** page of the company settings
-    * **Can manage Nodes** – can manage only the **Nodes** page of the company settings
+	* **Can manage Company** – can manage all the settings of the company
+	* **Can manage Users** – can manage only the **Users** page of the company settings
+	* **Can manage Apps** – can manage only the **Apps** page of the company settings
+	* **Can manage Nodes** – can manage only the **Nodes** page of the company settings
+	* **Can manage App Store**<a name="app-store-manager"></a> – can specify protected App Store items, add [content owners](../app-store/app-store-overview#cm) to protected items, and configure [external downloaders](../app-store/app-store-overview#ext) for private App Store content; this permission makes the Company Admin the default content owner for all protected App Store items; note that this permission is not currently individually configurable and is only configurable via the **Can manage Company** permission for all company settins
 
 	![](attachments/add-companyadmin.png)
 
@@ -82,21 +83,16 @@ You can change the App Contact by following these steps:
 
 ## 6 Changing the Technical Contact {#change-technical-contact}
 
-A node can have only one Technical Contact to manage the node's environments, deployment repositories, backups, alerts, etc. 
+An app can have only one Technical Contact to manage the app's environments, deployment repositories, backups, and alerts.
 
-You can change the Technical Contact by following these steps:
+If you are the current Technical Contact for an app, you can make another team member the Technical Contact by following these steps:
 
-1. Go to the [Developer Portal](http://home.mendix.com) and click **Apps** in the top navigation panel.
-2. Click **My Apps**, and in the drop-down list, click **Nodes**.
+1. Go to the [Developer Portal](http://home.mendix.com), click **Apps** in the top navigation panel, and select the app for which you want to change the Technical Contact.
+2. Click **Security** under the **Settings** category.
+3. Select the **Node Permissions** tab.
+4.  Below the name of the new Technical Contact, click **Change to Technical Contact**. The Technical Contact will be changed for all environments, and the change will be automatically saved.
 
-    ![](attachments/nodes.png)
-
-3. Select the node for which you want to change the Technical Contact.
-4. Click **Security** under the **Settings** category.
-5. Select the **Node Permissions** tab.
-6. Below the name of the new Technical Contact, click **Change to Technical Contact**. The Technical Contact will be changed for all environments. The change will be automatically saved.
-
-    ![](attachments/change-technicalcontact.png)      
+	![](attachments/change-technicalcontact.png)
 
 ## 7 Editing App Team Roles {#edit-app-team-roles}
 
@@ -110,12 +106,11 @@ It is possible to change or add new App Team roles for a specific app or at the 
 
 	![](attachments/apps-roles.png)
 
-## 8 Related Content
+## 8 Read More
 
 * [Company & App Roles](/developerportal/company-app-roles/index)
 * [Company Admin Settings](/developerportal/company-app-roles/companyadmin-settings)
 * [How to Leave & Delete an App](../settings/leave-delete-app)
 * [How to Deactivate & Activate an App](../company-app-roles/deactivate-activate-app)
-* [Security – Node Permissions](/developerportal/deploy/node-permissions)
+* [Node Permissions](/developerportal/deploy/node-permissions)
 * [Technical Contact](/developerportal/company-app-roles/technical-contact)
-

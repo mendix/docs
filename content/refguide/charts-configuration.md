@@ -2,7 +2,7 @@
 title: "Chart Configuration"
 parent: "chart-widgets"
 menu_order: 10
-tags: ["Charts", "Widgets", "Desktop Modeler", "Chart Configuration", "Configuration"]
+tags: ["Charts", "Widgets", "Studio Pro", "Chart Configuration", "Configuration"]
 ---
 
 ## 1 Introduction
@@ -33,7 +33,7 @@ The common configuration for all charts is described here. For chart specific co
 
 #### 2.1.1 Series
 
-Add series and configure their properties, each series represents a data set. For example a line on a line chart.
+Add series and configure their properties, each series represents a dataset. For example a line on a line chart.
 
 * The *Pie Charts* and *Heat Maps* support only a single series containing a single set of data
 
@@ -61,7 +61,7 @@ Add series and configure their properties, each series represents a data set. Fo
 
     * **Data source**: the data source type for the series: *Database*, *Microflow* or *REST endpoint*
 
-    * **REST URL**: Relative or full URL to REST endpoint. For more information on setting up a REST end point see [REST Charts](../howto/extensibility/charts-basic-rest)
+    * **REST URL**: Relative or full URL to REST endpoint. For more information on setting up a REST endpoint see [REST Charts](../howto/extensibility/charts-basic-rest)
 
     * **XPath constraint**: The constraint on the data from the entity (used when the data source is Database)
 
@@ -112,7 +112,7 @@ Add series and configure their properties, each series represents a data set. Fo
 
     * **Color attribute**: the attribute in the series entity which defines the HTML color used when displayed this series – *there may be more than one color attribute if the chart allows different values (for example an area chart has separate line and fill colors)
 
-    * **Series sort attribute**: allows you to sort the series by an attribute of the series entity – *this is not supported for **non-persistent** entities, such as those used when defining a REST datasource*
+    * **Series sort attribute**: allows you to sort the series by an attribute of the series entity – *this is not supported for **non-persistable** entities, such as those used when defining a REST datasource*
 
     * **Series sort order**: *Ascending* or *Descending*
 

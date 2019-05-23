@@ -1,8 +1,8 @@
 ---
-title: "Template Grid (document template)"
+title: "Template Grid (Document Template)"
 parent: "document-templates"
+tags: ["studio pro"]
 ---
-
 
 The template grid shows a list of objects in a tile view. For example, a template grid can show a list of products. The template grid has a lot in common with the data grid. The main difference is that the objects are shown in templates (a sort of small data view) instead of rows.
 

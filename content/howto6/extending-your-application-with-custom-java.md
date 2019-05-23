@@ -181,7 +181,7 @@ To edit the Java action in Eclipse, follow these steps:
 
 3.  Open the customers overview, select a row, and click **Reverse Name**. You should now see a message pop-up window with the reversed customer name.
 
-## 7 Related Content
+## 7 Read More
 
 * [How to Define Access Rules Using XPath](define-access-rules-using-xpath)
 * [How to Trigger Logic Using Microflows](triggering-logic-using-microflows)

@@ -9,16 +9,15 @@ parent: "ats-2"
 
 ### Mobile testing
 
-We are happy to announce that ATS now supports mobile testing for web applications. With a Browserstack account you can test on Android 6 and 7 on real mobile devices. 
+We are happy to announce that ATS now supports mobile testing for web applications. With a Browserstack account, you can test on Android 6 and 7 on real mobile devices. 
 
-* The format of test cases and the functions that are used to test on desktop devices also work the same way on mobile devices.
-* ATS functions are context aware, meaning that they can detect whey are run on mobile and interact with native dialogs, for example when setting a date field. All native input elements are set by automating the native dialogs, with the exception of drop downs which are set directly.
+* The format of test cases and the functions that are used to test on desktop devices work the same way on mobile devices.
+* ATS functions are context-aware, meaning, they detect the device and interact accordingly. For example, when setting a date field on mobile, the native date dialog box is used. All native input elements are set by automating the native dialog boxes, with the exception of drop-down menus, which are set directly.
 * You can use the ATS recorder even if you have different pages for desktop and mobile. 
 
-For all the details please refer to the [mobile section in the ATS reference guide](/ats/refguide/rg-version-2/mobile).
+For more details, refer to [Mobile](/ats/refguide/rg-version-2/mobile) in the *ATS Reference Guide*.
 
 _Please note that this feature is still in beta._
-
 
 ### Add an option to rerun only the not passed test cases from a test suite or a job
 
@@ -55,15 +54,15 @@ The same holds for the function parameters.
 
 ### Data driven test cases
 
-* We added the option to sequentially execute data driven test cases (DDTC). Until now DDTCs were always executed in parallel. We have now made it possible to chose if you want to execute DDTCs parallel or sequentially, i.e. one-by-one. The selection works in exactly the way it works for test suites, but it is only available for test cases that are related to a data set. This overcomes issues where DDTC could be interfering with each other because they were always running in parallel.
-* We have also added the screenshot feature to data driven test cases. Whenever a data driven test case fails for a given record in the data set, a screen shot will be recorded and will be accessible in the logs. This will work in the same way as it is working now for standard test cases.
-* Selecting a data set for a test case now uses the sidebar search dialog.
+* We added the option to sequentially execute data driven test cases (DDTC). Until now DDTCs were always executed in parallel. We have now made it possible to chose if you want to execute DDTCs parallel or sequentially, i.e. one-by-one. The selection works in exactly the way it works for test suites, but it is only available for test cases that are related to a dataset. This overcomes issues where DDTC could be interfering with each other because they were always running in parallel.
+* We have also added the screenshot feature to data driven test cases. Whenever a data driven test case fails for a given record in the dataset, a screen shot will be recorded and will be accessible in the logs. This will work in the same way as it is working now for standard test cases.
+* Selecting a dataset for a test case now uses the sidebar search dialog.
 
 
 ### Improvements
 
 * We added the corresponding provider logos for Browserstack and Saucelabs.
-* We sped up the opening of the edit page for large data sets.
+* We sped up the opening of the edit page for large datasets.
 * When editing a value for parameter of type number it is now possible to use the edit dialog, same as for text parameters.
 * When running from Browserstack or Saucelabs we select by default the Windows 10 platform and FullHD resolution. For MacOS the resolution UXGA is selected by default. We hope that this will save a few clicks.
 * We have changed the platform selection to use icons instead of a dropdown. This also enabled us to limit the choices to only those which make sense, for example you can no longer select Internet Explorer and MacOS.

@@ -1,7 +1,7 @@
 ---
 title: "Trends in Mendix Cloud v3"
 parent: "metrics"
-menu_order: 50
+menu_order: 10
 description: "Describes how to interpret various graphs and trends in the Mendix Cloud v3."
 tags: ["Trends","v3","Mendix Cloud","Developer Portal"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -16,9 +16,7 @@ To track the usage growth of your app and to debug performance problems, the Men
 To view the **Trends**, you must have permission to **Access the Monitoring**.
 
 {{% alert type="info" %}}
-
-Note that only the [Technical Contact](../company-app-roles/technical-contact) is allowed to grand the node permissions.
-
+Note that only the [Technical Contact](../company-app-roles/technical-contact) is allowed to grant the node permissions.
 {{% /alert %}}
 
 Assign this permission by following these steps:
@@ -42,7 +40,7 @@ You can find the trends by following these steps:
 4. Click **Metrics** under the **Operate** category.
 5. Select the environment you want to monitor under the tab **Trends**.
 
-![](attachments/environment.jpg)
+![](attachments/environment.png)
 
 ## 3 Application Statistics
 
@@ -78,7 +76,7 @@ More information on this graph is available in a Tech Blog post: [What's in my J
 
 ### <a name="Trends-appm2eeserverthreadpool"></a>3.6 Threadpool for Handling External Requests
 
-The application server thread pool graph shows the number of concurrent requests that are being handled bij the Mendix Runtime, but only when they're initiated by a remote API, like the way the normal web-based client communicates, or by calling web services. Because creating a new thread that can concurrently process a request is an expensive operation, there's a pool of threads being held that can quickly start processing new incoming requests. This pool automatically grows and shrinks according to the number of requests that are flowing through the application.
+The application server thread pool graph shows the number of concurrent requests that are being handled by the Mendix Runtime, but only when they're initiated by a remote API, like the way the normal web-based client communicates, or by calling web services. Because creating a new thread that can concurrently process a request is an expensive operation, there's a pool of threads being held that can quickly start processing new incoming requests. This pool automatically grows and shrinks according to the number of requests that are flowing through the application.
 
 ### <a name="Trends-appmxruntimethreads"></a>3.7 Total Number of Threads in the JVM Process
 
@@ -86,7 +84,7 @@ This graph shows the total number of threads that exist inside the running JVM p
 
 ### <a name="Trends-appmxruntimecache"></a>3.8 Object Cache
 
-Mendix 4.0 introduced Non-Persistent Entities which live in the JVM memory and are garbage collected regularly. If you have a memory leak, the number of objects in memory will grow over time. This might be a problem. In this graph you can monitor the number of Mendix Objects that live in memory.
+Non-Persistable Entities live in the JVM memory and are garbage collected regularly. If you have a memory leak, the number of objects in memory will grow over time. This might be a problem. In this graph you can monitor the number of Mendix Objects that live in memory.
 
 ## 4 Database Statistics
 
@@ -168,13 +166,13 @@ Disk utilization is calculated as the disk usage that is used by the user of the
 
 {{% /alert %}}
 
-## 6 Related Content
+## 6 Read More
 
 * [Alerts](monitoring-application-health)
-* [Database Maintenance: Size Reduction](/howtogeneral/support/database-maintenance-size-reduction)
-* [How to Calculate the Total Amount of Diskspace of a Cloud App Environment](/howtogeneral/support/how-to-calculate-diskspace-of-a-cloud-app-environment)
-* [How to Configure Maintenance Windows](/developerportal/deploy/maintenance-windows)
-* [How to Migrate to Mendix Cloud v4](/developerportal/deploy/migrating-to-v4)
+* [Database Size Reduction](database-size-reduction)
+* [How to Calculate the Total Amount of Diskspace of a Cloud App Environment](calculate-diskspace-of-a-cloud-app-environment)
+* [Maintenance Windows: Configuration](/developerportal/deploy/maintenance-windows)
+* [Migrate to Mendix Cloud v4](/developerportal/deploy/migrating-to-v4)
 * [How to Receive Environment Status Alerts](receive-alerts)
-* [How to View the Mendix Cloud Version and Region](/developerportal/deploy/cloud-version-region)
-* [Mendix Cloud v4 - FAQ](/developerportal/deploy/mxcloudv4)
+* [Cloud Version and Region in the Mendix Cloud](/developerportal/deploy/cloud-version-region)
+* [Mendix Cloud V4](/developerportal/deploy/mxcloudv4)

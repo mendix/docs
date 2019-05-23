@@ -1,6 +1,8 @@
 ---
 title: "Test Microflows Using the UnitTesting Module"
 category: "Testing"
+menu_order: 10
+tags: ["test", "testing", "microflow", "unittesting"]
 ---
 
 To smarten up your app with business logic you can use microflows. To verify that your microflow works as expected you can create unit tests using the UnitTesting module. The UnitTesting module provides an easy to use interface to manage and run unit tests. The module supports unit tests that are created using microflows and unit tests that are created using JUnit.
@@ -14,12 +16,11 @@ To smarten up your app with business logic you can use microflows. To verify tha
 
 Before you can start with this how-to, make sure you have completed the following prerequisites:
 
-* Download the [Mendix Desktop Modeler](https://appstore.home.mendix.com/link/modelers/)
+* Download [Mendix Studio Pro](https://appstore.home.mendix.com/link/modelers/)
 * Review the software used in this how-to:
 
     | Software | Version Used in This How-to |
     | --- | --- |
-    | Mendix Desktop Modeler | 5.18.0 |
     | UnitTesting module | 4.2 |
     | Community Commons Function Library module | 5.4 |
     | ObjectHandling module | 1.0 |
@@ -217,6 +218,6 @@ It is possible to create a Setup and TearDown microflow per module. The Setup mi
 
 Do not test everything, focus on the most used and complex microflows.
 
-## 4 Related Content
+## 4 Read More
 
-*   [How to Create Automated Tests with TestNG](create-automated-tests-with-testng)
+*   [Create Automated Tests with TestNG](create-automated-tests-with-testng)

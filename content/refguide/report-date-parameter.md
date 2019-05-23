@@ -1,12 +1,11 @@
 ---
 title: "Report Date Parameter"
 parent: "report-widgets"
+tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-
-
-With the report date parameter, the user can specify the DateTime parameter of the data set, which is then used for filtering the data displayed in the [Report](report-widgets).
+With the report date parameter, the user can specify the DateTime parameter of the dataset, which is then used for filtering the data displayed in the [Report](report-widgets).
 
 In the report date parameter you can add [Date Range Fields](date-range-field) to make it easier for an end user to select a data range. To do this, right-click the widget and choose **Add field** from the pop-up menu.
 
@@ -14,7 +13,7 @@ In the report date parameter you can add [Date Range Fields](date-range-field) t
 
 ### Parameter
 
-This refers to the data set parameter, the value of which is restricted by this widget. The corresponding data set must be used by one of the report widgets on the page.
+This refers to the dataset parameter, the value of which is restricted by this widget. The corresponding dataset must be used by one of the report widgets on the page.
 
 ### Fields Per Row
 

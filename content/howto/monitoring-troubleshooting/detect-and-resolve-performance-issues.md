@@ -1,7 +1,7 @@
 ---
 title: "Detect & Resolve Performance Issues"
 category: "Monitoring & Troubleshooting"
-tags: []
+tags: ["monitoring", "troubleshooting", "performance issue", "performance"]
 ---
 Any application can run into performance issues. Here are a number of possible performance issues you may run into, some root causes, and finally how you can resolve them.
 
@@ -43,7 +43,7 @@ Once you've identified the cause, either too many loads, or slow loads, you're r
 
 ### Too Many Loads
 
-If you have too many loads occurring on a single page, review the page structure in the modeler to determine if that number can be reduced. Here are a few common causes of large number of loads:
+If you have too many loads occurring on a single page, review the page structure in Studio Pro to determine if that number can be reduced. Here are a few common causes of large number of loads:
 
 *   Many datagrids
 *   Many nested dataviews
@@ -97,7 +97,7 @@ The Mendix Server and Developer Portal offer a number of performance graphs and 
 
 Once you've identified a slow page, it's pretty easy to identify which microflows are executed on that page. Make sure you look at directly referenced microflows, such as data sources, but also look at any sub-flows, on change event handlers, or domain model event handlers that could be called by your page.
 
-Setting a break point and stepping through these relevant microflows can often give you a quick (although subjective) way to find a slow action. To get started with debugging microflows, see: [Debugging Microflows](https://world.mendix.com/display/howto6/Debugging+Microflows). If you cannot subjectively identify your slow process, move on to the next step.
+Setting a break point and stepping through these relevant microflows can often give you a quick (although subjective) way to find a slow action. To get started with debugging microflows, see: [Debugging Microflows](/howto/monitoring-troubleshooting/debug-microflows). If you cannot subjectively identify your slow process, move on to the next step.
 
 ### Microflow Time Stamps
 
@@ -133,7 +133,7 @@ Slow retrieves can occur for a number of different reasons. Here are a few:
 *   Complex calculated attributes
 *   Large # of objects retrieved (See batching below)
 
-Additionally, review this article on denormalization and how it can improve your app performance in some cases: [Denormalize Data to Improve Performance](https://world.mendix.com/display/howto6/Denormalize+Data+to+Improve+Performance)
+Additionally, review this article on denormalization and how it can improve your app performance in some cases: [Denormalize Data to Improve Performance](/howto/data-models/denormalize-data-to-improve-performance#1-introduction)
 
 ### Slow Database Commits
 
@@ -185,6 +185,6 @@ If you find that your microflow has a large number of objects to loop over, or e
 
 As always, make sure you look at retrieves and commits performed in your loops, and try to minimize them wherever possible.
 
-## Related Content
+## Read More
 
 [Expert Webinar Series: App Performance](http://ww2.mendix.com/Expert-Webinar.Performance.html)

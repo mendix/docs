@@ -1,6 +1,7 @@
 ---
 title: "Published Web Service"
 parent: "published-web-services"
+tags: ["studio pro"]
 ---
 
 ## 1 Introduction
@@ -38,12 +39,6 @@ This is the value of the targetNamespace attribute in the published WSDL file fo
 It is important to correctly configure the target namespace before publishing your WSDL to third parties. Changing it later might break the third-party applications that call your published web services.
 
 ### 3.4 Generated XML
-
-{{% alert type="info" %}}
-
-The **Generated XML** feature was introduced in version 7.13.0.
-
-{{% /alert %}}
 
 Select **Include tags for associations** if you need to include tags for associations in XML. This is usually not necessary, and support for this will be removed in a future version.
 

@@ -2,7 +2,7 @@
 title: "Create a Dynamic Series Chart"
 parent: "charts-tutorials"
 menu_order: 50
-tags: ["Charts", "Dynamic Series", "Desktop Modeler", "Widgets"]
+tags: ["Charts", "Dynamic Series", "Studio Pro", "Widgets"]
 ---
 
 ## 1 Introduction
@@ -17,7 +17,6 @@ The charts widget provides a basic implementation of dynamic series. This allows
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Install the latest Mendix Desktop Modeler
 * Download the latest [Charts Widget](https://appstore.home.mendix.com/link/app/105695/) from the Mendix App Store
 
 ## 3 Setting up Chart Data
@@ -114,8 +113,8 @@ To view the chart, follow these steps:
 
     ![Dynamic Series Chart](attachments/charts/charts-dynamic-series-chart.png)
 
-## 6 Related Content
+## 6 Read More
 
-* [How to create a basic chart](charts-basic-create)
-* [How to fine tune a chart, with advance settings](charts-advanced-tuning)
-* [How to use Any Chart](charts-any-usage)
+* [Create a Basic Chart](charts-basic-create)
+* [Fine_Tune a Chart with Advance Ssettings](charts-advanced-tuning)
+* [Use Any Chart](charts-any-usage)

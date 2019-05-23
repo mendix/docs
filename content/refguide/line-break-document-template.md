@@ -1,6 +1,7 @@
 ---
-title: "Line break (document template)"
+title: "Line Break (Document Template)"
 parent: "document-templates"
+tags: ["studio pro"]
 ---
 
 

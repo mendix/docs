@@ -1,15 +1,14 @@
 ---
 title: "Synchronize User Accounts Using the LDAP Module"
 category: "Integration"
-tags: []
+menu_order: 15
+tags: ["synchronize", "user account", "ldap", "integration"]
 ---
 Your client might already have a centralized identity management solution in place, which houses information for all users in the company. If you want to make use of that information in your Mendix app, you can use the LDAP module available in the App Store. This module will allow you to synchronize user data from your LDAP-compatible identity manager to your Mendix app, for example to keep user names consistent across applications, or to allow users to use the same password for multiple apps. The LDAP module supports any LDAP-compatible identity manager. This how-to will teach you how to set up the LDAP module to work with your app, focusing on Microsoft Active Directory. It will give you a basic understanding of the LDAP module, but will skip over some advanced details. The document assumes basic Mendix knowledge, and some basic knowledge of what LDAP is and how it works.
 
-**Contents:**
-
 ## 1\. Preparation
 
-1.  Open the Mendix Desktop Modeler.
+1.  Open Mendix Studio Pro.
 2.  Import the following App Store modules into your application model:
 
 *   [LDAP Synchronization Module](https://appstore.home.mendix.com/link/app/24/Mendix/LDAP-Synchronization-module)
@@ -162,7 +161,7 @@ Now that you have configured the LDAP module it's time to synchronize the users.
 
     ![](attachments/18448733/18581915.png)
 
-    The module will now synchronize all users from the LDAP server to your Mendix app. You can follow the progress in the Desktop Modeler's **Console** log for the the app.
+    The module will now synchronize all users from the LDAP server to your Mendix app. You can follow the progress in 's **Console** log for the the app.
 2.  Open the user account overview to see the imported users. By default this should be available in the **Administration** menu.
 
 ## 7\. Next steps
@@ -175,7 +174,7 @@ Finally, you may want to automatically and/or periodically re-synchronize the LD
 
 Note that the scheduled event will always synchronize all enabled LDAP server configurations. If you want to override this default behavior you can change the "Ldap.ImportLdapUsersFlow" Microflow.
 
-## 8\. Related content
+## 8\. Read More
 
 *   [Consuming a complex web service](consume-a-complex-web-service)
 *   [Consuming a simple Web Service](consume-a-simple-web-service)

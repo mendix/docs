@@ -1,8 +1,9 @@
 ---
-title: "Configure the Mendix Feedback Widget on iOS"
-category: "Mobile"
+title: "Configure the Mendix Feedback Widget for iOS"
+parent: "hybrid-mobile"
+menu_order: 20
 description: "How to configure ios security settings to render the feedback widget's content"
-tags: ["Mobile", "feedback", "widget", "ios"]
+tags: ["mobile", "feedback", "widget", "ios"]
 ---
 
 ## 1 Introduction
@@ -33,7 +34,7 @@ Now build your appliaction and you will see a correctly rendered feedback widget
 
 For more information on the Cordova Whitelist plugin, see [cordova-plugin-whitelist](https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-whitelist/).
 
-## 4 Related Content
+## 4 Read More
 
-* [How to Use the Mendix Feedback Widget](/developerportal/feedback/use-feedback-widget)
-* [Feedback](/developerportal/feedback/index)
+* [Use the Mendix Feedback Widget](/developerportal/collaborate/use-feedback-widget)
+* [Feedback](/developerportal/collaborate/feedback)

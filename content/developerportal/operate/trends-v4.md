@@ -1,9 +1,10 @@
 ---
 title: "Trends in Mendix Cloud v4"
 parent: "metrics"
-menu_order: 60
+menu_order: 20
 description: "Describes how to interpret various graphs and trends in the Mendix Cloud v4."
 tags: ["Trends","v4","Mendix Cloud","Developer Portal"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
@@ -41,7 +42,7 @@ You can find the trends by following these steps:
 4. Click **Metrics** under the **Operate** category.
 5. Select the environment you want to monitor under the **Trends** tab.
 
-    ![](attachments/environment.jpg)
+    ![](attachments/environment.png)
 
 ## 4 Application Statistics
 
@@ -157,7 +158,7 @@ This graph shows the total number of threads that exist inside the running JVM p
 
 ### <a name="Trends-appmxruntimecache"></a>4.8 Object Cache
 
-Mendix 4.0 introduced non-persistent entities that live in the JVM memory and are garbage-collected regularly. If you have a memory leak, the number of objects in memory will grow over time. This might be a problem. In this graph, you can monitor the number of Mendix objects that live in memory.
+Non-persistable entities live in the JVM memory and are garbage-collected regularly. If you have a memory leak, the number of objects in memory will grow over time. This might be a problem. In this graph, you can monitor the number of Mendix objects that live in memory.
 
 ## 5 Database Statistics
 
@@ -179,13 +180,13 @@ Type | Explanation
 
 ### <a name="Trends-dbpgtableindexsizeVERSIONmain"></a>5.2 Index vs. Table Size
 
-This database size graph shows the distribution between disk space used for storing indexes and actual data. Remember, indexes actually occupy memory space and disk storage, as they're just parts of your data copied, stored, and sorted in another way! Besides your data, indexes also have to be read into the system memory to be able to use them.
+This database size graph shows the disk space used for storing indexes and actual data. If you need to know the total memory you are using, note that the space taken by indexes is *included* in the tables value. The index value is shown separately so that you can see how large the indexes are, as they need to be read into the system memory to be able to use them.
 
 These are the types:
 
 Type | Explanation
 ------------ | -------------
-**tables** | Amount of space taken by the tables in the database.
+**tables** | Total space taken by the database.
 **indexes** | Amount of space taken by the indexes in the database.
 
 ### 5.3 Application Node
@@ -283,12 +284,12 @@ Disk utilization is calculated as the disk usage that is used by the user of the
 
 {{% /alert %}}
 
-## 6 Related Content
+## 6 Read More
 
 * [Alerts](monitoring-application-health)
-* [How to Configure Maintenance Windows](/developerportal/deploy/maintenance-windows)
-* [How to Migrate to Mendix Cloud v4](/developerportal/deploy/migrating-to-v4)
+* [Maintenance Windows: Configuration](/developerportal/deploy/maintenance-windows)
+* [Migrate to Mendix Cloud v4](/developerportal/deploy/migrating-to-v4)
 * [How to Receive Environment Status Alerts](receive-alerts)
-* [How to View the Mendix Cloud Version and Region](/developerportal/deploy/cloud-version-region)
+* [Cloud Version and Region in the Mendix Cloud](/developerportal/deploy/cloud-version-region)
 * [Mendix Cloud v4 - FAQ](/developerportal/deploy/mxcloudv4)
 

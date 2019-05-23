@@ -1,6 +1,6 @@
 ---
-title: "Mendix SSO: Manage User Logins"
-parent: "mendix-cloud-deploy"
+title: "Manage User Logins with Mendix SSO"
+parent: "integrate-with-mendix-sso"
 menu_order: 72
 description: "How to manage Mendix SSO in your app so that local users and anonymous users are catered for"
 tags: ["SSO", "Single Sign-on", "AppCloudServices", "Local users", "Anonymous users"]
@@ -27,12 +27,6 @@ This leads to four scenarios, for which different solutions should be implemente
 | Anonymous users enabled | (3) Allow users to login with a Mendix account from an anonymous session | (4) Users can login with a Mendix or local account from an anonymous session |
 
 Based on your need to support local users and/or anonymous users, implement the solution mentioned in the table. The final four sections of this How To each describe one of the solutions.
-
-{{% alert type="warning" %}}
-
-Anonymous users are not supported on Sandboxes, only on non-free editions.
-
-{{% /alert %}}
 
 ### 2.1 Automatically log users in with their Mendix account
 
@@ -79,7 +73,7 @@ When only users with a Mendix Account are supported in your app, it makes sense 
 
 ```
 
-If you do not have a custom index.html yet, you can take the one that is generated on deployment by the modeler, and customize it. Find that file and copy it to the theme/ directory:
+If you do not have a custom index.html yet, you can take the one that is generated on deployment by Studio Pro, and customize it. Find that file and copy it to the theme/ directory:
 
 1.  From the menu bar, choose Project → Deploy for Eclipse
 2.  Then choose Project → Show Project Directory in Explorer
@@ -276,7 +270,7 @@ The custom login page can be created in a similar manner as in scenario 2, with 
 
 You can view the implementation by deploying your app to the Mendix Cloud and going to your app, e.g. `https://yourapp.mendixcloud.com/`, and going to the page where you inserted the link. Click on the link, and you should see the custom login page. Test the local account login, and logout. Then test the Mendix account login.
 
-## 3 Related Content
+## 3 Read More
 
 *   [Trends in Mendix Cloud v3](/developerportal/operate/trends)
 *   [Mendix Cloud: Deploy](mendix-cloud-deploy)

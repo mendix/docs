@@ -1,13 +1,14 @@
 ---
 title: "Publish a REST Service"
 category: "Integration"
-description: "Describes how to publish REST web services natively from the Desktop Modeler."
-tags: ["REST", "web service"]
+menu_order: 10
+description: "Describes how to publish REST web services natively from ."
+tags: ["rest", "rest service", "web service", "integration"]
 ---
 
 ## 1 Introduction
 
-Mendix allows you to publish REST web services natively from the Desktop Modeler. This how-to will show you how to publish a REST service in an example project. This example will demonstrate the GET operation for a published REST service.
+Mendix allows you to publish REST web services natively from . This how-to will show you how to publish a REST service in an example project. This example will demonstrate the GET operation for a published REST service.
 
 **This how-to will teach you how to do the following:**
 
@@ -17,13 +18,13 @@ Mendix allows you to publish REST web services natively from the Desktop Modeler
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Install [Desktop Modeler](https://appstore.home.mendix.com/link/modelers/) version 7.11 or higher
+* Install [Studio Pro](https://appstore.home.mendix.com/link/modelers/)
 
 ## 3 Setting Up the Example Project
 
 To create the example project you will use in the next sections for publishing your REST service, follow these steps:
 
-1. Create a new project in the Desktop Modeler.
+1. Create a new project in .
 2. Rename the **MyFirstModule** module to **RESTExample**.
 3. Open the domain model of the RESTExample module.
 4.  Create entities with an association like this:
@@ -50,21 +51,17 @@ To be able to use the data from your model in the REST service, you need to crea
 	![](attachments/publish-rest-service/message_definition.png)
 
 2. In the **Add Message Definition** dialog box, enter *MD_Orders* as the name for this definition.
-
 3.  The message definition is now opened and you need to select the entity to use for the MD_Orders definition. To do this, select **Add** and in the dialog box, click **Select** , then choose the **Order** entity from the list.
 
 	![](attachments/publish-rest-service/MD_AddEntity.png)
 
 4. After selecting the **Order** entity, the **Structure** part of the dialog box is filled with only the **Order** object selected.
-
 5. Select the **OrderID** and **Customer** attributes
-
 6.  Expand the **OrderItem_Order** association and select the **Product** and **Quantity** attributes:
 
 	![](attachments/publish-rest-service/MD_SelectedAttributes.png)
 
 7. Click **OK** to close the dialog box.
-
 8. Close the message definition, and make sure to save the definition if asked!
 
 ### 4.2 Configuring the REST Service
@@ -74,7 +71,6 @@ To be able to use the data from your model in the REST service, you need to crea
 	![](attachments/publish-rest-service/AddRestService.png)
 
 2. Enter *PRS_OrderService*  for the **Name** of your REST service. The REST service is now opened
-
 3.  Add a new resource to your service by clicking **Add**, and enter *GetOrderByID* for the **Resource name**:
 
 	![](attachments/publish-rest-service/AddRestResource.png)
@@ -82,19 +78,16 @@ To be able to use the data from your model in the REST service, you need to crea
 	Click **OK** to close the dialog box.
 
 4. Add an operation to your resource by clicking **Add** in the **Operations for resource** section.
+5.  In the **Operation** dialog box, enter`{OrderID}` in the **Operation path** field (make sure to include the braces). This will allow the REST service to be invoked with the OrderID in the URL shown in the **Example location** field of this same dialog box.
 
-5. In the **Operation** dialog box, enter`{OrderID}` in the **Operation path** field (make sure to include the braces). This will allow the REST service to be invoked with the OrderID in the URL shown in the **Example location** field of this same dialog box.
+	![](attachments/publish-rest-service/AddOperation.png)
 
-  ![](attachments/publish-rest-service/AddOperation.png)
+6.  In the same dialog box, click **Select** next to the **Microflow** field. As you do not have a microflow for this operation, select the **RESTExample** module in the dialog box and then click **New** to create a new microflow. Enter *PRS_GetGetOrderByID* for the **Name** of this new microflow:
 
-6. In the same dialog box, click **Select** next to the **Microflow** field. As you do not have a microflow for this operation, select the **RESTExample** module in the dialog box and then click **New** to create a new microflow. Enter *PRS_GetGetOrderByID* for the **Name** of this new microflow:
-
-   ![](attachments/publish-rest-service/AddOperationMicroflow.png)
+	![](attachments/publish-rest-service/AddOperationMicroflow.png)
 
 7. Click **Show** to start editing the newly created microflow.
-
 8. Add two parameters: **httpRequest** and **OrderID**.
-
 9.  Add an action to the microflow to convert the **OrderID** variable (string) to an integer variable. This is needed to be able to search for the OrderID (autonumber).
 
 	![](attachments/publish-rest-service/ConvertOrderID.png)
@@ -118,26 +111,23 @@ To be able to use the data from your model in the REST service, you need to crea
 	![](attachments/publish-rest-service/ExportMappingResult.png)
 
 14. Now go back to the **PRS_GetGetOrderByID** microflow and add an **Export with mapping** activity.
-
 15. In the **Mapping** field of the dialog box, select the mapping created above in [step 11](#eleven). For the **Parameter** field, select the **Order** object retrieved with the database retrieve action in the microflow.
-
 16. <a name="sixteen"></a>Select **JSON** for the result, and store the output in a **String variable**. Enter *Order_JSON* for the variable's **Name**.
 
 	![](attachments/publish-rest-service/MFExportWithMapping.png)
 
-16. Add a an activity to the microflow to create an object of the type **HttpResponse**:
+17. Add a an activity to the microflow to create an object of the type **HttpResponse**:
 
 	![](attachments/publish-rest-service/httpResponse.png)
 
 	The **StatusCode** will return "OK" as a 200 message. The content of the message is mapped to the exported JSON from [step 16](#sixteen). And add the **HttpVersion** that you will be using (in this case, `HTTP/1.1`).
 
-17. Add an activity to the microflow for adding a header to the response:
+18. Add an activity to the microflow for adding a header to the response:
 
 	![](attachments/publish-rest-service/httpResponseHeader.png)
 
 	Set the member **Key** to `'Content-Type'` and the **Value** to `'application/json' `(or `'application/xml'` if your response contains XML rather than JSON). Set the **System.HttpHeaders** association to your HTTP response.
-
-18. Open the end activity in your microflow and select **$NewHttpResponse** as the return value. You should have no errors, and your microflow should look like this:
+19. Open the end activity in your microflow and select **$NewHttpResponse** as the return value. You should have no errors, and your microflow should look like this:
 
 	![](attachments/publish-rest-service/CompleteMFNoErrorHandling.png)
 
@@ -172,7 +162,6 @@ In this new service, no error handling has been implemented. For example, if you
 ### 5.1 Adding Error Handling
 
 1. Open the **PRS_GetGetOrderByID** microflow, right-click the first activity, then select the option to **Set Error Handling** to **Custom with rollback**.
-
 2.  After the first activity, add an activity that creates a new HttpResponse object. Enter *NewHttpErrorResponse* for the **Name**, and map the attributes like this:
 
 	![](attachments/publish-rest-service/ParsingErrorResponse.png)
@@ -180,7 +169,6 @@ In this new service, no error handling has been implemented. For example, if you
 	For the **Content** member, the value is this JSON string: `'{"Error": "The OrderID can only be an integer"}'`.
 
 3. Set the new activity as the custom error handler.
-
 4.  Below this activity, add a **Create object** activity that creates a new httpHeader object:
 
 	![](attachments/publish-rest-service/ParsingErrorResponseHeader.png)
@@ -191,7 +179,7 @@ In this new service, no error handling has been implemented. For example, if you
 
 	![](attachments/publish-rest-service/ParsingErrorMicroflow.png)
 
-6. Test your error handler as you did with the app in section [4.3 Viewing the App](#viewing). Enter some characters in the **OrderID** parameter and observe the response of the request, like this:
+6.  Test your error handler as you did with the app in section [4.3 Viewing the App](#viewing). Enter some characters in the **OrderID** parameter and observe the response of the request, like this:
 
 	![](attachments/publish-rest-service/ParsingErrorRESTResult.png)
 
@@ -201,9 +189,7 @@ Now that you covered the error handling of the parameter parsing, it's time to h
 
 To add the error handling for those situations when the OrderID parameter is filled but no result is found, follow these steps:
 
-1.  After the activity for retrieving from the database, add an exclusive split activity with the following statement: `$Order != empty`.
-
-	The true exit is connected to the activity for exporting to JSON. For the false exit, add new Create object activities that create a **NewhttpErrorNotFoundResponse** and a **NewhttpErrorNotFoundHeader**:
+1.  After the activity for retrieving from the database, add an exclusive split activity with the following statement: `$Order != empty`. The true exit is connected to the activity for exporting to JSON. For the false exit, add new Create object activities that create a **NewhttpErrorNotFoundResponse** and a **NewhttpErrorNotFoundHeader**:
 
 	![](attachments/publish-rest-service/OrderNotFoundResponse.png)
 
@@ -211,12 +197,12 @@ To add the error handling for those situations when the OrderID parameter is fil
 
 	![](attachments/publish-rest-service/OrderNotFoundHeader.png)
 
-2. Configure the end activity to return the **NewHttpResponse**. The microflow should now look like this:
+2.  Configure the end activity to return the **NewHttpResponse**. The microflow should now look like this:
 
 	![](attachments/publish-rest-service/CompleteMFWithErrorHandling.png)
 
 3. Test your new error responses as you did with the app in section [4.3 Viewing the App](#viewing).
 
-## 6 Related Content
+## 6 Read More
 
 * For more information on creating published REST services in Mendix (including GET, POST, and DELETE operations), see [Published REST Services](/refguide/published-rest-services)

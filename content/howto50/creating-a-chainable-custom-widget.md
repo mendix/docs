@@ -193,7 +193,7 @@ A Mendix **custom** widget can also **only pass one type of entity** as an input
 
 ## 8\. Conclusion
 
-This How-to has enabled you to create a chainable Custom Widget for the Mendix Platform. Using Adobe Brackets as your main integrated development environment. The "AppStoreWidgetBoilerplate" as your starting point for custom widget development. And a fully configured Mendix test application.
+This How-to has enabled you to create a chainable Custom Widget for the Mendix Platform. Using Adobe Brackets as your main integrated development environment. The "AppStoreWidgetBoilerplate" as your starting point for widget development. And a fully configured Mendix test application.
 
 ## 9\. Related content
 

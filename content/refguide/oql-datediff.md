@@ -1,6 +1,7 @@
 ---
 title: "OQL DATEDIFF"
 parent: "oql-functions"
+tags: ["studio pro"]
 ---
 
 

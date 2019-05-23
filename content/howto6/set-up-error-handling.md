@@ -132,7 +132,7 @@ Consider the following best practices for error handling:
 * Always add custom error handling on integration or e-mail activities
 * Don’t over-do it – you can specify a lot of complicated error handling combinations, but this makes it more difficult (and slower) for the platform to evaluate the microflow, and it also makes it more difficult to predict the exact behavior in case of an exception
 
-## 7 Related Content
+## 7 Read More
 
 * [How to Define Access Rules Using XPath](define-access-rules-using-xpath)
 * [How to Trigger Logic Using Microflows](triggering-logic-using-microflows)

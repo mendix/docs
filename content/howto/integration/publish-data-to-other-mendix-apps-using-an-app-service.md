@@ -1,9 +1,14 @@
 ---
-title: "Publish Data to Other Mendix Apps Using an App Service"
+title: "Publish Data to Other Mendix Apps Using an App Service (Deprecated)"
 category: "Integration"
+menu_order: 14
 description: "Describes how to use an app service to publish data to other Mendix apps."
-tags: ["integration", "app service"]
+tags: ["integration", "publish"]
 ---
+
+{{% alert type="info" %}}
+App services are deprecated marked for removal. Use a [published web service](/refguide/published-web-services) or a [published REST service](/refguide/published-rest-services) instead.
+{{% /alert %}}
 
 ## 1 Introduction
 
@@ -16,9 +21,9 @@ The domain model defines the products that you want the save and how you want to
 To create the domain model, follow these steps:
 
 1. In the domain model, create a persistable entity called **Product** with two attributes: **Name** (String) and **Stock** (Integer).
-2. Create a non-persistable entity called **PublishedProduct** with the same attributes.
+2.  Create a non-persistable entity called **PublishedProduct** with the same attributes.
 
-    ![](attachments/publish-data-to-other-mendix-apps/domain-model.png)
+	![](attachments/publish-data-to-other-mendix-apps/domain-model.png)
 
 ## 4 Creating Pages
 
@@ -27,17 +32,17 @@ To create pages that allows users to create, edit, and delete products, follow t
 1. Add a new page called **EditUser**.
 2. Add a data view.
 3. From the **Connector**, drag the **Product** entity onto to yellow **[Unknown]** bar.
-4. On the dialog box that appears, click **OK**.
+4.  On the dialog box that appears, click **OK**.
 
-    ![](attachments/publish-data-to-other-mendix-apps/edit-product-page.png)
+	![](attachments/publish-data-to-other-mendix-apps/edit-product-page.png)
 
 5. Open the **Homepage** and add a data grid.
 6. From the **Connector**, drag the **Product** entity onto to yellow **[Unknown]** bar.
 7. On the dialog box that appears, click **OK**.
 8. From the **Project Explorer**, drag the **EditUser** page onto the **New** button.
-9. From the **Project Explorer**, drag the **EditUser** page onto the **Edit [default]** button.
+9.  From the **Project Explorer**, drag the **EditUser** page onto the **Edit [default]** button.
 
-    ![](attachments/publish-data-to-other-mendix-apps/homepage.png)
+	![](attachments/publish-data-to-other-mendix-apps/homepage.png)
 
 ## 5 Creating a Microflow
 
@@ -68,7 +73,7 @@ To create this microflow, follow these steps:
 21. For **Entity**, select **PublishedProduct**.
 22. For **Return value**, enter *$PublishedProductList*, then click **OK**.
 
-    ![](attachments/publish-data-to-other-mendix-apps/microflow.png) 
+	![](attachments/publish-data-to-other-mendix-apps/microflow.png) 
 
 ## 6 Creating an App Service
 
@@ -100,7 +105,7 @@ Before you publish our app, you need to make sure it is protected with a usernam
 
 You can now go ahead and deploy the app. This will publish your app service.
 
-## 9 Related Content
+## 9 Read More
 
-* [How to Expose a Web Service](expose-a-web-service)
-* [How to Expose Data to BI Tools Using OData](exposing-data-to-bi-tools-using-odata)
+* [Expose a Web Service](expose-a-web-service)
+* [Expose Data to BI Tools Using OData](exposing-data-to-bi-tools-using-odata)

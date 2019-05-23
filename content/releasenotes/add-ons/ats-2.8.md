@@ -39,8 +39,8 @@ It is now possible to see a video recording for test cases executed on Browserst
 * The built-in function *Assert Condition Fails* was not working due to a bug . It is now fixed.
 * The built-in function *Assert at least one not null* was not working due to a bug. It is now fixed.
 * The **Click Widget** action didn't propagate failures properly. As a consequence, a test step that used this action was not marked as failed, even though the actual click was not successful. This has been fixed.
-* Coping a data-driven test case did not copy the association to the data set. This is now fixed.
-* When using a data set field as in an test step where the parameter type is "Any" this was falsely classified as incompatible type issue and shows up under the "Test data" tab. This is now fixed.
+* Coping a data-driven test case did not copy the association to the dataset. This is now fixed.
+* When using a dataset field as in an test step where the parameter type is "Any" this was falsely classified as incompatible type issue and shows up under the "Test data" tab. This is now fixed.
 
 ### Important change
 

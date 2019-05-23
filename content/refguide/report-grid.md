@@ -1,10 +1,9 @@
 ---
 title: "Report Grid"
 parent: "report-widgets"
+tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
-
-
 
 This shows the reported data in a grid.
 
@@ -12,7 +11,7 @@ This shows the reported data in a grid.
 
 ### Data Set
 
-This is the data set that determines the data that will be shown in the report grid.
+This is the dataset that determines the data that will be shown in the report grid.
 
 ## General Properties
 

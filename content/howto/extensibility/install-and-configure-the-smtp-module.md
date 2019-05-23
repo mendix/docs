@@ -1,7 +1,8 @@
 ---
-title: "Install and Configure the SMTP Email Module"
+title: "Install & Configure the SMTP Email Module"
 category: "Extensibility"
-tags: []
+menu_order: 6
+tags: ["extensibility", "smtp", "email"]
 ---
 
 ## 1 Introduction
@@ -21,7 +22,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Configure a working SMTP relay for your email server
 * Know how to install modules from the Mendix App Store
-* Know how to create pages and microflows in the Modeler
+* Know how to create pages and microflows in Studio Pro
 
 ## 3 Setting Up the Module<a name="SettingUptheModule"></a>
 
@@ -157,8 +158,8 @@ The SMTP email module contains a number of other powerful tools. Some of the enh
 
 * Auto-generate emails in workflow steps to have the app send out emails from SMTP behind the scenes
 
-## 7 Related Content
+## 7 Read More
 
-* [How to Use  Connectors and Adapters](use-connectors-and-adapters)
-* [How to Access a Samba Share from the MxCloud](access-a-samba-share-from-the-mxcloud)
-* [How to Visualize Data Using the ChartsJS Module](visualize-data-using-the-chartsjs-module)
+* [Use Connectors & Adapters](use-connectors-and-adapters)
+* [Access a Samba Share from the MxCloud](access-a-samba-share-from-the-mxcloud)
+* [Visualize Data Using the ChartsJS Module](visualize-data-using-the-chartsjs-module)

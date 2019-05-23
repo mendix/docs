@@ -16,6 +16,10 @@ Any OData service can be used to generate a data model using the SAP OData Model
 
 To accelerate the consumption of the SAP Business Suite services, Mendix also provides the full set of Business Suite for SAP Fiori Cloud apps as modules in the Mendix App Store. See section [3 SAP Data Models in the App Store](#appstoremodels).
 
+{{% alert type="warning" %}}
+SAP OData Model Creator and SAP OData Connector only support SAP OData Gateway Services which use OData version 2 or version 3. OData version 4 is not yet supported.
+{{% /alert %}}
+
 ## 2 SAP Data Models
 
 The Data Model module contains up to four resources which help to consume the OData Service:
@@ -27,7 +31,7 @@ The Data Model module contains up to four resources which help to consume the OD
 
 ### 2.1 Domain Model
 
-Each Mendix SAP data model (previously referred to as "service modules") has a domain model that describes the information in the OData service. The domain model consists of entities and their relations represented by associations. For more information, see [Domain Model](../domain-model) in the Mendix Reference Guide.
+Each Mendix SAP data model (previously referred to as "service modules") has a domain model that describes the information in the OData service. The domain model consists of entities and their relations represented by associations. For more information, see [Domain Model](../domain-model).
 
 ![](attachments/sap-data-models/sap-service-example.png)
 
@@ -53,7 +57,7 @@ To accelerate the consumption of the SAP Business Suite services, Mendix also pr
 
 For example, if you need a CRM app, it is recommended to use a **Field Sales Representative** service like **Check Price and Availability for Field Sales Representative**. The **Check Price and Availability for Field Sales Representative** > **SAP Service** module contains all the entities of the selected service. By using the **SAP Service** module with the **SAP OData Connector** module, you can retrieve those CRM entities from the SAP back-end system in your Mendix app.
 
-## 4 Related Content
+## 4 Read More
 
 * [SAP OData Connector](sap-odata-connector)
 * [How To Use the SAP OData Model Creator](/howto/sap/use-sap-odata-model-creator)

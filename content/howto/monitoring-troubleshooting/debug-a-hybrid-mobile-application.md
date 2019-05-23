@@ -1,7 +1,8 @@
 ---
 title: "Debug a Hybrid Mobile Application"
 category: "Monitoring & Troubleshooting"
-tags: []
+menu_order: 5
+tags: ["monitoring", "troubleshooting", "debug", "hybrid mobile"]
 ---
 
 ## 1 Introduction
@@ -32,19 +33,19 @@ Click the settings icon in the top-right corner of the screen to configure your 
 
 ![](attachments/18448572/18580021.png)
 
-On the configure screen, fill in the same settings that you used to start weinre, which should be [http://1.2.3.4:9090](http://1.2.3.4:9090) (wherein `1.2.3.4` is your local IP).
+On the configure screen, fill in the same settings that you used to start weinre, which should be `http://1.2.3.4:9090` (wherein `1.2.3.4` is your local IP).
 
 You can now navigate to the same address on your local browser to start the debugging session.
 
-## 4 Related Content
+## 4 Read More
 
-* [How to Find the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
-* [How to Clear Warning Messages in Mendix](clear-warning-messages)
-* [How to Test Web Services Using SoapUI](../testing/testing-web-services-using-soapui)
-* [How to Monitor Mendix Using JMX](monitoring-mendix-using-jmx)
-* [How to Debug Java Actions Remotely](debug-java-actions-remotely)
-* [How to Log Levels](log-levels)
-* [How to Debug Microflows](debug-microflows)
-* [How to Debug Java Actions](debug-java-actions)
-* [How to Handle Common Mendix SSO Errors](handle-common-mendix-sso-errors)
-* [How to Debug Microflows Remotely](debug-microflows-remotely)
+* [Find the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
+* [Clear Warning Messages in Mendix](clear-warning-messages)
+* [Test Web Services Using SoapUI](../testing/testing-web-services-using-soapui)
+* [Monitor Mendix Using JMX](monitoring-mendix-using-jmx)
+* [Debug Java Actions Remotely](debug-java-actions-remotely)
+* [Log Levels](log-levels)
+* [Debug Microflows](debug-microflows)
+* [Debug Java Actions](debug-java-actions)
+* [Handle Common Mendix SSO Errors](handle-common-mendix-sso-errors)
+* [Debug Microflows Remotely](debug-microflows-remotely)

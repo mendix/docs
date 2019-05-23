@@ -1,7 +1,8 @@
 ---
 title: "Create Automated Tests with TestNG"
 category: "Testing"
-tags: []
+menu_order: 50
+tags: ["test", "testing", "testng"]
 ---
 
 ## 1 Introduction
@@ -23,31 +24,31 @@ Before starting with this how-to, make sure you have completed the following pre
 * Download and install [Eclipse](http://www.eclipse.org/downloads/)
 *  Download [Selenium Client & WebDriver](http://www.seleniumhq.org/download/):
    ![](attachments/18448634/18580399.png) 
-* Open the [Company Expenses app](https://appstore.home.mendix.com/link/app/240/Mendix/Company-Expenses) in the Modeler and run it locally
+* Open the [Company Expenses app](https://appstore.home.mendix.com/link/app/240/Mendix/Company-Expenses) in Studio Pro and run it locally
 
 ## 3 Creating a Java Project
 
 In this chapter you will install the TestNG plug-in and create a Java project in Eclipse including the TestNG and Selenium libraries:
 
 1.  Open Eclipse and select **Help** > **Eclipse Marketplace...**:
-   
+  
     ![](attachments/18448634/18580411.png)
 
 2. In the **Find** section of the **Eclipse Marketplace** dialog box, enter *TestNG* and click **Go**. "TestNG for Eclipse" will be shown in the search results. 
 3.  Click **Install** to install the TestNG plug-in for Eclipse:
-    
+  
     ![](attachments/18448634/18580410.png)
 
 4.  Click **Confirm** to confirm the features:
-    
+  
     ![](attachments/18448634/18580408.png)
 
 5.  Review the licenses and click **Finish**. The plug-in will be installed:
-    
+  
     ![](attachments/18448634/18580407.png)
 6. Restart Eclipse for changes to take effect.
 7.  Click the **New** icon:
-    
+  
     ![](attachments/18448634/18580406.png)
 
 8.  Select **Java Project** and click **Next**:
@@ -89,7 +90,7 @@ To create a new TestNG file, follow these steps:
     ![](attachments/18448634/18580393.png)
 
 5.  Click **Finish**. The template for your first TestNG file will be created automatically:
-    
+  
     ![](attachments/18448634/18580392.png)
 
     The `@Test` annotation is used to state that the method under it is a test case. In this case, the method `f` is a test case. The `@BeforeTest` annotation is used to state that the method under it will be executed before the first test case. The `@AfterTest` annotation is used to state that the method under it will be executed after the last test case.
@@ -189,37 +190,26 @@ driver.get("http://localhost:8080/index.html");
 }
 ```
 
-This test method will open the URL *http://localhost:8080/index.html* in the Firefox browser. By default, the methods annotated by `@Test` are executed alphabetically. You can use parameters to modify the annotation's function. The `priority` parameter can be used to execute the methods in a different order. TestNG will execute the `@Test` annotation with the lowest priority value up to the largest.
+This test method will open the URL `http://localhost:8080/index.html` in the Firefox browser. By default, the methods annotated by `@Test` are executed alphabetically. You can use parameters to modify the annotation's function. The `priority` parameter can be used to execute the methods in a different order. TestNG will execute the `@Test` annotation with the lowest priority value up to the largest.
 
 ### 5.5 Add the Second Test Method
 
 Now that you are on the login window, you will want to log in. To add the second test method, follow these steps:
 
-1. Open Firefox and go to _http://localhost:8080/index.html_.
-2.  Click the "firebug" button in the Firefox toolbar:
-    
-    ![](attachments/18448631/18580294.png)
+1. Open Firefox and go to `http://localhost:8080/index.html`.
+2. Use the developer tools to inspect the element.
+3.   Click the **User name** input field. The ID of the this field is _usernameInput_. The CSS selector of an ID is a hashtag (`#`) + the name of the ID. For the **User name** field, this will be _#usernameInput_. The same principle is used for the other steps. The CSS selector _#usernameInput_ is unique. There is one matching node:
 
-3.  Click the **FirePath** tab:
-    
-    ![](attachments/18448631/18580293.png) 
+	![](attachments/18448634/18580373.png)
 
-4.  Click the "inspect element" button:
-    
-    ![](attachments/18448631/18580292.png)
-
-5.  Click the **User name** input field. The ID of the this field is _usernameInput_. The CSS selector of an ID is a hashtag (`#`) + the name of the ID. For the **User name** field, this will be _#usernameInput_. The same principle is used for the other steps.
-    
-    The CSS selector _#usernameInput_ is unique. There is one matching node:
-    ![](attachments/18448634/18580373.png)
-6. Repeat steps 5–6 for the **Password** input field and the **Sign in** button:
+4. Repeat steps 5–6 for the **Password** input field and the **Sign in** button:
 
     Element | CSS Selector
     --- | ---
     **Password** input field | `#passwordInput`
     **Sign in** button | `#loginButton`
 
-7.  Add a new test method called `login`. Use the following code:
+5.  Add a new test method called `login`. Use the following code:
 
     ```java
     @Test(priority=2)
@@ -240,12 +230,12 @@ This test method contains the following test steps:
 
 Now that you are logged in, you will want to navigate to the **Expenses** tab. To add the third test method, follow these steps:
 
-1.  Open the Desktop Modeler, and in the **Project Explorer**, open the **Desktop_AdminMenu** page:
-    
+1.  Open , and in the **Project Explorer**, open the **Desktop_AdminMenu** page:
+  
     ![](attachments/18448634/18580390.png)
 
 2.  Select the **Expenses** tab:
-    
+  
     ![](attachments/18448634/18580389.png)
 
     The name of the **Expenses** tab is **tabPage4**. Every element will automatically get the CSS class `mx-name-[Name]`, so the expenses tab will get the CSS class `mx-name-tabPage4` when the app is running.
@@ -269,9 +259,9 @@ Now that you are logged in, you will want to navigate to the **Expenses** tab. T
 
 Now that you are on the **Expenses** tab, you will want to create a new expense. To add the fourth test method, follow these steps:
 
-1. Open the Modeler and then open the **Desktop_AdminMenu** page.
+1. Open Studio Pro and then open the **Desktop_AdminMenu** page.
 2.  Select the **New Expense** button:
-    
+  
     ![](attachments/18448634/18580387.png)
 
     The name of the **New Expense** button is `newButton3`, so the button will have the `mx-name-newButton3` CSS class:
@@ -326,7 +316,7 @@ Now that you are on the **Expenses** tab, you will want to create a new expense.
 
 After you have created an expense, you will want to sign out. To add the fifth test method, follow these steps:
 
-1. Open Modeler and then open the **Desktop_MyInfo** snippet.
+1. Open Studio Pro and then open the **Desktop_MyInfo** snippet.
 2.  Find the name of the following element:
 
     | Element | Name |
@@ -350,7 +340,7 @@ You are now ready to run the test. To run the test, follow these steps:
 
 1. Right-click the **MyFirstTestNGProject** folder.
 2.  Select **Run as** > **TestNG Test**:
-    
+  
     ![](attachments/18448634/18580385.png)
 
     The results of the test will be shown in the console window and in the TestNG results window:
@@ -364,7 +354,7 @@ You are now ready to run the test. To run the test, follow these steps:
 TestNG generates reports in the HTML format. To test the report, follow these steps:
 
 1.  Right-click the **MyFirstTestNGProject** folder and select **Refresh**. A test-output folder will be created:
-    
+  
     ![](attachments/18448634/18580382.png)
 
 2. Open the **test-output** folder.
@@ -516,7 +506,7 @@ The test you created is now run on Firefox only. If you want to make sure the fu
     The first test (called `ChromeTest`) has the browser parameter `chrome`. This parameter will be used in the `@BeforeTest` method in MyFirstTestNGFile.
 
 6.  Right-click the **MyFirstTestSuite.xml** file and select **Run as** > **TestNG Suite**:
-    
+  
     ![](attachments/18448634/18580372.png)
 
 Well done! You created your first automated cross-browser test with TestNG!
@@ -525,7 +515,7 @@ Now you know how to create a TestNG test file, how to create a test suite and ho
 
 Happy testing!
 
-## 10 Related Content
+## 10 Read More
 
 * [Test Mendix Applications Using Selenium IDE](testing-mendix-applications-using-selenium-ide)
 * [Test Microflows Using the UnitTesting Module](testing-microflows-using-the-unittesting-module)

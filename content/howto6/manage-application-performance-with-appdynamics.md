@@ -164,7 +164,7 @@ Once you have performed all of the steps above for your Mendix application, its 
 
 For more information on AppDynamics, see the AppDynamics documentation here: [https://docs.appdynamics.com/](https://docs.appdynamics.com/).
 
-## 9 Related Content
+## 9 Read More
 
 * [Finding the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
 * [Clearing Warning Messages in Mendix](clear-warning-messages)

@@ -1,18 +1,18 @@
 ---
 title: "Published REST Operation"
-parent: "published-rest-services"
-#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
+parent: "published-rest-service"
+menu_order: 10
+description: "Options to  configure a published REST operation."
+tags: ["Published REST", "operation", "method", "path", "example location", "mapping", "operation parameters", "how to"]
+# If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
+# linked from DM: published rest > select resource > add operation for resource > help (integration)
 ---
-
-{{% alert type="info" %}}
-
-This feature was introduced in version 7.10.0.
-
-{{% /alert %}}
 
 ## 1 Introduction
 
 A published REST operation is part of a [published REST resource](published-rest-resource) and defines an endpoint that a client can call to get, put, post, patch, or delete items from the resource.
+
+This document describes the options when configuring a REST operation through the *add operation for resource* pop-up dialog.
 
 ## 2 General
 
@@ -44,12 +44,6 @@ The example location gives an example of a URL on which the operation can be rea
 
 ### 2.4 Microflow
 
-{{% alert type="info" %}}
-
-Support for **File Documents** in these microflows was introduced in version 7.13.0.
-
-{{% /alert %}}
-
 An operation has different parameters:
 
  * [Path parameters](published-rest-path-parameters), which are part of the path of the URL
@@ -67,7 +61,7 @@ To set the status code, reason phrase, and headers, you should add an [HttpRespo
 
 The result of the microflow is the result of the operation. You have several options here, which are described below.
 
-The first option is to **return a *list* or an *object***. You will need to specify an export mapping to convert it to XML or JSON. 
+The first option is to **return a *list* or an *object***. You will need to specify an export mapping to convert it to XML or JSON.
 
 The second option is to **return a primitive**. When your microflow returns a string, integer, Boolean, etc., then the response to the operation will be that value. If you return a non-empty value from the microflow, the *Content* attribute of the *HttpResponse* object is ignored. If you return an empty value from the microflow, then the *Content* of the *HttpResponse* is taken as the result.
 
@@ -85,24 +79,9 @@ If you check this box, the operation is marked as deprecated in the service's [O
 
 ### 2.6 Parameters
 
-{{% alert type="info" %}}
-
-This feature was introduced in version 7.12.0.
-
-Ability to edit the parameters was introduced in version 7.17.0
-
-{{% /alert %}}
-
 In this list, you can add, update or delete the [parameters of the operation](published-rest-operation-parameter).
 
-<a name="import-mapping"></a>
-### 2.6.1 Import Mapping
-
-{{% alert type="info" %}}
-
-This feature was introduced in version 7.14.0. Using an import mapping that takes a parameter was introduced in version 7.17.0
-
-{{% /alert %}}
+### 2.6.1 Import Mapping {#import-mapping}
 
 For a body parameter, you can select an [import mapping](import-mappings) that converts the body of the request to an object. All object and list parameters besides file documents must have an import mapping selected. To select an import mapping, double-click the parameter or click **Edit** in the grid after you select the parameter. When selecting the import mapping, you can also choose the commit behavior of the mapping. You can choose to either commit, commit without events, or not commit imported objects.
 
@@ -117,12 +96,6 @@ Valid requests need to contain a *Content-Type* header. See [Table 1: Recognized
 The import mapping is also used to generate object schemas for operation responses in [OpenAPI (Swagger) documentation page](published-rest-services#interactive-documentation) based on [JSON Schema](published-rest-service-json-schema)
 
 ### 2.7 Response
-
-{{% alert type="info" %}}
-
-Support for **Export mapping and models in OpenAPI (Swagger)** was added in 7.14.0.
-
-{{% /alert %}}
 
 This shows information about the response of the operation. You can see the type of the microflow result as well as export mapping applied to it (if any).
 

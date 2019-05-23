@@ -1,6 +1,7 @@
 ---
 title: "Module Role"
 parent: "module-security"
+tags: ["studio pro"]
 ---
 
 
@@ -18,4 +19,4 @@ End users do not see the names of module roles. End users (if they create or vie
 
 ## Documentation
 
-The documentation of a module role is there only for the convenience of the people who use the modeler; it is not visible for the end users.
+The documentation of a module role is there only for the convenience of the people who use Studio Pro; it is not visible for the end users.

@@ -1,7 +1,8 @@
 ---
 title: "Trigger Logic Using Microflows"
 category: "Logic & Business Rules"
-tags: []
+menu_order: 2
+tags: ["microflow", "logic"]
 ---
 To add custom logic to your Mendix application you can use microflows. Microflows can be triggered in various ways, i.e. buttons, input fields, scheduled events, and more. This how-to will teach you how to configure the properties and settings of a microflow button placed on a grid or reference set selector. You will start with adding the microflow button to the right widget. Next you will need to configure the right properties and settings of the microflow button. 
 
@@ -10,7 +11,7 @@ To add custom logic to your Mendix application you can use microflows. Microflow
 Before starting this how-to make sure you complete the following prerequisites:
 
 *   [Creating a basic data layer](../data-models/create-a-basic-data-layer)
-*   [Creating your first two Overview and Detail pages](../ux/create-your-first-two-overview-and-detail-pages)
+*   [Creating your first two Overview and Detail pages](../front-end/create-your-first-two-overview-and-detail-pages)
 
 ## 2 Triggering Logic Using a Page Button
 
@@ -18,7 +19,7 @@ In this exercise you will add a microflow button to a grid or a reference set se
 
 ### 2.1 Adding a Button to a Data Grid
 
-1.  Open you project in the **Mendix Desktop Modeler**.
+1.  Open you project in Mendix Studio Pro.
 2.  Open page with a **Datagrid**.
 3.  Select the **menu bar** of the Datagrid.
 4.  Right click the menu bar.
@@ -51,7 +52,7 @@ At the moment there is only a button with no microflow behind it yet. In this ex
     | **Tooltip** | This property indicates what text will be displayed when users mouse over the button. |
     | **Icon** | This property indicates which image will be shown in front of the caption of the trigger. |
     | **Button style** | This property indicates the style of the button. |
-    | **Is default button** | This property indicates whether this button is the default button of the grid or reference set selector. A grid or reference set selector can only have one default button. The default button is triggered when clicking or double clicking a row. Whether a click or a double click triggers it depends on the 'default button trigger' property of the [Data grid](/refguide7/data-grid), [Template grid](/refguide7/template-grid) or [Reference set selector](/refguide7/reference-set-selector). ![](attachments/18448675/18580939.png) |
+    | **Is default button** | This property indicates whether this button is the default button of the grid or reference set selector. A grid or reference set selector can only have one default button. The default button is triggered when clicking or double clicking a row. Whether a click or a double click triggers it depends on the 'default button trigger' property of the [Data grid](/refguide/data-grid), [Template grid](/refguide/template-grid) or [Reference set selector](/refguide/reference-set-selector). ![](attachments/18448675/18580939.png) |
     | **Visible** | By default, whether or not an element is displayed in the browser is determined by how the page is designed and the user's roles within the application. However, the page can be configured to hide the element unless a certain condition is met. **Attribute**: When checked, this setting hides the widget unless the value of a particular attribute has a certain value. Only boolean and enumeration attributes can be assigned to this purpose. **Ignore security**: Check this box if you want the microflow button to be visible even if security says it should be hidden. |
     | **Name** | This property specifies the name of the microflow in the page builderClass: The class property allows you to specify a cascading style sheet (CSS) class for the widget. This class will be applied to the widget in the browser and the widget will get the corresponding styling. The class should be a class from the theme that is used in the project. It overrules the default styling of the widget. |
     | **Style** | The style property allows you to specify additional CSS styling. If a class is also specified, this styling is applied _after_ the class. |
@@ -139,7 +140,7 @@ There are two more advanced settings:
 *   **Maintain selection after microflow** – this is only for grid microflow buttons and specifies whether the selection of the data should be maintained after executing the microflow
 *   **Abort on validation errors** – you can choose to abort the microflow on validation errors  here
 
-## 3 Related Content
+## 3 Read More
 
 *   [Defining access rules using XPath](define-access-rules-using-xpath)
 *   [Extending Your Application with Custom Java](extending-your-application-with-custom-java)
@@ -149,4 +150,4 @@ There are two more advanced settings:
 *   [Optimizing Retrieve Activities](optimizing-retrieve-activities)
 *   [Error Handling](set-up-error-handling)
 *   [Optimizing Microflow Aggregates](optimizing-microflow-aggregates)
-*   [Extract and use sub microflows](extract-and-use-sub-microflows)
+*   [Extract & Use Sub-Microflows](extract-and-use-sub-microflows)

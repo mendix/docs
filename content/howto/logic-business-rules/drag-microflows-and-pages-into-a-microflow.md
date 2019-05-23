@@ -1,7 +1,8 @@
 ---
-title: "Drag Microflows and Pages into a Microflow"
+title: "Drag Microflows & Pages into a Microflow"
 category: "Logic & Business Rules"
-tags: []
+menu_order: 4
+tags: ["microflow", "logic", "page"]
 ---
 
 ## 1 Introduction
@@ -35,14 +36,14 @@ Instead of creating a new submicroflow action, it can be easier to drag an exist
 
 ![](attachments/18448680/18580991.gif)
 
-## 6 Related Content
+## 6 Read More
 
-* [How to Define Access Rules Using XPath](define-access-rules-using-xpath)
-* [How to Trigger Logic Using Microflows](triggering-logic-using-microflows)
-* [How to Create a Custom Save Button](create-a-custom-save-button)
-* [How to Extend Your Application with Custom Java](extending-your-application-with-custom-java)
-* [How to Work With Lists in a Microflow](working-with-lists-in-a-microflow)
-* [How to Optimize Retrieve Activities](optimizing-retrieve-activities)
-* [How to Set Up Error Handling](set-up-error-handling)
-* [How to Optimize Microflow Aggregates](optimizing-microflow-aggregates)
-* [How to Extract and Use Submicroflows](extract-and-use-sub-microflows)
+* [Define Access Rules Using XPath](define-access-rules-using-xpath)
+* [Trigger Logic Using Microflows](triggering-logic-using-microflows)
+* [Create a Custom Save Button](create-a-custom-save-button)
+* [Extend Your Application with Custom Java](extending-your-application-with-custom-java)
+* [Work With Lists in a Microflow](working-with-lists-in-a-microflow)
+* [Optimize Retrieve Activities](optimizing-retrieve-activities)
+* [Set Up Error Handling](set-up-error-handling)
+* [Optimize Microflow Aggregates](optimizing-microflow-aggregates)
+* [Extract and Use Submicroflows](extract-and-use-sub-microflows)

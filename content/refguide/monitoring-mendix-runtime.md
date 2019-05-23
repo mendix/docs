@@ -1,22 +1,22 @@
 ---
 title: "Monitoring Mendix Runtime"
-category: "Runtime"
+category: "Mendix Runtime"
 description: "Describes the supported Mendix Runtime monitoring actions."
-tags: ["runtime, json"]
+tags: ["runtime, json", "studio pro"]
 ---
 
 ## 1 Introduction
 
 The Mendix Runtime monitoring actions can be called by sending a JSON request to the admin handler. This is accomplished by sending a request to the admin port which is specified in the application configuration (defaults to 8090).
 
-You can change the admin port from the Desktop Modeler by navigating to **Project** > **Settings** > **Configurations** > *your configuration* > **Server** > **Admin port**.
+You can change the admin port from Studio Pro by navigating to **Project** > **Settings** > **Configurations** > *your configuration* > **Server** > **Admin port**.
 
 The request needs to be of the **POST** type with **No Authorization** and the following headers:
 
 * Content-Type: **application/json**
 * X-M2EE-Authentication: **yourM2EEPassword_Base64Encoded**
 
-The M2EE password is NOT the super administrator password, but a separate password. If you have the application deployed on premises, you can set this password in the **settings.yaml** file, which is located in the **Apps/YourProject** folder. If you are running the application from the Desktop Modeler, the M2EE password is set automatically by Mendix, and you can retrieve it from the enviornment variables of your application process.
+The M2EE password is NOT the super administrator password, but a separate password. If you have the application deployed on premises, you can set this password in the **settings.yaml** file, which is located in the **Apps/YourProject** folder. If you are running the application from Studio Pro, the M2EE password is set automatically by Mendix, and you can retrieve it from the enviornment variables of your application process.
 
 Read the next sections to find out which monitoring actions are supported.
 
@@ -185,14 +185,11 @@ This request returns the current executions of actions known by the Mendix Runti
           "index":5
         }
       ],
-      "tenured":0,
       "committed_heap":301465600,
       "max_heap":3817865216,
-      "survivor":0,
       "used_nonheap":67844048,
       "max_nonheap":-1,
       "committed_nonheap":72777728,
-      "permanent":0,
       "used_heap":125300600
   },
   "result":0
@@ -220,12 +217,6 @@ Number of database requests. Distinguishes between "select", "update", "insert",
 {{% alert type="warning" %}}
 
 Memory statistics should only be interpreted by experts, lack of detailed knowledge of the Java memory model can lead to false conclusions.
-
-{{% /alert %}}{{% alert type="warning" %}}
-
-For versions of lower than Mendix 6.6 or Mendix 5.21.5 running on Java8, the information returned in the "memory" part of the response provides incomplete and incorrect information. If you rely on information in this section for these versions we recommend you to upgrade your version to Mendix 6.7 or 5.21.5 or higher.
-
-For backwards compatibility reasons the fields "code", "eden", "tenured", "survivor" and "permanent" are still present but they should not be relied on anymore. They will be removed from Mendix 7 onwards.
 
 {{% /alert %}}
 
@@ -313,7 +304,7 @@ This monitoring action gives more detailed information about objects which are c
 }
 ```
 
-The server statistics monitor action gives information about the embedded Jetty web server. The "jetty" section lists the number of current open connections and the maximum number of open connections. In addition, the maximum idle time of connection before it's being closed is listed, for when Jetty is under normal circumstances. Please note that in Mendix 7.9 and above, information about the maximum idle time of connections before it's being closed for when Jetty is low on resources ("max_idle_time_s_low_resources") is removed as part of the Jetty upgrade, because it is no longer provided by Jetty.
+The server statistics monitor action gives information about the embedded Jetty web server. The "jetty" section lists the number of current open connections and the maximum number of open connections. In addition, the maximum idle time of connection before it's being closed is listed, for when Jetty is under normal circumstances. Please note that information about the maximum idle time of connections before it's being closed for when Jetty is low on resources ("max_idle_time_s_low_resources") is removed as part of the Jetty upgrade, because it is no longer provided by Jetty.
 
 The "threadpool" section gives information about the threadpool of the handler which processes all requests which go through the runtime port. See the [Jetty QueuedThreadPool documentation](https://www.eclipse.org/jetty/javadoc/9.4.11.v20180605/org/eclipse/jetty/util/thread/QueuedThreadPool.html) for more information.
 
@@ -444,9 +435,11 @@ Returns the current Mendix Runtime status. Possible status values are: "created"
 }
 ```
 
-In the Mendix Desktop Modeler, a [health check microflow](project-settings) can be configured. This microflow can report on the functional status of the application: does the general functionality of the application work, and are the necessary remote services available?
+In Mendix Studio Pro, a [health check microflow](project-settings) can be configured. This microflow can report on the functional status of the application: does the general functionality of the application work, and are the necessary remote services available?
 
 If a health check microflow has been configured, this request will report on the current health status. The "health" value can be either "healthy," "sick," or "unknown" (when no health microflow was configured). For the value "sick," the "diagnosis" value will give the reason the application is not healthy. This reason is the return value of the health check microflow.
+
+The health check microflow gets invoked multiple times per minute. Therefore, it is recommended to make it light-weight and run quickly. Heavy operations may have a significant impact on your application's performance.
 
 {{% alert type="warning" %}}
 
@@ -481,4 +474,4 @@ This request can only be executed when the Mendix Runtime status is "running" (s
 }
 ```
 
-Returns feedback about the Mendix Runtime. "java_version" is available from Mendix 6.6 onwards.
+Returns feedback about the Mendix Runtime.

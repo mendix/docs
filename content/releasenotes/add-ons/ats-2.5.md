@@ -19,16 +19,16 @@ This opens up a lot exciting possibilities for us as ATS developers. For example
 
 ### Fixes
 
-* When you had a data-driven test case, a bug was preventing the usage of data set fields as input parameters of assert actions. This is now fixed.
+* When you had a data-driven test case, a bug was preventing the usage of dataset fields as input parameters of assert actions. This is now fixed.
 * The PDF report still showed the result category **Unknown**, which was removed from the dashboard some time ago. To keep the reporting consistent between the dashboard and the PDF, we removed the category Unknown from the PDF report as well.
 * Under rare circumstances, the test suite results progress bar (shown on the dashboard) turned green, even though the percentage of passed test cases was below 100%. This is now fixed, and the progress bar will only be green if the percentage of past cases is exactly 100%.
 * When recording the **Click Widget button** action (which is used to click on special list view, template grid, and data grid buttons such as search, clear, reset, etc.), the recorded action did not save the information about which button was clicked in the test step. This is now fixed.
 * Moving items from one project to another was not possible if the items' parent folder(s) still existed in another app. This is now possible. Please note that although importing items that already exist in another app is not allowed, you can circumvent this by, for example, copying a test case from app A, exporting the copy from app A, deleting the copy from app A, then importing the copy into app B.
 * In some rare circumstances, importing a complex test set failed due to an internal error. This is now fixed.
 * Exporting items that contained empty test steps (for example, a test step was added but no action was selected for the test step) was not possible. Items with empty test steps can now be exported.
-* A validation check was missing that allowed users to execute a test case with a data set that has no records. This execution was followed by an error that did not provide much information to end-users. We added an extra validation check and improved the message that the user sees.
+* A validation check was missing that allowed users to execute a test case with a dataset that has no records. This execution was followed by an error that did not provide much information to end-users. We added an extra validation check and improved the message that the user sees.
 * While working on a test case, when you added a test step manually after a teardown step, it got the wrong step number and the wrong step type (by default, this should be teardown). This is now fixed.
-* When you related a data set to a test case that was previously related to a non-existing data set, an error message was shown that falsely informed the user that "the old dataset could not be found." Closing and reopening the test case eliminated the error. We fixed this, so now you do not have to close and reopen the test case to get rid of the error message anymore.
+* When you related a dataset to a test case that was previously related to a non-existing dataset, an error message was shown that falsely informed the user that "the old dataset could not be found." Closing and reopening the test case eliminated the error. We fixed this, so now you do not have to close and reopen the test case to get rid of the error message anymore.
 * The application UI got generally slower if you used the app for longer periods of time without refreshing your browser tab. We made several improvements related to the performance of the application's UI to improve this.
 
 ### Other Changes

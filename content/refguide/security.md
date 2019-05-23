@@ -1,10 +1,11 @@
 ---
 title: "Security"
-category: "Desktop Modeler"
+category: "App Modeling"
+tags: ["studio pro"]
 ---
 
 
-Security in Mendix has two sides: you want different people to see different parts of your application and you want to prevent unauthorized access. Both of these can be managed from the Modeler. Access to forms, data and microflows can be limited to authorized users.
+Security in Mendix has two sides: you want different people to see different parts of your application and you want to prevent unauthorized access. Both of these can be managed from Studio Pro. Access to forms, data and microflows can be limited to authorized users.
 
 ## Security Levels
 
@@ -18,7 +19,7 @@ At the level of a project some global settings can be specified: the security le
 
 See [Project Security](project-security).
 
-Most of the security settings take place at the module level. This has the advantage that a module can specify its own security and can be distributed and reused in other projects. Access to forms, entities, microflows and data sets can be configured.
+Most of the security settings take place at the module level. This has the advantage that a module can specify its own security and can be distributed and reused in other projects. Access to forms, entities, microflows and datasets can be configured.
 
 See [Module Security](module-security).
 

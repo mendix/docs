@@ -1,7 +1,8 @@
 ---
 title: "Manage Application Performance with AppDynamics"
 category: "Monitoring & Troubleshooting"
-tags: []
+menu_order: 12
+tags: ["monitoring", "troubleshooting", "performance", "appdynamics"]
 ---
 
 ## 1 Introduction
@@ -61,7 +62,7 @@ To the `javaopts` list in your *m2ee.yaml* file, add "-javaagent:<path-to-javaag
  ]
 ```
 
-### 3.2.3 Mendix Desktop Modeler (Development Mode Only)
+### 3.2.3 Mendix Studio Pro (Development Mode Only)
 
 1. Open your Mendix application, and then select **Settings** in the **Project Explorer**:
 2. Open a configuration:
@@ -162,15 +163,15 @@ Once you have performed all of the steps above for your Mendix application, its 
 
 For more information on AppDynamics, see the AppDynamics documentation here: [https://docs.appdynamics.com/](https://docs.appdynamics.com/).
 
-## 9 Related Content
+## 9 Read More
 
-* [How to Find the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
-* [How to Clear Warning Messages](clear-warning-messages)
-* [How to Monitor Mendix Using JMX](monitoring-mendix-using-jmx)
-* [How to Debug Java Actions Remotely](debug-java-actions-remotely)
-* [How to Set Log Levels](log-levels)
-* [How to Debug Microflows](debug-microflows)
-* [How to Debug Java Actions](debug-java-actions)
-* [How to Handle Common Mendix SSO Errors](handle-common-mendix-sso-errors)
-* [How to Solve Load and Import Errors](solving-load-and-import-errors)
-* [How to Debug Microflows Remotely](debug-microflows-remotely)
+* [Find the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
+* [Clear Warning Messages](clear-warning-messages)
+* [Monitor Mendix Using JMX](monitoring-mendix-using-jmx)
+* [Debug Java Actions Remotely](debug-java-actions-remotely)
+* [Set Log Levels](log-levels)
+* [Debug Microflows](debug-microflows)
+* [Debug Java Actions](debug-java-actions)
+* [Handle Common Mendix SSO Errors](handle-common-mendix-sso-errors)
+* [Solve Load & Import Errors](solving-load-and-import-errors)
+* [Debug Microflows Remotely](debug-microflows-remotely)

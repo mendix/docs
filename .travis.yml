@@ -1,5 +1,7 @@
 sudo: false
 dist: trusty
+git:
+  depth: 20000 # We're cloning a max of xxx commits, so the author date is correct
 language: node_js
 env:
   global:

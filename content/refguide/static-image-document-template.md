@@ -1,8 +1,8 @@
 ---
-title: "Static Image (document template)"
+title: "Static Image (Document Template)"
 parent: "document-templates"
+tags: ["studio pro"]
 ---
-
 
 A static image shows a predefined image. It can be put either in- or outside a data view or templategrid.
 

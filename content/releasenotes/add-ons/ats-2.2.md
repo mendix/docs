@@ -24,7 +24,7 @@ After your first login to this release, you'll see a pop-up window, which will a
 * When you pasted test steps into another action or test case some details in the test steps were not visible. This issue has been resolved. Copy-and-paste now works as expected in all scenarios.
 * The layout broke when you used a very long description in your test step. We've optimized the layout to cut off very long descriptions.
 * When you cancelled the import of a test case or test suite, it was not possible to import it again. We fixed this.
-* It was not possible to start a test suite when two test cases within the suite used the same data set. This now works as expected.
+* It was not possible to start a test suite when two test cases within the suite used the same dataset. This now works as expected.
 * The **Get Value** action always returned empty if you tried to get the value from a date picker field. This is now fixed so you can also read values from date pickers.
 * When cancelling a recording session, it sometimes took a few seconds before ATS returned to the previous page. This delay is now gone.
 * The two actions **Assert Active Tab Caption** and **Get Active Tab Caption** had misleading names, as they work for the tab name and not the tab caption. Consequently, they're now named **Assert Active Tab Name** and **Get Active Tab Caption**.

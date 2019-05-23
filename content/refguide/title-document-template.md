@@ -1,8 +1,8 @@
 ---
-title: "Title (document template)"
+title: "Title (Document Template)"
 parent: "document-templates"
+tags: ["studio pro"]
 ---
-
 
 A title works much like a static label but can be placed outside a data view, templategrid or table.
 

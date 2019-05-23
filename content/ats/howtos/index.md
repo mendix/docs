@@ -2,7 +2,11 @@
 title: "How-to's"
 ---
 
-These are the main documents in this category:
+## 1 Introduction
 
-* [ATS 1 How-to's](ht-version-1/ht-version-1)
+The how-to's for ATS are categorized according to the ATS version.
+
+## 2 Main Documents in This Category
+
 * [ATS 2 How-to's](ht-version-2/ht-version-2)
+* [ATS 1 How-to's](ht-version-1/ht-version-1)

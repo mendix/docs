@@ -1,6 +1,7 @@
 ---
 title: "Input Reference Set Selector"
 parent: "input-widgets"
+tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -31,7 +32,7 @@ If an input reference set selector is not editable under any circumstances, no s
 
 See [Opening Pages](opening-pages). Note that opening select pages in content is prohibited.
 
-{{% alert type="success" %}}
+{{% alert type="info" %}}
 
 You can generate a new page to show by right-clicking the widget and selecting 'Generate select page...'.
 
@@ -101,6 +102,6 @@ The page has displays a reference selector for the reference to country and an i
 
 {{% snippet file="refguide/Tab+index+Property.md" %}}
 
-## Related Content
+## Read More
 
 *   [Data view](data-view)

@@ -1,6 +1,7 @@
 ---
 title: "Menu Item"
 parent: "menu"
+tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -21,7 +22,7 @@ The glyph icon or image will appear next to or above the caption in the [menu wi
 
 The target of the menu item is the page or microflow that will be opened when the item is clicked. A menu item that has subitems cannot have a target itself.
 
-{{% alert type="success" %}}
+{{% alert type="info" %}}
 
 You can open a page that contains a data view from a menu item by setting as target a microflow that first retrieves an object for the data view and then opens the page.
 

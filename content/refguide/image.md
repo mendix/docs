@@ -1,13 +1,14 @@
 ---
 title: "Image"
 parent: "common-widgets"
+tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 
 The image widget can be used to show a predefined image on a page, layout or snippet.
 
-{{% alert type="success" %}}
+{{% alert type="info" %}}
 
 If you want to dynamically show different images based on data, please take a look at the [image viewer](image-viewer).
 

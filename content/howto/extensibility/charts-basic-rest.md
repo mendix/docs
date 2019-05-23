@@ -2,7 +2,7 @@
 title: "Use a Chart with a REST Data Source"
 parent: "charts-tutorials"
 menu_order: 60
-tags: ["Charts", "Widgets", "REST", "Desktop Modeler"]
+tags: ["Charts", "Widgets", "REST", "Studio Pro"]
 ---
 
 ## 1 Introduction
@@ -12,19 +12,18 @@ With the Charts widgets, you can use data from a REST Service to plot graphs.
 **This how-to will teach you how to do the following:**
 
 * Publish a REST API
-* Use a REST end point as a data source for the Charts widget
+* Use a REST endpoint as a data source for the Charts widget
 
 ## 2 Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Install the latest Mendix desktop modeler
-* Create a project
+* Create an app project
 * Import the latest [Charts Widgets](https://appstore.home.mendix.com/link/app/105695/) from the Mendix App Store
 
 ## 3 Setting up Data to be Exposed by a REST Endpoint
 
-Mendix allows you to publish REST Web services natively from the modeler. Using these capabilities you can publish a REST service and use it in our Charts widget to plot graphs.
+Mendix allows you to publish REST Web services natively from Studio Pro. Using these capabilities you can publish a REST service and use it in our Charts widget to plot graphs.
 
 To create an Area Chart with data from a REST service, follow these steps:
 
@@ -70,7 +69,7 @@ To configure the REST service, follow these steps:
 
 ## 5 Using REST as a Data Source
 
-To use the REST Data source end point in your chart, follow these steps:
+To use the REST Data source endpoint in your chart, follow these steps:
 
 1. Create a page in your project containing an **Area chart** widget.
 
@@ -100,8 +99,8 @@ To use the REST Data source end point in your chart, follow these steps:
 
     ![Show Chart](attachments/charts/charts-rest-area-chart.png)
 
-## 6 Related Content
+## 6 Read More
 
-* [How to use chart data source REST](charts-basic-create)
-* [How to use Any Chart](charts-any-usage)
-* [How to use theme charts](charts-theme)
+* [Use Chart Data Source REST](charts-basic-create)
+* [Use Any Chart](charts-any-usage)
+* [Use Theme Charts](charts-theme)

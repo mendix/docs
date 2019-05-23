@@ -1,12 +1,15 @@
 ---
-title: "Cell (document template)"
+title: "Cell (Document Template)"
 parent: "row-document-template"
+tags: ["studio pro"]
 ---
+
+## 1 Introduction
 
 Cells are part of a table. They can contain other widgets.
 
-## Appearance Properties
+## 2 Appearance Properties
 
-### Style
+### 2.1 Style
 
 See [Style](style).

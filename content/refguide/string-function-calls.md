@@ -2,6 +2,7 @@
 title: "String Function Calls"
 parent: "expressions"
 description: "Describes the functions for converting and inspecting strings in Mendix."
+tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -403,7 +404,7 @@ In `isMatch()`, the regex is implicitly anchored at `^` and `$`.
 
 NB searching an empty string:
 
-* `isMatch('', '.*[0-9].*')` returns true
+* `isMatch('', '.*[0-9].*')` returns false
 
 ## replaceAll
 
@@ -500,9 +501,9 @@ The `+` operator can be used to concatenate two strings or a string and a number
 ### Input Parameters
 
 * First parameter
-    * Type: string, integer/long, float, or decimal
+    * Type: string, integer/long, decimal
 * Second parameter
-    * Type: string, integer/long, float, or decimal
+    * Type: string, integer/long, decimal
 
 At least one of the parameters must be of type string.
 

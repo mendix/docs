@@ -1,6 +1,7 @@
 ---
 title: "Call Web Service Action"
 parent: "microflow-activities"
+tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -62,20 +63,12 @@ When consuming a WSDL that uses encoding, turning on validation will lead to a c
 
 Schema validation is not supported when you configure the [consumed web service](consumed-web-service) to send binary data as attachments.
 
-{{% alert type="info" %}}
-Support for schema validation using the [(optimized) implementation](project-settings#web-service-calls) was introduced in version 7.20.
-{{% /alert %}}
-
 _Default value:_ No
 
 ### 2.7 Proxy Configuration
 
 {{% alert type="info" %}}
-
-This feature was introduced in version 7.15.0.
-
-This feature is only available when you have configured web service calls to use the new (optimized) implementation in the [project's runtime settings](project-settings).
-
+This feature is only available when you have configured web service calls to use the (optimized) implementation in the [project's runtime settings](project-settings).
 {{% /alert %}}
 
 In almost all cases, you can ignore this setting. **Use project settings** is a good default value.
@@ -144,7 +137,7 @@ _Default:_ do not send the empty values.
 
 This option allows you to generate the XML for the request part using a template. The template defines the XML structure of the request part in plain text. Parameters can be used by writing a number between braces, e.g. '{1}'. For each parameter in the template you can specify its value using a [microflow expression](expressions) resulting in a String value.
 
-For the request header, the Modeler provides some common XML structures in the drop down menu.
+For the request header, Studio Pro provides some common XML structures in the drop down menu.
 
 ## 5 SOAP Response
 
@@ -157,12 +150,6 @@ If the data type is a complex XML structure it can be mapped to entities using a
 Here you can choose the [Import Mapping](import-mappings) that will be used to transform the XML into objects.
 
 ### 5.2 If No Object Was Found
-
-{{% alert type="info" %}}
-
-This feature was introduced in version 7.17.0.
-
-{{% /alert %}}
 
 You can indicate what should happen **if not object was found** when the import mapping has checked the box **decide this at the place where the mapping gets used**.
 

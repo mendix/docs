@@ -1,24 +1,19 @@
 ---
 title: "Navigation Profile"
 parent: "navigation"
-description: "Describes the profile properties and profile buttons for Mendix version 7.4 and above."
+tags: ["studio pro"]
+description: "Describes the Mendix profile properties and profile buttons."
 ---
-
-{{% alert type="info" %}}
-
-For details on how this works in Mendix versions 7.0 and 7.1, see [Navigation Before Mendix Version 7.2](navigation-before-72). For 7.2 and 7.3, see [Navigation in Mendix Versions 7.2 and 7.3](navigation-in-72-and-73)
-
-{{% /alert %}}
 
 ## 1 Overview
 
-Managment of profiles is available from the **Navigation** section of a project.
+Management of profiles is available from the **Navigation** section of a project.
 
-![](attachments/modeler-core/2018-03-01_17-29-32.png)
+![](attachments/core/2018-03-01_17-29-32.png)
 
 A profile can be added with the **Add navigation profile** button. Only one profile per type is allowed. While adding the profile, it is possible to copy the settings from an existing profile.
 
-![](attachments/modeler-core/2018-03-01_17-31-42.png)
+![](attachments/core/2018-03-01_17-31-42.png)
 
 ## 2 Profile Properties
 
@@ -40,7 +35,7 @@ By using role-based home pages, you can show different home pages for different 
 
 For each role-based home page, you can specify the user role it applies to and the target (page or microflow) that will be opened.
 
-### 2.3 Authentication
+### 2.3 Authentication {#authentication}
 
 If an [anonymous user](anonymous-users) tries to access a resource to which the user has no access, the configured [sign-in page](authentication-widgets) will be displayed, prompting the user to sign in.
 
@@ -65,3 +60,17 @@ Allows for changing the [profile type](navigation).
 ### 3.3 Delete
 
 This deletes the profile. If [menu widgets](menu-widgets) are still referring to the profile, errors will appear. It is possible to undo the deletion of a profile.
+
+### 3.4 Sync configuration
+
+Only available on profiles supporting offline synchronization.
+
+This opens the **Customize offline synchronziation** dialog which is used for overriding offline synchronization settings for specific entities. For each entity the download setting is shown. A default is automatically determined by analyzing the model, but can be overridden in which case the setting will appear in boldface. The download settings are one of the following:
+
+| Download setting | Description |
+----------------------------------
+| All objects | Download all objects of this entity type |
+| By XPath    | Download only those objects matching the specified [XPath constraint](xpath-constraints) |
+| Nothing     | Don't download any objects of this entity type |
+
+![](attachments/core/customize-offline-synchronization.png)

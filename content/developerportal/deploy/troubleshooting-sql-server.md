@@ -35,7 +35,7 @@ Message: Login failed for user 'YourDatabaseUser'. Reason: The account is disabl
 
 Validate the ‘Status’ of the User. One of the login properties of the user is probably configured to be Deny or Disabled. Both permissions should be configured as Grant/Enabled.
 
-## Related Content
+## Read More
 
 *   [Setting Up the Database User](setting-up-the-database-user)
 *   [Restoring a SQL Server Database](restoring-a-sql-server-database)
@@ -45,4 +45,4 @@ Validate the ‘Status’ of the User. One of the login properties of the user i
 *   [Security Checklist for Your On-Premises Installation](security-checklist-for-your-on-premises-installation)
 *   [Mendix on Windows - Microsoft SQL Server](mendix-on-windows-microsoft-sql-server)
 *   [Deploying Mendix on Microsoft Windows](deploy-mendix-on-microsoft-windows)
-*   [Installing Mendix on Debian GNU Linux](installing-mendix-on-debian-gnu-linux)
+*   [U*ix Deployment](unix-like)

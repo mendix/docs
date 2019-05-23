@@ -2,7 +2,11 @@
 title: "Reference Guide"
 ---
 
-These are the main documents in this category:
+## 1 Introduction
 
-* [ATS 1 Reference Guide](rg-version-1/rg-version-1)
+The reference guide for ATS is categorized according to the ATS version.
+
+## 2 Main Documents in This Category
+
 * [ATS 2 Reference Guide](rg-version-2/rg-version-2)
+* [ATS 1 Reference Guide](rg-version-1/rg-version-1)

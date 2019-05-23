@@ -191,7 +191,7 @@ function generate(domainModel1, model) {
 
 Execute the script. You should have a new project with the generated entities.
 
-{{% alert type="success" %}}
+{{% alert type="info" %}}
 
 Instead of creating a new project, you can also reuse an existing project or even an existing online working copy.
 

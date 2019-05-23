@@ -13,7 +13,7 @@ Mendix Studio Pro is the tool for creating, viewing, and editing your Mendix app
 
 This documentation describes the graphical user interface of Studio Pro. The rest of the documentation follows the structure of the project explorer.
 
-{{% alert type="success" %}}
+{{% alert type="info" %}}
 
 Press <kbd>F1</kbd> while in Studio Pro to quickly jump to the right page in the documentation.
 

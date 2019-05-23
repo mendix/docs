@@ -61,13 +61,13 @@ It is very important to read these alerts carefully and to act upon them, as the
 
 We expect your support team to be trained and certified on Studio Pro and the Developer Portal so that they can interpret and analyze alerts, graphs, and logs in the Developer Portal. For more information, please check our available [training courses](https://gettingstarted.mendixcloud.com/link/classroom) and [expert webinars](https://gettingstarted.mendixcloud.com/link/webinar) or contact the Mendix Academy (<academy@mendix.com>).
 
-## 6 Reach Out to Mendix Support
+## 6 Platform Status
+
+If there is an issue in the Mendix Platform that affects multiple customers or if there is planned maintenance, we will communicate this through our [status page](https://status.mendix.com) and send updates on the progress through email if you have subscribed to this service. Having your service desk team subscribe to updates from this page is recommended.
+
+## 7 Reach Out to Mendix Support
 
 If you suspect an issue in the Mendix platform exists after your analysis (or if you have questions about your analysis), you can reach out to Mendix Support. We will provide pointers on how to solve the issues yourself or redirect you to Expert Services for further assistance. If we suspect a platform issue, we will involve second and third line support for confirmation, and we will fix it if it is a platform issue. If the issue is commercial (for example, because your app requires a larger app container or more file storage), we might refer you to your Customer Success Manager directly.
-
-## 7 Platform Status
-
-If there is an issue in the Mendix platform that affects multiple customers or if there is planned maintenance, we will communicate this through our [status page](https://status.mendix.com) and send updates on the progress through email if you have subscribed to this service. Having your service desk team subscribe to updates from this page is recommended.
 
 ## 8 Product Support Period
 

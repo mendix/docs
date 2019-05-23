@@ -78,7 +78,9 @@ You can change the way the list is displayed in the same way as for the list of 
 
 If you click an app for which you are not a team member you will see some app details.
 
+{{% image_container width="400" %}}
 ![Example of app details](attachments/app-details.png)
+{{% /image_container %}}
 
 If you are a team member you will be taken to the app [Buzz](/developerportal/collaborate/buzz).
 

@@ -72,19 +72,19 @@ If investigating the documentation and searching the [Mendix Forum](https://foru
 
 You can select the priority that you feel the request should have. Please note the [SLA regulations](index#sla) for this priority.
 
-The priority is based on the combination of impact and urgency.
+The priority is based on the combination of impact and urgency: 
 
-These are the possible impacts:
+| Impact  | Description |
+| ------- | ------- |
+| High    | A high-priority production issue with a high impact on the customer’s business, impacting (almost) all users. |
+| Medium  | A production issue with intermediate impact on the customer’s business, impacting a group of users. |
+| Low     | A trivial production issue with no impact on the customer’s business. |
 
-* **High** – a high priority production issue with a high impact on the customer’s business, impacting (almost) all users
-* **Medium** – a production issue with intermediate impact on the customer’s business that impacts a group of users
-* **Low** – a trivial production issue with no impact on the customer’s business
-
-These are the possible urgency levels:
-
-* **High** – the operational functionality is severely disrupted
-* **Medium** – the operational functionality is limited disrupted
-* **Low** – the operational functionality is hardly disrupted
+| Urgency | Description |
+| ------- | ------- |
+| High    | The operational functionality is severely disrupted. |
+| Medium  | The operational functionality is fairly disrupted. |
+| Low     | The operational functionality is hardly disrupted. |
 
 You can set the priority to the following levels:
 
@@ -93,7 +93,7 @@ You can set the priority to the following levels:
 * **Medium**
 * **Low**
 
-The request priority is based on this matrix:
+The request [ticket priority](ticket-priority) that Mendix determines is based on this matrix:
 
 ![](attachments/submit/204371729-pic5.png)
 

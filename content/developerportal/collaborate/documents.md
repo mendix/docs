@@ -8,13 +8,13 @@ tags: ["Documents", "Developer Portal"]
 
 ## 1 Introduction
 
-On the **Documents** page, you can upload app project files and replace existing files with newer versions.
+On the **Documents** page, you can upload files to your app project and replace existing files with newer versions.
 
 ![](attachments/documents.png)
 
 ## 2 Actions
 
-You can perform the actions described below via the buttons that are available about your app project's documents.
+You can perform the actions described below via the buttons on your app project's *Documents* page. To select an existing document, click the checkbox in front of the document name to select it.
 
 ### 2.1 Uploading a File
 
@@ -35,18 +35,20 @@ To add a label to a document or create a new label, use the options under **Labe
 
 ### 2.3 Downloading a Document
 
-To download an available document, select the document and click **Download**.
+To download a document, select the document and click **Download**.
 
 ### 2.4 File Details
 
-Click **Details** to see the description of the file, comments, and all the versions of the file:
+Click **Details** to see the description of the document, comments, and all the versions of the document:
 
 ![](attachments/document-details.png)
 
-Under **Details**, you can perform the following actions:
+On the **Document** details page, you can perform the following actions:
 
 * Download the document
+
 * Upload a new version of the document
+
 * Delete the document
 
 ### 2.5 New Version

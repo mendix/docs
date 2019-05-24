@@ -139,31 +139,39 @@ There are various actions you can perform when managing stories, These are descr
 
 ### 4.1 Accessing Story Details {#accessing-details}
 
-Select a story and click **Details** to open the **Story Details** page. 
+Select a story and click **Details** (below the story title) to open the **Story Details** page. 
 
 {{% image_container width="500" %}}
 ![](attachments/story-details.png)
 {{% /image_container %}}
 
-On this page, you can perform a variety of actions:
+On this page, you can perform a number of actions:
 
-* View the details such as **Type**, date **Created**, etc.
-* Click **Edit** to edit the **Title**, **Description**, **Story type**, **Story points**, **Status**, and **Labels** of the story as well as see the history of edits done on the story
-* View the story's **Status** and click to update it (the available statuses are **To-do**, **Running**, and **Done**)
-* View the **Sprint** that contains the story as well as move the story via **Move To Sprint** (for details, see the [Moving Stories](#moving) section below)
+* View the details such as **Type** and date **Created**
+
+* Click **Edit** to edit the **Title**, **Description**, **Story type**, **Story points**, **Status**, and **Labels** of the story as well as see the history of edits made to the story
+
+* See the story's **Status** and click to update it (the available statuses are **To-do**, **Running**, and **Done**)
+
+* View the **Sprint** that contains the story as well as move the story via **Move to Sprint** (for details, see the [Moving Stories](#moving-stories) section below)
+
 * Click **Move to another app** to move the story to a different app's backlog
+
 * Click **View history** to view the history of changes to the story (for more information, see the [History](#history) section above)
 
 Also on this page, you can access the following tabs:
 
 * **Comments** – on this tab, you can view and add comments about the story to collaborate with your App Team
+
 * **Tasks** – you can see the tasks that were added to the story here (for more information, see the [Adding Tasks to a Story](#adding) section below)
+
 * **Feedback** – here you can see the feedback item linked to the story (for details, see the [Adding a Feedback Item to Your Backlog](feedback#adding) section of *Feedback Management*)
+
 * **Revisions** –  on this tab, you can see the committed revision of the app project that is linked to the story (which is configured in the [Related stories](/refguide/commit-dialog#stories) tab of the **Commit** dialog box in Studio Pro)
 
 ### 4.2 Adding Tasks to a Story {#adding}
 
-Stories of the **Feature** type can be translated into tasks that need to be completed to finish the story.
+Stories of the *Feature* type can be translated into tasks that need to be completed to finish the story.
 
 To add a task to the story, follow these steps:
 
@@ -185,19 +193,19 @@ After you have completed the task, check the box:
 
 ![](attachments/complete-task.png)
 
-### 4.3 Moving Stories  {#moving}
+### 4.3 Moving Stories  {#moving-stories}
 
 If you need to reorder stories or move a story to a different sprint, there are three ways to do this:
 
-*  Select the story and drag it to the desired sprint location:
+1.  Select the story and drag it to the desired sprint location:
 
 	![](attachments/move-story-drag.png)
 
-*  Click **Details** for the story you want to move to another sprint, and on the **Story Details** page, select the sprint to which you want to move the story from the **Move To Sprint** drop-down menu:
+2.  Click **Details** for the story you want to move to another sprint, and on the **Story Details** page, select the sprint to which you want to move the story from the **Move To Sprint** drop-down menu:
 
 	![](attachments/move-story-details.png)
 	
-* Select the story and use the **Move to** button to select the new sprint (for details on this method, see the [Moving a Story](#moving) section)
+3. Select the story and use the **Move to** button to select the new sprint (for details on this method, see the [Moving a Story](#moving) section)
 
 {{% alert type="info" %}}
 Moving a story will move any tasks and sub-tasks as well.

@@ -15,6 +15,7 @@ On the **Feedback** page of the Developer Portal, you can view and manage the fe
 This feedback comes from different sources:
 
 * Submitted via the [Mendix Feedback Widget](use-feedback-widget)
+
 * Submitted on the **Feedback** page itself (for details, see the [Actions](#actions) section below)
 
 ### 1.1 Types of Feedback {#types}
@@ -42,11 +43,14 @@ Feedback in each stage is shown in a separate tab on the **Feedback** page.
 
 ## 2 Feedback Actions {#actions}
 
-These are the general feedback actions available on the tabs of the **Feedback** page:
+These are the general feedback actions available on all the tabs of the **Feedback** page:
 
 * Clicking **Add feedback** will add a new feedback item to the **Open** tab of the app project
+
 * Clicking **Export to Excel** will export the listed feedback items in an *.xls* file
+
 	* For the export, you can filter on the **Submitted after** date, **Label**, **Status** of feedback, and **Type** of feedback
+
 * Clicking **Show filters** allows you to filter on the types of feedback being listed: **Ideas**, **Questions**, and/or **Issues**
 
 ## 3 Feedback Details
@@ -55,7 +59,7 @@ Clicking on the title of a feedback item or on **Details** opens the item's deta
 
 ![](attachments/feedback/feedbacklist.jpg)
 
-You can perform various actions for reviewing and processing a feedback item on this page, which are described below.
+You can perform various actions for reviewing and processing a feedback item on this page. These actions are described below.
 
 ### 3.1 Reviewing a Feedback Item
 

@@ -21,11 +21,13 @@ The priority levels are determined based on the impact and urgency of the reques
 
 | Urgency | Description |
 | ------- | ------- |
-| High    | The operational functionality is **severely disrupted**. |
-| Medium  | The operational functionality is **fairly disrupted**. |
-| Low     | The operational functionality is **hardly disrupted**. |
+| High    | The operational functionality is severely disrupted. |
+| Medium  | The operational functionality is fairly disrupted. |
+| Low     | The operational functionality is hardly disrupted. |
 
 ## 3 Priority Matrix
+
+The ticket priority that Mendix determines is based on this matrix:
 
 ![](attachments/submit/204371729-pic5.png)
 

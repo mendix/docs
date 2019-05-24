@@ -171,7 +171,7 @@ You can test how your app looks like for different roles the following way:
 
 ## 5 Managing App Users {#managing-app-users}
 
-You can assign the default or customized users for your app to end-users with Mendix accounts. These are called **App Users**, and once authorized, they can access the preview of your app on specific environments to use it, test it, and provide feedback.
+You can assign the default or customized users for your app to end-users with Mendix accounts. These are called **App Users** and once authorized, they can access your published app to use it, test it, and provide feedback.
 
 {{% alert type="info" %}}
 You can manage App Users only after you publish your app.
@@ -182,6 +182,10 @@ To manage App Users, open **Roles and Permissions** and click **Manage Users** i
 ![](attachments/settings-security/manage-users-button.png)
 
 You will be taken to the [App User Management](developerportal/settings/general-settings#app-user-button) page in the Developer Portal, where you can invite people to your app and manage their user roles. 
+
+{{% alert type="info" %}}
+People invited to join your App Team in the Developer Portal are not added as App Users automatically, so you will need to invite your App Team members if necessary.
+{{% /alert %}}
 
 {{% alert type="info" %}}
 If you have created a new user role on the **Roles and Permissions** page, you need to publish the app first to be able to see and assign this role in the Developer Portal.

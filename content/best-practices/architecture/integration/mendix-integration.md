@@ -5,8 +5,6 @@ menu_order: 1
 draft: true
 ---
 
-{{% todo %}}[**MENTIONS OF IoT, AI, AND MACHINE LEARNING SHOULD BE REMOVED/REWRITTEN OUT OF THIS DOCUMENT**]{{% /todo %}}
-
 ## 1 Introduction
 
 Mendix makes it easy to build, update, and maintain an application or microservice that fulfils a business function. The best practice is to try and keep as much of a business function as possible in an app to minimize external integration and complexity. In turn, this will make your DevOps teams more independent while making development and maintenance even faster and more efficient. However, most apps will need some external integration with other apps, systems, API layers, things, and human workflows.
@@ -79,18 +77,11 @@ For most of the integration related to Mendix, there are five basic solution cat
 
 Plotting functional use cases against basic methods of integration allows you to see there are several common options available. That is good, because integration needs to be flexible in a solution for the architect to select the best option for a specific situation. 
 
-For example, you may choose not to change an old system leading to another choice than if we built two new apps.
+For example, you may choose not to change an old system, which leads you to choose another option than you would if you were building two new apps. This means that you may choose the less ideal way to integrate in order not to change an old system. In the scenario that you were building two new apps, you would make another choice.
 
-It means that we may choose the less ideal way to integrate in order not to change an old system.
-If we were building 2 new Apps we would make another choice.
-
-For example, you may have to choose a less ideal way to integrate in order to not change an old system. This may in fact be a better solution than building two new apps.
-
-{{% todo %}}[**CLARIFY SENTENCE ABOVE**]{{% /todo %}}
+As another example, when integrating to SaaS solutions and older systems, there may only be one option available. Such a scenario will determine which integration to use, rather than these guidelines. 
 
 The table below presents use cases that you can reference  for more detail. The table uses the following symbols:
-
-{{% todo %}}[**ADD LINKS AS DOCS AVAILABLE**]{{% /todo %}}
 
 | Symbol | Meaning |
 | --- | --- |

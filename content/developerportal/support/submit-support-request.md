@@ -93,7 +93,7 @@ You can set the priority to the following levels:
 * **Medium**
 * **Low**
 
-The request [ticket priority](ticket-priority) that Mendix determines is based on this matrix:
+The [Support ticket priority](ticket-priority) that Mendix determines is based on this matrix:
 
 ![](attachments/submit/204371729-pic5.png)
 

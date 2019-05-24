@@ -1,5 +1,5 @@
 ---
-title: "Ticket Priority"
+title: "Support Ticket Priority"
 category: "Mendix Support"
 menu_order: 20
 description: "Presents details on how Mendix Support prioritizes tickets."

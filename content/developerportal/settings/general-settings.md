@@ -53,7 +53,7 @@ Specific steps for configuring different cloud platforms are provided here:
 * [IBM Cloud](../deploy/ibm-cloud)
 * [On-Premises](../deploy/on-premises-design)
 
-## 4 Managing App Users {#app-user-button}
+## 4 Managing App Users {#managing-app-users}
 
 Click **Manage App Users** to manage App Users, who are end-users who can access the deployed app on specific environments to use it, test it, and provide feedback.
 

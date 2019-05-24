@@ -12,17 +12,21 @@ In **Stories**, you are able to manage Sprints, stories, and labels. These compo
 
 By adding your Sprints to Mendix, you will have a clear overview of your tasks and can easily view the status of your development. You can create, refine, and prioritize user stories collaboratively using the stories' conversation threads. User stories can be estimated and organized into Sprints which can be monitored using Scrum boards and burn-down charts.
 
+{{% alert type="info" %}}
+
 You can also manage the progress of tasks and sprints from within Mendix Studio Pro.
+
+{{% /alert %}}
 
 ![](attachments/stories.png)
 
 ## 2 Actions
 
-You can perform the actions described below via the buttons that are available about your app project's stories.
+You can perform the actions described below via the buttons on your app project's *Stories* page.
 
 ### 2.1 Creating a New Story {#new-story}
 
-Every sprint contains a number of story points that describe specific functionality to be implemented, built, or fixed.
+Every sprint contains a number of stories that describe specific functionality to be implemented, built, or fixed. The size of each story can be indicated by allocating it a number of *story points*.
 
 To add a new story, click **New story** and fill in some details, including what your story is about and what type of story it is. The **Labels** you add in the new story can be reused in other stories (see [Label](#label) for more details).
 
@@ -30,13 +34,13 @@ To add a new story, click **New story** and fill in some details, including what
 
 ### 2.2 Creating a New Sprint {#sprint}
 
-To add a new sprint, click **New sprint** and fill in some details, including the name of the sprint or release and where it should be located in the structure of your **Stories** page.
+To add a new sprint, click **New sprint** and fill in some details, including the name of the Sprint or release and where it should be located in the structure of your **Stories** page.
 
 ![](attachments/sprint-example.png)
 
 ### 2.3 Moving a Story {#moving}
 
-To move a story, select the story, click **Move to**, then select the sprint where the story should be moved:
+To move a story: select the story, click **Move to**, then select the sprint where the story should be moved:
 
 ![](attachments/move-to.png)
 
@@ -60,7 +64,7 @@ Click **Delete selection** to delete the selected story:
 
 ### 3.2 Complete Current Sprint
 
-Click **Complete current sprint** to complete a sprint. Note that all stories have to be marked **Done** before you are able to complete a sprint.
+Click **Complete current sprint** to complete a Sprint. Note that all stories have to be marked **Done** before you are able to complete a Sprint.
 
 You will receive this confirmation message, so make sure you are able to confirm completion!
 
@@ -72,20 +76,38 @@ Click **Import / Export** to import stories from or export stories to Excel:
 
 ![](attachments/import-export.png)
 
-With Mendix, it is always possible to export data from your app project. If you select **Export a single sprint to Excel**, you can edit the sprint and then import it back to save the changes.
+In Mendix, it is always possible to export data from your app project. If you select **Export a single sprint to Excel**, you can edit the sprint and then import it back to save the changes.
 
 If you select **Updates stories from Excel**, you can use an an Excel sheet from a previous export as a template for the import. The Developer Portal recognizes items by using the **ID** column. The imported content will appear as stories for your app project.
 
-When editing stories, follow these guidelines:
+When editing stories in Excel, follow these guidelines:
 * To add a new story or task, simply add a new line on the correct position and type in the item's name
 * To reorder an item, adjust the depth by adding or removing the plus signs (make sure they stay in the correct order where every item is the same or 1 position lower than the item above it)
 * To remove an item, replace its depth with a single minus sign (make sure  that any tasks connected to it are either moved or are also removed)
 
 ### 3.4 Manage Labels {#manage-labels}
 
-Click **Manage labels** to configure, merge, create, and delete labels:
+Click **Manage labels** to create a **New Label**, **Configure label**, **Merge label**, or **Remove labels**:
 
 ![](attachments/labels.png)
+
+#### 3.4.1 New Label
+
+The **New label** button allows you to create a new label and assign a color to it.
+
+You can also create a new label by typing a new label name when you are creating a story.
+
+#### 3.4.2 Configure Label
+
+The **Configure label** button allows you to change the name and color of an existing label.
+
+#### 3.4.3 Merge Label
+
+The **Merge label** button will merge the selected label into another label. All stories which have the selected label will be labeled with the other label and the selected label will be deleted.
+
+#### 3.4.4 Remove Label
+
+The **Remove label** button will remove the selected label from any stories to which it has been applied. The label will then be deleted.
 
 ### 3.5 Manage Story Template
 
@@ -95,15 +117,25 @@ Click **Manage story template** to create and edit the default tasks that you ca
 
 To enable these default tasks, select the **Add default tasks based on story template** check box when creating a [new story](#new-story).
 
+{{% alert type="info" %}}
+Only team members with sufficient rights can manage story templates.
+{{% /alert %}}
+
 ### 3.6 History {#history}
 
-Click **History** to view the history details for stories (via **Show item**) and revert changes if necessary (via **Revert change**):
+Click **History** to view the history of collaboration actions for the app.
+
+On this page you can:
+
+* Click **Show item** to see details of a story
+
+* Click **Revert change** to revert changes
 
 ![](attachments/history.png)
 
 ## 4 Managing Stories
 
-There are various actions to perform when managing stories, which are described below.
+There are various actions you can perform when managing stories, These are described below.
 
 ### 4.1 Accessing Story Details {#accessing-details}
 

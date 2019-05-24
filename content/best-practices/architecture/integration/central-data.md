@@ -7,7 +7,9 @@ draft: true
 
 ## 1 Introduction
 
-The central data pattern is the integration pattern that stores data in motion. It is called an integration pattern because its purpose is integration from one place to another.
+The central data pattern is an integration pattern that stores a combined set of data in order to re-distribute it to other systems. It has an API, some logic, a data-base and some UX for configuration and error management. I.e. it is a system or a Mendix app, with the purpose to facilitate integration solutions that are hard to do as Services, Events or Files.
+
+Data warehouses and Data Lakes provide an enterprise scale version this pattern. But that does not mean that small, local or departmental solutions are not very helpful for the local integration needs. In fact we see that when Microservices replace a large monolith, there is often a good reason to have both a Dashboard app for log-on, and a "Shared Data App" (SDA), see sections below.
 
 The central data pattern reflects the ability to do the following:
 
@@ -16,7 +18,9 @@ The central data pattern reflects the ability to do the following:
 
 This diagram displays some typical ways to use the data:
 
-![](attachments/central-data/cd-intro.png)
+![](attachments/central-data/cd-intro.png)  << FIG 1 >>
+
+Some typical reasons to build a Shared Data App.
 
 * Viewing combined data using real-time services
 * Polling for combined updates (rather than polling many systems)
@@ -29,11 +33,11 @@ For many scenarios, it is better to specialize a system to handle subscriptions 
 
 A typical use-case is if a company has 10 business lines with all different ordering systems, but only one single support desk that needs to see them all. A small local app could be used that collects orders or tickets from a number of systems and enables easily searching them. A full data warehouse (DWH) could also be used for enterprise reporting.
 
-## 2 Typical Central Data Patterns
+### 1.2 Typical Central Data Patterns
 
 These are a few of the main ways the central data pattern is used:
 
-* **Operational data store (ODS)** – This combines the same type of data from different processes and is used in operational processes
+* **Shared Data Apps (SDA)** – This combines the same type of data from different processes and is used in operational processes. .
 	* For details, see the [Operational Data Stores (ODS)](#ods) section below
 * **DWH** – This is used for combining all types of data from the company and providing data for statistics, reporting, and business intelligence (BI)
 	* For details, see the [Operational & Data Warehouse Data](#owd) section below
@@ -47,26 +51,52 @@ These are a few of the main ways the central data pattern is used:
 	* They are beneficial for massive data volumes and can compare new data with previous loads 
 	* For more information, see the [Integration to DWH & BI](batch-integration#int) section of *Batch Integration*
 
-## 3 Operational Data Stores (ODS)  {#ods}
+## 2 Shared Data Apps (SDA)  {#ods}
 
-If the integration layer in the middle stores and combines business data before re-distributing it to other parties, it is a central data integration pattern, often referred to as an ODS.
+Shared Data Apps can be very useful on several levels:
 
-Mendix apps are often used for ODS solutions, since it is easy to integrate to several disparate systems, store the data, and manage any errors in the integration by creating a human workflow for it.
+* Microservice System level (supporting 3-10 apps that form a system)
+* Departmental leve,l supporting important and shared data within a deparment
+* Functional Area level, combining that same type of data, e.g. Orders, from different departments
+
+These are Microservices versions of the Central Data pattern, and any combinations of data that has a larger scope than that, should probably make use of the central Data lake or warehouse that most companies already have available.
+
+### 2.1 Example: Order SDA
 
 In this diagram, there are many business lines with different ordering systems, but there are also three different systems that need to search between the entire set of orders and give overviews of the current orders across business lines:
 
-![](attachments/central-data/ods.png)
+![](attachments/central-data/ods.png)  <<FIG 2>>
 
 The decision was made to specialize a microservice for the following tasks:
 
 * Collecting all relevant orders 
 * Provoiding good views and searches on the total set of orders
 
-ODS solutions are supposed to combine data, but if they try to do too many things, they become slow to change and manage. It is wise to have a limited area of scope for an ODS.
-
 You should create another ODS when it gets difficult to provide flexibility for more than one purpose. For example, an orders ODS can send overview ordering information to a customer ODS, which means they can both evolve autonomously.
 
-## 4 Operational & Data Warehouse Data {#owd}
+### 2.1 What does an SDA do?
+
+The typical responsibilities of a Shared Data App are:
+
+1. A local operational data-store (ODS), combining data
+2. Itegration app or Adapter, providing services, files or events for external system to retrieve data
+3. Reference data management, importing files with reference data or manually setting look-up values used across a Microservices system
+4. Batch processing, Export, Import, not disturbing UX experience with heavy loads, and allowing the neghbouring microservices to poll the SDA for updates
+5. Exception handling for all the above areas
+
+### 2.2 What does an SDA store
+
+The SDA typically stores the data in relational tables, in order to make them easily searchable and accessible in different formats. In many cases data can be stored both in a normalized form, and in a "flattened out" materialized view, that serves a specific purpose, e.g. provide high-volume access to a specific set of frequently requested data. 
+
+SDAs can naturally enrich the data, with other reference data. Combining data is part of the purpose. SDAs are often used as a component specializing in importing reference data and providing it to other apps locally. If the reference data comes as a file with all data in it, the SDA compares and makes sure to set the update-flag only on records that changes, making the impact on other apps to retrieve the data via e.g. REST services smaller.
+
+The general rule is that Master data from the other apps, are never updated in the SDA. While almost all reference data (static data from other systems), are imported into the SDA first. If another system updates Master data however, then it should call the service that owns that data. This way avoiding two-way updates of the same data-types.
+
+Shared Data Apps often also support event streams in small scale using an internal Process queue <<LINK>>. If updates from a Microservices system with several apps should be distributed by events in real-time, the SDA provides a good way to manage this flow and making sure that SDA is fully updates, at the same time as assembling all updates in the same queue assures they are diffused in the same order they happened.
+	
+<<<<<< END CHANGES >>>>>>
+
+## 3 Operational & Data Warehouse Data {#owd}
 
 It is good to keep operational data flows separate from statistical, BI, and DWH data unless you are using statistics or historical data as reference data in operational flows. The only patterns that should provide operational data are the [ODS pattern](#ods) and, in some cases, ETL solutions used operationally.
 
@@ -83,7 +113,7 @@ This diagram presents a number of apps in a process that shares business events 
 The event manager shares all the data with a data lake (or DWH), which processes the data into various data collections. One of those collections is sent to a Mendix app that manages that reference data and provides it back to three of the apps that “learn” from the past results.
 
 
-## 5 Small ODS & Large DWH
+## 4 Small ODS & Large DWH
 
 The other reason to keep operational data separate from DWH solutions is that operational processes change often, and different business units need flexibility and autonomy from each other. Even if it seems like two use cases need the same data, they may have very different needs when it comes to data models and functionality.
 

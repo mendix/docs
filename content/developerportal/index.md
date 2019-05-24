@@ -1,28 +1,20 @@
 ---
 title: "Developer Portal Guide"
 description: "A description of the sections in the Developer Portal and links to more detail"
-tags: ["Mendix", "Developer Portal", "Platform Services"]
+tags: ["Mendix", "Developer Portal", "Platform Services", "Buzz", "Apps", "People", "Community", "App Store", "Academy", "Forum", "Docs"]
 ---
 
 ## 1 What Is the Developer Portal?
 
-The [Developer Portal](http://home.mendix.com) is one of the three key components of the Mendix Platform. The other two are [Mendix Studio Pro](/refguide/modeling) and [Mendix Studio](/studio/index).
+The [Developer Portal](http://home.mendix.com) is one of the three key components of the Mendix Platform. The other two are [Mendix Studio Pro](/refguide/modeling) and [Mendix Studio](/studio/index). Here, Mendix developers can collaborate, deploy and manage their apps, and manage their company and users. 
 
-The Developer Portal is where Mendix developers can collaborate, deploy, and manage their apps, company, and users. 
+The Developer Portal can also be used for projects separately from other Mendix products, and the [Mendix Feedback Widget](collaborate/use-feedback-widget) can be included in any web application. The Developer Portal also offers an open, well-defined API, enabling third-party developers to integrate their own widgets and plugins.
 
-The Mendix Developer Portal takes a lightweight and social approach to enterprise project collaboration. The portal provides a unique combination of requirements management tools and social activity streams, offering a way to interact with colleagues, app project team members, and even external stakeholders involved in app projects.
-
-As a collaboration tool that can be used across the enterprise, the Developer Portal breaks down walls between different departments and roles. All employees are part of the same private social network and share a wall that shows all the company **Buzz** conversations. These conversations can turned into app ideas, and ideas can be organized using a voting system and then converted into projects. The portal offers all the tools you expect from a social network, including two-way email integration. 
-
-Besides operating as a powerful social platform, Mendix also provides tools for the Agile management of your projects. The social backlog management tools enable project team members and stakeholders to collaborate and create, refine, and prioritize user stories. Each user story has its own conversation thread, which is also published on the wall for an intuitive mix of company buzz and project activity streams. User stories can be estimated and planned in Sprints. The planning overview gives team members and stakeholders the ability to monitor the progress of the current Sprint using Scrum boards and burn-down charts as well as to plan the Sprints and releases that define the future of the project.
-
-The Developer Portal can be used separately from other Mendix products, and the [Mendix Feedback Widget](collaborate/use-feedback-widget) can be included in any web application. As a whole, the Mendix Platform offers an open, well-defined API, enabling third-party developers to create their own widgets, plugins, and any other innovative products they come up with.
-
-The Developer Portal is integrated using the menu items described below. Follow the highlighted links for more information.
+You can go to any part of the Developer Portal using the menu items described below. Follow the highlighted links for more information.
 
 ## 2 Buzz {#buzz}
 
-In the company [Buzz](collaborate/buzz), you can communicate with the users in your company:
+In the company [Buzz](collaborate/buzz), you can communicate with colleagues, app project team members, stakeholders, and any other Mendix users in your company:
 
 ![](attachments/developerportal-buzz.png)
 
@@ -31,6 +23,8 @@ In the company [Buzz](collaborate/buzz), you can communicate with the users in y
 In [Apps](/developerportal/apps-list/index), you can find your free and licensed apps, nodes, and other apps created by your company:
 
 ![](attachments/developerportal-apps.png)
+
+If you are a team member on an app, you can go to the app [Buzz](collaborate/buzz). Here you can  manage not only the deployment of the app itself but the entire development process via user stories which can be refined and allocated to Sprints.
 
 ## 4 People
 

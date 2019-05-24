@@ -8,11 +8,16 @@ tags: ["Stories", "Sprint", "Developer Portal"]
 
 ## 1 Introduction
 
-In **Stories**, you are able to manage sprints, stories, and labels. These components are often used in an Agile development environment, in which teams work in short development cycles of 2–4 weeks. By adding your sprints to Mendix, you will have a clear overview of your tasks and can easily view the status of your development cycle. You can also manage the progress of tasks and sprints from within Mendix Studio Pro.
+In **Stories**, you are able to manage Sprints, stories, and labels. These components are often used in an Agile development environment, in which teams work in short development cycles (Sprints) of 2–4 weeks.
+
+By adding your Sprints to Mendix, you will have a clear overview of your tasks and can easily view the status of your development. You can create, refine, and prioritize user stories collaboratively using the stories' conversation threads. User stories can be estimated and organized into Sprints which can be monitored using Scrum boards and burn-down charts.
+
+You can also manage the progress of tasks and sprints from within Mendix Studio Pro.
 
 ![](attachments/stories.png)
 
 ## 2 Actions
+
 You can perform the actions described below via the buttons that are available about your app project's stories.
 
 ### 2.1 Creating a New Story {#new-story}

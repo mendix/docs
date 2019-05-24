@@ -53,7 +53,50 @@ Specific steps for configuring different cloud platforms are provided here:
 * [IBM Cloud](../deploy/ibm-cloud)
 * [On-Premises](../deploy/on-premises-design)
 
-## 4 Editing App Info
+## 4 Managing App Users {#app-user-button}
+
+Click **Manage App Users** to manage App Users, who are end-users who can access the preview of your app on specific environments to use it, test it, and provide feedback.
+
+On the **App User Management** page, you will only see the environments for your app for which the following factors are true:
+
+* Mendix Single Sign-On is implemented
+	* In Studio Pro, SSO can implemented via the [AppCloudServices](https://appstore.home.mendix.com/link/app/934/) module – for details, see [Mendix Single Sign-On](../deploy/integrate-with-mendix-sso)
+	* In Studio, SSO can implemented by enabling security for your app – for details, see the [Enabling Security](/studio/settings-security#enabling-security) section of *Security, Roles & Permissions*
+* Your user role allows you to manage other users (for more information, see the [User Roles](/refguide/project-security#user-roles) section in *Project Security*)
+
+### 4.1 Inviting App Users
+
+To invite a new App User on the **App User Management** page, follow these steps:
+
+1. Click **Invite Users**.
+2. Enter the email addresses of the end-users you want to invite.
+3.  Click **Include your app team** to include invitiations to all the members of your [App Team](../collaborate/team). This may be useful, because people invited to join your App Team are not added as App Users automatically.
+
+	{{% image_container width="450" %}}![](attachments/invite-app-user.png)
+	{{% /image_container %}}
+	
+4. Select the **User** or **Administrator** role for the App User. Permissions for these roles correspond what you have configured for your app project's [User Roles](/refguide/project-security#user-roles). If you have created a customized role, you need to publish the app begore you are able to see and assign it here.
+5. Add a personal message to your invitiation, and finally click **Next** then **Send Invitations** to send it.
+
+The invitee will receive an email asking them to authorize access to their Mendix account on this screen:
+
+{{% image_container width="350" %}}![](attachments/authorize.png)
+{{% /image_container %}}
+
+After they provide authorization, they will be brought to the preview of your app.
+
+### 4.2 Editing App Users
+
+You can remove and edit App Users on the **App User Management** page.
+
+{{% image_container width="500" %}}![](attachments/app-user-management.png)
+{{% /image_container %}}
+
+To remove an App User, click **Remove from Environment** by their name.
+
+To edit an App User's roles, click **Edit** by their name.
+
+## 5 Editing App Info
 
 {{% alert type="info" %}}
 Only users with the **App Settings** permission can edit the application information.
@@ -68,7 +111,7 @@ Click **Edit App Info** to edit the following details:
 {{% image_container width="450" %}}![](attachments/edit.png)
 {{% /image_container %}}
 
-## 5 Managing Webhooks {#webhooks}
+## 6 Managing Webhooks {#webhooks}
 
 Click **Manage Webhooks** to manage your app's webhooks. A webhook enables the Developer Portal to talk to another website and post updated Developer Portal content (for example, sprint updates and new stories) to that website. For example, if [Mansystems](https://developer.mendixcloud.com/link/partnerprofile/1068) wants to follow the changes in their app project, they will create a service with a certain URL (see the required [URL](#url) below) that keeps track of the data. Changes in the app project in the Developer Portal are then sent to that URL.
 
@@ -99,11 +142,11 @@ To delete an existing webhook, click **Delete**.
 For details on the technical configuration of webhooks, see [Webhooks](/apidocs-mxsdk/apidocs/webhooks-sprints) in the *API Documentation*.
 {{% /alert %}}
 
-## 6 Leaving the App
+## 7 Leaving the App
 
 To leave the app, click **Leave App**. For details on leaving, deleting, and deactivating an app, see [How to Leave & Delete an App](leave-delete-app).
 
-## 7 Read More
+## 8 Read More
 
 * [Leave & Delete an App](leave-delete-app)
 * [Manage Deep Links](manage-deeplinks)

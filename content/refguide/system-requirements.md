@@ -61,7 +61,7 @@ The browser you use needs to have JavaScript turned on.
 
 ### 5.3 Database Server
 
-Mendix tries to support the most recent and patched versions of database vendors. We aim to add support for a new vendor version two minor Mendix versions after the vendor has released it. Dropping support for a database will be announced in the release notes at the date the vendor drops support. We will drop support two minor Mendix versions later.
+Mendix tries to support the most recent and patched database server versions from database vendors. We aim to add support for a new vendor version two minor Mendix versions after the vendor has released it. Dropping support for a database will be announced in the release notes at the date the vendor drops support. We will drop support two minor Mendix versions later.
 
 Current support:
 * [IBM DB2](db2) 11.1

@@ -55,4 +55,3 @@ To give existing project members access to submit tickets, follow these steps:
 ## 3 Read More
 
 * [On-Premises](../deploy/on-premises-design)
-* [How to Change the Affected Apps for Which You Can Submit Requests](change-affected-apps) 

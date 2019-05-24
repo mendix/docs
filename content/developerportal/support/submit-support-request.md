@@ -34,7 +34,7 @@ This is the basic information required for a ticket:
 * A detailed description of the exact error
 * A detailed description of the action that was performed when the error was received
 * A description of the desired goal (optional)
-* The affected app (for more information, see [How to Change the Affected Apps for Which You Can Submit Requests](change-affected-apps))
+* The affected app (for more information, see [How to Prepare Your App Project for Support](prepare-your-project))
 
 To submit a request with Mendix Support, follow these steps:
 

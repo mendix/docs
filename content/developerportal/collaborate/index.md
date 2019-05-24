@@ -20,7 +20,7 @@ For details, see [Buzz](buzz).
 
 The **Team** page shows an overview of your team members. It is also where you can invite members and manage your team.
 
-For details, see [Team](team).
+For details, see [App Team](team).
 
 ## 4 Stories
 

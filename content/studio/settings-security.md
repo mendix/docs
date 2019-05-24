@@ -13,7 +13,7 @@ Security is a way of controlling access to your app. For example, you can decide
 
 [Roles and Permissions](#roles-and-permissions) are an important part of security – an instrument which you can use to restrict or grant access to different parts of your app, such as pages and microflows.
 
-## 2 Enabling Security
+## 2 Enabling Security {#enabling-security}
 
 Whether security is enabled for your app by default, depends on app's type and version. You can come across the following cases:
 

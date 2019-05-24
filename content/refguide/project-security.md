@@ -52,7 +52,7 @@ When the security level is set to 'Prototype / demo' or 'Production', a number o
 
 The module status overview shows the security status for each module. It shows the total number of items for which security needs to be configured, as well as the number of items for which security has been configured already. At the 'Prototype / demo' security level, the status of form access and microflow access is shown. Additionally, at the 'Production' security level, the status of entity access and dataset access (if applicable) is shown.
 
-## 5 User Roles
+## 5 User Roles {#user-roles}
 
 A user role aggregates a number of access rights on data, forms and microflows. An end-user of the application is assigned one or more user roles by an administrator, and gets all access rights that these user roles represent.
 

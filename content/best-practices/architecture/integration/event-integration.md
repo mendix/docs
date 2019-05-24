@@ -63,13 +63,13 @@ The key to event streams is that they only flow in one direction. A device leavi
 
 Mendix often works as a dashboard for event streams and sometimes as the control center for devices and other connected items. Note that for commanding a drone or another device, the interface back to the device is sometimes synchronous. This diagram gives a schematic view of a potential Mendix integration where one app provides a dashboard and the other one is used to control a robot:
 
-<<Figure 4>>
+![](attachments/event-integration/ei-example.png)
 
 The three cases shown in the diagram are described below:
 
-1. Light-weight IoT is the case with a reasonable stream of data, where there is no need to process the incoming measurements before sending them to Mendix. Mendix then does most steps of the chain: data-aquisition, data-processing, data-storage and data-display and management. The advantage is that it  easy for business users to manage and change the IoT solution, and the relatively costly cloud based IoT data-processing units are not longer needed. In this example Mendix would e.g. poll the Azure Data Hub using REST to get the next sample of measurements (preferred), or request events directly from MQTT queues.
-2. Full-scale IoT is the case where massive amounts of data is collected, filtered, cached and pre-processed using cloud components and/or e.g. Kafka components. Mendix then receives a small filtered stream of data, and adds functional value to the use of that data, as a Dashboard with easy to change rules and display of data.
-3. Mendix can also act as a control app for devices and industrial machines, receiving measurements and sending commands back down. In this case the commands are often synchronous calls back, but request-reply event integration is also common.
+1. **Quick** – Light-weight IoT is the case with a reasonable stream of data, where there is no need to process the incoming measurements before sending them to the Mendix Platform. Mendix then does most steps of the chain: data aquisition, data processing, data storage, and data display and management. The advantage here is that it is easy for business users to manage and change the IoT solution, so relatively costly cloud-based IoT data-processing units are no longer needed. In this example, Mendix polls the Azure Data Hub using REST to get the next sample of measurements (preferred), or requests events directly from MQTT queues.
+2. **Heavy** – Full-scale IoT is the case where massive amounts of data are collected, filtered, cached, and pre-processed using cloud components and/or Kafka components, for example. The Mendix Platform then receives a small filtered stream of data and adds functional value to the use of that data. This is usually done with a dashboard that displays the data and has easy-to-change rules.
+3. **control** – A Mendix app can also act as a control app for devices and industrial machines, receiving measurements and sending commands back down. In this case, the commands are often synchronous calls back, but request-reply event integration is also common.
 
 ## 5 State Engines & Event Managers {#state}
 

@@ -17,7 +17,7 @@ You can perform the actions described below via the buttons that are available a
 
 ### 2.1 Creating a New Story {#new-story}
 
-Every sprint contains a number of story points that describe specific functionality to be implemented, built, or fixed.
+Every Sprint contains a number of story points that describe specific functionality to be implemented, built, or fixed.
 
 To add a new story, click **New story** and fill in some details, including what your story is about and what type of story it is. The **Labels** you add in the new story can be reused in other stories (see [Label](#label) for more details).
 
@@ -25,13 +25,13 @@ To add a new story, click **New story** and fill in some details, including what
 
 ### 2.2 Creating a New Sprint {#sprint}
 
-To add a new sprint, click **New sprint** and fill in some details, including the name of the sprint or release and where it should be located in the structure of your **Stories** page.
+To add a new Sprint, click **New sprint** and fill in some details, including the name of the Sprint or release and where it should be located in the structure of your **Stories** page.
 
 ![](attachments/sprint-example.png)
 
 ### 2.3 Moving a Story {#moving}
 
-To move a story, select the story, click **Move to**, then select the sprint where the story should be moved:
+To move a story, select the story, click **Move to**, then select the Sprint where the story should be moved:
 
 ![](attachments/move-to.png)
 
@@ -55,7 +55,7 @@ Click **Delete selection** to delete the selected story:
 
 ### 3.2 Complete Current Sprint
 
-Click **Complete current sprint** to complete a sprint. Note that all stories have to be marked **Done** before you are able to complete a sprint.
+Click **Complete current sprint** to complete a Sprint. Note that all stories have to be marked **Done** before you are able to complete a Sprint.
 
 You will receive this confirmation message, so make sure you are able to confirm completion!
 
@@ -67,7 +67,7 @@ Click **Import / Export** to import stories from or export stories to Excel:
 
 ![](attachments/import-export.png)
 
-With Mendix, it is always possible to export data from your app project. If you select **Export a single sprint to Excel**, you can edit the sprint and then import it back to save the changes.
+With Mendix, it is always possible to export data from your app project. If you select **Export a single sprint to Excel**, you can edit the Sprint and then import it back to save the changes.
 
 If you select **Updates stories from Excel**, you can use an an Excel sheet from a previous export as a template for the import. The Developer Portal recognizes items by using the **ID** column. The imported content will appear as stories for your app project.
 
@@ -150,17 +150,17 @@ After you have completed the task, check the box:
 
 ### 4.3 Moving Stories  {#moving}
 
-If you need to reorder stories or move a story to a different sprint, there are three ways to do this:
+If you need to reorder stories or move a story to a different Sprint, there are three ways to do this:
 
-*  Select the story and drag it to the desired sprint location:
+*  Select the story and drag it to the desired Sprint location:
 
 	![](attachments/move-story-drag.png)
 
-*  Click **Details** for the story you want to move to another sprint, and on the **Story Details** page, select the sprint to which you want to move the story from the **Move To Sprint** drop-down menu:
+*  Click **Details** for the story you want to move to another Sprint, and on the **Story Details** page, select the Sprint to which you want to move the story from the **Move To Sprint** drop-down menu:
 
 	![](attachments/move-story-details.png)
 	
-* Select the story and use the **Move to** button to select the new sprint (for details on this method, see the [Moving a Story](#moving) section)
+* Select the story and use the **Move to** button to select the new Sprint (for details on this method, see the [Moving a Story](#moving) section)
 
 {{% alert type="info" %}}
 Moving a story will move any tasks and sub-tasks as well.

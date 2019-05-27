@@ -6,19 +6,19 @@ tags: ["Developer Portal", "sprint", "story", "stories", "buzz"]
 
 ## 1 Introduction
 
-The Developer Portal supports collaboration with your team and the tracking of sprints and other tasks in your app projects.
+The Developer Portal supports collaboration with your team and the tracking of Sprints and other tasks in your app projects.
 
-The documentation within the *Collaboration Tools* category covers the following collaboration tools:
+The documentation within the **Collaboration Tools** category covers the following collaboration tools:
 
 ## 2 Buzz
 
-**Buzz** lets you see and share ideas as well as discuss and collaborate with your team. You will get an overview of new team members, new stories and their changes, and sprints which are added or completed.
+**Buzz** lets you see and share ideas as well as discuss and collaborate with your team. You will get an overview of new team members, new stories and their changes, and Sprints which are added or completed.
 
 For details, see [Buzz](buzz).
 
 ## 3 Team
 
-The **Team** page shows an overview of your team members. It is also where you can invite new members and manage your team.
+The **Team** page shows an overview of your App Team members. It is also where you can invite new members and manage your team.
 
 For details, see [Team](team).
 

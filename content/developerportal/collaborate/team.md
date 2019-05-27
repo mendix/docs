@@ -32,7 +32,7 @@ When you click **Manage Team** in the top-right corner of the screen, you will b
 Only the following roles can see the **Manage Team** button:
 
 * [SCRUM Master](/developerportal/company-app-roles/index#app-team-roles)
-* [Company Admin](/developerportalcompany-app-roles/#company-admin)
+* [Company Admin](/developerportal/company-app-roles/#company-admin)
 * A [custom role](/developerportal/company-app-roles/manage-roles#edit-app-team-roles) with **App Settings** permission
 
 {{% /alert %}}

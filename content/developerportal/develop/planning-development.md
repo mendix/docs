@@ -32,7 +32,7 @@ All the changes made on this page are directly passed on to the **Stories** page
 
 ## 3 Burndown Chart
 
-This tab graphically presents the progress of the current sprint:
+This tab graphically presents the progress of the current Sprint:
 
 * **Ideal Burndown** – the expected progress if the Sprint is completed at a consistent rate
 * **Remaining Effort** – the amount of story points that still have to be completed

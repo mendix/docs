@@ -2,7 +2,7 @@
 title: "Stories"
 category: "Collaboration Tools"
 menu_order: 30
-description: "Describes how to manage the sprints and stories for your app project."
+description: "Describes how to manage the Sprints and stories for your app project."
 tags: ["Stories", "Sprint", "Developer Portal"]
 ---
 
@@ -14,7 +14,7 @@ By adding your Sprints to Mendix, you will have a clear overview of your tasks a
 
 {{% alert type="info" %}}
 
-You can also manage the progress of tasks and sprints from within Mendix Studio Pro.
+You can also manage the progress of tasks and Sprints from within Mendix Studio Pro.
 
 {{% /alert %}}
 
@@ -26,7 +26,7 @@ You can perform the actions described below via the buttons on your app project'
 
 ### 2.1 Creating a New Story {#new-story}
 
-Every sprint contains a number of stories that describe specific functionality to be implemented, built, or fixed. The size of each story can be indicated by allocating it a number of *story points*.
+Every Sprint contains a number of stories that describe specific functionality to be implemented, built, or fixed. The size of each story can be indicated by allocating it a number of *story points*.
 
 To add a new story, click **New story** and fill in some details, including what your story is about and what type of story it is. The **Labels** you add in the new story can be reused in other stories (see [Label](#label) for more details).
 
@@ -34,13 +34,13 @@ To add a new story, click **New story** and fill in some details, including what
 
 ### 2.2 Creating a New Sprint {#sprint}
 
-To add a new sprint, click **New sprint** and fill in some details, including the name of the Sprint or release and where it should be located in the structure of your **Stories** page.
+To add a new Sprint, click **New sprint** and fill in some details, including the name of the Sprint or release and where it should be located in the structure of your **Stories** page.
 
 ![](attachments/sprint-example.png)
 
 ### 2.3 Moving a Story {#moving}
 
-To move a story: select the story, click **Move to**, then select the sprint where the story should be moved:
+To move a story: select the story, click **Move to**, then select the Sprint where the story should be moved:
 
 ![](attachments/move-to.png)
 
@@ -76,7 +76,7 @@ Click **Import / Export** to import stories from or export stories to Excel:
 
 ![](attachments/import-export.png)
 
-In Mendix, it is always possible to export data from your app project. If you select **Export a single sprint to Excel**, you can edit the sprint and then import it back to save the changes.
+In Mendix, it is always possible to export data from your app project. If you select **Export a single sprint to Excel**, you can edit the Sprint and then import it back to save the changes.
 
 If you select **Updates stories from Excel**, you can use an an Excel sheet from a previous export as a template for the import. The Developer Portal recognizes items by using the **ID** column. The imported content will appear as stories for your app project.
 

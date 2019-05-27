@@ -30,7 +30,7 @@ A list of module roles of which the access rights are accumulated in the user ro
 
 This specifies whether the consistency of security settings is checked for this user role. You can choose to not check security for a user role. For example, user roles that are used only for web service users do not need to be checked because they never sign in to the client. See [Project Security](project-security) for more information on the security check.
 
-## User Management Properties
+## User Management Properties {#user-management}
 
 ### Users with this user role can manage users with at most the following user roles
 

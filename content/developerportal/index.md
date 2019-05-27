@@ -8,13 +8,13 @@ tags: ["Mendix", "Developer Portal", "Platform Services", "Buzz", "Apps", "Peopl
 
 The [Developer Portal](http://home.mendix.com) is one of the three key components of the Mendix Platform. The other two are [Mendix Studio Pro](/refguide/modeling) and [Mendix Studio](/studio/index). Here, Mendix developers can collaborate, deploy and manage their apps, and manage their company and users. 
 
-The Developer Portal can also be used for projects separately from other Mendix products, and the [Mendix Feedback Widget](collaborate/use-feedback-widget) can be included in any web application. The Developer Portal also offers an open, well-defined API, enabling third-party developers to integrate their own widgets and plugins.
+The Developer Portal can also be used for projects separately from other Mendix products, and the [Mendix Feedback Widget](collaborate/use-feedback-widget) can be included in any web application. The Developer Portal also offers an open, well-defined [API], enabling third-party developers to integrate their own widgets and plugins. For more information, see [Feedback API](/apidocs-mxsdk/apidocs/feedback-api).
 
 You can go to any part of the Developer Portal using the menu items described below. Follow the highlighted links for more information.
 
 ## 2 Buzz {#buzz}
 
-In the company [Buzz](collaborate/buzz), you can communicate with colleagues, app project team members, stakeholders, and any other Mendix users in your company:
+In the company [Buzz](collaborate/buzz), you can communicate with colleagues, App Team members, stakeholders, and any other Mendix users in your company:
 
 ![](attachments/developerportal-buzz.png)
 
@@ -24,7 +24,7 @@ In [Apps](/developerportal/apps-list/index), you can find your free and licensed
 
 ![](attachments/developerportal-apps.png)
 
-If you are a team member on an app, you can go to the app [Buzz](collaborate/buzz). Here you can  manage not only the deployment of the app itself but the entire development process via user stories which can be refined and allocated to Sprints.
+If you are an App Team member, you can go to the app [Buzz](collaborate/buzz). Here you can  manage not only the deployment of the app itself but the entire development process via user stories which can be refined and allocated to Sprints.
 
 ## 4 People
 

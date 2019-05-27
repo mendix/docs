@@ -10,7 +10,7 @@ tags: ["Stories", "Sprint", "Developer Portal"]
 
 In **Stories**, you are able to manage Sprints, stories, and labels. These components are often used in an Agile development environment, in which teams work in short development cycles (Sprints) of 2–4 weeks.
 
-By adding your Sprints to Mendix, you will have a clear overview of your tasks and can easily view the status of your development. You can create, refine, and prioritize user stories collaboratively using the stories' conversation threads. User stories can be estimated and organized into Sprints which can be monitored using Scrum boards and burn-down charts.
+By adding your Sprints to Mendix, you will have a clear overview of your tasks and can easily view the status of your development. You can create, refine, and prioritize user stories collaboratively using the stories' conversation threads. User stories can be estimated and organized into Sprints which can be monitored using Scrum boards and burndown charts.
 
 {{% alert type="info" %}}
 
@@ -26,7 +26,7 @@ You can perform the actions described below via the buttons on your app project'
 
 ### 2.1 Creating a New Story {#new-story}
 
-Every Sprint contains a number of stories that describe specific functionality to be implemented, built, or fixed. The size of each story can be indicated by allocating it a number of *story points*.
+Every Sprint contains a number of stories that describe specific functionality to be implemented, built, or fixed. The size of each story can be indicated by allocating it a number of Story points.
 
 To add a new story, click **New story** and fill in some details, including what your story is about and what type of story it is. The **Labels** you add in the new story can be reused in other stories (see [Label](#label) for more details).
 
@@ -40,7 +40,7 @@ To add a new Sprint, click **New sprint** and fill in some details, including th
 
 ### 2.3 Moving a Story {#moving}
 
-To move a story: select the story, click **Move to**, then select the Sprint where the story should be moved:
+To move a story, select the story, click **Move to**, then select the Sprint where the story should be moved:
 
 ![](attachments/move-to.png)
 
@@ -87,27 +87,16 @@ When editing stories in Excel, follow these guidelines:
 
 ### 3.4 Manage Labels {#manage-labels}
 
-Click **Manage labels** to create a **New Label**, **Configure label**, **Merge label**, or **Remove labels**:
+Click **Manage labels** to open a page where you can list and manage your labels:
 
 ![](attachments/labels.png)
 
-#### 3.4.1 New Label
-
-The **New label** button allows you to create a new label and assign a color to it.
-
-You can also create a new label by typing a new label name when you are creating a story.
-
-#### 3.4.2 Configure Label
-
-The **Configure label** button allows you to change the name and color of an existing label.
-
-#### 3.4.3 Merge Label
-
-The **Merge label** button will merge the selected label into another label. All stories which have the selected label will be labeled with the other label and the selected label will be deleted.
-
-#### 3.4.4 Remove Label
-
-The **Remove label** button will remove the selected label from any stories to which it has been applied. The label will then be deleted.
+| Button | Description |
+| --- | --- |
+| New Label | allows you to create a new label and allows you to assign a color to it.<br/>You can also create a new label by typing a new label name when you are creating a story. |
+| Configure Label | allows you to change the name and/or color of an existing label. |
+| Merge Label | allows you to merge the selected label into another label.<br/>All stories which have the selected label are labeled with the other label and the selected label is deleted. |
+| Remove Label | allows you to remove the selected label from any stories to which it has been applied.<br/>The label is then deleted. |
 
 ### 3.5 Manage Story Template
 
@@ -128,14 +117,13 @@ Click **History** to view the history of collaboration actions for the app.
 On this page you can:
 
 * Click **Show item** to see details of a story
-
 * Click **Revert change** to revert changes
 
 ![](attachments/history.png)
 
 ## 4 Managing Stories
 
-There are various actions you can perform when managing stories, These are described below.
+There are various actions you can perform when managing stories. These are described below.
 
 ### 4.1 Accessing Story Details {#accessing-details}
 
@@ -148,25 +136,17 @@ Select a story and click **Details** (below the story title) to open the **Story
 On this page, you can perform a number of actions:
 
 * View the details such as **Type** and date **Created**
-
 * Click **Edit** to edit the **Title**, **Description**, **Story type**, **Story points**, **Status**, and **Labels** of the story as well as see the history of edits made to the story
-
 * See the story's **Status** and click to update it (the available statuses are **To-do**, **Running**, and **Done**)
-
 * View the **Sprint** that contains the story as well as move the story via **Move to Sprint** (for details, see the [Moving Stories](#moving-stories) section below)
-
 * Click **Move to another app** to move the story to a different app's backlog
-
 * Click **View history** to view the history of changes to the story (for more information, see the [History](#history) section above)
 
 Also on this page, you can access the following tabs:
 
 * **Comments** – on this tab, you can view and add comments about the story to collaborate with your App Team
-
 * **Tasks** – you can see the tasks that were added to the story here (for more information, see the [Adding Tasks to a Story](#adding) section below)
-
 * **Feedback** – here you can see the feedback item linked to the story (for details, see the [Adding a Feedback Item to Your Backlog](feedback#adding) section of *Feedback Management*)
-
 * **Revisions** –  on this tab, you can see the committed revision of the app project that is linked to the story (which is configured in the [Related stories](/refguide/commit-dialog#stories) tab of the **Commit** dialog box in Studio Pro)
 
 ### 4.2 Adding Tasks to a Story {#adding}
@@ -205,7 +185,7 @@ If you need to reorder stories or move a story to a different sprint, there are 
 
 	![](attachments/move-story-details.png)
 	
-3. Select the story and use the **Move to** button to select the new sprint (for details on this method, see the [Moving a Story](#moving) section)
+3. Select the story and use the **Move to** button to select the new sprint (for details on this method, see the [Moving a Story](#moving) section).
 
 {{% alert type="info" %}}
 Moving a story will move any tasks and sub-tasks as well.

@@ -14,7 +14,7 @@ On the **Documents** page, you can upload files to your app project and replace 
 
 ## 2 Actions
 
-You can perform the actions described below via the buttons on your app project's *Documents* page. To select an existing document, click the checkbox in front of the document name to select it.
+You can perform the actions described below via the buttons on your app project's **Documents** page. To select an existing document, click the check box in front of the document name to select it.
 
 ### 2.1 Uploading a File
 

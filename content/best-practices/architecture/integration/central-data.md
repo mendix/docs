@@ -98,7 +98,7 @@ SDAs often support event streams at a small scale by using an [internal process 
 	
 ## 3 Operational & DWH Data {#owd}
 
-It is good to keep operational data flows separate from statistical, BI, and DWH data unless you are using statistics or historical data as reference data in operational flows. The only patterns that should provide operational data are the [ODS pattern](#ods) and, in some cases, ETL solutions used operationally.
+It is good to keep operational data flows separate from statistical, BI, and DWH data unless you are using statistics or historical data as reference data in operational flows. The only patterns that should provide operational data are the [SDA pattern](#sda) and, in some cases, ETL solutions used operationally.
 
 Data lakes have been popular as an enterprise-wide Hadoop-style DWH solution that attempts to double as an enterprise-wide ODS. However, it is an almost impossible undertaking to make this work nicely. Snapshot-type data used for statistics makes for a slow and unreliable source of operational information.
 

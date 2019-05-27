@@ -128,8 +128,6 @@ Some users build a log integration component or connect to a central one. For mo
 
 For VPC and on-premises deployments, there is no Mendix Developer Portal monitoring available. In these  cases, an app-management or central-monitoring solution is highly desirable. That is because the customer in this scenario is responsible for their monitoring. The setup of log integration and central monitoring is largely the role of the customer's central IT, while Mendix connects to the tools and protocols proscribed.
 
-For details on the benefits that can be achieved by using native Mendix technology or by connecting to professional tooling, see [Robusntess](robustness/robustness-overview).
-
 ### 3.6 CI/CD & Automation
 
 Mendix provides some continuous integration out-of-the-box:

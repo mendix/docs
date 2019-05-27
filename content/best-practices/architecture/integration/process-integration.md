@@ -5,8 +5,6 @@ menu_order: 7
 draft: true
 ---
 
-{{% todo %}}[**MENTIONS OF IoT, AI, AND MACHINE LEARNING SHOULD BE REMOVED/REWRITTEN OUT OF THIS DOCUMENT**]{{% /todo %}}
-
 ## 1 What Is Process Integration?
 
 Process integration is a wide and important area that promises automation, digitization, and operational improvement. Often there is a significant business case for this type of IT development, where companies can gain on their competition by being more efficient, running lower costs, and providing better and faster services.
@@ -142,7 +140,7 @@ It is hard to make synchronous calls in these situations, so the phases in the p
 
 To make sure that messages are not lost, processes are not halfway finished, and status updates (like track-and-trace) can be provided, there is usually an event manager and/or a state engine that passively monitors the overall process. These will set alarms when some phase is missing or something seems to go wrong.
 
-With Mendix, you can make good cases for handling steps in straight-through processing apps. The Mendix Platform can act as an event manager for most cases, except when the volumes are extreme. For more information, see the [State Engines & Event Managers](#state) section in *Event-Driven Integration*. 
+With Mendix, you can make good cases for handling steps in straight-through processing apps. The Mendix Platform can act as an event manager for most cases, except when the volumes are extreme. For more information, see the [State Engines & Event Managers](event-integration#state) section in *Event-Driven Integration*. 
 
 ![](attachments/process-integration/process-int13.png)
 

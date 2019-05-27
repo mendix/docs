@@ -46,9 +46,7 @@ Click **Details** to see the description of the document, comments, and all the 
 On the **Document** details page, you can perform the following actions:
 
 * Download the document
-
 * Upload a new version of the document
-
 * Delete the document
 
 ### 2.5 New Version

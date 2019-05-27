@@ -97,7 +97,7 @@ To remove an App User, click **Remove from Environment** by their name.
 To edit an App User's roles, click **Edit** by their name.
 
 {{% alert type="info" %}}
-If an App User has been granted access to an app environment through a security group, only a Company Admin using the [Security Groups] page can remove them from that environment (by removing them from that security group) or edit the roles granted by that security group policy.
+If an App User has been granted access to an app environment through a security group, only a Company Admin using the [Security Groups](../company-app-roles/users#security-groups) page can remove them from that environment (by removing them from that security group) or edit the roles granted by that security group policy.
 {{% /alert %}}
 
 ## 5 Editing App Info

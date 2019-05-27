@@ -11,6 +11,8 @@ The central data pattern is an integration pattern that stores a combined set of
 
 Data warehouses (DWH) and data lakes provide an enterprise-scale version this pattern. However, that does not mean that small, local, or departmental solutions are unhelpful for local integration needs. In fact, it is clear that when microservices replace a large monolith, there is often a good reason to have both a dashboard app for login as well as a shared data app (for details, see the [Typical Central Data Patterns](#tcdp) section below).
 
+### 1.1 Using Central Data Integration
+
 The central data pattern reflects the ability to do the following:
 
 * Combine data from many sources and provide it on in various formats
@@ -20,7 +22,7 @@ This diagram displays some typical ways to use the data:
 
 ![](attachments/central-data/cd-intro.png)
 
-With a shared data app, you can typicall do the following:
+With a [shared data app](#sda), you can typically do the following:
 
 * View combined data using real-time services
 * Poll for combined updates (rather than polling many systems)
@@ -40,7 +42,7 @@ These are a few of the main ways the central data pattern is used:
 * **Shared data app** – This combines the same types of data from different processes and is used in operational processes
 	* For more information, see the [Shared Data App (SDA)](#sda) section below
 * **DWH** – This is used for combining all types of data from the company and providing data for statistics, reporting, and business intelligence (BI)
-	* For details, see the [Operational & Data Warehouse Data](#owd) section below
+	* For details, see the [Operational & DWH Data](#owd) section below
 * **Data lakes** – These have been popular recently as a Hadoop-style DWH good for statistics, reporting, and BI
 	* Data Lakes should not provide operational data, since the time stamp of combined data may be different
 	* For details, see the [Operational & Data Warehouse Data](#owd) section below
@@ -51,7 +53,7 @@ These are a few of the main ways the central data pattern is used:
 	* They are beneficial for massive data volumes and can compare new data with previous loads 
 	* For more information, see the [Integration to DWH & BI](batch-integration#int) section of *Batch Integration*
 
-## 2 Shared Data App (SDA) {#ods}
+## 2 Shared Data App (SDA) {#sda}
 
 SDAs can be very useful on the following levels:
 
@@ -74,11 +76,11 @@ The decision was made to specialize a microservice for the following tasks:
 
 You should create another ODS when it gets difficult to provide flexibility for more than one purpose. For example, an orders ODS can send overview ordering information to a customer ODS, which means they can both evolve autonomously.
 
-### 2.3 What Does an SDA Do?
+### 2.2 What Does an SDA Do?
 
 These are the typical responsibilities of an SDA:
 
-* Act as a local operational data store (ODS) and combine data
+* Act as a local operational data store and combine data
 * Act as an integration app or adapter and provide services, files, or events for external system to retrieve data
 * Perform reference data management by importing files with reference data or manually setting look-up values used across a microservices system
 * Perform batch processing, export, and import while not disturbing the UX with heavy loads, in turn allowing neighboring microservices to poll the SDA for updates
@@ -94,7 +96,7 @@ The general rule is that master data from the other apps is never updated in the
 
 SDAs often support event streams at a small scale by using an [internal process queue](event-integration#internal-queues). If updates from a microservices system with several apps should be distributed by events in real-time, the SDA provides a good way to manage this flow and make sure that the SDA is fully updated. At the same time, all updates are assembled in the same queue, in order to assure they are diffused in the same order that they happened.
 	
-## 3 Operational & Data Warehouse Data {#owd}
+## 3 Operational & DWH Data {#owd}
 
 It is good to keep operational data flows separate from statistical, BI, and DWH data unless you are using statistics or historical data as reference data in operational flows. The only patterns that should provide operational data are the [ODS pattern](#ods) and, in some cases, ETL solutions used operationally.
 
@@ -110,8 +112,7 @@ This diagram presents a number of apps in a process that shares business events 
 
 The event manager shares all the data with a data lake (or DWH), which processes the data into various data collections. One of those collections is sent to a Mendix app that manages that reference data and provides it back to three of the apps that “learn” from the past results.
 
-
-## 4 Small ODS & Large DWH
+## 4 Small Operational Data Store (ODS) & Large DWH
 
 The other reason to keep operational data separate from DWH solutions is that operational processes change often, and different business units need flexibility and autonomy from each other. Even if it seems like two use cases need the same data, they may have very different needs when it comes to data models and functionality.
 
@@ -119,7 +120,7 @@ If different use cases become difficult to easily combine, it may be better to h
 
 However, data lakes and DWH solutions are large, enterprise-wide, generic, incredibly complex, and quite far from the people that work in the business. This set of attributes makes them inefficient for use in operational processes. The data flows through the system slowly, and it is often enough to update every month in a report. All the business units share the DWH, so changing things takes time. A DWH is in a way a "necessary" monolith.
 
-## 6 Mendix for ODS
+## 5 Mendix for ODS
 
 An ODS solution is similar to a legacy adapter or an integration app, in that it can collect and store data from one or more systems and provide the data in a format that is easier to use or that is combined with data from other places.
 

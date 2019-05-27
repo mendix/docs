@@ -8,19 +8,19 @@ tags: ["Buzz","Developer Portal"]
 
 ## 1 Buzz Locations
 
-Located in the Developer Portal, Buzz lets you see Mendix app activity in your company as well as collaborate and share ideas with your App Team. There are two types of **Buzz** pages:
+Located in the Developer Portal, Buzz lets you see Mendix app activity in your company as well as collaborate and share ideas with your App Team. There are two types of **Buzz** pages: Company Buzz and App Buzz.
 
 ### 1.1 Company Buzz
 
-Company Buzz, is the landing page when you first sign in to the Developer Portal:
+Company Buzz is the landing page when you first sign in to the Developer Portal:
 
 ![](attachments/buzz.jpg)
 
-Initially you will see the Buzz activity for **All** apps for which you are a team member *plus* all Buzz activity for your company.
+Initially, you will see the Buzz activity for **All** apps for which you are a team member *plus* all Buzz activity for your company.
 
 ![List of things you can Show activity for](attachments/buzz-show-activity.png)
 
-You can choose to see only activity for your company by selecting the company name (*Mendix* in the example above) under **Show activity for**.
+You can choose to see only activity for your company by selecting the company name (**Mendix** in the example above) under **Show activity for**.
 
 Below the company name is a list of apps for which you are a team member. Clicking on the app name will take you to the [App Buzz](#app-buzz) for that app, described below.
 
@@ -34,13 +34,13 @@ You can see the size of your **Team** and your fellow team members on the right 
 
 Click the **+** icon to invite new team members directly from this page.
 
-Click **Show all** to go to the [Team](team) page for the app  
+Click **Show all** to go to the [Team](team) page for the app.
 
 **Latest Stories** shows the last few stories created for this app project. Click **Show all** to see all the [Stories](stories).
 
 **App Feedback** shows the last few items of feedback for this app project. Click **Show all** to see all the [Feedback](feedback).
 
-In App Buzz, you can manage your app by clicking the options to the left of the Buzz feed. These are grouped into the following categories (click the highlighted name to see the documentation for that category):
+In App Buzz, you can manage your app by clicking the options to the left of the Buzz feed. These are grouped into the following categories:
 
 * [Collaborate](index)
 * [Develop](/developerportal/develop/index)
@@ -52,11 +52,11 @@ In App Buzz, you can manage your app by clicking the options to the left of the 
 
 By default, communication via Company Buzz can be seen by all Mendix users in the company.
 
-You can choose to communicate with a single app team but selecting the app from the **Share with** dropdown.
+You can choose to communicate with a single App Team by selecting the app from the **Share with** drop-down menu.
 
 ![](attachments/buzz-share-with.png)
 
-In App Buzz, you will only be communicating with team members of that app.
+In App Buzz, you will only be communicating with App Team members.
 
 ### 2.1 Updating Your Status
 
@@ -64,7 +64,7 @@ The easiest way to communicate with others in your company and on your team is b
 
 ![](attachments/update-status.png)
 
-To continue a dialog, you can also **Comment** on an ongoing discussion and **Like** a message to show your support.
+To continue a conversation, you can also **Comment** on an ongoing discussion and **Like** a message to show your support.
 
 ### 2.2 Starting a Poll
 

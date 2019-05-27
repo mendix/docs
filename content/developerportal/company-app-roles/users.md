@@ -96,7 +96,7 @@ You can perform the following actions on this tab:
         * Members of this security group will be granted access to these apps automatically
         * It is only possible to create access policies for licensed AppCloud-enabled apps
         * Under **Select Environment**, you can select a specific node environment for the app
-        * Under **Select Role(s)**, you can select specific user roles for the app
+        * Under **Select Role(s)**, you can select specific [user roles](/refguide/project-security#user-roles) for the app
 
 ## 4 Security History Tab
 

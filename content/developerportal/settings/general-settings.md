@@ -75,7 +75,7 @@ To invite a new App User on the **App User Management** page, follow these steps
 	{{% image_container width="450" %}}![](attachments/invite-app-user.png)
 	{{% /image_container %}}
 	
-4. Select the role for the App User (for example, **User** or **Administrator**). Permissions for these roles correspond what you have configured for your app project's [User Roles](/refguide/project-security#user-roles). If you have created a customized role, you need to publish the app before you are able to see and assign it here.
+4. Select the role for the App User (for example, **User** or **Administrator**). Permissions for these roles correspond to what you have configured for your app project's [User Roles](/refguide/project-security#user-roles). If you have created a customized role, you need to publish the app before you are able to see and assign it here.
 5. Add a personal message to your invitiation, and finally click **Next** then **Send Invitations** to send it.
 
 The invitee will receive an email asking them to authorize access to their Mendix account on this screen:
@@ -87,7 +87,7 @@ After they provide authorization, they will be brought to your deployed app.
 
 ### 4.2 Editing App Users
 
-You can remove and edit App Users on the **App User Management** page.
+You can remove and edit App Users on the **App User Management** page:
 
 {{% image_container width="500" %}}![](attachments/app-user-management.png)
 {{% /image_container %}}

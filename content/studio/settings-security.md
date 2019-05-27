@@ -171,7 +171,7 @@ You can test how your app looks like for different roles the following way:
 
 ## 5 Managing App Users {#managing-app-users}
 
-You can assign the default or customized user roles for your app to end-users with Mendix accounts. These are called **App Users** and once authorized, they can access your published app to use it, test it, and provide feedback.
+You can assign the default or customized user roles for your app to app end-users with Mendix accounts. These are called **App Users** and once authorized, they can access your published app to use it, test it, and provide feedback.
 
 {{% alert type="info" %}}
 You can manage App Users only after you publish your app.

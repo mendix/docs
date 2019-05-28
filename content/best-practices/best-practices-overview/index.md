@@ -27,7 +27,7 @@ These best practices will be expanded on an ongoing basis to cover the following
 * [Architecture](../architecture/index)
 	* [Integration](../architecture/integration/integration-overview)
 	* [Performance](../architecture/performance/performance-overview)
-	* [Microservices](../architecture/performance/microservices-overview)
+	* [Microservices](../architecture/microservices/microservices-overview)
 	* Security
 	* CI/CD & test automation
 	* Monitoring & robustness

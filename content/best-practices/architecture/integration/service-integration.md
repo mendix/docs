@@ -56,7 +56,7 @@ These are some typical synchronous service scenarios:
 * Legacy integration with older RPC protocols on mid-range systems or with mainframe transactions (for more information, see [Integration Apps & Adapters](#adapters))
 * API management and other external gateways to, for example, EDI, SWIFT, or EDIFACT protocols for busines-to-business transactions (for details, see [Integration Layers](integration-layers))
 * Process orchestration where you need to know that the target received and processed the message (for details, see [Process Integration](process-integration))
-* CI/CD integration, test automation, and some health-checks for monitoring (for details, see [Ops & CI/CD Integration](
+* CI/CD integration, test automation, and some health-checks for monitoring (for details, see [Ops & CI/CD Integration](ops-cicd-integration).
 
 Synchronous integration styles are easy to manage, because there are no moving parts between the two systems. It is possible to estimate that more than 50% of all integration is synchronous request-reply in the current landcape.
 
@@ -84,7 +84,7 @@ The diagram below shows the most typical methods for transferring data in real-t
 The REST pull request-reply is the default option when replicating data from point A to point B. The system that needs the data is in charge of triggering the interface, and the apps do not need to be up and running at the same time for this to work. To see what has changed, there are at least three options:
 
 1. Use the last updated time stamp of the record to retrieve `all changes since <last time stamp>`. This is quite robust, but for high volumes, there are some edge cases where this can miss an update.
-2. Use a flag on the base table that indicates the record changed, which is reset when the change is picked up. For more than one subscriber, there will be more than one flag (for details, see [Workflow Integration with Data Transfer Example](data-transfer)).
+2. Use a flag on the base table that indicates the record changed, which is reset when the change is picked up. For more than one subscriber, there will be more than one flag (for details, see [Workflow Integration with Data Transfer Example](workflow-int-data-transfer)).
 3. Use the Mendix [Process Queue](https://appstore.home.mendix.com/link/app/393/) App Store module. In this case, the source app will already map the data into a REST JSON message that is ready to be picked up from the outbound queue.
 
 ![](attachments/service-integration/pull-transfer.png)
@@ -93,7 +93,7 @@ Options 2 and 3 are the most recommended.
 
 Option 3 has an additional advantage in that the transformation to a business event or transaction takes place directly. Because you will have already created a REST message, you will know that it reflects the exact situation when the change happened. The service call will also be slighly faster, because this work is already done.
 
-However, if the subscribing app is only interested in the latest stage, there is no need to receive "every save" in the source system. In that case, using option 2 with a flag is the easiest and most efficient method (for more information, see [Workflow Integration with Data Transfer Example](data-transfer)).
+However, if the subscribing app is only interested in the latest stage, there is no need to receive "every save" in the source system. In that case, using option 2 with a flag is the easiest and most efficient method (for more information, see [Workflow Integration with Data Transfer Example](workflow-int-data-transfer)).
 
 ### 3.2 REST Push Request-Reply When Validation Is Needed {#push-transfer}
 

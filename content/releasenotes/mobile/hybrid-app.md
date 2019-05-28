@@ -20,7 +20,7 @@ If you're using the advanced flow, you can get the latest version of the Hybrid 
 
 We updated **Cordova Android** to version 7.1.4.
 
-You now have more control over the target architecture for your Android apps. The `npm run package` command now produces a project that targets all supported architectures (x86, x86_64, arm, and arm64). This means that you can publish one APK that is used for all devices.
+You now have more control over the target architecture for your Android apps. The `npm run package` command now produces a project that targets all supported architectures (x86, x86_64, arm, and arm64). This means that you can publish one APK that is used for all devices. This APK will fulfill the [64-bit requirement](https://android-developers.googleblog.com/2019/01/get-your-apps-ready-for-64-bit.html) set by Google for apps published to Google Play.
 
 To enable more control over the target architecture, use the following variants:
 

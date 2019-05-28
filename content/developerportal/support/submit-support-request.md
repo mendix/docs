@@ -1,7 +1,7 @@
 ---
 title: "Submit a Support Request"
 category: "Mendix Support"
-menu_order: 10
+menu_order: 2
 description: "Describes submitting a request with Mendix Support."
 tags: ["support", "incident", "standard change", "URL", "change URL", "license", "change" ]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -34,7 +34,7 @@ This is the basic information required for a ticket:
 * A detailed description of the exact error
 * A detailed description of the action that was performed when the error was received
 * A description of the desired goal (optional)
-* The affected app (for more information, see [How to Change the Affected Apps for Which You Can Submit Requests](change-affected-apps))
+* The affected app (for more information, see [How to Prepare Your App Project for Support](prepare-your-project))
 
 To submit a request with Mendix Support, follow these steps:
 
@@ -93,7 +93,7 @@ You can set the priority to the following levels:
 * **Medium**
 * **Low**
 
-The request [ticket priority](ticket-priority) that Mendix determines is based on this matrix:
+The [Support ticket priority](ticket-priority) that Mendix determines is based on this matrix:
 
 ![](attachments/submit/204371729-pic5.png)
 

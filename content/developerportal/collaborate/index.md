@@ -1,7 +1,7 @@
 ---
 title: "Collaboration Tools"
 description: "Describes the collaboration tools available in the Mendix Developer Portal."
-tags: ["Developer Portal", "sprint", "story", "stories", "buzz"]
+tags: ["Developer Portal", "Sprint", "story", "stories", "buzz"]
 ---
 
 ## 1 Introduction
@@ -20,7 +20,7 @@ For details, see [Buzz](buzz).
 
 The **Team** page shows an overview of your App Team members. It is also where you can invite new members and manage your team.
 
-For details, see [Team](team).
+For details, see [App Team](team).
 
 ## 4 Stories
 

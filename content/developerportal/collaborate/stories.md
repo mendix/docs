@@ -175,17 +175,17 @@ After you have completed the task, check the box:
 
 ### 4.3 Moving Stories  {#moving-stories}
 
-If you need to reorder stories or move a story to a different sprint, there are three ways to do this:
+If you need to reorder stories or move a story to a different Sprint, there are three ways to do this:
 
-1.  Select the story and drag it to the desired sprint location:
+1.  Select the story and drag it to the desired Sprint location:
 
 	![](attachments/move-story-drag.png)
 
-2.  Click **Details** for the story you want to move to another sprint, and on the **Story Details** page, select the sprint to which you want to move the story from the **Move To Sprint** drop-down menu:
+2.  Click **Details** for the story you want to move to another Sprint, and on the **Story Details** page, select the Sprint to which you want to move the story from the **Move To Sprint** drop-down menu:
 
 	![](attachments/move-story-details.png)
 	
-3. Select the story and use the **Move to** button to select the new sprint (for details on this method, see the [Moving a Story](#moving) section).
+3. Select the story and use the **Move to** button to select the new Sprint (for details on this method, see the [Moving a Story](#moving) section).
 
 {{% alert type="info" %}}
 Moving a story will move any tasks and sub-tasks as well.

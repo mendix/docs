@@ -35,7 +35,7 @@ Feedback can go through four different stages:
 | ------------ | ------------------------------------------------------------ |
 | Open     | The feedback is awaiting a response from the App Team.       |
 | Handled  | The App Team has looked into the feedback and has requested further information. |
-| Accepted | The App Team has accepted the feedback and added this feedback as a story to the sprint. For more information, see [Adding a Feedback Story to Your Backlog](#adding) below. |
+| Accepted | The App Team has accepted the feedback and added this feedback as a story to the Sprint. For more information, see [Adding a Feedback Story to Your Backlog](#adding) below. |
 | Closed   | The App Team has closed the feedback.                        |
 
 Feedback in each stage is shown in a separate tab on the **Feedback** page.
@@ -90,15 +90,15 @@ After clicking **Accept feedback**, you can create a story on the basis of the f
 
 1. Enter a logical name for the story in **As story** and a description in **Story description**.
 2. Decide whether the feedback item should be classified as a bug or feature in **Identify as**.
-3. Select the sprint (or backlog) to which you want to add the story in **Plan for sprint**.
+3. Select the Sprint (or backlog) to which you want to add the story in **Plan for sprint**.
 4. Select the label(s) (if available ) to be added to the story under **Assign labels**.
 
     ![](attachments/feedback/accept-feedback.png)
 
 Once a feedback item is connected to a user story, the user who submitted the story will automatically be updated on the progress made on that story:
 
-* Adding a story with feedback attached from your backlog to a sprint will result in a message that the item has been planned
-* Completing a sprint that contains a story with feedback attached will result in a message that the item has been completed
+* Adding a story with feedback attached from your backlog to a Sprint will result in a message that the item has been planned
+* Completing a Sprint that contains a story with feedback attached will result in a message that the item has been completed
 
 ## 4 Main Documents in This Category
 

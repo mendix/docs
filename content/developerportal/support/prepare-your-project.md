@@ -1,9 +1,10 @@
 ---
-title: "Prepare Your Project for the Support Portal (for On-Premises Users)"
+title: "Prepare Your App Project for Support"
 category: "Mendix Support"
-menu_order: 60
+menu_order: 1
 description: "Describes what you need to do with an on-premises app project to prepare it for Mendix Support."
 tags: ["on-premises", "support"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
@@ -27,7 +28,7 @@ There are two ways to give team members access to submit tickets: by assigning t
 To add users to a project's App Team and give them access to submit tickets for a specific app, follow these steps:
 
 1. Go to the [App Team](../collaborate/team) page of your app project in the Mendix Developer Portal.
-2. Click **Invite Memmber** to invite the users who should be able to submit/view Support tickets concerning this app project.
+2. Click **Invite Member** to invite the users who should be able to submit/view Support tickets concerning this app project.
 3.  Assign one of the following roles to users you want to give access to creating tickets for the app:
 	* **Business Engineer**
 	* **Product Owner**
@@ -54,4 +55,3 @@ To give existing project members access to submit tickets, follow these steps:
 ## 3 Read More
 
 * [On-Premises](../deploy/on-premises-design)
-* [How to Change the Affected Apps for Which You Can Submit Requests](change-affected-apps) 

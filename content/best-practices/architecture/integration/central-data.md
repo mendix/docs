@@ -39,20 +39,20 @@ A small local app could be used to collect orders or tickets from a number of sy
 
 These are a few of the main ways the central data pattern is used:
 
-* **Shared data apps (SDA)** – An SDA solution combines data from different processes and is used in operational processes. It is a combination of an operational data store (ODS) and integration app. It usually combines shared data within a microservices system or department, or it may collect the same type of data from several departments.
+* **Shared data app (SDA)** – An SDA solution combines data from different processes and is used in operational processes. It is a combination of an operational data store (ODS) and integration app. It usually combines shared data within a microservices system or department, or it may collect the same type of data from several departments.
 	* For more information, see the [Shared Data App (SDA)](#sda) section below
 * **DWH & data lakes** – A DWH is used for combining all types of data from the entire organization and providing data for statistics, reporting, and business intelligence (BI). Data lakes are an evolution of DWH solutions to use Hadoop-style solutions and provide statistical data to operational systems in order to support self-learning, AI, and the tuning of automated processes.
 	* For details, see the [Operational & DWH Data](#owd) section below
 * **BI solutions** – BI solutions collect data to provide insight into processes and trends. They can collect bulk data from DWH and data lake solutions, while refining it in real-time with information from Operational apps and systems
 	* For more information, see the [Integration to DWH & BI](batch-integration#int) section of *Batch Integration*
-* **Extract-transform-load (ETL)** – ETL is usually used for integration towards DWH solutions or for data transition tasks during the go-live of bnew large solutions. ETL solutions are professional integration frameworks, doing the "integration app" part of the SDA at an enterprise level. They compare new data with previous loads, and they are beneficial for very large data volumes and large files. For more information, see the [Integration to DWH & BI](batch-integration#int) section of *Batch Integration*
+* **Extract-transform-load (ETL)** – ETL is usually used for integration towards DWH solutions or for data transition tasks during the go-live of bnew large solutions. ETL solutions are professional integration frameworks, doing the "integration app" part of the SDA solution at an enterprise level. They compare new data with previous loads, and they are beneficial for very large data volumes and large files. For more information, see the [Integration to DWH & BI](batch-integration#int) section of *Batch Integration*
 
-## 2 Shared Data Apps (SDA) {#sda}
+## 2 Shared Data App (SDA) {#sda}
 
-The sections below explain the most important considerations for using an SDA solution.
+The sections below explain the most important considerations for using an SDAs.
 
-### 2.1 When to Consider an SDA
- 
+### 2.1 When to Consider SDAs
+
 SDAs can be very useful on the following levels:
 
 * **Functional Area level** – for combining that same type of data (for example, orders from different departments)
@@ -66,20 +66,20 @@ The diagram below shows an overview of the first three of these levels:
 
 These are the microservice versions of the central data pattern. Any combinations of data that have a larger scope than what has been described should make use of a central data lake or DWH, which most organizations will already have available. 
 
-If there is already a central DWH and an ETL solution available within your organization, you may wonder why you should use a Mendix SDA. The answer is that local Mendix SDA solutions provide a flexible local alternative with fewer dependencies, because of the following factors:
+If there is already a central DWH and an ETL solution available within your organization, you may wonder why you should use Mendix SDAs. The answer is that local Mendix SDAs provide a flexible local alternative with fewer dependencies, because of the following factors:
 
 * Conway's law means that teams will (or should) design systems that align with organizational structures
 * Microservice architectures strive for autonomous functional parts 
 
-A Mendix SDA will be part of the microservices landscape, where you break the enterprise problem down into smaller pieces and allow local tribes of Mendix developers to also use the central data integration pattern. These are the advatages of this approach:
+A Mendix SDA solution will be part of the microservices landscape, where you break the enterprise problem down into smaller pieces and allow local tribes of Mendix developers to also use the central data integration pattern. These are the advatages of this approach:
 
 * A team can use the same technology and deployment stream, which is organizationally easier to manage
 * Building an SDA in low-code means it is easy to build, configure, and maintain
 * It is functionally autonomous, becase the scope of the SDA should never become very large
 
-### 2.2 When Not to Create an SDA 
+### 2.2 When Not to Create SDAs
 
-Mendix SDA solutions will not replace an enterprise DWH, compete with Kafka for massive event streams, or compete with ETL for managing massive data files and data transitions. A Mendix SDA will only provide a local flexible option that can actually make DWH and ETL solutions simpler (for example, by collecting data from a functional area before sending it on to enterprise-level aggregation).
+Mendix SDAs will not replace an enterprise DWH, compete with Kafka for massive event streams, or compete with ETL for managing massive data files and data transitions. Mendix SDAs will only provide a local flexible option that can actually make DWH and ETL solutions simpler (for example, by collecting data from a functional area before sending it on to enterprise-level aggregation).
 
 For many microservices systems, there is little need to work on a combined data set, or the functional area is very small. In such cases, typically the dashboard app takes responsibility for the reference data import for the cluster, and no SDA is required.
 
@@ -87,9 +87,9 @@ If a business app already has 90% of some combined information, it  makes sense 
 
 If the integration problems can be easily solved without collecting data in an SDA (meaning, end-users are given the combinations of data they need in a snappy UX), then an SDA may also not be needed.
 
-### 2.3 What Does an SDA Do?
+### 2.3 What Does an SDA Solution Do?
 
-These are the typical responsibilities of an SDA:
+These are the typical responsibilities of an SDA solution:
 
 * Act as a local operational data store and combine data
 * Act as an integration app or adapter and provide services, files, or events for external system to retrieve data

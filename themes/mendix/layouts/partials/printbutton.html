@@ -8,7 +8,7 @@
 {{- $space := index $spaces $main -}}
 {{- with $space -}}
     {{- $spacename := index $space "space" -}}
-    {{- if eq $spacename "Best Practices" -}}
+    {{- if eq $spacename "Expert Best Practices" -}}
         {{- $basename := $file.TranslationBaseName -}}
         {{- if eq $basename "index" -}}
 <a href="index.pdf" target="_blank" class="mx__page__header__pdf-button ignore_proofer"><i class="glyphicon glyphicon-download-alt"></i>Download PDF</a>

@@ -17,7 +17,9 @@ This feedback comes from different sources:
 * Submitted via the [Mendix Feedback Widget](use-feedback-widget)
 * Submitted on the **Feedback** page itself (for details, see the [Actions](#actions) section, below)
 
-### 1.1 Types of Feedback {#types}
+## 2 Feedback Fundmentals
+
+### 2.1 Types of Feedback {#types}
 
 There are three types of feedback item:
 
@@ -27,7 +29,7 @@ There are three types of feedback item:
 | Question | A question about the app project.                             |
 | Issue    | An issue or a bug that needs to be investigated for a fix. |
 
-### 1.2 Feedback Stages {#stages}
+### 2.2 Feedback Stages {#stages}
 
 Feedback can go through four different stages:
 
@@ -40,7 +42,7 @@ Feedback can go through four different stages:
 
 Feedback in each stage is shown in a separate tab on the **Feedback** page.
 
-## 2 Feedback Actions {#actions}
+## 3 Feedback Actions {#actions}
 
 These are the general feedback actions available on all the tabs of the **Feedback** page:
 
@@ -49,7 +51,7 @@ These are the general feedback actions available on all the tabs of the **Feedba
 	* For the export, you can filter on the **Submitted after** date, **Label**, **Status** of feedback, and **Type** of feedback
 * **Show filters** allows you to filter on the types of feedback being listed: **Ideas**, **Questions**, and/or **Issues**
 
-## 3 Feedback Details
+## 4 Feedback Details
 
 Clicking on the title of a feedback item or on **Details** opens the item's details page:
 
@@ -57,7 +59,7 @@ Clicking on the title of a feedback item or on **Details** opens the item's deta
 
 You can perform various actions for reviewing and processing a feedback item on this page. These actions are described below.
 
-### 3.1 Reviewing a Feedback Item
+### 4.1 Reviewing a Feedback Item
 
 Here you can review the feedback and start any necessary investigation.
 
@@ -73,7 +75,7 @@ In the **Leave a comment** box, you can post a comment and start an exchange wit
 
 ![](attachments/feedback/comment.png)
 
-### 3.2 Processing a Feedback Item {#processing}
+### 4.2 Processing a Feedback Item {#processing}
 
 To process a feedback item, you can select one of the following in the **Actions** menu. The options available depend on the current status of your feedback.
 
@@ -96,7 +98,7 @@ Finally, you can click **Delete feedback** to delete the item. This action will 
 
 ![](attachments/feedback/delete-feedback.png)
 
-### 3.3 Adding a Feedback Item to Your Backlog {#adding}
+### 4.3 Adding a Feedback Item to Your Backlog {#adding}
 
 After clicking **Accept feedback**, you can create a story on the basis of the feedback item and add it to your backlog. To do that, follow these steps:
 
@@ -114,6 +116,6 @@ Once a feedback item is connected to a user story, the user who submitted the st
 * Adding a story with feedback attached from your backlog to a Sprint will result in a message that the item has been planned
 * Completing a Sprint that contains a story with feedback attached will result in a message that the item has been completed
 
-## 4 Main Documents in This Category
+## 5 Main Documents in This Category
 
 * [Use the Mendix Feedback Widget](use-feedback-widget)

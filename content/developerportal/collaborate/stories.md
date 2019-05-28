@@ -8,9 +8,9 @@ tags: ["Stories", "Sprint", "Developer Portal"]
 
 ## 1 Introduction
 
-In **Stories**, you are able to manage Sprints, stories, and labels. These components are often used in an Agile development environment, in which teams work in short development cycles (Sprints) of 2–4 weeks.
+In **Stories**, you are able to manage Sprints, stories, and labels for your app project. These components are often used in an Agile development environment, in which teams work in short development cycles (Sprints) of 2–4 weeks.
 
-By adding your Sprints to Mendix, you will have a clear overview of your tasks and can easily view the status of your development. You can create, refine, and prioritize user stories collaboratively using the stories' conversation threads. User stories can be estimated and organized into Sprints which can be monitored using Scrum boards and burndown charts.
+By adding your Sprints to Mendix, you will have a clear overview of your tasks and can easily view the status of the development of your app project. You can create, refine, and prioritize user stories collaboratively using the stories' conversation threads. User stories can be estimated and organized into Sprints which can be monitored using Scrum boards and burndown charts.
 
 {{% alert type="info" %}}
 
@@ -28,7 +28,7 @@ You can perform the actions described below via the buttons on your app project'
 
 Every Sprint contains a number of stories that describe specific functionality to be implemented, built, or fixed. The size of each story can be indicated by allocating it a number of Story points.
 
-To add a new story, click **New story** and fill in some details, including what your story is about and what type of story it is. The **Labels** you add in the new story can be reused in other stories (see [Label](#label) for more details).
+To add a new story, click **New story** and fill in some details, including what your story is about and what type of story it is. The **Labels** you add in the new story can be reused in other stories (see [Using Labels](#label) for more details).
 
 ![](attachments/story-example.png)
 
@@ -83,6 +83,7 @@ You can also **Export all stories to Excel** and even **Export all stories to Ex
 If you select **Updates stories from Excel**, you can use an an Excel sheet from a previous export as a template for the import. The Developer Portal recognizes existing items by using the **ID** column. The imported content will become stories for your app project.
 
 When editing stories in Excel, follow these guidelines:
+
 * To add a new story or task,  add a new line on the correct position and enter the item's name
 * To reorder an item, adjust the depth by adding or removing the plus signs (make sure they stay consistent with every item being the same or 1 level deeper than the item above it)
 * To remove an item, replace its depth with a single minus sign (make sure that any tasks associated with it are either moved or are also removed)
@@ -106,7 +107,7 @@ Click **Manage story template** to create and edit the default tasks that can be
 
 ![](attachments/default-task.png)
 
-To enable these default tasks, select the **Add default tasks based on story template** check box when creating a [new story](#new-story).
+To enable these default tasks, select the **Add default tasks based on story template** check box when [creating a new story](#new-story).
 
 {{% alert type="info" %}}
 Only team members with sufficient rights can manage story templates.

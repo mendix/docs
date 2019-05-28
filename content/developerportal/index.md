@@ -6,11 +6,11 @@ tags: ["Mendix", "Developer Portal", "Platform Services", "Buzz", "Apps", "Peopl
 
 ## 1 What Is the Developer Portal?
 
-The [Developer Portal](http://home.mendix.com) is one of the three key components of the Mendix Platform. The other two are [Mendix Studio Pro](/refguide/modeling) and [Mendix Studio](/studio/index). Here, Mendix developers can collaborate, deploy and manage their apps, and manage their company and users. 
+The [Developer Portal](http://home.mendix.com) is one of the three key components of the Mendix Platform. The other two are [Mendix Studio Pro](/refguide/modeling) and [Mendix Studio](/studio/index). In the Developer Portal, Mendix developers can collaborate, deploy, and manage their apps, and manage their company and users. 
 
 The Developer Portal also offers open, well-defined APIs, enabling third-party developers to integrate their own widgets and plugins. For more information, see [API Documentation](/apidocs-mxsdk/apidocs/).
 
-You can go to any part of the Developer Portal using the menu items described below. Follow the highlighted links for more information.
+You can go to any part of the Developer Portal using the menu items described below.
 
 ## 2 Buzz {#buzz}
 

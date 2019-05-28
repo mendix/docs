@@ -45,9 +45,9 @@ When these names have been overriden, the name of the entity, attribute or assoc
 
 These features make it easier to refactor your domain model without affecting external APIs.
 
-## 4 Entity Set Name
+## 4 Exposed Set Name
 
-Use the **Entity set name** field to change the last part of the URL of the resource.
+Use the **Exposed set name** field to set the name of the entity set. This is the last part of the URL of the resource.
 
 _Default value:_ Entity name + s
 

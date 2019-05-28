@@ -24,7 +24,7 @@ For details, see [App Team](team).
 
 ## 4 Stories
 
-The **Stories** page lets you add, edit, and delete stories and Sprints. You can also import stories from, and export them to, Excel and view story history.
+The **Stories** page lets you add, edit, and delete stories and Sprints. You can also import stories from, and export them to, Excel, and view story history.
 
 For details, see [Stories](stories).
 

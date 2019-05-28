@@ -45,13 +45,13 @@ Click **Details** to see the description of the document, comments, and all the 
 
 On the **Document** details page, you can perform the following actions:
 
-* Download the document
-* Upload a new version of the document
-* Delete the document
+* **Download** the document
+* **Upload new version** of the document
+* **Delete document**
 
 ### 2.5 New Version
 
-To upload a new version of a document, select the document and click **New version**.
+To upload a new version of a document directly from the document list, select the document and click **New version**.
 
 ## 3 Read More
 

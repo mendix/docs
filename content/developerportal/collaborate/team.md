@@ -8,7 +8,7 @@ tags: ["Team", "Developer Portal"]
 
 ## 1 Introduction
 
-Your App Team can include all of your colleagues working on an app project. As well as developing, team members might have other roles such as ideating or reviewing. Mendix enables developers from both IT and business with mixed experience levels to collaborate in the Developer Portal.
+Your App Team can include all of your colleagues working on an app project. As well as developing, team members might have other roles such as ideating or reviewing. The Mendix Developer Portal enables developers from both IT and business with mixed experience levels to collaborate.
 
 To view and manage your App Team members, follow these steps:
 
@@ -16,7 +16,7 @@ To view and manage your App Team members, follow these steps:
 
 2. Click **Team** under the **Collaborate** category.
 
-On the **Team** page, you will see an overview with the following information about the team members:
+On the **Team** page, you will see an overview with the following information about the App Team members:
 
 * **Name**
 * **Role** – the developer's App Team role (for details on available roles, see the [App Team Roles](/developerportal/company-app-roles/index#app-team-roles) section of *Company & App Roles*)
@@ -56,9 +56,9 @@ On the  **App Team** tab of the **Security** page, you can do the following:
 
 ### 3 Inviting Team Members {#inviting}
 
-To invite members, click **Invite Member** on the **Team** page, or click the **+** icon next to the team on the Buzz, and follow these steps:
+To invite members, click **Invite Member** on the **Team** page, or click the **+** icon next to the team in app Buzz, and follow these steps:
 
-1. Enter the email address(es) for who you want to invite to the App Team.
+1. Enter the email address(es) for those you want to invite to the App Team.
 2. Add a personal message (optional).
 3. Confirm the invitation(s).
 

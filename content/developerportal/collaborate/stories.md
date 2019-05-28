@@ -22,7 +22,7 @@ You can also manage the progress of tasks and Sprints from within Mendix Studio 
 
 ## 2 Actions
 
-You can perform the actions described below via the buttons on your app project's *Stories* page.
+You can perform the actions described below via the buttons on your app project's **Stories** page.
 
 ### 2.1 Creating a New Story {#new-story}
 
@@ -40,7 +40,7 @@ To add a new Sprint, click **New sprint** and fill in some details, including th
 
 ### 2.3 Moving a Story {#moving}
 
-To move a story, select the story, click **Move to**, then select the Sprint where the story should be moved:
+To move a story, select the story, click **Move to**, then select the Sprint to which the story should be moved:
 
 ![](attachments/move-to.png)
 
@@ -58,7 +58,7 @@ Via the **More** button, you can perform the actions described below.
 
 ### 3.1 Delete Selection
 
-Click **Delete selection** to delete the selected story:
+Click **Delete selection** to delete the selected story or stories:
 
 ![](attachments/delete-selection.png)
 
@@ -76,14 +76,16 @@ Click **Import / Export** to import stories from or export stories to Excel:
 
 ![](attachments/import-export.png)
 
-In Mendix, it is always possible to export data from your app project. If you select **Export a single sprint to Excel**, you can edit the Sprint and then import it back to save the changes.
+In Mendix, you can export stories from your app project at any time. If you select **Export a single sprint to Excel**, you can select just the stories in one Sprint and export these to Excel to work on.
 
-If you select **Updates stories from Excel**, you can use an an Excel sheet from a previous export as a template for the import. The Developer Portal recognizes items by using the **ID** column. The imported content will appear as stories for your app project.
+You can also **Export all stories to Excel** and even **Export all stories to Excel (including completed sprints)**.
+
+If you select **Updates stories from Excel**, you can use an an Excel sheet from a previous export as a template for the import. The Developer Portal recognizes existing items by using the **ID** column. The imported content will become stories for your app project.
 
 When editing stories in Excel, follow these guidelines:
-* To add a new story or task, simply add a new line on the correct position and type in the item's name
-* To reorder an item, adjust the depth by adding or removing the plus signs (make sure they stay in the correct order where every item is the same or 1 position lower than the item above it)
-* To remove an item, replace its depth with a single minus sign (make sure  that any tasks connected to it are either moved or are also removed)
+* To add a new story or task,  add a new line on the correct position and enter the item's name
+* To reorder an item, adjust the depth by adding or removing the plus signs (make sure they stay consistent with every item being the same or 1 level deeper than the item above it)
+* To remove an item, replace its depth with a single minus sign (make sure that any tasks associated with it are either moved or are also removed)
 
 ### 3.4 Manage Labels {#manage-labels}
 
@@ -100,7 +102,7 @@ Click **Manage labels** to open a page where you can list and manage your labels
 
 ### 3.5 Manage Story Template
 
-Click **Manage story template** to create and edit the default tasks that you can add as tasks to every new story for your app project:
+Click **Manage story template** to create and edit the default tasks that can be added to every new story in your app project:
 
 ![](attachments/default-task.png)
 
@@ -139,7 +141,7 @@ On this page, you can perform a number of actions:
 * Click **Edit** to edit the **Title**, **Description**, **Story type**, **Story points**, **Status**, and **Labels** of the story as well as see the history of edits made to the story
 * See the story's **Status** and click to update it (the available statuses are **To-do**, **Running**, and **Done**)
 * View the **Sprint** that contains the story as well as move the story via **Move to Sprint** (for details, see the [Moving Stories](#moving-stories) section below)
-* Click **Move to another app** to move the story to a different app's backlog
+* Click **Move to another app** to move the story to a different app project's backlog
 * Click **View history** to view the history of changes to the story (for more information, see the [History](#history) section above)
 
 Also on this page, you can access the following tabs:
@@ -209,7 +211,7 @@ To manage stories in Studio Pro, follow these steps:
 
 	![](attachments/stories-pane.png)
 
-To change the status of a story in Studio Pro, just click the current status. For example, click the **To-do** **Status** to change it to **Running**:
+To change the status of a story in Studio Pro, click the current status. For example, click the **To-do** **Status** to change it to **Running**:
 
 ![](attachments/stories-to-do.png)
 

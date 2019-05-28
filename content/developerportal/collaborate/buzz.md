@@ -30,9 +30,9 @@ App Buzz is Buzz for a specific app. It is the landing page when you open that a
 
 ![](attachments/app-buzz.png)
 
-You can see the size of your **Team** and your fellow team members on the right side of the page.
+You can see the size of your **Team** and your fellow App Team members on the right side of the page.
 
-Click the **+** icon to invite new team members directly from this page.
+Click the **+** icon to invite new members to your App Team directly from this page.
 
 Click **Show all** to go to the [Team](team) page for the app.
 
@@ -60,7 +60,7 @@ In App Buzz, you will only be communicating with App Team members.
 
 ### 2.1 Updating Your Status
 
-The easiest way to communicate with others in your company and on your team is by leaving comments in Buzz. Click **Update status** to leave a new message. You can also **Add** attachments to support the discussion with your colleagues or **Edit** one of your previous messages.
+The easiest way to communicate with others in your company and on your team is by leaving comments in Buzz. Click **Update status** to leave a new message. You can also **Add** attachments to support the discussion with your colleagues or **Edit** one of your own previous messages.
 
 ![](attachments/update-status.png)
 

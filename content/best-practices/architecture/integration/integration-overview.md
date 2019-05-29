@@ -36,7 +36,7 @@ These Best Practices contain theoretical guidelines for the following areas:
 
 ### 1.3 Integration Examples
 
-The Integration Best Practices also include [Integration Examples](integration-use-cases). In future versions, these documented examples will be accompanied by examples in the Mendix App Store.
+The Integration Best Practices also include [Integration Examples](integration-examples). In future versions, these documented examples will be accompanied by examples in the Mendix App Store.
 
 Tthe typical examples that will be described are shown in the diagram below. At this time, only use cases for [Export, Import & Batch Processing](export-import-batch) and [Workflow Integration](workflow-integration) are available. 
 

@@ -1,5 +1,5 @@
 ---
-title: "Integration Use Cases"
+title: "Integration Examples"
 parent: "integration-overview"
 menu_order: 11
 draft: true
@@ -44,9 +44,9 @@ It is important to think of the overall solution, and recognize that integration
 
 If it gets complicated on one side of an integration, it is often because the other side of the integration is not ideal. Then, the best solution may be to try to change the other side of the integration.
 
-## 3 Integration Use Cases
+## 3 Integration Examples
 
-The integration use cases are introduced below.
+The integration examples are introduced below.
 
 {{% todo %}}[**ADD LINKS TO FULL DOCS BELOW ONCE AVAILABLE**]{{% /todo %}}
 

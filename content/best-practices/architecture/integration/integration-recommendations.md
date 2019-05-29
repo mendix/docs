@@ -100,4 +100,4 @@ Here are some basic recommendations that Mendix endorses:
 * Do not be afraid of copying data from one app to another, because that will increase processing speed and remove online dependencies – but, you should only copy the data that is required, to limit dependencies
 * Consider consumer-specific contracts if a service is not truly generic and stable, because they augment autonomy and flexibility in releases
 
-Continue reading about specific scenarios for integration in [Integration Use Cases](integration-use-cases).
+Continue reading about specific scenarios for integration in [Integration Examples](integration-examples).

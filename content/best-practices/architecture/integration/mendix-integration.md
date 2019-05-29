@@ -106,4 +106,4 @@ The table below presents use cases that you can reference  for more detail. The 
 | Int. with IoT Solutions | | ![](attachments/mendix-integration/green.png) | ![](attachments/mendix-integration/green.png) | ![](attachments/mendix-integration/grey.png) | ![](attachments/mendix-integration/green.png) |
 | Int. with AI & Machine Learning | | ![](attachments/mendix-integration/green.png) | ![](attachments/mendix-integration/grey.png) | | ![](attachments/mendix-integration/green.png) |
 
-For more details, see [Integration Use Cases](integration-use-cases).
+For more details, see [Integration Examples](integration-examples).

@@ -9,41 +9,41 @@ draft: true
 
 For large enterprises with several departments and hundreds of systems, it makes sense to create integration layers. These layers provide one or more benefits to an organization:
 
-* Decoupling between systems and departments, so that every app does not connect directly to every other app.
+* Decoupling between systems and departments, so that every app does not connect directly to every other app
 * A connectivity layer between networks, for example between cloud and premises, geographies or areas, and customer systems and external companies (as an external API gateway) 
 * A messaging platform with queue management
 
-### 1.1 Pros and Cons
+### 1.1 Pros & Cons
 
-The benefit of an integration layer to decouple systems can be exemplified in this way: 
+The benefit of an integration layer to decouple systems can be exemplified with this example: A project wants to introduce a new Mendix app that needs to call 20 existing services from 10 different systems in 3 locations. If all the services were already exposed on an API management gateway, the project would only need to align with one party, connect to one technology, and reach one network location. In addition, there would already be an available test environment for all 20 services. 
 
-A project wants to introduce a new Mendix app that needs to call 20 existing services from 10 different systems in 3 locations. If all the services were already exposed on an API management gateway, the project would only need to align with one party, connect to one technology and reach one network location. There would already be an available test environment for all 20 services etcetera. 
+If there was no integration layer, the Project Manager would have to align with 10 different teams. The teams would then design, build, and test against 20 disparate services. Network issues could be a problem. 
 
-If there was no integration layer the project manager would have to align with 10 different teams, the team would design, build, and test against 20 disparate services, and network issues could be a problem. 
+Decoupling comes with the cost of introducing an additional dependency that affects projects flexibility and timelines. If functional mapping is done in the integration layer, it often become a bottleneck for building and maintaining services. At organizations where all the integration is required to go through an integration layer, this dependency often becomes an issue that slows down the evolution of new business functionality across the enterprise.
 
-Decoupling comes with the cost of introducing an additional dependency that affects projects flexibility and timelines. If functional mapping is done in the integration layer, it often become a bottleneck for building and maintaining services. At organizations where all integration is required to go through an integration layer, this dependency often becomes an issue that slows down evolution of new business functionality across the enterprise.
+Mendix recommends balancing these pros and cons by using integration layers where they make the best sense.
 
-Mendix recommends to balance these pros and cons, and use Integration layers where it makes the best sense.
+### 1.2 Microservices Architecture
 
-### 1.1 Microservices architecture
+With microservices architecture, the recommendation is to use "thin" integration layers or no integration layer at all.
 
-With microservices architecture the recommendation is to use "thin" integration layers or no integration layer at all.
+Consider these points for microservices architecture and integration layers:
 
-* Use integration layers when it is beneficial, for example for event based integration, external integration or integration between departments of a company (see the [Different Integration Layers](#different) section below)
+* Use integration layers when it is beneficial – for example, with event-based integration, external integration, or integration between the departments of a company (for details, see the [Different Integration Layers](#different) section below)
 * Use relatively "thin" integration layers with less mapping and minimal functionality
 * Build functional groups of microservices (microservice systems), where the internal integration is direct
-** No integration layer between Mendix apps that are part of the same functional system
-** No integration layer between GUI, logic, and data of the same system, which is the default way Mendix works
+  * There should be no integration layer between Mendix apps that are part of the same functional system
+  * There should be no integration layer between the GUI, logic, and data of the same system – this is the default way Mendix works
   
-### 1.3 Overview of a modern Bus landscape
+### 1.3 Overview of a Modern Bus Landscape
 
-The diagram below shows a schematic view of a balanced and mixed strategy for Integration layers:
+The diagram below shows a schematic view of a balanced and mixed strategy for integration layers:
 
 ![](attachments/integration-layers/il-intro2.png)
 
-There are local connections between closely related microservices, and DevOps tribes even build some local Ops monitoring to own the entire life-cycle of their clusters of apps. Since the teams that build these apps are organized together, they easily manage their internal dependencies through releases of separate apps.
+There are local connections between closely related microservices. DevOps tribes may even build some local Ops monitoring in order to own the entire lifecycle of their clusters of apps. Since the teams that build these apps are organized together, they easily manage their internal dependencies through the releases of separate apps.
 
-For connections with other areas of the organization, there is a "Bus" that represents one or more integration layers used for connecting to the other areas of the company. It handles all formats, such as events, service calls and files. The integration layer services represent how departments speak to eachother, which we expect will change more rarely. The bus in this case decouplles departments from eachother and provides enterprise connectivity geographically and network wise.
+For connections with other areas of the organization, there is a "bus" that represents one or more integration layers used for connecting to the other areas of the company. It handles all formats, such as events, service calls, and files. The integration layer services represent how departments speak to each other, which is expected to rarely change. The bus in this case decouples departments from each other and provides enterprise connectivity both geographically and network-wise.
 
 ## 2 From SOA to Microservices
 
@@ -53,20 +53,20 @@ In early SOA architectures, applications connected to each other via an ESB, whi
 
 This version of SOA (when already implemented) is beneficial for new projects, because a large amount of useful services may already be available for new apps and services to use. 
 
-It is quite easy to switch towards a more microservice-oriented approach by simply adjusting the guidelines for new solutions being built:
+It is easy to switch towards a more microservice-oriented approach by simply adjusting the guidelines for new solutions being built to accomplish these goals:
 
-* Less mapping in the integration layer
-* Local integration allowed to go directly
+* Use less mapping in the integration layer
+* Allow local integration to go directly
 
-This diagram shows an example how to evolve around an existing ESB:
+The diagram below shows an example of how to evolve around an existing ESB:
 
-1. For the two old Mendix apps that belong to the same system, we re-route their internal communication to be direct
-2. Two new single-purpose apps below the ESB provide new services with less mapping in the ESB 
-3. Above the ESB, there is a microservices system that has a shared data app (SDA) for external communication, and that is the only one that connects to the ESB (for details, see the [Example - Microservices SDA](central-data#example-sda-micro) section of *Central Data*).
+* For the two old Mendix apps that belong to the same system, their internal communication is rerouted to be direct.
+* Two new single-purpose apps below the ESB provide new services with less mapping in the ESB 
+* Above the ESB, there is a microservices system that has a shared data app (SDA) for external communication, and that is the only one that connects to the ESB (for details, see the [Example - Microservices SDA](central-data#example-sda-micro) section of *Central Data*)
 
 ![](attachments/integration-layers/il-2.png)
 
-In the old situation, all communication went via the ESB. In the new situation, we continue to benefit from the existing services as they are, while for  new services we put less mapping in the ESB and only connect to the ESB for cross-departmental communication. 
+In the old situation, all communication went via the ESB. In the new situation, you continue to benefit from the existing services as they are, while for new services, you put less mapping in the ESB and only connect to the ESB for cross-departmental communication. 
 
 ### 2.2 Layered SOA
 
@@ -92,9 +92,9 @@ The diagram below shows how business features cross many layers in SOA layerd ar
 
 The diagram also shows that the transition from a large functional scope built in an SOA-layered architecture towards a microservices architecture requires a complete functional redesign and a rebuild of most of the functionality. However, there are often still services on the ESB towards the legacy systems that can be reused in the new architecture.
 
-Migrating from a layered SOA architecture is still strongly recommended for any area of functionality that requires flexibility and/or low-cost maintenance. A possible way to soften the impact of such a migration is to build Mendix "headless" services that do not have an end-user UX, but provides REST services to the existing UX layer. This saves most of the UX investment, while the logic, workflow and data management is made a lot more flexible using Mendix technology and a microservice architecture.
+Migrating from a layered SOA architecture is still strongly recommended for any area of functionality that requires flexibility and/or low-cost maintenance. A possible way to soften the impact of such a migration is to build Mendix "headless" services that do not have an end-user UX but provide REST services to the existing UX layer. This saves most of the UX investment, while the logic, workflow, and data management is made a lot more flexible using Mendix technology and a microservice architecture.
 
-This diagram shows how this replacement could be done. For example it could be two Mendix apps replacing the business function for a functional area of a customer portal:
+This diagram shows how this replacement could be done. For example, it could be two Mendix apps replacing the business function for a functional area of a customer portal:
 
 ![](attachments/integration-layers/il-4.png)
 
@@ -128,19 +128,19 @@ In large enterprises, there may be several different integration layers and vari
 
 The integration between the Mendix app and an integration layer has the same properties as the integration between two Mendix apps. I.e. for a Mendix app an integration layer is just like another exteral system to connect to.
 
-## 3 Why Use an Integration Layer?
+## 4 Why Use an Integration Layer?
 
-### 3.1 Distance
+### 4.1 Distance
 
 If there is a large geographical, network or organizational distance between two systems, an integration layer can provide a shared and secure way to bridge this distance.
 
-### 3.2 Event Streams & Queues
+### 4.2 Event Streams & Queues
 
 For event streams and queues—where there is high volume or distributed systems—an integration layer takes the responsibility for delivery.
 
 For more information, see [Event-Based Integration](event-integration).
 
-### 3.3 Service Maintenance
+### 4.3 Service Maintenance
 
 If all the connections in a large organization were point-to-point interfaces, there would be far too many direct dependencies, and all the systems would have to know too much about each other. An ESB or an API management gateway helps separating these systems through releases and in operations.
 
@@ -148,11 +148,11 @@ However, *decoupling* does not mean *independent*. As soon as there is a new con
 
 Changes to services are usually done as a new endpoint next to the old one, allowing consumers to migrate and deploy the new version at their own pace, see also the diagram below:
 
-<<Figure 8 - New>>
+![](attachments/integration-layers/il-8.png)
 
-ESBs can help with this by allowing the source system to go live with only the new version and having the ESB map it into two endpoints. This is useful for large enterprises with many service users. See the diagram in the next section showing this.
+ESBs can help with this by allowing the source system to go live with only the new version and having the ESB map it into two endpoints. This is useful for large enterprises with many service users. Continue with the [Service Options](#service-options) section below for more information on this.
 
-### 3.4 Service Options
+### 4.4 Service Options {#service-options}
 
 An integration layer can also provide connectivity to old protocols and/or provide different protocols on each side of an integration in order not to change existing systems. For example, the integration layer can receive a file and deliver the data as events or service calls. An ESB can collect events on a queue and generate a file at the end of the day.
 
@@ -160,16 +160,18 @@ This diagram presents some examples of how an integration layer enables new patt
 
 ![](attachments/integration-layers/il-6.png)
 
-* Routing towards several systems, orchestrating and combining services
-* For services that are reuses by several consumers, the ESB can provide different versions for consumers
-* Translation of technical formats, e.g. connecting Mainframes
-* translating from file to push services
-* translating an event flow to a daily file
-* translating asynchonous request reply to a synchronous call with re-tries
+The following service options should be considered:
 
-All these cases allow the end-points to adapt less to each other, and for large enterprises with hundreds or thousands of systems this does make sense for several integration scenarios. It should ne noted that most of these benefits can be achieved by separate and smaller integration apps, just as well as an ESB can provide them centrally.
+* Routing towards several systems, orchestrating, and combining services
+* For services that are reused by several consumers, the ESB can provide different versions for consumers
+* Translation of technical formats (for example, connecting mainframes)
+* Translating from file to push services
+* Translating an event flow to a daily file
+* Translating asynchronous request-reply to a synchronous call with retries
 
-## 4 Microservice Integration Apps
+All of these options allow the endpoints to adapt less to each other. But for large enterprises with hundreds or thousands of systems, this does make sense for several integration scenarios. It should be noted that most of these benefits can be achieved by separate and smaller integration apps, just as well as an ESB can provide them centrally.
+
+## 5 Microservice Integration Apps
 
 An integration layer does not have to be central and enterprise-wide for an entire organization. If you are driving all integration onto the same framework, it is likely to become a bottleneck for all. Therefore, many organizations have several solutions, and there is no significant reason to consolidate them.
 
@@ -181,7 +183,7 @@ This diagram shows the three styles next to each other – thick ESB, thin ESB, 
 
 ![](attachments/integration-layers/il-7.png)
 
-## 5 Summary
+## 6 Summary
 
 In summary, these are the recommendations for integration layers:
 

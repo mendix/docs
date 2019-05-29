@@ -7,44 +7,52 @@ draft: true
 
 ## 1 Introduction
 
-Best Practices for Integration will help lead developers, designers and architects to see examples for integration solutions made with Mendix involved, and some recommendation for when to choose one option over another.
+The Mendix Expert Best Practices for Integration will help Lead Developers, Designers, and Architects to see examples for integration solutions made with the Mendix Platform involved. They will also provide recommendations for when to choose one option over another.
 
-### 1.1 What is the question?
+### 1.1 What Questions Are Addressed?
 
-The questions answered are:
+These are the questions addressed in the Integration Best Practices:
 
-1. What are good business scenarios to use Mendix?
-2. How to integrate Mendix in an enterprise landscape?
-4. What technical and functional options are there for integration?
-3. How to move towards a more Microservice oriented architecture?
+* What are good business scenarios for using Mendix?
+* How do you integrate Mendix in an enterprise landscape?
+* What technical and functional options are there for integration?
+* How do you move towards a more microservice-oriented architecture?
 
 ![](attachments/integration-overview/int-ov2.png)
 
 ### 1.2 Integration Guidelines
 
-These Best Practices guidelines are the more theoretical part of the best practices and they will cover the following content areas:
+These Best Practices contain theoretical guidelines for the following areas:
 
-![](attachments/integration-overview/int-ov3.png)
+* [Service Integration](service-integration)
+* [UI Integration](ui-integration)
+* [Event-Based Integration](event-integration)
+* [Batch Integration](batch-integration)
+* [Central Data](central-data)
+* [Process Integration](process-integration)
+* [Integration Layers](integration-layers)
+* [Ops & CI/CD Integration](ops-cicd-integration)
+* [Integration Recommendations](integration-recommendations)
 
-### 1.3 Integration Use Cases and Examples
+### 1.3 Integration Examples
 
-The Best Practices for integration include [Integration Use Cases](integration-use-cases). The target is to accompany these use-cases with examples in the App Store.
+The Integration Best Practices also include [Integration Examples](integration-use-cases). In future versions, these documented examples will be accompanied by examples in the Mendix App Store.
 
-Tthe typical use cases that will be described are shown in the diagram below. At this time, only use cases for [Export, Import & Batch Processing](export-import-batch) and [Workflow Integration](workflow-integration) are available. 
+Tthe typical examples that will be described are shown in the diagram below. At this time, only use cases for [Export, Import & Batch Processing](export-import-batch) and [Workflow Integration](workflow-integration) are available. 
 
 ![](attachments/integration-overview/int-ov4.png)
 
-## 2 Ways to use Best Practices on Integration
+## 2 How to Use the Integration Best Practices
 
 ### 2.1 Enterprise Architecture, Positioning & Project Validation
 
-Enterprise and Domain Architects can scan these Best Practices for typical use cases and examples of how Mendidx has been used. This is useful for positioning Mendix within the enterprise and validating for which projects and roles Menidx apps may be useful. This diagram presents the basic steps of this process:
+Enterprise and Domain Architects can scan these Best Practices for typical examples of how the Mendidx Platform has been used for integration. This is useful for positioning Mendix within the enterprise and validating for which projects and roles Menidx apps may be useful. This diagram presents the basic steps of this process:
 
 ![](attachments/integration-overview/int-ov5.png)
 
 ### 2.2 Solution Architecture & Project Planning
 
-Solution Architects and Lead Developers will gain an overview of the available options as well as recommendations for integration. This can lead to more realistic estimates, a better solution architecture and hopefully more stable solutions. The diagram shows the basic steps expected:
+Solution Architects and Lead Developers will gain an overview of the available options as well as recommendations for integration. This can lead to more realistic estimates, a better solution architecture, and hopefully more stable solutions. The diagram shows the basic steps expected:
 
 ![](attachments/integration-overview/solution-architecture.png)
 
@@ -68,7 +76,3 @@ There is the following documentation and training material available around inte
 * [Integration](/howto7/integration/) in the *Mendix 7 How-to's*
 * [Integration](https://www.mendix.com/evaluation-guide/app-capabilities/integration) in the *Mendix Platform Evaluation Guide*
 * [Integration Authentication](https://gettingstarted.mendixcloud.com/link/module/117/lecture/944) in the *Mendix Academy*
-
-
-
-

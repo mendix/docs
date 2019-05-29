@@ -39,7 +39,6 @@ This is the basic information required for a ticket:
 To submit a request with Mendix Support, follow these steps:
 
 1. Click **Submit a request** in the top-right corner of the portal.
-
 2.  Select an issue from the drop-down menu:
 
 	![](attachments/submit/issue.png)
@@ -93,7 +92,7 @@ You can set the priority to the following levels:
 * **Medium**
 * **Low**
 
-The [Support ticket priority](ticket-priority) that Mendix determines is based on this matrix:
+The [ticket priority](ticket-priority) that Mendix Support validates is based on this matrix:
 
 ![](attachments/submit/204371729-pic5.png)
 

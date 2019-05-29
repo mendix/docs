@@ -73,7 +73,7 @@ The three cases shown in the diagram are described below:
 
 ## 5 State Engines & Event Managers {#state}
 
-A good example of event-based processing occurs when a package sent by post takes longer to be delivered than anticipated and the receiver needs to find out where the package is, so they use a track-and-trace system. A track-and-trace system is fed by an event manager that gathers all the events in a chain and thus knows what has happened to the package and where it is in the process. 
+A good example of event-based processing occurs when a package sent by post takes longer to be delivered than anticipated and the receiver needs to find out where the package is, so they use a track & trace system. A track & trace system is fed by an event manager that gathers all the events in a chain and thus knows what has happened to the package and where it is in the process. 
 
 ![](attachments/event-integration/state.png)
 

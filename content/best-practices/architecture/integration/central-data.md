@@ -110,7 +110,7 @@ In this scenario, the decision was made to specialize a microservice for the fol
 
 With this design, you avoid the **Customer Portal**, as the **CRM** and **Support Desk** apps have to integrate with the ordering systems of many different business lines. This is not suitable for ETL or DWH, because you want it to be real-time and flexible with a specific functional scope. It is also not suitable for an ESB, because you are storing data long-term, and you are combining data objects in a relational format in the domain model.
 
-### 2.5 Example - Microservices SDA
+### 2.5 Example - Microservices SDA {#example-sda-micro}
 
 This diagram shows a microservices SDA, in this case for a master data management system built using Mendix:
 

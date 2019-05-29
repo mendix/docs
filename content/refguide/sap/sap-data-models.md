@@ -14,8 +14,6 @@ The SAP OData Connector needs to know details of the OData service which has bee
 
 Any OData service can be used to generate a data model using the SAP OData Model Creator. See [How To Use the SAP OData Model Creator](/howto/sap/use-sap-odata-model-creator) for instructions on how to do this.
 
-To accelerate the consumption of the SAP Business Suite services, Mendix also provides the full set of Business Suite for SAP Fiori Cloud apps as modules in the Mendix App Store. See section [3 SAP Data Models in the App Store](#appstoremodels).
-
 {{% alert type="warning" %}}
 SAP OData Model Creator and SAP OData Connector only support SAP OData Gateway Services which use OData version 2 or version 3. OData version 4 is not yet supported.
 {{% /alert %}}
@@ -31,7 +29,7 @@ The Data Model module contains up to four resources which help to consume the OD
 
 ### 2.1 Domain Model
 
-Each Mendix SAP data model (previously referred to as "service modules") has a domain model that describes the information in the OData service. The domain model consists of entities and their relations represented by associations. For more information, see [Domain Model](../domain-model).
+Each Mendix SAP data model has a domain model that describes the information in the OData service. The domain model consists of entities and their relations represented by associations. For more information, see [Domain Model](../domain-model).
 
 ![](attachments/sap-data-models/sap-service-example.png)
 
@@ -51,13 +49,7 @@ The enumeration **EntitySetNames** contains a list of the collections in the ser
 
 The enumeration **FunctionNames** contains a list of functions which are exposed by the OData service. To assist in using these functions the domain model will also include an entity for each function, suffixed with the string *Parameters*, which is used to provide the required parameters to the function.
 
-## 3 SAP Data Models in the App Store<a name="appstoremodels"></a>
-
-To accelerate the consumption of the SAP Business Suite services, Mendix also provides the full set of Business Suite for SAP Fiori Cloud apps as modules in the Mendix App Store. Each **SAP Data** module in the App Store contains all the entities and attributes used in the apps consuming a service of the **SAP Business Suite**.
-
-For example, if you need a CRM app, it is recommended to use a **Field Sales Representative** service like **Check Price and Availability for Field Sales Representative**. The **Check Price and Availability for Field Sales Representative** > **SAP Service** module contains all the entities of the selected service. By using the **SAP Service** module with the **SAP OData Connector** module, you can retrieve those CRM entities from the SAP back-end system in your Mendix app.
-
-## 4 Read More
+## 3 Read More
 
 * [SAP OData Connector](sap-odata-connector)
 * [How To Use the SAP OData Model Creator](/howto/sap/use-sap-odata-model-creator)

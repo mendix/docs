@@ -1,7 +1,7 @@
 ---
-title: "Integration Recommendations"
+title: "Introduction to Integration"
 parent: "integration-overview"
-menu_order: 10
+menu_order: 1
 draft: true
 ---
 

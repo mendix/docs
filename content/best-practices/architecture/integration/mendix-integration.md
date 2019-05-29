@@ -1,7 +1,7 @@
 ---
 title: "Mendix & Integration"
 parent: "integration-overview"
-menu_order: 1
+menu_order: 2
 draft: true
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Service Integration"
 parent: "integration-overview"
-menu_order: 2
+menu_order: 3
 draft: true
 ---
 

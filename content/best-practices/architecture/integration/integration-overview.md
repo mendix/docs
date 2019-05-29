@@ -24,6 +24,7 @@ These are the questions addressed in the Integration Best Practices:
 
 These Best Practices contain theoretical guidelines for the following areas:
 
+* [Introduction to Integration](integration-intro)
 * [Service Integration](service-integration)
 * [UI Integration](ui-integration)
 * [Event-Based Integration](event-integration)
@@ -32,7 +33,6 @@ These Best Practices contain theoretical guidelines for the following areas:
 * [Process Integration](process-integration)
 * [Integration Layers](integration-layers)
 * [Ops & CI/CD Integration](ops-cicd-integration)
-* [Integration Recommendations](integration-recommendations)
 
 ### 1.3 Integration Examples
 

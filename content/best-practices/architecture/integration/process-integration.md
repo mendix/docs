@@ -27,7 +27,7 @@ When a business process runs across several systems, there will be some type of 
 	
 	![](attachments/process-integration/process-int3.png)
 
-* **State engine/event manager** – Events are passively gathered related to a process that runs across several systems. This is to determine that the process finishes correctly and that actions can be taken when something is wrong. This is useful for monitoring and managing a chain of business events (for example, packages for track-and-trace) and for high-volume asynchronous process orchestration.
+* **State engine/event manager** – Events are passively gathered related to a process that runs across several systems. This is to determine that the process finishes correctly and that actions can be taken when something is wrong. This is useful for monitoring and managing a chain of business events (for example, packages for track & trace) and for high-volume asynchronous process orchestration.
 
 	![](attachments/process-integration/process-int5.png)
 
@@ -150,7 +150,7 @@ The diagram below shows a typical situation from the logistics or supply-chain i
 
 The event manager makes sure that messages are not lost and that processes are not halfway finished. It can raise alarms when a phase is missing, something goes wrong, or a process takes too long to finish. The result of the alarm could be to notify the correct app in the chain, or to send a message to a dashboard for monitoring the process.
 
-Dashboards and/or track-and-trace solutions are usually built separately using services to retrieve the status or alarms. This makes them independent and allows for more than one-purpose views (for example, internal dashboard, external track-and-trace).
+Dashboards and/or track & trace solutions are usually built separately using services to retrieve the status or alarms. This makes them independent and allows for more than one-purpose views (for example, internal dashboard, external track & trace).
 
 The event manager solution is typically used when the following factors are true:
 

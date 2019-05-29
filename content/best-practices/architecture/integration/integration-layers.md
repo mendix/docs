@@ -23,7 +23,7 @@ Mendix recommends to balance these pros and cons by doing the following:
 * Build functional and autonomous microservices/apps or systems of apps, where the internal integration of the system does not have to go through an integration layer (meaning, there should be no integration layer between the GUI, logic, and data of the same business function, and no integration layer between Mendix apps that are part of the same functional system)
 * Use relatively "thin" integration layers, as suggested by microservice architecture guidelines (in other words, use less mapping and less functionality in the integration layer)
 * Consider using integration layers for distributed messaging, integration between departments, or integration with external parties
-  
+
 As the diagram below presents, Mendix prefers a mixed strategy with local connections between closely related microservices, while a thin integration layer is good for communication that is organizationally or network-wise farther away:
 
 ![](attachments/integration-layers/il-intro2.png)

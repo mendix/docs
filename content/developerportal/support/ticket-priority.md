@@ -9,7 +9,7 @@ tags: ["support", "request", "impact", "urgency"]
 
 ## 1 Introduction
 
-The priority levels are determined based on the impact and urgency of the request
+The priority levels are based on the impact and urgency of the request.
 
 ## 2 Prioritization
 
@@ -27,7 +27,7 @@ The priority levels are determined based on the impact and urgency of the reques
 
 ## 3 Priority Matrix
 
-The ticket priority that Mendix determines is based on this matrix:
+The ticket priority that Mendix Support validates is based on this matrix:
 
 ![](attachments/submit/204371729-pic5.png)
 

@@ -133,7 +133,7 @@ An integration layer can also provide connectivity to old protocols and/or provi
 
 This diagram presents some examples of how an integration layer enables new patterns by dividing the integration into two parts:
 
-![](attachments/integration-layers/management.png)
+![](attachments/integration-layers/il-6.png)
 
 * Service orchestration combines services
 * Service reuse is the same as with direct integration. 
@@ -148,7 +148,7 @@ Mendix has strong integration capabilities, and it is easy to add UI elements to
 
 This diagram shows the three styles next to each other – thick ESB, thin ESB, and integration apps:
 
-![](attachments/integration-layers/il-6.png)
+![](attachments/integration-layers/il-7.png)
 
 ## 5 Summary
 

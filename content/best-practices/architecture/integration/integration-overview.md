@@ -7,49 +7,52 @@ draft: true
 
 ## 1 Introduction
 
-Most solutions (which are made up of various applications) require integration with other apps and systems. Such integration is easy with Mendix, but there are many options to choose from. Integration is like the glue between components in a solution, and it needs to be adaptable for all possible functional scenarios. 
+The Mendix Expert Best Practices for Integration will help Lead Developers, Designers, and Architects to see examples for integration solutions made with the Mendix Platform involved. They will also provide recommendations for when to choose one option over another.
 
-As more core systems are built using Mendix microservices, integration is increasingly important, as is using a set of microservices together to perform a business funtion. That is called a microservices "system."
+### 1.1 What Questions Are Addressed?
 
-These Best Practices for integration position Mendix apps in a number of roles in a typical enteprise architecture. The Best Practices consider typical integration options and recommend (where possible) the easiest and/or most stable way to integrate Mendix apps or microservice systems into a landscape.
+These are the questions addressed in the Integration Best Practices:
 
-This diagram illustrates the question this section tries to address:
+* What are good business scenarios for using Mendix?
+* How do you integrate Mendix in an enterprise landscape?
+* What technical and functional options are there for integration?
+* How do you move towards a more microservice-oriented architecture?
 
 ![](attachments/integration-overview/int-ov2.png)
 
-{{% alert type="info" %}}
-Internal integration of a business function via GUI–logic–data integration within a Mendix app is handled out-of-the-box in the Mendix Platform. This means that a typical Mendix app project has many fewer integration points than, for example, an SOA-layered architecture project, where every user story typically passes 3–5 technical layers.
-{{% /alert %}}
+### 1.2 Integration Guidelines
 
-## 2 Integration Overview
+These Best Practices contain theoretical guidelines for the following areas:
 
-The Best Practices for integration are intended for Architects, Lead Developers, and other stakeholders to evaluate different integration options that will make solutions stable and easy to maintain.
+* [Service Integration](service-integration)
+* [UI Integration](ui-integration)
+* [Event-Based Integration](event-integration)
+* [Batch Integration](batch-integration)
+* [Central Data](central-data)
+* [Process Integration](process-integration)
+* [Integration Layers](integration-layers)
+* [Ops & CI/CD Integration](ops-cicd-integration)
+* [Integration Recommendations](integration-recommendations)
 
-These Best Practices will cover the following content areas:
+### 1.3 Integration Examples
 
-![](attachments/integration-overview/int-ov3.png)
+The Integration Best Practices also include [Integration Examples](integration-use-cases). In future versions, these documented examples will be accompanied by examples in the Mendix App Store.
 
-These are the typical use cases that will be described:
+Tthe typical examples that will be described are shown in the diagram below. At this time, only use cases for [Export, Import & Batch Processing](export-import-batch) and [Workflow Integration](workflow-integration) are available. 
 
 ![](attachments/integration-overview/int-ov4.png)
 
-{{% alert type="info" %}}
-At this time, only use cases for [Export, Import & Batch Processing](export-import-batch) and [Workflow Integration](workflow-integration) are available.
-{{% /alert %}}
+## 2 How to Use the Integration Best Practices
 
 ### 2.1 Enterprise Architecture, Positioning & Project Validation
 
-Best Practices for integration do not focus on positioning. But since Mendix applications are shown in a number of roles as integrated with other systems in the enterprise, these Best Practices can be useful in this area. 
-
-Enterprise and Domain Architects can scan these Best Practices for typical use cases and examples of how Mendidx has been used. This is useful for positioning Mendix within the enterprise and validating for which projects and roles Menidx apps may be useful.
-
-This diagram presents the basic steps of this process:
+Enterprise and Domain Architects can scan these Best Practices for typical examples of how the Mendidx Platform has been used for integration. This is useful for positioning Mendix within the enterprise and validating for which projects and roles Menidx apps may be useful. This diagram presents the basic steps of this process:
 
 ![](attachments/integration-overview/int-ov5.png)
 
 ### 2.2 Solution Architecture & Project Planning
 
-Solution Architects and Lead Developers will gain an overview of the available options as well as recommendations for integration. This can lead to more realistic estimates and a better solution architecture. The diagram shows the basic steps expected:
+Solution Architects and Lead Developers will gain an overview of the available options as well as recommendations for integration. This can lead to more realistic estimates, a better solution architecture, and hopefully more stable solutions. The diagram shows the basic steps expected:
 
 ![](attachments/integration-overview/solution-architecture.png)
 
@@ -67,15 +70,9 @@ A new category of integration is growing important in the DevOps and microservic
 
 ## 3 Related Documents
 
-The Best Practices for integration include [Integration Use Cases](integration-use-cases) and guidelines. 
-
-These use cases are supplemented by the following documentation and training material:
+There is the following documentation and training material available around integration:
 
 * [Integration](/refguide7/integration) in the *Mendix 7 Reference Guide*
 * [Integration](/howto7/integration/) in the *Mendix 7 How-to's*
 * [Integration](https://www.mendix.com/evaluation-guide/app-capabilities/integration) in the *Mendix Platform Evaluation Guide*
 * [Integration Authentication](https://gettingstarted.mendixcloud.com/link/module/117/lecture/944) in the *Mendix Academy*
-
-
-
-

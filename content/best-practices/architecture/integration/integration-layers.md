@@ -13,7 +13,7 @@ For large enterprises with several departments and hundreds of systems, it makes
 * A connectivity layer between networks, for example between cloud and premises, geographies or areas, and customer systems and external companies (as an external API gateway) 
 * A messaging platform with queue management
 
-As you move away from SOA architectures towards microservices with "dumb pipes and smart end-points," you can observe the following points:
+As you move away from SOA architectures towards microservices with "dumb pipes and smart endpoints," you can observe the following points:
 
 * Integration layers are getting thinner, meaning, they usually do less functionally than before, with often no transformation at all
 * There are rarely integration layers within systems, meaning, you usually do not have an integration layer between the UI and the database of an app or a system

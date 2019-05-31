@@ -14,50 +14,70 @@ The SAP OData Connector is a specific SAP connector for integrating with SAP bac
 
 * Add the SAP OData Connector to your Mendix app
 * Configure the SAP OData Connector
-
-{{% alert type="warning" %}}
-The SAP OData endpoint which is used in this how-to has been moved, so this example will no longer work when run.
-
-We are investigating a new SAP OData endpoint and will update this how-to as soon as we can.
-{{% /alert %}}
-
-## 2 Prerequisites
-
-Before starting this how-to, make sure you have completed the following prerequisites:
-
-* Create the app in Mendix Studio Pro
-* Get the SAP OData Connector module
-* Get an SAP data model
+* Display Data from an SAP OData service in your Mendix app
 
 {{% alert type="warning" %}}
 SAP OData Connector only supports SAP OData Gateway Services which use OData version 2 or version 3. OData version 4 is not yet supported.
 {{% /alert %}}
 
-### 2.1 Getting the SAP OData Connector Module
+## 2 Prerequisites{#prerequisistes}
 
-To be able to use the OData Connector; first create your project. Inside , navigate to the Mendix App Store to download the [SAP OData Connector](https://appstore.home.mendix.com/link/app/74525/Mendix/SAP-OData-Connector) module. You will then find this module in your app project's App Store modules.
+Before starting this how-to, make sure you have completed the following prerequisites:
+
+* Create an app in Mendix Studio Pro
+* Get authorization credentials for the [SAP NetWeaver (ES5)](https://sapes5.sapdevcenter.com/)
+
+## 3 Getting the SAP OData Connector Module
+
+To be able to use the OData Connector; first create your project. Inside, navigate to the Mendix App Store to download the [SAP OData Connector](https://appstore.home.mendix.com/link/app/74525/Mendix/SAP-OData-Connector) module. You will then find this module in your app project's App Store modules.
 
 For more information, see [How to Use App Store Content](/developerportal/app-store/app-store-content).
 
-### 2.2 Getting an SAP Data Model
+## 4 Getting an SAP Data Model
 
-To get started quickly, you can download one of the SAP data models available in the [Mendix App Store](https://appstore.mendix.com/). An SAP data model is available as a module that you can add to your app. The module contains a pre-built domain model for a specific service of SAP.
+In this example, you will display a list of products from the GWSAMPLE_BASIC OData service.
 
-If you want to use an SAP data model that is not available in the Mendix App Store, you can generate the SAP data model based on an OData service from an SAP back-end system. 
+You will need to create an SAP data model module for the GWSAMPLE_BASIC OData service. The module contains a pre-built domain model that you can add to your app.
 
-For more information, see [SAP Data Models](/refguide/sap/sap-data-models) and [Use the SAP OData Model Creator](use-sap-odata-model-creator).
+1. Open the [SAP OData Model Creator](https://sapodatamodelcreator.mendixcloud.com/).
+
+2. Click **SAP Catalog Service**.
+
+3. Enter your **User name** and **Password** for the ES5 SAP Service Catalog (see [Prerequisites](#prerequisites), above).
+
+4. Type *sapes5.sapdevcenter.com* as the **Server**. (Leave the protocol as `https://` and the **Port** as `443`).
+
+5. Click **Continue**.
+
+    ![](attachments/use-sap-odata-connector/login-catalog.png)
+
+6. Type *GWSAMPLE* in the search box and press <kbd>Enter</kbd>.
+
+7. Select **GWSAMPLE_BASIC** and click **Continue**.
+
+8. Select **GWSAMPLE_BASIC** again and click **Continue**.
+
+9. Click **Generate .mpk**.
+
+    ![](attachments/use-sap-odata-connector/generate-mpk.png)
+
+10. Click **Download** once the model is ready.
+
+11. Select **Save File**.
+
+12. Choose the **/resources** folder within the folder where your app project is stored on your PC and click **Save**.
+
+13. Open your app in Mendix Studio Pro.
+
+14. 
+
+For more information, see [Use the SAP OData Model Creator](use-sap-odata-model-creator) and [SAP Data Models](/refguide/sap/sap-data-models).
 
 ## 3 Using the SAP OData Connector
 
 In this section, you will learn how to implement the data connector in your Mendix app.
 
 ### 3.1 Creating a Microflow<a name="microflow"></a>
-
-In this example, you are retrieving a list of customers that is available in the SAP data model named **SAP Check Price and Availability Connector**.
-
-{{% alert type="info" %}}
-This is NOT the very similar SAP data model, **SAP Check Price and Availability for Field Sales Representative**.
-{{% /alert %}}
 
 To create the microflow for this retrieve, follow these steps:
 

@@ -6,7 +6,9 @@ notoc: true
 layout: wide
 ---
 
-{{% todo %}}[**THESE CARDS DO NOT REFLECT CURRENTLY PUBLISHED OR PLANNED CONTENT. IT IS THE DOCS TEAM POLICY THAT DOCUMENTATION DOES NOT ADVERTISE FUTURE DOCUMENTATION/PRODUCTS (THAT SHOULD BE DONE IN MARKETING/BLOG POSTS). THE "Coming soon!" CARDS SHOULD THUS BE REMOVED. WE SHOULD CONSIDER PUBLISHING THE "Best Practices Overview" CONTENT ON THIS PAGE INSTEAD, OR SOMETHING ENTIRELY ARCHITECTURE-FOCUSED (WHICH CAN BE ADJUSTED IF/WHEN FUTURE BEST PRACTICES ARE COMMITTED TO AND WRITTEN.**]{{% /todo %}}
+{{% todo %}}[**These cards do not reflect the currently published or planned content. It is the policy of the Documentation Team not to advertise future documentation/products (that should be done in Marketing content or blog posts). The "Coming soon!" cards should thus be removed.**]{{% /todo %}}
+
+{{% todo %}}[**We should consider publishing the "Best Practices Overview" content on this page instead of cards altogether. Or, something entirely Architecture-focused (which cah be adjusted if/when future best practices are written.**]{{% /todo %}}
 
 {{% partial "cards/overview.html" %}}
 

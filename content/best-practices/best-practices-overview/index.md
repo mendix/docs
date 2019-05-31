@@ -3,7 +3,8 @@ title: "Best Practices Overview"
 description: "Best practices overview."
 draft: true
 ---
-{{% todo %}}[**THIS DOC NEEDS ATTENTION FOR LONG-TERM VISION ON BPs; IF ONLY ARCHITECTURE > INTEGRATION WILL BE PUBLISHED WITH SUPPORT, THEN THIS DOC SHOULD BE ADJUSTED TO ONLY REFLECT THAT CONTENT**]{{% /todo %}}
+
+{{% todo %}}[**This doc needs attention for long-term vision on Best Practices. If only Architecture Best Practices or even Architecture > Integration will be published with long-term support, then this doc should be adjusted to reflect that content.**]{{% /todo %}}
 
 ## 1 Introduction 
 

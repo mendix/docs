@@ -6,7 +6,7 @@ description: "Presents reference information on the use of the SAP OData Connect
 tags: ["SAP", "integration", "OData", "BAPI"]
 ---
 
-## 1 Introduction<a name="Introduction"></a>
+## 1 Introduction{#Introduction}
 
 This documentation describes the actions and domain model of the SAP OData Connector module. 
 
@@ -28,7 +28,7 @@ When running the Mendix application on SAP Cloud Platform, you can choose to use
 The SAP Destination Service replaces the SAP Cloud Connector flag which was used in previous version of the SAP OData Connector
 {{% /alert %}}
 
-## 2 Using the SAP OData Connector<a name="UsingtheSAPODataConnector"></a>
+## 2 Using the SAP OData Connector{#UsingtheSAPODataConnector}
 
 Once you have downloaded the SAP OData Connector from the App Store, it will be imported into your app. You will find it in the Project Explorer under project **{Project name}** > **App Store modules** > **SAPODataConnector**.
 
@@ -65,36 +65,42 @@ Most of the actions of the SAP OData Connector make use of a domain model repres
 You can create a data model by inspecting the service metadata. The response from the service can be used in the [SAP OData Model Creator](https://sapodatamodelcreator.mendixcloud.com/) to generate a domain model which can be imported into your app. Instructions for doing this are in [How to Use the SAP OData Model Creator](/howto/sap/use-sap-odata-model-creator).
 
 {{% alert type="info" %}}
-In addition to the domain model, the OData Model Creator will also create two other items:
+In addition to the domain model, the OData Model Creator will also create three other items:
 
 * A constant with the name of the service which has the value of the Service Root URL for the SAP OData service you are using
-* An enumeration (**EntitySetNames**) containing a list of all the entities in the entity model
+* An enumeration (**EntitySetNames**) containing a list of all the entities in the entity model and the OData entity sets that correspond to them
+* An enumeration (**FunctionNames**) containing a list of all the functions which are exposed by the OData service
 {{% /alert %}}
 
 ![](attachments/sap-odata-connector/serviceroot.png)
 
-The examples used in this guide are based on the **SAP My Tasks for Field Sales Representative (CRM)** data model, created from an OData service exposed by the back-end system of www.sapfioritrial.com.
+The examples used in this guide are based on the **GWSAMPLE_BASIC** OData service exposed by the back-end system of sapes5.sapdevcenter.com.
 
-You will need to have an SAP account with access to the [SAP NetWeaver (ES5)](https://sapes5.sapdevcenter.com/) system.
+{{% alert type="info" %}}
+You will need to have an SAP account with access to the [SAP NetWeaver (ES5)](https://sapes5.sapdevcenter.com/) system to be able to use this service.
+{{% /alert %}}
 
-This data model can be obtained in the following ways:
+This data model for the GWSAMPLE_BASIC service can be obtained from the [SAP OData Model Creator](https://sapodatamodelcreator.mendixcloud.com/). You do one of the following:
 
-* You can download it from the App Store [here](https://appstore.home.mendix.com/link/app/89942/). If you download it within Studio Pro, it will be saved in Project Explorer under **Project {name}** > **App Store modules** > **CRM_TASK**.
-* You can create it using the OData metadata XML for Customer Relationship Management Tasks, which can be found at [https://www.sapfioritrial.com/sap/opu/odata/sap/CRM_TASK/$metadata](https://www.sapfioritrial.com/sap/opu/odata/sap/CRM_TASK/$metadata). Save this file and then, using the instructions in [How to Use SAP OData Model Creator](/howto/sap/use-sap-odata-model-creator), import it into your app.
+* You can create it manually using the OData metadata XML for GWSAMPLE_BASIC, which can be found at [https://sapes5.sapdevcenter.com/sap/opu/odata/iwbep/GWSAMPLE_BASIC/$metadata](https://sapes5.sapdevcenter.com/sap/opu/odata/iwbep/GWSAMPLE_BASIC/$metadata)
+* You can find it in the **SAP Catalog Service** of the [SAP OData Model Creator](https://sapodatamodelcreator.mendixcloud.com/)
+    * Log in to the server *sapes5.sapdevcenter.com* using your SAP ES5 credentials
+    * Search for the GWSAMPLE_BASIC API
+    * Use the GWSAMPLE_BASIC Schema
 
-Make sure that you review the value of the constant containing the URL of the SAP service you are using after you have imported the data model into your app.
+In both cases, save the file you download from the **SAP OData Model Creator** and then, using the instructions in [How to Use SAP OData Model Creator](/howto/sap/use-sap-odata-model-creator), import it into your app. Make sure that you review the value of the constant containing the URL of the SAP service you are using after you have imported the data model into your app.
 
 Part of the data model for this sample data is:
 
-![](attachments/sap-odata-connector/domainmodelcrmtask-sapodataconnector.png)
+![](attachments/sap-odata-connector/domainmodelgwsample_basic-sapodataconnector.png)
 
 This domain model generally works in the same way as a Mendix domain model, with entities, attributes, and associations. However, there are two additions to support the SAP OData Connector:
 
 * Every object is based on an entity which is a specialization of the ComplexType, FunctionParameters, or OdataObject entity. The OdataObject entity adds a **meta_objectURI** string, which is the URI of the object and can be used in entity manipulation actions, and a **meta_etag** string that identifies a state of the object. This is used by the OData service when you try to change data to check if it has been changed since it was retrieved by your app.
-* Many objects have attributes which end in ...Deferred. These contain URIs which will return a list of objects of an entity type which is associated with the current object. For example: in the domain model above, the Task entity contains an attribute AttachmentsDeferred. This will contain a URI which can be used to return a list of TaskAttachments associated with the current Task object via the Attachments_Task_TaskAttachment association.
+* Many objects have attributes which end in …Deferred. These contain URIs which will return a list of objects of an entity type which is associated with the current object. For example: in the domain model above, the Product entity contains an attribute ToSupplierDeferred. This will contain a URI which can be used to return the BusinessPartner associated with the current Product object via the ToSupplier_Product_BusinessPartner association.
 
 {{% alert type="info" %}}
-If you are using the *SAP Destination Service* to identify the endpoint of your SAP OData Service, you will need to edit the strings from the  meta_objectURI and ...Deferred attributes as they will already contain an endpoint in addition to the object references.
+If you are using the *SAP Destination Service* to identify the endpoint of your SAP OData Service, you will need to edit the strings from the  meta_objectURI and …Deferred attributes as they will already contain an endpoint in addition to the object references.
 {{% /alert %}}
 
 #### 2.3.2 SAP OData Connector Domain Model<a name='ConnectorDM'></a>
@@ -140,7 +146,7 @@ This domain model is part of the SAP OData Connector module and can be found in 
     * AuthTokens
     * Root
 
-## 3 Actions<a name="Actions"></a>
+## 3 Actions{#Actions}
 
 This section describes all the actions of the SAP OData Connector. They are categorized as being either for [entity and attribute manipulation](#EntityManipulation) or [helper actions](#HelperActions).
 
@@ -148,7 +154,7 @@ Some inputs are necessary for the connector to work and these are marked **(requ
 
 A more detailed description of the parameters is in section [4. Connector Action Parameters](#ConnectorActionParameters).
 
-### 3.1 Entity and Attribute Manipulation<a name="EntityManipulation"></a>
+### 3.1 Entity and Attribute Manipulation{#EntityManipulation}
 
 #### 3.1.1 Create
 
@@ -176,17 +182,19 @@ In the image below, creating a **Parent** object via the SAP OData Connector wil
 
 ![](attachments/sap-odata-connector/deep-create-parent-child.png)
 
-For example, this connector can be used to create a task using the **SAP My Tasks for Field Sales Representative (CRM)** service. In this case the **Query** is
+For example, this connector can be used to create a product using the **GWSAMPLE_BASIC** service. In this case the **Query** is
 
 ```javascript
-@CRM_TASK.CRM_TASK + '/' + toString(CRM_TASK.EntitySetNames.Tasks)
+@GWSAMPLE_BASIC.GWSAMPLE_BASIC + '/' + toString(GWSAMPLE_BASIC.EntitySetNames.ProductSet)
 ```
 
-**@CRM_TASK.CRM_TASK** is the constant in the SAP Service Data Model which identifies the Service Root for this OData service.
+**@GWSAMPLE_BASIC.GWSAMPLE_BASIC** is the constant in the SAP Service Data Model which identifies the Service Root for this OData service.
 
-**CRM_TASK.EntitySetNames.Tasks** is the name of the Tasks collection listed in the EntitySetNames enumeration of the SAP Service Data Model.
+**GWSAMPLE_BASIC.EntitySetNames.ProductSet** is the name of the Product collection listed in the EntitySetNames enumeration of the SAP Service Data Model.
 
-The **Odata object** is an object of entity type **Task**. This can be created, by using, for example, the **Create Object** action.
+The **Odata object** is an object of entity type **Product**. This can be created, by using, for example, the **Create Object** action.
+
+ You will need to pass authentication using **Request Parameters** and the **Add basic authentication** action described in [Helper Actions](#HelperActions), below.
 
 #### 3.1.2 Delete
 
@@ -200,7 +208,7 @@ The Delete operation deletes an existing entity instance in the SAP back-end sys
   * Return type - Boolean
   * Variable - the name which you would like to give to the boolean variable holding the value indicating the success or failure of the delete action
 
-For example, this connector can delete a task using the **SAP My Tasks for Field Sales Representative (CRM)** service.
+For example, this connector can delete a product using the **GWSAMPLE_BASIC** service.
 
 #### 3.1.3 Execute entry
 
@@ -251,14 +259,14 @@ The Get Entry operation gets a single existing entity instance from the OData se
   * Return type - Object: an object which has the same type as the entity type which was passed as Response type
   * Variable - the name which you would like to give to the object which is returned by the OData service
 
-For example, this connector can get details of a task using the **SAP My Tasks for Field Sales Representative (CRM)** service. This can often be done by passing the meta_objectURI attribute of an object, in this case a Task, which you have already retrieved.
+For example, this connector can get details of a product using the **GWSAMPLE_BASIC** service. This can often be done by passing the meta_objectURI attribute of an object, in this case a Product, which you have already retrieved.
 
-For a task with the reference **guid'00505697-47E6-1EE7-BED1-6C5662A87345'**, the URL would be set to:
+For a product with the reference **HT-1000**, the URL would be set to:
 
 ```javascript
-@CRM_TASK.CRM_TASK + '/' + toString(CRM_TASK.EntitySetNames.Tasks) + '(guid%2700505697-47E6-1EE7-BED1-6C5662A87345%27)'
+@GWSAMPLE_BASIC.GWSAMPLE_BASIC + '/' + toString(GWSAMPLE_BASIC.EntitySetNames.ProductSet) + 'HT-1000'
 ```
-This produces the GET request https://www.sapfioritrial.com/sap/opu/odata/sap/CRM_TASK/Tasks(guid'00505697-47E6-1EE7-BED1-6C5662A87345') and, if the task exists, returns it.
+This produces the GET request https://sapes5.sapdevcenter.com/sap/opu/odata/iwbep/GWSAMPLE_BASIC/ProductSet('HT-1000') and, if the product exists, returns it.  You will need to pass authentication using **Request Parameters** and the **Add basic authentication** action described in [Helper Actions](#HelperActions), below.
 
 #### 3.1.6 Get List
 
@@ -275,13 +283,13 @@ The Get List action gets a list of objects described by a type of entity in the 
   * Return type - List
   * Variable - the name which you would like to give to the list of objects which was returned from the query
 
-For example, to return a list of my tasks, sorted in descending order of CreatedAt using the **SAP My Tasks for Field Sales Representative (CRM)** (CRM_TASK) service, you could enter the following **Query**:
+For example, to return a list of products in the category *Notebooks*, using the **GWSAMPLE_BASIC** service, you could enter the following **Query**:
 
 ```javascript
-@CRM_TASK.CRM_TASK + '/' + toString(CRM_TASK.EntitySetNames.Tasks) + '?' + '$orderby=CreatedAt%20desc' + '&' + '$filter=MyTask%20eq%20true' + '&' + '$inlinecount=allpages'
+@GWSAMPLE_BASIC.GWSAMPLE_BASIC + '/' + toString(GWSAMPLE_BASIC.EntitySetNames.ProductSet) + '?' + '$filter=Category%20eq%20''Notebooks''' + '&' + '$inlinecount=allpages'
 ```
 
-The **Response Type** would be CRM_TASK.Task. **Request Parameters**, **Parent**, and **Result info** can be set to _empty_ **Use SAP cloud connector** should be set to **False**.
+The **Response Type** would be GWSAMPLE_BASIC.Product. You will need to pass authentication using **Request Parameters** and the **Add basic authentication** action described in [Helper Actions](#HelperActions), below.
 
 #### 3.1.7 Refresh
 
@@ -307,16 +315,16 @@ The Update operation changes the attributes of an existing entity instance in th
   * Return type - Boolean
   * Variable - the name which you would like to give to the boolean variable indicating the success or failure of the update action
 
-For example, this connector can update details of a task using the **SAP My Tasks for Field Sales Representative (CRM)** service.
+For example, this connector can update details of a product using the **GWSAMPLE_BASIC** service.
 
-### 3.2 Helper Actions<a name="HelperActions"></a>
+### 3.2 Helper Actions {#HelperActions}
 
 #### 3.2.1 Add basic authentication
 
 This action is a specialized version of the Add header action. It allows an authentication request to be made without having to manually encode the parameters as Base64. This header will have a name of 'Authorization' and a value which is the encoding of the Username and Password passed to the action.
 
 * Input
-  * Request Parameters (required) - The request parameters are passed as an object of entity type RequestParams. This can be created by using the Create request params action
+  * Request Parameters (required) - The request parameters are passed as an object of entity type RequestParams. This can be created by using the **Create request params** action
   * Username (required) - The user to be authenticated
   * Password (required) - The password for the user to be authenticated
 * Output
@@ -330,7 +338,7 @@ One or more headers can be provided to the SAP OData Connector actions by adding
 When you need to pass additional HTTP headers in an SAP OData Connector action, **you do not pass the headers directly as a single parameter**. The headers are associated with a RequestParams object and it is this object which is used as a parameter to the action. This enables a variable number of headers to be passed easily to an action.
 
 * Input
-  * Request Parameters (required) - The request parameters are passed as an object of entity type RequestParams. This can be created by using the Create request params action
+  * Request Parameters (required) - The request parameters are passed as an object of entity type RequestParams. This can be created by using the **Create request params** action
   * Name (required) - the name of the HTTP header field
   * Value (required) - the value of the HTTP header field
 * Output
@@ -380,7 +388,7 @@ This creates a **CloudConnectorInfo** object and fills the values for **ProxyHos
 If your app is not running on SAP Cloud Platform, this action will throw an error.
 {{% /alert %}}
 
-## 4 Connector Action Parameters<a name="ConnectorActionParameters"></a>
+## 4 Connector Action Parameters{#ConnectorActionParameters}
 
 This section describes in more detail each of the parameters which is used by one or more of the actions described in section [3. Actions](#Actions).
 
@@ -414,7 +422,7 @@ Destination is the name of the object of type SAPODataConnector.Destination wher
 The SAP Destination Service will only provide the correct information when run on SAP Cloud Platform. To test your app on your local machine you will have to use a URL to connect directly to an SAP service which is available to you.
 {{% /alert %}}
 
-#### 4.1.4 Query<a name="Query"></a>
+#### 4.1.4 Query{#Query}
 
 This is the OData query which identifies what data should be returned. This query formats an SQL query such as "SELECT * FROM EntitySet WHERE (foo) ORDER BY (bar) ..." into a OData GET request like "GET ~/EntitySet?$filter=foo&$orderby=bar...". It is the responsibility of the developer to ensure that the query is constructed correctly.
 
@@ -426,23 +434,23 @@ The format of the Query is:
 
 The Query edit box will help you by offering suggestions as described above.
 
-**@SERVICEROOT** is a constant which is created in the SAP Service Data Model and has a value which is the root URL of the OData service, for example: https://www.sapfioritrial.com/sap/opu/odata/sap/CRM_TASK.
+**@SERVICEROOT** is a constant which is created in the SAP Service Data Model and has a value which is the root URL of the OData service, for example: https://sapes5.sapdevcenter.com/sap/opu/odata/iwbep/GWSAMPLE_BASIC.
 
 {{% alert type="info" %}}
-If you are using a *Destination* configured by the SAP Destination Service, then the @SERVICEROOT should be empty. In other words, the query should begin with the `'/'` before the COLLECTIONNAME. 
+If you are using a *Destination* configured by the SAP Destination Service, then the **@SERVICEROOT** should be empty. In other words, the query should begin with the `'/'` before the COLLECTIONNAME. 
 {{% /alert %}}
 
-**COLLECTIONNAME** can be found in the enumeration EntitySetNames which lists all the collections in the SAP Service Data Model, for example: the collection Tasks will be shown as @SERVICEROOT.EntitySetNames.Tasks
+**COLLECTIONNAME** can be found in the enumeration EntitySetNames which lists all the collections in the SAP Service Data Model, for example: the collection SalesOrderSet will be shown as @SERVICEROOT.EntitySetNames.SalesOrderSet
 
 **QUERYPARAMETERS** are the parameters of the OData query which identify which objects should be returned. Please note:
 
 * The OData service will define how entities and attributes can be used.  For example, the metadata for the service will include a boolean indicating whether an attribute is **filterable** and/or **sortable**
-* The **$expand=[entity]** parameter will return associated (child) entity objects as part of a single query instead of having to retrieve them via a second query; for example, **$expand=TaskStatus** added to a query on the **Tasks** collection will return a list of Tasks and all the TaskStatus objects associated with them
+* The `$expand=[association]` parameter will return associated (child) entity objects as part of a single query instead of having to retrieve them via a second query; for example, `$expand=ToLineItems` added to a query on the **SalesOrderSet** collection will return a list of `SalesOrder` objects and all the `SalesOrderLineItem` objects associated with them via the association `ToLineItems_SalesOrder_SalesOrderLineItem`
 
-For example, to return a list of my tasks, sorted in descending order of CreatedAt from our **SAP My Tasks for Field Sales Representative (CRM)** (CRM_TASK) service, you could enter the following query:
+For example, to return a list of products in the category *Notebooks*, using the **GWSAMPLE_BASIC** service, you could enter the following **Query**:
 
 ```javascript
-@CRM_TASK.CRM_TASK + '/' + toString(CRM_TASK.EntitySetNames.Tasks) + '?' + '$orderby=CreatedAt%20desc' + '&' + '$filter=MyTask%20eq%20true' + '&' + '$inlinecount=allpages'
+@GWSAMPLE_BASIC.GWSAMPLE_BASIC + '/' + toString(GWSAMPLE_BASIC.EntitySetNames.ProductSet) + '?' + '$filter=Category%20eq%20''Notebooks''' + '&' + '$inlinecount=allpages'
 ```
 {{% alert type="info" %}}
 Note that the request has to be URL encoded so that, for example, spaces have to be encoded as %20. Mendix has the function urlEncode() which can do this for you.
@@ -450,12 +458,11 @@ Note that the request has to be URL encoded so that, for example, spaces have to
 
 This is the equivalent of the SQL SELECT statement:
 
-SELECT * FROM Tasks WHERE MyTask=true ORDER BY CreatedAt DESC
+SELECT * FROM SalesOrderSet WHERE Category='Notepads'
 
 The $inlinecount=allpages clause asks OData to return a count of the number of objects returned in the list. This will be stored in SAPODataConnector.ResultInfo.totalCount.
 
 You can find more information about OData queries in [OData Query Options](/refguide/odata-query-options).
-
 
 #### 4.1.5 Url
 
@@ -471,20 +478,20 @@ When you are referencing an object, the format of the URL is:
 @SERVICEROOT + '/' + toString(COLLECTIONNAME) + '/' + OBJECTINSTANCE
 ```
 
-**@SERVICEROOT** is a constant which is created in the SAP Service Data Model and has a value which is the root URL of the OData service, for example: https://www.sapfioritrial.com/sap/opu/odata/sap/CRM_TASK.
+**@SERVICEROOT** is a constant which is created in the SAP Service Data Model and has a value which is the root URL of the OData service, for example: https://sapes5.sapdevcenter.com/sap/opu/odata/iwbep/GWSAMPLE_BASIC.
 
 {{% alert type="info" %}}
 If you are using a *Destination* configured by the SAP Destination Service, then the @SERVICEROOT should be empty. In other words, the query should begin with the `'/'` before the COLLECTIONNAME. 
 {{% /alert %}}
 
-**COLLECTIONNAME** can be found in the enumeration EntitySetNames which lists all the collections in the SAP Service Data Model, for example: the collection Tasks will be shown as @SERVICEROOT.EntitySetNames.Tasks
+**COLLECTIONNAME** can be found in the enumeration EntitySetNames which lists all the collections in the SAP Service Data Model, for example: the collection SalesOrderSet will be shown as @SERVICEROOT.EntitySetNames.SalesOrderSet
 
 **OBJECTINSTANCE** is generally available as an attribute of an entity object.
 
 Alternatively, you can obtain the entire URL from attributes of an object. For example, the **meta_objectURI** attribute of an object is the full URL to the instance of the object which is held by the OData service.
 
 {{% alert type="warning" %}}
-If you are using a *Destination*, you will need to remove the SERVICEROOT part of the URL attribute and start with *'/' + COLLECTIONNAME*.
+If you are using a *Destination*, you will need to remove the SERVICEROOT part of the meta_objectURI attribute and start with *'/' + COLLECTIONNAME*.
 {{% /alert %}}
 
 #### 4.1.6 Http method
@@ -502,11 +509,11 @@ Before you pass the function parameters you will need to set the value of the **
 * **true** - (default) the parameters will be sent as part of the HTTP GET or POST instruction
 * **false** - the parameters will be sent in the HTTP body after the HTTP headers
 
-For example: in the CRM_TASK SAP service domain model there is a function called TaskFollowUpTransTypes. This has an associated entity, TaskFollowUpTransTypesParameters, which is a specialization of the SAP OData Connector entity FunctionParameters. This function parameter entity indicates that you need to supply an odata_Guid and a TransactionType.
+For example: in the GWSAMPLE_BASIC service domain model there is a function called SalesOrder_InvoiceCreated. This has an associated entity, SalesOrder_InvoiceCreatedParameters, which is a specialization of the SAP OData Connector entity FunctionParameters. This function parameter entity indicates that you need to supply an SalesOrderID.
 
 ![](attachments/sap-odata-connector/functionsandfunctionparameters-sapodataconnector.png)
 
-To use this function you will need to create an object of entity type TaskFollowUpTransTypesParameters with the correct values for odata_Guid, TransactionType, and postParameterInline using the Create object action. You can then use these parameters when you invoke the function using Execute list.
+To use this function you will need to create an object of entity type SalesOrder_InvoiceCreatedParameters with the correct values for SalesOrderID and postParameterInline, using the Create object action. You can then use these parameters when you invoke the function using Execute li\st.
 
 #### 4.1.8 Request parameters
 
@@ -519,7 +526,7 @@ The parameters which can be changed are:
 * Read Timeout - how long the action should wait for a response to a request (default 120 seconds)
 * Proxy - override the default proxy settings for this action
 
-This is also the parameter which is passed when an SAP OData Connector action requires additional HTTP headers. The Header objects are attached to the RequestParams object via the Header_RequestParams association.
+This is also the parameter which is passed when an SAP OData Connector action requires additional HTTP headers. For example, you may need to pass a username and password to the service. The Header objects are attached to the RequestParams object via the Header_RequestParams association.
 
 For example, you may be initiating a service operation using the Execute entry action. This service operation requires an additional HTTP header. You also want to set the timeout for receiving the data to 10 seconds, and treat a 204 No Content as a success. You can do this by:
 
@@ -536,16 +543,16 @@ Request parameters can also be set to _empty_ if no headers are needed and the d
 
 This is an object which should be associated as the parent of a list of objects returned from the Get List action.
 
-Within the Mendix domain model representing an OData service, there are associations set up between the entities. However, these associations are not set when you get data from an OData service. The associations which exist within the OData service are held as ...Deferred attributes within the entity object. When a list of objects is returned, you can set up an association to a parent object within the Mendix domain model. A parent object is an object of an entity type which is at the one end of a one-to-many association to  another entity type.
+Within the Mendix domain model representing an OData service, there are associations set up between the entities. However, these associations are not set when you get data from an OData service. The associations which exist within the OData service are held as …Deferred attributes within the entity object. When a list of objects is returned, you can set up an association to a parent object within the Mendix domain model. A parent object is an object of an entity type which is at the one end of a one-to-many association to another entity type.
 
 Set this to _empty_ if it is not required.
 
-For example, Account is the parent entity of task via the Tasks_Account_Task association in the CRM_TASK domain model.
+For example, SalesOrder is the parent entity of SalesOrderLineItem via the ToHeader_SalesOrderLineItem_SalesOrder association in the GWSAMPLE_BASIC domain model.
 
-![](attachments/sap-odata-connector/taskaccounttask-sapodataconnector.png)
+![](attachments/sap-odata-connector/tolineitems-sapodataconnector.png)
 
 {{% alert type="info" %}}
-If you are using the *Destination Service* to identify the endpoint of your SAP OData Service, you will need to edit the values of the ...Deferred attributes as they will already contain an endpoint in addition to the object references.
+If you are using the *Destination Service* to identify the endpoint of your SAP OData Service, you will need to edit the values of the …Deferred attributes as they will already contain an endpoint in addition to the object references.
 {{% /alert %}}
 
 {{% alert type="warning" %}}
@@ -555,7 +562,7 @@ There is no data content validation on the Parent parameter. This means you will
 * Pass a parent object which has no association with the entity type of the returned list of objects
 {{% /alert %}}
 
-For example, you want to retrieve all the Tasks which are associated with the 'My Account' account via the Tasks_Account_Task association. By passing the taskDeferred URL to the Get List action as the URL and passing the Account entity as Parent, the Get List action will set the Task_Account_Task association between all the Tasks retrieved and the Account.
+For example, you want to retrieve all the SalesOrderLineItems which are associated with a SalesOrder via the ToLineItems_SalesOrder_SalesOrderLineItem association. By passing the ToLineItemsDeferred URL to the Get List action as the URL and passing the SalesOrder entity as Parent, the Get List action will set the ToLineItems_SalesOrder_SalesOrderLineItem association between all the SalesOrderLineItem objects retrieved and the SalesOrder.
 
 #### 4.1.10 Result info
 
@@ -602,10 +609,8 @@ This is the name that you give the result of your Activity. This can be used lat
 * [How to Use App Store Content](/developerportal/app-store/app-store-content)
 * [How to Use the SAP OData Connector](/howto/sap/use-sap-odata-connector)
 * [How to Use the SAP OData Model Creator](/howto/sap/use-sap-odata-model-creator)
-* [OData metadata XML for CRM Task](https://www.sapfioritrial.com/sap/opu/odata/sap/CRM_TASK/$metadata)
 * [SAP Cloud Connector](sap-cloud-connector)
 * [SAP Help Portal](https://help.sap.com)
-* [SAP My Tasks for Field Sales Representative (CRM) data model](https://appstore.home.mendix.com/link/app/89942/)
 * [SAP OData Connector](https://appstore.home.mendix.com/link/app/74525/Mendix/SAP-OData-Connector)
 * [SAP OData Model Creator](https://sapodatamodelcreator.mendixcloud.com/)
 * [SAP Data Models](sap-data-models)

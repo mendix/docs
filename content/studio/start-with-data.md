@@ -115,7 +115,7 @@ After import is completed, you can [preview or publish your app](publishing-app)
 
 {{% /alert %}}
 
-### 4.3 Generating Pages 
+### 4.3 Generating Pages {#generating-pages}
 
 If **Generate pages for my data** has been selected in the preview page, pages are created based on your spreadsheet. The following changes are made in the page editor and the navigation document :
 

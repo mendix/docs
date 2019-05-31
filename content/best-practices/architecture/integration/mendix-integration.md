@@ -57,82 +57,82 @@ For information on how to use these in the [version 7 Mendix Desktop Modeler](ht
 
 If there is a format that is not immediateley supported, it is easy to extend Mendix using the [Mendix Platform SDK](/apidocs-mxsdk/mxsdk/). This can happen when integrating to legacy systems and mainframes. For example, there could be an RPC with a text format message communicating directly on sockets over TCP/IP. 
 
-Even if this requires a more technical Mendix developer, there is no reason to avoid such extensions. Once the adapter is built, it can be published as in the Mendix App Store and be reused in other Mendix apps (for more information, see [How to Share App Store Content](/developerportal/app-store/share-app-store-content) in the *Developer Portal Guide*).
+Even if this requires a more technical Mendix developer, there is no reason to avoid such extensions. Once an adapter is built, it can be published in the Mendix App Store and be reused in other Mendix apps (for more information, see [How to Share App Store Content](/developerportal/app-store/share-app-store-content) in the *Developer Portal Guide*).
 
 ### 2.5 Security of Integration
 
-Most Mendix apps are deployed on the Mendix cloud and communicating with non-Mendix apps means communicating over the Internet. This is standard in all modern solutions, using encrypted channels:
+Most Mendix apps are deployed on the Mendix Cloud, so communicating with non-Mendix apps means communicating over the internet. This is standard in all modern solutions via these encrypted channels:
 
 * SSL for service calls
-* Sending along the authenticated user token for UI links
+* Sending along an authenticated user token for UI links
 * SFTP for files
 
-User tokens can also be sent along with service calls from one app to the other, but this is rarely necessary. The source app of any service call should make sure that the end-user is authorized to perform the UX function that requires the service call. I.e. for service integration, app-level authentication with SSL is usually sufficient and simpler to manage. 
+User tokens can also be sent along with service calls from one app to the other, but this is rarely necessary. The source app of any service call should make sure that the end-user is authorized to perform the UX function that requires the service call. This means that for service integration, app-level authentication with SSL is usually sufficient and simpler to manage. 
 
-## 3 Integration Categories
+## 3 Integration Solution Categories
 
-The Best Practices are oganized as a number of solution categories where Mendix often plays an important role: 
+The Mendix Integration Best Practices are oganized as a number of solution categories where Mendix often plays an important role: 
 
 * [Service Integration](service-integration)
 * [UI Integration](ui-integration)
 * [Event-Based Integration](event-integration)
 * [Batch Integration](batch-integration)
 * [Central Data](central-data)
+* [Process Integration](process-integration)
 * [Integration Layers](integration-layers)
-* [Ops Itegration](ops-integration)  <<added>>
+* [Ops & CI/CD Integration](ops-integration)
   
-Within these solution categories there are a number of use-cases and integration scenarios used in the documentation that shows how Mendix integrates within a landscape. Those can be accessed directly via the links below:
+Within these solution categories, there are a number of use cases and scenarios used in the Best Practices that show how the Mendix Platform integrates within a landscape. Those can be accessed directly via the links below.
 
-### 3.1. Service Integration cases
+### 3.1. Service Integration Use Cases
 
-<<SHOULD RE-DO SERVICE INTEGRATION FIRST - leave this like this for now>>
-* 3. REST Request-Reply to Transfer Data
-* 4. OData Integration
-* 5 Integration Apps & Adapters
+* [Request-Reply to Transfer Data](service-integration#transfer)
+* [Database Integration & OData](service-integration#db-odata)
+* [Integration Apps & Adapters](service-integration#adapters)
 
-### 3.2. UI Integration cases
+### 3.2. UI Integration Use Cases
 
-* 2 Deep Linking from App to App
-* 3 Web Link Integration for Websites
-* 4 CMS Integration for Customer Portals
-* 5 CDN Integration for Global Portals & Apps
+* [Deep Linking from App to App](ui-integration#deep)
+* [Web Link Integration for Websites](ui-integration#web)
+* [CMS Integration for Customer Portals](ui-integration#cms)
+* [CDN Integration for Global Portals & Apps](ui-integration#cdn)
 
-### 3.3. Event Based Integration
+### 3.3. Event-Based Integration Use Cases
 
-* 4 Event Streams, IoT, Logging & Metrics
-* 5 State Engines & Event Managers
-* 6 Using Queues with Mendix
+* [Event Streams, IoT, Logging & Metrics](event-integration#stream-iot)
+* [State Engines & Event Managers](event-integration#state)
+* [Using Queues with Mendix](event-integration#queues)
 
-### 3.4 Batch Integration
+### 3.4 Batch Integration Use Cases
 
-* 2 Using Batch Processing
-* 3 Reference Data Examples with Mendix
-* 4 File Integration and Management
-* 5 Export & Import
-* 6 ETL, DWH & BI Integration
+* [Using Batch Processing](batch-integration#using)
+* [Reference Data Examples with Mendix](batch-integration#reference)
+* [File Integration & Management](batch-integration#file-integration)
+* [Export & Import](batch-integration#export-import)
+* [ETL, DWH & BI Integration](batch-integration#int)
 
-### 3.5 Central Data
+### 3.5 Central Data Use Cases
 
-* 2 Shared Data Apps (SDA)
-* 3 Self-learning Processes using Data Lakes  <<WILL RE-NAME THIS>>
+* [Shared Data App (SDA)](central-data#sda)
+* [Self-Learning Processes Using Data Lakes](central-data#data-lakes)
 
-### 3.5 Process Integration
+### 3.5 Process Integration Use Cases
 
-* 2 Business Events & Process Flow
-* 4 Case Management
-* 5 Process Orchestration
-* 6 Event Managers
+* [Business Events & Process Flow](process-integration#business)
+* [Case Management](process-integration#case)
+* [Process Orchestration](process-integration#po)
+* [Event Managers](process-integration#event-managers)
 
-### 3.6 Integration Layers
+### 3.6 Integration Layers Use Cases
 
-* 2 From SOA to Microservices
-* 5 Microservice Integration Apps
+* [From SOA to Microservices](integration-layers#soa-micro)
+* [Microservice Integration Apps](integration-layers#microservice)
 
-### 3.7 Ops Integration
+### 3.7 Ops & CI/CD Integration Use Cases
 
-* 1 CICD and Test Automation
-* 2 Deployment and Monitoring
+* [CI/CD & Test Automation](ops-cicd-integration#test)
+* [Deployment & Monitoring](ops-cicd-integration#deploy}
 
 ## 4 Summary
 
-Mendix is a platform that allows the developer to adapt to almost any situation. The amount of business use-case where Mendix has been used by Mendix partners and customers is very large and growing. The integration capability is very solid, so the main challenge with integration for Mendix projects is the dendendency on other systems to make good services available. 
+The Mendix Platform allows developers to adapt to almost any situation, which is why the number of business use cases for customers and partners using Mendix is only increasing. The integration capabilities of the Mendix Platform are solid, which means the main challenge for integration in Mendix app projects is the dendendency on other systems to make good services available.

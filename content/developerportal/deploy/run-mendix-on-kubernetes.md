@@ -270,7 +270,7 @@ metadata:
   name: mendix-app-service
 spec:
   ports:
-  - port: 80
+  - port: 8080
     protocol: TCP
   selector:
     app: mendix-k8s

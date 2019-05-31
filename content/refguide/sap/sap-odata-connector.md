@@ -75,6 +75,8 @@ In addition to the domain model, the OData Model Creator will also create two ot
 
 The examples used in this guide are based on the **SAP My Tasks for Field Sales Representative (CRM)** data model, created from an OData service exposed by the back-end system of www.sapfioritrial.com.
 
+You will need to have an SAP account with access to the [SAP NetWeaver (ES5)](https://sapes5.sapdevcenter.com/) system.
+
 This data model can be obtained in the following ways:
 
 * You can download it from the App Store [here](https://appstore.home.mendix.com/link/app/89942/). If you download it within Studio Pro, it will be saved in Project Explorer under **Project {name}** > **App Store modules** > **CRM_TASK**.

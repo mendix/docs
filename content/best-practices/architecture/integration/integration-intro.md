@@ -1,131 +1,160 @@
 ---
-title: "Introduction to Integration"
+title: "Introduction"
 parent: "integration-overview"
 menu_order: 1
 draft: true
 ---
 
-## 1 Introduction
+## 1 Introduction to Integration
 
-Integration is something you will always need, but it is often the most difficult part of implementations. This is partly because the variation in patterns is so large, and partly because there are unavoidable dependencies on other components and teams (who may not be able to easily help with the integration).
+Integration between different systems means that data-flows are automated and functions in different apps are connected. So integration is driving automation and digitization of processes, saving time and money for organizations. I.e. it is an incredibly important area to master and to do right.
 
-## 2 Dependencies
+The following sections will go through a number of methods for integrating Mendix with other systems, things, SaaS solutions and within microservices systems made up of many Mendix apps.
 
-Integration means dependencies, and we have to learn to live with them. The sections below describe some common dependencies and scenarios.
+Unless you are building a stand-alone Mendix app, there will be integration to existing systems and between Mendix apps. Even if Mendix makes it very easy to integrate technically, it is still important to functionally define the most efficient overall solution, where integration is as simple as possible. That will determine how easy it is to maintain, update or extend the solution.
+
+To assist Mendix projects in this area, we show a number of typical examples how Mendix apps play functional different roles and how they integrate well within an Enterprise landscape. This is especially helpful for organizations that want to use Mendix for core systems replacement, large scale migrations towards the cloud, or when Mendix is the preferred platform for all custom development. 
+
+## 2 Microservices integration
+
+Microservices architecture is pre-vailing over layered SOA architectures as a much more efficient way to implement service oriented and event driven architectures.
+
+Microservice architecture changes a lot of things in the area of integration, see also Martin Fowler on Microservices: https://martinfowler.com/articles/microservices.html 
+
+In general Microservices replace solutions where functional dependencies have become too complex: 
+1. Large Monolithic systems working on one single large database
+2. SOA Layered architectures
+
+<< FIGURE 1 >>
+
+### 2.1 Good Dependencies
+
+As the diagram above shows, Microservice apps are smaller functional pieces that contain a business function:
+* There are not too many functional areas that depend on the same data-model, as in Monoliths. 
+* There are not too many functional areas that depend on the same technical layers as in SOA layered architectures
+
+Instead we try to contain all things required to perform a business function within each app. A new business feature requirement is then  likely to land within only one single app that maintained by one single team. This means we can change quickly and provide flexibility to the business unit that own that functionality.
+
+There is still integration required between microservice apps. But there will be less integration than between the application server and the database in a monolith, or between the layers in a SOA layered architecture. This is because most of the work that the app does, is contained within the app itself. They are local and private (not externally exposed) dependencies, that are easily owned and maintained by a small DevOps team. 
+
+Mendix is perfect for building this type of microservices, because within a Mendix app all internal dependencies are kept private. They are managed and consistency-checked by the Mendix model itself, and the developer builds UX, logic, workflow and data structures directly for a business function.
+
+Some microservices will be complete end-user-oriented apps with GUI, logic, data and workflow. Some can be "head-less" microservices providing the functionality and data under UX oriented apps or layers, some are pure integration apps that act as legacy adapters, shared data apps or distributed ESBs.
+
+There is no rule for what Microservice should do and not, and what they contain. Just that they fulfill a clear function and have a clearly defined external interface, using clear contracts for external integration. 
+
+In a landscape of many styles of Microservices, Mendix can take any role and/or evolve from one to the other. E.g. having a "head-less" Mendix app supporting a customer portal UX via REST services, it is easy to add an internal UX for a support group that can set business values, monitor progress or do other internal tasks on the same functional area.
+
+The diagram below shows a number of typical Microservices:
+
+<<FIGURE 2>>
+
+* The first part shows a microservices system covering a larger functional area where several user groups cooperate. It has 
+** A log-in and overviews Dashboard
+** Three separate functional microservices each covering a phase in a process
+** It has a shared data app for the combined data set, for importing reference data and for other external integratiion
+* Second part is where Mendix apps are built with no UI at all, or with only a business administration UI - providing the business functions via REST services to a separate UI layer, e.g. a customer portal
+* Third part is where Mendix acts as an Integration layer, making it easy for other apps to access key data and functions from e.g. SAP or older legacy systems
+
+### 2.1 What changes with Microservices
+
+1. Organize components around Business Capabilities
+2. There will be less functionality in Integration layers ("smart end-points, dumb pipes")
+3. Balance autonomy against re-use, i.e. only re-use things when it does not impair the flexibility of evolving separate microservices
+4. Clear contracts for communication between microservices, typically REST, OData or SOAP contracts
+5. Decentralize data-management, i.e. do not be afraid of having a local copy of data, but do not copy all data and do not copy data-models, just copy the data required for that function, and adjust the data structure to what is needed in each app
+6. Design for failure, i.e. make sure the user experience is not impacted when a source app is down. In some cases copying core data beforehand is recommended. When this is not possible, make a nice user message that the service is un-available.
+7. Automate infrastructure. Ifrastructure automation is already at a very high level on the Mendix cloud, but additional automated testing and deployment management can be added.
+
+## 2 Minimize and Manage Dependencies
+
+While integration leads to automation and digitization it also creates dependencies between systems. Dependencies need to be managed from design to production for different releases of apps going live at different times.
+
+The target for a solution architect that designs a larger solution will therefore be to design apps and systems of apps that:
+
+1. Minimize integration
+2. Find a solution where integration dependencies are easy to build, change and manage
+
+Finding the correct, right-sized, functional and autonoumous microservices is the first step. Then finding the integration method that makes it easy to build and manage is the next step, where these best practices can help. 
+
+The best solution varies from case to case, and depends on several aspects: organizational, technical, functional and operational. The optimal solution takes all of thos factors into consideration.
 
 ### 2.1 Team Dependencies
 
-Even in a seemingly fully decoupled situation where an app is supposed to receive a file and import it, it could happen that because you are implementing a new business function, there is a field you need that is not in that file. That means you are dependent on another team to make an update in the file export program.
+Less development team dependencies follows from using a microservices architecture. It means that every app can be built and managed by one single DevOps team. The team is autonomous to complete the entire microservice. The only dependencies are external integration, which ideally can be defined as REST services in the beginning of the project.
 
-### 2.2 Good Services for the Purpose & Avoiding Loops
+Less dependencies between business units of an organization, can be achieved by defining functional apps that align relatively well with the business process or the business organization. That means less comprimizes on requirements, and less prioritizations to do between different stake-holders, and it often means a more purpose oriented app that is good at one specific area.
 
-In another scenario, you want to show which customers are impacted when a ship with hundreds of containers is stranded in a port. There are services providing the right data, but they are not good for your purpose.
+### 2.2 Functional Dependencies
 
-If you have to retrieve all the containers, call a separate service for each of them that will give you the shipment, and then call another service for each shipment to find the company that ordered it, your system will not perform well.
+When the right microservices have been chosen, there will still be some functional dependencies left, that should be automated by building good interfaces between the apps. These functional dependencies can not be removed, so they just need to be minimized.
 
-Ideally, you should ask the sub-system to create a new service optimized for this new business function. If that system is old and impossible to touch, it could make sense to create a new microservice/integration dashboard app that has the single purpose of providing this data. This app will import data from the source systems and keep it up to date by polling for changes. It will be a simle app for the business to use that will make real-time calls to the integration app and provide sub-second responses.
+For example: If we have a feature request where two apps both need to implement new fields, e.g. GPS coordinates, and if one app is the source of this data, it is in-evitable that the service contract needs to change. We then need a good process for managing this through separate releases. The typical way to do so is by the source app going live first, with two end-points, while the consumer goes live afterwards, swapping from the first end-point to the next one.
 
-### 2.3 Scoping Integration Early & Implementing Late
+If it is easy for the two apps to go live at the same time, then the two new versions are tested and deployed together. The diagram below shows the more generic case of service management, the apps are now not dependent on the same release date:
 
-Because integration is an external dependency, it makes sense to scope out the required integration early. This will allow for teams to have the maximum time to provide updated services or files before the go-live date. While waiting, users can use mock services and/or files, and then connect to the final version towards the end of the project.
+<<FIGURE 3>>
 
-### 2.4 Request-Reply Decoupling
+To minimize the functional dependencies it is usually recommended to 
 
-Decoupling for real-time request-reply interfaces just means there is a point in the middle that is forwarding requests, so the systems are still not independent. Both the service provider and consumer must be up and running for the interface to work.
+1) Make specific service contracts that imitate a Business event. Often the data is from more than one table, and rarely it includes all the fields from one table. If the functional requirement for the business event changes, we have to change the service, but if other data in the same tables change, there is no impact.
+2. Make consumer specific services when different consumers want different things. When one consumer wants additional functionality in the service, the other consumers are not impacted
 
-### 2.6 Asynchronous Decoupling
+### 2.3 Operational Dependencies
 
-Decoupling for asynchronous interfaces or files is a clearer scenario. This is because one side of the interface finalizes its work at one time and the other system receives information or data later.
+Operational dependencies relate to the fact that one system must be up and running for a certain function in another app to work. 
 
-### 2.7 Functional Dependencies
+For example: To create an order I need to search for products in another app. Then if the products app is down, there is also no ordering possible. In all synchronous services the both apps needs to be up and running for the integration to work. 
 
-{{% todo %}}[**UNCLEAR WHAT "both cases above" EXACTLY REFERS TO BELOW - PLEASE CLARIFY**]{{% /todo %}}
+It is possible to minimize operational dependencies by copying data over to the service that needs it before it is needed. This is particularly common for slow-changing data, such as product definitions. In the example above we can remove the operational dependency by simply copy the important part of the product definition over to the ordering app, and poll the product app for any changes.
 
-However, in both cases above, there is a functional dependency that cannot be removed and that you have to worked with through new and more frequent releases of other apps. If changing a file format or message format, every user using that service or file must be informed.
+The desire for autonomy in Microservices architectures, will allow copying data more often than in the SOA architecture pattern, where re-use of functions was more important, and people strived to retrieve data in real-time from the source system.
 
-### 2.8 Service Versioning 
+In high-volume automated situations the copying of required data becomes even more important, since every out-bound service call will take time and CPU resources and it leads to a risk for failed processing that may be difficult to manage manually.
 
-The standard way to handle service versioning is via the following steps:
+Sometimes, when operational dependencies are required, e.g. a source system needs to validate data in an input-form, then the best we can do is to build functionally around this dependency to soften the impact on the user if the other system is down. This could be by being aware of the other system's status, to inform the customer early or simply disable the local function temporarily. 
 
-1. Provide two separate endpoints for each service version.
-2. Preferably, insert the service version in the service endpoint name (so that users are not mistaken when using it).
-3. Allow consumers to migrate within a certain time limit.
+Microservice theory also suggests using circuit breakers for high-volume situations, so that the source app stops bombarding the destination with requests, when the service is already timing out the majority of the requests. This helps both apps to operate better.
 
-{{% todo %}}[**DIAGRAM NEEDS EXPLANATION?**]{{% /todo %}}
+### Technical Dependencies
 
-![](attachments/recommendations/service.png)
+In quite a few cases there is alreay a legacy system, or we integrate with a SaaS solution with an already existing API. In these cases there is often little choice in the format and protocol of the services we need to use.
 
-### 2.9 Consumer-Oriented Services
+In these cases the Mendix app will typically adapt to the existing technical and functional format of services provided by e.g. a SaaS system such as SAP or SalesForce. Mendix is the more flexible side in most integration relations, and can adopt to almost any format that is provided.
 
-The best practice is to *not* make services that are too large and generic. This will help in security and limiting dependencies, because each app will get a service adequate for what it needs. Not more and not less.
+But there are cases when it is better to change even old legacy systems. E.g. when one can not retrieve the data without looping over a service call 100s of times, then either a new service should be built or switching to copying the data ahead of time with e.g. a file.
 
-## 3 Minimize Integration
+### 2.4 Scoping Integration Early & Implementing Late
 
-The overall solution of one-to-many apps working together should always be designed to include the functional components and interfaces that require the least integration. In turn, this means the solution design should include the least complicated integration.
+Because integration is an external dependency, it makes sense to scope out the required integration early. 
 
-That will make the overall solution easier to build and maintain, and it will simplify the dependencies between apps. This means that even deciding which microservices and apps to build should incorporate integration analysis.
+This will allow for teams to have the maximum time to provide updated services or files before the go-live date. While waiting, users can use mock services and/or files, and then connect to the final version towards the end of the project.
 
-### 3.1 Learn to Work with Dependencies
+### 2.5 Keep It Simple
 
-Apps working together are dependent on each other – that is part of the business process and cannot be avoided. Trying to eliminate a functional dependency between two apps via a technical solution is not recommended, because that will usually create other functional issues with more complex error-handling. 
+As in all design, the more simple solution is always easier to build and maintain that a more complex one. If something can be done with fewer service calls or fewer components or fewer technologies involved, it is usually better. 
 
-In an example use case, you are sending data from app A to app B. You may put these apps on a queue in between in an asynchronous event, which would seem to eliminate an online dependency from a synchronous request-reply. But in fact, the error-handling will become  more difficult, since neither app will be aware of the entire travel path of the event. Furthermore, if something goes wrong in the middle of the path, nobody is properly notified. A better solution is often to poll from app B to app A and get all recently updated records. The app that needs the data is in control of the entire interface, and error-handling is confined to one single place.
+The most frequently used and overall accepted service protocol aty the moment is REST over Http(s). This allows the caller of the service to manage any errors or issues, and within a single service call, there is both request and reply.
 
-In this use case, the development dependency is almost eliminated. However, the runtime situation is less optimal with the events than with request-reply. 
+Bu there are an incredible amount of different situations to take into account, and this document will go through quite a few technical and functional scenarios where other formats and protocols are recommended.
 
-Still, there are many use cases when events make more sense. For example, in real event streams from logging or metrics, the data should only flow one way, and a message can be lost without breaking the business.
+## 3 Overall Recommendations
 
-There are also technical reasons to go for events. For example, in situations with very high volume, distributed infrastructure, poor network connectivity, or many-to-many situations, events should be considered. To guarantee delivery, you can make asynchronous request-replies, or use a state/process engine to monitor all the events in a large supply chain process.
+Apps should act as actors in a business process. They typically do different things, and often they have different views of the data. So it is ok to copy some data from one app to the otherm as part of the business process, or to share reference data between apps. 
 
-### 3.2 Keep It Simple
+Implementing the integration points as Business Events that fullfill a step in a business process. For sharing reference data, it is typical to pull the source for changes and/or send files with updated data for slowly changing data.
 
-Event-driven integration will increase drastically in the future. For example, LinkedIn is already using Kafka to distribute posts, metrics, and user statistics. Siemens and the rest of the world are bracing for the era of IoT, when almost all devices will be connected.
+To approach an inegration problem it is good to think functionally first - and only when it is clear what the entire integration should do, including acknoledgements, statuses and errors, then compare technical solutions that will handle the situation in a simple way.
 
-But this event-driven trend does not change what already works well for normal business apps. A regular app developer who is integrating a few systems for regular business processes should keep it as simple as possible.
+In the days of SOA layers, a central ESB would take care of a lot of integration functionality, such as transformation, routing, re-tries, queueing, and even combining services. 
 
-That usually means implementing request-reply using, for example, REST over Http(s). This allows for control in case of the non-delivery of information or events, which should be managed for normal business processes.
+In the era of microservices, you should aim for "dumb pipes and smart endpoints":
+1. Within a system of microservices owned by the same organizational area, there is no reason to use an integration layer at all
+2. For a number of other cases, especially for large organizations, a thin integration layer is helpful
 
-## 4 Overall Recommendations
+Integration is easy with Mendix, and microservices are enhancing the efficiency and flexibility in the IT industry. If in this situation the integration can be made simple, there is an amazing opportunity to re-shape how organizations build and manage It to support different business functions.
 
-Apps should act as actors in a business process. They typically do different things, and often they have different views of the data.
-
-In an example scenario where a customer portal, sales funnel, support, and operations all have product and customer data, they will likely have very different views of the data. This is good, because they specialize in their specific tasks. When the specialization is local, you should allow for smaller interfaces, and thereby more autonomous services.
-
-Here are some basic recommendations that Mendix endorses:
-
-* Seek the overall solution that minimizes integration, because integration is complexity and it creates dependencies in releases and operations
-* Do not start from the solution – instead, think functionally first, define what is really needed, and consider more than one technical solution option
-* Use explicit contracts that only transfer the data required, which will make dependencies smaller and shelter apps from each other’s data models
-* Use request-reply when possible for easier error-handling 
-* Do not be afraid of copying data from one app to another, because that will increase processing speed and remove online dependencies – but, you should only copy the data that is required, to limit dependencies
-* Consider consumer-specific contracts if a service is not truly generic and stable, because they augment autonomy and flexibility in releases
-
-Continue reading about specific scenarios for integration in [Integration Examples](integration-examples).
-
-## 5 Thinking *Functionally* First {#functionally}
-
-The most important thing for good solutions is to choose the right integration option from a lot of possibilities. These best practices will present an overview of integration methods and typical use cases. The first best practice is to have an open mind regarding integration requirements. This means thinking about what the integration really needs to accomplish and consider more than one option for the solution.
-
-In the days of SOA layers, a central ESB would take care of a lot of integration functionality, such as transformation, routing, re-tries, queueing, and even combining services. In the modern era of microservices, you should aim for "dumb pipes and smart endpoints," which means you should almost always put transformation into the app itself. This also means that within a close cluster of apps, you should do all the integration directly, leaving for larger enterprises a thin API management layer or a message broker for communications between departments, networks, and geographies.
-
-In turn, this means interface functionality starts inside one app and ends inside another system, so a Mendix developer needs to think through the entire interaction functionally and technically. The best practice is to think functionally first. Then, the different technical options should be compared to see which one has the fewest errors to manage and is the easiest to maintain through separate deployments of the apps being integrated.
-
-For example, a data replication can be identified as functionally asynchonous, meaning, the process creating the business event with data does not have to be directly aware when the second app receives the information. In this case, the simplest and most stable implementation is to use the [Process Queue](https://appstore.home.mendix.com/link/app/393/) module available from the Mendix App Store in the first app. Then, you would implement a synchronous REST call from the second app to the first app, picking up the next message.
-
-## 6 Best Practices for Integration Design
-
-* Think before you integrate. There is a chance that a simpler approach can make the app a lot easier to build, test, deploy and manage in production.
-* List all the planned integration early, and maintain the list through the project.
-* Think about how you can make the overall integration simple (for example, by choosing the right apps or microservices). Integration that is too much and too complex is a sign that apps should be merged or that the functional division is sub-optimal.
-* Start addressing external teams for integration dependencies early. If the other teams need to make changes to make your app work, those needs to be identified immediately.
-* If there are existing external services, make sure they are adequate. For example, you should avoid all types of loops on services, because they tend to make apps slow. If your source app can collect information internally with SQL, that is more efficient and the integration will be faster. 
-* Design the integration well. Consider what triggers the interface, who needs what data and when, and whether you can cache the data (by storing a local copy).
-* Plan for what functional errors can occur and how to manage them.
-* Consider how to minimize the overall integration complexity.
-* Analyze which integration use case applies and which technical options are available. Use these [Integration](integration-overview) Best Practices as references!
-* Make a conscious choice about why one method is chosen over another.
-
-## 7 Basic Solution Categories
+### 3.1 Basic Solution Categories
 
 For most of the integration related to Mendix, there are five basic solution categories that are almost always used. Sometimes just one is used, and sometimes a combination is used:
 
@@ -136,9 +165,8 @@ For most of the integration related to Mendix, there are five basic solution cat
 * [Event-Based Integration](event-integration) – This category usually does not have a response, and it is used to distribute data at large scales or large distances, or simply distribute data in a decoupled way. Event-driven integration can involve IoT, metrics, and social media, as well as state engines and event management.
 * [Batch Integration](batch-integration) – This category includes exporting, moving, and importing files as well as file integration.
 * [Central Data](central-data) – This category uses a pattern where data is landed and combined in a central place before it is distributed. This could be, for example, an operational data store (ODS); extract, transform, load (ETL); business intelligence (BI); or data lake solution.
-* [Integration Layers](integration-layers) – This category involves ESB, internal and external API management, and other gateways.
 
-## 8 Overview of Use Cases & Solution Options
+### 3.2 Overview of Use Cases & Solution Options
 
 Plotting functional use cases against basic methods of integration allows you to see there are several common options available. That is good, because integration needs to be flexible in a solution for the architect to select the best option for a specific situation. 
 

@@ -1,44 +1,43 @@
 ---
 title: "Mendix & Integration"
 parent: "integration-overview"
-menu_order: 1
+menu_order: 2
 draft: true
 ---
 
 ## 1 Introduction
 
-The Mendix Platform is very good for building business functionality and for integrating apps with virually any other technology. This Best Practices section provides an overview of how Mendix integrates with other parts of the enterprise landscape, and how Mendix apps by default are good microservices keeping GUI, logic and data together and requiring clear contracts for integration.
+The Mendix Platform is very good for building business functionality and for integrating apps with virually any other technology. This Best Practices section provides an overview of how Mendix integrates with other parts of the enterprise landscape. It also describes how Mendix apps are by default good microservices keeping GUI, logic, and data together and requiring clear contracts for integration.
 
 ## 2 Mendix Integration Characteristics
 
-### 2.1 Internal Integration is Out of the Box
+### 2.1 Internal Integration Available Out of the Box
 
-Most business functions require a UX for human interaction, some logic and workflow, some data to store and work on, and some integration with the rest of the organization. Thanks to the way the Mendix platform works, all these parts are kept together in the same model all the way from design to deployment resulting in:
+Most business functions require UX for human interaction, some logic and workflow, some data to store and work on, and some integration with the rest of the organization. Thanks to the way the Mendix Platform works, all of these parts are kept together in the same application model all the way from design to deployment. This results in the following benefits:
 
-1. Developers do not have to build and test internal integration
-2. Business features are kept together and consistency checked by the platform
-3. It is much easier and faster for non-technical developers to build Mendix apps.
+* Developers do not have to build and test internal integration
+* Business features are kept together and consistency is checked by the platform
+* It is easier and faster for non-technical developers to build Mendix apps
 
-The diagram presents how the Mendix Platform keeps everything together from design to operations, as is recommended by microservice architecture and the cloud-containerization paredigms
+This diagram illustrates how the Mendix Platform keeps everything together from design to operations, as is recommended by the microservice-architecture and cloud-containerization paradigms:
 
 ![](attachments/mendix-integration/feature-requirements.png)
 
-### 2.2 External Integration is by Contract
+### 2.2 External Integration Is by Contract
 
-In Mendix, all external integration occurs via the app's runtime server, as presented in the diagram below, and it requires clear contracts to be defined in the Mendix model to allow the integration. This means that any app is aware of the potential integration before deployment into production, making it secure and manageable. 
+In Mendix, all external integration occurs via the app's runtime server, which requires clear contracts defined in the Mendix app model to allow for integration. This means that any app is aware of potential integration before deployment into production, making it secure and manageable. 
 
-The contrary to this would be to allow direct DB connections with SQL defined outside the Mendix model. THis would mean that integration can change after deployment, testing is un-able to predict interactions and the app functioning in run-time would be at risk. Therefore in the Mendix Cloud, direct connections to the Mendix internal database and file-store are dis-allowed.
+The opposite approach here would be to allow for direct database connections with SQL defined outside the Mendix app model. This would mean that integration could change after deployment, testing would be unable to predict interactions, and the app functioning in runtime would be at risk. Therefore, in the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy), direct connections to the Mendix internal database and file store are not allowed.
 
-The diagram below shows:
-1. Internal app integration between the Mendix UX, run-time, database and fileserver are private and not accessible by outside parties, which enhances security and predictability of the app.
-2. External integration is funneled through the Mendix run-time, requiring contracts to be defined in design time. 
-3. A number of standard integration formats are shown, see also next section.
+The diagram below shows the following points:
+
+* Internal app integration between the Mendix UX, Mendix Runtime, database, and file server are private and not accessible by outside parties, which enhances the security and predictability of the app
+* External integration is funneled through the Mendix Runtime, requiring contracts to be defined in design time
+* A number of standard integration formats are shown (for more information, see the [Standard Integration Formats](#standard-formats) section below)
 
 ![](attachments/mendix-integration/runtime.png)
 
-For new 
-
-### 2.3 Standard Integration Formats
+### 2.3 Standard Integration Formats {#standard-formats}
 
 Mendix handles a large array of formats and protocols out of the box  The diagram above shows some of those formats:
 
@@ -100,13 +99,11 @@ Within these solution categories there are a number of use-cases and integration
 * 4 CMS Integration for Customer Portals
 * 5 CDN Integration for Global Portals & Apps
 
-
 ### 3.3. Event Based Integration
 
 * 4 Event Streams, IoT, Logging & Metrics
 * 5 State Engines & Event Managers
 * 6 Using Queues with Mendix
-* 5 CDN Integration for Global Portals & Apps
 
 ### 3.4 Batch Integration
 

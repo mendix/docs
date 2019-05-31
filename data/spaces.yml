@@ -205,6 +205,7 @@ studio:
     - "Consistency Errors"
     - "Theme Customizer"
     - "Settings"
+    - "Starting With Your Own Data"
 best-practices:
   space: "Expert Best Practices"
   priority: false

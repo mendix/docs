@@ -80,8 +80,8 @@ The Mendix Integration Best Practices are oganized as a number of solution categ
 * [Central Data](central-data)
 * [Process Integration](process-integration)
 * [Integration Layers](integration-layers)
-* [Ops & CI/CD Integration](ops-integration)
-  
+* [Ops & CI/CD Integration](ops-cicd-integration)
+
 Within these solution categories, there are a number of use cases and scenarios used in the Best Practices that show how the Mendix Platform integrates within a landscape. Those can be accessed directly via the links below.
 
 ### 3.1. Service Integration Use Cases

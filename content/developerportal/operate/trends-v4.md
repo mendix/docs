@@ -5,6 +5,7 @@ menu_order: 20
 description: "Describes how to interpret various graphs and trends in the Mendix Cloud v4."
 tags: ["Trends","v4","Mendix Cloud","Developer Portal"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
+#Please do not rename the anchors in this document as they are used in links from the Developer Portal
 ---
 
 ## 1 Introduction
@@ -205,7 +206,7 @@ The most important value in here is **user**, which shows the amount of CPU time
 
 The memory graph shows the distribution of operating system memory that is available for this server. The most important part of the graph is the application process, which is visible as an amount of memory that is continuously in use, labelled in the category **apps**.
 
-#### <a name="Trends-diskusage"></a>5.3.3 Disk usage
+#### 5.3.3 Disk usage{#Trends-appdf}
 
 The disk usage graph shows only the disk usage inside the container. This is usually only relevant if your application creates a lot of temporary files in `/tmp`. This value is not the same as the file document storage. 
 

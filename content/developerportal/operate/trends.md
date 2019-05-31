@@ -5,6 +5,7 @@ menu_order: 10
 description: "Describes how to interpret various graphs and trends in the Mendix Cloud v3."
 tags: ["Trends","v3","Mendix Cloud","Developer Portal"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
+#Please do not rename the anchors in this document as they are used in links from the Developer Portal
 ---
 
 ## 1 Introduction

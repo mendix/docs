@@ -107,9 +107,22 @@ To ensure you have the latest version of the widget included in your app, follow
 
 #### 3.2.2 Configuring the Widget
 
-You can configure the widget for certain actions in your app project (for example, to allow screenshots, to hide the Mendix logo, and to hide the **Share** button). All the properties are explained in the properties dialog box for the widget:
+All the configuration properties are explained on the various tabs of the properties dialog box for the widget:
 
 ![](attachments/feedback/widget-properties.png)
+
+The feedback feature requires the following properties to be set:
+
+* **Advanced** tab > **Feedback server location** – the URL of the Developer Portal server (usually `https://sprintr.home.mendix.com`)
+* **Project** tab > **App ID** – the unique identifier of your app project available in your app's [General](../general-settings) settings in the Developer Portal
+
+In the properties, you can configure the widget for certain actions in your app project, for example:
+
+* **Project** tab > **Allow screenshots**
+* **Project** tab > **Hide Mendix logo**
+* **Collaboration** tab > **Share button**
+
+You can place the widget on any form in your app project, but it needs to be placed on only one form. If the user accesses that form, the widget will remain in the browser until the session is expired. This means you only need to place the widget on the home form. You can use this mechanism to limit the feedback to certain user roles as well. To do that, just place the widget on their home forms but not on the home form of other users.
 
 ## 4 Widget Version 5.1.3 & Below {#below}
 

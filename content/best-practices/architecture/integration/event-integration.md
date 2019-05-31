@@ -51,7 +51,7 @@ This diagram presents some examples of when an event-driven architecture make se
 * **Network distance** – Geographical distance or slow networks make direct communication unstable or even impossible. For these situations, an ESB or message broker with queueing capabilities are often good solutions, as they can bridge network issues with adapters in all regions and provide a communication line between all apps and systems. If the source needs to functionally know the status or receive errors (which is the most common situation), a second asynchronous "status" interface is built in the opposite direction. The Mendix Platform communicates with ESBs and message brokers using REST, SOAP, or an App Store component for specific queue-management formats.
 * **Massive volumes** – For extremely high and/or fluctuating volumes, or when there are hundreds of publishers and subscribers in a distributed network, Kafka is the most efficient solution. It provides incredible resilience and many exciting new event-streaming features. However, managing and maintaining Kafka does require expertise and tooling, so ideally, this operationalization is already done in your organization. Mendix can then easily connect as a standard Kafka client using the [Kafka Connector](https://appstore.home.mendix.com/link/app/67994/). 
 
-## 4 Event Streams, IoT, Logging & Metrics
+## 4 Event Streams, IoT, Logging & Metrics {#stream-iot}
 
 IoT integration is starting an expected explosion of new IT that will be built alongside the current IT landscape. In the coming years, Mendix and Siemens will invest a lot into this area.
 

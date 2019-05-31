@@ -15,7 +15,7 @@ Batch integration is relevant for business processes that are periodic or when a
 
 ![](attachments/batch-integration/bi-intro.png)
 
-## 2 Using Batch Processing
+## 2 Using Batch Processing {#using}
 
 There are significant reasons and use-cases for when batching processing is a good choice and when it is not.
 
@@ -40,7 +40,7 @@ There are two main reasons not to go for batch-oriented integration:
 * **Real-time processing** – Because we are moving more towards a real-time world, processes that used to be periodic are becoming real-time. For example, invoicing was previously almost always monthly. Nowadays, invoicing is frequently done in real-time, when an order is confirmed or a delivery is completed.
 * **Complicated error handling** – Imagine if 5 records out of 1 million fail to import. In that case, there is a need to inform the source about this, or correct the file, or have a human workflow in the destination to manage these errors.
 
-## 3 Reference Data Examples with Mendix
+## 3 Reference Data Examples with Mendix {#reference}
 
 Many organizations use Mendix to manage reference and master data as microservices that each have a functional area of responsibility:
 
@@ -68,7 +68,7 @@ In the diagram's example, you can see the following factors at work:
 	* A **Shared Data App** to manage all shared data
 * As the **Shared Data App** is importing the product reference data file, it marks all products that change as updated. That is so the other apps can subscribe to those changes via a REST call, thereby minimizing the need for processing and allowing the other apps to be ignorant as to how the product data is distributed globally.
 
-## 4 File Integration and Management {#file-integration}
+## 4 File Integration & Management {#file-integration}
 
 File integration is important for the following cases:
 

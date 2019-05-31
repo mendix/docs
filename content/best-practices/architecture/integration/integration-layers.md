@@ -45,7 +45,7 @@ There are local connections between closely related microservices. DevOps tribes
 
 For connections with other areas of the organization, there is a "bus" that represents one or more integration layers used for connecting to the other areas of the company. It handles all formats, such as events, service calls, and files. The integration layer services represent how departments speak to each other, which is expected to rarely change. The bus in this case decouples departments from each other and provides enterprise connectivity both geographically and network-wise.
 
-## 2 From SOA to Microservices
+## 2 From SOA to Microservices {#soa-micro}
 
 ### 2.1 Reuse the Early SOA
 
@@ -171,7 +171,7 @@ The following service options should be considered:
 
 All of these options allow the endpoints to adapt less to each other. But for large enterprises with hundreds or thousands of systems, this does make sense for several integration scenarios. It should be noted that most of these benefits can be achieved by separate and smaller integration apps, just as well as an ESB can provide them centrally.
 
-## 5 Microservice Integration Apps
+## 5 Microservice Integration Apps {#microservice}
 
 An integration layer does not have to be central and enterprise-wide for an entire organization. If you are driving all integration onto the same framework, it is likely to become a bottleneck for all. Therefore, many organizations have several solutions, and there is no significant reason to consolidate them.
 

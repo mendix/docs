@@ -42,7 +42,7 @@ These are a few of the main ways the central data pattern is used:
 * **Shared data app (SDA)** – An SDA solution combines data from different processes and is used in operational processes. It is a combination of an operational data store (ODS) and integration app. It usually combines shared data within a microservices system or department, or it may collect the same type of data from several departments.
 	* For more information, see the [Shared Data App (SDA)](#sda) section below
 * **DWH & data lakes** – A DWH is used for combining all types of data from the entire organization and providing data for statistics, reporting, and business intelligence (BI). Data lakes are an evolution of DWH solutions to use Hadoop-style solutions and provide statistical data to operational systems in order to support self-learning, AI, and the tuning of automated processes.
-	* For details, see the [Operational & DWH Data](#owd) section below
+	* For details, see the [Self-Learning Processes Using Data Lakes](#data-lakes) section below
 * **BI solutions** – BI solutions collect data to provide insight into processes and trends. They can collect bulk data from DWH and data lake solutions, while refining it in real-time with information from Operational apps and systems
 	* For more information, see the [Integration to DWH & BI](batch-integration#int) section of *Batch Integration*
 * **Extract-transform-load (ETL)** – ETL is usually used for integration towards DWH solutions or for data transition tasks during the go-live of bnew large solutions. ETL solutions are professional integration frameworks, doing the "integration app" part of the SDA solution at an enterprise level. They compare new data with previous loads, and they are beneficial for very large data volumes and large files. For more information, see the [Integration to DWH & BI](batch-integration#int) section of *Batch Integration*
@@ -164,7 +164,7 @@ The lower-middle part of the diagram shows how processing on the entire data set
 
 The right-side of the diagram shows how the SDA is often used to import reference data and provide it to other apps locally. If the reference data comes as a file with all the data in it, the SDA compares and makes sure to set the update flag only on records that have changed. This makes the impact smaller on other apps that are retrieving the data (for example, via REST services).
 	
-## 3 Separating Operational Data from Statistical Data {#owd}
+## 3 Self-Learning Processes Using Data Lakes {#data-lakes}
 
 It is good to keep operational data flows separate from the statistical data that comes from data lakes and DWH. That is because there are different time requirements and needs for accuracy. 
 

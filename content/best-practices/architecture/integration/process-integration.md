@@ -31,7 +31,7 @@ When a business process runs across several systems, there will be some type of 
 
 	![](attachments/process-integration/process-int5.png)
 
-## 2 Business Events & Process Flow
+## 2 Business Events & Process Flow {#business}
 
 The most common process integration is for business events. This means that some part of a  process finishes in one app, which triggers something to happen in the next app or system. The business-event messages can be transferred in different ways, depending on the requirements. 
 
@@ -100,7 +100,7 @@ This is the flow for this ordering process example:
 4. The customer is created and stored in the customer app, after which the end-user is linked back to the same context/order in the ordering app. Note that the data should be saved in the ordering app to be available when the end-user comes back. Alternatively, selecting the customer can be made to be the first step in the ordering process.
 5. Before control is handed over to the user in the ordering app, the customer data is retrieved and stored in the relevant fields on the order. This is then displayed in the ordering app UI.
 
-## 4 Case Management
+## 4 Case Management {#case}
 
 When possible in process integration, human work is mostly done in phases where certain pre-conditions are completed first. This leads to the need for case-management solutions.
 

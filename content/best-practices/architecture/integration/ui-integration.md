@@ -1,7 +1,7 @@
 ---
 title: "UI Integration"
 parent: "integration-overview"
-menu_order: 3
+menu_order: 4
 draft: true
 ---
 
@@ -89,7 +89,7 @@ For more details, see the [Geo-Scaling Architecture](../performance/plan-design-
 In a customer portal, most end-users work locally in their region, so they will mostly log into their closest instance. A CDN can re-direct them back there when they are travelling, or the required data can also be copied over to work locally when travelling.
 
 When using CDN solutions, the external APIs are often also made available via the content nodes. This has the same proximity and caching advantages as for UX, while also providing some API management functions like protection against denial-of-service attacks, throttling, and bot management.
- 
+
 Akamai is the most established solution with 240,000 nodes in 240 countries, while AWS and Azure have good competing solutions available.
 
 ## 6 Summary

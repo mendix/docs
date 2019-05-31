@@ -1,6 +1,6 @@
 ---
 title: "Workflow Integration"
-parent: "integration-use-cases"
+parent: "integration-examples"
 menu_order: 2
 draft: true
 ---

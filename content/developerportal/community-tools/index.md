@@ -1,6 +1,7 @@
 ---
 title: "Community Tools"
 description: "Describes the main tools that Mendix maintains to support the awesome Mendix community."
+draft: true
 ---
 
 ## 1 Introduction

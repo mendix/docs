@@ -42,7 +42,6 @@ During the import process, spreadsheet data is analyzed and converted the follow
 3. The links between the worksheets are identified and can be converted into associations if both conditions below are met: <br/>
    a. Several or all values of one column in your spreadsheet are identical to the values of another column.<br/>
    b. The type of data in these columns is Text or General.<br/>
-
    c. The values of the other column are unique. <br/>
 
 Download this Excel spreadsheet example to check how data is normalized there: [Spreadsheet Example](attachments/start-with-data/Example.xlsx). You can also import it into an app and test how this spreadsheet is converted. For more information, see the [Importing a Spreadsheet](#importing-spreadsheet) section.

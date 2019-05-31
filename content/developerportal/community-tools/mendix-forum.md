@@ -3,6 +3,7 @@ title: "Mendix Forum"
 category: "Community Tools"
 description: "Describes the Mendix Forum, where the Mendix community can ask and answer questions as well as post ideas for how to improve the Mendix Platform."
 menu_order: 10
+draft: true
 ---
 
 ## 1 Introduction

@@ -206,7 +206,7 @@ The most important value in here is **user**, which shows the amount of CPU time
 
 The memory graph shows the distribution of operating system memory that is available for this server. The most important part of the graph is the application process, which is visible as an amount of memory that is continuously in use, labelled in the category **apps**.
 
-#### 5.3.3 Disk usage{#Trends-appdf}
+#### <a name="Trends-appdf"></a><a name="Trends-diskusage"></a>5.3.3 Disk usage{#}
 
 The disk usage graph shows only the disk usage inside the container. This is usually only relevant if your application creates a lot of temporary files in `/tmp`. This value is not the same as the file document storage. 
 
@@ -245,7 +245,7 @@ Type | Explanation
 
 The database connections graph shows the number of connections to the PostgreSQL server. This should go up and down with the usage of the application. The number of connections is limited to 50.
 
-### </a><a name="Trends-dbdfabs"></a><a name="Trends-dbdf"></a>5.4.4 Disk Usage
+### <a name="Trends-dbdfabs"></a><a name="Trends-dbdf"></a>5.4.4 Disk Usage
 This graph displays the amount of free disk space in bytes for the database.
 
 ## <a name="Trends-dbdiskstatsiops"></a>6 Both Application and Database Node

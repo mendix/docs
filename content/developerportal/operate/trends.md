@@ -51,7 +51,7 @@ These graphs show various application specific metrics, such as the number of HT
 
 The requests graph shows the number of requests that are sent from the client or systems that integrate with your application using web services. The number of requests per second is split up by request handlers.
 
-"xas" lists general queries for data in datagrids, sending changes to the server and triggering the execution of microflows. "ws" shows the number of web service calls that were done. "file" shows the number of file uploads and downloads. The "/" should not list any requests, because static content is directly served to the user by the front-facing web server, which is placed between the user and this application process.
+"xas" lists general queries for data in data grids, sending changes to the server and triggering the execution of microflows. "ws" shows the number of web service calls that were done. "file" shows the number of file uploads and downloads. The "/" should not list any requests, because static content is directly served to the user by the front-facing web server, which is placed between the user and this application process.
 
 ### <a name="Trends-appmxruntimeconnectionbus"></a>3.2 Number of Database Queries Being Executed
 

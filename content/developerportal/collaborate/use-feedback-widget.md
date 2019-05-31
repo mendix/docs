@@ -114,7 +114,7 @@ All the configuration properties are explained on the various tabs of the proper
 The feedback feature requires the following properties to be set:
 
 * **Advanced** tab > **Feedback server location** – the URL of the Developer Portal server (usually `https://sprintr.home.mendix.com`)
-* **Project** tab > **App ID** – the unique identifier of your app project available in your app's [General](../general-settings) settings in the Developer Portal
+* **Project** tab > **App ID** – the unique identifier of your app project available in your app's [General](../settings/general-settings) settings in the Developer Portal
 
 In the properties, you can configure the widget for certain actions in your app project, for example:
 

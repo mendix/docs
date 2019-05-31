@@ -7,7 +7,9 @@ tags: ["studio pro"]
 
 ## 1 Introduction
 
-In the project security dialog you can configure security settings related to the project, such as the security level, user roles, administrator access, and anonymous users.
+In the **Project Security** dialog window you can configure security settings related to the project, such as the security level, user roles, administrator credentials, and anonymous users:
+
+![](attachments/project-security/project-security-dialog.png)
 
 {{% alert type="info" %}}
 For more general information on security, see [Security](security).
@@ -20,20 +22,20 @@ The security level defines how security is applied and which security settings n
 | Value | How security is applied | Which security settings need to be configured |
 | --- | --- | --- |
 | Off | No security is applied. Users do not have to sign in and can access everything. | (none) |
-| Prototype / demo | Security is applied to signing in, forms, and microflows. Users can access all data. | Administrator and anonymous access, user roles, and security for forms and microflows. |
+| Prototype/demo | Security is applied to signing in, forms, and microflows. Users can access all data. | Administrator and anonymous access, user roles, and security for forms and microflows. |
 | Production | Full security is applied. | Administrator and anonymous access, user roles, and security for forms, microflows, entities, and reports. |
 
 {{% alert type="warning" %}}
-Security levels 'Off' and 'Prototype / demo' are only allowed in development and test. For acceptance and production you need to use the 'Production' security level and configure all security settings accordingly.
+Security levels **Off** and **Prototype/demo** are only allowed in the development and test environments. For acceptance and production you need to use the **Production** security level and configure all security settings accordingly.
 {{% /alert %}}
 
 {{% alert type="info" %}}
-All other security settings are only visible if the security level is 'Prototype / demo' or 'Production'.
+All other security settings including [Module Security](module-security) are only visible if the security level is **Prototype/demo** or **Production**.
 {{% /alert %}}
 
 ### 2.1 Check Security (Production Security Level)
 
-If the security level is production, you can specify whether the consistency of security settings should be checked. For each user role Studio Pro checks which forms are accessible, either directly in the menu bar or indirectly by following forms and microflows. For each of those forms, Studio Pro checks whether referred attributes and associations are accessible for the current user role. If not, an error is added to the error list. These errors are only shown if there are no other errors.
+If the security level is set to **Production**, you can specify whether the consistency of security settings should be checked. For each user role Studio Pro checks which forms are accessible, either directly in the menu bar or indirectly by following forms and microflows. For each of those forms, Studio Pro checks whether referred attributes and associations are accessible for the current user role. If not, an error is added to the error list. These errors are only shown if there are no other errors.
 
 ### 2.2 Project Status
 
@@ -42,15 +44,15 @@ The project status indicates the security status for the current project securit
 | Value | Description |
 | --- | --- |
 | Complete | All security settings for the current security level have been configured. |
-| Incomplete | Some security settings for the current security level need to be configured. See the module status for more information. |
+| Incomplete | Some security settings for the current security level need to be configured. For more information, see the [Module Status](#module-status) section. |
 
-## 3 Extra Settings
+## 4 Module Status {#module-status}
 
-When the security level is set to 'Prototype / demo' or 'Production', a number of tab pages with extra settings are shown.
+The **Module Status** tab shows the security status for each module. It shows the total number of items for which security needs to be configured, as well as the number of items for which security has been configured already. 
 
-## 4 Module Status
+At the **Prototype/demo** security level, the status of form access and microflow access is shown.
 
-The module status overview shows the security status for each module. It shows the total number of items for which security needs to be configured, as well as the number of items for which security has been configured already. At the 'Prototype / demo' security level, the status of form access and microflow access is shown. Additionally, at the 'Production' security level, the status of entity access and dataset access (if applicable) is shown.
+Additionally, at the **Production** security level, the status of entity access and dataset access (if applicable) is shown.
 
 ## 5 User Roles {#user-roles}
 
@@ -230,3 +232,5 @@ The following characters are considered symbols:
 ```java
 ` ~ ! @ # $ % ^ & * ( ) - _ = + [ { ] } \ | ; : ' " < , > . / ?
 ```
+
+## 10 Read more

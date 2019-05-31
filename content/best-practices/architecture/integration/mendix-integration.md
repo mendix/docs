@@ -39,27 +39,25 @@ The diagram below shows the following points:
 
 ### 2.3 Standard Integration Formats {#standard-formats}
 
-Mendix handles a large array of formats and protocols out of the box  The diagram above shows some of those formats:
+Mendix handles a large array of formats and protocols out of the box:
 
-1. REST is the most commonly used format for synchronous services, and it is always used for integration to the UX. Message format is JSON which is a bit lighter than XML. Mendix supports REST publish and importing of Swagger files with REST service definitions, so it is very easy to set up and maintain. There is always a microflow between the service and the end-point.
-2. SOAP is still used by many older services, using a WSDL files to share both definition of the message and the end-point. Mendix connects easily with SOAP services. To validate messages before sending them, XSD validation is available for SOAP interfaces.
-3. OData is a newer format already supported by Mendix. The transport is also REST, but instead of JSON it has a direct OData contract from the end-point to the domain model. Mendix 8 will enhance this capability.
-4. Deep-links allows the developer to re-direct a user with a specific context from the UX of one App to a specific point in the UX of another app. This is frequently used in microservices architectures.
-5. URL links are used to re-direct to other apps or web-pages, but also for encapsulating an external component in a Mendix widget, such as a Google map with enriched information overlayed.
-6. Queues are used for asynchronous use-cases. Mendix can use internal queues or connect to external queues, in both cases there are good App Store modules to import and use.
-7. Kafka is a new modern distributed event streaming system that Mendix integrates seemlessly with using the Kafka connector. It will be used for IoT and other high-volume, distributed, typically one-directional event flows.
-8. File extracts and imports are still frequently used, mostly using the Excel module, that works on csv-formated text files saved from Excel. Files are important for periodic busines processes, back-ups, and integrating with legacy systems.
-9. FTP or SFTP is used to move files to and from the internal file store in Mendix, often together with an import or export. A module in the AppStore provides the FTP client that can be used to call any FTP server that it can reach.
+* **REST** – This is the most commonly used format for synchronous services, and it is always used for integration to the UI. The message format is JSON, which is a bit lighter than XML. Mendix supports REST publishing and the importing of Swagger files with REST service definitions, so this integration is easy to set up and maintain. There is always a microflow between the service and the endpoint.
+* **SOAP** – This is still used by many older services, with WSDL files to share both the definition of the message and the endpoint. Mendix connects easily with SOAP services. To validate messages before sending them, XSD validation is available for SOAP interfaces.
+* **OData** – This is a newer format already supported by the Mendix Platform. The transport is also REST, but instead of JSON, there is a direct OData contract from the endpoint to the domain model.
+* **Deep links** – Deep links allow the developer to redirect an end-user with a specific context from the UX of one app to a specific point in the UX of another app. This is frequently used in microservice architectures.
+* **URL links** – These links are used to redirect the end-user to other apps or web pages. They are also used to encapsulate an external component in a Mendix widget, such as a Google map with enriched information overlayed.
+* **Queues** – Queues are used for asynchronous use cases. The Mendix Platform can use internal queues or connect to external queues. In both cases, there are good [Mendix App Store](https://appstore.home.mendix.com/index3.html) modules to import and use.
+* **Kafka** – Kafka is a new modern distributed event-streaming system that Mendix integrates seamlessly with using the [Kafka Connector](https://appstore.home.mendix.com/link/app/67994/). Kafka is used for IoT and other high-volume, distributed, typically one-directional event flows.
+* **File extracts & imports** – These are still frequently used, mostly via the [Excel Importer](https://appstore.home.mendix.com/link/app/72/) module, which works on *csv*-formated text files saved from Excel. These files are important for periodic busines processes, backups, and integrating with legacy systems.
+* **FTP or SFTP** – This is used to move files to and from the internal file store in Mendix, often together with an import or export. The [SFTP](https://appstore.home.mendix.com/link/app/107256/) connector in the Mendix App Store provides an FTP client that can be used to call any FTP server it can reach.
 
-For information on how to use these in the Mendix Modeller, see the [Integration How-to's](/howto/integration/).
+For information on how to use these in the [version 7 Mendix Desktop Modeler](https://docs.mendix.com/releasenotes/studio-pro/7), see the [Mendix 7 Integration How-to's](/howto7/integration/).
 
-### 2.4 Non-standard Formats
+### 2.4 Non-Standard Formats
 
-If there is a format that is not immediateley supported it is easy to extend Mendix using the [Mendix Platform SDK](/apidocs-mxsdk/mxsdk/). This can happen when integrating to legacy systems and mainframes. There could be an RPC with a text format message communicating directly on sockets over tcp/ip. 
+If there is a format that is not immediateley supported, it is easy to extend Mendix using the [Mendix Platform SDK](/apidocs-mxsdk/mxsdk/). This can happen when integrating to legacy systems and mainframes. For example, there could be an RPC with a text format message communicating directly on sockets over TCP/IP. 
 
-Even if this requires a more technical Mendix developer, there is no reason to avoid this option, because once the adapter is built it can be made a component in the local App Store and re-used by other Mendix apps.
-
-Mendix recommends using REST services, OData contracts, or SOAP for real-time integration; SFTP for files; and Kafka or a queue management system for distributed architectures. Mendix also recommends avoiding any direct database queries to the Mendix database. In fact, this option is disabled on Mendix Cloud, because the platform cannot check external SQL, which raises the risk of problems in production. Poor SQL can destroy things in an app, and when things change in the domain model, the platform cannot warn the developer of broken links.
+Even if this requires a more technical Mendix developer, there is no reason to avoid such extensions. Once the adapter is built, it can be published as in the Mendix App Store and be reused in other Mendix apps (for more information, see [How to Share App Store Content](/developerportal/app-store/share-app-store-content) in the *Developer Portal Guide*).
 
 ### 2.5 Security of Integration
 

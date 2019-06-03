@@ -69,29 +69,48 @@ You will need to create an SAP data model module for the GWSAMPLE_BASIC OData se
 
 13. Open your app in Mendix Studio Pro.
 
-14. 
+14. Right-click the project in the **Project Explorer** and select **Import module package…**.
+
+    ![](attachments/use-sap-odata-connector/import-module.png)
+
+15. Find the file that you stored in the /resources folder and import it.
+
+    The GWSAMPLE_BASIC data model will now be included as a module in your app.
+
+    ![](attachments/use-sap-odata-connector/data-model.png)
 
 For more information, see [Use the SAP OData Model Creator](use-sap-odata-model-creator) and [SAP Data Models](/refguide/sap/sap-data-models).
 
 ## 3 Using the SAP OData Connector
 
-In this section, you will learn how to implement the data connector in your Mendix app.
+In this section, you will learn how to implement the data connector in your Mendix app. These steps assume you are using a blank Mendix app with a module called MyFirstModule.
 
-### 3.1 Creating a Microflow<a name="microflow"></a>
+### 3.1 Creating a Microflow{#microflow}
 
 To create the microflow for this retrieve, follow these steps:
 
-1. Create a microflow in .
-2. From the **Toolbox**, drag the **Get List** operator into your microflow.
-3. Fill in the required fields of the Get List connector. For this example, you should use these settings:
-    * **Query** – `@SAPCheckPriceandAvailability.SRA016_PRICE_AVAIL_SRV_URL +'/' + toString(SAPCheckPriceandAvailability.EntitySetNames.Customers)`
-    * **Response type** – the type you want to query from the OData service; in this example, `Customer` is used
-    * **Request parameters** – empty
-    * **Parent** – empty
-    * **Result info** – empty
-    * **Use Cloud Connector** – Yes
-
-4. In the microflow, make the return value of the microflow **List of Customers**. This is so that you can call the microflow as a data source in a page.
+1. Create a constant in **MyFirstModule** called ES5_Username and make the default value your ES5 Username credential.
+2. Create a second constant in **MyFirstModule** called ES5_Password and make the default value your ES5 Password credential.
+3. Create a data source microflow called *DS_GetProductList* in **MyFirstModule**.
+4. From the **Toolbox**, drag a **Create request params** action into your microflow.
+5. Open the properties and change the return variable name to *SAPRequestParams*.
+6. Drag an **Add basic authentication** action into your microflow.
+7. Open the properties and set the following:
+    * **Request parameters** - `$SAPRequestParams`
+    * **Username** - `@MyFirstModule.ES5_Username`
+    * **Password** - `@MyFirstModule.ES5_Password`
+    * (You do not have to use the return variable)
+8. Drag the **Get List** action into your microflow.
+9. Fill in the required fields of the Get List connector. For this example, you should use these settings:
+    * **Response type** – `GWSAMPLE_BASIC.Product`
+    * **Destination** – `empty`
+    * **Query** – `@GWSAMPLE_BASIC.GWSAMPLE_BASIC + '/' + toString(GWSAMPLE_BASIC.EntitySetNames.ProductSet)`
+    * **Request parameters** – `$SAPRequestParams`
+    * **Parent** – `empty`
+    * **Result info** – `empty`
+    * **Use return variable** – `Yes`
+    * **Variable** – `ListOfProducts`
+10. In the microflow, make the return value of the microflow **List of Customers**. This is so that you can call the microflow as a data source in a page.
 
 The final result of your microflow should look like this:
 
@@ -101,15 +120,21 @@ The final result of your microflow should look like this:
 
 To create a page to show the objects in a list, follow these steps:
 
-1. Create a blank page and insert a **Data grid** widget.
-2. Select the microflow you created in section [3.1 Creating a Microflow](#microflow) as the data source for the grid. Your page should look like this:
+1. Add a blank page to your **MyFirstModule** module.
+2. Insert a **Data grid** widget in the page.
+3. Select the microflow you created in the section [Creating a Microflow](#microflow), above, as the data source for the grid.
+4. Select the **Name**, **Category**, and **Price** attributes to display in the data grid.
+
+    Your page should look like this:
 
     ![](attachments/use-sap-odata-connector/show-get-list-result.png)
 
-3. Create a simple **button** on your homepage.
-4. Set the action to **Open page** and select the page you have just created.
+3. Drag a **open page button** on your homepage.
+4. Select the page you have just created to be displayed.
 
-Congratulations! You can now run your app and see a list of the customers available in the public **Check Price and Availability** application of [SAP Fiori Cloud Demo](https://www.sapfioritrial.com/sites?helpset=trial&sap-client=001#PriceAndAvailability-check).
+{{% alert type="success" %}}
+Congratulations! You can now run your app and see a list of the products available in the **GWBASIC_SAMPLE** application.
+{{% /alert %}}
 
 ## 4 Read More
 

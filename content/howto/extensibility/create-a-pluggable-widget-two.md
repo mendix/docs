@@ -552,5 +552,6 @@ Explaining the code:
 
 ## 4 Read More
 
-* [Write JavaScript Actions](write-javascript-actions)
+* [Write JavaScript Actions: Part 1 (Basic)](write-javascript-actions)
+* [Write JavaScript Actions: Part 2 (Advanced)](write-javascript-github)
 * [Build a Text Box Pluggable Widget: Part 1](create-a-pluggable-widget-one)

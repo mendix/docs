@@ -531,7 +531,8 @@ Not all capabilities are recommended for use. Consider the side effects that an 
 
 ## 7 Read More
 
-* [Write JavaScript Actions](write-javascript-actions)
+* [Write JavaScript Actions: Part 1 (Basic)](write-javascript-actions)
+* [Write JavaScript Actions: Part 2 (Advanced)](write-javascript-github)
 * [JavaScript Actions](/refguide/javascript-actions)
 * [Mendix Client API](https://apidocs.mendix.com/7/client/)
 * JavaScript basics:

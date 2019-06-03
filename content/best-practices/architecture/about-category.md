@@ -14,7 +14,7 @@ The Mendix Architecture Best Practices were written for [Mendx version 7](/relea
 
 Mendix is optimized for the easiest and fastest way to develop and maintain apps that fulfill business functions. As the scope of your apps grows larger, architecture becomes more important. At that point, you should leverage best practices in this area.
 
-The Mendix architecture best practices complements the following sections in the Mendix Evaluation Guide:
+The Mendix architecture best practices complements the following sections in the *Mendix Platform Evaluation Guide*:
 
 * [Data Management](https://www.mendix.com/evaluation-guide/app-capabilities/data-management)
 * [Integration](https://www.mendix.com/evaluation-guide/app-capabilities/integration)

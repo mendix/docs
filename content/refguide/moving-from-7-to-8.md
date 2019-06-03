@@ -16,9 +16,9 @@ For information about new features in Mendix 8, see [Studio Pro 8 release notes]
 Mendix version 8 and Studio Pro 8 are still in beta. There may be additional breaking changes and update requirements introduced in future beta releases and when Mendix version 8 is made generally available (GA).
 {{% /alert %}}
 
-## 2 Converting Your Project
+## 2 Converting Your App Project
 
-The following sub-sections explain the steps to take in converting your project from Mendix 7 to Mendix 8.
+The following sub-sections explain the steps to take in converting your app project from Mendix 7 to Mendix 8.
 
 ### 2.1 Backup Your Project
 
@@ -76,7 +76,7 @@ Test the app for any unexpected results.
 Congratulations! Your app has been successfully upgraded to Mendix 8 and you can continue working as normal.
 {{% /alert %}}
 
-## 3 Deprecated & Removed APIs{#deprecated-apis}
+## 3 Deprecated & Removed APIs {#deprecated-apis}
 
 Deprecated Java actions should be fixed in Mendix 7, before you migrate the app project to Mendix 8.
 
@@ -84,7 +84,7 @@ Fix the deprecations in your Java actions by importing your project into your Ja
 
 Details of removed and deprecated APIs will be added to the *Breaking Changes* section of the [Studio Pro 8 release notes](/releasenotes/studio-pro/).
 
-## 4 Attributes of Type Float & Currency{#float-currency}
+## 4 Attributes of Type Float & Currency {#float-currency}
 
 Attributes of type Float and Currency were deprecated in Mendix version 7, and have now been removed from Mendix version 8. If your app contains attributes of type Float and/or Currency, these will need to be converted to type Decimal.
 

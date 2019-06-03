@@ -159,9 +159,7 @@ You can test how your app looks like for different roles the following way:
 
 1. [Preview your app](publishing-app).
 
-2.  Select the **Responsive view** mode.
-
-3. Click a user icon in the right-hand side of the screen:
+2. Click a user icon in the right-hand side of the screen:
 
     ![](attachments/settings-security/user-icon.png)
 

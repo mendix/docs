@@ -16,7 +16,7 @@ This documentation is written by Mendix employees, and sometimes it refers to re
 
 ### 1.1 About Best Practices
 
-Mendix Expert Best Practices will eventually be valuable for all the people that participate in the application lifecycle, from scoping and estimation to maintenance in production.
+The *Expert Best Practices* will eventually be valuable for all the people that participate in the application lifecycle, from scoping and estimation to maintenance in production.
 
 ![](attachments/overview1.png)
 

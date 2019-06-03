@@ -7,7 +7,7 @@ draft: true
 
 ## 1 Introduction
 
-The Mendix Expert Best Practices for Integration will help Lead Developers, Designers, and Architects to see examples for integration solutions made with the Mendix Platform involved. They will also provide recommendations for when to choose one option over another.
+The *Expert Best Practices for Integration* will help Lead Developers, Designers, and Architects to see examples for integration solutions made with the Mendix Platform involved. They will also provide recommendations for when to choose one option over another.
 
 ### 1.1 What Questions Are Addressed?
 

@@ -7,35 +7,37 @@ draft: true
 
 ## 1 Introduction
 
-Integration between different systems means that data-flows are automated and functions in different apps are connected. So integration is driving automation and digitization of processes, saving time and money for organizations. I.e. it is an incredibly important area to master and to do right.
+Integration between different systems means that data flows are automated and functions in different apps are connected. In turn, integration drives the automation and digitization of processes, saving time and money for your organization. This means integration is an incredibly important area to master and do right.
 
-The following sections will go through a number of methods for integrating Mendix with other systems, things, SaaS solutions and within microservices systems made up of many Mendix apps.
+The sections below will go through a number of methods for integrating the Mendix Platform with other systems, things, SaaS solutions, and microservice systems made up of many Mendix apps.
 
-Unless you are building a stand-alone Mendix app, there will be integration to existing systems and between Mendix apps. Even if Mendix makes it very easy to integrate technically, it is still important to functionally define the most efficient overall solution, where integration is as simple as possible. That will determine how easy it is to maintain, update or extend the solution.
+Unless you are building a stand-alone Mendix app, there will be integration with existing systems and between Mendix apps. Even if Mendix makes it very easy to integrate technically, it is still important to functionally define the most efficient overall solution, in which the integration should be as simple as possible. That will determine how easy it is to maintain, update, or extend the solution.
 
-To assist Mendix projects in this area, we show a number of typical examples how Mendix apps play functional different roles and how they integrate well within an Enterprise landscape. This is especially helpful for organizations that want to use Mendix for core systems replacement, large scale migrations towards the cloud, or when Mendix is the preferred platform for all custom development. 
+To assist Mendix app projects in this area, typical examples are presented of how Mendix apps play functionally different roles and how they integrate well within an enterprise landscape. This is especially helpful for organizations that want to use Mendix for core systems replacement or large scale migrations towards the cloud as well as when Mendix is the preferred platform for all custom development.
 
 ## 2 Microservices integration
 
-Microservices architecture is pre-vailing over layered SOA architectures as a much more efficient way to implement service oriented and event driven architectures.
+Microservices architecture is prevails nowadays over layered SOA architectures as a much more efficient way to implement service-oriented and event-driven architectures.
 
-Microservice architecture changes a lot of things in the area of integration, see also Martin Fowler on Microservices: https://martinfowler.com/articles/microservices.html 
+However, microservice architecture has changed a lot of things in the area of integration. For more information, see Martin Fowler's [Microservices: a definition of this new architectural term](https://martinfowler.com/articles/microservices.html ).
 
-In general Microservices replace solutions where functional dependencies have become too complex: 
-1. Large Monolithic systems working on one single large database
-2. SOA Layered architectures
+In general, microservices replace solutions where functional dependencies have become too complex like the following:
 
-<< FIGURE 1 >>
+* Large monolithic systems working on one single large database
+* SOA-layered architectures
+
+![](attachments/integration-intro/intro-1.png)
 
 ### 2.1 Good Dependencies
 
-As the diagram above shows, Microservice apps are smaller functional pieces that contain a business function:
-* There are not too many functional areas that depend on the same data-model, as in Monoliths. 
-* There are not too many functional areas that depend on the same technical layers as in SOA layered architectures
+Microservice apps are smaller functional pieces that contain a business function. The following best practices are important to understand for dependencies:
 
-Instead we try to contain all things required to perform a business function within each app. A new business feature requirement is then  likely to land within only one single app that maintained by one single team. This means we can change quickly and provide flexibility to the business unit that own that functionality.
+* There must not be too many functional areas that depend on the same data model (as occurs in monoliths)
+* There must not be too many functional areas that depend on the same technical layers (as occurs in SOA-layered architectures)
 
-There is still integration required between microservice apps. But there will be less integration than between the application server and the database in a monolith, or between the layers in a SOA layered architecture. This is because most of the work that the app does, is contained within the app itself. They are local and private (not externally exposed) dependencies, that are easily owned and maintained by a small DevOps team. 
+Instead, you must try to contain everything required to perform a business function within each app. A new business feature requirement is then likely to land within only one single app, which will be maintained by one single team. This means you can change quickly when necessary and provide flexibility to the business unit that owns that functionality.
+
+There is still integration required between microservice apps. However, there will be less integration than needed between the application server and database in a monolith, or between the layers in an SOA-layered architecture. This is because most of the work that the app does, is contained within the app itself. They are local and private (not externally exposed) dependencies, that are easily owned and maintained by a small DevOps team. 
 
 Mendix is perfect for building this type of microservices, because within a Mendix app all internal dependencies are kept private. They are managed and consistency-checked by the Mendix model itself, and the developer builds UX, logic, workflow and data structures directly for a business function.
 
@@ -47,7 +49,7 @@ In a landscape of many styles of Microservices, Mendix can take any role and/or 
 
 The diagram below shows a number of typical Microservices:
 
-<<FIGURE 2>>
+![](attachments/integration-intro/intro-2.png)
 
 * The first part shows a microservices system covering a larger functional area where several user groups cooperate. It has 
 ** A log-in and overviews Dashboard
@@ -195,7 +197,7 @@ The table below presents use cases that you can reference  for more detail. The 
 | Mobile Int. & Offline | | ![](attachments/integration-intro/green.png) | ![](attachments/integration-intro/grey.png) | | |
 | CMS & CDN Int. | ![](attachments/integration-intro/green.png) | ![](attachments/integration-intro/grey.png) | | | |
 | Process Orch. & State Engines | | ![](attachments/integration-intro/green.png) | ![](attachments/integration-intro/grey.png) | | ![](attachments/integration-intro/green.png) |
-| Int. with Ops & Monitoring | ![](attachments/integration-intro/grey.png) | ![](attachments/integration-intro/grey.png) | ![](attachments/mendix-integration/green.png) | ![](attachments/integration-intro/grey.png) | ![](attachments/integration-intro/green.png) |
+| Int. with Ops & Monitoring | ![](attachments/integration-intro/grey.png) | ![](attachments/integration-intro/grey.png) | ![](attachments/integration-intro/green.png) | ![](attachments/integration-intro/grey.png) | ![](attachments/integration-intro/green.png) |
 | Int. with IoT Solutions | | ![](attachments/integration-intro/green.png) | ![](attachments/integration-intro/green.png) | ![](attachments/integration-intro/grey.png) | ![](attachments/integration-intro/green.png) |
 | Int. with AI & Machine Learning | | ![](attachments/integration-intro/green.png) | ![](attachments/integration-intron/grey.png) | | ![](attachments/integration-intro/green.png) |
 

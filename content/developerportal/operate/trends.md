@@ -133,11 +133,11 @@ The memory graph shows the distribution of operating system memory that is avail
 
 The database connections graph shows the number of connections to the PostgreSQL server. This should go up and down with the usage of the application. The number of connections is limited to 50.
 
-## <a name="Trends-dbdiskstatsiops"></a>5 Both Application and Database Node
+## 5 Both Application and Database Node
 
 The following infrastructure metrics are available for both the application node and the database node.
 
-### <a name="Trends-appdiskstatsiops"></a>5.1 Disk IOPS
+### <a name="Trends-appdiskstatsiops"></a><a name="Trends-dbdiskstatsiops"></a>5.1 Disk IOPS
 
 The Disk IO statistics show the number of disk read and write operations that are done from and to the disk storage. It does not show the amount of data that was transferred.
 

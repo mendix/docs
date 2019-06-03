@@ -248,11 +248,11 @@ The database connections graph shows the number of connections to the PostgreSQL
 ### <a name="Trends-dbdfabs"></a><a name="Trends-dbdf"></a>5.4.4 Disk Usage
 This graph displays the amount of free disk space in bytes for the database.
 
-## <a name="Trends-dbdiskstatsiops"></a>6 Both Application and Database Node
+## 6 Both Application and Database Node
 
 Shared statistics for both of the machines.
 
-### <a name="Trends-appdiskstatsiops"></a>6.1 Disk IOPS
+### <a name="Trends-appdiskstatsiops"></a><a name="Trends-dbdiskstatsiops"></a>6.1 Disk IOPS
 
 The disk IO statistics show the number of disk read and write operations that are done from and to the disk storage. It does not show the amount of data that was transferred.
 

@@ -19,7 +19,7 @@ To assist Mendix app projects in this area, typical examples are presented of ho
 
 Microservices architecture prevails nowadays over layered SOA architectures as a much more efficient way to implement service-oriented and event-driven architectures.
 
-However, microservice architecture has changed a lot of things in the area of integration. For more information, see Martin Fowler's [Microservices: a definition of this new architectural term](https://martinfowler.com/articles/microservices.html ).
+However, microservice architecture has changed a lot of things in the area of integration. For more information, see [Microservices: a definition of this new architectural term](https://martinfowler.com/articles/microservices.html ) by Martin Fowler.
 
 In general, microservices replace solutions where functional dependencies have become too complex, like the following:
 

@@ -47,7 +47,7 @@ Mendix Assist has the following properties:
 
 * **Show suggestions for system variable** – when enabled, Mendix Assist will make suggestions for system variables as well, for example, it can suggest you changing such variables as *currentUser* or *currentSession*:
 
-  ![](attachments/mx-assist-studio-pro/mx-assist-system variables.png)
+  ![](attachments/mx-assist-studio-pro/mx-assist-system-variables.png)
 
 ## 4 Adding Activities and Elements with Mendix Assist {#add-activities}
 
@@ -62,7 +62,7 @@ To add an activity/element do the following:
 
 The activity/element is added to the flow.
 
-When you select **Add a check**, an exclusive split will be added (for more information, see [Exclusive Split](microflows-exclusive-split)):
+When you select **Add a check**, an exclusive split will be added (for more information, see [Exclusive Split](exclusive-split)):
 
 ![](attachments/mx-assist-studio-pro/mx-assist-add-check.png) 
 

@@ -86,7 +86,7 @@ The target for a Solution Architect designing a larger solution will therefore b
 There are two main steps here:
 
 1. Find the correct, right-sized, functional, and autonoumous microservices.
-2. Find the integration method that is easy to build and manage. That is where the Mendix Expert Best Practices for Integration can help. 
+2. Find the integration method that is easy to build and manage. That is where the *Expert Best Practices for Integration* can help. 
 
 The best solution varies from case to case and depends on organizational, technical, functional, and operational aspects. The optimal solution takes all of these factors into consideration.
 

@@ -1,7 +1,6 @@
 ---
 title: "Write JavaScript Actions: Part 1 (Basic)"
-category: "Extensibility"
-menu_order: 5
+parent: "build-javascript-actions"
 description: "This how-to will teach you to create a JavaScript action."
 tags: ["widget", "TexttoSpeech", "SpeechtoText", "JavaScript", "API", "JavaScript-API"]
 ---

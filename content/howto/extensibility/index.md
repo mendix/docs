@@ -11,8 +11,7 @@ One of the strengths of Mendix is that it is easy to connect your Mendix applica
 ## 2 Main Documents in This Category
 
 * [Building Pluggable Widgets](pluggable-widgets)
-* [Write JavaScript Actions: Part 1 (Basic)](write-javascript-actions)
-* [Write JavaScript Actions: Part 2 (Advanced)](write-javascript-github)
+* [Write JavaScript Actions](build-javascript-actions)
 * [Use the Charts Widgets](charts-tutorials)
 * [Access a Samba Share from the MxCloud](access-a-samba-share-from-the-mxcloud)
 * [Get Started with the TimeSeries Connector](get-started-with-the-timeseries-connector)

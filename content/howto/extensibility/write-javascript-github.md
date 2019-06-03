@@ -1,7 +1,6 @@
 ---
 title: "Write JavaScript Actions: Part 2 (Advanced)"
-category: "Extensibility"
-menu_order: 6
+parent: "build-javascript-actions"
 description: "This advanced how-to will teach you to make a JavaScript action which can search for GitHub users."
 tags: ["widget", "search", "GitHub", "JavaScript", "API", "JavaScript-API"]
 ---

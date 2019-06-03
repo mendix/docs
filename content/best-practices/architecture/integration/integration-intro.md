@@ -126,41 +126,38 @@ Microservices theory also suggests using circuit breakers for high-volume situat
 
 ### 3.4 Technical Dependencies
 
-In quite a few cases there is alreay a legacy system, or we integrate with a SaaS solution with an already existing API. In these cases there is often little choice in the format and protocol of the services we need to use.
+In quite a few cases there is already a legacy system to integrate with, or you need to integrate with a SaaS solution via an already existing API. In such cases, there is often little choice in the format and protocol of the services we need to use.
 
-In these cases the Mendix app will typically adapt to the existing technical and functional format of services provided by e.g. a SaaS system such as SAP or SalesForce. Mendix is the more flexible side in most integration relations, and can adopt to almost any format that is provided.
+In these cases, the Mendix app will typically adapt to the existing technical and functional format of services provided (for example, via an SaaS system such as SAP or SalesForce). The Mendix Platform is the more flexible side in most integration relations, as it can adapt to almost any format provided.
 
-But there are cases when it is better to change even old legacy systems. E.g. when one can not retrieve the data without looping over a service call 100s of times, then either a new service should be built or switching to copying the data ahead of time with e.g. a file.
+However, there are cases when it is better to change even old legacy systems. For example, when you cannot retrieve data without looping over a service call hundreds of times, then either a new service should be built, or you should switch to copying the data ahead of time (for example, with a file).
 
 ### 3.5 Scoping Integration Early & Implementing Late
 
-Because integration is an external dependency, it makes sense to scope out the required integration early. 
+Because integration is an external dependency, it makes sense to scope out the required integration early. This will give teams the maximum amount of time to provide updated services or files before the go-live date. While waiting, users can use mock services and/or files, and then connect to the final version towards the end of the app project.
 
-This will allow for teams to have the maximum time to provide updated services or files before the go-live date. While waiting, users can use mock services and/or files, and then connect to the final version towards the end of the project.
+### 3.6 Keep It Simple!
 
-### 3.6 Keep It Simple
+As in all design, a simpler solution is always easier to build and maintain than a more complex one. If something can be done with fewer service calls, components, or technologies involved, that is usually better. 
 
-As in all design, the more simple solution is always easier to build and maintain that a more complex one. If something can be done with fewer service calls or fewer components or fewer technologies involved, it is usually better. 
+The most frequently used and accepted service protocol at the moment is REST over Http(s). This allows the caller of the service to manage errors or issues, and within a single service call, there is both the request and reply.
 
-The most frequently used and overall accepted service protocol aty the moment is REST over Http(s). This allows the caller of the service to manage any errors or issues, and within a single service call, there is both request and reply.
-
-Bu there are an incredible amount of different situations to take into account, and this document will go through quite a few technical and functional scenarios where other formats and protocols are recommended.
+However, there is an incredible amount of integration scenarios to take into account. This document will go through quite a few technical and functional scenarios where other formats and protocols are recommended.
 
 ## 4 Overall Recommendations
 
-Apps should act as actors in a business process. They typically do different things, and often they have different views of the data. So it is ok to copy some data from one app to the otherm as part of the business process, or to share reference data between apps. 
+Apps should act as actors in a business process. They typically do different things, and often they have different views of the data. So, it is ok to copy some data from one app to another as part of the business process or share reference data between apps. 
 
-Implementing the integration points as Business Events that fullfill a step in a business process. For sharing reference data, it is typical to pull the source for changes and/or send files with updated data for slowly changing data.
+You should implement integration points as business events that fulfill a step in a business process. For sharing reference data, it is typical to poll the source for changes and/or send files with updated data for slowly-changing data.
 
-To approach an inegration problem it is good to think functionally first - and only when it is clear what the entire integration should do, including acknoledgements, statuses and errors, then compare technical solutions that will handle the situation in a simple way.
+When approaching an inegration problem, it is good to think functionally first. When it is clear what the entire integration should do (including acknoledgements, statuses, and errors), only then should you compare the technical solutions that can handle the situation in a simple way.
 
-In the days of SOA layers, a central ESB would take care of a lot of integration functionality, such as transformation, routing, re-tries, queueing, and even combining services. 
+In the days of SOA layers, a central ESB would take care of a lot of integration functionality, such as transformation, routing, re-tries, queueing, and even combining services. But now, in the era of microservices, you should aim for "dumb pipes and smart endpoints" in the following scenarios:
 
-In the era of microservices, you should aim for "dumb pipes and smart endpoints":
-1. Within a system of microservices owned by the same organizational area, there is no reason to use an integration layer at all
-2. For a number of other cases, especially for large organizations, a thin integration layer is helpful
+* Within a system of microservices owned by the same organizational area, where there is no reason to use an integration layer at all
+* In a number of other cases, especially for large organizations, where a thin integration layer is helpful
 
-Integration is easy with Mendix, and microservices are enhancing the efficiency and flexibility in the IT industry. If in this situation the integration can be made simple, there is an amazing opportunity to re-shape how organizations build and manage It to support different business functions.
+Integration is easy with Mendix, and microservices are enhancing the efficiency and flexibility in the IT industry. If in such scenarios the integration can be made simple, there is an amazing opportunity to reshape how organizations build and manage IT to support different business functions.
 
 ### 4.1 Basic Solution Categories
 

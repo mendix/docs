@@ -13,7 +13,7 @@ Publishing means getting your app up and running in a cloud environment to make 
 
 ## 2 Previewing Your App
 
-The app preview shows you how your app will look like after it is published.  
+The app preview shows you what your app will look like after it is published.  
 
 To preview your app, click **Preview** in the top-right corner of Studio. 
 

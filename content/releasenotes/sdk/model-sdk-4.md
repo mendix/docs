@@ -9,7 +9,7 @@ These are the release notes for the [Model SDK](/apidocs-mxsdk/mxsdk/) version 4
 
 **Release date: June 3rd, 2019**
 
-* We added support for Mendix 8.0.0 Beta 2.
+* We added support for Mendix [8.0.0 Beta 2](../studio-pro/8.0#802).
 
 ## 4.20.0 {#420}
 

@@ -14,10 +14,10 @@ The SAP OData Connector is a specific SAP connector for integrating with SAP bac
 
 * Add the SAP OData Connector to your Mendix app
 * Configure the SAP OData Connector
-* Display Data from an SAP OData service in your Mendix app
+* Display product data from the SAP OData service GWSAMPLE_BASIC in your Mendix app
 
 {{% alert type="warning" %}}
-SAP OData Connector only supports SAP OData Gateway Services which use OData version 2 or version 3. OData version 4 is not yet supported.
+The SAP OData Connector only supports SAP OData Gateway Services which use OData version 2 or version 3. OData version 4 is not yet supported.
 {{% /alert %}}
 
 ## 2 Prerequisites{#prerequisistes}
@@ -35,9 +35,7 @@ For more information, see [How to Use App Store Content](/developerportal/app-st
 
 ## 4 Getting an SAP Data Model
 
-In this example, you will display a list of products from the GWSAMPLE_BASIC OData service.
-
-You will need to create an SAP data model module for the GWSAMPLE_BASIC OData service. The module contains a pre-built domain model that you can add to your app.
+In this example, you will display a list of products from the GWSAMPLE_BASIC OData service. You will need to create an SAP data model module for the GWSAMPLE_BASIC OData service. The module contains a pre-built domain model that you can add to your app.
 
 1. Open the [SAP OData Model Creator](https://sapodatamodelcreator.mendixcloud.com/).
 

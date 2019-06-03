@@ -29,7 +29,7 @@ The Data Model module contains up to four resources which help to consume the OD
 
 ### 2.1 Domain Model
 
-Each Mendix SAP data model has a domain model that describes the information in the OData service. The domain model consists of entities and their relations represented by associations. For more information, see [Domain Model](../domain-model).
+Each Mendix SAP data model has a domain model that describes the information in the OData service. The domain model consists of entities and their relations represented by associations. For more information, see [Domain Model](/refguide/domain-model).
 
 ![](attachments/sap-data-models/sap-service-example.png)
 
@@ -39,7 +39,7 @@ Do not change the names of entities, attributes, or associations in the Domain M
 
 ### 2.2 Service Root
 
-The module contains a constant whose value is the service root of the OData service. For the **Check Price and Availability for Field Sales Representative** this is the constant SRA016_PRICE_AVAIL_SRV and has the value `https://www.sapfioritrial.com/sap/opu/odata/sap/SRA016_PRICE_AVAIL_SRV`.
+The module contains a constant whose value is the service root of the OData service. For example, the **GWSAMPLE_BASIC** data model, generated from the SAP Catalog Service using the SAP OData model Creator has a Service Root which is the constant GWSAMPLE_BASIC which has the value `https://sapes5.sapdevcenter.com:443/sap/opu/odata/iwbep/GWSAMPLE_BASIC`.
 
 ### 2.3 Entity Set Names
 

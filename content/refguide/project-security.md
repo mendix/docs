@@ -50,7 +50,7 @@ If the security level is set to **Production**, you can specify whether the cons
 
 When **Check Security** is enabled, for each user role Studio Pro checks which forms are accessible, either directly in the menu bar or indirectly by following forms and microflows. For each of those forms, Studio Pro checks whether referred attributes and associations are accessible for the current user role. If not, an error is added to the error list. These errors are only shown if there are no other consistency errors.
 
-### 2.3 Project Status
+### 2.3 Project Status {#project-status}
 
 The project status indicates the security status for the current project security level.
 
@@ -71,77 +71,15 @@ Additionally, at the **Production** security level, the status of entity access 
 
 A user role aggregates a number of access rights on data, forms, and microflows. An end-user of the application is assigned one or more user roles by an administrator, and gets all access rights that these user roles represent. For more information, see [User Roles](user-roles).
 
-## 5 Administrator
+## 5 Administrator {#administrator}
 
-**User Name**
+In the **Administrator** tab of **Project Security**, you can change the default credentials and a user role for the Administrator user. For more information, see [Administrator](administrator). 
 
-The user name of the administrator user that can be used to sign into the application.
+## 6 Demo Users {#demo-users}
 
-_Default value_: MxAdmin
+Demo users are a demonstration of each [user role](user-roles) existing in your app. You can use demo users to test how your app looks like for each user role or to demonstrate your app to other people. For more information, see [Demo Users](demo-users). 
 
-**Password**
-
-The password of the administrator user that can be used to sign into the application.
-
-_Default value_: 1
-
-**User Role**
-
-The user role of the administrator user that can be used to sign in to the application.
-
-{{% alert type="info" %}}
-
-This user is always created and has the System.Administrator role by default. This module role allows any user with this role to manage your users. On sandboxes the user that created the application automatically has this role by default as well so you can use it to administer your users in that environment.
-This role may be helpful in case for some reason you have exceeded your user license restriction in which case you can use any user that has this System.Administrator role to login to manage your users.
-
-{{% /alert %}}
-
-## 7 Demo Users
-
-In this section of the Project Security settings, you can define demo users that may be used during the development phase of your application for testing purposes, or to show the application to other people.
-
-Each demo user can be assigned an entity and one or more user roles that apply when you sign in to your application with that user. When the application is started for the first time, the specified demo users are created automatically.
-
-After signing in to your application with the administrator user, a small tab called the 'user switcher' is presented at the right side of your application. Expanding this tab shows a list with all the demo users that are defined in the project security settings. Selecting a user from this list will sign in to your application using the credentials of this user, thus allowing you to test or demo your application with the user's role(s). This allows for rapid testing of your application with different user roles.
-
-![](attachments/16713950/16844039.png)
-
-The user switcher is only shown and the demo users are only created when running your application locally on your development machine, or when running in a sandbox.
-
-{{% alert type="info" %}}
-
-After they are created automatically, demo users do not differ in any way from other local users that are defined in your application. This means that you can still use them to manually sign in using their user name and password, even after disabling the demo users feature again. Also, the demo users are never automatically removed from the database.
-
-{{% /alert %}}
-
-**Enable demo users**
-
-Here you can configure whether the specified demo users are created and accessible in the user switcher.
-
-| Value | Description |
-| --- | --- |
-| Yes | Demo users are enabled. A user switcher is shown in the right margin of your application. |
-| No | Demo users are disabled. The user switcher is not shown in the application. |
-
-### 7.1 Demo User Properties
-
-**Username**
-
-The name of the demo user. This name must be unique, and cannot be the same as the name of the [administrator user](administrator).
-
-**Password**
-
-The password of the demo user is created automatically when the demo user is created. It cannot be changed, but it's possible to put a copy of this password on the system clipboard. This makes it possible, for example, to share the credentials of a demo user with someone else.
-
-**Entity**
-
-The entity of the demo user. This must be the System.User entity, or a specialization thereof.
-
-**User roles**
-
-Here you can select the user roles of the demo user. Each demo user must have one or more roles.
-
-## 8 Anonymous Users {#anonymous-users}
+## 7 Anonymous Users {#anonymous-users}
 
 **Allow anonymous users**
 
@@ -185,7 +123,7 @@ An anonymous user in a web shop adds some items to her shopping cart and then cl
 
 {{% /alert %}}
 
-## 9 Password Policy
+## 8 Password Policy {#password-policy}
 
 You can specify a number of requirements for passwords. These requirements will be enforced when creating new users or changing passwords of existing users.
 
@@ -211,4 +149,4 @@ The following characters are considered symbols:
 ` ~ ! @ # $ % ^ & * ( ) - _ = + [ { ] } \ | ; : ' " < , > . / ?
 ```
 
-## 10 Read More
+## 9 Read More

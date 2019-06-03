@@ -6,15 +6,15 @@ tags: ["studio pro"]
 
 ## 1 Introduction
 
-In this section of the [project security](project-security) settings, you can define demo users that may be used during the development phase of your application for testing purposes, or to show the application to other people.
+Demo users are a demonstration of each [user role](user-roles) existing in your app. You can use demo users to test how your app looks like for each user role or to demonstrate your app to other people. 
 
 Each demo user can be assigned an entity and one or more user roles that apply when you sign in to your application with that user. When the application is started for the first time, the specified demo users are created automatically.
 
-After signing in to your application with the [administrator user](administrator), a small tab called the 'user switcher' is presented at the right side of your application. Expanding this tab shows a list with all the demo users that are defined in the project security settings. Selecting a user from this list will sign in to your application using the credentials of this user, thus allowing you to test or demo your application with the user's role(s). This allows for rapid testing of your application with different user roles.
+After signing in to your application as the [Administrator](administrator), a user icon is shown at the right-hand side of your screen. You can click this icon and the menu bas **Select user** will be displayed. It shows a list of all the demo users. Selecting a user from this list will sign in to your application using the credentials of this user, thus allowing you to test or demo your application with the user's role(s). This allows for rapid testing of your application with different user roles.
 
-![](attachments/16713956/16844040.png)
+![](attachments/demo-users/demo-users-example.png)
 
-The user switcher is only shown and the demo users are only created when running your application locally on your development machine, or when running in a sandbox.
+The demo users are only created and shown in the  when running your application locally on your development machine, or when running in a sandbox.
 
 {{% alert type="warning" %}}
 
@@ -48,3 +48,6 @@ The entity of the demo user. This must be the System.User entity, or a specializ
 ### 3.4 User Roles
 
 Here you can select the user roles of the demo user. Each demo user must have one or more roles.
+
+## Read More
+

@@ -33,16 +33,16 @@ Security levels **Off** and **Prototype/demo** are only allowed in the developme
 
 Security settings availability depend on the security level that you set. Find the list of all security settings and their availability per security level in the table below: 
 
-| Setting Name    | Security Off | Prototype/demo Security                                      | Production Security                                          |
-| --------------- | ------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Check security  | N/a          | N/a                                                          | Available, see the [Check Security](#check-security) section. |
-| Project status  | N/a          | Available, see the [Project Status](#project-status) section. | Available, see the [Project Status](#project-status) section. |
-| Module status   | N/a          | Available, see the [Module Status](#module-status) section.  | Available, see the [Module Status](#module-status) section.  |
-| User roles      | N/a          | Available, see the [User roles](#user-roles) section.        | Available, see the [User roles](#user-roles) section.        |
-| Administrator   | N/a          | Available, see the [Administrator](#administrator) section.  | Available, see the [Administrator](#administrator) section.  |
-| Demo users      | N/a          | Available, see the [Demo users](#demo-users) section.        | Available, see the [Demo users](#demo-users) section.        |
-| Anonymous users | N/a          | Available, see the [Anonymous users](#anonymous-users) section. | Available, see the [Anonymous users](#anonymous-users) section. |
-| Password policy | N/a          | Available, see the [Password policy](#password-policy) section. | Available, see the [Password policy](#password-policy) section. |
+| Setting Name                        | Security Off | Prototype/demo Security                                      | Production Security                                          |
+| ----------------------------------- | ------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| [Check security](#check-security)   | N/a          | N/a                                                          | Available, see the [Check Security](#check-security) section. |
+| [Project status](#project-security) | N/a          | Available, see the [Project Status](#project-status) section. | Available, see the [Project Status](#project-status) section. |
+| [Module status](#module-status)     | N/a          | Available, see the [Module Status](#module-status) section.  | Available, see the [Module Status](#module-status) section.  |
+| [User roles](#user-roles)           | N/a          | Available, see the [User roles](#user-roles) section.        | Available, see the [User roles](#user-roles) section.        |
+| [Administrator](#administrator)     | N/a          | Available, see the [Administrator](#administrator) section.  | Available, see the [Administrator](#administrator) section.  |
+| [Demo users](#demo-users)           | N/a          | Available, see the [Demo users](#demo-users) section.        | Available, see the [Demo users](#demo-users) section.        |
+| [Anonymous users](#anonymous-users) | N/a          | Available, see the [Anonymous users](#anonymous-users) section. | Available, see the [Anonymous users](#anonymous-users) section. |
+| [Password policy](#password-policy) | N/a          | Available, see the [Password policy](#password-policy) section. | Available, see the [Password policy](#password-policy) section. |
 
 ### 2.2 Check Security {#check-security}
 

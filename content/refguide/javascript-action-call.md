@@ -47,6 +47,7 @@ This property determines if the result of the JavaScript action will be stored i
 ## 4 Read More
 
 * [JavaScript Actions](javascript-actions)
-* [Write JavaScript Actions](/howto/extensibility/write-javascript-actions)
+* [Write JavaScript Actions: Part 1 (Basic)](write-javascript-actions)
+* [Write JavaScript Actions: Part 2 (Advanced)](write-javascript-github)
 * [Nanoflows](nanoflows)
 * [Java Action Call](java-action-call)

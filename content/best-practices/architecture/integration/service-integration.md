@@ -113,7 +113,7 @@ In future releases, Mendix will make OData contracts easier to use while making 
 
 Using OData to retrieve data means a tighter integration than most REST services, since it links database table formats to the integration and it can be sensitive to changes. As long as it is managed well, OData provides a great way to work more closely between apps (for example, when the data model is already stable, or when two apps are maintained by the same DevOps team, there is no issue).
 
-## 5 Database Integration {#db-odata}
+## 5 Database Integration {#db-int}
 
 Mendix can integrate directly with external databases using database calls (usually via JDBC calls).
 

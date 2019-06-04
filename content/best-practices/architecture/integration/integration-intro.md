@@ -41,9 +41,9 @@ There is still integration required between microservice apps. However, there wi
 
 The Mendix Platform is perfect for building this type of microservice solution, because within a Mendix app, all the internal dependencies are kept private. They are managed and consistency-checked by the Mendix app model itself, and the developer builds UX, logic, workflows, and data structures directly for a business function.
 
-Some microservices will be complete end-user-oriented apps with GUI, logic, data, and workflows. Some can be "headless" microservices providing functionality and data under UX-oriented apps or layers. Some are pure integration apps that act as legacy adapters, shared data apps, or distributed ESBs.
+Some microservices will be complete end-user oriented apps with GUI, logic, data, and workflows. Some can be "headless" microservices providing functionality and data under UX-oriented apps or layers. Some are pure integration apps that act as legacy adapters, shared data apps, or distributed ESBs.
 
-There is no one rule for what microservice should do or contain. The best practice is that they fulfill a clear function and have a clearly defined external interface, using clear contracts for external integration. 
+There is no one rule for what microservice should do or contain. The best practice is that they fulfill a clear function and have a clearly defined external interface, using clear contracts for external integration.
 
 In a landscape of many microservice styles, Mendix can take any role and evolve from one to another. For example, with a headless Mendix app supporting a customer portal UX via REST services, it would be easy to add internal UX for a support group to set business values, monitor progress, and do other internal tasks at the same functional area.
 
@@ -183,25 +183,25 @@ The table below presents use cases that you can reference  for more detail. The 
 
 | Symbol | Meaning |
 | --- | --- |
-| ![](attachments/integration-intro/green.png) | Indicates the common or preferred use of the method. In some of cases (for example, "Integration with IoT solutions"), the solution will require several methods, so several of these symbols are used. |
+| ![](attachments/integration-intro/green.png) | Indicates the common or preferred use of the method. In some cases (for example, "Int. with IoT solutions"), the solution will require several methods, so several of these symbols are used. |
 | ![](attachments/integration-intro/grey.png) | Indicates possible use in some cases. |
 
 | Use Case | UI Integration | RPC / Services | Events / Queues | Export, Import, Batch | Central Data |
 | --- | --- | --- | --- | --- | --- |
-| SSO, AD & Identity integration | ![](attachments/integration-intro/grey.png) | ![](attachments/integration-intro/green.png) | | | |
-| Import & Distribute Reference Data | | ![](attachments/integration-intro/green.png) | ![](attachments/integration-intron/grey.png) | ![](attachments/integration-intro/green.png) | ![](attachments/integration-intro/grey.png) |
-| View & Search Data in Another System  | ![](attachments/integration-intro/grey.png) | ![](attachments/integration-intro/green.png) | | | |
-| Use & Refer to Data in Another System | | ![](attachments/integration-intro/green.png) | | | ![](attachments/integration-intro/grey.png) |
-| [Process Int.](process-integration) (cont. workflow) | ![](attachments/integration-intro/green.png) | ![](attachments/integration-intro/grey.png) | ![](attachments/integration-intro/grey.png) | | |
-| [Export, Import & Batch Processing](export-import-batch) | | ![](attachments/integration-intro/grey.png) | ![](attachments/integration-intro/grey.png) | ![](attachments/integration-intro/grey.png) | ![](attachments/integration-intro/grey.png) |
-| Update Data in Master App | ![](attachments/integration-intro/green.png) | ![](attachments/integration-intro/green.png) | ![](attachments/integration-intro/grey.png) | | |
-| Distribute Master & Transactional Data | | ![](attachments/integration-intro/green.png) | ![](attachments/integration-intro/grey.png) | ![](attachments/integration-intro/grey.png) | ![](attachments/integration-intro/grey.png) |
-| Int. with BI & Reporting | | ![](attachments/integration-intro/grey.png) | ![](attachments/integration-intro/grey.png) | ![](attachments/integration-intro/green.png) | ![](attachments/integration-intro/grey.png) |
-| Mobile Int. & Offline | | ![](attachments/integration-intro/green.png) | ![](attachments/integration-intro/grey.png) | | |
-| CMS & CDN Int. | ![](attachments/integration-intro/green.png) | ![](attachments/integration-intro/grey.png) | | | |
-| Process Orch. & State Engines | | ![](attachments/integration-intro/green.png) | ![](attachments/integration-intro/grey.png) | | ![](attachments/integration-intro/green.png) |
-| Int. with Ops & Monitoring | ![](attachments/integration-intro/grey.png) | ![](attachments/integration-intro/grey.png) | ![](attachments/integration-intro/green.png) | ![](attachments/integration-intro/grey.png) | ![](attachments/integration-intro/green.png) |
-| Int. with IoT Solutions | | ![](attachments/integration-intro/green.png) | ![](attachments/integration-intro/green.png) | ![](attachments/integration-intro/grey.png) | ![](attachments/integration-intro/green.png) |
-| Int. with AI & Machine Learning | | ![](attachments/integration-intro/green.png) | ![](attachments/integration-intron/grey.png) | | ![](attachments/integration-intro/green.png) |
+| SSO, AD & identity integration | ![](attachments/integration-intro/grey.png) | ![](attachments/integration-intro/green.png) | | | |
+| Import & distribute reference data | | ![](attachments/integration-intro/green.png) | ![](attachments/integration-intro/grey.png) | ![](attachments/integration-intro/green.png) | ![](attachments/integration-intro/grey.png) |
+| View & search data in another system  | ![](attachments/integration-intro/grey.png) | ![](attachments/integration-intro/green.png) | | | |
+| Use & refer to data in another system | | ![](attachments/integration-intro/green.png) | | | ![](attachments/integration-intro/grey.png) |
+| [Process int.](process-integration) (cont. workflow) | ![](attachments/integration-intro/green.png) | ![](attachments/integration-intro/grey.png) | ![](attachments/integration-intro/grey.png) | | |
+| [Export, import & batch processing](export-import-batch) | | ![](attachments/integration-intro/grey.png) | ![](attachments/integration-intro/grey.png) | ![](attachments/integration-intro/grey.png) | ![](attachments/integration-intro/grey.png) |
+| Update data in master app | ![](attachments/integration-intro/green.png) | ![](attachments/integration-intro/green.png) | ![](attachments/integration-intro/grey.png) | | |
+| Distribute master & transactional data | | ![](attachments/integration-intro/green.png) | ![](attachments/integration-intro/grey.png) | ![](attachments/integration-intro/grey.png) | ![](attachments/integration-intro/grey.png) |
+| Int. with BI & reporting | | ![](attachments/integration-intro/grey.png) | ![](attachments/integration-intro/grey.png) | ![](attachments/integration-intro/green.png) | ![](attachments/integration-intro/grey.png) |
+| Mobile int. & offline | | ![](attachments/integration-intro/green.png) | ![](attachments/integration-intro/grey.png) | | |
+| CMS & CDN int. | ![](attachments/integration-intro/green.png) | ![](attachments/integration-intro/grey.png) | | | |
+| Process orch. & state engines | | ![](attachments/integration-intro/green.png) | ![](attachments/integration-intro/grey.png) | | ![](attachments/integration-intro/green.png) |
+| Int. with ops & monitoring | ![](attachments/integration-intro/grey.png) | ![](attachments/integration-intro/grey.png) | ![](attachments/integration-intro/green.png) | ![](attachments/integration-intro/grey.png) | ![](attachments/integration-intro/green.png) |
+| Int. with IoT solutions | | ![](attachments/integration-intro/green.png) | ![](attachments/integration-intro/green.png) | ![](attachments/integration-intro/grey.png) | ![](attachments/integration-intro/green.png) |
+| Int. with AI & machine learning | | ![](attachments/integration-intro/green.png) | ![](attachments/integration-intro/grey.png) | | ![](attachments/integration-intro/green.png) |
 
-For more details, see [Integration Examples](integration-examples).
+For more information, see [Integration Examples](integration-examples).

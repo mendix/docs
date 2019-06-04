@@ -7,7 +7,7 @@ draft: true
 
 ## 1 Introduction
 
-The Mendix Platform is very good for building business functionality and for integrating apps with virually any other technology. This Best Practices section provides an overview of how Mendix integrates with other parts of the enterprise landscape. It also describes how Mendix apps are by default good microservices keeping GUI, logic, and data together and requiring clear contracts for integration.
+The Mendix Platform is very good for building business functionality and for integrating apps with virtually any other technology. The integration-focused *Expert Best Practices for Architecture* provide an overview of how Mendix integrates with other parts of the enterprise landscape. It also describes how Mendix apps are by default good microservices that keep GUI, logic, and data together and require clear contracts for integration.
 
 ## 2 Mendix Integration Characteristics
 
@@ -87,8 +87,8 @@ Within these solution categories, there are a number of use cases and scenarios 
 ### 3.1. Service Integration Use Cases
 
 * [Request-Reply to Transfer Data](service-integration#transfer)
-* [Database Integration & OData](service-integration#db-odata)
-* [Integration Apps & Adapters](service-integration#adapters)
+* [Database Integration](service-integration#db-int)
+* [RPC Integration & Adapters](service-integration#adapters)
 
 ### 3.2. UI Integration Use Cases
 

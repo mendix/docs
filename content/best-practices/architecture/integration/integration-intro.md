@@ -32,8 +32,8 @@ In general, microservices replace solutions where functional dependencies have b
 
 Microservice apps are smaller functional pieces that contain a business function. The following best practices are important:
 
-* Avoid having too many functional areas that depend on the same data model, as often occurs in monoliths
-* Avoid too many functional areas that depend on the same technical layers, which often occured in SOA architectures
+* Avoid too many functional areas that depend on the same data model, as often occurs in monoliths
+* Avoid too many functional areas that depend on the same technical layers, as often occurs in SOA architectures
 
 Instead, you must try to contain everything required to perform a business function within each app. A new business feature requirement is then likely to land within only one single app, which will be maintained by one single team. This means you can change quickly when necessary and provide flexibility to the business unit that owns that functionality.
 
@@ -92,11 +92,9 @@ The best solution varies from case to case and depends on organizational, techni
 
 ### 3.1 Team Dependencies
 
-Applying a microservices architecture and DevOps means that team dependencies decrease. 
+Applying a microservices architecture along with DevOps means that team dependencies decrease. That is because every app is built and managed by one single DevOps team. That team completes the full business function contained in the microservice. The only dependencies are external integration, which ideally are defined as REST services in the beginning of the app project.
 
-Every app is built and managed by one single DevOps team. That team completes the full business function contained in the microservice. The only dependencies are external integration, which ideally are defined as REST services in the beginning of the app project.
-
-There are often also less dependencies between business units of an organization by defining functional microservices that align with a business process or business organization. It leads to fewer comprimises on requirements, fewer prioritizations between different stakeholders, and often a more purpose-oriented app that is ideal for one specific area.
+There are also often fewer dependencies between business units of an organization after defining functional microservices that align with a business process or the business organization itself. This leads to fewer comprimises on requirements, fewer prioritizations between different stakeholders, and often a more purpose-oriented app that is ideal for one specific area.
 
 ### 3.2 Functional Dependencies
 
@@ -104,7 +102,7 @@ When the right microservices have been chosen, there will still be some function
 
 For example, if you have a feature request where two apps need a new field implemented (for example, GPS coordinates) and one app is the source of this data, it is inevitable that the service contract needs to change. You then need a good process for managing this through separate releases. The typical way to do this is by going-live with the source app first (with two endpoints), and then going-live with the consumer app afterwards, swapping from the first endpoint to the next one.
 
-Using service versioning it is possible for the two apps to go live at separate times. This diagram illustrates this case of managing functional dependencies. 
+Using service versioning, it is possible for the two apps to go live at separate times. This diagram illustrates this case of managing functional dependencies:
 
 ![](attachments/integration-intro/intro-3.png)
 

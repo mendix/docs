@@ -97,76 +97,80 @@ Functional requirements will decide which mechanism is preferred. Often option 2
 
 ### 4 OData Retrieve {#odata-retrieve}
 
-For several reasons Mendix does not allow other systems to access the internal data-base tables directly, see also <<Introduction to Integration>> and <<Mendix and Integration>>.
+For several reasons, Mendix does not allow other systems to access internal database tables directly (for more information, see  [Introduction to Integration](integration-intro) and the [External Integration Is by Contract](mendix-integration#external-contract) section of *Mendix & Integration*).
 
-As an alternative to this and to REST services, Mendix enables OData contracts to be used. OData does not use a Microflow to retrieve data as is the case for REST calls. Instead the OData contract automatically creates REST end-points from the data-base tables with very little effort by the developer. 
+As an alternative to this and to REST services, Mendix enables OData contracts to be used. OData does not use a microflow to retrieve data, as is the case for REST calls. Instead, the OData contract automatically creates REST endpoints from the data-base tables with very little effort by the developer. 
 
-OData is a relatively new protocol and it requires both sides of the integration to be OData enabled. It is now mainly used for :
-1. BI solutions can access specific data in Mendix apps, more real-time than data-warehose solutions
-2. Mendix apps can access data in newer versions of SAP this way, see the [SAP OData Connector](/refguide/sap/sap-odata-connector)
-3. Mendix apps can use data from each others data-models directly this way, which is especially interesting within clusters of microservices that work together as a system. 
+OData is a relatively new protocol that requires both sides of the integration to be OData-enabled. It is now mainly used for the following reasons:
 
-<< FIGURE 6 >>
+* For BI solutions to access specific data in Mendix apps, which are more real-time than data-warehose solutions
+* For Mendix apps to access data in newer versions of SAP (for details, see the [SAP OData Connector](/refguide/sap/sap-odata-connector))
+* For Mendix apps to use data from each other's data models directly, which is especially interesting within clusters of microservices that work together as a system
 
-In a future version of Mendix, OData contracts will be easier to use and will make some data replication unnecessary (at least within microservices systems). A Mendix app will then be able to provide OData objects and REST services to the rest of the Mendix apps in the same organization in a platform provided service catalog, improving access and control of service integration in general.
+![](attachments/service-integration/si-6.png)
 
-Using OData to retrieve data means a tighter integration than most REST services, since it links database table formats to the integration and it can be sensitive to changes. As long as this is managed well, OData provides a great way to work more closely between apps. For example when the data-model is already stable, there is no issue, or when two apps are maintained by the same DevOps team.
+In future releases, Mendix will make OData contracts easier to use while making some data replication unnecessary (at least within microservices systems). A Mendix app will then be able to provide OData objects and REST services to the rest of the Mendix apps in the same organization via a platform-provided service catalog. This will improve the access and control of service integration in general.
 
-## 4 Database Integration {#db-odata}
+Using OData to retrieve data means a tighter integration than most REST services, since it links database table formats to the integration and it can be sensitive to changes. As long as it is managed well, OData provides a great way to work more closely between apps (for example, when the data model is already stable, or when two apps are maintained by the same DevOps team, there is no issue).
 
-Mendix can integrate directly with external databases using DB calls, usually via JDBC calls.
+## 5 Database Integration {#db-odata}
 
-There are only two cases when this is recommended:
-1. When there is a legacy system or database that can not be changed any more and the only way to access the data is via direct database interaction. This could be part of a migration scenario, or maintained for some time. If the source system really does not change anymore the risk is small that something will break in the connection.
-2. When there is a desire to maintain a very large data history in connection with a system of Mendix apps. The data may be stored for compliancy reasons, and very rarely accessed from the operational apps. Since this is "within" the same system, Mendix then interacts diretly with an external database.
+Mendix can integrate directly with external databases using database calls (usually via JDBC calls).
 
-The diagram shows these cases:
+However, there are only two cases when this is recommended:
 
-* Retrieve data from a legacy database, preferrably using a database view
-* Update data in a legacy database, preferably calling a stored procedure
-* Read and write via SQL calls to a History database as part of the Microservices system
+* When there is a legacy system or database that cannot be changed anymore, and the only way to access the data is via direct database interaction. This could be part of a migration scenario, or it could be maintained for some time. If the source system really does not change anymore, the risk is small that something will break in the connection.
+* When there is a desire to maintain a very large data history in connection with a system of Mendix apps. The data may be stored for compliancy reasons, and very rarely accessed from the operational apps. Since this is "within" the same system, Mendix then interacts diretly with an external database.
 
-![](attachments/service-integration/odata.png)  << FIGURE 7 - Updated>>
+The diagram below illustrates these cases:
 
-A good architectural guideline is to avoid tight coupling of the data models of different systems. Each data model is adapted to what that app is focusing on doing. This allows apps to develop their data model and functionality without impacting other apps and systems. 
+* Retrieving data from a legacy database, preferrably using a database view
+* Updating data in a legacy database, preferably by calling a stored procedure
+* Reading and writing via SQL calls to a history database as part of a microservices system
 
-If you have to go directly on a database, it is wise to use database views and stored procedures as a "padding" between the underlaying data model and the service interaction, and one should never do JDBC through firewalls. If the legacy database is on premises and DB calls is the only option, then either deploy the Mendix app on premises as well, or create a Mendix "Adapter App" on premises and have the main apps using the data on the cloud.
+![](attachments/service-integration/odata.png)
 
-## 5 SOAP Integration
+A good architectural guideline is to avoid the tight coupling of data models of different systems. Each data model should be adapted to what that app is focusing on doing. This allows apps to develop their data models and functionality without impacting other apps and systems. 
 
-SOAP integration uses XML messages and a SOAP header that includes the end-point in a WSDL file. For large solutions the integration points can be figured out early, WSDLs created, and after that point the teams can work and test relatively independently. Using XML allows XSLT mappings and a filled in message can be compared with an XSD to do relatively detailed validation before sending messages, which can be good for asynchronous flows.
+If you have to go directly on a database, it is wise to use database views and stored procedures as a "padding" between the underlaying data model and the service interaction. You should never do JDBC through firewalls. If the legacy database is on premises and database calls are the only option, then either deploy the Mendix app on premises as well, or create a Mendix "adapter app" on premises and have the main apps use the data on the cloud.
 
-SOAP was most populat between year 2000 and 2010, and there are still an enormous amount of SOAP services available in most organizations. When mobile internet became more important the SOAP format was quite heavy, and since then REST services are more frequenlt used for almost all new synchronous services. 
+## 6 SOAP Integration
 
-Mendix connects easily with SOAP services, but it is rare that new SOAP services are created in Mendix apps these days. Instead the REST functionality has been expanded allowing REST publish and REST consume via Swagger-files, making REST services even easier to use.
+SOAP integration uses XML messages and a SOAP header that includes the endpoint in a WSDL file. For large solutions, the integration points can be figured out early, WSDLs created, and after that point, the teams can work and test relatively independently. Using XML allows for XSLT mappings, and a filled-in message can be compared with an XSD to do relatively detailed validation before sending messages, which can be good for asynchronous flows.
 
-## 5 RPC Integration & Adapters {#adapters}
+SOAP was most popular between the years 2000–2010, and there are still an enormous amount of SOAP services available in most organizations. When mobile internet became more important, the SOAP format was found to be quite heavy, and since then, REST services are more frequently used for almost all new synchronous services. 
 
-Many old legacy systems have a very specific format of communication. It could be to and from mainframes or any other old technology. It is possible to build services to these old formats, but a more technical developer and the Mendix SDK is often required. 
+Mendix connects easily with SOAP services, but it is rare that new SOAP services are created in Mendix apps these days. Instead, the REST functionality has been expanded to allow for REST publish and REST consume via Swagger files, which makes REST services even easier to use.
 
-To build this technical integration repeatedly is not a good idea. There are two options to avoid building this over and over again:
+## 7 RPC Integration & Adapters {#adapters}
 
-1. Create an AppStore module that works as an adapter and can be used in several apps with little effort. This allows easy access to existing RPCs.
-2. Create an Integration App or Adapter, that makes data and services from the legacy system available in an easy to use format for other apps, e.g. using OData or REST services. 
-   a) It could bundle 3 TCP/IP calls into one operation and provide it via a REST services
-   b) It can import files with data or get data in real-time to store locally. This can provide faster services for other apps, more up-time for real-time requests, or it can extract a certain part of the data to store it in a format that is suitable for a specific purpose, see also SDA apps.
+Many old legacy systems have a very specific format of communication. This could be to and from mainframes or another other old technology. It is possible to build services to these old formats, but a more technical developer and the Mendix SDK are often required. 
 
-In the diagram below shows how an Integration App enables easy interaction with a legacy system:
+It is not a good idea to repeatedly build this technical integration. There are two options to avoid building this over and over again:
+
+* Create a [Mendix App Store](https://appstore.home.mendix.com/index3.html) module that works as an adapter and can be used in several apps with little effort; this will allow for easy access to existing RPCs
+* Create an integration app or adapter that makes data and services from the legacy system available in an easy-to-use format for other apps (for example, using OData or REST services)
+	* This could bundle 3 TCP/IP calls into one operation and provide it via a REST services
+   	* This could import files with data or get data in real-time to store locally; in turn, this could provide faster services for other apps and more uptime for real-time requests, or it could extract a certain part of the data to store in a format that is suitable for a specific purpose
+
+This diagram shows how an integration app enables easy interaction with a legacy system:
 
 ![](attachments/service-integration/rpc.png)
 
-In the example diagram, most of the interaction is the retrieval of data. To make that fast and easy, the integration app imports the relevant data via a file and stores it in a format that is ideal for retrieval, e.g. using materialized views. This data is from the legacy system is easily available via OData.  To update the legacy system the interaction needs to be synchronous. A REST service is created that translates the call to three RPC calls, that and update  legacy system, informing the user of success or failure
+In this example, most of the interaction is for the retrieval of data. To make that fast and easy, the integration app imports the relevant data via a file and stores it in a format that is ideal for retrieval (for example, by using materialized views). This data from the legacy system is easily available via OData. To update the legacy system, the interaction needs to be synchronous. A REST service is created that translates the call to three RPC calls, updating the legacy system and informing the user of success or failure.
 
-When Mendix for Integration apps it is easy to create an admin UI when that is needed, something that makes it more flexible and adaptable than most integration layers provide. In effect, with this pattern, one can create a distributed ESB, see also <<Integration Layers>>.
+When using Mendix for integration apps, it is easy to create an admin UI when that is neede. This makes it more flexible and adaptable than what most integration layers provide. In effect, with this pattern, one can create a distributed ESB (for details, see [Integration Layers](integration-layers)).
 	
-## 6 Queue integration
+## 8 Queue Integration
 
-Queue integration is described more in detail in the << Event based Integration >> section. Using queues or a message broker or Kafka typically means that the end-to-end integration is asynchronous, but each leg in the end-to-end integration is always a synchronous call to either put an event or get an event:
+Using queues, a message broker, or Kafka typically means that the end-to-end integration is asynchronous. However, each leg in the end-to-end integration is always a synchronous call to either put an event or get an event:
 
-* Push event to a queue, returns an acknowledgement or reception from the queue manager
-* Pull an event from the queue, returns data, after which the message is 'committed' or 'consumed'. The queue manager deletes consumed messages after a configurable time frame.
+* Pushing an event to a queue returns an acknowledgement or reception from the queue manager
+* Pulling an event from the queue returns data, after which the message is "committed" or "consumed"; the queue manager deletes consumed messages after a configurable amount of time
 
-## 7 Where to Use Synchronous Integration?
+Queue integration is described more in detail in [Event-Based Integration](event-integration).
+
+## 9 Where to Use Synchronous Integration?
 
 Synchronous calls can be used for almost anything. They are easy to design, build, deploy and operate. These are the most typical synchronous service scenarios:
 
@@ -180,7 +184,7 @@ Synchronous calls can be used for almost anything. They are easy to design, buil
 * Process orchestration where you need to know that the target received and processed the message (for details, see [Process Integration](process-integration))
 * CI/CD integration, test automation, and some health-checks for monitoring (for details, see [Ops & CI/CD Integration](ops-cicd-integration).
 
-### 7.1 Where Not to Use Synchronous Integration?
+### 9.1 Where Not to Use Synchronous Integration?
 
 For synchronous integration to work, it is necessary that the other system is directly reachable through the network. 
 
@@ -194,7 +198,7 @@ For scenarios where there are many-to-one or many-to-many situations, between di
 
 For periodic interactions that handle large datasets (for example, in reporting, billing, and invoicing), there is no reason to be working in real-time. Furthermore, processing will be slower and take more CPU power if transactions are processed one by one via services. For details on such cases, see [Export, Import & Batch Processing](export-import-batch).## 6 Summary
 
-## 8 Summary
+## 10 Summary
 
 Synchronous calls are used everywhere and in amost all integration situations.
 
@@ -218,5 +222,3 @@ The diagram shows the main functional cases, where the rounded shape represents 
 * Pushing data forward to an app that validates and returns results
 
 ![](attachments/service-integration/cases.png)
-
-

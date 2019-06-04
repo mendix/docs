@@ -38,7 +38,7 @@ For different security levels different settings are available. Find the list of
 | Setting Name                        | Security Off | Prototype/Demo Security                                      | Production Security                                          |
 | ----------------------------------- | ------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | [Check security](#check-security)   | N/a          | N/a                                                          | Available, see the [Check Security](#check-security) section. |
-| [Project status](#project-security) | N/a          | Available, see the [Project Status](#project-status) section. | Available, see the [Project Status](#project-status) section. |
+| [Project status](#project-status)   | N/a          | Available, see the [Project Status](#project-status) section. | Available, see the [Project Status](#project-status) section. |
 | [Module status](#module-status)     | N/a          | Available, see the [Module Status](#module-status) section.  | Available, see the [Module Status](#module-status) section.  |
 | [User roles](#user-roles)           | N/a          | Available, see the [User roles](#user-roles) section.        | Available, see the [User roles](#user-roles) section.        |
 | [Administrator](#administrator)     | N/a          | Available, see the [Administrator](#administrator) section.  | Available, see the [Administrator](#administrator) section.  |

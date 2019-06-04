@@ -18,7 +18,7 @@ The skeletons of these *.js* files are generated automatically when you save an 
 
 {{% /alert %}}
 
-For a tutorial on creating, configuring, and using a JavaScript action, see this [Write JavaScript Actions: Part 1 (Basic)](/howto/extensibility/write-javascript-actions) how-to.
+For tutorials on creating, configuring, and using a JavaScript action, see these [Make JavaScript Actions](/howto/extensibility/build-javascript-actions) how-to's.
 
 ## 2 General Settings
 
@@ -123,7 +123,6 @@ In the **Code** tab, you can edit the JavaScript action code without leaving Stu
 
 * [JavaScript Action Call](javascript-action-call)
 * [Nanoflows](nanoflows)
-* [Write JavaScript Actions: Part 1 (Basic)](/howto/extensibility/write-javascript-actions)
-* [Write JavaScript Actions: Part 2 (Advanced)](/howto/extensibility/write-javascript-github)
+* [Make JavaScript Actions](/howto/extensibility/build-javascript-actions)
 * [Java Action Call](java-action-call)
 * [Microflow Call](microflow-call)

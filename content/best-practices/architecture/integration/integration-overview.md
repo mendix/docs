@@ -20,30 +20,9 @@ These are the questions addressed in the integration-focused *Expert Best Practi
 
 ![](attachments/integration-overview/int-ov2.png)
 
-To start looking at how these questions are addressed, see [Introduction to Integration](integration-intro) and [Mendix & Integration](mendix-integration).
+To start looking at how these questions are addressed, see [Introduction to Integration](integration-intro) and [Mendix & Integration](mendix-integration), and the subesquest sections containing theoretical guidelines for a number of integration areas:
 
-### 1.2 Integration Guidelines
-
-{{% todo %}}[**Sections 1.2 & 1.3 is duplicated in "Mendix & Integration". It should only be in 1 location, for the sake of clarity and maintenance. It should probably just be in "Mendix & Integration". The "Examples" section below is mirrored with a list of "Use Cases" in "Mendix & Integration" - but the existing examples should be listed/linked there.** ]{{% /todo %}}
-
-These *Expert Best Practices for Architecture* contain theoretical guidelines for the following integration areas:
-
-* [Service Integration](service-integration)
-* [UI Integration](ui-integration)
-* [Event-Based Integration](event-integration)
-* [Batch Integration](batch-integration)
-* [Central Data](central-data)
-* [Process Integration](process-integration)
-* [Integration Layers](integration-layers)
-* [Ops & CI/CD Integration](ops-cicd-integration)
-
-### 1.3 Integration Examples
-
-The integration-focused *Expert Best Practices for Architecture*  also include [Integration Examples](integration-examples). In a future update, these documented examples will be accompanied by examples in the [Mendix App Store](https://appstore.home.mendix.com/index3.html).
-
-The diagram below presents the typical examples that are described. At this time, only examples for [Export, Import & Batch Processing](export-import-batch) and [Workflow Integration](workflow-integration) are available. 
-
-![](attachments/integration-overview/int-ov4.png)
+The intention is to add [Integration Examples](integration-examples) accompanied by examples in the [Mendix App Store](https://appstore.home.mendix.com/index3.html). At this time, examples for [Export, Import & Batch Processing](export-import-batch) and [Workflow Integration](workflow-integration) are available. 
 
 ## 2 How to Use the Integration Best Practices
 

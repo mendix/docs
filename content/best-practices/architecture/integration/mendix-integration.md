@@ -7,13 +7,15 @@ draft: true
 
 ## 1 Introduction
 
-The Mendix Platform is very good for building business functionality and for integrating apps with virually any other technology. This Best Practices section provides an overview of how Mendix integrates with other parts of the enterprise landscape. It also describes how Mendix apps are by default good microservices keeping GUI, logic, and data together and requiring clear contracts for integration.
+The Mendix Platform is very good for building business functionality and for integrating apps with virtually any other technology. The integration-focused *Expert Best Practices for Architecture* provide an overview of how Mendix integrates with other parts of the enterprise landscape. It also describes how Mendix apps are by default good microservices that keep GUI, logic, and data together and require clear contracts for integration.
 
 ## 2 Mendix Integration Characteristics
 
 ### 2.1 Internal Integration Available Out of the Box
 
-Most business functions require UX for human interaction, some logic and workflow, some data to store and work on, and some integration with the rest of the organization. Thanks to the way the Mendix Platform works, all of these parts are kept together in the same application model all the way from design to deployment. This results in the following benefits:
+Most business functions require UX for human interaction, some logic and workflow, some data to store and work on, and some integration with the rest of the organization. Thanks to the way the Mendix Platform works, all of these parts are kept together in the same application model, all the way from design to deployment. 
+
+This results in the following benefits:
 
 * Developers do not have to build and test internal integration
 * Business features are kept together and consistency is checked by the platform
@@ -23,7 +25,7 @@ This diagram illustrates how the Mendix Platform keeps everything together from 
 
 ![](attachments/mendix-integration/feature-requirements.png)
 
-### 2.2 External Integration Is by Contract
+### 2.2 External Integration Is by Contract {#external-contract}
 
 In Mendix, all external integration occurs via the app's runtime server, which requires clear contracts defined in the Mendix app model to allow for integration. This means that any app is aware of potential integration before deployment into production, making it secure and manageable. 
 
@@ -57,11 +59,11 @@ For information on how to use these in the [version 7 Mendix Desktop Modeler](ht
 
 If there is a format that is not immediateley supported, it is easy to extend Mendix using the [Mendix Platform SDK](/apidocs-mxsdk/mxsdk/). This can happen when integrating to legacy systems and mainframes. For example, there could be an RPC with a text format message communicating directly on sockets over TCP/IP. 
 
-Even if this requires a more technical Mendix developer, there is no reason to avoid such extensions. Once an adapter is built, it can be published in the Mendix App Store and be reused in other Mendix apps (for more information, see [How to Share App Store Content](/developerportal/app-store/share-app-store-content) in the *Developer Portal Guide*).
+Even if this requires a more technical Mendix developer, there is no reason to avoid such extensions. Once an adapter is built, it can be published in the [Mendix App Store](https://appstore.home.mendix.com/index3.html) and be reused in other Mendix apps (for more information, see [How to Share App Store Content](/developerportal/app-store/share-app-store-content) in the *Developer Portal Guide*).
 
 ### 2.5 Security of Integration
 
-Most Mendix apps are deployed on the Mendix Cloud, so communicating with non-Mendix apps means communicating over the internet. This is standard in all modern solutions via these encrypted channels:
+Most Mendix apps are deployed on the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy), so communicating with non-Mendix apps means communicating over the internet. This is standard in all modern solutions via these encrypted channels:
 
 * SSL for service calls
 * Sending along an authenticated user token for UI links
@@ -70,6 +72,8 @@ Most Mendix apps are deployed on the Mendix Cloud, so communicating with non-Men
 User tokens can also be sent along with service calls from one app to the other, but this is rarely necessary. The source app of any service call should make sure that the end-user is authorized to perform the UX function that requires the service call. This means that for service integration, app-level authentication with SSL is usually sufficient and simpler to manage. 
 
 ## 3 Integration Solution Categories
+
+{{% todo %}}[**This whole section is duplicated in "Integration" (integration-overview). It should only be in 1 location, for the sake of clarity and maintenance. It should probably just be here and not in "Integration."** ]{{% /todo %}}
 
 The Mendix Integration Best Practices are oganized as a number of solution categories where Mendix often plays an important role: 
 
@@ -87,8 +91,8 @@ Within these solution categories, there are a number of use cases and scenarios 
 ### 3.1. Service Integration Use Cases
 
 * [Request-Reply to Transfer Data](service-integration#transfer)
-* [Database Integration & OData](service-integration#db-odata)
-* [Integration Apps & Adapters](service-integration#adapters)
+* [Database Integration](service-integration#db-int)
+* [RPC Integration & Adapters](service-integration#adapters)
 
 ### 3.2. UI Integration Use Cases
 

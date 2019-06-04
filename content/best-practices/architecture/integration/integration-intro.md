@@ -63,11 +63,11 @@ Finally, the **Mendix integration apps** section of the diagram shows where Mend
 
 ### 2.2 Changes with Microservices & Resulting Best Practices
 
-Using microservices requires a specific approach and certain changes to be made. The following best practices should be followed:
+The following best practices should be followed:
 
 * Organize components around business capabilities
 * Implement less functionality in the integration layers ("smart endpoints and dumb pipes")
-* Balance autonomy against reuse (meaning, you should only reuse something when it does not impair the flexibility of evolving separate microservices)
+* Balance autonomy against reuse (meaning, only reuse something when it does not impair the flexibility of evolving separate microservices)
 * Have clear contracts for communication between microservices (typically, these are REST, OData, or SOAP contracts)
 * Decentralize data management (meaning, do not be afraid to have a local copy of data, but do not copy all data and do not copy data models; you should just copy the data required for one function and adjust the data structure to what is needed in each app)
 * Design for failure (as in, make sure the UX is not impacted when a source app is down)
@@ -92,9 +92,11 @@ The best solution varies from case to case and depends on organizational, techni
 
 ### 3.1 Team Dependencies
 
-Dependencies for the development team can follow from using a microservices architecture. This means that every app should be built and managed by one single DevOps team, and that team should autonomously complete the entire microservice. In that case, the only dependencies are external integration, which ideally can be defined as REST services in the beginning of the app project.
+Applying a microservices architecture and DevOps means that team dependencies decrease. 
 
-You can achieve fewer dependencies between business units of an organization by defining functional apps that align relatively well with a business process or business organization. That leads to fewer comprimises on requirements, fewer prioritizations between different stakeholders, and often a more purpose-oriented app that is good at one specific area.
+Every app is built and managed by one single DevOps team. That team completes the full business function contained in the microservice. The only dependencies are external integration, which ideally are defined as REST services in the beginning of the app project.
+
+There are often also less dependencies between business units of an organization by defining functional microservices that align with a business process or business organization. It leads to fewer comprimises on requirements, fewer prioritizations between different stakeholders, and often a more purpose-oriented app that is ideal for one specific area.
 
 ### 3.2 Functional Dependencies
 
@@ -102,13 +104,13 @@ When the right microservices have been chosen, there will still be some function
 
 For example, if you have a feature request where two apps need a new field implemented (for example, GPS coordinates) and one app is the source of this data, it is inevitable that the service contract needs to change. You then need a good process for managing this through separate releases. The typical way to do this is by going-live with the source app first (with two endpoints), and then going-live with the consumer app afterwards, swapping from the first endpoint to the next one.
 
-If it is easy to go-live with the two apps at the same time, then the two new versions should be tested and deployed together. This diagram illustrates this more generic case of service management, as the two apps are now not dependent on the same release date:
+Using service versioning it is possible for the two apps to go live at separate times. This diagram illustrates this case of managing functional dependencies. 
 
 ![](attachments/integration-intro/intro-3.png)
 
 To minimize functional dependencies, you should make service contracts that imitate a business event. Often data is from more than one table, but rarely does it include all the fields from one table. If the functional requirement for the business event changes, you have to change the service, but if other data in the same tables change, there is no impact.
 
-You should also make consumer-specific services when different consumers want different things. When one consumer wants additional functionality in the service, the other consumers are not impacted.
+It is also beneficial to make consumer-specific services when different consumers want different things. When one consumer wants additional functionality in the service, the other consumers are not impacted.
 
 ### 3.3 Operational Dependencies
 

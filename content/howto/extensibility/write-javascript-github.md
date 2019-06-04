@@ -280,7 +280,7 @@ You can now start creating the API for **SearchGitHubUsers**, an action which co
 	![toolbox window](attachments/jsactions-advanced/toolbox-window.png)
 
 17. To test your JavaScript action, do the following: <br/>
-	a. Add the **SearchGitHubUsers** action to the the search nanoflow then double-click it. <br/>
+	a. Add the **SearchGitHubUsers** action to the search nanoflow then double-click it. <br/>
 	b. Click **User entity** > **Select**, then double-click the **GitHubUser** entity. <br/>
 	c. Click **Query** > **Edit**, then type in *$GithubSearch/Query* and click **OK**. <br/>
 	d. To display the results in the user interface, type *UserList* into the **Variable** field. <br/>
@@ -292,7 +292,7 @@ You can now start creating the API for **SearchGitHubUsers**, an action which co
 	a. Double-click your **Change Object** activity. <br/>
 	b. Select **GithubSearch(HowTo.GithubSearch)** from the **Variable** drop-down menu. <br/>
 	c. Click **Action** > **New**. <br/>
-	d. Select **HowTo.GithubSearch_GithubUswer(ListofHowTo.GithubUser)** from the **Member** drop-down menu. <br/>
+	d. Select **HowTo.GithubSearch_GithubUser(ListofHowTo.GithubUser)** from the **Member** drop-down menu. <br/>
 	e. Type *$UserList* into the **Value** field and click **OK**. <br/>
 
 	![edit change](attachments/jsactions-advanced/edit-change-item.png)

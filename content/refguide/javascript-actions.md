@@ -123,7 +123,7 @@ In the **Code** tab, you can edit the JavaScript action code without leaving Stu
 
 * [JavaScript Action Call](javascript-action-call)
 * [Nanoflows](nanoflows)
-* [Write JavaScript Actions: Part 1 (Basic)](write-javascript-actions)
-* [Write JavaScript Actions: Part 2 (Advanced)](write-javascript-github)
+* [Write JavaScript Actions: Part 1 (Basic)](/howto/extensibility/write-javascript-actions)
+* [Write JavaScript Actions: Part 2 (Advanced)](/howto/extensibility/write-javascript-github)
 * [Java Action Call](java-action-call)
 * [Microflow Call](microflow-call)

@@ -2,7 +2,7 @@
 title: "Demo Users"
 parent: "project-security"
 menu_order: 30
-tags: ["studio pro", "demo users", "demo-users", "security, "project security]
+tags: ["studio pro", "demo users", "demo-users", "security, "project security"]
 ---
 
 ## 1 Introduction

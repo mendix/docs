@@ -434,18 +434,18 @@ The format of the Query is:
 
 The Query edit box will help you by offering suggestions as described above.
 
-**@SERVICEROOT** is a constant which is created in the SAP Service Data Model and has a value which is the root URL of the OData service, for example: https://sapes5.sapdevcenter.com/sap/opu/odata/iwbep/GWSAMPLE_BASIC.
+`@SERVICEROOT` is a constant which is created in the SAP Service Data Model and has a value which is the root URL of the OData service, for example: https://sapes5.sapdevcenter.com/sap/opu/odata/iwbep/GWSAMPLE_BASIC.
 
-{{% alert type="info" %}}
-If you are using a *Destination* configured by the SAP Destination Service, then the **@SERVICEROOT** should be empty. In other words, the query should begin with the `'/'` before the COLLECTIONNAME. 
+{{% alert type="warning" %}}
+If you are using a Destination configured by the SAP Destination Service, then the `@SERVICEROOT` should be empty. In other words, the query should begin with the `'/'` before the `COLLECTIONNAME`. 
 {{% /alert %}}
 
-**COLLECTIONNAME** can be found in the enumeration EntitySetNames which lists all the collections in the SAP Service Data Model, for example: the collection SalesOrderSet will be shown as @SERVICEROOT.EntitySetNames.SalesOrderSet
+`COLLECTIONNAME` can be found in the enumeration EntitySetNames which lists all the collections in the SAP Service Data Model, for example: the collection SalesOrderSet will be shown as `@SERVICEROOT.EntitySetNames.SalesOrderSet`
 
-**QUERYPARAMETERS** are the parameters of the OData query which identify which objects should be returned. Please note:
+`QUERYPARAMETERS` are the parameters of the OData query which identify which objects should be returned. Please note:
 
 * The OData service will define how entities and attributes can be used.  For example, the metadata for the service will include a boolean indicating whether an attribute is **filterable** and/or **sortable**
-* The `$expand=[association]` parameter will return associated (child) entity objects as part of a single query instead of having to retrieve them via a second query; for example, `$expand=ToLineItems` added to a query on the **SalesOrderSet** collection will return a list of `SalesOrder` objects and all the `SalesOrderLineItem` objects associated with them via the association `ToLineItems_SalesOrder_SalesOrderLineItem`
+* The `$expand=[association]` parameter will return associated (child) entity objects as part of a single query instead of having to retrieve them via a second query – `[association]` is the first part of the full association name; for example, `$expand=ToLineItems` added to a query on the **SalesOrderSet** collection will return a list of `SalesOrder` objects and all the `SalesOrderLineItem` objects associated with them via the association `ToLineItems_SalesOrder_SalesOrderLineItem`
 
 For example, to return a list of products in the category *Notebooks*, using the **GWSAMPLE_BASIC** service, you could enter the following **Query**:
 
@@ -458,9 +458,11 @@ Note that the request has to be URL encoded so that, for example, spaces have to
 
 This is the equivalent of the SQL SELECT statement:
 
+```sql
 SELECT * FROM SalesOrderSet WHERE Category='Notepads'
+```
 
-The $inlinecount=allpages clause asks OData to return a count of the number of objects returned in the list. This will be stored in SAPODataConnector.ResultInfo.totalCount.
+The `$inlinecount=allpages` clause asks OData to return a count of the number of objects returned in the list. This will be stored in SAPODataConnector.ResultInfo.totalCount.
 
 You can find more information about OData queries in [OData Query Options](/refguide/odata-query-options).
 
@@ -478,21 +480,17 @@ When you are referencing an object, the format of the URL is:
 @SERVICEROOT + '/' + toString(COLLECTIONNAME) + '/' + OBJECTINSTANCE
 ```
 
-**@SERVICEROOT** is a constant which is created in the SAP Service Data Model and has a value which is the root URL of the OData service, for example: https://sapes5.sapdevcenter.com/sap/opu/odata/iwbep/GWSAMPLE_BASIC.
-
-{{% alert type="info" %}}
-If you are using a *Destination* configured by the SAP Destination Service, then the @SERVICEROOT should be empty. In other words, the query should begin with the `'/'` before the COLLECTIONNAME. 
-{{% /alert %}}
-
-**COLLECTIONNAME** can be found in the enumeration EntitySetNames which lists all the collections in the SAP Service Data Model, for example: the collection SalesOrderSet will be shown as @SERVICEROOT.EntitySetNames.SalesOrderSet
-
-**OBJECTINSTANCE** is generally available as an attribute of an entity object.
-
-Alternatively, you can obtain the entire URL from attributes of an object. For example, the **meta_objectURI** attribute of an object is the full URL to the instance of the object which is held by the OData service.
+`@SERVICEROOT` is a constant which is created in the SAP Service Data Model and has a value which is the root URL of the OData service, for example: https://sapes5.sapdevcenter.com/sap/opu/odata/iwbep/GWSAMPLE_BASIC.
 
 {{% alert type="warning" %}}
-If you are using a *Destination*, you will need to remove the SERVICEROOT part of the meta_objectURI attribute and start with *'/' + COLLECTIONNAME*.
+If you are using a *Destination* configured by the SAP Destination Service, then the `@SERVICEROOT` should be empty. In other words, the query should begin with the `'/'` before the `COLLECTIONNAME`. 
 {{% /alert %}}
+
+`COLLECTIONNAME` can be found in the enumeration EntitySetNames which lists all the collections in the SAP Service Data Model, for example: the collection SalesOrderSet will be shown as `@SERVICEROOT.EntitySetNames.SalesOrderSet`
+
+`OBJECTINSTANCE` is generally available as an attribute of an entity object.
+
+Alternatively, you can obtain the entire URL from attributes of an object. For example, the **meta_objectURI** attribute of an object is the full URL to the instance of the object which is held by the OData service.
 
 #### 4.1.6 Http method
 
@@ -509,11 +507,11 @@ Before you pass the function parameters you will need to set the value of the **
 * **true** - (default) the parameters will be sent as part of the HTTP GET or POST instruction
 * **false** - the parameters will be sent in the HTTP body after the HTTP headers
 
-For example: in the GWSAMPLE_BASIC service domain model there is a function called SalesOrder_InvoiceCreated. This has an associated entity, SalesOrder_InvoiceCreatedParameters, which is a specialization of the SAP OData Connector entity FunctionParameters. This function parameter entity indicates that you need to supply an SalesOrderID.
+For example: in the **GWSAMPLE_BASIC** service domain model there is a function called **SalesOrder_InvoiceCreated**. This has an associated entity, **SalesOrder_InvoiceCreatedParameters**, which is a specialization of the SAP OData Connector entity **FunctionParameters**. This function parameter entity indicates that you need to supply a **SalesOrderID**.
 
 ![](attachments/sap-odata-connector/functionsandfunctionparameters-sapodataconnector.png)
 
-To use this function you will need to create an object of entity type SalesOrder_InvoiceCreatedParameters with the correct values for SalesOrderID and postParameterInline, using the Create object action. You can then use these parameters when you invoke the function using Execute li\st.
+To use this function you will need to create an object of entity type **SalesOrder_InvoiceCreatedParameters** with the correct values for **SalesOrderID** and **postParameterInline**, using the Create object action. You can then use these parameters when you invoke the function using Execute list.
 
 #### 4.1.8 Request parameters
 
@@ -530,14 +528,14 @@ This is also the parameter which is passed when an SAP OData Connector action re
 
 For example, you may be initiating a service operation using the Execute entry action. This service operation requires an additional HTTP header. You also want to set the timeout for receiving the data to 10 seconds, and treat a 204 No Content as a success. You can do this by:
 
-* Creating a RequestParams object using the Create request params action. This will return an object of type RequestParams
-* Use Change Object on your new object to set the attribute readTimeout to 10 and attribute expectedHttpResult to 204
-* Use Add header to add the required HTTP header. This can be done repeatedly to add as many HTTP headers as are needed by the service operation being invoked by Execute entry.
-* Invoke the service operation with Execute entry using the required URL, HTTP method, Function parameters, and the Request parameters and associated HTTP headers which you created above.
+* Creating a RequestParams object using the **Create request params** action. This will return an object of type RequestParams
+* Use **Change Object** on your new object to set the attribute readTimeout to 10 and attribute expectedHttpResult to 204
+* Use **Add header** to add the required HTTP header. This can be done repeatedly to add as many HTTP headers as are needed by the service operation being invoked by Execute entry.
+* Invoke the service operation with **Execute entry** using the required URL, HTTP method, Function parameters, and the Request parameters and associated HTTP headers which you created above.
 
 ![](attachments/sap-odata-connector/requestparams-sapodataconnector.png)
 
-Request parameters can also be set to _empty_ if no headers are needed and the default action behavior is used.
+Request parameters can also be set to `empty` if no headers are needed and the default action behavior is used.
 
 #### 4.1.9 Parent
 
@@ -545,14 +543,14 @@ This is an object which should be associated as the parent of a list of objects 
 
 Within the Mendix domain model representing an OData service, there are associations set up between the entities. However, these associations are not set when you get data from an OData service. The associations which exist within the OData service are held as …Deferred attributes within the entity object. When a list of objects is returned, you can set up an association to a parent object within the Mendix domain model. A parent object is an object of an entity type which is at the one end of a one-to-many association to another entity type.
 
-Set this to _empty_ if it is not required.
+Set this to `empty` if it is not required.
 
-For example, SalesOrder is the parent entity of SalesOrderLineItem via the ToHeader_SalesOrderLineItem_SalesOrder association in the GWSAMPLE_BASIC domain model.
+For example, **SalesOrder** is the parent entity of **SalesOrderLineItem** via the **ToHeader_SalesOrderLineItem_SalesOrder** association in the **GWSAMPLE_BASIC** domain model.
 
 ![](attachments/sap-odata-connector/tolineitems-sapodataconnector.png)
 
 {{% alert type="info" %}}
-If you are using the *Destination Service* to identify the endpoint of your SAP OData Service, you will need to edit the values of the …Deferred attributes as they will already contain an endpoint in addition to the object references.
+If you are using the Destination Service to identify the endpoint of your SAP OData Service, you will need to edit the values of the **…Deferred** attributes as they will already contain an endpoint in addition to the object references.
 {{% /alert %}}
 
 {{% alert type="warning" %}}
@@ -562,11 +560,11 @@ There is no data content validation on the Parent parameter. This means you will
 * Pass a parent object which has no association with the entity type of the returned list of objects
 {{% /alert %}}
 
-For example, you want to retrieve all the SalesOrderLineItems which are associated with a SalesOrder via the ToLineItems_SalesOrder_SalesOrderLineItem association. By passing the ToLineItemsDeferred URL to the Get List action as the URL and passing the SalesOrder entity as Parent, the Get List action will set the ToLineItems_SalesOrder_SalesOrderLineItem association between all the SalesOrderLineItem objects retrieved and the SalesOrder.
+For example, you want to retrieve all the **SalesOrderLineItems** which are associated with a **SalesOrder** via the **ToLineItems_SalesOrder_SalesOrderLineItem** association. By passing the **ToLineItemsDeferred** URL to the Get List action as the URL and passing the **SalesOrder** entity as Parent, the Get List action will set the **ToLineItems_SalesOrder_SalesOrderLineItem** association between all the **SalesOrderLineItem** objects retrieved and the **SalesOrder**.
 
 #### 4.1.10 Result info
 
- This is an object of type ResultInfo where the number of items in the list is returned. It is used for the Get List action. Note that for a Get List the query should include $inlinecount=allpages in order to return the total number of items in the list.
+ This is an object of type ResultInfo where the number of items in the list is returned. It is used for the Get List action. Note that for a Get List the query should include `$inlinecount=allpages` in order to return the total number of items in the list.
 
 Set this to _empty_ if it is not required.
 

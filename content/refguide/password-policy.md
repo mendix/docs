@@ -1,6 +1,7 @@
 ---
 title: "Password Policy"
 parent: "project-security"
+menu_order: 50
 tags: ["studio pro", "password policy", "project security", "security"]
 ---
 

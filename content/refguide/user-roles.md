@@ -1,6 +1,7 @@
 ---
 title: "User Roles"
 parent: "project-security"
+menu_order: 10
 tags: ["studio pro", "user role", "project security", "security"]
 ---
 

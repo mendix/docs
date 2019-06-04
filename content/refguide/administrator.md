@@ -1,18 +1,19 @@
 ---
 title: "Administrator"
 parent: "project-security"
+menu_order: 20
 tags: ["studio pro", "administrator", "project security", "security"]
 ---
 
 ## 1 Introduction
 
-In the **Administrator** tab of **Project Security**, you can change the default credentials and a user role for the Administrator user:
+In the **Administrator** tab of the **Project Security**, you can change the default credentials and a user role for the Administrator user:
 
 ![](attachments/administrator/project-security-administrator.png)
 
 ## 2 Administrator Properties
 
-In the Administrator tab the following properties are available:
+In the **Administrator** tab the following properties are available:
 
 * [User name](#user-name)
 * [Password](#password)

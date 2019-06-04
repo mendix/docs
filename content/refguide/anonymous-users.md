@@ -1,6 +1,7 @@
 ---
 title: "Anonymous Users"
 parent: "project-security"
+menu_order: 40
 tags: ["studio pro", "anonymous users", "project security", "security"]
 ---
 

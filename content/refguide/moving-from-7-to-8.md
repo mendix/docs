@@ -140,7 +140,7 @@ Follow the instructions in [Migration From the Sync Process to Collaborative Dev
 
 Apps made in Mendix Studio Pro cannot be deployed to *Version 3* of the Mendix Cloud. If you are using a licensed Mendix Cloud V3 node, then we recommend that you upgrade to Mendix Cloud V4. If this is not possible, you will need to continue to use Mendix version 7 to create and maintain your apps.
 
-## 8 Java code generation
+## 8 Java Code Generation
 
 In Mendix Studio Pro version 8 we’re changing the way we generate Java code for Java actions and Data Sets.
 

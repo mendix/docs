@@ -22,7 +22,7 @@ Password policy properties are described in the table below:
 | Minimum length     | Specifies the minimum length of a password.                  |
 | Require digit      | Specifies whether at least one digit is required in a password. |
 | Require mixed case | Specifies whether a password must contain at least one lowercase character and one uppercase character. |
-| Require symbol     | Specifies whether passwords must contain at least one special symbol. The following characters are considered symbols: <kbd>`~ ! @ # $ % ^ & * ( ) - _ = + [ { ] } \ </kbd> |
+| Require symbol     | Specifies whether passwords must contain at least one special symbol. The following characters are considered symbols: <code> ` ~ ! @ # $ % ^ & * ( ) - _ = + [ { ] } \ </code> |
 
 ## 3 Read More
 

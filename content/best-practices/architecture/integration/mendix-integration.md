@@ -23,7 +23,7 @@ This diagram illustrates how the Mendix Platform keeps everything together from 
 
 ![](attachments/mendix-integration/feature-requirements.png)
 
-### 2.2 External Integration Is by Contract
+### 2.2 External Integration Is by Contract {#external-contract}
 
 In Mendix, all external integration occurs via the app's runtime server, which requires clear contracts defined in the Mendix app model to allow for integration. This means that any app is aware of potential integration before deployment into production, making it secure and manageable. 
 

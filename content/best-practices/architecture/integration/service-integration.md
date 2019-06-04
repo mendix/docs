@@ -65,7 +65,7 @@ These steps are illustrated in the diagram:
 2. To manage automatic retries, it is possible to use the Mendix [Process Queue](https://appstore.home.mendix.com/link/app/393/) module, where events are stored if the destination app is down. A separate process retries the messages to the destination until it is delivered. If there are validation errors in this case, the end-user is informed separately.
 3. If the processing in the destination app is complex and takes time, and we want the end user to be able to continue his work, it is possible to use the [Process Queue](https://appstore.home.mendix.com/link/app/393/) module in the destination. The service that receives the call does selected validations, then it stores the message on a queue before acknowledging the reception of data.
 
-### 3 REST Pull to Transfer Data {#pull-transfer}
+## 3 REST Pull to Transfer Data {#pull-transfer}
 
 To avoid retries, Mendix apps often use a REST pull between themselves to replicate data or transfer business events. This is the easiest option when replicating data from points A to B. The system that needs the data (the destination app) is in charge of triggering the interface. If it is up and running, it can also poll for changes or business events. If the source is down, we know that no changes happen and no business events are created.
 
@@ -95,7 +95,7 @@ Functional requirements will decide which mechanism is preferred. Often **Option
 "Functionally asynchronous" means the process that results in a business event does not complete the integration end-to-end. Instead, it may create a REST message and put it on an internal queue for delivery by a separate process.
 {{% /alert %}}
 
-### 4 OData Retrieve {#odata-retrieve}
+## 4 OData Retrieve {#odata-retrieve}
 
 For several reasons, Mendix does not allow other systems to access internal database tables directly (for more information, see  [Introduction to Integration](integration-intro) and the [External Integration Is by Contract](mendix-integration#external-contract) section of *Mendix & Integration*).
 

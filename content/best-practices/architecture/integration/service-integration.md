@@ -81,15 +81,15 @@ For this to work, there needs to be something in the source app that tags which 
 
 ![](attachments/service-integration/pull-transfer.png)
 
-Option 1 – Use the last updated time stamp of the record to retrieve `all changes since <last time stamp>`. This is quite robust, but for high volumes, there are some edge cases where this can miss an update.
-Option 2 – Use a flag on the base table that indicates the record changed, which is reset when the change is picked up. For more than one subscriber, there will be more than one flag (for details, see [Workflow Integration with Data Transfer Example](workflow-int-data-transfer)). This is the recommended option for most situations
-Option 3 – Use the Mendix [Process Queue](https://appstore.home.mendix.com/link/app/393/) module. In this case, the source app will already map the data into a REST JSON message that is ready to be picked up from the outbound queue. 
+**Option 1** – Use the last updated time stamp of the record to retrieve `all changes since <last time stamp>`. This is quite robust, but for high volumes, there are some edge cases where this can miss an update.
+**Option 2** – Use a flag on the base table that indicates the record changed, which is reset when the change is picked up. For more than one subscriber, there will be more than one flag (for details, see [Workflow Integration with Data Transfer Example](workflow-int-data-transfer)). This is the recommended option for most situations
+**Option 3** – Use the Mendix [Process Queue](https://appstore.home.mendix.com/link/app/393/) module. In this case, the source app will already map the data into a REST JSON message that is ready to be picked up from the outbound queue. 
 
-Options 1 and 2 mean that the service that gets the data or event works on the base tables in the domain model. In turn, this means that if the same data is changed four times while the destination app is down, it will only lead to one update when polling starts again.
+**Option 1** and **Option 2** mean that the service that gets the data or event works on the base tables in the domain model. In turn, this means that if the same data is changed four times while the destination app is down, it will only lead to one update when polling starts again.
 
-For option 3, every transaction is registered as a business event that is placed on the internal queue. This means that four changes will lead to four events, providing the entire change history. 
+For **Option 3**, every transaction is registered as a business event that is placed on the internal queue. This means that four changes will lead to four events, providing the entire change history. 
 
-Functional requirements will decide which mechanism is preferred. Often option 2 is used to keep data synchronized, while option 3 is used for business events and transactions.
+Functional requirements will decide which mechanism is preferred. Often **Option 2** is used to keep data synchronized, while **Option 3** is used for business events and transactions.
 
 {{% alert type="info" %}}
 "Functionally asynchronous" means the process that results in a business event does not complete the integration end-to-end. Instead, it may create a REST message and put it on an internal queue for delivery by a separate process.
@@ -170,55 +170,57 @@ Using queues, a message broker, or Kafka typically means that the end-to-end int
 
 Queue integration is described more in detail in [Event-Based Integration](event-integration).
 
-## 9 Where to Use Synchronous Integration?
+## 9 Where Should You Use Synchronous Integration?
 
-Synchronous calls can be used for almost anything. They are easy to design, build, deploy and operate. These are the most typical synchronous service scenarios:
+Synchronous calls can be used for almost anything. They are easy to design, build, deploy, and operate. These are the most typical synchronous service scenarios:
 
-* Data retrieval with REST, OData, SOAP, RPC or direct SQL
-* Initiation of a function in another system, usually using REST, SOAP or RPC
-* Transferring business events, either pushing or pulling with REST
+* Data retrieval with REST, OData, SOAP, RPC, or direct SQL
+* Initiation of a function in another system, usually using REST, SOAP, or RPC
+* Transferring business events by either pushing or pulling with REST
 * Keeping data up to date when one app has a copy of some data, using REST pull
-* Committing data changes to another SaaS systems or apps, where validation is part of the integration
+* Committing data changes to another SaaS systems or apps where validation is part of the integration
 * Legacy integration with older RPC protocols on mid-range systems or with mainframe transactions
-* Business-to-business protocols, such as EDI, SWIFT, or EDIFACT, often via an API gateway, (for details, see [Integration Layers](integration-layers))
+* Business-to-business protocols, such as EDI, SWIFT, or EDIFACT, often via an API gateway (for details, see [Integration Layers](integration-layers))
 * Process orchestration where you need to know that the target received and processed the message (for details, see [Process Integration](process-integration))
-* CI/CD integration, test automation, and some health-checks for monitoring (for details, see [Ops & CI/CD Integration](ops-cicd-integration).
+* CI/CD integration, test automation, and some health checks for monitoring (for details, see [Ops & CI/CD Integration](ops-cicd-integration))
 
-### 9.1 Where Not to Use Synchronous Integration?
+### 9.1 Where Should You Not Use Synchronous Integration?
 
 For synchronous integration to work, it is necessary that the other system is directly reachable through the network. 
 
-For IoT, user metrics, logging scenarios and stock-ticker updates the commmunication is truly one-directional, and synchronous calls have little benefit. The messages will be accepted as they are in the destination.
+For IoT, user metrics, logging scenarios, and stock-ticker updates, the commmunication is truly one-directional, and synchronous calls have little benefit. The messages will be accepted as they are in the destination.
 
-If the network is unreliable, geographical distances are large, or volumes are extremely high, the synchronous calls are difficult to accomplish, and there may be reasons to implement other mechanisms. Integration will often become more functionally complex in these cases, because to fully guarantee delivery end to end, you should implement two interfaces: one to send the event, and one going back acknowledging the reception. For details, see [Event-Based Integration](event-integration).
+If the network is unreliable, geographical distances are large, or volumes are extremely high, synchronous calls are difficult to accomplish, and there may be reasons to implement other mechanisms. Integration will often become more functionally complex in these cases, because to fully guarantee delivery end to end, you should implement two interfaces: one to send the event, and one going back acknowledging the reception. For details, see [Event-Based Integration](event-integration).
 
-If a synchronous end-to-end call is impractical, it can be replaced by two asynchronous separate services. E.g. Order is one service, and Status is another one. A queue somewhere is required to store messages on the way. Most times it is prossible to use a Mendix internal queue, which means there are fewer moving parts and fewer places where things can fail. The other option is to use an external queue manager Integration layer (for details, see [Integration Layers](integration-layers)).
+If a synchronous end-to-end call is impractical, it can be replaced by two asynchronous separate services. For example, ordering is one service, status is another service, and a queue somewhere is required to store messages on the way. Most of the time it is possible to use a Mendix internal queue, which means there are fewer moving parts and fewer places where things can fail. The other option is to use an external queue-manager integration layer (for details, see [Integration Layers](integration-layers)).
 
-For scenarios where there are many-to-one or many-to-many situations, between distributed components there is no reason to be synchronous. In fact, it would be very hard to use synchronous communication. In these cases, Mendix recommends using Kafka, a message broker, or file interaction. For more information, see [Event-Based Integration](event-integration).
+For scenarios where there are many-to-one or many-to-many situations, there is no reason to be synchronous between distributed components. In fact, it would be very hard to use synchronous communication there. In these scenarios, Mendix recommends using Kafka, a message broker, or file interaction. For more information, see [Event-Based Integration](event-integration).
 
-For periodic interactions that handle large datasets (for example, in reporting, billing, and invoicing), there is no reason to be working in real-time. Furthermore, processing will be slower and take more CPU power if transactions are processed one by one via services. For details on such cases, see [Export, Import & Batch Processing](export-import-batch).## 6 Summary
+For periodic interactions that handle large datasets (for example, in reporting, billing, and invoicing), there is no reason to be working in real-time. Furthermore, processing will be slower and take more CPU power if transactions are processed one by one via services. For details on such cases, see [Export, Import & Batch Processing](export-import-batch).
 
 ## 10 Summary
 
 Synchronous calls are used everywhere and in amost all integration situations.
 
-* If it is synchronous end-to-end there is an operational dependency, but on the other hand the result of the operation can be provided back instantly
-* If there is a layer inbetween where messages are persisted before delivery, it is functionally asynchronous which is further described in the << Event Driven Integration>> and <<Integration Layers>>
+* If it is synchronous end-to-end, there is an operational dependency, but that means the result of the operation can be provided back instantly
+* If there is a layer in-between where messages are persisted before delivery, it is functionally asynchronous (for more information, see [Event-Based Integration](event-integration) and [Integration Layers](integration-layers))
 
-In order of relevance and priority for synchronous end-to-end interaction, Mendix prefers the protocols in this order :
+In order of relevance and priority for synchronous end-to-end interactions, Mendix prefers the protocols in this order:
 
 1. REST
 2. OData
 3. SOAP
 4. RPC
-5. DB calls
+5. Database calls
 
 The Mendix Platform has very rich integration functionality. Several organizations use Mendix to build integration apps and adapters to various systems or shared data apps that provide combined datasets.
 
-The diagram shows the main functional cases, where the rounded shape represents a process or microflow within an app:
+The diagram shows the following main functional cases:
 
 * Pulling for new data or events to process from the source app
 * Initiating a function remotely and often receiving results back
 * Pushing data forward to an app that validates and returns results
 
 ![](attachments/service-integration/cases.png)
+
+The rounded shapes in the diagram represent a process or microflow within an app.

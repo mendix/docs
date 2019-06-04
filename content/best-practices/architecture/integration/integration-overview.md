@@ -24,6 +24,8 @@ To start looking at how these questions are addressed, see [Introduction to Inte
 
 ### 1.2 Integration Guidelines
 
+{{% todo %}}[**Sections 1.2 & 1.3 is duplicated in "Mendix & Integration". It should only be in 1 location, for the sake of clarity and maintenance. It should probably just be in "Mendix & Integration". The "Examples" section below is mirrored with a list of "Use Cases" in "Mendix & Integration" - but the existing examples should be listed/linked there.** ]{{% /todo %}}
+
 These *Expert Best Practices for Architecture* contain theoretical guidelines for the following integration areas:
 
 * [Service Integration](service-integration)

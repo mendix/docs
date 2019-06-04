@@ -7,81 +7,89 @@ draft: true
 
 ## 1 Introduction
 
-Service integration means using a synchronous request-reply interaction. The system or person that initiates the call can take a relevant action depending on what the reply contains. If there is an error or a time-out it can be handled directly in the context of where the call was initiated from.
+Service integration means using a synchronous request-reply interaction. The system or person that initiates the call can take a relevant action depending on what the reply contains. If there is an error or a timeout, it can be handled directly in the context of where the call was initiated from.
 
-There are these types of Services integration :
-* REST calls - are used for calling most modern APIs and SaaS systems, initiating a function, finding information or sending a business event. It is also used to transfer data to another app or system when data needs to be validated by a destination app, e.g. when a user fills in an order in a portal, and the ordering app needs to accept it for it to be valid.
-* REST Pull - is the most common way to keep data in sync between two Mendix apps, or ro retrieve the next Business event in an automated chain.
-* OData Retrieve - is becoming popular for reading data in other apps and systems. OData creates a data-contract directly from the data model allowing another app to use that data as 'remote objects'. Odata is also used to retrieve information from modern versions of SAP.
-* SOAP Calls - are used in many applications that are 10-20 years old and on many ESBs. It is similar to REST, but uses XML instead of JSON as messaging format. I is more formal and the messages are a bit larger, making it un-suitable for Mobile and UX integration. 
-* RPC integration - RPC means 'Remote Procedure Call'. It can have many formats, e.g. just text messages on tcp/ip sockets. When something is called "RPC" it generally means that it is older than the SOAP format, often from the 90s time-frame. The system is often legacy and a custom module or adapter should be created to make the connection easily re-usable.
-* DB integration - means that we connect directly to a data-base, using direct SQL on base-tables or DB views, or we call a stored data-base procedure, virtually a remote procedure call directly on a database.
-* Queue integration - Calls to put messages on queues and get them from the queues are also synchronous, but queues are generally used in asynchronous scenarios and for event streams, so described further in <<Event Driven Integration>>
+There are these types of service integration:
 
-<<FIGURE 1 >>
+* **REST call** – This type is used for calling most modern APIs and SaaS systems, initiating a function, finding information, or sending a business event. This is also used to transfer data to another app or system when data needs to be validated by a destination app (for example, when a user fills in an order in a portal, and the ordering app needs to accept it for it to be valid).
+* **REST pull** – This is the most common way to keep data in sync between two Mendix apps, or to retrieve the next business event in an automated chain.
+* **OData retrieve** – This type is becoming popular for reading data in other apps and systems. OData creates a data contract directly from the data model that allows another app to use that data as remote objects. OData is also used to retrieve information from modern versions of SAP.
+* **SOAP call** – This is used in many applications that are 10–20 years old and on many ESBs. It is similar to REST, but it uses XML instead of JSON as the messaging format. It is more formal and the messages are a bit larger, which makes it unsuitable for mobile and UX integration. 
+* **RPC integration** – A remote procedure call (RPC) can have many formats (for example, text messages on TCP/IP sockets). When something is identified with "RPC," that generally means it is older than the SOAP format, often from the 1990s. Such a system is often a legacy, and a custom module or adapter should be created to make the connection easily reusable.
+* **DB integration** – This means you connect directly to a database, using direct SQL on base tables or database views. Or, you can call a stored database procedure, which is virtually a remote procedure call directly on a database.
+* **Queue integration** – Calls to put messages on queues and get them from the queues are also synchronous. However, the queues are generally used in asynchronous scenarios and for event streams, as further described in [Event-Based Integration](event-integration).
 
-Service integration is the most commonly used integration paradigm, and it should be considered the default method. The question is how far does the synchronous part of the integration go:
+![](attachments/service-integration/si-1.png)
 
-1. Does it end when the call is processed in destination? Then we have a confirmation of delivery or an error message directly, but also an operational dependency on the destination app being available
-2. Does it end on a queue or a message broker? In this case any end-to-end confirmation of delivery would be in a separete service, see <<Event Driven Integration>>	
+Service integration is the most commonly used integration paradigm, and it should be considered the default method. What you need to decide is how far the synchronous part of the integration needs to go. You can decide this via these two questions:
 
-The sections below focus on the simpler case where there is an end-to-end synchronous call, and no integration layer inbetween.
+1. Does the synchronous part of the integration end when the call is processed in the destination? That means you have a confirmation of delivery or an error message, but also an operational dependency on the destination app being available.
+2. Does the synchronous part of the integration end on a queue or message broker? In that case, any end-to-end confirmation of delivery is in a separate service (for details, see [Event-Based Integration](event-integration)).	
+
+The sections below focus on the simpler case, in which there is an end-to-end synchronous call and no integration layer in between.
 	
-## 2 REST to Call other systems {#push-transfer}
+## 2 REST to Call Other Systems {#push-transfer}
 
-Most common-off-the-shelf systems or SaaS systems provide API services to initiate a function, get data or update data. REST is the most commonly used format today, while SOAP was the most common ten years ago. The API services validate the input fields, and do something before returning an answer or an acknowledgement.
+Most common off-the-shelf systems or SaaS systems provide API services to initiate a function, get data, and update data. REST is the most commonly used format today, while SOAP was the most common ten years ago. The API services validate the input fields, and do something before returning an answer or acknowledgement.
 
-Pushing data to another system is useful when there is validation in the destination app that should be presented back to the source app and the end-user directly. It allows errors to be corrected immediately, or any other action to be taken, determined by the end-user. In a typical scenario, an end-user is filling in an order or a form in one app. The resulting information will be processed in another app, as visualized in the diagram below.
+Pushing data to another system is useful when there is validation in the destination app that should be presented back to the source app and the end-user directly. It allows errors to be corrected immediately or any other action to be taken, as determined by the end-user. 
 
-![](attachments/service-integration/si-intro1.png)
+In a typical scenario, the end-user fills in an order or form in one app, and the resulting information is processed in another app, as visualized in this diagram:
 
-The first app does technical validation on field level. But only the destination app can do the final functional validation. If something does not work the end-user can change the data and re-try, or try again later, or abandon the activity entirely. The end-user is an active part of the service integration across two apps.
+![](attachments/service-integration/si-rest-to-call.png)
 
-### 2.1 When the destination app is down
+The first app does the technical validation at the field-level. Only the destination app can do the final functional validation. If something does not work, the end-user can change the data and retry, try again later, or abandon the activity entirely. The end-user is an active part of the service integration across the two apps.
 
-The issue with synchronous end-to-end calls is that they create an operational dependency. The systems are 'tightly coupled', because the second app has to be up and running for the service to work. To handle this there are several options:
+### 2.1 When the Destination App Is Down
+
+The issue with synchronous end-to-end calls is that they create an operational dependency. The systems are tightly coupled, because the second app has to be up and running for the service to work. To handle this, there are the following options:
 
 * The business function in the source app that needs the service is disabled when the destination app is down
-* The source system stores the input, and tells the user to re-try later
-* The source system stores the input, and re-tries automatically later, informing the end-user of the results separatelly
+* The source system stores the input and tells the end-user to retry later
+* The source system stores the input and retries automatically later, informing the end-user of the results separately
 
-It is a trade-off between direct feedback (wich is good) and how easy it is to make sure the second app or up and running and/or how acceptable it is to re-try later.
+There is a tradeoff between receiving direct feedback (which is good) and one or both of the following points:
 
-### 2.2 Re-tries and Selective Validation
+* How easy it is to make sure the second app is up and running
+* How acceptable it is to retry later
 
-The diagram below shows the three integrations that can be involved in pushing events or data:
+### 2.2 Retries & Selective Validation
+
+This diagram shows the three integrations that can be involved in pushing events or data:
 
 ![](attachments/service-integration/push-validation.png)
 
-1. The main service call pushes events directly from the process that changes the data in destination, providing full validation directly. 
-2. To manage automatic re-tries it is possible to use Use the Mendix [Process Queue](https://appstore.home.mendix.com/link/app/393/) App Store module where events are stored if the destination app is down. A separate process retries the messages to the destination until it is delivered. If there are validation errors in this case, the end-user is informed separatelly.
-3. If the processing in the destination app is complex and takes time, and we want the end user to be able to continue his work, it is possible to use the [Process Queue](https://appstore.home.mendix.com/link/app/393/) in the destination. The service that receives the call does selected validations, and then stores the message on a queue before acknowledging reception of data.
+These steps are illustrated in the diagram:
+
+1. The main service call pushes events directly from the process that changes the data in the destination, directly providing full validation. 
+2. To manage automatic retries, it is possible to use the Mendix [Process Queue](https://appstore.home.mendix.com/link/app/393/) module, where events are stored if the destination app is down. A separate process retries the messages to the destination until it is delivered. If there are validation errors in this case, the end-user is informed separately.
+3. If the processing in the destination app is complex and takes time, and we want the end user to be able to continue his work, it is possible to use the [Process Queue](https://appstore.home.mendix.com/link/app/393/) module in the destination. The service that receives the call does selected validations, then it stores the message on a queue before acknowledging the reception of data.
 
 ### 3 REST Pull to Transfer Data {#pull-transfer}
 
-To avoid re-tries Mendix apps often use a REST pull between themselves to replicate data or transfer business events. It is the easiest option when replicating data from point A to point B. The system that needs the data (the destination app) is in charge of triggering the interface. If it is up and running it can also poll for changes or business events. If the source is down, we know that no changes happen and no business events are created.
+To avoid retries, Mendix apps often use a REST pull between themselves to replicate data or transfer business events. This is the easiest option when replicating data from points A to B. The system that needs the data (the destination app) is in charge of triggering the interface. If it is up and running, it can also poll for changes or business events. If the source is down, we know that no changes happen and no business events are created.
 
-It means that we get rid of an operational dependency. The two apps do not need to be up and running at the same time. When the destination app comes up after a down-time, it quickly recovers the missing data before it starts operating.
+This means that we get rid of an operational dependency. The two apps do not need to be up and running at the same time. When the destination app comes up after downtime, it quickly recovers the missing data before it starts operating.
 
-The diagram below shows this situation functionally:
+This diagram functionally illustrates this situation:
 
 ![](attachments/service-integration/si-intro2.png)
 
-The user interaction is separated from the integration, meaning it is "functionally asynchonous." The end-user finishes his work that creates an event or a change in the source app. The destination app uses a synchronous REST Pull to retrieve the changed data or the business event. The two apps are operationally decoupled: the first app can operate without the second app being up and running, and vice versa. 
+The user interaction is separated from the integration, meaning it is "functionally asynchonous." The end-user finishes their work, which creates an event or a change in the source app. The destination app uses a synchronous REST pull to retrieve the changed data or business event. The two apps are operationally decoupled: the first app can operate without the second app being up and running, and vice versa. 
 
-For this to work there needs to be something in the source app that tags which data needs to be picked up. The diagram below shows three common options:
+For this to work, there needs to be something in the source app that tags which data needs to be picked up. This diagram shows three common options:
 
 ![](attachments/service-integration/pull-transfer.png)
 
-1. Use the last updated time stamp of the record to retrieve `all changes since <last time stamp>`. This is quite robust, but for high volumes, there are some edge cases where this can miss an update.
-2. Use a flag on the base table that indicates the record changed, which is reset when the change is picked up. For more than one subscriber, there will be more than one flag (for details, see [Workflow Integration with Data Transfer Example](workflow-int-data-transfer)). This is the recommended option for most situations
-3. Use the Mendix [Process Queue](https://appstore.home.mendix.com/link/app/393/) App Store module. In this case, the source app will already map the data into a REST JSON message that is ready to be picked up from the outbound queue. 
+Option 1 – Use the last updated time stamp of the record to retrieve `all changes since <last time stamp>`. This is quite robust, but for high volumes, there are some edge cases where this can miss an update.
+Option 2 – Use a flag on the base table that indicates the record changed, which is reset when the change is picked up. For more than one subscriber, there will be more than one flag (for details, see [Workflow Integration with Data Transfer Example](workflow-int-data-transfer)). This is the recommended option for most situations
+Option 3 – Use the Mendix [Process Queue](https://appstore.home.mendix.com/link/app/393/) module. In this case, the source app will already map the data into a REST JSON message that is ready to be picked up from the outbound queue. 
 
-Option 1 and 2 means that the service that gets the data or the event works on the base tables in the domain model. I.e. if the same data is changed four times while the destination app is down, it will only lead to one update when polling starts again.
+Options 1 and 2 mean that the service that gets the data or event works on the base tables in the domain model. In turn, this means that if the same data is changed four times while the destination app is down, it will only lead to one update when polling starts again.
 
-For Option 3 every transaction is registered as a business event that is placed on the internal queue. I.e. four changes will lead to four events, providing the entire change history. 
+For option 3, every transaction is registered as a business event that is placed on the internal queue. This means that four changes will lead to four events, providing the entire change history. 
 
-Functional requirements decide which mechanims is preferred. Often Option 2 is used to keep data synchronized, while Option 3 is used for Business events and transactions.
+Functional requirements will decide which mechanism is preferred. Often option 2 is used to keep data synchronized, while option 3 is used for business events and transactions.
 
 {{% alert type="info" %}}
 "Functionally asynchronous" means the process that results in a business event does not complete the integration end-to-end. Instead, it may create a REST message and put it on an internal queue for delivery by a separate process.

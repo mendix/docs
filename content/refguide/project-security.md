@@ -7,7 +7,9 @@ tags: ["studio pro", "security", "project security"]
 
 ## 1 Introduction
 
-In the **Project Security** dialog window you can configure security settings related to the project, such as the security level, user roles, administrator credentials, and anonymous users:
+In the **Project Security**, you can switch security on or off for the whole project. You can also configure security settings related to the project, such as user roles, administrator credentials, demo users, anonymous users, and password policy. To be able to configure, for example, [security per module](module-security) or [entity access](entity-access), you need to switch the project security on first. 
+
+To configure the project security, open **Project Explorer** > **Project** >**Security**, and the dialog window will open:
 
 ![](attachments/project-security/project-security-dialog.png)
 
@@ -15,15 +17,15 @@ In the **Project Security** dialog window you can configure security settings re
 For more general information on security, see [Security](security).
 {{% /alert %}}
 
-## 2 Security Level {#level}
+## 2 Security Level {#security-level}
 
-The security level defines how security is applied and which security settings need to be configured.
+The security level defines if security is switched off or on for the project and which security settings need to be configured.
 
 | Security level | The way security is applied | Security settings to be configured |
 | --- | --- | --- |
 | Off | No security is applied. Users do not have to sign in and can access everything. | None |
-| Prototype/demo | Security is applied to signing in, forms, and microflows. Users can access all data. | Administrator and anonymous access, user roles, and security for forms and microflows. |
-| Production | Full security is applied. | Administrator and anonymous access, user roles, and security for forms, microflows, entities, and reports. |
+| Prototype/demo | Security is applied to signing in, forms, and microflows. Users can access all data. | Administrator and anonymous access, user roles, security for forms and microflows. |
+| Production | Full security is applied. | Administrator and anonymous access, user roles, security for forms, microflows, entities, and reports. |
 
 {{% alert type="warning" %}}
 Security levels **Off** and **Prototype/demo** are only allowed in the development and test environments. For acceptance and production you need to use the **Production** security level and configure all security settings accordingly.
@@ -31,9 +33,9 @@ Security levels **Off** and **Prototype/demo** are only allowed in the developme
 
 ### 2.1 Settings Availability for Different Security Levels
 
-Security settings availability depend on the security level that you set. Find the list of all security settings and their availability per security level in the table below: 
+For different security levels different settings are available. Find the list of all security settings and their availability per security level in the table below: 
 
-| Setting Name                        | Security Off | Prototype/demo Security                                      | Production Security                                          |
+| Setting Name                        | Security Off | Prototype/Demo Security                                      | Production Security                                          |
 | ----------------------------------- | ------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | [Check security](#check-security)   | N/a          | N/a                                                          | Available, see the [Check Security](#check-security) section. |
 | [Project status](#project-security) | N/a          | Available, see the [Project Status](#project-status) section. | Available, see the [Project Status](#project-status) section. |
@@ -77,76 +79,17 @@ In the **Administrator** tab of **Project Security**, you can change the default
 
 ## 6 Demo Users {#demo-users}
 
-Demo users are a demonstration of each [user role](user-roles) existing in your app. You can use demo users to test how your app looks like for each user role or to demonstrate your app to other people. For more information, see [Demo Users](demo-users). 
+Demo users are a demonstration of each [user role](user-roles) existing in your app. You can use demo users to test what your app looks like for each user role or to demonstrate your app to other people. For more information, see [Demo Users](demo-users). 
 
 ## 7 Anonymous Users {#anonymous-users}
 
-**Allow anonymous users**
-
-Here you can configure whether anonymous users are allowed to access your application.
-
-| Value | Description |
-| --- | --- |
-| Yes | Anonymous users are allowed. End-users do not have to sign in to access the application. If the user clicks a button of which the microflow requires a user role other than the anonymous user role, the user is presented with a sign in screen. |
-| No | Anonymous users are not allowed. End-users have to sign in to access the application. |
-
-**Anonymous user role**
-
-This is the user role that end-users of your application have when they are not signed in.
-
-**Sign-in microflow**
-
-When anonymous users are allowed, here you can optionally configure a sign-in microflow. This microflow can be used to transfer data from the anonymous user to the signed-in user. In this microflow the current user is set to the signed-in user.
-
-The sign-in microflow has two parameters.
-
-| Name | Type | Description |
-| --- | --- | --- |
-| AnonymousUser | Object of entity 'System.User' | The 'User' object of the anonymous user. This object will be automatically deleted after the execution of the sign-in microflow. |
-| SignedInUser | Object of entity 'System.User' | The 'User' object of the signed-in user. |
-
-{{% alert type="warning" %}}
-
-Clean up objects that were attached to the anonymous user and that you do _not_ transfer to the signed-in user. Since the anonymous user is deleted after running the sign-in microflow, you can use [delete behavior](associations) to automatically clean objects that were attached to the anonymous user.
-
-{{% /alert %}}
-
-The sign-in microflow is executed when an end-user:
-
-1.  Uses your application without signing in (thus as an anonymous user), and then
-2.  clicks a button for which she does not have access, which causes a sign-in screen to appear, and then
-3.  signs in to your application.
-
-{{% alert type="info" %}}
-
-An anonymous user in a web shop adds some items to her shopping cart and then clicks the 'Check out' button. A sign-in screen appears, and the user signs in. The sign-in microflow is executed and transfers the shopping cart of the anonymous user to the signed-in user.
-
-{{% /alert %}}
+Anonymous users allow end-users access your application without having to log in. You can restrict the data that anonymous users can access by assigning a specific user role to them. For more information, see [Anonymous Users](anonymous-users).
 
 ## 8 Password Policy {#password-policy}
 
-You can specify a number of requirements for passwords. These requirements will be enforced when creating new users or changing passwords of existing users.
-
-**Minimum length**
-
-Specifies the minimum length of passwords.
-
-**Require digit**
-
-Specifies whether at least one digit is required in passwords.
-
-**Require mixed case**
-
-Specifies whether passwords must contain at least one lowercase character and one uppercase character.
-
-**Require symbol**
-
-Specifies whether passwords must contain at least one special symbol.
-
-The following characters are considered symbols:
-
-```java
-` ~ ! @ # $ % ^ & * ( ) - _ = + [ { ] } \ | ; : ' " < , > . / ?
-```
+Specify the password requirements when users create their accounts and set passwords for them. For example, you can set the minimum length of the password, if it must contain digits or an upper case characters. For more information, see [Password Policy](password-policy). 
 
 ## 9 Read More
+
+* [Security](security)
+* [Module Security](module-security)

@@ -30,10 +30,10 @@ In general, microservices replace solutions where functional dependencies have b
 
 ### 2.1 Good Dependencies
 
-Microservice apps are smaller functional pieces that contain a business function. The following best practices are important to understand for dependencies:
+Microservice apps are smaller functional pieces that contain a business function. The following best practices are important:
 
-* There must not be too many functional areas that depend on the same data model (as occurs in monoliths)
-* There must not be too many functional areas that depend on the same technical layers (as occurs in SOA-layered architectures)
+* Avoid having too many functional areas that depend on the same data model, as often occurs in monoliths
+* Avoid too many functional areas that depend on the same technical layers, which often occured in SOA architectures
 
 Instead, you must try to contain everything required to perform a business function within each app. A new business feature requirement is then likely to land within only one single app, which will be maintained by one single team. This means you can change quickly when necessary and provide flexibility to the business unit that owns that functionality.
 

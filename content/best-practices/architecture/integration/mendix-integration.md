@@ -1,6 +1,6 @@
 ---
 title: "Mendix & Integration"
-parent: "integration-overview"
+parent: "integration-intro"
 menu_order: 2
 draft: true
 ---

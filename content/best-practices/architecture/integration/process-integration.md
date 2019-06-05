@@ -1,7 +1,7 @@
 ---
 title: "Process Integration"
-parent: "integration-overview"
-menu_order: 8
+parent: "integration-solutions"
+menu_order: 6
 draft: true
 ---
 

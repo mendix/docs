@@ -1,7 +1,7 @@
 ---
 title: "Event-Based Integration"
-parent: "integration-overview"
-menu_order: 5
+parent: "integration-solutions"
+menu_order: 3
 draft: true
 ---
 

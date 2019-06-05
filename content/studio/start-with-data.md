@@ -1,7 +1,6 @@
 ---
 title: "Starting With Your Own Data"
 description: "Describes how to import an Excel spreadsheet to your domain model in Mendix Studio."
-draft: true
 tags: ["studio", "domain model", "excel import", "start with data", "data model"]
 ---
 

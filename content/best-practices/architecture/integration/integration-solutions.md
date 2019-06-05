@@ -5,50 +5,52 @@ menu_order: 2
 draft: true
 ---
 
-{{% todo %}}[**Needs review after restructuring. This content now serves as the top-level solutions content. It can be moved into a separate doc called "Select the Best Integration Solution"; but in that case, new content would be needed for this doc.**]{{% /todo %}}
+{{% todo %}}[**Needs review after restructuring. This content now serves as the top-level solutions content. It can be moved into a separate doc called "Select the Best Integration Solution"; but in that case, new content would need to be added for this doc.**]{{% /todo %}}
 
 ## 1 Deciding on the Best Integration Solution
 
-This is an example sequence for an Architect or Lead Developer considering the best way to integrate:
+This is an example sequence of questions that an Architect or Lead Developer would consider to find the best way to integrate:
 
 1. What is the business use case? <br />
-	a. Use this document to see if one use csase fits?
+	a. Can I reference the [Overview of Use Cases & Solution Options](#overview) section below to see if one use case fits?
 2. What are the functional requirements? <br />
 	a.  Who needs what data when and for which reason? <br />
 	b. Does it need to be real-time? <br />
-	c. What error handling should be there?
+	c. What error-handling options should be there?
 3.  What are the functional options? <br />
-	a. How can I operate this interface in production? <br />
+	a. How can we operate this interface in production? <br />
 	b. How do we manage errors? <br />
 	c. Real-time or batch? <br />
 	d. Request–reply or events? <br />
-	e.  Is there an available integration layer? <br />
-		* If yes, what functions does it handle (for example security, monitoring, queueing, simple mapping)? <br />
-		* An "integration layer" means there are two parts of the integration where you one can choose events, request–reply, or batch separately for the best possible operational solution<br />
+	e.  Is there an available integration layer? An [integration layer](integration-layers) means there are two parts of the integration where you one can choose events, request–reply, or batch separately for the best possible operational solution.<br />
+		* If there is an integration layer available, what functions does it handle (for example security, monitoring, queueing, simple mapping)? <br />
 4. What are the technical options for each functional option? <br />
-	a. Which protocols are available? <br />
-	b. What will it mean for operations? <br />
-	c. What is more secure? <br />
-	d. What has better error handling?
-5. Compare the options against each other.
+	a. What protocols are available? <br />
+	b. What will each option mean for operations? <br />
+	c. What is the most secure option? <br />
+	d. Which option has better error handling?
 
-It is important to think of the overall solution, and recognize that integration starts inside one system and ends inside (one-to-many) other systems.
+The options should then be compared against each other.
+
+It is important to think of the overall solution, and to recognize that integration starts inside one system and ends inside (one-to-many) other systems.
 
 If it gets complicated on one side of an integration, it is often because the other side of the integration is not ideal. Then, the best solution may be to try to change the other side of the integration.
 
-## 2 Basic Solution Categories
+## 2 Five Basic Solution Categories
+
+{{% todo %}}[**Is it correct to say only "five" here, when there are 8 solution categories that will be published? Furthermore, "Process Integration" is not listed as a basic solution category here, yet it has extra content in the form of an example ("Workflow Integration with Data Transfer") -  if it's not a basic solution option, why does it already have an example?**]{{% /todo %}}
 
 For most of the integration related to Mendix, there are five basic solution categories that are almost always used. Sometimes just one is used, and sometimes a combination is used:
 
 ![](attachments/integration-solutions/solution-categories.png)
 
-* [Service Integration](service-integration) – This is otherwise known as remote procedure call (RPC) integration. This category uses request and reply, and it almost always synchronous. The request-reply interfaces with REST and SOAP. There is also database integration with OData and SQL, business event and process integration, process orchestration, integration apps, and distributed ESBs.
-* [UI Integration](ui-integration) – This solution category includes, for example, using a deep link from the UI of one app to open the UI of another app (either in the same browser tab or another tab). It also includes website, content management system, and content delivery network integration.
+* [Service Integration](service-integration) – This is otherwise known as remote procedure call (RPC) integration. This category uses request and reply, and it is almost always synchronous. The request-reply interfaces with REST and SOAP. There is also database integration with OData and SQL, business event and process integration, process orchestration, integration apps, and distributed ESBs.
+* [UI Integration](ui-integration) – This solution category includes, for example, using a deep link from the UI of one app to open the UI of another app (either in the same or another browser tab). It also includes integration with websites, content management systems, and content delivery networks.
 * [Event-Based Integration](event-integration) – This category usually does not have a response, and it is used to distribute data at large scales or large distances, or simply distribute data in a decoupled way. Event-driven integration can involve IoT, metrics, and social media, as well as state engines and event management.
 * [Batch Integration](batch-integration) – This category includes exporting, moving, and importing files as well as file integration.
-* [Central Data](central-data) – This category uses a pattern where data is landed and combined in a central place before it is distributed. This could be, for example, an operational data store (ODS); extract, transform, load (ETL); business intelligence (BI); or data lake solution.
+* [Central Data](central-data) – This category uses a pattern where data is landed and combined in a central place before it is distributed. This could be, for example, an operational data store (ODS); extract, transform, load (ETL); business intelligence (BI); or a data lake solution.
 
-## 3 Overview of Use Cases & Solution Options
+## 3 Overview of Use Cases & Solution Options {#overview}
 
 Plotting functional use cases against basic methods of integration allows you to see there are several common options available. That is good, because integration needs to be flexible in a solution for the architect to select the best option for a specific situation. 
 

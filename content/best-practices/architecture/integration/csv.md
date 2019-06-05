@@ -1,6 +1,7 @@
 ---
-title: "File Import Integration with CSV Example"
-parent: "export-import-batch"
+title: "Example – File Import Integration with CSV"
+parent: "batch-integration"
+menu_order: 2
 draft: true
 ---
 

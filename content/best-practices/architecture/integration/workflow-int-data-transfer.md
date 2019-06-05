@@ -1,7 +1,7 @@
 ---
-title: "Workflow Integration with Data Transfer Example"
-parent: "workflow-integration"
-menu_order: 1
+title: "Example – Workflow Integration with Data Transfer"
+parent: "process-examples"
+menu_order: 2
 draft: true
 ---
 

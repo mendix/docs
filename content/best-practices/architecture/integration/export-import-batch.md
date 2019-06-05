@@ -1,6 +1,6 @@
 ---
 title: "Export, Import & Batch Processing"
-parent: "integration-examples"
+parent: "batch-integration"
 menu_order: 1
 draft: true
 ---

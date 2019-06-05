@@ -1,7 +1,7 @@
 ---
 title: "Workflow Integration"
-parent: "integration-examples"
-menu_order: 2
+parent: "process-examples"
+menu_order: 1
 draft: true
 ---
 

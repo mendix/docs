@@ -142,7 +142,7 @@ Mendix recommends using either files or OData and to restrict the amount of data
 
 These are further factors to consider:
 
-* **OData** – OData is positioned to collect smaller data chunks more close to real-time. This is typically useful for BI solutions or business dashboards (for details, see the [Database Integration & OData](service-integration#db-odata) section of *Service Integration*). This requires the BI solution to have a direct link to the app. In addition, if the Mendix data model of the monitored data object changes, it will often require the BI solution to update the retrieval as well.
+* **OData** – OData is positioned to collect smaller data chunks more close to real-time. This is typically useful for BI solutions or business dashboards. This requires the BI solution to have a direct link to the app. In addition, if the Mendix data model of the monitored data object changes, it will often require the BI solution to update the retrieval as well.
 * **Files** – Files is the most decoupled option to share data with BI, ETL, and DWH. There could be several files with different data and functional IDs that link objects together. If this option is possible, it is recommended.
 * **Databse backup** – When a DWH wants almost all the data, when the domain model is complex, or when there are several important many-to-many relations, then a database dump is available as the best option. An ETL solution will be directly depending on the Mendix data model, creating a tight coupling that forces the ETL solution to change with every new Mendix app release. To handle this dependency, ETL solutions have a staging area where raw data is imported, so they can actually adopt even after changes occur, when errors are discovered.
 

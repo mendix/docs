@@ -97,6 +97,7 @@ Within these solution categories, the use cases and scenarios listed below show 
 * [File Integration & Management](batch-integration#file-integration)
 * [Export & Import](batch-integration#export-import)
 * [ETL, DWH & BI Integration](batch-integration#int)
+* [Example – File Import Integration with CSV](csv)
 
 #### 3.2.5 Central Data Use Cases
 
@@ -109,6 +110,7 @@ Within these solution categories, the use cases and scenarios listed below show 
 * [Case Management](process-integration#case)
 * [Process Orchestration](process-integration#po)
 * [Event Managers](process-integration#event-managers)
+* [Example – Workflow Integration with Data Transfer](workflow-int-data-transfer)
 
 #### 3.2.7 Integration Layers Use Cases
 
@@ -119,14 +121,6 @@ Within these solution categories, the use cases and scenarios listed below show 
 
 * [CI/CD & Test Automation](ops-cicd-integration#test)
 * [Deployment & Monitoring](ops-cicd-integration#deploy)
-
-### 3.3 Integration Examples
-
-The [Integration Examples](integration-examples) present detailed examples for certain integration solutions along with recommendations, do's, and don'ts.
-
-At this time, examples for [Export, Import & Batch Processing](export-import-batch) and [Workflow Integration](workflow-integration) are available. 
-
-In the future, [Mendix App Store](https://appstore.home.mendix.com/index3.html) items will be added to accompany these examples.
 
 ## 4 Related Content
 

@@ -29,7 +29,7 @@ The API you will make allows you to search for GitHub users. Before continuing, 
 
 ## 3 Downloading the Project Package
 
-1. Go to the Mendix [App Store](https://appstore.home.mendix.com/index3.html) and click **Dashboard**. You must have this page open in your browser for the next step to work.
+1. Go to the Mendix [App Store](https://appstore.home.mendix.com/index3.html), log in, and click **Dashboard**. You must have this page open in your browser for the next step to work.
 2. Click this [JavaScript Actions](https://appstore.home.mendix.com/link/app/109788/) app link. This will bring you to the project page for this how-to.
 3. Click **Download** to receive an *.mpk* file. 
 4. In Mendix Studio Pro, click **File** > **Import Project Package**.

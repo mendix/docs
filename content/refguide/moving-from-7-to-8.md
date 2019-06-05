@@ -88,16 +88,17 @@ Details of removed and deprecated APIs will be added to the *Breaking Changes* s
 
 The types Float and Currency were deprecated in Mendix version 7, and have now been removed from Mendix version 8. 
 
-The following elements of type Float or Currency will report errors in version 8: 
+The following elements of type Float or Currency will report errors in version 8:
+
 * Attributes
 * Constants
 * Create variable actions
 * Data set columns and parameters
 * Microflow/nanoflow parameters and return types
-* Java/JavaScript action parameters and return types.
+* Java/JavaScript action parameters and return types
 * The functions 'formatFloat', 'parseFloat' and 'toFloat'
 
-It is possible to fix most of the deprecations errors in one single action. To achieve this, do the following
+It is possible to fix most of the deprecation errors in one single action. To achieve this, do the following:
 
 1. In Studio Pro 8, find the error message which relates to the support of Currency and Float data types.
 
@@ -111,7 +112,7 @@ It is possible to fix most of the deprecations errors in one single action. To a
 
     ![Warning when converting all Float and Currency to Decimal](attachments/moving-from-7-to-8/convert-to-decimal-warning.png)
 
-4. Click **Convert all to Decimal** to perform the conversion
+4. Click **Convert all to Decimal** to perform the conversion.
 
 ## 5 64-Bit Studio Pro
 

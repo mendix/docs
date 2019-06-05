@@ -5,9 +5,13 @@ menu_order: 11
 draft: true
 ---
 
-{{% todo %}}[**NEEDS DIAGRAMS**]{{% /todo %}}
+{{% todo %}}[**Sections 1 & 2 below present theoretical content that should probably have been covered in above sections. Proper "example" content only starts from section 3.**]{{% /todo %}}
 
-{{% todo %}}[**MENTIONS OF IoT, AI, AND MACHINE LEARNING SHOULD BE REMOVED/REWRITTEN OUT OF THIS DOCUMENT**]{{% /todo %}}
+{{% todo %}}[**Need proper introductory content introducting examples and what this document aims to do**]{{% /todo %}}
+
+{{% todo %}}[**Needs diagrams**]{{% /todo %}}
+
+{{% todo %}}[**Mentions of IoT, AI, and machine learning should be reviewed to see if they should be removed/rewritten**]{{% /todo %}}
 
 ## 1 Introduction
 
@@ -48,7 +52,9 @@ If it gets complicated on one side of an integration, it is often because the ot
 
 The integration examples are introduced below.
 
-{{% todo %}}[**ADD LINKS TO FULL DOCS BELOW ONCE AVAILABLE**]{{% /todo %}}
+{{% todo %}}[**Add links to docs below once available**]{{% /todo %}}
+
+{{% todo %}}[**Add section when updated for Mx8: Mobile Integration & Offline**]{{% /todo %}}
 
 ### 3.1 SSO, AD & Identity Integration 
 
@@ -99,8 +105,6 @@ In its full scope, master data management is a complex process involving the fol
 * One or more mechanisms for distributing updates to the master data
 
 The best practices will describe how to update data in the master app and how to distribute the data to other subscribing apps.
-
-{{% todo %}}[**ADD WHEN RELEASE FOR MX8: ### 3.8 Mobile Integration & Offline (WHERE STORED?)**]{{% /todo %}}
 
 ### 3.8 CMS & CDN Integration 
 

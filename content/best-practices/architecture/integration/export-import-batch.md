@@ -5,7 +5,11 @@ menu_order: 1
 draft: true
 ---
 
-{{% todo %}}[**COULD USE 2 DIAGRAMS**]{{% /todo %}}
+{{% todo %}}[**Needs thorough review**]{{% /todo %}}
+
+{{% todo %}}[**Should make reference/link to specific solution/theoretical content above. Or should this content actually be moved into Batch Integration?**]{{% /todo %}}
+
+{{% todo %}}[**Needs diagrams**]{{% /todo %}}
 
 ## 1 Export, Import & Batch Processing Use Case
 

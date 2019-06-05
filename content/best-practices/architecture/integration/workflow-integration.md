@@ -5,7 +5,11 @@ menu_order: 2
 draft: true
 ---
 
-{{% todo %}}[**NEEDS 2-3 DIAGRAMS**]{{% /todo %}}
+{{% todo %}}[**Needs thorough review**]{{% /todo %}}
+
+{{% todo %}}[**Should make reference/link to specific solution/theoretical content above. Or should this content actually be moved into Process Integration (or another solution doc)?**]{{% /todo %}}
+
+{{% todo %}}[**Needs diagrams**]{{% /todo %}}
 
 ## 1 Workflow Integration Use Case (DELETE SECTION)
 

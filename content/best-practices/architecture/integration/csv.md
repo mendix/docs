@@ -4,6 +4,10 @@ parent: "export-import-batch"
 draft: true
 ---
 
+{{% todo %}}[**Needs thorough review**]{{% /todo %}}
+
+{{% todo %}}[**Structure is unclear for where this doc is located - what is exact relation to parent doc?**]{{% /todo %}}
+
 ## 1 Introduction
 
 {{% todo %}}[**ADD LINK WHEN AVAILABLE BELOW AND UPDATE TEXT AS NECESSARY**]{{% /todo %}}

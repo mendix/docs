@@ -7,7 +7,7 @@ tags: ["widget", "search", "GitHub", "JavaScript", "API", "JavaScript-API"]
 
 ## 1 Introduction
 
-Mendix has made nanoflows even more powerful with pluggable nanoflow actions, called JavaScript actions, newly included in Mendix 8. [Write JavaScript Actions: Part 1 (Basic)](write-javascript-actions) shows you how to create a JavaScript TextToSpeech action, expose it as a nanoflow action, then use it in a demo. In this advanced how-to you will learn to call a REST service, use a generic return type, and make an API to enhance the power of your JavaScript actions.
+Mendix has made nanoflows even more powerful with pluggable nanoflow actions, called JavaScript actions, newly included in Mendix 8. [Write JavaScript Actions: Part 1 (Basic)](write-javascript-actions) shows you how to create a JavaScript TextToSpeech action, expose it as a nanoflow action, and then use it in a demo. In this advanced how-to you will learn to call a REST service, use a generic return type, and make an API to enhance the power of your JavaScript actions.
 
 **This how-to will teach you how to do the following:**
 
@@ -29,6 +29,8 @@ The API you will make allows you to search for GitHub users. Before continuing, 
 
 ## 3 Downloading the Project Package
 
+This how-to comes paired with a project package prepared for you by Mendix. To download and import the package, follow the steps below:
+
 1. Go to the Mendix [App Store](https://appstore.home.mendix.com/index3.html), log in, and click **Dashboard**. You must have this page open in your browser for the next step to work.
 2. Click this [JavaScript Actions](https://appstore.home.mendix.com/link/app/109788/) app link. This will bring you to the project page for this how-to.
 3. Click **Download** to receive an *.mpk* file. 
@@ -39,7 +41,7 @@ The API you will make allows you to search for GitHub users. Before continuing, 
 
 ## 4 Creating a “Search GitHub User” JavaScript Action
 
-To create a JavaScript action that can search for users on GitHub, follow the steps below.
+To create a JavaScript action that can search for users on GitHub, follow the steps below:
 
 1.  Add a new **JavaScript action** in your Mendix project:
 
@@ -49,7 +51,7 @@ To create a JavaScript action that can search for users on GitHub, follow the st
 
 	![name javascript action](attachments/jsactions-advanced/name-js-action.png)
 
-You can now start creating the API for **SearchGitHubUsers**, an action which consists of parameters and a return type.
+	You can now start creating the API for **SearchGitHubUsers**, an action which consists of parameters and a return type.
 
 3.  Your **SearchGitGubUsers** JavaScript action only requires a single parameter. Create it by clicking **Parameters** > **Add**. Name the parameter *Query,* and add an extended **Description** if desired. 
 
@@ -65,7 +67,7 @@ You can now start creating the API for **SearchGitHubUsers**, an action which co
 
 	![default code](attachments/jsactions-advanced/default-code.png)
 
-	You can only add code between `// BEGIN USER CODE` and `// END USER CODE`. Any code outside this block will be lost. Source code is stored in your project folder under **javascriptsource**/**(module name)**/**actions**/**(action name).js**. 
+	You can only add code between `// BEGIN USER CODE` and `// END USER CODE`. Any code outside this block will be lost. Source code is stored in your project folder under **javascriptsource/(module name)/actions/(action name).js**. 
 
 6. Now add a check to verify if the required parameter has been set correctly. The action will return an empty list if no `query` was provided:
 
@@ -103,7 +105,6 @@ You can now start creating the API for **SearchGitHubUsers**, an action which co
 	This code uses the Fetch API. Browser compatibility is irrelevant, as this API is provided by the Mendix runtime when unavailable in the browser.
 
 8. Next up is the fun part: making Mendix objects. Create a new function called `createGitHubUser` that returns a `new Promise`. The executor function of the promise should use the Mendix client API to create a new object and set the attributes.
-
 9. Loop over all results and call your new function. The `githubUsers` variable will hold an array of promises.
 10. Finally, set a `Promise.all` return to wait for all promises to be resolved before the nanoflow can continue:
 
@@ -141,7 +142,7 @@ You can now start creating the API for **SearchGitHubUsers**, an action which co
 	}
 	```
 
-	The entity name consists of **{(modulename)}.{(entityname)}**. The entity name, therefore, might have been different if the **GitHubUser** entity was created in another module. Because this JavaScript action has names explicitly written into it, when a module or entity is renamed, the JavaScript action will break. You will fix this hard-coded relation in [step 10](#step-ten) below.
+	The entity name consists of **{(modulename)}.{(entityname)}**. The entity name, therefore, might have been different if the **GitHubUser** entity was created in another module. Because this JavaScript action has names explicitly written into it, when a module or entity is renamed, the JavaScript action will break. You will fix this hard-coded relation in [step 12](#step-ten) below.
 
 9. The function will only set the `login` and `avatar_url` properties. To make it more flexible, you will make the function discover the available attributes and set them. Extend the domain model with more attributes from the API like so:
 

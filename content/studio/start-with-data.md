@@ -50,7 +50,7 @@ Download this Excel spreadsheet example to check how data is normalized there: [
 
 When you create your app, a page where you can upload your spreadsheet is opened. Drag and drop your spreadsheet on the page or browse your files and choose the one you would like to import.
 
-{{% image_container width="400" %}}![](attachments/start-with-data/drag-and-drop.png)
+{{% image_container width="500" %}}![](attachments/start-with-data/drag-and-drop.png)
 {{% /image_container %}}
 
 {{% alert type="info" %}}
@@ -106,7 +106,8 @@ You can take a brief tour showing you how your file has been converted.
 
 Open the domain model to see all created entities and attributes:
 
-![](attachments/start-with-data/domain-model-example.png)
+{{% image_container width="350" %}}![](attachments/start-with-data/domain-model-example.png)
+{{% /image_container %}}
 
 {{% alert type="success" %}}
 

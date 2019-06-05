@@ -1,8 +1,13 @@
 ---
-title: "File Import Integration with CSV Example"
-parent: "export-import-batch"
+title: "Example – File Import Integration with CSV"
+parent: "batch-integration"
+menu_order: 2
 draft: true
 ---
+
+{{% todo %}}[**Needs thorough review**]{{% /todo %}}
+
+{{% todo %}}[**Structure is unclear for where this doc is located - what is exact relation to parent doc?**]{{% /todo %}}
 
 ## 1 Introduction
 

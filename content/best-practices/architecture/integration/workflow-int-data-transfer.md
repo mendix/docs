@@ -1,9 +1,13 @@
 ---
-title: "Workflow Integration with Data Transfer Example"
-parent: "workflow-integration"
-menu_order: 1
+title: "Example – Workflow Integration with Data Transfer"
+parent: "process-integration"
+menu_order: 2
 draft: true
 ---
+
+{{% todo %}}[**Needs thorough review**]{{% /todo %}}
+
+{{% todo %}}[**Structure is unclear for where this doc is located - what is exact relation to parent doc?**]{{% /todo %}}
 
 ## 1 Introduction
 

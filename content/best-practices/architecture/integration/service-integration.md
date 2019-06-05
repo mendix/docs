@@ -1,7 +1,7 @@
 ---
 title: "Service Integration"
-parent: "integration-overview"
-menu_order: 3
+parent: "integration-solutions"
+menu_order: 1
 draft: true
 ---
 
@@ -134,7 +134,7 @@ A good architectural guideline is to avoid the tight coupling of data models of 
 
 If you have to go directly on a database, it is wise to use database views and stored procedures as a "padding" between the underlaying data model and the service interaction. You should never do JDBC through firewalls. If the legacy database is on premises and database calls are the only option, then either deploy the Mendix app on premises as well, or create a Mendix "adapter app" on premises and have the main apps use the data on the cloud.
 
-## 6 SOAP Integration
+## 6 SOAP Integration {#soap-int}
 
 SOAP integration uses XML messages and a SOAP header that includes the endpoint in a WSDL file. For large solutions, the integration points can be figured out early, WSDLs created, and after that point, the teams can work and test relatively independently. Using XML allows for XSLT mappings, and a filled-in message can be compared with an XSD to do relatively detailed validation before sending messages, which can be good for asynchronous flows.
 
@@ -161,7 +161,7 @@ In this example, most of the interaction is for the retrieval of data. To make t
 
 When using Mendix for integration apps, it is easy to create an admin UI when that is neede. This makes it more flexible and adaptable than what most integration layers provide. In effect, with this pattern, one can create a distributed ESB (for details, see [Integration Layers](integration-layers)).
 	
-## 8 Queue Integration
+## 8 Queue Integration {#queue-int}
 
 Using queues, a message broker, or Kafka typically means that the end-to-end integration is asynchronous. However, each leg in the end-to-end integration is always a synchronous call to either put an event or get an event:
 

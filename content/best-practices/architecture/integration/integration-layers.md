@@ -1,7 +1,7 @@
 ---
 title: "Integration Layers"
-parent: "integration-overview"
-menu_order: 9
+parent: "integration-solutions"
+menu_order: 7
 draft: true
 ---
 

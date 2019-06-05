@@ -1,7 +1,7 @@
 ---
 title: "UI Integration"
-parent: "integration-overview"
-menu_order: 4
+parent: "integration-solutions"
+menu_order: 2
 draft: true
 ---
 

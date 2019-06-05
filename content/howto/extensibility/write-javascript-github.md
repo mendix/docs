@@ -22,14 +22,14 @@ Mendix has made nanoflows even more powerful with pluggable nanoflow actions –
 
 ## 2 Prerequisites
 
-The API you will make allows you to search for GitHub users. Before continuing, you can do the following to practice your API skills: 
+In [Creating a "Search GitHub User" JavaScript Action](#create-a-search) below, you will make an API which allows you to search for GitHub users. Before continuing, you can do the following to practice your API skills: 
 
 * Learn how the GitHub API works using the [GitHub developer documentation](https://developer.github.com/v3/search/#search-users)
-* Use test tooling to see how the GitHub API in action – an HTTP GET request of the URL https://api.github.com/search/users?q=test will result in a JSON response which you should study
+* Use test tooling to see how the GitHub API in action – an HTTP GET request of the URL `https://api.github.com/search/users?q=test` will result in a JSON response which you should study
 
 ## 3 Downloading the Project Package
 
-This how-to comes paired with a project package prepared for you by Mendix. To download and import the package, follow the steps below:
+This how-to comes paired with an app project package prepared for you by Mendix. To download and import the package, follow the steps below:
 
 1. Go to the Mendix [App Store](https://appstore.home.mendix.com/index3.html), log in, and click **Dashboard**. You must have this page open in your browser for the next step to work.
 2. Click this [JavaScript Actions](https://appstore.home.mendix.com/link/app/109788/) app link. This will bring you to the project page for this how-to.
@@ -39,7 +39,7 @@ This how-to comes paired with a project package prepared for you by Mendix. To d
 
 	![import package](attachments/jsactions-advanced/import-package.png)
 
-## 4 Creating a “Search GitHub User” JavaScript Action
+## 4 Creating a “Search GitHub User” JavaScript Action {#create-a-search}
 
 To create a JavaScript action that can search for users on GitHub, follow the steps below:
 
@@ -142,7 +142,7 @@ To create a JavaScript action that can search for users on GitHub, follow the st
 	}
 	```
 
-	The entity name consists of **{(modulename)}.{(entityname)}**. The entity name, therefore, might have been different if the **GitHubUser** entity was created in another module. Because this JavaScript action has names explicitly written into it, when a module or entity is renamed, the JavaScript action will break. You will fix this hard-coded relation in [step 12](#step-ten) below.
+	The entity name consists of **{(modulename)}.{(entityname)}**. The entity name, therefore, might have been different if the **GitHubUser** entity was created in another module. Because this JavaScript action has names explicitly written into it, when a module or entity is renamed, the JavaScript action will break. You will fix this hard-coded relation in [step 10](#step-ten) below.
 
 9. The function will only set the `login` and `avatar_url` properties. To make it more flexible, you will make the function discover the available attributes and set them. Extend the domain model with more attributes from the API like so:
 
@@ -192,7 +192,7 @@ To create a JavaScript action that can search for users on GitHub, follow the st
 	c. Provide the name *UserEntity*. <br/>
 	d. Click **OK**:
 
-	![add user entity](attachments/jsactions-advanced/add-user-entity.png)
+		![add user entity](attachments/jsactions-advanced/add-user-entity.png)
 
 11. Open the **General** tab again and add a new parameter of the type **Entity**. Select **Fill in a type parameter**, then from the **Type parameter** drop-down menu select **Type parameter 'UserEntity'**. This will couple the input entity with the generic type parameter:
 
@@ -203,7 +203,7 @@ To create a JavaScript action that can search for users on GitHub, follow the st
 	b. Select **Type Parameters** > **UserEntity**. <br/>
 	c. Click **OK**:
 
-	![select user entity](attachments/jsactions-advanced/select-user-entity.png)
+		![select user entity](attachments/jsactions-advanced/select-user-entity.png)
 
 13. Your final step is updating the code. The new `userEntity` parameter has already been added. In the `mx.data.create` function, set `userEntity` as the `entity` to be created. Then, add some documentation for future reference:
 
@@ -287,7 +287,7 @@ To create a JavaScript action that can search for users on GitHub, follow the st
 	d. To display the results in the user interface, type *UserList* into the **Variable** field. <br/>
 	e. Your finished **Call JavaScript Action** will look like this:
 
-	![variable display](attachments/jsactions-advanced/variable-display.png)
+		![variable display](attachments/jsactions-advanced/variable-display.png)
 
 18. To edit your **Change Object** activity, do the following: <br/>
 	a. Double-click your **Change Object** activity. <br/>
@@ -296,11 +296,11 @@ To create a JavaScript action that can search for users on GitHub, follow the st
 	d. Select **HowTo.GithubSearch_GithubUser(ListofHowTo.GithubUser)** from the **Member** drop-down menu. <br/>
 	e. Type *$UserList* into the **Value** field and click **OK**. <br/>
 
-	![edit change](attachments/jsactions-advanced/edit-change-item.png)
+		![edit change](attachments/jsactions-advanced/edit-change-item.png)
 	
 	f. Your finished **Change Object** action will look like this:
 	
-	![change object](attachments/jsactions-advanced/change-object-final.png)
+		![change object](attachments/jsactions-advanced/change-object-final.png)
 
 19. Run your project, then use your new search action to find a GitHub user:
 

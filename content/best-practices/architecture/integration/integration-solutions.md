@@ -1,7 +1,7 @@
 ---
 title: "Integration Solutions"
-parent: "select-solution"
-menu_order: 3
+parent: "integration-overview"
+menu_order: 2
 draft: true
 ---
 
@@ -40,7 +40,7 @@ If it gets complicated on one side of an integration, it is often because the ot
 
 For most of the integration related to Mendix, there are five basic solution categories that are almost always used. Sometimes just one is used, and sometimes a combination is used:
 
-![](attachments/select-solution/solution-categories.png)
+![](attachments/integration-solutions/solution-categories.png)
 
 * [Service Integration](service-integration) – This is otherwise known as remote procedure call (RPC) integration. This category uses request and reply, and it almost always synchronous. The request-reply interfaces with REST and SOAP. There is also database integration with OData and SQL, business event and process integration, process orchestration, integration apps, and distributed ESBs.
 * [UI Integration](ui-integration) – This solution category includes, for example, using a deep link from the UI of one app to open the UI of another app (either in the same browser tab or another tab). It also includes website, content management system, and content delivery network integration.
@@ -60,26 +60,26 @@ The table below presents use cases that you can reference  for more detail. The 
 
 | Symbol | Meaning |
 | --- | --- |
-| ![](attachments/select-solution/green.png) | Indicates the common or preferred use of the method. In some cases (for example, "Int. with IoT solutions"), the solution will require several methods, so several of these symbols are used. |
-| ![](attachments/select-solution/grey.png) | Indicates possible use in some cases. |
+| ![](attachments/integration-solutions/green.png) | Indicates the common or preferred use of the method. In some cases (for example, "Int. with IoT solutions"), the solution will require several methods, so several of these symbols are used. |
+| ![](attachments/integration-solutions/grey.png) | Indicates possible use in some cases. |
 
 | Use Case | UI Integration | RPC / Services | Events / Queues | Export, Import, Batch | Central Data |
 | --- | --- | --- | --- | --- | --- |
-| [SSO, AD & Identity Integration](#sso) | ![](attachments/select-solution/grey.png) | ![](attachments/select-solution/green.png) | | | |
-| [ Importing & Distributing Reference Data](#import-dist) | | ![](attachments/select-solution/green.png) | ![](attachments/select-solution/grey.png) | ![](attachments/select-solution/green.png) | ![](attachments/select-solution/grey.png) |
-| [Viewing & Searching Data in Another System](#view-search)  | ![](attachments/select-solution/grey.png) | ![](attachments/select-solution/green.png) | | | |
-| [Using & Referring to Data in Another System](#use-refer) | | ![](attachments/select-solution/green.png) | | | ![](attachments/select-solution/grey.png) |
-| [Process Integration](#process) | ![](attachments/select-solution/green.png) | ![](attachments/select-solution/grey.png) | ![](attachments/select-solution/grey.png) | | |
-| [Export, Import & Batch Processing](#export-import) | | ![](attachments/select-solution/grey.png) | ![](attachments/select-solution/grey.png) | ![](attachments/select-solution/grey.png) | ![](attachments/select-solution/grey.png) |
-| [Master Data Integration](#master-data)| ![](attachments/select-solution/green.png) | ![](attachments/select-solution/green.png) | ![](attachments/select-solution/grey.png) | | |
-| Distributing Master & Transactional Data | | ![](attachments/select-solution/green.png) | ![](attachments/select-solution/grey.png) | ![](attachments/select-solution/grey.png) | ![](attachments/select-solution/grey.png) |
-| Mobile Integration & Offline | | ![](attachments/select-solution/green.png) | ![](attachments/select-solution/grey.png) | | |
-| [CMS & CDN Integration](#cms-cdn) | ![](attachments/select-solution/green.png) | ![](attachments/select-solution/grey.png) | | | |
-| [Integration with BI & Reporting](#int-bi) | | ![](attachments/select-solution/grey.png) | ![](attachments/select-solution/grey.png) | ![](attachments/select-solution/green.png) | ![](attachments/select-solution/grey.png) |
-| Process Orchestration & State Engines | | ![](attachments/select-solution/green.png) | ![](attachments/select-solution/grey.png) | | ![](attachments/select-solution/green.png) |
-| [Integration with CICD, Ops & Monitoring](#int-cicd) | ![](attachments/select-solution/grey.png) | ![](attachments/select-solution/grey.png) | ![](attachments/select-solution/green.png) | ![](attachments/select-solution/grey.png) | ![](attachments/select-solution/green.png) |
-| [Integration with AI & IoT Solutions](#ai-iot) | | ![](attachments/select-solution/green.png) | ![](attachments/select-solution/green.png) | ![](attachments/select-solution/grey.png) | ![](attachments/select-solution/green.png) |
-| [Integration with AI & Machine Learning](#ai-machine) | | ![](attachments/select-solution/green.png) | ![](attachments/select-solution/grey.png) | | ![](attachments/select-solution/green.png) |
+| [SSO, AD & Identity Integration](#sso) | ![](attachments/integration-solutions/grey.png) | ![](attachments/integration-solutions/green.png) | | | |
+| [ Importing & Distributing Reference Data](#import-dist) | | ![](attachments/integration-solutions/green.png) | ![](attachments/integration-solutions/grey.png) | ![](attachments/integration-solutions/green.png) | ![](attachments/integration-solutions/grey.png) |
+| [Viewing & Searching Data in Another System](#view-search)  | ![](attachments/integration-solutions/grey.png) | ![](attachments/integration-solutions/green.png) | | | |
+| [Using & Referring to Data in Another System](#use-refer) | | ![](attachments/integration-solutions/green.png) | | | ![](attachments/integration-solutions/grey.png) |
+| [Process Integration](#process) | ![](attachments/integration-solutions/green.png) | ![](attachments/integration-solutions/grey.png) | ![](attachments/integration-solutions/grey.png) | | |
+| [Export, Import & Batch Processing](#export-import) | | ![](attachments/integration-solutions/grey.png) | ![](attachments/integration-solutions/grey.png) | ![](attachments/integration-solutions/grey.png) | ![](attachments/integration-solutions/grey.png) |
+| [Master Data Integration](#master-data)| ![](attachments/integration-solutions/green.png) | ![](attachments/integration-solutions/green.png) | ![](attachments/integration-solutions/grey.png) | | |
+| Distributing Master & Transactional Data | | ![](attachments/integration-solutions/green.png) | ![](attachments/integration-solutions/grey.png) | ![](attachments/integration-solutions/grey.png) | ![](attachments/integration-solutions/grey.png) |
+| Mobile Integration & Offline | | ![](attachments/integration-solutions/green.png) | ![](attachments/integration-solutions/grey.png) | | |
+| [CMS & CDN Integration](#cms-cdn) | ![](attachments/integration-solutions/green.png) | ![](attachments/integration-solutions/grey.png) | | | |
+| [Integration with BI & Reporting](#int-bi) | | ![](attachments/integration-solutions/grey.png) | ![](attachments/integration-solutions/grey.png) | ![](attachments/integration-solutions/green.png) | ![](attachments/integration-solutions/grey.png) |
+| Process Orchestration & State Engines | | ![](attachments/integration-solutions/green.png) | ![](attachments/integration-solutions/grey.png) | | ![](attachments/integration-solutions/green.png) |
+| [Integration with CICD, Ops & Monitoring](#int-cicd) | ![](attachments/integration-solutions/grey.png) | ![](attachments/integration-solutions/grey.png) | ![](attachments/integration-solutions/green.png) | ![](attachments/integration-solutions/grey.png) | ![](attachments/integration-solutions/green.png) |
+| [Integration with AI & IoT Solutions](#ai-iot) | | ![](attachments/integration-solutions/green.png) | ![](attachments/integration-solutions/green.png) | ![](attachments/integration-solutions/grey.png) | ![](attachments/integration-solutions/green.png) |
+| [Integration with AI & Machine Learning](#ai-machine) | | ![](attachments/integration-solutions/green.png) | ![](attachments/integration-solutions/grey.png) | | ![](attachments/integration-solutions/green.png) |
 
 ### 3.1 SSO, AD & Identity Integration {#sso}
 

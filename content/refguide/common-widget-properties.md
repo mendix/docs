@@ -10,13 +10,13 @@ These are properties that are shared by many widgets. For a complete list of pro
 
 ### Required (only in web forms)
 
-This property indicates whether this widget must be filled in by the end user or not. If set to true, this widget can not be left empty and a message will be shown if the end user presses the 'Save' button.
+This property indicates whether this widget must be filled in by the end user or not. If set to true, this widget can not be left empty and a message will be shown if the end user presses the *Save* button.
 
 _Default value:_ False
 
 ### Required message (only in web forms)
 
-This property determines the message that is shown to the end user if the widget is empty and the 'Required' property is set to true. This is a translable text. See [Translatable Texts](translatable-texts).
+This property determines the message that is shown to the end user if the widget is empty and the *Required* property is set to true. This is a translable text. See [Translatable Texts](translatable-texts).
 
 {{% alert type="info" %}}
 
@@ -28,7 +28,7 @@ For example, if an address field is required, the required message for the text 
 
 ### Tab index (only in web forms)
 
-The tab index influences the order in which the end user navigates through the form using the tab key. By default tab indices are zero and the tab order is determined automatically by the client system. A value of minus one (-1) means that the widget will be skipped when tabbing through the form.
+The tab index influences the order in which the end-user navigates through the page using the tab key. By default tab indices are zero and the tab order is determined automatically by the client system. A value of minus one (-1) means that the widget will be skipped when tabbing through the page.
 
 _Default value:_ 0
 
@@ -54,6 +54,6 @@ _Default value:_ 0
 
 ### Condition
 
-A widget can be made editable based on the value of an attribute of the enclosing data view. The attribute must be of type boolean or enumeration. For each value, you specify whether the widget is editable. Upon entering the form and upon changing the condition attribute the edit state of the widget will be updated.
+A widget can be made editable based on the value of an attribute of the enclosing data view. The attribute must be of type Boolean or enumeration. For each value, you specify whether the widget is editable. Upon opening the page and upon changing the condition attribute the edit state of the widget will be updated.
 
-Example: you don't have to ask for the marriage date if the end user indicates that he or she is not married.
+Example: you do not have to ask for the marriage date if the end-user indicates that he or she is not married.

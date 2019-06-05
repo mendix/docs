@@ -47,12 +47,12 @@ Let us say you have a project with two modules: System and ProjectManagement (PM
 
 {{% /alert %}}
 
-## Entity Access versus Form Access
+## Entity Access versus Page Access
 
 Per entity you can specify who can read or write what members (attributes and associations) under what circumstances. Using XPath constraints you can express powerful security behavior; e.g. "an employee can only see orders created by the department he is a part of".
 
-Per form you can specify who can open it from navigation. The menu bar is even optimized so that only those forms are visible that the user has access to.
+Per page you can specify who can open it from navigation. The menu bar is optimized so that only pages that the user has access to are visible. 
 
-A combination of entity access and form access is necessary because entities can also be accessed from microflows and custom widgets. Furthermore, you can express more advanced security through entity access.
+A combination of entity access and a page access is necessary because entities can also be accessed from microflows and custom widgets. Furthermore, you can express more advanced security through entity access.
 
 See [Entity Access](module-security).

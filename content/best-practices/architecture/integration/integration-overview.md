@@ -20,9 +20,7 @@ These are the questions addressed in the integration-focused *Expert Best Practi
 
 ![](attachments/integration-overview/int-ov2.png)
 
-To start looking at how these questions are addressed, see [Introduction to Integration](integration-intro) and [Mendix & Integration](mendix-integration), and the subesquest sections containing theoretical guidelines for a number of integration areas:
-
-The intention is to add [Integration Examples](integration-examples) accompanied by examples in the [Mendix App Store](https://appstore.home.mendix.com/index3.html). At this time, examples for [Export, Import & Batch Processing](export-import-batch) and [Workflow Integration](workflow-integration) are available. 
+To start looking at how these questions are addressed, see [Introduction to Integration](integration-intro) and [Mendix & Integration](mendix-integration). For theoretical guidelines, see the [Integration Solution Categories](mendix-integration#categories). Finally, for Mendix-specific examples, see [Integration Examples](integration-examples).
 
 ## 2 How to Use the Integration Best Practices
 
@@ -50,7 +48,7 @@ A new category of integration is growing important in the DevOps and microservic
 
 ![](attachments/integration-overview/int-ov7.png)
 
-## 3 Related Documents
+## 3 Related Content
 
 There is the following documentation and training material available around integration:
 

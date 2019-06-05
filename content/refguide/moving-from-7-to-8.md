@@ -114,6 +114,12 @@ It is possible to fix most of the deprecation errors in one single action. To ac
 
 4. Click **Convert all to Decimal** to perform the conversion.
 
+{{% alert type="warning" %}}
+If any attributes have been converted during this process, the next time your app is run locally or deployed the database will be converted to support the new attribute types.
+
+**This database conversion could take a long time!** We suggest that you first test the data conversion on a representative dataset, so that you can estimate how long it will take to convert your production database.
+{{% /alert %}}
+
 ## 5 64-Bit Studio Pro
 
 Mendix Desktop Modeler version 7 was 64-bit application but could also run on 32-bit.

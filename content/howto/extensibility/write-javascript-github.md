@@ -185,7 +185,7 @@ To create a JavaScript action that can search for users on GitHub, follow the st
 	}
 	```
 
-12. <a name="#step-twelve"></a>Now the attributes are dynamic, but the names of the module and entity are not. To solve this, do the following: <br/>
+12. <a name="step-twelve"></a>Now the attributes are dynamic, but the names of the module and entity are not. To solve this, do the following: <br/>
 	a. Open **Settings** > **Type parameters**. <br/>
 	b. Click **Add**. <br/>
 	c. Provide the name *UserEntity*. <br/>

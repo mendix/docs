@@ -208,10 +208,10 @@ To create a JavaScript action that can search for users on GitHub, follow the st
 
 	```javascript
 	/**
-	* Searching users on GitHub.com, it could find users via various criteria. This action returns up to 100 results.
-	* @param {string} query - The query contains one or more search keywords and qualifiers. Qualifiers allow you to limit your search to specific areas of GitHub.
-	* @param {string} userEntity - The entity to match the Return type Entity
-	* @returns {MxObject[]}
+	Searching users on GitHub.com, it could find users via various criteria. This action returns up to 100 results.
+	@param {string} query - The query contains one or more search keywords and qualifiers. Qualifiers allow you to limit your search to specific areas of GitHub.
+	@param {string} userEntity - The entity to match the Return type Entity
+	@returns {MxObject[]}
 	*/
 	function SearchGitHubUsers(query, userEntity) {
 		// BEGIN USER CODE

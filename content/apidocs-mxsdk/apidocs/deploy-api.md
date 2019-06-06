@@ -42,7 +42,7 @@ URL: https://deploy.mendix.com/api/1/apps/
 **Example Request**
 
 ```bash
-GET /api/1/apps/ HTTP/1.1
+GET /api/1/apps/ 
 Host: deploy.mendix.com
 Content-Type: application/json
 Mendix-Username: richard.ford51@example.com
@@ -96,7 +96,7 @@ An object with the following key-value pair:
 **Example Request**
 
 ```bash
-POST /api/1/apps/ HTTP/1.1
+POST /api/1/apps/ 
 Host: deploy.mendix.com
 Content-Type: application/json
 Mendix-Username: richard.ford51@example.com
@@ -154,7 +154,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>
 **Example Request**
 
 ```bash
-GET /api/1/apps/calc/ HTTP/1.1
+GET /api/1/apps/calc/ 
 Host: deploy.mendix.com
 Content-Type: application/json
 Mendix-Username: richard.ford51@example.com
@@ -207,7 +207,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/
 **Example Request**
 
 ```bash
-GET /api/ 1 /apps/calc/environments/ HTTP/ 1.1
+GET /api/1/apps/calc/environments/ 
 Host: deploy.mendix.com
 
 Content-Type: application/json
@@ -271,7 +271,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>
 **Example Request**
 
 ```bash
-GET /api/1/apps/calc/environments/Acceptance HTTP/1.1
+GET /api/1/apps/calc/environments/Acceptance 
 Host: deploy.mendix.com
 Content-Type: application/json
 Mendix-Username: richard.ford51@example.com
@@ -333,7 +333,7 @@ An object with the following key-value pair:
 **Example Request**
 
 ```bash
-POST /api/ 1 /apps/calc/environments/Acceptance/start HTTP/ 1.1
+POST /api/1/apps/calc/environments/Acceptance/start 
 Host: deploy.mendix.com
 
 Content-Type: application/json
@@ -385,7 +385,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/start/<Job
 **Example Request**
 
 ```bash
-GET /api/ 1 /apps/calc/environments/Acceptance/start/02df2e50-0e79-11e4- 9191 -0800200c9a66 HTTP/ 1.1
+GET /api/1/apps/calc/environments/Acceptance/start/02df2e50-0e79-11e4-9191-0800200c9a66 
 Host: deploy.mendix.com
 
 Content-Type: application/json
@@ -441,7 +441,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/stop
 **Example Request**
 
 ```bash
-POST /api/ 1 /apps/calc/environments/Acceptance/stop HTTP/ 1.1
+POST /api/1/apps/calc/environments/Acceptance/stop 
 Host: deploy.mendix.com
 
 Content-Type: application/json
@@ -481,7 +481,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/package
 **Example Request**
 
 ```bash
-GET /api/ 1 /apps/calc/environments/Acceptance/ package HTTP/ 1.1
+GET /api/1/apps/calc/environments/Acceptance/package 
 Host: deploy.mendix.com
 
 Content-Type: application/json
@@ -552,7 +552,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages/upload
 <!--Check this is correct -->
 
 ```bash
-POST /api/ 1 /apps/calc/packages/upload HTTP/ 1.1
+POST /api/1/apps/calc/packages/upload 
 Host: deploy.mendix.com
 
 Mendix-Username: richard.ford51@example.com
@@ -606,7 +606,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/transport
 **Example Request**
 
 ```bash
-POST /api/ 1 /apps/calc/environments/acceptance/transport HTTP/ 1.1
+POST /api/1/apps/calc/environments/acceptance/transport 
 Host: deploy.mendix.com
 
 Content-Type: application/json
@@ -655,7 +655,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/clean
 **Example Request**
 
 ```bash
-POST /api/ 1 /apps/calc/environments/acceptance/clean HTTP/ 1.1
+POST /api/1/apps/calc/environments/acceptance/clean 
 Host: deploy.mendix.com
 
 Content-Type: application/json
@@ -708,7 +708,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/settings
 **Example Request**
 
 ```bash
-GET /api/ 1 /apps/calc/environments/acceptance/settings/ HTTP/ 1.1
+GET /api/1/apps/calc/environments/acceptance/settings/ 
 Host: deploy.mendix.com
 
 Content-Type: application/json
@@ -772,7 +772,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/settings/
 **Example Request**
 
 ```bash
-GET /api/ 1 /apps/calc/environments/acceptance/settings/ HTTP/ 1.1
+GET /api/1/apps/calc/environments/acceptance/settings/ 
 Host: deploy.mendix.com
 
 Content-Type: application/json
@@ -860,7 +860,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/snapshots
 **Example Request**
 
 ```bash
-GET /api/1/apps/calc/environments/acceptance/snapshots HTTP/ 1.1
+GET /api/1/apps/calc/environments/acceptance/snapshots 
 Host: deploy.mendix.com
 
 Content-Type: application/json
@@ -926,7 +926,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/snapshots/
 **Example Request**
 
 ```bash
-GET /api/1/apps/calc/environments/acceptance/snapshots/201703221355 HTTP/ 1.1
+GET /api/1/apps/calc/environments/acceptance/snapshots/201703221355 
 Host: deploy.mendix.com
 
 Content-Type: application/json
@@ -979,7 +979,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/snapshots
 **Example Request**
 
 ```bash
-POST /api/1/apps/calc/environments/acceptance/snapshots/ HTTP/ 1.1
+POST /api/1/apps/calc/environments/acceptance/snapshots/ 
 Host: deploy.mendix.com
 
 Content-Type: application/json
@@ -1036,7 +1036,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/restore/<S
 **Example Request**
 
 ```bash
-POST /api/1/apps/calc/environments/acceptance/restore/0c982ca3-621f-40e9-9c6e-96492934170a HTTP/ 1.1
+POST /api/1/apps/calc/environments/acceptance/restore/0c982ca3-621f-40e9-9c6e-96492934170a 
 Host: deploy.mendix.com
 
 Content-Type: application/json
@@ -1091,7 +1091,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/scale
 **Example Request**
 
 ```bash
-POST /api/1/apps/calc/environments/acceptance/scale/0c982ca3-621f-40e9-9c6e-96492934170a HTTP/ 1.1
+POST /api/1/apps/calc/environments/acceptance/scale/0c982ca3-621f-40e9-9c6e-96492934170a 
 Host: deploy.mendix.com
 
 Content-Type: application/json

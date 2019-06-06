@@ -1,5 +1,5 @@
 ---
-title: "Minimizing & Managing Dependencies"
+title: "Managing Dependencies"
 parent: "integration-intro"
 menu_order: 1
 draft: true
@@ -35,7 +35,7 @@ For example, if you have a feature request where two apps need a new field imple
 
 Using service versioning, it is possible for the two apps to go live at separate times. This diagram illustrates this case of managing functional dependencies:
 
-![](attachments/integration-intro/intro-3.png)
+![](attachments/manage-dependencies/intro-3.png)
 
 To minimize functional dependencies, you should make service contracts that imitate a business event. Often data is from more than one table, but rarely does it include all the fields from one table. If the functional requirement for the business event changes, you have to change the service, but if other data in the same tables change, there is no impact.
 

@@ -141,9 +141,9 @@ To create a JavaScript action that can search for users on GitHub, follow the st
 	}
 	```
 
-	The entity name consists of **{(modulename)}.{(entityname)}**. The entity name, therefore, might have been different if the **GitHubUser** entity was created in another module. Because this JavaScript action has names explicitly written into it, when a module or entity is renamed, the JavaScript action will break. You will fix this hard-coded relation in [step 10](#step-ten) below.
+	The entity name consists of **{(modulename)}.{(entityname)}**. The entity name, therefore, might have been different if the **GitHubUser** entity was created in another module. Because this JavaScript action has names explicitly written into it, when a module or entity is renamed, the JavaScript action will break. You will fix this hard-coded relation in [step 12](#step-twelve) below.
 
-9. The function will only set the `login` and `avatar_url` properties. To make it more flexible, you will make the function discover the available attributes and set them. Extend the domain model with more attributes from the API like so:
+11. The function will only set the `login` and `avatar_url` properties. To make it more flexible, you will make the function discover the available attributes and set them. Extend the domain model with more attributes from the API like so:
 
 	```javascript
 	function SearchGitHubUsers(query, userEntity) {
@@ -185,7 +185,7 @@ To create a JavaScript action that can search for users on GitHub, follow the st
 	}
 	```
 
-10. <a name="step-ten"> Now the attributes are dynamic, but the names of the module and entity are not.</a> To solve this, do the following: <br/>
+12. <a name="#step-twelve"></a>Now the attributes are dynamic, but the names of the module and entity are not. To solve this, do the following: <br/>
 	a. Open **Settings** > **Type parameters**. <br/>
 	b. Click **Add**. <br/>
 	c. Provide the name *UserEntity*. <br/>
@@ -193,18 +193,18 @@ To create a JavaScript action that can search for users on GitHub, follow the st
 
 	![add user entity](attachments/jsactions-advanced/add-user-entity.png)
 
-11. Open the **General** tab again and add a new parameter of the type **Entity**. Select **Fill in a type parameter**, then from the **Type parameter** drop-down menu select **Type parameter 'UserEntity'**. This will couple the input entity with the generic type parameter:
+13. Open the **General** tab again and add a new parameter of the type **Entity**. Select **Fill in a type parameter**, then from the **Type parameter** drop-down menu select **Type parameter 'UserEntity'**. This will couple the input entity with the generic type parameter:
 
 	![couple input with generic](attachments/jsactions-advanced/couple-input-with-generic.png)
 
-12. In **Return type** > **Entity** do the following: <br/>
+14. In **Return type** > **Entity** do the following: <br/>
 	a. Click **Select**. <br/>
 	b. Select **Type Parameters** > **UserEntity**. <br/>
 	c. Click **OK**:
 
 	![select user entity](attachments/jsactions-advanced/select-user-entity.png)
 
-13. Your final step is updating the code. The new `userEntity` parameter has already been added. In the `mx.data.create` function, set `userEntity` as the `entity` to be created. Then, add some documentation for future reference:
+15. Your final step is updating the code. The new `userEntity` parameter has already been added. In the `mx.data.create` function, set `userEntity` as the `entity` to be created. Then, add some documentation for future reference:
 
 	```javascript
 	/**
@@ -265,7 +265,7 @@ To create a JavaScript action that can search for users on GitHub, follow the st
 	}
 	```
 
-14. You have just implemented an advanced JavaScript action! Start using the action in your nanoflows by adding a **JavaScript action call**, and then selecting the newly created **SearchGitHubUsers** action:
+16. You have just implemented an advanced JavaScript action! Start using the action in your nanoflows by adding a **JavaScript action call**, and then selecting the newly created **SearchGitHubUsers** action:
 
 	![add javascript action call](attachments/jsactions-advanced/add-jsaction-call.png)
 

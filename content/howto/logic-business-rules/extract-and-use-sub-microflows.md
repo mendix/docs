@@ -66,7 +66,7 @@ To create a sub-microflow for the validation steps, follow these steps:
 
     ![](attachments/18448683/18581015.png)
 
-The new sub-microflow will do the registration validation. You can reuse this sub-microflow whenever you need to do a registration validation. 
+The new sub-microflow will do the registration validation. You can reuse this sub-microflow whenever you need to do a registration validation. Do not forget to right-click the 'isValid' variable and select 'Set $isValid as return value' so you can stop or continue your microflow based on the Sub-Microflow's outcome.
 
 ## 4 Troubleshooting Extractions of Sub-Microflows
 

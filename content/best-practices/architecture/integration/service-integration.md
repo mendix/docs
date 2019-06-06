@@ -7,7 +7,7 @@ draft: true
 
 ## 1 Introduction
 
-Service integration means using a synchronous request-reply interaction. The system or person that initiates the call can take a relevant action depending on what the reply contains. If there is an error or a timeout, it can be handled directly in the context of where the call was initiated from.
+Service integration means using a synchronous request–reply interaction. The system or person that initiates the call can take a relevant action depending on what the reply contains. If there is an error or a timeout, it can be handled directly in the context of where the call was initiated from.
 
 There are these types of service integration, all of which are described in detail in the sections below:
 

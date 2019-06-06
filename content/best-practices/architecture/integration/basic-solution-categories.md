@@ -5,6 +5,8 @@ menu_order: 3
 draft: true
 ---
 
+{{% todo %}}[**Could use more content - only 1 section in a doc is not the best practice**)]{{% /todo %}}
+
 For most of the integration related to Mendix, there are five basic solution categories that are almost always used. Sometimes just one is used, and sometimes a combination is used:
 
 ![](attachments/basic-solution-categories/solution-categories.png)

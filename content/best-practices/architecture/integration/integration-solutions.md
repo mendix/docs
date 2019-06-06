@@ -5,6 +5,8 @@ menu_order: 2
 draft: true
 ---
 
+{{% todo %}}[**Could use more content for introducing solutions**)]{{% /todo %}}
+
 ## 1 Deciding on the Best Integration Solution
 
 This is an example sequence of questions that an Architect or Lead Developer would consider to find the best way to integrate:

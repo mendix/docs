@@ -191,7 +191,7 @@ To create a JavaScript action that can search for users on GitHub, follow the st
 	c. Provide the name *UserEntity*. <br/>
 	d. Click **OK**:
 
-		![add user entity](attachments/jsactions-advanced/add-user-entity.png)
+	![add user entity](attachments/jsactions-advanced/add-user-entity.png)
 
 11. Open the **General** tab again and add a new parameter of the type **Entity**. Select **Fill in a type parameter**, then from the **Type parameter** drop-down menu select **Type parameter 'UserEntity'**. This will couple the input entity with the generic type parameter:
 
@@ -202,17 +202,17 @@ To create a JavaScript action that can search for users on GitHub, follow the st
 	b. Select **Type Parameters** > **UserEntity**. <br/>
 	c. Click **OK**:
 
-		![select user entity](attachments/jsactions-advanced/select-user-entity.png)
+	![select user entity](attachments/jsactions-advanced/select-user-entity.png)
 
 13. Your final step is updating the code. The new `userEntity` parameter has already been added. In the `mx.data.create` function, set `userEntity` as the `entity` to be created. Then, add some documentation for future reference:
 
 	```javascript
 	/**
-	 * Searching users on GitHub.com, it could find users via various criteria. This action returns up to 100 results.
-	 * @param {string} query - The query contains one or more search keywords and qualifiers. Qualifiers allow you to limit your search to specific areas of GitHub.
-	 * @param {string} userEntity - The entity to match the Return type Entity
-	 * @returns {MxObject[]}
-	 */
+	* Searching users on GitHub.com, it could find users via various criteria. This action returns up to 100 results.
+	* @param {string} query - The query contains one or more search keywords and qualifiers. Qualifiers allow you to limit your search to specific areas of GitHub.
+	* @param {string} userEntity - The entity to match the Return type Entity
+	* @returns {MxObject[]}
+	*/
 	function SearchGitHubUsers(query, userEntity) {
 		// BEGIN USER CODE
 		// Documentation: https://developer.github.com/v3/search/#search-users
@@ -286,7 +286,7 @@ To create a JavaScript action that can search for users on GitHub, follow the st
 	d. To display the results in the user interface, type *UserList* into the **Variable** field. <br/>
 	e. Your finished **Call JavaScript Action** will look like this:
 
-		![variable display](attachments/jsactions-advanced/variable-display.png)
+	![variable display](attachments/jsactions-advanced/variable-display.png)
 
 18. To edit your **Change Object** activity, do the following: <br/>
 	a. Double-click your **Change Object** activity. <br/>
@@ -295,11 +295,11 @@ To create a JavaScript action that can search for users on GitHub, follow the st
 	d. Select **HowTo.GithubSearch_GithubUser(ListofHowTo.GithubUser)** from the **Member** drop-down menu. <br/>
 	e. Type *$UserList* into the **Value** field and click **OK**. <br/>
 
-		![edit change](attachments/jsactions-advanced/edit-change-item.png)
+	![edit change](attachments/jsactions-advanced/edit-change-item.png)
 	
 	f. Your finished **Change Object** action will look like this:
 	
-		![change object](attachments/jsactions-advanced/change-object-final.png)
+	![change object](attachments/jsactions-advanced/change-object-final.png)
 
 19. Run your project, then use your new search action to find a GitHub user:
 

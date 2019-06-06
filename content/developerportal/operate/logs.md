@@ -10,15 +10,17 @@ tags: ["Operate", "App", "Developer Portal", "SAP", "V3", "V4"]
 
 From this page of the Developer Portal, you can access the logs produced by your app. What you see depends on the environment to which your app is deployed.
 
-The page is accessed through the **Logs** page under the **Operate** category:
+The page is accessed through the **Logs** menu item under the **Operate** category:
 
 ![Navigate to Logs](attachments/logs/log-menu.png)
 
 ## 2 Apps Deployed to Mendix Cloud Version 4
 
+{{% alert type="info" %}}
 This is the default Mendix deployment for a licensed app.
+{{% /alert %}}
 
-For apps deployed to Mendix Cloud Version 4 (V4), you can select which environment you want logs for. Production logs will require two-step authentication.
+For apps deployed to Mendix Cloud Version 4 (V4), you can select which environment you want logs for. Production logs will require [Two-Factor Authentication](/developerportal/deploy/two-factor-authentication).
 
 You can view the live (current) log, download it, or view and download an archived log.
 

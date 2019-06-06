@@ -115,7 +115,7 @@ Dynamic data widgets are used for showing (dynamic) data. They must be placed in
 
 ### 4.1 Dynamic Label
 
-A dynamic label would be used for the same attribute types as a text box in form builder. It can be used to display a text value.
+A dynamic label is used for the same attribute types as a text box in the page editor. It can be used to display a text value.
 
 For more information, see [Dynamic Label (Document Template)](dynamic-label-document-template).
 

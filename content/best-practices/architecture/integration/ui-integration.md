@@ -78,12 +78,14 @@ In this setup, a website runs the frame, and Mendix provides the active pages wh
 
 For the static content, this setup provides a huge advantage in rendering time. For Mendix apps, this setup can save up to 50% of the content round-trips. CDN systems also have faster and better internet routing, which can provide a 50% improvement in Asia and South America, and around 10% within Europe. 
 
-The advatages with CDN solutions are so siginficant that almost all global portals and applications use CDN solutions these days. This also works very well with Mendix. When customer portals and apps need to be globally deployed and accessible, Mendix usually combines a global deployment strategy with a CDN solution for redirection and additional proximity to cached static content. Such a strategy looks like this:
+The advatages with CDN solutions are so siginficant that almost all global portals and applications use CDN solutions these days. This also works very well with Mendix. When customer portals and apps need to be globally deployed and accessible, Mendix usually combines a global deployment strategy with a CDN solution for redirection and additional proximity to cached static content. 
+
+Such a strategy looks like this:
 
 1. Deploy several instances globally in different availability zones. They may collaborate with each other if required.
 2. Use a CDN solution to further increase the availability and speed of UX interactions.
 
-For more details, see the [Geo-Scaling Architecture](../performance/plan-design-high-volume#geo-scaled) section of *Planning & Designing for High Volume*).
+For more details, see the [Geo-Scaling Architecture](../performance/plan-design-high-volume#geo-scaled) section of *Planning & Designing for High Volume*.
 
 In a customer portal, most end-users work locally in their region, so they will mostly log into their closest instance. A CDN can re-direct them back there when they are travelling, or the required data can also be copied over to work locally when travelling.
 

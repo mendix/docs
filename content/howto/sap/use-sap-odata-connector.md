@@ -20,7 +20,7 @@ The SAP OData Connector is a specific SAP connector for integrating with SAP bac
 The SAP OData Connector only supports SAP OData Gateway Services which use OData version 2 or version 3. OData version 4 is not yet supported.
 {{% /alert %}}
 
-## 2 Prerequisites{#prerequisistes}
+## 2 Prerequisites{#prerequisites}
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 

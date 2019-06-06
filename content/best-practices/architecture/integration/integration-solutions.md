@@ -50,20 +50,22 @@ For most of the integration related to Mendix, there are five basic solution cat
 * [Batch Integration](batch-integration) – This category includes exporting, moving, and importing files as well as file integration.
 * [Central Data](central-data) – This category uses a pattern where data is landed and combined in a central place before it is distributed. This could be, for example, an operational data store (ODS); extract, transform, load (ETL); business intelligence (BI); or a data lake solution.
 
-## 3 Overview of Use Cases & Solution Options {#overview}
+## 3 Overview of Use Cases & Integration Methods {#overview}
 
-Plotting functional use cases against basic methods of integration allows you to see there are several common options available. That is good, because integration needs to be flexible in a solution for the architect to select the best option for a specific situation. 
+{{% todo %}}**Should the methods in the table below correspond more closely to the basic solution categories listed above? There are 5 solution categories above and 5 methods in the table - some of them match up, but maybe that correspondence can be clarified?**]{{% /todo %}}
 
-For example, you may choose not to change an old system, which leads you to choose another option than you would if you were building two new apps. This means that you may choose the less ideal way to integrate in order not to change an old system. In the scenario that you were building two new apps, you would make another choice.
+Plotting functional use cases against basic integration methods allows you to see the common solutions available. That is good, because integration needs to be flexible for an Architect to select the best method for a specific situation. 
 
-As another example, when integrating to SaaS solutions and older systems, there may only be one option available. Such a scenario will determine which integration to use, rather than these guidelines. 
+For example, you may choose not to change an old system, which leads you to choose a different integration method than you would if you were building two new apps. This means that you may choose the less ideal way to integrate in order not to change an old system. In the scenario that you were building two new apps, you would make another choice.
 
-The table below presents use cases that you can reference  for more detail. The table uses the following symbols:
+As another example, when integrating to SaaS solutions and older systems, there may only be one method available. Such a scenario will determine which integration method to use, rather than these guidelines. 
+
+The table below plots use cases and integration methods, with further detail on the use cases available in the subsequent sections. The table uses the following symbols:
 
 | Symbol | Meaning |
 | --- | --- |
-| ![](attachments/integration-solutions/green.png) | Indicates the common or preferred use of the method. In some cases (for example, "Int. with IoT solutions"), the solution will require several methods, so several of these symbols are used. |
-| ![](attachments/integration-solutions/grey.png) | Indicates possible use in some cases. |
+| ![](attachments/integration-solutions/green.png) | The common or preferred use of the method. In some cases, the solution will require several methods, so several of these symbols are used. |
+| ![](attachments/integration-solutions/grey.png) | Possible use in some cases. |
 
 | Use Case | UI Integration | RPC / Services | Events / Queues | Export, Import, Batch | Central Data |
 | --- | --- | --- | --- | --- | --- |
@@ -149,7 +151,7 @@ This use case will also discuss Mendix integration with content delivery node so
 
 ### 3.11 Integration with BI & Reporting {#int-bi}
 
-This use case describes several options for how Mendix developers can provide data from the apps towards a DWH, data lake, or other BI tooling using, for example, files, OData, or database dumps.s
+This use case describes several options for how Mendix developers can provide data from the apps towards a DWH, data lake, or other BI tooling using, for example, files, OData, or database dumps.
 
 This use case will also look at creating reports in Mendix apps and integration with data mining tools like Tableau.
 

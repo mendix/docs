@@ -69,7 +69,7 @@ Within these solution categories, the use cases and scenarios listed below show 
 
 #### 3.2.1 Service Integration Use Cases
 
-* [REST to Call Other Systems](service-integration#push-transfer)
+* [REST to Call Other Systems](service-integration#rest-call)
 * [REST Pull to Transfer Data](service-integration#pull-transfer)
 * [OData Retrieve](service-integration#odata-retrieve)
 * [Database Integration](service-integration#db-int)

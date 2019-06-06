@@ -10,6 +10,13 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud V3, and other deploym
 
 ## 2019
 
+### June 6th, 2019
+
+#### Mendix App Store Improvements
+
+* We fixed the issue with selecting specific **Starter Apps** when creating a new app in Mendix Studio Pro (Desktop Modeler).
+* We fixed the problems with deep links for private apps.
+
 ### May 17th, 2019
 
 #### Fixes

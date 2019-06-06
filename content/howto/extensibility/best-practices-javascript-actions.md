@@ -531,7 +531,7 @@ Not all capabilities are recommended for use. Consider the side effects that an 
 
 ## 7 Read More
 
-* [Write JavaScript Actions](write-javascript-actions)
+* [Make JavaScript Actions](/howto/extensibility/build-javascript-actions)
 * [JavaScript Actions](/refguide/javascript-actions)
 * [Mendix Client API](https://apidocs.mendix.com/7/client/)
 * JavaScript basics:

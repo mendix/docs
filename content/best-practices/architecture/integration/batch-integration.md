@@ -7,21 +7,24 @@ draft: true
 
 ## 1 Export, Import & Batch Processing
 
-More and more processes is becoming real-time, but a lot of business processes are still periodic in nature (for example, salary payments and interest calculations). These use cases are best implemented in batch-oriented integration, which runs a sets of data at certain moments. 
+More and more processes are becoming real-time, but a lot of business processes are still periodic in nature (for example, salary payments and interest calculations). These use cases are best implemented in batch-oriented integration, which runs a sets of data at certain moments. 
 
-Batch processing is also advantageous for very high-volume integration, because it is more economical from a network and CPU perspective to transefer and process the data in batches. For example monitoring solutions and IoT solutions usually have agents or aggregators that collect a set of input and then sends the data on as small batches in close to real-time.
+Batch processing is also advantageous for very high-volume integration, because it is more economical from a network and CPU perspective for transferring and processing the data in batches. Monitoring and IoT solutions, for example, usually have agents or aggregators that collect a set of input and send the data on as small batches in close to real-time.
 
 Batch processing means that many records are processed together, which can be done in two ways:
-* File-based integration, exporting a file, moving the file and later importing it into one or more destination apps
-* Service-based batch integration, means that a REST, OData or SOAP interface works on batches of data. For example retrieving 5000 customers at a time and processing them.
 
-There are these typical use-cases:
+* File-based integration, exporting a file, moving the file, and later importing it into one or more destination apps
+* Service-based batch integration, meaning that a REST, OData, or SOAP interface works on batches of data (for example, retrieving 5000 customers at a time and processing them)
 
-1. Export and Import processes, where data is exported from one system and imported in another system
-2. Reference data management that usually is done in Batch because a snap-shot of a situation is generally desired and several systems may need to work on the same snap-shot. It is often done at night, to avoid the export/import processing to interfere with normal operations, and/or to take advantage of CPU power at night when it is usually less busy
-3. File integration and management, is important for moving files in batch oriented integration, but also for providing files of various types to end-users and customers
-4. Data Lakes, DWH & BI Integration is an area that usually works in batch mode. Mendix provides data to these solutions for analysis, statistics, reporting, business intelligence, and lately also machine learning. In some automated processes, Mendix also receives data from these solutions and turns it into reference data that helps optimizing automated business flows, see <<Self-Learning Process -3 Self-Learning Processes Using Data Lakes>>
-5. Monitoring and IoT solutions often batch up data as well in small packages and sending them at high speed, see <<Ops Integration>> and <<IoT Integration - 4.2 Examples for IoT with Mendix>> 
+There are these typical use cases:
+
+* [Export and import processes](#export-import) – In this use case, data is exported from one system and imported in another system.
+* [Reference data management](#reference) – Reference data management is usually done in batch, because a snapshot of a situation is generally desired and several systems may need to work on the same snapshot. This is often done at night, to prevent the export/import processing from interferring with normal operations, and/or to take advantage of the CPU power available at night when it is usually less busy.
+* [File integration and management](#file-integration) – This use case is important for moving files in batch-oriented integration.It is also important for providing files of various types to end-users and customers.
+* [Data lakes, DWH, and BI integration](#int) – This is an area that usually works in batch mode. Mendix provides data to these solutions for analysis, statistics, reporting, business intelligence, and also machine learning. In some automated processes, Mendix also receives data from these solutions and turns it into reference data that helps in optimizing automated business flows (for details, see <<Self-Learning Process -3 Self-Learning Processes Using Data Lakes>>
+* **Monitoring and IoT solutions** – often batch up data as well in small packages and sending them at high speed, see <<Ops Integration>> and <<IoT Integration - 4.2 Examples for IoT with Mendix>>
+	
+{{% todo %}}[**Where is the link for "Self-Learning Processes Using Data Lakes" above?**]{{% /todo %}}
 	
 ## 2 Export & Import {#export-import}
 

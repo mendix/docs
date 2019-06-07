@@ -104,16 +104,17 @@ The best practices will describe how to update data in the master app and how to
 
 ### 3.8 Distributing Master & Transactional Data
 
-This use-case is about the distribution of Master data and of transactional data across the enterprise using a variety of methods including:
-* REST Pull from the recipient
-* REST Push from the source
+This use case involves distributing master data and transactional data across the enterprise using a variety of methods, including the following:
+
+* REST pull from the recipient
+* REST push from the source
 * OData integration
 * Events on queues
 * Files
 
 ### 3.9 Mobile Integration & Offline
 
-This section involves the integration with Mobile apps and the synchronization of data from an Off-line app back to the Mobile app. It also deals with push notifications.
+This use case involves integration with [mobile](/refguide/mobile) applications and the synchronization of data from an [offline](/refguide/offline-first) app back to a mobile app. It also deals with [push notifications](/howto/mobile/sending-push-notifications).
 
 ### 3.10 CMS & CDN Integration  {#cms-cdn}
 
@@ -121,15 +122,19 @@ Mendix often needs to integrate with content management systems (CMS) and conten
 
 ### 3.11 Integration with BI & Reporting {#int-bi}
 
-This use case describes several options for how Mendix developers can provide data from the apps towards a DWH, data lake, or other BI tooling using, for example, files, OData, or database dumps. This use case will also look at creating reports in Mendix apps and integration with data mining tools like Tableau.
+This use case involves several options for how Mendix developers can provide app data to a DWH, data lake, or other BI tooling. For this, files, OData, or database dumps are used. This use case will also look at creating reports in Mendix apps and integration with data-mining tools like [Tableau](https://www.tableau.com/).
 
 ### 3.12 Process Orchestration & State Engines
 
-This is describing active and passive process orchestration, mainly automated straight-through-processing, while Case Management handles workflow and human process management. 
+This use case involves active and passive process orchestration. This is mainly automated straight-through-processing, while the case management handles the workflow and human process management. 
 
 ### 3.13 Integration with CICD, Ops & Monitoring {#int-cicd}
 
-DevOps is rolling out around the world and many processes—from development and testing to deploying and monitoring—are being automated. Together with cloud and low-code technologies, DevOps is contributing to the digital transformation of the IT industry. Integration from functional apps towards this automation and operations tooling is becoming increasingly important. These areas will be covered in the use cases:.
+DevOps is rolling out around the world and many processes—from development and testing to deploying and monitoring—are being automated. DevOps involves collaborating and using the same (or similar) tools to improve the flexibility of releasing functionality more often while maintaining stable solutions in production.
+
+Together with cloud and low-code technologies, DevOps is contributing to the digital transformation of the IT industry. Integration from functional apps towards this automation and operations tooling is becoming increasingly important. 
+
+These use cases will cover the following areas:
 
 * CI/CD integration
 * Test automation (building specific test services)
@@ -139,12 +144,12 @@ DevOps is rolling out around the world and many processes—from development and
 * Professional monitoring and trend analysis
 * Security monitoring
 
-DevOps involves collaborating and using the same (or similar) tools to improve the flexibility of releasing functionality more often while maintaining stable solutions in production.
-
 ### 3.14 Integration with IoT Solutions {#ai-iot}
 
-Mendix already integrates well with various IoT solutions, from monitoring farm-animals to office locations to technical components in industrial processes. This use case describes what to think for this type of integration and provides simple example implementations to use as references.  << IoT solutions>>
+The Mendix Platform already integrates well with various IoT solutions (for example, for monitoring everything from farm animals to office locations and technical components in industrial processes). This use case involves the key points that need to considered for such integration in order to provide implementations to use as references.
 
 ### 3.15 Integration with Machine Learning {#ai-machine}
 
-Mendix automation apps are using statistical information from Data Lakes to finetune automated processes, and can include algorithms as Java actions or Java scripts from e.g. AWS Machine learning solutions. Mendix also integrates well with Watson from IBM: [IBM](/refguide/ibm/ibm-watson-connector)
+Mendix automation apps use statistical information from data lakes to fine-tune automated processes. They can include algorithms such as Java actions or Java scripts from, for example, AWS Machine learning solutions. 
+
+Mendix also integrates well with Watson from IBM. For more information, see [IBM Watson Connector](/refguide/ibm/ibm-watson-connector).

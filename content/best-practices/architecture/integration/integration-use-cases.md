@@ -1,5 +1,5 @@
 ---
-title: "Overview of Use Cases"
+title: "Integration Use Cases"
 parent: "integration-intro"
 menu_order: 4
 draft: true
@@ -9,7 +9,7 @@ draft: true
 
 For most of the integration related to Mendix, there are five basic solutions that are almost always used. Sometimes just one is used, and sometimes a combination is used:
 
-![](attachments/use-case-overview/solution-categories.png)
+![](attachments/integration-use-cases/solution-categories.png)
 
 * [UI Integration](ui-integration) – This solution category includes, for example, using a deep link from the UI of one app to open the UI of another app (either in the same or another browser tab). It also includes integration with websites, content management systems, and content delivery networks.
 * [Service Integration](service-integration) – This is otherwise known as remote procedure call (RPC) integration. This category uses request and reply, and it is almost always synchronous. The request–reply interfaces with REST and SOAP. There is also database integration with OData and SQL, business event and process integration, process orchestration, integration apps, and distributed ESBs.
@@ -21,6 +21,8 @@ The next section presents use cases for these five basic solutions.
 
 ## 2 Use Cases & Integration Solutions {#overview}
 
+{{% todo %}}[**Unify use cases below with use cases presented in Integration Solutions?**]{{% /todo %}}
+
 Plotting functional use cases against basic integration solutions allows you to see the common solutions available. That is good, because integration needs to be flexible for an Architect to select the best method for a specific situation. 
 
 For example, you may choose not to change an old system, which leads you to choose a different integration method than you would if you were building two new apps. This means that you may choose the less ideal way to integrate in order not to change an old system. In the scenario that you were building two new apps, you would make another choice.
@@ -31,26 +33,26 @@ The table below plots use cases and integration solutions, with further detail o
 
 | Symbol | Meaning |
 | --- | --- |
-| ![](attachments/use-case-overview/green.png) | The common or preferred use of the method. In some cases, the solution will require several methods, so several of these symbols are used. |
-| ![](attachments/use-case-overview/grey.png) | Possible use in some cases. |
+| ![](attachments/integration-use-cases/green.png) | The common or preferred use of the method. In some cases, the solution will require several methods, so several of these symbols are used. |
+| ![](attachments/integration-use-cases/grey.png) | Possible use in some cases. |
 
 | Use Case | UI Integration | Service Integration | Events-Based Integration | Export, Import, Batch | Central Data |
 | --- | --- | --- | --- | --- | --- |
-| [SSO, AD & Identity Integration](#sso) | ![](attachments/use-case-overview/grey.png) | ![](attachments/use-case-overview/green.png) | | | |
-| [ Importing & Distributing Reference Data](#import-dist) | | ![](attachments/use-case-overview/green.png) | ![](attachments/use-case-overview/grey.png) | ![](attachments/use-case-overview/green.png) | ![](attachments/use-case-overview/grey.png) |
-| [Viewing & Searching Data in Another System](#view-search)  | ![](attachments/use-case-overview/grey.png) | ![](attachments/use-case-overview/green.png) | | | |
-| [Using & Referring to Data in Another System](#use-refer) | | ![](attachments/use-case-overview/green.png) | | | ![](attachments/use-case-overview/grey.png) |
-| [Process Integration](#process) | ![](attachments/use-case-overview/green.png) | ![](attachments/use-case-overview/grey.png) | ![](attachments/use-case-overview/grey.png) | | |
-| [Export, Import & Batch Processing](#export-import) | | ![](attachments/use-case-overview/grey.png) | ![](attachments/use-case-overview/grey.png) | ![](attachments/use-case-overview/grey.png) | ![](attachments/use-case-overview/grey.png) |
-| [Master Data Integration](#master-data)| ![](attachments/use-case-overview/green.png) | ![](attachments/use-case-overview/green.png) | ![](attachments/use-case-overview/grey.png) | | |
-| [Distributing Master & Transactional Data](#distributing) | | ![](attachments/use-case-overview/green.png) | ![](attachments/use-case-overview/grey.png) | ![](attachments/use-case-overview/grey.png) | ![](attachments/use-case-overview/grey.png) |
-| [Mobile Integration & Offline](#mobile) | | ![](attachments/use-case-overview/green.png) | ![](attachments/use-case-overview/grey.png) | | |
-| [CMS & CDN Integration](#cms-cdn) | ![](attachments/use-case-overview/green.png) | ![](attachments/use-case-overview/grey.png) | | | |
-| [Integration with BI & Reporting](#int-bi) | | ![](attachments/use-case-overview/grey.png) | ![](attachments/use-case-overview/grey.png) | ![](attachments/use-case-overview/green.png) | ![](attachments/use-case-overview/grey.png) |
-| [Process Orchestration & State Engines](#orchestrate) | | ![](attachments/use-case-overview/green.png) | ![](attachments/use-case-overview/grey.png) | | ![](attachments/use-case-overview/green.png) |
-| [Integration with CICD, Ops & Monitoring](#int-cicd) | ![](attachments/use-case-overview/grey.png) | ![](attachments/use-case-overview/grey.png) | ![](attachments/use-case-overview/green.png) | ![](attachments/use-case-overview/grey.png) | ![](attachments/use-case-overview/green.png) |
-| [Integration with AI & IoT Solutions](#ai-iot) | | ![](attachments/use-case-overview/green.png) | ![](attachments/use-case-overview/green.png) | ![](attachments/use-case-overview/grey.png) | ![](attachments/use-case-overview/green.png) |
-| [Integration with AI & Machine Learning](#ai-machine) | | ![](attachments/use-case-overview/green.png) | ![](attachments/use-case-overview/grey.png) | | ![](attachments/use-case-overview/green.png) |
+| [SSO, AD & Identity Integration](#sso) | ![](attachments/integration-use-cases/grey.png) | ![](attachments/integration-use-cases/green.png) | | | |
+| [ Importing & Distributing Reference Data](#import-dist) | | ![](attachments/integration-use-cases/green.png) | ![](attachments/integration-use-cases/grey.png) | ![](attachments/integration-use-cases/green.png) | ![](attachments/integration-use-cases/grey.png) |
+| [Viewing & Searching Data in Another System](#view-search)  | ![](attachments/integration-use-cases/grey.png) | ![](attachments/integration-use-cases/green.png) | | | |
+| [Using & Referring to Data in Another System](#use-refer) | | ![](attachments/integration-use-cases/green.png) | | | ![](attachments/integration-use-cases/grey.png) |
+| [Process Integration](#process) | ![](attachments/integration-use-cases/green.png) | ![](attachments/integration-use-cases/grey.png) | ![](attachments/integration-use-cases/grey.png) | | |
+| [Export, Import & Batch Processing](#export-import) | | ![](attachments/integration-use-cases/grey.png) | ![](attachments/integration-use-cases/grey.png) | ![](attachments/integration-use-cases/grey.png) | ![](attachments/integration-use-cases/grey.png) |
+| [Master Data Integration](#master-data)| ![](attachments/integration-use-cases/green.png) | ![](attachments/integration-use-cases/green.png) | ![](attachments/integration-use-cases/grey.png) | | |
+| [Distributing Master & Transactional Data](#distributing) | | ![](attachments/integration-use-cases/green.png) | ![](attachments/integration-use-cases/grey.png) | ![](attachments/integration-use-cases/grey.png) | ![](attachments/integration-use-cases/grey.png) |
+| [Mobile Integration & Offline](#mobile) | | ![](attachments/integration-use-cases/green.png) | ![](attachments/integration-use-cases/grey.png) | | |
+| [CMS & CDN Integration](#cms-cdn) | ![](attachments/integration-use-cases/green.png) | ![](attachments/integration-use-cases/grey.png) | | | |
+| [Integration with BI & Reporting](#int-bi) | | ![](attachments/integration-use-cases/grey.png) | ![](attachments/integration-use-cases/grey.png) | ![](attachments/integration-use-cases/green.png) | ![](attachments/integration-use-cases/grey.png) |
+| [Process Orchestration & State Engines](#orchestrate) | | ![](attachments/integration-use-cases/green.png) | ![](attachments/integration-use-cases/grey.png) | | ![](attachments/integration-use-cases/green.png) |
+| [Integration with CICD, Ops & Monitoring](#int-cicd) | ![](attachments/integration-use-cases/grey.png) | ![](attachments/integration-use-cases/grey.png) | ![](attachments/integration-use-cases/green.png) | ![](attachments/integration-use-cases/grey.png) | ![](attachments/integration-use-cases/green.png) |
+| [Integration with IoT Solutions](#ai-iot) | | ![](attachments/integration-use-cases/green.png) | ![](attachments/integration-use-cases/green.png) | ![](attachments/integration-use-cases/grey.png) | ![](attachments/integration-use-cases/green.png) |
+| [Integration with Machine Learning](#machine) | | ![](attachments/integration-use-cases/green.png) | ![](attachments/integration-use-cases/grey.png) | | ![](attachments/integration-use-cases/green.png) |
 
 ## 3 Use Case Descriptions
 
@@ -150,7 +152,7 @@ These use cases will cover the following areas:
 
 The Mendix Platform already integrates well with various IoT solutions (for example, for monitoring everything from farm animals to office locations and technical components in industrial processes). This use case involves the key points that need to considered for such integration in order to provide implementations to use as references.
 
-### 3.15 Integration with Machine Learning {#ai-machine}
+### 3.15 Integration with Machine Learning {#machine}
 
 Mendix automation apps use statistical information from data lakes to fine-tune automated processes. They can include algorithms such as Java actions or Java scripts from, for example, AWS Machine learning solutions. 
 

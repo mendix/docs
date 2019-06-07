@@ -48,7 +48,7 @@ With parameters you can customize your message with data specific to the situati
 
 ### 2.4 Blocking
 
-Blocking defines whether the message appears with a hover on top of the existing form(s).
+Blocking defines whether the message appears with a hover on top of the existing page(s).
 
 | Option | Description |
 | --- | --- |

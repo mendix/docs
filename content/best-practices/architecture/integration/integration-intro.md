@@ -28,14 +28,12 @@ In general, microservices replace solutions where functional dependencies have b
 
 ![](attachments/integration-intro/intro-1.png)
 
-### 2.1 Good Dependencies
-
-{{% todo %}}[**Needs review - is there duplication here with "Minimizing & Managing Dependencies"?]{{% /todo %}}
+### 2.1 Good Dependencies via Contracts
 
 Microservice apps are smaller functional pieces that contain a business function. The following best practices are important:
 
-* Avoid too many functional areas that depend on the same data model, as often occurs in monoliths
-* Avoid too many functional areas that depend on the same technical layers, as often occurs in SOA architectures
+* Avoid having too many functional areas that depend on the same data model, as often occurs in monoliths
+* Avoid functional areas that are built across technical components and layers by different teams, as often occurs in SOA architectures
 
 Instead, you must try to contain everything required to perform a business function within each app. A new business feature requirement is then likely to land within only one single app, which will be maintained by one single team. This means you can change quickly when necessary and provide flexibility to the business unit that owns that functionality.
 
@@ -78,16 +76,13 @@ The following best practices should be followed:
 
 ## 3 Overall Recommendations
 
-Apps should act as actors in a business process. They typically do different things, and often they have different views of the data. So, it is ok to copy some data from one app to another as part of the business process or share reference data between apps. 
+Using a microservices architecture enhances efficiency and flexibility in the IT industry. There is an amazing opportunity to reshape how organizations build and manage IT to support different business functions if the right microservice architecture is created and good robust integration patterns are selected.
 
-You should implement integration points as business events that fulfill a step in a business process. For sharing reference data, it is typical to poll the source for changes and/or send files with updated data for slowly-changing data.
+These are some important overall recommendations:
 
-When approaching an inegration problem, it is good to think functionally first. When it is clear what the entire integration should do (including acknoledgements, statuses, and errors), only then should you compare the technical solutions that can handle the situation in a simple way.
+* Apps should be actors in a business process – they typically do different things and often have different views of the data, so it is okay to copy some data from one app to another as part of a business process or to share reference data between apps
+* If the microservices fullfill a business function, the integration can often be implemented as business events that fulfill a step in a business process
+* Reference data can often be copied between microservices to make them autonomous
+* Integration layers can be used for certain situations only, and they are "thinner" with less functionality than typical ESBs
 
-In the days of SOA layers, a central ESB would take care of a lot of integration functionality, such as transformation, routing, re-tries, queueing, and even combining services. But now, in the era of microservices, you should aim for "dumb pipes and smart endpoints" in the following scenarios:
-
-* Within a system of microservices owned by the same organizational area, where there is no reason to use an integration layer at all
-* In a number of other cases, especially for large organizations, where a thin integration layer is helpful
-
-Integration is easy with Mendix, and microservices are enhancing the efficiency and flexibility in the IT industry. If in such scenarios the integration can be made simple, there is an amazing opportunity to reshape how organizations build and manage IT to support different business functions.
-
+When approaching an integration problem, it is good to think functionally first. When it is clear what the entire integration should do (including acknoledgements, statuses, and errors), it is advisable to consider more than one solution option and then compare the technical solution impacts on simplicity, robustness, and manageability.

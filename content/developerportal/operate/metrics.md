@@ -9,8 +9,6 @@ tags: ["Operate","App","Trends","Running now","Cache","Metrics","Developer Porta
 
 ## 1 Introduction
 
-{{% todo %}}[What does a Cache for Mendix V6 look like?]{{% /todo %}}
-
 On the **Metrics** page, under the **Operate** category, you can monitor the performance and health of your App. The Metrics page is divided into three tabs, each of which is described below.
 
 ## 2 Trends
@@ -45,8 +43,10 @@ This tab displays the following information about running requests:
 You can click the following buttons to execute actions:
 
 *   **Refresh** refreshes the list of running requests
+
 *   **Kill request** stops the selected request
     {{% alert type="warning" %}}If you kill a request, it will not complete and the end user may receive an error.{{% /alert %}}
+    
 *   **Details** shows you the **Action Stack** for the selected request. An Action Stack displays all the actions currently on the call stack. The bottom action is the one which is currently being performed. It was triggered by the action above it and so forth. The details shown for an Action Stack are:
     *   Name
     *   Type

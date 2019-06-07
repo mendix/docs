@@ -13,12 +13,14 @@ Access to operations information is divided into four pages:
 ![](attachments/operate.png)
 
 {{% alert type="info" %}}
-Metrics, Alerts, and Logs are not available for Free Apps running in the Mendix Cloud, and you cannot make manual backups.
+Metrics, Alerts, and Logs are not available for Free Apps running in the Mendix Cloud, and you cannot make manual backups of Free Apps.
 {{% /alert %}}
+
+## 2 Operations Pages
 
 The four operations pages are described below.
 
-## 2 Metrics
+### 2.1 Metrics
 
 On this page you can monitor the performance and health of your app in all environments where it is deployed.
 
@@ -28,7 +30,7 @@ If your app is deployed to SAP Cloud Platform or IBM Cloud, this page will give 
 
 You can also use a third-party service, such as Datadog, to assist you in monitoring your app. See [Datadog for v4 Mendix Cloud](datadog-metrics) for more information.
 
-## 3 Alerts
+### 2.2 Alerts
 
 On this page you can see the health of your app in all environments where it is deployed. You can also manage which environments will send you alerts.
 
@@ -36,7 +38,7 @@ See [Alerts](monitoring-application-health) for details of the information avail
 
 If your app is deployed to SAP Cloud Platform or IBM Cloud, this page will give you the option to go to the platform where your app is deployed. Here you will be able to find similar information about the health of your app.
 
-## 4 Logs
+### 2.3 Logs
 
 On this page you can see and manage your app logs in all environments where the app is deployed.
 
@@ -44,7 +46,7 @@ See [Logs](logs) for details of the logs for licensed apps running in the Mendix
 
 If your app is deployed to SAP Cloud Platform or IBM Cloud, this page will give you the option to go to the platform where your app is deployed. Here you will be able to find your app's logs.
 
-## 5 Backups
+### 2.4 Backups
 
 On this page you can see and manage your backups in all environments where your app is deployed.
 

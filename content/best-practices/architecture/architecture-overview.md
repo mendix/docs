@@ -19,9 +19,7 @@ IT architecture is about making valuable things with technology, and the Mendix 
 
 ## 2 Current IT Trends
 
-There are several IT trends converging recently, and Agile, DevOps, microservices, cloud, and automation are at the center of the evolution. As the diagram below illustrates, areas such as SOA (functional architecture), Agile (methodology), and cloud (infrastructure) are merging into one coherent movement of enterprise DevOps with automation, microservices, and an Agile mindset.
-
-{{% todo %}}[**Do you want to mention "SOA" here in a positive way when you write critically of SOA in "Introduction to Integration," for example?**]{{% /todo %}}
+There are several IT trends converging recently, and Agile, DevOps, microservices, cloud, and automation are at the center of the evolution. As the diagram below illustrates, areas that were previously separate initiatives (such as SOA architecture, Agile methodology, and cloud infrastructure) are now merging into a coherent enterprise DevOps movement. This movement favors low-code microservices on cloud-native platforms that are built, maintained, and automated by small teams that have an Agile mindset.
 
 ![](attachments/it-trends.png)
 

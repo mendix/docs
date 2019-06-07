@@ -65,13 +65,13 @@ The project status indicates the security status for the current project securit
 
 The **Module Status** tab shows the security status for each module. It shows the total number of items for which security needs to be configured, as well as the number of items for which security has been configured already. 
 
-At the **Prototype/demo** security level, the status of form access and microflow access is shown.
+At the **Prototype/demo** security level, the status of page access and microflow access is shown.
 
 Additionally, at the **Production** security level, the status of entity access and dataset access (if applicable) is shown.
 
 ## 4 User Roles {#user-roles}
 
-A user role aggregates a number of access rights on data, forms, and microflows. An end-user of the application is assigned one or more user roles by an administrator, and gets all access rights that these user roles represent. For more information, see [User Roles](user-roles).
+A user role aggregates a number of access rights on data, pages, and microflows. An end-user of the application is assigned one or more user roles by an administrator, and gets all access rights that these user roles represent. For more information, see [User Roles](user-roles).
 
 ## 5 Administrator {#administrator}
 

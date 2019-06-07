@@ -31,7 +31,7 @@ This feature allows you to re-use the same page for the New and Edit buttons of 
 
 {{% alert type="info" %}}
 
-If the [layout](layout) of the target page has a [layout type](layout) configured, the Location property will be unavailable. Instead, the layout type will determine how the page is opened. This eliminates the risk of accidentally modeling a pop-up form with a huge menu bar.
+If the [layout](layout) of the target page has a [layout type](layout) configured, the Location property will be unavailable. Instead, the layout type will determine how the page is opened. This eliminates the risk of accidentally modeling a pop-up page with a huge menu bar.
 
 {{% /alert %}}
 

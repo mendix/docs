@@ -5,19 +5,14 @@ menu_order: 2
 draft: true
 ---
 
-{{% todo %}}[**Needs thorough review**]{{% /todo %}}
-
-{{% todo %}}[**Structure is unclear for where this doc is located - what is exact relation to parent doc?**]{{% /todo %}}
 
 ## 1 Introduction
 
 {{% todo %}}[**NEEDS DIAGRAMS; ADD LINK WHEN AVAILABLE BELOW AND UPDATE TEXT AS NECESSARY**]{{% /todo %}}
 
-The integration pattern has been implemented in an App Store module that can be
-downloaded from the **Best Practices** section as **Integration Pattern: Process
-Integration**.
+The integration pattern has been implemented in an App Store module that will be placed in the **Best Practices** section as **Integration Pattern: Process Integration**.
 
-In this integration pattern example app, an example architecture is implemented that consists  of an ordering app and a billing app. The ordering app is responsible for managing customer orders, and the billing app is responsible for generating invoices. A user who creates an order (in the ordering app) needs to approve the invoice (in the billing app) immediately after creating the order. To support this workflow, an integration is necessary to transfer the user and data between apps.
+In this integration pattern, an example pattern is implemented that consists  of an ordering app and a billing app. The ordering app is responsible for managing customer orders, and the billing app is responsible for generating invoices. A user who creates an order (in the ordering app) needs to approve the invoice (in the billing app) immediately after creating the order. To support this workflow, an integration is necessary to transfer the user and data between apps.
 
 Both example apps have been built into the same Mendix model to facilitate easy distribution and deployment of the demo. However, they could be split and deployed as two separate microservices in a real implementation.
 

@@ -4,23 +4,24 @@ parent: "batch-integration"
 menu_order: 2
 draft: true
 ---
+
 ## 1 Introduction
 
-This integration pattern has been implemented by a Mendix Expert. It will soon be placed in an App Store module that can be downloaded from the **Best Practices** section as **Integration Pattern: File Import (CSV)**.
+This integration pattern has been implemented by a Mendix Expert. It will soon be packaged as a [Mendix App Store](https://appstore.home.mendix.com/index3.html) module that can be downloaded and used in your app projects.
 
-Importing by file using the CSV format is widely used to:
+Importing by file using the CSV format is widely used in the following scenarios:
 
-1. Import larger volumes of data. 
-2. Import reference data
-3. Import data from legacy systems
+* Importing larger volumes of data
+* Importing reference data
+* Importing data from legacy systems
 
-The diagram shows the main steps of this pattern: Export to file, move file, Import file.
+This diagram shows the main steps of this pattern – extracting/exporting to file, moving the file, then loadint/importing the file:
 
 ![](attachments/csv/csv-import.png)
 
-### 1.1 When to use CSV files?
+### 1.1 When to Use CSV Files
 
-CSV is supported by a broad range of systems including Excel and Access, so it the most frequently used file format. The following conditions should be considered for using CSV as a format for transferring data:
+CSV is supported by a broad range of systems including Excel and Access, so it is the most frequently used file format. The following conditions should be considered for using CSV as a format for transferring data:
 
 * When there is a large volume of data, for example > 1m records
 * When  structure is relatively flat and can be formatted as a table
@@ -31,14 +32,14 @@ CSV is supported by a broad range of systems including Excel and Access, so it t
 
 ### 1.2 How We Built This Project
 
-The project is fully self-contained. It contains all the tests and data, and it should be ready to use.
+The project is fully self-contained and contains all the tests and data.
 
-The reference case shows the following scenario’s:
+The reference case shows the following scenarios:
 
-1. Import for create or update of records
-2. Import for create, update and deletion of records
+* Import for creating or updating records
+* Import for creating, updating, and deleting records
 
-## 2 Recommendtions
+## 2 Recommendations
 
 * Keep track of which records are imported in your current run
 	* This way, it is easy to determine which records have been deleted since the previous import

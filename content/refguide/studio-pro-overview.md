@@ -63,7 +63,7 @@ Using items in the menu bar of Studio Pro, you can create new projects, deploy a
 | Close | Closes the current document. You will be asked to save or discard changes when needed. | <kbd>Ctrl</kbd> + <kbd>W</kbd> |
 | Close All | Closes all document tabs. You will be asked to save or discard changes when needed. | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>W</kbd> |
 | Close Project | Closes the currently open project and return to the start page. |   |
-| Export as Image | Exports the current document as an image in the *.png* format. The following document types can be exported as images: forms, microflows, domain models, document templates, and XML mappings. |   |
+| Export as Image | Exports the current document as an image in the *.png* format. The following document types can be exported as images: pages, microflows, domain models, document templates, and XML mappings. |   |
 | Export Project Package | Exports the current app to a project package (*.mpk*) file. This is useful for example when you want to give someone the entire app, or when you need to provide a test app when submitting a ticket. |   |
 | Import Project Package | Imports a project package that was created with the **Export Project Package** menu item. |   |
 | Exit | Closes Studio Pro | |

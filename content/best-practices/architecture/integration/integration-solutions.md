@@ -7,9 +7,9 @@ draft: true
 
 ## 1 Integration Solutions
 
-In this sections a number of integration solutions are shown, organized in folders of solution category. Reading the matrial will give ideas on where Mendix apps can play a useful role and how the integration with other areas can be best handled.
+This section of the *Expert Best Practices* presents various integration solutions. Reading the material on [Service Integration](service-integration), [UI Integration](ui-integration), and other methods will give you ideas for where Mendix applications can play a useful role in your integration solutions.
 
-Getting integration right will not only reduce the cost of implementation and maintenance, it will also raise the confidence that the business has in the solution. A simple and robust solution will give less errors in production, and better managed errors, and a solution that is easier to understand, change and extend.
+Getting your integration right will not only reduce the cost of implementation and maintenance, it will also raise the confidence that the business has in the solution. A simple and robust solution will lead to fewer errors in production, better ways to manage the errors do occur, and a solution that is easier to understand, change, and extend.
 
 ## 2 Considering Solution Options
 
@@ -23,12 +23,12 @@ See <<Introduction to Integration>> for a general overview. Below is an example 
 	c. What error-handling options should be there?
 3.  What are the functional options? <br />
 	a. How can we operate this interface in production? <br />
-	b. Can we copy the data ahead of time, or get it in real-time on request?
+	b. Can we copy the data ahead of time, or get it in real time on request?
 	c. How do we manage errors? <br />
 	d. Real-time or batch? <br />
 	e. Request–reply or events? <br />
-	f.  Is there an available integration layer? An [integration layer](integration-layers) means there are two parts of the integration where you one can choose events, request–reply, or batch separately for the best possible operational solution.<br />
-		* If there is an integration layer available, what functions does it handle (for example security, monitoring, queueing, simple mapping)? <br />
+	f. Is there an available integration layer? An [integration layer](integration-layers) means there are two parts of the integration where you one can choose events, request–reply, or batch separately for the best possible operational solution.<br />
+	g. If there is an integration layer available, what functions does it handle (for example security, monitoring, queueing, simple mapping)? <br />
 4. What are the technical options for each functional option? <br />
 	a. What protocols are available? <br />
 	b. What will each option mean for operations? <br />
@@ -43,6 +43,6 @@ If it gets complicated on one side of an integration, it is often because the ot
 
 ## 3 Managing Dependencies
 
-After the correct solution option has been determined, the right microservices with the right integration between them and externally to other parts of the enterprise, each integration will lead to some kind of dependency. The dependency then needs to be managed through design, build, test, deployment and operations, see also <<Managing Dependencies>>
+After you have determined the correct integration solution method—along with the correct microservices, integration between those microservices, and integration externally to other parts of the enterprise—your integration solution will inevitably lead to some kind of dependency. Dependencies need to be managed through design, building, testing, deploying, and operations. For more information, see [Managing Dependencies](manage-dependencies).
 	
-It is impossible to completely remove dependencies since the systems and apps need to inter-operate to generate automation, digitization and seem-less user experiences. Finding the right solution should make these dependencies all through the life-cycle as easy to manage as possible.
+It is impossible to completely remove dependencies, since systems and apps need to inter-operate to generate automation, digitization, and seamless user experiences. Finding the right solution should make the dependencies that occur through the lifecycle as easy to manage as possible.

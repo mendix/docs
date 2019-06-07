@@ -5,44 +5,41 @@ menu_order: 4
 draft: true
 ---
 
-## 1 Introduction
+## 1 Export, Import & Batch Processing
 
-Batch integration is relevant for business processes that are periodic or when a lot of data needs to be transferred. The diagram below illustrates the three main steps involved in batch integration:
+More and more processes is becoming real-time, but a lot of business processes are still periodic in nature (for example, salary payments and interest calculations). These use cases are best implemented in batch-oriented integration, which runs a sets of data at certain moments. 
 
-1. Extract a set of data (for example, into a file).
-2. Move the data.
-3. Import the data.
+Batch processing is also advantageous for very high-volume integration, because it is more economical from a network and CPU perspective to transefer and process the data in batches. For example monitoring solutions and IoT solutions usually have agents or aggregators that collect a set of input and then sends the data on as small batches in close to real-time.
 
-![](attachments/batch-integration/bi-intro.png)
+Batch processing means that many records are processed together, which can be done in two ways:
+* File-based integration, exporting a file, moving the file and later importing it into one or more destination apps
+* Service-based batch integration, means that a REST, OData or SOAP interface works on batches of data. For example retrieving 5000 customers at a time and processing them.
 
-## 2 Using Batch Processing {#using}
+There are these typical use-cases:
 
-There are significant reasons and use-cases for when batching processing is a good choice and when it is not.
+1. Export and Import processes, where data is exported from one system and imported in another system
+2. Reference data management that usually is done in Batch because a snap-shot of a situation is generally desired and several systems may need to work on the same snap-shot. It is often done at night, to avoid the export/import processing to interfere with normal operations, and/or to take advantage of CPU power at night when it is usually less busy
+3. File integration and management, is important for moving files in batch oriented integration, but also for providing files of various types to end-users and customers
+4. Data Lakes, DWH & BI Integration is an area that usually works in batch mode. Mendix provides data to these solutions for analysis, statistics, reporting, business intelligence, and lately also machine learning. In some automated processes, Mendix also receives data from these solutions and turns it into reference data that helps optimizing automated business flows, see <<Self-Learning Process -3 Self-Learning Processes Using Data Lakes>>
+5. Monitoring and IoT solutions often batch up data as well in small packages and sending them at high speed, see <<Ops Integration>> and <<IoT Integration - 4.2 Examples for IoT with Mendix>> 
+	
+## 2 Export & Import {#export-import}
 
-### 2.1 Reasons to Use Batch Processing
+Batch processing runs a large set at a time. First exporting a large set of data, then moving it, and then importing the data. these three actions can happen at different times, and the systems can be relatively un-aware of each other, just agreeing on a file format, file name and a file location 
 
-These are the main reasons to go for batch-oriented integration:
+This diagram shows the three main steps of batch processing: 
 
-* **Periodic business process** – When a business process is periodic, the correct way to process the integration is to work on a snapshot of the data. In that case, batch processing is the best way to work. These are other important considerations:
-	* Many financial processes are periodic, such as salary payments, interest calculations, and invoicing.
-	* Reference data (for example, products, drivers, employees) should be shared with operational systems only at certain times.
-	* Backups and other operational processes are typically done at night.
-* **Processing advantage** – There is a processing advantage when working in batch. The initiation of an event or service call has a cost in processing power, so it is much more efficient to extract, move, and import a million records in one go than it is to initiate 1 million separate events or service calls. The advantage becomes relevant at around 50,000 records, and significant above 500,000 records.
-* **Night-time processing** – To combine the two reasons above, with batch processing, some heavier processing can be moved to the night to save on CPU cycles during the day. This means you may require a less expensive infrastructure. This can also improve response times for end-users during the day.
-* **Decoupling** – Batch integration is decoupled, which means the following factors occur:
-	* The export and import can happen at different times. In fact, the import can be done several times if required. 
-	* There is a clearly defined file format that has been agreed on. The means that two systems can be very far from and virtually unaware of each other, and they will still integrate well. Often in a Mendix app project, the developer only knows there is a file of reference data they need to import, while the origin of the file may be unclear or irrelevant.
+![](attachments/batch-integration/export-import.png)
 
-### 2.1 Reasons to Avoid Batch Processing
+Processing data in bulk optimises CPU-usage and it is often done at night, when other load is much lower, and in order to avoid the batch processing load to intefere with operational processes, or make the end-user-experience suddenly slower.
 
-There are two main reasons not to go for batch-oriented integration: 
+Users frequently import and export files of various formats with the Mendix Platform, and the level of skills required depends on the format of the file. For unusual file formats, a more technical developer is recommended, while for common formats such as csv-file exporta nd import a business developer should be able to use the the [Excel Importer](https://appstore.home.mendix.com/link/app/72/) module in the Mendix App Store, just choose a field separator that is not the same as text that can be in the fields.
 
-* **Real-time processing** – Because we are moving more towards a real-time world, processes that used to be periodic are becoming real-time. For example, invoicing was previously almost always monthly. Nowadays, invoicing is frequently done in real-time, when an order is confirmed or a delivery is completed.
-* **Complicated error handling** – Imagine if 5 records out of 1 million fail to import. In that case, there is a need to inform the source about this, or correct the file, or have a human workflow in the destination to manage these errors.
+If there is a large amount of data to import, the best practice is to use a process queue to write to. This prevents the entire dataset from being in memory at the same time. For more information, see the section [Using Internal Queues](event-integration#internal-queues) in *Event-Based Integration* as well as the <<<Export - Import >> example.
 
-## 3 Reference Data Examples with Mendix {#reference}
+## 3 Reference Data with Mendix {#reference}
 
-Many organizations use Mendix to manage reference and master data as microservices that each have a functional area of responsibility:
+Many organizations use Mendix to manage reference data as microservices that each have a functional area of responsibility:
 
 * Reference data that is semi-static (for example, vehicles, drivers, addresses, products, shop opening hours)
 * Business intelligence statistical information that is turned into reference data to fine-tune processes
@@ -50,9 +47,9 @@ Many organizations use Mendix to manage reference and master data as microservic
 
 There area three typical examples where Mendix plays a role in master and reference data use-cases:
 
-* **Global reference data apps** – These apps typically share data periodically as files. This is because there are many subscribers that need to work on the same reference data set. For example, ordering, engineering, and financing all need to be aware of the same products for the order-to-cash process to work properly.
-* **Local shared data apps** – These apps are typical for microservices systems consisting of 3–10 apps, and they manage the import and distribution of reference data within that cluster of apps. Other apps can poll for differences instead of all importing a full set of data. The human workflow can define the shared data and manage issues in import/export. The shared data app can also provide a combined view of data for the rest of the world (for more information, see [Central Data](central-data).
-* **Global master data apps** – An example of this type of app is a central customer app. Such apps often need to share both in real-time for operational processes (for details, see [Service Integration](service-integration)) as well as via files (for example, to ERP solutions) to prepare for invoicing later.
+* **Reference data apps** – These apps typically share data periodically as files. This is because there are many subscribers that need to work on the same reference data set. For example, ordering, engineering, and financing all need to be aware of the same products for the order-to-cash process to work properly.
+* **Local shared data apps** – These "SDA" apps are typical for microservices systems consisting of 3–10 apps. They manage the import and distribution of reference data within that cluster of apps. Other apps can poll for differences instead of all importing a full set of data. The human workflow can define the shared data and manage issues in import/export. The shared data app can also provide a combined view of data for the rest of the world (for more information, see [Central Data](central-data).
+* **Master data apps** – An example of this is a central customer app. Such apps often need to share both in real-time for operational processes (for details, see [Service Integration](service-integration)) as well as via files (for example, to ERP solutions) to prepare for invoicing later.
 
 This diagram shows an example for managing shared product and customer data across Mendix apps and other systems (such as, engineering and finance systems):
 
@@ -68,13 +65,13 @@ In the diagram's example, you can see the following factors at work:
 	* A **Shared Data App** to manage all shared data
 * As the **Shared Data App** is importing the product reference data file, it marks all products that change as updated. That is so the other apps can subscribe to those changes via a REST call, thereby minimizing the need for processing and allowing the other apps to be ignorant as to how the product data is distributed globally.
 
-## 4 File Integration & Management {#file-integration}
+## 4 File Management with Mendix {#file-integration}
 
 File integration is important for the following cases:
 
 * Batch integration, as decribed above
 * Sharing content files, such as PDFs, photos, images, manuals, brochures, binaries, and 3D models
-* Logging and backups
+* Logging, monitoring and backups
 
 ### 4.1 Mendix File Storage
 
@@ -93,11 +90,11 @@ These are the five options displayed in the diagram:
 * **Source app creates file locally** – The destination app calls the source app with REST or SOAP to get the file as an attachment in a JSON or XML message. This is efficient for files smaller than approximatelly 5–10 MB.
 * **Source app writes the file directly in a shared folder** – At the end of the process, the file is renamed to the target name. The destination app will be able to read the file as soon as it is renamed to the agreed name.
 * **Move the file via FTP or SFTP** – This requires an FTP server to be available. The source app pushes the file to an FTP server, which stores it locally until one or more subscribers can pick it up using FTP get. For more information, see the [SFTP](https://appstore.home.mendix.com/link/app/107256/) connector available in the Mendix App Store.
-* **Special tools or an ESB** – A special tool may be available for more file management solutions, or an ESB can be adapted to handle the transfer. Typically, the source app pushes the file to this solution, which in turn creates a copy per destination in another folder, accessible only to one subscriber each. This managed file transfer (MFT) solution verifies that files are picked up and processed within agreed timeframes, and it can raise alarms when this is not the case.
+* **Managed File Transfer or ESB** – A special tool may be available for managed file transfer (MFT), or an ESB can be adapted to handle the transfer. Typically, the source app pushes the file to this solution, which in turn creates a copy per destination in another folder, accessible only to one subscriber each. MFT solutions verify that files are picked up and processed within agreed timeframes, and it can raise alarms when this is not the case.
 
-In larger organizations the file and batch process management can be quite elaborate. There is often a central scheduling solutions that expect files at certain times, and that orchestrates the moving of files and the export and import of the files and any errors that occur in this process.
+In larger organizations the file and batch process management can be quite elaborate. There is often a central scheduling solutions that expect files at certain times, and that orchestrates the moving of files and the export and import of the files and any errors that occur in this process. Mendix will then integrate with both the scheduling solution and the file transfer solution.
 
-### 4.3 Example – Manuals for Product Support {#example}
+### 4.3 Manuals for Product Support {#example}
 
 In the example visualized in the diagram below, the customer can browse all products, register usage of specific products, and download information and documentation related to these products. In this case, file management is at the core of the solution.
 
@@ -110,23 +107,9 @@ In this example, you can see the following process at work:
 3. The app imports some of the files with product metadata, to be searchable in the app and directly readable.
 4. Corporate customers can browse all products and related marketing information. They can also register a list of products that they use, download related manuals and documentation, and receive alerts when documents are updated. PDFs, Excel files, and other common format files can be read directly in the Mendix app's UI.
 
-## 5 Export & Import {#export-import}
+## 6 Data Lakes, DWH & BI Integration {#int}
 
-Batch processing runs a large set of data at a certain moment. For example, interfaces towards data warehousing (DWH) and business intelligence (BI) typically require a large export of data, and later, a large import of the same data.
-
-This diagram shows the three main steps of batch processing: exporting, moving, and importing a file:
-
-![](attachments/batch-integration/export-import.png)
-
-Typically, the extraction happens at a different time from the import. The moving of the file can be done separatelly as well, but often the destination app polls a location for a file. When the file appears, it copies the file and triggers the import.
-
-Users frequently import and export files of various formats with the Mendix Platform, and the level of skills required depends on the format of the file. For unusual file formats, a more technical developer is recommended, while for common formats, these processes are available more or less out of the box.
-
-The most common file format is [CSV](csv) import and export. This also works well with Excel integration. The [Excel Importer](https://appstore.home.mendix.com/link/app/72/) module in the Mendix App Store is very frequently used. When there are text fields in the data, the text can contain a comma, so there should be more complex field separators to be sure it works correctly.
-
-If there is a large amount of data to import, the best practice is to use a process queue to write to. This prevents the entire dataset from being in memory at the same time. For more information, see the section [Using Internal Queues](event-integration#internal-queues) in *Event-Based Integration* as well as the [Export, Import & Batch Processing](export-import-batch) use case.
-
-## 6 ETL, DWH & BI Integration {#int}
+Interfaces towards DWH and BI are often bulk and/or snapshot oriented. The same is true for initial loads of systems or the distribution of reference data. 
 
 ETL tools are used to keep DWH and data lakes updated. They can perform the entire operation of extracting, moving, validating, transforming, and updating the destination. For legacy systems, they can use direct database access or use files as input. When Mendix integrates with ETL or BI, these are the preferred methods:
 
@@ -146,8 +129,107 @@ These are further factors to consider:
 * **Files** – Files is the most decoupled option to share data with BI, ETL, and DWH. There could be several files with different data and functional IDs that link objects together. If this option is possible, it is recommended.
 * **Databse backup** – When a DWH wants almost all the data, when the domain model is complex, or when there are several important many-to-many relations, then a database dump is available as the best option. An ETL solution will be directly depending on the Mendix data model, creating a tight coupling that forces the ETL solution to change with every new Mendix app release. To handle this dependency, ETL solutions have a staging area where raw data is imported, so they can actually adopt even after changes occur, when errors are discovered.
 
+## 7 When to use Batch Processing {#using}
+
+Even as the world moves towards real-time, batch integration provides more efficient processing and the ability to move processing to a time of day when the app instance is less busy. It also provides decoupling for business processes that are periodic in nature or where systems can not connect directly.
+
+* **Periodic business process** – When a business process is periodic, the correct way to process the integration is to work on a snapshot of the data. In that case, batch processing is the best way to work, for example:
+	* Periodic financial processes, such as salary payments, interest calculations, and invoicing.
+	* Reference data, such as products, drivers, employees, should be shared with operational systems at a certain times.
+	* Backups and other operational processes are typically done at night.
+* **Processing advantage** – There is a processing advantage when working in batch. The initiation of an event or service call has a cost in processing power, so it is much more efficient to extract, move, and import a million records in one go than it is to initiate 1 million separate events or service calls. The advantage becomes relevant at around 50,000 records, and significant above 500,000 records.
+* **Night-time processing** – To combine the two reasons above, with batch processing, some heavier processing can be moved to the night to save on CPU cycles during the day. This means you may require a less expensive infrastructure. This can also improve response times for end-users during the day.
+* **Decoupling** – Batch integration is decoupled, which means the following factors occur:
+	* The export and import can happen at different times. In fact, the import can be done several times if required. 
+	* There is a clearly defined file format that has been agreed on. The means that two systems can be very far from and virtually unaware of each other, and they will still integrate well. Often in a Mendix app project, the developer only knows there is a file of reference data they need to import, while the origin of the file may be unclear or irrelevant.
+
+### 7.1 Reasons to Avoid Batch Processing
+
+There are two main reasons not to go for batch-oriented integration: 
+
+* **Real-time processing** – Because we are moving more towards a real-time world, processes that used to be periodic are becoming real-time. For example, invoicing was previously almost always monthly. Nowadays, invoicing is frequently done in real-time, when an order is confirmed or a delivery is completed.
+* **Complicated error handling** – Imagine if 5 records out of 1 million fail to import. In that case, there is a need to inform the source about this, or correct the file, or have a human workflow in the destination to manage these errors.
+
+### 8 How to do Batch Processing?
+
+### 8.1 Triggering Batch processes
+
+* If it is a periodic process, it is triggered using Mendix scheduling or by receiving an event from a central scheduler
+* If it is an ad-hoc process, it is triggered by manual invocation via a Mendix microflow
+* If it is by business event, it is often triggered by a REST call or by a file that is created in a location where a Mendix app is polling for a file with a specific name.
+
+### 8.2 File based Batch processing
+
+The following elements are typically needed:
+
+* A defined format to exchange data (for example, CSV, XML, Excel, fixed delimited)
+* A manner of transporting the data (for example, (S)FTP, HTTP, file (disk) access)
+* Possible interpretation (for example, masks for complex fields or logic to interpret an expected date format)
+* Possible transformation (for example, associate an imported address to a master-data     country)
+
+### 8.3 Service based Batch processing
+
+This section focused mainly on File export and import which is what most people associate with batch processing. But batch processing just means that many records are processed at a time. 
+
+In many cases this is done using "real-time" integration using REST, SOAP or OData, avoiding the management and transport of files. If the data set is smaller than a few MBs, a REST service works well for importing a few hundred thousand records, and it is a lot more efficient than processing one record at a time.
+
+If the data is too large, services can still be used while making a set of calls in a row and keeping track of the last imported record. For example 5 million records could be imported using one thousand REST calls.
+
+### 8.4 Do’ s
+
+* Uniquely identify records and store them in the application (to be able to update later; if applicable)
+* Index unique identifiers
+* Import data when there are fewer other processes running to avoid interference
+* Consider a strategy to handle deleted data (for example, mark as deleted and keep in the database or remove during the import)
+* Think of the correct error handling (for example, should only a single object fail or  the complete batch)
+* Preserve a trail of import/export statistics (for example, how many records were new, changed, removed or exported)
+* Implement a process to verify if imports are running successfully – if they are not, most of the time there should be an action taken (for example, requesting a record to be resent from the source or correcting the data)
+
+### 8.5 Don’ts
+
+* Apply batch imports/exports when data is expected to be updated in real time
+* Apply heavy batch processing during peak hours of system usage
+
+### 8.6 Technology Options with the Mendix Platform
+
+The following patterns are suitable options for batch import and export:
+
+* Batch
+	* File (for example, CSV, Excel, XML)
+	* Database (for example, JDBC)
+* RPC
+	* REST
+	* SOAP
+	* OData
+	
+### 8.6 When to Apply Each Technology Option
+
+The technology chosen is often limited by the environment (for example, a remote system only exports its data in a certain manner).
+
+|     | Pros | Cons |
+| --- | --- | ---|
+| **Batch** | Export/import is part of batch integration | |
+| **File** | Large volume in one transaction. | Intermediate transfer required (for example, SFTP). |
+| **Database** | | Connectivity to database required. |
+| **RPC** | | Multiple requests, pagination, and transactions. |
+| **REST** | Using standard HTTP(S) connectivity. Part of Mendix Core. |   |
+| **SOAP** | Using standard HTTP(S) connectivity. | |
+| **OData** | Using standard HTTP(S) connectivity. | Does not support binary interface. |## 7 Summary
+
 ## 7 Summary
 
-Even as the world moves towards real-time, batch integration provides more efficient processing and the ability to move processing to a time of day when the app instance is less busy. It also provides decoupling for business processes that are periodic in nature.
+Batch processing means that a larger set of records are processed together, and it is required all enterprises in a variety of situations. Most common is file-based batch processing, but a developer should consider that batch processing can also be done using services, such as REST or OData.
 
-Batch processing is required in almost all enterprises, and Mendix support this very well, with an internal scheduler as well as good export and import functionality. Mendix apps have an internal file storage area and can also move or get files using a central FTP server or another managed file transfer solution available in the company.
+File based batch integration is relevant for many periodic business processes, or when a lot of data needs to be transferred, or when service-integration is not available. The diagram below illustrates the three main steps involved in file based batch integration:
+
+1. Extract a set of data (for example, into a file).
+2. Move the data.
+3. Import the data.
+
+![](attachments/batch-integration/bi-intro.png)
+
+Mendix support batch processing very well, with an internal scheduler as well as good export and import functionality and support for REST and OData. Mendix apps have an internal file storage area and can move or get files to and from that area using a central FTP server or another managed file transfer solution available in the company.
+
+
+
+

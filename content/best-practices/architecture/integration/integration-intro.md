@@ -78,13 +78,11 @@ The following best practices should be followed:
 
 Using a microservices architecture enhances efficiency and flexibility in the IT industry. There is an amazing opportunity to reshape how organizations build and manage IT to support different business functions if the right microservice architecture is created and good robust integration patterns are selected.
 
-* Apps should act as actors in a business process. They typically do different things, and often they have different views of the data. So, it is ok to copy some data from one app to another as part of the business process or share reference data between apps. 
-* If the microservices fullfill a business function the integration can often be implemented as business events that fulfill a step in a business process. 
-* Reference data is often copied between microservices to make them autonomous
-* Integration layers are used for certain situations only, and they are "thinner" with less functionality than typical ESBs have.
+These are some important overall recommendations:
 
-When approaching an inegration problem, it is good to think functionally first. When it is clear what the entire integration should do (including acknoledgements, statuses, and errors), it is advicable to consider more than one solution option, compare the technical solutions impact on simplicity, robustness and manageability.
+* Apps should be actors in a business process – they typically do different things and often have different views of the data, so it is okay to copy some data from one app to another as part of a business process or to share reference data between apps
+* If the microservices fullfill a business function, the integration can often be implemented as business events that fulfill a step in a business process
+* Reference data can often be copied between microservices to make them autonomous
+* Integration layers can be used for certain situations only, and they are "thinner" with less functionality than typical ESBs
 
-
-
-
+When approaching an integration problem, it is good to think functionally first. When it is clear what the entire integration should do (including acknoledgements, statuses, and errors), it is advisable to consider more than one solution option and then compare the technical solution impacts on simplicity, robustness, and manageability.

@@ -13,7 +13,7 @@ Getting your integration right will not only reduce the cost of implementation a
 
 ## 2 Considering Solution Options
 
-See <<Introduction to Integration>> for a general overview. Below is an example sequence of questions that an Architect or Lead Developer typically considers to find the best way to integrate:
+Below is an example sequence of questions that an Architect or Lead Developer typically considers to find the best way to integrate:
 
 1. What is the business use case? <br />
 	a. Can I reference the [Overview of Use Cases](use-case-overview) to see if one use case fits?

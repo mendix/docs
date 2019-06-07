@@ -65,9 +65,9 @@ These best practices are organized with theoretical guidelines in the following 
 * [Integration Layers](integration-layers)
 * [Ops & CI/CD Integration](ops-cicd-integration)
 
-Within these solution categories, the use cases and scenarios listed below show how the Mendix Platform integrates within a landscape.
+Within these solution categories, the methods listed below show how the Mendix Platform integrates within a landscape.
 
-#### 3.2.1 Service Integration Use Cases
+#### 3.2.1 Service Integration Methods
 
 * [REST to Call Other Systems](service-integration#rest-call)
 * [REST Pull to Transfer Data](service-integration#pull-transfer)
@@ -77,20 +77,20 @@ Within these solution categories, the use cases and scenarios listed below show 
 * [RPC Integration & Adapters](service-integration#adapters)
 * [Queue Integration](service-integration#queue-int)
 
-#### 3.2.2 UI Integration Use Cases
+#### 3.2.2 UI Integration Methods
 
 * [Deep Linking from App to App](ui-integration#deep)
 * [Web Link Integration for Websites](ui-integration#web)
 * [CMS Integration for Customer Portals](ui-integration#cms)
 * [CDN Integration for Global Portals & Apps](ui-integration#cdn)
 
-#### 3.2.3 Event-Based Integration Use Cases
+#### 3.2.3 Event-Based Integration Methods
 
 * [Event Streams, IoT, Logging & Metrics](event-integration#stream-iot)
 * [State Engines & Event Managers](event-integration#state)
 * [Using Queues with Mendix](event-integration#queues)
 
-#### 3.2.4 Batch Integration Use Cases
+#### 3.2.4 Batch Integration Methods
 
 * [Using Batch Processing](batch-integration#using)
 * [Reference Data Examples with Mendix](batch-integration#reference)
@@ -99,12 +99,12 @@ Within these solution categories, the use cases and scenarios listed below show 
 * [ETL, DWH & BI Integration](batch-integration#int)
 * [Example – File Import Integration with CSV](csv)
 
-#### 3.2.5 Central Data Use Cases
+#### 3.2.5 Central Data Methods
 
 * [Shared Data App (SDA)](central-data#sda)
 * [Self-Learning Processes Using Data Lakes](central-data#data-lakes)
 
-#### 3.2.6 Process Integration Use Cases
+#### 3.2.6 Process Integration Methods
 
 * [Business Events & Process Flow](process-integration#business)
 * [Case Management](process-integration#case)
@@ -117,7 +117,7 @@ Within these solution categories, the use cases and scenarios listed below show 
 * [From SOA to Microservices](integration-layers#soa-micro)
 * [Microservice Integration Apps](integration-layers#microservice)
 
-#### 3.2.8 Ops & CI/CD Integration Use Cases
+#### 3.2.8 Ops & CI/CD Integration Methods
 
 * [CI/CD & Test Automation](ops-cicd-integration#test)
 * [Deployment & Monitoring](ops-cicd-integration#deploy)

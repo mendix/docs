@@ -5,34 +5,36 @@ menu_order: 4
 draft: true
 ---
 
-## 1 Basic Solution Categories
+## 1 Basic Integration Solutions
 
-For most of the integration related to Mendix, there are five basic solution categories that are almost always used. Sometimes just one is used, and sometimes a combination is used:
+For most of the integration related to Mendix, there are five basic solutions that are almost always used. Sometimes just one is used, and sometimes a combination is used:
 
-![](attachments/basic-solution-categories/solution-categories.png)
+![](attachments/use-case-overview/solution-categories.png)
 
-* [Service Integration](service-integration) – This is otherwise known as remote procedure call (RPC) integration. This category uses request and reply, and it is almost always synchronous. The request–reply interfaces with REST and SOAP. There is also database integration with OData and SQL, business event and process integration, process orchestration, integration apps, and distributed ESBs.
 * [UI Integration](ui-integration) – This solution category includes, for example, using a deep link from the UI of one app to open the UI of another app (either in the same or another browser tab). It also includes integration with websites, content management systems, and content delivery networks.
+* [Service Integration](service-integration) – This is otherwise known as remote procedure call (RPC) integration. This category uses request and reply, and it is almost always synchronous. The request–reply interfaces with REST and SOAP. There is also database integration with OData and SQL, business event and process integration, process orchestration, integration apps, and distributed ESBs.
 * [Event-Based Integration](event-integration) – This category usually does not have a response, and it is used to distribute data at large scales or large distances, or simply distribute data in a decoupled way. Event-driven integration can involve IoT, metrics, and social media, as well as state engines and event management.
 * [Batch Integration](batch-integration) – This category includes exporting, moving, and importing files as well as file integration.
 * [Central Data](central-data) – This category uses a pattern where data is landed and combined in a central place before it is distributed. This could be, for example, an operational data store (ODS); extract, transform, load (ETL); business intelligence (BI); or a data lake solution.
 
-## 2 Use Cases & Integration Methods {#overview}
+The next section presents use cases for these five basic solutions.
 
-Plotting functional use cases against basic integration methods allows you to see the common solutions available. That is good, because integration needs to be flexible for an Architect to select the best method for a specific situation. 
+## 2 Use Cases & Integration Solutions {#overview}
+
+Plotting functional use cases against basic integration solutions allows you to see the common solutions available. That is good, because integration needs to be flexible for an Architect to select the best method for a specific situation. 
 
 For example, you may choose not to change an old system, which leads you to choose a different integration method than you would if you were building two new apps. This means that you may choose the less ideal way to integrate in order not to change an old system. In the scenario that you were building two new apps, you would make another choice.
 
 As another example, when integrating to SaaS solutions and older systems, there may only be one method available. Such a scenario will determine which integration method to use, rather than these guidelines. 
 
-The table below plots use cases and integration methods, with further detail on the use cases available in the subsequent sections. The table uses the following symbols:
+The table below plots use cases and integration solutions, with further detail on the use cases available in the subsequent sections. The table uses the following symbols:
 
 | Symbol | Meaning |
 | --- | --- |
 | ![](attachments/use-case-overview/green.png) | The common or preferred use of the method. In some cases, the solution will require several methods, so several of these symbols are used. |
 | ![](attachments/use-case-overview/grey.png) | Possible use in some cases. |
 
-| Use Case | UI Integration | RPC / Services | Events / Queues | Export, Import, Batch | Central Data |
+| Use Case | UI Integration | Service Integration | Events-Based Integration | Export, Import, Batch | Central Data |
 | --- | --- | --- | --- | --- | --- |
 | [SSO, AD & Identity Integration](#sso) | ![](attachments/use-case-overview/grey.png) | ![](attachments/use-case-overview/green.png) | | | |
 | [ Importing & Distributing Reference Data](#import-dist) | | ![](attachments/use-case-overview/green.png) | ![](attachments/use-case-overview/grey.png) | ![](attachments/use-case-overview/green.png) | ![](attachments/use-case-overview/grey.png) |
@@ -41,11 +43,11 @@ The table below plots use cases and integration methods, with further detail on 
 | [Process Integration](#process) | ![](attachments/use-case-overview/green.png) | ![](attachments/use-case-overview/grey.png) | ![](attachments/use-case-overview/grey.png) | | |
 | [Export, Import & Batch Processing](#export-import) | | ![](attachments/use-case-overview/grey.png) | ![](attachments/use-case-overview/grey.png) | ![](attachments/use-case-overview/grey.png) | ![](attachments/use-case-overview/grey.png) |
 | [Master Data Integration](#master-data)| ![](attachments/use-case-overview/green.png) | ![](attachments/use-case-overview/green.png) | ![](attachments/use-case-overview/grey.png) | | |
-| Distributing Master & Transactional Data | | ![](attachments/use-case-overview/green.png) | ![](attachments/use-case-overview/grey.png) | ![](attachments/use-case-overview/grey.png) | ![](attachments/use-case-overview/grey.png) |
-| Mobile Integration & Offline | | ![](attachments/use-case-overview/green.png) | ![](attachments/use-case-overview/grey.png) | | |
+| [Distributing Master & Transactional Data](#distributing) | | ![](attachments/use-case-overview/green.png) | ![](attachments/use-case-overview/grey.png) | ![](attachments/use-case-overview/grey.png) | ![](attachments/use-case-overview/grey.png) |
+| [Mobile Integration & Offline](#mobile) | | ![](attachments/use-case-overview/green.png) | ![](attachments/use-case-overview/grey.png) | | |
 | [CMS & CDN Integration](#cms-cdn) | ![](attachments/use-case-overview/green.png) | ![](attachments/use-case-overview/grey.png) | | | |
 | [Integration with BI & Reporting](#int-bi) | | ![](attachments/use-case-overview/grey.png) | ![](attachments/use-case-overview/grey.png) | ![](attachments/use-case-overview/green.png) | ![](attachments/use-case-overview/grey.png) |
-| Process Orchestration & State Engines | | ![](attachments/use-case-overview/green.png) | ![](attachments/use-case-overview/grey.png) | | ![](attachments/use-case-overview/green.png) |
+| [Process Orchestration & State Engines](#orchestrate) | | ![](attachments/use-case-overview/green.png) | ![](attachments/use-case-overview/grey.png) | | ![](attachments/use-case-overview/green.png) |
 | [Integration with CICD, Ops & Monitoring](#int-cicd) | ![](attachments/use-case-overview/grey.png) | ![](attachments/use-case-overview/grey.png) | ![](attachments/use-case-overview/green.png) | ![](attachments/use-case-overview/grey.png) | ![](attachments/use-case-overview/green.png) |
 | [Integration with AI & IoT Solutions](#ai-iot) | | ![](attachments/use-case-overview/green.png) | ![](attachments/use-case-overview/green.png) | ![](attachments/use-case-overview/grey.png) | ![](attachments/use-case-overview/green.png) |
 | [Integration with AI & Machine Learning](#ai-machine) | | ![](attachments/use-case-overview/green.png) | ![](attachments/use-case-overview/grey.png) | | ![](attachments/use-case-overview/green.png) |
@@ -102,7 +104,7 @@ In its full scope, master data management is a complex process involving the fol
 
 The best practices will describe how to update data in the master app and how to distribute the data to other subscribing apps.
 
-### 3.8 Distributing Master & Transactional Data
+### 3.8 Distributing Master & Transactional Data {#distributing}
 
 This use case involves distributing master data and transactional data across the enterprise using a variety of methods, including the following:
 
@@ -112,7 +114,7 @@ This use case involves distributing master data and transactional data across th
 * Events on queues
 * Files
 
-### 3.9 Mobile Integration & Offline
+### 3.9 Mobile Integration & Offline {#mobile}
 
 This use case involves integration with [mobile](/refguide/mobile) applications and the synchronization of data from an [offline](/refguide/offline-first) app back to a mobile app. It also deals with [push notifications](/howto/mobile/sending-push-notifications).
 
@@ -124,7 +126,7 @@ Mendix often needs to integrate with content management systems (CMS) and conten
 
 This use case involves several options for how Mendix developers can provide app data to a DWH, data lake, or other BI tooling. For this, files, OData, or database dumps are used. This use case will also look at creating reports in Mendix apps and integration with data-mining tools like [Tableau](https://www.tableau.com/).
 
-### 3.12 Process Orchestration & State Engines
+### 3.12 Process Orchestration & State Engines {#orchestrate}
 
 This use case involves active and passive process orchestration. This is mainly automated straight-through-processing, while the case management handles the workflow and human process management. 
 

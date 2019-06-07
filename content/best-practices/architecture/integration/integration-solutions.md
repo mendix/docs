@@ -99,10 +99,10 @@ Within these solution categories, the methods listed below show how the Mendix P
 
 * [Using Batch Processing](batch-integration#using)
 * [Reference Data Examples with Mendix](batch-integration#reference)
-* [File Integration & Management](batch-integration#file-integration)
+* [File Management with Mendix](batch-integration#file-management)
 * [Export & Import](batch-integration#export-import)
 * [ETL, DWH & BI Integration](batch-integration#int)
-* [Example – File Import Integration with CSV](csv)
+* [Example – File Import with CSV](csv)
 
 #### 4.2.5 Central Data Use Cases
 

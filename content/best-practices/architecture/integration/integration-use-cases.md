@@ -67,7 +67,7 @@ This use case involves handling security around the following:
 
 ### 3.2 Importing & Distributing Reference Data {#import-dist}
 
-This use case involves managing reference data, such as country codes, currencies, and  product sets. These slow-changing datasets are often maintained in another system and regularly imported into an app (for example, from a CSV file).
+This use case involves managing reference data, such as country codes, currencies, and  product sets. These slow-changing datasets are often maintained in another system and regularly imported into an app (for example, from a [CSV](csv) file).
 
 Along with a microservices cluster, Mendix recommends using one app as the reference data-importing point and then distributing data from there to the rest of the apps.
 

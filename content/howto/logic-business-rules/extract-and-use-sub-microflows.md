@@ -1,5 +1,5 @@
 ---
-title: "Extract and Use Sub-Microflows"
+title: "Extract & Use Sub-Microflows"
 category: "Logic & Business Rules"
 menu_order: 5
 tags: ["microflow", "sub-microflow", "extract"]
@@ -66,7 +66,11 @@ To create a sub-microflow for the validation steps, follow these steps:
 
     ![](attachments/18448683/18581015.png)
 
-The new sub-microflow will do the registration validation. You can reuse this sub-microflow whenever you need to do a registration validation. Do not forget to right-click the 'isValid' variable and select 'Set $isValid as return value' so you can stop or continue your microflow based on the Sub-Microflow's outcome.
+The new sub-microflow will do the registration validation. You can reuse this sub-microflow whenever you need to do a registration validation. 
+
+{{% alert type="info" %}}
+Because this sub-microflow does not return anything, the sub-microflow call cannot be used in the **Is Valid?** check that immediately follows it. To stop or continue your microflow based on the sub-microflow's outcome, right-click the **Create Boolean Variable** activity and select **Set $isValid as return value**.
+{{% /alert %}}
 
 ## 4 Troubleshooting Extractions of Sub-Microflows
 

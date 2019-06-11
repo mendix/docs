@@ -1,6 +1,7 @@
 ---
 title: "Module Security"
-parent: "modules"
+parent: "security"
+menu_order: 20
 tags: ["studio pro", "module security", "security", "module"]
 ---
 

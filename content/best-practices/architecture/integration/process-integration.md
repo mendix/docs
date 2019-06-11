@@ -164,6 +164,57 @@ The Mendix Platform can be used for building all of the components in the diagra
 * Automated straight-through processing apps
 * Internal dashboards and control apps
 
+## 7 How to Do Workflow Integration
+
+In most architectures, there are business processes that exceed the functionality of a single microservice app. In that case, there will be some transactional data used in that process that needs to be transferred between the microservices involved. Often, there will be a deep link for users to navigate between the apps.
+
+Workflow integration can involve a business workflow that is executed across separate apps that also transfers data between the two apps. For a practical example, see [Example – Workflow Integration with Data Transfer](workflow-int-data-transfer).
+
+### 7.1 Continuing the Workflow in Another App
+
+To transfer a user from one app to the next in a business process, two options are available to use:
+
+* Page URLs
+* [Deep Link Module](https://appstore.home.mendix.com/link/app/43/) from the Mendix App Store
+
+Both URLs and deep links can be used to continue the workflow in another app.
+
+This table presents the pros and cons for these options:
+
+| | Pros | Cons |
+| --- | --- | --- |
+| **Page URLs** | Built into the Desktop Modeler | Only for pages, no parameters possible    |
+| **Deep link module** | Can start microflows; very flexible with link parameters | [Deep Link Module](https://appstore.home.mendix.com/link/app/43/) (with [Platform support](/developerportal/app-store/app-store-content-support)) |
+
+Page URLs are very easy to use in the Mendix Platform, but the platform currently only supports opening a page and does not support custom parameters. More flexibility is needed for this case, both to trigger integration logic when opening a link and to link to specific objects using link parameters.
+
+### 7.2 Copying Data Over Between Apps
+
+When parts of data have been copied over, they need to be kept up to date. This is often done with a REST pull method (for more information, see the [REST Pull to Transfer Data](service-integration#pull-transfer) section of *Service Integration*).
+
+To replicate data, use an API with a meaningful business object tree. Transferring related objects simultaneously is a little more difficult to set up, but it is better for data consistency. You should handle deleted data as “soft deletes” in the owning app so that the data will not disappear for the client and can be recovered if necessary.
+
+In some cases, transactional data needs to be available instantly, and the app cannot afford to wait for an asynchronous pull process. When opening a deep link, the client app should synchronously trigger the existing pull process to retrieve the data on demand.
+
+The Mendix Platform natively supports the following technologies for keeping data in sync between apps:
+
+* REST
+* SOAP
+* OData
+
+This table presents the pros and cons for these options:
+
+| | Pros | Cons |
+| --- | --- | --- |
+| **REST** | Intended for publishing data; more efficient message format (JSON); reusable in custom widgets | Less support for data schema validation |
+| **SOAP** | Strong schema support | Intended for operations in a verbose message format (XML) |
+| **OData** | Using standard HTTP(S) connectivity; part of Mendix core | Does not support binary interface |
+| **Batch** | N/A | N/A |
+| **File** | N/A | N/A |
+| **Database** | N/A | N/A |
+
+The most frequently used option between Mendix apps is to use the REST protocol.
+
 ## 7 Summary
 
 Process integration is one of the most important things an organization can focus on to increase automation, digitize processes, and make workflows leaner and more efficient. 

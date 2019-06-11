@@ -9,7 +9,7 @@ These are the [Platform SDK](/apidocs-mxsdk/mxsdk/) release notes, including all
 
 **Release date: June 11th, 2019**
 
-* Fix incorrect return type for `createNewApp` API. Downgraded `rest` dependency to 1.3.2 to always return a `When.js` Promise, instead of a regular `ES6` Promise.
+* We fixed the incorrect return type for the `createNewApp` method. We downgraded the `rest` dependency to 1.3.2 to always return a `When.js` promise (instead of a regular `ES6` promise).
 
 ## 4.1.0
 

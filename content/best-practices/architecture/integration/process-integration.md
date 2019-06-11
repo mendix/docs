@@ -179,41 +179,41 @@ To transfer a user from one app to the next in a business process, two options a
 
 Both URLs and deep links can be used to continue the workflow in another app.
 
-This table presents the pros and cons for these options
+This table presents the pros and cons for these options:
 
 | | Pros | Cons |
 | --- | --- | --- |
 | **Page URLs** | Built into the Desktop Modeler | Only for pages, no parameters possible    |
 | **Deep link module** | Can start microflows; very flexible with link parameters | [Deep Link Module](https://appstore.home.mendix.com/link/app/43/) (with [Platform support](/developerportal/app-store/app-store-content-support)) |
 
-Page URLs are very easy to use in the Mendix Platform, but the platform currently only supports opening a page and does not support custom parameters. More flexibility is needed for this case, both to be able to trigger integration logic when opening a link, and to be able to link to specific objects using link parameters.
+Page URLs are very easy to use in the Mendix Platform, but the platform currently only supports opening a page and does not support custom parameters. More flexibility is needed for this case, both to trigger integration logic when opening a link and to link to specific objects using link parameters.
 
 ### 7.2 Copying Data Over Between Apps
 
 When parts of data have been copied over, they need to be kept up to date. This is often done with a REST pull method (for more information, see the [REST Pull to Transfer Data](service-integration#pull-transfer) section of *Service Integration*).
 
-To replicate data use an API with a meaningful business object tree. Transferring related objects simultaneously is a little more difficult to set up, but it is better for consistency of data. Handle deleted data as “soft deletes” in the owning app so that data will not disappear for the client and can be recovered if necessary
+To replicate data, use an API with a meaningful business object tree. Transferring related objects simultaneously is a little more difficult to set up, but it is better for data consistency. You should handle deleted data as “soft deletes” in the owning app so that the data will not disappear for the client and can be recovered if necessary.
 
-In some cases, transactional data needs to be available instantly and the app cannot afford to wait for an asynchronous pull-process. When opening a deep link, the client app should synchronously trigger the existing pull process to retrieve data on demand.
+In some cases, transactional data needs to be available instantly, and the app cannot afford to wait for an asynchronous pull process. When opening a deep link, the client app should synchronously trigger the existing pull process to retrieve the data on demand.
 
-The Mendix Platform supports multiple technologies natively for keeping data in synch between apps:
+The Mendix Platform natively supports the following technologies for keeping data in sync between apps:
 
 * REST
 * SOAP
 * OData
 
-The table shows some pros and cons and related comments on these options.
+This table presents the pros and cons for these options:
 
 | | Pros | Cons |
 | --- | --- | --- |
+| **REST** | Intended for publishing data; more efficient message format (JSON); reusable in custom widgets | Less support for data schema validation |
+| **SOAP** | Strong schema support | Intended for operations in a verbose message format (XML) |
+| **OData** | Using standard HTTP(S) connectivity; part of Mendix core | Does not support binary interface |
 | **Batch** | N/A | N/A |
 | **File** | N/A | N/A |
 | **Database** | N/A | N/A |
-| **REST** | Intended for publishing data; more efficient message format (JSON); reusable in custom widgets | Less support for data schema validation |
-| **SOAP** | Strong schema support | Intended for operations Verbose message format (XML) |
-| **OData** | Using standard HTTP(S) connectivity; part of Mendix core | Doesn’t support binary interface. |
 
-The most frequently used option between Mendix apps is to use the REST protocol
+The most frequently used option between Mendix apps is to use the REST protocol.
 
 ## 7 Summary
 

@@ -68,6 +68,10 @@ If you have [TortoiseSVN](/refguide/using-version-control-in-studio-pro#tortoise
 
 ![](attachments/style-with-gulp-and-sass/svn-ignore.jpg)
 
+{{% alert type="warning" %}}
+Always use the version of TortoiseSVN which matches your app model. If you open a local model from Mendix version 7.x or 6.x with the latest version of TortoiseSVN **you will no longer be able to open it in Mendix**.
+{{% /alert %}}
+
 ## 7 Troubleshooting
 
 If you encounter issues using this setup, please read the [Troubleshooting](https://github.com/mendix/ux-theming#troubleshooting) section in the GitHub repo documentation. If this does not resolve your issue, please [create a new GitHub issue](https://github.com/mendix/ux-theming/issues/).

@@ -140,9 +140,64 @@ Follow the instructions in [Migration From the Sync Process to Collaborative Dev
 
 Apps made in Mendix Studio Pro cannot be deployed to *Version 3* of the Mendix Cloud. If you are using a licensed Mendix Cloud V3 node, then we recommend that you upgrade to Mendix Cloud V4. If this is not possible, you will need to continue to use Mendix version 7 to create and maintain your apps.
 
-## 8 Troubleshooting
+## 8 Java Code Generation
 
-### 8.1 Cannot Open Project: `Layout … has an invalid value …`
+In Mendix Studio Pro version 8 we’re changing the way we generate Java code for Java actions and Data Sets.
+
+Mendix Modeler version 7 sometimes appended a postfix (e.g. `Parameter1`) to the names of parameters of Java actions and Data Sets. This behavior was necessary to prevent name conflicts in the generated code. In the minor releases of Mendix Modeler 7 we introduced a number of fixes to prevent those conflicts from happening, making this behavior redundant.
+
+We also noticed that, by attempting to prevent those name conflicts, we sometimes caused Java compilation failures, which seemed completely unrelated to what you were working on. Seeing that appending a postfix is now completely unnecessary, and introduces quite a few problems on bigger projects, we decided to remove it completely.
+
+So, what does that mean in practice? For most projects nothing changes and everything still works as it used to. But, in a limited number of cases, Mendix Modeler version 7 will have introduced a postfix for your parameter name. For example, a parameter called `Customer` might become `CustomerParameter1` in the generated Java code. This postfix will be removed when you migrate your app to Mendix Studio Pro 8.
+
+In these few cases, this means that you need to make a simple fix before your code will compile again:
+
+* If it is a Java action in a module downloaded from the AppStore which is causing errors, just download it again, or update it to the latest version.
+* If it is your own Java action, then the fix is ever easier – just remove those postfixes from your Java code (so, in the previous example `CustomerParameter1` becomes just `Customer` again).
+
+### 8.1 Example of Differences
+
+In this example we have a Java action called `LogMessage`, which has a parameter called `Message`. In Mendix Modeler version 7 if you introduced a domain model entity also called `Message`, we would generate the following Java code for you (please note that some code is omitted for readability):
+
+```java
+        public LogMessage(IContext context, java.lang.String MessageParameter1)
+        {
+            super(context);
+            this.MessageParameter1 = MessageParameter1;
+        }
+        @java.lang.Override
+        public java.lang.Boolean executeAction() throws Exception
+        {
+            // BEGIN USER CODE
+            Core.getLogger("MyLogger").info(this.Message);
+            // END USER CODE
+        }
+```
+
+As you can see, instead of naming the parameter `Message` now Mendix Modeler version 7 names it `MessageParameter1`. In the user code of the `executeAction()` method, `this.Message` is used to log a message. This means that the code won’t compile.
+
+Studio Pro 8 will generate the following code for you:
+
+```java
+        public LogMessage(IContext context, java.lang.String Message)
+        {
+            super(context);
+            this.Message = Message;
+        }
+        @java.lang.Override
+        public java.lang.Boolean executeAction() throws Exception
+        {
+            // BEGIN USER CODE
+            Core.getLogger("MyLogger").info(this.Message);
+            // END USER CODE
+        }
+```
+
+This code behaves as expected and works out of the box. However, if you previously changed your user code to comply with the way Mendix Modeler version 7 was generating this code, you just need to update your user code to use the new names of parameters.
+
+## 9 Troubleshooting
+
+### 9.1 Cannot Open Project: `Layout … has an invalid value …`
 
 Very rarely, you may receive a message similar to the one below when opening a project in Mendix Studio Pro 8 which needs to be upgraded from a previous version of Mendix.
 

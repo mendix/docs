@@ -1,6 +1,6 @@
 ---
 title: "Projects"
-category: "App Modeling"
+parent: "project-explorer"
 tags: ["studio pro", "project"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -29,9 +29,11 @@ See [Navigation](navigation).
 
 ## 5 System Texts
 
-System texts are texts like information and error messages that are produced by the server and client. You can translate these texts so that they appear in the preferred language of the user.
+System texts are texts like information and error messages that are produced by the server or the client. You can translate these texts so that they appear in the preferred language of the user.
 
 See [System Texts](system-texts).
 
 ## 6 Read More
 
+* [Modules](modules)
+* [Security](security)

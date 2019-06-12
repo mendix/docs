@@ -49,6 +49,8 @@ An overview of the possibilities with expressions can be found below.
 
 ## 7 If Expressions
 
+* [if](if-expressions) - perform a conditional action
+
 ## 8 Mathematical Function Calls
 
 * [`max`](mathematical-function-calls) - Maximum of a list of numbers

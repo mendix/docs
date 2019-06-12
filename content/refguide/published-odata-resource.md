@@ -19,7 +19,7 @@ Another way to add a resource is by right-clicking on an entity in the domain mo
 
 ### 1.1 Resource
 
-Press the **Select...** button to open a dialog window that allows you to select an entity from the domain model to publish. Click on an entity in the displayed tree and press **Select** to confirm.
+Press **Select** to open a dialog window that allows you to select an entity from the domain model to publish. Click on an entity in the displayed tree and press **Select** to confirm.
 
 ![](attachments/16713722/16843930.png)
 
@@ -27,7 +27,7 @@ IBM DB2 does not support read-isolated data retrieval operations that are non-bl
 
 ## 2 Selecting Exposed Attributes & Associations
 
-When an entity to publish has been selected, press the **Select...** button to open a dialog that allows you to select individual attributes to expose.
+When an entity to publish has been selected, press **Select** to open a dialog that allows you to select individual attributes to expose.
 
 The _System_._ID_ attribute is used as a key in OData services and is therefore not allowed to be unchecked.
 
@@ -39,7 +39,9 @@ Attributes of type binary are not allowed to be exported through OData services,
 
 Use the **Exposed entity name** field to customize the name of your resource that is exposed to the outside world. By default, the name is the same as the name of the exposed entity from your domain model. You can change this to any name which starts with a letter followed by letters or digits with a maximum length of 480 characters. Be aware however that the location URIs must be unique. Exposing two different resources on the same location will result in a consistency error.
 
-This also applies to attributes and associations. In the 'Exposed attributes and associations' screen, you can also override the **exposed name** here.
+This also applies to attributes and associations. In the **Exposed attributes and associations** screen, you can also override the **exposed name**. 
+
+For associations, the exposed name is the name given to the navigation property (which is the property referring to the associated object(s)). You can also specify the name of the association using the **exposed association name** column. By default, the name is the same as the name of the association in the domain model.
 
 When these names have been overriden, the name of the entity, attribute or association as defined in your domain model will not be exposed to the outside world, for all OData communication the exposed name will be used.
 

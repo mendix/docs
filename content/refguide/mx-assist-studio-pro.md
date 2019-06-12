@@ -27,7 +27,7 @@ It is possible to add activities in a regular way without using Mendix Assist.
 
 Click the bow-tie to see Mendix Assist recommendations: 
 
-{{% image_container width="350" %}}![](attachments/mx-assist-studio-pro/mx-assist-recommendations.png)
+{{% image_container width="450" %}}![](attachments/mx-assist-studio-pro/mx-assist-recommendations.png)
 {{% /image_container %}}
 
 Mendix Assist lists the top five recommendations from the most probable to less probable ones for the particular microflow. Click the suggestion to proceed with it and insert it into a microflow. For more information, see section [4 Adding Activities and Elements with Mendix Assist](#add-activities).

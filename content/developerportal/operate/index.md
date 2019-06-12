@@ -6,78 +6,50 @@ tags: ["Operate", "App", "Developer Portal", "Metrics", "Alerts", "Logs", "Backu
 
 ## 1 Introduction
 
-The category **Operate** is divided into these four sections:
+When you have created your app, it is important to be able to manage it. The **Operate** section of the Developer Portal allows you to look at the app's performance and to ensure that data is backed up and can be restored under your control.
+
+Access to operations information is divided into four pages:
 
 ![](attachments/operate.png)
 
-These sections are described below.
+{{% alert type="info" %}}
+Metrics, Alerts, and Logs are not available for Free Apps running in the Mendix Cloud, and you cannot make manual backups of Free Apps.
+{{% /alert %}}
 
-## 2 Metrics
+## 2 Operations Pages
 
-On this page you can monitor the performance and health of your app.
+The four operations pages are described below.
 
-For more information, see [Metrics](/developerportal/operate/metrics).
+### 2.1 Metrics
 
-This page is divided into the three tabs described in the sections below.
+On this page you can monitor the performance and health of your app in all environments where it is deployed.
 
-### 2.1 Trends
+See [Metrics](metrics) for details of the information available for licensed apps running in the Mendix cloud.
 
-In this section you can view the graphs of the App about:
+If your app is deployed to SAP Cloud Platform or IBM Cloud, this page will give you the option to go to the platform where your app is deployed. Here you will be able to find similar information about the performance and health of your app.
 
-*   Application Statistics
-*   Database Statistics
-*   Application Node Statistics
-*   Database Node Statistics
+You can also use a third-party service, such as Datadog, to assist you in monitoring your app. See [Datadog for v4 Mendix Cloud](datadog-metrics) for more information.
 
-The **Trends** are different for the Mendix Cloud versions:
+### 2.2 Alerts
 
-*   [Trends in Mendix Cloud v3](/developerportal/operate/trends)
-*   [Trends in Mendix Cloud v4](/developerportal/operate/trends-v4)
+On this page you can see the health of your app in all environments where it is deployed. You can also manage which environments will send you alerts.
 
-### 2.2 Running now
+See [Alerts](monitoring-application-health) for details of the information available for licensed apps running in the Mendix cloud.
 
-Running requests are all requests that are currently in progress for this environment. Please note that interrupting a request will actually stop it, and the end user may receive an error.
+If your app is deployed to SAP Cloud Platform or IBM Cloud, this page will give you the option to go to the platform where your app is deployed. Here you will be able to find similar information about the health of your app.
 
-At this section you can view the following information about the running requests:
+### 2.3 Logs
 
-*   User - the user that is running the action
-*   Action - the currently running actions
-*   Type - the action type that is running
-*   Duration - for how long the action has been running
+On this page you can see and manage your app logs in all environments where the app is deployed.
 
-### 2.3 Cache
+See [Logs](logs) for details of the logs for licensed apps running in the Mendix cloud.
 
-The object cache contains non-persistable objects. Here you can see how many objects of each type currently live in memory, and the same but broken down per user session.
+If your app is deployed to SAP Cloud Platform or IBM Cloud, this page will give you the option to go to the platform where your app is deployed. Here you will be able to find your app's logs.
 
-At this section you can view the following:
+### 2.4 Backups
 
-*   Entity in cache
-*   User sessions
+On this page you can see and manage your backups in all environments where your app is deployed.
 
-## 3 Alerts
+See [Backups](backups) for details of managing your backups in the Mendix cloud.
 
-On this page you can view the following:
-
-*   The status of the Application and the Platform
-*   The history of the alerts
-
-For more information, see [Alerts](/developerportal/operate/monitoring-application-health)
-
-## 4 Logs
-
-On this page you can **Fetch the current log**. Logs are rotated and archived every 5MB. The logs are kept for at least 3 months. Besides archived logs, the current log file can be fetched at any time.
-
-For more information, see [Logs](/developerportal/operate/logs)
-
-## 5 Backups
-
-On this page you can manage the backups of your Application.
-
-The following backups are retained:
-Nightly Backups: maximum 2 weeks history (counting from yesterday)
-Sunday Backups: maximum 3 months history (counting from yesterday)
-Monthly Backups (1st Sunday of each month): maximum 1 year history
-
-This pruning schedule applies to nightly backups and backups initiated by users. If you want to keep a backup for longer than the schedule, you will have to download it.
-
-For more information, see [Backups](/developerportal/operate/backups)
+If your app is deployed to SAP Cloud Platform or IBM Cloud, this page will give you the option to go to the platform where your app is deployed. Here you will be able to manage your app's backups.

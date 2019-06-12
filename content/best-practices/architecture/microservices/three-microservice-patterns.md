@@ -13,7 +13,7 @@ There are three basic types of microservices that may be used in different situa
 {{% todo %}}[**A LINK TO WHERE FOWLER AND LEWIS ACTUALLY SAY THIS WOULD BE GOOD; OTHERWISE, THE IMPRESSION IS THAT THIS IS A PARAPHRASE WITHOUT ATTRIBUTION, AND EVEN THAT ALL 3 TYPES ARE BASED ON THEIR THINKING**]{{% /todo %}}
 
 * **Business-oriented microservices** – Fowler and Lewis suggest these usually cover a business function and are autonomous, giving the full advantage of the microservices architecture pattern. These microservices have UX, logic, and data.
-* **API-oriented microservices** – These microservices are smaller and request-reply oriented. These are really closer to SOA layers, and they are good for generic functions behind web portals, for example. These microservices normally have only logic and data, as the UX is externally developed.
+* **API-oriented microservices** – These microservices are smaller and request–reply oriented. These are really closer to SOA layers, and they are good for generic functions behind web portals, for example. These microservices normally have only logic and data, as the UX is externally developed.
 * **Shared data microservices** – These are a set of smaller apps sharing a database, which means this microservice pattern is closer to the monolith pattern. The risk here is in creating a monolith if too many apps use the same database. The service has logic and UX.
 
 ![](attachments/three-microservices-patterns/tmp-intro.png)
@@ -59,7 +59,7 @@ When a large system has GUI, logic, and data, at least some microservices in the
 
 Many people associate microservices with APIs and API gateways, because there are API management platforms that market those types of microservices. This pattern focuses on the “services” part of microservices, and it is closer to an SOA-layered model than the Fowler-Lewis microservices pattern.
 
-API-style microservices provide one or more request-reply functions (usually in REST) that can be used by one or more UX components or web applications. This usually occurs on the other side of an API management layer that handles security and access.
+API-style microservices provide one or more request–reply functions (usually in REST) that can be used by one or more UX components or web applications. This usually occurs on the other side of an API management layer that handles security and access.
 
 The improvement from SOA-layered architecture is that these microservices are relatively small and independent. They should try to fulfil a business function, and they can have data in them. In this pattern, you are going from 4–8 layers with a central ESB in between, to only 3–4 layers using a lightweight API management gateway between the microservices and UX layer.
 
@@ -71,7 +71,7 @@ This diagram compares the business-oriented microservices approach—where data 
 
 Since these microservices are small and contain relatively little data, they often expose and enrich functionality from legacy systems. A simple workflow is usually handled in the UX layer, to the extent that a workflow is required.
 
-This pattern is useful in a large enterprise that wants to provide generic request-reply based services to be used in several channels (for example, in several mobile apps and customer-oriented portals).
+This pattern is useful in a large enterprise that wants to provide generic request–reply based services to be used in several channels (for example, in several mobile apps and customer-oriented portals).
 
 This pattern is less efficient for process-heavy business applications and internal business department portals, where often concentrating the functionality in a business-oriented microservices cluster is more efficient.
 

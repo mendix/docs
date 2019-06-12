@@ -13,16 +13,17 @@ Security is a way of controlling access to your app. For example, you can decide
 
 [Roles and Permissions](#roles-and-permissions) are an important part of security – an instrument which you can use to restrict or grant access to different parts of your app, such as pages and microflows.
 
-## 2 Enabling Security
+## 2 Enabling Security {#enabling-security}
 
 Whether security is enabled for your app by default, depends on app's type and version. You can come across the following cases:
 
-1. If your app has been created in the Developer Portal with Mendix version 7.23.3 or above, you can enable security in Studio and view and edit [roles and permissions](#roles-and-permissions). For more information on versions, see [Web Modeler Version & Mendix Version Correlation](general-versions)
+1. If your app has been created in the Developer Portal with Mendix version 7.23.3 or above, you can enable security in Studio and view and edit [roles and permissions](#roles-and-permissions). For more information on versions, see [Studio Version & Mendix Version Correlation](general-versions)
 
 2. If your app has been created in the Developer Portal with Mendix version below 7.23.3, or has been labelled as private content, or has been customized by your team specifically for your company, the security state depends on Studio Pro:<br/>
     a.  If security is off in Studio Pro, then you can enable security in Studio. In this case, when you try to [publish the app](publishing-app), you will be prompted to enable security. <br/>
 
-    ![Secure Your App Pop-up Window](attachments/settings-security/security-pop-up.png)<br/>
+	{{% image_container width="400" %}}![Secure Your App Pop-up Window](attachments/settings-security/security-pop-up.png)
+	{{% /image_container %}}<br/>
 
     b. If security is set to the **Prototype/demo** or **Production** level in Studio Pro and settings are compatible with Studio, you can view and edit **Roles and Permissions** in Studio. (For more information on what security settings are compatible with Studio, see the [Studio Compatibility](/refguide/studio-security-enabled#studio-compatible) section in *Model Changes When Security Is Enabled in Studio*.)
 
@@ -42,17 +43,13 @@ If you need to enable security, do one of the following:
 	![The Roles and Permissions Screen](attachments/settings-security/enabling-security.png)
 
 {{% alert type="info" %}}
-
 When you enable security, it is enabled for the whole app, and there are checks and changes applied to the model that are visible in Studio Pro. For more technical information on these checks and changes, see [Model Changes When Security Is Enabled in Studio](/refguide/studio-security-enabled).
-
 {{% /alert %}}
 
 ## 3 Roles and Permissions {#roles-and-permissions}
 
 {{% alert type="info" %}}
-
 In Studio Pro, advanced security settings can be applied. In this case, you will not be able to edit roles and permissions in Studio.
-
 {{% /alert %}}
 
 A role is a set of permissions that you can assign to a user. For example, you may want to give the *Administrator* full access to all pages and microflows. While for other users, you may choose to only grant access to certain pages and restrict access for microflows. 
@@ -63,9 +60,7 @@ In apps created via the Developer Portal, there are two app roles:
 * User
 
 {{% alert type="warning" %}}
-
 When security is enabled, these two app roles will have full access to your app. We recommend you to review permissions for the User role. 
-
 {{% /alert %}}
 
 For more information on managing app users, see the [Managing App Users](#managing-app-users) section.
@@ -154,8 +149,6 @@ There are two ways to set access for specific pages/microflows in your app:
 
 	![](attachments/settings-security/permissions-section.png)
 
-  
-
 ## 4 Demo Users
 
 Demo users are a demonstration of each user role existing in your app. You can use demo users to review how your app looks like for each user role. For more technical information, see [Demo Users](/refguide/demo-users). 
@@ -166,9 +159,7 @@ You can test how your app looks like for different roles the following way:
 
 1. [Preview your app](publishing-app).
 
-2.  Select the **Responsive view** mode.
-
-3. Click a user icon in the right-hand side of the screen:
+2. Click a user icon in the right-hand side of the screen:
 
     ![](attachments/settings-security/user-icon.png)
 
@@ -176,30 +167,26 @@ You can test how your app looks like for different roles the following way:
 
     ![](attachments/settings-security/select-user.png)
 
-
-
 ## 5 Managing App Users {#managing-app-users}
 
-The default user roles or user roles that you have created can be assigned to Mendix accounts. Accounts that have user roles assigned to them are **App Users**. 
+You can assign the default or customized user roles for your app to app end-users with Mendix accounts. These are called **App Users** and once authorized, they can access your published app to use it, test it, and provide feedback.
 
 {{% alert type="info" %}}
-
-You can manage app users only after you publish your app.
-
+You can manage App Users only after you publish your app.
 {{% /alert %}}
 
-To manage app users, open **Roles and Permissions** and click **Manage Users** in the top-right of the screen. 
+To manage App Users, open **Roles and Permissions** and click **Manage Users** in the top-right of the screen:
 
 ![](attachments/settings-security/manage-users-button.png)
 
-You will be navigated to the Developer Portal > **General** > **App User Management**, where you can invite people to your app, edit app roles assigned to them, or delete them from app users. 
-
-If you have created a new role, you need to publish the app first to be able to see and assign this role in the Developer Portal.
+You will be taken to the [App User Management](/developerportal/settings/general-settings#managing-app-users) page in the Developer Portal, where you can invite people to your app and manage their user roles. 
 
 {{% alert type="info" %}}
+People invited to join your App Team in the Developer Portal are not added as App Users automatically, so you will need to invite your App Team members if necessary.
+{{% /alert %}}
 
-People invited to join your app development team in the Developer Portal are not added as app users automatically.
-
+{{% alert type="info" %}}
+If you have created a new user role on the **Roles and Permissions** page, you need to publish the app first to be able to see and assign this role in the Developer Portal.
 {{% /alert %}}
 
 ## 6 Read More

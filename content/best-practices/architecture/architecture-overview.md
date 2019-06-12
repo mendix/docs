@@ -8,7 +8,7 @@ draft: true
 
 ## 1 Why Best Practices on Architecture?
 
-IT architecture is about making valuable things with technology, and the Mendix Platform is a key enabler for achieving this goal. Organizations that use the Mendix Platform and the [Mendix partners](https://www.mendix.com/solution-providers/) that help them to realize their goals can use the Architecture Best Practices to make sure their IT assets meet the following goals:
+IT architecture is about making valuable things with technology, and the Mendix Platform is a key tool for achieving this goal. Organizations that use the Mendix Platform in addition to the [Mendix partners](https://www.mendix.com/solution-providers/) that help them to realize their goals can use the *Expert Best Practices for Architecture* to make sure their IT assets have the following qualities:
 
 * Valuable for the business
 * Easy to deliver and maintain
@@ -19,23 +19,23 @@ IT architecture is about making valuable things with technology, and the Mendix 
 
 ## 2 Current IT Trends
 
-There are several IT trends converging recently, and Agile, DevOps, microservices, cloud, and automation are at the center of the evolution. As the diagram below presents, areas such as SOA (functional architecture), Agile (methodology), and cloud (infrastructure) are merging into one coherent movement of enterprise DevOps with automation, microservices, and an Agile mindset.
+There are several IT trends converging recently, and Agile, DevOps, microservices, cloud, and automation are at the center of the evolution. As the diagram below illustrates, areas that were previously separate initiatives (such as SOA architecture, Agile methodology, and cloud infrastructure) are now merging into a coherent enterprise DevOps movement. This movement favors low-code microservices on cloud-native platforms that are built, maintained, and automated by small teams that have an Agile mindset.
 
 ![](attachments/it-trends.png)
-	
-This evolution makes sense when the IT teams, methodology, organization, infrastructure, and technical components are all related to each other. For optimal results, the overall strategy should be beneficial for all these elements.
 
-Good architecture, technology, and organization should deliver digital transformation to all levels of an organization, from customer interactions to business operations. This should happen all the way down to the digital transformation of IT delivery, of which cloud, low-code, CI/CD, microservices, and DevOps are all a part. As this diagram presents, this all leads to organizations being able to make work with higher quality than ever before:
+This evolution makes sense when IT teams, methodology, organization, infrastructure, and technical components are all related to each other. For optimal results, the overall strategy should be beneficial for all these elements.
+
+Good architecture, technology, and organization should deliver digital transformation to all levels of an organization, from customer interactions to business operations. This should happen all the way down to the digital transformation of IT delivery, of which cloud, low-code, CI/CD, microservices, and DevOps are all a part. As this diagram presents, this leads to organizations being able to make work with higher quality than ever before:
 
 ![](attachments/digitization.png)
 
 ## 3 Business & IT Alignment
 
-Enterprise DevOps will enable better business and IT alignment, which is at the heart of what Mendix is trying to provide. When users that innovate in IT and users who know how the business runs can cooperate more closely, they will iterate towards better architecture, increased digitization, and more value added to the business.
+Enterprise DevOps will enable better business and IT alignment, which is at the heart of what Mendix provides. When users that innovate in IT and users who know how the business runs can cooperate more closely, they will iterate towards better architecture, increased digitization, and more value added to the business.
 
 The prerequisite for this entire evolution is delivery automation in IT and IT infrastructure. As a cloud and low-code platform, Mendix enables BizDevOps to the point that small cross-functional teams no longer need database administrators and infrastructure experts. Such teams can own the entire lifecycle of the apps they build, be more functional, and thus align more closely with the business.
 
-The diagram below shows how we have entered a new era of IT evolution, enabled by the automation around IT infrastructure (cloud) and IT development (low-code platforms like Mendix). This automation makes it possible for small business-focused teams to evolve new IT components all the way from design to operations with little or minimal support from an Ops department. It also makes the cost of managing more components negligeable, enabling teams to build smaller functional components (microservices), which in turn allows teams and business units to be autonomous and evolve a lot faster. As a result, the business and IT can cooperate a lot more closely and easily than before, and automation, digitization, collaboration, and other efficiency-enhancing developments can be accelerated. This will put some organizations who adopt this new paradigm ahead of the ones that do not.
+The diagram below shows how we have entered a new era of IT evolution, enabled by the automation around IT infrastructure (cloud) and IT development (low-code platforms like Mendix). This automation makes it possible for small business-focused teams to evolve new IT components all the way from design to operations with little or minimal support from an Ops department. It also makes the cost of managing more components negligible, enabling teams to build smaller functional components (microservices), which in turn allows teams and business units to be autonomous and evolve a lot faster. As a result, the business and IT can cooperate a lot more closely and easily than before, and automation, digitization, collaboration, and other efficiency-enhancing developments can be accelerated. This will put some organizations who adopt this new paradigm ahead of the ones that do not.
 
 ![](attachments/it-alignment.png)
 
@@ -43,14 +43,14 @@ Automation in infrastructure for apps also means that managing more components n
 
 You can adapt the size of apps to what is most efficient to maintain. Microservices can be quite large when using low-code, so the app architecture will often align with how the business sees the world.
 
-All of this means that we are leaving behind the era when the development, operations, and business are separated by a trench of conflicting objectives. The DevOps teams and the functionally-oriented apps can align with the business they are supposed to support.
+All of this means that we are leaving behind the era when the development, operations, and the business are separated by a trench of conflicting objectives. The DevOps teams and the functionally-oriented apps can align with the business they are supposed to support.
 
 ### 4 Architecture Areas
 
 In Mendix, we separate the following three levels of architecture:
 
 * **Enterprise architecture** is strategic and involves policy, positioning, portfolios, technology selection, and guidelines
-* **Solution architecture** is tactical and works on the program level to solve business problems using one or many systems and technologies
+* **Solution architecture** is tactical and works at the program-level to solve business problems using one or many systems and technologies
 * **System architecture** is the architecture of one functional unit within a solution normally using one technology such as Mendix
 	* In microservices architecture, there may be one large app to start with that is later split up, but it is still considered one “system” by other teams within the company
 
@@ -69,7 +69,7 @@ Mendix has made the subject of architecture a lot easier by reducing the number 
 
 However, there is still some architecture work necessary so that you can get the best apps working together to serve the business in a secure and robust way that performs well. Mendix has a very strong base in innovation apps and business differentiating systems (for more information, see the [What Can I Build?](https://www.mendix.com/evaluation-guide/what-can-i-build) section in the *Mendix Platform Evaluation Guide* as well as Gartner's [Pace-Layered Application Strategy and IT Organizational Design](https://www.gartner.com/binaries/content/assets/events/keywords/applications/apn30/pace-layered-applications-research-report.pdf)). 
 
-But as many customers have discovered while employing the speed, productivity, and flexibility of the platform, Mendix can be used for company "heavy-lifting" as well. When your company starts using Mendix for core systems and high-volume situations, it becomes more important to consider the architecture in order to optimize the solution and make sure it meets requirements for volume and robustness.
+As many customers have discovered while employing the speed, productivity, and flexibility of the platform, Mendix can be used for company "heavy-lifting" as well. When your company starts using Mendix for core systems and high-volume situations, it becomes more important to consider the architecture in order to optimize the solution and make sure it meets requirements for volume and robustness.
 
 ### 4.2 When Do I Need the Real Architects?
 

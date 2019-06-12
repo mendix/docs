@@ -38,8 +38,8 @@ The table below describes all the available dockable window panes.
 | Get Started | Shows useful resources for getting started with Studio Pro. |
 | Project Explorer | Shows the complete structure of your project including all documents inside the modules. By default the active document is always selected in the project explorer so you can quickly see where the document you are editing is in the tree. You can change this behavior in the **Edit** > **Preferences** window pane. |
 | Properties | Shows properties of the currently selected element. This is where a lot of editing in Studio Pro takes place. |
-| Stories | For [Team Server](team-server) enabled projects, this pane shows the stories of the current sprint. |
-| Toolbox | Shows the tools that can be used in the current editor. For example, in a page you can insert all kinds of widgets (for example, text box and data view) by dragging them from the **Toolbox** to your form. |
+| Stories | For [Team Server](team-server) enabled projects, this pane shows the stories of the current Sprint. |
+| Toolbox | Shows the tools that can be used in the current editor. For example, in a page you can insert all kinds of widgets (for example, text box and data view) by dragging them from the **Toolbox** to your page. |
 | Variables (via Debug Windows) | You can view the current values of variables here when debugging your application. |
 
 ## 3 Document Tabs
@@ -63,7 +63,7 @@ Using items in the menu bar of Studio Pro, you can create new projects, deploy a
 | Close | Closes the current document. You will be asked to save or discard changes when needed. | <kbd>Ctrl</kbd> + <kbd>W</kbd> |
 | Close All | Closes all document tabs. You will be asked to save or discard changes when needed. | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>W</kbd> |
 | Close Project | Closes the currently open project and return to the start page. |   |
-| Export as Image | Exports the current document as an image in the *.png* format. The following document types can be exported as images: forms, microflows, domain models, document templates, and XML mappings. |   |
+| Export as Image | Exports the current document as an image in the *.png* format. The following document types can be exported as images: pages, microflows, domain models, document templates, and XML mappings. |   |
 | Export Project Package | Exports the current app to a project package (*.mpk*) file. This is useful for example when you want to give someone the entire app, or when you need to provide a test app when submitting a ticket. |   |
 | Import Project Package | Imports a project package that was created with the **Export Project Package** menu item. |   |
 | Exit | Closes Studio Pro | |
@@ -78,7 +78,7 @@ Using items in the menu bar of Studio Pro, you can create new projects, deploy a
 | Copy | Copies the selected element to the clipboard. | <kbd>Ctrl</kbd> + <kbd>C</kbd> |
 | Paste | Pastes the contents of the clipboard in the current editor. | <kbd>Ctrl</kbd> + <kbd>V</kbd> |
 | Delete | Deletes the selected element. | <kbd>Delete</kbd> |
-| Find | Searches the model for text. The following texts are searched: all texts that appear in the end user interface (captions of labels, buttons, etc); names and documentation of documents; entity, association, and attribute names and documentation; access rule documentation; form widget names; captions and documentation of microflow objects; variable definitions in microflow. | <kbd>Ctrl</kbd> + <kbd>F</kbd> |
+| Find | Searches the model for text. The following texts are searched: all texts that appear in the end user interface (captions of labels, buttons, etc); names and documentation of documents; entity, association, and attribute names and documentation; access rule documentation; page widget names; captions and documentation of microflow objects; variable definitions in microflow. | <kbd>Ctrl</kbd> + <kbd>F</kbd> |
 | Find Advanced | Opens a dialog box that allows for advanced search operations. Examples are searching for any document type and searching for unused documents. | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F</kbd> |
 | Find Usages | Opens the **Find Results** pane and displays usages of the selected object. | <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>F</kbd> |
 | Next Find Result | Highlights the next find result in the **Find Results** pane and open it in an editor. | <kbd>F3</kbd> |
@@ -127,7 +127,7 @@ Using items in the menu bar of Studio Pro, you can create new projects, deploy a
 | Tools > Batch update layouts | Opens the **Batch Update Layouts** dialog box so that you can configure the batch update of the layouts of many pages at once.  |  |
 | Tools > Batch convert Split panes | Opens the **Batch Convert Split Panes** dialog box so that you can configure the batch update. |  |
 | Tools > Check Widgets | Checks that the widgets you have implemented in the app project have been built correctly. | |
-| Synchronize Project Directory | If necessary, this action creates folders inside the project directory (resources, widgets, theme, etc.). It also reads the widget packages that are currently inside the widgets folders. For example, if you add widgets to the widgets folder, you needs to synchronize the project directory for them to appear in the form toolbox. | <kbd>F4</kbd> |
+| Synchronize Project Directory | If necessary, this action creates folders inside the project directory (resources, widgets, theme, etc.). It also reads the widget packages that are currently inside the widgets folders. For example, if you add widgets to the widgets folder, you needs to synchronize the project directory for them to appear in the **Toolbox**. | <kbd>F4</kbd> |
 | Show Project Directory in Explorer | Shows the directory that contains the project file (*.mpr*) and other assets such as resources and Java actions in Windows Explorer. |   |
 | Deploy for Eclipse | Deploys the project to the deployment directory. The Java stubs are generated so that you can start editing them in Eclipse. This action does not compile the Java actions. Use this if you are writing Java actions and you want to compile and debug them through Eclipse. | <kbd>F6</kbd> |
 | Create Deployment Package | Creates a Mendix Deployment Archive package (*.mda*) that contains all necessary files to run the project. This can be used if you want to deploy your project on a Windows server or on a custom Mendix Cloud. | <kbd>F7</kbd> |
@@ -158,9 +158,9 @@ Using items in the menu bar of Studio Pro, you can create new projects, deploy a
 | --- | --- | --- |
 | Current Language | Displays the current language of your app project. | |
 | Language Settings | Opens the **Project Settings** dialog box to the **Languages** tab so that you can adjust the language configuration of the app project. | |
-| Batch Replace | Opens a form in which you can correct texts within one language. This is useful to check whether texts presented to the user are consistent. |   |
-| Batch Translate | Opens a form in which you can quickly translate many texts from one language to another. |   |
-| Language Operations | Opens a form in which you can copy, move, swap, or delete all translations in a given language for selected modules. |   |
+| Batch Replace | Opens a dialog window in which you can correct texts within one language. This is useful to check whether texts presented to the user are consistent. |   |
+| Batch Translate | Opens a dialog window in which you can quickly translate many texts from one language to another. |   |
+| Language Operations | Opens a dialog window in which you can copy, move, swap, or delete all translations in a given language for selected modules. |   |
 
 ### 4.7 Help Menu
 
@@ -180,8 +180,8 @@ In most dialog boxes for editing properties, the following shortcut keys can be 
 
 | Key | Description |
 | --- | --- |
-| <kbd>Ctrl</kbd> + <kbd>Enter</kbd> | Confirms all changes and closes the form. Works as if the **OK** button was clicked. This is especially useful if the focus is on a multi-line text box; otherwise, pressing <kbd>Enter</kbd> will have the same effect. |
-| Escape | Cancels all changes and closes the form. Works as if the **Cancel** button was clicked. |
+| <kbd>Ctrl</kbd> + <kbd>Enter</kbd> | Confirms all changes and closes the dialog window. Works as if the **OK** button was clicked. This is especially useful if the focus is on a multi-line text box; otherwise, pressing <kbd>Enter</kbd> will have the same effect. |
+| Escape | Cancels all changes and closes the dialog window. Works as if the **Cancel** button was clicked. |
 | <kbd>Ctrl</kbd> + Mouse scroll wheel | Zooms in or out. This works in all editors. |
 | <kbd>Shift</kbd> + Mouse scroll wheel | Scrolls left or right. Works as if you were using the horizontal scroll bars. |
 
@@ -203,16 +203,16 @@ The following shortcut keys are available in the domain model editor:
 | <kbd>Ctrl</kbd> + <kbd>A</kbd> | Selects all entities. |
 | <kbd>Esc</kbd> | Clears selection. |
 
-## 7 Form Editor Shortcut Keys
+## 7 Page Editor Shortcut Keys
 
-The following shortcut keys are available in the form editor:
+The following shortcut keys are available in the page editor:
 
 | Key | Description |
 | --- | --- |
 | Arrow keys | Moves the selection box to the widget or element in the direction of the arrow key. For example, if currently a label is selected and you press the right arrow key, the text box to the right of it becomes selected. |
 | <kbd>Ctrl</kbd> + arrow keys | Moves the currently selected item up/down or left/right. This works on table columns and rows, tab pages, grid and data view buttons, search fields, etc. |
 | <kbd>Enter</kbd> | Edits the properties of the currently selected object in a dialog box. |
-| <kbd>F2</kbd> | Edits the caption of a label or button inline in the form. You can also just start typing a letter or a digit and the caption will be replaced by what you type. |
+| <kbd>F2</kbd> | Edits the caption of a label or button inline on the page. You can also just start typing a letter or a digit and the caption will be replaced by what you type. |
 
 ## 8 Microflow Editor Shortcut Keys
 

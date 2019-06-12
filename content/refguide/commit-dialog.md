@@ -10,7 +10,7 @@ The commit dialog is used for committing changes to the Team Server. You can ent
 
 ## 2 Message
 
-Enter a message describing the changes you have made. This message may contain multiple lines. If you want to confirm the form by keyboard and you are inside the message box you can use Ctrl+Enter.
+Enter a message describing the changes you have made. This message may contain multiple lines. If you want to confirm the message, you can press <kbd>Ctrl</kbd>+<kbd>Enter</kbd>.
 
 ## 3 Related Stories {#stories}
 

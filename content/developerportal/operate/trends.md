@@ -5,6 +5,7 @@ menu_order: 10
 description: "Describes how to interpret various graphs and trends in the Mendix Cloud v3."
 tags: ["Trends","v3","Mendix Cloud","Developer Portal"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
+#Please do not rename the anchors in this document as they are used in links from the Developer Portal
 ---
 
 ## 1 Introduction
@@ -50,7 +51,7 @@ These graphs show various application specific metrics, such as the number of HT
 
 The requests graph shows the number of requests that are sent from the client or systems that integrate with your application using web services. The number of requests per second is split up by request handlers.
 
-"xas" lists general queries for data in datagrids, sending changes to the server and triggering the execution of microflows. "ws" shows the number of web service calls that were done. "file" shows the number of file uploads and downloads. The "/" should not list any requests, because static content is directly served to the user by the front-facing web server, which is placed between the user and this application process.
+"xas" lists general queries for data in data grids, sending changes to the server and triggering the execution of microflows. "ws" shows the number of web service calls that were done. "file" shows the number of file uploads and downloads. The "/" should not list any requests, because static content is directly served to the user by the front-facing web server, which is placed between the user and this application process.
 
 ### <a name="Trends-appmxruntimeconnectionbus"></a>3.2 Number of Database Queries Being Executed
 
@@ -132,11 +133,11 @@ The memory graph shows the distribution of operating system memory that is avail
 
 The database connections graph shows the number of connections to the PostgreSQL server. This should go up and down with the usage of the application. The number of connections is limited to 50.
 
-## <a name="Trends-dbdiskstatsiops"></a>5 Both Application and Database Node
+## 5 Both Application and Database Node
 
 The following infrastructure metrics are available for both the application node and the database node.
 
-### <a name="Trends-appdiskstatsiops"></a>5.1 Disk IOPS
+### <a name="Trends-appdiskstatsiops"></a><a name="Trends-dbdiskstatsiops"></a>5.1 Disk IOPS
 
 The Disk IO statistics show the number of disk read and write operations that are done from and to the disk storage. It does not show the amount of data that was transferred.
 

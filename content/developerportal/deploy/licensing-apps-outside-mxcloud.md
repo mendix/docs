@@ -25,7 +25,9 @@ For all deployment options, apart from [IBM Cloud Portal](#ibm), you will need t
 
 If you need a *Subscription Secret* to deploy to SAP Cloud Platform you will need to create a ticket with [Mendix Support](https://support.mendix.com).
 
-For all other licenses, do the following:
+If you want to create a new licensed node in the Mendix Cloud and your contract does not allow for more licensed nodes, please contact your Customer Success Manager (CSM) first.
+
+For all other license requests, do the following:
 
 1. Open the [Request New App Node](https://newnode.mendix.com/) app.
 

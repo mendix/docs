@@ -1,13 +1,13 @@
 ---
 title: "Event-Based Integration"
-parent: "integration-overview"
-menu_order: 4
+parent: "integration-solutions"
+menu_order: 3
 draft: true
 ---
 
 ## 1 Introduction
 
-At the moment, event-driven architectures are making their return into the mainstream of integration. This follows an increased interest in and focus on, for example, IoT solutions, distributed networks of actors, and central monitoring. Several solution providers are promoting new paradigms for managing large, distributed, high-volume event driven architectures, where Kafka is probably the most interesting new protocol.
+At the moment, event-driven architectures are making their return into the mainstream of integration. This follows an increased interest focus on, for example, IoT solutions and distributed networks. Several solution providers are promoting new paradigms for managing large, distributed, high-volume event driven architectures, where Kafka is probably the most interesting new protocol.
 
 The diagram below presents a basic event-driven integration example:
 
@@ -25,67 +25,67 @@ Event-driven integration is important in the following scenarios:
 
 ## 2 Types of Event-Driven Integration
 
-There are many types of event-driven integration. The main differentiators are functional or infrastructure-oriented, which determines the most appropriate queue management. This diagram shows six options for event driven integration between two Mendix applications:
+There are many types of event-driven integration. The main differentiators are between functional integration and infrastructure-oriented integration, which determines the most appropriate queue management. This diagram shows six options for event-driven integration between two Mendix applications:
 
 ![](attachments/event-integration/queue.png)
 
-The queue management solution that is used depends on the situation, and Mendix supports almost all the options:
+The queue management solution that is used depends on the situation, and Mendix supports almost all the options (the numbered options below correspond to the numbers in the diagram above):
 
-* **Internal Mendix queue inside the sending app** – This is the simplest solution. It allows for the sending process in app 1 to finish, even if the target system is not up. A synchronous call is used to pick up events from the source app, see <<Service Integration, Request-Reply Pull>>
-* **Internal Mendix queue in the receiving app** –  This allows for the quick reception of many messages without processing them all at once. Accordingly, this means that peaks in volume have less effect on the receiving app.
-* **For very high volumes, a Mendix input app can be used as a queue** – This liberates the receiving app from the peak loads in an even better way. Additionally, it allows the receiving app to be redeployed easily without effecting the message flow.
-* **External queues like Rabbit MQ can be used in distributed architectures** – A queue management system handles transport over network borders and longer distances, but it requires an extra element of maintenance.
-* **ESB and message brokers can act as queues with additional mapping and routing** – ESBs also do synchronous calls and can push messages forward. If there is an ESB available and it is centrally recommended, then it can be a good option.
-* **Kafka** – This queue option is the newest and originated at LinkedIn to distribute user posts between nodes and collect user metrics. For distributed, high-volume, resilient, many-to-many solutions, Kafka is the clear choice.
+1. **Internal Mendix queue inside the sending app** – This is the simplest solution. It allows for the sending process in app 1 to finish, even if the target system is not up. A synchronous call is used to pick up events from the source app (for details, see the [REST Pull Request–Reply to Transfer Data](service-integration#pull-transfer) section of *Service Integration*).
+2. **Internal Mendix queue in the receiving app** –  This allows for the quick reception of many messages without processing them all at once. Accordingly, this means that peaks in volume have less effect on the receiving app.
+3. **For very high volumes, a Mendix input app can be used as a queue** – This liberates the receiving app from the peak loads in an even better way. Additionally, it allows the receiving app to be redeployed easily without effecting the message flow.
+4. **External queues like Rabbit MQ can be used in distributed architectures** – A queue management system handles transport over network borders and longer distances, but it requires an extra element of maintenance.
+5. **Kafka** – This queue option is the newest and originated at LinkedIn to distribute user posts between nodes and collect user metrics. For distributed, high-volume, resilient, many-to-many solutions, Kafka is the clear choice.
+6. **ESB and message brokers can act as queues with additional mapping and routing** – ESBs also do synchronous calls and can push messages forward. If there is an ESB available and it is centrally recommended, then this can be a good option.
 
-The internal queues and the Mendix input app require only Mendix technology. This is a clear advantage for skills and operations. External queues, ESBs, and Kafka require a Mendix adapter from the [Mendix App Store](https://appstore.home.mendix.com/index3.html) and external infrastructure that needs to be deployed and maintained. If this infrastructure is already there and frequently used, the operational advantage of a pure Mendix solution is smaller. For more information, see [Integration Layers](integration-layers).
+The internal queues and the Mendix input app require only Mendix technology. This is a clear advantage for skills and operations. External queues, ESBs, and Kafka require a Mendix adapter from the [Mendix App Store](https://appstore.home.mendix.com/index3.html) in addition to external infrastructure that needs to be deployed and maintained. If this infrastructure is already there and frequently used, the operational advantage of a pure Mendix solution is smaller. For more information, see [Integration Layers](integration-layers).
 
-## 3 Good Examples of Event-Driven Integration
+## 3 Event-Driven Use Cases
 
-Always consider a synchronous request–reply as the standard option for integration, because it is the simplest and most robust way to integrate systems. It is easier to think about and easier to manage errors.
-
-This diagram presents some examples of when event-driven and/or external queueing systems make sense, with further descriptions below:
+This diagram presents some use cases for when an event-driven architecture makes sense::
 
 ![](attachments/event-integration/event-use-cases.png)
 
+* **Controlled delivery** – This example illustrates the case described in the [REST Pull to Transfer Data](service-integration#pull-transfer) section of *Service Integration*. A functional business event is created in the source, placed on an internal Mendix queue, and picked up by the destination app(s) via a synchronous call. In the metadata of the queue, you add a flag for each subscriber so that you know who picks up which event. This solution gives a controlled delivery of business events, because the entire integration is handled within the two apps. This is suitable when the two apps are close to each other on the network.
+* **Fire & forget** – One-way "fire-and-forget" communication means that you can afford to lose a message or two over time (for example, with stock tickers, IoT, logging messages, and non-vital notifications). It also means that the destination accepts all the messages as they are. For these cases, event-driven queueing is a good option. If there is already an ESB or Kafka in operation, any other queue manager can be used, like [Amazon Simple Queue Service](https://aws.amazon.com/sqs/), [MQTT](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-mqtt-support) on Azure, or [RabbitMQ](https://www.rabbitmq.com/) on any platform.
 * **Network distance** – Geographical distance or slow networks make direct communication unstable or even impossible. For these situations, an ESB or message broker with queueing capabilities are often good solutions, as they can bridge network issues with adapters in all regions and provide a communication line between all apps and systems. If the source needs to functionally know the status or receive errors (which is the most common situation), a second asynchronous "status" interface is built in the opposite direction. The Mendix Platform communicates with ESBs and message brokers using REST, SOAP, or an App Store component for specific queue-management formats.
 * **Massive volumes** – For extremely high and/or fluctuating volumes, or when there are hundreds of publishers and subscribers in a distributed network, Kafka is the most efficient solution. It provides incredible resilience and many exciting new event-streaming features. However, managing and maintaining Kafka does require expertise and tooling, so ideally, this operationalization is already done in your organization. Mendix can then easily connect as a standard Kafka client using the [Kafka Connector](https://appstore.home.mendix.com/link/app/67994/). 
-* **Fire & forget** – One-way "fire-and-forget" communication means that you can afford to lose a message or two over time (for example, with stock tickers, IoT, logging messages, and non-vital notifications). It also means that the destination accepts all messages as they are. For these cases, event driven queueing is a good option. If there is already an ESB or Kafka in operation, any other queue manager can be used, like [Amazon Simple Queue Service](https://aws.amazon.com/sqs/), [MQTT](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-mqtt-support) on Azure, or [RabbitMQ](https://www.rabbitmq.com/) on any platform.
-* **Controlled delivery** – This example involves the case described in the [REST Pull Request-Reply to Transfer Data](service-integration#pull-transfer) section of *Service Integration*. This is functionally a business event created in the source, placed on an internal Mendix queue, and picked up by the destination app(s) via a synchronous call. In the metadata of the queue, you add a flag for each subscriber so that you know who picks up which event. This is called the "controlled delivery" of business events, because the entire integration is handled within the two apps. This is suitable for usage when the two apps are close to each other on the network.
 
-## 4 Event Streams, IoT, Logging & Metrics
+## 4 Event Streams, IoT, Logging & Metrics {#stream-iot}
+
+IoT integration is starting an expected explosion of new IT that will be built alongside the current IT landscape. In the coming years, Mendix and Siemens will invest a lot into this area.
 
 ### 4.1 One-Way Communication
 
-The key to event-streams is that they only flow in one direction. A device leaving metrics in an IoT system does not expect an immediate answer to the data it ships. Additionally, there could be many devices that are geographically distributed and shipping a lot of data. Request–reply is neither needed nor practical for inbound IoT.
+The key to event streams is that they only flow in one direction. A device leaving metrics in an IoT system does not expect an immediate answer to the data it ships. Additionally, there could be many devices that are geographically distributed and shipping a lot of data. Request-reply is neither necessary nor practical for inbound IoT. Queues or Kafka are recommended for one-way communication (for example, the Azure IoT Hub is a service layer on top of MQTT queues).
 
-Big-data integration is only the beginning of an expected explosion of new IT that will be built alongside the current IT landscape. In the coming years, Mendix and Siemens will invest heavily in this area.
+### 4.2 Examples for IoT with Mendix
 
-### 4.2 IoT, MindSphere, Kafka
+Mendix often works as a dashboard for event streams and sometimes as the control center for devices and other connected items. Note that for commanding a drone or another device, the interface back to the device is sometimes synchronous. This diagram gives a schematic view of a potential Mendix integration where one app provides a dashboard and the other one is used to control a robot:
 
-IoT, Kafka, and other event-based architecture will play an important role in the coming years. Mendix is working to incorporate Kafka into the platform, and integration with MindSphere for IoT has been set up. The Mendix Platform also integrates directly to MQTT on the [Azure IoT Hub](https://azure.microsoft.com/en-us/services/iot-hub/), making it possible to aquire, process, store and display monitoring data directly in a Mendix app that is specifically built to view data and tune specific devices in factory situations.
+![](attachments/event-integration/ei-example.png)
 
-Mendix then often works as a dashboard for event streams and sometimes as the control center for devices and other connected items. Note that for commanding a drone or another device, the interface back to the device is sometimes synchronous. This diagram gives a schematic view of a potential Mendix integration where one app provides a dashboard and the other one is used to control a robot:
+The three cases shown in the diagram are described below:
 
-![](attachments/event-integration/schematic.png)
-
-Using Kafka is a relevant option for this case, especially when the Mendix app is located far away from the IoT implementation.
+1. **Quick** – Lightweight IoT is the case with a reasonable stream of data, where there is no need to process the incoming measurements before sending them to the Mendix Platform. Mendix then does most steps of the chain: data acquisition, data processing, data storage, and data display and management. The advantage here is that it is easy for business users to manage and change the IoT solution, so relatively costly cloud-based IoT data-processing units are no longer needed. In this example, Mendix polls the Azure Data Hub using REST to get the next sample of measurements (preferred), or requests events directly from MQTT queues.
+2. **Heavy** – Full-scale IoT is the case where massive amounts of data are collected, filtered, cached, and pre-processed using cloud components and/or Kafka components, for example. The Mendix Platform then receives a small filtered stream of data and adds functional value to the use of that data. This is usually done with a dashboard that displays the data and has easy-to-change rules.
+3. **Control** – A Mendix app can also act as a control app for devices and industrial machines, receiving measurements and sending commands back down. In this case, the commands are often synchronous calls back, but request–reply event integration is also common.
 
 ## 5 State Engines & Event Managers {#state}
 
-A good example of event-based processing occurs when a package sent by post takes longer to be delivered than anticipated and the receiver needs to find out where the package is, so they use a track-and-trace system. A track-and-trace system is fed by an event manager that gathers all the events in a chain and thus knows what has happened to the package and where it is in the process. 
+A good example of event-based processing occurs when a package sent by post takes longer to be delivered than anticipated and the receiver needs to find out where the package is, so they use a track & trace system. A track & trace system is fed by an event manager that gathers all the events in a chain and thus knows what has happened to the package and where it is in the process. 
 
 ![](attachments/event-integration/state.png)
 
 Theses processes have very high volumes and 99% straight-through processing. Furthermore, they involve a chain of systems, as is often the case in supply-chain and logistics solutions. Sometimes, the real world does not exactly match the data in the systems, and there can be many exceptions. 
 
-When one stage of the process finishes, the system pushes the event to a queue of some kind (for details, see [Using Queues with Mendix](#queues) below). The systems are decoupled, but an event manager or state engine is required to manage any errors in the process.
+When one stage of the process finishes, the system pushes the event to a queue of some kind (for details, see the [Using Queues with Mendix](#queues) section below). The systems are decoupled, but an event manager or state engine is required to manage any errors in the process.
 
 The event manager collects events from a number of systems, devices, and scanners that are part of the process. Then it puts together what the status is. 
 
 ## 6 Using Queues with Mendix {#queues}
 
-### 6.1 Using Internal Queues
+### 6.1 Using Internal Queues {#internal-queues}
 
 Mendix itself does not currently provide an external queue management system, so most organizations use Mendix internal queues instead. This means that there is only one technology used, fewer places to look for errors, and one fewer deployment point.
 

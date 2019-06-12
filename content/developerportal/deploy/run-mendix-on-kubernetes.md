@@ -205,7 +205,7 @@ spec:
         - name: mendix-app
           image: mendix/sample-app-kubernetes:v2
           ports:
-            - containerPort: 80
+            - containerPort: 8080
           volumeMounts:
             - mountPath: "/build/data/files"
               name: mendix-data
@@ -270,7 +270,7 @@ metadata:
   name: mendix-app-service
 spec:
   ports:
-  - port: 80
+  - port: 8080
     protocol: TCP
   selector:
     app: mendix-k8s

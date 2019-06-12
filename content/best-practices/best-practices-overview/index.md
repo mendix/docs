@@ -4,6 +4,8 @@ description: "Best practices overview."
 draft: true
 ---
 
+{{% todo %}}[**This doc needs attention for long-term vision on Best Practices. If only Architecture Best Practices or even Architecture > Integration will be published with long-term support, then this doc should be adjusted to reflect that content.**]{{% /todo %}}
+
 ## 1 Introduction 
 
 In the Mendix documentation landscape, the [Mendix Evaluation Guide](https://www.mendix.com/evaluation-guide/) provides a great overview of all the possibilities and features in the Mendix Platform, the [Mendix Reference Guide](/refguide/) explains the product in detail, and the [Mendix How-to's](/howto/) provide developers with instructions on how to do things in Mendix.
@@ -14,7 +16,7 @@ This documentation is written by Mendix employees, and sometimes it refers to re
 
 ### 1.1 About Best Practices
 
-Mendix Expert Best Practices will eventually be valuable for all the people that participate in the application lifecycle, from scoping and estimation to maintenance in production.
+The *Expert Best Practices* will eventually be valuable for all the people that participate in the application lifecycle, from scoping and estimation to maintenance in production.
 
 ![](attachments/overview1.png)
 
@@ -27,7 +29,7 @@ These best practices will be expanded on an ongoing basis to cover the following
 * [Architecture](../architecture/index)
 	* [Integration](../architecture/integration/integration-overview)
 	* [Performance](../architecture/performance/performance-overview)
-	* [Microservices](../architecture/performance/microservices-overview)
+	* [Microservices](../architecture/microservices/microservices-overview)
 	* Security
 	* CI/CD & test automation
 	* Monitoring & robustness

@@ -10,6 +10,13 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud V3, and other deploym
 
 ## 2019
 
+### June 6th, 2019
+
+#### App Store Improvements
+
+* We fixed the issue with selecting specific **Starter Apps** when creating a new app in Mendix Studio Pro (Desktop Modeler).
+* We fixed the problems with deep links for private apps.
+
 ### May 17th, 2019
 
 #### Fixes
@@ -818,7 +825,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 #### Fixes
 
-* A story in a completed sprint no longer disappears when you open the details view.
+* A story in a completed Sprint no longer disappears when you open the details view.
 * The Mendix Feedback Widget now supports reporting feedback from pages with very long URLs.
 
 ### June 21st, 2017
@@ -898,12 +905,12 @@ In some cases, you may still experience false positives for the runtime heartbea
 ### March 9th, 2017
 
 #### Improvements
-* We improved the performance of sprint completion. This should now take significantly less time.
+* We improved the performance of Sprint completion. This should now take significantly less time.
 * The App Store now shares the same navigation top bar, and it will therefore now be opened in the same tab.
 * We made various small styling improvements.
 
 #### Fixes
-* We fixed an issue in which completing a sprint from the **Stories** page wouldn't properly update the UI.
+* We fixed an issue in which completing a Sprint from the **Stories** page wouldn't properly update the UI.
 * The **getAccounts** call in the **UserManagementAPI** will now sort results consistently on **EmailAddress** when using limit/offset.
 
 ### February 21st, 2017

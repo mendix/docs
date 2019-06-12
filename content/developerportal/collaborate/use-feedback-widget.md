@@ -9,9 +9,9 @@ tags: ["collaboration", "feedback and collaboration", "widget", "developer porta
 
 ## 1 Introduction
 
-With Mendix, you can make use of the fully integrated feedback cycle functionality. Mendix supports enabling the end-user to provide feedback out of the box. This feedback is then reviewed, processed, and converted into actionable [user stories](../collaborate/stories).
+In Mendix you can allow the end-user to provide feedback out of the box. The feedback is fully integrated with the collaboration features of the Developer Portal. You can then review and process the feedback, and convert it into [user stories](../collaborate/stories) which you can use to improve your app.
 
-The [Mendix Feedback Widget](https://appstore.home.mendix.com/link/app/199/) enables you to collaborate more easily and quickly than ever before when developing an app project. With this widget, you can make use of the fully integrated Mendix app feedback cycle, access the editing capabilities in Mendix Studio, check out a mobile view of the app, and easily share the app via email.
+This collaboration is enabled by the [Mendix Feedback Widget](https://appstore.home.mendix.com/link/app/199/). With this widget, you can make use of the fully integrated Mendix app feedback, access the editing capabilities in Mendix Studio, check out a mobile view of the app, and easily share the app via email.
 
 ![](attachments/feedback/widget.png)
 
@@ -21,7 +21,7 @@ This how-to covers the Mendix Feedback Widget [version 6.0.0 and above](#above) 
 
 **This how-to will teach you how to do the following:**
 
-* Use the widget for leaving feedback on an app, editing an app, get a mobile view of an app, and sharing an app
+* Use a widget to leave feedback on an app, edit an app, get a mobile view of an app, and share an app
 * Add the widget to your app project
 * Configure the widget
 
@@ -29,7 +29,7 @@ This how-to covers the Mendix Feedback Widget [version 6.0.0 and above](#above) 
 
 Before starting this how-to, make sure you have completed the following prerequisite:
 
-* Create an app containing a working application model
+* Create an app containing an application model with no errors
 
 ## 3 Widget Version 6.0.0 & Above {#above}
 
@@ -41,7 +41,7 @@ This version of the Mendix Feedback can be used in a variety of ways, which are 
 
 #### 3.1.1 Submitting Feedback on an App
 
-When you click the **Feedback** icon, the platform first checks if you are signed in. If you are already signed in, you will be in **Feedback Mode** right away. If you are not signed in, you will need to either **Sign in to Mendix** or **Continue as a guest** to enter the feedback mode:
+When you click the **Feedback** icon, the platform first checks if you are signed in. If you are already signed in, you will be in **Feedback Mode** right away. If you are not signed in, you will need to either **Sign in to Mendix** or **Continue as a guest** to enter feedback mode:
 
 ![](attachments/feedback/feedback-mode.png)
 
@@ -49,9 +49,9 @@ Once you are in feedback mode, you can click anywhere on the screen to leave a c
 
 ![](attachments/feedback/add-comment.png)
 
-And voila! A screenshot is created automatically of the current page, which you can choose to attach to your feedback. After clicking **Send**, your feedback will go straight to the **Feedback** page of your app project in the Developer Portal. For more information, see [Feedback](index).
+And voila! A screenshot of the current page is created automatically, which you can choose to attach to your feedback. After clicking **Send**, your feedback will go straight to the **Feedback** page of the app project in the Developer Portal. For more information, see [Feedback](index).
 
-When you are done leaving feedback, you need to exit the feedback mode by clicking this button:
+When you have left your feedback, you need to exit the feedback mode by clicking this button:
 
 ![](attachments/feedback/exit.png)
 
@@ -107,9 +107,22 @@ To ensure you have the latest version of the widget included in your app, follow
 
 #### 3.2.2 Configuring the Widget
 
-You can configure the widget for certain actions in your app project (for example, to allow screenshots, to hide the Mendix logo, and to hide the **Share** button). All the properties are explained in the properties dialog box for the widget:
+All the configuration properties are explained on the various tabs of the properties dialog box for the widget:
 
 ![](attachments/feedback/widget-properties.png)
+
+The feedback feature requires the following properties to be set:
+
+* **Advanced** tab > **Feedback server location** – the URL of the Developer Portal server (usually `https://sprintr.home.mendix.com`)
+* **Project** tab > **App ID** – the unique identifier of your app project available in your app's [General](../settings/general-settings) settings in the Developer Portal
+
+In the properties, you can configure the widget for certain actions in your app project, for example:
+
+* **Project** tab > **Allow screenshots**
+* **Project** tab > **Hide Mendix logo**
+* **Collaboration** tab > **Share button**
+
+You can place the widget on any form in your app project, but it needs to be placed on only one form. If the user accesses that form, the widget will remain in the browser until the session is expired. This means you only need to place the widget on the home form. You can use this mechanism to limit the feedback to certain user roles as well. To do that, just place the widget on their home forms but not on the home form of other users.
 
 ## 4 Widget Version 5.1.3 & Below {#below}
 

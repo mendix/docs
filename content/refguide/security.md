@@ -1,7 +1,7 @@
 ---
 title: "Security"
-category: "App Modeling"
-tags: ["studio pro"]
+parent: "project-explorer"
+tags: ["studio pro", "security"]
 ---
 
 
@@ -31,7 +31,7 @@ See [User Roles](user-roles).
 
 Each module defines its own set of module roles and you only have to specify security within a module in terms of those module roles. An e-mail module maybe has two module roles, one for normal user and one for an administrator; other modules may have just one or more than two module roles depending on the requirements for those modules.
 
-See [Module Role](module-role).
+See [Module Role](module-security#module-role).
 
 A user role is a combination of module roles. A user that signs into the system gets the access rights of all of his or her user roles and indirectly to the module roles that are contained by those user roles.
 

@@ -64,8 +64,12 @@ Instructions for licensing apps are available in the [License Activation](https:
 ## 5 Local Testing{#localtesting}
 
 ### 5.1 Credentials 
+To get a valid MindSphere token locally, the SSO module supports two ways, which can be choosen with the constant *CredentialsType*:
+- Application Credentials: which is the default and recommended way
+- Service Credentials: which is the backup possibility when Application Credentials are not possible
 
-When you run your app locally, you will not be able to use SSO to get your credentials. You will be logged on as MxAdmin and will be presented with a login screen either when the app starts, or the first time that your app attempts to retrieve your access token, depending on the value of the constant *AskForAppCredsOnStartUp*.
+#### 5.1.2 Application Credentials
+When you run your app locally, you will not be able to use SSO to get your credentials. You will be logged on as MxAdmin and will be presented with a login screen either when the app starts, or the first time that your app attempts to retrieve your access token, depending on the value of the constant *AskFoCredentialsOnStartUp*.
 
 {{% image_container width="50%" %}}![](attachments/mindsphere-development-considerations/image19.png){{% /image_container %}}
 
@@ -97,7 +101,14 @@ To ensure that the correct application credentials are requested, you have to se
 
 ![](attachments/mindsphere-development-considerations/image23.png)
 
-**AskForAppCredsOnStartUp**
+#### 5.1.2 Service Credentials
+Similar to the Application Credentials you can choose the option Service Credentials. As with the Application Credentials a login screen will be open asking for the **Credentials ID** and the **Password**.
+Service Credentials can be requested via a service request by the Global Technical Access Center GTAC. More information can be found [here].(https://developer.mindsphere.io/howto/howto-selfhosted-api-access.html#creating-service-credentials).
+
+
+### 5.2 Configuration 
+
+**AskForCredentialsOnStartUp**
 
 Set this to *True* if you want your app to ask for credentials as soon as it starts up, before the first page is displayed. If this is set to *False* then the app will ask for credentials the first time that it attempts to retrieve your access token.
 

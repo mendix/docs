@@ -1,7 +1,7 @@
 ---
 title: "Install & Configure the SMTP Email Module"
-category: "Extensibility"
-menu_order: 6
+category: "Integration"
+menu_order: 42
 tags: ["extensibility", "smtp", "email"]
 ---
 
@@ -160,6 +160,5 @@ The SMTP email module contains a number of other powerful tools. Some of the enh
 
 ## 7 Read More
 
-* [Use Connectors & Adapters](use-connectors-and-adapters)
-* [Access a Samba Share from the MxCloud](access-a-samba-share-from-the-mxcloud)
-* [Visualize Data Using the ChartsJS Module](visualize-data-using-the-chartsjs-module)
+* [Use Connectors & Adapters](/howto/extensibility/use-connectors-and-adapters)
+* [Access a Samba Share from the MxCloud](/howto/integration/access-a-samba-share-from-the-mxcloud)

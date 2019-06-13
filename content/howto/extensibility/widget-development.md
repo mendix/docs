@@ -1,5 +1,7 @@
 ---
-title: "Custom Widgets"
+title: "Make Custom Widgets"
+category: "Extensibility"
+menu_order: 20
 tags: ["widget", "develop widget", "customize"]
 ---
 
@@ -80,3 +82,4 @@ Within the Mendix Community of developers, there are plenty of widget developers
 ## 5 Main Documents in This Category
 
 * [Add a Preview Image for a Custom Widget](add-a-preview-image-for-custom-widget)
+* [Use XML in Widget Development](use-xml-widget)

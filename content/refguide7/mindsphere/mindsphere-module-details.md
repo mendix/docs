@@ -31,13 +31,13 @@ Please ensure that you also download the **latest version** of the MindSphere Th
 
 #### 2.1.1 LocalDevelopment
 
-These constants are only needed for local development and testing. For details of what needs to be put into the constants in the *LocalDevelopment* folder, please see [Local Testing](/refguide7/mindsphere/mindsphere-development-considerations#localtesting) in *MindSphere Development Considerations*.
+These constants are only needed for local development and testing. For details of what needs to be put into the constants in the *LocalDevelopment* folder, please see [Local Testing](/refguide/mindsphere/mindsphere-development-considerations#localtesting) in *MindSphere Development Considerations*.
 
 #### 2.1.2 CockpitApplicationName
 
 This is the name of your app as registered in the MindSphere developer portal. See [Running a Cloud Foundry-Hosted Application](https://developer.mindsphere.io/howto/howto-cf-running-app.html#configure-the-application-via-the-developer-cockpit) for more information.
 
-#### 2.1.3 MindGateURL
+#### 2.1.3 MindSphereGatewayURL
 
 This is the base URL for all requests to MindSphere APIs. For example, the URL for MindSphere on AWS PROD is `https://gateway.eu1.mindsphere.io`.
 
@@ -91,7 +91,7 @@ In addition, MindSphere SSO will identify whether the current user is a subtenan
 If the same user logs in using a different tenant, Mendix will treat this as a different user and a User ID will be used within Mendix instead of a user name. 
 {{% /alert %}}
 
-For advice on how to make your apps multi-tenant, see [Multi-Tenancy](/refguide7/mindsphere/mindsphere-development-considerations#multitenancy) in *MindSphere Development Considerations*.
+For advice on how to make your apps multi-tenant, see [Multi-Tenancy](/refguide/mindsphere/mindsphere-development-considerations#multitenancy) in *MindSphere Development Considerations*.
 
 ### 2.3 Roles & Scopes{#rolesscopes}
 
@@ -163,7 +163,7 @@ More information on the structure and content of this JSON object, together with
 
 ### 4.1 Atlas UI Theme
 
-See also section [MindSphere Icons](/refguide7/mindsphere/mindsphere-development-considerations#atlasui) of *MindSphere Development Considerations* for a discussion about adding icons from the MindSphere Atlas UI Theme.
+See also section [MindSphere Icons](/refguide/mindsphere/mindsphere-development-considerations#atlasui) of *MindSphere Development Considerations* for a discussion about adding icons from the MindSphere Atlas UI Theme.
 
 ### 4.2 index.html Changes{#indexhtmlchanges}
 
@@ -195,7 +195,7 @@ This is the general *permission denied* page, and will be shown if your app is c
 
 ### 4.5  No Authorization Information Found Page
 
-The *No Authorization Information Found* page (NoJWT.html) will be shown if your app is called without a valid token. This happens when the app URL is called directly and not via MindGate (launchpad). For example, if you have a self-hosted, or Mendix Cloud, deployment. The SSO module expects to find this MindSphere-compliant file as error_page/NoJWT.html within your ‘Theme’ folder.
+The *No Authorization Information Found* page (NoJWT.html) will be shown if your app is called without a valid token. This happens when the app URL is called directly and not via the MindSphere Gateway (launchpad). For example, if you have a self-hosted, or Mendix Cloud, deployment. The SSO module expects to find this MindSphere-compliant file as error_page/NoJWT.html within your ‘Theme’ folder.
 
 ### 4.6  CockpitApplicationName Not Found in the Provided Authorization Information Page
 
@@ -211,58 +211,13 @@ The index.html file is located in the /theme folder of your app project.
 
 You will only have to make the changes below if you are configuring your existing Mendix app manually, without importing the MindSphere Theme Pack.
 
-#### 5.1.1 OS Bar
+#### 5.1.1 XSRF
 
-For the OS Bar to work correctly in your Mendix app, the following script has to be added within the `<head>` tags of index.html. Please note the comments in the code regarding the order in which things need to be done if you are inserting this manually.
-
-{{% alert type="info" %}}
-*dojoConfig* and the call to load *mxui.js* must also be removed from their original positions in the file.
-{{% /alert %}}
+In index.html, in the header before the line `{{themecss}}`, the following script needs to be included in the file.
 
 ```javascript
 <script>
-	// MindSphere specific part-1: OS Bar related code
-	(function(d1, script1) {
-		script1 = d1.createElement('script');
-		script1.type = 'text/javascript';
-		script1.async = true;
-		script1.onload = function() {
-			_mdsp.init({
-				appId : 'content',
-				appInfoPath : "/rest/os-bar/v1/config",
-				initialize : true
-			});
-
-			// dojoConfig needs to be defined before loading mxui.js
-			dojoConfig = {
-				isDebug: false,
-				baseUrl: "mxclientsystem/dojo/",
-				cacheBust : "{{cachebust}}",
-				rtlRedirect: "index-rtl.html"
-			};
-			
-			// make sure that the mxui.js is loaded after osbar/v4/js/main.min.js to prevent problems with the height calculation of some elements
-			(function(d2, script2) {
-				script2 = d2.createElement('script');
-				script2.src = 'mxclientsystem/mxui/mxui.js?{{cachebust}}';
-				script2.async = true;
-				d2.getElementsByTagName('body')[0].appendChild(script2);
-			}(document));
-		};
-		script1.src = 'https://static.eu1.mindsphere.io/osbar/v4/js/main.min.js';
-		d1.getElementsByTagName('head')[0].appendChild(script1);
-	}(document));
-	// MindSphere specific part-1: ends
-</script>
-```
-
-#### 5.1.2 XSRF
-
-In index.html, after the line `<div id="content"></div>`, the following script needs to be included in the file.
-
-```javascript
-<script>
-	// MindSphere specific part-2: We have to use the XSRF-TOKEN on fetch requests.
+	// MindSphere specific part-1: We have to use the XSRF-TOKEN on fetch requests.
 	// This script should placed before "mxui.js" as this script makes the fetch requests
 	(function() {
 		// Read cookie below
@@ -284,43 +239,115 @@ In index.html, after the line `<div id="content"></div>`, the following script n
 				if (!init.headers) {
 					init.headers = new Headers();
 				}
-				init.headers.set("x-xsrf-token", xrsfToken);
+				var tokenAvailable = init.headers.get("x-xsrf-token");
+
+				if (!tokenAvailable) {
+					init.headers.set("x-xsrf-token", xrsfToken);
+				}
 				return originalFetch(url, init);
 			}
 		}
+
 		var originalXMLHttpRequest = window.XMLHttpRequest;
 		window.XMLHttpRequest = function() {
 			var result = new originalXMLHttpRequest(arguments);
+
+			// overwrite setRequestHeader function to make sure to set the x-xsrf-token only once
+			result.setRequestHeader = function(header, value) {
+				if (header){
+					if (header.toLowerCase().indexOf("x-xsrf-token") !== -1) {
+						if (this.xsfrTokenSet === true) {
+							// token is already in place -> so do nothing
+							return;
+						}
+						this.xsfrTokenSet = true;
+					}
+				}
+				originalXMLHttpRequest.prototype.setRequestHeader
+						.apply(this, arguments);
+			};
+
+			// overwrite open function to make sure to set the x-xsrf-token at least once
 			result.open = function() {
 				originalXMLHttpRequest.prototype.open
 						.apply(this, arguments);
+
 				this.setRequestHeader("x-xsrf-token", xrsfToken);
-			}
+			};
 			return result;
 		};
 	})();
-	// MindSphere specific part-2: ends
+	// MindSphere specific part-1: ends
 </script>
 ```
 
-#### 5.1.3 SSO
+#### 5.1.2 SSO
 
 To allow SSO, the usual login.html needs to be replaced with a different file (mindspherelogin.html).
 
-Replace the following lines:
+Delete the following lines:
 ```javascript
 if (\!document.cookie || \!document.cookie.match(/(^|;)originURI=/gi))
 document.cookie = "originURI=/login.html";
 ```
-with these lines:
+and directly after the script of the X-XRSR put the following script
 ```javascript
-if (!document.cookie || !document.cookie.match(/(^|;)originURI=/gi))
-		document.cookie = "originURI=/mindspherelogin.html?{{cachebust}}";
+<script>	
+	// MindSphere specific part-2: Use the MindSphereLogin.html to prevent the Gateway taking over login.html and perform SSO
+	// Always set originURI Cookie.
+	document.cookie = "originURI=/mindspherelogin.html";
+	// MindSphere specific part-2: ends
+</script>
 ```
 
 {{% alert type="info" %}}
 If mindspherelogin.html does not exist in your /theme folder, you will have to create it. See the [mindspherelogin.html](#mindspherelogin) section, below.
 {{% /alert %}}
+
+#### 5.1.3 OS Bar
+
+For the OS Bar to work correctly in your Mendix app, the following script has to be added after the just added SSO script. Please note the comments in the code regarding the order in which things need to be done if you are inserting this manually.
+
+{{% alert type="info" %}}
+*dojoConfig* and the call to load *mxui.js* must also be removed from their original positions in the file.
+{{% /alert %}}
+
+```javascript
+<script>	
+	// MindSphere specific part-3: OS Bar related code
+	(function(d1, script1) {
+		script1 = d1.createElement('script');
+		script1.type = 'text/javascript';
+		script1.async = true;
+		script1.onload = function() {
+			_mdsp.init({
+				appId : 'content',
+				appInfoPath : "/rest/os-bar/v1/config",
+				initialize : true
+			});
+
+			// dojoConfig needs to be defined before loading mxui.js
+			dojoConfig = {
+				isDebug : false,
+				baseUrl : "mxclientsystem/dojo/",
+				cacheBust : "{{cachebust}}",
+				rtlRedirect : "index-rtl.html"
+			};
+
+			// make sure that the mxui.js is loaded after osbar/v4/js/main.min.js to prevent problems with the height calculation of some elements
+			(function(d2, script2) {
+				script2 = d2.createElement('script');
+				script2.src = 'mxclientsystem/mxui/mxui.js?{{cachebust}}';
+				script2.async = true;
+				d2.getElementsByTagName('body')[0].appendChild(script2);
+			}(document));
+		};
+		script1.src = 'https://static.eu1.mindsphere.io/osbar/v4/js/main.min.js';
+		d1.getElementsByTagName('head')[0].appendChild(script1);
+	}(document));
+	// MindSphere specific part-3: ends
+</script>
+```
 
 ### 5.2 mindspherelogin.html{#mindspherelogin}
 
@@ -334,10 +361,10 @@ You will only have to create a `mindspherelogin.html` file with the following co
 <!doctype html>
 <html>
 <head>
-  <title>MindSphere Login SSO redirection</title>
-  <script>
-    window.location.assign("/sso/?{{cachebust}}")
-  </script>
+<title>MindSphere Login SSO redirection</title>
+<script>
+	window.location.assign("/sso" + window.location.search)
+</script>
 </head>
 </html>
 ```

@@ -73,7 +73,7 @@ Test case result:
 * If the test case can not be started  => Not Executed
 * If the test case fails in a setup step => Not Executed
 * If the test case fails in a regular step => Failed
-* If the test case fails in a teardown step => Passed and the warning flag is set
+* If the test case fails in a teardown step => Result is kept (passed/failed) and a warning flag is set
 * Otherwise => Passed
 
 The rules are applied in order, the first one that matches wins.

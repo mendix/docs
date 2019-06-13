@@ -1,7 +1,6 @@
 ---
 title: "Mendix Cloud HTTP Request Headers"
-category: "Deployment"
-parent: mendix-cloud-deploy
+parent: "mendix-cloud-deploy"
 menu_order: 36
 description: "Describes which HTTP request headers are available in the Mendix Cloud."
 tags: ["Deploy", "Mendix Cloud", "headers"]
@@ -9,20 +8,19 @@ tags: ["Deploy", "Mendix Cloud", "headers"]
 
 ## 1 Introduction
 
-All applications running in the Mendix Cloud are accessed using the HTTPS protocol. Using this HTTPS protocol, a lot of individual requests are sent to the application. Examples of these requests are "execute this XPath request", "execute this Microflow", or "please provide the layout of some specific page".
+All applications running in the Mendix Cloud are accessed using the HTTPS protocol. Using this HTTPS protocol, a lot of individual requests are sent to the application. Examples of these requests are "execute this XPath request", "execute this Microflow", or "please provide the layout of this page".
 
 ## 2 HTTP Request Headers
 
-Besides these instructions, every request also contains additional information, the request headers. Examples of information available in these headers are the IP address from wich the request originates, and the type of web browser or other HTTP client used.
+Besides these instructions, every request also contains additional information: the request headers. Examples of information available in these headers are the IP address from which the request originates, and the type of web browser or other HTTP client used.
 
-Most of the request headers are added by the HTTP client (e.g. the web browser), and simply let through by the Mendix Cloud. However, some of the request headers are inserted by the Mendix Cloud itself in the phase between receiving the request and handing it over to the actual application process.
+Most of the request headers are added by the HTTP client (the web browser, for example), and simply let through by the Mendix Cloud. However, some of the request headers are inserted by the Mendix Cloud itself between receiving the request and handing it over to the actual application process.
 
-Using custom Java code in the application, the full content of an incoming
-request can be inspected.
+Using custom Java code in the application, the full content of an incoming request can be inspected.
 
 ### 2.1 Usually available request headers set by the HTTP client
 
-The following headers are usually set by the HTTP client. The Mendix Cloud does not touch the value of these headers. This also means that in some cases, if the HTTP client does not set them, they might not be available.
+The following headers are usually set by the HTTP client. The Mendix Cloud does not touch the value of these headers. This also means that if the HTTP client does not set them they might not be available.
 
 | Header name                                 | Example value(s)                                             | Description |
 | ------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -50,6 +48,6 @@ The following headers are set by the Mendix Cloud, but are deprecated and will b
 
 Deprecating and removing a request header is a process consisting of several stages:
 
-* Stage 1: Deprecation. The dates on which stage 2 and 3 will be executed are communicated. The announcement will be documented in the Mendix Cloud Release Notes document.
-* Stage 2: Invalidation. The header value will be forced to an invalid value. All running customer applications that still rely on this header and are not changed yet will experience problems.
+* Stage 1: Deprecation. The dates on which stage 2 and 3 will be executed are communicated. The announcement will be documented in the [Mendix Developer Portal Release Notes](/releasenotes/developer-portal/) document.
+* Stage 2: Invalidation. The header value will be forced to an invalid value. All running customer applications that still rely on this header will experience problems.
 * Stage 3: Removal. The header is not set or overwritten by the Mendix Cloud any more. This also means that any value for it can now be set by the HTTP client.

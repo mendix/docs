@@ -5,9 +5,11 @@ parent: "rg-version-2"
 
 ## 1 CI/CD API
 
-With the CI/CD API you easily integrate ATS into your automated deployment workflow. You run a test according to predefined templates or you could retrieve the status of already finished tests. For more information on how to integrate ATS into your CI/CD workflow read the [How-To ATS CI/CD](/ats/howtos/ht-version-2/ats-and-ci-cd-2).
+With the CI/CD API, you can easily integrate ATS into your automated deployment workflow. You can run a test according to predefined templates, or you can retrieve the status of already finished tests. For more information on how to integrate ATS into your CI/CD workflow, see the [How to Use ATS in Combination with CI/CD](/ats/howtos/ht-version-2/ats-and-ci-cd-2).
 
-**IMPORTANT (for On-Premises)**: To use the CI/CD API you need a special webservice user, which ATS uses for authentication. Please contact support if you are having problems with this.
+{{% alert type="warning" %}}
+**For on-premises implementations** – to use the CI/CD API, you need a special web service user, which ATS uses for authentication. Please contact support if you are having problems with this.
+{{% /alert %}}
 
 ## 2 CI/CD Templates
 
@@ -41,7 +43,9 @@ For supported Selenium hubs, like Browserstack, further options are available. F
 
 The ATS CI/CD API is based on the SOAP webservice protocol. Currently there are two services available, **Run Job** and **Get Job Status**. The following sections show the structures of the request-and-response messages of these services.
 
-**IMPORTANT:** SOAP is an ordered protocol so all fields must appear in the exact order as they are given here.
+{{% alert type="warning" %}}
+SOAP is an ordered protocol, so all the fields must appear in the exact order as they are given here.
+{{% /alert %}}
 
 ### 3.1 Run Job
 

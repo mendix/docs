@@ -195,7 +195,7 @@ This is the general *permission denied* page, and will be shown if your app is c
 
 ### 4.5  No Authorization Information Found Page
 
-The *No Authorization Information Found* page (NoJWT.html) will be shown if your app is called without a valid token. This happens when the app URL is called directly and not via MindSphere Gateway (launchpad). For example, if you have a self-hosted, or Mendix Cloud, deployment. The SSO module expects to find this MindSphere-compliant file as error_page/NoJWT.html within your ‘Theme’ folder.
+The *No Authorization Information Found* page (NoJWT.html) will be shown if your app is called without a valid token. This happens when the app URL is called directly and not via the MindSphere Gateway (launchpad). For example, if you have a self-hosted, or Mendix Cloud, deployment. The SSO module expects to find this MindSphere-compliant file as error_page/NoJWT.html within your ‘Theme’ folder.
 
 ### 4.6  CockpitApplicationName Not Found in the Provided Authorization Information Page
 

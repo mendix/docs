@@ -11,10 +11,11 @@ One of the strengths of Mendix is that it is easy to connect your Mendix applica
 ## 2 Main Documents in This Category
 
 * [Building Pluggable Widgets](pluggable-widgets)
+* [Make Custom Widgets](widget-development)
+* [Implement Best Practices for JavaScript Actions](best-practices-javascript-actions)
 * [Make JavaScript Actions](build-javascript-actions)
-* [Use the Charts Widgets](charts-tutorials)
+* [Use Connectors & Adapters](use-connectors-and-adapters)
 * [Get Started with the TimeSeries Connector](get-started-with-the-timeseries-connector)
 * [Build Microflow Actions Using the Mendix Connector Kit](howto-connector-kit)
 * [Use Mendix DataStorage APIs to Build Reusable Microflow Actions](howto-datastorage-api)
-* [Use Connectors & Adapters](use-connectors-and-adapters)
-* [Make Custom Widgets](widget-development)
+

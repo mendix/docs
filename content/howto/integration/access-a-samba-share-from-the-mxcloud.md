@@ -1,7 +1,7 @@
 ---
 title: "Access a Samba Share"
-category: "Extensibility"
-menu_order: 10
+category: "Integration"
+menu_order: 11
 tags: ["Samba", "share"]
 ---
 
@@ -72,5 +72,4 @@ For more details on all the properties, see here: [http://jcifs.samba.org/src/do
 
 ## 5 Read More
 
-* [Use Connectors and Adapters](use-connectors-and-adapters)
-* [Access a Samba Share from the MxCloud](access-a-samba-share-from-the-mxcloud)
+* [Use Connectors and Adapters](/howto/extensibility/use-connectors-and-adapters)

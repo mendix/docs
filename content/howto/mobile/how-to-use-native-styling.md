@@ -13,7 +13,7 @@ With Mendix 8, you have the capacity to alter design properties with Mendix Stud
 ## 2 Prerequisites 
 
 * Install an integrated development environment (IDE) of your choice (Mendix recommends [Microsoft Visual Studio Code](https://code.visualstudio.com/))
-* Create a Mendix app based on the Quickstarter App template by following the [Creating a New Project Based on the Quickstart App](getting-started-with-native-mobile#quickstartapp) section of *Create and Test a Native Mobile App*
+* Create a Mendix app based on the Quickstarter App template by following the [Creating a New Project Based on the Quickstart App](getting-started-with-native-mobile#quickstartapp) section of *Get Started with Native Mobile*
 
 ### 3 Customizing the Quickstart App
 
@@ -187,4 +187,4 @@ Congratulations! By completing this how-to, you have learned how to alter a styl
 * [Implement Native Styling](native-styling)
 * [Native Styling](/refguide/native-styling-refguide)
 * [Mendix Atlas UI](../front-end/atlas-ui)
-* [Create and Test a Native Mobile App](getting-started-with-native-mobile)
+* [Get Started with Native Mobile](getting-started-with-native-mobile)

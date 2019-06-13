@@ -1,7 +1,7 @@
 ---
 title: "Use Connectors & Adapters"
 category: "Extensibility"
-menu_order: 7
+menu_order: 50
 tags: ["extensibility", "connector", "adapter", "extensibility"]
 ---
 
@@ -147,4 +147,4 @@ You can now add Google Analytics-tracking to your Mendix application! This widge
 
 ## 19 Read More
 
-* [Access a Samba Share from the MxCloud](access-a-samba-share-from-the-mxcloud)
+* [Access a Samba Share from the MxCloud](/howto/integration/access-a-samba-share-from-the-mxcloud)

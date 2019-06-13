@@ -73,7 +73,7 @@ To configure a Charts widget with a dynamic series, follow these steps:
     ![Chart Series](attachments/charts/charts-series.png)
 
 1. In the tab **Data source**, select **Dynamic**.
-    
+   
 1. Set the **Data entity** to *Value*. This is the entity from which the data values will be retrieved.
 
 1. Set the **Data source** as **Database** (note that REST endpoints are not supported for dynamic series).
@@ -116,5 +116,5 @@ To view the chart, follow these steps:
 ## 6 Read More
 
 * [Create a Basic Chart](charts-basic-create)
-* [Fine_Tune a Chart with Advance Ssettings](charts-advanced-tuning)
+* [Fine_Tune a Chart with Advance Settings](charts-advanced-tuning)
 * [Use Any Chart](charts-any-usage)

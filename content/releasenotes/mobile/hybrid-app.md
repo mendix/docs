@@ -3,7 +3,7 @@ title: "Hybrid App Base & Template"
 category: "Mobile Products"
 menu_order: 10
 toc-level: 1
-description: "Hybrid App release notes."
+description: "Mendix Hybrid App Base & Hybrid App Template release notes."
 ---
 
 The version numbers for each release below refer to the [Hybrid App Base](https://github.com/mendix/hybrid-app-base) and [Hybrid App Template](https://github.com/mendix/hybrid-app-template) packages, respectively. If you are building your hybrid mobile app using the regular PhoneGap Build approach from within the Mendix Developer Portal, you do not need to worry about these numbers. Downloading and building a new package will set you up with the latest version.

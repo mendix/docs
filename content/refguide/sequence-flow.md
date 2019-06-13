@@ -1,7 +1,7 @@
 ---
 title: "Sequence Flow"
 parent: "common-elements"
-tags: ["studio pro"]
+tags: ["studio pro", "condition value", "microflow"]
 ---
 
 ## 1 Introduction

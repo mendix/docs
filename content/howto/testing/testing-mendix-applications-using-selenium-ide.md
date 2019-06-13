@@ -1,5 +1,5 @@
 ---
-title: "Test Mendix Applications Using Selenium IDE"
+title: "Test a Mendix App with a Simple IDE Script"
 category: "Testing"
 menu_order: 40
 tags: ["test", "testing", "selenium"]
@@ -11,7 +11,7 @@ Selenium IDE is a Firefox plugin that records and plays back user interactions w
 
 **After using this how-to, you will know how to do the following:**
 
-* Record test scripts with Selenium IDE
+* Record a simple test scripts with Selenium IDE
 * Find unique CSS selectors
 
 ## 2 Prerequisites
@@ -49,8 +49,7 @@ Follow these steps to install and run the Company Expenses app:
 
 	![](attachments/selenium/download.png)
 
-5. Click **Run Locally** (F5).
-6. Click **View** (F9).
+5. Click **Run Locally** then **View**.
 
 ## 4 Create Your First Automated Test
 
@@ -64,70 +63,69 @@ To create an automated test by using the record button in Selenium IDE, follow t
 
 	![](attachments/selenium/sel-menu.png)
 
-3.  Enter a name for your new Selenium project (for example, *CompanyExpenses*).
-4.  Enter the URL for your Company Expenses app (`http://localhost:8080/index.html`), then click **START RECORDING**. This will open up your app in a new browser window. The Selenium IDE is now recording.
+3. Enter a name for your new Selenium project (for example, *CompanyExpenses*).
+4. Enter the URL for your Company Expenses app's login screen (`http://localhost:8080/login.html`), then click **START RECORDING**. This will open up your app in a new browser window. The Selenium IDE is now recording.
+5.  Log in with default [administrator credentials](/refguide/administrator#2-administrator-properties): 
+	* **User name**: MxAdmin
+	* **Password**: 1
+	
+6.  After you logged in, click **Sign out** on the right side of the app:
 
+	![](attachments/selenium/sign-out.png)
 
+7.  In the Selenium IDE, click the record icon to stop recording: 
 
+  ![](attachments/selenium/record.png)
 
+8.  Enter a name for your new test, (for example, *Test1*). The Selenium IDE should now look like this:
 
+  ![](attachments/selenium/after-test.png)
 
+7.  Now that you have a test, click the **Run current test** icon:
 
-
-# OLD
-
-5. Enter the following login details on the Mendix login screen:
-
-	* **User name** – Mxadmin
-	* **Password** – 1
-
-	![](attachments/selenium/18580279.png)
-
-4. Click **Sign in**.
-5. Click **Sign out**.
-6.  Click record icon in Selenium IDE:
-
-	![](attachments/selenium/18580302.png)
-
-	Selenium IDE should look like this:
-
-	![](attachments/selenium/18580281.png)
-
-7.  Click the "run current test case" icon:
-
-	![](attachments/selenium/18580303.png)
+	![](attachments/selenium/run-current-test.png)
 
 	Every passed test step will be marked green:
 
-	![](attachments/selenium/18580278.png)
+	![](attachments/selenium/green-test.png)
 
 Well done! You have just created your first automated test!
 
-### 4.1 Locate the Element Using Developer Tools
+## 5 Read More
+
+* [Automated Tests with TestNG](create-automated-tests-with-testng)
+* [Test Microflows Using the UnitTesting Module](testing-microflows-using-the-unittesting-module)
+* [Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
+* [Clear Warning Messages in Mendix](../monitoring-troubleshooting/clear-warning-messages)
+* [Test Web Services Using SoapUI](testing-web-services-using-soapui)
+* [Monitor Mendix Using JMX](../monitoring-troubleshooting/monitoring-mendix-using-jmx)
+
+Learn more about this topic using the following helpful link:
+
+* [Selenium IDE Documentation](http://docs.seleniumhq.org/docs/02_selenium_ide.jsp)
+
+# OLD
+
+## Locating  the Element Using Developer Tools (Second Automated Test)
 
 Selenium IDE can be used to record tests scripts, but these scripts usually need to be edited before you can use them (for example, HTML tag IDs are generated dynamically and will be different with each run of the same page). 
 
-You need to find the right locator, which will tell Selenium IDE which GUI elements (for example, buttons, text boxes, and data grids) it needs to operate on. To make it easier to create a locator for Mendix elements, `mx-name` is added to the class of an element. When the position of an element in the form changes, there is no need to rewrite the script.
+You need to find the right locator, which will tell Selenium IDE the GUI elements (for example, buttons, text boxes, and data grids) on which it needs to operate. To make it easier to create a locator for Mendix elements, `mx-name` is added to the class of an element. When the position of an element in the form changes, there is no need to rewrite the script.
 
-1. Press <kbd>CTRL</kbd> + <kbd>N</kbd> to create a new test case in Selenium IDE.
+1. In the Selenium IDE, click the plus symbol next to **Tests** to create a new test, and enter a name for the test.
 2. Click the record icon.
-3.  Enter the following login details on the Mendix login screen:
-
-	* **User name** – Mxadmin
-	* **Password** – 1
-
-4. Click **Sign in**.
-5. Click the **Expenses** tab.
+3. Open `http://localhost:8080/login.html` in your browser and log in with the same default administrator credentials you used above.
+4. Once you are logged in, click the **Expenses** tab.
 6. Click **New Expense**.
 7. Enter *1* in the **Amount** field.
 8.  Select **Accomodation** in the **Description** box:
 
-	![](attachments/selenium/18580273.png)
+	![](attachments/selenium/new-expense.png)
 
 9. Click **Save**.
 10. Click **Sign out**.
-11. Click the record icon in Selenium IDE to stop recording.
-12. Click **Run current test case**. The test will fail because it can not find the element with the target `id=mxui_widget_NumberInput_1_input`.
+11. In the Selenium IDE, click the record icon to stop recording: 
+12. click the **Run current test** icon. The test will fail because it can not find the element with the target `id=mxui_widget_NumberInput_1_input`.
 
 	![](attachments/selenium/18580299.png)
 
@@ -170,73 +168,3 @@ Congratulations! You have just created your second automated test.
 Some widgets, like a grid or a list view, can show multiple items. Every item has the CSS class `mx-name-index-[indexNumber].` The index number starts at 0.
 {{% /alert %}}
 
-### 4.2 Installing the Selenium Mendix Locator Builder Plugin
-
-Manually editing a lot of test steps is time-consuming, so Marcel Groenweg created a Selenium plugin for Mendix test recording. When you add the plugin to Selenium IDE, the test steps will have `mx-name-` CSS selectors rather than the Selenium default. It will also look for parent grids and list views and will add selectors to get the correct row by its index. This reduces the time spent on editing the test steps.
-
-To install the Selenium Mendix Locator Builder plugin, follow these steps:
-
-1. Go to [https://github.com/mgroeneweg/SeleniumMendixLocatorBuilder](https://github.com/mgroeneweg/SeleniumMendixLocatorBuilder).
-2.  Click **Download ZIP**:
-
-	![](attachments/selenium/18580277.png)
-
-3. Unzip `SeleniumMendixLocatorBuilder-master.zip` and open Selenium IDE.
-4. Go to **Options** > **Options**.
-5. Click **Browse** to select a Selenium IDE extension.
-6. Select **MendixNameLocatorBuilder.js** from the extracted folder.
-7. Click **Open** and then click **OK**.
-8. Restart Selenium IDE.
-9. Click **Options** > **Options**.
-10. Select the **Locator Builders** tab.
-11. Drag **css:MendixName** to the top.
-12. Restart Selenium IDE.
-
-Now the test steps will have `mx-name-` CSS selectors rather than the Selenium default.
-
-### 4.3 Creating an Automated Test with the Selenium Mendix Locator Builder Plugin
-
-1. Open **Selenium IDE**.
-2.  Enter the following login details on the Mendix login screen:
-
-	* **User name** – Mxadmin
-	* **Password** – 1
-
-3. Click **Sign in**.
-4. Select the **Expenses** tab.
-5. Click **New Expense**.
-6. Enter *1* in the **Amount** field.
-7.  Select **Accomodation** in the **Description** box:
-
-	![](attachments/selenium/18580274.png)
-  
-8. Click **Save**.
-9. Click **Sign out**.
-10. Click the record icon in Selenium IDE to stop recording.
-11. Click **Run current test case**. The test will fail because it can not find the element with the target `css=.mx-window-active .mx-name-textBox6 input`. The element can't be found, because the page with the element has not been loaded yet.
-
-	![](attachments/selenium/18580276.png)
-
-12. Switch the speed control to slow. The speed control determines how fast your test script runs. By default, the speed control is set to the maximum speed. When the test runs too fast, it is possible that the test starts asserting for an element on the page even before the page is fully loaded by the browser. Try to run your test script as fast as possible.
-
-	![](attachments/selenium/18580284.png)
-
-13. Click **Run current test case**. The test will pass.
-
-	![](attachments/selenium/18580275.png)
-
-## 5 Read More
-
-* [Automated Tests with TestNG](create-automated-tests-with-testng)
-* [Test Microflows Using the UnitTesting Module](testing-microflows-using-the-unittesting-module)
-* [Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
-* [Clear Warning Messages in Mendix](../monitoring-troubleshooting/clear-warning-messages)
-* [Test Web Services Using SoapUI](testing-web-services-using-soapui)
-* [Monitor Mendix Using JMX](../monitoring-troubleshooting/monitoring-mendix-using-jmx)
-* [Debug Java Actions Remotely](../monitoring-troubleshooting/debug-java-actions-remotely)
-* [Log Levels](../monitoring-troubleshooting/log-levels)
-* [Debug Java Actions](../monitoring-troubleshooting/debug-java-actions)
-
-Learn more about this topic using the following helpful link:
-
-* [Selenium IDE Documentation](http://docs.seleniumhq.org/docs/02_selenium_ide.jsp)

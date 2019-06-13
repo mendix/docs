@@ -29,3 +29,4 @@ We want to create a large network of Mendix apps, so let's start integrating!
 * [Synchronize User Accounts Using the LDAP Module](synchronizing-user-accounts-using-the-ldap-module)
 * [Configure Selenium Support](selenium-support)
 * [Execute an SQL Statement on an External Database](execute-an-sql-statement-on-an-external-database)
+* [Access a Samba Share from the MxCloud](access-a-samba-share-from-the-mxcloud)

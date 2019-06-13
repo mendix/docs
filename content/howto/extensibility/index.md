@@ -13,7 +13,6 @@ One of the strengths of Mendix is that it is easy to connect your Mendix applica
 * [Building Pluggable Widgets](pluggable-widgets)
 * [Make JavaScript Actions](build-javascript-actions)
 * [Use the Charts Widgets](charts-tutorials)
-* [Access a Samba Share from the MxCloud](access-a-samba-share-from-the-mxcloud)
 * [Get Started with the TimeSeries Connector](get-started-with-the-timeseries-connector)
 * [Build Microflow Actions Using the Mendix Connector Kit](howto-connector-kit)
 * [Use Mendix DataStorage APIs to Build Reusable Microflow Actions](howto-datastorage-api)

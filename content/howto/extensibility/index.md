@@ -19,5 +19,4 @@ One of the strengths of Mendix is that it is easy to connect your Mendix applica
 * [Use Mendix DataStorage APIs to Build Reusable Microflow Actions](howto-datastorage-api)
 * [Install & Configure the SMTP Email Module](install-and-configure-the-smtp-module)
 * [Use Connectors & Adapters](use-connectors-and-adapters)
-* [Visualize Data Using the ChartsJS Module](visualize-data-using-the-chartsjs-module)
 * [Make Custom Widgets](widget-development)

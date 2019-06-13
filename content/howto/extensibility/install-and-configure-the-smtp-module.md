@@ -162,4 +162,3 @@ The SMTP email module contains a number of other powerful tools. Some of the enh
 
 * [Use Connectors & Adapters](use-connectors-and-adapters)
 * [Access a Samba Share from the MxCloud](access-a-samba-share-from-the-mxcloud)
-* [Visualize Data Using the ChartsJS Module](visualize-data-using-the-chartsjs-module)

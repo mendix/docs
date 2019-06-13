@@ -1,5 +1,5 @@
 ---
-title: "Hybrid App"
+title: "Hybrid App Base & Template"
 category: "Mobile Products"
 menu_order: 10
 toc-level: 1

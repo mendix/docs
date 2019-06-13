@@ -14,7 +14,7 @@ With Mendix, you can create different channels (for example, responsive, hybrid 
 
 With Mendix 8, it is possible to build fully native mobile apps. Native mobile apps differ from hybrid apps: they do not render inside a web view, but use native UI elements instead. This results in fast performance, smooth animations, natural interaction patterns (like swipe gestures), and improved access to all native device capabilities.  To make such responsive native apps, Mendix leverages the popular open-source framework [React Native](https://facebook.github.io/react-native/).
 
-You build Mendix native mobile apps the same way you build web or hybrid apps. You can use pages, widgets, nanoflows, JavaScript actions, microflows, and many other familiar elements to build your app. For more information on how to to build a native app, see [How to Create and Test a Native Mobile App](/howto/mobile/getting-started-with-native-mobile).
+You build Mendix native mobile apps the same way you build web or hybrid apps. You can use pages, widgets, nanoflows, JavaScript actions, microflows, and many other familiar elements to build your app. For more information on how to to build a native app, see [Get Started with Native Mobile](/howto/mobile/getting-started-with-native-mobile).
 
 There are some differences, however, between building native apps and building hybrid apps. For example, the set of widgets (and their available properties) differs slightly when optimizing for native mobile apps. In addition, native apps' theming and styling is based on JavaScript instead of SASS/CSS. For more information on styling, see [Native Styling](native-styling-refguide). 
 

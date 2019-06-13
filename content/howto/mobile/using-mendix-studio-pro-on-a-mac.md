@@ -1,5 +1,5 @@
 ---
-title: "Create & Test Native Mobile Apps on a Mac"
+title: "Work with Parallels"
 parent: "native-mobile"
 menu_order: 40
 description: "This how-to will allow you to start making native Mendix apps on your Mac device."
@@ -85,9 +85,9 @@ Congratulations! You have successfully viewed your app on a test device.
 
 ### 5 Viewing Changes to Your App on Your Testing Device
 
-For information on how to change to your app and then see that change on your device, see the [Viewing Changes to Your App on Your Testing Device](getting-started-with-native-mobile#viewingchanges) section in *How to Create and Test a Native Mobile App*.
+For information on how to change to your app and then see that change on your device, see the [Viewing Changes to Your App on Your Testing Device](getting-started-with-native-mobile#viewingchanges) section in *Get Started with Native Mobile*.
 
 ## 6 Read More
 
-* [Create and Test a Native Mobile App](getting-started-with-native-mobile)
+* [Get Started with Native Mobile](getting-started-with-native-mobile)
 * [Style Your Mendix Native App](how-to-use-native-styling)

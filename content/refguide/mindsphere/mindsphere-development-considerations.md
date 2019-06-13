@@ -69,7 +69,7 @@ To get a valid MindSphere token locally, the SSO module supports two ways, which
 - Service Credentials: which is the backup possibility when Application Credentials are not possible
 
 #### 5.1.2 Application Credentials
-When you run your app locally, you will not be able to use SSO to get your credentials. You will be logged on as MxAdmin and will be presented with a login screen either when the app starts, or the first time that your app attempts to retrieve your access token, depending on the value of the constant *AskFoCredentialsOnStartUp*.
+When you run your app locally, you will not be able to use SSO to get your credentials. You will be logged on as MxAdmin and will be presented with a login screen either when the app starts, or the first time that your app attempts to retrieve your access token, depending on the value of the constant *AskForCredentialsOnStartUp*.
 
 {{% image_container width="50%" %}}![](attachments/mindsphere-development-considerations/image19.png){{% /image_container %}}
 

@@ -1,7 +1,7 @@
 ---
 title: "Use Connectors & Adapters"
 category: "Extensibility"
-menu_order: 7
+menu_order: 50
 tags: ["extensibility", "connector", "adapter", "extensibility"]
 ---
 

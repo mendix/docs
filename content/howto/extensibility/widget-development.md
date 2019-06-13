@@ -1,5 +1,7 @@
 ---
 title: "Make Custom Widgets"
+category: "Extensibility"
+menu_order: 20
 tags: ["widget", "develop widget", "customize"]
 ---
 

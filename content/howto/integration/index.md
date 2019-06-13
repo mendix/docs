@@ -30,3 +30,4 @@ We want to create a large network of Mendix apps, so let's start integrating!
 * [Configure Selenium Support](selenium-support)
 * [Execute an SQL Statement on an External Database](execute-an-sql-statement-on-an-external-database)
 * [Access a Samba Share from the MxCloud](access-a-samba-share-from-the-mxcloud)
+* [Install & Configure the SMTP Email Module](install-and-configure-the-smtp-module)

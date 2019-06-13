@@ -63,11 +63,11 @@ Open Studio Pro (version 7.22.2 or above) and follow these steps:
 3. Select **MindSphere Starter Application** in the search results.
 
 	![](attachments/deploying-to-mindsphere/app-store-search.png)
-  
+
 4. Click **Download** to create a new app project using this app.
 
 	![](attachments/deploying-to-mindsphere/app-store-download.png)
-  
+
 5. To start the new app project, confirm where to store the app, the app name, and the project directory, then click **OK**.
 
 	![](attachments/deploying-to-mindsphere/app-store-download-project.png)
@@ -104,7 +104,40 @@ Enter the name of your app as registered in the MindSphere developer portal as t
 
 These two values must be identical and must, therefore, fit the constraints listed in the [App Name](/refguide/mindsphere/mindsphere-development-considerations#appname) section of *MindSphere Development Considerations*.
 
-#### 4.1.2 RegisterSingleSignOn
+#### 4.1.2 MindSphereGatewayURL
+
+Needs to be adapted depending on the `{region}` your app is running. The default value is
+
+```html
+https://gateway.eu1.mindsphere.io
+```
+
+which fits to Mindpshere on AWS.
+
+If your app is running on Mindsphere on Azure change this constant to
+
+```html
+https://gateway.eu2.mindsphere.io
+```
+
+
+#### 4.1.3 PublicKeyURL
+
+Needs to be adapted depending on the `{region}` your app is running. The default value is
+
+```html
+https://core.piam.eu1.mindsphere.io/token_keys
+```
+
+which fits to Mindpshere on AWS.
+
+If your app is running on Mindsphere on Azure change this constant to
+
+```html
+https://core.piam.eu2.mindsphere.io/token_keys
+```
+
+#### 4.1.4 RegisterSingleSignOn
 
 Add the *RegisterSingleSignOn* microflow as the **After startup** microflow or added as a sub-microflow of an existing *after startup* microflow.
 
@@ -186,12 +219,12 @@ To deploy your deployment package, do the following:
     cf create-service postgresql10 {plan} {service_instance} [-c {parameters_as_JSON}] [-t {tags}]
     ```
 
-    For example: `cf create-service postgresql10 postgresql-xs myapp-db`  
+    For example: `cf create-service postgresql10 postgresql-xs myapp-db`
 
     For more information see [Using the a9s PostgreSQL](https://developer.mindsphere.io/paas/a9s-postgresql/using.html) on the MindSphere developers site.
 
-4.  Depending on your infrastructure and service broker usage, it may take several minutes to create the service instance. Check if your PostgreSQL service has been created successfully using the following command:  
-    `cf services`  
+4.  Depending on your infrastructure and service broker usage, it may take several minutes to create the service instance. Check if your PostgreSQL service has been created successfully using the following command:
+    `cf services`
     Your service should be listed, and the last operation should be ‘create succeeded’.
 
 5.  Ensure you are in the same folder as the package you wish to deploy.
@@ -208,7 +241,7 @@ To deploy your deployment package, do the following:
     ```
 
     {{% alert type="info" %}}`disk_quota_size` and `memory_size` must be at least **512M** to enable a Mendix app to run.<br />See the *Cloud Foundry* [App Manifest Attribute Reference](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest-attributes.html) for more information on valid specifications for memory and disk quota sizes.{{% /alert %}}
-    
+
     For more information on the configuration of manifest files, see [Configuring the manifest file](https://developer.mindsphere.io/howto/howto-cf-single-manifest.html#configuring-the-manifest-file) on the MindSphere developers site.
 
 7.  Push your app to MindSphere using the command:
@@ -285,8 +318,15 @@ To create a new app in the MindSphere launchpad, do the following:
 
 14.  Set the **Configurations > content-security-policy** *Value* to the following (hover your mouse over the text and you will be able to copy the contents to your clipboard):
 
-      ```http
+      If your app is running on MindSphere on AWS use ( `{region} = eu1` ):
+
+      ```code
       default-src 'self' 'unsafe-inline' 'unsafe-eval' static.eu1.mindsphere.io sprintr.home.mendix.com; font-src 'self' static.eu1.mindsphere.io fonts.gstatic.com; style-src * 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval' static.eu1.mindsphere.io sprintr.home.mendix.com; img-src * data:;
+      ```
+      If your app is running on Mindsphere on Azure use ( `{region} = eu2` ):
+
+      ```code
+      default-src 'self' 'unsafe-inline' 'unsafe-eval' static.eu1.mindsphere.io sprintr.home.mendix.com; img-src 'self' static.eu1.mindsphere.io sprintr.home.mendix.com data: uistorageaccountprod.blob.core.windows.net; font-src 'self' data: *.eu2.mindsphere.io uistorageaccountprod.blob.core.windows.net static.eu1.mindsphere.io; style-src 'self' 'unsafe-inline' *.eu2.mindsphere.io uistorageaccountprod.blob.core.windows.net static.eu1.mindsphere.io sprintr.home.mendix.com home.mendix.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' *.eu2.mindsphere.io uistorageaccountprod.blob.core.windows.net static.eu1.mindsphere.io sprintr.home.mendix.com home.mendix.com; connect-src 'self' 'unsafe-inline' *;
       ```
 
       {{% alert type="info" %}}These content security policy (CSP) settings are needed to ensure that the MindSphere OS Bar and the [Mendix Feedback Widget](https://appstore.home.mendix.com/link/app/199/) are loaded correctly. You may need to set additional CSP settings if you make additional calls to other domains (for example, if you use Google maps from maps.googleapi.com).{{% /alert %}}
@@ -298,7 +338,7 @@ To create a new app in the MindSphere launchpad, do the following:
 16.  Click **Register** to register your app with the MindSphere launchpad.
 
     {{% alert type="info" %}}If the app has not been pushed yet, there will be no route set up for the app and you will get an error message. This will be resolved once you have pushed your app to Cloud Foundry.{{% /alert %}}
-    
+
 #### 5.2.2 Setting Application Scopes in Developer Cockpit{#scopes}
 
 To set up the appropriate scopes in MindSphere, do the following:

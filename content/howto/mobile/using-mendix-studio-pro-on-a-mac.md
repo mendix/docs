@@ -1,7 +1,7 @@
 ---
 title: "Work with Parallels"
 parent: "native-mobile"
-menu_order: 40
+menu_order: 20
 description: "This how-to will allow you to start making native Mendix apps on your Mac device."
 tags: ["Native", "Parallels", "Mac", "Mobile"]
 ---

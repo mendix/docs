@@ -1,7 +1,7 @@
 ---
 title: "Implement Native Styling"
 parent: "native-mobile"
-menu_order: 10
+menu_order: 30
 description: General information for native styling in Mendix.
 tags: ["styling", "design", "native"]
 ---

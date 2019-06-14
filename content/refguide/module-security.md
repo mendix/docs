@@ -1,6 +1,7 @@
 ---
 title: "Module Security"
-parent: "modules"
+parent: "security"
+menu_order: 20
 tags: ["studio pro", "module security", "security", "module"]
 ---
 
@@ -14,7 +15,7 @@ For more general information on security, see [Security](security).
 
 Within a module you can define module roles and specify security settings for pages, microflows, entities, and datasets.
 
-## 2 Module Role
+## 2 Module Role {#module-role}
 
 A module role defines a set of access permissions that you can assign to a user. For more information on module roles, [user roles](user-roles), and their relation, see [Security](security).
 

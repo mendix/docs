@@ -1,6 +1,7 @@
 ---
 title: "Project Settings"
 parent: "project"
+menu_order: 10
 description: "Settings which apply to the project app as a whole."
 tags: ["project", "app", "configuration", "runtime", "Studio Pro", "languages", "certificate", "theme", "hashing", "hashing algorithm"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -8,15 +9,17 @@ tags: ["project", "app", "configuration", "runtime", "Studio Pro", "languages", 
 
 ## 1 Introduction
 
-In the **Project Settings** dialog box, you can alter the settings that are applicable to the whole project.
+In the **Project Settings** dialog box, you can alter the settings that are applicable to the whole project:
+
+![](attachments/project-settings/project-settings-configuration.png)
 
 The categories described below are available.
 
 ## 2 Configurations Tab
 
-A configuration is a group of settings with a name. You can define any number of configurations. The active configuration (meaning, the one that will be used when running your application) is determined by the drop-down menu in the toolbar of Studio Pro.
+A configuration is a group of settings. You can define any number of configurations. The active configuration (meaning, the one that will be used when running your application) is determined by the drop-down menu in the toolbar of Studio Pro.
 
-For the settings in a configuration, see [Configuration](configuration).
+For more information on settings in a configuration, see [Configuration](configuration).
 
 ## 3 Runtime Tab
 

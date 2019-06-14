@@ -7,13 +7,13 @@ draft: true
 
 ## 1 Introduction
 
-The Mendix Platform is good for building all types of apps and integrating them virtually any other technology. These integration best practices provide an overview of how Mendix integrates with other systems and technologies, using clear contracts as is prescribed for microservice architectures.
+The Mendix Platform is good for building many [types of applications ](https://www.mendix.com/evaluation-guide/what-can-i-build) and integrating them with virtually all other technologies. These integration best practices provide an overview of how Mendix integrates with other systems and technologies, using clear contracts as is prescribed for microservice architectures.
 
 ## 2 Mendix Integration Characteristics
 
 ### 2.1 Internal Integration Consistency Checks
 
-Most business functions require UX for human interaction, some logic and workflow, some data to store and work on, and some integration with the rest of the organization. Thanks to the way the Mendix Platform works, all of these parts are kept together in the same application model, all the way from design to deployment. 
+Most business functions require UX for human interaction, some logic and workflow, some data to store and work on, and some integration with the rest of the organization. Thanks to the way the Mendix Platform works, all of these parts are kept together in the same application model, all the way from design to deployment and operations. 
 
 This results in the following benefits:
 
@@ -25,13 +25,13 @@ This diagram illustrates how the Mendix Platform keeps everything together from 
 
 ![](attachments/mendix-integration/feature-requirements.png)
 
-When using Mendix in almost any business use case, there is less alignment between development teams and less integration testing needed than with other technology choices. This provides the low-code advantage of speed, security, and flexibility.
+When using Mendix in almost any business use case, there is less alignment between development teams and less integration testing needed than with other technology choices. This provides the low-code advantages of speed, security, and flexibility.
 
 ### 2.2 External Integration by Contract {#external-contract}
 
 Microservice architectures prescribe clear contracts for integration between components, and this is also the way Mendix operates. All external integration occurs via an application's runtime server, and this integration requires clear contracts to be defined in the Mendix app model. The app model is aware of all external integration contracts before deployment into production.
 
-If, for example, Mendix allowed direct database connections to an internal database using SQL defined outside the Mendix app model, there would be a risk to the functioning of the app in production. Testing would be unable to predict all possible interactions. Therefore, in the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy), all connections to the Mendix internal database and file store have to use an agreed contract executed by the Mendix app server.
+If, for example, Mendix allowed direct database connections to an internal database using SQL defined outside the Mendix app model, the functioning of the app in production would be at risk. In addition, testing would be unable to predict all possible interactions. Therefore, in the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy), all connections to the Mendix internal database and file store have to use an agreed contract executed by the Mendix app server.
 
 The diagram below illustrates the following points:
 

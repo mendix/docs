@@ -4,7 +4,7 @@ parent: "pages"
 tags: ["authentication", "widgets", "studio pro"]
 ---
 
-Authentication widgets are used to sign users in and out. Use the [navigation profile](navigation-profile#authentication) to direct users to the correct authentication page.
+Authentication widgets are used to sign users in and out. Use the [navigation profile](navigation#authentication) to direct users to the correct authentication page.
 
 This list shows the available authentication widgets:
 

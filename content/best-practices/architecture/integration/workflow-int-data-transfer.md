@@ -1,19 +1,15 @@
 ---
-title: "Workflow Integration with Data Transfer Example"
+title: "Example – Workflow Integration with Data Transfer"
 parent: "process-integration"
-menu_order: 1
+menu_order: 2
 draft: true
 ---
 
 ## 1 Introduction
 
-{{% todo %}}[**NEEDS DIAGRAMS; ADD LINK WHEN AVAILABLE BELOW AND UPDATE TEXT AS NECESSARY**]{{% /todo %}}
+{{% todo %}}[**Needs diagrams; add link to App Store module whne available**]{{% /todo %}}
 
-The integration pattern has been implemented in an App Store module that can be
-downloaded from the **Best Practices** section as **Integration Pattern: Process
-Integration**.
-
-In this integration pattern example app, an example architecture is implemented that consists  of an ordering app and a billing app. The ordering app is responsible for managing customer orders, and the billing app is responsible for generating invoices. A user who creates an order (in the ordering app) needs to approve the invoice (in the billing app) immediately after creating the order. To support this workflow, an integration is necessary to transfer the user and data between apps.
+This example integration pattern consists of an ordering app and a billing app. The ordering app is responsible for managing customer orders, and the billing app is responsible for generating invoices. A user who creates an order (in the ordering app) needs to approve the invoice (in the billing app) immediately after creating the order. To support this workflow, an integration is necessary to transfer the user and data between apps.
 
 Both example apps have been built into the same Mendix model to facilitate easy distribution and deployment of the demo. However, they could be split and deployed as two separate microservices in a real implementation.
 
@@ -21,6 +17,10 @@ The integration between the apps consists of the following parts:
 
 * The transactional data from the ordering app is shared with the billing app through a REST service endpoint published by the ordering app. The billing app has a scheduled event that periodically pulls data from this service.
 * The user working in the app can seamlessly transition between apps using deep links. When in the ordering workflow, the existing data-sharing mechanism is used to get updated data when necessary.
+
+{{% alert type="info" %}}
+In the future, this integration pattern will be implemented in a Mendix App Store module named **Integration Pattern: Process Integration**.
+{{% /alert %}}
 
 ## 2 The Example Case
 
@@ -57,7 +57,7 @@ This implementation has one shortcoming – it might not synchronize all the ord
 
 If the `get-all` REST operation is called during that time, the operation will have a max **ChangeDate** (meaning, that of **Order 2**) that is after the **ChangeDate** of **Order 1**, even though the change to **Order 1** is not included in the returned records. The next call to the service will include the later **ChangeDate**, and so it will not retrieve the change to **Order 1** either. Accordingly, the change to **Order 1** may be lost.
 
-{{% todo %}}[**EXPLAIN DIAGRAM; POSITION OF DIAGRAM IS CORRECT?**]{{% /todo %}}
+{{% todo %}}[**Explain diagram below**]{{% /todo %}}
 
 ![](attachments/workflow-int-data-transfer/workflow-order.png)
 

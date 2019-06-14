@@ -98,7 +98,6 @@ howto:
     - "Logic & Business Rules"
     - "Integration"
     - "Extensibility"
-    - "Custom Widgets"
     - "Security"
     - "Testing"
     - "Monitoring & Troubleshooting"
@@ -181,8 +180,8 @@ developerportal:
   menu_categories:
     - "Mendix Profile"
     - "Company & App Roles"
+    - "Apps List"
     - "Collaboration Tools"
-    - "Feedback Management"
     - "Development"
     - "Deployment"
     - "Operations"
@@ -196,7 +195,7 @@ studio:
   menu_categories:
     - "General Info"
     - "Domain Model"
-    - "Page Editor"
+    - "Pages"
     - "Navigation Document"
     - "Microflows"
     - "Data Filters"
@@ -204,7 +203,8 @@ studio:
     - "Checks"
     - "Consistency Errors"
     - "Theme Customizer"
-    - "App Settings"
+    - "Settings"
+    - "Starting With Your Own Data"
 best-practices:
   space: "Expert Best Practices"
   priority: false

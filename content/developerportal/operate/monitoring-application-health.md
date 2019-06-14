@@ -32,7 +32,7 @@ The Mendix Cloud automatically monitors the health and status of apps that are d
 
 	![](attachments/18579999.png)
 
-This status information will tell you important information that you either need in order to resolve the issue, or that needs to be included when submitting a support request with [Mendix Support](https://support.mendix.com). You can download a log of the alerts on the **Log** page under the **Operate** category.
+This status information will tell you important information that you either need in order to resolve the issue, or that needs to be included when submitting a support request to [Mendix Support](https://support.mendix.com). You can download a log of the alerts on the **Log** page under the **Operate** category.
 
 Any status that could cause your app to stop functioning will result in an alert. For example, the monitoring information from the image shows that one of the status indicators was **Critical**. When this happens to one of your nodes, all users that are subscribed to alerts will receive an email alert.
 
@@ -47,12 +47,12 @@ Application Status | |
 Description | Our application runtime sends a heartbeat signal every few minutes to show it is still alive. If no heartbeat timeout has been received for some time, the system will generate an alert.|
 Example message | No runtime heartbeat received for 8m45s.
 Warning Threshold | Not used.                                              |
-Critical Threshold | If the runtime heartbeat of the application has not been recieved for 5 minutes, a critical alert will be generated.
-First actions to take | Check the application logs for issues. Also check [https://status.mendix.com/](https://status.mendix.com/) for any planned maintainance.                         |
+Critical Threshold | If the runtime heartbeat of the application has not been received for 5 minutes, a critical alert will be generated.
+First actions to take | Check the application logs for issues. Also check [https://status.mendix.com/](https://status.mendix.com/) for any planned maintenance.                         |
 
 Application Container CPU Percentage | |
 :---|:---|
-Description | Track the CPU utlilzation of the application container |
+Description | Track the CPU utilization of the application container |
 Example message | Application container 34234543-6543-6543-6543-153d247b6543 - Instance Index: 0 has high CPU usage: 90.5
 Warning Threshold | CPU utilization is between 75% and 85%. |
 Critical Threshold | CPU utilization is higher than 85%.
@@ -60,7 +60,7 @@ First actions to take | Inspect the trends for **Application node CPU usage** co
 
 Application Container Disk Percentage | |
 :---|:---|
-Description | Track the disk utlilzation for the database belonging to the application |
+Description | Track the disk utilization for the database belonging to the application |
 Example message | Application container 34234543-6543-6543-6543-153d247b6543 - Instance Index: 0 has high disk usage: 90.5
 Warning Threshold | Disk utilization is between 75% and 85%. |
 Critical Threshold | Disk utilization is higher than 85%.
@@ -68,7 +68,7 @@ First actions to take | Inspect the trends for **Application node CPU usage** co
 
 Application Container Memory Percentage | |
 :---|:---|
-Description | Track the memory utlilzation for the database belonging to the application |
+Description | Track the memory utilization for the database belonging to the application |
 Example message | Application container 34234543-6543-6543-6543-153d247b6543 - Instance Index: 0 has high memory usage: 90.5
 Warning Threshold | Memory utilization is between 75% and 85%. |
 Critical Threshold | memory utilization is higher than 85%.
@@ -76,8 +76,8 @@ First actions to take | Inspect the trends for **Application node operating syst
 
 CPU Credit Balance status | |
 :---|:---|
-Description | This only appears if you run into a warning or a critical Credit Balance. See section 3.2, [CPU Credits on AWS](#burstable) for a more detailed discussion
-Example message | Application container 34234543-6543-6543-6543-153d247b6543 - Instance Index: 0 has low cpu credit balance: 16.315528
+Description | This only appears if you run into a warning or a critical Credit Balance. See the [CPU Credits on AWS](#burstable) section for a more detailed discussion
+Example message | Application container 34234543-6543-6543-6543-153d247b6543 - Instance Index: 0 has low CPU credit balance: 16.315528
 Warning Threshold | Credit balance goes below 80.0
 Critical Threshold | Credit balance goes below 20.0
 First actions to take | Inspect the trends for **Application node CPU usage** combined with **Application node disk throughput** and **Application node load** for anomalies and correlate those with application behavior.
@@ -92,7 +92,7 @@ First actions to take | Inspect the application log file and look up the CRITICA
 
 Database CPU Utilization | |
 :---|:---|
-Description | Track the CPU utlilzation for the database belonging to the application
+Description | Track the CPU utilization for the database belonging to the application
 Example message | Database has 95% CPU utilization.
 Warning Threshold | Not used.
 Critical Threshold | CPU utilization is higher than 90%. 

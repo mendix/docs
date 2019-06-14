@@ -5,7 +5,7 @@ menu_order: 30
 tags: ["mobile", "push notification", "apple", "server"]
 ---
 
-## 1 Introduction
+## 1 Introduction {#intro}
 
 In order to proceed you need an Apple developer license and a device running Mac OS X.
 
@@ -52,7 +52,7 @@ For this purpose, do the following:
 
 ## 3 Option B: Using an SSL certificate
 
-Follow the stepsbelow to obtain and set up an Apple Push Notifications service SSL certificate from Apple.
+Follow the steps below to obtain and set up an Apple Push Notifications service SSL certificate from Apple.
 
 ### 3.1 Logging in to the Apple Developer Center
 
@@ -78,7 +78,7 @@ This certificate needs to be converted into the *.p12* format. If you do not kno
 
 For the last step, you need to configure APNs within your application. This can be done by logging into your application as a user with Administrator role and navigating to the **PushNotifications_Administration** page that was set up in the [Setting Up the Project Security for Your Module](implementation-guide#setting) section of *How to Implement Push Notifications*.
 
-For this purpose, do the following:
+To configure your APNs, complete the following steps:
 
 * Create a new APNs configuration, and choose a name for the new configuration
 * Choose a topic for the new configuration (you can freely choose one)

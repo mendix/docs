@@ -53,7 +53,7 @@ A microflow could return whether or not the committing of an object should conti
 
 ### 5.1 Allowed Roles
 
-Allowed roles defines to which [module role](module-role) the user must have to be able to execute the microflow.
+Allowed roles defines to which [module role](module-security#module-role) the user must have to be able to execute the microflow.
 
 {{% alert type="warning" %}}
 
@@ -76,7 +76,7 @@ Microflows that apply entity access have an **Entity Access** tag in the editor.
 | Yes | Entity access is applied to retrieving and manipulating objects. The rights of current user are taken into account. |
 | No | Entity access is not applied. |
 
-{{% alert type="success" %}}
+{{% alert type="info" %}}
 By default entity access is not applied. Set 'Apply entity access' to 'Yes' if you want to perform some actions that respect the access rights of the current user.
 {{% /alert %}}
 

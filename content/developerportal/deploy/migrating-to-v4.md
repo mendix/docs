@@ -24,7 +24,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Have the [Technical Contact](/developerportal/company-app-roles/technical-contact) role for both your existing v3 and available v4 Cloud Nodes
 
-* Create a new temporary Free App without a sandbox environment – instructions for unlinking a Free App from a sandbox are here: [Licensing Apps](licensing-apps#unlink)
+* Create a new temporary Free App without a sandbox environment – instructions for unlinking a Free App from a sandbox are here: [Licensing Mendix Cloud Apps](licensing-apps#unlink)
 
 ## 3 Migrating the App
 
@@ -34,7 +34,7 @@ To migrate your app from a v3 node to a v4 node in the Mendix Cloud, follow the 
 
 First, link the new temporary app to the cloud v4 node.
 
-To learn how to do this, see [Licensing Apps](licensing-apps#licensed-node).
+To learn how to do this, see [Licensing Mendix Cloud Apps](licensing-apps#licensed-node).
 
 ### 3.2 Copying Data from v3 to v4
 
@@ -108,7 +108,7 @@ After the v3 node has been offboarded, follow these steps to link the app to the
 
 4.  Select the v4 node by clicking **Use this Node** and link it to your app. The currently linked (temporary) app will be unlinked automatically. The temporary app can be deleted.
 
-For more information, see [Licensing Apps](licensing-apps).
+For more information, see [Licensing Mendix Cloud Apps](licensing-apps).
 
 ### 3.5 Changing the App URL
 
@@ -129,5 +129,5 @@ If you have a custom domain set up, you will need to change this. Instructions f
 *   [Custom Domains](custom-domains)
 *   [Mendix Cloud: Deploy](mendix-cloud-deploy)
 *   [How to Download a Backup](/developerportal/operate/download-backup)
-*   [Licensing Apps](licensing-apps)
+*   [Licensing Mendix Cloud Apps](licensing-apps)
 *   [How to Restore a Backup](/developerportal/operate/restore-backup)

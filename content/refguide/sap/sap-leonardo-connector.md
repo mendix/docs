@@ -194,7 +194,7 @@ The **DetectTopic** action returns an object of entity type *LeonardoMachineLear
 |**TopicDetectionResponse**||The object returned by the action|
 |**TopicDetectionResult**||One object per document provided for inference
 |DocumentName|docName|Name of the file provided for inference|
-|**TopicDetectionValue**|n/a (implicit in the order of the values)|One object per topic detected|
+|**TopicDetectionValue**|N/A (implicit in the order of the values)|One object per topic detected|
 |Topic||A number identifying the topic inferred|
 |Score||The 'distance' between the topic *vector* and that of the document|
 |**TopicKeywords**|keywords|One object per keyword|
@@ -204,7 +204,7 @@ The **DetectTopic** action returns an object of entity type *LeonardoMachineLear
 
 This implements the [**Inference Service For Customizable Image Feature Extraction (feature-extraction)**](https://api.sap.com/api/img_feature_extraction_api/resource) service of SAP Leonardo Machine Learning Foundation. It takes an image and extracts feature vectors (measurable properties of the image such as edges or objects) for comparison, information retrieval, clustering, or further processing.
 
-The values in the feature vector extracted from the image can be used as input to the ScoreSimilarity action. See section 4.7 [ScoreSimilarity](#score-similarity).
+The values in the feature vector extracted from the image can be used as input to the ScoreSimilarity action. See the section on [ScoreSimilarity](#score-similarity), below.
 
 ![ExtractImageFeature action](attachments/sap-leonardo-connector/extract-image-feature-input.png)
 

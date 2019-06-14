@@ -1,20 +1,35 @@
 ---
-title: "Hybrid App"
+title: "Hybrid App Base & Template"
 category: "Mobile Products"
 menu_order: 10
 toc-level: 1
-description: "Hybrid App release notes."
+description: "Mendix Hybrid App Base & Hybrid App Template release notes."
 ---
 
-These are the release notes for the Hybrid App.
+The version numbers for each release below refer to the [Hybrid App Base](https://github.com/mendix/hybrid-app-base) and [Hybrid App Template](https://github.com/mendix/hybrid-app-template) packages, respectively. If you are building your hybrid mobile app using the regular PhoneGap Build approach from within the Mendix Developer Portal, you do not need to worry about these numbers. Downloading and building a new package will set you up with the latest version.
 
-The version numbers for each release refer to the [Hybrid App Base](https://github.com/mendix/hybrid-app-base) and [Hybrid App Template](https://github.com/mendix/hybrid-app-template) packages, respectively.
+If you are using the advanced flow, you can get the latest version of the Hybrid App Base by running `npm update` from your hybrid app project directory. To upgrade to the latest version of the Hybrid App Template, either pull in the latest changes from GitHub, or download a new copy from the Mendix Developer Portal ([Developer Portal](https://sprintr.home.mendix.com/index.html) > **DEPLOY**).
 
-If you're building the app using the regular PhoneGap Build approach from within the Mendix Developer Portal, you do not need to worry about these numbers. Downloading and building a new package will set you up with the latest version.
-
-If you're using the advanced flow, you can get the latest version of the Hybrid App Base by running `npm update` from your hybrid app project directory. To upgrade to the latest version of the Hybrid App Template, either pull in the latest changes from GitHub, or download a new copy from the Mendix Developer Portal ([Developer Portal](https://sprintr.home.mendix.com/index.html) > **DEPLOY**).
+{{% alert type="info" %}}
+For more information on hybrid mobile app development in Mendix, see the [Hybrid Mobile](/refguide/hybrid-mobile) section of the *Studio Pro 8 Guide* and the [Hybrid Mobile](/howto/mobile/hybrid-mobile) section of the *Studio Pro 8 How-to's*.
+{{% /alert %}}
 
 ## 2019
+
+### May 14th, 2019 (4.1.0 / 4.1.0)
+
+We updated **Cordova Android** to version 7.1.4.
+
+You now have more control over the target architecture for your Android apps. The `npm run package` command now produces a project that targets all supported architectures (x86, x86_64, arm, and arm64). This means that you can publish one APK that is used for all devices. This APK will fulfill the [64-bit requirement](https://android-developers.googleblog.com/2019/01/get-your-apps-ready-for-64-bit.html) set by Google for apps published to Google Play.
+
+To enable more control over the target architecture, use the following variants:
+
+| npm Command             |           Description                        |
+| --- | --- |
+|`$ npm run package:x86`    |           Prepares `build` directory for x86.|
+|`$ npm run package:x86_64` |           Prepares `build` directory for x86_64.|
+|`$ npm run package:arm`    |           Prepares `build` directory for arm.|
+|`$ npm run package:arm64`  |           Prepares `build` directory for arm64.|
 
 ### January 28th, 2019 (4.0.5 / 4.0.0)
 

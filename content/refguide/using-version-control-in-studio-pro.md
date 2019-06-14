@@ -98,7 +98,7 @@ In general, it is a good idea to commit after implementing one feature or fixing
 Committing results in a new revision in the repository. You can add the following information in Studio Pro when you perform a commit, and this will be attached to the newly created revision:
 
 * A textual message. This should be a summary of the changes you made
-* A list of Developer Portal stories that relate to the commit. A small commit will probably relate to one story. Studio Pro shows stories that are in the current sprint and do not have a status of *Done*. Adding the story to the commit will not change the state of the Developer Portal story. Setting the status to 'Done' must be done manually and depends on your *definition of done*.
+* A list of Developer Portal stories that relate to the commit. A small commit will probably relate to one story. Studio Pro shows stories that are in the current Sprint and do not have a status of *Done*. Adding the story to the commit will not change the state of the Developer Portal story. Setting the status to 'Done' must be done manually and depends on your *definition of done*.
 
 ![](attachments/using-version-control-in-studio-pro/2018-02-21_13-50-03.png)
 
@@ -125,7 +125,7 @@ Changes you receive from the repository when updating are combined with the chan
 
 For example, if the last time you updated you received all changes up to and including revision 40, this means that the original for your working copy is revision 40. Since you started making changes to your working copy, other people on your team have made another four commits (41, 42, 43 and 44). If you now update, you will receive those changes and 44 will be the new *original* to which your changes are compared.
 
-Usually, combining your changes with the latest revision from the repository will be done automatically. For example, one person may add a form while you are changing a microflow. If the changes are too close, however, a conflict can arise. For example, if one of your team has changed the properties of the same data view which you have also changed. You will have to resolve such conflicts before you can commit. See section 6, [Dealing With Conflicts](#conflicts) for information on how to do this.
+Usually, combining your changes with the latest revision from the repository will be done automatically. For example, one person may add a page while you are changing a microflow. If the changes are too close, however, a conflict can arise. For example, if one of your team has changed the properties of the same data view which you have also changed. You will have to resolve such conflicts before you can commit. See the  [Dealing With Conflicts](#conflicts) section, below, for information on how to do this.
 
 If your team is committing often you will have to update often. Frequent updating has the benefit that you receive fewer changes with each update, so integrating those changes with your work is easier.
 
@@ -135,7 +135,7 @@ The *history* of the project is a list of all revisions that have been committed
 
 ![History Button](attachments/using-version-control-in-studio-pro/history-button.png)
 
-The revisions are shown in reverse chronological order (newest is at top of list). The history form shows you revision number, date, time, author and message of each revision.
+The revisions are shown in reverse chronological order (newest is at top of list). The history dialog shows you revision number, date, time, author and message of each revision.
 
 Select a revision to see additional details such as related Developer Portal stories, changed documents, Studio Pro version and changes on disk. Icons summarize the kinds of changes that happened in the project.
 
@@ -143,7 +143,7 @@ Select a revision to see additional details such as related Developer Portal sto
 
 ## 5 Reverting Changes
 
-Changes that have not yet been committed can be reverted. Say, for example, that you have made a lot of changes to a form and you are not happy with the result. You can revert the form to the original: that is, the state of the form before you started making changes.
+Changes that have not yet been committed can be reverted. Say, for example, that you have made a lot of changes to a page and you are not happy with the result. You can revert the page to the original: that is, the state of the page before you started making changes.
 
 Deletes of documents, folders, and modules can also be reverted. This will bring them back into the project. Note that you will get back the latest version you have *committed*. For example, if you commit, make some changes to a microflow, and then delete the microflow, reverting the delete will give you the microflow without the changes that you made.
 
@@ -178,7 +178,7 @@ Ensure you are viewing changes for the whole project in the **Changes** dock, se
 
 ![Resolving a conflict using the changes dock](attachments/using-version-control-in-studio-pro/resolve-document-conflict.png)
 
-For example, if you deleted a data view in a form and another person changes something inside that data view, you may choose to discard the changes of the other by clicking 'Use mine'.
+For example, if you deleted a data view in a page and another person changes something inside that data view, you may choose to discard the changes of the other by clicking 'Use mine'.
 
 Resolving a conflict will make the conflict go away but the document may, of course, still be marked as changed if there are changes to commit.
 
@@ -284,7 +284,7 @@ Choose **Project > More Versioning > Reverse Merge Changes...**
 
 ![](attachments/using-version-control-in-studio-pro/revert-committed-changes.png)
 
-After a reverse merge the project will look like the changes never happened; if you 'reverse merge' the adding of a form, the form will be deleted locally. Just like when you are doing a normal merge, conflicts can arise. In the example, if later commits change the added form, the reverse merge will result in a conflict. After resolving any problems, you can commit the results to the repository.
+After a reverse merge the project will look like the changes never happened; if you 'reverse merge' the adding of a page, the page will be deleted locally. Just like when you are doing a normal merge, conflicts can arise. In the example, if later commits change the added page, the reverse merge will result in a conflict. After resolving any problems, you can commit the results to the repository.
 
 ## 8 Versioning a Project Deployed to the Cloud
 
@@ -310,7 +310,7 @@ When it creates the package, Studio Pro will also create a tag representing this
 
 #### 8.3.1 Deploying a Specific Version to a Mendix Licensed Cloud Node
 
-If you are using the Mendix Cloud you can choose **Project > Deploy to Licensed Cloud Node** to dpeloy a specific version.
+If you are using the Mendix Cloud you can choose **Project > Deploy to Licensed Cloud Node** to deploy a specific version.
 
 ![](attachments/using-version-control-in-studio-pro/2018-02-21_17-05-05.png)
 
@@ -328,7 +328,13 @@ We advise you to always commit and update inside Studio Pro because in this way 
 
 ### 9.1 TortoiseSVN & Subclipse{#tortoisesvn-subclipse}
 
-If you are doing more advanced changes to files, like adding Java actions or resources to your project, you will have to install TortoiseSVN on your computer and perform some operations yourself. You can download it for free at [http://tortoisesvn.tigris.org/](http://tortoisesvn.tigris.org/) (choose version 1.7).
+If you are doing more advanced changes to files, like adding Java actions or resources to your project, you will have to install TortoiseSVN on your computer and perform some operations yourself. You can download it for free at [https://tortoisesvn.net/](https://tortoisesvn.net/).
+
+{{% alert type="warning" %}}
+Mendix Studio Pro (version 8.0.0 beta 2 and above) uses the Subversion 1.9 working copy. Previous versions of the Mendix Desktop Modeler used a Subversion 1.7 working copy. These working copy versions **are not compatible**.
+
+Always use the version of TortoiseSVN which matches your app model. If you open a local model from Mendix version 7.x or 6.x with the latest version of TortoiseSVN **you will no longer be able to open it in Mendix**.
+{{% /alert %}}
 
 Also, if you are developing Java actions using Eclipse, we advise you to install Subclipse to help you with version control of Java files. You can download Subclipse from the Eclipse Marketplace inside Eclipse or from [http://subclipse.tigris.org/](http://subclipse.tigris.org/).
 

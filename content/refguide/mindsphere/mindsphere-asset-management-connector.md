@@ -74,7 +74,7 @@ It implements the API call .../api/assetmanagement/v3/assets?{Get query params}.
 *Get All Assets* uses the following parameters:
 
 * **Auth token** – a string containing an access token, retrieved by the *Access token* action
-* **Get query params** (optional) – an object of type **GetQueryParams** containing additional parameters for the query (see section 2, [Asset Management Domain Model](#assetdm), for more details)
+* **Get query params** (optional) – an object of type **GetQueryParams** containing additional parameters for the query (see the [Asset Management Domain Model](#assetdm), above, for more details)
 * **E tag** (optional) – an integer which acts as a counter for optimistic locking
 
 It returns the following:
@@ -113,7 +113,7 @@ It implements the API call .../api/assetmanagement/v3/assettypes/{Asset type id}
 The parameters are as follows:
 
 * **Auth token** – a string containing an access token, retrieved by the *Access token* action
-* **Get query params** (optional) – an object of type **GetQueryParams** containing additional parameters for the query (see section 2, [Asset Management Domain Model](#assetdm), for more details)
+* **Get query params** (optional) – an object of type **GetQueryParams** containing additional parameters for the query (see the [Asset Management Domain Model](#assetdm), above, for more details)
 * **E tag** (optional) – an integer which acts as a counter for optimistic locking
 * **Asset type id** – a string containing the value which should be matched to the _id attribute of the asset type required. This should be in the format {tenant}.{asset type}
 

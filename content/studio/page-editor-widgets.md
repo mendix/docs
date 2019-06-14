@@ -1,6 +1,6 @@
 ---
 title: "Widgets"
-category: "Page Editor"
+category: "Pages"
 description: "Describes widgets in Mendix Studio."
 tags: ["studio", "page editor", "pages", "widgets"]
 ---
@@ -57,7 +57,7 @@ Widgets in Studio can be divided by origin as shown in the table below:
 | ----------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | Default widgets   | Widgets that are included into your app by default and do not have the information icon in the top-right corner. | Apps created in the Developer Portal. For more information on the Developer Portal, see [Developer Portal](https://docs.mendix.com/developerportal/). |
 | App Store widgets | Widgets that are you can download to your project directly from Studio. Some App Store widgets are already in your project as a part of the app. Such widgets have the information icon in the top-right corner of widgets in the **Toolbox**. <br />For more information on the App Store, see [App Store Overview](/developerportal/app-store/app-store-overview). | [App Store](/developerportal/app-store/)                     |
-| Local widgets     | Either widgets that are a part of a starter app, or widgets created by your or your team locally via Studio Pro. For more information on developing widgets, see the [Custom Widget Development](../../howto/widget-development/) how-to's. As a rule local widgets will be listed in the **Add-ons** category. For more information on categories, see section [3 Widgets by Category](#widget-categories). | Apps created in the  Developer Portal/Studio Pro        |
+| Local widgets     | Either widgets that are a part of a starter app, or widgets created by your or your team locally via Studio Pro. For more information on developing widgets, see the [Custom Widget Development](/howto/extensibility/widget-development) how-to's. As a rule local widgets will be listed in the **Add-ons** category. For more information on categories, see section [3 Widgets by Category](#widget-categories). | Apps created in the  Developer Portal/Studio Pro        |
 
 ## 5 Adding the App Store Widgets
 
@@ -82,7 +82,7 @@ To add an App Store widget, do the following:
 
     ![](attachments/page-editor-widgets/app-store-download.png)
 
-The widget is now added to your project, you can simply drag and drop it to the page to use it. You can also view settings of this widget in the **App Settings**.  For more information on managing widgets in your app, see [App Settings](app-settings).
+The widget is now added to your project, you can simply drag and drop it to the page to use it. You can also view settings of this widget in the **App Settings**.  For more information on managing widgets in your app, see [Settings](settings).
 
 {{% alert type="info" %}}
 
@@ -92,6 +92,6 @@ Some similar widgets are packaged together: downloading one of these widgets wil
 
 ## 6 Read More 
 
-* [Page Editor](page-editor)
-* [App Settings](app-settings)
+* [Pages](page-editor)
+* [Settings](settings)
 * [App Store Overview](/developerportal/app-store/app-store-overview)

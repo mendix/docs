@@ -123,12 +123,13 @@ Within the app, you will need to set the following constants correctly:
 ![Folder structure of MindSphereSingleSignOn module](attachments/mindsphere-example-app/image5.png)
 
 * CockpitApplicationName (the *Name* of your app in the MindSphere Developer Cockpit)
-* MindGateURL
+* MindSphereGatewayURL
 * PublicKeyURL
 
 To deploy locally, you will need to configure the three constants above plus:
 
 * CockpitApplicationVersion
+* CredentialsType
 * HostTenant
 * UserTenant
 

@@ -29,7 +29,7 @@ Mendix allows for microflows to be triggered in pages by a variety of widgets. T
 
 This is the microflow that will be executed. Its parameters should match the available arguments.
 
-{{% alert type="success" %}}
+{{% alert type="info" %}}
 
 You can create a new microflow by clicking 'Select...' and then 'New'. Studio Pro will generate a microflow with parameters matching all available arguments. If a parameter is not used it can simply be deleted.
 

@@ -1,7 +1,7 @@
 ---
 title: "Create a Backup"
 parent: "backups"
-menu_order: 1
+menu_order: 10
 description: "This page describes how to create a backup."
 tags: ["Backup","Mendix Cloud","Developer Portal"]
 ---
@@ -43,5 +43,5 @@ Follow these steps to create a backup of a licensed app:
 
 * [How to Deploy to the Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy)
 * [How to Download a Backup](download-backup)
-* [Licensing Apps](/developerportal/deploy/licensing-apps)
+* [Licensing Mendix Cloud Apps](/developerportal/deploy/licensing-apps)
 * [How to Restore a Backup](restore-backup)

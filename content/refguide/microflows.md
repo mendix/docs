@@ -137,7 +137,7 @@ When an error occurs inside a microflow, under the hood a Java exception is rais
 
 In a custom error handler that is executed after an error occurs, `$latestError` is set to an object containing information about the error that occurred. If the error is a SOAP fault (an error that occurs as a result of a web service call), `$latestSoapFault` is set to an object that contains more specific information about the SOAP fault. Otherwise, `$latestSoapFault` is `empty`.
 
-{{% alert type="success" %}}
+{{% alert type="info" %}}
 
 You can determine whether an error was a SOAP fault by checking `$latestSoapFault` for `empty`.
 

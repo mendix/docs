@@ -28,7 +28,7 @@ After microflows are created, you can add them to pages to run them in your app.
 
 To embed the microflow with an exclusive split (the attribute of the enumeration type) to pages, do the following:
 
-1. Сreate a page for the existing customers details and name it *Customer_details*. For more information on creating pages, see section [3.2 Creating a New Page](page-editor) in the *Page Editor*.
+1. Сreate a page for the existing customers details and name it *Customer_details*. For more information on creating pages, see section [3.2 Creating a New Page](page-editor) in *Pages*.
 2.  In **Toolbox**>**Widgets** >**Data Containers**, find **Data View**.
 
     ![](attachments/microflows-how-to-configure-exclsplit/data-view.png)
@@ -40,9 +40,9 @@ To embed the microflow with an exclusive split (the attribute of the enumeration
 
     ![](attachments/microflows-how-to-configure-exclsplit/data-view-properties.png)
 
-5. In **Toolbox**>**Widgets** >**Buttons** find **Create Object**, drag and drop it inside the Data View container (it is named **New** by default).
+5. In **Toolbox**>**Widgets** >**Buttons** find **Create Object**, drag and drop it inside the data view container (it is named **New** by default).
 6.  We are going to create a new page that will be opened when a user clicks the **New** button. Open the **Properties** tab for the created button and do the following:<br/>
-    a. Set **Customer** as **Data Source**>**Entity**.<br/>
+    a. Set **Customer** as **Entity** in the **Events** section.<br/>
     b. Click **Select Page**.<br/>
 
     ![](attachments/microflows-how-to-configure-exclsplit/create-button-properties.png) <br/>
@@ -92,7 +92,7 @@ To embed the microflow with an exclusive split (the attribute of the Boolean typ
 
     ![](attachments/microflows-how-to-configure-exclsplit/data-view-select-data-view-source.png)
 
-7.  In the **Properties** of the **DATA VIEW**, do the following:<br/>
+7.  In the **Properties** of the data view, do the following:<br/>
     a. Set **Data Source** to **Context.**<br/>
     b. Set **Entity** to **Customer**.
 
@@ -113,4 +113,4 @@ To embed the microflow with an exclusive split (the attribute of the Boolean typ
 
 Congratulations! Now when the user clicks **Place order**, only the customers who are not blocked will be able to proceed. If the user is blocked, he will get an error message. 
 
-You can publish and view your app. For more information, see [Previewing & Publishing Your App](publishing-app).
+You can preview and publish. For more information, see [Previewing & Publishing Your App](publishing-app).

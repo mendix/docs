@@ -8,7 +8,7 @@ tags: ["studio pro"]
 
 The image widget can be used to show a predefined image on a page, layout or snippet.
 
-{{% alert type="success" %}}
+{{% alert type="info" %}}
 
 If you want to dynamically show different images based on data, please take a look at the [image viewer](image-viewer).
 

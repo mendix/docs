@@ -5,10 +5,45 @@ tags: ["developer portal", "cloud environments", "Mendix Cloud", "SAP", "IBM", "
 ---
 
 {{% alert type="info" %}}
+These release notes cover changes to various parts of the Mendix Platform accessible via the [Mendix Developer Portal](/developerportal/index), such as [Deployment](/developerportal/deploy/), [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy), [Mendix Profile](/developerportal/mendix-profile/), [Buzz](/developerportal/collaborate/buzz), and [Mendix App Store](/developerportal/app-store/app-store-overview).
+{{% /alert %}}
+
+{{% alert type="info" %}}
 For updates on the status of Mendix Cloud V4, Mendix Cloud V3, and other deployment options, see [Mendix Status](https://status.mendix.com/).
 {{% /alert %}}
 
 ## 2019
+
+### June 6th, 2019
+
+#### App Store Improvements
+
+* We fixed the issue with selecting specific **Starter Apps** when creating a new app in Mendix Studio Pro (Desktop Modeler).
+* We fixed the problems with deep links for private apps.
+
+### May 17th, 2019
+
+#### Fixes
+
+* We made several changes to our maintenance window management to ensure that environments are completely locked during maintenance.
+
+### May 16th, 2019
+
+#### Mendix Cloud Improvements
+
+* We re-designed the app user management page of the Developer Portal for Mendix Cloud environments which are enabled for single sign-on (SSO).
+
+### May 13th, 2019
+
+#### Fixes
+
+* We fixed an issue for users deploying to SAP Cloud Portal where newly-bound services were bound correctly but did not appear in the Mendix Developer Portal. (Ticket 81418)
+
+### May 10th, 2019
+
+#### Support Improvements
+
+* We have changed the way you request a license for a new app. You can now request a license using the [Request New App Node](https://newnode.mendix.com/) app. Other requests should continue to be made through the [Support Portal](https://support.mendix.com).
 
 ### May 9th, 2019
 
@@ -18,23 +53,26 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud V3, and other deploym
 
 ### May 7th, 2019
 
-#### Improvements
+#### Mendix Cloud Improvements
 
-* For Mendix Cloud V4, we have extended the range of HTTP Headers which are supported in the Developer Portal. Previously, only *X-Frame-Options* was supported. See [Environment Details](/developerportal/deploy/environments-details#http-headers) for more information.
-
-    If you add or change these settings, you will need to redeploy your app before the changes take effect.
-
+* For Mendix Cloud V4, we have extended the range of HTTP Headers which are supported in the Developer Portal. Previously, only *X-Frame-Options* was supported. For more information, see [Environment Details](/developerportal/deploy/environments-details#http-headers).
+	* If you add or change these settings, you will need to redeploy your app before the changes take effect.
 * For Mendix Cloud V4 deployments of Mendix apps version 7.23.1 and above, we now support AdoptOpenJDK, and the relevant Java version is displayed on the Environment Details page.
-
 * We clarified which logs can be downloaded from the Developer Portal by changing the button text from *Download Today's Log* to *Download Current Log*
 
 #### Fixes
 
 * We resolved an issue where some team members were not visible in Node Permissions after an app was relinked (Tickets 70285, 79708, 79824, 80557, 81713, and 82591).
 
+### May 3rd, 2019
+
+#### Free App Improvements
+
+* We released **Free Edition** of Mendix. This removes the limit of 10 named users on Free Apps which are deployed to the Mendix Cloud. To take advantage of the *Free Edition* for an existing app, you need to redeploy your app.
+
 ### May 2nd, 2019
 
-#### Improvements
+#### UI Improvements
 
 * With the beta release of Mendix Studio and Mendix Studio Pro (Mendix version 8), we have updated all mentions of *Web Modeler* to *Mendix Studio* and *Desktop Modeler* to *Mendix Studio Pro* across the Developer Portal.
 
@@ -786,7 +824,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 #### Fixes
 
-* A story in a completed sprint no longer disappears when you open the details view.
+* A story in a completed Sprint no longer disappears when you open the details view.
 * The Mendix Feedback Widget now supports reporting feedback from pages with very long URLs.
 
 ### June 21st, 2017
@@ -866,12 +904,12 @@ In some cases, you may still experience false positives for the runtime heartbea
 ### March 9th, 2017
 
 #### Improvements
-* We improved the performance of sprint completion. This should now take significantly less time.
+* We improved the performance of Sprint completion. This should now take significantly less time.
 * The App Store now shares the same navigation top bar, and it will therefore now be opened in the same tab.
 * We made various small styling improvements.
 
 #### Fixes
-* We fixed an issue in which completing a sprint from the **Stories** page wouldn't properly update the UI.
+* We fixed an issue in which completing a Sprint from the **Stories** page wouldn't properly update the UI.
 * The **getAccounts** call in the **UserManagementAPI** will now sort results consistently on **EmailAddress** when using limit/offset.
 
 ### February 21st, 2017

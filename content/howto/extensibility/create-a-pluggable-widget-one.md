@@ -120,7 +120,7 @@ Open the **(YourMendixProject)/CustomWidgets/TextBox** folder in your IDE of cho
 
 	This process will bundle the widget and generate the properties into *typings/TextBoxProperties.d.ts*.
 	
-	{{% alert type="info" %}}The console will show the error below, as we did not implement our `TextInput` component. We will solve the error in section 3.5 of this how-to:{{% /alert %}}
+	{{% alert type="info" %}}The console will show the error below, as we did not implement our `TextInput` component. We will solve the error in the [Labeling the Input](#label-input) of this how-to.{{% /alert %}}
 	
 	```
 	ERROR in ./src/TextBox.tsx
@@ -152,7 +152,7 @@ Open the **(YourMendixProject)/CustomWidgets/TextBox** folder in your IDE of cho
 5. The container component *TextBox.tsx* receives the properties in the runtime, and forwards the data to the display component. The container works like glue between the Mendix application and the display component. Override the class lines in *TextBox.tsx* until they look like this:
 
 	```ts
-	import { Component, ReactNode, createElement } from “react”; 
+	import { Component, ReactNode, createElement } from "react"; 
 	import { TextInput } from "./components/TextInput";
 	class TextBox extends Component<TextBoxContainerProps> {
 		render(): ReactNode {
@@ -167,16 +167,18 @@ Open the **(YourMendixProject)/CustomWidgets/TextBox** folder in your IDE of cho
 	Explaining the code:
 	
 	* The `textAttribute` is an object that will automatically have the actual data stored in the attribute – when the data is changed, it will cause an update of the component, and the new data will be displayed in the input
-6. Override the class lines in *Textbox.webmodeler.tsx* until they look like this:
 
-	```ts
+6. Alter *Textbox.webmodeler.tsx* by adding the `TextInput` import to *Textbox.webmodeler.tsx*:
+
+	```ts	
 	import { TextInput } from "./components/TextInput";
+	```
 	
-	declare function require(name: string): string;
+	Then, override the class lines in *Textbox.webmodeler.tsx* until they look like this:
 	
-	// eslint-disable-next-line @typescript-eslint/class-name-casing
+	```ts
 	export class preview extends Component<TextBoxPreviewProps> {
-		render(): JSX.Element {
+		render(): ReactNode {
 			return <TextInput value={this.props.textAttribute} />;
 		}
 	}
@@ -256,17 +258,19 @@ The input works, but the styling could be improved. In the next code snippets, y
 
 	![styled widgets](attachments/pluggable-part-one/styledinputwidgets.png)
 
-### 3.5 Making the Input Labeled
+### 3.5 Labeling the Input{#label-input}
 
 While the Mendix input widgets come with labels, you will need to add one to TextBox manually. With the new API it is easy to add a label to any widget.
 
-1.  In the *TextBox.xml* file, add attribute `<systemProperty />` inside the existing property group:
+1.  In the *TextBox.xml* file, add attribute `<propertyGroup caption="Label">` with its child `<systemProperty />` above the existing `<propertyGroup caption="Data source">`:
 
 	```xml
-	<systemProperty key="Label" />
+	<propertyGroup caption="Label">
+		<systemProperty key="Label" />
+	</propertyGroup>
 	```
 
-	This will add the **Show label** radio buttons in the widget properties tab **Data source**. When **Show label** is set to true it will automatically render the label for you in the page editor and the browser:
+	This will add the **Show label** radio buttons in the widget properties tab **Label**. When **Show label** is set to true, it will automatically render the label for you in the page editor and the browser:
 
 	![edit text box two](attachments/pluggable-part-one/edittextboxtwo.png)
 
@@ -311,7 +315,7 @@ The value from the attribute can be displayed and updated using the other input,
 
 	```ts
 	import { CSSProperties, ChangeEvent, Component, ReactNode, createElement } from "react";
-	import * as classNames from "classnames";
+	import classNames from "classnames";
 	export interface InputProps {
 		value: string;
 		className?: string;
@@ -355,5 +359,5 @@ Continue with the next tutorial to learn how to add validation feedback,  custom
 ## 4 Read More
 
 * [Build a Text Box Pluggable Widget: Part 2 (Advanced)](create-a-pluggable-widget-two)
-* [Write JavaScript Actions](write-javascript-actions)
+* [Make JavaScript Actions](/howto/extensibility/build-javascript-actions)
 * [Mendix Client API](https://apidocs.mendix.com/7/client/)

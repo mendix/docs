@@ -15,11 +15,17 @@ This section of the Developer Portal Guide contains step-by-step instructions, a
 * [Mobile App](mobileapp) – contains instructions for publishing your mobile app: to the Apple or Google stores, for example
 * [App Services](app-services) – describes what can be published to the Mendix App Store, and how to do this
 
-## 2 Locally
+## 2 Run Locally or Preview
 
-You can click **Run Locally** in the toolbar to run your app locally. Use the **View** button to directly jump to your app running at localhost.
+### 2.1 Studio Pro
+
+In *Studio Pro*, you can click **Run Locally** in the toolbar to run your app locally. Use the **View** button to directly jump to see your app running in your browser at *localhost*.
 
 If you plan to deploy to version 3 (V3) of the Mendix Cloud later on, *and* your project contains Java actions, you should enable the **Emulate Cloud Security** setting. For more information, see [V3: Java in Mendix Cloud](java-in-the-cloud).
+
+### 2.2 Studio
+
+In *Studio*, you can click **Preview** in the top-right corner of Studio to see a preview of your app in the browser. For more information see [Previewing & Publishing Your App](/studio/publishing-app).
 
 ## 3 Mendix Cloud
 

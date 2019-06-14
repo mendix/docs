@@ -32,7 +32,7 @@ Commit type defines the way the object is committed.
 | Yes without event handlers | The object is saved in the database, but the [event handlers](event-handlers) are not triggered |
 | No | The object is changed without being saved in the database |
 
-{{% alert type="success" %}}
+{{% alert type="info" %}}
 
 If a flow is triggered from a data view (for example by the 'on change' of an text field) you often do not want to commit the changes you make to the data view object yet. The end user can press the Save or Cancel button to commit or rollback the changes.
 

@@ -4,7 +4,7 @@ module.exports = {
      * POTENTIALLY TEMPORARY REDIRECTS
      ****************************************************/
 	/****************************************************
-     * From the Web Modeler (potentially temporary until fixed in product, mapped)
+     * From Studio(potentially temporary until fixed in product, mapped)
      ****************************************************/
 	{
       from: "/refguide/web-modeler/domain-models-association-properties-wm",
@@ -24,35 +24,8 @@ module.exports = {
     },
 	{
       from: "/refguide/web-modeler/app-settings-wm",
-      to: "/studio/app-settings"
-    },
-	/****************************************************
-     * From the Support Portal (potentially temporary until fixed in product, mapped) 
-     ****************************************************/
-	{
-      from: "/community/app-store-content-support",
-      to: "/developerportal/app-store/app-store-content-support"
-    },
-	{
-      from: "/mendixcloud/custom-domains",
-      to: "/developerportal/deploy/custom-domains"
-    },
-	{
-      from: "/developerportal/howto/how-to-link-app-to-node",
-      to: "/developerportal/deploy/licensing-apps"
-    },
-	{
-      from: "/developerportal/howto/how-to-link-a-different-app-to-a-node",
-      to: "/developerportal/deploy/licensing-apps"
-    },
-	{
-      from: "/developerportal/support/new-app-request-template",
-      to: "/developerportal/support/new-app-node-request-template"
-    },
-	{
-      from: "/developerportal/support/export-a-project-package",
-      to: "/refguide/export-project-package-dialog"
-    },
+      to: "/studio/settings-widget-overview"
+    },	
 	/****************************************************
      * PERMANENT REDIRECTS
      ****************************************************/
@@ -159,6 +132,10 @@ module.exports = {
       from: "/deployment/mendixcloud/sending-email",
       to: "/developerportal/deploy/sending-email"
     },
+	{
+      from: "/howto/deploying-a-mendix-app-to-cloud-foundry",
+      to: "/developerportal/deploy/cloud-foundry-deploy"
+    },
 	/****************************************************
      * From the Developer Portal (permanent, mapped) 
      ****************************************************/
@@ -186,11 +163,11 @@ module.exports = {
       from: "/developerportal/howto/deploying-to-the-cloud",
       to: "/developerportal/deploy/mendix-cloud-deploy"
     },
-  {
+	{
       from: "/deployment/on-premises/deploy-mendix-on-microsoft-windows",
       to: "/developerportal/deploy/deploy-mendix-on-microsoft-windows"
     },
-  {
+	{
       from: "/deployment/on-premises",
       to: "/developerportal/deploy/on-premises-design"
     },
@@ -388,6 +365,37 @@ module.exports = {
 	{
       from: "/releasenotes/desktop-modeler/6.0",
       to: "/releasenotes/studio-pro/6.0"
+    },
+	/****************************************************
+     * From the Support Portal (permanent, mapped) 
+     ****************************************************/
+	{
+      from: "/community/app-store-content-support",
+      to: "/developerportal/app-store/app-store-content-support"
+    },
+	{
+      from: "/mendixcloud/custom-domains",
+      to: "/developerportal/deploy/custom-domains"
+    },
+	{
+      from: "/developerportal/howto/how-to-link-app-to-node",
+      to: "/developerportal/deploy/licensing-apps"
+    },
+	{
+      from: "/developerportal/howto/how-to-link-a-different-app-to-a-node",
+      to: "/developerportal/deploy/licensing-apps"
+    },
+	{
+      from: "/developerportal/support/new-app-request-template",
+      to: "/developerportal/support/new-app-node-request-template"
+    },
+	{
+      from: "/developerportal/support/export-a-project-package",
+      to: "/refguide/export-project-package-dialog"
+    },
+	{
+      from: "/developerportal/support/change-affected-apps",
+      to: "/developerportal/support/prepare-your-project"
     },
 	/****************************************************
      * From Studio Pro version 8 (permanent as backups, mapped)

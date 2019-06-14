@@ -10,9 +10,7 @@ tags: ["studio pro"]
 ## 1 Introduction
 
 {{% alert type="info" %}}
-
 This page is an overview of all the elements that can be used in a nanoflow. For the properties of the nanoflow itself, see [Nanoflow Properties](nanoflow).
-
 {{% /alert %}}
 
 Nanoflows are similar to [microflows](microflows), as they allow you to express the logic of your application. However, they do have some specific benefits (for example, they run directly on the browser/device and can be used in an offline app). Furthermore, most of the actions run directly on the device, so there is also a speed benefit.
@@ -25,7 +23,9 @@ Nanoflows are designed with offline-first applications in mind, as they allow yo
 
 ### 2.2 Logic Where No Connection Is Needed
 
-Nanoflows also offer great value in online applications (for example, for UI logic, validations, calculations, and navigation). However, please keep in mind that when you perform database-related actions, each action will create a separate network request to the Mendix Runtime. The following actions interact with the database:
+Nanoflows also offer great value to online applications (for example, for UI logic, validations, calculations, and navigation). However, please keep in mind that, when you perform database-related actions, each action will create a separate network request to the Mendix Runtime.
+
+The following actions interact with the database:
 
 * Create
 * Commit
@@ -44,11 +44,12 @@ The previous section stated that nanoflows perform best in online applications w
 
 ## 3 Differences from Microflows
 
-There are three main differences betweeen nanoflows and microflows:
+There are four main differences betweeen nanoflows and microflows:
 
 * When a nanoflow steps through its actions, client actions are directly executed. For example, an open page action immediately opens a page instead of at the end of the nanoflow. This is different from client actions in a microflow, which only run when the client receives the result from the microflow.
 * When used in nanoflow activities, expressions do not support the following variables: `$latestError`, `$latestSoapFault`, `$latestHttpResponse`, `$currentSession`, `$currentUser`, `$currentDeviceType`.
-* Nanoflows are not run inside a transaction, so if an error occurs in a nanoflow, it will not roll back any previous changes.
+* Nanoflows are not run inside a transaction so, if an error occurs in a nanoflow, it will not roll back any previous changes.
+* Nanoflows and microflows do not provide the same actions. Some actions available in microflows are not available in nanoflows, and vice versa.
 
 ## 4 Keyboard Support
 
@@ -133,7 +134,11 @@ List activities can be used to create and manipulate lists of objects.
 | [![](attachments/819203/918007.png)](change-list) | [Change list](change-list) | Can be used to change the content of a list variable. |
 | [![](attachments/819203/918009.png)](create-list) | [Create list](create-list) | Can be used to create a (empty) list variable. |
 
-#### 5.4.3 Variable Activities
+#### 5.4.3 Action Call Activities
+
+The [JavaScript action call](javascript-action-call) activity executes a JavaScript action.
+
+#### 5.4.4 Variable Activities
 
 Variable activities can be used to create or change a variable within a microflow.
 
@@ -142,7 +147,7 @@ Variable activities can be used to create or change a variable within a microflo
 | [![](attachments/819203/918011.png)](change-variable) | [Change variable](change-variable) | Can be used to change the value of a variable. |
 | [![](attachments/819203/918110.png)](create-variable) | [Create variable](create-variable) | Can be used to create a new variable. |
 
-#### 5.4.4 Client Activities
+#### 5.4.5 Client Activities
 
 Client activities can be used to have the web client of your application perform an action, such as showing a different page or downloading a file.
 

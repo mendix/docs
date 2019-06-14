@@ -32,7 +32,7 @@ If an input reference set selector is not editable under any circumstances, no s
 
 See [Opening Pages](opening-pages). Note that opening select pages in content is prohibited.
 
-{{% alert type="success" %}}
+{{% alert type="info" %}}
 
 You can generate a new page to show by right-clicking the widget and selecting 'Generate select page...'.
 

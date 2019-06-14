@@ -1,5 +1,5 @@
 ---
-title: "Page Editor"
+title: "Pages"
 description: "Describes the page editor in Mendix Studio."
 menu_order: 30
 tags: ["studio", "page editor", "pages"]
@@ -101,7 +101,7 @@ For example, when you select a button on a page, you will see that it is placed 
 
 To view information on the element click this element in the breadcrumb trail and its properties are displayed automatically.
 
-### 4.1 Viewing Navigation Layout Information with Breadcrumb Trail
+### 4.1 Viewing the Navigation Layout Information with the Breadcrumb Trail
 
 You can also view the information on Navigation layout by clicking it in the breadcrumb trail.
 
@@ -112,7 +112,7 @@ The following options will be displayed in the **Properties** tab:
 
 ## 5 Toolbox Tab
 
-The **Toolbox** shows the tools that can be used in the Page editor. 
+The **Toolbox** shows the tools that can be used on pages. 
 
 This tab consists of the following:
 
@@ -160,7 +160,7 @@ Widgets are single user-interface elements that can be configured. For more info
 
 {{% alert type="info" %}}
 
-You can update widgets in the [App Settings](app-settings). 
+You can update widgets in the [Settings](settings). 
 
 {{% /alert %}}
 

@@ -7,7 +7,7 @@ tags: ["studio pro"]
 
 If database is selected as the data source for a widget then the object or objects shown are retrieved directly from the database with a query. This data source is also supported in [offline](offline-first) applications in which case the data will come from the database on the mobile device. 
 
-{{% alert type="success" %}}
+{{% alert type="info" %}}
 
 Use access rules whenever possible to limit data in data grids. This way you know that the objects will always be constrained by these rules (as opposed to constraints on a single data grid). The access rules will also be applied when executing microflows which saves you from repeating constraints.
 

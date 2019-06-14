@@ -131,4 +131,4 @@ If you want to delete just one condition and not all of them, click the trash bi
 ## 5 Read More
 
 * [Microflows](microflows)
-* [Page Editor](page-editor)
+* [Pages](page-editor)

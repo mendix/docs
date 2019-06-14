@@ -9,53 +9,58 @@ tags: ["Operate","App","Trends","Running now","Cache","Metrics","Developer Porta
 
 ## 1 Introduction
 
-In **Metrics** under the **Operate** category, you can monitor the performance and health of your App. This page is divided into three tabs, each of which is described below.
+On the **Metrics** page, under the **Operate** category, you can monitor the performance and health of your App. The Metrics page is divided into three tabs, each of which is described below.
 
 ## 2 Trends
 
-In this tab you can view the graphs of the App about:
+In this tab you can view graphs which display the following information about the app:
 
 *   Application Statistics 
 *   Database Statistics
 *   Application Node Statistics
 *   Database Node Statistics
 
-There are two types of **Trends** depending on which **Mendix Cloud version** the App is running on:
+The information displayed in **Trends** depends on which **Mendix Cloud version** the app is running. The following documents describe the different trends information available:
 
-*   [Trends in Mendix Cloud v3](/developerportal/operate/trends)
-*   [Trends in Mendix Cloud v4](/developerportal/operate/trends-v4)
+*   [Trends in Mendix Cloud v3](trends)
+*   [Trends in Mendix Cloud v4](trends-v4)
 
-You can find the Mendix Cloud version of your App in the **environment details**. 
-For more information, see [Cloud Version and Region in the Mendix Cloud](/developerportal/deploy/cloud-version-region).
+You can find the Mendix Cloud version of your App in the **Environment details**. For more information, see [Cloud Version and Region in the Mendix Cloud](/developerportal/deploy/cloud-version-region).
 
 ## 3 Running Now
 
-Running requests are all requests that are currently in progress for this environment. Please note that interrupting a request will actually stop it, and the end user may receive an error.
+Running requests are all requests that are currently in progress for this environment.
 
-At this section you can view the following information about the running requests:
+This tab displays the following information about running requests:
 
-| Running Requests | Description
----|---
-| User | The user that has started running the request. |
+| Column | Description |
+| --- | --- |
+| User | The user that started running the request. |
 | Action | The name of the request. |
 | Type | Microflow or Java action. |
-| Duration | For how long the request is running. |
+| Duration | For how long the request has been running. |
 
 You can click the following buttons to execute actions:
 
-*   **Refresh** will refresh the running requests
-*   **Kill request** will stop the request
-*   **Details** will show you information about the **Action Stack**. An Action Stack displays all actions currently on the call stack. Your action us currently performing the bottom action, which was triggered by the action one above it and so forth. 
+*   **Refresh** refreshes the list of running requests
 
-The details of an Action Stack are:
-
-*   Name
-*   Type
-*   Details
+*   **Kill request** stops the selected request
+    {{% alert type="warning" %}}If you kill a request, it will not complete and the end user may receive an error.{{% /alert %}}
+    
+*   **Details** shows you the **Action Stack** for the selected request. An Action Stack displays all the actions currently on the call stack. The bottom action is the one which is currently being performed. It was triggered by the action above it and so forth. The details shown for an Action Stack are:
+    *   Name
+    *   Type
+    *   Details
 
 ## 4 Cache
 
-Mendix runtime version 6 has an object cache for non-persistable objects. In this tab you can see how many objects of each type currently live in memory. You can also see the same information broken down per user session.
+Mendix runtime version 6 has an object cache for non-persistable objects. In this tab you can see how many objects of each type currently live in memory. You can also see the number of objects broken down by user session.
+
+![User session cache details](attachments/metrics/cache-summary.png)
+
+If you select a user session you can click **Details** to see which entities are being used by that user session.
+
+![User session cache details](attachments/metrics/user-cache.png)
 
 {{% alert type="info" %}}
 
@@ -63,11 +68,7 @@ Runtime versions 7 and above are stateless and do not cache Mendix objects on th
 
 {{% /alert %}}
 
-*   Entity
-*   User sessions with the amount of entities. If you select a user session you can click **Details** to see which entities are used.
-
-
 ## 5 Read More
 
 * [Database Size Reduction](database-size-reduction)
-* [Environment details](/developerportal/deploy/environments-details)
+* [Environment Details](/developerportal/deploy/environments-details)

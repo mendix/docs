@@ -1,5 +1,6 @@
 ---
 title: "Integration"
+tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -28,3 +29,5 @@ We want to create a large network of Mendix apps, so let's start integrating!
 * [Synchronize User Accounts Using the LDAP Module](synchronizing-user-accounts-using-the-ldap-module)
 * [Configure Selenium Support](selenium-support)
 * [Execute an SQL Statement on an External Database](execute-an-sql-statement-on-an-external-database)
+* [Access a Samba Share from the MxCloud](access-a-samba-share-from-the-mxcloud)
+* [Install & Configure the SMTP Email Module](install-and-configure-the-smtp-module)

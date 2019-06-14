@@ -35,9 +35,9 @@ In this chapter we will create a new app and select a starter app from the New A
 
     ![](attachments/18448712/18581488.png)
 
-4.  You can now deploy your app or just head over to section 3 to configure Koala.
+4.  You can now deploy your app or just continue with [Configuring Koala](#configuring).
 
-## 4 Configuring Koala
+## 4 Configuring Koala{#configuring}
 
 The Mendix UI Framework uses **Sass**, which relies on Ruby. However, you can install [Koala](http://koala-app.com/) to run Sass in a self-contained Ruby environment, letting you effortlessly manage all of your Sass projects with a handful of clicks. This way you don't have to worry about using the terminal. You can still do this if you are familiar with Sass and terminal.
 

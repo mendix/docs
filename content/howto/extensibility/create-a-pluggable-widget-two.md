@@ -70,7 +70,7 @@ To add these restrictions, follow the instructions below:
 		/>;
 	}
 	private isReadOnly(): boolean {
-		return this.props.editable === "default" || this.props.textAttribute.readOnly;
+		return this.props.editable === "never" || this.props.textAttribute.readOnly;
 	}
 	```
 
@@ -325,7 +325,7 @@ Limitation: The implementation in this sample will cause the onChange event to t
 			</Fragment>;
 		}
 		private isReadOnly(): boolean {
-			return this.props.editable === "default" || this.props.textAttribute.readOnly;
+			return this.props.editable === "never" || this.props.textAttribute.readOnly;
 		}
 		private onLeave(value: string, isChanged: boolean) {
 			if (!isChanged) {
@@ -552,5 +552,5 @@ Explaining the code:
 
 ## 4 Read More
 
-* [Write JavaScript Actions](write-javascript-actions)
+* [Make JavaScript Actions](/howto/extensibility/build-javascript-actions)
 * [Build a Text Box Pluggable Widget: Part 1](create-a-pluggable-widget-one)

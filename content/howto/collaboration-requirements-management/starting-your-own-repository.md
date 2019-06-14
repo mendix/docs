@@ -2,7 +2,7 @@
 title: "Start Your Own Repository"
 category: "Collaboration"
 menu_order: 30
-tags: []
+tags: ["studio pro"]
 ---
 
 ## 1 Introduction
@@ -38,6 +38,6 @@ If you want to make a new release for the App Store, we advise you start off wit
 *   [Stories](/developerportal/collaborate/stories)
 *   [Contributing to a GitHub repository](contribute-to-a-github-repository)
 *   [Version Control](/refguide/version-control)
-*   [How to Use the Feedback Widget](/developerportal/feedback/use-feedback-widget)
+*   [How to Use the Feedback Widget](/developerportal/collaborate/use-feedback-widget)
 *   [Sharing the Development Database](sharing-the-development-database)
 

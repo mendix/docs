@@ -1,110 +1,80 @@
 ---
 title: "Mendix & Integration"
-parent: "integration-overview"
-menu_order: 1
+parent: "integration-intro"
+menu_order: 2
 draft: true
 ---
 
 ## 1 Introduction
 
-Mendix makes it easy to build, update, and maintain an app or microservice that fulfils a business function. Usually a business functions need a GUI, some logic, and data. The internal integration of those layers is handled by Mendix, but for most apps as well as microservice architectures, there is a need for integration with other systems.
+The Mendix Platform is good for building many [types of applications ](https://www.mendix.com/evaluation-guide/what-can-i-build) and integrating them with virtually all other technologies. These integration best practices provide an overview of how Mendix integrates with other systems and technologies, using clear contracts as is prescribed for microservice architectures.
 
-This diagram presents how Mendix keeps all these parts together and checks consistency in the app model:
+## 2 Mendix Integration Characteristics
+
+### 2.1 Internal Integration Consistency Checks
+
+Most business functions require UX for human interaction, some logic and workflow, some data to store and work on, and some integration with the rest of the organization. Thanks to the way the Mendix Platform works, all of these parts are kept together in the same application model, all the way from design to deployment and operations. 
+
+This results in the following benefits:
+
+* Developers do not have to build and test internal integration
+* Business features are kept together and consistency is checked by the platform
+* It is easier and faster for non-technical developers to build Mendix apps
+
+This diagram illustrates how the Mendix Platform keeps everything together from design to operations, as is recommended by the microservice-architecture and cloud-containerization paradigms:
 
 ![](attachments/mendix-integration/feature-requirements.png)
 
-So, you do not have to worry about the integration of internal app layers. However, the Solution Architect or Lead Developer does need to design good microservices and interfaces that can integrate seamlessly with other apps and systems in the enterprise.
+When using Mendix in almost any business use case, there is less alignment between development teams and less integration testing needed than with other technology choices. This provides the low-code advantages of speed, security, and flexibility.
 
-In Mendix, all the integration goes via the app's runtime server, which is a clear advantage for security and control, as presented in this diagram:
+### 2.2 External Integration by Contract {#external-contract}
+
+Microservice architectures prescribe clear contracts for integration between components, and this is also the way Mendix operates. All external integration occurs via an application's runtime server, and this integration requires clear contracts to be defined in the Mendix app model. The app model is aware of all external integration contracts before deployment into production.
+
+If, for example, Mendix allowed direct database connections to an internal database using SQL defined outside the Mendix app model, the functioning of the app in production would be at risk. In addition, testing would be unable to predict all possible interactions. Therefore, in the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy), all connections to the Mendix internal database and file store have to use an agreed contract executed by the Mendix app server.
+
+The diagram below illustrates the following points:
+
+* Internal app integration between the UX, Mendix Runtime, database, and file server is private and not accessible by outside parties, which enhances the security and predictability of the app
+* External integration is funneled through the Mendix Runtime, requiring contracts to be defined in design time
+* A number of standard integration formats are shown (for more information, see the [Standard Integration Formats](#standard-formats) section below)
 
 ![](attachments/mendix-integration/runtime.png)
 
-Mendix handles a large array of formats and protocols. For more information, see the [Integration how-to's](/howto/integration/).
+### 2.3 Standard Integration Formats {#standard-formats}
 
-The most important thing to do is to choose the right integration option from a lot of possibilities. These best practices will present an overview of integration methods and typical use cases.
+Mendix handles a large array of formats and protocols out of the box:
 
-### 1.1 Security
+* **REST** – This is the most commonly used format for synchronous services, and it is always used for integration to the UI. The message format is JSON, which is a bit lighter than XML. Mendix supports REST publishing and the importing of Swagger files with REST service definitions, so this integration is easy to set up and maintain. There is always a microflow between the service and the endpoint.
+* **SOAP** – This is still used by many older services, with WSDL files to share both the message definition and the endpoint. Mendix connects easily with SOAP services. 
+* **OData** – This is a newer format already supported by the Mendix Platform. The transport is also REST, but instead of JSON, there is a direct OData contract from the endpoint to the domain model. This is often used with BI and SAP as well as between Mendix apps.
+* **Deep links** – Deep links allow the developer to redirect an end-user with a specific context from the UX of one app to a specific point in the UX of another app. This is frequently used in microservice architectures.
+* **URL links** – These links are used to redirect the end-user to other apps or web pages. They are also used to encapsulate an external component in a Mendix widget, such as a Google map with enriched information overlayed.
+* **Queues** – Queues are used for asynchronous use cases. The Mendix Platform can use internal queues or connect to external queues. In both cases, there are good [Mendix App Store](https://appstore.home.mendix.com/index3.html) modules to import and use.
+* **Kafka** – Kafka is a new modern distributed event-streaming system that Mendix integrates seamlessly via the [Kafka Connector](https://appstore.home.mendix.com/link/app/67994/). Kafka is used for IoT and other high-volume, distributed, one-directional event streams.
+* **File extracts & imports** – These are still frequently used, mostly via the [Excel Importer](https://appstore.home.mendix.com/link/app/72/) module, which works on [CSV](csv)-formatted text files saved from Excel. These files are important for periodic busines processes, backups, and integrating with legacy systems.
+* **FTP or SFTP** – This is used to move files to and from the internal file store in Mendix, often together with an import or export. The [SFTP](https://appstore.home.mendix.com/link/app/107256/) connector in the Mendix App Store provides an FTP client that can be used to call any FTP server it can reach.
 
-The standard for security is to almost always use encrypted channels: SSL for service calls and SFTP for files. This always allows an app to be on different clouds and data centers will communicating safely.
+For information on how to use these in the [version 7 Mendix Desktop Modeler](https://docs.mendix.com/releasenotes/studio-pro/7), see the [Mendix 7 Integration How-to's](/howto7/integration/).
 
-### 1.2 Always Think *Functionally* First {#functionally}
+### 2.4 Non-Standard Formats
 
-The first best practice is to have an open mind regarding integration requirements. Think about what the integration need really is and consider more than one option for the solution.
+If there is a format that is not immediateley supported, it is easy to extend Mendix using the [Mendix Platform SDK](/apidocs-mxsdk/mxsdk/). This can be required when integrating to legacy systems and mainframes. For example, there could be an RPC with text format messages communicating directly on TCP/IP sockets. 
 
-It is important to remember that an interface starts inside one system and ends inside one or more other systems. There could also be integration components in the middle, so the
-number of options to decide on can be quite large.
+Even if this requires a more technical Mendix developer, there is no reason to avoid such extensions. Once an adapter is built, it can be published in the [Mendix App Store](https://appstore.home.mendix.com/index3.html) and be reused in other Mendix apps (for more information, see [How to Share App Store Content](/developerportal/app-store/share-app-store-content) in the *Developer Portal Guide*).
 
-First, consider the following questions:
+Alternatively, when investing in this legacy integration, you could use a Mendix adapter or "integration app" that provides other apps and systems with the required access to old systems using modern protocols such as REST or OData. If the legacy system is on premises, this adapter can also be installed on premises, while the other apps will be on the Mendix Cloud or a VPC.
 
-* What triggers the interface?
-* Who needs what data when?
-* Who should handle functional errors if they occur?
-* Who should handle technical errors?
-* How can integration be minimized?
-* How can a UX be built that requires very few service calls to load?
+### 2.5 Security of Integration
 
-Next, consider which use case applies and which options are available. 
+Most Mendix apps are deployed on the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy), so communicating with non-Mendix apps means communicating over the internet. This is standard in all modern solutions via these encrypted channels:
 
-Finally, make a conscious choice about why one method is chosen over another.
+* SSL for service calls
+* Sending along an authenticated user token for UI links
+* SFTP for files
 
-## 2 Use Case Categories
+User tokens can also be sent along with service calls from one app to the other, but this is rarely necessary. The source app of any service call should make sure that the end-user is authorized to perform the UX function that requires the service call. This means that for service integration, app-level authentication with SSL is usually sufficient and simpler to manage. 
 
-"Integration" means any kind of interaction between any person, thing, app, or system for any type of purpose. The scope is enormous, and there are hundreds of use cases. When scoping out a new project, there is a fair chance you may find a new type of use case, even if you have worked on integration for years. So, there is reason to keep your eyes open for what is similar and what is different in the use cases we already know.
+## 3 Summary
 
-However, there are typical use cases for which Mendix is creating example implementations. These best practices are related to such typical use cases.
-
-{{% todo %}}[**EXPLAIN DIAGRAM**]{{% /todo %}}
-
-![](attachments/mendix-integration/common-use-cases.png)
-
-For each use case, we need to consider which solution is most suitable under which condition.
-
-## 3 Basic Solution Categories
-
-For most of the integration related to Mendix, there are five solution categories that are almost always used. Sometimes just one is used, and sometimes a combination is used:
-
-{{% todo %}}[**EXPLAIN DIAGRAM**]{{% /todo %}}
-
-![](attachments/mendix-integration/solution-categories.png)
-
-{{% todo %}}[**ADD LINKS BELOW TO INTEGRATION DOCS WHEN AVAILABLE**]{{% /todo %}}
-
-* [UI integration](ui-integration) – This solution category includes, for example, using a deep link from the UI of one app to open the UI of another app (either in the same browser tab or another tab). It also includes website, content management system, and content delivery network integration.
-* [Service integration](service-integration) – This is otherwise known as remote procedure call (RPC) integration. This category uses request and reply, and it almost always synchronous. The request-reply interfaces with REST and SOAP. There is also database integration with OData and SQL, business event and process integration, process orchestration, integration apps, and distributed ESBs.
-* [Event-driven integration](event-integration) – This category usually does not have a response, and it is used to distribute data at large scales or large distances, or simply distribute data in a decoupled way. Event-driven integration can involve IoT, metrics, and social media, as well as state engines and event management.
-* **Batch-oriented integration** – This category includes exporting, moving, and importing files as well as file integration.
-* **Central data** – This category uses a pattern where data is landed and combined in a central place before it is distributed. This could be, for example, an operational data store (ODS); extract, transform, load (ETL); business intelligence (BI); or data lake solution.
-* **Integration Layers & Gateways** – This category involves ESB, internal and external API management, and other gateways.
-
-## 4 Overview of Use Case & Solution Options
-
-Plotting functional use cases against basic methods of integration allows us to see that there are several common options available. That is good, because integration needs to be flexible in a solution in order to adapt to how systems, things, or people communicate. 
-
-The table below presents use cases that you can reference  for more detail. The table uses the following symbols:
-
-{{% todo %}}[**ADD LINKS AS DOCS AVAILABLE**]{{% /todo %}}
-
-| Symbol | Meaning |
-| --- | --- |
-| ![](attachments/mendix-integration/green.png) | Indicates the common or preferred use of the method. In some of cases (for example, "Integration with IoT solutions"), the solution will require several methods, so several of these symbols are used. |
-| ![](attachments/mendix-integration/grey.png) | Indicates possible use in some cases. |
-
-| Use Case | UI Integration | RPC / Services | Events / Queues | Export, Import, Batch | Central Data |
-| --- | --- | --- | --- | --- | --- |
-| SSO, AD & Identity integration | ![](attachments/mendix-integration/grey.png) | ![](attachments/mendix-integration/green.png) | | | |
-| Import & Distribute Reference Data | | ![](attachments/mendix-integration/green.png) | ![](attachments/mendix-integration/grey.png) | ![](attachments/mendix-integration/green.png) | ![](attachments/mendix-integration/grey.png) |
-| View & Search Data in Another System  | ![](attachments/mendix-integration/grey.png) | ![](attachments/mendix-integration/green.png) | | | |
-| Use & Refer to Data in Another System | | ![](attachments/mendix-integration/green.png) | | | ![](attachments/mendix-integration/grey.png) |
-| [Process Int.](process-integration) (cont. workflow) | ![](attachments/mendix-integration/green.png) | ![](attachments/mendix-integration/grey.png) | ![](attachments/mendix-integration/grey.png) | | |
-| [Export, Import & Batch Processing](export-import-batch) | | ![](attachments/mendix-integration/grey.png) | ![](attachments/mendix-integration/grey.png) | ![](attachments/mendix-integration/grey.png) | ![](attachments/mendix-integration/grey.png) |
-| Update Data in Master App | ![](attachments/mendix-integration/green.png) | ![](attachments/mendix-integration/green.png) | ![](attachments/mendix-integration/grey.png) | | |
-| Distribute Master & Transactional Data | | ![](attachments/mendix-integration/green.png) | ![](attachments/mendix-integration/grey.png) | ![](attachments/mendix-integration/grey.png) | ![](attachments/mendix-integration/grey.png) |
-| Int. with BI & Reporting | | ![](attachments/mendix-integration/grey.png) | ![](attachments/mendix-integration/grey.png) | ![](attachments/mendix-integration/green.png) | ![](attachments/mendix-integration/grey.png) |
-| Mobile Int. & Offline | | ![](attachments/mendix-integration/green.png) | ![](attachments/mendix-integration/grey.png) | | |
-| CMS & CDN Int. | ![](attachments/mendix-integration/green.png) | ![](attachments/mendix-integration/grey.png) | | | |
-| Process Orch. & State Engines | | ![](attachments/mendix-integration/green.png) | ![](attachments/mendix-integration/grey.png) | | ![](attachments/mendix-integration/green.png) |
-| Int. with Ops & Monitoring | ![](attachments/mendix-integration/grey.png) | ![](attachments/mendix-integration/grey.png) | ![](attachments/mendix-integration/green.png) | ![](attachments/mendix-integration/grey.png) | ![](attachments/mendix-integration/green.png) |
-| Int. with IoT Solutions | | ![](attachments/mendix-integration/green.png) | ![](attachments/mendix-integration/green.png) | ![](attachments/mendix-integration/grey.png) | ![](attachments/mendix-integration/green.png) |
-| Int. with AI & Machine Learning | | ![](attachments/mendix-integration/green.png) | ![](attachments/mendix-integration/grey.png) | | ![](attachments/mendix-integration/green.png) |
-
-To read these use cases, start with [Integration Use Cases](integration-use-cases).
+The Mendix Platform allows developers to adapt to almost any situation, which is why the number of business use cases for customers and partners using Mendix is constantly increasing. The integration capabilities of the Mendix Platform are solid, which means the main challenge for integration in Mendix app projects is the dendendency on other systems to make good services available.

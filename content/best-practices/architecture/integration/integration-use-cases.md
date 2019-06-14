@@ -1,91 +1,99 @@
 ---
 title: "Integration Use Cases"
-parent: "integration-overview"
-menu_order: 50
+parent: "integration-intro"
+menu_order: 4
 draft: true
 ---
 
-{{% todo %}}[**NEEDS 3 DIAGRAMS**]{{% /todo %}}
+## 1 Basic Integration Solutions
 
-## 1 Introduction
+For most of the integration related to Mendix, there are five basic solutions that are almost always used. Sometimes just one is used, and sometimes a combination is used:
 
-As described in [Mendix & Integration](mendix-integration#functionally), Mendix recommends always thinking of integration from a functional perspective first. The main question you should ask is, what will this integration do for the business solution?
+![](attachments/integration-use-cases/solution-categories.png)
 
-## 2 Deciding on the Best Integration Option
+* [UI Integration](ui-integration) – This solution category includes, for example, using a deep link from the UI of one app to open the UI of another app (either in the same or another browser tab). It also includes integration with websites, content management systems, and content delivery networks.
+* [Service Integration](service-integration) – This is otherwise known as remote procedure call (RPC) integration. This category uses request and reply, and it is almost always synchronous. The request–reply interfaces with REST and SOAP. There is also database integration with OData and SQL, business event and process integration, process orchestration, integration apps, and distributed ESBs.
+* [Event-Based Integration](event-integration) – This category usually does not have a response, and it is used to distribute data at large scales or large distances, or simply distribute data in a decoupled way. Event-driven integration can involve IoT, metrics, and social media, as well as state engines and event management.
+* [Batch Integration](batch-integration) – This category includes exporting, moving, and importing files as well as file integration.
+* [Central Data](central-data) – This category uses a pattern where data is landed and combined in a central place before it is distributed. This could be, for example, an operational data store (ODS); extract, transform, load (ETL); business intelligence (BI); or a data lake solution.
 
-This is an example sequence for an Architect or Lead Developer considering the best way to integrate:
+The next section presents use cases for these five basic solutions.
 
-1. What is the business use case? <br />
-	a. Use this document to see if one use csase fits?
-2. What are the functional requirements? <br />
-	a.  Who needs what data when and for which reason? <br />
-	b. Does it need to be real-time? <br />
-	c. What error handling should be there?
-3.  What are the functional options? <br />
-	a. How can I operate this interface in production? <br />
-	b. How do we manage errors? <br />
-	c. Real-time or batch? <br />
-	d. Request–reply or events? <br />
-	e.  Is there an available integration layer? <br />
+## 2 Use Cases & Integration Solutions {#overview}
 
-	* If yes, what functions does it handle (for example security, monitoring, queueing, simple mapping)? <br />
-	* An "integration layer" means there are two parts of the integration where you one can choose events, request–reply, or batch separately for the best possible operational solution
+{{% todo %}}[**Unify use cases below with use cases presented in Integration Solutions?**]{{% /todo %}}
 
-4. What are the technical options for each functional option? <br />
-	a. Which protocols are available? <br />
-	b. What will it mean for operations? <br />
-	c. What is more secure? <br />
-	d. What has better error handling?
-5. Compare the options against each other.
+Plotting functional use cases against basic integration solutions allows you to see the common solutions available. That is good, because integration needs to be flexible for an Architect to select the best method for a specific situation. 
 
-It is important to think of the overall solution, and recognize that integration starts inside one system and ends inside (one-to-many) other systems.
+For example, you may choose not to change an old system, which leads you to choose a different integration method than you would if you were building two new apps. This means that you may choose the less ideal way to integrate in order not to change an old system. In the scenario that you were building two new apps, you would make another choice.
 
-If it gets complicated on one side of an integration, it is often because the other side of the integration is not ideal. Then, the best solution may be to try to change the other side of the integration.
+As another example, when integrating to SaaS solutions and older systems, there may only be one method available. Such a scenario will determine which integration method to use, rather than these guidelines. 
 
-## 3 Integration Use Cases
+The table below plots use cases and integration solutions, with further detail on the use cases available in the subsequent sections. The table uses the following symbols:
 
-The integration use cases are introduced below.
+| Symbol | Meaning |
+| --- | --- |
+| ![](attachments/integration-use-cases/green.png) | The common or preferred use of the method. In some cases, the solution will require several methods, so several of these symbols are used. |
+| ![](attachments/integration-use-cases/grey.png) | Possible use in some cases. |
 
-{{% todo %}}[**ADD LINKS TO FULL DOCS BELOW ONCE AVAILABLE**]{{% /todo %}}
+| Use Case | UI Integration | Service Integration | Events-Based Integration | Export, Import, Batch | Central Data |
+| --- | --- | --- | --- | --- | --- |
+| [SSO, AD & Identity Integration](#sso) | ![](attachments/integration-use-cases/grey.png) | ![](attachments/integration-use-cases/green.png) | | | |
+| [ Importing & Distributing Reference Data](#import-dist) | | ![](attachments/integration-use-cases/green.png) | ![](attachments/integration-use-cases/grey.png) | ![](attachments/integration-use-cases/green.png) | ![](attachments/integration-use-cases/grey.png) |
+| [Viewing & Searching Data in Another System](#view-search)  | ![](attachments/integration-use-cases/grey.png) | ![](attachments/integration-use-cases/green.png) | | | |
+| [Using & Referring to Data in Another System](#use-refer) | | ![](attachments/integration-use-cases/green.png) | | | ![](attachments/integration-use-cases/grey.png) |
+| [Process Integration](#process) | ![](attachments/integration-use-cases/green.png) | ![](attachments/integration-use-cases/grey.png) | ![](attachments/integration-use-cases/grey.png) | | |
+| [Export, Import & Batch Processing](#export-import) | | ![](attachments/integration-use-cases/grey.png) | ![](attachments/integration-use-cases/grey.png) | ![](attachments/integration-use-cases/grey.png) | ![](attachments/integration-use-cases/grey.png) |
+| [Master Data Integration](#master-data)| ![](attachments/integration-use-cases/green.png) | ![](attachments/integration-use-cases/green.png) | ![](attachments/integration-use-cases/grey.png) | | |
+| [Distributing Master & Transactional Data](#distributing) | | ![](attachments/integration-use-cases/green.png) | ![](attachments/integration-use-cases/grey.png) | ![](attachments/integration-use-cases/grey.png) | ![](attachments/integration-use-cases/grey.png) |
+| [Mobile Integration & Offline](#mobile) | | ![](attachments/integration-use-cases/green.png) | ![](attachments/integration-use-cases/grey.png) | | |
+| [CMS & CDN Integration](#cms-cdn) | ![](attachments/integration-use-cases/green.png) | ![](attachments/integration-use-cases/grey.png) | | | |
+| [Integration with BI & Reporting](#int-bi) | | ![](attachments/integration-use-cases/grey.png) | ![](attachments/integration-use-cases/grey.png) | ![](attachments/integration-use-cases/green.png) | ![](attachments/integration-use-cases/grey.png) |
+| [Process Orchestration & State Engines](#orchestrate) | | ![](attachments/integration-use-cases/green.png) | ![](attachments/integration-use-cases/grey.png) | | ![](attachments/integration-use-cases/green.png) |
+| [Integration with CICD, Ops & Monitoring](#int-cicd) | ![](attachments/integration-use-cases/grey.png) | ![](attachments/integration-use-cases/grey.png) | ![](attachments/integration-use-cases/green.png) | ![](attachments/integration-use-cases/grey.png) | ![](attachments/integration-use-cases/green.png) |
+| [Integration with IoT Solutions](#ai-iot) | | ![](attachments/integration-use-cases/green.png) | ![](attachments/integration-use-cases/green.png) | ![](attachments/integration-use-cases/grey.png) | ![](attachments/integration-use-cases/green.png) |
+| [Integration with Machine Learning](#machine) | | ![](attachments/integration-use-cases/green.png) | ![](attachments/integration-use-cases/grey.png) | | ![](attachments/integration-use-cases/green.png) |
 
-### 3.1 SSO, AD & Identity Integration 
+## 3 Use Case Descriptions
 
-This use case handles security around the following:
+### 3.1 SSO, AD & Identity Integration {#sso}
+
+This use case involves handling security around the following:
 
 * User login integration using standard SSO (for example, SAML and Open ID)
 * Service integration (for example, SSL, tokens, and encryption)
 * Events (for example, securing data on queues)
 * Batch interfaces (for example, using SFTP)
 
-### 3.2 Importing & Distributing Reference Data 
+### 3.2 Importing & Distributing Reference Data {#import-dist}
 
-This use case describes how to manage reference data, such as country codes, currencies, and  product sets. These slow-changing datasets are often maintained in another system and regularly imported into an app (for example, from a CSV file).
+This use case involves managing reference data, such as country codes, currencies, and  product sets. These slow-changing datasets are often maintained in another system and regularly imported into an app (for example, from a [CSV](csv) file).
 
 Along with a microservices cluster, Mendix recommends using one app as the reference data-importing point and then distributing data from there to the rest of the apps.
 
-### 3.3 Viewing & Searching Data in Another System 
+### 3.3 Viewing & Searching Data in Another System {#view-search}
 
-A typical case for integration is using one app to view or search data from another system. This is a simple functional use case, but it has a few technical options that are worth understanding.
+A typical use case for integration is using one app to view or search data from another system. This is a simple functional use case, but it has a few technical options that are worth understanding.
 
-### 3.4 Using & Referring to Data in Another System
+### 3.4 Using & Referring to Data in Another System {#use-refer}
 
-This use case describes how to search and view data in another system as well as store parts of the data locally and set up a functional link between the objects. With such a link, you can  subscribe to updates, reretrieve a new version of the data on request later, or configure a downstream system (for example, finance) to use the reference for its processing.
+This use case involves searching and viewing data in another system as well as store parts of the data locally and set up a functional link between the objects. With such a link, you can  subscribe to updates, reretrieve a new version of the data on request later, or configure a downstream system (for example, finance) to use the reference for its processing.
 
-### 3.5 Process Integration
+### 3.5 Process Integration {#process}
 
 Process integration is the most common integration type in most enterprises. As soon as a business process spans more than one app, there is usually some level of process integration needed. For example, when an end-user submits an order in an ordering system, it should go to a fulfilment system and maybe after that to finance. And of course you will want to also inform the customer.
 
 Read more in [Process Integration](process-integration).
 
-### 3.6 Export, Import & Batch Processing
+### 3.6 Export, Import & Batch Processing {#export-import}
 
 Even in a real-time world, there is plenty of integration that still makes sense to do in a batch-oriented way. Batch integration is usually decoupled, because one step extracts a file, another step moves the file, and a third step imports the file.
 
 This is a great option for reference data and other periodically updated data as well as for initial loads and exports towards DWH solutions, for example.
 
-Read more in [Export, Import & Batch Processing](export-import-batch).
+Read more in [Batch Integration](batch-integration).
 
-### 3.7 Master Data Integration
+### 3.7 Master Data Integration {#master-data}
 
 Master data consists of semi-permanent objects that are used throughout several business processes. That means that several processes and/or departments use the same objects (and often also change the same objects). The most common example is customer data, where a  customer may order products from five different departments but needs to be treated as the same customer.
 
@@ -98,25 +106,39 @@ In its full scope, master data management is a complex process involving the fol
 
 The best practices will describe how to update data in the master app and how to distribute the data to other subscribing apps.
 
-{{% todo %}}[**ADD WHEN RELEASE FOR MX8: ### 3.8 Mobile Integration & Offline (WHERE STORED?)**]{{% /todo %}}
+### 3.8 Distributing Master & Transactional Data {#distributing}
 
-### 3.8 CMS & CDN Integration 
+This use case involves distributing master data and transactional data across the enterprise using a variety of methods, including the following:
 
-Mendix often needs to integrate with content management systems (CMS) like Magnolia. This allows for external facing apps to have a main menu and marketing material in a CMS system that is specialized for these purposes, while Mendix runs the functional part of the portal.
+* REST pull from the recipient
+* REST push from the source
+* OData integration
+* Events on queues
+* Files
 
-This use case will also discuss Mendix integration with content delivery node solutions (such as Akamai) for geo-scaled solutions.
+### 3.9 Mobile Integration & Offline {#mobile}
 
-### 3.9 Integration with BI & Reporting
+This use case involves integration with [mobile](/refguide/mobile) applications and the synchronization of data from an [offline](/refguide/offline-first) app back to a mobile app. It also deals with [push notifications](/howto/mobile/sending-push-notifications).
 
-This use case describes several options for how Mendix developers can provide data from the apps towards a DWH, data lake, or other BI tooling using, for example, files, OData, or database dumps.s
+### 3.10 CMS & CDN Integration  {#cms-cdn}
 
-This use case will also look at creating reports in Mendix apps and integration with data mining tools like Tableau.
+Mendix often needs to integrate with content management systems (CMS) and content delivery nodes (CDN). CMS allows for external facing apps to have a main menu and marketing material in a CMS system that is specialized for these purposes, while Mendix runs the functional part of the portal. CDN solutions provide better responsiveness for geo-scaled solutions.
 
-### 3.10 Integration with CICD, Ops & Monitoring 
+### 3.11 Integration with BI & Reporting {#int-bi}
 
-DevOps is rolling out around the world and many processes—from development and testing to deploying and monitoring—are being automated. Together with cloud and low-code technologies, DevOps is contributing to the digital transformation of the IT industry.
+This use case involves several options for how Mendix developers can provide app data to a DWH, data lake, or other BI tooling. For this, files, OData, or database dumps are used. This use case will also look at creating reports in Mendix apps and integration with data-mining tools like [Tableau](https://www.tableau.com/).
 
-Integration from functional apps towards this automation and operations tooling is becoming increasingly important. These areas will be covered in the use cases:.
+### 3.12 Process Orchestration & State Engines {#orchestrate}
+
+This use case involves active and passive process orchestration. This is mainly automated straight-through-processing, while the case management handles the workflow and human process management. 
+
+### 3.13 Integration with CICD, Ops & Monitoring {#int-cicd}
+
+DevOps is rolling out around the world and many processes—from development and testing to deploying and monitoring—are being automated. DevOps involves collaborating and using the same (or similar) tools to improve the flexibility of releasing functionality more often while maintaining stable solutions in production.
+
+Together with cloud and low-code technologies, DevOps is contributing to the digital transformation of the IT industry. Integration from functional apps towards this automation and operations tooling is becoming increasingly important. 
+
+These use cases will cover the following areas:
 
 * CI/CD integration
 * Test automation (building specific test services)
@@ -126,13 +148,12 @@ Integration from functional apps towards this automation and operations tooling 
 * Professional monitoring and trend analysis
 * Security monitoring
 
-DevOps involves collaborating and using the same (or similar) tools to improve the
-flexibility of releasing functionality more often while maintaining stable solutions in production.
+### 3.14 Integration with IoT Solutions {#ai-iot}
 
-### 3.11 Integration with AI & IoT Solutions
+The Mendix Platform already integrates well with various IoT solutions (for example, for monitoring everything from farm animals to office locations and technical components in industrial processes). This use case involves the key points that need to considered for such integration in order to provide implementations to use as references.
 
-{{% todo %}}[**"Google" BELOW? NO DOCS ON GOOGLE, BUT EXIST ON SAP - VERIFY**]{{% /todo %}}
+### 3.15 Integration with Machine Learning {#machine}
 
-Mendix already integrates well with AI solutions from [IBM](/refguide/ibm/ibm-watson-connector) and Google and with IoT solutions such as [Siemens MindSphere](/howto/mindsphere/). 
+Mendix automation apps use statistical information from data lakes to fine-tune automated processes. They can include algorithms such as Java actions or Java scripts from, for example, AWS Machine learning solutions. 
 
-This use case describes what to think for this type of integration and provides simple example implementations to use as references.
+Mendix also integrates well with Watson from IBM. For more information, see [IBM Watson Connector](/refguide/ibm/ibm-watson-connector).

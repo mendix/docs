@@ -27,7 +27,7 @@ The view of the **General** tab depends on the Mendix Cloud version on which the
         ![](attachments/environments-details/environment-status.png)   
 
 * **Running since** date – the date on which the app was started
-* **Name** – the type of environment (Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy#flexible-environments)): see section 2.2 [Naming of Environments](#naming) for more information
+* **Name** – the type of environment (Test, Acceptance, Production or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy#flexible-environments)): see [Naming of Environments](#naming) for more information
 * **URL** – the URL of the app
 * **Project ID** – the unique identifier for your Mendix app
 * **Environment ID** – the unique identifier of this environment
@@ -35,13 +35,13 @@ The view of the **General** tab depends on the Mendix Cloud version on which the
 * **Java Version** – Oracle version 1.8 or AdoptOpenJDK version 8
 * **Studio Target** – whether this environment is the one where apps will be deployed from Studio - see [Studio Deployment Settings](studio-deployment-settings) for more information
 * **Plan** – (*Cloud V4 only*) the type of plan covered by this license
-* **Instances** – (*Cloud V4 only*) A summary of the number and memory allocation of *instances* of this environment: see section 2.3, [Scaling...](#scaling) for more information
+* **Instances** – (*Cloud V4 only*) A summary of the number and memory allocation of *instances* of this environment: see [Scaling...](#scaling) for more information
 * **Database Status** – (*Cloud V3 only*) this is **Running** by default
 * **Database Version** – the PostgreSQL version that is supporting the database
 * **Region** - the region where the app is hosted
 * **Mendix Cloud Version** – Mendix Cloud v3/Mendix Cloud v4
 
-At the bottom of the page there are three overview sections. These are described below in section 2.4, [Overviews](#overviews)
+At the bottom of the page there are three overview sections. These are described below in the [Overviews](#overviews) section.
 
 ### 2.1 Actions
 

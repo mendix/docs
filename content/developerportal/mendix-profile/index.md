@@ -93,11 +93,11 @@ These are points you can gain through activity on the [Mendix Forum](https://for
 
 | Activity | Points | Max. Points per Day |
 | --- | --- | --- |
-| Have your answer marked as accepted | 15 | n/a |
+| Have your answer marked as accepted | 15 | N/A |
 | Receive an upvote | 10 | 50 |
-| Mark an answer on your question as accepted | 2 | n/a |
-| Downvote someone | -1 | n/a |
-| Receive a downvote | -2 | n/a |
+| Mark an answer on your question as accepted | 2 | N/A |
+| Downvote someone | -1 | N/A |
+| Receive a downvote | -2 | N/A |
 
 ### 7.2 App Store Points {#app-store-points}
 
@@ -105,9 +105,9 @@ These are points you can gain through activity in the [Mendix App Store](https:/
 
 | Activity | Points | Max. Points per Day |
 | --- | --- | --- |
-| Publish an app | 50 | n/a |
-| Publish a new app version | 25 | n/a |
-| Add an app review | 5 | n/a |
+| Publish an app | 50 | N/A |
+| Publish a new app version | 25 | N/A |
+| Add an app review | 5 | N/A |
 | Download [Mendix Studio Pro](https://appstore.home.mendix.com/link/modelers/) | 5 | 5 |
 | Download an app from the App Store | 1 | 5 |
 
@@ -115,7 +115,7 @@ These are points you can gain through activity in the [Mendix App Store](https:/
 
 | Activity | Points | Max. Points per Day |
 | --- | --- | --- |
-| Be the first member of your company to sign up for Mendix | 25 | n/a |
+| Be the first member of your company to sign up for Mendix | 25 | N/A |
 | Upload to Model Share | 10 | 10 |
 | Send an app invite | 10 | 50 |
 | Download a microflow from [Model Share](https://modelshare.mendix.com/) | 5 | 5 |
@@ -128,23 +128,23 @@ These are points you can gain through activity in the [Mendix App Store](https:/
 | Create a user story | 1 | 20 |
 | Post a message on the Buzz | 1 | 10 |
 | Deploy to a licensed node | 1 | 5 |
-| Deploy a Free App | 1 | n/a |
+| Deploy a Free App | 1 | N/A |
 
 ### 7.4 Community Points {#github}
 
 | Activity | Points | Max. per Day |
 | --- | --- | --- |
-| Win a Mendix Hackathon! | 300 | n/a |
-| Reach the [Mendix MVP](https://developer.mendixcloud.com/link/mvp) status | 300 | n/a |
-| Be the runner-up in a Mendix Hackathon | 150 | n/a |
-| Organize a [Mendix Meetup ](https://developers.mendix.com/)  | 100 | n/a |
-| Complete your Mendix Profile | 50 | n/a |
-| Make your Mendix Profile public | 50 | n/a |
-| Attend a Mendix Hackathon | 50 | n/a |
-| Successfully refer a friend to Mendix | 25 | n/a |
-| Attend a Mendix Meetup | 25 | n/a |
-| Attend Mendix World 2016 | 25 | n/a |
-| Get a GitHub pull request merged | 15 | n/a |
+| Win a Mendix Hackathon! | 300 | N/A |
+| Reach the [Mendix MVP](https://developer.mendixcloud.com/link/mvp) status | 300 | N/A |
+| Be the runner-up in a Mendix Hackathon | 150 | N/A |
+| Organize a [Mendix Meetup ](https://developers.mendix.com/)  | 100 | N/A |
+| Complete your Mendix Profile | 50 | N/A |
+| Make your Mendix Profile public | 50 | N/A |
+| Attend a Mendix Hackathon | 50 | N/A |
+| Successfully refer a friend to Mendix | 25 | N/A |
+| Attend a Mendix Meetup | 25 | N/A |
+| Attend Mendix World 2016 | 25 | N/A |
+| Get a GitHub pull request merged | 15 | N/A |
 | Invite a friend to Mendix | 5 | 50 |
 | Have a user sign up via your referral URL | 5 | 50 |
 
@@ -156,17 +156,17 @@ In order to receive Mendix points for your contributions to Mendix GitHub reposi
 
 | Activity | Points | Max. per Day |
 | --- | --- | --- |
-| Pass the [Expert Developer Certification](https://gettingstarted.mendixcloud.com/link/certification/expert) exam | 100 | n/a |
-| Pass the [Advanced Developer](https://gettingstarted.mendixcloud.com/link/certification/advanced) exam | 50 | n/a |
-| Give a presentation on Mendix | 25 | n/a |
-| Write a blog post that is featured on the Mendix [Community Blog](https://developers.mendix.com/community-blog/) | 25 | n/a |
-| Pass the [Rapid Developer Certification](https://gettingstarted.mendixcloud.com/link/certification/rapid) exam | 25 | n/a |
-| Complete a learning path in the [Mendix Academy](https://gettingstarted.mendixcloud.com/link/home) | 25 | n/a |
-| Make a large contribution to the [Mendix documentation](https://docs.mendix.com/) | 15 | n/a |
-| Attend the [Advanced Developer Classroom](https://gettingstarted.mendixcloud.com/link/classroom/advanced) course | 10 | n/a |
-| Attend the [Rapid Developer Classroom](https://gettingstarted.mendixcloud.com/link/classroom/rapid) course | 10 | n/a |
-| Make a small contribution to the Mendix documentation | 5 | n/a |
-| Complete a unit in the Mendix Academy | 1 | n/a |
+| Pass the [Expert Developer Certification](https://gettingstarted.mendixcloud.com/link/certification/expert) exam | 100 | N/A |
+| Pass the [Advanced Developer](https://gettingstarted.mendixcloud.com/link/certificatioN/Advanced) exam | 50 | N/A |
+| Give a presentation on Mendix | 25 | N/A |
+| Write a blog post that is featured on the Mendix [Community Blog](https://developers.mendix.com/community-blog/) | 25 | N/A |
+| Pass the [Rapid Developer Certification](https://gettingstarted.mendixcloud.com/link/certification/rapid) exam | 25 | N/A |
+| Complete a learning path in the [Mendix Academy](https://gettingstarted.mendixcloud.com/link/home) | 25 | N/A |
+| Make a large contribution to the [Mendix documentation](https://docs.mendix.com/) | 15 | N/A |
+| Attend the [Advanced Developer Classroom](https://gettingstarted.mendixcloud.com/link/classroom/advanced) course | 10 | N/A |
+| Attend the [Rapid Developer Classroom](https://gettingstarted.mendixcloud.com/link/classroom/rapid) course | 10 | N/A |
+| Make a small contribution to the Mendix documentation | 5 | N/A |
+| Complete a unit in the Mendix Academy | 1 | N/A |
 
 {{% alert type="info" %}}
 For details on how to gain Mendix points on documentation work, see [How to Contribute to the Mendix Documentation](../community-tools/contribute-to-the-mendix-documentation).
@@ -225,7 +225,7 @@ In this section, you can view feedback submitted on the following:
 * Apps of which you are an App Team member
 * Your company’s apps of which you are not an App Team member
 
-When you click **Details** for feedback on an app of which you are an App Team member, you can manage the feedback. For details on how to do this, see [Feedback](../feedback/index).
+When you click **Details** for feedback on an app of which you are an App Team member, you can manage the feedback. For details on how to do this, see [Feedback](/developerportal/collaborate/feedback).
 
 ### 9.4 Team Server
 

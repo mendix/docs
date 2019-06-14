@@ -57,8 +57,6 @@ When you initially deploy a Mendix App, it is treated as a *Free App*. For a Min
 * You can have a maximum of ten users
 * The app will go into sleep mode after 1-2 hours: this could cause the Cloud Foundry environment to be restarted and pick up the latest values of environment variables.
 
-For a full list of limitations, see the [Free App](/developerportal/deploy/mendix-cloud-deploy#free-app) section of *Mendix Cloud*. Note that this also includes restrictions which apply specifically to apps which are deployed to the Mendix Cloud.
-
 To license your app, you need to obtain a license key from [Mendix Support](https://support.mendix.com).
 
 Instructions for licensing apps are available in the [License Activation](https://github.com/mendix/cf-mendix-buildpack#license-activation) section of the *Mendix Cloud Foundry Buildpack Readme*. Refer to [Cloud Foundry Environment Variables](#cfenvvars), above, for instructions on changing Cloud Foundry environment variables.
@@ -66,8 +64,13 @@ Instructions for licensing apps are available in the [License Activation](https:
 ## 5 Local Testing{#localtesting}
 
 ### 5.1 Credentials 
+The SSO module supports two ways to get a valid MindSphere token locally. The method can be chosen by setting the value of the constant *CredentialsType* to one of the following settings:
 
-When you run your app locally, you will not be able to use SSO to get your credentials. You will be logged on as MxAdmin and will be presented with a login screen either when the app starts, or the first time that your app attempts to retrieve your access token, depending on the value of the constant *AskForAppCredsOnStartUp*.
+* **Application Credentials**: which is the default and recommended way
+* **Service Credentials**: which is the backup method for when Application Credentials are not possible
+
+#### 5.1.2 Application Credentials
+When you run your app locally, you will not be able to use SSO to get your credentials. You will be logged in as MxAdmin and will be presented with a login screen either when the app starts, or the first time that your app attempts to retrieve your access token, depending on the value of the constant *AskForCredentialsOnStartUp*.
 
 {{% image_container width="50%" %}}![](attachments/mindsphere-development-considerations/image19.png){{% /image_container %}}
 
@@ -99,7 +102,14 @@ To ensure that the correct application credentials are requested, you have to se
 
 ![](attachments/mindsphere-development-considerations/image23.png)
 
-**AskForAppCredsOnStartUp**
+#### 5.1.2 Service Credentials
+As an alternative to the Application Credentials, you can choose the option Service Credentials. As with the Application Credentials a login screen will be open asking for the **Credentials ID** and the **Password**.
+Service Credentials can be requested via a service request to the Global Technical Access Center GTAC. More information can be found [here].(https://developer.mindsphere.io/howto/howto-selfhosted-api-access.html#creating-service-credentials).
+
+
+### 5.2 Configuration 
+
+**AskForCredentialsOnStartUp**
 
 Set this to *True* if you want your app to ask for credentials as soon as it starts up, before the first page is displayed. If this is set to *False* then the app will ask for credentials the first time that it attempts to retrieve your access token.
 

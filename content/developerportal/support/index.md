@@ -8,7 +8,7 @@ Although our platform is highly accessible and new versions of our products are 
 
 Mendix Support is here to answer any questions and solve any issues that you might have. We try to make your journey as frictionless as possible.
 
-### 1.1 Service Level Agreements
+### 1.1 Service Level Agreements {#sla}
 
 We are available for all users of the Mendix platform, and we are bound by service-level agreements (SLA) to our licensed customers. Licensed customers can select their type of SLA level: **Platform** or **Platinum**. The SLA level determines the specific agreement on the following points:
 
@@ -34,7 +34,7 @@ For more details about the idea forum, see [The Mendix Forum](/developerportal/c
 
 ## 4 Accessing Mendix Support
 
-You can access the Mendix Support team through the [Support Portal](https://support.mendix.com), via email (support@mendix.com), or by phone (phone numbers are listed in the Support Portal). Please note that critical tickets always need to be accompanied by a phone call to speed up the triage of the issue. In the Support Portal, you can check the status of your personal tickets, check all the submitted tickets on your applications, and provide updates on them.
+You can access the Mendix Support team through the [Mendix Support Portal](https://support.mendix.com), via email (support@mendix.com), or by phone (phone numbers are listed in the Support Portal). Please note that critical tickets always need to be accompanied by a phone call to speed up the triage of the issue. In the Support Portal, you can check the status of your personal tickets, check all the submitted tickets on your applications, and provide updates on them.
 
 ## 5 What We Expect from You
 
@@ -61,13 +61,13 @@ It is very important to read these alerts carefully and to act upon them, as the
 
 We expect your support team to be trained and certified on Studio Pro and the Developer Portal so that they can interpret and analyze alerts, graphs, and logs in the Developer Portal. For more information, please check our available [training courses](https://gettingstarted.mendixcloud.com/link/classroom) and [expert webinars](https://gettingstarted.mendixcloud.com/link/webinar) or contact the Mendix Academy (<academy@mendix.com>).
 
-## 6 Reach Out to Mendix Support
+## 6 Platform Status
+
+If there is an issue in the Mendix Platform that affects multiple customers or if there is planned maintenance, we will communicate this through our [status page](https://status.mendix.com) and send updates on the progress through email if you have subscribed to this service. Having your service desk team subscribe to updates from this page is recommended.
+
+## 7 Reach Out to Mendix Support
 
 If you suspect an issue in the Mendix platform exists after your analysis (or if you have questions about your analysis), you can reach out to Mendix Support. We will provide pointers on how to solve the issues yourself or redirect you to Expert Services for further assistance. If we suspect a platform issue, we will involve second and third line support for confirmation, and we will fix it if it is a platform issue. If the issue is commercial (for example, because your app requires a larger app container or more file storage), we might refer you to your Customer Success Manager directly.
-
-## 7 Platform Status
-
-If there is an issue in the Mendix platform that affects multiple customers or if there is planned maintenance, we will communicate this through our [status page](https://status.mendix.com) and send updates on the progress through email if you have subscribed to this service. Having your service desk team subscribe to updates from this page is recommended.
 
 ## 8 Product Support Period
 

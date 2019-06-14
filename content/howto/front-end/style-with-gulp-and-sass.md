@@ -54,7 +54,7 @@ If you are using Parallels on Mac, you can access your Mendix project on your Ma
 
 And that's it! Now you are ready to start styling your Mendix app with Sass.
 
-## 5 Development and Production
+## 5 Development & Production
 
 When running `gulp dev`, Sass will compile the CSS files unminified and with source-mapping. This helps in debugging the styling, as a modern browser will point to the *.scss* file where a rule is specified.
 
@@ -67,6 +67,10 @@ When you use this setup in a collaborative app project, please note that you wil
 If you have [TortoiseSVN](/refguide/using-version-control-in-studio-pro#tortoisesvn-subclipse) installed, right-click the **node_modules** folder and select **TortoiseSVN** > **Add to ignore list**.
 
 ![](attachments/style-with-gulp-and-sass/svn-ignore.jpg)
+
+{{% alert type="warning" %}}
+Always use the version of TortoiseSVN which matches your app model. If you open a local model from Mendix version 7.x or 6.x with the latest version of TortoiseSVN **you will no longer be able to open it in Mendix**.
+{{% /alert %}}
 
 ## 7 Troubleshooting
 

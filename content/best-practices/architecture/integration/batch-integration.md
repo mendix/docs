@@ -20,7 +20,7 @@ There are these typical use cases:
 
 * [Export and import processes](#export-import) – In this use case, data is exported from one system and imported in another system.
 * [Reference data management](#reference) – Reference data management is usually done in batch, because a snapshot of a situation is generally desired and several systems may need to work on the same snapshot. This is often done at night, to prevent the export/import processing from interferring with normal operations, and/or to take advantage of the CPU power available at night when it is usually less busy.
-* [File integration and management](#file-integration) – This use case is important for moving files in batch-oriented integration.It is also important for providing files of various types to end-users and customers.
+* [File management](#file-management) – This use case is important for moving files in batch-oriented integration.It is also important for providing files of various types to end-users and customers.
 * [Data lakes, DWH, and BI integration](#int) – This is an area that usually works in batch mode. Mendix provides data to these solutions for analysis, statistics, reporting, business intelligence, and also machine learning. In some automated processes, Mendix also receives data from these solutions and turns it into reference data that helps in optimizing automated business flows (for details, see <<Self-Learning Process -3 Self-Learning Processes Using Data Lakes>>
 * **Monitoring and IoT solutions** – In these use cases, data is often batched up data in small packages and sent at high speed. For more information, see [Ops & CI/CD Integration](ops-cicd-integration) and <<IoT Integration - 4.2 Examples for IoT with Mendix>>.
 	

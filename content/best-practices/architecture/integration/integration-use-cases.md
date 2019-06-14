@@ -91,7 +91,7 @@ Even in a real-time world, there is plenty of integration that still makes sense
 
 This is a great option for reference data and other periodically updated data as well as for initial loads and exports towards DWH solutions, for example.
 
-Read more in [Export, Import & Batch Processing](export-import-batch).
+Read more in [Batch Integration](batch-integration).
 
 ### 3.7 Master Data Integration {#master-data}
 

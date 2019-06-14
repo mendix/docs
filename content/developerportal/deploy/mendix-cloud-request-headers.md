@@ -38,6 +38,8 @@ The following headers are set by the Mendix Cloud. If any of these are present i
 | **SSL-Cipher**                              | `ECDHE-RSA-AES256-GCM-SHA384`                                | The TLS ciphers used for the HTTPS connection. |
 | **SSL-Client-S-DN**                         | `CN=Hans van Kranenburg,OU=RnD,O=Mendix,C=NL`                | The Subject DN string of the client certificate for an established TLS connection according to [RFC 2253](https://tools.ietf.org/html/rfc2253). |
 
+There can be additional headers set by the Mendix Cloud, not being documented in the list above. The presence of these headers and the values they have must not be relied on. They are not subject to the deprecation handling as shown below.
+
 ### 2.3 Deprecated request headers inserted by the Mendix Cloud
 
 The following headers are set by the Mendix Cloud, but are deprecated and will be removed in the future.

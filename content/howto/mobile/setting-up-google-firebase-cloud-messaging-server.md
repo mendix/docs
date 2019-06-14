@@ -124,3 +124,8 @@ Configure FCM as follows:
 {{% alert type="warning" %}}
 Make sure the **Encryption.EncryptionKey** constant has a valid value before you start the application. If the value is not set, the private key will not be stored correctly, and you will get a `NullPointerException` error when you try to send a notification to FCM. If you get the `NullPointerException` error, please double-check the value of the **Encryption.EncryptionKey** constant, restart your app, and upload the private key again.
 {{% /alert %}}
+
+## 9 Read More
+
+* [Implement Push Notifications](implementation-guide)
+* [Publish a Mendix Hybrid Mobile App in Mobile App Stores](publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)

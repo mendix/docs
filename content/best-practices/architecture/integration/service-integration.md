@@ -200,7 +200,7 @@ If a synchronous end-to-end call is impractical, it can be replaced by two async
 
 For scenarios where there are many-to-one or many-to-many situations, there is no reason to be synchronous between distributed components. In fact, it would be very hard to use synchronous communication there. In these scenarios, Mendix recommends using Kafka, a message broker, or file interaction. For more information, see [Event-Based Integration](event-integration).
 
-For periodic interactions that handle large datasets (for example, in reporting, billing, and invoicing), there is no reason to be working in real-time. Furthermore, processing will be slower and take more CPU power if transactions are processed one by one via services. For details on such cases, see [Export, Import & Batch Processing](export-import-batch).
+For periodic interactions that handle large datasets (for example, in reporting, billing, and invoicing), there is no reason to be working in real-time. Furthermore, processing will be slower and take more CPU power if transactions are processed one by one via services. For details on such cases, see [Batch Integration](batch-integration).
 
 ### 3.3 Copying Data or Getting It in Real-Time
 

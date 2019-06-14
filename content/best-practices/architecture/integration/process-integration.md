@@ -70,7 +70,9 @@ Kafka is often used as an advanced queueing system for one-way communications, s
 
 Mendix is often used as a workflow tool, where a partly manual business process is implemented in a Mendix app. The Mendix app can perform the workflow on top of SAP or legacy systems, or the app could be a departmental “business portal” that allows users to work in one single app instead of opening 10-20 different applications.
 
-[Workflow integration](workflow-integration) means that the human workflow is handled across several apps via links in the UI (which are usually deep links). The end-user is often unaware that there are two separate apps. Sometimes you need to copy data behind the scenes, so the user has new data when they come back to the original app.
+Workflow integration means that the human workflow is handled across several apps via links in the UI (which are usually deep links). The end-user is often unaware that there are two separate apps. Sometimes you need to copy data behind the scenes, so the user has new data when they come back to the original app.
+
+For more information, see [How to Do Workflow Integration](#how-workflow-int).
 
 ### 3.1 Example 1 – Dashboard for Standard Microservices System
 
@@ -164,7 +166,7 @@ The Mendix Platform can be used for building all of the components in the diagra
 * Automated straight-through processing apps
 * Internal dashboards and control apps
 
-## 7 How to Do Workflow Integration
+## 7 How to Do Workflow Integration {#how-workflow-int}
 
 In most architectures, there are business processes that exceed the functionality of a single microservice app. In that case, there will be some transactional data used in that process that needs to be transferred between the microservices involved. Often, there will be a deep link for users to navigate between the apps.
 

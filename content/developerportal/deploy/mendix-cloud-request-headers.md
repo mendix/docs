@@ -3,7 +3,7 @@ title: "Mendix Cloud HTTP Request Headers"
 parent: "mendix-cloud-deploy"
 menu_order: 36
 description: "Describes which HTTP request headers are available in the Mendix Cloud."
-tags: ["Deploy", "Mendix Cloud", "headers"]
+tags: ["Deploy", "Mendix Cloud", "headers", "HTTP Request Headers", "X-Real-IP", "SSL-Protocol", "SSL-Cipher", "SSL-Client-S-DN"]
 ---
 
 ## 1 Introduction

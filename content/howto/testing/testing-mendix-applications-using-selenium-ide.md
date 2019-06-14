@@ -106,6 +106,8 @@ Learn more about this topic using the following helpful link:
 
 # OLD
 
+-create test to get to a failing element
+
 ## Locating  the Element Using Developer Tools (Second Automated Test)
 
 Selenium IDE can be used to record tests scripts, but these scripts usually need to be edited before you can use them (for example, HTML tag IDs are generated dynamically and will be different with each run of the same page). 

@@ -8,7 +8,7 @@ tags: ["Deploy", "Mendix Cloud", "headers", "HTTP Request Headers", "X-Real-IP",
 
 ## 1 Introduction
 
-All applications running in the Mendix Cloud are accessed using the HTTPS protocol. Using this HTTPS protocol, a lot of individual requests are sent to the application. Examples of these requests are "execute this XPath request", "execute this Microflow", or "please provide the layout of this page".
+All applications running in the Mendix Cloud are accessed using the HTTPS protocol. Using this protocol, a lot of individual requests are sent to the application. Examples of these requests are "execute this XPath request", "execute this Microflow", or "please provide the layout of this page".
 
 ## 2 HTTP Request Headers
 

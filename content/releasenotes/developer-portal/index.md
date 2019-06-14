@@ -14,6 +14,13 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud V3, and other deploym
 
 ## 2019
 
+### Jun 15th, 2019
+
+#### Mendix Cloud Announcement
+
+* All stable HTTP Request Headers set by the Mendix Cloud are documented on the page about [Mendix Cloud HTTP Request Headers](developerportal/deploy/mendix-cloud-request-headers).
+* The `X-Client-Certificate` Request Header that is currently present is deprecated and will be removed in a later stage. Any application relying on this header must switch to the new `SSL-Client-S-DN` header. See the previously mentioned documentation page for more information.
+
 ### June 6th, 2019
 
 #### App Store Improvements

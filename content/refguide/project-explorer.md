@@ -8,7 +8,8 @@ tags: ["studio pro", "project explorer"]
 
 The **Project Explorer** shows the complete structure of your project including all documents inside the modules:
 
-![](attachments/project-explorer/project-explorer.png)
+{{% image_container width="450" %}}![](attachments/project-explorer/project-explorer.png)
+{{% /image_container %}}
 
 The **Project Explorer** consists of the following:
 

@@ -35,7 +35,7 @@ If, for example, Mendix allowed direct database connections to an internal datab
 
 The diagram below illustrates the following points:
 
-* Internal app integration between the Mendix UX, Mendix Runtime, database, and file server are private and not accessible by outside parties, which enhances the security and predictability of the app
+* Internal app integration between the UX, Mendix Runtime, database, and file server is private and not accessible by outside parties, which enhances the security and predictability of the app
 * External integration is funneled through the Mendix Runtime, requiring contracts to be defined in design time
 * A number of standard integration formats are shown (for more information, see the [Standard Integration Formats](#standard-formats) section below)
 
@@ -51,7 +51,7 @@ Mendix handles a large array of formats and protocols out of the box:
 * **Deep links** – Deep links allow the developer to redirect an end-user with a specific context from the UX of one app to a specific point in the UX of another app. This is frequently used in microservice architectures.
 * **URL links** – These links are used to redirect the end-user to other apps or web pages. They are also used to encapsulate an external component in a Mendix widget, such as a Google map with enriched information overlayed.
 * **Queues** – Queues are used for asynchronous use cases. The Mendix Platform can use internal queues or connect to external queues. In both cases, there are good [Mendix App Store](https://appstore.home.mendix.com/index3.html) modules to import and use.
-* **Kafka** – Kafka is a new modern distributed event-streaming system that Mendix integrates seamlessly with using the [Kafka Connector](https://appstore.home.mendix.com/link/app/67994/). Kafka is used for IoT and other high-volume, distributed, one-directional event streams.
+* **Kafka** – Kafka is a new modern distributed event-streaming system that Mendix integrates seamlessly via the [Kafka Connector](https://appstore.home.mendix.com/link/app/67994/). Kafka is used for IoT and other high-volume, distributed, one-directional event streams.
 * **File extracts & imports** – These are still frequently used, mostly via the [Excel Importer](https://appstore.home.mendix.com/link/app/72/) module, which works on [CSV](csv)-formatted text files saved from Excel. These files are important for periodic busines processes, backups, and integrating with legacy systems.
 * **FTP or SFTP** – This is used to move files to and from the internal file store in Mendix, often together with an import or export. The [SFTP](https://appstore.home.mendix.com/link/app/107256/) connector in the Mendix App Store provides an FTP client that can be used to call any FTP server it can reach.
 

@@ -1,7 +1,7 @@
 ---
 title: "Modules"
-category: "App Modeling"
-tags: ["studio pro"]
+parent: "project-explorer"
+tags: ["studio pro", "module", "modules"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

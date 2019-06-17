@@ -15,17 +15,19 @@ An enumeration consists of one or more [enumeration values](enumeration-values).
 
 To create a new enumeration, do the following: 
 
-1. In the [Project Explorer](project-explorer), right-click the module or a folder you want to add enumeration to and in the list of actions, select **Add other** > **Enumeration**.
+1.  In the [Project Explorer](project-explorer), right-click the module or a folder you want to add enumeration to and in the list of actions, select **Add other** > **Enumeration**:
+
+    ![](attachments/enumerations/add-enumeration.png)
 
 2. In the **Add Enumeration** dialog window, fill out the name of the enumeration.
 
-3.  In the **Enumeration** dialog window, click **New** to create enumeration values:
+3. In the **Enumeration** dialog window, click **New** to create enumeration values:
 
-	a.  Fill out **Name** and **Caption** for an enumeration value. You can set **Image** for it if necessary. For more information on enumeration properties, see the **[Enumeration Properties](#enum-properties)** section. <br />
+  a.  Fill out **Name** and **Caption** for an enumeration value. You can set **Image** for it if necessary. For more information on enumeration properties, see the **[Enumeration Properties](#enum-properties)** section. <br />
 
     ![](attachments/enumerations/add-enum-value.png)<br />
-  
-	b.  Click **OK** to save the enumeration value.<br />
+
+  b.  Click **OK** to save the enumeration value.<br />
 
 4. Repeat step 3 for every enumeration value that you want to create.
 

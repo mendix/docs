@@ -1,49 +1,66 @@
 ---
 title: "Demo Users"
 parent: "project-security"
+menu_order: 30
+tags: ["studio pro", "demo users", "demo-users", "project security"]
 ---
 
 ## 1 Introduction
 
-In this section of the [project security](project-security) settings, you can define demo users that may be used during the development phase of your application for testing purposes, or to show the application to other people.
+Demo users are a demonstration of each [user role](user-roles) existing in your app. You can use demo users to test what your app looks like for each user role or to demonstrate your app to other people (for more information, see the [Testing Your App via Demo Users](#test-your-app) section . 
 
-Each demo user can be assigned an entity and one or more user roles that apply when you sign in to your application with that user. When the application is started for the first time, the specified demo users are created automatically.
+When the application is started for the first time, the specified demo users are created automatically.
 
-After signing in to your application with the [administrator user](administrator), a small tab called the 'user switcher' is presented at the right side of your application. Expanding this tab shows a list with all the demo users that are defined in the project security settings. Selecting a user from this list will sign in to your application using the credentials of this user, thus allowing you to test or demo your application with the user's role(s). This allows for rapid testing of your application with different user roles.
+The demo users are only created and shown when running your application locally on your development machine, or when running in a sandbox.
 
-![](attachments/16713956/16844040.png)
+To access demo users and their properties, open **Project Security** > the**Demo users** tab:
 
-The user switcher is only shown and the demo users are only created when running your application locally on your development machine, or when running in a sandbox.
-
-{{% alert type="warning" %}}
-
-After they are created automatically, demo users do not differ in any way from other local users that are defined in your application. This means that you can still use them to manually sign in using their user name and password, even after disabling the demo users feature again. Also, the demo users are never automatically removed from the database.
-
-{{% /alert %}}
+![](attachments/demo-users/demo-users-tab.png)
 
 ## 2 Enabling Demo Users
 
-Here you can configure whether the specified demo users are created and accessible in the user switcher.
+When security is enabled, demo users are enabled by default. You can disable or enable them back with **Enable demo users** setting that has the following options:
 
-| Value | Description |
-| --- | --- |
-| Yes | Demo users are enabled. A user switcher is shown in the right margin of your application. |
-| No | Demo users are disabled. The user switcher is not shown in the application. |
+* **Yes** – demo users are enabled, you can create new demo users, edit or delete them
+* **No** – demo users are disabled, you cannot add, edit, or delete demo users
+
+{{% alert type="warning" %}}
+
+After they are created automatically, demo users do not differ in any way from other local users that are defined in your application. This means that you can still manually sign in using their user name and password, even after disabling the demo users feature. Also, the demo users are never automatically removed from the database.
+
+{{% /alert %}}
 
 ## 3 Demo User Properties
 
-### 3.1 Username
+Double click the demo user to open its properties:
 
-The name of the demo user. This name must be unique, and cannot be the same as the name of the [administrator user](administrator).
+![](attachments/demo-users/demo-user-properties.png)
 
-### 3.2 Password
+Demo user properties are described in the table below:
 
-The password of the demo user is created automatically when the demo user is created. It cannot be changed, but it's possible to put a copy of this password on the system clipboard. This makes it possible, for example, to share the credentials of a demo user with someone else.
+| Property   | Description                                                  |
+| ---------- | ------------------------------------------------------------ |
+| User name  | The name of the demo user. This name must be unique, and cannot be the same as the name of the [administrator user](administrator). |
+| Password   | The password of the demo user is created automatically when the demo user is created. It cannot be changed, but you can click **Copy password to clipboard**, for example, to share the credentials of a demo user with someone else. |
+| Entity     | The entity of the demo user. This entity must be the System.User entity or a specialization of it. |
+| User roles | A user role of the demo user. Each demo user must have one or more roles. |
 
-### 3.3 Entity
+## 4 Testing Your App via Demo Users {#test-your-app}
 
-The entity of the demo user. This must be the System.User entity, or a specialization thereof.
+You can use demo user to test what your application looks like to different user roles. Do the following:
 
-### 3.4 User Roles
+1. View you app.
+2. Sign in it as the [Administrator](administrator).
+3.  Click a user icon in the right-hand side of the screen. The menu bar **Select user** will be displayed: 
 
-Here you can select the user roles of the demo user. Each demo user must have one or more roles.
+	![](attachments/demo-users/demo-users-example.png)
+	
+4. Selecting a user from the list to sign in to your application with the credentials of this user, thus allowing you to test or demo your application with the selected user role.
+
+## 5 Read More
+
+* [Project Security](project-security)
+* [User Roles](user-roles)
+* [Administrator](administrator)
+* [Anonymous Users](anonymous-users)
+* [Password Policy](password-policy)

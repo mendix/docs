@@ -1,6 +1,7 @@
 ---
 title: "Opening Pages"
 parent: "page-concepts"
+tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -22,7 +23,7 @@ This is the [page](page) that is shown to the end-user. There can be a number re
 
 By default the title of the page is taken from the title property of the selected page. You can replace this title with a custom title if necessary.
 
-{{% alert type="success" %}}
+{{% alert type="info" %}}
 This feature allows you to re-use the same page for the New and Edit buttons of a data grid. By simply setting the titles to, for example, 'New customer' and 'Edit customer', you can save yourself the trouble of duplicating the rest of the page.
 {{% /alert %}}
 
@@ -30,7 +31,7 @@ This feature allows you to re-use the same page for the New and Edit buttons of 
 
 {{% alert type="info" %}}
 
-If the [layout](layout) of the target page has a [layout type](layout) configured, the Location property will be unavailable. Instead, the layout type will determine how the page is opened. This eliminates the risk of accidentally modeling a pop-up form with a huge menu bar.
+If the [layout](layout) of the target page has a [layout type](layout) configured, the Location property will be unavailable. Instead, the layout type will determine how the page is opened. This eliminates the risk of accidentally modeling a pop-up page with a huge menu bar.
 
 {{% /alert %}}
 

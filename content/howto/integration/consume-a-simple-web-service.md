@@ -18,7 +18,7 @@ For this how-to, you will be using an example web service of [W3Schools](http://
 
 ## 2 Importing a WSDL
 
-A WSDL describes the operations of a web service and can be imported in the Modeler. After importing the WSDL, you can invoke the operations of the web service instantly within the microflow editor.
+A WSDL describes the operations of a web service and can be imported in Studio Pro. After importing the WSDL, you can invoke the operations of the web service instantly within the microflow editor.
 
 To import a WSDL, follow these steps:
 
@@ -38,7 +38,7 @@ To import a WSDL, follow these steps:
 
     ![](attachments/18448738/18582065.png)
 
-5. Click **OK** to select the default. The Modeler should now import these operations: **CelsiusToFahrenheit** and **FahrenheitToCelsius**.
+5. Click **OK** to select the default. Studio Pro should now import these operations: **CelsiusToFahrenheit** and **FahrenheitToCelsius**.
 
     ![](attachments/18448738/18582084.png)
 
@@ -60,7 +60,7 @@ To create logic to call the web service, follow these steps:
 
     ![](attachments/18448738/18582081.png)
 
-4.  Open the **Toolbox** (from the bottom-right corner of the Modeler) and drag a **Create variable** activity to the line between the start and end event.
+4.  Open the **Toolbox** (from the bottom-right corner of Studio Pro) and drag a **Create variable** activity to the line between the start and end event.
 
     ![](attachments/8784287/8946802.png)
 
@@ -107,15 +107,15 @@ To create logic to call the web service, follow these steps:
 
     ![](attachments/18448738/18582070.png)
 
-21. Create a menu item that triggers this microflow. For details on how to create a menu item, see [How to Set Up the Navigation Structure](../ux/setting-up-the-navigation-structure).
+21. Create a menu item that triggers this microflow. For details on how to create a menu item, see [How to Set Up the Navigation Structure](../general/setting-up-the-navigation-structure).
 22. Deploy the application and trigger the microflow to call the web service operation. You should see a message with the converted temperature.
 
 ## 4 Read More
 
-* [How to Create a Secure App](../security/create-a-secure-app)
-* [How to Consume a Complex Web Service](consume-a-complex-web-service)
-* [How to Export XML Documents](export-xml-documents)
-* [How to Import Excel Documents](importing-excel-documents)
-* [How to Expose a Web Service](expose-a-web-service)
-* [How to Use Selenium Support](selenium-support)
-* [Security How-To's](../security/)
+* [Create a Secure App](../security/create-a-secure-app)
+* [Consume a Complex Web Service](consume-a-complex-web-service)
+* [Export XML Documents](export-xml-documents)
+* [Import Excel Documents](importing-excel-documents)
+* [Expose a Web Service](expose-a-web-service)
+* [Use Selenium Support](selenium-support)
+* [Security How-to's](../security/)

@@ -8,7 +8,7 @@ Your client might already have a centralized identity management solution in pla
 
 ## 1\. Preparation
 
-1.  Open the Mendix Desktop Modeler.
+1.  Open Mendix Studio Pro.
 2.  Import the following App Store modules into your application model:
 
 *   [LDAP Synchronization Module](https://appstore.home.mendix.com/link/app/24/Mendix/LDAP-Synchronization-module)
@@ -161,7 +161,7 @@ Now that you have configured the LDAP module it's time to synchronize the users.
 
     ![](attachments/18448733/18581915.png)
 
-    The module will now synchronize all users from the LDAP server to your Mendix app. You can follow the progress in the Desktop Modeler's **Console** log for the the app.
+    The module will now synchronize all users from the LDAP server to your Mendix app. You can follow the progress in 's **Console** log for the the app.
 2.  Open the user account overview to see the imported users. By default this should be available in the **Administration** menu.
 
 ## 7\. Next steps

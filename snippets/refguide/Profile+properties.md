@@ -14,7 +14,7 @@ The desktop profile is always enabled.
 
 **Enable Offline Support (Only Hybrid Tablet and Hybrid Phone)**
 
-Specifies whether the hybrid profile allows users to continue using their Mendix application without a working Internet connection. Pages that are available offline are subject to certain restrictions, which you can read [here](offline).
+Specifies whether the hybrid profile allows users to continue using their Mendix application without a working Internet connection. Pages that are available offline are subject to certain restrictions, which you can read [here](offline-first).
 
 **Application Title**
 

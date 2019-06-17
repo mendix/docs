@@ -3,15 +3,9 @@ title: "Published REST Query Parameters"
 parent: "published-rest-service"
 menu_order: 40
 description: "Parameters for a published REST query"
-tags: ["published REST", "query", "parameters", "Date and Time format"]
+tags: ["published REST", "query", "parameters", "Date and Time format", "studio pro"]
 # Merge into published rest service document
 ---
-
-{{% alert type="info" %}}
-
-The **published REST service** feature was introduced in version 7.10.0.
-
-{{% /alert %}}
 
 The specification of a [published REST operation](published-rest-operation) includes a microflow that implements the operation. This microflow may take parameters that come from the query string of the request.
 

@@ -3,12 +3,12 @@ title: "Team Server Overview"
 category: "Development"
 menu_order: 20
 description: "Describes the overview of Team Server revisions and commits."
-tags: ["Desktop Modeler", "Team Server", "Developer Portal", "commit", "branch"]
+tags: ["Studio Pro", "Team Server", "Developer Portal", "commit", "branch"]
 ---
 
 ## 1 Introduction
 
-On the **Team Server** page of the Developer Portal, an overview is presented of the changes and revisions made to the app project in the Desktop Modeler:
+On the **Team Server** page of the Developer Portal, an overview is presented of the changes and revisions made to the app project in Mendix Studio Pro:
 
 ![](attachments/team-server.png)
 
@@ -32,7 +32,7 @@ For each revision, you can see the following information:
 * The date of the revision commit
 * The name of the App Team member who committed the revision
 * The branch to which the revision was committed
-* The Mendix Desktop Modeler version used
+* The Mendix Studio Pro version used
 * The revision number
 
 ![](attachments/revision-example.png)
@@ -43,7 +43,7 @@ When you click **Details** for a revision, you can see the stories related to th
 
 ![](attachments/revision-details.png)
 
-Related stories will only appear if you select them in the **Commit** dialog box of the Desktop Modeler when committing:
+Related stories will only appear if you select them in the **Commit** dialog box of Mendix Studio Pro when committing:
 
 ![](attachments/commit-story.png)
 

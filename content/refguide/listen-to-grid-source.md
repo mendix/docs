@@ -1,6 +1,7 @@
 ---
-title: "Listen To Widget Source"
+title: "Listen to Widget Source"
 parent: "data-sources"
+tags: ["studio pro"]
 ---
 
 
@@ -9,7 +10,8 @@ The listen-to-widget data source allows a data view to display detailed informat
 {{% alert type="info" %}}
 
 ![](attachments/16713834/16843964.jpg)
-The data view on the right listens to the data grid on the left. In this example, the listening view will display the image attached to the selected product if one is selected.
+
+The data view on top listens to the data grid on the bottom. In this example, the listening view will display the image attached to the selected product if one is selected.
 
 {{% /alert %}}
 

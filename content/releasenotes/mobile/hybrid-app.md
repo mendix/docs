@@ -1,20 +1,35 @@
 ---
-title: "Hybrid App"
+title: "Hybrid App Base & Template"
 category: "Mobile Products"
 menu_order: 10
 toc-level: 1
-description: "Hybrid App release notes."
+description: "Mendix Hybrid App Base & Hybrid App Template release notes."
 ---
 
-These are the release notes for the Hybrid App.
+The version numbers for each release below refer to the [Hybrid App Base](https://github.com/mendix/hybrid-app-base) and [Hybrid App Template](https://github.com/mendix/hybrid-app-template) packages, respectively. If you are building your hybrid mobile app using the regular PhoneGap Build approach from within the Mendix Developer Portal, you do not need to worry about these numbers. Downloading and building a new package will set you up with the latest version.
 
-The version numbers for each release refer to the [Hybrid App Base](https://github.com/mendix/hybrid-app-base) and [Hybrid App Template](https://github.com/mendix/hybrid-app-template) packages, respectively.
+If you are using the advanced flow, you can get the latest version of the Hybrid App Base by running `npm update` from your hybrid app project directory. To upgrade to the latest version of the Hybrid App Template, either pull in the latest changes from GitHub, or download a new copy from the Mendix Developer Portal ([Developer Portal](https://sprintr.home.mendix.com/index.html) > **DEPLOY**).
 
-If you're building the app using the regular PhoneGap Build approach from within the Mendix Developer Portal, you do not need to worry about these numbers. Downloading and building a new package will set you up with the latest version.
-
-If you're using the advanced flow, you can get the latest version of the Hybrid App Base by running `npm update` from your hybrid app project directory. To upgrade to the latest version of the Hybrid App Template, either pull in the latest changes from GitHub, or download a new copy from the Mendix Developer Portal ([Developer Portal](https://sprintr.home.mendix.com/index.html) > **DEPLOY**).
+{{% alert type="info" %}}
+For more information on hybrid mobile app development in Mendix, see the [Hybrid Mobile](/refguide/hybrid-mobile) section of the *Studio Pro 8 Guide* and the [Hybrid Mobile](/howto/mobile/hybrid-mobile) section of the *Studio Pro 8 How-to's*.
+{{% /alert %}}
 
 ## 2019
+
+### May 14th, 2019 (4.1.0 / 4.1.0)
+
+We updated **Cordova Android** to version 7.1.4.
+
+You now have more control over the target architecture for your Android apps. The `npm run package` command now produces a project that targets all supported architectures (x86, x86_64, arm, and arm64). This means that you can publish one APK that is used for all devices. This APK will fulfill the [64-bit requirement](https://android-developers.googleblog.com/2019/01/get-your-apps-ready-for-64-bit.html) set by Google for apps published to Google Play.
+
+To enable more control over the target architecture, use the following variants:
+
+| npm Command             |           Description                        |
+| --- | --- |
+|`$ npm run package:x86`    |           Prepares `build` directory for x86.|
+|`$ npm run package:x86_64` |           Prepares `build` directory for x86_64.|
+|`$ npm run package:arm`    |           Prepares `build` directory for arm.|
+|`$ npm run package:arm64`  |           Prepares `build` directory for arm64.|
 
 ### January 28th, 2019 (4.0.5 / 4.0.0)
 
@@ -47,7 +62,7 @@ The latest release of the Mendix Push Notifications Connector supports FCM as th
 
 This upgrade of the hybrid app package includes an upgrade to v2 of the [Cordova Push Notifications plugin](https://github.com/phonegap/phonegap-plugin-push). As part of the plugin upgrade, some additional setup is required for push notifications (in connection with the Mendix Push Notifications Connector). Specifically, if your app supports push notifications, you are now required to set up a [Firebase](https://firebase.google.com/) account for your app and include Google service description files (*google-services.json* and *GoogleService-Info.plist*) in your hybrid app.
 
-As a result of this, Mendix hybrid apps that employ push notifications can no longer be built directly using the [Phonegap Build flow](/refguide/customizing-phonegap-build-packages) in the Mendix Developer Portal. Instead, you will need to prepare the hybrid app package locally. You can use the generated hybrid app package to build your Android and iOS apps locally, or upload them to Phonegap Build manually.
+As a result of this, Mendix hybrid apps that employ push notifications can no longer be built directly using the [Phonegap Build flow](/refguide7/customizing-phonegap-build-packages) in the Mendix Developer Portal. Instead, you will need to prepare the hybrid app package locally. You can use the generated hybrid app package to build your Android and iOS apps locally, or upload them to Phonegap Build manually.
 
 If your app does not employ push notifications, you can still use the Phonegap Build workflow. Please make sure you clear the **Push Notifications** check box in the **Permissions** section of the **Deploy** > [Mobile App](/developerportal/deploy/mobileapp) page in the Developer Portal.
 
@@ -182,7 +197,7 @@ For this update, we recommend downloading a fresh hybrid app package from the Me
 
 * We fixed the transparency level in the default styling.
 
-### July 3rd, 2018 (2.0.6 / 2.0.1)
+### July 3rd, 2018 (2.0.6 / 2.0.1) {#7318}
 
 * We increased the default server timeout for offline apps. The new timeout is 30 seconds.
 

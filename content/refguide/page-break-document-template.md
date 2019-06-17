@@ -1,6 +1,7 @@
 ---
 title: "Page Break (Document Template)"
 parent: "document-templates"
+tags: ["studio pro"]
 ---
 
 

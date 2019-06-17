@@ -1,9 +1,9 @@
 ---
 title: "MxBuild"
-category: "General"
+category: "General Info"
 menu_order: 50
 description: "Describes MxBuild which is a command-line tool for building and deploying Mendix Apps"
-tags: ["Build", "Deploy", "deployment package", "command-line"]
+tags: ["Build", "Deploy", "deployment package", "command-line", "studio pro"]
 ---
 
 ## 1 Introduction
@@ -14,16 +14,16 @@ The version of MxBuild which you need is dependent on the version of the Mendix 
 
 {{% alert type="info" %}}
 
-Mendix versions 7.18.1 and above include a build number in the version, and this has to be included in the link path. For example:
+A build number is included in the version, and this has to be included in the link path. For example:
 
-* 7.17.2
-* 7.18.1.40272
+* 8.1.2
+* 8.1.2.40272
 
-You can find the build number in path of your Mendix installation (for example `C:\Program Files\Mendix\7.18.1.40272`).
+You can find the build number in path of your Mendix installation (for example `C:\Program Files\Mendix\8.1.2.40272`).
 
 {{% /alert %}}
 
-So, MxBuild for Mendix version 7.18.1 is found at [https://cdn.mendix.com/runtime/mxbuild-7.18.1.40272.tar.gz](https://cdn.mendix.com/runtime/mxbuild-7.18.1.40272.tar.gz).
+So, the MxBuild for Mendix version 8.1.2 would be found at [https://cdn.mendix.com/runtime/mxbuild-8.1.2.40272.tar.gz](https://cdn.mendix.com/runtime/mxbuild-8.1.2.40272.tar.gz).
 
 You can extract the files using your favorite archival tool, such as [7-Zip](https://www.7-zip.org/).
 
@@ -53,7 +53,7 @@ After creating the deployment package, the MxBuild process quits.
 | `--java-exe-path=FILENAME` | (required) the **full path** to the Java executable<br/>for example `--java-exe-path=/usr/lib/jvm/java-8-oracle/bin/java`<br/>for Windows the *DIRECTORY* should be enclosed in double-quotes, `"`, and must contain the complete file name `...\java.exe`.|
 | <code>––target=[package&#124;deploy]</code> | `package` (default if option is omitted): create a deployment package (.mda file)<br/>`deploy`: make a deployment of the project without making a deployment package. |
 | `--loose-version-check` | create a deployment package from a project which was created with a lower Mendix version.<br/>The project will be upgraded to the MxBuild version before the deployment package is created.<br /> Any changes included as a result of this upgrade will **not** be stored in your project. |
-| `--write-errors=FILENAME` | Write all errors, warnings and deprecations encountered during deployment of the project to the specified file in JSON format.<br />This file is only written when the project contains errors.<br />If the file already exists, it will be overwritten without warning.<br />See section 4, [Project Errors](#project-errors) for a description of the format of this file. |
+| `--write-errors=FILENAME` | Write all errors, warnings and deprecations encountered during deployment of the project to the specified file in JSON format.<br />This file is only written when the project contains errors.<br />If the file already exists, it will be overwritten without warning.<br />See the [Project Errors](#project-errors) section, below, for a description of the format of this file. |
 
 ### 2.2 Options When Creating a Package
 
@@ -121,7 +121,7 @@ The following table describes the various properties of the *problems* JSON obje
 | --- | --- |
 | `name` | A unique identifier of the problem, or `null` when the consistency check is not yet defined in the Mendix Metamodel. |
 | `severity` | Describes the type of problem: `Warning`, `Error` or `Deprecation`. |
-| `message` | The description of the problem. This is the same as the message in the 'Errors' dock of the Mendix Modeler. |
+| `message` | The description of the problem. This is the same as the message in the 'Errors' dock of Mendix Studio Pro. |
 | `locations` | Contains zero or more objects that describe the location in the Mendix project where the problem occurs (see the following table). |
 
 The location(s) associated with the problem have the following properties:

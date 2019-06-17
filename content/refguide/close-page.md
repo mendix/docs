@@ -1,6 +1,7 @@
 ---
 title: "Close Page"
 parent: "client-activities"
+tags: ["studio pro"]
 ---
 
 Close page closes the currently open page.

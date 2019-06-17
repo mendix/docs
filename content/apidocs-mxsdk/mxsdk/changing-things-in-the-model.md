@@ -20,12 +20,12 @@ The following example function creates a new entity with an attribute given a do
 ```js
 import {domainmodels} from "mendixmodelsdk";
 
-function createEntitiy(domainModel : domainmodels.DomainModel, entityName : string, attributeName : string) {
+function createEntity(domainModel : domainmodels.DomainModel, entityName : string, attributeName : string) {
     const newEntity = domainmodels.Entity.createIn(domainModel);
 	newEntity.name = entityName;
 	domainModel.entities.push(newEntity);
 
-	// location on the canvas in the Mendix Modeler:
+	// location on the canvas in the Mendix Studio Pro:
 	newEntity.location = { 'x': 100, 'y': 100 };
 
     // new attribute (which is by default a string attribute):

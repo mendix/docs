@@ -2,7 +2,7 @@
 title: "App Store Content Support"
 category: "App Store"
 menu_order: 40
-tags: ["app store", "support"]
+tags: ["app store", "support", "platform support", "community support"]
 description: "Describes the various levels of support available for using App Store items in your Mendix apps."
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -47,4 +47,4 @@ The level of support depends on the availability and effort of the developer and
 
 * [App Store Overview](app-store-overview)
 * [How to Share App Store Content](share-app-store-content)
-* [How to Use App Store Content](/developerportal/app-store/use-app-store-content-in-the-modeler)
+* [How to Use App Store Content](/developerportal/app-store/app-store-content)

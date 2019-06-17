@@ -1,7 +1,7 @@
 ---
-title: "Ticket Priority"
+title: "Support Ticket Priority"
 category: "Mendix Support"
-menu_order: 20
+menu_order: 4
 description: "Presents details on how Mendix Support prioritizes tickets."
 tags: ["support", "request", "impact", "urgency"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -9,7 +9,7 @@ tags: ["support", "request", "impact", "urgency"]
 
 ## 1 Introduction
 
-The priority levels are determined based on the impact and urgency of the request
+The priority levels are based on the impact and urgency of the request.
 
 ## 2 Prioritization
 
@@ -21,13 +21,15 @@ The priority levels are determined based on the impact and urgency of the reques
 
 | Urgency | Description |
 | ------- | ------- |
-| High    | The operational functionality is **severely disrupted**. |
-| Medium  | The operational functionality is **fairly disrupted**. |
-| Low     | The operational functionality is **hardly disrupted**. |
+| High    | The operational functionality is severely disrupted. |
+| Medium  | The operational functionality is fairly disrupted. |
+| Low     | The operational functionality is hardly disrupted. |
 
 ## 3 Priority Matrix
 
-![](attachments/how-to-submit-a-ticket---quick-reference-for-endusers/204371729-pic5.png)
+The ticket priority that Mendix Support validates is based on this matrix:
+
+![](attachments/submit/204371729-pic5.png)
 
 If Mendix provides a workaround, the impact can never be higher than **Medium**.
 

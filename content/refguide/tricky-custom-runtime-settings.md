@@ -1,13 +1,13 @@
 ---
 title: "Tricky Custom Settings in Mendix Runtime"
-parent: "custom-runtime-settings"
+parent: "custom-settings"
 description: " Describes custom settings that are a little more difficult to configure than normal."
 tags: ["Support", "custom settings"]
 ---
 
 ## 1 Introduction
 
-There are many custom settings in Mendix, most of which are described in [Custom Settings](/refguide/custom-settings) in the Mendix Reference Guide.
+There are many custom settings in Mendix, most of which are described in [Custom Settings](/refguide/custom-settings).
 
 However, a few of the more commonly used custom settings can be misunderstood or have effects that one might not expect. That is why we would like to give these settings a bit of special attention and more thoroughly explain the consequences of changing them.
 
@@ -34,7 +34,7 @@ Increasing the session timeout can improve the user experience, especially on mo
 
 Since the frequency of the session timeout checks and other important events is tied to the `ClusterManagerActionInterval`, it makes sense to not use the default of half the session timeout when the value is increased by a lot (for example, 24 hours or more). It might make sense to put a maximum value on `ClusterManagerActionInterval`, regardless of how high the value of `SessionTimeout` is set. An approximate figure is 15 minutes, but ultimately this will depend on the functional requirements of the application.
 
-With the introduction of stateless runtime in Mendix 7, the potential of memory usage leading to problems has been reduced for two reasons. The first reason is the ability to run in a horizontally scaled environment. Multiple runtimes will mean unintended memory usage is also divided over those runtimes, reducing the impact of any one idle user session. But the main (and second) reason is that most of the memory usage has been moved to the client. So instead of all entities in the memory ending up on the application node, a large share of them will end up in the browser of the client. This should significantly reduce the potential strain on the application node that can be caused by increasing the `SessionTimeout` default value to a much higher value. If you are setting the timeout to a very high value in Mendix 6, you should consider using one node size larger than you would use otherwise.
+With stateless runtime, the potential of memory usage leading to problems has been reduced for two reasons. The first reason is the ability to run in a horizontally scaled environment. Multiple runtimes will mean unintended memory usage is also divided over those runtimes, reducing the impact of any one idle user session. But the main (and second) reason is that most of the memory usage has been moved to the client. So instead of all entities in the memory ending up on the application node, a large share of them will end up in the browser of the client. This should significantly reduce the potential strain on the application node that can be caused by increasing the `SessionTimeout` default value to a much higher value. If you are setting the timeout to a very high value in Mendix 6, you should consider using one node size larger than you would use otherwise.
 
 Another important matter that can be affected by increasing the session timeout is the user restrictions imposed by your Mendix license. Longer sessions might mean more concurrent users at any given time. This is something to keep in mind when deciding on the specifics of the license you will need to run your application.
 
@@ -48,7 +48,7 @@ So, make sure to keep in mind all of the above when changing these values. Also,
 
 | Name | Description | Default value |
 | --- | --- | --- |
-| `LogMinDurationQuery` | Defines whether database queries are logged via the `ConnectionBus_Queries` log node if they finished after the amount of milliseconds specified here. By default, only the concerning SQL query will be logged. Set the log level of the `ConnectionBus_Queries` log node to TRACE to show more information about the form or the microflow that leads to this query. |   |
+| `LogMinDurationQuery` | Defines whether database queries are logged via the `ConnectionBus_Queries` log node if they finished after the amount of milliseconds specified here. By default, only the concerning SQL query will be logged. Set the log level of the `ConnectionBus_Queries` log node to TRACE to show more information about the page or the microflow that leads to this query. |   |
 
 `LogMinDurationQuery` can be a very helpful tool in detecting queries that are taking longer than expected. This is especially useful for queries that only take longer than expected after the data used in and by the app grows larger, because this might mean the queries will only become slower after a few months of usage and might not have turned up in pre-release performance tests. Determining that a query is slow depends on the type of app you are running. But in general, any query that directly affects a user using the app (meaning, not a background process) will have a lower threshold for determing it as slow than a query running in the background. For example, a drop-down menu that takes 5 seconds to load before anything can be selected is many times worse than a PDF generated in the background taking 8 instead of 4 seconds because of a “slow” query that takes 5 seconds instead of 1 second.
 
@@ -101,7 +101,7 @@ However, if all of the following are true, you should increase the `ConnectionPo
 
 In general, we see that increasing the `ConnectionPoolingMaxActive` value to a (much) higher number is very rarely the right action to take, even if it is unfortunately the action usually taken when you run into connection pooling issues.s
 
-In addition, keep in mind that changing this value for an application running in the Mendix Cloud will also require an adjustment on the database node that only Mendix can make. So, before changing the value, please file a ticket in the [Mendix Support portal](https://support.mendix.com/hc/en-us) stating the number to which you intend to change the value.
+In addition, keep in mind that changing this value for an application running in the Mendix Cloud will also require an adjustment on the database node that only Mendix can make. So, before changing the value, please file a ticket in the [Mendix Support Portal](https://support.mendix.com/hc/en-us) stating the number to which you intend to change the value.
 
 ## 5 Read More
 

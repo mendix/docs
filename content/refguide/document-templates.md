@@ -1,6 +1,7 @@
 ---
 title: "Document Templates"
-category: "Desktop Modeler"
+category: "App Modeling"
+tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -71,11 +72,11 @@ A template grid showing products with name and description.
 
 ## 3 Layout Widgets {#layout}
 
-Layout widgets give structure to a form. They do not show data but provide a layout in which you can place other widgets that do.
+Layout widgets give structure to a page. They do not show data but provide a layout in which you can place other widgets that do.
 
 ### 3.1 Table
 
-Tables can be used to change the layout of the form. They contain a number of rows and columns and the intersection of the two is called a cell. Each cell can contain widgets. Cells can be merged horizontally and vertically before they are filled to allow for asymmetric layouts.
+Tables can be used to change the layout of the page. They contain a number of rows and columns and the intersection of the two is called a cell. Each cell can contain widgets. Cells can be merged horizontally and vertically before they are filled to allow for asymmetric layouts.
 Tables can be used both inside and outside data view or templategrid widgets.
 
 For more information, see [Table (Document Template)](table-document-template).
@@ -114,7 +115,7 @@ Dynamic data widgets are used for showing (dynamic) data. They must be placed in
 
 ### 4.1 Dynamic Label
 
-A dynamic label would be used for the same attributetypes as a text box in form builder. It can be used to display a text value.
+A dynamic label is used for the same attribute types as a text box in the page editor. It can be used to display a text value.
 
 For more information, see [Dynamic Label (Document Template)](dynamic-label-document-template).
 

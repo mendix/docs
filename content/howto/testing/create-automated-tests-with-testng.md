@@ -24,7 +24,7 @@ Before starting with this how-to, make sure you have completed the following pre
 * Download and install [Eclipse](http://www.eclipse.org/downloads/)
 *  Download [Selenium Client & WebDriver](http://www.seleniumhq.org/download/):
    ![](attachments/18448634/18580399.png) 
-* Open the [Company Expenses app](https://appstore.home.mendix.com/link/app/240/Mendix/Company-Expenses) in the Modeler and run it locally
+* Open the [Company Expenses app](https://appstore.home.mendix.com/link/app/240/Mendix/Company-Expenses) in Studio Pro and run it locally
 
 ## 3 Creating a Java Project
 
@@ -197,30 +197,19 @@ This test method will open the URL `http://localhost:8080/index.html` in the Fir
 Now that you are on the login window, you will want to log in. To add the second test method, follow these steps:
 
 1. Open Firefox and go to `http://localhost:8080/index.html`.
-2.  Click the "firebug" button in the Firefox toolbar:
-  
-    ![](attachments/18448631/18580294.png)
+2. Use the developer tools to inspect the element.
+3.   Click the **User name** input field. The ID of the this field is _usernameInput_. The CSS selector of an ID is a hashtag (`#`) + the name of the ID. For the **User name** field, this will be _#usernameInput_. The same principle is used for the other steps. The CSS selector _#usernameInput_ is unique. There is one matching node:
 
-3.  Click the **FirePath** tab:
-  
-    ![](attachments/18448631/18580293.png) 
+	![](attachments/18448634/18580373.png)
 
-4.  Click the "inspect element" button:
-  
-    ![](attachments/18448631/18580292.png)
-
-5.  Click the **User name** input field. The ID of the this field is _usernameInput_. The CSS selector of an ID is a hashtag (`#`) + the name of the ID. For the **User name** field, this will be _#usernameInput_. The same principle is used for the other steps.
-  
-    The CSS selector _#usernameInput_ is unique. There is one matching node:
-    ![](attachments/18448634/18580373.png)
-6. Repeat steps 5–6 for the **Password** input field and the **Sign in** button:
+4. Repeat steps 5–6 for the **Password** input field and the **Sign in** button:
 
     Element | CSS Selector
     --- | ---
     **Password** input field | `#passwordInput`
     **Sign in** button | `#loginButton`
 
-7.  Add a new test method called `login`. Use the following code:
+5.  Add a new test method called `login`. Use the following code:
 
     ```java
     @Test(priority=2)
@@ -241,7 +230,7 @@ This test method contains the following test steps:
 
 Now that you are logged in, you will want to navigate to the **Expenses** tab. To add the third test method, follow these steps:
 
-1.  Open the Desktop Modeler, and in the **Project Explorer**, open the **Desktop_AdminMenu** page:
+1.  Open , and in the **Project Explorer**, open the **Desktop_AdminMenu** page:
   
     ![](attachments/18448634/18580390.png)
 
@@ -270,7 +259,7 @@ Now that you are logged in, you will want to navigate to the **Expenses** tab. T
 
 Now that you are on the **Expenses** tab, you will want to create a new expense. To add the fourth test method, follow these steps:
 
-1. Open the Modeler and then open the **Desktop_AdminMenu** page.
+1. Open Studio Pro and then open the **Desktop_AdminMenu** page.
 2.  Select the **New Expense** button:
   
     ![](attachments/18448634/18580387.png)
@@ -327,7 +316,7 @@ Now that you are on the **Expenses** tab, you will want to create a new expense.
 
 After you have created an expense, you will want to sign out. To add the fifth test method, follow these steps:
 
-1. Open Modeler and then open the **Desktop_MyInfo** snippet.
+1. Open Studio Pro and then open the **Desktop_MyInfo** snippet.
 2.  Find the name of the following element:
 
     | Element | Name |

@@ -19,7 +19,7 @@ Mendix applications frequently need to communicate with existing systems. Whethe
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Know how to create domain models (for details, see [How to Create a Basic Data Layer](../data-models/create-a-basic-data-layer))
-* Know how to create overview and detail pages (for details, see [How to Create Your First Two Overview & Detail Pages](../ux/create-your-first-two-overview-and-detail-pages))
+* Know how to create overview and detail pages (for details, see [How to Create Your First Two Overview & Detail Pages](../front-end/create-your-first-two-overview-and-detail-pages))
 * Know how to create microflows (for details, see [How to Build Your First Microflow: Hello world!](../logic-business-rules/create-your-first-microflow-hello-world))
 * Understand the concepts behind REST and web services (for more information, see [Consuming Your First REST Service](http://www.mendix.com/blog/consuming-first-rest-service/) and [How to Consume a Complex Web Service](consume-a-complex-web-service))
     * Creating an exposed REST service on top of your legacy system is beyond the scope of this tutorial; for instructions on how to accomplish this, refer to the configuration of your non-Mendix Platform
@@ -87,14 +87,14 @@ For further documentation and to see the GitHub project for REST services, see t
 
 ## 4 Read More
 
-* [How to Consume a Complex Web Service](consume-a-complex-web-service)
-* [How to Consume a Simple Web Service](consume-a-simple-web-service)
-* [How to Export XML Documents](export-xml-documents)
-* [How to Import Excel Documents](importing-excel-documents)
-* [How to Expose a Web Service](expose-a-web-service)
-* [How to Configure Selenium Support](selenium-support)
-* [How to Synchronize User Accounts Using the LDAP Module](synchronizing-user-accounts-using-the-ldap-module)
-* [How to Import XML Documents](importing-xml-documents)
-* [How to Consume a REST Service](consume-a-rest-service)
-* [How to Expose Data to BI Tools Using OData](exposing-data-to-bi-tools-using-odata)
+* [Consume a Complex Web Service](consume-a-complex-web-service)
+* [Consume a Simple Web Service](consume-a-simple-web-service)
+* [Export XML Documents](export-xml-documents)
+* [Import Excel Documents](importing-excel-documents)
+* [Expose a Web Service](expose-a-web-service)
+* [Configure Selenium Support](selenium-support)
+* [Synchronize User Accounts Using the LDAP Module](synchronizing-user-accounts-using-the-ldap-module)
+* [Import XML Documents](importing-xml-documents)
+* [Consume a REST Service](consume-a-rest-service)
+* [Expose Data to BI Tools Using OData](exposing-data-to-bi-tools-using-odata)
 * [Extending Salesforce with Mendix, an Alternative to Force.com](https://www.mendix.com/blog/extending-salesforce-mendix-alternative-force-com/)

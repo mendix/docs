@@ -1,7 +1,7 @@
 ---
-title: "Data view"
+title: "Data View"
 parent: "data-widgets"
-tags: ["Page", "Display", "widget", "object"]
+tags: ["Page", "Display", "widget", "object", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -101,16 +101,6 @@ See the corresponding data source for specific properties:
 * [Context source](entity-path-source) - either a page parameter or a surrounding data element
 * [Microflow source](microflow-source) - a microflow returning only one object
 * [Listen to widget source](listen-to-grid-source) - any widget returning only one object
-
-### 6.3 Use Schema
-
-{{% alert type="info" %}}
-
-This property has been deprecated in version 7.2.0 and is marked for removal in version 8.0.0.
-
-{{% /alert %}}
-
-Curently this has no effect.
 
 ## 7 Visibility Properties
 

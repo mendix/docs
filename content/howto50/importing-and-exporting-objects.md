@@ -7,8 +7,6 @@ Don't re-invent the wheel. Save time by importing modules others have already cr
 
 This How-to covers the basics of how to import and export modeler objects: packages, modules, widgets, and module objects. Module objects include pages, microflows, image collections, event, document templates, constants, web services, layouts, menus, and loads more.
 
-
-
 ## Importing Objects
 
 {{% alert type="warning" %}}
@@ -96,7 +94,7 @@ Mendix module packages are stored as Mendix Package (.mpk) files. However, you n
 
 ### Importing Content from the App Store
 
-To learn more about importing content from the App Store, see [How to Use App Store Content](/developerportal/app-store/use-app-store-content-in-the-modeler).
+To learn more about importing content from the App Store, see [How to Use App Store Content](/developerportal/app-store/app-store-content).
 
 ## Exporting Objects
 
@@ -146,3 +144,4 @@ Mendix module object packages are stored as Mendix Package (.mpk) files. An obje
 *   [Modules](/refguide5/modules)
 *   [Project](/refguide5/project)
 *   [Common Widgets](/refguide5/common-widgets)
+

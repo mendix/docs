@@ -99,7 +99,7 @@ const parseHtmlFile = file => new Promise((resolve, reject) => {
         return true;
       } else if (href.indexOf('#') === 0) {
         file.anchorLinks.push(href.trim().replace('#',''));
-      } else if (href.indexOf('http') === 0) {
+      } else if (href.indexOf('http://') === 0 || href.indexOf('https://') === 0) {
         file.external.links.push(href.trim());
       } else if (href.indexOf('mailto') === 0) {
         file.external.mailto.push(href.trim());
@@ -184,11 +184,11 @@ const parseHtmlFiles = files => {
 
 const getLinkPaths = link => {
   //TODO: GET THIS FROM CONFIG
-  if (link.indexOf('/howto7/') !== -1) {
-    link = link.replace(/\/howto7\//g, '/howto/');
+  if (link.indexOf('/howto8/') !== -1) {
+    link = link.replace(/\/howto8\//g, '/howto/');
   }
-  if (link.indexOf('/refguide7/') !== -1) {
-    link = link.replace(/\/refguide7\//g, '/refguide/');
+  if (link.indexOf('/refguide8/') !== -1) {
+    link = link.replace(/\/refguide8\//g, '/refguide/');
   }
 
   const paths = [

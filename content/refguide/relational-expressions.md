@@ -1,7 +1,9 @@
 ---
-title: "Relational expressions"
+title: "Relational Expressions"
 parent: "expressions"
+tags: ["studio pro"]
 ---
+
 Relational expressions allow the user to compare variables and base changes and actions upon that information. The return type of such expressions is always boolean.
 
 ## Less than ( < )
@@ -14,7 +16,7 @@ Result is of type Boolean.
 The values be any of the following types, but the two values should be in the same category (e.g. both numbers):
 
 *   String
-*   Numeric (Integer/Long, Decimal, Float)
+*   Numeric (Integer/Long, Decimal)
 *   DateTime
 
 ```java
@@ -36,7 +38,7 @@ Result is of type Boolean.
 The values be any of the following types, but the two values should be in the same category (e.g. both numbers):
 
 *   String
-*   Numeric (Integer/Long, Decimal, Float)
+*   Numeric (Integer/Long, Decimal)
 *   DateTime
 
 ```java
@@ -58,7 +60,7 @@ Result is of type Boolean.
 The values be any of the following types, but the two values should be in the same category (e.g. both numbers):
 
 *   String
-*   Numeric (Integer/Long, Decimal, Float)
+*   Numeric (Integer/Long, Decimal)
 *   DateTime
 
 ```java
@@ -93,7 +95,7 @@ Result is of type Boolean.
 The values be any of the following types, but the two values should be in the same category (e.g. both numbers):
 
 *   String
-*   Numeric (Integer/Long, Decimal, Float)
+*   Numeric (Integer/Long, Decimal)
 *   DateTime
 
 ```java
@@ -116,7 +118,7 @@ Result is of type Boolean.
 The values be any of the following types, but the two values should be in the same category (e.g. both numbers):
 
 *   String
-*   Numeric (Integer/Long, Decimal, Float)
+*   Numeric (Integer/Long, Decimal)
 *   DateTime
 *   Domain Entity. Equality is checked based on the ID of the object.
 
@@ -152,7 +154,7 @@ Result is of type Boolean.
 The values be any of the following types, but the two values should be in the same category (e.g. both numbers):
 
 *   String
-*   Numeric (Integer/Long, Decimal, Float)
+*   Numeric (Integer/Long, Decimal)
 *   DateTime
 *   Object. Equality is checked based on the ID of the object.
 

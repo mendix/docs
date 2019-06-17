@@ -1,6 +1,7 @@
 ---
 title: "OQL Case Expression"
 parent: "oql-operators"
+tags: ["studio pro"]
 ---
 
 

@@ -21,8 +21,8 @@ Before you continue, make sure that you know how to create:
 
 * Domain models (see [How to Create a Basic Data Layer](../data-models/create-a-basic-data-layer))
 * A custom file document (see [How to Work with Images & Files](../data-models/working-with-images-and-files))
-* Overview and detail pages (see [How to Create Your First Two Overview & Detail Pages](../ux/create-your-first-two-overview-and-detail-pages))
-* Menu items (see [How to Set Up the Navigation Structure](../ux/setting-up-the-navigation-structure))
+* Overview and detail pages (see [How to Create Your First Two Overview & Detail Pages](../front-end/create-your-first-two-overview-and-detail-pages))
+* Menu items (see [How to Set Up the Navigation Structure](../general/setting-up-the-navigation-structure))
 
 ## 3 Preparing the Data Structure & GUI
 
@@ -41,7 +41,7 @@ To prepare the data structure and the GUI, follow these steps:
     ![](attachments/18448727/18581650.png)
 
 5. Create the overview and detail pages to manage objects of the **XMLDocument** type.
-6. Create a menu item to access the XML document overview page (for more information, see [How to Set Up the Navigation Structure](../ux/setting-up-the-navigation-structure).
+6. Create a menu item to access the XML document overview page (for more information, see [How to Set Up the Navigation Structure](../general/setting-up-the-navigation-structure).
 
 ## 4 Adding an XML Schema (XSD)
 
@@ -60,7 +60,7 @@ To add an XML schema (XSD), follow these steps:
 
 4. Click **OK** to save the XML schema, which you will be using in the following steps.
 
-## 5 Create XML-to-Domain mapping
+## 5 Create XML-to-Domain Mapping
 
 The XML schema describes what the possible contents of an XML file are, but we need to create an XML-to-domain mapping to define how the data in the XML document is imported into the application.
 
@@ -80,7 +80,7 @@ To create the XML-to-domain mapping, follow these steps:
 
 	![](attachments/18448727/18581655.png)
 
-6. Open the connector (from the lower-right side of the Modeler or from the **View** menu).
+6. Open the connector (from the lower-right side of the Studio Pro or from the **View** menu).
 7.  Drag the entity **Customer** from the connector to the place-holder in the mapping editor:
 
 	![](attachments/18448727/18581681.png)  
@@ -105,27 +105,27 @@ In this section, you will create the logic to import the customers stored in an 
 
 To create the import logic, follow these steps:
 
-1.  Open the **XMLDocument** overview page. It should look this, using a default layout:
+1. Open the **XMLDocument** overview page. It should look this, using a default layout:
 
     ![](attachments/18448727/18581648.png)
 
-2.  Right-click the toolbar of the data grid widget and select **Add button** > **Action** to add a new action button:
+2. Right-click the toolbar of the data grid widget and select **Add button** > **Action** to add a new action button:
 
     ![](attachments/18448727/18581647.png)
 
-3.  Double-click the new button to open the **Edit Action Button** editor and do the following:<br />
+3. Double-click the new button to open the **Edit Action Button** editor and do the following:<br />
     a. Change the caption to *Import XML Document*<br />
     b. For the **On click** event, select **Call a microflow**, then click **Select** for the microflow, create a new microflow, and name it **XMLDocument_Import**.<br />
     c. Click **OK** to save the properties.<br />
 
     ![](attachments/18448727/18581646.png)
 
-4. Right-click the new **Import XML Document** button and select **Go to microflow** in the context menu. You should see an empty microflow with **XMLDocument** as the input parameter:
+4. Right-click the new **Import XML Document** button and select **Go to on click microflow** in the context menu. You should see an empty microflow with **XMLDocument** as the input parameter:
 
     ![](attachments/18448727/18581669.png)
 
 5. Open the **Toolbox** and drag an **Import with mapping** activity to the line between the start and end event. This inserts a new import XML activity.
-6.  Double-click the new activity to open the **Import With Mapping** dialog box and do the following:<br />
+6. Double-click the new activity to open the **Import With Mapping** dialog box and do the following:<br />
     a. Select the input paramater **XMLDocument** as the **Variable**.<br />
     b. Select the previously created XML-to-domain mapping **ImportCustomersMapping** as the mapping.<br />
     c. Click **OK** to save the properties.<br />
@@ -154,3 +154,4 @@ To import the XML file, follow these steps:
 * [How to Consume a REST Service](consume-a-rest-service)
 * [How to Expose Data to BI Tools Using OData](exposing-data-to-bi-tools-using-odata)
 * [Exporting to a CSV Button](/refguide7/export-to-csv-button)
+

@@ -1,10 +1,11 @@
 ---
 title: "Dynamic Label (Document Template)"
 parent: "document-templates"
+tags: ["studio pro"]
 ---
 
 
-A dynamic label would be used for the same kind of attributes as a text box from the form builder. It can be used to display a text value.
+A dynamic label is used for the same kind of attributes as a text box from the page editor. It can be used to display a text value.
 
 {{% alert type="info" %}}
 

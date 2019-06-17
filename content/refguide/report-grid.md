@@ -1,10 +1,9 @@
 ---
 title: "Report Grid"
 parent: "report-widgets"
+tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
-
-
 
 This shows the reported data in a grid.
 
@@ -26,9 +25,9 @@ If **Use Paging** is true, this property indicates the number of occurrences tha
 
 ### Zoom
 
-This property can refer to a form. When the user double-clicks an occurrence in the report, that form is displayed.
+This property can refer to a page. When the user double-clicks an occurrence in the report, that page is displayed.
 
-If the other form contains a report, the columns of the current report can be mapped to the parameters of the report in the other form.
+If the other page contains a report, the columns of the current report can be mapped to the parameters of the report in the other page.
 
 ### Column Widths
 

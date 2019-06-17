@@ -1,8 +1,9 @@
 ---
 title: "Preferences Dialog"
 parent: "dialogs"
+tags: ["studio pro"]
 ---
-This dialog contains Modeler-wide user-specific settings.
+This dialog contains Studio Pro-wide user-specific settings.
 
 The following preference categories are available:
 
@@ -22,7 +23,7 @@ If checked, the document selection in the project explorer automatically follows
 
 #### Auto-check delay
 
-The auto-check delay is the number of milliseconds that the Modeler waits after a change, before starting the consistency checks. Increase this setting for large projects if the Modeler responses slowly after changes.
+The auto-check delay is the number of milliseconds that Studio Pro waits after a change, before starting the consistency checks. Increase this setting for large projects if Studio Pro responses slowly after changes.
 
 ### Deployment
 
@@ -34,7 +35,7 @@ The JDK is necessary to run Mendix applications because the Mendix runtime is wr
 
 #### Enable run optimizations
 
-Enable this setting to increase the speed at which a running application is updated after changes have been made in the Modeler. When only pages, layouts or snippets have been changed, an entire restart of the application is skipped to decrease deployment time. Also, no Java compilation is performed when no relevant files have changed.
+Enable this setting to increase the speed at which a running application is updated after changes have been made in Studio Pro. When only pages, layouts or snippets have been changed, an entire restart of the application is skipped to decrease deployment time. Also, no Java compilation is performed when no relevant files have changed.
 
 ## Model
 
@@ -67,4 +68,4 @@ Select this option when you want to work on an app that's not stored in the Team
 
 ### Proxy server
 
-Sometimes the computer that's running the Modeler cannot access the internet directly, but has to connect to a proxy server that requires authentication. If this is the case, then these settings can be used to specify the user name and password to connect to the proxy server.
+Sometimes the computer that's running Studio Pro cannot access the internet directly, but has to connect to a proxy server that requires authentication. If this is the case, then these settings can be used to specify the user name and password to connect to the proxy server.

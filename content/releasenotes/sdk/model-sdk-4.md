@@ -5,6 +5,19 @@ parent: "model-sdk"
 
 These are the release notes for the [Model SDK](/apidocs-mxsdk/mxsdk/) version 4.
 
+## 4.21.0 {#421}
+
+**Release date: June 3rd, 2019**
+
+* We added support for Mendix [8.0.0 Beta 2](../studio-pro/8.0#802).
+
+## 4.20.0 {#420}
+
+**Release date: April 26th, 2019**
+
+* We added support for Mendix [8.0.0 Beta 1](../studio-pro/8.0#800).
+* We fixed the rename for by-name references that refer to the base class.
+
 ## 4.19.0 {#419}
 
 **Release date: February 8th, 2019**
@@ -145,7 +158,7 @@ These are the release notes for the [Model SDK](/apidocs-mxsdk/mxsdk/) version 4
 
 | Story | Impact | Description |
 |------|-----|---|
-| MS-461 | Medium | Defined the new metamodel for DataType. From Mendix [7.9.0](../desktop-modeler/7) onwards, the new properties of the DataType type should be used instead of the old properties of the String type. |
+| MS-461 | Medium | Defined the new metamodel for DataType. From Mendix [7.9.0](../studio-pro/7) onwards, the new properties of the DataType type should be used instead of the old properties of the String type. |
 | MS-328 | None | Defined the new metamodel for microflow expressions (experimental). |
 
 ## 4.4.0

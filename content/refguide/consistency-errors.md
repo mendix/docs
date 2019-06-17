@@ -1,17 +1,17 @@
 ---
 title: "Consistency Errors"
-category: "Desktop Modeler"
-description: "Describes consistency errors in the Mendix Desktop Modeler and the way to fix them."
-tags: ["desktop modeler", "consistency errors", "checks", "errors"]
+category: "App Modeling"
+description: "Describes consistency errors in Mendix Studio Pro and the way to fix them."
+tags: ["Studio Pro", "consistency errors", "checks", "errors"]
 ---
 
 ## 1 Introduction 
 
-To make sure that your app is always consistent and properly built, the Desktop Modeler does consistency checks when you build your app. When a consistency check is not met, the Desktop Modeler will notify you about this via consistency errors on the **Errors** tab. 
+To make sure that your app is always consistent and properly built, Studio Pro does consistency checks when you build your app. When a consistency check is not met, Studio Pro will notify you about this via consistency errors on the **Errors** tab. 
 
-![The Errors tab](attachments/consistency-errors/dm-errors-tab.png)
+![The Errors tab](attachments/consistency-errors/errors-tab.png)
 
-Errors need to be solved before your app can be published. A consistency error can occur in the following editors or functionalities of the modeler:
+Errors need to be solved before your app can be published. A consistency error can occur in the following editors or functionalities of Studio Pro:
 
 * Pages 
 * Navigation 
@@ -26,4 +26,4 @@ Errors need to be solved before your app can be published. A consistency error c
 * [Navigation Consistency Errors](consistency-errors-navigation)
 * [Pages](pages)
 * [Microflows](microflows) 
-* [Navigation in Mendix 7.4 & Above](navigation)
+* [Navigation in Mendix](navigation)

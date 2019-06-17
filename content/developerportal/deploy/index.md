@@ -15,33 +15,39 @@ This section of the Developer Portal Guide contains step-by-step instructions, a
 * [Mobile App](mobileapp) – contains instructions for publishing your mobile app: to the Apple or Google stores, for example
 * [App Services](app-services) – describes what can be published to the Mendix App Store, and how to do this
 
-## 2 Locally
+## 2 Run Locally or Preview
 
-You can click **Run Locally** in the toolbar to run your app locally. Use the **View** button to directly jump to your app running at localhost.
+### 2.1 Studio Pro
+
+In *Studio Pro*, you can click **Run Locally** in the toolbar to run your app locally. Use the **View** button to directly jump to see your app running in your browser at *localhost*.
 
 If you plan to deploy to version 3 (V3) of the Mendix Cloud later on, *and* your project contains Java actions, you should enable the **Emulate Cloud Security** setting. For more information, see [V3: Java in Mendix Cloud](java-in-the-cloud).
+
+### 2.2 Studio
+
+In *Studio*, you can click **Preview** in the top-right corner of Studio to see a preview of your app in the browser. For more information see [Previewing & Publishing Your App](/studio/publishing-app).
 
 ## 3 Mendix Cloud
 
 The Mendix Cloud is the default deployment option when you get started with the Mendix Platform. As an integrated solution, a licensed node on the Mendix Cloud includes multiple environments, backups, monitoring, high availability, and more.
 
-From within the Desktop Modeler, you can view the cloud nodes you have available in the Mendix Cloud. You can create a deployment package (MDA) in the Developer Portal and, from there, you can transport it and start running your application. For more information, see [Mendix Cloud](mendix-cloud-deploy).
+From within Mendix Studio Pro, you can view the cloud nodes you have available in the Mendix Cloud. You can create a deployment package (MDA) in the Developer Portal and, from there, you can transport it and start running your application. For more information, see [Mendix Cloud](mendix-cloud-deploy).
 
 ## 4 IBM Cloud
 
-If you create your app from an IBM Starter App, or an IBM Starter Kit on IBM Cloud, then the Developer Portal will lead you through the creation of an environment on IBM Cloud. You can then deploy your app to your IBM environment directly from within the Modeler.
+If you create your app from an IBM Starter App, or an IBM Starter Kit on IBM Cloud, then the Developer Portal will lead you through the creation of an environment on IBM Cloud. You can then deploy your app to your IBM environment directly from within Studio Pro.
 
 For more information, see [IBM Cloud](ibm-cloud).
 
 ## 5 SAP Cloud Platform
 
-If you create your app from an SAP Starter App, the Developer Portal will lead you through the creation of an environment on SAP Cloud Platform. You can then deploy your app to your SAP Cloud Platform environment directly from within the Modeler.
+If you create your app from an SAP Starter App, the Developer Portal will lead you through the creation of an environment on SAP Cloud Platform. You can then deploy your app to your SAP Cloud Platform environment directly from within Studio Pro.
 
 For more information, see [SAP Cloud Platform](sap-cloud-platform).
 
 ## 6 Cloud Foundry
 
-From within the Modeler, you can deploy directly to Cloud Foundry-based platforms. To get started, see [Cloud Foundry](cloud-foundry-deploy) and the Cloud Foundry Buildpack:[Cloud Foundry Mendix Buildpack](https://github.com/mendix/cf-mendix-buildpack).
+From within Studio Pro, you can deploy directly to Cloud Foundry-based platforms. To get started, see [Cloud Foundry](cloud-foundry-deploy) and the Cloud Foundry Buildpack:[Cloud Foundry Mendix Buildpack](https://github.com/mendix/cf-mendix-buildpack).
 
 ## 7 Docker and Kubernetes
 

@@ -1,6 +1,6 @@
 ---
 title: "Implement SSO on a Hybrid App with Mendix & SAML"
-category: "Mobile Development"
+parent: "hybrid-mobile"
 menu_order: 30
 description: "Describes how to address the challenges of implementing SSO in hybrid mobile apps."
 tags: ["SAML", "SSO", "mobile", "hybrid app", "phonegap", "authentication"]
@@ -8,7 +8,11 @@ tags: ["SAML", "SSO", "mobile", "hybrid app", "phonegap", "authentication"]
 
 ## 1 Introduction
 
-This how-to will describe the challenges behind implementing SSO (single sign-on) in hybrid mobile apps and teach you how this can be solved in Mendix app projects.
+This how-to will describe the challenges involved in implementing SSO (single sign-on) in hybrid mobile apps, and teach you how this can be solved in Mendix app projects.
+
+{{% alert type="warning" %}}
+The implementation described in this how-to will _not_ work when you have enabled anonymous users in your project. Disable anonymous users in your project to use this implementation.
+{{% /alert %}}
 
 ## 2 Prerequisites
 
@@ -21,9 +25,9 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 Context
 
-### 3.1 Mendix Mobile Apps, Hybrid Apps, Cordova, and PhoneGap Build
+### 3.1 Hybrid Apps, Cordova, and PhoneGap Build
 
-Mendix apps can be viewed in mobile web browsers. However, some features of mobile devices cannot be accessed through HTML and JavaScript. Also, if you want to publish your app in the Apple App Store or Google Play Store, you have to wrap your app in a native shell. Mendix uses [Cordova](https://cordova.apache.org/) to do this. Cordova creates a native wrapper around a web application and provides access to native functionality through a JavaScript API. These apps are called hybrid apps, because they are a hybrid of a web and a native app. To create binaries of your app, Mendix leverages PhoneGap Build so that you do not need to install software (Android SDK, XCode) for this.
+Hybrid Mendix apps can be viewed in mobile web browsers. However, some features of mobile devices cannot be accessed through HTML and JavaScript. Also, if you want to publish your app in the Apple App Store or Google Play Store, you have to wrap your app in a native shell. Mendix uses [Cordova](https://cordova.apache.org/) to do this. Cordova creates a native wrapper around a web application and provides access to native functionality through a JavaScript API. These apps are called hybrid apps, because they are a hybrid of a web and a native app. To create binaries of your app, Mendix leverages PhoneGap Build so that you do not need to install software (Android SDK, XCode) for this.
 
 ### 3.2 How Authentication Against an IdP Works<a name="how"></a>
 
@@ -145,7 +149,7 @@ To use the hybrid app package, follow these steps:
     ![](attachments/implement-sso/entry.js.png)
 
 6.  Add the JavaScript code provided in [5.1 The JavaScript](#javascript) under `MxApp.onConfigReady(function(config) {`. Your *Entry.js* file should now look like this:
-  ​     
+    ​     
     ![](attachments/implement-sso/entry.js-with-fix.png)
 
 7.  Create the PhoneGap Build package by following the instructions in the **Through Uploading to PhoneGap Build** section of the [Mendix PhoneGap Build App Template documentation](https://github.com/mendix/hybrid-app-template#through-uploading-to-phonegap-build). Be sure to read the **Prerequisites** and **Build on PhoneGap** sections of this documentation as well. This is an overview of the steps:<br>
@@ -169,8 +173,8 @@ The last thing to do is to check the **Enable mobile authentication token** box 
 
 ## 6 Read More
 
-* [How to Deploy Your First Hybrid Mobile App](deploy-your-first-hybrid-mobile-app)
-* [How to Publish a Mendix Hybrid Mobile App in App Stores](publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)
-* [How to Debug a Mobile App with Mendix](debug-a-mobile-app)
-* [How to Debug a Hybrid Mobile Application](../monitoring-troubleshooting/debug-a-hybrid-mobile-application)
+* [Deploy Your First Hybrid Mobile App](deploy-your-first-hybrid-mobile-app)
+* [Publish a Mendix Hybrid Mobile App in App Stores](publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)
+* [Debug a Mobile App with Mendix](debug-a-mobile-app)
+* [Debug a Hybrid Mobile Application](../monitoring-troubleshooting/debug-a-hybrid-mobile-application)
 * [Building a Mobile App with Mendix](https://www.mendix.com/blog/building-mobile-app-mendix/)

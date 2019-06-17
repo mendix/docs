@@ -1,9 +1,9 @@
 ---
 title: "Text Area"
 parent: "input-widgets"
+tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
-
 
 A text area can be used to display and/or edit a long text value that can be split over several lines.
 

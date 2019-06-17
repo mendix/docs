@@ -1,8 +1,8 @@
 ---
 title: "Static Label (Document Template)"
 parent: "document-templates"
+tags: ["studio pro"]
 ---
-
 
 A static label shows a line of static text. You can use it to place custom text inside a data view, template grid or table.
 

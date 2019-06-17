@@ -13,7 +13,7 @@ More complex widgets, like a grid, can set more specific CSS classes to sub-elem
 
 Some widgets, like a Grid or a Listview, can show multiple items. Every item has a CSS class '`mx-name-index-`' followed by an index number, starting at 0.
 
-The easiest way to discover these names is to use a browser's developer tool, like [Firebug](https://addons.mozilla.org/nl/firefox/addon/firebug/).
+The easiest way to discover these names is to use a browser's developer tool.
 
 ## 2\. Pitfalls
 

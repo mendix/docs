@@ -1,6 +1,7 @@
 ---
 title: "XPath Source"
 parent: "data-sources"
+tags: ["studio pro"]
 ---
 
 ## 1 Overview
@@ -11,7 +12,7 @@ If database is selected as the data source for a widget then the object or objec
 2. The XPath constraint supplied in the widgets settings.
 3. An association, if the widget is nested in another data widget and the data path described runs over an association.
 
-{{% alert type="success" %}}
+{{% alert type="info" %}}
 Use access rules whenever possible to limit data in data grids. This way you know that the objects will always be constrained by these rules (as opposed to an XPath constraint on a single data grid). The access rules will also be applied when executing microflows which saves you from repeating XPath constraints.
 {{% /alert %}}
 

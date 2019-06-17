@@ -88,6 +88,19 @@ $block: 'mx';
         height: 20px;
         padding: 4px;
       }
+      @include element('pdf-button') {
+        @include clearfix();
+        font-size: 12px;
+        margin: 0 0 5px 5px;
+        display: inline-block;
+        float: right;
+        i {
+          margin-right: 3px;
+        }
+        &:hover {
+          text-decoration: none;
+        }
+      }
     }
 
     @include element('content') {

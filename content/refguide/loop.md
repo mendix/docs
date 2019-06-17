@@ -1,6 +1,7 @@
 ---
 title: "Loop"
 parent: "common-elements"
+tags: ["studio pro"]
 ---
 
 ## 1 Introduction

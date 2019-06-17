@@ -1,6 +1,7 @@
 ---
-title: "XPath sum"
+title: "XPath Sum"
 parent: "xpath-query-functions"
+tags: ["studio pro"]
 ---
 
 ## 1 Overview

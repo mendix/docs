@@ -1,5 +1,6 @@
 ---
 title: "Data Models"
+tags: ["studio pro"]
 ---
 
 ## 1 Introduction

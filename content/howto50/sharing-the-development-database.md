@@ -88,4 +88,4 @@ Make sure the names of the databases aren't the same or make a copy of your own 
 *   [Starting your own repository](starting-your-own-repository)
 *   [Contributing to a GitHub repository](contributing-to-a-github-repository)
 *   [Using Team Server - Version Control](using-team-server-version-control)
-*   [How to Use the Mendix Feedback Widget](/developerportal/feedback/use-feedback-widget)
+*   [How to Use the Mendix Feedback Widget](/developerportal/collaborate/use-feedback-widget)

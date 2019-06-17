@@ -1,7 +1,7 @@
 ---
-title: "Escalation Management Process"
+title: "Support Escalation Process"
 category: "Mendix Support"
-menu_order: 30
+menu_order: 5
 description: "This document describes the types of Mendix Support escalation and how the escalation process works."
 tags: ["support", "escalation management"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -39,7 +39,7 @@ Listed below are some examples of reasons to initiate an escalation:
 
 * Management of a major problem, especially where impact to business is high and the problem is taking too long to isolate the cause of the incidents
 * A prolonged outage that exceeds or threaten to exceed the SLA or timeframe
-* Frequently recurring or multiple related hig-priority incidents where the priority is related to business impact and urgency
+* Frequently recurring or multiple related high-priority incidents where the priority is related to business impact and urgency
 * Security breaches identified or reported by a customer without a workaround that is mutually agreed upon
 * Risk of potential or actual damage to the customer's or provider's reputation
 * Data loss or risk of potential data loss
@@ -51,20 +51,22 @@ The entry point into the Mendix escalation process is through your support case.
 
 This is the normal process for a support case:
 
-1. Navigate to the [Mendix Support homepage](https://support.mendix.com/hc/en-us).
-2. Submit a request:
+1. Navigate to the [Mendix Support](https://support.mendix.com/hc/en-us).
+2. Click **Submit a request**, which will open this form:
 
   ![](attachments/escalation-management-process/zendesk.png)
 
 3. Once the ticket has been submitted, this incoming ticket is assigned to a Support Engineer.
-4. This engineer will come to a solution most of the time, sometimes after discussion with a Technical Support Lead and, if needed, with our second-line team (as in, Modeler, Client, Core, or Expert Services).
-5.	If the gap between the customer's expectation and the Mendix possibilities cannot be solved, the escalation is started.
+
+The Support Engineer will come to a solution most of the time, sometimes after discussion with a Technical Support Lead and, if needed, with our second-line team (for the Mendix Studios, Client, Core, or Expert Services).
+
+If the gap between the customer's expectation and the Mendix Platform possibilities cannot be resolved, an escalation is started.
 
 ## 6 Methods to Escalate My Support Case
 
 ### 6.1 Via Email
 
-Send an email to **escalation@mendix.com** (and CC your Customer Success Manager). Ensure you add the following details to your email for an effective event-based escalation process:
+Send an email to **escalation[at]mendix.com** (and CC your Customer Success Manager). Ensure you add the following details to your email for an effective event-based escalation process:
 
 * Case number
 * Organization name
@@ -74,7 +76,7 @@ Send an email to **escalation@mendix.com** (and CC your Customer Success Manager
 
 ### 6.2 Through the Support Ticket
 
-In the case notes, CC **escalation@mendix.com** and in the case note, do the following:
+In the case notes, CC **escalation[at]mendix.com** and in the case note, do the following:
 
 *	Document the problem description
 *	Provide the business use case for the escalation

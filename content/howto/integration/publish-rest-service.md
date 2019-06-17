@@ -2,13 +2,13 @@
 title: "Publish a REST Service"
 category: "Integration"
 menu_order: 10
-description: "Describes how to publish REST web services natively from the Desktop Modeler."
+description: "Describes how to publish REST web services natively from ."
 tags: ["rest", "rest service", "web service", "integration"]
 ---
 
 ## 1 Introduction
 
-Mendix allows you to publish REST web services natively from the Desktop Modeler. This how-to will show you how to publish a REST service in an example project. This example will demonstrate the GET operation for a published REST service.
+Mendix allows you to publish REST web services natively from . This how-to will show you how to publish a REST service in an example project. This example will demonstrate the GET operation for a published REST service.
 
 **This how-to will teach you how to do the following:**
 
@@ -18,13 +18,13 @@ Mendix allows you to publish REST web services natively from the Desktop Modeler
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Install [Desktop Modeler](https://appstore.home.mendix.com/link/modelers/) version 7.11 or higher
+* Install [Studio Pro](https://appstore.home.mendix.com/link/modelers/)
 
 ## 3 Setting Up the Example Project
 
 To create the example project you will use in the next sections for publishing your REST service, follow these steps:
 
-1. Create a new project in the Desktop Modeler.
+1. Create a new project in .
 2. Rename the **MyFirstModule** module to **RESTExample**.
 3. Open the domain model of the RESTExample module.
 4.  Create entities with an association like this:

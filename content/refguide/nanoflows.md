@@ -3,15 +3,14 @@ title: "Nanoflows"
 parent: "application-logic"
 menu_order: 20
 description: "Presents an overview of all the elements that can be used in a nanoflow."
+tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
 {{% alert type="info" %}}
-
 This page is an overview of all the elements that can be used in a nanoflow. For the properties of the nanoflow itself, see [Nanoflow Properties](nanoflow).
-
 {{% /alert %}}
 
 Nanoflows are similar to [microflows](microflows), as they allow you to express the logic of your application. However, they do have some specific benefits (for example, they run directly on the browser/device and can be used in an offline app). Furthermore, most of the actions run directly on the device, so there is also a speed benefit.
@@ -24,7 +23,9 @@ Nanoflows are designed with offline-first applications in mind, as they allow yo
 
 ### 2.2 Logic Where No Connection Is Needed
 
-Nanoflows also offer great value in online applications (for example, for UI logic, validations, calculations, and navigation). However, please keep in mind that when you perform database-related actions, each action will create a separate network request to the Mendix Runtime. The following actions interact with the database:
+Nanoflows also offer great value to online applications (for example, for UI logic, validations, calculations, and navigation). However, please keep in mind that, when you perform database-related actions, each action will create a separate network request to the Mendix Runtime.
+
+The following actions interact with the database:
 
 * Create
 * Commit
@@ -43,11 +44,12 @@ The previous section stated that nanoflows perform best in online applications w
 
 ## 3 Differences from Microflows
 
-There are three main differences betweeen nanoflows and microflows:
+There are four main differences betweeen nanoflows and microflows:
 
 * When a nanoflow steps through its actions, client actions are directly executed. For example, an open page action immediately opens a page instead of at the end of the nanoflow. This is different from client actions in a microflow, which only run when the client receives the result from the microflow.
 * When used in nanoflow activities, expressions do not support the following variables: `$latestError`, `$latestSoapFault`, `$latestHttpResponse`, `$currentSession`, `$currentUser`, `$currentDeviceType`.
-* Nanoflows are not run inside a transaction, so if an error occurs in a nanoflow, it will not roll back any previous changes.
+* Nanoflows are not run inside a transaction so, if an error occurs in a nanoflow, it will not roll back any previous changes.
+* Nanoflows and microflows do not provide the same actions. Some actions available in microflows are not available in nanoflows, and vice versa.
 
 ## 4 Keyboard Support
 
@@ -72,7 +74,7 @@ The graphical notation of nanoflows is based on the [Business Process Model and 
 
 A nanoflow is composed of elements. The following categories are used:
 
-* [Events](#events) represent the start and end points of a nanoflow and special operations in a loop
+* [Events](#events) represent the start and endpoints of a nanoflow and special operations in a loop
 * [Flows](#flows) form the connection between elements
 * [Gateways](#gateways) deal with making choices and merging different paths again
 * [Activities](#activities) are the actions that are executed in a nanoflow
@@ -80,7 +82,7 @@ A nanoflow is composed of elements. The following categories are used:
 
 ### 5.1 Events<a name="events"></a>
 
-Events represent the start and end points of a nanoflow and special operations in a loop.
+Events represent the start and endpoints of a nanoflow and special operations in a loop.
 
 | Graphic | Name | Description |
 | --- | --- | --- |
@@ -132,7 +134,11 @@ List activities can be used to create and manipulate lists of objects.
 | [![](attachments/819203/918007.png)](change-list) | [Change list](change-list) | Can be used to change the content of a list variable. |
 | [![](attachments/819203/918009.png)](create-list) | [Create list](create-list) | Can be used to create a (empty) list variable. |
 
-#### 5.4.3 Variable Activities
+#### 5.4.3 Action Call Activities
+
+The [JavaScript action call](javascript-action-call) activity executes a JavaScript action.
+
+#### 5.4.4 Variable Activities
 
 Variable activities can be used to create or change a variable within a microflow.
 
@@ -141,7 +147,7 @@ Variable activities can be used to create or change a variable within a microflo
 | [![](attachments/819203/918011.png)](change-variable) | [Change variable](change-variable) | Can be used to change the value of a variable. |
 | [![](attachments/819203/918110.png)](create-variable) | [Create variable](create-variable) | Can be used to create a new variable. |
 
-#### 5.4.4 Client Activities
+#### 5.4.5 Client Activities
 
 Client activities can be used to have the web client of your application perform an action, such as showing a different page or downloading a file.
 
@@ -168,7 +174,7 @@ Artifacts provide the nanoflow with input and allow comments to be made.
 
 ## 6 Variable Usages
 
-The Modeler visualizes which variables are used by selected object(s). It does this by showing the used variables in white text on a blue background. Conversely, elements that use the variable(s) defined by the selected object(s) are marked with the word **Usage** in white text on a green background.
+Studio Pro visualizes which variables are used by selected object(s). It does this by showing the used variables in white text on a blue background. Conversely, elements that use the variable(s) defined by the selected object(s) are marked with the word **Usage** in white text on a green background.
 
 In the example below, the parameter **AccountPasswordData** is highlighted because it is used in the selected activity. And the activity **Save password** has a usage label because it uses the variable defined by the selected activity.
 
@@ -180,7 +186,7 @@ When an error occurs in a nanoflow, all the changes that have been made to objec
 
 ## 8 Nanoflow Debugging
 
-Step-by-step debugging is not supported yet. For now, we recommend using log message actions, which are shown in the console log of the Desktop Modeler (for version 7.13.0 and above).
+Step-by-step debugging is not supported yet. For now, we recommend using log message actions, which are shown in the console log of Studio Pro.
 
 ## 9 Security
 

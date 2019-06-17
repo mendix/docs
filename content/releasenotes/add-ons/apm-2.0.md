@@ -3,6 +3,28 @@ title: "2.0"
 parent: "apm-2"
 ---
 
+## 2.0.3
+
+* We fixed an issue that caused the agent not to detect a microflow had finished. As a result the microflow was always shown as a long-running microflow. This is no longer the case.
+* We fixed an issue in which the agent logged a settings change, even though no changes were made.
+* Captured actions of the **Retrieve by XPath** type now include the entity name.
+* When a timeout occurs between the agent and the manager, the agent now logs it as **INFO**.
+* When a connection is lost with the APM Manager, the agent now delays each subsequent call to the manager until a connection has succesfully been made. The maximum delay is 5 minutes per interval.
+* We added the capturing of SQL statements to the performance recorder.
+* We added functionality to put a pause on the agent when the manager is down for maintenance.
+* We made various performance optimizations.
+
+## 2.0.2
+
+The Mendix 6 version of the agent in release 2.0.3, which contains the Mendix 7 version.
+
+## 2.0.1
+
+* Added support for file uploads for Load Testing
+* Reduced logging from the Agent
+* In case of an error while transmitting data to the APM Manager, logging the full JSON messages now default disabled.
+* In case the Browser Agent is disabled per configuration on the APM Manager, the agent no longer log an error when a user opens the application.
+
 ## 2.0
 
 This major release of APM deals with cloud, end-user measurements, and simplicity.

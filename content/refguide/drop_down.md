@@ -1,7 +1,7 @@
 ---
 title: "Drop-Down"
 parent: "input-widgets"
-tags: ["Drop-down", "input", "page", "widget", "enumeration"]
+tags: ["Drop-down", "input", "page", "widget", "enumeration", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -24,12 +24,6 @@ This property represents the caption for the empty option in the drop-down shown
 {{% alert type="info" %}}
 
 Filling out the caption for an empty option improves the user experience of your application. It also helps screen-reader users to operate the application easily. For example, the drop-down that represents the color selection for a car could have a caption reading "Select a color".
-
-{{% /alert %}}
-
-{{% alert type="info" %}}
-
-The empty option caption is available from Mendix 7.2.0.
 
 {{% /alert %}}
 

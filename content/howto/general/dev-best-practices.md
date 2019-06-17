@@ -1,6 +1,6 @@
 ---
 title: "Implement Best Practices for Development"
-category: "General"
+category: "General Info"
 menu_order: 3
 tags: ["best practice", "development", "develop", "reusable", "prefix"]
 ---
@@ -9,7 +9,7 @@ tags: ["best practice", "development", "develop", "reusable", "prefix"]
 
 This document can be used as a guideline for adopting consistent naming and modeling conventions while developing your Mendix applications. This will help to improve your application’s maintainability and performance, and make it easier to read and understand.
 
-Even with the powerful navigation and search support in the Mendix Modeler, adhering to naming and modeling conventions is a wise thing because:
+Even with the powerful navigation and search support in Mendix Studio Pro, adhering to naming and modeling conventions is a wise thing because:
 
 * After finishing an application, it is usually handed over to different people for maintenance, so even years later, they will need to understand what you did and how to improve on it
 * Anybody should be able to quickly understand an existing app in terms of what is located where and how the different parts are related
@@ -45,11 +45,11 @@ Each user role should correspond to only one module role per module. In other wo
 
 #### 3.1.1 Module Names
 
-Modules should be treated like standalone replaceable services; for example, the customer module should function as a standalone customer management system as much as possible, replaceable by a different customer management system. Module names should have camel case names that identify the responsibility of the module, for example, **CustomerManagement** or **SharePointIntegration**.
+Modules should be treated like stand-alone replaceable services; for example, the customer module should function as a stand-alone customer management system as much as possible, replaceable by a different customer management system. Module names should have camel case names that identify the responsibility of the module, for example, **CustomerManagement** or **SharePointIntegration**.
 
 #### 3.1.2 Module Roles
 
-The [module roles](/refguide/module-role) should have logical names that reflect the access they should have within a module. In contrast to the user role, the module role should always be in English, for instance **Administrator** or **Employee**.
+The [module roles](/refguide/module-security#module-role) should have logical names that reflect the access they should have within a module. In contrast to the user role, the module role should always be in English, for instance **Administrator** or **Employee**.
 
 ### 3.2 Domain Model
 
@@ -77,11 +77,7 @@ If you have multiple associations between the same entities we recommend extendi
 
 **Renaming entities**
 
-A second recommendation is that when an association already exists between entities, and you change the name on one or both of the entities, that you rename the association.
-
-{{% alert type="info" %}}
-Starting with version 7.19, Mendix will rename the association automatically. 
-{{% /alert %}}
+When an association already exists between entities and you change the name on one or both of the entities, Mendix will rename the association automatically. 
 
 With models built in lower versions of Mendix, however, you will need to manually rename the assocation to keep your model consistent and up-to-date.
 
@@ -206,7 +202,7 @@ For integrations, you have the following types of microflow:
 
 Pages use a **suffix** to indicate their use.
 
-Pages that show an [overview](/howto/ux/create-your-first-two-overview-and-detail-pages) of a single entity should have a suffix of **_Overview**.
+Pages that show an [overview](/howto/front-end/create-your-first-two-overview-and-detail-pages) of a single entity should have a suffix of **_Overview**.
 
 Pages that are to create, edit, or view entity data, and that are not part of a process, should have the suffix **_New**, **_Edit**, **_NewEdit**, or **_View**.
 
@@ -274,7 +270,7 @@ When using inheritance (specialization/generalization), it is recommended to use
 
 #### 4.2.1 Size {#size}
 
-The size of a microflow should not exceed 25 elements. An element is any block that the Modeler allows in a microflow (loops, action activities, splits, etc.). In some cases exceeding this limit is acceptable; this can occur, for instance, for validation or data copying flows.
+The size of a microflow should not exceed 25 elements. An element is any block that Studio Pro allows in a microflow (loops, action activities, splits, etc.). In some cases exceeding this limit is acceptable; this can occur, for instance, for validation or data copying flows.
 
 Split microflows up into logical, functional elements. If a microflow has more than twenty-five elements, split the microflow up by creating a sub-microflow for a part of it. For example, by separating presentation logic from business logic.
 
@@ -308,21 +304,21 @@ Use microflow [error handling](/howto/logic-business-rules/set-up-error-handling
 
 Complex processes and important business logic (like workflow processing or validations) must include debug and trace [logging](/refguide/logging). Logging actions must write the current state and progress of the process and must include a request ID or other identifying information. The log node should be the name of the module. This will greatly assist error analysis.
 
-### 4.3 Warnings & Modeler Feedback
+### 4.3 Warnings & Studio Pro Feedback
 
-No warnings should be visible in the Modeler, unless explicitly documented with a reason. Warnings can indicate many issues, including maintainability and security risks, which must be resolved.
+No warnings should be visible in Studio Pro, unless explicitly documented with a reason. Warnings can indicate many issues, including maintainability and security risks, which must be resolved.
 
-Unused and excluded items should be removed from the model when they are no longer needed. When a version of the application is prepared for a release, all these items should be cleaned up. Make sure to check whether items that appear unused are not actually called from a Java action before removing them. The Modeler provides the possibility to mark such items as used to override warnings about this.
+Unused and excluded items should be removed from the model when they are no longer needed. When a version of the application is prepared for a release, all these items should be cleaned up. Make sure to check whether items that appear unused are not actually called from a Java action before removing them. Studio Pro provides the possibility to mark such items as used to override warnings about this.
 
 ### 4.4 XPath
 
-[XPath](/refguide/xpath) constraints in any part of the model should be kept as simple as possible. As a general rule, XPaths must not appear when the **Find advanced > XPath** option in the Modeler is used with all options enabled.
+[XPath](/refguide/xpath) constraints in any part of the model should be kept as simple as possible. As a general rule, XPaths must not appear when the **Find advanced > XPath** option in Studio Pro is used with all options enabled.
 
 When an XPath needs multiple constraints, each constraint must be put in brackets (`[ ]`) separately, instead of using the `and` keyword. This also applies to sub-constraints.
 
 ### 4.5 Security
 
-The [security](/howto/security/index) overview in the Modeler must not show any incomplete (yellow) parts. All entity, microflow, and page access must be configured completely.
+The [security](/howto/security/index) overview in Studio Pro must not show any incomplete (yellow) parts. All entity, microflow, and page access must be configured completely.
 
 It is recommended **not** to assign default rights to new members when defining entity access. This will ensure that access is only granted after a conscious decision.
 

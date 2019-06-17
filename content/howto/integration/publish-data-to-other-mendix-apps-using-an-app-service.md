@@ -1,10 +1,14 @@
 ---
-title: "Publish Data to Other Mendix Apps Using an App Service"
+title: "Publish Data to Other Mendix Apps Using an App Service (Deprecated)"
 category: "Integration"
 menu_order: 14
 description: "Describes how to use an app service to publish data to other Mendix apps."
-tags: ["integration", "app service", "publish"]
+tags: ["integration", "publish"]
 ---
+
+{{% alert type="info" %}}
+App services are deprecated marked for removal. Use a [published web service](/refguide/published-web-services) or a [published REST service](/refguide/published-rest-services) instead.
+{{% /alert %}}
 
 ## 1 Introduction
 
@@ -103,5 +107,5 @@ You can now go ahead and deploy the app. This will publish your app service.
 
 ## 9 Read More
 
-* [How to Expose a Web Service](expose-a-web-service)
-* [How to Expose Data to BI Tools Using OData](exposing-data-to-bi-tools-using-odata)
+* [Expose a Web Service](expose-a-web-service)
+* [Expose Data to BI Tools Using OData](exposing-data-to-bi-tools-using-odata)

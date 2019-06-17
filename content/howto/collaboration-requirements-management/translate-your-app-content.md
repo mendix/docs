@@ -1,8 +1,8 @@
 ---
 title: "Translate Your App Content"
-category: "Collaboration & Requirements Management"
+category: "Collaboration"
 menu_order: 50
-tags: []
+tags: ["studio pro"]
 ---
 
 ## 1 Introduction
@@ -16,7 +16,7 @@ Delivering your Mendix app in multiple languages is an important capability for 
 * Configure language operations
 * Perform batch replacement and batch translation
 
-## 2 Adding app Project Languages
+## 2 Adding App Project Languages
 
 The app project language is the main language of the app when it is run. There must be a default app project language, and **English, United States** is the app project language set automatically by default. You can add as many languages as you like by following these steps:
 
@@ -30,13 +30,13 @@ The app project language is the main language of the app when it is run. There m
 
 If you want to set a different language as the default, you can do that in the **Default language** drop-down menu on the **Languages** tab.
 
-Any app project language can be used as a development language in the Modeler (for details, see [4 Changing the Development Language](#changingthedevelopmentlanguage)).
+Any app project language can be used as a development language in Studio Pro (for details, see [4 Changing the Development Language](#changingthedevelopmentlanguage)).
 
 ## <a name="changingthedevelopmentlanguage"></a>3 Changing the Development Language
 
-The development language is the language used to define translatable texts as you develop your app in the Modeler. For example, if you select **Dutch, Netherlands** as the development language, any labels that you type during the development of your app in the Modeler will be added to your app project's Dutch dictionary. The Dutch translation of your app will be seen by users of your app who set Dutch as their preferred language in their profile (if they do not specify a preferred language, the app project default language will be used).
+The development language is the language used to define translatable texts as you develop your app in Studio Pro. For example, if you select **Dutch, Netherlands** as the development language, any labels that you type during the development of your app in Studio Pro will be added to your app project's Dutch dictionary. The Dutch translation of your app will be seen by users of your app who set Dutch as their preferred language in their profile (if they do not specify a preferred language, the app project default language will be used).
 
-You can change the language setting if desired in the Modeler by going to: **Language > Current Language**.
+You can change the language setting if desired in Studio Pro by going to: **Language > Current Language**.
 
 ![](attachments/Translating+Your+App+Content/04_switch_development_language.png)
 
@@ -44,11 +44,11 @@ Mendix recommends setting your development language at the start of your app pro
 
 After selecting your development language, the pages will display their labels and content in that language. Labels that haven’t yet been translated to the selected language will display the text of the default language (which was set in the app project **Settings**) between angle brackets ("<>").
 
-When your app is deployed with labels that don’t yet have a translation, these labels will also display the default language label (without the angle brackets). You can configure how strict the Modeler is in checking for a translation in the **Language Operations** settings of your app project (see [3.1 Configuring Language Operations](#toconfigurelanguageoperations)).
+When your app is deployed with labels that don’t yet have a translation, these labels will also display the default language label (without the angle brackets). You can configure how strict Studio Pro is in checking for a translation in the **Language Operations** settings of your app project (see [3.1 Configuring Language Operations](#toconfigurelanguageoperations)).
 
 ### <a name="toconfigurelanguageoperations"></a>3.1 Configuring Language Operations
 
-To update the language settings in the Modeler, go to **Language > Language Operations**.
+To update the language settings in Studio Pro, go to **Language > Language Operations**.
 
 ![](attachments/Translating+Your+App+Content/language_operations.png)
 
@@ -89,7 +89,7 @@ To search for phrases that look similar and replace them as a batch, follow thes
 
 To translate a label, follow these steps:
 
-1. Select the desired development language from the language drop-down menu in the Modeler toolbar (which displays "English, United States" by default). Words in your app project will be automatically translated if they are in the library.
+1. Select the desired development language from the language drop-down menu in Studio Pro toolbar (which displays "English, United States" by default). Words in your app project will be automatically translated if they are in the library.
 2. Words that have not been automatically translated (that is, those words that are in angle brackets) must be manually translated one-by-one or through batch translation (see below).
 
 ### 4.3 Performing Batch Translation
@@ -117,4 +117,4 @@ For example, there may be two English labels with the word "address." If you tra
 
 ## 5 Exporting and Importing Translations
 
-If you want to translate a language outside the Modeler, you can export the translatable texts to the Excel (.xlsx) format by clicking **Export to Excel** on the **Batch translate** dialog box. This produces an Excel file with two columns, one for each language. When you’re done, simply import the Excel file into your app project by clicking **Import from Excel** on the **Batch translate** dialog box.
+If you want to translate a language outside Studio Pro, you can export the translatable texts to the Excel (.xlsx) format by clicking **Export to Excel** on the **Batch translate** dialog box. This produces an Excel file with two columns, one for each language. When you’re done, simply import the Excel file into your app project by clicking **Import from Excel** on the **Batch translate** dialog box.

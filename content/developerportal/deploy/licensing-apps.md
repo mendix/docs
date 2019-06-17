@@ -1,5 +1,5 @@
 ---
-title: "Licensing Apps"
+title: "Licensing Mendix Cloud Apps"
 # New document which replaces four others
 parent: "mendix-cloud-deploy"
 menu_order: 15
@@ -10,7 +10,7 @@ tags: ["App", "Node", "Developer Portal", "Deploy", "Link", "Unlink", "Licensed"
 
 ## 1 Introduction
 
-To run Mendix apps in production on the Mendix Cloud, they must be linked to a licensed node. Without a licensed node you can still deploy your app and test it, however it will only run for a couple of hours before shutting down, and is restricted in the number of users it can have.
+To run Mendix apps in production on the Mendix Cloud, they must be linked to a licensed node. Without a licensed node you can still deploy your app and test it, however it will only run for a couple of hours before shutting down, cannot be scaled and has limited operational information available.
 
 This page explains how you can link your app to a licensed cloud node. It covers:
 
@@ -31,14 +31,14 @@ This is the Mendix **environment**.
 
 In a **node** in the Mendix Cloud, you may have one, or more, of these *environments*. More information about *nodes* can be found here: [Nodes](/developerportal/company-app-roles/nodes).
 
-For a **Free App**, your app has a single *Sandbox* environment which allows you to test your app. However, this comes with restrictions on how long it will run and the number of users it will support. You cannot scale the app, and the operational capabilities are limited. For more details on the restrictions of a Free App, see [Mendix Cloud](mendix-cloud-deploy#free-app)
+For a **Free App**, your app has a single *Sandbox* environment which allows you to test your app. However, this comes with restrictions on how long it will run. In addition, you cannot scale the app, and the operational capabilities are limited. For more details on the restrictions of a Free App, see [Mendix Cloud](mendix-cloud-deploy#free-app)
 
-In a **licensed node** you have everything you need to stage and deploy your app. You can have several different *environments* to support development: test, acceptance, and production, for example. You can scale these environments by providing more memory or multiple instances, and you can configure and monitor them using the tools in the *Developer Portal*.
+In a **licensed node** you have everything you need to stage and deploy your app. You can have several different *environments* to support development: test, acceptance, and production, for example. With [Flexible Environments](mendix-cloud-deploy#flexible-environments) in Mendix Cloud V4, you can even specify the number and names of your environments. You can scale licensed environments by providing more memory or multiple instances, and you can configure and monitor them using the tools in the *Developer Portal*.
 
 This document describes how you can link apps to a licensed node.
 
 {{% alert type="warning" %}}
-These instructions will not move databases, file storage, or any other environment configurations to another node. Only the deployment package of a Mendix **model** – the app as built in the Modeler – is moved.
+These instructions will not move databases, file storage, or any other environment configurations to another node. Only the deployment package of a Mendix **model** – the app as built in Mendix Studio Pro – is moved.
 {{% /alert %}}
 
 ## 3 Prerequisites
@@ -47,9 +47,11 @@ These instructions will not move databases, file storage, or any other environme
 
 To license an app, you need to have a licensed cloud node available:
 
-* if your contract allows for more licensed nodes, please reach out to Mendix Support (see https://support.mendix.com for contact details) so they can create the node for you
+If your contract allows for more licensed nodes, use the [Request New App Node](https://newnode.mendix.com) app to request a new node from Mendix Support. See [Licensing Apps](licensing-apps-outside-mxcloud) for more information
 
-* if your contract does not allow for more licensed nodes, please contact your Customer Success Manager (CSM)
+{{% alert type="info" %}}
+If your contract does not allow for more licensed nodes, please contact your Customer Success Manager (CSM).
+{{% /alert %}}
 
 ### 3.2 Authorization
 
@@ -61,7 +63,7 @@ You need to have enabled two-factor authentication. See [Two-Factor Authenticati
 
 You have deployed an app: either as a free app, or to a licensed node. You now want to link it to a licensed node, or to a different licensed node.
 
-For the specific case of swapping two apps between licensed nodes, see the guidance in section 5 [Exchange Linked Apps Between Nodes](#exchange-apps).
+For the specific case of swapping two apps between licensed nodes, see the guidance in the [Exchange Linked Apps Between Nodes](#exchange-apps) section.
 
 ### 4.1 Backing Up{#backing-up}
 
@@ -87,7 +89,7 @@ Before you can link an app to a new environment, you need to unlink it from its 
 
 3.  Go to **Environments** in the left navigation panel.
 
-    If the environments tab shows the following message, then your app is not currently linked to a node and you can go straight to section 4.3 [Connect Your App to a Licensed Node](#connect-app).
+    If the environments tab shows the following message, then your app is not currently linked to a node and you can go straight to the section [Connect Your App to a Licensed Node](#connect-app).
 
     ![](attachments/licensing-apps/link-node.png)
    
@@ -109,7 +111,7 @@ Your app has now been unlinked from the Sandbox environment.
 
 It is not possible to unlink an app from a licensed node. The only way to do this is to connect another app to the licensed node; this will unlink the existing app automatically.
 
-An example of how this behavior can be used is given in section 5 [Exchange Linked Apps Between Nodes](#exchange-apps).
+An example of how this behavior can be used is given in the section [Exchange Linked Apps Between Nodes](#exchange-apps).
 
 ### 4.3 Connecting Your App to a Licensed Node{#connect-app}
 
@@ -201,7 +203,7 @@ To link **App A** to **Node 2** and **App B** to **Node 1**, follow these steps:
 
 1. Create a new empty app **App C** which is not connected to any environment.
 
-2. Link **App C** to **Node 1** (see section 4.3 [Connecting Your App to a Licensed Node](#connect-app). This will unlink **App A**.
+2. Link **App C** to **Node 1** (see [Connecting Your App to a Licensed Node](#connect-app), above). This will unlink **App A**.
 
 3. Now that **App A** is unlinked from **Node 1**, it can be linked to **Node 2**.
 

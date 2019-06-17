@@ -1,6 +1,7 @@
 ---
 title: "Deploy To The Cloud Dialog"
 parent: "dialogs"
+tags: ["studio pro"]
 ---
 Use this dialog to create a versioned deployment package and upload it to your app in the Mendix Cloud.
 
@@ -18,7 +19,7 @@ Choose a version for the deployment package. The version consists of four number
 
 The other numbers are free to choose but it is wise to use a convention for the numbering. Major versions typically contain major new feature or rewrites of existing features. A minor version contains small new features and fixes. A patch solves minor issues and should not change the data model of the application. A patch release should be interchangeable with another patch release with no changes to the data.
 
-The Modeler will show you the latest version that you created a package for (if any). You can increase major, minor or patch according to the convention you use.
+Studio Pro will show you the latest version that you created a package for (if any). You can increase major, minor or patch according to the convention you use.
 
 ## Description
 

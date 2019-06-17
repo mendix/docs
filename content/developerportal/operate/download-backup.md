@@ -1,7 +1,7 @@
 ---
 title: "Download a Backup"
 parent: "backups"
-menu_order: 2
+menu_order: 20
 description: "This page describes how to download a backup."
 tags: ["Backup","Download","Mendix Cloud","Developer Portal"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -46,7 +46,7 @@ To download a backup of a licensed app, follow these steps:
 4. Click **Backups** under the **Operate** category.
 5. Select the environment from which you want to download the backup.
 
-    ![](attachments/download-a-backup/environment.jpg)
+    ![](attachments/download-a-backup/environment.png)
 
 6. If you want to create a backup first, click **Create Backup**.
 
@@ -58,5 +58,5 @@ To download a backup of a licensed app, follow these steps:
 ## 5 Read More
 
 * [How to Create a Backup](create-backup)
-* [Licensing Apps](/developerportal/deploy/licensing-apps)
+* [Licensing Mendix Cloud Apps](/developerportal/deploy/licensing-apps)
 * [How to Restore a Backup](restore-backup)

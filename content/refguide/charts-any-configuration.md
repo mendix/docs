@@ -1,26 +1,26 @@
 ---
 title: "Any Chart Widgets"
 parent: "chart-widgets"
-description: "A reference guide on the configuration of the Any Chart widget to pass the correct values to plotly. This enables you to draw a wide variety of charts"
+description: "A reference for the configuration of the Any Chart widget to pass the correct values to plotly. This enables you to draw a wide variety of charts"
 menu_order: 30
-tags: ["Any Chart", "Reference Guide", "Options", "Configuration", "Charts"]
+tags: ["Any Chart", "Options", "Configuration", "Charts", "studio pro"]
 ---
 
 ## 1 Introduction
 
 With **Any Chart**, you can build any chart type that is supported by Plotly.js. So if you want to build a chart which is not available as a standard chart widget, such as a 3D chart, Any Chart is your friend.
 
-The configuration of this chart type is complex. For help, you can look at the **building blocks** that are delivered in the [Any Chart module](https://appstore.home.mendix.com/link/app/106517/) from the Mendix App Store. Alternatively, use [How to Use Any Chart](/howto/extensibility/charts-any-usage) or the [Any Chart cheat sheet](charts-any-cheat-sheet) for a quick start.
+The configuration of this chart type is complex. For help, you can look at the **building blocks** that are delivered in the [Any Chart module](https://appstore.home.mendix.com/link/app/106517/) from the Mendix App Store. Alternatively, use [How to Use Any Chart](/howto/front-end/charts-any-usage) or the [Any Chart cheat sheet](charts-any-cheat-sheet) for a quick start.
 
 Any Charts are configured with a JSON **Data** array and **Layout** object. The configuration can be set statically, via the **Source attribute** and **Sample data** properties.
 
 The layout JSON, which can be created dynamically or retrieved from the database, will be merged into the static settings and will overwrite any common properties.
 
-The Sample data is for demo purposes. It is shown at run time when there is no Source attribute selected, and when rendering the chart in the modeler preview.
+The Sample data is for demo purposes. It is shown at run time when there is no Source attribute selected, and when rendering the chart in Studio Pro preview.
 
 ## 2. Location of Any Chart Widget
 
-The Any Chart Widget must be placed in the context of a **data view**. The data view contains an entity object which has a **Source attribute** (unlimited length string) which contains the JSON representation of the data which you want to plot. Unlike the basic chart widgets, the Any Chart widget does not work directly on the data in your domain model. You have to convert the data you want to plot into the JSON format which Any Chart expects. See [How to Use Any Chart](/howto/extensibility/charts-any-usage) for a step-by-step explanation of how to do this.
+The Any Chart Widget must be placed in the context of a **data view**. The data view contains an entity object which has a **Source attribute** (unlimited length string) which contains the JSON representation of the data which you want to plot. Unlike the basic chart widgets, the Any Chart widget does not work directly on the data in your domain model. You have to convert the data you want to plot into the JSON format which Any Chart expects. See [How to Use Any Chart](/howto/front-end/charts-any-usage) for a step-by-step explanation of how to do this.
 
 ## 3 Data
 
@@ -42,7 +42,7 @@ The **Source attribute** contains a JSON structure which will merge with, and ov
 
 ### Sample data
 
-The data for previewing the chart. This will be merged with the **Static data** in the modeler or at runtime when no **Source attribute** is selected.
+The data for previewing the chart. This will be merged with the **Static data** in Studio Pro or at runtime when no **Source attribute** is selected.
 
 ### Mode
 
@@ -64,7 +64,7 @@ This is an unlimited length string attribute of the entity which forms the conte
 
 ### Sample layout
 
-Layout options for preview. It will be merged with the *Static* layout in the modeler or at runtime when no *Source attribute* is selected.
+Layout options for preview. It will be merged with the *Static* layout in Studio Pro or at runtime when no *Source attribute* is selected.
 
 ## 5 Configuration options
 
@@ -190,7 +190,7 @@ To the theme folder, add a `.json` file named *com.mendix.charts*. The JSON shou
 }
 ```
 
-For guidance on how to set up chart theming see: [How to Use the Charts Theme](/howto/extensibility/charts-theme).
+For guidance on how to set up chart theming see: [How to Use the Charts Theme](/howto/front-end/charts-theme).
 
 {{% alert type="info" %}}
 

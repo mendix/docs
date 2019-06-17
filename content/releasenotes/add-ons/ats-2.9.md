@@ -3,6 +3,26 @@ title: "2.9"
 parent: "ats-2"
 ---
 
+## 2.9.5 
+
+**Release date: February 12th, 2019**
+
+### Support for Mendix 7.22.2
+
+Mendix applications that are based on [Mendix version 7.22.2](../studio-pro/7.22) can now be recorded and tested with ATS.
+
+### Improvements
+
+* We added support for [authentication widgets](/refguide7/authentication-widgets). Login pages built with authentication widgets can now be recorded and tested with ATS.
+* We added support for clicking on [static images](/refguide7/static-image-document-template). Clicks on images can now be recorded and tested with ATS.
+
+### Fixes
+
+* We fixed an issue where a click was not be recorded on some buttons in Mendix versions 7.18+.
+* In rare cases under a very high testing load, jobs got stuck in the queued status. We have added additional checks to prevent this from happening.
+* In some scenarios, the **Recordings** tab was not available in ATS. We addressed this issue by changing the way recordings are retrieved.
+* We fixed a UI issue where double-clicking on an item in an ATS repository showed a generic error message.
+
 ## 2.9.4
 
 **Release date: December 4th, 2018**

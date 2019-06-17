@@ -2,7 +2,7 @@
 title: "Event Handlers"
 parent: "entities"
 menu_order: 50
-tags: ["domain model", "entity", "event handler"]
+tags: ["domain model", "entity", "event handler", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -10,7 +10,7 @@ Event handlers define microflows that handle certain events related to the entit
 
 {{% alert type="warning" %}}
 
-Use event handlers moderately. Event handlers will be triggered each and every time the corresponding event is raised so it has to be something that you want to always happen. If you just want something to happen in a certain form you can use a local microflow there, for example on a self-made Save button.
+Use event handlers moderately. Event handlers will be triggered each and every time the corresponding event is raised so it has to be something that you want to always happen. If you just want something to happen on a certain page you can use a local microflow there, for example on a self-made Save button.
 
 {{% /alert %}}{{% alert type="warning" %}}
 
@@ -36,9 +36,9 @@ This property defines the event that triggers execution of the microflow.
 | Value | Description |
 | --- | --- |
 | Create | The microflow is executed when an object of this entity is created. This happens when a user clicks a **Create** button on a grid, or when creating an object in a microflow. In a microflow create action, an After Create is executed after the object is initialised with its default values, but before any change items specified in the action are applied. |
-| Commit | The microflow is executed when an object of this entity is committed. This happens when the user clicks a save button on a form, or when committing an object in a microflow. |
+| Commit | The microflow is executed when an object of this entity is committed. This happens when the user clicks a save button on a page, or when committing an object in a microflow. |
 | Delete | The microflow is executed when an object of this entity is deleted. This happens when a user clicks a delete button in a grid, or when deleting an object in a microflow. |
-| Rollback | The microflow is executed when an object of this entity is rolled back. This happens when a user clicks a cancel button in a form, or when rolling back an object in a microflow. |
+| Rollback | The microflow is executed when an object of this entity is rolled back. This happens when a user clicks a cancel button on a page, or when rolling back an object in a microflow. |
 
 ### Microflow
 

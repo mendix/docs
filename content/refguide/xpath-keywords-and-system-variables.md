@@ -1,6 +1,7 @@
 ---
-title: "XPath Keywords and System Variables"
+title: "XPath Keywords & System Variables"
 parent: "xpath-constraints"
+tags: ["studio pro"]
 ---
 
 ## 1 Overview
@@ -22,7 +23,7 @@ This query returns all the customers whose name is not known to the system:
 //Sales.Customer[Name = NULL]
 ```
 
-These keywords can only be used in conjunction with attributes. The existence of associations cannot be confirmed in this manner. For more information on how to constrain on associations, see [XPath Constraints](xpath-constraints).
+These keywords can only be used in conjunction with attributes. The existence of associations cannot be confirmed in this manner. For more information on how to constrain on associations, see [XPath Constraint Functions](xpath-constraint-functions).
 
 ## 3 System Variables
 

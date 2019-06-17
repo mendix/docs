@@ -1,6 +1,7 @@
 ---
 title: "Enumerations in Expressions"
 parent: "expressions"
+tags: ["studio pro"]
 ---
 
 
@@ -41,7 +42,7 @@ getCaption($NewEntity/TestEnum)
 
 ## getKey
 
-Takes an enumeration value and returns the key (called Name in the Modeler) of this value. The key is the technical name for the enumeration value and is language independent. See also [Enumeration Values](enumeration-values).
+Takes an enumeration value and returns the key (called Name in Studio Pro) of this value. The key is the technical name for the enumeration value and is language independent. See also [Enumeration Values](enumeration-values).
 
 ### Input parameters
 

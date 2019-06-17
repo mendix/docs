@@ -47,6 +47,10 @@ The ATS CI/CD API is based on the SOAP web service protocol. Currently there are
 SOAP is an ordered protocol, so all the fields must appear in the exact order as they are given here.
 {{% /alert %}}
 
+{{% alert type="warning" %}}
+SOAP is an ordered protocol, so all the fields must appear in the exact order as they are given here.
+{{% /alert %}}
+
 ### 3.1 Run Job
 
 Starts a new job based on a CI/CD template and returns the UUID of the job which can be used to query the result.

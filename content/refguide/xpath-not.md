@@ -1,11 +1,16 @@
 ---
-title: "XPath not"
+title: "XPath Not"
 parent: "xpath-constraint-functions"
+tags: ["studio pro"]
 ---
 
 ## 1 Overview
 
 The `not()` function inverts the meaning (and as such; the result) of the argument.
+
+{{% alert type="info" %}}
+This can have different results from an inverse comparison (for example `!=` as the negative of `=`) if the XPath is over a one-to-many relationship. See the examples below for more explanation.
+{{% /alert %}}
 
 ## 2 Examples
 
@@ -15,19 +20,19 @@ This query returns all customers whose names are *not* equal to "Jansen":
 //Sales.Customer[not(Name = 'Jansen')]
 ```
 
-The above query returns the same result as the following query:
+In this case, the above query returns the same result as the following query:
 
 ```java
 //Sales.Customer[Name != 'Jansen']
 ```
 
-This query returns all the customers who have not placed at least one order:
+The following query returns all the customers who have not placed at least one order:
 
 ```java
 //Sales.Customer[not(Sales.Customer_Order/Sales.Order)]
 ```
 
-This query returns all the customers who have placed *no* orders with a `TotalPrice` of *more than* 30,000, including those who have not placed any orders at all:
+The following query returns all the customers who have placed *no* orders with a `TotalPrice` of *more than* 30,000, including those who have not placed any orders at all:
 
 ```java
 //Sales.Customer[not(Sales.Customer_Order/Sales.Order/TotalPrice > 30000)]

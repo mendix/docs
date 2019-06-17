@@ -1,6 +1,7 @@
 ---
 title: "Change Object"
 parent: "object-activities"
+tags: ["studio pro"]
 ---
 
 ## 1 Introduction
@@ -31,7 +32,7 @@ Commit type defines the way the object is committed.
 | Yes without event handlers | The object is saved in the database, but the [event handlers](event-handlers) are not triggered |
 | No | The object is changed without being saved in the database |
 
-{{% alert type="success" %}}
+{{% alert type="info" %}}
 
 If a flow is triggered from a data view (for example by the 'on change' of an text field) you often do not want to commit the changes you make to the data view object yet. The end user can press the Save or Cancel button to commit or rollback the changes.
 
@@ -50,17 +51,13 @@ _Default value:_ No
 If the microflow is called from the client, the change is not reflected in the client if **Refresh in client** is set to *No*. If set to *Yes*, the object is refreshed across the client, which includes reloading the relevant [data sources](data-sources).
 
 {{% alert type="info" %}}
-
-As of 7.19.0, changed attribute values are always reflected in the client. If the object is committed, the object is refreshed from the Mendix Runtime, which includes updating virtual attributes. [Data sources](data-sources) are only reloaded if **Refresh in client** is set to *Yes*.
-
+Changed attribute values are always reflected in the client. If the object is committed, the object is refreshed from the Mendix Runtime, which includes updating virtual attributes. [Data sources](data-sources) are only reloaded if **Refresh in client** is set to *Yes*.
 {{% /alert %}}
 
 {{% alert type="warning" %}}
-
 When inside a [nanoflow](nanoflows), the Change object action does not have the **Refresh in client option** available, and the refresh behavior depends on the **Commit type** option. It always reflects the changed attribute values in the client, including [conditions](conditions).
 
 If **Commit type** is set to *Yes*, the object is refreshed across the client as if **Refresh in client** was set to *Yes*.
-
 {{% /alert %}}
 
 _Default value_: No

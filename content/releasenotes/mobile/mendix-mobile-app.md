@@ -7,10 +7,7 @@ toc-level: 1
 ---
 
 {{% alert type="info" %}}
-To download the **Mendix** mobile app, select one of the download links below:
-
-* [Download for iOS](https://itunes.apple.com/app/mendix/id458058946?mt=8)
-* [Download for Android](https://play.google.com/store/apps/details?id=com.mendix.SprintrMobile)
+For more information on the **Mendix** mobile app, see [Getting the Mendix Mobile App](/refguide/getting-the-mendix-app).
 {{% /alert %}}
 
 ## 4.7.1
@@ -67,7 +64,7 @@ To download the **Mendix** mobile app, select one of the download links below:
 
 ### Deprecations and Removals
 
-* We removed support for custom profiles (which were deprecated with Mendix [7.4](../desktop-modeler/7.4)).
+* We removed support for custom profiles (which were deprecated with Mendix [7.4](../studio-pro/7.4)).
 
 ### Known Issue
 

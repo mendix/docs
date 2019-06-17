@@ -1,6 +1,6 @@
 ---
 title: "Debug a Mobile App with Mendix"
-category: "Mobile Development"
+parent: "hybrid-mobile"
 menu_order: 40
 description: "How to set up a mobile app to run from your local machine and debug using Mendix's tools"
 tags: ["mobile", "debug", "android", "ios"]
@@ -12,7 +12,7 @@ Mendix has great tools for debugging web applications, including the offline and
 
 **This how-to will teach you how to do the following:**
 
-* Build and run a Mendix mobile app that connects to your local development machine
+* Build and run a hybrid Mendix mobile app that connects to your local development machine
 * Debug the mobile app using Mendix debugging tools, Chrome DevTools and the Safari Web Inspector
 
 ## 2 Prerequisites
@@ -25,7 +25,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 Mendix and PhoneGap <a name="MendixAndPhonegap"></a>
 
-Before we begin, it’s important to understand how Mendix Hybrid Mobile apps work, and the relationship between the Mendix application and the PhoneGap service. [Adobe PhoneGap](https://phonegap.com/) provides a way for users to create mobile applications using web technologies, like Mendix. PhoneGap (PG) essentially creates a wrapper for a Mendix application that is recognized and treated like a native application by mobile platforms. All your application’s logic, appearance, and functionality are controlled by Mendix. PhoneGap then, in a way, *translates* these aspects of your application into a language that can be understood by Android and iOS. That being said, there are some facets of your application’s configuration that need to be configured in the PhoneGap application and not in Mendix. We’ll return to this a little later.
+Before we begin, it’s important to understand how hybrid Mendix mobile apps work, and the relationship between the Mendix application and the PhoneGap service. [Adobe PhoneGap](https://phonegap.com/) provides a way for users to create mobile applications using web technologies, like Mendix. PhoneGap (PG) essentially creates a wrapper for a Mendix application that is recognized and treated like a native application by mobile platforms. All your application’s logic, appearance, and functionality are controlled by Mendix. PhoneGap then, in a way, *translates* these aspects of your application into a language that can be understood by Android and iOS. That being said, there are some facets of your application’s configuration that need to be configured in the PhoneGap application and not in Mendix. We’ll return to this a little later.
 
 The basic function of the PhoneGap app is to ensure that all the necessary libraries (called PhoneGap Plugins) are loaded and available to the application, and then initialize the Mendix application from a target URL. As soon as the Mendix app has been initialized, the app’s Mendix logic then takes over. There are a couple of benefits that we, as Mendix developers, gain from the fact that the PhoneGap app initializes based on a URL: One, changes that we make to the application logic do not require a full rebuild of both the Mendix app and the PhoneGap app (just the Mendix one); and two, that we can instruct the PhoneGap app to initialize based on an IP address (rather than the production URL) and debug a mobile application running locally on our laptop, in order to further increase the speed of our iterations.
 
@@ -35,7 +35,7 @@ This is perhaps the easiest combination of mobile target platform and developmen
 
 ### 4.1 macOS Configuration
 
-Since the Mendix Modeler only runs on Mendix, we need to make sure that your virtual (windows) machine can be accessed by the outsideworld. To do that, the network setting much be shared between the virtual machine and your Mac, and the appropriate ports forwarded. Follow these steps to configure your development environment with Parallels:
+Since Mendix Studio Pro only runs on Mendix, we need to make sure that your virtual (windows) machine can be accessed by the outsideworld. To do that, the network setting much be shared between the virtual machine and your Mac, and the appropriate ports forwarded. Follow these steps to configure your development environment with Parallels:
 
 1. Open the Parallels **Configure** dialog.
 

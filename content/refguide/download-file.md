@@ -1,6 +1,7 @@
 ---
 title: "Download File"
 parent: "client-activities"
+tags: ["studio pro"]
 ---
 
 {{% alert type="info" %}}

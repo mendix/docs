@@ -1,9 +1,10 @@
 ---
 title: "2.10"
-parent: "2"
+parent: "ats-2"
 ---
 
 ## 2.10
+
 
 **Release date: May 18th 2019**
 
@@ -12,6 +13,7 @@ parent: "2"
 The option to receive alerts when a scheduled test is done is a feature that received a lot of requests. Starting with this release, you can opt in to receive emails for schedules either always or only when they do not pass. The emails include the result of the scheduled run; flags (if present); a breakdown of the number of passed, not-executed, and failed test cases; and additional information. You can individually choose per app if you want to receive these alerts or not.
 
 For more details, see [Schedules](/ats/refguide/rg-version-2/schedule) in the *ATS 2 Reference Guide*.
+
 
 ### Better Integration with Browserstack
 
@@ -34,6 +36,7 @@ These are the new features on the ATS side:
 ![Browserstack-ATS integration](/ats/refguide/rg-version-2/attachments/results/lookup.gif)
 
 This table compares the nomenclature:
+
 
 | ATS              | Browserstack |
 | ---              | ---          |

@@ -1,6 +1,7 @@
 ---
 title: "Error Event"
 parent: "events"
+tags: ["studio pro"]
 ---
 
 {{% alert type="info" %}}
@@ -11,7 +12,7 @@ An error event defines a location where the microflow will stop and throw an err
 
 {{% alert type="warning" %}}
 
-You can only use an Error Event if an error is in scope: the Modeler does not accept it if you connect the normal execution flow to an error event, because there would not be an error to rethrow.
+You can only use an Error Event if an error is in scope: Studio Pro does not accept it if you connect the normal execution flow to an error event, because there would not be an error to rethrow.
 
 {{% /alert %}}{{% alert type="info" %}}
 

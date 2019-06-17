@@ -117,6 +117,11 @@
                 background-image: url('/public/images/card/Learn.svg');
             }
         }
+        @include modifier('qualityassurance') {
+            @include element('background', $cardroot) {
+                background-image: url('/public/images/card/QualityAssurance.svg');
+            }
+        }
         @include modifier('sap') {
             @include element('background', $cardroot) {
                 background-image: url('/public/images/card/Sap.png');
@@ -209,6 +214,11 @@
 
         @include modifier('learning') {
             background-image: url('/public/images/card/Learn.svg');
+            background-position: 0px 8px;
+        }
+
+        @include modifier('qualityassurance') {
+            background-image: url('/public/images/card/QualityAssurance.svg');
             background-position: 0px 8px;
         }
 

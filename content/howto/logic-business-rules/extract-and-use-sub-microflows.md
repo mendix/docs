@@ -1,5 +1,5 @@
 ---
-title: "Extract and Use Sub-Microflows"
+title: "Extract & Use Sub-Microflows"
 category: "Logic & Business Rules"
 menu_order: 5
 tags: ["microflow", "sub-microflow", "extract"]
@@ -68,6 +68,10 @@ To create a sub-microflow for the validation steps, follow these steps:
 
 The new sub-microflow will do the registration validation. You can reuse this sub-microflow whenever you need to do a registration validation. 
 
+{{% alert type="info" %}}
+Because this sub-microflow does not return anything, the sub-microflow call cannot be used in the **Is Valid?** check that immediately follows it. To stop or continue your microflow based on the sub-microflow's outcome, right-click the **Create Boolean Variable** activity and select **Set $isValid as return value**.
+{{% /alert %}}
+
 ## 4 Troubleshooting Extractions of Sub-Microflows
 
 If you get errors, this usually means you have not provided the right input or output parameters. Check your parameters and make sure that they are configured properly. 
@@ -80,12 +84,12 @@ The extra sub-microflow option is based on the Mendix reusability principle. You
 
 ## 6 Read More
 
-* [How to Define Access Rules Using XPath](define-access-rules-using-xpath)
-* [How to Trigger Logic Using Microflows](triggering-logic-using-microflows)
-* [How to Create a Custom Save Button](create-a-custom-save-button)
-* [How to Extend Your Application with Custom Java](extending-your-application-with-custom-java)
-* [How to Work with Lists in a Microflow](working-with-lists-in-a-microflow)
-* [How to Optimize Retrieve Activities](optimizing-retrieve-activities)
-* [How to Set Up Error Handling](set-up-error-handling)
-* [How to Optimize Microflow Aggregates](optimizing-microflow-aggregates)
+* [Define Access Rules Using XPath](define-access-rules-using-xpath)
+* [Trigger Logic Using Microflows](triggering-logic-using-microflows)
+* [Create a Custom Save Button](create-a-custom-save-button)
+* [Extend Your Application with Custom Java](extending-your-application-with-custom-java)
+* [Work with Lists in a Microflow](working-with-lists-in-a-microflow)
+* [Optimize Retrieve Activities](optimizing-retrieve-activities)
+* [Set Up Error Handling](set-up-error-handling)
+* [Optimize Microflow Aggregates](optimizing-microflow-aggregates)
 * [Microflows](/refguide/microflows)

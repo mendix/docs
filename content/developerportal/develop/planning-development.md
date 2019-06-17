@@ -16,9 +16,9 @@ This page has three tabs, which are described below.
 
 ## 2 Sprint Status
 
-On this tab, there is a Kanban overview of the [stories](../collaborate/stories) in the current sprint. 
+On this tab, there is a Kanban overview of the [stories](../collaborate/stories) in the current Sprint. 
 
-There is also a percentage bar of the stories that are done and the deadline date of the current sprint:
+There is also a percentage bar of the stories that are done and the deadline date of the current Sprint:
 
 ![](attachments/sprint-status.jpg)
 
@@ -32,9 +32,9 @@ All the changes made on this page are directly passed on to the **Stories** page
 
 ## 3 Burndown Chart
 
-This tab graphically presents the progress of the current sprint:
+This tab graphically presents the progress of the current Sprint:
 
-* **Ideal Burndown** – the expected progress if the sprint is completed at a consistent rate
+* **Ideal Burndown** – the expected progress if the Sprint is completed at a consistent rate
 * **Remaining Effort** – the amount of story points that still have to be completed
 * **New Stories** – the amount of new story points added on a specific day
 
@@ -46,7 +46,7 @@ Under **Sprint History**, you can view burndown charts for completed sprints.
 
 Under this tab, you will get an overview of all the springs.
 
-Click **Edit** to make changes in a specific sprint or release (for example, to change the name, date, or duration of the sprint).
+Click **Edit** to make changes in a specific Sprint or release (for example, to change the name, date, or duration of the Sprint).
 
 Click **Plan Something** to plan a **Sprint**, **Release**, or **Other**.
 
@@ -58,5 +58,5 @@ All the changes made on this page are directly passed on to the **Stories** page
 
 ## 5 Read More
 
-* [Modeling Environments](modeling-environments)
+* [App Modeling Environments](modeling-environments)
 * [Team Server Overview](team-server)

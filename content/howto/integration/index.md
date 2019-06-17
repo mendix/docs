@@ -1,5 +1,6 @@
 ---
 title: "Integration"
+tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -24,7 +25,9 @@ We want to create a large network of Mendix apps, so let's start integrating!
 * [Version a REST Service](version-rest-service)
 * [Expose a Web Service](expose-a-web-service)
 * [Expose Data to BI Tools Using OData](exposing-data-to-bi-tools-using-odata)
-* [Publish Data to Other Mendix Apps Using an App Service](publish-data-to-other-mendix-apps-using-an-app-service)
+* [Publish Data to Other Mendix Apps Using an App Service (Deprecated)](publish-data-to-other-mendix-apps-using-an-app-service)
 * [Synchronize User Accounts Using the LDAP Module](synchronizing-user-accounts-using-the-ldap-module)
 * [Configure Selenium Support](selenium-support)
 * [Execute an SQL Statement on an External Database](execute-an-sql-statement-on-an-external-database)
+* [Access a Samba Share from the MxCloud](access-a-samba-share-from-the-mxcloud)
+* [Install & Configure the SMTP Email Module](install-and-configure-the-smtp-module)

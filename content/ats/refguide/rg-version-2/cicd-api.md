@@ -41,9 +41,11 @@ For supported Selenium hubs, like Browserstack, further options are available. F
 
 ## 3 API
 
-The ATS CI/CD API is based on the SOAP webservice protocol. Currently there are three services available, **Run Job**, **Get Job Status** and **RerunNotPassed**. The following sections show the structures of the request-and-response messages of these services.
+The ATS CI/CD API is based on the SOAP web service protocol. Currently there are three services available: **Run Job**, **Get Job Status**, and **RerunNotPassed**. The following sections show the structures of the request-and-response messages of these services.
 
-**IMPORTANT:** SOAP is an ordered protocol so all fields must appear in the exact order as they are given here.
+{{% alert type="info" %}}
+SOAP is an ordered protocol, so all the fields must appear in the exact order as they are given here.
+{{% /alert %}}
 
 ### 3.1 Run Job
 
@@ -89,7 +91,7 @@ You must include the following information in the request:
 </soap:Envelope>
 ```
 
-#### 3.1.3 Response
+#### 3.1.3 Response {#response}
 
 The following table shows the data contained in the response of the Run Job service:
 
@@ -134,11 +136,11 @@ You must include the following information in the request:
 | AppAPIToken | The key for the CI/CD API. Generated on the **App Settings** page. |
 | JobID | The unique ID of the job returned by the Run Job service. |
 | AppID | The ID of your Mendix app. |
-| IncludeExecutionFlags¹| Whether to include execution flags (canceled, warning) in the response. |
-| IncludeExecutionResultBreakdown¹ | Whether to include the number of passed/failed/not executed test cases in the response. |
-| IncludeDetailsPerTestCase¹ | Whether to include details (e.g. name, result, duration) for each test case that was executed in the response. |
+| IncludeExecutionFlags¹| Indicates whether to include execution flags (canceled, warning) in the response. |
+| IncludeExecutionResultBreakdown¹ | Indicates whether to include the number of passed/failed/not executed test cases in the response. |
+| IncludeDetailsPerTestCase¹ | Indicates whether to include details (for example, name, result, duration) for each test case that was executed in the response. |
 
-¹ Optional, if left out defaults to `false`
+¹ Optional. If left out, defaults to `false`.
 
 ##### 3.2.2.1 Example
 
@@ -225,8 +227,8 @@ The following table shows the data contained in the response of the **Get Job St
 | ErrorMessage | Contains the error message if the test failed to start. Empty if the test started succesfully. |
 | ExecutionResult | Result of the execution: **Passed** or **Failed**. |
 | ExecutionFlags¹ | Status of the canceled and warning flags for the job. |
-| ExecutionResultBreakdown¹ | Number of test cases in this job that passed/failed/were not executed. |
-| ExecutionDetailsPerTestCase¹ | Name, result (**Passed**,**Failed**,**Not_Executed**), duration and error message² for each executed test case. |
+| ExecutionResultBreakdown¹ | Number of test cases in this job that passed, failed, and were not executed. |
+| ExecutionDetailsPerTestCase¹ | Name, result (**Passed**,**Failed**,**Not_Executed**), duration, and error message² for each executed test case. |
 
 ¹ Optional, only returned if the corresponding **Include** statement was set to true in the request.  
 ² Error messages are only included for not passed testcases where a simple and short error message can be generated.  
@@ -251,7 +253,7 @@ Basic example, only returns the status and result (and error message if there is
 
 ##### 3.2.3.2 Example
 
-Example which also returns the number of passed/failed/not executed test cases:
+Example which also returns the number of passed, failed, and not-executed test cases:
 
 ```xml
 <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tns="http://www.mendix.com/">
@@ -311,9 +313,9 @@ Example which returns the status of the execution flags and details for each tes
 </soap:Envelope>
 ```
 
-### 3.3 Rerun not passed
+### 3.3 Rerun Not Passed
 
-Reruns all failed or not executed test cases for a finished job. Returns the UUID of the new job which can be used to query the result.
+Reruns all the failed or not-executed test cases for a finished job. Returns the UUID of the new job which can be used to query the result.
 
 #### 3.3.1 URL
 
@@ -333,7 +335,7 @@ You must include the following information in the request:
 | AppID | The ID of your Mendix app. |
 | FinishedJobID | The unique UUID of a finished job that was started with **Run Job**. |
 
-##### 3.1.2.1 Example
+##### 3.3.2.1 Example
 
 ```xml
 <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tns="http://www.mendix.com/">
@@ -357,4 +359,4 @@ You must include the following information in the request:
 
 #### 3.3.3 Response
 
-The response for **Rerun Not Passed** is identical with the response for **Run Job** in section [3.1.3](#3.1.3-Response)
+The response for **Rerun Not Passed** is identical with the response for **Run Job** in the [3.1.3 Response](#response) section above.

@@ -59,7 +59,7 @@ IoT integration is starting an expected explosion of new IT that will be built a
 
 The key to event streams is that they only flow in one direction. A device leaving metrics in an IoT system does not expect an immediate answer to the data it ships. Additionally, there could be many devices that are geographically distributed and shipping a lot of data. Request-reply is neither necessary nor practical for inbound IoT. Queues or Kafka are recommended for one-way communication (for example, the Azure IoT Hub is a service layer on top of MQTT queues).
 
-### 4.2 Examples for IoT with Mendix
+### 4.2 Examples for IoT with Mendix {#iot-examples}
 
 Mendix often works as a dashboard for event streams and sometimes as the control center for devices and other connected items. Note that for commanding a drone or another device, the interface back to the device is sometimes synchronous. This diagram gives a schematic view of a potential Mendix integration where one app provides a dashboard and the other one is used to control a robot:
 

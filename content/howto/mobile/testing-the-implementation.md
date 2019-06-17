@@ -47,3 +47,8 @@ Follow these steps to test and send a push notification to a device:
 5. Fill in the title and the message in the form and press **Send**. Your device should receive a new push notification. If your hybrid mobile app is currently running in the foreground, the notification will be displayed in the app. Otherwise, it will be shown as a standard push notification.
 
 If you saw the notification, congratulations! By following this document, you have successfully tested push notifications on your device.
+
+## 5 Read More
+
+* [Publish a Mendix Hybrid Mobile App in Mobile App Stores](publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)
+* [Debug a Mobile App with Mendix](debug-a-mobile-app)

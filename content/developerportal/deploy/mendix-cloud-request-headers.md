@@ -8,7 +8,7 @@ tags: ["Deploy", "Mendix Cloud", "headers", "HTTP Request Headers", "X-Real-IP",
 
 ## 1 Introduction
 
-All applications running in the Mendix Cloud are accessed using the HTTPS protocol. Using this protocol, a lot of individual requests are sent to the application. Examples of these requests are "execute this XPath request", "execute this Microflow", or "please provide the layout of this page".
+All applications running in the Mendix Cloud are accessed using the HTTPS protocol. Using this protocol, a lot of individual requests are sent to the application. Examples of these requests are "execute this XPath query", "execute this Microflow", or "please provide the layout of this page".
 
 ## 2 HTTP Request Headers
 
@@ -37,6 +37,8 @@ The following headers are set by the Mendix Cloud. If any of these are present i
 | **SSL-Protocol**                            | `TLSv1.3`, `TLSv1.2`, `TLSv1.1`, `TLSv1`                     | The TLS encryption protocol used for the HTTPS connection. |
 | **SSL-Cipher**                              | `ECDHE-RSA-AES256-GCM-SHA384`                                | The TLS ciphers used for the HTTPS connection. |
 | **SSL-Client-S-DN**                         | `CN=Hans van Kranenburg,OU=RnD,O=Mendix,C=NL`                | The Subject DN string of the client certificate for an established TLS connection according to [RFC 2253](https://tools.ietf.org/html/rfc2253). |
+
+There may be additional headers set by the Mendix Cloud, which are not documented in the list above. The presence of these headers, and the values they have, must not be relied on. They are for internal use only and are not subject to the deprecation handling described below.
 
 ### 2.3 Deprecated request headers inserted by the Mendix Cloud
 

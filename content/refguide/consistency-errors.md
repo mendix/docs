@@ -13,8 +13,8 @@ To make sure that your app is always consistent and properly built, Studio Pro d
 
 Errors need to be solved before your app can be published. A consistency error can occur in the following editors or functionalities of Studio Pro:
 
-* Pages 
-* Navigation 
+* [Pages](consistency-errors-pages) 
+* [Navigation](consistency-errors-navigation) 
 * Microflows
 * Domain Models
 * Integration

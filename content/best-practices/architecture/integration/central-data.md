@@ -7,7 +7,7 @@ draft: true
 
 ## 1 Introduction
 
-The central data pattern is an integration pattern that stores a combined set of data in order to redistribute it to other systems. It has an API, some logic, a database, and some UX for configuration and error management. This pattern involves a system or a Mendix app who purpose is to facilitate integration solutions that are hard to do as services, events, or files.
+The central data pattern is an integration pattern that stores a combined set of data in order to redistribute it to other systems. It has an API, some logic, a database, and some UX for configuration and error management. This pattern involves a system or a Mendix app whose purpose is to facilitate integration solutions that are hard to do as services, events, or files.
 
 Data warehouses (DWH) and data lakes provide an enterprise-scale version this pattern. But even when there is a central DWH, the central data pattern is still useful for small, local, or departmental integration needs. When microservices replace a large monolith, there is often a good reason to have both a dashboard app for login as well as a shared data app (for details, see the [Typical Central Data Patterns](#tcdp) section below).
 
@@ -27,7 +27,7 @@ With a [shared data app](#sda), you can typically do the following:
 * View combined data using real-time services
 * Poll for combined updates (rather than polling many systems)
 * Receive files or batches (for example, of the day’s updates)
-* Process the data and streaming a new combination of data on to the next queue or Kafka
+* Process the data and stream a new combination of data on to the next queue or Kafka
 * Enable business intelligence and statistics
 * Report on all kinds of data (for example, financial, business, and operational)
 
@@ -40,22 +40,23 @@ A small local app could be used to collect orders or tickets from a number of sy
 These are a few of the main ways the central data pattern is used:
 
 * **Shared data app (SDA)** – An SDA solution combines data from different processes and is used in operational processes. It is a combination of an operational data store (ODS) and integration app. It usually combines shared data within a microservices system or department, or it may collect the same type of data from several departments.
-	* For more information, see the [Shared Data App (SDA)](#sda) section below
+	* For more information, see the [Shared Data App (SDA)](#sda) section below.
 * **DWH & data lakes** – A DWH is used for combining all types of data from the entire organization and providing data for statistics, reporting, and business intelligence (BI). Data lakes are an evolution of DWH solutions to use Hadoop-style solutions and provide statistical data to operational systems in order to support self-learning, AI, and the tuning of automated processes.
-	* For details, see the [Self-Learning Processes Using Data Lakes](#data-lakes) section below
-* **BI solutions** – BI solutions collect data to provide insight into processes and trends. They can collect bulk data from DWH and data lake solutions, while refining it in real-time with information from Operational apps and systems
-	* For more information, see the [Integration to DWH & BI](batch-integration#int) section of *Batch Integration*
-* **Extract-transform-load (ETL)** – ETL is usually used for integration towards DWH solutions or for data transition tasks during the go-live of bnew large solutions. ETL solutions are professional integration frameworks, doing the "integration app" part of the SDA solution at an enterprise level. They compare new data with previous loads, and they are beneficial for very large data volumes and large files. For more information, see the [Integration to DWH & BI](batch-integration#int) section of *Batch Integration*
+	* For details, see the [Self-Learning Processes Using Data Lakes](#data-lakes) section below.
+* **BI solutions** – BI solutions collect data to provide insight into processes and trends. They can collect bulk data from DWH and data lake solutions, while refining it in real-time with information from Operational apps and systems.
+	* For more information, see the [Integration to DWH & BI](batch-integration#int) section of *Batch Integration*.
+* **Extract-transform-load (ETL)** – ETL is usually used for integration towards DWH solutions or for data transition tasks during the go-live of bnew large solutions. ETL solutions are professional integration frameworks, doing the "integration app" part of the SDA solution at an enterprise level. They compare new data with previous loads, and they are beneficial for very large data volumes and large files.
+	* For more information, see the [Integration to DWH & BI](batch-integration#int) section of *Batch Integration*.
 
 ## 2 Shared Data App (SDA) {#sda}
 
-The sections below explain the most important considerations for using an SDAs.
+The sections below explain the most important considerations for using an SDA.
 
-### 2.1 When to Consider SDAs
+### 2.1 When to Consider an SDA
 
-SDAs can be very useful on the following levels:
+An SDA can be very useful on the following levels:
 
-* **Functional Area level** – for combining that same type of data (for example, orders from different departments)
+* **Functional area level** – for combining that same type of data (for example, orders from different departments)
 * **Microservice system level** – for supporting 3–10 apps that form a system
 * **Departmental level** – for supporting important and shared data within a deparment.
 * **Referenca data management** – for more information, see [Batch Integration](batch-integration)
@@ -81,7 +82,7 @@ A Mendix SDA solution will be part of the microservices landscape, where you bre
 
 Mendix SDAs will not replace an enterprise DWH, compete with Kafka for massive event streams, or compete with ETL for managing massive data files and data transitions. Mendix SDAs will only provide a local flexible option that can actually make DWH and ETL solutions simpler (for example, by collecting data from a functional area before sending it on to enterprise-level aggregation).
 
-For many microservices systems, there is little need to work on a combined data set, or the functional area is very small. In such cases, typically the dashboard app takes responsibility for the reference data import for the cluster, and no SDA is required.
+For many microservices systems, there is little need to work on a combined dataset or the functional area is very small. In such cases, the dashboard app typically takes responsibility for the reference data import for the cluster, and no SDA is required.
 
 If a business app already has 90% of some combined information, it  makes sense to add the missing 10% and make it act as the SDA, instead of creating another app and copying a lot of data.
 
@@ -108,9 +109,9 @@ In this scenario, the decision was made to specialize a microservice for the fol
 * Collecting all relevant orders 
 * Providing good views and searches on the total set of orders for various purposes
 
-With this design, you avoid the **Customer Portal**, as the **CRM** and **Support Desk** apps have to integrate with the ordering systems of many different business lines. This is not suitable for ETL or DWH, because you want it to be real-time and flexible with a specific functional scope. It is also not suitable for an ESB, because you are storing data long-term, and you are combining data objects in a relational format in the domain model.
+With this design, you avoid the **Customer Portal**, as the **CRM** and **Support Desk** apps have to integrate with the ordering systems of many different business lines. This is not suitable for ETL or DWH, because you want it to be real-time and flexible with a specific functional scope. It is also not suitable for an enterprise service bus (ESB), because you are storing data long-term, and you are combining data objects in a relational format in the domain model.
 
-### 2.5 Example - Microservices SDA {#example-sda-micro}
+### 2.5 Example – Microservices SDA {#example-sda-micro}
 
 This diagram shows a microservices SDA, in this case for a master data management system built using Mendix:
 
@@ -120,11 +121,11 @@ Starting from the top-left corner, you allow the driver end-users to view the **
 
 At the core of the microservices system, there are people working on updating and managing the address and route information. Most of the time short workflows are used, and for every save in the master data apps, the data is pushed to the SDA to keep it up-to-date. When certain workflows are longer (for example, planning a new area), the new data is only submitted to the SDA at the very end of the workflow. This could also be a pull action, but REST push was selected to make sure the SDA is always 100% up-to-date. This also means that the SDA has to be up-and-running for work to be submitted.
 
-The SDA also imports other Reference data from SAP and other sources, comparing with the old data, it sets a flag on all records that changed and allows the other apps to swiftly get those changes via REST pull services. There is also a Business administrator UI on the SDA to manage these flows and any errors that may occur, also manually managing some internal reference data when required.
+The SDA also imports other reference data from SAP and other sources. After comparing with the old data, it sets a flag on all the records that changed, and it allows the other apps to swiftly get those changes via REST pull services. There is also a Business Administrator UI on the SDA to manage these flows and any errors that may occur, also manually managing some internal reference data when required.
 
-In turn, reference data flows up from the SDA to the other apps, while master data only flows down toward the SDA. Data flows of the same data type going in two directions area avoided, because those can lead to conflicts.
+In turn, reference data flows up from the SDA to the other apps, while master data only flows down toward the SDA. Data flows of the same data type going in two directions are avoided, because those can lead to conflicts.
 
-For all the external systems to access the data, the SDA is the only access point. This off-loads the MDM apps from the external load. It also ensures that the team owning this cluster also owns how the data from **Address** and **Routes** is combined as well as how it is accessed, providing a unified view of the data across the enterprise.
+For all the external systems to access the data, the SDA is the only access point. This offloads the MDM apps from the external load. This also ensures that the team owning this cluster also owns how the data from **Address** and **Routes** is combined as well as how it is accessed. This provides a unified view of the data across the enterprise.
 
 ### 2.6 Departmental SDAs
 
@@ -140,7 +141,7 @@ This diagram presents a schematic view of how departmental portals or SDAs can h
 
 ![](attachments/central-data/cd-5.png)
 
-### 2.3 What Does an SDA Store?
+### 2.7 What Does an SDA Store?
 
 The SDA can typically store the following:
 
@@ -152,11 +153,11 @@ The relational data can be stored both in a normalized form as well as in a "fla
 
 SDAs can also support a "local" event stream from updates in the microservices system or updates from a set of ordering systems. These can be treated as business events or transactions, and they are often stored in an [internal process queue](event-integration#internal-queues).
 
-This diagram below gives a schematic view of how this can take place, using the example above with **Address** and **Routes** apps as master data management apps that are pushing changes down to the SDA:
+This diagram gives a schematic view of how this can take place, using the example above with **Address** and **Routes** as master data management apps that are pushing changes down to the SDA:
 
 ![](attachments/central-data/cd-6.png)
 
-The SDA receives business events into one single internal process queue, in order to process them in the same order as they happened. A scheduled process event takes the next event and transforms it into the data model of the SDA, which is very similar to the data model of the **Address** and **Routes** apps, thus minimizing functional errors in this step. Should a functional error still occur, a human workflow is required to solve the issue. This typically only happens at a new release when testing has been insufficient.
+The SDA receives business events into one single internal process queue, in order to process them in the same order as they happened. A scheduled process event takes the next event and transforms it into the data model of the SDA, which is very similar to the data model of the **Address** and **Routes** apps. This helps to minimize the functional errors in this step. If a functional error still occurs, a human workflow will be required to solve the issue. This typically only happens at a new release when testing has been insufficient.
 
 Next, the SDA flag is set, and the other systems that subscribe to the same events can start retrieving them from the same queue. When all the subscribers have noted success, the successfully processed messages are moved to a transaction history queue. If transformation is required in the SDA, an additional outbound queue is created for each different event stream.
 
@@ -191,6 +192,6 @@ If different business use cases are difficult to combine using one component, it
 
 Data lakes and DWH solutions are large, enterprise-wide, generic, incredibly complex, and quite far from the people that work in the business. This set of attributes makes them inefficient for use in operational processes. The data flows through the system slowly, and it is often enough to update every month in a report. All the business units share the DWH, so changing things takes time. A DWH is in a way a "necessary" monolith.
 
-## 5 Summary
+## 4 Summary
 
 Mendix will not replace the need for DWH solutions, ETL, or high-volume data-streaming platforms. However, in a flexible microservices architecture landscape, there is often a benefit to creating small and local SDAs. This makes integration easier by removing Excel and shadow IT, and by providing an easier, more flexible overall solution to various business problems.

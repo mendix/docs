@@ -91,50 +91,23 @@ To create an automated test by using the record button in Selenium IDE, follow t
 
 Well done! You have just created your first automated test!
 
-## 5 Read More
+## 5  Locating  the Element Using Developer Tools (Second Automated Test)
 
-* [Automated Tests with TestNG](create-automated-tests-with-testng)
-* [Test Microflows Using the UnitTesting Module](testing-microflows-using-the-unittesting-module)
-* [Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
-* [Clear Warning Messages in Mendix](../monitoring-troubleshooting/clear-warning-messages)
-* [Test Web Services Using SoapUI](testing-web-services-using-soapui)
-* [Monitor Mendix Using JMX](../monitoring-troubleshooting/monitoring-mendix-using-jmx)
+Selenium IDE can be used to record tests scripts, but these scripts sometimes need to be edited before you can run them regularly (because, for example, HTML tag IDs are generated dynamically and will be different with each run of the same page).
 
-Learn more about this topic using the following helpful link:
+When necessary, you will need to find the right locators in order to tell Selenium IDE the GUI elements (for example, buttons, text boxes, and data grids) on which it needs to operate. To make it easier to create a locator for Mendix elements, `mx-name` is added to the class of an element. When the position of an element in a document changes, there is thus no need to rewrite the script.
 
-* [Selenium IDE Documentation](http://docs.seleniumhq.org/docs/02_selenium_ide.jsp)
+In this example scenario, you are running a test that fails on the target `id=mxui_widget_NumberInput_1_input`:
 
-# OLD
+![](attachments/selenium/18580299.png)
+	
+The element with this target does not exist on the page for Selenium IDE, because the number in the ID is not always the same. You need to find another target selector for the same element that Selenium IDE will pick up. Mendix uses CSS classes to identify page content like widgets and pop-up windows, so you can use these classes in Selenium IDE to manipulate pages and verify data. 
 
--create test to get to a failing element
+A widget can be given a name in Mendix Studio Pro, and this name will appear in the HTML document as a class name prefixed by `mx-name-`. For instance, a grid named `EmployeeGrid` will get a CSS class `mx-name-EmployeeGrid`. This is true for all Mendix widgets.
 
-## Locating  the Element Using Developer Tools (Second Automated Test)
+In this scenario, you need to open the page in Studio Pro that corresponds to the element on which Selenium IDE test failed:
 
-Selenium IDE can be used to record tests scripts, but these scripts usually need to be edited before you can use them (for example, HTML tag IDs are generated dynamically and will be different with each run of the same page). 
 
-You need to find the right locator, which will tell Selenium IDE the GUI elements (for example, buttons, text boxes, and data grids) on which it needs to operate. To make it easier to create a locator for Mendix elements, `mx-name` is added to the class of an element. When the position of an element in the form changes, there is no need to rewrite the script.
-
-1. In the Selenium IDE, click the plus symbol next to **Tests** to create a new test, and enter a name for the test.
-2. Click the record icon.
-3. Open `http://localhost:8080/login.html` in your browser and log in with the same default administrator credentials you used above.
-4. Once you are logged in, click the **Expenses** tab.
-6. Click **New Expense**.
-7. Enter *1* in the **Amount** field.
-8.  Select **Accomodation** in the **Description** box:
-
-	![](attachments/selenium/new-expense.png)
-
-9. Click **Save**.
-10. Click **Sign out**.
-11. In the Selenium IDE, click the record icon to stop recording: 
-12. click the **Run current test** icon. The test will fail because it can not find the element with the target `id=mxui_widget_NumberInput_1_input`.
-
-	![](attachments/selenium/18580299.png)
-
-	The element with the target `id=mxui_widget_NumberInput_1_input` does not exist on the page. The number in the ID is not always the same. You need to find another target selector for the same element.
-
-13. Repeat steps 3 through 6.
-14. Find a unique selector for the **Amount** field. Mendix uses CSS classes to identify page content like widgets and pop-up windows. You can use these classes in Selenium to manipulate pages and verify data. Widgets can be given a name in Mendix Studio Pro. These names appear in the HTML document as class names prefixed by `mx-name-`. For instance, a grid named `EmployeeGrid` will get a CSS class `mx-name-EmployeeGrid`. This is true for all widgets.
 15. Open the **Desktop_Expense_NewEdit_Admin** page in Studio Pro:
 
 	![](attachments/selenium/18580285.png)
@@ -170,3 +143,15 @@ Congratulations! You have just created your second automated test.
 Some widgets, like a grid or a list view, can show multiple items. Every item has the CSS class `mx-name-index-[indexNumber].` The index number starts at 0.
 {{% /alert %}}
 
+## 6 Read More
+
+* [Automated Tests with TestNG](create-automated-tests-with-testng)
+* [Test Microflows Using the UnitTesting Module](testing-microflows-using-the-unittesting-module)
+* [Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
+* [Clear Warning Messages in Mendix](../monitoring-troubleshooting/clear-warning-messages)
+* [Test Web Services Using SoapUI](testing-web-services-using-soapui)
+* [Monitor Mendix Using JMX](../monitoring-troubleshooting/monitoring-mendix-using-jmx)
+
+Learn more about this topic using the following helpful link:
+
+* [Selenium IDE Documentation](http://docs.seleniumhq.org/docs/02_selenium_ide.jsp)

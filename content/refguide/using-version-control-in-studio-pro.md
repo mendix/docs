@@ -63,7 +63,7 @@ The project explorer shows an icon in front of items (documents, folders, and mo
 | ![](attachments/using-version-control-in-studio-pro/688175.png) | You added this item. |
 | ![](attachments/using-version-control-in-studio-pro/688174.png) | You moved this item to another position in the project tree. |
 | ![](attachments/using-version-control-in-studio-pro/688164.png) | You deleted this item. |
-| ![](attachments/using-version-control-in-studio-pro/688165.png) | This item is conflicted. See [Dealing With Conflicts](#conflicts) for more information. |
+| ![](attachments/using-version-control-in-studio-pro/688165.png) | You and somebody else made conflicting changes to this item. For more information, see the [Dealing With Conflicts](#conflicts) section below. |
 
 {{% alert type="info" %}}
 There is only room for one icon and if a document is both modified and moved it is shown as modified.
@@ -151,7 +151,7 @@ You can revert changes in the **Changes** dock, or from the right-click menu on 
 
 ![Two ways of reverting](attachments/using-version-control-in-studio-pro/revertx2.png)
 
-## 6 Dealing With Conflicts{#conflicts}
+## 6 Dealing With Conflicts {#conflicts}
 
 If you update your app and the changes cannot be merged automatically you will receive a message telling you there are conflicts. A conflict arises when two changes cannot be combined.
 
@@ -326,7 +326,7 @@ Studio Pro takes care of some file management automatically. If you add or remov
 
 We advise you to always commit and update inside Studio Pro because in this way useful metadata is added to your revisions. Studio Pro has ways to recover from external updates or merges but it is best to not depend on that.
 
-### 9.1 TortoiseSVN & Subclipse{#tortoisesvn-subclipse}
+### 9.1 TortoiseSVN & Subclipse {#tortoisesvn-subclipse}
 
 If you are doing more advanced changes to files, like adding Java actions or resources to your project, you will have to install TortoiseSVN on your computer and perform some operations yourself. You can download it for free at [https://tortoisesvn.net/](https://tortoisesvn.net/).
 

@@ -5,7 +5,7 @@ menu_order: 4
 draft: true
 ---
 
-## 1 Export, Import & Batch Processing
+## 1 Introduction
 
 More and more processes are becoming real-time, but a lot of business processes are still periodic in nature (for example, salary payments and interest calculations). These use cases are best implemented in batch-oriented integration, which runs a sets of data at certain moments. 
 

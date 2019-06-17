@@ -9,7 +9,7 @@ tags: ["studio pro"]
 
 An enumeration defines a list of predefined values. Enumerations are used for the enumeration attribute type. For example, the status of an order can be *Open*, *Closed*, or *In Progress*. So, the enumeration for the order status will consist of three values: **Open*, *Closed*, and *In_Progress*. 
 
-An enumeration consists of one or more [enumeration values](enumeration-values). Each value represents one option. An attribute of the enumeration type can also represent an uninitialized state: for example, if you do not assign any status to an order, the order status will be *empty*. 
+An enumeration consists of one or more [enumeration values](enumerations#enum-properties). Each value represents one option. An attribute of the enumeration type can also represent an uninitialized state: for example, if you do not assign any status to an order, the order status will be *empty*. 
 
 ## 2 Creating an Enumeration  
 

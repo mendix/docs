@@ -5,9 +5,11 @@ parent: "rg-version-2"
 
 ## 1 CI/CD API
 
-With the CI/CD API you easily integrate ATS into your automated deployment workflow. You can run a test according to predefined templates and then query its status and result. Additionally, you can rerun the not passed test cases for a failed test suite. For more information on how to integrate ATS into your CI/CD workflow read the [How-To ATS CI/CD](/ats/howtos/ht-version-2/ats-and-ci-cd-2).
+With the CI/CD API, you can easily integrate ATS into your automated deployment workflow. You can run a test according to predefined templates and then query its status and result. Additionally, you can rerun the test cases that were not passed for a failed test suite. For more information on how to integrate ATS into your CI/CD workflow, see the [How-To ATS CI/CD](/ats/howtos/ht-version-2/ats-and-ci-cd-2).
 
-**IMPORTANT (for On-Premises)**: To use the CI/CD API you need a special webservice user, which ATS uses for authentication. Please contact support if you are having problems with this.
+{{% alert type="warning" %}}
+**For on-premises implementations** – to use the CI/CD API, you need a special web service user, which ATS uses for authentication. Please contact [Mansystems Support](https://www.mansystems.com/contact/) if you are having problems with this.
+{{% /alert %}}
 
 ## 2 CI/CD Templates
 

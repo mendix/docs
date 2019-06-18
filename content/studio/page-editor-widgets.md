@@ -36,11 +36,7 @@ For example, quickly configuring the data source of a data grid helps you avoid 
 
 ![](attachments/page-editor-widgets/quick-config.png)
 
-{{% alert type="info" %}}
-
-The pop-up window disappears once you start interacting with the page or the menu items, for example, if you start clicking elements on the page or if you open **Toolbox**, **Properties**, **Buzz**. 
-
-{{% /alert %}}
+The pop-up window disappears once you start interacting with the page or the menu items, for example, if you start clicking elements on the page or if you open **Toolbox**, **Properties**, **Buzz**. To access the quick configuration pop-up window again, click the icon in the top-right corner of the widget.
 
 ## 4 Widgets by Category {#widget-categories}
 

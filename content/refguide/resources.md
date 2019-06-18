@@ -34,7 +34,10 @@ The **Resources** category contain various elements that can be used in differen
 | Constant           | Microflow expressions and web services | Constants are used to define configuration values.           |
 | Regular expression | Domain model                           | Regular expressions define criteria that a string should match and are used in validation rules to identify whether an string attribute type matches these criteria. |
 | Scheduled event    | Runtime/Microflows                     | Scheduled events let the runtime execute a microflow at a specific moment in time. |
-| Document template  | Microflows                             | Document template can used to generate a pdf.                |
+| Document template  | Microflows                             | Document template is used to view the document in a client in a downloadable and printable version. |
 
 ## 4 Read More
 
+* [Microflows](microflows)
+* [Domain Model](domain-model)
+* [Pages](pages)

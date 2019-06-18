@@ -129,29 +129,30 @@ You may notice an **Enable dev mode** toggle on the Make It Native app home page
 	
 ### 3.4 Debugging Your Implementation
 
-When implementing changes to your app or designing a custom widget, you may need to debug your implementation. The Make It Native app exposes a developer mode which supports debugging. Chrome is recommended, as it starts automatically during debugging.
+When changing your native app or designing a custom widget, you may need to debug your implementation. The Make It Native app exposes a developer mode which supports debugging native apps for expert developers. Chrome is recommended for this, as it starts automatically during debugging.
 
 To start a debugging session, do the following:
-1. Run your Mendix project locally.
+
+1. Run your Mendix project locally on your desktop.
 2. Start the Make It Native app.
 3. Select **Enable dev mode** in the Make It Native app.
-4. Start your project on your mobile device by doing the following steps:</br>
-	a. In Mendix Studio Pro, click View > View in the Mendix App </br>
-	b. With your mobile device, click **Scan QR code**, then scan the QR code with your mobile</br>
+4.  Start your project on your mobile device: </br>
+	a. In Mendix Studio Pro, click **View** > **View in the Mendix App**.</br>
+	b. With your mobile device, tap **Scan QR code**, then scan the QR code on your desktop.
+When the Make It Native app finishes loading your project, do the following:
 
-When the app finishes loading, do the following:
 1. Open the developer menu by using a three-finger long press.
 2. Tap **Enable Remote js Debugging**.
 
-Your mobile app project should start reloading, and a Chrome window should start on your desktop pointing to a debugging address. Change the address in your navigation bar to *localhost:8083/debugger-ui* in your browser manually.
+Your mobile app project should start reloading, and a Chrome window should launch on your desktop pointing to a debugging address. Change the address in your browser's navigation bar to *localhost:8083/debugger-ui* manually and go to that page.
 
-If the Chrome page comes up but does not load your app, check that your project is running in Mendix Studio Pro. If it is, click the **Stop** button, then click **Run Locally** again to restart your app. 
+If Chrome launches but does not load your app, check that your project is running in Mendix Studio Pro. If it is, click the **Stop** button, then click **Run Locally** again to restart your app. 
 
 You should see this page:
 
 ![debug waiting](attachments/getting-started-with-native-mobile/debug-waiting.png)
 
-If the status remains at **Waiting**, use the reload command in the Make It Native app. The **Waiting** status should change and indicate an **active** session:
+If the status remains at **Waiting**, use the reload command (pictured above) to refresh your app. The **Waiting** status should change and indicate an **active** session:
 
 ![debug active](attachments/getting-started-with-native-mobile/debug-active.png)
 

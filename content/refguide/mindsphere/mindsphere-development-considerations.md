@@ -33,7 +33,7 @@ To improve security of your app, it is recommended that you delete the MindSpher
 If you need to set or change the value of any Cloud Foundry Environment Variables, you will have to do this using the Cloud Foundry Command Line Interface (CF CLI).
 
 1.  Use `cf set-env {app_name} {environment_variable_name} {value}`
-2.  You will need to restage the app to use the new value.  
+2.  You will need to restage the app to use the new value.
     Use `cf restage {app_name}`
 
 {{% alert type="warning" %}}
@@ -63,7 +63,7 @@ Instructions for licensing apps are available in the [License Activation](https:
 
 ## 5 Local Testing{#localtesting}
 
-### 5.1 Credentials 
+### 5.1 Credentials
 The SSO module supports two ways to get a valid MindSphere token locally. The method can be chosen by setting the value of the constant *CredentialsType* to one of the following settings:
 
 * **Application Credentials**: which is the default and recommended way
@@ -107,7 +107,7 @@ As an alternative to the Application Credentials, you can choose the option Serv
 Service Credentials can be requested via a service request to the Global Technical Access Center GTAC. More information can be found [here].(https://developer.mindsphere.io/howto/howto-selfhosted-api-access.html#creating-service-credentials).
 
 
-### 5.2 Configuration 
+### 5.2 Configuration
 
 **AskForCredentialsOnStartUp**
 
@@ -234,14 +234,14 @@ It is not necessary to put an access rule on every entity within the domain mode
 
 To make your Mendix app multi-tenant, do the following:
 
-1.  Make all *persistable* entities which have a **TenantId** attribute a specialization of the MindSphereSingleSignOn.TenantObject entity.  
+1.  Make all *persistable* entities which have a **TenantId** attribute a specialization of the MindSphereSingleSignOn.TenantObject entity.
     This ensures that every object is associated with the Tenant object of the user who creates it.
 2.  Every action on this object must have the following XPath constraint:
 
     ```java
     [MindSphereSingleSignOn.TenantObject_Tenant/MindSphereSingleSignOn.Tenant/MindSphereSingleSignOn.MindSphereAccount_Tenant='[%CurrentUser%]']
     ```
-    
+
     This ensures that the user can only retrieve entities which belong to their tenant, in other words, where their Tenant matches the TenantId of the entity. You can copy and paste this constraint from here (hover your mouse over the text and click the **Copy** button). You can also copy it from XPath constraint on the *TenantObject* entity in the *MindSphereSingleSignOn* module. For more information on XPath, see [XPath](/refguide/xpath).
 
 {{% alert type="info" %}}
@@ -296,9 +296,9 @@ If you want to use the same app name in both Mendix and MindSphere, you should b
 
 ### 9.3 Roles and Scopes
 
-At present, MindSphere only supports two roles. You should take this into account when designing security within your Mendix app.
+MindSphere supports up to five application roles. You should take this into account when designing security within your Mendix app.
 
-It is recommended that you create two scopes for your MindSphere app, **user** and **admin** which will map to identically-named user roles in your Mendix app.
+It is recommended that you create identically-named scopes for each MindSphere application role. These scopes will map to identically-name user roles in your Mendix app.
 
 There is a more detailed discussion of MindSphere and Mendix roles and scopes in the [Roles & Scopes](mindsphere-module-details) section of *MindSphere Module Details*.
 
@@ -312,7 +312,7 @@ If the user logs out from MindSphere, the Mendix app will not delete the session
 In some circumstances, this could lead to another user *using the same app in the same browser on the same computer*, picking up the session from the previous user if the cookie has not yet expired.
 {{% /alert %}}
 
-### 9.5 Cloud Services Platform 
+### 9.5 Cloud Services Platform
 
 Mendix apps can currently only be deployed to MindSphere running on AWS (Amazon Web Services). They cannot currently be deployed to MindSphere running on Microsoft Azure.
 

@@ -63,11 +63,11 @@ Open Studio Pro (version 7.22.2 or above) and follow these steps:
 3. Select **MindSphere Starter Application** in the search results.
 
 	![](attachments/deploying-to-mindsphere/app-store-search.png)
-  
+
 4. Click **Download** to create a new app project using this app.
 
 	![](attachments/deploying-to-mindsphere/app-store-download.png)
-  
+
 5. To start the new app project, confirm where to store the app, the app name, and the project directory, then click **OK**.
 
 	![](attachments/deploying-to-mindsphere/app-store-download-project.png)
@@ -186,12 +186,12 @@ To deploy your deployment package, do the following:
     cf create-service postgresql10 {plan} {service_instance} [-c {parameters_as_JSON}] [-t {tags}]
     ```
 
-    For example: `cf create-service postgresql10 postgresql-xs myapp-db`  
+    For example: `cf create-service postgresql10 postgresql-xs myapp-db`
 
     For more information see [Using the a9s PostgreSQL](https://developer.mindsphere.io/paas/a9s-postgresql/using.html) on the MindSphere developers site.
 
-4.  Depending on your infrastructure and service broker usage, it may take several minutes to create the service instance. Check if your PostgreSQL service has been created successfully using the following command:  
-    `cf services`  
+4.  Depending on your infrastructure and service broker usage, it may take several minutes to create the service instance. Check if your PostgreSQL service has been created successfully using the following command:
+    `cf services`
     Your service should be listed, and the last operation should be ‘create succeeded’.
 
 5.  Ensure you are in the same folder as the package you wish to deploy.
@@ -208,7 +208,7 @@ To deploy your deployment package, do the following:
     ```
 
     {{% alert type="info" %}}`disk_quota_size` and `memory_size` must be at least **512M** to enable a Mendix app to run.<br />See the *Cloud Foundry* [App Manifest Attribute Reference](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest-attributes.html) for more information on valid specifications for memory and disk quota sizes.{{% /alert %}}
-    
+
     For more information on the configuration of manifest files, see [Configuring the manifest file](https://developer.mindsphere.io/howto/howto-cf-single-manifest.html#configuring-the-manifest-file) on the MindSphere developers site.
 
 7.  Push your app to MindSphere using the command:
@@ -298,14 +298,14 @@ To create a new app in the MindSphere launchpad, do the following:
 16.  Click **Register** to register your app with the MindSphere launchpad.
 
     {{% alert type="info" %}}If the app has not been pushed yet, there will be no route set up for the app and you will get an error message. This will be resolved once you have pushed your app to Cloud Foundry.{{% /alert %}}
-    
+
 #### 5.2.2 Setting Application Scopes in Developer Cockpit{#scopes}
 
 To set up the appropriate scopes in MindSphere, do the following:
 
 1.  Go to **Developer Cockpit > Authorization Management > App Roles** from the MindSphere launchpad.
 2.  Enter the **Scope Name**.
-3.  Associate it with the MindSphere roles **USER** and/or **ADMIN**.
+3.  Associate it with the MindSphere default roles **USER** and/or **ADMIN**. Or associate it with one of your self created MindSphere roles. MindSphere supports up to five application roles.
 4.  Click **Save**.
 
     ![](attachments/deploying-to-mindsphere/image15.png)

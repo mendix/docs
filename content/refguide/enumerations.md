@@ -1,7 +1,7 @@
 ---
 title: "Enumerations"
 category: "App Modeling"
-tags: ["studio pro"]
+tags: ["studio pro", "enumeration", "enumeration value"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -41,9 +41,9 @@ An enumeration has the following properties:
 
 * **Name** – the name of the enumeration
 
-* **Enumeration values** – an enumeration has one or more enumeration values. Each value represents one of the options. For more information on enumeration values and their properties, see the [Enumeration Value Properties](#enum-value-properties) section.
+*  **Enumeration values** – an enumeration has one or more enumeration values. Each value represents one of the options. For more information on enumeration values and their properties, see the [Enumeration Value Properties](#enum-value-properties) section.
 
-  ![](attachments/enumerations/enumeration-properties.png)
+    ![](attachments/enumerations/enumeration-properties.png)
 
 ### 3.1 Enumeration Value Properties {#enum-value-properties}
 

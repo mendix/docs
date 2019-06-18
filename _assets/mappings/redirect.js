@@ -462,7 +462,7 @@ module.exports = {
     },
 	{
       from: "/refguide8/enumeration-values",
-      to: "/refguide/enumerations"
+      to: "/refguide/enumerations#enum-properties"
     },
 	/****************************************************
      * From Desktop Modeler version 7 (permanent, mapped)

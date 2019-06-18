@@ -1,13 +1,13 @@
 ---
 title: "Enumerations"
 category: "App Modeling"
-tags: ["studio pro"]
+tags: ["studio pro", "enumeration", "enumeration value"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
-An enumeration defines a list of predefined values. Enumerations are used for the enumeration attribute type. For example, the status of an order can be *Open*, *Closed*, or *In Progress*. So, the enumeration for the order status will consist of three values: **Open*, *Closed*, and *In_Progress*. 
+An enumeration defines a list of predefined values. Enumerations are used for the enumeration attribute type. For example, the status of an order can be *Open*, *Closed*, or *In Progress*. So, the enumeration for the order status will consist of three values: *Open*, *Closed*, and *In_Progress*. 
 
 An enumeration consists of one or more [enumeration values](enumerations#enum-properties). Each value represents one option. An attribute of the enumeration type can also represent an uninitialized state: for example, if you do not assign any status to an order, the order status will be *empty*. 
 
@@ -21,13 +21,13 @@ To create a new enumeration, do the following:
 
 2. In the **Add Enumeration** dialog window, fill out the name of the enumeration.
 
-3. In the **Enumeration** dialog window, click **New** to create enumeration values:
+3.  In the **Enumeration** dialog window, click **New** to create enumeration values:
 
-  a.  Fill out **Name** and **Caption** for an enumeration value. You can set **Image** for it if necessary. For more information on enumeration properties, see the **[Enumeration Properties](#enum-properties)** section. <br />
+    a.  Fill out **Name** and **Caption** for an enumeration value. You can set **Image** for it if necessary. For more information on enumeration properties, see the **[Enumeration Properties](#enum-properties)** section. <br />
 
-    ![](attachments/enumerations/add-enum-value.png)<br />
+    ![](attachments/enumerations/add-enum-value.png)
 
-  b.  Click **OK** to save the enumeration value.<br />
+    b.  Click **OK** to save the enumeration value.
 
 4. Repeat step 3 for every enumeration value that you want to create.
 
@@ -41,14 +41,13 @@ An enumeration has the following properties:
 
 * **Name** – the name of the enumeration
 
-* **Enumeration values** – an enumeration has one or more enumeration values. Each value represents one of the options. For more information on enumeration values and their properties, see the [Enumeration Properties](#enum-value-properties) section.
+*  **Enumeration values** – an enumeration has one or more enumeration values. Each value represents one of the options. For more information on enumeration values and their properties, see the [Enumeration Value Properties](#enum-value-properties) section.
 
-  ![](attachments/enumerations/enumeration-properties.png)
+    ![](attachments/enumerations/enumeration-properties.png)
 
 ### 3.1 Enumeration Value Properties {#enum-value-properties}
 
 Enumeration value properties are described below:
-
 
 * **Caption** – the caption of an enumeration value is the text that the end-user sees for this enumeration value. This is a translatable text. For more information, see [Translatable Texts](translatable-texts). 
 

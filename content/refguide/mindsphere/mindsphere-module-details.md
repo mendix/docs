@@ -88,7 +88,7 @@ This microflow populates the *Name* attribute of the *Tenant* entity and the *Em
 In addition, MindSphere SSO will identify whether the current user is a subtenant using **IsSubTenantUser** and, if so, will populate the name of the subtenant in **SubtenantId**. More information about subtenants can be found in the MindSphere documentation [Subtenants](https://developer.mindsphere.io/apis/core-tenantmanagement/api-tenantmanagement-overview.html#subtenants).
 
 {{% alert type="info" %}}
-If the same user logs in using a different tenant, Mendix will treat this as a different user and a User ID will be used within Mendix instead of a user name. 
+If the same user logs in using a different tenant, Mendix will treat this as a different user and a User ID will be used within Mendix instead of a user name.
 {{% /alert %}}
 
 For advice on how to make your apps multi-tenant, see [Multi-Tenancy](/refguide/mindsphere/mindsphere-development-considerations#multitenancy) in *MindSphere Development Considerations*.
@@ -97,7 +97,7 @@ For advice on how to make your apps multi-tenant, see [Multi-Tenancy](/refguide/
 
 Using SSO, the Mendix app needs to know which roles to allocate to the user. This enables the app to know whether the user should have, for example, administrator access.
 
-MindSphere apps have two roles: user and admin. Each MindSphere user is given one or both of these roles. As well as defining access to MindSphere core roles, these roles are also mapped to application scopes. For information on how to set up scopes in MindSphere, see the [Setting Application Scopes in Developer Cockpit](/developerportal/deploy/deploying-to-mindsphere#scopes) section in *Siemens MindSphere – deploy*.
+MindSphere apps have up to five application roles. Each MindSphere user is given one or more of these roles. As well as defining access to MindSphere core roles, these roles are also mapped to MindSphere application scopes. For information on how to set up scopes in MindSphere, see the [Setting Application Scopes in Developer Cockpit](/developerportal/deploy/deploying-to-mindsphere#scopes) section in *Siemens MindSphere – deploy*.
 
 During the login process, MindSphere application scopes are mapped to Mendix roles automatically. The comparison ignores upper- and lower-case differences. If the roles match, then that Mendix role is assigned to the user.
 
@@ -292,7 +292,7 @@ document.cookie = "originURI=/login.html";
 ```
 and directly after the script of the X-XRSR put the following script
 ```javascript
-<script>	
+<script>
 	// MindSphere specific part-2: Use the MindSphereLogin.html to prevent the Gateway taking over login.html and perform SSO
 	// Always set originURI Cookie.
 	document.cookie = "originURI=/mindspherelogin.html";
@@ -313,7 +313,7 @@ For the OS Bar to work correctly in your Mendix app, the following script has to
 {{% /alert %}}
 
 ```javascript
-<script>	
+<script>
 	// MindSphere specific part-3: OS Bar related code
 	(function(d1, script1) {
 		script1 = d1.createElement('script');

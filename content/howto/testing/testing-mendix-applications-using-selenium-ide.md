@@ -89,13 +89,11 @@ To create an automated test by using the record button in Selenium IDE, follow t
 
 	![](attachments/selenium/green-test.png)
 
-Well done! You have just created your first automated test!
-
-## 5  Locating  the Element Using Developer Tools (Second Automated Test)
+## 5  Locating  & Changing a Test Target
 
 It is possible that you will need to edit your Selenium IDE test script before you can run it regularly. This may happen because, for example, HTML tag IDs are generated dynamically and will be different with each run of the same page.
 
-When necessary, you will need to find the right locators in order to tell Selenium IDE the GUI elements (for example, buttons, text boxes, and data grids) on which it needs to operate. To make it easier to create a locator for Mendix elements, `mx-name` is added to the class of an element. If you change the position of an element in a document, there is thus no need to rewrite the script.
+When necessary, you will need to find the right locators in order to tell Selenium IDE the GUI targets (for example, buttons, text boxes, and data grids) on which it needs to operate. To make it easier to create a locator for Mendix elements, `mx-name` is added to the class of an element. If you change the position of an element in a document, there is thus no need to rewrite the script.
 
 In this example scenario, a running test has failed on the target `id=mxui_widget_Wrapper_23`:
 
@@ -105,34 +103,23 @@ The element with this target does not exist on the page for Selenium IDE, becaus
 
 A widget can be given a name in Mendix Studio Pro, and this name will appear in the HTML document as a class name prefixed by `mx-name-`. For instance, a grid named `EmployeeGrid` will get the CSS class `mx-name-EmployeeGrid`. This is true for all Mendix widgets.
 
-In this scenario, you need to do the following:
+In this example scenario, you need to do the following:
 
-1. Open the page in Studio Pro and highlight the element that the Selenium IDE test failed.
-2. The **Name** property for **User name** field is **textBox10**. Every Mendix element will automatically get the CSS class `mx-name-[Name]`, so this field will have the CSS class `mx-name-textBox10`.
+1. Open the page in Studio Pro that corresponds to where the Selenium IDE test failed.
+2. Highlight the element where the Selenium IDE test failed.
+2. The **Name** property for the **User name** field is **textBox10**. Every Mendix element automatically gets the CSS class `mx-name-[Name]`, so note that this field will have the CSS class `mx-name-textBox10`.
 
+	![](attachments/selenium/name.png)
 
-  ![](attachments/selenium/name.png)
+4. Open the developer tools for your browser (with the app still open to where the Selenium IDE test failed) and search for `mx-name-textBox10`. There is a matching node, so you have now verified a unique selector for the **User name** field.
 
-3. 
+	![](attachments/selenium/inspector.png)
 
+5. In Selenium IDE, change the **Target** `id=mxui_widget_Wrapper_23` into `css=.mx-name-textBox6`: 
 
+	![](attachments/selenium/change.png)
 
-
-	 
-
-
-	
-
-17. Enter `.mx-name-textBox6` in your developer tools and press <kbd>Enter</kbd>. There is only one matching node, so you have now found a unique selector for the **Amount** field.
-18. Change the value `id=_mxui_widget_NumberInput_1_input` into `css=.mx-name-textBox6 input` in Selenium. Because it is an input field, you have to add *input* to the target. 
-
-19. Click **Run current test case**. You can also try to switch the speed control to slow. Switch the speed control to slow. The speed control determines how fast your test script runs. By default, the speed control is set to the maximum speed. When the test runs too fast, it is possible that the test starts asserting for an element on the page even before the page is fully loaded by the browser.
-
-
-
-{{% alert type="info" %}}
-Some widgets, like a grid or a list view, can show multiple items. Every item has the CSS class `mx-name-index-[indexNumber].` The index number starts at 0.
-{{% /alert %}}
+6. Click the **Run current test** icon to see if your test passes. 
 
 ## 6 Read More
 

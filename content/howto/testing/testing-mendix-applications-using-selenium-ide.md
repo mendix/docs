@@ -93,51 +93,42 @@ Well done! You have just created your first automated test!
 
 ## 5  Locating  the Element Using Developer Tools (Second Automated Test)
 
-Selenium IDE can be used to record tests scripts, but these scripts sometimes need to be edited before you can run them regularly (because, for example, HTML tag IDs are generated dynamically and will be different with each run of the same page).
+It is possible that you will need to edit your Selenium IDE test script before you can run it regularly. This may happen because, for example, HTML tag IDs are generated dynamically and will be different with each run of the same page.
 
-When necessary, you will need to find the right locators in order to tell Selenium IDE the GUI elements (for example, buttons, text boxes, and data grids) on which it needs to operate. To make it easier to create a locator for Mendix elements, `mx-name` is added to the class of an element. When the position of an element in a document changes, there is thus no need to rewrite the script.
+When necessary, you will need to find the right locators in order to tell Selenium IDE the GUI elements (for example, buttons, text boxes, and data grids) on which it needs to operate. To make it easier to create a locator for Mendix elements, `mx-name` is added to the class of an element. If you change the position of an element in a document, there is thus no need to rewrite the script.
 
-In this example scenario, you are running a test that fails on the target `id=mxui_widget_NumberInput_1_input`:
+In this example scenario, a running test has failed on the target `id=mxui_widget_Wrapper_23`:
 
-![](attachments/selenium/18580299.png)
-	
+![](attachments/selenium/fail.png)
+
 The element with this target does not exist on the page for Selenium IDE, because the number in the ID is not always the same. You need to find another target selector for the same element that Selenium IDE will pick up. Mendix uses CSS classes to identify page content like widgets and pop-up windows, so you can use these classes in Selenium IDE to manipulate pages and verify data. 
 
-A widget can be given a name in Mendix Studio Pro, and this name will appear in the HTML document as a class name prefixed by `mx-name-`. For instance, a grid named `EmployeeGrid` will get a CSS class `mx-name-EmployeeGrid`. This is true for all Mendix widgets.
+A widget can be given a name in Mendix Studio Pro, and this name will appear in the HTML document as a class name prefixed by `mx-name-`. For instance, a grid named `EmployeeGrid` will get the CSS class `mx-name-EmployeeGrid`. This is true for all Mendix widgets.
 
-In this scenario, you need to open the page in Studio Pro that corresponds to the element on which Selenium IDE test failed:
+In this scenario, you need to do the following:
+
+1. Open the page in Studio Pro and highlight the element that the Selenium IDE test failed.
+2. The **Name** property for **User name** field is **textBox10**. Every Mendix element will automatically get the CSS class `mx-name-[Name]`, so this field will have the CSS class `mx-name-textBox10`.
 
 
-15. Open the **Desktop_Expense_NewEdit_Admin** page in Studio Pro:
+  ![](attachments/selenium/name.png)
 
-	![](attachments/selenium/18580285.png)
+3. 
 
-16. Select the **Amount** field:
 
-	![](attachments/selenium/18580290.png) 
 
-	The **Name** property of the **Amount** field is **textBox6**. Every element will automatically get the CSS class `mx-name-[Name]`, so the amount field will have the CSS class `mx-name-textBox6`.
 
-	![](attachments/selenium/18580289.png)
+	 
+
+
+	
 
 17. Enter `.mx-name-textBox6` in your developer tools and press <kbd>Enter</kbd>. There is only one matching node, so you have now found a unique selector for the **Amount** field.
 18. Change the value `id=_mxui_widget_NumberInput_1_input` into `css=.mx-name-textBox6 input` in Selenium. Because it is an input field, you have to add *input* to the target. 
-19. Click **Run current test case**. The test will fail because it can not find the element with the target `css=.mx-name-textBox6 input`, because the page with the element has not been loaded yet.
-20. Switch the speed control to slow. The speed control determines how fast your test script runs. By default, the speed control is set to the maximum speed. When the test runs too fast, it is possible that the test starts asserting for an element on the page even before the page is fully loaded by the browser. Try to run your test script as fast as possible.
 
-	![](attachments/selenium/18580284.png)
+19. Click **Run current test case**. You can also try to switch the speed control to slow. Switch the speed control to slow. The speed control determines how fast your test script runs. By default, the speed control is set to the maximum speed. When the test runs too fast, it is possible that the test starts asserting for an element on the page even before the page is fully loaded by the browser.
 
-21. Click **Run current test case**. The test will fail because it can not find the element with the target `css=input.form-control.mx-focus`.
-22. Open the **Desktop_Expense_NewEdit_Admin** page in Studio Pro.
-23. Click the **Description** box. The name of this box is `referenceSelector1` and it will have the CSS class `mx-name-referenceSelector1`.
-24. Enter `.mx-name-referenceSelector1` in your developer tools and press <kbd>Enter</kbd>. Two elements should be found: one in the pop-up window and one on the page in the background. To retrieve the element of the active page, you need to add `.mx-window-active` to the target.
-25. Enter `.mx-window-active .mx-name-referenceSelector1` in your developer tools and press <kbd>Enter</kbd>. There should only be one matching node, so you have now found a unique selector for the **Type** box. 
-26. Change the value `id=mxui_widget_ReferenceSelector_2_input` into `css=.mx-window-active .mx-name-referenceSelector1 select` in Selenium. Because it is a dropdown list, you have to add *select* to the target.
-27. Click **Run current test case**. The test will pass.
 
-	![](attachments/selenium/18580286.png)
-
-Congratulations! You have just created your second automated test.
 
 {{% alert type="info" %}}
 Some widgets, like a grid or a list view, can show multiple items. Every item has the CSS class `mx-name-index-[indexNumber].` The index number starts at 0.

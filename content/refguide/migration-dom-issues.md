@@ -19,9 +19,11 @@ TODO: [+How to migrate Atlas to Mendix 8](https://paper.dropbox.com/doc/How-to-m
 
 ## 3 Streamlined Custom Themes
 
+**what is — find nice location-- ?**
+
 Before Mendix 8, when you lacked a theme the client provided a large amount of default styling. This made it difficult to build your own theme, as you needed to override the default styling often. As of Mendix 8, all CSS which is not required for a working application has been removed. Now, building your own theme from scratch requires significantly less work.
 
-If you already have built your own theme from scratch in a previous Mendix version, you might depend on that styling. For that we provide the previous defaults —find nice location-- for you to download so you can re-use it.
+If you already have built your own theme from scratch in a previous Mendix version, you might depend on that styling. For that we provide the previous defaults — find nice location-- for you to download so you can re-use it.
 
 ## 4 Focus-Specific Class Removed
 

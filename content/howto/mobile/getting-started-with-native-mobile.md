@@ -127,9 +127,37 @@ You may notice an **Enable dev mode** toggle on the Make It Native app home page
 
 {{% image_container width="500" %}}![enable dev mode](attachments/getting-started-with-native-mobile/enable-dev-mode.png){{% /image_container %}}
 	
-{{% todo %}}[link to future debug doc - For more information on debugging, see Debugging A Native Mobile App]{{% /todo %}}
+### 3.4 Debugging Your Implementation
 
-### 3.4 Viewing Changes to Your App on Your Testing Device {#viewingchanges}
+When implementing changes to your app or designing a custom widget, you may need to debug your implementation. The Make It Native app exposes a developer mode which supports debugging. Chrome is recommended, as it starts automatically during debugging.
+
+To start a debugging session, do the following:
+1. Run your Mendix project locally.
+2. Start the Make It Native app.
+3. Select **Enable dev mode**
+4. Start your project on your mobile device.
+
+When the app finishes loading, do the following:
+1. Open the developer menu by using a three-finger long press.
+2. Switch **Enable Remote js Debugging** on.
+
+Your mobile app project should start reloading, and a Chrome window should start on your desktop pointing to the correct debugging address. If you are using Parallels, or a Chrome window does not start, navigate to *(machine-ip-address):8083/debugger-ui* in your Chrome browser manually.
+
+If X incurs a 404 error, make sure the native bundler is running on your Y and your IP address matches the one pointing to your machine running Mendix Studio Pro. 
+
+You should see this page:
+
+![debug waiting](attachments/getting-started-with-native-mobile/debug-waiting.png)
+
+If the status remains at **Waiting**, try reloading your project. The **Waiting** status should change and indicate an **active** session:
+
+![debug active](attachments/getting-started-with-native-mobile/debug-active.png)
+
+Chrome's debugging tools should be pointing to your project. Now, you can debug your app like you would any other web app. 
+
+Outside of Chrome, other tools can help you debug Mendix apps (such as React Developer Tools). Regardless of which tool you use, remember that Mendix uses a different port (8083) than a default React Native installation would (8080).
+
+### 3.5 Viewing Changes to Your App on Your Testing Device {#viewingchanges}
 
 To see how changes made in Mendix Studio Pro are displayed live on your testing device, make a small change to your app.
 

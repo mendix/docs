@@ -53,7 +53,7 @@ A microflow could return whether or not the committing of an object should conti
 
 ### 5.1 Allowed Roles
 
-Allowed roles defines to which [module role](module-role) the user must have to be able to execute the microflow.
+Allowed roles defines to which [module role](module-security#module-role) the user must have to be able to execute the microflow.
 
 {{% alert type="warning" %}}
 

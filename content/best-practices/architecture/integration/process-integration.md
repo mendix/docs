@@ -11,11 +11,11 @@ Process integration is a wide and important area that promises automation, digit
 
 When a business process runs across several systems, there will be some type of process integration. There are many ways this can be done:
 
-* **Business event integration** – Work finishes in one app, and the next app is notified to start the next step of the process automatically. This avoids, for example, sending emails and having to retype information into another system.
+* **Business event integration** – Work finishes in one app, and the next app is notified to start the next step of the process automatically. This avoids the need to, for example, send emails and retype information into another system.
 
 	![](attachments/process-integration/process-int1.png)
 
-* **Workflow integration** – A user works in one app and then continues the same process in another app (for example, via a deep link). By enabling this integration, you can have specialized apps or microservices that evolve separately, but for the end-user it seems to be the same system. For more information, refer to [Workflow Integration with Data Transfer Example](workflow-int-data-transfer).
+* **Workflow integration** – A user works in one app and then continues the same process in another app (for example, via a deep link). By enabling this integration, you can have specialized apps or microservices that evolve separately, but for the end-user it seems to be the same system. For more information, refer to [Example – Workflow Integration with Data Transfer](workflow-int-data-transfer).
 
 	![](attachments/process-integration/process-int2.png)
 
@@ -23,7 +23,7 @@ When a business process runs across several systems, there will be some type of 
 
 	![](attachments/process-integration/process-int4.png)
 
-* **Process orchestration** – A system actively orchestrates a process across several systems, keeping track of status, re-trying when required, and escalating to human workflow when required. This is useful for automating transaction processing (for example, in banks), for provisioning a bill of materials, and when a business event should lead to updates in several systems in parallel.
+* **Process orchestration** – A system actively orchestrates a process across several systems, keeping track of status, retrying when required, and escalating to human workflow when required. This is useful for automating transaction processing (for example, in banks), for provisioning a bill of materials, and when a business event should lead to updates in several systems in parallel.
 	
 	![](attachments/process-integration/process-int3.png)
 
@@ -70,7 +70,9 @@ Kafka is often used as an advanced queueing system for one-way communications, s
 
 Mendix is often used as a workflow tool, where a partly manual business process is implemented in a Mendix app. The Mendix app can perform the workflow on top of SAP or legacy systems, or the app could be a departmental “business portal” that allows users to work in one single app instead of opening 10-20 different applications.
 
-[Workflow integration](workflow-integration) means that the human workflow is handled across several apps via links in the UI (which are usually deep links). The end-user is often unaware that there are two separate apps. Sometimes you need to copy data behind the scenes, so the user has new data when they come back to the original app.
+Workflow integration means that the human workflow is handled across several apps via links in the UI (which are usually deep links). The end-user is often unaware that there are two separate apps. Sometimes you need to copy data behind the scenes, so the user has new data when they come back to the original app.
+
+For more information, see [How to Do Workflow Integration](#how-workflow-int).
 
 ### 3.1 Example 1 – Dashboard for Standard Microservices System
 
@@ -164,7 +166,7 @@ The Mendix Platform can be used for building all of the components in the diagra
 * Automated straight-through processing apps
 * Internal dashboards and control apps
 
-## 7 How to Do Workflow Integration
+## 7 How to Do Workflow Integration {#how-workflow-int}
 
 In most architectures, there are business processes that exceed the functionality of a single microservice app. In that case, there will be some transactional data used in that process that needs to be transferred between the microservices involved. Often, there will be a deep link for users to navigate between the apps.
 

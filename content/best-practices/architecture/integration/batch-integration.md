@@ -5,7 +5,7 @@ menu_order: 4
 draft: true
 ---
 
-## 1 Export, Import & Batch Processing
+## 1 Introduction
 
 More and more processes are becoming real-time, but a lot of business processes are still periodic in nature (for example, salary payments and interest calculations). These use cases are best implemented in batch-oriented integration, which runs a sets of data at certain moments. 
 
@@ -20,19 +20,15 @@ There are these typical use cases:
 
 * [Export and import processes](#export-import) – In this use case, data is exported from one system and imported in another system.
 * [Reference data management](#reference) – Reference data management is usually done in batch, because a snapshot of a situation is generally desired and several systems may need to work on the same snapshot. This is often done at night, to prevent the export/import processing from interferring with normal operations, and/or to take advantage of the CPU power available at night when it is usually less busy.
-* [File integration and management](#file-integration) – This use case is important for moving files in batch-oriented integration.It is also important for providing files of various types to end-users and customers.
-* [Data lakes, DWH, and BI integration](#int) – This is an area that usually works in batch mode. Mendix provides data to these solutions for analysis, statistics, reporting, business intelligence, and also machine learning. In some automated processes, Mendix also receives data from these solutions and turns it into reference data that helps in optimizing automated business flows (for details, see <<Self-Learning Process -3 Self-Learning Processes Using Data Lakes>>
-* **Monitoring and IoT solutions** – In these use cases, data is often batched up data in small packages and sent at high speed. For more information, see [Ops & CI/CD Integration](ops-cicd-integration) and <<IoT Integration - 4.2 Examples for IoT with Mendix>>.
-	
-{{% todo %}}[**Need a section on "Monitoring & Iot Solutions" below in order to link above, as is done for all other use cases**]{{% /todo %}}
+* [File management](#file-management) – This use case is important for moving files in batch-oriented integration.It is also important for providing files of various types to end-users and customers.
+* [Data lakes, DWH, and BI integration](#int) – This is an area that usually works in batch mode. Mendix provides data to these solutions for analysis, statistics, reporting, business intelligence, and also machine learning. In some automated processes, Mendix also receives data from these solutions and turns it into reference data that helps in optimizing automated business flows (for details, see the [Self-Learning Processes Using Data Lakes](central-datadata-lakes) section of *Central Data*).
+* **Monitoring and IoT solutions** – In these use cases, data is often batched up data in small packages and sent at high speed. For more information, see [Ops & CI/CD Integration](ops-cicd-integration) as well as the [Examples for IoT with Mendix](event-integration#iot-examples) section of *Event-Integration*.
 
-{{% todo %}}[**Where is the link for "Self-Learning Processes Using Data Lakes" above?**]{{% /todo %}}
-	
-{{% todo %}}[**Where is the link for "Examples for IoT with Mendix" above?**]{{% /todo %}}
+{{% todo %}}[**Need a section on "Monitoring & Iot Solutions" below in order to link above, as is done for all other use cases**]{{% /todo %}}
 
 ## 2 Export & Import {#export-import}
 
-Batch processing runs a large set at a time by first exporting a large set of data, moving it, and then importing the data. These three actions can happen at different times, and the systems can be relatively unaware of each other besides agreeing on a file format, file name, and file location 
+Batch processing runs a large set of data by first exporting the set, moving it, and then importing the data. These three actions can happen at different times, and the systems can be relatively unaware of each other besides agreeing on a file format, file name, and file location 
 
 This diagram shows the three main steps of batch processing: 
 
@@ -40,9 +36,9 @@ This diagram shows the three main steps of batch processing:
 
 Processing data in bulk optimizes CPU-usage. It is often done at night, when the other load is much lower in order to prevent the batch processing load from interferring with operational processes or suddenly making the UX slower.
 
-Users frequently import and export files of various formats with the Mendix Platform, and the level of skills required depends on the format of the file. For unusual file formats, a more Technical Developer is recommended. Fr common formats such as *csv*, a Business Developer should be able to use the the [Excel Importer](https://appstore.home.mendix.com/link/app/72/) module from the Mendix App Store by just selecting a field separator that is not the same as the text that in the fields.
+Users frequently import and export files of various formats with the Mendix Platform, and the level of skills required depends on the format of the file. For unusual file formats, a more Technical Developer is recommended. For common formats such as *csv*, a Business Developer should be able to use the the [Excel Importer](https://appstore.home.mendix.com/link/app/72/) module from the Mendix App Store by just selecting a field separator that is not the same as the text that in the fields.
 
-If there is a large amount of data to import, the best practice is to write to a process queue. This prevents the entire dataset from being in the memory at the same time. For more information, see the section [Using Internal Queues](event-integration#internal-queues) in *Event-Based Integration* as well as [Example – File Import Integration with CSV](csv).
+If there is a large amount of data to import, the best practice is to write to a process queue. This prevents the entire dataset from being in the memory at the same time. For more information, see the [Using Internal Queues](event-integration#internal-queues) section in *Event-Based Integration* as well as [Example – File Import Integration with CSV](csv).
 
 ## 3 Reference Data with Mendix {#reference}
 
@@ -52,7 +48,7 @@ Many organizations use Mendix to manage reference data as microservices that eac
 * Business intelligence statistical information that is turned into reference data to fine-tune processes
 * Master data (for example, customers) that changes in real-time while being used in several processes across the enterprise
 
-There area three typical examples where Mendix plays a role in master and reference data use-cases:
+There area three typical examples where Mendix plays a role in master and reference data use cases:
 
 * **Reference data apps** – These apps typically share data periodically as files. This is because there are many subscribers that need to work on the same reference data set. For example, ordering, engineering, and financing all need to be aware of the same products for the order-to-cash process to work properly.
 * **Local shared data apps** – These "SDA" apps are typical for microservics systems consisting of 3–10 apps. They manage the import and distribution of reference data within that cluster of apps. Other apps can poll for differences instead of all importing a full set of data. The human workflow can define the shared data and manage issues in import/export. The shared data app can also provide a combined view of data for the rest of the world (for more information, see [Central Data](central-data).
@@ -64,7 +60,7 @@ This diagram shows an example for managing shared product and customer data acro
 
 In the diagram's example, you can see the following factors at work:
 
-* New or changed product definitions should only be shared at decisive moments, so the business process is periodic and all three down-stream systems need to have the data at the same time (meaning, this is a perfect case for batch integration with files). New data will only be shared at night, when no ordering occurs, and only some nights when marketing, sales, and engineering agree it can be released. An FTP server (or any other file-transfer management system) acts as a central point of contact for the files.
+* New or changed product definitions should only be shared at decisive moments, so the business process is periodic and all three down-stream systems need to have the data at the same time (meaning, this is a perfect case for batch integration with files). New data will only be shared at night, when no ordering occurs, and only some nights when marketing, sales, and engineering agree it can be released. A file transfer protocol  (FTP) server (or any other file-transfer management system) acts as a central point of contact for the files.
 * A **Customer** master data app is outside in an order-to-cash cluster to serve other areas as well. It can be reached via a deep link to create new customers when required, and this data is transferred almost directly to be able to place orders against it. 
 * The order-to-ship process is complex, so it has been broken up into the following microservices:
 	* A dashboard for SSO and overviews
@@ -82,9 +78,9 @@ File integration is important for the following cases:
 
 ### 4.1 Mendix File Storage
 
-Each Mendix app has a dedicated file storage area, where it writes files to by default. This is also where the Mendix app log file is located by default. The size of this area is large enough to handle most regular file management. Also, when importing a file, it is practical to copy the file to this local area first before processing it.
+Each Mendix application has a dedicated file storage area, where it writes files to by default. This is also where the Mendix app log file is located by default. The size of this area is large enough to handle most regular file management. Also, when importing a file, it is practical to copy the file to this local area first before processing it.
 
-In rare cases, the file space can be extended by filing a Mendix Support request. This could occur if the purpose of the Mendix app is to help distribute files like manuals, documents, or pictures. For more information, see [Example – Manuals for Product Support](#example) below.
+In rare cases, the file space can be extended by filing a Mendix Support request. This could occur if the purpose of the Mendix app is to help distribute files like manuals, documents, or pictures. For more information, see the [Example – Manuals for Product Support](#example) section below.
 
 ### 4.2 File Transfer Options
 
@@ -118,7 +114,7 @@ In this example, you can see the following process at work:
 
 Interfaces towards DWH and BI are often bulk- and/or snapshot-oriented. The same is true for initial loads of systems and the distribution of reference data. 
 
-ETL tools are used to keep DWH and data lakes updated. They can perform the entire operation of extracting, moving, validating, transforming, and updating the destination. For legacy systems, they can use direct database access or use files as input. When Mendix integrates with ETL or BI, these are the preferred methods:
+Extract, transform, load (ETL) tools are used to keep DWH and data lakes updated. They can perform the entire operation of extracting, moving, validating, transforming, and updating the destination. For legacy systems, they can use direct database access or use files as input. When Mendix integrates with ETL or BI, these are the preferred methods:
 
 * Exporting a file for periodic dumps of specific data
 * Using OData for more frequent and smaller updates

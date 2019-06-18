@@ -5,7 +5,11 @@ parent: "rg-version-2"
 
 ## 1 CI/CD API
 
-With the CI/CD API you easily integrate ATS into your automated deployment workflow. You run a test according to predefined templates or you could retrieve the status of already finished tests. To use the CI/CD API you need a special webservice user, which ATS uses for authentication. For more information on how to integrate ATS into your CI/CD workflow read the [How-To ATS CI/CD](/ats/howtos/ht-version-2/ats-and-ci-cd-2).
+With the CI/CD API, you can easily integrate ATS into your automated deployment workflow. You can run a test according to predefined templates and then query its status and result. Additionally, you can rerun the test cases that were not passed for a failed test suite. For more information on how to integrate ATS into your CI/CD workflow, see the [How-To ATS CI/CD](/ats/howtos/ht-version-2/ats-and-ci-cd-2).
+
+{{% alert type="warning" %}}
+**For on-premises implementations** – to use the CI/CD API, you need a special web service user, which ATS uses for authentication. Please contact [Mansystems Support](https://www.mansystems.com/contact/) if you are having problems with this.
+{{% /alert %}}
 
 ## 2 CI/CD Templates
 
@@ -37,9 +41,19 @@ For supported Selenium hubs, like Browserstack, further options are available. F
 
 ## 3 API
 
-The ATS CI/CD API is based on the SOAP webservice protocol. Currently there are two services available, **Run Job** and **Get Job Status**. The following sections show the structures of the request-and-response messages of these services.
+The ATS CI/CD API is based on the SOAP web service protocol. Currently there are three services available: **Run Job**, **Get Job Status**, and **RerunNotPassed**. The following sections show the structures of the request-and-response messages of these services.
+
+{{% alert type="info" %}}
+SOAP is an ordered protocol, so all the fields must appear in the exact order as they are given here.
+{{% /alert %}}
+
+{{% alert type="warning" %}}
+SOAP is an ordered protocol, so all the fields must appear in the exact order as they are given here.
+{{% /alert %}}
 
 ### 3.1 Run Job
+
+Starts a new job based on a CI/CD template and returns the UUID of the job which can be used to query the result.
 
 #### 3.1.1 URL
 
@@ -61,8 +75,8 @@ You must include the following information in the request:
 
 ##### 3.1.2.1 Example
 
-```
-<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:men="http://www.mendix.com/">
+```xml
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tns="http://www.mendix.com/">
   <soap:Header>
     <tns:authentication>
       <username>ATSAPIUser</username>
@@ -78,23 +92,23 @@ You must include the following information in the request:
       </TestRun>
     </tns:RunJob>
   </soap:Body>
-</soapenv:Envelope>
+</soap:Envelope>
 ```
 
-#### 3.1.3 Response
+#### 3.1.3 Response {#response}
 
 The following table shows the data contained in the response of the Run Job service:
 
 | Name | Description |
 | --- | --- |
 | Started | True if the test has already started. Otherwise, false.  |
-| ErrorMessage | Contains the error message if the test failed to start. Empty if the test started succesfully. |
+| ErrorMessage | Contains the error message if the test failed to start. Empty if the test started successfully. |
 | JobID | The unique ID of the job. This ID is used to retrieve the result of the test with the **Get Job Status** service. |
 
 ##### 3.1.3.1 Example
 
-```
-<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:men="http://www.mendix.com/">
+```xml
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tns="http://www.mendix.com/">
   <soap:Body>
     <tns:RunJobResponse>
       <RunJob>
@@ -104,7 +118,7 @@ The following table shows the data contained in the response of the Run Job serv
       </RunJob>
     </tns:RunJobResponse>
   </soap:Body>
-</soapenv:Envelope>
+</soap:Envelope>
 ```
 
 ### 3.2 Get Job Status
@@ -112,7 +126,7 @@ The following table shows the data contained in the response of the Run Job serv
 #### 3.2.1 URL
 
 ```
-https://ats100-test.mendixcloud.com/ws/GetJobStatus
+https://ats100.mendixcloud.com/ws/GetJobStatus
 ```
 
 #### 3.2.2 Request
@@ -126,11 +140,18 @@ You must include the following information in the request:
 | AppAPIToken | The key for the CI/CD API. Generated on the **App Settings** page. |
 | JobID | The unique ID of the job returned by the Run Job service. |
 | AppID | The ID of your Mendix app. |
+| IncludeExecutionFlags¹| Indicates whether to include execution flags (canceled, warning) in the response. |
+| IncludeExecutionResultBreakdown¹ | Indicates whether to include the number of passed/failed/not executed test cases in the response. |
+| IncludeDetailsPerTestCase¹ | Indicates whether to include details (for example, name, result, duration) for each test case that was executed in the response. |
+
+¹ Optional. If left out, defaults to `false`.
 
 ##### 3.2.2.1 Example
 
-```
-<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:men="http://www.mendix.com/">
+Basic example, only returns the status and result (and error message if there is one):
+
+```xml
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tns="http://www.mendix.com/">
   <soap:Header>
     <tns:authentication>
       <username>exampleUser</username>
@@ -146,7 +167,58 @@ You must include the following information in the request:
       </TestRun>
     </tns:GetTestRun>
   </soap:Body>
-</soapenv:Envelope>
+</soap:Envelope>
+```
+
+##### 3.2.2.2 Example
+
+Example which also returns the number of passed/failed/not executed test cases:
+
+```xml
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tns="http://www.mendix.com/">
+  <soap:Header>
+    <tns:authentication>
+      <username>exampleUser</username>
+      <password>examplePassword</password>
+    </tns:authentication>
+  </soap:Header>
+  <soap:Body>
+    <tns:GetTestRun>
+      <TestRun>
+        <AppAPIToken>exampleString</AppAPIToken>
+        <JobID>exampleString</JobID>
+        <AppID>exampleString</AppID>
+        <IncludeExecutionResultBreakdown>true</IncludeExecutionResultBreakdown>
+      </TestRun>
+    </tns:GetTestRun>
+  </soap:Body>
+</soap:Envelope>
+```
+
+##### 3.2.2.3 Example
+
+Example which returns the status of the execution flags and details for each test case.
+
+```xml
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tns="http://www.mendix.com/">
+  <soap:Header>
+    <tns:authentication>
+      <username>exampleUser</username>
+      <password>examplePassword</password>
+    </tns:authentication>
+  </soap:Header>
+  <soap:Body>
+    <tns:GetTestRun>
+      <TestRun>
+        <AppAPIToken>exampleString</AppAPIToken>
+        <JobID>exampleString</JobID>
+        <AppID>exampleString</AppID>
+        <IncludeExecutionFlags>true</IncludeExecutionFlags>
+        <IncludeDetailsPerTestCase>true</IncludeDetailsPerTestCase>
+      </TestRun>
+    </tns:GetTestRun>
+  </soap:Body>
+</soap:Envelope>
 ```
 
 #### 3.2.3 Response
@@ -158,11 +230,19 @@ The following table shows the data contained in the response of the **Get Job St
 | ExecutionStatus| Status of the execution: **Running** or **Queued**. |
 | ErrorMessage | Contains the error message if the test failed to start. Empty if the test started succesfully. |
 | ExecutionResult | Result of the execution: **Passed** or **Failed**. |
+| ExecutionFlags¹ | Status of the canceled and warning flags for the job. |
+| ExecutionResultBreakdown¹ | Number of test cases in this job that passed, failed, and were not executed. |
+| ExecutionDetailsPerTestCase¹ | Name, result (**Passed**,**Failed**,**Not_Executed**), duration, and error message² for each executed test case. |
+
+¹ Optional, only returned if the corresponding **Include** statement was set to true in the request.  
+² Error messages are only included for not passed testcases where a simple and short error message can be generated.  
 
 ##### 3.2.3.1 Example
 
-```
-<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:men="http://www.mendix.com/">
+Basic example, only returns the status and result (and error message if there is one):
+
+```xml
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tns="http://www.mendix.com/">
   <soap:Body>
     <tns:GetTestRunResponse>
       <TestRun>
@@ -172,5 +252,115 @@ The following table shows the data contained in the response of the **Get Job St
       </TestRun>
     </tns:GetTestRunResponse>
   </soap:Body>
-</soapenv:Envelope>
+</soap:Envelope>
 ```
+
+##### 3.2.3.2 Example
+
+Example which also returns the number of passed, failed, and not-executed test cases:
+
+```xml
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tns="http://www.mendix.com/">
+  <soap:Body>
+    <tns:GetTestRunResponse>
+      <TestRun>
+        <ExecutionStatus>[key]</ExecutionStatus>
+        <ExecutionResult>[key]</ExecutionResult>
+        <ErrorMessage>exampleString</ErrorMessage>
+        <ExecutionResultBreakdown>
+            <ResultBreakdown>
+                <CountPassed>5</CountPassed>
+                <CountNotExecuted>1</CountNotExecuted>
+                <CountFailed>1</CountFailed>
+            </ResultBreakdown>
+        </ExecutionResultBreakdown>
+      </TestRun>
+    </tns:GetTestRunResponse>
+  </soap:Body>
+</soap:Envelope>
+```
+
+##### 3.2.3.3 Example
+
+Example which returns the status of the execution flags and details for each test case.
+
+```xml
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tns="http://www.mendix.com/">
+  <soap:Body>
+    <tns:GetTestRunResponse>
+      <TestRun>
+        <ExecutionStatus>[key]</ExecutionStatus>
+        <ExecutionResult>[key]</ExecutionResult>
+        <ErrorMessage>exampleString</ErrorMessage>
+        <ExecutionFlags>
+            <Flags>
+                <Canceled>true</Canceled>
+                <Warning>false</Warning>
+            </Flags>
+        </ExecutionFlags>
+        <ExecutionDetailsPerTestCase>
+          <ExecutionDetailsTestCase>
+            <Name>exampleString</Name>
+            <Result>[key]</Result>
+            <Duration>00:00:04</Duration>
+          </ExecutionDetailsTestCase>
+          <ExecutionDetailsTestCase>
+            <Name>exampleString</Name>
+            <Result>[key]</Result>
+            <Duration>00:01:37</Duration>
+            <ErrorMessage>exampleString</ErrorMessage>
+          </ExecutionDetailsTestCase>
+        </ExecutionDetailsPerTestCase>
+      </TestRun>
+    </tns:GetTestRunResponse>
+  </soap:Body>
+</soap:Envelope>
+```
+
+### 3.3 Rerun Not Passed
+
+Reruns all the failed or not-executed test cases for a finished job. Returns the UUID of the new job which can be used to query the result.
+
+#### 3.3.1 URL
+
+```
+https://ats100.mendixcloud.com/ws/RerunNotPassed
+```
+
+#### 3.3.2 Request
+
+You must include the following information in the request:
+
+| Name | Description |
+| --- | --- |
+| username | ATSAPIUser |
+| password | ATSAPIUser |
+| AppAPIToken | The key for the CI/CD API. Generated on the **App Settings** page. |
+| AppID | The ID of your Mendix app. |
+| FinishedJobID | The unique UUID of a finished job that was started with **Run Job**. |
+
+##### 3.3.2.1 Example
+
+```xml
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tns="http://www.mendix.com/">
+  <soap:Header>
+    <tns:authentication>
+      <username>ATSAPIUser</username>
+      <password>ATSAPIUser</password>
+    </tns:authentication>
+  </soap:Header>
+  <soap:Body>
+    <tns:RerunNotPassed>
+      <RerunNotPassed>
+        <AppAPIToken>exampleString</AppAPIToken>
+        <AppID>exampleString</AppID>
+        <FinishedJobID>exampleString</FinishedJobID>
+      </RerunNotPassed>
+    </tns:RerunNotPassed>
+  </soap:Body>
+</soap:Envelope>
+```
+
+#### 3.3.3 Response
+
+The response for **Rerun Not Passed** is identical with the response for **Run Job** in the [3.1.3 Response](#response) section above.

@@ -110,7 +110,7 @@ There are three possible outcomes of the authentication microflow:
 
 #### 3.2.3 Allowed Roles
 
-The allowed roles define which [module role](module-role) a user must have to be able to access the service. This option is only available when **Requires authentication** is set to **Yes**.
+The allowed roles define which [module role](module-security#module-role) a user must have to be able to access the service. This option is only available when **Requires authentication** is set to **Yes**.
 
 ### 5 Runtime considerations
 

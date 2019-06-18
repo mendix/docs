@@ -21,3 +21,4 @@ Looking to create great user experiences and a user-friendly graphical user inte
 * [Start Styling with Gulp & Sass](style-with-gulp-and-sass)
 * [Create Custom Error Pages](custom-error-page)
 * [Style Google Maps](style-google-maps)
+* [Use the Charts Widgets](charts-tutorials)

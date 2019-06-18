@@ -134,26 +134,28 @@ When implementing changes to your app or designing a custom widget, you may need
 To start a debugging session, do the following:
 1. Run your Mendix project locally.
 2. Start the Make It Native app.
-3. Select **Enable dev mode**
-4. Start your project on your mobile device.
+3. Select **Enable dev mode** in the Make It Native app.
+4. Start your project on your mobile device by doing the following steps:</br>
+	a. In Mendix Studio Pro, click View > View in the Mendix App </br>
+	b. With your mobile device, click **Scan QR code**, then scan the QR code with your mobile</br>
 
 When the app finishes loading, do the following:
 1. Open the developer menu by using a three-finger long press.
-2. Switch **Enable Remote js Debugging** on.
+2. Tap **Enable Remote js Debugging**.
 
-Your mobile app project should start reloading, and a Chrome window should start on your desktop pointing to the correct debugging address. If you are using Parallels, or a Chrome window does not start, navigate to *(machine-ip-address):8083/debugger-ui* in your Chrome browser manually.
+Your mobile app project should start reloading, and a Chrome window should start on your desktop pointing to a debugging address. Change the address in your navigation bar to *localhost:8083/debugger-ui* in your browser manually.
 
-If X incurs a 404 error, make sure the native bundler is running on your Y and your IP address matches the one pointing to your machine running Mendix Studio Pro. 
+If the Chrome page comes up but does not load your app, check that your project is running in Mendix Studio Pro. If it is, click the **Stop** button, then click **Run Locally** again to restart your app. 
 
 You should see this page:
 
 ![debug waiting](attachments/getting-started-with-native-mobile/debug-waiting.png)
 
-If the status remains at **Waiting**, try reloading your project. The **Waiting** status should change and indicate an **active** session:
+If the status remains at **Waiting**, use the reload command in the Make It Native app. The **Waiting** status should change and indicate an **active** session:
 
 ![debug active](attachments/getting-started-with-native-mobile/debug-active.png)
 
-Chrome's debugging tools should be pointing to your project. Now, you can debug your app like you would any other web app. 
+Your browser's debugging tools should be pointing to your project. Now, you can debug your app like you would any other web app. 
 
 Outside of Chrome, other tools can help you debug Mendix apps (such as React Developer Tools). Regardless of which tool you use, remember that Mendix uses a different port (8083) than a default React Native installation would (8080).
 

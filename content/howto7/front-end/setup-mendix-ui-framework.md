@@ -1,7 +1,7 @@
 ---
 title: "Set Up the Mendix UI Framework"
 category: "Front-End"
-menu_order: 35
+menu_order: 30
 tags: ["UI Framework", "Styling", "Scout", "Koala", "CSS", "Front-End"]
 ---
 

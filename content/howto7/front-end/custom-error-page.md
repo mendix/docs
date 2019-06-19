@@ -1,7 +1,7 @@
 ---
 title: "Create Custom Error Pages"
 category: "Front-End"
-menu_order: 55
+menu_order: 50
 tags: ["theming", "UX", "Error page", "offline", "404", "403", "Front-End"]
 ---
 

@@ -8,7 +8,7 @@ tags: ["native", "mobile", "developer", "test"]
 
 ## 1 Introduction
 
-{{% todo %}} With next release, also Mention that also possible using blank app or add to existing project, and how to (because Atlas needs to be updated) {{% /todo %}}
+{{% todo %}} With next release, also Mention that also possible using blank app or add to existing app project, and how to (because Atlas needs to be updated) {{% /todo %}}
 
 To use Mendix Studio Pro's native app capabilities, you can use the [Native Mobile Quickstart](https://appstore.home.mendix.com/link/app/109511/) app from the Mendix App Store. This app is optimized to quickly build a native mobile app. Out of the box, this app gives you a native page, a native phone profile to enable native device navigation, a native layout with menus, and native widgets and actions which leverage device capabilities.
 
@@ -27,7 +27,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * For information on device requirements, see [System Requirements](/refguide/system-requirements)
 * If you wish to use an emulator for Android mobile testing, install a product such as [Bluestacks](https://www.bluestacks.com/nl/index.html) or [Genymotion](https://www.genymotion.com/) (your emulator must have Google Play services supported)
 
-## 3 Creating a New Project Based on the Quickstart App{#quickstartapp}
+## 3 Creating a New App Project Based on the Quickstart App{#quickstartapp}
 
 {{% todo %}}[add Apple App Store link to MakeItNative app]{{% /todo %}}
 
@@ -127,9 +127,40 @@ You may notice an **Enable dev mode** toggle on the Make It Native app home page
 
 {{% image_container width="500" %}}![enable dev mode](attachments/getting-started-with-native-mobile/enable-dev-mode.png){{% /image_container %}}
 	
-{{% todo %}}[link to future debug doc - For more information on debugging, see Debugging A Native Mobile App]{{% /todo %}}
+### 3.4 Debugging Your Implementation
 
-### 3.4 Viewing Changes to Your App on Your Testing Device {#viewingchanges}
+When changing your native app or designing a custom widget, you may need to debug your implementation. The Make It Native app exposes a developer mode which supports debugging native apps for expert developers. Using Google Chrome is recommended for this, as it starts automatically during debugging.
+
+To start a debugging session, do the following:
+
+1. Run your Mendix app project locally on your desktop.
+2. Start the Make It Native app.
+3. Select **Enable dev mode** in the Make It Native app.
+4. Start your app project on your mobile device in Mendix Studio Pro by clicking **View** > **View in the Mendix App**.
+5. With your mobile device, tap **Scan QR code**, then scan the QR code on your desktop.
+
+When the Make It Native app finishes loading your app project, do the following:
+
+1. Open the developer menu by using a three-finger long press.
+2. Tap **Enable Remote js Debugging**.
+
+Your mobile app project should start reloading, and a Chrome window should launch on your desktop pointing to a debugging address. Change the address in your browser's navigation bar to *localhost:8083/debugger-ui* manually and go to that page.
+
+If Chrome launches but does not load your app, check that your app project is running in Mendix Studio Pro. If it is, click the **Stop** button, then click **Run Locally** again to restart your app. 
+
+You should see this page:
+
+![debug waiting](attachments/getting-started-with-native-mobile/debug-waiting.png)
+
+If the status remains at **Waiting**, use the reload command (pictured above) to refresh your app. The **Waiting** status should change and indicate an **active** session:
+
+![debug active](attachments/getting-started-with-native-mobile/debug-active.png)
+
+Your browser's debugging tools should be pointing to your app project. Now, you can debug your app like you would any other web app. 
+
+Outside of Chrome, other tools can help you debug Mendix apps (such as React Developer Tools). Regardless of which tool you use, remember that Mendix uses a different port (8083) than a default React Native installation would (8080).
+
+### 3.5 Viewing Changes to Your App on Your Testing Device {#viewingchanges}
 
 To see how changes made in Mendix Studio Pro are displayed live on your testing device, make a small change to your app.
 

@@ -471,6 +471,10 @@ module.exports = {
       from: "/refguide8/enumeration-values",
       to: "/refguide/enumerations"
     },
+	{
+      from: "/refguide8/inheritance-split",
+      to: "/refguide/object-type-decision"
+    },
 	/****************************************************
      * From Desktop Modeler version 7 (permanent, mapped)
      ****************************************************/

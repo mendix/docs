@@ -84,7 +84,7 @@ An exclusive split conditionally splits on either an expression or a rule. In ca
 Studio Pro Guide | Model SDK API docs
 --- | --- |
 [Exclusive Split](/refguide/exclusive-split) |[ExclusiveSplit](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.exclusivesplit.html)
-[Inheritance Split](/refguide/inheritance-split) |[InheritanceSplit](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.inheritancesplit.html)
+[Inheritance Split](/refguide/object-type-decision) |[InheritanceSplit](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.inheritancesplit.html)
 [Merge](/refguide/merge) |[ExclusiveMerge](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.exclusivemerge.html)
 [Rules](/refguide/rules) |[ExpressionSplitCondition](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.expressionsplitcondition.html)
 |[RuleSplitCondition](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.rulesplitcondition.html)

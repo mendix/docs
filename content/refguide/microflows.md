@@ -76,7 +76,7 @@ Gateways deal with making choices and merging different paths again..
 | --- | --- | --- |
 | [![](attachments/819203/917726.png)](exclusive-split) | [Exclusive Split](exclusive-split) | An exclusive split makes a decision based on a condition and follows one and only one of the outgoing flows.
 **Note**: There is no parallell execution in microflows. |
-| [![](attachments/819203/918122.png)](inheritance-split) | [Inheritance Split](inheritance-split) | An inheritance split is an element that makes a choice based on the [specialization](entities) of the selected object. You can give the specialized object a name using a [Cast Object](cast-object) action. |
+| [![](attachments/819203/918122.png)](object-type-decision) | [Object Type Decision](object-type-decision) | An object type decision is an element that makes a choice based on the [specialization](entities) of the selected object. You can give the specialized object a name using a [Cast Object](cast-object) action. |
 | [![](attachments/819203/918116.png)](merge) | [Merge](merge) | A merge can be used to combine multiple sequence flows into one. If a choice is made in a microflow and afterwards some common work needs to be done, you can combine the two (or more) paths using a merge. |
 
 ## 7 Activities<a name="activities"></a>

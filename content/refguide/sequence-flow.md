@@ -18,4 +18,4 @@ When you have two activities that you want to link together a sequence flow is u
 
 ## 2 Condition Value
 
-The **Condition value** describes which direction should be followed based on the outcome of an [exclusive split](exclusive-split) or an [inheritance split](inheritance-split).
+The **Condition value** describes which direction should be followed based on the outcome of an [exclusive split](exclusive-split) or an [object type decision](object-type-decision).

@@ -7,5 +7,5 @@ tags: ["studio pro"]
 This section describes the splits for microflows and nanoflows:
 
 * [Exclusive Split](exclusive-split)
-* [Inheritance Split](inheritance-split)
+* [Object Type Decision](object-type-decision)
 * [Merge](merge)

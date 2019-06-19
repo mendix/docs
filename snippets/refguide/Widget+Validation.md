@@ -1,6 +1,9 @@
 ### Validation Type
 
-This property indicates whether this widget value should be validated and, if so, how. The possible options are no validation, a predefined validation, or a custom validation.
+This property indicates whether this widget value should be validated and, if so, how. The possible options are:
+- no validation, 
+- a predefined validation, 
+- or a custom validation.
 
 The possible values of a predefined validation are the following:
 

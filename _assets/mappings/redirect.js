@@ -41,6 +41,13 @@ module.exports = {
       to: "/"
     },
 	/****************************************************
+     * Studio Pro Guide (permanent, mapped)
+     ****************************************************/
+	{
+      from: "/refguide/mindsphere/mindsphere-module-details",
+      to: "/refguide/siemens/mindsphere-module-details"
+    },
+	/****************************************************
      * Studio Guide (permanent, unmapped)
      ****************************************************/
 	{

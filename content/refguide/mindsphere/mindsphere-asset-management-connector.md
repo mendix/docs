@@ -1,7 +1,7 @@
 ---
 title: "MindSphere Asset Management Connector"
-category: "Siemens MindSphere"
-menu_order: 60
+parent: "mindsphere"
+menu_order: 30
 description: "Documentation of the MindSphere Asset Management Connector"
 tags: ["MindSphere", "Asset", "Asset Type", "Connector"]
 ---

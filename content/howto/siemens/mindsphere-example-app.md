@@ -1,6 +1,6 @@
 ---
 title: "Use the Siemens MindSphere Pump Asset Example App"
-category: "Siemens MindSphere"
+category: "Siemens"
 tags: ["Siemens", "MindSphere", "Example", "Asset Management", "Time Series", "REST", "API", "Pump"]
 ---
 

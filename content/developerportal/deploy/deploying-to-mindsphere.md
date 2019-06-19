@@ -28,7 +28,7 @@ You can easily copy code examples shown within grey blocks into the clipboard. H
 
 {{% /alert %}}
 
-To help you with your first MindSphere apps, there is also an example app which contains modules which call the MindSphere APIs. See [How to Use the Siemens MindSphere Pump Asset Example App](/howto/mindsphere/mindsphere-example-app) for more information.
+To help you with your first MindSphere apps, there is also an example app which contains modules which call the MindSphere APIs. See [How to Use the Siemens MindSphere Pump Asset Example App](/howto/siemens/mindsphere-example-app) for more information.
 
 ## 2 Prerequisites{#prerequisites}
 

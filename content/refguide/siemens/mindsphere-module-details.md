@@ -1,7 +1,7 @@
 ---
 title: "MindSphere Module Details"
-category: "Siemens MindSphere"
-menu_order: 40
+parent: "mindsphere"
+menu_order: 20
 description: "A detailed description of the modules which are required for deployment to MindSphere"
 tags: ["MindSphere"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -31,7 +31,7 @@ Please ensure that you also download the **latest version** of the MindSphere Th
 
 #### 2.1.1 LocalDevelopment
 
-These constants are only needed for local development and testing. For details of what needs to be put into the constants in the *LocalDevelopment* folder, please see [Local Testing](/refguide/mindsphere/mindsphere-development-considerations#localtesting) in *MindSphere Development Considerations*.
+These constants are only needed for local development and testing. For details of what needs to be put into the constants in the *LocalDevelopment* folder, please see [Local Testing](/refguide/siemens/mindsphere-development-considerations#localtesting) in *MindSphere Development Considerations*.
 
 #### 2.1.2 CockpitApplicationName
 
@@ -91,7 +91,7 @@ In addition, MindSphere SSO will identify whether the current user is a subtenan
 If the same user logs in using a different tenant, Mendix will treat this as a different user and a User ID will be used within Mendix instead of a user name.
 {{% /alert %}}
 
-For advice on how to make your apps multi-tenant, see [Multi-Tenancy](/refguide/mindsphere/mindsphere-development-considerations#multitenancy) in *MindSphere Development Considerations*.
+For advice on how to make your apps multi-tenant, see [Multi-Tenancy](/refguide/siemens/mindsphere-development-considerations#multitenancy) in *MindSphere Development Considerations*.
 
 ### 2.3 Roles & Scopes{#rolesscopes}
 
@@ -163,7 +163,7 @@ More information on the structure and content of this JSON object, together with
 
 ### 4.1 Atlas UI Theme
 
-See also section [MindSphere Icons](/refguide/mindsphere/mindsphere-development-considerations#atlasui) of *MindSphere Development Considerations* for a discussion about adding icons from the MindSphere Atlas UI Theme.
+See also section [MindSphere Icons](/refguide/siemens/mindsphere-development-considerations#atlasui) of *MindSphere Development Considerations* for a discussion about adding icons from the MindSphere Atlas UI Theme.
 
 ### 4.2 index.html Changes{#indexhtmlchanges}
 

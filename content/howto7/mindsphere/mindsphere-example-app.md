@@ -174,7 +174,7 @@ This is based on a standard Mendix starter app. It also has additional modules w
 
 The use of these modules is covered in more detail in [Siemens MindSphere – deployment](/developerportal/deploy/deploying-to-mindsphere).
 
-It also uses the **MindSphere Asset Management Connector**. This is described in [MindSphere Asset Management Connector](/refguide/mindsphere/mindsphere-asset-management-connector).
+It also uses the **MindSphere Asset Management Connector**. This is described in [MindSphere Asset Management Connector](/refguide7/mindsphere/mindsphere-asset-management-connector).
 
 To use the app:
 
@@ -184,7 +184,7 @@ To use the app:
 
     ![Example App Home page](attachments/mindsphere-example-app/image8.png)
 
-3.  If you are running locally, you will need to provide *Client ID* and *Client Secret* credentials for your app. See [MindSphere Development Considerations](/refguide/mindsphere/mindsphere-development-considerations) for more information on how to do this.
+3.  If you are running locally, you will need to provide *Client ID* and *Client Secret* credentials for your app. See [MindSphere Development Considerations](/refguide7/mindsphere/mindsphere-development-considerations) for more information on how to do this.
 
     If you are running in the MindSphere launchpad, you will be logged on using Single Sign-on.
 
@@ -249,7 +249,7 @@ The *Access Token* action is called at the start of every microflow which access
 
 ### 6.3 Asset Management
 
-Asset Management (retrieving assets and asset types) is performed using the MindSphere Asset Management Connector. This is described in [MindSphere Asset Management Connector](/refguide/mindsphere/mindsphere-asset-management-connector).
+Asset Management (retrieving assets and asset types) is performed using the MindSphere Asset Management Connector. This is described in [MindSphere Asset Management Connector](/refguide7/mindsphere/mindsphere-asset-management-connector).
 
 ### 6.4 Native REST
 
@@ -267,4 +267,4 @@ However, MindSphere will queue this request internally and the data will not be 
 
 ## 7 Read More
 
-* [MindSphere Asset Management Connector](/refguide/mindsphere/mindsphere-asset-management-connector)
+* [MindSphere Asset Management Connector](/refguide7/mindsphere/mindsphere-asset-management-connector)

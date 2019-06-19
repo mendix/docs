@@ -1,8 +1,8 @@
 ---
 title: "Set Up Gulp & Sass"
-parent: "style-with-gulp-and-sass"
-draft: true
-tags: [sass", "ux", "front-end"]
+parent: "use-gulp-and-sass"
+menu_order: 1
+tags: ["gulp", "sass", "ux", "front end"]
 ---
 
 ## 1  Introduction
@@ -28,13 +28,11 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 	![](attachments/set-up-sass/gulp.png)
 
-4.  You also need to install Node.js for task-running and automation through gulp. Install the latest LTS version from [Node.js](https://nodejs.org/en/):
+4.  Install Node.js for task-running and automation through gulp. Install the latest LTS version from [Node.js](https://nodejs.org/en/):
 
 	![](attachments/set-up-sass/node.png)
 
-5. Install the latest version of [TortoiseSVN](https://tortoisesvn.net/downloads.html): 
-
-	![](attachments/set-up-sass/svn.png)
+5. Install version **1.12.0** of [TortoiseSVN](https://tortoisesvn.net/downloads.html).
 
 ## 3 Preparing Your App Project
 
@@ -54,7 +52,7 @@ To prepare your app project, follow these steps:
 
 	![](attachments/set-up-sass/copy.png)
 
-6.  Write the following in PowerShell: `cd ‘{the address of your app project folder’`
+6.  Provide the directory for your app project folder in PowerShell: `cd ‘directory for your app project folder’`
 7.   Write `npm install` or use `npm install gulp-cli -g`:
 
 	![](attachments/set-up-sass/write-install.png)
@@ -111,7 +109,7 @@ Final steps! Read below to open and work with Sass:
 
 ### 4.1  Keeping Your Sass in the Custom Folder
 
-it is important to keep in mind that you are only working in the **custom** folder. You will not make any changes in the **lib** folder, but you can use that as a reference. You will only use the contents of the **\_variables.scss** file to get the variables you need and copy them in your **\_custom-variables.scss** file. The variables can differ from the default font sizes, colors, background colors, heights, and so on. In the **\_custom-variables.scss** file, you can also make your own variables, for example `\$brand-blue: \#48B0F7;`.
+it is important to keep in mind that you are only working in the **custom** folder. You will not make any changes in the **lib** folder, but you can use that as a reference. You will only use the contents of the **\_variables.scss** file to get the variables you need and copy them in your **\_custom-variables.scss** file. The variables can differ from the default font sizes, colors, background colors, heights, and so on. In the **\_custom-variables.scss** file, you can also make your own variables, for example `$brand-blue: \#48B0F7;`.
 
 You can now work on the Sass structure and organize everything neatly by creating sub-folders and files in the **custom** folder. You can also look in the **lib** folder to get an idea of which folders and files you will most likely use in your app project.
 
@@ -123,7 +121,7 @@ When you create a new Sass file, follow this naming guideline: *\_{namefilehere}
 
 Before you can see any changes in your app project with your new Sass, you need to import the folders and files first. If you open **custom.scss**, you will see this:
 
-`\@import "custom-variables";`
+`@import "custom-variables";`
 
 To import all the sub-folders and files you have created, write this:
 

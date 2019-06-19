@@ -1,7 +1,7 @@
 ---
 title: "Use Layouts & Snippets"
 category: "Front-End"
-menu_order: 25
+menu_order: 30
 tags: ["Front-End"]
 ---
 

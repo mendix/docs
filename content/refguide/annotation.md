@@ -24,7 +24,7 @@ Currently you warn users of unpaid orders with a pop-up message in the client. L
 
 For details, see [Microflow Element Common Properties](microflow-element-common-properties).
 
-## 3 Annotation Flow
+## 3 Annotation Flow {#annotation-flow}
 
 An annotation flow is a connection that can be used to link an annotation to a flow object(s).
 

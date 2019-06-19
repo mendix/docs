@@ -5,6 +5,7 @@ menu_order: 20
 tags: ["app store", "Studio Pro"]
 description: "Covers the basics of how to access the App Store from Studio Pro and provides examples of how to add a widget and module to your app."
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
+#The anchors downloading, widget, and project-layout below are mapped, so they should not be removed or changed.
 ---
 
 ## 1 Introduction

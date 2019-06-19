@@ -1,3 +1,15 @@
+---
+title: "Teamcenter Connector for Mendix"
+parent: "teamcenter"
+#menu_order: Enter the position of the document in the category or under the parent; number by 10 (for first), 20, 30, etc. for easy ordering of other documents in the future if necessary; don't add brackets or quotation marks; if no number is added, the system will add an extremely high number to order the documents, which means that if you only want a document to appear at the top, you only have to add "10" to that specific document, you don't have to order all the other documents in the category/under the parent
+description: "Documentation of the Teamcenter Connector which enables Mendix developers to integrate their app with product data from Teamcenter"
+tags: ["Teamcenter", "connector"]
+#notoc: true
+#layout: wide
+draft: true
+#toc-level: "3"
+---
+
 # Introduction
 Teamcenter is a virtual gateway to your company’s product information connecting all who need to collaborate with product and process knowledge. Teamcenter enables you to digitally manage your product and manufacturing data in the context of the product life cycle.
 

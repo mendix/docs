@@ -85,13 +85,17 @@ If the [export mapping](export-mappings) is based on a message definition, it ca
 
 This option allows you to send binary data (for example, the contents of a FileDocument).
 
-### 4.3 Form-data
+### 4.3 Form-Data
 
-This option allows you to generate a multipart/form-data request multiple parts. Each part is a pair with a key and a value (a microflow expression). FileDocuments and Images are are also supported for this option when used as a variable in microflow expression.
+This option allows you to generate a multipart/form-data request for multiple parts. Each part is a pair with a key and a value (microflow expression). 
+
+FileDocuments and images are are also supported for this option when used as variables in microflow expressions.
 
 #### 4.3.1 Content Type
 
-Setting up a **Content-Type header** for a Form-data request will result in a consistency error as it will be set automatically to **multipart/form-data**. Content-Type for the FileDocument part will be **application/octet-stream**
+Setting up a **Content-Type header** for a form-data request will result in a consistency error, as it will automatically be set to **multipart/form-data**. 
+
+The content type for the FileDocument part is **application/octet-stream**.
 
 ### 4.4 Custom Request Template
 

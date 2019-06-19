@@ -1,6 +1,6 @@
 ---
 title: "Decision"
-parent: "splits"
+parent: "decisions"
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -13,7 +13,7 @@ A decision is an element that makes a choice based on a condition and follows (e
 
 ### 2.1 Type
 
-Type defines whether an expression or a rule is used to define the condition of the split.
+Type defines whether an expression or a rule is used to define the condition of the decision.
 
 | Option | Description |
 | --- | --- |
@@ -22,7 +22,7 @@ Type defines whether an expression or a rule is used to define the condition of 
 
 ### 2.2 Expression
 
-If the property 'Type' is set to 'Expression' the expression field can be used to define the condition of the split. The condition can be entered as an [expression](expressions). The expression should result in a boolean or an enumeration.
+If the property 'Type' is set to 'Expression' the expression field can be used to define the condition of the decision. The condition can be entered as an [expression](expressions). The expression should result in a boolean or an enumeration.
 
 {{% alert type="info" %}}
 
@@ -37,7 +37,7 @@ The expression entered is given below. Because you want to go a different direct
 
 ### 2.3 Rule
 
-If the property 'Type' is set to 'Rule', a [rule](rules) can be selected to define the condition of the split. For each parameter of the rule an argument needs to be specified using [expressions](expressions). For example, a rule that determines whether a customer deserves a certain status will have a customer object as a parameter.
+If the property 'Type' is set to 'Rule', a [rule](rules) can be selected to define the condition of the decision. For each parameter of the rule an argument needs to be specified using [expressions](expressions). For example, a rule that determines whether a customer deserves a certain status will have a customer object as a parameter.
 
 ## 3 Common Properties
 

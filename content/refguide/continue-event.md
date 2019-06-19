@@ -8,7 +8,7 @@ A continue event is used to stop the current iteration and start the iteration o
 
 {{% alert type="warning" %}}
 
-Only if the last activity of the flow inside the loop ends with a break event, the loop will be aborted. Otherwise, the iteration of the next object will be started automatically. So, in theory, a continue event is only necessary after a split (when one of the paths does not have a destination yet), as both paths of a split need a destination. However, for clarity you could choose to always include one.
+Only if the last activity of the flow inside the loop ends with a break event, the loop will be aborted. Otherwise, the iteration of the next object will be started automatically. So, in theory, a continue event is only necessary after a decision (when one of the paths does not have a destination yet), as both paths of a decision need a destination. However, for clarity you could choose to always include one.
 
 {{% /alert %}}{{% alert type="info" %}}
 

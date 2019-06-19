@@ -19,7 +19,7 @@ Every string attribute will start out as an empty field, whenever the users or t
 
 Whenever you want to check if a string contains text it won't be sufficient to execute the expression: _$Account/Firstname !=_ **_empt_y** nor will  _$Account/Firstname != ''_ cover all cases. Every string needs to be checked for both values to be sure that a field really is empty.  
 
-### Example 1, broken down into separate splits:
+### Example 1, broken down into separate decisions:
 
 An inefficient example on how to check for text and create a combined messages based on the outcome.
 Building out all combinations is a lot of work, and if something need to change it will be a lot of work to change and it is prone to errors.

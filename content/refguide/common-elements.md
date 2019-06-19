@@ -17,4 +17,4 @@ The common elements for microflows and nanoflows are divided into the following:
 * [Microflow Element Common Properties](microflow-element-common-properties)
 * [Parameter](parameter)
 * [Sequence Flow](sequence-flow)
-* [Splits](splits)
+* [Decisions](decisions)

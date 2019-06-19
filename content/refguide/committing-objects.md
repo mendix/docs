@@ -4,6 +4,10 @@ parent: "object-activities"
 tags: ["studio pro"]
 ---
 
+{{% alert type="warning" %}}
+This activity can be used in both **Microflows** and **Nanoflows**.
+{{% /alert %}}
+
 ## 1 Introduction
 
 This action can commit one or more objects. For persistable entities this means that the object will be stored in the database. Committing non-persistable entities stores the current attribute values and association values in memory, this allows a rollback to revert to those values. See also [Persistability](persistability).

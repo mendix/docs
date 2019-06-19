@@ -4,6 +4,10 @@ parent: "client-activities"
 tags: ["studio pro"]
 ---
 
+{{% alert type="warning" %}}
+This activity can be used in both **Microflows** and **Nanoflows**.
+{{% /alert %}}
+
 Close page closes the currently open page.
 
 {{% alert type="info" %}}

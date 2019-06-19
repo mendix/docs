@@ -4,6 +4,10 @@ parent: "object-activities"
 tags: ["studio pro"]
 ---
 
+{{% alert type="warning" %}}
+This activity can be used in both **Microflows** and **Nanoflows**.
+{{% /alert %}}
+
 ## 1 Introduction
 
 The Rollback object action can be used to undo changes (that have not been committed) made to the object in the part of the flow preceding the activity. Furthermore, it deletes objects that have been created but never committed.

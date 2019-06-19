@@ -1,12 +1,12 @@
 ---
-title: "Call Web Service Action"
-parent: "microflow-activities"
-tags: ["studio pro"]
+title: "Call Web Service"
+parent: "integration-activities"
+tags: ["studio pro", "integration activity", "call we service"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="info" %}}
-This activity can only be used in microflows, not in nanoflows.
+{{% alert type="warning" %}}
+ This activity can only be used in **Microflows**.
 {{% /alert %}}
 
 ## 1 Introduction

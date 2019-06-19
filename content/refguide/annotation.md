@@ -1,7 +1,8 @@
 ---
 title: "Annotation"
-parent: "common-elements"
-tags: ["studio pro"]
+parent: "application-logic"
+menu_order: 40
+tags: ["studio pro", "annotation", annotation flow]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -22,3 +23,11 @@ Currently you warn users of unpaid orders with a pop-up message in the client. L
 ### 2.1 Caption
 
 For details, see [Microflow Element Common Properties](microflow-element-common-properties).
+
+## 3 Annotation Flow
+
+An annotation flow is a connection that can be used to link an annotation to a flow object(s).
+
+For example, this is an annotation flow linking an annotation and a microflow call activity:
+
+![](attachments/819203/918062.png)

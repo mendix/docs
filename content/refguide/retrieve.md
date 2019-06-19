@@ -5,6 +5,10 @@ tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert type="warning" %}}
+This activity can be used in both **Microflows** and **Nanoflows**.
+{{% /alert %}}
+
 ## 1 Introduction
 
 Retrieve can be used to get one or more objects, either by directly traversing an association of another object, or by retrieving objects from the database.

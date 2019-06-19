@@ -4,6 +4,10 @@ parent: "object-activities"
 tags: ["studio pro"]
 ---
 
+{{% alert type="warning" %}}
+This activity can be used in both **Microflows** and **Nanoflows**.
+{{% /alert %}}
+
 ## 1 Introduction 
 
 The Create object action can be used to create an object.

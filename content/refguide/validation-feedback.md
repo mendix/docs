@@ -3,6 +3,10 @@ title: "Validation Feedback"
 parent: "client-activities"
 ---
 
+{{% alert type="warning" %}}
+This activity can be used in both **Microflows** and **Nanoflows**.
+{{% /alert %}}
+
 ## 1 Introduction
 
 With this action, you can display a red text below a widget that displays an attribute or association.

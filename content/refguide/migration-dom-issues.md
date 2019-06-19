@@ -221,7 +221,10 @@ Form groups now have special class name depending on their widget type:
 
 ### 9.4 Examples of Form Group Layout
 
-Vertical input has a label, input, and an optional validation message on the same level:
+**vertical/horizontal input "what"? Forms?**
+**they have these things now? like, they are new additions?**
+
+Vertical input now has a label, input, and an optional validation message on the same level:
 
 ```html
 <div class="form-group mx-name-textBox4 [...]" [...]>
@@ -238,7 +241,7 @@ Vertical input has a label, input, and an optional validation message on the sam
 </div>
 ```
 
-Horizontal input has a label with `col-sm-{labelWith}`, `div.col-sm-{12-labelWith}`, input, and an optional validation message inside:
+Horizontal now input has a label with `col-sm-{labelWith}`and `div.col-sm-{12-labelWith}`. Its label also has input and an optional validation message inside:
 
 ```html
 <div class="form-group mx-name-textBox4 [...]" [...]>
@@ -255,6 +258,8 @@ Caption
 	</div>
 </div>
 ```
+
+**fix this fragmented nonsense**
 
 Without label. Same structure for inputs without a label in both vertical and horizontal forms. Has an input and an optional validation message.
 
@@ -273,13 +278,15 @@ Without label. Same structure for inputs without a label in both vertical and ho
 
 ### 9.5 Read-Only Controls
 
-Previously, non-editable controls with **Read-only style** set to **Text** could have been rendered using a `p` or a `label` element with a `form-control-static` class on them. Read-only controls with **Read-only style** **Text** are now rendered as `<div class="form-control-static"/>`.
+Previously, non-editable controls with **Read-only style** set to **Text** could have been rendered using a `p` or a `label` element with a `form-control-static` class on them. Read-only controls with **Read-only style** set to **Text** are now rendered as `<div class="form-control-static"/>`.
 
 ### 9.6 Input Widgets Structure
 
-Previously, some input widgets had a wrapper element surrounding their control. These redundant wrappers have been removed, and now bare controls are rendered wherever possible (except radio buttons in a radio buttons group, each individual control is wrapped in a `div`).
+Previously, some input widgets had a wrapper element surrounding their control. These redundant wrappers have been removed, and now bare controls are rendered wherever possible (except radio buttons in a radio buttons group, in which each individual control is wrapped in a `div`).
 
 ### 9.7 Examples of Input Widget Layout
+
+**put some text here introing why anyone would need this or what these examples illustrate**
 
 Text box:
 
@@ -298,6 +305,8 @@ Check box:
 ```html
 <input type="checkbox" value="" />
 ```
+
+**change to complete sentence**
 
 When **Label position** is set to **After control** (label on the form group is not shown):
 
@@ -344,19 +353,24 @@ Drop down:
 
 ### 10.1 Input
 
-The classes `mx-dateinput` and `mx-dateinput-input` have been removed in favour of the new `mx-compound-control` class, which was introduced for input widgets which are made up of more than one element (like having a button next to the input). The inner `<div>` element (with class `mx-dateinput-input-wrapper` ) around the input was removed and `<button>` element is now after the input in the DOM to match the visual order.
+The following changes have been made to the input **SOMETHING**:
+
+* The classes `mx-dateinput` and `mx-dateinput-input` have been removed in favor of the new `mx-compound-control` class
+* The `mx-compound-control` class was introduced for input widgets made up of more than one element, such as a widget with a button next to the input
+* The inner `<div>` element with class `mx-dateinput-input-wrapper` around the input was removed
+* The `<button>` element was placed after the input in the DOM to match the visual order
 
 ### 10.2 Calendar
 
 Because the calendar pop-up is no longer implemented using the Dojo framework, several changes were made to its internal structure:
 
-* All classes starting with `dijit` have been removed.
+* All classes starting with `dijit` have been removed
 * The outermost `<div>` element now has the class `mx-calendar`
 * The `<td>` elements, which represent the days in the calendar view, get the following classes:
 	* `mx-calendar-day-month-current`, `mx-calendar-day-month-previous` or `mx-calendar-day-month-next` (depending on whether the day falls in the current, previous or next month)
 	* `mx-calendar-day-selected` if the day is currently selected in the date picker for which the calendar was opened
 	* `mx-calendar-day-active` if the day currently has the focus
-* The `<span>` elements inside `<td>` and `<th>` elements have been removed.
+* The `<span>` elements inside `<td>` and `<th>` elements have been removed
 
 The month header now has the following structure:
 

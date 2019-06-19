@@ -26,15 +26,15 @@ The **Resources** category contain various document types that can be used in di
 
 | Element            | Is used in                      | Description                                                  |
 | ------------------ | -------------------------------------- | ------------------------------------------------------------ |
-| Java action        | Microflows                             | Java actions can extend the functionality of your application. They can be called from microflows. |
-| JavaScript action  | Nanoflow                               | JavaScript actions can extend the functionality of your application. They can be called from nanoflows. |
-| Rule               | Microflows                             | Rules contain the application logic that should result in an enumeration or a Boolean. They are used in exclusive splits in microflows. |
-| Enumeration        | Domain model                           | Enumerations are used to define attributes of an enumeration type. |
-| Dataset            | Pages                                  | Datasets define the data shown in reporting widgets.        |
-| Constant           | Microflow expressions and web services | Constants are used to define configuration values.           |
-| Regular expression | Domain model                           | Regular expressions define criteria that a string should match and are used in validation rules to identify whether a string attribute type matches these criteria. |
-| Scheduled event    | Runtime/Microflows                     | Scheduled events let the runtime execute a microflow at a specific moment in time. |
-| Document template  | Microflows                             | Document template is used to format the document in a client and to download or print it. |
+| [Java action](java-actions) | Microflows                             | Java actions can extend the functionality of your application. They can be called from microflows. |
+| [JavaScript action](javascript-actions) | Nanoflow                               | JavaScript actions can extend the functionality of your application. They can be called from nanoflows. |
+| [Rule](rules)      | Microflows                             | Rules contain the application logic that should result in an enumeration or a Boolean. They are used in exclusive splits in microflows. |
+| [Enumeration](enumerations) | Domain model                           | Enumerations are used to define attributes of an enumeration type. |
+| [Dataset](data-sets) | Pages                                  | Datasets define the data shown in reporting widgets.        |
+| [Constant](constants) | Microflow expressions and Consumed web services | Constants are used to define configuration values.           |
+| [Regular expression](regular-expressions) | Domain model                           | Regular expressions define criteria that a string should match and are used in validation rules to identify whether a string attribute type matches these criteria. |
+| [Scheduled event](scheduled-events) | Microflows                     | Scheduled events let the runtime execute a microflow at a specific moment in time. |
+| [Document template](document-templates) | Microflows                             | Document template is used to format the document in a client and to download or print it. |
 
 ## 4 Read More
 

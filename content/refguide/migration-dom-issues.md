@@ -362,15 +362,15 @@ The following changes have been made to the input **SOMETHING**:
 
 ### 10.2 Calendar
 
-Because the calendar pop-up is no longer implemented using the Dojo framework, several changes were made to its internal structure:
+Because the calendar pop-up is no longer implemented using the Dojo framework, several changes were made to the calendar pop-up's internal structure:
 
 * All classes starting with `dijit` have been removed
 * The outermost `<div>` element now has the class `mx-calendar`
 * The `<td>` elements, which represent the days in the calendar view, get the following classes:
-	* `mx-calendar-day-month-current`, `mx-calendar-day-month-previous` or `mx-calendar-day-month-next` (depending on whether the day falls in the current, previous or next month)
-	* `mx-calendar-day-selected` if the day is currently selected in the date picker for which the calendar was opened
-	* `mx-calendar-day-active` if the day currently has the focus
-* The `<span>` elements inside `<td>` and `<th>` elements have been removed
+	* `mx-calendar-day-month-current`, `mx-calendar-day-month-previous` or `mx-calendar-day-month-next`: depending on whether the day falls in the current, previous, or next month
+	* `mx-calendar-day-selected`: if the day is currently selected in the date picker for which the calendar was opened
+	* `mx-calendar-day-active`:  if the day currently has the focus
+* The `<span>` elements inside the `<td>` and `<th>` elements have been removed
 
 The month header now has the following structure:
 
@@ -411,20 +411,35 @@ The year switcher now has the following structure:
 
 ## 11 Reference Selector and Input Reference Set Selector Markup Changes
 
-The classes `mx-referenceselector` and `mx-referencesetselecto``r` have been removed from the main `<div>` element in favor of the new `mx-compound-control` class, which was introduced for input widgets made up of more than one element. One common input widget with multiple elements is a button next to an input. The surrounding form group will now get the class `mx-referenceselector` or `mx-inputreferencesetselector` (note the `input` prefix) instead. The inner `<div>` element (having a class ending with `-input-wrapper`) around the input was removed and `<button>` elements have been placed after the input in the DOM to match the visual order.
+The following changes have been made to the reference selector markup:
+
+* The classes `mx-referenceselector` and `mx-referencesetselector` have been removed from the main `<div>` element in favor of the new `mx-compound-control` class, which was introduced for input widgets made up of more than one element (one common input widget with multiple elements is a button next to an input)
+
+The following changes have been made to the input reference set selector markup: **surrounding form group? surrounding what? Also, can I move the `mx-referenceselector` reference to the above bullet/section?**
+
+* The surrounding form group will now get the class `mx-referenceselector` or `mx-inputreferencesetselector` (note the `input` prefix) instead
+* The inner `<div>` element (sharing a class ending with `-input-wrapper`) around the input was removed
+* The `<button>` elements have been placed after the input in the DOM to match the visual order
 
 
 ## 12 DropDownButton Widget Cleanup
 
-The class `mx-list` has been removed from the list of terms in the dialog window. The class `mx-dropdown` has been removed from the dialog window, as it has nothing to do with drop down in the search input.
+The following changes have been made to the `DropDownButton` **X**:
+
+* The class `mx-list` has been removed from the list of terms in the dialog window
+* The class `mx-dropdown` has been removed from the dialog window, as it has nothing to do with drop down in the search input
 
 
 ## 13 File Uploader Markup Changes
 
-Previously File and Image uploader widgets were rendered differently on desktop and mobile browsers. On desktop it was an easily stylable custom html snippet while on mobile it was a native file input which is hard to style.
+**have dev help me break into bullets (esp 3rd para)**
 
-We made this widget consistent, now it always shows the same html structure. Also we made some changes in a DOM structure of those widgets to be consistent with other compound widgets like Reference Selector and Date Picker.
+Previously, file and image uploader widgets were rendered differently on desktop and mobile browsers. On desktop these widgets rendered as an easily stylable custom HTML snippet, while on mobile they manifested as difficult-to-style native file input.
 
-Now those widgets are always represented as a `div`  element with `mx-compound-control` class on it, `mx-fileinput` class is moved to the form group. Inside of the `div` there is an input with `form-control` class. This input represents a filename of currently selected file. Additional class `mx-wrapped-label` is gone from the input. Next to the input there are one of two buttons for uploading and downloading the current file, they have the same classes as before.
+These widgets have been changed for consistency. Now, they always shows the same HTML structure. Also, these widgets' DOM structure has been made more consistent with other compound widgets (like the reference selector and date picker).
+
+**those widgets? which ones?**
+
+Now those widgets are always represented as a `div`  element with `mx-compound-control` class on it. Also, the `mx-fileinput` class has been moved to the form group. Inside of the `div`, there is an input with `form-control` class. This input represents a filename of currently selected file. The class `mx-wrapped-label` is gone from the input. Next to the input, there are one of two buttons for uploading and downloading the current file. These buttons have the same classes as before.
 
 

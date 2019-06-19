@@ -16,7 +16,6 @@ However these updates might impact your styling. Markup in your widgets and thei
 
 TODO: [+How to migrate Atlas to Mendix 8](https://paper.dropbox.com/doc/How-to-migrate-Atlas-to-Mendix-8-g4PvGKOMxR2aSHLPSj4xo) 
 
-
 ## 3 Streamlined Custom Themes
 
 **what is — find nice location-- ?**
@@ -54,22 +53,22 @@ Another change concerning the data grid markup is that the `div` containing the 
 This is the current resulting markup of the data grid (unchanged parts omitted):
 
 ```html
-    <div class="mx-grid mx-datagrid mx-name-grid1">
-        <div class="mx-grid-searchbar" style="display: none;">...</div>
-        <div class="mx-grid-controlbar">...</div>
-        <div class="mx-grid-content">
-            <table>
-                <colgroup>...</colgroup>
-                <thead>
-                  <tr class="mx-name-head-row"></tr>
-                </thead>
-                <tbody>
-                  <tr class="mx-name-index-0" >...</tr>
-                </tbody>
-                <tfoot></tfoot>
-            </table>
-        </div>
-    </div>
+<div class="mx-grid mx-datagrid mx-name-grid1">
+	<div class="mx-grid-searchbar" style="display: none;">...</div>
+	<div class="mx-grid-controlbar">...</div>
+	<div class="mx-grid-content">
+		<table>
+			<colgroup>...</colgroup>
+			<thead>
+				<tr class="mx-name-head-row"></tr>
+			</thead>
+			<tbody>
+				<tr class="mx-name-index-0" >...</tr>
+			</tbody>
+			<tfoot></tfoot>
+		</table>
+	</div>
+</div>
 ```
 
 Additionally, a number of additional classes on the table have been removed, as they are easily accessed by the element names. 
@@ -77,24 +76,24 @@ Additionally, a number of additional classes on the table have been removed, as 
 Common use cases for styling the data grid now contains CSS such as this:
 
 ```css
-    .mx-datagrid .mx-datagrid-head-table {
-      // your styling
-    }
-    .mx-datagrid .mx-datagrid-body-table .mx-datagrid-body tr td {
-      // your styling
-    }
+.mx-datagrid .mx-datagrid-head-table {
+	// your styling
+}
+.mx-datagrid .mx-datagrid-body-table .mx-datagrid-body tr td {
+	// your styling
+}
 ```
 
 This should now be rewritten to:
 
 ```css
-    .mx-datagrid thead {
-      // your styling
-    }
-    
-    .mx-datagrid tbody tr td {
-      // your styling
-    }
+.mx-datagrid thead {
+	// your styling
+}
+
+.mx-datagrid tbody tr td {
+	// your styling
+}
 ```
 
 ## 6 List View Markup Changes
@@ -116,29 +115,29 @@ The order of the DOM elements list view search bar has been corrected to be cons
 Common use cases for styling the list view might contain CSS such as this:
 
 ```css
-    .mx-listview-item {
-      // Your styling
-    }
-    .mx-listview-search-input input {
-      // Your styling
-    }
-    .mx-listview-clear-button {
-      // Your styling
-    }
+.mx-listview-item {
+	// Your styling
+}
+.mx-listview-search-input input {
+	// Your styling
+}
+.mx-listview-clear-button {
+	// Your styling
+}
 ```
 
 This should be rewritten to:
 
 ```css
-    .mx-listview li {
-      // Your styling
-    }
-    .mx-listview-searchbar input {
-      // Your styling
-    }
-    .mx-listview-searchbar button {
-      // Your styling
-    }
+.mx-listview li {
+	// Your styling
+}
+.mx-listview-searchbar input {
+	// Your styling
+}
+.mx-listview-searchbar button {
+	// Your styling
+}
 ```
 
 ## 7 Scroll Container Markup Changes
@@ -151,10 +150,10 @@ All classes starting with `mx-layoutcontainer` have been removed from scroll con
 The markup for link buttons has been made more consistent with other buttons:
 
 ```html
-    <a href="#" class="mx-link mx-name-actionButton1">
-      <span class="glyphicon glyphicon-euro"></span>
-      Link button
-    </a>
+<a href="#" class="mx-link mx-name-actionButton1">
+	<span class="glyphicon glyphicon-euro"></span>
+	Link button
+</a>
 ```
 
 ## 9 Input Widgets Markup Changes
@@ -167,17 +166,17 @@ Every input widget has an implicit form group structure wrapped around it. Befor
 Previously data view was rendering `form-horizontal` class on it when **Form orientation** was set to **Horizontal** and no such class if this option was set to **Vertical**. Now we always add `form-horizontal` or `form-vertical` on **Horizontal** and **Vertical** options respectively. This makes it easier to style forms (and inputs in them) with different orientations by targeting one or another class in your CSS selector. If previously you were relying on presence or absence of `form-horizontal` now you can make your CSS selectors simpler by using `form-vertical`.
 
 ```html
-    <div class="mx-dataview mx-name-dataView3 form-horizontal"><!-- or form-vertical -->
-            <div class="mx-dataview-content">
-                    ...
-                    <div class="form-group"> ... </div>
-                    <div class="form-group"> ... </div>
-                    ...
-            </div>
-            <div class="mx-dataview-controls">
-                    ...
-            </div>
-    </div>
+<div class="mx-dataview mx-name-dataView3 form-horizontal"><!-- or form-vertical -->
+		<div class="mx-dataview-content">
+			...
+			<div class="form-group"> ... </div>
+			<div class="form-group"> ... </div>
+			...
+		</div>
+		<div class="mx-dataview-controls">
+			...
+		</div>
+</div>
 ```
 
 ### 9.2 Form group structure
@@ -185,17 +184,17 @@ Previously data view was rendering `form-horizontal` class on it when **Form ori
 Previously if widget had **Show caption** option set to **No** form group structure was missing `form-group` class on the top level div:
 
 ```html
-    <div class="mx-name-textBox4 [...]" [...]>
-        <INPUT-WIDGET />
-    </div>
+<div class="mx-name-textBox4 [...]" [...]>
+	<INPUT-WIDGET />
+</div>
 ```
 
 Now `form-group` class is always in place with extra `no-columns` class:
 
 ```html
-    <div class="form-group no-columns mx-name-textBox4 [...]" [...]>
-        <INPUT-WIDGET />
-    </div>
+<div class="form-group no-columns mx-name-textBox4 [...]" [...]>
+	<INPUT-WIDGET />
+</div>
 ```
 
 If you’ve had custom styles using `.form-group` before, this might be a breaking change as `.form-group`  matches with more elements now. You can now target form groups and elements inside them on only horizontal or only vertical forms using `.form-horizontal .form-group` or `.form-vertical .form-group` respectively. 
@@ -218,51 +217,51 @@ Form groups now have special class name depending on their widget type:
 Vertical input has a label, input, and an optional validation message on the same level:
 
 ```html
-    <div class="form-group mx-name-textBox4 [...]" [...]>
-       <label class="control-label" for="123_abc">
-           Caption
-       </label>
-    
-       <INPUT-WIDGET/>
-       <!-- OR for readonly style text -->
-       <div class="form-control-static">value</div>
-    
-       <!-- optional: validation message -->
-       <div class="alert alert-danger mx-validation-message">checkboom</div>
-    </div>
+<div class="form-group mx-name-textBox4 [...]" [...]>
+	<label class="control-label" for="123_abc">
+		Caption
+	</label>
+
+	<INPUT-WIDGET/>
+	<!-- OR for readonly style text -->
+	<div class="form-control-static">value</div>
+
+	<!-- optional: validation message -->
+	<div class="alert alert-danger mx-validation-message">checkboom</div>
+</div>
 ```
 
 Horizontal input has a label with `col-sm-{labelWith}`, `div.col-sm-{12-labelWith}`, input, and an optional validation message inside:
 
 ```html
-    <div class="form-group mx-name-textBox4 [...]" [...]>
-        <label class="control-label col-sm-4" for="123_abc">
-            Caption
-        </label>
-        <div class="col-sm-8">
-            <INPUT-WIDGET/>
-            <!-- OR for readonly style text -->
-            <div class="form-control-static">value</div>
-    
-            <!-- optional: validation message -->
-            <div class="alert alert-danger mx-validation-message">checkboom</div>
-        </div>
-    </div>
+<div class="form-group mx-name-textBox4 [...]" [...]>
+	<label class="control-label col-sm-4" for="123_abc">
+Caption
+	</label>
+	<div class="col-sm-8">
+		<INPUT-WIDGET/>
+		<!-- OR for readonly style text -->
+		<div class="form-control-static">value</div>
+
+		<!-- optional: validation message -->
+		<div class="alert alert-danger mx-validation-message">checkboom</div>
+	</div>
+</div>
 ```
 
 Without label. Same structure for inputs without a label in both vertical and horizontal forms. Has an input and an optional validation message.
 
 ```html
-    <div class="form-group mx-name-textBox4 [...]" [...]>
-        <!-- A form group without a label is still a form-group -->
+<div class="form-group mx-name-textBox4 [...]" [...]>
+	<!-- A form group without a label is still a form-group -->
     
-        <INPUT-WIDGET/>
-        <!-- OR for readonly style text -->
-        <div class="form-control-static">value</div>
+	<INPUT-WIDGET/>
+	<!-- OR for readonly style text -->
+	<div class="form-control-static">value</div>
     
-        <!-- optional: validation message -->
-        <div class="alert alert-danger mx-validation-message">checkboom</div>
-    </div>
+	<!-- optional: validation message -->
+	<div class="alert alert-danger mx-validation-message">checkboom</div>
+</div>
 ```
 
 ### 9.5 Read-Only Controls
@@ -278,60 +277,60 @@ Previously, some input widgets had a wrapper element surrounding their control. 
 Text box:
 
 ```html
-    <input class="form-control" type="text" id="123_abc" />
+<input class="form-control" type="text" id="123_abc" />
 ```
 
 Text area:
 
 ```html
-    <textarea class="form-control mx-textarea-input mx-textarea mx-textarea-input-noresize"></textarea>
+<textarea class="form-control mx-textarea-input mx-textarea mx-textarea-input-noresize"></textarea>
 ```
 
 Check box:
 
 ```html
-    <input type="checkbox" value="" />
+<input type="checkbox" value="" />
 ```
 
 When **Label position** is set to **After control** (label on the form group is not shown):
 
 ```html
-    <input type="checkbox" value="" />
-    <label for="">Label</label>
+<input type="checkbox" value="" />
+<label for="">Label</label>
 ```
 
 Radio buttons: 
 
 ```html
-    <div role="radiogroup" id="123_abc" aria-labelledby="123_abc-label">
-        <div class="radio">
-            <input type="radio" id="123_abc_0" value="Funghi">
-            <label for="123_abc_0">Funghi</label>
-        </div>
-        <div class="radio">
-            <input type="radio" id="123_abc_1" value="Pepperoni">
-            <label for="123_abc_1">Pepperoni</label>
-        </div>
-        <div class="radio">
-            <input type="radio" id="123_abc_2" value="Tre_Formaggi">
-            <label for="123_abc_2">Tre Formaggi</label>
-        </div>
-        <div class="radio">
-            <input type="radio" id="123_abc_3" value="Margherita">
-            <label for="123_abc_3">Margherita</label>
-        </div>
-    </div>
+<div role="radiogroup" id="123_abc" aria-labelledby="123_abc-label">
+	<div class="radio">
+		<input type="radio" id="123_abc_0" value="Funghi">
+		<label for="123_abc_0">Funghi</label>
+	</div>
+	<div class="radio">
+		<input type="radio" id="123_abc_1" value="Pepperoni">
+		<label for="123_abc_1">Pepperoni</label>
+	</div>
+	<div class="radio">
+		<input type="radio" id="123_abc_2" value="Tre_Formaggi">
+		<label for="123_abc_2">Tre Formaggi</label>
+	</div>
+	<div class="radio">
+		<input type="radio" id="123_abc_3" value="Margherita">
+		<label for="123_abc_3">Margherita</label>
+	</div>
+</div>
 ```
 
 Drop down:
 
 ```html
-    <select class="form-control">
-        <option value=""></option>
-        <option value="a1">a1</option>
-        <option value="a2">a2</option>
-        <option value="a3">a3</option>
-    </select>
+<select class="form-control">
+	<option value=""></option>
+	<option value="a1">a1</option>
+	<option value="a2">a2</option>
+	<option value="a3">a3</option>
+</select>
 ```
 
 ## 10 Date Picker Markup Changes

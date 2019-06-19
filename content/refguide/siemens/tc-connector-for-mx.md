@@ -10,20 +10,20 @@ draft: true
 #toc-level: "3"
 ---
 
-# Introduction
+## 1 Introduction
 Teamcenter is a virtual gateway to your company’s product information connecting all who need to collaborate with product and process knowledge. Teamcenter enables you to digitally manage your product and manufacturing data in the context of the product life cycle.
 
 Teamcenter Connector for Mendix enables Mendix developers to access product data from Teamcenter or create and modify product data in Teamcenter.
 
-This documentation provides guidance on using Teamcenter Connector for Mendix. It assumes that you are  familiar with Mendix concepts, processes, and terminology for application development.
+This documentation provides guidance on using Teamcenter Connector for Mendix. It assumes that you are familiar with Mendix concepts, processes, and terminology for application development.
 
-# Prerequisites
+## 2 Prerequisites
 To use Teamcenter Connector for Mendix, you need the following:
 
 * [Mendix Modeler](https://www.mendix.com/tag/mendix-modeler/)
 * An appropriate Teamcenter license
 
-# Teamcenter Connector for Mendix domain model
+## 3 Teamcenter Connector for Mendix domain model
 
 The domain model is a data model that describes the information in your application domain in an abstract way. It is central to the architecture of your application. The domain model consists of [entities](https://docs.mendix.com/refguide/entities) and their relations represented by [associations](https://docs.mendix.com/refguide/associations).
 
@@ -32,7 +32,7 @@ To see the Teamcenter Connector domain model:
 1. In Mendix Modeler, open your project containing Teamcenter Connector.
 1. In the left navigation pane, go to **Domain Model** in the **TcConnector** folder.
 
-# Download Teamcenter Connector for Mendix
+## 4 Download Teamcenter Connector for Mendix
 
 Teamcenter Connector for Mendix is available on [Mendix App Store](https://appstore.mendix.com/). To add the connector to your project:
 
@@ -44,7 +44,7 @@ Teamcenter Connector for Mendix is available on [Mendix App Store](https://appst
 
 The connector is imported in your project in the **App Store Modules** folder.
  
-# Connect to Teamcenter
+## 5 Connect to Teamcenter
 
 Teamcenter Connector for Mendix comes with a sample application. To get started and validate your setup, you can run the sample application and connect to your Teamcenter environment.
 
@@ -55,19 +55,19 @@ Teamcenter Connector for Mendix comes with a sample application. To get started 
 
     ![env config incon](attachments/tc-connector-for-mx/env_config.png)
 
-# Log on to Teamcenter through Teamcenter Connector
+## 6 Log on to Teamcenter through Teamcenter Connector
 
-## Single sign on (SSO)
+### 6.1 Single sign on (SSO)
 
-## Non-SSO
+### 6.2 Non-SSO
 
-# Process for calling Teamcenter services using Teamcenter Connector
+## 7 Process for calling Teamcenter services using Teamcenter Connector
 
-# Using Teamcenter services available with Teamcenter Connector
+## 8 Using Teamcenter services available with Teamcenter Connector
 
-## Supported services
+### 8.1 Supported services
 
-## Steps to use Teamcenter services in your application
+### 8.2 Steps to use Teamcenter services in your application
 
 1. Check if the required Mendix entity representing the Teamcenter business object type is available in the Teamcenter Connector domain model. If it is not available, create the required entity in a separate module as a sub-type of an existing entity or a specialized entity.
 
@@ -83,7 +83,7 @@ Teamcenter Connector for Mendix comes with a sample application. To get started 
 
 1.  Run your application.
 
-## Example 1: Create a change notice revision in Teamcenter
+### 8.3 Example 1: Create a change notice revision in Teamcenter
 
 1. Create a module that represents the change management domain. Skip this step if the module exists.
 
@@ -131,20 +131,20 @@ Create **ChangeNotice** and **ChangeNoticeRevision** entities based on the **TcC
 
     ![create module](attachments/tc-connector-for-mx/retrieve_objects2.png)
 
-## Example 2: Search for change objects in Teamcenter based on object properties
+### 8.4 Example 2: Search for change objects in Teamcenter based on object properties
 
-# Using any Teamcenter service through Teamcenter Connector
+## 9 Using any Teamcenter service through Teamcenter Connector
 
-## Create a service request
+### 9.1 Create a service request
 
-## Make a service call to Teamcenter with a service request
+### 9.2 Make a service call to Teamcenter with a service request
 
-## Process response from a Teamcenter service
+### 9.3 Process response from a Teamcenter service
 
-## Helper functions to process response from a Teamcenter service
+### 9.4 Helper functions to process response from a Teamcenter service
 
-# How to extend the Teamcenter Connector domain model to work with any Teamcenter object
+## 10 How to extend the Teamcenter Connector domain model to work with any Teamcenter object
 
-# Sample application
+## 11 Sample application
 
-# How to get support
+## 12 How to get support

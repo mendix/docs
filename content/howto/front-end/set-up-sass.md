@@ -52,7 +52,7 @@ To prepare your app project, follow these steps:
 
 	![](attachments/set-up-sass/copy.png)
 
-6.  Provide the directory for your app project folder in PowerShell: `cd ‘\<directory for your app project folder\>’`
+6.  Provide the directory for your app project folder in PowerShell: `cd ‘directory for your app project folder’`
 7.   Write `npm install` or use `npm install gulp-cli -g`:
 
 	![](attachments/set-up-sass/write-install.png)

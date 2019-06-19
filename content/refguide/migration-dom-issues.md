@@ -354,38 +354,38 @@ Because the calendar pop-up is no longer implemented using the Dojo framework, s
 The month header now has the following structure:
 
 ```html
-    <div class="mx-calendar-month-header">
-        <button class="mx-calendar-month-previous">
-            <span class="glyphicon glyphicon-minus"/>
-        </button>
-        <div class="mx-calendar-month-dropdown">
-            <div class="mx-calendar-month-current">
-                <div class="mx-calendar-month-spacer">
-                    <div>January</div>
-                    ...
-                </div>
-                <div class="mx-calendar-month-label">June</div>
-            </div>
-            <span class="glyphicon glyphicon-chevron-down"/>
-            <div class="mx-calendar-month-dropdown-options"> <!-- only rendered when the month dropdown is clicked -->
-                <div>January</div>
-                ...
-            </div>
-        </div>
-        <button class="mx-calendar-month-next">
-            <span class="glyphicon glyphicon-plus"/>
-        </button>
-    </div>
+<div class="mx-calendar-month-header">
+	<button class="mx-calendar-month-previous">
+		<span class="glyphicon glyphicon-minus"/>
+	</button>
+	<div class="mx-calendar-month-dropdown">
+		<div class="mx-calendar-month-current">
+			<div class="mx-calendar-month-spacer">
+				<div>January</div>
+				...
+			</div>
+			<div class="mx-calendar-month-label">June</div>
+		</div>
+		<span class="glyphicon glyphicon-chevron-down"/>
+		<div class="mx-calendar-month-dropdown-options"> <!-- only rendered when the month dropdown is clicked -->
+			<div>January</div>
+			...
+		</div>
+	</div>
+	<button class="mx-calendar-month-next">
+		<span class="glyphicon glyphicon-plus"/>
+	</button>
+</div>
 ```
 
 The year switcher now has the following structure:
 
 ```html
-    <div class="mx-calendar-year-switcher">
-        <span class="mx-calendar-year-previous">2018</span>
-        <span class="mx-calendar-year-selected">2019</span>
-        <span class="mx-calendar-year-next">2020</span>
-    </div>
+<div class="mx-calendar-year-switcher">
+	<span class="mx-calendar-year-previous">2018</span>
+	<span class="mx-calendar-year-selected">2019</span>
+	<span class="mx-calendar-year-next">2020</span>
+</div>
 ```
 
 ## 11 Reference Selector and Input Reference Set Selector Markup Changes

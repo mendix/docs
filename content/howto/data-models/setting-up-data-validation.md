@@ -80,7 +80,7 @@ Validating user input can also be achieved by overriding the default save button
     ![](attachments/18448742/18582140.png)
 
     You can now extend the Microflow to validate user input.
-6.  After the start event insert an **Exclusive split**.
+6.  After the start event insert a **decision**.
 7.  Double click the split to open the **properties editor** and type in an expression that returns true or false. For example: _$Customer/Name != 'John'_.
 
     As you can see you can use the **Customer** input parameter in the expression to validate its values.
@@ -89,7 +89,7 @@ Validating user input can also be achieved by overriding the default save button
 
     ![](attachments/18448742/18582139.png)
 
-10. Add an **End event** to the Exclusive Split.
+10. Add an **End event** to the decision.
 11. Draw an additional line from the split to the new end event.
 12. Right click the line between the split and end event and select **false** as condition value.
 13. Insert a **Validation feedback** activity between the split and end event. In the activity's properties editor, enter these details:

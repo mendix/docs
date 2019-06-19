@@ -259,7 +259,7 @@ For instructions on how to use Mendix native REST see [How To Consume a REST Ser
 
 ### 6.5 PUT Time Series
 
-In ACT_PutTimeSeriesData, the timeseries data is created as a MindSphere time series using a native REST(PUT) action. It this is successful, MindSphere returns a 204 code and this is checked in the exclusive split *Put request completed successfully?*
+In ACT_PutTimeSeriesData, the timeseries data is created as a MindSphere time series using a native REST(PUT) action. It this is successful, MindSphere returns a 204 code and this is checked in the decision *Put request completed successfully?*
 
 However, MindSphere will queue this request internally and the data will not be available until MindSphere has processed the queue. To ensure that this does not impact the app flow, the sub-microflow DS_GetTimeSeriesDataWithRetry is called. This attempts to read the time series data back from MindSphere until either it is successful, or it reaches the maximum number of retries (set in the constant *MaxRetryAfterPutTimeSeries*). There is a delay between each retry which follows an increasing arithmetic series.
 

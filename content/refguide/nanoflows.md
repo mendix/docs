@@ -68,7 +68,7 @@ The nanoflow editor offers keyboard support for navigating and manipulating the 
 | <kbd>End</kbd> | Cycles through the end events. |
 | Context-menu key or <kbd>Shift</kbd> + <kbd>F10</kbd> | Opens the context menu for the currently selected element. |
 
-## 5 Notation and Categories
+## 5 Notation & Categories
 
 The graphical notation of nanoflows is based on the [Business Process Model and Notation](https://en.wikipedia.org/wiki/Business_Process_Model_and_Notation) (BPMN). BPMN is a standardized graphical notation for drawing business processes in a workflow.
 
@@ -76,7 +76,7 @@ A nanoflow is composed of elements. The following categories are used:
 
 * [Events](#events) represent the start and endpoints of a nanoflow and special operations in a loop
 * [Flows](#flows) form the connection between elements
-* [Gateways](#gateways) deal with making choices and merging different paths again
+* [Decisions](#decisions) deal with making choices and merging different paths again
 * [Activities](#activities) are the actions that are executed in a nanoflow
 * [Artifacts](#artifacts) provide the nanoflow with input and allow comments to be made
 
@@ -100,13 +100,13 @@ Flows form the connection between elements.
 | [![](attachments/819203/917883.png)](sequence-flow) | [Sequence flow](sequence-flow) | An arrow that links events, activities, splits, and merges with each other. Together they define the order of execution within a nanoflow. |
 | [![](attachments/819203/917688.png)](annotation-flow) | [Annotation flow](annotation-flow) | A connection that can be used to connect an annotation to another element. |
 
-### 5.3 Gateways<a name="gateways"></a>
+### 5.3 Decsions {#decisions}
 
-Gateways deal with making choices and merging different paths.
+Decisions deal with making choices and merging different paths.
 
 | Graphic | Name | Description |
 | --- | --- | --- |
-| [![](attachments/819203/917726.png)](exclusive-split) | [Exclusive split](exclusive-split) | Makes a decision based on a condition and follows one and only one of the outgoing flows. Please note that there is no parallell execution in nanoflows. |
+| [![](attachments/819203/917726.png)](decision) | [Decision](decision) | Makes a decision based on a condition and follows one and only one of the outgoing flows. Please note that there is no parallell execution in nanoflows. |
 | [![](attachments/819203/918116.png)](merge) | [Merge](merge) | Can be used to combine multiple sequence flows into one. If a choice is made in a nanoflow and afterwards some common work needs to be done, you can combine the two (or more) paths using a merge. |
 
 ### 5.4 Activities<a name="activities"></a>

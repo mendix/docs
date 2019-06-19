@@ -1,5 +1,5 @@
 ---
-title: "Exclusive Split"
+title: "Decision"
 parent: "splits"
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -7,7 +7,7 @@ tags: ["studio pro"]
 
 ## 1 Introduction
 
-An exclusive split is an element that makes a choice based on a condition and follows (exactly) one of the outgoing sequence flows.
+A decision is an element that makes a choice based on a condition and follows (exactly) one of the outgoing sequence flows.
 
 ## 2 Action Properties
 
@@ -26,7 +26,7 @@ If the property 'Type' is set to 'Expression' the expression field can be used t
 
 {{% alert type="info" %}}
 
-If you want to open a different order form per member type you can use an exclusive split. The selected customer is a parameter with name SelectedCustomer to the microflow. For each enumeration value a different sequence flow is followed. If the enumeration has no value the sequence flow with the caption (empty) is followed.
+If you want to open a different order form per member type you can use a decision. The selected customer is a parameter with name SelectedCustomer to the microflow. For each enumeration value a different sequence flow is followed. If the enumeration has no value the sequence flow with the caption (empty) is followed.
 
 ![](attachments/819203/918050.png)
 

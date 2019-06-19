@@ -53,7 +53,7 @@ Studio Pro Guide | Model SDK API docs
 
 A microflow consists of objects that are connected by flows, specifically, `SequenceFlow`s. A flow has an origin and a destination, with which the order of objects in the microflow is defined.
 
-An exclusive split on an enumeration has a sequence flow for each enumeration value. In the meta model, this is represented by the case value of the sequence flows. Each sequence flow has an enumeration case value with `value` set to the corresponding enumeration case. Boolean splits have two sequence flows, one for each of `true` and `false`, with each a corresponding case value.
+A decision on an enumeration has a sequence flow for each enumeration value. In the meta model, this is represented by the case value of the sequence flows. Each sequence flow has an enumeration case value with `value` set to the corresponding enumeration case. Boolean splits have two sequence flows, one for each of `true` and `false`, with each a corresponding case value.
 
 Inheritance splits have sequence flows for each specialization of the entity type on which is split. Each sequence flow has an inheritance case value with as value the specialization entity.
 
@@ -73,9 +73,9 @@ Studio Pro Guide | Model SDK API docs
 
 ### Splits
 
-The control flow in microflows is defined with splits of two types: exclusive splits (for boolean or enumeration splits) and inheritance splits (for control based on specialization entity types). Two paths of control can be merged with an exclusive merge.
+The control flow in microflows is defined with splits of two types: decisions (for boolean or enumeration splits) and inheritance splits (for control based on specialization entity types). Two paths of control can be merged with an exclusive merge.
 
-An exclusive split conditionally splits on either an expression or a rule. In case of a rule, a call is made, similar to a microflow call, with a rule parameter mapping.
+A decision conditionally splits on either an expression or a rule. In case of a rule, a call is made, similar to a microflow call, with a rule parameter mapping.
 
 #### Graphical overview
 
@@ -83,7 +83,7 @@ An exclusive split conditionally splits on either an expression or a rule. In ca
 
 Studio Pro Guide | Model SDK API docs
 --- | --- |
-[Exclusive Split](/refguide/exclusive-split) |[ExclusiveSplit](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.exclusivesplit.html)
+[Decision](/refguide/decision) |[ExclusiveSplit](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.exclusivesplit.html)
 [Inheritance Split](/refguide/object-type-decision) |[InheritanceSplit](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.inheritancesplit.html)
 [Merge](/refguide/merge) |[ExclusiveMerge](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.exclusivemerge.html)
 [Rules](/refguide/rules) |[ExpressionSplitCondition](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.expressionsplitcondition.html)

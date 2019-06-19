@@ -475,6 +475,10 @@ module.exports = {
       from: "/refguide8/inheritance-split",
       to: "/refguide/object-type-decision"
     },
+	{
+      from: "/refguide8/exclusive-split",
+      to: "/refguide/decision"
+    },
 	/****************************************************
      * From Desktop Modeler version 7 (permanent, mapped)
      ****************************************************/

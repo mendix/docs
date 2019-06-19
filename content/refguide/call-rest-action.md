@@ -85,7 +85,15 @@ If the [export mapping](export-mappings) is based on a message definition, it ca
 
 This option allows you to send binary data (for example, the contents of a FileDocument).
 
-### 4.3 Custom Request Template
+### 4.3 Form-data
+
+This option allows you to generate a multipart/form-data request multiple parts. Each part is a pair with a key and a value (a microflow expression). FileDocuments and Images are are also supported for this option when used as a variable in microflow expression.
+
+#### 4.3.1 Content Type
+
+Setting up a **Content-Type header** for a Form-data request will result in a consistency error as it will be set automatically to **multipart/form-data**. Content-Type for the FileDocument part will be **application/octet-stream**
+
+### 4.4 Custom Request Template
 
 This option allows you to generate the request using a string template. The template defines the structure of the request in plain text. Parameters can be used by writing a number between braces (for example, `{1}`). For each parameter in the template, you can specify its value using a [microflow expression](expressions) resulting in a string value. To escape the opening brace (`{`), a double opening brace should be used (`{{`).
 

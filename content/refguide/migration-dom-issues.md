@@ -20,13 +20,15 @@ TODO: [+How to migrate Atlas to Mendix 8](https://paper.dropbox.com/doc/How-to-m
 
 **what is — find nice location-- ?**
 
-Before Mendix 8, when you lacked a theme the client provided a large amount of default styling. This made it difficult to build your own theme, as you needed to override the default styling often. As of Mendix 8, all CSS which is not required for a working application has been removed. Now, building your own theme from scratch requires significantly less work.
+Before Mendix 8, the client provided a large amount of default styling if your app project lacked a theme. This made building your own theme difficult, as you needed to override the default styling. As of Mendix 8, all CSS not required for a working application has been removed. Now, building your own theme from scratch requires significantly less work.
 
-If you already have built your own theme from scratch in a previous Mendix version, you might depend on that styling. For that we provide the previous defaults — find nice location-- for you to download so you can re-use it.
+If you have already built your own theme from scratch in an earlier version of Mendix, you might depend on that styling. For that we provide the previous defaults — find nice location-- for you to download so you can re-use it.
 
 ## 4 Focus-Specific Class Removed
 
-Before Mendix 8, the client frequently applied `mx-focus` to the element which received focus and removing `mx-focus` when the element lost focus. Because all supported browsers now have proper support for the `:focus` pseudo-class, these reapplications are no longer necessary. For more information on `:focus`, see Mozilla’s [:focus documentation](https://developer.mozilla.org/en-US/docs/Web/CSS/:focus). If your are using `mx-focus` in your theme, you should replace it with `:focus` :
+Before Mendix 8, the client frequently applied `mx-focus` to the element receiving focus and removed `mx-focus` when the element lost focus. Because all supported browsers now have proper support for the `:focus` pseudo-class, these reapplications are no longer necessary.  For more information on `:focus`, see Mozilla’s [:focus documentation](https://developer.mozilla.org/en-US/docs/Web/CSS/:focus).
+
+If your are using `mx-focus` in your theme, you should replace it with `:focus` .
 
 Code such as this:
 
@@ -46,11 +48,11 @@ Should be changed to:
 
 ## 5 Data Grid Markup Updates
 
-We made a number of updates to the data grid markup. Previously, the data grid was split into two separate tables: one containing the header and one containing the data. This made the data grid less accessible, because for screen readers these are just two separate tables, without any relation to one another. Now the two tables have been merged into a single table. Furthermore, the `div` wrapping the two tables has been removed.
+We made a number of updates to the data grid markup. Previously, the data grid was split into two separate tables: one containing the header and one containing the data. This made the data grid less accessible, because screen readers show these as two separate tables. Now the two tables have been merged into a single table. Furthermore, the `div` wrapping the two tables has been removed.
 
-Another change concerning the data grid markup is that the `div` containing the toolbar and the `div` containing the paging bar (both part of the control bar) are now in a logical order. Previously, additional CSS was needed to display them in the right order, and additional Javascript was needed to dictate a logical tab behavior. The current structure now falls in line with WCAG standards by having the DOM order follow the visual order.
+One more data grid markup change is that the `div` containing the toolbar and the `div` containing the paging bar (both part of the control bar) are now in a logical order. Previously, additional CSS was needed to display them in the right order, and additional JavaScript was needed to dictate a logical tab behavior. The current structure now falls in line with WCAG standards by having the DOM order follow the visual order.
 
-This is the current resulting markup of the data grid (unchanged parts omitted):
+This is the current markup of the data grid (unchanged code omitted):
 
 ```html
 <div class="mx-grid mx-datagrid mx-name-grid1">
@@ -71,9 +73,11 @@ This is the current resulting markup of the data grid (unchanged parts omitted):
 </div>
 ```
 
-Additionally, a number of additional classes on the table have been removed, as they are easily accessed by the element names. 
+Additionally, a number of additional classes on the table have been removed, as they are easily accessed using element names. 
 
-Common use cases for styling the data grid now contains CSS such as this:
+**two code snippets below: past/present compare/contrast? or telling user to do something?**
+
+Common use cases for styling the data grid now contain CSS such as this:
 
 ```css
 .mx-datagrid .mx-datagrid-head-table {
@@ -98,8 +102,7 @@ This should now be rewritten to:
 
 ## 6 List View Markup Changes
 
-The markup for list views was also changed. To simplify the styling, the following classes have been removed:
-
+The markup for list views has also been changed. To simplify the styling, the following classes have been removed:
 
 * `mx-list`
 * `mx-listview-list`
@@ -108,9 +111,11 @@ The markup for list views was also changed. To simplify the styling, the followi
 * `mx-listview-search-input` 
 * `mx-listview-clear-button`
 
-For list views that are not in a select page for a reference or reference set selector,  the `mx-listview-selectable` class on the list view itself and the unneeded `div` element with class `mx-listview-content` around the contents of each list view item have been removed.
+For list views that are not in a select page for a reference or reference set selector,  the list view's `mx-listview-selectable` has been remobed. The unneeded `div` elements with class `mx-listview-content` around the contents of each list view item have also been removed.
 
-The order of the DOM elements list view search bar has been corrected to be consistent with the visual order. The `div` element around the search input field has been removed.
+The order of the list view search bar's DOM elements has been corrected to be consistent with the visual order. The `div` element around the search input field has been removed.
+
+**two code snippets below: past/present compare/contrast? or telling user to do something?**
 
 Common use cases for styling the list view might contain CSS such as this:
 
@@ -144,7 +149,6 @@ This should be rewritten to:
 
 All classes starting with `mx-layoutcontainer` have been removed from scroll containers, as they are redundant with their `mx-scrollcontainer` counterparts.
 
-
 ## 8 Link Button Markup Changes
 
 The markup for link buttons has been made more consistent with other buttons:
@@ -158,12 +162,15 @@ The markup for link buttons has been made more consistent with other buttons:
 
 ## 9 Input Widgets Markup Changes
 
-Every input widget has an implicit form group structure wrapped around it. Before recent changes, an input widget’s DOM structure could appear disorganized depending on its settings.Now, the form group structure ensures that the input widget is properly aligned inside the data view and properly labeled.  For the full description form group and input widget structures, see [Link to the full form group / input widgets description].
+**add link /refguide/input-widgets?**
 
+Every input widget has an implicit form group structure wrapped around it. Before recent changes, an input widget’s DOM structure could appear disorganized depending on its settings. Now, the form group structure ensures that the input widget is properly aligned inside the data view and properly labeled. For the full descriptions of form group and input widget structures, see [Link to the full form group / input widgets description].
 
-### 9.1 Vertical/horizontal classes on DataView
+### 9.1 Vertical and Horizontal Classes on DataView
 
-Previously data view was rendering `form-horizontal` class on it when **Form orientation** was set to **Horizontal** and no such class if this option was set to **Vertical**. Now we always add `form-horizontal` or `form-vertical` on **Horizontal** and **Vertical** options respectively. This makes it easier to style forms (and inputs in them) with different orientations by targeting one or another class in your CSS selector. If previously you were relying on presence or absence of `form-horizontal` now you can make your CSS selectors simpler by using `form-vertical`.
+**introduce code snippet with :?**
+
+Previously, data view was rendering `form-horizontal` class on it when **Form orientation** was set to **Horizontal** and no such class if this option was set to **Vertical**. Now, `form-horizontal` or `form-vertical` are added on **Horizontal** and **Vertical** options respectively. This makes it easier to style forms (and inputs in them) with different orientations by targeting a class in your CSS selector. If you were previously relying on the presence or absence of `form-horizontal,` now you can simplify your CSS selectors by using `form-vertical`.
 
 ```html
 <div class="mx-dataview mx-name-dataView3 form-horizontal"><!-- or form-vertical -->
@@ -181,7 +188,7 @@ Previously data view was rendering `form-horizontal` class on it when **Form ori
 
 ### 9.2 Form group structure
 
-Previously if widget had **Show caption** option set to **No** form group structure was missing `form-group` class on the top level div:
+Previously, if widget had the **Show caption** option set to **No**, form group structure was missing `form-group` class on its top level `div`:
 
 ```html
 <div class="mx-name-textBox4 [...]" [...]>
@@ -189,7 +196,7 @@ Previously if widget had **Show caption** option set to **No** form group struct
 </div>
 ```
 
-Now `form-group` class is always in place with extra `no-columns` class:
+Now, the `form-group` class stays in place with extra `no-columns` class:
 
 ```html
 <div class="form-group no-columns mx-name-textBox4 [...]" [...]>
@@ -197,7 +204,7 @@ Now `form-group` class is always in place with extra `no-columns` class:
 </div>
 ```
 
-If you’ve had custom styles using `.form-group` before, this might be a breaking change as `.form-group`  matches with more elements now. You can now target form groups and elements inside them on only horizontal or only vertical forms using `.form-horizontal .form-group` or `.form-vertical .form-group` respectively. 
+If you have nade custom styles using `.form-group` before, this might be a breaking change as `.form-group`  matches with more elements now. You can now target form groups and elements inside them on only horizontal or only vertical forms using `.form-horizontal .form-group` or `.form-vertical .form-group` respectively. 
 
 ### 9.3 Input widget type classes
 

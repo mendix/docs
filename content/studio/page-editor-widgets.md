@@ -26,7 +26,21 @@ To view widgets in Mendix Studio, do the following:
 
    ![](attachments/page-editor-widgets/toolbox-widgets.png)
 
-## 3 Widgets by Category {#widget-categories}
+## 3 Quick Configuration of Widget Properties {#quick-config}
+
+Quick configuration of properties is available for most of the non-custom widgets. This means that their properties can be configured in a pop-up window when adding these widgets on a page. 
+
+Once you drag and drop a widget, a small pop-up window appears next to it. You can set the properties that are necessary for the widget to function without resulting in [consistency errors](consistency-errors). 
+
+For example, quickly configuring the data source of a data grid helps you avoid consistency errors when previewing or publishing your app, and you can configure the rest of the properties later.
+
+![](attachments/page-editor-widgets/quick-config.png)
+
+The pop-up window disappears once you start interacting with the page or the menu items, for example, if you start clicking elements on the page or if you open **Toolbox**, **Properties**, **Buzz**. To access the quick configuration pop-up window again, click the gear icon in the top-right corner of the widget:
+
+![](attachments/page-editor-widgets/quick-widget-icon.png)
+
+## 4 Widgets by Category {#widget-categories}
 
 Widgets of Studio are divided into categories that you can see when you open the **Widgets** tab.
 
@@ -49,7 +63,7 @@ Widget categories are described in the table below:
 | List view Controls                                   | Contains controls for the list view. This category consist of the App Store widgets. | section [4 Widgets by Origin](#widgets-by-origin)            |
 | Add-ons                                              | Contains all custom widgets previously installed in the app. If widgets cannot be matched to the App Store profile they will be shown in the add-ones. |                                                              |
 
-## 4 Widgets by Origin {#widgets-by-origin}
+## 5 Widgets by Origin {#widgets-by-origin}
 
 Widgets in Studio can be divided by origin as shown in the table below:
 
@@ -59,7 +73,7 @@ Widgets in Studio can be divided by origin as shown in the table below:
 | App Store widgets | Widgets that are you can download to your project directly from Studio. Some App Store widgets are already in your project as a part of the app. Such widgets have the information icon in the top-right corner of widgets in the **Toolbox**. <br />For more information on the App Store, see [App Store Overview](/developerportal/app-store/app-store-overview). | [App Store](/developerportal/app-store/)                     |
 | Local widgets     | Either widgets that are a part of a starter app, or widgets created by your or your team locally via Studio Pro. For more information on developing widgets, see the [Custom Widget Development](/howto/extensibility/widget-development) how-to's. As a rule local widgets will be listed in the **Add-ons** category. For more information on categories, see section [3 Widgets by Category](#widget-categories). | Apps created in the  Developer Portal/Studio Pro        |
 
-## 5 Adding the App Store Widgets
+## 6 Adding the App Store Widgets
 
 You can add App Store widgets to your app by downloading them directly in the **Widgets** tab in Studio. These widgets are a subset of all widgets available in the app store: you can only download the ones that are approved for use in Studio. You can also update them if an update is available.
 
@@ -90,7 +104,7 @@ Some similar widgets are packaged together: downloading one of these widgets wil
 
 {{% /alert %}}
 
-## 6 Read More 
+## 7 Read More 
 
 * [Pages](page-editor)
 * [Settings](settings)

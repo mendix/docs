@@ -27,7 +27,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * For information on device requirements, see [System Requirements](/refguide/system-requirements)
 * If you wish to use an emulator for Android mobile testing, install a product such as [Bluestacks](https://www.bluestacks.com/nl/index.html) or [Genymotion](https://www.genymotion.com/) (your emulator must have Google Play services supported)
 
-## 3 Creating a New Project Based on the Quickstart App{#quickstartapp}
+## 3 Creating a New App Project Based on the Quickstart App{#quickstartapp}
 
 {{% todo %}}[add Apple App Store link to MakeItNative app]{{% /todo %}}
 

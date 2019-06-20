@@ -2,7 +2,7 @@
 title: "Mendix Studio Pro DOM Improvements"
 category: "App Modeling"
 menu_order: 
-description: "Set a description with a maximum of 140 characters; this should describe what the goal of the document is, and it can be different from the document introduction; this is optional, and it can be removed"
+description: "This document explains the updated DOM structure for Mendix 8, and what that means for app projects' CSS."
 tags: ["DOM", "Widgets", "Themes", "Classes"]
 ---
 
@@ -18,11 +18,11 @@ TODO: [+How to migrate Atlas to Mendix 8](https://paper.dropbox.com/doc/How-to-m
 
 ## 3 Streamlined Custom Themes
 
-**get link to github/something repo for the old CSS File mentioned in para 2**
+**TODO: get link to github/something repo for the old CSS File mentioned in para 2**
 
 Before Mendix 8, the client provided a large amount of default styling if your app project lacked a theme. This made building your own theme difficult, as you needed to override the default styling. As of Mendix 8, all CSS not required for a working application has been removed. Now, building your own theme from scratch requires significantly less work.
 
-If you have already built your own theme from scratch in an earlier version of Mendix, you might depend on that styling. For that we provide the previous CSS defaults in this github repository which you can download for use.
+If you have already built your own theme from scratch in an earlier version of Mendix, you might depend on that styling. For that we provide the previous CSS defaults in [this github repository](**TODO:LINK HERE**) which you can download for use.
 
 ## 4 Focus-Specific Class Removed
 
@@ -251,7 +251,7 @@ Caption
 	</div>
 </div>
 ```
-**validate "show label"**
+**TODO: validate "show label"**
 
 This is the structure of an input widget, in either a horizontal or vertical data view, with **Show label** set to **No**. The input widget has an input control and an optional validation message:
 
@@ -301,8 +301,6 @@ Check box:
 ```html
 <input type="checkbox" value="" />
 ```
-
-**change to complete sentence**
 
 Check box when **Label position** is set to **After control** (in this case the label on the form group is not shown):
 

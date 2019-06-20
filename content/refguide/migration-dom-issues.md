@@ -3,14 +3,14 @@ title: "Mendix Studio Pro DOM Improvements"
 category: "App Modeling"
 menu_order: 
 description: "Set a description with a maximum of 140 characters; this should describe what the goal of the document is, and it can be different from the document introduction; this is optional, and it can be removed"
-tags: ["Samba", "MxCloud", "cloud", "share"]
+tags: ["DOM", "Widgets", "Themes", "Classes"]
 ---
 
 ## 1 Introduction
 
 While improving the client in Mendix 8,  the markup has also been updated. These changes make widgets more accessible, more consistent, and give you a cleaner markup to work with. 
 
-However these updates might impact your styling. Markup in your widgets and their classnames might be affected if your app uses custom CSS. This reference guide will outline the differences between Mendix 7 and 8 as they pertain to the DOM and CSS. This document is only relevant for apps which employ custom CSS.
+However these updates might impact your styling. The appearance of your app may be affected, as the widgets' DOM structure has been updated. This reference guide will outline the differences between Mendix 7 and 8 as they pertain to the DOM and CSS. This document is only relevant for apps which employ custom CSS or modify existing Atlas UI CSS.
 
 ## 2 Updating Atlas
 
@@ -18,11 +18,11 @@ TODO: [+How to migrate Atlas to Mendix 8](https://paper.dropbox.com/doc/How-to-m
 
 ## 3 Streamlined Custom Themes
 
-**what is — find nice location-- ?**
+**get link to github/something repo for the old CSS File mentioned in para 2**
 
 Before Mendix 8, the client provided a large amount of default styling if your app project lacked a theme. This made building your own theme difficult, as you needed to override the default styling. As of Mendix 8, all CSS not required for a working application has been removed. Now, building your own theme from scratch requires significantly less work.
 
-If you have already built your own theme from scratch in an earlier version of Mendix, you might depend on that styling. For that we provide the previous defaults — find nice location-- for you to download so you can re-use it.
+If you have already built your own theme from scratch in an earlier version of Mendix, you might depend on that styling. For that we provide the previous CSS defaults in this github repository which you can download for use.
 
 ## 4 Focus-Specific Class Removed
 
@@ -75,9 +75,7 @@ This is the current markup of the data grid (unchanged code omitted):
 
 Additionally, a number of additional classes on the table have been removed, as they are easily accessed using element names. 
 
-**two code snippets below: past/present compare/contrast? or telling user to do something?**
-
-Common use cases for styling the data grid now contain CSS such as this:
+If you were styling your data grid in this way:
 
 ```css
 .mx-datagrid .mx-datagrid-head-table {
@@ -88,7 +86,7 @@ Common use cases for styling the data grid now contain CSS such as this:
 }
 ```
 
-This should now be rewritten to:
+You should rewrite the data grid styling using these guidelines:
 
 ```css
 .mx-datagrid thead {
@@ -102,7 +100,7 @@ This should now be rewritten to:
 
 ## 6 List View Markup Changes
 
-The markup for list views has also been changed. To simplify the styling, the following classes have been removed:
+The markup for list view widgets has also been changed. To simplify the styling, the following classes have been removed:
 
 * `mx-list`
 * `mx-listview-list`
@@ -115,9 +113,7 @@ For list views that are not in a select page for a reference or reference set se
 
 The order of the list view search bar's DOM elements has been corrected to be consistent with the visual order. The `div` element around the search input field has been removed.
 
-**two code snippets below: past/present compare/contrast? or telling user to do something?**
-
-Common use cases for styling the list view might contain CSS such as this:
+If you were styling your list view widgets this way:
 
 ```css
 .mx-listview-item {
@@ -131,7 +127,7 @@ Common use cases for styling the list view might contain CSS such as this:
 }
 ```
 
-This should be rewritten to:
+You should rewrite your list view styling using these guidelines :
 
 ```css
 .mx-listview li {
@@ -162,18 +158,18 @@ The markup for link buttons has been made more consistent with other buttons:
 
 ## 9 Input Widgets Markup Changes
 
-**add link /refguide/input-widgets?**
-
-Every input widget has an implicit form group structure wrapped around it. Before recent changes, an input widget’s DOM structure could appear disorganized depending on its settings. Now, the form group structure ensures that the input widget is properly aligned inside the data view and properly labeled. For the full descriptions of form group and input widget structures, see [Link to the full form group / input widgets description].
+Every input widget has an implicit form group structure wrapped around it. Before recent changes, an input widget’s DOM structure could appear disorganized depending on its settings. Now, the form group structure ensures that the input widget is properly aligned inside the data view and properly labeled.
 
 ### 9.1 Vertical and Horizontal Classes on DataView
 
-**introduce code snippet with :?**
+Previously, data view was rendering `form-horizontal` class on it when **Form orientation** was set to **Horizontal** and no such class if this option was set to **Vertical**. Now, `form-horizontal` or `form-vertical` are added on **Horizontal** and **Vertical** options respectively. 
 
-Previously, data view was rendering `form-horizontal` class on it when **Form orientation** was set to **Horizontal** and no such class if this option was set to **Vertical**. Now, `form-horizontal` or `form-vertical` are added on **Horizontal** and **Vertical** options respectively. This makes it easier to style forms (and inputs in them) with different orientations by targeting a class in your CSS selector. If you were previously relying on the presence or absence of `form-horizontal,` now you can simplify your CSS selectors by using `form-vertical`.
+This makes it easier to style forms (and inputs in them) with different orientations by targeting a class in your CSS selector. If you were previously relying on the presence or absence of `form-horizontal,` now you can simplify your CSS selectors by using `form-vertical`.
+
+This is how the DOM structure of the data view widget is organized now:
 
 ```html
-<div class="mx-dataview mx-name-dataView3 form-horizontal"><!-- or form-vertical -->
+<div class="mx-dataview [form-horizontal or form-vertical]">
 		<div class="mx-dataview-content">
 			...
 			<div class="form-group"> ... </div>
@@ -221,10 +217,7 @@ Form groups now have special class name depending on their widget type:
 
 ### 9.4 Examples of Form Group Layout
 
-**vertical/horizontal input "what"? Forms?**
-**they have these things now? like, they are new additions?**
-
-Vertical input now has a label, input, and an optional validation message on the same level:
+The vertical form group input widget now has a label, input, and an optional validation message on the same level:
 
 ```html
 <div class="form-group mx-name-textBox4 [...]" [...]>
@@ -241,7 +234,7 @@ Vertical input now has a label, input, and an optional validation message on the
 </div>
 ```
 
-Horizontal now input has a label with `col-sm-{labelWith}`and `div.col-sm-{12-labelWith}`. Its label also has input and an optional validation message inside:
+The horizontal form group input widget now has a label with `col-sm-{labelWith}`and `div.col-sm-{12-labelWith}`. Its label also has input and an optional validation message inside:
 
 ```html
 <div class="form-group mx-name-textBox4 [...]" [...]>
@@ -258,10 +251,9 @@ Caption
 	</div>
 </div>
 ```
+**validate "show label"**
 
-**fix this fragmented nonsense**
-
-Without label. Same structure for inputs without a label in both vertical and horizontal forms. Has an input and an optional validation message.
+This is the structure of an input widget, in either a horizontal or vertical data view, with **Show label** set to **No**. The input widget has an input and an optional validation message:
 
 ```html
 <div class="form-group mx-name-textBox4 [...]" [...]>
@@ -413,7 +405,7 @@ The year switcher now has the following structure:
 
 The following changes have been made to the reference selector markup:
 
-* The classes `mx-referenceselector` and `mx-referencesetselector` have been removed from the main `<div>` element in favor of the new `mx-compound-control` class, which was introduced for input widgets made up of more than one element (one common input widget with multiple elements is a button next to an input)
+* The classes `mx-referenceselector` and `mx-referencesetselector` have been removed from the main `<div>` element in favor of the new `mx-compound-control` class, which was introduced for input widgets made up of more than one element (one common input widget with multiple elements is a button next to an input element)
 
 The following changes have been made to the input reference set selector markup: **surrounding form group? surrounding what? Also, can I move the `mx-referenceselector` reference to the above bullet/section?**
 
@@ -424,7 +416,7 @@ The following changes have been made to the input reference set selector markup:
 
 ## 12 DropDownButton Widget Cleanup
 
-The following changes have been made to the `DropDownButton` **X**:
+The following changes have been made to the `DropDownButton` widget:
 
 * The class `mx-list` has been removed from the list of terms in the dialog window
 * The class `mx-dropdown` has been removed from the dialog window, as it has nothing to do with drop down in the search input

@@ -1,5 +1,5 @@
 ---
-title: "Test a Mendix App with a Simple IDE Script"
+title: "Test Mendix Apps Using Selenium IDE"
 category: "Testing"
 menu_order: 40
 tags: ["test", "testing", "selenium"]

@@ -10,7 +10,7 @@ tags: ["DOM", "Widgets", "Themes", "Classes"]
 
 Alongside improvements to the client in Mendix 8,  the HTML Mendix Studio Pro exports when you run an app project has also been updated. These changes make widgets more accessible, more consistent, and give you a cleaner markup to work with. 
 
-However, these updates might impact your styling. The appearance of your application may be affected, as the widgets' DOM structure has been updated. This reference guide will outline the differences between Mendix 7 and 8 as they pertain to the DOM and CSS. This document is only relevant for apps which employ custom CSS or modify existing Atlas UI CSS.
+However, these updates might impact your styling. The appearance of your application may be affected, as the widgets' Document Object Model structure has been updated. This reference guide will outline the differences between Mendix 7 and 8 as they pertain to the DOM and CSS. This document is only relevant for apps which employ custom CSS or modify existing Atlas UI CSS.
 
 ## 2 Updating Atlas
 
@@ -50,7 +50,7 @@ Should be changed to:
 
 We made a number of updates to the data grid markup. Previously, the data grid was split into two separate tables: one containing the header and one containing the data. This made the data grid less accessible, because screen readers show these as two separate tables. Now the two tables have been merged into a single table. Furthermore, the `div` wrapping the two tables has been removed.
 
-One more data grid markup change is that the `div` containing the toolbar and the `div` containing the paging bar (both part of the control bar) are now in a logical order. Previously, additional CSS was needed to display them in the right order, and additional JavaScript was needed to dictate a logical tab behavior. The current structure now falls in line with WCAG standards by having the DOM order follow the visual order.
+One more data grid markup change is that the `div` containing the toolbar and the `div` containing the paging bar (both part of the control bar) are now in a logical order. Previously, additional CSS was needed to display them in the right order, and additional JavaScript was needed to dictate a logical tab behavior. The current structure now falls in line with [Web Content Accessibility Guidelines 2.1's criterion 1.3.2](https://www.w3.org/TR/WCAG21/#meaningful-sequence) by having [the DOM order follow the visual order](https://www.w3.org/TR/WCAG20-TECHS/C27.html).
 
 This is the current markup of the data grid (unchanged code omitted):
 

@@ -8,7 +8,7 @@ tags: ["DOM", "Widgets", "Themes", "Classes"]
 
 ## 1 Introduction
 
-Alongside improvements to the client in Mendix 8,  Mendix Studio Pro's markup has also been updated. These changes make widgets more accessible, more consistent, and give you a cleaner markup to work with. 
+Alongside improvements to the client in Mendix 8,  the HTML Mendix Studio Pro exports when you run an app project has also been updated. These changes make widgets more accessible, more consistent, and give you a cleaner markup to work with. 
 
 However, these updates might impact your styling. The appearance of your application may be affected, as the widgets' DOM structure has been updated. This reference guide will outline the differences between Mendix 7 and 8 as they pertain to the DOM and CSS. This document is only relevant for apps which employ custom CSS or modify existing Atlas UI CSS.
 

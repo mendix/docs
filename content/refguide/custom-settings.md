@@ -12,7 +12,7 @@ You can use custom server settings to configure the Runtime beyond the standard 
 
 {{% alert type="warning" %}}
 
-Only use this functionality if you know exactly what you are doing. Wrong values can prevent the Runtime from starting.
+Only use this functionality if you know exactly what you are doing. Incorrect values can prevent Mendix Runtime from starting.
 
 {{% /alert %}}
 

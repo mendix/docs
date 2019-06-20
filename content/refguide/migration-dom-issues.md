@@ -1,7 +1,7 @@
 ---
 title: "Mendix Studio Pro DOM Improvements"
-category: "App Modeling"
-menu_order: 
+parent: "domain-model"
+menu_order:
 description: "This document explains the updated DOM structure for Mendix 8, and what that means for app projects' CSS."
 tags: ["DOM", "Widgets", "Themes", "Classes"]
 ---
@@ -14,7 +14,7 @@ However these updates might impact your styling. The appearance of your app may 
 
 ## 2 Updating Atlas
 
-TODO: [+How to migrate Atlas to Mendix 8](https://paper.dropbox.com/doc/How-to-migrate-Atlas-to-Mendix-8-g4PvGKOMxR2aSHLPSj4xo) 
+TODO: write a sentence or two and link it to the Atlas refguide doc [+How to migrate Atlas to Mendix 8](https://paper.dropbox.com/doc/How-to-migrate-Atlas-to-Mendix-8-g4PvGKOMxR2aSHLPSj4xo) 
 
 ## 3 Streamlined Custom Themes
 

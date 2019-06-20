@@ -182,7 +182,7 @@ This is how the DOM structure of the data view widget is organized now:
 </div>
 ```
 
-### 9.2 Form group structure
+### 9.2 Form Group Structure
 
 Previously, if widget had the **Show caption** option set to **No**, form group structure was missing `form-group` class on its top level `div`:
 
@@ -202,7 +202,7 @@ Now, the `form-group` class stays in place with extra `no-columns` class:
 
 If you have nade custom styles using `.form-group` before, this might be a breaking change as `.form-group`  matches with more elements now. You can now target form groups and elements inside them on only horizontal or only vertical forms using `.form-horizontal .form-group` or `.form-vertical .form-group` respectively. 
 
-### 9.3 Input widget type classes
+### 9.3 Input Widget Type Classes
 
 Form groups now have special class name depending on their widget type:
 
@@ -217,7 +217,7 @@ Form groups now have special class name depending on their widget type:
 
 ### 9.4 Examples of Form Group Layout
 
-The vertical form group input widget now has a label, input, and an optional validation message on the same level:
+The vertical form group input widget now has a label, input control, and an optional validation message on the same level:
 
 ```html
 <div class="form-group mx-name-textBox4 [...]" [...]>
@@ -225,7 +225,7 @@ The vertical form group input widget now has a label, input, and an optional val
 		Caption
 	</label>
 
-	<INPUT-WIDGET/>
+	<INPUT-CONTROL/>
 	<!-- OR for readonly style text -->
 	<div class="form-control-static">value</div>
 
@@ -234,7 +234,7 @@ The vertical form group input widget now has a label, input, and an optional val
 </div>
 ```
 
-The horizontal form group input widget now has a label with `col-sm-{labelWith}`and `div.col-sm-{12-labelWith}`. Its label also has input and an optional validation message inside:
+The horizontal form group input widget now has a label with `col-sm-{labelWith}`and `div.col-sm-{12-labelWith}`. Its label also has input control and an optional validation message inside:
 
 ```html
 <div class="form-group mx-name-textBox4 [...]" [...]>
@@ -242,7 +242,7 @@ The horizontal form group input widget now has a label with `col-sm-{labelWith}`
 Caption
 	</label>
 	<div class="col-sm-8">
-		<INPUT-WIDGET/>
+		<INPUT-CONTROL/>
 		<!-- OR for readonly style text -->
 		<div class="form-control-static">value</div>
 
@@ -253,13 +253,13 @@ Caption
 ```
 **validate "show label"**
 
-This is the structure of an input widget, in either a horizontal or vertical data view, with **Show label** set to **No**. The input widget has an input and an optional validation message:
+This is the structure of an input widget, in either a horizontal or vertical data view, with **Show label** set to **No**. The input widget has an input control and an optional validation message:
 
 ```html
 <div class="form-group mx-name-textBox4 [...]" [...]>
 	<!-- A form group without a label is still a form-group -->
     
-	<INPUT-WIDGET/>
+	<INPUT-CONTROL/>
 	<!-- OR for readonly style text -->
 	<div class="form-control-static">value</div>
     
@@ -270,15 +270,19 @@ This is the structure of an input widget, in either a horizontal or vertical dat
 
 ### 9.5 Read-Only Controls
 
-Previously, non-editable controls with **Read-only style** set to **Text** could have been rendered using a `p` or a `label` element with a `form-control-static` class on them. Read-only controls with **Read-only style** set to **Text** are now rendered as `<div class="form-control-static"/>`.
+Previously, non-editable input controls of input widgets with **Read-only style** set to **Text** could have been rendered using a `p` or a `label` element with a `form-control-static` class on them. 
+
+Read-only controls with **Read-only style** set to **Text** are now rendered as `<div class="form-control-static"/>`.
 
 ### 9.6 Input Widgets Structure
 
-Previously, some input widgets had a wrapper element surrounding their control. These redundant wrappers have been removed, and now bare controls are rendered wherever possible (except radio buttons in a radio buttons group, in which each individual control is wrapped in a `div`).
+Previously, some input widgets had a wrapper element surrounding their control. 
 
-### 9.7 Examples of Input Widget Layout
+These redundant wrappers have been removed, and now bare controls are rendered wherever possible (except radio buttons in a radio buttons group, in which each individual control is wrapped in a `div`).
 
-**put some text here introing why anyone would need this or what these examples illustrate**
+### 9.7 Examples of Input Controls
+
+Here are a few examples of various input controls:
 
 Text box:
 
@@ -300,7 +304,7 @@ Check box:
 
 **change to complete sentence**
 
-When **Label position** is set to **After control** (label on the form group is not shown):
+Check box when **Label position** is set to **After control** (in this case the label on the form group is not shown):
 
 ```html
 <input type="checkbox" value="" />
@@ -341,11 +345,11 @@ Drop down:
 </select>
 ```
 
-## 10 Date Picker Markup Changes
+## 10 Date Picker Widget Changes
 
 ### 10.1 Input
 
-The following changes have been made to the input **SOMETHING**:
+The following changes have been made to the date picker input widget:
 
 * The classes `mx-dateinput` and `mx-dateinput-input` have been removed in favor of the new `mx-compound-control` class
 * The `mx-compound-control` class was introduced for input widgets made up of more than one element, such as a widget with a button next to the input
@@ -407,9 +411,9 @@ The following changes have been made to the reference selector markup:
 
 * The classes `mx-referenceselector` and `mx-referencesetselector` have been removed from the main `<div>` element in favor of the new `mx-compound-control` class, which was introduced for input widgets made up of more than one element (one common input widget with multiple elements is a button next to an input element)
 
-The following changes have been made to the input reference set selector markup: **surrounding form group? surrounding what? Also, can I move the `mx-referenceselector` reference to the above bullet/section?**
+The following changes have been made to the input reference set selector markup: 
 
-* The surrounding form group will now get the class `mx-referenceselector` or `mx-inputreferencesetselector` (note the `input` prefix) instead
+* The form group will now get the class `mx-referenceselector` or `mx-inputreferencesetselector` (note the `input` prefix) instead
 * The inner `<div>` element (sharing a class ending with `-input-wrapper`) around the input was removed
 * The `<button>` elements have been placed after the input in the DOM to match the visual order
 
@@ -421,17 +425,10 @@ The following changes have been made to the `DropDownButton` widget:
 * The class `mx-list` has been removed from the list of terms in the dialog window
 * The class `mx-dropdown` has been removed from the dialog window, as it has nothing to do with drop down in the search input
 
+## 13 File Manager and Image Uploader Widget Changes
 
-## 13 File Uploader Markup Changes
+Previously, file manager and image uploader widgets were rendered differently on desktop and mobile browsers. On desktop these widgets rendered as an easily stylable custom HTML snippet, while on mobile they manifested as difficult-to-style native file input.
 
-**have dev help me break into bullets (esp 3rd para)**
+File manager and image uploader widgets have been changed for consistency. Now, they always shows the same HTML structure. Also, these widgets' DOM structure has been made more consistent with other compound widgets (like the reference selector and date picker).
 
-Previously, file and image uploader widgets were rendered differently on desktop and mobile browsers. On desktop these widgets rendered as an easily stylable custom HTML snippet, while on mobile they manifested as difficult-to-style native file input.
-
-These widgets have been changed for consistency. Now, they always shows the same HTML structure. Also, these widgets' DOM structure has been made more consistent with other compound widgets (like the reference selector and date picker).
-
-**those widgets? which ones?**
-
-Now those widgets are always represented as a `div`  element with `mx-compound-control` class on it. Also, the `mx-fileinput` class has been moved to the form group. Inside of the `div`, there is an input with `form-control` class. This input represents a filename of currently selected file. The class `mx-wrapped-label` is gone from the input. Next to the input, there are one of two buttons for uploading and downloading the current file. These buttons have the same classes as before.
-
-
+Now, file manager and image uploader widgets are always represented as a `div`  element with `mx-compound-control` class on it. Also, the `mx-fileinput` class has been moved to the form group. Inside of the `div`, there is an input with `form-control` class. This input represents a filename of currently selected file. The class `mx-wrapped-label` is gone from the input. Next to the input, there are one of two buttons for uploading and downloading the current file. These buttons have the same classes as before.

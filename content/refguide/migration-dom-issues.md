@@ -251,7 +251,6 @@ Caption
 	</div>
 </div>
 ```
-**TODO: validate "show label"**
 
 This is the structure of an input widget, in either a horizontal or vertical data view, with **Show label** set to **No**. The input widget has an input control and an optional validation message:
 

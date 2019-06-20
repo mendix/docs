@@ -99,7 +99,7 @@ Flows form the connection between elements.
 | --- | --- | --- |
 
 | [![](attachments/819203/917883.png)](sequence-flow) | [Sequence flow](sequence-flow) | An arrow that links events, activities, decisions, and merges with each other. Together they define the order of execution within a nanoflow. |
-| [![](attachments/819203/917688.png)](annotation-flow) | [Annotation flow](annotation-flow) | A connection that can be used to connect an annotation to another element. |
+| [![](attachments/819203/917688.png)](annotation#annotation-flow) | [Annotation flow](annotation#annotation-flow) | A connection that can be used to connect an annotation to another element. |
 
 ### 5.3 Decsions {#decisions}
 

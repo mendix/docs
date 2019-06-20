@@ -9,7 +9,6 @@ tags: ["studio pro"]
 The common elements for microflows and nanoflows are divided into the following:
 
 * [Activities](activities)
-* [Annotation Flow](annotation-flow)
 * [Annotation](annotation)
 * [Events](events)
 * [Expressions](expressions)

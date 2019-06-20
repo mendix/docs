@@ -429,3 +429,8 @@ Previously, file manager and image uploader widgets were rendered differently on
 File manager and image uploader widgets have been changed for consistency. Now, they always shows the same HTML structure. Also, these widgets' DOM structure has been made more consistent with other compound widgets (like the reference selector and date picker).
 
 Now, file manager and image uploader widgets are always represented as a `div`  element with `mx-compound-control` class on it. Also, the `mx-fileinput` class has been moved to the form group. Inside of the `div`, there is an input with `form-control` class. This input represents a filename of currently selected file. The class `mx-wrapped-label` is gone from the input. Next to the input, there are one of two buttons for uploading and downloading the current file. These buttons have the same classes as before.
+
+## 14 Read More
+
+* [Atlas Documentation]()
+* Something else 

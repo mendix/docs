@@ -1,6 +1,6 @@
 ---
 title: "Microflow Element Common Properties"
-parent: "common-elements"
+parent: "application-logic"
 tags: ["studio pro"]
 ---
 

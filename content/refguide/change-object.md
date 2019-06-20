@@ -4,6 +4,10 @@ parent: "object-activities"
 tags: ["studio pro"]
 ---
 
+{{% alert type="warning" %}}
+This activity can be used in both **Microflows** and **Nanoflows**.
+{{% /alert %}}
+
 ## 1 Introduction
 
 The Change object activity can be used to change the members of an object. This can be done with or without committing and with or without events.

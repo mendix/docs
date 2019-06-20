@@ -1,6 +1,7 @@
 ---
 title: "Sequence Flow"
-parent: "common-elements"
+parent: "application-logic"
+menu_order: 70
 tags: ["studio pro", "condition value", "microflow"]
 ---
 

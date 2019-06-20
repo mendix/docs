@@ -7,6 +7,10 @@ tags: ["javascript", "javascript action", "parameter", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert type="warning" %}}
+This activity can only be used in **Nanoflows**.
+{{% /alert %}}
+
 ## 1 Introduction
 
 With JavaScript actions, you can extend your application's functionality in ways nanoflows alone cannot. To use a JavaScript action, call it from a nanoflow using the [JavaScript Action Call](javascript-action-call).

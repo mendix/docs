@@ -1,6 +1,7 @@
 ---
 title: "Action Call Activities"
 parent: "activities"
+menu_order: 30
 tags: ["studio pro", "javascript", "javascript actions"]
 ---
 

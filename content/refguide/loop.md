@@ -1,7 +1,8 @@
 ---
 title: "Loop"
-parent: "common-elements"
-tags: ["studio pro"]
+parent: "application-logic"
+menu_order: 60
+tags: ["studio pro", "loop"]
 ---
 
 ## 1 Introduction

@@ -1,8 +1,9 @@
 ---
 title: "Expressions"
-parent: "common-elements"
+parent: "application-logic"
+menu_order: 80
 description: "Describes the expressions that can be used in Mendix for a variety of purposes (for example, to change a member of an object based on logic)."
-tags: ["studio pro"]
+tags: ["studio pro", "expressions", "microflow expressions"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

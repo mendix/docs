@@ -26,7 +26,7 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud V3, and other deploym
 * We fixed an issue which prevented the adding of comments to a backup. (Ticket #81993)
 * We updated the **Read documentation** link in the Mendix Cloud V4 metrics page to point to the right document. (Ticket #82130)
 * We added appropriate feedback if you try to upload a client certificate which is unsupported because it is not encoded in PEM. (Ticket #82299)
-* We fixed an issue which prevented the offboarding a just a single environment if you wanted to retain other environments in the Mendix Cloud node. (Ticket #83189)
+* We fixed an issue which prevented the offboarding of a single environment if you wanted to retain other environments in the Mendix Cloud node. (Ticket #83189)
 
 ### June 15th, 2019
 

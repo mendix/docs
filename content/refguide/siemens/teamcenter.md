@@ -15,4 +15,3 @@ This section includes reference content for using Teamcenter with Mendix.
 There is one document in this section:
 
 * [Teamcenter Connector for Mendix](tc-connector-for-mx) − This documentation provides guidance on using Teamcenter Connector for Mendix.
-* [Teamcenter Connector for Mendix](tc-connector-for-mx)

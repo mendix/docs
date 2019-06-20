@@ -9,3 +9,11 @@ tags: ["studio pro"]
 
  * [Microflows](microflows)
  * [Nanoflows](nanoflows)
+ * [Activities](activities)
+ * Splits
+ * [Events](events)
+ * [Annotation](annotation)
+ * [Parameter](parameter)
+ * [Loop](loop)
+ * [Sequence Flow](sequence-flow)
+ * [Expressions](expressions)

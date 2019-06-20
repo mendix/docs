@@ -133,7 +133,7 @@ To import all the sub-folders and files you have created, write this:
 
 After you import everything, you are finally ready to Sass! 
 
-## 5 Working with Sass
+## 5 Custom Sass Example
 
 Here is an example of custom Sass:
 

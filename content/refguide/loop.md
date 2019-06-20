@@ -1,7 +1,7 @@
 ---
 title: "Loop"
 parent: "application-logic"
-menu_order: 60
+menu_order: 80
 tags: ["studio pro", "loop"]
 ---
 

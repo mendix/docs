@@ -1,6 +1,7 @@
 ---
 title: "Activities"
 parent: "application-logic"
+menu_order: 30
 tags: ["studio pro", "microflows", "nanoflows", "activity"]
 ---
 

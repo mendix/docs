@@ -1,7 +1,7 @@
 ---
 title: "Splits"
 parent: "application-logic"
-menu_order: 20
+menu_order: 40
 tags: ["studio pro"]
 ---
 

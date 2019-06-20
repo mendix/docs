@@ -30,6 +30,6 @@ AQM includes automated checks for a subset of the [Mendix Development Best Pract
 |Check Code|Check Name|
 |----------|----------|
 |MF-1|[Microflow – elements – Using more than 25 elements in a microflow is discouraged](/howto/general/dev-best-practices#size)|
-|MF-2|[Microflow – documentation – All complex microflows (more than 10 activities and/or 2 splits) must have an annotation describing the purpose of the microflow](/howto/general/dev-best-practices#documentation-and-annotations)|
+|MF-2|[Microflow – documentation – All complex microflows (more than 10 activities and/or 2 decisions) must have an annotation describing the purpose of the microflow](/howto/general/dev-best-practices#documentation-and-annotations)|
 |DM-1|[Domain model – entities – Using more than two inheritance levels on domain entities is discouraged](/howto/general/dev-best-practices#inheritance)|
 |DM-2|[Domain model – entities – Using calculated attribute values is discouraged](/howto/general/dev-best-practices#attributes)|

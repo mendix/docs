@@ -6,7 +6,7 @@ tags: ["studio pro", "condition value", "microflow"]
 
 ## 1 Introduction
 
-A sequence flow is an arrow that links events, activities, decisions and merges with each other. Hereby it defines the order of execution. Flows always flow in one direction where elements follow each other up one by one. Splits always lead to one direction so it is not possible that multiple flows take place simultaneously.
+A sequence flow is an arrow that links events, activities, decisions and merges with each other. Hereby it defines the order of execution. Flows always flow in one direction where elements follow each other up one by one. Decisions always lead to one direction, so it is not possible that multiple flows take place simultaneously.
 
 {{% alert type="info" %}}
 

@@ -36,7 +36,7 @@ You should always convert your project from the latest release of Mendix version
 
 Review your app project in combination with the sections below and assess if further action needs to be taken before upgrading to Mendix 8.
 
-In particular, it is easier to fix deprecations in Java actions (see [Deprecated and Removed APIs](#deprecated-apis)) in Mendix 7 before upgrading to Mendix 8. However, Float and Currency deprecation errors will be easier to fix in Mendix 8 instead (see the section [Elements of Type Float & Currency](#float-currency)) below for instructions.
+In particular, it is easier to fix deprecations in Java actions (see [Deprecated and Removed APIs](#deprecated-apis)) in Mendix 7 before upgrading to Mendix 8. However, Float and Currency deprecation errors will be easier to fix in Mendix 8 instead (see the section [Elements of Type Float & Currency](#float-currency) below for instructions).
 
 ### 2.4 Save Version 7 Project
 

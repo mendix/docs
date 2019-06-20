@@ -14,6 +14,20 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud V3, and other deploym
 
 ## 2019
 
+### June 27th, 2019
+
+#### Mendix Cloud Improvements
+
+* We added a confirmation dialogue when you delete Custom Headers
+* We made general performance improvements
+
+#### Fixes
+
+* We fixed an issue which meant that sometimes comments could not be added to a backup. (Ticket #81993)
+* We updated the **Read documentation** link in the Mendix Cloud V4 metrics page to point to the right document. (Ticket #82130)
+* We added appropriate feedback if you try to upload a client certificate which is unsupported because it is not encoded in PEM. (Ticket #82299)
+* We fixed an issue which prevented the offboarding a just a Test environment if you wanted to retain the Acceptance and Production environments. (Ticket #83189)
+
 ### June 15th, 2019
 
 #### Mendix Cloud Announcement

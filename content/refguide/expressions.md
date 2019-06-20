@@ -126,7 +126,11 @@ An overview of the possibilities with expressions can be found below.
 
 ## 14 To String
 
+See [To String](to-string) for details.
+
 ## 15 Parse Integer
+
+See [Parse Integer](parse-integer) for details.
 
 ## 16 Parse/Format Decimal Function Calls
 

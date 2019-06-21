@@ -91,3 +91,11 @@ You can search for unused items (Ctrl+Shift+F, Search for = Unused items) in Stu
 By setting the propery 'Mark as used' to 'Yes' you specify that the document is used implicitly and Studio Pro will no longer list it when searching for unused items.
 
 _Default value:_ No
+
+### 7 Expose as microflow action settings
+
+By selecting the Expose as microflow action option, it is possible to expose the microflow as a microflow action. Exposing the microflow will make it appear in the the Toolbox window when editing a microflow in the category of your choice. When this action is used in a microflow, it will show the provided caption and icon.
+
+The caption and category of the microflow action are required, but the icon is optional. When no icon is selected, the default microflow call action icon is used.
+
+The recommended size for the icon is 16x16.

@@ -22,7 +22,7 @@ A Free App has a number of limitations compared to a licensed app. The main limi
 | ------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | **Number of Users**                         | Unlimited users.                                             | Depends on your pricing plan.                                |
 | **Sleep Mode**                              | Goes into Sleep Mode after an hour or so of inactivity and automatically resumes when a user accesses it. All your data is retained while the app is in Sleep Mode. | Does not have a Sleep Mode.                                  |
-| **Storage**                                 | 100MB of data and 100MB of file storage space.               | Depends on your pricing plan.                                |
+| **Disk Storage**                            | Unlimited.               | Unlimited on Mendix Cloud V4.                                |
 | **Scheduled Events**                        | Are not run.                                                 | Are run and can be configured from the Developer Portal.     |
 | **Environments**                            | Single environment in the Mendix Cloud.                      | A node in the cloud which has one or more environments, for example, production, acceptance, and test. |
 | **Deployment**                              | Can only be deployed to the cloud from Mendix Studio or Studio Pro. | Can be deployed from the Studios, or from the Developer Portal. |
@@ -31,7 +31,7 @@ A Free App has a number of limitations compared to a licensed app. The main limi
 | **Client Certificates**                     | Not available.                                               | Can be configured from the Developer Portal.                 |
 | **Starting and stopping your app manually** | Not available.                                               | Available in the Developer Portal.                           |
 | **Constants and Runtime Settings**          | Defined in Studio Pro                                        | Configurable through environment variables and settings in the Developer Portal. |
-| **Scalability**                             | Only one instance and a fixed amount of memory.              | Configurable in the Developer Portal.                        |
+| **Scalability**                             | Only one instance and a fixed amount (1Gb) of memory.              | Configurable in the Developer Portal.                        |
 | **Metrics, Alerts, and Log Levels**         | Not available.                                               | Available.                                                   |
 | **Historic Archived Logs**                  | Not available, only live logs are available.                 | Available.                                                   |
 | **Backups**                                 | Performed daily, cannot be triggered manually. Stored up to two weeks. |Performed daily, can also be created manually. Kept for up to one year, depending on your plan. |

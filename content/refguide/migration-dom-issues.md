@@ -22,7 +22,7 @@ TODO: write a sentence or two and link it to the Atlas refguide doc [+How to mig
 
 Before Mendix 8, the client provided a large amount of default styling if your app project lacked a theme. This made building your own theme difficult, as you needed to override the default styling. As of Mendix 8, all styling has been moved to AtlasUI. Now, building your own theme from scratch requires significantly less work.
 
-If you have already built your own theme from scratch in an earlier version of Mendix, you might depend on that styling. For that we provide the previous CSS defaults in [this github repository](**TODO:LINK HERE**) which you can download for use.
+If you have already built your own theme from scratch in an earlier version of Mendix, you might depend on that styling. For that we provide the previous CSS defaults in this github repository which you can download for use.
 
 ## 4 Focus-Specific Class Removed
 

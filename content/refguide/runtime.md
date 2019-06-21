@@ -21,11 +21,15 @@ Links to available API documentation such as WSDLs for published web services ar
 
 ## 4 Main Documents in This Category
 
-* [Clustered Mendix Runtime](clustered-mendix-runtime)
-* [Customization](custom-settings)
-* [Data Storage](data-storage)
-* [Date & Time Handling](datetime-handling-faq)
-* [Logging](logging)
-* [Monitoring Mendix Runtime](monitoring-mendix-runtime)
-* [Objects & Caching](objects-and-caching)
-* [Transient Objects & Garbage Collecting](transient-objects-garbage-collecting)
+* [Clustered Mendix Runtime](clustered-mendix-runtime) – describes the behavior and impact of running Mendix Runtime as a cluster
+* [Runtime Customization](custom-settings) – presents advanced options for customizing Runtime server settings
+* [Data Storage](data-storage) – presents information on data storage configuration options, such as the following:
+	* [Uniqueness Constraint Migration](uniqueness-constraint-migration)
+	* [MySQL/MariaDB](mysql)
+	* [Oracle](oracle)
+	* [SAP HANA](saphana)
+* [Date & Time Handling](datetime-handling-faq) – presents details on how to configure Mendix Server operations for the user's date and time
+* [Logging](logging) – discusses the various log levels for Runtime
+* [Monitoring Mendix Runtime](monitoring-mendix-runtime) – describes the Mendix Runtime monitoring actions that are supported (such as [state statistics](monitoring-mendix-runtime#state) and [thread stack traces](monitoring-mendix-runtime#thread)).
+* [Objects & Caching](objects-and-caching) – presents details on what happens when objects are loaded from the database, cached, retrieved, changed, and committed
+* [Mendix Runtime & Java](runtime-java) – explains some of the basic concepts of Java in Mendix

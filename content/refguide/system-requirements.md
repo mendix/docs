@@ -11,7 +11,7 @@ tags: ["studio pro"]
 
 This document presents the system requirements for the various parts of the Mendix Platform.
 
-## 2 Mendix Studio Pro
+## 2 Mendix Studio Pro {#sp}
 
 Mendix [Studio Pro](modeling) supports 64-bit versions of Windows 7, 8, and 10. Windows 7 must be at least Service Pack 1.
 
@@ -36,7 +36,7 @@ Mendix Studio Pro (version 8.0.0 beta 2 and above) uses the Subversion 1.9 worki
 Always use the version of TortoiseSVN which matches your app model. If you open a local model from Mendix version 7.x or 6.x with the latest version of TortoiseSVN **you will no longer be able to open it in Mendix**.
 {{% /alert %}}
 
-## 3 Team Server
+## 3 Team Server {#ts}
 
 The [Team Server](team-server) is implemented using Subversion, and Studio Pro uses the HTTPS protocol to communicate with that server. To access the Team Server from within Studio Pro, the network at your location needs the following settings:
 

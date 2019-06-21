@@ -103,7 +103,7 @@ A Tag is a way of identifying a commit in addition to the *revision* number. It 
 
 The Repository Service manages communication between Studio or Studio Pro and other supporting services (for example, Team Server). The developer will not generally be aware that they are communicating via the Repository Service.
 
-## 3 Version Control Processes for a Single Branch{#vc-single}
+## 3 Version Control Processes for a Single Branch {#vc-single}
 
 The figure below shows how two developers might work on a *Studio enabled* development line of an app. One developer is working in Studio, and one in Studio Pro. They both work on the same development line (for example, the Main Line).
 
@@ -204,5 +204,6 @@ Note that *errors* can be introduced by the *merge* process even if no conflicts
 
 ## 5 Main Documents in This Category
 
-* [Using Version Control in Studio Pro](using-version-control-in-studio-pro)
-* [Team Server](team-server)
+* [Using Version Control in Studio Pro](using-version-control-in-studio-pro) – presents technical details for using version control (theoretical concerns are described above)
+* [Team Server](team-server) – introduces topics relating to Team Server and app development in Studio Pro
+* [Collaborative Development] – describes the process of sharing app model changes when a team of more than one person is working on the app

@@ -28,7 +28,7 @@ To improve security of your app, it is recommended that you delete the MindSpher
 
 ![Section of a microflow showing the Access token action and the Edit Custom HTTP Header dialog in the Call REST action](attachments/mindsphere-development-considerations/delete-mindspheretoken.png)
 
-## 3 Cloud Foundry Environment Variables{#cfenvvars}
+## 3 Cloud Foundry Environment Variables {#cfenvvars}
 
 If you need to set or change the value of any Cloud Foundry Environment Variables, you will have to do this using the Cloud Foundry Command Line Interface (CF CLI).
 
@@ -50,7 +50,7 @@ Your project will define the default values for [constants](/refguide/constants)
     cf set-env MyApp MX_MyModule_MyConstant "ABC123"
 ```
 
-## 4 Licensing Your App{#licensing}
+## 4 Licensing Your App {#licensing}
 
 When you initially deploy a Mendix App, it is treated as a *Free App*. For a MindSphere app the most important restrictions are:
 
@@ -61,7 +61,7 @@ To license your app, you need to obtain a license key from [Mendix Support](http
 
 Instructions for licensing apps are available in the [License Activation](https://github.com/mendix/cf-mendix-buildpack#license-activation) section of the *Mendix Cloud Foundry Buildpack Readme*. Refer to [Cloud Foundry Environment Variables](#cfenvvars), above, for instructions on changing Cloud Foundry environment variables.
 
-## 5 Local Testing{#localtesting}
+## 5 Local Testing {#localtesting}
 
 ### 5.1 Credentials
 The SSO module supports two ways to get a valid MindSphere token locally. The method can be chosen by setting the value of the constant *CredentialsType* to one of the following settings:
@@ -105,7 +105,6 @@ To ensure that the correct application credentials are requested, you have to se
 #### 5.1.2 Service Credentials
 As an alternative to the Application Credentials, you can choose the option Service Credentials. As with the Application Credentials a login screen will be open asking for the **Credentials ID** and the **Password**.
 Service Credentials can be requested via a service request to the Global Technical Access Center GTAC. More information can be found [here].(https://developer.mindsphere.io/howto/howto-selfhosted-api-access.html#creating-service-credentials).
-
 
 ### 5.2 Configuration
 
@@ -157,7 +156,7 @@ When a new user is identified during SSO, the SSO process generates a random pas
 This policy is set up as the default in the MindSphere starter and example apps and should not be changed.
 {{% /alert %}}
 
-## 6 MindSphere Icons{#atlasui}
+## 6 MindSphere Icons {#atlasui}
 
 The MindSphere Theme Pack includes two ways of including MindSphere icons in your app.
 
@@ -198,17 +197,17 @@ You will not see the icon in Studio Pro when it is in *Structure mode*. Switch t
 You can only add one icon per element.
 {{% /alert %}}
 
-## 7 Multi-Tenancy{#multitenancy}
+## 7 Multi-Tenancy {#multitenancy}
 
 In MindSphere, apps are usually designed to be multi-tenant, meaning that a single instance of the app serves multiple tenants. A tenant is a representation of a real-world organization. It groups users, data, assets, entities, and many kinds of other properties. Access to these resources for users of the same tenant is controlled via the authorization management system.
 
 For a MindSphere app to be multi-tenant, each user can only see the data from a single tenant, defined by their login credentials, and cannot access resources of other tenants.
 
-### 7.1 Control through MindSphere APIs
+### 7.1 Control Through MindSphere APIs
 
 The Authorization HTTP Header (see DS_MindSphereAccessToken in the [Microflows](mindsphere-module-details#microflows) section of *MindSphere Module Details*) which is passed for every MindSphere API call ensures that the user can only obtain data which is authorized to them via their tenant.
 
-### 7.2 Control within a Mendix app
+### 7.2 Control Within a Mendix App
 
 If no security is placed on persistable Mendix entity objects, these are accessible to all users of the app (subject to access granted by their user role). This means that any app which stores data in persistable Mendix entities cannot be made multi-tenant without additional security.
 
@@ -263,11 +262,11 @@ You have some limits which are set for the user's tenant to be applied to a time
 
 4.  When you want to retrieve the list of limits, call this microflow instead of using the retrieve objects action. This will ensure that tenant-based security is always applied.
 
-## 8 Validation{#validation}
+## 8 Validation {#validation}
 
 Your app should, as a minimum, meet the requirements of the checklist on the MindSphere developer site here: [Get your Application Ready for Productive Use](https://developer.mindsphere.io/howto/howto-app-publication.html).
 
-## 9 Limitations{#limitations}
+## 9 Limitations {#limitations}
 
 The following limitations apply to Mendix apps which are deployed to MindSphere.
 
@@ -283,7 +282,7 @@ You can store small amounts of binary information in persistable entities. Howev
 
 Alternatively, you can use a separate AWS S3 bucket. See [Configuring External Filestore](https://github.com/mendix/cf-mendix-buildpack#configuring-external-filestore) in the *Mendix Cloud Foundry Buildpack GitHub Repository*. Refer to [Cloud Foundry Environment Variables](#cfenvvars), above, for instructions on changing Cloud Foundry environment variables.
 
-### 9.2 App Name{#appname}
+### 9.2 App Name {#appname}
 
 There are few limitations on what you call your app within Mendix. However, when you deploy the app to MindSphere, the app name registered in the Developer Cockpit must have the following characteristics:
 
@@ -294,7 +293,7 @@ There are few limitations on what you call your app within Mendix. However, when
 
 If you want to use the same app name in both Mendix and MindSphere, you should bear these constraints in mind when naming your Mendix app.
 
-### 9.3 Roles and Scopes
+### 9.3 Roles & Scopes
 
 MindSphere supports up to five application roles. You should take this into account when designing security within your Mendix app.
 

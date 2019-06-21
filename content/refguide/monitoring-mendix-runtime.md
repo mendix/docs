@@ -235,7 +235,7 @@ In case you do want to develop a strategy on interpreting these pools anyway bas
 
 {{% /alert %}}
 
-## 4 State Statistics
+## 4 State Statistics {#state}
 
 **Request**
 
@@ -331,7 +331,7 @@ The "threadpool" section gives information about the threadpool of the handler w
 
 Shows which users are currently logged in. If a user has multiple sessions, this user will be list once for every session.
 
-## 7 Thread Stack Traces
+## 7 Thread Stack Traces {#thread}
 
 **Request**
 

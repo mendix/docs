@@ -16,7 +16,7 @@ Storage space is unlimited for projects connected to a commercial license. 1 GB 
 
 ### How do I access the Team Server?
 
-The Team Server is delivered as a plugin to the Developer Portal. Start using the Team Server in your Developer Portal project by activating the plugin or by creating a new Team Server project in Mendix Studio Pro.
+The Team Server is delivered as a plugin to the [Developer Portal](/developerportal/develop/team-server). Start using the Team Server in your Developer Portal project by activating the plugin or by creating a new Team Server project in Mendix Studio Pro.
 
 ### What access controls come standard with the Team Server?
 

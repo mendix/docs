@@ -4,6 +4,7 @@ category: "Mendix Runtime"
 description: "Describes custom settings for server, log file, database, Amazon S3 storage service, IBM Cloud Object Storage, Microsoft Azure, IBM Bluemix object storage, web client, and proxy server in Mendix."
 tags: ["Runtime", "Customization", "Settings", "Configuration", "IBM Cloud", "Amazon S3", "IBM Cloud Object Storage", "Microsoft Azure", "Custom Settings", "Proxy", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
+#The anchor #5-amazon-s3-storage-service-settings below is mapped, so it should not be removed or changed.
 ---
 
 ## 1 Custom Runtime Settings

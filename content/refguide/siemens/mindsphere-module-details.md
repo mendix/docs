@@ -5,6 +5,7 @@ menu_order: 20
 description: "A detailed description of the modules which are required for deployment to MindSphere"
 tags: ["MindSphere"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
+#The anchors #mssso, #msosbar and #msthemepack below are mapped from the Siemens MindSphere documentation site, so they should not be removed or changed.
 ---
 
 ## 1 Introduction

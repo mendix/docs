@@ -52,7 +52,7 @@ Once pasted in your blog post / tutorial / wherever valid (X)HTML is accepted, t
 
 You can remove Model Shares you have created by navigating to your [model shares](https://modelshare.mendix.com/mymodels/) on the model share website. This will show a list of model shares uploaded by your Mendix account. If you want to remove a Model Share, open it, and press the 'Delete' button in the side bar. Note that it might take a while before Model Shares are removed from caches and especially from search engine results.
 
-## Disclaimer
+**Disclaimer**
 
 *   All shared models are publicly available and will be indexed by search engines.
 *   Mendix stores all the models on best efforts basis. Model share is not a backup service, please use the Mendix Teamserver instead.

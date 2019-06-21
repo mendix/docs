@@ -20,7 +20,7 @@ TODO: write a sentence or two and link it to the Atlas refguide doc [+How to mig
 
 **TODO: get link to github/something repo for the old CSS File mentioned in para 2**
 
-Before Mendix 8, the client provided a large amount of default styling if your app project lacked a theme. This made building your own theme difficult, as you needed to override the default styling. As of Mendix 8, all CSS not required for a working application has been removed. Now, building your own theme from scratch requires significantly less work.
+Before Mendix 8, the client provided a large amount of default styling if your app project lacked a theme. This made building your own theme difficult, as you needed to override the default styling. As of Mendix 8, all styling has been moved to AtlasUI. Now, building your own theme from scratch requires significantly less work.
 
 If you have already built your own theme from scratch in an earlier version of Mendix, you might depend on that styling. For that we provide the previous CSS defaults in [this github repository](**TODO:LINK HERE**) which you can download for use.
 
@@ -109,7 +109,7 @@ The markup for list view widgets has also been changed. To simplify the styling,
 * `mx-listview-search-input` 
 * `mx-listview-clear-button`
 
-For list views that are not in a select page for a reference or reference set selector,  the list view's `mx-listview-selectable` has been remobed. The unneeded `div` elements with class `mx-listview-content` around the contents of each list view item have also been removed.
+For list views that are not in a select page for a reference or reference set selector,  the list view's `mx-listview-selectable` has been removed. The unneeded `div` elements with class `mx-listview-content` around the contents of each list view item have also been removed.
 
 The order of the list view search bar's DOM elements has been corrected to be consistent with the visual order. The `div` element around the search input field has been removed.
 
@@ -170,15 +170,15 @@ This is how the DOM structure of the data view widget is organized now:
 
 ```html
 <div class="mx-dataview [form-horizontal or form-vertical]">
-		<div class="mx-dataview-content">
-			...
-			<div class="form-group"> ... </div>
-			<div class="form-group"> ... </div>
-			...
-		</div>
-		<div class="mx-dataview-controls">
-			...
-		</div>
+	<div class="mx-dataview-content">
+		...
+		<div class="form-group"> ... </div>
+		<div class="form-group"> ... </div>
+		...
+	</div>
+	<div class="mx-dataview-controls">
+		...
+	</div>
 </div>
 ```
 
@@ -200,7 +200,7 @@ Now, the `form-group` class stays in place with extra `no-columns` class:
 </div>
 ```
 
-If you have nade custom styles using `.form-group` before, this might be a breaking change as `.form-group`  matches with more elements now. You can now target form groups and elements inside them on only horizontal or only vertical forms using `.form-horizontal .form-group` or `.form-vertical .form-group` respectively. 
+If you have made custom styles using `.form-group` before, this might be a breaking change as `.form-group`  matches with more elements now. You can now target form groups and elements inside them on only horizontal or only vertical forms using `.form-horizontal .form-group` or `.form-vertical .form-group` respectively. 
 
 ### 9.3 Input Widget Type Classes
 

@@ -655,7 +655,7 @@ The microflow does the following:
 * Calls CFCommons.getEnvVariables to get an environment variable **VCAP_SERVICES**
 * If the variable does not exist, the microflow ends and returns **false**
 * If the VCAP_SERVICE environment variable does exist it will contain the credentials, in JSON format, of all the services which have been allocated to your project on IBM Cloud
-* The action **Import with mapping** is used, together with the mapping **USE_ME > JsonMapping > VCAP_Import_Mapping** to populate an object of type **Config** (see [Import Mapping Action](../import-mapping-action) for more information)
+* The action **Import with mapping** is used, together with the mapping **USE_ME > JsonMapping > VCAP_Import_Mapping** to populate an object of type **Config** (see [Import Mapping Action](/refguide/import-mapping-action) for more information)
 
     ![Domain model for Watson VCAP Management](attachments/ibm-watson-connector/vcap.png)
 

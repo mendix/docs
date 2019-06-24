@@ -19,7 +19,6 @@ Looking to create great user experiences and a user-friendly graphical user inte
 * [Create a Custom Theme with the Mendix UI Framework](create-a-custom-theme-with-the-mendix-ui-framework)
 * [Implement Styles](styles)
 * [Set Up Gulp & Sass](set-up-sass)
-* [Start Styling with Gulp & Sass](style-with-gulp-and-sass)
 * [Create Custom Error Pages](custom-error-page)
 * [Style Google Maps](style-google-maps)
 * [Use the Charts Widgets](charts-tutorials)

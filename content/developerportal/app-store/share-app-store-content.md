@@ -97,7 +97,7 @@ To add content to the App Store, follow these steps:
 		b. Enter the **GitHub profile name**.<br />
 		c. Select the **GitHub repo** from which the content will be uploaded by clicking **Select**. The system will crawl all of the projects for that GitHub profile and present the Mendix package file (*.mpk*) options to you in a pop-up window. When you find the correct *.mpk* file name, click **Select** on this window.<br />
 		d. Select the **release** by clicking **Select**. If there are various releases of the *.mpk* file available, the system will present them to you in a pop-up window. When you find the correct release, click **Select** on this window.<br />
-		e. Check the **Use GitHub readme.md** check box if you want the *readme.md* file to be included with the App Store content.<br />
+		e. Check the **Use GitHub readme.md** check box if you want the repo's *readme.md* file to be included on the App Store item's [Documentation tab](#doc-tab). This is useful for including nicely formatted documentation with screenshots for your App Store item.<br />
 		f. Note that the **Release notes** section is only available for updating a new version of the content (for details see the  [Updating Existing App Store Content](#updating) section below).<br />
 
 		{{% image_container width="400" %}}![](attachments/share-app-store-content/add_content_1.png)

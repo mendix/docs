@@ -196,8 +196,7 @@ Practice the routine above a few times and you will master it in no time. In add
 	* **package**
 * When running `gulp dev`, Sass will compile the CSS files unminified and with source-mapping – this helps in debugging the styling, as a modern browser will point to the *.scss* file where a rule is specified
 	* When using this in production, you should run `gulp build` before committing and deploying – this will disable source-mapping and will minify the CSS files to minimize the file size
-	{{% alert type="info" %}}
-	This point is drawn from the blog post [How Do I Start Styling In Mendix (Gulp & Sass)](https://medium.com/@jasonteunissen/how-do-i-start-styling-in-mendix-gulp-sass-6b37ddaf8de6) by Jason Teunissen, UX Consultant at [Appronto](https://developer.mendixcloud.com/link/partnerprofile/8870), a Mendix partner company.
+	{{% alert type="info" %}}This point is drawn from the blog post [How Do I Start Styling In Mendix (Gulp & Sass)](https://medium.com/@jasonteunissen/how-do-i-start-styling-in-mendix-gulp-sass-6b37ddaf8de6) by Jason Teunissen, UX Consultant at [Appronto](https://developer.mendixcloud.com/link/partnerprofile/8870), a Mendix partner company.
 	{{% /alert %}}
 
 Have fun styling!

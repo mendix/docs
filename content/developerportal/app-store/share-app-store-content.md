@@ -134,7 +134,7 @@ To add content to the App Store, follow these steps:
 	{{% image_container width="400" %}}![](attachments/share-app-store-content/add_content_4.png)
 	{{% /image_container %}}
 
-8.  <a name="doc-tab"></a>On the **Documentation** tab, you can write or edit the documentation that should accompany your app in the editor. Note that this is only applicable when the **Use GitHub readme.md** check box is not checked, and you are only able to edit the documentation of your own and your company's content.
+8.  <a name="doc-tab"></a>On the **Documentation** tab, you can write or edit the documentation that should accompany your app in the editor. You are only able to edit the documentation of your own and your company's content. Note that this is only applicable when the **Use GitHub readme.md** check box is not checked.
 
 	* The documentation template includes the following sections that you must fill out in order to submit your content:
 		* An extended **Description** of the content

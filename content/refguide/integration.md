@@ -16,7 +16,7 @@ For [Call REST Service Action](call-rest-action) and JSON support in [Mapping Do
 For [Call Web Service Action](call-web-service-action) and support for SOAP Web Services/XML, see [Consumed Web Services](consumed-web-services).
 {{% /alert %}}
 
-## 2 Other Documents in This Sub-Category
+## 2 Other Documents in This Section
 
 * [Consumed App Services](consumed-app-services)
 * [HttpRequest & HttpResponse System Entities](http-request-and-response-entities)

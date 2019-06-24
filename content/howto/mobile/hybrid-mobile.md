@@ -9,7 +9,7 @@ tags: ["mobile", "hybrid"]
 
 A Mendix hybrid app is a web application which runs inside a container that can be installed as a native app on your device. Hybrid apps can be deployed using the Mendix Platform, their containers enable native capabilities like camera and GPS app functions, and they can be published to the Apple App Store and Google Play. 
 
-## 2 Documents in This Sub-Category
+## 2 Documents in This Section
 
 * [Include Push Notifications](push-notifications)
 * [Configure the Mendix Feedback Widget for iOS](feedback-widget-ios)

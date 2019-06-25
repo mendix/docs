@@ -1,7 +1,7 @@
 ---
-title: "Query Over Self-References"
-category: "Data Models"
-menu_order: 5
+title: "Querying Over Self-References"
+parent: "entities"
+menu_order: 7
 tags: ["query", "self-reference", "association", "domain model"]
 ---
 

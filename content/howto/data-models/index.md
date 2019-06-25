@@ -9,10 +9,9 @@ This category includes how-to's on creating data layers and setting up data vali
 
 ## 2 Main Documents in This Category
 
-* [Create a Basic Data Layer](create-a-basic-data-layer)
-* [Set Up Data Validation](setting-up-data-validation)
-* [Work with Object Events](working-with-object-events)
-* [Work with Images & Files](working-with-images-and-files)
+* [Create a Basic Data Layer](create-a-basic-data-layer) – teaches you how to create entities and attributes, add enumerations, create associations, and delete association behavior
+* [Set Up Data Validation](setting-up-data-validation) – explains how to set up both required and advanced data validation
+* [Work with Images & Files](working-with-images-and-files) – explains how to start working with images and files by configuring inheritance and generalization
 * [Query Over Self-References](query-over)
 * [Denormalize Data to Improve Performance](denormalize-data-to-improve-performance)
 * [Migrate Your Mendix Database](migrating-your-mendix-database)

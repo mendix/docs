@@ -11,7 +11,7 @@ This document will cover the basics of how to create pages using layouts and sni
 
 **This how-to will teach you how to do the following:**
 
-* Create and style layouts
+* Create style layouts
 * Create snippets
 
 ## 2 Layouts

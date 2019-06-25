@@ -236,5 +236,5 @@ You can picture the authentication as shown below:
 * [Use App Store Content](/developerportal/app-store/app-store-content)
 * [Project Security](/refguide/project-security)
 * [SAP Cloud Platform XSUAA Connector](https://appstore.home.mendix.com/link/app/78091/)
-* [SAP XSUAA Connector](/refguide/sap/sap-xsuaa-connector)
+* [SAP XSUAA Connector](/partners/sap/sap-xsuaa-connector)
 * [SAP Cloud Platform cockpit](https://account.hana.ondemand.com/cockpit#/home/allaccounts)

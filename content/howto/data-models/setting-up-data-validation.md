@@ -4,9 +4,12 @@ category: "Data Models"
 menu_order: 2
 tags: ["studio pro"]
 ---
-This how-to explains how you can set up data validation with Mendix. Before you can start with this how-to you need to setup a basic data structure, otherwise there won't be any data to validate. If you don't know how to setup a basic data structure, you can take a look at [this how-to](create-a-basic-data-layer).
 
-## 1 Data Validation on Entity Level
+## 1 Introduction
+
+This how-to explains how you can set up data validation with Mendix. Before you can start with this how-to you need to setup a basic data structure, otherwise there won't be any data to validate. If you don't know how to setup a basic data structure, you can take a look at [How to Create a Basic Data Layer](create-a-basic-data-layer).
+
+## 2 Data Validation on Entity Level
 
 This section will explain how you can add validation rules to the domain model of your module. Validation rules are always triggered when changes to an object are committed. Please note that validation rules can only be applied on entities that are persistable.
 
@@ -25,7 +28,7 @@ This section will explain how you can add validation rules to the domain model o
 7.  Select the **rule type**.
 8.  Click **OK** to save this validation rule.
 
-## 2 Required Validation on Inputs, Reference Selectors and Drop-downs
+## 3 Required Validation on Inputs, Reference Selectors and Drop-downs
 
 The page builder of Studio Pro allows you to configure which inputs are mandatory and what message is shown to the user if the input is empty. If you don't have a detail page yet, take a look at [this](../front-end/create-your-first-two-overview-and-detail-pages) how-to.
 
@@ -36,7 +39,7 @@ The page builder of Studio Pro allows you to configure which inputs are mandator
 
 Please note that a _required_ validation rule on entity level overrules this property.
 
-## 3 Advanced Data Validation with the 'Before Commit' Event
+## 4 Advanced Data Validation with the 'Before Commit' Event
 
 Validation rules are great for simple validations, but Mendix also offers ways to handle more complex validations. The domain model allows you to define event handlers on entity level. The 'Before Commit' and 'After Commit' events are always triggered when an object is committed to the database. The 'After Commit' is most commonly used to calculate values of de-normalised data. With the 'Before Commit' event you can execute a microflow that must return a boolean value. If the microflow returns 'false', the entire commit is aborted otherwise the object is stored in the database. This mechanism is great for data validation. This section will explain how you can validate data by use of the 'Before Commit' event.
 
@@ -57,7 +60,7 @@ Validation rules are great for simple validations, but Mendix also offers ways t
 
 As long as this Microflow returns a boolean value, you are free to add any logic to determine if the data is valid or not. If the Microflow returns 'false', the commit is cancelled. Returning 'true' will commit the object. If you don't know how to work with microflows, take a look at how-to.
 
-## 4 Advanced Validation with a Custom 'Save' Button
+## 5 Advanced Validation with a Custom 'Save' Button
 
 Validating user input can also be achieved by overriding the default save button on a detail page. Start by creating an overview and detail page. If you don't know how to create overview and detail pages, take a look at [this](../front-end/create-your-first-two-overview-and-detail-pages) how-to. Your detail page should look similar to this:
 
@@ -104,7 +107,7 @@ Validating user input can also be achieved by overriding the default save button
 15. Select for example **Name** as member.
 16. Enter an error message in the **Template** field. You can use indexes to dynamically insert parameters in the template.
 
-## 5 Read More
+## 6 Read More
 
 * [Work with Images & Files](working-with-images-and-files)
 * [Create a Basic Data Layer](create-a-basic-data-layer)
@@ -114,4 +117,3 @@ Validating user input can also be achieved by overriding the default save button
 * [Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
 * [Stories](/developerportal/collaborate/stories)
 * [Perform the Scout and Windows 10 Workaround](../front-end/perform-scout-and-windows-10-workaround)
-

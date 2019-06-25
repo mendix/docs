@@ -37,5 +37,5 @@ When the SAP XSUAA Connector and Cloud Connector are set up, the only thing a de
 ## 4 Read More
 
 * [SAP XSUAA Connector](sap-xsuaa-connector)
-* [How to Set Up the SAP XSUAA Connector](/howto/sap/use-sap-xsuaa-connector)
-* [How to Use the SAP OData Connector](/howto/sap/use-sap-odata-connector)
+* [How to Set Up the SAP XSUAA Connector](/partners/sap/use-sap-xsuaa-connector)
+* [How to Use the SAP OData Connector](/partners/sap/use-sap-odata-connector)

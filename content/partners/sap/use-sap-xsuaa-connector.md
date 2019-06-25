@@ -1,10 +1,9 @@
 ---
 title: "Use the SAP XSUAA Connector"
 category: "SAP"
-menu_order: 30
+menu_order: 130
 description: "Describes how to set up the SAP XSUAA Connector."
 tags: ["SAP", "integration", "OData", "SSO"]
-draft: true
 ---
 
 ## 1 Introduction
@@ -27,12 +26,12 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Create an SAP app using an SAP starter app
 * Select and deploy the app to an SAP account and subaccount where you have authority to configure security
-* Set the security level for the project to at least Prototype/demo to use SAP Authentication; for more information see [Project Security](/refguide/project-security) and for instructions on setting security levels, see [How To Create a Secure App](../security/create-a-secure-app)
+* Set the security level for the project to at least Prototype/demo to use SAP Authentication; for more information see [Project Security](/refguide/project-security) and for instructions on setting security levels, see [How To Create a Secure App](/howto/security/create-a-secure-app)
 * Setup the app with the following two **User roles** in **Project ... > Security**: Supervisor and Inspector
 
 	![](attachments/use-sap-xsuaa-connector/add-roles-to-app.png)
 
-* Ensure the app behaves differently according to the user role, so you can see the effect of setting up the roles in XSUAA. For example, give each role a different starting page as described here: [How To Set Up the Navigation Structure](../general/setting-up-the-navigation-structure)
+* Ensure the app behaves differently according to the user role, so you can see the effect of setting up the roles in XSUAA. For example, give each role a different starting page as described here: [How To Set Up the Navigation Structure](/howto/general/setting-up-the-navigation-structure)
 
 ## 3 Getting the SAP XSUAA Connector Module
 
@@ -233,9 +232,9 @@ You can picture the authentication as shown below:
 
 ## 6 Read More
 
-* [Create a Secure App](../security/create-a-secure-app)
+* [Create a Secure App](/howto/security/create-a-secure-app)
 * [Use App Store Content](/developerportal/app-store/app-store-content)
 * [Project Security](/refguide/project-security)
 * [SAP Cloud Platform XSUAA Connector](https://appstore.home.mendix.com/link/app/78091/)
-* [SAP XSUAA Connector](/refguide/sap/sap-xsuaa-connector)
+* [SAP XSUAA Connector](/partners/sap/sap-xsuaa-connector)
 * [SAP Cloud Platform cockpit](https://account.hana.ondemand.com/cockpit#/home/allaccounts)

@@ -19,4 +19,4 @@ This category includes reference content for integrating with Siemens products.
 ## 3 Read More
 
 * [Siemens MindSphere for Deployment](/developerportal/deploy/deploying-to-mindsphere)
-* [How to Use the Siemens MindSphere Pump Asset Example App](/howto/siemens/mindsphere-example-app)
+* [How to Use the Siemens MindSphere Pump Asset Example App](/partners/siemens/mindsphere-example-app)

@@ -4,7 +4,6 @@ parent: "mindsphere"
 menu_order: 30
 description: "Documentation of the MindSphere Asset Management Connector"
 tags: ["MindSphere", "Asset", "Asset Type", "Connector"]
-draft: true
 ---
 
 ## 1 Introduction
@@ -124,4 +123,4 @@ It returns the following:
 
 ## 4 Read More
 
-* [How to Use the Siemens MindSphere Pump Asset Example App](/howto/siemens/mindsphere-example-app)
+* [How to Use the Siemens MindSphere Pump Asset Example App](/partners/siemens/mindsphere-example-app)

@@ -1,10 +1,9 @@
 ---
 title: "Use the SAP OData Connector"
 category: "SAP"
-menu_order: 10
+menu_order: 110
 description: "Describes how to use the SAP OData Connector."
 tags: ["SAP", "integration", "OData"]
-draft: true
 ---
 
 ## 1 Introduction
@@ -78,7 +77,7 @@ In this example, you will display a list of products from the GWSAMPLE_BASIC ODa
 
     ![](attachments/use-sap-odata-connector/data-model.png)
 
-For more information, see [Use the SAP OData Model Creator](use-sap-odata-model-creator) and [SAP Data Models](/refguide/sap/sap-data-models).
+For more information, see [Use the SAP OData Model Creator](use-sap-odata-model-creator) and [SAP Data Models](/partners/sap/sap-data-models).
 
 ## 3 Using the SAP OData Connector
 
@@ -137,5 +136,5 @@ Congratulations! You can now run your app and see a list of the products availab
 
 ## 4 Read More
 
-* [SAP OData Connector](/refguide/sap/sap-odata-connector)
-* [SAP Data Models](/refguide/sap/sap-data-models)
+* [SAP OData Connector](/partners/sap/sap-odata-connector)
+* [SAP Data Models](/partners/sap/sap-data-models)

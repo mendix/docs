@@ -34,4 +34,4 @@ A guide on how to use the MindSphere Asset Management Connector to retrieve asse
 ## 3 Read More
 
 * [Siemens MindSphere - deployment](/developerportal/deploy/deploying-to-mindsphere)
-* [How to Use the Siemens MindSphere Pump Asset Example App](/howto7/mindsphere/mindsphere-example-app)
+* [How to Use the Siemens MindSphere Pump Asset Example App](/partners/siemens/mindsphere-example-app)

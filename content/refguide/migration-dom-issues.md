@@ -239,7 +239,7 @@ The horizontal form group input widget now has a label with `col-sm-{labelWith}`
 ```html
 <div class="form-group mx-name-textBox4 [...]" [...]>
 	<label class="control-label col-sm-4" for="123_abc">
-Caption
+		Caption
 	</label>
 	<div class="col-sm-8">
 		<INPUT-CONTROL/>
@@ -271,7 +271,11 @@ This is the structure of an input widget, in either a horizontal or vertical dat
 
 Previously, non-editable input controls of input widgets with **Read-only style** set to **Text** could have been rendered using a `p` or a `label` element with a `form-control-static` class on them. 
 
-Read-only controls with **Read-only style** set to **Text** are now rendered as `<div class="form-control-static"/>`.
+Read-only controls with **Read-only style** set to **Text** are now rendered as the following:
+
+```html
+<div class="form-control-static">value</div>
+```
 
 ### 9.6 Input Widgets Structure
 
@@ -304,8 +308,8 @@ Check box:
 Check box when **Label position** is set to **After control** (in this case the label on the form group is not shown):
 
 ```html
-<input type="checkbox" value="" />
-<label for="">Label</label>
+<input type="checkbox" id="123_abc" value="" />
+<label for="123_abc">Label</label>
 ```
 
 Radio buttons: 
@@ -381,7 +385,9 @@ The month header now has the following structure:
 			<div class="mx-calendar-month-label">June</div>
 		</div>
 		<span class="glyphicon glyphicon-chevron-down"/>
-		<div class="mx-calendar-month-dropdown-options"> <!-- only rendered when the month dropdown is clicked -->
+
+		<!-- only rendered when the month dropdown is clicked -->
+		<div class="mx-calendar-month-dropdown-options">
 			<div>January</div>
 			...
 		</div>

@@ -196,7 +196,7 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud V3, and other deploym
 * We released an upgraded version of the [IBM Watson Connector Suite](https://appstore.home.mendix.com/link/app/2860/), which supports IBM Watson SDK version 6.11.0 and adds additional microflow actions.
 * We released an upgraded version of the [IBM Watson Connector Suite Example Project](https://appstore.home.mendix.com/link/app/2880/), which includes the new IBM Watson Connector Suite.
 * We released an upgraded version of the IBM Watson Blank App starter app, which includes the new IBM Watson Connector Suite.
-* For more information see [IBM Watson Connector](https://docs.mendix.com/refguide7/ibm/ibm-watson-connector).
+* For more information see [IBM Watson Connector](https://docs.mendix.com/partners/ibm/ibm-watson-connector).
 
 ### January 21st, 2019
 
@@ -323,7 +323,7 @@ The Web Modeler can now be enabled for all types of apps. You can do this on the
 
 #### SAP OData Connector Version 4.0.0
 
-This version of the SAP OData Connector allows you to use the destination services of SAP Cloud Platform. This simplifies configuration, authentication and endpoint management when integrating your application, running in SAP Cloud Platform, with SAP backend services. See [SAP Destination Service](/refguide7/sap/sap-destination-service).
+This version of the SAP OData Connector allows you to use the destination services of SAP Cloud Platform. This simplifies configuration, authentication and endpoint management when integrating your application, running in SAP Cloud Platform, with SAP backend services. See [SAP Destination Service](/partners/sap/sap-destination-service).
 
 The following authentication types are currently supported in SAP Destination Services:
 
@@ -349,7 +349,7 @@ We now configure Destination Service in the scope of XSUAA. This means that we a
 
 #### Breaking Changes
 
-* The new **SAP OData Connector** will break existing projects which are using the SAP Cloud Connector. The SAP OData Connector no longer supports the “Use Cloud Connector” attribute. This is now embedded in the destination service configuration. See [SAP Destination Service](/refguide7/sap/sap-destination-service) for more details.
+* The new **SAP OData Connector** will break existing projects which are using the SAP Cloud Connector. The SAP OData Connector no longer supports the “Use Cloud Connector” attribute. This is now embedded in the destination service configuration. See [SAP Destination Service](/partners/sap/sap-destination-service) for more details.
 
 #### Fixes
 

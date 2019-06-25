@@ -106,7 +106,7 @@ As an alternative to this and to REST services, Mendix enables OData contracts t
 OData is a relatively new protocol that requires both sides of the integration to be OData-enabled. It is now mainly used for the following reasons:
 
 * For BI solutions to access specific data in Mendix apps, which are more real-time than data-warehose solutions
-* For Mendix apps to access data in newer versions of SAP (for details, see the [SAP OData Connector](/refguide/sap/sap-odata-connector))
+* For Mendix apps to access data in newer versions of SAP (for details, see the [SAP OData Connector](/partners/sap/sap-odata-connector))
 * For Mendix apps to use data from each other's data models directly, which is especially interesting within clusters of microservices that work together as a system
 
 ![](attachments/service-integration/si-6.png)

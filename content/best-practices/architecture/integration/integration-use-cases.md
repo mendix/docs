@@ -156,4 +156,4 @@ The Mendix Platform already integrates well with various IoT solutions (for exam
 
 Mendix automation apps use statistical information from data lakes to fine-tune automated processes. They can include algorithms such as Java actions or Java scripts from, for example, AWS Machine learning solutions. 
 
-Mendix also integrates well with Watson from IBM. For more information, see [IBM Watson Connector](/refguide/ibm/ibm-watson-connector).
+Mendix also integrates well with Watson from IBM. For more information, see [IBM Watson Connector](/partners/ibm/ibm-watson-connector).

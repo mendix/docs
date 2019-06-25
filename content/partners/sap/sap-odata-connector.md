@@ -4,7 +4,6 @@ category: "SAP"
 menu_order: 10
 description: "Presents reference information on the use of the SAP OData Connector."
 tags: ["SAP", "integration", "OData", "BAPI"]
-draft: true
 ---
 
 ## 1 Introduction{#Introduction}
@@ -15,13 +14,13 @@ The SAP OData Connector is an OData connector written specifically to integrate 
 
 ![](attachments/sap-odata-connector/appstore-sapodata.png)
 
-You can use the [SAP OData Model Creator](https://sapodatamodelcreator.mendixcloud.com/) to generate a data model from the metadata of your OData service, exposed from your SAP back-end system, or from APIs in the SAP API Business Hub or the SAP Catalog Service. For more details see [How to Use the SAP OData Model Creator](/howto/sap/use-sap-odata-model-creator).
+You can use the [SAP OData Model Creator](https://sapodatamodelcreator.mendixcloud.com/) to generate a data model from the metadata of your OData service, exposed from your SAP back-end system, or from APIs in the SAP API Business Hub or the SAP Catalog Service. For more details see [How to Use the SAP OData Model Creator](/partners/sap/use-sap-odata-model-creator).
 
 {{% alert type="warning" %}}
 SAP OData Connector only supports SAP OData Gateway Services which use OData version 2 or version 3. OData version 4 is not yet supported.
 {{% /alert %}}
 
-If you are new to the SAP OData Connector, you can try it out by following our how-to: [How to Use the OData Connector](/howto/sap/use-sap-odata-connector). This reference assumes that you know the details of the SAP OData service you want to use.
+If you are new to the SAP OData Connector, you can try it out by following our how-to: [How to Use the OData Connector](/partners/sap/use-sap-odata-connector). This reference assumes that you know the details of the SAP OData service you want to use.
 
 When running the Mendix application on SAP Cloud Platform, you can choose to use the SAP Destination Service to gain access to your on-premises SAP instance. The SAP Destination Service can be configured to invoke the SAP Connectivity Service in SAP Cloud Platform to find a route to your OData service residing on-premises. This route is configured from the SAP Cloud Connector running as an agent in your on-premises SAP back-end. If no route is configured, the SAP OData Connector will route requests to the public OData service. For more information, see the [SAP Destination Service](sap-destination-service) documentation and the [SAP OData Connector](https://appstore.home.mendix.com/link/app/74525/Mendix/SAP-OData-Connector) in the Mendix App Store.
 
@@ -63,7 +62,7 @@ For more information on domain models, see [Domain Model](/refguide/domain-model
 
 Most of the actions of the SAP OData Connector make use of a domain model representing the SAP service data model. These models contain non-persistable Mendix entities which represent entities in the OData service which is exposed by an SAP back-end system. The entities contain attributes which correspond to the entity properties plus additional attributes which support the SAP OData Connector.
 
-You can create a data model by inspecting the service metadata. The response from the service can be used in the [SAP OData Model Creator](https://sapodatamodelcreator.mendixcloud.com/) to generate a domain model which can be imported into your app. Instructions for doing this are in [How to Use the SAP OData Model Creator](/howto/sap/use-sap-odata-model-creator).
+You can create a data model by inspecting the service metadata. The response from the service can be used in the [SAP OData Model Creator](https://sapodatamodelcreator.mendixcloud.com/) to generate a domain model which can be imported into your app. Instructions for doing this are in [How to Use the SAP OData Model Creator](/partners/sap/use-sap-odata-model-creator).
 
 {{% alert type="info" %}}
 In addition to the domain model, the OData Model Creator will also create three other items:
@@ -89,7 +88,7 @@ This data model for the GWSAMPLE_BASIC service can be obtained from the [SAP ODa
     * Search for the GWSAMPLE_BASIC API
     * Use the GWSAMPLE_BASIC Schema
 
-In both cases, save the file you download from the **SAP OData Model Creator** and then, using the instructions in [How to Use SAP OData Model Creator](/howto/sap/use-sap-odata-model-creator), import it into your app. Make sure that you review the value of the constant containing the URL of the SAP service you are using after you have imported the data model into your app.
+In both cases, save the file you download from the **SAP OData Model Creator** and then, using the instructions in [How to Use SAP OData Model Creator](/partners/sap/use-sap-odata-model-creator), import it into your app. Make sure that you review the value of the constant containing the URL of the SAP service you are using after you have imported the data model into your app.
 
 Part of the data model for this sample data is:
 
@@ -622,8 +621,8 @@ This is the name that you give the result of your Activity. This can be used lat
 * [Domain Model](/refguide/domain-model)
 * [Entities](/refguide/entities)
 * [How to Use App Store Content](/developerportal/app-store/app-store-content)
-* [How to Use the SAP OData Connector](/howto/sap/use-sap-odata-connector)
-* [How to Use the SAP OData Model Creator](/howto/sap/use-sap-odata-model-creator)
+* [How to Use the SAP OData Connector](/partners/sap/use-sap-odata-connector)
+* [How to Use the SAP OData Model Creator](/partners/sap/use-sap-odata-model-creator)
 * [SAP Cloud Connector](sap-cloud-connector)
 * [SAP Help Portal](https://help.sap.com)
 * [SAP OData Connector](https://appstore.home.mendix.com/link/app/74525/Mendix/SAP-OData-Connector)

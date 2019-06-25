@@ -1,7 +1,6 @@
 ---
 title: "Strategic Partners Guide"
 description: "Documentation for IBM, SAP, and Siemens widgets written and maintained by Mendix"
-draft: true
 notoc: true
 tags: ["strategic partners", "ibm", "sap", "siemens"]
 ---

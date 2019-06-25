@@ -67,7 +67,7 @@ You may be asked to provide your credentials in one of two ways:
 2. The Developer Portal will ask for your credentials which it will then use to obtain an access token from SAP. The Developer Portal will then use the access token. It will not store your credentials. *This method is being deprecated*.
 
 {{% alert type="info" %}}
-If you have issues using SAP authentication, please refer to the reference [SAP Single Sign On](/refguide/sap/sap-single-sign-on).
+If you have issues using SAP authentication, please refer to the reference [SAP Single Sign On](/partners/sap/sap-single-sign-on).
 {{% /alert %}}
 
 You will now be asked to provide the final details for the SAP Cloud Platform development environment.
@@ -526,4 +526,4 @@ The Mendix status page ([https://status.mendix.com/](https://status.mendix.com/)
 
 ## 11 Read More
 
-* [SAP Single Sign On](/refguide/sap/sap-single-sign-on)
+* [SAP Single Sign On](/partners/sap/sap-single-sign-on)

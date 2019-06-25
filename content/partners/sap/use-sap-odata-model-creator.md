@@ -4,7 +4,6 @@ category: "SAP"
 menu_order: 120
 description: "Presents the use of the SAP OData Model Creator."
 tags: ["SAP", "OData", "integration", "SAP services"]
-draft: true
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -267,11 +266,11 @@ Now you have a Mendix module ready to import into your project.
 Do not change the names of entities, attributes, or associations in the Domain Model of the module; they need to match the names used by the SAP OData service for the SAP OData Connector to work correctly.
 {{% /alert %}}
 
-For more information on how to use the imported data model together with the SAP OData Connector, see [How to Use the SAP OData Connector](/howto/sap/use-sap-odata-connector).
+For more information on how to use the imported data model together with the SAP OData Connector, see [How to Use the SAP OData Connector](/partners/sap/use-sap-odata-connector).
 
 ## 5 Read More
 
 * [Use App Store Content](/developerportal/app-store/app-store-content)
-* [Use the SAP OData Connector](/howto/sap/use-sap-odata-connector)
+* [Use the SAP OData Connector](/partners/sap/use-sap-odata-connector)
 * [SAP OData Connector](https://appstore.home.mendix.com/link/app/74525/Mendix/SAP-OData-Connector)
 * [SAP OData Model Creator](https://sapodatamodelcreator.mendixcloud.com/)

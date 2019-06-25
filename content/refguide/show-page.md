@@ -12,13 +12,15 @@ This activity can be used in both **Microflows** and **Nanoflows**.
 
 With this action you can show a page to the end user.
 
-{{% alert type="info" %}}
+Note that it is also possible to drag an existing page from **Project Explorer** straight into your microflow:
 
-See [Microflow Element Common Properties](microflow-element-common-properties) for properties that all microflow activities share (for example, caption). This page only describes the properties specific to the action.
-
-{{% /alert %}}
+![](attachments/show-page/18580992.gif)
 
 ## 2 Input Properties
+
+{{% alert type="info" %}}
+See [Microflow Element Common Properties](microflow-element-common-properties) for properties that all microflow activities share (for example, caption). This page only describes the properties specific to the action.
+{{% /alert %}}
 
 ### 2.1 Object to pass
 

@@ -123,44 +123,11 @@ Your mobile device has to be on the same network as your development machine for
 
 Now you can see your app on your device. While this is just a template app, whenever you make changes you will be able to view them live on your Make It Native app.
 
-You may notice an **Enable dev mode** toggle on the Make It Native app home page. Turning this toggle on will give you more detailed warning messages during error screens, as well as additional functionality on the developer app menu.
+You may notice an **Enable dev mode** toggle on the Make It Native app home page. Turning this toggle on will give you more detailed warning messages during error screens, as well as additional functionality on the developer app menu:
 
 {{% image_container width="500" %}}![enable dev mode](attachments/getting-started-with-native-mobile/enable-dev-mode.png){{% /image_container %}}
-	
-### 3.4 Debugging Your Implementation
 
-When changing your native app or designing a custom widget, you may need to debug your implementation. The Make It Native app exposes a developer mode which supports debugging native apps for expert developers. Using Google Chrome is recommended for this, as it starts automatically during debugging.
-
-To start a debugging session, do the following:
-
-1. Run your Mendix app project locally on your desktop.
-2. Start the Make It Native app.
-3. Select **Enable dev mode** in the Make It Native app.
-4. Start your app project on your mobile device in Mendix Studio Pro by clicking **View** > **View in the Mendix App**.
-5. With your mobile device, tap **Scan QR code**, then scan the QR code on your desktop.
-
-When the Make It Native app finishes loading your app project, do the following:
-
-1. Open the developer menu by using a three-finger long press.
-2. Tap **Enable Remote js Debugging**.
-
-Your mobile app project should start reloading, and a Chrome window should launch on your desktop pointing to a debugging address. Change the address in your browser's navigation bar to *localhost:8083/debugger-ui* manually and go to that page.
-
-If Chrome launches but does not load your app, check that your app project is running in Mendix Studio Pro. If it is, click the **Stop** button, then click **Run Locally** again to restart your app. 
-
-You should see this page:
-
-![debug waiting](attachments/getting-started-with-native-mobile/debug-waiting.png)
-
-If the status remains at **Waiting**, use the reload command (pictured above) to refresh your app. The **Waiting** status should change and indicate an **active** session:
-
-![debug active](attachments/getting-started-with-native-mobile/debug-active.png)
-
-Your browser's debugging tools should be pointing to your app project. Now, you can debug your app like you would any other web app. 
-
-Outside of Chrome, other tools can help you debug Mendix apps (such as React Developer Tools). Regardless of which tool you use, remember that Mendix uses a different port (8083) than a default React Native installation would (8080).
-
-### 3.5 Viewing Changes to Your App on Your Testing Device {#viewingchanges}
+### 3.4 Viewing Changes to Your App on Your Testing Device {#viewingchanges}
 
 To see how changes made in Mendix Studio Pro are displayed live on your testing device, make a small change to your app.
 
@@ -179,9 +146,10 @@ Should you get an error screen while testing your app, there are easy ways to re
 * Tap your test app with three fingers to restart your app
 * With the **Enable dev mode** toggle turned on, hold a three-fingered tap to bring up the developer app menu – here you can access **ADVANCED SETTINGS** and **ENABLE REMOTE JS DEBUGGING** 
 
-{{% todo %}}[(link to future debug doc at the end of the last bullet above)]{{% /todo %}}
+For more detailed instructions on debugging a native app, see [Debug Native Apps (Advanced)](native-debug).
 
 ## 4 Read More
 
 * [Build Pluggable Widgets](../extensibility/pluggable-widgets)
 * [Native Styling](/refguide/native-styling-refguide)
+* [Debug Native Apps (Advanced)](native-debug)

@@ -37,7 +37,7 @@ _Default value_: Yes
 
 ## 3 Background Color {#color}
 
-Here you can choose a background color for the activity. Colors do not influence execution; they are only used to quickly spot an element in a flow. For example, you can make activities with [error handlers](micriflows#errorhandlers) red so you can easily identify them.
+Here you can choose a background color for the activity. Colors do not influence execution; they are only used to quickly spot an element in a flow. For example, you can make activities with [error handlers](microflows#errorhandlers) red so you can easily identify them.
 
 ## 4 Read More
 

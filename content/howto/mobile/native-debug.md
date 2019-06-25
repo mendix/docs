@@ -23,7 +23,7 @@ To start a debugging session, do the following:
 When the Make It Native app finishes loading your app project, do the following:
 
 1. Open the developer menu by using a three-finger long press.
-2. Tap **Enable Remote js Debugging**.
+2.  Tap **Enable Remote js Debugging**.
 
 Your mobile app project should start reloading, and a Chrome window should launch on your desktop pointing to a debugging address. Change the address in your browser's navigation bar to *localhost:8083/debugger-ui* manually and go to that page.
 
@@ -43,3 +43,6 @@ Outside of Chrome, other tools can help you debug Mendix apps (such as React Dev
 
 ## 3 Read More
 
+* [Get Started with Native Mobile](getting-started-with-native-mobile)
+* [Debug a Mobile App with Mendix](debug-a-mobile-app)
+* [Work with Parallels](using-mendix-studio-pro-on-a-mac)

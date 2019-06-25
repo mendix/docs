@@ -27,7 +27,7 @@ module.exports = {
       to: "/studio/settings-widget-overview"
     },	
     {
-      from: "/how-to/sap/use-sap-odata-model-creator",
+      from: "/howto/sap/use-sap-odata-model-creator",
       to: "/partners/sap/use-sap-odata-model-creator"
     },	
     {

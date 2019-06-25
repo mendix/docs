@@ -13,12 +13,11 @@ With these how-to's, you can learn how to translate your business logic into mic
 
 ## 2 Main Documents in This Category
 
-* [Create Your First Microflow: Hello World!](create-your-first-microflow-hello-world)
-* [Trigger Logic Using Microflows](triggering-logic-using-microflows)
-* [Create a Custom Save Button](create-a-custom-save-button)
-* [Drag Microflows & Pages into a Microflow](drag-microflows-and-pages-into-a-microflow)
-* [Extract & Use Sub-Microflows](extract-and-use-sub-microflows)
-* [Work with Lists in a Microflow](working-with-lists-in-a-microflow)
+* [Create Your First Microflow: Hello World!](create-your-first-microflow-hello-world) – explains how to create a simple microflow that will define the logic of your application
+* [Trigger Logic Using Microflows](triggering-logic-using-microflows) – describes how to trigger a microflow using a page button
+* [Create a Custom Save Button](create-a-custom-save-button) – explains how to create a custom save button by utilizing microflows
+* [Extract & Use Sub-Microflows](extract-and-use-sub-microflows) – shows you how to break down a large microflow into more manageable parts
+* [Work with Lists in a Microflow](working-with-lists-in-a-microflow) – teaches you how to iterate over a retrieved list of objects
 * [Optimize Microflow Aggregates](optimizing-microflow-aggregates)
 * [Set Up Error Handling](set-up-error-handling)
 * [Optimize Retrieve Activities](optimizing-retrieve-activities)

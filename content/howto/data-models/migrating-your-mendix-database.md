@@ -56,7 +56,9 @@ Database migration is handled by Mendix as a normal database synchronization pha
 
 {{% alert type="warning" %}}
 
-Before the data copy process starts, the source database will also be synchronized with the model, just like the main database. This is necessary to ensure that all data is copyied without problems.
+Before the data copy process starts, the main database structure will be generated based on the source database structure. This is necessary to make sure that all data is copied without any problems especially in cases when the source database has a large element value than what the current domain model specifies.
+
+As of Mendix 8.1, the source database structure and data will not be changed as part of the migration which used to be the case in prior versions of Mendix.
 
 {{% /alert %}}
 

@@ -4,7 +4,6 @@ category: "SAP"
 menu_order: 60
 description: "Documentation for using the SAP Leonardo Machine Learning Foundation Connector with images and text."
 tags: ["SAP", "Leonardo", "Machine Learning", "AI"]
-draft: true
 ---
 
 ## 1 Introduction

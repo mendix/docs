@@ -2,7 +2,6 @@
 title: "SAP"
 description: "Documentation for users who need material on consuming SAP services."
 tags: ["SAP", "OData", "XSUAA", "Destination Services", "Fiori"]
-draft: true
 ---
 
 ## 1 Introduction
@@ -13,10 +12,10 @@ To find out how to deploy your app to SAP Cloud Platform, see [SAP Cloud Platfor
 
 ## 2 Reference Documents in This Category
 
-* [SAP OData Connector](sap-odata-connector) – describes the actions and domain model of the [SAP OData Connector](/howto/sap/use-sap-odata-connector) 
+* [SAP OData Connector](sap-odata-connector) – describes the actions and domain model of the [SAP OData Connector](/partners/sap/use-sap-odata-connector) 
 * [SAP Destination Service](sap-destination-service) – presents details on enabling your Mendix app running on SAP Cloud Platform to use external services and systems
 * [SAP Data Models](sap-data-models) – describes resources for consuming the SAP OData service
-* [SAP XSUAA Connector](sap-xsuaa-connector) – presents background information on the [SAP XSUAA Connector](/howto/sap/use-sap-xsuaa-connector)
+* [SAP XSUAA Connector](sap-xsuaa-connector) – presents background information on the [SAP XSUAA Connector](/partners/sap/use-sap-xsuaa-connector)
 * [SAP Single Sign-On](sap-single-sign-on) – describes utilizing all the options of Mendix SSO as an SAP user
 * [SAP Leonardo Machine Learning Foundation Connector](sap-leonardo-connector) – provides details on using a number of the models available in the SAP Leonardo Machine Learning Foundation
 * [SAP Fiori / Mendix Building Blocks](sap-fiori-building-blocks) – presents a summary of the building blocks you can use to create an SAP Fiori-themed app

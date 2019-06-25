@@ -4,7 +4,6 @@ category: "SAP"
 menu_order: 50
 description: "Reference information on SAP Single Sign-On"
 tags: ["SAP", "SSO", "Single Sign-On"]
-draft: true
 ---
 
 ## 1 Introduction

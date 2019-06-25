@@ -215,7 +215,6 @@ best-practices:
 partners:
   space: "Strategic Partners Guide"
   priority: false
-  draft: true
   menu_categories:
     - "IBM"
     - "SAP"

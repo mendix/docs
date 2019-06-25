@@ -4,7 +4,6 @@ category: "SAP"
 menu_order: 140
 description: "How to configure Mendix native REST and SOAP calls to use the SAP Destination Service and the SAP Connectivity Service to reach on-premises services."
 tags: ["SAP", "Cloud Connector", "Connectivity Service", "Destination Service", "REST", "SOAP"]
-draft: true
 ---
 
 ## 1 Introduction
@@ -18,7 +17,7 @@ This how-to will teach you how to configure a REST or SOAP call to use the confi
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Have a Mendix app which can be deployed to SAP Cloud Platform
-* Configured a **PrincipalPropagation** destination to an *on-premise* REST or SOAP service in your SAP Cloud Platform account; see [SAP Destination Service](/refguide/sap/sap-destination-service) for more information
+* Configured a **PrincipalPropagation** destination to an *on-premise* REST or SOAP service in your SAP Cloud Platform account; see [SAP Destination Service](/partners/sap/sap-destination-service) for more information
 * Imported an **SAP OData Connector** version higher than 4.0.0 into your app
 
 ## 3 Writing Your Microflow
@@ -103,7 +102,7 @@ The same HTTP Headers are required as for a REST call. They do the following:
 
 ## 4 Read More
 
-* [SAP Destination Service](/refguide/sap/sap-destination-service)
+* [SAP Destination Service](/partners/sap/sap-destination-service)
 * [Consumed Web Services](/refguide/consumed-web-services)
 * [Consumed Web Service](/refguide/consumed-web-service)
 * [Call Web Service Action](/refguide/call-web-service-action)

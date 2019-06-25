@@ -1,9 +1,8 @@
 ---
-title: "Siemens MindSphere"
+title: "MindSphere"
 category: "Siemens"
 description: "Reference content for apps deployed to MindSphere"
 tags: ["Siemens", "MindSphere"]
-draft: true
 ---
 
 ## 1 Introduction

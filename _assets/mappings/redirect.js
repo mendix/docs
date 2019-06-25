@@ -45,7 +45,7 @@ module.exports = {
      ****************************************************/
 	{
       from: "/refguide/mindsphere/mindsphere-module-details",
-      to: "/refguide/siemens/mindsphere-module-details"
+      to: "/partners/siemens/mindsphere-module-details"
     },
 	/****************************************************
      * Studio Guide (permanent, unmapped)

@@ -5,9 +5,9 @@ description: "Presents an overview of documentation on microflows and nanoflows.
 tags: ["studio pro"]
 ---
 
- Application logic in Mendix can be implemented via microflows and nanoflows. Explore the documentation for details on microflow and nanoflow definitions, properties, and usages.
+Application logic in Mendix can be implemented via microflows and nanoflows. Explore the documentation for details on microflow and nanoflow definitions, properties, and usages.
 
- * [Microflows](microflows)
+* [Microflows](microflows)
 * [Nanoflows](nanoflows)
 * [Activities](activities)
 * [Splits](splits)
@@ -17,4 +17,4 @@ tags: ["studio pro"]
 * [Loop](loop)
 * [Sequence Flow](sequence-flow)
 * [Expressions](expressions)
-* [Common Properties](microflow-element-common-properties)
+* [Microflow Element Common Properties](microflow-element-common-properties)

@@ -1,7 +1,7 @@
 ---
 title: "SAP XSUAA Connector"
 category: "SAP"
-menu_order: 30
+menu_order: 40
 description: "Presents reference information on the SAP XSUAA Connector."
 tags: ["SAP", "SAP Cloud Platform", "SSO", "XSUAA"]
 draft: true

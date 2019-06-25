@@ -8,11 +8,13 @@ draft: true
 
 ## 1 Introduction
 
-This section includes reference content for using MindSphere with Mendix.
+Mendix can be used to access Siemens MindSphere data and can also be deployed to Siemens MindSphere.
+
+Mendix can be used to access Siemens MindSphere data and can also be deployed to Siemens MindSphere.To find out how to deploy your app to Siemens MindSphere, see [Siemens MindSphere – Deployment](/developerportal/deploy/deploying-to-mindsphere).
 
 ## 2 Main Documents in This Section
 
-There are three main documents in this section:
+There are three four in this section:
 
 * [MindSphere Development Considerations](mindsphere-development-considerations) – covers things which you should address when developing for MindSphere, including the following:
 
@@ -23,8 +25,4 @@ There are three main documents in this section:
 
 * [MindSphere Module Details](mindsphere-module-details) – describes more technical details about the MindSphere modules that you need to include in your Mendix app to enable it to run on MindSphere
 * [MindSphere Asset Management Connector](mindsphere-asset-management-connector) – describes how to use the MindSphere Asset Management Connector to retrieve assets and asset types from MindSphere
-
-## 3 Read More
-
-* [Siemens MindSphere - deployment](/developerportal/deploy/deploying-to-mindsphere)
-* [How to Use the Siemens MindSphere Pump Asset Example App](/howto/siemens/mindsphere-example-app)
+* [How to Use the Siemens MindSphere Pump Asset Example App](mindsphere-example-app) – contains documentation and assistance in using the Pump Asset Example App available in the App Store

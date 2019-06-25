@@ -1,7 +1,7 @@
 ---
 title: "Use the SAP OData Model Creator"
 category: "SAP"
-menu_order: 20
+menu_order: 120
 description: "Presents the use of the SAP OData Model Creator."
 tags: ["SAP", "OData", "integration", "SAP services"]
 draft: true

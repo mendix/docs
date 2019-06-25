@@ -1,7 +1,7 @@
 ---
 title: "SAP Data Models"
 category: "SAP"
-menu_order: 20
+menu_order: 30
 description: "Presents reference information on the use of SAP data models."
 tags: ["SAP", "integration", "SAP services", "OData"]
 draft: true

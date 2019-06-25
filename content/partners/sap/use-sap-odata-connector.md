@@ -1,7 +1,7 @@
 ---
 title: "Use the SAP OData Connector"
 category: "SAP"
-menu_order: 10
+menu_order: 110
 description: "Describes how to use the SAP OData Connector."
 tags: ["SAP", "integration", "OData"]
 draft: true

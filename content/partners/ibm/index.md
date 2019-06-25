@@ -8,7 +8,11 @@ draft: true
 
 ## 1 Introduction
 
-Mendix can be found in IBM Cloud as starter kits. In addition, IBM has integrated the provisioning and deployment of Mendix apps directly to the IBM Cloud.
+Mendix can be found as starter kits in IBM Cloud and in the IBM tab of the Mendix starter apps, when you create an app in the Mendix [Developer Portal](https://home.mendix.com/).
+
+IBM has integrated the provisioning and deployment of Mendix apps directly to the IBM Cloud. More information on how to deploy your app is available in [IBM Cloud](/developerportal/deploy/ibm-cloud).
+
+In addition, Mendix has written a number of connectors to enable developers to work easily with IBM Watson.
 
 ## 2 Main Documents in This Category
 

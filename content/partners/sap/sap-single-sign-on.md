@@ -1,7 +1,7 @@
 ---
 title: "SAP Single Sign-On"
 category: "SAP"
-menu_order: 40
+menu_order: 50
 description: "Reference information on SAP Single Sign-On"
 tags: ["SAP", "SSO", "Single Sign-On"]
 draft: true

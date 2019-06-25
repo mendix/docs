@@ -123,4 +123,4 @@ It returns the following:
 
 ## 4 Read More
 
-* [How to Use the Siemens MindSphere Pump Asset Example App](/howto7/mindsphere/mindsphere-example-app)
+* [How to Use the Siemens MindSphere Pump Asset Example App](/partners/siemens/mindsphere-example-app)

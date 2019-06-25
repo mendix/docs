@@ -10,7 +10,7 @@ We like to work with our community, and we encourage you to create and contribut
 
 **This how-to will teach you how to do the following:**
 
-* Contribute to a GitHub repository according to our guidelines
+* Contribute to a GitHub repository according to Mendix guidelines
 
 ## 2 Prerequisites
 

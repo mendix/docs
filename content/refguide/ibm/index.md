@@ -12,5 +12,4 @@ Mendix can be found in IBM Cloud as starter kits. In addition, IBM has integrate
 
 ## 2 Main Documents in This Category
 
-* [IBM Watson Connector](ibm-watson-connector)
-
+* [IBM Watson Connector](ibm-watson-connector) – describes using connectors with Mendix that simplify the use of various IBM Watson™ services

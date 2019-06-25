@@ -12,9 +12,9 @@ This category includes reference content for integrating with Siemens products.
 
 ## 2 Main Documents in This Category
 
-* [MindSphere Development Considerations](mindsphere-development-considerations)
-* [MindSphere Module Details](mindsphere-module-details)
-* [MindSphere Asset Management Connector](mindsphere-asset-management-connector)
+* [MindSphere Development Considerations](mindsphere-development-considerations) – clarifies what you need to keep in mind when developing a Mendix app that will be deployed to MindSphere
+* [MindSphere Module Details](mindsphere-module-details) – contains detailed information about the content of MindSphere modules for Mendix apps and what they are used for
+* [MindSphere Asset Management Connector](mindsphere-asset-management-connector) – describes the standard connector for managing assets within MindSphere
 
 ## 3 Read More
 

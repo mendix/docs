@@ -18,6 +18,6 @@ Both Android and iOS versions allow you to preview and debug your locally runnin
 
 ### iOS 1.0:
 
-* We developed a tutorial which explains the app’s most common features.
+* We developed a slideshow which explains the app’s most common features (accessed via the **?** button in the top-right corner).
 * We added **Showcase**: a place to view some of Mendix's core and pluggable widgets, as well as their Atlas UI styling.
-* We enabled access to Mendix documentation directly from the app.
+* We enabled access to Mendix documentation directly from the app (accessed via the **?** button in the top-right corner).

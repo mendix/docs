@@ -1,7 +1,7 @@
 ---
 title: "Mendix Mobile App"
 category: "Mobile Products"
-menu_order: 10
+menu_order: 20
 description: "These are the release notes for the Mendix Mobile app."
 toc-level: 1
 ---

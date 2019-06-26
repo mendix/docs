@@ -14,15 +14,10 @@ For more information on the Make It Native app, see [Getting the Make It Native 
 
 **Release date: June 21st, 2019**
 
-Both versions contain the same developer capabilities, but the iOS version contains a few extra features to help new users. These features will be available for Android in the future.
-
-### Android 1.0: 
-
-* You can preview and debug your locally running native app project on any supported mobile platform.
+Both Android and iOS versions allow you to preview and debug your locally running native app project on any supported mobile platform. The iOS version contains a few extra features to help new users. These features will be available for Android in the future.
 
 ### iOS 1.0:
 
-* You can preview and debug your locally running native app project on any supported mobile platform.
 * We developed a tutorial which explains the app’s most common features.
 * We added **Showcase**: a place to experience projects built with the Mendix Platform.
 * We enabled access to Mendix documentation directly from the app.

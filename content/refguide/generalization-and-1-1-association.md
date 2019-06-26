@@ -33,7 +33,7 @@ When you change an object with inheritance the platform will potentially prevent
 
 #### One-to-One Association
 
-When changing an object, none of the associated objects will be changed. There are two exceptions to this rule: of course if you change the associated object in an object event, or because associated objects are being 'autocommitted', see [How to Work with Object Events](/howto/data-models/working-with-object-events).
+When changing an object, none of the associated objects will be changed. There are two exceptions to this rule: of course if you change the associated object in an object event, or because associated objects are being 'autocommitted', see [Object Activities](object-activities).
 
 Whenever you have a high number of write transactions in your application, it is far better to choose for a one-to-one association, since this limits the number of tables that are being changed/locked during a transaction. However, if you do more inserts than updates it might be worth using inheritance again. Inheritance uses one less table to store the relationship, it does not have the association table. Therefore, any inserts require one indexed table fewer to be updated.
 

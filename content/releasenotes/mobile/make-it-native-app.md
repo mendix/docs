@@ -16,8 +16,8 @@ For more information on the Make It Native app, see [Getting the Make It Native 
 
 Both Android and iOS versions allow you to preview and debug your locally running native app project on any supported mobile platform. The iOS version contains a few extra features to help new users. These features will be available for Android in the future.
 
-### iOS 1.0:
+### iOS 1.0
 
 * We developed a slideshow which explains the app’s most common features (accessed via the **?** button in the top-right corner).
-* We added **Showcase**: a place to view some of Mendix's core and pluggable widgets, as well as their Atlas UI styling.
+* We added **Showcase**, a page which lets you view some of Mendix's core and pluggable widgets as well as their Atlas UI styling.
 * We enabled access to Mendix documentation directly from the app (accessed via the **?** button in the top-right corner).

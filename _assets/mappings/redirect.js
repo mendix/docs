@@ -201,6 +201,10 @@ module.exports = {
       from: "/refguide/publish-packages-to-mobile-stores",
       to: "/howto/mobile/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores"
     },
+	{
+      from: "/refguide/team-server",
+      to: "/developerportal/develop/team-server"
+    },
 	/****************************************************
      * From the App Store (permanent, mapped)
      ****************************************************/

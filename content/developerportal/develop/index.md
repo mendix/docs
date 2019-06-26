@@ -6,7 +6,7 @@ tags: ["Edit", "Studio Pro", "Studio", "Studio Pro", "Team Server", "Developer P
 
 ## 1 Introduction
 
-As you work with your [App Team](../collaborate/team) to develop your app project, the Developer Portal provides facilities for selecting the app modeling environment, viewing [Team Server](/refguide/team-server) revisions, and planning your app development.
+As you work with your [App Team](../collaborate/team) to develop your app project, the Developer Portal provides facilities for selecting the app modeling environment, viewing [Team Server](team-server) revisions, and planning your app development.
 
 ## 2 Documents in This Category
 

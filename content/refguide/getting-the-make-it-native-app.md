@@ -1,6 +1,7 @@
 ---
 title: "Getting the Make It Native App"
 parent: "native-mobile"
+menu_order: 10
 tags: ["Android", "iOS", "native", "debug"]
 ---
 

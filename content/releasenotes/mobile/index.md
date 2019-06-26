@@ -2,4 +2,8 @@
 title: "Mobile Products"
 ---
 
-This category includes release notes for the [Hybrid App](hybrid-app) and the [Mendix Mobile App](mendix-mobile-app)
+This category includes the following release notes: 
+
+* [Make It Native App](make-it-native-app)
+* [Mendix Mobile App](mendix-mobile-app)
+* [Hybrid App Base & Template](hybrid-app)

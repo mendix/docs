@@ -56,15 +56,11 @@ module.exports = {
       to: "/partners/siemens/mindsphere-module-details"
     },
 	/****************************************************
-     * Studio Guide (permanent, unmapped)
-     ****************************************************/
+     * Reference Guide version 7 (permanent, unmapped)
+     ****************************************************/	
 	{
-      from: "/howto/tutorials/",
-      to: "/studio/general"
-    },
-	{
-      from: "/howto/tutorials/mendix-tutorials",
-      to: "/studio/general"
+      from: "/refguide/moving-from-6-to-7",
+      to: "/refguide7/moving-from-6-to-7"
     },
 	/****************************************************
      * How-to's (permanent, unmapped)
@@ -91,6 +87,17 @@ module.exports = {
 	{
       from: "/howto7/ux/configuring-your-theme",
       to: "/howto7/front-end/configuring-your-theme"
+    },
+	/****************************************************
+     * Studio Guide (permanent, unmapped)
+     ****************************************************/
+	{
+      from: "/howto/tutorials/",
+      to: "/studio/general"
+    },
+	{
+      from: "/howto/tutorials/mendix-tutorials",
+      to: "/studio/general"
     },
 	/****************************************************
      * Developer Portal Guide (permanent, unmapped) 

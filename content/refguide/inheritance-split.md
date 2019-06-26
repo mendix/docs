@@ -33,4 +33,4 @@ Let us say you have an entity Student and an entity Professor which have the ent
 
 ### 3.1 Caption
 
-See [Microflow Element Common Properties](microflow-element-common-properties).
+See [Common Properties](microflow-element-common-properties).

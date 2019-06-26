@@ -22,7 +22,7 @@ Currently you warn users of unpaid orders with a pop-up message in the client. L
 
 ### 2.1 Caption
 
-For details, see [Microflow Element Common Properties](microflow-element-common-properties).
+For details, see [Common Properties](microflow-element-common-properties).
 
 ## 3 Annotation Flow {#annotation-flow}
 

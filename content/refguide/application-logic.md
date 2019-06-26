@@ -17,4 +17,4 @@ Application logic in Mendix can be implemented via microflows and nanoflows. Exp
 * [Loop](loop)
 * [Sequence Flow](sequence-flow)
 * [Expressions](expressions)
-* [Microflow Element Common Properties](microflow-element-common-properties)
+* [Common Properties](microflow-element-common-properties)

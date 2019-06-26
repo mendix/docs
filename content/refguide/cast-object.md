@@ -16,7 +16,7 @@ To read more about specialization and generalization, see [Entities](entities).
 
 {{% alert type="info" %}}
 
-For the properties that all the activities share (for example, a caption), see [Microflow Element Common Properties](microflow-element-common-properties). This page only describes the properties specific to the action.
+For the properties that all the activities share (for example, a caption), see [Common Properties](microflow-element-common-properties). This page only describes the properties specific to the action.
 
 {{% /alert %}}
 

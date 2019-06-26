@@ -19,7 +19,7 @@ Note that you can also drag a page from the **Project Explorer** into your micro
 ## 2 Input Properties
 
 {{% alert type="info" %}}
-See [Microflow Element Common Properties](microflow-element-common-properties) for properties that all microflow activities share (for example, caption). This page only describes the properties specific to the action.
+See [Common Properties](microflow-element-common-properties) for properties that all microflow activities share (for example, caption). This page only describes the properties specific to the action.
 {{% /alert %}}
 
 ### 2.1 Object to pass

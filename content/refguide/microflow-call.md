@@ -16,7 +16,7 @@ The Microflow call activity can be used to call another [microflow](microflows).
 
 {{% alert type="info" %}}
 
-See [Microflow Element Common Properties](microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
+See [Common Properties](microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
 
 {{% /alert %}}
 

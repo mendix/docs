@@ -2,7 +2,7 @@
 title: "Make It Native App"
 parent: "mobile"
 menu_order: 5
-description: "These release notes showcase each substantive release of the iOS and Android Make It Native app versions."
+description: "These release notes showcase each release of the iOS and Android Make It Native app versions."
 tags: ["Native", "Android", "iOS", "Apple", "Android"]
 ---
 

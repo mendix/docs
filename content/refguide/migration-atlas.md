@@ -22,7 +22,7 @@ To make your theming compatible with Mendix 8, follow the steps below.
 
 ## 2 Integrating **theme_old** into **theme**
 
-Text here doing some general intro setting off the bulleted list below blah blah
+When migrating from Mendix 7 to Mendix 8, you must integrate **theme_old** into **theme** while adhering to several guidelines. These guidelines vary on your specific project. Consult the subsections below for instructions based on your unique case.
 
 {{% alert type="info" %}}If you customized any widget where the DOM structure has changed, consult [Troubleshoot DOM Changes when Migrating to Mendix 8](migration-dom-issues) to ensure your custom styling works.{{% /info %}}
 

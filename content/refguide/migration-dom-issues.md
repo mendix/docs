@@ -14,7 +14,7 @@ However, these updates might impact your styling. The appearance of your applica
 
 ## 2 Updating Atlas
 
-TODO: write a sentence or two and link it to the Atlas refguide doc [+How to migrate Atlas to Mendix 8](https://paper.dropbox.com/doc/How-to-migrate-Atlas-to-Mendix-8-g4PvGKOMxR2aSHLPSj4xo) 
+When you upgrade to Mendix 8, DOM (HTML) structure changes will also alter the correlating styling (SASS). This could make some of your styling not work as expected anymore. To make your styling compatible with Mendix 8, see [Troubleshoot Atlas UI Changes when Migrating to Mendix 8](migration-atlas). 
 
 ## 3 Streamlined Custom Themes
 

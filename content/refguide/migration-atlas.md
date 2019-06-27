@@ -10,8 +10,7 @@ tags: [ "Widgets", "Themes", "Classes", "Atlas", "Atlas UI", "Styling", "SASS", 
 
 todo: see if I can change the **theme_old** bits of the existing heading
 
-When you upgrade to Mendix 8, there will be widgets where the DOM (HTML) structure has changed. This means that the correlating styling (SASS), will not work as expected anymore.
-To make your theming compatible with Mendix 8, follow the steps below.
+When you upgrade to Mendix 8, there will be widgets where the DOM structure has changed. This means that the correlating Sass styling will not work as expected anymore. To make your theming compatible with Mendix 8, follow the steps below.
 
 {{% alert type="warning" %}}If you have added any content in the **Atlas_UI_Resource module**, you have to move that content out of the module. If you do not, it will be overwritten.{{% /alert %}}
 

@@ -14,7 +14,7 @@ However, these updates might impact your styling. The appearance of your applica
 
 ## 2 Updating Atlas
 
-When you upgrade to Mendix 8, DOM (HTML) structure changes will also alter the correlating styling (SASS). This could make some of your styling not work as expected anymore. To make your styling compatible with Mendix 8, see [Troubleshoot Atlas UI Changes when Migrating to Mendix 8](migration-atlas). 
+When you upgrade to Mendix 8, DOM structure changes will also alter the correlating Sass styling files. This could make some of your styling not work as expected anymore. To make your styling compatible with Mendix 8, see [Troubleshoot Atlas UI Changes when Migrating to Mendix 8](migration-atlas). 
 
 ## 3 Streamlined Custom Themes
 

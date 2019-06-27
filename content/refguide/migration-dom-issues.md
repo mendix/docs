@@ -1,5 +1,5 @@
 ---
-title: "Mendix Studio Pro DOM Improvements"
+title: "Troubleshoot DOM Changes when Migrating to Mendix 8"
 parent: "domain-model"
 menu_order:
 description: "This document explains the updated DOM structure for Mendix 8, and what that means for app projects' CSS."
@@ -438,5 +438,4 @@ Now, file manager and image uploader widgets are always represented as a `div`  
 
 ## 14 Read More
 
-* [Atlas Documentation]()
-* Something else 
+* [Troubleshoot Atlas UI Changes when Migrating to Mendix 8](migration-atlas)

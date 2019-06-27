@@ -1,7 +1,7 @@
 ---
 title: "Change List"
 parent: "list-activities"
-tags: ["studio pro"]
+tags: ["studio pro", "List"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -11,7 +11,7 @@ This activity can be used in both **Microflows** and **Nanoflows**.
 
 ## 1 Introduction
 
-With this activity you can change a list that is stored in a variable.
+With this activity you can change a list.
 
 {{% alert type="info" %}}
 
@@ -23,13 +23,13 @@ See [Microflow Element Common Properties](microflow-element-common-properties) f
 
 ### 2.1 List
 
-Defines the list variable that is changed.
+Specifies the list that is changed.
 
 ## 3 Action Properties
 
 ### 3.1 Type
 
-Defines the type of change that is performed to the list.
+Defines the type of change that is applied to the list.
 
 | Option | Description |
 | --- | --- |
@@ -42,4 +42,4 @@ _Default value:_ Add
 
 ### 3.2 Value
 
-Value defines the value that is used to change the list. The value is entered using an [expression](expressions). The expression should result in an object or list of the same [entity](entities) as the input list.
+Value defines the value that is used to change the list. The value is entered using an [expression](expressions). The expression should result in an object or list of the same type of [entity](entities) as the input list.

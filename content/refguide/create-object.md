@@ -26,7 +26,7 @@ The entity of which you want to create an object.
 
 ### 2.2 Commit Type
 
-The **Commit type** defines the way the object is committed.
+**Commit** defines the way the object is committed.
 
 | Option | Description |
 | --- | --- |
@@ -56,10 +56,10 @@ _Default value_: No
 
 ### 2.3 Initialize Members
 
-You can initialize members of the newly created object. Values for members are specified with an [expression](expressions) and should be of the same type as the member.
+You can initialize members (attributes and associations) of the newly created object. Values for members are specified with an [expression](expressions) and must be of the same type as the member.
 
 ## 3 Output Properties
 
-### 3.1 Variable Name
+### 3.1 Name
 
-Variable name defines the name of the resulting object variable. It can be used by all activities that follow this activity.
+This is the name of the resulting object which can be used by all activities that follow this activity.

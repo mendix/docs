@@ -75,7 +75,7 @@ If the [export mapping](export-mappings) requires an input, this field shows the
 
 #### 4.1.3 Parameter
 
-If the [export mapping](export-mappings) requires an input, you can select a variable of the correct type.
+If the [export mapping](export-mappings) requires an input, you can select a parameter of the correct type.
 
 #### 4.1.4 Content Type
 
@@ -99,15 +99,15 @@ These are the options in the drop-down menu for handling the response:
 
 * **Apply import mapping** – if the response is JSON or XML, it can be transformed directly into objects using an [import mapping](import-mappings). The fields that you can choose here are described in the [Import Mapping action](import-mapping-action)
 * **Store in an HTTP response** – any successful HTTP response can be stored directly in an [HttpResponse](http-request-and-response-entities#http-response) object, and the [$latestHttpResponse](#latesthttpresponse) variable is also updated
-* **Store in a file document variable** – if the response is a binary content (for example, a PDF), it can be stored in an entity – this entity should inherit from `System.FileDocument`
+* **Store in a file document** – if the response contains binary content (for example, a PDF), it can be stored in an object of an entity type which inherits from `System.FileDocument`
 * **Store in a string** – if the response is a string (for example, CSV), it can be stored directly in a string variable
 * **Do not store in a variable** - use this option when the call does not return anything useful
 
 ### 5.2 Output
 
-The **Type** field defines the type of the output variable.
+The **Type** field defines the type of the output.
 
-The **Name** field defines the name for the variable that will hold the result of the operation.
+The **Variable** field defines the name for the result of the operation.
 
 ### 5.3 Error Handling
 
@@ -115,9 +115,9 @@ This section is applicable when the HTTP response status code is not successful 
 
 When the **Store message body in $latestHttpResponse variable** option is selected, `$latestHttpResponse/Content` will be set with the response body. It might contain some useful information provided by the server (for example, why the authentication is rejected).
 
-### 5.4 $latestHttpResponse Variable<a name="latesthttpresponse"></a>
+### 5.4 $latestHttpResponse Object<a name="latesthttpresponse"></a>
 
-The `$latestHttpResponse` variable is of the [HttpResponse](http-request-and-response-entities#http-response) type. It is available after a Call REST activity.
+The `$latestHttpResponse` object is of the [HttpResponse](http-request-and-response-entities#http-response) type. It is available after a Call REST activity.
 
 However, its `Content` attribute will be left empty in most cases to minimize memory usage.
 
@@ -126,4 +126,4 @@ This attribute is filled when one of the following scenarios occur:
 * The **Response handling** is **Store in an HTTP response** and the call succeeded
 * The **Store message body in $latestHttpResponse variable** option in the **Error handling** section is checked and the call failed
 
-This variable can be accessed from any microflow action in the scope.
+This object can be accessed from any microflow action in the scope.

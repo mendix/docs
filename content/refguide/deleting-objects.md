@@ -20,9 +20,9 @@ See [Microflow Element Common Properties](microflow-element-common-properties) f
 
 ## 2 Input Properties
 
-### 2.1 Variable
+### 2.1 Object or List
 
-The variable that refers to the object or list of objects that will be deleted. If you choose a list, all objects in that list will be deleted.
+The name of the object or list of objects that will be deleted. If you choose a list, all objects in that list will be deleted.
 
 ## 3 Action Properties
 

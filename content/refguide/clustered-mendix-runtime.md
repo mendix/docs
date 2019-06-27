@@ -118,7 +118,7 @@ To make sure the dirty state does not become too big when the above scenarios ap
 
 ## 10 Associating Entities with `System.Session` or `System.User`
 
-The `$currentSession` variable is available in microflows so that a reference to the current session can easily be obtained. When an object needs to be stored, its association can be set to `$currentSession`, and when the object needs to be retrieved again, `$currentSession` can be used as a starting point from which the desired object can be retrieved by association. The associated object can be designed so that it meets the desired needs. This same pattern applies to entities associated with `System.User`. In that case, you can use the `$currentUser` variable.
+The `$currentSession` *Session* object is available in microflows so that a reference to the current session can easily be obtained. When an object needs to be stored, its association can be set to `$currentSession`, and when the object needs to be retrieved again, `$currentSession` can be used as a starting point from which the desired object can be retrieved by association. The associated object can be designed so that it meets the desired needs. This same pattern applies to entities associated with `System.User`. In that case, you can use the `$currentUser` *User* object.
 
 ![](attachments/core/2018-03-01_17-49-15.png)
 
@@ -136,7 +136,7 @@ When data is associated to the current user or current session, it cannot be aut
 
 ## 11 Sessions Are Always Persistent
 
-To support seamless clustering, sessions are always persisted in the database. In previous versions, this was a known performance bottleneck. Mendix now contains optimizations to migitate this performance hit.
+To support seamless clustering, sessions are always persisted in the database. In previous versions, this was a known performance bottleneck. Mendix now contains optimizations to mitigate this performance hit.
 
 Roundtrips to the database for this purpose are reduced by giving the persistent sessions a maximum caching time of thirty seconds (by default). This means that after logging out of a session, the session might still be accessible for thirty seconds on other nodes of the cluster, but only in case that node has handled a previous request on that session just before the logout happened. This timeout can be configured. Lowering it makes the cluster more secure, because the chance that the session is still accessible within the configured time window is smaller. However, this also requires more frequent roundtrips to the database (which impacts performance). Increasing the timeout has the opposite effect. This can be configured by setting `SessionValidationTimeout` (value in milliseconds).
 

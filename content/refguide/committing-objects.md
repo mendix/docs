@@ -20,7 +20,7 @@ See [Microflow Element Common Properties](microflow-element-common-properties) f
 
 ## 2 Input Properties
 
-### 2.1 Variable
+### 2.1 Object or List
 
 The object or list of objects that you want to commit.
 

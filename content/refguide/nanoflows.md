@@ -113,19 +113,19 @@ Gateways deal with making choices and merging different paths.
 
 Activities are the actions that are executed in a nanoflow.
 
-#### 5.4.1 Object Activitities
+#### 5.4.1 Object Activities
 
 Object activities can be used to create and manipulate objects. The [domain model](domain-model) defines the object types ([entities](entities)) that can be used.
 
 | Graphic | Name | Description |
 | --- | --- | --- |
-| [![](attachments/819203/917661.png)](change-object) | [Change object](change-object) | Can be used to change the members of an object. This can be done with or without commiting. |
+| [![](attachments/819203/917661.png)](change-object) | [Change object](change-object) | Can be used to change the members of an object. This can be done with or without committing. |
 | [![](attachments/819203/17661961.png)](committing-objects) | [Commit object(s)](committing-objects) | Can be used to commit the changes to one or more objects. |
 | [![](attachments/819203/917756.png)](create-object) | [Create object](create-object) | Can be used to create an object. |
 | [![](attachments/819203/917866.png)](retrieve) | [Retrieve](retrieve) | Can be used to get one (or more) associated objects of another object. The activity can also get one (or more) objects directly from the database. |
 | [![](attachments/819203/918119.png)](rollback-object) | [Rollback object](rollback-object) | Can be used to undo the changes (that have not been committed) made to the object in the part of the nanoflow preceding the activity. This also deletes objects that have been created but never committed. |
 
-#### 5.4.2 List Activitities
+#### 5.4.2 List Activities
 
 List activities can be used to create and manipulate lists of objects.
 

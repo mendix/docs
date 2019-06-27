@@ -17,10 +17,10 @@ There are three four in this section:
 
 * [MindSphere Development Considerations](mindsphere-development-considerations) – covers things which you should address when developing for MindSphere, including the following:
 
-	* [Cloud Foundry environment variables](mindsphere-development-considerations#cfenvvars)
+	* <div style="margin-top:-10px;"></div>[Cloud Foundry environment variables](mindsphere-development-considerations#cfenvvars)
 	* [Local testing](mindsphere-development-considerations#localtesting)
 	* [Multi-tenancy](mindsphere-development-considerations#multitenancy)
-	* [Validation](mindsphere-development-considerations#validation)
+	* [Validation<br style="margin-bottom: 10px;">](mindsphere-development-considerations#validation)
 
 * [MindSphere Module Details](mindsphere-module-details) – describes more technical details about the MindSphere modules that you need to include in your Mendix app to enable it to run on MindSphere
 * [MindSphere Asset Management Connector](mindsphere-asset-management-connector) – describes how to use the MindSphere Asset Management Connector to retrieve assets and asset types from MindSphere

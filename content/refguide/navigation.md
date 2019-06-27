@@ -30,7 +30,7 @@ At the heart of the navigation model in Mendix, there are seven types of profile
 
 Users that access the app via a particular device type are automatically redirected to the homepage of the appropriate profile based on the profile type (for details, see the [Redirection to Profiles](#redirection) section below).
 
-The device type of the currently logged-in user is available in [microflows](microflows) as the `$currentDeviceType` variable. The type of this variable is the [enumeration](enumerations) `System.DeviceType`, which has the values `Phone`, `Tablet`, and `Desktop`. You can use the `$currentDeviceType` variable to perform different actions based on the device type. A typical example is to show different pages based on the device type.
+The device type of the currently logged-in user is available in [microflows](microflows) as the `$currentDeviceType` variable. The type of this variable is the [enumeration](enumerations) `System.DeviceType`, which has the values `Phone`, `Tablet`, and `Desktop`. You can use `$currentDeviceType` to perform different actions based on the device type. A typical example is to show different pages based on the device type.
 
 ### 2.1 Responsive
 
@@ -38,7 +38,7 @@ Every app always has one profile of a Responsive type which cannot be deleted. T
 
 ### 2.2 Hybrid Profiles {#hybrid-profiles}
 
-A Mendix app can be installed on a tablet or phone as an app by creating a PhoneGap hybrid package. Hybrid profiles can be accessed from such a PhoneGap app. Hybrid app profiles are determined by device type (phone or tablet) and by the offline accessability feature enabled (online or offline). If no profile exists with the requested combination, an error will be displayed in the app.
+A Mendix app can be installed on a tablet or phone as an app by creating a PhoneGap hybrid package. Hybrid profiles can be accessed from such a PhoneGap app. Hybrid app profiles are determined by device type (phone or tablet) and by the offline accessibility feature enabled (online or offline). If no profile exists with the requested combination, an error will be displayed in the app.
 
 Hybrid offline apps are designed to allow users to continue using their Mendix app even when they have no internet connection. However, certain restrictions apply. For an overview of the ramifications of running an offline device profile, see [Offline first](offline-first).
 

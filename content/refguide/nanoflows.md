@@ -44,10 +44,10 @@ The previous section stated that nanoflows perform best in online applications w
 
 ## 3 Differences from Microflows
 
-There are four main differences betweeen nanoflows and microflows:
+There are four main differences between nanoflows and microflows:
 
 * When a nanoflow steps through its actions, client actions are directly executed. For example, an open page action immediately opens a page instead of at the end of the nanoflow. This is different from client actions in a microflow, which only run when the client receives the result from the microflow.
-* When used in nanoflow activities, expressions do not support the following variables: `$latestError`, `$latestSoapFault`, `$latestHttpResponse`, `$currentSession`, `$currentUser`, `$currentDeviceType`.
+* When used in nanoflow activities, expressions do not support the following objects: `$latestError`, `$latestSoapFault`, `$latestHttpResponse`, `$currentSession`, `$currentUser`, `$currentDeviceType`.
 * Nanoflows are not run inside a transaction so, if an error occurs in a nanoflow, it will not roll back any previous changes.
 * Nanoflows and microflows do not provide the same actions. Some actions available in microflows are not available in nanoflows, and vice versa.
 
@@ -59,7 +59,7 @@ The nanoflow editor offers keyboard support for navigating and manipulating the 
 | --- | --- |
 | Arrow keys | Selects the nearby element (activity, event, loop, or parameter) in the direction of the arrow. |
 | <kbd>Enter</kbd> | Edits the properties of the selected element. |
-| <kbd>F2</kbd> | Renames the variable introduced by the selected element. |
+| <kbd>F2</kbd> | Renames the item returned by the selected element. |
 | <kbd>Shift</kbd> + <kbd>F2</kbd> or just starting to type | Edits the caption of the selected element. |
 | <kbd>Ctrl</kbd> + arrow keys | Moves the selected element in the direction of the arrow. |
 | <kbd>Tab</kbd> | If a loop is selected, the first element inside the loop is selected. |
@@ -131,8 +131,8 @@ List activities can be used to create and manipulate lists of objects.
 
 | Graphic | Name | Description |
 | --- | --- | --- |
-| [![](attachments/819203/918007.png)](change-list) | [Change list](change-list) | Can be used to change the content of a list variable. |
-| [![](attachments/819203/918009.png)](create-list) | [Create list](create-list) | Can be used to create a (empty) list variable. |
+| [![](attachments/819203/918007.png)](change-list) | [Change list](change-list) | Can be used to change the contents of a list. |
+| [![](attachments/819203/918009.png)](create-list) | [Create list](create-list) | Can be used to create a (empty) list. |
 
 #### 5.4.3 Action Call Activities
 
@@ -172,11 +172,11 @@ Artifacts provide the nanoflow with input and allow comments to be made.
 | [![](attachments/819203/918019.png)](parameter) | [Parameter](parameter) | Data that serves as input for the nanoflow. Parameters are filled at the location from which the nanoflow is triggered. |
 | [![](attachments/819203/917689.png)](annotation) | [Annotation](annotation) | An element that can be used to put comments in a nanoflow. |
 
-## 6 Variable Usages
+## 6 Item Usages
 
-Studio Pro visualizes which variables are used by selected object(s). It does this by showing the used variables in white text on a blue background. Conversely, elements that use the variable(s) defined by the selected object(s) are marked with the word **Usage** in white text on a green background.
+Studio Pro visualizes which items are used by the selected element(s). It does this by showing the used items in white text on a blue background. Conversely, elements that use the item(s) returned by the selected element(s) are marked with the word 'Usage' in white text on a green background.
 
-In the example below, the parameter **AccountPasswordData** is highlighted because it is used in the selected activity. And the activity **Save password** has a usage label because it uses the variable defined by the selected activity.
+In the example below, the parameter **AccountPasswordData** is highlighted because it is used in the selected activity (**Retrieve Account**). And the activity **Save password** has a **Usage** label because it uses the object returned by **Retrieve Account**.
 
 ![](attachments/16713739/16843950.png)
 

@@ -16,9 +16,9 @@ Studio enables you to do the following:
 * Visually model the interactions and flow control of an application
 * Leverage your enterprise design language to create engaging apps that conform to company standards beyond branding and theming 
 
-## 2 Main Documents in This Category
+## 2 Document Categories
 
-The main documents in the Studio Guide are the following ones:
+The *Studio Guide* is divided into the following categories:
 
 * [General Info](general) 
 * [Domain Model](domain-models)

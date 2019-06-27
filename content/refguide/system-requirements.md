@@ -11,7 +11,7 @@ tags: ["studio pro"]
 
 This document presents the system requirements for the various parts of the Mendix Platform.
 
-## 2 Mendix Studio Pro
+## 2 Mendix Studio Pro {#sp}
 
 Mendix [Studio Pro](modeling) supports 64-bit versions of Windows 7, 8, and 10. Windows 7 must be at least Service Pack 1.
 
@@ -22,15 +22,23 @@ The following frameworks are automatically installed (if necessary):
 * Microsoft Visual C++ 2013 Redistributable Package
 * AdoptOpenJDK 11 or Oracle JDK 11 (the former is installed automatically as of [Mendix 8.0.0 Beta 3](/releasenotes/studio-pro/8.0#803) if you do not have any JDK 11 installed) 
 
-{{% alert type="warning" %}}
+{{% alert type="info" %}}
 You can choose which JDK is used for building and running locally via the **Edit** > **Preferences** menu item in Studio Pro.
 {{% /alert %}}
 
-If you want to use TortoiseSVN in combination with Studio Pro, download the latest version 1.7.x from [Sourceforge](http://sourceforge.net/projects/tortoisesvn/files/?source=navbar).
+### 2.1 TortoiseSVN
 
-## 3 Team Server
+If you want to use TortoiseSVN in combination with Studio Pro, download the latest version from the [TortoiseSVN](https://tortoisesvn.net/) website.
 
-The [Team Server](team-server) is implemented using Subversion, and Studio Pro uses the HTTPS protocol to communicate with that server. To access the Team Server from within Studio Pro, the network at your location needs the following settings:
+{{% alert type="warning" %}}
+Mendix Studio Pro (version 8.0.0 beta 2 and above) uses the Subversion 1.9 working copy. Previous versions of the Mendix Desktop Modeler used a Subversion 1.7 working copy. These working copy versions **are not compatible**.
+
+Always use the version of TortoiseSVN which matches your app model. If you open a local model from Mendix version 7.x or 6.x with the latest version of TortoiseSVN **you will no longer be able to open it in Mendix**.
+{{% /alert %}}
+
+## 3 Team Server {#ts}
+
+The [Team Server](/developerportal/develop/team-server) is implemented using Subversion, and Studio Pro uses the HTTPS protocol to communicate with that server. To access the Team Server from within Studio Pro, the network at your location needs the following settings:
 
 * The HTTPS port (TCP 443) needs to be open
 * The HTTP port (TCP 80) needs to be open

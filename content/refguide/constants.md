@@ -1,9 +1,12 @@
 ---
 title: "Constants"
-category: "App Modeling"
-tags: ["studio pro"]
+parent: "resources"
+menu_order: 60
+tags: ["studio pro", "constant", "constants"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
+
+## 1 Introduction
 
 Constants are used to define configuration values. These can differ per environment.
 
@@ -22,24 +25,24 @@ Constants can be used in:
 *   [Microflow expressions](expressions): by prefixing the full name of the constant with @.
 *   [Consumed Web Services](consumed-web-services): in this case the constant is a URL that specifies where the web service is located. This can vary based on the environment in which the application is running, so that you can for example use different web services for development and production.
 
-## Common Properties
+## 2 Common Properties
 
-### Name
+### 2.1 Name
 
 The name of the constant. This name is used to refer to it.
 
-### Documentation
+### 2.2 Documentation
 
 This field is for documentation purpose only: end users will never see it, and it doesn't influence the behavior of your application.
 
-## Type Properties
+## 3 Type Properties
 
-### Type
+### 3.1 Type
 
 The [data type](data-types) of the constant. This determines what kind of values a constant can hold. Supported data types are String, Boolean, Date and time, Decimal and Integer/Long.
 
-## Value Properties
+## 4 Value Properties
 
-### Default value
+### 4.1 Default value
 
 The default value of the constant. This value is used when running locally or in a sandbox. When running locally, the value can be overridden in the currently selected [Configuration](configuration).

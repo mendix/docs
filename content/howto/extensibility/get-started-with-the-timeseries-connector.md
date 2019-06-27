@@ -1,7 +1,7 @@
 ---
 title: "Get Started with the TimeSeries Connector"
 category: "Extensibility"
-menu_order: 2
+menu_order: 60
 tags: ["iot", "connector", "timeseries", "big data", "analytics", "extensibility"]
 ---
 
@@ -52,9 +52,9 @@ There are three constants that you can configure. Follow these steps to configur
 3. Paste your TimeSeries API key in the **Default value** field and click **OK**.
 
   {{% alert type="info" %}}
-  
+
   There are two more constants that don't need to be configured unless otherwise instructed.
-  
+
   * Dateformat: Is by default set to yyyy-MM-dd'T'HH:mm:ss.SSSZ and should remain like that
   * TimeSeriesBasePath: Is by default set to https://timeseries-connector.timeseries.nl:16000/ and should remain like that unless communicated otherwise
 
@@ -112,11 +112,11 @@ The next step is creating a *Channel*. This *Channel* should belong to an *Asset
 3. Provide a **Measurement interval**. 
 
   {{% alert type="info" %}}
-  
+
   You are free to choose the channel key name and the measurement interval. The interval is stored and can be used for analysis.
-  
+
   {{% /alert %}}
-  
+
 
 In our example implementation we have created a page with a *Channel* object, on which the attributes and the association with an asset can be set.
 

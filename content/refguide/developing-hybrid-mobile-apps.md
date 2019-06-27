@@ -6,9 +6,9 @@ tags: ["studio pro"]
 
 ## 1 Introduction
 
-Mendix apps can simply be viewed in mobile web browsers. However, some features of mobile devices cannot be accessed through HTML and JavaScript. Also, if you want to publish your app on the Apple App Store, Google Play, or Microsoft Phone Store, you have to wrap your app in a native shell. We use [PhoneGap](http://phonegap.com/) to do this. PhoneGap creates a native wrapper around a web application and provides access to native functions through a JavaScript API. 
+Hybrid Mendix apps can simply be viewed in mobile web browsers. However, mobile device features cannot be accessed through HTML and JavaScript. Also, if you want to publish your hybrid app on the Apple App Store, Google Play, or Microsoft Phone Store, you have to wrap your app in a native shell. We use [PhoneGap](http://phonegap.com/) to do this. PhoneGap creates a native wrapper around a web application and provides access to native functions through a JavaScript API. 
 
-These apps are also called "hybrid" apps because they are a hybrid of a web and a native app. Mendix facilitates the creation of hybrid mobile apps in a number of ways.
+These apps are called "hybrid" apps because they are a hybrid of a web and a native app. Mendix facilitates the creation of hybrid mobile apps in a number of ways.
 
 ## 2 The Mendix Mobile App
 

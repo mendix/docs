@@ -1,13 +1,13 @@
 ---
 title: "Implement Best Practices for Development"
 category: "General Info"
-menu_order: 3
+menu_order: 7
 tags: ["best practice", "development", "develop", "reusable", "prefix"]
 ---
 
 ## 1 Introduction
 
-This document can be used as a guideline for adopting consistent naming and modeling conventions while developing your Mendix applications. This will help to improve your application’s maintainability and performance, and make it easier to read and understand.
+This document can be used as a reference for adopting consistent naming and modeling conventions while developing your Mendix applications. This will help to improve your application’s maintainability and performance, and make it easier to read and understand.
 
 Even with the powerful navigation and search support in Mendix Studio Pro, adhering to naming and modeling conventions is a wise thing because:
 
@@ -49,7 +49,7 @@ Modules should be treated like stand-alone replaceable services; for example, th
 
 #### 3.1.2 Module Roles
 
-The [module roles](/refguide/module-role) should have logical names that reflect the access they should have within a module. In contrast to the user role, the module role should always be in English, for instance **Administrator** or **Employee**.
+The [module roles](/refguide/module-security#module-role) should have logical names that reflect the access they should have within a module. In contrast to the user role, the module role should always be in English, for instance **Administrator** or **Employee**.
 
 ### 3.2 Domain Model
 

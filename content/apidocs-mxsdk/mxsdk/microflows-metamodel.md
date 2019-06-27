@@ -64,9 +64,9 @@ Annotation flows are used to connect annotations to other microflow objects.
 ![](attachments/15466739/16842853.svg)
 
 Studio Pro Guide | Model SDK API docs
---- | --- |
+--- | --- 
 [Sequence Flow](/refguide/sequence-flow) | [Flow](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.flow.html)
-[Annotation flow](/refguide/annotation-flow) | [SequenceFlow](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.sequenceflow.html)
+[Annotation flow](/refguide/annotation#annotation-flow) | [SequenceFlow](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.sequenceflow.html)
 |[AnnotationFlow](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.annotationflow.html)
 |Properties [`origin`](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.flow.html#origin) and [`destination`](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.flow.html#destination) of Flow
 |[CaseValue](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.casevalue.html) and its inheritance hierarchy
@@ -182,7 +182,7 @@ See the following diagrams for details on the HTTP configuration, request handli
 
 Studio Pro Guide | Model SDK API docs
 --- | --- |
-[Call Web Service](/refguide/call-web-service) |[WebServiceCallAction](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.webservicecallaction.html)
+[Call Web Service](/refguide/call-web-service-action) |[WebServiceCallAction](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.webservicecallaction.html)
 |[HttpConfiguration](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.httpconfiguration.html)
 |[RequestHandling](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.requesthandling.html) and [ResultHandling](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.resulthandling.html)
 
@@ -196,7 +196,7 @@ An HTTP configuration has an optional custom endpoint location, authentication c
 
 Studio Pro Guide | Model SDK API docs
 --- | --- |
-[Call Web Service](/refguide/call-web-service) |[HttpConfiguration](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.httpconfiguration.html)
+[Call Web Service](/refguide/call-web-service-action) |[HttpConfiguration](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.httpconfiguration.html)
 |[HttpHeaderEntry](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.httpheaderentry.html)
 
 ### Web service calls - Request handling
@@ -214,7 +214,7 @@ A web service operation request needs to be mapped from Mendix app concepts to t
 
 Studio Pro Guide | Model SDK API docs
 --- | --- |
-[Call Web Service](/refguide/call-web-service) |[RequestHandling](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.requesthandling.html)
+[Call Web Service](/refguide/call-web-service-action) |[RequestHandling](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.requesthandling.html)
 |[SimpleRequestHandling](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.simplerequesthandling.html) - [WebServiceOperationSimpleParameterMapping](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.webserviceoperationsimpleparametermapping.html)
 |[AdvancedRequestHandling](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.advancedrequesthandling.html) - [WebServiceOperationAdvancedParameterMapping](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.webserviceoperationadvancedparametermapping.html)
 |[MappingRequestHandling](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.mappingrequesthandling.html)
@@ -230,7 +230,7 @@ The result of a web service operation needs to be mapped to Mendix app concepts 
 
 Studio Pro Guide | Model SDK API docs
 --- | --- |
-[Call Web Service](/refguide/call-web-service) |[ResultHandling](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.resulthandling.html)
+[Call Web Service](/refguide/call-web-service-action) |[ResultHandling](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.resulthandling.html)
 |[ImportMappingCall](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.importmappingcall.html)
 |[ImportMapping](https://apidocs.mendix.com/modelsdk/latest/classes/importmappings.importmapping.html)
 |[Range](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.range.html)

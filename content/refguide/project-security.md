@@ -1,6 +1,7 @@
 ---
 title: "Project Security"
-parent: "project"
+parent: "security"
+menu_order: 10
 tags: ["studio pro", "security", "project security"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -37,14 +38,14 @@ For different security levels different settings are available. Find the list of
 
 | Setting Name                        | Security Off | Prototype/Demo Security                                      | Production Security                                          |
 | ----------------------------------- | ------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [Check security](#check-security)   | N/a          | N/a                                                          | Available, see the [Check Security](#check-security) section. |
-| [Project status](#project-status)   | N/a          | Available, see the [Project Status](#project-status) section. | Available, see the [Project Status](#project-status) section. |
-| [Module status](#module-status)     | N/a          | Available, see the [Module Status](#module-status) section.  | Available, see the [Module Status](#module-status) section.  |
-| [User roles](#user-roles)           | N/a          | Available, see the [User roles](#user-roles) section.        | Available, see the [User roles](#user-roles) section.        |
-| [Administrator](#administrator)     | N/a          | Available, see the [Administrator](#administrator) section.  | Available, see the [Administrator](#administrator) section.  |
-| [Demo users](#demo-users)           | N/a          | Available, see the [Demo users](#demo-users) section.        | Available, see the [Demo users](#demo-users) section.        |
-| [Anonymous users](#anonymous-users) | N/a          | Available, see the [Anonymous users](#anonymous-users) section. | Available, see the [Anonymous users](#anonymous-users) section. |
-| [Password policy](#password-policy) | N/a          | Available, see the [Password policy](#password-policy) section. | Available, see the [Password policy](#password-policy) section. |
+| [Check security](#check-security)   | N/A          | N/A                                                          | Available, see the [Check Security](#check-security) section. |
+| [Project status](#project-status)   | N/A          | Available, see the [Project Status](#project-status) section. | Available, see the [Project Status](#project-status) section. |
+| [Module status](#module-status)     | N/A          | Available, see the [Module Status](#module-status) section.  | Available, see the [Module Status](#module-status) section.  |
+| [User roles](#user-roles)           | N/A          | Available, see the [User roles](#user-roles) section.        | Available, see the [User roles](#user-roles) section.        |
+| [Administrator](#administrator)     | N/A          | Available, see the [Administrator](#administrator) section.  | Available, see the [Administrator](#administrator) section.  |
+| [Demo users](#demo-users)           | N/A          | Available, see the [Demo users](#demo-users) section.        | Available, see the [Demo users](#demo-users) section.        |
+| [Anonymous users](#anonymous-users) | N/A          | Available, see the [Anonymous users](#anonymous-users) section. | Available, see the [Anonymous users](#anonymous-users) section. |
+| [Password policy](#password-policy) | N/A          | Available, see the [Password policy](#password-policy) section. | Available, see the [Password policy](#password-policy) section. |
 
 ### 2.2 Check Security {#check-security}
 
@@ -65,13 +66,13 @@ The project status indicates the security status for the current project securit
 
 The **Module Status** tab shows the security status for each module. It shows the total number of items for which security needs to be configured, as well as the number of items for which security has been configured already. 
 
-At the **Prototype/demo** security level, the status of form access and microflow access is shown.
+At the **Prototype/demo** security level, the status of page access and microflow access is shown.
 
 Additionally, at the **Production** security level, the status of entity access and dataset access (if applicable) is shown.
 
 ## 4 User Roles {#user-roles}
 
-A user role aggregates a number of access rights on data, forms, and microflows. An end-user of the application is assigned one or more user roles by an administrator, and gets all access rights that these user roles represent. For more information, see [User Roles](user-roles).
+A user role aggregates a number of access rights on data, pages, and microflows. An end-user of the application is assigned one or more user roles by an administrator, and gets all access rights that these user roles represent. For more information, see [User Roles](user-roles).
 
 ## 5 Administrator {#administrator}
 

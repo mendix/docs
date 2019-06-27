@@ -25,9 +25,9 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 Context
 
-### 3.1 Mendix Mobile Apps, Hybrid Apps, Cordova, and PhoneGap Build
+### 3.1 Hybrid Apps, Cordova, and PhoneGap Build
 
-Mendix apps can be viewed in mobile web browsers. However, some features of mobile devices cannot be accessed through HTML and JavaScript. Also, if you want to publish your app in the Apple App Store or Google Play Store, you have to wrap your app in a native shell. Mendix uses [Cordova](https://cordova.apache.org/) to do this. Cordova creates a native wrapper around a web application and provides access to native functionality through a JavaScript API. These apps are called hybrid apps, because they are a hybrid of a web and a native app. To create binaries of your app, Mendix leverages PhoneGap Build so that you do not need to install software (Android SDK, XCode) for this.
+Hybrid Mendix apps can be viewed in mobile web browsers. However, some features of mobile devices cannot be accessed through HTML and JavaScript. Also, if you want to publish your app in the Apple App Store or Google Play Store, you have to wrap your app in a native shell. Mendix uses [Cordova](https://cordova.apache.org/) to do this. Cordova creates a native wrapper around a web application and provides access to native functionality through a JavaScript API. These apps are called hybrid apps, because they are a hybrid of a web and a native app. To create binaries of your app, Mendix leverages PhoneGap Build so that you do not need to install software (Android SDK, XCode) for this.
 
 ### 3.2 How Authentication Against an IdP Works<a name="how"></a>
 
@@ -74,54 +74,47 @@ To address the [first problem](#firstproblem), when the mobile app is starting t
 
 ```javascript
 MxApp.onConfigReady(function(config) {
-	
     var samlLogin = function() {
         var samlWindow = cordova.InAppBrowser.open(window.mx.remoteUrl + "SSO/", "_blank", "location=no,toolbar=no");
-        var exitFn = function(){
+
+        var exitFn = function() {
             navigator.app.exitApp();
         };
+
         samlWindow.addEventListener("exit", exitFn);
-        var cb = function(event) {        
-            if (event.url.indexOf(window.mx.remoteUrl) == 0 && event.url.indexOf("SSO") == -1) {
-            
-                samlWindow.removeEventListener("loadstop", cb);
-                samlWindow.removeEventListener("exit", exitFn);
-				
-                samlWindow.executeScript({
-                    code: "document.cookie;"
-                }, function(values) {
-                    var value = values[0] + ";";
-                    var token = new RegExp('AUTH_TOKEN=([^;]+);', 'g').exec(value);
-                    var authPromise = new Promise(function(resolve, reject) {
-                        if (token && token.length > 1) {
-                            window.localStorage.setItem("mx-authtoken", token[1]);
-							
-                            window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, function (fs) {
-                                fs.root.getFile(".mx-token", { create: true, exclusive: false }, function (fileEntry) {
-                                    fileEntry.createWriter(function (fileWriter) {
-                                        fileWriter.onwriteend = resolve;
-                                        fileWriter.onerror = reject;
-                                        fileWriter.write(token[1]);
-                                    });
-                                }, reject);
-                            }, reject);
-                        } else {
-                            resolve();
-                        }
+
+        var loop = setInterval(function() {
+            samlWindow.executeScript({
+                code: "window.location.href;"
+            }, function(href) {
+                if (href[0].indexOf(window.mx.remoteUrl) == 0 && href[0].indexOf("SSO") == -1) {
+                    samlWindow.executeScript({
+                        code: "document.cookie;"
+                    }, function(values) {
+                        var authPromise = new Promise(function(resolve, reject) {
+                            var token = new RegExp('AUTH_TOKEN=([^;]+)', 'g').exec(values[0]);
+                            if (token && token.length > 1) {
+                                mx.session.tokenStore.set(token[1]).then(resolve);
+                            } else {
+                                resolve();                            
+                            }
+                        });
+
+                        var closeWindow = function() {
+                            samlWindow.close();
+
+                            if (window.mx.afterLoginAction) {
+                                window.mx.afterLoginAction();
+                            }
+                        };
+
+                        authPromise.then(closeWindow);
                     });
-                    
-                    var closeWindow = function() {
-                        samlWindow.close();
-                        if (window.mx.afterLoginAction) {
-                            window.mx.afterLoginAction();
-                        }
-                    };
-                    authPromise.then(closeWindow, closeWindow);
-                });
-            };
-        }
-        samlWindow.addEventListener("loadstop", cb);
+                };
+            });
+        }, 1000);
     }
+
     config.ui.customLoginFn = samlLogin;
 });
 ```

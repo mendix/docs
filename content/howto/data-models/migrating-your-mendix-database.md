@@ -32,19 +32,21 @@ The most commonly used custom settings for database migration are:
 *   SourceDatabaseUserName
 *   SourceDatabasePassword
 
-See [Custom Settings](/refguide/custom-settings) for more information on the full list of available settings. These settings can be configured as follows:
+For more information on the full list of available settings, see [Custom Settings](/refguide/custom-settings).
 
-* Studio Pro: in **Project Explorer**, expand **Project**, double-click **Settings**, edit a configuration, go to the right-most tab called **Custom**:
+These settings can be configured as follows:
 
-  ![](attachments/migrating/19398970.png) 
+*  Studio Pro – in **Project Explorer**, expand **Project**, double-click **Settings**, edit a configuration, and go to the **Custom** tab:
 
-* Service Console: click an app in the left pane, click **Configuration**, click **Advanced**, see Custom Mendix settings.
+	![](attachments/migrating/19398970.png) 
 
-  ![](attachments/migrating/19398971.png) 
+*  Service Console – click an app in the left pane, click **Configuration**, click **Advanced**, then see **Custom Mendix settings**:
 
-* m2ee-tools: add the custom settings to the mxruntime section. See [https://github.com/mendix/m2ee-tools/blob/develop/examples/full-documented-m2ee.yaml](https://github.com/mendix/m2ee-tools/blob/develop/examples/full-documented-m2ee.yaml)
+	![](attachments/migrating/19398971.png) 
 
-You can migrate databases using either Studio Pro, the Service Console or m2ee-tools. The Service Console gives you the advantage of seeing a progress bar during the copy process, which is handy if you copy a lot of data which takes a long time to execute.
+* m2ee-tools – add the custom settings to the mxruntime section (for more information, see [Full Documented m2ee](https://github.com/mendix/m2ee-tools/blob/develop/examples/full-documented-m2ee.yaml))
+
+You can migrate databases using either Studio Pro, the Service Console, or m2ee-tools. The Service Console gives you the advantage of seeing a progress bar during the copy process, which is handy if you copy a lot of data which takes a long time to execute.
 
 {{% alert type="info" %}}
 

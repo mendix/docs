@@ -3,7 +3,7 @@ title: "Solve Known Version Control Issues"
 category: "Collaboration"
 menu_order: 7
 description: "This document presents a list of problems and fixes for version control issues."
-tags: ["version control", "troubleshoot", "Studio Pro"]
+tags: ["version control", "troubleshoot", "Studio Pro", "Subversion", "TortoiseSVN"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -46,9 +46,14 @@ Follow these steps:
 
 Follow these steps:
 
-1. Install TortoiseSVN, as suggested in [System Requirements](/refguide/system-requirements). Use version 1.7.x, which can be downloaded [here](https://sourceforge.net/projects/tortoisesvn/files/1.7.15/).
+1. Install [TortoiseSVN](https://tortoisesvn.net/), as suggested in [System Requirements](/refguide/system-requirements).
+
+    {{% alert type="warning" %}}Mendix Studio Pro (version 8.0.0 beta 2 and above) uses the Subversion 1.9 working copy. Previous versions of the Mendix Desktop Modeler used a Subversion 1.7 working copy. These working copy versions **are not compatible**.<br/>Always use the version of TortoiseSVN which matches your app model. If you open a local model from Mendix version 7.x or 6.x with the latest version of TortoiseSVN **you will no longer be able to open it in Mendix**.{{% /alert %}}
+
 2. Go to the parent directory (folder) of your project (this is the folder with the **<folder_name>** from the error message).
+
 3. Right-click to open the folder's context menu.
+
 4. On the **TortoiseSVN** sub-menu, select **Clean up**.
 
 ### 2.5 Getting an Error with the Message `System.Security.Cryptography.CryptographicException: Key not valid for use in specified state`
@@ -62,7 +67,10 @@ Follow these steps to remove your user settings and restart Studio Pro.
 
 Follow these steps:
 
-1. Install TortoiseSVN, as suggested in [System Requirements](/refguide/system-requirements). Use version 1.7.x, which can be downloaded from [Sourceforge](https://sourceforge.net/projects/tortoisesvn/files/1.7.15/).
+1. Install [TortoiseSVN](https://tortoisesvn.net/), as suggested in [System Requirements](/refguide/system-requirements).
+
+    {{% alert type="warning" %}}Mendix Studio Pro (version 8.0.0 beta 2 and above) uses the Subversion 1.9 working copy. Previous versions of the Mendix Desktop Modeler used a Subversion 1.7 working copy. These working copy versions **are not compatible**.<br/>Always use the version of TortoiseSVN which matches your app model. If you open a local model from Mendix version 7.x or 6.x with the latest version of TortoiseSVN **you will no longer be able to open it in Mendix**.{{% /alert %}}
+
 2. Open the project folder via Studio Pro by choosing **Show Project Directory in Explorer** from the **Project** menu.
 3. Right-click the white background of the project folder.
 4. Select **TortoiseSVN > Properties**.
@@ -127,7 +135,10 @@ Note that a conflict is reported on the project *folder*. This usually means tha
 
 To resolve a conflict on the svn:ignore property, perform the following steps.
 
-1. Install TortoiseSVN, as suggested in [System Requirements](/refguide/system-requirements). Use version 1.7.x, which can be downloaded from [Sourceforge](https://sourceforge.net/projects/tortoisesvn/files/1.7.15/).
+1. Install [TortoiseSVN](https://tortoisesvn.net/), as suggested in [System Requirements](/refguide/system-requirements).
+
+    {{% alert type="warning" %}}Mendix Studio Pro (version 8.0.0 beta 2 and above) uses the Subversion 1.9 working copy. Previous versions of the Mendix Desktop Modeler used a Subversion 1.7 working copy. These working copy versions **are not compatible**.<br/>Always use the version of TortoiseSVN which matches your app model. If you open a local model from Mendix version 7.x or 6.x with the latest version of TortoiseSVN **you will no longer be able to open it in Mendix**.{{% /alert %}}
+    
 2. Open the project directory in the Windows File Explorer
 3. Right-click the white background and choose **TortoiseSVN > Edit Conflicts**.
 

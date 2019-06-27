@@ -1,7 +1,8 @@
 ---
 title: "Sequence Flow"
-parent: "common-elements"
-tags: ["studio pro"]
+parent: "application-logic"
+menu_order: 90
+tags: ["studio pro", "condition value", "microflow"]
 ---
 
 ## 1 Introduction
@@ -16,8 +17,6 @@ When you have two activities that you want to link together a sequence flow is u
 
 {{% /alert %}}
 
-## 2 Behavior Properties
+## 2 Condition Value
 
-### 2.1 Condition Value
-
-Condition value describes which direction should be followed based on the outcome of an [exclusive split](exclusive-split) or an [inheritance split](inheritance-split).
+The **Condition value** describes which direction should be followed based on the outcome of an [exclusive split](exclusive-split) or an [inheritance split](inheritance-split).

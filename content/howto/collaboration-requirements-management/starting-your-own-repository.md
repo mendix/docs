@@ -1,5 +1,5 @@
 ---
-title: "Start Your Own Repository"
+title: "Start Your Own GitHub Repository"
 category: "Collaboration"
 menu_order: 30
 tags: ["studio pro"]

@@ -23,7 +23,7 @@ The input variable is the variable of which the type is inspected to see how to 
 
 {{% alert type="info" %}}
 
-Let us say you have an entity Student and an entity Professor which have the entity Member as their generalization. For a professor you want to open a different form than for another member. The selected member is available in the parameter SelectedMember and is used as input variable for the inheritance split. Note that the sequence flow for Student is missing. If a sequence flow is missing, the closest generalization is searched that does have a sequence flow. In the case of Student this is Member. The sequence flow with the caption (empty) is followed when the parameter used as input variable does not contain an object.
+Let us say you have an entity Student and an entity Professor which have the entity Member as their generalization. For a professor you want to open a different page than for another member. The selected member is available in the parameter SelectedMember and is used as input variable for the inheritance split. Note that the sequence flow for Student is missing. If a sequence flow is missing, the closest generalization is searched that does have a sequence flow. In the case of Student this is Member. The sequence flow with the caption (empty) is followed when the parameter used as input variable does not contain an object.
 
 ![](attachments/819203/918058.png)
 
@@ -33,4 +33,4 @@ Let us say you have an entity Student and an entity Professor which have the ent
 
 ### 3.1 Caption
 
-See [Microflow Element Common Properties](microflow-element-common-properties).
+See [Common Properties](microflow-element-common-properties).

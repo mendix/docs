@@ -97,8 +97,8 @@ Flows form the connection between elements.
 
 | Graphic | Name | Description |
 | --- | --- | --- |
-| [![](attachments/819203/917883.png)](sequence-flow) | [Sequence flow](sequence-flow) | An arrow that links events, activities, splits, and merges with each other. Together they define the order of execution within a nanoflow. |
-| [![](attachments/819203/917688.png)](annotation-flow) | [Annotation flow](annotation-flow) | A connection that can be used to connect an annotation to another element. |
+| ![](attachments/819203/917883.png) | An arrow that links events, activities, splits, and merges with each other. Together they define the order of execution within a nanoflow. |
+| ![](attachments/819203/917688.png) | A connection that can be used to connect an annotation to another element. |
 
 ### 5.3 Gateways<a name="gateways"></a>
 
@@ -120,7 +120,7 @@ Object activities can be used to create and manipulate objects. The [domain mode
 | Graphic | Name | Description |
 | --- | --- | --- |
 | [![](attachments/819203/917661.png)](change-object) | [Change object](change-object) | Can be used to change the members of an object. This can be done with or without commiting. |
-| [![](attachments/16713769/17661961.png)](committing-objects) | [Commit object(s)](committing-objects) | Can be used to commit the changes to one or more objects. |
+| [![](attachments/819203/17661961.png)](committing-objects) | [Commit object(s)](committing-objects) | Can be used to commit the changes to one or more objects. |
 | [![](attachments/819203/917756.png)](create-object) | [Create object](create-object) | Can be used to create an object. |
 | [![](attachments/819203/917866.png)](retrieve) | [Retrieve](retrieve) | Can be used to get one (or more) associated objects of another object. The activity can also get one (or more) objects directly from the database. |
 | [![](attachments/819203/918119.png)](rollback-object) | [Rollback object](rollback-object) | Can be used to undo the changes (that have not been committed) made to the object in the part of the nanoflow preceding the activity. This also deletes objects that have been created but never committed. |

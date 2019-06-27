@@ -74,7 +74,7 @@ To generate a CI/CD API key follow these steps:
 ![](attachments/ats-and-ci-cd-2/generate-new-ci-cd-api-key.png)
 
 6. A **confirmation** dialog box appears that warns you that an existing CI/CD API key will become invalid once you generate a new one.
-7. Click **Continu**.
+7. Click **Continue**.
 
 ![](attachments/ats-and-ci-cd-2/confirmation-continu.png)
 

@@ -26,11 +26,11 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 Defining the User Approach
 
-First you define the user approach and how you interact with the widget. Since you are creating an Unsupported Widget action, how you find the widget isn’t important. What is importnat is how you interact with it.
+First you define the user approach and how you interact with the widget. Since you are creating an Unsupported Widget action, how you find the widget isn’t important. What is important is how you interact with it.
 
 To define the user approach, select an option by clicking the radio button that contains the text. 
 
-Ths is no radio button selected:
+This is no radio button selected:
 
 ![](attachments/create-unsupported-widget/cab-07-radiobuttons/radiobuttons-nooptionselected.png)
 

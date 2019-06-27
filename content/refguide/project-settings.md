@@ -293,4 +293,4 @@ If this option is set, custom widgets will also be bundled locally. This mimics 
 
 ### 7.2 Suggest Lower-Case Names in Microflows
 
-When enabled, the variable names that Studio Pro suggests in microflows will start with a lower-case letter instead of an upper-case letter.
+When enabled, the names that Studio Pro suggests in microflows will start with a lower-case letter instead of an upper-case letter.

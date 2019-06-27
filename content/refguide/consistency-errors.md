@@ -15,10 +15,10 @@ Errors need to be solved before your app can be published. A consistency error c
 
 * [Pages](consistency-errors-pages) 
 * [Navigation](consistency-errors-navigation) 
-* Microflows
-* Domain Models
-* Integration
-* Security
+* [Microflows](microflows)
+* [Domain Model](domain-model)
+* [Integration](integration)
+* [Security](security)
 
 ##  2 Read More
 

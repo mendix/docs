@@ -28,7 +28,7 @@ The table below describes all the available dockable window panes.
 | Pane | Description |
 | --- | --- |
 | Breakpoints (via Debug Windows) | Shows all breakpoints in the project. You can enable/disable breakpoints from here. |
-| Changes | For [Team Server](team-server) projects, this pane shows the local changes to the project since the last commit. You can commit changes, update to the latest revision and view the history from here. |
+| Changes | For [Team Server](/developerportal/develop/team-server) projects, this pane shows the local changes to the project since the last commit. You can commit changes, update to the latest revision and view the history from here. |
 | Connector | Shows what elements can be connected to the currently selected element. For example, when a button is a selected, the connector will show microflows that you can drag and drop onto the button to connect them. |
 | Console | Shows the output of the Mendix Runtime while running an application. |
 | Debugger (via Debug Windows) | This can be used to debug your application. |
@@ -38,7 +38,7 @@ The table below describes all the available dockable window panes.
 | Get Started | Shows useful resources for getting started with Studio Pro. |
 | Project Explorer | Shows the complete structure of your project including all documents inside the modules. By default the active document is always selected in the project explorer so you can quickly see where the document you are editing is in the tree. You can change this behavior in the **Edit** > **Preferences** window pane. |
 | Properties | Shows properties of the currently selected element. This is where a lot of editing in Studio Pro takes place. |
-| Stories | For [Team Server](team-server) enabled projects, this pane shows the stories of the current Sprint. |
+| Stories | For [Team Server](/developerportal/develop/team-server) enabled projects, this pane shows the stories of the current Sprint. |
 | Toolbox | Shows the tools that can be used in the current editor. For example, in a page you can insert all kinds of widgets (for example, text box and data view) by dragging them from the **Toolbox** to your page. |
 | Variables (via Debug Windows) | You can view the current values of variables here when debugging your application. |
 

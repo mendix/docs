@@ -19,7 +19,7 @@ You can create Mendix apps which make MindSphere API calls, but which are deploy
 {{% /alert %}}
 
 {{% alert type="warning" %}}
-There are some limitations to what you can do in your Mendix app if it is deployed to MindSphere. See the [Limitations](/refguide/siemens/mindsphere-development-considerations#limitations) section of *MindSphere Development Considerations* for more information.
+There are some limitations to what you can do in your Mendix app if it is deployed to MindSphere. See the [Limitations](/partners/siemens/mindsphere-development-considerations#limitations) section of *MindSphere Development Considerations* for more information.
 {{% /alert %}}
 
 {{% alert type="info" %}}
@@ -29,7 +29,7 @@ You can easily copy code examples shown within grey blocks into the clipboard. H
 
 {{% /alert %}}
 
-To help you with your first MindSphere apps, there is also an example app which contains modules which call the MindSphere APIs. See [How to Use the Siemens MindSphere Pump Asset Example App](/howto/siemens/mindsphere-example-app) for more information.
+To help you with your first MindSphere apps, there is also an example app which contains modules which call the MindSphere APIs. See [How to Use the Siemens MindSphere Pump Asset Example App](/partners/siemens/mindsphere-example-app) for more information.
 
 ## 2 Prerequisites{#prerequisites}
 
@@ -79,15 +79,15 @@ If you have an existing app which was not based on the MindSphere starter app, y
 
 * MindSphere SSO from the Mendix App Store here: [Siemens MindSphere SSO](https://appstore.home.mendix.com/link/app/108805/)
 
-  This module enables users who are logged in to MindSphere to use your app without having to log in again. It also enables you to test your app locally. For more information, see the [Single Sign-On](/refguide/siemens/mindsphere-module-details#mssso) section of *MindSphere Module Details*.
+  This module enables users who are logged in to MindSphere to use your app without having to log in again. It also enables you to test your app locally. For more information, see the [Single Sign-On](/partners/siemens/mindsphere-module-details#mssso) section of *MindSphere Module Details*.
 
 * MindSphere OS Bar Connector from the Mendix App Store here: [Siemens MindSphere OS Bar Connector](https://appstore.home.mendix.com/link/app/108804/)
 
-  This integrates the mandatory MindSphere OS Bar with your app. For more information, see the [MindSphere OS Bar](/refguide/siemens/mindsphere-module-details#msosbar) section of *MindSphere Module Details*.
+  This integrates the mandatory MindSphere OS Bar with your app. For more information, see the [MindSphere OS Bar](/partners/siemens/mindsphere-module-details#msosbar) section of *MindSphere Module Details*.
 
 * MindSphere Theme Pack (MindSphere_UI_Resources) from the Mendix App Store here: [Siemens MindSphere Theme Pack](https://appstore.home.mendix.com/link/app/108803/)
 
-  This applies MindSphere styling to your app and includes some additional custom files which are required for the correct operation of your app. For more information, see the [MindSphere Theme Pack](/refguide/siemens/mindsphere-module-details#msthemepack) section of *MindSphere Module Details*.
+  This applies MindSphere styling to your app and includes some additional custom files which are required for the correct operation of your app. For more information, see the [MindSphere Theme Pack](/partners/siemens/mindsphere-module-details#msthemepack) section of *MindSphere Module Details*.
 
 ## 4 Configuring the Modules{#configure-modules}
 
@@ -103,7 +103,7 @@ The following items in the MindSphereSingleSignOn module need to be configured.
 
 Enter the name of your app as registered in the MindSphere developer portal as the value of *CockpitApplicationName*.
 
-These two values must be identical and must, therefore, fit the constraints listed in the [App Name](/refguide/siemens/mindsphere-development-considerations#appname) section of *MindSphere Development Considerations*.
+These two values must be identical and must, therefore, fit the constraints listed in the [App Name](/partners/siemens/mindsphere-development-considerations#appname) section of *MindSphere Development Considerations*.
 
 #### 4.1.2 RegisterSingleSignOn
 
@@ -315,7 +315,7 @@ To set up the appropriate scopes in MindSphere, do the following:
 If you are using the starter app, you should create two scopes, *user* and *admin*.
 {{% /alert %}}
 
-For an explanation of the relationship between Mendix roles and MindSphere roles, see section [Roles & Scopes](/refguide/siemens/mindsphere-module-details#rolesscopes) in *MindSphere Module Details*.
+For an explanation of the relationship between Mendix roles and MindSphere roles, see section [Roles & Scopes](/partners/siemens/mindsphere-module-details#rolesscopes) in *MindSphere Module Details*.
 
 ![](attachments/deploying-to-mindsphere/image8.png)
 
@@ -348,7 +348,7 @@ Your app is now set up and users can run it from within the MindSphere Developer
 
 ## 6 Development Considerations
 
-See [MindSphere Development Considerations](/refguide/siemens/mindsphere-development-considerations) for additional help on such things as:
+See [MindSphere Development Considerations](/partners/siemens/mindsphere-development-considerations) for additional help on such things as:
 
 * local testing
 * multi-tenancy

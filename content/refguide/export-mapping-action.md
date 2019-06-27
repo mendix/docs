@@ -18,7 +18,7 @@ With the Export With Mapping action, you can export the data stored in [domain m
 
 {{% alert type="info" %}}
 
-For details on the properties that all activities share (for example, caption), see [Microflow Element Common Properties](microflow-element-common-properties). This page only describes the properties specific to the action.
+For details on the properties that all activities share (for example, caption), see [Common Properties](microflow-element-common-properties). This page only describes the properties specific to the action.
 
 {{% /alert %}}
 

@@ -19,7 +19,7 @@ Only use this functionality if you know exactly what you are doing. Incorrect va
 
 Each custom setting consists of a name and a value. For example, to enable persistent sessions you add a custom setting with name `PersistentSessions` and value `true`. For a more detailed list of settings and example values please consult the [fully-documented m2ee.yaml](https://github.com/mendix/m2ee-tools/blob/master/examples/full-documented-m2ee.yaml).
 
-If you are running your app on the Mendix Cloud, you can access these settings on the **Runtime Tab** of the *Environment Details*: accessible from the *Environments* page of the Developer Portal. For more information see [Environment Details – Runtime Tab](/developerportal/deploy/environments-details#runtime-tab).
+If you are running your app on the Mendix Cloud, you can access these settings in the Developer Portal via **Environments** > **Environment Details** > **Runtime**. For more information see [Environment Details – Runtime Tab](/developerportal/deploy/environments-details#runtime-tab).
 
 ## 2 General Settings
 

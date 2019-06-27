@@ -10,7 +10,7 @@ One of the strengths of Mendix is that it is easy to connect your Mendix applica
 
 ## 2 Main Documents in This Category
 
-* [Building Pluggable Widgets](pluggable-widgets)
+* [Build Pluggable Widgets](pluggable-widgets)
 * [Make Custom Widgets](widget-development)
 * [Implement Best Practices for JavaScript Actions](best-practices-javascript-actions)
 * [Make JavaScript Actions](build-javascript-actions)

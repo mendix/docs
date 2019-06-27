@@ -210,3 +210,10 @@ See the image below for an indication of where you might find the error in your 
 ![Location of Layouts Error](attachments/moving-from-7-to-8/layout-error-location.png)
 
 To resolve this issue, use the previous version of Mendix to change the invalid **Layout type** (in the example above, `Legacy`) to a valid value.
+
+### 9.2 DOM and Atlas UI Issues
+
+Mendix 8 comes with several improvements to its DOM structure. These changes will also affect the SASS styling of app projects. To troubleshoot either DOM or Atlas UI migration issues, consult the following documents:
+
+* [Troubleshoot DOM Changes when Migrating to Mendix 8](migration-dom-issues)
+* [Troubleshoot Atlas UI Changes when Migrating to Mendix 8](migration-atlas)

@@ -9,7 +9,7 @@ tags: ["Pages", "Widgets", "Studio Pro"]
 
 A page is an end-user interface of a Mendix application. Pages are created, edited, manipulated in the page editor. 
 
-Every page is based on a page layout and a page template. A layout is a frame you put your page in. A page template is a basis with predefined elements (widgets), their look, and place on a page.  
+Every page is based on a page layout and a page template. A layout is a frame you put your page in. A page template is a basis with predefined elements (widgets).  
 
 ![](attachments/pages/page-structure.png)
 
@@ -17,7 +17,7 @@ For more information on page properties, see [Page](page).
 
 ## 2 Page and Page Resources
 
-
+In addition to a page, you can add page resources in the page editor. They help structure your page, style it, and fill it with data. For more information on page resources, see [Page Resources](page-resources). 
 
 Type | Description
 --- | ---
@@ -27,7 +27,7 @@ Type | Description
 [![](attachments/pages/building-block-icon.png)Building block](building-block) | A [building block](building-block) is pre-styled set of widgets. Building blocks will automatically appear in the page editor toolbox, allowing for easy reuse. By designing a comprehensive library of building blocks, a great deal of the fussy work involved in page design can be averted. 
 [![](attachments/pages/page-icon.png)Page](page) | A [page](page) is the end-user interface of a Mendix application. Pages are the things that are actually shown to the end-user. 
 [![](attachments/pages/menu-icon.png)Menu](menu) | A [menu](menu) defines a menu structure that can be used by a menu widget. 
-![](attachments/pages/image-collection-icon.png)Image collection | An image collection is a page resource where you need to place custom images to use them in your application. For more information, see [Images](images). 
+![](attachments/pages/image-collection-icon.png)Image collection | An image collection is a page resource where you place custom images to use them in your application. For more information, see [Images](images). 
 
 ## 3 Widgets and Their Categories
 
@@ -43,8 +43,11 @@ Widgets are grouped into the following categories:
 * [Button widgets](button-widgets) are buttons that trigger actions
 * [Menu widgets](menu-widgets) allow the user to navigate through the application
 * [Report widgets](report-widgets) aggregate data and show it in the form of a table or a chart
-* Authentication widgets 
+* Authentication widgets allow to add the user verification process such as password and login id text boxes.
 * Add-on widgets can be downloaded from the [Mendix App Store](https://appstore.mendix.com/) or created by yourself using JavaScript
   * [Chart widgets](chart-widgets) are add-on widgets that graphically represent data using various chart types
 
 ## 4 Read More
+
+* [Page Resources](page-resources)
+* [Page](page)

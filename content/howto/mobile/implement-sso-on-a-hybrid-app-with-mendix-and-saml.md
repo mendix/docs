@@ -14,6 +14,10 @@ This how-to will describe the challenges involved in implementing SSO (single si
 The implementation described in this how-to will _not_ work when you have enabled anonymous users in your project. Disable anonymous users in your project to use this implementation.
 {{% /alert %}}
 
+{{% alert type="warning" %}}
+The implementation described in this how-to will _not_ work when you have enabled the PIN feature for your hybrid app. Disable the PIN feature for your hybrid app to use this implementation.
+{{% /alert %}}
+
 ## 2 Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:

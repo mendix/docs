@@ -42,7 +42,7 @@ To initialize the logger, do the following:
 
     ![Runtime show After startup microflow](attachments/sap-logger/logger_project_runtime_show_startup.png)
 
-    {{% alert type="info" %}}If there's no existing microflow (as indicated by the text `(none)`, instead of a microflow name), click **Select…** and create a new microflow by clicking **New**:<br/><br/>    
+    {{% alert type="info" %}}If there's no existing microflow (as indicated by the text `(none)`, instead of a microflow name), click **Select…** and create a new microflow by clicking **New**:<br/>   
     ![Runtime no After Startup](attachments/sap-logger/logger_project_runtime_nostartup.png){{% /alert %}}
 
 4. Drag and drop the **RegisterSubscriber** action at the end of the *After startup* microflow:

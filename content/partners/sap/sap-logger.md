@@ -25,7 +25,7 @@ In addition, the Connector supports multiline log messages.
 
 To use the SAP Logger Connector, you need to import it into your app from the App Store. For more information on importing modules from the App Store, see [Use App Store Content](/developerportal/app-store/app-store-content).
 
-The SAP Logger Connector is available here: **LINK TO APP STORE**
+The SAP Logger Connector is available here: [https://appstore.home.mendix.com/link/app/110219/](https://appstore.home.mendix.com/link/app/110219/).
 
 ## 3 Using the Connector
 
@@ -39,13 +39,15 @@ To initialize the logger, do the following:
 
 2. Switch to the **Runtime** tab:
 
-    ![Runtime no After Startup](attachments/sap-logger/logger_project_runtime_nostartup.png)
-
 3. Go to the **After startup** microflow by clicking **Show** next to the **After startup** microflow:
 
     ![Runtime show After startup microflow](attachments/sap-logger/logger_project_runtime_show_startup.png)
 
-    {{% alert type="info" %}}If there's no existing microflow (as indicated by the text `(none)`, instead of a microflow name), click **Select…** and create a new microflow by clicking **New**:{{% /alert %}}
+    {{% alert type="info" %}}If there's no existing microflow (as indicated by the text `(none)`, instead of a microflow name), click **Select…** and create a new microflow by clicking **New**:
+    
+    ![Runtime no After Startup](attachments/sap-logger/logger_project_runtime_nostartup.png)
+
+    {{% /alert %}}
 
 4. Drag and drop the **RegisterSubscriber** action at the end of the *After startup* microflow:
 

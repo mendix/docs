@@ -33,11 +33,11 @@ To format all the log messages, the SAP Logger Connector needs to be initialized
 
 To initialize the logger, do the following:
 
-1. Open **Project … > Settings** in the **Project Explorer**
+1. Open **Project … > Settings** in the **Project Explorer**:
 
     ![Open project settings](attachments/sap-logger/logger_open_project_settings.png)
 
-2. Switch to the **Runtime** tab:
+2. Switch to the **Runtime** tab.
 
 3. Go to the **After startup** microflow by clicking **Show** next to the **After startup** microflow:
 

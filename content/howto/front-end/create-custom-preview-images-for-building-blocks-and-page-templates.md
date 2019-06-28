@@ -128,5 +128,5 @@ You can also create your page template preview image in a different image editor
 * [Get Started with Atlas UI](get-started-with-atlasui)
 * [Create Company Atlas UI Resources](create-company-atlas-ui-resources)
 * [Extend Design Properties to Customize Your Studio Experience](extend-design-properties-to-customize)
-* [Migrate Existing Projects to Atlas UI](migrate-existing-projects-to-atlasui)
+* [Migrate Existing App Projects to Atlas UI](migrate-existing-projects-to-atlasui)
 * [Share Company Atlas UI Resources](share-company-atlas-ui-resources)

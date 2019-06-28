@@ -212,3 +212,10 @@ best-practices:
   menu_categories:
     - "Best Practices Overview"
     - "Architecture"
+partners:
+  space: "Strategic Partners Guide"
+  priority: false
+  menu_categories:
+    - "IBM"
+    - "SAP"
+    - "Siemens"

@@ -26,6 +26,14 @@ module.exports = {
       from: "/refguide/web-modeler/app-settings-wm",
       to: "/studio/settings-widget-overview"
     },	
+    {
+      from: "/howto/sap/use-sap-odata-model-creator",
+      to: "/partners/sap/use-sap-odata-model-creator"
+    },	
+    {
+      from: "/refguide/siemens/mindsphere-module-details",
+      to: "/partners/siemens/mindsphere-module-details"
+    },	
 	/****************************************************
      * PERMANENT REDIRECTS
      ****************************************************/
@@ -45,18 +53,14 @@ module.exports = {
      ****************************************************/
 	{
       from: "/refguide/mindsphere/mindsphere-module-details",
-      to: "/refguide/siemens/mindsphere-module-details"
+      to: "/partners/siemens/mindsphere-module-details"
     },
 	/****************************************************
-     * Studio Guide (permanent, unmapped)
-     ****************************************************/
+     * Reference Guide version 7 (permanent, unmapped)
+     ****************************************************/	
 	{
-      from: "/howto/tutorials/",
-      to: "/studio/general"
-    },
-	{
-      from: "/howto/tutorials/mendix-tutorials",
-      to: "/studio/general"
+      from: "/refguide/moving-from-6-to-7",
+      to: "/refguide7/moving-from-6-to-7"
     },
 	/****************************************************
      * How-to's (permanent, unmapped)
@@ -83,6 +87,17 @@ module.exports = {
 	{
       from: "/howto7/ux/configuring-your-theme",
       to: "/howto7/front-end/configuring-your-theme"
+    },
+	/****************************************************
+     * Studio Guide (permanent, unmapped)
+     ****************************************************/
+	{
+      from: "/howto/tutorials/",
+      to: "/studio/general"
+    },
+	{
+      from: "/howto/tutorials/mendix-tutorials",
+      to: "/studio/general"
     },
 	/****************************************************
      * Developer Portal Guide (permanent, unmapped) 
@@ -185,6 +200,10 @@ module.exports = {
 	{
       from: "/refguide/publish-packages-to-mobile-stores",
       to: "/howto/mobile/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores"
+    },
+	{
+      from: "/refguide/team-server",
+      to: "/developerportal/develop/team-server"
     },
 	/****************************************************
      * From the App Store (permanent, mapped)

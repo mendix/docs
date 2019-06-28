@@ -1,5 +1,5 @@
 ---
-title: "Test a Mendix App with a Simple IDE Script"
+title: "Test Mendix Apps Using Selenium IDE"
 category: "Testing"
 menu_order: 40
 tags: ["test", "testing", "selenium"]
@@ -41,7 +41,7 @@ Follow these steps to install and run the Company Expenses app:
 
 	![](attachments/selenium/app-store.png)
 
-3. Search for *Company Expenses*, then select **Company Expenses**:
+3.  Search for *Company Expenses*, then select **Company Expenses**:
 
 	![](attachments/selenium/company-ex.png)
 
@@ -55,7 +55,7 @@ Follow these steps to install and run the Company Expenses app:
 
 To create an automated test by using the record button in Selenium IDE, follow these steps:
 
-1. Open **Firefox** and click the **Selenium IDE** icon in the browser toolbar:
+1.  Open **Firefox** and click the **Selenium IDE** icon in the browser toolbar:
 
 	![](attachments/selenium/icon.png)
 
@@ -75,11 +75,11 @@ To create an automated test by using the record button in Selenium IDE, follow t
 
 7.  In the Selenium IDE, click the record icon to stop recording: 
 
-  ![](attachments/selenium/record.png)
+	![](attachments/selenium/record.png)
 
 8.  Enter a name for your new test, (for example, *Test1*). The Selenium IDE should now look like this:
 
-  ![](attachments/selenium/after-test.png)
+	![](attachments/selenium/after-test.png)
 
 7.  Now that you have a test, click the **Run current test** icon:
 

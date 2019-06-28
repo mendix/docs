@@ -76,7 +76,7 @@ By selecting the **Expose as microflow action** option, it is possible to expose
 
 The caption and category of the microflow action are required, but the icon is optional. When no icon is selected, the default Java action icon is used.
 
-The recommended size for the icon is 16x16.
+The recommended size for the icon is 16x16 pixels.
 
 ## 5 Documentation
 

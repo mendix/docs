@@ -144,7 +144,6 @@ Now the application is ready to store redundant data, but you still need to keep
 * [Work with Images & Files](working-with-images-and-files)
 * [Create a Basic Data Layer](create-a-basic-data-layer)
 * [Set Up Data Validation](setting-up-data-validation)
-* [Work with Object Events](working-with-object-events)
 * [Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
 * [Stories](/developerportal/collaborate/stories)
 * [Define Access Rules Using XPath](../logic-business-rules/define-access-rules-using-xpath)

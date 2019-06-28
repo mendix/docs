@@ -1,7 +1,7 @@
 ---
 title: "Show the Project Directory in Explorer"
 category: "General Info"
-menu_order: 2
+menu_order: 4
 tags: ["project directory", "directory", "explorer", "local", "windows"]
 ---
 

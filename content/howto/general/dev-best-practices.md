@@ -1,13 +1,13 @@
 ---
 title: "Implement Best Practices for Development"
 category: "General Info"
-menu_order: 3
+menu_order: 7
 tags: ["best practice", "development", "develop", "reusable", "prefix"]
 ---
 
 ## 1 Introduction
 
-This document can be used as a guideline for adopting consistent naming and modeling conventions while developing your Mendix applications. This will help to improve your application’s maintainability and performance, and make it easier to read and understand.
+This document can be used as a reference for adopting consistent naming and modeling conventions while developing your Mendix applications. This will help to improve your application’s maintainability and performance, and make it easier to read and understand.
 
 Even with the powerful navigation and search support in Mendix Studio Pro, adhering to naming and modeling conventions is a wise thing because:
 

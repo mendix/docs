@@ -14,9 +14,9 @@ Here is a domain model that defines customers and orders. The line between them 
 
 ## Components
 
-*   [Entities](entities)
 *   [Associations](associations)
 *   [Annotations](annotations)
+*   [Entities](entities)
 
 ## Technical Appendix
 

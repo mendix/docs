@@ -129,7 +129,7 @@ Usually, combining your changes with the latest revision from the repository wil
 
 If your team is committing often you will have to update often. Frequent updating has the benefit that you receive fewer changes with each update, so integrating those changes with your work is easier.
 
-### 4.4 History
+### 4.4 History {#history}
 
 The *history* of the project is a list of all revisions that have been committed. To view the history of the project, click the **History** button in the **Changes** dock, or choose the **Project > More Versioning > History...** menu item.
 

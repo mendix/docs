@@ -16,7 +16,7 @@ The implementation described in this how-to will not work when you have enabled 
 
 
 {{% alert type="warning" %}}
-The implementation described in this how-to will _not_ work when you have enabled the PIN feature for your hybrid app. Disable the PIN feature for your hybrid app to use this implementation.
+The implementation described in this how-to will not work when you have enabled the PIN feature for your hybrid app. Disable the PIN feature for your hybrid app to use this implementation.
 {{% /alert %}}
 
 ## 2 Prerequisites

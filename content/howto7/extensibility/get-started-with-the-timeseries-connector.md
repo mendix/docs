@@ -31,7 +31,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 Follow these steps to get access to the TimeSeries connector and receive an API key:
 
-1. Sign up for the connector by going to our [Connector website](http://connector.timeseries.nl/ "Click here to go to the TimeSeries website") and register for free. You will receive your API key in an email after registering.
+1. Sign up for the connector by going to our [Connector website](https://connector.timeseries.com/) and register for free. You will receive your API key in an email after registering.
 
   {{% alert type="info" %}}
   It can take up to a few hours to generate the key and send it to you. This key is used to activate and access your TimeSeries Analytics instance.

@@ -123,7 +123,7 @@ Microflow parameters are especially useful for handling events. For example, the
 
 ## 4 Using Import & Export Mappings
 
-Now we will discuss an example of how you can use mappings in your Java actions. In this example, you'll create an action to import a string using an import mapping. This is not particulairly useful, seeing there is a default action in your toolbox already that provides this functionality called **Import with mapping**. However, as an example, it illustrates how to use mappings.
+Now we will discuss an example of how you can use mappings in your Java actions. In this example, you'll create an action to import a string using an import mapping. This is not particularly useful, seeing there is a default action in your toolbox already that provides this functionality called **Import with mapping**. However, as an example, it illustrates how to use mappings.
 
 This is an image of what we are building: an action to import JSON strings:
 

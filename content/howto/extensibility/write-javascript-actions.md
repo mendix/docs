@@ -124,7 +124,7 @@ To create a JavaScript action that can synthesize text to speech, follow these s
 	}
 	```
 
-10. You have just implemented your first JavaScript action! You can start using the action in your nanoflows by adding a **JavaScript action call** and selecting the newly created **SpeechToText** action: 
+9. You have just implemented your first JavaScript action! You can start using the action in your nanoflows by adding a **JavaScript action call** and selecting the newly created **SpeechToText** action: 
 
 	![javascript action call](attachments/write-javascript-actions/selectjsactioncall.png)
 
@@ -138,15 +138,15 @@ To create a JavaScript action that can synthesize text to speech, follow these s
 
 	![text to speech in nanoflow](attachments/write-javascript-actions/iconintoolbox.png)
 
-11. Now for a JavaScript action test run! First, make a nanoflow which features your new JavaScript action. Right-click your folder in the **Project Explorer** and click **Add nanoflow**. Then, add an action to your nanoflow, select **call a nanoflow action**, and select your JavaScript action. You will see a window which will let you edit the JavaScript action. Click the **Edit** button of the **Input Text** and type *‘Hello world'*. Then, select the **Use return variable “No”** radio button**.**
+10. Now for a JavaScript action test run! First, make a nanoflow which features your new JavaScript action. Right-click your folder in the **Project Explorer** and click **Add nanoflow**. Then, add an action to your nanoflow, select **call a nanoflow action**, and select your JavaScript action. You will see a window which will let you edit the JavaScript action. Click the **Edit** button of the **Input Text** and type *‘Hello world'*. Then, set **Use return value** to *No* radio button.
 
 	![edit text in call javascript action dialog](attachments/write-javascript-actions/calljsactionnanoflow.png)
 
-12. Now you are going to put your new nanoflow to work. On a page of your app, make an action button by clicking **Add widget** in the top center toolbar. Then, under **Button Widgets**, select **Call nanoflow button**. Select your new nanoflow when prompted. 
+11. Now you are going to put your new nanoflow to work. On a page of your app, make an action button by clicking **Add widget** in the top center toolbar. Then, under **Button Widgets**, select **Call nanoflow button**. Select your new nanoflow when prompted. 
 
 	![select widget dialog](attachments/write-javascript-actions/makingwidgetbuttonhighlights.png)
 
-13. Click a place on your page to drop your new button where you want it. With the button now on your page, you can test your work. Run your model, click your new button, and if your sound is on you should be greeted by the voice you programmed! 
+12. Click a place on your page to drop your new button where you want it. With the button now on your page, you can test your work. Run your model, click your new button, and if your sound is on you should be greeted by the voice you programmed! 
 
 ## 3 Read More{#read-more}
 

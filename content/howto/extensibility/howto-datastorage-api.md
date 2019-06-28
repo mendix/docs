@@ -225,7 +225,7 @@ You create a Java action with parameters for the start date and the end date. Yo
 
     ![](attachments/dsapi/image036.png)
 
-When you use this in a microflow, you just need to specify the start and end dates, and the name of the variable that will hold the resulting list. This example iterates through all the data objects in the list and prints the date of that object.
+When you use this in a microflow, you just need to specify the start and end dates, and the name of the resulting list. This example iterates through all the data objects in the list and prints the date of that object.
 
 ![](attachments/dsapi/image037.png)
 

@@ -430,7 +430,7 @@ The following changes have been made to the `DropDownButton` widget:
 
 ## 13 File Manager and Image Uploader Widget Changes
 
-Previously, file manager and image uploader widgets were rendered differently on desktop and mobile browsers. On desktop these widgets rendered as an easily stylable custom HTML snippet, while on mobile they manifested as difficult-to-style native file input.
+Previously, file manager and image uploader widgets were rendered differently on desktop and mobile browsers. On desktop these widgets rendered as an easy-to-style custom HTML snippet, while on mobile they manifested as difficult-to-style native file input.
 
 File manager and image uploader widgets have been changed for consistency. Now, they always shows the same HTML structure. Also, these widgets' DOM structure has been made more consistent with other compound widgets (like the reference selector and date picker).
 

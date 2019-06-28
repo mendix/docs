@@ -69,7 +69,7 @@ If you have altered your **styles/sass/lib** folder, consult the instructions be
 
 If you changed any files in the **styles/sass/lib** folder, complete the actions below::
 
-* If you changed a file’s content or name, you must manually integrate that file into the new file and in the new theme folder (while also keeping the [DOM changes](migration-dom-issues) in mind)
+* If you changed a file’s content or name, you must manually integrate that file into the new file and in the new theme folder (while also keeping the Mendix 8 [DOM changes](migration-dom-issues) in mind)
 * If you removed a file, no action is required
 
 If you added a file to the **lib/base** folder, copy your content from **theme_old/styles/sass/lib/base/** to **theme/styles/web/sass/core/base/**. You must also complete the following action:

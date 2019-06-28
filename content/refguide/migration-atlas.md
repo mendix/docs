@@ -23,7 +23,7 @@ Follow the steps below to begin upgrading your Atlas Resources:
 
 When migrating from Mendix 7 to Mendix 8, you must integrate **theme_old** into **theme** while adhering to several guidelines. Which guidelines you must follow vary based on your specific project. Consult the subsections below for instructions based on your unique case.
 
-{{% alert type="info" %}}If you customized any widget where the DOM structure has changed, consult [Troubleshoot DOM Changes when Migrating to Mendix 8](migration-dom-issues) to ensure your custom styling works.{{% /info %}}
+{{% alert type="info" %}}If you customized any widget where the DOM structure has changed, consult [Troubleshoot DOM Changes when Migrating to Mendix 8](migration-dom-issues) to ensure your custom styling works.{{% /alert %}}
 
 ## 2.1 Working with HTML Files
 

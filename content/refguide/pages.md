@@ -43,7 +43,7 @@ Widgets are grouped into the following categories:
 * [Button widgets](button-widgets) are buttons that trigger actions
 * [Menu widgets](menu-widgets) allow the user to navigate through the application
 * [Report widgets](report-widgets) aggregate data and show it in the form of a table or a chart
-* Authentication widgets allow to add the user verification process such as password and login id text boxes.
+* [Authentication widgets](authentication-widgets) allow to add the user verification process such as password and login id text boxes.
 * Add-on widgets can be downloaded from the [Mendix App Store](https://appstore.mendix.com/) or created by yourself using JavaScript
   * [Chart widgets](chart-widgets) are add-on widgets that graphically represent data using various chart types
 

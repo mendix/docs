@@ -1,7 +1,7 @@
 ---
 title: "Build Pluggable Widgets"
 category: "Extensibility"
-menu_order: 10
+menu_order: 1
 tags: ["widget", "pluggable", "JavaScript", "API", "JavaScript-API"]
 ---
 

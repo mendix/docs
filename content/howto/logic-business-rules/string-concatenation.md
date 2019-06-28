@@ -21,11 +21,7 @@ Every string attribute will start out as an empty field, whenever the users or t
 
 Whenever you want to check if a string contains text it won't be sufficient to execute the expression: `$Account/Firstname != empty` nor will  `$Account/Firstname != ''` cover all cases. Every string needs to be checked for both values to be sure that a field really is empty.  
 
-<<<<<<< HEAD
-### Example 1, broken down into separate decisions:
-=======
-## 2 Breaking Down into Separate Splits
->>>>>>> development
+## 2 Breaking Down into Separate Decisions
 
 An inefficient example on how to check for text and create a combined messages based on the outcome. Building out all combinations is a lot of work, and if something need to change it will be a lot of work to change and it is prone to errors.
 

@@ -1,7 +1,7 @@
 ---
 title: "Make JavaScript Actions"
 category: "Extensibility"
-menu_order: 4
+menu_order: 3
 tags: ["widget", "pluggable", "JavaScript", "API", "JavaScript-API"]
 ---
 

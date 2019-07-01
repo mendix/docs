@@ -22,7 +22,7 @@ When you upgrade to Mendix 8, DOM structure changes will also alter the correlat
 
 Before Mendix 8, the client provided a large amount of default styling if your app project lacked a theme. This made building your own theme difficult, as you needed to override the default styling. As of Mendix 8, all styling has been moved to AtlasUI. Now, building your own theme from scratch requires significantly less work.
 
-If you have already built your own theme from scratch in an earlier version of Mendix, you might depend on that styling. For that we provide the previous CSS defaults in this github repository which you can download for use.
+If you have already built your own theme from scratch in an earlier version of Mendix, you might depend on that styling. For that we provide the previous CSS defaults in this GitHub repository which you can download for use.
 
 ## 4 Focus-Specific Class Removed
 
@@ -285,7 +285,7 @@ These redundant wrappers have been removed, and now bare controls are rendered w
 
 ### 9.7 Examples of Input Controls
 
-Here are a few examples of various input controls:
+A few examples of various input controls are listed below.
 
 Text box:
 
@@ -359,7 +359,7 @@ The following changes have been made to the date picker input widget:
 
 ### 10.2 Calendar
 
-Because the calendar pop-up is no longer implemented using the Dojo framework, several changes were made to the calendar pop-up's internal structure:
+Because the calendar pop-up window is no longer implemented using the Dojo framework, several changes were made to the calendar pop-up window's internal structure:
 
 * All classes starting with `dijit` have been removed
 * The outermost `<div>` element now has the class `mx-calendar`
@@ -412,14 +412,13 @@ The year switcher now has the following structure:
 
 The following changes have been made to the reference selector markup:
 
-* The classes `mx-referenceselector` and `mx-referencesetselector` have been removed from the main `<div>` element in favor of the new `mx-compound-control` class, which was introduced for input widgets made up of more than one element (one common input widget with multiple elements is a button next to an input element)
+* The classes `mx-referenceselector` and `mx-referencesetselector` have been removed from the main `<div>` element in favor of the new `mx-compound-control` class, which was introduced for input widgets made up of more than one element (one common input widget with multiple elements is a button next to an input element).
 
 The following changes have been made to the input reference set selector markup: 
 
 * The form group will now get the class `mx-referenceselector` or `mx-inputreferencesetselector` (note the `input` prefix) instead
 * The inner `<div>` element (sharing a class ending with `-input-wrapper`) around the input was removed
 * The `<button>` elements have been placed after the input in the DOM to match the visual order
-
 
 ## 12 DropDownButton Widget Cleanup
 

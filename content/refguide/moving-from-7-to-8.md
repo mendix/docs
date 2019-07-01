@@ -215,5 +215,5 @@ To resolve this issue, use the previous version of Mendix to change the invalid 
 
 Mendix 8 comes with several improvements to its DOM structure. These changes will also affect the SASS styling of app projects. To troubleshoot either DOM or Atlas UI migration issues, consult the following documents:
 
-* [Troubleshoot DOM Changes when Migrating to Mendix 8](migration-dom-issues)
-* [Troubleshoot Atlas UI Changes when Migrating to Mendix 8](migration-atlas)
+* [Troubleshooting DOM Changes](migration-dom-issues)
+* [Troubleshooting Atlas UI Changes](migration-atlas)

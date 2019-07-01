@@ -1,5 +1,5 @@
 ---
-title: "Troubleshooting Atlas UI Changes when Migrating to Mendix 8"
+title: "Troubleshooting Atlas UI Changes"
 parent: "moving-from-7-to-8"
 menu_order: 20
 description: "This document explains how to fix your styling when migrating a project from Mendix 7 to Mendix 8."
@@ -102,4 +102,4 @@ After troubleshooting your issues with the guidance above, complete the followin
 
 ## 3 Read More
 
-* [Troubleshoot DOM Changes when Migrating to Mendix 8](migration-dom-issues)
+* [Troubleshoot DOM Changes](migration-dom-issues)

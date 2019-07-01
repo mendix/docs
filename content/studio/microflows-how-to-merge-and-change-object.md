@@ -32,7 +32,7 @@ In this how-to we will merge flows for bronze, silver, and gold customer grades 
 
 To start this tutorial, make sure you have completed the following prerequisites:
 
-* Create the microflow with the decision: [Configure a Decision Split Step 1: Build the Domain Model & Configure a Microflow](microflows-how-to-configure-decision-p1)
+* Create the microflow with the decision: [Configure a Decision Step 1: Build the Domain Model & Configure a Microflow](microflows-how-to-configure-decision-p1)
 
 ## 3 Creating a Merge
 

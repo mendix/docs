@@ -40,7 +40,7 @@ Before you start configuring microflows, familiarize yourself with the concepts 
 | ---------- | ------------------------------------------------------------ |
 | Activities | Blue boxes performing different functions. For example, with the help of an activity you can show users a home page. For more information, see section [5 Toolbox](#microflows-toolbox). |
 | Flows      | Arrows that connect microflow events and activities. For more information, see section [6 Flows](#flows). |
-| Events     | Other things placed in a flow not in a shape of a blue box are events. Exclusive split is a an example of the event. For more information, see section [5.1 General](#microflow-general-section). |
+| Events     | Other things placed in a flow not in a shape of a blue box are events. Decision is an example of the event. For more information, see section [5.1 General](#microflow-general-section). |
 | Variable   | A variable is a temporary storage for data. Variables are used to store information and refer to it when needed. For this purpose variables should have a unique name. <br />In a microflow you can add a variable, assign a value to it and then use it in microflow activities. You can then change this value later if necessary. For example, you can create variable **$Discount** and assign it a value 0.5, and use it to calculate a price for a customer. <br />You can use the variable only in the microflow where it was created. |
 | Parameter  | Parameters contain global variables, which means that you can use one and the same parameter in different microflows. |
 
@@ -84,16 +84,16 @@ In the **Toolbox** tab, you can see that the microflow contains three sections w
 
 Elements available in the **General** section are described in the table below.
 
-| Element                                       | Description                                                  |
-| --------------------------------------------- | ------------------------------------------------------------ |
-| Annotation                                    | An annotation is an element that can be used to put comments in a microflow. |
-| Break Event                                   | A break event is used in loops only to stop iterating over a list of objects and continue with the rest of the flow in the microflow. For more information, see [Break Event](/refguide/break-event) in the *Mendix Studio Pro Guide*. |
-| Continue Event                                | A continue event is used in loops only to stop the current iteration and start the iteration of the next object. For more information, see [Continue Event](/refguide/continue-event) in the *Mendix Studio Pro Guide*. |
-| End Event                                     | An end event defines the location where the microflow will stop. There can be more than one end event, for example when an exclusive split is used in the microflow. So, the number of end events depends on the number of possible outcomes of the microflow. For more information, see [End Event](/refguide/end-event) in the *Mendix Studio Pro Guide*. |
-| [Exclusive Split](microflows-exclusive-split) | An exclusive split splits the microflow flow. Use an exclusive split when you want to add conditions. For example, you want to show different order forms for the customers with different grades. Thus, an exclusive split creates different flows. With the help of an exclusive split the app makes a decision based on a condition and follows one and only one of the outgoing flows. |
-| [Loop](microflows-loop)                       | A loop is used to iterate over a list of objects and perform actions on each item of the list. For example, you can retrieve a list of orders from your database, then loop over this list and mark orders as processed. |
-| Merge                                         | A merge can be used to combine flows into one.  If previously you split the microflow flow and now one and the same action needs to be executed for these separated flows, you can combine the two (or more) paths using a merge. For more information, see [Merge](/refguide/merge) in the *Mendix Studio Pro Guide*. |
-| Parameter                                     | A parameter is an input data for the microflow and can be used in any activity in the microflow. For more information, see [Parameter](/refguide/parameter) in the *Mendix Studio Pro Guide*. |
+| Element                         | Description                                                  |
+| ------------------------------- | ------------------------------------------------------------ |
+| Annotation                      | An annotation is an element that can be used to put comments in a microflow. |
+| Break Event                     | A break event is used in loops only to stop iterating over a list of objects and continue with the rest of the flow in the microflow. For more information, see [Break Event](/refguide/break-event) in the *Mendix Studio Pro Guide*. |
+| Continue Event                  | A continue event is used in loops only to stop the current iteration and start the iteration of the next object. For more information, see [Continue Event](/refguide/continue-event) in the *Mendix Studio Pro Guide*. |
+| End Event                       | An end event defines the location where the microflow will stop. There can be more than one end event, for example when a **Decision** is used in the microflow. So, the number of end events depends on the number of possible outcomes of the microflow. For more information, see [End Event](/refguide/end-event) in the *Mendix Studio Pro Guide*. |
+| [Decision](microflows-decision) | A decision should be used if you want to add conditions. For example, if you want to show different order forms for the customers with different grades. <br />This element is based on a condition and will result in several outgoing flows, one for every possible outcome. The microflow checks the condition and follows one the flows. |
+| [Loop](microflows-loop)         | A loop is used to iterate over a list of objects and perform actions on each item of the list. For example, you can retrieve a list of orders from your database, then loop over this list and mark orders as processed. |
+| Merge                           | A merge can be used to combine flows into one.  If previously you split the microflow flow (for example, when adding a decision) and now one and the same action needs to be executed for these separated flows, you can combine the two (or more) paths using a merge. For more information, see [Merge](/refguide/merge) in the *Mendix Studio Pro Guide*. |
+| Parameter                       | A parameter is an input data for the microflow and can be used in any activity in the microflow. For more information, see [Parameter](/refguide/parameter) in the *Mendix Studio Pro Guide*. |
 
 ### 5.2 Object Activities {#microflow-object-activities}
 

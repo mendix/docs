@@ -10,16 +10,16 @@ tags: ["studio", "microflows", "merge", "expression", "change object"]
 
 This how-to explains how you can add advanced logic to a microflow by configuring a merge and a change object activity in Mendix Studio. 
 
-A merge is used to combine flows into one. If you split the microflow flow (with an exclusive split) and now one and the same action needs to be executed for these separated flows, you can combine the two (or more) flows using a merge. For more information on exclusive split, see [Exclusive Split](microflows-exclusive-split).
+A merge is used to combine flows into one. If you split the microflow flow (with a decision) and now one and the same action needs to be executed for these separated flows, you can combine the two (or more) flows using a merge. For more information on decision, see [Decision](microflows-decision).
 
 **This how-to will teach you how to do the following:**
 
-* Configure the merge in the microflow that contains an exclusive split
+* Configure the merge in the microflow that contains a decision
 * Configure the change object activity after the merge
 
 This how-to describes the following use case: 
 
-In [Configure an Exclusive Split Step 1: Build the Domain Model & Configure a Microflow ](microflows-how-to-configure-exclsplit-p1) we have configured the exclusive split to open a specific page depending on the customer's grade. In case the customer's grade is not indicated, the error message is shown. So we have four flows after the exclusive split: 
+In [Configure a Decision Step 1: Build the Domain Model & Configure a Microflow ](microflows-how-to-configure-decision-p1) we have configured the decision to open a specific page depending on the customer's grade. In case the customer's grade is not indicated, the error message is shown. So we have four flows after the decision: 
 
 * Showing a page for bronze  grade customers
 * Showing a page for silver grade customers
@@ -32,7 +32,7 @@ In this how-to we will merge flows for bronze, silver, and gold customer grades 
 
 To start this tutorial, make sure you have completed the following prerequisites:
 
-* Create the microflow with the exclusive split: [Configure an Exclusive Split Step 1: Build the Domain Model & Configure a Microflow](microflows-how-to-configure-exclsplit-p1)
+* Create the microflow with the decision: [Configure a Decision Split Step 1: Build the Domain Model & Configure a Microflow](microflows-how-to-configure-decision-p1)
 
 ## 3 Creating a Merge
 

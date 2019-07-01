@@ -1,29 +1,29 @@
 ---
-title: "Exclusive Split"
+title: "Decision"
 category: "Microflows"
 menu_order: 20
-description: "Describes the exclusive split in Mendix Studio."
-tags: ["studio", "microflow", "exclusive split"]
+description: "Describes a decision in Mendix Studio."
+tags: ["studio", "microflow", "exclusive split", "decision"]
 ---
 
 ## 1 Introduction 
 
-This document describes an exclusive split in Mendix Studio. 
+This document describes a **Decision** in Mendix Studio. 
 
-An exclusive split makes a decision based on a condition and follows one and only one of the outgoing flows. For example, you need to use an exclusive split to show different order forms for the customers with different grades, or to prevent a blocked customer from making orders.
+A decision is an element based on a condition and follows one and only one of the outgoing flows. For example, you need to use a decision to show different order forms for the customers with different grades, or to prevent a blocked customer from making orders.
 
 ## 2 Condition
 
-There are two ways to configure a condition for the exclusive split:
+There are two ways to configure a condition for the decision:
 
 * [With **Variables/ Attributes**](#variables-attributes-tab) ( for example, you can use it to create different flows for an attribute of the enumeration type)
 *  [With an **Expression**](#expression-tab) (for example, you can create a comparison with it)
 
-   ![](attachments/microflows-exclusive-split/configure-condition-dialog-excl-split.png)
+   ![](attachments/microflows-decision/configure-condition-dialog.png)
 
 ### 2.1 Configuring the Condition with Variables or Attributes {#variables-attributes-tab}
 
-The following elements can be used as an exclusive split condition in the **Variable/Attributes** tab:
+The following elements can be used as a decision condition in the **Variable/Attributes** tab:
 
 * Variable with Boolean data type
 * Variable with enumeration data type
@@ -32,7 +32,7 @@ The following elements can be used as an exclusive split condition in the **Vari
 
 {{% alert type="info" %}}
 
-The parameters and entities which you would like to use in configuring the condition of the exclusive split should be present in the microflow, either as input parameter or as a result of an activity. 
+The parameters and entities which you would like to use in configuring the condition of the decision should be present in the microflow, either as input parameter or as a result of an activity. 
 
 {{% /alert %}}
 
@@ -46,11 +46,11 @@ The number of available cases depends on the selected **Condition**.
 
 For the Boolean type of the parameter or attribute, two values are possible: true and false.  
 
-![](attachments/microflows-exclusive-split/exclusive-split-boolean.png)
+![](attachments/microflows-decision/decision-boolean.png)
 
 The number of cases available for the enumeration type depends on the corresponding enumeration constants/values. There is also the empty case available for enumeration. If the enumeration parameter or attribute of an object is unassigned, the sequence flow with the caption (empty) is followed.
 
-![](attachments/microflows-exclusive-split/exclusive-split-enumeration.png)
+![](attachments/microflows-decision/decision-enumeration.png)
 
 ## 4 Caption
 
@@ -60,5 +60,5 @@ The caption describes what happens in this element.
 
 * [Microflows](microflows)
 * [Microflow Expressions](microflows-expressions)
-* [Configure an Exclusive Split](microflows-how-to-configure-exclsplit) 
+* [Configure a  Decision](microflows-how-to-configure-decision) 
 

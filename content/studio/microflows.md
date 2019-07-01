@@ -164,6 +164,6 @@ When configuring the activities of the microflows you will notice icons above or
 ## 8 Read More
 
 * [General Info](general)
-* [Exclusive Split](microflows-exclusive-split)
+* [Decision](microflows-decision)
 * [Microflow Expressions](microflows-expressions)
 * [Set & Change a Value for Different Activities in the Microflows](microflows-setting-and-changing-value)

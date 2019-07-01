@@ -14,7 +14,7 @@ This document describes microflow expressions in Mendix Studio. Expressions can 
 The **Expression** tab is opened when you configure the following activities in the microflow:
 
 *  [End Event](/refguide/end-event)
-*  [Exclusive Split](microflows-exclusive-split)
+*  [Decision](microflows-decision)
 *  [Create Object](/refguide/create-object)
 *  [Change Object](/refguide/change-object)
 *  [Create Variable](/refguide/create-variable) 
@@ -75,13 +75,13 @@ Let us study two examples that illustrate how the expression can be used.
 
 #### 2.3.1 Example 1
 
-You have an exclusive split and you want to write an expression that checks whether the customer grade is gold and the price of the order is more than 100 (you can configure a discount after the split that is allowed if this expression is true). 
+You have a **Decision** and you want to write an expression that checks whether the customer grade is gold and the price of the order is more than 100 (you can configure a discount after the **Decision** that is allowed if this expression is true). 
 
-![](attachments/microflows-expressions/example-excl-split.png) 
+![](attachments/microflows-expressions/example-decision.png) 
 
 The expression will look the following way:
 
-![](attachments/microflows-expressions/expression-excl-split.png)
+![](attachments/microflows-expressions/expression-decision.png)
 
 #### 2.3.2 Example 2
 

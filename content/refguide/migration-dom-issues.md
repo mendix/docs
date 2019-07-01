@@ -18,11 +18,9 @@ When you upgrade to Mendix 8, DOM structure changes will also alter the correlat
 
 ## 3 Streamlined Custom Themes
 
-**TODO: get link to github/something repo for the old CSS File mentioned in para 2**
-
 Before Mendix 8, the client provided a large amount of default styling if your app project lacked a theme. This made building your own theme difficult, as you needed to override the default styling. As of Mendix 8, all styling has been moved to AtlasUI. Now, building your own theme from scratch requires significantly less work.
 
-If you have already built your own theme from scratch in an earlier version of Mendix, you might depend on that styling. For that we provide the previous CSS defaults in this GitHub repository which you can download for use.
+If you have already built your own theme from scratch in an earlier version of Mendix, you might depend on the default styling (specifically the Bootstrap files and the **mxui.css** file) which are not included in Mendix 8 applications by default. For this case, Mendix provides legacy **mxui.css** and Bootstrap files with defaults in this [GitHub repository](https://github.com/mendix/legacy-mxui-css/). Downloading files from this repository will enable your custom theme.
 
 ## 4 Focus-Specific Class Removed
 

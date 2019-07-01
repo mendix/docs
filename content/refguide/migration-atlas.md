@@ -8,7 +8,9 @@ tags: [ "Widgets", "Themes", "Classes", "Atlas", "Atlas UI", "Styling", "SASS", 
 
 ## 1 Introduction
 
-When you upgrade to Mendix 8, your widgets' DOM structure will be changed. This means that the correlating Sass styling will not work as expected anymore. This document will allow you to make your theming compatible with Mendix 8.
+When you upgrade to Mendix 8, your widgets' DOM structure will be changed. This means that the correlating Sass styling will not work as expected anymore. This document will allow you to make your theming compatible with Mendix 8. 
+
+Each section in this document could apply to your app project, but some sections may *not* apply. If a section does not apply to your case, you may skip it.
 
 {{% alert type="warning" %}}If you have added any content in the **Atlas_UI_Resource module**, you have to move that content out of the module. If you do not, it will be overwritten.{{% /alert %}}
 

@@ -13,7 +13,7 @@ tags: ["AppCloudServices", "SSO", "Single Sign On", "Mendix credentials"]
 
 The [AppCloudServices module](https://appstore.home.mendix.com/link/app/934/) module allows you to integrate your app with the Mendix Cloud, including the single sign-on (SSO) feature.
 
-Want to know more about all the possibilities this opens up? Take a look at the [New Mendix AppCloud Ignites Application Innovation by Connecting All Custom Apps, Developers, Data, and Users in One Enterprise Cloud Ecosystem](http://www.mendix.com/press/new-mendix-appcloud/) blog post.
+Want to know more about all the possibilities this opens up? Take a look at the blog post titled [New Mendix AppCloud Ignites Application Innovation by Connecting All Custom Apps, Developers, Data, and Users in One Enterprise Cloud Ecosystem](http://www.mendix.com/press/new-mendix-appcloud/).
 
 ## 2 Steps & Example
 

@@ -2,7 +2,7 @@
 title: "Use the Java API"
 category: "Logic & Business Rules"
 menu_order: 13
-tags: ["microflow", "logic", "java", "api"]
+tags: ["microflow", "logic", "java", "API"]
 ---
 
 ## 1 Introduction

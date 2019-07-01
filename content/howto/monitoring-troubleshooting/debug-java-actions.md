@@ -12,7 +12,7 @@ Mendix Studio Pro has a built-in debugger to solve errors on the microflow level
 **This how-to will teach you how to do the following:**
 
 * Set breakpoints
-* Debug in Eclipe
+* Debug in Eclipse
 
 ## 2 Prerequisites
 

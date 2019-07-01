@@ -45,7 +45,7 @@ The GetI18NText microflow validates and acquires the text like this. This is don
 
 <iframe width="100%" height="400px" frameborder="0" src="https://modelshare.mendix.com/models/45864420-7a30-42cd-9f36-ba0976fd5315/get-i18n-text?embed=true" allowfullscreen=""></iframe>
 
-The text is replaced by this microflow, the input is the translated text, the variable (parameter) text you want to add to the text, and the token nr to indicate the position (i.e. {1}, {2}, {3})
+The text is replaced by this microflow, the input is the translated text, the variable (parameter) text you want to add to the text, and the token number to indicate the position (i.e. {1}, {2}, {3})
 
 <iframe width="100%" height="495px" frameborder="0" src="https://modelshare.mendix.com/models/6a80d12a-5670-48fe-bbdf-ba793af6cf8d/replace-i18n-token?embed=true" allowfullscreen=""></iframe>
 

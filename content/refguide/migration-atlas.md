@@ -31,7 +31,7 @@ If you have altered the CSS in your HTML files, consult the instructions below. 
 
 If you changed any **index\*.html** files, make sure to do the following:
 
-* Apply the same changes you did in the old file to the new html file
+* Apply the same changes you did in the old file to the new HTML file
 * Make sure the **bootstrap.min.css** and **mxui.css** imports are not there
 * Make sure you don’t import **styles/css/lib/lib.css** anymore
 * Make sure you’ve put either `<link *rel*="stylesheet" *type*="text/css" *href*="styles/web/css/main.css?{{cachebust}}">` or `{{themecss}}` inside of the `<head></head>` tags

@@ -30,7 +30,7 @@ To view widgets in Mendix Studio, do the following:
 
 Quick configuration of properties is available for most of the non-custom widgets. This means that their properties can be configured in a pop-up window when adding these widgets on a page. 
 
-Once you drag and drop a widget, a small pop-up window appears next to it. You can set the properties that are necessary for the widget to function without resulting in [consistency errors](consistency-errors). 
+Once you drag and drop a widget, a small pop-up window appears next to it. You can set the properties that are necessary for the widget to function without resulting in [consistency errors](consistency-errors) as well as other frequently used properties to help you configure the widget quickly. However, you can configure all properties from the **Properties** tab at all times. 
 
 For example, quickly configuring the data source of a data grid helps you avoid consistency errors when previewing or publishing your app, and you can configure the rest of the properties later.
 

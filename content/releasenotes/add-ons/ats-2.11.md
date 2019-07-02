@@ -19,7 +19,7 @@ On the information side, we added options to retrieve the following data for a j
 * Breakdown per test case (meaning, the number of passed, failed, and not-executed test cases)
 * Details per test case with name, result, duration, and error message
 
-For more details, see the [ATS 2 Reference Guide](/ats/refguide/rg-version-2/cicd-api).
+For more details, see the [ATS 2 Reference Guide](/addons/ats/refguide/rg-version-2/cicd-api).
 
 ### Known Issues
 

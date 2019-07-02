@@ -16,6 +16,12 @@ For more information on hybrid mobile app development in Mendix, see the [Hybrid
 
 ## 2019
 
+### July 2nd, 2019 (4.1.1 / 4.1.0)
+
+- We moved the Google Services (json/plist) and the build-extras.xml files to the /config folder.
+- We changed how the build-extras.xml file is included in the project, so that Phonegap Build properly picks it up
+- The build process no longer fails when you do not provide a GoogleServices-Info.plist file. This is usefull in case you wish to use FCM for push notifications on Android, and APNS for push notifications on iOS.
+
 ### May 14th, 2019 (4.1.0 / 4.1.0)
 
 We updated **Cordova Android** to version 7.1.4.

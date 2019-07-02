@@ -1,9 +1,12 @@
 ---
-title: "APM Guide"
+title: "Application Performance Monitor"
 ---
 
-This space contains all the documentation for versions 1 and 2 of Application Performance Monitor (APM).
+This category contains all the documentation for versions 1 and 2 of Application Performance Monitor (APM).
 
-The *APM Guide* is divided into the following categories: 
+The category includes the following sections:
 
-{{% category_block %}}
+* [APM Overview](apm/index)
+* [APM Installation Guide](installation-guide/index)
+* [APM Reference Guide](reference-guide/index)
+* [APM Use Cases](use-cases/index)

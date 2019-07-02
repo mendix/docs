@@ -1,12 +1,12 @@
 ---
-title: "Application Test Suite"
+title: "ATS Overview"
 ---
 
 ## 1 Introduction
 
-This category presents general information on ATS.
+This section presents general information on ATS.
 
-## 2 Main Documents in This Category
+## 2 Main Documents in This section
 
 * [Introduction to ATS](introduction)
 * [Compatibility](compatibility)

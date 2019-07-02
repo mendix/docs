@@ -1,12 +1,12 @@
 ---
-title: "Best Practices"
+title: "ATS Best Practices"
 ---
 
 ## 1 Introduction
 
-The best practices for ATS are categorized according to the ATS version.
+The best practices for ATS are organized according to the ATS version.
 
-## 2 Main Documents in This Category
+## 2 Main Documents in This Section
 
 * [ATS 2 Best Practices](bp-version-2/bp-version-2)
 * [ATS 1 Best Practices](bp-version-1/bp-version-1)

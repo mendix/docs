@@ -1,5 +1,5 @@
 ---
-title: "ATS Guide"
+title: "Application Test Suite"
 ---
 
 The Mendix Application Test Suite (ATS) is a suite of tools for embedding (automated) testing into your application life cycle. These tools are built by [Mansystems](https://www.mansystems.com/) in Mendix on top of Selenium.
@@ -8,6 +8,9 @@ ATS provides a powerful solution for automation of not only your functional and 
 
 A small investment in setting up ATS, which is very easy to learn, will save you a lot of (re)testing time in the long run. This will help your team and its stakeholders to have the right insights into the quality off your apps at any time and at the press of a button.
 
-The *ATS Guide* is divided into the following categories: 
+This category includes the following sections: 
 
-{{% category_block %}}
+* [ATS Overview](general/index)
+* [ATS Reference Guide](refguide/index)
+* [ATS How-to's](howtos/index)
+* [ATS Best Practices](bestpractices/index)

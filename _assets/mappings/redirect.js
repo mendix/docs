@@ -237,6 +237,10 @@ module.exports = {
       to: "/howto/front-end/create-a-custom-theme-with-the-mendix-ui-framework"
     },
 	{
+      from: "/addons/APM",
+      to: "/apm/"
+    },
+	{
       from: "/releasenotes/desktop-modeler/",
       to: "/releasenotes/studio-pro/"
     },
@@ -2231,29 +2235,9 @@ module.exports = {
       to: "/howto6/solving-load-and-import-errors"
     },
 	/****************************************************
-     * Add-ons Guide (permanent, mapped)
+     * APM (permanent, unmapped)
      ****************************************************/
-	{
-      from: "/ats/",
-      to: "/addons/ats/"
-    },
-	{
-      from: "/apm/",
-      to: "/addons/apm/"
-    },
-	{
-      from: "/addons/APM",
-      to: "/addons/apm/"
-    },
-	{
-      from: "/aqm/",
-      to: "/addons/aqm/"
-    },
-	{
-      from: "/apm/reference-guide/rg-2/reference-guide-2",
-      to: "/addons/apm/reference-guide/rg-2/reference-guide-2"
-    },
-	// {
+    // {
     //   from: "~*\\\/apm\\\/use-cases\\\/uc",
     //   to: "/apm/use-cases/",
     //   exact: true

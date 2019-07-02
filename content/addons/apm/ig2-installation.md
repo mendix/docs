@@ -15,7 +15,7 @@ This is the installation guide for Mansystems APM 2.
 Note the following:
 
 * Before using APM 2, create a database backup and have a backup deployment ready
-* APM 1 and 2 can be installed side-by-side (to uninstall the APM 1 module, see [Uninstall Steps](v1-uninstall-steps)
+* APM 1 and 2 can be installed side-by-side (to uninstall the APM 1 module, see [Uninstall Steps](ig1-uninstall-steps)
 
 ## 2 Installation
 

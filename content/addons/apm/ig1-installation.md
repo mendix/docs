@@ -7,10 +7,10 @@ This document describes the installation and uninstallation of the APM tool. The
 
 Read all the details here:
 
-*   [Prerequisites](v1-prerequisites)
-*   [Installation Steps](vv1-installation-steps)
-*   [Upgrade Steps](v1-upgrade-steps)
-*   [Uninstall Steps](v1-uninstall-steps)
+*   [Prerequisites](ig1-prerequisites)
+*   [Installation Steps](vig1-installation-steps)
+*   [Upgrade Steps](ig1-upgrade-steps)
+*   [Uninstall Steps](ig1-uninstall-steps)
 
 ## Installation for the Experienced User
 

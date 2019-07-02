@@ -10,8 +10,8 @@ The Application Performance Monitor (APM) is a solution that helps to analyze pe
 
 This is the reference guide for the Mansystems APM for Mendix. It has the following chapters:
 
-*   [Dashboard](dashboard)
-*   [Configuration](configuration)
+*   [Dashboard](v1-dashboard)
+*   [Configuration](v1-configuration)
 *   [Log Tool](log-tool)
 *   [Trap Tool](trap-tool)
 *   [Statistics Tool](statistics-tool)

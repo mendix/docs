@@ -17,7 +17,7 @@ For more information on page properties, see [Page](page).
 
 ## 2 Page and Page Resources
 
-In addition to a page, you can add page resources in the page editor. They help structure your page, style it, and fill it with data. For more information on page resources, see [Page Resources](page-resources). 
+In addition to a page, you can add page resources in the page editor. They help structure your page, style it, and fill it with data. For more on how to add page resources, see [Page Resources](page-resources). 
 
 Type | Description
 --- | ---

@@ -490,6 +490,10 @@ module.exports = {
       from: "/refguide8/enumeration-values",
       to: "/refguide/enumerations"
     },
+	{
+      from: "/refguide8/menu-items",
+      to: "/refguide/menu"
+    },
 	/****************************************************
      * From Desktop Modeler version 7 (permanent, mapped)
      ****************************************************/

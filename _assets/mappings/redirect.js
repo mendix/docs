@@ -491,6 +491,10 @@ module.exports = {
       to: "/refguide/enumerations"
     },
 	{
+      from: "/howto/deploying-a-mendix-app-to-cloud-foundry",
+      to: "/developerportal/deploy/cloud-foundry-deploy"
+    },
+	{
       from: "/refguide8/menu-items",
       to: "/refguide/menu"
     },

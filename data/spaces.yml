@@ -9,13 +9,27 @@ apidocs-mxsdk:
   menu_categories:
     - "API Documentation"
     - "Mendix Platform SDK"
-addons:
-  space: "Add-ons Guide"
+aqm:
+  space: "AQM Guide"
+  priority: false
+  menu_categories:
+    - "Application Quality Monitor"
+apm:
+  space: "APM Guide"
+  priority: false
+  menu_categories:
+    - "Application Performance Monitor"
+    - "Installation Guide"
+    - "Reference Guide"
+    - "Use Cases"
+ats:
+  space: "ATS Guide"
   priority: false
   menu_categories:
     - "Application Test Suite"
-    - "Application Performance Monitor"
-    - "Application Quality Monitor"
+    - "Reference Guide"
+    - "How-to's"
+    - "Best Practices"
 howto50:
   space: "Mendix 5 How-to's"
   priority: false

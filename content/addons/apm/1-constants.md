@@ -1,6 +1,6 @@
 ---
 title: "Constants"
-parent: "installation-steps"
+parent: "1-installation-steps"
 ---
 This appendix describes the constants used in the APMAgent. You are advised to use the defaults with the exception of the CompanyName constant.
 

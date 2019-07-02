@@ -7,10 +7,10 @@ This document describes the installation and uninstallation of the APM tool. The
 
 Read all the details here:
 
-*   [Prerequisites](pre-requisites)
-*   [Installation Steps](installation-steps)
-*   [Upgrade Steps](upgrade-steps)
-*   [Uninstall Steps](uninstall-steps)
+*   [Prerequisites](1-prerequisites)
+*   [Installation Steps](1-installation-steps)
+*   [Upgrade Steps](1-upgrade-steps)
+*   [Uninstall Steps](1-uninstall-steps)
 
 ## Installation for the Experienced User
 

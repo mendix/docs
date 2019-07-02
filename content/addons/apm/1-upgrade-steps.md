@@ -1,6 +1,6 @@
 ---
 title: "Upgrade Steps"
-parent: "installation-1"
+parent: "1-installation"
 ---
 This document describes the upgrade steps for version 1.5.5 and above.
 

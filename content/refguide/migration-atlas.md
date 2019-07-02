@@ -64,7 +64,7 @@ If you have altered your custom folders, consult the instructions below. If you 
 If you added, removed, or changed custom variables in a custom folder, copy your content from **theme_old/styles/sass/custom/_custom-variables.scss** to **theme/styles/web/sass/app/_custom-variables.scss**.
 
 If you added or changed custom styling in a custom folder, copy your content from **theme_old/styles/sass/custom/** to **theme/styles/web/sass/app/**.
-* In this case, also make sure that your new app project's **custom.scss** folder is named **_custom.scss**
+* In this case, also make sure that your new app project's **custom.scss** file is named **_custom.scss**
 
 ### 2.4 Working with Lib Folder Files
 

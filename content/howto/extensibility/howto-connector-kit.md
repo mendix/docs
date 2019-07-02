@@ -18,7 +18,7 @@ To illustrate the power of the Connector Kit, here's a high-level design diagram
 
 ![Slack Rekognition Bot design](attachments/how-to-connector-kit/slack-rekogition-bot-architecture.png)
 
-A Mendix application consists of a small number of microflows that use Mendix microflow actions to offer a conversational user interface using [Slack](https://slack.com/) and different Amazon services: [S3](https://aws.amazon.com/s3/), [Rekognition](https://aws.amazon.com/rekognition/), and [Lex](https://aws.amazon.com/lex/).
+The Mendix application consists of a small number of microflows that use Mendix microflow actions to offer a conversational user interface using [Slack](https://slack.com/) and different Amazon services: [S3](https://aws.amazon.com/s3/), [Rekognition](https://aws.amazon.com/rekognition/), and [Lex](https://aws.amazon.com/lex/).
 
 This image shows what the microflow toolbox looks like after including all the modules that provide connectors to the services used:
 

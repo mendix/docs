@@ -22,11 +22,11 @@ Before starting with this how-to, make sure you have the following prerequisites
 * ATS account
 * Your ATS instance
 * An application under test (AUT)
-* Selenium hub (for more information on the Selenium options, see [ATS Deployment](/addons/ats/general/deployment))
+* Selenium hub (for more information on the Selenium options, see [ATS Deployment](ov-deployment))
 
 {{% alert type="info" %}}
 
-You add users to ATS by inviting them to your Mendix app project. For more information on the user roles, see [Different User Roles](../../general/introduction#roles).
+You add users to ATS by inviting them to your Mendix app project. For more information on the user roles, see [Different User Roles](ov-introduction#roles).
 {{% /alert %}}
 
 ## 3 Configuring Your App
@@ -144,7 +144,7 @@ To create a test case, follow these steps:
 Now that you have created a test case, the next step is to configure your test case and start adding test steps. ATS provides two different tools to help add test steps: ATS helper (Setup step manually) and ATS recorder (Record step). We advise you to use the recorder as much as possible to add test steps. But, the ATS Recorder might not be able to record certain manual test steps. So, we advise to add steps in the following order:
 
 * Record your manual test steps using the ATS Recorder
-* Adding test steps using the ATS Helper, see [Finding the action you need](../../bestpractices/bp-version-2/finding-the-action-you-need-2).
+* Adding test steps using the ATS Helper, see [Finding the action you need](bp2-finding-the-action-you-need).
 * Create a custom action, see [Create custom action](create-custom-actions-2).
 
 Before you start adding test steps, add the ATS Helper and ATS Recorder tools:

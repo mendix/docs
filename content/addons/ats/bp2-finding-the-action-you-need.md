@@ -1,6 +1,6 @@
 ---
 title: "Finding the Action You Need"
-parent: "bp-version-2"
+parent: "bp2"
 ---
 
 ## 1 Introduction
@@ -34,13 +34,13 @@ When you want to find a widget, the main choice is always the [Find/Assert Widge
 
 ATS uses the `widget name` parameter instead of  `mx-name`. The widget name is found using the ATS helper, and the value is the `widget name`:
 
-![](attachments/finding-the-action-you-need-2/mx-name-ats-helper-cp.png)
+![](attachments/bp2-finding-the-action-you-need/mx-name-ats-helper-cp.png)
 
 The Find/Assert Widget action works on every widget that has a `mx-name`. 
 
 This is the **Find/Assert Widget** action:
 
-![](attachments/finding-the-action-you-need-2/findassert-widget-action-search.png)  
+![](attachments/bp2-finding-the-action-you-need/findassert-widget-action-search.png)  
 
 If the generic action does not work, check if there is a specific one.
 
@@ -54,7 +54,7 @@ In this example, you want to find a row inside a data grid widget. You can use t
 
 The solution in this situation is to use the following search term: "Find Datagrid". ATS checks all the actions and returns those that match these words. There is an action called [Find/Assert DataGrid Row](../../refguide/rg-version-1/findassert-datagrid-row), which enables searching for a data grid row containing a specific value in a specific column. This action also works on list views and template grids.
 
-![](attachments/finding-the-action-you-need-2/find-datagrid-example.png)
+![](attachments/bp2-finding-the-action-you-need/find-datagrid-example.png)
 
 #### 2.2.2 Example 2
 
@@ -62,7 +62,7 @@ In this example, you want to find the check box in a simple check box set select
 
 The solution in this situation is to use the following search term: "Find Simple Checkbox Set Selector". ATS checks all the actions and returns those that match these words. There is an action called [Find Simple Checkbox Set Selector](../../refguide/rg-version-1/find-simple-checkbox-set-selector), which finds the check box based on the `widget name` of the entire widget and the value displayed by the check box.
 
-![](attachments/finding-the-action-you-need-2/find-simple-checkbox-set-selector-example.png)
+![](attachments/bp2-finding-the-action-you-need/find-simple-checkbox-set-selector-example.png)
 
 #### 2.2.3 Example 3
 
@@ -70,7 +70,7 @@ In this example, you want to find a dialog box based on the title or text inside
 
 The solution in this situation is to use the following search term: "Find Dialog". ATS checks all the actions and returns those that match these words. There is an action called [Find/Assert Dialog](../../refguide/rg-version-1/findassert-dialog), which can find a dialog based on title, text, or only a dialog. 
 
-![](attachments/finding-the-action-you-need-2/find-dialog-example.png)
+![](attachments/bp2-finding-the-action-you-need/find-dialog-example.png)
 
 ### 2.3 Summary
 
@@ -90,13 +90,13 @@ When you want to click a widget, the main choice is always the [Click Widget](..
 
 ATS uses the `widget name` parameter instead of `mx-name`. The widget name is found using the ATS helper, and the value is the `widget name`:
 
-![](attachments/finding-the-action-you-need-2/mx-name-ats-helper-cp.png)
+![](attachments/bp2-finding-the-action-you-need/mx-name-ats-helper-cp.png)
 
 The Click Widget action works on every widget that has a `mx-name`.
 
 This is the **Click Widget** action:
 
-![](attachments/finding-the-action-you-need-2/click-widget-action-search.png)
+![](attachments/bp2-finding-the-action-you-need/click-widget-action-search.png)
 
 If the generic action does not work, check if there is a specific one.
 
@@ -110,7 +110,7 @@ In this example, you want to click the **Load more** button inside a list view w
 
 The solution in this situation is to use one of the following search terms: "Click Widget Button" because you want to click a button that is part of a widget. ATS checks all the actions and returns those that match these words. There is an action called [Click Widget Button](../../refguide/rg-version-1/click-widget-button), which uses the `mx-name` of the widget and the button type to click the right button. In this case, select the "load more" type.
 
-![](attachments/finding-the-action-you-need-2/click-widget-button-action-search.png)
+![](attachments/bp2-finding-the-action-you-need/click-widget-button-action-search.png)
 
 #### 3.2.2 Example 2
 
@@ -118,7 +118,7 @@ In this example, you want to click a specific data grid row inside a data grid. 
 
 The solution in this situation is to use the following search term: "Click DataGrid".  ATS checks all the actions and returns those that match these words. There is an action called [Click DataGrid Row](../../refguide/rg-version-1/click-datagrid-row). which enables you to click a data grid row containing a specific value in a specific column. This action also works on list views and template grids.
 
-![](attachments/finding-the-action-you-need-2/click-datagrid-row-action-search.png)
+![](attachments/bp2-finding-the-action-you-need/click-datagrid-row-action-search.png)
 
 #### 3.2.3 Example 3
 
@@ -126,7 +126,7 @@ In this example, you want to click a menu item in a menu bar widget. You cannot 
 
 The solution in this situation is to use the following search term: "Click menu". ATS checks all the actions and returns those that match these words. There is an action called [Click Menu Item](../../refguide/rg-version-1/click-menu-item), which clicks on a menu item inside a menu bar widget using the caption.
 
-![](attachments/finding-the-action-you-need-2/click-menu-item-action-search.png)
+![](attachments/bp2-finding-the-action-you-need/click-menu-item-action-search.png)
 
 #### 3.2.4 Example 4
 
@@ -134,7 +134,7 @@ In this example, you want to click an element you found in a previous step. You 
 
 The solution in this situation is to use the following search term: "Click/Doubleclick". ATS checks all the actions and returns those that match these words. You see there is an action called [Click/Doubleclick](../../refguide/rg-version-1/clickdoubleclick), which you should use when you want to click an element found in a previous step.
 
-![](attachments/finding-the-action-you-need-2/clickdoubleclick-action-search.png)
+![](attachments/bp2-finding-the-action-you-need/clickdoubleclick-action-search.png)
 
 ### 3.3 Summary
 
@@ -154,13 +154,13 @@ When you want to set an input widget, the main choice is always the [Set Value](
 
 ATS uses the `widget name` parameter instead of `mx-name`. The widget name is found using the ATS helper, and the value is the `widget name`:
 
-![](attachments/finding-the-action-you-need-2/mx-name-ats-helper-cp.png)
+![](attachments/bp2-finding-the-action-you-need/mx-name-ats-helper-cp.png)
 
 The Set Value action works on almost every widget that is an input widget.
  
 This is the **Set Value** action:
 
-![](attachments/finding-the-action-you-need-2/set-value-action-search.png)
+![](attachments/bp2-finding-the-action-you-need/set-value-action-search.png)
 
 If the generic action does not work, check if there is a specific one.
 
@@ -174,7 +174,7 @@ In this example, you want to set the value of a check box widget, but you want t
 
 The solution in this situation is to use the following search term: "Set Checkbox". ATS checks all the actions and returns those that match these words. There is an action called [Set Checkbox Value](../../refguide/rg-version-1/set-checkbox-value), which uses the `mx-name` of the widget and the boolean value you set to check or clear the check box.
 
-![](attachments/finding-the-action-you-need-2/set-checkbox-value-action-search.png)
+![](attachments/bp2-finding-the-action-you-need/set-checkbox-value-action-search.png)
 
 #### 4.2.2 Example 2
 
@@ -182,7 +182,7 @@ In this example, you want to set the BooleanSlider widget to certain value. You 
 
 The solution in this situation is to use the following search term: "Set BooleanSlider". ATS checks all the actions and returns those that match these words. There is an action called [Set BooleanSlider Value](../../refguide/rg-version-1/set-booleanslider-value), which uses the `mx-name` of the widget and the value to which you want to set the slider.
 
-![](attachments/finding-the-action-you-need-2/set-booleanslider-value-action-search.png)
+![](attachments/bp2-finding-the-action-you-need/set-booleanslider-value-action-search.png)
 
 #### 4.2.3 Example 3
 
@@ -190,7 +190,7 @@ In this example, you want to set a radio button inside a GridSelector widget. Yo
 
 The solution in this situation is to use the following search term: "Set Grid Selector". ATS checks all the actions and returns those that match these words. There is an action called [Set Grid Selector Value](../../refguide/rg-version-1/set-grid-selector-radiobutton-checked), which uses the `mx-name` of the widget, column caption, and row caption to locate the radio button.
 
-![](attachments/finding-the-action-you-need-2/set-grid-selector-radiobutton-action-search.png)
+![](attachments/bp2-finding-the-action-you-need/set-grid-selector-radiobutton-action-search.png)
 
 #### 4.2.4 Example 4
 
@@ -198,7 +198,7 @@ In this example, you want to set an input reference selector widget. You cannot 
 
 The solution in this situation is to use the following search term: "Set InputReferenceSelector". ATS checks all the actions and returns those that match these words. There is an action called [Set InputReferenceSelector Value](../../refguide/rg-version-1/set-inputreferenceselector-value), which uses the `mx-name` and the value to which you set the InputReferenceSelector widget.
 
-![](attachments/finding-the-action-you-need-2/set-inputreferenceselector-value-action-search.png)
+![](attachments/bp2-finding-the-action-you-need/set-inputreferenceselector-value-action-search.png)
 
 ### 4.3 Summary
 
@@ -218,13 +218,13 @@ When you want to get a value from a widget, the main choice is always the [Get V
 
 ATS uses the `widget name` parameter instead of  `mx-name`. The widget name is found using the ATS helper, and the value is the `widget name`:
 
-![](attachments/finding-the-action-you-need-2/mx-name-ats-helper-cp.png)
+![](attachments/bp2-finding-the-action-you-need/mx-name-ats-helper-cp.png)
 
 The Get Value action works on almost every widget that is an input widget.
  
 This is the Get Value action:
 
-![](attachments/finding-the-action-you-need-2/get-value-action-search.png)
+![](attachments/bp2-finding-the-action-you-need/get-value-action-search.png)
 
 If the generic action does not work, check if there is a specific one.
 
@@ -238,14 +238,14 @@ In this example, you want to get the value of an InputReferenceSelector widget. 
 
 The solution in this situation is to use the following search term: "Get InputReferenceSelector". ATS checks all the actions and returns those that match these words. There is an action called [Get InputReferenceSelector](../../refguide/rg-version-1/get-inputreferenceselector-value), which returns the value the InputReferenceSelector widget is set to using the `mx-name`. 
 
-![](attachments/finding-the-action-you-need-2/get-inputreferenceselector-value-action-search.png)
+![](attachments/bp2-finding-the-action-you-need/get-inputreferenceselector-value-action-search.png)
 
 #### 5.2.2 Example 2
 
 In this example, you want to get the value displayed in the CKEditor widget. You cannot use the Get Value action because it does not work.  
 
 The solution in this situation is to use the following search term: "Get CKEditor". ATS checks all the actions and returns those that match these words. There is an action called [Get CKEditor Value](../../refguide/rg-version-1/get-ckeditor-value), which uses the `mx-name` to return the value displayed in the CKEditor widget.
-![](attachments/finding-the-action-you-need-2/get-ckeditor-value-action-search.png)
+![](attachments/bp2-finding-the-action-you-need/get-ckeditor-value-action-search.png)
 
 #### 5.2.3 Example 3
 
@@ -253,7 +253,7 @@ In this example, you want to get the message displayed in the dialog box widget.
 
 The solution in this situation is to use the following search term: "Get Dialog". ATS checks all the actions and returns those that match these words. There is an action called [Get Dialog Message Text](../../refguide/rg-version-1/get-dialog-message-text), which uses the dialog as a WebElement to retrieve the message text. You use the Find/Assert Dialog action to get the dialog as a WebEelement.
 
-![](attachments/finding-the-action-you-need-2/get-dialog-message-text-action-search.png)
+![](attachments/bp2-finding-the-action-you-need/get-dialog-message-text-action-search.png)
 
 ### 5.3 Summary
 
@@ -273,13 +273,13 @@ When you want to assert a value inside a widget, the main choice is always the [
 
 ATS uses the `widget name` parameter instead of `mx-name`. The widget name is found using the ATS helper, and the value is the `widget name`:
 
-![](attachments/finding-the-action-you-need-2/mx-name-ats-helper-cp.png)
+![](attachments/bp2-finding-the-action-you-need/mx-name-ats-helper-cp.png)
 
 The Assert Value action works on almost every widget that is an input widget.
  
 This is the Assert Value action:
 
-![](attachments/finding-the-action-you-need-2/assert-value-action-search.png)
+![](attachments/bp2-finding-the-action-you-need/assert-value-action-search.png)
 
 If the generic action does not work, check if there is a specific one.
 
@@ -293,7 +293,7 @@ In this example, you want to assert that a specific validation message appears. 
 
 The solution in this situation is to use the following search term: "Assert Validation". ATS checks all the actions and returns those that match these words. There is an action called [Assert Validation Message](../../refguide/rg-version-1/assert-validation-message), which uses the `mx-name` of a widget to assert the validation message that appears in the widget.
 
-![](attachments/finding-the-action-you-need-2/assert-validation-message-action-search.png)
+![](attachments/bp2-finding-the-action-you-need/assert-validation-message-action-search.png)
     
 #### 6.2.2 Example 2
 
@@ -301,7 +301,7 @@ In this example, you want to assert that the right page has opened. You cannot u
 
 The solution in this situation is to use the following search term: "Assert Page". ATS checks all the actions and returns those that match these words. There is an action called [Assert Current Page](../../refguide/rg-version-1/assert-current-page), which uses the page title to assert that the right page has opened.
 
-![](attachments/finding-the-action-you-need-2/assert-current-page-action-search.png)
+![](attachments/bp2-finding-the-action-you-need/assert-current-page-action-search.png)
 
 #### 6.2.3 Example 3
 
@@ -311,7 +311,7 @@ In this example, you want to assert that the outcome of an earlier test step is 
 
 The solution in this situation is to use the following search term: "Assert not equal". ATS checks all the actions and returns those that match these words. There is an action called [Assert Not Equals](../../refguide/rg-version-1/assert-not-equals), which compares two provided values and checks if they are equal or not.
 
-![](attachments/finding-the-action-you-need-2/assert-not-equals-action-search.png)
+![](attachments/bp2-finding-the-action-you-need/assert-not-equals-action-search.png)
 
 ### 6.3 Summary
 
@@ -333,7 +333,7 @@ It is also used for creating variable selectors.
 
 This is the Concatenate String action:
 
-![](attachments/finding-the-action-you-need-2/concatenate-string-action-search.png)
+![](attachments/bp2-finding-the-action-you-need/concatenate-string-action-search.png)
 
 ### 7.2 Specific Action
 
@@ -345,7 +345,7 @@ In this example, you want to have a unique value in your test case. That also ma
 
 The solution in this situation is to use the following search term: "Random".  ATS checks all the actions and returns those that match this word. There is an action called [Random String](../../refguide/rg-version-1/random-string), which generates a random value and allows you to set a prefix and/or postfix.
 
-![](attachments/finding-the-action-you-need-2/random-string-action-search.png)
+![](attachments/bp2-finding-the-action-you-need/random-string-action-search.png)
 
 #### 7.2.2 Example 2
 
@@ -353,7 +353,7 @@ In this example, you want to have a unique number value in your test case. That 
 
 The solution in this situation is to use the following search term: "Random". ATS checks all the actions and returns those that match this word. There is an action called [Random Number](../../refguide/rg-version-1/random-number), which generates a random number and allows you to set a minimum and maximum.
 
-![](attachments/finding-the-action-you-need-2/random-number-action-search.png)
+![](attachments/bp2-finding-the-action-you-need/random-number-action-search.png)
 
 #### 7.2.3 Example 3
 
@@ -361,7 +361,7 @@ In this example, you want to use today's date in your test case. This makes your
 
 The solution in this situation is to use the following search term: "Current Date". ATS checks all the actions and returns those that match these words. There is an action called [Get Current DateTime String](../../refguide/rg-version-1/get-current-datetime-string), which retrieves the current date and allows you to set the date format.
 
-![](attachments/finding-the-action-you-need-2/get-current-datetime-string-action-search.png)
+![](attachments/bp2-finding-the-action-you-need/get-current-datetime-string-action-search.png)
 
 ### 7.3 Summary
 

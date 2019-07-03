@@ -19,7 +19,7 @@ Every ATS deployment consists of four components: the ATS application, the Mendi
 
 The following diagram illustrates how the components are connected:
 
-![ATS simplified architecture](attachments/deployment/ATS_architecture_simplified.png)
+![ATS simplified architecture](attachments/ov-deployment/ATS_architecture_simplified.png)
 
 ### 2.1 Application Test Suite (ATS) Application
 
@@ -43,25 +43,25 @@ There is one standard deployment option in addition to three alternative options
 
 ### 3.1 Standard
 
-![Standard Option](attachments/deployment/deploymentoption_standard.png)
+![Standard Option](attachments/ov-deployment/deploymentoption_standard.png)
 
 The standard option is highly recommended for all customers. It supports all current and future features, is easy to set up, is maintenance-free, and gets the best support.
 
 ### 3.2 Public App On-Premises
 
-![Public app on-premise](attachments/deployment/deploymentoption_alternative1.png)
+![Public app on-premise](attachments/ov-deployment/deploymentoption_alternative1.png)
 
 This option is meant for customers who run their app on premises. Since the app runs on premises, it is protected from external access via a firewall. In order to allow the Selenium Runner to access the app, you have to configure your firewall.
 
 ### 3.3 Private App On-Premises
 
-![Private app on-premise](attachments/deployment/deploymentoption_alternative2.png)
+![Private app on-premise](attachments/ov-deployment/deploymentoption_alternative2.png)
 
 This option is meant for customers who run their app on premises and who don't want to open their firewall for the Selenium Runner. In order to enable communication between the Selenium Runner and your local application, you have to deploy a Selenium Saas Agent in your local network. This agent will establish a VPN tunnel to your Selenium Service Provider and route all traffic between the Selenium Runner and your application.
 
 ### 3.4 Customer-Hosted Selenium
 
-![Customer hosted Selenium](attachments/deployment/deploymentoption_alternative3.png)
+![Customer hosted Selenium](attachments/ov-deployment/deploymentoption_alternative3.png)
 
 This option is meant for customers who run their app on premises and who also want to run their own Selenium Runner. The challenging part of this option is that the customer needs to set up, maintain, and operate its own Selenium Runner.
 
@@ -121,10 +121,10 @@ ATS does not support the uploading of files in every situation. This table prese
 
 | Selenium Setup | Uploading Your Own File | Uploading a File | Uploading Possible? |
 | :-------------- | :---------------------- | :--------------- | :------------------ |
-| Local Selenium Server (Docker) | ![](attachments/deployment/grey.png) Limited<sup>1</sup> | ![](attachments/deployment/green.png) Yes | ![](attachments/deployment/green.png) Yes |
-| BrowserStack (SaaS) | ![](attachments/deployment/red.png) No | ![](attachments/deployment/green.png) Yes | ![](attachments/deployment/green.png) Yes |
-| SauceLabs (SaaS) | ![](attachments/deployment/red.png) No | ![](attachments/deployment/red.png) No | ![](attachments/deployment/red.png) No |
-| Selenium SaaS Agent | ![](attachments/deployment/grey.png) Limited<sup>2</sup> | ![](attachments/deployment/green.png) Yes | ![](attachments/deployment/green.png) Yes |
+| Local Selenium Server (Docker) | ![](attachments/ov-deployment/grey.png) Limited<sup>1</sup> | ![](attachments/ov-deployment/green.png) Yes | ![](attachments/ov-deployment/green.png) Yes |
+| BrowserStack (SaaS) | ![](attachments/ov-deployment/red.png) No | ![](attachments/ov-deployment/green.png) Yes | ![](attachments/ov-deployment/green.png) Yes |
+| SauceLabs (SaaS) | ![](attachments/ov-deployment/red.png) No | ![](attachments/ov-deployment/red.png) No | ![](attachments/ov-deployment/red.png) No |
+| Selenium SaaS Agent | ![](attachments/ov-deployment/grey.png) Limited<sup>2</sup> | ![](attachments/ov-deployment/green.png) Yes | ![](attachments/ov-deployment/green.png) Yes |
 
 <sup>1</sup> This is only possible when you prepare your own files on that server.<br />
 <sup>2</sup> This depends on where the agent is installed.
@@ -287,6 +287,6 @@ Before you start, make sure that your server has internet access to download the
 
 The firewall should accept TCP connections from the internet on port 4444 (the standard port for Selenium Server). This port should forward to your Selenium Server.
 
-[green]:attachments/deployment/green.png
-[grey]:attachments/deployment/grey.png
-[red]:attachments/deployment/red.png
+[green]:attachments/ov-deployment/green.png
+[grey]:attachments/ov-deployment/grey.png
+[red]:attachments/ov-deployment/red.png

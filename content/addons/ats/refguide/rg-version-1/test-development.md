@@ -11,6 +11,6 @@ These are the test development documents:
 *   [Standard Actions Reference](standard-actions-reference)
 *   [Custom Actions](custom-actions)
 *   [Selectors](selectors)
-*   [Best Practices](best-practices)
+*   [Best Practices](bp)
 *   [Data Driven Tests](data-driven-tests)
 *   [Test Case Documentation](test-case-documentation)

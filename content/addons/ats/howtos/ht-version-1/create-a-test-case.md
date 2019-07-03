@@ -1,6 +1,6 @@
 ---
 title: "Create a Test Case"
-parent: "ht-version-1"
+parent: "ht1"
 description: "Describes how to create a test case and add test steps."
 tags: ["ATS", "testing"]
 ---
@@ -260,4 +260,4 @@ You have now created your test case using the ATS Recorder.
 
 You have now learned how to create a test case, so the next how-to is [How to Create a Test Suite](create-a-test-suite).
 
-For an overview of all the how-tos and the structure, see [ATS 1 How-to's](ht-version-1). We advise following the how-to's in the order listed there.
+For an overview of all the how-tos and the structure, see [ATS 1 How-to's](ht1). We advise following the how-to's in the order listed there.

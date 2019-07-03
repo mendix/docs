@@ -1,6 +1,6 @@
 ---
 title: "ATS 1 How-to's"
-category: "How-to's"
+parent: "ht"
 menu_order: 20
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Get Started"
-parent: "ht-version-1"
+parent: "ht1"
 description: "Describes the initial steps for automatically testing your apps using ATS."
 tags: ["ATS", "testing"]
 ---
@@ -24,7 +24,7 @@ Before starting with this how-to, make sure you have the following prerequisites
 * ATS account
 * Your ATS instance
 * An application under test (AUT)
-* Selenium hub (for more information on the Selenium options, see [ATS Deployment](/addons/ats/general/deployment))
+* Selenium hub (for more information on the Selenium options, see [ATS Deployment](ov-deployment))
 
 {{% youtube zJOpO0AymAg %}}
 
@@ -273,7 +273,7 @@ When you click **Run**, the **Monitoring / Results** page will open.
 
 Once your test case is executed, the result is shown here. For more information on results, see [Monitoring](/addons/ats/refguide/rg-version-1/monitoring).
 
-You have now finished the getting started guide for ATS. Please check the [how-to's](ht-version-1) and [best practices](/addons/ats/bestpractices/bp-version-1/bp-version-1) for more information.
+You have now finished the getting started guide for ATS. Please check the [how-to's](ht1) and [best practices](/addons/ats/bestpractices/bp-version-1/bp-version-1) for more information.
 
 Good luck testing your Mendix app with ATS!
 
@@ -281,4 +281,4 @@ Good luck testing your Mendix app with ATS!
 
 You have now learned a few basics of working with ATS, so the next how-to is [How to Install the ATS Helper and ATS Recorder](install-ats-helper-recorder).
 
-For an overview of all the how-tos and the structure, see [ATS 1 How-to's](ht-version-1). We advise following the how-to's in the order listed there.
+For an overview of all the how-tos and the structure, see [ATS 1 How-to's](ht1). We advise following the how-to's in the order listed there.

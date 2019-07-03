@@ -154,10 +154,6 @@ module.exports = {
       from: "/deployment/mendixcloud/sending-email",
       to: "/developerportal/deploy/sending-email"
     },
-	{
-      from: "/howto/deploying-a-mendix-app-to-cloud-foundry",
-      to: "/developerportal/deploy/cloud-foundry-deploy"
-    },
 	/****************************************************
      * From the Developer Portal (permanent, mapped) 
      ****************************************************/
@@ -497,6 +493,9 @@ module.exports = {
 	{
       from: "/refguide8/exclusive-split",
       to: "/refguide/decision"
+	{
+      from: "/howto/deploying-a-mendix-app-to-cloud-foundry",
+      to: "/developerportal/deploy/cloud-foundry-deploy"
     },
 	/****************************************************
      * From Desktop Modeler version 7 (permanent, mapped)
@@ -565,6 +564,11 @@ module.exports = {
       from: "/refguide7/Developing+Hybrid+Mobile+Apps",
       to: "/refguide7/developing-hybrid-mobile-apps"
     },
+	{
+      from: "/howto7/deploying-a-mendix-app-to-cloud-foundry",
+      to: "/developerportal/deploy/cloud-foundry-deploy"
+    },
+
 	/****************************************************
      * From Desktop Modeler version 6 (permanent)
      ****************************************************/

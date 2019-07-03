@@ -14,6 +14,12 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud V3, and other deploym
 
 ## 2019
 
+### June 28th, 2019
+
+#### SAP Logging Improvements
+
+* We added a component in the App Store which, when configured in your app, allows you to use the logging format supported by SAP Kibana. For more information, see [SAP Logger Connector](/partners/sap/sap-logger).
+
 ### June 27th, 2019
 
 #### Mendix Cloud Improvements

@@ -136,6 +136,13 @@ List activities can be used to create and manipulate lists of objects.
 
 #### 5.4.3 Action Call Activities
 
+
+| Graphic | Name | Description |
+| --- | --- | --- |
+| [![](attachments/819203/918008.png)](javascript-action-call) | [JavaScript action call](javascript-action-call) | Can be used to execute a JavaScript action. |
+| [![](attachments/819203/918005.png)](nanoflow-call) | [Call nanoflow](nanoflow-call) | Can be used to call a nanoflow. |
+
+
 The [JavaScript action call](javascript-action-call) activity executes a JavaScript action.
 
 #### 5.4.4 Variable Activities

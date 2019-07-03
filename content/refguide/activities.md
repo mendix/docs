@@ -44,6 +44,8 @@ Action call activities can be used to call another microflow or to call a Java a
 | --- | --- | --- |
 | [![](attachments/819203/918018.png)](java-action-call) | [Java Action call](java-action-call) | Java Action call can be used to call a Java action. Arguments can be passed to the action and the result can be stored in a variable. |
 | [![](attachments/819203/918001.png)](microflow-call) | [Microflow call](microflow-call) | Microflow call can be used to call another microflow. Arguments can be passed to the microflow and the result can be stored in a variable. |
+| [![](attachments/819203/918008.png)](javascript-action-call) | [JavaScript action call](javascript-action-call) | JavaScript Action call can be used to call a JavaScript action. Arguments can be passed to the action and the result can be stored in a variable. |
+| [![](attachments/819203/918005.png)](nanoflow-call) | [Call nanoflow](nanoflow-call) | Nanoflow call can be used to call another nanoflow. Arguments can be passed to the nanoflow and the result can be stored in a variable. |
 
 ## 5 Variable Activitities
 

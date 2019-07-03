@@ -6,7 +6,7 @@ category: "Application Performance Monitor"
 
 ## 1 Introduction
 
-The installation guide for APM is organized according to the APM version.
+The APM Installation Guide for is organized according to the APM version.
 
 ## 2 Main Documents in This Section
 

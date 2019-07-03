@@ -24,7 +24,7 @@ To install APM 2, follow these steps:
 1. Arrange a license for the app to use APM.
 2. In a browser, log in to the APM Manager at [https://apmmanager100.mendixcloud.com](https://apmmanager100.mendixcloud.com) using your Mendix account.
 3. Select your app in the dashboard.
-4. In the environments dashboard, select the **New Environment** tile. If you are a SCRUM Master of the Mendix app project, you can add test, acceptance, and production environments. If you are not, you can only add Mendix Studio Pro environments. For more detailed information, see the [Environments overview](../../reference-guide/rg-2/environments) documentation.
+4. In the environments dashboard, select the **New Environment** tile. If you are a SCRUM Master of the Mendix app project, you can add test, acceptance, and production environments. If you are not, you can only add Mendix Studio Pro environments. For more detailed information, see the [Environments overview](rg2-environments) documentation.
 5. Choose an environment name.
 6. Click **Save and generate API key**, then use this key as the value for the **APMAgent.APMAPIKey** constant in step 10.
 7. In Studio Pro with your app, import the [Mendix Application Performance Monitor](https://appstore.home.mendix.com/link/app/6127/) module from the Mendix App Store.

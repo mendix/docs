@@ -11,19 +11,19 @@ Activities represent the actions that are executed in a microflow or a nanoflow.
 
 The following types of activities are available:
 
-## 2 Object Activitities
+## 2 Object Activities
 
 Object activities can be used to create and manipulate objects. The [domain model](domain-model) defines the object types ([entities](entities)) that can be used.
 
 | Graphic | Name | Description |
 | --- | --- | --- |
-| [![cast object](attachments/819203/918013.png)](cast-object) | [Cast object](cast-object) | Cast object can be used in combination with an [inheritance split](inheritance-split) to use the [specialized](entities) members of the object. |
-| [![change object](attachments/819203/917661.png)](change-object) | [Change object](change-object) | Change object can be used to change the members of an object. This can be done with or without commiting and with or without events. |
-| [![commit object](attachments/819203/17661961.png)](committing-objects) | [Commit object(s)](committing-objects) | Commit object(s) can be used to commit the changes to one or more objects. |
+| [![cast object](attachments/819203/918013.png)](cast-object) | [Cast object](cast-object) | Cast object can be used in combination with an [inheritance split](inheritance-split) to use the specialized members of the object. For more information on the specialized members of an object, see [Entities](entities) |
+| [![change object](attachments/819203/917661.png)](change-object) | [Change object](change-object) | Change object can be used to change the members of an object. This can be done with or without commiting, and with or without events. |
+| [![commit object](attachments/819203/17661961.png)](committing-objects) | [Commit object(s)](committing-objects) | Commit object(s) can be used to commit changes to one or more objects. |
 | [![create object](attachments/819203/917756.png)](create-object) | [Create object](create-object) | Create object can be used to create an object. |
 | [![delete object](attachments/819203/918191.png)](deleting-objects) | [Delete object(s)](deleting-objects) | Delete object can be used to delete an object. |
-| [![retrieve](attachments/819203/917866.png)](retrieve) | [Retrieve](retrieve) | Retrieve can be used to get one (or more) associated objects of another object. Furthermore the activity can also get one (or more) objects directly from the database. |
-| [![rollback object](attachments/819203/918119.png)](rollback-object) | [Rollback object](rollback-object) | Rollback object can be used to undo changes (that have not been committed) that were made to the object in the part of the microflow preceding the activity. Furthermore it deletes objects that have been created but have never been committed. |
+| [![retrieve](attachments/819203/917866.png)](retrieve) | [Retrieve](retrieve) | Retrieve can be used to get one (or more) associated objects of another object. Furthermore, this activity can also get one (or more) objects directly from a database. |
+| [![rollback object](attachments/819203/918119.png)](rollback-object) | [Rollback object](rollback-object) | Rollback object can be used to undo uncommitted changes that were made to an object in the part of the microflow preceding the activity. Furthermore, it deletes objects that have been created but have never been committed. |
 
 ## 3 List Activitities
 

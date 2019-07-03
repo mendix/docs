@@ -2,7 +2,7 @@
 title: "Build Microflow Actions Using the Mendix Connector Kit"
 category: "Extensibility"
 description: "Describes creating custom Microflow actions using advanced Connector Kit options."
-menu_order: 70
+menu_order: 6
 tags: ["java", "connector kit", "microflow action", "parameter type", "aws", "amazon web services"]
 output:
   word_document: default
@@ -12,7 +12,7 @@ output:
 
 ## 1 Introduction
 
-In version 6.6, Mendix introduced the [Connector Kit](https://www.mendix.com/blog/introducing-mendix-connector-kit/). The goal of this enhancement was to enable Java developers to easily add powerful and robust new microflow actions to their Mendix toolbox. These microflow actions can be shared in the Mendix App Store, so anyone can benefit from them without having to know Java.
+The goal of the Mendix [Connector Kit](https://www.mendix.com/blog/introducing-mendix-connector-kit/) is to enable Java developers to easily add powerful and robust new microflow actions to their Mendix toolbox. These microflow actions can be shared in the Mendix App Store, so anyone can benefit from them without having to know Java.
 
 To illustrate the power of the Connector Kit, here's a high-level design diagram for an application Mendix recently built: a Slack bot that enables users to determine things and people in pictures taken with a mobile Slack app:
 

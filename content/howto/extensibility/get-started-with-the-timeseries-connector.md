@@ -1,7 +1,7 @@
 ---
 title: "Get Started with the TimeSeries Connector"
 category: "Extensibility"
-menu_order: 60
+menu_order: 8
 tags: ["iot", "connector", "timeseries", "big data", "analytics", "extensibility"]
 ---
 
@@ -31,13 +31,13 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 Follow these steps to get access to the TimeSeries connector and receive an API key:
 
-1. Sign up for the connector by going to our [Connector website](http://connector.timeseries.nl/ "Click here to go to the TimeSeries website") and register for free. You will receive your API key in an email after registering.
+1. Sign up for the connector by going to the [TimeSeries Connector website](https://connector.timeseries.com/) and registering for free. You will receive your API key in an email after registering.
 
   {{% alert type="info" %}}
   It can take up to a few hours to generate the key and send it to you. This key is used to activate and access your TimeSeries Analytics instance.
   {{% /alert %}}
 
-2. After you receive the key, import the TimeSeries Connector module from the [Mendix App Store](https://appstore.home.mendix.com/link/app/31951/TimeSeries/TimeSeries-Connector "Click here for awesomeness") into your project.
+2. After you receive the key, import the TimeSeries Connector module from the [Mendix App Store](https://appstore.home.mendix.com/link/app/31951/TimeSeries/TimeSeries-Connector) into your project.
 
 ## 4 Configure the Module Settings
 
@@ -47,7 +47,7 @@ After importing the module, there are a couple of settings you need to configure
 
 There are three constants that you can configure. Follow these steps to configure them:
 
-1. Expand your project and go to **App Store modules > TimeSeriesConnector > Settings**.
+1. Expand your project and go to **App Store modules** > **TimeSeriesConnector** > **Settings**.
 2. Open the **TimeSeriesAccessKey** constant.
 3. Paste your TimeSeries API key in the **Default value** field and click **OK**.
 
@@ -55,8 +55,8 @@ There are three constants that you can configure. Follow these steps to configur
 
   There are two more constants that don't need to be configured unless otherwise instructed.
 
-  * Dateformat: Is by default set to yyyy-MM-dd'T'HH:mm:ss.SSSZ and should remain like that
-  * TimeSeriesBasePath: Is by default set to https://timeseries-connector.timeseries.nl:16000/ and should remain like that unless communicated otherwise
+  * `Dateformat` – by default set to **yyyy-MM-dd'T'HH:mm:ss.SSSZ** (and should remain like that)
+  * `TimeSeriesBasePath` – by default set to `https://timeseries-connector.timeseries.nl:16000/` (and should remain like that unless communicated otherwise)
 
     {{% /alert %}}
 
@@ -64,10 +64,10 @@ There are three constants that you can configure. Follow these steps to configur
 
 These are the available enumarations in the TimeSeriesConnector module:
 
-* Enum_AggregationInterval: INTERVAL or REGISTER. These are determined by the TimeSeries platform and are the supported interval types for aggregation calls
-* Enum_AggregationPeriod: Hourly, daily, weekly, monthly or yearly. These are the supported time periods
-* Enum_MeasurementType: INTERVAL, REGISTER or EVENT. These are determined by the TimeSeries platforma and are the only supported measurement types. Note: measurements of type EVENT can not be aggregated
-* Enum_SearchType: Purely for UI. These are used to determine which search to perform
+* **Enum_AggregationInterval** – `INTERVAL` or `REGISTER` – these are determined by the TimeSeries platform and are the supported interval types for aggregation calls
+* **Enum_AggregationPeriod** – hourly, daily, weekly, monthly, and yearly are the supported time periods
+* **Enum_MeasurementType** – `INTERVAL`, `REGISTER`, or `EVENT` – these are determined by the TimeSeries platform and are the only supported measurement types (note that measurements of the `EVENT` type cannot be aggregated)
+* **Enum_SearchType** – Purely for UI. These are used to determine which search to perform
 
 ## 5 Implementation Example
 
@@ -75,19 +75,17 @@ Let's take the concept of a house. In this scenario the house is an asset, of wh
 
 ![](attachments/how-to-get-started-with-the-timeseries-connector/Systemoverview.PNG)
 
-The module comes with a ready-to-use domain model, which we'll also use in this how-to. Of course, this isn't a necessity, and you can also use your own domain model. All referenced microflows in this how-to can also be found in the module.
+The module comes with a ready-to-use domain model, which will be used in this how-to. This is not a necessity, and you can also use your own domain model. All referenced microflows in this how-to can also be found in the module.
 
-  {{% alert type="warning" %}}
-
-  If you want to use your own domain model, make sure that your entities have the necessary attributes for every action that requires a Type Parameter.
-
-  {{% /alert %}}
+{{% alert type="warning" %}}
+If you want to use your own domain model, make sure that your entities have the necessary attributes for every action that requires a Type Parameter.
+{{% /alert %}}
 
 The domain model looks like this:
 
 ![](attachments/how-to-get-started-with-the-timeseries-connector/Domainmodel.png)
 
-### 5.1 Create an Asset
+### 5.1 Creating an Asset
 
 You start the implementation by creating an asset object in a page, or directly in a microflow.
 
@@ -103,7 +101,7 @@ After having set the **Asset name**, we trigger some validation, call the **Crea
 
 You can find this microflow in the *TimerSeriesConnector* module under **1. Assets > CreateAsset > IVK_CreateAsset**.
 
-### 5.2 Create a Channel
+### 5.2 Creating a Channel
 
 The next step is creating a *Channel*. This *Channel* should belong to an *Asset*. Follow these steps to create a *Channel*:
 
@@ -128,7 +126,7 @@ After having set the necessary attributes and associations, we trigger some vali
 
 You can find this microflow in the *TimerSeriesConnector* module under **2. Channels > AddChannel > IVK_AddChannel**.
 
-### 5.3 Store Measurement(s)
+### 5.3 Storing Measurement(s)
 
 Now that you have created an asset with a channel, you can start storing measurements. Follow these steps to store your measurements:
 
@@ -153,7 +151,7 @@ After having set the necessary attributes and associations, we trigger some vali
 
 You can find this microflow in the *TimerSeriesConnector* module under **3. Measuremenets > StoreMeasurements > IVK_StoreMeasurement**.
 
-### 5.4 Aggregate Your Data
+### 5.4 Aggregating Your Data
 
 Once your channel has sufficient data, the TimeSeries Connector will really start to shine. Instead of having enormous amounts of data in your database, which takes a long time to aggregate for reporting, you can now simply ask the TimeSeries platform for an aggregation of your data. Follow these steps to set up your data aggregation:
 
@@ -177,7 +175,7 @@ After having set the necessary attributes and associations, we trigger some vali
 <iframe width='100%' height='491px' frameborder='0' src='https://modelshare.mendix.com/models/9d9055e4-4301-4ee4-8ef9-fdcbcd05079e/timeseries-connector-get-aggregations?embed=true'></iframe>
 You can find this microflow in the *TimerSeriesConnector* module under **4. Aggregations > GetAggregations > IVK_GetAggregations**.
 
-## 6 Final Remarks
+## 6 Conclusion
 
 This how-to provides an example on how to implement a basic subset of the available actions. Over time, more actions will be released.
 

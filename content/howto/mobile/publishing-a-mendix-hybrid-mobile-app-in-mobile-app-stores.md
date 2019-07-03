@@ -25,6 +25,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 	* If you require an app to test with, set up the [Company Expenses](https://appstore.home.mendix.com/link/app/240/) app from the Mendix App Store as a free app to try out its mobile features 
 * Have an account for Adobe PhoneGap Build (you can create one for free [here](https://build.phonegap.com/plans/free-adobeid))
 * Have an iOS device (iPhone or iPad) for testing the iOS package that will be produced
+* Register for an [Apple Developer Account](https://developer.apple.com/register/index.action)
 * Have an iOS deployment certificate and a provisioning file for which your test device is activated
 * Have an Android device for testing the APK package that will be produced
 	* You need both a *.p12* certificate file and a *.mobileprovision* profile file 

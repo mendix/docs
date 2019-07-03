@@ -217,4 +217,4 @@ The Mendix instance on Azure is now fully configured and ready for use. Let's tr
 *   [Mendix Cloud: Deploy](mendix-cloud-deploy)
 *   [Sending Email](sending-email)
 *   [Different user logins when integrated with Mendix SSO](managing-mendix-sso)
-*   [Integrate your app with Mendix SSO](integrate-with-mendix-sso)
+*   [Mendix Single Sign-On](integrate-with-mendix-sso)

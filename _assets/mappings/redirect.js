@@ -493,6 +493,7 @@ module.exports = {
 	{
       from: "/refguide8/exclusive-split",
       to: "/refguide/decision"
+	},
 	{
       from: "/howto/deploying-a-mendix-app-to-cloud-foundry",
       to: "/developerportal/deploy/cloud-foundry-deploy"

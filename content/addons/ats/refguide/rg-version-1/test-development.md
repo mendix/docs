@@ -1,6 +1,6 @@
 ---
 title: "Test Development"
-parent: "rg-version-1"
+parent: "rg1"
 ---
 
 These are the test development documents:

@@ -5,7 +5,7 @@ parent: "mendix-appstore-widgets-actions"
 
 This section contains these documents:
 
-* [Assert Grid Selector Value](assert-grid-selector-value)
+* [Assert Grid Selector Value](rg1-assert-grid-selector-value)
 * [Find Grid Selector Box](find-grid-selector-box)
 * [Get Grid Selector Box Value](get-grid-selector-box-value)
 * [Set Checkbox Set Selector Value](set-grid-selector-checkbox-value)

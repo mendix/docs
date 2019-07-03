@@ -1,6 +1,6 @@
 ---
 title: "Projects"
-parent: "rg-version-1"
+parent: "rg1"
 ---
 ## 1 Introduction
 

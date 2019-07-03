@@ -1,6 +1,6 @@
 ---
 title: "Monitoring"
-parent: "rg-version-1"
+parent: "rg1"
 ---
 
 ## Test Results

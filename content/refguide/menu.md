@@ -2,7 +2,8 @@
 title: "Menu"
 parent: "page-resources"
 tags: ["studio pro", "menu", "menu item", "page resource"]
-#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. Also, the anchor "menu-item" is mapped.
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
+#The anchor <menu-item> below is mapped, so it should not be removed or changed.
 ---
 
 ## 1 Introduction

@@ -129,7 +129,7 @@ ATS does not support the uploading of files in every situation. This table prese
 <sup>1</sup> This is only possible when you prepare your own files on that server.<br />
 <sup>2</sup> This depends on where the agent is installed.
 
-For more information, see [How to Upload a File in Your App Using ATS](../howtos/ht-version-2/upload-file-using-ats-2].
+For more information, see [How to Upload a File in Your App Using ATS](../howtos/ht2/ht2-upload-file-using-ats].
 
 ## 5 Selenium SaaS Subscription
 

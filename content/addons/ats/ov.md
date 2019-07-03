@@ -1,6 +1,7 @@
 ---
 title: "ATS Overview"
 category: "Application Test Suite"
+menu_order: 1
 ---
 
 ## 1 Introduction

@@ -3,7 +3,8 @@ title: "Enumerations"
 parent: "resources"
 menu_order: 40
 tags: ["studio pro", "enumeration", "enumeration value"]
-#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. Also, the anchor "enum-value-properties" is mapped. 
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
+#The anchor <enum-value-properties> below is mapped, so it should not be removed or changed.
 ---
 
 ## 1 Introduction

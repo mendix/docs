@@ -121,7 +121,8 @@ This request returns the current executions of actions known by the Mendix Runti
 ### 3.1 Request
 
 ```json
-"{"action" : "runtime_statistics", "params":{} }"```
+"{"action" : "runtime_statistics", "params":{} }"
+```
 
 ### 3.2 Example Response
 
@@ -214,7 +215,7 @@ This request returns the current executions of actions known by the Mendix Runti
 
 ### 3.3 Return Values
 
-#### 3.1 Requests
+#### 3.3.1 Requests
 
 Displays information about the request per handler:
 
@@ -228,11 +229,11 @@ For each handler you will get two pieces of information:
 * The value field shows the number of requests per handler.
 * The last_request_timestamp field shows the timestamp in milliseconds of the last handled request. If there are no requests handled, this field shows the moment the handler is registered.
 
-#### 3.2 Cache
+#### 3.3.2 Cache
 
 Shows the total number of objects which are currently part of the runtime state (all session together). The runtime state either resides in memory (non-clustered runtime) or in Redis or the database (clustered runtime). Too many objects in the state could slow down the performance of the Mendix Runtime.
 
-#### 3.3 Sessions
+#### 3.3.3 Sessions
 
 The "user_sessions" sections shows the current user sessions with their user agents.
 
@@ -242,11 +243,11 @@ The other sections show the number of sessions per category. Categories are:
 * "named_user_sessions" (the number of non-anonymous concurrent sessions)
 * "anonymous_sessions" (the number of anonymous concurrent sessions)
 
-#### 3.4 Connectionbus
+#### 3.3.4 Connectionbus
 
 Number of database requests. Distinguishes between "select", "update", "insert", and "delete" commands and started database transactions.
 
-#### 3.5 Memory
+#### 3.3.5 Memory
 
 {{% alert type="warning" %}}
 
@@ -456,7 +457,7 @@ Returns all the current thread stack traces by name. This is useful for low leve
 }
 ```
 
-### 2.3 Return Values
+### 8.3 Return Values
 
 Returns the current Mendix Runtime status. Possible status values are:
 
@@ -489,7 +490,7 @@ This information can be used to track what state the Mendix Runtime is in when t
 }
 ```
 
-### 2.3 Return Values
+### 9.3 Return Values
 
 In Mendix Studio Pro, a [health check microflow](project-settings) can be configured. This microflow can report on the functional status of the application; does the general functionality of the application work, and are the necessary remote services available?
 

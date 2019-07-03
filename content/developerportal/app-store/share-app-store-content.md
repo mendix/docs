@@ -85,7 +85,7 @@ To add content to the App Store, follow these steps:
 
 	![](attachments/share-app-store-content/add_content_button.png)
 
-2.  The **DRAFT** page will open, where you need to select the purpose of your contribution:
+2.  <a name="two"></a>The **DRAFT** page will open, where you need to select the purpose of your contribution:
 
 	* **Share** – components that can be downloaded using Studio Pro – if you select this option, continue to [step #3](#three) below
 	* **Promote** – a way to advertise a component or solution while not making it downloadable – if you select this option, continue to [step #4](#four) below

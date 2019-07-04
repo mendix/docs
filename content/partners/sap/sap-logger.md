@@ -53,7 +53,7 @@ To initialize the logger, do the following:
 
     ![sap log level](attachments/sap-logger/logger_edit_action.png)
 	
-6. Edit **SapLogLevel** constant to select minimum log level which you want to send to the SAP Cloud Platform Application Logging service (case-insensitive). The supported log levels are Debug, Trace, Info, Warning, Error, and Critical.
+6. Edit **SapLogLevel** constant to select minimum log level which you want to send to the *SAP Cloud Platform Application Logging service* (case-insensitive). The supported log levels are Debug, Trace, Info, Warning, Error, and Critical.
  ![Edit log level](attachments/sap-logger/edit_log_level_constant.png)
  
 Now, when the application is started, it will produce logs in the JSON format supported by Kibana.

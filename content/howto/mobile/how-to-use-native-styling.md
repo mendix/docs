@@ -38,7 +38,7 @@ These resources let you style your app with a wide variety of interface parts. H
 
 	![default button](attachments/how-to-use-native-styling/default-button.png)
 
-3. Open *theme/styles/mobile/core/variables.js* using your IDE of choice.
+3. Open *theme/styles/mobile/custom/custom-variables.js* using your IDE of choice.
 4. Change the `brand.primary` from **#0595DB** to *rosybrown*:
 
 	```javascript
@@ -116,9 +116,9 @@ When you have specific design requirements, you will need to build custom classe
 	}
 	```
 	
-	When you alter a class on your own, you can look up the widget's structure in [core widgets refguide link TBR].
+	When you alter a class on your own, you can look up the widget's structure in [core widgets refguide link TBR]??.
 
-6. Create a custom button widget by removing the background color of the default button widget:
+6. Apply a transparent background color to customize default button widget:
 
 	```javascript
 	export const className = {

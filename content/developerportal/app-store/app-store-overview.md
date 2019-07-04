@@ -151,7 +151,13 @@ On this page, you will see the following buttons (depending on your permissions)
 
 ### 4.3 Drafts
 
-This page contains drafts of App Store content you have started.
+This page contains drafts of App Store content you have started:
+
+![](attachments/app-store-overview/drafts.png)
+
+Click the name of the App Store item to be taken to the [DRAFT](share-app-store-content#adding) page, where you can continue editing the content details.
+
+Click **Delete** to delete a draft.
 
 ### 4.4 Shared with Me {#shared-with-me}
 

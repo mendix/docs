@@ -442,15 +442,15 @@ module.exports = {
       from: "/refguide8/download-from-team-server-dialog",
       to: "/refguide/download-from-version-control-dialog"
     },
-  {
+	{
       from: "/refguide8/open-project-dialog",
       to: "/refguide/open-app-dialog"
     },
-  {
+	{
       from: "/refguide8/upload-to-team-server-dialog",
       to: "/refguide/upload-to-version-control-dialog"
     },
-  {
+	{
       from: "/refguide8/microflow-expressions",
       to: "/refguide/expressions"
     },
@@ -517,15 +517,15 @@ module.exports = {
       from: "/refguide7/download-from-team-server-dialog",
       to: "/refguide7/download-from-version-control-dialog"
     },
-  {
+	{
       from: "/refguide7/open-project-dialog",
       to: "/refguide7/open-app-dialog"
     },
-  {
+	{
       from: "/refguide7/upload-to-team-server-dialog",
       to: "/refguide7/upload-to-version-control-dialog"
     },
-  {
+	{
       from: "/refguide7/microflow-expressions",
       to: "/refguide7/expressions"
     },

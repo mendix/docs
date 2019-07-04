@@ -20,7 +20,7 @@ For updates on the status of Mendix Cloud V4, Mendix Cloud V3, and other deploym
 
 * We fixed an issue where the XSUAA configuration wasn’t updated after deployment.
 
-  **Please redeploy any apps which you deployed to SAP Cloud Platform between June 27th and 8:00 CST on July 4th.**
+    **Please redeploy any apps which you deployed to SAP Cloud Platform between June 27th and 8:00 CST on July 4th.**
 
 ### June 28th, 2019
 

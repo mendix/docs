@@ -12,12 +12,12 @@ tags: ["Trends","v3","Mendix Cloud","Developer Portal"]
 
 To track the usage growth of your app and to debug performance problems, the Mendix Cloud includes detailed graphs on both infrastructure and application level. These graphs show various performance trends of all your apps in the paid editions of the Mendix Platform. In case you experience issues with your app, always check the **Alerts** and **Trends** in the **Developer Portal** under **Operate**.
 
-## 2 Monitor Trends Access  
+## 2 Access to Monitoring Trends
 
 To view the **Trends**, you must have permission to **Access the Monitoring**.
 
 {{% alert type="info" %}}
-Note that only the [Technical Contact](../company-app-roles/technical-contact) is allowed to grant the node permissions.
+Only the [Technical Contact](../company-app-roles/technical-contact) is allowed to grant the node permissions.
 {{% /alert %}}
 
 Assign this permission by following these steps:
@@ -31,7 +31,7 @@ Assign this permission by following these steps:
 
 ![](attachments/trends/nodepermission.jpg)
 
-## 3 Find the Trends
+## 3 Viewing the Trends
 
 You can find the trends by following these steps:
 

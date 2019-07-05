@@ -124,11 +124,11 @@ The microflows related to such an event handler should have the following prefix
 
 #### 3.4.2 Calculated Attribute Microflows
 
-For attributes, you can choose to store the value in the database or to calculate the value based on a microflow. For the microflow which does the calculation you should use **Cal_** as a prefix, and refer to the entity and attribute which is being calculated.
+For attributes, you can choose to store the value in the database or to calculate the value based on a microflow. For the microflow which does the calculation you should use **Cal_** as a prefix, and refer to the entity and attribute which is being calculated. The calculation is triggered when you show the entity on a page or use it in a microflow. On a page the object's calculation attribute refreshes if you navigate away from the object and back to it in any way (pagination-buttons, tabs, re-enter the page).
 
 | Event Type      | Prefix               |
 |-----------------|----------------------|
-| Calculation     | Cal_{Entity name}    |
+| Calculation     | Cal_{Entity name}\_{Attribute name}    |
 
 #### 3.4.4 Page-based Microflows
 

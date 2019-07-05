@@ -13,8 +13,8 @@ A <i>ConfirmationDialog</i> is shown when a delete or microflow action requires 
 
 **Dialog** contains these documents:
 
-* [Cancel Dialog](cancel-dialog)
-* [Close Dialog](close-dialog)
-* [Confirm Dialog](confirm-dialog)
-* [Find/Assert Dialog](findassert-dialog)
+* [Cancel Dialog](rg1-cancel-dialog)
+* [Close Dialog](rg1-close-dialog)
+* [Confirm Dialog](rg1-confirm-dialog)
+* [Find/Assert Dialog](rg1-findassert-dialog)
 * [Get Dialog Message Text](get-dialog-message-text)

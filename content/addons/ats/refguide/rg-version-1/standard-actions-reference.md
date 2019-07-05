@@ -7,8 +7,8 @@ parent: "test-development"
 
 These sections provide you with information on all the predefined actions in ATS:
 
-* [Mendix Actions](mendix-actions)
-* [Dialog](dialog)
-* [Mendix Appstore Widgets Actions](mendix-appstore-widgets-actions)
-* [ATS Core Actions](ats-core-actions)
-* [Selenium Actions](selenium-actions)
+* [Mendix Actions](rg1-mendix-actions)
+* [Dialog](rg1-dialog)
+* [Mendix Appstore Widgets Actions](rg1-mendix-appstore-widgets-actions)
+* [ATS Core Actions](rg1-ats-core-actions)
+* [Selenium Actions](rg1-selenium-actions)

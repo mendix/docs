@@ -1,6 +1,6 @@
 ---
 title: "Click DataGrid Row"
-parent: "datagrid-templategrid-listview"
+parent: "rg1-datagrid-templategrid-listview"
 ---
 
 ## Description

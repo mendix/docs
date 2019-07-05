@@ -57,7 +57,7 @@ In the previous section, you wrote down the user approach for the Mendix Switch 
 
     ![](attachments/ht2-create-unsupported-widget/ht2-cab-02-switch/highlighted-switch-mxname.png)
 
-    When selecting which element to find, also remember that ATS clicks in the middle of an element. In this case, ATS does not click the actual switch. This means you must use the [*Find Widget Child Node*](/addons/ats/refguide/rg1/find-widget-child-node) action. This action is a combination of the [*Find/Assert Widget*](/addons/ats/refguide/rg1/findassert-widget) and [*Find Element by Sizzle*](/addons/ats/refguide/rg1/find-element-by-sizzle) actions, combining the best of both. It’s an official Mendix action, it has all the internal processes, and it uses a CSS/jQuery selector to find the child, which makes it flexible.
+    When selecting which element to find, also remember that ATS clicks in the middle of an element. In this case, ATS does not click the actual switch. This means you must use the [*Find Widget Child Node*](rg1-find-widget-child-node) action. This action is a combination of the [*Find/Assert Widget*](rg1-findassert-widget) and [*Find Element by Sizzle*](rg1-find-element-by-sizzle) actions, combining the best of both. It’s an official Mendix action, it has all the internal processes, and it uses a CSS/jQuery selector to find the child, which makes it flexible.
 
 2.  Check the different child nodes to find the one you need. While doing this, keep the **guidelines for creating a custom action** in mind! It must be generic, so pick an element or element class that’s always present, because you "hard-code" it into your action. Also, make sure the element is visible for the end-user so that ATS can click it.
 
@@ -108,7 +108,7 @@ In the previous section, you wrote down the user approach for the Mendix Switch 
 
     ![](attachments/ht2-create-unsupported-widget/ht2-cab-02-switch/mendix-switch-findwidgetchild-description-output.png)
 
-9. You click the Mendix switch to change its state. So, add the [*Click/Doubleclick*](/addons/ats/refguide/rg1/clickdoubleclick) action, because this action is a Mendix action:
+9. You click the Mendix switch to change its state. So, add the [Click/Doubleclick](rg1-clickdoubleclick) action, because this action is a Mendix action:
 
     ![](attachments/ht2-create-unsupported-widget/ht2-cab-02-switch/mendix-switch-click-doubleclick-add.png)
 

@@ -1,6 +1,6 @@
 ---
 title: "Get Row Cell Value"
-parent: "datagrid-templategrid-listview"
+parent: "rg1-datagrid-templategrid-listview"
 ---
 
 ## Description
@@ -13,7 +13,7 @@ Returns the cell value of a given DataGrid row as string, specified by the colum
 
 ## Usage
 
-You have to pass a DataGrid row as WebElement and the column name to determine which cell you want to read. To get the DataGrid row, use the actions [Find Item/Row](find-itemrow), [Find Item/Row (by child element)](find-itemrow-by-child) or [Find/Assert DataGrid Row](findassert-datagrid-row).    
+You have to pass a DataGrid row as WebElement and the column name to determine which cell you want to read. To get the DataGrid row, use the actions [Find Item/Row](rg1-find-itemrow), [Find Item/Row (by child element)](rg1-find-itemrow-by-child) or [Find/Assert DataGrid Row](rg1-findassert-datagrid-row).    
 
 ## Input Parameters
 

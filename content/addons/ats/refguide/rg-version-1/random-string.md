@@ -1,6 +1,6 @@
 ---
 title: "Random String"
-parent: "ats-core-actions"
+parent: "rg1-ats-core-actions"
 ---
 
 ## Description

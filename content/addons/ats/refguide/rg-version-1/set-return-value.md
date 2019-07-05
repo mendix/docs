@@ -1,6 +1,6 @@
 ---
 title: "Set Return Value"
-parent: "ats-core-actions"
+parent: "rg1-ats-core-actions"
 ---
 
 ## Description

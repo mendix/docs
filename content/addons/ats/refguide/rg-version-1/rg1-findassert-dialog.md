@@ -1,6 +1,6 @@
 ---
 title: "Find/Assert Dialog"
-parent: "dialog"
+parent: "rg1-dialog"
 ---
 
 ## Description

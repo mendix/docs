@@ -1,6 +1,6 @@
 ---
 title: "Get Dialog Message Text"
-parent: "dialog"
+parent: "rg1-dialog"
 ---
 
 ## Description
@@ -14,7 +14,7 @@ Returns the text from messages and confirmation dialogs
 
 ## Usage
 
-You have to pass the dialog as WebElement to the action. To get the dialog as WebElement use the action [Find/Assert Dialog](findassert-dialog).
+You have to pass the dialog as WebElement to the action. To get the dialog as WebElement use the action [Find/Assert Dialog](rg1-findassert-dialog).
 
 ## Input Parameters
 

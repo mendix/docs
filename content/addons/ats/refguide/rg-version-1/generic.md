@@ -10,7 +10,7 @@ This section contains these documents:
 * [Click Widget Button](rg1-click-widget-button)
 * [Click Widget](rg1-click-widget)
 * [Click/Double-Click](rg1-clickdoubleclick)
-* [Find/Assert Widget](rg1-findassert-widget)
+* [Find/Assert Widget](rg1-rg1-findassert-widget)
 * [Get Validation Message](rg1-get-validation-message)
 * [Login](rg1-login)
 * [Logout](rg1-logout)

@@ -1,6 +1,6 @@
 ---
 title: "Assert Equals"
-parent: "ats-core-actions"
+parent: "rg1-ats-core-actions"
 ---
 
 ## Description

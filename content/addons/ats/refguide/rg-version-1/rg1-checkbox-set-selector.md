@@ -6,8 +6,8 @@ parent: "mendix-appstore-widgets-actions"
 This section contains these documents:
 
 * [Assert Checkbox Set Selector Value](rg1-assert-checkbox-set-selector-value)
-* [Find Checkbox Set Selector](find-checkbox-set-selector)
-* [Find Checkbox Set Selector (All)](find-checkbox-set-selector-all)
+* [Find Checkbox Set Selector](rg1-find-checkbox-set-selector)
+* [Find Checkbox Set Selector (All)](rg1-find-checkbox-set-selector-all)
 * [Get Checkbox Set Selector Value](get-checkbox-set-selector-value)
 * [Get Checkbox Set Selector Value (All)](get-checkbox-set-selector-value-all)
 * [Set Checkbox Set Selector Value](set-checkbox-set-selector-value)

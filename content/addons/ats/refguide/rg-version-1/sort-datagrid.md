@@ -1,6 +1,6 @@
 ---
 title: "Sort DataGrid"
-parent: "datagrid-templategrid-listview"
+parent: "rg1-datagrid-templategrid-listview"
 ---
 
 ## Description

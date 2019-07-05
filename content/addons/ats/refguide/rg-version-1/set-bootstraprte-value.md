@@ -1,6 +1,6 @@
 ---
 title: "Set BootstrapRTE Value"
-parent: "bootstraprte"
+parent: "rg1-bootstraprte"
 ---
 
 ## Description

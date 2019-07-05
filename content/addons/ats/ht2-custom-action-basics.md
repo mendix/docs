@@ -125,7 +125,7 @@ To add an output parameter, follow these steps:
     ![](attachments/ht2-custom-action-basics/new-action-output-parameter-complete.png)
 
 6. The **Output Parameter** requires additional steps. Go to the **Test Steps** tab and click **Add**.
-7.  Add the [Find/Assert Widget](/addons/ats/refguide/rg1/findassert-widget) action and the [Set Return Value](/addons/ats/refguide/rg1/set-return-value) action.
+7.  Add the [Find/Assert Widget](rg1-findassert-widget) action and the [Set Return Value](set-return-value) action.
     
     ![](attachments/ht2-custom-action-basics/output-parameter-actions.png)
 

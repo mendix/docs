@@ -5,5 +5,5 @@ parent: "mendix-actions"
 
 This section contains these documents:
 
-* [Find/Assert Menu Item](findassert-menu-item)
-* [Click Menu Item](click-menu-item)
+* [Find/Assert Menu Item](rg1-findassert-menu-item)
+* [Click Menu Item](rg1-click-menu-item)

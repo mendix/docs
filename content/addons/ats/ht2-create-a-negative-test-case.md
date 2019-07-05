@@ -61,7 +61,7 @@ This is the final test case:
 
 ![](attachments/ht2-create-a-negative-test-case/set-to-true.png)
 
-6. Add the action needed to search for the menu item as a **Precondition**. Check the precondition box and add the [Find/Assert Menu Item](/addons/ats/refguide/rg1/findassert-menu-item) action:
+6. Add the action needed to search for the menu item as a **Precondition**. Check the precondition box and add the [Find/Assert Menu Item](rg1-findassert-menu-item) action:
 
   ![](attachments/ht2-create-a-negative-test-case/add-findassert-menu-item-as-precondition-2.png)
 

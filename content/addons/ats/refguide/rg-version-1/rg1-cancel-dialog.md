@@ -1,20 +1,19 @@
 ---
-title: "Confirm Dialog"
-parent: "dialog"
+title: "Cancel Dialog"
+parent: "rg1-dialog"
 ---
 
 ## Description
 
-Clicks Proceed/Ok Button on a Confirmation, Error, Warning or Info Dialog.
+Clicks Cancel on a Confirmation Dialog.
 
 ## Supported Widgets
 
  + ConfirmationDialog
- + DialogMessage
 
 ## Usage
 
-Optionally you can provide the dialog title and dialog type, to specify which dialog you want to confirm. Otherwise this action will confirm the first found active dialog.
+Optionally you can provide the dialog title and dialog type, to specify which dialog you want to cancel. Otherwise this action will cancel the first found active dialog.     
 
 ## Input Parameters
 

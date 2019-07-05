@@ -120,7 +120,7 @@ Clicking **New Action** opens the **Create new** dialog box:
 
    ![](attachments/ht2-create-extracted-actions/edit-input-parameter-dialog.png)
 
-11. Enter **Column Value** in the **Name** field. When defining action parameter names, always use the ATS [naming conventions](../../refguide/rg1/best-practices).
+11. Enter **Column Value** in the **Name** field. When defining action parameter names, always use the ATS [naming conventions](rg1-best-practices).
 12. Enter a description in the **Description** field. (for example, *Enter the value of the description of the expense to be deleted.*). Giving each input parameter a description of what to enter in the input parameter is advised.
 13. Click **Save**.
 

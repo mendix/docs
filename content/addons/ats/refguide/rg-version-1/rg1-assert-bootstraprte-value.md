@@ -1,6 +1,6 @@
 ---
 title: "Assert BootstrapRTE Value"
-parent: "bootstraprte"
+parent: "rg1-bootstraprte"
 ---
 ## Description
 Asserts that the BootstrapRTE value is equal to the given value.

@@ -1,6 +1,6 @@
 ---
 title: "Toggle Checkbox Set Selector Value"
-parent: "checkbox-set-selector"
+parent: "rg1-checkbox-set-selector"
 ---
 
 ## Description

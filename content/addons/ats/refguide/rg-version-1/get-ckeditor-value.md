@@ -1,6 +1,6 @@
 ---
 title: "Get CKEditor Value"
-parent: "ckeditor"
+parent: "rg1-ckeditor"
 ---
 
 ## Description

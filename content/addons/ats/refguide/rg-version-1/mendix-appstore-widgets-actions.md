@@ -5,11 +5,11 @@ parent: "standard-actions-reference"
 
 **Mendix App Store Widget Actions** contains the following sections:
 
-* [Boolean Slider](booleanslider)
-* [BootstrapRTE](bootstraprte)
-* [Checkbox Set Selector](checkbox-set-selector)
-* [CK Editor](ckeditor)
-* [Dropdown Div Convertor](dropdown-div-converter)
-* [Grid Selector](grid-selector)
-* [Input Reference Selector](input-reference-selector)
-* [Simple Checkbox Set Selector](simple-checkbox-set-selector)
+* [Boolean Slider](rg1-booleanslider)
+* [BootstrapRTE](rg1-bootstraprte)
+* [Checkbox Set Selector](rg1-checkbox-set-selector)
+* [CK Editor](rg1-ckeditor)
+* [Dropdown Div Convertor](rg1-dropdown-div-converter)
+* [Grid Selector](rg1-grid-selector)
+* [Input Reference Selector](rg1-input-reference-selector)
+* [Simple Checkbox Set Selector](rg1-simple-checkbox-set-selector)

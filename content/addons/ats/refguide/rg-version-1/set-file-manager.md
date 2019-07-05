@@ -1,6 +1,6 @@
 ---
 title: "Set File Manager"
-parent: "file-manager"
+parent: "rg1-file-manager"
 ---
 
 ## Description

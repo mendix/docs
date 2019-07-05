@@ -1,6 +1,6 @@
 ---
 title: "Assert BooleanSlider Value"
-parent: "booleanslider"
+parent: "rg1-booleanslider"
 ---
 ## Description
 Asserts the value of the BooleanSlider Appstore Widget (String).

@@ -182,27 +182,24 @@ In the example below, the parameter **AccountPasswordData** is highlighted becau
 
 ## 7 Errors
 
-When an error occurs in a nanoflow, all the changes that have been made to objects are not rolled back and the nanoflow is aborted. Optionally, you can handle errors in the nanoflow itself by configuring an error handler. You can inspect the details of the error by looking at the`$latestError` predefined variable.
+When an error occurs in a nanoflow, all the changes made to objects are not rolled back and the nanoflow is aborted. Optionally, you can handle errors in the nanoflow itself by configuring an error handler. You can inspect the details of the error by looking at the`$latestError` predefined variable.
 
 ### 7.1 Error Handlers
 
-Setting error handlers are currently supported on all nanoflow elements except for gateways and loops. Those will be supported later.
-There are 2 available options:
+Error handlers are currently supported on all nanoflow elements except for gateways and loops. There are two available options:
 
-*  Abort (default)
-*  Custom without rollback
+*  **Abort** (which is the default)
+*  **Custom without rollback**
 
-For the latter option you can draw an additional flow from the block and mark this flow as the error handler flow. The 'Custom without rollback' option does not rollback the objects. After you selected a flow as the error handler it will show this as in the following image.
+For **Custom without rollback** error handlers, you can draw an additional flow from the block and then mark this flow as the error handler flow. The **Custom without rollback** option does not roll back the objects. After you select a flow as the error handler it will appear this way:
 
 ![](attachments/819203/918248.png)
 
 ### 7.2 Inspecting Errors
 
-In a custom error handler that is executed after an error occurs, `$latestError` variable is set to the message of the error information.
-The type of `$latestError` variable is `String`, unlike [microflows](microflows) where its type is `System.Error` entity.
+In a custom error handler executed after an error occurs, the `$latestError` variable is set to the message of the error information. The `$latestError` variable type is `String`, unlike in [microflows](microflows) where errors' type is the `System.Error` entity.
  
-
-Also, `$latestSoapFault` variable is not available in nanoflows.
+The `$latestSoapFault` variable is not available in nanoflows.
 
 ## 8 Nanoflow Debugging
 

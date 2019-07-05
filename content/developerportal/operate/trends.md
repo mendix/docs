@@ -60,13 +60,9 @@ The number of requests per second is split up by request handlers.
 * **xas/** lists general queries for data in data grids, sending changes to the server and triggering the execution of microflows
 * **file** shows the number of file uploads and downloads
 
-### <a name="Trends-appmxruntimeconnectionbus"></a>4.2 Number of Database Queries Being Executed
+### <a name="Trends-appmxruntimecache"></a>4.2 Object Cache
 
-This graph shows the number of database queries that are executed by your Mendix application.
-
-![](attachments/trends/no-db-queries.png)
-
-The queries are broken down into queries that actually modify data (insert, update, delete), queries that fetch data (select), and the number of transactions (like microflows from which these queries originate).
+Non-Persistable Entities live in the JVM memory and are garbage collected regularly. If you have a memory leak, the number of objects in memory will grow over time. This might be a problem. In this graph you can monitor the number of Mendix Objects that live in memory.
 
 ### <a name="Trends-appmxruntimesessions"></a>4.3 User Accounts and Login Sessions
 
@@ -88,47 +84,19 @@ This second graph about JVM memory is similar to the previous graph, JVM Object 
 
 More information on this graph is available in a Tech Blog post: [What's in my JVM memory?](https://tech.mendix.com/linux/2015/01/14/whats-in-my-jvm-memory/)
 
-### <a name="Trends-appm2eeserverthreadpool"></a>4.6 Threadpool for Handling External Requests
+### <a name="Trends-appmemory"></a>4.6 Application Node Operating System Memory
+
+The memory graph shows the distribution of operating system memory that is available for this server. The most important part of the graph is the application process, which is visible as an amount of memory that is continuously in use, labelled in the category 'apps'.
+
+### <a name="Trends-appm2eeserverthreadpool"></a>4.7 Threadpool for Handling External Requests
 
 The application server thread pool graph shows the number of concurrent requests that are being handled by the Mendix Runtime, but only when they're initiated by a remote API, like the way the normal web-based client communicates, or by calling web services. Because creating a new thread that can concurrently process a request is an expensive operation, there's a pool of threads being held that can quickly start processing new incoming requests. This pool automatically grows and shrinks according to the number of requests that are flowing through the application.
 
-### <a name="Trends-appmxruntimethreads"></a>4.7 Total Number of Threads in the JVM Process
+### <a name="Trends-appmxruntimethreads"></a>4.8 Total Number of Threads in the JVM Process
 
 This graph shows the total number of threads that exist inside the running JVM process. Besides the threadpool that is used for external HTTP requests, as shown above, this includes the threadpool used for database connections, internal processes inside the Mendix Runtime, and optional extra threads created by the application itself, for example, using a threadpool in a custom module or custom Java code.
 
-### <a name="Trends-appmxruntimecache"></a>4.8 Object Cache
-
-Non-Persistable Entities live in the JVM memory and are garbage collected regularly. If you have a memory leak, the number of objects in memory will grow over time. This might be a problem. In this graph you can monitor the number of Mendix Objects that live in memory.
-
-## 5 Database Statistics
-
-The database statistics show the amount of database queries and mutations, as well as the total size of the database.
-
-### <a name="Trends-dbpgstatdatabaseVERSIONmain"></a>5.1 Database Transactions and Mutations
-
-This graph shows the number of database objects that were actually changed by database queries from the application.
-
-![](attachments/trends/db-mutations.png)
-
-A single database operation that affects more than one object, will show up as single database query as measured from the application side, but will show the number of object actually changed here, as measured from inside the database.
-
-### <a name="Trends-dbpgtableindexsizeVERSIONmain"></a>5.2 Index vs. Table Size
-
-This database size graph shows the distribution between disk space used for storing indexes and actual data. Remember, indexes actually occupy memory space and disk storage, as they're just parts of your data copied and stored, sorted in another way! Besides your data, indexes also have to be read into system memory to be able to use them.
-
-## 6 Application and Database Node Statistics
-
-This section has three subsections, describing the graphs for the following:
-
-* [Application Node](#application-node)
-* [Database Node](#database-node)
-* [Both Application and Database Node](#both-nodes)
-
-### 6.1 Application Node{#application-node}
-
-These are infrastructure level metrics with regards to the application node.
-
-#### <a name="Trends-appcpu"></a>6.1.1 Application Node CPU Usage
+### <a name="Trends-appcpu"></a>4.9 Application Node CPU Usage
 
 The CPU graph shows the amount of CPU utilization in percentage, broken down into different types of CPU usage.
 
@@ -136,55 +104,15 @@ The CPU graph shows the amount of CPU utilization in percentage, broken down int
 
 The most important value in here is 'user', which shows the amount of CPU time used for handling requests at Mendix Runtime and executing microflows and scheduled events. CPU usage of the database is shown in a separate graph below.
 
-#### <a name="Trends-appmemory"></a>6.1.2 Memory
-
-The memory graph shows the distribution of operating system memory that is available for this server. The most important part of the graph is the application process, which is visible as an amount of memory that is continuously in use, labelled in the category 'apps'.
-
-### 6.2 Database Node{#database-node}
-
-These are infrastructure level metrics with regards to the database node.
-
-#### <a name="Trends-dbcpu"></a>6.2.1 CPU
-
-The CPU graph shows the amount of CPU utilization in percentage, broken down into different types of CPU usage.
-
-The most important values in here are: 'user', which shows the amount of CPU time used for running database queries, and 'iowait', showing the amount of time a CPU core is idle and waiting for disk operations to finish (for example, waiting for information that has to be read from disk, or waiting for a synchronous write operation to finish).
-
-Clearly visible amounts of iowait, in combination with a high number of disk read operations (Disk IOPS), and having all free system memory filled as disk cache (Memory graph), are a sign of a lack of available server memory for use as disk cache. This situation will slow down database operations tremendously, because getting data from disk over and over again takes considerably more time than having it present in memory.
-
-#### <a name="Trends-dbmemory"></a>6.2.2 Memory
-
-The memory graph shows the distribution of operating system memory that is available for this server. The most important part of this graph is the 'cache' section. This type of memory usage contains parts of the database storage that have been read from disk earlier. It is crucial to the performance of an application that parts of the database data and indexes that are referenced a lot are always immediately available in the working memory of the server, at the cache part. A lack of disk cache on a busy application will result in continuous re-reads of data from disk, which takes several orders of magnitude more time, slowing down the entire application.
-
-#### <a name="Trends-dbpgstatactivityVERSIONmain"></a>6.2.3 Database Connections
-
-The database connections graph shows the number of connections to the PostgreSQL server. This should go up and down with the usage of the application. The number of connections is limited to 50.
-
-### 6.3 Both Application and Database Node{#both-nodes}
-
-The following infrastructure metrics are available for both the application node and the database node.
-
-### <a name="Trends-appdiskstatsiops"></a><a name="Trends-dbdiskstatsiops"></a>6.3.1 Disk IOPS
-
-The Disk IO statistics show the number of disk read and write operations that are done from and to the disk storage. It does not show the amount of data that was transferred.
-
-### <a name="Trends-appload"></a><a name="Trends-dbload"></a>6.3.2 Load
-
-This value is commonly used as a general indication for overall server load that can be monitored and alerted upon. The load value is a composite value, calculated from a range of other measurements, as shown in the other graphs on this page. When actually investigating high server load, this graph alone is not sufficient.
-
-### <a name="Trends-appdiskstatslatency"></a><a name="Trends-dbdiskstatslatency"></a>6.3.3 Disk Latency
-
-The disk latency graph shows the average waiting times for disk operations to complete. Interpreting the values in this graph should be done in combination with the other disk stats graphs, and while having insight in the type of requests that done. Sequential or random reads and writes can create a different burden for disk storage.
-
-### <a name="Trends-appdiskstatsthroughput"></a><a name="Trends-dbdiskstatsthroughput"></a>6.3.4 Disk Throughput
+### <a name="Trends-appdiskstatsthroughput"></a>4.10 Application Node Disk Throughput
 
 Disk throughput shows the amount of data that is being read from and written to disk. If there's more than one disk partition in the system, the /srv partition generally contains project files and uploaded files of the application, while /var generally holds the database storage.
 
-### <a name="Trends-appdfabs"></a><a name="Trends-dbdfabs"><a name="Trends-dbdf"><a name="Trends-appdf"></a>6.3.5 Disk Usage
+### <a name="Trends-appdfabs"></a><a name="Trends-appdf"></a>4.11 Application Node Disk Usage (in Bytes)
 
 This graph displays the amount of data that is stored on disk in absolute amounts. If there's more than one disk partition in the system, the /srv partition generally holds project files and uploaded files of the application, while /var generally holds the database storage.
 
-### <a name="Trends-appdiskstatsutilization"></a><a name="Trends-dbdiskstatsutilization"></a>6.3.6 Disk Utilization
+### <a name="Trends-appdiskstatsutilization"></a>4.12 Application Node Disk Utilization in Percentage (%)
 
 Disk utilization shows the percentage of time that the disk storage is busy processing requests. This graph should be interpreted in combination with other graphs, like CPU iowait, disk iops, and number of running requests. For example, a combination of a moderate number of IO operations, low amount of disk throughput, visible cpu iowait, filled up memory disk cache, and reports of long running database queries in the application log could point to a shortage of system memory for disk cache that leads to repeated random reads from disk storage.
 
@@ -194,7 +122,109 @@ Disk utilization is calculated as the disk usage that is used by the user of the
 
 {{% /alert %}}
 
-## 7 Read More
+### <a name="Trends-appdiskstatsiops"></a>4.13 Application Node Disk I/Os
+
+The Disk IO statistics show the number of disk read and write operations that are done from and to the disk storage. It does not show the amount of data that was transferred.
+
+### <a name="Trends-appload"></a>4.14 Application Node Load
+
+This value is commonly used as a general indication for overall server load that can be monitored and alerted upon. The load value is a composite value, calculated from a range of other measurements, as shown in the other graphs on this page. When actually investigating high server load, this graph alone is not sufficient.
+
+### <a name="Trends-appdiskstatslatency"></a>4.15 Application Node Disk Latency
+
+The disk latency graph shows the average waiting times for disk operations to complete. Interpreting the values in this graph should be done in combination with the other disk stats graphs, and while having insight in the type of requests that done. Sequential or random reads and writes can create a different burden for disk storage.
+
+### <a name="Trends-appdiskstatsutilization"></a>4.16 Application Node Disk Utilization
+
+Disk utilization shows the percentage of time that the disk storage is busy processing requests. This graph should be interpreted in combination with other graphs, like CPU iowait, disk iops, and number of running requests. For example, a combination of a moderate number of IO operations, low amount of disk throughput, visible cpu iowait, filled up memory disk cache, and reports of long running database queries in the application log could point to a shortage of system memory for disk cache that leads to repeated random reads from disk storage.
+
+{{% alert type="info" %}}
+
+Disk utilization is calculated as the disk usage that is used by the user of the system. Due to operating system overhead and empty space in block size allocation, not all disk space can be fully allocated. For this reason, the total amount of usable space will be ~4% lower than the actual disk space.
+
+{{% /alert %}}
+
+## 5 Database Statistics
+
+The database statistics show the amount of database queries and mutations, as well as the total size of the database.
+
+### <a name="Trends-appmxruntimeconnectionbus"></a>5.1 Number of Database Queries Being Executed
+
+This graph shows the number of database queries that are executed by your Mendix application.
+
+![](attachments/trends/no-db-queries.png)
+
+The queries are broken down into queries that actually modify data (insert, update, delete), queries that fetch data (select), and the number of transactions (like microflows from which these queries originate).
+
+### <a name="Trends-appmxruntimepgtableindexsize"></a>5.2 Database Table vs. Index Size
+
+This database size graph shows the distribution between disk space used for storing indexes and actual data. Remember, indexes actually occupy memory space and disk storage, as they're just parts of your data copied and stored, sorted in another way! Besides your data, indexes also have to be read into system memory to be able to use them.
+
+### <a name="Trends-appmxruntimepgstattuples"></a>5.3 Number of Database Tuple Mutations
+
+This graph shows the number of database objects that were actually changed by database queries from the application.
+
+![](attachments/trends/db-mutations.png)
+
+A single database operation that affects more than one object, will show up as single database query as measured from the application side, but will show the number of object actually changed here, as measured from inside the database.
+
+### <a name="Trends-appmxruntimepgstatactivity"></a>5.4 Number of Database Connections
+
+The database connections graph shows the number of connections to the PostgreSQL server. This should go up and down with the usage of the application. The number of connections is limited to 50.
+
+### <a name="Trends-dbmemory"></a>5.5 Database Node Operating System Memory
+
+The memory graph shows the distribution of operating system memory that is available for this server. The most important part of this graph is the 'cache' section. This type of memory usage contains parts of the database storage that have been read from disk earlier. It is crucial to the performance of an application that parts of the database data and indexes that are referenced a lot are always immediately available in the working memory of the server, at the cache part. A lack of disk cache on a busy application will result in continuous re-reads of data from disk, which takes several orders of magnitude more time, slowing down the entire application.
+
+### <a name="Trends-dbcpu"></a>5.6 Database Node CPU Usage
+
+The CPU graph shows the amount of CPU utilization in percentage, broken down into different types of CPU usage.
+
+The most important values in here are: 'user', which shows the amount of CPU time used for running database queries, and 'iowait', showing the amount of time a CPU core is idle and waiting for disk operations to finish (for example, waiting for information that has to be read from disk, or waiting for a synchronous write operation to finish).
+
+Clearly visible amounts of iowait, in combination with a high number of disk read operations (Disk IOPS), and having all free system memory filled as disk cache (Memory graph), are a sign of a lack of available server memory for use as disk cache. This situation will slow down database operations tremendously, because getting data from disk over and over again takes considerably more time than having it present in memory.
+
+### <a name="Trends-dbdiskstatsthroughput"></a>5.7 Database Node Disk Throughput
+
+Disk throughput shows the amount of data that is being read from and written to disk. If there's more than one disk partition in the system, the /srv partition generally contains project files and uploaded files of the application, while /var generally holds the database storage.
+
+### <a name="Trends-dbdfabs"></a><a name="Trends-dbdf"></a>5.8 Database Node Disk Usage (in Bytes)
+
+This graph displays the amount of data that is stored on disk in absolute amounts. If there's more than one disk partition in the system, the /srv partition generally holds project files and uploaded files of the application, while /var generally holds the database storage.
+
+### <a name="Trends-dbdiskstatsutilization"></a>5.9 Database Node Disk Utilization in Percentage (%)
+
+Disk utilization shows the percentage of time that the disk storage is busy processing requests. This graph should be interpreted in combination with other graphs, like CPU iowait, disk iops, and number of running requests. For example, a combination of a moderate number of IO operations, low amount of disk throughput, visible cpu iowait, filled up memory disk cache, and reports of long running database queries in the application log could point to a shortage of system memory for disk cache that leads to repeated random reads from disk storage.
+
+{{% alert type="info" %}}
+
+Disk utilization is calculated as the disk usage that is used by the user of the system. Due to operating system overhead and empty space in block size allocation, not all disk space can be fully allocated. For this reason, the total amount of usable space will be ~4% lower than the actual disk space.
+
+{{% /alert %}}
+
+### <a name="Trends-dbdiskstatsiops"></a>5.10 Database Node Disk I/Os
+
+The Disk IO statistics show the number of disk read and write operations that are done from and to the disk storage. It does not show the amount of data that was transferred.
+
+### <a name="Trends-dbload"></a>5.11 Database Node Load
+
+This value is commonly used as a general indication for overall server load that can be monitored and alerted upon. The load value is a composite value, calculated from a range of other measurements, as shown in the other graphs on this page. When actually investigating high server load, this graph alone is not sufficient.
+
+### <a name="Trends-dbdiskstatslatency"></a>5.12 Database Node Disk Latency
+
+The disk latency graph shows the average waiting times for disk operations to complete. Interpreting the values in this graph should be done in combination with the other disk stats graphs, and while having insight in the type of requests that done. Sequential or random reads and writes can create a different burden for disk storage.
+
+### <a name="Trends-dbdiskstatsutilization"></a>5.13 Database Node Disk Utilization
+
+Disk utilization shows the percentage of time that the disk storage is busy processing requests. This graph should be interpreted in combination with other graphs, like CPU iowait, disk iops, and number of running requests. For example, a combination of a moderate number of IO operations, low amount of disk throughput, visible cpu iowait, filled up memory disk cache, and reports of long running database queries in the application log could point to a shortage of system memory for disk cache that leads to repeated random reads from disk storage.
+
+{{% alert type="info" %}}
+
+Disk utilization is calculated as the disk usage that is used by the user of the system. Due to operating system overhead and empty space in block size allocation, not all disk space can be fully allocated. For this reason, the total amount of usable space will be ~4% lower than the actual disk space.
+
+{{% /alert %}}
+
+## 6 Read More
 
 * [Alerts](monitoring-application-health)
 * [Database Size Reduction](database-size-reduction)

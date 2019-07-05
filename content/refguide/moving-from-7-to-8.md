@@ -142,18 +142,18 @@ Apps made in Mendix Studio Pro cannot be deployed to *Version 3* of the Mendix C
 
 ## 8 Java Code Generation
 
-In Mendix Studio Pro version 8 we’re changing the way we generate Java code for Java actions and Data Sets.
+In Mendix Studio Pro version 8, we are changing the way we generate Java code for Java actions and datasets.
 
-Mendix Modeler version 7 sometimes appended a postfix (e.g. `Parameter1`) to the names of parameters of Java actions and Data Sets. This behavior was necessary to prevent name conflicts in the generated code. In the minor releases of Mendix Modeler 7 we introduced a number of fixes to prevent those conflicts from happening, making this behavior redundant.
+Mendix Desktop Modeler version 7 sometimes appended a postfix (for example, `Parameter1`) to the names of parameters of Java actions and datasets. This behavior was necessary to prevent name conflicts in the generated code. In the minor releases of Mendix Desktop Modeler 7, we introduced a number of fixes to prevent those conflicts from happening, making this behavior redundant.
 
-We also noticed that, by attempting to prevent those name conflicts, we sometimes caused Java compilation failures, which seemed completely unrelated to what you were working on. Seeing that appending a postfix is now completely unnecessary, and introduces quite a few problems on bigger projects, we decided to remove it completely.
+We also noticed that by attempting to prevent those name conflicts, we sometimes caused Java compilation failures, which seemed completely unrelated to what you were working on. Seeing that appending a postfix is now completely unnecessary and introduces quite a few problems on bigger app projects, we decided to remove it completely.
 
-So, what does that mean in practice? For most projects nothing changes and everything still works as it used to. But, in a limited number of cases, Mendix Modeler version 7 will have introduced a postfix for your parameter name. For example, a parameter called `Customer` might become `CustomerParameter1` in the generated Java code. This postfix will be removed when you migrate your app to Mendix Studio Pro 8.
+What does that mean in practice? For most app projects, nothing changes and everything still works as it used to. But, in a limited number of cases, Mendix Desktop Modeler version 7 will have introduced a postfix for your parameter name. For example, a parameter called `Customer` might become `CustomerParameter1` in the generated Java code. This postfix will be removed when you migrate your app to Mendix Studio Pro 8.
 
-In these few cases, this means that you need to make a simple fix before your code will compile again:
+In these few casesyou need to make a simple fix before your code will compile again:
 
-* If it is a Java action in a module downloaded from the AppStore which is causing errors, just download it again, or update it to the latest version.
-* If it is your own Java action, then the fix is ever easier – just remove those postfixes from your Java code (so, in the previous example `CustomerParameter1` becomes just `Customer` again).
+* If it is a Java action in a module downloaded from the App Store that is causing errors, just download it again, or update it to the latest version
+* If it is your own Java action, then the fix is ever easier – just remove those postfixes from your Java code (in the previous example, `CustomerParameter1` just becomes `Customer` again).
 
 ### 8.1 Example of Differences
 

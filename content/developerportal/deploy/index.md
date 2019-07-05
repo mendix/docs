@@ -15,7 +15,7 @@ This section of the Developer Portal Guide contains step-by-step instructions, a
 * [Mobile App](mobileapp) – contains instructions for publishing your mobile app: to the Apple or Google stores, for example
 * [App Services](app-services) – describes what can be published to the Mendix App Store, and how to do this
 
-## 2 Run Locally or Preview{#run-locally #preview #section-2}
+## 2 Run Locally or Preview
 
 ### 2.1 Studio Pro
 

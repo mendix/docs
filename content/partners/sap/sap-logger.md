@@ -49,12 +49,13 @@ To initialize the logger, do the following:
 
     ![Drag logger subscriber into After startup microflow](attachments/sap-logger/logger_drag_component.png)
 
-5. Double-click the **RegisterSubscriber** action make sure the constant SapLogLevel is selected:
-<img src="attachments/sap-logger/logger_edit_action.png"  width="70%" height="70%">
+5. Double-click the **RegisterSubscriber** action make sure that **Log level** is set to the constant *SapLogLevel*:
 
+    ![log level is set to SapLogLevel](attachments/sap-logger/logger_edit_action.png)
 	
-6. Edit **SapLogLevel** constant to select minimum log level which you want to send to the *SAP Cloud Platform Application Logging service* (case-insensitive). The supported log levels are Debug, Trace, Info, Warning, Error, and Critical.
-<img src="attachments/sap-logger/edit_log_level_constant.png"  width="70%" height="70%">
+6. Edit the constant **SapLogLevel** to select the minimum log level which you want to send to the *SAP Cloud Platform Application Logging service*. The supported log levels (case-insensitive) are `Debug`, `Trace`, `Info`, `Warning`, `Error`, and `Critical`.
+
+    ![SapLogLevel is set to Info](attachments/sap-logger/edit_log_level_constant.png)
  
 Now, when the application is started, it will produce logs in the JSON format supported by Kibana.
 

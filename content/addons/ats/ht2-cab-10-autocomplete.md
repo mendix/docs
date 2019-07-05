@@ -113,11 +113,11 @@ To create the action structure, follow these steps:
 
     ![](attachments/ht2-create-unsupported-widget/ht2-cab-10-autocomplete/autocompletewidget-focusandclearelement-action.png)
 
-12. Add the [*Send Keys*](send-keys) action to enter the value in the `input` element. Add the action, connect the `input` element from test step 3 as an input, and provide a proper description:
+12. Add the [*Send Keys*](rg1-send-keys) action to enter the value in the `input` element. Add the action, connect the `input` element from test step 3 as an input, and provide a proper description:
 
     ![](attachments/ht2-create-unsupported-widget/ht2-cab-10-autocomplete/autocompletewidget-sendkeys-action.png)
 
-13. Add a [Mendix Wait](mendix-wait) action to give the app time to perform activities:
+13. Add a [Mendix Wait](rg1-mendix-wait) action to give the app time to perform activities:
 
     ![](attachments/ht2-create-unsupported-widget/ht2-cab-10-autocomplete/autocompletewidget-mendixwait-action.png)
 

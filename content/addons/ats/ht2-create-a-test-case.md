@@ -55,7 +55,7 @@ The following steps describe how to add test steps manually to your test case. Y
 
     ![](attachments/ht2-create-a-test-case/test-case-page-add.png)
 
-    The first step is opening the Company Expenses app, which you do by entering a URL in the browser. ATS does the same by using the [Open Application](open-application) action.
+    The first step is opening the Company Expenses app, which you do by entering a URL in the browser. ATS does the same by using the [Open Application](rg1-open-application) action.
 
 2. Enter *Open Mendix Application* in the input area of the dialog box. You have the core action and Mendix actions. Mendix actions are preferred over core actions, so select the Mendix action to open the application. 
 
@@ -77,7 +77,7 @@ The following steps describe how to add test steps manually to your test case. Y
   
     ATS now uses the application URL you select in the **Run Configuration** application.
     
-5.  After opening the application, you must log in. ATS has a standard login action for logging in to a Mendix application that you must use, which is the [login](login) action. The login page of the company expenses app looks like this:
+5.  After opening the application, you must log in. ATS has a standard login action for logging in to a Mendix application that you must use, which is the [login](rg1-login) action. The login page of the company expenses app looks like this:
 
     ![](attachments/ht2-create-a-test-case/comp-app-login-page.1.png)
 
@@ -123,7 +123,7 @@ The following steps describe how to add test steps manually to your test case. Y
 
     ![](attachments/ht2-create-a-test-case/new-expense-dialog-fields.png)
 
-20. The **Amount** field is a text box widget, the **Type** field is a reference selector widget, and the **Description** field is a text area widget. ATS can interact with all these widgets using the [Set Value](set-value) action. Inside your test case, click **Setup step manually** and add the **Set Value** action. Then, select the test step with the **Set Value** action, click **Copy**, and click **Paste**.
+20. The **Amount** field is a text box widget, the **Type** field is a reference selector widget, and the **Description** field is a text area widget. ATS can interact with all these widgets using the [Set Value](rg1-set-value) action. Inside your test case, click **Setup step manually** and add the **Set Value** action. Then, select the test step with the **Set Value** action, click **Copy**, and click **Paste**.
 21. Repeat the copy and paste step of the test step with the **Set value** action. Now you have a test step for each field.
 
     ![](attachments/ht2-create-a-test-case/three-set-value-actions.png)
@@ -170,7 +170,7 @@ The following steps describe how to add test steps manually to your test case. Y
 31. The last step of your test case is to end your user session by logging out. ATS has two ways for logging out of your application:
 
     * ATS clicks the **Logout** button
-    * ATS uses the [Logout](logout) action 
+    * ATS uses the [Logout](rg1-logout) action 
     
     The Logout action is a hard logout, meaning that no matter where ATS is inside your application, it always logs out. Inside your test case, click **Setup step manually** and add the **Logout** action.
    
@@ -194,7 +194,7 @@ The following steps describe how to add test steps manually to your test case. Y
 
 ## 5 Adding Test Steps Using the ATS Recorder
 
-The following steps describe how to add test steps to your test case using the [ATS Recorder](recorder). You add the steps necessary for creating a new expense in the Company Expenses app. Create a new test case by completing [3 Creating a Test Case](#3) before starting with this section.
+The following steps describe how to add test steps to your test case using the [ATS Recorder](rg1-recorder). You add the steps necessary for creating a new expense in the Company Expenses app. Create a new test case by completing [3 Creating a Test Case](#3) before starting with this section.
 
 To add test steps using the ATS Recorder, follow these steps:
 

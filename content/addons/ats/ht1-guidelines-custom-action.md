@@ -7,8 +7,8 @@ For a details on custom actions, please see [Custom Actions](rg1-custom-actions)
  
 These are the definitions of Mendix actions and Core actions:
 
-* Mendix actions are a combination [Mendix actions](mendix-actions) and [Mendix App Store widget actions](mendix-appstore-widgets-actions)
-* Core actions are a combination of [ATS Core actions](rg1-ats-core-actions) and [Selenium actions](selenium-actions)
+* Mendix actions are a combination [Mendix actions](rg1-mendix-actions) and [Mendix App Store widget actions](rg1-mendix-appstore-widgets-actions)
+* Core actions are a combination of [ATS Core actions](rg1-ats-core-actions) and [Selenium actions](rg1-selenium-actions)
 
 {{% alert type="info" %}}
 
@@ -26,7 +26,7 @@ Always try to use a Mendix action first. This table explains why you should use 
 | Visibility checks | A Mendix action only searches for elements that are _visible_. |
 | Browser support | A Mendix action always works in the supported browser. |
 | Mendix support | A Mendix action always works on the latest version of Mendix. |
-| Waiting for background processes | A Mendix action waits untill the Mendix app is finished rendering. This aspect is also covered by the [Mendix Wait](mendix-wait) action.<br> |
+| Waiting for background processes | A Mendix action waits untill the Mendix app is finished rendering. This aspect is also covered by the [Mendix Wait](rg1-mendix-wait) action.<br> |
 
 However, there are reasons not to use the Mendix actions. For example, sometimes a custom action can get too complex using a Mendix action, because of the input parameters that are required. For example, when using a Mendix action, you have six input parameters:
 
@@ -87,9 +87,9 @@ When using core actions to trigger an event, always use a Mendix Wait action aft
 
 This is the Mendix Wait action:
 
-![](attachments/ht1-guidelines-custom-action/mendix-wait-action.png)
+![](attachments/ht1-guidelines-custom-action/rg1-mendix-wait-action.png)
 
-For more information, please see [Mendix wait](mendix-wait).
+For more information, please see [Mendix wait](rg1-mendix-wait).
 
 {{% alert type="info" %}}
 

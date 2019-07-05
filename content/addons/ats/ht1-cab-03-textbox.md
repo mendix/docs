@@ -76,7 +76,7 @@ To create the action structure, follow these steps:
 
     ![](attachments/ht1-create-unsupported-widget/ht1-cab-03-textbox/text-box-focusclearelementvalue-add.png)
 
-6.  After focusing the `input` element, enter the text. When entering text in an `input` element, use the [Send Keys](send-keys) action. Add the action, connect the input element from step 1, and give it a proper description:
+6.  After focusing the `input` element, enter the text. When entering text in an `input` element, use the [Send Keys](rg1-send-keys) action. Add the action, connect the input element from step 1, and give it a proper description:
 
     ![](attachments/ht1-create-unsupported-widget/ht1-cab-03-textbox/text-box-sendkeys-add.png)
 
@@ -84,9 +84,9 @@ To create the action structure, follow these steps:
 
     ![](attachments/ht1-create-unsupported-widget/ht1-cab-03-textbox/text-box-unfocuswebelement-add.png)
 
-8.  The last action you add is [Mendix Wait](mendix-wait). You trigger a possible event in the widget by entering text, so you need to ensure that ATS waits for all the background processes to finish:
+8.  The last action you add is [Mendix Wait](rg1-mendix-wait). You trigger a possible event in the widget by entering text, so you need to ensure that ATS waits for all the background processes to finish:
 
-    ![](attachments/ht1-create-unsupported-widget/ht1-cab-03-textbox/text-box-mendix-wait.png)
+    ![](attachments/ht1-create-unsupported-widget/ht1-cab-03-textbox/text-box-rg1-mendix-wait.png)
 
 ## 5 Action Parameters
 

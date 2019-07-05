@@ -74,7 +74,7 @@ To create the action structure, follow these steps:
 
     ![](attachments/ht1-create-unsupported-widget/ht1-cab-05-reference-selector/ref-selector-selectoptionbytext-action.png)
 
-6.  The Select Option by Text action is a core action that triggers an event. Finish your custom action with a [Mendix Wait](mendix-wait) action:
+6.  The Select Option by Text action is a core action that triggers an event. Finish your custom action with a [Mendix Wait](rg1-mendix-wait) action:
 
     ![](attachments/ht1-create-unsupported-widget/ht1-cab-05-reference-selector/ref-selector-mendixwait-action.png)
 

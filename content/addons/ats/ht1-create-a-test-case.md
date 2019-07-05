@@ -61,7 +61,7 @@ The following steps describe how to add test steps manually to your test case. Y
     ![](attachments/ht1-create-a-test-case/test-case-page-add.png)
 
     This will open the **Test Step Setup** dialog box.
-2. The first step is opening the Company Expenses app, which you do this by entering a URL in the browser. ATS does the same by using the [open application](open-application) action.
+2. The first step is opening the Company Expenses app, which you do this by entering a URL in the browser. ATS does the same by using the [open application](rg1-open-application) action.
 3. Enter a description of the test step in the **Describe Test Step** text box (for example, *Open the company expenses app*).
 4.  Search for the **Open Application** action in the **Search Action** text box. Enter terms like *Find*, *Click*, *Set*, *Assert*, and *Get* to find the right action.
 5. Select the **Open Application** action from the **Select an Action** data grid. Choose the one for Mendix applications.
@@ -83,7 +83,7 @@ The following steps describe how to add test steps manually to your test case. Y
 
     ATS now uses the application URL you selected in the **Run Configuration** application.
     
-12.  After opening the application, you must log in. ATS has a standard login action for logging in to a Mendix application that you must use, which is the [login](login) action. The login page of the company expenses app looks like this:
+12.  After opening the application, you must log in. ATS has a standard login action for logging in to a Mendix application that you must use, which is the [login](rg1-login) action. The login page of the company expenses app looks like this:
 
     ![](attachments/ht1-create-a-test-case/comp-app-login-page.png)
 
@@ -124,7 +124,7 @@ The following steps describe how to add test steps manually to your test case. Y
 
     ![](attachments/ht1-create-a-test-case/new-expense-dialog-fields.png)
 
-23. The **Amount** field is a text box widget, the **Type** field is a reference selector widget, and the **Description** field is a text area widget. ATS can interact with all these widgets using the [Set Value](set-value) action. Inside your test case, click **Add** and add the **Set Value** action. Then, select the test step with the **Set Value** action, click **Copy**, and click **Paste** two times. Now you have a test step for each field.
+23. The **Amount** field is a text box widget, the **Type** field is a reference selector widget, and the **Description** field is a text area widget. ATS can interact with all these widgets using the [Set Value](rg1-set-value) action. Inside your test case, click **Add** and add the **Set Value** action. Then, select the test step with the **Set Value** action, click **Copy**, and click **Paste** two times. Now you have a test step for each field.
 
     ![](attachments/ht1-create-a-test-case/three-set-value-actions.png)
 
@@ -171,7 +171,7 @@ The following steps describe how to add test steps manually to your test case. Y
 33. The last step of your test case is to end your user session by logging out. ATS has two ways for logging out of your application:
 
     * ATS clicks the **Logout** button
-    * ATS uses the [Logout](logout) action 
+    * ATS uses the [Logout](rg1-logout) action 
     
     The **Logout** action is a hard logout, meaning that no matter where ATS is inside your application, it always logs out. Inside your test case, click **Add** and add the **Logout** action.
    
@@ -195,7 +195,7 @@ The following steps describe how to add test steps manually to your test case. Y
 
 ## 5 Adding Test Steps Using the ATS Recorder
 
-The following steps describe how to add test steps to your test case using the [ATS Recorder](recorder). You add the steps necessary for creating a new expense in the Company Expenses app. Create a new test case by completing [3 Creating a Test Case](#3) before starting with this section.
+The following steps describe how to add test steps to your test case using the [ATS Recorder](rg1-recorder). You add the steps necessary for creating a new expense in the Company Expenses app. Create a new test case by completing [3 Creating a Test Case](#3) before starting with this section.
 
 To add test steps using the ATS Recorder, follow these steps:
 

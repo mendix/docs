@@ -137,7 +137,7 @@ In ATS there are several actions for setting an input widget. From a simple acti
 
 ### 4.1 Generic Action
 
-When you want to set an input widget the main choice is always the [_Set Value_](set-value) action. It sets the input widget using the `mx-name` of the widget and the value to set. ATS uses the **Widget Name** parameter instead of  `mx-name`.
+When you want to set an input widget the main choice is always the [_Set Value_](rg1-set-value) action. It sets the input widget using the `mx-name` of the widget and the value to set. ATS uses the **Widget Name** parameter instead of  `mx-name`.
 
 The **Widget Name** is found using the ATS helper, the value is the **Widget Name**:
 
@@ -157,25 +157,25 @@ If the generic action does not work check if there is a specific one.
 
 1. Example, you want to set the value of a checkbox widget, but you want to set it to a specific state. You cannot use the _Set Value_ action because it does not work.
 
-    The solution is to use the following search term, "Set Checkbox". ATS checks all the actions and returns those that match these words. You see there is an action called [_Set Checkbox Value_](set-checkbox-value). The _Set Checkbox Value_ action uses the `mx-name` of the widget and the boolean value you set to check or uncheck the checkbox.
+    The solution is to use the following search term, "Set Checkbox". ATS checks all the actions and returns those that match these words. You see there is an action called [_Set Checkbox Value_](rg1-set-checkbox-value). The _Set Checkbox Value_ action uses the `mx-name` of the widget and the boolean value you set to check or uncheck the checkbox.
 
     ![](attachments/bp1-finding-the-action-you-need/set-checkbox-value-action-search-1.png)
 
 2. Example, you want to set the BooleanSlider widget to certain value. You cannot use the _Set Value_ action because it does not work. 
 
-    The solution is to use the following search term, "Set BooleanSlider". ATS checks all the actions and returns those that match these words. You see there is an action called [_Set BooleanSlider Value_](set-booleanslider-value). The _Set BooleanSlider Value_ action uses the `mx-name` of the widget and the value you want to set the slider to.
+    The solution is to use the following search term, "Set BooleanSlider". ATS checks all the actions and returns those that match these words. You see there is an action called [_Set BooleanSlider Value_](rg1-set-booleanslider-value). The _Set BooleanSlider Value_ action uses the `mx-name` of the widget and the value you want to set the slider to.
 
     ![](attachments/bp1-finding-the-action-you-need/set-booleanslider-value-action-search-1.png)
 
 3. Example, you want to set the radiobutton inside a GridSelector widget. You cannot use the _Set Value_ because the radiobutton does not have its own `mx-name`. It is part of the GridSelector widget.
 
-    The solution is to use the following search term, "Set Grid Selector". ATS checks all the actions and returns those that match these words. You see there is an action called [_Set Grid Selector Value_](set-grid-selector-radiobutton-checked). The _Set Grid Selector Value_ action uses the `mx-name` of the widget, column caption and row caption to locate the radiobutton.
+    The solution is to use the following search term, "Set Grid Selector". ATS checks all the actions and returns those that match these words. You see there is an action called [_Set Grid Selector Value_](rg1-set-grid-selector-radiobutton-checked). The _Set Grid Selector Value_ action uses the `mx-name` of the widget, column caption and row caption to locate the radiobutton.
 
     ![](attachments/bp1-finding-the-action-you-need/set-grid-selector-radiobutton-action-search-1.png)
 
 4. Example, you want to set an input reference selector widget. You cannot use the _Set Value_ action because it does not work. 
 
-    The solution is to use the following search term, "Set InputReferenceSelector". ATS checks all the actions and returns those that match these words. You see there is an action called [_Set InputReferenceSelector Value_](set-inputreferenceselector-value). The _Set InputReferenceSelector Value_ action uses the `mx-name` and the value you set to set the InputReferenceSelector widget.
+    The solution is to use the following search term, "Set InputReferenceSelector". ATS checks all the actions and returns those that match these words. You see there is an action called [_Set InputReferenceSelector Value_](rg1-set-inputreferenceselector-value). The _Set InputReferenceSelector Value_ action uses the `mx-name` and the value you set to set the InputReferenceSelector widget.
 
     ![](attachments/bp1-finding-the-action-you-need/set-inputreferenceselector-value-action-search-1.png)
 
@@ -193,7 +193,7 @@ In ATS there are several actions for getting a value from a widget. The first ch
 
 ### 5.1 Generic Action
 
-When you want to get a value from a widget the main choice is always the [_Get Value_](get-value) action. It retrieves the value of a widget using the `mx-name` of the widget. ATS uses the **Widget Name** parameter instead of  `mx-name`.
+When you want to get a value from a widget the main choice is always the [Get Value](rg1-get-value) action. It retrieves the value of a widget using the `mx-name` of the widget. ATS uses the **Widget Name** parameter instead of  `mx-name`.
 
 The **Widget Name** is found using the ATS helper, the value is the **Widget Name**:
 
@@ -213,21 +213,21 @@ ATS also has a few specific actions for getting a value from an widget. To find 
 
 1. Example, you want to get the value of an Input Reference Selector widget. You cannot use the _Get Value_ action because it does not work. 
 
-    The solution is to use the following search term, "Get InputReferenceSelector". ATS checks all the actions and returns those that match these words. You see there is an action called [_ Get InputReferenceSelector_](get-inputreferenceselector-value). The _Get InputReferenceSelector_ action returns the value the InputReferenceSelector widget is set to using the `mx-name`. 
+    The solution is to use the following search term, "Get InputReferenceSelector". ATS checks all the actions and returns those that match these words. You see there is an action called [_ Get InputReferenceSelector_](rg1-get-inputreferenceselector-value). The _Get InputReferenceSelector_ action returns the value the InputReferenceSelector widget is set to using the `mx-name`. 
 
     ![](attachments/bp1-finding-the-action-you-need/get-inputreferenceselector-value-action-search-1.png)
 
 2. Example, you want to get the value displayed in the CKEditor widget. You cannot use the _Get Value_ action because it does not work.  
 
-    The solution is to use the following search term, "Get CKEditor". ATS checks all the actions and returns those that match these words. You see there is an action called [_Get CKEditor Value_](get-ckeditor-value). The  _Get CKEditor Value_ action uses the `mx-name` to return the value displayed in the CKEditor widget.
+    The solution is to use the following search term, "Get CKEditor". ATS checks all the actions and returns those that match these words. You see there is an action called [_Get CKEditor Value_](rg1-get-ckeditor-value). The  _Get CKEditor Value_ action uses the `mx-name` to return the value displayed in the CKEditor widget.
 
-    ![](attachments/bp1-finding-the-action-you-need/get-ckeditor-value-action-search-1.png)
+    ![](attachments/bp1-finding-the-action-you-need/rg1-get-ckeditor-value-action-search-1.png)
 
 3. Example, you want to get the message displayed in the dialog box widget. You cannot use the _Get Value_ action because there is no `mx-name`.
 
-    The solution is to use the following search term "Get Dialog".  ATS checks all the actions and returns those that match these words. You see there is an action called [_Get Dialog Message Text_](get-dialog-message-text). The  _Get Dialog Message Text_ action uses the dialog as a WebElement to retrieve the message text. You use the _Find/Assert Dialog_ action to get the dialog as a WebEelement.
+    The solution is to use the following search term "Get Dialog".  ATS checks all the actions and returns those that match these words. You see there is an action called [_Get Dialog Message Text_](rg1-get-dialog-message-text). The  _Get Dialog Message Text_ action uses the dialog as a WebElement to retrieve the message text. You use the _Find/Assert Dialog_ action to get the dialog as a WebEelement.
 
-    ![](attachments/bp1-finding-the-action-you-need/get-dialog-message-text-action-search-1.png)
+    ![](attachments/bp1-finding-the-action-you-need/rg1-get-dialog-message-text-action-search-1.png)
 
 ### 5.3 Summary
 
@@ -309,21 +309,21 @@ ATS also has a few specific actions for generating values to use in your test ca
 
 1.  Example, you want to have a unique value in your test case. That also makes your test case reusable. 
 
-    The solution is to use the following search term, "Random".  ATS checks all the actions and returns those that match these words. You see there is an action called [_Random String_](random-string). The _Random String_ action generates a random value and allows you to set a prefix and/or postfix.
+    The solution is to use the following search term, "Random".  ATS checks all the actions and returns those that match these words. You see there is an action called [_Random String_](rg1-random-string). The _Random String_ action generates a random value and allows you to set a prefix and/or postfix.
 
     ![](attachments/bp1-finding-the-action-you-need/random-string-action-search-1.png)
 
 2. Example, you want to have a unique number value in your test case. That also makes your test case reusable.
 
-    The solution is to use the following search term, "Random".  ATS checks all the actions and returns those that match these words. You see there is an action called [_Random Number_](random-number). The _Random Number_ action generates a random number and allows you to set a minimum and maximum.
+    The solution is to use the following search term, "Random".  ATS checks all the actions and returns those that match these words. You see there is an action called [_Random Number_](rg1-random-number). The _Random Number_ action generates a random number and allows you to set a minimum and maximum.
 
     ![](attachments/bp1-finding-the-action-you-need/random-number-action-search-1.png)
 
 3. Example, you want to use today's date in your test case. This makes your test case reusable, but you don't want to enter it every time you execute the test case.
 
-    The solution is to use the following search term, "Current Date". ATS checks all the actions and returns those that match these words. You see there is an action called [_Get Current DateTime String_](get-current-datetime-string). The _Get Current DateTime String_ action retrieves the current date and allows you to set the date format.
+    The solution is to use the following search term, "Current Date". ATS checks all the actions and returns those that match these words. You see there is an action called [_Get Current DateTime String_](rg1-get-current-datetime-string). The _Get Current DateTime String_ action retrieves the current date and allows you to set the date format.
 
-    ![](attachments/bp1-finding-the-action-you-need/get-current-datetime-string-action-search-1.png)
+    ![](attachments/bp1-finding-the-action-you-need/rg1-get-current-datetime-string-action-search-1.png)
 
 ### 7.3 Summary
 
@@ -339,7 +339,7 @@ It all comes down to following certain steps to achieve the right result.
 
      Task                             | Action |
     ----------------------------------|:------:|
-     Finding a widget                 | The [_Find/Assert Widget_](rg1-rg1-findassert-widget) action. |
+     Finding a widget                 | The [_Find/Assert Widget_](rg1-findassert-widget) action. |
      Clicking a widget                | The [_Click Widget_](rg1-click-widget) action. |
      Cover an input widget            | The [_Set Value_](rg1-set-value) action. |
      Retrieving a value from a widget | The [_Get Value_](rg1-get-value) action. |

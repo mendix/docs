@@ -141,13 +141,13 @@ You have now created an input parameter. You can add as many input parameters as
     ![](attachments/ht1-custom-action-basics/new-action-output-parameter-complete.png)
 
 6.  The **Output Parameter** requires additional steps. Go to the **Test Steps** tab and click **Add**.
-7.  Add the [Find/Assert Widget](rg1-findassert-widget) action and the [Set Return Value](set-return-value) action.
+7.  Add the [Find/Assert Widget](rg1-findassert-widget) action and the [Set Return Value](rg1-set-return-value) action.
     
     ![](attachments/ht1-custom-action-basics/output-parameter-actions.png)
 
 8.  For ATS to return the outcome of a test step as an **Output Parameter**, it needs to know what it must return. ATS returns the **Value** connected to the **Set Return Value** action. Now connect the outcome of test step 1 to the **Set Return Value** action.
     
-    ![](attachments/ht1-custom-action-basics/set-return-value-parameter.png)
+    ![](attachments/ht1-custom-action-basics/rg1-set-return-value-parameter.png)
 
     ATS now returns the outcome of test step 1.
   

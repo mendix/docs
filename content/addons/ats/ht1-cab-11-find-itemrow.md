@@ -76,7 +76,7 @@ To define the action structure, follow these steps:
 
     ![](attachments/ht1-create-search-context-actions/getitemrow-listviewitem-finditemrow.png)
 
-3.  The last step is that you must return the found list view as an output parameter. To use the output parameter, you must add the [Set Return Value](set-return-value) action and connect the output of test step 2. This action does not need any descriptions. The Set Return Value action gives the connected input to the output parameter as a WebElement, because the item/row is a WebElement:
+3.  The last step is that you must return the found list view as an output parameter. To use the output parameter, you must add the [Set Return Value](rg1-set-return-value) action and connect the output of test step 2. This action does not need any descriptions. The Set Return Value action gives the connected input to the output parameter as a WebElement, because the item/row is a WebElement:
 
     ![](attachments/ht1-create-search-context-actions/getitemrow-listviewitem-setreturnvalue.png)
 

@@ -78,4 +78,4 @@ The SCRUM Master of your app can access the **App Settings** from the profile me
 
 All other roles in your app have access to ATS. The only difference is that the SCRUM Master can access the **App Settings** of your app.
 
-For more information, see the [ATS 2 Reference Guide](../refguide/rg-version-2/rg-version-2).
+For more information, see the [ATS 2 Reference Guide](rg2).

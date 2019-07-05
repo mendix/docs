@@ -1,6 +1,6 @@
 ---
 title: "Browser Recorder Results"
-parent: "recorder"
+parent: "rg1-recorder"
 ---
 
 ## 1 Introduction

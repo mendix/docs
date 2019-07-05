@@ -1,5 +1,5 @@
 ---
-title: "SAP Logger Connector"
+title: "SAP Logging Connector"
 category: "SAP"
 menu_order: 48
 description: "The connector which formats logs for the Kibana dashboard"
@@ -8,7 +8,7 @@ tags: ["SAP", "Kibana", "Log", "json"]
 
 ## 1 Introduction
 
-The SAP Logger Connector allows a Mendix app to output logs in a format supported by the Kibana dashboard provided by the _SAP Cloud Platform Application Logging_ service. Without this connector, logs sent to Kibana will not have the correct structure and log level.
+The SAP Logging Connector allows a Mendix app to output logs in a format supported by the Kibana dashboard provided by the _SAP Cloud Platform Application Logging_ service. Without this connector, logs sent to Kibana will not have the correct structure and log level.
 
 By using this connector, logs will be output in a JSON format with the following fields:
 
@@ -20,17 +20,17 @@ By using this connector, logs will be output in a JSON format with the following
 
 In addition, the Connector supports multiline log messages.
 
-## 2 Getting the SAP Logger Connector
+## 2 Getting the SAP Logging Connector
 
-To use the SAP Logger Connector, you need to import it into your app from the App Store. For more information on importing modules from the App Store, see [Use App Store Content](/developerportal/app-store/app-store-content).
+To use the SAP Logging Connector, you need to import it into your app from the App Store. For more information on importing modules from the App Store, see [Use App Store Content](/developerportal/app-store/app-store-content).
 
-The SAP Logger Connector is available here: [https://appstore.home.mendix.com/link/app/110219/](https://appstore.home.mendix.com/link/app/110219/).
+The SAP Logging Connector is available here: [https://appstore.home.mendix.com/link/app/110219/](https://appstore.home.mendix.com/link/app/110219/).
 
 ## 3 Using the Connector
 
-To format all the log messages, the SAP Logger Connector needs to be initialized during the startup of the Mendix application<sup><small>[1]</small></sup>.
+To format all the log messages, the SAP Logging Connector needs to be initialized during the startup of the Mendix application<sup><small>[1]</small></sup>.
 
-To initialize the logger, do the following:
+To initialize the connector, do the following:
 
 1. Open **Project … > Settings** in the **Project Explorer**:
 
@@ -47,16 +47,20 @@ To initialize the logger, do the following:
 
 4. Drag and drop the **RegisterSubscriber** action at the end of the *After startup* microflow:
 
-    ![Drag logger subscriber into After startup microflow](attachments/sap-logger/logger_drag_component.png)
+    ![Drag logging subscriber into After startup microflow](attachments/sap-logger/logger_drag_component.png)
 
-5. Double-click the **RegisterSubscriber** action and select the minimum **Log level** which you want to send to the *SAP Cloud Platform Application Logging* service:
+5. Double-click the **RegisterSubscriber** action make sure that **Log level** is set to the constant *SapLogLevel*:
 
-    ![Select log level](attachments/sap-logger/logger_edit_action.png)
+    ![log level is set to SapLogLevel](attachments/sap-logger/logger_edit_action.png)
+	
+6. Edit the constant **SapLogLevel** to select the minimum log level which you want to send to the *SAP Cloud Platform Application Logging service*. The supported log levels (case-insensitive) are `Debug`, `Trace`, `Info`, `Warning`, `Error`, and `Critical`.
 
+    ![SapLogLevel is set to Info](attachments/sap-logger/edit_log_level_constant.png)
+ 
 Now, when the application is started, it will produce logs in the JSON format supported by Kibana.
 
 ## 4 Notes
 
-* Due to technical limitations, the **SAP Logger Connector** is activated with a 5 second delay. This means that logging configuration is updated after the *RegisterSubscriber* action is completed.
+* Due to technical limitations, the **SAP Logging Connector** is activated with a 5 second delay. This means that logging configuration is updated after the *RegisterSubscriber* action is completed.
 * The *RegisterSubscriber* action checks to see if the Mendix application is running in an SAP environment with the *SAP Cloud Platform Application Logging* service. If the *SAP Cloud Platform Application Logging* service cannot be found, *RegisterSubscriber* assumes that the app is running locally and doesn't change the logging configuration.
 * When log messages are generated rapidly, it is possible that Kibana will display them in the wrong order. The `written_at` field can be used to sort the log messages.

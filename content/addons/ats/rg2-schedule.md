@@ -7,7 +7,7 @@ parent: "rg2"
 
 Scheduling allows you to plan the execution of test cases and test suites at defined dates. You can also choose to send alerts when a scheduled run is done.
 
-![](attachments/schedule/schedules_tab_with_alerting.png)
+![](attachments/rg2-schedule/schedules_tab_with_alerting.png)
 
 If you want to edit the schedule, click the pencil icon to the right of the schedule. Clicking the "X" icon will delete the schedule. To activate/deactivate a schedule, click the box in front of the schedule.
 
@@ -37,7 +37,7 @@ This option is only available for supported Selenium hubs.
 
 If you have selected a Selenium hub from a supported Selenium hub provider (SauceLabs, or Browserstack), you will get access to the platform settings. Here you can set the operating system on which the test case will be run.
 
-For more information on the different supported operating systems, see [Supported Selenium Hub Providers](supported-selenium-hub-provider).
+For more information on the different supported operating systems, see [Supported Selenium Hub Providers](rg2-supported-selenium-hub-provider).
 
 ## 4 Resolution
 
@@ -45,7 +45,7 @@ For more information on the different supported operating systems, see [Supporte
 This option is only available for supported Selenium hubs.
 {{% /alert %}}
 
-With this option, you can specify the screen resolution for your test run. A list of all the supported screen resolutions can be found in [Supported Selenium Hub Providers](supported-selenium-hub-provider).
+With this option, you can specify the screen resolution for your test run. A list of all the supported screen resolutions can be found in [Supported Selenium Hub Providers](rg2-supported-selenium-hub-provider).
 
 ## 5 Alerts
 

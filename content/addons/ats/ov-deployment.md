@@ -147,7 +147,7 @@ Selenium SaaS providers in general provide the following three solutions:
 
 To test your application for desktops and mobile, you need **automated browser testing**.
 
-ATS has two supported Selenium providers (for details, see [Supported Selenium Providers](supported-selenium-hub-provider)). The solutions of these providers are discussed in the next sections.
+ATS has two supported Selenium providers (for details, see [Supported Selenium Providers](rg2-supported-selenium-hub-provider)). The solutions of these providers are discussed in the next sections.
 
 ### 5.2 Browserstack Solutions/Products
 

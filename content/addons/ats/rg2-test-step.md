@@ -7,11 +7,11 @@ parent: "rg2"
 
 Test steps are the heart and soul of a test case. They describe a sequence of [actions](rg2-action) that ATS performs during the execution of a test case.
 
-When you create a new test case, it is empty by default. You must add test steps to it. For more information on how to add a test step to a test case, see [Test Case](test-case).
+When you create a new test case, it is empty by default. You must add test steps to it. For more information on how to add a test step to a test case, see [Test Case](rg2-test-case).
 
 To see the details of a test step, click the name of the test step. The details will open below the test step.
 
-![](attachments/test/test-step-details.png)
+![](attachments/rg2-test/test-step-details.png)
 
 ## 2 Description
 
@@ -19,7 +19,7 @@ Every test step has a description box, where you give your test step a clear des
 
 By default, the name of the test step is the name of the action used in it. But if you set a description, it replaces the test step name. With this, you describe your test scenario step by step. Now you don't have to write an extra description.
 
-If you record your test steps, ATS enters a description automatically. For more information about recording test steps, see [Recorder](recorder).
+If you record your test steps, ATS enters a description automatically. For more information about recording test steps, see [Recorder](rg2-recorder).
 
 ## 3 Call Types
 
@@ -61,7 +61,7 @@ Parameters of the Number type only allow digits as inputs.
 
 Another way of setting the parameter value is to use the **Edit Input Value** dialog box. To open the dialog box, click this icon:
 
-![](attachments/test/input-value-dialog.png)
+![](attachments/rg2-test/input-value-dialog.png)
 
 This dialog box shows you all the available input values for the parameter.
 

@@ -5,11 +5,11 @@ parent: "rg2"
 
 ## 1 Introduction
 
-The repository is the heart of ATS, as it allows you to create and manage folders, test suites, test cases, drop-down menus, and actions. You can also create test data for data-driven testing. For more information on how to use data-driven testing in ATS, see [Test Data](test-data).
+The repository is the heart of ATS, as it allows you to create and manage folders, test suites, test cases, drop-down menus, and actions. You can also create test data for data-driven testing. For more information on how to use data-driven testing in ATS, see [Test Data](rg2-test-data).
 
 You can access the repository by clicking **Test Cases** in the navigation menu.
 
-![](attachments/repository/repository.png)
+![](attachments/rg2-repository/repository.png)
 
 You search for a specific item by using the search bar in the repository. ATS searches for the desired item in the current folder and all sub-folders. So, if you start searching ATS, only searches inside your current folder and its sub-folders.
 
@@ -19,33 +19,33 @@ With the type icons on the left side of the item name, you can identify at a gla
 
 *  This is a folder:
 
-    ![](attachments/repository/folder-icon.png)
+    ![](attachments/rg2-repository/folder-icon.png)
 
 *  This is a test case:
 
-    ![](attachments/repository/test-case-icon.png)
+    ![](attachments/rg2-repository/test-case-icon.png)
 
 *  This is test suite:
 
-    ![](attachments/repository/test-suite-icon.png)
+    ![](attachments/rg2-repository/test-suite-icon.png)
 
 *  This is a action:
 
-    ![](attachments/repository/action-icon.png)
+    ![](attachments/rg2-repository/action-icon.png)
 
 If you want to cut, copy, or delete an item in the repository, you can do so by marking it with the check-box. After that, the actions become available.
 
-![](attachments/repository/repository-actions.png)
+![](attachments/rg2-repository/repository-actions.png)
 
 ## 2 Actions
 
 In the repository, you use the **Actions** drop-down menu to perform the following actions:
 
 * Create a **New Folder**
-* Create a **New Test Case** (for details on creating a test case, see [Test Case](test-case))
-* Create a **New Test Suite** (for detailson creating a test suite, see [Test Suite](test-suite))
+* Create a **New Test Case** (for details on creating a test case, see [Test Case](rg2-test-case))
+* Create a **New Test Suite** (for detailson creating a test suite, see [Test Suite](rg2-test-suite))
 * Create a **New Action** (for details on creating an action, see [Action](rg2-action))
-* Create a **New Drop-Down** (for details on creating a drop-down menu, see [Drop-Down](drop-down))
+* Create a **New Drop-Down** (for details on creating a drop-down menu, see [Drop-Down](rg2-drop-down))
 * **Import** items into the repository
 
 ATS stores all created items in the repository.

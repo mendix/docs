@@ -7,39 +7,39 @@ parent: "rg2"
 
 Under **Results**, you find all the running and executed tests from your app. The tests are sorted based on the finishing date.
 
-![](attachments/results/test-runs.png)
+![](attachments/rg2-results/test-runs.png)
 
 The first column shows the status of a test. If the test is done, a warning and/or a canceled flag can be shown. The following list explains all the different icons:
 
 *  Queued – the test is waiting for a free running slot on the Selenium hub:
 
-    ![](attachments/icons/queued.png)
+    ![](attachments/rg2-icons/queued.png)
 
 *  Running – the test is currently running:
 
-    ![](attachments/icons/running.gif)
+    ![](attachments/rg2-icons/running.gif)
     
 *  Warning – the test is passed but may require your attention.
 
-    ![](attachments/test-run/warning-flag.png)
+    ![](attachments/rg2-test-run/warning-flag.png)
     
 *  Canceled – the test was canceled before it could be completed.
 
-    ![](attachments/test-run/canceled-flag.PNG)
+    ![](attachments/rg2-test-run/canceled-flag.PNG)
     
 The second column shows the type of the test. The following list explains all the different icons:
 
 *  Test case:
 
-    ![Test Case](attachments/project/test-case-icon.png)
+    ![Test Case](attachments/rg2-project/test-case-icon.png)
 
 *  Test suite:
 
-    ![Test Suite](attachments/project/test-suite-icon.png) 
+    ![Test Suite](attachments/rg2-project/test-suite-icon.png) 
 
 *  Data-driven instance:
 
-    ![Datadriven Test Case](attachments/project/ddt-icon.png)
+    ![Datadriven Test Case](attachments/rg2-project/ddt-icon.png)
 
 The duration column is formatted as followed: `HH:MM:SS`.
 
@@ -84,17 +84,17 @@ Under **Test steps**, you will find the result, start time, and the duration of 
 
 Drill down deeper into the log by clicking the name of the test step. You can always go back to a parent step by clicking its name in the breadcrumbs:
 
-![](attachments/test-run/result-log.png)
+![](attachments/rg2-test-run/result-log.png)
 
 The following results can be assigned to a test step:
 
-![](attachments/results/passed-icon.png)  Passed – the test has passed
+![](attachments/rg2-results/passed-icon.png)  Passed – the test has passed
 
-![](attachments/results/failed-icon.png)  Failed – the test has failed
+![](attachments/rg2-results/failed-icon.png)  Failed – the test has failed
 
-![](attachments/results/not-executed-icon.png)  Not Executed – the test was not executed; this happens if a test step has not met the set precondition
+![](attachments/rg2-results/not-executed-icon.png)  Not Executed – the test was not executed; this happens if a test step has not met the set precondition
 
-![](attachments/results/mixed-icon.png)  Different Results - some of the containing tests passed, some failed and some where not executed
+![](attachments/rg2-results/mixed-icon.png)  Different Results - some of the containing tests passed, some failed and some where not executed
 
 ### 2.3 Actions
 
@@ -108,20 +108,20 @@ On the top-right of the screen, you will find the **Edit** and **Run** buttons:
 
 The **Run Configuration** tab shows the configuration with which the test was executed. It shows the name of the environment, the Selenium hub, and the icon of the browser.
 
-![](attachments/results/result-log-run-config.png)
+![](attachments/rg2-results/result-log-run-config.png)
 
 
 ### 2.5 Error Log
 
 The **Error Log** shows detailed information about a failed test step.
 
-![](attachments/results/result-log-error-log.png)
+![](attachments/rg2-results/result-log-error-log.png)
 
 ### 2.5 Screenshots
 
 All the screenshots ATS takes during the test run are available under **Screenshots**. Screenshots are only taken if a test step fails.
 
-![](attachments/results/result-log-screenshots.png)
+![](attachments/rg2-results/result-log-screenshots.png)
 
 
 ### 2.6 Recording

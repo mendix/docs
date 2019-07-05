@@ -5,7 +5,7 @@ parent: "rg2"
 
 ## 1 Introduction
 
-A test case is a set of [test steps](test-step) that exercise a particular program path or verify compliance with a specific need. The point of running the test is to check if your app is fully functional. For example, whether a user can perform a certain task in your app or not.
+A test case is a set of [test steps](rg2-test-step) that exercise a particular program path or verify compliance with a specific need. The point of running the test is to check if your app is fully functional. For example, whether a user can perform a certain task in your app or not.
 
 In ATS, you create a new test case by clicking **New Test Case** in the **Actions** drop-down menu in the repository.
 
@@ -13,11 +13,11 @@ A dialog box opens where you give your test case a name and an optional descript
 
 ## 2 Test Case Details
 
-![](attachments/test/testcase-details.png)
+![](attachments/rg2-test/testcase-details.png)
 
 {{% alert type="info" %}}
 
-Please note that there is an additional switch for **paralell**/**sequential**. This switch is only available for [data driven test cases](test-data).
+Please note that there is an additional switch for **paralell**/**sequential**. This switch is only available for [data driven test cases](rg2-test-data).
 
 {{% /alert %}}
 
@@ -36,24 +36,24 @@ In the top right corner of the screen, you will find the **Export** and **Run** 
 
 | Name                   | Description                              |
 | ---------------------- | ---------------------------------------- |
-| Run                    | If the test case has been executed before, it runs with the configuration of the previous run. Otherwise, the [Run Configuration](test-run) page will open. |
-| Edit Run Configuration | Opens the [Run Configuration](test-run) page. |
+| Run                    | If the test case has been executed before, it runs with the configuration of the previous run. Otherwise, the [Run Configuration](rg2-test-run) page will open. |
+| Edit Run Configuration | Opens the [Run Configuration](rg2-test-run) page. |
 
 ## 3 Test Steps
 
 Test steps describe the actions that the test case performs. You can add new test steps by searching an action in the **Add step** box. For a more detailed search, use the **Test Step Setup** dialog box by clicking this button:
 
-![](attachments/test/search-button.png)
+![](attachments/rg2-test/search-button.png)
 
 A dialog box will open where you can search for a specific action or you explore all the available actions inside ATS and your current project:
 
-![](attachments/test/select-function-action.png).
+![](attachments/rg2-test/select-function-action.png).
 
 After you have found the desired action, add it to your test case as a test step by selecting it and clicking **Select**.
 
-Another way of adding test steps to a test case is to use the recorder by clicking **Record step**. For more information, see [Recorder](recorder).
+Another way of adding test steps to a test case is to use the recorder by clicking **Record step**. For more information, see [Recorder](rg2-recorder).
 
-The details of a test step open by clicking the test step. For more information, see [Test Step](test-step).
+The details of a test step open by clicking the test step. For more information, see [Test Step](rg2-test-step).
 
 To add a new step above or below an existing test step, click **Add above** or **Add below**, or click on the red record icon, to add a new step by using the recorder. These buttons appear if you hover over an existing test step.
 
@@ -73,14 +73,14 @@ Test steps have three different call types: setup, regular, and teardown. ATS ma
 
 | Icon                                     | Meaning  |
 | ---------------------------------------- | -------- |
-| ![](attachments/test/setting-gears-2.png) | Setup    |
-| ![](attachments/test/hammer-2.png)       | Teardown |
+| ![](attachments/rg2-test/setting-gears-2.png) | Setup    |
+| ![](attachments/rg2-test/hammer-2.png)       | Teardown |
 
-For more information about the call types of test steps, see [Test Step](test-step).
+For more information about the call types of test steps, see [Test Step](rg2-test-step).
 
 ## 4 Test Data
 
-Under the **Test Data** tab, you can set a master dataset for your test case. You can now link the fields of the master dataset to your test steps. Note that the test case runs a separate session for every record in the master dataset. For more information on how to use datasets in your test cases, see [Data Driven Testing](test-data).
+Under the **Test Data** tab, you can set a master dataset for your test case. You can now link the fields of the master dataset to your test steps. Note that the test case runs a separate session for every record in the master dataset. For more information on how to use datasets in your test cases, see [Data Driven Testing](rg2-test-data).
 
 ## 5 Show Usages
 

@@ -91,7 +91,7 @@ To add content to the App Store, follow these steps:
 	* **Promote** – a way to advertise a component or solution while not making it downloadable – if you select this option, continue to [step #4](#four) below
 
 	{{% alert type="warning" %}}You can only set this in the initial version of your content. You cannot change this setting by updating the App Store item later.
-	{{% /alert %}
+	{{% /alert %}}
 
 3.  <a name="three"></a>When adding Studio Pro content, select **your content source**:
 

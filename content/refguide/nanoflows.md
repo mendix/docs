@@ -186,7 +186,8 @@ When an error occurs in a nanoflow, all the changes that have been made to objec
 
 ### 7.1 Error Handlers
 
-An error handler can be set on an activity. Setting error handlers on gateways and loops aren't supported. On an activity it gives you two options:
+Setting error handlers are currently supported on all nanoflow elements except for gateways and loops. Those will be supported later.
+There are 2 available options:
 
 *  Abort (default)
 *  Custom without rollback

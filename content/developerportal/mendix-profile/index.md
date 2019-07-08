@@ -333,4 +333,4 @@ Mendix has been tracking these data changes since November, 2018.
 
 ## 11 Main Document in This Category
 
-* [OAuth & Scopes](oauth-scopes)
+* [OAuth & Scopes](oauth-scopes) – provides introductory information on how OAuth and scopes work as well as details on scopes generated in the Developer Portal

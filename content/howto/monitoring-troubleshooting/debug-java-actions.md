@@ -1,7 +1,7 @@
 ---
 title: "Debug Java Actions"
 category: "Monitoring & Troubleshooting"
-menu_order: 6
+menu_order: 4
 tags: ["monitoring", "troubleshooting", "debug", "java action"]
 ---
 

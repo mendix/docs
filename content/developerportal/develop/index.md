@@ -10,6 +10,6 @@ As you work with your [App Team](../collaborate/team) to develop your app projec
 
 ## 2 Documents in This Category
 
-* [App Modeling Environments](modeling-environments)
-* [Team Server Overview](team-server)
-* [Plan App Development](planning-development)
+* [App Modeling Environments](modeling-environments) – 
+* [Team Server Overview](team-server) – 
+* [Plan App Development](planning-development) – 

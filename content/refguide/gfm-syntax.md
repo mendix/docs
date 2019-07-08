@@ -15,3 +15,4 @@ This is especially useful in case you want to include JSON example payload in yo
 ![](attachments/gfm-syntax/snippet.png)
 
 For more information, see the [GitHub Guide to Mastering Markdown](https://guides.github.com/features/mastering-markdown/#GitHub-flavored-Markdown).
+

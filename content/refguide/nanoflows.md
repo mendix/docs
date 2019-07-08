@@ -182,7 +182,24 @@ In the example below, the parameter **AccountPasswordData** is highlighted becau
 
 ## 7 Errors
 
-When an error occurs in a nanoflow, all the changes that have been made to objects are not rolled back and the nanoflow is aborted. Nanoflow actions do not support error handlers.
+When an error occurs in a nanoflow, the changes that were made to objects are not rolled back and the nanoflow is aborted. Optionally, you can handle errors in the nanoflow itself by configuring an error handler. You can inspect the details of the error by looking at the `$latestError` predefined variable.
+
+### 7.1 Error Handlers
+
+Error handlers are supported on all nanoflow elements except for gateways and loops. There are two error handler options:
+
+*  **Abort** (which is the default)
+*  **Custom without rollback**
+
+With the **Custom without rollback** option, you can draw an additional flow from the block and then mark this flow as the error handler flow. The **Custom without rollback** option does not roll back the objects. After you select a flow as the error handler it will appear this way:
+
+![selected error handler](attachments/819203/918248.png)
+
+### 7.2 Error Inspection
+
+In a custom error handler executed after an error occurs, the `$latestError` variable is set to the message of the error information. The `$latestError` variable type is `String`, unlike in [microflows](microflows) where errors' type is the `System.Error` entity.
+ 
+The `$latestSoapFault` variable is not available in nanoflows.
 
 ## 8 Nanoflow Debugging
 

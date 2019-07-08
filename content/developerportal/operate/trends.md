@@ -188,6 +188,8 @@ The queries are broken down into queries that actually modify data (insert, upda
 
 This database size graph shows the distribution between disk space used for storing indexes and actual data. Remember, indexes actually occupy memory space and disk storage, as they're just parts of your data copied and stored, sorted in another way! Besides your data, indexes also have to be read into system memory to be able to use them.
 
+![](attachments/trends/db-table-vs-index.png)
+
 ### <a name="Trends-appmxruntimepgstattuples"></a>5.3 Number of Database Tuple Mutations
 
 This graph shows the number of database objects that were actually changed by database queries from the application.
@@ -200,13 +202,19 @@ A single database operation that affects more than one object, will show up as s
 
 The database connections graph shows the number of connections to the PostgreSQL server. This should go up and down with the usage of the application. The number of connections is limited to 50.
 
+![](attachments/trends/no-db-connections.png)
+
 ### <a name="Trends-dbmemory"></a>5.5 Database Node Operating System Memory
 
 The memory graph shows the distribution of operating system memory that is available for this server. The most important part of this graph is the 'cache' section. This type of memory usage contains parts of the database storage that have been read from disk earlier. It is crucial to the performance of an application that parts of the database data and indexes that are referenced a lot are always immediately available in the working memory of the server, at the cache part. A lack of disk cache on a busy application will result in continuous re-reads of data from disk, which takes several orders of magnitude more time, slowing down the entire application.
 
+![](attachments/trends/db-os-memory.png)
+
 ### <a name="Trends-dbcpu"></a>5.6 Database Node CPU Usage
 
 The CPU graph shows the amount of CPU utilization in percentage, broken down into different types of CPU usage.
+
+![](attachments/trends/db-cpu-usage.png)
 
 The most important values in here are: 'user', which shows the amount of CPU time used for running database queries, and 'iowait', showing the amount of time a CPU core is idle and waiting for disk operations to finish (for example, waiting for information that has to be read from disk, or waiting for a synchronous write operation to finish).
 
@@ -216,13 +224,19 @@ Clearly visible amounts of iowait, in combination with a high number of disk rea
 
 Disk throughput shows the amount of data that is being read from and written to disk. If there's more than one disk partition in the system, the /srv partition generally contains project files and uploaded files of the application, while /var generally holds the database storage.
 
+![](attachments/trends/db-disk-throughput.png)
+
 ### <a name="Trends-dbdfabs"></a><a name="Trends-dbdf"></a>5.8 Database Node Disk Usage (in Bytes)
 
 This graph displays the amount of data that is stored on disk in absolute amounts. If there's more than one disk partition in the system, the /srv partition generally holds project files and uploaded files of the application, while /var generally holds the database storage.
 
+![](attachments/trends/db-disk-usage-bytes.png)
+
 ### <a name="Trends-dbdiskstatsutilization"></a>5.9 Database Node Disk Utilization in Percentage (%)
 
 Disk utilization shows the percentage of time that the disk storage is busy processing requests. This graph should be interpreted in combination with other graphs, like CPU iowait, disk iops, and number of running requests. For example, a combination of a moderate number of IO operations, low amount of disk throughput, visible cpu iowait, filled up memory disk cache, and reports of long running database queries in the application log could point to a shortage of system memory for disk cache that leads to repeated random reads from disk storage.
+
+![](attachments/trends/db-disk-usage-pct.png)
 
 {{% alert type="info" %}}
 
@@ -234,17 +248,25 @@ Disk utilization is calculated as the disk usage that is used by the user of the
 
 The Disk IO statistics show the number of disk read and write operations that are done from and to the disk storage. It does not show the amount of data that was transferred.
 
+![](attachments/trends/db-disk-ios.png)
+
 ### <a name="Trends-dbload"></a>5.11 Database Node Load
 
 This value is commonly used as a general indication for overall server load that can be monitored and alerted upon. The load value is a composite value, calculated from a range of other measurements, as shown in the other graphs on this page. When actually investigating high server load, this graph alone is not sufficient.
+
+![](attachments/trends/db-load)
 
 ### <a name="Trends-dbdiskstatslatency"></a>5.12 Database Node Disk Latency
 
 The disk latency graph shows the average waiting times for disk operations to complete. Interpreting the values in this graph should be done in combination with the other disk stats graphs, and while having insight in the type of requests that done. Sequential or random reads and writes can create a different burden for disk storage.
 
+![](attachments/trends/db-disk-latency.png)
+
 ### <a name="Trends-dbdiskstatsutilization"></a>5.13 Database Node Disk Utilization
 
 Disk utilization shows the percentage of time that the disk storage is busy processing requests. This graph should be interpreted in combination with other graphs, like CPU iowait, disk iops, and number of running requests. For example, a combination of a moderate number of IO operations, low amount of disk throughput, visible cpu iowait, filled up memory disk cache, and reports of long running database queries in the application log could point to a shortage of system memory for disk cache that leads to repeated random reads from disk storage.
+
+![](attachments/trends/db-disk-utilization.png)
 
 {{% alert type="info" %}}
 

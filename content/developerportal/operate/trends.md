@@ -8,6 +8,8 @@ tags: ["Trends","v3","Mendix Cloud","Developer Portal"]
 #Please do not rename the anchors in this document as they are used in links from the Developer Portal
 ---
 
+{{% todo %}}[CHECK SECTIONS MARKED ???????????????]{{% /todo %}}
+
 ## 1 Introduction
 
 To track the usage growth of your app and to debug performance problems, the Mendix Cloud includes detailed graphs on both infrastructure and application level. These graphs show various performance trends of all your apps in the paid editions of the Mendix Platform. In case you experience issues with your app, always check the **Alerts** and **Trends** in the **Developer Portal** under **Operate**.
@@ -56,19 +58,28 @@ The requests graph shows the number of requests that are sent from the client or
 The number of requests per second is split up by request handlers.
 
 * **/** should not list any requests, because static content is directly served to the user by the front-facing web server, which is placed between the user and this application process
+* **api-doc/** ?????????????
+* **rest-doc/** ????????????
 * **ws/** shows the number of web service calls that were done
+* **p/** ??????????????
 * **xas/** lists general queries for data in data grids, sending changes to the server and triggering the execution of microflows
 * **file** shows the number of file uploads and downloads
+* **odata-doc/** ????????????
+* **openid/** ???????????
 
 ### <a name="Trends-appmxruntimecache"></a>4.2 Object Cache
 
-Non-Persistable Entities live in the JVM memory and are garbage collected regularly. If you have a memory leak, the number of objects in memory will grow over time. This might be a problem. In this graph you can monitor the number of Mendix Objects that live in memory.
+In this graph you can monitor the number of Mendix Objects that live in memory.
 
 ![](attachments/trends/object-cache.png)
+
+Non-Persistable Entities live in the JVM memory and are garbage collected regularly. If you have a memory leak, the number of objects in memory will grow over time. This might be a problem. 
 
 ### <a name="Trends-appmxruntimesessions"></a>4.3 User Accounts and Login Sessions
 
 The sessions graph shows the number of logged-in named and anonymous user sessions for your application, next to the total number of existing login accounts in the application.
+
+{{% todo %}}[Which value is which?]{{% /todo %}}
 
 ![](attachments/trends/user-accounts-logins.png)
 
@@ -78,39 +89,50 @@ The JVM Object Heap graphs shows the internal distribution of allocated memory i
 
 ![](attachments/trends/jvm-heap.png)
 
-One of the most important things to know in order to be able to interpret the values in this graph, is the fact that the JVM does not immediately clean up objects that are no longer in use. This graph will show unused memory as still in use until the so-called garbage collector, which analyzes the memory to free up space, is run. So, this graph does not show how much of the JVM memory that is in use before a garbage collection will have to stay allocated after the garbage collection cycle, because the garbage collection process will only find out about that when it's actually running.
+One of the most important things to know in order to be able to interpret the values in this graph, is the fact that the JVM does not immediately clean up objects that are no longer in use. This graph will show unused memory as still in use until the so-called garbage collector, which analyzes the memory to free up space, is run. So, this graph does not show how much of the JVM memory that is in use before a garbage collection will have to stay allocated after the garbage collection cycle, because the garbage collection process will only find out about that when it is actually running.
 
-If the tenured generation shows up to as big as 65% of the complete heap size, this might as well change to 0% when a garbage collection is triggered as soon as the percentage reaches two thirds of the total heap size, but it could also stay at this amount if all data in this memory part is still referenced by running actions in the application. This behavior causes the JVM heap memory graphs to be one of the most difficult to base conclusions on.
+For example, if the **tenured generation** is shown as 65% of the complete heap size, this might as well change to 0% when a garbage collection is triggered when the percentage reaches two thirds of the total heap size. However, it could stay at this amount if all data in this memory part is still referenced by running actions in the application. This behavior means that the JVM heap memory graphs are the most difficult to base conclusions on.
 
 ### <a name="Trends-appmxruntimejvmprocessmemory"></a>4.5 JVM Process Memory Usage
 
-This second graph about JVM memory is similar to the previous graph, JVM Object Heap. It shows a more complete view of the actual size and composition of the operating system memory that is in use by the JVM process. This graph is currently primarily present to provide more insight in situations in which the part of the real used memory outside the JVM Object Heap is growing too much, causing problems with memory shortage in the operating system.
+This second graph of JVM memory is similar to the previous graph, JVM Object Heap. It shows a more complete view of the actual size and composition of the operating system memory that is in use by the JVM process.
 
 ![](attachments/trends/jvm-process-memory.png)
 
-More information on this graph is available in a Tech Blog post: [What's in my JVM memory?](https://tech.mendix.com/linux/2015/01/14/whats-in-my-jvm-memory/)
+ This graph is primarily present to provide more insight in situations where the part of the real used memory *outside* the JVM Object Heap is growing too much, causing problems with memory shortage in the operating system.
+ 
+ More information on this graph is available in a Tech Blog post: [What's in my JVM memory?](https://tech.mendix.com/linux/2015/01/14/whats-in-my-jvm-memory/)
 
 ### <a name="Trends-appmemory"></a>4.6 Application Node Operating System Memory
 
-The memory graph shows the distribution of operating system memory that is available for this server. The most important part of the graph is the application process, which is visible as an amount of memory that is continuously in use, labelled in the category 'apps'.
+The memory graph shows the distribution of operating system memory that is available for this server.
 
 ![](attachments/trends/node-os-memory.png)
 
+The most important part of the graph is the application process, which is visible as an amount of memory that is continuously in use, labelled in the category 'apps'.
+
 ### <a name="Trends-appm2eeserverthreadpool"></a>4.7 Threadpool for Handling External Requests
 
-The application server thread pool graph shows the number of concurrent requests that are being handled by the Mendix Runtime, but only when they're initiated by a remote API, like the way the normal web-based client communicates, or by calling web services. Because creating a new thread that can concurrently process a request is an expensive operation, there's a pool of threads being held that can quickly start processing new incoming requests. This pool automatically grows and shrinks according to the number of requests that are flowing through the application.
+The application server thread pool graph shows the number of concurrent requests that are being handled by the Mendix Runtime, The requests are counted in two circumstances:
+
+* they are initiated by a remote API – the way the normal web-based client communicates
+* they are initiated by calling web services
 
 ![](attachments/trends/threadpool-external-reqs.png)
 
+Because creating a new thread that can concurrently process a request is an expensive operation, there's a pool of threads being held that can quickly start processing new incoming requests. This pool automatically grows and shrinks according to the number of requests that are flowing through the application.
+
 ### <a name="Trends-appmxruntimethreads"></a>4.8 Total Number of Threads in the JVM Process
 
-This graph shows the total number of threads that exist inside the running JVM process. Besides the threadpool that is used for external HTTP requests, as shown above, this includes the threadpool used for database connections, internal processes inside the Mendix Runtime, and optional extra threads created by the application itself, for example, using a threadpool in a custom module or custom Java code.
+This graph shows the **total number of threads** that exist inside the running JVM process.
 
 ![](attachments/trends/jvm-thread-count.png)
 
+Besides the threadpool that is used for external HTTP requests, as shown above, this includes the threadpool used for database connections, internal processes inside the Mendix Runtime, and optional extra threads created by the application itself, for example, using a threadpool in a custom module or custom Java code.
+
 ### <a name="Trends-appcpu"></a>4.9 Application Node CPU Usage
 
-The CPU graph shows the amount of CPU utilization in percentage, broken down into different types of CPU usage.
+The CPU graph shows the CPU utilization in percentage, broken down into different types of CPU usage.
 
 ![](attachments/trends/app-cpu.png)
 

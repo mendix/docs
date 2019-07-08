@@ -2245,13 +2245,16 @@ module.exports = {
       from: "/addons/APM",
       to: "/addons/apm/"
     },
+	  from: "/apm/installation-guide",
+	  to: "/addons/apm/ig2-installation"
+	},
+	{
+      from: "/apm/reference-guide/rg-2/reference-guide-2",
+      to: "/addons/apm/rg2"
+    },
 	{
       from: "/aqm/",
       to: "/addons/aqm/"
-    },
-	{
-      from: "/apm/reference-guide/rg-2/reference-guide-2",
-      to: "/addons/apm/reference-guide/rg-2/reference-guide-2"
     },
 	// {
     //   from: "~*\\\/apm\\\/use-cases\\\/uc",

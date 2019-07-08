@@ -1,7 +1,7 @@
 ---
-title: "Manage Application Performance with New Relic"
-category: "Monitoring & Troubleshooting"
-menu_order: 13
+title: "Manage App Performance with New Relic"
+parent: "manage-app-performance"
+menu_order: 2
 tags: ["monitoring", "troubleshooting", "performance", "new relic"]
 ---
 

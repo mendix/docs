@@ -1,5 +1,5 @@
 ---
-title: "Trends in Mendix Cloud v3"
+title: "Trends in Mendix Cloud"
 parent: "metrics"
 menu_order: 10
 description: "Describes how to interpret various graphs and trends in the Mendix Cloud v3."
@@ -64,9 +64,13 @@ The number of requests per second is split up by request handlers.
 
 Non-Persistable Entities live in the JVM memory and are garbage collected regularly. If you have a memory leak, the number of objects in memory will grow over time. This might be a problem. In this graph you can monitor the number of Mendix Objects that live in memory.
 
+![](attachments/trends/object-cache.png)
+
 ### <a name="Trends-appmxruntimesessions"></a>4.3 User Accounts and Login Sessions
 
 The sessions graph shows the number of logged-in named and anonymous user sessions for your application, next to the total number of existing login accounts in the application.
+
+![](attachments/trends/user-accounts-logins.png)
 
 ### <a name="Trends-appmxruntimejvmheap"></a>4.4 JVM Object Heap
 
@@ -82,19 +86,27 @@ If the tenured generation shows up to as big as 65% of the complete heap size, t
 
 This second graph about JVM memory is similar to the previous graph, JVM Object Heap. It shows a more complete view of the actual size and composition of the operating system memory that is in use by the JVM process. This graph is currently primarily present to provide more insight in situations in which the part of the real used memory outside the JVM Object Heap is growing too much, causing problems with memory shortage in the operating system.
 
+![](attachments/trends/jvm-process-memory.png)
+
 More information on this graph is available in a Tech Blog post: [What's in my JVM memory?](https://tech.mendix.com/linux/2015/01/14/whats-in-my-jvm-memory/)
 
 ### <a name="Trends-appmemory"></a>4.6 Application Node Operating System Memory
 
 The memory graph shows the distribution of operating system memory that is available for this server. The most important part of the graph is the application process, which is visible as an amount of memory that is continuously in use, labelled in the category 'apps'.
 
+![](attachments/trends/node-os-memory.png)
+
 ### <a name="Trends-appm2eeserverthreadpool"></a>4.7 Threadpool for Handling External Requests
 
 The application server thread pool graph shows the number of concurrent requests that are being handled by the Mendix Runtime, but only when they're initiated by a remote API, like the way the normal web-based client communicates, or by calling web services. Because creating a new thread that can concurrently process a request is an expensive operation, there's a pool of threads being held that can quickly start processing new incoming requests. This pool automatically grows and shrinks according to the number of requests that are flowing through the application.
 
+![](attachments/trends/threadpool-external-reqs.png)
+
 ### <a name="Trends-appmxruntimethreads"></a>4.8 Total Number of Threads in the JVM Process
 
 This graph shows the total number of threads that exist inside the running JVM process. Besides the threadpool that is used for external HTTP requests, as shown above, this includes the threadpool used for database connections, internal processes inside the Mendix Runtime, and optional extra threads created by the application itself, for example, using a threadpool in a custom module or custom Java code.
+
+![](attachments/trends/jvm-thread-count.png)
 
 ### <a name="Trends-appcpu"></a>4.9 Application Node CPU Usage
 
@@ -108,13 +120,21 @@ The most important value in here is 'user', which shows the amount of CPU time u
 
 Disk throughput shows the amount of data that is being read from and written to disk. If there's more than one disk partition in the system, the /srv partition generally contains project files and uploaded files of the application, while /var generally holds the database storage.
 
+![](attachments/trends/app-disk-throughput.png)
+
 ### <a name="Trends-appdfabs"></a><a name="Trends-appdf"></a>4.11 Application Node Disk Usage (in Bytes)
 
-This graph displays the amount of data that is stored on disk in absolute amounts. If there's more than one disk partition in the system, the /srv partition generally holds project files and uploaded files of the application, while /var generally holds the database storage.
+This graph displays the amount of data that is stored on disk in absolute amounts.
+
+![](attachments/trends/app-disk-usage-bytes.png)
+
+If there's more than one disk partition in the system, the /srv partition generally holds project files and uploaded files of the application, while /var generally holds the database storage.
 
 ### <a name="Trends-appdiskstatsutilization"></a>4.12 Application Node Disk Utilization in Percentage (%)
 
 Disk utilization shows the percentage of time that the disk storage is busy processing requests. This graph should be interpreted in combination with other graphs, like CPU iowait, disk iops, and number of running requests. For example, a combination of a moderate number of IO operations, low amount of disk throughput, visible cpu iowait, filled up memory disk cache, and reports of long running database queries in the application log could point to a shortage of system memory for disk cache that leads to repeated random reads from disk storage.
+
+![](attachments/trends/app-disk-usage-pct.png)
 
 {{% alert type="info" %}}
 
@@ -126,17 +146,25 @@ Disk utilization is calculated as the disk usage that is used by the user of the
 
 The Disk IO statistics show the number of disk read and write operations that are done from and to the disk storage. It does not show the amount of data that was transferred.
 
+![](attachments/trends/app-disk-ios.png)
+
 ### <a name="Trends-appload"></a>4.14 Application Node Load
 
 This value is commonly used as a general indication for overall server load that can be monitored and alerted upon. The load value is a composite value, calculated from a range of other measurements, as shown in the other graphs on this page. When actually investigating high server load, this graph alone is not sufficient.
+
+![](attachments/trends/app-load.png)
 
 ### <a name="Trends-appdiskstatslatency"></a>4.15 Application Node Disk Latency
 
 The disk latency graph shows the average waiting times for disk operations to complete. Interpreting the values in this graph should be done in combination with the other disk stats graphs, and while having insight in the type of requests that done. Sequential or random reads and writes can create a different burden for disk storage.
 
+![](attachments/trends/app-disk-latency.png)
+
 ### <a name="Trends-appdiskstatsutilization"></a>4.16 Application Node Disk Utilization
 
 Disk utilization shows the percentage of time that the disk storage is busy processing requests. This graph should be interpreted in combination with other graphs, like CPU iowait, disk iops, and number of running requests. For example, a combination of a moderate number of IO operations, low amount of disk throughput, visible cpu iowait, filled up memory disk cache, and reports of long running database queries in the application log could point to a shortage of system memory for disk cache that leads to repeated random reads from disk storage.
+
+![](attachments/trends/app-disk-utilization.png)
 
 {{% alert type="info" %}}
 

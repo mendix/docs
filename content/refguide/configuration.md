@@ -53,7 +53,6 @@ The **Server** tab has the following settings:
   * **Default** – use the default heap memory size of the installed Java virtual machine.
   * **Custom** – use the value of the **Maximum size (in MB)** setting.
 * **Maximum size (in MB)** – when you set the Java heap setting to *Custom*, you can specify the amount of heap memory that is available for the Java virtual machine on which you deploy your application.
-* **Emulate cloud security** – projects hosted in the Mendix Cloud have to adhere to much stricter security policies than hosting it on your own server. Turning on this switch emulates that behavior. A security policy will be enforced, which will allow you to test your Java actions and verify that they will also run in the cloud.
 * **Extra JVM parameters** – here you can enter extra parameters for the Java virtual machine on which you deploy your application. Note: use with care. If the parameters are invalid, the Java VM might not start.
 
 ### 2.3 Constants {#constants}

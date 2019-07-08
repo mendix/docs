@@ -191,7 +191,7 @@ Error handlers are supported on all nanoflow elements except for gateways and lo
 *  **Abort** (which is the default)
 *  **Custom without rollback**
 
-With **Custom without rollback** error handlers, you can draw an additional flow from the block and then mark this flow as the error handler flow. The **Custom without rollback** option does not roll back the objects. After you select a flow as the error handler it will appear this way:
+With the **Custom without rollback** option, you can draw an additional flow from the block and then mark this flow as the error handler flow. The **Custom without rollback** option does not roll back the objects. After you select a flow as the error handler it will appear this way:
 
 ![selected error handler](attachments/819203/918248.png)
 

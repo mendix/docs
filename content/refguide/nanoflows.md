@@ -182,20 +182,20 @@ In the example below, the parameter **AccountPasswordData** is highlighted becau
 
 ## 7 Errors
 
-When an error occurs in a nanoflow, all the changes made to objects are not rolled back and the nanoflow is aborted. Optionally, you can handle errors in the nanoflow itself by configuring an error handler. You can inspect the details of the error by looking at the`$latestError` predefined variable.
+When an error occurs in a nanoflow, the changes that were made to objects are not rolled back and the nanoflow is aborted. Optionally, you can handle errors in the nanoflow itself by configuring an error handler. You can inspect the details of the error by looking at the `$latestError` predefined variable.
 
 ### 7.1 Error Handlers
 
-Error handlers are currently supported on all nanoflow elements except for gateways and loops. There are two available options:
+Error handlers are supported on all nanoflow elements except for gateways and loops. There are two error handler options:
 
 *  **Abort** (which is the default)
 *  **Custom without rollback**
 
-For **Custom without rollback** error handlers, you can draw an additional flow from the block and then mark this flow as the error handler flow. The **Custom without rollback** option does not roll back the objects. After you select a flow as the error handler it will appear this way:
+With **Custom without rollback** error handlers, you can draw an additional flow from the block and then mark this flow as the error handler flow. The **Custom without rollback** option does not roll back the objects. After you select a flow as the error handler it will appear this way:
 
-![](attachments/819203/918248.png)
+![selected error handler](attachments/819203/918248.png)
 
-### 7.2 Inspecting Errors
+### 7.2 Error Inspection
 
 In a custom error handler executed after an error occurs, the `$latestError` variable is set to the message of the error information. The `$latestError` variable type is `String`, unlike in [microflows](microflows) where errors' type is the `System.Error` entity.
  

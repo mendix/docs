@@ -1,6 +1,6 @@
 ---
 title: "Upgrade Steps"
-parent: "ig1-installation"
+parent: "ig1"
 menu_order: 4
 ---
 This document describes the upgrade steps for version 1.5.5 and above.

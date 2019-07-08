@@ -1,6 +1,6 @@
 ---
 title: "Installation Steps"
-parent: "ig1-installation"
+parent: "ig1"
 menu_order: 2
 ---
 This chapter describes the installation of the APM tool. For details on upgrading to a new version, see [Upgrade Steps](ig1-upgrade-steps).

@@ -30,4 +30,4 @@ For project administrators (with SCRUM Master role), an extra **Modeler environm
 Each environment must have a name. The name of an environment is only for display purposes in APM, and it does not have to match your hostname/servername.
 For a description of the other settings, see the [APM settings](rg2-settings).
 
-Upon creating the environment, an API key for the APM Agent configuration will be generated (it is possible to generate a new one at a later time in the environment settings). For more information about the API key and APM Agent installation, see the [APM 2 Installation Manual](ig2-installation).
+Upon creating the environment, an API key for the APM Agent configuration will be generated (it is possible to generate a new one at a later time in the environment settings). For more information about the API key and APM Agent installation, see the [APM 2 Installation Guide](ig2).

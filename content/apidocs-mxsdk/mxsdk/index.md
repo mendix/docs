@@ -22,8 +22,8 @@ Browse the reference documentation below about the Mendix metamodel:
 
 * [JavaScript & TypeScript Resources](javascript-typescript-resources) – summarizes TypeScript and provides links to useful resources for learning more
 * [Understanding the Metamodel](understanding-the-metamodel) – explains the basic components of the metamodel as well as the domain model, microflows, pages, and app projects in the metamodel
-* [Working with when.js and Promises in TypeScript](working-with-when.js-and-promises-in-typescript) – 
-* [Mendix Model SDK Release Notes](/releasenotes/sdk/model-sdk) – 
+* [Working with when.js and Promises in TypeScript](working-with-when.js-and-promises-in-typescript) – explains what promises are, how to use them, and how resolve common problems when using them
+* [Mendix Model SDK Release Notes](/releasenotes/sdk/model-sdk) – describes the releases for the Mendix Model SDK
 
 ## 4 Use Case Examples
 

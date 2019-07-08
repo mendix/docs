@@ -99,9 +99,9 @@ This second graph of JVM memory is similar to the previous graph, JVM Object Hea
 
 ![](attachments/trends/jvm-process-memory.png)
 
- This graph is primarily present to provide more insight in situations where the part of the real used memory *outside* the JVM Object Heap is growing too much, causing problems with memory shortage in the operating system.
+This graph is primarily present to provide more insight in situations where the part of the real used memory *outside* the JVM Object Heap is growing too much, causing problems with memory shortage in the operating system.
  
- More information on this graph is available in a Tech Blog post: [What's in my JVM memory?](https://tech.mendix.com/linux/2015/01/14/whats-in-my-jvm-memory/)
+More information on this graph is available in a Tech Blog post: [What's in my JVM memory?](https://tech.mendix.com/linux/2015/01/14/whats-in-my-jvm-memory/)
 
 ### <a name="Trends-appmemory"></a>4.6 Application Node Operating System Memory
 
@@ -136,13 +136,19 @@ The CPU graph shows the CPU utilization in percentage, broken down into differen
 
 ![](attachments/trends/app-cpu.png)
 
-The most important value in here is 'user', which shows the amount of CPU time used for handling requests at Mendix Runtime and executing microflows and scheduled events. CPU usage of the database is shown in a separate graph below.
+The most important value in here is 'user', which shows the amount of CPU time used for handling requests at Mendix Runtime and executing microflows and scheduled events.
+
+{{% alert type="info" %}}
+CPU usage of the database is shown in [Database Node CPU Usage](#Trends-dbcpu), below.
+{{% /alert %}}
 
 ### <a name="Trends-appdiskstatsthroughput"></a>4.10 Application Node Disk Throughput
 
-Disk throughput shows the amount of data that is being read from and written to disk. If there's more than one disk partition in the system, the /srv partition generally contains project files and uploaded files of the application, while /var generally holds the database storage.
+Disk throughput shows the amount of data that is being read from and written to disk.
 
 ![](attachments/trends/app-disk-throughput.png)
+
+ If there is more than one disk partition in the system, the /srv partition generally contains project files and uploaded files of the application, while /var generally holds the database storage.
 
 ### <a name="Trends-appdfabs"></a><a name="Trends-appdf"></a>4.11 Application Node Disk Usage (in Bytes)
 
@@ -154,9 +160,13 @@ If there's more than one disk partition in the system, the /srv partition genera
 
 ### <a name="Trends-appdiskstatsutilization"></a>4.12 Application Node Disk Utilization in Percentage (%)
 
-Disk utilization shows the percentage of time that the disk storage is busy processing requests. This graph should be interpreted in combination with other graphs, like CPU iowait, disk iops, and number of running requests. For example, a combination of a moderate number of IO operations, low amount of disk throughput, visible cpu iowait, filled up memory disk cache, and reports of long running database queries in the application log could point to a shortage of system memory for disk cache that leads to repeated random reads from disk storage.
+Disk utilization shows the percentage of time that the disk storage is busy processing requests.
 
 ![](attachments/trends/app-disk-usage-pct.png)
+
+This graph should be interpreted in combination with other graphs, like CPU iowait, [Application Node Disk I/Os](#appdiskstatsiops), and [Number of Handled External Requests](#appmxruntimerequests).
+
+For example, a combination of a moderate number of IO operations, low disk throughput, visible cpu iowait, full memory disk cache, and reports of long running database queries in the application log could point to a shortage of system memory for disk cache that leads to repeated random reads from disk storage.
 
 {{% alert type="info" %}}
 
@@ -166,25 +176,31 @@ Disk utilization is calculated as the disk usage that is used by the user of the
 
 ### <a name="Trends-appdiskstatsiops"></a>4.13 Application Node Disk I/Os
 
-The Disk IO statistics show the number of disk read and write operations that are done from and to the disk storage. It does not show the amount of data that was transferred.
+The application node disk I/O statistics show the *number* of disk read and write operations that are done from and to disk storage. It does not show the amount of data that was transferred.
 
 ![](attachments/trends/app-disk-ios.png)
 
 ### <a name="Trends-appload"></a>4.14 Application Node Load
 
-This value is commonly used as a general indication for overall server load that can be monitored and alerted upon. The load value is a composite value, calculated from a range of other measurements, as shown in the other graphs on this page. When actually investigating high server load, this graph alone is not sufficient.
+This value is commonly used as a general indication for overall server load that can be monitored and alerted upon.
 
 ![](attachments/trends/app-load.png)
 
+The load value is a composite value, calculated from a range of other measurements, as shown in the other graphs on this page. If you are investigating high server load, this graph alone is not sufficient.
+
 ### <a name="Trends-appdiskstatslatency"></a>4.15 Application Node Disk Latency
 
-The disk latency graph shows the average waiting times for disk operations to complete. Interpreting the values in this graph should be done in combination with the other disk stats graphs, and while having insight in the type of requests that done. Sequential or random reads and writes can create a different burden for disk storage.
+The disk latency graph shows the average waiting times for disk operations to complete.
 
 ![](attachments/trends/app-disk-latency.png)
 
+Interpreting the values in this graph should be done in combination with the other disk stats graphs, and taking the types of requests into consideration. Sequential or random reads and writes can create a different burden for disk storage.
+
 ### <a name="Trends-appdiskstatsutilization"></a>4.16 Application Node Disk Utilization
 
-Disk utilization shows the percentage of time that the disk storage is busy processing requests. This graph should be interpreted in combination with other graphs, like CPU iowait, disk iops, and number of running requests. For example, a combination of a moderate number of IO operations, low amount of disk throughput, visible cpu iowait, filled up memory disk cache, and reports of long running database queries in the application log could point to a shortage of system memory for disk cache that leads to repeated random reads from disk storage.
+This graph should be interpreted in combination with other graphs, like CPU iowait, [Application Node Disk I/Os](#appdiskstatsiops), and [Number of Handled External Requests](#appmxruntimerequests).
+
+For example, a combination of a moderate number of IO operations, low disk throughput, visible cpu iowait, full memory disk cache, and reports of long running database queries in the application log could point to a shortage of system memory for disk cache that leads to repeated random reads from disk storage.
 
 ![](attachments/trends/app-disk-utilization.png)
 
@@ -276,7 +292,7 @@ The Disk IO statistics show the number of disk read and write operations that ar
 
 This value is commonly used as a general indication for overall server load that can be monitored and alerted upon. The load value is a composite value, calculated from a range of other measurements, as shown in the other graphs on this page. When actually investigating high server load, this graph alone is not sufficient.
 
-![](attachments/trends/db-load)
+![](attachments/trends/db-load.png)
 
 ### <a name="Trends-dbdiskstatslatency"></a>5.12 Database Node Disk Latency
 

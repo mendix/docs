@@ -92,7 +92,7 @@ Projects hosted in the Mendix Cloud have to adhere to much stricter security pol
 
 {{% alert type="warning" %}}
 
-This option is been removed from version 7.21.0 and above, see [release notes](/releasenotes/studio-pro/7.21#62223) for more information. 
+This option is removed from versions 7.21.0 and above, see [release notes](/releasenotes/studio-pro/7.21#62223) for more information. 
 
 {{% /alert %}}
 

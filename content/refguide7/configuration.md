@@ -88,7 +88,13 @@ When you set the Java heap setting to 'Custom', you can specify the amount of he
 
 ### Emulate cloud security
 
-Projects hosted in the Mendix Cloud have to adhere to much stricter security policies than hosting it on your own server. Turning on this switch emulates that behavior. A security policy will be enforced, which will allow you to test your Java actions and verify that they will also run in the cloud.
+Projects hosted in the Mendix Cloud have to adhere to much stricter security policies than hosting it on your own server. Turning on this switch emulates that behavior. A security policy will be enforced, which will allow you to test your Java actions and verify that they will also run in the cloud. 
+
+{{% alert type="warning" %}}
+
+This option is been removed from version 7.21.0 and above, see [release notes](/releasenotes/studio-pro/7.21) for more information. 
+
+{{% /alert %}}
 
 ### Extra JVM parameters
 

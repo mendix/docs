@@ -1,5 +1,5 @@
 ---
-title: "Trends in Mendix Cloud"
+title: "Trends in Mendix Cloud V3"
 parent: "metrics"
 menu_order: 10
 description: "Describes how to interpret various graphs and trends in the Mendix Cloud v3."
@@ -12,38 +12,66 @@ tags: ["Trends","v3","Mendix Cloud","Developer Portal"]
 
 ## 1 Introduction
 
-To track the usage growth of your app and to debug performance problems, the Mendix Cloud includes detailed graphs on both infrastructure and application level. These graphs show various performance trends of all your apps in the paid editions of the Mendix Platform. In case you experience issues with your app, always check the **Alerts** and **Trends** in the **Developer Portal** under **Operate**.
+To track the usage growth of your app, and to debug performance problems, the Mendix Cloud includes detailed graphs on both infrastructure and application level. These graphs show various performance trends of all your apps in the paid editions of the Mendix Platform. If you experience issues with your app, always check the **Alerts** and **Trends** in the **Developer Portal** under **Operate**.
+
+{{% alert type="info" %}}
+This document describes the trends graphs available in Mendix Cloud V3. If your app is deployed to Mendix Cloud V4, please refer to [Trends in Mendix Cloud v4](trends-v4).
+
+If you don't know which Mendix Cloud version you are using, you can find out by following the instructions in [Cloud Version and Region in the Mendix Cloud](/developerportal/deploy/cloud-version-region).
+{{% /alert %}}
 
 ## 2 Access to Monitoring Trends
 
 To view the **Trends**, you must have permission to **Access the Monitoring**.
 
 {{% alert type="info" %}}
-Only the [Technical Contact](../company-app-roles/technical-contact) is allowed to grant the node permissions.
+Only the [Technical Contact](../company-app-roles/technical-contact) is allowed to grant node permissions.
 {{% /alert %}}
 
 Assign this permission by following these steps:
 
-1. Go to the [Developer Portal](http://home.mendix.com) and click **Apps** in the top navigation.
-2. Click **My Apps** and select **Nodes**.
-3. Select the node from which you want to monitor.
-4. Click **Security** under the **Settings** category on the left.
-5. Go to the **Node Permissions** tab.
-6. Check **Access the Monitoring** next to the name of the person who is granted this permission.
+1. Open your app in the [Developer Portal](http://home.mendix.com)
+2. Click **Security** under the **Settings** category on the left.
+3. Go to the **Node Permissions** tab.
+4. Choose the environment for which you want to grant access.
+5. Check **Access to Monitoring** next to the name of the person to whom you want to grant this permission.
 
 ![](attachments/trends/nodepermission.jpg)
 
 ## 3 Viewing the Trends
 
+### 3.1 Finding the Trends
+
 You can find the trends by following these steps:
 
-1. Go to the [Developer Portal](http://home.mendix.com) and click **Apps** in the top navigation panel.
-2. Click **My Apps** and select **Nodes**.
-3. Select the node from which you want to monitor.
-4. Click **Metrics** under the **Operate** category.
-5. Select the environment you want to monitor under the tab **Trends**.
+1. Open your app in the [Developer Portal](http://home.mendix.com)
+2. Click **Metrics** under the **Operate** category.
+3. Select the environment you want to monitor under the tab **Trends**.
 
 ![](attachments/trends/environment.png)
+
+### 3.2 Interpreting the Graphs
+
+#### 3.2.1 Scales
+
+The scales are produced automatically by the graphing software. This can lead to unexpected scales.
+
+For example a scale for transactions per seconds may have a value of 30 m. This means  30 *milli*-transactions per second, 1800 milli-transactions, or 2 transactions per minute.
+
+#### 3.2.2 Disk Utilization
+
+Disk utilization is calculated as the disk usage that is used by the user of the system. Due to operating system overhead and empty space in block size allocation, not all disk space can be fully allocated. For this reason, the total amount of usable space will be ~4% lower than the actual disk space.
+
+#### 3.2.2 Combining Information{#combine-info}
+
+You can often get more information about the performance of your app by combining the information from several graphs. Useful graphs for this are:
+
+* The CPU iowait information from [Database Node CPU Usage](#Trends-dbcpu)
+* [Application Node Disk I/Os](#Trends-appdiskstatsiops)
+* [Database Node Disk I/Os](#Trends-dbdiskstatsiops)
+* [Number of Handled External Requests](#appmxruntimerequests)
+
+For example, a combination of a moderate number of IO operations, low disk throughput, visible cpu iowait, full memory disk cache, and reports of long running database queries in the application log could point to a shortage of system memory for disk cache that leads to repeated random reads from disk storage.
 
 ## 4 Application Statistics
 
@@ -51,11 +79,11 @@ These graphs show various application specific metrics, such as the number of HT
 
 ### <a name="Trends-appmxruntimerequests"></a>4.1 Number of Handled External Requests
 
-The requests graph shows the number of requests that are sent from the client or systems that integrate with your application using web services.
+The **Number of handled external requests** graph shows the number of requests that are sent from the client and systems that integrate with your application using web services.
 
 ![](attachments/trends/no-ext-reqs.png)
 
-The number of requests per second is split up by request handlers.
+The number of requests per second is split up by request handlers:
 
 * **/** should not list any requests, because static content is directly served to the user by the front-facing web server, which is placed between the user and this application process
 * **api-doc/** ?????????????
@@ -69,15 +97,15 @@ The number of requests per second is split up by request handlers.
 
 ### <a name="Trends-appmxruntimecache"></a>4.2 Object Cache
 
-In this graph you can monitor the number of Mendix Objects that live in memory.
+In the **Object cache** graph you can monitor the number of Mendix Objects that live in memory.
 
 ![](attachments/trends/object-cache.png)
 
-Non-Persistable Entities live in the JVM memory and are garbage collected regularly. If you have a memory leak, the number of objects in memory will grow over time. This might be a problem. 
+Non-persistable entities live in the JVM memory and are garbage collected regularly. If you have a memory leak, the number of objects in memory will grow over time. This might be a problem. 
 
 ### <a name="Trends-appmxruntimesessions"></a>4.3 User Accounts and Login Sessions
 
-The sessions graph shows the number of logged-in named and anonymous user sessions for your application, next to the total number of existing login accounts in the application.
+The **User Accounts and Login Sessions** graph shows the number of logged-in named and anonymous user sessions for your application, next to the total number of existing login accounts in the application.
 
 {{% todo %}}[Which value is which?]{{% /todo %}}
 
@@ -85,17 +113,17 @@ The sessions graph shows the number of logged-in named and anonymous user sessio
 
 ### <a name="Trends-appmxruntimejvmheap"></a>4.4 JVM Object Heap
 
-The JVM Object Heap graphs shows the internal distribution of allocated memory inside the application process for objects that are in use by microflows, scheduled events, and all other data that flows around inside the Mendix runtime process.
+The **JVM Object Heap** graph shows the internal distribution of allocated memory inside the application process for objects that are in use by microflows, scheduled events, and all other data that flows around inside the Mendix runtime process.
 
 ![](attachments/trends/jvm-heap.png)
 
-One of the most important things to know in order to be able to interpret the values in this graph, is the fact that the JVM does not immediately clean up objects that are no longer in use. This graph will show unused memory as still in use until the so-called garbage collector, which analyzes the memory to free up space, is run. So, this graph does not show how much of the JVM memory that is in use before a garbage collection will have to stay allocated after the garbage collection cycle, because the garbage collection process will only find out about that when it is actually running.
+One of the most important things to know in order to be able to interpret the values in this graph, is the fact that the JVM does not immediately clean up objects that are no longer in use. This graph will show unused memory as still in use until the so-called *garbage collector*, which analyzes the memory to free up space, is run. So, you cannot see how much of the JVM memory that is in use before a garbage collection will be available after the garbage collection cycle, because the garbage collection process will only find out about that when it actually runs.
 
-For example, if the **tenured generation** is shown as 65% of the complete heap size, this might as well change to 0% when a garbage collection is triggered when the percentage reaches two thirds of the total heap size. However, it could stay at this amount if all data in this memory part is still referenced by running actions in the application. This behavior means that the JVM heap memory graphs are the most difficult to base conclusions on.
+For example, if the **tenured generation** is shown as 65% of the complete heap size, this might as well change to 0% if a garbage collection is triggered when the percentage reaches two thirds of the total heap size. However, it could stay at this 65% if all data in this memory part is still referenced by running actions in the application. This behavior means that the JVM heap memory graphs are the most difficult to base conclusions on.
 
 ### <a name="Trends-appmxruntimejvmprocessmemory"></a>4.5 JVM Process Memory Usage
 
-This second graph of JVM memory is similar to the previous graph, JVM Object Heap. It shows a more complete view of the actual size and composition of the operating system memory that is in use by the JVM process.
+This **JVM Process Memory Usage** graph is similar to the previous graph, *JVM Object Heap*. It shows a more complete view of the actual size and composition of the operating system memory that is in use by the JVM process.
 
 ![](attachments/trends/jvm-process-memory.png)
 
@@ -105,38 +133,38 @@ More information on this graph is available in a Tech Blog post: [What's in my J
 
 ### <a name="Trends-appmemory"></a>4.6 Application Node Operating System Memory
 
-The memory graph shows the distribution of operating system memory that is available for this server.
+The **Application node operating system memory** graph shows the distribution of operating system memory that is available for this server.
 
 ![](attachments/trends/node-os-memory.png)
 
-The most important part of the graph is the application process, which is visible as an amount of memory that is continuously in use, labelled in the category 'apps'.
+The most important part of the graph is the category **apps** which shows the amount of memory that is continuously in use by the application process.
 
 ### <a name="Trends-appm2eeserverthreadpool"></a>4.7 Threadpool for Handling External Requests
 
-The application server thread pool graph shows the number of concurrent requests that are being handled by the Mendix Runtime, The requests are counted in two circumstances:
+The **Threadpool for handling external requests** graph shows the number of concurrent requests that are being handled by the Mendix Runtime, The requests are counted in two circumstances:
 
 * they are initiated by a remote API – the way the normal web-based client communicates
 * they are initiated by calling web services
 
 ![](attachments/trends/threadpool-external-reqs.png)
 
-Because creating a new thread that can concurrently process a request is an expensive operation, there's a pool of threads being held that can quickly start processing new incoming requests. This pool automatically grows and shrinks according to the number of requests that are flowing through the application.
+Because creating a new thread that can concurrently process a request is an expensive operation, Mendix holds a pool of threads that can quickly start processing new incoming requests. This pool automatically grows and shrinks according to the number of requests that are flowing through the application.
 
 ### <a name="Trends-appmxruntimethreads"></a>4.8 Total Number of Threads in the JVM Process
 
-This graph shows the **total number of threads** that exist inside the running JVM process.
+The **Total Number of Threads in the JVM Process** graph shows the total number of threads that exist inside the running JVM process.
 
 ![](attachments/trends/jvm-thread-count.png)
 
-Besides the threadpool that is used for external HTTP requests, as shown above, this includes the threadpool used for database connections, internal processes inside the Mendix Runtime, and optional extra threads created by the application itself, for example, using a threadpool in a custom module or custom Java code.
+Besides the threadpool that is used for *external* HTTP requests, described above, this includes the threadpool used for database connections, internal processes inside the Mendix Runtime, and optional extra threads created by the application itself, for example, using a threadpool in a custom module or custom Java code.
 
 ### <a name="Trends-appcpu"></a>4.9 Application Node CPU Usage
 
-The CPU graph shows the CPU utilization in percentage, broken down into different types of CPU usage.
+The **Application node CPU usage** graph shows the CPU utilization in percentage, broken down into different types of CPU usage.
 
 ![](attachments/trends/app-cpu.png)
 
-The most important value in here is 'user', which shows the amount of CPU time used for handling requests at Mendix Runtime and executing microflows and scheduled events.
+The most important value in here is **user**, which shows the amount of CPU time used for handling requests at Mendix Runtime and executing microflows and scheduled events.
 
 {{% alert type="info" %}}
 CPU usage of the database is shown in [Database Node CPU Usage](#Trends-dbcpu), below.
@@ -144,7 +172,7 @@ CPU usage of the database is shown in [Database Node CPU Usage](#Trends-dbcpu), 
 
 ### <a name="Trends-appdiskstatsthroughput"></a>4.10 Application Node Disk Throughput
 
-Disk throughput shows the amount of data that is being read from and written to disk.
+The **Application node disk throughput** graph shows the amount of data that is being read from and written to disk.
 
 ![](attachments/trends/app-disk-throughput.png)
 
@@ -152,37 +180,29 @@ Disk throughput shows the amount of data that is being read from and written to 
 
 ### <a name="Trends-appdfabs"></a><a name="Trends-appdf"></a>4.11 Application Node Disk Usage (in Bytes)
 
-This graph displays the amount of data that is stored on disk in absolute amounts.
+The **Application node disk usage (in bytes)** graph displays the absolute amount of data that is stored on disk.
 
 ![](attachments/trends/app-disk-usage-bytes.png)
 
 If there's more than one disk partition in the system, the /srv partition generally holds project files and uploaded files of the application, while /var generally holds the database storage.
 
-### <a name="Trends-appdiskstatsutilization"></a>4.12 Application Node Disk Utilization in Percentage (%)
+### <a name="Trends-appdiskstatsutilization"></a>4.12 Application Node Disk Usage in Percentage (%)
 
-Disk utilization shows the percentage of time that the disk storage is busy processing requests.
+The **Application node disk usage (percentage)** shows the relative amounts of data that is stored on disk.
 
 ![](attachments/trends/app-disk-usage-pct.png)
 
-This graph should be interpreted in combination with other graphs, like CPU iowait in [Database Node CPU Usage](#Trends-dbcpu), [Application Node Disk I/Os](#Trends-appdiskstatsiops), and [Number of Handled External Requests](#appmxruntimerequests).
-
-For example, a combination of a moderate number of IO operations, low disk throughput, visible cpu iowait, full memory disk cache, and reports of long running database queries in the application log could point to a shortage of system memory for disk cache that leads to repeated random reads from disk storage.
-
-{{% alert type="info" %}}
-
-Disk utilization is calculated as the disk usage that is used by the user of the system. Due to operating system overhead and empty space in block size allocation, not all disk space can be fully allocated. For this reason, the total amount of usable space will be ~4% lower than the actual disk space.
-
-{{% /alert %}}
+This graph should be interpreted in combination with other graphs. See [Combining Information](#combine-info), above.
 
 ### <a name="Trends-appdiskstatsiops"></a>4.13 Application Node Disk I/Os
 
-The application node disk I/O statistics show the *number* of disk read and write operations that are done from and to disk storage. It does not show the amount of data that was transferred.
+The **Application node disk IO/s** statistics show the *number* of disk read and write operations that are done from and to disk storage. It does not show the amount of data that was transferred.
 
 ![](attachments/trends/app-disk-ios.png)
 
 ### <a name="Trends-appload"></a>4.14 Application Node Load
 
-This value is commonly used as a general indication for overall server load that can be monitored and alerted upon.
+The **Application node load** is commonly used as a general indication of overall server load that can be monitored and alerted upon.
 
 ![](attachments/trends/app-load.png)
 
@@ -190,7 +210,7 @@ The load value is a composite value, calculated from a range of other measuremen
 
 ### <a name="Trends-appdiskstatslatency"></a>4.15 Application Node Disk Latency
 
-The disk latency graph shows the average waiting times for disk operations to complete.
+The **Application node disk latency** graph shows the average waiting times for disk operations to complete.
 
 ![](attachments/trends/app-disk-latency.png)
 
@@ -198,19 +218,11 @@ Interpreting the values in this graph should be done in combination with the oth
 
 ### <a name="Trends-appdiskstatsutilization"></a>4.16 Application Node Disk Utilization
 
-Disk utilization shows the percentage of time that the disk storage is busy processing requests.
+The **Application node disk utilization** shows the percentage of time that the disk storage is busy processing requests.
 
 ![](attachments/trends/app-disk-utilization.png)
 
-This graph should be interpreted in combination with other graphs, like CPU iowait in [Database Node CPU Usage](#Trends-dbcpu), [Application Node Disk I/Os](#Trends-appdiskstatsiops), and [Number of Handled External Requests](#appmxruntimerequests).
-
-For example, a combination of a moderate number of IO operations, low disk throughput, visible cpu iowait, full memory disk cache, and reports of long running database queries in the application log could point to a shortage of system memory for disk cache that leads to repeated random reads from disk storage.
-
-{{% alert type="info" %}}
-
-Disk utilization is calculated as the disk usage that is used by the user of the system. Due to operating system overhead and empty space in block size allocation, not all disk space can be fully allocated. For this reason, the total amount of usable space will be ~4% lower than the actual disk space.
-
-{{% /alert %}}
+This graph should be interpreted in combination with other graphs. See [Combining Information](#combine-info), above.
 
 ## 5 Database Statistics
 
@@ -284,15 +296,7 @@ Disk utilization shows the percentage of time that the disk storage is busy proc
 
 ![](attachments/trends/db-disk-usage-pct.png)
 
-This graph should be interpreted in combination with other graphs, like CPU iowait in [Database Node CPU Usage](#Trends-dbcpu), [Database Node Disk I/Os](#Trends-dbdiskstatsiops), and [Number of Handled External Requests](#appmxruntimerequests).
-
-For example, a combination of a moderate number of IO operations, low disk throughput, visible cpu iowait, full memory disk cache, and reports of long running database queries in the application log could point to a shortage of system memory for disk cache that leads to repeated random reads from disk storage.
-
-{{% alert type="info" %}}
-
-Disk utilization is calculated as the disk usage that is used by the user of the system. Due to operating system overhead and empty space in block size allocation, not all disk space can be fully allocated. For this reason, the total amount of usable space will be ~4% lower than the actual disk space.
-
-{{% /alert %}}
+This graph should be interpreted in combination with other graphs. See [Combining Information](#combine-info), above.
 
 ### <a name="Trends-dbdiskstatsiops"></a>5.10 Database Node Disk I/Os
 
@@ -322,15 +326,7 @@ Disk utilization shows the percentage of time that the disk storage is busy proc
 
 ![](attachments/trends/db-disk-utilization.png)
 
-This graph should be interpreted in combination with other graphs, like CPU iowait in [Database Node CPU Usage](#Trends-dbcpu), [Application Node Disk I/Os](#Trends-appdiskstatsiops), and [Number of Handled External Requests](#appmxruntimerequests).
-
-For example, a combination of a moderate number of IO operations, low disk throughput, visible cpu iowait, full memory disk cache, and reports of long running database queries in the application log could point to a shortage of system memory for disk cache that leads to repeated random reads from disk storage.
-
-{{% alert type="info" %}}
-
-Disk utilization is calculated as the disk usage that is used by the user of the system. Due to operating system overhead and empty space in block size allocation, not all disk space can be fully allocated. For this reason, the total amount of usable space will be ~4% lower than the actual disk space.
-
-{{% /alert %}}
+This graph should be interpreted in combination with other graphs. See [Combining Information](#combine-info), above.
 
 ## 6 Read More
 

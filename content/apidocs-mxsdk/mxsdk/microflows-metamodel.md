@@ -1,6 +1,7 @@
 ---
-title: "Microflows (Metamodel)"
+title: "Microflows in the Metamodel"
 parent: "understanding-the-metamodel"
+menu_order: 4
 ---
 ## Overview
 
@@ -34,7 +35,7 @@ Studio Pro Guide | Model SDK API docs
 
 ### Microflow objects
 
-There are several types of objects that can be added to a microflow. One type is `Activity`, which can either be a loop, or an action activity, which will execute a microflow action (see the next section for more details on different types of activities). Other microflow object types include start and end events, splits and merges, annotations and parameters.
+There are several types of objects that can be added to a microflow. One type is `Activity`, which can either be a loop, or an action activity, which will execute a microflow action (see the next section for more details on different types of activities). Other microflow object types include start and end events, decisions and merges, annotations and parameters.
 
 #### Graphical overview
 
@@ -53,9 +54,9 @@ Studio Pro Guide | Model SDK API docs
 
 A microflow consists of objects that are connected by flows, specifically, `SequenceFlow`s. A flow has an origin and a destination, with which the order of objects in the microflow is defined.
 
-An exclusive split on an enumeration has a sequence flow for each enumeration value. In the meta model, this is represented by the case value of the sequence flows. Each sequence flow has an enumeration case value with `value` set to the corresponding enumeration case. Boolean splits have two sequence flows, one for each of `true` and `false`, with each a corresponding case value.
+A decision on an enumeration has a sequence flow for each enumeration value. In the meta model, this is represented by the case value of the sequence flows. Each sequence flow has an enumeration case value with `value` set to the corresponding enumeration case. Boolean decisions have two sequence flows, one for each of `true` and `false`, with each a corresponding case value.
 
-Inheritance splits have sequence flows for each specialization of the entity type on which is split. Each sequence flow has an inheritance case value with as value the specialization entity.
+Object type decisions have sequence flows for each specialization of the entity type on which is split. Each sequence flow has an inheritance case value with a specialization entity value.
 
 Annotation flows are used to connect annotations to other microflow objects.
 
@@ -64,18 +65,23 @@ Annotation flows are used to connect annotations to other microflow objects.
 ![](attachments/15466739/16842853.svg)
 
 Studio Pro Guide | Model SDK API docs
---- | --- |
+--- | --- 
 [Sequence Flow](/refguide/sequence-flow) | [Flow](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.flow.html)
-[Annotation flow](/refguide/annotation-flow) | [SequenceFlow](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.sequenceflow.html)
+[Annotation flow](/refguide/annotation#annotation-flow) | [SequenceFlow](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.sequenceflow.html)
 |[AnnotationFlow](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.annotationflow.html)
 |Properties [`origin`](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.flow.html#origin) and [`destination`](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.flow.html#destination) of Flow
 |[CaseValue](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.casevalue.html) and its inheritance hierarchy
 
-### Splits
+### Decisions
 
-The control flow in microflows is defined with splits of two types: exclusive splits (for boolean or enumeration splits) and inheritance splits (for control based on specialization entity types). Two paths of control can be merged with an exclusive merge.
+The control flow in microflows is defined with decisions of two types: 
 
-An exclusive split conditionally splits on either an expression or a rule. In case of a rule, a call is made, similar to a microflow call, with a rule parameter mapping.
+* **Decisions** – for Boolean or enumeration decisions
+* **Object type decisions** – for control based on specialization entity types
+
+Two paths of a control can be merged with a decision.
+
+A decision conditionally splits on either an expression or a rule. In case of a rule, a call is made, similar to a microflow call, with a rule parameter mapping.
 
 #### Graphical overview
 
@@ -83,8 +89,8 @@ An exclusive split conditionally splits on either an expression or a rule. In ca
 
 Studio Pro Guide | Model SDK API docs
 --- | --- |
-[Exclusive Split](/refguide/exclusive-split) |[ExclusiveSplit](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.exclusivesplit.html)
-[Inheritance Split](/refguide/inheritance-split) |[InheritanceSplit](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.inheritancesplit.html)
+[Decision](/refguide/decision) |[ExclusiveSplit](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.exclusivesplit.html)
+[Object Type Decision](/refguide/object-type-decision) |[InheritanceSplit](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.inheritancesplit.html)
 [Merge](/refguide/merge) |[ExclusiveMerge](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.exclusivemerge.html)
 [Rules](/refguide/rules) |[ExpressionSplitCondition](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.expressionsplitcondition.html)
 |[RuleSplitCondition](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.rulesplitcondition.html)
@@ -182,7 +188,7 @@ See the following diagrams for details on the HTTP configuration, request handli
 
 Studio Pro Guide | Model SDK API docs
 --- | --- |
-[Call Web Service](/refguide/call-web-service) |[WebServiceCallAction](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.webservicecallaction.html)
+[Call Web Service](/refguide/call-web-service-action) |[WebServiceCallAction](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.webservicecallaction.html)
 |[HttpConfiguration](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.httpconfiguration.html)
 |[RequestHandling](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.requesthandling.html) and [ResultHandling](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.resulthandling.html)
 
@@ -196,7 +202,7 @@ An HTTP configuration has an optional custom endpoint location, authentication c
 
 Studio Pro Guide | Model SDK API docs
 --- | --- |
-[Call Web Service](/refguide/call-web-service) |[HttpConfiguration](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.httpconfiguration.html)
+[Call Web Service](/refguide/call-web-service-action) |[HttpConfiguration](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.httpconfiguration.html)
 |[HttpHeaderEntry](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.httpheaderentry.html)
 
 ### Web service calls - Request handling
@@ -214,7 +220,7 @@ A web service operation request needs to be mapped from Mendix app concepts to t
 
 Studio Pro Guide | Model SDK API docs
 --- | --- |
-[Call Web Service](/refguide/call-web-service) |[RequestHandling](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.requesthandling.html)
+[Call Web Service](/refguide/call-web-service-action) |[RequestHandling](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.requesthandling.html)
 |[SimpleRequestHandling](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.simplerequesthandling.html) - [WebServiceOperationSimpleParameterMapping](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.webserviceoperationsimpleparametermapping.html)
 |[AdvancedRequestHandling](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.advancedrequesthandling.html) - [WebServiceOperationAdvancedParameterMapping](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.webserviceoperationadvancedparametermapping.html)
 |[MappingRequestHandling](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.mappingrequesthandling.html)
@@ -230,7 +236,7 @@ The result of a web service operation needs to be mapped to Mendix app concepts 
 
 Studio Pro Guide | Model SDK API docs
 --- | --- |
-[Call Web Service](/refguide/call-web-service) |[ResultHandling](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.resulthandling.html)
+[Call Web Service](/refguide/call-web-service-action) |[ResultHandling](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.resulthandling.html)
 |[ImportMappingCall](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.importmappingcall.html)
 |[ImportMapping](https://apidocs.mendix.com/modelsdk/latest/classes/importmappings.importmapping.html)
 |[Range](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.range.html)

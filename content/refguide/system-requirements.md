@@ -11,26 +11,34 @@ tags: ["studio pro"]
 
 This document presents the system requirements for the various parts of the Mendix Platform.
 
-## 2 Mendix Studio Pro
+## 2 Mendix Studio Pro {#sp}
 
 Mendix [Studio Pro](modeling) supports 64-bit versions of Windows 7, 8, and 10. Windows 7 must be at least Service Pack 1.
 
 The following frameworks are automatically installed (if necessary):
 
-* Microsoft .NET Framework 4.6.2
+* Microsoft .NET Framework 4.7.2
 * Microsoft Visual C++ 2010 SP1 Redistributable Package
 * Microsoft Visual C++ 2013 Redistributable Package
-* AdoptOpenJDK 8 (installed automatically as of [Mendix 7.23.3](/releasenotes/studio-pro/7.23#7233) if you do not have this or Java Development Kit 1.8 already installed) or Java Development Kit 1.8
+* AdoptOpenJDK 11 or Oracle JDK 11 (the former is installed automatically as of [Mendix 8.0.0 Beta 3](/releasenotes/studio-pro/8.0#803) if you do not have any JDK 11 installed) 
 
-{{% alert type="warning" %}}
+{{% alert type="info" %}}
 You can choose which JDK is used for building and running locally via the **Edit** > **Preferences** menu item in Studio Pro.
 {{% /alert %}}
 
-If you want to use TortoiseSVN in combination with Studio Pro, download the latest version 1.7.x from [Sourceforge](http://sourceforge.net/projects/tortoisesvn/files/?source=navbar).
+### 2.1 TortoiseSVN
 
-## 3 Team Server
+If you want to use TortoiseSVN in combination with Studio Pro, download the latest version from the [TortoiseSVN](https://tortoisesvn.net/) website.
 
-The [Team Server](team-server) is implemented using Subversion, and Studio Pro uses the HTTPS protocol to communicate with that server. To access the Team Server from within Studio Pro, the network at your location needs the following settings:
+{{% alert type="warning" %}}
+Mendix Studio Pro (version 8.0.0 beta 2 and above) uses the Subversion 1.9 working copy. Previous versions of the Mendix Desktop Modeler used a Subversion 1.7 working copy. These working copy versions **are not compatible**.
+
+Always use the version of TortoiseSVN which matches your app model. If you open a local model from Mendix version 7.x or 6.x with the latest version of TortoiseSVN **you will no longer be able to open it in Mendix**.
+{{% /alert %}}
+
+## 3 Team Server {#ts}
+
+The [Team Server](/developerportal/develop/team-server) is implemented using Subversion, and Studio Pro uses the HTTPS protocol to communicate with that server. To access the Team Server from within Studio Pro, the network at your location needs the following settings:
 
 * The HTTPS port (TCP 443) needs to be open
 * The HTTP port (TCP 80) needs to be open
@@ -76,7 +84,7 @@ Current support:
 
 ### 5.4 Java
 
-When running Mendix on a server, you will need Java Runtime Environment (JRE) 8. To download an OpenJDK distribution from AdoptOpenJDK, see [AdoptOpenJDK Installation](https://adoptopenjdk.net/installation.html). To download a commercial Oracle distribution, see [Java SE Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html).
+When running Mendix on a server, you will need Java Runtime Environment (JRE) 11. To download an OpenJDK distribution from AdoptOpenJDK, see [AdoptOpenJDK Installation](https://adoptopenjdk.net/installation.html). To download a commercial Oracle distribution, see [Java SE Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html).
 
 {{% alert type="info" %}}
 There is an issue since Java 7 that causes timeouts when using web services with a certain amount of data. You can circumvent this issue by adding the VM params `-Djava.net.preferIPv4Stack=true`. Mendix Studio Pro will do this for you, but if you are running Mendix on premises on a Windows server, you will need to do this yourself. For more information about this issue, see [HotSpot (64bit server) hangs on socket read (JVM 1.7 bug?) - updated](http://blog.bielu.com/2011/11/hotspot-64bit-server-hangs-on-socket.html) and [Possible Bug in Java 7](https://forums.oracle.com/forums/thread.jspa?messageID=9985748).
@@ -116,5 +124,5 @@ For Mendix apps and the [Mendix Mobile app](getting-the-mendix-app):
 
 MxBuild is a Windows and Linux command-line tool that can be used to build a Mendix Deployment Package. For more information, see [MxBuild](mxbuild).
 
-* Mono v4.6.x or .NET v4.6.2
+* Mono v5.20.x or .NET v4.7.2
 * JDK 8.

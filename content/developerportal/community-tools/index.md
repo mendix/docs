@@ -103,9 +103,8 @@ Click any blog post title to go to the full text of that post. There is a lot of
 
 ## 9 Main Documents in This Category
 
-* [Mendix Forum](mendix-forum)
-* [Contribute to the Documentation](contribute-to-the-mendix-documentation)
-* [Documentation Writing Guidelines](documentation-writing-guidelines)
-* [Mendix Jobs Board](mendix-job-board)
-* [Mendix MVP Program](mendix-mvp-program)
-* [Set Up Your Partner Profile](how-to-set-up-your-partner-profile)
+* [Mendix Forum](mendix-forum) – describes how to use the Mendix Forum and the Mendix Idea Forum to ask questions, search for answers, and post ideas
+* [Contribute to the Documentation](contribute-to-the-mendix-documentation) – shows you how to edit and write new documentation to help the Mendix community
+* [Mendix Jobs Board](mendix-job-board) – explains how to post and find Mendix-related jobs
+* [Mendix MVP Program](mendix-mvp-program) – describes how Mendix MVPs are selected and what the benefits are to being an MVP
+* [Set Up Your Partner Profile](how-to-set-up-your-partner-profile) – shows you how to set up the Mendix Partner Profile for your company

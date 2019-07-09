@@ -1,7 +1,7 @@
 ---
 title: "Integration Layers"
-parent: "integration-overview"
-menu_order: 9
+parent: "integration-solutions"
+menu_order: 7
 draft: true
 ---
 
@@ -167,7 +167,7 @@ The following service options should be considered:
 * Translation of technical formats (for example, connecting mainframes)
 * Translating from file to push services
 * Translating an event flow to a daily file
-* Translating asynchronous request-reply to a synchronous call with retries
+* Translating asynchronous request–reply to a synchronous call with retries
 
 All of these options allow the endpoints to adapt less to each other. But for large enterprises with hundreds or thousands of systems, this does make sense for several integration scenarios. It should be noted that most of these benefits can be achieved by separate and smaller integration apps, just as well as an ESB can provide them centrally.
 

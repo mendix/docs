@@ -1,7 +1,7 @@
 ---
 title: "Introduction to the SDK"
 category: "Mendix Platform SDK"
-menu_order: 10
+menu_order: 1
 tags: ["SDK", "Mendix SDK", "Platform SDK", "Model SDK", "metadata"]
 # (When content is updated here, it should also be updated on https://developers.mendix.com/sdk/, contact Ben)	
 ---
@@ -40,7 +40,7 @@ For detailed information on getting started with the Platform SDK and Model SDK,
 
 Move your legacy applications into a cloud-based, modern technology.  The Platform SDK empowers you to build legacy software transformation tools that target the Mendix Platform. 
 
-For more information, see [Use Case Examples](use-case-examples#importing).
+For more information, see [Use Case Examples](sdk-use-cases#importing).
 
 ### 3.2 Analyzing Your Apps
 
@@ -48,7 +48,7 @@ For more information, see [Use Case Examples](use-case-examples#importing).
 
 If you are looking to improve your existing app models, it can be hard  to figure out where the complexity is. Mendix models are completely open and accessible, making it possible to automate model quality analysis.
 
-For more information, see [Use Case Examples](use-case-examples#analyzing).
+For more information, see [Use Case Examples](sdk-use-cases#analyzing).
 
 ### 3.3 Exporting Your Apps
 
@@ -56,7 +56,7 @@ For more information, see [Use Case Examples](use-case-examples#analyzing).
 
 The SDK allows you to export your app model and take it anywhere. So  take any page, microflow, or other model element and transform it into code, documentation, or scaffolding for a testing tool. 
 
-For more information, see [Use Case Examples](use-case-examples#exporting).
+For more information, see [Use Case Examples](sdk-use-cases#exporting).
 
 ### 3.4 Modifying Your Apps
 
@@ -64,10 +64,10 @@ For more information, see [Use Case Examples](use-case-examples#exporting).
 
 Updating your existing Mendix app models can sometimes be tedious to do by hand. Write a script to execute all the boring changes automatically. Focus on the creative and fun parts of your app! 
 
-For more information, see [Use Case Examples](use-case-examples#modifying).
+For more information, see [Use Case Examples](sdk-use-cases#modifying).
 
 ## 4 Openness
 
 The Mendix Model SDK provides you with a whole new way of interacting with your app. Through this API, you get full access to all the aspects of your app model, enabling you to both read from and write to it. We have opened up our metamodel, which is a detailed description of how all Mendix app models are structured.
 
-To explore the inner-workings of Mendix apps, see the [Mendix Platform SDK Reference Documentation](reference-documentation). 
+To explore the inner-workings of Mendix apps, see the [Mendix Platform SDK Reference Documentation](sdk-refguide). 

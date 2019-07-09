@@ -14,7 +14,7 @@ With Mendix, you can create different channels (for example, responsive, hybrid 
 
 With Mendix 8, it is possible to build fully native mobile apps. Native mobile apps differ from hybrid apps: they do not render inside a web view, but use native UI elements instead. This results in fast performance, smooth animations, natural interaction patterns (like swipe gestures), and improved access to all native device capabilities.  To make such responsive native apps, Mendix leverages the popular open-source framework [React Native](https://facebook.github.io/react-native/).
 
-You build Mendix native mobile apps the same way you build web or hybrid apps. You can use pages, widgets, nanoflows, JavaScript actions, microflows, and many other familiar elements to build your app. For more information on how to to build a native app, see [How to Create and Test a Native Mobile App](/howto/mobile/getting-started-with-native-mobile).
+You build Mendix native mobile apps the same way you build web or hybrid apps. You can use pages, widgets, nanoflows, JavaScript actions, microflows, and many other familiar elements to build your app. For more information on how to to build a native app, see [Get Started with Native Mobile](/howto/mobile/getting-started-with-native-mobile).
 
 There are some differences, however, between building native apps and building hybrid apps. For example, the set of widgets (and their available properties) differs slightly when optimizing for native mobile apps. In addition, native apps' theming and styling is based on JavaScript instead of SASS/CSS. For more information on styling, see [Native Styling](native-styling-refguide). 
 
@@ -24,7 +24,7 @@ Mendix's hybrid mobile apps are versatile apps viewed through mobile web browser
 
 Mendix uses [Cordova](https://cordova.apache.org/) in combination with [PhoneGap Build](http://build.phonegap.com/) to build mobile apps which can leverage certain device features and be published to the Apple App Store or Google Play store. Cordova creates a native wrapper around a web application and provides access to native functions through a JavaScript API. These apps are called "hybrid" because they are hybrids of both web and native apps.
 
-For your hybrid app to access a device's native functions, Mendix provides several widgets in the [Mendix App Store](https://appstore.home.mendix.com/index3.html). You can also build your own custom widgets or JavaScript actions  which leverage native features. For more information on building custom widgets or JavaScript actions, see [How to Build Pluggable Widgets](/howto/extensibility/pluggable-widgets) and [How to Write JavaScript Actions](/howto/extensibility/write-javascript-actions).
+For your hybrid app to access a device's native functions, Mendix provides several widgets in the [Mendix App Store](https://appstore.home.mendix.com/index3.html). You can also build your own custom widgets or JavaScript actions  which leverage native features. For more information on building custom widgets or JavaScript actions, see [How to Build Pluggable Widgets](/howto/extensibility/pluggable-widgets) and [Make JavaScript Actions](/howto/extensibility/build-javascript-actions), respectively.
 
 ## 4 Offline-First Apps
 
@@ -34,6 +34,6 @@ Mendix's native mobile apps are always configured with offline-first capabilitie
 
 ## 5 Main Documents in This Category
 
-* [Native Mobile](native-mobile)
-* [Hybrid Mobile](hybrid-mobile)
-* [Offline First](offline-first)
+* [Native Mobile](native-mobile) – presents information on building fully native mobile apps with the Mendix Platform that utilize native UI elements
+* [Hybrid Mobile](hybrid-mobile) – describes how to prepare, package, and customize Mendix hybrid apps
+* [Offline First](offline-first) – provides details on the architectural concepts of offline-first applications in Mendix

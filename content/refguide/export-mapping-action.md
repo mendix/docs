@@ -1,12 +1,12 @@
 ---
-title: "Export Mapping Action"
-parent: "microflow-activities"
-tags: ["studio pro"]
+title: "Export With Mapping"
+parent: "integration-activities"
+tags: ["studio pro", "integration activity", "export mapping action", "export to xml"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="info" %}}
-This activity can only be used in microflows, not in nanoflows.
+{{% alert type="warning" %}}
+This activity can only be used in **Microflows**.
 {{% /alert %}}
 
 
@@ -14,11 +14,11 @@ This activity can only be used in microflows, not in nanoflows.
 
 ![](attachments/19202807/19399019.png)
 
-With the Export Mapping action, you can export the data stored in [domain model](domain-model) entities into an XML document, JSON document, or string variable.
+With the Export With Mapping action, you can export the data stored in [domain model](domain-model) entities into an XML document, JSON document, or string variable.
 
 {{% alert type="info" %}}
 
-For details on the properties that all activities share (for example, caption), see [Microflow Element Common Properties](microflow-element-common-properties). This page only describes the properties specific to the action.
+For details on the properties that all activities share (for example, caption), see [Common Properties](microflow-element-common-properties). This page only describes the properties specific to the action.
 
 {{% /alert %}}
 
@@ -29,9 +29,9 @@ For details on the properties that all activities share (for example, caption), 
 The [Export Mapping](export-mappings) action defines in which way the data in the [domain model](domain-model) corresponds with the XML schema or JSON structure.
 
 {{% alert type="info" %}}
- 
+
 Export mappings support flat JSON. You can select a JSON structure document in an export mapping, and you can select JSON elements that are at most one level deep. That means that you can export simple JSON objects like `{"Name":"John", "Age":46}`.
- 
+
 {{% /alert %}}
 
 ### 2.2 Parameter Type

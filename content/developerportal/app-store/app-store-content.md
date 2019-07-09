@@ -5,6 +5,7 @@ menu_order: 20
 tags: ["app store", "Studio Pro"]
 description: "Covers the basics of how to access the App Store from Studio Pro and provides examples of how to add a widget and module to your app."
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
+#The anchors downloading, widget, and project-layout below are mapped, so they should not be removed or changed.
 ---
 
 ## 1 Introduction
@@ -163,6 +164,6 @@ To delete a theme, remove the *.zip* file from your project's **theme** folder.
 * [How to Share App Store Content](share-app-store-content)
 * [App Store Content Support](app-store-content-support)
 * [Common Widget Properties](/refguide/common-widget-properties)
-* [How to Install the SMTP Email Module](/howto/extensibility/install-and-configure-the-smtp-module)
+* [How to Install the SMTP Email Module](/howto/integration/install-and-configure-the-smtp-module)
 * [My Top 5 Mendix Widgets for Speeding Up Application Development](http://www.mendix.com/blog/top-5-mendix-widgets-speeding-application-development/)
 

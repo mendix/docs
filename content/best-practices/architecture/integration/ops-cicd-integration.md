@@ -1,7 +1,7 @@
 ---
 title: "Ops & CI/CD Integration"
-parent: "integration-overview"
-menu_order: 10
+parent: "integration-solutions"
+menu_order: 8
 draft: true
 ---
 

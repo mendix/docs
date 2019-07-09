@@ -4,8 +4,8 @@ parent: "client-activities"
 tags: ["studio pro"]
 ---
 
-{{% alert type="info" %}}
-This activity can only be used in microflows, not in nanoflows.
+{{% alert type="warning" %}}
+This activity can be used in both **Microflows** and **Nanoflows**.
 {{% /alert %}}
 
 ## 1 Introduction
@@ -14,7 +14,7 @@ With the show-message action you can show a blocking or non-blocking message to 
 
 {{% alert type="info" %}}
 
-See [Microflow Element Common Properties](microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
+See [Common Properties](microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
 
 {{% /alert %}}
 
@@ -48,7 +48,7 @@ With parameters you can customize your message with data specific to the situati
 
 ### 2.4 Blocking
 
-Blocking defines whether the message appears with a hover on top of the existing form(s).
+Blocking defines whether the message appears with a hover on top of the existing page(s).
 
 | Option | Description |
 | --- | --- |

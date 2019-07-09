@@ -147,7 +147,7 @@ Flows are lines connecting the elements. You can find the description of flows i
 | Flow            | Image                                                        | Description                                                  |
 | --------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | Sequence Flow   | ![Sequence Flow](attachments/microflows/sequence-flow.png)   | A sequence flow is an arrow that links events, activities, splits and merges with each other. Thus, it defines the order of execution. Flows always flow in one direction where elements follow each other up one by one. Splits always lead to one direction so it is not possible that multiple flows take place simultaneously. |
-| Annotation Flow | ![Annotation Flow](attachments/microflows/annotation-flow.png) | An annotation flow is a connection that can be used to link an annotation to a flow object(s). For more information, see [Annotation Flow](/refguide/annotation-flow) in the *Mendix Studio Pro Guide*. |
+| Annotation Flow | ![Annotation Flow](attachments/microflows/annotation-flow.png) | An annotation flow is a connection that can be used to link an annotation to a flow object(s). |
 
 ## 7 Activity Icons 
 

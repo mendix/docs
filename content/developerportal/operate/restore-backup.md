@@ -10,7 +10,7 @@ tags: ["Backup", "Restore", "Mendix Cloud", "Developer Portal", "backup file for
 
 This page describes how to restore a backup to the Mendix Cloud.
 
-The backup can be stored in the cloud, associated with the environment from which it was made. Alternatively, it can be a backup which has been stored locally, for example by downloading a backup from the Mendix Cloud (see [Download a Backup](download-backup)) for more information.
+The backup can be stored in the cloud, associated with the environment from which it was made. Alternatively, for licensed nodes it can be a backup which has been stored locally, for example by downloading a backup from the Mendix Cloud (see [Download a Backup](download-backup)) for more information.
 
 {{% alert type="info" %}}
 You can only restore a backup if you have sufficient rights to the target node. See [Node Permissions](/developerportal/deploy/node-permissions) for more information.
@@ -63,6 +63,8 @@ To transfer backups between environments, you will need a downloaded backup file
 6. In Mendix Cloud **V4** you will now need to restore your backup which is held in the Mendix Cloud, as described in [Restoring a Backup for the Same Licensed Cloud Node](#restore-cloud-backup), above.
 
 ## 4 Restoring a Backup for a Free App
+
+For a Free App, you can only restore available backups which are made from the app and held in the cloud. It is not possible to upload a backup which was created or stored elsewhere.
 
 1. Go to the **Backups** page of the *Developer Portal* for your app.
 

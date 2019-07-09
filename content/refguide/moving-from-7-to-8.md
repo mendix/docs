@@ -36,7 +36,7 @@ You should always convert your project from the latest release of Mendix version
 
 Review your app project in combination with the sections below and assess if further action needs to be taken before upgrading to Mendix 8.
 
-In particular, it is easier to fix deprecations in Java actions (see [Deprecated and Removed APIs](#deprecated-apis)) in Mendix 7 before upgrading to Mendix 8. However, Float and Currency deprecation errors will be easier to fix in Mendix 8 instead (see the section [Elements of Type Float & Currency](#float-currency) below for instructions).
+In particular, it is easier to fix deprecations in Java actions (see [Java Version, Deprecated and Removed APIs](#deprecated-apis)) in Mendix 7 before upgrading to Mendix 8. However, Float and Currency deprecation errors will be easier to fix in Mendix 8 instead (see the section [Elements of Type Float & Currency](#float-currency) below for instructions).
 
 ### 2.4 Save Version 7 Project
 
@@ -76,7 +76,9 @@ Test the app for any unexpected results.
 Congratulations! Your app has been successfully upgraded to Mendix 8 and you can continue working as normal.
 {{% /alert %}}
 
-## 3 Deprecated & Removed APIs {#deprecated-apis}
+## 3 Java Version, Deprecated & Removed APIs {#deprecated-apis}
+
+Mendix 8 runs on Java 11, whereas Mendix 7 runs on Java 8. Make sure that your Java actions are compatible with Java 11. The official Java 8 to 11 migration guide can be found in the [Migrating From JDK 8 to Later JDK Releases](https://docs.oracle.com/en/java/javase/11/migrate/index.html#JSMIG-GUID-7744EF96-5899-4FB2-B34E-86D49B2E89B6) section of the *Oracle JDK Migration Guide*.
 
 Deprecated Java actions should be fixed in Mendix 7, before you migrate the app project to Mendix 8.
 
@@ -142,9 +144,64 @@ Follow the instructions in [Migration From the Sync Process to Collaborative Dev
 
 Apps made in Mendix Studio Pro cannot be deployed to *Version 3* of the Mendix Cloud. If you are using a licensed Mendix Cloud V3 node, then we recommend that you upgrade to Mendix Cloud V4. If this is not possible, you will need to continue to use Mendix version 7 to create and maintain your apps.
 
-## 8 Troubleshooting
+## 8 Java Code Generation
 
-### 8.1 Cannot Open Project: `Layout … has an invalid value …`
+In Mendix Studio Pro version 8, we are changing the way we generate Java code for Java actions and datasets.
+
+Mendix Desktop Modeler version 7 sometimes appended a postfix (for example, `Parameter1`) to the names of parameters of Java actions and datasets. This behavior was necessary to prevent name conflicts in the generated code. In the minor releases of Mendix Desktop Modeler 7, we introduced a number of fixes to prevent those conflicts from happening, making this behavior redundant.
+
+We also noticed that by attempting to prevent those name conflicts, we sometimes caused Java compilation failures, which seemed completely unrelated to what you were working on. Seeing that appending a postfix is now completely unnecessary and introduces quite a few problems on bigger app projects, we decided to remove it completely.
+
+What does that mean in practice? For most app projects, nothing changes and everything still works as it used to. But, in a limited number of cases, Mendix Desktop Modeler version 7 will have introduced a postfix for your parameter name. For example, a parameter called `Customer` might become `CustomerParameter1` in the generated Java code. This postfix will be removed when you migrate your app to Mendix Studio Pro 8.
+
+In these few casesyou need to make a simple fix before your code will compile again:
+
+* If it is a Java action in a module downloaded from the App Store that is causing errors, just download it again, or update it to the latest version
+* If it is your own Java action, then the fix is ever easier – just remove those postfixes from your Java code (in the previous example, `CustomerParameter1` just becomes `Customer` again).
+
+### 8.1 Example of Differences
+
+In this example we have a Java action called `LogMessage`, which has a parameter called `Message`. In Mendix Modeler version 7 if you introduced a domain model entity also called `Message`, we would generate the following Java code for you (please note that some code is omitted for readability):
+
+```java
+        public LogMessage(IContext context, java.lang.String MessageParameter1)
+        {
+            super(context);
+            this.MessageParameter1 = MessageParameter1;
+        }
+        @java.lang.Override
+        public java.lang.Boolean executeAction() throws Exception
+        {
+            // BEGIN USER CODE
+            Core.getLogger("MyLogger").info(this.Message);
+            // END USER CODE
+        }
+```
+
+As you can see, instead of naming the parameter `Message` now Mendix Modeler version 7 names it `MessageParameter1`. In the user code of the `executeAction()` method, `this.Message` is used to log a message. This means that the code won’t compile.
+
+Studio Pro 8 will generate the following code for you:
+
+```java
+        public LogMessage(IContext context, java.lang.String Message)
+        {
+            super(context);
+            this.Message = Message;
+        }
+        @java.lang.Override
+        public java.lang.Boolean executeAction() throws Exception
+        {
+            // BEGIN USER CODE
+            Core.getLogger("MyLogger").info(this.Message);
+            // END USER CODE
+        }
+```
+
+This code behaves as expected and works out of the box. However, if you previously changed your user code to comply with the way Mendix Modeler version 7 was generating this code, you just need to update your user code to use the new names of parameters.
+
+## 9 Troubleshooting
+
+### 9.1 Cannot Open Project: `Layout … has an invalid value …`
 
 Very rarely, you may receive a message similar to the one below when opening a project in Mendix Studio Pro 8 which needs to be upgraded from a previous version of Mendix.
 
@@ -157,3 +214,11 @@ See the image below for an indication of where you might find the error in your 
 ![Location of Layouts Error](attachments/moving-from-7-to-8/layout-error-location.png)
 
 To resolve this issue, use the previous version of Mendix to change the invalid **Layout type** (in the example above, `Legacy`) to a valid value.
+
+### 9.2 DOM and Atlas UI Issues
+
+Mendix 8 comes with several improvements to its DOM structure. These DOM changes will also affect the Sass styling of app projects. Mendix 8 app projects are also meant to be completed using [Atlas UI Resources](https://appstore.home.mendix.com/link/app/104730/) (v2.0.0 or higher). Upgrading your Atlas UI can cause issues with your app project's theming. To troubleshoot either DOM or Atlas UI migration issues, consult the following documents:
+
+* [Troubleshooting DOM Changes](migration-dom-issues)
+* [Troubleshooting Atlas UI Changes](migration-atlas)
+

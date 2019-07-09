@@ -98,12 +98,11 @@ howto:
     - "Logic & Business Rules"
     - "Integration"
     - "Extensibility"
-    - "Custom Widgets"
     - "Security"
     - "Testing"
     - "Monitoring & Troubleshooting"
     - "SAP"
-    - "Siemens MindSphere"    
+    - "Siemens"    
   banner:
     type: 'info'
     text: 'You are browsing the documentation for Mendix 8, which is currently a beta release. For more information, see <a href="/releasenotes/beta-features/index">Mendix Beta Features</a>.'
@@ -160,7 +159,7 @@ refguide:
     - "Java Programming"
     - "SAP"
     - "IBM"
-    - "Siemens MindSphere"
+    - "Siemens"
   banner:
     type: 'info'
     text: 'You are browsing the documentation for Mendix 8, which is currently a beta release. For more information, see <a href="/releasenotes/beta-features/index">Mendix Beta Features</a>.'
@@ -213,3 +212,10 @@ best-practices:
   menu_categories:
     - "Best Practices Overview"
     - "Architecture"
+partners:
+  space: "Strategic Partners Guide"
+  priority: false
+  menu_categories:
+    - "IBM"
+    - "SAP"
+    - "Siemens"

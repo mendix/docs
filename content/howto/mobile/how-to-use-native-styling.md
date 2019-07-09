@@ -13,7 +13,7 @@ With Mendix 8, you have the capacity to alter design properties with Mendix Stud
 ## 2 Prerequisites 
 
 * Install an integrated development environment (IDE) of your choice (Mendix recommends [Microsoft Visual Studio Code](https://code.visualstudio.com/))
-* Create a Mendix app based on the Quickstarter App template by following the [Creating a New Project Based on the Quickstart App](getting-started-with-native-mobile#quickstartapp) section of *Create and Test a Native Mobile App*
+* Create a Mendix app based on the Quickstarter App template by following the [Creating a New App Project Based on the Quickstart App](getting-started-with-native-mobile#quickstartapp) section of *Get Started with Native Mobile*
 
 ### 3 Customizing the Quickstart App
 
@@ -38,7 +38,7 @@ These resources let you style your app with a wide variety of interface parts. H
 
 	![default button](attachments/how-to-use-native-styling/default-button.png)
 
-3. Open *theme/styles/mobile/core/variables.js* using your IDE of choice.
+3. Open *theme/styles/mobile/custom/custom-variables.js* using your IDE of choice.
 4. Change the `brand.primary` from **#0595DB** to *rosybrown*:
 
 	```javascript
@@ -93,8 +93,6 @@ Design properties are easy-to-use classes in Mendix Studio Pro which you do not 
 
 ## 6 Creating Your Own Classes {#6-creating-your-own-classes}
 
-{{% todo %}}[throw core widget link in there when it comes online in the next few weeks]{{% /todo %}}
-
 When you have specific design requirements, you will need to build custom classes to fit. To harness the power of custom classes, follow the instructions below.
 
 1. Place a fourth button widget on your app's home page.
@@ -116,9 +114,9 @@ When you have specific design requirements, you will need to build custom classe
 	}
 	```
 	
-	When you alter a class on your own, you can look up the widget's structure in [core widgets refguide link TBR].
+	To alter a class on your own, consult [Native Styling](/refguide/native-styling-refguide) to understand widget structures.
 
-6. Create a custom button widget by removing the background color of the default button widget:
+6. Apply a transparent background color to customize the the default button widget:
 
 	```javascript
 	export const className = {
@@ -187,4 +185,4 @@ Congratulations! By completing this how-to, you have learned how to alter a styl
 * [Implement Native Styling](native-styling)
 * [Native Styling](/refguide/native-styling-refguide)
 * [Mendix Atlas UI](../front-end/atlas-ui)
-* [Create and Test a Native Mobile App](getting-started-with-native-mobile)
+* [Get Started with Native Mobile](getting-started-with-native-mobile)

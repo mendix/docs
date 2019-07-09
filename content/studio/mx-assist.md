@@ -8,9 +8,9 @@ tags: ["studio", "mendix assist", "AI", "assistant"]
 
 ## 1 Introduction 
 
-Mendix Assist is an Artificially Intelligence powered agent that helps you configure microflows in Mendix Studio. It gives unexperienced users recommendations on configuring the next step of the microflow based on activities, parameters, and events that already exist in the microflow.
+Mendix Assist is an artificial intelligence-powered agent that helps you configure microflows in Mendix Studio. It gives unexperienced users recommendations on configuring the next step of the microflow based on activities, parameters, and events that already exist in the microflow.
 
-Mendix Assist was built using Machine Learning analysis of over twelve million anonymized application flows built with Mendix. Mendix uses Deep Learning to detect best practice patterns in microflows. Based on these patterns Mendix Assist predicts the best options for the next activity in a microflow. Moreover, Mendix Assist keeps learning by analyzing new microflows being built.  
+Mendix Assist was built using machine learning analysis of over twelve million anonymized application flows built with Mendix. Mendix uses Deep Learning to detect best practice patterns in microflows. Based on these patterns Mendix Assist predicts the best options for the next activity in a microflow. Moreover, Mendix Assist keeps learning by analyzing new microflows being built.  
 
 ## 2 Mendix Assist Overview
 

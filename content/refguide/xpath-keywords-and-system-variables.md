@@ -44,6 +44,10 @@ These will be created for each user role in your app project. Here is an example
 | --- | --- |
 | `[%UserRole_Administrator%]` | The Administrator user role. |
 
+Here is an example for retreiving that user role: 
+
+![](attachments/xpath/user-role.png)
+
 ### 3.3 Time-Related
 
 The following tokens can be used to obtain a date and time value:

@@ -1,8 +1,8 @@
 ---
 title: "Starting With Your Own Data"
 description: "Describes how to import an Excel spreadsheet to your domain model in Mendix Studio."
-draft: true
 tags: ["studio", "domain model", "excel import", "start with data", "data model"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction 
@@ -51,7 +51,7 @@ Download this Excel spreadsheet example to check how data is normalized there: [
 
 When you create your app, a page where you can upload your spreadsheet is opened. Drag and drop your spreadsheet on the page or browse your files and choose the one you would like to import.
 
-{{% image_container width="350" %}}![](attachments/start-with-data/drag-and-drop.png)
+{{% image_container width="500" %}}![](attachments/start-with-data/drag-and-drop.png)
 {{% /image_container %}}
 
 {{% alert type="info" %}}
@@ -64,7 +64,8 @@ If you choose to start without data, you will have just a blank app, and will no
 
 Once you select the spreadsheet for import, your data is analyzed and worksheets that have relations (associations) are identified: 
 
-![](attachments/start-with-data/relations-identified.png)
+{{% image_container width="400" %}}![](attachments/start-with-data/relations-identified.png)
+{{% /image_container %}}
 
 In the **Data Preview**, you can check the spreadsheet data before the actual import is completed. You can review tables and columns and untick the ones that you do not want to import. Tables that have relations (associations) detected are indicated with a link icon:
 
@@ -106,7 +107,8 @@ You can take a brief tour showing you how your file has been converted.
 
 Open the domain model to see all created entities and attributes:
 
-![](attachments/start-with-data/domain-model-example.png)
+{{% image_container width="350" %}}![](attachments/start-with-data/domain-model-example.png)
+{{% /image_container %}}
 
 {{% alert type="success" %}}
 

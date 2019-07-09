@@ -5,7 +5,7 @@ tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-Use this dialog box to download an app from an SVN version control server. Note that you can use the [Open App Dialog](open-app-dialog) for this, too. You only need to use this form in the specialized case that you want a second download of an app (and development line) you already have on disk.
+Use this dialog box to download an app from an SVN version control server. Note that you can use the [Open App Dialog](open-app-dialog) for this, too. You only need to use this dialog box in the specialized case that you want a second download of an app (and development line) you already have on disk.
 
 ## Location
 
@@ -21,7 +21,7 @@ This option is only available when support for other SVN servers is enabled in t
 
 From the list select the Team Server app you wish to open, then choose the development line that you want to download.
 
-For more information about the Mendix Team Server, see [Team Server](team-server).
+For more information about the Mendix Team Server, see [Team Server Overview](/developerportal/develop/team-server).
 
 For more information about development lines, see [Version Control](version-control).
 

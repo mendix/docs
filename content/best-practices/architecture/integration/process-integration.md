@@ -1,7 +1,7 @@
 ---
 title: "Process Integration"
-parent: "integration-overview"
-menu_order: 8
+parent: "integration-solutions"
+menu_order: 6
 draft: true
 ---
 
@@ -11,11 +11,11 @@ Process integration is a wide and important area that promises automation, digit
 
 When a business process runs across several systems, there will be some type of process integration. There are many ways this can be done:
 
-* **Business event integration** – Work finishes in one app, and the next app is notified to start the next step of the process automatically. This avoids, for example, sending emails and having to retype information into another system.
+* **Business event integration** – Work finishes in one app, and the next app is notified to start the next step of the process automatically. This avoids the need to, for example, send emails and retype information into another system.
 
 	![](attachments/process-integration/process-int1.png)
 
-* **Workflow integration** – A user works in one app and then continues the same process in another app (for example, via a deep link). By enabling this integration, you can have specialized apps or microservices that evolve separately, but for the end-user it seems to be the same system. For more information, refer to [Workflow Integration with Data Transfer Example](workflow-int-data-transfer).
+* **Workflow integration** – A user works in one app and then continues the same process in another app (for example, via a deep link). By enabling this integration, you can have specialized apps or microservices that evolve separately, but for the end-user it seems to be the same system. For more information, refer to [Example – Workflow Integration with Data Transfer](workflow-int-data-transfer).
 
 	![](attachments/process-integration/process-int2.png)
 
@@ -23,7 +23,7 @@ When a business process runs across several systems, there will be some type of 
 
 	![](attachments/process-integration/process-int4.png)
 
-* **Process orchestration** – A system actively orchestrates a process across several systems, keeping track of status, re-trying when required, and escalating to human workflow when required. This is useful for automating transaction processing (for example, in banks), for provisioning a bill of materials, and when a business event should lead to updates in several systems in parallel.
+* **Process orchestration** – A system actively orchestrates a process across several systems, keeping track of status, retrying when required, and escalating to human workflow when required. This is useful for automating transaction processing (for example, in banks), for provisioning a bill of materials, and when a business event should lead to updates in several systems in parallel.
 	
 	![](attachments/process-integration/process-int3.png)
 
@@ -70,7 +70,9 @@ Kafka is often used as an advanced queueing system for one-way communications, s
 
 Mendix is often used as a workflow tool, where a partly manual business process is implemented in a Mendix app. The Mendix app can perform the workflow on top of SAP or legacy systems, or the app could be a departmental “business portal” that allows users to work in one single app instead of opening 10-20 different applications.
 
-[Workflow integration](workflow-integration) means that the human workflow is handled across several apps via links in the UI (which are usually deep links). The end-user is often unaware that there are two separate apps. Sometimes you need to copy data behind the scenes, so the user has new data when they come back to the original app.
+Workflow integration means that the human workflow is handled across several apps via links in the UI (which are usually deep links). The end-user is often unaware that there are two separate apps. Sometimes you need to copy data behind the scenes, so the user has new data when they come back to the original app.
+
+For more information, see [How to Do Workflow Integration](#how-workflow-int).
 
 ### 3.1 Example 1 – Dashboard for Standard Microservices System
 
@@ -163,6 +165,57 @@ The Mendix Platform can be used for building all of the components in the diagra
 
 * Automated straight-through processing apps
 * Internal dashboards and control apps
+
+## 7 How to Do Workflow Integration {#how-workflow-int}
+
+In most architectures, there are business processes that exceed the functionality of a single microservice app. In that case, there will be some transactional data used in that process that needs to be transferred between the microservices involved. Often, there will be a deep link for users to navigate between the apps.
+
+Workflow integration can involve a business workflow that is executed across separate apps that also transfers data between the two apps. For a practical example, see [Example – Workflow Integration with Data Transfer](workflow-int-data-transfer).
+
+### 7.1 Continuing the Workflow in Another App
+
+To transfer a user from one app to the next in a business process, two options are available to use:
+
+* Page URLs
+* [Deep Link Module](https://appstore.home.mendix.com/link/app/43/) from the Mendix App Store
+
+Both URLs and deep links can be used to continue the workflow in another app.
+
+This table presents the pros and cons for these options:
+
+| | Pros | Cons |
+| --- | --- | --- |
+| **Page URLs** | Built into the Desktop Modeler | Only for pages, no parameters possible    |
+| **Deep link module** | Can start microflows; very flexible with link parameters | [Deep Link Module](https://appstore.home.mendix.com/link/app/43/) (with [Platform support](/developerportal/app-store/app-store-content-support)) |
+
+Page URLs are very easy to use in the Mendix Platform, but the platform currently only supports opening a page and does not support custom parameters. More flexibility is needed for this case, both to trigger integration logic when opening a link and to link to specific objects using link parameters.
+
+### 7.2 Copying Data Over Between Apps
+
+When parts of data have been copied over, they need to be kept up to date. This is often done with a REST pull method (for more information, see the [REST Pull to Transfer Data](service-integration#pull-transfer) section of *Service Integration*).
+
+To replicate data, use an API with a meaningful business object tree. Transferring related objects simultaneously is a little more difficult to set up, but it is better for data consistency. You should handle deleted data as “soft deletes” in the owning app so that the data will not disappear for the client and can be recovered if necessary.
+
+In some cases, transactional data needs to be available instantly, and the app cannot afford to wait for an asynchronous pull process. When opening a deep link, the client app should synchronously trigger the existing pull process to retrieve the data on demand.
+
+The Mendix Platform natively supports the following technologies for keeping data in sync between apps:
+
+* REST
+* SOAP
+* OData
+
+This table presents the pros and cons for these options:
+
+| | Pros | Cons |
+| --- | --- | --- |
+| **REST** | Intended for publishing data; more efficient message format (JSON); reusable in custom widgets | Less support for data schema validation |
+| **SOAP** | Strong schema support | Intended for operations in a verbose message format (XML) |
+| **OData** | Using standard HTTP(S) connectivity; part of Mendix core | Does not support binary interface |
+| **Batch** | N/A | N/A |
+| **File** | N/A | N/A |
+| **Database** | N/A | N/A |
+
+The most frequently used option between Mendix apps is to use the REST protocol.
 
 ## 7 Summary
 

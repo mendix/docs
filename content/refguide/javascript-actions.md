@@ -1,10 +1,15 @@
 ---
 title: "JavaScript Actions"
-category: "App Modeling"
+parent: "resources"
+menu_order: 20
 description: "This reference guide details the ways JavaScript Actions can extend the functionality of your Mendix app."
 tags: ["javascript", "javascript action", "parameter", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
+
+{{% alert type="warning" %}}
+This activity can only be used in **Nanoflows**.
+{{% /alert %}}
 
 ## 1 Introduction
 
@@ -18,7 +23,7 @@ The skeletons of these *.js* files are generated automatically when you save an 
 
 {{% /alert %}}
 
-For a tutorial on creating, configuring, and using a JavaScript action, see this [Write JavaScript Actions](/howto/extensibility/write-javascript-actions) how-to.
+To learn how to create, configure, and use a JavaScript action, see these [Make JavaScript Actions](/howto/extensibility/build-javascript-actions) how-to's.
 
 ## 2 General Settings
 
@@ -123,6 +128,6 @@ In the **Code** tab, you can edit the JavaScript action code without leaving Stu
 
 * [JavaScript Action Call](javascript-action-call)
 * [Nanoflows](nanoflows)
-* [Write JavaScript Actions](/howto/extensibility/write-javascript-actions)
+* [Make JavaScript Actions](/howto/extensibility/build-javascript-actions)
 * [Java Action Call](java-action-call)
 * [Microflow Call](microflow-call)

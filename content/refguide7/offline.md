@@ -30,6 +30,8 @@ Because synchronization depends on the regular runtime APIs, the models of the a
 
 Synchronization of files is only triggered by modifications to the attributes of the object, not by modifying the contents of the file itself.
 
+{{% alert type="warning" %}}When a synchronization error occurs because of one the reasons above, an object's commit is skipped, its changes are ignored, and references from other objects to it become invalid. Objects referencing such a skipped object (which are not triggering errors) will be synchronized normally. Such a situation is likely to be a modeling error and is logged on the server.{{% /alert %}}
+
 ## 4 Restrictions {#restrictions}
 
 ### 4.1 Microflows
@@ -94,7 +96,7 @@ For more information on offline apps, see [Configuring Hybrid Mobile Apps to Run
 
 Mendix does not have a recommended maximum app size for the synchronization process. This process depends on the amount of data as well as the connection quality and speed of the mobile device. 
 
-The timeout should be set to 30 seconds per entity downloaded. This change was introduced in the [July 3rd, 2018 hybrid app release](/releasenotes/mobile/hybrid-app#7318).
+The timeout should be set to 30 seconds per entity downloaded. This change was introduced in the [July 3rd, 2018 Hybrid App Base & Template](/releasenotes/mobile/hybrid-app#7318) release.
 
 In addition, Mendix recommends limiting the amount of data and syncing as much as possible by configuring security access so that users do not sync entities they do not need.
 

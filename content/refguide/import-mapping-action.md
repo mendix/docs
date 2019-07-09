@@ -1,12 +1,12 @@
 ---
-title: "Import Mapping Action"
-parent: "microflow-activities"
-tags: ["studio pro"]
+title: "Import With Mapping"
+parent: "integration-activities"
+tags: ["studio pro", "import xml", "import mapping action", "integration activity"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert type="info" %}}
-This activity can only be used in microflows, not in nanoflows.
+{{% alert type="warning" %}}
+This activity can only be used in **Microflows**.
 {{% /alert %}}
 
 
@@ -39,7 +39,7 @@ If the import mapping is based on a [message definitions](message-definitions), 
 ### 3.4 If No Object Was Found
 
 You can indicate what should happen **if no object was found** when the import mapping has checked the box **decide this at the place where the mapping gets used**.
- 
+
 ### 3.5 Parameter
 
 If the selected mapping requires a parameter, you can choose it here.

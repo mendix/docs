@@ -28,7 +28,7 @@ The font tab page in the style editor.
 
 {{% /alert %}}
 
-If you'd like to show text in a language with uncommon characters such as Arabic or Thai, make sure you select a font in the style editor that supports these characters. 'Tahoma' is such a font.
+If you'd like to show text in a language with uncommon characters such as Arabic or Thai, make sure you select a font in the style editor that supports these characters.
 
 ### Cell styling
 

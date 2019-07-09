@@ -2261,6 +2261,7 @@ module.exports = {
       from: "/addons/APM",
       to: "/addons/apm/"
     },
+	{
 	  from: "/apm/installation-guide",
 	  to: "/addons/apm/ig2"
 	},

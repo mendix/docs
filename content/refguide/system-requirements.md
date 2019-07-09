@@ -17,7 +17,7 @@ Mendix [Studio Pro](modeling) supports 64-bit versions of Windows 7, 8, and 10. 
 
 The following frameworks are automatically installed (if necessary):
 
-* Microsoft .NET Framework 4.6.2
+* Microsoft .NET Framework 4.7.2
 * Microsoft Visual C++ 2010 SP1 Redistributable Package
 * Microsoft Visual C++ 2013 Redistributable Package
 * AdoptOpenJDK 11 or Oracle JDK 11 (the former is installed automatically as of [Mendix 8.0.0 Beta 3](/releasenotes/studio-pro/8.0#803) if you do not have any JDK 11 installed) 
@@ -124,5 +124,5 @@ For Mendix apps and the [Mendix Mobile app](getting-the-mendix-app):
 
 MxBuild is a Windows and Linux command-line tool that can be used to build a Mendix Deployment Package. For more information, see [MxBuild](mxbuild).
 
-* Mono v4.6.x or .NET v4.6.2
-* JDK 11
+* Mono v5.20.x or .NET v4.7.2
+* JDK 8.

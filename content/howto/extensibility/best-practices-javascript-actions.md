@@ -408,7 +408,7 @@ Explaining the Promise API code:
 
 * As this is a part of a promise already, it does not need to call a `resolve` function or return a promise itself. This makes error handling on promises easier, as a single error function can be used to catch errors at all three steps: fetch, parse JSON, and accessing the data. For a more detailed explanation, see the [MDN promise documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-* For more information on building a JavaScript action rest consume function, see [Write JavaScript Actions: Part 2(Advanced)](write-javascript-github).
+* For more information on building a JavaScript action rest consume function, see [Write JavaScript Actions: Part 2 (Advanced)](write-javascript-github).
 
 #### 2.3.3 Understanding Common Promise Functions
 

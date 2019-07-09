@@ -29,16 +29,12 @@ To make use of Datadog you will need a Datadog API key. If you already use Datad
 If you are new to Datadog, you will need to get an account first.
 
 1. Go to the Datadog site ([https://www.datadoghq.com/](https://www.datadoghq.com/)) and choose **GET STARTED FREE**.
-
-2. Enter your Datadog account details.
-
-    Once you have entered your details you cannot continue until you have set up your agent.
-
-3. Choose the option **From Source**.
+2. Enter your Datadog account details. Once you have entered your details you cannot continue until you have set up your agent.
+3.  Choose the option **From Source**.
 
     ![The From Source option on the Agent setup screen](attachments/datadog-metrics/from-source.png)
 
-4. Copy the value of *DD_API_KEY* key shown on the install script.
+4.  Copy the value of *DD_API_KEY* key shown on the install script.
 
     ![Source install script shows DD_API_KEY=your API key](attachments/datadog-metrics/dd-api-key.png)
 
@@ -49,12 +45,11 @@ If you are new to Datadog, you will need to get an account first.
 To find your existing API key, or to request a new one for your app, do the following:
 
 1. Login to your Datadog account.
-
-2. Go to the **Integrations > API** screen.
+2.  Go to the **Integrations > API** screen.
 
     ![Datadog site: navigation to Integration, API](attachments/datadog-metrics/datadog-integrations-api.png)
 
-3. Copy an existing **API Key** or create a new one.
+3.  Copy an existing **API Key** or create a new one.
 
     ![Datadog site: API Keys page](attachments/datadog-metrics/datadog-api=keys.png)
 
@@ -65,29 +60,24 @@ To find your existing API key, or to request a new one for your app, do the foll
 To send your runtime information to Datadog, you need to provide the Datadog API key to your environment.
 
 1. Go to the **Environments** page of your app in the *Developer Portal*.
-
 2. Click **Details** to select the environment you wish to monitor with Datadog. 
-
 3. Open the **Runtime** tab.
-
 4. Add a **Custom Environment Variable**.
+5.  Select **DD_API_KEY** from the *Name* dropdown.
 
-5. Select **DD_API_KEY** from the *Name* dropdown.
-
-    ![Dropdown containing custom environment variable names](attachments/datadog-metrics/environment-variable-dd-api-key.png)
+	![Dropdown containing custom environment variable names](attachments/datadog-metrics/environment-variable-dd-api-key.png)
 
 6. Enter the Datadog **API key**, obtained in the [Datadog API Key](#api-key) section, above, as the *Value* of the Environment Variable.
-
 7. Add a second **Custom Environment Variable**:
 
-    * **Name**: *DD_LOG_LEVEL*
-    * **Value**: *INFO*
+	* **Name**: *DD_LOG_LEVEL*
+	* **Value**: *INFO*
 
-        This will ensure that some messages are sent to Datadog. You can change the log level later once you have confirmed that Datadog is receiving them.
+	This will ensure that some messages are sent to Datadog. You can change the log level later once you have confirmed that Datadog is receiving them.
 
-7. Return to the **Environments** page for your app and *Deploy* or *Transport* your app into the selected environment.
+7.  Return to the **Environments** page for your app and *Deploy* or *Transport* your app into the selected environment.
 
-    {{% alert type="warning" %}}Your app must be **redeployed** as additional dependencies need to be included.<br/><br/>Restarting the app is not sufficient to start sending data to Datadog.{{% /alert %}}
+	{{% alert type="warning" %}}Your app must be **redeployed** as additional dependencies need to be included.<br/><br/>Restarting the app is not sufficient to start sending data to Datadog.{{% /alert %}}
 
 8. **Restart** the application.
 
@@ -109,7 +99,7 @@ However, it is possible to add activities and microflows to be passed to DataDog
 
 ### 4.1 Format of Metrics Agent Configuration
 
-You can specify which request handlers, microflows, and activities are reported to Datadog using a JSON configuration with the following format:
+You can specify which request handlers, microflows, and activities are reported to Datadog using a JSON configuration with the following format (note that this is the syntax and not an example of this custom setting):
 
 ```json
 {
@@ -120,7 +110,7 @@ You can specify which request handlers, microflows, and activities are reported 
   ],
   "microflows": [
     {
-      "name": "*" | <microflow>
+      "name": "*" | "<microflow>"
     }
   ],
   "activities": [
@@ -129,17 +119,14 @@ You can specify which request handlers, microflows, and activities are reported 
     }
   ]
 }
-
-
 ```
 
-| Value | What is Sent | Note |
+| Value | What Is Sent | Note |
 | --- | --- | --- |
-| `"name": "*"` | all | default |
-| `"name": "<requesthandler>"` | all request handler calls of this type | see list of request handlers above |
-| `"name": "<microflow>"` | each time this microflow is run | format is `<module>.<microflow>`<br />for example `TrainingManagement.ACT_CancelScheduledCourse`
+| `"name": "*"` | All | Default |
+| `"name": "<requesthandler>"` | All request handler calls of this type | see list of request handlers above |
+| `"name": "<microflow>"` | Each time this microflow is run | The format is `<module>.<microflow>`<br />For example, `TrainingManagement.ACT_CancelScheduledCourse` |
 | `"name": "<activity>"` | all activities of this type | click activities<sup><small>1</small></sup> below to see the list of options |
-
 
 **<details><summary><sup><small>[1]</small></sup>Activities (click to see list)</summary>**
 
@@ -167,9 +154,9 @@ The following Mendix activities can be passed to Datadog:
 
 The following example will send logs for:
 
-* all request handlers
-* the microflow `After_Startup` in the module `Administration`
-* `CreateObject` and `DeleteObject` activities
+* All request handlers
+* The microflow `After_Startup` in the module `Administration`
+* The `CreateObject` and `DeleteObject` activities
 
 ```json
 {
@@ -200,9 +187,9 @@ You pass the configuration to the metrics agent by adding a *Custom Runtime Sett
 
 1. Go to the **Environments** page of your app.
 2. Click **Details** next to the environment you have configured for Datadog.
-3. Add the **Custom Runtime Setting** *MetricsAgentConfig* with the value of the JSON required for your configuration.
+3.  Add the **Custom Runtime Setting** *MetricsAgentConfig* with the value of the JSON required for your configuration.
 
-    ![](attachments/datadog-metrics/metrics-agent-config.png)
+	![](attachments/datadog-metrics/metrics-agent-config.png)
 
 4. Click **Save**.
 5. Restart your app to apply the new settings.

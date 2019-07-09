@@ -101,5 +101,5 @@ The module can now be imported in other apps or uploaded to the [Mendix App Stor
 * [Get Started with Atlas UI](get-started-with-atlasui)
 * [Create Custom Preview Images for Building Blocks & Page Templates](create-custom-preview-images-for-building-blocks-and-page-templates)
 * [Extend Design Properties to Customize Your Studio Experience](extend-design-properties-to-customize)
-* [Migrate Existing Projects to Atlas UI](migrate-existing-projects-to-atlasui)
+* [Migrate Existing App Projects to Atlas UI](migrate-existing-projects-to-atlasui)
 * [Share Company Atlas UI Resources](share-company-atlas-ui-resources)

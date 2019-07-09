@@ -4,18 +4,19 @@ category: "Integration"
 menu_order: 15
 tags: ["synchronize", "user account", "ldap", "integration"]
 ---
-Your client might already have a centralized identity management solution in place, which houses information for all users in the company. If you want to make use of that information in your Mendix app, you can use the LDAP module available in the App Store. This module will allow you to synchronize user data from your LDAP-compatible identity manager to your Mendix app, for example to keep user names consistent across applications, or to allow users to use the same password for multiple apps. The LDAP module supports any LDAP-compatible identity manager. This how-to will teach you how to set up the LDAP module to work with your app, focusing on Microsoft Active Directory. It will give you a basic understanding of the LDAP module, but will skip over some advanced details. The document assumes basic Mendix knowledge, and some basic knowledge of what LDAP is and how it works.
 
-## 1\. Preparation
+## 1 Introduction
 
-1.  Open Mendix Studio Pro.
-2.  Import the following App Store modules into your application model:
+Your company might already have a centralized identity management solution in place, which houses information for all users in the company. If you want to make use of that information in your Mendix app, you can use the LDAP module available in the App Store. This module will allow you to synchronize user data from your LDAP-compatible identity manager to your Mendix app, for example to keep user names consistent across applications, or to allow users to use the same password for multiple apps. The LDAP module supports any LDAP-compatible identity manager. This how-to will teach you how to set up the LDAP module to work with your app, focusing on Microsoft Active Directory. It will give you a basic understanding of the LDAP module, but will skip over some advanced details. The document assumes basic Mendix knowledge, and some basic knowledge of what LDAP is and how it works.
 
-*   [LDAP Synchronization Module](https://appstore.home.mendix.com/link/app/24/Mendix/LDAP-Synchronization-module)
-*   [Encryption](https://appstore.home.mendix.com/link/app/1011/Mendix/Encryption)
-*   [Community Commons Function Library](https://appstore.home.mendix.com/link/app/170/Mendix/Community-Commons-Function-Library)
+## 2 Prerequisites
 
-## 2\. Configuring the LDAP Synchronization Module
+* Import the following App Store modules into your application model:
+    * [LDAP Synchronization Module](https://appstore.home.mendix.com/link/app/24/Mendix/LDAP-Synchronization-module)
+    * [Encryption](https://appstore.home.mendix.com/link/app/1011/Mendix/Encryption)
+    * [Community Commons Function Library](https://appstore.home.mendix.com/link/app/170/Mendix/Community-Commons-Function-Library)
+
+## 3 Configuring the LDAP Synchronization Module
 
 1.  Double-click **Settings** in the project explorer pane. Select the **Ldap.ASu_StartLdap** Microflow as your **After Startup** Microflow.
 
@@ -39,7 +40,7 @@ Your client might already have a centralized identity management solution in pla
 
 7.  Click **OK**.
 
-## 3\. Configure the LDAP server information
+## 4 Configuring the LDAP Server Information
 
 In this chapter you will run the application and complete the LDAP configuration in the application itself.
 
@@ -83,7 +84,7 @@ In this chapter you will run the application and complete the LDAP configuration
 
     ![](attachments/18448733/18581923.png)
 
-## 4\. Configure the Synchronization Type
+## 5 Configuring the Synchronization Type
 
 The next step is to configure how to handle the user information.
 
@@ -108,7 +109,7 @@ The next step is to configure how to handle the user information.
     | Domain suffix | In Active directory user names are often suffixed with the domain of the company. If you want users to be able to log in using just their user name, enter the domain here. It will be stripped from the full user name, leaving just the actual account name as a username. | _@companydomain.local_ |
     | Userroles WITHOUT ldap authentication | In most cases, certain user roles (usually administrators) should not be authenticated against LDAP. This can be, for example, because the corresponding users or roles don't exist in the LDAP server, or because the users should be able to log in when LDAP is not available for some reason. In most cases, you should enter an administrator role with access to the LDAP configuration. | _Administrator_ |
 
-## 5\. Configure User Mappings
+## 6 Configuring User Mappings
 
 The final step in the configuration is to configure how the LDAP module handles user information found in the LDAP server.
 
@@ -153,7 +154,7 @@ The final step in the configuration is to configure how the LDAP module handles 
 13.  Click **Save** to store the mapping.
 14.  Finally, click **Save & Close** to store the LDAP server configuration.
 
-## 6\. Synchronizing the users
+## 7 Synchronizing the Users
 
 Now that you have configured the LDAP module it's time to synchronize the users.
 
@@ -164,7 +165,7 @@ Now that you have configured the LDAP module it's time to synchronize the users.
     The module will now synchronize all users from the LDAP server to your Mendix app. You can follow the progress in 's **Console** log for the the app.
 2.  Open the user account overview to see the imported users. By default this should be available in the **Administration** menu.
 
-## 7\. Next steps
+## 8 Next Steps
 
 After synchronizing the user information users can not sign in yet. This is because their passwords have been set to random values. For security reasons it is not possible to synchronize LDAP passwords. You can only synchronize user information. You can allow users to log in by assigning new passwords to the accounts. You can create a Microflow to reset passwords automatically.
 
@@ -174,7 +175,7 @@ Finally, you may want to automatically and/or periodically re-synchronize the LD
 
 Note that the scheduled event will always synchronize all enabled LDAP server configurations. If you want to override this default behavior you can change the "Ldap.ImportLdapUsersFlow" Microflow.
 
-## 8\. Read More
+## 9 Read More
 
 *   [Consuming a complex web service](consume-a-complex-web-service)
 *   [Consuming a simple Web Service](consume-a-simple-web-service)

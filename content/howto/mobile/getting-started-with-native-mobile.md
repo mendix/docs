@@ -8,7 +8,7 @@ tags: ["native", "mobile", "developer", "test"]
 
 ## 1 Introduction
 
-{{% todo %}} With next release, also Mention that also possible using blank app or add to existing project, and how to (because Atlas needs to be updated) {{% /todo %}}
+{{% todo %}} With next release, also Mention that also possible using blank app or add to existing app project, and how to (because Atlas needs to be updated) {{% /todo %}}
 
 To use Mendix Studio Pro's native app capabilities, you can use the [Native Mobile Quickstart](https://appstore.home.mendix.com/link/app/109511/) app from the Mendix App Store. This app is optimized to quickly build a native mobile app. Out of the box, this app gives you a native page, a native phone profile to enable native device navigation, a native layout with menus, and native widgets and actions which leverage device capabilities.
 
@@ -27,11 +27,9 @@ Before starting this how-to, make sure you have completed the following prerequi
 * For information on device requirements, see [System Requirements](/refguide/system-requirements)
 * If you wish to use an emulator for Android mobile testing, install a product such as [Bluestacks](https://www.bluestacks.com/nl/index.html) or [Genymotion](https://www.genymotion.com/) (your emulator must have Google Play services supported)
 
-## 3 Creating a New Project Based on the Quickstart App{#quickstartapp}
+## 3 Creating a New App Project Based on the Quickstart App{#quickstartapp}
 
-{{% todo %}}[add Apple App Store link to MakeItNative app]{{% /todo %}}
-
-For details on making a Mendix app using the Native Mobile Quickstart app template, download the [Make It Native](https://play.google.com/store/apps/details?id=com.mendix.developerapp) app. Using the Make It Native app to view the changes to your Mendix app, see the sections below.
+For details on making a Mendix app using the Native Mobile Quickstart app template, download the Make It Native app on either the [Google Play store](https://play.google.com/store/apps/details?id=com.mendix.developerapp) or the [Apple App Store](https://apps.apple.com/us/app/make-it-native/id1334081181). Using the Make It Native app to view the changes to your Mendix app, see the sections below.
 
 ### 3.1 Starting a Quickstarter App Project
 
@@ -73,34 +71,17 @@ Alternatively, you can navigate to the Make It Native app using Mendix Studio Pr
 2. This will bring up a dialog box. In the **Native mobile** tab, click either **Go to play store** or **Go to app store** to be brought to the Google Play Store or Apple App Store pages for the Make It Native app.
 3. In the Apple or Android app store, you can download the Make It Native app to your device.{{% /todo %}}
 
-{{% todo %}}[replace screenshot below with two app store screens when they get new logos?]{{% /todo %}}
-
-{{% todo %}}Remove alert when app is added to Apple App store {{% /todo %}}
-
 #### 3.2.1 Downloading for Android
 
-To view your app on an Android device (or emulator), you must download and install the Make It Native app from [Google Play](https://play.google.com/store/apps/details?id=com.mendix.developerapp):
+To view your app on an Android device (or emulator), you must download and install the Make It Native app from the [Google Play store](https://play.google.com/store/apps/details?id=com.mendix.developerapp):
 
 {{% image_container width="500" %}}![native app on googleplay](attachments/getting-started-with-native-mobile/make-it-native-googleplay.png){{% /image_container %}}
 
 #### 3.2.2 Downloading for iOS {#downloading-for-ios}
 
-To view your app on a iOS device, you currently need to use TestFlight to install the Make It Native app:
+To view your app on a iOS device, you must download and install the Make It Native app from the [Apple App Store](https://apps.apple.com/us/app/make-it-native/id1334081181):
 
-1. Download the [TestFlight](https://itunes.apple.com/us/app/testflight/id899247664?mt=8) app for your iOS device.
-2.  On your device, either [click here](https://testflight.apple.com/join/KrcEFwo7), or scan the QR code below (which will trigger a notification you must tap) using your iOS device's standard camera app:
-
-	![testflight qr code](attachments/getting-started-with-native-mobile/testflight-qr-code.png)
-
-3. Click the **Install** button to install your Make It Native TestFlight app:
-
-	![testflight app](attachments/getting-started-with-native-mobile/testflight-install.png)
-
-{{% alert type="info" %}}
-
-The iOS version of the Make It Native app will be released soon to the public Apple App Store
-
-{{% /alert %}}
+{{% image_container width="500" %}}![native app on app store](attachments/getting-started-with-native-mobile/make-it-native-ios.png){{% /image_container %}}
 
 ### 3.3 Viewing Your App on Your Testing Device
 
@@ -123,11 +104,9 @@ Your mobile device has to be on the same network as your development machine for
 
 Now you can see your app on your device. While this is just a template app, whenever you make changes you will be able to view them live on your Make It Native app.
 
-You may notice an **Enable dev mode** toggle on the Make It Native app home page. Turning this toggle on will give you more detailed warning messages during error screens, as well as additional functionality on the developer app menu.
+You may notice an **Enable dev mode** toggle on the Make It Native app home page. Turning this toggle on will give you more detailed warning messages during error screens, as well as additional functionality on the developer app menu:
 
 {{% image_container width="500" %}}![enable dev mode](attachments/getting-started-with-native-mobile/enable-dev-mode.png){{% /image_container %}}
-	
-{{% todo %}}[link to future debug doc - For more information on debugging, see Debugging A Native Mobile App]{{% /todo %}}
 
 ### 3.4 Viewing Changes to Your App on Your Testing Device {#viewingchanges}
 
@@ -148,9 +127,10 @@ Should you get an error screen while testing your app, there are easy ways to re
 * Tap your test app with three fingers to restart your app
 * With the **Enable dev mode** toggle turned on, hold a three-fingered tap to bring up the developer app menu – here you can access **ADVANCED SETTINGS** and **ENABLE REMOTE JS DEBUGGING** 
 
-{{% todo %}}[(link to future debug doc at the end of the last bullet above)]{{% /todo %}}
+For more detailed instructions on debugging a native app, see [Debug Native Apps (Advanced)](native-debug).
 
 ## 4 Read More
 
 * [Build Pluggable Widgets](../extensibility/pluggable-widgets)
 * [Native Styling](/refguide/native-styling-refguide)
+* [Debug Native Apps (Advanced)](native-debug)

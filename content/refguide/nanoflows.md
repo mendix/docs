@@ -97,8 +97,8 @@ Flows form the connection between elements.
 
 | Graphic | Name | Description |
 | --- | --- | --- |
-| [![](attachments/819203/917883.png)](sequence-flow) | [Sequence flow](sequence-flow) | An arrow that links events, activities, splits, and merges with each other. Together they define the order of execution within a nanoflow. |
-| [![](attachments/819203/917688.png)](annotation-flow) | [Annotation flow](annotation-flow) | A connection that can be used to connect an annotation to another element. |
+| ![](attachments/819203/917883.png) | An arrow that links events, activities, splits, and merges with each other. Together they define the order of execution within a nanoflow. |
+| ![](attachments/819203/917688.png) | A connection that can be used to connect an annotation to another element. |
 
 ### 5.3 Gateways<a name="gateways"></a>
 
@@ -120,7 +120,7 @@ Object activities can be used to create and manipulate objects. The [domain mode
 | Graphic | Name | Description |
 | --- | --- | --- |
 | [![](attachments/819203/917661.png)](change-object) | [Change object](change-object) | Can be used to change the members of an object. This can be done with or without commiting. |
-| [![](attachments/16713769/17661961.png)](committing-objects) | [Commit object(s)](committing-objects) | Can be used to commit the changes to one or more objects. |
+| [![](attachments/819203/17661961.png)](committing-objects) | [Commit object(s)](committing-objects) | Can be used to commit the changes to one or more objects. |
 | [![](attachments/819203/917756.png)](create-object) | [Create object](create-object) | Can be used to create an object. |
 | [![](attachments/819203/917866.png)](retrieve) | [Retrieve](retrieve) | Can be used to get one (or more) associated objects of another object. The activity can also get one (or more) objects directly from the database. |
 | [![](attachments/819203/918119.png)](rollback-object) | [Rollback object](rollback-object) | Can be used to undo the changes (that have not been committed) made to the object in the part of the nanoflow preceding the activity. This also deletes objects that have been created but never committed. |
@@ -182,7 +182,24 @@ In the example below, the parameter **AccountPasswordData** is highlighted becau
 
 ## 7 Errors
 
-When an error occurs in a nanoflow, all the changes that have been made to objects are not rolled back and the nanoflow is aborted. Nanoflow actions do not support error handlers.
+When an error occurs in a nanoflow, the changes that were made to objects are not rolled back and the nanoflow is aborted. Optionally, you can handle errors in the nanoflow itself by configuring an error handler. You can inspect the details of the error by looking at the `$latestError` predefined variable.
+
+### 7.1 Error Handlers
+
+Error handlers are supported on all nanoflow elements except for gateways and loops. There are two error handler options:
+
+*  **Abort** (which is the default)
+*  **Custom without rollback**
+
+With the **Custom without rollback** option, you can draw an additional flow from the block and then mark this flow as the error handler flow. The **Custom without rollback** option does not roll back the objects. After you select a flow as the error handler it will appear this way:
+
+![selected error handler](attachments/819203/918248.png)
+
+### 7.2 Error Inspection
+
+In a custom error handler executed after an error occurs, the `$latestError` variable is set to the message of the error information. The `$latestError` variable type is `String`, unlike in [microflows](microflows) where errors' type is the `System.Error` entity.
+ 
+The `$latestSoapFault` variable is not available in nanoflows.
 
 ## 8 Nanoflow Debugging
 

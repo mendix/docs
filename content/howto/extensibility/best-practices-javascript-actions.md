@@ -1,7 +1,7 @@
 ---
 title: "Implement Best Practices for JavaScript Actions"
 category: "Extensibility"
-menu_order: 30
+menu_order: 4
 description: "This set of best practices will help you get the most out of your JavaScript actions."
 tags: ["JavaScript", "API", "nanoflow"]
 ---
@@ -23,7 +23,7 @@ JavaScript actions are run in the browser, and each browser version has its own 
 
 Older browsers might not have the new ES6 functions implemented, so be careful copying and pasting modern sample code from the internet, especially when IE11 must be supported. Some ECMAScript 6 functions are polyfilled by the Mendix Client.
 
-{{% todo %}}[check with client-core if polyfill statement is correct]{{% /todo %}} 
+{{% todo %}}[check with "client" if polyfills are correct]{{% /todo %}} 
 
 Mendix Studio Pro contains the following polyfills from [Core JS](https://github.com/zloirock/core-js):
 
@@ -146,9 +146,7 @@ function CameraStart(targetSize, pictureSource, correctOrientation, waterMark) {
 }
 ```
 
-{{% todo %}}["All input types are described in the reference guide." goes in para below this, write "write javascript actions" refguide, add link]{{% /todo %}}
-
-For more information on choosing correct input types, see the [Better APIs](#betterapis) section below.
+For more detail on input types, see [JavaScript Actions](/refguide/javascript-actions). For more information on choosing correct input types, see the [Better APIs](#betterapis) section below.
 
 ### 2.2 Coding the Actions
 
@@ -315,9 +313,7 @@ The actual list of plugins use can be found in *config.xml* inside your deployme
 
 ### 2.3 Understanding Returns
 
-{{% todo %}}["For the full reference see (link to ref guide)." goes at end of first para below. Check with Marco about when jsactions refguide is up after mxworld**]{{% /todo %}} 
-
-The JavaScript action can specify a return type such as Integer, DateTime, Object, List of object, and Generics. 
+The JavaScript action can specify a return type such as Integer, DateTime, Object, List of object, and Generics. For more information on returns, see [JavaScript Actions](/refguide/javascript-actions).
 
 Actions can be synchronous or asynchronous. Synchronous actions will directly return the value and finish executing. An asynchronous action will return a promise, and will continue to execute and finish at a later time. The nanoflow will continue to execute when the promise is resolved.
 
@@ -386,8 +382,6 @@ Explaining the callback code:
 
 #### 2.3.2 Understanding Promise API
 
-{{% todo %}}["For more information on building a JavaScript action rest consume function, see X)link below" goes before first para below. Search githubusers howto https://paper.dropbox.com/doc/How-to-JS-Action-Search-GitHub-Users--Aa5K2Y5MoulzXbbhiRyghWEiAg-g3bkJVCHJDv8qx3T9r1ik]{{% /todo %}} 
-
 This function uses the browser promise API:
 
 ```javascript
@@ -413,6 +407,8 @@ Explaining the Promise API code:
 * The URL refers to a sample API that returns a JSON object `{ id: string, name: string }`. Fetch is a browser API for retrieving data which returns a promise (see the [MDI Fetch API documentation](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API). The response is a promise that is converted into data with the `.json()` function. The name is accessed and returned. 
 
 * As this is a part of a promise already, it does not need to call a `resolve` function or return a promise itself. This makes error handling on promises easier, as a single error function can be used to catch errors at all three steps: fetch, parse JSON, and accessing the data. For a more detailed explanation, see the [MDN promise documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+
+* For more information on building a JavaScript action rest consume function, see [Write JavaScript Actions: Part 2 (Advanced)](write-javascript-github).
 
 #### 2.3.3 Understanding Common Promise Functions
 

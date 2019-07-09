@@ -107,7 +107,7 @@ These are the queue connectors often used with Mendix:
 * [Kafka Connector](https://appstore.home.mendix.com/link/app/67994/)
 * [Rabbit MQ Connector](https://appstore.home.mendix.com/link/app/31947/) 
 * [MQTT Client](https://appstore.home.mendix.com/link/app/3066/)
-* [Siemens MindSphere](https://docs.mendix.com/refguide/mindsphere/)
+* [Siemens MindSphere](https://docs.mendix.com/partners/siemens/mindsphere)
 
 Other connectors exist or are very easy to build with a Java action if required. 
 

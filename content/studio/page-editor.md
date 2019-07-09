@@ -156,11 +156,11 @@ Building Blocks categories may differ because Atlas UI can be customized using S
 
 ### 5.2 Widgets {#widgets}
 
-Widgets are single user-interface elements that can be configured. For more information, see [Widgets](page-editor-widgets). 
+Widgets are single user-interface elements that can be configured. You can [quickly configure](page-editor-widgets#quick-config) most of the non-custom widgets when adding them on a page. For more information, see [Widgets](page-editor-widgets). 
 
 {{% alert type="info" %}}
 
-You can update widgets in the [Settings](settings). 
+You can update widgets in the [Widget Overview](settings-widget-overview). 
 
 {{% /alert %}}
 

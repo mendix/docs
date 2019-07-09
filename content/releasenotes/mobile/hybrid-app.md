@@ -1,7 +1,7 @@
 ---
 title: "Hybrid App Base & Template"
 category: "Mobile Products"
-menu_order: 10
+menu_order: 30
 toc-level: 1
 description: "Mendix Hybrid App Base & Hybrid App Template release notes."
 ---
@@ -15,6 +15,12 @@ For more information on hybrid mobile app development in Mendix, see the [Hybrid
 {{% /alert %}}
 
 ## 2019
+
+### July 2nd, 2019 (4.1.1 / 4.1.0)
+
+* We moved the Google Services *.json*, *.plist*, and *build-extras.xml* files to the **/config** folder.
+* We changed how the *build-extras.xml* file is included in your app project. Now PhoneGap Build properly includes that file.
+* The build process no longer fails when you do not provide a *GoogleServices-Info.plist* file. This is useful if you use Firebase Cloud Messaging for push notifications on Android, but use the Apple Push Notification service for push notifications on iOS.
 
 ### May 14th, 2019 (4.1.0 / 4.1.0)
 

@@ -1,7 +1,6 @@
 ---
 title: "Debug Java Actions Remotely"
-category: "Monitoring & Troubleshooting"
-menu_order: 7
+parent: "debug-java-actions"
 tags: ["monitoring", "troubleshooting", "java action", "debug"]
 ---
 

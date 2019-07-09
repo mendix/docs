@@ -1,6 +1,7 @@
 ---
 title: "Variable Activities"
 parent: "activities"
+menu_order: 40
 tags: ["studio pro"]
 ---
 

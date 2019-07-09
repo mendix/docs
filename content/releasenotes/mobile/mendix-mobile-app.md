@@ -10,7 +10,7 @@ toc-level: 1
 For more information on the **Mendix** mobile app, see [Getting the Mendix Mobile App](/refguide/getting-the-mendix-app).
 {{% /alert %}}
 
-## 4.7.1
+## Android 4.7.1 / iOS 4.7.1
 
 **Release date: March 26th, 2018**
 
@@ -18,7 +18,7 @@ For more information on the **Mendix** mobile app, see [Getting the Mendix Mobil
 
 * We fixed an issue where hybrid apps were stuck in either offline or online mode.
 
-## 4.7.0
+## Android 4.7.0 / iOS 4.7.0
 
 **Release date: March 23rd, 2018**
 
@@ -39,7 +39,7 @@ For more information on the **Mendix** mobile app, see [Getting the Mendix Mobil
 * The Mendix feedback widget does not always load properly on iOS.
 * Mendix hybrid apps (loaded using, for example, the QR scanner or the manual app loading screen) are not able to use the barcode scanning widget. Using the barcode scanning functionality from within an app-specific hybrid app (meaning, one built using the mobile app flow from the Mendix Developer Portal) should not pose any problems.
 
-## 4.6.0
+## Android 4.6.0 / iOS 4.6.0
 
 **Release date: November 30th, 2017**
 
@@ -51,7 +51,7 @@ For more information on the **Mendix** mobile app, see [Getting the Mendix Mobil
 
 * Mendix hybrid apps (loaded using, for example, the QR scanner or the manual app loading screen) are not able to use the barcode scanning widget. Using the barcode scanning functionality from within an app-specific hybrid app (meaning, one built using the mobile app flow from the Mendix Developer Portal) should not pose any problems.
 
-## 4.5.0
+## Android 4.5.0 / iOS 4.5.0
 
 **Release date: October 24th, 2017**
 
@@ -70,7 +70,7 @@ For more information on the **Mendix** mobile app, see [Getting the Mendix Mobil
 
 * Mendix hybrid apps (loaded using, for example, the QR scanner or the manual app loading screen) are not able to use the barcode scanning widget. Using the barcode scanning functionality from within an app-specific hybrid app (meaning, one built using the mobile app flow from the Mendix Developer Portal) should not pose any problems.
 
-## 4.4.1 (iOS only)<a name="RN441"></a>
+## iOS 4.4.1 <a name="RN441"></a>
 
 **Release date: October 2nd, 2017**
 
@@ -82,7 +82,7 @@ For more information on the **Mendix** mobile app, see [Getting the Mendix Mobil
 
 * Mendix hybrid apps (loaded using, for example, the QR scanner or the manual app loading screen) are not able to use the barcode scanning widget. Using the barcode scanning functionality from within an app-specific hybrid app (meaning, one built using the mobile app flow from the Mendix Developer Portal) should not pose any problems.
 
-## 4.4.0
+## Android 4.4.0 / iOS 4.4.0
 
 **Release date: July 21st, 2017**
 
@@ -105,7 +105,7 @@ For more information on the **Mendix** mobile app, see [Getting the Mendix Mobil
 * On iOS 11, loading one of the sample apps or loading an app using the QR scanner will crash the application. 
     * Fixed in [4.4.1](#RN441).
 
-## 4.3.0
+## Android 4.3.0 / iOS 4.3.0
 
 **Release date: July 10th, 2017**
 
@@ -116,7 +116,7 @@ We have added two new features to accelerate your app delivery projects:
 * Easily test your hybrid mobile Mendix apps on your phone by scanning the QR code shown in the Mendix Modeler from the convenience of the Mendix Mobile app.
 * Review the capabilities of Atlas UI and the Mendix Platform through the showcases accessible through the Mendix Mobile app. The above features are available without logging in. However, you still need to log in if you want to use **Buzz**.
 
-## 4.1.0
+## Android 4.1.0 / iOS 4.3.0
 
 **Release date: April 7th, 2017**
 

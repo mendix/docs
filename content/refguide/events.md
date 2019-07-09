@@ -1,6 +1,7 @@
 ---
 title: "Events"
-parent: "common-elements"
+parent: "application-logic"
+menu_order: 50
 tags: ["studio pro"]
 ---
 

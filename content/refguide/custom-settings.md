@@ -4,6 +4,7 @@ category: "Mendix Runtime"
 description: "Describes custom settings for server, log file, database, Amazon S3 storage service, IBM Cloud Object Storage, Microsoft Azure, IBM Bluemix object storage, web client, and proxy server in Mendix."
 tags: ["Runtime", "Customization", "Settings", "Configuration", "IBM Cloud", "Amazon S3", "IBM Cloud Object Storage", "Microsoft Azure", "Custom Settings", "Proxy", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
+#The anchor #5-amazon-s3-storage-service-settings below is mapped, so it should not be removed or changed.
 ---
 
 ## 1 Custom Runtime Settings
@@ -12,13 +13,13 @@ You can use custom server settings to configure the Runtime beyond the standard 
 
 {{% alert type="warning" %}}
 
-Only use this functionality if you know exactly what you are doing. Wrong values can prevent the Runtime from starting.
+Only use this functionality if you know exactly what you are doing. Incorrect values can prevent Mendix Runtime from starting.
 
 {{% /alert %}}
 
 Each custom setting consists of a name and a value. For example, to enable persistent sessions you add a custom setting with name `PersistentSessions` and value `true`. For a more detailed list of settings and example values please consult the [fully-documented m2ee.yaml](https://github.com/mendix/m2ee-tools/blob/master/examples/full-documented-m2ee.yaml).
 
-If you are running your app on the Mendix Cloud, you can access these settings on the **Runtime Tab** of the *Environment Details*: accessible from the *Environments* page of the Developer Portal. For more information see [Environment Details – Runtime Tab](/developerportal/deploy/environments-details#runtime-tab).
+If you are running your app on the Mendix Cloud, you can access these settings in the Developer Portal via **Environments** > **Environment Details** > **Runtime**. For more information see [Environment Details – Runtime Tab](/developerportal/deploy/environments-details#runtime-tab).
 
 ## 2 General Settings
 
@@ -106,7 +107,7 @@ Possible values: HSQLDB, MYSQL, ORACLE, POSTGRESQL, SQLSERVER |   |
 | SourceDatabaseUserName | The user name for the connection to the source database. |   |
 | SourceOracleServiceName | Defines the SERVICE_NAME when you have a connection with an Oracle DBMS as source. |   |
 
-## 5 S3 Storage Service Settings {#aws-s3}{#s3}
+## 5 S3 Storage Service Settings {#aws-s3} {#5-amazon-s3-storage-service-settings}
 
 The settings described below influence the behavior of the Amazon S3 Storage Service module. This module can be used for both Amazon S3 Storage and IBM Cloud Object Storage. Using these settings manually in Mendix Cloud is strongly discouraged, as files stored in external systems will not be included in backup creation and restoration.
 

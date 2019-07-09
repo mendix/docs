@@ -2,52 +2,33 @@
 title: "Mendix Platform SDK"
 ---
 
-## 1 Introduction & How-to's
+## 1 Introduction & FAQ
 
-Before the for the [Mendix Platform SDK](https://apidocs.mendix.com/platformsdk/latest/) can make your life easier, there is some learning you should do. First, read the [Introduction to the Mendix Platform SDK](sdk-intro) and the [FAQ](faq). Then, follow the step-by-step guides listed below to learn everything you need about using the SDK:
+Before the [Mendix Platform SDK](https://apidocs.mendix.com/platformsdk/latest/) can make your life easier, you should learn about the [Mendix Model SDK](https://apidocs.mendix.com/modelsdk/latest/index.html). Start with the [Introduction to the SDK](sdk-intro) and the [FAQ](faq). 
 
-*  [Set Up Your Development Environment](setting-up-your-development-environment)
-*  [Create Your First Script](creating-your-first-script)
-*  [Create the Domain Model](creating-the-domain-model)
-*  [Manipulate Existing Models](manipulating-existing-models)
-	* [Change Things in the Model](changing-things-in-the-model)
-	* [Close the Server Connection](closing-the-server-connection)
-	* [Find Things in the Model](finding-things-in-the-model)
-	* [Load Units and Elements](loading-units-and-elements)
-* [Generate Code from the Model](generating-code-from-the-model)
+## 2 How-to's
 
-## 2 Reference Documentation
+Follow these step-by-step guides to learn everything you need about using the SDK:
 
-Browse the  documentation below about the Mendix metamodel as well as external resources that you can use as a reference for programming with the Mendix SDK.
+* [How to Set Up Your Development Environment](setting-up-your-development-environment) – leads you through the process of setting up everything you need to start working with the Mendix Platform SDK
+* [How to Create Your First Script](creating-your-first-script) – teaches you how to write a script that will use the Mendix Platform SDK
+* [How to Create the Domain Model](creating-the-domain-model) – guides you in the process of creating a more extensive domain model
+* [How to Manipulate Existing Models](manipulating-existing-models) – teaches you how to change things in the model, close the server connection, and find and load units and elements
+* [How to Generate Code from the Model](generating-code-from-the-model) – explains how to write code to alter your model
 
-### 2.1 Understanding the Metamodel
+## 3 References
 
-* [Understanding the Metamodel](understanding-the-metamodel)  
-* [Domain Model (Metamodel)](domain-model-metamodel)
-* [Microflows (Metamodel)](microflows-metamodel)
-* [Pages (Metamodel)](pages-metamodel)
-* [Projects (Metamodel)](projects-metamodel)
+Browse the reference documentation below about the Mendix metamodel:
 
-### 2.2 Mendix Model SDK
+* [JavaScript & TypeScript Resources](javascript-typescript-resources) – summarizes TypeScript and provides links to useful resources for learning more
+* [Understanding the Metamodel](understanding-the-metamodel) – explains the basic components of the metamodel as well as the domain model, microflows, pages, and app projects in the metamodel
+* [Working with when.js and Promises in TypeScript](working-with-when.js-and-promises-in-typescript) – explains what promises are, how to use them, and how resolve common problems when using them
+* [Mendix Model SDK Release Notes](/releasenotes/sdk/model-sdk) – describes the releases for the Mendix Model SDK
 
-* [Mendix Model SDK](https://apidocs.mendix.com/modelsdk/latest/index.html)
-* [Mendix Model SDK Release Notes](/releasenotes/sdk/model-sdk)
-* Manipulating existing models:
-    * [Finding Things in the Model](finding-things-in-the-model)
-    * [Loading Things in the Model](loading-units-and-elements)
-    * [Changing Things in the Model](changing-things-in-the-model)
-    * [Closing the Server Connection](closing-the-server-connection)
-* [Generating Code from the Model](generating-code-from-the-model)
-* [Working with when.js and Promises in TypeScript](working-with-when.js-and-promises-in-typescript)
+## 4 Use Case Examples
 
-### 2.3 Other Resources
+The [Use Case Examples](use-case-examples) provide examples from the four basic categories of actions performed with the Mendix SDK: analyzing, exporting, modifying and importing.
 
-* [JavaScript & TypeScript Resources](javascript-typescript-resources)
-* [Mendix Platform SDK API Docs](https://apidocs.mendix.com/platformsdk/latest/)
-* [FAQ](faq)
+## 5 Need Help?
 
-## 3 Need Help?
-
-Check whether your question is answered in the [Frequently Asked Questions](faq). Otherwise, ask your question in the [Mendix Forum](https://forum.mendixcloud.com/index4.html). Check out the technical specifications of the Mendix Platform SDK and Model API as well.
-
-If you need help with JavaScript/TypeScript, see [JavaScript & TypeScript Resources](javascript-typescript-resources).
+If you need help with the SDKs, check whether your question is answered in the [Frequently Asked Questions](faq). Otherwise, ask your question in the [Mendix Forum](https://forum.mendixcloud.com/index4.html). 

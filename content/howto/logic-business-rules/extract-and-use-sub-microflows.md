@@ -33,6 +33,12 @@ The second example of using sub-microflows is when you are doing data validation
 
 There are many other examples of when it is useful to create sub-microflows. The goal is to reuse sub-microflows to condense your logic. Feel free to use sub-microflows whenever you see the need for it.
 
+### 2.4 Dragging a Microflow into a Microflow
+
+Instead of creating a new sub-microflow action, it may be easier to drag an existing microflow into the current one:
+
+![](attachments/18448683/18580991.gif)
+
 ## 3 How to Use Sub-Microflows {#HowtoUseSubMicroflows}
 
 The following example microflow checks to see if a registration has a trainee assigned and a registration date. If the registration passes both of these checks, the registration is committed to the database.

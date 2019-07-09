@@ -43,4 +43,4 @@ If the property 'Type' is set to 'Rule', a [rule](rules) can be selected to defi
 
 ### 3.1 Caption
 
-See [Microflow Element Common Properties](microflow-element-common-properties).
+See [Common Properties](microflow-element-common-properties).

@@ -1,8 +1,8 @@
 ---
 title: "Set Up Gulp & Sass"
-parent: "style-with-gulp-and-sass"
-draft: true
-tags: [sass", "ux", "front-end"]
+category: "Front-End"
+menu_order: 50
+tags: ["gulp", "sass", "ux", "front end"]
 ---
 
 ## 1  Introduction
@@ -28,13 +28,11 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 	![](attachments/set-up-sass/gulp.png)
 
-4.  You also need to install Node.js for task-running and automation through gulp. Install the latest LTS version from [Node.js](https://nodejs.org/en/):
+4.  Install Node.js for task-running and automation through gulp. Install the latest LTS version from [Node.js](https://nodejs.org/en/):
 
 	![](attachments/set-up-sass/node.png)
 
-5. Install the latest version of [TortoiseSVN](https://tortoisesvn.net/downloads.html): 
-
-	![](attachments/set-up-sass/svn.png)
+5. Install version **1.12.0** of [TortoiseSVN](https://tortoisesvn.net/downloads.html).
 
 ## 3 Preparing Your App Project
 
@@ -46,16 +44,16 @@ To prepare your app project, follow these steps:
 	![](attachments/set-up-sass/unpack.png)
 
 	After you have unpacked the **Gulp.zip** into your app project folder, you can remove the *zip* file.
-4.  Open **Windows PowerShell**:
+3.  Open **Windows PowerShell**:
 
 	![](attachments/set-up-sass/powershell.png)
 
-5.  Copy the address as text from your main project folder and paste it into Powershell:
+4.  Copy the address as text from your main project folder and paste it into Powershell:
 
 	![](attachments/set-up-sass/copy.png)
 
-6.  Write the following in PowerShell: `cd ‘{the address of your app project folder’`
-7.   Write `npm install` or use `npm install gulp-cli -g`:
+5.  Provide the directory for your app project folder in PowerShell: `cd ‘directory for your app project folder’`
+6.   Write `npm install` or use `npm install gulp-cli -g`:
 
 	![](attachments/set-up-sass/write-install.png)
 
@@ -64,13 +62,13 @@ To prepare your app project, follow these steps:
 	{{% alert type="info" %}}You should do this for each new app project! That way, you will not have to repeat the installation step whenever you reopen the app project and Powershell.
 	{{% /alert %}}
 
-6. Write `gulp dev`. Your screen should then look like this:
+7. Write `gulp dev`. Your screen should then look like this:
 
 	![](attachments/set-up-sass/gulp-dev.png)
 
 	At this point, you are ready to start working with Sass.
 
-7. You also need to add the following selected items into the ignore list of TortoiseSVN for each new app project (or else your app project will take too long to commit a change) :
+8. You also need to add the following selected items into the ignore list of TortoiseSVN for each new app project (or else your app project will take too long to commit a change) :
 
 	![](attachments/set-up-sass/selected-ignore.png)
 
@@ -80,13 +78,17 @@ To prepare your app project, follow these steps:
 
 	You will receive a confirmation when the items have been added to the ignore list. You can also double-check via TortoiseSVN:
 
+	{{% image_container width="350" %}}
 	![](attachments/set-up-sass/check-ignore.png)
+	{{% /image_container %}}
 	
 	If you need to remove an item from the ignore list, right-click it and select **TortoiseSVN** > **Remove from ignore list**.
 
-8. Open your app project in Studio Pro, then click **Run Locally** and **View**:
+9. Open your app project in Studio Pro, then click **Run Locally** and **View**:
 
-![](attachments/set-up-sass/run-view.png)
+	{{% image_container width="500" %}}
+	![](attachments/set-up-sass/run-view.png)
+	{{% /image_container %}}
 
 ## 4  Setting Up Your Sass Files
 
@@ -111,7 +113,7 @@ Final steps! Read below to open and work with Sass:
 
 ### 4.1  Keeping Your Sass in the Custom Folder
 
-it is important to keep in mind that you are only working in the **custom** folder. You will not make any changes in the **lib** folder, but you can use that as a reference. You will only use the contents of the **\_variables.scss** file to get the variables you need and copy them in your **\_custom-variables.scss** file. The variables can differ from the default font sizes, colors, background colors, heights, and so on. In the **\_custom-variables.scss** file, you can also make your own variables, for example `\$brand-blue: \#48B0F7;`.
+it is important to keep in mind that you are only working in the **custom** folder. You will not make any changes in the **lib** folder, but you can use that as a reference. You will only use the contents of the **\_variables.scss** file to get the variables you need and copy them in your **\_custom-variables.scss** file. The variables can differ from the default font sizes, colors, background colors, heights, and so on. In the **\_custom-variables.scss** file, you can also make your own variables, for example `$brand-blue: \#48B0F7;`.
 
 You can now work on the Sass structure and organize everything neatly by creating sub-folders and files in the **custom** folder. You can also look in the **lib** folder to get an idea of which folders and files you will most likely use in your app project.
 
@@ -123,7 +125,7 @@ When you create a new Sass file, follow this naming guideline: *\_{namefilehere}
 
 Before you can see any changes in your app project with your new Sass, you need to import the folders and files first. If you open **custom.scss**, you will see this:
 
-`\@import "custom-variables";`
+`@import "custom-variables";`
 
 To import all the sub-folders and files you have created, write this:
 
@@ -135,7 +137,7 @@ To import all the sub-folders and files you have created, write this:
 
 After you import everything, you are finally ready to Sass! 
 
-## 5 Working with Sass
+## 5 Custom Sass Example
 
 Here is an example of custom Sass:
 
@@ -193,12 +195,12 @@ Practice the routine above a few times and you will master it in no time. In add
 * Do not make use of inline styling via Studio Pro
 * Be sure to change the portal of `localhost:8080` into `localhost:3000`
 * Add the following items to the TortoiseSVN ignore list:
-	* **node_modules**
-	* **Gulpfile**
-	* **package**
+	* `node_modules`
+	* `Gulpfile`
+	* `package`
+* When running `gulp dev`, Sass will compile the CSS files unminified and with source-mapping – this helps in debugging the styling, as a modern browser will point to the *.scss* file where a rule is specified
+	* When using this in production, you should run `gulp build` before committing and deploying – this will disable source-mapping and will minify the CSS files to minimize the file size
+	{{% alert type="info" %}}This point is drawn from the blog post [How Do I Start Styling In Mendix (Gulp & Sass)](https://medium.com/@jasonteunissen/how-do-i-start-styling-in-mendix-gulp-sass-6b37ddaf8de6) by Jason Teunissen, UX Consultant at [Appronto](https://developer.mendixcloud.com/link/partnerprofile/8870), a Mendix partner company.
+	{{% /alert %}}
 
 Have fun styling!
-
-## 7 Read More
-
-* [How to Start Styling with Gulp & Sass](style-with-gulp-and-sass)

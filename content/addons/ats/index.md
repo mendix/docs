@@ -14,7 +14,7 @@ A small investment in setting up ATS, which is very easy to learn, will save you
 
 This category includes the following sections: 
 
-* [ATS Overview](general/index)
-* [ATS Reference Guide](refguide/index)
-* [ATS How-to's](howtos/index)
-* [ATS Best Practices](bestpractices/index)
+* [ATS Overview](ov)
+* [ATS Reference Guide](rg)
+* [ATS How-to's](ht)
+* [ATS Best Practices](bp)

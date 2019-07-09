@@ -20,5 +20,5 @@ This category contains all the documentation for versions 1 and 2 of Application
 The category includes the following sections:
 
 * [APM Installation Guide](ig)
-* [APM Reference Guide](reference-guide/index)
-* [APM Use Cases](use-cases/index)
+* [APM Reference Guide](rg)
+* [APM Use Cases](uc)

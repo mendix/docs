@@ -13,7 +13,7 @@ To create new units, you need to pass the parent structural unit to the construc
 
 To create new elements, use the `create` methods, as this will create an element detached from the model. Please note that after creating an element, you have to assign it to a property before it actually becomes part of your model. For example, a new `Attribute` element should be pushed onto the `attributes` array of an entity. If you want to create an element and attach it to the model directly, you can use `createIn`. 
 
-An element is always in a specific state: new, attached, detached, or deleted. The state determines what changes can be applied to the element. For a full description of these states and their characteristics, see [Element States](element-states).
+An element is always in a specific state: new, attached, detached, or deleted. The state determines what changes can be applied to the element. For a full description of these states and their characteristics, see the [Element States](#es) section below.
 
 All non-list-like properties can be altered simply using assignments. List-like properties are essentially JavaScript arrays, so to alter them you can just replace them or use JavaScript's built-in [array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) functions such as `push`.
 
@@ -39,7 +39,7 @@ function createEntity(domainModel : domainmodels.DomainModel, entityName : strin
 }
 ```
 
-## 3 Element States
+## 3 Element States {#es}
 
 An element can be in four different states. The state determines what can be done with the element.
 

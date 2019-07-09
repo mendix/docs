@@ -55,7 +55,7 @@ To create an import mapping:
 
 ## 4 Adding an Input Entity to the Domain Model
 
-Our sevice takes the title of the page as an input. It returns the summary of the page. 
+Our service takes the title of the page as an input. It returns the summary of the page. 
 
 In this section, you are creating an entity that represents this input and associating it with its summary.
 
@@ -93,7 +93,7 @@ To call the REST service in a microflow, follow these steps:
 
 8. Click **OK**.
 9. From the **Toolbox**, drag a **Change object** activity onto the microflow and double-click it.
-10. For the **Variable**, select **Input (MyFirstModule.Input)**.
+10. For the **Object**, select **Input (MyFirstModule.Input)**.
 11. For **Refresh in client**, select **Yes**. This makes sure that the summary gets shown on the screen.
 12. Click **New**.
 13. Under **Member**, select **MyFirstModule.Input_Summary (MyFirstModule.Summary)**.

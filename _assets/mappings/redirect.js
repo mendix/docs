@@ -237,6 +237,10 @@ module.exports = {
       to: "/howto/front-end/create-a-custom-theme-with-the-mendix-ui-framework"
     },
 	{
+      from: "/addons/APM",
+      to: "/apm/"
+    },
+	{
       from: "/releasenotes/desktop-modeler/",
       to: "/releasenotes/studio-pro/"
     },
@@ -438,15 +442,15 @@ module.exports = {
       from: "/refguide8/download-from-team-server-dialog",
       to: "/refguide/download-from-version-control-dialog"
     },
-  {
+	{
       from: "/refguide8/open-project-dialog",
       to: "/refguide/open-app-dialog"
     },
-  {
+	{
       from: "/refguide8/upload-to-team-server-dialog",
       to: "/refguide/upload-to-version-control-dialog"
     },
-  {
+	{
       from: "/refguide8/microflow-expressions",
       to: "/refguide/expressions"
     },
@@ -483,8 +487,20 @@ module.exports = {
       to: "/refguide/enumerations"
     },
 	{
+      from: "/refguide8/inheritance-split",
+      to: "/refguide/object-type-decision"
+    },
+	{
+      from: "/refguide8/exclusive-split",
+      to: "/refguide/decision"
+	},
+	{
       from: "/howto/deploying-a-mendix-app-to-cloud-foundry",
       to: "/developerportal/deploy/cloud-foundry-deploy"
+    },
+	{
+      from: "/refguide8/menu-item",
+      to: "/refguide/menu"
     },
 	/****************************************************
      * From Desktop Modeler version 7 (permanent, mapped)
@@ -513,15 +529,15 @@ module.exports = {
       from: "/refguide7/download-from-team-server-dialog",
       to: "/refguide7/download-from-version-control-dialog"
     },
-  {
+	{
       from: "/refguide7/open-project-dialog",
       to: "/refguide7/open-app-dialog"
     },
-  {
+	{
       from: "/refguide7/upload-to-team-server-dialog",
       to: "/refguide7/upload-to-version-control-dialog"
     },
-  {
+	{
       from: "/refguide7/microflow-expressions",
       to: "/refguide7/expressions"
     },
@@ -2231,8 +2247,9 @@ module.exports = {
       to: "/howto6/solving-load-and-import-errors"
     },
 	/****************************************************
-     * Add-ons Guide (permanent, mapped)
+     * APM (permanent, unmapped)
      ****************************************************/
+<<<<<<< HEAD
 	{
       from: "/ats/",
       to: "/addons/ats/"
@@ -2257,6 +2274,9 @@ module.exports = {
       to: "/addons/aqm/"
     },
 	// {
+=======
+    // {
+>>>>>>> development
     //   from: "~*\\\/apm\\\/use-cases\\\/uc",
     //   to: "/apm/use-cases/",
     //   exact: true

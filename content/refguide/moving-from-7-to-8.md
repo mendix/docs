@@ -36,7 +36,7 @@ You should always convert your project from the latest release of Mendix version
 
 Review your app project in combination with the sections below and assess if further action needs to be taken before upgrading to Mendix 8.
 
-In particular, it is easier to fix deprecations in Java actions (see [Deprecated and Removed APIs](#deprecated-apis)) in Mendix 7 before upgrading to Mendix 8.
+In particular, it is easier to fix deprecations in Java actions (see [Java Version, Deprecated and Removed APIs](#deprecated-apis)) in Mendix 7 before upgrading to Mendix 8. However, Float and Currency deprecation errors will be easier to fix in Mendix 8 instead (see the section [Elements of Type Float & Currency](#float-currency) below for instructions).
 
 ### 2.4 Save Version 7 Project
 
@@ -56,7 +56,7 @@ Open the project in Mendix Studio Pro version 8 and allow Studio Pro to update y
 
 Review all error messages and messages about deprecated items and make changes where necessary.
 
-If you are using one, or both, of the deprecated data types Currency and Float you will see errors. See the section [Attributes of Type Float and Currency](#float-currency) below for more information.
+If you are using one, or both, of the deprecated data types Currency and Float you will see errors. See the section [Elements of Type Float & Currency](#float-currency) below for more information.
 
 ### 2.7 Upgrade All Widgets
 
@@ -76,7 +76,9 @@ Test the app for any unexpected results.
 Congratulations! Your app has been successfully upgraded to Mendix 8 and you can continue working as normal.
 {{% /alert %}}
 
-## 3 Deprecated & Removed APIs {#deprecated-apis}
+## 3 Java Version, Deprecated & Removed APIs {#deprecated-apis}
+
+Mendix 8 runs on Java 11, whereas Mendix 7 runs on Java 8. Make sure that your Java actions are compatible with Java 11. The official Java 8 to 11 migration guide can be found in the [Migrating From JDK 8 to Later JDK Releases](https://docs.oracle.com/en/java/javase/11/migrate/index.html#JSMIG-GUID-7744EF96-5899-4FB2-B34E-86D49B2E89B6) section of the *Oracle JDK Migration Guide*.
 
 Deprecated Java actions should be fixed in Mendix 7, before you migrate the app project to Mendix 8.
 
@@ -84,13 +86,21 @@ Fix the deprecations in your Java actions by importing your project into your Ja
 
 Details of removed and deprecated APIs will be added to the *Breaking Changes* section of the [Studio Pro 8 release notes](/releasenotes/studio-pro/).
 
-## 4 Attributes of Type Float & Currency {#float-currency}
+## 4 Elements of Type Float & Currency {#float-currency}
 
-Attributes of type Float and Currency were deprecated in Mendix version 7, and have now been removed from Mendix version 8. If your app contains attributes of type Float and/or Currency, these will need to be converted to type Decimal.
+The types Float and Currency were deprecated in Mendix version 7, and have now been removed from Mendix version 8. 
 
-We recommend that you make this change separately from other changes as it will force a change to your domain model and the underlying database.
+The following elements of type Float or Currency will report errors in version 8:
 
-To convert attributes of type float and currency to decimal, do the following.
+* Attributes
+* Constants
+* Create variable actions
+* Data set columns and parameters
+* Microflow/nanoflow parameters and return types
+* Java/JavaScript action parameters and return types
+* The functions 'formatFloat', 'parseFloat' and 'toFloat'
+
+It is possible to fix most of the deprecation errors in one single action. To achieve this, do the following:
 
 1. In Studio Pro 8, find the error message which relates to the support of Currency and Float data types.
 
@@ -100,20 +110,14 @@ To convert attributes of type float and currency to decimal, do the following.
 
     ![Change manually or automatically?](attachments/moving-from-7-to-8/currency-float-change-options.png)
 
-3. Click **Convert attributes of type 'Currency' or 'Float' to 'Decimal'…** to convert all the attributes automatically.
+3. Click **Convert all to Decimal** to convert all the attributes automatically.
 
     ![Warning when converting all Float and Currency to Decimal](attachments/moving-from-7-to-8/convert-to-decimal-warning.png)
 
-4. Click **Convert all to Decimal** to perform the conversion
-
-5. Find all references to the converted attributes (within microflow actions, for example) and ensure that they expect the *Decimal* attribute type. If the attribute types do not match, you may have additional errors and warnings.
-
-Alternatively, you can convert each attribute manually by clicking **Find attributes of type 'Currency' or 'Float'** and then convert each of them manually.
-
-![Warning when converting all Float and Currency to Decimal](attachments/moving-from-7-to-8/convert-to-decimal-manual.png)
+4. Click **Convert all to Decimal** to perform the conversion.
 
 {{% alert type="warning" %}}
-The next time your app is run locally or deployed the database will be converted to support the new attribute types.
+If any attributes have been converted during this process, the next time your app is run locally or deployed the database will be converted to support the new attribute types.
 
 **This database conversion could take a long time!** We suggest that you first test the data conversion on a representative dataset, so that you can estimate how long it will take to convert your production database.
 {{% /alert %}}
@@ -142,18 +146,18 @@ Apps made in Mendix Studio Pro cannot be deployed to *Version 3* of the Mendix C
 
 ## 8 Java Code Generation
 
-In Mendix Studio Pro version 8 we’re changing the way we generate Java code for Java actions and Data Sets.
+In Mendix Studio Pro version 8, we are changing the way we generate Java code for Java actions and datasets.
 
-Mendix Modeler version 7 sometimes appended a postfix (e.g. `Parameter1`) to the names of parameters of Java actions and Data Sets. This behavior was necessary to prevent name conflicts in the generated code. In the minor releases of Mendix Modeler 7 we introduced a number of fixes to prevent those conflicts from happening, making this behavior redundant.
+Mendix Desktop Modeler version 7 sometimes appended a postfix (for example, `Parameter1`) to the names of parameters of Java actions and datasets. This behavior was necessary to prevent name conflicts in the generated code. In the minor releases of Mendix Desktop Modeler 7, we introduced a number of fixes to prevent those conflicts from happening, making this behavior redundant.
 
-We also noticed that, by attempting to prevent those name conflicts, we sometimes caused Java compilation failures, which seemed completely unrelated to what you were working on. Seeing that appending a postfix is now completely unnecessary, and introduces quite a few problems on bigger projects, we decided to remove it completely.
+We also noticed that by attempting to prevent those name conflicts, we sometimes caused Java compilation failures, which seemed completely unrelated to what you were working on. Seeing that appending a postfix is now completely unnecessary and introduces quite a few problems on bigger app projects, we decided to remove it completely.
 
-So, what does that mean in practice? For most projects nothing changes and everything still works as it used to. But, in a limited number of cases, Mendix Modeler version 7 will have introduced a postfix for your parameter name. For example, a parameter called `Customer` might become `CustomerParameter1` in the generated Java code. This postfix will be removed when you migrate your app to Mendix Studio Pro 8.
+What does that mean in practice? For most app projects, nothing changes and everything still works as it used to. But, in a limited number of cases, Mendix Desktop Modeler version 7 will have introduced a postfix for your parameter name. For example, a parameter called `Customer` might become `CustomerParameter1` in the generated Java code. This postfix will be removed when you migrate your app to Mendix Studio Pro 8.
 
-In these few cases, this means that you need to make a simple fix before your code will compile again:
+In these few casesyou need to make a simple fix before your code will compile again:
 
-* If it is a Java action in a module downloaded from the AppStore which is causing errors, just download it again, or update it to the latest version.
-* If it is your own Java action, then the fix is ever easier – just remove those postfixes from your Java code (so, in the previous example `CustomerParameter1` becomes just `Customer` again).
+* If it is a Java action in a module downloaded from the App Store that is causing errors, just download it again, or update it to the latest version
+* If it is your own Java action, then the fix is ever easier – just remove those postfixes from your Java code (in the previous example, `CustomerParameter1` just becomes `Customer` again).
 
 ### 8.1 Example of Differences
 
@@ -210,3 +214,11 @@ See the image below for an indication of where you might find the error in your 
 ![Location of Layouts Error](attachments/moving-from-7-to-8/layout-error-location.png)
 
 To resolve this issue, use the previous version of Mendix to change the invalid **Layout type** (in the example above, `Legacy`) to a valid value.
+
+### 9.2 DOM and Atlas UI Issues
+
+Mendix 8 comes with several improvements to its DOM structure. These DOM changes will also affect the Sass styling of app projects. Mendix 8 app projects are also meant to be completed using [Atlas UI Resources](https://appstore.home.mendix.com/link/app/104730/) (v2.0.0 or higher). Upgrading your Atlas UI can cause issues with your app project's theming. To troubleshoot either DOM or Atlas UI migration issues, consult the following documents:
+
+* [Troubleshooting DOM Changes](migration-dom-issues)
+* [Troubleshooting Atlas UI Changes](migration-atlas)
+

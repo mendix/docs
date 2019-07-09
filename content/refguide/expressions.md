@@ -9,15 +9,23 @@ tags: ["studio pro", "expressions", "microflow expressions"]
 
 ## 1 Introduction
 
-Expressions can for example be used to change a member of an object based on logic. Variables in the microflow can be called in an expression by inserting the name of the variable and adding a dollar sign (for example,  `$customer` refers to the variable `customer`). Expressions can be used recursively (for example, `1 + 2 + 3`). Attributes and associations of object variables are accessed using a slash (for example, `$customer/Name`, `$customer/CRM.Customer_Order`).
+Expressions can for example be used to change a member of an object based on logic. 
 
-As an example, imagine an object with the variable name **package** with two attributes: `weight` (decimal) and `shippingCosts` (decimal). The rule is that, if the weight of a package is less than one kilogram, there are no shipping costs. Otherwise, the shipping costs are €5.00. The expression for changing the `shippingCosts` attribute is:
+Named items in the microflow (for example objects, lists, or variables) can be called in an expression by inserting the name of the item and adding a dollar sign (for example,  `$customer` could refers to an object named `customer`).
+
+Attributes and associations of objects are accessed using a slash (for example, the Name attribute of the customer object is referred to as `$customer/Name`, and the CRM.Customer_Order association of the customer object is referred to as `$customer/CRM.Customer_Order`).
+
+Expressions can contain several operations which are applied using standard algebraic rules for precedence and associativity (for example, `1 + 2 + 3`). Brackets can be used to change the precedence and associativity, or for clarity.
+
+### 1.1 An Example
+
+As an example, imagine an object called **package** with two attributes: `weight` (decimal) and `shippingCosts` (decimal). The rule is that, if the weight of a package is less than one kilogram, there are no shipping costs. Otherwise, the shipping costs are €5.00. The expression for changing the `shippingCosts` attribute is:
 
 ```
 if $package/weight < 1.00 then 0.00 else 5.00`
 ```
 
-An overview of the possibilities with expressions can be found below.
+An overview of the operators which can be used in expressions is shown below.
 
 ## 2 Unary Expressions
 
@@ -80,13 +88,13 @@ An overview of the possibilities with expressions can be found below.
 * [`endsWith`](string-function-calls) – determines whether a string ends with the specified sub-string
 * [`trim`](string-function-calls) – removes the leading and trailing whitespace
 * [`isMatch`](string-function-calls) – matches a regular expression
-* [`replaceAll`](string-function-calls) – replaces the occurences of a sub-string
-* [`replaceFirst`](string-function-calls) – replaces the first occurence of a sub-string
+* [`replaceAll`](string-function-calls) – replaces the occurrences of a sub-string
+* [`replaceFirst`](string-function-calls) – replaces the first occurrence of a sub-string
 * [`String concatenation ( + )`](string-function-calls) – concatenates strings
 * [`urlEncode`](string-function-calls) – converts a string to be used in a URL
 * [`urlDecode`](string-function-calls) – converts a string back from a URL
 
-## 10 [Date Creation
+## 10 Date Creation
 
 * [`dateTime`](date-creation) – creating a date value using the server's calendar
 * [`dateTimeUTC`](date-creation) – creating a date value using the UTC calendar

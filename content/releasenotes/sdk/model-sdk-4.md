@@ -5,17 +5,24 @@ parent: "model-sdk"
 
 These are the release notes for the [Model SDK](/apidocs-mxsdk/mxsdk/) version 4.
 
+## 4.22.0 {#422}
+
+**Release date: July 2nd, 2019**
+
+* We added support for Mendix [8.0.0 Beta 3](../studio-pro/8.0).
+* We improved the performance of loading units.
+
 ## 4.21.0 {#421}
 
 **Release date: June 3rd, 2019**
 
-* We added support for Mendix [8.0.0 Beta 2](../studio-pro/8.0#802).
+* We added support for Mendix [8.0.0 Beta 2](../studio-pro/8.0).
 
 ## 4.20.0 {#420}
 
 **Release date: April 26th, 2019**
 
-* We added support for Mendix [8.0.0 Beta 1](../studio-pro/8.0#800).
+* We added support for Mendix [8.0.0 Beta 1](../studio-pro/8.0).
 * We fixed the rename for by-name references that refer to the base class.
 
 ## 4.19.0 {#419}
@@ -207,8 +214,8 @@ layout.layoutCall.layout = this.masterLayout;
 
 | Story | Impact | Description |
 |---|---|---|
-| 1085587 | Breaking | Moving elements now has to be done though the `detach()` function. For a full description of all the states and their meanings, see [Element States](/apidocs-mxsdk/mxsdk/element-states). This does not affect reading models and elements. |
-| 1085587 | Breaking | Creating, deleting, and changing elements is restricted by their state. For a full description of all the states and their meanings, see [Element States](/apidocs-mxsdk/mxsdk/element-states). This does not affect reading models and elements. |
+| 1085587 | Breaking | Moving elements now has to be done though the `detach()` function. For a full description of all the states and their meanings, see the [Element States](/apidocs-mxsdk/mxsdk/changing-things-in-the-model#es) section of *Changing Things in the Model*. This does not affect reading models and elements. |
+| 1085587 | Breaking | Creating, deleting, and changing elements is restricted by their state. For a full description of all the states and their meanings, see [Element States](/apidocs-mxsdk/mxsdk/changing-things-in-the-model#es) section of *Changing Things in the Model*. This does not affect reading models and elements. |
 | 1031416 | Breaking | The `qualifiedName` property for an element that is not attached to the model now returns `undefined`. |
 | 1052744 | Breaking | Elements that have no `name` property (like `DomainModel`) no longer have a `qualifiedName` property. |
 | 1031416 | Breaking | When assigning an element to a by-name reference (list) property, the element must have a valid qualified name first. This means that the element itself and any named containers should have a valid name. |

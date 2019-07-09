@@ -56,7 +56,5 @@ For more information, see [How to Manage App API Keys](/developerportal/settings
 
 ## 5 Main Documents in This Category
 
-* [Manage General App Settings](general-settings)
-* [Leave & Delete an App](leave-delete-app)
-* [Manage Deep Links](manage-deeplinks)
-* [Manage App API Keys](api-key)
+* [Manage General App Settings](general-settings) – describes the various actions you can perform to configure general settings for your app project
+* [Manage App API Keys](api-key) – explains what is included in the overview of API keys and how to create an API key

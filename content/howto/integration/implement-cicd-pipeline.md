@@ -17,7 +17,7 @@ Before starting this how-to, make sure you are familiar with the following:
 * CICD
 * Using REST services
 * [Mendix Unit Testing module](https://appstore.home.mendix.com/link/app/390/) (only if used in your application)
-* [Mendix Application Test Suite](/addons/ats/) (only if used in your application)
+* [Mendix Application Test Suite](/ats/) (only if used in your application)
 
 ## 3 The Pipeline
 
@@ -37,7 +37,7 @@ To be able to use the Mendix APIs to access your environment, you will need to g
 
 To build the deployment package, use the [Team Server API](/apidocs-mxsdk/apidocs/team-server-api) and the [Build API](/apidocs-mxsdk/apidocs/build-api). In this scenario, a package will be built for the latest revision, but you can use whatever version you wish.
 
-#### 3.2.1 Geting the Latest Revision
+#### 3.2.1 Getting the Latest Revision
 
 To get the latest revision, use the [Retrieve Branch API call](/apidocs-mxsdk/apidocs/team-server-api#retrieve-branch) to get the `LatestRevisionNumber` from the output.
 
@@ -110,13 +110,13 @@ When the tests are completed (check the status for when completed is `true`), yo
 
 {{% alert type="info" %}}
 
-You can also (manually) create a web service that exposes the standard junit structure from the data available in the UnitTesting module.
+You can also (manually) create a web service that exposes the standard unit structure from the data available in the UnitTesting module.
 
 {{% /alert %}}
 
 #### 3.4.2 Mendix Application Test Suite (ATS) Tests
 
-ATS has its own [API for CICD](/addons/ats/refguide/rg-version-2/cicd-api#3-api). To use this, follow the steps in the **ATS and CI/CD** section of [How to Use ATS in Combination with CI/CD](/addons/ats/howtos/ht-version-2/ats-and-ci-cd-2#4-ats-and-ci-cd).
+ATS has its own [API for CICD](/ats/refguide/rg-version-2/cicd-api#3-api). To use this, follow the steps in the **ATS and CI/CD** section of [How to Use ATS in Combination with CI/CD](/ats/howtos/ht-version-2/ats-and-ci-cd-2#4-ats-and-ci-cd).
 
 ### 3.5 Next Steps
 
@@ -130,7 +130,7 @@ The sections below present examples of how to call a Mendix API with Jenkins (us
 
 To call a REST service with Jenkins (using a groovy script), install the [HTTP Request Plugin](https://wiki.jenkins.io/display/JENKINS/HTTP+Request+Plugin). If you also want to bind credentials to variables (see `withCredentials` in the code snippet below), install the [Credentials Binding Plugin](https://jenkins.io/doc/pipeline/steps/credentials-binding/). The `Mendix-Username` and `Mendix-ApiKey` will be set in a `customHeaders` array.
 
-This code snippet example gets the latest revision numbere so it can be used when building the deployment package:
+This code snippet example gets the latest revision number so it can be used when building the deployment package:
 
 ![](attachments/implement-cicd-pipeline/12Jenkins.png)
 

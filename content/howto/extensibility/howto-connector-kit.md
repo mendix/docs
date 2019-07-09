@@ -18,7 +18,7 @@ To illustrate the power of the Connector Kit, here's a high-level design diagram
 
 ![Slack Rekognition Bot design](attachments/how-to-connector-kit/slack-rekogition-bot-architecture.png)
 
-A Mendix application consists of a small number of microflows that use Mendix microflow actions to offer a conversational user interface using [Slack](https://slack.com/) and different Amazon services: [S3](https://aws.amazon.com/s3/), [Rekognition](https://aws.amazon.com/rekognition/), and [Lex](https://aws.amazon.com/lex/).
+The Mendix application consists of a small number of microflows that use Mendix microflow actions to offer a conversational user interface using [Slack](https://slack.com/) and different Amazon services: [S3](https://aws.amazon.com/s3/), [Rekognition](https://aws.amazon.com/rekognition/), and [Lex](https://aws.amazon.com/lex/).
 
 This image shows what the microflow toolbox looks like after including all the modules that provide connectors to the services used:
 
@@ -123,7 +123,7 @@ Microflow parameters are especially useful for handling events. For example, the
 
 ## 4 Using Import & Export Mappings
 
-Now we will discuss an example of how you can use mappings in your Java actions. In this example, you'll create an action to import a string using an import mapping. This is not particulairly useful, seeing there is a default action in your toolbox already that provides this functionality called **Import with mapping**. However, as an example, it illustrates how to use mappings.
+Now we will discuss an example of how you can use mappings in your Java actions. In this example, you'll create an action to import a string using an import mapping. This is not particularly useful, seeing there is a default action in your toolbox already that provides this functionality called **Import with mapping**. However, as an example, it illustrates how to use mappings.
 
 This is an image of what we are building: an action to import JSON strings:
 

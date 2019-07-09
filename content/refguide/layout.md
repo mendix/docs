@@ -1,6 +1,6 @@
 ---
-title: "Layouts"
-parent: "pages"
+title: "Layout"
+parent: "page-resources"
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -39,7 +39,7 @@ As a consequence of this behavior, user experience can be improved significantly
 
 {{% snippet file="refguide/Style+Property.md" %}}
 
-## 4 Designer Properties
+## 4 Design Properties
 
 {{% snippet file="refguide/Canvas+Width+Property.md" %}}
 

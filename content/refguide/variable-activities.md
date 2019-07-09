@@ -5,10 +5,11 @@ menu_order: 40
 tags: ["studio pro"]
 ---
 
-## Create Variable
+## 1 Introduction
 
-See [Create Variable](create-variable).
+These are the activities which can be used to change the values of primitive variables such as strings.
 
-## Change Variable
+## 2 Main Documents in This Section
 
-See [Change Variable](change-variable).
+* [Create Variable](create-variable).
+* [Change Variable](change-variable).

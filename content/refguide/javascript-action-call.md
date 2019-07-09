@@ -7,9 +7,13 @@ tags: ["javascript", "return", "variable", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert type="warning" %}}
+This activity can only be used in **Nanoflows**.
+{{% /alert %}}
+
 ## 1 Introduction
 
-The JavaScript action call activity can be used to call a [JavaScript action](javascript-actions). Arguments can be passed to the action, and the result can be stored in a variable. This activity can be used in nanoflows, but not in microflows:
+The JavaScript action call activity can be used to call a [JavaScript action](javascript-actions). Arguments can be passed to the action, and the result can be stored.
 
 ![javascript action call properties](attachments/javascript-action-call/properties.png)
 
@@ -27,7 +31,6 @@ An argument is the input data that you are passing to the JavaScript action. For
 
 ![argument](attachments/javascript-action-call/argument-edit.png)
 
-
 ## 3 Output Properties
 
 Output properties allow you to customize the action result of your JavaScript action. When set up properly, output properties enable action results to be handled by your nanoflow.
@@ -36,13 +39,13 @@ Output properties allow you to customize the action result of your JavaScript ac
 
 The return type property is the data type of the JavaScript action's result. The return type is defined by the JavaScript action.
 
-### 3.2 Use Return Variable
+### 3.2 Use Return Value
 
 This property determines if the returned value from the JavaScript action should be stored in a variable.
 
-### 3.3 Variable Name
+### 3.3 Variable, Object, or List
 
-This property determines if the result of the JavaScript action will be stored in a variable with this name. You may only set a variable name if **Use return value** has been set to **Yes**.
+The result of the Javascript action will be given this name. The label indicates whether the result is a variable, object, or list. If it is an object or list, the **Return type** will indicate the entity which is being returned. You may only set a variable name if **Use return value** has been set to **Yes**.
 
 ## 4 Read More
 

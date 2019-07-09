@@ -1,6 +1,7 @@
 ---
-title: "Microflows (Metamodel)"
+title: "Microflows in the Metamodel"
 parent: "understanding-the-metamodel"
+menu_order: 4
 ---
 ## Overview
 

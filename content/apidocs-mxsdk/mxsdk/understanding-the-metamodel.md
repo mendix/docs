@@ -1,6 +1,7 @@
 ---
 title: "Understanding the Metamodel"
-parent: "reference-documentation"
+parent: "sdk-refguide"
+menu_order: 1
 ---
 
 ## 1 Units

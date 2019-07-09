@@ -1,6 +1,7 @@
 ---
 title: "Working with when.js and Promises in TypeScript"
-parent: "reference-documentation"
+parent: "sdk-refguide"
+menu_order: 3
 ---
 
 ## 1 Introduction

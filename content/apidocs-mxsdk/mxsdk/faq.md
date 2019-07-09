@@ -1,5 +1,5 @@
 ---
-title: "FAQ"
+title: "SDK FAQ"
 category: "Mendix Platform SDK"
 menu_order: 20
 ---

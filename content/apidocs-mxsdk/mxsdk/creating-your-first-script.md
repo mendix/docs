@@ -1,7 +1,7 @@
 ---
 title: "Create Your First Script"
 menu_order: 20
-parent: "tutorial-for-the-mendix-sdk"
+parent: "sdk-howtos"
 ---
 
 ## 1 Introduction

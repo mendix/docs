@@ -10,7 +10,7 @@ Application logic in Mendix can be implemented via microflows and nanoflows. Exp
 * [Microflows](microflows)
 * [Nanoflows](nanoflows)
 * [Activities](activities)
-* [Splits](splits)
+* [Decisions](decisions)
 * [Events](events)
 * [Annotation](annotation)
 * [Parameter](parameter)

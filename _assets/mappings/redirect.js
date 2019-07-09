@@ -487,8 +487,20 @@ module.exports = {
       to: "/refguide/enumerations"
     },
 	{
+      from: "/refguide8/inheritance-split",
+      to: "/refguide/object-type-decision"
+    },
+	{
+      from: "/refguide8/exclusive-split",
+      to: "/refguide/decision"
+	},
+	{
       from: "/howto/deploying-a-mendix-app-to-cloud-foundry",
       to: "/developerportal/deploy/cloud-foundry-deploy"
+    },
+	{
+      from: "/refguide8/menu-item",
+      to: "/refguide/menu"
     },
 	/****************************************************
      * From Desktop Modeler version 7 (permanent, mapped)

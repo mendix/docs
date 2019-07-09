@@ -1,6 +1,7 @@
 ---
 title: "JavaScript & TypeScript Resources"
-parent: "reference-documentation"
+parent: "sdk-refguide"
+menu_order: 2
 ---
 
 ## 1 What Is TypeScript?

@@ -1,7 +1,7 @@
 ---
 title: "SDK Reference Guide"
 category: "Mendix Platform SDK"
-menu_order: 40
+menu_order: 2
 ---
 
 ## 1 Introduction

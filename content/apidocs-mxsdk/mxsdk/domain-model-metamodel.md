@@ -1,6 +1,7 @@
 ---
-title: "Domain Model (Metamodel)"
+title: "Domain Model in the Metamodel"
 parent: "understanding-the-metamodel"
+menu_order: 2
 ---
 
 ## 1 Introduction

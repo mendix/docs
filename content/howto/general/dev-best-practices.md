@@ -270,7 +270,7 @@ When using inheritance (specialization/generalization), it is recommended to use
 
 #### 4.2.1 Size {#size}
 
-The size of a microflow should not exceed 25 elements. An element is any block that Studio Pro allows in a microflow (loops, action activities, splits, etc.). In some cases exceeding this limit is acceptable; this can occur, for instance, for validation or data copying flows.
+The size of a microflow should not exceed 25 elements. An element is any block that Studio Pro allows in a microflow (loops, action activities, decisions, etc.). In some cases exceeding this limit is acceptable; this can occur, for instance, for validation or data copying flows.
 
 Split microflows up into logical, functional elements. If a microflow has more than twenty-five elements, split the microflow up by creating a sub-microflow for a part of it. For example, by separating presentation logic from business logic.
 
@@ -278,7 +278,7 @@ Certain cases (such as validation checks) may require this rule to be ignored to
 
 #### 4.2.2 Documentation & Annotations {#documentation-and-annotations}
 
-All complex microflows (more than ten activities or more than two splits) should have an [annotation](/refguide/annotations) describing the purpose of the microflow, expected parameters, and return values. This annotation should be placed at the start, so it is visible when the microflow is opened. This will assist other developers in quickly understanding the general purpose of a microflow, without having to read through it entirely.
+All complex microflows (more than ten activities or more than two decisions) should have an [annotation](/refguide/annotations) describing the purpose of the microflow, expected parameters, and return values. This annotation should be placed at the start, so it is visible when the microflow is opened. This will assist other developers in quickly understanding the general purpose of a microflow, without having to read through it entirely.
 
 Complex, non-standard or integration-related sections in microflows should also have an accompanying annotation. Examples of these are web service calls, custom loops, and Java calls.
 
@@ -292,7 +292,7 @@ If you decide to color code the different activities in your project, be sure to
 
 #### 4.2.4 Complexity
 
-Nested `IF` statements in a single microflow expression are not recommended. If multiple checks depend on one another, this should be represented by multiple splits in the microflow, so that the complexity is not hidden away in the expressions. You can use `AND` and `OR` operators to produce complex expressions if necessary.
+Nested `IF` statements in a single microflow expression are not recommended. If multiple checks depend on one another, this should be represented by multiple decisions in the microflow, so that the complexity is not hidden away in the expressions. You can use `AND` and `OR` operators to produce complex expressions if necessary.
 
 Event triggers on input fields must be kept as simple as possible, since they are potentially executed very often, depending on user behavior. Complex operations here will reduce performance.
 

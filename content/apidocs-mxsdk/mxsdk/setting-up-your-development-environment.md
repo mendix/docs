@@ -1,6 +1,6 @@
 ---
 title: "Set Up Your Development Environment"
-parent: "tutorial-for-the-mendix-sdk"
+parent: "sdk-howtos"
 menu_order: 10
 ---
 

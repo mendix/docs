@@ -68,7 +68,7 @@ The nanoflow editor offers keyboard support for navigating and manipulating the 
 | <kbd>End</kbd> | Cycles through the end events. |
 | Context-menu key or <kbd>Shift</kbd> + <kbd>F10</kbd> | Opens the context menu for the currently selected element. |
 
-## 5 Notation and Categories
+## 5 Notation & Categories
 
 The graphical notation of nanoflows is based on the [Business Process Model and Notation](https://en.wikipedia.org/wiki/Business_Process_Model_and_Notation) (BPMN). BPMN is a standardized graphical notation for drawing business processes in a workflow.
 
@@ -76,11 +76,11 @@ A nanoflow is composed of elements. The following categories are used:
 
 * [Events](#events) represent the start and endpoints of a nanoflow and special operations in a loop
 * [Flows](#flows) form the connection between elements
-* [Gateways](#gateways) deal with making choices and merging different paths again
+* [Decisions](#decisions) deal with making choices and merging different paths again
 * [Activities](#activities) are the actions that are executed in a nanoflow
 * [Artifacts](#artifacts) provide the nanoflow with input and allow comments to be made
 
-### 5.1 Events<a name="events"></a>
+### 5.1 Events {#events}
 
 Events represent the start and endpoints of a nanoflow and special operations in a loop.
 
@@ -91,25 +91,26 @@ Events represent the start and endpoints of a nanoflow and special operations in
 | [![](attachments/819203/918115.png)](continue-event) | [Continue event](continue-event) | Used to stop the current iteration of a loop and continue with the next iteration. Please note that continue events can only be used inside a [loop](loop). |
 | [![](attachments/819203/918026.png)](break-event) | [Break Event](break-event) | Used to stop iterating over the list of objects and to continue with the rest of the flow after the loop. Please note that break events can only be used inside a [loop](loop). |
 
-### 5.2 Flows<a name="flows"></a>
+### 5.2 Flows {#flows}
 
 Flows form the connection between elements.
 
 | Graphic | Name | Description |
 | --- | --- | --- |
-| ![](attachments/819203/917883.png) | An arrow that links events, activities, splits, and merges with each other. Together they define the order of execution within a nanoflow. |
-| ![](attachments/819203/917688.png) | A connection that can be used to connect an annotation to another element. |
 
-### 5.3 Gateways<a name="gateways"></a>
+| [![](attachments/819203/917883.png)](sequence-flow) | [Sequence flow](sequence-flow) | An arrow that links events, activities, decisions, and merges with each other. Together they define the order of execution within a nanoflow. |
+| [![](attachments/819203/917688.png)](annotation#annotation-flow) | [Annotation flow](annotation#annotation-flow) | A connection that can be used to connect an annotation to another element. |
 
-Gateways deal with making choices and merging different paths.
+### 5.3 Decsions {#decisions}
+
+Decisions deal with making choices and merging different paths.
 
 | Graphic | Name | Description |
 | --- | --- | --- |
-| [![](attachments/819203/917726.png)](exclusive-split) | [Exclusive split](exclusive-split) | Makes a decision based on a condition and follows one and only one of the outgoing flows. Please note that there is no parallell execution in nanoflows. |
+| [![](attachments/819203/917726.png)](decision) | [Decision](decision) | Makes a decision based on a condition and follows one and only one of the outgoing flows. Please note that there is no parallell execution in nanoflows. |
 | [![](attachments/819203/918116.png)](merge) | [Merge](merge) | Can be used to combine multiple sequence flows into one. If a choice is made in a nanoflow and afterwards some common work needs to be done, you can combine the two (or more) paths using a merge. |
 
-### 5.4 Activities<a name="activities"></a>
+### 5.4 Activities {#activities}
 
 Activities are the actions that are executed in a nanoflow.
 
@@ -163,7 +164,7 @@ Client activities can be used to have the web client of your application perform
 | --- | --- | --- |
 | [![](attachments/819203/917804.png)](loop) | [Loop](loop) | A looped activity is used to iterate over a list of objects. For every object the flow inside the looped activity is executed. A looped activity can contain all elements used in nanoflows, with the exception of start and stop events. The flow starts at the first element with no incoming flows. |
 
-### 5.6 Artifacts<a name="artifacts"></a>
+### 5.6 Artifacts {#artifacts}
 
 Artifacts provide the nanoflow with input and allow comments to be made.
 

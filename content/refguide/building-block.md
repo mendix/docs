@@ -1,7 +1,7 @@
 ---
 title: "Building Block"
-parent: "pages"
-tags: ["studio pro"]
+parent: "page-resources"
+tags: ["studio pro", "building block", "page resource"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -21,7 +21,7 @@ As the purpose of building blocks is to facilitate design rather than functional
 
 {{% snippet file="refguide/Documentation+Property.md" %}}
 
-## 3 Designer Properties
+## 3 Design Properties
 
 {{% snippet file="refguide/Canvas+Width+Property.md" %}}
 

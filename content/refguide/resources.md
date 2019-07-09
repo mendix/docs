@@ -28,7 +28,7 @@ The **Resources** category contain various document types that can be used in di
 | ------------------ | -------------------------------------- | ------------------------------------------------------------ |
 | [Java action](java-actions) | Microflows                             | Java actions can extend the functionality of your application. They can be called from microflows. |
 | [JavaScript action](javascript-actions) | Nanoflow                               | JavaScript actions can extend the functionality of your application. They can be called from nanoflows. |
-| [Rule](rules)      | Microflows                             | Rules contain the application logic that should result in an enumeration or a Boolean. They are used in exclusive splits in microflows. |
+| [Rule](rules)      | Microflows                             | Rules contain the application logic that should result in an enumeration or a Boolean. They are used in decisions in microflows. |
 | [Enumeration](enumerations) | Domain model                           | Enumerations are used to define attributes of an enumeration type. |
 | [Dataset](data-sets) | Pages                                  | Datasets define the data shown in reporting widgets.        |
 | [Constant](constants) | Microflow expressions and Consumed web services | Constants are used to define configuration values.           |

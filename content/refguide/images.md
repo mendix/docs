@@ -17,7 +17,7 @@ The following image formats are supported: *png*, *jpeg*, *gif*, *bmp*, *svg*. T
 
 ## 3 Custom Images
 
-To use your own images, they must first be added to an mage collection. To add an image collection, right-click a module in the **Project Explorer** and select **Add other > Image collection**.
+To use your own images, they must first be added to an image collection. To add an image collection, right-click a module in the **Project Explorer** and select **Add other > Image collection**.
 
 After naming the new image collection, open it and click **Add** in the menu bar to add custom images to your module.
 

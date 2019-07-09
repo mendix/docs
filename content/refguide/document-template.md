@@ -65,7 +65,7 @@ The name of the document template. You can change the name via the project explo
 
 Documentation for the document template.
 
-## Designer Properties
+## Design Properties
 
 ### Canvas width
 

@@ -214,8 +214,8 @@ layout.layoutCall.layout = this.masterLayout;
 
 | Story | Impact | Description |
 |---|---|---|
-| 1085587 | Breaking | Moving elements now has to be done though the `detach()` function. For a full description of all the states and their meanings, see [Element States](/apidocs-mxsdk/mxsdk/element-states). This does not affect reading models and elements. |
-| 1085587 | Breaking | Creating, deleting, and changing elements is restricted by their state. For a full description of all the states and their meanings, see [Element States](/apidocs-mxsdk/mxsdk/element-states). This does not affect reading models and elements. |
+| 1085587 | Breaking | Moving elements now has to be done though the `detach()` function. For a full description of all the states and their meanings, see the [Element States](/apidocs-mxsdk/mxsdk/changing-things-in-the-model#es) section of *Changing Things in the Model*. This does not affect reading models and elements. |
+| 1085587 | Breaking | Creating, deleting, and changing elements is restricted by their state. For a full description of all the states and their meanings, see [Element States](/apidocs-mxsdk/mxsdk/changing-things-in-the-model#es) section of *Changing Things in the Model*. This does not affect reading models and elements. |
 | 1031416 | Breaking | The `qualifiedName` property for an element that is not attached to the model now returns `undefined`. |
 | 1052744 | Breaking | Elements that have no `name` property (like `DomainModel`) no longer have a `qualifiedName` property. |
 | 1031416 | Breaking | When assigning an element to a by-name reference (list) property, the element must have a valid qualified name first. This means that the element itself and any named containers should have a valid name. |

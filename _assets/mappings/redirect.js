@@ -2247,9 +2247,8 @@ module.exports = {
       to: "/howto6/solving-load-and-import-errors"
     },
 	/****************************************************
-     * APM (permanent, unmapped)
+     * APM (permanent, mapped)
      ****************************************************/
-<<<<<<< HEAD
 	{
       from: "/ats/",
       to: "/addons/ats/"
@@ -2273,10 +2272,7 @@ module.exports = {
       from: "/aqm/",
       to: "/addons/aqm/"
     },
-	// {
-=======
     // {
->>>>>>> development
     //   from: "~*\\\/apm\\\/use-cases\\\/uc",
     //   to: "/apm/use-cases/",
     //   exact: true

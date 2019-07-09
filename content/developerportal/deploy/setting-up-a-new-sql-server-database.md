@@ -6,7 +6,13 @@ menu_order: 10
 
 ## 1 Introduction
 
-This how-to will teach you how to set up a new SQL Server database.
+This how-to will teach you how to manually set up a new SQL Server database.
+
+{{% alert type="info" %}}
+You only need to follow these steps if the database user used by Mendix does not have enough permission to create the database for you.
+
+Some of these steps are only required for specific versions of SQL Server or Mendix.
+{{% /alert %}}
 
 ## 2 Set Up a New Database
 
@@ -28,6 +34,10 @@ There are two more queries that are only executed once, but these privileges are
 
 ## 3 Configuring the Read Committed Snapshot Isolation Level
 
+{{% alert type="info" %}}
+You only need to follow these steps if the database user used by the Mendix runtime does not have enough permission to issue the `ALTER DATABASE` command.
+{{% /alert %}}
+
 The database schema needs to be configured so that the **Read Committed Snapshot** feature is enabled. This can be achieved by executing the following command on the database:
 
 ```
@@ -39,15 +49,22 @@ You need to replace `MySchema` with the name of your schema.
 
 ## 4 Configuring the necessary SQL Server extensions
 
-For the correct functioning of Mendix, some SQL Server extensions need to be installed. This can be achieved via the following command:
+{{% alert type="info" %}}
+You do not have to configure these extensions for Mendix version 8.0.0 and above.
+
+For Mendix version 7, you only need to perform these steps if the following are true:
+
+* your SQL server version is older than SQL Server 2014
+* the database user used by Mendix does not have permission to issue the commands in this section
+{{% /alert %}}
+
+### 4.1 Installing SQL Server Extensions
+
+For the correct functioning of Mendix, some SQL Server extensions need to be installed. This can be achieved via the following command, setting the file path to the correct location of your Mendix installation:
 
 ```
 CREATE ASSEMBLY [Mendix.SqlServerExtensions] FROM "D:\MyFolder\Mendix\server\runtime\lib\Mendix.SqlServerExtensions.dll" WITH PERMISSION_SET = SAFE;
 ```
-
-{{% alert type="info" %}}
-Of course, the file path needs to be set to the corresponding file which is part of your Mendix installation.
-{{% /alert %}}
 
 The permission above requires CLR to be enabled on the SQL Server instance. CLR can be enabled using this query:
 
@@ -56,13 +73,23 @@ EXEC sp_configure 'clr enabled' , '1';
 RECONFIGURE;
 ```
 
-### 4.1 Queries to Be Executed with the `db_owner` or `db_ddladmin` Database Role
+### 4.2 Queries to Be Executed with the `db_owner` or `db_ddladmin` Database Role
 
-The function and assembly need to be created for timezone handling. Also for these functions, Common Language Runtime (CLR) needs to be enabled on the SQL Server instance. If your are not working on the same timezone as UTC, you need to enable CLR and this function. Without time zone support in the platform, development of your functionality will be much more difficult. This can be achieved using the following commands:
+#### 4.2.1 Create Function mx_toLocalDateTime
+
+If you are not working in the same timezone as UTC, you need to enable CLR and this function. Without timezone support in the platform, development of your functionality will be much more difficult. A function needs to be created for timezone handling. Also, for this functions, Common Language Runtime (CLR) needs to be enabled on the SQL Server instance (see above). 
+
+You can create the timezone handling function using the following commands:
 
 ```
 CREATE FUNCTION [dbo].[mx_toLocalDateTime] (@utcDateTime datetime, @dstTimeZone nvarchar(50)) RETURNS datetime AS EXTERNAL NAME [Mendix.SqlServerExtensions].[Mendix.SqlServerExtensions.DateTimeLocalizer].[ConvertToLocalDateTime];
 ```
+
+#### 4.2.2 Create Procedure usp_nextsequencevalue
+
+{{% alert type="info" %}}
+This is normally executed automatically by the Mendix runtime so long as the database user used by Mendix has permission to create procedures.
+{{% /alert %}}
 
 ```
 CREATE PROCEDURE [dbo].[usp_nextsequencevalue]

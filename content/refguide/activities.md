@@ -17,7 +17,7 @@ Object activities can be used to create and manipulate objects. The [domain mode
 
 | Graphic | Name | Description |
 | --- | --- | --- |
-| [![](attachments/819203/918013.png)](cast-object) | [Cast object](cast-object) | Cast object can be used in combination with an [inheritance split](inheritance-split) to use the [specialized](entities) members of the object. |
+| [![](attachments/819203/918013.png)](cast-object) | [Cast object](cast-object) | Cast object can be used in combination with an [object type decision](object-type-decision) to use the [specialized](entities) members of the object. |
 | [![](attachments/819203/917661.png)](change-object) | [Change object](change-object) | Change object can be used to change the members of an object. This can be done with or without committing and with or without events. |
 | [![](attachments/819203/17661961.png)](committing-objects) | [Commit object(s)](committing-objects) | Commit object(s) can be used to commit the changes to one or more objects. |
 | [![](attachments/819203/917756.png)](create-object) | [Create object](create-object) | Create object can be used to create an object. |

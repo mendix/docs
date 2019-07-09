@@ -1,7 +1,7 @@
 ---
-title: "Manage Application Performance with AppDynamics"
-category: "Monitoring & Troubleshooting"
-menu_order: 12
+title: "Manage App Performance with AppDynamics"
+parent: "manage-app-performance"
+menu_order: 1
 tags: ["monitoring", "troubleshooting", "performance", "appdynamics"]
 ---
 

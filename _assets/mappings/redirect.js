@@ -154,10 +154,6 @@ module.exports = {
       from: "/deployment/mendixcloud/sending-email",
       to: "/developerportal/deploy/sending-email"
     },
-	{
-      from: "/howto/deploying-a-mendix-app-to-cloud-foundry",
-      to: "/developerportal/deploy/cloud-foundry-deploy"
-    },
 	/****************************************************
      * From the Developer Portal (permanent, mapped) 
      ****************************************************/
@@ -446,15 +442,15 @@ module.exports = {
       from: "/refguide8/download-from-team-server-dialog",
       to: "/refguide/download-from-version-control-dialog"
     },
-  {
+	{
       from: "/refguide8/open-project-dialog",
       to: "/refguide/open-app-dialog"
     },
-  {
+	{
       from: "/refguide8/upload-to-team-server-dialog",
       to: "/refguide/upload-to-version-control-dialog"
     },
-  {
+	{
       from: "/refguide8/microflow-expressions",
       to: "/refguide/expressions"
     },
@@ -490,6 +486,22 @@ module.exports = {
       from: "/refguide8/enumeration-values",
       to: "/refguide/enumerations"
     },
+	{
+      from: "/refguide8/inheritance-split",
+      to: "/refguide/object-type-decision"
+    },
+	{
+      from: "/refguide8/exclusive-split",
+      to: "/refguide/decision"
+	},
+	{
+      from: "/howto/deploying-a-mendix-app-to-cloud-foundry",
+      to: "/developerportal/deploy/cloud-foundry-deploy"
+    },
+	{
+      from: "/refguide8/menu-item",
+      to: "/refguide/menu"
+    },
 	/****************************************************
      * From Desktop Modeler version 7 (permanent, mapped)
      ****************************************************/
@@ -517,15 +529,15 @@ module.exports = {
       from: "/refguide7/download-from-team-server-dialog",
       to: "/refguide7/download-from-version-control-dialog"
     },
-  {
+	{
       from: "/refguide7/open-project-dialog",
       to: "/refguide7/open-app-dialog"
     },
-  {
+	{
       from: "/refguide7/upload-to-team-server-dialog",
       to: "/refguide7/upload-to-version-control-dialog"
     },
-  {
+	{
       from: "/refguide7/microflow-expressions",
       to: "/refguide7/expressions"
     },
@@ -557,6 +569,11 @@ module.exports = {
       from: "/refguide7/Developing+Hybrid+Mobile+Apps",
       to: "/refguide7/developing-hybrid-mobile-apps"
     },
+	{
+      from: "/howto7/deploying-a-mendix-app-to-cloud-foundry",
+      to: "/developerportal/deploy/cloud-foundry-deploy"
+    },
+
 	/****************************************************
      * From Desktop Modeler version 6 (permanent)
      ****************************************************/

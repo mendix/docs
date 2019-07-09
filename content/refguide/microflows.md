@@ -42,10 +42,10 @@ A microflow is composed of elements. Below is a categorized overview of all elem
 
 *   [Events](#events) represent start and endpoints of a microflow and special operations in a loop.
 *   [Flows](#flows) form the connection between elements.
-*   [Gateways](#gateways) deal with making choices and merging different paths again.
+*   [Decisions](#decisions) deal with making choices and merging different paths again.
 *   [Activities](#activities) are the actions that are executed in a microflow.
 *   [Artifacts](#artifacts) provide the microflow with input and allow comments to be made.
-*   [Error handlers](#errorhandlers) can be set on an activity, gateway or loop to define how to handle an error.
+*   [Error handlers](#errorhandlers) can be set on an activity, decision, or loop to define how to handle an error.
 
 ## 4 Events<a name="events"></a>
 
@@ -65,18 +65,18 @@ Flows form the connection between elements.
 
 | Graphic | Name | Description |
 | --- | --- | --- |
-| ![](attachments/819203/917883.png) | A sequence flow is an arrow that links events, activities, splits and merges with each other. Together they defined the order of execution within a microflow. |
-| ![](attachments/819203/917688.png) | An association is a connection that can be used to connect an annotation to another element. |
+| [![](attachments/819203/917883.png)](sequence-flow) | [Sequence Flow](sequence-flow) | A sequence flow is an arrow that links events, activities, decisions, and merges with each other. Together they define the order of execution within a microflow. |
+| [![](attachments/819203/917688.png)](annotation#annotation-flow) | [Annotation flow](annotation#annotation-flow) | An association is a connection that can be used to connect an annotation to another element. |
 
-## 6 Gateways<a name="gateways"></a>
+## 6 Decisions {#decisions}
 
-Gateways deal with making choices and merging different paths again..
+Decisions deal with making choices and merging different paths again..
 
 | Graphic | Name | Description |
 | --- | --- | --- |
-| [![](attachments/819203/917726.png)](exclusive-split) | [Exclusive Split](exclusive-split) | An exclusive split makes a decision based on a condition and follows one and only one of the outgoing flows.
+| [![](attachments/819203/917726.png)](decision) | [Decision](decision) | A decision makes a decision based on a condition and follows one and only one of the outgoing flows.
 **Note**: There is no parallel execution in microflows. |
-| [![](attachments/819203/918122.png)](inheritance-split) | [Inheritance Split](inheritance-split) | An inheritance split is an element that makes a choice based on the [specialization](entities) of the selected object. You can give the specialized object a name using a [Cast Object](cast-object) action. |
+| [![](attachments/819203/918122.png)](object-type-decision) | [Object Type Decision](object-type-decision) | An object type decision is an element that makes a choice based on the [specialization](entities) of the selected object. You can give the specialized object a name using a [Cast Object](cast-object) action. |
 | [![](attachments/819203/918116.png)](merge) | [Merge](merge) | A merge can be used to combine multiple sequence flows into one. If a choice is made in a microflow and afterwards some common work needs to be done, you can combine the two (or more) paths using a merge. |
 
 ## 7 Activities<a name="activities"></a>
@@ -111,8 +111,8 @@ When an error occurs in a microflow, all changes that have been made to objects 
 
 ### 10.1 Error Handlers<a name="errorhandlers"></a>
 
-An error handler can be set on an activity, gateway or loop.
-On an activity or gateway it gives you three options:
+An error handler can be set on an activity, decision, or loop.
+On an activity or decision, it gives you three options:
 
 *   Rollback (default)
 *   Custom with rollback

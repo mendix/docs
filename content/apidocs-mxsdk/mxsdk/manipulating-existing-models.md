@@ -1,6 +1,6 @@
 ---
 title: "Manipulate Existing Models"
-parent: "tutorial-for-the-mendix-sdk"
+parent: "sdk-howtos"
 menu_order: 40
 ---
 

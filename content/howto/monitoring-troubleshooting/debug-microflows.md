@@ -47,7 +47,7 @@ Breakpoints are points in a microflow where the application will halt execution.
 
 1. Run your application locally.
 2. Open the microflow that needs debugging in Studio Pro.
-3. Right-click any of the activities or splits in the microflow and select **Add breakpoint**. This sets a breakpoint on the selected step in the microflow, which is visually represented by a red dot:
+3. Right-click any of the activities or decisions in the microflow and select **Add breakpoint**. This sets a breakpoint on the selected step in the microflow, which is visually represented by a red dot:
     ![](attachments/18448571/18580020.png)
 
     You can open an overview of all the breakpoints by going to **View** > **Breakpoints**:
@@ -99,7 +99,7 @@ Sometimes it is necessary to configure a breakpoint so that the microflow only b
 
 To use breakpoint conditions, follow these steps:
 
-1. Right-click the activity or split in the microflow with a breakpoint and select **Edit breakpoint condition**:
+1. Right-click the activity or decision in the microflow with a breakpoint and select **Edit breakpoint condition**:
     ![](attachments/18448571/18580018.png)
 2.  Use the expression below to make sure this breakpoint only interrupts the microflow if you are executing it yourself (replace `YourUserName` with your own user name):
 
